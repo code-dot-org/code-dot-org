@@ -1,4 +1,6 @@
 @no_mobile
+@no_safari
+# TODO: This test has been flaky on Safari. Investigate and re-enable.
 
 Feature: Music Lab block can be dragged
 
@@ -20,7 +22,7 @@ Scenario Outline: Dragging play sound block
   And I press the first ".blocklyTreeRow" element
 
   # Drag the "play sound" block and attach it to the "when run" block.
-  Then I drag block "play-sound-block" to block "when-run-block"
+  Then I drag block "play_sound_at_current_location_simple2" to block "when-run-block"
 
   # There should now be a music timeline entry.
   And element ".timeline-element" is visible

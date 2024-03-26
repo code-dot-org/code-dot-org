@@ -3,8 +3,13 @@ require 'authentication_option'
 
 class Queries::Lti
   def self.get_user(id_token)
-    auth_id = Policies::Lti.generate_auth_id(id_token)
+    auth_id = Services::Lti::AuthIdGenerator.new(id_token).call
     User.find_by_credential(type: AuthenticationOption::LTI_V1, id: auth_id)
+  end
+
+  # Returns the LTI user id for a particular code.org user and LTI integration
+  def self.lti_user_id(user, lti_integration)
+    user.lti_user_identities.find_by(lti_integration_id: lti_integration.id)&.subject
   end
 
   def self.get_lti_integration(issuer, client_id)
@@ -29,7 +34,7 @@ class Queries::Lti
   end
 
   def self.get_lti_course_from_section_code(section_code)
-    Section.find_by(code: section_code).lti_course
+    Section.find_by(code: section_code)&.lti_course
   end
 
   def self.find_or_create_lti_course(lti_integration_id:, context_id:, deployment_id:, nrps_url:, resource_link_id:)

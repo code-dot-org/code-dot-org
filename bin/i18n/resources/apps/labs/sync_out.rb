@@ -12,13 +12,11 @@ module I18n
       module Labs
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+            crowdin_locale_dir = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
             return unless File.directory?(crowdin_locale_dir)
 
-            unless I18nScriptUtils.source_lang?(language)
-              restore_crawding_locale_files(language[:locale_s], crowdin_locale_dir)
-              distribute_crawding_locale_files(language[:locale_s], crowdin_locale_dir)
-            end
+            restore_crawding_locale_files(language[:locale_s], crowdin_locale_dir)
+            distribute_crawding_locale_files(language[:locale_s], crowdin_locale_dir)
 
             i18n_locale_dir = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME)
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)

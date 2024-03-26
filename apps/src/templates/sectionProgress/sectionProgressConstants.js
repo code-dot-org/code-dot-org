@@ -2,12 +2,13 @@ import PropTypes from 'prop-types';
 import {studentType} from '@cdo/apps/templates/progress/progressTypes';
 
 /**
- * Shape for scriptData
- * The data we get from the server's call to script.summarize. The format
+ * Shape for unitData
+ * The data we get from the server's call to unit.summarize. The format
  * ends up being similar to that which we send to initProgress in progressRedux.
- * The important part is scriptData.lessons, which gets used by levelsWithLesson
+ * The important part is unitData.lessons, which gets used by levelsWithLesson
+ * Note: unit was previously named script
  */
-export const scriptDataPropType = PropTypes.shape({
+export const unitDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   csf: PropTypes.bool,
   hasStandards: PropTypes.bool,

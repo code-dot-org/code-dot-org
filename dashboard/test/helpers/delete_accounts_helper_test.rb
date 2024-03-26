@@ -50,6 +50,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
 
     # Skip real Firebase operations
+    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
     FirebaseHelper.stubs(:delete_channel)
     FirebaseHelper.stubs(:delete_channels)
 
@@ -1191,22 +1193,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.pd_workshop_surveys
-  # Associated via enrollment
-  #
-
-  test "clears form_data from pd_workshop_surveys" do
-    enrollment = create :pd_enrollment, :from_user
-    survey = create :pd_workshop_survey, pd_enrollment: enrollment
-    refute_equal '{}', survey.form_data
-
-    purge_user survey.pd_enrollment.user
-
-    survey.reload
-    assert_equal '{}', survey.form_data
-  end
-
-  #
   # Table dashboard.peer_reviews
   # Could delete submitter or viewer
   #
@@ -1601,6 +1587,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.ai_tutor_interactions
+  #
+
+  test "deletes all of a purged user's ai tutor interactions (chat messages)" do
+    student = create :student_with_ai_tutor_access
+    num_ai_tutor_interactions = 3
+    create_list :ai_tutor_interaction, num_ai_tutor_interactions, user: student
+
+    assert_changes -> {AiTutorInteraction.where(user: student).count}, from: num_ai_tutor_interactions, to: 0 do
+      purge_user student
+    end
+  end
+
+  #
   # Table: dashboard.projects
   #
 
@@ -1815,12 +1815,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1831,12 +1831,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       purge_user student
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1850,14 +1850,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
     end
@@ -1923,6 +1923,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
         student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
                             storage_encrypt_channel_id(storage_id, project_id_b)]
+
+        # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+        # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
         FirebaseHelper.
           expects(:delete_channels).
           with(student_channels)

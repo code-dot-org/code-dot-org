@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe8c8c2b16ff1676de0d07c68f2d7e641a2bb893d2cfe1b06ffaaf1a82295eaf
-size 538
+@import "mixins";
+
+li.level_name {
+  @include selectable;
+}
+
+.ani-gif-dropdown {
+  min-width: 450px;
+}
+
+.video-dropdown {
+  min-width: 450px;
+}
+
+// CSS tricks for preserving aspect ratio for iframe div
+.aspect-ratio iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  // Fill parent.
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.aspect-ratio {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  position: relative;
+  min-width: 280px;
+}
+.aspect-ratio::after {
+  padding-top: 120.25%;
+  display: block;
+  content: '';
+}

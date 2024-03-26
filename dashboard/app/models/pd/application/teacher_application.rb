@@ -367,6 +367,11 @@ module Pd::Application
       )
     end
 
+    def status_including_enrolled
+      return 'enrolled' if enrolled?
+      status
+    end
+
     # This is called by the scheduled_pd_application_emails cronjob which is run
     # on the production-daemon machine every day
     def self.send_admin_approval_reminders_to_teachers
@@ -433,7 +438,7 @@ module Pd::Application
     end
 
     def formatted_principal_email
-      "\"#{principal_greeting}\" <#{principal_email}>"
+      ActionMailer::Base.email_address_with_name(principal_email, principal_greeting)
     end
 
     def effective_regional_partner_name
@@ -682,7 +687,6 @@ module Pd::Application
         previous_yearlong_cdo_pd
 
         program
-        enough_course_hours
 
         gender_identity
         race
@@ -709,6 +713,7 @@ module Pd::Application
 
         # If the applicant will teach the course, we require extra information
         if hash[:will_teach] == 'Yes'
+          required << :enough_course_hours
           if hash[:program] == PROGRAMS[:csd]
             required << :csd_which_grades
           elsif hash[:program] == PROGRAMS[:csp]
@@ -912,7 +917,7 @@ module Pd::Application
       }
       labels_to_remove = columns_to_remove(course)
 
-      CSV_COLUMNS.keys.each do |source|
+      CSV_COLUMNS.each_key do |source|
         CSV_COLUMNS[source].each do |k|
           unless labels_to_remove[source]&.include? k.to_sym
             labels[source][k] = CSV_LABELS[source][k] || ALL_LABELS_WITH_OVERRIDES[k]
@@ -926,8 +931,8 @@ module Pd::Application
       labels = csv_filtered_labels(course)
       CSV.generate do |csv|
         columns = []
-        labels.keys.each do |source|
-          labels[source].keys.each do |k|
+        labels.each_key do |source|
+          labels[source].each_key do |k|
             columns.push(labels[source][k])
           end
         end
@@ -1076,10 +1081,7 @@ module Pd::Application
 
       # Check if a school is not teaching CS according to the access report
       # If the school is not in the census_summaries table, treat that as not teaching
-      # This is a bit of a confusing double negative but I wanted to keep the YES/NO logic
-      # consistent with the criteria.
-      meets_scholarship_criteria_scores[:not_teaching_in_access_report] =
-        Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES
+      meets_scholarship_criteria_scores[:school_last_census_status] = Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES
 
       update(
         response_scores: response_scores_hash.deep_merge(

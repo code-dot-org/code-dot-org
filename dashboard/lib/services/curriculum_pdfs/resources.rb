@@ -173,7 +173,7 @@ module Services
         def fetch_url_to_path(url, path)
           service = Drive::DriveService.new
           service.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
-            json_key_io: StringIO.new(CDO.gdrive_export_secret || ""),
+            json_key_io: StringIO.new(CDO.gdrive_export_secret.to_json || ""),
             scope: Google::Apis::DriveV3::AUTH_DRIVE,
           )
           if url.start_with?("https://docs.google.com/document/d/")
@@ -182,9 +182,9 @@ module Services
             return path
           elsif url.start_with?("https://drive.google.com/")
             file_id = url_to_id(url)
-            file = service.getFile(file_id)
-            return nil unless file.export_links.include? "application/pdf"
-            service.export_file(file_id, 'application/pdf', download_dest: path)
+            file = service.get_file(file_id)
+            return nil unless file.mime_type == "application/pdf"
+            service.get_file(file_id, download_dest: path)
             return path
           elsif url.end_with?(".pdf")
             IO.copy_stream(URI.parse(url)&.open, path)

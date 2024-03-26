@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-03 15:47:53 UTC",
+    "serialized_at": "2024-01-11 15:25:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -110,6 +110,7 @@
       "key": "a377d91b-0c7f-42e2-adce-cc52d0f7bb3d",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "a377d91b-0c7f-42e2-adce-cc52d0f7bb3d",
@@ -122,6 +123,7 @@
       "key": "2f372c86-f01a-458a-b725-4477837e2fe4",
       "position": 1,
       "properties": {
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "2f372c86-f01a-458a-b725-4477837e2fe4",
@@ -134,6 +136,7 @@
       "key": "a11a93a7-7f64-41c2-9b4b-aae96803f9e1",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "a11a93a7-7f64-41c2-9b4b-aae96803f9e1",
@@ -146,6 +149,7 @@
       "key": "3231b63a-19f7-4b29-a89a-9d39d993cf8a",
       "position": 1,
       "properties": {
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "3231b63a-19f7-4b29-a89a-9d39d993cf8a",
@@ -520,6 +524,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -542,6 +549,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PSP-vid_2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -2227,6 +2237,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

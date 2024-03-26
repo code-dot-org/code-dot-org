@@ -27,6 +27,44 @@ module I18n
         UnpluggedContent.sync_in
       end
 
+      def self.sync_up(**opts)
+        BaseContent.sync_up(**opts)
+        Blocks.sync_up(**opts)
+        CourseContent.sync_up(**opts)
+        CourseOfferings.sync_up(**opts)
+        Courses.sync_up(**opts)
+        CurriculumContent.sync_up(**opts)
+        DataContent.sync_up(**opts)
+        DeviseContent.sync_up(**opts)
+        Docs.sync_up(**opts)
+        MarketingAnnouncements.sync_up(**opts)
+        RestrictedContent.sync_up(**opts)
+        Scripts.sync_up(**opts)
+        SharedFunctions.sync_up(**opts)
+        Slides.sync_up(**opts)
+        Standards.sync_up(**opts)
+        UnpluggedContent.sync_up(**opts)
+      end
+
+      def self.sync_down(**opts)
+        BaseContent.sync_down(**opts)
+        Blocks.sync_down(**opts)
+        CourseContent.sync_down(**opts)
+        CourseOfferings.sync_down(**opts)
+        Courses.sync_down(**opts)
+        CurriculumContent.sync_down(**opts)
+        DataContent.sync_down(**opts)
+        DeviseContent.sync_down(**opts)
+        Docs.sync_down(**opts)
+        MarketingAnnouncements.sync_down(**opts)
+        RestrictedContent.sync_down(**opts)
+        Scripts.sync_down(**opts)
+        SharedFunctions.sync_down(**opts)
+        Slides.sync_down(**opts)
+        Standards.sync_down(**opts)
+        UnpluggedContent.sync_down(**opts)
+      end
+
       def self.sync_out
         BaseContent.sync_out
         Blocks.sync_out
@@ -52,4 +90,4 @@ module I18n
   end
 end
 
-Dir[File.expand_path('../dashboard/**/*.rb', __FILE__)].sort.each {|file| require file}
+Dir[File.expand_path('../dashboard/*.rb', __FILE__)].sort.each {|file| require file}

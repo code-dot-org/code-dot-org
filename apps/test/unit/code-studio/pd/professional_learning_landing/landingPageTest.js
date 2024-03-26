@@ -1,91 +1,66 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {render, screen} from '@testing-library/react';
 import i18n from '@cdo/locale';
 import {expect} from '../../../../util/reconfiguredChai';
-import LandingPage, {
-  LastWorkshopSurveyBanner,
-} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
-import Button from '@cdo/apps/templates/Button';
+import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 
-describe('Tests for Professional Learning Landing Page', () => {
-  const generateLandingPage = (landingPageProps = []) => {
-    return shallow(<LandingPage {...landingPageProps} />);
-  };
+const DEFAULT_PROPS = {
+  lastWorkshopSurveyUrl: 'url',
+  lastWorkshopSurveyCourse: 'CS Fundamentals',
+  deeperLearningCourseData: [{data: 'oh yeah'}],
+  currentYearApplicationId: 2024,
+  workshopsAsParticipant: [{data: 'workshops'}],
+  plCoursesStarted: [{data: 'courses'}],
+};
 
-  describe('Tests related to the initial state of the landing page for given teacher', () => {
-    it('page is as expected for a teacher with a pending survey', () => {
-      const landingPage = generateLandingPage({
-        lastWorkshopSurveyUrl: 'url',
-        lastWorkshopSurveyCourse: 'CS Fundamentals',
-        deeperLearningCourseData: [{data: 'oh yeah'}],
-      });
+describe('LandingPage', () => {
+  function renderDefault(propOverrides = {}) {
+    render(<LandingPage {...DEFAULT_PROPS} {...propOverrides} />);
+  }
 
-      expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
-      expect(landingPage.childAt(2).prop('subHeading')).to.equal(
-        'Submit your feedback'
-      );
-      expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
-      expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to
-        .be.true;
+  it('page shows a getting started banner for a new teacher without an existing application, upcoming workshop, or pl course', () => {
+    renderDefault({
+      lastWorkshopSurveyUrl: null,
+      lastWorkshopSurveyCourse: null,
+      deeperLearningCourseData: null,
+      currentYearApplicationId: null,
+      workshopsAsParticipant: [],
+      plCoursesStarted: [],
     });
-
-    it('page is as expected for a CSD/CSP teacher with a pending survey', () => {
-      const landingPage = generateLandingPage({
-        lastWorkshopSurveyUrl: 'url',
-        lastWorkshopSurveyCourse: 'CS Discoveries',
-        deeperLearningCourseData: [{data: 'oh yeah'}],
-      });
-
-      expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
-      expect(
-        landingPage.childAt(2).shallow().text().indexOf('Submit your feedback')
-      ).to.equal(-1);
-      expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
-      expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to
-        .be.true;
-    });
-
-    it('page is as expected for a teacher with no pending survey but upcoming workshops and plc enrollments', () => {
-      const landingPage = generateLandingPage({
-        deeperLearningCourseData: [{data: 'oh yeah'}],
-      });
-
-      expect(landingPage.childAt(2).is('EnrolledWorkshops')).to.be.true;
-      expect(landingPage.childAt(3).is('ProfessionalLearningCourseProgress')).to
-        .be.true;
-    });
-  });
-});
-
-describe('LastWorkshopSurveyBanner', () => {
-  let wrapper;
-
-  const TEST_SURVEY_URL = 'https//example.com';
-
-  beforeEach(() => {
-    wrapper = mount(
-      <LastWorkshopSurveyBanner
-        subHeading="Test subheading"
-        description="Test description"
-        surveyUrl={TEST_SURVEY_URL}
-      />
-    );
+    screen.getByText(i18n.plLandingGettingStartedHeading());
+    expect(screen.queryByText(i18n.plLandingStartSurvey())).to.not.exist;
+    screen.getByTestId('enrolled-workshops-loader');
+    expect(screen.queryByText('Online Professional Learning Courses')).to.not
+      .exist;
   });
 
-  afterEach(() => {
-    wrapper.unmount();
+  it('page shows a survey banner for a teacher with a pending survey', () => {
+    renderDefault();
+    expect(screen.queryByText(i18n.plLandingGettingStartedHeading())).to.not
+      .exist;
+    screen.getByText(i18n.plLandingStartSurvey());
+    screen.getByTestId('enrolled-workshops-loader');
+    screen.getByText('Online Professional Learning Courses');
   });
 
-  it('makes a button that opens the survey URL in a new tab', () => {
-    expect(
-      wrapper.containsMatchingElement(
-        <Button
-          __useDeprecatedTag
-          href={TEST_SURVEY_URL}
-          target="_blank"
-          text={i18n.plLandingStartSurvey()}
-        />
-      )
-    ).to.be.ok;
+  it('page shows a survey banner for a CSD/CSP teacher with a pending survey', () => {
+    renderDefault();
+    expect(screen.queryByText(i18n.plLandingGettingStartedHeading())).to.not
+      .exist;
+    screen.getByText(i18n.plLandingStartSurvey());
+    screen.getByTestId('enrolled-workshops-loader');
+    screen.getByText('Online Professional Learning Courses');
+  });
+
+  it('page shows upcoming workshops and plc enrollments but no survey banner if no pending survey exists', () => {
+    renderDefault({
+      lastWorkshopSurveyUrl: null,
+      lastWorkshopSurveyCourse: null,
+    });
+    expect(screen.queryByText(i18n.plLandingGettingStartedHeading())).to.not
+      .exist;
+    expect(screen.queryByText(i18n.plLandingStartSurvey())).to.not.exist;
+    screen.getByTestId('enrolled-workshops-loader');
+    screen.getByText('Online Professional Learning Courses');
   });
 });

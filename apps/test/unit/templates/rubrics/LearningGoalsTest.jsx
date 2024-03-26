@@ -1,71 +1,365 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+import {render, screen} from '@testing-library/react';
 import {shallow, mount} from 'enzyme';
+import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import LearningGoals from '@cdo/apps/templates/rubrics/LearningGoals';
 
-describe('LearningGoals', () => {
+import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import tipIconImage from '@cdo/apps/templates/rubrics/images/AiBot_Icon.svg';
+import infoIconImage from '@cdo/apps/templates/rubrics/images/info-icon.svg';
+import LearningGoals, {
+  clearAnnotations,
+  annotateLines,
+} from '@cdo/apps/templates/rubrics/LearningGoals';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+const learningGoals = [
+  {
+    id: 2,
+    key: 'abcd',
+    learningGoal: 'Learning Goal 1',
+    aiEnabled: true,
+    evidenceLevels: [
+      {id: 10, understanding: 0, teacherDescription: 'lg one none'},
+      {id: 11, understanding: 1, teacherDescription: 'lg one limited'},
+      {id: 12, understanding: 2, teacherDescription: 'lg one convincing'},
+      {id: 13, understanding: 3, teacherDescription: 'lg one extensive'},
+    ],
+    tips: 'Tips',
+  },
+  {
+    key: 'efgh',
+    learningGoal: 'Learning Goal 2',
+    aiEnabled: false,
+    evidenceLevels: [
+      {id: 10, understanding: 0, teacherDescription: 'lg two none'},
+      {id: 11, understanding: 1, teacherDescription: 'lg two limited'},
+      {id: 12, understanding: 2, teacherDescription: 'lg two convincing'},
+      {id: 13, understanding: 3, teacherDescription: 'lg two extensive'},
+    ],
+    tips: 'Tips',
+  },
+];
+
+const submittedEvaluation = {
+  feedback: 'test feedback',
+  understanding: RubricUnderstandingLevels.LIMITED,
+};
+
+const aiEvaluations = [
+  {
+    id: 2,
+    learning_goal_id: 2,
+    understanding: 2,
+    aiConfidencePassFail: 2,
+    aiConfidenceExactMatch: 1,
+    observations:
+      'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
+  },
+];
+
+const code = `// code
+    var x = 5;
+    var y = 6;
+    // add them together
+    /*
+    var z = x + y;
+    */
+    draw();
+  `;
+
+const studentLevelInfo = {
+  user_id: 1,
+  name: 'Stella',
+  attempts: 3,
+  timeSpent: 100,
+  lastAttempt: '2024-03-02',
+};
+
+describe('LearningGoals - React Testing Library', () => {
+  it('renders EvidenceLevels without canProvideFeedback', () => {
+    render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
+
+    // This text only shows up within EvidenceLevels when canProvideFeedback is false
+    expect(screen.getByText('Rubric Scores')).to.exist;
+
+    // First learning goal is visible
+    expect(screen.getByText('Learning Goal 1')).to.exist;
+    expect(screen.getByText(/lg one none/)).to.exist;
+    expect(screen.getByText(/lg one limited/)).to.exist;
+    expect(screen.getByText(/lg one convincing/)).to.exist;
+    expect(screen.getByText(/lg one extensive/)).to.exist;
+  });
+
+  describe('when aiConfidenceExactMatch is high', () => {
+    const myAiEvaluations = [
+      {
+        ...aiEvaluations[0],
+        aiConfidenceExactMatch: 3,
+      },
+    ];
+    it('highlights one bubble', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={myAiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      expect(getSuggestedButtonNames()).to.deep.equal(['Convincing']);
+    });
+    it('shows only one evaluation level in written summary', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={myAiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText(
+        'Stella has achieved Convincing Evidence for this learning goal.'
+      );
+    });
+    it('shows exact-match confidence level', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={myAiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText('AI Confidence: high');
+    });
+  });
+
+  describe('when aiConfidenceExactMatch is low', () => {
+    it('highlights two bubbles', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      expect(getSuggestedButtonNames().sort()).to.deep.equal(
+        ['Convincing', 'Extensive'].sort()
+      );
+    });
+    it('shows two evaluation levels in written summary', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText(
+        'Stella has achieved Extensive or Convincing Evidence for this learning goal.'
+      );
+    });
+    it('shows pass-fail confidence level', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText('AI Confidence: medium');
+    });
+  });
+});
+
+function getSuggestedButtonNames() {
+  const allButtons = screen.getAllByRole('button');
+  const suggestedButtons = allButtons.filter(button =>
+    button.classList.contains('unittest-evidence-level-suggested')
+  );
+  return suggestedButtons.map(button => button.textContent);
+}
+
+describe('LearningGoals - Enzyme', () => {
+  let annotatorStub,
+    annotateLineStub,
+    highlightLineStub,
+    clearAnnotationsStub,
+    clearHighlightedLinesStub;
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
 
-  const learningGoals = [
-    {
-      id: 2,
-      key: 'abcd',
-      learningGoal: 'Testing 1',
-      aiEnabled: true,
-      evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
-      tips: 'Tips',
-    },
-    {
-      key: 'efgh',
-      learningGoal: 'Testing 2',
-      aiEnabled: false,
-      evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
-      tips: 'Tips',
-    },
-  ];
-
-  const submittedEvaluation = {
-    feedback: 'test feedback',
-    understanding: RubricUnderstandingLevels.LIMITED,
-  };
-
-  const aiEvaluations = [
-    {
-      id: 2,
-      learning_goal_id: 2,
-      understanding: 2,
-      ai_confidence: 50,
-    },
-  ];
-
-  it('renders EvidenceLevels', () => {
-    const wrapper = shallow(
-      <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
+  // Stub out our references to the singleton and editor
+  beforeEach(() => {
+    let annotatorInstanceStub = sinon.stub();
+    annotatorInstanceStub.getCode = sinon.stub().returns(code);
+    annotatorStub = sinon
+      .stub(EditorAnnotator, 'annotator')
+      .returns(annotatorInstanceStub);
+    annotateLineStub = sinon.stub(EditorAnnotator, 'annotateLine');
+    clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
+    highlightLineStub = sinon.stub(EditorAnnotator, 'highlightLine');
+    clearHighlightedLinesStub = sinon.stub(
+      EditorAnnotator,
+      'clearHighlightedLines'
     );
-    expect(wrapper.find('EvidenceLevels')).to.have.lengthOf(1);
-    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.deep.equal(
-      [{id: 1, understanding: 1, teacherDescription: 'test'}]
-    );
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
+  });
+  afterEach(() => {
+    annotatorStub.restore();
+    annotateLineStub.restore();
+    clearAnnotationsStub.restore();
+    highlightLineStub.restore();
+    clearHighlightedLinesStub.restore();
+  });
+
+  describe('annotateLines', () => {
+    it('should do nothing if the AI observation does not reference any lines', () => {
+      // The AI tends to misreport the line number, so we shouldn't rely on it
+      annotateLines('This is just a basic observation.');
+      expect(annotateLineStub.notCalled).to.be.true;
+    });
+
+    it('should annotate a single line of code referenced by the AI', () => {
+      // The AI tends to misreport the line number, so we shouldn't rely on it
+      annotateLines('Line 1: This is a line of code `var x = 5;`');
+      sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
+    });
+
+    it('should annotate the first line of code referenced by the AI', () => {
+      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
+    });
+
+    it('should highlight a single line of code referenced by the AI', () => {
+      // The AI tends to misreport the line number, so we shouldn't rely on it
+      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      sinon.assert.calledWith(highlightLineStub, 2);
+    });
+
+    it('should highlight all lines of code referenced by the AI', () => {
+      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      sinon.assert.calledWith(highlightLineStub, 2);
+      sinon.assert.calledWith(highlightLineStub, 3);
+    });
+
+    it('should just highlight the lines the AI thinks if the referenced code does not exist', () => {
+      annotateLines('Line 45: This is a line of code `var z = 0`');
+      sinon.assert.calledWith(annotateLineStub, 45, 'This is a line of code');
+      sinon.assert.calledWith(highlightLineStub, 45);
+    });
+
+    it('should just highlight all of the lines the AI thinks if the referenced code does not exist', () => {
+      annotateLines('Line 42-44: This is a line of code `var z = 0`');
+      sinon.assert.calledWith(annotateLineStub, 42, 'This is a line of code');
+      sinon.assert.calledWith(highlightLineStub, 42);
+      sinon.assert.calledWith(highlightLineStub, 43);
+      sinon.assert.calledWith(highlightLineStub, 44);
+    });
+
+    it('should annotate the last line of code when referenced by the AI', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(annotateLineStub, 8, 'This is a line of code');
+    });
+
+    it('should pass along the correct info type for the annotation', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        'INFO'
+      );
+    });
+
+    it('should pass along a hex color', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match('#')
+      );
+    });
+
+    it('should pass along the appropriate image as an icon', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match('#'),
+        infoIconImage
+      );
+    });
+
+    it('should pass along the appropriate image as an icon for the tooltip', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match({backgroundImage: sinon.match(tipIconImage)})
+      );
+    });
+
+    it('should highlight the last line of code when referenced by the AI', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(highlightLineStub, 8);
+    });
+
+    it('should highlight the line with a hex color', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(highlightLineStub, 8, sinon.match('#'));
+    });
+
+    it('should ignore code snippets that are empty', () => {
+      annotateLines('Line 42: This is totally a thing ` `');
+      sinon.assert.notCalled(highlightLineStub);
+    });
+  });
+
+  describe('clearAnnotations', () => {
+    it('should clear annotations and clear highlighted lines', () => {
+      clearAnnotations();
+      sinon.assert.called(clearAnnotationsStub);
+      sinon.assert.called(clearHighlightedLinesStub);
+    });
   });
 
   it('changes learning goal when left and right buttons are pressed', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
     );
     wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
   });
@@ -75,7 +369,6 @@ describe('LearningGoals', () => {
       <LearningGoals
         learningGoals={learningGoals}
         teacherHasEnabledAi={true}
-        aiConfidence={50}
         aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
         aiEvaluations={aiEvaluations}
@@ -85,7 +378,7 @@ describe('LearningGoals', () => {
     expect(wrapper.find('AiAssessment').props().studentName).to.equal(
       studentLevelInfo.name
     );
-    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(50);
+    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(2);
     expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).to.equal(
       2
     );
@@ -111,7 +404,7 @@ describe('LearningGoals', () => {
         isStudent={false}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
+    expect(wrapper.find('details')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
   });
@@ -120,15 +413,14 @@ describe('LearningGoals', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} isStudent={true} />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(0);
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
+    expect(wrapper.find('details')).to.have.lengthOf(0);
   });
 
   it('shows AI token when AI is enabled', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
@@ -139,7 +431,7 @@ describe('LearningGoals', () => {
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -152,7 +444,7 @@ describe('LearningGoals', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -187,7 +479,7 @@ describe('LearningGoals', () => {
         unitName: 'test-2023',
         levelName: 'test-level',
         learningGoalKey: 'efgh',
-        learningGoal: 'Testing 2',
+        learningGoal: 'Learning Goal 2',
       }
     );
     wrapper.find('button').first().simulate('click');
@@ -197,37 +489,10 @@ describe('LearningGoals', () => {
         unitName: 'test-2023',
         levelName: 'test-level',
         learningGoalKey: 'abcd',
-        learningGoal: 'Testing 1',
+        learningGoal: 'Learning Goal 1',
       }
     );
     sendEventSpy.restore();
-  });
-
-  it('displays Evaluate when AI is disabled and no understanding has been selected', () => {
-    const wrapper = mount(
-      <LearningGoals
-        learningGoals={learningGoals}
-        teacherHasEnabledAi
-        canProvideFeedback
-      />
-    );
-    wrapper.update();
-    wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('BodyThreeText').first().text()).to.include('Evaluate');
-    wrapper.unmount();
-  });
-
-  it('displays Approve when AI is enabled and no understanding has been selected', () => {
-    const wrapper = mount(
-      <LearningGoals
-        learningGoals={learningGoals}
-        teacherHasEnabledAi
-        canProvideFeedback
-      />
-    );
-    wrapper.update();
-    expect(wrapper.find('BodyThreeText').first().text()).to.include('Approve');
-    wrapper.unmount();
   });
 
   it('shows feedback in disabled textbox when available', () => {
@@ -242,48 +507,34 @@ describe('LearningGoals', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('message');
   });
 
-  it('shows editable textbox for feedback when the teacher can provide feedback', () => {
-    const wrapper = shallow(
+  it('shows editable textbox for feedback when the teacher can provide feedback', async () => {
+    const postStub = sinon.stub(HttpClient, 'post').returns(
+      Promise.resolve({
+        json: () => {
+          return {
+            id: 0,
+          };
+        },
+      })
+    );
+
+    const wrapper = mount(
       <LearningGoals
         canProvideFeedback={true}
         studentLevelInfo={studentLevelInfo}
         learningGoals={learningGoals}
       />
     );
-    expect(wrapper.find('textarea').props().disabled).to.equal(false);
-  });
 
-  it('shows understanding in header if submittedEvaluation contains understand', () => {
-    const wrapper = shallow(
-      <LearningGoals
-        learningGoals={learningGoals}
-        submittedEvaluation={{
-          feedback: 'test feedback',
-          understanding: RubricUnderstandingLevels.LIMITED,
-        }}
-      />
-    );
-    expect(wrapper.find('BodyThreeText').props().children).to.equal(
-      'Limited Evidence'
-    );
-  });
+    // Need to have it 'load' all the prior evaluations
+    await act(async () => {
+      await Promise.resolve();
+    });
 
-  it('shows No Evidence understanding in header if submittedEvaluation contains understand', () => {
-    const wrapper = shallow(
-      <LearningGoals
-        learningGoals={learningGoals}
-        submittedEvaluation={{
-          feedback: 'test feedback',
-          understanding: RubricUnderstandingLevels.NONE,
-        }}
-      />
-    );
-    expect(wrapper.find('BodyThreeText').props().children).to.equal(
-      'No Evidence'
-    );
+    expect(wrapper.find('textarea').getDOMNode().disabled).to.equal(false);
+    postStub.restore();
   });
 
   it('passes isStudent down to EvidenceLevels', () => {
@@ -301,5 +552,15 @@ describe('LearningGoals', () => {
     expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.equal(
       learningGoals[0]['evidenceLevels']
     );
+  });
+
+  it('displays progress ring', () => {
+    const wrapper = shallow(
+      <LearningGoals
+        learningGoals={learningGoals}
+        submittedEvaluation={submittedEvaluation}
+      />
+    );
+    expect(wrapper.find('ProgressRing')).to.have.lengthOf(1);
   });
 });

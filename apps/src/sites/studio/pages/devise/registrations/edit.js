@@ -14,6 +14,7 @@ import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLink
 import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import color from '@cdo/apps/util/color';
+import LtiRosterSyncSettings from '@cdo/apps/lib/ui/accounts/LtiRosterSyncSettings';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -21,13 +22,13 @@ const scriptData = getScriptData('edit');
 const {
   userAge,
   userType,
+  isAdmin,
   isPasswordRequired,
   authenticationOptions,
   isGoogleClassroomStudent,
   isCleverStudent,
   dependedUponForLogin,
-  dependentStudents,
-  studentCount,
+  dependentStudentsCount,
   personalAccountLinkingEnabled,
 } = scriptData;
 
@@ -82,6 +83,22 @@ $(document).ready(() => {
     new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
   }
 
+  const ltiSyncSettingsMountPoint =
+    document.getElementById('lti-sync-settings');
+  if (ltiSyncSettingsMountPoint) {
+    ReactDOM.render(
+      <LtiRosterSyncSettings
+        ltiRosterSyncEnabled={
+          ltiSyncSettingsMountPoint.getAttribute(
+            'data-lti-roster-sync-enabled'
+          ) === 'true'
+        }
+        formId={'lti-sync-settings-form'}
+      />,
+      ltiSyncSettingsMountPoint
+    );
+  }
+
   const lockoutLinkedAccountsMountPoint = document.getElementById(
     'lockout-linked-accounts'
   );
@@ -131,8 +148,9 @@ $(document).ready(() => {
         isPasswordRequired={isPasswordRequired}
         isTeacher={userType === 'teacher'}
         dependedUponForLogin={dependedUponForLogin}
-        dependentStudents={dependentStudents}
-        hasStudents={studentCount > 0}
+        dependentStudentsCount={dependentStudentsCount}
+        hasStudents={dependentStudentsCount > 0}
+        isAdmin={isAdmin}
       />,
       deleteAccountMountPoint
     );

@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+
+# TODO: unfirebase, also update datablock storage: #56993
+# TODO: post-firebase-cleanup, remove the firebase version: #56994
+
 require_relative '../only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
@@ -11,6 +15,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../../deployment'
 require 'ostruct'
+# TODO: post-firebase-cleanup, remove the firebase reference: #56994
 require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 require 'cdo/profanity_filter'
 require 'rest-client'
@@ -130,16 +135,17 @@ end
 
 def main
   get_token
+  # TODO: post-firebase-cleanup, remove the firebase reference: #56994
   fb = FirebaseHelper.new('shared')
 
-  if $token.nil_or_empty?
+  if $token.nil? || $token.empty?
     Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")
     return
   end
 
   SPOTIFY_CHARTS.each do |chart|
     records, columns = get_playlist_data(chart['type'], chart['id'])
-    if records.nil_or_empty?
+    if records.nil? || records.empty?
       Honeybadger.notify_cronjob_error(
         error_message: "Did not to upload Spotify playlist data due to nil or empty list of records.",
         context: {

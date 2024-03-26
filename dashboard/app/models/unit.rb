@@ -452,7 +452,7 @@ class Unit < ApplicationRecord
   def self.script_level_cache
     return nil unless should_cache?
     @@script_level_cache ||= {}.tap do |cache|
-      script_cache.values.each do |unit|
+      script_cache.each_value do |unit|
         cache.merge!(unit.script_levels.index_by(&:id))
       end
     end
@@ -463,7 +463,7 @@ class Unit < ApplicationRecord
   def self.level_cache
     return nil unless should_cache?
     @@level_cache ||= {}.tap do |cache|
-      script_level_cache.values.each do |script_level|
+      script_level_cache.each_value do |script_level|
         level = script_level.level
         next unless level
         cache[level.id] = level unless cache.key? level.id
@@ -719,6 +719,16 @@ class Unit < ApplicationRecord
 
     # A student can view the unit version if they are assigned to it.
     user.assigned_script?(self)
+  end
+
+  # If this unit is in a unit group, returns the next unit in the unit group.
+  # If it's the last unit in the unit group, returns nil.
+  # If it's not in a unit group, returns nil.
+  def next_unit(user)
+    return nil unless unit_group
+    other_units = unit_group.units_for_user(user)
+    self_index = other_units.index {|u| u.id == id}
+    other_units[self_index + 1] if self_index
   end
 
   # @param family_name [String] The family name for a unit family.
@@ -1456,7 +1466,8 @@ class Unit < ApplicationRecord
   def finish_url
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
-    nil
+    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
+    CDO.code_org_url "/congrats/#{name}"
   end
 
   # A unit that the general public can assign. Has been soft or

@@ -593,6 +593,16 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes(levels, regular_artist)
   end
 
+  test 'validated? requires free_play false on Artist levels' do
+    true_artist = Artist.create(name: 'freeplay true artist', free_play: 'true')
+    false_artist = Artist.create(name: 'freeplay false artist', free_play: 'false')
+    nil_artist = Artist.create(name: 'freeplay nil artist', free_play: nil)
+
+    assert false_artist.validated?
+    refute nil_artist.validated?
+    refute true_artist.validated?
+  end
+
   test 'calculate_ideal_level_source_id does nothing if no level sources' do
     level = Maze.create(name: 'maze level with no level sources')
     assert_nil level.ideal_level_source_id
@@ -1245,9 +1255,9 @@ class LevelTest < ActiveSupport::TestCase
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
-      "Odometer", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "StandaloneVideo",
+      "Odometer", "Panels", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
-      "Vigenere", "Weblab"
+      "Vigenere", "Weblab", "Weblab2"
     ]
     scripts = [
       "All scripts", "20-hour", "algebra", "artist", "course1", "course2",

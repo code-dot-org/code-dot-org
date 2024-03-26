@@ -43,7 +43,7 @@ class GamelabJr < Gamelab
   end
 
   def self.standalone_app_names
-    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations'], ['Ecosystems', 'ecosystems']]
+    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations'], ['Ecosystems', 'ecosystems'], ['Sprite Lab (Game Design)', 'game_design']]
   end
 
   def standalone_app_name_or_default
@@ -90,7 +90,7 @@ class GamelabJr < Gamelab
       <category name="Variables" custom="VARIABLE" />
       <category name="Functions" custom="PROCEDURE" />
       <category name="World" />
-      <category name="Sprites" custom="Sprite" />
+      <category name="Sprites" />
       <category name="Groups" />
       <category name="Events" />
       <category name="Math">
@@ -181,6 +181,10 @@ class GamelabJr < Gamelab
 
   def uses_droplet?
     false
+  end
+
+  def uses_google_blockly?
+    true
   end
 
   def age_13_required?

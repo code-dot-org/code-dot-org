@@ -1,48 +1,45 @@
-import FontAwesome from './../FontAwesome';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import Notification, {NotificationType} from '../Notification';
+
+import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
+import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {switchToSection, recordSwitchToSection} from './sectionHelpers';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+
+import Button from '../Button';
+import DropdownButton from '../DropdownButton';
+import Notification, {NotificationType} from '../Notification';
 import SmallChevronLink from '../SmallChevronLink';
+
+import FontAwesome from './../FontAwesome';
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import {
+  asyncLoadCourseOfferings,
   beginEditingSection,
   getAssignmentName,
   sortedSectionsList,
 } from './teacherSectionsRedux';
-import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import Button from '../Button';
-import DropdownButton from '../DropdownButton';
-import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 
-class TeacherDashboardHeader extends React.Component {
-  static propTypes = {
-    sections: PropTypes.arrayOf(sectionShape).isRequired,
-    selectedSection: sectionShape.isRequired,
-    openEditSectionDialog: PropTypes.func.isRequired,
-    assignmentName: PropTypes.string,
-  };
+function TeacherDashboardHeader({
+  sections,
+  selectedSection,
+  assignmentName,
+  openEditSectionDialog,
+  asyncLoadCourseOfferings,
+}) {
+  React.useEffect(() => {
+    asyncLoadCourseOfferings();
+  }, [asyncLoadCourseOfferings]);
 
-  constructor(props) {
-    super(props);
-    this.getDropdownOptions = this.getDropdownOptions.bind(this);
-  }
-  getDropdownOptions(optionMetricName) {
-    let self = this;
-
-    let options = self.props.sections.map(function (section, i) {
+  const getDropdownOptions = optionMetricName => {
+    let options = sections.map(function (section, i) {
       let optionOnClick = () => {
-        switchToSection(section.id, self.props.selectedSection.id);
-        recordSwitchToSection(
-          section.id,
-          self.props.selectedSection.id,
-          optionMetricName
-        );
+        switchToSection(section.id, selectedSection.id);
+        recordSwitchToSection(section.id, selectedSection.id, optionMetricName);
       };
       let icon = undefined;
-      if (section.id === self.props.selectedSection.id) {
+      if (section.id === selectedSection.id) {
         icon = <FontAwesome icon="check" />;
       }
       return (
@@ -52,9 +49,9 @@ class TeacherDashboardHeader extends React.Component {
       );
     });
     return options;
-  }
+  };
 
-  lockedSectionNotification = ({restrictSection, loginType}) =>
+  const lockedSectionNotification = ({restrictSection, loginType}) =>
     restrictSection &&
     loginType !==
       (SectionLoginType.google_classroom || SectionLoginType.clever) && (
@@ -66,7 +63,7 @@ class TeacherDashboardHeader extends React.Component {
       />
     );
 
-  progressNotSavingNotification() {
+  const progressNotSavingNotification = () => {
     return (
       <Notification
         type={NotificationType.failure}
@@ -82,67 +79,72 @@ class TeacherDashboardHeader extends React.Component {
         dismissable={false}
       />
     );
-  }
+  };
   /**
    * Returns the URL to the correct section to be edited
    */
-  editRedirectUrl = sectionId => {
+  const editRedirectUrl = sectionId => {
     return '/sections/' + sectionId + '/edit';
   };
 
-  render() {
-    return (
-      <div>
-        <SmallChevronLink
-          href="/home#classroom-sections"
-          text={i18n.viewAllSections()}
-          iconBefore
-        />
-        <this.lockedSectionNotification
-          restrictSection={this.props.selectedSection.restrictSection}
-          loginType={this.props.selectedSection.loginType}
-        />
-        {this.props.selectedSection.postMilestoneDisabled && (
-          <this.progressNotSavingNotification />
-        )}
-        <div style={styles.header}>
-          <div>
-            <h1>{this.props.selectedSection.name}</h1>
-            {this.props.assignmentName && (
-              <div id="assignment-name">
-                <span style={styles.sectionPrompt}>
-                  {i18n.assignedToWithColon()}{' '}
-                </span>
-                {this.props.assignmentName}
-              </div>
-            )}
-          </div>
-          <div style={styles.rightColumn}>
-            <div style={styles.buttonSection}>
-              <Button
-                __useDeprecatedTag
-                href={this.editRedirectUrl(this.props.selectedSection.id)}
-                className="edit-section-details-link"
-                icon="gear"
-                size="narrow"
-                color="gray"
-                text={i18n.editSectionDetails()}
-                style={styles.buttonWithMargin}
-              />
-              <DropdownButton
-                size="narrow"
-                color="gray"
-                text={i18n.switchSection()}
-              >
-                {this.getDropdownOptions('from_button_switch_section')}
-              </DropdownButton>
+  return (
+    <div style={styles.headerContainer}>
+      <SmallChevronLink
+        href="/home#classroom-sections"
+        text={i18n.viewAllSections()}
+        iconBefore
+        style={styles.linkPadding}
+      />
+      {lockedSectionNotification({
+        restrictSection: selectedSection.restrictSection,
+        loginType: selectedSection.loginType,
+      })}
+      {selectedSection.postMilestoneDisabled && progressNotSavingNotification()}
+      <div style={styles.header}>
+        <div>
+          <h1>{selectedSection.name}</h1>
+          {assignmentName && (
+            <div id="assignment-name">
+              <span style={styles.sectionPrompt}>
+                {i18n.assignedToWithColon()}{' '}
+              </span>
+              {assignmentName}
             </div>
+          )}
+        </div>
+        <div style={styles.rightColumn}>
+          <div style={styles.buttonSection}>
+            <Button
+              __useDeprecatedTag
+              href={editRedirectUrl(selectedSection.id)}
+              className="edit-section-details-link"
+              icon="gear"
+              size="narrow"
+              color="gray"
+              text={i18n.editSectionDetails()}
+              style={styles.buttonWithMargin}
+            />
+            <DropdownButton
+              size="narrow"
+              color="gray"
+              text={i18n.switchSection()}
+            >
+              {getDropdownOptions('from_button_switch_section')}
+            </DropdownButton>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+TeacherDashboardHeader.propTypes = {
+  sections: PropTypes.arrayOf(sectionShape).isRequired,
+  selectedSection: sectionShape.isRequired,
+  openEditSectionDialog: PropTypes.func.isRequired,
+  assignmentName: PropTypes.string,
+  asyncLoadCourseOfferings: PropTypes.func.isRequired,
+};
 
 const styles = {
   sectionPrompt: {
@@ -165,26 +167,35 @@ const styles = {
     margin: 0,
     marginRight: 5,
   },
+  linkPadding: {
+    padding: '10px 0',
+  },
+  headerContainer: {
+    padding: '0 64px',
+  },
 };
 
 export const UnconnectedTeacherDashboardHeader = TeacherDashboardHeader;
 
 export default connect(
-  state => {
+  state => ({
     // In most cases, filtering out hidden sections is done on the backend.
     // However in this case, we need hidden sections in the redux tree in case
     // the selected section is hidden.
-    let sections = sortedSectionsList(state.teacherSections.sections).filter(
+    sections: sortedSectionsList(state.teacherSections.sections).filter(
       section => !section.hidden
-    );
-    let selectedSectionId = state.teacherSections.selectedSectionId;
-    let selectedSection = state.teacherSections.sections[selectedSectionId];
-    let assignmentName = getAssignmentName(state, selectedSectionId);
-    return {sections, selectedSection, assignmentName};
-  },
+    ),
+    selectedSection:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId],
+    assignmentName: getAssignmentName(
+      state,
+      state.teacherSections.selectedSectionId
+    ),
+  }),
   dispatch => {
     return {
       openEditSectionDialog: id => dispatch(beginEditingSection(id)),
+      asyncLoadCourseOfferings: () => dispatch(asyncLoadCourseOfferings()),
     };
   }
 )(TeacherDashboardHeader);

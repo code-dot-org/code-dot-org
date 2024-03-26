@@ -2,7 +2,6 @@ import React from 'react';
 import InputPrompt from './InputPrompt';
 
 export default {
-  title: 'InputPrompt',
   component: InputPrompt,
 };
 

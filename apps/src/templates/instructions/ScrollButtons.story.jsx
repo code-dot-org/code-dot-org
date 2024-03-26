@@ -1,8 +1,8 @@
 import React from 'react';
+
 import ScrollButtons from './ScrollButtons';
 
 export default {
-  title: 'ScrollButtons',
   component: ScrollButtons,
 };
 

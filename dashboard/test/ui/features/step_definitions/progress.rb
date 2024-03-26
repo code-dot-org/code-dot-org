@@ -5,7 +5,7 @@ def color_string(key)
     passed: 'rgb(159, 212, 159)',       # $level_passed
     not_tried: 'rgb(254, 254, 254)',    # $level_not_tried
     lighter_gray: 'rgb(198, 202, 205)',
-    assessment: 'rgb(118, 101, 160)'
+    assessment: 'rgb(140, 82, 186)'
   }[key.to_sym]
 end
 
@@ -123,4 +123,12 @@ end
 Then(/^check that level (\d+) on this lesson is not done$/) do |level|
   undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
   undone
+end
+
+And(/^I complete unit (.+)/) do |unit_name|
+  browser_request(
+    url: '/api/test/complete_unit',
+    method: 'POST',
+    body: {unit_name: unit_name}
+  )
 end

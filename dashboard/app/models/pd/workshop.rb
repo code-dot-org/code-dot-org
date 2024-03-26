@@ -805,8 +805,6 @@ class Pd::Workshop < ApplicationRecord
   def survey_responses
     if teachercon?
       Pd::TeacherconSurvey.where(pd_enrollment: enrollments)
-    elsif local_summer?
-      Pd::LocalSummerWorkshopSurvey.where(pd_enrollment: enrollments)
     else
       raise 'Not supported for this workshop type'
     end
@@ -914,5 +912,13 @@ class Pd::Workshop < ApplicationRecord
 
   def user_attended?(user)
     attending_teachers.include?(user)
+  end
+
+  def summarize_for_my_pl_page
+    {
+      course_name: course_name,
+      dates: workshop_date_range_string,
+      location: location_address,
+    }
   end
 end

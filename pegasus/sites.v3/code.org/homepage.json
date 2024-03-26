@@ -1,3 +1,105 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d8c8b173c0c1663a9057b3ae746ccbfc9ea8f95d01c72f717d8f009e859cf7c7
-size 3594
+{
+  "pages": {
+    "homepage": [
+      "hoc2023-soon-hoc",
+      "hoc2023-actual-hoc",
+      "pl-launch-superhero"
+    ]
+  },
+
+  "banners": {
+    "hoc2023-soon-hoc": {
+      "hoc_modes": ["soon-hoc"],
+      "class": "hoc-banner homepage",
+      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
+      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
+      "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
+      "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
+      "actions": [
+        {
+          "type": "text",
+          "text": "homepage_hero_hoc_is_coming"
+        },
+        {
+          "type": "heading",
+          "text": "curriculum_name_dance_party_ai_edition"
+        },
+        {
+          "type": "heading-two",
+          "text": "codeorg_homepage_hoc2023_body"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "hoc2022_cta_primary",
+          "url": "/dance"
+        },
+        {
+          "type": "cta_button_solid_white",
+          "text": "hoc2022_cta_secondary",
+          "url": "https://hourofcode.com/learn"
+        }
+      ]
+    },
+    "hoc2023-actual-hoc": {
+      "hoc_modes": ["actual-hoc"],
+      "class": "hoc-banner homepage",
+      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
+      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
+      "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
+      "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
+      "actions": [
+        {
+          "type": "text",
+          "text": "homepage_hero_hoc_is_here"
+        },
+        {
+          "type": "heading",
+          "text": "curriculum_name_dance_party_ai_edition"
+        },
+        {
+          "type": "heading-two",
+          "text": "codeorg_homepage_hoc2023_body"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "hoc2022_cta_primary",
+          "url": "/dance"
+        },
+        {
+          "type": "cta_button_solid_white",
+          "text": "hoc2022_cta_secondary",
+          "url": "https://hourofcode.com/learn"
+        }
+      ]
+    },
+    "pl-launch-superhero": {
+      "dcdo": "pl-launch-hero-banner",
+      "languages": ["en"],
+      "class": "pl-banner-superhero homepage",
+      "desktopImage": "/images/pl-superhero-banner-yellow-bg.svg",
+      "actions": [
+        {
+          "type": "heading",
+          "text": "pl_superhero_title"
+        },
+        {
+          "type": "heading-two",
+          "text": "pl_superhero_desc"
+        },
+        {
+          "type": "image",
+          "url": "/images/pl-superhero-girl.png"
+        },
+        {
+          "type": "image-tablet",
+          "url": "/images/pl-superhero-girl-tablet.png"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "front_join_us_learn_more",
+          "url": "/educate/professional-learning"
+        }
+      ]
+    }
+  }
+}

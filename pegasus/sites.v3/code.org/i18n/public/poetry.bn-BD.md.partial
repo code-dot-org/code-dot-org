@@ -16,7 +16,7 @@ social:
 
 # Coding with Poetry
 
-{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
+{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg “, alt_text: “বেগুনি বিনি টুপি পরা একটি সুন্দর গোলাপী অক্টোপাস চরিত্র একটি মল এবং মাইক্রোফোন সহ একটি মঞ্চে স্পটলাইটের নীচে একটি কবিতা সম্পাদন করে”, text_color: “white”, box_background_color: “rgb (0,0,0.4)”, left_header: “কবিতা শিল্প”, left_description: “যোগ করুন এবং এই আওয়ার অফ কোড ক্রিয়াকলাপে একটি ক্লাসিক কবিতার অ্যানিমেশন!” , left_spec: “”, left_button_url: "https://studio.code.org/s/poem-art-2021/reset “, left_button_text: “স্টার্ট”, right_heading: “কবিতার সাথে কোডিং”, right_description: “এই সিরিজের পাঠের সাথে আপনার শ্রেণিকক্ষে কম্পিউটার বিজ্ঞান এবং কবিতা সংযুক্ত করুন। “, রাইট_স্পেক্স: “”, রাইট_বোতাম__URL: "https://studio.code.org/s/poetry?viewAs=Instructor “, রাইট_বোতান_টেক্সট: “মডিউল দেখুন"}}
 
 ## Learn more about Coding with Poetry
 

@@ -1,24 +1,28 @@
+import {orderBy, sortBy, random} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import i18n from '@cdo/locale';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {orderBy, sortBy} from 'lodash';
-import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape} from './shapes';
+
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
-import {stringifyQueryParams} from '../../utils';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import color from '@cdo/apps/util/color';
 import {
   StudentGradeLevels,
   SectionLoginType,
 } from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {stringifyQueryParams} from '../../utils';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import SectionActionDropdown from './SectionActionDropdown';
+import {sortableSectionShape} from './shapes';
+import {getSectionRows} from './teacherSectionsRedux';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -46,36 +50,45 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  const {assignmentNames, assignmentPaths} = rowData;
+  const {assignmentNames, assignmentPaths, courseOfferingsAreLoaded} = rowData;
   return (
     <div>
-      <a
-        href={`${rowData.assignmentPaths[0]}${stringifyQueryParams({
-          section_id: rowData.id,
-        })}`}
-        style={tableLayoutStyles.link}
-      >
-        {rowData.assignmentNames[0]}
-      </a>
-      {assignmentPaths.length > 1 && (
-        <div style={styles.currentUnit}>
-          <div>{i18n.currentUnit()}</div>
+      {courseOfferingsAreLoaded ? (
+        <>
           <a
-            href={`${rowData.assignmentPaths[1]}${stringifyQueryParams({
+            href={`${assignmentPaths[0]}${stringifyQueryParams({
               section_id: rowData.id,
             })}`}
             style={tableLayoutStyles.link}
           >
-            {assignmentNames[1]}
+            {assignmentNames[0]}
           </a>
-        </div>
-      )}
-      {assignmentPaths.length < 1 && (
-        <Button
-          __useDeprecatedTag
-          text={i18n.coursesCardAction()}
-          href={'/catalog'}
-          color={Button.ButtonColor.neutralDark}
+          {assignmentPaths.length > 1 && (
+            <div style={styles.currentUnit}>
+              <div>{i18n.currentUnit()}</div>
+              <a
+                href={`${assignmentPaths[1]}${stringifyQueryParams({
+                  section_id: rowData.id,
+                })}`}
+                style={tableLayoutStyles.link}
+              >
+                {assignmentNames[1]}
+              </a>
+            </div>
+          )}
+          {assignmentPaths.length < 1 && (
+            <Button
+              __useDeprecatedTag
+              text={i18n.coursesCardAction()}
+              href={'/catalog'}
+              color={Button.ButtonColor.neutralDark}
+            />
+          )}
+        </>
+      ) : (
+        <span
+          className={skeletonizeContent.skeletonizeContent}
+          style={{width: random(30, 90) + '%'}}
         />
       )}
     </div>

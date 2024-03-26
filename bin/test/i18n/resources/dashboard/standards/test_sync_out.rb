@@ -5,12 +5,11 @@ describe I18n::Resources::Dashboard::Standards::SyncOut do
   let(:described_class) {I18n::Resources::Dashboard::Standards::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'expected_i18n_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
   let(:standards_i18n_file_path) {CDO.dir('dashboard/config/locales', "standards.#{i18n_locale}.json")}
-  let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale, 'standards')}
+  let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'standards')}
   let(:i18n_locale_dir) {CDO.dir('i18n/locales', i18n_locale, 'standards')}
 
   around do |test|
@@ -42,22 +41,6 @@ describe I18n::Resources::Dashboard::Standards::SyncOut do
       expect_crowdin_files_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
 
       process_language
-    end
-
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute the localization' do
-        expect_localizations_distribution.never
-        process_language
-      end
-
-      it 'moves Crowdin files to the i18n locale dir' do
-        expect_crowdin_files_to_i18n_locale_dir_moving.once
-        process_language
-      end
     end
 
     context 'when the Crowdin locale directory does not exists' do

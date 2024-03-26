@@ -47,8 +47,8 @@ $(document).ready(() => {
         <ProjectHeader
           canViewAdvancedTools={projectsData.canViewAdvancedTools}
           projectCount={projectsData.projectCount}
-          showDeprecatedCalcAndEvalWarning={
-            projectsData.showDeprecatedCalcAndEvalWarning
+          showPublicGalleryUpdatedInfo={
+            projectsData.showPublicGalleryUpdatedInfo
           }
         />
         <div className={'main container'}>

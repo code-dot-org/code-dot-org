@@ -1,0 +1,532 @@
+{
+  "script": {
+    "name": "melissambcc",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-03-01 22:26:56 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "melissambcc"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "melissambcc"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Events",
+      "name": "Events",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "b39a9237-e12a-49b2-bf68-be4e9aac0fee",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b39a9237-e12a-49b2-bf68-be4e9aac0fee",
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "90635ac9-2921-45bc-8da7-85238714c3ce",
+      "position": 1,
+      "properties": {
+        "progression_name": "Intro to Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "90635ac9-2921-45bc-8da7-85238714c3ce",
+        "lesson_activity.key": "b39a9237-e12a-49b2-bf68-be4e9aac0fee"
+      }
+    },
+    {
+      "key": "a27eca7d-7011-43b2-9d21-68d55109bc99",
+      "position": 2,
+      "properties": {
+        "progression_name": "Events with Flappy Bird"
+      },
+      "seeding_key": {
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99",
+        "lesson_activity.key": "b39a9237-e12a-49b2-bf68-be4e9aac0fee"
+      }
+    },
+    {
+      "key": "2be9a8f6-176f-400e-a880-b54b62a10a44",
+      "position": 3,
+      "properties": {
+        "progression_name": "Print Block + Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "2be9a8f6-176f-400e-a880-b54b62a10a44",
+        "lesson_activity.key": "b39a9237-e12a-49b2-bf68-be4e9aac0fee"
+      }
+    },
+    {
+      "key": "ba9e17a4-bcea-4f3a-ab9e-c4da8cbc561d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Unplugged Lesson with Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba9e17a4-bcea-4f3a-ab9e-c4da8cbc561d",
+        "lesson_activity.key": "b39a9237-e12a-49b2-bf68-be4e9aac0fee"
+      }
+    },
+    {
+      "key": "cef36aac-dd47-4352-a5e7-44fd5b59bc48",
+      "position": 5,
+      "properties": {
+        "progression_name": "Events Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "cef36aac-dd47-4352-a5e7-44fd5b59bc48",
+        "lesson_activity.key": "b39a9237-e12a-49b2-bf68-be4e9aac0fee"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Intro to Course_C"
+        ],
+        "progression": "Intro to Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Course_C"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "90635ac9-2921-45bc-8da7-85238714c3ce"
+      },
+      "level_keys": [
+        "Intro to Course_C"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Intro to Events_1"
+        ],
+        "progression": "Intro to Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Events_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "90635ac9-2921-45bc-8da7-85238714c3ce"
+      },
+      "level_keys": [
+        "Intro to Events_1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_flappyIntro_2023MB_1"
+        ],
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_flappyIntro_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      },
+      "level_keys": [
+        "courseC_video_flappyIntro_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_flappy_events1_2023MB_1"
+        ],
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events1_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      },
+      "level_keys": [
+        "courseC_flappy_events1_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_flappy_events2_2023MB_1"
+        ],
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events2_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      },
+      "level_keys": [
+        "courseC_flappy_events2_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_flappy_events3_2023MB_1"
+        ],
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events3_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      },
+      "level_keys": [
+        "courseC_flappy_events3_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_flappy_events4_2023MB_1"
+        ],
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events4_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      },
+      "level_keys": [
+        "courseC_flappy_events4_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_flappy_events5_2023MB_1"
+        ],
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events5_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      },
+      "level_keys": [
+        "courseC_flappy_events5_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1"
+        ],
+        "progression": "Unplugged Lesson with Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "ba9e17a4-bcea-4f3a-ab9e-c4da8cbc561d"
+      },
+      "level_keys": [
+        "course_c_maker_dance_party_unpluggedMB_1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unplugged Lesson with Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_C"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "ba9e17a4-bcea-4f3a-ab9e-c4da8cbc561d"
+      },
+      "level_keys": [
+        "CSF_maker_microbit_PL_end_naviagtion_C"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Intro to Course_C",
+        "script_level.level_keys": [
+          "Intro to Course_C"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "90635ac9-2921-45bc-8da7-85238714c3ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Events_1",
+        "script_level.level_keys": [
+          "Intro to Events_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "90635ac9-2921-45bc-8da7-85238714c3ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_flappyIntro_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_video_flappyIntro_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events1_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events1_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events2_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events2_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events3_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events3_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events4_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events4_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events5_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events5_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "a27eca7d-7011-43b2-9d21-68d55109bc99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_dance_party_unpluggedMB_1",
+        "script_level.level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "ba9e17a4-bcea-4f3a-ab9e-c4da8cbc561d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSF_maker_microbit_PL_end_naviagtion_C",
+        "script_level.level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_C"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambcc",
+        "activity_section.key": "ba9e17a4-bcea-4f3a-ab9e-c4da8cbc561d"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

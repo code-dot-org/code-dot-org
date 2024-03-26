@@ -1,7 +1,6 @@
 {
   "pages": {
-    "/courses": "hoc-2023-dance-ai",
-    "/home": "co-teacher",
+    "/home": "superhero",
     "/student-home": "hoc-2023-dance-ai"
   },
   "banners": {
@@ -10,7 +9,7 @@
       "title": "Help your students become superheroes!",
       "body": "Join our highly supportive Professional Learning Program for middle and high school educators.",
       "buttonText": "Learn More",
-      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonUrl": "https://code.org/educate/professional-learning",
       "buttonId": "superhero-pl-details"
     },
     "hoc-2023": {

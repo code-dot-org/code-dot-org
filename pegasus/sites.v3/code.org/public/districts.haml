@@ -4,6 +4,8 @@ theme: responsive_full_width
 ---
 
 %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
+%script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
+%script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 %script{src: webpack_asset_path('js/code.org/public/districts.js')}
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/districts-styles.css", rel: "stylesheet"}
@@ -25,9 +27,9 @@ theme: responsive_full_width
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
     .text-wrapper
-      %h1{style: "color: white"} Code.org District Program
-      %p.heading-sm{style: "color: white"} Bring computer science to your district.
-      %p.no-margin-bottom{style: "color: white"} Learn how Code.org can help teach your students the skills of the future!
+      %h1.white Code.org District Program
+      %p.heading-sm.white Bring computer science to your district.
+      %p.no-margin-bottom.white Learn how Code.org can help teach your students the skills of the future!
     .clear
     %img{src: "shared/images/banners/admins-hero-students-at-computers.png", alt: ""}
 
@@ -43,7 +45,7 @@ theme: responsive_full_width
         %li Invest in teachers and administrators through <a href="/educate/professional-learning" target="_blank" rel="noopener noreferrer">high-quality professional learning</a> experiences
         %li Tap into the energy, aspirations, and potential of all students to close equity gaps in computer science education and career pathways
         %li Align with the education-to-workforce priorities of employers and policymakers
-      .button-wrapper.flex-container
+      .button-wrapper
         %a.link-button{href: url_learn_more} Learn more
         %a.link-button.secondary{href: url_enroll_now, target: "_blank", rel: "noopener noreferrer"} Enroll now
     %div.col-45{style: "float:right; margin-top: 3px"}
@@ -105,11 +107,11 @@ theme: responsive_full_width
         .text-wrapper
           %h3 Scholarships for schools serving underserved students
           %p Access to $1.5M in Professional Learning scholarships for teachers serving students traditionally underrepresented in CS.
-    .button-wrapper.flex-container.justify-center
+    .button-wrapper.centered
       %a.link-button{href: url_learn_more} Learn more
       %a.link-button.secondary{href: url_enroll_now, target: "_blank", rel: "noopener noreferrer"} Enroll now
 
-%section.bg-primary-light{style: "display: block !important"}
+%section.bg-primary-light.centered
   .wrapper
     %p.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool" target="_blank" rel="noopener noreferrer">CS Access Report</a>!
 
@@ -174,4 +176,4 @@ theme: responsive_full_width
           %a.link-button.has-external-link{href: "https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.9ub4frvyuqiy"} Learn more
   .clear
 
-= view :analytics_event_log_helper, event_name: AnalyticsConstants::ADMIN_PAGE_VISITED_EVENT
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::DISTRICT_PROGRAM_PAGE_VISITED_EVENT

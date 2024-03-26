@@ -140,14 +140,6 @@ class Pd::Enrollment < ApplicationRecord
     user_id
   end
 
-  def survey_class
-    if workshop.local_summer?
-      Pd::LocalSummerWorkshopSurvey
-    else
-      Pd::WorkshopSurvey
-    end
-  end
-
   # Filters a list of workshops user is enrolled in with (in)complete surveys (dependent on select_completed).
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
   # @param select_completed [Boolean] if true, return only enrollments with completed surveys,

@@ -15,7 +15,6 @@ import {
   BodyThreeText,
   BodyFourText,
   ExtraStrongText,
-  StrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -23,6 +22,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import EvidenceLevels from './EvidenceLevels';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import AiAssessment from './AiAssessment';
+import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
@@ -49,6 +49,7 @@ export default function LearningGoal({
     ERROR: 3,
   });
   const [isOpen, setIsOpen] = useState(false);
+  const [aiFeedback, setAiFeedback] = useState(-1);
   const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
@@ -57,7 +58,7 @@ export default function LearningGoal({
   const teacherFeedback = useRef('');
   const understandingLevel = useRef(invalidUnderstanding);
 
-  const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
+  const aiEnabled = !!(learningGoal.aiEnabled && teacherHasEnabledAi);
   const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
 
   // Timer variables for autosaving
@@ -217,7 +218,7 @@ export default function LearningGoal({
       <summary className={style.learningGoalHeader} onClick={handleClick}>
         <div className={style.learningGoalHeaderLeftSide}>
           {/*TODO: [DES-321] Label-two styles here*/}
-          <StrongText>{learningGoal.learningGoal}</StrongText>
+          <Heading6>{learningGoal.learningGoal}</Heading6>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && displayUnderstanding === invalidUnderstanding && (
@@ -264,24 +265,29 @@ export default function LearningGoal({
 
       {/*TODO: Pass through data to child component*/}
       <div>
-        {teacherHasEnabledAi &&
-          !!studentLevelInfo &&
-          !!aiEvalInfo &&
-          aiUnderstanding !== undefined && (
-            <div className={style.openedAiAssessment}>
-              <AiAssessment
-                isAiAssessed={learningGoal.aiEnabled}
-                studentName={studentLevelInfo.name}
-                aiConfidence={aiConfidence}
-                aiUnderstandingLevel={aiUnderstanding}
-                aiEvalInfo={aiEvalInfo}
-              />
-            </div>
-          )}
+        <AiAssessmentFeedbackContext.Provider
+          value={{aiFeedback, setAiFeedback}}
+        >
+          {teacherHasEnabledAi &&
+            !!studentLevelInfo &&
+            !!aiEvalInfo &&
+            aiUnderstanding !== undefined && (
+              <div className={style.openedAiAssessment}>
+                <AiAssessment
+                  isAiAssessed={learningGoal.aiEnabled}
+                  studentName={studentLevelInfo.name}
+                  aiConfidence={aiConfidence}
+                  aiUnderstandingLevel={aiUnderstanding}
+                  aiEvalInfo={aiEvalInfo}
+                />
+              </div>
+            )}
+        </AiAssessmentFeedbackContext.Provider>
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
             learningGoalKey={learningGoal.key}
+            isAiAssessed={aiEnabled}
             evidenceLevels={learningGoal.evidenceLevels}
             canProvideFeedback={canProvideFeedback}
             understanding={displayUnderstanding}

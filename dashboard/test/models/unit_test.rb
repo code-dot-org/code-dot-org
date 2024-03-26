@@ -2111,6 +2111,42 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal "test-localized-title-default", unit.localized_title
   end
 
+  test 'next_unit returns next unit if there is another unit in unit group' do
+    unit_group = create :unit_group
+    unit1 = create :unit
+    unit2 = create :unit
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
+
+    student = create :student
+
+    assert_equal unit2, unit1.next_unit(student)
+  end
+
+  test 'next_unit returns nil if there is no next unit in unit group' do
+    unit1 = create :unit
+    unit2 = create :unit
+    unit_group = create :unit_group
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
+
+    student = create :student
+
+    assert_nil unit2.next_unit(student)
+  end
+
+  test 'next_unit returns nil if not in a unit group' do
+    unit1 = create :unit, is_course: true
+
+    student = create :student
+
+    assert_nil unit1.next_unit(student)
+  end
+
   class MigratedScriptCopyTests < ActiveSupport::TestCase
     setup do
       Unit.any_instance.stubs(:write_script_json)
@@ -2395,6 +2431,20 @@ class UnitTest < ActiveSupport::TestCase
     end
 
     assert_includes error.message, 'Instruction type must be set on the unit if its a standalone unit.'
+  end
+
+  test 'finish_url returns unit group finish url if in a unit group' do
+    unit_group = create :unit_group
+    unit = create :script
+    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+    unit.reload
+
+    assert unit.finish_url.include?(unit_group.name)
+  end
+
+  test 'finish_url returns unit finish url if not in a unit group' do
+    unit = create :script, is_course: true
+    assert unit.finish_url.include?(unit.name)
   end
 
   private

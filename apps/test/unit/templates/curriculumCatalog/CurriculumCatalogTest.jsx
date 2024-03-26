@@ -1,11 +1,7 @@
-import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
+import React from 'react';
 import {Provider} from 'react-redux';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import {
-  setWindowLocation,
-  resetWindowLocation,
-} from '../../../../src/code-studio/utils';
+
 import responsive, {
   setResponsiveSize,
   ResponsiveSize,
@@ -17,6 +13,20 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage} from '@cdo/apps/utils';
+
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '../../../../src/code-studio/utils';
+import {assert, expect} from '../../../util/reconfiguredChai';
+import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
+import {sections} from '../studioHomepages/fakeSectionUtils';
+
 import {
   allCurricula,
   allShownCurricula,
@@ -32,10 +42,6 @@ import {
   noGradesCurriculum,
   noPathCurriculum,
 } from './CurriculumCatalogTestHelper';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {
@@ -45,6 +51,7 @@ describe('CurriculumCatalog', () => {
     isSignedOut: true,
     isInUS: true,
     isTeacher: false,
+    curriculaTaught: null,
   };
   let store;
 
@@ -67,6 +74,7 @@ describe('CurriculumCatalog', () => {
   afterEach(() => {
     restoreRedux();
     resetWindowLocation();
+    sessionStorage.removeItem('similarRecommenderResults');
     window.history.replaceState = replaceStateOrig;
   });
 
@@ -139,6 +147,51 @@ describe('CurriculumCatalog', () => {
         );
       }
     });
+  });
+
+  it('curriculum cards show Assign button for signed-out users', () => {
+    const props = {...defaultProps, isSignedOut: true};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    const numCardsWithAssign = screen.getAllByText('Assign', {
+      exact: false,
+    }).length;
+    expect(numCardsWithAssign).to.equal(allShownCurricula.length);
+    expect(screen.queryByText('Try Now')).to.be.null;
+  });
+
+  it('curriculum cards show Assign button for teachers', () => {
+    const props = {...defaultProps, isSignedOut: false, isTeacher: true};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    const numCardsWithAssign = screen.getAllByText('Assign', {
+      exact: false,
+    }).length;
+    expect(numCardsWithAssign).to.equal(allShownCurricula.length);
+    expect(screen.queryByText('Try Now')).to.be.null;
+  });
+
+  it('curriculum cards show Try Now button for students', () => {
+    const props = {...defaultProps, isSignedOut: false, isTeacher: false};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    const numCardsWithTryNow = screen.getAllByText('Try Now', {
+      exact: false,
+    }).length;
+    expect(numCardsWithTryNow).to.equal(allShownCurricula.length);
+    expect(screen.queryByText('Assign')).to.be.null;
   });
 
   it('filtering by grade level shows any shown course that supports one of the selected grades', () => {
@@ -603,6 +656,135 @@ describe('CurriculumCatalog', () => {
       fireEvent.click(translatedToggle);
       assert(!translatedToggle.checked);
       assert(replacedLocation.includes('translated=false'));
+    });
+  });
+
+  describe('with recommender test curricula', () => {
+    it('renders image and link of similar recommended curriculum', () => {
+      const props = {...defaultProps, curriculaData: FULL_TEST_COURSES};
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+      const quickViewButtons = screen.getAllByText('Quick View', {
+        exact: false,
+      });
+
+      for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
+        const currCurriculum = FULL_TEST_COURSES[i];
+
+        // Get the Similar Recommended Curriculum for the current test curriculum
+        const recommendedSimilarCurriculum = getSimilarRecommendations(
+          FULL_TEST_COURSES,
+          currCurriculum.key,
+          null
+        )[0];
+
+        // Open expanded card of the current test curriculum
+        fireEvent.click(quickViewButtons[i]);
+        screen.getByText(currCurriculum.description);
+
+        // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
+        // Image's alt text is the curriculum's display name.
+        screen.getByAltText(recommendedSimilarCurriculum.display_name);
+
+        assert(
+          document
+            .querySelector('#similarCurriculumButton')
+            .innerHTML.includes(recommendedSimilarCurriculum.display_name)
+        );
+      }
+    });
+
+    it('does not recommend similar curriculum the user has already taught', () => {
+      // fullTestCourse5 is the top-ranked similar curriculum for 2 other curricula
+      const curriculaTaughtBefore = [FULL_TEST_COURSES[4].course_offering_id];
+      const props = {
+        ...defaultProps,
+        curriculaData: FULL_TEST_COURSES,
+        curriculaTaught: curriculaTaughtBefore,
+      };
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+      const quickViewButtons = screen.getAllByText('Quick View', {
+        exact: false,
+      });
+
+      for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
+        const currCurriculum = FULL_TEST_COURSES[i];
+
+        // Get the Similar Recommended Curriculum for the current test curriculum
+        const similarCurriculumRecommendations = getSimilarRecommendations(
+          FULL_TEST_COURSES,
+          currCurriculum.key,
+          curriculaTaughtBefore
+        );
+
+        // Open expanded card of the current test curriculum
+        fireEvent.click(quickViewButtons[i]);
+        screen.getByText(currCurriculum.description);
+
+        // Check that the top-recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
+        // If the top-recommended similar curriculum was previously taught by the user, then check that the image and link are of the
+        // next-most-recommended similar curriculum.
+        let recommendedSimilarCurriculum = similarCurriculumRecommendations[0];
+        if (
+          curriculaTaughtBefore.includes(
+            recommendedSimilarCurriculum.course_offering_id
+          )
+        ) {
+          recommendedSimilarCurriculum = similarCurriculumRecommendations[1];
+        }
+
+        // Ensure none of the recommendations are ones the user has taught before
+        assert(
+          curriculaTaughtBefore[0].key !== recommendedSimilarCurriculum.key
+        );
+
+        // Image's alt text is the curriculum's display name.
+        screen.getByAltText(recommendedSimilarCurriculum.display_name);
+        assert(
+          document
+            .querySelector('#similarCurriculumButton')
+            .innerHTML.includes(recommendedSimilarCurriculum.display_name)
+        );
+      }
+    });
+
+    it('sets sessionStorage for Similar Curriculum Recommender result', () => {
+      const props = {...defaultProps, curriculaData: FULL_TEST_COURSES};
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+      const firstQuickViewButton = screen.getAllByText('Quick View', {
+        exact: false,
+      })[0];
+
+      // Get the Similar Recommended Curriculum for the first test curriculum
+      const firstTestCurriculum = FULL_TEST_COURSES[0];
+      const similarCurriculumRecommendations = getSimilarRecommendations(
+        FULL_TEST_COURSES,
+        firstTestCurriculum.key,
+        null
+      );
+
+      // Open expanded card of the first test curriculum
+      fireEvent.click(firstQuickViewButton);
+      screen.getByText(firstTestCurriculum.description);
+
+      // Check that sessionStorage has result of Similar Curriculum Recommender
+      const storedRecommenderResults = JSON.parse(
+        tryGetSessionStorage('similarRecommenderResults', '{}')
+      );
+      expect(storedRecommenderResults[firstTestCurriculum.key].key).to.equal(
+        similarCurriculumRecommendations[0].key
+      );
     });
   });
 });

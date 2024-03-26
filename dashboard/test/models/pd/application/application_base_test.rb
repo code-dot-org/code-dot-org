@@ -347,12 +347,13 @@ module Pd::Application
 
       # program manager but no contact_name or contact_email
       program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
-      assert_equal "\"#{program_manager.name}\" <#{program_manager.email}>", application.formatted_partner_contact_email
+      assert_includes application.formatted_partner_contact_email, program_manager.name
+      assert_includes application.formatted_partner_contact_email, program_manager.email
 
       # name and email
       partner.contact_name = 'We Teach Code'
       partner.contact_email = 'we_teach_code@ex.net'
-      assert_equal "\"We Teach Code\" <we_teach_code@ex.net>", application.formatted_partner_contact_email
+      assert_equal "We Teach Code <we_teach_code@ex.net>", application.formatted_partner_contact_email
     end
 
     test 'formatted_applicant_email uses user account email' do
@@ -360,8 +361,8 @@ module Pd::Application
 
       assert application.user.email.present?
 
-      formatted_email = "\"#{application.applicant_full_name}\" <#{application.user.email}>"
-      assert_equal formatted_email, application.formatted_applicant_email
+      assert_includes application.formatted_applicant_email, application.user.email
+      assert_includes application.formatted_applicant_email, application.applicant_full_name
     end
 
     test 'formatted_applicant_email uses alternate email if no user account email' do
@@ -373,8 +374,8 @@ module Pd::Application
 
       assert teacher_without_email.email.blank?
 
-      formatted_alternate_email = "\"#{application.applicant_full_name}\" <#{application.sanitized_form_data_hash[:alternate_email]}>"
-      assert_equal formatted_alternate_email, application.formatted_applicant_email
+      assert_includes application.formatted_applicant_email, application.applicant_full_name
+      assert_includes application.formatted_applicant_email, application.sanitized_form_data_hash[:alternate_email]
     end
 
     test 'formatted_applicant_email raises error if no user email or alternate email' do

@@ -1,9 +1,9 @@
 import React from 'react';
 import Link, {LinkProps} from './index';
-import {Meta, Story} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Link Component',
+  title: 'DesignSystem/Link', // eslint-disable-line storybook/no-title-property-in-meta
   component: Link,
 } as Meta;
 
@@ -12,9 +12,9 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: Story<LinkProps> = args => <Link {...args} />;
+const SingleTemplate: StoryFn<LinkProps> = args => <Link {...args} />;
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: LinkProps[];
 }> = args => (
   <>

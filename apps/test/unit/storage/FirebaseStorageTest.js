@@ -1,3 +1,5 @@
+// TODO: post-firebase-cleanup, remove this file #56994
+
 import {expect} from '../../util/reconfiguredChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {WarningType} from '@cdo/apps/storage/constants';

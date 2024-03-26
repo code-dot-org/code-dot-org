@@ -11,7 +11,7 @@ export default class ProjectHeader extends React.Component {
   static propTypes = {
     canViewAdvancedTools: PropTypes.bool,
     projectCount: PropTypes.number,
-    showDeprecatedCalcAndEvalWarning: PropTypes.bool,
+    showPublicGalleryUpdatedInfo: PropTypes.bool,
   };
 
   render() {
@@ -28,12 +28,12 @@ export default class ProjectHeader extends React.Component {
           backgroundImageStyling={{backgroundPosition: '90% 40%'}}
         />
         <div className={'container main'}>
-          {this.props.showDeprecatedCalcAndEvalWarning && (
+          {this.props.showPublicGalleryUpdatedInfo && (
             <Notification
-              type={NotificationType.warning}
-              notice={i18n.deprecatedCalcAndEvalWarning()}
-              details={i18n.deprecatedCalcAndEvalDetails()}
-              dismissible={false}
+              type={NotificationType.information}
+              notice={i18n.publicGalleryUpdatedInfo()}
+              details={i18n.publicGalleryUpdatedDetails()}
+              dismissible={true}
             />
           )}
           <ProjectsPromo />

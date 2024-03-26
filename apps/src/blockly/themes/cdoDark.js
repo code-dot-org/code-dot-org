@@ -1,8 +1,8 @@
 import GoogleBlockly from 'blockly/core';
 import DarkTheme from '@blockly/theme-dark';
 import fontConstants from '@cdo/apps/fontConstants';
-import cdoBlockStyles from './cdoBlockStyles.mjs';
-import {Themes} from '../constants.js';
+import cdoBlockStyles from './cdoBlockStyles.js';
+import {Themes} from '../constants';
 import color from '../../util/color';
 
 // https://github.com/google/blockly-samples/blob/master/plugins/theme-dark/src/index.js

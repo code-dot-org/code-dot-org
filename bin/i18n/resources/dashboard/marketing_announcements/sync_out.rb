@@ -12,15 +12,14 @@ module I18n
           MARKETING_ANNOUNCEMENTS_TYPE = 'marketing_announcements'.freeze
 
           def process(language)
-            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
+            crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], FILE_PATH)
             return unless File.file?(crowdin_file_path)
 
-            unless I18nScriptUtils.source_lang?(language)
-              distribute_localization(language, crowdin_file_path)
-            end
+            distribute_localization(language, crowdin_file_path)
 
-            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME)
+            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH)
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
+            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
           private

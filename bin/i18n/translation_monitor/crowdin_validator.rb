@@ -240,8 +240,8 @@ class CrowdinValidator
     # Combine error messages found by the validation functions with
     # other useful information to help translators fixing errors faster.
     crowdin_editor_code = languages[translation.crowdin_language_id]['editor_code']
-    project_name = Crowdin::Client::CDO_PROJECT_IDS.key(source.project_id)
-    project_source_language = Crowdin::Client::CDO_PROJECT_SOURCE_LANGUAGES[project_name]
+    project_name, project_configs = CDO.crowdin_projects.find {|_p, configs| configs['id'] == source.project_id.to_i}
+    project_source_language = project_configs['source_language']
     crowdin_link = "https://crowdin.com/translate/#{project_name}/#{source.file_id}/#{project_source_language}-#{crowdin_editor_code}##{source.id}"
     common_info = {
       string_id: source.id,

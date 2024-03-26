@@ -12,9 +12,10 @@ import teacherSections, {
   setSections,
   selectSection,
   setRosterProvider,
-  setCourseOfferings,
+  setRosterProviderName,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
+  sectionProviderName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -36,10 +37,10 @@ const scriptData = JSON.parse(script.dataset.dashboard);
 const {
   section,
   sections,
-  validCourseOfferings,
   localeCode,
   hasSeenStandardsReportInfo,
   coursesWithProgress,
+  canViewStudentAIChatMessages,
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -63,8 +64,8 @@ $(document).ready(function () {
   store.dispatch(selectSection(section.id));
   store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   store.dispatch(setRosterProvider(section.login_type));
+  store.dispatch(setRosterProviderName(section.login_type_name));
   store.dispatch(setLoginType(section.login_type));
-  store.dispatch(setCourseOfferings(validCourseOfferings));
   store.dispatch(setLocaleCode(localeCode));
 
   // DCDO Flag - show/hide Lock Section field
@@ -90,6 +91,8 @@ $(document).ready(function () {
   ].reverse();
   store.dispatch(setCoursesWithProgress(reorderedCourses));
 
+  const showAITutorTab = canViewStudentAIChatMessages;
+
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
@@ -103,6 +106,11 @@ $(document).ready(function () {
               sectionName={section.name}
               studentCount={section.students.length}
               coursesWithProgress={coursesWithProgress}
+              showAITutorTab={showAITutorTab}
+              sectionProviderName={sectionProviderName(
+                store.getState(),
+                section.id
+              )}
             />
           )}
         />

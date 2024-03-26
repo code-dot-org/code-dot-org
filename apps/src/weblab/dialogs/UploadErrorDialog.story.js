@@ -3,7 +3,6 @@ import {action} from '@storybook/addon-actions';
 import UploadErrorDialog from './UploadErrorDialog';
 
 export default {
-  title: 'UploadErrorDialog',
   component: UploadErrorDialog,
 };
 

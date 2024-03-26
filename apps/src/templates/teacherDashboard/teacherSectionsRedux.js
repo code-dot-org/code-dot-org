@@ -1,12 +1,14 @@
-import _ from 'lodash';
 import $ from 'jquery';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
+
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -93,6 +95,8 @@ const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
 /** Sets a section's roster provider, which must be of type OAuthSectionTypes */
 const SET_ROSTER_PROVIDER = 'teacherSections/SET_ROSTER_PROVIDER';
+/** Sets a section's roster provider name which should be shown to users */
+const SET_ROSTER_PROVIDER_NAME = 'teacherSections/SET_ROSTER_PROVIDER_NAME';
 /** Opens the third-party roster UI */
 const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
 /** Reports available rosters have been loaded */
@@ -129,6 +133,10 @@ export const setAuthProviders = providers => ({
 export const setRosterProvider = rosterProvider => ({
   type: SET_ROSTER_PROVIDER,
   rosterProvider,
+});
+export const setRosterProviderName = rosterProviderName => ({
+  type: SET_ROSTER_PROVIDER_NAME,
+  rosterProviderName,
 });
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
@@ -208,7 +216,7 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * Removes null values from stringified object before sending firehose record
  */
 function removeNullValues(key, val) {
-  if (val === null || typeof val === undefined) {
+  if (val === null || typeof val === 'undefined') {
     return undefined;
   }
   return val;
@@ -441,6 +449,14 @@ export const asyncLoadSectionData = id => dispatch => {
     });
 };
 
+export const asyncLoadCourseOfferings = () => dispatch => {
+  fetchJSON('/dashboardapi/sections/valid_course_offerings')
+    .then(offerings => dispatch(setCourseOfferings(offerings)))
+    .catch(err => {
+      console.error(err.message);
+    });
+};
+
 /**
  * Load coteacher invites
  */
@@ -615,6 +631,7 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
   courseOfferings: {},
+  courseOfferingsAreLoaded: false,
   // The participant types the user can create sections for
   availableParticipantTypes: [],
   // Mapping from sectionId to section object
@@ -707,6 +724,7 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       courseOfferings: action.courseOfferings,
+      courseOfferingsAreLoaded: true,
     };
   }
 
@@ -1112,6 +1130,13 @@ export default function teacherSections(state = initialState, action) {
     }
   }
 
+  if (action.type === SET_ROSTER_PROVIDER_NAME) {
+    return {
+      ...state,
+      rosterProviderName: action.rosterProviderName,
+    };
+  }
+
   //
   // Roster import action types
   //
@@ -1201,6 +1226,10 @@ export function rosterProvider(state) {
   return getRoot(state).rosterProvider;
 }
 
+export function rosterProviderName(state) {
+  return getRoot(state).rosterProviderName;
+}
+
 export function sectionCode(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).code;
 }
@@ -1211,6 +1240,10 @@ export function sectionName(state, sectionId) {
 
 export function ltiSyncResult(state) {
   return getRoot(state).ltiSyncResult;
+}
+
+export function syncEnabled(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).syncEnabled;
 }
 
 export function sectionUnitName(state, sectionId) {
@@ -1229,6 +1262,13 @@ export function selectedSection(state) {
 export function sectionProvider(state, sectionId) {
   if (isSectionProviderManaged(state, sectionId)) {
     return rosterProvider(state);
+  }
+  return null;
+}
+
+export function sectionProviderName(state, sectionId) {
+  if (isSectionProviderManaged(state, sectionId)) {
+    return rosterProviderName(state);
   }
   return null;
 }
@@ -1258,7 +1298,7 @@ export function getVisibleSections(state) {
  * @param {number[]} sectionIds - List of section ids we want row data for
  */
 export function getSectionRows(state, sectionIds) {
-  const {sections, courseOfferings} = getRoot(state);
+  const {sections, courseOfferings, courseOfferingsAreLoaded} = getRoot(state);
   return sectionIds.map(id => ({
     ..._.pick(sections[id], [
       'id',
@@ -1274,6 +1314,7 @@ export function getSectionRows(state, sectionIds) {
     ]),
     assignmentNames: assignmentNames(courseOfferings, sections[id]),
     assignmentPaths: assignmentPaths(courseOfferings, sections[id]),
+    courseOfferingsAreLoaded,
   }));
 }
 
@@ -1313,6 +1354,7 @@ export const sectionFromServerSection = serverSection => ({
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
   sectionInstructors: serverSection.section_instructors,
+  syncEnabled: serverSection.sync_enabled,
 });
 
 /**

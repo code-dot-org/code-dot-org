@@ -2,13 +2,16 @@
 #
 # Table name: learning_goal_ai_evaluations
 #
-#  id                      :bigint           not null, primary key
-#  rubric_ai_evaluation_id :bigint           not null
-#  learning_goal_id        :bigint           not null
-#  understanding           :integer
-#  ai_confidence           :integer
-#  created_at              :datetime         not null
-#  updated_at              :datetime         not null
+#  id                        :bigint           not null, primary key
+#  rubric_ai_evaluation_id   :bigint           not null
+#  learning_goal_id          :bigint           not null
+#  understanding             :integer
+#  ai_confidence             :integer
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  observations              :text(65535)
+#  ai_confidence_exact_match :integer
+#  evidence                  :text(65535)
 #
 # Indexes
 #
@@ -33,6 +36,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
   }.freeze
 
   validates :ai_confidence, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
+  validates :ai_confidence_exact_match, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
   validates :understanding, presence: true, inclusion: {in: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.values}
 
   def summarize_for_instructor
@@ -40,7 +44,12 @@ class LearningGoalAiEvaluation < ApplicationRecord
       id: id,
       understanding: understanding,
       learning_goal_id: learning_goal_id,
+      observations: observations,
+      evidence: evidence,
+      # temporarily include this until client code is updated to use aiConfidencePassFail
       ai_confidence: ai_confidence,
+      aiConfidencePassFail: ai_confidence,
+      aiConfidenceExactMatch: ai_confidence_exact_match,
     }
   end
 
@@ -57,7 +66,10 @@ class LearningGoalAiEvaluation < ApplicationRecord
       level_name: level.name,
       learning_goal: learning_goal.learning_goal,
       understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.invert[understanding].to_s,
+      observations: observations,
+      evidence: evidence,
       ai_confidence: AI_CONFIDENCE_LEVELS.invert[ai_confidence].to_s,
+      ai_confidence_exact_match: AI_CONFIDENCE_LEVELS.invert[ai_confidence_exact_match].to_s,
     }
   end
 end

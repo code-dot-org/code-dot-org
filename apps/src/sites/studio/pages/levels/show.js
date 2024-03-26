@@ -12,8 +12,10 @@ import instructions, {
   setCodeReviewEnabledForLevel,
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
+import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import AITutorFloatingActionButton from '@cdo/apps/code-studio/components/aiTutor/aiTutorFloatingActionButton';
 
 $(document).ready(initPage);
 
@@ -22,6 +24,7 @@ function initPage() {
   const config = JSON.parse(script.dataset.level);
 
   registerReducers({instructions});
+
   // this is the common js entry point for level pages
   // which is why ttsAutoplay is set here
   const ttsAutoplayEnabled = config.tts_autoplay_enabled;
@@ -54,6 +57,32 @@ function initPage() {
       <UnversionedScriptRedirectDialog />,
       unversionedRedirectDialogMountPoint
     );
+  }
+
+  if (hasScriptData('script[data-aitutordata]')) {
+    const aiTutorData = getScriptData('aitutordata');
+    const {levelId, type, hasValidation, isAssessment, isProjectBacked} =
+      aiTutorData;
+    const level = {
+      id: levelId,
+      type: type,
+      hasValidation: hasValidation,
+      isAssessment: isAssessment,
+      isProjectBacked: isProjectBacked,
+    };
+    getStore().dispatch(setLevel(level));
+    getStore().dispatch(setScriptId(aiTutorData.scriptId));
+    const aiTutorFabMountPoint = document.getElementById(
+      'ai-tutor-fab-mount-point'
+    );
+    if (aiTutorFabMountPoint) {
+      ReactDOM.render(
+        <Provider store={getStore()}>
+          <AITutorFloatingActionButton />
+        </Provider>,
+        aiTutorFabMountPoint
+      );
+    }
   }
 
   const inRubricsPilot =

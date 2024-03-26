@@ -16,7 +16,7 @@ social:
 
 # Programem amb poesia
 
-{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "Un adorable pop rosa amb un barret lila que declama un poema sota un focus a l'escenari, amb un tamboret i un micròfon", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "L'art del poema", left_description: "Afegeix efectes artístics i animacions a un poema clàssic en aquesta activitat de l'Hora del Codi!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Començar", right_heading: "Programem amb poesia", right_description: "Relacioneu la informàtica i la poesia a l'aula amb aquesta sèrie de lliçons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Veure mòdul" }}
+{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg “, alt_text: “Un bonic personatge de pop rosa que porta un barret de gorra morat interpretant un poema sota un focus en un escenari amb tamboret i micròfon”, text_color: “blanc”, box_background_color: “rgb (0,0,0,0.4)”, left_header: “Art del poema”, left_description: “Add art i animació a un poema clàssic en aquesta activitat de l'Hora del Codi!” , left_spec: "”, left_button_url: "https://studio.code.org/s/poem-art-2021/reset “, left_button_text: “Inici”, right_header: “Codificació amb Poesia”, right_description: “Connecta la informàtica i la poesia a la teva aula amb aquesta sèrie de lliçons. “, right_specs:"”, right_button_url: "https://studio.code.org/s/poetry?viewAs=Instructor “, right_button_text: “Veure mòdul”}}
 
 ## Més informació sobre Programem amb poesia
 

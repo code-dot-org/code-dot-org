@@ -56,11 +56,11 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
 
-    test_user_gets_response_for :index, response: :success, user: :user, queries: 4
+    test_user_gets_response_for :index, response: :success, user: :user, queries: 6
 
     test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
 
-    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
+    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 4
   end
 
   class CachedQueryCounts < ActionController::TestCase
@@ -139,6 +139,16 @@ class CoursesControllerTest < ActionController::TestCase
     create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
     get :show, params: {course_name: 'csd'}
     assert_redirected_to '/courses/csd-2019'
+  end
+
+  test "show: redirect to latest stable version in course family with params" do
+    offering = create :course_offering, key: 'csp'
+    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
+    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
+    get :show, params: {course_name: 'csp', url_param: 'foo'}
+    assert_redirected_to '/courses/csp-2019?url_param=foo'
   end
 
   test "get_unit_group for family name with no stable versions does not redirect" do

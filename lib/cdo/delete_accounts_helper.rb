@@ -71,6 +71,8 @@ class DeleteAccountsHelper
     end
 
     # Clear Firebase contents for user's channels
+    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
     @log.puts "Deleting Firebase contents for #{channel_count} channels"
     FirebaseHelper.delete_channels encrypted_channel_ids
 
@@ -199,7 +201,6 @@ class DeleteAccountsHelper
 
     unless pd_enrollment_ids.empty?
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
-      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
     end
@@ -307,6 +308,13 @@ class DeleteAccountsHelper
       feedback.save!
     end
     @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
+  end
+
+  def delete_ai_tutor_interactions(user_id)
+    chat_messages_to_delete = AiTutorInteraction.where(user_id: user_id)
+    count = chat_messages_to_delete.count
+    chat_messages_to_delete.in_batches.destroy_all
+    @log.puts "Deleted #{count} AI Tutor Interactions" if count > 0
   end
 
   def clean_and_destroy_code_reviews(user_id)
@@ -428,6 +436,7 @@ class DeleteAccountsHelper
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
+    delete_ai_tutor_interactions(user.id)
     clean_and_destroy_pd_content(user.id, user_email)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)

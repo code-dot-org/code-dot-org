@@ -70,16 +70,17 @@ theme: responsive
 
 Para tem a melhor experiência possível com todo o conteúdo do Code.org, recomendamos um consulta com o departamento de TI da sua escola ou distrito, para se certificar de que os sites a seguir são permitidos não estão bloqueados.
 
-| Prioridade                                                                            | URL                                                                                                        |
-| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Obrigatório**                                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Opcional**                                                                          | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Para utilizar nossos vídeos hospedados no YouTube (Modo de privacidade otimizada)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Para utilizar os vídeos hospedados no Code.org**                                    | `https://videos.code.org`                                                                                  |
-| **Para utilizar o Simulador de internet**                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Para utilizar o Laboratório de internet**                                           | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Para utilizar o botão Compartilhar sala de aula no Google**                         | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                           | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Prioridade                                                                                                        | URL                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Obrigatório**                                                                                                   | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Para garantir que os sistemas CAPTCHA possam distinguir seu uso da atividade fraudulenta automatizada (“bot”)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Opcional**                                                                                                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Para utilizar nossos vídeos hospedados no YouTube (Modo de privacidade otimizada)**                             | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Para utilizar os vídeos hospedados no Code.org**                                                                | `https://videos.code.org`                                                                                  |
+| **Para utilizar o Simulador de internet**                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Para utilizar o Laboratório de internet**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Para utilizar o botão Compartilhar sala de aula no Google**                                                     | `https://apis.google.com`                                                                                  |
+| **Para usar conjuntos de dados do App Lab**                                                                       | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Detalhes sobre a compatibilidade de dispositivos móveis e tablets
 
@@ -104,7 +105,7 @@ Antes de começar os cursos on-line do Code.org, teste a reprodução do vídeo 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

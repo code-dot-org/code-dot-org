@@ -22,8 +22,7 @@ module I18n
           private
 
           def distribute_ml_playground(language)
-            crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, ML_PLAYGROUND_DIR_NAME)
-            return if I18nScriptUtils.source_lang?(language)
+            crowdin_locale_dir = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME, ML_PLAYGROUND_DIR_NAME)
 
             js_locale = I18nScriptUtils.to_js_locale(language[:locale_s])
             target_i18n_file_path = CDO.dir("apps/i18n/mlPlayground/#{js_locale}.json")
@@ -59,7 +58,7 @@ module I18n
           ensure
             i18n_locale_dir = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, ML_PLAYGROUND_DIR_NAME)
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir) if File.directory?(crowdin_locale_dir)
-            I18nScriptUtils.remove_empty_dir(I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME))
+            I18nScriptUtils.remove_empty_dir(I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME))
           end
 
           def blockly_core_i18n_data(crowdin_file_path)
@@ -80,9 +79,8 @@ module I18n
           end
 
           def distribute_blockly_core(language)
-            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], BLOCKLY_CORE_DIR_NAME, BLOCKLY_CORE_FILE_NAME)
+            crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], BLOCKLY_CORE_DIR_NAME, BLOCKLY_CORE_FILE_NAME)
             return unless File.exist?(crowdin_file_path)
-            return if I18nScriptUtils.source_lang?(language)
 
             i18n_data = blockly_core_i18n_data(crowdin_file_path)
 

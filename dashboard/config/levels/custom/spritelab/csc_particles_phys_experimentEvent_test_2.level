@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2023-10-26T21:43:24.000Z",
   "level_num": "custom",
@@ -12,12 +11,11 @@
     "block_pools": [
       "GamelabJr",
       "ParticlesBlocks",
+      "DansBlocks",
       "KatiesBlocks"
     ],
     "helper_libraries": [
       "NativeSpriteLab",
-      "zCriterionValidationLibrary",
-      "zDanValidationHelpers",
       "zParticlesModule"
     ],
     "use_default_sprites": "false",
@@ -52,12 +50,10 @@
     ],
     "validation_code": "//validation\r\n\r\nif(World.frameCount == 1) {\r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n  setupPrevious(); \r\n\r\n addCriteria(function() {\r\n    //Checks if flame touches glass of water\r\n    return checkUniqueTouchEvents(1);\r\n  }, \"addWhenTouchesEvent\"); //\r\n  \r\n  addCriteria(function(){\r\n    //checks for costume change\r\n    return checkNotDefaultCostume(spriteIds[2], \"water_glass\");\r\n  }, \"madeUpString\"); // should be \"changeOrSetCostumeEvent\"\r\n\r\n}\r\ngetHelperVars();\r\n// drawHandsOnUnclickedSprites() //uncomment on levels where the user needs to click sprites to advance\r\ncheck();\r\nupdatePrevious();",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-10-26T21:43:24.668+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_experimentEvent_test\\\"\"],\"cloned_from\":\"csc_particles_phys_experimentEvent_test\"},{\"changed_at\":\"2023-10-26 21:43:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-26 21:47:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 18:58:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-10-26T21:43:24.668+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_experimentEvent_test\\\"\"],\"cloned_from\":\"csc_particles_phys_experimentEvent_test\"},{\"changed_at\":\"2023-10-26 21:43:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-26 21:47:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 18:58:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-01-08 17:54:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-01-08 17:55:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"helper_libraries\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-01-08 17:55:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-01-08 17:56:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-01-08 17:57:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-01-08 17:57:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-01-08 17:59:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -68,6 +64,12 @@
           <next>
             <block type="procedures_callnoreturn" editable="false">
               <mutation name="LabSetup"/>
+              <next>
+                <block type="KatiesBlocks_goldilocks">
+                  <field name="CONDITION">"solid"</field>
+                  <field name="SPRITE">"microscope_outline"</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -1588,6 +1590,31 @@
           <value name="THIS">
             <block type="gamelab_allSpritesWithAnimation">
               <field name="ANIMATION">"water_glass"</field>
+            </block>
+          </value>
+        </block>
+        <block type="DansBlocks_testShowVariable">
+          <field name="SOMENUMBER">i</field>
+          <field name="OPT">"large"</field>
+          <field name="COLOR">"blue"</field>
+        </block>
+        <block type="variables_set">
+          <field name="VAR">i</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+        </block>
+        <block type="KatiesBlocks_goldilocks">
+          <field name="CONDITION">"solid"</field>
+          <field name="SPRITE">"microscope_outline"</field>
+        </block>
+        <block type="math_change">
+          <field name="VAR">i</field>
+          <value name="DELTA">
+            <block type="math_number">
+              <field name="NUM">1</field>
             </block>
           </value>
         </block>

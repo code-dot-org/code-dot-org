@@ -1,74 +1,70 @@
-/**
- * Teacher Landing Page
- */
+// My Professional Learning landing page
+// studio.code.org/my-professional-learning
 
 import PropTypes from 'prop-types';
-
-import React, {Component} from 'react';
-import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
-import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import {EnrolledWorkshops} from './EnrolledWorkshops';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import React from 'react';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
+import {EnrolledWorkshops} from './EnrolledWorkshops';
+import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import style from './landingPage.module.scss';
 
-export default class LandingPage extends Component {
-  static propTypes = {
-    lastWorkshopSurveyUrl: PropTypes.string,
-    lastWorkshopSurveyCourse: PropTypes.string,
-    deeperLearningCourseData: PropTypes.array,
-  };
+export default function LandingPage({
+  lastWorkshopSurveyUrl,
+  lastWorkshopSurveyCourse,
+  deeperLearningCourseData,
+  currentYearApplicationId,
+  workshopsAsParticipant,
+  plCoursesStarted,
+}) {
+  const showGettingStartedBanner =
+    !currentYearApplicationId &&
+    workshopsAsParticipant?.length === 0 &&
+    plCoursesStarted?.length === 0;
 
-  render() {
-    return (
-      <div>
-        <HeaderImage />
-        <br />
-        {this.props.lastWorkshopSurveyUrl && (
+  return (
+    <>
+      <HeaderBannerNoImage
+        headingText={i18n.professionalLearning()}
+        backgroundColor={color.light_gray_50}
+      />
+      <main className={style.wrapper}>
+        {showGettingStartedBanner && <GettingStartedBanner />}
+        {lastWorkshopSurveyUrl && (
           <LastWorkshopSurveyBanner
             subHeading={i18n.plLandingSubheading()}
             description={i18n.plLandingDescription({
-              course: this.props.lastWorkshopSurveyCourse,
+              course: lastWorkshopSurveyCourse,
             })}
-            surveyUrl={this.props.lastWorkshopSurveyUrl}
+            surveyUrl={lastWorkshopSurveyUrl}
           />
         )}
         <EnrolledWorkshops />
-        {this.props.deeperLearningCourseData && (
-          <ProfessionalLearningCourseProgress
-            deeperLearningCourseData={this.props.deeperLearningCourseData}
-          />
+        {deeperLearningCourseData?.length >= 1 && (
+          <div>
+            <Heading2>Online Professional Learning Courses</Heading2>
+            <ProfessionalLearningCourseProgress
+              deeperLearningCourseData={deeperLearningCourseData}
+            />
+          </div>
         )}
-      </div>
-    );
-  }
+      </main>
+    </>
+  );
 }
 
-const styles = {
-  headerImage: {
-    width: '100%',
-    height: '300px',
-    background: `url(/blockly/media/BannerKids.png) no-repeat`,
-    backgroundSize: 'cover',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  headerText: {
-    backgroundColor: 'rgba(0, 0, 0, .5)',
-    alignSelf: 'flex-end',
-    width: '100%',
-    textAlign: 'center',
-    padding: '30px',
-    fontSize: '40px',
-    color: 'white',
-  },
+LandingPage.propTypes = {
+  lastWorkshopSurveyUrl: PropTypes.string,
+  lastWorkshopSurveyCourse: PropTypes.string,
+  deeperLearningCourseData: PropTypes.array,
+  currentYearApplicationId: PropTypes.number,
+  workshopsAsParticipant: PropTypes.array,
+  plCoursesStarted: PropTypes.array,
 };
-
-const HeaderImage = () => (
-  <div style={styles.headerImage}>
-    <div style={styles.headerText}>{i18n.plLandingHeading()}</div>
-  </div>
-);
 
 export const LastWorkshopSurveyBanner = ({
   subHeading,
@@ -76,8 +72,6 @@ export const LastWorkshopSurveyBanner = ({
   surveyUrl,
 }) => (
   <TwoColumnActionBlock
-    isRtl={false}
-    responsiveSize="lg"
     imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
     subHeading={subHeading}
     description={description}
@@ -90,8 +84,26 @@ export const LastWorkshopSurveyBanner = ({
     ]}
   />
 );
+
 LastWorkshopSurveyBanner.propTypes = {
   subHeading: PropTypes.string,
   description: PropTypes.string,
   surveyUrl: PropTypes.string,
 };
+
+export const GettingStartedBanner = () => (
+  <TwoColumnActionBlock
+    imageUrl={pegasus(
+      '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
+    )}
+    heading={i18n.plLandingGettingStartedHeading()}
+    subHeading={i18n.plLandingGettingStartedSubHeading()}
+    description={i18n.plLandingGettingStartedDescription()}
+    buttons={[
+      {
+        url: pegasus('/educate/professional-learning'),
+        text: i18n.plLandingGettingStartedButton(),
+      },
+    ]}
+  />
+);

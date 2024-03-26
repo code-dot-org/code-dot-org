@@ -3,7 +3,6 @@ import {action} from '@storybook/addon-actions';
 import ResetSuccessDialog from './ResetSuccessDialog';
 
 export default {
-  title: 'ResetSuccessDialog',
   component: ResetSuccessDialog,
 };
 

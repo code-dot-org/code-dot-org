@@ -1,12 +1,14 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/reconfiguredChai';
+
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   stubRedux,
   restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import reducer, {
   __testInterface__,
   setAuthProviders,
@@ -41,8 +43,8 @@ import reducer, {
   assignToSection,
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const {
   EDIT_SECTION_SUCCESS,
@@ -464,6 +466,7 @@ describe('teacherSectionsRedux', () => {
             instructor_email: 'coteacher@code.org',
           },
         ],
+        syncEnabled: undefined,
       });
     });
   });
@@ -782,6 +785,7 @@ describe('teacherSectionsRedux', () => {
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
           sectionInstructors: [],
+          syncEnabled: undefined,
         },
       });
     });
@@ -1681,6 +1685,7 @@ describe('teacherSectionsRedux', () => {
           loginType: 'picture',
           studentCount: 10,
           code: 'PMTKVH',
+          courseOfferingsAreLoaded: true,
           grades: ['2'],
           participantType: 'student',
           providerManaged: false,
@@ -1695,6 +1700,7 @@ describe('teacherSectionsRedux', () => {
           loginType: 'picture',
           studentCount: 1,
           code: 'DWGMFX',
+          courseOfferingsAreLoaded: true,
           grades: ['11'],
           participantType: 'student',
           providerManaged: false,

@@ -74,13 +74,14 @@ class AnnouncementsTest < ActiveSupport::TestCase
   end
 
   test 'returns nil for announcement behind false dcdo flag' do
-    DCDO.instance_variable_get(:@datastore_cache).set('announcement-dcdo-test', false)
+    DCDO.stubs(:get).with('announcement-dcdo-test', false).returns(false)
     announcement = Announcements.get_announcement_for_page("/dcdo-test")
     assert_nil announcement
+    DCDO.unstub(:get)
   end
 
   test 'gets announcement for banner behind true dcdo flag' do
-    DCDO.instance_variable_get(:@datastore_cache).set('announcement-dcdo-test', true)
+    DCDO.stubs(:get).with('announcement-dcdo-test', false).returns(true)
     announcement = Announcements.get_announcement_for_page("/dcdo-test")
     assert announcement
     assert_equal("https://code.org/images/professional-learning-2019-closing-soon.png", announcement[:image])
@@ -93,5 +94,6 @@ class AnnouncementsTest < ActiveSupport::TestCase
     assert_equal("https://code.org/educate/professional-learning", announcement[:buttonUrl2])
     assert_equal("teacher-apps-closing-2020-sign-up-2", announcement[:buttonId2])
     assert_equal("dcdo-flag-test", announcement[:id])
+    DCDO.unstub(:get)
   end
 end

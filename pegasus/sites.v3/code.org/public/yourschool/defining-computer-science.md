@@ -5,7 +5,10 @@ social:
   "og:title": "Does your school teach computer science?"
   "og:description": "Expand computer science at your school or district. Join the thousands of schools who have already incorporated high quality computer science education into their curriculum and provide opportunities for the students in your local area."
 ---
-The K-12 Computer Science Access Report is a collaborative partnership between the Computer Science Teachers Association and Code.org to identify on a school-by-school basis where computer science is taught. The data we’ve already gathered is available on our [interactive map](https://code.org/yourschool). Read the annual [State of Computer Science Education report] (https://advocacy.code.org/stateofcs) (published each fall) which includes a chapter on the K-12 Computer Science Access Report.  
+
+# Defining computer science
+
+The K-12 Computer Science Access Report is a collaborative partnership between the Computer Science Teachers Association and Code.org to identify on a school-by-school basis where computer science is taught. The data we’ve already gathered is available on our [interactive map](https://code.org/yourschool). Read the annual [State of Computer Science Education report] (https://advocacy.code.org/stateofcs) (published each fall) which includes a chapter on the K-12 Computer Science Access Report.
 
 ## Overview of the data sources we use
 The data shown on the map on [code.org/yourschool](https://code.org/yourschool) comes from one of four sources:
@@ -15,7 +18,7 @@ The data shown on the map on [code.org/yourschool](https://code.org/yourschool) 
 1. The International Baccalaureate’s list of high schools offering IB computer science classes.
 
 ## How we define whether a school teaches computer science
-Our definition of computer science was developed by the Computer Science Teachers Association [(Tucker, 2003)](https://dl.acm.org/citation.cfm?id=2593247) and later reaffirmed in the [K-12 Computer Science Framework](https://k12cs.org/defining-computer-science/): 
+Our definition of computer science was developed by the Computer Science Teachers Association [(Tucker, 2003)](https://dl.acm.org/citation.cfm?id=2593247) and later reaffirmed in the [K-12 Computer Science Framework](https://k12cs.org/defining-computer-science/):
 
 _Computer science is the study of computers and algorithms, including their principles, their hardware and software designs, their implementation, and their impact on society._
 
@@ -40,11 +43,11 @@ technology courses. Although some schools may
 integrate computer science and programming
 instruction in other courses, the Access Report only
 includes courses that are coded as computer
-science.  
+science.
 
 Each school on our map fits into one of four possible categories:
 1. __Need information.__ This means we don’t have information yet for this school. If your school is in this category, please [fill out the survey](https://code.org/yourschool).
-1. __Offers a computer science class.__ This means that we have data for this school that indicates that it offers a computer science class. 
-1. __Historically offered computer science.__ We have data that indicates that this school has taught CS in the past 2 years and we have not received updated information this year. 
+1. __Offers a computer science class.__ This means that we have data for this school that indicates that it offers a computer science class.
+1. __Historically offered computer science.__ We have data that indicates that this school has taught CS in the past 2 years and we have not received updated information this year.
 1. __Offers no computer science.__ This means that we have data for this school indicating the school does not offer any computer science classes during the day that include minimum requirements as defined above. This school may offer other computer science education opportunities, like after school programs, clubs, or Hour of Code events.
 1. __Historically did not offer computer science.__ We have data that indicates that this school did not teach CS in the past 2 years and we have not received updated information this year.

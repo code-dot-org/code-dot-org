@@ -4,6 +4,9 @@ Dashboard::Application.routes.draw do
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
+  # Redirect studio.code.org/courses to code.org/students
+  get "/courses", to: redirect(CDO.code_org_url("/students"))
+
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
@@ -59,9 +62,6 @@ Dashboard::Application.routes.draw do
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
-    get 'maker/google_oauth_login_code', to: 'maker#login_code'
-    get 'maker/display_google_oauth_code', to: 'maker#display_code'
-    get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false
@@ -182,7 +182,7 @@ Dashboard::Application.routes.draw do
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
-      patch '/users/set_age', to: 'registrations#set_age'
+      patch '/users/set_student_information', to: 'registrations#set_student_information'
       patch '/users/email', to: 'registrations#set_email'
       patch '/users/parent_email', to: 'registrations#set_parent_email'
       patch '/users/user_type', to: 'registrations#set_user_type'
@@ -194,7 +194,6 @@ Dashboard::Application.routes.draw do
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
-      post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
       get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
@@ -227,8 +226,10 @@ Dashboard::Application.routes.draw do
     get "/gallery", to: redirect("/projects/public")
 
     get 'projects/featured', to: 'projects#featured'
-    put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
-    put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
+    delete '/featured_projects/:channel_id', to: 'featured_projects#destroy'
+    put '/featured_projects/:channel_id/unfeature', to: 'featured_projects#unfeature'
+    put '/featured_projects/:channel_id/feature', to: 'featured_projects#feature'
+    put '/featured_projects/:channel_id/bookmark', to: 'featured_projects#bookmark'
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
@@ -572,10 +573,12 @@ Dashboard::Application.routes.draw do
     post '/admin/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
     get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
     post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
+    post '/admin/delete_user', to: 'admin_users#delete_user', as: 'delete_user'
     post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
     get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
     post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
     get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
+    get '/admin/permissions/csv', to: 'admin_users#permissions_csv', as: 'permissions_csv'
     post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
     get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
     post '/admin/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
@@ -594,11 +597,17 @@ Dashboard::Application.routes.draw do
     get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+    get '/admin/dcdo', to: 'dynamic_config#dcdo_show', as: 'dcdo_show'
+    post '/admin/dcdo/set', to: 'dynamic_config#dcdo_set', as: 'dcdo_set'
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
-    post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+    match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
+    get '/lti/v1/iframe', to: 'lti_v1#iframe'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
+    post '/lti/v1/integrations', to: 'lti_v1#create_integration'
+    get '/lti/v1/integrations', to: 'lti_v1#new_integration'
+    post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -625,6 +634,8 @@ Dashboard::Application.routes.draw do
 
     get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
     get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
+
+    get '/deeper-learning', to: 'plc/user_course_enrollments#index'
 
     namespace :plc do
       root to: 'plc#index'
@@ -662,7 +673,6 @@ Dashboard::Application.routes.draw do
           delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
           get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
-          get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
           get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_report'
           get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
           get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
@@ -885,12 +895,14 @@ Dashboard::Application.routes.draw do
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+        post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
         get 'users/:user_id/contact_details', to: 'users#get_contact_details'
         get 'users/current', to: 'users#current'
+        get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
@@ -915,7 +927,7 @@ Dashboard::Application.routes.draw do
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
 
-        get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+        get 'projects/gallery/public/:project_type(/:featured_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
@@ -1060,6 +1072,7 @@ Dashboard::Application.routes.draw do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
+        get 'get_teacher_evaluations_for_all'
         get 'ai_evaluation_status_for_user'
         get 'ai_evaluation_status_for_all'
         post 'run_ai_evaluations_for_user'
@@ -1100,10 +1113,62 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
+    resources :ai_tutor_interactions, only: [:create, :index]
+
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent'
     post '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent_request'
+
+    # DatablockStorageController powers the data features of applab,
+    # and the key/value pair store feature of gamelab
+    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
+      collection do
+        # Datablock Storage: Key-Value-Pair API
+        post :set_key_value
+        get :get_key_value
+        delete :delete_key_value
+        get :get_key_values
+        put :populate_key_values
+
+        # Datablock Storage: Table API
+        post :create_table
+        post :add_shared_table
+        post :import_csv
+        get :export_csv
+        delete :clear_table
+        delete :delete_table
+        get :get_table_names
+        put :populate_tables
+
+        # Datablock Storage: Table Column API
+        post :add_column
+        put :rename_column
+        put :coerce_column
+        delete :delete_column
+        get :get_column
+        get :get_columns_for_table
+
+        # Datablock Storage: Table Record API
+        post :create_record
+        get :read_records
+        put :update_record
+        delete :delete_record
+
+        # Datablock Storage: Library Manifest API (=shared table metadata)
+        get :get_library_manifest
+        put :set_library_manifest
+
+        # Datablock Storage: Project API
+        get :project_has_data
+        delete :clear_all_data
+
+        # TODO: post-firebase-cleanup, remove
+        # Project Use Datablock Storage API
+        put :use_datablock_storage
+        put :use_firebase_storage
+      end
+    end
   end
 end

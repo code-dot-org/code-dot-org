@@ -17,8 +17,8 @@ theme: responsive_full_width
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
     .text-wrapper.col-60
-      %h1{style: "color: white"}=hoc_s(:ai_hero_heading)
-      %p.body-one{style: "color: white"}=hoc_s(:ai_hero_desc)
+      %h1.white=hoc_s(:ai_hero_heading)
+      %p.body-one.white=hoc_s(:ai_hero_desc)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
@@ -74,13 +74,13 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
-    = view :ai_curricula_blocks
+    = view :ai_carousel_curricula_blocks
 
 %section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:ai_carousel_heading)
     .quotes-wrapper
-      = view :ai_carousel
+      = view :ai_carousel_quotes
 
 %section#ai-pl
   .wrapper
@@ -112,7 +112,7 @@ theme: responsive_full_width
             %strong
               =hoc_s(:module_label_duration)
             =hoc_s(:module_duration_2_hrs)
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml-2023")}
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml")}
             =hoc_s(:call_to_action_self_paced_pl)
 
 
@@ -134,13 +134,13 @@ theme: responsive_full_width
     %h2=hoc_s(:ai_video_series_title)
     %p=hoc_s(:ai_video_series_desc, markdown: :inline, locals: {how_ai_works_url: "/ai/how-ai-works"})
     .video-series
-      = view :ai_vid_chatbots
-      = view :ai_vid_creativity
       = view :ai_vid_intro
       = view :ai_vid_mlintro
       = view :ai_vid_trainingdata
       = view :ai_vid_neuralnetworks
       = view :ai_vid_computervision
+      = view :ai_vid_chatbots
+      = view :ai_vid_creativity
       = view :ai_vid_ethics1
       = view :ai_vid_ethics2
 
@@ -181,5 +181,7 @@ theme: responsive_full_width
 %section
   .wrapper
     = view :donors_block_microsoft_infosys
+
+= view :swiper_page_ai
 
 = view :visit_partial_event_logger

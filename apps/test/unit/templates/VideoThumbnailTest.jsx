@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+import React from 'react';
 import sinon from 'sinon';
+
 import VideoThumbnail from '@cdo/apps/templates/VideoThumbnail';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('VideoThumbnail', () => {
   it('renders a link on the video thumbnail', () => {

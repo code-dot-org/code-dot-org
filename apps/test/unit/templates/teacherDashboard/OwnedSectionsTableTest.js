@@ -1,15 +1,16 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow, mount} from 'enzyme';
-import * as Table from 'reactabular-table';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import React from 'react';
 import {Provider} from 'react-redux';
+import * as Table from 'reactabular-table';
+
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import Button from '@cdo/apps/templates/Button';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
@@ -18,10 +19,12 @@ import {
   studentsFormatter,
   COLUMNS,
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
-import Button from '@cdo/apps/templates/Button';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const GRADE_COLUMN = COLUMNS.GRADE.toString();
 
@@ -39,6 +42,7 @@ const sectionRowData = [
     pairingAllowed: true,
     providerManaged: false,
     hidden: false,
+    courseOfferingsAreLoaded: true,
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
     assignmentPaths: [
       '//localhost-studio.code.org:3000/courses/csd',
@@ -74,6 +78,19 @@ const sectionRowData = [
     grades: ['3'],
     providerManaged: false,
     hidden: false,
+    courseOfferingsAreLoaded: true,
+    assignmentNames: [],
+    assignmentPaths: [],
+  },
+  {
+    id: 5,
+    name: 'sectionE',
+    studentCount: 0,
+    code: 'MNO',
+    grades: ['3'],
+    providerManaged: false,
+    hidden: false,
+    courseOfferingsAreLoaded: false,
     assignmentNames: [],
     assignmentPaths: [],
   },
@@ -438,6 +455,21 @@ describe('OwnedSectionsTable', () => {
       assert.equal(button, '<Button />');
       assert.equal(link, '/catalog');
       assert.equal(text, 'Find a course');
+      expect(
+        courseLinkCol.find({
+          className: skeletonizeContent.skeletonizeContent,
+        })
+      ).to.have.lengthOf(0);
+    });
+
+    it('courseLinkFormatter contains skeleton before course info is loaded', () => {
+      const rowData = sectionRowData[4];
+      const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
+      expect(
+        courseLinkCol.find({
+          className: skeletonizeContent.skeletonizeContent,
+        })
+      ).to.have.lengthOf(1);
     });
 
     it('sectionLinkFormatter contains section link', () => {

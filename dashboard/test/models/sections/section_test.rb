@@ -476,6 +476,7 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        login_type_name: "Email",
         participant_type: 'student',
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
@@ -491,7 +492,8 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -526,6 +528,7 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        login_type_name: "Email",
         participant_type: 'student',
         course_offering_id: script.course_version.course_offering.id,
         course_version_id: script.course_version.id,
@@ -541,7 +544,8 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -559,7 +563,7 @@ class SectionTest < ActiveSupport::TestCase
       section = create :section
       coteacher_user = create :teacher
       primary_section_instructor_id = section.section_instructors[0].id
-      coteacher_section_instructor = section.add_instructor(coteacher_user.email, current_user)
+      coteacher_section_instructor = section.invite_instructor(coteacher_user.email, current_user)
       section.reload
 
       expected = {
@@ -580,6 +584,7 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        login_type_name: "Email",
         participant_type: 'student',
         course_offering_id: nil,
         course_version_id: nil,
@@ -596,7 +601,8 @@ class SectionTest < ActiveSupport::TestCase
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
-                             {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}]
+                             {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
+        sync_enabled: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -634,6 +640,7 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        login_type_name: "Email",
         participant_type: 'student',
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
@@ -649,8 +656,8 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
-
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -681,6 +688,7 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        login_type_name: "Email",
         participant_type: 'student',
         course_offering_id: nil,
         course_version_id: nil,
@@ -696,7 +704,8 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -894,6 +903,66 @@ class SectionTest < ActiveSupport::TestCase
     section.save!
 
     assert_equal 1, section.instructors.length
+  end
+
+  test 'add_instructor returns true and adds the teacher if not previously a co-teacher' do
+    section = create(:section)
+    user = create :teacher
+
+    assert section.add_instructor(user)
+    assert_equal user, section.section_instructors.last.instructor
+  end
+
+  test 'add_instructor returns true and restores the teacher if previously deleted co-teacher' do
+    section = create(:section)
+    user = create :teacher
+
+    # Add instructor, then delete the instructor
+    section.add_instructor(user)
+    section.section_instructors.last.destroy
+
+    # Re-add the deleted instructor
+    result = section.add_instructor(user)
+
+    assert_equal true, result
+    assert_equal user, section.section_instructors.last.instructor
+  end
+
+  test 'add_instructor returns true and activates the teacher if the teacher was previously invited' do
+    section = create(:section)
+    inviter = create :teacher
+    user = create :teacher
+
+    section.invite_instructor(user.email, inviter)
+    result = section.add_instructor(user)
+    si = section.section_instructors.last
+
+    assert_equal true, result
+    assert_equal user, si.instructor
+    assert_equal "active", si.status
+  end
+
+  test 'remove_instructor destroys the applicable SectionInstructor' do
+    section = create(:section)
+    user = create :teacher
+
+    section.add_instructor(user)
+    si = section.section_instructors.last
+    section.remove_instructor(user)
+    si.reload
+
+    assert_equal true, si.deleted?
+  end
+
+  test 'remove_instructor does not remove the primary teacher' do
+    user = create :teacher
+    section = create(:section, user: user)
+
+    si = SectionInstructor.find_by(instructor: user, section_id: section.id)
+    section.remove_instructor(user)
+    si.reload
+
+    refute si.deleted?
   end
 
   def set_up_code_review_groups

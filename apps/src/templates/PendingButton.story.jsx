@@ -4,7 +4,6 @@ import dataStyles from '../storage/dataBrowser/data-styles.module.scss';
 import classNames from 'classnames';
 
 export default {
-  title: 'PendingButton',
   component: PendingButton,
 };
 

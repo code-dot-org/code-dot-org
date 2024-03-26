@@ -1,58 +1,110 @@
-import React, {useEffect, useRef} from 'react';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import classNames from 'classnames';
-import {EditorView, ViewUpdate} from '@codemirror/view';
-import {EditorState} from '@codemirror/state';
-import {editorSetup} from '../javalab/editorSetup';
-import {darkMode} from '../javalab/editorThemes';
+import React from 'react';
+import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
-import {useDispatch, useSelector} from 'react-redux';
-import {PythonlabState, setCode} from './pythonlabRedux';
+import {useDispatch} from 'react-redux';
+import {appendOutput, resetOutput, setSource} from './pythonlabRedux';
+import Button from '@cdo/apps/templates/Button';
+import {runPythonCode} from './pyodideRunner';
+import {useFetch} from '@cdo/apps/util/useFetch';
+import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {getFileByName} from '@cdo/apps/lab2/projects/utils';
+
+interface PermissionResponse {
+  permissions: string[];
+}
 
 const PythonEditor: React.FunctionComponent = () => {
-  const editorRef = useRef<HTMLDivElement>(null);
-  const code = useSelector(
-    (state: {pythonlab: PythonlabState}) => state.pythonlab.code
-  );
+  const source = useAppSelector(state => state.pythonlab.source);
+  const codeOutput = useAppSelector(state => state.pythonlab.output);
+  const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
+  const editorExtensions = [python(), darkMode];
+  const initialSources = useAppSelector(state => state.lab.initialSources);
+  let startCode = 'print("Hello world!")';
 
-  useEffect(() => {
-    if (editorRef.current === null) {
-      return;
-    }
+  if (initialSources?.source && typeof initialSources.source !== 'string') {
+    startCode =
+      getFileByName(initialSources.source.files, 'main.py')?.contents ||
+      startCode;
+  }
 
-    const onEditorUpdate = EditorView.updateListener.of(
-      (update: ViewUpdate) => {
-        dispatch(setCode(update.state.doc.toString()));
+  const handleRun = () => {
+    const parsedData = data ? (data as PermissionResponse) : {permissions: []};
+    // For now, restrict running python code to levelbuilders.
+    if (parsedData.permissions.includes('levelbuilder')) {
+      dispatch(appendOutput('Running code...'));
+      if (source) {
+        const code = getFileByName(source.files, 'main.py')?.contents;
+        if (code) {
+          runPythonCode(code);
+        } else {
+          appendOutput('No main.py to run.');
+        }
       }
-    );
+    } else {
+      alert('You do not have permission to run python code.');
+    }
+  };
 
-    const editorExtensions = [
-      ...editorSetup,
-      python(),
-      darkMode,
-      onEditorUpdate,
-    ];
-    new EditorView({
-      state: EditorState.create({
-        doc: '',
-        extensions: editorExtensions,
-      }),
-      parent: editorRef.current,
-    });
-  }, [dispatch, editorRef]);
+  const onCodeUpdate = (updatedCode: string) => {
+    // TODO: handle multiple files. For now everything is "main.py".
+    const updatedSource: MultiFileSource = {
+      files: {
+        '0': {
+          id: '0',
+          name: 'main.py',
+          language: 'python',
+          contents: updatedCode,
+          folderId: '1',
+        },
+      },
+      folders: {
+        '1': {
+          id: '1',
+          name: 'src',
+          parentId: '0',
+        },
+      },
+    };
+    dispatch(setSource(updatedSource));
+    if (Lab2Registry.getInstance().getProjectManager()) {
+      const projectSources = {
+        source: updatedSource,
+      };
+      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
+    }
+  };
+
+  const clearOutput = () => {
+    dispatch(resetOutput());
+  };
 
   return (
     <div className={moduleStyles.editorContainer}>
-      <PanelContainer
-        id="python-editor"
-        headerText="Editor"
-        hideHeaders={false}
-      >
-        <div ref={editorRef} className={classNames('codemirror-container')} />
-      </PanelContainer>
-      <div>{code}</div>
+      <CodeEditor
+        onCodeChange={onCodeUpdate}
+        startCode={startCode}
+        editorConfigExtensions={editorExtensions}
+      />
+      <div>
+        <Button
+          type={'button'}
+          text="Run"
+          onClick={handleRun}
+          disabled={loading}
+        />
+        <Button type={'button'} text="Clear output" onClick={clearOutput} />
+      </div>
+      <div>
+        Output:
+        {codeOutput.map((outputLine, index) => {
+          return <div key={index}>{outputLine}</div>;
+        })}
+      </div>
     </div>
   );
 };

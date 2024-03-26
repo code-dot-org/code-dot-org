@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification from '@cdo/apps/templates/Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
@@ -54,7 +54,6 @@ export const UnconnectedTeacherHomepage = ({
   hasFeedback,
   showIncubatorBanner,
   currentUserId,
-  showDeprecatedCalcAndEvalWarning,
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
@@ -63,15 +62,15 @@ export const UnconnectedTeacherHomepage = ({
   /*
    * Determines whether the AFE banner will take premium space on the Teacher Homepage
    */
-  const shouldShowAFEBanner = true;
+  const shouldShowAFEBanner = false;
 
-  /* We are hiding the Census banner to free up space on the Teacher Homepage (November 2023)
-   * when we want to show the Census banner again remove the next line
+  /*
+   * Set to true to hide the census banner (Census banner live as of Mar 2024)
    */
-  const forceHideCensusBanner = true;
+  const forceHideCensusBanner = false;
 
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
-   * when we want to show the Census banner again set this to true
+   * when we want to show the PL banner again set this to true
    */
   const showPLBanner = false;
 
@@ -184,14 +183,6 @@ export const UnconnectedTeacherHomepage = ({
       />
       <div className={'container main'}>
         <ProtectedStatefulDiv ref={flashes} />
-        {showDeprecatedCalcAndEvalWarning && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.deprecatedCalcAndEvalWarning()}
-            details={i18n.deprecatedCalcAndEvalDetails()}
-            dismissible={false}
-          />
-        )}
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
         {specialAnnouncement && (
@@ -269,7 +260,7 @@ export const UnconnectedTeacherHomepage = ({
         )}
         {showAFEBanner && (
           <div>
-            <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
+            <DonorTeacherBanner source="teacher_home" />
             <div style={styles.clear} />
           </div>
         )}
@@ -339,7 +330,6 @@ UnconnectedTeacherHomepage.propTypes = {
   hasFeedback: PropTypes.bool,
   showIncubatorBanner: PropTypes.bool,
   currentUserId: PropTypes.number,
-  showDeprecatedCalcAndEvalWarning: PropTypes.bool,
 };
 
 const styles = {
