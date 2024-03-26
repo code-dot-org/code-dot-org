@@ -9,8 +9,10 @@ module I18n
     class CrowdinClient
       RequestError = Class.new(StandardError)
 
+      # TODO-P20-808: Find a better solution to avoid hitting Crowdin's rate limit than decreasing the concurrent request limit
+      MAX_CONCURRENT_REQUESTS = 10 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
+
       MAX_ITEMS_COUNT = Crowdin::Web::FetchAllExtensions::MAX_ITEMS_COUNT_PER_REQUEST.freeze
-      MAX_CONCURRENT_REQUESTS = 20 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
       REQUEST_RETRY_ATTEMPTS = 2 # Number of retries for a failed request
       REQUEST_RETRY_DELAY = 2 # Number of seconds to wait before retrying a failed request
       RETRIABLE_ERRORS = [
