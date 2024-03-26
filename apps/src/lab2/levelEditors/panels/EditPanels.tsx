@@ -134,7 +134,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
           type="button"
           onClick={addPanel}
           text="Add Panel"
-          color="grey"
+          color="gray"
           icon="plus"
         />
       </div>
