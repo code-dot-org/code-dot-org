@@ -9,3 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<NavigationBar />, mountPoint);
   }
 });
+console.log('outside _navigation_bar.js');
