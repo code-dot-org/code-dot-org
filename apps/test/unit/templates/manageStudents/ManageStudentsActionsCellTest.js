@@ -1,9 +1,11 @@
-import React from 'react';
-import $ from 'jquery';
-import sinon from 'sinon';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import $ from 'jquery';
+import React from 'react';
+import sinon from 'sinon';
+
 import {UnconnectedManageStudentsActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
+
+import {expect} from '../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   id: 2,

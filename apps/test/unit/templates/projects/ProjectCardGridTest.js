@@ -1,12 +1,15 @@
+import {mount} from 'enzyme';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import ProjectCardGrid from '@cdo/apps/templates/projects/ProjectCardGrid';
-import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea.jsx';
-import {projects} from './projectsTestData';
 import {combineReducers, createStore} from 'redux';
+
+import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea.jsx';
+import ProjectCardGrid from '@cdo/apps/templates/projects/ProjectCardGrid';
 import reducer from '@cdo/apps/templates/projects/projectsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+import {projects} from './projectsTestData';
 
 describe('ProjectCardGrid', () => {
   const store = createStore(combineReducers({projects: reducer}));

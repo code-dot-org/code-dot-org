@@ -1,19 +1,21 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
+import React from 'react';
 import {act} from 'react-dom/test-utils';
+import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
 import * as utils from '@cdo/apps/code-studio/utils';
-import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {Provider} from 'react-redux';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricSettings', () => {
   let clock;

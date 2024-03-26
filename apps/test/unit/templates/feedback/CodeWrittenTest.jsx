@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import React from 'react';
+
 import CodeWritten from '@cdo/apps/templates/feedback/CodeWritten';
+
+import {expect} from '../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   numLinesWritten: 0,

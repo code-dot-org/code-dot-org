@@ -1,10 +1,12 @@
-import {assert} from '../../../util/reconfiguredChai';
-import {stub} from 'sinon';
-import React from 'react';
 import {shallow} from 'enzyme';
-import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+import React from 'react';
+import {stub} from 'sinon';
+
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
+import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import * as utils from '@cdo/apps/utils';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   lessonExtrasUrl: '/extras',
