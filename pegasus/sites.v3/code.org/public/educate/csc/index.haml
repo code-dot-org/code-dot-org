@@ -19,8 +19,6 @@ theme: responsive_full_width
       %img{src: "/images/banners/banner-csc-octopus.png", alt: ""}
     .clear
 
-= view :poetry_banner
-
 %section
   .wrapper
     %div.col-50{style: "margin: 0.5rem 0 1rem;"}
@@ -37,6 +35,8 @@ theme: responsive_full_width
       %a.link-button{href: "#csc-modules"}
         =hoc_s(:call_to_action_explore_modules)
     .clear
+
+= view :poetry_banner
 
 %section.bg-neutral-light
   .wrapper
