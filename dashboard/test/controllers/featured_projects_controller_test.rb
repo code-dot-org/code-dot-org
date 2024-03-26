@@ -1,8 +1,14 @@
 require 'test_helper'
 
 class FeaturedProjectsControllerTest < ActionController::TestCase
-  setup do
+  # Setting this to true causes some weird db locking issue, possibly due to
+  # some writes to the projects table coming from a different connection via
+  # sequel.
+  self.use_transactional_test_case = false
+
+  setup_all do
     @project_validator = create :project_validator
+    @project = create :project, id: 456, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
     # @featured_project has a project_id of 456
     @featured_project = create :featured_project
     @teacher = create :teacher
@@ -10,15 +16,14 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
 
   test 'project validators can bookmark a project as a featured project' do
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
+    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     put :bookmark, params: {channel_id: "789"}
     assert_response :success
   end
 
   test 'project validators can feature projects' do
-    skip 'Investigate flaky test'
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
+    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     put :feature, params: {channel_id: "789"}
     assert_response :success
   end
@@ -63,9 +68,9 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
 
   test 'bookmarking a never featured project creates a new featured project' do
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
+    @controller.expects(:storage_decrypt_channel_id).with("678").returns([234, 654])
     assert_creates(FeaturedProject) do
-      put :bookmark, params: {channel_id: "789"}
+      put :bookmark, params: {channel_id: "678"}
     end
     assert FeaturedProject.last.project_id == 654
     assert FeaturedProject.last.unfeatured_at.nil?
@@ -73,7 +78,6 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'featuring a currently unfeatured project should update the correct featured project' do
-    skip 'Investigate flaky test'
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     @featured_project.update! unfeatured_at: DateTime.now
