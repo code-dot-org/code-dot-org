@@ -1,7 +1,8 @@
 /** @file Tests for convertXmlToBlockly utility */
+import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
+
 import {expect} from '../../util/reconfiguredChai';
 import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
-import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
 describe('convertXmlToBlockly', function () {
   beforeEach(() => {

@@ -9,7 +9,7 @@ import {
   sendSuccessReport,
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
-import {PanelsLevelData} from './types';
+import {PanelsLevelData, PanelsLevelProperties} from './types';
 import PanelsView from './PanelsView';
 import useWindowSize from '../util/hooks/useWindowSize';
 
@@ -18,8 +18,11 @@ const appName = 'panels';
 const PanelsLabView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
-  const levelData = useAppSelector(
-    state => state.lab.levelProperties?.levelData
+  const panels = useAppSelector(
+    state =>
+      (state.lab.levelProperties as PanelsLevelProperties | undefined)
+        ?.panels ||
+      (state.lab.levelProperties?.levelData as PanelsLevelData)?.panels
   );
   const currentAppName = useAppSelector(
     state => state.lab.levelProperties?.appName
@@ -38,8 +41,6 @@ const PanelsLabView: React.FunctionComponent = () => {
     },
     [dispatch]
   );
-
-  const panels = (levelData as PanelsLevelData | undefined)?.panels;
 
   const [windowWidth, windowHeight] = useWindowSize();
 

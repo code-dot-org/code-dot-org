@@ -1,16 +1,18 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {mount, shallow} from 'enzyme';
-import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
+import React from 'react';
+import {Provider} from 'react-redux';
+
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
-import {Provider} from 'react-redux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricContent', () => {
   let store;

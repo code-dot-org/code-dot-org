@@ -1,7 +1,9 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import SocialShare from '@cdo/apps/templates/certificates/SocialShare';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SocialShare', () => {
   // SocialShare uses a function from url_test.js to check if images are accessible
