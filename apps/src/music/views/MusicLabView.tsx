@@ -185,6 +185,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       <PackDialog
         currentPackName={currentPackName}
         setCurrentPackName={setCurrentPackName}
+        player={player}
       />
 
       {showInstructions &&

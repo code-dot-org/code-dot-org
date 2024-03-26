@@ -1,25 +1,17 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useRef} from 'react';
 import Typography from '@cdo/apps/componentLibrary/typography';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import FocusLock from 'react-focus-lock';
 import styles from './PackDialog.module.scss';
-import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import i18n from '@cdo/locale';
-import MusicLibrary, {
-  SoundData,
-  SoundFolder,
-  SoundType,
-} from '../player/MusicLibrary';
+import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import {getBaseAssetUrl} from '../appConfig';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import MusicPlayer from '../player/MusicPlayer';
 
 interface PackEntryProps {
   libraryGroupPath: string;
-  playingPreview: string;
+  playingPreview: string | null;
   folder: SoundFolder;
-  currentValue: SoundFolder;
   onSelect: (path: SoundFolder) => void;
   onPreview: (path: string) => void;
 }
@@ -28,7 +20,6 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   libraryGroupPath,
   playingPreview,
   folder,
-  currentValue,
   onSelect,
   onPreview,
 }) => {
@@ -38,8 +29,6 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   const imageSrc =
     folder.imageSrc &&
     `${getBaseAssetUrl()}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
-
-  const isSelected = folder.id === currentValue.id;
 
   const onPreviewClick = useCallback(
     (e: Event) => {
@@ -53,10 +42,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
 
   return (
     <div
-      className={classNames(
-        styles.pack,
-        classNames(styles.folderRow, isSelected && styles.folderRowSelected)
-      )}
+      className={classNames(styles.pack, classNames(styles.folderRow))}
       onClick={() => onSelect(folder)}
       onKeyDown={event => {
         if (event.key === 'Enter') {
@@ -99,6 +85,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
 interface PackDialogProps {
   currentPackName: string;
   setCurrentPackName: (packName: string) => void;
+  player: MusicPlayer;
 }
 
 /**
@@ -107,27 +94,43 @@ interface PackDialogProps {
 const PackDialog: React.FunctionComponent<PackDialogProps> = ({
   currentPackName,
   setCurrentPackName,
+  player,
 }) => {
   const library = MusicLibrary.getInstance();
 
-  if (!library) return null;
+  // Use a ref for instant access to this value inside onPreview.
+  const playingPreview = useRef<string | null>(null);
 
-  const [isShowing, setIsShowing] = useState<boolean>(false);
+  // Use state so that we can re-render when the preview state changes.
+  const [playingPreviewState, setPlayingPreviewState] = useState<string | null>(
+    null
+  );
+
+  if (!library) return null;
 
   const folders = library.getAllowedSounds(undefined);
   const libraryGroupPath = library.libraryJson.path;
 
-  const playingPreview = '';
-  const currentValue = library.getAllowedFolderForFolderId(
-    undefined,
-    currentPackName
-  );
   const setSelectedFolder = (folder: SoundFolder) => {
-    setIsShowing(false);
     setCurrentPackName(folder.id);
   };
-  const onPreview = () => {};
-  const selectedFolder = folders[0];
+  const onPreview = (id: string) => {
+    playingPreview.current = id;
+    setPlayingPreviewState(id);
+
+    player.previewSound(id, () => {
+      // If the user starts another preview while one is
+      // already playing, it will have started playing before
+      // we get this stop event.  We want to wait until the
+      // new preview stops before we reactivate the button, and
+      // so we don't clear out playingPreview unless the
+      // stop event coming in is for the actively playing preview.
+      if (playingPreview.current === id) {
+        playingPreview.current = null;
+        setPlayingPreviewState(null);
+      }
+    });
+  };
 
   if (currentPackName) {
     return null;
@@ -137,6 +140,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
     <FocusLock>
       <div className={styles.dialogContainer}>
         <div id="pack-dialog" className={styles.packDialog}>
+          <div id="hidden-item" tabIndex={0} role="button" />
           <Typography
             semanticTag="h1"
             visualAppearance="heading-lg"
@@ -151,29 +155,14 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
                 <PackEntry
                   key={folderIndex}
                   libraryGroupPath={libraryGroupPath}
-                  playingPreview={playingPreview}
+                  playingPreview={playingPreviewState}
                   folder={folder}
-                  currentValue={selectedFolder}
                   onSelect={setSelectedFolder}
                   onPreview={onPreview}
                 />
               );
             })}
           </div>
-
-          {/*
-          <button
-            type="button"
-            className={styles.closeButton}
-            onClick={() => {}}
-          >
-            <FontAwesomeV6Icon
-              iconName={'xmark'}
-              iconStyle="thin"
-              className={styles.closeButtonIcon}
-            />
-          </button>
-          */}
         </div>
       </div>
     </FocusLock>

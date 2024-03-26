@@ -21,6 +21,7 @@
   border-radius: 5px;
   padding: 20px 50px;
   width: 80%;
+  max-height: 80%;
 }
 
 %button {
@@ -78,46 +79,15 @@
         &Artist {
           font-size: 11px;
         }
-      }
-    }
 
-    .closeButton {
-      color: $neutral_light;
-    }
+        .preview {
+          color: $neutral_dark40;
 
-    .itemsContainer {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 12px;
-
-      .copyToClipboard {
-        @extend %button;
-        background-color: $light_secondary_500;
-        color: $neutral_light;
-
-        &:hover {
-          background-color: $light_secondary_500;
+          &Playing {
+            color: $neutral_dark70;
+            cursor: default;
+          }
         }
-
-        &Icon {
-          font-size: 24px;
-          margin-right: 10px;
-          padding-bottom: 3px;
-        }
-      }
-    }
-
-    .closeButton {
-      background-color: initial;
-      box-shadow: initial;
-      border: none !important;
-      position: absolute;
-      top: 0;
-      right: 0;
-
-      &Icon {
-        font-size: 24px;
       }
     }
   }

@@ -226,6 +226,8 @@ export interface SoundFolder {
   imageSrc: string;
   restricted?: boolean;
   sounds: SoundData[];
+  bpm?: number;
+  key?: string;
 }
 
 export type LibraryJson = {
