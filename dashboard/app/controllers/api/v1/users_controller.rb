@@ -199,10 +199,9 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       return head :unauthorized
     end
 
-    target_user.ai_tutor_access_denied = !params[:ai_tutor_access]
+    target_user.ai_tutor_access_denied = !params[:ai_tutor_access].try(:to_bool)
     target_user.save
 
-    # TODO: Do we need to handle errors here?
     head :no_content
   end
 
