@@ -13,10 +13,15 @@ import i18n from '@cdo/locale';
 
 import './LtiFeedbackBanner.scss';
 
-// LtiFeedbackBanner statuses
+// The initial status of the banner. It means that the status has not been set yet.
+const UNSET = 'unset';
+// The status when the banner is not available. This is typically when the user is not an LTI teacher.
 const UNAVAILABLE = 'unavailable';
-const AVAILABLE = 'available';
+// The status when the banner is displayed but the user has not yet provided feedback.
+const UNANSWERED = 'unanswered';
+// The status when the user has provided feedback.
 const ANSWERED = 'answered';
+// The status when the banner has been closed by the user.
 const CLOSED = 'closed';
 
 /**
@@ -48,8 +53,8 @@ const LtiFeedbackBanner: React.FC = () => {
   const [status, setStatus] = useState<string>(() => {
     if (!currentUser.isLti || !currentUser.isTeacher) return UNAVAILABLE;
 
-    let status = tryGetLocalStorage(key, '');
-    if (status === UNAVAILABLE) status = '';
+    let status = tryGetLocalStorage(key, UNSET);
+    if (status === UNAVAILABLE) status = UNSET;
 
     !status && fetchLtiFeedback(ltiFeedbackAction);
 
@@ -68,7 +73,7 @@ const LtiFeedbackBanner: React.FC = () => {
    */
   useEffect(() => {
     if (ltiFeedback === null) {
-      setStatus(AVAILABLE);
+      setStatus(UNANSWERED);
     } else if (ltiFeedback) {
       setStatus(ANSWERED);
     }
@@ -78,7 +83,7 @@ const LtiFeedbackBanner: React.FC = () => {
    * Effect for handling errors.
    */
   useEffect(() => {
-    error && setStatus('');
+    error && setStatus(UNSET);
   }, [error]);
 
   /**
@@ -93,7 +98,7 @@ const LtiFeedbackBanner: React.FC = () => {
   const close = () => setStatus(CLOSED);
 
   return (
-    <Fade in={[AVAILABLE, ANSWERED].includes(status)} unmountOnExit={true}>
+    <Fade in={[UNANSWERED, ANSWERED].includes(status)} unmountOnExit={true}>
       <Alert
         key={key}
         bsStyle="info"
@@ -110,7 +115,7 @@ const LtiFeedbackBanner: React.FC = () => {
         />
 
         <Fade in={!isLoading}>
-          {status === AVAILABLE ? (
+          {status === UNANSWERED ? (
             <span>
               <span id="lti-feedback-banner-title" aria-hidden="true">
                 {i18n.lti_feedbackBanner_question()}
