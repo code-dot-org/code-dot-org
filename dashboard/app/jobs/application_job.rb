@@ -25,25 +25,41 @@ class ApplicationJob < ActiveJob::Base
   # Parent class callbacks are called in addition to any callbacks defined in the job subclass
   # https://guides.rubyonrails.org/v6.0/active_job_basics.html#available-callbacks
 
+  after_enqueue do |job|
+    jobs_in_queue = Delayed::Job.where(queue: job.queue_name).where("handler LIKE ?", "%job_class: #{job.class.name}%").count
+
+    metrics = [
+      {
+        metric_name: 'JobsInQueue',
+        value: jobs_in_queue,
+        unit: 'Count',
+        dimensions: job.class.common_dimensions,
+      }
+    ]
+
+    Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
+  end
+
   before_perform do |job|
     @perform_started_at = Time.now
     wait_time = @perform_started_at - Time.parse(job.enqueued_at)
 
-    metric = {
-      metric_name: 'WaitTime',
-      value: wait_time,
-      unit: 'Seconds',
-      dimensions: job.class.common_dimensions,
-    }
+    metrics = [
+      {
+        metric_name: 'WaitTime',
+        value: wait_time,
+        unit: 'Seconds',
+        dimensions: job.class.common_dimensions,
+      }
+    ]
 
-    Cdo::Metrics.put_metric(METRICS_NAMESPACE, metric)
+    Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
   end
 
   after_perform do |job|
     perform_complete_at = Time.now
     execution_time = perform_complete_at - @perform_started_at
     total_time = perform_complete_at - Time.parse(job.enqueued_at)
-    jobs_in_queue = Delayed::Job.where(queue: job.queue_name).where("handler LIKE ?", "%job_class: #{job.class.name}%").count
 
     metrics = [
       {
@@ -56,12 +72,6 @@ class ApplicationJob < ActiveJob::Base
         metric_name: 'TotalTime',
         value: total_time,
         unit: 'Seconds',
-        dimensions: job.class.common_dimensions,
-      },
-      {
-        metric_name: 'JobsInQueue',
-        value: jobs_in_queue,
-        unit: 'Count',
         dimensions: job.class.common_dimensions,
       }
     ]
