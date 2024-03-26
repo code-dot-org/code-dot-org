@@ -1,7 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
+
 import i18n from '@cdo/locale';
+
 import styles from './teacher-dashboard.module.scss';
 
 export const TeacherDashboardPath = {

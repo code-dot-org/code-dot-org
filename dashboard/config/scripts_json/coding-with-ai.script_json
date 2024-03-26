@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-03-22 19:11:07 UTC",
+    "serialized_at": "2024-03-26 04:11:50 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -49,7 +49,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can AI support code development and what ethical considerations should be addressed when using AI in coding?**\n\nIn this lesson, students embark on an exploration of AI's role in programming. They discuss their experiences with AI tools, explore scenarios of AI-learner collaboration, delve into ethical considerations, and begin to form their opinions on how AI can support or hinder their coding journey.  Finally, students create initial Value Statements about AI usage which will evolve as they explore various supportive AI strategies. The lesson also includes optional hands-on pseudocode practice which will prepare students for AI-assisted coding strategies in the subsequent lessons.",
-        "preparation": "* (Optional) Print copies of the Pseudocode Practice activity guide (one for each student) if doing the extension activity\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
+        "preparation": "* (Optional) Print copies of the Pseudocode Practice activity guide (one for each student) if doing the extension activity\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n* (Optional) Check out our resources for the chatbot you will be using: [r guide_to_using_microsoft_copilot/coding-with-ai/unversioned], [r guide_to_google_gemini/coding-with-ai/unversioned], or [r guide_to_chatgpt/coding-with-ai/unversioned]\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
         "student_overview": "**How can AI support code development and what ethical considerations should be addressed when using AI in coding?**\n\nIn this lesson, you'll explore how AI is used in programming, discuss its impact, and think about when and how to use AI responsibly. "
       },
       "seeding_key": {
@@ -67,7 +67,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can AI assist during the initial stages of the programming process, and what ethical considerations should be noted?**\n\nThis lesson engages students in utilizing AI to kick-start their programming projects through either brainstorming or generating pseudocode with the help of AI models like ChatGPT or Bard AI. Students will document their experience and engage in thoughtful discussions on the ethical considerations of employing AI in the creative and problem-solving aspects of coding, focusing on topics like privacy, originality, and the balance between AI assistance and personal creativity. Through these activities and reflections, students will develop value statements concerning the role of AI in initiating programming projects, fostering a balanced understanding of AI's potential and limitations in the software development process",
-        "preparation": "* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five lessons or just this individual lesson.\n* Print copies of the following activity guides:\n   * AI-Assisted Program Prep Strategies (one for each pair of students)\n   * My Coding with AI Values (one for each student)\n   * Reflection Stations (one for each student)\n* (Optional) Print copies of the Pseudocode Practice activity guide (one for each student) if doing the extension activity\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
+        "preparation": "* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five lessons or just this individual lesson.\n* Print copies of the following activity guides:\n   * AI-Assisted Program Prep Strategies (one for each pair of students)\n   * My Coding with AI Values (one for each student)\n   * Reflection Stations (one for each student)\n* (Optional) Print copies of the Pseudocode Practice activity guide (one for each student) if doing the extension activity\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n* (Optional) Check out our resources for the chatbot you will be using: [r guide_to_using_microsoft_copilot/coding-with-ai/unversioned], [r guide_to_google_gemini/coding-with-ai/unversioned], or [r guide_to_chatgpt/coding-with-ai/unversioned]\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
         "student_overview": "**How can AI assist during the initial stages of the programming process, and what ethical considerations should be noted?**\n\nIn this lesson, you'll use AI tools like ChatGPT or Bard AI for project ideation or possibly even pseudocode drafting while discussing the ethical implications of AI in creativity. Through reflection, you'll establish your value statements for employing AI in your programming journey."
       },
       "seeding_key": {
@@ -85,7 +85,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How can AI enhance your ability to develop and understand algorithms, and what ethical considerations should be noted?**\n\nIn this lesson, students engage in a two-step strategy that integrates AI into algorithm planning. They use AI to help them identify key steps in an algorithm and generate pseudocode. The lesson also emphasizes ethical considerations and personal value reflections regarding the use of AI in the creative process of algorithm planning.\n",
-        "preparation": "* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five lessons or just this individual lesson.\n* Print copies of the following activity guides:\n   * Four Corners Reflection (one for each student)\n   * My Algorithms & AI Value Statements (one for each student)\n   * Mystery Algorithms (one for each student)\n   * Navigating Algorithms with AI (one for each of student)\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
+        "preparation": "* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five lessons or just this individual lesson.\n* Print copies of the following activity guides:\n   * Four Corners Reflection (one for each student)\n   * My Algorithms & AI Value Statements (one for each student)\n   * Mystery Algorithms (one for each student)\n   * Navigating Algorithms with AI (one for each of student)\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n(Optional) Check out our resources for the chatbot you will be using: [r guide_to_using_microsoft_copilot_2/coding-with-ai/unversioned], [r guide_to_chatgpt_2/coding-with-ai/unversioned], or [r guide_to_google_gemini_2/coding-with-ai/unversioned]\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
         "student_overview": "**How can AI enhance your ability to develop and understand algorithms, and what ethical considerations should be noted?**\n\nIn this lesson, you'll dive into the world of algorithms, working alongside AI to analyze and create your algorithmic solutions. You will also reflect on the ethical aspects of using AI in coding, helping you develop a well-rounded understanding of AI's role in the creative process of programming."
       },
       "seeding_key": {
@@ -103,7 +103,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How does integrating AI into the debugging process impact the balance between a programmer's creativity and problem-solving efficiency?**\n\nThis lesson focuses on debugging with AI. Students will engage in practical exercises using AI to identify and understand buggy code and participate in step-by-step debugging. The lesson emphasizes ethical considerations and personal reflection on using AI in the debugging process, encouraging students to form their value statements regarding AI's role in coding and creativity.",
-        "preparation": "* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five lessons or just this individual lesson.\n* Print copies of the following activity guides:\n   * Debugging Code with AI (one for each of student)\n   * My Debugging with AI Value Statements (one for each student)\n   * Reflection Scavenger Hunt (one for each student)\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
+        "preparation": "* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five lessons or just this individual lesson.\n* Print copies of the following activity guides:\n   * Debugging Code with AI (one for each of student)\n   * My Debugging with AI Value Statements (one for each student)\n   * Reflection Scavenger Hunt (one for each student)\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n(Optional) Check out our resources for the chatbot you will be using: [r guide_to_using_microsoft_copilot/coding-with-ai/unversioned], [r guide_to_google_gemini/coding-with-ai/unversioned], or [r guide_to_chatgpt/coding-with-ai/unversioned]\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
         "student_overview": "**How does integrating AI into the debugging process impact the balance between a programmer's creativity and problem-solving efficiency?**\n\nIn this lesson, you'll dive into debugging and optimizing code, using AI to spot and fix errors and make our code sleeker. Plus, we'll have a thoughtful discussion on how AI shapes our coding ethics and creativity, shaping our guidelines for when and how to use AI in programming."
       },
       "seeding_key": {
@@ -121,7 +121,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can AI tools ethically enhance the functionality of a finished program?**\n\nThis lesson has students experience using AI to enhance completed programs through activities like feature expansion or program improvements. They engage in discussions about ethical concerns related to AI-assisted feature suggestions and the creative process in coding, culminating in creating personal value statements for using AI in program development and improvement.",
-        "preparation": "* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five lessons or just this individual lesson.\n* Print copies of the following activity guides:\n  * AI Value Statement with Finished Programs (one for each student)\n  * Ethics Speed Chat Reflection (one for each student)\n  * Using AI with Finished Programs (one for each of student)\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
+        "preparation": "* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five lessons or just this individual lesson.\n* Print copies of the following activity guides:\n  * AI Value Statement with Finished Programs (one for each student)\n  * Ethics Speed Chat Reflection (one for each student)\n  * Using AI with Finished Programs (one for each of student)\n* (Optional) Review a video on [Code Generation with AI](https://www.youtube.com/watch?v=Z_OSq0eh2xM) - watch up through 3:35.\n* (Optional) Review a video about the chatbot you will be using with your students, for example [ChatGPT](https://www.youtube.com/watch?v=Vayo2RSwcRY), [GitHub CoPilot](https://www.youtube.com/watch?v=hPVatUSvZq0), [Google Gemini](https://www.youtube.com/watch?v=btPBE-fjHeg), [BingChat](https://www.youtube.com/watch?v=iSwBvKWo66I), or [Amazon Code Whisperer](https://www.youtube.com/watch?v=j8BoVmHKFlI). Keep in mind Chatbots are constantly updating, so these videos can be a place to start but may be out of date.\n(Optional) Check out our resources for the chatbot you will be using: [r teacher_guide_to_microsoft_copilot/coding-with-ai/unversioned], [r guide_to_google_gemini/coding-with-ai/unversioned], or [r guide_to_chatgpt/coding-with-ai/unversioned]\n* (Optional) If you would like to understand more about How these chatbots work, feel free to look at the video and lesson in optional pre-work.",
         "student_overview": "**How can AI tools ethically enhance the functionality of a finished program?**\n\nIn this lesson, you'll explore how AI can help you improve your finished programs. You'll learn to expand features with AI's help or get suggestions for improving your program. We will also discuss important ethical aspects of using AI in coding, shaping our guidelines for when and how to use AI in programming."
       },
       "seeding_key": {
@@ -3959,6 +3959,114 @@
       }
     },
     {
+      "name": "Guide to ChatGPT",
+      "url": "https://docs.google.com/document/d/1X9RLIpeAwlxckdAugepxS4h7hyjvHUTSDn-knipVneE/",
+      "key": "guide_to_chatgpt",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_chatgpt"
+      }
+    },
+    {
+      "name": "Guide to ChatGPT",
+      "url": "https://docs.google.com/document/d/1X9RLIpeAwlxckdAugepxS4h7hyjvHUTSDn-knipVneE/",
+      "key": "guide_to_chatgpt_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_chatgpt_1"
+      }
+    },
+    {
+      "name": "Guide to ChatGPT",
+      "url": "https://docs.google.com/document/d/1X9RLIpeAwlxckdAugepxS4h7hyjvHUTSDn-knipVneE/",
+      "key": "guide_to_chatgpt_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_chatgpt_2"
+      }
+    },
+    {
+      "name": "Guide to Google Gemini",
+      "url": "https://docs.google.com/document/d/1NFPloHIzAxZca_86Up4Ubrji4xLjGKBIH9gqoBRopAg/",
+      "key": "guide_to_google_gemini",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_google_gemini"
+      }
+    },
+    {
+      "name": "Guide to Google Gemini",
+      "url": "https://docs.google.com/document/d/1NFPloHIzAxZca_86Up4Ubrji4xLjGKBIH9gqoBRopAg/",
+      "key": "guide_to_google_gemini_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_google_gemini_1"
+      }
+    },
+    {
+      "name": "Guide to Google Gemini",
+      "url": "https://docs.google.com/document/d/1NFPloHIzAxZca_86Up4Ubrji4xLjGKBIH9gqoBRopAg/",
+      "key": "guide_to_google_gemini_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_google_gemini_2"
+      }
+    },
+    {
+      "name": "Guide to using Microsoft Copilot",
+      "url": "https://docs.google.com/document/d/1Pqz-xjN1btqSvFj4vYMOZS0boJ0Bw_DFDZ3v_3nwUVk/",
+      "key": "guide_to_using_microsoft_copilot",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_using_microsoft_copilot"
+      }
+    },
+    {
+      "name": "Guide to using Microsoft Copilot",
+      "url": "https://docs.google.com/document/d/1Pqz-xjN1btqSvFj4vYMOZS0boJ0Bw_DFDZ3v_3nwUVk/",
+      "key": "guide_to_using_microsoft_copilot_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_using_microsoft_copilot_1"
+      }
+    },
+    {
+      "name": "Guide to using Microsoft Copilot",
+      "url": "https://docs.google.com/document/d/1Pqz-xjN1btqSvFj4vYMOZS0boJ0Bw_DFDZ3v_3nwUVk/",
+      "key": "guide_to_using_microsoft_copilot_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_using_microsoft_copilot_2"
+      }
+    },
+    {
       "name": "Initial Stages Strategies Digital Journal",
       "url": "https://docs.google.com/presentation/d/10KAgpz8QJXviZymPj1QkOSxKmzrXWvy0eby1dMILIAo/edit?usp=sharing",
       "key": "initial_stages_strategies_digital_journal",
@@ -4100,6 +4208,42 @@
       }
     },
     {
+      "name": "Teacher Guide to Chat GPT",
+      "url": "https://docs.google.com/document/d/1X9RLIpeAwlxckdAugepxS4h7hyjvHUTSDn-knipVneE/",
+      "key": "teacher_guide_to_chat_gpt",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_guide_to_chat_gpt"
+      }
+    },
+    {
+      "name": "Teacher Guide to Gemini",
+      "url": "https://docs.google.com/document/d/1NFPloHIzAxZca_86Up4Ubrji4xLjGKBIH9gqoBRopAg/",
+      "key": "teacher_guide_to_gemini",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_guide_to_gemini"
+      }
+    },
+    {
+      "name": "Teacher Guide to Microsoft Copilot",
+      "url": "https://docs.google.com/document/d/1Pqz-xjN1btqSvFj4vYMOZS0boJ0Bw_DFDZ3v_3nwUVk/",
+      "key": "teacher_guide_to_microsoft_copilot",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_guide_to_microsoft_copilot"
+      }
+    },
+    {
       "name": "[OPTIONAL] User Feedback",
       "url": "https://docs.google.com/document/d/1g_G24ut-J5ldD59KtYCN7vTl7S_AvlhLAg5MY4UtR9Q/edit?usp=sharing",
       "key": "user_feedback",
@@ -4124,6 +4268,24 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "_optional_what_is_pseudocode_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "guide_to_chatgpt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "guide_to_google_gemini"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "guide_to_using_microsoft_copilot"
       }
     },
     {
@@ -4166,6 +4328,24 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "ai_your_ideation_partner_for_programming_prep"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "guide_to_chatgpt_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "guide_to_google_gemini_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "guide_to_using_microsoft_copilot_1"
       }
     },
     {
@@ -4231,6 +4411,24 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "guide_to_chatgpt_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "guide_to_google_gemini_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "guide_to_using_microsoft_copilot_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "my_algorithms_ai_value_statements"
       }
     },
@@ -4274,6 +4472,24 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "debugging_ai_assistant"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "guide_to_chatgpt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "guide_to_google_gemini"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "guide_to_using_microsoft_copilot"
       }
     },
     {
@@ -4345,6 +4561,24 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "guide_to_chatgpt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "guide_to_google_gemini"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "teacher_guide_to_microsoft_copilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "user_feedback"
       }
     }
@@ -4353,6 +4587,24 @@
     {
       "seeding_key": {
         "resource.key": "ai_chatbot_prompting_guide",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_guide_to_chat_gpt",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_guide_to_gemini",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_guide_to_microsoft_copilot",
         "script.name": "coding-with-ai"
       }
     }

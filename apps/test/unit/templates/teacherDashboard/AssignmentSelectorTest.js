@@ -1,11 +1,13 @@
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/reconfiguredChai';
+
 import AssignmentSelector, {
   getCourseOfferingsByCategory,
 } from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   courseOfferings: courseOfferings,
