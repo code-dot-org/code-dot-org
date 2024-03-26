@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import MethodSummaryTable from '@cdo/apps/templates/codeDocs/MethodSummaryTable';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('MethodSummaryTable', () => {
   let defaultMethods;

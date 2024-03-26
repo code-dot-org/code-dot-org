@@ -478,8 +478,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
 
     user = create :student
-
-    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao = AuthenticationOption.new(
+      user: user,
+      email: Services::Lti.get_claim(payload, :email),
+      credential_type: AuthenticationOption::LTI_V1,
+      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
+    )
     ao.save!
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
@@ -495,8 +499,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
 
     user = create :student
-
-    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao = AuthenticationOption.new(
+      user: user,
+      email: Services::Lti.get_claim(payload, :email),
+      credential_type: AuthenticationOption::LTI_V1,
+      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
+    )
     ao.save!
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
@@ -538,6 +546,27 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal home_path, '/' + @response.redirect_url.split('/').last
   end
 
+  test 'sync - should not sync when section code is blank and required param missing' do
+    user = create :teacher, :with_lti_auth
+    sign_in user
+    get '/lti/v1/sync_course', params: {lti_integration_id: nil, deployment_id: nil, context_id: nil, rlid: nil, nrps_url: nil}
+    assert_response :bad_request
+  end
+
+  test 'sync - should not sync when launching from wrong context' do
+    user = create :teacher, :with_lti_auth
+    sign_in user
+    LtiV1Controller.any_instance.expects(:render_sync_course_error).with('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
+    get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: nil, rlid: 'qux', nrps_url: nil}
+  end
+
+  test 'sync - should not sync and render sync course error when missing a param' do
+    user = create :teacher, :with_lti_auth
+    sign_in user
+    LtiV1Controller.any_instance.expects(:render_sync_course_error).with("Missing lti_integration_id.", :bad_request, 'missing_param')
+    get '/lti/v1/sync_course', params: {lti_integration_id: nil, deployment_id: 'qux', context_id: 'foo', rlid: 'quux', nrps_url: 'bar'}
+  end
+
   test 'sync - should sync and show the confirmation page' do
     had_changes = true
     user = create :teacher, :with_lti_auth
@@ -550,6 +579,50 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_response :ok
+  end
+
+  test 'sync_course as json - syncs and returns course sections data' do
+    lti_course_context_id = SecureRandom.uuid
+    lti_course_resource_link_id = SecureRandom.uuid
+    lti_course_nrps_url = 'https://example.com/nrps'
+
+    user = create :teacher, :with_lti_auth
+    lti_integration = create :lti_integration
+    create(
+      :lti_course,
+      lti_integration: lti_integration,
+      context_id: lti_course_context_id,
+      resource_link_id: lti_course_resource_link_id,
+      nrps_url: lti_course_nrps_url
+    )
+
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id)
+    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+    Services::Lti.expects(:sync_course_roster).returns(true)
+
+    sign_in user
+
+    assert_no_difference 'LtiCourse.count' do
+      get '/lti/v1/sync_course', params: {
+        lti_integration_id: lti_integration.id,
+        deployment_id: 'foo',
+        context_id: lti_course_context_id,
+        rlid: lti_course_resource_link_id,
+        nrps_url: lti_course_nrps_url
+      }, as: :json
+    end
+
+    expected_sections_data = {
+      'all' => {
+        '1' => {'name' => 'Section 1', 'size' => 3},
+        '2' => {'name' => 'Section 2', 'size' => 3},
+        '3' => {'name' => 'Section 3', 'size' => 3}
+      },
+      'changed' => {},
+    }
+
+    assert_response :ok
+    assert_equal expected_sections_data, JSON.parse(response.body)
   end
 
   test 'sync - should not sync given no changes' do

@@ -1,15 +1,17 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-import * as utils from '@cdo/apps/utils';
+import React from 'react';
 import sinon from 'sinon';
+
 import IconKey from '@cdo/apps/templates/sectionProgressV2/IconKey';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('IconKey Component', () => {
   it('renders the open state initially', () => {
     sinon.stub(utils, 'tryGetLocalStorage').returns('true');
     render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[]} />);
-    expect(screen.getByLabelText('Icon key')).be.visible;
+    expect(screen.getByLabelText('Icon Key')).be.visible;
     expect(screen.queryByText('More Details')).be.visible;
     screen.getByText('Assignment Completion States');
     screen.getByText('Teacher Actions');

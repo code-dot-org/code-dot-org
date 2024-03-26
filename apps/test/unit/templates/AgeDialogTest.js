@@ -1,8 +1,10 @@
 import {assert} from 'chai';
-import React from 'react';
-import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
 import {shallow} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
+
+import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
+
 import FakeStorage from '../../util/FakeStorage';
 
 describe('AgeDialog', () => {

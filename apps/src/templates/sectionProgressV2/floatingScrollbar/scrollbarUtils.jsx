@@ -18,6 +18,6 @@ function getScrollbarWidth() {
   // Removing temporary elements from the DOM
   outer.parentNode.removeChild(outer);
 
-  // Return a base number that is larger than all scrollbar widths if we can't calculate it.
-  return scrollbarWidth > 0 ? scrollbarWidth : 20;
+  // Note scrollbar width can be 0 if scrollbars are not always shown.
+  return scrollbarWidth;
 }

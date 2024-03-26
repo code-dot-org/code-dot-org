@@ -7,7 +7,6 @@ import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import style from './project-card.module.scss';
-import ReportAbusePopUp from './ReportAbusePopUp.jsx';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -24,32 +23,6 @@ export default class ProjectCard extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      isShowingReportAbusePopUp: false,
-      hasBeenReported: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
-    };
-    this.showReportAbusePopUp = this.showReportAbusePopUp.bind(this);
-    this.closeReportAbusePopUp = this.closeReportAbusePopUp.bind(this);
-    this.onReportAbuse = this.onReportAbuse.bind(this);
-  }
-
-  showReportAbusePopUp() {
-    this.setState({
-      isShowingReportAbusePopUp: true,
-    });
-  }
-
-  closeReportAbusePopUp() {
-    this.setState({
-      isShowingReportAbusePopUp: false,
-    });
-  }
-
-  onReportAbuse() {
-    this.setState({
-      hasBeenReported: true,
-    });
   }
 
   renderHeader() {
@@ -92,8 +65,7 @@ export default class ProjectCard extends React.Component {
   }
 
   render() {
-    const {projectData, currentGallery, isDetailView, showReportAbuseHeader} =
-      this.props;
+    const {projectData, currentGallery, isDetailView} = this.props;
     const {type, channel} = this.props.projectData;
     const isPersonalGallery = currentGallery === 'personal';
     const isPublicGallery = currentGallery === 'public';
@@ -110,22 +82,9 @@ export default class ProjectCard extends React.Component {
       isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
-    const {isShowingReportAbusePopUp} = this.state;
-
     return (
       <div className="project_card">
-        {isShowingReportAbusePopUp && (
-          <ReportAbusePopUp
-            abuseUrl={url}
-            projectData={this.props.projectData}
-            onClose={this.closeReportAbusePopUp}
-            onReport={this.onReportAbuse}
-          />
-        )}
-
         <div className={style.card}>
-          {showReportAbuseHeader && this.renderHeader()}
-
           <div style={thumbnailStyle}>
             <a
               href={studio(url)}

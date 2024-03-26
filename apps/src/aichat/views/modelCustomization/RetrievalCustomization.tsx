@@ -1,27 +1,57 @@
 import React, {useState, useCallback} from 'react';
 
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
+import {isDisabled} from './utils';
+import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
-  const [messages, setMessages] = useState<string[]>([]);
-  const [newMessage, setNewMessage] = useState('');
+  const [newRetrievalContext, setNewRetrievalContext] = useState('');
+
+  const dispatch = useAppDispatch();
+
+  const {visibility} = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  ).retrievalContexts;
+  const {retrievalContexts} = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
 
   const onAdd = useCallback(() => {
-    setMessages([...messages, newMessage]);
-    setNewMessage('');
+    dispatch(
+      setAiCustomizationProperty({
+        property: 'retrievalContexts',
+        value: [...retrievalContexts, newRetrievalContext],
+      })
+    );
+    setNewRetrievalContext('');
     document.getElementById('retrieval-input')?.focus();
-  }, [messages, setMessages, newMessage, setNewMessage]);
+  }, [
+    dispatch,
+    retrievalContexts,
+    newRetrievalContext,
+    setNewRetrievalContext,
+  ]);
 
   const onRemove = useCallback(
     (index: number) => {
-      const messagesCopy = [...messages];
-      messagesCopy.splice(index, 1);
-      setMessages(messagesCopy);
+      const newRetrievalContexts = [...retrievalContexts];
+      newRetrievalContexts.splice(index, 1);
+      dispatch(
+        setAiCustomizationProperty({
+          property: 'retrievalContexts',
+          value: newRetrievalContexts,
+        })
+      );
     },
-    [messages, setMessages]
+    [dispatch, retrievalContexts]
   );
 
   return (
@@ -33,22 +63,28 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           </label>
           <textarea
             id="retrieval-input"
-            onChange={event => setNewMessage(event.target.value)}
-            value={newMessage}
+            onChange={event => setNewRetrievalContext(event.target.value)}
+            value={newRetrievalContext}
+            disabled={isDisabled(visibility)}
           />
         </div>
         <div className={styles.addItemContainer}>
-          <button type="button" onClick={onAdd} disabled={!newMessage}>
+          <button
+            type="button"
+            onClick={onAdd}
+            disabled={!newRetrievalContext || isDisabled(visibility)}
+          >
             Add
           </button>
         </div>
-        {messages.map((message, index) => {
+        {retrievalContexts.map((message, index) => {
           return (
             <div key={index} className={styles.itemContainer}>
               <button
                 type="button"
                 onClick={() => onRemove(index)}
                 className={styles.removeItemButton}
+                disabled={isDisabled(visibility)}
               >
                 <FontAwesomeV6Icon
                   iconName="circle-xmark"
@@ -61,7 +97,9 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <button type="button">Update</button>
+        <button type="button" disabled={isDisabled(visibility)}>
+          Update
+        </button>
       </div>
     </div>
   );

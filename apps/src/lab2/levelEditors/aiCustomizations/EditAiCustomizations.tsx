@@ -14,7 +14,10 @@ import {
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
-} from '@cdo/apps/aichat/constants';
+  SET_TEMPERATURE_STEP,
+  EMPTY_MODEL_CARD_INFO,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import MultiItemInput from './MultiItemInput';
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
@@ -22,23 +25,6 @@ import VisibilityDropdown from './VisibilityDropdown';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {UpdateContext} from './UpdateContext';
 import CollapsibleSection from './CollapsibleSection';
-
-const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
-  description: '',
-  intendedUse: '',
-  limitationsAndWarnings: '',
-  testingAndEvaluation: '',
-  exampleTopics: [],
-};
-
-const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
-  botName: {value: '', visibility: 'editable'},
-  temperature: {value: 0, visibility: 'editable'},
-  systemPrompt: {value: '', visibility: 'editable'},
-  retrievalContexts: {value: [], visibility: 'editable'},
-  modelCardInfo: {value: EMPTY_MODEL_CARD_INFO, visibility: 'editable'},
-  hidePresentationPanel: false,
-};
 
 // Make sure all fields have a visibility specified.
 function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {
@@ -51,7 +37,7 @@ function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {
       continue;
     }
     if (field.visibility === undefined) {
-      field.visibility = 'editable';
+      field.visibility = Visibility.EDITABLE;
     }
   }
   return data;
@@ -105,7 +91,8 @@ const EditAiCustomizations: React.FunctionComponent<{
         ...aiCustomizations,
         modelCardInfo: {
           value: updatedModelCardInfo,
-          visibility: aiCustomizations.modelCardInfo?.visibility || 'editable',
+          visibility:
+            aiCustomizations.modelCardInfo?.visibility || Visibility.EDITABLE,
         },
       });
     },
@@ -150,7 +137,7 @@ const EditAiCustomizations: React.FunctionComponent<{
           inputType="number"
           min={MIN_TEMPERATURE}
           max={MAX_TEMPERATURE}
-          step={0.1}
+          step={SET_TEMPERATURE_STEP}
           description="Temperature setting for the model. A higher temperature induces more randomness."
         />
         <FieldSection
@@ -196,7 +183,10 @@ const EditAiCustomizations: React.FunctionComponent<{
             <div className={moduleStyles.fieldRow}>
               <ModelCardFields />
               <VisibilityDropdown
-                value={aiCustomizations.modelCardInfo?.visibility || 'editable'}
+                value={
+                  aiCustomizations.modelCardInfo?.visibility ||
+                  Visibility.EDITABLE
+                }
                 property="modelCardInfo"
               />
             </div>
