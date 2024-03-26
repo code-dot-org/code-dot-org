@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
-import moduleStyles from './edit-ai-customizations.module.scss';
+import moduleStyles from '@cdo/apps/lab2/levelEditors/aiCustomizations/edit-ai-customizations.module.scss';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 
 interface AITutorFieldsProps {
