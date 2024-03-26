@@ -1,5 +1,6 @@
-import React, {createContext, useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
+import React, {createContext, useState, useEffect, useRef} from 'react';
+
 import {playNextAudio} from '../utils/audioQueueUtils';
 
 export const AudioQueueContext = createContext();
