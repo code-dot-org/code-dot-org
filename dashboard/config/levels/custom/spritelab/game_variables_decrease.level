@@ -25,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Variable values can increase or decrease.** Program the Health variable decrease when the bomb sprite is clicked.\r\n- Under the event `when sprite touches sprite` add a `change Health by -1` \r\n\r\n- Press `Run` and watch the variables change when you click on the sprites ",
+    "long_instructions": "**Variable values can increase or decrease.** Program the Health variable to decrease when the bomb sprite is clicked.\r\n- Under the event `when sprite touches sprite` add a `change Health by -1` \r\n\r\n- Press `Run` and watch the variables change when you click on the sprites ",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -51,9 +51,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "validation_code": "if (World.frameCount == 1) {\r\n\r\n   addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'spritelabFeedbackClickSprite'); // Failure message: \"Make sure to click on your sprite after pressing *\"Run\"*.\"\r\n  \r\n  addCriteria(function() {\r\n    return variableValueChanged('decrease'); // Check whether the value of the variable decreased.\r\n  }, \"variableDecreaseValue\");  // Failure message: \"The value of your variable didn't decrease.\"\r\n}\r\ncheck();\r\n"
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:22:48.511+00:00\",\"changed\":[\"cloned from \\\"game_dev_score_change\\\"\"],\"cloned_from\":\"game_dev_score_change\"},{\"changed_at\":\"2024-03-18 20:22:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:22:48.511+00:00\",\"changed\":[\"cloned from \\\"game_dev_score_change\\\"\"],\"cloned_from\":\"game_dev_score_change\"},{\"changed_at\":\"2024-03-18 20:22:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 17:56:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 18:03:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 18:04:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

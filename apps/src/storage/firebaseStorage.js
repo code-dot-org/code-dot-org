@@ -1107,7 +1107,7 @@ FirebaseStorage.subscribeToListOfProjectTables = function (
     let tableName =
       typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
     tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
-    onTableAdded(tableName);
+    onTableAdded(tableName, tableType.PROJECT);
   });
   tableRef.on('child_removed', snapshot => {
     let tableName =
@@ -1128,7 +1128,7 @@ FirebaseStorage.subscribeToListOfProjectTables = function (
     let tableName =
       typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
     tableName = unescapeFirebaseKey(tableName);
-    onTableAdded(tableName);
+    onTableAdded(tableName, tableType.SHARED);
   });
   currentTableRef.on('child_removed', snapshot => {
     let tableName =

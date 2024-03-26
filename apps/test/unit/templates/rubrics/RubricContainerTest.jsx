@@ -57,6 +57,12 @@ describe('RubricContainer', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  function stubFetchTeacherEvaluations(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
   beforeEach(() => {
     ajaxStub = sinon.stub($, 'ajax');
     const request = sinon.stub();
@@ -168,6 +174,19 @@ describe('RubricContainer', () => {
     },
   };
 
+  const noEvals = [
+    {
+      user_name: 'Stilgar',
+      user_id: 1,
+      eval: [],
+    },
+    {
+      user_name: 'Chani',
+      user_id: 1,
+      eval: [],
+    },
+  ];
+
   const defaultStudentInfo = {user_id: 1, name: 'Jane Doe'};
 
   const mockAiEvaluations = [
@@ -191,6 +210,7 @@ describe('RubricContainer', () => {
   it('fetches AI evaluations and passes them to children', async () => {
     stubFetchEvalStatusForUser(successJson);
     stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     const evalFetch = stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -236,6 +256,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForUser(successJson);
     stubFetchEvalStatusForAll(successJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -264,6 +285,7 @@ describe('RubricContainer', () => {
   it('shows a a button for running analysis if canProvideFeedback is true', async () => {
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
     const wrapper = mount(
@@ -280,7 +302,7 @@ describe('RubricContainer', () => {
     );
     await wait();
     wrapper.update();
-    expect(wrapper.find('Button')).to.have.lengthOf(3);
+    expect(wrapper.find('Button')).to.have.lengthOf(4);
     expect(wrapper.find('Button').first().props().text).to.equal(
       i18n.runAiAssessment()
     );
@@ -289,6 +311,7 @@ describe('RubricContainer', () => {
   it('shows status text when student has not attempted level', async () => {
     const userFetchStub = stubFetchEvalStatusForUser(notAttemptedJson);
     const allFetchStub = stubFetchEvalStatusForAll(notAttemptedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
     const wrapper = mount(
@@ -315,6 +338,7 @@ describe('RubricContainer', () => {
   it('shows status text when level has already been evaluated', async () => {
     const userFetchStub = stubFetchEvalStatusForUser(successJson);
     const allFetchStub = stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -346,6 +370,7 @@ describe('RubricContainer', () => {
   it('allows teacher to run analysis when level has not been evaluated', async () => {
     const userFetchStub = stubFetchEvalStatusForUser(readyJson);
     const allFetchStub = stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
     const wrapper = mount(
@@ -386,6 +411,7 @@ describe('RubricContainer', () => {
 
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
     const wrapper = mount(
@@ -468,6 +494,7 @@ describe('RubricContainer', () => {
 
     const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
     const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -508,6 +535,7 @@ describe('RubricContainer', () => {
 
     const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
     const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -548,6 +576,7 @@ describe('RubricContainer', () => {
 
     const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
     const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -581,6 +610,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForUser(successJson);
     stubFetchEvalStatusForAll(successJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
 
     const {getByTestId} = render(
       <Provider store={store}>

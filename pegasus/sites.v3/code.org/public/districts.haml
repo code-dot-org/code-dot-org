@@ -4,6 +4,8 @@ theme: responsive_full_width
 ---
 
 %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
+%script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
+%script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 %script{src: webpack_asset_path('js/code.org/public/districts.js')}
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/districts-styles.css", rel: "stylesheet"}
@@ -109,7 +111,7 @@ theme: responsive_full_width
       %a.link-button{href: url_learn_more} Learn more
       %a.link-button.secondary{href: url_enroll_now, target: "_blank", rel: "noopener noreferrer"} Enroll now
 
-%section.bg-primary-light{style: "display: block !important"}
+%section.bg-primary-light.centered
   .wrapper
     %p.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool" target="_blank" rel="noopener noreferrer">CS Access Report</a>!
 

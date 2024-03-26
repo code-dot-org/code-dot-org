@@ -48,6 +48,7 @@ function generateFakeProjectData(numProjects, projectType) {
     publishedAt: new Date(startTime + projectNum).toISOString(),
     publishedToPublic: true,
     publishedToClass: true,
+    featuredAt: new Date(startTime + projectNum).toISOString(),
   }));
 }
 
