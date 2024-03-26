@@ -1,12 +1,14 @@
-import _ from 'lodash';
 import $ from 'jquery';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
+
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user

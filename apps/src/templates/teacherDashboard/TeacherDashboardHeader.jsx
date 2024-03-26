@@ -1,17 +1,20 @@
-import FontAwesome from './../FontAwesome';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import Notification, {NotificationType} from '../Notification';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {switchToSection, recordSwitchToSection} from './sectionHelpers';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import SmallChevronLink from '../SmallChevronLink';
-import {beginEditingSection, sortedSectionsList} from './teacherSectionsRedux';
+
+import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
+
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
-import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
+import Notification, {NotificationType} from '../Notification';
+import SmallChevronLink from '../SmallChevronLink';
+
+import FontAwesome from './../FontAwesome';
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
+import {beginEditingSection, sortedSectionsList} from './teacherSectionsRedux';
 
 function TeacherDashboardHeader({
   sections,

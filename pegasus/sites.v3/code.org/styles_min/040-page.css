@@ -117,6 +117,17 @@ h6,
   margin-bottom: 0.5em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Use this class on text elements to turn them white */
+h1, h2, h3, h4, h5, h6, p, figcaption, span, a:not(.link-button) {
+  &.white {
+    color: var(--neutral_white) !important;
+  }
+}
+
 p {
   line-height: 1.48;
   margin-bottom: 1em;
@@ -406,9 +417,14 @@ td {
   padding: 15px;
 }
 
-/*Centers a block-level element */
+/* Centers a block-level element */
 .centered {
   text-align: center !important;
+}
+
+/* Applies text-wrap: balance to an element */
+.wrap-balance {
+  text-wrap: balance;
 }
 
 /* Styles for the "OR" divider line between paragraphs

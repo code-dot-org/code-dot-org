@@ -48,11 +48,13 @@
     "display_name": "Freeze Tag",
     "thumbnail_url": "https://images.code.org/d32d37f3ac0c84e378a23aeee03793ea-freeze_tag.jpg",
     "bubble_choice_description": "**Difficulty:** 🌶️🌶️🌶️\r\n\r\n**Game Mechanic:** Chase\r\n\r\n**How to win:** Freeze all 5 opponents. When you tag an opponent they freeze. But they can unfreeze each other! ",
-    "long_instructions": "**Play the game!**\r\n \r\n Press `Run` and play the game. What do you notice?",
+    "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on.",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"It's freeze tag. Use the arrows and chase the wizzards!\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3462080419880755169d65de817ba664/game_variables_intro_choices_d.mp3\"}]",
+    "short_instructions": "Play the game!",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:38.458+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice2\\\"\"],\"cloned_from\":\"game_dev_choice2\"},{\"changed_at\":\"2024-03-18 20:19:46 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:59:13 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:02:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:02:56 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:03:17 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:03:44 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:05:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:38.458+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice2\\\"\"],\"cloned_from\":\"game_dev_choice2\"},{\"changed_at\":\"2024-03-18 20:19:46 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:59:13 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:02:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:02:56 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:03:17 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:03:44 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:05:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 21:17:47 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:20:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:22:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:23:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -119,6 +121,26 @@
                                       <field name="NAME">wandering</field>
                                     </block>
                                   </value>
+                                  <next>
+                                    <block type="gamelab_showVariable">
+                                      <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">Frozen</field>
+                                      <value name="LOCATION">
+                                        <block type="gamelab_location_picker">
+                                          <field name="LOCATION">{"x":89,"y":67}</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="variables_set">
+                                          <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">Frozen</field>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <field name="NUM">0</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -132,7 +154,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" deletable="false" movable="false" x="16" y="420">
+        <block type="gamelab_checkTouching" deletable="false" movable="false" x="17" y="488">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
@@ -177,6 +199,26 @@
                           <field name="NUM">1</field>
                         </block>
                       </value>
+                      <next>
+                        <block type="gamelab_ifVarEquals" deletable="false" movable="false">
+                          <field name="NUM" id="Y2zu8%:MR4BRtCZA]L%9">Frozen</field>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <field name="NUM">6</field>
+                            </block>
+                          </value>
+                          <statement name="STATEMENT">
+                            <block type="gamelab_spriteSay" deletable="false" movable="false">
+                              <field name="SPEECH">I win!</field>
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"rpgcharacter_17"</field>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
@@ -184,7 +226,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" deletable="false" movable="false" x="16" y="660">
+        <block type="gamelab_checkTouching" deletable="false" movable="false" x="17" y="846">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
@@ -225,6 +267,9 @@
                         <shadow type="math_number" id="LN?:Ipm7O+;L/nTyQ*^N">
                           <field name="NUM">-1</field>
                         </shadow>
+                        <block type="math_number">
+                          <field name="NUM">-1</field>
+                        </block>
                       </value>
                     </block>
                   </next>

@@ -25,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##Game Mechanic: COLLECT\r\n**Problem:** How many coins do I have?\r\n\r\n**Fix:** Add the scoreboard by with the block `show score`",
+    "long_instructions": "##Game Mechanic: COLLECT\r\n**Problem:** How many coins do I have?\r\n\r\n**Fix:** Add the scoreboard with the block `show coins`",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -46,14 +46,15 @@
       "downButton"
     ],
     "display_name": "Coin Collector",
-    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect\r\n\r\n**Problem:** We don't know what the score is!",
+    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect & Avoid\r\n\r\n**Problem:** We don't know what the score is!",
     "thumbnail_url": "https://images.code.org/b97faf7231b9f04f450f48cfcd4d6de6-coin.jpg",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "short_instructions": "Update the scoreboard to show the number of coins you collected."
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:13.534+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_intro\\\"\"],\"cloned_from\":\"game_dev_bad_example_intro\"},{\"changed_at\":\"2024-03-18 20:25:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:13.534+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_intro\\\"\"],\"cloned_from\":\"game_dev_bad_example_intro\"},{\"changed_at\":\"2024-03-18 20:25:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:34:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:43:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:44:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:32:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:45:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 16:06:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -63,67 +64,67 @@
         <variables>
           <variable id="H;TDX?=i:64:oM74dP0(">coins</variable>
         </variables>
-        <block type="when_run" deletable="false" movable="false" x="58" y="30">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
+            <block type="gamelab_setBackgroundImageAs" deletable="false">
               <field name="IMG">"cave"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
+                <block type="gamelab_makeNewSpriteAnon" deletable="false">
                   <field name="ANIMATION_NAME">"purple bunny"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker">
+                    <block type="gamelab_location_picker" deletable="false">
                       <field name="LOCATION">{"x":104,"y":328}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon">
+                    <block type="gamelab_makeNewSpriteAnon" deletable="false">
                       <field name="ANIMATION_NAME">"ghost"</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker">
+                        <block type="gamelab_location_picker" deletable="false">
                           <field name="LOCATION">{"x":367,"y":45}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_makeSpritesWithSize">
+                        <block type="gamelab_makeSpritesWithSize" deletable="false">
                           <field name="SIZE">50</field>
                           <field name="COSTUME">"silver coin"</field>
                           <value name="NUM">
-                            <block type="math_number">
+                            <block type="math_number" deletable="false">
                               <field name="NUM">10</field>
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_spriteSay">
+                            <block type="gamelab_spriteSay" deletable="false">
                               <field name="SPEECH">Collect 100 coins to win!</field>
                               <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
+                                <block type="gamelab_allSpritesWithAnimation" deletable="false">
                                   <field name="ANIMATION">"purple bunny"</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="adaptations_toggleBehaviorSimple">
+                                <block type="adaptations_toggleBehaviorSimple" deletable="false">
                                   <field name="TOGGLE">"begins"</field>
                                   <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation">
+                                    <block type="gamelab_allSpritesWithAnimation" deletable="false">
                                       <field name="ANIMATION">"purple bunny"</field>
                                     </block>
                                   </value>
                                   <value name="BEHAVIOR">
-                                    <block type="gamelab_behavior_get">
+                                    <block type="gamelab_behavior_get" deletable="false">
                                       <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
                                       <field name="NAME">moving with arrow keys</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="adaptations_toggleBehaviorSimple">
+                                    <block type="adaptations_toggleBehaviorSimple" deletable="false">
                                       <field name="TOGGLE">"begins"</field>
                                       <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation">
+                                        <block type="gamelab_allSpritesWithAnimation" deletable="false">
                                           <field name="ANIMATION">"ghost"</field>
                                         </block>
                                       </value>
                                       <value name="BEHAVIOR">
-                                        <block type="gamelab_behavior_get">
+                                        <block type="gamelab_behavior_get" deletable="false">
                                           <mutation behaviorId="wandering" name="wandering"/>
                                           <field name="NAME">wandering</field>
                                         </block>
@@ -143,27 +144,27 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="51" y="510">
+        <block type="gamelab_checkTouching" deletable="false" x="16" y="480">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false">
               <field name="ANIMATION">"purple bunny"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false">
               <field name="ANIMATION">"silver coin"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_destroy">
+            <block type="gamelab_destroy" deletable="false">
               <value name="THIS">
-                <block type="gamelab_objectSpritePointer"/>
+                <block type="gamelab_objectSpritePointer" deletable="false"/>
               </value>
               <next>
-                <block type="math_change">
+                <block type="math_change" deletable="false">
                   <field name="VAR" id="H;TDX?=i:64:oM74dP0(">coins</field>
                   <value name="DELTA">
                     <shadow type="math_number" id="7dCkzIGI^WtcfxiW*Nob">
@@ -175,44 +176,44 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="54" y="671">
+        <block type="gamelab_checkTouching" deletable="false" x="16" y="650">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false">
               <field name="ANIMATION">"ghost"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false">
               <field name="ANIMATION">"purple bunny"</field>
             </block>
           </value>
           <next>
-            <block type="variables_set">
+            <block type="variables_set" deletable="false">
               <field name="VAR" id="H;TDX?=i:64:oM74dP0(">coins</field>
               <value name="VALUE">
-                <block type="math_number">
+                <block type="math_number" deletable="false">
                   <field name="NUM">0</field>
                 </block>
               </value>
             </block>
           </next>
         </block>
-        <block type="gamelab_everyInterval" x="52" y="798">
+        <block type="gamelab_everyInterval" deletable="false" x="16" y="780">
           <field name="UNIT">"seconds"</field>
           <value name="N">
-            <block type="math_number">
+            <block type="math_number" deletable="false">
               <field name="NUM">3</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_makeSpritesWithSize">
+            <block type="gamelab_makeSpritesWithSize" deletable="false">
               <field name="SIZE">50</field>
               <field name="COSTUME">"silver coin"</field>
               <value name="NUM">
-                <block type="math_number">
+                <block type="math_number" deletable="false">
                   <field name="NUM">10</field>
                 </block>
               </value>

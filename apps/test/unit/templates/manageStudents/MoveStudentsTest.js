@@ -1,7 +1,7 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
 import sinon from 'sinon';
+
 import {
   blankStudentTransfer,
   blankStudentTransferStatus,
@@ -9,6 +9,8 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const studentData = [
   {id: 1, name: 'studentb'},

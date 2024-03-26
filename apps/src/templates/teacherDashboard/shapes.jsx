@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 export const sectionShape = PropTypes.shape({

@@ -17,8 +17,8 @@ theme: responsive_full_width
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
     .text-wrapper.col-60
-      %h1{style: "color: white"}=hoc_s(:ai_hero_heading)
-      %p.body-one{style: "color: white"}=hoc_s(:ai_hero_desc)
+      %h1.white=hoc_s(:ai_hero_heading)
+      %p.body-one.white=hoc_s(:ai_hero_desc)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
@@ -74,13 +74,13 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
-    = view :ai_curricula_blocks
+    = view :ai_carousel_curricula_blocks
 
 %section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:ai_carousel_heading)
     .quotes-wrapper
-      = view :ai_carousel
+      = view :ai_carousel_quotes
 
 %section#ai-pl
   .wrapper
@@ -181,5 +181,7 @@ theme: responsive_full_width
 %section
   .wrapper
     = view :donors_block_microsoft_infosys
+
+= view :swiper_page_ai
 
 = view :visit_partial_event_logger
