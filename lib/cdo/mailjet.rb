@@ -1,4 +1,5 @@
 require 'mailjet'
+require 'honeybadger/ruby'
 require_relative './shared_constants/mailjet_constants'
 
 module MailJet
@@ -48,21 +49,36 @@ module MailJet
       config.api_version = "v3"
     end
 
-    Mailjet::Contact.create(
-      is_excluded_from_campaigns: true,
-      email: email,
-      name: name
-    )
+    # If a contact already exists, Mailjet will raise an error.
+    # This shouldn't happen as user emails should be unique, but
+    # we don't want to block sign up if it does.
+    begin
+      Mailjet::Contact.create(
+        is_excluded_from_campaigns: true,
+        email: email,
+        name: name
+      )
+    rescue => exception
+      Honeybadger.notify(exception)
+    end
 
-    contact = Mailjet::Contactdata.find(email)
-    contact.update_attributes(
-      data: [
-        {
-          name: 'sign_up_date',
-          value: sign_up_date
-        }
-      ]
-    )
+    # Most likely, the above would fail if a contact already exists.
+    # In that case, we want to update the contact with the sign up date.
+    # However, in the case of a different error, we want to notify Honeybadger,
+    # but not block sign up.
+    begin
+      contact = Mailjet::Contactdata.find(email)
+      contact.update_attributes(
+        data: [
+          {
+            name: 'sign_up_date',
+            value: sign_up_date
+          }
+        ]
+      )
+    rescue => exception
+      Honeybadger.notify(exception)
+    end
   end
 
   def self.send_template_email(to_email, from_email, to_name, from_name, template_id)
