@@ -79,7 +79,6 @@ class FeaturedProjectsController < ApplicationController
 
   def freeze_featured_project(project_id)
     project = Project.find_by(id: project_id)
-    return if project.nil?
     project_value = JSON.parse(project.value)
     project_value["frozen"] = true
     project_value["updatedAt"] = DateTime.now.to_s
@@ -88,11 +87,8 @@ class FeaturedProjectsController < ApplicationController
 
   def unfreeze_featured_project(project_id)
     project = Project.find_by(id: project_id)
-    return if project.nil?
     project_value = JSON.parse(project.value)
     project_value["frozen"] = false
-    # Unhide in case this project was frozen manually.
-    project_value["hidden"] = false
     project_value["updatedAt"] = DateTime.now.to_s
     project.update! value: project_value.to_json
   end
