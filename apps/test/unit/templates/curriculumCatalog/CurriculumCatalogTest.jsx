@@ -740,45 +740,33 @@ describe('CurriculumCatalog', () => {
         const currCurriculum = FULL_TEST_COURSES[i];
 
         // Get the Similar Recommended Curriculum for the current test curriculum
-        const similarCurriculumRecommendations = getSimilarRecommendations(
+        const recommendedSimilarCurriculum = getSimilarRecommendations(
           FULL_TEST_COURSES,
           currCurriculum.key,
           curriculaTaughtBefore
-        );
+        )[0];
 
-        // Get the Stretch Recommended Curriculum for the current test curriculum. If the top stretch curriculum result is the same
-        // as the similar curriculum, then get the second stretch curriculum to match the logic in CurriculumCatalog.jsx.
-        const recommendedStretchCurriculumResults = getStretchRecommendations(
+        // Get the Stretch Recommended Curriculum for the current test curriculum. If the top stretch curriculum result is the same as
+        // the Similar Recommended Curriculum, then get the second stretch curriculum to match the logic in CurriculumCatalog.jsx.
+        const stretchCurriculumRecommendations = getStretchRecommendations(
           FULL_TEST_COURSES,
           currCurriculum.key,
           curriculaTaughtBefore
         );
         const recommendedStretchCurriculum =
           recommendedSimilarCurriculum.key ===
-          recommendedStretchCurriculumResults[0].key
-            ? recommendedStretchCurriculumResults[1]
-            : recommendedStretchCurriculumResults[0];
+          stretchCurriculumRecommendations[0].key
+            ? stretchCurriculumRecommendations[1]
+            : stretchCurriculumRecommendations[0];
 
         // Open expanded card of the current test curriculum
         fireEvent.click(quickViewButtons[i]);
         screen.getByText(currCurriculum.description);
 
-        // Check that the top-recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
-        // If the top-recommended similar curriculum was previously taught by the user, then check that the image and link are of the
-        // next-most-recommended similar curriculum.
-        let recommendedSimilarCurriculum = similarCurriculumRecommendations[0];
-        if (
-          curriculaTaughtBefore.includes(
-            recommendedSimilarCurriculum.course_offering_id
-          )
-        ) {
-          recommendedSimilarCurriculum = similarCurriculumRecommendations[1];
-        }
-
         // Ensure none of the recommendations are ones the user has taught before
         assert(
-          curriculaTaughtBefore[0].key !== recommendedSimilarCurriculum.key &&
-            curriculaTaughtBefore[0].key !== recommendedStretchCurriculum.key
+          !curriculaTaughtBefore.includes(recommendedSimilarCurriculum.key) &&
+            !curriculaTaughtBefore.includes(recommendedStretchCurriculum.key)
         );
 
         // Image's alt text is the curriculum's display name.
