@@ -1,31 +1,24 @@
-import classnames from 'classnames';
-import React, {useRef, useEffect, ChangeEvent} from 'react';
+import React from 'react';
 
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
+// import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import Typography from '@cdo/apps/componentLibrary/typography';
+// import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
+import TabPanel from '@cdo/apps/componentLibrary/tabs/tabs/TabPanel';
+import styles from '@cdo/apps/componentLibrary/tabs/tabs/tabs.module.scss';
 
-import moduleStyles from './tabs.module.scss';
+// import moduleStyles from './tabs.module.scss';
 
 export interface TabsProps {
-  /** Checkbox checked state */
-  checked: boolean;
-  /** Checkbox onChange handler*/
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  /** The name attribute specifies the name of an input element.
-     The name attribute is used to reference elements in a JavaScript,
-     or to reference form data after a form is submitted.
-     Note: Only form elements with a name attribute will have their values passed when submitting a form. */
+  tabs: TabModel[];
+  onChange: (value: string) => void;
+  selectedTabValue?: string;
+  /** The name attribute specifies the name of a Tabs group.
+     The name attribute is used to reference elements in a JavaScript.
+     */
   name: string;
-  /** The value attribute specifies the value of an input element. */
-  value?: string;
-  /** Checkbox label */
-  label?: string;
-  /** Is checkbox disabled */
-  disabled?: boolean;
-  /** Is checkbox indeterminate */
-  indeterminate?: boolean;
-  /** Size of checkbox */
+  type: 'primary' | 'secondary';
+  /** Size of Tabs */
   size?: ComponentSizeXSToL;
 }
 
@@ -43,44 +36,42 @@ export interface TabsProps {
  * Can be used to render a set of Tabs and Tab's content.
  */
 const Tabs: React.FunctionComponent<TabsProps> = ({
-  label,
-  checked,
-  onChange,
+  tabs,
   name,
-  value,
-  disabled = false,
-  indeterminate = false,
+  onChange,
+  selectedTabValue,
   size = 'm',
 }) => {
-  const checkboxRef = useRef<HTMLInputElement>(null);
-  const bodyTextSize = componentSizeToBodyTextSizeMap[size];
-
-  useEffect(() => {
-    if (checkboxRef?.current) {
-      checkboxRef.current.indeterminate = indeterminate;
-    }
-  }, [checkboxRef, indeterminate]);
-
   return (
-    <label
-      className={classnames(moduleStyles.label, moduleStyles[`label-${size}`])}
-    >
-      {/*<input*/}
-      {/*  type="checkbox"*/}
-      {/*  ref={checkboxRef}*/}
-      {/*  name={name}*/}
-      {/*  value={value}*/}
-      {/*  checked={checked}*/}
-      {/*  disabled={disabled}*/}
-      {/*  onChange={onChange}*/}
-      {/*/>*/}
-      <i className="fa-solid" />
-      {label && (
-        <Typography semanticTag="span" visualAppearance={bodyTextSize}>
-          {label}
-        </Typography>
-      )}
-    </label>
+    <>
+      <div className={styles.tabsContainer}>
+        <ul role="tablist" className={styles.tabsList}>
+          {tabs.map((tab, index) => (
+            <_Tab
+              {...tab}
+              key={tab.value}
+              isSelected={tab.value === selectedTabValue}
+              onClick={onChange}
+              tabPanelId={`${name}-panel-${tab.value}`}
+              tabButtonId={`${name}-tab-${tab.value}`}
+            />
+          ))}
+        </ul>
+      </div>
+      <div className={styles.tabPanelsContainer}>
+        {tabs.map((tab, index) => {
+          return (
+            <TabPanel
+              key={index}
+              content={tab.tabContent}
+              isActive={tab.value === selectedTabValue}
+              id={`${name}-panel-${tab.value}`}
+              labelledBy={`${name}-tab-${tab.value}`}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 

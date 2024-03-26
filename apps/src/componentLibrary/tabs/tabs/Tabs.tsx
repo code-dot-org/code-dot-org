@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
 import classNames from 'classnames';
+import React, {useState} from 'react';
 
-import styles from './tabs.module.scss';
 import TabPanel from './TabPanel';
 
-type Tab = {
+import styles from './tabs.module.scss';
+
+export type Tab = {
   title: string;
   content: React.ReactNode;
 };
