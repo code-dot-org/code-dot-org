@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "pilot-k5-game-design",
-    "serialized_at": "2024-03-22 19:17:21 UTC",
+    "serialized_at": "2024-03-25 20:53:53 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -264,6 +264,45 @@
         "lesson_group.key": "",
         "script.name": "pilot-k5-game-design"
       }
+    },
+    {
+      "key": "5293a6cc-140e-45b7-9806-4890b8578979",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5293a6cc-140e-45b7-9806-4890b8578979",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "01076014-face-4d63-aba0-87ee1d5ab527",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01076014-face-4d63-aba0-87ee1d5ab527",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "c45182c2-9c60-46fa-9b16-0c5505ed4494",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c45182c2-9c60-46fa-9b16-0c5505ed4494",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
     }
   ],
   "activity_sections": [
@@ -444,6 +483,37 @@
         "activity_section.key": "1a90ff4d-f286-4201-8d5c-70cabb354433",
         "lesson_activity.key": "2d281cc2-c442-451f-9c87-d23c13cdb5e3"
       }
+    },
+    {
+      "key": "10230064-8740-48ed-8989-bacbc8f2998b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "10230064-8740-48ed-8989-bacbc8f2998b",
+        "lesson_activity.key": "5293a6cc-140e-45b7-9806-4890b8578979"
+      }
+    },
+    {
+      "key": "c06cfc5b-d2e6-4e5f-9a4b-34c90d785068",
+      "position": 1,
+      "properties": {
+        "progression_name": "Game Jam: Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "c06cfc5b-d2e6-4e5f-9a4b-34c90d785068",
+        "lesson_activity.key": "01076014-face-4d63-aba0-87ee1d5ab527"
+      }
+    },
+    {
+      "key": "e9cd177c-ef45-4463-93e3-78fa7361be88",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e9cd177c-ef45-4463-93e3-78fa7361be88",
+        "lesson_activity.key": "c45182c2-9c60-46fa-9b16-0c5505ed4494"
+      }
     }
   ],
   "script_levels": [
@@ -453,6 +523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_video_sprites"
+        ],
         "progression": "Game Design Setup"
       },
       "bonus": false,
@@ -475,6 +548,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_player"
+        ],
         "progression": "Game Design Setup"
       },
       "bonus": false,
@@ -497,6 +573,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_location"
+        ],
         "progression": "Game Design Setup"
       },
       "bonus": false,
@@ -519,6 +598,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_say"
+        ],
         "progression": "Game Design Setup"
       },
       "bonus": false,
@@ -541,6 +623,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_behavior"
+        ],
         "progression": "Sprite Behaviors"
       },
       "bonus": false,
@@ -563,6 +648,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_two_behaviors"
+        ],
         "progression": "Sprite Behaviors"
       },
       "bonus": false,
@@ -585,6 +673,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_about_events"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -607,6 +698,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_event_click"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -629,6 +723,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_event_touch"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1403,6 +1500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_jam_create_plan"
+        ],
         "progression": "Quick Plan"
       },
       "bonus": false,
@@ -1425,6 +1525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_jam_create_game"
+        ],
         "progression": "Make the Game"
       },
       "bonus": false,
@@ -1439,6 +1542,28 @@
       },
       "level_keys": [
         "game_jam_create_game"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Jam: Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_play"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "c06cfc5b-d2e6-4e5f-9a4b-34c90d785068"
+      },
+      "level_keys": [
+        "game_jam_play"
       ]
     }
   ],
@@ -1945,6 +2070,18 @@
         "lesson_group.key": "",
         "script.name": "pilot-k5-game-design",
         "activity_section.key": "21a491e5-b034-4295-af9b-6eef68287e09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_play",
+        "script_level.level_keys": [
+          "game_jam_play"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "c06cfc5b-d2e6-4e5f-9a4b-34c90d785068"
       }
     }
   ],
