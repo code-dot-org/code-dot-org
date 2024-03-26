@@ -27,14 +27,6 @@ section.bg-secondary {
 section.bg-primary-light {
   background-color: rgba(171, 223, 229, 0.5);
 
-  p {
-    @include strong;
-
-    &.body-three {
-      @include body-three;
-    }
-  }
-
   a {
     color: var(--neutral_dark) !important;
     &:hover {
@@ -82,6 +74,15 @@ section.bg-pattern-dark {
 .no-padding-bottom {
   padding-bottom: 0 !important;
 }
+
+// Adds 2rem of space above or below an element
+.add-margin-top {
+  margin-top: 2rem;
+}
+.add-margin-bottom {
+  margin-bottom: 2rem;
+}
+
 
 // FontAwesome icon defaults
 // Sets fixed height on icon container to maintain consistent
@@ -139,6 +140,10 @@ i.fa-fw {
   }
   &.gap-2 {
     gap: 2rem;
+  }
+
+  & > .flex-1 {
+    flex: 1;
   }
 }
 
@@ -633,6 +638,7 @@ form {
   margin-top: 2rem;
   display: grid;
   grid-gap: 1.5rem;
+  text-align: initial;
 
   @media screen and (min-width: $width-sm) {
     grid-template-columns: repeat(2, 1fr);

@@ -1,12 +1,14 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/reconfiguredChai';
+
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   stubRedux,
   restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import reducer, {
   __testInterface__,
   setAuthProviders,
@@ -41,8 +43,8 @@ import reducer, {
   assignToSection,
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const {
   EDIT_SECTION_SUCCESS,

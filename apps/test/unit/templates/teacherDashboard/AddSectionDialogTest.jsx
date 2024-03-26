@@ -1,10 +1,12 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import _ from 'lodash';
+import React from 'react';
+import sinon from 'sinon';
+
+import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('AddSectionDialog', () => {
   let defaultProps,
