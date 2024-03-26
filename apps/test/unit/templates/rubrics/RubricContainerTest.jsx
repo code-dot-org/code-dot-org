@@ -1,3 +1,4 @@
+// react testing library import
 import {render, fireEvent, act} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
 import $ from 'jquery';
@@ -20,8 +21,6 @@ import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
-
-// react testing library import
 
 describe('RubricContainer', () => {
   let clock;

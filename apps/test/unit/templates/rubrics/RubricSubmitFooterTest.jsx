@@ -1,3 +1,4 @@
+// react testing library import
 import {render, screen, act} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -18,8 +19,6 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
-
-// react testing library import
 
 describe('RubricSubmitFooter', () => {
   let store;
