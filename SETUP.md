@@ -101,9 +101,7 @@ External contributors can supply alternate placeholder values for secrets normal
 
 ### macOS
 
-These steps are for Apple devices running **macOS Ventura and Sonoma**, including those running on [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon#M_series) and Intel x86.
-
-Setup steps for macOS:
+Setup steps for Apple devices running **macOS Ventura and Sonoma**, including those running on [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon#M_series) and Intel x86:
 
 1. Open a Terminal.
 
@@ -141,7 +139,7 @@ Setup steps for macOS:
         brew services    # should show: "started"
         ```
 
-      If the status is "stopped", you may need initialize your mysql database:
+      If the status is instead "stopped", you may need initialize your mysql database:
         ```
         brew services stop mysql@5.7
         mysqld --initialize-insecure  # this will leave the root password blank, which is required
@@ -150,17 +148,17 @@ Setup steps for macOS:
         ```
 
 1.  Install **Ruby**
-    1. Configure zsh to load rbenv (for [other shells](https://github.com/rbenv/rbenv#basic-git-checkoutshells)): 
+    1. Configure zsh to load rbenv ([other shells](https://github.com/rbenv/rbenv#basic-git-checkoutshells)): 
         ```
         echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && source ~/.zshrc
         ```
-    2. Install ruby:
+    2. Install ruby version specified by [.ruby-version](.ruby-version):
         ```
         rbenv install --skip-existing`    # run from the project root directory
         ```
 
 1.  Install **Node.js**
-    1. Install node:
+    1. Install node version specified by [.nvmrc](.nvmrc):
         ```
         nvm install    # run from the project root directory
         ```
