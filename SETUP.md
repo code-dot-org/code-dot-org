@@ -154,7 +154,7 @@ Setup steps for Apple devices running **macOS Ventura and Sonoma**, including th
         ```
     2. Install ruby version specified by [.ruby-version](.ruby-version):
         ```
-        rbenv install --skip-existing`    # run from the project root directory
+        rbenv install --skip-existing    # run from the project root directory
         ```
 
 1.  Install **Node.js**
