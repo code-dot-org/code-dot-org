@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
@@ -26,7 +26,10 @@ const PublishNotes: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const onUpdate = () => dispatch(updateAiCustomization());
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
 
   return (
     <div className={styles.verticalFlexContainer}>
@@ -57,7 +60,11 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={false} onClick={onUpdate}>
+        <button
+          type="button"
+          disabled={isDisabled(visibility)}
+          onClick={onUpdate}
+        >
           Publish
         </button>
       </div>

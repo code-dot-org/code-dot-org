@@ -27,7 +27,10 @@ const RetrievalCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const onUpdate = () => dispatch(updateAiCustomization());
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
 
   const onAdd = useCallback(() => {
     dispatch(

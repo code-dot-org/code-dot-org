@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
@@ -33,7 +33,10 @@ const PromptCustomization: React.FunctionComponent = () => {
     isDisabled(temperature.visibility) &&
     isDisabled(systemPrompt.visibility);
 
-  const onUpdate = () => dispatch(updateAiCustomization());
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
 
   return (
     <div className={styles.verticalFlexContainer}>
