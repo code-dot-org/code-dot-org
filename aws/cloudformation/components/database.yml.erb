@@ -124,6 +124,8 @@
         # BEGIN: Static configuration settings.
         # WARNING - Changing these settings triggers restart of each database instance in the cluster during Stack Update.
 
+        performance_schema: 1
+
         # In conjunction with GTID, enabling binary logging causes Pegasus tests that utilize fake dashboard to fail
         # because they create/drop temporary tables within a transaction:
         # https://github.com/code-dot-org/code-dot-org/blob/654d0cf90dd65848fdd045df3b9e4f85903d9f68/pegasus/test/fixtures/fake_dashboard.rb#L257-L271
@@ -138,26 +140,14 @@
         innodb_monitor_enable: all
         tx_isolation: READ-COMMITTED
 
+        # Prevent a slow query from degrading instance or cluster performance.
+        # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
+        max_execution_time: 30000
+
         # Favor write performance over durability. In the event of a database server crash
         # we could lose roughly 1 second of transactions.
         # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
         innodb_flush_log_at_trx_commit: 0
-        # END: Dynamic configuration settings.
-  AuroraWriterDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Aurora Writer DB Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters:
-        # BEGIN: Static configuration settings. Changing these settings will trigger a restart of each database instance.
-        performance_schema: 1
-        #END: Static configuration settings.
-
-        # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
-
-        # Prevent a slow query from degrading instance or cluster performance.
-        # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
-        max_execution_time: 30000
         # END: Dynamic configuration settings.
   # Aurora Engine 3.x (MySQL 8.x) ParameterGroups
   Aurora3ClusterDBParameters:
@@ -168,6 +158,8 @@
       Parameters:
         # BEGIN: Static configuration settings.
         # WARNING - Changing these settings triggers restart of each database instance in the cluster during Stack Update.
+
+        performance_schema: 1
 
         # In conjunction with GTID, enabling binary logging causes Pegasus tests that utilize fake dashboard to fail
         # because they create/drop temporary tables within a transaction:
@@ -183,27 +175,15 @@
         innodb_monitor_enable: all
         transaction_isolation: READ-COMMITTED
 
+        # Prevent a slow query from degrading instance or cluster performance.
+        # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
+        max_execution_time: 30000
+
         # Favor write performance over durability. In the event of a database server crash
         # we could lose roughly 1 second of transactions.
         # https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
         innodb_flush_log_at_trx_commit: 0
         innodb_trx_commit_allow_data_loss: 1
-        # END: Dynamic configuration settings.
-  Aurora3WriterDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Aurora Engine 3.x (MySQL 8.x) Writer DB Parameters for ${AWS::StackName}."
-      Family: aurora-mysql8.0
-      Parameters:
-        # BEGIN: Static configuration settings. Changing these settings will trigger a restart of each database instance.
-        performance_schema: 1
-        #END: Static configuration settings.
-
-        # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
-
-        # Prevent a slow query from degrading instance or cluster performance.
-        # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
-        max_execution_time: 30000
         # END: Dynamic configuration settings.
   DBProxyRole:
     Type: AWS::IAM::Role
@@ -329,8 +309,6 @@
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
       DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
-      # Use same ParameterGroup for writer and all readers so that any reader can be promoted to writer during a Failover.
-      DBInstanceParameterGroupName: !Ref AuroraWriterDBParameters
       Engine: aurora-mysql
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
