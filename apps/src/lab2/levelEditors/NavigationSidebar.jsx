@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './navigation.module.scss';
 
-const NavigationBar = () => {
+const NavigationSidebar = () => {
   const [linksToHeadings, setLinksToHeadings] = useState([]);
 
   useEffect(() => {
@@ -44,4 +44,4 @@ const NavigationBar = () => {
   );
 };
 
-export default NavigationBar;
+export default NavigationSidebar;
