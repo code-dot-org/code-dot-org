@@ -119,7 +119,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
       <div className={moduleStyles.panelEditors}>
         {panels.map((panel, index) => (
           <EditPanel
-            key={index}
+            key={panel.key}
             panel={panel}
             index={index}
             updatePanel={updatePanel}
