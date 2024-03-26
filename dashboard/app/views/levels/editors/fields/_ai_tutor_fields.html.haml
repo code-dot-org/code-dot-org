@@ -4,7 +4,7 @@
 
 %script{src: webpack_asset_path('js/levels/editors/fields/_ai_tutor_fields.js'),
   data: {aitutoravailable: @level.properties["ai_tutor_available"]}}
-  
+
   -# data: {aicustomizations: (@level.properties["initial_ai_customizations"] || {}).to_json, levelname: @level.name, appname: @level.game&.app}
     = f.label :ai_tutor_level_specific_prompt, 'Level-Specific Prompt'
     %p Prompt used to specify the behavior of AI Tutor on a per level basis.
