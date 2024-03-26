@@ -1026,7 +1026,6 @@ FactoryBot.define do
     after(:build) do |project, evaluator|
       project_storage = create :project_storage, user_id: evaluator.owner.id
       project.storage_id = project_storage.id
-      project.value = evaluator.value if evaluator.value
     end
   end
 
