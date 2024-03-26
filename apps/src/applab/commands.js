@@ -1863,7 +1863,7 @@ applabCommands.getColumn = function (opts) {
   apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
   apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
 
-  Applab.storage.readRecords(
+  Applab.storage.getColumn(
     opts.table,
     opts.column,
     handleGetColumn.bind(this, opts),

@@ -16,12 +16,8 @@ import RubricTabButtons from './RubricTabButtons';
 import RubricSubmitFooter from './RubricSubmitFooter';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import Draggable from 'react-draggable';
+import {TAB_NAMES} from './rubricHelpers';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
-
-const TAB_NAMES = {
-  RUBRIC: 'rubric',
-  SETTINGS: 'settings',
-};
 
 export default function RubricContainer({
   rubric,
@@ -141,6 +137,7 @@ export default function RubricContainer({
             aiEvaluations={aiEvaluations}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
+            sectionId={sectionId}
           />
           {showSettings && (
             <RubricSettings
@@ -148,6 +145,7 @@ export default function RubricContainer({
               refreshAiEvaluations={fetchAiEvaluations}
               rubric={rubric}
               sectionId={sectionId}
+              tabSelectCallback={tabSelectCallback}
             />
           )}
         </div>

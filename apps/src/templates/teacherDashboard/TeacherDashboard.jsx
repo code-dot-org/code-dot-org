@@ -4,8 +4,6 @@ import React, {useEffect, useRef} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -75,11 +73,6 @@ function TeacherDashboard({
       },
       {includeUserId: true}
     );
-    if (newTab === 'progress') {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-        sectionId: sectionId,
-      });
-    }
   });
 
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
@@ -122,12 +115,14 @@ function TeacherDashboard({
         />
         <Route
           path={TeacherDashboardPath.loginInfo}
-          component={props => (
-            <SectionLoginInfo
-              studioUrlPrefix={studioUrlPrefix}
-              sectionProviderName={sectionProviderName}
-            />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionLoginInfo
+                studioUrlPrefix={studioUrlPrefix}
+                sectionProviderName={sectionProviderName}
+              />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.standardsReport}
