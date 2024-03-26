@@ -4,6 +4,20 @@ chef_local_mode: true
 stub_school_data: true
 db_writer: 'mysql://root@localhost/'
 
+db_cluster_id: !StackSecret
+db_endpoint_writer: !StackSecret
+db_endpoint_writer_port: 3306 # TODO: Populate this with !StackSecret
+db_endpoint_proxy_writer: !StackSecret
+db_endpoint_proxy_writer_port: 3306 # TODO: Populate this with !StackSecret
+db_endpoint_proxy_reader: !StackSecret
+db_endpoint_proxy_reader_port: 3306 # TODO: Populate this with !StackSecret
+db_endpoint_proxy_reporting: !StackSecret
+db_endpoint_proxy_reporting_port: 3306 # TODO: Populate this with !StackSecret
+
+db_credential_admin: !StackSecret
+db_credential_writer: !StackSecret
+db_credential_reader: !StackSecret
+
 dashboard_secret_key_base: not a secret
 
 # needed by storage_id helper
@@ -20,17 +34,3 @@ properties_encryption_key: !Secret
 firebase_name: cdo-v3-adhoc
 firebase_secret: !Secret
 firebase_shared_secret: !Secret
-
-# Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
-db_cluster_id: !StackSecret
-db_endpoint_writer: !StackSecret
-db_endpoint_proxy_writer: !StackSecret
-db_endpoint_proxy_reader: !StackSecret
-db_endpoint_proxy_reporting: !StackSecret
-
-# Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
-# https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
-db_credential_admin: !StackSecret
-db_credential_writer: !StackSecret
-db_credential_reader: !StackSecret
-
