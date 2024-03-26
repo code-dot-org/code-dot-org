@@ -83,6 +83,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     @controller.expects(:storage_decrypt_channel_id).with("567").returns([345, 888])
     refute @archived_featured_project.active?
     put :feature, params: {channel_id: "567"}
+    @archived_featured_project.reload
     assert @archived_featured_project.active? # FAIL
   end
 
@@ -91,6 +92,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     @controller.expects(:storage_decrypt_channel_id).with("678").returns([987, 777])
     assert @active_featured_project.active?
     put :unfeature, params: {channel_id: "678"}
+    @active_featured_project.reload
     refute @active_featured_project.active? # FAIL
   end
 end
