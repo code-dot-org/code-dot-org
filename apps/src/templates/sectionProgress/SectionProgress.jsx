@@ -25,8 +25,6 @@ import logToCloud from '@cdo/apps/logToCloud';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import styleConstants from './progressTables/progress-table-constants.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
-import EmptySection from '../teacherDashboard/EmptySection';
-import {Heading1} from '@cdo/apps/componentLibrary/typography';
 
 const SECTION_PROGRESS = 'SectionProgress';
 
@@ -38,7 +36,6 @@ const SECTION_PROGRESS = 'SectionProgress';
  */
 class SectionProgress extends Component {
   static propTypes = {
-    studentCount: PropTypes.number,
     //Provided by redux
     scriptId: PropTypes.number,
     sectionId: PropTypes.number,
@@ -148,7 +145,7 @@ class SectionProgress extends Component {
     return scriptData && !isLoadingProgress && !isRefreshingProgress;
   };
 
-  showProgressTable = () => {
+  render() {
     const {
       coursesWithProgress,
       currentView,
@@ -168,7 +165,10 @@ class SectionProgress extends Component {
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
 
     return (
-      <div>
+      <div
+        className={dashboardStyles.dashboardPage}
+        data-testid="section-progress-v1"
+      >
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
@@ -222,25 +222,6 @@ class SectionProgress extends Component {
             </div>
           )}
         </div>
-      </div>
-    );
-  };
-
-  // TO DO: Something is broken when looking at a populated section switching from new to old view.
-  render() {
-    const {sectionId, studentCount} = this.props;
-
-    return (
-      <div
-        className={dashboardStyles.dashboardPage}
-        data-testid="section-progress-v1"
-      >
-        <Heading1>{i18n.progress()}</Heading1>
-        {studentCount === 0 ? (
-          <EmptySection sectionId={sectionId} />
-        ) : (
-          this.showProgressTable()
-        )}
       </div>
     );
   }

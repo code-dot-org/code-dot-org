@@ -41,7 +41,6 @@ function SectionProgressV2({
   isLoadingProgress,
   isRefreshingProgress,
   isLevelProgressLoaded,
-  studentCount,
 }) {
   const [expandedLessonIds, setExpandedLessonIds] = React.useState(() =>
     getLocalStorage(scriptId, sectionId)
@@ -118,7 +117,6 @@ SectionProgressV2.propTypes = {
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
   isLevelProgressLoaded: PropTypes.bool.isRequired,
-  studentCount: PropTypes.number,
 };
 
 export default connect(state => ({

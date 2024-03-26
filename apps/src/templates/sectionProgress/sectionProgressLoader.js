@@ -30,9 +30,9 @@ export function loadUnitProgress(scriptId, sectionId) {
   let progressLatencyMs = -1;
   let structureLatencyMs = -1;
 
-  if (sectionData.studentCount < 1) {
-    return null;
-  }
+  // if (sectionData.studentCount < 1) {
+  //   return null;
+  // }
 
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
