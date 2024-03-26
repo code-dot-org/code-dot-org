@@ -67,6 +67,17 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     assert_response 403
   end
 
+  test 'bookmarking a never featured project creates a new featured project' do
+    sign_in @project_validator
+    @controller.expects(:storage_decrypt_channel_id).with("678").returns([234, 654])
+    assert_creates(FeaturedProject) do
+      put :bookmark, params: {channel_id: "678"}
+    end
+    assert FeaturedProject.last.project_id == 654
+    assert FeaturedProject.last.unfeatured_at.nil?
+    assert FeaturedProject.last.featured_at.nil?
+  end
+
   test 'featuring a currently unfeatured project should update the correct featured project' do
     skip 'Investigate flaky test'
     sign_in @project_validator
