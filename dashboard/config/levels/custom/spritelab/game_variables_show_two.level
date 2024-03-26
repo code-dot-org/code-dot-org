@@ -50,9 +50,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "validation_code": "if (World.frameCount == 1) {\r\n\r\n  addCriteria(function() {\r\n    return variableBubblesCreated(2); // Check whether two variable bubbles are visible on screen. \r\n  }, \"variableBubblesTwo\");  // Failure message: \"Make sure to display two variables on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(2); // Check whether both variables have been set to something. \r\n  }, \"variableSetValueTwo\");  // Failure message: \"You need to set the value of both your variables.\"\r\n  \r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();"
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:22:37.970+00:00\",\"changed\":[\"cloned from \\\"game_dev_scoreboard2\\\"\"],\"cloned_from\":\"game_dev_scoreboard2\"},{\"changed_at\":\"2024-03-18 20:22:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:54:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:22:37.970+00:00\",\"changed\":[\"cloned from \\\"game_dev_scoreboard2\\\"\"],\"cloned_from\":\"game_dev_scoreboard2\"},{\"changed_at\":\"2024-03-18 20:22:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:54:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 17:52:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 17:54:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

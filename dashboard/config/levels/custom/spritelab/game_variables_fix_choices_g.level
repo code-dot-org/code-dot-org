@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:25:29.000Z",
   "level_num": "custom",
@@ -47,10 +48,13 @@
     "display_name": "Hay Collector",
     "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect\r\n\r\n**Problem:** The hay bundle is too hard to catch!",
     "thumbnail_url": "https://images.code.org/86a2a65fe86009f0402abe2d0128fda2-basketcatcher.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "short_instructions": "Adjust the hay bundle's speed by setting the `difficultyLevel` to 3 or 4."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:29.504+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_emma_3\\\"\"],\"cloned_from\":\"game_dev_bad_example_emma_3\"},{\"changed_at\":\"2024-03-18 20:25:42 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:02:53 +0000\",\"changed\":[\"start_blocks\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:47:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:29.504+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_emma_3\\\"\"],\"cloned_from\":\"game_dev_bad_example_emma_3\"},{\"changed_at\":\"2024-03-18 20:25:42 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:02:53 +0000\",\"changed\":[\"start_blocks\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:47:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:07:28 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

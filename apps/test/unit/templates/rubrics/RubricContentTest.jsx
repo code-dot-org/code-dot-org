@@ -66,6 +66,7 @@ describe('RubricContent', () => {
     canProvideFeedback: true,
     onLevelForEvaluation: true,
     visible: true,
+    sectionId: 1,
   };
 
   const aiEvaluations = [
@@ -225,7 +226,7 @@ describe('RubricContent', () => {
     );
     expect(wrapper.find('InfoAlert').length).to.equal(1);
     expect(wrapper.find('InfoAlert').props().text).to.equal(
-      'Select a student from the Teacher Panel to view and evaluate their work.'
+      'Select a student from the dropdown menu to view and evaluate their work.'
     );
   });
 });

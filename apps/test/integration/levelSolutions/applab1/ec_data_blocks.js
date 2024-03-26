@@ -38,6 +38,38 @@ export default {
     },
 
     {
+      description: 'Data getColumn',
+      editCode: true,
+      xml: `
+        createRecord("mytable", {name:'Alice'}, function(record) {
+          createRecord("mytable", {name: 'Bob'}, function (record) {
+            var names = getColumn('mytable', 'name');
+            console.log("getColumn returned: " + names.join(', '));
+          });
+        });`,
+
+      runBeforeClick(assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 200, () => {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // No errors in output console
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(
+          debugOutput.textContent,
+          '"getColumn returned: Alice, Bob"'
+        );
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+
+    {
       description: 'Data createRecord again to confirm mock is reset',
       editCode: true,
       xml: `

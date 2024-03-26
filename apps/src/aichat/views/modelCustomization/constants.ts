@@ -1,7 +1,13 @@
-import {LevelAiCustomizations, ModelCardInfo, Visibility} from '../../types';
+import {
+  AiCustomizations,
+  LevelAiCustomizations,
+  ModelCardInfo,
+  Visibility,
+} from '../../types';
 
 export const MIN_TEMPERATURE = 0;
 export const MAX_TEMPERATURE = 2;
+export const SET_TEMPERATURE_STEP = 0.1;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
 export const MAX_ASK_ABOUT_TOPICS = 10;
 
@@ -30,4 +36,12 @@ export const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
     visibility: Visibility.EDITABLE,
   },
   hidePresentationPanel: false,
+};
+
+export const EMPTY_AI_CUSTOMIZATIONS_STUDENT: AiCustomizations = {
+  botName: '',
+  temperature: 0.5,
+  systemPrompt: '',
+  retrievalContexts: [],
+  modelCardInfo: EMPTY_MODEL_CARD_INFO,
 };
