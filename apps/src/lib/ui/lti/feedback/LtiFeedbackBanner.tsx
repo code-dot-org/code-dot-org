@@ -107,12 +107,14 @@ const LtiFeedbackBanner: React.FC = () => {
         closeLabel={i18n.closeDialog()}
         onDismiss={status === ANSWERED ? close : undefined}
       >
-        <FontAwesome
-          icon="hand-wave"
-          className="fa-fw wave-animation"
-          title=""
-          aria-hidden="true"
-        />
+        <span className="lti-feedback-banner-greeting">
+          <FontAwesome
+            icon="hand-wave"
+            className="fa-fw"
+            title=""
+            aria-hidden="true"
+          />
+        </span>
 
         <Fade in={!isLoading}>
           {status === UNANSWERED ? (
@@ -129,7 +131,7 @@ const LtiFeedbackBanner: React.FC = () => {
                 >
                   <FontAwesome
                     icon="thumbs-o-up"
-                    className="fa-fw approval-animation"
+                    className="fa-fw"
                     title=""
                     aria-hidden="true"
                   />
@@ -142,7 +144,7 @@ const LtiFeedbackBanner: React.FC = () => {
                 >
                   <FontAwesome
                     icon="thumbs-o-down"
-                    className="fa-fw approval-animation"
+                    className="fa-fw"
                     title=""
                     aria-hidden="true"
                   />

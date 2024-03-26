@@ -1,3 +1,4 @@
+@import 'animations';
 @import 'color';
 @import 'font';
 
@@ -9,14 +10,20 @@
   color: $dark_charcoal;
   line-height: 2rem;
 
-  & .fa-hand-wave {
+  & .lti-feedback-banner-greeting {
+    display: inline-block;
     margin-right: $indent;
-    font-weight: 400;
-    vertical-align: middle;
 
-    &.wave-animation {
-      cursor: grab;
-      animation-iteration-count: 2;
+    @include wave-animation;
+    animation-iteration-count: 2;
+
+    & .fa-hand-wave {
+      font-weight: 400;
+      vertical-align: middle;
+
+      &:hover {
+        @include high-five-animation;
+      }
     }
   }
 
@@ -58,6 +65,7 @@
 
       & i {
         &:hover {
+          @include approval-animation;
           color: rgb(0 0 0 / 0.6);
         }
       }
