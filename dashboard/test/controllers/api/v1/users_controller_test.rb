@@ -331,7 +331,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   test 'teacher cannot update ai tutor access for student not in section' do
     teacher = create :teacher
     student_not_in_section = create :student
-    create :section, teacher: @teacher
+    create :section, teacher: teacher
 
     sign_in(teacher)
 
