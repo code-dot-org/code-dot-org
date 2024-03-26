@@ -245,6 +245,7 @@ trigger:
     exclude:
       - "production"
       - "test"
+      - "levelbuilder"
   event:
     - pull_request
 
