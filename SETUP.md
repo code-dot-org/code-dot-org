@@ -78,7 +78,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. Run the website `bin/dashboard-server`
 
-1. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
+1. **Open <http://localhost-studio.code.org:3000/>** to verify its running.
 
 After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
