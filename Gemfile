@@ -159,7 +159,7 @@ gem 'gemoji'
 # Authentication and permissions.
 gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.7.0'
-gem 'devise_invitable', '~> 2.0.2'
+gem 'devise_invitable', '~> 2.0.9'
 
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
 gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'

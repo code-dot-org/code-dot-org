@@ -334,7 +334,7 @@ GEM
       ruby_dig
       rubyzip
       tableschema
-    date (3.3.3)
+    date (3.3.4)
     declarative (0.0.20)
     delayed_job (4.1.11)
       activesupport (>= 3.0, < 8.0)
@@ -347,7 +347,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise_invitable (2.0.6)
+    devise_invitable (2.0.9)
       actionmailer (>= 5.0)
       devise (>= 4.6)
     diff-lcs (1.5.0)
@@ -425,8 +425,8 @@ GEM
     geocoder (1.6.4)
     get_process_mem (0.2.3)
     gherkin (5.1.0)
-    globalid (1.1.0)
-      activesupport (>= 5.0)
+    globalid (1.2.1)
+      activesupport (>= 6.1)
     google-apis-analytics_v3 (0.12.0)
       google-apis-core (>= 0.9.1, < 2.a)
     google-apis-classroom_v1 (0.21.0)
@@ -490,7 +490,7 @@ GEM
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
-    i18n (1.12.0)
+    i18n (1.14.4)
       concurrent-ruby (~> 1.0)
     image_optim_rails (0.4.3)
       image_optim (~> 0.24)
@@ -552,8 +552,8 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2023.0218.1)
     mini_magick (4.12.0)
-    mini_mime (1.1.2)
-    mini_portile2 (2.8.2)
+    mini_mime (1.1.5)
+    mini_portile2 (2.8.5)
     mini_racer (0.8.0)
       libv8-node (~> 18.16.0.0)
     minitest (5.18.0)
@@ -580,16 +580,16 @@ GEM
     naturally (2.1.0)
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
-    net-imap (0.3.4)
+    net-imap (0.4.10)
       date
       net-protocol
     net-pop (0.1.2)
       net-protocol
-    net-protocol (0.2.1)
+    net-protocol (0.2.2)
       timeout
     net-scp (2.0.0)
       net-ssh (>= 2.6.5, < 6.0.0)
-    net-smtp (0.3.3)
+    net-smtp (0.4.0.1)
       net-protocol
     net-ssh (5.2.0)
     netrc (0.11.0)
@@ -677,8 +677,8 @@ GEM
       multi_json (~> 1.0)
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
-    racc (1.6.2)
-    rack (2.2.6.4)
+    racc (1.7.3)
+    rack (2.2.8.1)
     rack-cache (1.13.0)
       rack (>= 0.4)
     rack-cors (2.0.1)
@@ -697,7 +697,7 @@ GEM
     rack-protection (2.2.3)
       rack
     rack-ssl-enforcer (0.2.9)
-    rack-test (2.0.2)
+    rack-test (2.1.0)
       rack (>= 1.3)
     rack_csrf (2.7.0)
       rack (>= 1.1.0)
@@ -720,11 +720,12 @@ GEM
       actionpack (>= 5.0.1.rc1)
       actionview (>= 5.0.1.rc1)
       activesupport (>= 5.0.1.rc1)
-    rails-dom-testing (2.0.3)
-      activesupport (>= 4.2.0)
+    rails-dom-testing (2.2.0)
+      activesupport (>= 5.0.0)
+      minitest
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.2.0)
-      loofah (~> 2.2, >= 2.2.2)
+    rails-html-sanitizer (1.5.0)
+      loofah (~> 2.19, >= 2.19.1)
     railties (6.1.7.7)
       actionpack (= 6.1.7.7)
       activesupport (= 6.1.7.7)
@@ -888,14 +889,14 @@ GEM
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
       rack (>= 1, < 3)
-    thor (1.2.1)
+    thor (1.3.1)
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
     time (0.3.0)
       date
     timecop (0.8.1)
-    timeout (0.3.2)
+    timeout (0.4.1)
     tod (2.1.1)
     trailblazer-option (0.1.2)
     ttfunk (1.7.0)
@@ -926,8 +927,8 @@ GEM
     validates_email_format_of (1.6.3)
       i18n
     vcr (3.0.3)
-    warden (1.2.7)
-      rack (>= 1.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -952,7 +953,7 @@ GEM
     xxhash (0.4.0)
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
-    zeitwerk (2.6.7)
+    zeitwerk (2.6.13)
 
 PLATFORMS
   ruby
@@ -1004,7 +1005,7 @@ DEPENDENCIES
   datapackage
   delayed_job_active_record (~> 4.1)
   devise (~> 4.7.0)
-  devise_invitable (~> 2.0.2)
+  devise_invitable (~> 2.0.9)
   dotiw
   execjs
   eyes_selenium (= 3.18.4)
