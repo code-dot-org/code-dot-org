@@ -26,7 +26,7 @@ const PublishNotes: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const save = () => dispatch(updateAiCustomization());
+  const onUpdate = () => dispatch(updateAiCustomization());
 
   return (
     <div className={styles.verticalFlexContainer}>
@@ -57,7 +57,7 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={false} onClick={save}>
+        <button type="button" disabled={false} onClick={onUpdate}>
           Publish
         </button>
       </div>
