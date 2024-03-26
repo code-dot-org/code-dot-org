@@ -10,6 +10,7 @@ Feature: Student can complete rubric-enabled level
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until element "#submitButton" is visible
     And I click selector "#submitButton"
     And I wait until element "#confirm-button" is visible
@@ -32,6 +33,7 @@ Feature: Student can complete rubric-enabled level
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until element "#submitButton" is visible
     And I click selector "#submitButton"
     And I wait until element "#confirm-button" is visible
@@ -54,6 +56,7 @@ Feature: Student can complete rubric-enabled level
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until element "#submitButton" is visible
     And I click selector "#submitButton"
     And I wait until element "#confirm-button" is visible
