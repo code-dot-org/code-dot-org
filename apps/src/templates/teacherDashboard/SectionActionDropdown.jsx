@@ -1,11 +1,24 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '../../util/color';
-import {sortableSectionShape} from './shapes.jsx';
+import {connect} from 'react-redux';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
-import i18n from '@cdo/locale';
+import {getStore} from '@cdo/apps/redux';
+import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
+import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import BaseDialog from '../BaseDialog';
+import Button from '../Button';
+import FontAwesome from '../FontAwesome';
+
+import DialogFooter from './DialogFooter';
+import PrintCertificates from './PrintCertificates';
+import {sortableSectionShape} from './shapes.jsx';
 import {
   sectionCode,
   sectionName,
@@ -13,16 +26,6 @@ import {
   toggleSectionHidden,
   importOrUpdateRoster,
 } from './teacherSectionsRedux';
-import {connect} from 'react-redux';
-import PrintCertificates from './PrintCertificates';
-import FontAwesome from '../FontAwesome';
-import BaseDialog from '../BaseDialog';
-import Button from '../Button';
-import DialogFooter from './DialogFooter';
-import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
-import {getStore} from '@cdo/apps/redux';
-import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 class SectionActionDropdown extends Component {
   static propTypes = {
