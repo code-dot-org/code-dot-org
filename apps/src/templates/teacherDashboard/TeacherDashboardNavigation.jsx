@@ -63,9 +63,7 @@ export default function TeacherDashboardNavigation({links, showAITutorTab}) {
           className={styles.linkContainer}
           activeClassName={styles.activeLinkContainer}
         >
-          <label>
-            <div className={styles.link}>{link.label}</div>
-          </label>
+          <div className={styles.link}>{link.label}</div>
         </NavLink>
       ))}
     </div>
