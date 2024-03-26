@@ -104,102 +104,57 @@ External contributors can supply alternate placeholder values for secrets normal
 
 ### macOS
 
-These steps are for Apple devices running **macOS Monterey and Ventura**, including those running on [Apple Silicon (M1|M2)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
-
-Notes:
-- At this time, if you are using an M1 Macbook, we recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
-- These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
-- As macOS Catalina is no longer receiving security updates, we cannot recommend using it. If you still need support, see [old setup.md instructions for Catalina](https://github.com/code-dot-org/code-dot-org/blob/138d08a6f304c289e2b4388f513d81954ec85158/SETUP.md#os-x-catalina)
+These steps are for Apple devices running **macOS Ventura and Sonoma**, including those running on [Apple Silicon (M1|M2|M3)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
 
 Setup steps for macOS:
 
-1. _(M1 Mac users only)_ Install Rosetta 2.
-
-  - Check if Rosetta is already installed: `/usr/bin/pgrep -q oahd && echo Yes || echo No`
-  - If not, install Rosetta using
-    - `softwareupdate --install-rosetta` (launches the Rosetta installer) or
-    - `/usr/sbin/softwareupdate --install-rosetta --agree-to-license` (skips installer and license agreement)
-  - Follow these steps to enable Rosetta:
-    - Select the app (Terminal) in Finder from Applications/Utilities.
-    - Right-click on the app (Terminal) and select `Get Info`.
-    - In `General`, check the `Open using Rosetta` checkbox.
-    - Close the Terminal and open it again.
-    - To verify that you are using a Rosetta terminal, run the command `arch` from the command line and it should output `i386`. The native terminal without Rosetta would output `arm64` for the above command. If you still do not see `i386` in the terminal then try restarting your machine. 
-
-
 1. Open your Terminal. These steps assume you are using **zsh**, the default shell for OSX.
-
-1. Optionally configure your **zsh** experience.
-   1. Either install [oh-my-zsh](https://ohmyz.sh/) and add the [git-prompt](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-prompt) plugin, or install the plugin directly without oh-my-zsh as described under the [OS X Catalina](#os-x-catalina) instructions.
 
 1. Install/Update **Xcode Command Line Tools** via `xcode-select --install`
 
-1. Install [Homebrew](https://brew.sh/), a macOS package manager
+1. Install **homebrew & packages**:
+   1. Install [Homebrew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+   2. Install packages: `brew install rbenv ruby-build nvm mysql@5.7 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi`
 
-1. Install **Git LFS**
-    1. `brew install git-lfs`
-    1. From your homedir, run: `git lfs install`
-       - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
-       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it'll instead attempt to install git hooks in that repo.
+1. Initialize **Git LFS**: `git lfs install --skip-repo`
 
-2. Install [Redis](https://redis.io/) via `brew install redis`
+1. Setup your local [MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) server
+   1. Force link 5.7 version via `brew link mysql@5.7 --force`
+   2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
+   3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first.
+       1. `brew services stop mysql@5.7`
+       2. `mysqld --initialize-insecure` (this will leave the root password blank, which is required)
+       3. `brew services start mysql@5.7`
+       4. Confirm MySQL has started by running `brew services` again.
 
-3. Install [MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) via `brew install mysql@5.7`
-   1. Set up your local MySQL server
-      1. Force link 5.7 version via `brew link mysql@5.7 --force`
-      2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
-      3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first.
-          1. `brew services stop mysql@5.7`
-          2. `mysqld --initialize-insecure` (this will leave the root password blank, which is required)
-          3. `brew services start mysql@5.7`
-          4. Confirm MySQL has started by running `brew services` again.
+1.  Install **Ruby**
+    1. Configure zsh to load rbenv: `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && source ~/.zshrc`
+       - For other shells, see: https://github.com/rbenv/rbenv#basic-git-checkoutshells.
+    2. Install ruby: `rbenv install --skip-existing` from the project root directory
 
-4. Install the **Java 8 JSK**
-   1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
-   2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
-      1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
-      2. `sdk install java <version identifier>` to install a version
-      3. `sdk default java <installed version>` to ensure it is the default for future shells.
+1.  Install **Node.js**
+    1. Install node: `nvm install` from the project root directory
+    2. Set default node version: `nvm alias default $(cat ./.nvmrc)` 
+    3. Enable corepack to install **yarn**: `corepack enable`
 
-5. Install and configure **rbenv**
-    1. Install: `brew install rbenv`
-    2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
-    3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
+1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-6. Install **Ruby**
-    1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install --skip-existing` from the project root directory should be sufficient.
-    2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
+1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail.
+    1. Install the **Java 8 JDK**
+       1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
+       2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
+          1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
+          2. `sdk install java <version identifier>` to install a version
+          3. `sdk default java <installed version>` to ensure it is the default for future shells.
 
-      ```sh
-      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install --skip-existing
-      ```
+    2. Install **pdftk.rb**
+       ```sh
+       curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
+       brew install ./pdftk.rb
+       rm ./pdftk.rb
+       ```
 
-7. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
-
-    ```sh
-    curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
-    brew install ./pdftk.rb
-    rm ./pdftk.rb
-    ```
-
-8. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils parallel tidy-html5`
-
-9. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
-    1. Install NVM via `brew install nvm`
-
-    2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
-
-    3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
-
-10. Enable **corepack** to install **yarn**: `corepack enable`
-
-11. Install **OpenSSL**
-    1. Run `brew install openssl`
-    2. Following the instructions in the output, run a form of `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
-
-12. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
-
-13. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) / Intel Mac when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+1. Return to the [Overview](#overview) to clone the code-dot-org repo and continue installation.
 
 ### Ubuntu 20.04
 [Ubuntu 20.04 iso download][ubuntu-iso-url]
@@ -414,27 +369,7 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 ---
 ### Bundle Install Tips
 
-#### Apple Silicon (M1) or Intel Mac bundle install steps
-
-On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
-
-First, run the following commands to successfully complete a bundle install:
-
-```sh
-gem install bundler -v 2.3.22
-rbenv rehash
-export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/openssl/lib/
-bundle install
-```
-
-After `bundle install` completes successfully, before attempting the `bundle exec rake ...` commands, execute the following command to avoid errors with **ffi**
-
-```sh
-bundle update ffi
-```
-
-
-### ImageMagick with Pango
+#### ImageMagick with Pango
 
 **Note:** Most developers won't need to peronsonalize certificates locally, but some will.  Here are notes on getting this working on macOS.
 
