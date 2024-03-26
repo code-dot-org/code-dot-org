@@ -146,7 +146,7 @@
   AuroraWriterDBParameters:
     Type: AWS::RDS::DBParameterGroup
     Properties:
-      Description: !Sub "Aurora Cluster DB Parameters for ${AWS::StackName}."
+      Description: !Sub "Aurora Writer DB Parameters for ${AWS::StackName}."
       Family: aurora-mysql5.7
       Parameters:
         # BEGIN: Static configuration settings. Changing these settings will trigger a restart of each database instance.
