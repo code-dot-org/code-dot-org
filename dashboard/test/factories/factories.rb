@@ -1057,8 +1057,6 @@ FactoryBot.define do
     end
   end
 
-
-
   factory :user_ml_model do
     user
     model_id {SecureRandom.alphanumeric(12)}
