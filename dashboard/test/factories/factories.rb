@@ -1034,8 +1034,30 @@ FactoryBot.define do
   end
 
   factory :featured_project do
-    project_id {456}
+    factory :new_featured_project do
+      project_id {456}
+    end
+  
+    factory :active_featured_project do
+      project_id {777}
+      after(:create) do |active_featured_project|
+        active_featured_project.featured_at = DateTime.now
+        active_featured_project.unfeatured_at = nil
+        active_featured_project.save
+      end
+    end
+
+    factory :archived_featured_project do
+      project_id {888}
+      after(:create) do |archived_featured_project|
+        archived_featured_project.featured_at = DateTime.now
+        archived_featured_project.unfeatured_at = DateTime.now
+        archived_featured_project.save
+      end
+    end
   end
+
+
 
   factory :user_ml_model do
     user

@@ -3,9 +3,15 @@ require 'test_helper'
 class FeaturedProjectsControllerTest < ActionController::TestCase
   setup_all do
     @project_validator = create :project_validator
-    @project = create :project, id: 456, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
-    # @featured_project has a project_id of 456
-    @featured_project = create :featured_project
+    @project_new = create :project, id: 456, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
+    @project_active = create :project, id: 777, value: {frozen: true, hidden: true, updatedAt: DateTime.now}.to_json
+    @project_archived = create :project, id: 888, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
+    # @new_featured_project has a project_id of 456
+    @new_featured_project = create :new_featured_project
+    # @active_featured_project has a project_id of 777
+    @active_featured_project = create :active_featured_project
+    # @archived_featured_project has a project_id of 888
+    @archived_featured_project = create :archived_featured_project
     @teacher = create :teacher
   end
 
@@ -74,20 +80,25 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
 
   test 'featuring a currently unfeatured project should update the correct featured project' do
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
-    @featured_project.update! unfeatured_at: DateTime.now
-    refute @featured_project.reload.active?
-    put :feature, params: {channel_id: "789"}
-    assert @featured_project.reload.active?
+    puts "featuring a currently unfeatured project"
+    @controller.expects(:storage_decrypt_channel_id).with("567").returns([345, 888])
+    puts "@archived_featured_project #{@archived_featured_project}"
+    puts "@archived_featured_project.featured_at #{@archived_featured_project.featured_at}"
+    puts "@archived_featured_project.unfeatured_at #{@archived_featured_project.unfeatured_at}"
+    refute @archived_featured_project.active?
+    put :feature, params: {channel_id: "567"}
+    puts "@archived_featured_project after call to :feature - back IN TEST #{@archived_featured_project}"
+    puts "@archived_featured_project.featured_at #{@archived_featured_project.featured_at}"
+    puts "@archived_featured_project.unfeatured_at #{@archived_featured_project.unfeatured_at}"
+
+    assert @archived_featured_project.active? # FAIL
   end
 
   test 'unfeaturing a featured project should unfeature the project' do
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
-    @featured_project.update! featured_at: DateTime.now
-    @featured_project.update! unfeatured_at: nil
-    assert @featured_project.reload.active?
-    put :unfeature, params: {channel_id: "789"}
-    refute @featured_project.reload.active?
+    @controller.expects(:storage_decrypt_channel_id).with("678").returns([987, 777])
+    assert @active_featured_project.active?
+    put :unfeature, params: {channel_id: "678"}
+    refute @active_featured_project.active? # FAIL
   end
 end
