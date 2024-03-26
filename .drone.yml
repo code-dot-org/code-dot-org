@@ -242,8 +242,9 @@ volumes:
 
 trigger:
   branch:
-    - "staging"
-    - "staging-next"
+    exclude:
+      - "production"
+      - "test"
   event:
     - pull_request
 
