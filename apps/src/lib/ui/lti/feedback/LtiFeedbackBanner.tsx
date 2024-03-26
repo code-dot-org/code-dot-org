@@ -14,7 +14,7 @@ import i18n from '@cdo/locale';
 import './LtiFeedbackBanner.scss';
 
 // The initial status of the banner. It means that the status has not been set yet.
-const UNSET = 'unset';
+const UNSET = '';
 // The status when the banner is not available. This is typically when the user is not an LTI teacher.
 const UNAVAILABLE = 'unavailable';
 // The status when the banner is displayed but the user has not yet provided feedback.
