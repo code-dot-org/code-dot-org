@@ -18,8 +18,8 @@ steps:
     image: curlimages/curl
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")"
-      - "hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - echo "Running on $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -137,8 +137,8 @@ steps:
     image: curlimages/curl
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")"
-      - "hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - echo "Running on $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -282,13 +282,12 @@ steps:
 trigger:
   branch:
     exclude:
-      - "production"
-      - "test"
-      - "levelbuilder"
+      - "staging"
+      - "staging-next"
   event:
     - push
 ---
 kind: signature
-hmac: 9ad071371bd2d0832675d3779737d185419485b62f5e584f3bca21244595f7fe
+hmac: 1e9a6df9ffff498a280d67bec72a99ce05f207afafc46e68b9b28b49bc5e5324
 
 ...
