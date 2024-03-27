@@ -99,8 +99,8 @@ export default function LtiSectionSyncDialog({
       aboutSyncingUrl,
     });
     let sectionListItems;
-    if (syncResult && syncResult.all) {
-      sectionListItems = Object.entries(syncResult.all).map(
+    if (syncResult && syncResult.changed) {
+      sectionListItems = Object.entries(syncResult.changed).map(
         ([section_id, section]) => {
           const studentCount = i18n.ltiSectionSyncDialogStudentCount({
             numberOfStudents: section.size,
@@ -187,7 +187,7 @@ const LtiSectionShape = PropTypes.shape({
 });
 export const LtiSectionSyncResultShape = PropTypes.shape({
   all: PropTypes.objectOf(LtiSectionShape),
-  updated: PropTypes.objectOf(LtiSectionShape),
+  changed: PropTypes.objectOf(LtiSectionShape),
   error: PropTypes.string,
 });
 
