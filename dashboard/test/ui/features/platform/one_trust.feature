@@ -47,3 +47,20 @@ Feature: OneTrust integration
     Then element "script[src$='otSDKStub.js']" does not exist
     Then element "script[src$='e345/OtAutoBlock.js']" does not exist
     Then element "script[src$='e345-test/OtAutoBlock.js']" does not exist
+
+  Scenario Outline: Critical Javascript files are appropriately categorized by OneTrust
+    Given I am on "<url>"
+    Then element "script[src*='google-analytics.com/analytics']" is categorized by OneTrust
+    Then element "script[src*='/assets/application']" is not categorized by OneTrust
+    Then element "script[src*='js/webpack-runtime']" is not categorized by OneTrust
+    Then element "script[src*='js/essential']" is not categorized by OneTrust
+    Then element "script[src*='js/vendors']" is not categorized by OneTrust
+    Then element "script[src*='/common_locale']" is not categorized by OneTrust
+    Then element "script[src*='js/code-studio-common']" is not categorized by OneTrust
+    Then element "script[src*='js/code-studio']" is not categorized by OneTrust
+
+    Examples:
+    | url                                                                     |
+    | http://code.org/index                                                   |
+    | http://hourofcode.com/us                                                |
+    | http://studio.code.org/users/sign_in                                    |
