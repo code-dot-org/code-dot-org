@@ -8,17 +8,39 @@
 class SampleJob < ApplicationJob
   queue_as :default
 
-  def perform(*message)
-    puts "Hello, #{message}"
-    sleep(rand(1..5))
-    puts "Goodbye, #{message}"
+  # Event Callbacks
+  before_enqueue do |job|
+    puts "In #{job.class.name} - before_enqueue"
+  end
+
+  around_enqueue do |job, block|
+    puts "In #{job.class.name} - around_enqueue (before)"
+    block.call
+    puts "In #{job.class.name} - around_enqueue (after)"
+  end
+
+  after_enqueue do |job|
+    puts "In #{job.class.name} - after_enqueue"
   end
 
   before_perform do |job|
-    puts "Before perform in #{job.class.name}"
+    puts "In #{job.class.name} - before_perform"
+  end
+
+  around_perform do |job, block|
+    puts "In #{job.class.name} - around_perform (before)"
+    block.call
+    puts "In #{job.class.name} - around_perform (after)"
   end
 
   after_perform do |job|
-    puts "After perform in #{job.class.name}"
+    puts "In #{job.class.name} - after_perform"
+  end
+
+  # Primary Job Method
+  def perform(*message)
+    puts "In #{self.class.name} - perform"
+    sleep(rand(1..5))
+    puts "Hello, #{message}"
   end
 end
