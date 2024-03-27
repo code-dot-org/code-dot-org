@@ -178,7 +178,7 @@ def geocoder_config
     timeout: 10,
     units: :km,
   }.tap do |config|
-    config[:cache] = Redis.connect(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
+    config[:cache] = Redis.new(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
     if CDO.mapbox_access_token
       config[:lookup] = :mapbox
       config[:use_https] = true
