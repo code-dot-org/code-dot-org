@@ -13,7 +13,7 @@ import styles from '@cdo/apps/componentLibrary/tabs/tabs/tabs.module.scss';
 export interface TabsProps {
   tabs: TabModel[];
   onChange: (value: string) => void;
-  selectedTabValue?: string;
+  selectedTabValue: string;
   /** The name attribute specifies the name of a Tabs group.
      The name attribute is used to reference elements in a JavaScript.
      */

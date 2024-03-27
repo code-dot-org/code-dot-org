@@ -36,6 +36,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   disabled = false,
 }) => {
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
+
   return (
     <li
       role="presentation"
@@ -49,6 +50,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         id={tabButtonId}
         onClick={handleClick}
         className={classNames(isSelected && styles.active)}
+        disabled={disabled}
       >
         {icon?.title}
         {iconLeft?.title}

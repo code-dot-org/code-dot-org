@@ -1,5 +1,5 @@
 import {Meta, StoryFn} from '@storybook/react';
-import React from 'react';
+import React, {useState} from 'react';
 
 import Tabs, {TabsProps} from './index';
 
@@ -13,17 +13,43 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: StoryFn<TabsProps> = args => <Tabs {...args} />;
+const SingleTemplate: StoryFn<TabsProps> = args => {
+  const [value, setValues] = useState('');
+
+  return (
+    <Tabs
+      {...args}
+      selectedTabValue={value || args.selectedTabValue}
+      onChange={setValues}
+    />
+  );
+};
 
 const MultipleTemplate: StoryFn<{
   components: TabsProps[];
-}> = args => (
-  <>
-    {args.components?.map(componentArg => (
-      <Tabs key={componentArg.name} {...componentArg} />
-    ))}
-  </>
-);
+}> = args => {
+  const [value, setValues] = useState({} as Record<string, string>);
+
+  return (
+    <>
+      {args.components?.map(componentArg => (
+        <Tabs
+          key={componentArg.name}
+          {...componentArg}
+          selectedTabValue={
+            value[componentArg.name] || componentArg.selectedTabValue
+          }
+          onChange={value =>
+            setValues(values => ({
+              ...values,
+              [componentArg.name]: value,
+            }))
+          }
+        />
+      ))}
+    </>
+  );
+};
 
 export const DefaultTabs = SingleTemplate.bind({});
 DefaultTabs.args = {
@@ -77,7 +103,6 @@ GroupOfTypesOfTabs.args = {
           value: 'tab2',
           text: 'Tab 2',
           tabContent: <div>Tab 2 Content</div>,
-          disabled: true,
         },
         {
           value: 'tab3',
@@ -97,7 +122,6 @@ GroupOfTypesOfTabs.args = {
           value: 'tab2',
           text: 'Tab 2',
           tabContent: <div>Tab 2 Content</div>,
-          disabled: true,
         },
         {
           value: 'tab3',
@@ -123,7 +147,6 @@ GroupOfSizesOfTabs.args = {
           value: 'tab2',
           text: 'Tab 2',
           tabContent: <div>Tab 2 Content</div>,
-          disabled: true,
         },
         {
           value: 'tab3',
@@ -143,7 +166,6 @@ GroupOfSizesOfTabs.args = {
           value: 'tab2',
           text: 'Tab 2',
           tabContent: <div>Tab 2 Content</div>,
-          disabled: true,
         },
         {
           value: 'tab3',
@@ -163,7 +185,6 @@ GroupOfSizesOfTabs.args = {
           value: 'tab2',
           text: 'Tab 2',
           tabContent: <div>Tab 2 Content</div>,
-          disabled: true,
         },
         {
           value: 'tab3',
@@ -183,7 +204,6 @@ GroupOfSizesOfTabs.args = {
           value: 'tab2',
           text: 'Tab 2',
           tabContent: <div>Tab 2 Content</div>,
-          disabled: true,
         },
         {
           value: 'tab3',
