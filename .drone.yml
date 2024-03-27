@@ -266,7 +266,7 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .
+      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
 
   - name: cache-staging-clone
     image: plugins/s3-cache
@@ -281,13 +281,12 @@ steps:
 
 trigger:
   branch:
-    exclude:
-      - "staging"
-      - "staging-next"
+    - "staging"
+    - "staging-next"
   event:
     - push
 ---
 kind: signature
-hmac: 1e9a6df9ffff498a280d67bec72a99ce05f207afafc46e68b9b28b49bc5e5324
+hmac: e51f14b739c978b477222c272341dc9552ad743ee7658a48cf75ee5d5b976d7f
 
 ...
