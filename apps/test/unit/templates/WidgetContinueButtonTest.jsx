@@ -1,9 +1,11 @@
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
-import WidgetContinueButton from '@cdo/apps/templates/WidgetContinueButton';
+
 import * as dialogHelper from '@cdo/apps/code-studio/levels/dialogHelper';
+import WidgetContinueButton from '@cdo/apps/templates/WidgetContinueButton';
+
+import {expect} from '../../util/deprecatedChai';
 
 describe('WidgetContinueButton', () => {
   beforeEach(() => {

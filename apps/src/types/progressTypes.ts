@@ -58,6 +58,7 @@ export interface Level {
   position: number;
   title: number;
   url: string;
+  path: string;
   status?: string;
   usesLab2: boolean;
 }

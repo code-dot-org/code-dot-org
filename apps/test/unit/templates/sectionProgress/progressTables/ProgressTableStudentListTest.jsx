@@ -1,14 +1,16 @@
-import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
 import {shallow, mount} from 'enzyme';
-import i18n from '@cdo/locale';
-import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
+import React from 'react';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
+
+import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import {
   fakeRowsForStudents,
   fakeDetailRowsForStudent,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const TEST_STUDENT_1 = {
   id: 1,

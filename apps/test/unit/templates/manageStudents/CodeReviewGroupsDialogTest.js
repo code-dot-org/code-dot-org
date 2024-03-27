@@ -1,11 +1,13 @@
-import React from 'react';
-import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import Button from '@cdo/apps/templates/Button';
 import {isolateComponent} from 'isolate-react';
+import React from 'react';
+import sinon from 'sinon';
+
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import Button from '@cdo/apps/templates/Button';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
+import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CodeReviewGroupsDialog', () => {
   let wrapper, dataApi, fakeGroups;
