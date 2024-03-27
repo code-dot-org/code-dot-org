@@ -4,19 +4,20 @@ import React, {useEffect, useRef} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 import AITutorTeacherDashboard from '@cdo/apps/code-studio/components/aiTutor/aiTutorTeacherDashboard';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import i18n from '@cdo/locale';
 
-import EmptySection from './EmptySection';
 import firehoseClient from '../../lib/util/firehose';
-import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
+import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+
+import EmptySection from './EmptySection';
 import StatsTableWithData from './StatsTableWithData';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import TeacherDashboardNavigation, {
