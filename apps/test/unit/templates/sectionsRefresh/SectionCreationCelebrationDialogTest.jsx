@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import SectionCreationCelebrationDialog from '@cdo/apps/templates/sectionsRefresh/SectionCreationCelebrationDialog';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SectionCreationCelebrationDialog', () => {
   it('renders dialog with gif', () => {

@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+import React from 'react';
+
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const GOOGLE_RECAPTCHA_TEST_KEY = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 

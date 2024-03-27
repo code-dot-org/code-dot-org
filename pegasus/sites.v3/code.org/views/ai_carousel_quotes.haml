@@ -1,5 +1,5 @@
 .carousel-wrapper
-  %swiper-container{navigation: false, init: "false"}
+  %swiper-container.swiper-02{navigation: false, init: "false"}
     %swiper-slide.slide.with-image
       %img{src: "/images/ai/ai-quote-betia.png", alt: ""}
       .text-wrapper
@@ -10,5 +10,3 @@
       .text-wrapper
         %p.quote-text=hoc_s(:ai_carousel_quote_01)
         %p.no-margin-bottom Seneca Hart <span>•</span> CS Discoveries Teacher
-
-= view :swiper

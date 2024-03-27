@@ -1,11 +1,13 @@
-import {assert} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
+
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import {
   fakeLesson,
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('DetailProgressTable', () => {
   const lessons = [

@@ -1,8 +1,10 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
+import React from 'react';
+
 import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CurriculumQuickAssign', () => {
   it('renders headers and the top row of buttons', () => {

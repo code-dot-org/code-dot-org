@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   isOpen: true,
