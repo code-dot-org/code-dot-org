@@ -324,7 +324,7 @@ export default function RubricSettings({
             {teacherEvalCount === 0 && (
               <Button
                 className="uitest-rubric-switch-content-tab"
-                text={i18n.rubricViewStudentRubric()}
+                text={i18n.rubricTabStudent()}
                 color={Button.ButtonColor.brandSecondaryDefault}
                 onClick={onClickSwitchTab}
                 style={{margin: 0}}
