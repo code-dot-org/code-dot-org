@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2024-03-26 22:41:58 UTC",
+    "serialized_at": "2024-03-27 20:08:20 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -20467,10 +20467,26 @@
   ],
   "rubrics": [
     {
+      "level_name": "CSD U3 Sprites scene challenge_2023",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
       "level_name": "CSD U3 L7 mini project_2023",
       "seeding_key": {
         "lesson.key": "Mini-Project - Robot Faces",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "level_name": "CSD games sidescroll review_2023",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "interactive-games-animations-2023"
       }
     },
@@ -20519,6 +20535,19 @@
       "seeding_key": {
         "learning_goal.key": "23415a34-f5e7-49c5-8850-81ae30a53839",
         "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "key": "47d7ade9-eae6-4dd8-bafc-2a6b04fce04f",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others\n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.",
+      "seeding_key": {
+        "learning_goal.key": "47d7ade9-eae6-4dd8-bafc-2a6b04fce04f",
+        "lesson.key": "Mini-Project - Captioned Scenes",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "interactive-games-animations-2023"
       }
@@ -20611,6 +20640,19 @@
         "learning_goal.key": "dd331e3d-0df7-4dcf-bb93-0a658b931655",
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "key": "f944dbc2-aecc-4408-b927-f36d5c415742",
+      "position": 1,
+      "learning_goal": "test concept",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "f944dbc2-aecc-4408-b927-f36d5c415742",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "interactive-games-animations-2023"
       }
     }
@@ -20756,6 +20798,54 @@
         "understanding": 3,
         "learning_goal.key": "23415a34-f5e7-49c5-8850-81ae30a53839",
         "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "47d7ade9-eae6-4dd8-bafc-2a6b04fce04f",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program has significant sequencing errors, resulting in many elements unintentionally hidden or overlapping others.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "47d7ade9-eae6-4dd8-bafc-2a6b04fce04f",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program may contain a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "47d7ade9-eae6-4dd8-bafc-2a6b04fce04f",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well(1) and and all elements on the screen appear as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "47d7ade9-eae6-4dd8-bafc-2a6b04fce04f",
+        "lesson.key": "Mini-Project - Captioned Scenes",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "interactive-games-animations-2023"
       }
@@ -21093,6 +21183,54 @@
         "learning_goal.key": "dd331e3d-0df7-4dcf-bb93-0a658b931655",
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "none",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "f944dbc2-aecc-4408-b927-f36d5c415742",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "lmtd",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "f944dbc2-aecc-4408-b927-f36d5c415742",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "convincing",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "f944dbc2-aecc-4408-b927-f36d5c415742",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "extensive",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "f944dbc2-aecc-4408-b927-f36d5c415742",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "interactive-games-animations-2023"
       }
     }
