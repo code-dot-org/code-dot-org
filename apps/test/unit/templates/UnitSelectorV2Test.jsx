@@ -1,10 +1,12 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../util/reconfiguredChai';
-import {UnconnectedUnitSelectorV2} from '@cdo/apps/templates/UnitSelectorV2';
-import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
-import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import React from 'react';
 import sinon from 'sinon';
+
+import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import {UnconnectedUnitSelectorV2} from '@cdo/apps/templates/UnitSelectorV2';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   coursesWithProgress: fakeCoursesWithProgress,
