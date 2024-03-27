@@ -92,9 +92,7 @@ $(document).ready(function () {
               sectionName={section.name}
               section
               studentCount={section.students.length}
-              isSectionAssignedCurriculum={
-                !!section.course_offering_id && !!section.course_version_id
-              }
+              anyStudentHasProgress={section.anyStudentHasProgress}
               showAITutorTab={showAITutorTab}
               sectionProviderName={sectionProviderName(
                 store.getState(),

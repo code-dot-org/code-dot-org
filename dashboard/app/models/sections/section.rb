@@ -523,6 +523,10 @@ class Section < ApplicationRecord
     Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
   end
 
+  def any_student_has_progress?
+    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).any? {|s| s.course_assignable?(user)}
+  end
+
   def code_review_enabled?
     return false if code_review_expires_at.nil?
     return code_review_expires_at > Time.now.utc

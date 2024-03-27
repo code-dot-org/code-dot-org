@@ -33,7 +33,7 @@ function TeacherDashboard({
   sectionId,
   sectionName,
   studentCount,
-  isSectionAssignedCurriculum,
+  anyStudentHasProgress,
   location,
   showAITutorTab,
   sectionProviderName,
@@ -152,7 +152,7 @@ function TeacherDashboard({
             applyV1TeacherDashboardWidth(<StatsTableWithData />)
           }
         />
-        {!isSectionAssignedCurriculum && (
+        {!anyStudentHasProgress && (
           <Route
             component={() =>
               applyV1TeacherDashboardWidth(
@@ -202,7 +202,7 @@ TeacherDashboard.propTypes = {
   isSectionAssignedCurriculum: PropTypes.bool.isRequired,
   showAITutorTab: PropTypes.bool,
   sectionProviderName: PropTypes.string,
-
+  anyStudentHasProgress: PropTypes.bool,
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,
 };
