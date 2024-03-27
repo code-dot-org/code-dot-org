@@ -140,9 +140,13 @@ export const GroupOfSizesOfTabs = MultipleTemplate.bind({});
 GroupOfSizesOfTabs.args = {
   components: [
     {
-      name: 'tabs_xs',
+      name: 'tabs_xs_primary',
       tabs: [
-        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab1',
+          text: 'Tab 1 XS Primary',
+          tabContent: <div>Tab 1 Content</div>,
+        },
         {
           value: 'tab2',
           text: 'Tab 2',
@@ -159,9 +163,13 @@ GroupOfSizesOfTabs.args = {
       size: 'xs',
     },
     {
-      name: 'tabs_s',
+      name: 'tabs_s_primary',
       tabs: [
-        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab1',
+          text: 'Tab 1 S Primary',
+          tabContent: <div>Tab 1 Content</div>,
+        },
         {
           value: 'tab2',
           text: 'Tab 2',
@@ -178,9 +186,13 @@ GroupOfSizesOfTabs.args = {
       size: 's',
     },
     {
-      name: 'tabs_m',
+      name: 'tabs_m_primary',
       tabs: [
-        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab1',
+          text: 'Tab 1 M Primary',
+          tabContent: <div>Tab 1 Content</div>,
+        },
         {
           value: 'tab2',
           text: 'Tab 2',
@@ -197,9 +209,13 @@ GroupOfSizesOfTabs.args = {
       size: 'm',
     },
     {
-      name: 'tabs_l',
+      name: 'tabs_l_primary',
       tabs: [
-        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab1',
+          text: 'Tab 1 L Primary',
+          tabContent: <div>Tab 1 Content</div>,
+        },
         {
           value: 'tab2',
           text: 'Tab 2',
@@ -212,6 +228,102 @@ GroupOfSizesOfTabs.args = {
         },
       ],
       selectedTabValue: 'tab1',
+      onChange: () => null,
+      size: 'l',
+    },
+    {
+      name: 'tabs_xs_secondary',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1 XS Secondary',
+          tabContent: <div>Tab 1 Content</div>,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      type: 'secondary',
+      onChange: () => null,
+      size: 'xs',
+    },
+    {
+      name: 'tabs_s_secondary',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1 S Secondary',
+          tabContent: <div>Tab 1 Content</div>,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      type: 'secondary',
+      onChange: () => null,
+      size: 's',
+    },
+    {
+      name: 'tabs_m_secondary',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1 M Secondary',
+          tabContent: <div>Tab 1 Content</div>,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      type: 'secondary',
+      onChange: () => null,
+      size: 'm',
+    },
+    {
+      name: 'tabs_l_secondary',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1 L Secondary',
+          tabContent: <div>Tab 1 Content</div>,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      type: 'secondary',
       onChange: () => null,
       size: 'l',
     },

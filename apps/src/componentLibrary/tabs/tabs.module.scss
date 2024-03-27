@@ -1,6 +1,138 @@
 @import 'color';
 @import 'font';
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
 @import '../../mixins.scss';
+
+.tabs {
+  ul {
+    display: inline-flex;
+    align-items: flex-start;
+    margin: 0;
+
+    li {
+      background: red;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      button {
+        @include remove-button-styles;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+// Tabs Colors
+.tabs-primary {
+
+  .selectedTab {
+    background-color: green;
+  }
+
+}
+
+.tabs-secondary {
+
+  .selectedTab {
+    background-color: blue;
+  }
+}
+
+// Tabs Sizes
+.tabs-l {
+  &.tabs-primary {
+    ul {
+      gap: 1rem;
+
+      li button {
+        @include button-one-text;
+        padding: 0.625rem 0;
+      }
+    }
+  }
+
+  &.tabs-secondary {
+    ul {
+      gap: 0.25rem;
+
+      li button {
+        @include label-one;
+        padding: 0 0.75rem;
+      }
+    }
+  }
+
+}
+
+.tabs-m {
+  &.tabs-primary {
+    ul {
+      gap: 1rem;
+
+      li button {
+        @include button-two-text;
+      }
+    }
+  }
+
+  &.tabs-secondary {
+    ul {
+      gap: 0.25rem;
+
+      li button {
+        @include label-two;
+      }
+    }
+  }
+}
+
+.tabs-s {
+  &.tabs-primary {
+    ul {
+      gap: 1rem;
+
+      li button {
+        @include button-three-text;
+      }
+    }
+  }
+
+  &.tabs-secondary {
+    ul {
+      gap: 0.125rem;
+
+      li button {
+        @include label-three;
+      }
+    }
+  }
+}
+
+.tabs-xs {
+  &.tabs-primary {
+    ul {
+      gap: 0.5rem;
+
+      li button {
+        @include button-four-text;
+      }
+    }
+  }
+
+  &.tabs-secondary {
+    ul {
+      gap: 0.125rem;
+
+      li button {
+        @include label-four;
+      }
+    }
+  }
+}
+
 
 .tabsContainer {
   background-color: $neutral_dark;
@@ -21,22 +153,21 @@
   margin: 0;
 }
 
-.tab {
-  white-space: nowrap;
-  background-color: $neutral_dark70;
-  margin: 5px 8px 0 0;
-  padding: 0 10px;
-  border-radius: 4px 4px 0 0;
-  height: 30px;
-
-  button {
-    @include remove-button-styles;
-    height: 30px;
-    font-size: 16px;
-    font-weight: $medium-font-weight;
-    color: $neutral_white;
-  }
-}
+//.tab {
+//  white-space: nowrap;
+//  background-color: $neutral_dark70;
+//  margin: 5px 8px 0 0;
+//  padding: 0 10px;
+//  border-radius: 4px 4px 0 0;
+//  height: 30px;
+//  button {
+//    @include remove-button-styles;
+//    height: 30px;
+//    font-size: 16px;
+//    font-weight: $medium-font-weight;
+//    color: $neutral_white;
+//  }
+//}
 
 .tabPanelsContainer {
   padding: 10px;

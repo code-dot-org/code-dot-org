@@ -41,8 +41,8 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     <li
       role="presentation"
       className={classNames(
-        moduleStyles.tab,
-        isSelected && moduleStyles.active
+        // moduleStyles.tab,
+        isSelected && moduleStyles.selectedTab
       )}
     >
       <button
@@ -52,7 +52,6 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         aria-controls={tabPanelId}
         id={tabButtonId}
         onClick={handleClick}
-        className={classNames(isSelected && moduleStyles.active)}
         disabled={disabled}
       >
         {icon?.title}

@@ -55,12 +55,17 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
     <>
       <div
         className={classnames(
-          moduleStyles.tabsContainer,
+          moduleStyles.tabs,
+          moduleStyles[`tabs-${size}`],
+          moduleStyles[`tabs-${type}`],
           tabsContainerClassName
         )}
         id={tabsContainerId}
       >
-        <ul role="tablist" className={moduleStyles.tabsList}>
+        <ul
+          role="tablist"
+          // className={moduleStyles.tabsList}
+        >
           {tabs.map((tab, index) => (
             <_Tab
               {...tab}
@@ -75,22 +80,20 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
       </div>
       <div
         className={classnames(
-          moduleStyles.tabPanelsContainer,
+          // moduleStyles.tabPanelsContainer,
           tabPanelsContainerClassName
         )}
         id={tabPanelsContainerId}
       >
-        {tabs.map((tab, index) => {
-          return (
-            <TabPanel
-              key={index}
-              content={tab.tabContent}
-              isActive={tab.value === selectedTabValue}
-              id={`${name}-panel-${tab.value}`}
-              labelledBy={`${name}-tab-${tab.value}`}
-            />
-          );
-        })}
+        {tabs.map(tab => (
+          <TabPanel
+            key={tab.value}
+            content={tab.tabContent}
+            isActive={tab.value === selectedTabValue}
+            id={`${name}-panel-${tab.value}`}
+            labelledBy={`${name}-tab-${tab.value}`}
+          />
+        ))}
       </div>
     </>
   );
