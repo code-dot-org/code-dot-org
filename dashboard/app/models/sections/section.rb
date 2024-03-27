@@ -434,8 +434,8 @@ class Section < ApplicationRecord
           id: script_id,
           name: script.try(:name),
           project_sharing: script.try(:project_sharing),
-        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         },
+        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
       }
     end
   end
@@ -470,8 +470,8 @@ class Section < ApplicationRecord
       # Remove ordering from scope when not including full
       # list of students, in order to improve query performance.
       unique_students = include_students ?
-                          students.distinct(&:id) :
-                          students.unscope(:order).distinct(&:id)
+        students.distinct(&:id) :
+        students.unscope(:order).distinct(&:id)
       num_students = unique_students.size
 
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
