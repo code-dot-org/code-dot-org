@@ -96,7 +96,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
-  levelBlockIds: string[];
+  levelBlockIds: Set<string>;
   isStartMode: boolean;
   isToolboxMode: boolean;
   toolboxBlocks: ToolboxDefinition | undefined;
@@ -214,7 +214,7 @@ export interface ExtendedVariableMap extends VariableMap {
 export interface ExtendedBlocklyOptions extends BlocklyOptions {
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
-  levelBlockIds: string[];
+  levelBlockIds: Set<string>;
   isBlockEditMode: boolean;
   editBlocks: string | undefined;
   noFunctionBlockFrame: boolean;
