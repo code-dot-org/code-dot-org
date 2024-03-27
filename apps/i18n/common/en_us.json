@@ -2212,6 +2212,7 @@
   "rubricNumberStudentEvals": "You have evaluated this lesson for {teacherEvalCount} students.",
   "rubricViewStudentRubric": "View Student Rubric",
   "rubricSummaryClassScore": "Summary of Class Scores",
+  "rubricLearningGoalSummary" : "Summary",
   "runAiAssessment": "Run AI Assessment for Project",
   "runAiAssessmentAll": "Run AI Assessment for all unsubmitted",
   "runAiAssessmentClass": "Run AI Assessment for Class",
