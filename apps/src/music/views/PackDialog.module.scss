@@ -67,29 +67,39 @@
       grid-template-columns: 33.333% 33.333% 33.333%;
 
       .pack {
-        text-align: center;
         box-sizing: border-box;
         padding: 8px;
         cursor: pointer;
 
-        &Description {
+        &Image {
+          width: 100%;
+        }
+
+        &Footer {
           margin-top: 10px;
-        }
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
 
-        &Name {
-          font-size: 16px;
-        }
+          &Name {
+            font-size: 16px;
+          }
 
-        &Artist {
-          font-size: 11px;
-        }
+          &Artist {
+            font-size: 11px;
+          }
 
-        .preview {
-          color: $neutral_dark40;
+          &Preview {
+            margin-right: 10px;
 
-          &Playing {
-            color: $neutral_dark70;
-            cursor: default;
+            .preview {
+              color: $neutral_dark40;
+
+              &Playing {
+                color: $neutral_dark70;
+                cursor: default;
+              }
+            }
           }
         }
       }

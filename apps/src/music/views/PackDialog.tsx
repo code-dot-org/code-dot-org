@@ -56,16 +56,15 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
       <div className={styles.packImageContainer}>
         {imageSrc && <img src={imageSrc} className={styles.packImage} alt="" />}
       </div>
-      <div className={styles.packDescription}>
-        <div className={styles.packName}>{folder.name}</div>
-        {folder.artist && (
-          <div className={styles.packArtist}>{folder.artist}</div>
-        )}
-      </div>
-      <div className={styles.folderRowRight}>
-        <div className={styles.length}>&nbsp;</div>
+      <div className={styles.packFooter}>
+        <div>
+          <div className={styles.packFooterName}>{folder.name}</div>
+          {folder.artist && (
+            <div className={styles.packFooteArtist}>{folder.artist}</div>
+          )}
+        </div>
         {previewSound && (
-          <div className={styles.previewContainer}>
+          <div className={styles.packFooterPreview}>
             <FontAwesome
               title={undefined}
               icon={'play-circle'}
