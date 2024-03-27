@@ -23,6 +23,14 @@ class ApplicationJob < ActiveJob::Base
   end
 
   # Parent class callbacks are called in addition to any callbacks defined in the job subclass
+  # Callback functions are executed in the following order:
+  #   before_enqueue and around_enqueue(before) in any order
+  #   Job is added to database or other queue store
+  #   after_enqueue and around_enqueue(after) in any order
+  #   before_perform and around_perform(before) in any order
+  #   job is performed
+  #   after_perform and around_perform(after) in any order
+  # When both the Parent and Child class define the same callback, they may be called in any order.
   # https://guides.rubyonrails.org/v6.0/active_job_basics.html#available-callbacks
 
   after_enqueue do |job|
