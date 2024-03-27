@@ -255,6 +255,7 @@ class RubricsController < ApplicationController
       next unless @user&.student_of?(current_user)
       attempted = attempted_at
       evaluated = ai_evaluated_at # only finished, successful evaluations
+      last_attempt_evaluated = attempted && evaluated && evaluated >= attempted
       rubric_ai_evaluation = RubricAiEvaluation.where(
         rubric_id: @rubric.id,
         user_id: user_id
@@ -267,7 +268,7 @@ class RubricsController < ApplicationController
 
       attempted_unevaluated_count += 1 if !!attempted && (!last_eval_time || (!!last_eval_time && last_eval_time < attempted))
       attempted_count += 1 if !!attempted
-      last_attempt_evaluated_count += 1 if !!attempted && !!evaluated && evaluated >= attempted
+      last_attempt_evaluated_count += 1 if last_attempt_evaluated
     end
     render json: {
       notAttemptedCount: user_ids.length - attempted_count,
