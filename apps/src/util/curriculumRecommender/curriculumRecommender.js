@@ -24,8 +24,11 @@ const now = moment().utc();
 export const getSimilarRecommendations = (
   curriculaData,
   mainCurriculumKey,
-  curriculaTaught
+  curriculaTaught,
+  testEditorScores
 ) => {
+  console.log(testEditorScores);
+
   // Create copy of array of curricula to not affect the curriculaData array passed in
   let curricula = [...curriculaData];
 

@@ -15,6 +15,8 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
+const SHOW_RECOMMENDER_SCORE_EDITOR = true;
+
 const CurriculumCatalog = ({
   curriculaData,
   isEnglish,
@@ -30,6 +32,8 @@ const CurriculumCatalog = ({
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
   const [expandedCardKey, setExpandedCardKey] = useState(null);
+
+  const [sample, setSample] = useState(0);
 
   useEffect(() => {
     const expandedCardFound = filteredCurricula.some(
@@ -90,7 +94,8 @@ const CurriculumCatalog = ({
     const recommendations = getSimilarRecommendations(
       curriculaData,
       curriculumKey,
-      curriculaTaught
+      curriculaTaught,
+      sample
     );
     const recommendedCurriculum = recommendations[0];
 
@@ -222,6 +227,16 @@ const CurriculumCatalog = ({
               <strong>X</strong>
             </button>
           </div>
+        </div>
+      )}
+      {SHOW_RECOMMENDER_SCORE_EDITOR && (
+        <div>
+          <input
+            type="text"
+            pattern="[0-9]*"
+            onChange={e => setSample(e.target.value)}
+            value={sample}
+          />
         </div>
       )}
       <CurriculumCatalogFilters
