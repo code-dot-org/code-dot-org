@@ -10,7 +10,6 @@ import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionPro
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import i18n from '@cdo/locale';
 
