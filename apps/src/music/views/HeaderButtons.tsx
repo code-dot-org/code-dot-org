@@ -107,12 +107,12 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               <span>
                 <img
                   src={packImageSrc}
-                  style={{height: 19, borderRadius: 2}}
+                  className={moduleStyles.buttonWideImage}
                   alt=""
                 />
-                &nbsp; &nbsp;
-                {packFolder.name} &bull; {packFolder.artist}
-                &nbsp; &nbsp;
+                <span className={moduleStyles.buttonWideContent}>
+                  {packFolder.name} &bull; {packFolder.artist}
+                </span>
               </span>
             )}
             <FontAwesome

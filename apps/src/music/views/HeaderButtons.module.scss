@@ -30,6 +30,15 @@
 
   &Wide {
     width: initial;
-    padding: 0 6px;
+    padding: 0 6px 0 2px;
+
+    &Image {
+      height: 20px;
+      border-radius: 2px;
+    }
+
+    &Content {
+      padding: 0 30px;
+    }
   }
 }
