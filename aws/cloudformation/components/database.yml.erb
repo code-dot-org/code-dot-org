@@ -149,6 +149,17 @@
         # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
         innodb_flush_log_at_trx_commit: 0
         # END: Dynamic configuration settings.
+  AuroraWriterDBParameters:
+    Type: AWS::RDS::DBParameterGroup
+    Properties:
+      Description: !Sub "Aurora Cluster DB Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters:
+        # BEGIN: Static configuration settings. Changing these settings will trigger a restart of each database instance.
+        #END: Static configuration settings.
+
+        # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
+        # END: Dynamic configuration settings.
   # Aurora Engine 3.x (MySQL 8.x) ParameterGroups
   Aurora3ClusterDBParameters:
     Type: AWS::RDS::DBClusterParameterGroup
