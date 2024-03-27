@@ -1,7 +1,11 @@
 {
   "name": "pl-csd-summer-2024",
   "script_names": [
-
+    "pl-csd-summer-2024-day1",
+    "pl-csd-summer-2024-day2",
+    "pl-csd-summer-2024-day3",
+    "pl-csd-summer-2024-day4",
+    "pl-csd-summer-2024-day5"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
