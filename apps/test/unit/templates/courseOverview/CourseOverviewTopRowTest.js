@@ -1,7 +1,9 @@
-import {assert} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
+
 import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverviewTopRow';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   sectionsForDropdown: [],
