@@ -68,10 +68,6 @@ window.levelbuilder.copySelectedBlockToClipboard = function () {
 window.levelbuilder.pasteBlocksToWorkspace = function () {
   let str = localStorage.getItem('blockXml');
 
-  if (str.startsWith('<block') && str.endsWith('</block>')) {
-    // If a single block has been copied, wrap it in <xml></xml>
-    str = `<xml>${str}</xml>`;
-  }
   if (!(str.startsWith('<xml') && str.endsWith('</xml>'))) {
     // str is not valid block xml.
     return;
