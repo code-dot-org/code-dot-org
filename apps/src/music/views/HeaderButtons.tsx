@@ -101,7 +101,10 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           <button
             onClick={onClickStartOver}
             type="button"
-            className={classNames(moduleStyles.button, moduleStyles.buttonWide)}
+            className={classNames(
+              moduleStyles.button,
+              packFolder && packImageSrc && moduleStyles.buttonWide
+            )}
           >
             {packFolder && packImageSrc && (
               <span>

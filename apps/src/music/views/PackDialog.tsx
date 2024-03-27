@@ -137,7 +137,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
   }
 
   return (
-    <FocusLock>
+    <FocusLock className={styles.focusLock}>
       <div className={styles.dialogContainer}>
         <div id="pack-dialog" className={styles.packDialog}>
           <div id="hidden-item" tabIndex={0} role="button" />

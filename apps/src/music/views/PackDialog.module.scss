@@ -36,6 +36,12 @@
   }
 }
 
+.focusLock {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .dialogContainer {
   @extend %full-container-overlay;
 
