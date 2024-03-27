@@ -1,8 +1,10 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import {UnconnectedMultipleChoiceAssessmentsOverviewTable} from '@cdo/apps/templates/sectionAssessments/MultipleChoiceAssessmentsOverviewTable';
 import commonMsg from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const multipleChoiceData = [
   {

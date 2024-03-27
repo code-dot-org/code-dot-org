@@ -5,7 +5,7 @@ import AddTableRow from './AddTableRow';
 import EditTableRow from './EditTableRow';
 import ColumnHeader from './ColumnHeader';
 import DataEntryError from './DataEntryError';
-import FirebaseStorage from '../firebaseStorage';
+import {storageBackend} from '../storage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -17,6 +17,7 @@ import msg from '@cdo/locale';
 import {WarningType} from '../constants';
 import style from './data-table.module.scss';
 import classNames from 'classnames';
+import {refreshCurrentDataView} from './loadDataForView';
 
 const MAX_ROWS_PER_PAGE = 500;
 
@@ -59,10 +60,11 @@ class DataTable extends React.Component {
     this.setState({pendingAdd: true});
     // Show the spinner icon before updating the data.
     setTimeout(() => {
-      FirebaseStorage.addColumn(
+      storageBackend().addColumn(
         this.props.tableName,
         columnName,
         () => {
+          refreshCurrentDataView();
           this.setState({
             editingColumn: columnName,
             pendingAdd: false,
@@ -82,10 +84,10 @@ class DataTable extends React.Component {
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
-      FirebaseStorage.deleteColumn(
+      storageBackend().deleteColumn(
         this.props.tableName,
         columnToRemove,
-        this.resetColumnState,
+        this.onColumnChanged,
         error => {
           console.warn(error);
           this.resetColumnState();
@@ -107,11 +109,11 @@ class DataTable extends React.Component {
     // Show the spinner icon before updating the data.
     setTimeout(() => {
       if (this.props.tableName) {
-        FirebaseStorage.renameColumn(
+        storageBackend().renameColumn(
           this.props.tableName,
           oldName,
           newName,
-          this.resetColumnState,
+          this.onColumnChanged,
           error => {
             console.warn(error);
             this.resetColumnState();
@@ -122,6 +124,11 @@ class DataTable extends React.Component {
         this.resetColumnState();
       }
     }, 0);
+  };
+
+  onColumnChanged = () => {
+    refreshCurrentDataView();
+    this.resetColumnState();
   };
 
   resetColumnState = () => {
@@ -147,11 +154,11 @@ class DataTable extends React.Component {
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
-      FirebaseStorage.coerceColumn(
+      storageBackend().coerceColumn(
         this.props.tableName,
         columnName,
         columnType,
-        this.resetColumnState,
+        this.onColumnChanged,
         err => {
           if (err.type === WarningType.CANNOT_CONVERT_COLUMN_TYPE) {
             this.props.onShowWarning(err.msg);

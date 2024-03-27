@@ -487,7 +487,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     ao.save!
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
-    create :lti_user_identity, user: user, subject: payload[:sub]
     assert deployment
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
 

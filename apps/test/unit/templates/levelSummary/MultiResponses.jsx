@@ -1,10 +1,12 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import MultiResponses, {
   exportedForTesting,
 } from '@cdo/apps/templates/levelSummary/MultiResponses';
 import color from '@cdo/apps/util/color';
+
+import {expect} from '../../../util/reconfiguredChai';
 const {multiAnswerCounts, multiChartData} = exportedForTesting;
 
 const JS_DATA = {

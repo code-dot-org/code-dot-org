@@ -1,9 +1,11 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import ProgrammingEnvironmentOverview, {
   CategorySection,
 } from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentOverview';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ProgrammingEnvironmentOverview', () => {
   let defaultProgrammingEnvironment;

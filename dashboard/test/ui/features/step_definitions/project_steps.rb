@@ -114,7 +114,7 @@ end
 
 Then /^I navigate to the public gallery via the gallery switcher$/ do
   steps <<-GHERKIN
-    Then I click selector "#uitest-gallery-switcher div:contains(Public Projects)"
+    Then I click selector "#uitest-gallery-switcher div:contains(Featured Projects)"
     Then check that I am on "http://studio.code.org/projects/public"
     And I wait until element "#uitest-public-projects" is visible
     And element "#uitest-personal-projects" is not visible

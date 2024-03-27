@@ -1,21 +1,23 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+import {render, screen} from '@testing-library/react';
 import {shallow, mount} from 'enzyme';
+import React from 'react';
 import {act} from 'react-dom/test-utils';
 import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import HttpClient from '@cdo/apps/util/HttpClient';
+
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import tipIconImage from '@cdo/apps/templates/rubrics/images/AiBot_Icon.svg';
+import infoIconImage from '@cdo/apps/templates/rubrics/images/info-icon.svg';
 import LearningGoals, {
   clearAnnotations,
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
-import {render, screen} from '@testing-library/react';
-import infoIconImage from '@cdo/apps/templates/rubrics/images/info-icon.svg';
-import tipIconImage from '@cdo/apps/templates/rubrics/images/AiBot_Icon.svg';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const learningGoals = [
   {
