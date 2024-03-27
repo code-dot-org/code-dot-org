@@ -1,4 +1,5 @@
 @no_mobile
+@no_safari
 Feature: Teachers can see and give feedback on Rubrics
 
 Scenario: Teachers can give and send feedback on the rubric to students.
@@ -9,6 +10,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I click selector ".uitest-taRubricTab" once I see it
   Then I wait to see "#runButton"
   And I press "runButton"
+  And I wait until element ".project_updated_at" contains text "Saved"
   And I wait to see "#submitButton"
   And I press "submitButton"
   And I wait to see "#confirm-button"

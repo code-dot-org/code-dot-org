@@ -1,11 +1,13 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
-import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
+
 import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.scss';
+import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const JS_DATA = {
   response_count: 1,

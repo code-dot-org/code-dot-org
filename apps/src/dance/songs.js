@@ -18,6 +18,7 @@ const DEPRECATED_SONGS = [
   'showdaspoderosas_anitta',
   'savagelove_jasonderulo',
   'astronautintheocean_maskedwolf',
+  'dernieredanse_indila',
 ];
 
 /**

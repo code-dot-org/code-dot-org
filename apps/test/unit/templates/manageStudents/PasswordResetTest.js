@@ -1,8 +1,10 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import PasswordReset from '@cdo/apps/templates/manageStudents/PasswordReset';
+import React from 'react';
 import sinon from 'sinon';
+
+import PasswordReset from '@cdo/apps/templates/manageStudents/PasswordReset';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('PasswordReset', () => {
   it('disables reset password button if resetDisabled prop is true', () => {

@@ -1,7 +1,9 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {assert, expect} from '../../util/reconfiguredChai';
+import React from 'react';
+
 import CheckboxDropdown from '@cdo/apps/templates/CheckboxDropdown';
+
+import {assert, expect} from '../../util/reconfiguredChai';
 
 describe('CheckboxDropdown', function () {
   const colorOptions = {

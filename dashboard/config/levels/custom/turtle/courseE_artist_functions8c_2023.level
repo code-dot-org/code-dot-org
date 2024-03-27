@@ -47,7 +47,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:39:55.893+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions8c2022\\\"\"],\"cloned_from\":\"courseE_artist_functions8c2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:39:55.893+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions8c2022\\\"\"],\"cloned_from\":\"courseE_artist_functions8c2022\"},{\"changed_at\":\"2024-03-25 17:22:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "debugging": 4,
@@ -105,28 +105,32 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
+          <block type="draw_move_by_constant">
+            <field name="DIR">moveForward</field>
+            <field name="VALUE">100</field>
+          </block>
           <block type="jump_by_constant">
-            <title name="DIR">jumpForward</title>
-            <title name="VALUE">100</title>
+            <field name="DIR">jumpForward</field>
+            <field name="VALUE">100</field>
           </block>
           <block type="draw_turn_by_constant">
-            <title name="DIR">turnRight</title>
-            <title name="VALUE">90</title>
+            <field name="DIR">turnRight</field>
+            <field name="VALUE">90</field>
           </block>
           <block type="draw_turn_by_constant">
-            <title name="DIR">turnLeft</title>
-            <title name="VALUE">90</title>
+            <field name="DIR">turnLeft</field>
+            <field name="VALUE">90</field>
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour">
             <value name="COLOUR">
               <block type="colour_picker">
-                <title name="COLOUR">#ff0000</title>
+                <field name="COLOUR">#ff0000</field>
               </block>
             </value>
           </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour">
             <value name="COLOUR">
               <block type="colour_random"/>
             </value>
@@ -134,18 +138,18 @@
         </category>
         <category name="Loops">
           <block type="controls_repeat">
-            <title name="TIMES">4</title>
+            <field name="TIMES">4</field>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
           <block type="procedures_defnoreturn">
             <mutation/>
-            <title name="NAME">do something</title>
+            <field name="NAME">do something</field>
           </block>
         </category>
         <category name="Comments">
           <block type="comment">
-            <title name="TEXT"/>
+            <field name="TEXT"/>
           </block>
         </category>
       </xml>

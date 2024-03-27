@@ -390,30 +390,6 @@ describe I18n::Utils::CrowdinClient do
     end
   end
 
-  describe '#upload_source_files' do
-    let(:upload_source_files) {described_instance.upload_source_files(source_files, base_path: base_path)}
-
-    let(:base_path) {'/expected_base_path'}
-    let(:crowdin_dir_path) {'/expected_crowdin_dir_path'}
-    let(:source_file_path) {File.join(base_path, crowdin_dir_path, 'expected_source_file_path')}
-    let(:source_files) {[source_file_path]}
-
-    it 'returns uploaded source file data' do
-      expected_source_file_data = 'uploaded_source_file_data'
-
-      described_instance.
-        expects(:upload_source_file).
-        with(source_file_path, crowdin_dir_path).
-        returns(expected_source_file_data)
-
-      source_files_data = upload_source_files do |uploaded_source_file_data|
-        _(uploaded_source_file_data).must_equal expected_source_file_data
-      end
-
-      _(source_files_data).must_equal [expected_source_file_data]
-    end
-  end
-
   describe '#download_translation' do
     let(:download_translation) do
       described_instance.download_translation(source_file_id, language_id, dest_path, etag: etag)

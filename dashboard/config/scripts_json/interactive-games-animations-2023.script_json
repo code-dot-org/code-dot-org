@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2023-12-11 23:56:00 UTC",
+    "serialized_at": "2024-03-26 22:41:58 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -20467,6 +20467,14 @@
   ],
   "rubrics": [
     {
+      "level_name": "CSD U3 L7 mini project_2023",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
       "level_name": "CSD U3 Interactive Card Final_2023",
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
@@ -20498,6 +20506,19 @@
       "seeding_key": {
         "learning_goal.key": "08fbaa6b-de89-4ac0-a997-d94a31ab23ea",
         "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "key": "23415a34-f5e7-49c5-8850-81ae30a53839",
+      "position": 2,
+      "learning_goal": "Position - Shapes",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "23415a34-f5e7-49c5-8850-81ae30a53839",
+        "lesson.key": "Mini-Project - Robot Faces",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "interactive-games-animations-2023"
       }
@@ -20550,6 +20571,32 @@
       "seeding_key": {
         "learning_goal.key": "a6bd166a-c97b-453a-b9d3-964873c01bf7",
         "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "key": "b691805e-c78b-4218-b92a-4bf36243c1c5",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": ". Sequenced the program well\nIf the program code is not sequenced correctly, some elements, such as shapes, may be unintentionally hidden behind other shapes. \n2. Different types of shapes: \nEach shape listed below would be considered a “different type” of shape. Students should use at least 4 different types of shapes.\nrect(x, y, width, height)\nellipse(x, y, width, height)\nline(x1, y1, x2, y2)\narc(x, y, width, height, start, stop)\npoint(x, y)\nregularPolygon(x, y, sides, size)\nshape(x1, y1, x2, y2, … xN, yN)\n",
+      "seeding_key": {
+        "learning_goal.key": "b691805e-c78b-4218-b92a-4bf36243c1c5",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
+      "position": 3,
+      "learning_goal": "Creating a Digital Artifact",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
+        "lesson.key": "Mini-Project - Robot Faces",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "interactive-games-animations-2023"
       }
@@ -20661,6 +20708,54 @@
         "understanding": 3,
         "learning_goal.key": "08fbaa6b-de89-4ac0-a997-d94a31ab23ea",
         "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "They used no shapes in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "23415a34-f5e7-49c5-8850-81ae30a53839",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They use at least 1 shape and place it correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "23415a34-f5e7-49c5-8850-81ae30a53839",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "They only use the ellipse and rect shapes and place them correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "23415a34-f5e7-49c5-8850-81ae30a53839",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They used at least 4 different types of shapes2 and placed them correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "23415a34-f5e7-49c5-8850-81ae30a53839",
+        "lesson.key": "Mini-Project - Robot Faces",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "interactive-games-animations-2023"
       }
@@ -20853,6 +20948,102 @@
         "understanding": 3,
         "learning_goal.key": "a6bd166a-c97b-453a-b9d3-964873c01bf7",
         "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling intended drawing.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "b691805e-c78b-4218-b92a-4bf36243c1c5",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Program has significant sequencing errors, resulting in many shapes unintentionally hidden or overlapping others.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "b691805e-c78b-4218-b92a-4bf36243c1c5",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Program may contain a few incorrectly sequenced code resulting in a few shapes hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "b691805e-c78b-4218-b92a-4bf36243c1c5",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They sequenced the program well1 and all shapes on the screen appear as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "b691805e-c78b-4218-b92a-4bf36243c1c5",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "They did not fill the project guide out, or it is unrelated to the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They used some elements as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Elements are generally used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They used elements as described in the project guide and clearly displayed a robot face.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
+        "lesson.key": "Mini-Project - Robot Faces",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "interactive-games-animations-2023"
       }

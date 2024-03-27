@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import LessonTip from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('LessonTip', () => {
   let defaultProps;

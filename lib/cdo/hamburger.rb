@@ -121,7 +121,6 @@ class Hamburger
       {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")},
       {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")},
       {title: "educate_hoc", url: "https://hourofcode.com"},
-      {title: "educate_partner", url: CDO.code_org_url("/educate/partner")},
       {title: "educate_beyond", url: CDO.code_org_url("/educate/curriculum/3rd-party")},
       {title: "educate_inspire", url: CDO.code_org_url("/educate/resources/inspire")},
       {title: "educate_community", url: CDO.code_org_url("/educate/community")},
