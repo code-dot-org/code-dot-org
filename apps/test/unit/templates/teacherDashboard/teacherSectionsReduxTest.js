@@ -433,7 +433,6 @@ describe('teacherSectionsRedux', () => {
       const stateWithSections = reducer(initialState, setSections(sections));
       assert.isNull(stateWithSections.sectionBeingEdited);
       const state = reducer(stateWithSections, beginEditingSection(12));
-      console.log('lfm', state.sectionBeingEdited, state.sections[12]);
       assert.deepEqual(state.sectionBeingEdited, {
         id: 12,
         name: 'My Other Section',

@@ -71,42 +71,32 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
   }
 
   dispatch(startLoadingCoursesWithProgress());
-  fetchJSON(`/dashboardapi/section_courses/${selectedSection.id}`)
-    .then(coursesWithProgress => {
-      // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
-      const reorderedCourses = [
-        ...coursesWithProgress.filter(
-          course => course.id !== selectedSection.course_version_id
-        ),
-        ...coursesWithProgress.filter(
-          course => course.id === selectedSection.course_version_id
-        ),
-      ].reverse();
-      dispatch(setCoursesWithProgress(reorderedCourses));
-      dispatch(finishedLoadingCoursesWithProgress());
-    })
-    .catch(err => {
-      console.error(err.message);
-      dispatch(finishedLoadingCoursesWithProgress());
-    });
-};
 
-function fetchJSON(url, params) {
-  return new Promise((resolve, reject) => {
-    $.getJSON(url, params)
-      .done(resolve)
-      .fail(jqxhr =>
-        reject(
-          new Error(`
-        url: ${url}
-        status: ${jqxhr.status}
-        statusText: ${jqxhr.statusText}
-        responseText: ${jqxhr.responseText}
-      `)
-        )
-      );
-  });
-}
+  fetch(`/dashboardapi/section_courses/${selectedSection.id}`),
+    {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+    }
+      .then(coursesWithProgress => {
+        // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
+        const reorderedCourses = [
+          ...coursesWithProgress.filter(
+            course => course.id !== selectedSection.course_version_id
+          ),
+          ...coursesWithProgress.filter(
+            course => course.id === selectedSection.course_version_id
+          ),
+        ].reverse();
+        dispatch(setCoursesWithProgress(reorderedCourses));
+        dispatch(finishedLoadingCoursesWithProgress());
+      })
+      .catch(err => {
+        console.error(err.message);
+        dispatch(finishedLoadingCoursesWithProgress());
+      });
+};
 
 // Initial state of unitSelectionRedux
 const initialState = {
