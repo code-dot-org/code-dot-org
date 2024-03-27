@@ -116,7 +116,8 @@ export function getProjectXml(workspace: WorkspaceSvg) {
 
 /**
  * Removes the randomized 'id' attribute from all 'block' elements.
- * This is intended to prevent writing duplicate entries to the level_sources table.
+ * This is intended to prevent writing duplicate entries to the level_sources table,
+ * but it can also be used in other contexts where block ids are not desired.
  * @param {Element} element - The XML element to process.
  * @param {string[]} levelBlockIds - An array of ids to preserve, if found.
  */
