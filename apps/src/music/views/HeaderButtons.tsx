@@ -11,13 +11,57 @@ import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './HeaderButtons.module.scss';
 import musicI18n from '../locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
-import MusicLibrary from '../player/MusicLibrary';
+import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import {getBaseAssetUrl} from '../appConfig';
+
+interface CurrentPackProps {
+  packFolder: SoundFolder;
+  noRightPadding: boolean;
+}
+
+const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
+  packFolder,
+  noRightPadding,
+}) => {
+  const library = MusicLibrary.getInstance();
+
+  let packImageSrc = null;
+
+  if (library && packFolder) {
+    const libraryGroupPath = library.libraryJson.path;
+    packImageSrc =
+      packFolder.imageSrc &&
+      `${getBaseAssetUrl()}${libraryGroupPath}/${packFolder.path}/${
+        packFolder.imageSrc
+      }`;
+  }
+
+  return (
+    <span>
+      {packImageSrc && (
+        <img
+          src={packImageSrc}
+          className={moduleStyles.buttonWideImage}
+          alt=""
+        />
+      )}
+      <span
+        className={classNames(
+          moduleStyles.buttonWideContent,
+          noRightPadding && moduleStyles.buttonWideContentNoRightPadding
+        )}
+      >
+        {packFolder.name} &bull; {packFolder.artist}
+      </span>
+    </span>
+  );
+};
 
 interface HeaderButtonsProps {
   onClickUndo: () => void;
   onClickRedo: () => void;
   clearCode: () => void;
+  allowPackSelection: boolean;
   currentPackName: string;
 }
 
@@ -28,6 +72,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   onClickUndo,
   onClickRedo,
   clearCode,
+  allowPackSelection,
   currentPackName,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
@@ -37,24 +82,15 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useContext(DialogContext);
 
-  let packFolder = null;
-  let packImageSrc = null;
   const library = MusicLibrary.getInstance();
+
+  let packFolder = null;
+
   if (library) {
     packFolder = library.getAllowedFolderForFolderId(
       undefined,
       currentPackName
     );
-
-    if (packFolder) {
-      const libraryGroupPath = library.libraryJson.path;
-
-      packImageSrc =
-        packFolder.imageSrc &&
-        `${getBaseAssetUrl()}${libraryGroupPath}/${packFolder.path}/${
-          packFolder.imageSrc
-        }`;
-    }
   }
 
   const onClickUndoRedo = useCallback(
@@ -98,25 +134,29 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     <div className={moduleStyles.container}>
       {!readOnlyWorkspace && (
         <div className={moduleStyles.subContainer}>
+          {!allowPackSelection && packFolder && (
+            <button
+              type="button"
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonWide,
+                moduleStyles.buttonCursorDisabled
+              )}
+              disabled={true}
+            >
+              <CurrentPack packFolder={packFolder} noRightPadding={true} />
+            </button>
+          )}
           <button
             onClick={onClickStartOver}
             type="button"
             className={classNames(
               moduleStyles.button,
-              packFolder && packImageSrc && moduleStyles.buttonWide
+              allowPackSelection && packFolder && moduleStyles.buttonWide
             )}
           >
-            {packFolder && packImageSrc && (
-              <span>
-                <img
-                  src={packImageSrc}
-                  className={moduleStyles.buttonWideImage}
-                  alt=""
-                />
-                <span className={moduleStyles.buttonWideContent}>
-                  {packFolder.name} &bull; {packFolder.artist}
-                </span>
-              </span>
+            {allowPackSelection && packFolder && (
+              <CurrentPack packFolder={packFolder} noRightPadding={false} />
             )}
             <FontAwesome
               title={musicI18n.startOver()}

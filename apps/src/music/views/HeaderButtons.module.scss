@@ -28,6 +28,10 @@
     cursor: default;
   }
 
+  &CursorDisabled {
+    cursor: default;
+  }
+
   &Wide {
     width: initial;
     padding: 0 6px 0 2px;
@@ -39,6 +43,10 @@
 
     &Content {
       padding: 0 14px 0 9px;
+
+      &NoRightPadding {
+        padding-right: 0;
+      }
     }
   }
 }

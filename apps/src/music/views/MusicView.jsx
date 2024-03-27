@@ -362,8 +362,12 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
-    this.setState({currentPackName: null});
-    this.library.setCurrentPackName(null);
+    // Clear the pack, unless it came from the level data itself.
+    if (!this.props.levelData?.packName) {
+      this.setState({currentPackName: null});
+      this.library.setCurrentPackName(null);
+    }
+
     this.loadCode(this.getStartSources());
     this.setPlaying(false);
   };
@@ -648,7 +652,10 @@ class UnconnectedMusicView extends React.Component {
           clearCode={this.clearCode}
           validator={this.musicValidator}
           player={this.player}
-          hasRestrictedPacks={this.library?.getHasRestrictedPacks()}
+          allowPackSelection={
+            this.library?.getHasRestrictedPacks() &&
+            !this.props.levelData?.packName
+          }
           currentPackName={this.state.currentPackName}
           setCurrentPackName={packName => {
             this.setState({currentPackName: packName});
