@@ -565,7 +565,7 @@ Resources:
     Type: AWS::EC2::Instance
 <% unless rack_env?(:adhoc) -%>
     DeletionPolicy: Retain
-    # UpdateReplacePolicy: Retain
+    UpdateReplacePolicy: Retain
 <% end -%>
     CreationPolicy:
       ResourceSignal:
