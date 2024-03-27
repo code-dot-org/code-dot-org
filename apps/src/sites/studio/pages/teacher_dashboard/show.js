@@ -56,37 +56,42 @@ $(document).ready(function () {
     sectionStandardsProgress,
     locales,
   });
+
+  const sectionData = {...sections[section.id], ...section};
+
   const store = getStore();
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
   store.dispatch(setSections(sections));
-  store.dispatch(selectSection(section.id));
-  store.dispatch(setStudentsForCurrentSection(section.id, section.students));
-  store.dispatch(setRosterProvider(section.login_type));
-  store.dispatch(setRosterProviderName(section.login_type_name));
-  store.dispatch(setLoginType(section.login_type));
+  store.dispatch(selectSection(sectionData.id));
+  store.dispatch(
+    setStudentsForCurrentSection(sectionData.id, sectionData.students)
+  );
+  store.dispatch(setRosterProvider(sectionData.login_type));
+  store.dispatch(setRosterProviderName(sectionData.login_type_name));
+  store.dispatch(setLoginType(sectionData.login_type));
   store.dispatch(setLocaleCode(localeCode));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
-  if (!section.sharing_disabled && section.script.project_sharing) {
+  if (!sectionData.sharing_disabled && sectionData.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));
   }
 
   // Default the scriptId to the script assigned to the section
-  const defaultScriptId = section.script ? section.script.id : null;
+  const defaultScriptId = sectionData.script ? sectionData.script.id : null;
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }
   // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
   const reorderedCourses = [
     ...coursesWithProgress.filter(
-      course => course.id !== section.course_version_id
+      course => course.id !== sectionData.course_version_id
     ),
     ...coursesWithProgress.filter(
-      course => course.id === section.course_version_id
+      course => course.id === sectionData.course_version_id
     ),
   ].reverse();
   store.dispatch(setCoursesWithProgress(reorderedCourses));
@@ -102,14 +107,14 @@ $(document).ready(function () {
             <TeacherDashboard
               {...props}
               studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={section.id}
-              sectionName={section.name}
-              studentCount={section.students.length}
+              sectionId={sectionData.id}
+              sectionName={sectionData.name}
+              studentCount={sectionData.students.length}
               coursesWithProgress={coursesWithProgress}
               showAITutorTab={showAITutorTab}
               sectionProviderName={sectionProviderName(
                 store.getState(),
-                section.id
+                sectionData.id
               )}
             />
           )}
