@@ -199,7 +199,6 @@ TeacherDashboard.propTypes = {
   sectionId: PropTypes.number.isRequired,
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
-  isSectionAssignedCurriculum: PropTypes.bool.isRequired,
   showAITutorTab: PropTypes.bool,
   sectionProviderName: PropTypes.string,
   anyStudentHasProgress: PropTypes.bool,

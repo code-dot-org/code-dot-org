@@ -76,6 +76,13 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
       'Content-Type': 'application/json; charset=utf-8',
     },
   })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Error(${response.status}: ${response.statusText})`);
+      }
+
+      return response.json();
+    })
     .then(coursesWithProgress => {
       // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
       const reorderedCourses = [

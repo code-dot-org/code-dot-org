@@ -15,8 +15,10 @@ function UnitSelector({
   isLoadingCourses,
 }) {
   React.useEffect(() => {
-    asyncLoadCoursesWithProgress();
-  }, [asyncLoadCoursesWithProgress]);
+    if (!coursesWithProgress || coursesWithProgress.length === 0) {
+      asyncLoadCoursesWithProgress();
+    }
+  }, [coursesWithProgress, asyncLoadCoursesWithProgress]);
 
   const loadingSkeleton = () => (
     <div>

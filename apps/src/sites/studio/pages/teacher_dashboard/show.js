@@ -32,6 +32,7 @@ import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
+  anyStudentHasProgress,
   section,
   sections,
   localeCode,
@@ -92,7 +93,7 @@ $(document).ready(function () {
               sectionName={section.name}
               section
               studentCount={section.students.length}
-              anyStudentHasProgress={section.anyStudentHasProgress}
+              anyStudentHasProgress={anyStudentHasProgress}
               showAITutorTab={showAITutorTab}
               sectionProviderName={sectionProviderName(
                 store.getState(),

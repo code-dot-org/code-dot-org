@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
   location: {},
   studentCount: 5,
   sectionVersionId: 2,
-  isSectionAssignedCurriculum: true,
+  anyStudentHasProgress: true,
 };
 
 describe('TeacherDashboard', () => {

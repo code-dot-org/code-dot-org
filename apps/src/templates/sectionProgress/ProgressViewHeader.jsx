@@ -16,7 +16,7 @@ class ProgressViewHeader extends Component {
     //redux
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     sectionId: PropTypes.number.isRequired,
-    scriptFriendlyName: PropTypes.string.isRequired,
+    scriptFriendlyName: PropTypes.string,
     scriptData: unitDataPropType,
   };
 
@@ -52,13 +52,15 @@ class ProgressViewHeader extends Component {
       <div style={{...h3Style, ...styles.heading, ...styles.tableHeader}}>
         <span>
           {headingText[currentView] + ' '}
-          <a
-            href={linkToOverview}
-            style={styles.scriptLink}
-            onClick={this.navigateToScript}
-          >
-            {scriptFriendlyName}
-          </a>
+          {scriptFriendlyName && (
+            <a
+              href={linkToOverview}
+              style={styles.scriptLink}
+              onClick={this.navigateToScript}
+            >
+              {scriptFriendlyName}
+            </a>
+          )}
         </span>
         {currentView === ViewType.STANDARDS && (
           <StandardsViewHeaderButtons sectionId={this.props.sectionId} />

@@ -40,8 +40,10 @@ function UnitSelectorV2({
   isLoadingCourses,
 }) {
   React.useEffect(() => {
-    asyncLoadCoursesWithProgress();
-  }, [asyncLoadCoursesWithProgress]);
+    if (!coursesWithProgress || coursesWithProgress.length === 0) {
+      asyncLoadCoursesWithProgress();
+    }
+  }, [coursesWithProgress, asyncLoadCoursesWithProgress]);
 
   const unitId = React.useMemo(() => scriptId, [scriptId]);
   const onSelectUnit = React.useCallback(
