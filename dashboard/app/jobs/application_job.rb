@@ -55,7 +55,9 @@ class ApplicationJob < ActiveJob::Base
 
   before_perform do |job|
     @perform_started_at = Time.now
-    wait_time = @perform_started_at - Time.parse(job.enqueued_at)
+    # Note that `enqueued_at` is not set for jobs created via `.perform_now`
+    @enqueued_or_started_at = job.enqueued_at.nil? ? @perform_started_at : Time.parse(job.enqueued_at)
+    wait_time = @perform_started_at - @enqueued_or_started_at
 
     metrics = [
       {
@@ -73,7 +75,7 @@ class ApplicationJob < ActiveJob::Base
   after_perform do |job|
     perform_complete_at = Time.now
     execution_time = perform_complete_at - @perform_started_at
-    total_time = perform_complete_at - Time.parse(job.enqueued_at)
+    total_time = perform_complete_at - @enqueued_or_started_at
 
     metrics = [
       {
