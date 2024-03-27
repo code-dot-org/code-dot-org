@@ -6173,6 +6173,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-bootstrap@npm:^0.32.36":
+  version: 0.32.36
+  resolution: "@types/react-bootstrap@npm:0.32.36"
+  dependencies:
+    "@types/react": "*"
+  checksum: 89b7301afd9d7f2be29eaff86c2fce74f31b5d13524e9051a37dc5e3a4a73a37189ca2e2845e50f6d190b41dc1781df5d10b398b3ac337b5f85631e43b2344ec
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:^18.0.11":
   version: 18.0.11
   resolution: "@types/react-dom@npm:18.0.11"
@@ -8472,6 +8481,7 @@ __metadata:
     "@types/mocha": ^10.0.1
     "@types/qrcode.react": ^1.0.5
     "@types/react": ^18.0.28
+    "@types/react-bootstrap": ^0.32.36
     "@types/react-dom": ^18.0.11
     "@types/sinon": ^10.0.14
     "@typescript-eslint/eslint-plugin": ^7.0.2
