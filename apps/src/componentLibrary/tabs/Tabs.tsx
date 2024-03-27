@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React from 'react';
 
 // import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
@@ -17,9 +18,13 @@ export interface TabsProps {
      The name attribute is used to reference elements in a JavaScript.
      */
   name: string;
-  type: 'primary' | 'secondary';
+  type?: 'primary' | 'secondary';
   /** Size of Tabs */
   size?: ComponentSizeXSToL;
+  tabsContainerClassName?: string;
+  tabsContainerId?: string;
+  tabPanelsContainerClassName?: string;
+  tabPanelsContainerId?: string;
 }
 
 /**
@@ -40,11 +45,19 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   name,
   onChange,
   selectedTabValue,
+  tabsContainerId,
+  tabsContainerClassName,
+  tabPanelsContainerId,
+  tabPanelsContainerClassName,
+  type = 'primary',
   size = 'm',
 }) => {
   return (
     <>
-      <div className={styles.tabsContainer}>
+      <div
+        className={classnames(styles.tabsContainer, tabsContainerClassName)}
+        id={tabsContainerId}
+      >
         <ul role="tablist" className={styles.tabsList}>
           {tabs.map((tab, index) => (
             <_Tab
@@ -58,7 +71,13 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
           ))}
         </ul>
       </div>
-      <div className={styles.tabPanelsContainer}>
+      <div
+        className={classnames(
+          styles.tabPanelsContainer,
+          tabPanelsContainerClassName
+        )}
+        id={tabPanelsContainerId}
+      >
         {tabs.map((tab, index) => {
           return (
             <TabPanel

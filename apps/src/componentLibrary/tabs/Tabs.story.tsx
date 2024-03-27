@@ -27,59 +27,87 @@ const MultipleTemplate: StoryFn<{
 
 export const DefaultTabs = SingleTemplate.bind({});
 DefaultTabs.args = {
-  name: 'controlled_checkbox',
-  label: 'Tabs Label',
-};
-//
-export const GroupOfDefaultTabs = MultipleTemplate.bind({});
-GroupOfDefaultTabs.args = {
-  components: [
+  name: 'default_tabs',
+  tabs: [
+    {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
     {
-      name: 'test',
-      label: 'Label',
-      onChange: () => null,
-      checked: false,
+      value: 'tab2',
+      text: 'Tab 2',
+      tabContent: <div>Tab 2 Content</div>,
     },
     {
-      name: 'test-checked',
-      label: 'Label Checked',
-      checked: true,
-      onChange: () => null,
-    },
-    {
-      name: 'test-indeterminate',
-      label: 'Label Indeterminate',
-      indeterminate: true,
-      checked: false,
-      onChange: () => null,
+      value: 'tab3',
+      text: 'Tab 3',
+      tabContent: <div>Tab 3 Content</div>,
     },
   ],
+  selectedTabValue: 'tab1',
+  onChange: () => null,
 };
 
-export const GroupOfDisabledTabs = MultipleTemplate.bind({});
-GroupOfDisabledTabs.args = {
+export const DefaultTabsWithDisabledTab = SingleTemplate.bind({});
+DefaultTabsWithDisabledTab.args = {
+  name: 'default_tabs_with_disabled_tab',
+  tabs: [
+    {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+    {
+      value: 'tab2',
+      text: 'Tab 2',
+      tabContent: <div>Tab 2 Content</div>,
+      disabled: true,
+    },
+    {
+      value: 'tab3',
+      text: 'Tab 3',
+      tabContent: <div>Tab 3 Content</div>,
+    },
+  ],
+  selectedTabValue: 'tab1',
+  onChange: () => null,
+};
+
+export const GroupOfTypesOfTabs = MultipleTemplate.bind({});
+GroupOfTypesOfTabs.args = {
   components: [
     {
-      name: 'test-disabled',
-      label: 'Label',
-      disabled: true,
-      checked: false,
+      name: 'primary_tabs',
+      tabs: [
+        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          disabled: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
       onChange: () => null,
+      type: 'primary',
     },
     {
-      name: 'test-disabled-checked',
-      label: 'Label Checked',
-      disabled: true,
-      checked: true,
+      name: 'secondary_tabs',
+      tabs: [
+        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          disabled: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
       onChange: () => null,
-    },
-    {
-      name: 'test-disabled-indeterminate',
-      label: 'Label Indeterminate',
-      indeterminate: true,
-      checked: false,
-      disabled: true,
-      onChange: () => null,
+      type: 'secondary',
     },
   ],
 };
@@ -88,32 +116,84 @@ export const GroupOfSizesOfTabs = MultipleTemplate.bind({});
 GroupOfSizesOfTabs.args = {
   components: [
     {
-      name: 'test-xs',
-      label: 'Label XS',
+      name: 'tabs_xs',
+      tabs: [
+        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          disabled: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      onChange: () => null,
       size: 'xs',
-      checked: false,
-      onChange: () => null,
     },
     {
-      name: 'test-s',
-      label: 'Label S',
+      name: 'tabs_s',
+      tabs: [
+        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          disabled: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      onChange: () => null,
       size: 's',
-      checked: false,
-      onChange: () => null,
     },
     {
-      name: 'test-m',
-      label: 'Label M',
+      name: 'tabs_m',
+      tabs: [
+        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          disabled: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      onChange: () => null,
       size: 'm',
-      checked: false,
-      onChange: () => null,
     },
     {
-      name: 'test-xl',
-      label: 'Label XL',
-      size: 'l',
-      checked: false,
+      name: 'tabs_l',
+      tabs: [
+        {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          disabled: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
       onChange: () => null,
+      size: 'l',
     },
   ],
 };
