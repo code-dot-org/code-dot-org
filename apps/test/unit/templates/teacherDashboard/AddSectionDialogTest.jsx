@@ -42,6 +42,7 @@ describe('AddSectionDialog', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
+        isAssigned: undefined,
         restrictSection: false,
       },
       beginImportRosterFlow,
