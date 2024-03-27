@@ -102,7 +102,9 @@ export function clearAnnotations() {
  * ellipsis (...).
  *
  * This will return a list of annotation blocks containing the line numbers
- * and the description.
+ * and the description that should be listed out to the viewer. Only items
+ * returned here will be listed. However, other content may be highlighted
+ * that does not end up in that list.
  *
  * @param {string} evidence - A text block described above.
  * @param {string} observations - The text block for the overall observations, if needed.
@@ -110,6 +112,12 @@ export function clearAnnotations() {
  */
 export function annotateLines(evidence, observations) {
   let ret = [];
+
+  // When we fail to find specific instances of evidence, we use the
+  // 'observations' column to fill out the evidence section. This fall back
+  // is not our ideal since it does not include line numbers or landmarks in
+  // the code to follow.
+  let shouldIncludeObservationsColumn = false;
 
   // Go through the AI evidence
   // For every reference the AI gave us, we will find it in the code.
@@ -182,12 +190,17 @@ export function annotateLines(evidence, observations) {
         for (let i = position.firstLine; i <= position.lastLine; i++) {
           EditorAnnotator.highlightLine(i, ai_rubric_cyan);
         }
-        ret.push({
-          firstLine: position.firstLine,
-          lastLine: position.lastLine,
-          message: message,
-          observations: observations,
-        });
+
+        if (message !== observations) {
+          shouldIncludeObservationsColumn = true;
+        }
+        else {
+          ret.push({
+            firstLine: position.firstLine,
+            lastLine: position.lastLine,
+            message: message,
+          });
+        }
       }
     }
 
@@ -205,13 +218,32 @@ export function annotateLines(evidence, observations) {
       for (let i = lineNumber; i <= lastLineNumber; i++) {
         EditorAnnotator.highlightLine(i, ai_rubric_cyan);
       }
-      ret.push({
-        firstLine: lineNumber,
-        lastLine: lastLineNumber,
-        message: message,
-        observations: observations,
-      });
+
+      // If we are forcing these lines to have the bulk annotation of
+      // the observations column, we do not append it to the list. This way,
+      // it does not get listed out.
+      if (message !== observations) {
+        shouldIncludeObservationsColumn = true;
+      }
+      else {
+        ret.push({
+          firstLine: lineNumber,
+          lastLine: lastLineNumber,
+          message: message,
+        });
+      }
     }
+  }
+
+  // Somewhere, we annotated with the obserations column, or we have no other
+  // sources of evidence. We want to list out the observations column in our
+  // rendered list. So, here we parse out the observations column.
+  if (shouldIncludeObservationsColumn) {
+    observations.split('. ').forEach( (observation) => {
+      ret.push({
+        message: observation,
+      });
+    });
   }
 
   return ret;

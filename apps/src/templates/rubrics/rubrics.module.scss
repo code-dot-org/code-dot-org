@@ -619,6 +619,10 @@ p.aiAssessmentScoreText {
 
 p.aiAssessmentEvidenceBlock {
   margin: 0;
+
+  + ul li p {
+    margin: 0;
+  }
 }
 
 .aiConfidenceBox {
