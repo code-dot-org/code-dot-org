@@ -57,7 +57,8 @@ $(document).ready(function () {
     locales,
   });
 
-  const selectedSection = {...sections[section.id], ...section};
+  const selectedSectionFromList = sections.find(s => s.id === section.id);
+  const selectedSection = {...selectedSectionFromList, ...section};
 
   const store = getStore();
   store.dispatch(
