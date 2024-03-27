@@ -9,6 +9,7 @@ export interface LtiSectionSyncResult {
   all?: LtiSectionMap;
   changed?: LtiSectionMap;
   error?: string;
+  message?: string;
 }
 
 export interface LtiSectionSyncDialogProps {
