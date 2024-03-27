@@ -590,7 +590,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'sync - should sync and show the confirmation page' do
-    had_changes = true
     user = create :teacher, :with_lti_auth
     sign_in user
     lti_integration = create :lti_integration
