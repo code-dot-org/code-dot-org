@@ -243,8 +243,8 @@ describe('LearningGoals - Enzyme', () => {
     clearHighlightedLinesStub;
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
 
-  // Stub out our references to the singleton and editor
-  beforeEach(() => {
+  function stubAnnotator() {
+    // Stub out our references to the singleton and editor
     let annotatorInstanceStub = sinon.stub();
     annotatorInstanceStub.getCode = sinon.stub().returns(code);
     annotatorStub = sinon
@@ -257,16 +257,24 @@ describe('LearningGoals - Enzyme', () => {
       EditorAnnotator,
       'clearHighlightedLines'
     );
-  });
-  afterEach(() => {
+  }
+
+  function restoreAnnotator() {
     annotatorStub.restore();
     annotateLineStub.restore();
     clearAnnotationsStub.restore();
     highlightLineStub.restore();
     clearHighlightedLinesStub.restore();
-  });
+  }
 
   describe('annotateLines', () => {
+    beforeEach(() => {
+      stubAnnotator();
+    });
+    afterEach(() => {
+      restoreAnnotator();
+    });
+
     it('should do nothing if the AI observation does not reference any lines', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
       annotateLines('This is just a basic observation.', observations);
@@ -429,6 +437,13 @@ describe('LearningGoals - Enzyme', () => {
   });
 
   describe('clearAnnotations', () => {
+    beforeEach(() => {
+      stubAnnotator();
+    });
+    afterEach(() => {
+      restoreAnnotator();
+    });
+
     it('should clear annotations and clear highlighted lines', () => {
       clearAnnotations();
       sinon.assert.called(clearAnnotationsStub);
