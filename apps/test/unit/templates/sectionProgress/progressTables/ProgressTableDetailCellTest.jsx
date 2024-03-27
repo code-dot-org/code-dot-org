@@ -1,16 +1,18 @@
-import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
-import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
+import React from 'react';
 import sinon from 'sinon';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {
   fakeLevel,
   fakeProgressForLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
+import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const level_1 = fakeLevel({
   id: '123',

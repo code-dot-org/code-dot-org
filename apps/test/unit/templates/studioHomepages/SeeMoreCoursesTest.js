@@ -1,11 +1,14 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
+import React from 'react';
+
+import Button from '@cdo/apps/templates/Button';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
-import Button from '@cdo/apps/templates/Button';
+import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import color from '@cdo/apps/util/color';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
+
 import {courses} from './homepagesTestData';
 
 describe('SeeMoreCourses', () => {

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-humanities",
-    "serialized_at": "2024-03-25 20:59:56 UTC",
+    "serialized_at": "2024-03-26 12:00:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -330,7 +330,7 @@
       "key": "c7b7be61-b435-4e50-a5af-438bed831f95",
       "position": 9,
       "properties": {
-        "description": "Each of these chatbots – ChatGPT, Bard, and BingChat are examples of Large Language Models. Can someone read for me the definition of Large Language Models on this slide? Can someone summarize that for me?\n\nLarge Language Models can do all of these things because they were built by programs that created models of what words tend to go together in text.Those programs learned these patterns from building probabilities on lots of text (like everything on Wikipedia and Google Books and other sources freely available on the internet). \n\nLarge Language Models do not “understand” what they are saying; they see word choice in numbers. This means not everything that a large language model says will be truthful, even though almost all of it will sound like something a human might have created.\n\nTake a minute and complete the Notes/Images section of your activity guide.\n",
+        "description": "Large Language Models can do all of these things because they were built by programs that created models of what words tend to go together in text.Those programs learned these patterns from building probabilities on lots of text (like everything on Wikipedia and Google Books and other sources freely available on the internet). \n\nLarge Language Models do not “understand” what they are saying; they see word choice in numbers. This means not everything that a large language model says will be truthful, even though almost all of it will sound like something a human might have created.\n\nTake a minute and complete the Notes/Images section of your activity guide.\n",
         "remarks": true
       },
       "seeding_key": {

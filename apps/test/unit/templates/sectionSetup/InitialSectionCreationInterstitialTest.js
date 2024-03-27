@@ -1,12 +1,14 @@
-import React from 'react';
-import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {expect} from '../../../util/reconfiguredChai';
-import InitialSectionCreationInterstitial from '@cdo/apps/templates/sectionSetup/InitialSectionCreationInterstitial';
 import {mount} from 'enzyme';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getStore} from '@cdo/apps/redux';
+import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
+import InitialSectionCreationInterstitial from '@cdo/apps/templates/sectionSetup/InitialSectionCreationInterstitial';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('InitialSectionCreationInterstitial', () => {
   it('logs an Amplitude event for when the dialog is abandoned', () => {

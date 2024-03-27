@@ -1,8 +1,10 @@
-import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import React from 'react';
 import sinon from 'sinon';
+
+import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const testPrimaryTeacher = {
   name: 'T-rex',
