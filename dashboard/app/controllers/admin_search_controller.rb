@@ -15,6 +15,9 @@ class AdminSearchController < ApplicationController
     users = User.with_deleted
 
     # If requested, filter...
+    if params[:usernameFilter].present?
+      users = users.where("username LIKE ?", "%#{params[:usernameFilter]}%")
+    end
     if params[:studentNameFilter].present?
       users = users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
     end
