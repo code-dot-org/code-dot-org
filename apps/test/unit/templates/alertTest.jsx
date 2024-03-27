@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+
 import Alert from '@cdo/apps/templates/alert';
+
+import {expect} from '../../util/deprecatedChai';
 
 describe('Alert', () => {
   it('renders any children', () => {

@@ -23,6 +23,9 @@ const now = moment().utc();
 //    1) Filters out the curriculum with the a key of mainCurriculumKey, any curricula that do not support any of mainCurriculum's grade levels,
 //        and (if applicable) any curricula the user has taught before
 //    2) Scores the remaining curricula to find which are most similar to mainCurriculum
+// curriculaData: curricula to filter, score, and sort
+// mainCurriculumKey: the key of the curriculum to compare all other curricula to find a similar recommendation for
+// curriculaTaught: curricula the user has taught before (if a signed-in teacher)
 export const getSimilarRecommendations = (
   curriculaData,
   mainCurriculumKey,
@@ -111,6 +114,9 @@ export const getSimilarRecommendations = (
 //    1) Filters out the curriculum with the a key of mainCurriculumKey, any curricula that do not support any of mainCurriculum's grade levels,
 //        and (if applicable) any curricula the user has taught before
 //    2) Scores the remaining curricula to find which is the best stretch fit for the mainCurriculum
+// curriculaData: curricula to filter, score, and sort
+// mainCurriculumKey: the key of the curriculum to compare all other curricula to find a stretch recommendation for
+// curriculaTaught: curricula the user has taught before (if a signed-in teacher)
 export const getStretchRecommendations = (
   curriculaData,
   mainCurriculumKey,

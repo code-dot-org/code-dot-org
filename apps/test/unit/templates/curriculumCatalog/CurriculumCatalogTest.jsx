@@ -1,11 +1,7 @@
-import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
+import React from 'react';
 import {Provider} from 'react-redux';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import {
-  setWindowLocation,
-  resetWindowLocation,
-} from '../../../../src/code-studio/utils';
+
 import responsive, {
   setResponsiveSize,
   ResponsiveSize,
@@ -17,6 +13,23 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  getSimilarRecommendations,
+  getStretchRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage} from '@cdo/apps/utils';
+
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '../../../../src/code-studio/utils';
+import {assert, expect} from '../../../util/reconfiguredChai';
+import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
+import {sections} from '../studioHomepages/fakeSectionUtils';
+
 import {
   allCurricula,
   allShownCurricula,
@@ -32,16 +45,6 @@ import {
   noGradesCurriculum,
   noPathCurriculum,
 } from './CurriculumCatalogTestHelper';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {sections} from '../studioHomepages/fakeSectionUtils';
-import {
-  getSimilarRecommendations,
-  getStretchRecommendations,
-} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
-import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
-import {tryGetSessionStorage} from '@cdo/apps/utils';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {

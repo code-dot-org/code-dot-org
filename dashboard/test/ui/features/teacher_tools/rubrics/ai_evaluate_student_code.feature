@@ -1,4 +1,3 @@
-@skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 @no_firefox
 Feature: Evaluate student code against rubrics using AI
@@ -22,6 +21,7 @@ Feature: Evaluate student code against rubrics using AI
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until element "#submitButton" is visible
     And I click selector "#submitButton"
     And I wait until element "#confirm-button" is visible
@@ -70,7 +70,7 @@ Feature: Evaluate student code against rubrics using AI
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
-    And I wait until element "#resetButton" is visible
+    And I wait until element ".project_updated_at" contains text "Saved"
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
@@ -105,6 +105,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
+  @skip
   Scenario: Student code is evaluated by AI when teacher requests evaluation for entire class
     Given I create a teacher-associated student named "Aiden"
     And I get debug info for the current user
@@ -119,7 +120,7 @@ Feature: Evaluate student code against rubrics using AI
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
-    And I wait until element "#resetButton" is visible
+    And I wait until element ".project_updated_at" contains text "Saved"
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"

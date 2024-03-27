@@ -1,8 +1,10 @@
 /** @file Tests for BaseDialog component */
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+import React from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('BaseDialog', function () {
   describe('fullWidth option', function () {

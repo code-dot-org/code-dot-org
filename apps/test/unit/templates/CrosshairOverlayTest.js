@@ -1,10 +1,12 @@
-import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
+import React from 'react';
+
 import CrosshairOverlay, {
   CROSSHAIR_MARGIN,
   styles,
 } from '@cdo/apps/templates/CrosshairOverlay';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('CrosshairOverlay', () => {
   const TEST_APP_WIDTH = 300,

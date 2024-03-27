@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('EmbeddedBlock', () => {
   it('renders div for block wrapped with link', () => {
