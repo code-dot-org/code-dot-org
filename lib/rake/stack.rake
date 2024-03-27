@@ -48,6 +48,11 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     @cfn.validate
   end
 
+  desc 'Lint Cloudformation template.'
+  timed_task_with_logging lint: :environment do
+    @cfn.lint
+  end
+
   # Managed resource stacks other than the Code.org application.
   simple_stacks = %I(lambda alerting)
   rack_stacks = %I(ami data)
