@@ -71,6 +71,7 @@
 
 require 'digest/md5'
 require 'cdo/aws/metrics'
+require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
