@@ -471,7 +471,7 @@ export default function LearningGoals({
   const aiEvidence = useMemo(() => {
     // Annotate the lines based on the AI observation
     clearAnnotations();
-    if (!!aiEvalInfo && aiEvalInfo.evidence) {
+    if (!!aiEvalInfo?.evidence) {
       return annotateLines(aiEvalInfo.evidence, aiEvalInfo.observations);
     }
     return [];
