@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import styles from '@cdo/apps/componentLibrary/tabs/tabs/tabs.module.scss';
+import moduleStyles from '@cdo/apps/componentLibrary/tabs/tabs.module.scss';
 
 export interface TabModel {
   value: string;
@@ -40,7 +40,10 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   return (
     <li
       role="presentation"
-      className={classNames(styles.tab, isSelected && styles.active)}
+      className={classNames(
+        moduleStyles.tab,
+        isSelected && moduleStyles.active
+      )}
     >
       <button
         type="button"
@@ -49,7 +52,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         aria-controls={tabPanelId}
         id={tabButtonId}
         onClick={handleClick}
-        className={classNames(isSelected && styles.active)}
+        className={classNames(isSelected && moduleStyles.active)}
         disabled={disabled}
       >
         {icon?.title}

@@ -5,10 +5,9 @@ import React from 'react';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 // import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
-import TabPanel from '@cdo/apps/componentLibrary/tabs/tabs/TabPanel';
-import styles from '@cdo/apps/componentLibrary/tabs/tabs/tabs.module.scss';
+import TabPanel from '@cdo/apps/componentLibrary/tabs/TabPanel';
 
-// import moduleStyles from './tabs.module.scss';
+import moduleStyles from './tabs.module.scss';
 
 export interface TabsProps {
   tabs: TabModel[];
@@ -55,10 +54,13 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   return (
     <>
       <div
-        className={classnames(styles.tabsContainer, tabsContainerClassName)}
+        className={classnames(
+          moduleStyles.tabsContainer,
+          tabsContainerClassName
+        )}
         id={tabsContainerId}
       >
-        <ul role="tablist" className={styles.tabsList}>
+        <ul role="tablist" className={moduleStyles.tabsList}>
           {tabs.map((tab, index) => (
             <_Tab
               {...tab}
@@ -73,7 +75,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
       </div>
       <div
         className={classnames(
-          styles.tabPanelsContainer,
+          moduleStyles.tabPanelsContainer,
           tabPanelsContainerClassName
         )}
         id={tabPanelsContainerId}
