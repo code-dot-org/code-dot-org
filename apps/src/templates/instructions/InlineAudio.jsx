@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import MD5 from 'crypto-js/md5';
+import md5 from 'md5';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -160,7 +160,7 @@ class InlineAudio extends React.Component {
       const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
 
       const message = this.props.message.replace('"???"', 'the question marks');
-      const hash = MD5(message).toString();
+      const hash = md5(message).toString();
       const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
 
       return `${TTS_URL}/${voicePath}/${contentPath}`;

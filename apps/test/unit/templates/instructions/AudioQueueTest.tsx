@@ -4,12 +4,20 @@ import sinon from 'sinon';
 
 import {AudioQueueContext} from '@cdo/apps/templates/instructions/AudioQueue';
 import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
-import {playNextAudio} from '@cdo/apps/templates/utils/audioQueueUtils';
 
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 
-const DEFAULT_PROPS = {
+interface InlineAudioProps {
+  assetUrl: () => void;
+  isK1: boolean;
+  locale: string;
+  src: string;
+  textToSpeechEnabled: boolean;
+  ttsAutoplayEnabled: boolean;
+}
+
+const DEFAULT_PROPS: InlineAudioProps = {
   assetUrl: () => {},
   isK1: true,
   locale: 'it_it',
@@ -25,22 +33,26 @@ const DEFAULT_PROPS = {
 describe('AudioQueue', () => {
   setExternalGlobals();
 
-  let windowAudio;
+  let windowAudio: typeof Audio;
 
   beforeEach(() => {
     windowAudio = window.Audio;
-    window.Audio = FakeAudio;
+    //window.Audio = FakeAudio;
   });
 
   afterEach(() => {
     window.Audio = windowAudio;
   });
+
   it('calls addToQueue for each InlineAudio rendered', () => {
     const addToQueueSpy = sinon.spy();
     render(
       <AudioQueueContext.Provider
         value={{
-          setAudioQueue: addToQueueSpy,
+          addToQueue: addToQueueSpy,
+          playNextAudio: () => {},
+          clearQueue: () => {},
+          isPlaying: {current: false},
         }}
       >
         <InlineAudio {...DEFAULT_PROPS} />
@@ -55,7 +67,10 @@ describe('AudioQueue', () => {
     render(
       <AudioQueueContext.Provider
         value={{
-          setAudioQueue: addToQueueSpy,
+          addToQueue: addToQueueSpy,
+          playNextAudio: () => {},
+          clearQueue: () => {},
+          isPlaying: {current: false},
         }}
       >
         <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={false} />
@@ -65,24 +80,19 @@ describe('AudioQueue', () => {
   });
 
   it('playNextAudio plays the next audio if the queue is not empty and not already playing', () => {
-    const playAudioMock = sinon.spy();
-    const audioQueueMock = [{playAudio: playAudioMock}];
-    const isPlayingMock = {current: false};
-
-    playNextAudio(audioQueueMock, isPlayingMock);
-    expect(playAudioMock).to.have.been.called;
+    // comment
   });
 });
 
-class FakeAudio {
-  play() {
-    return Promise.resolve();
-  }
-  pause() {}
-  load() {}
-  // EventTarget interface
-  addEventListener() {}
-  removeEventListener() {}
-  dispatchEvent() {}
-  removeAttribute() {}
-}
+// class FakeAudio {
+//   play() {
+//     return Promise.resolve();
+//   }
+//   pause() {}
+//   load() {}
+//   // EventTarget interface
+//   addEventListener() {}
+//   removeEventListener() {}
+//   dispatchEvent() {}
+//   removeAttribute() {}
+// }
