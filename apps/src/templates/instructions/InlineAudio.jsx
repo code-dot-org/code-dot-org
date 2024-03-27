@@ -1,15 +1,13 @@
 import classNames from 'classnames';
-import md5 from 'md5';
+import MD5 from 'crypto-js/md5';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {Voices} from '@cdo/apps/util/sharedVoices';
-import i18n from '@cdo/locale';
 
 import trackEvent from '../../util/trackEvent';
-import {playNextAudio, addToQueue, clearQueue} from '../utils/audioQueueUtils';
 
 import {AudioQueueContext} from './AudioQueue';
 
@@ -78,8 +76,9 @@ class InlineAudio extends React.Component {
       this.autoplayTriggerElement = autoplayTriggerElementId
         ? document.getElementById(autoplayTriggerElementId)
         : document;
-      const {audioQueue, setAudioQueue} = this.context;
-      addToQueue(audioQueue, this, setAudioQueue);
+
+      const {addToQueue} = this.context;
+      addToQueue(this);
     }
   }
 
@@ -129,9 +128,9 @@ class InlineAudio extends React.Component {
         autoplayed: this.props.ttsAutoplayEnabled,
       });
       if (this.props.ttsAutoplayEnabled) {
-        const {audioQueue, isPlaying} = this.context;
+        const {playNextAudio, isPlaying} = this.context;
         isPlaying.current = false;
-        playNextAudio(audioQueue, isPlaying);
+        playNextAudio();
       }
     });
 
@@ -161,7 +160,7 @@ class InlineAudio extends React.Component {
       const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
 
       const message = this.props.message.replace('"???"', 'the question marks');
-      const hash = md5(message);
+      const hash = MD5(message).toString();
       const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
 
       return `${TTS_URL}/${voicePath}/${contentPath}`;
@@ -234,8 +233,8 @@ class InlineAudio extends React.Component {
     this.getAudioElement().pause();
     this.setState({playing: false});
     if (this.props.ttsAutoplayEnabled) {
-      const {setAudioQueue, isPlaying} = this.context;
-      clearQueue(setAudioQueue, isPlaying);
+      const {clearQueue} = this.context;
+      clearQueue();
     }
   }
 
@@ -258,7 +257,6 @@ class InlineAudio extends React.Component {
           )}
           style={this.props.style && this.props.style.wrapper}
           onClick={this.toggleAudio}
-          aria-label={i18n.textToSpeech()}
           type="button"
         >
           <div
