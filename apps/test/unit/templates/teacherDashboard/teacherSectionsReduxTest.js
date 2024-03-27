@@ -358,6 +358,7 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
+        isAssigned: undefined,
         restrictSection: false,
       });
     });
@@ -389,6 +390,7 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: courseVersionId,
         unitId: unitId,
         hidden: false,
+        isAssigned: undefined,
         restrictSection: false,
       });
     });
@@ -416,6 +418,7 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
+        isAssigned: undefined,
         restrictSection: false,
       });
     });
@@ -444,6 +447,7 @@ describe('teacherSectionsRedux', () => {
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
+        isAssigned: undefined,
         restrictSection: false,
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
@@ -775,6 +779,7 @@ describe('teacherSectionsRedux', () => {
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,
+          isAssigned: undefined,
           restrictSection: false,
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
