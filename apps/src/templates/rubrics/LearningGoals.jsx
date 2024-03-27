@@ -465,7 +465,6 @@ export default function LearningGoals({
       }
 
       if (!isStudent) {
-        console.group(`Send Event`);
         const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
         analyticsReporter.sendEvent(eventName, {
           ...(reportingData || {}),
