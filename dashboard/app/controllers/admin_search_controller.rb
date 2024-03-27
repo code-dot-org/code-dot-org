@@ -16,10 +16,10 @@ class AdminSearchController < ApplicationController
 
     # If requested, filter...
     if params[:usernameFilter].present?
-      users = users.where("username LIKE ?", "%#{params[:usernameFilter]}%")
+      users = users.where(User.arel_table[:username].matches("%#{params[:usernameFilter]}%"))
     end
     if params[:studentNameFilter].present?
-      users = users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
+      users = users.where(User.arel_table[:name].matches("%#{params[:studentNameFilter]}%"))
     end
     if params[:studentEmailFilter].present?
       hashed_email = User.hash_email params[:studentEmailFilter]
@@ -27,8 +27,8 @@ class AdminSearchController < ApplicationController
     end
     if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
       teachers = User.
-        where("name LIKE ?", "%#{params[:teacherNameFilter]}%").
-        where("email LIKE ?", "%#{params[:teacherEmailFilter]}%").
+        where(User.arel_table[:name].matches("%#{params[:teacherNameFilter]}%")).
+        where(User.arel_table[:email].matches("%#{params[:teacherEmailFilter]}%")).
         all
       if teachers.count > 1
         flash[:alert] = 'Multiple teachers matched the name and email search criteria.'
