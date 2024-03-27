@@ -26,6 +26,9 @@ describe('SectionSelector', () => {
         selectSection={() => {}}
       />
     );
+
+    assert(false);
+
     assert(component.html() === null);
   });
 
