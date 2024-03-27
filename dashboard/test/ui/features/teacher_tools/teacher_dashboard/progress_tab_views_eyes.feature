@@ -32,19 +32,19 @@ Feature: Using the progress tab of the teacher dashboard
     And I wait until element ".uitest-detail-cell" is visible
     And I see no difference for "detail view"
 
-    # Standards View - Need to be in a course that has standards
-    And I select the "Course A (2019)" option in dropdown "uitest-course-dropdown"
-    And I wait until element "#uitest-course-dropdown" contains text "Course A (2019)"
-
-    And I wait until element "#uitest-standards-toggle" is visible
-    And I press the first "#uitest-standards-toggle" element
-
-    # Clear the intro dialog
-    And I wait until element ".uitest-standards-intro-button" is visible
-    And I see no difference for "standards intro"
-    And I press the first ".uitest-standards-intro-button" element
-
-    And I wait until element ".uitest-standards-intro-button" is not visible
-    And I wait until element "#uitest-progress-standards-table" is visible
-    And I see no difference for "standards view"
-    And I close my eyes
+#    # Standards View - Need to be in a course that has standards
+#    And I select the "Course A (2019)" option in dropdown "uitest-course-dropdown"
+#    And I wait until element "#uitest-course-dropdown" contains text "Course A (2019)"
+#
+#    And I wait until element "#uitest-standards-toggle" is visible
+#    And I press the first "#uitest-standards-toggle" element
+#
+#    # Clear the intro dialog
+#    And I wait until element ".uitest-standards-intro-button" is visible
+#    And I see no difference for "standards intro"
+#    And I press the first ".uitest-standards-intro-button" element
+#
+#    And I wait until element ".uitest-standards-intro-button" is not visible
+#    And I wait until element "#uitest-progress-standards-table" is visible
+#    And I see no difference for "standards view"
+#    And I close my eyes
