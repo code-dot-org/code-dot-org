@@ -1030,7 +1030,14 @@ FactoryBot.define do
   end
 
   factory :featured_project do
-    project_id {456}
+    factory :active_featured_project do
+      featured_at {DateTime.now}
+    end
+
+    factory :archived_featured_project do
+      featured_at {DateTime.now}
+      unfeatured_at {DateTime.now}
+    end
   end
 
   factory :user_ml_model do
