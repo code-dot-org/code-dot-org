@@ -15469,7 +15469,20 @@ en:
           title: Generative AI for Humanities
           description_audience: ''
           description_short: Learn how to effectively and ethically use generative AI chatbots in the writing and research process in these standalone lessons.
-          description: This unit consists of two standalone lessons -- one about writing with AI and one about researching with AI. Both are meant to be used in Humanities classes, to help demystify ethical and effective use of chatbots in humanities subject areas. You may use either or both at a time that makes sense for your class. Both lessons encourage students to explore the uses of these rapidly growing technologies and reflect on when and where to use them.
+          description: |-
+            This unit consists of two standalone lessons -- one about writing with AI and one about researching with AI. You may teach one or both of them. Both are meant to be used in Humanities classes, to help demystify ethical and effective use of chatbots in Humanities subject areas. Both lessons encourage students to explore the uses of these rapidly growing technologies and reflect on when and where to use them. If you wish to teach one but not the other, [click here to learn about hiding lessons](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students)
+
+            In the Writing Process Lesson students will:
+            * Prompt a chatbot to help brainstorm, draft or revise an essay.
+            * Discuss with your classmates which of these uses supported your learning, versus detracted from it, and why.
+            * Build Values for using AI with your class.
+
+            In the Research Process Lesson, students will:
+            * Use a chatbot and a search engine to research and verify information.
+            * Learn how to more effectively prompt a chatbot in the process.
+            * Discuss what kind of research AI is helpful for.
+
+            **Support for teachers**: You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers](https://code.org/ai/pl/101) series. AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
           student_description: |-
             In the Writing Process Lesson you will:
             * Prompt a chatbot to help brainstorm, draft or revise an essay.
@@ -15931,3 +15944,28 @@ en:
             **Suggested Time**: 70 minutes
           description_short: ''
           description_audience: ''
+        csf-sandbox:
+          lessons:
+            lesson-1:
+              name: Welcome and Intro
+            lesson-2:
+              name: Course A
+            lesson-3:
+              name: Course B
+            lesson-4:
+              name: Course C
+            lesson-5:
+              name: Course D
+            lesson-6:
+              name: Course E
+            lesson-7:
+              name: Course F
+            lesson-8:
+              name: Next Steps
+          lesson_groups: {}
+          name: csf-sandbox
+          title: CSF Sandbox
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
