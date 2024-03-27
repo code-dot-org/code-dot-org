@@ -1,8 +1,10 @@
-import {expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
-import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
+import React from 'react';
+
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ProgressLegend', () => {
   it('renders a single table without extra columns', () => {

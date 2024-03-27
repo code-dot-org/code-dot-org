@@ -295,7 +295,7 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
       return;
     }
 
-    updateBrowserForLevelNavigation(state, newLevel.url, levelId);
+    updateBrowserForLevelNavigation(state, newLevel.path, levelId);
     dispatch(setCurrentLevelId(levelId));
   };
 }

@@ -1,4 +1,5 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sectionProgress, {
   setCurrentView,
   addDataByUnit,
@@ -9,8 +10,8 @@ import sectionProgress, {
   startRefreshingProgress,
   finishRefreshingProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const fakeUnitData789 = {
   unitDataByUnit: {

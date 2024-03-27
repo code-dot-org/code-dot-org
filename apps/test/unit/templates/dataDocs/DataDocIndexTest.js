@@ -1,6 +1,8 @@
-import React from 'react';
 import {isolateComponentTree} from 'isolate-react';
+import React from 'react';
+
 import DataDocIndex from '@cdo/apps/templates/dataDocs/DataDocIndex';
+
 import {expect} from '../../../util/reconfiguredChai';
 
 describe('DataDocIndex', () => {

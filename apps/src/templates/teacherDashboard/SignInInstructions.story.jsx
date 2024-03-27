@@ -1,6 +1,8 @@
 import React from 'react';
-import SignInInstructions from './SignInInstructions';
+
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import SignInInstructions from './SignInInstructions';
 
 export default {
   component: SignInInstructions,
