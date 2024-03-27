@@ -10487,6 +10487,13 @@
         desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
         button: "Visit our support center"
 
+  coding_with_ai_tile:
+    title: "Coding with AI"
+    desc: "The Coding with AI unit teaches strategies for using AI to simplify complex concepts, guide problem-solving, and even generate code, empowering students to become informed and ethical future coders."
+    duration: "Five 45 minute lessons"
+    aria_label: "Explore the Coding with AI lessons"
+    button_label: "Explore lessons"
+
   video_library_page_main_title: "Educational short videos"
   video_library_page_hero_description: "Code.org's growing library of educational videos is available for re-use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach."
   video_library_page_title_ai_works: "How AI Works"

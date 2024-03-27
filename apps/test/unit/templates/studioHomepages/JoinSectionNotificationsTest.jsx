@@ -1,7 +1,9 @@
-import {expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
+
 import JoinSectionNotifications from '@cdo/apps/templates/studioHomepages/JoinSectionNotifications';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const SUCCESSFUL_JOIN = {
   action: 'join',

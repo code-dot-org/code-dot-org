@@ -1,8 +1,10 @@
-import {assert} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
+
 import ProgressLessonContent from '@cdo/apps/templates/progress/ProgressLessonContent';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('ProgressLessonContent', function () {
   it('renders a bubble set (with no pill) when there is a single unnamed progression', () => {
