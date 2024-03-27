@@ -140,7 +140,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               className={classNames(
                 moduleStyles.button,
                 moduleStyles.buttonWide,
-                moduleStyles.buttonCursorDisabled
+                moduleStyles.buttonInteractionDisabled
               )}
               disabled={true}
             >

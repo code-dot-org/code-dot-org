@@ -28,8 +28,9 @@
     cursor: default;
   }
 
-  &CursorDisabled {
+  &InteractionDisabled {
     cursor: default;
+    background-color: $neutral_dark90;
   }
 
   &Wide {
