@@ -54,11 +54,11 @@ class ApplicationJob < ActiveJob::Base
   end
 
   before_perform do |job|
-    @perform_started_at = Time.now
-    # Note that `enqueued_at` is not set for jobs created via `.perform_now`
-    @enqueued_or_started_at = job.enqueued_at.nil? ? @perform_started_at : Time.parse(job.enqueued_at)
-    wait_time = @perform_started_at - @enqueued_or_started_at
+    # Log wait times only jobs that were enqueued
+    return if job.enqueued_at.nil?
 
+    @perform_started_at = Time.now
+    wait_time = @perform_started_at - Time.parse(job.enqueued_at)
     metrics = [
       {
         metric_name: 'WaitTime',
