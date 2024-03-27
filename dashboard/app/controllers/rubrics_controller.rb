@@ -1,5 +1,6 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
+  include SharedConstants
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
   load_resource only: [:get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
@@ -315,7 +316,7 @@ class RubricsController < ApplicationController
 
   def ai_evaluated_at
     RubricAiEvaluation.
-      where(rubric_id: @rubric.id, user_id: @user.id, status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]).
+      where(rubric_id: @rubric.id, user_id: @user.id, status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]).
       order(updated_at: :desc).
       first&.
       created_at
