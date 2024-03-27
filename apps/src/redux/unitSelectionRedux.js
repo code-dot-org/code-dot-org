@@ -70,30 +70,29 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
 
   dispatch(startLoadingCoursesWithProgress());
 
-  fetch(`/dashboardapi/section_courses/${selectedSection.id}`),
-    {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-      },
-    }
-      .then(coursesWithProgress => {
-        // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
-        const reorderedCourses = [
-          ...coursesWithProgress.filter(
-            course => course.id !== selectedSection.course_version_id
-          ),
-          ...coursesWithProgress.filter(
-            course => course.id === selectedSection.course_version_id
-          ),
-        ].reverse();
-        dispatch(setCoursesWithProgress(reorderedCourses));
-        dispatch(finishedLoadingCoursesWithProgress());
-      })
-      .catch(err => {
-        console.error(err.message);
-        dispatch(finishedLoadingCoursesWithProgress());
-      });
+  fetch(`/dashboardapi/section_courses/${selectedSection.id}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+    },
+  })
+    .then(coursesWithProgress => {
+      // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
+      const reorderedCourses = [
+        ...coursesWithProgress.filter(
+          course => course.id !== selectedSection.course_version_id
+        ),
+        ...coursesWithProgress.filter(
+          course => course.id === selectedSection.course_version_id
+        ),
+      ].reverse();
+      dispatch(setCoursesWithProgress(reorderedCourses));
+      dispatch(finishedLoadingCoursesWithProgress());
+    })
+    .catch(err => {
+      console.error(err.message);
+      dispatch(finishedLoadingCoursesWithProgress());
+    });
 };
 
 // Initial state of unitSelectionRedux
