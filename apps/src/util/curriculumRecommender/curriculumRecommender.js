@@ -1,8 +1,10 @@
 import {
   IMPORTANT_TOPICS,
+  CURRICULUM_DURATIONS,
   UTC_PUBLISHED_DATE_FORMAT,
   TEST_RECOMMENDER_SCORING,
   SIMILAR_RECOMMENDER_SCORING,
+  STRETCH_RECOMMENDER_SCORING,
 } from './curriculumRecommenderConstants';
 import moment from 'moment';
 
@@ -21,6 +23,9 @@ const now = moment().utc();
 //    1) Filters out the curriculum with the a key of mainCurriculumKey, any curricula that do not support any of mainCurriculum's grade levels,
 //        and (if applicable) any curricula the user has taught before
 //    2) Scores the remaining curricula to find which are most similar to mainCurriculum
+// curriculaData: curricula to filter, score, and sort
+// mainCurriculumKey: the key of the curriculum to compare all other curricula to find a similar recommendation for
+// curriculaTaught: curricula the user has taught before (if a signed-in teacher)
 export const getSimilarRecommendations = (
   curriculaData,
   mainCurriculumKey,
@@ -36,18 +41,14 @@ export const getSimilarRecommendations = (
   const mainCurriculum = curricula.splice(mainCurriculumIndex, 1)[0];
 
   // Filter out curricula that don't support any of the same grade levels
-  const mainCurriculumGrades = mainCurriculum.grade_levels;
-  curricula = curricula.filter(curr =>
-    curr.grade_levels
-      ?.split(',')
-      ?.some(grade => mainCurriculumGrades.includes(grade))
+  curricula = filterHasOverlappingGradeLevels(
+    curricula,
+    mainCurriculum.grade_levels
   );
 
   // (if signed-in teacher) Filter out curricula the user has taught before
   if (curriculaTaught) {
-    curricula = curricula.filter(
-      curr => !curriculaTaught.includes(curr.course_offering_id)
-    );
+    curricula = filterNotTaughtBefore(curricula, curriculaTaught);
   }
 
   // Score each remaining curricula
@@ -109,6 +110,90 @@ export const getSimilarRecommendations = (
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
 };
 
+// Stretch Curriculum Recommender:
+//    1) Filters out the curriculum with the a key of mainCurriculumKey, any curricula that do not support any of mainCurriculum's grade levels,
+//        and (if applicable) any curricula the user has taught before
+//    2) Scores the remaining curricula to find which is the best stretch fit for the mainCurriculum
+// curriculaData: curricula to filter, score, and sort
+// mainCurriculumKey: the key of the curriculum to compare all other curricula to find a stretch recommendation for
+// curriculaTaught: curricula the user has taught before (if a signed-in teacher)
+export const getStretchRecommendations = (
+  curriculaData,
+  mainCurriculumKey,
+  curriculaTaught
+) => {
+  // Create copy of array of curricula to not affect the curriculaData array passed in
+  let curricula = [...curriculaData];
+
+  // Filter out the curriculum with the key, mainCurriculumKey, from the curricula to consider
+  const mainCurriculumIndex = curricula.findIndex(
+    e => e.key === mainCurriculumKey
+  );
+  const mainCurriculum = curricula.splice(mainCurriculumIndex, 1)[0];
+
+  // Filter out curricula that don't support any of the same grade levels
+  curricula = filterHasOverlappingGradeLevels(
+    curricula,
+    mainCurriculum.grade_levels
+  );
+
+  // (if signed-in teacher) Filter out curricula the user has taught before
+  if (curriculaTaught) {
+    curricula = filterNotTaughtBefore(curricula, curriculaTaught);
+  }
+
+  // Score each remaining curricula
+  const curriculaScores = [];
+  curricula.forEach(curriculum => {
+    let score = 0;
+
+    // Add points if given curriculum has a slighty longer duration.
+    score += hasSlightlyLongerDuration(curriculum, mainCurriculum.duration)
+      ? STRETCH_RECOMMENDER_SCORING['hasDesiredDuration']
+      : 0;
+
+    // Add points if given curriculum has a DIFFERENT marketing initiative.
+    score += hasDesiredMarketingInitiative(
+      curriculum,
+      mainCurriculum.marketing_initiative
+    )
+      ? 0
+      : STRETCH_RECOMMENDER_SCORING['hasDesiredMarketingInitiative'];
+
+    // Adds points for having NO school subject. If it has school subjects, then add
+    // points if it's NOT overlapping with the mainCurriculum's subjects.
+    if (!hasAnySchoolSubject(curriculum)) {
+      score += STRETCH_RECOMMENDER_SCORING['hasAnySchoolSubject'];
+    } else {
+      const numOverlappingSubjects = numOverlappingDesiredSchoolSubjects(
+        curriculum,
+        mainCurriculum.school_subject
+      );
+      score +=
+        numOverlappingSubjects === 0
+          ? STRETCH_RECOMMENDER_SCORING['overlappingDesiredSchoolSubject']
+          : 0;
+    }
+
+    // Add points if given curriculum has an important topic.
+    score += hasImportantButNotDesiredTopic(curriculum, '')
+      ? STRETCH_RECOMMENDER_SCORING['hasImportantButNotDesiredTopic']
+      : 0;
+
+    // Add points if given curriculum was published within 2 years ago, and add more
+    // points if it was published within 1 year ago.
+    const publishedYearsAgo = publishedNumYearsAgo(curriculum);
+    if (publishedYearsAgo < 2) {
+      score +=
+        publishedYearsAgo < 1
+          ? STRETCH_RECOMMENDER_SCORING['publishedWithinOneYearAgo']
+          : STRETCH_RECOMMENDER_SCORING['publishedWithinTwoYearsAgo'];
+    }
+    curriculaScores.push([curriculum, score]);
+  });
+  return sortRecommendations(curriculaScores).map(curr => curr[0]);
+};
+
 export const getTestRecommendations = (
   curricula,
   duration,
@@ -122,6 +207,11 @@ export const getTestRecommendations = (
 
     // Add points if given curriculum has the desired duration.
     score += hasDesiredDuration(curriculum, duration)
+      ? TEST_RECOMMENDER_SCORING['hasDesiredDuration']
+      : 0;
+
+    // Add points if given curriculum has a slighty longer duration
+    score += hasSlightlyLongerDuration(curriculum, duration)
       ? TEST_RECOMMENDER_SCORING['hasDesiredDuration']
       : 0;
 
@@ -178,6 +268,16 @@ const hasDesiredDuration = (curriculum, duration) => {
   return duration && curriculum.duration === duration;
 };
 
+const hasSlightlyLongerDuration = (curriculum, duration) => {
+  const durationIndex = CURRICULUM_DURATIONS.findIndex(d => d === duration);
+  const slightlyLongerDurationIndex = durationIndex + 1;
+
+  return (
+    slightlyLongerDurationIndex <= CURRICULUM_DURATIONS.length - 1 &&
+    CURRICULUM_DURATIONS[slightlyLongerDurationIndex] === curriculum.duration
+  );
+};
+
 const hasDesiredMarketingInitiative = (curriculum, marketingInitiative) => {
   return (
     marketingInitiative &&
@@ -207,9 +307,9 @@ const hasImportantButNotDesiredTopic = (curriculum, csTopics) => {
   const curriculumTopics = curriculum.cs_topic?.split(',');
   const desiredTopics = csTopics?.split(',');
 
-  if (curriculumTopics && desiredTopics) {
+  if (curriculumTopics) {
     for (const topic of curriculumTopics) {
-      if (IMPORTANT_TOPICS.includes(topic) && !desiredTopics.includes(topic)) {
+      if (IMPORTANT_TOPICS.includes(topic) && !desiredTopics?.includes(topic)) {
         return true;
       }
     }
@@ -237,6 +337,23 @@ const publishedNumYearsAgo = curriculum => {
     UTC_PUBLISHED_DATE_FORMAT
   );
   return now.diff(publishedDate, 'years', false);
+};
+
+/*
+ * Helper functions
+ */
+const filterHasOverlappingGradeLevels = (curricula, desired_grade_levels) => {
+  return curricula.filter(curr =>
+    curr.grade_levels
+      ?.split(',')
+      ?.some(grade => desired_grade_levels.includes(grade))
+  );
+};
+
+const filterNotTaughtBefore = (curricula, curriculaTaught) => {
+  return curricula.filter(
+    curr => !curriculaTaught.includes(curr.course_offering_id)
+  );
 };
 
 // Sort [curriculum, score] pairs by score in descending order. If multiple curricula get the same score, featured curricula are prioritized over
