@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/templates/Button';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import i18n from '@cdo/locale';
@@ -40,13 +40,7 @@ function EmptySection({className, hasStudents, hasCurriculumAssigned}) {
         </NavLink>
       )}
       {!hasCurriculumAssigned && hasStudents && (
-        <Button
-          __useDeprecatedTag
-          href="/catalog"
-          text={i18n.browseCurriculum()}
-          color={Button.ButtonColor.brandSecondaryDefault}
-          style={{margin: 0}}
-        />
+        <LinkButton href="/catalog" text={i18n.browseCurriculum()} />
       )}
     </div>
   );
