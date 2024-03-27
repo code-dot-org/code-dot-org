@@ -813,6 +813,40 @@ class SectionTest < ActiveSupport::TestCase
     refute section.code_review_enabled?
   end
 
+  test 'any_student_has_progress? returns false if no student progress' do
+    section = create :section, script: nil, unit_group: nil
+
+    create(:follower, section: section).student_user
+
+    refute section.any_student_has_progress?
+  end
+
+  test 'any_student_has_progress? returns true if student has progress on unit assigned to section' do
+    script = Unit.find_by_name('jigsaw')
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create :section, script: script, unit_group: unit_group
+
+    student = create(:follower, section: section).student_user
+    UserScript.create!(user: student, script: script)
+
+    assert section.any_student_has_progress?
+  end
+
+  test 'any_student_has_progress? returns true if student has progress on unit not assigned to section' do
+    script = Unit.find_by_name('jigsaw')
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create :section, script: nil, unit_group: nil
+
+    student = create(:follower, section: section).student_user
+    UserScript.create!(user: student, script: script)
+
+    assert section.any_student_has_progress?
+  end
+
   test 'reset_code_review_groups creates new code review groups' do
     code_review_group_section = create(:section, user: @teacher, login_type: 'word')
     # Create 5 students

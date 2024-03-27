@@ -523,6 +523,8 @@ class Section < ApplicationRecord
     Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
   end
 
+  # Returns true if any student in the section has ever made progress on a unit
+  # that the instructor of the section can be an instructor for.
   def any_student_has_progress?
     Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).any? {|s| s.course_assignable?(user)}
   end
