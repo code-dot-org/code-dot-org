@@ -5,26 +5,26 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 
 interface AITutorFieldsProps {
   isAvailable: boolean;
-  levelbuilderPrompt: string;
+  //levelbuilderPrompt: string;
 }
 
 const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
   isAvailable,
-  levelbuilderPrompt,
+  //levelbuilderPrompt,
 }) => {
   const [aiTutorAvailable, setaiTutorAvailable] =
     useState<boolean>(isAvailable);
 
-  const [levelSpecificPrompt, setlevelSpecificPrompt] =
-    useState<string>(levelbuilderPrompt);
+  // const [levelSpecificPrompt, setlevelSpecificPrompt] =
+  //   useState<string>(levelbuilderPrompt);
 
   return (
     <div>
       <input
         type="hidden"
-        id="level_ai_tutor_level_specific_prompt"
-        name="level[ai_tutor_level_specific_prompt]"
-        value={levelSpecificPrompt}
+        id="level_ai_tutor_available"
+        name="level[ai_tutor_available]"
+        value={aiTutorAvailable.toString()}
       />
       <BodyThreeText>
         Set the level-specific prompt.
@@ -46,7 +46,7 @@ const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
             }}
           />
         </div>
-        <div className={moduleStyles.fieldRow}>
+        {/* <div className={moduleStyles.fieldRow}>
           <div className={moduleStyles.fieldValue}>
             <label htmlFor="levelPrompt">Level-Specific Prompt</label>
             <input
@@ -58,7 +58,7 @@ const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
               }}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
