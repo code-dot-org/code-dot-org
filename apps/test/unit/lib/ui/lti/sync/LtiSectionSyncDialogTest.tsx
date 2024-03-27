@@ -30,7 +30,7 @@ const MOCK_UPDATED_SECTION_MAP: LtiSectionMap = {
 
 const MOCK_SYNC_RESULT: LtiSectionSyncResult = {
   all: MOCK_ALL_SECTION_MAP,
-  updated: MOCK_UPDATED_SECTION_MAP,
+  changed: MOCK_UPDATED_SECTION_MAP,
 };
 
 describe('LTI Section Sync Dialog', () => {
@@ -54,8 +54,7 @@ describe('LTI Section Sync Dialog', () => {
       const items = getAllByRole('listitem', {exact: false});
       const sectionListItems = items.map(item => item.textContent);
 
-      expect(sectionListItems[0]).to.match(/Section 1(.*)100 students/);
-      expect(sectionListItems[1]).to.match(/Section 2 (.*) 10 students/);
+      expect(sectionListItems[0]).to.match(/Section 2(.*)15 students/);
 
       // no 'disable roster sync'
       expect(

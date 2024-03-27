@@ -244,6 +244,28 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
        ]
      }
     }
+
+    @sync_course_result_with_changes = {
+      all: {
+        '1' => {name: 'Section 1', size: 3},
+        '2' => {name: 'Section 2', size: 3},
+        '3' => {name: 'Section 3', size: 3},
+      },
+      changed: {
+        '1' => {name: 'Section 1', size: 3},
+        '2' => {name: 'Section 2', size: 3},
+        '3' => {name: 'Section 3', size: 3},
+      },
+    }
+
+    @sync_course_result_no_changes = {
+      all: {
+        '1' => {name: 'Section 1', size: 3},
+        '2' => {name: 'Section 2', size: 3},
+        '3' => {name: 'Section 3', size: 3},
+      },
+      changed: {},
+    }
   end
 
   setup do
@@ -568,14 +590,13 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'sync - should sync and show the confirmation page' do
-    had_changes = true
     user = create :teacher, :with_lti_auth
     sign_in user
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
     LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-    Services::Lti.expects(:sync_course_roster).returns(had_changes)
+    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_response :ok
@@ -598,7 +619,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id)
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-    Services::Lti.expects(:sync_course_roster).returns(true)
+    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_no_changes)
 
     sign_in user
 
@@ -626,14 +647,13 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'sync - should not sync given no changes' do
-    had_changes = false
     user = create :teacher, :with_lti_auth
     sign_in user
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
     LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-    Services::Lti.expects(:sync_course_roster).returns(had_changes)
+    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_no_changes)
 
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_response :redirect
@@ -647,7 +667,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     lti_section = create :lti_section, lti_course: lti_course
     LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-    Services::Lti.expects(:sync_course_roster).returns(true)
+    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
     get '/lti/v1/sync_course', params: {section_code: lti_section.section.code}
     assert_response :ok
