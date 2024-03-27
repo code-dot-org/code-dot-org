@@ -55,7 +55,7 @@
     border: solid 1px $neutral_dark40;
 
     .heading {
-      color: $ai_rubric_cyan;
+      color: $neutral_light;
     }
 
     .packs {
@@ -64,11 +64,11 @@
       overflow-y: scroll;
       flex: 1;
       display: grid;
-      grid-template-columns: 33.333% 33.333% 33.333%;
+      grid-template-columns: 25% 25% 25% 25%;
 
       .pack {
         box-sizing: border-box;
-        padding: 8px;
+        padding: 16px;
         cursor: pointer;
 
         &Image {
