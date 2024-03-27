@@ -59,10 +59,8 @@ window.levelbuilder.copySelectedBlockToClipboard = function () {
     xmlContainer.appendChild(blockElement);
     removeIdsFromBlocks(xmlContainer);
 
-    console.log(xmlContainer);
     const str = Blockly.Xml.domToPrettyText(xmlContainer);
     copyToClipboard(str);
-    console.log(str);
     localStorage.setItem('blockXml', str);
   }
 };
