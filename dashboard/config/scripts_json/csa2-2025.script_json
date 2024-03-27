@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 06:24:50 UTC",
+    "serialized_at": "2024-03-27 06:11:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7490,6 +7490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L1 _2025"
+        ],
         "progression": "Predict and Run: Nested Loops"
       },
       "bonus": false,
@@ -7512,6 +7515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L2_2025"
+        ],
         "progression": "Investigate & Modify: Nested Iteration"
       },
       "bonus": false,
@@ -7534,6 +7540,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L3_2025"
+        ],
         "progression": "Investigate & Modify: Nested Iteration"
       },
       "bonus": false,
@@ -7586,7 +7595,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2 Nested Iteration-L6_2025"
+          "CSA U2 Nested Iteration-L5_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
@@ -7594,7 +7603,7 @@
         "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
       },
       "level_keys": [
-        "CSA U2 Nested Iteration-L6_2025"
+        "CSA U2 Nested Iteration-L5_2025"
       ]
     },
     {
@@ -8804,9 +8813,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2 Nested Iteration-L6_2025",
+        "level.key": "CSA U2 Nested Iteration-L5_2025",
         "script_level.level_keys": [
-          "CSA U2 Nested Iteration-L6_2025"
+          "CSA U2 Nested Iteration-L5_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
