@@ -79,7 +79,7 @@ module AWS
         success = system(command)
 
         if success
-          log.info "SUCCESS: cfn-lint passed successfully. Run `rake stack:validate` to further check for CloudFormation syntax errors."
+          log.info "SUCCESS: cfn-lint passed successfully. Run `validate` task to further check for CloudFormation syntax errors."
         else
           warn "WARNING: cfn-lint detected issues in the template."
         end

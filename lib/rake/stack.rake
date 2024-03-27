@@ -89,6 +89,11 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
         @cfn.validate
       end
 
+      desc "Lint #{stack} stack template."
+      timed_task_with_logging lint: :environment do
+        @cfn.lint
+      end
+
       # `stop` command intentionally removed. Use AWS console to manually delete stacks.
     end
   end
