@@ -60,13 +60,13 @@ module RakeUtils
     status
   end
 
-  # Alternate version of RakeUtils.rake which always streams STDOUT to the shell
+  # Alternate version of RakeUtils.rake which always streams $stdout to the shell
   # during execution.
   def self.rake_stream_output(*args, &block)
     system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rake', *args, &block
   end
 
-  # Alternate version of RakeUtils.system which always streams STDOUT to the
+  # Alternate version of RakeUtils.system which always streams $stdout to the
   # shell during execution.
   def self.system_stream_output(*args, &block)
     command = command_(*args)
@@ -306,7 +306,7 @@ module RakeUtils
   end
 
   # Captures all stdout and stderr within a block, including subprocesses:
-  # - redirect STDOUT and STDERR streams to a pipe
+  # - redirect $stdout and $stderr streams to a pipe
   # - have a background thread read from the pipe
   # - store data in a StringIO
   # - execute the block
