@@ -25,16 +25,20 @@ class ApplicationJob < ActiveJob::Base
   # Parent class callbacks are called in addition to any callbacks defined in the job subclass
   # https://guides.rubyonrails.org/v6.0/active_job_basics.html#available-callbacks
 
-  after_enqueue do |job|
-    jobs_in_queue = Delayed::Job.where(queue: job.queue_name).where("handler LIKE ?", "%job_class: #{job.class.name}%").count
+  after_enqueue do |_job|
+    job_count = Delayed::Job.count
 
     metrics = [
       {
         # Same metric as "bin/cron/report_activejob_metrics"
         metric_name: 'JobCount',
-        value: jobs_in_queue,
+        value: job_count,
         unit: 'Count',
-        dimensions: job.class.common_dimensions,
+        timestamp: Time.now,
+        dimensions: {
+          name: 'Environment',
+          value: CDO.rack_env
+        },
       }
     ]
 
@@ -50,6 +54,7 @@ class ApplicationJob < ActiveJob::Base
         metric_name: 'WaitTime',
         value: wait_time,
         unit: 'Seconds',
+        timestamp: Time.now,
         dimensions: job.class.common_dimensions,
       }
     ]
@@ -67,12 +72,14 @@ class ApplicationJob < ActiveJob::Base
         metric_name: 'ExecutionTime',
         value: execution_time,
         unit: 'Seconds',
+        timestamp: Time.now,
         dimensions: job.class.common_dimensions,
       },
       {
         metric_name: 'TotalTime',
         value: total_time,
         unit: 'Seconds',
+        timestamp: Time.now,
         dimensions: job.class.common_dimensions,
       }
     ]
