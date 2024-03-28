@@ -135,6 +135,8 @@ const EVENTS = {
   TA_RUBRIC_RUN_BUTTON_CLICKED:
     'TA Rubric Teacher clicked RUN button on student work',
   TA_RUBRIC_LEARNING_GOAL_SELECTED: 'TA Rubric Learning Goal Selected',
+  TA_RUBRIC_DROPDOWN_STUDENT_SELECTED: 'TA Rubric Student Switched',
+  TA_RUBRIC_CSV_DOWNLOADED: 'TA Rubric CSV Downloaded',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
