@@ -76,7 +76,7 @@ const AichatView: React.FunctionComponent = () => {
   const chatWorkspaceHeader =
     viewMode === ViewMode.EDIT
       ? aichatI18n.aichatWorkspaceHeader()
-      : aiCustomizations.botName; // Get from level properties.
+      : aiCustomizations.botName;
 
   return (
     <>
