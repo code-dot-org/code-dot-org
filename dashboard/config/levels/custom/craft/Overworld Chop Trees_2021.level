@@ -1,7 +1,8 @@
 <Craft>
   <config><![CDATA[{
+  "published": true,
   "game_id": 49,
-  "created_at": "2020-12-04T22:23:55.000Z",
+  "created_at": "2023-09-27T06:33:36.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -47,15 +48,19 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "hint_prompt_attempts_threshold": 5,
+    "hint_prompt_attempts_threshold": "5",
     "parent_level_id": 21237,
     "name_suffix": "_2021",
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "encrypted": "false",
+    "show_type_hints": "false",
+    "agent_start_direction": "0",
+    "is_agent_level": "false",
+    "is_aquatic_level": "false",
+    "boat": "false",
+    "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-18 03:38:55 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:46:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 23:05:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-06 20:09:32 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 03:38:55 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:46:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 23:05:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-06 20:09:32 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2024-03-28 13:30:39 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "debugging": 4
@@ -64,7 +69,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" id="5">
           <next>
             <block type="craft_moveForward">
               <next>
