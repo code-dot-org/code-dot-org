@@ -3,6 +3,7 @@ import CdoBlockFlyout from './cdoBlockFlyout';
 
 interface FieldFlyoutConfig extends FieldConfig {
   flyoutKey: string;
+  name: string;
 }
 
 export default class CdoFieldFlyout extends GoogleBlockly.Field {

@@ -13,9 +13,9 @@ import teacherSections, {
   selectSection,
   setRosterProvider,
   setRosterProviderName,
-  setCourseOfferings,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
+  sectionProviderName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -37,7 +37,6 @@ const scriptData = JSON.parse(script.dataset.dashboard);
 const {
   section,
   sections,
-  validCourseOfferings,
   localeCode,
   hasSeenStandardsReportInfo,
   coursesWithProgress,
@@ -67,7 +66,6 @@ $(document).ready(function () {
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setRosterProviderName(section.login_type_name));
   store.dispatch(setLoginType(section.login_type));
-  store.dispatch(setCourseOfferings(validCourseOfferings));
   store.dispatch(setLocaleCode(localeCode));
 
   // DCDO Flag - show/hide Lock Section field
@@ -109,6 +107,10 @@ $(document).ready(function () {
               studentCount={section.students.length}
               coursesWithProgress={coursesWithProgress}
               showAITutorTab={showAITutorTab}
+              sectionProviderName={sectionProviderName(
+                store.getState(),
+                section.id
+              )}
             />
           )}
         />

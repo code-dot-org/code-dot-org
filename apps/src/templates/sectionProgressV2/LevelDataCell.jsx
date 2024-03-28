@@ -1,16 +1,20 @@
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import React from 'react';
-import {studentLevelProgressType} from '../progress/progressTypes';
-import classNames from 'classnames';
-import styles from './progress-table-v2.module.scss';
-import legendStyles from './progress-table-legend.module.scss';
 import {Link} from '@dsco_/link';
-import ProgressIcon from './ProgressIcon';
-import {ITEM_TYPE} from './ItemType';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import {feedbackLeft, studentNeedsFeedback} from '../progress/progressHelpers';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+
+import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
+import {studentLevelProgressType} from '../progress/progressTypes';
+
+import {ITEM_TYPE} from './ItemType';
+import ProgressIcon from './ProgressIcon';
+
+import legendStyles from './progress-table-legend.module.scss';
+import styles from './progress-table-v2.module.scss';
 
 export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
@@ -41,7 +45,10 @@ function LevelDataCell({
     if (expandedChoiceLevel) {
       return ITEM_TYPE.CHOICE_LEVEL;
     }
-    if (studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking') {
+    if (
+      studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking' &&
+      studentLevelProgress?.teacherFeedbackNew
+    ) {
       return ITEM_TYPE.KEEP_WORKING;
     }
     if (
@@ -71,13 +78,16 @@ function LevelDataCell({
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   const feedbackStyle = React.useMemo(() => {
-    if (feedbackLeft(studentLevelProgress)) {
+    if (expandedChoiceLevel) {
+      return;
+    }
+    if (commentLeft(studentLevelProgress)) {
       return legendStyles.feedbackGiven;
     }
     if (studentNeedsFeedback(studentLevelProgress, level)) {
       return legendStyles.needsFeedback;
     }
-  }, [studentLevelProgress, level]);
+  }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   return (
     <Link

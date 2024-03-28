@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import PropTypes from 'prop-types';
+
 import styles from './progress-table-v2.module.scss';
 
 export const getTooltipId = lesson => `tooltip-${lesson.id}`;

@@ -1,18 +1,22 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+import {render, screen} from '@testing-library/react';
 import {shallow, mount} from 'enzyme';
+import React from 'react';
 import {act} from 'react-dom/test-utils';
 import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import HttpClient from '@cdo/apps/util/HttpClient';
+
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import tipIconImage from '@cdo/apps/templates/rubrics/images/AiBot_Icon.svg';
+import infoIconImage from '@cdo/apps/templates/rubrics/images/info-icon.svg';
 import LearningGoals, {
   clearAnnotations,
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
-import {render, screen} from '@testing-library/react';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const learningGoals = [
   {
@@ -271,9 +275,62 @@ describe('LearningGoals - Enzyme', () => {
       sinon.assert.calledWith(annotateLineStub, 8, 'This is a line of code');
     });
 
+    it('should pass along the correct info type for the annotation', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        'INFO'
+      );
+    });
+
+    it('should pass along a hex color', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match('#')
+      );
+    });
+
+    it('should pass along the appropriate image as an icon', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match('#'),
+        infoIconImage
+      );
+    });
+
+    it('should pass along the appropriate image as an icon for the tooltip', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match({backgroundImage: sinon.match(tipIconImage)})
+      );
+    });
+
     it('should highlight the last line of code when referenced by the AI', () => {
       annotateLines('Line 55: This is a line of code `draw();`');
       sinon.assert.calledWith(highlightLineStub, 8);
+    });
+
+    it('should highlight the line with a hex color', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(highlightLineStub, 8, sinon.match('#'));
     });
 
     it('should ignore code snippets that are empty', () => {

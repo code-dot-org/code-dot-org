@@ -64,7 +64,7 @@ module I18n
 
             i18n_data = YAML.load_file(I18N_SOURCE_FILE_PATH)
             # Redact the specific subset of fields within each script that we care about.
-            i18n_data.dig('en', 'data', 'course', 'name').values.each do |course_data|
+            i18n_data.dig('en', 'data', 'course', 'name').each_value do |course_data|
               markdown_data = course_data.slice('description', 'student_description', 'description_student', 'description_teacher')
               redacted_data = RedactRestoreUtils.redact_data(markdown_data, REDACT_PLUGINS, REDACT_FORMAT)
               course_data.merge!(redacted_data)

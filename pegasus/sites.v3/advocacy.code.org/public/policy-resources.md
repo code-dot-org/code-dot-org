@@ -8,7 +8,7 @@ style_min: true
 
 ## Code.org State Policy Agenda
 
-- [10 policies to make computer science education foundational](/2023_making_cs_foundational.pdf)
+- [10 policies to make computer science education foundational](/making_cs_foundational_2024.pdf)
 - [State tracker of our 10 policies](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml)
 
 ## Model Legislation

@@ -1,9 +1,12 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import LessonStandards, {
   ExpandMode,
 } from '@cdo/apps/templates/lessonOverview/LessonStandards';
+
+import {expect} from '../../../util/reconfiguredChai';
+
 import {cspStandards, cstaStandards} from './sampleStandardsData';
 
 describe('LessonStandards', () => {

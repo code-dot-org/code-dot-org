@@ -40,7 +40,7 @@ export default class MusicLibrary {
     }
 
     if (libraryJson.key) {
-      this.key = Key[libraryJson.key.toUpperCase() as keyof typeof Key];
+      this.key = libraryJson.key;
     }
   }
 
@@ -81,6 +81,28 @@ export default class MusicLibrary {
   // Given a folder ID (e.g. "pack1") return the SoundFolder.
   getFolderForFolderId(folderId: string): SoundFolder | null {
     return this.folders.find(folder => folder.id === folderId) || null;
+  }
+
+  // Given a folderType and a sound ID (e.g. "pack1/sound1"), return only an
+  // allowed SoundFolder containing the allowed sounds.
+  getAllowedFolderForSoundId(
+    folderType: string | undefined,
+    id: string
+  ): SoundFolder | null {
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderId = id.substring(0, lastSlashIndex);
+
+    return this.getAllowedFolderForFolderId(folderType, folderId);
+  }
+
+  // Given a folderType and a folder ID (e.g. "pack1"), return only an
+  // allowed SoundFolder containing the allowed sounds.
+  getAllowedFolderForFolderId(
+    folderType: string | undefined,
+    folderId: string
+  ): SoundFolder | null {
+    const folders = this.getAllowedSounds(folderType);
+    return folders.find(folder => folder.id === folderId) || null;
   }
 
   // A progression step might specify a smaller set of allowed sounds.
@@ -200,7 +222,7 @@ export type LibraryJson = {
   imageSrc: string;
   path: string;
   bpm?: number;
-  key?: string;
+  key?: number;
   defaultSound?: string;
   folders: SoundFolder[];
   instruments: SoundFolder[];

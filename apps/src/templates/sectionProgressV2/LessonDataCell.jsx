@@ -1,15 +1,18 @@
-import {connect} from 'react-redux';
+import {Link} from '@dsco_/link';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {studentLessonProgressType} from '../progress/progressTypes';
-import classNames from 'classnames';
-import styles from './progress-table-v2.module.scss';
-import legendStyles from './progress-table-legend.module.scss';
+import {connect} from 'react-redux';
+
 import {lessonHasLevels} from '../progress/progressHelpers';
+import {studentLessonProgressType} from '../progress/progressTypes';
+import {teacherDashboardUrl} from '../teacherDashboard/urlHelpers';
+
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
-import {Link} from '@dsco_/link';
-import {teacherDashboardUrl} from '../teacherDashboard/urlHelpers';
+
+import legendStyles from './progress-table-legend.module.scss';
+import styles from './progress-table-v2.module.scss';
 
 function LessonDataCell({
   lesson,

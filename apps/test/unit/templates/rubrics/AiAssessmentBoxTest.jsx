@@ -1,10 +1,12 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
+import React from 'react';
+
 import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
+import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('AiAssessmentBox', () => {
   const mockAiInfo = {

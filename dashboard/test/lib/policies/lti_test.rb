@@ -4,7 +4,7 @@ require 'policies/lti'
 
 class Policies::LtiTest < ActiveSupport::TestCase
   setup do
-    @ids = ['http://some-iss.com', 'some-aud', 'some-sub'].freeze
+    @ids = ['http://some-iss.com', ['some-aud'], 'some-sub'].freeze
     @roles_key = Policies::Lti::LTI_ROLES_KEY
     @teacher_roles = [
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
@@ -25,7 +25,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
     @user = create :user
     @user.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(@id_token),
+      authentication_id: Services::Lti::AuthIdGenerator.new(@id_token).call,
       credential_type: AuthenticationOption::LTI_V1,
     )
   end
@@ -38,10 +38,6 @@ class Policies::LtiTest < ActiveSupport::TestCase
   test 'get_account_type should return a student if id_token does not have TEACHER_ROLES' do
     @id_token[@roles_key] = ['not-a-teacher-role']
     assert_equal Policies::Lti.get_account_type(@id_token[Policies::Lti::LTI_ROLES_KEY]), User::TYPE_STUDENT
-  end
-
-  test 'generate_auth_id should create authentication_id string' do
-    assert_equal Policies::Lti.generate_auth_id(@id_token), @ids.join('|')
   end
 
   test 'issuer should return the issuer of the LTI Platform from a users LTI authentication_options' do
@@ -90,6 +86,11 @@ class Policies::LtiTest < ActiveSupport::TestCase
       failure_msg = "Expected show_email_input?(#{traits}) to be #{expected} but it was #{actual}"
       assert_equal expected, actual, failure_msg
     end
+  end
+
+  test `force_iframe_launch? should return true for Schoology and false for other LMS platforms` do
+    assert Policies::Lti.force_iframe_launch?('https://schoology.schoology.com')
+    refute Policies::Lti.force_iframe_launch?('https://canvas.instructure.com')
   end
 
   class EarlyAccessTest < ActiveSupport::TestCase
@@ -192,6 +193,32 @@ class Policies::LtiTest < ActiveSupport::TestCase
       Policies::Lti.stubs(:lti?).with(@user).returns(false)
 
       refute Policies::Lti.early_access_banner_available?(@user)
+    end
+  end
+
+  class FeedbackAvailabilityTest < ActiveSupport::TestCase
+    test 'returns true when user is a teacher, LTI user and created more than 2 days ago' do
+      user = create(:teacher, :with_lti_auth, created_at: 3.days.ago)
+
+      assert Policies::Lti.feedback_available?(user)
+    end
+
+    test 'returns false when user is not a teacher' do
+      user = create(:student, :with_lti_auth, created_at: 3.days.ago)
+
+      refute Policies::Lti.feedback_available?(user)
+    end
+
+    test 'returns false when user is not an LTI user' do
+      user = create(:teacher, created_at: 3.days.ago)
+
+      refute Policies::Lti.feedback_available?(user)
+    end
+
+    test 'returns false when user is created less than 2 days ago' do
+      user = create(:teacher, :with_lti_auth, created_at: 1.day.ago)
+
+      refute Policies::Lti.feedback_available?(user)
     end
   end
 end

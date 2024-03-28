@@ -23,6 +23,7 @@ export const fieldSoundsDefinition = {
     Globals.getPlayer().previewSound(id, onStop);
   },
   currentValue: null,
+  getShowSoundFilters: () => Globals.getShowSoundFilters(),
 };
 
 export const fieldPatternDefinition = {
