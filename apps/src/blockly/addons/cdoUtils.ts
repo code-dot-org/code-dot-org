@@ -97,7 +97,7 @@ function addProcedureCallBlocksToFlyout(
     });
     if (callBlocks.length) {
       // Add the new callblocks to the toolbox and refresh it.
-      workspace.options.languageTree.contents.push(...callBlocks);
+      workspace.options.languageTree.contents.unshift(...callBlocks);
       workspace.getFlyout()?.show(workspace.options.languageTree);
     }
   }
