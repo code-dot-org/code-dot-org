@@ -691,25 +691,27 @@ function createWebpackConfig({
           ]
         : []),
     ],
-    devServer: {
-      allowedHosts: ['localhost-studio.code.org', 'localhost.code.org'],
-      client: {overlay: false},
-      port: WEBPACK_DEV_SERVER_PORT,
-      proxy: [
-        {
-          context: ['**'],
-          target: 'http://localhost-studio.code.org:3000',
-          changeOrigin: false,
-          logLevel: 'debug',
-        },
-      ],
-      host: '0.0.0.0',
-      hot: false,
-      liveReload: false,
-      devMiddleware: {
-        writeToDisk: true,
-      },
-    },
+    devServer: envConstants.DEV
+      ? {
+          allowedHosts: ['localhost-studio.code.org', 'localhost.code.org'],
+          client: {overlay: false},
+          port: WEBPACK_DEV_SERVER_PORT,
+          proxy: [
+            {
+              context: ['**'],
+              target: 'http://localhost-studio.code.org:3000',
+              changeOrigin: false,
+              logLevel: 'debug',
+            },
+          ],
+          host: '0.0.0.0',
+          hot: envConstants.HOT,
+          liveReload: envConstants.HOT,
+          devMiddleware: {
+            writeToDisk: true,
+          },
+        }
+      : undefined,
   };
 
   //////////////////////////////////////////////
