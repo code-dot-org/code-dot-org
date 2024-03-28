@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {useCallback, useMemo, useState} from 'react';
-import i18n from '@cdo/locale';
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
-import styles from './coteacher-settings.module.scss';
+import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
 import AddCoteacher from './AddCoteacher';
 import CoteacherTable from './CoteacherTable';
-import RemoveCoteacherDialog from './RemoveCoteacherDialog';
 import PrimaryTeacher from './PrimaryTeacher';
+import RemoveCoteacherDialog from './RemoveCoteacherDialog';
+
+import styles from './coteacher-settings.module.scss';
 
 const statusSortValue = coteacher => {
   switch (coteacher.status) {
