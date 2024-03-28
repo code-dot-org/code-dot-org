@@ -87,7 +87,6 @@ RUN apt-get install -y --no-install-recommends \
     parallel \
     python \
     python-dev \
-    redis-server \
     software-properties-common \
     sudo \
     tar \
