@@ -54,7 +54,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:38.458+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice2\\\"\"],\"cloned_from\":\"game_dev_choice2\"},{\"changed_at\":\"2024-03-18 20:19:46 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:59:13 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:02:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:02:56 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:03:17 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:03:44 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:05:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 21:17:47 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:20:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:22:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:23:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:38.458+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice2\\\"\"],\"cloned_from\":\"game_dev_choice2\"},{\"changed_at\":\"2024-03-18 20:19:46 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:59:13 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:02:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:02:56 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:03:17 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:03:44 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:05:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 21:17:47 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:20:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:22:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:23:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 18:12:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:13:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:16:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:17:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:19:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,7 +62,7 @@
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable id="Y2zu8%:MR4BRtCZA]L%9">Frozen</variable>
+          <variable id="Y2zu8%:MR4BRtCZA]L%9">frozen</variable>
         </variables>
         <block type="when_run" deletable="false" movable="false" x="16" y="16">
           <next>
@@ -123,7 +123,7 @@
                                   </value>
                                   <next>
                                     <block type="gamelab_showVariable">
-                                      <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">Frozen</field>
+                                      <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">frozen</field>
                                       <value name="LOCATION">
                                         <block type="gamelab_location_picker">
                                           <field name="LOCATION">{"x":89,"y":67}</field>
@@ -131,7 +131,7 @@
                                       </value>
                                       <next>
                                         <block type="variables_set">
-                                          <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">Frozen</field>
+                                          <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">frozen</field>
                                           <value name="VALUE">
                                             <block type="math_number">
                                               <field name="NUM">0</field>
@@ -190,7 +190,7 @@
                   </value>
                   <next>
                     <block type="math_change" deletable="false" movable="false">
-                      <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">Frozen</field>
+                      <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">frozen</field>
                       <value name="DELTA">
                         <shadow type="math_number" id="{pi-?R./`A{IC;,LWqiH">
                           <field name="NUM">1</field>
@@ -201,7 +201,7 @@
                       </value>
                       <next>
                         <block type="gamelab_ifVarEquals" deletable="false" movable="false">
-                          <field name="NUM" id="Y2zu8%:MR4BRtCZA]L%9">Frozen</field>
+                          <field name="NUM" id="Y2zu8%:MR4BRtCZA]L%9">frozen</field>
                           <value name="VAL">
                             <block type="math_number">
                               <field name="NUM">6</field>
@@ -241,34 +241,34 @@
             </block>
           </value>
           <next>
-            <block type="gamelab_setAnimation" deletable="false" movable="false">
-              <field name="ANIMATION">"rpgcharacter_05"</field>
-              <value name="THIS">
-                <block type="gamelab_objectSpritePointer" deletable="false" movable="false"/>
+            <block type="math_change" deletable="false" movable="false">
+              <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">frozen</field>
+              <value name="DELTA">
+                <shadow type="math_number" id="LN?:Ipm7O+;L/nTyQ*^N">
+                  <field name="NUM">-1</field>
+                </shadow>
+                <block type="math_number">
+                  <field name="NUM">-1</field>
+                </block>
               </value>
               <next>
-                <block type="adaptations_toggleBehaviorSimple" deletable="false" movable="false">
-                  <field name="TOGGLE">"begins"</field>
-                  <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false">
-                      <field name="ANIMATION">"rpgcharacter_05"</field>
-                    </block>
-                  </value>
-                  <value name="BEHAVIOR">
-                    <block type="gamelab_behavior_get" deletable="false" movable="false">
-                      <mutation behaviorId="wandering" name="wandering"/>
-                      <field name="NAME">wandering</field>
-                    </block>
+                <block type="gamelab_setAnimation" deletable="false" movable="false">
+                  <field name="ANIMATION">"rpgcharacter_05"</field>
+                  <value name="THIS">
+                    <block type="gamelab_objectSpritePointer" deletable="false" movable="false"/>
                   </value>
                   <next>
-                    <block type="math_change" deletable="false" movable="false">
-                      <field name="VAR" id="Y2zu8%:MR4BRtCZA]L%9">Frozen</field>
-                      <value name="DELTA">
-                        <shadow type="math_number" id="LN?:Ipm7O+;L/nTyQ*^N">
-                          <field name="NUM">-1</field>
-                        </shadow>
-                        <block type="math_number">
-                          <field name="NUM">-1</field>
+                    <block type="adaptations_toggleBehaviorSimple" deletable="false" movable="false">
+                      <field name="TOGGLE">"begins"</field>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false">
+                          <field name="ANIMATION">"rpgcharacter_05"</field>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_behavior_get" deletable="false" movable="false">
+                          <mutation behaviorId="wandering" name="wandering"/>
+                          <field name="NAME">wandering</field>
                         </block>
                       </value>
                     </block>

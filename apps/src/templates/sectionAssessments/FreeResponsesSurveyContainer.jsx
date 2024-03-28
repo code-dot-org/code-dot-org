@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import {QUESTION_CHARACTER_LIMIT} from './assessmentDataShapes';
 import FreeResponsesSurveyTable from './FreeResponsesSurveyTable';
 import {
   getSurveyFreeResponseQuestions,
   setQuestionIndex,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {QUESTION_CHARACTER_LIMIT} from './assessmentDataShapes';
 
 const freeResponseQuestionsPropType = PropTypes.shape({
   questionNumber: PropTypes.number,

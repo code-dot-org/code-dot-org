@@ -1264,17 +1264,21 @@ en:
         text: make player do {STRENGTH} jump
         options:
           STRENGTH:
-            '7': small
-            '8.5': medium
+            '6.5': small
+            '8': medium
             '11': big
+      GameDev_removeGroup:
+        text: set {SPRITE} type to {GROUP}
+        options:
+          GROUP:
+            '"players"': player
+            '"walls"': environment
       GameDev_setGroup:
         text: set {SPRITE} type to {GROUP}
         options:
           GROUP:
             '"players"': player
             '"walls"': environment
-            '"objects"': object
-            '"enemies"': enemy
       GameDev_setVelocity:
         text: set {SPRITE} {PROPERTY} to {VALUE}
         options:
@@ -1287,8 +1291,6 @@ en:
           GROUP:
             '"players"': player
             '"walls"': environment
-            '"objects"': objects
-            '"enemies"': enemies
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
       gamelab_addTarget:
@@ -1325,8 +1327,6 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"speed"': speed
-      gamelab_changeVarBy:
-        text: change {VARIABLE} by {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} touches {SPRITE2}"
         options:

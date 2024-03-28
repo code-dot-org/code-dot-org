@@ -39,7 +39,7 @@ end
 there_can_be_only_one("#{File.basename(__FILE__)}.pid") unless ENV['PEGASUS_RAKE_RECURSIVE'].to_s.casecmp?('true')
 
 unless ENV['PEGASUS_RAKE_LOGGER'].to_s.casecmp?('true')
-  $log = Logger.new STDOUT
+  $log = Logger.new $stdout
   $log.level = Logger::INFO
 end
 
