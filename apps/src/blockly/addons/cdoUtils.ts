@@ -75,23 +75,23 @@ function addProcedureCallBlocksToFlyout(
   // options.languageTree is the translated toolbox info
   if (workspace.getFlyout() && workspace.options?.languageTree) {
     const callBlocks = [] as ToolboxItemInfo[];
-    const defBlocks = mainSource.blocks.blocks.filter(
-      block => block.type === 'procedures_defnoreturn'
+    const definitionBlocks = mainSource.blocks.blocks.filter(
+      block => block.type === BLOCK_TYPES.procedureDefinition
     );
-    defBlocks.forEach(def => {
+    definitionBlocks.forEach(definitionBlock => {
       // Procedure definitions should have a valid name
-      if (typeof def.fields?.NAME === 'string') {
+      if (typeof definitionBlock.fields?.NAME === 'string') {
         // Create the block XML for a procedure call block.
-        const block = document.createElement('block');
-        block.setAttribute('type', 'procedures_callnoreturn');
-        const mutation = document.createElement('mutation');
-        mutation.setAttribute('name', def.fields.NAME);
-        block.appendChild(mutation);
+        const callBlockElement = document.createElement('block');
+        callBlockElement.setAttribute('type', BLOCK_TYPES.procedureCall);
+        const mutationElement = document.createElement('mutation');
+        mutationElement.setAttribute('name', definitionBlock.fields.NAME);
+        callBlockElement.appendChild(mutationElement);
 
         callBlocks.push({
           kind: 'BLOCK',
-          blockxml: block,
-          type: 'procedures_callnoreturn',
+          blockxml: callBlockElement,
+          type: BLOCK_TYPES.procedureCall,
         });
       }
     });
