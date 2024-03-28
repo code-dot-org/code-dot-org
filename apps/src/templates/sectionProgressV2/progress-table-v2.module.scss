@@ -56,8 +56,8 @@ $level-cell-width: 52;
 
   &Lesson {
     text-align: center;
-    min-width: 80px;
-    max-width: 80px;  
+    min-width: 47px;
+    max-width: 47px;  
     height: 47px;
     line-height: 47px !important;
   }
@@ -130,7 +130,7 @@ $level-cell-width: 52;
   &HeaderCell {
     height: 42px;
     line-height: 42px;
-    min-width: 80px;
+    min-width:47px;
     border-bottom: 1px solid $light_gray_200;
     border-right: 1px solid $light_gray_200;
     margin-bottom: 32px;
@@ -143,7 +143,7 @@ $level-cell-width: 52;
   }
 
   &HeaderCaret {
-    margin-inline-end: 12px;
+    margin-inline-end: 8px;
   }
 
   &SkeletonHeaderCell {
@@ -167,12 +167,12 @@ $level-cell-width: 52;
 
 .expanded {
   &Header {
-    min-width: 80px;
+    min-width: 47px;
 
     &LessonCell {
       height: 43px;
       line-height: 42px;
-      min-width: 82px;
+      min-width: 49px;
       border: 0;
       background-color: $light_primary_500;
       color: $light_white;
