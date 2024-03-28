@@ -35,7 +35,12 @@ import {
   ToolboxItem,
   WorkspaceSvg,
 } from 'blockly';
-import {BlockColor, JsonBlockConfig, WorkspaceSerialization} from '../types';
+import {
+  BlockColor,
+  JsonBlockConfig,
+  SerializedFields,
+  WorkspaceSerialization,
+} from '../types';
 import experiments from '@cdo/apps/util/experiments';
 import {getBaseName} from '../utils';
 import {ToolboxItemInfo} from 'blockly/core/utils/toolbox';
@@ -499,12 +504,6 @@ export function getLevelToolboxBlocks(customCategory: string) {
   } else {
     return undefined;
   }
-}
-interface SerializedFields {
-  [key: string]: {
-    id?: string;
-    name?: string;
-  };
 }
 
 /**
