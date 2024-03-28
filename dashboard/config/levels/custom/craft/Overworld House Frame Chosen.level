@@ -64,7 +64,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-18 03:53:13 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:47:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 15:30:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 23:09:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-06 20:15:06 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 20:51:04 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 22:58:02 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 22:59:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"available_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 23:03:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2024-03-28 13:58:38 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 03:53:13 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:47:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 15:30:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 23:09:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-06 20:15:06 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 20:51:04 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 22:58:02 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 22:59:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"available_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 23:03:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2024-03-28 13:58:38 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-03-28 15:23:02 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-03-28 15:23:43 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "debugging": 4,
@@ -74,7 +74,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" id="12">
           <next>
             <block type="controls_repeat_dropdown">
               <title name="TIMES" config="2-10">3</title>
@@ -89,7 +89,7 @@
               </statement>
               <next>
                 <block type="craft_turn">
-                  <title name="DIR" id="12">right</title>
+                  <title name="DIR">right</title>
                 </block>
               </next>
             </block>
