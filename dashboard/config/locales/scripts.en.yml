@@ -16177,3 +16177,48 @@ en:
             **Suggested Time:** 100 minutes
           description_short: ''
           description_audience: ''
+        self-paced-pl-csd-unit4-1-2024:
+          title: Getting Started with Code.org
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd-unit4-2-2024:
+          title: Preparing to Teach The Design Process
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
+          description_short: ''
+          description_audience: ''
+        k5-onlinepd-2024:
+          lesson_groups:
+            Implementing and Teaching CS:
+              display_name: 'Part I:  Teaching and Implementing Computer Science'
+            k5_basic_concepts_1:
+              display_name: 'Part II:  Concepts in Courses A - F'
+            k5_next_steps_1:
+              display_name: 'Part III:  Next Steps'
+          title: Teaching Computer Science Fundamentals ('23-'24)
+          description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
+          student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
+          description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
