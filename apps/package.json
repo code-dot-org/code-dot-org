@@ -236,6 +236,7 @@
     "htmlhint": "^1.1.4",
     "immutable": "3.8.1",
     "intro.js": "^7.2.0",
+    "intro.js-react": "^1.0.0",
     "isolate-react": "^2.3.0",
     "jquery": "1.12.1",
     "jquery-ui": "^1.12.1",

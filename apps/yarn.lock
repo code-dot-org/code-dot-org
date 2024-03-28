@@ -8558,6 +8558,7 @@ __metadata:
     http-server: ^0.9.0
     immutable: 3.8.1
     intro.js: ^7.2.0
+    intro.js-react: ^1.0.0
     isolate-react: ^2.3.0
     istanbul-instrumenter-loader: ^3.0.1
     jquery: 1.12.1
@@ -15854,6 +15855,16 @@ es6-shim@latest:
   version: 1.1.0
   resolution: "interpret@npm:1.1.0"
   checksum: 978a142dd380c5087cc85af5d6856cb5d78ea31a69e817733279aa4abbd9e0eebe0966ed6c7bf6f7d5e5fd01e3c94839d68ef4757b06881533ba35353a6c7514
+  languageName: node
+  linkType: hard
+
+"intro.js-react@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "intro.js-react@npm:1.0.0"
+  peerDependencies:
+    intro.js: ">=2.5.0"
+    react: ">=0.14.0"
+  checksum: 97e1526965de95832f57a1a7b53ebeb8bba0ca101becf49840a88ff70dd2d07bd9b616a61a6af63824a6c2d8e4ac0db57597d96e2b309560fc0f1a6a59cd14e5
   languageName: node
   linkType: hard
 
