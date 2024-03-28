@@ -38,6 +38,6 @@
     "name_suffix": "_2024"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:26.053+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L7d_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L7d_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:26.053+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L7d_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L7d_2023\"},{\"changed_at\":\"2024-03-28 17:52:50 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-03-28 17:57:55 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>
