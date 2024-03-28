@@ -28,7 +28,7 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
   );
 
   return (
-    <AccessibleDialog onClose={onClose}>
+    <AccessibleDialog onClose={onClose} closeOnClickBackdrop={true}>
       <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
       <button type="button" onClick={onClose} className={styles.xCloseButton}>
         <i id="x-close" className="fa-solid fa-xmark" />
