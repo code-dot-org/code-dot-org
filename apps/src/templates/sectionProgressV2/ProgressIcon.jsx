@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import React from 'react';
 
 import FontAwesome from '../FontAwesome';
-import ProgressBox from '../sectionProgress/ProgressBox';
 
 import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
 
@@ -25,30 +24,6 @@ export default function ProgressIcon({itemType}) {
     />
   );
 
-  const notStartedBox = () => (
-    <ProgressBox
-      started={false}
-      incomplete={20}
-      imperfect={0}
-      perfect={0}
-      lessonIsAllAssessment={false}
-    />
-  );
-
-  /*   Note that we decided not to have a viewedBox icon in this iteration
-  of the icon key.  However, this may be part of a future iteration
-  of the IconKey. If so, this is the approach we took to rendering it
-  const viewedBox = () => (
-    <ProgressBox
-      started={false}
-      incomplete={20}
-      imperfect={0}
-      perfect={0}
-      lessonIsAllAssessment={false}
-      viewed={true}
-    />
-  ); */
-
   return (
     <div data-testid="progress-icon">
       {itemType?.length && (
@@ -60,7 +35,6 @@ export default function ProgressIcon({itemType}) {
           aria-label={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
         />
       )}
-      {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox()}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
       {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
     </div>
