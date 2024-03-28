@@ -37,6 +37,8 @@ const AichatView: React.FunctionComponent = () => {
         ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   );
 
+  const hidePresentationPanel = initialAiCustomizations.hidePresentationPanel;
+
   useEffect(() => {
     const aiCustomizations: AiCustomizations = {
       botName: initialAiCustomizations.botName.value,
@@ -78,9 +80,11 @@ const AichatView: React.FunctionComponent = () => {
 
   return (
     <>
-      <div className={moduleStyles.viewModeButtons}>
-        <SegmentedButtons {...viewModeButtonsProps} />
-      </div>
+      {!hidePresentationPanel && (
+        <div className={moduleStyles.viewModeButtons}>
+          <SegmentedButtons {...viewModeButtonsProps} />
+        </div>
+      )}
       <div id="aichat-lab" className={moduleStyles.aichatLab}>
         {viewMode === ViewMode.EDIT && (
           <>
