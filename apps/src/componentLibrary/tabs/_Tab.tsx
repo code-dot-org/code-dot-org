@@ -1,12 +1,14 @@
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import moduleStyles from '@cdo/apps/componentLibrary/tabs/tabs.module.scss';
 
 export interface TabModel {
   value: string;
-  text: string;
+  text?: string;
   iconLeft?: FontAwesomeV6IconProps;
   iconRight?: FontAwesomeV6IconProps;
   isIconOnly?: boolean;
@@ -54,10 +56,10 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         onClick={handleClick}
         disabled={disabled}
       >
-        {icon?.title}
-        {iconLeft?.title}
-        {text}
-        {iconRight?.title}
+        {icon && <FontAwesomeV6Icon {...icon} />}
+        {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+        {text && <span>{text}</span>}
+        {iconRight && <FontAwesomeV6Icon {...iconRight} />}
       </button>
     </li>
   );

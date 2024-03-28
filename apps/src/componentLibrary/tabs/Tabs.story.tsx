@@ -136,6 +136,112 @@ GroupOfTypesOfTabs.args = {
   ],
 };
 
+export const GroupOfTabsWithIcons = MultipleTemplate.bind({});
+GroupOfTabsWithIcons.args = {
+  components: [
+    {
+      name: 'primary_tabs_with_icons',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1',
+          iconRight: {iconName: 'check', iconStyle: 'solid'},
+          tabContent: <div>Tab 1 Content</div>,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          iconLeft: {iconName: 'check', iconStyle: 'solid'},
+          tabContent: <div>Tab 2 Content</div>,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          iconLeft: {iconName: 'smile', iconStyle: 'solid'},
+          iconRight: {iconName: 'smile', iconStyle: 'solid'},
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'primary',
+    },
+    {
+      name: 'primary_tabs_icon_only',
+      tabs: [
+        {
+          value: 'tab1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          tabContent: <div>Tab 1 Content</div>,
+        },
+        {
+          value: 'tab2',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          tabContent: <div>Tab 2 Content</div>,
+        },
+        {
+          value: 'tab3',
+          icon: {iconName: 'smile', iconStyle: 'solid'},
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'primary',
+    },
+    {
+      name: 'secondary_tabs_with_icons',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1',
+          iconRight: {iconName: 'check', iconStyle: 'solid'},
+          tabContent: <div>Tab 1 Content</div>,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          iconLeft: {iconName: 'check', iconStyle: 'solid'},
+          tabContent: <div>Tab 2 Content</div>,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          iconLeft: {iconName: 'smile', iconStyle: 'solid'},
+          iconRight: {iconName: 'smile', iconStyle: 'solid'},
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'secondary',
+    },
+    {
+      name: 'secondary_tabs_icon_only',
+      tabs: [
+        {
+          value: 'tab1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          tabContent: <div>Tab 1 Content</div>,
+        },
+        {
+          value: 'tab2',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          tabContent: <div>Tab 2 Content</div>,
+        },
+        {
+          value: 'tab3',
+          icon: {iconName: 'smile', iconStyle: 'solid'},
+          tabContent: <div>Tab 3 Content</div>,
+        },
+      ],
+      selectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'secondary',
+    },
+  ],
+};
+
 export const GroupOfSizesOfTabs = MultipleTemplate.bind({});
 GroupOfSizesOfTabs.args = {
   components: [
