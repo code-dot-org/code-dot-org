@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import styles from './coteacher-settings.module.scss';
+
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
+
+import styles from './coteacher-settings.module.scss';
 
 export default function PrimaryTeacher({primaryTeacher, numCoteachers}) {
   // We explicitely only want to show this component if there are coteachers on initial load.
