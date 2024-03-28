@@ -79,10 +79,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
         </ul>
       </div>
       <div
-        className={classnames(
-          // moduleStyles.tabPanelsContainer,
-          tabPanelsContainerClassName
-        )}
+        className={classnames(tabPanelsContainerClassName)}
         id={tabPanelsContainerId}
       >
         {tabs.map(tab => (

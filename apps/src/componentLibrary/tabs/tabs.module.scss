@@ -19,7 +19,6 @@
   button {
     display: flex;
     justify-content: center;
-    align-items: baseline;
 
     margin: 0;
     padding: 0;
@@ -35,6 +34,8 @@
 // Tabs Colors
 .tabs-primary {
   li button {
+    align-items: baseline;
+
     color: $light_gray_700;
 
     background-color: transparent;
@@ -70,6 +71,7 @@
 
 .tabs-secondary {
   li button {
+    align-items: center;
     color: $light_white;
     background-color: $light_gray_700;
     border-radius: 0.25rem 0.25rem 0 0;
@@ -117,6 +119,7 @@
         @include button-one-text;
         margin: 0;
         padding: 0.625rem 0;
+        gap: 0.5rem;
       }
     }
   }
@@ -127,7 +130,10 @@
 
       li button {
         @include label-one;
+        margin: 0;
         padding: 0 0.75rem;
+        gap: 0.5rem;
+        height: 2rem;
       }
     }
   }
@@ -142,6 +148,8 @@
       li button {
         @include button-two-text;
         margin: 0;
+        padding: 0.5rem 0;
+        gap: 0.5rem;
       }
     }
   }
@@ -152,6 +160,10 @@
 
       li button {
         @include label-two;
+        margin: 0;
+        padding: 0 0.75rem;
+        gap: 0.5rem;
+        height: 1.75rem;
       }
     }
   }
@@ -165,6 +177,8 @@
       li button {
         @include button-three-text;
         margin: 0;
+        padding: 0.3125rem 0;
+        gap: 0.5rem;
       }
     }
   }
@@ -175,6 +189,10 @@
 
       li button {
         @include label-three;
+        margin: 0;
+        padding: 0 0.625rem;
+        gap: 0.25rem;
+        height: 1.5rem;
       }
     }
   }
@@ -188,6 +206,8 @@
       li button {
         @include button-four-text;
         margin: 0;
+        padding: 0.0625rem 0;
+        gap: 0.5rem;
       }
     }
   }
@@ -198,48 +218,12 @@
 
       li button {
         @include label-four;
+        margin: 0;
+        padding: 0 0.5rem;
+        gap: 0.25rem;
+        height: 1.25rem;
+
       }
     }
   }
-}
-
-
-.tabsContainer {
-  background-color: $neutral_dark;
-  display: flex;
-  padding-left: 5px;
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  .active {
-    background-color: $neutral_light;
-    color: #007785;
-  }
-}
-
-.tabsList {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-}
-
-//.tab {
-//  white-space: nowrap;
-//  background-color: $neutral_dark70;
-//  margin: 5px 8px 0 0;
-//  padding: 0 10px;
-//  border-radius: 4px 4px 0 0;
-//  height: 30px;
-//  button {
-//    @include remove-button-styles;
-//    height: 30px;
-//    font-size: 16px;
-//    font-weight: $medium-font-weight;
-//    color: $neutral_white;
-//  }
-//}
-
-.tabPanelsContainer {
-  padding: 10px;
-  height: 100%;
 }
