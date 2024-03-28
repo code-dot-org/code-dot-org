@@ -27,14 +27,7 @@ import {
   getProjectXml,
   processIndividualBlock,
 } from '@cdo/apps/blockly/addons/cdoXml';
-import {
-  Block,
-  BlockSvg,
-  Field,
-  Theme,
-  ToolboxItem,
-  WorkspaceSvg,
-} from 'blockly';
+import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
 import {
   BlockColor,
   JsonBlockConfig,
