@@ -148,4 +148,8 @@ class Policies::Lti
   def self.force_iframe_launch?(issuer)
     ['Schoology'].include?(issuer_name(issuer))
   end
+
+  def self.feedback_available?(user)
+    user.teacher? && lti?(user) && user.created_at <= 2.days.ago
+  end
 end
