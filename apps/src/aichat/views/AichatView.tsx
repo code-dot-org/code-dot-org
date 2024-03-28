@@ -60,17 +60,21 @@ const AichatView: React.FunctionComponent = () => {
       {
         label: 'Edit',
         value: ViewMode.EDIT,
-        iconLeft: {iconName: 'wrench', iconStyle: 'solid', title: 'check'},
+        iconLeft: {iconName: 'wrench', iconStyle: 'solid', title: 'Edit Mode'},
       },
       {
         label: 'User View',
         value: ViewMode.PRESENTATION,
-        iconLeft: {iconName: 'user-group', iconStyle: 'solid', title: 'check'},
+        iconLeft: {
+          iconName: 'user-group',
+          iconStyle: 'solid',
+          title: 'User View Mode',
+        },
       },
     ],
     size: 'm',
     selectedButtonValue: viewMode,
-    onChange: (value: string) => setViewMode(value),
+    onChange: setViewMode,
   };
 
   const chatWorkspaceHeader =
