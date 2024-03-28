@@ -69,7 +69,9 @@ const AichatView: React.FunctionComponent = () => {
 
   return (
     <>
-      <SegmentedButtons {...viewModeButtonsProps} />
+      <div className={moduleStyles.viewModeButtons}>
+        <SegmentedButtons {...viewModeButtonsProps} />
+      </div>
       <div id="aichat-lab" className={moduleStyles.aichatLab}>
         {viewMode === ViewMode.EDIT && (
           <>
