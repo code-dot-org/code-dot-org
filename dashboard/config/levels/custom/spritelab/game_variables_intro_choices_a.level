@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:19:25.000Z",
   "level_num": "custom",
@@ -50,14 +49,12 @@
     "thumbnail_url": "https://images.code.org/38e869d2474704f9d71e4caadb375e48-fox_jewel.jpg",
     "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanic:** Collect  \r\n\r\n**How to win:** Use the arrows to get 6 arctic jewels. ",
     "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on.",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "short_instructions": " **Play the game!**",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Press the `Run` button then use the arrow keys to move the fox to the jewels.\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a3199cc53af35bd174f9b4fe8e9579cd/game_variables_intro_choices_a.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Press the `Run` button then use the arrow keys to move the fox to the jewels.\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a3199cc53af35bd174f9b4fe8e9579cd/game_variables_intro_choices_a.mp3\"}]",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:25.271+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice1\\\"\"],\"cloned_from\":\"game_dev_choice1\"},{\"changed_at\":\"2024-03-18 20:19:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:59:19 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:07:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:07:57 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:08:22 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 20:40:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 20:41:45 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 20:44:10 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:25.271+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice1\\\"\"],\"cloned_from\":\"game_dev_choice1\"},{\"changed_at\":\"2024-03-18 20:19:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:59:19 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:07:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:07:57 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:08:22 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 20:40:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 20:41:45 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 20:44:10 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 18:10:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:11:03 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:11:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -65,7 +62,7 @@
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable id="NxB^1]lLc8);a:8IK3(6">Gems</variable>
+          <variable id="NxB^1]lLc8);a:8IK3(6">gems</variable>
         </variables>
         <block type="when_run" id="Awi8kv?p8Jt?*~A7y8iO" deletable="false" movable="false" x="16" y="16">
           <next>
@@ -112,12 +109,22 @@
                               </value>
                               <next>
                                 <block type="variables_set" id="u{6bnpOz^un34,fF=PO^" deletable="false" movable="false" editable="false">
-                                  <field name="VAR" id="NxB^1]lLc8);a:8IK3(6">Gems</field>
+                                  <field name="VAR" id="NxB^1]lLc8);a:8IK3(6">gems</field>
                                   <value name="VALUE">
                                     <block type="ecosystems_int10" id="?Xj~(E/n2F5??AE3GT!S" deletable="false" movable="false" editable="false">
                                       <field name="VALUE">0</field>
                                     </block>
                                   </value>
+                                  <next>
+                                    <block type="gamelab_showVariable">
+                                      <field name="VAR" id="NxB^1]lLc8);a:8IK3(6">gems</field>
+                                      <value name="LOCATION">
+                                        <block type="gamelab_location_picker">
+                                          <field name="LOCATION">{"x":53,"y":29}</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -131,7 +138,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" id="B,_W%aBFH=#{w]Y^3+j." deletable="false" movable="false" x="16" y="380">
+        <block type="gamelab_checkTouching" id="B,_W%aBFH=#{w]Y^3+j." deletable="false" movable="false" x="16" y="400">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
@@ -147,7 +154,7 @@
           </value>
           <next>
             <block type="math_change" id="1o%Hrq`irPgu}93KFhL[" deletable="false" movable="false" editable="false">
-              <field name="VAR" id="NxB^1]lLc8);a:8IK3(6">Gems</field>
+              <field name="VAR" id="NxB^1]lLc8);a:8IK3(6">gems</field>
               <value name="DELTA">
                 <shadow type="math_number" id=".@*R02e1quT?GmCy|VAq">
                   <field name="NUM">1</field>
@@ -168,7 +175,7 @@
                           <field name="OP">EQ</field>
                           <value name="A">
                             <block type="variables_get" id="DJ/JN8KM_CF)uAL,4e+e" deletable="false" movable="false" editable="false">
-                              <field name="VAR" id="NxB^1]lLc8);a:8IK3(6">Gems</field>
+                              <field name="VAR" id="NxB^1]lLc8);a:8IK3(6">gems</field>
                             </block>
                           </value>
                           <value name="B">

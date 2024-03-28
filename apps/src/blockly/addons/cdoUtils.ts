@@ -31,6 +31,7 @@ import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
 import {BlockColor, JsonBlockConfig, WorkspaceSerialization} from '../types';
 import experiments from '@cdo/apps/util/experiments';
 import {getBaseName} from '../utils';
+import {ToolboxItemInfo} from 'blockly/core/utils/toolbox';
 
 /**
  * Loads blocks to a workspace.
@@ -58,6 +59,48 @@ export function loadBlocksToWorkspace(
   Blockly.serialization.workspaces.load(mainSource, workspace);
   positionBlocksOnWorkspace(workspace);
   Blockly.hasLoadedBlocks = true;
+
+  // Dynamically add procedure call blocks to an uncategorized toolbox
+  // if specified in the level config (e.g. Minecraft Agent levels).
+  // Levels will include: "top_level_procedure_autopopulate": "true"
+  if (Blockly.topLevelProcedureAutopopulate) {
+    addProcedureCallBlocksToFlyout(workspace, mainSource);
+  }
+}
+
+function addProcedureCallBlocksToFlyout(
+  workspace: WorkspaceSvg,
+  mainSource: WorkspaceSerialization
+) {
+  // options.languageTree is the translated toolbox info
+  if (workspace.getFlyout() && workspace.options?.languageTree) {
+    const callBlocks = [] as ToolboxItemInfo[];
+    const definitionBlocks = mainSource.blocks.blocks.filter(
+      block => block.type === BLOCK_TYPES.procedureDefinition
+    );
+    definitionBlocks.forEach(definitionBlock => {
+      // Procedure definitions should have a valid name
+      if (typeof definitionBlock.fields?.NAME === 'string') {
+        // Create the block XML for a procedure call block.
+        const callBlockElement = document.createElement('block');
+        callBlockElement.setAttribute('type', BLOCK_TYPES.procedureCall);
+        const mutationElement = document.createElement('mutation');
+        mutationElement.setAttribute('name', definitionBlock.fields.NAME);
+        callBlockElement.appendChild(mutationElement);
+
+        callBlocks.push({
+          kind: 'BLOCK',
+          blockxml: callBlockElement,
+          type: BLOCK_TYPES.procedureCall,
+        });
+      }
+    });
+    if (callBlocks.length) {
+      // Add the new callblocks to the toolbox and refresh it.
+      workspace.options.languageTree.contents.push(...callBlocks);
+      workspace.getFlyout()?.show(workspace.options.languageTree);
+    }
+  }
 }
 
 /**

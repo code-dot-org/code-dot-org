@@ -275,85 +275,87 @@ export default function RubricSettings({
         </div>
       </div>
 
-      <div className={style.settingsGroup}>
-        <Heading4>{i18n.aiAssessment()}</Heading4>
-        <div className={style.settingsContainers}>
-          <div className={style.runAiAllStatuses}>
-            <BodyTwoText>
-              <StrongText>{summaryText()}</StrongText>
-            </BodyTwoText>
-            {statusAllText() && (
-              <BodyTwoText className="uitest-eval-status-all-text">
-                {statusAllText()}
+      <div className={style.settingsContent}>
+        <div className={style.settingsGroup}>
+          <Heading4>{i18n.aiAssessment()}</Heading4>
+          <div className={style.settingsContainers}>
+            <div className={style.runAiAllStatuses}>
+              <BodyTwoText>
+                <StrongText>{summaryText()}</StrongText>
               </BodyTwoText>
-            )}
-          </div>
-          <Button
-            className="uitest-run-ai-assessment-all"
-            text={i18n.runAiAssessmentClass()}
-            color={Button.ButtonColor.brandSecondaryDefault}
-            onClick={handleRunAiAssessmentAll}
-            style={{margin: 0}}
-            disabled={statusAll !== STATUS_ALL.READY}
-          >
-            {statusAll === STATUS_ALL.EVALUATION_PENDING && (
-              <i className="fa fa-spinner fa-spin" />
-            )}
-          </Button>
-          <div className={style.detailsGroup}>
-            <BodyTwoText
-              className={
-                displayDetails ? style.detailsVisible : style.detailsHidden
-              }
+              {statusAllText() && (
+                <BodyTwoText className="uitest-eval-status-all-text">
+                  {statusAllText()}
+                </BodyTwoText>
+              )}
+            </div>
+            <Button
+              className="uitest-run-ai-assessment-all"
+              text={i18n.runAiAssessmentClass()}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              onClick={handleRunAiAssessmentAll}
+              style={{margin: 0}}
+              disabled={statusAll !== STATUS_ALL.READY}
             >
-              {i18n.aiEvaluationDetails()}
-            </BodyTwoText>
-            <Link onClick={showHideDetails}>
-              {displayDetails ? i18n.hideDetails() : i18n.showDetails()}
-            </Link>
+              {statusAll === STATUS_ALL.EVALUATION_PENDING && (
+                <i className="fa fa-spinner fa-spin" />
+              )}
+            </Button>
+            <div className={style.detailsGroup}>
+              <BodyTwoText
+                className={
+                  displayDetails ? style.detailsVisible : style.detailsHidden
+                }
+              >
+                {i18n.aiEvaluationDetails()}
+              </BodyTwoText>
+              <Link onClick={showHideDetails}>
+                {displayDetails ? i18n.hideDetails() : i18n.showDetails()}
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className={style.settingsGroup}>
-        <Heading4>{i18n.rubricSummaryClassScore()}</Heading4>
-        <div className={style.settingsContainers}>
-          <div className={style.runAiAllStatuses}>
+        <div className={style.settingsGroup}>
+          <Heading4>{i18n.rubricSummaryClassScore()}</Heading4>
+          <div className={style.settingsContainers}>
+            <div className={style.runAiAllStatuses}>
+              {teacherEvalCount === 0 && (
+                <BodyTwoText>{i18n.rubricNoStudentEvals()}</BodyTwoText>
+              )}
+              {teacherEvalCount > 0 && (
+                <BodyTwoText>
+                  {i18n.rubricNumberStudentEvals({
+                    teacherEvalCount: teacherEvalCount,
+                  })}
+                </BodyTwoText>
+              )}
+            </div>
             {teacherEvalCount === 0 && (
-              <BodyTwoText>{i18n.rubricNoStudentEvals()}</BodyTwoText>
-            )}
-            {teacherEvalCount > 0 && (
-              <BodyTwoText>
-                {i18n.rubricNumberStudentEvals({
-                  teacherEvalCount: teacherEvalCount,
-                })}
-              </BodyTwoText>
-            )}
-          </div>
-          {teacherEvalCount === 0 && (
-            <Button
-              className="uitest-rubric-switch-content-tab"
-              text={i18n.rubricViewStudentRubric()}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              onClick={onClickSwitchTab}
-              style={{margin: 0}}
-            />
-          )}
-          {!!teacherEval && teacherEvalCount > 0 && (
-            <CSVLink
-              headers={headers}
-              data={teacherEval}
-              filename={`lesson_${rubric.lesson.position}_student_scores.csv`}
-            >
               <Button
-                className="uitest-rubric-download-csv"
-                text={i18n.downloadCSV()}
+                className="uitest-rubric-switch-content-tab"
+                text={i18n.rubricTabStudent()}
                 color={Button.ButtonColor.brandSecondaryDefault}
-                onClick={onClickDownloadCSV}
+                onClick={onClickSwitchTab}
                 style={{margin: 0}}
               />
-            </CSVLink>
-          )}
+            )}
+            {!!teacherEval && teacherEvalCount > 0 && (
+              <CSVLink
+                headers={headers}
+                data={teacherEval}
+                filename={`lesson_${rubric.lesson.position}_student_scores.csv`}
+              >
+                <Button
+                  className="uitest-rubric-download-csv"
+                  text={i18n.downloadCSV()}
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  onClick={onClickDownloadCSV}
+                  style={{margin: 0}}
+                />
+              </CSVLink>
+            )}
+          </div>
         </div>
       </div>
     </div>

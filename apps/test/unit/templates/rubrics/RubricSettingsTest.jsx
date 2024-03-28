@@ -275,7 +275,7 @@ describe('RubricSettings', () => {
     wrapper.update();
     expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
     expect(wrapper.find('Button').at(1).text()).to.include(
-      i18n.rubricViewStudentRubric()
+      i18n.rubricTabStudent()
     );
   });
 
