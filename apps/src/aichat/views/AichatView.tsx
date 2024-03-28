@@ -49,6 +49,10 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(setAiCustomizations(aiCustomizations));
   }, [dispatch, initialAiCustomizations]);
 
+  const aiCustomizations = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
+
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
       {
@@ -66,6 +70,11 @@ const AichatView: React.FunctionComponent = () => {
     selectedButtonValue: viewMode,
     onChange: (value: string) => setViewMode(value),
   };
+
+  const chatWorkspaceHeader =
+    viewMode === ViewMode.EDIT
+      ? aichatI18n.aichatWorkspaceHeader()
+      : aiCustomizations.botName; // Get from level properties.
 
   return (
     <>
@@ -97,14 +106,14 @@ const AichatView: React.FunctionComponent = () => {
           <div className={moduleStyles.presentationArea}>
             <PanelContainer
               id="aichat-presentation-panel"
-              headerText={'Presentation'}
+              headerText={'Model Card'}
             />
           </div>
         )}
         <div className={moduleStyles.chatWorkspaceArea}>
           <PanelContainer
             id="aichat-workspace-panel"
-            headerText={aichatI18n.aichatWorkspaceHeader()}
+            headerText={chatWorkspaceHeader}
             rightHeaderContent={<CopyButton />}
           >
             <ChatWorkspace />
