@@ -10514,7 +10514,7 @@
       desc: "The AI Teaching Assistant transforms CS education, easing the workload for new and experienced teachers alike. By streamlining assessments, it boosts educator confidence, enabling a focus on enriching student interactions and tailored learning experiences."
     pilot_apps:
       heading: "Accepting pilot applications through June 2024"
-      desc: "We are enrolling **CSD Unit 3 teachers** to into our AI Teaching Assistant pilot. You'll get the chance to help experience and test this exciting new tool!"
+      desc: "We are enrolling **CSD Unit 3 teachers** into our AI Teaching Assistant pilot. You'll get the chance to help experience and test this exciting new tool!"
       cta: "Not a CSD teacher? [Sign up for our AI updates](%{sign_up_url})!"
     resources:
       heading: "Additional AI resources for educators"
@@ -10537,12 +10537,11 @@
       heading: "Frequently asked questions"
       support:
         question: "What can the AI Teaching Assistant currently support?"
-        answer_01: "The AI Teaching Assistant's first feature is AI-supported rubrics in the Interactive Games and Animations unit of Code.
-        org's Computer Science Discoveries (CSD) curriculum. This feature:"
-        answer_02: "In the future, the AI Teaching Assistant's feature set will expand to assist teachers with additional tasks."
+        answer_01: "The AI Teaching Assistant's first feature is AI-supported rubrics in the Interactive Games and Animations unit of Code.org's Computer Science Discoveries (CSD) curriculum. This feature:"
         list_01: "Allows teachers to assess their students' coding projects within the Code.org platform"
         list_02: "Saves teachers time by providing an initial assessment of student work"
         list_03: "Helps build confidence for teachers who are new to teaching Computer Science"
+        answer_02: "In the future, the AI Teaching Assistant's feature set will expand to assist teachers with additional tasks."
       units:
         question: "What Units is the AI Teaching Assistant available for?"
         answer: "The AI Teaching Assistant is launching in CSD's Interactive Games and Animations Unit. The team is hard at work building AI-supported features for additional curriculum."
@@ -10557,7 +10556,7 @@
         answer: "Code.org is investing in using AI to enhance teaching and learning.  Check out [https://code.org/ai](https://code.org/ai) to learn more about our AI curriculum, professional learning, and tools."
       demo:
         question: "Can I see a demo of how AI TA works?"
-        answer: ""
+        answer: "Join our curriculum manager, Angelina as she introduces the AI Teaching Assistant."
     partners:
       heading: "Developed in partnership with"
 
