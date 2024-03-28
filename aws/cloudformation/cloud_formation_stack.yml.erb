@@ -381,16 +381,12 @@ Resources:
 
 
 <% if frontends-%>
-  # ---------------------------------------------
-  # ElastiCache for Geocoder and Memcached
-  # ---------------------------------------------
+  # --------------------------------------------------------
+  # ElastiCache for Geocoder, Memcached, and Session Storage
+  # --------------------------------------------------------
 <%=  component 'cache'%>
-<% end -%>
-
-  # ---------------------------------------------
-  # ElastiCache for Redis-based Session Storage
-  # ---------------------------------------------
 <%=  component 'session_store'%>
+<% end -%>
 
   # ---------------------------------------------
   # Daemon Server
