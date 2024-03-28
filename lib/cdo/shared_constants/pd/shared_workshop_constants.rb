@@ -145,6 +145,7 @@ module Pd
       TEACHING_DESIGN_PROCESS = 'Teaching Design Process'.freeze,
       TEACHING_DATA_AND_SOCIETY = 'Teaching Data and Society'.freeze,
       CS_FUNDAMENTALS_MAKER_MICROBIT = 'CS Fundamentals Maker with micro:bit'.freeze,
+      WEB_DEVELOPMENT = 'Teaching Web Development'.freeze,
     ].freeze
 
     NOT_FUNDED_SUBJECTS = [
