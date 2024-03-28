@@ -105,7 +105,6 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
-  @skip
   Scenario: Student code is evaluated by AI when teacher requests evaluation for entire class
     Given I create a teacher-associated student named "Aiden"
     And I get debug info for the current user
