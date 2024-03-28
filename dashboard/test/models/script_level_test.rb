@@ -1143,9 +1143,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "can only be used on migrated scripts", e.message
   end
 
-  private
-
-  def create_fake_plc_data
+  private def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
     @plc_script.update(professional_learning_course: 'My course name')

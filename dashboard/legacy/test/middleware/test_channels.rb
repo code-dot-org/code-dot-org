@@ -536,13 +536,11 @@ class ChannelsTest < Minitest::Test
     assert_equal 400, last_response.status
   end
 
-  private
-
-  def timestamp(time)
+  private def timestamp(time)
     time.strftime('%Y-%m-%d %H:%M:%S.%L')
   end
 
-  def assert_can_publish(project_type)
+  private def assert_can_publish(project_type)
     start = 1.second.ago
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
@@ -562,7 +560,7 @@ class ChannelsTest < Minitest::Test
     assert_equal result['projectType'], project_type
   end
 
-  def assert_cannot_publish(project_type, channel_id = nil)
+  private def assert_cannot_publish(project_type, channel_id = nil)
     unless channel_id
       post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
       channel_id = last_response.location.split('/').last
@@ -578,18 +576,18 @@ class ChannelsTest < Minitest::Test
     assert_nil result['publishedAt']
   end
 
-  def assert_cannot_unpublish(channel_id)
+  private def assert_cannot_unpublish(channel_id)
     post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.client_error?
   end
 
-  def stub_project_body(should_restrict_share)
+  private def stub_project_body(should_restrict_share)
     sample_project = StringIO.new
     sample_project.puts "{\"inRestrictedShareMode\": #{should_restrict_share}}"
     SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
   end
 
-  def stub_project_age(project_old_enough, user_old_enough, apply_publish_limits = true)
+  private def stub_project_age(project_old_enough, user_old_enough, apply_publish_limits = true)
     test_project = mock
     test_project.stubs(:existed_long_enough_to_publish?).returns(project_old_enough)
     test_project.stubs(:owner_existed_long_enough_to_publish?).returns(user_old_enough)

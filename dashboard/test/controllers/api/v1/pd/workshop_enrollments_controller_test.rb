@@ -489,9 +489,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     assert_response 403
   end
 
-  private
-
-  def enrollment_test_params(teacher = nil)
+  private def enrollment_test_params(teacher = nil)
     if teacher
       first_name, last_name = teacher.name.split(' ', 2)
       email = teacher.email
@@ -508,7 +506,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     }
   end
 
-  def school_info_params
+  private def school_info_params
     {
       school_type: 'private',
       school_state: 'WA',

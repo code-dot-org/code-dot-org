@@ -277,9 +277,7 @@ class RubricsController < ApplicationController
     }
   end
 
-  private
-
-  def rubric_params
+  private def rubric_params
     params.transform_keys(&:underscore).permit(
       :level_id,
       :lesson_id,
@@ -303,7 +301,7 @@ class RubricsController < ApplicationController
     )
   end
 
-  def attempted_at
+  private def attempted_at
     script_level = @rubric.get_script_level
     channel_id = get_channel_id(@user, script_level)
     return nil unless channel_id
@@ -313,7 +311,7 @@ class RubricsController < ApplicationController
     source_data[:last_modified]
   end
 
-  def ai_evaluated_at
+  private def ai_evaluated_at
     RubricAiEvaluation.
       where(rubric_id: @rubric.id, user_id: @user.id, status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]).
       order(updated_at: :desc).

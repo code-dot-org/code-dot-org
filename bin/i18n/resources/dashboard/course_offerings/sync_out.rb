@@ -23,9 +23,7 @@ module I18n
             I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
-          private
-
-          def distribute_localization(i18n_locale, crowdin_file_path)
+          private def distribute_localization(i18n_locale, crowdin_file_path)
             crowdin_translations = JSON.load_file(crowdin_file_path)
 
             i18n_data = I18nScriptUtils.to_dashboard_i18n_data(i18n_locale, 'course_offerings', crowdin_translations)

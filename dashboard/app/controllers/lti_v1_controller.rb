@@ -382,42 +382,40 @@ class LtiV1Controller < ApplicationController
     render status: :ok, json: {}
   end
 
-  private
-
   NAMESPACE = 'lti_v1_controller'.freeze
 
-  def unauthorized_status
+  private def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
   end
 
-  def wrong_resource_type
+  private def wrong_resource_type
     render(status: :not_acceptable, json: {error: I18n.t('lti.error.wrong_resource_type')})
   end
 
-  def create_state_and_nonce
+  private def create_state_and_nonce
     state = generate_random_string 10
     nonce = Digest::SHA2.hexdigest(generate_random_string(10))
 
     {state: state, nonce: nonce}
   end
 
-  def write_cache(key, value, expires_in = 1.minute)
+  private def write_cache(key, value, expires_in = 1.minute)
     # TODO: Add error handling
     CDO.shared_cache.write("#{NAMESPACE}/#{key}", value.to_json, expires_in: expires_in)
   end
 
-  def read_cache(key)
+  private def read_cache(key)
     # TODO: Add error handling
     json_value = CDO.shared_cache.read("#{NAMESPACE}/#{key}")
     return nil unless json_value
     JSON.parse(json_value).symbolize_keys
   end
 
-  def generate_random_string(length)
+  private def generate_random_string(length)
     SecureRandom.alphanumeric length
   end
 
-  def log_unauthorized(exception, context = nil)
+  private def log_unauthorized(exception, context = nil)
     Honeybadger.notify(
       exception,
       context: context
