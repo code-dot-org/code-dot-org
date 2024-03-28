@@ -41,4 +41,37 @@ describe('SchoolDataInputs', () => {
     fireEvent.change(screen.getByRole('textbox'), {target: {value: '99'}});
     expect(screen.queryByText(i18n.zipInvalidMessage()));
   });
+
+  it('displays school dropdown if zip is given', () => {
+    renderDefault();
+    fireEvent.change(screen.getByRole('combobox'), {target: {value: 'US'}});
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: '98112'}});
+    expect(screen.queryByText(i18n.selectYourSchool()));
+  });
+
+  it('dropdown switches to input box if user clicks to add', () => {
+    renderDefault();
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
+      target: {value: 'US'},
+    });
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: '98112'}});
+    fireEvent.change(screen.getAllByRole('combobox')[1], {
+      target: {value: 'clickToAdd'},
+    });
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion()));
+  });
+
+  it('goes back to dropdown if user clicks return to results list', () => {
+    renderDefault();
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
+      target: {value: 'US'},
+    });
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: '98112'}});
+    fireEvent.change(screen.getAllByRole('combobox')[1], {
+      target: {value: 'clickToAdd'},
+    });
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion()));
+    fireEvent.click(screen.getByRole('button', {name: i18n.returnToResults()}));
+    expect(screen.queryByText(i18n.selectYourSchool()));
+  });
 });

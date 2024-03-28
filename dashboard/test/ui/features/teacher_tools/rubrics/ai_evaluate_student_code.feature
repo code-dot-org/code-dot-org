@@ -1,6 +1,6 @@
-@skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 @no_firefox
+@no_mobile
 Feature: Evaluate student code against rubrics using AI
   # Make sure AI config files in S3 are parseable. Do this in a UI test because
   # we do not allow S3 access in unit tests. Only needs to be run in 1 browser.
@@ -106,6 +106,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
+  @skip
   Scenario: Student code is evaluated by AI when teacher requests evaluation for entire class
     Given I create a teacher-associated student named "Aiden"
     And I get debug info for the current user
@@ -143,7 +144,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".uitest-run-ai-assessment" is enabled
 
     # Teacher switches to Class Management tab
-    When I click selector "button:contains('Class Management')"
+    When I click selector "button:contains('Class Data')"
     And I wait until element ".uitest-run-ai-assessment-all" is visible
     And element ".uitest-run-ai-assessment-all" is enabled
 
@@ -153,7 +154,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element ".uitest-eval-status-all-text" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in Student Rubric tab
-    When I click selector "button:contains('Student Rubric')"
+    When I click selector "button:contains('Assess a Student')"
     And I wait until element "#uitest-next-goal" is visible
     And I click selector "#uitest-next-goal"
     And I wait until element ".uitest-learning-goal-title" is visible
