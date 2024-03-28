@@ -281,6 +281,8 @@ class LtiV1Controller < ApplicationController
 
     result = nil
     had_changes = false
+    total_sections = 0
+    total_students = 0
     ActiveRecord::Base.transaction do
       lti_course ||= Queries::Lti.find_or_create_lti_course(
         lti_integration_id: lti_integration.id,
@@ -296,8 +298,12 @@ class LtiV1Controller < ApplicationController
 
       result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
       had_changes ||= !result[:changed].empty?
-    end
 
+      result[:changed].each_value do |section|
+        total_sections += 1
+        total_students += section[:size]
+      end
+    end
     metadata = {
       'number_of_sections' => total_sections,
       'number_of_students' => total_students,
