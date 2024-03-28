@@ -63,7 +63,7 @@ const AichatView: React.FunctionComponent = () => {
       {
         label: 'User View',
         value: ViewMode.PRESENTATION,
-        iconLeft: {iconName: 'house', iconStyle: 'solid', title: 'check'},
+        iconLeft: {iconName: 'user-group', iconStyle: 'solid', title: 'check'},
       },
     ],
     size: 'm',
