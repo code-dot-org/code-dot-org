@@ -687,7 +687,6 @@ function newSectionData(participantType) {
     courseVersionId: null,
     unitId: null,
     hidden: false,
-    isAssigned: undefined,
     restrictSection: false,
   };
 }
@@ -1345,7 +1344,6 @@ export const sectionFromServerSection = serverSection => ({
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
-  isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
   postMilestoneDisabled: serverSection.post_milestone_disabled,
   codeReviewExpiresAt: serverSection.code_review_expires_at

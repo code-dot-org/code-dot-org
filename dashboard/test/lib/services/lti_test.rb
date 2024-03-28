@@ -224,6 +224,11 @@ class Services::LtiTest < ActiveSupport::TestCase
         }
       ]
     }.deep_symbolize_keys
+
+    @empty_sync_result = {
+      all: {},
+      changed: {},
+    }
   end
 
   test 'initialize_lti_user should create User::TYPE_TEACHER when id_token contains teacher/admin roles' do
@@ -554,9 +559,9 @@ class Services::LtiTest < ActiveSupport::TestCase
     lti_course = create :lti_course, lti_integration: lti_integration
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    had_changes = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
 
-    assert_equal false, had_changes
+    assert_equal @empty_sync_result, result
   end
 
   test 'lti_user_roles should return the LTI roles for a given user' do

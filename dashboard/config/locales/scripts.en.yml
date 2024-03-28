@@ -15969,3 +15969,195 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        pl-csd-summer-2024-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 1
+          title: Day 1
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        pl-csd-summer-2024-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 2
+          title: Day 2
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        pl-csd-summer-2024-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 3
+          title: Day 3
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        pl-csd-summer-2024-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 4
+          title: Day 4
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        pl-csd-summer-2024-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Day 5 '
+          title: 'Day 5 '
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        virtual-pl-csd-summer-2024-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          title: Day 1
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        virtual-pl-csd-summer-2024-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          title: Day 2
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        virtual-pl-csd-summer-2024-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          title: Day 3
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        virtual-pl-csd-summer-2024-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          title: Day 4
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        virtual-pl-csd-summer-2024-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+          title: Day 5
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-microbit1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          title: Getting Started with Code.org
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-microbit2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparing to Teach Creating Apps for Devices with micro:bits
+          title: Preparing to Teach Creating Apps for Devices with micro:bits
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-aiml1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          title: Getting Started with Code.org
+          description: |-
+            **You will:**
+
+            * Get an introduction to Code.org’s mission.
+            * Learn how to navigate the Code.org website and teacher tools.
+            * Set up a classroom section.
+            * Locate and use course lesson plans and teacher resources.
+            * Learn how to access support while teaching Code.org curricula.
+
+            **Suggested time:** 80 minutes
+          student_description: |-
+            **You will:**
+
+            * Get an introduction to Code.org’s mission.
+            * Learn how to navigate the Code.org website and teacher tools.
+            * Set up a classroom section.
+            * Locate and use course lesson plans and teacher resources.
+            * Learn how to access support while teaching Code.org curricula.
+
+            **Suggested time:** 80 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-aiml2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Teaching Artificial Intelligence and Machine Learning '
+          title: 'Teaching AI and Machine Learning '
+          description: |2-
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes
+          student_description: |2-
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes
+          description_short: ''
+          description_audience: ''
