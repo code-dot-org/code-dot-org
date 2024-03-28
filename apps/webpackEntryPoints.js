@@ -135,6 +135,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_callouts': './src/sites/studio/pages/levels/editors/fields/_callouts.js',
   'levels/editors/fields/_droplet': './src/sites/studio/pages/levels/editors/fields/_droplet.js',
   'levels/editors/fields/_grid': './src/sites/studio/pages/levels/editors/fields/_grid.js',
+  'levels/editors/fields/_panels': './src/sites/studio/pages/levels/editors/fields/_panels.js',
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
   'levels/editors/fields/_preload_assets': './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
   'levels/editors/fields/_special_level_types': './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
@@ -190,6 +191,7 @@ const PEGASUS_ENTRIES = {
   'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
   'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
   'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
+  'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com

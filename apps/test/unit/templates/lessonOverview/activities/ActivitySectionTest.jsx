@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
+
+import {expect} from '../../../../util/reconfiguredChai';
 import {sampleActivities} from '../../../lib/levelbuilder/lesson-editor/activitiesTestData';
 
 describe('ActivitySection', () => {

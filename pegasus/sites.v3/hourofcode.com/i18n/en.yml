@@ -130,6 +130,10 @@
   teach_ai_homepage_banner_title: "AI education for the world"
   teach_ai_homepage_banner_desc: "Code.org is part of TeachAI, dedicated to empowering educators everywhere to teach with AI and about AI."
 
+  poetry_banner_title: "April is Poetry Month!"
+  poetry_banner_desc: "Celebrate Poetry Month with our \"Coding with Poetry\" activities and discover new perspectives!"
+  poetry_banner_explore_aria_label: "Explore poetry activities"
+
   curriculum_launch_2023_title: "Introducing incredible updates to our curriculum"
   curriculum_launch_2023_desc: "Updates to CSC, CSP, CSD, and more — plus a new Curriculum Catalog and redesigned Teach page to help you find it all!"
 
@@ -10486,6 +10490,13 @@
         title: "Get Support"
         desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
         button: "Visit our support center"
+
+  coding_with_ai_tile:
+    title: "Coding with AI"
+    desc: "The Coding with AI unit teaches strategies for using AI to simplify complex concepts, guide problem-solving, and even generate code, empowering students to become informed and ethical future coders."
+    duration: "Five 45 minute lessons"
+    aria_label: "Explore the Coding with AI lessons"
+    button_label: "Explore lessons"
 
   video_library_page_main_title: "Educational short videos"
   video_library_page_hero_description: "Code.org's growing library of educational videos is available for re-use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach."

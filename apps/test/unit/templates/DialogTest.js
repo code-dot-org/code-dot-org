@@ -1,8 +1,10 @@
 /** @file Tests for Dialog component */
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+import React from 'react';
+
 import Dialog from '@cdo/apps/templates/Dialog';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Dialog', function () {
   describe('fullWidth option', function () {

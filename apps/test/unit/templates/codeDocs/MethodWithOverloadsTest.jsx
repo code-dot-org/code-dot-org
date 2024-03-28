@@ -1,10 +1,12 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import MethodWithOverloads, {
   MethodOverloadSection,
   SingleMethod,
 } from '@cdo/apps/templates/codeDocs/MethodWithOverloads';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('MethodWithOverloads', () => {
   it('shows MethodOverloadSection if method has overloads', () => {

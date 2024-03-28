@@ -1,5 +1,6 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
+import React from 'react';
+
 import ProjectCard from '@cdo/apps/templates/projects/ProjectCard';
 import msg from '@cdo/locale';
 

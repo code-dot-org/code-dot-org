@@ -1,7 +1,9 @@
-import {expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
+
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('VerifiedResourcesNotification', () => {
   const defaultProps = {
