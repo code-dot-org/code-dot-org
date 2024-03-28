@@ -92,6 +92,30 @@ function TeacherDashboard({
     location.pathname !== TeacherDashboardPath.loginInfo &&
     location.pathname !== TeacherDashboardPath.standardsReport;
 
+  const generateEmptySectionGraphic = (hasStudents, hasCurriculumAssigned) => {
+    return (
+      <div className={dashboardStyles.emptyClassroomDiv}>
+        {location.pathname === TeacherDashboardPath.progress && (
+          <div>
+            <Heading1>{i18n.progress()}</Heading1>
+            <EmptySection
+              className={dashboardStyles.emptyClassroomProgress}
+              hasStudents={hasStudents}
+              hasCurriculumAssigned={hasCurriculumAssigned}
+            />
+          </div>
+        )}
+        {location.pathname !== TeacherDashboardPath.progress && (
+          <EmptySection
+            className={dashboardStyles.emptyClassroom}
+            hasStudents={hasStudents}
+            hasCurriculumAssigned={hasCurriculumAssigned}
+          />
+        )}
+      </div>
+    );
+  };
+
   return (
     <div>
       {includeHeader && (
@@ -130,26 +154,7 @@ function TeacherDashboard({
         />
         {studentCount === 0 && (
           <Route
-            component={props => (
-              <div className={dashboardStyles.emptyClassroomDiv}>
-                {location.pathname === TeacherDashboardPath.progress && (
-                  <div>
-                    <Heading1>{i18n.progress()}</Heading1>
-                    <EmptySection
-                      className={dashboardStyles.emptyClassroomProgress}
-                      hasStudents={false}
-                    />
-                  </div>
-                )}
-                {location.pathname !== TeacherDashboardPath.progress && (
-                  <EmptySection
-                    className={dashboardStyles.emptyClassroom}
-                    sectionId={sectionId}
-                    hasStudents={false}
-                  />
-                )}
-              </div>
-            )}
+            component={props => generateEmptySectionGraphic(false, true)}
           />
         )}
         <Route
@@ -168,28 +173,7 @@ function TeacherDashboard({
         />
         {coursesWithProgress.length === 0 && (
           <Route
-            component={props => (
-              <div className={dashboardStyles.emptyClassroomDiv}>
-                {location.pathname === TeacherDashboardPath.progress && (
-                  <div>
-                    <Heading1>{i18n.progress()}</Heading1>
-                    <EmptySection
-                      className={dashboardStyles.emptyClassroomProgress}
-                      hasStudents={true}
-                      hasCurriculumAssigned={false}
-                    />
-                  </div>
-                )}
-                {location.pathname !== TeacherDashboardPath.progress && (
-                  <EmptySection
-                    className={dashboardStyles.emptyClassroom}
-                    sectionId={sectionId}
-                    hasStudents={true}
-                    hasCurriculumAssigned={false}
-                  />
-                )}
-              </div>
-            )}
+            component={props => generateEmptySectionGraphic(true, false)}
           />
         )}
         <Route
