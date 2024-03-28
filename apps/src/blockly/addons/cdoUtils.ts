@@ -541,12 +541,10 @@ function updateVariableFields(
 ): void {
   const fields = block.fields;
   for (const key in fields) {
-    if (Object.prototype.hasOwnProperty.call(fields, key)) {
-      const field = fields[key];
-      if (field.id && serializedVariableMap.has(field.id)) {
-        field.name = serializedVariableMap.get(field.id)!;
-        delete field.id;
-      }
+    const field = fields[key];
+    if (field.id && serializedVariableMap.has(field.id)) {
+      field.name = serializedVariableMap.get(field.id)!;
+      delete field.id;
     }
   }
 }
