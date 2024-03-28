@@ -1,19 +1,21 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  levelType,
-  studentLevelProgressType,
-} from '@cdo/apps/templates/progress/progressTypes';
+
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   BubbleSize,
   getBubbleUrl,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 import {lessonHasLevels} from '@cdo/apps/templates/progress/progressHelpers';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+import {
+  levelType,
+  studentLevelProgressType,
+} from '@cdo/apps/templates/progress/progressTypes';
 import color from '@cdo/apps/util/color';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import _ from 'lodash';
+
+import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 
 export default class ProgressTableDetailCell extends React.Component {
   static propTypes = {
