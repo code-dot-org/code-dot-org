@@ -10553,10 +10553,10 @@
         answer: "The AI Teaching Assistant is available for teachers accepted into the pilot in mini and end-of-unit projects in the Interactive Games and Animations unit. In those lessons, the AI Teaching Assistant will appear in the bottom left-hand corner of your screen."
       keep_up:
         question: "Where should I go to keep up with Code.org's investment in AI-supported tools?"
-        answer: "Code.org is investing in using AI to enhance teaching and learning.  Check out [https://code.org/ai](https://code.org/ai) to learn more about our AI curriculum, professional learning, and tools."
+        answer: "Code.org is investing in using AI to enhance teaching and learning.  Check out [code.org/ai](https://code.org/ai) to learn more about our AI curriculum, professional learning, and tools."
       demo:
         question: "Can I see a demo of how AI TA works?"
-        answer: "Join our curriculum manager, Angelina as she introduces the AI Teaching Assistant."
+        answer: "Join our curriculum manager, Angelina, as she introduces the AI Teaching Assistant."
     partners:
       heading: "Developed in partnership with"
 

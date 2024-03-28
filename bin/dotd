@@ -358,7 +358,7 @@ def puts_quit_message
   EOS
 end
 
-# Flushes STDIN, returning the results of gets.
+# Flushes $stdin, returning the results of gets.
 # @return [String] The result of gets.
 def flush_and_gets
   $stdin.iflush
