@@ -7,23 +7,45 @@ import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import Button from '@cdo/apps/templates/Button';
 
-const SEARCH_ITEMS = [
+const SEARCH_DEFAULTS = [
   {value: 'selectASchool', text: i18n.selectASchool()},
   {value: 'clickToAdd', text: i18n.schoolClickToAdd()},
   {value: 'noSchoolSetting', text: i18n.noSchoolSetting()},
 ];
 
-export default function SchoolZipSearch({fieldNames}) {
-  const [selectedSchool, setSelectedSchool] = useState('');
+export default function SchoolZipSearch({fieldNames, zip}) {
+  const [selectedSchoolNcesId, setSelectedSchoolNcesId] = useState('');
   const [inputManually, setInputManually] = useState(false);
+  const [dropdownSchools, setDropdownSchools] = useState([]);
 
   const onSchoolChange = e => {
-    const schoolName = e.target.value;
-    setSelectedSchool(schoolName);
-    if (schoolName === 'clickToAdd') {
+    const schoolId = e.target.value;
+    setSelectedSchoolNcesId(schoolId);
+    if (schoolId === 'clickToAdd') {
       setInputManually(true);
     }
   };
+
+  const constructSchoolOption = school => ({
+    value: school.nces_id.toString(),
+    text: `${school.name}`,
+  });
+
+  /**
+   * Debounced function that will request school search results from the server.
+   * Because this function is debounced it is not guaranteed to execute
+   * when it is called - there may be a delay of up to 200ms.
+   * @param {string} q - Search query
+   * @param {function(err, result)} callback - Function called when the server
+   *   returns results or a request error occurs.
+   */
+  const searchUrl = `/dashboardapi/v1/schoolsearch/${zip}/40`;
+  fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
+    .then(response => (response.ok ? response.json() : []))
+    .then(json => {
+      const schools = json.map(school => constructSchoolOption(school));
+      setDropdownSchools(schools);
+    });
 
   return (
     <div>
@@ -37,9 +59,9 @@ export default function SchoolZipSearch({fieldNames}) {
           </BodyTwoText>
           <SimpleDropdown
             className={style.dropdown}
-            name={fieldNames.schoolName}
-            items={SEARCH_ITEMS}
-            selectedValue={selectedSchool}
+            name={fieldNames.ncesSchoolId}
+            items={SEARCH_DEFAULTS.concat(dropdownSchools)}
+            selectedValue={selectedSchoolNcesId}
             onChange={onSchoolChange}
             size="m"
           />
@@ -63,4 +85,5 @@ export default function SchoolZipSearch({fieldNames}) {
 
 SchoolZipSearch.propTypes = {
   fieldNames: PropTypes.object,
+  zip: PropTypes.string.isRequired,
 };
