@@ -73,7 +73,10 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
         </EmText>
       )}
       {!aiSubmitted && aiFeedback === thumbsdownval && (
-        <div className={style.aiAssessmentFeedback}>
+        <div
+          id="tour-ai-assessment-feedback"
+          className={style.aiAssessmentFeedback}
+        >
           <BodyFourText>
             <StrongText>{i18n.aiFeedbackNegativeWhy()}</StrongText>
           </BodyFourText>
