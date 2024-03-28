@@ -40,19 +40,14 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
 
   return (
-    <li
-      role="presentation"
-      className={classNames(
-        // moduleStyles.tab,
-        isSelected && moduleStyles.selectedTab
-      )}
-    >
+    <li role="presentation">
       <button
         type="button"
         role="tab"
         aria-selected={isSelected}
         aria-controls={tabPanelId}
         id={tabButtonId}
+        className={classNames(isSelected && moduleStyles.selectedTab)}
         onClick={handleClick}
         disabled={disabled}
       >

@@ -10,34 +10,100 @@
     margin: 0;
 
     li {
-      background: red;
       list-style: none;
       margin: 0;
       padding: 0;
-
-      button {
-        @include remove-button-styles;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
     }
   }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
 }
 
 // Tabs Colors
 .tabs-primary {
+  li button {
+    color: $light_gray_700;
 
-  .selectedTab {
-    background-color: green;
+    background-color: transparent;
+    border-radius: 0;
+
+    &:hover {
+      color: $light_primary_500;
+    }
+
+    &:focus-visible {
+      color: $light_primary_500;
+      outline: 2px solid $light_primary_500;
+    }
+
+    &:active:not(:disabled) {
+      color: $light_primary_500;
+      border: none !important;
+      border-bottom: 2px solid $light_primary_500 !important;
+    }
+
+    &.selectedTab {
+      color: $light_black;
+      border-bottom: 2px solid $light_primary_500;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: $light_gray_200;
+      border: none !important;
+    }
   }
-
 }
 
 .tabs-secondary {
+  li button {
+    color: $light_white;
+    background-color: $light_gray_700;
+    border-radius: 0.25rem 0.25rem 0 0;
 
-  .selectedTab {
-    background-color: blue;
+    &:hover {
+      color: $light_white;
+      background-color: $light_primary_500;
+    }
+
+    &:focus-visible {
+      color: $light_white;
+      background-color: $light_primary_500;
+      outline: 2px solid $light_primary_500;
+      outline-offset: 2px;
+    }
+
+    &:active:not(:disabled) {
+      color: $light_primary_500;
+      background-color: $light_white;
+      border: none !important;
+    }
+
+    &.selectedTab {
+      color: $light_primary_500;
+      background-color: $light_white;
+      border: none !important;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: $light_white;
+      background-color: $light_gray_200;
+      border: none !important;
+    }
   }
 }
 
@@ -49,6 +115,7 @@
 
       li button {
         @include button-one-text;
+        margin: 0;
         padding: 0.625rem 0;
       }
     }
@@ -74,6 +141,7 @@
 
       li button {
         @include button-two-text;
+        margin: 0;
       }
     }
   }
@@ -96,6 +164,7 @@
 
       li button {
         @include button-three-text;
+        margin: 0;
       }
     }
   }
@@ -118,6 +187,7 @@
 
       li button {
         @include button-four-text;
+        margin: 0;
       }
     }
   }
