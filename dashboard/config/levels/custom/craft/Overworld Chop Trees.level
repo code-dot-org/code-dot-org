@@ -62,7 +62,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" id="5">
           <next>
             <block type="craft_moveForward">
               <next>
