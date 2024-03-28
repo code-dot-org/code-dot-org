@@ -46,7 +46,7 @@ theme: responsive_full_width
         =hoc_s("ai_ta_page.pilot_apps.heading")
       %p.wrap-balance
         =hoc_s("ai_ta_page.pilot_apps.desc", markdown: :inline)
-      %p=hoc_s("ai_ta_page.pilot_apps.cta", markdown: :inline, locals: {sign_up_url: "#signup"})
+      %p=hoc_s("ai_ta_page.pilot_apps.cta", markdown: :inline, locals: {sign_up_url: "#ai-signup-form"})
     .button-wrapper.col-30
       %a.link-button.has-external-link{href: button_url, target: "_blank", rel: "noopener noreferrer"}
         =button_string
@@ -54,15 +54,16 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper.centered
     %h2=hoc_s("ai_ta_page.resources.heading")
-    = view "ai-teaching-assistant/ai_ta_editorial_cards"
+    = view :"ai_teaching_assistant/ai_ta_editorial_cards"
 
-%section#signup
+%section#ai-signup-form
   .wrapper
-    FORM HERE
+    = view :subscribe_form, subscribe_form_section_title: hoc_s("ai_ta_page.form.heading"), subscribe_form_section_desc: hoc_s("ai_ta_page.form.desc"), form_height: "375px", form_src: "https://go.pardot.com/l/153401/2024-03-27/pqwtxx"
 
 %section
   .wrapper
-    FAQ HERE
+    %h2=hoc_s("ai_ta_page.faq.heading")
+    = view :"ai_teaching_assistant/ai_ta_faq"
 
 %section.bg-neutral-light
   .wrapper.centered
@@ -70,4 +71,11 @@ theme: responsive_full_width
     %p=hoc_s("coding_with_ai_page.resources.desc")
     = view :"ai_pages_shared/ai_pages_resources", white_bg: true
 
+%section
+  .wrapper.centered
+    %h2.heading-sm
+      =hoc_s("ai_ta_page.partners.heading")
+    .logos-wrapper.no-margin-bottom
+      %img{src: "/images/avatars/stanford.png", alt: "Stanford University logo", style: "max-width: 150px"}
+      %img{src: "/images/avatars/schmidt-futures.png", alt: "Schmidt Futures logo", style: "max-width: 340px"}
 

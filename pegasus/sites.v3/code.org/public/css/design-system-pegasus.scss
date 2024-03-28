@@ -1461,3 +1461,18 @@ table {
   justify-content: space-between;
   align-items: center;
 }
+
+// List of logos
+// Set the max-width of each image inline to maintain consistent ratios
+.logos-wrapper {
+  margin-block: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+
+  img {
+    align-self: center;
+    width: 100%;
+  }
+}
