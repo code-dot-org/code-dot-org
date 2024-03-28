@@ -1,21 +1,23 @@
-import React from 'react';
-import {reduxStore} from '@cdo/storybook/decorators';
-import {Provider, connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import React from 'react';
+import {Provider, connect} from 'react-redux';
+
+import locales from '@cdo/apps/redux/localesRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
-import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
+import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 import {
   getScriptData,
   buildSectionProgress,
 } from '../sectionProgressTestHelpers';
-import {allowConsoleWarnings} from '../../../../test/util/testUtils';
-import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import locales from '@cdo/apps/redux/localesRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
 
 class _TableWrapper extends React.Component {
   static propTypes = {
