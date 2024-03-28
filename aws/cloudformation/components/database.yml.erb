@@ -130,7 +130,7 @@
         # because they create/drop temporary tables within a transaction:
         # https://github.com/code-dot-org/code-dot-org/blob/654d0cf90dd65848fdd045df3b9e4f85903d9f68/pegasus/test/fixtures/fake_dashboard.rb#L257-L271
         # Disable binary logging to improve write performance.
-        binlog_format: 'OFF'
+        binlog_format: 'ON'
         gtid-mode: ON_PERMISSIVE
         innodb_autoinc_lock_mode: 2
         #END: Static configuration settings.
@@ -323,6 +323,13 @@
     Type: AWS::RDS::DBCluster
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
+      # TODO: Test the process to upgrade production:
+      # 1) Provision future new production cluster via CloudFormation as a clone of existing cluster (which was created manually).
+      # 2) Make clone a binary log client, replicating from production cluster.
+      # 3) Upgrade clone to Aurora 3 / MySQL 8
+      SourceDBClusterIdentifier: staging-cluster
+      RestoreType: copy-on-write
+      UseLatestRestorableTime: true
       DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
       Engine: aurora-mysql
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
