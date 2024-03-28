@@ -251,6 +251,15 @@ module Cdo
       ''
     end
 
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Statsig API key.
+    def safe_statsig_api_client_key
+      CDO.statsig_api_client_key
+    rescue ArgumentError
+      # Return an empty string instead of raising
+      ''
+    end
+
     def dir(*dirs)
       File.join(root_dir, *dirs)
     end

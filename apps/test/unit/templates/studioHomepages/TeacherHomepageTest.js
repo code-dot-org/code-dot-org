@@ -1,12 +1,15 @@
-import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import {assert} from 'chai';
+import {shallow} from 'enzyme';
+import React from 'react';
+import sinon from 'sinon';
+
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
-import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {expect} from '../../../util/reconfiguredChai';
+
+import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
 
 const DEFAULT_PROPS = {
   announcements: [],

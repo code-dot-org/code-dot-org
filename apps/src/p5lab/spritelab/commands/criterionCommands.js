@@ -375,6 +375,60 @@ export const commands = {
     return false;
   },
 
+  // Returns true if a minimum number of sprites are in the specified group.
+  minimumGroupSprites(group, min = 1) {
+    const spriteIds = this.getSpriteIdsInUse();
+    const groupSpriteIds = spriteIds.filter(
+      id => this.nativeSpriteMap[id].group === group
+    );
+    return groupSpriteIds.length >= min;
+  },
+
+  // Returns true if a minimum number of sprites have no group.
+  minimumNonGroupSprites(min = 1) {
+    const spriteIds = this.getSpriteIdsInUse();
+    const nonGroupSpriteIds = spriteIds.filter(
+      id => !this.nativeSpriteMap[id].group
+    );
+    return nonGroupSpriteIds.length >= min;
+  },
+
+  // Returns true if sprites with a minimum number of costumes are in the specified group.
+  minimumCostumesForGroup(group, min = 1) {
+    const uniqueCostumes = [];
+    const spriteIds = this.getSpriteIdsInUse();
+    const spritesInUse = spriteIds.map(id => this.nativeSpriteMap[id]);
+    const groupSprites = spritesInUse.filter(sprite => sprite.group === group);
+
+    for (const sprite of groupSprites) {
+      const costume = sprite.getAnimationLabel();
+      if (!uniqueCostumes.includes(costume)) {
+        uniqueCostumes.push(costume);
+      }
+    }
+    return uniqueCostumes.length >= min;
+  },
+
+  // Returns true if there is exactly one sprite with the "players" group.
+  playerSpriteFound() {
+    const spriteIds = this.getSpriteIdsInUse();
+    const groupSpriteIds = spriteIds.filter(
+      id => this.nativeSpriteMap[id].group === 'players'
+    );
+    return groupSpriteIds.length === 1;
+  },
+
+  // Returns true if a player sprite has an upward vertical velocity
+  playerSpriteJumping() {
+    const spriteIds = this.getSpriteIdsInUse();
+    const spritesInUse = spriteIds.map(id => this.nativeSpriteMap[id]);
+
+    const jumpingSprites = spritesInUse.filter(
+      sprite => sprite.group === 'players' && sprite.velocityY < 0
+    );
+    return jumpingSprites.length > 0;
+  },
+
   // Special function for lesson: Mini-Project: Collector Game
   // Returns true if any sprite has one of: ['moving_with_arrow_keys', 'driving_with_arrow_keys', 'draggable'].
   interactiveBehaviorFound() {
@@ -468,6 +522,26 @@ export const commands = {
     return result;
   },
 
+  // Returns true if sprites from the specified groups touched, regardless of the eventLog.
+  groupSpritesTouched(subjectGroup, objectGroup) {
+    let result = false;
+    const allSprites = this.p5.World.allSprites;
+    const subjectSprites = subjectGroup
+      ? allSprites.filter(sprite => sprite.group === subjectGroup)
+      : allSprites;
+    const objectSprites = objectGroup
+      ? allSprites.filter(sprite => sprite.group === objectGroup)
+      : allSprites;
+    // P5 adds an isTouching method to sprite group arrays:
+    // https://github.com/code-dot-org/p5.play/blob/6b9a6ac479ce38a134cfc2fb9cadd50310741669/lib/p5.play.js#L3930
+    // If we've modified the array by filtering, we'll need to re-add the method.
+    if (!subjectSprites.isTouching) {
+      subjectSprites.isTouching = allSprites.isTouching;
+    }
+    result = subjectSprites.isTouching(objectSprites);
+    return result;
+  },
+
   // Returns true if a click event was logged this frame.
   clickEventFound() {
     let result = false;
@@ -510,6 +584,42 @@ export const commands = {
       }
     }
     return result;
+  },
+
+  // Returns true if a key press event was logged this frame.
+  keyPressEventFound() {
+    // Only check for values that are new this frame
+    for (let i = this.previous.eventLogLength; i < this.eventLog.length; i++) {
+      if (
+        this.eventLog[i].includes('whenPress: ') ||
+        this.eventLog[i].includes('whilePress: ')
+      ) {
+        return true;
+      }
+    }
+    return false;
+  },
+
+  // Returns true if the background changed this frame.
+  backgroundChanged() {
+    if (this.previous.background) {
+      return this.getBackground() !== this.previous.background;
+    } else {
+      return false;
+    }
+  },
+
+  // Returns true if the title text changed this frame.
+  titleChanged() {
+    const previousScreenText = this.previous.screenText;
+    if (previousScreenText) {
+      return (
+        this.screenText.title !== previousScreenText.title ||
+        this.screenText.subtitle !== previousScreenText.subtitle
+      );
+    } else {
+      return false;
+    }
   },
 
   // Returns true if text was printed this frame.

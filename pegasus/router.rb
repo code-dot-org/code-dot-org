@@ -354,10 +354,9 @@ class Documents < Sinatra::Base
       line = content.lines.count - remaining_content.lines.count + 1
       [header, remaining_content, line]
     rescue => exception
-      raise exception unless match[:yaml]
-      # re-raise the exception with added details
-      modified_message = "#{exception.message} \n#{match[:yaml]}"
-      raise exception.class, modified_message, exception.backtrace
+      # Append rendered header to error message.
+      exception.message << "\n#{match[:yaml]}" if match[:yaml]
+      raise
     end
 
     def document(path)

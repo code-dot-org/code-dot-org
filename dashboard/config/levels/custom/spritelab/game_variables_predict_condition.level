@@ -25,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**How do you loose the game?**\r\nCheck if the player has run out of Health.\r\n\r\n- Connect the `if Health = 0` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `chage background block` *inside* the new block\r\n- Press `Run` to see how it works",
+    "long_instructions": "**How do you loose the game?**\r\nCheck if the player has run out of **health**.\r\n\r\n- Connect the `if health = 0` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `chage background block` *inside* the new block\r\n- Press `Run` to see how it works",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -54,7 +54,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:23:09.345+00:00\",\"changed\":[\"cloned from \\\"game_dev_winning_conditional2\\\"\"],\"cloned_from\":\"game_dev_winning_conditional2\"},{\"changed_at\":\"2024-03-18 20:23:12 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:54:25 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:11:14 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:23:09.345+00:00\",\"changed\":[\"cloned from \\\"game_dev_winning_conditional2\\\"\"],\"cloned_from\":\"game_dev_winning_conditional2\"},{\"changed_at\":\"2024-03-18 20:23:12 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:54:25 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:11:14 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 20:27:22 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 20:27:26 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 20:31:42 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,7 +62,7 @@
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable id="brBn}v{CpUvR[.64ZYc{">Health</variable>
+          <variable id="brBn}v{CpUvR[.64ZYc{">health</variable>
         </variables>
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="16" y="16">
           <next>
@@ -71,7 +71,7 @@
               <field name="NAME">GameSetup</field>
               <next>
                 <block type="gamelab_showVariable">
-                  <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
+                  <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">health</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
                       <field name="LOCATION">{"x":200,"y":100}</field>
@@ -79,7 +79,7 @@
                   </value>
                   <next>
                     <block type="variables_set">
-                      <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
+                      <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">health</field>
                       <value name="VALUE">
                         <block type="math_number">
                           <field name="NUM">5</field>
@@ -108,7 +108,7 @@
           </value>
           <next>
             <block type="math_change">
-              <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
+              <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">health</field>
               <value name="DELTA">
                 <shadow type="math_number" id="[o[fCv%xLKlU/tXpTXSK">
                   <field name="NUM">-1</field>
@@ -138,7 +138,7 @@
                               </value>
                               <next>
                                 <block type="gamelab_spriteSay">
-                                  <field name="SPEECH">Game Over!</field>
+                                  <field name="SPEECH">Game over!</field>
                                   <value name="SPRITE">
                                     <block type="gamelab_allSpritesWithAnimation">
                                       <field name="ANIMATION">"game_panda"</field>

@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+import React from 'react';
+
 import {UnconnectedAppView as AppView} from '@cdo/apps/templates/AppView';
+
+import {expect} from '../../util/deprecatedChai';
 
 describe('AppView', () => {
   const DEFAULT_PROPS = {
