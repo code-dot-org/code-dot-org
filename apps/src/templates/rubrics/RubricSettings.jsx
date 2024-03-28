@@ -208,13 +208,13 @@ export default function RubricSettings({
               // we can't fetch the csrf token from the DOM because CSRF protection
               // is disabled on script level pages.
               setCsrfToken(data.csrfToken);
-              setUnevaluatedCount(data.attemptedUnevaluatedCount);
+              setEvaluatedCount(data.lastAttemptEvaluatedCount);
               if (data.attemptedCount === 0) {
                 setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
-              } else if (data.attemptedUnevaluatedCount === 0) {
-                setStatusAll(STATUS_ALL.SUCCESS);
+              } else if (data.pendingCount > 0) {
+                setStatusAll(STATUS_ALL.EVALUATION_PENDING);
               } else {
-                setStatusAll(STATUS_ALL.READY);
+                setStatusAll(STATUS_ALL.SUCCESS);
               }
             });
           }
