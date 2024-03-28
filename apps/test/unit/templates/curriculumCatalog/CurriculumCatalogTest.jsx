@@ -671,6 +671,9 @@ describe('CurriculumCatalog', () => {
         exact: false,
       });
 
+      // Track the number of times the Similar and Stretch recommenders output the same top result
+      let numOverlapTopResults = 0;
+
       for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
         const currCurriculum = FULL_TEST_COURSES[i];
 
@@ -688,11 +691,15 @@ describe('CurriculumCatalog', () => {
           currCurriculum.key,
           null
         );
-        const recommendedStretchCurriculum =
+        let recommendedStretchCurriculum =
+          recommendedStretchCurriculumResults[0];
+        if (
           recommendedSimilarCurriculum.key ===
           recommendedStretchCurriculumResults[0].key
-            ? recommendedStretchCurriculumResults[1]
-            : recommendedStretchCurriculumResults[0];
+        ) {
+          numOverlapTopResults++;
+          recommendedStretchCurriculum = recommendedStretchCurriculumResults[1];
+        }
 
         // Open expanded card of the current test curriculum
         fireEvent.click(quickViewButtons[i]);
@@ -716,6 +723,10 @@ describe('CurriculumCatalog', () => {
             .innerHTML.includes(recommendedStretchCurriculum.display_name)
         );
       }
+
+      // Ensure that there were instances of the Similar and Stretch recommenders outputting the same result, meaning the Stretch
+      // recommender had to suggest its next top result.
+      assert(numOverlapTopResults === 1);
     });
 
     it('does not recommend similar or stretch curricula the user has already taught', () => {
