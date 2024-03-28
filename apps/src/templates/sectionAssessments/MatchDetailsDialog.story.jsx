@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {UnconnectedMatchDetailsDialog as MatchDetailsDialog} from './MatchDetailsDialog';
 
 export default {
