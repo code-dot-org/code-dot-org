@@ -141,7 +141,6 @@ module Services
           # Custom variables substitutions must be configured in the LMS.
           custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
 
-          # Handles the possibility of the LMS not having sectionId variable substitution configured.
           member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
           # :section_names from Canvas is a stringified JSON array
           member_section_names = JSON.parse(custom_variables[:section_names])

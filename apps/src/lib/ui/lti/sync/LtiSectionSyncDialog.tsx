@@ -49,11 +49,15 @@ export default function LtiSectionSyncDialog({
     );
   };
 
-  const errorView = (error: string | undefined) => {
+  const errorView = (syncResult: LtiSectionSyncResult) => {
+    const errorMessages = getRosterSyncErrorMessage(syncResult).split('\n');
+
     return (
       <div>
         <h2 style={styles.dialogHeader}>{i18n.errorOccurredTitle()}</h2>
-        {error && <SafeMarkdown markdown={getRosterSyncErrorMessage(error)} />}
+        {errorMessages.map((errorMessage: string, index: React.Key) => (
+          <SafeMarkdown key={index} markdown={errorMessage} />
+        ))}
       </div>
     );
   };
@@ -177,7 +181,7 @@ export default function LtiSectionSyncDialog({
       case SubView.SPINNER:
         return spinnerView();
       case SubView.ERROR:
-        return errorView(syncResult.error);
+        return errorView(syncResult);
       case SubView.DISABLE_ROSTER_SYNC:
         return disableRosterSyncView();
       default:
