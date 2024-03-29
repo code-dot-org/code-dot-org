@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import styles from '../sectionProgress/unit-selector.module.scss';
 
 export default class AssessmentSelector extends Component {

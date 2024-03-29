@@ -277,11 +277,7 @@ class LtiV1Controller < ApplicationController
       nrps_url = params[:nrps_url]
     end
 
-    result = {
-      all: {},
-      changed: {}
-    }
-
+    result = nil
     had_changes = false
     ActiveRecord::Base.transaction do
       lti_course ||= Queries::Lti.find_or_create_lti_course(
@@ -296,20 +292,8 @@ class LtiV1Controller < ApplicationController
       nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
       nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
 
-      sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
-      had_changes ||= sync_course_roster_results
-
-      # Report which sections were updated
-      nrps_sections.each do |section_id, section|
-        student_count = section[:members].count do |member|
-          member[:roles].include?(Policies::Lti::CONTEXT_LEARNER_ROLE)
-        end
-
-        result[:all][section_id] = {
-          name: section[:name],
-          size: student_count,
-        }
-      end
+      result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
+      had_changes ||= !result[:changed].empty?
     end
 
     @lti_section_sync_result = result

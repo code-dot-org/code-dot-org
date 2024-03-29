@@ -35,7 +35,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "hide_view_data_button": "false",
@@ -46,7 +46,6 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "parent_level_id": 21671,
-    "display_name": "Create a Sprite Lab project",
     "block_pool": "gamelab",
     "include_shared_functions": "true",
     "name_suffix": "_2023",
@@ -63,23 +62,21 @@
       "upButton",
       "downButton"
     ],
-    "thumbnail_url": "https://code.org/shared/images/courses/logo_gamelab_square.png",
     "mini_toolbox": "true",
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": " Program the player to `begin moving with arrow keys` and `jump`. Choose the jump size.\r\n",
-    "standalone_app_name": "spritelab",
-    "long_instructions": "**Get your player moving and jumping**\r\n1. Program the player sprite to `begin moving with arrow keys` when the program runs\r\n- Add a `player does jump` block to the `when up pressed` event and choose the jump size\r\n\r\n-  Press `Run` then tap the arrows to move!",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_code": "if (World.frameCount == 1) {\r\n  \r\n   addCriteria(function() {\r\n  return playerSpriteFound() && minimumGroupSprites(\"walls\", 8);\r\n   }, \"starterSprites\"); //It looks like you removed a sprite. You can add it back or reset your program using the Version History button below.\r\n  \r\n   addCriteria(function() {\r\n  return minimumMatchingBehaviors(\"moving_with_arrow_keys\"); \r\n   }, \"noBehavior\"); //Your sprite needs a behavior.\r\n  \r\n    addCriteria(function() {\r\n  return keyWentDown(\"up\");\r\n   }, \"cscBookcoverClickUpArrowKey\"); //You need to click the up arrow key!\r\n  \r\n   addCriteria(function() {\r\n  return keyPressEventFound();\r\n   }, \"cscBookcoverAddEventBlock\"); //Add a 'when up arrow clicked' event block \r\n  \r\n    addCriteria(function() {\r\n  return keyPressEventFound() && playerSpriteJumping();\r\n   }, \"gameDesignEventNoJump\"); //Make sure your player jumps when you press a key.\r\n\r\n}\r\ncheck();\r\n"
+    "standalone_app_name": "game_design",
+    "long_instructions": "**Get your player moving and jumping**\r\n1. Program the player sprite to `begin moving with arrow keys` when the program runs\r\n- Add a `make player do jump` block to the `when up pressed` event and choose the jump size\r\n\r\n-  Press `Run` then tap the arrows to move!",
+    "validation_code": "if (World.frameCount == 1) {\r\n  \r\n   addCriteria(function() {\r\n  return playerSpriteFound() && minimumGroupSprites(\"walls\", 8);\r\n   }, \"starterSprites\"); //It looks like you removed a sprite. You can add it back or reset your program using the Version History button below.\r\n  \r\n   addCriteria(function() {\r\n  return minimumMatchingBehaviors(\"moving_with_arrow_keys\"); \r\n   }, \"noBehavior\"); //Your sprite needs a behavior.\r\n  \r\n    addCriteria(function() {\r\n  return keyWentDown(\"up\");\r\n   }, \"cscBookcoverClickUpArrowKey\"); //You need to click the up arrow key!\r\n  \r\n   addCriteria(function() {\r\n  return keyPressEventFound();\r\n   }, \"cscBookcoverAddEventBlock\"); //Add a 'when up arrow clicked' event block \r\n  \r\n    addCriteria(function() {\r\n  return keyPressEventFound() && playerSpriteJumping();\r\n   }, \"gameDesignEventNoJump\"); //Make sure your player jumps when you press a key.\r\n\r\n}\r\ncheck();\r\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Add the player sprite's behavior to the <code style=\\\"color:black; background-color:#FFBD46\\\">When run</code> program.\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_toggleBehaviorSimple\\\" id=\\\"+H{.X4]Mx;D!jf2Ok]8{\\\">\\n  <field name=\\\"TOGGLE\\\">\\\"begins\\\"</field>\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\" id=\\\"#@}@B-CM_z?vgs~L7`:O\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"game_penguin\\\"</field>\\n    </block>\\n  </value>\\n  <value name=\\\"BEHAVIOR\\\">\\n    <block type=\\\"gamelab_behavior_get\\\" id=\\\"yf*T0|()Ufr%3+7V==qK\\\">\\n      <mutation behaviorId=\\\"moving with arrow keys\\\" name=\\\"moving with arrow keys\\\"></mutation>\\n      <field name=\\\"NAME\\\">moving with arrow keys</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\\n\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/afebf40299fabda0f30a2e7f54855174/game_development_jump.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"There is a new block that makes any player type sprites jump! Attach it to the <code style=\\\"color:black; background-color:#6AF36C\\\">when up pressed</code> event. \\n\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"GameDev_playerJump\\\" id=\\\"yy{.[X:.rZzA*3xi2kJb\\\">\\n  <field name=\\\"STRENGTH\\\">6.5</field>\\n</block>\\n</xml>\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/80738e3e7252daeb48a69d849fba541d/game_development_jump.mp3\"}]",
+    "encrypted_examples": "TIdALavgLHun/5mCEOx4RL8WPQB/sNtoGA5d21h0d1fawHADmFBYmPU7b85P\nSzX1Xqy20CRjDA+xf0fno/8yGw==\n",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:35:25.107+00:00\",\"changed\":[\"cloned from \\\"game_meachaics_world7\\\"\"],\"cloned_from\":\"game_meachaics_world7\"},{\"changed_at\":\"2024-03-18 20:35:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 16:45:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 16:45:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 19:30:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:30:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:32:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:32:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 21:10:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 18:13:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:14:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:16:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:22:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:24:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:54:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:10:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:15:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:35:25.107+00:00\",\"changed\":[\"cloned from \\\"game_meachaics_world7\\\"\"],\"cloned_from\":\"game_meachaics_world7\"},{\"changed_at\":\"2024-03-18 20:35:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 16:45:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 16:45:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 19:30:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:30:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:32:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:32:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 21:10:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 18:13:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:14:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:16:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:22:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:24:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:54:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:10:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:15:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 14:47:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"standalone_app_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:29:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:32:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"authored_hints\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:33:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"authored_hints\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 20:58:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 22:01:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 21:26:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1230,10 +1227,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="GameDev_playerJump" id="yy{.[X:.rZzA*3xi2kJb" x="19" y="41">
-          <field name="STRENGTH">6.5</field>
+        <block type="gamelab_setBackgroundImageAs" id="h!!GMS1H)!V})+hb4D)2" x="204" y="0">
+          <field name="IMG">"gradient_02"</field>
         </block>
-        <block type="gamelab_toggleBehaviorSimple" id="+H{.X4]Mx;D!jf2Ok]8{" x="277" y="83">
+        <block type="gamelab_toggleBehaviorSimple" id="+H{.X4]Mx;D!jf2Ok]8{" x="82" y="69">
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="#@}@B-CM_z?vgs~L7`:O">
@@ -1247,15 +1244,11 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_keyPressed" id="m.$^=s}*r%j`#)Jz9fCe" x="151" y="169">
-          <field name="CONDITION">"when"</field>
-          <field name="KEY">"up"</field>
+        <block type="GameDev_playerJump" id="yy{.[X:.rZzA*3xi2kJb" x="126" y="145">
+          <field name="STRENGTH">6.5</field>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="h!!GMS1H)!V})+hb4D)2" x="14" y="207">
-          <field name="IMG">"gradient_02"</field>
-        </block>
-        <block type="gamelab_makeSpritesGridInput" id="](:gZbK.u65)58Oqq$6L" x="29" y="291">
-          <field name="ANIMATION_NAME">"stone_snow"</field>
+        <block type="gamelab_makeSpritesGridInput" id="](:gZbK.u65)58Oqq$6L" x="30" y="249">
+          <field name="ANIMATION_NAME">"dirt_grass"</field>
           <value name="GRID">
             <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
               <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
@@ -1265,7 +1258,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_makeNewSpriteAnon" id="nSMWaV6Vupk7H,J1*Kw;" x="27" y="382">
+        <block type="gamelab_makeNewSpriteAnon" id="nSMWaV6Vupk7H,J1*Kw;" x="27" y="352">
           <field name="ANIMATION_NAME">"game_penguin"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="W(o}3QiTq7CP+N14wja[">
@@ -1273,13 +1266,17 @@
             </block>
           </value>
         </block>
-        <block type="GameDev_setGroup" id="Ns/(cIF~q7lQ-h(Q/5*?" x="15" y="470">
+        <block type="GameDev_setGroup" id="Ns/(cIF~q7lQ-h(Q/5*?" x="30" y="476">
           <field name="GROUP">"walls"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="q*o3l#waMmuaAiBjH%I;">
-              <field name="ANIMATION">"stone_snow"</field>
+              <field name="ANIMATION">"dirt_grass"</field>
             </block>
           </value>
+        </block>
+        <block type="gamelab_keyPressed" id="m.$^=s}*r%j`#)Jz9fCe" x="33" y="561">
+          <field name="CONDITION">"when"</field>
+          <field name="KEY">"up"</field>
         </block>
       </xml>
     </toolbox_blocks>

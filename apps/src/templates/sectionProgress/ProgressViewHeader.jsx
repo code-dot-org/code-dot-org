@@ -1,13 +1,16 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {getCurrentUnitData} from './sectionProgressRedux';
-import {ViewType, unitDataPropType} from './sectionProgressConstants';
+
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
+import i18n from '@cdo/locale';
+
+import {h3Style} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
 import color from '../../util/color';
-import {h3Style} from '../../lib/ui/Headings';
+
+import {ViewType, unitDataPropType} from './sectionProgressConstants';
+import {getCurrentUnitData} from './sectionProgressRedux';
 import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 
 class ProgressViewHeader extends Component {

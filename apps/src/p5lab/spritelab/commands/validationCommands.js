@@ -125,17 +125,17 @@ export const commands = {
   setBonusSuccessMessage(message) {
     this.bonusSuccessMessage = message;
   },
-  setEarlyTime(frames) {
-    this.validationFrames.early = frames;
-  },
   setWaitTime(frames) {
     this.validationFrames.fail = frames;
+    return true;
   },
   setFailTime(frames) {
     this.validationFrames.fail = frames;
+    return true;
   },
   setDelayTime(frames) {
     this.validationFrames.delay = frames;
+    return true;
   },
   getFailTime() {
     return this.validationFrames.fail;

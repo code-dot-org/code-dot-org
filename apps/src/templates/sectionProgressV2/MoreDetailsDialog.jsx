@@ -28,7 +28,7 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
   );
 
   return (
-    <AccessibleDialog onClose={onClose}>
+    <AccessibleDialog onClose={onClose} closeOnClickBackdrop={true}>
       <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
       <button type="button" onClick={onClose} className={styles.xCloseButton}>
         <i id="x-close" className="fa-solid fa-xmark" />
@@ -36,16 +36,6 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
       <hr />
       <div role="region" className={styles.dialog}>
         <Heading6>{i18n.assignmentCompletionStates()}</Heading6>
-        {renderItem(
-          ITEM_TYPE.NOT_STARTED,
-          i18n.notStarted(),
-          i18n.progressLegendDetailsNotStarted()
-        )}
-        {renderItem(
-          ITEM_TYPE.NO_ONLINE_WORK,
-          i18n.noOnlineWork(),
-          i18n.progressLegendDetailsNoOnlineWork()
-        )}
         {renderItem(
           ITEM_TYPE.IN_PROGRESS,
           i18n.inProgress(),
@@ -72,6 +62,11 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
             i18n.validated(),
             i18n.progressLegendDetailsValidated()
           )}
+        {renderItem(
+          ITEM_TYPE.NO_ONLINE_WORK,
+          i18n.noOnlineWork(),
+          i18n.progressLegendDetailsNoOnlineWork()
+        )}
         <Heading6>{i18n.teacherActions()}</Heading6>
         {renderItem(
           ITEM_TYPE.NEEDS_FEEDBACK,

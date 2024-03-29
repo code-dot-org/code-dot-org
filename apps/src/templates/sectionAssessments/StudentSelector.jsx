@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import styles from '@cdo/apps/templates/sectionProgress/unit-selector.module.scss';
-import {ALL_STUDENT_FILTER} from './sectionAssessmentsRedux';
 import i18n from '@cdo/locale';
+
+import {ALL_STUDENT_FILTER} from './sectionAssessmentsRedux';
 
 export default class StudentSelector extends Component {
   static propTypes = {

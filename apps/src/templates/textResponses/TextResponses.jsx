@@ -1,20 +1,23 @@
+import {uniq, map, filter} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
-import {connect} from 'react-redux';
-import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
-import i18n from '@cdo/locale';
-import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
-import {h3Style} from '../../lib/ui/Headings';
-import color from '../../util/color';
-import TextResponsesTable from './TextResponsesTable';
-import Button from '../Button';
-import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
+import {connect} from 'react-redux';
+
 import {
   setScriptId,
   getSelectedScriptName,
 } from '@cdo/apps/redux/unitSelectionRedux';
+import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
+import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
+import i18n from '@cdo/locale';
+
+import {h3Style} from '../../lib/ui/Headings';
+import color from '../../util/color';
+import Button from '../Button';
+
+import TextResponsesTable from './TextResponsesTable';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},

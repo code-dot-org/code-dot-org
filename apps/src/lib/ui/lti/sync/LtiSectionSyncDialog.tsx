@@ -94,13 +94,16 @@ export default function LtiSectionSyncDialog({
       'https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section';
     const aboutSyncingUrl = LmsLinks.ROSTER_SYNC_INSTRUCTIONS_URL;
     const dialogTitle = i18n.ltiSectionSyncDialogTitle();
-    const dialogDescription = i18n.ltiSectionSyncDialogDescription({
-      aboutSectionsUrl,
-      aboutSyncingUrl,
-    });
+    const dialogDescription =
+      syncResult.changed && Object.keys(syncResult.changed).length > 0
+        ? i18n.ltiSectionSyncDialogDescription({
+            aboutSectionsUrl,
+            aboutSyncingUrl,
+          })
+        : i18n.ltiSectionSyncDialogDescriptionNoChange({aboutSyncingUrl});
     let sectionListItems;
-    if (syncResult && syncResult.all) {
-      sectionListItems = Object.entries(syncResult.all).map(
+    if (syncResult && syncResult.changed) {
+      sectionListItems = Object.entries(syncResult.changed).map(
         ([section_id, section]) => {
           const studentCount = i18n.ltiSectionSyncDialogStudentCount({
             numberOfStudents: section.size,
@@ -187,7 +190,7 @@ const LtiSectionShape = PropTypes.shape({
 });
 export const LtiSectionSyncResultShape = PropTypes.shape({
   all: PropTypes.objectOf(LtiSectionShape),
-  updated: PropTypes.objectOf(LtiSectionShape),
+  changed: PropTypes.objectOf(LtiSectionShape),
   error: PropTypes.string,
 });
 

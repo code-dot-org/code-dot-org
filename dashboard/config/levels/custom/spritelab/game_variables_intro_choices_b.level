@@ -52,7 +52,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:29.796+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice4\\\"\"],\"cloned_from\":\"game_dev_choice4\"},{\"changed_at\":\"2024-03-18 20:19:42 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:53:11 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:56:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:57:17 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:58:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 21:03:08 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:06:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:09:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:29.796+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice4\\\"\"],\"cloned_from\":\"game_dev_choice4\"},{\"changed_at\":\"2024-03-18 20:19:42 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:53:11 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:56:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:57:17 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:58:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 21:03:08 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:06:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:09:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 18:12:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -60,7 +60,7 @@
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable id="]~{fSy[rAAw;{0vd~%e-">Stars</variable>
+          <variable id="]~{fSy[rAAw;{0vd~%e-">stars</variable>
         </variables>
         <block type="when_run" deletable="false" movable="false" x="16" y="16">
           <next>
@@ -113,7 +113,7 @@
                               </value>
                               <next>
                                 <block type="gamelab_showVariable" deletable="false" movable="false">
-                                  <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">Stars</field>
+                                  <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">stars</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker" deletable="false" movable="false">
                                       <field name="LOCATION">{"x":200,"y":58}</field>
@@ -121,7 +121,7 @@
                                   </value>
                                   <next>
                                     <block type="variables_set" deletable="false" movable="false">
-                                      <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">Stars</field>
+                                      <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">stars</field>
                                       <value name="VALUE">
                                         <block type="math_number" deletable="false" movable="false">
                                           <field name="NUM">0</field>
@@ -206,7 +206,7 @@
                   </value>
                   <next>
                     <block type="math_change" deletable="false" movable="false">
-                      <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">Stars</field>
+                      <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">stars</field>
                       <value name="DELTA">
                         <shadow type="math_number" id="p!Lh^aW^Q+Z7u6_-CQfm">
                           <field name="NUM">1</field>
@@ -217,7 +217,7 @@
                       </value>
                       <next>
                         <block type="gamelab_ifVarEquals" deletable="false" movable="false">
-                          <field name="NUM" id="]~{fSy[rAAw;{0vd~%e-">Stars</field>
+                          <field name="NUM" id="]~{fSy[rAAw;{0vd~%e-">stars</field>
                           <value name="VAL">
                             <block type="math_number">
                               <field name="NUM">10</field>

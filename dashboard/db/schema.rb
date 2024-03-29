@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_18_185523) do
+ActiveRecord::Schema.define(version: 2024_03_21_184256) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -863,6 +863,16 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["deployment_id"], name: "index_lti_deployments_on_deployment_id"
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
+  end
+
+  create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.boolean "satisfied", null: false
+    t.string "locale"
+    t.boolean "early_access"
+    t.datetime "created_at", null: false
+    t.index ["satisfied"], name: "index_lti_feedbacks_on_satisfied"
+    t.index ["user_id"], name: "index_lti_feedbacks_on_user_id", unique: true
   end
 
   create_table "lti_integrations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2372,6 +2382,7 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
   add_foreign_key "lti_courses", "lti_deployments"
   add_foreign_key "lti_courses", "lti_integrations"
   add_foreign_key "lti_deployments", "lti_integrations"
+  add_foreign_key "lti_feedbacks", "users"
   add_foreign_key "lti_sections", "lti_courses"
   add_foreign_key "lti_sections", "sections"
   add_foreign_key "lti_user_identities", "lti_integrations"

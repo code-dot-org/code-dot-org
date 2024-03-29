@@ -53,27 +53,38 @@ $(document).ready(function () {
     sectionStandardsProgress,
     locales,
   });
+
+  const selectedSectionFromList = sections.find(s => s.id === section.id);
+  const selectedSection = {...selectedSectionFromList, ...section};
+
   const store = getStore();
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
   store.dispatch(setSections(sections));
-  store.dispatch(selectSection(section.id));
-  store.dispatch(setStudentsForCurrentSection(section.id, section.students));
-  store.dispatch(setRosterProvider(section.login_type));
-  store.dispatch(setRosterProviderName(section.login_type_name));
-  store.dispatch(setLoginType(section.login_type));
+  store.dispatch(selectSection(selectedSection.id));
+  store.dispatch(
+    setStudentsForCurrentSection(selectedSection.id, selectedSection.students)
+  );
+  store.dispatch(setRosterProvider(selectedSection.login_type));
+  store.dispatch(setRosterProviderName(selectedSection.login_type_name));
+  store.dispatch(setLoginType(selectedSection.login_type));
   store.dispatch(setLocaleCode(localeCode));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
-  if (!section.sharing_disabled && section.script.project_sharing) {
+  if (
+    !selectedSection.sharing_disabled &&
+    selectedSection.script.project_sharing
+  ) {
     store.dispatch(setShowSharingColumn(true));
   }
 
   // Default the scriptId to the script assigned to the section
-  const defaultScriptId = section.script ? section.script.id : null;
+  const defaultScriptId = selectedSection.script
+    ? selectedSection.script.id
+    : null;
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }
@@ -89,15 +100,14 @@ $(document).ready(function () {
             <TeacherDashboard
               {...props}
               studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={section.id}
-              sectionName={section.name}
-              section
-              studentCount={section.students.length}
+              sectionId={selectedSection.id}
+              sectionName={selectedSection.name}
+              studentCount={selectedSection.students.length}
               anyStudentHasProgress={anyStudentHasProgress}
               showAITutorTab={showAITutorTab}
               sectionProviderName={sectionProviderName(
                 store.getState(),
-                section.id
+                selectedSection.id
               )}
             />
           )}
