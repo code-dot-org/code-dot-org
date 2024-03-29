@@ -78,6 +78,9 @@ const initialState: AichatState = {
 
 // THUNKS
 
+// This thunk saves a student's AI customizations using the Project Manager (ie, to S3 typically),
+// then does a comparison between the previous and current saved customizations in order to
+// output a message to the chat window with the list of customizations that were updated.
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
