@@ -3,7 +3,7 @@ import React from 'react';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MODEL_CARD_FIELDS_AND_LABELS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
-import CollapsibleSection from '@cdo/apps/lab2/levelEditors/aiCustomizations/CollapsibleSection';
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import {BodyFourText, Heading4} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './presentation-view.module.scss';
 
