@@ -92,7 +92,6 @@ class AiTutorInteractionsController < ApplicationController
   def determine_user_ids_for_interactions
     # If the current user is a student, ignore any filters and return their own ID.
     unless current_user.can_view_student_ai_chat_messages?
-      puts "you cant view messages"
       return [current_user.id] if params[:userId].blank? && params[:sectionId].blank?
       # If a student tries to provide filters, return nil and a specific error message.
       return nil, 'Students cannot provide filters.'
