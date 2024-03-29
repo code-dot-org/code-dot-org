@@ -130,6 +130,7 @@ export default function RubricSettings({
     setDisplayDetails(!displayDetails);
   };
 
+  // load initial ai evaluation status
   useEffect(() => {
     if (!!rubricId && !!sectionId) {
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
@@ -196,6 +197,7 @@ export default function RubricSettings({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricId, sectionId]);
 
+  // after ai eval is requested, poll for status changes
   useEffect(() => {
     if (polling && !!rubricId && !!sectionId) {
       const intervalId = setInterval(() => {
