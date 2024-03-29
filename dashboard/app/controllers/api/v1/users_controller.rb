@@ -6,6 +6,10 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :post_show_progress_table_v2, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
+  private def to_bool(val)
+    ActiveModel::Type::Boolean.new.cast val
+  end
+
   def load_user
     user_id = params[:user_id]
     if current_user.nil? || (user_id != 'me' && user_id.to_i != current_user.id)
@@ -199,7 +203,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       return head :unauthorized
     end
 
-    target_user.ai_tutor_access_denied = !params[:ai_tutor_access].try(:to_bool)
+    target_user.ai_tutor_access_denied = !to_bool(params[:ai_tutor_access])
     target_user.save
 
     head :no_content
