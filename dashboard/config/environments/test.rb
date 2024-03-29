@@ -75,5 +75,16 @@ Dashboard::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
+  if CDO.running_web_application?
+    # Use default logging formatter so that PID and timestamp are not suppressed.
+    config.log_formatter = Logger::Formatter.new
+
+    # Log condensed lines to syslog for centralized logging.
+    config.lograge.enabled = true
+    config.lograge.formatter = Lograge::Formatters::Cee.new
+    require 'syslog/logger'
+    config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
+  end
+
   config.experiment_cache_time_seconds = 0
 end
