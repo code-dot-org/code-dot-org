@@ -115,6 +115,15 @@ theme: responsive_full_width
           %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml")}
             =hoc_s(:call_to_action_self_paced_pl)
 
+-# Remove the DCDO logic after the AI Teaching Assistant launch
+- if !!DCDO.get('ai-teaching-assistant-launch', false)
+  = view :section_divider_line
+
+  %section
+    .wrapper
+      %h2=hoc_s("ai_integrations.heading")
+      %p=hoc_s("ai_integrations.desc")
+      = view :ai_integrations
 
 %section.bg-neutral-light
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
