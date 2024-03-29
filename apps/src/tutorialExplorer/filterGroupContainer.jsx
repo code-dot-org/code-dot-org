@@ -4,8 +4,10 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import {getResponsiveValue} from './responsive';
+
 import fontConstants from '@cdo/apps/fontConstants';
+
+import {getResponsiveValue} from './responsive';
 
 export default class FilterGroupContainer extends React.Component {
   static propTypes = {

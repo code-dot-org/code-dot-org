@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import BaseDialog from '../../BaseDialog';
+
 import CreateStandardsReportStep1 from './CreateStandardsReportStep1';
 import CreateStandardsReportStep2 from './CreateStandardsReportStep2';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export class CreateStandardsReportDialog extends Component {
   static propTypes = {

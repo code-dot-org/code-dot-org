@@ -25,7 +25,7 @@
 
 .action-block__wrapper.action-block__wrapper--three-col
   - resource_item.each do |resource_item|
-    .action-block.action-block--one-col.flex-space-between
+    .action-block.action-block--one-col.flex-space-between{class: white_bg ? "white" : ""}
       .content-wrapper
         %h3
           = resource_item[:title]
