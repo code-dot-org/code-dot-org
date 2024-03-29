@@ -65,37 +65,43 @@ class AiTutorInteractionsController < ApplicationController
 
   # GET /ai_tutor_interactions
   def index
-    return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor chat messages'}) unless current_user.can_view_student_ai_chat_messages?
-    params.require([:sectionId])
-    section = Section.find(params[:sectionId])
-    students = section.students
-    return render(status: :not_found, json: {error: 'Section not found'}) unless section
-    return render(status: :forbidden, json: {error: 'This user does not own this section'}) unless current_user.sections.include?(section)
-    ai_tutor_interactions = AiTutorInteraction.where(user_id: students.pluck(:id)).map(&:attributes)
-    student_chats = []
-    ai_tutor_interactions.each do |interaction|
-      student_name = students.find(interaction["user_id"]).name
-      interaction["student_name"] = student_name
-      student_chat = interaction.transform_keys {|key| key.camelize(:lower)}
-      student_chats << student_chat
+    unless user_has_chat_access?
+      return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor chat messages.'})
     end
-    render json: student_chats
+
+    user_ids = determine_user_ids_for_interactions
+
+    interactions = AiTutorInteraction.where(user_id: user_ids)
+    render json: format_ai_tutor_interactions(interactions)
   end
 
-  # GET /ai_tutor_interactions/get_for_student
-  def get_for_student
-    params.require([:userId])
-    student = User.find(params[:userId])
-    return render(status: :not_found, json: {error: 'Student not found'}) unless student
-    teacher_can_view_chats = current_user.students.include?(student)
-    student_can_view_own_chats = student.id == current_user.id
-    return render(status: :forbidden, json: {error: 'This user does not have access to these chats'}) unless teacher_can_view_chats || student_can_view_own_chats
-    ai_tutor_interactions = AiTutorInteraction.where(user_id: student.id).map(&:attributes)
-    student_chats = []
-    ai_tutor_interactions.each do |interaction|
-      student_chat = interaction.transform_keys {|key| key.camelize(:lower)}
-      student_chats << student_chat
+  private
+
+  def user_has_chat_access?
+    current_user.can_view_student_ai_chat_messages? || current_user.has_ai_tutor_access?
+  end
+
+  def determine_user_ids_for_interactions
+    if current_user.can_view_student_ai_chat_messages?
+      # Teacher scenario
+      if params[:sectionId].present?
+        section = current_user.sections.find_by(id: params[:sectionId])
+        return render(status: :not_found, json: {error: 'Section not found, or user does not have permission for this section.'}) unless section
+        section.students.pluck(:id)
+      else
+        current_user.students.pluck(:id)
+      end
+    else
+      # Student scenario
+      [current_user.id]
     end
-    render json: student_chats
+  end
+
+  def format_ai_tutor_interactions(interactions)
+    interactions.includes(:user).map do |interaction|
+      interaction.attributes.merge({
+        'studentName' => interaction.user.name
+      }).transform_keys { |key| key.camelize(:lower) }
+    end
   end
 end

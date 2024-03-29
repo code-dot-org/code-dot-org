@@ -260,12 +260,11 @@ class Ability
       if user.has_ai_tutor_access?
         can :chat_completion, :openai_chat
         can :create, AiTutorInteraction, user_id: user.id
-        can :get_for_student, AiTutorInteraction
+        can :index, AiTutorInteraction
       end
 
       if user.can_view_student_ai_chat_messages?
         can :index, AiTutorInteraction
-        can :get_for_student, AiTutorInteraction
       end
     end
 
