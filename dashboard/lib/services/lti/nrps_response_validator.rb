@@ -29,7 +29,7 @@ module Services
 
         REQUIRED_CUSTOM_FIELDS.each do |custom_field|
           next unless custom_field_missing?(custom_field)
-          errors << ::I18n.t('lti.error.missing_key_config', field: custom_field)
+          errors << ::I18n.t('lti.error.missing_tool_config', field: "custom_fields[#{custom_field}]")
         end
 
         errors
