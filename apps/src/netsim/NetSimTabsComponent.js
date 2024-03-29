@@ -7,10 +7,11 @@
  */
 
 import $ from 'jquery';
-var buildMarkup = require('./NetSimTabsComponent.html.ejs');
-var NetSimRouterTab = require('./NetSimRouterTab');
-var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
+
 var NetSimDnsTab = require('./NetSimDnsTab');
+var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
+var NetSimRouterTab = require('./NetSimRouterTab');
+var buildMarkup = require('./NetSimTabsComponent.html.ejs');
 var NetSimTabType = require('./NetSimConstants').NetSimTabType;
 var shouldShowTab = require('./NetSimUtils').shouldShowTab;
 var NetSimGlobals = require('./NetSimGlobals');

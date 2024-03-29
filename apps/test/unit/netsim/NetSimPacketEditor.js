@@ -1,6 +1,8 @@
 /** @file Tests for NetSimPacketEditor */
 import {assert} from '../../util/reconfiguredChai';
+
 var NetSimTestUtils = require('../../util/netsimTestUtils');
+
 var NetSimPacketEditor = require('@cdo/apps/netsim/NetSimPacketEditor');
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');

@@ -1,4 +1,5 @@
 import {assert} from '../../util/reconfiguredChai';
+
 var ArgumentUtils = require('@cdo/apps/netsim/ArgumentUtils');
 
 describe('ArgumentUtils', function () {

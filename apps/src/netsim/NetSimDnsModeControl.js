@@ -2,6 +2,7 @@
  * @overview UI component used to select a DNS mode at runtime.
  */
 import $ from 'jquery';
+
 var markup = require('./NetSimDnsModeControl.html.ejs');
 var DnsMode = require('./NetSimConstants').DnsMode;
 
