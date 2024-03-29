@@ -4,9 +4,9 @@ import React, {useEffect, useRef} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
+import {Heading1} from '@cdo/apps/componentLibrary/typography';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
@@ -92,6 +92,30 @@ function TeacherDashboard({
     location.pathname !== TeacherDashboardPath.loginInfo &&
     location.pathname !== TeacherDashboardPath.standardsReport;
 
+  const generateEmptySectionGraphic = (hasStudents, hasCurriculumAssigned) => {
+    return (
+      <div className={dashboardStyles.emptyClassroomDiv}>
+        {location.pathname === TeacherDashboardPath.progress && (
+          <div>
+            <Heading1>{i18n.progress()}</Heading1>
+            <EmptySection
+              className={dashboardStyles.emptyClassroomProgress}
+              hasStudents={hasStudents}
+              hasCurriculumAssigned={hasCurriculumAssigned}
+            />
+          </div>
+        )}
+        {location.pathname !== TeacherDashboardPath.progress && (
+          <EmptySection
+            className={dashboardStyles.emptyClassroom}
+            hasStudents={hasStudents}
+            hasCurriculumAssigned={hasCurriculumAssigned}
+          />
+        )}
+      </div>
+    );
+  };
+
   return (
     <div>
       {includeHeader && (
@@ -128,14 +152,9 @@ function TeacherDashboard({
           path={TeacherDashboardPath.standardsReport}
           component={props => applyV1TeacherDashboardWidth(<StandardsReport />)}
         />
-        {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
         {studentCount === 0 && (
           <Route
-            component={props =>
-              applyV1TeacherDashboardWidth(
-                <EmptySection sectionId={sectionId} />
-              )
-            }
+            component={props => generateEmptySectionGraphic(false, true)}
           />
         )}
         <Route
@@ -154,13 +173,7 @@ function TeacherDashboard({
         />
         {coursesWithProgress.length === 0 && (
           <Route
-            component={() =>
-              applyV1TeacherDashboardWidth(
-                <div className={dashboardStyles.text}>
-                  <SafeMarkdown markdown={i18n.noProgressSection()} />
-                </div>
-              )
-            }
+            component={props => generateEmptySectionGraphic(true, false)}
           />
         )}
         <Route
