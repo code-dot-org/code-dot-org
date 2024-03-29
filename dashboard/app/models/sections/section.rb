@@ -399,6 +399,7 @@ class Section < ApplicationRecord
         sharing_disabled: sharing_disabled?,
         studentCount: students.distinct(&:id).size,
         code: code,
+        course_display_name: course_display_name,
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
