@@ -89,7 +89,7 @@ module Cdo
     end
 
     module SafeInterpolation
-      def initialize
+      def initialize(...)
         super
 
         # Override the default handler for the "missing interpolation argument"
@@ -164,11 +164,68 @@ module Cdo
       end
     end
 
-    class SimpleBackend < ::I18n::Backend::Simple
+    module Plugins
       include SmartTranslate
       include MarkdownTranslate
       include SafeInterpolation
       include I18nStringUrlTrackerPlugin
+    end
+
+    class SimpleBackend < ::I18n::Backend::Simple
+      include Plugins
+    end
+
+    class LazyLoadableBackend < ::I18n::Backend::LazyLoadable
+      include Plugins
+
+      LOCALES_MAPPING = YAML.load_file(CDO.dir('dashboard/config/locales.yml')).each_with_object({}) do |(k, v), locales|
+        locales[k.to_sym] = v.to_sym if v.is_a?(String)
+      end.freeze
+
+      class ::I18n::Backend::LocaleExtractor
+        def self.locale_from_path(path)
+          # Extracts the locale name from the path, like "en", "en-US", "haw", "haw-HI", etc.
+          path[/\b([a-z]{2,3}(?:-[A-Z]{2})?)\b\.\w+$/, 1]&.to_sym
+        end
+      end
+
+      def load_translations(*files)
+        loaded_files.merge(files.flatten) if lazy_load?
+        super
+      end
+
+      def reload!
+        @loaded_files = nil if lazy_load?
+        super
+      end
+
+      def eager_load!
+        # Ignores eager loading instead of raising an error if lazy loading is enabled
+        super unless lazy_load?
+      end
+
+      protected
+
+      def loaded_files
+        @loaded_files ||= Set.new
+      end
+
+      def filenames_for_current_locale
+        valid_locales = Set.new(::I18n.fallbacks[::I18n.locale])
+        valid_locales << LOCALES_MAPPING[::I18n.locale] # en: :'en-US'
+        valid_locales.compact_blank
+
+        (::I18n.load_path.flatten - loaded_files.to_a).select do |path|
+          path_locale = ::I18n::Backend::LocaleExtractor.locale_from_path(path)
+          path_locale.nil? || valid_locales.include?(path_locale)
+        end
+      end
+
+      # Prevents from raising an error when the locale in the filename and
+      # the root locale key in the file content mismatch,
+      # like when `en.yml` has a root locale key of `en-US:` instead of `en:`
+      def assert_file_named_correctly!(...)
+      end
     end
   end
 end

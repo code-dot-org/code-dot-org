@@ -13,6 +13,9 @@ Dashboard::Application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = true
 
+  # Configure i18n
+  config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
+
   # Configure static asset server for tests with Cache-Control for performance.
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
