@@ -45,6 +45,8 @@ class DCDOBase < DynamicConfigBase
       # Whether the scholarship dropdown is locked on the application dashboard.
       'scholarship-dropdown-locked': DCDO.get('scholarship-dropdown-locked', true),
       hoc_mode: DCDO.get('hoc_mode', false),
+      # Whether to show the marketing banners for the AI Teacher Assistant launch. Can be removed later.
+      'ai-teaching-assistant-launch': DCDO.get('ai-teaching-assistant-launch', false),
     }
   end
 end

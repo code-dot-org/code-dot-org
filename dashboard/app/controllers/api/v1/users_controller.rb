@@ -24,11 +24,13 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     if current_user
       render json: {
         id: current_user.id,
+        uuid: Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, current_user.id.to_s),
         username: current_user.username,
         user_type: current_user.user_type,
         is_signed_in: true,
         short_name: current_user.short_name,
         is_verified_instructor: current_user.verified_instructor?,
+        is_lti: Policies::Lti.lti?(current_user),
         mute_music: current_user.mute_music?,
         under_13: current_user.under_13?,
         over_21: current_user.over_21?,

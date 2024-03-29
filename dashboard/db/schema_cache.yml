@@ -3111,6 +3111,34 @@ columns:
   - *64
   - *27
   - *28
+  lti_feedbacks:
+  - *18
+  - *12
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: satisfied
+    sql_type_metadata: *23
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: locale
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: early_access
+    sql_type_metadata: *23
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - *10
   lti_integrations:
   - *18
   - *38
@@ -7581,6 +7609,7 @@ primary_keys:
   libraries: id
   lti_courses: id
   lti_deployments: id
+  lti_feedbacks: id
   lti_integrations: id
   lti_sections: id
   lti_user_identities: id
@@ -7775,6 +7804,7 @@ data_sources:
   libraries: true
   lti_courses: true
   lti_deployments: true
+  lti_feedbacks: true
   lti_integrations: true
   lti_sections: true
   lti_user_identities: true
@@ -9634,6 +9664,33 @@ indexes:
     unique: false
     columns:
     - deployment_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  lti_feedbacks:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_feedbacks
+    name: index_lti_feedbacks_on_user_id
+    unique: true
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_feedbacks
+    name: index_lti_feedbacks_on_satisfied
+    unique: false
+    columns:
+    - satisfied
     lengths: {}
     orders: {}
     opclasses: {}
@@ -13180,7 +13237,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240318185523
+version: 20240321184256
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

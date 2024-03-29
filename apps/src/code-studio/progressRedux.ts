@@ -22,14 +22,20 @@ import {
 import {
   processServerStudentProgress,
   getLevelResult,
+  processedLevel,
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {mergeActivityResult} from './activityUtils';
 import {SET_VIEW_TYPE} from './viewAsRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
-import {updateBrowserForLevelNavigation} from './browserNavigation';
+import {
+  canChangeLevelInPage,
+  updateBrowserForLevelNavigation,
+} from './browserNavigation';
 import {TestResults} from '@cdo/apps/constants';
 import {nextLevelId} from './progressReduxSelectors';
+import {getBubbleUrl} from '../templates/progress/BubbleFactory';
+import {navigateToHref} from '../utils';
 
 export interface ProgressState {
   currentLevelId: string | null;
@@ -283,20 +289,27 @@ export const queryUserProgress =
 export function navigateToLevelId(levelId: string): ProgressThunkAction {
   return (dispatch, getState) => {
     const state = getState().progress;
-    if (!state.currentLessonId) {
+    if (!state.currentLessonId || !state.currentLevelId) {
       return;
     }
-    const newLevel = getLevelById(
-      state.lessons,
-      state.currentLessonId,
-      levelId
+    const newLevel = processedLevel(
+      getLevelById(state.lessons, state.currentLessonId, levelId)
     );
     if (!newLevel) {
       return;
     }
 
-    updateBrowserForLevelNavigation(state, newLevel.url, levelId);
-    dispatch(setCurrentLevelId(levelId));
+    const currentLevel = processedLevel(
+      getLevelById(state.lessons, state.currentLessonId, state.currentLevelId)
+    );
+
+    if (canChangeLevelInPage(currentLevel, newLevel)) {
+      updateBrowserForLevelNavigation(state, newLevel.path, levelId);
+      dispatch(setCurrentLevelId(levelId));
+    } else {
+      const url = getBubbleUrl(newLevel.path, undefined, undefined, true);
+      navigateToHref(url);
+    }
   };
 }
 

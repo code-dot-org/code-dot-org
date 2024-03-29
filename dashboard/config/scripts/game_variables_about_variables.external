@@ -48,7 +48,7 @@ This block puts the variable name and current value onto the playspace.
     <summary style="font-size: 1.7em;">2️⃣ <strong>Set variable</strong> (starting score)</summary>
         <div style="background-color: #cce5ff; font-size: 1.1em; padding: 15px; margin-bottom: 10px;">
 	<div style="margin-left: 20px; margin-right: 20px; margin-top: 20px; height: 150px">
-	   <img src="https://images.code.org/65397f7fa88e20ba2f8d05030f9baf02-image-1711143579258.jpg" style="margin-left: 40px; margin-right: 40px; margin-bottom: 40px;width: 30%; float: left">
+	   <img src="https://images.code.org/65397f7fa88e20ba2f8d05030f9baf02-image-1711143579258.jpg" style="margin-left: 40px; margin-right: 40px; margin-bottom: 10px;width: 30%; float: left">
        <img src="https://images.code.org/7eb62fd8397a08c2db35a560c04b742b-image-1711143457638.jpg" style="margin-right: 40px; width: 30%">
 <br>
 <br>
@@ -65,7 +65,7 @@ This block sets the value of the variable.
     <summary style="font-size: 1.7em;">3️⃣ <strong>Change variable</strong> (score points)</summary>
         <div style="background-color: #b3d7ff; font-size: 1.1em; padding: 15px; margin-bottom: 10px;">
 	<div style="margin-left: 20px; margin-right: 20px; margin-top: 20px; height: 150px">
-	   <img src="https://images.code.org/e5960deb4f0ecdfe110a2cc2fd171501-image-1711143785962.gif" style="margin-left: 40px; margin-right: 40px; margin-bottom: 40px;width: 30%; float: left">
+	   <img src="https://images.code.org/e5960deb4f0ecdfe110a2cc2fd171501-image-1711143785962.gif" style="margin-left: 40px; margin-right: 40px; margin-bottom: 10px;width: 30%; float: left">
        <img src="https://images.code.org/bba5a417e342b31fc40771590d5c2e41-image-1711143867215.jpg" style="margin-right: 40px; width: 30%">
 <br>
 <br>
@@ -81,7 +81,7 @@ This block changes the value of the variable.
     <summary style="font-size: 1.7em;">4️⃣ <strong>Conditional</strong> (winning)</summary>
         <div style="background-color: #99caff; font-size: 1.1em; padding: 15px; margin-bottom: 10px;">
 	<div style="margin-left: 20px; margin-right: 20px; margin-top: 20px; height: 150px">
-	   <img src="https://images.code.org/981ee826a83fa01d400e0b01703501e1-image-1711144457508.gif" style="margin-left: 40px; margin-right: 40px; margin-bottom: 40px;width: 30%; float: left">
+	   <img src="https://images.code.org/981ee826a83fa01d400e0b01703501e1-image-1711144457508.gif" style="margin-left: 40px; margin-right: 40px; margin-bottom: 10px;width: 30%; float: left">
        <img src="https://images.code.org/34ad90c428b5fe801dc09484643d9020-image-1711144527212.jpg" style="margin-right: 40px;  width: 30%">
 <br>
 <br>

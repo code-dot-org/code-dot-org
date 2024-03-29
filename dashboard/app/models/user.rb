@@ -71,6 +71,7 @@
 
 require 'digest/md5'
 require 'cdo/aws/metrics'
+require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
@@ -194,8 +195,8 @@ class User < ApplicationRecord
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = 'student'.freeze,
-    TYPE_TEACHER = 'teacher'.freeze
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
   validates_presence_of :user_type

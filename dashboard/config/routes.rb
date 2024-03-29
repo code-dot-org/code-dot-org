@@ -608,6 +608,11 @@ Dashboard::Application.routes.draw do
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
     get '/lti/v1/integrations', to: 'lti_v1#new_integration'
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+    namespace :lti do
+      namespace :v1 do
+        resource :feedback, controller: :feedback, only: %i[create show]
+      end
+    end
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
