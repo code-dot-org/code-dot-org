@@ -1,4 +1,5 @@
 require 'cdo/aws/metrics'
+require 'cdo/honeybadger'
 
 class ApplicationJob < ActiveJob::Base
   # Automatically retry jobs that encountered a deadlock
@@ -31,6 +32,7 @@ class ApplicationJob < ActiveJob::Base
   #   job is performed
   #   after_perform and around_perform(after) in any order
   # When both the Parent and Child class define the same callback, they may be called in any order.
+  # Also note that jobs executed via `.perform_now` will not trigger the `enqueue` callbacks.
   # https://guides.rubyonrails.org/v6.0/active_job_basics.html#available-callbacks
 
   after_enqueue do |_job|
@@ -51,6 +53,8 @@ class ApplicationJob < ActiveJob::Base
     ]
 
     Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 
   before_perform do |job|
@@ -68,8 +72,9 @@ class ApplicationJob < ActiveJob::Base
         dimensions: job.class.common_dimensions,
       }
     ]
-
     Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 
   after_perform do |job|
@@ -95,5 +100,7 @@ class ApplicationJob < ActiveJob::Base
     ]
 
     Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 end
