@@ -13,6 +13,7 @@ import {
 } from './types';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
+import {getRosterSyncErrorMessage} from './LtiSectionSyncDialogHelpers';
 
 // This dialog is shown to the teacher whenever they have requested Code.org to
 // import/sync the teacher's sections and students managed by their LMS.
@@ -49,8 +50,7 @@ export default function LtiSectionSyncDialog({
     return (
       <div>
         <h2 style={styles.dialogHeader}>{i18n.errorOccurredTitle()}</h2>
-        <p>{i18n.ltiSectionSyncDialogError()}</p>
-        <p>{error}</p>
+        {error && <SafeMarkdown markdown={getRosterSyncErrorMessage(error)} />}
       </div>
     );
   };
@@ -94,13 +94,16 @@ export default function LtiSectionSyncDialog({
       'https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section';
     const aboutSyncingUrl = LmsLinks.ROSTER_SYNC_INSTRUCTIONS_URL;
     const dialogTitle = i18n.ltiSectionSyncDialogTitle();
-    const dialogDescription = i18n.ltiSectionSyncDialogDescription({
-      aboutSectionsUrl,
-      aboutSyncingUrl,
-    });
+    const dialogDescription =
+      syncResult.changed && Object.keys(syncResult.changed).length > 0
+        ? i18n.ltiSectionSyncDialogDescription({
+            aboutSectionsUrl,
+            aboutSyncingUrl,
+          })
+        : i18n.ltiSectionSyncDialogDescriptionNoChange({aboutSyncingUrl});
     let sectionListItems;
-    if (syncResult && syncResult.all) {
-      sectionListItems = Object.entries(syncResult.all).map(
+    if (syncResult && syncResult.changed) {
+      sectionListItems = Object.entries(syncResult.changed).map(
         ([section_id, section]) => {
           const studentCount = i18n.ltiSectionSyncDialogStudentCount({
             numberOfStudents: section.size,
@@ -187,7 +190,7 @@ const LtiSectionShape = PropTypes.shape({
 });
 export const LtiSectionSyncResultShape = PropTypes.shape({
   all: PropTypes.objectOf(LtiSectionShape),
-  updated: PropTypes.objectOf(LtiSectionShape),
+  changed: PropTypes.objectOf(LtiSectionShape),
   error: PropTypes.string,
 });
 

@@ -125,17 +125,17 @@ export const commands = {
   setBonusSuccessMessage(message) {
     this.bonusSuccessMessage = message;
   },
-  setEarlyTime(frames) {
-    this.validationFrames.early = frames;
-  },
   setWaitTime(frames) {
     this.validationFrames.fail = frames;
+    return true;
   },
   setFailTime(frames) {
     this.validationFrames.fail = frames;
+    return true;
   },
   setDelayTime(frames) {
     this.validationFrames.delay = frames;
+    return true;
   },
   getFailTime() {
     return this.validationFrames.fail;
@@ -223,6 +223,8 @@ export const commands = {
     this.previous.printLogLength = this.printLog.length || 0;
     this.previous.soundLogLength = this.soundLog.length || 0;
     this.previous.foregroundEffectsLength = this.foregroundEffects.length || 0;
+    this.previous.background = this.background;
+    this.previous.screenText = this.screenText;
 
     // Store basic information about sprites.
     this.previous.sprites = [];

@@ -10,6 +10,7 @@ import {
   displayWorkspaceAlert,
 } from '../../code-studio/projectRedux';
 import msg from '@cdo/locale';
+import {formatForPlayspace} from '../utils';
 
 export default class CoreLibrary {
   constructor(p5, jsInterpreter) {
@@ -131,7 +132,7 @@ export default class CoreLibrary {
       padding: 10,
       strokeWeight: 3,
       strokeRadius: 24,
-      maxLabelLength: 30, // Maximum number of characters to display in the label
+      maxLabelLength: 20, // Maximum number of characters to display in the label
     };
 
     // Calculate the width for the label and value separator (colon and space)
@@ -167,7 +168,7 @@ export default class CoreLibrary {
         APP_WIDTH - totalReservedSpace - labelWidth;
       const displayValue = drawUtils.truncateText(
         this.p5,
-        `${value}`,
+        formatForPlayspace(value),
         availableSpaceForValue,
         config.textSize
       );
@@ -419,7 +420,14 @@ export default class CoreLibrary {
         );
       }
     }
-    if (spriteArg.group) {
+    if (typeof spriteArg.group === 'string') {
+      // The group property is undefined for sprites unless explicitly set.
+      // We're using '' as a way to signal that we want to return the ones without a group.
+      if (spriteArg.group === '') {
+        return Object.values(this.nativeSpriteMap).filter(
+          sprite => !sprite.group
+        );
+      }
       return Object.values(this.nativeSpriteMap).filter(
         sprite => sprite.group === spriteArg.group
       );

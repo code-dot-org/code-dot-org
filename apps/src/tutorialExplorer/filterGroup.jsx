@@ -4,8 +4,9 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import FilterGroupContainer from './filterGroupContainer';
+
 import FilterChoice from './filterChoice';
+import FilterGroupContainer from './filterGroupContainer';
 
 export default class FilterGroup extends React.Component {
   static propTypes = {

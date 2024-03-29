@@ -1,4 +1,4 @@
-.modal#student-information-modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', display: 'none'}
+.modal#student-information-modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', style: 'display: none'}
   .modal-dialog
     .modal-content.no-modal-icon
       %h1{style: 'margin: 25px 0 0 0;font-size: 28px'}= t('activerecord.attributes.user.finish_sign_up_header')
@@ -30,7 +30,11 @@
           = f.submit t('continue'), class: 'btn primary-button', disabled: true, id: 'submit-btn'
 :javascript
   $().ready(function() {
-    $("#student-information-modal").modal('show');
+    const pathName = window.location.pathname;
+
+    if (pathName !== "/lti/v1/authenticate") {
+      $("#student-information-modal").modal('show');
+    }
 
      function checkInputs() {
       const ageValue = $("#user_age").val();

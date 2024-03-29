@@ -15,7 +15,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "false",
     "show_type_hints": "true",
-    "embed": "false",
+    "embed": "true",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -69,8 +69,8 @@
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
     "hint_prompt_attempts_threshold": "1",
-    "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
-    "standalone_app_name": "spritelab",
+    "short_instructions": "Try out this game! Use the arrows to move the dog to collect the bones.",
+    "standalone_app_name": "game_design",
     "long_instructions": "**Try it out!**\r\n\r\n- Move the dog to collect the bones \r\n\r\n- Watch out for the cactus!\r\n- Press `Finish` when you're ready to move on\r\n\r\n",
     "preload_asset_list": null,
     "encrypted_examples": [
@@ -78,13 +78,16 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-20T23:14:29.118+00:00\",\"changed\":[\"cloned from \\\"game_development_type_practice_choices_a\\\"\"],\"cloned_from\":\"game_development_type_practice_choices_a\"},{\"changed_at\":\"2024-03-20 23:16:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:21:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:21:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:22:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:24:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:26:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:30:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-20T23:14:29.118+00:00\",\"changed\":[\"cloned from \\\"game_development_type_practice_choices_a\\\"\"],\"cloned_from\":\"game_development_type_practice_choices_a\"},{\"changed_at\":\"2024-03-20 23:16:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:21:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:21:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:22:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:24:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:26:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 23:30:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 14:58:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 14:59:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 15:00:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 15:07:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 15:07:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 16:31:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 16:32:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 16:32:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-25 18:21:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-25 18:21:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-25 22:01:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 15:26:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"standalone_app_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
+        <variables>
+          <variable id="VP?xgb~0GQE;,U8lY{?0">bones</variable>
+        </variables>
         <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" movable="false" x="16" y="16">
           <next>
             <block type="gamelab_setBackgroundImageAs">
@@ -93,7 +96,7 @@
                 <block type="gamelab_makeSpritesGridInput">
                   <field name="ANIMATION_NAME">"cactus_02"</field>
                   <value name="GRID">
-                    <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
+                    <shadow type="gamelab_bitmap" id="1MX:iHx/W.Eq-PA@6gc3">
                       <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
                     </shadow>
                     <block type="gamelab_bitmap">
@@ -116,7 +119,7 @@
                               <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
                             </shadow>
                             <block type="gamelab_bitmap">
-                              <field name="GRID">[[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+                              <field name="GRID">[[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,1],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
                             </block>
                           </value>
                           <next>
@@ -128,19 +131,34 @@
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_toggleBehaviorSimple">
-                                  <field name="TOGGLE">"begins"</field>
+                                <block type="gamelab_setProp">
+                                  <field name="PROPERTY">"scale"</field>
                                   <value name="SPRITE">
                                     <block type="gamelab_allSpritesWithAnimation">
                                       <field name="ANIMATION">"cuteanimals_dog_hello"</field>
                                     </block>
                                   </value>
-                                  <value name="BEHAVIOR">
-                                    <block type="gamelab_behavior_get">
-                                      <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
-                                      <field name="NAME">moving with arrow keys</field>
+                                  <value name="VAL">
+                                    <block type="math_number">
+                                      <field name="NUM">40</field>
                                     </block>
                                   </value>
+                                  <next>
+                                    <block type="gamelab_toggleBehaviorSimple">
+                                      <field name="TOGGLE">"begins"</field>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"cuteanimals_dog_hello"</field>
+                                        </block>
+                                      </value>
+                                      <value name="BEHAVIOR">
+                                        <block type="gamelab_behavior_get">
+                                          <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+                                          <field name="NAME">moving with arrow keys</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -154,7 +172,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="19" y="485">
+        <block type="gamelab_checkTouching" x="17" y="472">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
@@ -181,6 +199,61 @@
                       <field name="ANIMATION">"cuteanimals_dog_hello"</field>
                     </block>
                   </value>
+                  <next>
+                    <block type="math_change">
+                      <field name="VAR" id="VP?xgb~0GQE;,U8lY{?0">bones</field>
+                      <value name="DELTA">
+                        <shadow type="math_number" id="i@:k)hW^58`:oTLmH]%H">
+                          <field name="NUM">1</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="gamelab_ifVarEquals">
+                          <field name="NUM" id="VP?xgb~0GQE;,U8lY{?0">bones</field>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <field name="NUM">4</field>
+                            </block>
+                          </value>
+                          <statement name="STATEMENT">
+                            <block type="gamelab_spriteSay">
+                              <field name="SPEECH">Woof woof!</field>
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"cuteanimals_dog_hello"</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_destroy">
+                                  <value name="THIS">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"cactus_02"</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_toggleBehaviorSimple">
+                                      <field name="TOGGLE">"begins"</field>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"cuteanimals_dog_hello"</field>
+                                        </block>
+                                      </value>
+                                      <value name="BEHAVIOR">
+                                        <block type="gamelab_behavior_get">
+                                          <mutation behaviorId="spinning right" name="spinning right"/>
+                                          <field name="NAME">spinning right</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
@@ -1330,15 +1403,15 @@
           <field name="GROUP">"walls"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="x,sMj}}CfvGtzA+U2wfm">
-              <field name="ANIMATION">"space_planet_8"</field>
+              <field name="ANIMATION">"cuteanimals_dog_hello"</field>
             </block>
           </value>
         </block>
         <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="21" y="149">
-          <field name="IMG">"santa"</field>
+          <field name="IMG">"gradient_11"</field>
         </block>
         <block type="gamelab_makeSpritesGridInput" id="%lIt9m#@H2J}unSh8[y!" x="21" y="247">
-          <field name="ANIMATION_NAME">"space_astronaut_dog"</field>
+          <field name="ANIMATION_NAME">"cuteanimals_dog_hello"</field>
           <value name="GRID">
             <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
               <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
@@ -1349,7 +1422,7 @@
           </value>
         </block>
         <block type="gamelab_makeNewSpriteAnon" id="IM+:ZqBn5NT-ZZL!04b:" x="21" y="341">
-          <field name="ANIMATION_NAME">"space_astronaut_dog"</field>
+          <field name="ANIMATION_NAME">"cuteanimals_dog_hello"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id=")}o!T7jG3=$uWTqjEy0+">
               <field name="LOCATION">{"x":81,"y":34}</field>
@@ -1360,7 +1433,7 @@
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="$C,HF=WY/5tDhl[.OjK!">
-              <field name="ANIMATION">"space_astronaut_dog"</field>
+              <field name="ANIMATION">"cuteanimals_dog_hello"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
@@ -1374,7 +1447,7 @@
           <field name="SPEECH">Help! I'm lost!</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="1:JA@~SAIU3Ct+vVv`*q">
-              <field name="ANIMATION">"space_astronaut_axolotl"</field>
+              <field name="ANIMATION">"cuteanimals_dog_hello"</field>
             </block>
           </value>
         </block>

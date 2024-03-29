@@ -1,7 +1,9 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
+import React from 'react';
+
 import EvidenceLevels from '@cdo/apps/templates/rubrics/EvidenceLevels';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   evidenceLevels: [

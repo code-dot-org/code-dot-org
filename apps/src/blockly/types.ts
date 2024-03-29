@@ -22,6 +22,7 @@ import {
   WORKSPACE_EVENTS,
 } from './constants';
 import {Field, FieldProto} from 'blockly/core/field';
+import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldButton from './addons/cdoFieldButton';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
@@ -66,6 +67,7 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  topLevelProcedureAutopopulate: boolean;
   getNewCursor: (type: string) => Cursor;
   LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
@@ -87,6 +89,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldBehaviorPicker: typeof CdoFieldBehaviorPicker;
   FieldButton: typeof CdoFieldButton;
   FieldImageDropdown: typeof CdoFieldImageDropdown;
+  FieldAnimationDropdown: typeof CdoFieldAnimationDropdown;
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
@@ -114,6 +117,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   BlockValueType: {[key: string]: string};
   SNAP_RADIUS: number;
   Variables: ExtendedVariables;
+  hasLoadedBlocks: boolean;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -214,6 +218,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   levelBlockIds: string[];
   isBlockEditMode: boolean;
   editBlocks: string | undefined;
+  topLevelProcedureAutopopulate: boolean | undefined;
   noFunctionBlockFrame: boolean;
   useModalFunctionEditor: boolean;
   useBlocklyDynamicCategories: boolean;

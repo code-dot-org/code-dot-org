@@ -77,8 +77,8 @@ export function loadDataForView(storage, view, oldTableName, newTableName) {
       if (isFirebaseStorage()) {
         // Firebase
         storage.subscribeToListOfProjectTables(
-          tableName =>
-            getStore().dispatch(addTableName(tableName, tableType.PROJECT)),
+          (tableName, tableType) =>
+            getStore().dispatch(addTableName(tableName, tableType)),
           tableName => getStore().dispatch(deleteTableName(tableName))
         );
       } else {

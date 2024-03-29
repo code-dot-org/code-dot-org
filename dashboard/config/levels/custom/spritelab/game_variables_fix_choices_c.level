@@ -29,7 +29,7 @@
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "true",
     "free_play": "false",
@@ -42,14 +42,13 @@
     "hide_pause_button": "false",
     "thumbnail_url": "https://images.code.org/26b14d1fc0555c73efaf4c4e662fddcf-soccer.jpg",
     "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Game Mechanics:** Click & Collect \r\n\r\n**Problem:** Nothing happens if the player wins",
-    "long_instructions": " **Fix the game!**\r\n \r\n1. Press `Run` and try out the game\r\n\r\n- Program something to happen if a player wins the game\r\n\r\n***\r\n\r\n***Hint:*** *In level 6 we learned how to check if the variable equals winning condition.*",
+    "long_instructions": " **Fix the game!**\r\n \r\n1. Press `Run` and try out the game\r\n\r\n- Program something to happen if a player wins the game\r\n- Click `Finish` when you are finished\r\n\r\n***\r\n\r\n***Hint:*** *In level 6 we learned how to check if the variable equals winning condition.*",
+    "short_instructions": "Add to your program so something happens if a player wins the game!",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "short_instructions": "Add to your program so something happens if a player wins the game!"
+    "encrypted_examples": "fDAyomACpQcjPwwolaNycDsIJVqkIXtcYvqSynfmzCSvnsGYElqs31EkwtH+\nt8GlIVOq5xdu4DJU1LQopyrIfA==\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Did you add a conditional to one of your events?\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_ifVarEquals\\\" id=\\\"M/gCD$xcQAi@;(xYGB%;\\\">\\n  <field name=\\\"NUM\\\" id=\\\"TPks;#qQ]AsS/}K=XrX$\\\">ballCount</field>\\n  <value name=\\\"VAL\\\">\\n    <block type=\\\"math_number\\\" id=\\\"4k.$ts7E5)WO(|_4LA29\\\">\\n      <field name=\\\"NUM\\\">8</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4634ceec559a7c4359defb14ad8766b2/game_variables_fix_choices_c.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"You can code anything to happen when the ballCount reaches 8! Just nest the block you want to happen **within** the `if ballCount = 8` block.\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bc6a0cb44efbc6bbda77b5ec235bcb4b/game_variables_fix_choices_c.mp3\"}]"
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:06.395+00:00\",\"changed\":[\"cloned from \\\"game_dev_fix_choice3\\\"\"],\"cloned_from\":\"game_dev_fix_choice3\"},{\"changed_at\":\"2024-03-18 20:25:35 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:11:38 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:31:55 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:50:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:49 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:44:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 15:47:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:06.395+00:00\",\"changed\":[\"cloned from \\\"game_dev_fix_choice3\\\"\"],\"cloned_from\":\"game_dev_fix_choice3\"},{\"changed_at\":\"2024-03-18 20:25:35 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:11:38 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:31:55 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:50:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:49 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:44:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 15:47:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-21 18:26:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 15:48:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 15:50:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 15:53:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"authored_hints\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1297,10 +1296,10 @@
     <toolbox_blocks>
       <xml>
         <variables>
-          <variable id="n`_IY?HES|9qQ/cu*1co">Score</variable>
+          <variable id="n`_IY?HES|9qQ/cu*1co">ballCount</variable>
         </variables>
         <block type="gamelab_ifVarEquals" id="M/gCD$xcQAi@;(xYGB%;" x="391" y="15">
-          <field name="NUM" id="n`_IY?HES|9qQ/cu*1co">Score</field>
+          <field name="NUM" id="n`_IY?HES|9qQ/cu*1co">ballCount</field>
           <value name="VAL">
             <block type="math_number" id="4k.$ts7E5)WO(|_4LA29">
               <field name="NUM">8</field>
@@ -1308,7 +1307,7 @@
           </value>
         </block>
         <block type="gamelab_showVariable" id="/)UBq5TH4YJjZD-`%IZQ" x="16" y="52">
-          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">Score</field>
+          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">ballCount</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="p$Ph8wEe0XoP#ks5#9Nt">
               <field name="LOCATION">{"x":200,"y":200}</field>
@@ -1316,7 +1315,7 @@
           </value>
         </block>
         <block type="variables_set" id="fXn,U[?LRWWvSKOhe=bn" x="47" y="91">
-          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">Score</field>
+          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">ballCount</field>
           <value name="VALUE">
             <block type="math_number" id="Sg~0tgXZ+$|x:hXADq~L">
               <field name="NUM">0</field>
@@ -1324,7 +1323,7 @@
           </value>
         </block>
         <block type="math_change" id="Xtk0Wuz]qYA2a}VYyuSn" x="16" y="132">
-          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">Score</field>
+          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">ballCount</field>
           <value name="DELTA">
             <shadow type="math_number" id="MIV.zaN{.y8?~;([e*,B">
               <field name="NUM">1</field>
@@ -1334,7 +1333,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="l8$mN@=wg,pKFYRD:+aw" x="16" y="172">
+        <block type="gamelab_setBackgroundImageAs" id="l8$mN@=wg,pKFYRD:+aw" x="52" y="191">
           <field name="IMG">"tennis_court"</field>
         </block>
         <block type="gamelab_playSound" id="2=6uV8c=c%-F8R:pdSeT" x="16" y="246">
@@ -1451,7 +1450,7 @@
           </value>
           <value name="BEHAVIOR">
             <block type="gamelab_behaviorPicker" id="h]]+8LOkLIuH(Zy=zbgU">
-              <field name="BEHAVIOR">uninitialized</field>
+              <field name="BEHAVIOR">driving with arrow keys</field>
             </block>
           </value>
         </block>

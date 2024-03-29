@@ -226,10 +226,10 @@ Dashboard::Application.routes.draw do
     get "/gallery", to: redirect("/projects/public")
 
     get 'projects/featured', to: 'projects#featured'
-    delete '/featured_projects/:project_id', to: 'featured_projects#destroy'
-    put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
-    put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
-    put '/featured_projects/:project_id/bookmark', to: 'featured_projects#bookmark'
+    delete '/featured_projects/:channel_id', to: 'featured_projects#destroy'
+    put '/featured_projects/:channel_id/unfeature', to: 'featured_projects#unfeature'
+    put '/featured_projects/:channel_id/feature', to: 'featured_projects#feature'
+    put '/featured_projects/:channel_id/bookmark', to: 'featured_projects#bookmark'
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
@@ -608,6 +608,11 @@ Dashboard::Application.routes.draw do
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
     get '/lti/v1/integrations', to: 'lti_v1#new_integration'
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+    namespace :lti do
+      namespace :v1 do
+        resource :feedback, controller: :feedback, only: %i[create show]
+      end
+    end
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -1072,6 +1077,7 @@ Dashboard::Application.routes.draw do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
+        get 'get_teacher_evaluations_for_all'
         get 'ai_evaluation_status_for_user'
         get 'ai_evaluation_status_for_all'
         post 'run_ai_evaluations_for_user'
