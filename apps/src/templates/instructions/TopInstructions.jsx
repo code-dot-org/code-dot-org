@@ -807,47 +807,6 @@ class TopInstructions extends Component {
                     ))}
                   </div>
                 )}
-              {!fetchingData && (
-                <TeacherFeedbackTab
-                  teacherViewingStudentWork={teacherViewingStudentWork}
-                  visible={tabSelected === TabType.COMMENTS}
-                  rubric={miniRubric}
-                  innerRef={ref => (this.commentTab = ref)}
-                  latestFeedback={latestFeedback}
-                  token={token}
-                  serverScriptId={this.props.serverScriptId}
-                  serverLevelId={this.props.serverLevelId}
-                  teacher={user}
-                  allowUnverified={isCSF}
-                />
-              )}
-              {tabSelected === TabType.DOCUMENTATION && (
-                <DocumentationTab ref={ref => (this.documentationTab = ref)} />
-              )}
-              {tabSelected === TabType.REVIEW && (
-                <CommitsAndReviewTab
-                  ref={ref => (this.reviewTab = ref)}
-                  onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
-                />
-              )}
-              {tabSelected === TabType.TEACHER_ONLY &&
-                exampleSolutions.length > 0 && (
-                  <div style={styles.exampleSolutions}>
-                    {exampleSolutions.map((example, index) => (
-                      <Button
-                        __useDeprecatedTag
-                        key={index}
-                        text={i18n.exampleSolution({number: index + 1})}
-                        color={Button.ButtonColor.blue}
-                        href={example}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ref={ref => (this.teacherOnlyTab = ref)}
-                        style={styles.exampleSolutionButton}
-                      />
-                    ))}
-                  </div>
-                )}
               {tabSelected === TabType.TA_RUBRIC && (
                 <StudentRubricView
                   rubric={this.props.taRubric}
