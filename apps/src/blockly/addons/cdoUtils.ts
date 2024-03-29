@@ -36,7 +36,7 @@ import {
 } from '../types';
 import experiments from '@cdo/apps/util/experiments';
 import {getBaseName} from '../utils';
-import {ToolboxItemInfo} from 'blockly/core/utils/toolbox';
+import {ToolboxItemInfo, BlockInfo} from 'blockly/core/utils/toolbox';
 
 /**
  * Loads blocks to a workspace.
@@ -77,8 +77,8 @@ function addProcedureCallBlocksToFlyout(
   workspace: WorkspaceSvg,
   mainSource: WorkspaceSerialization
 ) {
-  // options.languageTree is the translated toolbox info
-  if (workspace.getFlyout() && workspace.options?.languageTree) {
+  const translatedToolboxInfo = workspace.options?.languageTree;
+  if (workspace.getFlyout() && translatedToolboxInfo) {
     const callBlocks = [] as ToolboxItemInfo[];
     const definitionBlocks = mainSource.blocks.blocks.filter(
       block => block.type === BLOCK_TYPES.procedureDefinition
@@ -101,9 +101,13 @@ function addProcedureCallBlocksToFlyout(
       }
     });
     if (callBlocks.length) {
+      // Remove existing call blocks from the toolbox
+      translatedToolboxInfo.contents = translatedToolboxInfo.contents.filter(
+        (item: BlockInfo) => item.type !== BLOCK_TYPES.procedureCall
+      );
       // Add the new callblocks to the toolbox and refresh it.
-      workspace.options.languageTree.contents.push(...callBlocks);
-      workspace.getFlyout()?.show(workspace.options.languageTree);
+      translatedToolboxInfo.contents.unshift(...callBlocks);
+      workspace.getFlyout()?.show(translatedToolboxInfo);
     }
   }
 }
