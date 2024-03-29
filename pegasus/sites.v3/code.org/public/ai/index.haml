@@ -84,7 +84,8 @@ theme: responsive_full_width
     %hr.light
     %h3.heading-lg
       =hoc_s("ai_curriculum_offerings.heading")
-    %p=hoc_s("ai_curriculum_offerings.desc")
+    %p.wrap-pretty
+      =hoc_s("ai_curriculum_offerings.desc")
     %a.link-button.secondary{href: CDO.studio_url("/catalog?topic=artificial_intelligence")}
       =hoc_s("ai_curriculum_offerings.button")
 
