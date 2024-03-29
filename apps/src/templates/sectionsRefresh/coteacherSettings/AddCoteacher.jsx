@@ -1,18 +1,19 @@
-import React, {useCallback, useState} from 'react';
+import classNames from 'classnames';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
+import React, {useCallback, useState} from 'react';
 
+import {Figcaption} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
-import classNames from 'classnames';
-import {Figcaption} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from '@cdo/apps/templates/Button';
-import $ from 'jquery';
+
+import {convertAddCoteacherResponse} from './CoteacherUtils';
 
 import styles from './coteacher-settings.module.scss';
-import {convertAddCoteacherResponse} from './CoteacherUtils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const getErrorMessageFromResponse = (response, email) => {
   if (response.ok) {

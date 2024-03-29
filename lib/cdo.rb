@@ -301,7 +301,7 @@ module Cdo
 
     def log
       require 'logger'
-      @@log ||= Logger.new(STDOUT).tap do |l|
+      @@log ||= Logger.new($stdout).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
           "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"

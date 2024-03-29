@@ -16,16 +16,6 @@ export default function AssignmentCompletionStatesBox({hasValidatedLevels}) {
       <div className={styles.icons}>
         <div className={styles.legendColumn}>
           <LegendItem
-            itemType={ITEM_TYPE.NOT_STARTED}
-            labelText={i18n.notStarted()}
-          />
-          <LegendItem
-            itemType={ITEM_TYPE.NO_ONLINE_WORK}
-            labelText={i18n.noOnlineWork()}
-          />
-        </div>
-        <div className={styles.legendColumn}>
-          <LegendItem
             itemType={ITEM_TYPE.IN_PROGRESS}
             labelText={i18n.inProgress()}
           />
@@ -34,14 +24,18 @@ export default function AssignmentCompletionStatesBox({hasValidatedLevels}) {
             labelText={i18n.submitted()}
           />
         </div>
-        {hasValidatedLevels && (
-          <div className={styles.legendColumn}>
+        <div className={styles.legendColumn}>
+          {hasValidatedLevels && (
             <LegendItem
               itemType={ITEM_TYPE.VALIDATED}
               labelText={i18n.validated()}
             />
-          </div>
-        )}
+          )}
+          <LegendItem
+            itemType={ITEM_TYPE.NO_ONLINE_WORK}
+            labelText={i18n.noOnlineWork()}
+          />
+        </div>
       </div>
     );
   };

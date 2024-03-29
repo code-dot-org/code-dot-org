@@ -730,6 +730,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options
     ) as ExtendedWorkspaceSvg;
 
+    blocklyWrapper.topLevelProcedureAutopopulate =
+      !!options.topLevelProcedureAutopopulate;
+
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }

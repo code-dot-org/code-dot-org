@@ -1,16 +1,19 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {connect} from 'react-redux';
-import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {unitDataPropType} from '../sectionProgressConstants';
+
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import StandardsIntroDialog from './StandardsIntroDialog';
-import StandardsProgressTable from './StandardsProgressTable';
-import StandardsLegend from './StandardsLegend';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import i18n from '@cdo/locale';
+
+import {unitDataPropType} from '../sectionProgressConstants';
+
 import {cstaStandardsURL} from './standardsConstants';
+import StandardsIntroDialog from './StandardsIntroDialog';
+import StandardsLegend from './StandardsLegend';
+import StandardsProgressTable from './StandardsProgressTable';
 
 class StandardsView extends Component {
   static propTypes = {
