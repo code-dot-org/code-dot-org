@@ -8,7 +8,7 @@ theme: responsive_full_width
 
 -# TODO - Remove the DCDO logic after the AI Teaching Assistant launch
 - if !!DCDO.get('ai-teaching-assistant-launch', false)
-  = view :top_skinny_banner, banner_id: "banner-csd", banner_url: nil, banner_icon: "fa fa-megaphone", banner_text: hoc_s("ai_ta_page.announcement_banner_csd_page", markdown: :inline, locals: {apply_url: "https://forms.gle/84GHPpoRRG9QGmAM8"}), external_link: true, light_theme: true
+  = view :top_skinny_banner, banner_id: "banner-csd", banner_url: nil, banner_icon: "fa fa-megaphone", banner_text: hoc_s("ai_ta_page.announcement_banner_csd_page", markdown: :inline, locals: {learn_url: "/ai/teaching-assistant"}), external_link: false, light_theme: true
 
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
