@@ -95,7 +95,17 @@ class InlineAudio extends React.Component {
       playing: false,
       error: false,
     });
-    audio.removeEventListener('ended');
+    audio.removeEventListener('ended', e => {
+      this.setState({
+        playing: false,
+        autoplayed: this.props.ttsAutoplayEnabled,
+      });
+      if (this.props.ttsAutoplayEnabled) {
+        const {playNextAudio, isPlaying} = this.context;
+        isPlaying.current = false;
+        playNextAudio();
+      }
+    });
 
     const {clearQueue} = this.context;
     clearQueue();

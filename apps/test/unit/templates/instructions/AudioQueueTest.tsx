@@ -29,16 +29,6 @@ const DEFAULT_PROPS: InlineAudioProps = {
 describe('AudioQueue', () => {
   setExternalGlobals();
 
-  let windowAudio: typeof Audio;
-
-  beforeEach(() => {
-    windowAudio = window.Audio;
-  });
-
-  afterEach(() => {
-    window.Audio = windowAudio;
-  });
-
   it('calls addToQueue for each InlineAudio rendered', () => {
     const addToQueueSpy = sinon.spy();
     render(
@@ -78,16 +68,3 @@ describe('AudioQueue', () => {
     // comment
   });
 });
-
-// class FakeAudio {
-//   play() {
-//     return Promise.resolve();
-//   }
-//   pause() {}
-//   load() {}
-//   // EventTarget interface
-//   addEventListener() {}
-//   removeEventListener() {}
-//   dispatchEvent() {}
-//   removeAttribute() {}
-// }
