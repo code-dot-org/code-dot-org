@@ -12,6 +12,7 @@ import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashbo
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import i18n from '@cdo/locale';
 
+import {Heading1} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
