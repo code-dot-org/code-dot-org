@@ -3,19 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Wrap Up: Build a Website with HTML
+# Wrap Up: Style a Website with CSS
 
 ## Great job! 🎉
 
-#### So far, you've learned the basics of HTML and how to add structure, text, and images to a web page. The skills you've learned thus far will take you through Unit 2, Lesson 8. You learned how to:
+#### So far, you've learned the basics of CSS and Flexbox to style and organize content on a webpage. Combined with HTML, CSS gives you and your students the power to build some pretty nifty web pages!
 
-* #### Use Web Lab.
-* #### Add structure to a web page using HTML.
-* #### Add images to a web page.
+* #### Style the text of a web page using CSS.
+* #### Link a CSS style sheet to the web page index.
+* #### Explore additional properties to style elements on a web page.
+* #### Utilize Flexbox and div containers to organize a web page.
+
 
 ## Up Next
 
-#### In the next section of this professional learning module, you'll learn more about **CSS**, which will allow you to style elements on a web page.
+#### In the next section of this professional learning module, you'll learn more about students' roles and responsibilities as smart creators and consumers of digital media.
 
 #### Click continue to keep going!
 
