@@ -1,0 +1,17 @@
+@import '@cdo/apps/mixins.scss';
+
+.titleRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .fieldTitle {
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+  
+  .expandCollapseButton {
+    @include remove-button-styles;
+  }
