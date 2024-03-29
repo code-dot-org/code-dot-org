@@ -20,33 +20,22 @@ describe('AiAssessmentBox', () => {
       firstLine: 1,
       lastLine: 10,
       message: 'This is evidence.',
-      observations:
-        'This is the original observations. This is another line. This is a third line.',
     },
     {
       firstLine: 42,
       lastLine: 45,
       message: 'This is some other evidence.',
-      observations:
-        'This is the original observations. This is another line. This is a third line.',
     },
   ];
-  const mockEvidenceWithObservations = [
+  const mockEvidenceWithoutLines = [
     {
-      firstLine: 1,
-      lastLine: 10,
-      message:
-        'This is the original observations. This is another line. This is a third line.',
-      observations:
-        'This is the original observations. This is another line. This is a third line.',
+      message: 'This is the original observations.',
     },
     {
-      firstLine: 42,
-      lastLine: 45,
-      message:
-        'This is the original observations. This is another line. This is a third line.',
-      observations:
-        'This is the original observations. This is another line. This is a third line.',
+      message: 'This is another line.',
+    },
+    {
+      message: 'This is a third line.',
     },
   ];
   const props = {
@@ -165,37 +154,25 @@ describe('AiAssessmentBox', () => {
     );
     expect(wrapper.find('ul li')).to.have.lengthOf(2);
     expect(wrapper.html().includes(props.aiEvidence[0].message)).to.be.true;
-    expect(
-      wrapper
-        .html()
-        .includes(
-          `Lines ${props.aiEvidence[0].firstLine}-${props.aiEvidence[0].lastLine}`
-        )
-    ).to.be.true;
+
+    // Expect that lines are present
+    expect(wrapper.html().includes(`Lines`)).to.be.true;
+
+    // And we expect two links for each line for a total of 4 links
+    expect(wrapper.find('ul li p a')).to.have.lengthOf(4);
   });
 
-  it('falls back to rendering evidence as observations if there is no message', () => {
-    const updatedProps = {...props, aiEvidence: mockEvidenceWithObservations};
+  it('falls back to rendering evidence as observations if there is no line numbers', () => {
+    const updatedProps = {...props, aiEvidence: mockEvidenceWithoutLines};
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    // One item per sentence in 'observations'
+    // Still one list item per evidence provided.
     expect(wrapper.find('ul li')).to.have.lengthOf(3);
-    // It should not render the entire message this time, but rather each sentence
-    expect(wrapper.html().includes(props.aiEvidence[0].message)).to.be.false;
-    expect(
-      wrapper.html().includes(props.aiEvidence[0].observations.split('.')[0])
-    ).to.be.true;
     // And it should not render line numbers in this case since it does not know
     // where any particular observation actually is.
-    expect(
-      wrapper
-        .html()
-        .includes(
-          `Lines ${props.aiEvidence[0].firstLine}-${props.aiEvidence[0].lastLine}`
-        )
-    ).to.be.false;
+    expect(wrapper.html().includes(`Lines`)).to.be.false;
   });
 });

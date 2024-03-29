@@ -55,9 +55,8 @@ export default function AiAssessmentBox({
      * observations instead of the evidence. This won't have line
      * numbers and is certainly worse but better than nothing. */
     if (evidence.firstLine === undefined) {
-      return (<p key={i}>{text}</p>);
-    }
-    else if (evidence.firstLine === evidence.lastLine) {
+      return <p key={i}>{text}</p>;
+    } else if (evidence.firstLine === evidence.lastLine) {
       // Line [lineNumber]: [message]
       text = i18n.aiAssessmentEvidenceLine({
         lineNumber: '<><first-line><>',
@@ -73,11 +72,12 @@ export default function AiAssessmentBox({
     }
 
     return (
-      <p key={i + 100}>
-        {text.split('<>').map(subtext => {
+      <p key={i}>
+        {text.split('<>').map((subtext, k) => {
           if (subtext === '<first-line>') {
             return (
               <a
+                key={`${i}-${k}`}
                 href="#"
                 onClick={e => {
                   e.preventDefault();
@@ -90,6 +90,7 @@ export default function AiAssessmentBox({
           } else if (subtext === '<last-line>') {
             return (
               <a
+                key={`${i}-${k}`}
                 href="#"
                 onClick={e => {
                   e.preventDefault();
@@ -100,7 +101,7 @@ export default function AiAssessmentBox({
               </a>
             );
           } else {
-            return <span>{subtext}</span>;
+            return <span key={`${i}-${k}`}>{subtext}</span>;
           }
         })}
       </p>
@@ -135,11 +136,9 @@ export default function AiAssessmentBox({
             <StrongText>{i18n.aiAssessmentEvidence()}</StrongText>
           </BodyFourText>
           <ul>
-            {aiEvidence.map(
-              (info, i) =>
-                info &&
-                info.firstLine && <li key={i}>{renderEvidenceItem(info, i)}</li>
-            )}
+            {aiEvidence.map((info, i) => (
+              <li key={i}>{renderEvidenceItem(info, i)}</li>
+            ))}
           </ul>
         </div>
       )}

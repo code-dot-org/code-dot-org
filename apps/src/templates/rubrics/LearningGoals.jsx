@@ -191,10 +191,9 @@ export function annotateLines(evidence, observations) {
           EditorAnnotator.highlightLine(i, ai_rubric_cyan);
         }
 
-        if (message !== observations) {
+        if (message === observations) {
           shouldIncludeObservationsColumn = true;
-        }
-        else {
+        } else {
           ret.push({
             firstLine: position.firstLine,
             lastLine: position.lastLine,
@@ -222,10 +221,9 @@ export function annotateLines(evidence, observations) {
       // If we are forcing these lines to have the bulk annotation of
       // the observations column, we do not append it to the list. This way,
       // it does not get listed out.
-      if (message !== observations) {
+      if (message === observations) {
         shouldIncludeObservationsColumn = true;
-      }
-      else {
+      } else {
         ret.push({
           firstLine: lineNumber,
           lastLine: lastLineNumber,
@@ -239,7 +237,7 @@ export function annotateLines(evidence, observations) {
   // sources of evidence. We want to list out the observations column in our
   // rendered list. So, here we parse out the observations column.
   if (shouldIncludeObservationsColumn) {
-    observations.split('. ').forEach( (observation) => {
+    observations.split('. ').forEach(observation => {
       ret.push({
         message: observation,
       });
