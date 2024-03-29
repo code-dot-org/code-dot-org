@@ -36,6 +36,20 @@ interface TabsProps extends TabModel {
   tabButtonId: string;
 }
 
+const checkTabForErrors = (
+  isIconOnly: boolean,
+  icon: FontAwesomeV6IconProps | undefined,
+  text: string | undefined
+) => {
+  if (isIconOnly && !icon) {
+    throw new Error('IconOnly tabs must have an icon');
+  }
+
+  if (!isIconOnly && !text) {
+    throw new Error('Tabs that are not icon only must have text');
+  }
+};
+
 const _Tab: React.FunctionComponent<TabsProps> = ({
   isSelected,
   onClick,
@@ -43,13 +57,14 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   text,
   iconLeft,
   iconRight,
-  isIconOnly,
   icon,
   tabPanelId,
   tabButtonId,
   disabled = false,
+  isIconOnly = false,
 }) => {
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
+  checkTabForErrors(isIconOnly, icon, text);
 
   return (
     <li role="presentation">
@@ -59,14 +74,21 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         aria-selected={isSelected}
         aria-controls={tabPanelId}
         id={tabButtonId}
-        className={classNames(isSelected && moduleStyles.selectedTab)}
+        className={classNames(
+          isSelected && moduleStyles.selectedTab,
+          isIconOnly && moduleStyles.iconOnlyTab
+        )}
         onClick={handleClick}
         disabled={disabled}
       >
-        {icon && <FontAwesomeV6Icon {...icon} />}
-        {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-        {text && <span>{text}</span>}
-        {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+        {isIconOnly && icon && <FontAwesomeV6Icon {...icon} />}
+        {!isIconOnly && (
+          <>
+            {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+            {text && <span>{text}</span>}
+            {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+          </>
+        )}
       </button>
     </li>
   );

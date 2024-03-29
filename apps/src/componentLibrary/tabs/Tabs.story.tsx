@@ -172,16 +172,19 @@ GroupOfTabsWithIcons.args = {
         {
           value: 'tab1',
           icon: {iconName: 'check', iconStyle: 'solid'},
+          isIconOnly: true,
           tabContent: <div>Tab 1 Content</div>,
         },
         {
           value: 'tab2',
           icon: {iconName: 'check', iconStyle: 'solid'},
+          isIconOnly: true,
           tabContent: <div>Tab 2 Content</div>,
         },
         {
           value: 'tab3',
           icon: {iconName: 'smile', iconStyle: 'solid'},
+          isIconOnly: true,
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
@@ -222,16 +225,19 @@ GroupOfTabsWithIcons.args = {
         {
           value: 'tab1',
           icon: {iconName: 'check', iconStyle: 'solid'},
+          isIconOnly: true,
           tabContent: <div>Tab 1 Content</div>,
         },
         {
           value: 'tab2',
           icon: {iconName: 'check', iconStyle: 'solid'},
+          isIconOnly: true,
           tabContent: <div>Tab 2 Content</div>,
         },
         {
           value: 'tab3',
           icon: {iconName: 'smile', iconStyle: 'solid'},
+          isIconOnly: true,
           tabContent: <div>Tab 3 Content</div>,
         },
       ],

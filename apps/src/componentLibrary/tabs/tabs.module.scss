@@ -7,6 +7,7 @@
     display: inline-flex;
     align-items: flex-start;
     margin: 0;
+    padding: 0;
 
     li {
       list-style: none;
@@ -110,6 +111,12 @@
 
 // Tabs Sizes
 .tabs-l {
+  i {
+    font-size: 1.1875rem;
+    line-height: 125%;
+    width: 1.5rem;
+  }
+
   &.tabs-primary {
     ul {
       gap: 1rem;
@@ -119,6 +126,10 @@
         margin: 0;
         padding: 0.625rem 0;
         gap: 0.5rem;
+
+        &.iconOnlyTab {
+          padding: 0.75rem 1rem;
+        }
       }
     }
   }
@@ -140,6 +151,12 @@
 }
 
 .tabs-m {
+  i {
+    font-size: 1rem;
+    line-height: 125%;
+    width: 1.25rem;
+  }
+
   &.tabs-primary {
     ul {
       gap: 1rem;
@@ -149,6 +166,10 @@
         margin: 0;
         padding: 0.5rem 0;
         gap: 0.5rem;
+
+        &.iconOnlyTab {
+          padding: 0.625rem 1rem;
+        }
       }
     }
   }
@@ -178,6 +199,10 @@
         margin: 0;
         padding: 0.3125rem 0;
         gap: 0.5rem;
+
+        &.iconOnlyTab {
+          padding: 0.4375rem 1rem;
+        }
       }
     }
   }
@@ -207,6 +232,10 @@
         margin: 0;
         padding: 0.0625rem 0;
         gap: 0.5rem;
+
+        &.iconOnlyTab {
+          padding: 0.25rem 0.5rem;
+        }
       }
     }
   }
