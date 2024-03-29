@@ -1,13 +1,21 @@
 import {
-  AiTutorInteractionSaveStatus,
-  AiTutorTypes,
+  AiTutorInteractionStatus as AITutorInteractionStatus,
+  AiTutorTypes as AITutorTypes,
+  PiiTypes as PII,
 } from '@cdo/apps/util/sharedConstants';
+
+export type AITutorTypesValue =
+  (typeof AITutorTypes)[keyof typeof AITutorTypes];
+export type AITutorInteractionStatusValue =
+  (typeof AITutorInteractionStatus)[keyof typeof AITutorInteractionStatus];
+
+export {AITutorInteractionStatus, AITutorTypes, PII};
 
 export type ChatCompletionMessage = {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: Status;
+  status: (typeof AITutorInteractionStatus)[keyof typeof AITutorInteractionStatus];
   timestamp?: string;
 };
 
@@ -15,7 +23,7 @@ export type AITutorInteraction = {
   userId?: number;
   levelId?: number;
   scriptId?: number;
-  type: TutorType | undefined;
+  type: AITutorTypesValue | undefined;
   isProjectBacked?: boolean;
   prompt: string;
   status: string;
@@ -25,7 +33,7 @@ export type AITutorInteraction = {
 export type StudentChatRow = {
   id: number;
   studentName: string;
-  type: TutorType;
+  type: AITutorTypesValue;
   prompt: string;
   status: string;
   aiResponse?: string;
@@ -44,7 +52,7 @@ export interface ChatContext {
   // studentInput is the last user message for general chat
   // or the student's code for compilation and validaiton.
   studentInput: string;
-  tutorType: TutorType | undefined;
+  tutorType: AITutorTypesValue | undefined;
 }
 
 export enum Role {
@@ -52,10 +60,3 @@ export enum Role {
   USER = 'user',
   SYSTEM = 'system',
 }
-export type Status =
-  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
-export const Status = AiTutorInteractionSaveStatus;
-export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
-
-export type TutorType = (typeof AiTutorTypes)[keyof typeof AiTutorTypes];
-export const TutorType = AiTutorTypes;

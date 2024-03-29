@@ -1,11 +1,19 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {AiTutorInteractionSaveStatus} from '@cdo/apps/util/sharedConstants';
+import {
+  AiTutorInteractionStatus as AITutorInteractionStatus,
+  PiiTypes as PII,
+} from '@cdo/apps/util/sharedConstants';
+
+export type AITutorInteractionStatusType =
+  (typeof AITutorInteractionStatus)[keyof typeof AITutorInteractionStatus];
+
+export {PII, AITutorInteractionStatus};
 
 export type ChatCompletionMessage = {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: Status;
+  status: AITutorInteractionStatusType;
   timestamp?: string;
 };
 
@@ -14,12 +22,6 @@ export enum Role {
   USER = 'user',
   SYSTEM = 'system',
 }
-
-export type Status =
-  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
-export const Status = AiTutorInteractionSaveStatus;
-export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
-
 export interface AichatLevelProperties extends LevelProperties {
   // --- DEPRECATED - used for old AI Chat
   systemPrompt: string;

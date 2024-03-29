@@ -14,7 +14,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
           script_id: 987,
           type: SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT],
           prompt: "Can you help me?",
-          status: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:OK],
+          status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK],
           ai_response: "Yes, I can help."
       }
     end
@@ -28,7 +28,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
           script_id: 246,
           type: SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT],
           prompt: "Can you help me?",
-          status: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:OK],
+          status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK],
           ai_response: "Yes, I can help."
       }
     end
@@ -43,7 +43,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
           script_id: 987,
           type: "trash can",
           prompt: "Can you help me?",
-          status: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:OK],
+          status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK],
           ai_response: "Yes, I can help."
       }
     end
@@ -76,7 +76,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
           script_id: @level.script_levels.first.script.id,
           type: SharedConstants::AI_TUTOR_TYPES[:COMPILATION],
           prompt: "Can you help me?",
-          status: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:PROFANITY],
+          status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:PROFANITY_VIOLATION],
           ai_response: "Yes, I can help.",
           isProjectBacked: true
       }
@@ -106,7 +106,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
           script_id: @script_level.script.id,
           type: SharedConstants::AI_TUTOR_TYPES[:VALIDATION],
           prompt: "Why is my test failing?",
-          status: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:OK],
+          status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK],
           ai_response: "Because your code is wrong.",
           isProjectBacked: true
       }
