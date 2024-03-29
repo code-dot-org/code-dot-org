@@ -5,8 +5,8 @@ class AiTutorInteractionsController < ApplicationController
 
   # POST /ai_tutor_interactions
   def create
-    return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor'}) unless current_user.has_ai_tutor_access?
-    return render(status: :not_acceptable, json: {error: 'Staus is unacceptable'}) unless valid_status
+    return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor.'}) unless current_user.has_ai_tutor_access?
+    return render(status: :not_acceptable, json: {error: 'Staus is unacceptable.'}) unless valid_status
     @ai_tutor_interaction = AiTutorInteraction.new(ai_tutor_interaction_params)
     if @ai_tutor_interaction.save
       render json: {message: "successfully created AiTutorInteraction with id: #{@ai_tutor_interaction.id}"}, status: :created
@@ -65,11 +65,11 @@ class AiTutorInteractionsController < ApplicationController
 
   # GET /ai_tutor_interactions
   def index
-    unless user_has_chat_access?
-      return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor chat messages.'})
-    end
+    user_ids, error_message = determine_user_ids_for_interactions
 
-    user_ids = determine_user_ids_for_interactions
+    if user_ids.nil?
+      render(status: :forbidden, json: {error: error_message || 'Access denied.'}) and return
+    end
 
     interactions = AiTutorInteraction.where(user_id: user_ids)
     render json: format_ai_tutor_interactions(interactions)
@@ -81,19 +81,39 @@ class AiTutorInteractionsController < ApplicationController
     current_user.can_view_student_ai_chat_messages? || current_user.has_ai_tutor_access?
   end
 
+  def student_belongs_to_teacher?(student_id)
+    current_user.students.exists?(id: student_id)
+  end
+
+  def section_owned_by_current_user?(section_id)
+    current_user.sections.exists?(id: section_id)
+  end
+
   def determine_user_ids_for_interactions
-    if current_user.can_view_student_ai_chat_messages?
-      # Teacher scenario
-      if params[:sectionId].present?
-        section = current_user.sections.find_by(id: params[:sectionId])
-        return render(status: :not_found, json: {error: 'Section not found, or user does not have permission for this section.'}) unless section
-        section.students.pluck(:id)
+    # If the current user is a student, ignore any filters and return their own ID.
+    unless current_user.can_view_student_ai_chat_messages?
+      puts "you cant view messages"
+      return [current_user.id] if params[:userId].blank? && params[:sectionId].blank?
+      # If a student tries to provide filters, return nil and a specific error message.
+      return nil, 'Students cannot provide filters.'
+    end
+
+    if params[:userId].present?
+      user_id = params[:userId].to_i
+      if student_belongs_to_teacher?(user_id)
+        return [user_id], nil
+      else 
+        return nil, 'Access to the specified student’s chats is not allowed.'
+      end
+    elsif params[:sectionId].present?
+      section = current_user.sections.find_by(id: params[:sectionId])
+      if section
+        return section.students.pluck(:id), nil
       else
-        current_user.students.pluck(:id)
+        return nil, 'Section not found, or user does not have permission for this section.'
       end
     else
-      # Student scenario
-      [current_user.id]
+      return current_user.students.pluck(:id), nil
     end
   end
 

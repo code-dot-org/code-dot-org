@@ -142,9 +142,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     random_section = create :section
     refute teacher.sections.include?(random_section)
 
-    get :index, params: {
-      sectionId: random_section.id,
-    }
+    get :index, params: { sectionId: random_section.id }
     assert_response :forbidden
   end
 
@@ -160,24 +158,22 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'get_for_student returns not found for invalid userId' do
+  test 'index returns forbidden when students provide parameters' do
     sign_in @student_with_ai_tutor_access
-    assert_raises(ActiveRecord::RecordNotFound) do
-      get :get_for_student, params: {
-        userId: '123',
-      }
-    end
+
+    get :index, params: { userId: '123' }
+    assert_response :forbidden
+    response_body = JSON.parse(response.body)
+    assert_equal 'Students cannot provide filters.', response_body['error']
   end
 
-  test 'get_for_student returns AI Tutor Interactions when student owns chats' do
+  test 'index returns AI Tutor Interactions when student owns chats' do
     sign_in @student_with_ai_tutor_access
     num_ai_tutor_interactions = 2
     num_ai_tutor_interactions.times do
       create :ai_tutor_interaction, user: @student_with_ai_tutor_access
     end
-    get :get_for_student, params: {
-      userId: @student_with_ai_tutor_access.id,
-    }
+    get :index
     assert_response :success
 
     response_json = JSON.parse(response.body)
@@ -185,29 +181,28 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     assert response_json.first["userId"], @student_with_ai_tutor_access.id
   end
 
-  test 'get_for_student returns forbidden when student is not in teacher section' do
+  test 'index returns forbidden when student is not in teacher section' do
     random_teacher = create :teacher
     sign_in random_teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
     create :ai_tutor_interaction, user: @student_with_ai_tutor_access
-    get :get_for_student, params: {
-      userId: @student_with_ai_tutor_access.id,
-    }
+
+    get :index, params: { userId: @student_with_ai_tutor_access.id }
     assert_response :forbidden
   end
 
-  test 'get_for_student returns forbidden when teacher does not have access to view chats' do
+  test 'index returns forbidden when teacher does not have access to view chats' do
     teacher = @student_with_ai_tutor_access.teachers.first
     sign_in teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(false)
     create :ai_tutor_interaction, user: @student_with_ai_tutor_access
-    get :get_for_student, params: {
+    get :index, params: {
       userId: @student_with_ai_tutor_access.id,
     }
     assert_response :forbidden
   end
 
-  test 'get_for_student returns AI Tutor Interactions for student in teacher section' do
+  test 'index returns AI Tutor Interactions for student in teacher section' do
     teacher = @student_with_ai_tutor_access.teachers.first
     sign_in teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
@@ -215,7 +210,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     num_ai_tutor_interactions.times do
       create :ai_tutor_interaction, user: @student_with_ai_tutor_access
     end
-    get :get_for_student, params: {
+    get :index, params: {
       userId: @student_with_ai_tutor_access.id,
     }
     assert_response :success
