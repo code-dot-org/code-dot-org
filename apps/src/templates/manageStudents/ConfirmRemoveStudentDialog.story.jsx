@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS,
 } from './ConfirmRemoveStudentDialog';

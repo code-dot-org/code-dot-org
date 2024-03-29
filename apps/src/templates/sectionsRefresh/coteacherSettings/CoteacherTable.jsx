@@ -1,12 +1,13 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
+
+import {StrongText, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
-import classNames from 'classnames';
 import styles from './coteacher-settings.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {StrongText, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import ReactTooltip from 'react-tooltip';
 
 const getPendingPill = () => {
   return (

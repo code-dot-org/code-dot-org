@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+
 import moduleStyles from './sections-refresh.module.scss';
+
 const CelebrationGif = require('@cdo/static/section_creation_celebration.gif');
 
 export default function SectionCreationCelebrationDialog() {

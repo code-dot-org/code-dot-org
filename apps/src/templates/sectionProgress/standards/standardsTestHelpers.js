@@ -1,5 +1,5 @@
-import {TeacherScores} from '@cdo/apps/templates/sectionProgress/standards/standardsConstants';
 import {levelProgressFromResult} from '@cdo/apps/templates/progress/progressHelpers';
+import {TeacherScores} from '@cdo/apps/templates/sectionProgress/standards/standardsConstants';
 
 export const unpluggedLessonList = [
   {

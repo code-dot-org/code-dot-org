@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Button from '@cdo/apps/templates/Button';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import i18n from '@cdo/locale';
+import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
 import {
   getCurrentQuestion,
   getStudentAnswersForCurrentQuestion,
   QuestionType,
 } from './sectionAssessmentsRedux';
-import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 class MultipleChoiceDetailsDialog extends Component {
   static propTypes = {
