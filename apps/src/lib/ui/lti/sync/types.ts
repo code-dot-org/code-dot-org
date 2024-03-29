@@ -16,6 +16,7 @@ export interface LtiSectionSyncDialogProps {
   syncResult: LtiSectionSyncResult;
   onClose?: () => void;
   disableRosterSyncButtonEnabled?: boolean;
+  lmsName: string;
 }
 
 export enum SubView {

@@ -85,7 +85,9 @@ class LtiV1Controller < ApplicationController
     return log_unauthorized('Missing "aud" or "iss" from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
-
+    # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
+    # unable to access values using dot notation and instead must use brackets. This still works with the value returned by Active Record,
+    # as it has a '[]' method that behaves in the same way https://api.rubyonrails.org/classes/ActiveRecord/AttributeMethods.html#method-i-5B-5D
     integration = read_cache(integration_cache_key) || LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
     return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id}) unless integration
     # Cache integration for fast retrieval on subsequent LTI launches. Set
@@ -163,7 +165,7 @@ class LtiV1Controller < ApplicationController
 
         metadata = {
           'user_type' => user.user_type,
-          'lms_type' => integration[:platform_name],
+          'lms_name' => integration[:platform_name],
         }
         Metrics::Events.log_event(
           user: user,
@@ -279,6 +281,8 @@ class LtiV1Controller < ApplicationController
 
     result = nil
     had_changes = false
+    total_sections = 0
+    total_students = 0
     ActiveRecord::Base.transaction do
       lti_course ||= Queries::Lti.find_or_create_lti_course(
         lti_integration_id: lti_integration.id,
@@ -294,9 +298,27 @@ class LtiV1Controller < ApplicationController
 
       result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
       had_changes ||= !result[:changed].empty?
+
+      result[:changed].each_value do |section|
+        total_sections += 1
+        total_students += section[:size]
+      end
     end
+    metadata = {
+      'number_of_sections' => total_sections,
+      'number_of_students' => total_students,
+    }
+    # If section code present, this is a sync from the teacher dashboard by button, otherwise it's a sync
+    # by LTI launch
+    event_name = params[:section_code] ? 'lti_section_update_by_button' : 'lti_section_update_by_launch'
+    Metrics::Events.log_event(
+      user: current_user,
+      event_name: event_name,
+      metadata: metadata,
+    )
 
     @lti_section_sync_result = result
+    @lms_name = lti_integration.platform_name
 
     respond_to do |format|
       format.html do
