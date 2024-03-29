@@ -144,7 +144,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".uitest-run-ai-assessment" is enabled
 
     # Teacher switches to Class Management tab
-    When I click selector "button:contains('Class Management')"
+    When I click selector "button:contains('Class Data')"
     And I wait until element ".uitest-run-ai-assessment-all" is visible
     And element ".uitest-run-ai-assessment-all" is enabled
 
@@ -154,7 +154,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element ".uitest-eval-status-all-text" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in Student Rubric tab
-    When I click selector "button:contains('Student Rubric')"
+    When I click selector "button:contains('Assess a Student')"
     And I wait until element "#uitest-next-goal" is visible
     And I click selector "#uitest-next-goal"
     And I wait until element ".uitest-learning-goal-title" is visible
