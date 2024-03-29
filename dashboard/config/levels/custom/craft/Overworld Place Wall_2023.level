@@ -1,7 +1,8 @@
 <Craft>
   <config><![CDATA[{
+  "published": true,
   "game_id": 49,
-  "created_at": "2023-03-14T20:38:24.000Z",
+  "created_at": "2023-09-27T06:33:36.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -39,7 +40,7 @@
       "planksBirch",
       "planksOak"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_inside_repeat\",\r\n  \"callout_text\": \"Repeat actions by placing blocks in here\",\r\n  \"element_id\": \"[block-id=\\\"7\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -18,\r\n     \"y\": 13\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_inside_repeat\",\r\n  \"callout_text\": \"Repeat actions by placing blocks in here\",\r\n  \"element_id\": \"[data-id=\\\"7\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -18,\r\n     \"y\": 13\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "grid_width": "10",
     "grid_height": "10",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `place` block first, and then the `move` block.\",\"hint_id\":\"mc_5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/296af8e5cc4203d4c16172a5eb2780c5/Overworld Place Wall.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure both blocks are inside of the `repeat` loop to run the code more than once.\",\"hint_id\":\"mc_5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c4beb4a47ef3d540abe808c5084fa9cb/Overworld Place Wall.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.\",\"hint_id\":\"mc_5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5dbc8a441cfe78f9f41366345e6db629/Overworld Place Wall.mp3\"}]",
@@ -65,9 +66,8 @@
     "boat": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:38:24.684+00:00\",\"changed\":[\"cloned from \\\"Overworld Place Wall2022\\\"\"],\"cloned_from\":\"Overworld Place Wall2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:38:24.684+00:00\",\"changed\":[\"cloned from \\\"Overworld Place Wall2022\\\"\"],\"cloned_from\":\"Overworld Place Wall2022\"},{\"changed_at\":\"2024-03-28 15:56:54 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1
@@ -76,7 +76,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" id="7">
           <next>
             <block type="controls_repeat_dropdown">
               <title name="TIMES" config="2-10">4</title>
