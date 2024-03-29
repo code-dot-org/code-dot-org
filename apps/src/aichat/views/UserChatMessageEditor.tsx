@@ -34,13 +34,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
         value={userMessage}
       />
 
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <div className={moduleStyles.centerSingleItemContainer}>
         <Button
           isIconOnly
           icon={{iconName: 'paper-plane'}}

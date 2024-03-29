@@ -16,3 +16,9 @@ $message-editor-height: 60px;
     box-sizing: border-box;
     gap: 5px;
 }
+
+.centerSingleItemContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
