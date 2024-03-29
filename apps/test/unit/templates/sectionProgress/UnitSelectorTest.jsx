@@ -37,6 +37,7 @@ describe('UnitSelector', () => {
     render(
       <UnconnectedUnitSelector
         {...DEFAULT_PROPS}
+        coursesWithProgress={[]}
         asyncLoadCoursesWithProgress={asyncLoadCoursesWithProgress}
       />
     );

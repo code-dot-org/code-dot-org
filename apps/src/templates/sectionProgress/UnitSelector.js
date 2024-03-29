@@ -1,10 +1,11 @@
 import classNames from 'classnames';
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {asyncLoadCoursesWithProgress} from '@cdo/apps/redux/unitSelectionRedux';
+import {connect} from 'react-redux';
 
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import {asyncLoadCoursesWithProgress} from '@cdo/apps/redux/unitSelectionRedux';
+
 import styles from './unit-selector.module.scss';
 
 function UnitSelector({
@@ -28,7 +29,6 @@ function UnitSelector({
           styles.skeletonDropdown,
           skeletonizeContent.skeletonizeContent
         )}
-        id="uitest-course-dropdown"
       />
     </div>
   );
