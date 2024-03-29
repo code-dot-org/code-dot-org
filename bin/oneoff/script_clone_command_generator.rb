@@ -18,7 +18,9 @@ def generate_unit_clone_commands(source_unit_group_name, src_year, dstn_year)
   end
 end
 
-print "Enter the source year:"
+puts "\nThis script does not generate correct commands for deep learning courses, courses that belong to a course family and those which aren't versioned."
+puts "Pull latest from staging and run seeding to ensure the local curriculum state matches that of levelbuilder environment."
+print "\nEnter the source year:"
 source_year = gets.chomp
 
 print "Enter the destination year:"
