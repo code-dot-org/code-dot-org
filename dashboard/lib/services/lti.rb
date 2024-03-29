@@ -266,7 +266,7 @@ module Services
           )
           lti_section = LtiSection.create(lti_course_id: lti_course.id, lms_section_id: lms_section_id, section: section)
 
-          metadata = {'lms_type' => lti_integration.platform_name}
+          metadata = {'lms_name' => lti_integration.platform_name}
           Metrics::Events.log_event(
             user: current_user,
             event_name: 'lti_section_created',

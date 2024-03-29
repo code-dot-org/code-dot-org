@@ -33,7 +33,7 @@ const MOCK_SYNC_RESULT: LtiSectionSyncResult = {
   changed: MOCK_UPDATED_SECTION_MAP,
 };
 
-const LMS_TYPE = 'some_lms';
+const LMS_NAME = 'some_lms';
 
 describe('LTI Section Sync Dialog', () => {
   beforeEach(() => {
@@ -51,7 +51,7 @@ describe('LTI Section Sync Dialog', () => {
         <LtiSectionSyncDialog
           isOpen
           syncResult={MOCK_SYNC_RESULT}
-          lmsType={LMS_TYPE}
+          lmsName={LMS_NAME}
         />
       );
 
@@ -80,7 +80,7 @@ describe('LTI Section Sync Dialog', () => {
           syncResult={MOCK_SYNC_RESULT}
           disableRosterSyncButtonEnabled
           onClose={mockOnClose}
-          lmsType={LMS_TYPE}
+          lmsName={LMS_NAME}
         />
       );
 
@@ -120,7 +120,7 @@ describe('LTI Section Sync Dialog', () => {
           isOpen
           syncResult={MOCK_SYNC_RESULT}
           disableRosterSyncButtonEnabled
-          lmsType={LMS_TYPE}
+          lmsName={LMS_NAME}
         />
       );
 
@@ -157,7 +157,7 @@ describe('LTI Section Sync Dialog', () => {
         <LtiSectionSyncDialog
           isOpen
           syncResult={errorSyncResult}
-          lmsType={LMS_TYPE}
+          lmsName={LMS_NAME}
         />
       );
 

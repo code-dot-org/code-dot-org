@@ -127,7 +127,7 @@ class RegistrationsController < Devise::RegistrationsController
         lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
           'user_type' => current_user.user_type,
-          'lms_type' => lms_name,
+          'lms_name' => lms_name,
         }
         Metrics::Events.log_event(
           user: current_user,

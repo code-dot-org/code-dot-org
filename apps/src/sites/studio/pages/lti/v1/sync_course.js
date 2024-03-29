@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const result = scriptData['lti_section_sync_result'];
-  const lmsType = scriptData['lms_type'];
+  const lmsName = scriptData['lms_name'];
 
   ReactDOM.render(
     <LtiSectionSyncDialog
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       syncResult={result}
       onClose={onClose}
       disableRosterSyncButtonEnabled
-      lmsType={lmsType}
+      lmsName={lmsName}
     />,
     mountPoint
   );

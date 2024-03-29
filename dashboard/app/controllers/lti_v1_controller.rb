@@ -165,7 +165,7 @@ class LtiV1Controller < ApplicationController
 
         metadata = {
           'user_type' => user.user_type,
-          'lms_type' => integration[:platform_name],
+          'lms_name' => integration[:platform_name],
         }
         Metrics::Events.log_event(
           user: user,
@@ -318,7 +318,7 @@ class LtiV1Controller < ApplicationController
     )
 
     @lti_section_sync_result = result
-    @lms_type = lti_integration.platform_name
+    @lms_name = lti_integration.platform_name
 
     respond_to do |format|
       format.html do

@@ -23,7 +23,7 @@ export default function LtiSectionSyncDialog({
   syncResult,
   onClose,
   disableRosterSyncButtonEnabled,
-  lmsType,
+  lmsName,
 }: LtiSectionSyncDialogProps) {
   const initialView = syncResult.error ? SubView.ERROR : SubView.SYNC_RESULT;
   const [currentView, setCurrentView] = useState<SubView>(initialView);
@@ -60,10 +60,10 @@ export default function LtiSectionSyncDialog({
 
   const disableRosterSyncView = () => {
     const eventPayload = {
-      lms_type: lmsType,
+      lms_name: lmsName,
     };
     analyticsReporter.sendEvent(
-      'lti_opt_out_dialogue',
+      'lti_opt_out_click',
       eventPayload,
       PLATFORMS.STATSIG
     );
@@ -92,7 +92,7 @@ export default function LtiSectionSyncDialog({
       url: `/api/v1/users/disable_lti_roster_sync`,
       success: () => {
         const eventPayload = {
-          lms_type: lmsType,
+          lms_name: lmsName,
         };
         analyticsReporter.sendEvent(
           'lti_opt_out_confirm',
@@ -106,7 +106,7 @@ export default function LtiSectionSyncDialog({
 
   const handleDocsClick = () => {
     const eventPayload = {
-      lms_type: lmsType,
+      lms_name: lmsName,
     };
     analyticsReporter.sendEvent(
       'lti_opt_out_documentation',
@@ -229,5 +229,5 @@ LtiSectionSyncDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   syncResult: LtiSectionSyncResultShape.isRequired,
   onClose: PropTypes.func,
-  lmsType: PropTypes.string.isRequired,
+  lmsName: PropTypes.string.isRequired,
 };

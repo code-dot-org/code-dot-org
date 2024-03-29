@@ -19,7 +19,7 @@ export default function LtiRosterSyncSettings(props) {
 
   const handleSubmit = () => {
     const eventPayload = {
-      lms_type: props.lmsType,
+      lms_name: props.lmsName,
     };
     const eventName = enabled
       ? 'lti_opt_out_toggle_on'
@@ -70,5 +70,5 @@ const styles = {
 LtiRosterSyncSettings.propTypes = {
   ltiRosterSyncEnabled: PropTypes.bool.isRequired,
   formId: PropTypes.string.isRequired,
-  lmsType: PropTypes.string,
+  lmsName: PropTypes.string,
 };
