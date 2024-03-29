@@ -7,11 +7,11 @@
     margin-bottom: 10px;
   }
   
-  .fieldTitle {
+.title {
     margin-left: 10px;
     margin-bottom: 0;
-  }
-  
-  .expandCollapseButton {
+}
+
+.expandCollapseButton {
     @include remove-button-styles;
-  }
+}

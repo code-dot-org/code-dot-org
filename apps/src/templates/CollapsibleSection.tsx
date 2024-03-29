@@ -7,18 +7,22 @@ import {
   VisualAppearance,
 } from '@cdo/apps/componentLibrary/typography/types';
 
-const CollapsibleSection: React.FunctionComponent<{
+interface CollapsibleSectionProps {
   title: string;
   titleSemanticTag?: SemanticTag;
+  titleStyle?: string;
   titleVisualAppearance?: VisualAppearance;
   children: React.ReactNode;
   initiallyCollapsed?: boolean;
   collapsedIcon?: string;
   expandedIcon?: string;
-}> = ({
+}
+
+const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
   title,
   titleSemanticTag = 'p',
   titleVisualAppearance = 'body-one',
+  titleStyle = moduleStyles.title,
   children,
   initiallyCollapsed = true,
   collapsedIcon = 'chevron-down',
@@ -42,7 +46,7 @@ const CollapsibleSection: React.FunctionComponent<{
         <Typography
           semanticTag={titleSemanticTag}
           visualAppearance={titleVisualAppearance}
-          className={moduleStyles.fieldTitle}
+          className={titleStyle}
         >
           {title}
         </Typography>
