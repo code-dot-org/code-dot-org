@@ -109,6 +109,7 @@ Feature: Using the teacher dashboard
     Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#uitest-summary-cell" is visible
     And I press the first ".uitest-summary-cell" element
     And I see ".uitest-detail-cell"
 
