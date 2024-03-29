@@ -101,7 +101,7 @@ class AiTutorInteractionsController < ApplicationController
       user_id = params[:userId].to_i
       if student_belongs_to_teacher?(user_id)
         return [user_id], nil
-      else 
+      else
         return nil, 'Access to the specified student’s chats is not allowed.'
       end
     elsif params[:sectionId].present?
@@ -119,8 +119,9 @@ class AiTutorInteractionsController < ApplicationController
   def format_ai_tutor_interactions(interactions)
     interactions.includes(:user).map do |interaction|
       interaction.attributes.merge({
-        'studentName' => interaction.user.name
-      }).transform_keys { |key| key.camelize(:lower) }
+                                     'studentName' => interaction.user.name
+                                   }
+).transform_keys {|key| key.camelize(:lower)}
     end
   end
 end

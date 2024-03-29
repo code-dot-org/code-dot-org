@@ -35,16 +35,17 @@ export const fetchAITutorInteractions = async (
   options: FetchAITutorInteractionsOptions
 ) => {
   const baseUrl = `/ai_tutor_interactions`;
-  let queryParams = '';
+  const queryParams = [];
 
   if (options.sectionId) {
-    queryParams += `sectionId=${options.sectionId}`;
+    queryParams.push(`sectionId=${options.sectionId}`);
   }
   if (options.userId) {
-    queryParams += `userId=${options.userId}`;
+    queryParams.push(`userId=${options.userId}`);
   }
 
-  const url = `${baseUrl}${queryParams ? `?${queryParams}` : ''}`;
+  const queryString = queryParams.join('&');
+  const url = `${baseUrl}${queryString ? `?${queryString}` : ''}`;
   try {
     const response = await fetch(url, {
       method: 'GET',

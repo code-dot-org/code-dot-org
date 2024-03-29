@@ -142,7 +142,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     random_section = create :section
     refute teacher.sections.include?(random_section)
 
-    get :index, params: { sectionId: random_section.id }
+    get :index, params: {sectionId: random_section.id}
     assert_response :forbidden
   end
 
@@ -161,7 +161,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
   test 'index returns forbidden when students provide parameters' do
     sign_in @student_with_ai_tutor_access
 
-    get :index, params: { userId: '123' }
+    get :index, params: {userId: '123'}
     assert_response :forbidden
     response_body = JSON.parse(response.body)
     assert_equal 'Students cannot provide filters.', response_body['error']
@@ -187,7 +187,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
     create :ai_tutor_interaction, user: @student_with_ai_tutor_access
 
-    get :index, params: { userId: @student_with_ai_tutor_access.id }
+    get :index, params: {userId: @student_with_ai_tutor_access.id}
     assert_response :forbidden
   end
 
