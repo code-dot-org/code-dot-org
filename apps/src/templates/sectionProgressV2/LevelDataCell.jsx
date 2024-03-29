@@ -5,6 +5,8 @@ import queryString from 'query-string';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
@@ -15,6 +17,14 @@ import ProgressIcon from './ProgressIcon';
 
 import legendStyles from './progress-table-legend.module.scss';
 import styles from './progress-table-v2.module.scss';
+
+const levelClickedAmplitude = (sectionId, isAssessment) => () => {
+  console.log('levelClickedAmplitude', sectionId, isAssessment);
+  analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_LEVEL_DETAILS, {
+    sectionId: sectionId,
+    isAssessment: isAssessment,
+  });
+};
 
 export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
@@ -95,6 +105,7 @@ function LevelDataCell({
       openInNewTab
       external
       className={classNames(styles.gridBox, styles.gridBoxLevel, feedbackStyle)}
+      onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
     >
       {itemType && <ProgressIcon itemType={itemType} />}
     </Link>

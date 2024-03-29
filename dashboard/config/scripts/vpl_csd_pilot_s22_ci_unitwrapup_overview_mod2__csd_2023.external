@@ -4,20 +4,14 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Unit Wrap Up
+<img src="https://images.code.org/38b78a55a33fdb2ba631a5182217eaeb-image-1711652195311.56.32 AM.png" alt="Two students smile as they look at a laptop together." style="border-radius:40px; float: right; padding-right: 10px; height: 250px; clear: both; margin: 20px 20px 0px 20px;">
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+#### In the next section of this professional learning module, you will have the opportunity to see sample student projects. 
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">In the next section of this professional learning module, you will have the opportunity to see sample student projects. 
-</p></div>
+### **You will**:
 
-## You will:
-
-* ##### Explore end of chapter projects.
+* #### Explore end-of-chapter projects.
 
 ### **Suggested time:** 10 minutes
-
-## Let's keep learning! 
-
-
-
+<br><br><br><br><br><br>
 MARKDOWN

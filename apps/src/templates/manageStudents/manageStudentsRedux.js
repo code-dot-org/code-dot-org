@@ -1,11 +1,12 @@
+import $ from 'jquery';
 import _ from 'lodash';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
 import {
   sectionCode,
   sectionName,
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import $ from 'jquery';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',
