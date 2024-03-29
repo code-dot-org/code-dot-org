@@ -61,6 +61,7 @@ class XhrProxyController < ApplicationController
     api.scripture.api.bible
     api.scryfall.com
     api.spoonacular.com
+    api.sportsdata.io
     api.si.edu
     api.spacexdata.com
     api.spotify.com

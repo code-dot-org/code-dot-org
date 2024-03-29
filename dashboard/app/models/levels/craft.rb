@@ -470,6 +470,11 @@ class Craft < Blockly
 
   }.freeze
 
+  # Use a DCDO flag here so we can revert back to CDO Blockly without a deploy
+  def uses_google_blockly?
+    DCDO.get('minecraft_google_blockly', true)
+  end
+
   def self.start_directions
     [['North', 0], ['East', 1], ['South', 2], ['West', 3]]
   end

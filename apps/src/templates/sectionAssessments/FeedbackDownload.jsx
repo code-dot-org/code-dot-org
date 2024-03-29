@@ -1,19 +1,20 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {CSVLink} from 'react-csv';
+import {connect} from 'react-redux';
+
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
+import Button from '@cdo/apps/templates/Button';
+import moduleStyles from '@cdo/apps/templates/button.module.scss';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   getExportableFeedbackData,
   isCurrentScriptCSD,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {CSVLink} from 'react-csv';
-import Button from '@cdo/apps/templates/Button';
-import moduleStyles from '@cdo/apps/templates/button.module.scss';
-import classNames from 'classnames';
 import color from '@cdo/apps/util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
