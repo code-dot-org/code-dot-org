@@ -3,8 +3,8 @@
  */
 import $ from 'jquery';
 
-var markup = require('./NetSimDnsModeControl.html.ejs');
 var DnsMode = require('./NetSimConstants').DnsMode;
+var markup = require('./NetSimDnsModeControl.html.ejs');
 
 /**
  * Generator and controller for DNS mode selector

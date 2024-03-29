@@ -10,12 +10,13 @@ var _ = require('lodash');
 
 var i18n = require('@cdo/netsim/locale');
 
-var NetSimPanel = require('./NetSimPanel');
-var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./NetSimConstants').NodeType;
 var NetSimGlobals = require('./NetSimGlobals');
+var NetSimPanel = require('./NetSimPanel');
+var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimUtils = require('./NetSimUtils');
+
 require('../utils'); // Provides Function.prototype.inherits
 
 /**

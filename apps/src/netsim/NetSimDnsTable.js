@@ -3,8 +3,8 @@
  */
 import $ from 'jquery';
 
-var markup = require('./NetSimDnsTable.html.ejs');
 var DnsMode = require('./NetSimConstants').DnsMode;
+var markup = require('./NetSimDnsTable.html.ejs');
 
 /**
  * Generator and controller for DNS network lookup table component.

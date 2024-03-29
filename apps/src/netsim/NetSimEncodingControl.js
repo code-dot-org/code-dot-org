@@ -3,8 +3,8 @@
  */
 import $ from 'jquery';
 
-var markup = require('./NetSimEncodingControl.html.ejs');
 var EncodingType = require('./NetSimConstants').EncodingType;
+var markup = require('./NetSimEncodingControl.html.ejs');
 
 /**
  * Generator and controller for message encoding selector: A dropdown that

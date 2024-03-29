@@ -13,19 +13,18 @@ var utils = require('../utils'); // Provides Function.prototype.inherits
 var DataConverters = require('./DataConverters');
 var NetSimConstants = require('./NetSimConstants');
 var NetSimGlobals = require('./NetSimGlobals');
-
-var EncodingType = NetSimConstants.EncodingType;
-var MessageGranularity = NetSimConstants.MessageGranularity;
-var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
-
-var binaryToAB = DataConverters.binaryToAB;
-
 var logger = require('./NetSimLogger').getSingleton();
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimSendPanel.html.ejs');
 var Packet = require('./Packet');
+
+var EncodingType = NetSimConstants.EncodingType;
+var MessageGranularity = NetSimConstants.MessageGranularity;
+var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
+
+var binaryToAB = DataConverters.binaryToAB;
 
 /**
  * Generator and controller for message sending view.

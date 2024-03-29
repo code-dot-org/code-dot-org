@@ -3,10 +3,10 @@
  */
 import $ from 'jquery';
 
-var markup = require('./NetSimDnsTab.html.ejs');
 var DnsMode = require('./NetSimConstants').DnsMode;
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
+var markup = require('./NetSimDnsTab.html.ejs');
 var NetSimDnsTable = require('./NetSimDnsTable');
 var NetSimGlobals = require('./NetSimGlobals');
 
