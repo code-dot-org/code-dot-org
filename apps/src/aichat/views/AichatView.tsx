@@ -8,15 +8,12 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
-import {
-  setAiCustomizations,
-  setPreviouslySavedAiCustomizations,
-} from '../redux/aichatRedux';
+import {setStartingAiCustomizations} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
-import {AichatLevelProperties, AiCustomizations} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const AichatView: React.FunctionComponent = () => {
@@ -39,22 +36,12 @@ const AichatView: React.FunctionComponent = () => {
   );
 
   useEffect(() => {
-    const levelAiCustomizations: AiCustomizations = {
-      botName: levelAiCustomizationsWithVisibility.botName.value,
-      temperature: levelAiCustomizationsWithVisibility.temperature.value,
-      systemPrompt: levelAiCustomizationsWithVisibility.systemPrompt.value,
-      retrievalContexts:
-        levelAiCustomizationsWithVisibility.retrievalContexts.value,
-      modelCardInfo: levelAiCustomizationsWithVisibility.modelCardInfo.value,
-    };
-
-    const reconciledAiCustomizations = Object.keys(studentAiCustomizations)
-      .length
-      ? studentAiCustomizations
-      : levelAiCustomizations;
-
-    dispatch(setPreviouslySavedAiCustomizations(reconciledAiCustomizations));
-    dispatch(setAiCustomizations(reconciledAiCustomizations));
+    dispatch(
+      setStartingAiCustomizations({
+        levelAiCustomizationsWithVisibility,
+        studentAiCustomizations,
+      })
+    );
   }, [dispatch, studentAiCustomizations, levelAiCustomizationsWithVisibility]);
 
   return (

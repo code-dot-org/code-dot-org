@@ -14,6 +14,8 @@ import {
   Status,
   AiCustomizations,
   ModelCardInfo,
+  LevelAiCustomizations,
+  Visibility,
 } from '../types';
 
 const haveDifferentValues = (
@@ -202,8 +204,42 @@ const aichatSlice = createSlice({
         chatMessage.status = status;
       }
     },
-    setAiCustomizations: (state, action: PayloadAction<AiCustomizations>) => {
-      state.currentAiCustomizations = action.payload;
+    setStartingAiCustomizations: (
+      state,
+      action: PayloadAction<{
+        levelAiCustomizationsWithVisibility: LevelAiCustomizations;
+        studentAiCustomizations: AiCustomizations;
+      }>
+    ) => {
+      const {levelAiCustomizationsWithVisibility, studentAiCustomizations} =
+        action.payload;
+
+      let reconciledAiCustomizations: AiCustomizations = {
+        botName: levelAiCustomizationsWithVisibility.botName.value,
+        temperature: levelAiCustomizationsWithVisibility.temperature.value,
+        systemPrompt: levelAiCustomizationsWithVisibility.systemPrompt.value,
+        retrievalContexts:
+          levelAiCustomizationsWithVisibility.retrievalContexts.value,
+        modelCardInfo: levelAiCustomizationsWithVisibility.modelCardInfo.value,
+      };
+
+      for (const customizationUntyped in reconciledAiCustomizations) {
+        const customization = customizationUntyped as keyof AiCustomizations;
+
+        if (
+          levelAiCustomizationsWithVisibility[customization].visibility ===
+            Visibility.EDITABLE &&
+          studentAiCustomizations[customization]
+        ) {
+          reconciledAiCustomizations = {
+            ...reconciledAiCustomizations,
+            [customization]: studentAiCustomizations[customization],
+          };
+        }
+      }
+
+      state.previouslySavedAiCustomizations = reconciledAiCustomizations;
+      state.currentAiCustomizations = reconciledAiCustomizations;
     },
     setPreviouslySavedAiCustomizations: (
       state,
@@ -263,7 +299,7 @@ export const {
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
-  setAiCustomizations,
+  setStartingAiCustomizations,
   setPreviouslySavedAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
