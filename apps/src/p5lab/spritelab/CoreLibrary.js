@@ -10,6 +10,7 @@ import {
   displayWorkspaceAlert,
 } from '../../code-studio/projectRedux';
 import msg from '@cdo/locale';
+import {formatForPlayspace} from '../utils';
 
 export default class CoreLibrary {
   constructor(p5, jsInterpreter) {
@@ -131,7 +132,7 @@ export default class CoreLibrary {
       padding: 10,
       strokeWeight: 3,
       strokeRadius: 24,
-      maxLabelLength: 30, // Maximum number of characters to display in the label
+      maxLabelLength: 20, // Maximum number of characters to display in the label
     };
 
     // Calculate the width for the label and value separator (colon and space)
@@ -167,7 +168,7 @@ export default class CoreLibrary {
         APP_WIDTH - totalReservedSpace - labelWidth;
       const displayValue = drawUtils.truncateText(
         this.p5,
-        `${value}`,
+        formatForPlayspace(value),
         availableSpaceForValue,
         config.textSize
       );
