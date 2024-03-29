@@ -16,11 +16,7 @@ import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import moduleStyles from './aichatView.module.scss';
-import {
-  AichatLevelProperties,
-  ViewMode,
-  Visibility,
-} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const AichatView: React.FunctionComponent = () => {
@@ -38,26 +34,23 @@ const AichatView: React.FunctionComponent = () => {
   );
   const {hidePresentationPanel} = levelAiCustomizationsWithVisibility;
 
-  const studentAiCustomizations = JSON.parse(
-    useAppSelector(
-      state => (state.lab.initialSources?.source as string) || '{}'
-    )
+  const initialSources = useAppSelector(
+    state => (state.lab.initialSources?.source as string) || '{}'
   );
 
   useEffect(() => {
+    const studentAiCustomizations = JSON.parse(initialSources);
     dispatch(
       setStartingAiCustomizations({
         levelAiCustomizationsWithVisibility,
         studentAiCustomizations,
       })
     );
-  }, [dispatch, studentAiCustomizations, levelAiCustomizationsWithVisibility]);
+  }, [dispatch, initialSources, levelAiCustomizationsWithVisibility]);
 
-  const botName =
-    levelAiCustomizationsWithVisibility.botName.visibility ===
-      Visibility.EDITABLE && studentAiCustomizations.botName
-      ? studentAiCustomizations.botName
-      : levelAiCustomizationsWithVisibility.botName.value;
+  const {botName} = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
 
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
