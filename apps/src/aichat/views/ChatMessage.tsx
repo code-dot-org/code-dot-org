@@ -6,7 +6,7 @@ import {
   AichatLevelProperties,
   ChatCompletionMessage,
   Role,
-  Status,
+  AITutorInteractionStatus as Status,
 } from '../types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {useSelector} from 'react-redux';
@@ -36,7 +36,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {chatMessageText}
       </div>
     );
-  } else if (status === Status.INAPPROPRIATE) {
+  } else if (status === Status.PROFANITY_VIOLATION) {
     return (
       <div
         className={classNames(
@@ -47,7 +47,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {INAPPROPRIATE_MESSAGE}
       </div>
     );
-  } else if (status === Status.PERSONAL) {
+  } else if (status === Status.PII_VIOLATION) {
     return (
       <div
         className={classNames(

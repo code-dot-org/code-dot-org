@@ -15,7 +15,7 @@ export type ChatCompletionMessage = {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: (typeof AITutorInteractionStatus)[keyof typeof AITutorInteractionStatus];
+  status: AITutorInteractionStatusValue;
   timestamp?: string;
 };
 

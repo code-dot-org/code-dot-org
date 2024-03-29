@@ -1,9 +1,9 @@
 import {
   Role,
   AITutorInteractionStatus as Status,
-  AITutorTypes as TutorType,
+  AITutorInteractionStatusValue,
+  AITutorTypesValue,
   ChatCompletionMessage,
-  PII,
 } from '@cdo/apps/aiTutor/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from './constants';
@@ -15,7 +15,7 @@ import Lab2Registry from '../lab2/Lab2Registry';
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
-  tutorType?: typeof TutorType
+  tutorType?: AITutorTypesValue
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = levelId
     ? {levelId: levelId, messages: messagesToSend, type: tutorType}
@@ -54,7 +54,7 @@ export async function getChatCompletionMessage(
   newMessage: string,
   chatMessages: ChatCompletionMessage[],
   levelId?: number,
-  tutorType?: typeof TutorType
+  tutorType?: AITutorTypesValue
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     {role: Role.SYSTEM, content: systemPrompt},
@@ -77,14 +77,14 @@ export async function getChatCompletionMessage(
   // For now, response will be null if there was an error.
   if (!response) {
     return {status: Status.ERROR, id: userMessageId};
-  } else if (response.status === Status.PROFANITY_VIOLATION) {
+  } else if (response?.status === Status.PROFANITY_VIOLATION) {
     return {
       status: Status.PROFANITY_VIOLATION,
       id: userMessageId,
       assistantResponse:
         "I can't respond because your message is inappropriate. Please don't use profanity.",
     };
-  } else if (response && response.status && PII.includes(response.status)) {
+  } else if (response?.status === Status.PII_VIOLATION) {
     return {
       status: Status.PII_VIOLATION,
       id: userMessageId,
@@ -99,12 +99,12 @@ export async function getChatCompletionMessage(
 }
 
 type OpenaiChatCompletionMessage = {
-  status?: typeof Status;
+  status?: AITutorInteractionStatusValue;
   role: Role;
   content: string;
 };
 type ChatCompletionResponse = {
-  status: typeof Status;
+  status: AITutorInteractionStatusValue;
   id: number;
   assistantResponse?: string;
 };
