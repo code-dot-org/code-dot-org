@@ -1,5 +1,5 @@
 %aside.top-skinny-banner{class: light_theme ? "light-theme" : "", id: banner_id}
-  .content-wrapper
+  .content-wrapper{class: external_link ? "has-external-link" : ""}
     %i{class: "#{banner_icon}"}
     - if banner_url
       %a.body-two.no-margin-bottom{href: banner_url}
