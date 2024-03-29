@@ -1,5 +1,7 @@
 import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
+
 import firehoseClient from '../../lib/util/firehose';
+
 import {ViewType} from './sectionProgressConstants';
 
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';

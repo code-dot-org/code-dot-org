@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import DownloadParentLetter from './DownloadParentLetter';
-import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LtiLogins} from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
+import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
+import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import color from '@cdo/apps/util/color';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
 
+import DownloadParentLetter from './DownloadParentLetter';
 import LoginExport from './LoginExport';
 
 class ManageStudentsLoginInfo extends Component {

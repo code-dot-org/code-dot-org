@@ -63,10 +63,18 @@ export interface arg {
   name: string;
 }
 
+export interface SerializedFields {
+  [key: string]: {
+    id?: string;
+    name?: string;
+  };
+}
+
 type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  topLevelProcedureAutopopulate: boolean;
   getNewCursor: (type: string) => Cursor;
   LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
@@ -217,6 +225,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   levelBlockIds: string[];
   isBlockEditMode: boolean;
   editBlocks: string | undefined;
+  topLevelProcedureAutopopulate: boolean | undefined;
   noFunctionBlockFrame: boolean;
   useModalFunctionEditor: boolean;
   useBlocklyDynamicCategories: boolean;
