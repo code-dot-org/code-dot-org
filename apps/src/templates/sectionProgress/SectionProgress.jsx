@@ -68,6 +68,8 @@ class SectionProgress extends Component {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
+      windowWidth: window.screen.width,
+      windowHeight: window.screen.height,
     });
   }
 
@@ -90,6 +92,8 @@ class SectionProgress extends Component {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
         sectionId: this.props.sectionId,
         unitId: this.props.scriptId,
+        windowWidth: window.screen.width,
+        windowHeight: window.screen.height,
       });
     }
   }

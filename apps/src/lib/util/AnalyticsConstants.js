@@ -93,6 +93,7 @@ const EVENTS = {
   PROGRESS_V2_EXPAND_ICON_KEY: 'Section New Progress Icon Key Expand',
   PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
   PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
+  PROGRESS_V2_VIEW_LESSON_DETAILS: 'Section New Progress Lesson Details',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
