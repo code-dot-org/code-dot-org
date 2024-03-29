@@ -341,7 +341,7 @@ GEM
     delayed_job_active_record (4.1.7)
       activerecord (>= 3.0, < 8.0)
       delayed_job (>= 3.0, < 5)
-    devise (4.7.3)
+    devise (4.9.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -926,8 +926,8 @@ GEM
     validates_email_format_of (1.6.3)
       i18n
     vcr (3.0.3)
-    warden (1.2.7)
-      rack (>= 1.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -1003,7 +1003,7 @@ DEPENDENCIES
   database_cleaner-active_record (~> 2.1.0)
   datapackage
   delayed_job_active_record (~> 4.1)
-  devise (~> 4.7.0)
+  devise (~> 4.9.0)
   devise_invitable (~> 2.0.2)
   dotiw
   execjs
