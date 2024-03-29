@@ -20,7 +20,7 @@ import styles from './progress-table-v2.module.scss';
 
 const levelClickedAmplitude = (sectionId, isAssessment) => () => {
   console.log('levelClickedAmplitude', sectionId, isAssessment);
-  analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
+  analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_LEVEL_DETAILS, {
     sectionId: sectionId,
     isAssessment: isAssessment,
   });
