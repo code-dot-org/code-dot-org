@@ -82,6 +82,25 @@ class InlineAudio extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    // remove reference to existing Audio object when a hint is unmounted before the audio finishes.
+    const audio = this.state.audio;
+    if (audio) {
+      audio.pause();
+      audio.removeAttribute('src');
+      audio.load();
+    }
+    this.setState({
+      audio: undefined,
+      playing: false,
+      error: false,
+    });
+    audio.removeEventListener('ended');
+
+    const {clearQueue} = this.context;
+    clearQueue();
+  }
+
   UNSAFE_componentWillUpdate(nextProps) {
     const audioTargetWillChange =
       this.props.src !== nextProps.src ||

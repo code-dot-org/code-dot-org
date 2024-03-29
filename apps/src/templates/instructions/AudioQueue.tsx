@@ -64,7 +64,3 @@ export const AudioQueue: React.FC<AudioQueueProps> = ({children}) => {
     </AudioQueueContext.Provider>
   );
 };
-
-// AudioQueue.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };

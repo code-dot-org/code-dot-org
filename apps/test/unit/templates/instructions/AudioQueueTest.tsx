@@ -23,10 +23,6 @@ const DEFAULT_PROPS: InlineAudioProps = {
   locale: 'it_it',
   src: 'test',
   textToSpeechEnabled: true,
-  style: {
-    button: {},
-    buttonImg: {},
-  },
   ttsAutoplayEnabled: true,
 };
 
@@ -37,7 +33,6 @@ describe('AudioQueue', () => {
 
   beforeEach(() => {
     windowAudio = window.Audio;
-    //window.Audio = FakeAudio;
   });
 
   afterEach(() => {
