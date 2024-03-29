@@ -19,7 +19,7 @@ import createResourcesReducer, {
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import {
   PublishedState,
   InstructionType,
@@ -111,13 +111,14 @@ describe('UnitEditor', () => {
       <Provider store={store}>
         <UnitEditor {...combinedProps} />
       </Provider>
-    )
+    );
   }
 
   describe('Script Editor', () => {
-    it('does not show publishing editor if hasCourse is true', () => {  
+    it('does not show publishing editor if hasCourse is true', () => {
       renderDefault({hasCourse: true});
-      expect(screen.queryByTestId('course-version-publishing-editor')).to.not.exist;
+      expect(screen.queryByTestId('course-version-publishing-editor')).to.not
+        .exist;
     });
 
     it('shows publishing editor if hasCourse is false', () => {
