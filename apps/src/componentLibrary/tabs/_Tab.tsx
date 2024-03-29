@@ -7,20 +7,32 @@ import FontAwesomeV6Icon, {
 import moduleStyles from '@cdo/apps/componentLibrary/tabs/tabs.module.scss';
 
 export interface TabModel {
+  /** Unique value of the tab */
   value: string;
+  /** Tab text */
   text?: string;
+  /** Icon left from label */
   iconLeft?: FontAwesomeV6IconProps;
+  /** Icon right from label */
   iconRight?: FontAwesomeV6IconProps;
+  /** Whether button should be icon only */
   isIconOnly?: boolean;
+  /** Tab icon */
   icon?: FontAwesomeV6IconProps;
+  /** Tab content */
   tabContent: React.ReactNode;
+  /** Is tab disabled */
   disabled?: boolean;
 }
 
 interface TabsProps extends TabModel {
+  /** Is tab selected */
   isSelected: boolean;
+  /** Tab onClick handler */
   onClick: (value: string) => void;
+  /** The ID of the panel element that this tab controls */
   tabPanelId: string;
+  /** The ID of the button element (_Tab) */
   tabButtonId: string;
 }
 

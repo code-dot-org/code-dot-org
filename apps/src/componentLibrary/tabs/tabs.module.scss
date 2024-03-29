@@ -1,7 +1,6 @@
 @import 'color';
 @import 'font';
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
-@import '../../mixins.scss';
 
 .tabs {
   ul {
@@ -222,7 +221,6 @@
         padding: 0 0.5rem;
         gap: 0.25rem;
         height: 1.25rem;
-
       }
     }
   }

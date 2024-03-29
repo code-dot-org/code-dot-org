@@ -1,17 +1,18 @@
 import classnames from 'classnames';
 import React from 'react';
 
-// import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-// import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
 import TabPanel from '@cdo/apps/componentLibrary/tabs/TabPanel';
 
 import moduleStyles from './tabs.module.scss';
 
 export interface TabsProps {
+  /** Array of props for Tabs to render */
   tabs: TabModel[];
+  /** The function that is called when a Tab is clicked */
   onChange: (value: string) => void;
+  /** The value of the selected Tab */
   selectedTabValue: string;
   /** The name attribute specifies the name of a Tabs group.
      The name attribute is used to reference elements in a JavaScript.
@@ -20,9 +21,13 @@ export interface TabsProps {
   type?: 'primary' | 'secondary';
   /** Size of Tabs */
   size?: ComponentSizeXSToL;
+  /** Custom className for Tabs container */
   tabsContainerClassName?: string;
+  /** Custom className for Tab Panels container */
   tabsContainerId?: string;
+  /** Custom className for Tab Panels container */
   tabPanelsContainerClassName?: string;
+  /** Custom id for Tab Panels container */
   tabPanelsContainerId?: string;
 }
 
@@ -62,10 +67,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
         )}
         id={tabsContainerId}
       >
-        <ul
-          role="tablist"
-          // className={moduleStyles.tabsList}
-        >
+        <ul role="tablist">
           {tabs.map((tab, index) => (
             <_Tab
               {...tab}
