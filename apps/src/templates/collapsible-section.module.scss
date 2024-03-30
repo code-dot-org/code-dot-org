@@ -1,4 +1,5 @@
 @import '@cdo/apps/mixins.scss';
+@import 'color.scss';
 
 .titleRow {
     display: flex;
@@ -10,6 +11,12 @@
 .title {
     margin-left: 10px;
     margin-bottom: 0;
+}
+
+.titleIcon {
+    margin-left: 25px;
+    margin-bottom: 0;
+    color: $teal;
 }
 
 .expandCollapseButton {
