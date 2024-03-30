@@ -13,9 +13,6 @@ Dashboard::Application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = true
 
-  # Configure i18n
-  config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
-
   # Configure static asset server for tests with Cache-Control for performance.
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
@@ -32,6 +29,10 @@ Dashboard::Application.configure do
 
     # Version of your assets, change this if you want to expire all your assets.
     config.assets.version = '1.0'
+
+    # Speeds up the env loading by avoid loading all i18n files up front.
+    # Instead, it only loads i18n files that belong to the current locale.
+    config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
   end
 
   config.assets.quiet = true
