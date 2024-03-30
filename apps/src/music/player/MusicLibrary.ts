@@ -18,7 +18,7 @@ export default class MusicLibrary {
   libraryJson: LibraryJson;
   folders: SoundFolder[];
   private allowedSounds: Sounds | null;
-  private currentPackName: string | null;
+  private currentPackId: string | null;
   private hasRestrictedPacks: boolean;
 
   // BPM & Key associated with this library, or undefined if not present.
@@ -45,13 +45,13 @@ export default class MusicLibrary {
       this.key = Key[libraryJson.key.toUpperCase() as keyof typeof Key];
     }
 
-    this.currentPackName = null;
+    this.currentPackId = null;
 
     this.hasRestrictedPacks = libraryJson.packs.some(pack => pack.restricted);
   }
 
-  setCurrentPackName(packName: string) {
-    this.currentPackName = packName;
+  setCurrentPackId(packId: string) {
+    this.currentPackId = packId;
   }
 
   getHasRestrictedPacks(): boolean {
@@ -68,7 +68,7 @@ export default class MusicLibrary {
     // We will skip restricted folders unless it's the currently selected pack.
     const firstFolder = this.folders.find(
       group =>
-        !group.type && (!group.restricted || group.id === this.currentPackName)
+        !group.type && (!group.restricted || group.id === this.currentPackId)
     );
     const firstSound = firstFolder?.sounds.find(sound => !sound.preview);
     return `${firstFolder?.id}/${firstSound?.src}`;
@@ -150,9 +150,9 @@ export default class MusicLibrary {
     foldersCopy = foldersCopy.filter(
       (folder: SoundFolder) =>
         folder.type === folderType &&
-        ((!this.currentPackName && folder.restricted) ||
-          (this.currentPackName &&
-            (!folder.restricted || this.currentPackName === folder.id)))
+        ((!this.currentPackId && folder.restricted) ||
+          (this.currentPackId &&
+            (!folder.restricted || this.currentPackId === folder.id)))
     );
 
     if (this.allowedSounds) {

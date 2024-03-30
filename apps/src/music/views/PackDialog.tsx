@@ -2,6 +2,8 @@ import React, {useCallback, useState, useRef} from 'react';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import FocusLock from 'react-focus-lock';
 import styles from './PackDialog.module.scss';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {setPackId} from '../redux/musicRedux';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import {getBaseAssetUrl} from '../appConfig';
 import classNames from 'classnames';
@@ -82,19 +84,17 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
 };
 
 interface PackDialogProps {
-  currentPackName: string;
-  setCurrentPackName: (packName: string) => void;
   player: MusicPlayer;
 }
 
 /**
  * Packs Dialog.
  */
-const PackDialog: React.FunctionComponent<PackDialogProps> = ({
-  currentPackName,
-  setCurrentPackName,
-  player,
-}) => {
+const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
+  const dispatch = useAppDispatch();
+
+  const currentPackId = useAppSelector(state => state.music.packId);
+
   const library = MusicLibrary.getInstance();
 
   // Use a ref for instant access to this value inside onPreview.
@@ -111,8 +111,10 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
   const libraryGroupPath = library.libraryJson.path;
 
   const setSelectedFolder = (folder: SoundFolder) => {
-    setCurrentPackName(folder.id);
+    dispatch(setPackId(folder.id));
+    library.setCurrentPackId(folder.id);
   };
+
   const onPreview = (id: string) => {
     playingPreview.current = id;
     setPlayingPreviewState(id);
@@ -131,7 +133,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
     });
   };
 
-  if (currentPackName) {
+  if (currentPackId) {
     return null;
   }
 

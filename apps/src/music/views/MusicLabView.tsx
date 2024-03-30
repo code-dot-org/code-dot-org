@@ -35,8 +35,6 @@ interface MusicLabViewProps {
   validator: MusicValidator;
   player: MusicPlayer;
   allowPackSelection: boolean;
-  currentPackName: string;
-  setCurrentPackName: (packName: string) => void;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -52,8 +50,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   validator,
   player,
   allowPackSelection,
-  currentPackName,
-  setCurrentPackName,
 }) => {
   useUpdatePlayer(player);
   const dispatch = useAppDispatch();
@@ -184,13 +180,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
-      {allowPackSelection && (
-        <PackDialog
-          currentPackName={currentPackName}
-          setCurrentPackName={setCurrentPackName}
-          player={player}
-        />
-      )}
+      {allowPackSelection && <PackDialog player={player} />}
 
       {showInstructions &&
         instructionsPosition === InstructionsPosition.TOP &&
@@ -214,7 +204,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 onClickRedo={redo}
                 clearCode={clearCode}
                 allowPackSelection={allowPackSelection}
-                currentPackName={currentPackName}
               />
             }
           >

@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import React, {useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 import {AnalyticsContext} from '../context';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './HeaderButtons.module.scss';
 import musicI18n from '../locale';
@@ -62,7 +63,6 @@ interface HeaderButtonsProps {
   onClickRedo: () => void;
   clearCode: () => void;
   allowPackSelection: boolean;
-  currentPackName: string;
 }
 
 /**
@@ -73,12 +73,12 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   onClickRedo,
   clearCode,
   allowPackSelection,
-  currentPackName,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
   const {canUndo, canRedo} = useSelector(
     (state: {music: MusicState}) => state.music.undoStatus
   );
+  const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useContext(DialogContext);
 
@@ -86,11 +86,8 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   let packFolder = null;
 
-  if (library) {
-    packFolder = library.getAllowedFolderForFolderId(
-      undefined,
-      currentPackName
-    );
+  if (library && currentPackId) {
+    packFolder = library.getAllowedFolderForFolderId(undefined, currentPackId);
   }
 
   const onClickUndoRedo = useCallback(

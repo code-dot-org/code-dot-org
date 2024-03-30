@@ -13,6 +13,8 @@ import SoundUploader from '../utils/SoundUploader';
 import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
 import {
+  setLibraryName,
+  setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,
   clearSelectedBlockId,
@@ -73,6 +75,10 @@ class UnconnectedMusicView extends React.Component {
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
+    libraryName: PropTypes.string,
+    setLibraryName: PropTypes.func,
+    packId: PropTypes.string,
+    setPackId: PropTypes.func,
     isPlaying: PropTypes.bool,
     setIsPlaying: PropTypes.func,
     setCurrentPlayheadPosition: PropTypes.func,
@@ -95,6 +101,7 @@ class UnconnectedMusicView extends React.Component {
     levelData: PropTypes.object,
     longInstructions: PropTypes.string,
     startingPlayheadPosition: PropTypes.number,
+    isProjectLevel: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
     appName: PropTypes.string,
@@ -132,8 +139,6 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       loadedLibrary: false,
-      currentLibraryName: null,
-      currentPackName: null,
       hasLoadedInitialSounds: false,
     };
 
@@ -266,9 +271,9 @@ class UnconnectedMusicView extends React.Component {
       !!levelData?.text || !!this.props.longInstructions
     );
 
-    let packName = levelData?.packName || initialSources?.labConfig?.music.pack;
-    this.library.setCurrentPackName(packName);
-    this.setState({currentPackName: packName});
+    let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
+    this.library.setCurrentPackId(packId);
+    this.props.setPackId(packId);
 
     if (this.getStartSources() || initialSources) {
       let codeToLoad = this.getStartSources();
@@ -286,7 +291,7 @@ class UnconnectedMusicView extends React.Component {
 
   // Load the library and initialize the music player, if not already loaded.
   loadAndInitializePlayer = async libraryName => {
-    if (this.state.currentLibraryName === libraryName) {
+    if (this.props.libraryName === libraryName) {
       // Already loaded this library, no need to load again.
       return;
     }
@@ -321,9 +326,7 @@ class UnconnectedMusicView extends React.Component {
     // Temporarily loading all instruments for ToneJS player.
     this.player.loadAllInstruments();
 
-    this.setState({
-      currentLibraryName: libraryName,
-    });
+    this.props.setLibraryName(libraryName);
 
     this.props.setIsLoading(false);
   };
@@ -363,9 +366,9 @@ class UnconnectedMusicView extends React.Component {
 
   clearCode = () => {
     // Clear the pack, unless it came from the level data itself.
-    if (!this.props.levelData?.packName) {
-      this.setState({currentPackName: null});
-      this.library.setCurrentPackName(null);
+    if (!this.props.levelData?.packId) {
+      this.props.setPackId(null);
+      this.library.setCurrentPackId(null);
     }
 
     this.loadCode(this.getStartSources());
@@ -561,19 +564,19 @@ class UnconnectedMusicView extends React.Component {
     };
 
     // Save the current library to sources as part of labConfig if present
-    if (this.state.currentLibraryName) {
+    if (this.props.libraryName) {
       sourcesToSave.labConfig = {
         music: {
-          library: this.state.currentLibraryName,
+          library: this.props.libraryName,
         },
       };
     }
 
     // Also save the current pack to sources as part of labConfig.
-    if (this.state.currentPackName) {
+    if (this.props.packId) {
       sourcesToSave.labConfig ??= {};
       sourcesToSave.labConfig.music ??= {};
-      sourcesToSave.labConfig.music.pack = this.state.currentPackName;
+      sourcesToSave.labConfig.music.packId = this.props.packId;
     }
 
     Lab2Registry.getInstance()
@@ -654,13 +657,9 @@ class UnconnectedMusicView extends React.Component {
           player={this.player}
           allowPackSelection={
             this.library?.getHasRestrictedPacks() &&
-            !this.props.levelData?.packName
+            !this.props.levelData?.packId &&
+            this.props.isProjectLevel
           }
-          currentPackName={this.state.currentPackName}
-          setCurrentPackName={packName => {
-            this.setState({currentPackName: packName});
-            this.library.setCurrentPackName(packName);
-          }}
         />
         <Callouts />
       </AnalyticsContext.Provider>
@@ -676,6 +675,8 @@ const MusicView = connect(
     userType: state.currentUser.userType,
     signInState: state.currentUser.signInState,
 
+    libraryName: state.music.libraryName,
+    packId: state.music.packId,
     isPlaying: state.music.isPlaying,
     selectedBlockId: state.music.selectedBlockId,
     showInstructions: state.music.showInstructions,
@@ -683,11 +684,14 @@ const MusicView = connect(
     initialSources: state.lab.initialSources,
     levelData: state.lab.levelProperties?.levelData,
     longInstructions: state.lab.levelProperties?.longInstructions,
+    isProjectLevel: state.lab.levelProperties?.isProjectLevel,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     appName: state.lab.levelProperties?.appName,
     startingPlayheadPosition: state.music.startingPlayheadPosition,
   }),
   dispatch => ({
+    setLibraryName: libraryName => dispatch(setLibraryName(libraryName)),
+    setPackId: packId => dispatch(setPackId(packId)),
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
     setCurrentPlayheadPosition: currentPlayheadPosition =>
       dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
