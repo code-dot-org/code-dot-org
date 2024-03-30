@@ -23,19 +23,6 @@
   max-height: 80%;
 }
 
-%button {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
-  border: none !important;
-
-  &:hover, &:active {
-    box-shadow: none;
-  }
-}
-
 .focusLock {
   position: absolute;
   width: 100%;

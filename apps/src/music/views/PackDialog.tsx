@@ -88,7 +88,8 @@ interface PackDialogProps {
 }
 
 /**
- * Packs Dialog.
+ * The PackDialog allows the user to preview and choose from the set of restricted
+ * sound packs.
  */
 const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
   const dispatch = useAppDispatch();
