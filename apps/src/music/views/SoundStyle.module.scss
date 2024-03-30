@@ -9,10 +9,10 @@
       fill: #FC55FF;
     }
     &Background {
-      background-color: purple;
+      background-color: #89308a;
     }
     &Border {
-      border-color: lightpink;
+      border-color: #FC55FF;
     }
   }
 
@@ -24,10 +24,10 @@
       fill: #00C0FF;
     }
     &Background {
-      background-color: blue;
+      background-color: #03789e;
     }
     &Border {
-      border-color: lightblue;
+      border-color: #00C0FF;
     }
   }
 
@@ -39,10 +39,10 @@
       fill: #23C347;
     }
     &Background {
-      background-color: green;
+      background-color: #14742a;
     }
     &Border {
-      border-color: lightgreen;
+      border-color: #23C347;
     }
   }
 
@@ -54,25 +54,25 @@
       fill: #E3CB0C;
     }
     &Background {
-      background-color: yellow;
+      background-color: #928308;
     }
     &Border {
-      border-color: brown;
+      border-color: #E3CB0C;
     }
   }
 
   &Vocal {
     &Color {
-      color: darkorange;
+      color: #ff8c00;
     }
     &Fill {
-      fill: darkorange;
+      fill: #ff8c00;
     }
     &Background {
-      background-color: darkorange;
+      background-color: #a35a02;
     }
     &Border {
-      border-color: #60d5cd;
+      border-color: #ff8c00;
     }
   }
 
@@ -87,7 +87,7 @@
       background-color: black;
     }
     &Border {
-      border-color: white;
+      border-color: $neutral_light;
     }
   }
 
