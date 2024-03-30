@@ -35,7 +35,7 @@ const PresentationView: React.FunctionComponent = () => {
           keyName="examplePrompts"
           title="Example Prompts and Topics"
           titleIcon="message-lines"
-          expandedContent="Example TEXT - Example Prompts and Topics"
+          expandedContent="Example TEXT - Example Prompts and Topics Every paragraph you write should include clear opening, supporting, and closing sentences. The opening sentence introduces the topic of the paragraph or signals a change of direction."
         />
         <ModelCardViewRow
           keyName="technicalInfo"

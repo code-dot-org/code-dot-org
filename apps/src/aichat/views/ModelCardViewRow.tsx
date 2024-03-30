@@ -1,7 +1,7 @@
 import React from 'react';
 import moduleStyles from '@cdo/apps/aichat/views/model-card-view-row.module.scss';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
+import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 
 interface ModelCardViewRowProps {
   keyName: string;
@@ -27,9 +27,9 @@ const ModelCardViewRow: React.FunctionComponent<ModelCardViewRowProps> = ({
           collapsedIcon="caret-right"
           expandedIcon="caret-down"
         >
-          <BodyFourText className={moduleStyles.expandedContent}>
-            <i>{expandedContent}</i>
-          </BodyFourText>
+          <BodyThreeText className={moduleStyles.expandedContent}>
+            {expandedContent}
+          </BodyThreeText>
         </CollapsibleSection>
       </div>
       <hr className={moduleStyles.borderLine} />
