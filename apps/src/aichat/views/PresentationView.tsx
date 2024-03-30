@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MODEL_CARD_FIELDS_AND_LABELS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
@@ -12,6 +11,12 @@ const PublishNotes: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
   console.log('modelCardInfo', modelCardInfo);
+  const modelCardIcons = [
+    'memo',
+    'bullseye-pointer',
+    'diamond-exclamation',
+    'vial-circle-check',
+  ];
 
   return (
     <div className={styles.verticalFlexContainer}>
@@ -19,7 +24,7 @@ const PublishNotes: React.FunctionComponent = () => {
         <Heading4 className={moduleStyles.modelCardTitle}>
           Title of Model Card
         </Heading4>
-        {MODEL_CARD_FIELDS_AND_LABELS.map(([property, label]) => {
+        {MODEL_CARD_FIELDS_AND_LABELS.map(([property, label], index) => {
           return (
             <>
               <div key={property} className={moduleStyles.modelCardAttributes}>
@@ -27,6 +32,7 @@ const PublishNotes: React.FunctionComponent = () => {
                   title={label}
                   titleSemanticTag="h6"
                   titleVisualAppearance="heading-xs"
+                  titleIcon={modelCardIcons[index]}
                   collapsedIcon="caret-right"
                   expandedIcon="caret-down"
                 >
@@ -45,6 +51,7 @@ const PublishNotes: React.FunctionComponent = () => {
             title="Example Prompts and Topics"
             titleSemanticTag="h6"
             titleVisualAppearance="heading-xs"
+            titleIcon="message-lines"
             collapsedIcon="caret-right"
             expandedIcon="caret-down"
           >
@@ -59,6 +66,7 @@ const PublishNotes: React.FunctionComponent = () => {
             title="Technical Info"
             titleSemanticTag="h6"
             titleVisualAppearance="heading-xs"
+            titleIcon="screwdriver-wrench"
             collapsedIcon="caret-right"
             expandedIcon="caret-down"
           >
