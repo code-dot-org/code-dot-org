@@ -10,8 +10,10 @@ import {
 interface CollapsibleSectionProps {
   title: string;
   titleSemanticTag?: SemanticTag;
-  titleStyle?: string;
   titleVisualAppearance?: VisualAppearance;
+  titleStyle?: string;
+  titleIcon?: string;
+  titleIconStyle?: string;
   children: React.ReactNode;
   initiallyCollapsed?: boolean;
   collapsedIcon?: string;
@@ -23,12 +25,16 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
   titleSemanticTag = 'p',
   titleVisualAppearance = 'body-one',
   titleStyle = moduleStyles.title,
+  titleIcon,
+  titleIconStyle = moduleStyles.titleIcon,
   children,
   initiallyCollapsed = true,
   collapsedIcon = 'chevron-down',
   expandedIcon = 'chevron-up',
 }) => {
   const [collapsed, setCollapsed] = useState(initiallyCollapsed);
+
+  const hasTitleIcon = titleIcon !== undefined;
 
   return (
     <>
@@ -43,6 +49,13 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
             iconStyle="solid"
           />
         </button>
+        {hasTitleIcon && (
+          <FontAwesomeV6Icon
+            iconName={titleIcon}
+            iconStyle="solid"
+            className={titleIconStyle}
+          />
+        )}
         <Typography
           semanticTag={titleSemanticTag}
           visualAppearance={titleVisualAppearance}
