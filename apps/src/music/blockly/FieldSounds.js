@@ -4,6 +4,7 @@ import SoundsPanel from '../views/SoundsPanel';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
+import SoundStyle from '../utils/SoundStyle';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
@@ -164,7 +165,7 @@ class FieldSounds extends GoogleBlockly.Field {
     // Create the text element so we can measure it.
     const textElement = GoogleBlockly.utils.dom.createSvgElement('text', {
       fill: color.neutral_light,
-      x: 25,
+      x: 27,
       y: 16,
       width: 100,
       height: 20,
@@ -211,23 +212,35 @@ class FieldSounds extends GoogleBlockly.Field {
       this.backgroundElement
     );
 
-    // Add an image for the sound type.
+    let iconElement;
+
+    // Add an icon for the sound type.
     if (soundType) {
-      GoogleBlockly.utils.dom.createSvgElement(
-        'image',
-        {
-          x: 6,
-          y: 3,
-          width: 15,
-          href: `/blockly/media/music/icon-${soundType}.png`,
-        },
-        this.backgroundElement
+      iconElement = GoogleBlockly.utils.dom.createSvgElement('text', {
+        fill: color.neutral_light,
+        x: 5 + SoundStyle[soundType].marginLeft,
+        y: 16,
+        width: 20,
+        height: 20,
+      });
+
+      iconElement.setAttribute('style', 'font-family: "Font Awesome 6 Pro"');
+      iconElement.classList.add(SoundStyle[soundType].classNameFill);
+
+      // Attach the actual text.
+      iconElement.appendChild(
+        document.createTextNode(SoundStyle[soundType].iconCode)
       );
     }
 
     // Now attach the text element to the background parent.  It will
     // render on top of the background rectangle.
     this.backgroundElement.appendChild(textElement);
+
+    // Similarly, add the icon text element to the background parent.
+    if (iconElement) {
+      this.backgroundElement.appendChild(iconElement);
+    }
 
     // Update the field size.
     this.updateSize_();

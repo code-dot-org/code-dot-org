@@ -1,0 +1,108 @@
+@import 'color.scss';
+
+.sound {
+  &Beat {
+    &Color {
+      color: #FC55FF;
+    }
+    &Fill {
+      fill: #FC55FF;
+    }
+    &Background {
+      background-color: purple;
+    }
+    &Border {
+      border-color: lightpink;
+    }
+  }
+
+  &Bass {
+    &Color {
+      color: #00C0FF;
+    }
+    &Fill {
+      fill: #00C0FF;
+    }
+    &Background {
+      background-color: blue;
+    }
+    &Border {
+      border-color: lightblue;
+    }
+  }
+
+  &Lead {
+    &Color {
+      color: #23C347;
+    }
+    &Fill {
+      fill: #23C347;
+    }
+    &Background {
+      background-color: green;
+    }
+    &Border {
+      border-color: lightgreen;
+    }
+  }
+
+  &Fx {
+    &Color {
+      color: #E3CB0C;
+    }
+    &Fill {
+      fill: #E3CB0C;
+    }
+    &Background {
+      background-color: yellow;
+    }
+    &Border {
+      border-color: brown;
+    }
+  }
+
+  &Vocal {
+    &Color {
+      color: darkorange;
+    }
+    &Fill {
+      fill: darkorange;
+    }
+    &Background {
+      background-color: darkorange;
+    }
+    &Border {
+      border-color: #60d5cd;
+    }
+  }
+
+  &Pattern {
+    &Color {
+      color: black;
+    }
+    &Fill {
+      fill: black;
+    }
+    &Background {
+      background-color: black;
+    }
+    &Border {
+      border-color: white;
+    }
+  }
+
+  &Chord {
+    &Color {
+      color: $light_cyan;
+    }
+    &Fill {
+      fill: $light_cyan;
+    }
+    &Background {
+      background-color: $light_cyan;
+    }
+    &Border {
+      border-color: $neutral_dark80;
+    }
+  }
+}
