@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {setAiCustomizationProperty} from '../../redux/aichatRedux';
+import {
+  setAiCustomizationProperty,
+  updateAiCustomization,
+} from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 import {
   EMPTY_AI_CUSTOMIZATIONS,
@@ -29,6 +32,11 @@ const PromptCustomization: React.FunctionComponent = () => {
     isDisabled(botName.visibility) &&
     isDisabled(temperature.visibility) &&
     isDisabled(systemPrompt.visibility);
+
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
 
   return (
     <div className={styles.verticalFlexContainer}>
@@ -101,7 +109,7 @@ const PromptCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={allFieldsDisabled}>
+        <button type="button" disabled={allFieldsDisabled} onClick={onUpdate}>
           Update
         </button>
       </div>

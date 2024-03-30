@@ -442,6 +442,11 @@ td {
   text-wrap: balance;
 }
 
+/* Applies text-wrap: pretty to an element */
+.wrap-pretty {
+  text-wrap: pretty;
+}
+
 /* Styles for the "OR" divider line between paragraphs
   - see code.org/afe for an example */
 .or-divider-line {

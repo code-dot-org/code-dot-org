@@ -4,6 +4,8 @@ import i18n from '@cdo/locale';
 import Toggle from '@cdo/apps/componentLibrary/toggle';
 import {LmsLinks} from '@cdo/apps/util/sharedConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default function LtiRosterSyncSettings(props) {
   const enabledLabel = i18n.ltiSectionSyncEnabled();
@@ -16,6 +18,14 @@ export default function LtiRosterSyncSettings(props) {
   const [changed, setChanged] = useState(false);
 
   const handleSubmit = () => {
+    const eventPayload = {
+      lms_name: props.lmsName,
+    };
+    const eventName = enabled
+      ? 'lti_opt_out_toggle_on'
+      : 'lti_opt_out_toggle_off';
+    analyticsReporter.sendEvent(eventName, eventPayload, PLATFORMS.STATSIG);
+
     const form = document.getElementById(props.formId);
     form.elements['user_lti_roster_sync_enabled'].value = enabled;
     form.submit();
@@ -60,4 +70,5 @@ const styles = {
 LtiRosterSyncSettings.propTypes = {
   ltiRosterSyncEnabled: PropTypes.bool.isRequired,
   formId: PropTypes.string.isRequired,
+  lmsName: PropTypes.string,
 };

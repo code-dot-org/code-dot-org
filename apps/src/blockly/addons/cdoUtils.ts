@@ -28,7 +28,12 @@ import {
   processIndividualBlock,
 } from '@cdo/apps/blockly/addons/cdoXml';
 import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
-import {BlockColor, JsonBlockConfig, WorkspaceSerialization} from '../types';
+import {
+  BlockColor,
+  JsonBlockConfig,
+  SerializedFields,
+  WorkspaceSerialization,
+} from '../types';
 import experiments from '@cdo/apps/util/experiments';
 import {getBaseName} from '../utils';
 import {ToolboxItemInfo, BlockInfo} from 'blockly/core/utils/toolbox';
@@ -507,63 +512,63 @@ export function getLevelToolboxBlocks(customCategory: string) {
 export function getSimplifiedStateForFlyout(
   serialization: WorkspaceSerialization
 ) {
-  const variableMap: {[key: string]: string} = {};
-  const variables = serialization.variables;
+  const blocksList = [] as object[];
+
+  const {variables, blocks} = serialization;
+
+  // Create a map of variable ids and names from the serialization.
+  const serializedVariableMap: Map<string, string> = new Map();
   variables?.forEach(variable => {
-    variableMap[variable.id] = variable.name;
+    serializedVariableMap.set(variable.id, variable.name);
   });
 
-  const blocksList = hasBlocks(serialization)
-    ? serialization.blocks.blocks.map(block =>
-        simplifyBlockState(block, variableMap)
-      )
-    : [];
+  // Create a copy of the blocks list to avoid modifying the original
+  const blocksCopy = {...blocks};
+
+  // Replace variable ids with names and simplify state for flyout.
+  blocksCopy.blocks.forEach(block => {
+    updateVariableFields(block, serializedVariableMap);
+    blocksList.push(simplifyBlockState(block));
+  });
 
   return blocksList;
 }
 
+// Function for updating field values
+function updateVariableFields(
+  block: {fields: SerializedFields},
+  serializedVariableMap: Map<string, string>
+): void {
+  const fields = block.fields;
+  for (const key in fields) {
+    const field = fields[key];
+    if (field.id && serializedVariableMap.has(field.id)) {
+      field.name = serializedVariableMap.get(field.id)!;
+      delete field.id;
+    }
+  }
+}
 /**
  * Simplifies the state of a block by removing properties like x/y and id.
  * Also replaces variable IDs with variable names derived from the specified variable map.
  * @param {object} block The block to process.
- * @param {object} variableMap A map of variable IDs to variable names.
  * @returns {object} The processed block with variable names.
  */
-function simplifyBlockState(
-  block: JsonBlockConfig,
-  variableMap: {[key: string]: string}
-) {
+function simplifyBlockState(block: JsonBlockConfig) {
   // Create a copy of the block so we can modify certain fields.
   const result = {...block};
-
-  // For variable fields, look up the name of the variable to use instead of the id.
-  const variableFields = [
-    'VAR' /* most common */,
-    'VARIABLE' /* used in gamelab_changeVarBy */,
-  ];
-
-  variableFields.forEach(field => {
-    const fieldValue = block.fields?.[field];
-    if (fieldValue) {
-      result.fields[field] = {
-        name: fieldValue.id ? variableMap[fieldValue.id] || '' : '',
-        type: '',
-      };
-    }
-  });
 
   // Recursively check nested blocks.
   if (block.inputs?.block) {
     for (const inputKey in block.inputs) {
       result.inputs[inputKey].block = simplifyBlockState(
-        block.inputs[inputKey].block,
-        variableMap
+        block.inputs[inputKey].block
       );
     }
   }
   // Recursively check next block, if present.
   if (block.next?.block) {
-    result.next.block = simplifyBlockState(block.next.block, variableMap);
+    result.next.block = simplifyBlockState(block.next.block);
   }
   // Remove unnecessary properties
   delete result.id;
