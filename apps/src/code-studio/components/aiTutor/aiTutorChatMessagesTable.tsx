@@ -31,16 +31,14 @@ const AITutorChatMessagesTable: React.FunctionComponent<
     })();
   }, [sectionId]);
 
-  console.log(
-    'Object.keys(AITutorInteractionStatus):',
-    Object.keys(AITutorInteractionStatus)
-  );
-
   return (
     <div>
       <div>
         <CheckboxDropdown
-          allOptions={[]}
+          allOptions={Object.keys(AITutorInteractionStatus).map(status => ({
+            label: status,
+            value: status,
+          }))}
           checkedOptions={[]}
           color="black"
           labelText="Filter by Status"
