@@ -50,19 +50,31 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
           />
         </button>
         {hasTitleIcon && (
-          <FontAwesomeV6Icon
-            iconName={titleIcon}
-            iconStyle="solid"
-            className={titleIconStyle}
-          />
+          <button
+            type="button"
+            onClick={() => setCollapsed(!collapsed)}
+            className={moduleStyles.expandCollapseButton}
+          >
+            <FontAwesomeV6Icon
+              iconName={titleIcon}
+              iconStyle="solid"
+              className={titleIconStyle}
+            />
+          </button>
         )}
-        <Typography
-          semanticTag={titleSemanticTag}
-          visualAppearance={titleVisualAppearance}
-          className={titleStyle}
+        <button
+          type="button"
+          onClick={() => setCollapsed(!collapsed)}
+          className={moduleStyles.expandCollapseButton}
         >
-          {title}
-        </Typography>
+          <Typography
+            semanticTag={titleSemanticTag}
+            visualAppearance={titleVisualAppearance}
+            className={titleStyle}
+          >
+            {title}
+          </Typography>
+        </button>
       </div>
       {!collapsed && children}
     </>
