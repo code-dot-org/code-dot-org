@@ -175,6 +175,13 @@ module Cdo
       include Plugins
     end
 
+    # The class extends the `LazyLoadable` backend from the i18n gem to support CDO i18n files:
+    # - Modified the `LocaleExtractor` class to support filenames that include both a prefix and the locale (e.g., "courses.en-US.yml").
+    # - Modified the `filenames_for_current_locale` method to load files for the current locale and its fallbacks, (e.g, "en" for "en-US" and vice versa)
+    # - Modified the `eager_load!` method to ignore eager loading when lazy loading is enabled.
+    # - Prevented the `assert_file_named_correctly!` method from raising an irrelevant error regarding file locale mismatches.
+    # - Implemented a mechanism to avoid reloading already loaded translation files.
+    # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb
     class LazyLoadableBackend < ::I18n::Backend::LazyLoadable
       include Plugins
 
@@ -182,9 +189,12 @@ module Cdo
         locales[k.to_sym] = v.to_sym if v.is_a?(String)
       end.freeze
 
+      # The original method has been modified to works on i18n files named with a prefix and the locale,
+      # like "common.en.yml" or "common.en-US.json" and not only on files named with the locale, like "en-US.json".
+      # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L55-L63
       class ::I18n::Backend::LocaleExtractor
         def self.locale_from_path(path)
-          # Extracts the locale name from the path, like "en", "en-US", "haw", "haw-HI", etc.
+          # Extracts the locale from the path, like "en", "en-US", "haw", "haw-HI", etc.
           path[/\b([a-z]{2,3}(?:-[A-Z]{2})?)\b\.\w+$/, 1]&.to_sym
         end
       end
@@ -210,11 +220,18 @@ module Cdo
         @loaded_files ||= Set.new
       end
 
+      # The original method has been modified to also load files for the current locale's fallbacks,
+      # like loading "en-US" files for the "en" locale and vice versa.
+      # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L164-L171
       def filenames_for_current_locale
+        # Enables loading both the current locale and its fallbacks, such as "en" for "en-US" and vice versa.
         valid_locales = Set.new(::I18n.fallbacks[::I18n.locale])
         valid_locales << LOCALES_MAPPING[::I18n.locale] # en: :'en-US'
         valid_locales.compact_blank
 
+        # Excludes already loaded i18n files to prevent them from being reloaded during locale switching.
+        # For example, for the "de-DE" locale, the i18n fallbacks are "de", "en", and "en-US".
+        # Since "en-US" (and "en") is the default locale, its i18n files are already loaded.
         (::I18n.load_path.flatten - loaded_files.to_a).select do |path|
           path_locale = ::I18n::Backend::LocaleExtractor.locale_from_path(path)
           path_locale.nil? || valid_locales.include?(path_locale)
@@ -223,7 +240,9 @@ module Cdo
 
       # Prevents from raising an error when the locale in the filename and
       # the root locale key in the file content mismatch,
-      # like when `en.yml` has a root locale key of `en-US:` instead of `en:`
+      # like when `en.yml` has a root locale key of `en-US:` instead of `en:`.
+      # This error is no longer relevant because the functionality has been changed to load such files regardless.
+      # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L173-L181
       def assert_file_named_correctly!(...)
       end
     end
