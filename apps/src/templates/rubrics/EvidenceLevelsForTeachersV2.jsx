@@ -65,7 +65,7 @@ export default function EvidenceLevelsForTeachersV2({
 
   if (canProvideFeedback) {
     return (
-      <div id="tour-evidence-levels-for-teachers">
+      <div id="tour-evidence-levels">
         <BodyThreeText className={style.evidenceLevelHeaderText}>
           <StrongText>{i18n.assignARubricScore()}</StrongText>
         </BodyThreeText>

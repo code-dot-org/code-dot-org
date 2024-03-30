@@ -35,6 +35,7 @@ const formatLastAttempt = lastAttempt => {
 };
 
 export default function RubricContent({
+  productTour,
   studentLevelInfo,
   rubric,
   open,
@@ -127,6 +128,7 @@ export default function RubricContent({
       <div className={style.learningGoalsWrapper}>
         <Heading4>{i18n.rubric()}</Heading4>
         <LearningGoals
+          productTour={productTour}
           open={open}
           learningGoals={rubric.learningGoals}
           teacherHasEnabledAi={teacherHasEnabledAi}
@@ -144,6 +146,7 @@ export default function RubricContent({
 }
 
 RubricContent.propTypes = {
+  productTour: PropTypes.bool,
   onLevelForEvaluation: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,

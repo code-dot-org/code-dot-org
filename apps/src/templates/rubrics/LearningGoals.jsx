@@ -186,6 +186,7 @@ export function annotateLines(evidence) {
 }
 
 export default function LearningGoals({
+  productTour,
   open,
   learningGoals,
   teacherHasEnabledAi,
@@ -309,7 +310,7 @@ export default function LearningGoals({
   };
 
   useEffect(() => {
-    if (studentLevelInfo && learningGoals) {
+    if (studentLevelInfo && learningGoals && !productTour) {
       // Set our current idea of the feedback immediately
       setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
       setLoaded(teacherFeedbacksLoaded.current[currentLearningGoal]);
@@ -356,7 +357,7 @@ export default function LearningGoals({
             .catch(error => console.error(error));
         });
     }
-  }, [studentLevelInfo, learningGoals, currentLearningGoal, open]);
+  }, [studentLevelInfo, learningGoals, currentLearningGoal, open, productTour]);
 
   useEffect(() =>
     document.addEventListener('keydown', handleKeyDown, {once: true})
@@ -565,7 +566,10 @@ export default function LearningGoals({
               !!studentLevelInfo &&
               !!aiEvalInfo &&
               aiEvalInfo.understanding !== undefined && (
-                <div className={style.aiAssessmentOuterBlock}>
+                <div
+                  id="tour-ai-assessment"
+                  className={style.aiAssessmentOuterBlock}
+                >
                   <AiAssessment
                     isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
                     studentName={studentLevelInfo.name}
@@ -598,6 +602,7 @@ export default function LearningGoals({
 }
 
 LearningGoals.propTypes = {
+  productTour: PropTypes.bool,
   open: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,

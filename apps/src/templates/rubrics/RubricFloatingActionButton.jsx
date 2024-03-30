@@ -17,10 +17,6 @@ import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSecti
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import classNames from 'classnames';
 
-// intro.js
-import 'intro.js/introjs.css';
-import {Steps} from 'intro.js-react';
-
 function RubricFloatingActionButton({
   rubric,
   studentLevelInfo,
@@ -40,7 +36,6 @@ function RubricFloatingActionButton({
   );
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
   const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
-  const [stepsEnabled, setStepsEnabled] = useState(true);
 
   const eventData = useMemo(() => {
     return {
@@ -49,48 +44,6 @@ function RubricFloatingActionButton({
       viewingEvaluationLevel: rubric.level.name === currentLevelName,
     };
   }, [reportingData, studentLevelInfo, rubric.level.name, currentLevelName]);
-
-  const initialStep = 0;
-  const steps = [
-    {
-      element: '#ui-floatingActionButton',
-      position: 'top',
-      title: 'Getting Started with AI Teaching Assistant',
-      intro:
-        'Launch AI Teaching Assistant from the bottom left corner of the screen in sprite lab.\nClick on the AI Teaching Assistant to get started!',
-    },
-    {
-      element: '.uitest-ai-assessment',
-      position: 'left',
-      title: 'Understanding the AI Assessment',
-      intro:
-        "AI Teaching Assistant analyzes students' code for each learning goal, then recommends a rubric score(s).  AI will provide one score for learning goals where our AI has trained extensively.  It will provide two scores where it needs more training data.\nThe final score is always up to you. AI Teaching Assistant will provide evidence for its recommendation.",
-    },
-    {
-      // TODO: Add evidence image
-      element: '#dropletCodeTextbox',
-      position: 'left',
-      title: 'Using Evidence',
-      intro:
-        'Where possible, AI Teaching Assistant will highlight the relevant lines of code in the student’s project so it is easy for you to double-check.',
-    },
-    {
-      element: '#tour-ai-assessment-feedback',
-      position: 'left',
-      title: 'How did we do?',
-      intro:
-        'Your feedback helps us make the AI Teaching Assistant more helpful to you –  let us know how it did.\nFinish up by providing feedback about the AI Assessment.',
-    },
-    {
-      element: '#tour-evidence-levels-for-teachers',
-      position: 'left',
-      title: 'Assigning a Rubric Score',
-      intro:
-        'Once you have reviewed the AI Assessment and the student’s code, assign a rubric score for the learning goal.',
-    },
-  ];
-
-  const onExit = () => setStepsEnabled(false);
 
   const handleClick = () => {
     const eventName = isOpen
@@ -133,15 +86,6 @@ function RubricFloatingActionButton({
 
   return (
     <div id="fab-contained">
-      <Steps
-        enabled={stepsEnabled}
-        initialStep={initialStep}
-        steps={steps}
-        onExit={onExit}
-        options={{
-          scrollToElement: true,
-        }}
-      />
       <button
         id="ui-floatingActionButton"
         className={classes}

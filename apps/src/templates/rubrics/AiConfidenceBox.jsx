@@ -23,7 +23,7 @@ export default function AiConfidenceBox({aiConfidence}) {
   }, [aiConfidence]);
 
   return (
-    <div className={style.aiConfidenceBox}>
+    <div id="tour-ai-confidence" className={style.aiConfidenceBox}>
       <div>
         {[...Array(3)].map((_, i) => (
           <div

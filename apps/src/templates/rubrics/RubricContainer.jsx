@@ -19,6 +19,10 @@ import Draggable from 'react-draggable';
 import {TAB_NAMES} from './rubricHelpers';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+// intro.js
+import 'intro.js/introjs.css';
+import {Steps} from 'intro.js-react';
+
 export default function RubricContainer({
   rubric,
   studentLevelInfo,
@@ -40,6 +44,9 @@ export default function RubricContainer({
   const [aiEvaluations, setAiEvaluations] = useState(null);
 
   const [feedbackAdded, setFeedbackAdded] = useState(false);
+
+  const [stepsEnabled, setStepsEnabled] = useState(true);
+  const [tourButtonLabel, setTourButtonLabel] = useState('Next');
 
   const tabSelectCallback = tabSelection => {
     setSelectedTab(tabSelection);
@@ -83,83 +90,281 @@ export default function RubricContainer({
   // add more functionality to the settings tab.
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
+  // Steps for product tour
+  const initialStep = 0;
+  const steps = [
+    {
+      element: '#ui-floatingActionButton',
+      title: 'Getting Started with AI Teaching Assistant',
+      intro:
+        '<p>Launch AI Teaching Assistant from the bottom left corner of the screen in sprite lab.</p><p><b>Click on the AI Teaching Assistant to get started!</b></p>',
+    },
+    {
+      element: '#tour-ai-assessment',
+      title: 'Understanding the AI Assessment',
+      intro:
+        '<p>AI Teaching Assistant analyzes students’ code for each learning goal with AI enabled, then recommends a rubric score(s). AI will provide one score for learning goals where our AI has trained extensively. It will provide two scores where more training data is needed.</p><p>The final score is always up to you. AI Teaching Assistant will provide evidence for its recommendation.</p>',
+    },
+    {
+      // TODO: Add evidence image
+      element: '#draggable-id',
+      title: 'Using Evidence',
+      intro:
+        '<p>Where possible, AI Teaching Assistant will highlight the relevant lines of code in the student’s project so it is easy for you to double-check.</p>',
+    },
+    {
+      element: '#tour-ai-confidence',
+      title: 'How did we do?',
+      intro:
+        "<p>The confidence rating gives you an idea of how often the AI agreed with teachers when scoring this learning goal. Just like humans, AI isn't perfect.</p>",
+    },
+    {
+      element: '#tour-ai-assessment-feedback',
+      title: 'How did we do?',
+      intro:
+        '<p>Your feedback helps us make the AI Teaching Assistant more helpful to you –  let us know how it did.</p><p><b>Finish up by providing feedback about the AI Assessment.</b></p>',
+    },
+    {
+      element: '#tour-evidence-levels',
+      title: 'Assigning a Rubric Score',
+      intro:
+        "<p>Once you have reviewed the AI Assessment and the student's code, assign a rubric score for the learning goal.</p>",
+    },
+  ];
+
+  const onExit = () => setStepsEnabled(false);
+
+  // Dummy props for product tour
+  const rubricDummy = {
+    id: 1,
+    learningGoals: [
+      {
+        id: 1,
+        key: '1',
+        learningGoal: 'goal 1',
+        aiEnabled: true,
+        evidenceLevels: rubric.learningGoals[0].evidenceLevels,
+      },
+    ],
+    lesson: {
+      position: 3,
+      name: 'Data Structures',
+    },
+    level: {
+      name: 'test_level',
+      position: 7,
+    },
+  };
+
+  const studentLevelInfoDummy = {
+    name: 'Grace Hopper',
+    timeSpent: 305,
+    lastAttempt: '1980-07-31T00:00:00.000Z',
+    attempts: 6,
+  };
+
+  const aiEvaluationsDummy = [
+    {id: 1, learning_goal_id: 1, understanding: 2, aiConfidencePassFail: 2},
+  ];
+
+  const onStepChange = (nextStepIndex, nextElement) => {
+    if (nextStepIndex === 1) {
+      document.getElementById('tour-fab-bg').scrollBy(0, 1000);
+      setTourButtonLabel('See how evidence works');
+    } else if (nextStepIndex === 2) {
+      setTourButtonLabel('Got it!');
+    } else {
+      setTourButtonLabel('Next');
+    }
+  };
+
+  const beforeStepChange = (nextStepIndex, nextElement) => {
+    if (nextStepIndex === 1) {
+      return open;
+    } else if (nextStepIndex === 2) {
+      document
+        .getElementById('tour-ai-assessment')
+        .setAttribute('z-index', 99999);
+    } else if (nextStepIndex === 4) {
+      document
+        .getElementById('tour-ai-confidence')
+        .setAttribute('z-index', 99999);
+    }
+  };
+
   return (
     <Draggable>
-      <div
-        data-testid="draggable-test-id"
-        id="draggable-id"
-        className={classnames(style.rubricContainer, {
-          [style.hiddenRubricContainer]: !open,
-        })}
-      >
-        <div className={style.rubricHeaderRedesign}>
-          <div className={style.rubricHeaderLeftSide}>
-            <img
-              src={aiBotOutlineIcon}
-              className={style.aiBotOutlineIcon}
-              alt={i18n.rubricAiHeaderText()}
-            />
-            <span>{i18n.rubricAiHeaderText()}</span>
-          </div>
-          <div className={style.rubricHeaderRightSide}>
-            <button
-              type="button"
-              onClick={closeRubric}
-              className={classnames(style.buttonStyle, style.closeButton)}
-            >
-              <FontAwesome icon="xmark" />
-            </button>
-          </div>
-        </div>
-
-        <div className={style.fabBackground}>
-          <RubricTabButtons
-            tabSelectCallback={tabSelectCallback}
-            selectedTab={selectedTab}
-            showSettings={showSettings}
-            canProvideFeedback={canProvideFeedback}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
-            refreshAiEvaluations={fetchAiEvaluations}
-            rubric={rubric}
-            studentName={studentLevelInfo && studentLevelInfo.name}
+      {stepsEnabled ? (
+        <div
+          data-testid="draggable-test-id"
+          id="draggable-id"
+          className={classnames(style.rubricContainer, {
+            [style.hiddenRubricContainer]: !open,
+          })}
+        >
+          <Steps
+            enabled={stepsEnabled}
+            initialStep={initialStep}
+            steps={steps}
+            onExit={onExit}
+            onChange={onStepChange}
+            onBeforeChange={beforeStepChange}
+            options={{
+              scrollToElement: false,
+              exitOnOverlayClick: false,
+              hidePrev: true,
+              nextLabel: tourButtonLabel,
+              toolTipClass: style.productTourToolTip,
+              buttonClass: style.productTourButtons,
+              showBullets: false,
+            }}
           />
+          <div className={style.rubricHeaderRedesign}>
+            <div className={style.rubricHeaderLeftSide}>
+              <img
+                src={aiBotOutlineIcon}
+                className={style.aiBotOutlineIcon}
+                alt={i18n.rubricAiHeaderText()}
+              />
+              <span>{i18n.rubricAiHeaderText()}</span>
+            </div>
+            <div className={style.rubricHeaderRightSide}>
+              <button
+                type="button"
+                onClick={closeRubric}
+                className={classnames(style.buttonStyle, style.closeButton)}
+              >
+                <FontAwesome icon="xmark" />
+              </button>
+            </div>
+          </div>
 
-          <RubricContent
-            rubric={rubric}
-            open={open}
-            studentLevelInfo={studentLevelInfo}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            canProvideFeedback={canProvideFeedback}
-            onLevelForEvaluation={onLevelForEvaluation}
-            reportingData={reportingData}
-            visible={selectedTab === TAB_NAMES.RUBRIC}
-            aiEvaluations={aiEvaluations}
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-            sectionId={sectionId}
-          />
-          {showSettings && (
-            <RubricSettings
-              visible={selectedTab === TAB_NAMES.SETTINGS}
+          <div id="tour-fab-bg" className={style.fabBackground}>
+            <RubricTabButtons
+              tabSelectCallback={tabSelectCallback}
+              selectedTab={selectedTab}
+              showSettings={showSettings}
+              canProvideFeedback={canProvideFeedback}
+              teacherHasEnabledAi={teacherHasEnabledAi}
+              studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
               refreshAiEvaluations={fetchAiEvaluations}
               rubric={rubric}
+              studentName={studentLevelInfo && studentLevelInfo.name}
+            />
+
+            <RubricContent
+              productTour={stepsEnabled}
+              rubric={rubricDummy}
+              open={open}
+              studentLevelInfo={studentLevelInfoDummy}
+              teacherHasEnabledAi={true}
+              canProvideFeedback={true}
+              onLevelForEvaluation={true}
+              reportingData={reportingData}
+              visible={selectedTab === TAB_NAMES.RUBRIC}
+              aiEvaluations={aiEvaluationsDummy}
+              feedbackAdded={feedbackAdded}
+              setFeedbackAdded={setFeedbackAdded}
               sectionId={sectionId}
-              tabSelectCallback={tabSelectCallback}
+            />
+            {showSettings && (
+              <RubricSettings
+                visible={selectedTab === TAB_NAMES.SETTINGS}
+                refreshAiEvaluations={fetchAiEvaluations}
+                rubric={rubric}
+                sectionId={sectionId}
+                tabSelectCallback={tabSelectCallback}
+              />
+            )}
+          </div>
+          {canProvideFeedback && (
+            <RubricSubmitFooter
+              open={open}
+              rubric={rubric}
+              reportingData={reportingData}
+              studentLevelInfo={studentLevelInfo}
+              feedbackAdded={feedbackAdded}
+              setFeedbackAdded={setFeedbackAdded}
             />
           )}
         </div>
-        {canProvideFeedback && (
-          <RubricSubmitFooter
-            open={open}
-            rubric={rubric}
-            reportingData={reportingData}
-            studentLevelInfo={studentLevelInfo}
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-          />
-        )}
-      </div>
+      ) : (
+        <div
+          data-testid="draggable-test-id"
+          id="draggable-id"
+          className={classnames(style.rubricContainer, {
+            [style.hiddenRubricContainer]: !open,
+          })}
+        >
+          <div className={style.rubricHeaderRedesign}>
+            <div className={style.rubricHeaderLeftSide}>
+              <img
+                src={aiBotOutlineIcon}
+                className={style.aiBotOutlineIcon}
+                alt={i18n.rubricAiHeaderText()}
+              />
+              <span>{i18n.rubricAiHeaderText()}</span>
+            </div>
+            <div className={style.rubricHeaderRightSide}>
+              <button
+                type="button"
+                onClick={closeRubric}
+                className={classnames(style.buttonStyle, style.closeButton)}
+              >
+                <FontAwesome icon="xmark" />
+              </button>
+            </div>
+          </div>
+
+          <div className={style.fabBackground}>
+            <RubricTabButtons
+              tabSelectCallback={tabSelectCallback}
+              selectedTab={selectedTab}
+              showSettings={showSettings}
+              canProvideFeedback={canProvideFeedback}
+              teacherHasEnabledAi={teacherHasEnabledAi}
+              studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+              refreshAiEvaluations={fetchAiEvaluations}
+              rubric={rubric}
+              studentName={studentLevelInfo && studentLevelInfo.name}
+            />
+
+            <RubricContent
+              rubric={rubric}
+              open={open}
+              studentLevelInfo={studentLevelInfo}
+              teacherHasEnabledAi={teacherHasEnabledAi}
+              canProvideFeedback={canProvideFeedback}
+              onLevelForEvaluation={onLevelForEvaluation}
+              reportingData={reportingData}
+              visible={selectedTab === TAB_NAMES.RUBRIC}
+              aiEvaluations={aiEvaluations}
+              feedbackAdded={feedbackAdded}
+              setFeedbackAdded={setFeedbackAdded}
+              sectionId={sectionId}
+            />
+            {showSettings && (
+              <RubricSettings
+                visible={selectedTab === TAB_NAMES.SETTINGS}
+                refreshAiEvaluations={fetchAiEvaluations}
+                rubric={rubric}
+                sectionId={sectionId}
+                tabSelectCallback={tabSelectCallback}
+              />
+            )}
+          </div>
+          {canProvideFeedback && (
+            <RubricSubmitFooter
+              open={open}
+              rubric={rubric}
+              reportingData={reportingData}
+              studentLevelInfo={studentLevelInfo}
+              feedbackAdded={feedbackAdded}
+              setFeedbackAdded={setFeedbackAdded}
+            />
+          )}
+        </div>
+      )}
     </Draggable>
   );
 }
