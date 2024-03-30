@@ -193,9 +193,9 @@ class FieldSounds extends GoogleBlockly.Field {
       constants.FIELD_TEXT_FONTFAMILY
     );
 
-    // The full width comprises:
-    // 5px left margin, 15px image, 4px gap, text width, 5px right margin.
-    this.currentFieldWidth = 5 + 15 + 4 + textWidth + 5;
+    // The full width essentially comprises:
+    // 5px left margin, 17px image, 4px gap, text width, 5px right margin.
+    this.currentFieldWidth = 5 + 17 + 4 + textWidth + 5;
 
     // Create the background rectangle and attach it to the background
     // parent.
