@@ -1,4 +1,23 @@
 import React from 'react';
+import {
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  Heading5,
+  Heading6,
+  BodyOneText,
+  BodyTwoText,
+  BodyThreeText,
+  BodyFourText,
+  OverlineOneText,
+  OverlineTwoText,
+  OverlineThreeText,
+  EmText,
+  StrongText,
+  ExtraStrongText,
+  Figcaption,
+} from '@cdo/apps/componentLibrary/typography';
 
 type SemanticTag =
   | 'h1'
@@ -32,6 +51,25 @@ type VisualAppearance =
   | 'em'
   | 'figcaption';
 
+type TypographyElement =
+  | typeof Heading1
+  | typeof Heading2
+  | typeof Heading3
+  | typeof Heading4
+  | typeof Heading5
+  | typeof Heading6
+  | typeof BodyOneText
+  | typeof BodyTwoText
+  | typeof BodyThreeText
+  | typeof BodyFourText
+  | typeof OverlineOneText
+  | typeof OverlineTwoText
+  | typeof OverlineThreeText
+  | typeof EmText
+  | typeof StrongText
+  | typeof ExtraStrongText
+  | typeof Figcaption;
+
 interface TypographyElementProps {
   // Scss module classname to use for the typography element
   visualAppearance?: VisualAppearance;
@@ -43,4 +81,9 @@ interface TypographyElementProps {
   children: React.ReactNode;
 }
 
-export {SemanticTag, VisualAppearance, TypographyElementProps};
+export {
+  SemanticTag,
+  VisualAppearance,
+  TypographyElementProps,
+  TypographyElement,
+};
