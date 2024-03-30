@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
@@ -18,6 +18,16 @@ export default function SchoolZipSearch({fieldNames, zip}) {
   const [inputManually, setInputManually] = useState(false);
   const [dropdownSchools, setDropdownSchools] = useState([]);
 
+  useEffect(() => {
+    const searchUrl = `/dashboardapi/v1/schoolsearch/${zip}/40`;
+    fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
+      .then(response => (response.ok ? response.json() : []))
+      .then(json => {
+        const schools = json.map(school => constructSchoolOption(school));
+        setDropdownSchools(schools);
+      });
+  }, [zip]);
+
   const onSchoolChange = e => {
     const schoolId = e.target.value;
     setSelectedSchoolNcesId(schoolId);
@@ -30,22 +40,6 @@ export default function SchoolZipSearch({fieldNames, zip}) {
     value: school.nces_id.toString(),
     text: `${school.name}`,
   });
-
-  /**
-   * Debounced function that will request school search results from the server.
-   * Because this function is debounced it is not guaranteed to execute
-   * when it is called - there may be a delay of up to 200ms.
-   * @param {string} q - Search query
-   * @param {function(err, result)} callback - Function called when the server
-   *   returns results or a request error occurs.
-   */
-  const searchUrl = `/dashboardapi/v1/schoolsearch/${zip}/40`;
-  fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
-    .then(response => (response.ok ? response.json() : []))
-    .then(json => {
-      const schools = json.map(school => constructSchoolOption(school));
-      setDropdownSchools(schools);
-    });
 
   return (
     <div>
