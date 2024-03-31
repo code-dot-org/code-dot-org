@@ -1,9 +1,11 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+import React from 'react';
 import sinon from 'sinon';
-import LoadableComponent from '@cdo/apps/templates/LoadableComponent';
+
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import LoadableComponent from '@cdo/apps/templates/LoadableComponent';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('LoadableComponent', () => {
   let loadFunction, loadArgs, renderFunction, renderedText, errorMessage;

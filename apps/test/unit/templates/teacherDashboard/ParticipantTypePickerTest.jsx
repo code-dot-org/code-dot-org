@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/reconfiguredChai';
+
 import ParticipantTypePicker from '@cdo/apps/templates/teacherDashboard/ParticipantTypePicker';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 describe('ParticipantTypePicker', () => {
   let defaultProps, setParticipantType, handleCancel;

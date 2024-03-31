@@ -9,9 +9,9 @@ theme: responsive_full_width
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
-      %h1{style: "color: white"}
+      %h1.white
         =hoc_s(:curriculum_name_csc)
-      %p{style: "color: white"}
+      %p.white
         =hoc_s(:csc_page_top_desc)
       %a.link-button.white{href: "#csc-modules"}
         =hoc_s(:call_to_action_explore_modules)
@@ -36,6 +36,8 @@ theme: responsive_full_width
         =hoc_s(:call_to_action_explore_modules)
     .clear
 
+= view :poetry_banner
+
 %section.bg-neutral-light
   .wrapper
     = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_3_5), duration: hoc_s(:module_duration_week), level: hoc_s(:module_level_beginner), tools: hoc_s(:csc_page_curriculum_glance_tools), devices: hoc_s(:csc_page_curriculum_glance_devices), professional_learning: hoc_s(:csc_page_curriculum_glance_professional_learning), topics: hoc_s(:csc_page_curriculum_glance_topics), accessibility_features: hoc_s(:csc_page_curriculum_glance_professional_accessibility_features), languages: hoc_s(:csc_page_curriculum_glance_professional_languages)
@@ -50,7 +52,7 @@ theme: responsive_full_width
         %span •
         =hoc_s(:teacher_label_csc)
 
-%section.bg-neutral-light.centered
+%section#csc-modules.bg-neutral-light.centered
   .wrapper
     %h2=hoc_s(:csc_explore_curriculum)
     %p=hoc_s(:csc_explore_desc)

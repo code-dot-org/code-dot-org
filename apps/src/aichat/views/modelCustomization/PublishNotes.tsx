@@ -1,31 +1,72 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {
+  EMPTY_AI_CUSTOMIZATIONS,
+  MODEL_CARD_FIELDS_AND_LABELS,
+} from './constants';
+import {isVisible, isDisabled} from './utils';
+import {
+  setModelCardProperty,
+  updateAiCustomization,
+} from '@cdo/apps/aichat/redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
-
-const INPUTS = [
-  {id: 'intended-uses', text: 'Intended Uses'},
-  {id: 'limitations-and-warnings', text: 'Limitations and Warnings'},
-  {id: 'testing-and-evaluation', text: 'Testing and Evaluation'},
-];
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const PublishNotes: React.FunctionComponent = () => {
+  const dispatch = useAppDispatch();
+
+  const {visibility} = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  ).modelCardInfo;
+  const {modelCardInfo} = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
+
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
+
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        {INPUTS.map(({id, text}) => {
+        {MODEL_CARD_FIELDS_AND_LABELS.map(([id, text]) => {
           return (
-            <div className={styles.inputContainer} key={id}>
-              <label htmlFor={id}>
-                <StrongText>{text}</StrongText>
-              </label>
-              <textarea id={id} />
-            </div>
+            isVisible(visibility) && (
+              <div className={styles.inputContainer} key={id}>
+                <label htmlFor={id}>
+                  <StrongText>{text}</StrongText>
+                </label>
+                <textarea
+                  id={id}
+                  disabled={isDisabled(visibility)}
+                  value={modelCardInfo[id]}
+                  onChange={event =>
+                    dispatch(
+                      setModelCardProperty({
+                        property: id,
+                        value: event.target.value,
+                      })
+                    )
+                  }
+                />
+              </div>
+            )
           );
         })}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button">Publish</button>
+        <button
+          type="button"
+          disabled={isDisabled(visibility)}
+          onClick={onUpdate}
+        >
+          Publish
+        </button>
       </div>
     </div>
   );

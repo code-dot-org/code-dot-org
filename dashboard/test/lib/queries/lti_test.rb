@@ -12,7 +12,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       iss: 'http://some-iss.com',
     }
     user.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(id_token),
+      authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
       credential_type: AuthenticationOption::LTI_V1,
     )
 
@@ -30,7 +30,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       iss: lms_issuer,
     }
     user.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(id_token),
+      authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
       credential_type: AuthenticationOption::LTI_V1,
     )
     mock_nrps_member = {

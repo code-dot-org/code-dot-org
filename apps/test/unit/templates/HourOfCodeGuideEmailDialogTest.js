@@ -1,7 +1,8 @@
 import {expect} from 'chai';
-import React from 'react';
-import {UnconnectedHourOfCodeGuideEmailDialog as HourOfCodeGuideEmailDialog} from '@cdo/apps/templates/HourOfCodeGuideEmailDialog';
 import {shallow} from 'enzyme';
+import React from 'react';
+
+import {UnconnectedHourOfCodeGuideEmailDialog as HourOfCodeGuideEmailDialog} from '@cdo/apps/templates/HourOfCodeGuideEmailDialog';
 import i18n from '@cdo/locale';
 
 describe('HourOfCodeGuideEmailDialog', () => {

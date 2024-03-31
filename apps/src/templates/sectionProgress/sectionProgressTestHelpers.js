@@ -1,21 +1,21 @@
+import {TestResults} from '@cdo/apps/constants';
 import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
+import locales from '@cdo/apps/redux/localesRedux';
+import unitSelection, {
+  setCoursesWithProgress,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
 import sectionProgress, {
   addDataByUnit,
   setLessonOfInterest,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection, {
-  setCoursesWithProgress,
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {TestResults} from '@cdo/apps/constants';
-import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 export function fakeRowsForStudents(students) {
   const rows = [];
@@ -116,6 +116,7 @@ function randomProgress(level) {
         lastTimestamp: timestamp,
         teacherFeedbackReviewState: randomReviewState(),
         teacherFeedbackNew: false,
+        teacherFeedbackCommented: true,
       };
     case 1:
       return {
@@ -127,6 +128,7 @@ function randomProgress(level) {
         lastTimestamp: timestamp,
         teacherFeedbackReviewState: randomReviewState(),
         teacherFeedbackNew: true,
+        teacherFeedbackCommented: false,
       };
     case 2:
       return {
@@ -138,6 +140,7 @@ function randomProgress(level) {
         lastTimestamp: timestamp,
         teacherFeedbackReviewState: randomReviewState(),
         teacherFeedbackNew: false,
+        teacherFeedbackCommented: true,
       };
     default:
       return null;

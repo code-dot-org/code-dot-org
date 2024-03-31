@@ -23,7 +23,7 @@ class S3Packaging
     @package_name = package_name
     @source_location = source_location
     @target_location = target_location
-    @logger = Logger.new(STDOUT)
+    @logger = Logger.new($stdout)
     regenerate_commit_hash
   end
 

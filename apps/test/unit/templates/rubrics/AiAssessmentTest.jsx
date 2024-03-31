@@ -1,7 +1,9 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
+import React from 'react';
+
 import AiAssessment from '@cdo/apps/templates/rubrics/AiAssessment';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('AiAssessment', () => {
   const mockAiInfo = {

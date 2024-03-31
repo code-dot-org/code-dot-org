@@ -27,7 +27,6 @@ const CODE_STUDIO_ENTRIES = {
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
   'congrats/index': './src/sites/studio/pages/congrats/index.js',
-  'courses/index': './src/sites/studio/pages/courses/index.js',
   'courses/show': './src/sites/studio/pages/courses/show.js',
   'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
   'courses/resources': './src/sites/studio/pages/courses/resources.js',
@@ -137,6 +136,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_callouts': './src/sites/studio/pages/levels/editors/fields/_callouts.js',
   'levels/editors/fields/_droplet': './src/sites/studio/pages/levels/editors/fields/_droplet.js',
   'levels/editors/fields/_grid': './src/sites/studio/pages/levels/editors/fields/_grid.js',
+  'levels/editors/fields/_panels': './src/sites/studio/pages/levels/editors/fields/_panels.js',
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
   'levels/editors/fields/_preload_assets': './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
   'levels/editors/fields/_special_level_types': './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
@@ -191,6 +191,9 @@ const PEGASUS_ENTRIES = {
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
   'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
   'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
+  'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
+  'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
+  'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com
   'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',

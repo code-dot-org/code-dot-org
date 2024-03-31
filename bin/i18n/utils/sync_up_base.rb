@@ -49,8 +49,19 @@ module I18n
       def perform
         progress_bar.start
 
-        crowdin_client.upload_source_files(source_files, base_path: config.base_path) do |_source_file_data|
-          progress_bar.increment
+        mutex = Thread::Mutex.new
+        Parallel.each(source_files, in_threads: I18n::Utils::CrowdinClient::MAX_CONCURRENT_REQUESTS) do |source_file_path|
+          crowdin_file_path = File.join File::SEPARATOR, source_file_path.delete_prefix(config.base_path)
+          crowdin_dir_path = File.dirname(crowdin_file_path)
+
+          crowdin_client.upload_source_file(source_file_path, crowdin_dir_path)
+        ensure
+          mutex.synchronize do
+            progress_bar.increment
+
+            # Limits the number of requests to 20 per second to avoid hitting Crowdin's rate limit
+            sleep(1) if progress_bar.progress % I18n::Utils::CrowdinClient::MAX_CONCURRENT_REQUESTS == 0
+          end
         end
 
         progress_bar.finish

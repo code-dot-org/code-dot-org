@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import StandardsReportHeader from '@cdo/apps/templates/sectionProgress/standards/StandardsReportHeader';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('StandardsReportHeader', () => {
   let DEFAULT_PROPS;

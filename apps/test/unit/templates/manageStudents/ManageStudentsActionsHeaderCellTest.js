@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
+import React from 'react';
+
 import {UnconnectedManageStudentsActionsHeaderCell as ManageStudentsActionsHeaderCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ManageStudentsActionsCell', () => {
   it('renders the edit all option', () => {

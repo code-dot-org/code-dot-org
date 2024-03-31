@@ -1,12 +1,14 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
-import {TabType} from '@cdo/apps/templates/instructions/TopInstructions';
-import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
-import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import React from 'react';
+
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
+import {TabType} from '@cdo/apps/templates/instructions/TopInstructions';
+import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   teacherOnly: false,

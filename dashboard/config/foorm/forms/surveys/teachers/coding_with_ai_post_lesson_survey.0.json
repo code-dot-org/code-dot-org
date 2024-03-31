@@ -14,8 +14,10 @@
         },
         {
           "type": "radiogroup",
-          "name": "lesson_number",
-          "defaultValueExpression": "{1}",
+          "name": "lesson_name",
+          "defaultValueExpression": "{lesson_number}",
+          "startWithNewLine": false,
+          "readOnly": true,
           "visible": true,
           "choices": [
             {
@@ -44,7 +46,7 @@
           "type": "html",
           "name": "variable_testing",
           "visible": true,
-          "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>lesson_number = {lesson_number}</p>"
+          "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>lesson_number = {lesson_number}, lesson_name = {lesson_name} </p>"
         },
         {
           "type": "html",
@@ -56,7 +58,7 @@
     {
       "type": "html",
       "name": "intro_coding_with_ai_post_lesson_survey",
-      "html": "<h1>Code.org Coding with AI</h1><p><h2>Post-Lesson Survey</h2></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>{lesson_number}</h2>"
+      "html": "<h1>Code.org Coding with AI</h1><p><h2>Post-Lesson Survey</h2></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>{lesson_name}</h2>"
     },
     {
       "type": "panel",

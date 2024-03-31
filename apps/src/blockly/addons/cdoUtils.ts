@@ -7,6 +7,7 @@ import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/procedure
 import {
   BLOCK_TYPES,
   CLAMPED_NUMBER_REGEX,
+  DARK_THEME_SUFFIX,
   DEFAULT_SOUND,
   stringIsXml,
   Themes,
@@ -26,9 +27,16 @@ import {
   getProjectXml,
   processIndividualBlock,
 } from '@cdo/apps/blockly/addons/cdoXml';
-import {Block, BlockSvg, Field, WorkspaceSvg} from 'blockly';
-import {BlockColor, JsonBlockConfig, WorkspaceSerialization} from '../types';
+import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
+import {
+  BlockColor,
+  JsonBlockConfig,
+  SerializedFields,
+  WorkspaceSerialization,
+} from '../types';
 import experiments from '@cdo/apps/util/experiments';
+import {getBaseName} from '../utils';
+import {ToolboxItemInfo, BlockInfo} from 'blockly/core/utils/toolbox';
 
 /**
  * Loads blocks to a workspace.
@@ -41,6 +49,9 @@ export function loadBlocksToWorkspace(
   source: string,
   includeHiddenDefinitions = true
 ) {
+  // Reset hasLoadedBlocks to false so we can accurately track if blocks have been loaded.
+  // This function may be called multiple times to reload blocks (ex. when starting over).
+  Blockly.hasLoadedBlocks = false;
   const embedded = Blockly.isEmbeddedWorkspace(workspace);
   const {mainSource, hiddenDefinitionSource} = prepareSourcesForWorkspaces(
     source,
@@ -52,6 +63,53 @@ export function loadBlocksToWorkspace(
   }
   Blockly.serialization.workspaces.load(mainSource, workspace);
   positionBlocksOnWorkspace(workspace);
+  Blockly.hasLoadedBlocks = true;
+
+  // Dynamically add procedure call blocks to an uncategorized toolbox
+  // if specified in the level config (e.g. Minecraft Agent levels).
+  // Levels will include: "top_level_procedure_autopopulate": "true"
+  if (Blockly.topLevelProcedureAutopopulate) {
+    addProcedureCallBlocksToFlyout(workspace, mainSource);
+  }
+}
+
+function addProcedureCallBlocksToFlyout(
+  workspace: WorkspaceSvg,
+  mainSource: WorkspaceSerialization
+) {
+  const translatedToolboxInfo = workspace.options?.languageTree;
+  if (workspace.getFlyout() && translatedToolboxInfo) {
+    const callBlocks = [] as ToolboxItemInfo[];
+    const definitionBlocks = mainSource.blocks.blocks.filter(
+      block => block.type === BLOCK_TYPES.procedureDefinition
+    );
+    definitionBlocks.forEach(definitionBlock => {
+      // Procedure definitions should have a valid name
+      if (typeof definitionBlock.fields?.NAME === 'string') {
+        // Create the block XML for a procedure call block.
+        const callBlockElement = document.createElement('block');
+        callBlockElement.setAttribute('type', BLOCK_TYPES.procedureCall);
+        const mutationElement = document.createElement('mutation');
+        mutationElement.setAttribute('name', definitionBlock.fields.NAME);
+        callBlockElement.appendChild(mutationElement);
+
+        callBlocks.push({
+          kind: 'BLOCK',
+          blockxml: callBlockElement,
+          type: BLOCK_TYPES.procedureCall,
+        });
+      }
+    });
+    if (callBlocks.length) {
+      // Remove existing call blocks from the toolbox
+      translatedToolboxInfo.contents = translatedToolboxInfo.contents.filter(
+        (item: BlockInfo) => item.type !== BLOCK_TYPES.procedureCall
+      );
+      // Add the new callblocks to the toolbox and refresh it.
+      translatedToolboxInfo.contents.unshift(...callBlocks);
+      workspace.getFlyout()?.show(translatedToolboxInfo);
+    }
+  }
 }
 
 /**
@@ -293,16 +351,30 @@ export function getField(type: string) {
 
 /**
  * Returns a theme object, based on the presence of an option in the browser's localStorage.
- * @param {string} type
+ * @param {?Theme} themeOption
  * @returns {?Blockly.Field}
  */
-// Users can change their active theme using the context menu. Use this setting, if present.
-export function getUserTheme(themeOption: string | undefined) {
-  return (
-    Blockly.themes[localStorage.blocklyTheme as Themes] ||
-    themeOption ||
-    cdoTheme
-  );
+export function getUserTheme(themeOption: Theme | undefined) {
+  // Today we only store the theme's base name in localStorage, which never includes 'dark'.
+  // Until March, 2024 we stored the full theme name, so we need to convert it now.
+  // getBaseName strips the 'dark' suffix from a theme name, if present.
+  const localStorageThemeBaseName = getBaseName(localStorage.blocklyTheme);
+
+  // For labs that use dark mode by default, ensure we are returning a dark theme.
+  if (themeOption?.name.endsWith(DARK_THEME_SUFFIX)) {
+    return localStorageThemeBaseName
+      ? Blockly.themes[
+          (localStorageThemeBaseName + DARK_THEME_SUFFIX) as Themes
+        ]
+      : themeOption;
+  } else {
+    // For all other labs, return a light mode theme.
+    return (
+      Blockly.themes[localStorageThemeBaseName as Themes] ||
+      themeOption ||
+      cdoTheme
+    );
+  }
 }
 
 /**
@@ -440,63 +512,63 @@ export function getLevelToolboxBlocks(customCategory: string) {
 export function getSimplifiedStateForFlyout(
   serialization: WorkspaceSerialization
 ) {
-  const variableMap: {[key: string]: string} = {};
-  const variables = serialization.variables;
+  const blocksList = [] as object[];
+
+  const {variables, blocks} = serialization;
+
+  // Create a map of variable ids and names from the serialization.
+  const serializedVariableMap: Map<string, string> = new Map();
   variables?.forEach(variable => {
-    variableMap[variable.id] = variable.name;
+    serializedVariableMap.set(variable.id, variable.name);
   });
 
-  const blocksList = hasBlocks(serialization)
-    ? serialization.blocks.blocks.map(block =>
-        simplifyBlockState(block, variableMap)
-      )
-    : [];
+  // Create a copy of the blocks list to avoid modifying the original
+  const blocksCopy = {...blocks};
+
+  // Replace variable ids with names and simplify state for flyout.
+  blocksCopy.blocks.forEach(block => {
+    updateVariableFields(block, serializedVariableMap);
+    blocksList.push(simplifyBlockState(block));
+  });
 
   return blocksList;
 }
 
+// Function for updating field values
+function updateVariableFields(
+  block: {fields: SerializedFields},
+  serializedVariableMap: Map<string, string>
+): void {
+  const fields = block.fields;
+  for (const key in fields) {
+    const field = fields[key];
+    if (field.id && serializedVariableMap.has(field.id)) {
+      field.name = serializedVariableMap.get(field.id)!;
+      delete field.id;
+    }
+  }
+}
 /**
  * Simplifies the state of a block by removing properties like x/y and id.
  * Also replaces variable IDs with variable names derived from the specified variable map.
  * @param {object} block The block to process.
- * @param {object} variableMap A map of variable IDs to variable names.
  * @returns {object} The processed block with variable names.
  */
-function simplifyBlockState(
-  block: JsonBlockConfig,
-  variableMap: {[key: string]: string}
-) {
+function simplifyBlockState(block: JsonBlockConfig) {
   // Create a copy of the block so we can modify certain fields.
   const result = {...block};
-
-  // For variable fields, look up the name of the variable to use instead of the id.
-  const variableFields = [
-    'VAR' /* most common */,
-    'VARIABLE' /* used in gamelab_changeVarBy */,
-  ];
-
-  variableFields.forEach(field => {
-    const fieldValue = block.fields?.[field];
-    if (fieldValue) {
-      result.fields[field] = {
-        name: fieldValue.id ? variableMap[fieldValue.id] || '' : '',
-        type: '',
-      };
-    }
-  });
 
   // Recursively check nested blocks.
   if (block.inputs?.block) {
     for (const inputKey in block.inputs) {
       result.inputs[inputKey].block = simplifyBlockState(
-        block.inputs[inputKey].block,
-        variableMap
+        block.inputs[inputKey].block
       );
     }
   }
   // Recursively check next block, if present.
   if (block.next?.block) {
-    result.next.block = simplifyBlockState(block.next.block, variableMap);
+    result.next.block = simplifyBlockState(block.next.block);
   }
   // Remove unnecessary properties
   delete result.id;

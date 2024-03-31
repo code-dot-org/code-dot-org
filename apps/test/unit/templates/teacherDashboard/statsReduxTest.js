@@ -1,7 +1,8 @@
-import {assert} from '../../../util/reconfiguredChai';
 import stats, {
   setCompletedLevelCount,
 } from '@cdo/apps/templates/teacherDashboard/statsRedux';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 // Key-value pairs where the key is the student id and value is
 // the count of completed levels for that student.

@@ -48,3 +48,8 @@ export function randomColor(p5) {
 export function randomColorFromPalette(palette) {
   return palette[randomInt(0, palette.length - 1)];
 }
+
+export function formatForPlayspace(value) {
+  const isScientific = typeof value === 'number' && Math.abs(value) >= 1e21;
+  return isScientific ? value.toPrecision(2) : `${value}`;
+}

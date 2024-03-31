@@ -1,11 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
-import FontAwesome from '../FontAwesome';
-import LevelProgressHeader from './LevelProgressHeader';
-import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import i18n from '@cdo/locale';
+
+import FontAwesome from '../FontAwesome';
+
+import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import LevelProgressHeader from './LevelProgressHeader';
+
+import styles from './progress-table-v2.module.scss';
 
 export default function ExpandedProgressColumnHeader({
   lesson,
@@ -27,6 +31,8 @@ export default function ExpandedProgressColumnHeader({
       }
     });
     resizeObserver.observe(expandedLevelHeaderRef.current);
+
+    return () => resizeObserver.disconnect();
   }, [setHeaderWidth, expandedLevelHeaderRef]);
 
   // If there are 2 or less levels, we only show the number so that the text fits the cell.
