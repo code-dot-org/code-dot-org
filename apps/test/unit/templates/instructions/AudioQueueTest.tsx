@@ -63,8 +63,4 @@ describe('AudioQueue', () => {
     );
     expect(addToQueueSpy).to.not.have.been.called;
   });
-
-  it('playNextAudio plays the next audio if the queue is not empty and not already playing', () => {
-    // comment
-  });
 });
