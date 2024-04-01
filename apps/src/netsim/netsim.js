@@ -11,7 +11,6 @@ import {getStore} from '../redux';
 import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
 
 var _ = require('lodash');
-/** @type {Object<string, function>} */
 var Provider = require('react-redux').Provider;
 
 var i18n = require('@cdo/netsim/locale');
