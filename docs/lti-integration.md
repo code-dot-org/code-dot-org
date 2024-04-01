@@ -201,7 +201,7 @@ be manually installed.
   - Recommended For: `Instructors` and `Students`
   - Available For: `Only people in my school`
 
-![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/395e733f-72ea-41f7-af11-613130e89bfa)
+![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/02898ddb-1155-4aa0-a39a-7c518e4e2a38)
 
 3. You can leave the App logo Feature graphic empty
 4. Type of App: `LTI 1.3 App`
