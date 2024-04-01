@@ -10,17 +10,19 @@ class RubricsControllerTest < ActionController::TestCase
     @level = create(:level)
     @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
 
+    # set up a section containing 6 students: 1 @student and 5 other_students.
+
     @teacher = create :teacher
     @student = create :student
     @follower = create :follower, student_user: @student, user: @teacher
     @rubric = create :rubric, lesson: @lesson, level: @level
 
-    @followers = []
-    @students = []
+    other_followers = []
+    other_students = []
 
     5.times do
-      @students << create(:student)
-      @followers << create(:follower, section: @follower.section, student_user: @students[-1], user: @teacher)
+      other_students << create(:student)
+      other_followers << create(:follower, section: @follower.section, student_user: other_students[-1], user: @teacher)
     end
 
     @fake_ip = '127.0.0.1'
