@@ -200,11 +200,10 @@ be manually installed.
   - Category: `Technology`
   - Recommended For: `Instructors` and `Students`
   - Available For: `Only people in my school`
+
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/395e733f-72ea-41f7-af11-613130e89bfa)
 
-
 3. You can leave the App logo Feature graphic empty
-
 4. Type of App: `LTI 1.3 App`
 5. Select where the tool can be installed, `Can Be Installed For`:
   - Users
@@ -227,6 +226,7 @@ be manually installed.
   - `display_name=$User.username`
 12. OIDC Login Init Url: `https://studio.code.org/lti/v1/login`
 13. Redirect URLs: `https://studio.code.org/lti/v1/authenticate`
+
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/96f09b29-3c90-46cd-a60d-2f206abf8ca4)
 
 14. Click toggle to accept Schoology Terms of Use
@@ -236,22 +236,28 @@ After you install the App to the district, you also need to install it to the
 areas where it should appear (Courses, Groups, etc). Click the ‘Install’ button
 next to your app on the District App list to complete that additional installation
 process.
+
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/f78e0051-922e-4eff-b96f-8bf99c1d4768)
 
 
 This will open a modal, where you'll need to accept and continue. When prompted
 for where you want to install it, click `Add to Organization`.
+
+
 <p align="center">
 <img width="368" alt="image" src="https://github.com/code-dot-org/code-dot-org/assets/8847422/03e2dd29-1f23-4408-867a-2c8fde1e74d2">
 </p>
 
 This will take you to the Organization Apps page, where you will click on the
 `Install/Remove` button for the Code.org tool.
+
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/8ac87431-6a21-4b6c-af94-0cd9696260a4)
 
 
 A modal will open, where you'll be prompted to select who and where this app
 will be available for.
+
+
 <p align="center">
 <img width="496" alt="image" src="https://github.com/code-dot-org/code-dot-org/assets/8847422/08b2fc57-6e39-42d1-aa2b-29f5e4ef5665">
 </p>
