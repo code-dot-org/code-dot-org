@@ -95,20 +95,11 @@ class InlineAudio extends React.Component {
       playing: false,
       error: false,
     });
-    audio.removeEventListener('ended', e => {
-      this.setState({
-        playing: false,
-        autoplayed: this.props.ttsAutoplayEnabled,
-      });
-      if (this.props.ttsAutoplayEnabled) {
-        const {playNextAudio, isPlaying} = this.context;
-        isPlaying.current = false;
-        playNextAudio();
-      }
-    });
+    audio.removeEventListener('ended', this.audioEndedListener);
 
-    const {clearQueue} = this.context;
+    const {clearQueue, isPlaying} = this.context;
     clearQueue();
+    if (this.state.playing) isPlaying.current = false;
   }
 
   UNSAFE_componentWillUpdate(nextProps) {
@@ -158,19 +149,12 @@ class InlineAudio extends React.Component {
       });
       if (this.props.ttsAutoplayEnabled) {
         const {playNextAudio, isPlaying} = this.context;
-        isPlaying.current = false;
+        isPlaying.current = this.state.playing;
         playNextAudio();
       }
     });
 
-    audio.addEventListener('error', e => {
-      // e is an instance of a MediaError object
-      trackEvent('InlineAudio', 'error', e.target.error.code);
-      this.setState({
-        playing: false,
-        error: true,
-      });
-    });
+    audio.addEventListener('error', this.audioEndedListener);
 
     this.setState({audio});
     trackEvent('InlineAudio', 'getAudioElement', src);
@@ -266,6 +250,17 @@ class InlineAudio extends React.Component {
       clearQueue();
     }
   }
+
+  audioEndedListener = e => {
+    // e is an instance of a MediaError object
+    trackEvent('InlineAudio', 'error', e.target.error.code);
+    this.setState({
+      playing: false,
+      error: true,
+    });
+    const {isPlaying} = this.context;
+    isPlaying.current = this.state.playing;
+  };
 
   render() {
     const {isRoundedVolumeIcon, isLegacyStyles} = this.props;
