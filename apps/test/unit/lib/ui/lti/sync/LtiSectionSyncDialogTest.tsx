@@ -30,8 +30,10 @@ const MOCK_UPDATED_SECTION_MAP: LtiSectionMap = {
 
 const MOCK_SYNC_RESULT: LtiSectionSyncResult = {
   all: MOCK_ALL_SECTION_MAP,
-  updated: MOCK_UPDATED_SECTION_MAP,
+  changed: MOCK_UPDATED_SECTION_MAP,
 };
+
+const LMS_NAME = 'some_lms';
 
 describe('LTI Section Sync Dialog', () => {
   beforeEach(() => {
@@ -45,7 +47,13 @@ describe('LTI Section Sync Dialog', () => {
 
   describe('Sync Result Sub View', () => {
     it('should show a sync results view', () => {
-      render(<LtiSectionSyncDialog isOpen syncResult={MOCK_SYNC_RESULT} />);
+      render(
+        <LtiSectionSyncDialog
+          isOpen
+          syncResult={MOCK_SYNC_RESULT}
+          lmsName={LMS_NAME}
+        />
+      );
 
       screen.getByText(i18n.ltiSectionSyncDialogTitle());
 
@@ -54,8 +62,7 @@ describe('LTI Section Sync Dialog', () => {
       const items = getAllByRole('listitem', {exact: false});
       const sectionListItems = items.map(item => item.textContent);
 
-      expect(sectionListItems[0]).to.match(/Section 1(.*)100 students/);
-      expect(sectionListItems[1]).to.match(/Section 2 (.*) 10 students/);
+      expect(sectionListItems[0]).to.match(/Section 2(.*)15 students/);
 
       // no 'disable roster sync'
       expect(
@@ -73,6 +80,7 @@ describe('LTI Section Sync Dialog', () => {
           syncResult={MOCK_SYNC_RESULT}
           disableRosterSyncButtonEnabled
           onClose={mockOnClose}
+          lmsName={LMS_NAME}
         />
       );
 
@@ -112,6 +120,7 @@ describe('LTI Section Sync Dialog', () => {
           isOpen
           syncResult={MOCK_SYNC_RESULT}
           disableRosterSyncButtonEnabled
+          lmsName={LMS_NAME}
         />
       );
 
@@ -144,7 +153,13 @@ describe('LTI Section Sync Dialog', () => {
         error: 'Error!!',
       };
 
-      render(<LtiSectionSyncDialog isOpen syncResult={errorSyncResult} />);
+      render(
+        <LtiSectionSyncDialog
+          isOpen
+          syncResult={errorSyncResult}
+          lmsName={LMS_NAME}
+        />
+      );
 
       screen.getByText(i18n.errorOccurredTitle());
       screen.getByText(i18n.ltiSectionSyncDialogError());

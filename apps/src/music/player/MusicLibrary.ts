@@ -42,7 +42,7 @@ export default class MusicLibrary {
     }
 
     if (libraryJson.key) {
-      this.key = Key[libraryJson.key.toUpperCase() as keyof typeof Key];
+      this.key = libraryJson.key;
     }
 
     this.currentPackId = null;
@@ -248,7 +248,7 @@ export type LibraryJson = {
   imageSrc: string;
   path: string;
   bpm?: number;
-  key?: string;
+  key?: number;
   defaultSound?: string;
   folders: SoundFolder[];
   instruments: SoundFolder[];

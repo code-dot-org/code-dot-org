@@ -1,13 +1,15 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {lessonsByStandard} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import i18n from '@cdo/locale';
+
 import StandardDescriptionCell from './StandardDescriptionCell';
-import {connect} from 'react-redux';
-import {lessonsByStandard} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import _ from 'lodash';
 
 export const COLUMNS = {
   STANDARD_CATEGORY: 0,

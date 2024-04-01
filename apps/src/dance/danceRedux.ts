@@ -84,10 +84,15 @@ export const initSongs = createAsyncThunk(
 
     // a song should be included if we do NOT have a filtered song set
     // OR if we do have a set and our song's id is in them.
-    const songManifest = unfilteredSongManifest.filter(
+    let songManifest = unfilteredSongManifest.filter(
       (song: {id: string}) =>
         !filteredSongSet.size || filteredSongSet.has(song.id)
     );
+    // Handle dev scenario where there's no overlap between
+    // levelbuilder-configured songs and the list of dev-only songs
+    if (!songManifest.length) {
+      songManifest = unfilteredSongManifest;
+    }
     const songData = parseSongOptions(songManifest) as SongData;
 
     if (

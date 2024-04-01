@@ -222,7 +222,8 @@ hr {
 .button-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
 
   &.centered {
     justify-content: center;
@@ -235,6 +236,12 @@ hr {
 .hero-banner-basic {
   position: relative;
   overflow: hidden;
+
+  & > .grid-container {
+    @media (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   .text-wrapper {
     position: relative;
@@ -662,6 +669,7 @@ form {
   background: var(--neutral_light);
   border: 1px solid var(--neutral_dark20);
   border-radius: $border-radius;
+  text-align: initial;
   display: flex;
   align-content: baseline;
 
@@ -1453,4 +1461,19 @@ table {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+// List of logos
+// Set the max-width of each image inline to maintain consistent ratios
+.logos-wrapper {
+  margin-block: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+
+  img {
+    align-self: center;
+    width: 100%;
+  }
 }

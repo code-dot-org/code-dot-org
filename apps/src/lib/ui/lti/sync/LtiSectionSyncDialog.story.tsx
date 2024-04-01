@@ -37,7 +37,7 @@ SuccessfulSync.args = {
         size: 32,
       },
     },
-    updated: {
+    changed: {
       2: {
         name: 'CSD - Period 2',
         size: 27,

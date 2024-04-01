@@ -5,10 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapter 2 Project: Website for a Purpose
 
-<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+#### Throughout Chapter 2, students work in teams to plan websites for a purpose. In Lesson 20, the team works together and individually to code all of the pages of their web pages. They then link all of the pages together into a multi-page website. 
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">Throughout Chapter 2, students work in teams to plan websites for a purpose. In Lesson 20, the team works together and individually to code all of the pages of their web pages. They then link all of the pages together into a multi-page website. 
-</p></div>
+## Project Resources
+
+* #### <a href="https://studio.code.org/s/csd2-2024/lessons/20" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* #### <a href="https://docs.google.com/document/d/1jHYPkuHIWOlqXzEtcGBYG7kzGBzpBwGsEVtL8C0TcwE/edit?usp=sharing" target="blank" rel="noopener noreferrer" >Project Guide</a> (introduced in <a href="https://studio.code.org/s/csd2-2024/lessons/19" target="blank" rel="noopener noreferrer">Lesson 19</a>)
+* #### <a href="https://docs.google.com/document/d/1foeIXBKOmRdM3vv8JU5ii4YWvzENvO4GGzBdLgi4TrM/edit?usp=sharing" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
+* #### <a href="https://docs.google.com/document/d/1npD3ERU8C6chX_mXTfid1bzZzeivaUHYVz6CpiF6b5I/edit?usp=sharing" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
 
 ## Sample Student Projects
 
@@ -23,12 +27,7 @@ markdown <<MARKDOWN
 
 <div style="clear:both"/>
 
-## Project Resources
 
-* ##### <a href="https://studio.code.org/s/csd2-2023/lessons/20" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
-* ##### <a href="https://docs.google.com/document/d/1RlLpWsXEHX2GC6eVVsYrx7pAaZ_VUACKpgAQfkWUKKw/view" target="blank" rel="noopener noreferrer" >Project guide</a> 
-* ##### <a href="https://docs.google.com/document/d/1HA8nG3-qIb57id98VJfpYgVTx83vsri9C5ACLtvk8wA/view" target="blank" rel="noopener noreferrer" >Student checklist</a> 
-* ##### <a href="https://docs.google.com/document/d/19ObCznDrFTz93q15fq3SMUkURiVgTuchLbFninlj3ww/view" target="blank" rel="noopener noreferrer" >Project rubric</a> 
 
 
 MARKDOWN
