@@ -101,13 +101,10 @@ class AudioSystem {
       currentNode = gainNode;
     }
 
-    if (effects) {
-      // Insert sound effects, which will connect to the output.
-      soundEffects.insertEffects(effects, currentNode);
-    } else {
-      // No sound effects, so we will connect directly to the output.
-      currentNode.connect(audioContext.destination);
-    }
+    // Insert sound effects, which will connect to the output.  We will always adjust
+    // volume, if nothing else.
+    soundEffects.insertEffects(effects, currentNode);
+
     source.onended = callback.bind(this, id);
 
     source.loop = loop;

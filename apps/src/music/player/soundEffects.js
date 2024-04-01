@@ -125,21 +125,24 @@ export default class SoundEffects {
   // Inserts the desired effects, using lastNode as its attachment
   // point into the Web Audio graph, and attaching everything to the
   // audio context's output.
+  // Always modify volume, if nothing else.
   insertEffects(effects, lastNode) {
-    // Volume is inserted per sound, so possibly add it here.
-    if (['low', 'medium'].includes(effects.volume)) {
-      const volume = this.audioContext.createGain();
-      volume.gain.value = effects.volume === 'low' ? 0.4 : 0.75;
-
-      lastNode.connect(volume);
-
-      // This is now the last node.
-      lastNode = volume;
-    }
+    // Adjust volume.
+    const volume = this.audioContext.createGain();
+    const overallVolume = 0.45;
+    volume.gain.value =
+      effects?.volume === 'low'
+        ? 0.4 * overallVolume
+        : effects?.volume === 'medium'
+        ? 0.75 * overallVolume
+        : 1 * overallVolume;
+    lastNode.connect(volume);
+    // This is now the last node.
+    lastNode = volume;
 
     // For other effects, find the right bus to attach to.
-    const keyString = this.generateKeyString(effects);
-    const bus = this.busses[keyString];
+    const keyString = effects && this.generateKeyString(effects);
+    const bus = keyString && this.busses[keyString];
     if (bus) {
       // Attach the last node to that bus, which is already
       // connected to the output.
