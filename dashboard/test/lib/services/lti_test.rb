@@ -345,7 +345,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     assert_empty parsed_response.keys - @lms_section_ids.map(&:to_s)
     parsed_response.each do |_, v|
-      assert_empty v.keys - [:name, :members]
+      assert_empty v.keys - [:name, :short_name, :members]
       assert_equal v[:members].length, 5
     end
   end
@@ -354,7 +354,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     parsed_response = Services::Lti.parse_nrps_response(@nrps_response_no_rlid_provided, @id_token[:iss])
     assert_equal parsed_response.keys.length, 1
     parsed_response.each do |_, v|
-      assert_empty v.keys - [:name, :members]
+      assert_empty v.keys - [:name, :short_name, :members]
       assert_equal v[:members].length, 4
     end
   end
@@ -416,19 +416,21 @@ class Services::LtiTest < ActiveSupport::TestCase
     lti_section = create(:lti_section, lti_course: lti_course, section: section)
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    members = parsed_response[@lms_section_ids.first.to_s][:members]
+    nrps_section = parsed_response[@lms_section_ids.first.to_s]
 
     # Create and add brand new users
-    Services::Lti.sync_section_roster(@lti_integration, lti_section, members)
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
     assert_equal lti_section.followers.length, 3
 
     # Remove a user
     user_to_remove = lti_section.followers.last
-    Services::Lti.sync_section_roster(@lti_integration, lti_section, members[0...-1])
+    section_one_less_user = parsed_response[@lms_section_ids.first.to_s].clone
+    section_one_less_user[:members] = section_one_less_user[:members][0...-1]
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, section_one_less_user)
     assert_equal lti_section.reload.followers.length, 2
 
     # Find an existing user add them back in
-    Services::Lti.sync_section_roster(@lti_integration, lti_section, members)
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
     assert_equal lti_section.reload.followers.length, 3
     assert_equal lti_section.followers.last, user_to_remove
   end
@@ -449,9 +451,9 @@ class Services::LtiTest < ActiveSupport::TestCase
     lti_section = create(:lti_section, lti_course: lti_course, section: section)
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    members = parsed_response[@lms_section_ids.first.to_s][:members]
+    nrps_section = parsed_response[@lms_section_ids.first.to_s]
 
-    Services::Lti.sync_section_roster(@lti_integration, lti_section, members)
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
 
     co_teacher_si.reload
 
@@ -475,9 +477,9 @@ class Services::LtiTest < ActiveSupport::TestCase
     lti_section = create(:lti_section, lti_course: lti_course, section: section)
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    members = parsed_response[@lms_section_ids.first.to_s][:members]
+    nrps_section = parsed_response[@lms_section_ids.first.to_s]
 
-    Services::Lti.sync_section_roster(@lti_integration, lti_section, members)
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
 
     co_teacher_si = SectionInstructor.find_by(instructor: student, section_id: section.id)
 
