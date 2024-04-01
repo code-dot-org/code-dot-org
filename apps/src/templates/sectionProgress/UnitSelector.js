@@ -33,7 +33,9 @@ function UnitSelector({
     </div>
   );
 
-  return isLoadingCourses ? (
+  return isLoadingCourses ||
+    !coursesWithProgress ||
+    coursesWithProgress.length === 0 ? (
     loadingSkeleton()
   ) : (
     <div>
