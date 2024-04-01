@@ -43,6 +43,7 @@ export default function CoteacherSettings({
   setCoteachersToAdd,
   coteachersToAdd,
   sectionMetricInformation,
+  loginType,
 }) {
   const [addError, setAddError] = useState('');
   const [coteacherToRemove, setCoteacherToRemove] = useState(null);
@@ -77,7 +78,9 @@ export default function CoteacherSettings({
 
   return (
     <div className={styles.expandedSection}>
-      {i18n.coteacherAddInfo()}
+      {loginType === 'ltiV1'
+        ? i18n.coteacherLtiAddInfo()
+        : i18n.coteacherAddInfo()}
       <PrimaryTeacher
         primaryTeacher={primaryTeacher}
         numCoteachers={coteachers.length}
@@ -95,10 +98,12 @@ export default function CoteacherSettings({
           addError={addError}
           setAddError={setAddError}
           sectionMetricInformation={sectionMetricInformation}
+          loginType={loginType}
         />
         <CoteacherTable
           coteachers={coteachers}
           setCoteacherToRemove={setCoteacherToRemove}
+          loginType={loginType}
         />
         <RemoveCoteacherDialog
           coteacherToRemove={coteacherToRemove}
@@ -119,4 +124,5 @@ CoteacherSettings.propTypes = {
   setCoteachersToAdd: PropTypes.func.isRequired,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
   sectionMetricInformation: PropTypes.object,
+  loginType: PropTypes.string,
 };

@@ -72,6 +72,16 @@ describe('AddCoteacher', () => {
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
 
+  it('disables email input and add button when loginType is LTIv1', () => {
+    const wrapper = shallow(
+      <AddCoteacher {...DEFAULT_PROPS} loginType={'ltiV1'} />
+    );
+
+    expect(wrapper.find('input').first().props().disabled).to.be.true;
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.find('Figcaption')).to.have.lengthOf(0);
+  });
+
   it('adds coteacher when valid email is added', done => {
     fetchSpy.returns(Promise.resolve({ok: true}));
     const setCoteachersToAddSpy = sinon.spy();

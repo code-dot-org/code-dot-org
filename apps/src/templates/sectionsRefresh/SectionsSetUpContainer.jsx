@@ -328,6 +328,7 @@ export default function SectionsSetUpContainer({
           sectionMetricInformation={getCoteacherMetricInfoFromSection(
             sections[0]
           )}
+          loginType={sections[0].loginType}
         />
       ),
       isCoteacherOpen,
