@@ -431,6 +431,70 @@ class RubricsControllerTest < ActionController::TestCase
     assert json_response['csrfToken']
   end
 
+  test "returns ok and pending count when getting aggregate status if work is queued" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    Timecop.freeze do
+      Timecop.travel 1.minute
+      create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: @student,
+        requester: @teacher,
+        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
+      )
+    end
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :success
+
+    assert_equal 5, json_response['notAttemptedCount']
+    assert_equal 1, json_response['attemptedCount']
+    assert_equal 1, json_response['attemptedUnevaluatedCount']
+    assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 1, json_response['pendingCount']
+    assert json_response['csrfToken']
+  end
+
+  test "returns ok and pending count when getting aggregate status if work is running" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    Timecop.freeze do
+      Timecop.travel 1.minute
+      create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: @student,
+        requester: @teacher,
+        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
+      )
+    end
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :success
+
+    assert_equal 5, json_response['notAttemptedCount']
+    assert_equal 1, json_response['attemptedCount']
+    assert_equal 1, json_response['attemptedUnevaluatedCount']
+    assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 1, json_response['pendingCount']
+    assert json_response['csrfToken']
+  end
+
   test "returns ok and mixed attempted/evaluated count when getting aggregate status" do
     student = create :student
     follower = create :follower, student_user: student, user: @teacher
