@@ -6,11 +6,12 @@ import {combineReducers, createStore} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
-import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../../util/reconfiguredChai';
+
+import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 
 const JS_DATA = {
   level: {

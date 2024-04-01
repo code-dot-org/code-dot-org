@@ -1,9 +1,11 @@
-import React from 'react';
-import uniq from 'lodash/uniq';
 import classNames from 'classnames';
+import uniq from 'lodash/uniq';
+import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+
 import Chip from './_Chip';
+
 import moduleStyles from './chip.module.scss';
 
 export interface ChipsProps {

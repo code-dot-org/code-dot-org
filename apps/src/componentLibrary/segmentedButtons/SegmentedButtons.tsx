@@ -1,5 +1,5 @@
-import React from 'react';
 import classnames from 'classnames';
+import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
@@ -7,6 +7,7 @@ import SegmentedButton, {
   SegmentedButtonModel,
   SegmentButtonType,
 } from './_SegmentedButton';
+
 import moduleStyles from './segmentedButtons.module.scss';
 
 export interface SegmentedButtonsProps {
