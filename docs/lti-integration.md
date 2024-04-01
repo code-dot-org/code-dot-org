@@ -1,19 +1,28 @@
 # LTI 1.3 Integration
 
-Code.org is developing an LTI 1.3 compliant integration for Canvas. This integration is undergoing beta testing with a small group of Canvas users and is expected to release broadly in 2024.
+Code.org is developing an LTI 1.3 compliant integration for Canvas and Schoology.
+This integration is undergoing beta testing with a small group of Canvas users
+and is expected to release broadly in 2024.
 
 The following documentation details the steps required to install Code.org as an
-LTI Tool in Canvas. Completing the following steps will generate a `Client ID`
-and a `Deployment ID`. 
+LTI Tool in Canvas and Schoology. Completing the following steps will generate a
+`Client ID`.
 
-Please supply these two IDs to Code.org via
-[this form][lti-integration-form] to register your LMS & complete your installation.
+Please supply the Client ID to Code.org via
+[this form][lti-integration-form] to register your LMS & complete your 
+installation.
 
-[lti-integration-form]: https://forms.gle/hLqdbgQ1VhZdKR7N8
+[lti-integration-form]: https://studio.code.org/lti/v1/integrations
+
+## Table of Contents
+
+* [Canvas Install Instructions](#installing-codeorg-in-canvas)
+* [Schoology Install Instructions](#installing-codeorg-in-schoology)
 
 ## Installing Code.org in Canvas
 
-Visual guides for Steps 1 - 3 can be [found here][install-canvas], and for Step 4 [here][configure-canvas]
+Visual guides for Steps 1 - 3 can be [found here][install-canvas], and for Step
+4 [here][configure-canvas]
 
 ### Step 1: Create your LTI Key
 
@@ -27,7 +36,9 @@ Visual guides for Steps 1 - 3 can be [found here][install-canvas], and for Step 
 
 ### Step 2: Configure your LTI Key
 
-There are two options for configuring your LTI key. The easiest is to paste in a JSON configuration snippet (Option 1). Optionally, you can elect to manually enter these settings (Option 2).
+There are two options for configuring your LTI key. The easiest is to paste in
+a JSON configuration snippet (Option 1). Optionally, you can elect to manually
+enter these settings (Option 2).
 
 #### Option 1 (Easiest): Enter JSON Details
 
@@ -130,8 +141,8 @@ select any placements that utilize an `LtiDeepLinkRequest`.
 After configuring & saving your LTI Key, you will be redirected to your table of Developer Keys. 
 
 1. Navigate to the Code.org Key you just created
-2. Copy the 18-digit numerical code in the Details column, e.g.: `000000000123456789` - this is your Client ID
-3. Paste this Client ID into the [Code.org Registration Form][lti-integration-form], and keep it handy for the next step
+1. Copy the 18-digit numerical code in the Details column, e.g.: `000000000123456789` - this is your Client ID
+1. Paste this Client ID into the [Code.org Registration Form][lti-integration-form], and keep it handy for the next step
 
 ![image](https://github.com/code-dot-org/code-dot-org/assets/1631660/1c0c9ad3-0b97-42b0-b70c-6f0738db4636)
 
@@ -141,13 +152,13 @@ Now that you have the LTI Key, you need to configure the Code.org LTI App to
 generate a `Deployment ID`. You can follow the steps below or [refer to the visual instructions here][configure-canvas]
 
 1. Visit the `Admin` panel and click `Settings`
-2. Click the `Apps` tab
-3. Click `View App Configurations`
-4. Click the `Add App` button
-5. Select `By Client ID` in the Configuration Type drop-down menu
-6. Paste your `Client ID` copied from Step 3
-7. Click `Submit`
-8. Click the `Install` button to confirm your installation
+1. Click the `Apps` tab
+1. Click `View App Configurations`
+1. Click the `Add App` button
+1. Select `By Client ID` in the Configuration Type drop-down menu
+1. Paste your `Client ID` copied from Step 3
+1. Click `Submit`
+1. Click the `Install` button to confirm your installation
 
 <p align="center">
 <img width="430" alt="image" src="https://github.com/code-dot-org/code-dot-org/assets/1631660/29eb6290-98e5-4891-be9a-ca241d7026dd">
@@ -157,9 +168,9 @@ generate a `Deployment ID`. You can follow the steps below or [refer to the visu
 After installing the application, you can now generate a `Deployment ID`
 
 1. View your app on the External Apps page
-2. Click the `Settings` (gear) icon
-3. Click `Deployment ID`
-4. Copy the `Deployment ID` string and submit it into the [Code.org Registration Form][lti-integration-form]
+1. Click the `Settings` (gear) icon
+1. Click `Deployment ID`
+1. Copy the `Deployment ID` string and submit it into the [Code.org Registration Form][lti-integration-form]
 
 ![image](https://github.com/code-dot-org/code-dot-org/assets/1631660/bcf40fa9-be26-42cd-865d-7e34e600c4c5)
 
@@ -173,6 +184,75 @@ After installing the application, you can now generate a `Deployment ID`
 ### Step 5: Submit the Code.org Registration Form
 
 Now that you've created and entered both your `Client ID` (Step 3) & `Deployment ID` (Step 4) into the [Code.org Registration Form][lti-integration-form], submit the form and wait for a confirmation email from our team! You can expect this confirmation mail within 1 - 2 business days.
+
+## Installing Code.org in Schoology
+
+These instructions are based on the [Schoology docs](https://developers.schoology.com/app-platform/lti-apps/#how-to-add-your-app-to-schoology)
+for adding a new App to Schoology.
+
+Currently, Code.org's LTI Tool is not listed in Schoology's App Store, and must
+be manually installed.
+
+1. Navigate to https://app.schoology.com/apps/publisher
+2. Fill in required fields
+  - App Name: `Code.org`
+  - App Description: `Code.org LTI Tool`
+  - Category: `Technology`
+  - Recommended For: `Instructors` and `Students`
+  - Available For: `Only people in my school`
+![image](<Screenshot 2024-04-01 at 11.51.53 AM.png>)
+
+3. You can leave the App logo Feature graphic empty
+![image](<Screenshot 2024-04-01 at 11.52.13 AM.png>)
+
+4. Type of App: `LTI 1.3 App`
+5. Select where the tool can be installed, `Can Be Installed For`:
+  - Users
+    - App Center Dropdown
+    - User Profile Left Navigation Menu
+  - Courses
+    - Left Navigation
+    - Rich Text Editor
+    - External Tool
+  - Groups
+  - Resources
+6. Configuration Type: `Manual`
+7. Privacy: `Send Name and Email/Username of user who luanches the tool`
+8. Check `Names and Roles Services`, leave `Assignment and Grade Services` unchecked
+![alt text](<Screenshot 2024-04-01 at 11.52.35 AM.png>)
+
+9. JWKS URL: `https://studio.code.org/oauth/jwks
+10. Domain/URL: `https://studio.code.org/lti/v1/sync_course
+11. Custom Parameters:
+  - `display_name=$User.username`
+12. OIDC Login Init Url: `https://studio.code.org/lti/v1/login`
+13. Redirect URLs: `https://studio.code.org/lti/v1/authenticate`
+![alt text](<Screenshot 2024-04-01 at 11.52.46 AM.png>)
+
+14. Click toggle to accept Schoology Terms of Use
+15. Click `Save Changes`
+
+After you install the App to the district, you also need to install it to the
+areas where it should appear (Courses, Groups, etc). Click the ‘Install’ button
+next to your app on the District App list to complete that additional installation
+process.
+![image](<Screenshot 2024-04-01 at 1.00.36 PM-1.png>)
+
+This will open a modal, where you'll need to accept and continue. When prompted
+for where you want to install it, click `Add to Organization`.
+![image](<Screenshot 2024-04-01 at 1.03.09 PM.png>)
+
+This will take you to the Organization Apps page, where you will click on the
+`Install/Remove` button for the Code.org tool.
+![image](<Screenshot 2024-04-01 at 1.00.04 PM.png>)
+
+A modal will open, where you'll be prompted to select who and where this app
+will be available for.
+![image](<Screenshot 2024-04-01 at 12.59.34 PM.png>)
+
+Once you make your selection, click `Submit`.
+
+Code.org's LTI app is now ready to use in your Schoology account!
 
 ## Using Code.org as an LTI Tool
 
@@ -191,3 +271,4 @@ these instructions, or refer to the steps above for Code.org specific details.
 
 [install-canvas]: https://community.canvaslms.com/t5/Admin-Guide/How-do-I-configure-an-LTI-key-for-an-account/ta-p/140
 [configure-canvas]: https://community.canvaslms.com/t5/Admin-Guide/How-do-I-configure-an-external-app-for-an-account-using-a-client/ta-p/202
+
