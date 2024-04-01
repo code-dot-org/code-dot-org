@@ -407,6 +407,7 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 0, json_response['attemptedCount']
     assert_equal 0, json_response['attemptedUnevaluatedCount']
     assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 0, json_response['pendingCount']
     assert json_response['csrfToken']
   end
 
@@ -426,6 +427,7 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 1, json_response['attemptedCount']
     assert_equal 1, json_response['attemptedUnevaluatedCount']
     assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 0, json_response['pendingCount']
     assert json_response['csrfToken']
   end
 
@@ -488,6 +490,7 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 6, json_response['attemptedCount']
     assert_equal 1, json_response['attemptedUnevaluatedCount']
     assert_equal 5, json_response['lastAttemptEvaluatedCount']
+    assert_equal 0, json_response['pendingCount']
     assert json_response['csrfToken']
   end
 
