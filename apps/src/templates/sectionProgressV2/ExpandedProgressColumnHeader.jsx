@@ -42,28 +42,33 @@ export default function ExpandedProgressColumnHeader({
       : lesson.title;
 
   return (
-    <div className={styles.expandedHeader} key={lesson.id}>
-      <div
-        className={classNames(
-          styles.gridBox,
-          styles.expandedHeaderLessonCell,
-          styles.pointerMouse
-        )}
-        style={{width: headerWidth + 'px'}}
-        onClick={() => removeExpandedLesson(lesson.id)}
-        aria-label={headerText}
-        data-tip
-        data-for={getTooltipId(lesson)}
-      >
-        <LessonTitleTooltip lesson={lesson} />
-        <FontAwesome
-          icon="caret-down"
-          className={styles.expandedHeaderCaret}
-          title={i18n.unexpand()}
-        />
-        <div className={styles.expandedHeaderLessonText}>{headerText}</div>
-      </div>
-      <div
+    <tbody className={styles.expandedHeader} key={lesson.id}>
+      <tr>
+        <th
+          className={classNames(
+            styles.gridBox,
+            styles.expandedHeaderLessonCell,
+            styles.pointerMouse
+          )}
+          style={{width: headerWidth + 'px'}}
+          onClick={() => removeExpandedLesson(lesson.id)}
+          aria-label={headerText}
+          data-tip
+          data-for={getTooltipId(lesson)}
+          id={'l-' + lesson.id}
+          scope="colgroup"
+          //todo: col-span
+        >
+          <LessonTitleTooltip lesson={lesson} />
+          <FontAwesome
+            icon="caret-down"
+            className={styles.expandedHeaderCaret}
+            title={i18n.unexpand()}
+          />
+          <div className={styles.expandedHeaderLessonText}>{headerText}</div>
+        </th>
+      </tr>
+      <tr
         className={styles.expandedHeaderSecondRow}
         ref={expandedLevelHeaderRef}
       >
@@ -76,8 +81,8 @@ export default function ExpandedProgressColumnHeader({
             toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
           />
         ))}
-      </div>
-    </div>
+      </tr>
+    </tbody>
   );
 }
 
