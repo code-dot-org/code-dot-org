@@ -1,8 +1,10 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
+import classNames from 'classnames';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
 import {
   setAiCustomizationProperty,
   updateAiCustomization,
@@ -19,6 +21,8 @@ import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const PromptCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
+
+  const [chosenModel, setChosenModel] = useState<string>('llama2');
 
   const {botName, temperature, systemPrompt} = useAppSelector(
     state =>
@@ -42,6 +46,28 @@ const PromptCustomization: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
+        <div className={classNames(styles.inputContainer)}>
+          <SimpleDropdown
+            labelText="Pick a model:"
+            onChange={e => setChosenModel(e.target.value)}
+            items={[
+              {value: 'llama2', text: 'LLama 2'},
+              {value: 'gpt', text: 'ChatGPT'},
+            ]}
+            selectedValue={chosenModel}
+            name="model"
+            size="s"
+            className={styles.updateButton}
+          />
+          <div>
+            <Button
+              text="Compare Models"
+              onClick={() => {}}
+              type="secondary"
+              className={styles.updateButton}
+            />
+          </div>
+        </div>
         {isVisible(botName.visibility) && (
           <div className={styles.inputContainer}>
             <label htmlFor="chatbot-name">
