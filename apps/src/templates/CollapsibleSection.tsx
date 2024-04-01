@@ -33,7 +33,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
   expandedIcon = 'chevron-up',
 }) => {
   const [collapsed, setCollapsed] = useState(initiallyCollapsed);
-  const handleIconClick = useCallback(() => {
+  const toggleCollapsed = useCallback(() => {
     setCollapsed(!collapsed);
   }, [collapsed, setCollapsed]);
   const hasTitleIcon = titleIcon !== undefined;
@@ -43,7 +43,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
       <div className={moduleStyles.titleRow}>
         <button
           type="button"
-          onClick={handleIconClick}
+          onClick={toggleCollapsed}
           className={moduleStyles.expandCollapseButton}
         >
           <FontAwesomeV6Icon
@@ -54,7 +54,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
         {hasTitleIcon && (
           <button
             type="button"
-            onClick={handleIconClick}
+            onClick={toggleCollapsed}
             className={moduleStyles.expandCollapseButton}
           >
             <FontAwesomeV6Icon
@@ -66,7 +66,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
         )}
         <button
           type="button"
-          onClick={handleIconClick}
+          onClick={toggleCollapsed}
           className={moduleStyles.expandCollapseButton}
         >
           <Typography
