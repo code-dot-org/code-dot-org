@@ -46,6 +46,12 @@ export default function AiAssessmentBox({
       : i18n.aiAssessmentDoesNotMeet();
   };
 
+  // When a line number is clicked in the evidence listing
+  const lineNumberClickHandler = (lineNumber, e) => {
+    e.preventDefault();
+    EditorAnnotator.scrollToLine(lineNumber);
+  };
+
   const renderEvidenceItem = (evidence, i) => {
     let text = evidence.message;
 
@@ -79,10 +85,7 @@ export default function AiAssessmentBox({
               <a
                 key={`${i}-${k}`}
                 href="#"
-                onClick={e => {
-                  e.preventDefault();
-                  EditorAnnotator.scrollToLine(evidence.firstLine);
-                }}
+                onClick={lineNumberClickHandler.bind(this, evidence.firstLine)}
               >
                 {evidence.firstLine}
               </a>
@@ -92,10 +95,7 @@ export default function AiAssessmentBox({
               <a
                 key={`${i}-${k}`}
                 href="#"
-                onClick={e => {
-                  e.preventDefault();
-                  EditorAnnotator.scrollToLine(evidence.lastLine);
-                }}
+                onClick={lineNumberClickHandler.bind(this, evidence.lastLine)}
               >
                 {evidence.lastLine}
               </a>

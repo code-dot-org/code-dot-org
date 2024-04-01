@@ -1,8 +1,8 @@
 import {mount} from 'enzyme';
-import React from 'react';
-
-import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
+import sinon from 'sinon';
 import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
+import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
+import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -171,8 +171,35 @@ describe('AiAssessmentBox', () => {
     );
     // Still one list item per evidence provided.
     expect(wrapper.find('ul li')).to.have.lengthOf(3);
+    // We expect no links
+    expect(wrapper.find('ul li p a')).to.have.lengthOf(0);
     // And it should not render line numbers in this case since it does not know
     // where any particular observation actually is.
     expect(wrapper.html().includes(`Lines`)).to.be.false;
+  });
+
+  it('navigates to the line when the evidence link for a line number is activated', () => {
+    const scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
+
+    const wrapper = mount(
+      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+        <AiAssessmentBox {...props} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
+
+    // The first link should be the first line number mentioned in the evidence list.
+    const lineNumber = mockEvidence[0].firstLine;
+
+    // Find the links and expect clicking on them actives scrolling
+    const link = wrapper.find('ul li p a').first();
+
+    // Click on it
+    link.simulate('click');
+
+    // Check that we called the editor annotator to scroll to the line we want.
+    sinon.assert.calledWith(scrollToLineStub, lineNumber);
+
+    // Restore stubs
+    scrollToLineStub.restore();
   });
 });
