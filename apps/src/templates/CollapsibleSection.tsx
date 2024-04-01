@@ -3,14 +3,14 @@ import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import React, {useState} from 'react';
 import moduleStyles from './collapsible-section.module.scss';
 import {
-  SemanticTag,
-  VisualAppearance,
+  SemanticTag as TypographyElementSemanticTag,
+  VisualAppearance as TypographyElementVisualAppearance,
 } from '@cdo/apps/componentLibrary/typography/types';
 
 interface CollapsibleSectionProps {
   title: string;
-  titleSemanticTag?: SemanticTag;
-  titleVisualAppearance?: VisualAppearance;
+  titleSemanticTag?: TypographyElementSemanticTag;
+  titleVisualAppearance?: TypographyElementVisualAppearance;
   titleStyle?: string;
   titleIcon?: string;
   titleIconStyle?: string;
