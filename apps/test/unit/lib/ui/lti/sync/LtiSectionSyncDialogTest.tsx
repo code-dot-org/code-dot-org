@@ -13,18 +13,47 @@ import sinon from 'sinon';
 const MOCK_ALL_SECTION_MAP: LtiSectionMap = {
   1: {
     name: 'Section 1',
+    short_name: 'Section 1',
     size: 100,
+    instructors: [
+      {
+        name: 'Teacher 1',
+        id: '0',
+        isOwner: true,
+      },
+    ],
   },
   2: {
     name: 'Section 2',
+    short_name: 'Section 2',
     size: 10,
+    instructors: [
+      {
+        name: 'Teacher 1',
+        id: '0',
+        isOwner: true,
+      },
+      {
+        name: 'Teacher 2',
+        id: '1',
+        isOwner: false,
+      },
+    ],
   },
 };
 
 const MOCK_UPDATED_SECTION_MAP: LtiSectionMap = {
   2: {
     name: 'Section 2: Code.org fundamentals',
+    short_name: 'Section 2',
     size: 15,
+    instructors: [
+      {
+        name: 'Teacher 1',
+        id: '0',
+        isOwner: true,
+      },
+    ],
   },
 };
 
