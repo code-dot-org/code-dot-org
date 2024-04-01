@@ -11,15 +11,15 @@ export type AITutorInteractionStatusValue =
 
 export {AITutorInteractionStatus, AITutorTypes, PII};
 
-export type ChatCompletionMessage = {
+export interface ChatCompletionMessage {
   id: number;
   role: Role;
   chatMessageText: string;
   status: AITutorInteractionStatusValue;
   timestamp?: string;
-};
+}
 
-export type AITutorInteraction = {
+export interface AITutorInteraction {
   userId?: number;
   levelId?: number;
   scriptId?: number;
@@ -28,25 +28,31 @@ export type AITutorInteraction = {
   prompt: string;
   status: string;
   aiResponse?: string;
-};
+}
 
-export type StudentChatRow = {
-  id: number;
-  studentName: string;
-  type: AITutorTypesValue;
-  prompt: string;
-  status: string;
+export interface StudentChatRow {
+  aiModelVersion: string;
   aiResponse?: string;
   createdAt: string;
-};
+  id: number;
+  levelId?: number;
+  projectId?: string;
+  prompt: string;
+  scriptId?: number;
+  status: string;
+  studentName: string;
+  type: AITutorTypesValue;
+  updatedAt?: string;
+  userId: number;
+}
 
-export type Level = {
+export interface Level {
   id: number;
   type: string;
   hasValidation: boolean;
   isAssessment: boolean;
   isProjectBacked: boolean;
-};
+}
 
 export interface ChatContext {
   // studentInput is the last user message for general chat

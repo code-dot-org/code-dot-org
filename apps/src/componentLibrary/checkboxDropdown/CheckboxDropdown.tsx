@@ -26,6 +26,12 @@ import {
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 
+export interface CheckboxOption {
+  value: string;
+  label: string;
+  isOptionDisabled?: boolean;
+}
+
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name */
   name: string;
@@ -38,7 +44,7 @@ export interface CheckboxDropdownProps {
   /** CheckboxDropdown label */
   labelText: string;
   /** CheckboxDropdown options */
-  allOptions: {value: string; label: string; isOptionDisabled?: boolean}[];
+  allOptions: CheckboxOption[];
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
