@@ -1,0 +1,34 @@
+name 'CSD-U2SelfPaced-FlexboxOverview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Flexbox Overview
+
+#### In Lessons 12 and 13, students will learn about a CSS web layout model called **Flexbox**, or **Flex** for short. Flexbox is a powerful tool for organizing elements on a web page. Previous CSS properties focused on the style of elements, like color or size, while Flex focuses on where elements are placed on a page within **division containers**.
+
+## What is a `div` Container?
+
+#### A `div` tag defines a division or a section in an HTML document. It allows developers to split their webpage into distinct sections, each capable of taking on unique styles through CSS. Divs go in the body section of an HTML file.
+
+<img src="https://images.code.org/eee2bd63f872bb80929dac7bc0aecf3d-image-1711684094701.48.08 PM.png" alt="A webpage split into containers.">
+
+#### `div` tags don't do anything by themselves, but they can take on properties just like other HTML elements.
+
+## How Do I Use Flexbox?
+
+#### Once your elements are set up in a `div` container, you can begin organizing it. Flex provides a more efficient way to lay out, align, and distribute space among items in a container.
+
+#### All Flex properties are add to a CSS style sheet. They include:
+
+* #### display
+* #### flex-direction
+* #### flex-wrap
+* #### justify-content
+* #### align-items
+* #### align-content
+
+### **Up Next**
+
+#### In the next level, you'll watch a video showing you exactly how to use Flex in your web pages.
+MARKDOWN

@@ -1,8 +1,10 @@
-import React from 'react';
-import {assert} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
+import React from 'react';
+
 import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import color from '@cdo/apps/util/color';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   started: true,

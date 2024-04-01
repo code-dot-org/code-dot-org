@@ -99,7 +99,9 @@ def main
     AI_TUTOR_INTERACTION_SAVE_STATUS
     AI_TUTOR_TYPES
     FEATURED_PROJECT_STATUS
+    FEATURED_PROJECT_CONSTANTS
     LMS_LINKS
+    USER_TYPES
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")

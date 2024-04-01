@@ -27,14 +27,6 @@ section.bg-secondary {
 section.bg-primary-light {
   background-color: rgba(171, 223, 229, 0.5);
 
-  p {
-    @include strong;
-
-    &.body-three {
-      @include body-three;
-    }
-  }
-
   a {
     color: var(--neutral_dark) !important;
     &:hover {
@@ -82,6 +74,15 @@ section.bg-pattern-dark {
 .no-padding-bottom {
   padding-bottom: 0 !important;
 }
+
+// Adds 2rem of space above or below an element
+.add-margin-top {
+  margin-top: 2rem;
+}
+.add-margin-bottom {
+  margin-bottom: 2rem;
+}
+
 
 // FontAwesome icon defaults
 // Sets fixed height on icon container to maintain consistent
@@ -140,13 +141,31 @@ i.fa-fw {
   &.gap-2 {
     gap: 2rem;
   }
+
+  & > .flex-1 {
+    flex: 1;
+  }
 }
 
 // Grid container
-// Apply class to containers that use grid, but declare
-// column/row characteristics on a case-by-case basis
+// Apply class to containers that use grid
 .grid-container {
   display: grid;
+
+  &.two-col {
+    @media (min-width: $width-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+  &.align-items-center {
+    align-items: center;
+  }
+  &.gap-4 {
+    gap: 4rem;
+  }
 }
 
 // Line divider for use between sections
@@ -184,6 +203,11 @@ div.divider {
   box-shadow: 8px 8px 0 var(--brand_primary_light);
 }
 
+// Add a soft box shadow to an element
+.box-shadow-soft-neutral {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
+}
+
 // Lines (<hr>)
 hr {
   border-top: 1px solid var(--neutral_dark20);
@@ -198,7 +222,8 @@ hr {
 .button-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
 
   &.centered {
     justify-content: center;
@@ -211,6 +236,12 @@ hr {
 .hero-banner-basic {
   position: relative;
   overflow: hidden;
+
+  & > .grid-container {
+    @media (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   .text-wrapper {
     position: relative;
@@ -614,6 +645,7 @@ form {
   margin-top: 2rem;
   display: grid;
   grid-gap: 1.5rem;
+  text-align: initial;
 
   @media screen and (min-width: $width-sm) {
     grid-template-columns: repeat(2, 1fr);
@@ -637,6 +669,7 @@ form {
   background: var(--neutral_light);
   border: 1px solid var(--neutral_dark20);
   border-radius: $border-radius;
+  text-align: initial;
   display: flex;
   align-content: baseline;
 
@@ -1376,6 +1409,10 @@ section.quote {
   background-color: var(--brand_primary_default);
   border-radius: $border-radius;
   padding: 2rem;
+
+  &.solid-bg {
+    background: var(--brand_primary_default);
+  }
 }
 
 // Tables
@@ -1424,4 +1461,19 @@ table {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+// List of logos
+// Set the max-width of each image inline to maintain consistent ratios
+.logos-wrapper {
+  margin-block: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+
+  img {
+    align-self: center;
+    width: 100%;
+  }
 }

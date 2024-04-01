@@ -1,15 +1,18 @@
 /* eslint-disable react/jsx-no-target-blank */
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import MultiCheckboxSelector from '../../MultiCheckboxSelector';
-import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 import {connect} from 'react-redux';
+
+import color from '@cdo/apps/util/color';
+
+import firehoseClient from '../../../lib/util/firehose';
+import MultiCheckboxSelector from '../../MultiCheckboxSelector';
+
+import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 import {
   getUnpluggedLessonsForScript,
   setSelectedLessons,
 } from './sectionStandardsProgressRedux';
-import firehoseClient from '../../../lib/util/firehose';
-import color from '@cdo/apps/util/color';
 
 class LessonStatusList extends Component {
   static propTypes = {

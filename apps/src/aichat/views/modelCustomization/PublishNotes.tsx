@@ -1,21 +1,34 @@
-import React from 'react';
-import {useSelector} from 'react-redux';
+import React, {useCallback} from 'react';
 
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import styles from '../model-customization-workspace.module.scss';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 import {
   EMPTY_AI_CUSTOMIZATIONS,
   MODEL_CARD_FIELDS_AND_LABELS,
 } from './constants';
 import {isVisible, isDisabled} from './utils';
+import {
+  setModelCardProperty,
+  updateAiCustomization,
+} from '@cdo/apps/aichat/redux/aichatRedux';
+import styles from '../model-customization-workspace.module.scss';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const PublishNotes: React.FunctionComponent = () => {
-  const {modelCardInfo} = useSelector(
-    (state: {lab: LabState}) =>
+  const dispatch = useAppDispatch();
+
+  const {visibility} = useAppSelector(
+    state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
         ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  ).modelCardInfo;
+  const {modelCardInfo} = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
+
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
   );
 
   return (
@@ -23,15 +36,23 @@ const PublishNotes: React.FunctionComponent = () => {
       <div>
         {MODEL_CARD_FIELDS_AND_LABELS.map(([id, text]) => {
           return (
-            isVisible(modelCardInfo.visibility) && (
+            isVisible(visibility) && (
               <div className={styles.inputContainer} key={id}>
                 <label htmlFor={id}>
                   <StrongText>{text}</StrongText>
                 </label>
                 <textarea
                   id={id}
-                  disabled={isDisabled(modelCardInfo.visibility)}
-                  value={modelCardInfo.value[id]}
+                  disabled={isDisabled(visibility)}
+                  value={modelCardInfo[id]}
+                  onChange={event =>
+                    dispatch(
+                      setModelCardProperty({
+                        property: id,
+                        value: event.target.value,
+                      })
+                    )
+                  }
                 />
               </div>
             )
@@ -39,7 +60,11 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={isDisabled(modelCardInfo.visibility)}>
+        <button
+          type="button"
+          disabled={isDisabled(visibility)}
+          onClick={onUpdate}
+        >
           Publish
         </button>
       </div>

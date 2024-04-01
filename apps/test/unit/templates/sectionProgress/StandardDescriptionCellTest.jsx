@@ -1,11 +1,13 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import StandardDescriptionCell from '@cdo/apps/templates/sectionProgress/standards/StandardDescriptionCell';
 import {
   standardsData,
   lessonCompletedByStandard,
 } from '@cdo/apps/templates/sectionProgress/standards/standardsTestHelpers';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('StandardDescriptionCell', () => {
   let DEFAULT_PROPS = {
