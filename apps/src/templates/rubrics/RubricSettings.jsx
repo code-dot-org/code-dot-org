@@ -110,7 +110,6 @@ export default function RubricSettings({
   // load initial ai evaluation status
   useEffect(() => {
     if (!!rubricId && !!sectionId) {
-      console.log('initial fetchAiEvaluationStatusAll');
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
         if (!response.ok) {
           setStatusAll(STATUS_ALL.ERROR);
@@ -180,7 +179,6 @@ export default function RubricSettings({
     if (polling && !!rubricId && !!sectionId) {
       const intervalId = setInterval(() => {
         refreshAiEvaluations();
-        console.log('updated fetchAiEvaluationStatusAll');
         fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
           if (!response.ok) {
             setStatusAll(STATUS_ALL.ERROR);
