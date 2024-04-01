@@ -17,29 +17,6 @@ import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';
 import {CSVLink} from 'react-csv';
 import _ from 'lodash';
 
-const STATUS = {
-  // we are waiting for initial status from the server
-  INITIAL_LOAD: 'initial_load',
-  // the student has not attempted this level
-  NOT_ATTEMPTED: 'not_attempted',
-  // after initial load, the student has submitted work, but it has already been evaluated
-  ALREADY_EVALUATED: 'already_evaluated',
-  // the student has work which is ready to evaluate
-  READY: 'ready',
-  // evaluation queued and ready to run
-  EVALUATION_PENDING: 'evaluation_pending',
-  // evaluation currently in progress
-  EVALUATION_RUNNING: 'evaluation_running',
-  // evaluation successfully completed
-  SUCCESS: 'success',
-  // general evaluation error
-  ERROR: 'error',
-  // personal identifying info present in code
-  PII_ERROR: 'pii_error',
-  // profanity present in code
-  PROFANITY_ERROR: 'profanity_error',
-};
-
 const STATUS_ALL = {
   // we are waiting for initial status from the server
   INITIAL_LOAD: 'initial_load',
@@ -112,9 +89,9 @@ export default function RubricSettings({
         return i18n.aiEvaluationStatus_pending();
       case STATUS_ALL.ERROR:
         return i18n.aiEvaluationStatus_error();
-      case STATUS.ALREADY_EVALUATED:
+      case STATUS_ALL.ALREADY_EVALUATED:
         return i18n.aiEvaluationStatusAll_already_evaluated();
-      case STATUS.NOT_ATTEMPTED:
+      case STATUS_ALL.NOT_ATTEMPTED:
         return i18n.aiEvaluationStatusAll_not_attempted();
     }
   };
