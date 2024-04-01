@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
-import {Heading1} from '@cdo/apps/componentLibrary/typography';
+import AITutorTeacherDashboard from '@cdo/apps/code-studio/components/aiTutor/aiTutorTeacherDashboard';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
@@ -13,6 +12,7 @@ import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashbo
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import i18n from '@cdo/locale';
 
+import {Heading1} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
@@ -197,7 +197,7 @@ function TeacherDashboard({
             path={TeacherDashboardPath.aiTutorChatMessages}
             component={props =>
               applyV1TeacherDashboardWidth(
-                <AITutorChatMessagesTable sectionId={sectionId} />
+                <AITutorTeacherDashboard sectionId={sectionId} />
               )
             }
           />

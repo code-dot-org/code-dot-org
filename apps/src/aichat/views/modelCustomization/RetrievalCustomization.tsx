@@ -6,7 +6,10 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
 import {isDisabled} from './utils';
-import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import {
+  setAiCustomizationProperty,
+  updateAiCustomization,
+} from '@cdo/apps/aichat/redux/aichatRedux';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
@@ -22,6 +25,11 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   ).retrievalContexts;
   const {retrievalContexts} = useAppSelector(
     state => state.aichat.currentAiCustomizations
+  );
+
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
   );
 
   const onAdd = useCallback(() => {
@@ -97,7 +105,11 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <button type="button" disabled={isDisabled(visibility)}>
+        <button
+          type="button"
+          disabled={isDisabled(visibility)}
+          onClick={onUpdate}
+        >
           Update
         </button>
       </div>
