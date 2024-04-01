@@ -20,9 +20,6 @@ class TestAiProxyController < ApplicationController
         'Label' => 'Convincing Evidence'
       }
     end
-    # wait long enough that we have a good chance of catching a bug if the UI,
-    # which polls every 5 seconds, does not properly wait for a response.
-    sleep 10
     render json: {data: response_data}
   end
 end
