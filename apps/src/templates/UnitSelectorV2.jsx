@@ -83,7 +83,9 @@ function UnitSelectorV2({
     />
   );
 
-  return isLoadingCourses ? (
+  return isLoadingCourses ||
+    !coursesWithProgress ||
+    coursesWithProgress.length === 0 ? (
     loadingDropdown()
   ) : (
     <SimpleDropdown
