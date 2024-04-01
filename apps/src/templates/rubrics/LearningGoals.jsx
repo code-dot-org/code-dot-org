@@ -106,6 +106,21 @@ export function clearAnnotations() {
  * returned here will be listed. However, other content may be highlighted
  * that does not end up in that list.
  *
+ * This table suggests the fallbacks we have in place for responding to the
+ * provided 'evidence' column. Ideally, the evidence column can be parsed into
+ * items with a line number, code snippet, and a message (this first row of
+ * this table.) Then, it may be missing any one of those items and has to be
+ * gracefully handled. We should still strive to fix upstream the prompts such
+ * that they provide the ideal form.
+ *
+ * line number? | has code? | message? | annotated by | line number via
+ * ---------------------------------------------------------------------
+ * yes          | yes       | yes      | evidence     | code snippet
+ * yes          | no        | yes      | evidence     | AI line number
+ * yes          | yes       | no       | observations | code snippet
+ * yes          | no        | no       | observations | AI line number
+ * no           | --        | --       | none         | none
+ *
  * @param {string} evidence - A text block described above.
  * @param {string} observations - The text block for the overall observations, if needed.
  * @returns {Array} The ordered list of annotations.
