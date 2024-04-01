@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import moduleStyles from './collapsible-section.module.scss';
 import {
   SemanticTag as TypographyElementSemanticTag,
@@ -9,12 +9,12 @@ import {
 
 interface CollapsibleSectionProps {
   title: string;
+  children: React.ReactNode;
   titleSemanticTag?: TypographyElementSemanticTag;
   titleVisualAppearance?: TypographyElementVisualAppearance;
   titleStyle?: string;
   titleIcon?: string;
   titleIconStyle?: string;
-  children: React.ReactNode;
   initiallyCollapsed?: boolean;
   collapsedIcon?: string;
   expandedIcon?: string;
@@ -22,18 +22,20 @@ interface CollapsibleSectionProps {
 
 const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
   title,
+  children,
   titleSemanticTag = 'p',
   titleVisualAppearance = 'body-one',
   titleStyle = moduleStyles.title,
   titleIcon,
   titleIconStyle = moduleStyles.titleIcon,
-  children,
   initiallyCollapsed = true,
   collapsedIcon = 'chevron-down',
   expandedIcon = 'chevron-up',
 }) => {
   const [collapsed, setCollapsed] = useState(initiallyCollapsed);
-
+  const handleIconClick = useCallback(() => {
+    setCollapsed(!collapsed);
+  }, [collapsed, setCollapsed]);
   const hasTitleIcon = titleIcon !== undefined;
 
   return (
@@ -41,7 +43,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
       <div className={moduleStyles.titleRow}>
         <button
           type="button"
-          onClick={() => setCollapsed(!collapsed)}
+          onClick={handleIconClick}
           className={moduleStyles.expandCollapseButton}
         >
           <FontAwesomeV6Icon
@@ -52,7 +54,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
         {hasTitleIcon && (
           <button
             type="button"
-            onClick={() => setCollapsed(!collapsed)}
+            onClick={handleIconClick}
             className={moduleStyles.expandCollapseButton}
           >
             <FontAwesomeV6Icon
@@ -64,7 +66,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
         )}
         <button
           type="button"
-          onClick={() => setCollapsed(!collapsed)}
+          onClick={handleIconClick}
           className={moduleStyles.expandCollapseButton}
         >
           <Typography
