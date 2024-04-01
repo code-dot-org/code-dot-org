@@ -87,6 +87,13 @@ describe('RubricSettings', () => {
     csrfToken: 'abcdef',
   };
 
+  const onePending = {
+    attemptedCount: 1,
+    attemptedUnevaluatedCount: 1,
+    pendingCount: 1,
+    csrfToken: 'abcdef',
+  };
+
   const noEvals = [
     {
       user_name: 'Stilgar',
@@ -192,6 +199,44 @@ describe('RubricSettings', () => {
     // Perform fetches and re-render
     await wait();
     wrapper.update();
+
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+  });
+
+  it('shows pending status when eval is pending', async () => {
+    // show ready state on initial load
+
+    stubFetchEvalStatusForAll(ready);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    // Perform fetches and re-render
+    await wait();
+    wrapper.update();
+
+    let status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
+    expect(status.text()).to.include(
+      i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1})
+    );
+    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+
+    // show pending state after clicking run
+
+    stubFetchEvalStatusForAll(onePending);
+
+    wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
+
+    status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
+    expect(status.text()).to.include(i18n.aiEvaluationStatus_pending());
 
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
