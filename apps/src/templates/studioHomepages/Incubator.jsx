@@ -58,11 +58,11 @@ class Incubator extends Component {
                   text: i18n.incubator_canvasIntegration_earlyAccess_signIn_button(),
                   target: '_blank',
                 },
-                {
-                  url: '#',
-                  text: i18n.incubator_canvasIntegration_earlyAccess_viewDemo_button(),
-                  color: Button.ButtonColor.neutralDark,
-                },
+                // {
+                //   url: '#',
+                //   text: i18n.incubator_canvasIntegration_earlyAccess_viewDemo_button(),
+                //   color: Button.ButtonColor.neutralDark,
+                // },
               ]}
             />
           )}
