@@ -2,6 +2,7 @@ require 'test_helper'
 
 class RubricsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include SharedConstants
 
   setup do
     @levelbuilder = create :levelbuilder
@@ -212,7 +213,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric: @rubric,
       user: student,
       requester: @teacher,
-      status: 1
+      status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
     )
     ai_evaluation1 = create(
       :learning_goal_ai_evaluation,
@@ -234,7 +235,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: classmate,
         requester: @teacher,
-        status: 1
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -276,7 +277,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric: learning_goal.rubric,
       user: student,
       requester: @teacher,
-      status: 1
+      status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
     )
     create(
       :learning_goal_ai_evaluation,
@@ -305,7 +306,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric: learning_goal.rubric,
       user: student,
       requester: @teacher,
-      status: 1
+      status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
     )
     create(
       :learning_goal_ai_evaluation,
@@ -319,7 +320,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: learning_goal.rubric,
         user: student,
         requester: @teacher,
-        status: 1
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -444,7 +445,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
+        status: RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
       )
     end
 
@@ -476,7 +477,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
     end
 
@@ -528,7 +529,7 @@ class RubricsControllerTest < ActionController::TestCase
           rubric: @rubric,
           user: s,
           requester: @teacher,
-          status: 2 # successful
+          status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
         )
         create(
           :learning_goal_ai_evaluation,
@@ -642,7 +643,7 @@ class RubricsControllerTest < ActionController::TestCase
           rubric: @rubric,
           user: s,
           requester: @teacher,
-          status: 2 # successful
+          status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
         )
         create(
           :learning_goal_ai_evaluation,
@@ -686,7 +687,7 @@ class RubricsControllerTest < ActionController::TestCase
           rubric: @rubric,
           user: s,
           requester: @teacher,
-          status: 2 # successful
+          status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
         )
         create(
           :learning_goal_ai_evaluation,
@@ -933,7 +934,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
+        status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -950,7 +951,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
+        status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -991,7 +992,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: 1
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
       create(
         :learning_goal_ai_evaluation,
