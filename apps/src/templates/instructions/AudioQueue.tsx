@@ -42,12 +42,10 @@ export const AudioQueue: React.FC<AudioQueueProps> = ({children}) => {
   }, [audioQueue]);
 
   const addToQueue = useCallback((inlineAudio: InlineAudio) => {
-    console.log('Adding to Queue');
     setAudioQueue(prevQueue => [...prevQueue, inlineAudio]);
   }, []);
 
   const clearQueue = useCallback(() => {
-    console.log('clearing queue');
     setAudioQueue([]);
   }, []);
 
