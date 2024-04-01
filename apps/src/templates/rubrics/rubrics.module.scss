@@ -475,6 +475,7 @@ h2.studentName {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100px;
   gap: 8px;
 }
 
@@ -1048,6 +1049,11 @@ p.evidenceLevelHeaderText {
     box-shadow: none;
     background-color: $light_gray_100;
   }
+
+  &:disabled {
+    border-color: $light_black;
+    background: $neutral_white;
+  }
 }
 
 .evidenceLevelSelected {
@@ -1058,6 +1064,12 @@ p.evidenceLevelHeaderText {
   &:hover {
     box-shadow: none;
     background-color: $light_primary_700;
+  }
+
+  &:disabled {
+    border-color: $light_primary_500;
+    background: $light_primary_500;
+    color: $light_white;
   }
 }
 
@@ -1074,6 +1086,17 @@ p.evidenceLevelHeaderText {
   &:hover {
     box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
     background-color: $light_gray_100;
+  }
+
+  &:disabled {
+    border-radius: 100px;
+    border: 1px solid $light_black;
+    background: $neutral_white;
+    gap: 10px;
+    padding: 3px 16px 0;
+    font-size: 0.875rem;
+    height: 32px;
+    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
   }
 }
 
@@ -1245,7 +1268,22 @@ p.detailsHidden {
 }
 
 .productTourToolTip {
-  color: red;
+  @include main-font-regular;
+  font-size: 1rem;
+  min-width: 300px !important;
+  max-width: 400px !important;
+
+  h1 {
+    @include main-font-bold;
+    color: $light_black;
+    font-size: 1rem;
+  }
+
+  .introjs-helperNumberLayer {
+    @include main-font-regular;
+    font-size: 1rem;
+    color: $light-black;
+  }
 }
 
 .productTourButtons {

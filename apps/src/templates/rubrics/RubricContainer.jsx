@@ -18,6 +18,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import Draggable from 'react-draggable';
 import {TAB_NAMES} from './rubricHelpers';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
 
 // intro.js
 import 'intro.js/introjs.css';
@@ -109,8 +110,7 @@ export default function RubricContainer({
       // TODO: Add evidence image
       element: '#draggable-id',
       title: 'Using Evidence',
-      intro:
-        '<p>Where possible, AI Teaching Assistant will highlight the relevant lines of code in the student’s project so it is easy for you to double-check.</p>',
+      intro: `<p>Where possible, AI Teaching Assistant will highlight the relevant lines of code in the student’s project so it is easy for you to double-check.</p><img src=${evidenceDemo}>`,
     },
     {
       element: '#tour-ai-confidence',
@@ -214,9 +214,10 @@ export default function RubricContainer({
               exitOnOverlayClick: false,
               hidePrev: true,
               nextLabel: tourButtonLabel,
-              toolTipClass: style.productTourToolTip,
+              tooltipClass: style.productTourToolTip,
               buttonClass: style.productTourButtons,
               showBullets: false,
+              showStepNumbers: true,
             }}
           />
           <div className={style.rubricHeaderRedesign}>
