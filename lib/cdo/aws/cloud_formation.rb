@@ -37,7 +37,7 @@ module AWS
 
     # @param [Cdo::CloudFormation::StackTemplate] stack
     # @param [Logger] log
-    def initialize(stack:, log: Logger.new(STDOUT), **options)
+    def initialize(stack:, log: Logger.new($stdout), **options)
       @stack = stack
       @log = log
       @options = options

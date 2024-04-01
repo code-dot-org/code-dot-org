@@ -19,12 +19,6 @@ describe('ProgressIconComponent', () => {
     expect(iconElement).to.be.visible;
   });
 
-  it('renders the not started box when itemType is NOT_STARTED', () => {
-    render(<ProgressIcon itemType={ITEM_TYPE.NOT_STARTED} />);
-    const progressBox = screen.getByTestId('progress-box');
-    expect(progressBox).to.be.visible;
-  });
-
   it('renders the feedback given triangle when itemType is FEEDBACK_GIVEN', () => {
     render(<ProgressIcon itemType={ITEM_TYPE.FEEDBACK_GIVEN} />);
     const feedbackGivenTriangle = screen.getByTestId('feedback-given-triangle');

@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {setShowSharingColumn} from './manageStudentsRedux';
 import {connect} from 'react-redux';
+
+import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import i18n from '@cdo/locale';
+
 import QuickActionsCell, {
   QuickActionsCellType,
 } from '../tables/QuickActionsCell';
+
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import i18n from '@cdo/locale';
+import {setShowSharingColumn} from './manageStudentsRedux';
 
 class ManageStudentsActionsHeaderCell extends Component {
   static propTypes = {

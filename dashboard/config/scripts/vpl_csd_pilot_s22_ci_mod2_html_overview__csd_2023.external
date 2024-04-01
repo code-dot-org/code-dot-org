@@ -9,9 +9,9 @@ markdown <<MARKDOWN
 
 #### HTML stands for **Hypertext Markup Language**. HTML is used to add structure to the content of a web page.
 
-<img src="https://images.code.org/f8a9cbe883ce741c57a6d71f793db137-image-1710968811862.06.47 PM.png" alt="Building materials pictured with the text Words, Images, and Tables underneath. A simple house pictured with the word HTML underneath.">
+<img src="https://images.code.org/54d360f639aa018f68e6248b002cc6f0-image-1711567903864.31.37 PM.png" alt="Building materials pictured with the text Words, Images, and Headers underneath. A simple house pictured with the word HTML underneath.">
 
-#### You can think of coding a web page like building a house. The words, images, tables, and other elements on your web page are like the building materials you use for construction. HTML takes those elements and structures them neatly to build a simple house.
+#### You can think of coding a web page like building a house. The words, images, headers, and other elements on your web page are like the building materials you use for construction. HTML takes those elements and structures them neatly to build a simple house.
 
 ## What is an HTML Element?
 
@@ -32,4 +32,8 @@ markdown <<MARKDOWN
 * #### `<p>` - Defines a paragraph of written text.
 
 #### As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. 
+
+### **Up Next**
+
+#### In the next level, you'll have a chance to practice using HTML in Web Lab. You can always return to this level for reference!
 MARKDOWN

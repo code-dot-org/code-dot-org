@@ -3,8 +3,12 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :post_show_progress_table_v2, :get_current_permissions, :post_disable_lti_roster_sync]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :post_show_progress_table_v2, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
+
+  private def to_bool(val)
+    ActiveModel::Type::Boolean.new.cast val
+  end
 
   def load_user
     user_id = params[:user_id]
@@ -20,17 +24,20 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     if current_user
       render json: {
         id: current_user.id,
+        uuid: Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, current_user.id.to_s),
         username: current_user.username,
         user_type: current_user.user_type,
         is_signed_in: true,
         short_name: current_user.short_name,
         is_verified_instructor: current_user.verified_instructor?,
+        is_lti: Policies::Lti.lti?(current_user),
         mute_music: current_user.mute_music?,
         under_13: current_user.under_13?,
         over_21: current_user.over_21?,
         sort_by_family_name: current_user.sort_by_family_name?,
         show_progress_table_v2: current_user.show_progress_table_v2,
-        progress_table_v2_closed_beta: current_user.progress_table_v2_closed_beta?
+        progress_table_v2_closed_beta: current_user.progress_table_v2_closed_beta?,
+        ai_tutor_access_denied: !!current_user.ai_tutor_access_denied
       }
     else
       render json: {
@@ -187,6 +194,21 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     @user.save
 
     render json: {display_theme: @user.display_theme}
+  end
+
+  # POST /api/v1/users/<user_id>/ai_tutor_access
+  def update_ai_tutor_access
+    return head :unauthorized unless current_user&.teacher?
+    target_user = User.find_by_id(params[:user_id])
+
+    unless target_user&.student_of?(current_user)
+      return head :unauthorized
+    end
+
+    target_user.ai_tutor_access_denied = !to_bool(params[:ai_tutor_access])
+    target_user.save
+
+    head :no_content
   end
 
   # POST /api/v1/users/accept_data_transfer_agreement

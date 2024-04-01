@@ -35,7 +35,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "hide_view_data_button": "false",
@@ -46,7 +46,6 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "parent_level_id": 21671,
-    "display_name": "Create a Sprite Lab project",
     "block_pool": "gamelab",
     "include_shared_functions": "true",
     "name_suffix": "_2023",
@@ -63,23 +62,20 @@
       "upButton",
       "downButton"
     ],
-    "thumbnail_url": "https://code.org/shared/images/courses/logo_gamelab_square.png",
     "mini_toolbox": "true",
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Add at least 3 sprites for the player to collect. Then `remove object` when the player touches the collectible.\r\n",
-    "standalone_app_name": "spritelab",
-    "long_instructions": "**Add a collectible!**\r\n1. Add at least 3 sprites for the player to collect\r\n- Then use an event to `remove object` when the player sprite touches the collectible  \r\n\r\n- Press `Run` when you are finished\r\n\r\n***\r\n**Bonus:** Program the collectible to move with a behavior\r\n",
-    "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return playerSpriteFound(); // Check whether or not the student created a player sprite.\r\n  }, \"gameDesignNoPlayerSprite\");  // Failure message: \"You need to make a player sprite.\"\r\n  \r\n   addCriteria(function() {\r\n  return minimumGroupSprites(\"walls\", 8);\r\n   }, \"starterSprites\"); //It looks like you removed a sprite. You can add it back or reset your program using the Version History button below.\r\n  \r\n   addCriteria(function() {\r\n  return minimumCostumeCount(3);\r\n   }, \"gameDesignNeedMoreCostumes\"); //You need to add at least 3 different `make new sprite` blocks in your program.\r\n  \r\n   addCriteria(function() {\r\n  return minimumNonGroupSprites(3);\r\n   }, \"gameDesignMissingSpriteCostumes\"); //You need to add at least 3 sprites for the player to collect. Make sure  to not set them as player or environment.\r\n  \r\n    addCriteria(function() {\r\n  return touchEventFound();\r\n   }, \"gameDesignWhenTouchingEvent\"); //Make sure to add a `when sprite touches` event block in your code. Then make  your player touch the collectible sprites.  \r\n  \r\n   addCriteria(function() {\r\n  return spriteRemoved();\r\n   }, \"gameDesignTouchEventSpriteNotRemoved\"); //Your player sprite touched the collectible but didn't remove it. Make sure to add a `remove object` block under your event.\r\n\r\n}\r\ncheck();",
+    "standalone_app_name": "game_design",
+    "long_instructions": "**Add a collectible!**\r\n1. Add at least 3 sprites for the player to collect\r\n- Then use a `when sprite touches sprite` event to `remove object` when the player sprite touches the collectible  \r\n\r\n- Press `Run` when you are finished\r\n\r\n***\r\n**Bonus:** Program the collectible to move with a behavior\r\n",
+    "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return playerSpriteFound(); // Check whether or not the student created a player sprite.\r\n  }, \"gameDesignNoPlayerSprite\");  // Failure message: \"You need to make a player sprite.\"\r\n  \r\n   addCriteria(function() {\r\n  return minimumGroupSprites(\"walls\", 8);\r\n   }, \"starterSprites\"); //It looks like you removed a sprite. You can add it back or reset your program using the Version History button below.\r\n  \r\n   addCriteria(function() {\r\n  return minimumCostumeCount(3);\r\n   }, \"gameDesignNeedMoreCostumes\"); //You need to add at least 3 different `make new sprite` blocks in your program. Your program should have a player, environment, and collectibles.\r\n  \r\n   addCriteria(function() {\r\n  return minimumNonGroupSprites(3);\r\n   }, \"gameDesignMissingSpriteCostumes\"); //You need to add at least 3 sprites for the player to collect. Make sure  to not set them as player or environment.\r\n  \r\n    addCriteria(function() {\r\n  return touchEventFound();\r\n   }, \"gameDesignWhenTouchingEvent\"); //Make sure to add a `when sprite touches` event block in your code. Then make  your player touch the collectible sprites.  \r\n  \r\n   addCriteria(function() {\r\n  return spriteRemoved();\r\n   }, \"gameDesignTouchEventSpriteNotRemoved\"); //Your player sprite touched the collectible but didn't remove it. Make sure to add a `remove object` block under your event.\r\n\r\n}\r\ncheck();",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "VQA1N9wG4UGsZY8ALVhlvNhJFXeIs90ENjsvPAC5MHuYZNiaVftI3rc21kyV\nD0Ozwq8MtZtzcXJgVdw9bGhhQA==\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:38:14.523+00:00\",\"changed\":[\"cloned from \\\"game_mechancis_world8\\\"\"],\"cloned_from\":\"game_mechancis_world8\"},{\"changed_at\":\"2024-03-18 20:38:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 16:53:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 19:40:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:40:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:00:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:47:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:48:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:38:14.523+00:00\",\"changed\":[\"cloned from \\\"game_mechancis_world8\\\"\"],\"cloned_from\":\"game_mechancis_world8\"},{\"changed_at\":\"2024-03-18 20:38:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 16:53:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 19:40:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:40:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:00:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:47:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 19:48:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 14:48:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"standalone_app_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 18:35:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 21:04:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 21:05:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 21:06:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 21:06:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 21:07:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 22:02:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -157,7 +153,7 @@
           <field name="KEY">"up"</field>
           <next>
             <block type="GameDev_playerJump">
-              <field name="STRENGTH">6.5</field>
+              <field name="STRENGTH">11</field>
             </block>
           </next>
         </block>
@@ -1251,16 +1247,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_makeSpritesWithSize" id="(R#6?L^QtfcDos:sq{EF" x="31" y="37">
-          <field name="SIZE">30</field>
-          <field name="COSTUME">"gameplay_greendiamond2"</field>
-          <value name="NUM">
-            <block type="math_number" id="Ulk_(R{2^Cfob}HrYV,%">
-              <field name="NUM">3</field>
-            </block>
-          </value>
+        <block type="gamelab_setBackgroundImageAs" id="+a](989O/Yh,Fj2D|9,(" x="25" y="7">
+          <field name="IMG">"gradient_02"</field>
         </block>
-        <block type="gamelab_checkTouching" id="RD=1(i^/RlHggiCXTCWW" x="16" y="112">
+        <block type="gamelab_checkTouching" id="RD=1(i^/RlHggiCXTCWW" x="31" y="107">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
@@ -1275,15 +1265,25 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_destroy" id="40;5SKS,8+IJu/p-Flj5" x="21" y="231">
+        <block type="gamelab_keyPressed" id="@DrM_xA#I39:c@NHb?f-" x="32" y="206">
+          <field name="CONDITION">"when"</field>
+          <field name="KEY">"up"</field>
+        </block>
+        <block type="gamelab_makeSpritesWithSize" id="(R#6?L^QtfcDos:sq{EF" x="31" y="279">
+          <field name="SIZE">30</field>
+          <field name="COSTUME">"gameplay_greendiamond2"</field>
+          <value name="NUM">
+            <block type="math_number" id="Ulk_(R{2^Cfob}HrYV,%">
+              <field name="NUM">3</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_destroy" id="40;5SKS,8+IJu/p-Flj5" x="37" y="375">
           <value name="THIS">
             <block type="gamelab_objectSpritePointer" id="|T=b~0B!RtO5Zc*+mW!5"/>
           </value>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="+a](989O/Yh,Fj2D|9,(" x="51" y="318">
-          <field name="IMG">"gradient_02"</field>
-        </block>
-        <block type="gamelab_makeSpritesGridInput" id="n(v/V{3=G~TA,+}g8([:" x="52" y="469">
+        <block type="gamelab_makeSpritesGridInput" id="n(v/V{3=G~TA,+}g8([:" x="52" y="471">
           <field name="ANIMATION_NAME">"stone_snow"</field>
           <value name="GRID">
             <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
@@ -1294,7 +1294,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_makeNewSpriteAnon" id="em42:od-{0_4mIH7N|Su" x="196" y="536">
+        <block type="gamelab_makeNewSpriteAnon" id="em42:od-{0_4mIH7N|Su" x="23" y="558">
           <field name="ANIMATION_NAME">"game_penguin"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="QH`wug6^Ja^2VY4*%Gk`">
@@ -1302,7 +1302,7 @@
             </block>
           </value>
         </block>
-        <block type="GameDev_setGroup" id="lR.bz{i2=Q/vpXGSPM_B" x="72" y="628">
+        <block type="GameDev_setGroup" id="lR.bz{i2=Q/vpXGSPM_B" x="41" y="636">
           <field name="GROUP">"walls"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="CyAw64G[#|~P7rHjF5Yx">
@@ -1310,7 +1310,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_toggleBehaviorSimple" id="_^,Z)c`Pl^^_n8Ie}_T3" x="222" y="712">
+        <block type="gamelab_toggleBehaviorSimple" id="_^,Z)c`Pl^^_n8Ie}_T3" x="92" y="751">
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="lN$}ma*7wmwyEBBgthuy">
@@ -1324,12 +1324,8 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_keyPressed" id="@DrM_xA#I39:c@NHb?f-" x="238" y="834">
-          <field name="CONDITION">"when"</field>
-          <field name="KEY">"up"</field>
-        </block>
         <block type="GameDev_playerJump" id="s67mUnR#LA%qC5`8+|0k" x="166" y="905">
-          <field name="STRENGTH">6.5</field>
+          <field name="STRENGTH">11</field>
         </block>
       </xml>
     </toolbox_blocks>
