@@ -11,14 +11,12 @@ import {teacherDashboardUrl} from '../teacherDashboard/urlHelpers';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 
-import legendStyles from './progress-table-legend.module.scss';
 import styles from './progress-table-v2.module.scss';
 
 function LessonDataCell({
   lesson,
   sectionId,
   locked,
-  needsFeedback,
   studentLessonProgress,
   addExpandedLesson,
   studentId,
@@ -54,8 +52,7 @@ function LessonDataCell({
           styles.gridBox,
           styles.gridBoxLesson,
           locked && styles.littleLock,
-          interactive && styles.lessonInteractive,
-          !locked && needsFeedback && legendStyles.needsFeedback
+          interactive && styles.lessonInteractive
         )}
         onClick={expandLesson}
         data-testid={'lesson-data-cell-' + lesson.id + '-' + studentId}
@@ -89,5 +86,4 @@ LessonDataCell.propTypes = {
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
   studentId: PropTypes.number.isRequired,
-  needsFeedback: PropTypes.bool,
 };

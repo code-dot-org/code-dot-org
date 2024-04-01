@@ -963,7 +963,7 @@ nl-NL:
   dashboard_sections_switch_section: 'switch groep:'
   dashboard_sections_table_code: Groepscode
   dashboard_sections_table_course: Cursus
-  dashboard_sections_table_grade: Cijfer
+  dashboard_sections_table_grade: Klas
   dashboard_sections_table_pairing_allowed: Programmeren in Tweetallen
   dashboard_sections_table_secret: Login-Type
   dashboard_sections_table_section: Groep

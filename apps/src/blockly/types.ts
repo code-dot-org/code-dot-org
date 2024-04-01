@@ -63,6 +63,13 @@ export interface arg {
   name: string;
 }
 
+export interface SerializedFields {
+  [key: string]: {
+    id?: string;
+    name?: string;
+  };
+}
+
 type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
