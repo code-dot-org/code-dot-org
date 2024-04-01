@@ -13,7 +13,8 @@ const generateActionBlocks = count => {
       imageUrl:
         'https://code.org/images/dance-hoc/dance-party-activity-ai-edition.png',
       heading: `Heading ${i + 1}`,
-      description: `Description ${i + 1}`,
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit.',
       buttons: [
         {
           color: 'purple',
