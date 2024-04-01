@@ -145,8 +145,6 @@ After configuring & saving your LTI Key, you will be redirected to your table of
 
 ![image](https://github.com/code-dot-org/code-dot-org/assets/1631660/1c0c9ad3-0b97-42b0-b70c-6f0738db4636)
 
-Now you can navigate to
-
 ## Installing Code.org in Schoology
 
 These instructions are based on the [Schoology docs](https://developers.schoology.com/app-platform/lti-apps/#how-to-add-your-app-to-schoology)
@@ -184,8 +182,8 @@ be manually installed.
 8. Check `Names and Roles Services`, leave `Assignment and Grade Services` unchecked
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/73ab74e1-4c70-4ba6-8c41-5e5d46bc543f)
 
-9. JWKS URL: `https://studio.code.org/oauth/jwks
-10. Domain/URL: `https://studio.code.org/lti/v1/sync_course
+9. JWKS URL: `https://studio.code.org/oauth/jwks`
+10. Domain/URL: `https://studio.code.org/lti/v1/sync_course`
 11. Custom Parameters:
   - `display_name=$User.username`
 12. OIDC Login Init Url: `https://studio.code.org/lti/v1/login`
