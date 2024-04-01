@@ -6,6 +6,7 @@ CDO.log = Logger.new($stdout)
 
 SURVEY_YEAR = '2022-2023'.freeze
 SURVEY_YEAR_HEADER = '2022-23'.freeze
+LAST_SURVEY_YEAR = '2021-2022'.freeze
 
 # Override for the dry run variable using an commandline argument
 DRY_RUN = !((ARGV.find {|arg| arg.casecmp('-dryrun')}).nil?)
@@ -15,17 +16,6 @@ VIRTUAL_SCHOOL_MAP = {
   'Not Virtual' => 'No',
   'Supplemental Virtual' => 'No',
   'Virtual with face to face options' => 'Yes',
-  '–' => nil,
-  '†' => nil
-}.freeze
-
-TITLE_I_MAP = {
-  '1-Title I targeted assistance eligible school-No program' => '1',
-  '2-Title I targeted assistance school' => '2',
-  '3-Title I schoolwide eligible-Title I targeted assistance program' => '3',
-  '4-Title I schoolwide eligible school-No program' => '4',
-  '5-Title I schoolwide school' => '5',
-  '6-Not a Title I school' => '6',
   '–' => nil,
   '†' => nil
 }.freeze
@@ -80,9 +70,13 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools_public.csv") do |fi
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, dry_run: DRY_RUN) do |row|
     # remove quote and eq sign from ="12345" (the ="" is required to preserve leading 0's in zip codes)
     row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+    school_id = row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s
+    # NCES did not provide Title 1 Status in the table this year so we are using last year's as a placeholder
+    previous_year_entry = SchoolStatsByYear.where(school_id: school_id, school_year: LAST_SURVEY_YEAR)
+    previous_title_1_status = previous_year_entry.empty? ? nil : previous_year_entry.first['title_i_status']
 
     {
-      school_id:          row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
+      school_id:          school_id,
       school_year:        SURVEY_YEAR,
       grades_offered_lo:  GRADES_MAP[row['Lowest Grade Offered [Public School] ' + SURVEY_YEAR_HEADER]],
       grades_offered_hi:  GRADES_MAP[row['Highest Grade Offered [Public School] ' + SURVEY_YEAR_HEADER]],
@@ -111,7 +105,7 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools_public.csv") do |fi
       student_wh_count:   row['White Students [Public School] ' + SURVEY_YEAR_HEADER].to_i,
       student_hp_count:   row['Nat. Hawaiian or Other Pacific Isl. Students [Public School] ' + SURVEY_YEAR_HEADER].to_i,
       student_tr_count:   row['Two or More Races Students [Public School] ' + SURVEY_YEAR_HEADER].to_i,
-      title_i_status:     TITLE_I_MAP[row['Title I School Status [Public School] ' + SURVEY_YEAR_HEADER]],
+      title_i_status:     previous_title_1_status,
       frl_eligible_total: row['Free and Reduced Lunch Students [Public School] ' + SURVEY_YEAR_HEADER].to_i
     }
   end
