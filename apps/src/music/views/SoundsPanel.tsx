@@ -262,13 +262,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     currentSoundRef.current = ref;
   };
 
-  const allSoundEntries: SoundEntry[] = [];
-  folders.forEach(folder => {
-    folder.sounds.forEach(sound => {
-      allSoundEntries.push({folder, sound});
-    });
-  });
-
   let possibleSoundEntries: SoundEntry[] = [];
   let rightColumnSoundEntries: SoundEntry[] = [];
 
@@ -278,7 +271,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
       sound,
     }));
   } else {
-    possibleSoundEntries = allSoundEntries;
+    folders.forEach(folder => {
+      folder.sounds.forEach(sound => {
+        possibleSoundEntries.push({folder, sound});
+      });
+    });
   }
 
   if (filter === 'all') {
@@ -289,13 +286,10 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     );
   }
 
-  const showFilterTypes: {[key: string]: boolean} = {
+  const availableSoundTypes: {[key: string]: boolean} = {
     all: true,
+    ...library.getAvailableSoundTypes(),
   };
-
-  allSoundEntries.forEach(soundEntry => {
-    showFilterTypes[soundEntry.sound.type] = true;
-  });
 
   const allFilterButtons = [
     {label: 'All', value: 'all'},
@@ -307,7 +301,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   ];
 
   const filterButtons = allFilterButtons.filter(
-    filterButton => showFilterTypes[filterButton.value]
+    filterButton => availableSoundTypes[filterButton.value]
   );
 
   return (
