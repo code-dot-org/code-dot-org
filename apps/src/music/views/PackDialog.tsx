@@ -25,7 +25,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   onSelect,
   onPreview,
 }) => {
-  const previewSound = folder.sounds.find(sound => sound.preview);
+  const previewSound = folder.sounds.find(sound => sound.type === 'preview');
   const soundPath = previewSound && folder.id + '/' + previewSound.src;
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc =

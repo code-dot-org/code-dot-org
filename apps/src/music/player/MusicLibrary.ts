@@ -70,7 +70,9 @@ export default class MusicLibrary {
       group =>
         !group.type && (!group.restricted || group.id === this.currentPackId)
     );
-    const firstSound = firstFolder?.sounds.find(sound => !sound.preview);
+    const firstSound = firstFolder?.sounds.find(
+      sound => sound.type !== 'preview'
+    );
     return `${firstFolder?.id}/${firstSound?.src}`;
   }
 
@@ -187,7 +189,7 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
   return libraryJson;
 };
 
-export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal';
+export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal' | 'preview';
 
 /**
  * A single event in a {@link SampleSequence}
@@ -222,7 +224,6 @@ export interface SoundData {
   note?: number;
   restricted?: boolean;
   sequence?: SampleSequence;
-  preview?: boolean;
   bpm?: number;
   key?: Key;
 }

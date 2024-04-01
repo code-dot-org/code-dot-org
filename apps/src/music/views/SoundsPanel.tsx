@@ -51,7 +51,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   onPreview,
   currentFolderRefCallback,
 }) => {
-  const previewSound = folder.sounds.find(sound => sound.preview);
+  const previewSound = folder.sounds.find(sound => sound.type === 'preview');
   const soundPath = previewSound && folder.id + '/' + previewSound.src;
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc =
@@ -284,12 +284,12 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   if (filter === 'all') {
     rightColumnSoundEntries = possibleSoundEntries.filter(
-      soundEntry => !soundEntry.sound.preview
+      soundEntry => soundEntry.sound.type !== 'preview'
     );
   } else {
     rightColumnSoundEntries = possibleSoundEntries.filter(
       soundEntry =>
-        soundEntry.sound.type === filter && !soundEntry.sound.preview
+        soundEntry.sound.type === filter && soundEntry.sound.type !== 'preview'
     );
   }
 
