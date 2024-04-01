@@ -125,7 +125,9 @@ describe('UnitEditor', () => {
       renderDefault({hasCourse: false});
       screen.queryByTestId('course-version-publishing-editor');
     });
+  });
 
+  describe('Script Editor - Legacy (Enzyme)', () => {
     it('shows hide this unit in course if hasCourse and course is not in development', () => {
       const wrapper = createWrapper({
         hasCourse: true,
