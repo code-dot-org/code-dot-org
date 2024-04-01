@@ -239,6 +239,9 @@ the Code.org LTI app, and select `API Info`.
 1. Copy the Client ID displayed in the pop up modal
 1. Paste this Client ID into the [Code.org Registration Portal][lti-integration-portal]
 
+![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/a74180c2-84a1-46ad-bb22-f945a75c1642)
+
+
 ## Using Code.org as an LTI Tool
 
 To install Code.org in your Canvas course, first ensure the LTI Key is enabled from the admin panel. Next, select `Code.org` from the `External Tool` dialogue when adding an Item to your App Modules. **Code.org must be configured to open in a new tab, and will not work in an iFrame.**
