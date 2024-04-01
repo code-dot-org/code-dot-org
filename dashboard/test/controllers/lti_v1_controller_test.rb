@@ -636,15 +636,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       }, as: :json
     end
 
-    expected_sections_data = {
-      all: {
-        '1': {name: 'Section 1', short_name: 'Section 1', size: 3, instructors: [{name: 'Teacher', id: 0, isOwner: true}],},
-        '2': {name: 'Section 2', short_name: 'Section 2', size: 3, instructors: [{name: 'Teacher', id: 0, isOwner: true}],},
-        '3': {name: 'Section 3', short_name: 'Section 3', size: 3, instructors: [{name: 'Teacher', id: 0, isOwner: true}],},
-      },
-      changed: {},
-    }
-
     assert_response :ok
     assert_equal @sync_course_result_no_changes.to_json, response.body
   end
