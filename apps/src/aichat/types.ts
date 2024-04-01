@@ -39,6 +39,7 @@ export interface AichatLevelProperties extends LevelProperties {
    * Visibility is not editable by the student; students can only change
    * the value if it is set to editable.
    */
+  aiChatSettings?: LevelAiChatSettings;
   initialAiCustomizations?: LevelAiCustomizations;
 }
 
@@ -65,6 +66,13 @@ export enum Visibility {
   HIDDEN = 'hidden',
   READONLY = 'readonly',
   EDITABLE = 'editable',
+}
+
+export interface LevelAiChatSettings {
+  initialCustomizations: AiCustomizations;
+  visibilities: {[key in keyof AiCustomizations]: Visibility};
+  /** If the presentation panel is hidden from the student. */
+  hidePresentationPanel?: boolean;
 }
 
 /**

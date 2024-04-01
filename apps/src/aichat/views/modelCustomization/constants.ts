@@ -1,5 +1,6 @@
 import {
   AiCustomizations,
+  LevelAiChatSettings,
   LevelAiCustomizations,
   ModelCardInfo,
   Visibility,
@@ -26,7 +27,7 @@ export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   exampleTopics: [],
 };
 
-export const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
+export const EMPTY_AI_LEVEL_CUSTOMIZATIONS: LevelAiCustomizations = {
   botName: {value: '', visibility: Visibility.EDITABLE},
   temperature: {value: 0.5, visibility: Visibility.EDITABLE},
   systemPrompt: {value: '', visibility: Visibility.EDITABLE},
@@ -38,10 +39,25 @@ export const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
   hidePresentationPanel: false,
 };
 
-export const EMPTY_AI_CUSTOMIZATIONS_STUDENT: AiCustomizations = {
+export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
   botName: '',
   temperature: 0.5,
   systemPrompt: '',
   retrievalContexts: [],
   modelCardInfo: EMPTY_MODEL_CARD_INFO,
+};
+
+export const DEFAULT_VISIBILITIES: {
+  [key in keyof AiCustomizations]: Visibility;
+} = {
+  botName: Visibility.EDITABLE,
+  temperature: Visibility.EDITABLE,
+  systemPrompt: Visibility.EDITABLE,
+  retrievalContexts: Visibility.EDITABLE,
+  modelCardInfo: Visibility.EDITABLE,
+};
+
+export const EMPTY_LEVEL_AI_CHAT_SETTINGS: LevelAiChatSettings = {
+  initialCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  visibilities: DEFAULT_VISIBILITIES,
 };
