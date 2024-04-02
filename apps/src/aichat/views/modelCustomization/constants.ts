@@ -1,6 +1,5 @@
 import {
   AiCustomizations,
-  LevelAiChatSettings,
   LevelAiCustomizations,
   ModelCardInfo,
   Visibility,
@@ -55,9 +54,4 @@ export const DEFAULT_VISIBILITIES: {
   systemPrompt: Visibility.EDITABLE,
   retrievalContexts: Visibility.EDITABLE,
   modelCardInfo: Visibility.EDITABLE,
-};
-
-export const EMPTY_LEVEL_AI_CHAT_SETTINGS: LevelAiChatSettings = {
-  initialCustomizations: EMPTY_AI_CUSTOMIZATIONS,
-  visibilities: DEFAULT_VISIBILITIES,
 };
