@@ -8,13 +8,15 @@ import AITutorFields from '@cdo/apps/aiTutor/levelEditors/AITutorFields';
 $(document).ready(function () {
   const isAvailable = getScriptData('aitutoravailable');
   console.log('isAvailable', isAvailable);
-  // const levelbuilderPrompt = getScriptData('levelbuilderprompt');
-  // console.log('isAvailable', isAvailable);
+  const aitutorlevelspecificprompt = getScriptData(
+    'aitutorlevelspecificprompt'
+  );
+  console.log('aitutorlevelspecificprompt', aitutorlevelspecificprompt);
 
   ReactDOM.render(
     <AITutorFields
       isAvailable={isAvailable}
-      // levelbuilderPrompt={levelbuilderPrompt}
+      levelbuilderPrompt={aitutorlevelspecificprompt}
     />,
     document.getElementById('ai-tutor-container')
   );

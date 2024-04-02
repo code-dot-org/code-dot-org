@@ -1,21 +1,20 @@
 import React, {useState} from 'react';
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from '@cdo/apps/lab2/levelEditors/aiCustomizations/edit-ai-customizations.module.scss';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 
 interface AITutorFieldsProps {
   isAvailable: boolean;
-  //levelbuilderPrompt: string;
+  levelbuilderPrompt: string;
 }
 
 const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
   isAvailable,
-  //levelbuilderPrompt,
+  levelbuilderPrompt,
 }) => {
   const [aiTutorAvailable, setAiTutorAvailable] =
     useState<boolean>(isAvailable);
-  // const [levelSpecificPrompt, setlevelSpecificPrompt] =
-  //   useState<string>(levelbuilderPrompt);
+  const [levelSpecificPrompt, setlevelSpecificPrompt] =
+    useState<string>(levelbuilderPrompt);
 
   return (
     <div>
@@ -42,25 +41,29 @@ const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
             }}
           />
         </div>
+        <br />
+
+        <input
+          type="hidden"
+          id="level_ai_tutor_level_specific_prompt"
+          name="level[ai_tutor_level_specific_prompt]"
+          value={levelSpecificPrompt.toString()}
+        />
         {aiTutorAvailable && (
-          <BodyThreeText>
-            Set the level-specific prompt.
-            <br />
-          </BodyThreeText>
-        )}
-        {/* <div className={moduleStyles.fieldRow}>
-          <div className={moduleStyles.fieldValue}>
-            <label htmlFor="levelPrompt">Level-Specific Prompt</label>
-            <input
-              id="levelPrompt"
-              type="text"
-              value={levelSpecificPrompt || ''}
-              onChange={e => {
-                setlevelSpecificPrompt(e.target.value);
-              }}
-            />
+          <div className={moduleStyles.fieldRow}>
+            <div className={moduleStyles.fieldValue}>
+              <label htmlFor="levelPrompt">Level-Specific Prompt</label>
+              <input
+                id="levelPrompt"
+                type="text"
+                value={levelSpecificPrompt || ''}
+                onChange={e => {
+                  setlevelSpecificPrompt(e.target.value);
+                }}
+              />
+            </div>
           </div>
-        </div> */}
+        )}
       </div>
     </div>
   );
