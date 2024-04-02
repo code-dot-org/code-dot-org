@@ -197,7 +197,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(costumeList, 32, 32, buttons),
+          new Blockly.FieldAnimationDropdown(costumeList, 32, 32, buttons),
           inputConfig.name
         );
     },
@@ -226,7 +226,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(backgroundList, 40, 40, buttons),
+          new Blockly.FieldAnimationDropdown(backgroundList, 40, 40, buttons),
           inputConfig.name
         );
     },
@@ -333,7 +333,7 @@ const customInputTypes = {
   },
   behaviorPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const dropdownField = new Blockly.FieldDropdown(
+      const dropdownField = new Blockly.FieldBehaviorPicker(
         Blockly.customBlocks.getAllBehaviorOptions
       );
       currentInputRow
@@ -426,6 +426,25 @@ const customInputTypes = {
         .getVariableById(id).name;
       const name = Blockly.JavaScript.getVariableName(id);
       return [`"${label}"`, `"${name}"`];
+    },
+  },
+
+  bitmap: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const config = {
+        height: 8,
+        width: 8,
+      };
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldBitmap(null, null, config),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      // Convert 2d array into a string.
+      return JSON.stringify(block.getFieldValue(arg.name));
     },
   },
 };

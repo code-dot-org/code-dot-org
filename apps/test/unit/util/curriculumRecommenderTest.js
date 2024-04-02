@@ -1,6 +1,7 @@
 import {
   getTestRecommendations,
   getSimilarRecommendations,
+  getStretchRecommendations,
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {
   IS_FEATURED_TEST_COURSES,
@@ -9,7 +10,7 @@ import {
   SCHOOL_SUBJECT_TEST_COURSES,
   TOPICS_TEST_COURSES,
   PUBLISHED_DATE_TEST_COURSES,
-  SIMILAR_RECOMMENDER_TEST_COURSES,
+  FULL_TEST_COURSES,
 } from './curriculumRecommenderTestCurricula';
 import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
 import {expect} from '../../util/reconfiguredChai';
@@ -36,7 +37,7 @@ describe('testRecommender', () => {
   it('adds score to curricula with desired duration', () => {
     const recommendedCurricula = getTestRecommendations(
       DURATION_TEST_COURSES,
-      'week',
+      'month',
       '',
       '',
       ''
@@ -44,6 +45,25 @@ describe('testRecommender', () => {
 
     expect(recommendedCurricula).to.deep.equal([
       // Curricula with desired duration score higher
+      'monthDurationCourse',
+      // Sort remaining 0-score curricula by published_date
+      'emptyCourse',
+      'nullCourse',
+      'weekDurationCourse',
+    ]);
+  });
+
+  it('adds score to curricula with a slightly longer duration', () => {
+    const recommendedCurricula = getTestRecommendations(
+      DURATION_TEST_COURSES,
+      'lesson',
+      '',
+      '',
+      ''
+    ).map(curr => curr.key);
+
+    expect(recommendedCurricula).to.deep.equal([
+      // Curricula with slightly longer duration score higher
       'weekDurationCourse',
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
@@ -179,31 +199,40 @@ describe('testRecommender', () => {
 });
 
 describe('similarRecommender', () => {
-  it('similar curriculum recommender scores test curricula with relevant fields', () => {
+  it('similar curriculum recommender scores relevant test curricula', () => {
     const recommendedCurricula = getSimilarRecommendations(
-      SIMILAR_RECOMMENDER_TEST_COURSES,
-      'month',
-      'markInit1',
-      'subject2',
-      `topic1,topic2,${IMPORTANT_TOPICS[0]}`
+      FULL_TEST_COURSES,
+      'fullTestCourse1',
+      null
     ).map(curr => curr.key);
 
+    // Check recommended curricula results. fullTestCourse1 should be filtered out because it's the curriculum each other one is being compared against,
+    // and fullTestCourse5 should be filtered out because it does not support any of the same grade levels as fullTestCourse1.
     expect(recommendedCurricula).to.deep.equal([
-      'multipleTopicsCourse', // 4 points = 2 overlapping topics * overlappingDesiredTopic(2)
-      'publishedWithinOneYearAgoCourse', // 2 points = publishedWithinOneYearAgo(2) [sorted highest of the 2-point courses by recent published_date]
-      'firstImportantTopicCourse', // 2 points = 1 overlapping topic * overlappingDesiredTopic(2)
-      'oneTopicCourse', // 2 points = 1 overlapping topic * overlappingDesiredTopic(2)
-      'multipleSchoolSubjectsCourse', // 2 points = 1 overlapping subject * overlappingDesiredSchoolSubject(2)
-      'marketingInitCourse1', // 2 points = hasDesiredMarketingInitiative(2)
-      'monthDurationCourse', // 2 points = hasDesiredDuration(2)
-      'publishedWithinTwoYearsAgoCourse', // 1 point = publishedWithinTwoYearsAgo(1) [sorted highest of the 1-point courses by recent published_date]
-      'secondImportantTopicCourse', // 1 point = hasImportantButNotDesiredTopic(1)
-      'oneSchoolSubjectCourse', // 1 point = hasAnySchoolSubject(1) [only receives points from hasAnySchoolSubject if numOverlappingDesiredSchoolSubjects == 0]
-      'featuredCourse', // 0 points [sorted highest of 0-point courses because it's marked as featured]
-      'emptyCourse', // 0 points
-      'nullCourse', // 0 points
-      'marketingInitCourse2', // 0 points
-      'weekDurationCourse', // 0 points
+      'fullTestCourse2' /* 7 points = hasDesiredMarketingInitiative(2) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
+                          (1 overlapping topic * overlappingDesiredTopic(2)) + publishedWithinTwoYearsAgo(1) */,
+      'fullTestCourse3' /* 5 points = (1 overlapping topic * overlappingDesiredTopic(2)) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
+                          publishedWithinTwoYearsAgo(1) */,
+      'fullTestCourse4' /* 1 point = hasAnySchoolSubject(2) */,
+    ]);
+  });
+});
+
+describe('stretchRecommender', () => {
+  it('stretch curriculum recommender scores relevant test curricula', () => {
+    const recommendedCurricula = getStretchRecommendations(
+      FULL_TEST_COURSES,
+      'fullTestCourse1',
+      null
+    ).map(curr => curr.key);
+
+    // Check recommended curricula results. fullTestCourse1 should be filtered out because it's the curriculum each other one is being compared against,
+    // and fullTestCourse5 should be filtered out because it does not support any of the same grade levels as fullTestCourse1.
+    expect(recommendedCurricula).to.deep.equal([
+      'fullTestCourse3' /* 6 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(1) + hasImportantButNotDesiredTopic(2) +
+                           publishedWithinTwoYearsAgo(1) */,
+      'fullTestCourse4' /* 4 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(1) + overlappingDesiredSchoolSubject(1) */,
+      'fullTestCourse2' /* 3 points = hasDesiredDuration(2) + publishedWithinTwoYearsAgo(1) */,
     ]);
   });
 });

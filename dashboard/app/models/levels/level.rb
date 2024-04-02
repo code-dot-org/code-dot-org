@@ -520,7 +520,8 @@ class Level < ApplicationRecord
       type: self.class.to_s,
       name: name,
       display_name: display_name,
-      is_validated: validated?
+      is_validated: validated?,
+      can_have_feedback: can_have_feedback?
     }
   end
 
@@ -726,6 +727,23 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_validations
+    if should_localize?
+      validations_clone = validations.map(&:clone)
+      validations_clone.each do |validation|
+        validation['message'] = I18n.t(
+          validation["key"],
+          scope: [:data, :validations, name],
+          default: validation["message"],
+          smart: true
+        )
+      end
+      validations_clone
+    else
+      validations
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -791,6 +809,8 @@ class Level < ApplicationRecord
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
+    # Localized properties
+    properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
     properties_camelized
   end
 

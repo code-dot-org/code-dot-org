@@ -25,6 +25,13 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 'staging.code.org', CDO.canonical_hostname('code.org')
   end
 
+  test "canonical_hostname in CI" do
+    set_env :test
+    CDO.stubs(:ci_webserver?).returns(true)
+    assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'localhost.code.org', CDO.canonical_hostname('code.org')
+  end
+
   test "canonical_hostname in development" do
     set_env :development
     assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
@@ -144,6 +151,36 @@ class ApplicationHelperTest < ActionView::TestCase
     client_state.add_callout_seen 'callout'
     assert client_state.callout_seen? 'callout'
     refute client_state.callout_seen? 'callout2'
+  end
+
+  test 'callout_seen only has a truncated list' do
+    refute client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    25.times do |i|
+      client_state.add_callout_seen "callout_#{i}"
+    end
+    assert client_state.callout_seen? 'callout_24'
+    refute client_state.callout_seen? 'callout'
+  end
+
+  test 'callout_seen maintains most recently used order' do
+    refute client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    assert client_state.callout_seen? 'callout'
+    10.times do |i|
+      client_state.add_callout_seen "callout_#{i}"
+    end
+    assert client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    10.times do |i|
+      client_state.add_callout_seen "callout_#{i + 10}"
+    end
+    assert client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    10.times do |i|
+      client_state.add_callout_seen "callout_#{i + 10}"
+    end
+    assert client_state.callout_seen? 'callout'
   end
 
   test 'client state with invalid cookie' do

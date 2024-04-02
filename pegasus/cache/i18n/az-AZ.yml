@@ -992,7 +992,7 @@ az-AZ:
   dashboard_sections_table_code: Bölmə kodu
   dashboard_sections_table_course: Kurs
   dashboard_sections_table_grade: Sinif
-  dashboard_sections_table_pairing_allowed: Estafet proqramlaşdırması
+  dashboard_sections_table_pairing_allowed: İkili Qrup Şəklində Proqramlaşdırma
   dashboard_sections_table_secret: Daxil olma tipi
   dashboard_sections_table_section: Bölmə
   dashboard_sections_table_stage_extras: Səhnə Əlavələri
@@ -1380,7 +1380,7 @@ az-AZ:
   hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition Minecraft-da standartlara
     uyğunlaşdırılmış kurikulum, təlim və kodlaşdırma təmin edir.'
   hoc2018_mc_educators_box1_title: Minecraft ilə kod
-  hoc2018_mc_educators_box2_button: yüklə
+  hoc2018_mc_educators_box2_button: Yüklə
   hoc2018_mc_educators_box2_desc: Bu alət dəsti sizə Kod Saatı keçirməyə və tələbələrinizi
     kompüter elminə cəlb etməyə kömək edəcək.
   hoc2018_mc_educators_box2_title: Fasilitator Bələdçisini yükləyin

@@ -115,6 +115,8 @@ function Certificate(props) {
     children,
     certificateData,
     isHocTutorial,
+    isPlCourse,
+    userType,
   } = props;
 
   const swiperRef = useRef(null);
@@ -209,13 +211,18 @@ function Certificate(props) {
             {certificateData.map(image => (
               <swiper-slide key={image.courseName} class={style.swiperSlide}>
                 <a href={getCertificateSharePath(image.courseName)}>
-                  {
-                    // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-                    // Verify or update this alt-text as necessary
-                  }
                   <img
                     src={getCertificateImagePath(image.courseName)}
-                    alt=""
+                    alt={
+                      studentName
+                        ? i18n.certificateAltTextWithName({
+                            studentName,
+                            courseTitle: image.courseTitle,
+                          })
+                        : i18n.certificateAltTextNoName({
+                            courseTitle: image.courseTitle,
+                          })
+                    }
                     style={{width: 470}}
                   />
                 </a>
@@ -261,14 +268,14 @@ function Certificate(props) {
           <BodyThreeText>
             {i18n.congratsCertificateShareMessage()}
           </BodyThreeText>
-          {/* TODO(ACQ-1342): determine whether certificate is for pl course  */}
           <SocialShare
             facebook={facebook}
             twitter={twitter}
             linkedin={linkedin}
             print={print}
             under13={under13}
-            isPlCourse={false}
+            isPlCourse={isPlCourse}
+            userType={userType}
           />
         </div>
       </div>
@@ -286,6 +293,8 @@ Certificate.propTypes = {
   children: PropTypes.node,
   certificateData: PropTypes.arrayOf(PropTypes.object).isRequired,
   isHocTutorial: PropTypes.bool,
+  isPlCourse: PropTypes.bool,
+  userType: PropTypes.string,
 };
 
 export default connect(state => ({

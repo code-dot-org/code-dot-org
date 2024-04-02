@@ -19,6 +19,7 @@ export const PROJECT_TYPE_MAP = {
   minecraft_designer: i18n.projectTypeMinecraft(),
   minecraft_hero: i18n.projectTypeMinecraft(),
   minecraft_aquatic: i18n.projectTypeMinecraft(),
+  game_design: i18n.projectTypeGameDesign(),
   gamelab: i18n.projectTypeGamelab(),
   playlab: i18n.projectTypePlaylab(),
   weblab: i18n.projectTypeWeblab(),

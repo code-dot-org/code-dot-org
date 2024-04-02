@@ -35,7 +35,7 @@ module Cdo
       )
 
       defaults = render("#{root}/config.yml.erb").first
-      to_h.keys.each do |key|
+      to_h.each_key do |key|
         raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
       end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
@@ -65,7 +65,8 @@ module Cdo
       # our HTTPS wildcard certificate only supports *.code.org
       # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
       sep = (domain.include?('.code.org')) ? '-' : '.'
-      return "localhost#{sep}#{domain}" if rack_env?(:development)
+      # developers and CI servers use localhost
+      return "localhost#{sep}#{domain}" if rack_env?(:development) || ci_webserver?
       return "translate#{sep}#{domain}" if name == 'crowdin'
       "#{rack_env}#{sep}#{domain}"
     end
@@ -250,6 +251,15 @@ module Cdo
       ''
     end
 
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Statsig API key.
+    def safe_statsig_api_client_key
+      CDO.statsig_api_client_key
+    rescue ArgumentError
+      # Return an empty string instead of raising
+      ''
+    end
+
     def dir(*dirs)
       File.join(root_dir, *dirs)
     end
@@ -274,6 +284,12 @@ module Cdo
       %w(puma thin).include?(File.basename($0))
     end
 
+    # Is this code running in a webserver as part of our Continuous Integration
+    # builds?
+    def ci_webserver?
+      running_web_application? && ENV['CI']
+    end
+
     def shared_image_url(path)
       "/shared/images/#{path}"
     end
@@ -285,7 +301,7 @@ module Cdo
 
     def log
       require 'logger'
-      @@log ||= Logger.new(STDOUT).tap do |l|
+      @@log ||= Logger.new($stdout).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
           "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"

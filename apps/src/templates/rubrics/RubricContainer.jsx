@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
+import i18n from '@cdo/locale';
 import classnames from 'classnames';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -12,13 +13,11 @@ import {
 import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
+import RubricSubmitFooter from './RubricSubmitFooter';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
-
-const TAB_NAMES = {
-  RUBRIC: 'rubric',
-  SETTINGS: 'settings',
-};
+import Draggable from 'react-draggable';
+import {TAB_NAMES} from './rubricHelpers';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 export default function RubricContainer({
   rubric,
@@ -39,6 +38,8 @@ export default function RubricContainer({
       TAB_NAMES.RUBRIC
   );
   const [aiEvaluations, setAiEvaluations] = useState(null);
+
+  const [feedbackAdded, setFeedbackAdded] = useState(false);
 
   const tabSelectCallback = tabSelection => {
     setSelectedTab(tabSelection);
@@ -83,60 +84,83 @@ export default function RubricContainer({
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
   return (
-    <div
-      className={classnames(style.rubricContainer, {
-        [style.hiddenRubricContainer]: !open,
-      })}
-    >
-      <div className={style.rubricHeaderRedesign}>
-        <div className={style.rubricHeaderLeftSide}>
-          <FontAwesome icon="house" />
-          {i18n.rubricAiHeaderText()}
+    <Draggable>
+      <div
+        data-testid="draggable-test-id"
+        id="draggable-id"
+        className={classnames(style.rubricContainer, {
+          [style.hiddenRubricContainer]: !open,
+        })}
+      >
+        <div className={style.rubricHeaderRedesign}>
+          <div className={style.rubricHeaderLeftSide}>
+            <img
+              src={aiBotOutlineIcon}
+              className={style.aiBotOutlineIcon}
+              alt={i18n.rubricAiHeaderText()}
+            />
+            <span>{i18n.rubricAiHeaderText()}</span>
+          </div>
+          <div className={style.rubricHeaderRightSide}>
+            <button
+              type="button"
+              onClick={closeRubric}
+              className={classnames(style.buttonStyle, style.closeButton)}
+            >
+              <FontAwesome icon="xmark" />
+            </button>
+          </div>
         </div>
-        <div className={style.rubricHeaderRightSide}>
-          <button
-            type="button"
-            onClick={closeRubric}
-            className={classnames(style.buttonStyle, style.closeButton)}
-          >
-            <FontAwesome icon="xmark" />
-          </button>
-        </div>
-      </div>
 
-      <div className={style.fabBackground}>
-        <RubricTabButtons
-          tabSelectCallback={tabSelectCallback}
-          selectedTab={selectedTab}
-          showSettings={showSettings}
-          canProvideFeedback={canProvideFeedback}
-          teacherHasEnabledAi={teacherHasEnabledAi}
-          studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
-          refreshAiEvaluations={fetchAiEvaluations}
-          rubric={rubric}
-          studentName={studentLevelInfo && studentLevelInfo.name}
-        />
-
-        <RubricContent
-          rubric={rubric}
-          open={open}
-          studentLevelInfo={studentLevelInfo}
-          teacherHasEnabledAi={teacherHasEnabledAi}
-          canProvideFeedback={canProvideFeedback}
-          onLevelForEvaluation={onLevelForEvaluation}
-          reportingData={reportingData}
-          visible={selectedTab === TAB_NAMES.RUBRIC}
-          aiEvaluations={aiEvaluations}
-        />
-        {showSettings && (
-          <RubricSettings
-            visible={selectedTab === TAB_NAMES.SETTINGS}
+        <div className={style.fabBackground}>
+          <RubricTabButtons
+            tabSelectCallback={tabSelectCallback}
+            selectedTab={selectedTab}
+            showSettings={showSettings}
+            canProvideFeedback={canProvideFeedback}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+            refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
+            studentName={studentLevelInfo && studentLevelInfo.name}
+          />
+
+          <RubricContent
+            rubric={rubric}
+            open={open}
+            studentLevelInfo={studentLevelInfo}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            canProvideFeedback={canProvideFeedback}
+            onLevelForEvaluation={onLevelForEvaluation}
+            reportingData={reportingData}
+            visible={selectedTab === TAB_NAMES.RUBRIC}
+            aiEvaluations={aiEvaluations}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
+          />
+          {showSettings && (
+            <RubricSettings
+              visible={selectedTab === TAB_NAMES.SETTINGS}
+              refreshAiEvaluations={fetchAiEvaluations}
+              rubric={rubric}
+              sectionId={sectionId}
+              tabSelectCallback={tabSelectCallback}
+            />
+          )}
+        </div>
+        {canProvideFeedback && (
+          <RubricSubmitFooter
+            open={open}
+            rubric={rubric}
+            reportingData={reportingData}
+            studentLevelInfo={studentLevelInfo}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
           />
         )}
       </div>
-    </div>
+    </Draggable>
   );
 }
 

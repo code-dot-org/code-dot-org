@@ -51,7 +51,7 @@ const groupedLesson = {
 };
 
 export default {
-  compoent: LessonGroup,
+  component: LessonGroup,
 };
 
 export const WithDetailView = () => (

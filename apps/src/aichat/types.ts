@@ -22,6 +22,12 @@ export enum Role {
   USER = 'user',
   SYSTEM = 'system',
 }
+
+export enum ViewMode {
+  EDIT = 'edit-mode',
+  PRESENTATION = 'presentation-mode',
+}
+
 export interface AichatLevelProperties extends LevelProperties {
   // --- DEPRECATED - used for old AI Chat
   systemPrompt: string;
@@ -33,7 +39,8 @@ export interface AichatLevelProperties extends LevelProperties {
    * Initial AI customizations set by the level.
    * For each field, levelbuilders may define the initial default value,
    * and visibility (hidden, readonly, or editable).
-   * Visibility is not editable by the student; students can only change the value if it is set to editable.
+   * Visibility is not editable by the student; students can only change
+   * the value if it is set to editable.
    */
   initialAiCustomizations?: LevelAiCustomizations;
 }
@@ -44,7 +51,7 @@ export interface AiCustomizations {
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
-  modelCardInfo?: ModelCardInfo;
+  modelCardInfo: ModelCardInfo;
 }
 
 /** Chat bot Model Card information */
@@ -53,11 +60,15 @@ export interface ModelCardInfo {
   intendedUse: string;
   limitationsAndWarnings: string;
   testingAndEvaluation: string;
-  askAboutTopics: string[];
+  exampleTopics: string[];
 }
 
 // Visibility for AI customization fields set by levelbuilders.
-type Visibility = 'hidden' | 'readonly' | 'editable';
+export enum Visibility {
+  HIDDEN = 'hidden',
+  READONLY = 'readonly',
+  EDITABLE = 'editable',
+}
 
 /**
  * Level-defined AI customizations for student chat bots set by levelbuilders on the level's properties.
@@ -69,11 +80,6 @@ export type LevelAiCustomizations = {
     visibility: Visibility;
   };
 } & {
-  /** The initial panel to show when displaying the level */
-  initialPanel?: 'edit' | 'presentation';
-  /**
-   * If the student can go back to the editing panel after starting on the presentation panel.
-   * Only applies if initialPanel is 'presentation'.
-   */
-  canGoBackToEditing?: boolean;
+  /** If the presentation panel is hidden from the student. */
+  hidePresentationPanel?: boolean;
 };

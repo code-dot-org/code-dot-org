@@ -1,12 +1,14 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/reconfiguredChai';
+
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   stubRedux,
   restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import reducer, {
   __testInterface__,
   setAuthProviders,
@@ -41,8 +43,8 @@ import reducer, {
   assignToSection,
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const {
   EDIT_SECTION_SUCCESS,
@@ -356,7 +358,6 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
       });
     });
@@ -388,7 +389,6 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: courseVersionId,
         unitId: unitId,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
       });
     });
@@ -416,7 +416,6 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
       });
     });
@@ -445,7 +444,6 @@ describe('teacherSectionsRedux', () => {
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
@@ -464,6 +462,7 @@ describe('teacherSectionsRedux', () => {
             instructor_email: 'coteacher@code.org',
           },
         ],
+        syncEnabled: undefined,
       });
     });
   });
@@ -776,12 +775,12 @@ describe('teacherSectionsRedux', () => {
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,
-          isAssigned: undefined,
           restrictSection: false,
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
           sectionInstructors: [],
+          syncEnabled: undefined,
         },
       });
     });

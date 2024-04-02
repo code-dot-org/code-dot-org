@@ -329,12 +329,14 @@ class ScriptLevel < ApplicationRecord
         is_concept_level: level.concept_level?,
         title: level_display_text,
         url: build_script_level_url(self),
+        path: build_script_level_path(self),
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
         display_as_unplugged: level.display_as_unplugged?,
         app: level.game&.app,
         uses_lab2: level.uses_lab2?,
-        is_validated: level.validated?
+        is_validated: level.validated?,
+        can_have_feedback: level.can_have_feedback?
       }
 
       if progression

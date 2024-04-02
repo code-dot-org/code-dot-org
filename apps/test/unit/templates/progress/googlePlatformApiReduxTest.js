@@ -1,4 +1,3 @@
-import {expect} from '../../../util/reconfiguredChai';
 import {
   registerReducers,
   getStore,
@@ -10,6 +9,8 @@ import reducer, {
   loadGooglePlatformApi,
   canShowGoogleShareButton,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Google Platoform API redux module', () => {
   const initialState = {

@@ -16,7 +16,7 @@ social:
 
 # 詩歌程式設計
 
-{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
+{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg「, alt_text:「一個戴著紫色帽子帽子的可愛粉紅色章魚角色，在舞台上用凳子和麥克風表演詩歌」，文字顏色：「白色」，框背景顏色：「rgb（0,0,0,0.4）」，左標題：「詩歌藝術」，左圖描述:「添加藝術和動畫在這個《編碼時刻》活動中的經典詩歌！」, 左 _ 規格:「」, 左鍵 _url: "https://studio.code.org/s/poem-art-2021/reset「, 左鍵 _ 文字：「開始」，右標題：「用詩歌編碼」，right_description：「與課堂中的計算機科學和詩歌連接這一系列課程。「, 右鍵規格:「」，右鍵 _鍵 _url: "https://studio.code.org/s/poetry?viewAs=Instructor「，右鍵 _ 文字：「查看模塊」}}
 
 ## 進一步瞭解詩歌程式設計
 

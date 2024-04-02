@@ -8,14 +8,10 @@ SHARED_JS_DIR = "#{REPO_DIR}/shared/js".freeze
 SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}".freeze
 
 def filter_eslint_apps(modified_files)
+  full_apps_dir = File.expand_path(APPS_DIR)
+
   modified_files.select do |f|
-    (f.end_with?(".js", ".jsx", ".ts", ".tsx")) &&
-      !(f.end_with?('.min.js') ||
-        f.match(/public\/.+package\//) ||
-        f.include?('apps/lib/') ||
-        f.include?('shared/') ||
-        f.include?('dashboard/config/')
-       )
+    f.start_with?(full_apps_dir) && f.end_with?(".js", ".jsx", ".ts", ".tsx")
   end
 end
 

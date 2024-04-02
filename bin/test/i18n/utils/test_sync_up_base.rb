@@ -153,12 +153,14 @@ describe I18n::Utils::SyncUpBase do
     let(:perform) {described_instance.send(:perform)}
 
     let(:crowdin_project) {'expected_crowdin_project'}
-    let(:base_path) {'expected_base_path'}
+    let(:base_path) {'/expected_base_path'}
+
+    let(:crowdin_dir_path) {'/expected_crowdin_dir_path'}
+    let(:source_file_path) {File.join(base_path, crowdin_dir_path, 'expected_source_file_path')}
+    let(:source_files) {[source_file_path]}
 
     let(:config) {stub(crowdin_project: crowdin_project, base_path: base_path)}
-
     let(:crowdin_client) {stub}
-    let(:source_files) {['expected_source_file_path']}
 
     before do
       described_class.stubs(:config).returns(config)
@@ -167,7 +169,10 @@ describe I18n::Utils::SyncUpBase do
     end
 
     it 'uploads source files' do
-      crowdin_client.expects(:upload_source_files).with(source_files, base_path: base_path).once
+      crowdin_client.
+        expects(:upload_source_file).
+        with(source_file_path, crowdin_dir_path).once
+
       perform
     end
   end

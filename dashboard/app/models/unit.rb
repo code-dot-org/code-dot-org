@@ -452,7 +452,7 @@ class Unit < ApplicationRecord
   def self.script_level_cache
     return nil unless should_cache?
     @@script_level_cache ||= {}.tap do |cache|
-      script_cache.values.each do |unit|
+      script_cache.each_value do |unit|
         cache.merge!(unit.script_levels.index_by(&:id))
       end
     end
@@ -463,7 +463,7 @@ class Unit < ApplicationRecord
   def self.level_cache
     return nil unless should_cache?
     @@level_cache ||= {}.tap do |cache|
-      script_level_cache.values.each do |script_level|
+      script_level_cache.each_value do |script_level|
         level = script_level.level
         next unless level
         cache[level.id] = level unless cache.key? level.id
@@ -1466,6 +1466,7 @@ class Unit < ApplicationRecord
   def finish_url
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
+    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
     CDO.code_org_url "/congrats/#{name}"
   end
 

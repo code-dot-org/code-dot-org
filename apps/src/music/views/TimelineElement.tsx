@@ -5,19 +5,8 @@ import {useDispatch} from 'react-redux';
 import {selectBlockId} from '../redux/musicRedux';
 import {SoundEvent} from '../player/interfaces/SoundEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {SoundType} from '../player/MusicLibrary';
 import {useMusicSelector} from './types';
-
-// TODO: Unify type constants and colors with those SoundPanel.jsx
-const typeToColorClass: {[key in SoundType | PlaybackEvent['type']]?: string} =
-  {
-    beat: moduleStyles.timelineElementPurple,
-    bass: moduleStyles.timelineElementBlue,
-    lead: moduleStyles.timelineElementGreen,
-    fx: moduleStyles.timelineElementYellow,
-    pattern: moduleStyles.timelineElementPattern,
-    chord: moduleStyles.timelineElementChord,
-  };
+import SoundStyle from '../utils/SoundStyle';
 
 interface TimelineElementProps {
   eventData: PlaybackEvent;
@@ -57,18 +46,18 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
 
   const isBlockSelected = eventData.blockId === selectedBlockId;
 
-  const colorType =
+  const soundType =
     eventData.type === 'sound'
       ? (eventData as SoundEvent).soundType
       : eventData.type;
-  const colorClass = typeToColorClass[colorType];
 
   return (
     <div
       className={classNames(
         'timeline-element',
         moduleStyles.timelineElement,
-        colorClass,
+        SoundStyle[soundType]?.classNameBackground,
+        SoundStyle[soundType]?.classNameBorder,
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
         isSkipSound && moduleStyles.timelineElementSkipSound,
