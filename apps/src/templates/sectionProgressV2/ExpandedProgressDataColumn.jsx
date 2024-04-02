@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import i18n from '@cdo/locale';
 
 import {studentLevelProgressType} from '../progress/progressTypes';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
@@ -101,6 +102,7 @@ function ExpandedProgressDataColumn({
 
   return (
     <table key={lesson.id} className={styles.expandedColumn}>
+      <caption>{i18n.progressForLesson(lesson.title)}</caption>
       <ExpandedProgressColumnHeader
         lesson={lesson}
         removeExpandedLesson={removeExpandedLesson}

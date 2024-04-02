@@ -1968,6 +1968,7 @@
   "programmingEnvironmentDocumentation": "{programmingEnvironmentTitle} Documentation",
   "progress": "Progress",
   "progressBeta": "Progress (beta)",
+  "progressForLesson": "Progress for lesson {lessonName}",
   "progressLegendDetailsNotStarted": "The student has not done any work on this lesson or level.",
   "progressLegendDetailsNoOnlineWork": "This level is an activity that doesn't require online work.",
   "progressLegendDetailsInProgress": "The student has begun working on this level.",
