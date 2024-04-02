@@ -1,6 +1,6 @@
 import {
   AiCustomizations,
-  LevelAiCustomizations,
+  LevelAichatSettings,
   ModelCardInfo,
   Visibility,
 } from '@cdo/apps/aichat/types';
@@ -15,8 +15,7 @@ import {
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
-  EMPTY_MODEL_CARD_INFO,
-  EMPTY_AI_LEVEL_CUSTOMIZATIONS,
+  DEFAULT_LEVEL_AICHAT_SETTINGS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
 import MultiItemInput from './MultiItemInput';
 import FieldSection from './FieldSection';
@@ -26,83 +25,71 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {UpdateContext} from './UpdateContext';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
-// Make sure all fields have a visibility specified.
-function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {
-  for (const key of Object.keys(data)) {
-    if (key === 'hidePresentationPanel') {
-      continue;
-    }
-    const field = data[key as keyof AiCustomizations];
-    if (field === undefined) {
-      continue;
-    }
-    if (field.visibility === undefined) {
-      field.visibility = Visibility.EDITABLE;
-    }
-  }
-  return data;
-}
-
 /**
  * Editor for the AI Customizations on the level edit page.
  */
-const EditAiCustomizations: React.FunctionComponent<{
-  initialCustomizations: LevelAiCustomizations;
-}> = ({initialCustomizations}) => {
-  const [aiCustomizations, setAiCustomizations] =
-    useState<LevelAiCustomizations>(
-      initialCustomizations || EMPTY_AI_LEVEL_CUSTOMIZATIONS
-    );
+const EditAichatSettings: React.FunctionComponent<{
+  initialSettings: LevelAichatSettings;
+}> = ({initialSettings}) => {
+  const [aichatSettings, setAichatSettings] = useState<LevelAichatSettings>(
+    initialSettings || DEFAULT_LEVEL_AICHAT_SETTINGS
+  );
+
+  const {initialCustomizations, visibilities} = aichatSettings;
+  const {retrievalContexts} = initialCustomizations;
 
   const setPropertyVisibility = useCallback(
     (property: keyof AiCustomizations, visibility: Visibility) => {
-      setAiCustomizations({
-        ...aiCustomizations,
-        [property]: {
-          value: aiCustomizations[property]?.value,
-          visibility,
+      setAichatSettings({
+        ...aichatSettings,
+        visibilities: {
+          ...visibilities,
+          [property]: visibility,
         },
       });
     },
-    [setAiCustomizations, aiCustomizations]
+    [setAichatSettings, aichatSettings, visibilities]
   );
 
   const setPropertyValue = useCallback(
-    (property: keyof AiCustomizations, value: string | number | string[]) => {
-      setAiCustomizations({
-        ...aiCustomizations,
-        [property]: {
-          value,
-          visibility: aiCustomizations[property]?.visibility,
+    (
+      property: keyof AiCustomizations,
+      value: AiCustomizations[keyof AiCustomizations]
+    ) => {
+      setAichatSettings({
+        ...aichatSettings,
+        initialCustomizations: {
+          ...initialCustomizations,
+          [property]: value,
         },
       });
     },
-    [setAiCustomizations, aiCustomizations]
+    [setAichatSettings, aichatSettings, initialCustomizations]
   );
 
   const setModelCardPropertyValue = useCallback(
-    (property: keyof ModelCardInfo, value: string | string[]) => {
-      const updatedModelCardInfo: ModelCardInfo = {
-        ...(aiCustomizations.modelCardInfo?.value || EMPTY_MODEL_CARD_INFO),
-        [property]: value,
-      };
-
-      setAiCustomizations({
-        ...aiCustomizations,
-        modelCardInfo: {
-          value: updatedModelCardInfo,
-          visibility:
-            aiCustomizations.modelCardInfo?.visibility || Visibility.EDITABLE,
+    (
+      property: keyof ModelCardInfo,
+      value: ModelCardInfo[keyof ModelCardInfo]
+    ) => {
+      setAichatSettings({
+        ...aichatSettings,
+        initialCustomizations: {
+          ...initialCustomizations,
+          modelCardInfo: {
+            ...initialCustomizations.modelCardInfo,
+            [property]: value,
+          },
         },
       });
     },
-    [aiCustomizations, setAiCustomizations]
+    [aichatSettings, setAichatSettings, initialCustomizations]
   );
 
   return (
     <UpdateContext.Provider
       value={{
-        aiCustomizations,
+        aichatSettings,
         setPropertyVisibility,
         setPropertyValue,
         setModelCardPropertyValue,
@@ -113,7 +100,7 @@ const EditAiCustomizations: React.FunctionComponent<{
           type="hidden"
           id="level_aichat_settings"
           name="level[aichat_settings]"
-          value={JSON.stringify(sanitizeData(aiCustomizations))}
+          value={JSON.stringify(aichatSettings)}
         />
         <BodyThreeText>
           Set the initial values and visibility for AI model customizations.
@@ -153,22 +140,21 @@ const EditAiCustomizations: React.FunctionComponent<{
           inputType="custom"
           inputNode={
             <MultiItemInput
-              items={aiCustomizations.retrievalContexts?.value || []}
+              items={retrievalContexts}
               onAdd={() => {
                 setPropertyValue(
                   'retrievalContexts',
-                  aiCustomizations.retrievalContexts?.value?.concat('') || ['']
+                  retrievalContexts.concat('')
                 );
               }}
               onRemove={() => {
                 setPropertyValue(
                   'retrievalContexts',
-                  aiCustomizations.retrievalContexts?.value?.slice(0, -1) || []
+                  retrievalContexts.slice(0, -1)
                 );
               }}
               onChange={(index, value) => {
-                const updatedContexts =
-                  aiCustomizations.retrievalContexts.value.slice();
+                const updatedContexts = retrievalContexts.slice();
                 updatedContexts[index] = value;
                 setPropertyValue('retrievalContexts', updatedContexts);
               }}
@@ -183,10 +169,7 @@ const EditAiCustomizations: React.FunctionComponent<{
             <div className={moduleStyles.fieldRow}>
               <ModelCardFields />
               <VisibilityDropdown
-                value={
-                  aiCustomizations.modelCardInfo?.visibility ||
-                  Visibility.EDITABLE
-                }
+                value={visibilities.modelCardInfo}
                 property="modelCardInfo"
               />
             </div>
@@ -214,10 +197,10 @@ const EditAiCustomizations: React.FunctionComponent<{
               </label>
               <Checkbox
                 name="hidePresentationPanel"
-                checked={aiCustomizations.hidePresentationPanel || false}
+                checked={aichatSettings.hidePresentationPanel || false}
                 onChange={e => {
-                  setAiCustomizations({
-                    ...aiCustomizations,
+                  setAichatSettings({
+                    ...aichatSettings,
                     hidePresentationPanel: e.target.checked,
                   });
                 }}
@@ -231,4 +214,4 @@ const EditAiCustomizations: React.FunctionComponent<{
   );
 };
 
-export default EditAiCustomizations;
+export default EditAichatSettings;

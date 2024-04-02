@@ -1,6 +1,6 @@
 import {
   AiCustomizations,
-  LevelAiCustomizations,
+  LevelAichatSettings,
   ModelCardInfo,
   Visibility,
 } from '../../types';
@@ -26,18 +26,6 @@ export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   exampleTopics: [],
 };
 
-export const EMPTY_AI_LEVEL_CUSTOMIZATIONS: LevelAiCustomizations = {
-  botName: {value: '', visibility: Visibility.EDITABLE},
-  temperature: {value: 0.5, visibility: Visibility.EDITABLE},
-  systemPrompt: {value: '', visibility: Visibility.EDITABLE},
-  retrievalContexts: {value: [], visibility: Visibility.EDITABLE},
-  modelCardInfo: {
-    value: EMPTY_MODEL_CARD_INFO,
-    visibility: Visibility.EDITABLE,
-  },
-  hidePresentationPanel: false,
-};
-
 export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
   botName: '',
   temperature: 0.5,
@@ -54,4 +42,10 @@ export const DEFAULT_VISIBILITIES: {
   systemPrompt: Visibility.EDITABLE,
   retrievalContexts: Visibility.EDITABLE,
   modelCardInfo: Visibility.EDITABLE,
+};
+
+export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
+  initialCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  visibilities: DEFAULT_VISIBILITIES,
+  hidePresentationPanel: false,
 };

@@ -8,9 +8,10 @@ import {
 import {UpdateContext} from './UpdateContext';
 
 const ModelCardFields: React.FunctionComponent = () => {
-  const {setModelCardPropertyValue, aiCustomizations} =
+  const {setModelCardPropertyValue, aichatSettings: aiCustomizations} =
     useContext(UpdateContext);
-  const exampleTopics = aiCustomizations.modelCardInfo?.value?.exampleTopics;
+  const modelCardInfo = aiCustomizations.initialCustomizations.modelCardInfo;
+  const exampleTopics = modelCardInfo.exampleTopics;
   return (
     <div className={moduleStyles['model-card-fields']}>
       {MODEL_CARD_FIELDS_AND_LABELS.map(([property, label]) => {
@@ -19,7 +20,7 @@ const ModelCardFields: React.FunctionComponent = () => {
             <label htmlFor={`modelCard-${property}`}>{label}</label>
             <textarea
               id={`modelCard-${property}`}
-              value={aiCustomizations.modelCardInfo?.value?.[property] || ''}
+              value={modelCardInfo[property]}
               onChange={e =>
                 setModelCardPropertyValue(property, e.target.value)
               }

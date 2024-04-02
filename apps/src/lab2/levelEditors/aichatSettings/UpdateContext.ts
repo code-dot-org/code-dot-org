@@ -1,16 +1,16 @@
 import {
   AiCustomizations,
-  LevelAiCustomizations,
+  LevelAichatSettings,
   ModelCardInfo,
   Visibility,
 } from '@cdo/apps/aichat/types';
 import {createContext} from 'react';
 
 export const UpdateContext = createContext({
-  aiCustomizations: {} as LevelAiCustomizations,
+  aichatSettings: {} as LevelAichatSettings,
   setPropertyValue: (
     property: keyof AiCustomizations,
-    value: string | number
+    value: AiCustomizations[keyof AiCustomizations]
   ) => {},
   setPropertyVisibility: (
     property: keyof AiCustomizations,
@@ -18,6 +18,6 @@ export const UpdateContext = createContext({
   ) => {},
   setModelCardPropertyValue: (
     property: keyof ModelCardInfo,
-    value: string | string[]
+    value: ModelCardInfo[keyof ModelCardInfo]
   ) => {},
 });
