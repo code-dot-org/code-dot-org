@@ -202,12 +202,13 @@ class LtiV1Controller < ApplicationController
     JSON::JWT.decode(id_token, jwk_set)
   end
 
-  def render_sync_course_error(message, status, error = nil)
-    @lti_section_sync_result = {error: error}
+  def render_sync_course_error(reason, status, error = nil, message: nil)
+    @lti_section_sync_result = {error: error, message: message}
     Honeybadger.notify(
       'LTI roster sync error',
       context: {
-        reason: message,
+        reason: reason,
+        details: message,
       }
     )
     return respond_to do |format|
@@ -279,6 +280,22 @@ class LtiV1Controller < ApplicationController
       nrps_url = params[:nrps_url]
     end
 
+    lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+    nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+    if Policies::Lti.issuer_accepts_resource_link?(lti_integration.issuer)
+      nrps_response_errors = Services::Lti::NRPSResponseValidator.call(nrps_response)
+
+      if nrps_response_errors.present?
+        return render_sync_course_error(
+          'Invalid LTI key configuration',
+          :unprocessable_entity,
+          'invalid_configs',
+          message: nrps_response_errors.join("\n")
+        )
+      end
+    end
+    nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
+
     result = nil
     had_changes = false
     total_sections = 0
@@ -291,10 +308,6 @@ class LtiV1Controller < ApplicationController
         nrps_url: nrps_url,
         resource_link_id: resource_link_id
       )
-
-      lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
-      nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
-      nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
 
       result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
       had_changes ||= !result[:changed].empty?
@@ -317,6 +330,7 @@ class LtiV1Controller < ApplicationController
       metadata: metadata,
     )
 
+    result[:course_name] = nrps_response.dig(:context, :title)
     @lti_section_sync_result = result
     @lms_name = lti_integration.platform_name
 

@@ -141,7 +141,6 @@ module Services
           # Custom variables substitutions must be configured in the LMS.
           custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
 
-          # Handles the possibility of the LMS not having sectionId variable substitution configured.
           member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
           # :section_names from Canvas is a stringified JSON array
           member_section_names = JSON.parse(custom_variables[:section_names])
@@ -157,6 +156,7 @@ module Services
             sections[section_id] = {
               # Schoology provides Course and section name in context_title
               name: member_section_names[index].nil? ? context_title.to_s : "#{context_title}: #{member_section_names[index]}",
+              short_name: member_section_names[index] || context_title.to_s,
               members: [member],
             }
           end
@@ -167,13 +167,15 @@ module Services
 
     # Takes an LTI section and NRPS members array and syncs a single section.
     # @return {boolean} whether any changes were made
-    def self.sync_section_roster(lti_integration, lti_section, nrps_members)
+    def self.sync_section_roster(lti_integration, lti_section, nrps_section)
       had_changes = false
+      nrps_members = nrps_section[:members]
       client_id = lti_integration.client_id
       issuer = lti_integration.issuer
       section = lti_section.section
       current_students = Set.new
       current_teachers = Set.new
+      instructor_list = []
 
       nrps_members.each do |nrps_member|
         account_type = Policies::Lti.get_account_type(nrps_member[:roles])
@@ -197,6 +199,11 @@ module Services
             had_changes ||= add_instructor_result
           end
           current_teachers.add(user.id)
+          instructor_list << {
+            name: user.name,
+            id: user.id,
+            isOwner: user.id == section.user_id,
+          }
         else
           add_student_result = section.add_student(user)
           had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
@@ -221,11 +228,12 @@ module Services
         end
       end
 
-      section_size = nrps_members.count {|member| member[:roles].include?(Policies::Lti::CONTEXT_LEARNER_ROLE)}
       {
         had_changes: had_changes,
-        size: section_size,
+        size: current_students.size,
         name: lti_section.section.name,
+        short_name: nrps_section[:short_name],
+        instructors: instructor_list,
       }
     end
 
@@ -280,7 +288,7 @@ module Services
           lti_section.section.update(name: section_name)
           had_changes = true
         end
-        current_section_result = sync_section_roster(lti_integration, lti_section, nrps_sections[lms_section_id][:members])
+        current_section_result = sync_section_roster(lti_integration, lti_section, nrps_sections[lms_section_id])
         had_changes ||= current_section_result[:had_changes]
         course_sync_result[:all][lms_section_id] = current_section_result
         if current_section_result[:had_changes]

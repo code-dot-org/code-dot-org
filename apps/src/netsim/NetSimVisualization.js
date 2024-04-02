@@ -3,18 +3,20 @@
  */
 
 import $ from 'jquery';
+
 var _ = require('lodash');
-var visualizationMarkup = require('./NetSimVisualization.html.ejs');
+
+var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
-var NetSimWire = require('./NetSimWire');
+var visualizationMarkup = require('./NetSimVisualization.html.ejs');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
 var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
 var NetSimVizWire = require('./NetSimVizWire');
-var NetSimGlobals = require('./NetSimGlobals');
+var NetSimWire = require('./NetSimWire');
 var tweens = require('./tweens');
-var NetSimConstants = require('./NetSimConstants');
 var DnsMode = NetSimConstants.DnsMode;
 var NodeType = NetSimConstants.NodeType;
 

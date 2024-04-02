@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "long_instructions": "# Styling Elements with CSS\r\n\r\n#### After learning how to style text using CSS, students will move on to style other elements of their web page such as background color and image placement. \r\n\r\n# Do This\r\n\r\n#### 1. Look through web page below for new styles.\r\n#### 2. Open the style sheet.\r\n#### 3. Identify parts of the CSS code that are making the page appear different.\r\n  * #### What makes the entire page blue?\r\n  * #### How are the images positioned to the left of all the other elements?\r\n",
+    "long_instructions": "# Styling Elements with CSS\r\n\r\n#### After learning how to style text using CSS, students will move on to style other elements of their web page such as background color and image placement. \r\n\r\n# Do This\r\n\r\n#### 1. Look through the web page below for new styles.\r\n#### 2. Open the style sheet.\r\n#### 3. Identify parts of the CSS code that are making the page appear different.\r\n  * #### What makes the entire page blue?\r\n  * #### How are the images positioned to the left of all the other elements?\r\n",
     "instructions_important": "false",
     "project_template_level_name": "CSDU2 - layout style template_-csd-2023",
     "hide_share_and_remix": "false",
@@ -33,6 +33,6 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-14T20:02:52.100+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2023\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2023\"},{\"changed_at\":\"2024-03-29 03:00:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-14T20:02:52.100+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2023\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2023\"},{\"changed_at\":\"2024-03-29 03:00:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-03-29 21:44:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Weblab>
