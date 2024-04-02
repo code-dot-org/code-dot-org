@@ -18,11 +18,14 @@ import {
 } from './constants';
 import {isVisible, isDisabled} from './utils';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import CompareModelsDialog from './CompareModelsDialog';
 
 const PromptCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const [chosenModel, setChosenModel] = useState<string>('llama2');
+  const [isShowingModelDialog, setIsShowingModelDialog] =
+    useState<boolean>(false);
 
   const {botName, temperature, systemPrompt} = useAppSelector(
     state =>
@@ -62,11 +65,16 @@ const PromptCustomization: React.FunctionComponent = () => {
           <div>
             <Button
               text="Compare Models"
-              onClick={() => {}}
+              onClick={() => setIsShowingModelDialog(true)}
               type="secondary"
               className={styles.updateButton}
             />
           </div>
+          {isShowingModelDialog && (
+            <CompareModelsDialog
+              onClose={() => setIsShowingModelDialog(false)}
+            />
+          )}
         </div>
         {isVisible(botName.visibility) && (
           <div className={styles.inputContainer}>

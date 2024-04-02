@@ -12,6 +12,7 @@ function AccessibleDialog({
   className,
   initialFocus = true,
   closeOnClickBackdrop = false,
+  modalId,
 }) {
   // If these styles are provided by the given stylesheet, use them
   const modalStyle = styles?.modal || defaultStyle.modal;
@@ -32,6 +33,7 @@ function AccessibleDialog({
             aria-modal
             className={classnames(modalStyle, className)}
             role="dialog"
+            id={modalId}
           >
             {children}
           </div>
@@ -48,6 +50,7 @@ AccessibleDialog.propTypes = {
   className: PropTypes.string,
   initialFocus: PropTypes.bool,
   closeOnClickBackdrop: PropTypes.bool,
+  modalId: PropTypes.string,
 };
 
 export default AccessibleDialog;

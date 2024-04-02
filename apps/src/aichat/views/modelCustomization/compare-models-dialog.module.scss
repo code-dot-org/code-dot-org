@@ -1,0 +1,19 @@
+@import 'color';
+
+.descriptionContainer {
+  background-color: $light_gray_50;
+  border-radius: 4px;
+}
+
+.modelDescriptionContainer {
+  flex: 1;
+  padding: 5px 10px;
+}
+
+#modelComparisonContainer {
+  height: 600px;
+  width: 800px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
