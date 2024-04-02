@@ -332,6 +332,19 @@ class HomeControllerTest < ActionController::TestCase
 
     assert_select '#student-information-modal', false
   end
+  test 'student under 13 and in US with no state gets student information prompt' do
+    student = create(:student, age: 12)
+    assert student.age
+
+    sign_in student
+
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state'
+    assert_select '#user_gender_student_input', false
+  end
 
   test 'anonymous does not get student information prompt' do
     get :index
