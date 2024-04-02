@@ -241,6 +241,10 @@ const EVENTS = {
     'Recommended Similar Curriculum Clicked',
   RECOMMENDED_STRETCH_CURRICULUM_CLICKED:
     'Recommended Stretch Curriculum Clicked',
+
+  // LTI Incubator
+  LTI_INCUBATOR_SIGNUP_CLICKED: 'LTI_Incubator_SignUp_Clicked',
+  LTI_INCUBATOR_GUIDES_CLICKED: 'LTI_Incubator_Guides_Clicked',
 };
 
 const EVENT_GROUP_NAMES = {

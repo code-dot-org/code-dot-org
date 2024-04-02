@@ -4,6 +4,9 @@ import DCDO from '@cdo/apps/dcdo';
 import Button from '@cdo/apps/templates/Button';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import i18n from '@cdo/locale';
+import {getStore} from '@cdo/apps/redux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {LmsLinks} from '@cdo/apps/util/sharedConstants';
 
 import HeaderBanner from '../HeaderBanner';
@@ -14,7 +17,21 @@ class Incubator extends Component {
 
     this.state = {
       canvasBlockEnabled: DCDO.get('incubator-canvas-block-enabled', true),
+      currentUser: getStore().getState().currentUser,
     };
+  }
+
+  reportEvent(eventName, platform = PLATFORMS.STATSIG) {
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        userId: this.state.currentUser.userId,
+        userType: this.state.currentUser.userType,
+        userName: this.state.currentUser.userName,
+        userRoleInCourse: this.state.currentUser.userRoleInCourse,
+      },
+      platform
+    );
   }
 
   render() {
@@ -58,12 +75,18 @@ class Incubator extends Component {
                   url: 'https://forms.gle/x7EBBiC18yJysb5D7',
                   text: i18n.incubator_canvasIntegration_earlyAccess_signIn_button(),
                   target: '_blank',
+                  onClick: () => {
+                    this.reportEvent(EVENTS.LTI_INCUBATOR_SIGNUP_CLICKED);
+                  },
                 },
                 {
                   url: LmsLinks.INSTALL_GUIDE_FOR_CANVAS_URL,
                   text: i18n.incubator_canvasIntegration_earlyAccess_guides_button(),
                   color: Button.ButtonColor.neutralDark,
                   target: '_blank',
+                  onClick: () => {
+                    this.reportEvent(EVENTS.LTI_INCUBATOR_GUIDES_CLICKED);
+                  },
                 },
               ]}
             />
