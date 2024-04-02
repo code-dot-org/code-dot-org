@@ -84,7 +84,7 @@ module Honeybadger
   def self.parse_exception_dump(error)
     return if error.to_s.empty?
 
-    # Unhandled Ruby exceptions are dumped to STDERR in the following format:
+    # Unhandled Ruby exceptions are dumped to $stderr in the following format:
     #   file:number:in `method': message
     #     from file:number:in `method'
     #     from ...

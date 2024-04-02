@@ -901,6 +901,7 @@ Dashboard::Application.routes.draw do
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
+        post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
 
         post 'users/post_ai_rubrics_tour_seen', to: 'users#post_ai_rubrics_tour_seen'
         get 'users/get_ai_rubrics_tour_seen', to: 'users#get_ai_rubrics_tour_seen'

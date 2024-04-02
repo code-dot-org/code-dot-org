@@ -1,6 +1,8 @@
 import {assert, expect} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
+
 var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
+
+var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 describe('NetSimUtils', function () {
   beforeEach(function () {

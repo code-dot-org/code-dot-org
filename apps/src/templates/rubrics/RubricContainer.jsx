@@ -38,11 +38,22 @@ export default function RubricContainer({
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const rubricTabSessionKey = 'rubricFABTabSessionKey';
+  const rubricPositionX = 'rubricFABPositionX';
+  const rubricPositionY = 'rubricFABPositionY';
 
   const [selectedTab, setSelectedTab] = useState(
     tryGetSessionStorage(rubricTabSessionKey, TAB_NAMES.RUBRIC) ||
       TAB_NAMES.RUBRIC
   );
+
+  const [positionX, setPositionX] = useState(
+    parseInt(tryGetSessionStorage(rubricPositionX, 0)) || 0
+  );
+
+  const [positionY, setPositionY] = useState(
+    parseInt(tryGetSessionStorage(rubricPositionY, 0)) || 0
+  );
+
   const [aiEvaluations, setAiEvaluations] = useState(null);
 
   const [feedbackAdded, setFeedbackAdded] = useState(false);
@@ -86,6 +97,19 @@ export default function RubricContainer({
   useEffect(() => {
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
   }, [selectedTab]);
+
+  useEffect(() => {
+    trySetSessionStorage(rubricPositionX, positionX);
+  }, [positionX]);
+
+  useEffect(() => {
+    trySetSessionStorage(rubricPositionY, positionY);
+  }, [positionY]);
+
+  const onStopHandler = (event, dragElement) => {
+    setPositionX(dragElement.x);
+    setPositionY(dragElement.y);
+  };
 
   const updateTourStatus = async () => {
     const url = `/rubrics/${rubric.id}/update_ai_rubrics_tour_seen`;
@@ -242,7 +266,10 @@ export default function RubricContainer({
   };
 
   return (
-    <Draggable>
+    <Draggable
+      defaultPosition={{x: positionX, y: positionY}}
+      onStop={onStopHandler}
+    >
       {stepsEnabled ? (
         <div
           data-testid="draggable-test-id"
@@ -400,6 +427,7 @@ export default function RubricContainer({
                 rubric={rubric}
                 sectionId={sectionId}
                 tabSelectCallback={tabSelectCallback}
+                reportingData={reportingData}
               />
             )}
           </div>
