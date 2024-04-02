@@ -12,9 +12,8 @@ const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
   isAvailable,
   //levelbuilderPrompt,
 }) => {
-  const [aiTutorAvailable, setaiTutorAvailable] =
+  const [aiTutorAvailable, setAiTutorAvailable] =
     useState<boolean>(isAvailable);
-
   // const [levelSpecificPrompt, setlevelSpecificPrompt] =
   //   useState<string>(levelbuilderPrompt);
 
@@ -26,10 +25,7 @@ const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
         name="level[ai_tutor_available]"
         value={aiTutorAvailable.toString()}
       />
-      <BodyThreeText>
-        Set the level-specific prompt.
-        <br />
-      </BodyThreeText>
+
       <div className={moduleStyles.fieldSection}>
         <div className={moduleStyles.fieldRow}>
           <label
@@ -42,10 +38,16 @@ const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
             name="aiTutorAvailableCheckbox"
             checked={aiTutorAvailable || false}
             onChange={e => {
-              setaiTutorAvailable(e.target.checked);
+              setAiTutorAvailable(!aiTutorAvailable);
             }}
           />
         </div>
+        {aiTutorAvailable && (
+          <BodyThreeText>
+            Set the level-specific prompt.
+            <br />
+          </BodyThreeText>
+        )}
         {/* <div className={moduleStyles.fieldRow}>
           <div className={moduleStyles.fieldValue}>
             <label htmlFor="levelPrompt">Level-Specific Prompt</label>
