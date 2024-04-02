@@ -1,8 +1,12 @@
+import {render} from '@testing-library/react';
 import {mount} from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 
-import {AudioQueue} from '@cdo/apps/templates/instructions/AudioQueue';
+import {
+  AudioQueue,
+  AudioQueueContext,
+} from '@cdo/apps/templates/instructions/AudioQueue';
 import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
 
 import {assert, expect} from '../../../util/reconfiguredChai';
@@ -174,6 +178,41 @@ describe('InlineAudio', function () {
     expect(component.state().audio).to.be.undefined;
     expect(component.state().playing).to.be.false;
     expect(component.state().error).to.be.false;
+  });
+
+  it('calls addToQueue for each InlineAudio rendered', () => {
+    const addToQueueSpy = sinon.spy();
+    render(
+      <AudioQueueContext.Provider
+        value={{
+          addToQueue: addToQueueSpy,
+          playNextAudio: () => {},
+          clearQueue: () => {},
+          isPlaying: {current: false},
+        }}
+      >
+        <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={true} />
+        <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={true} />
+      </AudioQueueContext.Provider>
+    );
+    expect(addToQueueSpy).to.have.been.calledTwice;
+  });
+
+  it('does not add to queue if autoplay is off', () => {
+    const addToQueueSpy = sinon.spy();
+    render(
+      <AudioQueueContext.Provider
+        value={{
+          addToQueue: addToQueueSpy,
+          playNextAudio: () => {},
+          clearQueue: () => {},
+          isPlaying: {current: false},
+        }}
+      >
+        <InlineAudio {...DEFAULT_PROPS} />
+      </AudioQueueContext.Provider>
+    );
+    expect(addToQueueSpy).to.not.have.been.called;
   });
 });
 

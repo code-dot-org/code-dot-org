@@ -2,65 +2,75 @@ import {render} from '@testing-library/react';
 import React from 'react';
 import sinon from 'sinon';
 
-import {AudioQueueContext} from '@cdo/apps/templates/instructions/AudioQueue';
-import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
+import {
+  AudioQueue,
+  AudioQueueContext,
+} from '@cdo/apps/templates/instructions/AudioQueue';
 
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 
-interface InlineAudioProps {
-  assetUrl: () => void;
-  isK1: boolean;
-  locale: string;
-  src: string;
-  textToSpeechEnabled: boolean;
-  ttsAutoplayEnabled: boolean;
+type myProps = {
+  shouldQueue: boolean;
+  playNextAudioCallCounter: number;
+};
+
+class AudioQueueItem extends React.Component<myProps> {
+  componentDidMount() {
+    const {addToQueue, playNextAudio} = this.context;
+    if (this.props.shouldQueue) addToQueue(this);
+    for (let i = 0; i < this.props.playNextAudioCallCounter; i++)
+      playNextAudio();
+  }
+
+  playAudio() {}
+  render() {
+    return <div />;
+  }
 }
 
-const DEFAULT_PROPS: InlineAudioProps = {
-  assetUrl: () => {},
-  isK1: true,
-  locale: 'it_it',
-  src: 'test',
-  textToSpeechEnabled: true,
-  ttsAutoplayEnabled: true,
-};
+AudioQueueItem.contextType = AudioQueueContext;
 
 describe('AudioQueue', () => {
   setExternalGlobals();
 
-  it('calls addToQueue for each InlineAudio rendered', () => {
-    const addToQueueSpy = sinon.spy();
+  // Write react component that expects to be provided that function, test does nothing when queue is empty, playAudio calls playAudio of child component
+  it('does not play audio when nothing added to queue', () => {
+    const playAudioSpy = sinon.spy(AudioQueueItem.prototype, 'playAudio');
+
     render(
-      <AudioQueueContext.Provider
-        value={{
-          addToQueue: addToQueueSpy,
-          playNextAudio: () => {},
-          clearQueue: () => {},
-          isPlaying: {current: false},
-        }}
-      >
-        <InlineAudio {...DEFAULT_PROPS} />
-        <InlineAudio {...DEFAULT_PROPS} />
-      </AudioQueueContext.Provider>
+      <AudioQueue>
+        <AudioQueueItem shouldQueue={false} playNextAudioCallCounter={1} />
+      </AudioQueue>
     );
-    expect(addToQueueSpy).to.have.been.calledTwice;
+
+    expect(playAudioSpy).to.not.have.been.called;
+    playAudioSpy.restore();
   });
 
-  it('does not add to queue if autoplay is off', () => {
-    const addToQueueSpy = sinon.spy();
+  it('plays audio when adding to queue', () => {
+    const playAudioSpy = sinon.spy(AudioQueueItem.prototype, 'playAudio');
+
     render(
-      <AudioQueueContext.Provider
-        value={{
-          addToQueue: addToQueueSpy,
-          playNextAudio: () => {},
-          clearQueue: () => {},
-          isPlaying: {current: false},
-        }}
-      >
-        <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={false} />
-      </AudioQueueContext.Provider>
+      <AudioQueue>
+        <AudioQueueItem shouldQueue={true} playNextAudioCallCounter={1} />
+      </AudioQueue>
     );
-    expect(addToQueueSpy).to.not.have.been.called;
+
+    expect(playAudioSpy).to.have.been.called;
+    playAudioSpy.restore();
+  });
+
+  it('only plays one audio if one audio in queue and multiple plaYNextAudio calls', () => {
+    const playAudioSpy = sinon.spy(AudioQueueItem.prototype, 'playAudio');
+
+    render(
+      <AudioQueue>
+        <AudioQueueItem shouldQueue={true} playNextAudioCallCounter={2} />
+      </AudioQueue>
+    );
+
+    expect(playAudioSpy).to.have.been.calledOnce;
+    playAudioSpy.restore();
   });
 });
