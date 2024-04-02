@@ -72,22 +72,20 @@ function ExpandedProgressDataColumn({
     () => (
       <tbody className={styles.expandedTable}>
         {sortedStudents.map(student => (
-          <>
+          <tr className={styles.expandedLevelColumn} key={student.id}>
             <th hidden={true} id={getStudentRowHeaderId(student.id)}>
               {getFullName(student)}
             </th>
-            <tr className={styles.expandedLevelColumn} key={lesson.id}>
-              {lesson.levels.flatMap(level => {
-                if (
-                  level.sublevels?.length > 0 &&
-                  expandedChoiceLevels.includes(level.id)
-                ) {
-                  return getExpandedChoiceLevel(level, student.id);
-                }
-                return [getSingleLevelColumn(level, student.id)];
-              })}
-            </tr>
-          </>
+            {lesson.levels.flatMap(level => {
+              if (
+                level.sublevels?.length > 0 &&
+                expandedChoiceLevels.includes(level.id)
+              ) {
+                return getExpandedChoiceLevel(level, student.id);
+              }
+              return [getSingleLevelColumn(level, student.id)];
+            })}
+          </tr>
         ))}
       </tbody>
     ),
