@@ -38,12 +38,14 @@ export const RightPane = () => {
     project: {files},
     config: {previewFileTypes, PreviewComponents},
   } = useCDOIDEContext();
-  const [previewFile, setPreviewFile] = useState(
-    Object.values(files).find(f => f.name === 'index.html' && !f.folderId)
+  const [previewFile, setPreviewFile] = useState<ProjectFileType | undefined>(
+    Object.values(files).find(
+      (f: ProjectFileType) => f.name === 'index.html' && !f.folderId
+    )
   );
 
-  const activeFile = Object.values(files).find(
-    f => f.active && previewFileType(f.language)
+  const activeFile: ProjectFileType | undefined = Object.values(files).find(
+    (f: ProjectFileType) => f.active && previewFileType(f.language)
   ); //*/
 
   useEffect(() => {
@@ -55,7 +57,7 @@ export const RightPane = () => {
   useEffect(() => {
     if (previewFile && !files[previewFile.id]) {
       setPreviewFile(
-        Object.values(files).find(f =>
+        Object.values(files).find((f: ProjectFileType) =>
           previewFileType(f.language, previewFileTypes)
         )
       );
@@ -69,13 +71,13 @@ export const RightPane = () => {
       <select
         onChange={e => {
           const newFile = Object.values(files).find(
-            f => f.id === e.target.value
+            (f: ProjectFileType) => f.id === e.target.value
           );
           setPreviewFile(newFile);
         }}
         value={previewFile?.id}
       >
-        {Object.values(files)
+        {(Object.values(files) as ProjectFileType[])
           .sort()
           .filter(f => previewFileType(f.language, previewFileTypes))
           .map(file => (
