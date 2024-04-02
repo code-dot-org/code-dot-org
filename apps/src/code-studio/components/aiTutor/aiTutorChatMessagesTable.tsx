@@ -25,12 +25,20 @@ const STATUS_LABELS: StatusLabels = {
   unknown: 'Unknown Status',
 };
 
+enum TimeFilter {
+  LastHour = 'lastHour',
+  Last24Hours = 'last24Hours',
+  Last7Days = 'last7Days',
+  Last30Days = 'last30Days',
+  AllTime = 'allTime',
+}
+
 const TIME_FILTER_OPTIONS = [
-  {value: 'lastHour', text: 'Last Hour'},
-  {value: 'last24Hours', text: 'Last 24 Hours'},
-  {value: 'last7Days', text: 'Last 7 Days'},
-  {value: 'last30Days', text: 'Last 30 Days'},
-  {value: 'allTime', text: 'All Time'},
+  {value: TimeFilter.LastHour, text: 'Last Hour'},
+  {value: TimeFilter.Last24Hours, text: 'Last 24 Hours'},
+  {value: TimeFilter.Last7Days, text: 'Last 7 Days'},
+  {value: TimeFilter.Last30Days, text: 'Last 30 Days'},
+  {value: TimeFilter.AllTime, text: 'All Time'},
 ];
 
 /**
@@ -111,18 +119,18 @@ const AITutorChatMessagesTable: React.FunctionComponent<
     const messageDate = moment(message.createdAt);
     let timeMatch = false;
     switch (selectedTimeFilter) {
-      case 'lastHour':
+      case TimeFilter.LastHour:
         timeMatch = messageDate.isAfter(moment().subtract(1, 'hours'));
         break;
-      case 'last24Hours':
+      case TimeFilter.Last24Hours:
         timeMatch = messageDate.isAfter(moment().subtract(24, 'hours'));
         break;
-      case 'last7Days':
+      case TimeFilter.Last7Days:
         timeMatch = messageDate.isAfter(moment().subtract(7, 'days'));
         break;
-      case 'last30Days':
-        // For now, the last 30 days and all-time filters are equivalent because of a
-        // cron job that deletes chat messages older than 30 days.
+      // For now, the last 30 days and all-time filters are equivalent because of a
+      // cron job that deletes chat messages older than 30 days.
+      case TimeFilter.Last30Days:
         timeMatch = messageDate.isAfter(moment().subtract(30, 'days'));
         break;
       default:
