@@ -106,6 +106,7 @@ const PromptCustomization: React.FunctionComponent = () => {
         <Button
           text="Update"
           disabled={allFieldsDisabled}
+          iconLeft={{iconName: 'edit'}}
           onClick={onUpdate}
           className={styles.updateButton}
         />
