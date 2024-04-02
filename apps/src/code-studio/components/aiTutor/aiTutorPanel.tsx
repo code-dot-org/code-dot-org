@@ -14,11 +14,8 @@ interface AITutorPanelProps {
 const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
   const level = useAppSelector(state => state.aiTutor.level);
   const isAssessmentLevel = level?.isAssessment;
-  const isAvailable = level?.aiTutorAvailable;
-  let aiTutorAvailable = true;
-  if (isAssessmentLevel || !isAvailable) {
-    aiTutorAvailable = false;
-  }
+  const aiTutorAvailable = level?.aiTutorAvailable;
+  const renderAITutor = !isAssessmentLevel && aiTutorAvailable;
 
   return (
     <div
@@ -29,7 +26,7 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
       <div className={classnames(style.aiTutorPanelContent)}>
         <h3 id="ai_tutor_panel">AI Tutor</h3>
         <img alt={commonI18n.aiBot()} src={icon} className={style.aiBotImg} />
-        {aiTutorAvailable ? (
+        {renderAITutor ? (
           <div>
             <AITutor />
             <h4> What would you like AI Tutor to help you with?</h4>
