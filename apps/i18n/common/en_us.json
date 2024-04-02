@@ -1356,7 +1356,7 @@
   "incorrectSolutionBody": "The solution you've entered is not correct.  Please try again!",
   "incubator_canvasIntegration_earlyAccess_title": "Canvas Integration Early Access",
   "incubator_canvasIntegration_earlyAccess_desc": "Try out our one-click Single Sign-On (SSO) and Roster Syncing integrations for Canvas now!",
-  "incubator_canvasIntegration_earlyAccess_signIn_button": "Sign-in now",
+  "incubator_canvasIntegration_earlyAccess_signUp_button": "Sign-up now",
   "incubator_canvasIntegration_earlyAccess_guides_button": "Guides",
   "infinity": "Infinity",
   "inProgress": "In progress",

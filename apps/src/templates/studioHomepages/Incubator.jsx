@@ -73,7 +73,7 @@ class Incubator extends Component {
               buttons={[
                 {
                   url: 'https://forms.gle/x7EBBiC18yJysb5D7',
-                  text: i18n.incubator_canvasIntegration_earlyAccess_signIn_button(),
+                  text: i18n.incubator_canvasIntegration_earlyAccess_signUp_button(),
                   target: '_blank',
                   onClick: () => {
                     this.reportEvent(EVENTS.LTI_INCUBATOR_SIGNUP_CLICKED);
