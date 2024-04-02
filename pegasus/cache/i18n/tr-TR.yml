@@ -1148,6 +1148,7 @@ tr-TR:
   header_about_us: Hakkımızda
   header_course_catalog: Kurs Kataloğu
   header_courses: kurslar
+  header_districts: İlçeler
   header_documentation: Belgeler
   header_educate_beyond: Code.org ötesi
   header_educate_community: Çevrimiçi Topluluk
@@ -2498,6 +2499,7 @@ tr-TR:
   user_header_applab: Uygulama Laboratuvarı
   user_header_artist: 'Sanatçı '
   user_header_create: 'Oluştur '
+  user_header_create_account: 'Hesap oluştur '
   user_header_dance: Dans Partisi
   user_header_flappy: Flappy
   user_header_gamelab: Oyun Laboratuvarı

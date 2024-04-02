@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 
 ## Body Styling
 
-#### The `<body>` element is a special element that wraps all of the visible content on a web page. Because everything that you see is inside this tag, any rule-set that you create for the body element will apply to every element on page, unless the element itself has a rule that contradicts it. This is useful for establishing a baseline style for everything on your page.
+#### The `<body>` element is a special element that wraps all of the visible content on a web page. Because everything that you see is inside this tag, any rule-set that you create for the body element will apply to every element on a page, unless the element itself has a rule that contradicts it. This is useful for establishing a baseline style for everything on your page.
 
 ### **Example**
 

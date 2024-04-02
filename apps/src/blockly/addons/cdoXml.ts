@@ -109,28 +109,31 @@ export function getProjectXml(workspace: WorkspaceSvg) {
     workspaceXml.appendChild(clonedNode);
   });
 
-  removeIdsFromBlocks(workspaceXml);
+  removeIdsFromBlocks(workspaceXml, Blockly.levelBlockIds);
 
   return workspaceXml;
 }
 
 /**
- * Removes the randomized 'id' attribute from all 'block' elements.
- * This is intended to prevent writing duplicate entries to the level_sources table.
+ * Removes the 'id' attribute from all 'block' elements except those specified to be preserved.
+ * This is intended to prevent writing duplicate entries to the level_sources table,
+ * but it can also be used in other contexts where block ids are not desired.
  * @param {Element} element - The XML element to process.
- * @param {string[]} levelBlockIds - An array of ids to preserve, if found.
+ * @param {Set<string>} [idsToExempt=new Set<string>] - An optional set of ids to preserve, if found.
  */
-function removeIdsFromBlocks(element: Element) {
-  if (element.nodeName === 'block') {
-    const id = element.getAttribute('id');
-    if (id && !Blockly.levelBlockIds.includes(id)) {
-      element.removeAttribute('id');
-    }
-  }
+export function removeIdsFromBlocks(
+  element: Element,
+  idsToExempt: Set<string> = new Set<string>()
+) {
+  // Find all 'block' elements including nested children, including the current element if it's a block.
+  const blockElements = element.querySelectorAll(':scope block');
 
-  // Blocks in XML are nested so we need to iterate through the children.
-  Array.from(element.children).forEach(child => {
-    removeIdsFromBlocks(child);
+  // Iterate over each found 'block' element
+  blockElements.forEach(blockElement => {
+    const id = blockElement.getAttribute('id');
+    if (id && !idsToExempt.has(id)) {
+      blockElement.removeAttribute('id');
+    }
   });
 }
 

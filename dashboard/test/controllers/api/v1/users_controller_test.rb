@@ -310,4 +310,47 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response 200
     assert_equal '"DonorName"', response.body
   end
+
+  test "teacher can update ai tutor access for student in section" do
+    teacher = create :teacher
+    student_in_section = create :student
+    section = create :section, teacher: teacher
+    section.students << student_in_section
+
+    sign_in(teacher)
+
+    post :update_ai_tutor_access, params: {user_id: student_in_section.id, ai_tutor_access: false}
+    assert_response :no_content
+    student_in_section.reload
+    assert_equal true, student_in_section.ai_tutor_access_denied
+  end
+
+  test 'teacher cannot update ai tutor access for student not in section' do
+    teacher = create :teacher
+    student_not_in_section = create :student
+    create :section, teacher: teacher
+
+    sign_in(teacher)
+
+    post :update_ai_tutor_access, params: {user_id: student_not_in_section.id, ai_tutor_access: false}
+    assert_response :unauthorized
+  end
+
+  test 'student cannot modify ai tutor access' do
+    student = create :student
+
+    sign_in(student)
+
+    post :update_ai_tutor_access, params: {user_id: student.id, ai_tutor_access: false}
+    assert_response :unauthorized
+  end
+
+  test 'updating ai tutor access for uncreated user returns unauthorized' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    post :update_ai_tutor_access, params: {user_id: -1, ai_tutor_access: false}
+
+    assert_response :unauthorized
+  end
 end
