@@ -5,9 +5,9 @@ export default {
   component: ActionBlocksWrapper,
 };
 
-const generateActionBlocks = count => {
+const generateActionBlocks = tileCount => {
   const actionBlocks = [];
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < tileCount; i++) {
     actionBlocks.push({
       overline: `Overline ${i + 1}`,
       imageUrl:
