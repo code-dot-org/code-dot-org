@@ -93,6 +93,7 @@ const EVENTS = {
   PROGRESS_V2_EXPAND_ICON_KEY: 'Section New Progress Icon Key Expand',
   PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
   PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
+  PROGRESS_V2_VIEW_LEVEL_DETAILS: 'Section New Progress Level Details',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -135,6 +136,8 @@ const EVENTS = {
   TA_RUBRIC_RUN_BUTTON_CLICKED:
     'TA Rubric Teacher clicked RUN button on student work',
   TA_RUBRIC_LEARNING_GOAL_SELECTED: 'TA Rubric Learning Goal Selected',
+  TA_RUBRIC_DROPDOWN_STUDENT_SELECTED: 'TA Rubric Student Switched',
+  TA_RUBRIC_CSV_DOWNLOADED: 'TA Rubric CSV Downloaded',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',

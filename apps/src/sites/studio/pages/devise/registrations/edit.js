@@ -30,6 +30,7 @@ const {
   dependedUponForLogin,
   dependentStudentsCount,
   personalAccountLinkingEnabled,
+  lmsName,
 } = scriptData;
 
 $(document).ready(() => {
@@ -94,6 +95,7 @@ $(document).ready(() => {
           ) === 'true'
         }
         formId={'lti-sync-settings-form'}
+        lmsName={lmsName}
       />,
       ltiSyncSettingsMountPoint
     );

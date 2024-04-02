@@ -3,11 +3,14 @@
  */
 
 import $ from 'jquery';
+
 var _ = require('lodash');
+
 var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
+
+var ArgumentUtils = require('./ArgumentUtils');
 var NetSimApi = require('./NetSimApi');
 var NetSimGlobals = require('./NetSimGlobals');
-var ArgumentUtils = require('./ArgumentUtils');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache

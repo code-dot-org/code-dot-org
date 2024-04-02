@@ -1,0 +1,41 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-04-02T15:25:25.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "##1️⃣ Show variable (scoreboard)\n\nThis block puts the variable name and current value onto the play space.\n\n<img src=\"https://images.code.org/14dcaea0ee98ffeb0dc41ff3b77fa35c-image-1711142905141.jpg\" style=\"margin-right: 40px; width: 55%\">",
+        "imageUrl": "https://images.code.org/be055a8be36d4945b553cc0b224fe222-showscoreslide.gif",
+        "key": "games_dev_variables_panel-f291fa1b-ba53-4654-87a6-7c35376e6659",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "## 2️⃣ Set variable (starting score)\n\nThis block sets the value of the variable.\n\n<img src=\"https://images.code.org/7eb62fd8397a08c2db35a560c04b742b-image-1711143457638.jpg\" style=\"margin-right: 40px; width: 30%\">",
+        "imageUrl": "",
+        "key": "games_dev_variables_panel-a8841bd0-4808-48cc-85ac-2d43ce210226"
+      },
+      {
+        "text": "## 3️⃣ Change variable (score points)\n\nThis block changes the value of the variable.\n\n<img src=\"https://images.code.org/bba5a417e342b31fc40771590d5c2e41-image-1711143867215.jpg\" style=\"margin-right: 40px;  width: 50%\">",
+        "imageUrl": "https://images.code.org/2959f6ffcaf06474e45aa6d3e3fa4643-changeScoreSlide.gif",
+        "key": "games_dev_variables_panel-68fde408-b74c-4b53-8a8c-39dd7456bf02"
+      },
+      {
+        "text": "##4️⃣ <strong>Conditional</strong> (winning)\n\nThis block checks to see if the condition is true. If it is true it will run the code inside.\n\n<img src=\"https://images.code.org/34ad90c428b5fe801dc09484643d9020-image-1711144527212.jpg\" style=\"margin-right: 40px;  width: 50%\">",
+        "imageUrl": "https://images.code.org/088cdbeae6fbcdf04e47e14647f2540d-winningSlide.gif",
+        "key": "games_dev_variables_panel-5fea9700-21a2-42af-8226-aad824e7b531"
+      },
+      {
+        "text": "",
+        "imageUrl": "",
+        "key": "games_dev_variables_panel-19c27820-32bf-4625-bf37-1083a223a3b2"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-04-02 15:41:00 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 15:44:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 15:45:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 15:49:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:03:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:12:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:14:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:18:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:30:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:35:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:36:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:38:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:41:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-02 16:48:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

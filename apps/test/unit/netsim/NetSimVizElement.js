@@ -1,4 +1,5 @@
 import {assert} from '../../util/reconfiguredChai';
+
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 
 describe('NetSimVizElement', function () {

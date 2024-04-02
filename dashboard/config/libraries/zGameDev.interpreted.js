@@ -1,6 +1,6 @@
 var GRID_SIZE = 8;
 var CELL_SIZE = 400 / GRID_SIZE;
-var GRAVITY = -0.25;
+var GRAVITY = -0.75;
 
 setDefaultSpriteSize(CELL_SIZE);
 
