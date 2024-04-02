@@ -3,10 +3,10 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 14: Chapter 1 Project
-<br>
+# Chapter 1 Project
 <img src="https://images.code.org/5c7f5731f419113f89a84845e3da0d7c-image-1711664715459.25.12 PM.png" alt="A website with a resume for a user named Alana" width="300px" style="float:right; margin-left:20px;padding-right: 10px;">
 
+#### <a href="https://studio.code.org/s/csd2-2024/lessons/14" target="blank" rel="noopener noreferrer">Lesson Plan</a>
 
 #### Chapter 1 of the Web Development unit concludes with a multi-lesson project where students will use the skills they have learned throughout the unit to create and design a web page for a user. They will be able to choose from several different users with distinct needs to style their web page.
 

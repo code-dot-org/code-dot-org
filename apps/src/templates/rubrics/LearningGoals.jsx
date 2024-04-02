@@ -17,6 +17,7 @@ import {
   BodyThreeText,
   OverlineThreeText,
   Heading5,
+  StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -212,6 +213,7 @@ export default function LearningGoals({
   );
   const [aiFeedback, setAiFeedback] = useState(-1);
   const [aiEvidence, setAiEvidence] = useState([]);
+  const [doneLoading, setDoneLoading] = useState(false);
   // The ref version of this state is used when updating the information based
   // on saved info retrieved by network requests so as not to race them.
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
@@ -226,7 +228,9 @@ export default function LearningGoals({
   );
 
   const aiEnabled =
-    learningGoals[currentLearningGoal].aiEnabled && teacherHasEnabledAi;
+    currentLearningGoal === learningGoals.length
+      ? false
+      : learningGoals[currentLearningGoal].aiEnabled && teacherHasEnabledAi;
   const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
 
   // Timer variables for autosaving
@@ -234,7 +238,11 @@ export default function LearningGoals({
   const saveAfter = 2000;
 
   const handleFeedbackChange = event => {
-    if (studentLevelInfo.user_id && learningGoals[currentLearningGoal].id) {
+    if (
+      currentLearningGoal !== learningGoals.length &&
+      studentLevelInfo.user_id &&
+      learningGoals[currentLearningGoal].id
+    ) {
       if (autosaveTimer.current) {
         clearTimeout(autosaveTimer.current);
       }
@@ -260,7 +268,10 @@ export default function LearningGoals({
     }
   };
 
-  const aiEvalInfo = getAiInfo(learningGoals[currentLearningGoal].id);
+  const aiEvalInfo =
+    currentLearningGoal === learningGoals.length
+      ? null
+      : getAiInfo(learningGoals[currentLearningGoal].id);
 
   // The backend provides two ai confidence levels. aiConfidenceExactMatch is
   // our confidence that the ai score is exactly correct, and and
@@ -352,6 +363,9 @@ export default function LearningGoals({
                 setLoaded(teacherFeedbacksLoaded.current[index]);
                 setDisplayUnderstanding(understandingLevels.current[index]);
               }
+              if (index === learningGoals.length - 1) {
+                setDoneLoading(true);
+              }
             })
             .catch(error => console.error(error));
         });
@@ -364,17 +378,19 @@ export default function LearningGoals({
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
-      ...(reportingData || {}),
-      learningGoalId: learningGoals[currentLearningGoal].id,
-      learningGoal: learningGoals[currentLearningGoal].learningGoal,
-      newlySelectedEvidenceLevel: radioButtonData,
-      previouslySelectedEvidenceLevel:
-        understandingLevels.current[currentLearningGoal],
-    });
-    setDisplayUnderstanding(radioButtonData);
-    understandingLevels.current[currentLearningGoal] = radioButtonData;
-    autosave();
+    if (currentLearningGoal !== learningGoals.length) {
+      analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
+        ...(reportingData || {}),
+        learningGoalId: learningGoals[currentLearningGoal].id,
+        learningGoal: learningGoals[currentLearningGoal].learningGoal,
+        newlySelectedEvidenceLevel: radioButtonData,
+        previouslySelectedEvidenceLevel:
+          understandingLevels.current[currentLearningGoal],
+      });
+      setDisplayUnderstanding(radioButtonData);
+      understandingLevels.current[currentLearningGoal] = radioButtonData;
+      autosave();
+    }
   };
 
   const renderAutoSaveTextbox = () => {
@@ -430,8 +446,8 @@ export default function LearningGoals({
     let currentIndex = currentLearningGoal;
     currentIndex += buttonValue;
     if (currentIndex < 0) {
-      currentIndex = learningGoals.length - 1;
-    } else if (currentIndex >= learningGoals.length) {
+      currentIndex = learningGoals.length;
+    } else if (currentIndex > learningGoals.length) {
       currentIndex = 0;
     }
     currentLearningGoalRef.current = currentIndex;
@@ -442,18 +458,20 @@ export default function LearningGoals({
 
     // Annotate the lines based on the AI observation
     clearAnnotations();
-    const aiEvalInfo = getAiInfo(learningGoals[currentIndex].id);
-    if (!!aiEvalInfo && aiEvalInfo.evidence) {
-      setAiEvidence(annotateLines(aiEvalInfo.evidence));
-    }
+    if (currentIndex !== learningGoals.length) {
+      const aiEvalInfo = getAiInfo(learningGoals[currentIndex].id);
+      if (!!aiEvalInfo && aiEvalInfo.evidence) {
+        setAiEvidence(annotateLines(aiEvalInfo.evidence));
+      }
 
-    if (!isStudent) {
-      const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
-      analyticsReporter.sendEvent(eventName, {
-        ...(reportingData || {}),
-        learningGoalKey: learningGoals[currentIndex].key,
-        learningGoal: learningGoals[currentIndex].learningGoal,
-      });
+      if (!isStudent) {
+        const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
+        analyticsReporter.sendEvent(eventName, {
+          ...(reportingData || {}),
+          learningGoalKey: learningGoals[currentIndex].key,
+          learningGoal: learningGoals[currentIndex].learningGoal,
+        });
+      }
     }
   };
 
@@ -486,6 +504,7 @@ export default function LearningGoals({
             understandingLevels={understandingLevels.current}
             radius={30}
             stroke={4}
+            loaded={doneLoading}
           />
           <div className={style.learningGoalsHeaderText}>
             <Heading5
@@ -494,17 +513,22 @@ export default function LearningGoals({
                 'uitest-learning-goal-title',
               ]}
             >
-              <span>{learningGoals[currentLearningGoal].learningGoal}</span>
+              <span>
+                {currentLearningGoal === learningGoals.length
+                  ? i18n.rubricLearningGoalSummary()
+                  : learningGoals[currentLearningGoal].learningGoal}
+              </span>
               {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
                 <AiToken />
               )}
             </Heading5>
             <BodyThreeText className={style.learningGoalsHeaderTextBody}>
               {i18n.next()}:{' '}
-              {
-                learningGoals[(currentLearningGoal + 1) % learningGoals.length]
-                  .learningGoal
-              }
+              {currentLearningGoal + 1 === learningGoals.length
+                ? i18n.rubricLearningGoalSummary()
+                : learningGoals[
+                    (currentLearningGoal + 1) % learningGoals.length
+                  ].learningGoal}
             </BodyThreeText>
           </div>
         </div>
@@ -544,60 +568,76 @@ export default function LearningGoals({
       </div>
 
       <div className={style.learningGoalOuterBlock}>
-        <div className={style.learningGoalExpanded}>
-          <AiAssessmentFeedbackContext.Provider
-            value={{aiFeedback, setAiFeedback}}
-          >
-            {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
-            <div>
-              <EvidenceLevels
-                aiEvalInfo={aiEvalInfo}
-                isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
-                learningGoalKey={learningGoals[currentLearningGoal].key}
-                evidenceLevels={
-                  learningGoals[currentLearningGoal].evidenceLevels
-                }
-                canProvideFeedback={canProvideFeedback}
-                understanding={displayUnderstanding}
-                radioButtonCallback={radioButtonCallback}
-                submittedEvaluation={submittedEvaluation}
-                isStudent={isStudent}
-                isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
-              />
-              {teacherHasEnabledAi &&
-                !!studentLevelInfo &&
-                !!aiEvalInfo &&
-                aiEvalInfo.understanding !== undefined && (
-                  <div className={style.aiAssessmentOuterBlock}>
-                    <AiAssessment
-                      isAiAssessed={
-                        learningGoals[currentLearningGoal].aiEnabled
-                      }
-                      studentName={studentLevelInfo.name}
-                      aiConfidence={aiConfidence}
-                      aiUnderstandingLevel={aiEvalInfo.understanding}
-                      aiEvalInfo={aiEvalInfo}
-                      aiEvidence={aiEvidence}
-                    />
-                  </div>
-                )}
-              {learningGoals[currentLearningGoal].tips && !isStudent && (
-                <details>
-                  <summary className={style.tipsDetailsSummary}>
-                    <strong>{i18n.tipsForEvaluation()}</strong>
-                  </summary>
+        {currentLearningGoal !== learningGoals.length && (
+          <div className={style.learningGoalExpanded}>
+            <AiAssessmentFeedbackContext.Provider
+              value={{aiFeedback, setAiFeedback}}
+            >
+              {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
+              <div>
+                <EvidenceLevels
+                  aiEvalInfo={aiEvalInfo}
+                  isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
+                  learningGoalKey={learningGoals[currentLearningGoal].key}
+                  evidenceLevels={
+                    learningGoals[currentLearningGoal].evidenceLevels
+                  }
+                  canProvideFeedback={canProvideFeedback}
+                  understanding={displayUnderstanding}
+                  radioButtonCallback={radioButtonCallback}
+                  submittedEvaluation={submittedEvaluation}
+                  isStudent={isStudent}
+                  isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
+                />
+                {teacherHasEnabledAi &&
+                  !!studentLevelInfo &&
+                  !!aiEvalInfo &&
+                  aiEvalInfo.understanding !== undefined && (
+                    <div className={style.aiAssessmentOuterBlock}>
+                      <AiAssessment
+                        isAiAssessed={
+                          learningGoals[currentLearningGoal].aiEnabled
+                        }
+                        studentName={studentLevelInfo.name}
+                        aiConfidence={aiConfidence}
+                        aiUnderstandingLevel={aiEvalInfo.understanding}
+                        aiEvalInfo={aiEvalInfo}
+                        aiEvidence={aiEvidence}
+                      />
+                    </div>
+                  )}
+                {learningGoals[currentLearningGoal].tips && !isStudent && (
+                  <details>
+                    <summary className={style.tipsDetailsSummary}>
+                      <strong>{i18n.tipsForEvaluation()}</strong>
+                    </summary>
 
-                  <div className={style.learningGoalsTips}>
-                    <SafeMarkdown
-                      markdown={learningGoals[currentLearningGoal].tips}
-                    />
-                  </div>
-                </details>
-              )}
-            </div>
-            {!!studentLevelInfo && renderAutoSaveTextbox()}
-          </AiAssessmentFeedbackContext.Provider>
-        </div>
+                    <div className={style.learningGoalsTips}>
+                      <SafeMarkdown
+                        markdown={learningGoals[currentLearningGoal].tips}
+                      />
+                    </div>
+                  </details>
+                )}
+              </div>
+              {!!studentLevelInfo && renderAutoSaveTextbox()}
+            </AiAssessmentFeedbackContext.Provider>
+          </div>
+        )}
+        {currentLearningGoal === learningGoals.length && (
+          <div>
+            {learningGoals.map((lg, i) => (
+              <div className={style.learningGoalSummary} key={i}>
+                <BodyThreeText>
+                  <StrongText>{lg.learningGoal}</StrongText>
+                </BodyThreeText>
+                <BodyThreeText>
+                  {UNDERSTANDING_LEVEL_STRINGS[understandingLevels.current[i]]}
+                </BodyThreeText>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

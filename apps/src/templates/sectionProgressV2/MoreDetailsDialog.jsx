@@ -16,7 +16,7 @@ import ProgressIcon from './ProgressIcon';
 
 import styles from './progress-table-legend.module.scss';
 
-export default function MoreDetailsDialog({hasValidation, onClose}) {
+export default function MoreDetailsDialog({onClose}) {
   const renderItem = (itemType, itemTitle, itemDetails) => (
     <div className={styles.item}>
       <ProgressIcon itemType={itemType} />
@@ -56,12 +56,11 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
             />
           </div>
         </div>
-        {hasValidation &&
-          renderItem(
-            ITEM_TYPE.VALIDATED,
-            i18n.validated(),
-            i18n.progressLegendDetailsValidated()
-          )}
+        {renderItem(
+          ITEM_TYPE.VALIDATED,
+          i18n.validated(),
+          i18n.progressLegendDetailsValidated()
+        )}
         {renderItem(
           ITEM_TYPE.NO_ONLINE_WORK,
           i18n.noOnlineWork(),
@@ -100,6 +99,5 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
 }
 
 MoreDetailsDialog.propTypes = {
-  hasValidation: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
 };

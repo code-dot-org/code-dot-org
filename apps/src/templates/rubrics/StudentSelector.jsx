@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Select from 'react-select';
 import i18n from '@cdo/locale';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {reload} from '@cdo/apps/utils';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
@@ -14,6 +16,7 @@ import {
   EmText,
   OverlineThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import {reportingDataShape} from './rubricShapes';
 
 const NO_SELECTED_SECTION_VALUE = '';
 
@@ -21,6 +24,8 @@ function StudentSelector({
   styleName,
   selectedUserId,
   reloadOnChange,
+  reportingData,
+  sectionId,
 
   //from redux
   students,
@@ -33,6 +38,11 @@ function StudentSelector({
       'user_id',
       newUserId === NO_SELECTED_SECTION_VALUE ? undefined : newUserId
     );
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_DROPDOWN_STUDENT_SELECTED, {
+      ...(reportingData || {}),
+      studentId: newUserId,
+      sectionId: sectionId,
+    });
     if (reloadOnChange) {
       reload();
     } else {
@@ -94,6 +104,8 @@ StudentSelector.propTypes = {
   styleName: PropTypes.string,
   selectedUserId: PropTypes.number,
   reloadOnChange: PropTypes.bool,
+  sectionId: PropTypes.number,
+  reportingData: reportingDataShape,
 
   //from redux
   students: PropTypes.arrayOf(

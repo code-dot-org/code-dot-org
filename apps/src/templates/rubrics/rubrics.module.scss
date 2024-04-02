@@ -963,6 +963,16 @@ h5.learningGoalsHeaderTextBody {
   }
 }
 
+.learningGoalSummary {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px $light_gray_100 solid;
+  margin: 1rem 1rem 0 1rem;
+}
+
 .aiTokenContainer {
   align-self: start;
   margin-left: 0.5rem;
