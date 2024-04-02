@@ -19,7 +19,6 @@ import Draggable from 'react-draggable';
 import {TAB_NAMES} from './rubricHelpers';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 // intro.js
 import 'intro.js/introjs.css';
@@ -58,7 +57,7 @@ export default function RubricContainer({
 
   const [feedbackAdded, setFeedbackAdded] = useState(false);
 
-  const [stepsEnabled, setStepsEnabled] = useState(true);
+  const [stepsEnabled, setStepsEnabled] = useState(false);
   const [tourButtonLabel, setTourButtonLabel] = useState('Next');
 
   const tabSelectCallback = tabSelection => {
@@ -112,22 +111,13 @@ export default function RubricContainer({
   };
 
   const updateTourStatus = async () => {
-    const url = `/rubrics/${rubric.id}/update_ai_rubrics_tour_seen`;
-    let bodyData;
-    if (stepsEnabled) {
-      bodyData = JSON.stringify({seen: true});
-    } else {
-      bodyData = JSON.stringify({seen: false});
-    }
-
-    HttpClient.post(url, bodyData, {
-      'Content-Type': 'application/json',
-    })
+    const url = `/rubrics/${rubric.id}/update_ai_rubrics_tour_seen?seen=${stepsEnabled}`;
+    fetch(url)
       .then(response => {
         return response.json();
       })
       .then(json => {
-        if (json['seen']) {
+        if (json['seen'] === 'true') {
           setStepsEnabled(false);
         } else {
           setStepsEnabled(true);
@@ -143,7 +133,7 @@ export default function RubricContainer({
         return response.json();
       })
       .then(json => {
-        if (json['seen']) {
+        if (json['seen'] === 'true') {
           setStepsEnabled(false);
         } else {
           setStepsEnabled(true);
@@ -203,7 +193,6 @@ export default function RubricContainer({
   ];
 
   const onExit = () => {
-    setStepsEnabled(false);
     updateTourStatus();
   };
 
@@ -383,6 +372,13 @@ export default function RubricContainer({
               <span>{i18n.rubricAiHeaderText()}</span>
             </div>
             <div className={style.rubricHeaderRightSide}>
+              <button
+                type="button"
+                onClick={updateTourStatus}
+                className={classnames(style.buttonStyle, style.closeButton)}
+              >
+                <FontAwesome icon="circle-question" />
+              </button>
               <button
                 type="button"
                 onClick={closeRubric}

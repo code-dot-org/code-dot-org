@@ -1,17 +1,17 @@
 @import 'color';
 @import 'font';
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
 
 @keyframes pulse {
   0% {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
   }
   100% {
-    transform: scale(.9);
+    transform: scale(0.9);
     box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
   }
 }
@@ -30,7 +30,7 @@
   border-radius: 30px;
 
   img {
-    opacity: 1.0;
+    opacity: 1;
     border-radius: 30px;
   }
 }
@@ -152,7 +152,7 @@
   flex: 1 1 100%;
   padding: 0.25rem 0;
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     & + i::before {
       background: $neutral_white;
     }
@@ -443,7 +443,6 @@ h2.studentName {
   flex-direction: column;
   gap: 1rem;
   align-self: stretch;
-
 
   .tipsDetailsSummary {
     font-size: 0.875rem;
@@ -1154,7 +1153,7 @@ p.evidenceLevelHeaderText {
 
 .infoAlertLeft {
   display: flex;
-  gap: 10px
+  gap: 10px;
 }
 
 .infoAlertRight {
@@ -1242,7 +1241,7 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 4px 10px 0;
   height: 22px;
-  display:inline;
+  display: inline;
   p {
     margin-bottom: 0;
   }
@@ -1253,9 +1252,9 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
-  display:inline;
+  display: inline;
   p {
-    margin: 0,0,0,0;
+    margin: 0, 0, 0, 0;
   }
 }
 
@@ -1264,14 +1263,14 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
-  display:inline;
+  display: inline;
   p {
-    margin: 0,0,0,0;
+    margin: 0, 0, 0, 0;
   }
 }
 
 .submitStatusText {
-  display:inline;
+  display: inline;
   padding-top: 3px;
   p {
     margin-bottom: 0;
@@ -1309,7 +1308,7 @@ p.detailsHidden {
   &:focus,
   &:visited {
     color: $light_white;
-    background-color: #6C468A;
+    background-color: #6c468a;
     text-decoration: none;
   }
 

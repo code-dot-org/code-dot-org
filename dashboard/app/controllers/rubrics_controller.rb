@@ -278,15 +278,15 @@ class RubricsController < ApplicationController
   end
 
   def update_ai_rubrics_tour_seen
-    seen = params.transform_keys(&:underscore).require(:seen)
-    return head :unauthorized unless current_user
+    return head :unauthorized unless current_user&.teacher?
+    seen = params.require(:seen)
     current_user.ai_rubrics_tour_seen = seen
     current_user.save!
     render json: {seen: current_user.ai_rubrics_tour_seen}
   end
 
   def get_ai_rubrics_tour_seen
-    return head :unauthorized unless current_user
+    return head :unauthorized unless current_user&.teacher?
     render json: {seen: current_user.ai_rubrics_tour_seen}
   end
 
