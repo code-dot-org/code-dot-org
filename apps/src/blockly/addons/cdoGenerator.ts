@@ -22,7 +22,7 @@ export default function initializeGenerator(
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function (name) {
-    let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
+    const blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
     );
     return blocklyWrapper.Generator.blocksToCode(name, blocksToGenerate);
