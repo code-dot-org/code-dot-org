@@ -26,7 +26,7 @@ const OneColumnActionBlock = ({
         {heading && (
           <Heading2 visualAppearance="heading-md">{heading}</Heading2>
         )}
-        {imageUrl && <img src={imageUrl} alt="" className={styles.image} />}
+        {imageUrl && <img src={imageUrl} alt="" />}
         {description && <BodyThreeText>{description}</BodyThreeText>}
       </div>
       <div className={styles.buttonWrapper}>
