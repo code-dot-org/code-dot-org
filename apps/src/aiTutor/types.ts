@@ -4,10 +4,9 @@ import {
   PiiTypes as PII,
 } from '@cdo/apps/util/sharedConstants';
 
-export type AITutorTypesValue =
-  (typeof AITutorTypes)[keyof typeof AITutorTypes];
-export type AITutorInteractionStatusValue =
-  (typeof AITutorInteractionStatus)[keyof typeof AITutorInteractionStatus];
+// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
+export type AITutorTypesValue = string;
+export type AITutorInteractionStatusValue = string;
 
 export {AITutorInteractionStatus, AITutorTypes, PII};
 
@@ -15,7 +14,7 @@ export interface ChatCompletionMessage {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: AITutorInteractionStatusValue;
+  status: string;
   timestamp?: string;
 }
 
@@ -39,7 +38,7 @@ export interface StudentChatRow {
   projectId?: string;
   prompt: string;
   scriptId?: number;
-  status: string;
+  status: AITutorInteractionStatusValue;
   studentName: string;
   type: AITutorTypesValue;
   updatedAt?: string;

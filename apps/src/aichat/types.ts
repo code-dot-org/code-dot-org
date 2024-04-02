@@ -4,8 +4,8 @@ import {
   PiiTypes as PII,
 } from '@cdo/apps/util/sharedConstants';
 
-export type AITutorInteractionStatusType =
-  (typeof AITutorInteractionStatus)[keyof typeof AITutorInteractionStatus];
+// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
+export type AITutorInteractionStatusType = string;
 
 export {PII, AITutorInteractionStatus};
 
