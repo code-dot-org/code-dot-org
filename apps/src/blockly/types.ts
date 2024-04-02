@@ -63,6 +63,13 @@ export interface arg {
   name: string;
 }
 
+export interface SerializedFields {
+  [key: string]: {
+    id?: string;
+    name?: string;
+  };
+}
+
 type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
@@ -97,7 +104,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
-  levelBlockIds: string[];
+  levelBlockIds: Set<string>;
   isStartMode: boolean;
   isToolboxMode: boolean;
   toolboxBlocks: ToolboxDefinition | undefined;
@@ -215,7 +222,7 @@ export interface ExtendedVariableMap extends VariableMap {
 export interface ExtendedBlocklyOptions extends BlocklyOptions {
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
-  levelBlockIds: string[];
+  levelBlockIds: Set<string>;
   isBlockEditMode: boolean;
   editBlocks: string | undefined;
   topLevelProcedureAutopopulate: boolean | undefined;

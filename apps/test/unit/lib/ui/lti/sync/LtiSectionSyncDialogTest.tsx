@@ -33,6 +33,8 @@ const MOCK_SYNC_RESULT: LtiSectionSyncResult = {
   changed: MOCK_UPDATED_SECTION_MAP,
 };
 
+const LMS_NAME = 'some_lms';
+
 describe('LTI Section Sync Dialog', () => {
   beforeEach(() => {
     const jqueryStub = sinon.stub($, 'post');
@@ -45,7 +47,13 @@ describe('LTI Section Sync Dialog', () => {
 
   describe('Sync Result Sub View', () => {
     it('should show a sync results view', () => {
-      render(<LtiSectionSyncDialog isOpen syncResult={MOCK_SYNC_RESULT} />);
+      render(
+        <LtiSectionSyncDialog
+          isOpen
+          syncResult={MOCK_SYNC_RESULT}
+          lmsName={LMS_NAME}
+        />
+      );
 
       screen.getByText(i18n.ltiSectionSyncDialogTitle());
 
@@ -72,6 +80,7 @@ describe('LTI Section Sync Dialog', () => {
           syncResult={MOCK_SYNC_RESULT}
           disableRosterSyncButtonEnabled
           onClose={mockOnClose}
+          lmsName={LMS_NAME}
         />
       );
 
@@ -111,6 +120,7 @@ describe('LTI Section Sync Dialog', () => {
           isOpen
           syncResult={MOCK_SYNC_RESULT}
           disableRosterSyncButtonEnabled
+          lmsName={LMS_NAME}
         />
       );
 
@@ -143,7 +153,13 @@ describe('LTI Section Sync Dialog', () => {
         error: 'Error!!',
       };
 
-      render(<LtiSectionSyncDialog isOpen syncResult={errorSyncResult} />);
+      render(
+        <LtiSectionSyncDialog
+          isOpen
+          syncResult={errorSyncResult}
+          lmsName={LMS_NAME}
+        />
+      );
 
       screen.getByText(i18n.errorOccurredTitle());
       screen.getByText(i18n.ltiSectionSyncDialogError());

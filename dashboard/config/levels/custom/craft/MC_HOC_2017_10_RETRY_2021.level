@@ -55,7 +55,7 @@
     ],
     "parent_level_id": 21548,
     "name_suffix": "_2021",
-    "top_level_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "true",
     "show_type_hints": "false",
     "is_aquatic_level": "false",
     "boat": "false",
@@ -128,12 +128,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="fix short path"/>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="fix long path"/>
-        </block>
         <block type="craft_moveForward"/>
         <block type="craft_moveBackward"/>
         <block type="craft_turn">

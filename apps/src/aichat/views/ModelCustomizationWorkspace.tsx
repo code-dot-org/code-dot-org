@@ -29,14 +29,13 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         tabs={
           [
             showPromptCustomization && {
-              title: 'Prompt',
+              title: 'Setup',
               content: <PromptCustomization />,
             },
             isVisible(retrievalContexts.visibility) && {
               title: 'Retrieval',
               content: <RetrievalCustomization />,
             },
-            {title: 'Fine Tuning', content: 'fine tuning content TBD'},
             isVisible(modelCardInfo.visibility) && {
               title: 'Publish',
               content: <PublishNotes />,

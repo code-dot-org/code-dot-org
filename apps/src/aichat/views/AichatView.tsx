@@ -8,7 +8,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
-import {setAiCustomizations} from '../redux/aichatRedux';
+import {setStartingAiCustomizations} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import PresentationView from './PresentationView';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
@@ -17,11 +17,7 @@ import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import moduleStyles from './aichatView.module.scss';
-import {
-  AichatLevelProperties,
-  AiCustomizations,
-  ViewMode,
-} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const AichatView: React.FunctionComponent = () => {
@@ -32,27 +28,28 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
 
-  const initialAiCustomizations = useAppSelector(
+  const levelAiCustomizationsWithVisibility = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
         ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   );
+  const {hidePresentationPanel} = levelAiCustomizationsWithVisibility;
 
-  const hidePresentationPanel = initialAiCustomizations.hidePresentationPanel;
+  const initialSources = useAppSelector(
+    state => (state.lab.initialSources?.source as string) || '{}'
+  );
 
   useEffect(() => {
-    const aiCustomizations: AiCustomizations = {
-      botName: initialAiCustomizations.botName.value,
-      temperature: initialAiCustomizations.temperature.value,
-      systemPrompt: initialAiCustomizations.systemPrompt.value,
-      retrievalContexts: initialAiCustomizations.retrievalContexts.value,
-      modelCardInfo: initialAiCustomizations.modelCardInfo.value,
-    };
+    const studentAiCustomizations = JSON.parse(initialSources);
+    dispatch(
+      setStartingAiCustomizations({
+        levelAiCustomizationsWithVisibility,
+        studentAiCustomizations,
+      })
+    );
+  }, [dispatch, initialSources, levelAiCustomizationsWithVisibility]);
 
-    dispatch(setAiCustomizations(aiCustomizations));
-  }, [dispatch, initialAiCustomizations]);
-
-  const aiCustomizations = useAppSelector(
+  const {botName} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
 
@@ -79,9 +76,7 @@ const AichatView: React.FunctionComponent = () => {
   };
 
   const chatWorkspaceHeader =
-    viewMode === ViewMode.EDIT
-      ? aichatI18n.aichatWorkspaceHeader()
-      : aiCustomizations.botName;
+    viewMode === ViewMode.EDIT ? aichatI18n.aichatWorkspaceHeader() : botName;
 
   return (
     <>
