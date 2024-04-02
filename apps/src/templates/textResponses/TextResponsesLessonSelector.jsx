@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
 
 const DEFAULT_FILTER_KEY = i18n.all();
 

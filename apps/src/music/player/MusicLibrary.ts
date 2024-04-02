@@ -23,6 +23,9 @@ export default class MusicLibrary {
   private bpm: number | undefined;
   private key: Key | undefined;
 
+  // The available sound types in this library.
+  private availableSoundTypes: {[key: string]: boolean};
+
   constructor(name: string, libraryJson: LibraryJson) {
     this.name = name;
     this.libraryJson = libraryJson;
@@ -42,6 +45,28 @@ export default class MusicLibrary {
     if (libraryJson.key) {
       this.key = libraryJson.key;
     }
+
+    // Take this opportunity to determine the available sound types in this library.
+    this.availableSoundTypes = {};
+    this.determineAvailableSoundTypes();
+  }
+
+  // Determine the available sound types available in this library.
+  // Only currently-allowed sounds from packs are included.
+  private determineAvailableSoundTypes() {
+    const folders = this.getAllowedSounds(undefined);
+
+    folders.forEach(folder => {
+      folder.sounds.forEach(sound => {
+        this.availableSoundTypes[sound.type] = true;
+      });
+    });
+  }
+
+  // Get the available sound types available in this library.
+  // This is called by SoundsPanel to determine which filters to show.
+  getAvailableSoundTypes() {
+    return this.availableSoundTypes;
   }
 
   getDefaultSound(): string | undefined {

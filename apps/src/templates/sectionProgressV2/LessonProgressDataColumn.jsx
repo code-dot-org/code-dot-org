@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {studentNeedsFeedback} from '../progress/progressHelpers';
 import {
   studentLessonProgressType,
   studentLevelProgressType,
@@ -35,22 +34,6 @@ function LessonProgressDataColumn({
     [levelProgressByStudent, sortedStudents, lesson]
   );
 
-  const needsFeedbackByStudent = React.useMemo(
-    () =>
-      Object.fromEntries(
-        sortedStudents.map(student => [
-          student.id,
-          lesson.levels.some(level =>
-            studentNeedsFeedback(
-              levelProgressByStudent[student.id][level.id],
-              level
-            )
-          ),
-        ])
-      ),
-    [levelProgressByStudent, sortedStudents, lesson.levels]
-  );
-
   // For lockable lessons, check whether each level is locked for each student.
   // Used to control locked/unlocked icon in lesson header.
   const allLocked = React.useMemo(
@@ -74,7 +57,6 @@ function LessonProgressDataColumn({
             studentLessonProgress={
               lessonProgressByStudent[student.id][lesson.id]
             }
-            needsFeedback={needsFeedbackByStudent[student.id]}
             key={student.id + '.' + lesson.id}
             studentId={student.id}
             addExpandedLesson={addExpandedLesson}

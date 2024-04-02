@@ -16,7 +16,7 @@
 .iconKeyTitle {
   cursor: pointer;
   width: fit-content;
-  padding-inline-end: 8px;
+  margin-inline-end: 8px;
 }
 
 .iconKeyMoreDetailsLink {
@@ -46,6 +46,7 @@
   padding: 8px 16px;
   border-bottom: 1px solid $light_gray_200;
   box-sizing: border-box;
+  background-color: $light_gray_50;
 }
 
 .legend.levelTypes {
