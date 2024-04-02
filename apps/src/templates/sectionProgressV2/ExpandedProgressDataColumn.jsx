@@ -102,7 +102,9 @@ function ExpandedProgressDataColumn({
 
   return (
     <table key={lesson.id} className={styles.expandedColumn}>
-      <caption>{i18n.progressForLesson(lesson.title)}</caption>
+      <caption hidden={true}>
+        {i18n.progressForLesson({lessonName: lesson.title})}
+      </caption>
       <ExpandedProgressColumnHeader
         lesson={lesson}
         removeExpandedLesson={removeExpandedLesson}
