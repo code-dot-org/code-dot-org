@@ -111,7 +111,7 @@ export default function LandingPage({
             />
           </div>
         )}
-        <section>
+        <section style={{marginTop: '3rem'}}>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
           {RenderStaticRecommendedPL()}
         </section>
