@@ -25,7 +25,7 @@ export interface AITutorInteraction {
   type: AITutorTypesValue | undefined;
   isProjectBacked?: boolean;
   prompt: string;
-  status: string;
+  status: AITutorInteractionStatusValue;
   aiResponse?: string;
 }
 
