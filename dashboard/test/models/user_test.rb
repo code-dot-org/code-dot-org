@@ -3904,7 +3904,8 @@ class UserTest < ActiveSupport::TestCase
         location: "/v2/users/#{@student.id}",
         age: @student.age,
         sharing_disabled: false,
-        has_ever_signed_in: @student.has_ever_signed_in?
+        has_ever_signed_in: @student.has_ever_signed_in?,
+        ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
       },
       @student.summarize
     )
