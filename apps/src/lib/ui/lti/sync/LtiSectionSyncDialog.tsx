@@ -202,7 +202,9 @@ export default function LtiSectionSyncDialog({
   const hideCloseButton = currentView === SubView.SPINNER;
 
   const SectionRow = (id: string, section: LtiSection) => {
-    const sectionOwnerName = section.instructors.find((instructor) => instructor.isOwner)?.name
+    const sectionOwnerName = section.instructors.find(
+      instructor => instructor.isOwner
+    )?.name;
     return (
       <tr key={id} role={'gridcell'}>
         <td style={styles.tableCellText}>{section.short_name}</td>
