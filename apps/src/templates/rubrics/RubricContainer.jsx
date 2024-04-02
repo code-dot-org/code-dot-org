@@ -146,6 +146,7 @@ export default function RubricContainer({
               rubric={rubric}
               sectionId={sectionId}
               tabSelectCallback={tabSelectCallback}
+              reportingData={reportingData}
             />
           )}
         </div>
