@@ -181,10 +181,8 @@ class ApplicationController < ActionController::Base
     Thread.current[:current_request_url] = request.url
   end
 
-  def with_locale
-    I18n.with_locale(locale) do
-      yield
-    end
+  def with_locale(&block)
+    I18n.with_locale(locale, &block)
   end
 
   def milestone_response(options)

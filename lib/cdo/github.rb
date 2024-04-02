@@ -375,10 +375,10 @@ module GitHub
   end
 
   # Iterate over a paged resource, given the first response
-  def self.paged_for_each(response)
+  def self.paged_for_each(response, &block)
     loop do
       resources = response.data
-      resources.each {|resource| yield(resource)}
+      resources.each(&block)
       break unless response.rels[:next]
       response = response.rels[:next].get
     end
