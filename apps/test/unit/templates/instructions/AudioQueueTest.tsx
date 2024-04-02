@@ -61,7 +61,7 @@ describe('AudioQueue', () => {
     playAudioSpy.restore();
   });
 
-  it('only plays one audio if one audio in queue and multiple plaYNextAudio calls', () => {
+  it('only plays one audio if one audio in queue and multiple playNextAudio calls', () => {
     const playAudioSpy = sinon.spy(AudioQueueItem.prototype, 'playAudio');
 
     render(
