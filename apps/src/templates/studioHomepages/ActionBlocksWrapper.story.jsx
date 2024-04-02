@@ -42,3 +42,8 @@ export const ThreeColumns = () => {
   const actionBlocks = generateActionBlocks(3);
   return <ActionBlocksWrapper actionBlocks={actionBlocks} />;
 };
+
+export const SixTiles = () => {
+  const actionBlocks = generateActionBlocks(6);
+  return <ActionBlocksWrapper actionBlocks={actionBlocks} />;
+};

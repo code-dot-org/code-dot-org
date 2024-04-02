@@ -69,6 +69,8 @@ export default function ActionBlocksWrapper({actionBlocks}) {
       className={
         // This automatically adjusts the column count CSS
         // based on the number of blocks in an array.
+        // If there are 3 or more, it'll use a 3-column layout.
+        // For example: 6 blocks would result in a 3x2 grid.
         actionBlocks?.length >= 3
           ? styles.wrapperThreeCol
           : styles.wrapperTwoCol
