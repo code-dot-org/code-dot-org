@@ -68,6 +68,9 @@ export default function IconKey({sectionId}) {
           onClick={clickListener}
           className={styles.iconKeyTitle}
           data-testid="expandable-container"
+          role="button"
+          aria-expanded={isOpen}
+          tabIndex="0"
         >
           <Heading6>
             <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
