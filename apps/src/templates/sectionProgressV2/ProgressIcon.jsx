@@ -39,6 +39,9 @@ export default function ProgressIcon({itemType}) {
       )}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
       {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
+      {itemType === ITEM_TYPE.NO_PROGRESS && (
+        <div aria-label={itemType['title']} />
+      )}
     </div>
   );
 }

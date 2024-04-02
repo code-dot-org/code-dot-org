@@ -1,6 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 import {UnconnectedLevelDataCell} from '@cdo/apps/templates/sectionProgressV2/LevelDataCell';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
@@ -44,7 +45,7 @@ describe('ProgressTableV2', () => {
   it('Expanded choice level', () => {
     renderDefault({expandedChoiceLevel: true});
 
-    screen.getByRole('link', {name: 'progressicon-split'});
+    screen.getByRole('link', {name: ITEM_TYPE.CHOICE_LEVEL.title});
   });
 
   it('Keep working level', () => {
@@ -56,7 +57,7 @@ describe('ProgressTableV2', () => {
       },
     });
 
-    screen.getByRole('link', {name: 'progressicon-rotate-left'});
+    screen.getByRole('link', {name: ITEM_TYPE.KEEP_WORKING.title});
   });
 
   it('Keep working level that the student has revisited', () => {
@@ -69,14 +70,13 @@ describe('ProgressTableV2', () => {
       },
     });
 
-    screen.getByRole('link', {name: 'progressicon-circle'});
+    screen.getByRole('link', {name: ITEM_TYPE.SUBMITTED.title});
   });
 
   it('Not tried level', () => {
     renderDefault();
 
-    expect(screen.queryByRole('link', {name: /progressicon-^[a-z]*$/})).to.be
-      .null;
+    screen.getByRole('link', {name: ITEM_TYPE.NO_PROGRESS.title});
   });
 
   it('Validated level', () => {
@@ -88,7 +88,7 @@ describe('ProgressTableV2', () => {
       level: {isValidated: true, id: 1, url: TEST_URL},
     });
 
-    screen.getByRole('link', {name: 'progressicon-circle-check'});
+    screen.getByRole('link', {name: ITEM_TYPE.VALIDATED.title});
   });
 
   it('Submitted level', () => {
@@ -99,7 +99,7 @@ describe('ProgressTableV2', () => {
       },
     });
 
-    screen.getByRole('link', {name: 'progressicon-circle'});
+    screen.getByRole('link', {name: ITEM_TYPE.SUBMITTED.title});
   });
 
   it('In progress level', () => {
@@ -110,6 +110,6 @@ describe('ProgressTableV2', () => {
       },
     });
 
-    screen.getByRole('link', {name: 'progressicon-circle-o'});
+    screen.getByRole('link', {name: ITEM_TYPE.IN_PROGRESS.title});
   });
 });
