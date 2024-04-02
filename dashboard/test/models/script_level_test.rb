@@ -8,6 +8,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    # setup_units
+
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)
     @lesson = create(:lesson)
