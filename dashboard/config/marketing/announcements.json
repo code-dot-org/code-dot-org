@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/home": "superhero",
+    "/home": "ai-teaching-assistant",
     "/student-home": "hoc-2023-dance-ai"
   },
   "banners": {
@@ -28,13 +28,14 @@
       "buttonUrl": "https://code.org/dance",
       "buttonId": "hoc-2023-dance-ai"
     },
-    "co-teacher": {
-      "image": "/shared/images/announcement/announcement_co_teacher_2024.png",
-      "title": "New! Add co-teachers to your sections",
-      "body": "Streamline your classroom management by adding co-teachers from your \"Edit Section Details\" page.",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://support.code.org/hc/en-us/articles/228116368-Can-2-teachers-share-access-to-a-classroom-section-",
-      "buttonId": "co-teacher"
+    "ai-teaching-assistant": {
+      "dcdo": "ai-teaching-assistant-launch",
+      "image": "/images/action-blocks/action-block-ai-ta.png",
+      "title": "AI Teaching Assistant",
+      "body": "Elevate teaching confidence and streamline assessment of student progress. This tool heralds a new chapter in personalized learning and instructional excellence.",
+      "buttonText": "Learn more about AI Teaching Assistant",
+      "buttonUrl": "https://code.org/ai-ta",
+      "buttonId": "ai-teaching-assistant"
     }
   }
 }
