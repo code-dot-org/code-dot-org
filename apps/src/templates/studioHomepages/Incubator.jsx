@@ -4,6 +4,7 @@ import DCDO from '@cdo/apps/dcdo';
 import Button from '@cdo/apps/templates/Button';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import i18n from '@cdo/locale';
+import {LmsLinks} from '@cdo/apps/util/sharedConstants';
 
 import HeaderBanner from '../HeaderBanner';
 
@@ -58,11 +59,12 @@ class Incubator extends Component {
                   text: i18n.incubator_canvasIntegration_earlyAccess_signIn_button(),
                   target: '_blank',
                 },
-                // {
-                //   url: '#',
-                //   text: i18n.incubator_canvasIntegration_earlyAccess_viewDemo_button(),
-                //   color: Button.ButtonColor.neutralDark,
-                // },
+                {
+                  url: LmsLinks.INSTALL_GUIDE_FOR_CANVAS_URL,
+                  text: i18n.incubator_canvasIntegration_earlyAccess_guides_button(),
+                  color: Button.ButtonColor.neutralDark,
+                  target: '_blank',
+                },
               ]}
             />
           )}
