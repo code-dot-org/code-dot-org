@@ -242,6 +242,7 @@ export interface ExtendedGenerator extends CodeGeneratorType {
     name: string,
     opt_typeFilter?: string | string[]
   ) => string;
+  blocksToCode: (name: string, blocksToGenerate: Block[]) => string;
   prefixLines: (text: string, prefix: string) => string;
 }
 
