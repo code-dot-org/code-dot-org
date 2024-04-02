@@ -163,7 +163,7 @@ export default function LtiSectionSyncDialog({
               <p style={styles.courseNameText}>
                 <span style={styles.courseNameLabel}>
                   {i18n.ltiSectionSyncDialogCourseLabel()}:
-                </span>{' '}
+                </span>
                 {syncResult.course_name}
               </p>
             )}
