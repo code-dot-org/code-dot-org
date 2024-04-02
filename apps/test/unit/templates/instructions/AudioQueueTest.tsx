@@ -10,6 +10,11 @@ import {
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 
+interface QueueContext {
+  addToQueue: (audioItem: object) => void;
+  playNextAudio: () => void;
+}
+
 type myProps = {
   shouldQueue: boolean;
   playNextAudioCallCounter: number;
@@ -17,7 +22,7 @@ type myProps = {
 
 class AudioQueueItem extends React.Component<myProps> {
   componentDidMount() {
-    const {addToQueue, playNextAudio} = this.context;
+    const {addToQueue, playNextAudio} = this.context as QueueContext;
     if (this.props.shouldQueue) addToQueue(this);
     for (let i = 0; i < this.props.playNextAudioCallCounter; i++)
       playNextAudio();
