@@ -1,9 +1,9 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
-  load_resource only: [:get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  load_resource only: [:get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -277,12 +277,26 @@ class RubricsController < ApplicationController
     }
   end
 
+  def update_ai_rubrics_tour_seen
+    seen = params.transform_keys(&:underscore).require(:seen)
+    return head :unauthorized unless current_user
+    current_user.ai_rubrics_tour_seen = seen
+    current_user.save!
+    render json: {seen: current_user.ai_rubrics_tour_seen}
+  end
+
+  def get_ai_rubrics_tour_seen
+    return head :unauthorized unless current_user
+    render json: {seen: current_user.ai_rubrics_tour_seen}
+  end
+
   private
 
   def rubric_params
     params.transform_keys(&:underscore).permit(
       :level_id,
       :lesson_id,
+      :seen,
       learning_goals_attributes: [
         :id,
         :learning_goal,

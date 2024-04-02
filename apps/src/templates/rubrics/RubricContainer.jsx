@@ -19,6 +19,7 @@ import Draggable from 'react-draggable';
 import {TAB_NAMES} from './rubricHelpers';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 // intro.js
 import 'intro.js/introjs.css';
@@ -86,6 +87,51 @@ export default function RubricContainer({
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
   }, [selectedTab]);
 
+  const updateTourStatus = async () => {
+    const url = `/rubrics/${rubric.id}/update_ai_rubrics_tour_seen`;
+    let bodyData;
+    if (stepsEnabled) {
+      bodyData = JSON.stringify({seen: true});
+    } else {
+      bodyData = JSON.stringify({seen: false});
+    }
+
+    HttpClient.post(url, bodyData, {
+      'Content-Type': 'application/json',
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        if (json['seen']) {
+          setStepsEnabled(false);
+        } else {
+          setStepsEnabled(true);
+        }
+        console.log('status updated to', json['seen']);
+      });
+  };
+
+  const getTourStatus = async () => {
+    const url = `/rubrics/${rubric.id}/get_ai_rubrics_tour_seen`;
+    fetch(url)
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        if (json['seen']) {
+          setStepsEnabled(false);
+        } else {
+          setStepsEnabled(true);
+        }
+        console.log('tour status is', json['seen']);
+      });
+  };
+
+  useEffect(() => {
+    getTourStatus();
+  });
+
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
@@ -132,7 +178,10 @@ export default function RubricContainer({
     },
   ];
 
-  const onExit = () => setStepsEnabled(false);
+  const onExit = () => {
+    setStepsEnabled(false);
+    updateTourStatus();
+  };
 
   // Dummy props for product tour
   const rubricDummy = {

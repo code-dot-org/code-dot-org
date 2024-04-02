@@ -1274,7 +1274,7 @@ p.detailsHidden {
   max-width: 400px !important;
 
   h1 {
-    @include main-font-bold;
+    font-family: $barlowSemiCondensed-semibold;
     color: $light_black;
     font-size: 1rem;
   }
