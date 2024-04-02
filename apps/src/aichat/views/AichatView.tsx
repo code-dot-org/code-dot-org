@@ -17,7 +17,6 @@ import SegmentedButtons, {
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import moduleStyles from './aichatView.module.scss';
 import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
-import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const AichatView: React.FunctionComponent = () => {
   const [viewMode, setViewMode] = useState<string>(ViewMode.EDIT);
@@ -27,12 +26,11 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
 
-  const levelAiCustomizationsWithVisibility = useAppSelector(
+  const levelAichatSettings = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+        ?.aichatSettings
   );
-  const {hidePresentationPanel} = levelAiCustomizationsWithVisibility;
 
   const initialSources = useAppSelector(
     state => (state.lab.initialSources?.source as string) || '{}'
@@ -42,11 +40,11 @@ const AichatView: React.FunctionComponent = () => {
     const studentAiCustomizations = JSON.parse(initialSources);
     dispatch(
       setStartingAiCustomizations({
-        levelAiCustomizationsWithVisibility,
+        levelAichatSettings,
         studentAiCustomizations,
       })
     );
-  }, [dispatch, initialSources, levelAiCustomizationsWithVisibility]);
+  }, [dispatch, initialSources, levelAichatSettings]);
 
   const {botName} = useAppSelector(
     state => state.aichat.currentAiCustomizations
@@ -79,7 +77,7 @@ const AichatView: React.FunctionComponent = () => {
 
   return (
     <>
-      {!hidePresentationPanel && (
+      {!levelAichatSettings?.hidePresentationPanel && (
         <div className={moduleStyles.viewModeButtons}>
           <SegmentedButtons {...viewModeButtonsProps} />
         </div>
