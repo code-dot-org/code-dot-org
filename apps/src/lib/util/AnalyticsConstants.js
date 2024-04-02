@@ -31,6 +31,16 @@ const EVENTS = {
   SCHOOL_INTERSTITIAL_SAVE_FAILURE: 'School Interstitial Save Failure',
   SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
 
+  // School Selection Component
+  COUNTRY_SELECTED: 'User Selects Country',
+  ZIP_CODE_ENTERED: 'Valid Zip Code Entered',
+  SCHOOL_SEARCH_INPUT_ENTERED: 'School Search Input Entered',
+  SCHOOL_LIST_OPENED: 'School List Opened',
+  SCHOOL_SELECTED_FROM_LIST: 'School Selected from Dropdown',
+  ADD_MANUALLY_CLICKED: 'User Elects to Add School Name Manually',
+  DO_NOT_TEACH_AT_SCHOOL_CLICKED:
+    'User Clicks I Do Not Teach In A School Setting',
+
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Course Overview Page Visited By Teacher',
