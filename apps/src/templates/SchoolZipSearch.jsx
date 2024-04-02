@@ -69,6 +69,7 @@ export default function SchoolZipSearch({fieldNames, zip}) {
             styleAsText={true}
             onClick={() => {
               setInputManually(false);
+              setSelectedSchoolNcesId('selectASchool');
             }}
           />
         </div>
