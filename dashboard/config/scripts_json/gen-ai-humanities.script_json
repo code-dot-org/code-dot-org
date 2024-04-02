@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-humanities",
-    "serialized_at": "2024-03-26 12:00:09 UTC",
+    "serialized_at": "2024-03-30 13:33:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1726,7 +1726,7 @@
     {
       "key": "large_language_models",
       "word": "Large Language Models",
-      "definition": "A trained model that can recognize, summarize, translate, predict, and generate text in a human-like fashion",
+      "definition": "Trained models that can recognize, summarize, translate, predict, and generate text in a human-like fashion",
       "properties": {
       },
       "seeding_key": {
