@@ -9,6 +9,7 @@ export interface LtiSectionSyncResult {
   all?: LtiSectionMap;
   changed?: LtiSectionMap;
   error?: string;
+  message?: string;
 }
 
 export interface LtiSectionSyncDialogProps {
@@ -16,6 +17,7 @@ export interface LtiSectionSyncDialogProps {
   syncResult: LtiSectionSyncResult;
   onClose?: () => void;
   disableRosterSyncButtonEnabled?: boolean;
+  lmsName: string;
 }
 
 export enum SubView {

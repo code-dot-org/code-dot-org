@@ -4,6 +4,7 @@ require 'user'
 require 'authentication_option'
 require 'sections/section'
 require 'set'
+require 'metrics/events'
 
 module Services
   module Lti
@@ -140,7 +141,6 @@ module Services
           # Custom variables substitutions must be configured in the LMS.
           custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
 
-          # Handles the possibility of the LMS not having sectionId variable substitution configured.
           member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
           # :section_names from Canvas is a stringified JSON array
           member_section_names = JSON.parse(custom_variables[:section_names])
@@ -264,6 +264,14 @@ module Services
             }
           )
           lti_section = LtiSection.create(lti_course_id: lti_course.id, lms_section_id: lms_section_id, section: section)
+
+          metadata = {'lms_name' => lti_integration.platform_name}
+          Metrics::Events.log_event(
+            user: current_user,
+            event_name: 'lti_section_created',
+            metadata: metadata,
+          )
+
           had_changes = true
         end
 
