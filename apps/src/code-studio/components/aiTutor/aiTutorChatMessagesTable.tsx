@@ -57,8 +57,9 @@ const AITutorChatMessagesTable: React.FunctionComponent<
   >([]);
   const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
   const [selectedUserIds, setSelectedUserIds] = useState<string[]>([]);
-  const [selectedTimeFilter, setSelectedTimeFilter] =
-    useState<string>('allTime');
+  const [selectedTimeFilter, setSelectedTimeFilter] = useState<string>(
+    TimeFilter.AllTime
+  );
 
   useEffect(() => {
     (async () => {
