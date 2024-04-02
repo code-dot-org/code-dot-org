@@ -227,10 +227,16 @@ module Cdo
       # Get the set of valid locales for a given base locale code. For example,
       # for a base of `:pt`, we expect valid locales `:pt`, `:"pt-BR"`, `:"en-US"`, and `en`
       def valid_locales_for(base_locale)
-        valid_locales = Set.new(::I18n.fallbacks[base_locale])
-        valid_locales << base_locale
-        valid_locales << LOCALES_MAPPING[base_locale] # en: :'en-US'
-        valid_locales.compact_blank
+        @valid_locales ||= {}
+
+        unless @valid_locales[base_locale]
+          @valid_locales[base_locale] = Set.new(::I18n.fallbacks[base_locale])
+          @valid_locales[base_locale] << base_locale
+          @valid_locales[base_locale] << LOCALES_MAPPING[base_locale] # en: :'en-US'
+          @valid_locales[base_locale] = @valid_locales[base_locale].compact_blank
+        end
+
+        @valid_locales[base_locale]
       end
 
       # The original method has been modified to also load files for the current locale's fallbacks,
