@@ -276,6 +276,18 @@ min-width:47px;
     display: flex;
     flex-direction: row;
   }
+
+  &LevelLink {
+    height: 100%;
+    width: 100%;
+    text-align: center; 
+    line-height: 47px !important;
+  }
+
+  &LevelEmpty {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .sortDropdown {
@@ -304,9 +316,3 @@ min-width:47px;
   color: black;
 }
 
-.levelLink {
-  height: 100%;
-  width: 100%;
-  text-align: center; 
-  line-height: 47px !important;
-}
