@@ -130,11 +130,7 @@ export default function LtiSectionSyncDialog({
     const aboutSyncingUrl = LmsLinks.ROSTER_SYNC_INSTRUCTIONS_URL;
     const dialogTitle = i18n.ltiSectionSyncDialogTitle();
     let dialogDescription, sectionsTable;
-    if (
-      syncResult &&
-      syncResult.changed &&
-      Object.keys(syncResult.changed).length > 0
-    ) {
+    if (syncResult?.changed && Object.keys(syncResult.changed).length > 0) {
       dialogDescription = i18n.ltiSectionSyncDialogDescription({
         aboutSectionsUrl,
         aboutSyncingUrl,
