@@ -476,6 +476,7 @@ h2.studentName {
   flex-direction: row;
   width: 100%;
   gap: 8px;
+  min-height: 92px;
 }
 
 .evidenceLevelInnerDiv:first-child {
@@ -962,6 +963,16 @@ h5.learningGoalsHeaderTextBody {
   }
 }
 
+.learningGoalSummary {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px $light_gray_100 solid;
+  margin: 1rem 1rem 0 1rem;
+}
+
 .aiTokenContainer {
   align-self: start;
   margin-left: 0.5rem;
@@ -1144,6 +1155,12 @@ button.infoAlertRight {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+}
+
+.settingsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .settingsContainers {

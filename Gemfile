@@ -45,7 +45,7 @@ gem 'google_drive'
 gem 'jumphash'
 gem 'os'
 gem 'parallel'
-gem 'redis', '~> 3.3.3'
+gem 'redis', '~> 4.8.1'
 # Using commit ref on fork until maintainer publishes a new version.
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
@@ -158,7 +158,7 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 3.5.0'
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/daynew/omniauth-clever/pull/1

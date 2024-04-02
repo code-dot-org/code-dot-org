@@ -294,6 +294,7 @@ export const processedLevel = level => {
         : PUZZLE_PAGE_NONE,
     sublevels:
       level.sublevels && level.sublevels.map(level => processedLevel(level)),
+    path: level.path,
   };
 };
 

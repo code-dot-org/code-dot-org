@@ -66,7 +66,8 @@
     "show_type_hints": "false",
     "is_aquatic_level": "false",
     "boat": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "top_level_procedure_autopopulate": "true"
   },
   "game_id": 49,
   "published": true,
@@ -111,12 +112,6 @@
         </block>
         <block type="controls_repeat_dropdown">
           <title name="TIMES" config="2-10">2</title>
-        </block>
-        <block type="procedures_callnoreturn" id="callMe">
-          <mutation name="function 1"/>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="function 2"/>
         </block>
       </xml>
     </toolbox_blocks>
