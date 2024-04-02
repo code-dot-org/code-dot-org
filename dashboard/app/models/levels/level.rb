@@ -514,6 +514,10 @@ class Level < ApplicationRecord
     unplugged? || properties["display_as_unplugged"] == "true"
   end
 
+  def ai_tutor_available?
+    properties["ai_tutor_available"] == "true"
+  end
+
   def summarize
     {
       level_id: id.to_s,

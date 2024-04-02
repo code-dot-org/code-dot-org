@@ -2,8 +2,9 @@
  * @overview Simulation entity for a message between two nodes.
  */
 var utils = require('../utils'); // Provides Function.prototype.inherits
-var NetSimEntity = require('./NetSimEntity');
+
 var DataConverters = require('./DataConverters');
+var NetSimEntity = require('./NetSimEntity');
 var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;
 var NetSimLogger = require('./NetSimLogger');

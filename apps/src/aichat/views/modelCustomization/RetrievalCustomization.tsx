@@ -10,19 +10,14 @@ import {
   setAiCustomizationProperty,
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
-import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [newRetrievalContext, setNewRetrievalContext] = useState('');
 
   const dispatch = useAppDispatch();
-
-  const {visibility} = useAppSelector(
-    state =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
-  ).retrievalContexts;
+  const visibility = useAppSelector(
+    state => state.aichat.fieldVisibilities.retrievalContexts
+  );
   const {retrievalContexts} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );

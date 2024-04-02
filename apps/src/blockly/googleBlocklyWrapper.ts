@@ -98,6 +98,7 @@ const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
+const LOOP_HIGHLIGHT = 'loopHighlight();\n';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -187,7 +188,16 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return Blockly.JavaScript.INFINITE_LOOP_TRAP;
   };
 
-  blocklyWrapper.loopHighlight = function () {}; // TODO
+  blocklyWrapper.loopHighlight = function (apiName, blockId) {
+    let args = "'block_id_" + blockId + "'";
+    if (blockId === undefined) {
+      args = '%1';
+    }
+    return (
+      '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')')
+    );
+  };
+
   blocklyWrapper.getWorkspaceCode = function () {
     return getWorkspaceCodeHelper(0, this.getHiddenDefinitionWorkspace());
   };
