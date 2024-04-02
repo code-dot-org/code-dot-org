@@ -1,5 +1,6 @@
 @import 'color';
 @import 'font';
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 @keyframes pulse {
   0% {
@@ -258,6 +259,8 @@
   border-right: 2px solid $neutral_dark;
   border-left: 2px solid $neutral_dark;
 
+  padding-inline-start: 0.75rem;
+
   display: flex;
   height: 40px;
   justify-content: space-between;
@@ -267,11 +270,18 @@
 
 .rubricHeaderLeftSide {
   display: flex;
-  gap: 4px;
-  align-items: flex-start;
-  margin-left: 20px;
-  font-size: 14px;
-  font-weight: 600;
+  gap: 0.25rem;
+  align-items: center;
+
+  .aiBotOutlineIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  span {
+    @include label-two;
+    margin: 0;
+  }
 }
 
 .rubricHeaderRightSide {
@@ -433,6 +443,15 @@ h2.studentName {
   flex-direction: column;
   gap: 1rem;
   align-self: stretch;
+
+
+  .tipsDetailsSummary {
+    font-size: 0.875rem;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
 }
 
 .learningGoalTips {
@@ -615,7 +634,8 @@ p.aiAssessmentEvidenceBlock {
 }
 
 .aiConfidenceBoxText {
-  p {
+  p.labelThree {
+    @include label-three;
     white-space: nowrap;
     margin: 0;
   }
@@ -724,6 +744,7 @@ i.infoAlertIcon {
 }
 
 p.aiFeedbackRadioBoxText {
+  @include label-three;
   margin: 0;
   white-space: nowrap;
 }
@@ -817,6 +838,11 @@ em.aiFeedbackReceived {
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
+  gap: 0.75rem;
+
+  h3 {
+    margin: 0;
+  }
 }
 
 .learningGoalsWrapper {
@@ -934,6 +960,16 @@ h5.learningGoalsHeaderTextBody {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+}
+
+.learningGoalSummary {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px $light_gray_100 solid;
+  margin: 1rem 1rem 0 1rem;
 }
 
 .aiTokenContainer {
@@ -1118,6 +1154,12 @@ button.infoAlertRight {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+}
+
+.settingsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .settingsContainers {

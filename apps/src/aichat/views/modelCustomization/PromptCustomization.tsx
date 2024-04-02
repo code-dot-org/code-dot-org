@@ -1,24 +1,42 @@
-import React from 'react';
-import {useSelector} from 'react-redux';
+import React, {useCallback} from 'react';
 
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import {
+  setAiCustomizationProperty,
+  updateAiCustomization,
+} from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
+import {
+  EMPTY_AI_CUSTOMIZATIONS,
+  MAX_TEMPERATURE,
+  MIN_TEMPERATURE,
+  SET_TEMPERATURE_STEP,
+} from './constants';
 import {isVisible, isDisabled} from './utils';
-import {EMPTY_AI_CUSTOMIZATIONS} from './constants';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const PromptCustomization: React.FunctionComponent = () => {
-  const {botName, temperature, systemPrompt} = useSelector(
-    (state: {lab: LabState}) =>
+  const dispatch = useAppDispatch();
+
+  const {botName, temperature, systemPrompt} = useAppSelector(
+    state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
         ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  );
+  const aiCustomizations = useAppSelector(
+    state => state.aichat.currentAiCustomizations
   );
 
   const allFieldsDisabled =
     isDisabled(botName.visibility) &&
     isDisabled(temperature.visibility) &&
     isDisabled(systemPrompt.visibility);
+
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
 
   return (
     <div className={styles.verticalFlexContainer}>
@@ -30,9 +48,16 @@ const PromptCustomization: React.FunctionComponent = () => {
             </label>
             <input
               id="chatbot-name"
-              value={botName.value}
+              value={aiCustomizations.botName}
               disabled={isDisabled(botName.visibility)}
-              // readOnly might be preferred property for disabling inputs?
+              onChange={event =>
+                dispatch(
+                  setAiCustomizationProperty({
+                    property: 'botName',
+                    value: event.target.value,
+                  })
+                )
+              }
             />
           </div>
         )}
@@ -42,15 +67,23 @@ const PromptCustomization: React.FunctionComponent = () => {
               <label htmlFor="temperature">
                 <StrongText>Temperature</StrongText>
               </label>
-              {temperature.value}
+              {aiCustomizations.temperature}
             </div>
             <input
               type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={temperature.value}
+              min={MIN_TEMPERATURE}
+              max={MAX_TEMPERATURE}
+              step={SET_TEMPERATURE_STEP}
+              value={aiCustomizations.temperature}
               disabled={isDisabled(temperature.visibility)}
+              onChange={event =>
+                dispatch(
+                  setAiCustomizationProperty({
+                    property: 'temperature',
+                    value: event.target.value,
+                  })
+                )
+              }
             />
           </div>
         )}
@@ -61,14 +94,22 @@ const PromptCustomization: React.FunctionComponent = () => {
             </label>
             <textarea
               id="system-prompt"
-              value={systemPrompt.value}
+              value={aiCustomizations.systemPrompt}
               disabled={isDisabled(systemPrompt.visibility)}
+              onChange={event =>
+                dispatch(
+                  setAiCustomizationProperty({
+                    property: 'systemPrompt',
+                    value: event.target.value,
+                  })
+                )
+              }
             />
           </div>
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={allFieldsDisabled}>
+        <button type="button" disabled={allFieldsDisabled} onClick={onUpdate}>
           Update
         </button>
       </div>

@@ -2,8 +2,9 @@ require 'policies/lti'
 require 'authentication_option'
 
 class Queries::Lti
-  def self.get_user(user_id)
-    LtiUserIdentity.find_by(subject: user_id)&.user
+  def self.get_user(id_token)
+    auth_id = Services::Lti::AuthIdGenerator.new(id_token).call
+    User.find_by_credential(type: AuthenticationOption::LTI_V1, id: auth_id)
   end
 
   # Returns the LTI user id for a particular code.org user and LTI integration
@@ -15,13 +16,18 @@ class Queries::Lti
     LtiIntegration.find_by(issuer: issuer, client_id: client_id)
   end
 
+  def self.get_lms_name_from_user(user)
+    return nil unless Policies::Lti.lti? user
+    user.lti_user_identities.first.lti_integration&.platform_name
+  end
+
   def self.get_user_from_nrps(client_id:, issuer:, nrps_member:)
     id_token = {
       sub: nrps_member[:user_id],
       aud: client_id,
       iss: issuer,
     }
-    get_user(id_token[:sub])
+    get_user(id_token)
   end
 
   def self.get_deployment(lti_integration_id, deployment_id)

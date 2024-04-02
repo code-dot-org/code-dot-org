@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_18_185523) do
+ActiveRecord::Schema.define(version: 2024_03_21_184256) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -435,6 +435,40 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
     t.index ["name"], name: "index_data_docs_on_name"
   end
 
+  create_table "datablock_storage_kvps", primary_key: ["project_id", "key"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "key", limit: 700, null: false
+    t.json "value"
+    t.index ["project_id"], name: "index_datablock_storage_kvps_on_project_id"
+  end
+
+  create_table "datablock_storage_library_manifest", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.json "library_manifest"
+    t.integer "singleton_guard", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["singleton_guard"], name: "index_datablock_storage_library_manifest_on_singleton_guard", unique: true
+  end
+
+  create_table "datablock_storage_records", primary_key: ["project_id", "table_name", "record_id"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "table_name", limit: 700, null: false
+    t.integer "record_id", null: false
+    t.json "record_json"
+    t.index ["project_id", "table_name"], name: "index_datablock_storage_records_on_project_id_and_table_name"
+    t.index ["project_id"], name: "index_datablock_storage_records_on_project_id"
+  end
+
+  create_table "datablock_storage_tables", primary_key: ["project_id", "table_name"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "table_name", limit: 700, null: false
+    t.json "columns"
+    t.string "is_shared_table", limit: 700
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_datablock_storage_tables_on_project_id"
+  end
+
   create_table "delayed_jobs", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
@@ -829,6 +863,16 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["deployment_id"], name: "index_lti_deployments_on_deployment_id"
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
+  end
+
+  create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.boolean "satisfied", null: false
+    t.string "locale"
+    t.boolean "early_access"
+    t.datetime "created_at", null: false
+    t.index ["satisfied"], name: "index_lti_feedbacks_on_satisfied"
+    t.index ["user_id"], name: "index_lti_feedbacks_on_user_id", unique: true
   end
 
   create_table "lti_integrations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1567,6 +1611,12 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
     t.datetime "updated_at", null: false
     t.index ["storage_app_id", "object_version_id"], name: "index_project_commits_on_storage_app_id_and_object_version_id", unique: true
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
+  end
+
+  create_table "project_use_datablock_storages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.boolean "use_datablock_storage", default: false, null: false
+    t.index ["project_id"], name: "index_project_use_datablock_storages_on_project_id"
   end
 
   create_table "projects", id: :integer, charset: "utf8mb4", force: :cascade do |t|
@@ -2332,6 +2382,7 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
   add_foreign_key "lti_courses", "lti_deployments"
   add_foreign_key "lti_courses", "lti_integrations"
   add_foreign_key "lti_deployments", "lti_integrations"
+  add_foreign_key "lti_feedbacks", "users"
   add_foreign_key "lti_sections", "lti_courses"
   add_foreign_key "lti_sections", "sections"
   add_foreign_key "lti_user_identities", "lti_integrations"

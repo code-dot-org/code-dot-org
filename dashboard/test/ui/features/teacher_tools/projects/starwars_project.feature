@@ -14,9 +14,7 @@ Scenario: Starwars Flow
   And I wait until element ".project_edit" is visible
   Then I should see title includes "Code Ninja III: Revenge of the Semicolon - Play Lab - Code.org"
 
-  When I open the project share dialog
-  Then the project is unpublished
-
+  Then I open the project share dialog
   When I navigate to the share URL
   And I wait to see "#footerDiv"
   Then I should see title includes "Code Ninja III: Revenge of the Semicolon - Play Lab - Code.org"

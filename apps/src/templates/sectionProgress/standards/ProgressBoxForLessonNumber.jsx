@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ProgressBox from '../ProgressBox';
-import firehoseClient from '../../../lib/util/firehose';
 import {connect} from 'react-redux';
+
+import firehoseClient from '../../../lib/util/firehose';
+import ProgressBox from '../ProgressBox';
 
 class ProgressBoxForLessonNumber extends Component {
   static propTypes = {

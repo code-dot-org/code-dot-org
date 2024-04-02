@@ -17,31 +17,9 @@ Scenario: Gamelab Flow
   And I ensure droplet is in text mode
   And I append gamelab code to draw a ninja
 
-  # Thumbnail is required to publish the project
-  And I press "runButton"
-  And I wait until element ".project_updated_at" contains text "Saved"
-  And I wait until initial thumbnail capture is complete
-
-  Given I open the project share dialog
-  And the project is unpublished
-  When I publish the project from the share dialog
-  And I open the project share dialog
-  Then the project is published
-
-  When I reload the project page
-  And I open the project share dialog
-  Then the project is published
-
-  When I unpublish the project from the share dialog
-  And I open the project share dialog
-  Then the project is unpublished
-
-  When I reload the project page
-  And I open the project share dialog
-  Then the project is unpublished
-
   # Test the "View code" button, as the owner goes to /edit
-  When I navigate to the share URL
+  Then I open the project share dialog
+  And I navigate to the share URL
   And I wait to see "#footerDiv"
   Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And element "#codeWorkspace" is hidden

@@ -9961,6 +9961,8 @@ en:
               name: Game Jam - Play
             lesson-11:
               name: Game Mechanics
+            lesson-12:
+              name: New Game Design Lesson 3
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -13086,8 +13088,8 @@ en:
           title: Getting Started with Code.org
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
         self-paced-pl-csd-unit2-2-2023:
           lessons: {}
           lesson_groups: {}
@@ -13095,8 +13097,28 @@ en:
           title: Preparing to Teach Web Development
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            -   Get an introduction to Web Development.
+            -   Practice key concepts included in the unit.
+            -   Engage with Web Lab.
+            -   Explore end-of-chapter projects.
+
+            **Suggested time**: 90 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            -   Get an introduction to Web Development.
+            -   Practice key concepts included in the unit.
+            -   Engage with Web Lab.
+            -   Explore end-of-chapter projects.
+
+            **Suggested time**: 90 minutes
         self-paced-pl-csd-unit3-1-2023:
           lessons: {}
           lesson_groups: {}
@@ -13746,7 +13768,9 @@ en:
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description_audience: ''
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: Conditonals New Practice
           name: csp4-2024
         csp5-2024:
           lesson_groups:
@@ -13883,6 +13907,8 @@ en:
           lessons:
             lesson-2:
               name: Implementing String Algorithms
+            lesson-3:
+              name: Nested Iteration
           name: csa2-2025
         csa3-2025:
           lesson_groups:
@@ -14229,7 +14255,7 @@ en:
             lessonGroup-4:
               display_name: 'Stretch: Data and Variables'
           title: Course C - Maker with micro:bit
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course C booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course C booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey][1] to share your feedback with the Code.org team."
           student_description: ''
           description_short: Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit.
           description_audience: ''
@@ -14278,7 +14304,7 @@ en:
             lessonGroup-4:
               display_name: 'Stretch: Functions'
           title: Course E - Maker with micro:bit
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course E booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course E booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey][1] to share your feedback with the Code.org team."
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -14293,7 +14319,7 @@ en:
             lessonGroup-4:
               display_name: 'Stretch: Conditionals and Text Inputs '
           title: Course D - Maker with micro:bit
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course D booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course D booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey][1] to share your feedback with the Code.org team."
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -14308,7 +14334,7 @@ en:
             lessonGroup-4:
               display_name: 'Stretch: Events, Conditionals, and Variables'
           title: Course F - Maker with micro:bit
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course F booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course F booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey][1] to share your feedback with the Code.org team."
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -14385,7 +14411,7 @@ en:
               name: Create an AI Poster
           lesson_groups: {}
           name: pilot-k5-ai
-          title: Elementary AI Module [Pilot]
+          title: "[Pilot] Elementary AI Module "
           description_audience: ''
           description_short: ''
           description: ''
@@ -14424,3 +14450,581 @@ en:
           description_audience: ''
           lessons: {}
           name: csd-web-dev-beta-2024
+        fcs1-beta-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: fcs1-beta-2024
+          title: Computer Systems and Devices
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        fcs2-beta-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: fcs2-beta-2024
+          title: Unit 2 - Representing Information
+          description_audience: ''
+          description_short: Learn how people use computers to solve data problems.
+          description: "The Data and Society unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter focuses on data representation and its role in solving information problems.  Students learn what a representation system needs to be useful, and how computers are able to represent different types of information using binary systems.  For the chapter project, students represent their perfect day in a binary punch card and trade with classmates to decipher.\n\n**Goals:**\n\n-   Understand the role of data and data representation in solving information problems. \n-   Explain the necessary components of any data representation scheme, as well as the particulars of binary and the common ways that various types of simple and complex data are represented in binary code. \n\n**Big Questions:**\n\n-   Why is representation important in problem solving?\n-   What features does a representation system need to be useful?\n-   What is necessary to create usable binary representation systems?\n-   How can we combine systems together to get more complex information?\n\n:::"
+          student_description: This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+        fcs3-beta-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: fcs3-beta-2024
+          title: Unit 3 - Artificial Intelligence and Machine Learning
+          description_audience: ''
+          description_short: Learn to about Artificial Intelligence and Machine Learning.
+          description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n**Goals:**\n\n-   Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n-   Understand how machine learning models make decisions from data\n\n**Big Questions:**\n\n-   How does machine learning find patterns in data to make decisions?\n-   How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Implementation Guide][2] for more information about this unit\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module][3]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::"
+          student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+        fcs4-beta-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: fcs4-beta-2024
+          title: Unit 4 - Networks and the Internet
+          description_audience: ''
+          description_short: Build the internet from the ground up using the Internet Simulator.
+          description: "This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.\n\n::: details [**\U0001F9D0 Unit Philosophy and Pedagogy**]\n\n#### Inventing the Internet with the Internet Simulator\n\nThis unit features many different versions of the Internet Simulator, a digital widget that simulates how different features or \"layers\" of the Internet work. As students move from lesson to lesson, the version of the Internet Simulator they use will have slightly more functionality than the last. Lessons will present students with challenges that closely mimic those that the internet's original inventors needed to solve. Students will collaboratively design and test solutions to those problems to develop an intuitive understanding of how the internet works and why it was designed that way. By the end of the unit, students will have \"invented the internet\" themselves! \n\n#### Continuing to Establish a Strong Classroom Culture\n\nMuch like the Digital Information unit that comes before it, this unit emphasizes collaborative problem solving and developing a supportive and inclusive classroom culture. \n:::\n\n::: details [**⭐️ Major Assessment and Projects**]\n\n \nThe unit project asks students to design a policy position for an imaginary political candidate related to an \"Internet Dilemma.\" Students must analyze news stories about their topic to identify impacted groups, explain those groups' interests, explain technical background about the dilemma, and then recommend a policy solution that the candidate should advocate for. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n:::\n\n::: details [**✅ AP Connections**]\n \n\nThis unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n-   CSN-1: that computer systems and networks facilitate how data are transferred\n-   IOC-1: and that while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage][0].\n\n-   4.1 The Internet\n-   4.2 Fault Tolerance\n-   5.2 Digital Divide\n\n:::"
+          student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
+        fcs5-beta-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: fcs5-beta-2024
+          title: Unit 5 - Cybersecurity and Global Impacts
+          description_audience: ''
+          description_short: 'Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact. '
+          description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\n\n::: details [**\U0001F9D0 Unit Philosophy and Pedagogy**]\n\n#### Learning Through Full-class Simulation\n\nThe simulation project that runs through this unit serves several important goals. It helps contextualize what students are learning by moving from abstract ideas of privacy or security to concrete potential innovations. Since the simulation is based on modernizing schools, students can consider the consequences of computing innovations in a familiar setting. By taking on an assigned role and interacting with a group of teammates who have done the same, students must consider a breadth of interests and goals beyond their own when it comes to innovating in schools. \n\n#### Ending the Year as \"Deciders\"\n\nA major theme students engage with throughout this unit is the need to consider both sides of technological innovation. Computing technology has led to both benefits and harms to culture, economy, and society at large. Responding to important questions facing our world requires understanding technology and an ability to identify and interpret the impacts it causes. This unit is not designed to advocate for any particular point of view on the impact of technology. Still, it should empower students to adeptly see and weigh the consequences of the technology around them. While the Create PT may feel like the most significant project of this course, the Explore Curricular requirement and the questions faced in this unit are arguably more crucial. Many of the young people who take CS Principles may pursue studies or careers in which they are \"creators\" with technology, but all of them will need to be thoughtful \"deciders\" in a world profoundly shaped by computing. \n:::\n\n::: details [**⭐️ Major Assessment and Projects**]\n \n\nStudents complete the Future School Convention simulation throughout this unit. Working in teams of roughly five people, students are assigned a role and a set of interests they'll need to investigate. They research real-world innovations that could improve schools and align with the interests of their character. Throughout the unit, they are given opportunities to refine their proposals as a team and debate the benefits and risks of different computing innovations. Eventually, their team submits an overall proposal for the Future School, and all students vote for the team and innovation they believe to be the best. Students will also complete an end-of-unit assessment aligned with the CS Principles framework objectives covered in this unit.\n:::\n\n::: details [**✅ AP Connections**]\n \nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n-   IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n-   IOC-2: The use of computing innovations may involve risks to your personal safety and identity.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage][0].\n\n-   5.1 Beneficial and Harmful Effects\n-   5.6 Safe Computing\n\n:::"
+          student_description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
+        fcs6-beta-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: fcs6-beta-2024
+          title: Unit 6 - Introduction to Programming
+          description_audience: ''
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          student_description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+        fcs1a-beta-2024:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+          name: fcs1a-beta-2024
+          title: Unit 1A - (Option A) Computer Systems and Devices with Circuit Playground
+          description_audience: ''
+          description_short: Learn to program with physical devices.
+          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [(Option B) Creating Apps with Devices unit][0]. Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n\n-   This unit requires students to have access to Circuit Playground's - [click here][1] for more information about using Circuit Playground's in your classroom\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][2] and [Differentiation Guide][3]\n-   You can view the [Implementation Guide][4] for more information about this unit\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module][5]. The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::"
+          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+        fcs1b-beta-2024:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+          name: fcs1b-beta-2024
+          title: Unit 1B - (Option B) Computer Systems and Devices with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit][0]. Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n\n-   This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom][1]\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][2] and [Differentiation Guide][3]\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module][4]. The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::"
+          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
+        pilot-k5-game-design:
+          lessons:
+            lesson-1:
+              name: Game Design
+            lesson-2:
+              name: Variables as Score
+            lesson-3:
+              name: Environment and Players
+            lesson-4:
+              name: 'Game Jam Day 1: Create'
+            lesson-5:
+              name: 'Game Jam Day 2: Play'
+          lesson_groups: {}
+          name: pilot-k5-game-design
+          title: "[Pilot] Game Design"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-humanities:
+          lessons:
+            lesson-1:
+              name: Writing Process
+            lesson-2:
+              name: Research Process
+          lesson_groups: {}
+          name: gen-ai-humanities
+          title: Generative AI for Humanities
+          description_audience: ''
+          description_short: Learn how to effectively and ethically use generative AI chatbots in the writing and research process in these standalone lessons.
+          description: This unit consists of two standalone lessons -- one about writing with AI and one about researching with AI. Both are meant to be used in Humanities classes, to help demystify ethical and effective use of chatbots in humanities subject areas. You may use either or both at a time that makes sense for your class. Both lessons encourage students to explore the uses of these rapidly growing technologies and reflect on when and where to use them.
+          student_description: |-
+            In the Writing Process Lesson you will:
+
+            -   Prompt a chatbot to help brainstorm, draft or revise an essay.
+            -   Discuss with your classmates which of these uses supported your learning, versus detracted from it, and why.
+            -   Build Values for using AI with your class.
+
+            In the Research Process Lesson, you will:
+
+            -   Use a chatbot and a search engine to research and verify information.
+            -   Learn how to more effectively prompt a chatbot in the process.
+            -   Discuss what kind of research AI is helpful for.
+        self-paced-pl-csd1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          title: 'Module 1: Welcome '
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Discoveries.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Discoveries.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigating Code.org
+          title: 'Module 2: Navigating Code.org'
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Overview of CS Discoveries
+          title: 'Module 3: Overview of CS Discoveries'
+          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching and learning CS Discoveries
+          title: 'Module 4: Teaching and learning CS Discoveries'
+          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Consider the role of the teacher in a CS Discoveries classroom. \n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Consider the role of the teacher in a CS Discoveries classroom. \n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Artificial Intelligence and Machine Learning
+          title: "[Hidden - Do Not Use] Preparing to Teach AI and Machine Learning"
+          description: "**Note:** This unit is hidden within the CSD Self-Paced Course. The content of this unit has instead been moved to [https://studio.code.org/courses/self-paced-pl-aiml-2023][0]\n\nThis professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd-unit1-1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          title: Getting Started with Code.org
+          description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd-unit1-2-2024:
+          title: Preparing to Teach Problem Solving and Computing
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Problem Solving and Computing.\n-   Learn the key problem solving frameworks utilized in the unit\n-   Practice key concepts included in the unit.\n-   Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Problem Solving and Computing.\n-   Learn the key problem solving frameworks utilized in the unit\n-   Practice key concepts included in the unit.\n-   Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd-unit2-1-2024:
+          title: Getting Started with Code.org
+          description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd-unit2-2-2024:
+          title: Preparing to Teach Web Development
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            -   Get an introduction to Web Development.
+            -   Practice key concepts included in the unit.
+            -   Engage with Web Lab.
+            -   Explore end-of-chapter projects.
+
+            **Suggested time**: 90 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            -   Get an introduction to Web Development.
+            -   Practice key concepts included in the unit.
+            -   Engage with Web Lab.
+            -   Explore end-of-chapter projects.
+
+            **Suggested time**: 90 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd-unit3-1-2024:
+          title: Getting Started with Code.org
+          description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd-unit3-2-2024:
+          title: Preparing to Teach Interactive Animations and Games
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Interactive Animations and Games.\n-   Practice key concepts included in the unit.\n-   Engage with Game Lab.\n-   Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Interactive Animations and Games.\n-   Practice key concepts included in the unit.\n-   Engage with Game Lab.\n-   Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd-unit5-1-2024:
+          title: Getting Started with Code.org
+          description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd-unit5-2-2024:
+          title: Preparing to Teach Data and Society
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Data and Society.\n-   Practice key concepts included in the unit.\n-   Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Data and Society.\n-   Practice key concepts included in the unit.\n-   Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-physical-computing1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          title: Getting Started with Code.org
+          description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching the unit.\n\n**Suggested time:** 80 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-physical-computing2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparing to Teach Creating Apps for Devices with Circuit Playgrounds
+          title: Preparing to Teach Creating Apps for Devices
+          description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your Circuit Playground. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your Circuit Playground. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n\n**Suggested time:** 100 minutes"
+          description_short: ''
+          description_audience: ''
+        vpl-csd-2024-m1:
+          title: Module 1
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csd-2024-m2:
+          title: Module 2
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csd-2024-m3:
+          title: Module 3
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csd-2024-m4:
+          title: Module 4
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csd-2024-m5:
+          title: Module 5
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csd-2024-m6:
+          title: Module 6
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csd-2024-m7:
+          title: Module 7
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csd-2024-m8:
+          title: Module 8
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csa-2024-m1:
+          title: Module 1
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csa-2024-m2:
+          title: Module 2
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csa-2024-m3:
+          title: Module 3
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csa-2024-m4:
+          title: Module 4
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csa-2024-m5:
+          title: Module 5
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csa-2024-m6:
+          title: Module 6
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csa-2024-m7:
+          title: Module 7
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csa-2024-m8:
+          title: Module 8
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa1-2024:
+          title: 'Module 1: Welcome'
+          description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+
+            -   Get an introduction to Code.org.
+            -   Learn how to engage in these professional learning modules.
+            -   Get an introduction to the AP Computer Science A course
+            -   Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 1 hour
+          student_description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+
+            -   Get an introduction to Code.org.
+            -   Learn how to engage in these professional learning modules.
+            -   Get an introduction to the AP Computer Science A course
+            -   Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 1 hour
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa2-2024:
+          title: 'Module 2: Navigating Code.org'
+          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching the course.\n\n**Estimated Time:** 1 hour"
+          student_description: |-
+            This module is intended for teachers who are new to Code.org and the Code.org platform.
+
+            **You will:**
+
+            -   Navigate the Code.org website and teacher tools.
+            -   Set up a classroom section.
+            -   Locate and use course lesson plans and teacher resources.
+            -   Learn how to access support while teaching the course.
+
+            **Estimated Time:** 1 hour
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa3-2024:
+          title: 'Module 3: Support for text-based programming'
+          description: |-
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+
+            -   Create a new file in the Java Lab IDE
+            -   Become familiar with the basics of Java syntax
+            -   Declare and initialize variables
+            -   Use variables in arithmetic operations
+            -   Print variables and text to the console
+            -   Write and read if, if-else, if-else-if-else statements
+            -   Read, write, and debug for loops in Java
+            -   Declare and  initialize a 1D array of primitive data types
+            -   Access and modify elements in arrays
+            -   Traverse arrays
+
+            **Estimated Time:** 6 hours
+          student_description: |-
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+
+            -   Create a new file in the Java Lab IDE
+            -   Become familiar with the basics of Java syntax
+            -   Declare and initialize variables
+            -   Use variables in arithmetic operations
+            -   Print variables and text to the console
+            -   Write and read if, if-else, if-else-if-else statements
+            -   Read, write, and debug for loops in Java
+            -   Declare and  initialize a 1D array of primitive data types
+            -   Access and modify elements in arrays
+            -   Traverse arrays
+
+            **Estimated Time:** 6 hours
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa4-2024:
+          title: 'Module 4: Getting to know the Painter class'
+          description: |-
+            This module is for any teacher who is familiar with Java OR has done Module 3, but who want introduction to the student-facing tools Code.org's in CSA Curriculum.
+
+            **You will:**
+
+            -   Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            -   Instantiate an object
+            -   Call methods from the `Painter` class
+            -   Learn how to use UML diagrams
+
+            **Estimated Time:** 2 hours
+          student_description: |-
+            This module is for any teacher who is:
+
+            -   Experienced in using variables, conditionals, loops and arrays in other programming languages
+            -   Has finished Module 3 in this set of Modules
+            -   Is new to Java
+            -   Want an introduction to the student-facing tools in Code.org's tools in CSA Curriculum.
+
+            **You will:**
+
+            -   Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            -   Instantiate an object
+            -   Call methods from the `Painter` class
+            -   Learn how to use UML diagrams
+
+            **Estimated Time:** 2 hours
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2024-m1:
+          title: Module 1
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2024-m2:
+          title: Module 2
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2024-m3:
+          title: Module 3
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2024-m4:
+          title: Module 4
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2024-m5:
+          title: Module 5
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2024-m6:
+          title: Module 6
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2024-m7:
+          title: Module 7
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2024-m8:
+          title: Module 8
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csp1-2024:
+          title: 'Module 1: Welcome'
+          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csp2-2024:
+          title: 'Module 2: Navigating Code.org'
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csp3-2024:
+          title: Overview of CS Principles
+          description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            -   Gain a high-level understanding of the CS Principles curriculum.
+            -   Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            -   Become familiar with the student learning tools used within CS Principles.
+            -   Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            -   Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+          student_description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            -   Gain a high-level understanding of the CS Principles curriculum.
+            -   Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            -   Become familiar with the student learning tools used within CS Principles.
+            -   Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            -   Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csp4-2024:
+          title: Teaching and learning CS Principles
+          description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            -   Consider the role of the teacher in a CS Principles classroom.
+            -   Learn about authentic CS practices that students will develop throughout the CS Principles course.
+            -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            -   Learn about opportunities to connect with the broader CS community.
+
+            **Suggested Time**: 70 minutes
+          student_description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            -   Consider the role of the teacher in a CS Principles classroom.
+            -   Learn about authentic CS practices that students will develop throughout the CS Principles course.
+            -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            -   Learn about opportunities to connect with the broader CS community.
+
+            **Suggested Time**: 70 minutes
+          description_short: ''
+          description_audience: ''

@@ -135,6 +135,10 @@ module SharedConstants
     }
   )
 
+  FEATURED_PROJECT_CONSTANTS = OpenStruct.new(
+    {MAX_REQUESTS_PER_CATEGORY: 15}
+  )
+
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.
@@ -659,13 +663,14 @@ module SharedConstants
       ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
       INTEGRATION_EARLY_ACCESS_URL: 'https://docs.google.com/forms/d/e/1FAIpQLScjfVR4CZs8Utf5vI4mz3e1q8vdH6RNIgTUWygZXN0oovBSQg/viewform',
       INTEGRATION_BUG_REPORT_URL: 'https://support.code.org/hc/en-us/requests/new?ticket_form_id=14998494738829&tf_23889708=lms_eaf',
+      ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
     }
   ).freeze
 
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v1.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v2.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
@@ -690,4 +695,9 @@ module SharedConstants
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
   }.freeze
+
+  USER_TYPES = OpenStruct.new(
+    STUDENT: 'student',
+    TEACHER: 'teacher',
+  ).freeze
 end

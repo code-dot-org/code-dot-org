@@ -727,6 +727,23 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_validations
+    if should_localize?
+      validations_clone = validations.map(&:clone)
+      validations_clone.each do |validation|
+        validation['message'] = I18n.t(
+          validation["key"],
+          scope: [:data, :validations, name],
+          default: validation["message"],
+          smart: true
+        )
+      end
+      validations_clone
+    else
+      validations
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -787,11 +804,14 @@ class Level < ApplicationRecord
   def summarize_for_lab2_properties(script)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
+    properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
+    # Localized properties
+    properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
     properties_camelized
   end
 

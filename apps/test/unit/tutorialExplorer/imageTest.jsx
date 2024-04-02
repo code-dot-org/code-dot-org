@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../util/reconfiguredChai';
+import React from 'react';
+
 import Image from '@cdo/apps/tutorialExplorer/image';
+
+import {assert} from '../../util/reconfiguredChai';
 
 describe('Image', () => {
   it('renders with minimum opacity at first', () => {

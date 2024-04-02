@@ -9,12 +9,16 @@ markdown <<MARKDOWN
 
 #### The overview of the module can be edited on the module overview page in Levelbuilder and each lesson overview is edited on the lesson overview page in the overview section. You must click on each lesson and add the overviews one by one.  
 
-![](https://images.code.org/d36a259426fd4df88be409deef7db6cd-image-1706725812749.29.44 AM.png)
+#### This diagram guides you to where you edit the overviews for each page on Levelbuilder. 
 
-#### The each overview should include: 
+![](https://images.code.org/9ce5edd0559815d0b872d5a49ab80eac-image-1711047182753.png)
+
+### **Each overview should include:** 
 * #### Title 
 * #### Objectives 
 * #### Suggested time 
+
+
 
 #### The content you put in the "Edit Markdown" this page will appear in two places:
 

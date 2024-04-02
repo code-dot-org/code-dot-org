@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
 import {multipleChoiceDataPropType} from './assessmentDataShapes';
+import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
 import {
   getMultipleChoiceSurveyResults,
   countSubmissionsForCurrentAssessment,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 
 class MultipleChoiceSurveyOverviewContainer extends Component {
   static propTypes = {

@@ -248,17 +248,7 @@ class Section < ApplicationRecord
   def ensure_owner_is_active_instructor
     return if user.blank?
 
-    si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
-    if si.blank?
-      SectionInstructor.create!(section_id: id, instructor: user, status: :active)
-    elsif si.deleted?
-      si.restore
-      si.status = :active
-      si.save!
-    elsif si.status != 'active'
-      si.status = :active
-      si.save!
-    end
+    add_instructor(user)
   end
 
   # return a version of self.students in which all students' names are
@@ -383,8 +373,73 @@ class Section < ApplicationRecord
     summarize(include_students: false)
   end
 
+  # Provides some information about a section. This provides a more concise set of information than
+  # 'summarize' and is used for the list of sections in the teacher dashboard. This should reduce the amount of
+  # data loaded and sent to the client than returning `summarize` for each section.
+  # This is placed into the redux store as `teacherSections.sections` for all sections a teacher has access to.
+  def concise_summarize
+    ActiveRecord::Base.connected_to(role: :reading) do
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+
+      {
+        id: id,
+        name: name,
+        courseVersionName: unit_group ? unit_group.name : script&.name,
+        createdAt: created_at,
+        login_type: login_type,
+        grades: grades,
+        providerManaged: provider_managed?,
+        lesson_extras: lesson_extras,
+        pairing_allowed: pairing_allowed,
+        tts_autoplay_enabled: tts_autoplay_enabled,
+        sharing_disabled: sharing_disabled?,
+        studentCount: students.distinct(&:id).size,
+        code: code,
+        course_offering_id: course_offering_id,
+        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+        unit_id: unit_group ? script_id : nil,
+        course_id: course_id,
+        hidden: hidden,
+        restrict_section: restrict_section,
+        # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
+        post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
+        code_review_expires_at: code_review_expires_at,
+        is_assigned_csa: assigned_csa?,
+        participant_type: participant_type,
+        sectionInstructors: serialized_section_instructors,
+        sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+      }
+    end
+  end
+
+  # Provides additional information about a selected section.
+  # This only additional information from `concise_summarize`, 'name' and 'id' are the only overlapping fields.
+  # This is only needed for the teacher dashboard SELECTED section.
+  def selected_section_summarize
+    ActiveRecord::Base.connected_to(role: :reading) do
+      login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
+      if login_type == LOGIN_TYPE_LTI_V1
+        issuer = lti_course.lti_integration.issuer
+        login_type_name = Policies::Lti.issuer_name(issuer)
+      end
+
+      {
+        id: id,
+        name: name,
+        students: students.distinct(&:id).map(&:summarize),
+        login_type_name: login_type_name,
+        script: {
+          id: script_id,
+          name: script.try(:name),
+          project_sharing: script.try(:project_sharing),
+        },
+      }
+    end
+  end
+
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
-  # React component on the teacher homepage and student homepage
+  # React component on the student homepage.
+  # This provides all information in `selected_section_summarize` and `concise_summarize` as well as additional fields.
   def summarize(include_students: true)
     ActiveRecord::Base.connected_to(role: :reading) do
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
@@ -578,7 +633,29 @@ class Section < ApplicationRecord
   end
   before_validation :strip_emoji_from_name
 
-  public def add_instructor(email, current_user)
+  # Adds an instructor to the section
+  # If the instructor was previously deleted, restore the instructor
+  # Make the instructor active if they had a different status
+  # If the instructor did not previously exist, create the section instructor relationship
+  # Returns true if successful
+  def add_instructor(user)
+    transaction do
+      Follower.find_by(section: self, student_user: user)&.destroy
+      si = SectionInstructor.with_deleted.find_or_initialize_by(instructor: user, section_id: id)
+      si.restore if si.deleted?
+      si.active!
+    end
+
+    true
+  end
+
+  # Removes an instructor
+  # Note: Will not remove the primary instructor to prevent orphaned sections
+  def remove_instructor(user)
+    SectionInstructor.find_by(instructor: user, section_id: id)&.destroy unless self.user == user
+  end
+
+  def invite_instructor(email, current_user)
     instructor = User.find_by!(email: email, user_type: :teacher)
     raise ArgumentError.new('inviting self') if instructor == current_user
 

@@ -1,7 +1,10 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
+
+import {expect} from '../../../util/reconfiguredChai';
+
 import {courseData} from './rollupTestData';
 
 describe('UnitRollup', () => {
