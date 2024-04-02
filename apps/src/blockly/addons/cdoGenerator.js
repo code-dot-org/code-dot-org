@@ -16,11 +16,22 @@ export default function initializeGenerator(blocklyWrapper) {
     return workspace.getTopBlocks(true);
   };
 
+  // Used to generate code for an array of top blocks, such as initialization blocks.
+  blocklyWrapper.Generator.blocksToCode = function (lanugage, blocks) {
+    const generator = blocklyWrapper.getGenerator();
+    generator.init(blocklyWrapper.mainBlockSpace);
+    let code = [];
+    blocks.forEach(block => {
+      code.push(blocklyWrapper[lanugage].blockToCode(block));
+    });
+    code = code.join('\n');
+    code = generator.finish(code);
+    return code;
+  };
+
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function (name, opt_typeFilter) {
-    const generator = blocklyWrapper.getGenerator();
-    generator.init(blocklyWrapper.mainBlockSpace);
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
     );
@@ -32,13 +43,10 @@ export default function initializeGenerator(blocklyWrapper) {
         opt_typeFilter.includes(block.type)
       );
     }
-    let code = [];
-    blocksToGenerate.forEach(block => {
-      code.push(blocklyWrapper.JavaScript.blockToCode(block));
-    });
-    code = code.join('\n');
-    code = generator.finish(code);
-    return code;
+    return blocklyWrapper.Generator.blocksToCode(
+      'JavaScript',
+      blocksToGenerate
+    );
   };
 
   const originalBlockToCode = blocklyWrapper.Generator.prototype.blockToCode;

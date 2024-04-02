@@ -160,6 +160,7 @@ export interface ExtendedBlock extends Block {
   // Blockly uses any for value.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setTitleValue: (newValue: any, name: string) => void;
+  interpolateMsg(msg: string, ...args: InterpolateMsgArgs[]): void;
 }
 
 export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
@@ -225,3 +226,14 @@ export interface ProcedureBlockConfiguration {
 export type ProcedureType =
   | BLOCK_TYPES.procedureDefinition
   | BLOCK_TYPES.behaviorDefinition;
+
+export const usedArgumentSymbol = Symbol('UsedArgument');
+
+export type InterpolateMsgArgs = (
+  | (() => void)
+  | [string, string, number]
+  | number
+  | string
+  | typeof usedArgumentSymbol
+  | null
+)[];

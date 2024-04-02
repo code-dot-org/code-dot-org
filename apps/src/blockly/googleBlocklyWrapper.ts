@@ -80,6 +80,8 @@ import {
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
   GoogleBlocklyInstance,
+  InterpolateMsgArgs,
+  usedArgumentSymbol,
 } from './types';
 import {FieldProto} from 'blockly/core/field';
 import {Options, Theme} from 'blockly';
@@ -496,6 +498,51 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this.setFieldValue(newValue, name);
   };
 
+  extendedBlock.interpolateMsg = function (
+    msg: string,
+    ...args: InterpolateMsgArgs[]
+  ) {
+    // Remove the msg from the start and the dummy alignment from the end of args.
+    const dummyAlign = arguments.length - 1;
+
+    const tokens = msg.split(/(%\d)/);
+    for (let i = 0; i < tokens.length; i += 2) {
+      const text = tokens[i].trim();
+      const symbol = tokens[i + 1];
+      if (symbol) {
+        // Value input.
+        const digit = window.parseInt(symbol.charAt(1), 10);
+        const fieldInputType = args[digit] as unknown as
+          | (() => void)
+          | [string, string, number];
+
+        if (typeof fieldInputType === 'function') {
+          this.appendDummyInput().appendField(text);
+          fieldInputType();
+        } else {
+          this.appendValueInput(fieldInputType[0])
+            .setCheck(fieldInputType[1])
+            .setAlign(fieldInputType[2])
+            .appendField(text);
+        }
+        args[digit] = usedArgumentSymbol; // Inputs may not be reused.
+      } else if (text) {
+        // Trailing dummy input.
+        this.appendDummyInput().setAlign(dummyAlign).appendField(text);
+      }
+    }
+    // Verify that all inputs were used.
+    for (let i = 1; i < arguments.length - 1; i++) {
+      if (args[i] !== null) {
+        throw new Error(
+          `Assertion Error: Input "%${i}" not used in message: "${msg}"`
+        );
+      }
+    }
+    // Make the inputs inline unless there is only one input and
+    // no text follows it.
+    this.setInputsInline(!msg.match(/%1\s*$/));
+  };
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
     .prototype as ExtendedWorkspaceSvg;
 
