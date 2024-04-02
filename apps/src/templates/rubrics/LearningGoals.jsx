@@ -494,11 +494,6 @@ export default function LearningGoals({
     // Annotate the lines based on the AI observation
     clearAnnotations();
     if (currentIndex !== learningGoals.length) {
-      const aiEvalInfo = getAiInfo(learningGoals[currentIndex].id);
-      if (!!aiEvalInfo && aiEvalInfo.evidence) {
-        setAiEvidence(annotateLines(aiEvalInfo.evidence));
-      }
-
       if (!isStudent) {
         const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
         analyticsReporter.sendEvent(eventName, {
