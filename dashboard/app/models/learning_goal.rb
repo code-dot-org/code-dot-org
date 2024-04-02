@@ -24,7 +24,7 @@ class LearningGoal < ApplicationRecord
 
   validate :validate_ai_config
   def validate_ai_config
-    if ai_enabled
+    if ai_enabled && [:development, :test].exclude?(rack_env)
       lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
       s3_learning_goals = EvaluateRubricJob.new.get_s3_learning_goals(lesson_s3_name)
       unless s3_learning_goals.include?(learning_goal)
