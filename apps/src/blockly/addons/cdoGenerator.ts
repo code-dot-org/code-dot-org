@@ -21,10 +21,18 @@ export default function initializeGenerator(
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
-  blocklyWrapper.Generator.blockSpaceToCode = function (name) {
-    const blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
+  blocklyWrapper.Generator.blockSpaceToCode = function (name, opt_typeFilter) {
+    let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
     );
+    if (opt_typeFilter) {
+      if (typeof opt_typeFilter === 'string') {
+        opt_typeFilter = [opt_typeFilter];
+      }
+      blocksToGenerate = blocksToGenerate.filter(block =>
+        (opt_typeFilter as string[]).includes(block.type)
+      );
+    }
     return blocklyWrapper.Generator.blocksToCode(name, blocksToGenerate);
   };
 

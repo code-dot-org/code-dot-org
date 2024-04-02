@@ -238,7 +238,10 @@ export interface ExtendedWorkspace extends Workspace {
 type CodeGeneratorType = typeof CodeGenerator;
 export interface ExtendedGenerator extends CodeGeneratorType {
   xmlToBlocks: (name: string, xml: Node) => Block[];
-  blockSpaceToCode: (name: string) => string;
+  blockSpaceToCode: (
+    name: string,
+    opt_typeFilter?: string | string[]
+  ) => string;
   blocksToCode: (name: string, blocksToGenerate: Block[]) => string;
   prefixLines: (text: string, prefix: string) => string;
 }
