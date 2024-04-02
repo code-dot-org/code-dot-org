@@ -154,6 +154,6 @@ LevelDataCell.propTypes = {
   studentLevelProgress: studentLevelProgressType,
   level: PropTypes.object.isRequired,
   expandedChoiceLevel: PropTypes.bool,
-  parentLevelId: PropTypes.number,
+  parentLevelId: PropTypes.string,
   lessonId: PropTypes.number.isRequired,
 };

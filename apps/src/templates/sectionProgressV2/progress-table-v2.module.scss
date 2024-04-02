@@ -203,7 +203,7 @@ min-width:47px;
       flex-direction: row;
       width: fit-content;
 
-      & .expandedHeaderChild:last-child {
+      & .expandedHeaderLevelCell:last-child {
         border-right: 1px solid $neutral_dark40;
       }
     }
@@ -231,27 +231,22 @@ min-width:47px;
       }
     }
 
-    &ExpandedLevel {
-      background-color: $light_primary_500;
-      color: $light_white;
-      display: flex;
-      flex-direction: row;
-      border-left: 1px solid $neutral_dark40;
+    &ExpandedLevelCell {
+      // Invisible border to match sizing of table
+      border: 0;
+      width: 53px;
       border-top: 1px solid $neutral_dark40;
+      color: $light_white;
+      background-color: $light_primary_500;
 
       & .assessmentLevelIcon {
         color: $light_white;
       }
-
-      .expandedHeaderExpandedLevelCell:first-child {
-        border-left: 0;
-      }
     }
 
-    &ExpandedLevelCell {
-      // Invisible border to match sizing of table
-      border: 0;
-      border-left: 1px solid $light_primary_500;
+    &ExpandedLevelCellFirst { 
+      border-left: 1px solid $neutral_dark40;
+      width: 52px;
     }
   }
   &Column {

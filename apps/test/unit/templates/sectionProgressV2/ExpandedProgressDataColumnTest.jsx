@@ -121,7 +121,6 @@ describe('ExpandedProgressDataColumn', () => {
 
   it('Shows expanded choice level', () => {
     const {lesson, levelWithSublevels} = renderWithSublevels();
-
     const choiceLevelHeader = screen.getByText(
       lesson.relative_position + '.' + levelWithSublevels.bubbleText
     );

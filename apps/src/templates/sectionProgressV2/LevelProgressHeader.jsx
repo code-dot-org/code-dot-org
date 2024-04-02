@@ -18,23 +18,18 @@ export default function ExpandedProgressColumnHeader({
 
   const expandedChoiceLevel = React.useCallback(
     () => (
-      <tbody
-        key={lesson.id + '.' + level.id + '-h'}
-        className={classNames(
-          styles.expandedHeaderChild,
-          styles.expandedHeaderExpandedLevel,
-          isExpandable && styles.pointerMouse
-        )}
-        onClick={() => toggleExpandedChoiceLevel(level)}
-      >
+      <>
         <th
           className={classNames(
             styles.gridBox,
             styles.expandedHeaderLevelCell,
-            styles.expandedHeaderExpandedLevelCell
+            styles.expandedHeaderExpandedLevelCell,
+            styles.expandedHeaderExpandedLevelCellFirst,
+            isExpandable && styles.pointerMouse
           )}
           scope="col"
           id={getLevelColumnHeaderId(level.id)}
+          onClick={() => toggleExpandedChoiceLevel(level)}
         >
           {level.sublevels?.length > 0 && <FontAwesome icon="caret-down" />}
           <div className={styles.expandedHeaderLevelCellLevelNumber}>
@@ -48,7 +43,7 @@ export default function ExpandedProgressColumnHeader({
             />
           )}
         </th>
-        {level.sublevels?.map(sublevel => (
+        {level.sublevels?.map((sublevel, index) => (
           <th
             className={classNames(
               styles.gridBox,
@@ -64,7 +59,7 @@ export default function ExpandedProgressColumnHeader({
             </div>
           </th>
         ))}
-      </tbody>
+      </>
     ),
     [lesson, level, isExpandable, toggleExpandedChoiceLevel]
   );
