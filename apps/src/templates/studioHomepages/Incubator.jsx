@@ -25,9 +25,6 @@ class Incubator extends Component {
     analyticsReporter.sendEvent(
       eventName,
       {
-        userId: this.state.currentUser.userId,
-        userType: this.state.currentUser.userType,
-        userName: this.state.currentUser.userName,
         userRoleInCourse: this.state.currentUser.userRoleInCourse,
       },
       platform
@@ -76,7 +73,7 @@ class Incubator extends Component {
                   text: i18n.incubator_canvasIntegration_earlyAccess_signUp_button(),
                   target: '_blank',
                   onClick: () => {
-                    this.reportEvent(EVENTS.LTI_INCUBATOR_SIGNUP_CLICKED);
+                    this.reportEvent(EVENTS.LTI_INCUBATOR_SIGNUP_CLICK);
                   },
                 },
                 {
@@ -85,7 +82,7 @@ class Incubator extends Component {
                   color: Button.ButtonColor.neutralDark,
                   target: '_blank',
                   onClick: () => {
-                    this.reportEvent(EVENTS.LTI_INCUBATOR_GUIDES_CLICKED);
+                    this.reportEvent(EVENTS.LTI_INCUBATOR_GUIDES_CLICK);
                   },
                 },
               ]}
