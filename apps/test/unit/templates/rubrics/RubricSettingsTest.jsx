@@ -5,6 +5,8 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon';
 
 import * as utils from '@cdo/apps/code-studio/utils';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
@@ -116,6 +118,12 @@ describe('RubricSettings', () => {
       ],
     },
   ];
+
+  const reportingData = {
+    unitName: 'test-2023',
+    courseName: 'course-2023',
+    levelName: 'Test Blah Blah Blah',
+  };
 
   it('displays Section selector', () => {
     stubFetchEvalStatusForAll(ready);
@@ -278,9 +286,6 @@ describe('RubricSettings', () => {
     fetchStub
       .onCall(1)
       .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    // fetchStub.onCall(2).returns(
-    //   Promise.resolve(new Response(JSON.stringify(evals)))
-    // );
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -300,15 +305,58 @@ describe('RubricSettings', () => {
       await Promise.resolve();
     });
     wrapper.update();
-    // await act(async () => {
-    //   await Promise.resolve();
-    // });
-    // wrapper.update();
     expect(wrapper.text()).to.include(
       i18n.rubricNumberStudentEvals({
         teacherEvalCount: 2,
       })
     );
     expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
+  });
+
+  it('sends event when download CSV is clicked', async () => {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          reportingData={reportingData}
+          sectionId={1}
+        />
+      </Provider>
+    );
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    expect(wrapper.text()).to.include(
+      i18n.rubricNumberStudentEvals({
+        teacherEvalCount: 2,
+      })
+    );
+    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
+    wrapper.find('Button').at(1).simulate('click');
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_CSV_DOWNLOADED,
+      {
+        unitName: 'test-2023',
+        courseName: 'course-2023',
+        levelName: 'Test Blah Blah Blah',
+        sectionId: 1,
+      }
+    );
+    sendEventSpy.restore();
   });
 });
