@@ -24,7 +24,7 @@ import ModelCardFields from './ModelCardFields';
 import VisibilityDropdown from './VisibilityDropdown';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {UpdateContext} from './UpdateContext';
-import CollapsibleSection from './CollapsibleSection';
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 // Make sure all fields have a visibility specified.
 function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {

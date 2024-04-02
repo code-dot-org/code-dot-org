@@ -980,13 +980,13 @@ export function getAlphanumericId() {
 /**
  * Parses a level's XML properties for block ids that were explicitly set.
  * @param {Object} appOptions
- * @returns {string[]} - An array of explicitly set 'id' attributes found in the XML.
+ * @returns {Set<string>} - A set of explicitly set 'id' attributes found in the XML.
  */
 export function findExplicitlySetBlockIds(appOptions = null) {
   if (!appOptions || !appOptions.level) {
     return [];
   }
-  const explicitlySetIds = [];
+  const explicitlySetIds = new Set();
 
   const blockSources = ['startBlocks', 'toolbox'];
   for (const levelProperty of blockSources) {
@@ -1005,7 +1005,7 @@ export function findExplicitlySetBlockIds(appOptions = null) {
       blockElements.forEach(blockElement => {
         const idAttribute = blockElement.getAttribute('id');
         if (idAttribute) {
-          explicitlySetIds.push(idAttribute);
+          explicitlySetIds.add(idAttribute);
         }
       });
     } catch (error) {
