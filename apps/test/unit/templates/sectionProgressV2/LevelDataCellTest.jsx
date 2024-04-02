@@ -21,9 +21,10 @@ const DEFAULT_PROPS = {
   sectionId: 1,
   studentLevelProgress: PROGRESS,
   expandedChoiceLevel: false,
+  lessonId: 1,
 };
 
-describe('ProgressTableV2', () => {
+describe('LevelDataCell', () => {
   const renderDefault = (propOverrides = {}) => {
     render(<UnconnectedLevelDataCell {...DEFAULT_PROPS} {...propOverrides} />);
   };
