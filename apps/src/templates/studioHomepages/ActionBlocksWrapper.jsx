@@ -75,7 +75,6 @@ export default function ActionBlocksWrapper({actionBlocks}) {
           ? styles.wrapperThreeCol
           : styles.wrapperTwoCol
       }
-      data-testid="action-blocks-wrapper"
     >
       {actionBlocks.map((actionBlock, index) => (
         <OneColumnActionBlock

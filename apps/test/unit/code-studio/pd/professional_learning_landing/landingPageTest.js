@@ -32,7 +32,7 @@ describe('LandingPage', () => {
     screen.getByTestId('enrolled-workshops-loader');
     expect(screen.queryByText('Online Professional Learning Courses')).to.not
       .exist;
-    screen.getByTestId('action-blocks-wrapper');
+    screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
   it('page shows a survey banner for a teacher with a pending survey', () => {
@@ -42,7 +42,7 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingStartSurvey());
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText('Online Professional Learning Courses');
-    screen.getByTestId('action-blocks-wrapper');
+    screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
   it('page shows a survey banner for a CSD/CSP teacher with a pending survey', () => {
@@ -52,7 +52,7 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingStartSurvey());
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText('Online Professional Learning Courses');
-    screen.getByTestId('action-blocks-wrapper');
+    screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
   it('page shows upcoming workshops and plc enrollments but no survey banner if no pending survey exists', () => {
@@ -65,6 +65,6 @@ describe('LandingPage', () => {
     expect(screen.queryByText(i18n.plLandingStartSurvey())).to.not.exist;
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText('Online Professional Learning Courses');
-    screen.getByTestId('action-blocks-wrapper');
+    screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 });
