@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:13:57.000Z",
   "level_num": "custom",
@@ -57,7 +58,7 @@
     "hide_pause_button": "false",
     "instructions_icon": "pizza",
     "short_instructions": "Practice changing each sprite's costume using events.",
-    "long_instructions": "**Finish the game!** Practice changing each sprite's costume using events.\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/29dc89dbaa522a5cc418620013717af4-image-1641833820697.2022-01-10 11_55_38.gif)\r\n\r\n</div>\r\n\r\n1. Make at least 3 sprites with the same costume\r\n\r\n - Make each sprite change costumes when it is clicked\r\n - Press `Run` and try it out\r\n\r\n**Extra challenge:** Create a group of sprites that all change costume at the same time when one is clicked. \r\n\r\n\r\n",
+    "long_instructions": "**Finish the game!** Practice changing each sprite's costume using events.\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/29dc89dbaa522a5cc418620013717af4-image-1641833820697.2022-01-10 11_55_38.gif)\r\n\r\n</div>\r\n\r\n1. Make at least 3 sprites with the same costume\r\n\r\n - Make each sprite change costumes when it is clicked\r\n - Press `Run` and try it out\r\n\r\n**Extra challenge:** Create another group of sprites that all change costume _**at the same time**_ when one is clicked. \r\n\r\n\r\n",
     "authored_hints": "[]",
     "hint_prompt_attempts_threshold": "1",
     "display_name": "Changing Costumes",
@@ -69,9 +70,8 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:13:57.952+00:00\",\"changed\":[\"cloned from \\\"hello_games_groups_practice2\\\"\"],\"cloned_from\":\"hello_games_groups_practice2\"},{\"changed_at\":\"2024-03-18 20:14:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:35:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-21 18:58:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:13:57.952+00:00\",\"changed\":[\"cloned from \\\"hello_games_groups_practice2\\\"\"],\"cloned_from\":\"hello_games_groups_practice2\"},{\"changed_at\":\"2024-03-18 20:14:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:35:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-21 18:58:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-01 13:48:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
