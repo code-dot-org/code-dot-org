@@ -220,15 +220,20 @@ module Cdo
         @loaded_files ||= Set.new
       end
 
+      # Get the set of valid locales for a given base locale code. For example,
+      # for a base of `:pt`, we expect valid locales `:pt`, `:"pt-BR"`, `:"en-US"`, and `en`
+      def valid_locales_for(base_locale)
+        valid_locales = Set.new(::I18n.fallbacks[base_locale])
+        valid_locales << base_locale
+        valid_locales << LOCALES_MAPPING[base_locale] # en: :'en-US'
+        valid_locales.compact_blank
+      end
+
       # The original method has been modified to also load files for the current locale's fallbacks,
       # like loading "en-US" files for the "en" locale and vice versa.
       # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L164-L171
       def filenames_for_current_locale
-        # Enables loading both the current locale and its fallbacks, such as "en" for "en-US" and vice versa.
-        valid_locales = Set.new(::I18n.fallbacks[::I18n.locale])
-        valid_locales << LOCALES_MAPPING[::I18n.locale] # en: :'en-US'
-        valid_locales.compact_blank
-
+        valid_locales = valid_locales_for(::I18n.locale)
         # Excludes already loaded i18n files to prevent them from being reloaded during locale switching.
         # For example, for the "de-DE" locale, the i18n fallbacks are "de", "en", and "en-US".
         # Since "en-US" (and "en") is the default locale, its i18n files are already loaded.
@@ -238,12 +243,23 @@ module Cdo
         end
       end
 
-      # Prevents from raising an error when the locale in the filename and
-      # the root locale key in the file content mismatch,
-      # like when `en.yml` has a root locale key of `en-US:` instead of `en:`.
-      # This error is no longer relevant because the functionality has been changed to load such files regardless.
+      # Checks if a filename is named in correspondence to the translations it loaded.
+      # The locale extracted from the path must be either the single locale loaded in
+      # the translations or one of the expected variations of the locale, taking into
+      # account both long locale codes and fallbacks.
       # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L173-L181
-      def assert_file_named_correctly!(...)
+      def assert_file_named_correctly!(file, translations)
+        expected_locale = ::I18n::Backend::LocaleExtractor.locale_from_path(file)
+        return if expected_locale.nil?
+
+        valid_locales = valid_locales_for(expected_locale)
+        unexpected_locales = translations.each_key.reject {|locale| valid_locales.include?(locale.to_sym)}
+        return if unexpected_locales.empty?
+
+        warn "INVALID I18N: Incorrect filename of #{file}".yellow
+        warn "       valid: #{valid_locales.inspect}".blue
+        warn "    expected: #{expected_locale.inspect}".green
+        warn "  unexpected: #{unexpected_locales.inspect}".red
       end
     end
   end
