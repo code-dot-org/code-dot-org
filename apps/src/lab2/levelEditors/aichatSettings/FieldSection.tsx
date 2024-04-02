@@ -28,10 +28,9 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
   max,
   step,
 }) => {
-  const {aichatSettings: aiCustomizations, setPropertyValue} =
-    useContext(UpdateContext);
+  const {aichatSettings, setPropertyValue} = useContext(UpdateContext);
   const InputTag = inputType === 'textarea' ? 'textarea' : 'input';
-  const {initialCustomizations, visibilities} = aiCustomizations;
+  const {initialCustomizations, visibilities} = aichatSettings;
   return (
     <div className={moduleStyles.fieldSection}>
       <hr />
