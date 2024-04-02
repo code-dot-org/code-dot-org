@@ -166,6 +166,14 @@ const defaultProject: ProjectType = {
       open: false,
       folderId: '0',
     },
+    '8': {
+      id: '8',
+      name: 'some-json.json',
+      language: 'json',
+      contents: '{"a" : "b", "c":[1,2,3]}',
+      open: false,
+      folderId: '0',
+    },
   },
 };
 
