@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
@@ -14,6 +14,7 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 
 const loremIpsum =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+
 const CompareModelsDialog: React.FunctionComponent<{onClose: () => void}> = ({
   onClose,
 }) => {
@@ -35,7 +36,7 @@ const CompareModelsDialog: React.FunctionComponent<{onClose: () => void}> = ({
         </button>
       </div>
       <hr />
-      <div style={{display: 'flex', position: 'relative', overflowY: 'auto'}}>
+      <div style={{display: 'flex', position: 'relative', overflowY: 'hidden'}}>
         <ModelDescriptionPanel />
         <ModelDescriptionPanel />
       </div>
@@ -48,6 +49,24 @@ const CompareModelsDialog: React.FunctionComponent<{onClose: () => void}> = ({
 };
 
 const ModelDescriptionPanel: React.FunctionComponent = () => {
+  const [userWantsScroll, setUserWantsScroll] = useState<boolean>(false);
+  const [contentNeedsScroll, setContentNeedsScroll] = useState<boolean>(false);
+
+  const descriptionsContainerRef = useRef<HTMLDivElement>(null);
+
+  const showViewMoreButton = !userWantsScroll && contentNeedsScroll;
+  const shouldScroll = userWantsScroll && contentNeedsScroll;
+
+  useEffect(() => {
+    if (
+      descriptionsContainerRef.current &&
+      descriptionsContainerRef.current.scrollHeight >
+        descriptionsContainerRef.current.clientHeight
+    ) {
+      setContentNeedsScroll(true);
+    }
+  }, [setContentNeedsScroll, descriptionsContainerRef]);
+
   // update labeltext and name
   return (
     <div className={styles2.modelDescriptionContainer}>
@@ -64,14 +83,32 @@ const ModelDescriptionPanel: React.FunctionComponent = () => {
         size="s"
         className={styles.updateButton}
       />
-      <StrongText>Overview</StrongText>
-      <div className={styles2.descriptionContainer}>
-        <BodyThreeText>{loremIpsum}</BodyThreeText>
+      <div
+        ref={descriptionsContainerRef}
+        style={{overflowY: shouldScroll ? 'scroll' : 'hidden'}}
+      >
+        <StrongText>Overview</StrongText>
+        <div className={styles2.descriptionContainer}>
+          <BodyThreeText>{loremIpsum}</BodyThreeText>
+        </div>
+        <br />
+        <StrongText>Training Data</StrongText>
+        <div className={styles2.descriptionContainer}>
+          <BodyThreeText>{loremIpsum}</BodyThreeText>
+        </div>
       </div>
-      <StrongText>Training Data</StrongText>
-      <div className={styles2.descriptionContainer}>
-        <BodyThreeText>{loremIpsum}</BodyThreeText>
-      </div>
+      {showViewMoreButton && (
+        <div style={{display: 'flex', flexDirection: 'row-reverse'}}>
+          <Button
+            size="xs"
+            type="secondary"
+            onClick={() => setUserWantsScroll(true)}
+            text="view more"
+            iconRight={{iconName: 'chevron-down'}}
+            className={styles2.viewMoreButton}
+          />
+        </div>
+      )}
     </div>
   );
 };

@@ -3,11 +3,14 @@
 .descriptionContainer {
   background-color: $light_gray_50;
   border-radius: 4px;
+  padding: 2px 0;
 }
 
 .modelDescriptionContainer {
   flex: 1;
   padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 #modelComparisonContainer {
@@ -16,4 +19,9 @@
   max-width: 800px;
   display: flex;
   flex-direction: column;
+}
+
+.viewMoreButton {
+  width: fit-content;
+  float: right;
 }
