@@ -514,6 +514,10 @@ class Level < ApplicationRecord
     unplugged? || properties["display_as_unplugged"] == "true"
   end
 
+  def ai_tutor_available?
+    properties["ai_tutor_available"] == "true"
+  end
+
   def summarize
     {
       level_id: id.to_s,
@@ -804,6 +808,7 @@ class Level < ApplicationRecord
   def summarize_for_lab2_properties(script)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
+    properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app

@@ -61,9 +61,10 @@ export interface Level {
   id: number;
   type: string;
   hasValidation: boolean;
-  isAssessment: boolean;
   isProjectBacked: boolean;
-}
+  aiTutorAvailable: boolean;
+  isAssessment: boolean;
+};
 
 export interface ChatContext {
   // studentInput is the last user message for general chat

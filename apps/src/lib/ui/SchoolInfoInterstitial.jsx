@@ -14,7 +14,7 @@ import {combineReducers, createStore} from 'redux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import fontConstants from '@cdo/apps/fontConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const store = createStore(
   combineReducers({
@@ -109,7 +109,11 @@ export default class SchoolInfoInterstitial extends React.Component {
   }
 
   componentDidMount() {
-    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SHOW);
+    analyticsReporter.sendEvent(
+      EVENTS.SCHOOL_INTERSTITIAL_SHOW,
+      {},
+      PLATFORMS.BOTH
+    );
   }
 
   buildSchoolData() {
@@ -214,13 +218,17 @@ export default class SchoolInfoInterstitial extends React.Component {
     if (!isValid) {
       return;
     }
-    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SUBMIT, {
-      hasNcesId:
-        this.state.ncesSchoolId && this.state.ncesSchoolId !== '-1'
-          ? 'true'
-          : 'false',
-      attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
+      {
+        hasNcesId:
+          this.state.ncesSchoolId && this.state.ncesSchoolId !== '-1'
+            ? 'true'
+            : 'false',
+        attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
+      },
+      PLATFORMS.BOTH
+    );
 
     const schoolData = this.buildSchoolData();
     const {formUrl, authTokenName, authTokenValue} = this.props.scriptData;
@@ -234,16 +242,24 @@ export default class SchoolInfoInterstitial extends React.Component {
       },
     })
       .done(() => {
-        analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS, {
-          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
-        });
+        analyticsReporter.sendEvent(
+          EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
+          {
+            attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
+          },
+          PLATFORMS.BOTH
+        );
 
         this.props.onClose();
       })
       .fail(() => {
-        analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE, {
-          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
-        });
+        analyticsReporter.sendEvent(
+          EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
+          {
+            attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
+          },
+          PLATFORMS.BOTH
+        );
 
         if (!this.state.showSchoolInfoUnknownError) {
           // First failure, display error message and give the teacher a chance
@@ -257,7 +273,11 @@ export default class SchoolInfoInterstitial extends React.Component {
   };
 
   dismissSchoolInfoForm = () => {
-    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_DISMISS);
+    analyticsReporter.sendEvent(
+      EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
+      {},
+      PLATFORMS.BOTH
+    );
     this.setState({isOpen: false});
     this.props.onClose();
   };

@@ -4,7 +4,10 @@ import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
-import {EMPTY_AI_CUSTOMIZATIONS_STUDENT} from '../views/modelCustomization/constants';
+import {
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
 import {
@@ -15,13 +18,14 @@ import {
   AITutorInteractionStatusType,
   AiCustomizations,
   ModelCardInfo,
-  LevelAiCustomizations,
   Visibility,
+  LevelAichatSettings,
 } from '../types';
+import {RootState} from '@cdo/apps/types/redux';
 
 const haveDifferentValues = (
-  value1: string[] | string | number | ModelCardInfo,
-  value2: string[] | string | number | ModelCardInfo
+  value1: AiCustomizations[keyof AiCustomizations],
+  value2: AiCustomizations[keyof AiCustomizations]
 ): boolean => {
   if (typeof value1 === 'object' && typeof value2 === 'object') {
     return JSON.stringify(value1) !== JSON.stringify(value2);
@@ -40,12 +44,8 @@ const findChangedProperties = (
 
   const changedProperties: string[] = [];
   Object.keys(next).forEach(key => {
-    if (
-      haveDifferentValues(
-        previous[key as keyof AiCustomizations],
-        next[key as keyof AiCustomizations]
-      )
-    ) {
+    const typedKey = key as keyof AiCustomizations;
+    if (haveDifferentValues(previous[typedKey], next[typedKey])) {
       changedProperties.push(key);
     }
   });
@@ -67,6 +67,7 @@ export interface AichatState {
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
   previouslySavedAiCustomizations?: AiCustomizations;
+  fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
 }
 
 const initialState: AichatState = {
@@ -74,7 +75,8 @@ const initialState: AichatState = {
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
-  currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS_STUDENT,
+  currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  fieldVisibilities: DEFAULT_VISIBILITIES,
 };
 
 // THUNKS
@@ -85,7 +87,7 @@ const initialState: AichatState = {
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
-    const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
+    const state = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, previouslySavedAiCustomizations} =
       state.aichat;
 
@@ -211,28 +213,24 @@ const aichatSlice = createSlice({
     setStartingAiCustomizations: (
       state,
       action: PayloadAction<{
-        levelAiCustomizationsWithVisibility: LevelAiCustomizations;
+        levelAichatSettings?: LevelAichatSettings;
         studentAiCustomizations: AiCustomizations;
       }>
     ) => {
-      const {levelAiCustomizationsWithVisibility, studentAiCustomizations} =
-        action.payload;
+      const {levelAichatSettings, studentAiCustomizations} = action.payload;
 
       let reconciledAiCustomizations: AiCustomizations = {
-        botName: levelAiCustomizationsWithVisibility.botName.value,
-        temperature: levelAiCustomizationsWithVisibility.temperature.value,
-        systemPrompt: levelAiCustomizationsWithVisibility.systemPrompt.value,
-        retrievalContexts:
-          levelAiCustomizationsWithVisibility.retrievalContexts.value,
-        modelCardInfo: levelAiCustomizationsWithVisibility.modelCardInfo.value,
+        ...(levelAichatSettings?.initialCustomizations ||
+          EMPTY_AI_CUSTOMIZATIONS),
       };
 
       for (const customizationUntyped in reconciledAiCustomizations) {
         const customization = customizationUntyped as keyof AiCustomizations;
 
         if (
-          levelAiCustomizationsWithVisibility[customization].visibility ===
-            Visibility.EDITABLE &&
+          (levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES)[
+            customization
+          ] === Visibility.EDITABLE &&
           studentAiCustomizations[customization]
         ) {
           reconciledAiCustomizations = {
@@ -244,6 +242,8 @@ const aichatSlice = createSlice({
 
       state.previouslySavedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
+      state.fieldVisibilities =
+        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
     },
     setPreviouslySavedAiCustomizations: (
       state,
