@@ -2,6 +2,9 @@ require 'cdo/firehose'
 require 'cdo/honeybadger'
 require 'cpa'
 require_relative '../../../shared/middleware/helpers/experiments'
+require 'metrics/events'
+require 'policies/lti'
+require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
@@ -120,6 +123,18 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
+      if Policies::Lti.lti? current_user
+        lms_name = Queries::Lti.get_lms_name_from_user(current_user)
+        metadata = {
+          'user_type' => current_user.user_type,
+          'lms_name' => lms_name,
+        }
+        Metrics::Events.log_event(
+          user: current_user,
+          event_name: 'lti_user_created',
+          metadata: metadata,
+        )
+      end
     end
 
     SignUpTracking.log_sign_up_result resource, session

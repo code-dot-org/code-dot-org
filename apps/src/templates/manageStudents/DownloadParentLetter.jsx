@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import Button from '@cdo/apps/templates/Button';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
 
 export default class DownloadParentLetter extends Component {
   static propTypes = {

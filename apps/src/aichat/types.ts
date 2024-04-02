@@ -20,6 +20,11 @@ export type Status =
 export const Status = AiTutorInteractionSaveStatus;
 export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
+export enum ViewMode {
+  EDIT = 'edit-mode',
+  PRESENTATION = 'presentation-mode',
+}
+
 export interface AichatLevelProperties extends LevelProperties {
   // --- DEPRECATED - used for old AI Chat
   systemPrompt: string;

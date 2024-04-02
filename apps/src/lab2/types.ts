@@ -116,6 +116,7 @@ export interface Level {
  */
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
+  id: number;
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
   usesProjects?: boolean;

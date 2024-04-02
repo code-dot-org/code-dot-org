@@ -1,11 +1,22 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import $ from 'jquery';
-import QuickActionsCell from '../tables/QuickActionsCell';
+import {connect} from 'react-redux';
+
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 import Button from '../Button';
+import FontAwesome from '../FontAwesome';
+import QuickActionsCell from '../tables/QuickActionsCell';
+
+import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import {
   startEditingStudent,
   cancelEditingStudent,
@@ -14,14 +25,6 @@ import {
   addStudents,
   RowType,
 } from './manageStudentsRedux';
-import {connect} from 'react-redux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
-import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import i18n from '@cdo/locale';
-import {navigateToHref} from '@cdo/apps/utils';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 class ManageStudentsActionsCell extends Component {
   static propTypes = {

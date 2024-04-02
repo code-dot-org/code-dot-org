@@ -103,6 +103,7 @@ class XhrProxyController < ApplicationController
     noaa.gov
     numbersapi.com
     open.mapquestapi.com
+    openlibrary.org
     opentdb.com
     perenual.com
     pixabay.com
