@@ -104,7 +104,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
-  levelBlockIds: string[];
+  levelBlockIds: Set<string>;
   isStartMode: boolean;
   isToolboxMode: boolean;
   toolboxBlocks: ToolboxDefinition | undefined;
@@ -222,7 +222,7 @@ export interface ExtendedVariableMap extends VariableMap {
 export interface ExtendedBlocklyOptions extends BlocklyOptions {
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
-  levelBlockIds: string[];
+  levelBlockIds: Set<string>;
   isBlockEditMode: boolean;
   editBlocks: string | undefined;
   topLevelProcedureAutopopulate: boolean | undefined;
@@ -242,6 +242,7 @@ export interface ExtendedGenerator extends CodeGeneratorType {
     name: string,
     opt_typeFilter?: string | string[]
   ) => string;
+  blocksToCode: (name: string, blocksToGenerate: Block[]) => string;
   prefixLines: (text: string, prefix: string) => string;
 }
 

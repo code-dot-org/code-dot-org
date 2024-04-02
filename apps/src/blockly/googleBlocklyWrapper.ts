@@ -712,7 +712,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // In order to prevent writing duplicate solution entries to the level_sources table,
     // we strip block ids from XML when saving. An exception is made for block ids that
     // are explicitly set in the level's toolbox or start blocks.
-    blocklyWrapper.levelBlockIds = optOptionsExtended.levelBlockIds || [];
+    blocklyWrapper.levelBlockIds =
+      optOptionsExtended.levelBlockIds || new Set<string>();
 
     // Shrink container to make room for the workspace header
     if (!optOptionsExtended.isBlockEditMode) {

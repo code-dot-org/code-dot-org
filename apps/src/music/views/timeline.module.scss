@@ -68,42 +68,8 @@
       position: absolute;
       box-sizing: border-box;
       border-radius: 8px;
-      border: solid 2px;
-
-      &Purple {
-        background-color: purple;
-        border-color: lightpink;
-      }
-
-      &Blue {
-        background-color: blue;
-        border-color: lightblue;
-      }
-
-      &Green {
-        background-color: green;
-        border-color: lightgreen;
-      }
-
-      &Yellow {
-        background-color: yellow;
-        border-color: brown;
-      }
-
-      &Orange {
-        background-color: darkorange;
-        border-color: #60d5cd;
-      }
-
-      &Pattern {
-        background-color: black;
-        border-color: white;
-      }
-
-      &Chord {
-        background-color: $light_cyan;
-        border-color: $neutral_dark80;
-      }
+      border-width: 2px;
+      border-style: solid;
 
       &Playing {
         box-shadow: 0 0 10px rgba(255 255 255 / 0.5);
