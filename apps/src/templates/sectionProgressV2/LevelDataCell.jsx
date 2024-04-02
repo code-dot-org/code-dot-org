@@ -129,7 +129,11 @@ function LevelDataCell({
         onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
         className={styles.levelLink}
       >
-        {itemType && <ProgressIcon itemType={itemType} />}
+        {itemType ? (
+          <ProgressIcon itemType={itemType} />
+        ) : (
+          <div className={styles.levelLink} />
+        )}
       </Link>
     </td>
   );

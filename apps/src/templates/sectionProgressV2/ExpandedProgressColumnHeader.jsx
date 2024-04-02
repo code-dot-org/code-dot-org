@@ -58,7 +58,6 @@ export default function ExpandedProgressColumnHeader({
           data-for={getTooltipId(lesson)}
           id={getLessonColumnHeaderId(lesson.id)}
           scope="colgroup"
-          //todo: col-span
         >
           <LessonTitleTooltip lesson={lesson} />
           <FontAwesome
