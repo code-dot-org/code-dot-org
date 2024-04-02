@@ -2,7 +2,7 @@ import {AiCustomizations} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
-import moduleStyles from './edit-ai-customizations.module.scss';
+import moduleStyles from './edit-aichat-settings.module.scss';
 import VisibilityDropdown from './VisibilityDropdown';
 import {UpdateContext} from './UpdateContext';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';

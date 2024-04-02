@@ -1,8 +1,0 @@
-%h1.control-legend{data: {toggle: "collapse", target: "#ai-customizations-container"}}
-  AI ChatBot Customizations
-
-#ai-customizations-container.in.collapse
-
-- content_for :body_scripts do
-  %script{src: webpack_asset_path('js/levels/editors/fields/_ai_customizations.js'),
-        data: {aicustomizations: (@level.properties["initial_ai_customizations"]).to_json}}

@@ -5,10 +5,10 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import EditAiCustomizations from '@cdo/apps/lab2/levelEditors/aiCustomizations/EditAiCustomizations';
 
 $(document).ready(function () {
-  const initialCustomizations = getScriptData('aicustomizations');
+  const initialSettings = getScriptData('aichatsettings');
 
   ReactDOM.render(
-    <EditAiCustomizations initialCustomizations={initialCustomizations} />,
-    document.getElementById('ai-customizations-container')
+    <EditAiCustomizations initialSettings={initialSettings} />,
+    document.getElementById('aichat-settings-container')
   );
 });

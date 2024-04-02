@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import MultiItemInput from './MultiItemInput';
-import moduleStyles from './edit-ai-customizations.module.scss';
+import moduleStyles from './edit-aichat-settings.module.scss';
 import {
   MAX_ASK_ABOUT_TOPICS,
   MODEL_CARD_FIELDS_AND_LABELS,

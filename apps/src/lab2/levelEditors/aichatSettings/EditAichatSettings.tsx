@@ -9,7 +9,7 @@ import {
   BodyFourText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
-import moduleStyles from './edit-ai-customizations.module.scss';
+import moduleStyles from './edit-aichat-settings.module.scss';
 import {
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
@@ -111,8 +111,8 @@ const EditAiCustomizations: React.FunctionComponent<{
       <div>
         <input
           type="hidden"
-          id="level_initial_ai_customizations"
-          name="level[initial_ai_customizations]"
+          id="level_aichat_settings"
+          name="level[aichat_settings]"
           value={JSON.stringify(sanitizeData(aiCustomizations))}
         />
         <BodyThreeText>
