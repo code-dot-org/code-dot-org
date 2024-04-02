@@ -28,7 +28,7 @@ export default function ProgressIcon({itemType}) {
 
   return (
     <div data-testid="progress-icon">
-      {itemType?.length > 2 && (
+      {itemType[2] !== undefined && (
         <FontAwesome
           id={'uitest-' + itemType[1]}
           icon={itemType[1]}
