@@ -163,7 +163,10 @@ class UnconnectedMusicView extends React.Component {
     });
 
     if (this.props.levelProperties?.appName === 'music') {
-      this.onLevelLoad(this.props.levelProperties, this.props.initialSources);
+      this.onLevelLoad(
+        this.props.levelProperties?.levelData,
+        this.props.initialSources
+      );
     }
     this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
   }
