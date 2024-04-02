@@ -33,11 +33,17 @@ AudioQueueItem.contextType = AudioQueueContext;
 
 describe('AudioQueue', () => {
   setExternalGlobals();
+  let playAudioSpy: sinon.SinonSpy;
+  beforeEach(() => {
+    playAudioSpy = sinon.spy(AudioQueueItem.prototype, 'playAudio');
+  });
+
+  afterEach(() => {
+    playAudioSpy.restore();
+  });
 
   // Write react component that expects to be provided that function, test does nothing when queue is empty, playAudio calls playAudio of child component
   it('does not play audio when nothing added to queue', () => {
-    const playAudioSpy = sinon.spy(AudioQueueItem.prototype, 'playAudio');
-
     render(
       <AudioQueue>
         <AudioQueueItem shouldQueue={false} playNextAudioCallCounter={1} />
@@ -45,12 +51,9 @@ describe('AudioQueue', () => {
     );
 
     expect(playAudioSpy).to.not.have.been.called;
-    playAudioSpy.restore();
   });
 
   it('plays audio when adding to queue', () => {
-    const playAudioSpy = sinon.spy(AudioQueueItem.prototype, 'playAudio');
-
     render(
       <AudioQueue>
         <AudioQueueItem shouldQueue={true} playNextAudioCallCounter={1} />
@@ -58,12 +61,9 @@ describe('AudioQueue', () => {
     );
 
     expect(playAudioSpy).to.have.been.called;
-    playAudioSpy.restore();
   });
 
   it('only plays one audio if one audio in queue and multiple playNextAudio calls', () => {
-    const playAudioSpy = sinon.spy(AudioQueueItem.prototype, 'playAudio');
-
     render(
       <AudioQueue>
         <AudioQueueItem shouldQueue={true} playNextAudioCallCounter={2} />
@@ -71,6 +71,5 @@ describe('AudioQueue', () => {
     );
 
     expect(playAudioSpy).to.have.been.calledOnce;
-    playAudioSpy.restore();
   });
 });
