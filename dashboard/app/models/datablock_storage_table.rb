@@ -75,7 +75,9 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def self.find_shared_table(table_name)
-    DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
+    shared_table = DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
+    raise "Shared table '#{table_name}' does not exist" unless shared_table
+    return shared_table
   end
 
   def self.add_shared_table(project_id, table_name)
