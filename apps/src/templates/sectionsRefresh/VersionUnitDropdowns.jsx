@@ -1,9 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import moduleStyles from './sections-refresh.module.scss';
-import AssignmentVersionSelector from '../teacherDashboard/AssignmentVersionSelector';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import i18n from '@cdo/locale';
+
+import AssignmentVersionSelector from '../teacherDashboard/AssignmentVersionSelector';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 export default function VersionUnitDropdowns({
   courseOffering,

@@ -125,17 +125,17 @@ export const commands = {
   setBonusSuccessMessage(message) {
     this.bonusSuccessMessage = message;
   },
-  setEarlyTime(frames) {
-    this.validationFrames.early = frames;
-  },
   setWaitTime(frames) {
     this.validationFrames.fail = frames;
+    return true;
   },
   setFailTime(frames) {
     this.validationFrames.fail = frames;
+    return true;
   },
   setDelayTime(frames) {
     this.validationFrames.delay = frames;
+    return true;
   },
   getFailTime() {
     return this.validationFrames.fail;
@@ -223,6 +223,8 @@ export const commands = {
     this.previous.printLogLength = this.printLog.length || 0;
     this.previous.soundLogLength = this.soundLog.length || 0;
     this.previous.foregroundEffectsLength = this.foregroundEffects.length || 0;
+    this.previous.background = this.background;
+    this.previous.screenText = this.screenText;
 
     // Store basic information about sprites.
     this.previous.sprites = [];
@@ -319,6 +321,32 @@ export const commands = {
     if (firstFailed > -1) {
       return criteria[firstFailed].feedback;
     }
+  },
+
+  // Returns an object with properties representing student Blockly variables.
+  // Typically called in validation code to set `varLog` - a global variable
+  // initialized by the interpreted variableLog helper library.
+  buildVariableLog() {
+    const studentVariables = {};
+
+    const blocklyVariables = Blockly.getMainWorkspace()
+      .getVariableMap()
+      .getAllVariables();
+    const variableNames = blocklyVariables.map(blocklyVariable =>
+      Blockly.JavaScript.getName(blocklyVariable.name)
+    );
+
+    for (const name of variableNames) {
+      const value = this.getVariableValue(name);
+      if (
+        ['number', 'string', 'boolean'].includes(typeof value) |
+        Array.isArray(value)
+      ) {
+        studentVariables[name] = value;
+      }
+    }
+
+    return studentVariables;
   },
 };
 

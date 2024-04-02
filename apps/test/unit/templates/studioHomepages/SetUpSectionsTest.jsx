@@ -1,11 +1,13 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Button from '@cdo/apps/templates/Button';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SetUpSections', () => {
   it('renders as expected', () => {

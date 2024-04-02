@@ -1,20 +1,23 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+import {render, screen} from '@testing-library/react';
 import {shallow, mount} from 'enzyme';
+import React from 'react';
 import {act} from 'react-dom/test-utils';
 import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import HttpClient from '@cdo/apps/util/HttpClient';
+
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import tipIconImage from '@cdo/apps/templates/rubrics/images/AiBot_Icon.svg';
+import infoIconImage from '@cdo/apps/templates/rubrics/images/info-icon.svg';
 import LearningGoals, {
   clearAnnotations,
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
-import {render, screen} from '@testing-library/react';
-import infoIconImage from '@cdo/apps/templates/rubrics/images/info-icon.svg';
-import tipIconImage from '@cdo/apps/templates/rubrics/images/AiBot_Icon.svg';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const learningGoals = [
   {
@@ -354,11 +357,15 @@ describe('LearningGoals - Enzyme', () => {
     );
     wrapper.find('button').first().simulate('click');
     expect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[1].learningGoal
+      i18n.rubricLearningGoalSummary()
     );
     wrapper.find('button').at(1).simulate('click');
     expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
+    );
+    wrapper.find('button').at(1).simulate('click');
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
+      learningGoals[1].learningGoal
     );
   });
 
@@ -428,7 +435,7 @@ describe('LearningGoals - Enzyme', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    wrapper.find('button').first().simulate('click');
+    wrapper.find('button').at(1).simulate('click');
     expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
     );
@@ -470,7 +477,7 @@ describe('LearningGoals - Enzyme', () => {
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
       />
     );
-    wrapper.find('button').first().simulate('click');
+    wrapper.find('button').at(1).simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
       EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED,
       {
@@ -532,6 +539,45 @@ describe('LearningGoals - Enzyme', () => {
     });
 
     expect(wrapper.find('textarea').getDOMNode().disabled).to.equal(false);
+    postStub.restore();
+  });
+
+  it('summary shows submitted scores', async () => {
+    const postStub = sinon.stub(HttpClient, 'post').returns(
+      Promise.resolve({
+        json: () => {
+          return {
+            id: 2,
+            feedback: 'blah blah',
+            understanding: RubricUnderstandingLevels.LIMITED,
+          };
+        },
+      })
+    );
+
+    const wrapper = mount(
+      <LearningGoals
+        canProvideFeedback={true}
+        studentLevelInfo={studentLevelInfo}
+        learningGoals={learningGoals}
+      />
+    );
+
+    // Need to have it 'load' all the prior evaluations
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    wrapper.find('button').first().simulate('click');
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
+      i18n.rubricLearningGoalSummary()
+    );
+    expect(wrapper.find('BodyThreeText StrongText').at(0).text()).to.equal(
+      'Learning Goal 1'
+    );
+    expect(wrapper.find('BodyThreeText').at(2).text()).to.equal(
+      'Limited Evidence'
+    );
     postStub.restore();
   });
 

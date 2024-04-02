@@ -14,6 +14,7 @@ import {
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
+  SET_TEMPERATURE_STEP,
   EMPTY_MODEL_CARD_INFO,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
@@ -23,7 +24,7 @@ import ModelCardFields from './ModelCardFields';
 import VisibilityDropdown from './VisibilityDropdown';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {UpdateContext} from './UpdateContext';
-import CollapsibleSection from './CollapsibleSection';
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 // Make sure all fields have a visibility specified.
 function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {
@@ -136,7 +137,7 @@ const EditAiCustomizations: React.FunctionComponent<{
           inputType="number"
           min={MIN_TEMPERATURE}
           max={MAX_TEMPERATURE}
-          step={0.1}
+          step={SET_TEMPERATURE_STEP}
           description="Temperature setting for the model. A higher temperature induces more randomness."
         />
         <FieldSection

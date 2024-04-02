@@ -1,23 +1,24 @@
+// react testing library import
+import {render, screen, act} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import RubricSubmitFooter from '@cdo/apps/templates/rubrics/RubricSubmitFooter';
+
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
-import {Provider} from 'react-redux';
-import i18n from '@cdo/locale';
-import * as topInstructionDataApi from '@cdo/apps/templates/instructions/topInstructionsDataApi';
 import * as teacherFeedbackDataApi from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
+import * as topInstructionDataApi from '@cdo/apps/templates/instructions/topInstructionsDataApi';
+import RubricSubmitFooter from '@cdo/apps/templates/rubrics/RubricSubmitFooter';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
 
-// react testing library import
-import {render, screen, act} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricSubmitFooter', () => {
   let store;

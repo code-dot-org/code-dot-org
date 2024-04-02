@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
@@ -9,21 +8,10 @@ import LegendItem from './LegendItem';
 
 import styles from './progress-table-legend.module.scss';
 
-export default function AssignmentCompletionStatesBox({hasValidatedLevels}) {
-  // TO-DO (TEACH-800): Fix spacing on validated levels once width on page is set
+export default function AssignmentCompletionStatesBox() {
   const legendIcons = () => {
     return (
       <div className={styles.icons}>
-        <div className={styles.legendColumn}>
-          <LegendItem
-            itemType={ITEM_TYPE.NOT_STARTED}
-            labelText={i18n.notStarted()}
-          />
-          <LegendItem
-            itemType={ITEM_TYPE.NO_ONLINE_WORK}
-            labelText={i18n.noOnlineWork()}
-          />
-        </div>
         <div className={styles.legendColumn}>
           <LegendItem
             itemType={ITEM_TYPE.IN_PROGRESS}
@@ -34,14 +22,16 @@ export default function AssignmentCompletionStatesBox({hasValidatedLevels}) {
             labelText={i18n.submitted()}
           />
         </div>
-        {hasValidatedLevels && (
-          <div className={styles.legendColumn}>
-            <LegendItem
-              itemType={ITEM_TYPE.VALIDATED}
-              labelText={i18n.validated()}
-            />
-          </div>
-        )}
+        <div className={styles.legendColumn}>
+          <LegendItem
+            itemType={ITEM_TYPE.VALIDATED}
+            labelText={i18n.validated()}
+          />
+          <LegendItem
+            itemType={ITEM_TYPE.NO_ONLINE_WORK}
+            labelText={i18n.noOnlineWork()}
+          />
+        </div>
       </div>
     );
   };
@@ -55,7 +45,3 @@ export default function AssignmentCompletionStatesBox({hasValidatedLevels}) {
     </div>
   );
 }
-
-AssignmentCompletionStatesBox.propTypes = {
-  hasValidatedLevels: PropTypes.bool,
-};

@@ -3,11 +3,13 @@ import classNames from 'classnames';
 import {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import MusicLibrary, {
   SoundData,
   SoundFolder,
   SoundType,
 } from '../player/MusicLibrary';
+import SoundStyle from '../utils/SoundStyle';
 import FocusLock from 'react-focus-lock';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 
@@ -142,7 +144,6 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   const soundPath = folder.id + '/' + sound.src;
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
-  const typeIconPath = `/blockly/media/music/icon-${sound.type}.png`;
   const onPreviewClick = useCallback(
     (e: Event) => {
       if (!isPlayingPreview) {
@@ -172,8 +173,21 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
       role="button"
     >
       <div className={styles.soundRowLeft}>
-        <img src={typeIconPath} className={styles.typeIcon} alt="" />
-        <div className={styles.name}>{sound.name}</div>
+        <FontAwesomeV6Icon
+          iconName={SoundStyle[sound.type]?.icon || ''}
+          className={classNames(
+            styles.typeIcon,
+            SoundStyle[sound.type]?.classNameColor
+          )}
+        />
+        <div
+          className={classNames(
+            styles.name,
+            sound.type === 'vocal' && styles.nameVocal
+          )}
+        >
+          {sound.name}
+        </div>
       </div>
       {showingSoundsOnly && (
         <div className={styles.soundRowMiddle}>
@@ -279,6 +293,24 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     );
   }
 
+  const availableSoundTypes: {[key: string]: boolean} = {
+    all: true,
+    ...library.getAvailableSoundTypes(),
+  };
+
+  const allFilterButtons = [
+    {label: 'All', value: 'all'},
+    {label: 'Beats', value: 'beat'},
+    {label: 'Bass', value: 'bass'},
+    {label: 'Leads', value: 'lead'},
+    {label: 'Effects', value: 'fx'},
+    {label: 'Vocals', value: 'vocal'},
+  ];
+
+  const filterButtons = allFilterButtons.filter(
+    filterButton => availableSoundTypes[filterButton.value]
+  );
+
   return (
     <FocusLock>
       <div id="sounds-panel" className={styles.soundsPanel} aria-modal>
@@ -297,13 +329,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
             <SegmentedButtons
               selectedButtonValue={filter}
-              buttons={[
-                {label: 'All', value: 'all'},
-                {label: 'Beats', value: 'beat'},
-                {label: 'Bass', value: 'bass'},
-                {label: 'Leads', value: 'lead'},
-                {label: 'Effects', value: 'fx'},
-              ]}
+              buttons={filterButtons}
               onChange={value => onFilterChange(value as Filter)}
               className={styles.segmentedButtons}
             />

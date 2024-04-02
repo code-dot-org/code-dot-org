@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import BaseDialog from '../../BaseDialog';
-import DialogFooter from '../../teacherDashboard/DialogFooter';
-import Button from '../../Button';
 import {connect} from 'react-redux';
-import {setCurrentUserHasSeenStandardsReportInfo} from '@cdo/apps/templates/currentUserRedux';
-import {cstaStandardsURL} from './standardsConstants';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import {setCurrentUserHasSeenStandardsReportInfo} from '@cdo/apps/templates/currentUserRedux';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import BaseDialog from '../../BaseDialog';
+import Button from '../../Button';
+import DialogFooter from '../../teacherDashboard/DialogFooter';
+
+import {cstaStandardsURL} from './standardsConstants';
 
 /*
 Dialog that show the first time a teacher goes to the

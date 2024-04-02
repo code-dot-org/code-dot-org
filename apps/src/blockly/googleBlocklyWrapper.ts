@@ -12,6 +12,8 @@ import {BlocklyVersion, WORKSPACE_EVENTS} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
+import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
@@ -335,6 +337,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
   blocklyWrapper.FieldToggle = CdoFieldToggle;
   blocklyWrapper.FieldFlyout = CdoFieldFlyout;
+  blocklyWrapper.FieldBehaviorPicker = CdoFieldBehaviorPicker;
+  blocklyWrapper.FieldAnimationDropdown = CdoFieldAnimationDropdown;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -667,6 +671,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
+    // Set the default value for hasLoadedBlocks to false.
+    blocklyWrapper.hasLoadedBlocks = false;
     if (!opt_options) {
       opt_options = {};
     }
@@ -706,7 +712,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // In order to prevent writing duplicate solution entries to the level_sources table,
     // we strip block ids from XML when saving. An exception is made for block ids that
     // are explicitly set in the level's toolbox or start blocks.
-    blocklyWrapper.levelBlockIds = optOptionsExtended.levelBlockIds || [];
+    blocklyWrapper.levelBlockIds =
+      optOptionsExtended.levelBlockIds || new Set<string>();
 
     // Shrink container to make room for the workspace header
     if (!optOptionsExtended.isBlockEditMode) {
@@ -722,6 +729,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       container,
       options
     ) as ExtendedWorkspaceSvg;
+
+    blocklyWrapper.topLevelProcedureAutopopulate =
+      !!options.topLevelProcedureAutopopulate;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;

@@ -47,12 +47,13 @@ export default function ExpandedProgressColumnHeader({
           <div
             className={classNames(
               styles.expandedHeaderLevelCell,
-              styles.expandedHeaderExpandedLevelCell,
-              styles.expandedHeaderLevelCellLevelNumber
+              styles.expandedHeaderExpandedLevelCell
             )}
             key={lesson.id + '.' + level.id + '-h-' + sublevel.id}
           >
-            {sublevel.bubbleText}
+            <div className={styles.expandedHeaderLevelCellLevelNumber}>
+              {sublevel.bubbleText}
+            </div>
           </div>
         ))}
       </div>
