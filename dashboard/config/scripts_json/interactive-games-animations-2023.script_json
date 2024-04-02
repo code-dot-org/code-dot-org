@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2024-03-28 16:14:53 UTC",
+    "serialized_at": "2024-04-01 16:25:42 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -20603,6 +20603,32 @@
       }
     },
     {
+      "key": "3a1d5503-9fb2-4b06-b2ea-39d56328fb91",
+      "position": 7,
+      "learning_goal": "Variables",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "3a1d5503-9fb2-4b06-b2ea-39d56328fb91",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "key": "3a34d6f2-2559-4e6b-8ae4-408bc65458a6",
+      "position": 4,
+      "learning_goal": "Creating a Digital Artifact",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "3a34d6f2-2559-4e6b-8ae4-408bc65458a6",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
       "key": "41d55b16-6f7c-4248-8d8c-fb32508f2e51",
       "position": 2,
       "learning_goal": "Modularity - Sprites and Sprite Properties",
@@ -20785,6 +20811,19 @@
       }
     },
     {
+      "key": "9085bd18-5a81-4a8a-8ab9-80d98a8e2596",
+      "position": 6,
+      "learning_goal": "Algorithms and Control - Interaction Conditionals",
+      "ai_enabled": false,
+      "tips": "(7) **Conditionals to control multiple sprite interactions**\n- This includes the use of at least 1 conditional for the target sprite and at least 1 conditional for the obstacle sprite. \n- _Examples:_\n  - _The conditional for the target sprite should use the `isTouching()` to detect interaction between the player sprite and target sprite._\n     - _If the two sprites touch, the score variable should increase and the x value of the target sprite should reset to the right side of the screen_\n  - _The conditional for the obstacle sprite should also use the `isTouching()` to detect interaction between the player sprite and the obstacle sprite._\n    - _If the two sprites touch, the health variable should decrease and the obstacle sprite should change in some way_\n      - _For example, the obstacle sprite’s rotation property could change to make the sprite appear to be knocked over or the tint property of the obstacle sprite could change to make the sprite appear red indicating it was touched)._\n",
+      "seeding_key": {
+        "learning_goal.key": "9085bd18-5a81-4a8a-8ab9-80d98a8e2596",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
       "key": "930f81da-0e40-4fee-a09b-e630c0f8b2e3",
       "position": 6,
       "learning_goal": "Algorithms and Control - User Input",
@@ -20928,15 +20967,15 @@
       }
     },
     {
-      "key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
-      "position": 3,
-      "learning_goal": "Creating a Digital Artifact",
+      "key": "d1adf779-179f-4529-89ad-2855458117fe",
+      "position": 5,
+      "learning_goal": "Algorithms and Control - Looping Conditionals",
       "ai_enabled": false,
-      "tips": null,
+      "tips": "(6) **Conditionals to control multiple sprites’ looping behavior**\n- This includes the use of at least 1 conditional for the target sprite and at least 1 conditional for the obstacle sprite.\n- Examples:\n  - _The conditional for the target sprite should check if the sprite’s x value has reached the left side of the screen and then reset it’s x value to the right side of the screen_\n  - _The conditional for the obstacle sprite should also check if the sprite’s x value has reached the left side of the screen and then reset it’s x value to the right side of the screen_\n",
       "seeding_key": {
-        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
-        "lesson.key": "Mini-Project - Robot Faces",
-        "lesson_group.key": "lessonGroup-2",
+        "learning_goal.key": "d1adf779-179f-4529-89ad-2855458117fe",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "interactive-games-animations-2023"
       }
     },
@@ -21002,6 +21041,19 @@
         "learning_goal.key": "f1a10757-38dc-4dc2-919e-8ce15d127fff",
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "key": "fb48fded-cc37-4252-873f-c4e7c0d1d572",
+      "position": 3,
+      "learning_goal": "Variables / Storing Information",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "fb48fded-cc37-4252-873f-c4e7c0d1d572",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "interactive-games-animations-2023"
       }
     },
@@ -21305,6 +21357,102 @@
         "learning_goal.key": "23d493c3-251d-4164-ae80-a6b600df3436",
         "lesson.key": "Mini-Project - Flyer Game",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not update any of the provided non-sprite variables during the game. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3a1d5503-9fb2-4b06-b2ea-39d56328fb91",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program properly updates at least one provided non-sprite variable during the game and properly updates at least one of the variable totals on the screen.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3a1d5503-9fb2-4b06-b2ea-39d56328fb91",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program properly updates the two provided non-sprite variables during the game and properly updates at least one of the variable totals on the screen.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3a1d5503-9fb2-4b06-b2ea-39d56328fb91",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program properly updates the two provided non-sprite variables during the game and properly displays the variable totals on the screen.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3a1d5503-9fb2-4b06-b2ea-39d56328fb91",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "They did not fill the project guide out, or it is unrelated to the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3a34d6f2-2559-4e6b-8ae4-408bc65458a6",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They used some elements as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3a34d6f2-2559-4e6b-8ae4-408bc65458a6",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Elements are generally used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3a34d6f2-2559-4e6b-8ae4-408bc65458a6",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They used elements as described in the project guide and clearly displayed a robot face.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3a34d6f2-2559-4e6b-8ae4-408bc65458a6",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "interactive-games-animations-2023"
       }
     },
@@ -21982,6 +22130,54 @@
     },
     {
       "understanding": 0,
+      "teacher_description": "Your program does not use any conditionals to control sprite interactions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "9085bd18-5a81-4a8a-8ab9-80d98a8e2596",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program either does not have all conditionals in the draw loop required to control multiple sprite interactions, or has required conditionals but none of them work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "9085bd18-5a81-4a8a-8ab9-80d98a8e2596",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program has conditionals in the draw loop meant to control multiple sprite interactions, however one of them does not work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "9085bd18-5a81-4a8a-8ab9-80d98a8e2596",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program has conditionals to control multiple sprite interactions (7) inside the draw loop. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "9085bd18-5a81-4a8a-8ab9-80d98a8e2596",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 0,
       "teacher_description": "Your program does not use any code for detecting user input, such as keyDown() or mouseDown().",
       "ai_prompt": "",
       "seeding_key": {
@@ -22510,49 +22706,49 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "They did not fill the project guide out, or it is unrelated to the program.",
+      "teacher_description": "Your program does not use any conditionals to control looping behavior.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
-        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
-        "lesson.key": "Mini-Project - Robot Faces",
-        "lesson_group.key": "lessonGroup-2",
+        "learning_goal.key": "d1adf779-179f-4529-89ad-2855458117fe",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "interactive-games-animations-2023"
       }
     },
     {
       "understanding": 1,
-      "teacher_description": "They used some elements as described in the project guide.",
+      "teacher_description": "Your program either does not have all conditionals in the draw loop needed to control multiple sprites’ looping behavior, or has required conditionals but none of them work as expected.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
-        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
-        "lesson.key": "Mini-Project - Robot Faces",
-        "lesson_group.key": "lessonGroup-2",
+        "learning_goal.key": "d1adf779-179f-4529-89ad-2855458117fe",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "interactive-games-animations-2023"
       }
     },
     {
       "understanding": 2,
-      "teacher_description": "Elements are generally used as described in the project guide.",
+      "teacher_description": "Your program has conditionals in the draw loop meant to control multiple sprites’ looping behavior, however one of them does not work as expected.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
-        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
-        "lesson.key": "Mini-Project - Robot Faces",
-        "lesson_group.key": "lessonGroup-2",
+        "learning_goal.key": "d1adf779-179f-4529-89ad-2855458117fe",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "interactive-games-animations-2023"
       }
     },
     {
       "understanding": 3,
-      "teacher_description": "They used elements as described in the project guide and clearly displayed a robot face.",
+      "teacher_description": "Your program has conditionals to control multiple sprites’ looping behavior (6) inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
-        "learning_goal.key": "da455d2b-7497-477a-a98d-b557a6c0b00d",
-        "lesson.key": "Mini-Project - Robot Faces",
-        "lesson_group.key": "lessonGroup-2",
+        "learning_goal.key": "d1adf779-179f-4529-89ad-2855458117fe",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "interactive-games-animations-2023"
       }
     },
@@ -22793,6 +22989,54 @@
         "learning_goal.key": "f1a10757-38dc-4dc2-919e-8ce15d127fff",
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No variables or randomNumbers are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "fb48fded-cc37-4252-873f-c4e7c0d1d572",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They created at least 1 variable and used it in the program.\nThey used randomness in the program, but not within a variable. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "fb48fded-cc37-4252-873f-c4e7c0d1d572",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "They created at least 4 variables and used them correctly in the program. All variables have descriptive names. Only 2 of the variables use the randomNumber block to give the program a different look each time the program is run.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "fb48fded-cc37-4252-873f-c4e7c0d1d572",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The program creates and correctly uses at least 4 variables. All variables have descriptive names and use the randomNumber block to give the program a different look each time the program is run.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "fb48fded-cc37-4252-873f-c4e7c0d1d572",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "interactive-games-animations-2023"
       }
     },
