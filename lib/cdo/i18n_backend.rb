@@ -258,9 +258,9 @@ module Cdo
       # the translations or one of the expected variations of the locale, taking into
       # account both long locale codes and fallbacks.
       #
-      # The original implementation was changed from raising an error to log the details to the console,
-      # because the error isn't all that critical to catch and
-      # the new loading logic includes more weird edge cases.
+      # The original implementation was changed from raising an error to logging
+      # the details to the console, because the error isn't all that critical
+      # to catch and the new loading logic includes more weird edge cases.
       # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L173-L181
       def assert_file_named_correctly!(file, translations)
         expected_locale = ::I18n::Backend::LocaleExtractor.locale_from_path(file)
