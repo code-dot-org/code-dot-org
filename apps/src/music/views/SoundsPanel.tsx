@@ -293,6 +293,24 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     );
   }
 
+  const availableSoundTypes: {[key: string]: boolean} = {
+    all: true,
+    ...library.getAvailableSoundTypes(),
+  };
+
+  const allFilterButtons = [
+    {label: 'All', value: 'all'},
+    {label: 'Beats', value: 'beat'},
+    {label: 'Bass', value: 'bass'},
+    {label: 'Leads', value: 'lead'},
+    {label: 'Effects', value: 'fx'},
+    {label: 'Vocals', value: 'vocal'},
+  ];
+
+  const filterButtons = allFilterButtons.filter(
+    filterButton => availableSoundTypes[filterButton.value]
+  );
+
   return (
     <FocusLock>
       <div id="sounds-panel" className={styles.soundsPanel} aria-modal>
@@ -311,13 +329,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
             <SegmentedButtons
               selectedButtonValue={filter}
-              buttons={[
-                {label: 'All', value: 'all'},
-                {label: 'Beats', value: 'beat'},
-                {label: 'Bass', value: 'bass'},
-                {label: 'Leads', value: 'lead'},
-                {label: 'Effects', value: 'fx'},
-              ]}
+              buttons={filterButtons}
               onChange={value => onFilterChange(value as Filter)}
               className={styles.segmentedButtons}
             />
