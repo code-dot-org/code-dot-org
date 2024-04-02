@@ -189,7 +189,7 @@ module Cdo
         locales[k.to_sym] = v.to_sym if v.is_a?(String)
       end.freeze
 
-      # The original method has been modified to works on i18n files named with a prefix and the locale,
+      # The original method has been modified to work on i18n files named with a prefix and the locale,
       # like "common.en.yml" or "common.en-US.json" and not only on files named with the locale, like "en-US.json".
       # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L55-L63
       class ::I18n::Backend::LocaleExtractor
@@ -256,7 +256,7 @@ module Cdo
         unexpected_locales = translations.each_key.reject {|locale| valid_locales.include?(locale.to_sym)}
         return if unexpected_locales.empty?
 
-        warn "INVALID I18N: Incorrect filename of #{file}".yellow
+        warn "INVALID I18N: File #{file.inspect} contains translations for unexpected locale".yellow
         warn "       valid: #{valid_locales.inspect}".blue
         warn "    expected: #{expected_locale.inspect}".green
         warn "  unexpected: #{unexpected_locales.inspect}".red
