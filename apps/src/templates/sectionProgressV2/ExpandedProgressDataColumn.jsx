@@ -9,7 +9,7 @@ import {studentLevelProgressType} from '../progress/progressTypes';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 
 import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
-import LevelDataCell from './LevelDataCell';
+import LevelDataCell, {getStudentRowHeaderId} from './LevelDataCell';
 
 import styles from './progress-table-v2.module.scss';
 
@@ -72,7 +72,7 @@ function ExpandedProgressDataColumn({
       <tbody className={styles.expandedTable}>
         {sortedStudents.map(student => (
           <>
-            <th hidden={true} id={'s-' + student.id}>
+            <th hidden={true} id={getStudentRowHeaderId(student.id)}>
               {getFullName(student)}
             </th>
             <tr className={styles.expandedLevelColumn} key={lesson.id}>

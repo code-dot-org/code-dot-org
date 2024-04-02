@@ -7,6 +7,7 @@ import i18n from '@cdo/locale';
 import FontAwesome from '../FontAwesome';
 
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import {getLessonColumnHeaderId} from './LevelDataCell';
 import LevelProgressHeader from './LevelProgressHeader';
 
 import styles from './progress-table-v2.module.scss';
@@ -55,7 +56,7 @@ export default function ExpandedProgressColumnHeader({
           aria-label={headerText}
           data-tip
           data-for={getTooltipId(lesson)}
-          id={'l-' + lesson.id}
+          id={getLessonColumnHeaderId(lesson.id)}
           scope="colgroup"
           //todo: col-span
         >

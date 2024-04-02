@@ -4,6 +4,8 @@ import React from 'react';
 
 import FontAwesome from '../FontAwesome';
 
+import {getLevelColumnHeaderId} from './LevelDataCell';
+
 import styles from './progress-table-v2.module.scss';
 
 export default function ExpandedProgressColumnHeader({
@@ -32,7 +34,7 @@ export default function ExpandedProgressColumnHeader({
             styles.expandedHeaderExpandedLevelCell
           )}
           scope="col"
-          id={'lvl-' + level.id}
+          id={getLevelColumnHeaderId(level.id)}
         >
           {level.sublevels?.length > 0 && <FontAwesome icon="caret-down" />}
           <div className={styles.expandedHeaderLevelCellLevelNumber}>
@@ -55,7 +57,7 @@ export default function ExpandedProgressColumnHeader({
             )}
             key={lesson.id + '.' + level.id + '-h-' + sublevel.id}
             scope="col"
-            id={'lvl-' + level.id + '.' + sublevel.id}
+            id={getLevelColumnHeaderId(sublevel.id, level.id)}
           >
             <div className={styles.expandedHeaderLevelCellLevelNumber}>
               {sublevel.bubbleText}
@@ -79,7 +81,7 @@ export default function ExpandedProgressColumnHeader({
         )}
         key={lesson.id + '.' + level.id + '-h'}
         onClick={() => toggleExpandedChoiceLevel(level)}
-        id={'lvl-' + level.id}
+        id={getLevelColumnHeaderId(level.id)}
       >
         {level.sublevels?.length > 0 && <FontAwesome icon="caret-right" />}
         <div className={styles.expandedHeaderLevelCellLevelNumber}>

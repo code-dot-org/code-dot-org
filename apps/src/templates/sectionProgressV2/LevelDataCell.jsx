@@ -25,6 +25,23 @@ const levelClickedAmplitude = (sectionId, isAssessment) => () => {
   });
 };
 
+export const getStudentRowHeaderId = studentId => `s-${studentId}`;
+export const getLessonColumnHeaderId = lessonId => `l-${lessonId}`;
+export const getLevelColumnHeaderId = (levelId, parentLevelId) =>
+  parentLevelId !== undefined
+    ? `lvl-${parentLevelId}.${levelId}`
+    : `lvl-${levelId}`;
+
+const getHeadersForCell = (studentId, levelId, parentLevelId, lessonId) => {
+  return (
+    getStudentRowHeaderId(studentId) +
+    ' ' +
+    getLevelColumnHeaderId(levelId, parentLevelId) +
+    ' ' +
+    getLessonColumnHeaderId(lessonId)
+  );
+};
+
 export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
     return null;
@@ -103,15 +120,7 @@ function LevelDataCell({
   return (
     <td
       className={classNames(styles.gridBox, styles.gridBoxLevel, feedbackStyle)}
-      headers={
-        's-' +
-        studentId +
-        ' lvl-' +
-        level.id +
-        (parentLevelId ? '.' + parentLevelId : '') +
-        ' l-' +
-        lessonId
-      }
+      headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
       <Link
         href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
