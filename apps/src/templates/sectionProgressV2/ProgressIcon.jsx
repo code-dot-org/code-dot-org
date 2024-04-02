@@ -13,7 +13,7 @@ export default function ProgressIcon({itemType}) {
   const needsFeedbackTriangle = () => (
     <div
       className={classNames(styles.needsFeedback, styles.cornerBox)}
-      aria-label={itemType[0]}
+      aria-label={itemType['title']}
       data-testid="needs-feedback-triangle"
     />
   );
@@ -21,20 +21,20 @@ export default function ProgressIcon({itemType}) {
   const feedbackGivenTriangle = () => (
     <div
       className={classNames(styles.feedbackGiven, styles.cornerBox)}
-      aria-label={itemType[0]}
+      aria-label={itemType['title']}
       data-testid="feedback-given-triangle"
     />
   );
 
   return (
     <div data-testid="progress-icon">
-      {itemType[1] !== undefined && (
+      {itemType['icon'] !== undefined && (
         <FontAwesome
-          id={'uitest-' + itemType[1]}
-          icon={itemType[1]}
-          style={{color: itemType[2]}}
+          id={'uitest-' + itemType['icon']}
+          icon={itemType['icon']}
+          style={{color: itemType['color']}}
           className={styles.fontAwesomeIcon}
-          aria-label={itemType[0]}
+          aria-label={itemType['title']}
         />
       )}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
@@ -44,5 +44,5 @@ export default function ProgressIcon({itemType}) {
 }
 
 ProgressIcon.propTypes = {
-  itemType: ITEM_TYPE_SHAPE,
+  itemType: ITEM_TYPE_SHAPE.isRequired,
 };
