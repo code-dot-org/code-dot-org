@@ -206,7 +206,7 @@ export default function LtiSectionSyncDialog({
       ([id, instructor]) => instructor.isOwner
     )?.[1]?.name;
     return (
-      <tr id={id}>
+      <tr key={id} role={'gridcell'}>
         <td style={styles.tableCellText}>{section.short_name}</td>
         <td style={styles.tableCellText}>{sectionOwnerName}</td>
         <td style={styles.tableCellNumber}>{section.size}</td>
@@ -217,7 +217,7 @@ export default function LtiSectionSyncDialog({
 
   const SyncSummaryTable = (sections: LtiSectionMap) => {
     return (
-      <table style={styles.summaryTable}>
+      <table style={styles.summaryTable} role={'grid'}>
         <thead>
           <tr>
             <th style={styles.tableHeaderLeft}>

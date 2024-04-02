@@ -86,12 +86,18 @@ describe('LTI Section Sync Dialog', () => {
 
       screen.getByText(i18n.ltiSectionSyncDialogTitle());
 
-      const list = screen.getByRole('list');
+      const list = screen.getByRole('grid');
       const {getAllByRole} = within(list);
-      const items = getAllByRole('listitem', {exact: false});
+      const items = getAllByRole('gridcell', {exact: false});
       const sectionListItems = items.map(item => item.textContent);
+      const section = MOCK_UPDATED_SECTION_MAP[2];
+      const instName = section.instructors[0].name;
 
-      expect(sectionListItems[0]).to.match(/Section 2(.*)15 students/);
+      expect(sectionListItems[0]).to.match(
+        new RegExp(
+          `${section.short_name}${instName}${section.size}${section.instructors.length}`
+        )
+      );
 
       // no 'disable roster sync'
       expect(
