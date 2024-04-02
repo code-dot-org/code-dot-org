@@ -17,11 +17,7 @@ import TeacherActionsBox from './TeacherActionsBox';
 
 import styles from './progress-table-legend.module.scss';
 
-export default function IconKey({
-  isViewingValidatedLevel,
-  expandedLessonIds,
-  sectionId,
-}) {
+export default function IconKey({sectionId}) {
   const [isOpen, setIsOpen] = useState(
     tryGetLocalStorage('iconKeyIsOpen', 'true') !== 'false'
   );
@@ -36,17 +32,13 @@ export default function IconKey({
     });
   };
 
-  const isViewingLevelProgress = expandedLessonIds.length > 0;
-
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
   const sectionContent = () => (
     <>
-      <AssignmentCompletionStatesBox
-        hasValidatedLevels={isViewingValidatedLevel}
-      />
-      <TeacherActionsBox isViewingLevelProgress={isViewingLevelProgress} />
-      {isViewingLevelProgress && <LevelTypesBox />}
+      <AssignmentCompletionStatesBox />
+      <TeacherActionsBox />
+      <LevelTypesBox />
     </>
   );
 
@@ -93,17 +85,12 @@ export default function IconKey({
       </div>
       {isOpen && sectionContent()}
       {isIconDetailsOpen && (
-        <MoreDetailsDialog
-          onClose={() => setIconDetailsOpen(false)}
-          hasValidation={isViewingValidatedLevel}
-        />
+        <MoreDetailsDialog onClose={() => setIconDetailsOpen(false)} />
       )}
     </div>
   );
 }
 
 IconKey.propTypes = {
-  isViewingValidatedLevel: PropTypes.bool,
-  expandedLessonIds: PropTypes.array,
   sectionId: PropTypes.number,
 };

@@ -6,6 +6,10 @@ import codemirror from 'codemirror';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 import $ from 'jquery';
+import {
+  getProjectXml,
+  removeIdsFromBlocks,
+} from '@cdo/apps/blockly/addons/cdoXml';
 
 $(document).ready(initPage);
 
@@ -40,18 +44,22 @@ window.levelbuilder.installBlocks = function (app, blockly, options) {
 };
 
 window.levelbuilder.copyWorkspaceToClipboard = function () {
-  const str = Blockly.Xml.domToPrettyText(
-    Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
-  );
+  const workspaceXml = getProjectXml(Blockly.mainBlockSpace);
+  removeIdsFromBlocks(workspaceXml);
+
+  const str = Blockly.Xml.domToPrettyText(workspaceXml);
   copyToClipboard(str);
   localStorage.setItem('blockXml', str);
 };
 
 window.levelbuilder.copySelectedBlockToClipboard = function () {
   if (Blockly.selected) {
-    const str = Blockly.Xml.domToPrettyText(
-      Blockly.Xml.blockToDom(Blockly.selected)
-    );
+    const xmlContainer = document.createElementNS('', 'xml');
+    const blockElement = Blockly.Xml.blockToDom(Blockly.selected);
+    xmlContainer.appendChild(blockElement);
+    removeIdsFromBlocks(xmlContainer);
+
+    const str = Blockly.Xml.domToPrettyText(xmlContainer);
     copyToClipboard(str);
     localStorage.setItem('blockXml', str);
   }
@@ -60,10 +68,6 @@ window.levelbuilder.copySelectedBlockToClipboard = function () {
 window.levelbuilder.pasteBlocksToWorkspace = function () {
   let str = localStorage.getItem('blockXml');
 
-  if (str.startsWith('<block') && str.endsWith('</block>')) {
-    // If a single block has been copied, wrap it in <xml></xml>
-    str = `<xml>${str}</xml>`;
-  }
   if (!(str.startsWith('<xml') && str.endsWith('</xml>'))) {
     // str is not valid block xml.
     return;
