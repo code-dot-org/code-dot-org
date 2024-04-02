@@ -52,8 +52,11 @@ export default function ExpandedProgressColumnHeader({
         style={{width: headerWidth + 'px'}}
         onClick={() => removeExpandedLesson(lesson.id)}
         aria-label={headerText}
+        aria-expanded={true}
         data-tip
         data-for={getTooltipId(lesson)}
+        role="button"
+        tabIndex={0}
       >
         <LessonTitleTooltip lesson={lesson} />
         <FontAwesome

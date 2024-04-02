@@ -69,6 +69,10 @@ export default function LessonProgressColumnHeader({
         data-tip
         data-for={getTooltipId(lesson)}
         onClick={() => addExpandedLesson(lesson)}
+        aria-label={lesson.title}
+        aria-expanded={false}
+        role="button"
+        tabIndex={0}
       >
         <LessonTitleTooltip lesson={lesson} />
         <FontAwesome
