@@ -35,6 +35,7 @@ $width-lg: 1020px;
   text-align: initial;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   .overline {
     color: $light_primary_500;
