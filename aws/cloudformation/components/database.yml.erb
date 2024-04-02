@@ -352,6 +352,7 @@
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
     Properties:
+      AllowMajorVersionUpgrade: true
       DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
       DBClusterIdentifier: !Ref AuroraCluster
       DBInstanceClass: !Ref DBInstanceType
