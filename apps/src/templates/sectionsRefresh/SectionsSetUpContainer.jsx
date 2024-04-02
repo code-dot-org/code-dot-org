@@ -307,6 +307,10 @@ export default function SectionsSetUpContainer({
   };
 
   const renderCoteacherSection = () => {
+    const isCoTeacherManagementDisabled =
+      sections[0].primaryInstructor?.ltiRosterSyncEnabled === true &&
+      sections[0].loginType === 'ltiV1';
+
     return renderExpandableSection(
       'uitest-expandable-coteacher',
       () => (
@@ -328,7 +332,7 @@ export default function SectionsSetUpContainer({
           sectionMetricInformation={getCoteacherMetricInfoFromSection(
             sections[0]
           )}
-          loginType={sections[0].loginType}
+          disabled={isCoTeacherManagementDisabled}
         />
       ),
       isCoteacherOpen,

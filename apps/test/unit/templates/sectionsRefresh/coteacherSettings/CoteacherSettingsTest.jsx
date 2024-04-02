@@ -99,14 +99,14 @@ describe('CoteacherSettings', () => {
     expect(cells.at(6).text()).to.include('allosaurus@code.org');
     expect(cells.at(7).text()).to.include('ACCEPTED');
   });
-  it('renders LTI instructions for co-teacher and disables remove button', () => {
+  it('renders LTI instructions for co-teacher and disables remove button if disabled', () => {
     const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={() => {}}
         coteachersToAdd={[]}
         primaryTeacher={testPrimaryTeacher}
-        loginType={'ltiV1'}
+        disabled
       />
     );
     const addCoteacher = wrapper.find('div').first().childAt(0);

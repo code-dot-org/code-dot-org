@@ -72,10 +72,8 @@ describe('AddCoteacher', () => {
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
 
-  it('disables email input and add button when loginType is LTIv1', () => {
-    const wrapper = shallow(
-      <AddCoteacher {...DEFAULT_PROPS} loginType={'ltiV1'} />
-    );
+  it('disables email input and add button when disabled', () => {
+    const wrapper = shallow(<AddCoteacher {...DEFAULT_PROPS} disabled />);
 
     expect(wrapper.find('input').first().props().disabled).to.be.true;
     expect(wrapper.find('Button').first().props().disabled).to.be.true;

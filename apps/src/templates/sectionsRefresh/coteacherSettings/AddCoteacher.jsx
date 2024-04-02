@@ -93,7 +93,7 @@ export default function AddCoteacher({
   addError,
   setAddError,
   sectionMetricInformation,
-  loginType,
+  disabled,
 }) {
   const [inputValue, setInputValue] = useState('');
 
@@ -196,7 +196,7 @@ export default function AddCoteacher({
   const isMaxCoteachers = numCoteachers >= 5;
 
   const getErrorOrCount = () => {
-    if (loginType === 'ltiV1') {
+    if (disabled) {
       return null;
     }
 
@@ -225,7 +225,7 @@ export default function AddCoteacher({
         <input
           className={classNames(styles.input, !!addError && styles.inputError)}
           type="text"
-          disabled={isMaxCoteachers || loginType === 'ltiV1'}
+          disabled={isMaxCoteachers || !!disabled}
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleSubmitAddEmail}
@@ -237,7 +237,7 @@ export default function AddCoteacher({
           type="submit"
           text={i18n.coteacherAddButton()}
           onClick={handleAddEmail}
-          disabled={isMaxCoteachers || loginType === 'ltiV1'}
+          disabled={isMaxCoteachers || !!disabled}
         />
       </div>
       {getErrorOrCount()}
@@ -254,5 +254,5 @@ AddCoteacher.propTypes = {
   addSavedCoteacher: PropTypes.func.isRequired,
   setAddError: PropTypes.func.isRequired,
   sectionMetricInformation: PropTypes.object,
-  loginType: PropTypes.string,
+  disabled: PropTypes.bool,
 };

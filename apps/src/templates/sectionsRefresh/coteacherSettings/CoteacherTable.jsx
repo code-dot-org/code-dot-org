@@ -78,7 +78,7 @@ const getStatusPill = status => {
 export default function CoteacherTable({
   coteachers,
   setCoteacherToRemove,
-  loginType,
+  disabled,
 }) {
   const tableRow = (index, coteacher) => {
     return (
@@ -98,7 +98,7 @@ export default function CoteacherTable({
         <td className={styles.tableStatusCell}>
           {getStatusPill(coteacher.status)}
         </td>
-        {loginType !== 'ltiV1' && (
+        {!disabled && (
           <td>
             <button
               type="button"
@@ -131,5 +131,5 @@ export default function CoteacherTable({
 CoteacherTable.propTypes = {
   coteachers: PropTypes.arrayOf(PropTypes.object).isRequired,
   setCoteacherToRemove: PropTypes.func.isRequired,
-  loginType: PropTypes.string,
+  disabled: PropTypes.bool,
 };
