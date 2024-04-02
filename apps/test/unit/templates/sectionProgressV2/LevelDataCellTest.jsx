@@ -24,9 +24,21 @@ const DEFAULT_PROPS = {
   lessonId: 1,
 };
 
+const wrapInTableStructure = element => (
+  <table>
+    <tbody>
+      <tr>{element}</tr>
+    </tbody>
+  </table>
+);
+
 describe('LevelDataCell', () => {
   const renderDefault = (propOverrides = {}) => {
-    render(<UnconnectedLevelDataCell {...DEFAULT_PROPS} {...propOverrides} />);
+    render(
+      wrapInTableStructure(
+        <UnconnectedLevelDataCell {...DEFAULT_PROPS} {...propOverrides} />
+      )
+    );
   };
 
   it('Redirects with sectionId and studentId when specified', () => {
