@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
@@ -10,10 +10,10 @@ import moduleStyles from './tabs.module.scss';
 export interface TabsProps {
   /** Array of props for Tabs to render */
   tabs: TabModel[];
-  /** The function that is called when a Tab is clicked */
+  /** The function that is called when a Tab is clicked/selected tab is changed */
   onChange: (value: string) => void;
-  /** The value of the selected Tab */
-  selectedTabValue: string;
+  /** The value of the default selected Tab */
+  defaultSelectedTabValue: string;
   /** The name attribute specifies the name of a Tabs group.
      The name attribute is used to reference elements in a JavaScript.
      */
@@ -48,7 +48,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   tabs,
   name,
   onChange,
-  selectedTabValue,
+  defaultSelectedTabValue,
   tabsContainerId,
   tabsContainerClassName,
   tabPanelsContainerId,
@@ -56,6 +56,18 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   type = 'primary',
   size = 'm',
 }) => {
+  const [selectedTabValue, setSelectedValue] = useState(
+    defaultSelectedTabValue
+  );
+  const handleChange = useCallback(
+    (value: string) => {
+      setSelectedValue(value);
+      if (onChange) {
+        onChange(value);
+      }
+    },
+    [setSelectedValue, onChange]
+  );
   return (
     <>
       <div
@@ -73,7 +85,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
               {...tab}
               key={tab.value}
               isSelected={tab.value === selectedTabValue}
-              onClick={onChange}
+              onClick={handleChange}
               tabPanelId={`${name}-panel-${tab.value}`}
               tabButtonId={`${name}-tab-${tab.value}`}
             />

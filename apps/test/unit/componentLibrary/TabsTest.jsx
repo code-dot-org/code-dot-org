@@ -17,7 +17,7 @@ describe('Design System - Tabs', () => {
 
     render(
       <Tabs
-        selectedTabValue={valuesMap.test1}
+        defaultSelectedTabValue={valuesMap.test1}
         tabs={[
           {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
           {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
@@ -47,7 +47,7 @@ describe('Design System - Tabs', () => {
 
     const TabsToRender = () => (
       <Tabs
-        selectedTabValue={valuesMap.test1}
+        defaultSelectedTabValue={valuesMap.test1}
         tabs={[
           {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
           {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
@@ -98,7 +98,7 @@ describe('Design System - Tabs', () => {
 
     const TabsToRender = () => (
       <Tabs
-        selectedTabValue={valuesMap.test1}
+        defaultSelectedTabValue={valuesMap.test1}
         tabs={[
           {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
           {

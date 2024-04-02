@@ -1,5 +1,5 @@
 import {Meta, StoryFn} from '@storybook/react';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Tabs, {TabsProps} from './index';
 
@@ -14,38 +14,16 @@ export default {
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
 const SingleTemplate: StoryFn<TabsProps> = args => {
-  const [value, setValues] = useState('');
-
-  return (
-    <Tabs
-      {...args}
-      selectedTabValue={value || args.selectedTabValue}
-      onChange={setValues}
-    />
-  );
+  return <Tabs {...args} />;
 };
 
 const MultipleTemplate: StoryFn<{
   components: TabsProps[];
 }> = args => {
-  const [value, setValues] = useState({} as Record<string, string>);
-
   return (
     <>
       {args.components?.map(componentArg => (
-        <Tabs
-          key={componentArg.name}
-          {...componentArg}
-          selectedTabValue={
-            value[componentArg.name] || componentArg.selectedTabValue
-          }
-          onChange={value =>
-            setValues(values => ({
-              ...values,
-              [componentArg.name]: value,
-            }))
-          }
-        />
+        <Tabs key={componentArg.name} {...componentArg} />
       ))}
     </>
   );
@@ -67,7 +45,7 @@ DefaultTabs.args = {
       tabContent: <div>Tab 3 Content</div>,
     },
   ],
-  selectedTabValue: 'tab1',
+  defaultSelectedTabValue: 'tab1',
   onChange: () => null,
 };
 
@@ -88,7 +66,7 @@ DefaultTabsWithDisabledTab.args = {
       tabContent: <div>Tab 3 Content</div>,
     },
   ],
-  selectedTabValue: 'tab1',
+  defaultSelectedTabValue: 'tab1',
   onChange: () => null,
 };
 
@@ -110,7 +88,7 @@ GroupOfTypesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       type: 'primary',
     },
@@ -129,7 +107,7 @@ GroupOfTypesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       type: 'secondary',
     },
@@ -162,7 +140,7 @@ GroupOfTabsWithIcons.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       type: 'primary',
     },
@@ -188,7 +166,7 @@ GroupOfTabsWithIcons.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       type: 'primary',
     },
@@ -215,7 +193,7 @@ GroupOfTabsWithIcons.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       type: 'secondary',
     },
@@ -241,7 +219,7 @@ GroupOfTabsWithIcons.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       type: 'secondary',
     },
@@ -270,7 +248,7 @@ GroupOfSizesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       size: 'xs',
     },
@@ -293,7 +271,7 @@ GroupOfSizesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       size: 's',
     },
@@ -316,7 +294,7 @@ GroupOfSizesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       size: 'm',
     },
@@ -339,7 +317,7 @@ GroupOfSizesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       size: 'l',
     },
@@ -362,7 +340,7 @@ GroupOfSizesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       type: 'secondary',
       onChange: () => null,
       size: 'xs',
@@ -386,7 +364,7 @@ GroupOfSizesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab1',
       type: 'secondary',
       onChange: () => null,
       size: 's',
@@ -410,7 +388,7 @@ GroupOfSizesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab2',
       type: 'secondary',
       onChange: () => null,
       size: 'm',
@@ -434,7 +412,7 @@ GroupOfSizesOfTabs.args = {
           tabContent: <div>Tab 3 Content</div>,
         },
       ],
-      selectedTabValue: 'tab1',
+      defaultSelectedTabValue: 'tab3',
       type: 'secondary',
       onChange: () => null,
       size: 'l',
