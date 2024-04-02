@@ -1,4 +1,4 @@
-const defaultPreviewFileTypesArray = ['html', 'js', 'json'];
+const defaultPreviewFileTypesArray = ['html'];
 export const previewFileType = (
   language: string,
   previewFileTypesArray = defaultPreviewFileTypesArray
