@@ -1,4 +1,4 @@
-name 'CSA U6L2-L5_-modular'
+name 'CSA U6L2-L5_-modular-choice'
 display_name 'Practice: Checking String objects for certain criteria'
 description 'Practice using the `substring()` method to check if `String` objects meet a criteria.'
 
