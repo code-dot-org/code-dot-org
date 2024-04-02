@@ -179,7 +179,7 @@ module Cdo
     # - Modified the `LocaleExtractor` class to support filenames that include both a prefix and the locale (e.g., "courses.en-US.yml").
     # - Modified the `filenames_for_current_locale` method to load files for the current locale and its fallbacks, (e.g, "en" for "en-US" and vice versa)
     # - Modified the `eager_load!` method to ignore eager loading when lazy loading is enabled.
-    # - Prevented the `assert_file_named_correctly!` method from raising an irrelevant error regarding file locale mismatches.
+    # - Modified the `assert_file_named_correctly!` method to check if a filename corresponds to the locale it loaded.
     # - Implemented a mechanism to avoid reloading already loaded translation files.
     # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb
     class LazyLoadableBackend < ::I18n::Backend::LazyLoadable
@@ -243,7 +243,7 @@ module Cdo
         end
       end
 
-      # Checks if a filename is named in correspondence to the translations it loaded.
+      # Checks if a filename corresponds to the locale it has loaded.
       # The locale extracted from the path must be either the single locale loaded in
       # the translations or one of the expected variations of the locale, taking into
       # account both long locale codes and fallbacks.
