@@ -32,9 +32,15 @@ scripts_to_clone = gets.chomp
 scripts_to_clone.split(",").reject(&:blank?).map(&:strip).each do |scpt_to_clone|
   clone_unit = Unit.find_by_name(scpt_to_clone)
   unless clone_unit.nil?
+    puts "\Generating commands for unit: [#{scpt_to_clone}] for destination year [#{destination_year}]"
     dstn_unit_name = clone_unit.name.sub(source_year, destination_year)
+
     family_name = clone_unit.family_name
-    puts "\nUnit: [#{scpt_to_clone}] for destination year [#{destination_year}]"
+    if family_name.nil? || family_name.empty?
+      puts "Clone commands for units that are not part of a family aren't supported yet. Please check the how-to guide and consider adding the support."
+      next
+    end
+
     puts "Unit.find_by_name('#{scpt_to_clone}').clone_migrated_unit('#{dstn_unit_name}', family_name: '#{family_name}', version_year: '#{destination_year}', new_level_suffix: '#{destination_year}')"
     next
   end
