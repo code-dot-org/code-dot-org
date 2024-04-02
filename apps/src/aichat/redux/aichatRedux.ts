@@ -18,7 +18,7 @@ import {
   AiCustomizations,
   ModelCardInfo,
   Visibility,
-  LevelAiChatSettings,
+  LevelAichatSettings,
 } from '../types';
 import {RootState} from '@cdo/apps/types/redux';
 
@@ -212,14 +212,14 @@ const aichatSlice = createSlice({
     setStartingAiCustomizations: (
       state,
       action: PayloadAction<{
-        levelAiChatSettings?: LevelAiChatSettings;
+        levelAichatSettings?: LevelAichatSettings;
         studentAiCustomizations: AiCustomizations;
       }>
     ) => {
-      const {levelAiChatSettings, studentAiCustomizations} = action.payload;
+      const {levelAichatSettings, studentAiCustomizations} = action.payload;
 
       let reconciledAiCustomizations: AiCustomizations = {
-        ...(levelAiChatSettings?.initialCustomizations ||
+        ...(levelAichatSettings?.initialCustomizations ||
           EMPTY_AI_CUSTOMIZATIONS),
       };
 
@@ -227,7 +227,7 @@ const aichatSlice = createSlice({
         const customization = customizationUntyped as keyof AiCustomizations;
 
         if (
-          (levelAiChatSettings?.visibilities || DEFAULT_VISIBILITIES)[
+          (levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES)[
             customization
           ] === Visibility.EDITABLE &&
           studentAiCustomizations[customization]
@@ -242,7 +242,7 @@ const aichatSlice = createSlice({
       state.previouslySavedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
-        levelAiChatSettings?.visibilities || DEFAULT_VISIBILITIES;
+        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
     },
     setPreviouslySavedAiCustomizations: (
       state,

@@ -33,13 +33,13 @@ export interface AichatLevelProperties extends LevelProperties {
   // ---
 
   /**
-   * Initial AI customizations set by the level.
+   * Initial AI chat customizations set by the level.
    * For each field, levelbuilders may define the initial default value,
    * and visibility (hidden, readonly, or editable).
    * Visibility is not editable by the student; students can only change
    * the value if it is set to editable.
    */
-  aiChatSettings?: LevelAiChatSettings;
+  aichatSettings?: LevelAichatSettings;
   initialAiCustomizations?: LevelAiCustomizations;
 }
 
@@ -72,7 +72,7 @@ export enum Visibility {
  * Level-defined AI customizations for student chat bots set by levelbuilders on the level's properties.
  * Levelbuilders can define initial default values for each field, as well as their visibilities.
  */
-export interface LevelAiChatSettings {
+export interface LevelAichatSettings {
   initialCustomizations: AiCustomizations;
   visibilities: {[key in keyof AiCustomizations]: Visibility};
   /** If the presentation panel is hidden from the student. */

@@ -26,10 +26,10 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
 
-  const levelAiChatSettings = useAppSelector(
+  const levelAichatSettings = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.aiChatSettings
+        ?.aichatSettings
   );
 
   const initialSources = useAppSelector(
@@ -40,11 +40,11 @@ const AichatView: React.FunctionComponent = () => {
     const studentAiCustomizations = JSON.parse(initialSources);
     dispatch(
       setStartingAiCustomizations({
-        levelAiChatSettings,
+        levelAichatSettings,
         studentAiCustomizations,
       })
     );
-  }, [dispatch, initialSources, levelAiChatSettings]);
+  }, [dispatch, initialSources, levelAichatSettings]);
 
   const {botName} = useAppSelector(
     state => state.aichat.currentAiCustomizations
@@ -77,7 +77,7 @@ const AichatView: React.FunctionComponent = () => {
 
   return (
     <>
-      {!levelAiChatSettings?.hidePresentationPanel && (
+      {!levelAichatSettings?.hidePresentationPanel && (
         <div className={moduleStyles.viewModeButtons}>
           <SegmentedButtons {...viewModeButtonsProps} />
         </div>
