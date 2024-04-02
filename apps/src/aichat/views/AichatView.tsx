@@ -11,6 +11,7 @@ const aichatI18n = require('@cdo/aichat/locale');
 import {setStartingAiCustomizations} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
+import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
 import SegmentedButtons, {
   SegmentedButtonsProps,
@@ -110,7 +111,9 @@ const AichatView: React.FunctionComponent = () => {
             <PanelContainer
               id="aichat-presentation-panel"
               headerText={'Model Card'}
-            />
+            >
+              <PresentationView />
+            </PanelContainer>
           </div>
         )}
         <div className={moduleStyles.chatWorkspaceArea}>
