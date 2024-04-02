@@ -36,8 +36,9 @@ const getHeadersForCell = (studentId, levelId, parentLevelId, lessonId) => {
   return (
     getStudentRowHeaderId(studentId) +
     ' ' +
-    getLevelColumnHeaderId(levelId, parentLevelId) +
+    getLevelColumnHeaderId(levelId) +
     ' ' +
+    (parentLevelId && getLevelColumnHeaderId(levelId, parentLevelId) + ' ') +
     getLessonColumnHeaderId(lessonId)
   );
 };
