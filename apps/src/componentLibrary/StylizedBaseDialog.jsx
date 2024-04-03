@@ -1,10 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {makeEnum} from '@cdo/apps/utils';
+import React from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 /**
  * StylizedBaseDialog

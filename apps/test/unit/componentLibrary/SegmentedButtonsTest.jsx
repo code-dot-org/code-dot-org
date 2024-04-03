@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const valuesMap = {};
 const onSegmentedButtonsChange = (name, value) => (valuesMap[name] = value);
