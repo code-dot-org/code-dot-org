@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import moduleStyles from '@cdo/apps/templates/button.module.scss';
 import i18n from '@cdo/locale';
 
 import Button from '../Button';
@@ -15,6 +14,8 @@ import {
   getExportableSubmissionStatusData,
 } from './sectionAssessmentsRedux';
 import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable';
+
+import moduleStyles from '@cdo/apps/templates/button.module.scss';
 
 export const studentExportableDataPropType = PropTypes.shape({
   studentName: PropTypes.string.isRequired,

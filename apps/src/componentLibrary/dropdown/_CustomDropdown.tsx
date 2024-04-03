@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {
   useCallback,
   useMemo,
@@ -5,19 +6,18 @@ import React, {
   useEffect,
   KeyboardEvent,
 } from 'react';
-import classNames from 'classnames';
 
+import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
+import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {
   ComponentSizeXSToL,
   DropdownColor,
 } from '@cdo/apps/componentLibrary/common/types';
-import moduleStyles from './customDropdown.module.scss';
-
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
+
+import moduleStyles from './customDropdown.module.scss';
 
 export interface CustomDropdownProps {
   /** CustomDropdown name.
