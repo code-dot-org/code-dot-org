@@ -14,6 +14,10 @@
   cursor: pointer;
   border-radius: 0;
   display: inline-block;
+
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .progressTableV2 {
@@ -160,11 +164,6 @@ $level-cell-width: 52;
     margin-bottom: 32px;
     text-align: center;
     background-color: $light_gray_50;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: none;
-    }
   }
 
   
