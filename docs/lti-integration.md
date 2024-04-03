@@ -157,26 +157,26 @@ be manually installed.
 
 1. Navigate to https://app.schoology.com/apps/publisher
 2. Fill in required fields
-  - App Name: `Code.org`
-  - App Description: `Code.org LTI Tool`
-  - Category: `Technology`
-  - Recommended For: `Instructors` and `Students`
-  - Available For: `Only people in my school`
+    - App Name: `Code.org`
+    - App Description: `Code.org LTI Tool`
+    - Category: `Technology`
+    - Recommended For: `Instructors` and `Students`
+    - Available For: `Only people in my school`
 
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/02898ddb-1155-4aa0-a39a-7c518e4e2a38)
 
 3. You can leave the App logo Feature graphic empty
 4. Type of App: `LTI 1.3 App`
 5. Select where the tool can be installed, `Can Be Installed For`:
-  - Users
-    - App Center Dropdown
-    - User Profile Left Navigation Menu
-  - Courses
-    - Left Navigation
-    - Rich Text Editor
-    - External Tool
-  - Groups
-  - Resources
+    - Users
+      - App Center Dropdown
+      - User Profile Left Navigation Menu
+    - Courses
+      - Left Navigation
+      - Rich Text Editor
+      - External Tool
+    - Groups
+    - Resources
 6. Configuration Type: `Manual`
 7. Privacy: `Send Name and Email/Username of user who luanches the tool`
 8. Check `Names and Roles Services`, leave `Assignment and Grade Services` unchecked
@@ -185,7 +185,7 @@ be manually installed.
 9. JWKS URL: `https://studio.code.org/oauth/jwks`
 10. Domain/URL: `https://studio.code.org/lti/v1/sync_course`
 11. Custom Parameters:
-  - `display_name=$User.username`
+    - `display_name=$User.username`
 12. OIDC Login Init Url: `https://studio.code.org/lti/v1/login`
 13. Redirect URLs: `https://studio.code.org/lti/v1/authenticate`
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/c1be38ac-a136-4e47-9bfb-b41f3ece713f)
