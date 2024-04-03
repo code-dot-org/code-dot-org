@@ -37,7 +37,6 @@ export default function MoreDetailsDialog({onClose}) {
       onClose={onClose}
       closeOnClickBackdrop={true}
       initialFocus={false}
-      aria-label={i18n.iconKeyMoreDetails()}
     >
       <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
       <button type="button" onClick={onClose} className={styles.xCloseButton}>
