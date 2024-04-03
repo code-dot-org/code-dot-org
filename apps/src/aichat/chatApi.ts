@@ -5,9 +5,11 @@ import {
   PII,
 } from '@cdo/apps/aiTutor/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {CHAT_COMPLETION_URL} from './constants';
-import Lab2Registry from '../lab2/Lab2Registry';
+
 import {TutorType} from '../aiTutor/types';
+import Lab2Registry from '../lab2/Lab2Registry';
+
+import {CHAT_COMPLETION_URL} from './constants';
 
 /**
  * This function sends a POST request to the chat completion backend controller.

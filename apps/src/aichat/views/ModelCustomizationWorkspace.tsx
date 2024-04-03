@@ -1,12 +1,14 @@
 import React from 'react';
 
-import Tabs, {Tab} from './tabs/Tabs';
-import PromptCustomization from './modelCustomization/PromptCustomization';
-import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
-import PublishNotes from './modelCustomization/PublishNotes';
-import styles from './model-customization-workspace.module.scss';
-import {isVisible} from './modelCustomization/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import PromptCustomization from './modelCustomization/PromptCustomization';
+import PublishNotes from './modelCustomization/PublishNotes';
+import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
+import {isVisible} from './modelCustomization/utils';
+import Tabs, {Tab} from './tabs/Tabs';
+
+import styles from './model-customization-workspace.module.scss';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   const {botName, temperature, systemPrompt, retrievalContexts, modelCardInfo} =

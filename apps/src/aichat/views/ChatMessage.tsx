@@ -1,6 +1,10 @@
-import React from 'react';
-import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';
+import React from 'react';
+import {useSelector} from 'react-redux';
+
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
+
 import aichatI18n from '../locale';
 import {
   AichatLevelProperties,
@@ -8,9 +12,8 @@ import {
   Role,
   Status,
 } from '../types';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import {useSelector} from 'react-redux';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
+
+import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
   message: ChatCompletionMessage;

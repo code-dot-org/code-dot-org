@@ -1,14 +1,16 @@
 import React, {useCallback} from 'react';
 
-import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import {MODEL_CARD_FIELDS_AND_LABELS} from './constants';
-import {isVisible, isDisabled} from './utils';
 import {
   setModelCardProperty,
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import {MODEL_CARD_FIELDS_AND_LABELS} from './constants';
+import {isVisible, isDisabled} from './utils';
+
 import styles from '../model-customization-workspace.module.scss';
 
 const PublishNotes: React.FunctionComponent = () => {

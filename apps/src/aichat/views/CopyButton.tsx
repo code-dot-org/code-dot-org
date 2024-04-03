@@ -1,9 +1,9 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
+import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 import Button from '@cdo/apps/templates/Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 
 const CopyButton: React.FunctionComponent = () => {
   const storedMessages = useSelector(

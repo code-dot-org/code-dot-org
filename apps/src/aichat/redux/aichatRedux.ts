@@ -1,15 +1,12 @@
-import moment from 'moment';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
+import moment from 'moment';
+
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-const registerReducers = require('@cdo/apps/redux').registerReducers;
+import {RootState} from '@cdo/apps/types/redux';
 
-import {
-  DEFAULT_VISIBILITIES,
-  EMPTY_AI_CUSTOMIZATIONS,
-} from '../views/modelCustomization/constants';
-import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
+import {initialChatMessages} from '../constants';
 import {
   ChatCompletionMessage,
   AichatLevelProperties,
@@ -20,7 +17,12 @@ import {
   Visibility,
   LevelAichatSettings,
 } from '../types';
-import {RootState} from '@cdo/apps/types/redux';
+import {
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '../views/modelCustomization/constants';
+
+const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],

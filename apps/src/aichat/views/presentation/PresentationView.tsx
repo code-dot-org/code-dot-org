@@ -1,9 +1,12 @@
 import React from 'react';
-import ModelCardRow from './ModelCardRow';
+
 import {MODEL_CARD_FIELDS_AND_LABELS} from '@cdo/apps/aichat/views/modelCustomization/constants';
-import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
+
+import ModelCardRow from './ModelCardRow';
+
 import moduleStyles from './presentation-view.module.scss';
+import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
 
 const PresentationView: React.FunctionComponent = () => {
   return (
