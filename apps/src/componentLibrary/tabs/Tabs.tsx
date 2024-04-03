@@ -3,7 +3,7 @@ import React, {useCallback, useState} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
-import TabPanel from '@cdo/apps/componentLibrary/tabs/TabPanel';
+import _TabPanel from '@cdo/apps/componentLibrary/tabs/_TabPanel';
 
 import moduleStyles from './tabs.module.scss';
 
@@ -18,6 +18,7 @@ export interface TabsProps {
      The name attribute is used to reference elements in a JavaScript.
      */
   name: string;
+  /** Type of Tabs */
   type?: 'primary' | 'secondary';
   /** Size of Tabs */
   size?: ComponentSizeXSToL;
@@ -97,7 +98,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
         id={tabPanelsContainerId}
       >
         {tabs.map(tab => (
-          <TabPanel
+          <_TabPanel
             key={tab.value}
             content={tab.tabContent}
             isActive={tab.value === selectedTabValue}
