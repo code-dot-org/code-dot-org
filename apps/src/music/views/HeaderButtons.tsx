@@ -7,15 +7,62 @@ import classNames from 'classnames';
 import React, {useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 import {AnalyticsContext} from '../context';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './HeaderButtons.module.scss';
 import musicI18n from '../locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
+import {getBaseAssetUrl} from '../appConfig';
+
+interface CurrentPackProps {
+  packFolder: SoundFolder;
+  noRightPadding: boolean;
+}
+
+const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
+  packFolder,
+  noRightPadding,
+}) => {
+  const library = MusicLibrary.getInstance();
+
+  let packImageSrc = null;
+
+  if (library && packFolder) {
+    const libraryGroupPath = library.libraryJson.path;
+    packImageSrc =
+      packFolder.imageSrc &&
+      `${getBaseAssetUrl()}${libraryGroupPath}/${packFolder.path}/${
+        packFolder.imageSrc
+      }`;
+  }
+
+  return (
+    <span>
+      {packImageSrc && (
+        <img
+          src={packImageSrc}
+          className={moduleStyles.buttonWideImage}
+          alt=""
+        />
+      )}
+      <span
+        className={classNames(
+          moduleStyles.buttonWideContent,
+          noRightPadding && moduleStyles.buttonWideContentNoRightPadding
+        )}
+      >
+        {packFolder.name} &bull; {packFolder.artist}
+      </span>
+    </span>
+  );
+};
 
 interface HeaderButtonsProps {
   onClickUndo: () => void;
   onClickRedo: () => void;
   clearCode: () => void;
+  allowPackSelection: boolean;
 }
 
 /**
@@ -25,13 +72,23 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   onClickUndo,
   onClickRedo,
   clearCode,
+  allowPackSelection,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
   const {canUndo, canRedo} = useSelector(
     (state: {music: MusicState}) => state.music.undoStatus
   );
+  const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useContext(DialogContext);
+
+  const library = MusicLibrary.getInstance();
+
+  let packFolder = null;
+
+  if (library && currentPackId) {
+    packFolder = library.getAllowedFolderForFolderId(undefined, currentPackId);
+  }
 
   const onClickUndoRedo = useCallback(
     (action: 'undo' | 'redo') => {
@@ -74,11 +131,30 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     <div className={moduleStyles.container}>
       {!readOnlyWorkspace && (
         <div className={moduleStyles.subContainer}>
+          {!allowPackSelection && packFolder && (
+            <button
+              type="button"
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonWide,
+                moduleStyles.buttonInteractionDisabled
+              )}
+              disabled={true}
+            >
+              <CurrentPack packFolder={packFolder} noRightPadding={true} />
+            </button>
+          )}
           <button
             onClick={onClickStartOver}
             type="button"
-            className={classNames(moduleStyles.button)}
+            className={classNames(
+              moduleStyles.button,
+              allowPackSelection && packFolder && moduleStyles.buttonWide
+            )}
           >
+            {allowPackSelection && packFolder && (
+              <CurrentPack packFolder={packFolder} noRightPadding={false} />
+            )}
             <FontAwesome
               title={musicI18n.startOver()}
               icon="refresh"

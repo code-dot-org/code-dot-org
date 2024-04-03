@@ -75,7 +75,11 @@ const getStatusPill = status => {
   }
 };
 
-export default function CoteacherTable({coteachers, setCoteacherToRemove}) {
+export default function CoteacherTable({
+  coteachers,
+  setCoteacherToRemove,
+  disabled,
+}) {
   const tableRow = (index, coteacher) => {
     return (
       <tr key={index} className={styles.tableRow}>
@@ -94,15 +98,19 @@ export default function CoteacherTable({coteachers, setCoteacherToRemove}) {
         <td className={styles.tableStatusCell}>
           {getStatusPill(coteacher.status)}
         </td>
-        <td>
-          <button
-            type="button"
-            onClick={() => setCoteacherToRemove(coteacher)}
-            className={styles.tableRemoveButton}
-          >
-            <i className={classNames('fa-solid fa-trash', styles.trashIcon)} />
-          </button>
-        </td>
+        {!disabled && (
+          <td>
+            <button
+              type="button"
+              onClick={() => setCoteacherToRemove(coteacher)}
+              className={styles.tableRemoveButton}
+            >
+              <i
+                className={classNames('fa-solid fa-trash', styles.trashIcon)}
+              />
+            </button>
+          </td>
+        )}
       </tr>
     );
   };
@@ -123,4 +131,5 @@ export default function CoteacherTable({coteachers, setCoteacherToRemove}) {
 CoteacherTable.propTypes = {
   coteachers: PropTypes.arrayOf(PropTypes.object).isRequired,
   setCoteacherToRemove: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
 };

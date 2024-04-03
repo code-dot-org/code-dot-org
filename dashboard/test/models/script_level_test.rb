@@ -8,6 +8,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)
     @lesson = create(:lesson)

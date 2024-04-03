@@ -1,6 +1,7 @@
-import React from 'react';
-import Tags, {TagsProps} from './index';
 import {Meta, StoryFn} from '@storybook/react';
+import React from 'react';
+
+import Tags, {TagsProps} from './index';
 
 export default {
   title: 'DesignSystem/Tags', // eslint-disable-line storybook/no-title-property-in-meta

@@ -7,6 +7,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LmsLinks} from '@cdo/apps/util/sharedConstants';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {
+  LtiSection,
+  LtiSectionMap,
   LtiSectionSyncDialogProps,
   LtiSectionSyncResult,
   SubView,
@@ -127,28 +129,19 @@ export default function LtiSectionSyncDialog({
       'https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section';
     const aboutSyncingUrl = LmsLinks.ROSTER_SYNC_INSTRUCTIONS_URL;
     const dialogTitle = i18n.ltiSectionSyncDialogTitle();
-    const dialogDescription =
-      syncResult.changed && Object.keys(syncResult.changed).length > 0
-        ? i18n.ltiSectionSyncDialogDescription({
-            aboutSectionsUrl,
-            aboutSyncingUrl,
-          })
-        : i18n.ltiSectionSyncDialogDescriptionNoChange({aboutSyncingUrl});
-    let sectionListItems;
-    if (syncResult && syncResult.changed) {
-      sectionListItems = Object.entries(syncResult.changed).map(
-        ([section_id, section]) => {
-          const studentCount = i18n.ltiSectionSyncDialogStudentCount({
-            numberOfStudents: section.size,
-          });
-          return (
-            <li key={section_id}>
-              <b>{section.name}</b> &mdash; {studentCount}
-            </li>
-          );
-        }
-      );
+    let dialogDescription, sectionsTable;
+    if (syncResult?.changed && Object.keys(syncResult.changed).length > 0) {
+      dialogDescription = i18n.ltiSectionSyncDialogDescription({
+        aboutSectionsUrl,
+        aboutSyncingUrl,
+      });
+      sectionsTable = SyncSummaryTable(syncResult.changed);
+    } else {
+      dialogDescription = i18n.ltiSectionSyncDialogDescriptionNoChange({
+        aboutSyncingUrl,
+      });
     }
+
     return (
       <div>
         <div>
@@ -158,7 +151,20 @@ export default function LtiSectionSyncDialog({
           <div onClick={handleDocsClick}>
             <SafeMarkdown markdown={dialogDescription} />
           </div>
-          <ul aria-labelledby={'roster-sync-status'}> {sectionListItems} </ul>
+          <div
+            style={styles.summaryContainer}
+            aria-labelledby={'roster-sync-status'}
+          >
+            {syncResult.course_name && (
+              <p style={styles.courseNameText}>
+                <span style={styles.courseNameLabel}>
+                  {i18n.ltiSectionSyncDialogCourseLabel()}:
+                </span>
+                {syncResult.course_name}
+              </p>
+            )}
+            {sectionsTable}
+          </div>
         </div>
         <DialogFooter rightAlign={!disableRosterSyncButtonEnabled}>
           {disableRosterSyncButtonEnabled && (
@@ -191,6 +197,48 @@ export default function LtiSectionSyncDialog({
 
   const hideCloseButton = currentView === SubView.SPINNER;
 
+  const SectionRow = (id: string, section: LtiSection) => {
+    const sectionOwnerName = section.instructors.find(
+      instructor => instructor.isOwner
+    )?.name;
+    return (
+      <tr key={id} role={'gridcell'}>
+        <td style={styles.tableCellText}>{section.short_name}</td>
+        <td style={styles.tableCellText}>{sectionOwnerName}</td>
+        <td style={styles.tableCellNumber}>{section.size}</td>
+        <td style={styles.tableCellNumber}>{section.instructors.length}</td>
+      </tr>
+    );
+  };
+
+  const SyncSummaryTable = (sections: LtiSectionMap) => {
+    return (
+      <table style={styles.summaryTable} role={'grid'}>
+        <thead>
+          <tr>
+            <th style={styles.tableHeaderLeft}>
+              {i18n.ltiSectionSyncDialogHeaderSectionName()}
+            </th>
+            <th style={styles.tableHeaderLeft}>
+              {i18n.ltiSectionSyncDialogHeaderPrimaryInstructor()}
+            </th>
+            <th style={styles.tableHeaderCenter}>
+              {i18n.ltiSectionSyncDialogHeaderStudents()}
+            </th>
+            <th style={styles.tableHeaderCenter}>
+              {i18n.ltiSectionSyncDialogHeaderInstructors()}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {Object.entries(sections).map(([id, section]) =>
+            SectionRow(id, section)
+          )}
+        </tbody>
+      </table>
+    );
+  };
+
   return (
     <BaseDialog
       useUpdatedStyles
@@ -216,6 +264,44 @@ const styles: {[key: string]: CSSProperties} = {
   },
   spinner: {
     fontSize: '32px',
+  },
+  summaryContainer: {
+    marginTop: 30,
+  },
+  summaryTable: {
+    width: '100%',
+  },
+  tableHeaderCenter: {
+    textAlign: 'center',
+    backgroundColor: 'transparent',
+    color: '#0093a4',
+    fontSize: '13px',
+    fontWeight: 500,
+    paddingLeft: 0,
+  },
+  tableHeaderLeft: {
+    textAlign: 'left',
+    backgroundColor: 'transparent',
+    color: '#0093a4',
+    fontSize: '13px',
+    fontWeight: 500,
+    paddingLeft: 0,
+  },
+  tableCellNumber: {
+    textAlign: 'center',
+    fontWeight: 500,
+  },
+  tableCellText: {
+    textAlign: 'left',
+    fontWeight: 500,
+  },
+  courseNameLabel: {
+    fontWeight: 500,
+    color: '#0093a4',
+    marginRight: '10px',
+  },
+  courseNameText: {
+    fontWeight: 500,
   },
 };
 
