@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+
+import {expect} from '../../util/reconfiguredChai';
 
 let dropdownValue;
 let onDropdownChange = value => (dropdownValue = value);
