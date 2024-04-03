@@ -74,6 +74,7 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  readOnly: boolean;
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   getNewCursor: (type: string) => Cursor;
@@ -211,6 +212,7 @@ export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
   getContainer: () => ParentNode | null;
   setEnableToolbox: () => void;
   traceOn: () => void;
+  isReadOnly: () => boolean;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {

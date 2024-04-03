@@ -505,7 +505,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   // Labs like Maze and Artist turn undeletable blocks gray.
   extendedBlockSvg.shouldBeGrayedOut = function () {
-    return blocklyWrapper.grayOutUndeletableBlocks && !this.isDeletable();
+    return (
+      blocklyWrapper.grayOutUndeletableBlocks &&
+      !this.workspace.isReadOnly() &&
+      !this.isDeletable()
+    );
   };
 
   const originalSetDeletable = blocklyWrapper.Block.prototype.setDeletable;
@@ -559,6 +563,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   extendedWorkspaceSvg.getAllUsedBlocks = function () {
     return this.getAllBlocks().filter(block => block.isEnabled());
+  };
+
+  extendedWorkspaceSvg.isReadOnly = function () {
+    return blocklyWrapper.readOnly || this.options.readOnly;
   };
 
   // Used in levels when starting over or resetting Version History
@@ -763,6 +771,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       !!options.grayOutUndeletableBlocks;
     blocklyWrapper.topLevelProcedureAutopopulate =
       !!options.topLevelProcedureAutopopulate;
+    blocklyWrapper.readOnly = !!opt_options.readOnly;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
