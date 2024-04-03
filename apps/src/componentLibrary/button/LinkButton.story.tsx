@@ -1,7 +1,9 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
-import {buttonColors} from './index';
+
 import LinkButton, {LinkButtonProps} from './LinkButton';
+
+import {buttonColors} from './index';
 
 export default {
   title: 'DesignSystem/Button/LinkButton', // eslint-disable-line storybook/no-title-property-in-meta

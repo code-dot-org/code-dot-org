@@ -13,18 +13,47 @@ import sinon from 'sinon';
 const MOCK_ALL_SECTION_MAP: LtiSectionMap = {
   1: {
     name: 'Section 1',
+    short_name: 'Section 1',
     size: 100,
+    instructors: [
+      {
+        name: 'Teacher 1',
+        id: '0',
+        isOwner: true,
+      },
+    ],
   },
   2: {
     name: 'Section 2',
+    short_name: 'Section 2',
     size: 10,
+    instructors: [
+      {
+        name: 'Teacher 1',
+        id: '0',
+        isOwner: true,
+      },
+      {
+        name: 'Teacher 2',
+        id: '1',
+        isOwner: false,
+      },
+    ],
   },
 };
 
 const MOCK_UPDATED_SECTION_MAP: LtiSectionMap = {
   2: {
     name: 'Section 2: Code.org fundamentals',
+    short_name: 'Section 2',
     size: 15,
+    instructors: [
+      {
+        name: 'Teacher 1',
+        id: '0',
+        isOwner: true,
+      },
+    ],
   },
 };
 
@@ -57,12 +86,18 @@ describe('LTI Section Sync Dialog', () => {
 
       screen.getByText(i18n.ltiSectionSyncDialogTitle());
 
-      const list = screen.getByRole('list');
+      const list = screen.getByRole('grid');
       const {getAllByRole} = within(list);
-      const items = getAllByRole('listitem', {exact: false});
+      const items = getAllByRole('gridcell', {exact: false});
       const sectionListItems = items.map(item => item.textContent);
+      const section = MOCK_UPDATED_SECTION_MAP[2];
+      const instName = section.instructors[0].name;
 
-      expect(sectionListItems[0]).to.match(/Section 2(.*)15 students/);
+      expect(sectionListItems[0]).to.match(
+        new RegExp(
+          `${section.short_name}${instName}${section.size}${section.instructors.length}`
+        )
+      );
 
       // no 'disable roster sync'
       expect(

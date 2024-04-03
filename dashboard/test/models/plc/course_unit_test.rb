@@ -26,9 +26,7 @@ class CourseUnitTest < ActionView::TestCase
     course_unit_assertions
   end
 
-  private
-
-  def course_unit_assertions
+  private def course_unit_assertions
     assert @course_unit.started
     assert_equal 1, @course_unit.plc_unit_assignment.size
     assignment = @course_unit.plc_unit_assignment.first

@@ -105,9 +105,7 @@ module Pd::SurveyPipeline
       GenericMapper.new(group_config: [], map_config: map_config).map_to_reducers @groups
     end
 
-    private
-
-    def group_and_summarize(group_config)
+    private def group_and_summarize(group_config)
       GenericMapper.new(group_config: group_config, map_config: []).
         group_data(@data).
         map {|_, v| v.size}

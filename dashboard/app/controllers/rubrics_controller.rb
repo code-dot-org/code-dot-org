@@ -1,5 +1,6 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
+  include SharedConstants
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
   load_resource only: [:get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
@@ -247,6 +248,7 @@ class RubricsController < ApplicationController
     attempted_count = 0
     attempted_unevaluated_count = 0
     last_attempt_evaluated_count = 0
+    pending_count = 0
 
     user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
     user_ids.each do |user_id|
@@ -254,32 +256,31 @@ class RubricsController < ApplicationController
       next unless @user&.student_of?(current_user)
       attempted = attempted_at
       evaluated = ai_evaluated_at # only finished, successful evaluations
+      last_attempt_evaluated = attempted && evaluated && evaluated >= attempted
       rubric_ai_evaluation = RubricAiEvaluation.where(
         rubric_id: @rubric.id,
         user_id: user_id
       ).order(updated_at: :desc).first
 
-      last_eval_time = nil # any evaluation- pending, success, or failure
-      if rubric_ai_evaluation&.status
-        last_eval_time = rubric_ai_evaluation.created_at
-      end
+      status = rubric_ai_evaluation&.status
+      is_pending = status == RUBRIC_AI_EVALUATION_STATUS[:QUEUED] || status == RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
 
-      attempted_unevaluated_count += 1 if !!attempted && (!last_eval_time || (!!last_eval_time && last_eval_time < attempted))
+      attempted_unevaluated_count += 1 if attempted && !last_attempt_evaluated
       attempted_count += 1 if !!attempted
-      last_attempt_evaluated_count += 1 if !!attempted && !!evaluated && evaluated >= attempted
+      last_attempt_evaluated_count += 1 if last_attempt_evaluated
+      pending_count += 1 if is_pending
     end
     render json: {
       notAttemptedCount: user_ids.length - attempted_count,
       attemptedCount: attempted_count,
       attemptedUnevaluatedCount: attempted_unevaluated_count,
       lastAttemptEvaluatedCount: last_attempt_evaluated_count,
+      pendingCount: pending_count,
       csrfToken: form_authenticity_token
     }
   end
 
-  private
-
-  def rubric_params
+  private def rubric_params
     params.transform_keys(&:underscore).permit(
       :level_id,
       :lesson_id,
@@ -303,7 +304,7 @@ class RubricsController < ApplicationController
     )
   end
 
-  def attempted_at
+  private def attempted_at
     script_level = @rubric.get_script_level
     channel_id = get_channel_id(@user, script_level)
     return nil unless channel_id
@@ -313,9 +314,9 @@ class RubricsController < ApplicationController
     source_data[:last_modified]
   end
 
-  def ai_evaluated_at
+  private def ai_evaluated_at
     RubricAiEvaluation.
-      where(rubric_id: @rubric.id, user_id: @user.id, status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]).
+      where(rubric_id: @rubric.id, user_id: @user.id, status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]).
       order(updated_at: :desc).
       first&.
       created_at

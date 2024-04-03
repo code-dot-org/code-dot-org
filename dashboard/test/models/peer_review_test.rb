@@ -523,9 +523,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     refute PeerReview.exists?(level_source_id: new_level_source.id)
   end
 
-  private
-
-  def track_progress(level_source_id, user = @user, script_level = @script_level)
+  private def track_progress(level_source_id, user = @user, script_level = @script_level)
     # this is what creates the peer review objects
     User.track_level_progress(
       user_id: user.id,
@@ -538,7 +536,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     )
   end
 
-  def assert_review_equality(expected, actual)
+  private def assert_review_equality(expected, actual)
     assert_equal expected, actual.attributes.symbolize_keys.slice(:submitter_id, :reviewer_id, :status, :from_instructor, :script_id, :level_id, :level_source_id, :data)
   end
 end

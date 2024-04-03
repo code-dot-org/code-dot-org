@@ -99,9 +99,7 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
     purger.purge_expired_child_accounts!
   end
 
-  private
-
-  def purged?(user)
+  private def purged?(user)
     user.purged_at.present?
   end
 end

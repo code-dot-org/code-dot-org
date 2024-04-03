@@ -2,9 +2,10 @@ import {shallow} from 'enzyme';
 import React from 'react';
 
 import FreeResponseResponses from '@cdo/apps/templates/levelSummary/FreeResponseResponses';
-import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 
 import {expect} from '../../../util/reconfiguredChai';
+
+import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 
 describe('FreeResponseResponses', () => {
   it('renders responses', () => {

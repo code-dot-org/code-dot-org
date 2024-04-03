@@ -57,9 +57,7 @@ class DatablockStorageLibraryManifest < ApplicationRecord
 
   validate :library_manifest
 
-  private
-
-  def validate_library_manifest
+  private def validate_library_manifest
     unless library_manifest.is_a?(Hash)
       errors.add(:library_manifest, "must be a JSON object")
       return
@@ -74,7 +72,7 @@ class DatablockStorageLibraryManifest < ApplicationRecord
     end
   end
 
-  def set_default_library_manifest
+  private def set_default_library_manifest
     self.library_manifest ||= {'categories' => [], 'tables' => []}
   end
 end
