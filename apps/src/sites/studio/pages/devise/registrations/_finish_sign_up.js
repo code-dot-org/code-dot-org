@@ -275,11 +275,15 @@ $(document).ready(() => {
 
   function onSchoolChange(_, event) {
     schoolData.ncesSchoolId = event ? event.value : '';
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_SELECTED_FROM_LIST,
-      {ncesId: schoolData.ncesSchoolId},
-      PLATFORMS.BOTH
-    );
+    // ID is set to -1 and '' respectively as user toggles 'I cannot find my
+    // school above': exlude these from school selection events
+    if (!['-1', ''].includes(schoolData.ncesSchoolId)) {
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_SELECTED_FROM_LIST,
+        {ncesId: schoolData.ncesSchoolId},
+        PLATFORMS.BOTH
+      );
+    }
     renderSchoolInfo();
   }
 
