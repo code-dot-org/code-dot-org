@@ -57,6 +57,7 @@ const CurriculumCatalogCard = ({
   isSignedOut,
   isTeacher,
   getRecommendedSimilarCurriculum,
+  getRecommendedStretchCurriculum,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -105,6 +106,7 @@ const CurriculumCatalogCard = ({
     isSignedOut={isSignedOut}
     isTeacher={isTeacher}
     getRecommendedSimilarCurriculum={getRecommendedSimilarCurriculum}
+    getRecommendedStretchCurriculum={getRecommendedStretchCurriculum}
     {...props}
   />
 );
@@ -146,6 +148,7 @@ CurriculumCatalogCard.propTypes = {
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
   getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
+  getRecommendedStretchCurriculum: PropTypes.func.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
 };
 
@@ -183,6 +186,7 @@ const CustomizableCurriculumCatalogCard = ({
   isInUS,
   availableResources,
   getRecommendedSimilarCurriculum,
+  getRecommendedStretchCurriculum,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -355,6 +359,7 @@ const CustomizableCurriculumCatalogCard = ({
           isSignedOut={isSignedOut}
           isTeacher={isTeacher}
           getRecommendedSimilarCurriculum={getRecommendedSimilarCurriculum}
+          getRecommendedStretchCurriculum={getRecommendedStretchCurriculum}
         />
       )}
     </div>
@@ -401,6 +406,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
   getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
+  getRecommendedStretchCurriculum: PropTypes.func.isRequired,
 };
 
 export default connect(
