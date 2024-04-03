@@ -168,6 +168,30 @@ const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
   localeDoNotImport(cdo.replace(/^@cdo/, `${dir}/p5lab`)),
 ];
 
+const WEBPACK_ALIASES = {
+  '@cdo/locale': path.resolve(__dirname, 'src/util/locale-do-not-import.js'),
+  ...Object.fromEntries([
+    localeDoNotImport('@cdo/aichat/locale'),
+    localeDoNotImport('@cdo/applab/locale'),
+    localeDoNotImport('@cdo/javalab/locale'),
+    localeDoNotImport('@cdo/music/locale'),
+    localeDoNotImport('@cdo/netsim/locale'),
+    localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
+    localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
+    localeDoNotImport('@cdo/standaloneVideo/locale'),
+    localeDoNotImport('@cdo/tutorialExplorer/locale'),
+    localeDoNotImport('@cdo/weblab/locale'),
+    localeDoNotImportP5Lab('@cdo/gamelab/locale'),
+    localeDoNotImportP5Lab('@cdo/poetry/locale'),
+    localeDoNotImportP5Lab('@cdo/spritelab/locale'),
+  ]),
+  '@cdo/apps': p('src'),
+  '@cdo/static': p('static'),
+  repl: p('src/noop'),
+  '@cdo/storybook': p('.storybook'),
+  serialport: false,
+};
+
 // Our base webpack config, from which our other webpack configs are derived,
 // including our main config, the karma config, and the storybook config.
 //
@@ -186,32 +210,7 @@ const WEBPACK_BASE_CONFIG = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: {...nodePolyfillConfig.resolve.fallback},
-    alias: {
-      '@cdo/locale': path.resolve(
-        __dirname,
-        'src/util/locale-do-not-import.js'
-      ),
-      ...Object.fromEntries([
-        localeDoNotImport('@cdo/aichat/locale'),
-        localeDoNotImport('@cdo/applab/locale'),
-        localeDoNotImport('@cdo/javalab/locale'),
-        localeDoNotImport('@cdo/music/locale'),
-        localeDoNotImport('@cdo/netsim/locale'),
-        localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
-        localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
-        localeDoNotImport('@cdo/standaloneVideo/locale'),
-        localeDoNotImport('@cdo/tutorialExplorer/locale'),
-        localeDoNotImport('@cdo/weblab/locale'),
-        localeDoNotImportP5Lab('@cdo/gamelab/locale'),
-        localeDoNotImportP5Lab('@cdo/poetry/locale'),
-        localeDoNotImportP5Lab('@cdo/spritelab/locale'),
-      ]),
-      '@cdo/apps': p('src'),
-      '@cdo/static': p('static'),
-      repl: p('src/noop'),
-      '@cdo/storybook': p('.storybook'),
-      serialport: false,
-    },
+    alias: WEBPACK_ALIASES,
   },
   module: {
     rules: [
@@ -732,4 +731,5 @@ module.exports = {
   localeDoNotImport,
   // Used as the basis for karma and storybook webpack configs:
   WEBPACK_BASE_CONFIG,
+  WEBPACK_ALIASES,
 };
