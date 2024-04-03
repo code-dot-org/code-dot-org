@@ -7,6 +7,8 @@ class UnitTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)
     # Level names match those in 'test.script'
@@ -2447,9 +2449,7 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.finish_url.include?(unit.name)
   end
 
-  private
-
-  def has_unlaunched_unit?(units)
+  private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end
 end

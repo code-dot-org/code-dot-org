@@ -11,15 +11,13 @@ module Services
         "#{issuer}|#{audience}|#{subject}"
       end
 
-      private
-
       attr_reader :id_token
 
-      def issuer
+      private def issuer
         id_token[:iss]
       end
 
-      def audience
+      private def audience
         case id_token[:aud]
         when String
           id_token[:aud]
@@ -44,7 +42,7 @@ module Services
         end
       end
 
-      def subject
+      private def subject
         id_token[:sub]
       end
     end

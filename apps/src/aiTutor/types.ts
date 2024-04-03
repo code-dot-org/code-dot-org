@@ -48,8 +48,9 @@ export type Level = {
   id: number;
   type: string;
   hasValidation: boolean;
-  isAssessment: boolean;
   isProjectBacked: boolean;
+  aiTutorAvailable: boolean;
+  isAssessment: boolean;
 };
 
 export interface ChatContext {

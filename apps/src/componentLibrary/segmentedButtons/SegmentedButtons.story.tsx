@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
-import SegmentedButtons, {SegmentedButtonsProps} from './index';
 import {Meta, StoryFn} from '@storybook/react';
+import React, {useState} from 'react';
+
+import SegmentedButtons, {SegmentedButtonsProps} from './index';
 
 export default {
   title: 'DesignSystem/Segmented Buttons', // eslint-disable-line storybook/no-title-property-in-meta

@@ -28,9 +28,7 @@ class SeedDatasetsFromFirebase < ActiveRecord::Migration[6.1]
     DatablockStorageTable.where(project_id: DatablockStorageTable::SHARED_TABLE_PROJECT_ID).destroy_all
   end
 
-  private
-
-  def firebase_get(path)
+  private def firebase_get(path)
     raise "CDO.firebase_shared_secret not defined" unless CDO.firebase_shared_secret
     firebase = Firebase::Client.new 'https://cdo-v3-shared.firebaseio.com/', CDO.firebase_shared_secret
     response = firebase.get(path)
@@ -38,7 +36,7 @@ class SeedDatasetsFromFirebase < ActiveRecord::Migration[6.1]
     response.body
   end
 
-  def seed_manifest_from_firebase
+  private def seed_manifest_from_firebase
     db = DatablockStorageLibraryManifest.instance
     raise "Library manifest already exists, not re-seeding" unless db.library_manifest['tables']&.length&.< 1
     firebase_manifest = firebase_get('/v3/channels/shared/metadata/manifest')
@@ -46,7 +44,7 @@ class SeedDatasetsFromFirebase < ActiveRecord::Migration[6.1]
     db.update!(library_manifest: firebase_manifest)
   end
 
-  def seed_tables_from_firebase
+  private def seed_tables_from_firebase
     raise "There are already shared_tables / datasets, not re-seeding" unless DatablockStorageTable.get_shared_table_names.empty?
     firebase_tables = firebase_get('/v3/channels/shared/storage/tables')
     # Firebase's JSON format is a little different, in particular in stores
