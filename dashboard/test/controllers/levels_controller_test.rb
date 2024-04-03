@@ -6,6 +6,10 @@ class LevelsControllerTest < ActionController::TestCase
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
+  setup_all do
+    setup_units
+  end
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
