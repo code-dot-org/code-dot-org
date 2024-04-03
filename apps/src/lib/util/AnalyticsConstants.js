@@ -140,7 +140,8 @@ const EVENTS = {
   TA_RUBRIC_CSV_DOWNLOADED: 'TA Rubric CSV Downloaded',
   TA_RUBRIC_INDIVIDUAL_AI_EVAL: 'TA Rubric Individual AI Eval Requested',
   TA_RUBRIC_SECTION_AI_EVAL: 'TA Rubric Section AI Eval Requested',
-  TA_RUBRIC_AI_PAGE_VISITED: 'TA Rubrics AI Level Page Visited',
+  TA_RUBRIC_AI_PAGE_VISITED: 'TA Rubric AI Level Page Visited',
+  TA_RUBRIC_STUDENT_AI_SUBMITTED: 'TA Rubric Student AI Level Submitted',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
