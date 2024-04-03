@@ -20,6 +20,7 @@ const generateActionBlocks = tileCount => {
           color: 'purple',
           url: '#',
           text: 'Primary button',
+          ariaLabel: 'Aria label goes here',
         },
         {
           color: 'black',
