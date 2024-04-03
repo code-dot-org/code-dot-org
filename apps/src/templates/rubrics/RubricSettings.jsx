@@ -10,7 +10,7 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
 import SectionSelector from './SectionSelector';
@@ -232,11 +232,15 @@ export default function RubricSettings({
     const url = `/rubrics/${rubricId}/run_ai_evaluations_for_all`;
     const params = {section_id: sectionId};
     const eventName = EVENTS.TA_RUBRIC_SECTION_AI_EVAL;
-    analyticsReporter.sendEvent(eventName, {
-      ...(reportingData || {}),
-      rubricId: rubricId,
-      sectionId: sectionId,
-    });
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        ...(reportingData || {}),
+        rubricId: rubricId,
+        sectionId: sectionId,
+      },
+      PLATFORMS.BOTH
+    );
     fetch(url, {
       method: 'POST',
       headers: {

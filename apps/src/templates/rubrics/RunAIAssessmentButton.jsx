@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 export const STATUS = {
@@ -136,11 +136,15 @@ export default function RunAIAssessmentButton({
     const url = `/rubrics/${rubricId}/run_ai_evaluations_for_user`;
     const params = {user_id: studentUserId};
     const eventName = EVENTS.TA_RUBRIC_INDIVIDUAL_AI_EVAL;
-    analyticsReporter.sendEvent(eventName, {
-      ...(reportingData || {}),
-      rubricId: rubricId,
-      studentId: studentUserId,
-    });
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        ...(reportingData || {}),
+        rubricId: rubricId,
+        studentId: studentUserId,
+      },
+      PLATFORMS.BOTH
+    );
     fetch(url, {
       method: 'POST',
       headers: {
