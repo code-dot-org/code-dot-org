@@ -2,6 +2,7 @@ import React, {useCallback} from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import {MODEL_CARD_FIELDS_AND_LABELS} from './constants';
 import {isVisible, isDisabled} from './utils';
 import {
@@ -54,13 +55,13 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button
-          type="button"
+        <Button
+          text="Publish"
+          iconLeft={{iconName: 'upload'}}
           disabled={isDisabled(visibility)}
           onClick={onUpdate}
-        >
-          Publish
-        </button>
+          className={styles.updateButton}
+        />
       </div>
     </div>
   );
