@@ -35,11 +35,9 @@ module Services
         errors
       end
 
-      private
-
       attr_reader :nrps_response
 
-      def custom_field_missing?(field)
+      private def custom_field_missing?(field)
         Array.wrap(nrps_response[:members]).any? do |member|
           Array.wrap(member[:message]).any? do |message|
             custom_fields = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]

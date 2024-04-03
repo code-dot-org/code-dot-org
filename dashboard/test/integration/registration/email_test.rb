@@ -55,9 +55,7 @@ module RegistrationsControllerTests
       created_user&.destroy!
     end
 
-    private
-
-    def finish_email_sign_up(user_type)
+    private def finish_email_sign_up(user_type)
       post '/users', params: finish_sign_up_params(user_type: user_type)
     end
   end

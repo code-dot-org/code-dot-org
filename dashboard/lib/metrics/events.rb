@@ -16,21 +16,19 @@ module Metrics
       )
       end
 
-      private
-
       # Logs an event to Statsig
-      def log_event_with_statsig(user:, event_name:, event_value:, metadata:)
+      private def log_event_with_statsig(user:, event_name:, event_value:, metadata:)
         statsig_user = build_statsig_user(user)
         Statsig.log_event(statsig_user, event_name, event_value, metadata)
       end
 
       # Builds a StatsigUser object from a user entity
-      def build_statsig_user(user)
+      private def build_statsig_user(user)
         StatsigUser.new({'userID' => user.id.to_s})
       end
 
       # Logs an event to stdout, useful for development and debugging
-      def log_event_to_stdout(user:, event_name:, event_value:, metadata:)
+      private def log_event_to_stdout(user:, event_name:, event_value:, metadata:)
         event_details = {
           user_id: user.id,
           event_name: event_name,

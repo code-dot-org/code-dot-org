@@ -20,9 +20,7 @@ module MysqlAvoidUtf8AliasInSchemaDump
     end.join(', ')
   end
 
-  private
-
-  def resolve_alias_for_mysql_version(key, alias_value)
+  private def resolve_alias_for_mysql_version(key, alias_value)
     if key == :charset && alias_value == 'utf8'
       return current_mysql_version < 8 ? 'utf8mb3' : 'utf8mb4'
     end
@@ -41,7 +39,7 @@ module MysqlAvoidUtf8AliasInSchemaDump
   # those are the two versions that represent a change in the behavior of the
   # `utf8` alias; older versions than 5.7 do not have support for utf8mb4, and
   # newer versions than 8.0 have deprecated utf8mb3.
-  def current_mysql_version
+  private def current_mysql_version
     @current_mysql_version ||= begin
       raw_version = ActiveRecord::Base.connection.select_value('SELECT VERSION()')
       case raw_version

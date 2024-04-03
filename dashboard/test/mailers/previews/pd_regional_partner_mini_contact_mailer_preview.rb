@@ -24,9 +24,7 @@ class PdRegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
     Pd::RegionalPartnerMiniContactMailer.matched(form, rp_pm)
   end
 
-  private
-
-  def build_form_data(contact_factory, **factory_options)
+  private def build_form_data(contact_factory, **factory_options)
     contact = build contact_factory, factory_options
     contact.sanitized_and_trimmed_form_data_hash
   end

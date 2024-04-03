@@ -18,38 +18,34 @@ module I18n
         end
       end
 
-      protected
-
       attr_reader :options
 
-      def initialize(**options)
+      protected def initialize(**options)
         @options = options.freeze
       end
 
-      def process(_language)
+      protected def process(_language)
         raise NotImplementedError
       end
 
       # List of supported CDO Languages to sync-out
       #
       # @return [Array<CdoLanguage>] supported CDO languages except the source language
-      def languages
+      protected def languages
         @languages ||= I18nScriptUtils.cdo_languages.select do |cdo_language|
           cdo_language[:locale_s] != I18nScriptUtils::SOURCE_LOCALE
         end
       end
 
-      def progress_bar
+      protected def progress_bar
         @progress_bar ||= I18nScriptUtils.create_progress_bar(title: self.class.name, total: languages.size)
       end
 
-      def mutex
+      protected def mutex
         @mutex ||= Thread::Mutex.new
       end
 
-      private
-
-      def perform
+      private def perform
         progress_bar.start
 
         I18nScriptUtils.process_in_threads(languages) do |language|
