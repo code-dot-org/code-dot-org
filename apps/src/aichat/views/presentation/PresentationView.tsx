@@ -32,27 +32,25 @@ const PresentationView: React.FunctionComponent = () => {
 
   return (
     <div className={styles.verticalFlexContainer}>
-      <div>
-        <Heading4 className={moduleStyles.modelCardTitle}>
-          Title of Model Card
-        </Heading4>
-        {MODEL_CARD_FIELDS_AND_LABELS.map(([property, label], index) => {
-          return (
-            <ModelCardRow
-              keyName={property}
-              title={label}
-              titleIcon={modelCardIcons[index]}
-              expandedContent={modelCardInfo[property]}
-            />
-          );
-        })}
-        <ModelCardRow
-          keyName="technicalInfo"
-          title="Technical Info"
-          titleIcon="screwdriver-wrench"
-          expandedContent="Example TEXT - Technical Info"
-        />
-      </div>
+      <Heading4 className={moduleStyles.modelCardTitle}>
+        Title of Model Card
+      </Heading4>
+      {MODEL_CARD_FIELDS_AND_LABELS.map(([property, label], index) => {
+        return (
+          <ModelCardRow
+            keyName={property}
+            title={label}
+            titleIcon={modelCardIcons[index]}
+            expandedContent={modelCardInfo[property]}
+          />
+        );
+      })}
+      <ModelCardRow
+        keyName="technicalInfo"
+        title="Technical Info"
+        titleIcon="screwdriver-wrench"
+        expandedContent="Example TEXT - Technical Info"
+      />
     </div>
   );
 };
