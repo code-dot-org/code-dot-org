@@ -3,8 +3,9 @@
  */
 
 import $ from 'jquery';
-var markup = require('./NetSimAlert.html.ejs');
+
 var ArgumentUtils = require('./ArgumentUtils');
+var markup = require('./NetSimAlert.html.ejs');
 var NetSimLogger = require('./NetSimLogger');
 
 var logger = NetSimLogger.getSingleton();

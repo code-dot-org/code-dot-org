@@ -574,50 +574,52 @@ export default function LearningGoals({
               value={{aiFeedback, setAiFeedback}}
             >
               {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
-              <EvidenceLevels
-                aiEvalInfo={aiEvalInfo}
-                isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
-                learningGoalKey={learningGoals[currentLearningGoal].key}
-                evidenceLevels={
-                  learningGoals[currentLearningGoal].evidenceLevels
-                }
-                canProvideFeedback={canProvideFeedback}
-                understanding={displayUnderstanding}
-                radioButtonCallback={radioButtonCallback}
-                submittedEvaluation={submittedEvaluation}
-                isStudent={isStudent}
-                isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
-              />
-              {teacherHasEnabledAi &&
-                !!studentLevelInfo &&
-                !!aiEvalInfo &&
-                aiEvalInfo.understanding !== undefined && (
-                  <div className={style.aiAssessmentOuterBlock}>
-                    <AiAssessment
-                      isAiAssessed={
-                        learningGoals[currentLearningGoal].aiEnabled
-                      }
-                      studentName={studentLevelInfo.name}
-                      aiConfidence={aiConfidence}
-                      aiUnderstandingLevel={aiEvalInfo.understanding}
-                      aiEvalInfo={aiEvalInfo}
-                      aiEvidence={aiEvidence}
-                    />
-                  </div>
-                )}
-              {learningGoals[currentLearningGoal].tips && !isStudent && (
-                <details>
-                  <summary className={style.tipsDetailsSummary}>
-                    <strong>{i18n.tipsForEvaluation()}</strong>
-                  </summary>
+              <div>
+                <EvidenceLevels
+                  aiEvalInfo={aiEvalInfo}
+                  isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
+                  learningGoalKey={learningGoals[currentLearningGoal].key}
+                  evidenceLevels={
+                    learningGoals[currentLearningGoal].evidenceLevels
+                  }
+                  canProvideFeedback={canProvideFeedback}
+                  understanding={displayUnderstanding}
+                  radioButtonCallback={radioButtonCallback}
+                  submittedEvaluation={submittedEvaluation}
+                  isStudent={isStudent}
+                  isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
+                />
+                {teacherHasEnabledAi &&
+                  !!studentLevelInfo &&
+                  !!aiEvalInfo &&
+                  aiEvalInfo.understanding !== undefined && (
+                    <div className={style.aiAssessmentOuterBlock}>
+                      <AiAssessment
+                        isAiAssessed={
+                          learningGoals[currentLearningGoal].aiEnabled
+                        }
+                        studentName={studentLevelInfo.name}
+                        aiConfidence={aiConfidence}
+                        aiUnderstandingLevel={aiEvalInfo.understanding}
+                        aiEvalInfo={aiEvalInfo}
+                        aiEvidence={aiEvidence}
+                      />
+                    </div>
+                  )}
+                {learningGoals[currentLearningGoal].tips && !isStudent && (
+                  <details>
+                    <summary className={style.tipsDetailsSummary}>
+                      <strong>{i18n.tipsForEvaluation()}</strong>
+                    </summary>
 
-                  <div className={style.learningGoalsTips}>
-                    <SafeMarkdown
-                      markdown={learningGoals[currentLearningGoal].tips}
-                    />
-                  </div>
-                </details>
-              )}
+                    <div className={style.learningGoalsTips}>
+                      <SafeMarkdown
+                        markdown={learningGoals[currentLearningGoal].tips}
+                      />
+                    </div>
+                  </details>
+                )}
+              </div>
               {!!studentLevelInfo && renderAutoSaveTextbox()}
             </AiAssessmentFeedbackContext.Provider>
           </div>

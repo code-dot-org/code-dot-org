@@ -284,7 +284,7 @@ csta_jotform_form_id: !Secret
 ### Service configurations (urls, endpoints, etc)
 
 freegeoip_host:
-geocoder_redis_url:
+geocoder_redis_url: 'redis://localhost:6379/0/geocoder'
 solr_server: localhost
 
 # S3 bucket and (environment-specific) path-prefix configuration
@@ -302,6 +302,9 @@ libraries_s3_bucket:       cdo-v3-libraries
 libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
+
+# Session Store (ElastiCache Redis)
+session_store_server:
 
 # Memcached (ElastiCache)
 memcached_endpoint:

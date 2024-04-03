@@ -563,6 +563,7 @@ roles.each do |name, config| %>
               - arn:aws:s3:::cdo-v3-assets
               - arn:aws:s3:::cdo-v3-animations
               - arn:aws:s3:::cdo-v3-files
+              - arn:aws:s3:::cdo-ai
             Condition:
               StringLike: {
                 "s3:prefix": [
@@ -570,7 +571,8 @@ roles.each do |name, config| %>
                     "sources_development/*",
                     "assets_development/*",
                     "animations_development/*",
-                    "files_development/*"
+                    "files_development/*",
+                    "teaching_assistant/*"
                 ]
               }
           - Sid: AllowNeededS3ActionsInCertainBucketFolders
@@ -599,6 +601,7 @@ roles.each do |name, config| %>
               - arn:aws:s3:::cdo-v3-assets/assets_development/*
               - arn:aws:s3:::cdo-v3-animations/animations_development/*
               - arn:aws:s3:::cdo-v3-files/files_development/*
+              - arn:aws:s3:::cdo-ai/teaching_assistant/*
           - Sid: AllowListingToLibraryBuckets
             Effect: Allow
             Action:
