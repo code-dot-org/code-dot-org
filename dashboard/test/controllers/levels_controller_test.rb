@@ -1296,10 +1296,8 @@ class LevelsControllerTest < ActionController::TestCase
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
 
-  private
-
   # Assert that the url is a real S3 url, and not a placeholder.
-  def assert_s3_image_url(url)
+  private def assert_s3_image_url(url)
     assert(
       %r{#{LevelSourceImage::S3_URL}.*\.png}o.match(url),
       "expected #{url.inspect} to be an S3 URL"
@@ -1310,7 +1308,7 @@ class LevelsControllerTest < ActionController::TestCase
   # generated when solution images are uploaded. We don't want to actually
   # upload any S3 images in our tests, so just enable the codepath where an
   # existing LevelSourceImage is found based on the program contents.
-  def enable_level_source_image_s3_urls
+  private def enable_level_source_image_s3_urls
     # Allow LevelSourceImage to return real S3 urls.
     CDO.stubs(:disable_s3_image_uploads).returns(false)
 
