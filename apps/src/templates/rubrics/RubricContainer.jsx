@@ -158,7 +158,7 @@ export default function RubricContainer({
       element: '#ui-floatingActionButton',
       title: 'Getting Started with AI Teaching Assistant',
       intro:
-        '<p>Launch AI Teaching Assistant from the bottom left corner of the screen in sprite lab.</p><p><b>Click on the AI Teaching Assistant to get started!</b></p>',
+        '<p>Launch AI Teaching Assistant from the bottom left corner of the screen.</p><p><b>Click on the AI Teaching Assistant to get started!</b></p>',
     },
     {
       element: '#tour-ai-assessment',
@@ -179,22 +179,18 @@ export default function RubricContainer({
         "<p>The confidence rating gives you an idea of how often the AI agreed with teachers when scoring this learning goal. Just like humans, AI isn't perfect.</p>",
     },
     {
-      element: '#tour-ai-assessment-feedback',
-      title: 'How did we do?',
-      intro:
-        '<p>Your feedback helps us make the AI Teaching Assistant more helpful to you –  let us know how it did.</p><p><b>Finish up by providing feedback about the AI Assessment.</b></p>',
-    },
-    {
       element: '#tour-evidence-levels',
       title: 'Assigning a Rubric Score',
       intro:
         "<p>Once you have reviewed the AI Assessment and the student's code, assign a rubric score for the learning goal.</p>",
     },
+    {
+      element: '#tour-ai-assessment-feedback',
+      title: 'How did we do?',
+      intro:
+        '<p>Your feedback helps us make the AI Teaching Assistant more helpful to you –  let us know how it did.</p><p><b>Finish up by providing feedback about the AI Assessment.</b></p>',
+    },
   ];
-
-  const onExit = () => {
-    updateTourStatus();
-  };
 
   // Dummy props for product tour
   const rubricDummy = {
@@ -226,17 +222,29 @@ export default function RubricContainer({
   };
 
   const aiEvaluationsDummy = [
-    {id: 1, learning_goal_id: 1, understanding: 2, aiConfidencePassFail: 2},
+    {
+      id: 1,
+      learning_goal_id: 1,
+      understanding: 2,
+      aiConfidencePassFail: 2,
+      evidence: 'Line 1: This is a line of code `var x = 5;`',
+    },
   ];
+
+  const onTourStart = stepIndex => {
+    setTourButtonLabel('Next Tip');
+    let elems = document.getElementsByClassName('introjs-helperLayer');
+    console.log(elems);
+    console.log(elems[0]);
+  };
+
+  const onTourExit = () => {
+    updateTourStatus();
+  };
 
   const onStepChange = (nextStepIndex, nextElement) => {
     if (nextStepIndex === 1) {
       document.getElementById('tour-fab-bg').scrollBy(0, 1000);
-      setTourButtonLabel('See how evidence works');
-    } else if (nextStepIndex === 2) {
-      setTourButtonLabel('Got it!');
-    } else {
-      setTourButtonLabel('Next');
     }
   };
 
@@ -271,16 +279,15 @@ export default function RubricContainer({
             enabled={stepsEnabled}
             initialStep={initialStep}
             steps={steps}
-            onExit={onExit}
+            onExit={onTourExit}
             onChange={onStepChange}
             onBeforeChange={beforeStepChange}
+            onStart={onTourStart}
             options={{
               scrollToElement: false,
               exitOnOverlayClick: false,
               hidePrev: true,
               nextLabel: tourButtonLabel,
-              //tooltipClass: style.productTourToolTip,
-              //buttonClass: style.productTourButtons,
               showBullets: false,
               showStepNumbers: true,
             }}

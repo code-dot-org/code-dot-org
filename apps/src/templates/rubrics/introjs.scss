@@ -34,6 +34,7 @@ tr.introjs-showElement > th {
   z-index: 9999998;
   border-radius: 4px;
   transition: all 0.3s ease-out;
+  box-shadow: #21212180 0 0 0 5000px !important;
 }
 .introjs-helperLayer * {
   box-sizing: content-box;
@@ -67,59 +68,59 @@ tr.introjs-showElement > th {
   padding-bottom: 10px;
 }
 .introjs-arrow {
-  border: 5px solid transparent;
+  border: 10px solid transparent;
   content: '';
   position: absolute;
 }
 .introjs-arrow.top {
-  top: -10px;
+  top: -18px;
   left: 10px;
   border-bottom-color: #fff;
 }
 .introjs-arrow.top-right {
-  top: -10px;
+  top: -18px;
   right: 10px;
   border-bottom-color: #fff;
 }
 .introjs-arrow.top-middle {
-  top: -10px;
+  top: -18px;
   left: 50%;
   margin-left: -5px;
   border-bottom-color: #fff;
 }
 .introjs-arrow.right {
-  right: -10px;
+  right: -18px;
   top: 10px;
   border-left-color: #fff;
 }
 .introjs-arrow.right-bottom {
-  bottom: 10px;
+  bottom: 18px;
   right: -10px;
   border-left-color: #fff;
 }
 .introjs-arrow.bottom {
-  bottom: -10px;
+  bottom: -18px;
   left: 10px;
   border-top-color: #fff;
 }
 .introjs-arrow.bottom-right {
-  bottom: -10px;
+  bottom: -18px;
   right: 10px;
   border-top-color: #fff;
 }
 .introjs-arrow.bottom-middle {
-  bottom: -10px;
+  bottom: -18px;
   left: 50%;
   margin-left: -5px;
   border-top-color: #fff;
 }
 .introjs-arrow.left {
-  left: -10px;
+  left: -18px;
   top: 10px;
   border-right-color: #fff;
 }
 .introjs-arrow.left-bottom {
-  left: -10px;
+  left: -18px;
   bottom: 10px;
   border-right-color: #fff;
 }
@@ -128,17 +129,18 @@ tr.introjs-showElement > th {
   position: absolute;
   visibility: visible;
   background-color: $light_white;
-  min-width: 300px;
-  max-width: 400px;
+  width: 400px;
   border-radius: 5px;
+  border-color: $light_white;
+  border-width: 1px;
   box-shadow: 0 3px 30px $light-black;
   transition: opacity 0.1s ease-out;
 }
 .introjs-tooltiptext {
-  padding: 20px;
+  padding: 0 24px;
   p {
     @include main-font-regular;
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
 .introjs-dontShowAgain {
@@ -167,24 +169,21 @@ tr.introjs-showElement > th {
 .introjs-tooltip-title {
   font-family: $barlowSemiCondensed-semibold;
   color: $light_black;
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: 90%;
   min-height: 1.5em;
   margin: 0;
-  padding: 0;
-  font-weight: 700;
-  line-height: 1.5;
 }
 .introjs-tooltip-header {
   position: relative;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
   min-height: 1.5em;
 }
 .introjs-tooltipbuttons {
   border-top: 1px solid #e0e0e0;
-  padding: 10px;
+  padding: 10px 24px;
   text-align: right;
   white-space: nowrap;
 }
@@ -196,20 +195,20 @@ tr.introjs-showElement > th {
   clear: both;
 }
 .introjs-button {
+  @include main-font-regular;
   box-sizing: content-box;
   position: relative;
   overflow: visible;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px 6px;
   border: 1px solid #bdbdbd;
   text-decoration: none;
-  text-shadow: 1px 1px 0 #fff;
-  font-size: 14px;
+  font-size: 0.75rem;
   color: #424242;
   white-space: nowrap;
   cursor: pointer;
   outline: 0;
   background-color: #f4f4f4;
-  border-radius: 0.2em;
+  border-radius: 4px;
   zoom: 1;
   display: inline;
 }
@@ -261,15 +260,10 @@ tr.introjs-showElement > th {
   text-decoration: none;
 }
 .introjs-prevbutton {
-  @include main-font-regular;
-  text-shadow: none;
-  font-size: 1rem;
   float: left;
   color: $light_secondary_500;
-  border-radius: 4px;
   border-color: $light_secondary_500;
   border-width: 1px;
-  padding: 5px 16px;
   background-color: $light_white;
 
   &:hover,
@@ -279,19 +273,13 @@ tr.introjs-showElement > th {
     color: $light_white;
     background-color: $light_secondary_100;
     text-decoration: none;
-    border: none;
     box-shadow: none;
   }
 }
 .introjs-nextbutton {
-  @include main-font-regular;
-  text-shadow: none;
-  font-size: 1rem;
   float: right;
   color: $light_white;
-  border-radius: 4px;
   border: none;
-  padding: 5px 16px;
   background-color: $light_secondary_500;
 
   &:hover,
