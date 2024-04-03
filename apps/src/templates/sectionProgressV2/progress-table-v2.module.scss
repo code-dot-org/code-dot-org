@@ -201,6 +201,9 @@ $level-cell-width: 52;
     min-width: 47px;
 
     &LessonCell {
+      @include remove-default-button-styles;
+      border-top: 1px solid $neutral_dark40;
+      border-left: 1px solid $neutral_dark40;
       height: 43px;
       line-height: 42px;
       min-width: 49px;

@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -44,11 +43,7 @@ export default function ExpandedProgressColumnHeader({
   return (
     <div className={styles.expandedHeader} key={lesson.id}>
       <div
-        className={classNames(
-          styles.gridBox,
-          styles.expandedHeaderLessonCell,
-          styles.pointerMouse
-        )}
+        className={styles.expandedHeaderLessonCell}
         style={{width: headerWidth + 'px'}}
         onClick={() => removeExpandedLesson(lesson.id)}
         aria-label={headerText}
