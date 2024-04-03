@@ -374,7 +374,7 @@ class UnconnectedMusicView extends React.Component {
 
   clearCode = () => {
     // Clear the pack, unless it came from the level data itself.
-    if (!this.props.levelData?.packId) {
+    if (!this.props.levelProperties?.levelData?.packId) {
       this.props.setPackId(null);
       this.library.setCurrentPackId(null);
     }
@@ -668,7 +668,7 @@ class UnconnectedMusicView extends React.Component {
           player={this.player}
           allowPackSelection={
             this.library?.getHasRestrictedPacks() &&
-            !this.props.levelData?.packId &&
+            !this.props.levelProperties?.levelData?.packId &&
             this.props.isProjectLevel
           }
         />
