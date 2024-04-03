@@ -1,6 +1,6 @@
 @import 'color';
 
-.descriptionContainer {
+.textContainer {
   background-color: $light_gray_50;
   border-radius: 4px;
   padding: 2px 0;
@@ -13,7 +13,7 @@
   flex-direction: column;
 }
 
-#modelComparisonContainer {
+#modelComparisonDialog {
   height: 600px;
   width: 800px;
   max-width: 800px;
@@ -21,7 +21,75 @@
   flex-direction: column;
 }
 
+.modelComparisonContainer {
+  display: flex;
+  position: relative;
+  overflow-y: hidden;
+  flex: 1;
+}
+
 .viewMoreButton {
   width: fit-content;
   float: right;
+}
+
+.rightAlign {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.overflowYHidden {
+  overflow-y: hidden;
+}
+
+.overflowYScroll {
+  overflow-y: scroll;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.xCloseButton {
+  // Clear default button styles
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  box-shadow: none;
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  i {
+    color: $light_gray_300;
+    font-size: 1.1875rem;
+    line-height: 1.4844rem;
+    width: 1.4844rem;
+  }
+
+  &:hover {
+    // Clear default button styles
+    box-shadow: none;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    i {
+      color: $light_gray_500;
+    }
+  }
+
+  &:focus {
+    outline: $brand_primary_default solid 2px;
+    outline-offset: 2px;
+  }
 }
