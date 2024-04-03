@@ -35,9 +35,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
-    "free_play": "true",
+    "free_play": "false",
     "hide_view_data_button": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
@@ -46,7 +46,6 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "parent_level_id": 21671,
-    "display_name": "Space Maze",
     "block_pool": "gamelab",
     "include_shared_functions": "true",
     "name_suffix": "_2023",
@@ -63,30 +62,28 @@
       "upButton",
       "downButton"
     ],
-    "thumbnail_url": "https://images.code.org/f48d657b870f990b3667ff7d9c56e3d2-spaceMaze.jpg",
     "mini_toolbox": "true",
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
     "hint_prompt_attempts_threshold": "1",
-    "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
-    "standalone_app_name": "spritelab",
-    "long_instructions": "##Sprite type: Environment\r\n**When sprites are set to then environment type they block all other sprites.**\r\n\r\n\r\n\r\n1. Use the new `set sprite type to environment` block so the wall sprites block the player \r\n\r\n- Press `Run` and use the arrow keys to move the player. \r\n- Are the wall sprites blocking the player?",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_code": "if (World.frameCount == 1) {\r\n  \r\n   addCriteria(function() {\r\n  return minimumGroupSprites(\"walls\");\r\n   }, \"gameDesignSetSpriteType\"); //Make sure to set the sprite type to player or environment. \r\n  \r\n    addCriteria(function() {\r\n  return (isKeyPressed(\"left\") || isKeyPressed(\"right\") || isKeyPressed(\"up\") || isKeyPressed(\"down\"));\r\n   }, \"didntPressKey\"); //Make sure to press an arrow key after pressing *\"Run\"*. You can click the orange buttons under the play area or press the keys on your keyboard.\r\n  \r\n   addCriteria(function() {\r\n  return groupSpritesTouched(\"walls\");\r\n   }, \"gameDesignTouchEnvironment\"); //Try making your player bump into the environment around it.\r\n  \r\n  \r\n}\r\ncheck();\r\n"
+    "short_instructions": "Use the new `set sprite type to environment` block so the wall sprites block the player.",
+    "standalone_app_name": "game_design",
+    "long_instructions": "##Sprite type: Environment\r\n**When sprites are set to the environment type they block all other sprites.**\r\n\r\n\r\n\r\n1. Use the new `set sprite type to environment` block so the wall sprites block the player. \r\n\r\n- Press `Run` and use the arrow keys to move the player. \r\n- Are the wall sprites blocking the player?",
+    "validation_code": "if (World.frameCount == 1) {\r\n  \r\n   addCriteria(function() {\r\n  return minimumGroupSprites(\"walls\");\r\n   }, \"gameDesignSetSpriteType\"); //Make sure to set the sprite type to player or environment. \r\n  \r\n    addCriteria(function() {\r\n  return (isKeyPressed(\"left\") || isKeyPressed(\"right\") || isKeyPressed(\"up\") || isKeyPressed(\"down\"));\r\n   }, \"didntPressKey\"); //Make sure to press an arrow key after pressing *\"Run\"*. You can click the orange buttons under the play area or press the keys on your keyboard.\r\n  \r\n   addCriteria(function() {\r\n  return groupSpritesTouched(\"walls\");\r\n   }, \"gameDesignTouchEnvironment\"); //Try making your player bump into the environment around it.\r\n  \r\n  \r\n}\r\ncheck();\r\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"With this new block you can set a sprite's type. Environment sprites won't allow other sprites to pass through them.\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"GameDev_setGroup\\\" id=\\\"s0~~e0!}K[fm;ShKs2sG\\\">\\n  <field name=\\\"GROUP\\\">\\\"walls\\\"</field>\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\" id=\\\"x,sMj}}CfvGtzA+U2wfm\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"brick_grey\\\"</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/90c2ddd83c546b295c32b4043d776ffd/game_development_environment_type.mp3\"}]",
+    "encrypted_examples": "j2l1WNLr8aNlquH9ILOAxX/h7JvpL+dEmleifUD0RdHCi1lfrviBjzjtKiZh\n1++wzRFpjE68LPJptUbGI97MDQ==\n",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-21T15:43:20.107+00:00\",\"changed\":[\"cloned from \\\"game_new3_environment_type\\\"\"],\"cloned_from\":\"game_new3_environment_type\"},{\"changed_at\":\"2024-03-22 17:54:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 17:58:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:00:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:05:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-21T15:43:20.107+00:00\",\"changed\":[\"cloned from \\\"game_new3_environment_type\\\"\"],\"cloned_from\":\"game_new3_environment_type\"},{\"changed_at\":\"2024-03-22 17:54:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 17:58:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:00:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:05:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-25 17:20:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-25 22:00:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 14:44:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 16:27:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"standalone_app_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 20:48:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 21:57:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 22:00:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 22:43:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-28 21:25:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="16" y="55">
+        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="16" y="16">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"gradient_08"</field>
@@ -1292,41 +1289,22 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="GameDev_setGroup" id="s0~~e0!}K[fm;ShKs2sG" x="18" y="44">
+        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="53" y="27">
+          <field name="IMG">"gradient_08"</field>
+        </block>
+        <block type="GameDev_setGroup" id="s0~~e0!}K[fm;ShKs2sG" x="29" y="138">
           <field name="GROUP">"walls"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="x,sMj}}CfvGtzA+U2wfm">
-              <field name="ANIMATION">"space_planet_8"</field>
+              <field name="ANIMATION">"brick_grey"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="21" y="149">
-          <field name="IMG">"santa"</field>
-        </block>
-        <block type="gamelab_makeSpritesGridInput" id="%lIt9m#@H2J}unSh8[y!" x="21" y="247">
-          <field name="ANIMATION_NAME">"space_astronaut_dog"</field>
-          <value name="GRID">
-            <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
-              <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
-            </shadow>
-            <block type="gamelab_bitmap" id="%KH@7!,[}z6n_+#p*V{9">
-              <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,1,1],[0,0,0,0,0,1,1,1],[0,0,0,0,1,1,1,1],[1,1,1,1,1,1,1,1]]</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon" id="IM+:ZqBn5NT-ZZL!04b:" x="21" y="341">
-          <field name="ANIMATION_NAME">"space_astronaut_dog"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id=")}o!T7jG3=$uWTqjEy0+">
-              <field name="LOCATION">{"x":81,"y":34}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_toggleBehaviorSimple" id="m~(X1v!3H`(mn![kJdoH" x="21" y="436">
+        <block type="gamelab_toggleBehaviorSimple" id="m~(X1v!3H`(mn![kJdoH" x="21" y="236">
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="$C,HF=WY/5tDhl[.OjK!">
-              <field name="ANIMATION">"space_astronaut_dog"</field>
+              <field name="ANIMATION">"alien_01"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
@@ -1336,11 +1314,30 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteSay" id="tm@:?Ad*dOn;~O3`R?nU" x="55" y="545">
-          <field name="SPEECH">Help! I'm lost!</field>
+        <block type="gamelab_makeSpritesGridInput" id="FWg!@11KScQ13=#Tg/(-" x="24" y="347">
+          <field name="ANIMATION_NAME">"brick_grey"</field>
+          <value name="GRID">
+            <shadow type="gamelab_bitmap" id="gDzDdeF11M!t=xm$w#e(">
+              <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
+            </shadow>
+            <block type="gamelab_bitmap" id="pZ`~SuUQ?f?W$(,@$](q">
+              <field name="GRID">[[0,0,1,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,0,0,1,0,0],[0,0,1,0,0,1,0,0],[0,0,1,0,0,1,0,0],[0,0,1,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0]]</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="IM+:ZqBn5NT-ZZL!04b:" x="24" y="443">
+          <field name="ANIMATION_NAME">"alien_03"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="F?XC]y8q1%kx{{EEm5oq">
+              <field name="LOCATION">{"x":349,"y":363}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay" id="tm@:?Ad*dOn;~O3`R?nU" x="29" y="544">
+          <field name="SPEECH">Come find me!</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="1:JA@~SAIU3Ct+vVv`*q">
-              <field name="ANIMATION">"space_astronaut_axolotl"</field>
+              <field name="ANIMATION">"alien_03"</field>
             </block>
           </value>
         </block>

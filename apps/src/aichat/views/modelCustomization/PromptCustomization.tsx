@@ -1,39 +1,41 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {setAiCustomizationProperty} from '../../redux/aichatRedux';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+import {
+  setAiCustomizationProperty,
+  updateAiCustomization,
+} from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 import {
-  EMPTY_AI_CUSTOMIZATIONS,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
 import {isVisible, isDisabled} from './utils';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const PromptCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-
   const {botName, temperature, systemPrompt} = useAppSelector(
-    state =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+    state => state.aichat.fieldVisibilities
   );
   const aiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
 
   const allFieldsDisabled =
-    isDisabled(botName.visibility) &&
-    isDisabled(temperature.visibility) &&
-    isDisabled(systemPrompt.visibility);
+    isDisabled(botName) && isDisabled(temperature) && isDisabled(systemPrompt);
+
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
 
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        {isVisible(botName.visibility) && (
+        {isVisible(botName) && (
           <div className={styles.inputContainer}>
             <label htmlFor="chatbot-name">
               <StrongText>Chatbot name</StrongText>
@@ -41,7 +43,7 @@ const PromptCustomization: React.FunctionComponent = () => {
             <input
               id="chatbot-name"
               value={aiCustomizations.botName}
-              disabled={isDisabled(botName.visibility)}
+              disabled={isDisabled(botName)}
               onChange={event =>
                 dispatch(
                   setAiCustomizationProperty({
@@ -53,7 +55,7 @@ const PromptCustomization: React.FunctionComponent = () => {
             />
           </div>
         )}
-        {isVisible(temperature.visibility) && (
+        {isVisible(temperature) && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>
               <label htmlFor="temperature">
@@ -67,7 +69,7 @@ const PromptCustomization: React.FunctionComponent = () => {
               max={MAX_TEMPERATURE}
               step={SET_TEMPERATURE_STEP}
               value={aiCustomizations.temperature}
-              disabled={isDisabled(temperature.visibility)}
+              disabled={isDisabled(temperature)}
               onChange={event =>
                 dispatch(
                   setAiCustomizationProperty({
@@ -79,7 +81,7 @@ const PromptCustomization: React.FunctionComponent = () => {
             />
           </div>
         )}
-        {isVisible(systemPrompt.visibility) && (
+        {isVisible(systemPrompt) && (
           <div className={styles.inputContainer}>
             <label htmlFor="system-prompt">
               <StrongText>System prompt</StrongText>
@@ -87,7 +89,7 @@ const PromptCustomization: React.FunctionComponent = () => {
             <textarea
               id="system-prompt"
               value={aiCustomizations.systemPrompt}
-              disabled={isDisabled(systemPrompt.visibility)}
+              disabled={isDisabled(systemPrompt)}
               onChange={event =>
                 dispatch(
                   setAiCustomizationProperty({
@@ -101,9 +103,13 @@ const PromptCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={allFieldsDisabled}>
-          Update
-        </button>
+        <Button
+          text="Update"
+          disabled={allFieldsDisabled}
+          iconLeft={{iconName: 'edit'}}
+          onClick={onUpdate}
+          className={styles.updateButton}
+        />
       </div>
     </div>
   );

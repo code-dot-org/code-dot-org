@@ -1,11 +1,13 @@
-import React from 'react';
-import {UnconnectedCreateStandardsReportDialog as CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import {action} from '@storybook/addon-actions';
-import {createStore, combineReducers} from 'redux';
+import React from 'react';
 import {Provider} from 'react-redux';
-import sectionStandardsProgress from './sectionStandardsProgressRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {createStore, combineReducers} from 'redux';
+
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+
+import {UnconnectedCreateStandardsReportDialog as CreateStandardsReportDialog} from './CreateStandardsReportDialog';
+import sectionStandardsProgress from './sectionStandardsProgressRedux';
 
 export default {
   component: CreateStandardsReportDialog,

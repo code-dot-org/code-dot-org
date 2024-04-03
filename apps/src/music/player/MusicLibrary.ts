@@ -18,10 +18,15 @@ export default class MusicLibrary {
   libraryJson: LibraryJson;
   folders: SoundFolder[];
   private allowedSounds: Sounds | null;
+  private currentPackId: string | null;
+  private hasRestrictedPacks: boolean;
 
   // BPM & Key associated with this library, or undefined if not present.
   private bpm: number | undefined;
   private key: Key | undefined;
+
+  // The available sound types in this library.
+  private availableSoundTypes: {[key: string]: boolean};
 
   constructor(name: string, libraryJson: LibraryJson) {
     this.name = name;
@@ -40,8 +45,42 @@ export default class MusicLibrary {
     }
 
     if (libraryJson.key) {
-      this.key = Key[libraryJson.key.toUpperCase() as keyof typeof Key];
+      this.key = libraryJson.key;
     }
+
+    this.currentPackId = null;
+
+    this.hasRestrictedPacks = libraryJson.packs.some(pack => pack.restricted);
+
+    // Take this opportunity to determine the available sound types in this library.
+    this.availableSoundTypes = {};
+    this.determineAvailableSoundTypes();
+  }
+
+  setCurrentPackId(packId: string) {
+    this.currentPackId = packId;
+  }
+
+  getHasRestrictedPacks(): boolean {
+    return this.hasRestrictedPacks;
+  }
+
+  // Determine the available sound types available in this library.
+  // Only currently-allowed sounds from packs are included.
+  private determineAvailableSoundTypes() {
+    const folders = this.getAllowedSounds(undefined);
+
+    folders.forEach(folder => {
+      folder.sounds.forEach(sound => {
+        this.availableSoundTypes[sound.type] = true;
+      });
+    });
+  }
+
+  // Get the available sound types available in this library.
+  // This is called by SoundsPanel to determine which filters to show.
+  getAvailableSoundTypes() {
+    return this.availableSoundTypes;
   }
 
   getDefaultSound(): string | undefined {
@@ -50,9 +89,16 @@ export default class MusicLibrary {
       return this.libraryJson?.defaultSound;
     }
 
-    // The fallback is the first non-instrument/kit folder's first sound.
-    const firstFolder = this.folders.find(group => !group.type);
-    return `${firstFolder?.id}/${firstFolder?.sounds[0].src}`;
+    // The fallback is the first non-instrument/kit folder's first non-preview sound.
+    // We will skip restricted folders unless it's the currently selected pack.
+    const firstFolder = this.folders.find(
+      group =>
+        !group.type && (!group.restricted || group.id === this.currentPackId)
+    );
+    const firstSound = firstFolder?.sounds.find(
+      sound => sound.type !== 'preview'
+    );
+    return `${firstFolder?.id}/${firstSound?.src}`;
   }
 
   // Given a sound ID (e.g. "pack1/sound1"), return the SoundData.
@@ -129,7 +175,11 @@ export default class MusicLibrary {
 
     // Whether or not we have allowedSounds, we need to filter by type.
     foldersCopy = foldersCopy.filter(
-      (folder: SoundFolder) => folder.type === folderType
+      (folder: SoundFolder) =>
+        folder.type === folderType &&
+        ((!this.currentPackId && folder.restricted) ||
+          (this.currentPackId &&
+            (!folder.restricted || this.currentPackId === folder.id)))
     );
 
     if (this.allowedSounds) {
@@ -164,7 +214,7 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
   return libraryJson;
 };
 
-export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal';
+export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal' | 'preview';
 
 /**
  * A single event in a {@link SampleSequence}
@@ -199,7 +249,6 @@ export interface SoundData {
   note?: number;
   restricted?: boolean;
   sequence?: SampleSequence;
-  preview?: boolean;
   bpm?: number;
   key?: Key;
 }
@@ -213,7 +262,10 @@ export interface SoundFolder {
   type?: SoundFolderType;
   path: string;
   imageSrc: string;
+  restricted?: boolean;
   sounds: SoundData[];
+  bpm?: number;
+  key?: string;
 }
 
 export type LibraryJson = {
@@ -222,7 +274,7 @@ export type LibraryJson = {
   imageSrc: string;
   path: string;
   bpm?: number;
-  key?: string;
+  key?: number;
   defaultSound?: string;
   folders: SoundFolder[];
   instruments: SoundFolder[];

@@ -1,24 +1,28 @@
+import {orderBy, sortBy, random} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import i18n from '@cdo/locale';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {orderBy, sortBy, random} from 'lodash';
-import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape} from './shapes';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
-import {stringifyQueryParams} from '../../utils';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import color from '@cdo/apps/util/color';
 import {
   StudentGradeLevels,
   SectionLoginType,
 } from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {stringifyQueryParams} from '../../utils';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import SectionActionDropdown from './SectionActionDropdown';
+import {sortableSectionShape} from './shapes';
+import {getSectionRows} from './teacherSectionsRedux';
+
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
 /** @enum {number} */

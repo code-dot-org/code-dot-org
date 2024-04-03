@@ -29,14 +29,12 @@ module I18n
             end
           end
 
-          private
-
-          def programming_envs
+          private def programming_envs
             @programming_envs ||= ProgrammingEnvironment.where(name: TRANSLATABLE_PROGRAMMING_ENVS).order(:name)
           end
 
           # TODO: refactor the programming env i18n data serialization
-          def i18n_data_of(programming_env)
+          private def i18n_data_of(programming_env)
             i18n_data = {}
 
             i18n_data[programming_env.name] = {

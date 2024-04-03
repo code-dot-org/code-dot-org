@@ -18,7 +18,7 @@ import sectionProgress, {
   addDataByUnit,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
-import {PROGRESS_ICON_TITLE_PREFIX} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
+import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 import teacherSections, {
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -121,7 +121,6 @@ describe('ExpandedProgressDataColumn', () => {
 
   it('Shows expanded choice level', () => {
     const {lesson, levelWithSublevels} = renderWithSublevels();
-
     const choiceLevelHeader = screen.getByText(
       lesson.relative_position + '.' + levelWithSublevels.bubbleText
     );
@@ -133,7 +132,7 @@ describe('ExpandedProgressDataColumn', () => {
     );
 
     expect(
-      screen.queryAllByLabelText(PROGRESS_ICON_TITLE_PREFIX + 'split')
+      screen.queryAllByLabelText(ITEM_TYPE.CHOICE_LEVEL.title)
     ).to.have.length(STUDENTS.length);
   });
 

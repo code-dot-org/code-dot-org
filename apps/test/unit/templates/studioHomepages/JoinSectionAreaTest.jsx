@@ -1,8 +1,11 @@
-import {expect} from '../../../util/reconfiguredChai';
-import React from 'react';
-import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import {joinedSections, joinedPlSections} from './homepagesTestData';
 import {shallow} from 'enzyme';
+import React from 'react';
+
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+import {joinedSections, joinedPlSections} from './homepagesTestData';
 
 const defaultProps = {
   initialJoinedPlSections: [],

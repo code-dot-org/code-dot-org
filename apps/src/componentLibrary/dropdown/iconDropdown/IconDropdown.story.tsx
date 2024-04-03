@@ -1,8 +1,9 @@
-import React, {useState, useCallback} from 'react';
-import IconDropdown, {IconDropdownProps, IconDropdownOption} from './index';
 import {Meta, StoryFn} from '@storybook/react';
+import React, {useState, useCallback} from 'react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
+
+import IconDropdown, {IconDropdownProps, IconDropdownOption} from './index';
 
 export default {
   title: 'DesignSystem/Dropdown/Icon Dropdown', // eslint-disable-line storybook/no-title-property-in-meta

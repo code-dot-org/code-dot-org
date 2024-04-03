@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "b5e30a50-5108-43e7-982a-02b97bb466bb",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Want to teach CS Discoveries, but not sure where to start? Code.org has released a professional learning module all about CSD's Unit 2: Web Development. This two-hour, self-paced module will teach you what you need to know to teach CSD. Check it out at this link!",
+          "link": "https://studio.code.org/courses/self-paced-pl-csd-unit2-2023",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Unit 2 Self-Paced PL"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -16,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-05 16:17:30 UTC",
+    "serialized_at": "2024-04-02 17:31:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3578,7 +3590,13 @@
       "key": "a69f3ffd-b968-4520-8e2f-eb8ad31f48b3",
       "position": 4,
       "properties": {
-        "description": "**Level 1:** Students may come across some image tags that include a slash at the end, like this: `<img src=\"imgURL.jpg\" alt=\"my image\" />`\n\nThese ending slashes are there to indicate that this tag is self-closing, but they are optional and have no effect on the web page.\n\n**Level 2:** Because of the type of license used, students are not legally required to include attribution, but it is a good habit for them to get into when developing their websites.\n\n**Level 5 - Recommended Search Engines:** Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom."
+        "description": "**Level 1:** Students may come across some image tags that include a slash at the end, like this: `<img src=\"imgURL.jpg\" alt=\"my image\" />`\n\nThese ending slashes are there to indicate that this tag is self-closing, but they are optional and have no effect on the web page.\n\n**Level 2:** Because of the type of license used, students are not legally required to include attribution, but it is a good habit for them to get into when developing their websites.\n\n**Level 5 - Recommended Search Engines:** Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A useful way to have students name images that they find in image repositories online would be to combine  <i>description + image source + Creative Commons license type</i>. \n\nAn example might be:  <b>CatWikimediaCC0.jpg</b>\n\nThis ensures that the students know where they found the image originally, what the search terms might have been, and that they are able to provide attribution to a source if needed."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a69f3ffd-b968-4520-8e2f-eb8ad31f48b3",

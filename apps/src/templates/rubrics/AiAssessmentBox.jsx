@@ -73,26 +73,50 @@ export default function AiAssessmentBox({
             <StrongText>{i18n.aiAssessmentEvidence()}</StrongText>
           </BodyFourText>
           <ul>
-            {aiEvidence.map(
-              (info, i) =>
-                info &&
-                info.firstLine && (
-                  <li key={i}>
-                    {/* Lines [firstLine]-[lastLine]: [message] */}
-                    {info.firstLine === info.lastLine &&
-                      i18n.aiAssessmentEvidenceLine({
-                        lineNumber: info.firstLine,
-                        feedbackForLine: info.message,
-                      })}
-                    {info.firstLine !== info.lastLine &&
-                      i18n.aiAssessmentEvidenceLines({
-                        firstLineNumber: info.firstLine,
-                        lastLineNumber: info.lastLine,
-                        feedbackForLines: info.message,
-                      })}
-                  </li>
+            {
+              /* When the message is the same as the whole observations, this
+               * was evidence that did not have a dedicated message. In this
+               * case, this is where we fall back to just showing a list of
+               * observations instead of the evidence. This won't have line
+               * numbers and is certainly worse but better than nothing. */
+              (
+                aiEvidence
+                  .filter(info => info && info.observations === info.message)
+                  .map(info => info.observations)[0] || ''
+              )
+                .split('. ')
+                .map(
+                  (line, i) =>
+                    line.trim() && (
+                      <li key={i}>
+                        {/* Just the observation as a whole */}
+                        {line.endsWith('.') ? line : line + '.'}
+                      </li>
+                    )
                 )
-            )}
+            }
+            {aiEvidence
+              .filter(info => info && info.observations !== info.message)
+              .map(
+                (info, i) =>
+                  info &&
+                  info.firstLine && (
+                    <li key={i}>
+                      {/* Lines [firstLine]-[lastLine]: [message] */}
+                      {info.firstLine === info.lastLine &&
+                        i18n.aiAssessmentEvidenceLine({
+                          lineNumber: info.firstLine,
+                          feedbackForLine: info.message,
+                        })}
+                      {info.firstLine !== info.lastLine &&
+                        i18n.aiAssessmentEvidenceLines({
+                          firstLineNumber: info.firstLine,
+                          lastLineNumber: info.lastLine,
+                          feedbackForLines: info.message,
+                        })}
+                    </li>
+                  )
+              )}
           </ul>
         </div>
       )}

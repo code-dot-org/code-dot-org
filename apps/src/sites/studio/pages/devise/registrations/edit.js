@@ -15,6 +15,8 @@ import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import color from '@cdo/apps/util/color';
 import LtiRosterSyncSettings from '@cdo/apps/lib/ui/accounts/LtiRosterSyncSettings';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -30,6 +32,7 @@ const {
   dependedUponForLogin,
   dependentStudentsCount,
   personalAccountLinkingEnabled,
+  lmsName,
 } = scriptData;
 
 $(document).ready(() => {
@@ -94,6 +97,7 @@ $(document).ready(() => {
           ) === 'true'
         }
         formId={'lti-sync-settings-form'}
+        lmsName={lmsName}
       />,
       ltiSyncSettingsMountPoint
     );
@@ -155,6 +159,12 @@ $(document).ready(() => {
       deleteAccountMountPoint
     );
   }
+
+  analyticsReporter.sendEvent(
+    EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED,
+    {'user type': userType},
+    PLATFORMS.BOTH
+  );
 
   initializeCreatePersonalAccountControls();
 });

@@ -17,9 +17,7 @@ module I18n
             I18nScriptUtils.write_json_file(I18N_SOURCE_FILE_PATH, spritelab_manifest_builder.get_animation_strings)
           end
 
-          private
-
-          def spritelab_manifest_builder
+          private def spritelab_manifest_builder
             @spritelab_manifest_builder ||= ManifestBuilder.new({spritelab: true, quiet: true})
           end
         end

@@ -10,6 +10,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I click selector ".uitest-taRubricTab" once I see it
   Then I wait to see "#runButton"
   And I press "runButton"
+  And I wait until element ".project_updated_at" contains text "Saved"
   And I wait to see "#submitButton"
   And I press "submitButton"
   And I wait to see "#confirm-button"
@@ -68,7 +69,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
     Then I see no difference for "floating action button icon"
 
     When I click selector "#ui-floatingActionButton"
-    And I wait until element ".uitest-rubric-tab-buttons:contains('Class Management')" is visible
+    And I wait until element ".uitest-rubric-tab-buttons:contains('Class Data')" is visible
     And I wait until element "h5:contains(Code Quality)" is visible
     Then I see no difference for "rubric tab, Code Quality learning goal"
     And element ".uitest-run-ai-assessment" is disabled
@@ -78,7 +79,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
     And I wait until element "h5:contains(Sprites)" is visible
     Then I see no difference for "rubric tab, Sprites learning goal"
 
-    When I click selector "button:contains('Class Management')"
+    When I click selector "button:contains('Class Data')"
     And I wait until element ".uitest-rubric-settings" is visible
     Then I see no difference for "rubric settings tab"
 

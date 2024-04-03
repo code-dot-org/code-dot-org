@@ -1,6 +1,6 @@
-@skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 @no_firefox
+@no_mobile
 Feature: Evaluate student code against rubrics using AI
   # Make sure AI config files in S3 are parseable. Do this in a UI test because
   # we do not allow S3 access in unit tests. Only needs to be run in 1 browser.
@@ -22,6 +22,7 @@ Feature: Evaluate student code against rubrics using AI
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until element "#submitButton" is visible
     And I click selector "#submitButton"
     And I wait until element "#confirm-button" is visible
@@ -70,7 +71,7 @@ Feature: Evaluate student code against rubrics using AI
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
-    And I wait until element "#resetButton" is visible
+    And I wait until element ".project_updated_at" contains text "Saved"
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
@@ -119,7 +120,7 @@ Feature: Evaluate student code against rubrics using AI
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
-    And I wait until element "#resetButton" is visible
+    And I wait until element ".project_updated_at" contains text "Saved"
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
@@ -142,7 +143,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".uitest-run-ai-assessment" is enabled
 
     # Teacher switches to Class Management tab
-    When I click selector "button:contains('Class Management')"
+    When I click selector "button:contains('Class Data')"
     And I wait until element ".uitest-run-ai-assessment-all" is visible
     And element ".uitest-run-ai-assessment-all" is enabled
 
@@ -152,7 +153,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element ".uitest-eval-status-all-text" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in Student Rubric tab
-    When I click selector "button:contains('Student Rubric')"
+    When I click selector "button:contains('Assess a Student')"
     And I wait until element "#uitest-next-goal" is visible
     And I click selector "#uitest-next-goal"
     And I wait until element ".uitest-learning-goal-title" is visible

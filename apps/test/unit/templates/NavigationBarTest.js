@@ -1,12 +1,14 @@
-import React from 'react';
 import {isolateComponent} from 'isolate-react';
-import {expect} from '../../util/reconfiguredChai';
+import React from 'react';
+
 import {
   NavigationBar,
   NavigationCategory,
   NavigationItem,
 } from '@cdo/apps/templates/NavigationBar';
 import color from '@cdo/apps/util/color';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('NavigationItem', () => {
   it('item renders text', () => {

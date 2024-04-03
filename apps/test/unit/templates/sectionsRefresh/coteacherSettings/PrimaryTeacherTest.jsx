@@ -1,8 +1,9 @@
-import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
 
 import PrimaryTeacher from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/PrimaryTeacher';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const testPrimaryTeacher = {
   name: 'Parmesan',

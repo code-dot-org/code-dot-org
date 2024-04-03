@@ -35,16 +35,14 @@ module I18n
         end
       end
 
-      protected
-
       attr_reader :config, :options
 
-      def initialize(**options)
+      protected def initialize(**options)
         @config = self.class.config.freeze
         @options = options.freeze
       end
 
-      def perform
+      protected def perform
         etags_path = CDO.dir('bin/i18n/crowdin/etags', "#{resource_name.underscore}.#{crowdin_project}.json")
         etags = File.file?(etags_path) ? JSON.load_file(etags_path) : {}
 
@@ -85,13 +83,11 @@ module I18n
         I18nScriptUtils.write_json_file(etags_path, etags)
       end
 
-      private
-
-      def resource_name
+      private def resource_name
         @resource_name ||= self.class.name[/^.*::(\w+::\w+)::SyncDown/, 1] || self.class.name
       end
 
-      def crowdin_project
+      private def crowdin_project
         @crowdin_project ||=
           if options[:testing]
             # When testing, use a set of test Crowdin projects that mirrors our regular set of projects.
@@ -101,19 +97,19 @@ module I18n
           end
       end
 
-      def crowdin_client
+      private def crowdin_client
         @crowdin_client ||= I18n::Utils::CrowdinClient.new(project: crowdin_project)
       end
 
       # CDO languages supported by the Crowdin project
-      def cdo_languages
+      private def cdo_languages
         @cdo_languages ||= begin
           available_lang_ids = crowdin_client.get_project['targetLanguages'].map {|lang| lang['id']}
           I18nScriptUtils.cdo_languages.select {|lang| available_lang_ids.include?(lang[:crowdin_code_s])}
         end
       end
 
-      def source_files(crowdin_src)
+      private def source_files(crowdin_src)
         if crowdin_src.nil? || File.extname(crowdin_src).empty?
           crowdin_client.list_source_files(crowdin_src).sort_by {|source_file| source_file['path']}
         else

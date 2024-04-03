@@ -28,7 +28,7 @@ class DeleteAccountsHelper
   #   usual checks on account type, row limits, etc.  For use only when an
   #   engineer needs to purge an account manually after investigating whatever
   #   prevented it from being automatically purged.
-  def initialize(log: STDERR, bypass_safety_constraints: false)
+  def initialize(log: $stderr, bypass_safety_constraints: false)
     @pegasus_db = PEGASUS_DB
 
     @log = log
@@ -470,18 +470,16 @@ class DeleteAccountsHelper
     clean_pegasus_forms_for_email(email)
   end
 
-  private
-
-  def clean_pegasus_forms_for_user(user)
+  private def clean_pegasus_forms_for_user(user)
     @log.puts "Cleaning pegasus forms for user"
     clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
   end
 
-  def clean_pegasus_forms_for_email(email)
+  private def clean_pegasus_forms_for_email(email)
     clean_pegasus_forms(@pegasus_db[:forms].where(email: email))
   end
 
-  def clean_pegasus_forms(forms_recordset)
+  private def clean_pegasus_forms(forms_recordset)
     form_ids = forms_recordset.map {|f| f[:id]}
     @pegasus_db[:form_geos].
       where(form_id: form_ids).

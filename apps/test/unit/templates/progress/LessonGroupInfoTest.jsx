@@ -1,7 +1,9 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
+import React from 'react';
+
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   description: 'This is an awesome Lesson Group.',

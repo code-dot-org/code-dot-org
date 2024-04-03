@@ -4,6 +4,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
 
 export default class FilterGroupHeaderSelection extends React.Component {

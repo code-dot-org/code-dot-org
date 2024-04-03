@@ -477,17 +477,15 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal [], ProjectsList.fetch_updated_library_channels([])
   end
 
-  private
-
-  def user_db_result(result)
+  private def user_db_result(result)
     stub(where: stub(select_hash: result))
   end
 
-  def library_db_result(result)
+  private def library_db_result(result)
     stub(where: stub(where: stub(where: result)))
   end
 
-  def db_result(result)
+  private def db_result(result)
     stub(select: stub(join: stub(join: stub(where: stub(where: stub(exclude: stub(order: stub(limit: result))))))))
   end
 end

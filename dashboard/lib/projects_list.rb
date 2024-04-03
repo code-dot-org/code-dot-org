@@ -283,18 +283,16 @@ module ProjectsList
       return data_for_featured_project_cards
     end
 
-    private
-
     # e.g. '/projects/applab' -> 'applab', or
     # 'https://studio.code.org/projects/weblab' --> 'weblab'
-    def project_type(level)
+    private def project_type(level)
       level&.split('/')&.last
     end
 
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    def get_project_row_data(project, channel_id, student = nil, with_library: false)
+    private def get_project_row_data(project, channel_id, student = nil, with_library: false)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
 
@@ -305,7 +303,8 @@ module ProjectsList
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at]
+        publishedAt: project[:published_at],
+        frozen: project_value['frozen'],
       }
 
       if with_library
@@ -321,7 +320,7 @@ module ProjectsList
     # pull various fields out of the user and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single library or a list of libraries.
-    def get_library_row_data(project, channel_id, section_name, user = nil)
+    private def get_library_row_data(project, channel_id, section_name, user = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       {
         sectionName: section_name,
@@ -333,7 +332,7 @@ module ProjectsList
       }.with_indifferent_access
     end
 
-    def project_and_user_fields
+    private def project_and_user_fields
       [
         :projects__id___id,
         :projects__storage_id___storage_id,
@@ -347,7 +346,7 @@ module ProjectsList
       ]
     end
 
-    def fetch_published_project_types(project_groups, limit:, published_before: nil)
+    private def fetch_published_project_types(project_groups, limit:, published_before: nil)
       users = "dashboard_#{CDO.rack_env}__users".to_sym
 
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
@@ -376,7 +375,7 @@ module ProjectsList
     #  See project_and_user_fields for which fields it contains.
     # @returns [hash, nil] containing fields relevant to the published project or
     #  nil when the user has sharing_disabled = true for App Lab, Game Lab and Sprite Lab.
-    def get_published_project_and_user_data(project_and_user)
+    private def get_published_project_and_user_data(project_and_user)
       return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
       return nil if project_and_user[:abuse_score] > 0
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
