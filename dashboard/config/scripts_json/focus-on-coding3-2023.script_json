@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-03 13:55:10 UTC",
+    "serialized_at": "2024-04-03 17:58:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -20569,7 +20569,7 @@
       "position": 2,
       "learning_goal": "Modularity - Sprites and Sprite Properties",
       "ai_enabled": true,
-      "tips": "(2) **Updated after creation**\n  - Sprites are created with these two lines of code: \n    ```\n    var sprite = createSprite(200, 200); \n    sprite.setAnimation(\"animation_1\");\n    ```\n  - After the above two lines, a sprite property listed below should be updated\n    - `rotation`\n    - `scale`\n    - `tint`\n    - `alpha`\n    - `width`\n    - `height`",
+      "tips": "(3) **Updating in the draw loop**\n- Sprites are created with these two lines of code outside of the draw loop: \n  ```\nvar sprite = createSprite(200, 200); \nsprite.setAnimation(\"animation_1\");\n```\n- After the above two lines, a sprite property, such as the ones listed below, should be continuously updating inside the draw loop\n  - x \n  - y\n  - rotation\n  - scale\n  - tint\n  - alpha\n  - width\n  - height",
       "seeding_key": {
         "learning_goal.key": "670f095a-944a-46ca-bbcb-30197af6de7e",
         "lesson.key": "Mini-Project - Animation",
@@ -20777,7 +20777,7 @@
       "position": 1,
       "learning_goal": "Program Development - Program Sequence",
       "ai_enabled": false,
-      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others\n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.",
+      "tips": "(1) **Sequenced the program well**\nIf the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \nIn the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\nCode inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.\n",
       "seeding_key": {
         "learning_goal.key": "bfbfa0d8-bcf6-4cd7-b908-ced7545b167c",
         "lesson.key": "Mini-Project - Animation",
@@ -21546,7 +21546,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "At least 1 sprite created. No properties updated after creation.",
+      "teacher_description": "At least 1 sprite created. No properties updated inside the draw loop.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -21558,7 +21558,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "At least 1 sprite created with at least one property updated after creation.",
+      "teacher_description": "At least 1 sprite created with at least one property updated inside the draw loop",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -21570,7 +21570,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation (2).",
+      "teacher_description": "At least 2 sprites created, each with at least one property updating in the draw loop (3).",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22302,7 +22302,7 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene.",
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene or the Draw loop is not used to create animation",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -22314,7 +22314,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Your program has significant sequencing errors, resulting in many elements unintentionally hidden or overlapping others.",
+      "teacher_description": "You have several sequencing errors, resulting in many elements unintentionally hidden or overlapping others. Some code is improperly placed in or out of the loop",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -22326,7 +22326,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Your program may contain a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "teacher_description": "You properly separated code in and out of the draw loop, however they have a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -22338,7 +22338,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well(1) and and all elements on the screen appear as intended.",
+      "teacher_description": "You sequenced the program well (1)  and properly separated code in and out of the draw loop (2).",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
