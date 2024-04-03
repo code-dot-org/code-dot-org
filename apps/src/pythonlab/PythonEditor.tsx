@@ -36,7 +36,7 @@ const PythonEditor: React.FunctionComponent = () => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
     // For now, restrict running python code to levelbuilders.
     if (parsedData.permissions.includes('levelbuilder')) {
-      dispatch(appendSystemMessage('Running code...'));
+      dispatch(appendSystemMessage('Running program...'));
       if (source) {
         const code = getFileByName(source.files, 'main.py')?.contents;
         if (code) {
