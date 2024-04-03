@@ -13,7 +13,7 @@ export const ITEM_TYPE = Object.freeze({
   VIEWED: makeObjectType(i18n.viewed(), undefined, undefined),
   NEEDS_FEEDBACK: makeObjectType(i18n.needsFeedback(), undefined, undefined),
   FEEDBACK_GIVEN: makeObjectType(i18n.feedbackGiven(), undefined, undefined),
-  NO_PROGRESS: makeObjectType(i18n.none(), undefined, undefined),
+  NO_PROGRESS: makeObjectType(i18n.noProgress(), undefined, undefined),
   ASSESSMENT_LEVEL: makeObjectType(
     i18n.assessmentLevel(),
     'star',
