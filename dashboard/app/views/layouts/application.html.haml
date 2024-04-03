@@ -67,8 +67,8 @@
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
     - isLtiUser = Policies::Lti.lti?(current_user)
-    - isInUS = request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us')
-    - ageUnderThirteen = current_user&.age.present? && current_user.age < 13
+    - isInUS = request.country.nil? || ['US', 'RD'].include?(request.country.to_s.upcase)
+    - ageUnderThirteen = current_user&.age.present? && current_user.age.to_i < 13
     - if current_user&.student? && (current_user.age.nil? || (current_user.us_state.nil? && (isLtiUser || (isInUS && ageUnderThirteen))))
       = render partial: 'layouts/student_information_interstitial', locals: {isLtiUser: isLtiUser, isInUS: isInUS, ageUnderThirteen: ageUnderThirteen}
 
