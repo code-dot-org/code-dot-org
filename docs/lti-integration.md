@@ -188,8 +188,7 @@ be manually installed.
   - `display_name=$User.username`
 12. OIDC Login Init Url: `https://studio.code.org/lti/v1/login`
 13. Redirect URLs: `https://studio.code.org/lti/v1/authenticate`
-
-![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/96f09b29-3c90-46cd-a60d-2f206abf8ca4)
+![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/c1be38ac-a136-4e47-9bfb-b41f3ece713f)
 
 14. Click toggle to accept Schoology Terms of Use
 15. Click `Save Changes`
