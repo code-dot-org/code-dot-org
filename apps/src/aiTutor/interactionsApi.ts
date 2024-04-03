@@ -3,6 +3,12 @@ import {AITutorInteraction} from './types';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
+// TODO: Pagination options can be added here
+interface FetchAITutorInteractionsOptions {
+  sectionId?: number;
+  userId?: number;
+}
+
 export async function savePromptAndResponse(
   interactionData: AITutorInteraction
 ) {
@@ -18,30 +24,47 @@ export async function savePromptAndResponse(
   } catch (error) {
     MetricsReporter.logError({
       event: MetricEvent.AI_TUTOR_CHAT_SAVE_FAIL,
-      errorMessage: error,
+      errorMessage:
+        (error as Error).message || 'Failed to save AI Tutor interaction',
     });
   }
 }
 
-// Fetch student chat messages to display to teachers.
-export const fetchStudentChatMessages = async (sectionId: number) => {
+// Fetch AI Tutor chat messages based on context: for all students, a specific section, or a specific student
+export const fetchAITutorInteractions = async (
+  options: FetchAITutorInteractionsOptions
+) => {
+  const baseUrl = `/ai_tutor_interactions`;
+  const queryParams = [];
+
+  if (options.sectionId) {
+    queryParams.push(`sectionId=${options.sectionId}`);
+  }
+  if (options.userId) {
+    queryParams.push(`userId=${options.userId}`);
+  }
+
+  const queryString = queryParams.join('&');
+  const url = `${baseUrl}${queryString ? `?${queryString}` : ''}`;
   try {
-    const response = await fetch(
-      `/ai_tutor_interactions?sectionId=${sectionId}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
-      }
-    );
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+    });
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
     const data = await response.json();
     return data;
   } catch (error) {
     MetricsReporter.logError({
       event: MetricEvent.AI_TUTOR_CHAT_FETCH_FAIL,
-      errorMessage: error,
+      errorMessage:
+        (error as Error).message || 'Failed to fetch AI Tutor chat messages',
     });
+    return null;
   }
 };

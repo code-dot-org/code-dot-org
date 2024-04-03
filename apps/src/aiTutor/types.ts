@@ -32,12 +32,25 @@ export type StudentChatRow = {
   createdAt: string;
 };
 
+export type StudentServerData = {
+  id: number;
+  name: string;
+  ai_tutor_access_denied: boolean;
+};
+
+export type StudentAccessData = {
+  id: number;
+  name: string;
+  aiTutorAccessDenied: boolean;
+};
+
 export type Level = {
   id: number;
   type: string;
   hasValidation: boolean;
-  isAssessment: boolean;
   isProjectBacked: boolean;
+  aiTutorAvailable: boolean;
+  isAssessment: boolean;
 };
 
 export interface ChatContext {

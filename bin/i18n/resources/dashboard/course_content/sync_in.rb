@@ -182,6 +182,15 @@ module I18n
                 end
               end
 
+              # Panels
+              if level.is_a? Panels
+                panels = level.panels
+                i18n_strings['panels'] = Hash.new unless panels.empty?
+                panels.each do |panel|
+                  i18n_strings['panels'][panel['key']] = panel['text']
+                end
+              end
+
               level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
               blocks = level_xml.xpath('//blocks').first
               if blocks
@@ -393,6 +402,7 @@ module I18n
               short_instructions
               teacher_markdown
               validations
+              panels
             )
 
             redactable = i18n_strings.select do |key, _|

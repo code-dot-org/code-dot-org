@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import Chips from '@cdo/apps/componentLibrary/chips';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const options = [
   {value: 'chip1', label: 'Chip1'},

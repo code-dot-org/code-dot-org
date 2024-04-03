@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import moduleStyles from './edit-ai-customizations.module.scss';
 import VisibilityDropdown from './VisibilityDropdown';
 import {UpdateContext} from './UpdateContext';
-import CollapsibleSection from './CollapsibleSection';
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 interface FieldSectionProps {
   fieldName: keyof AiCustomizations;

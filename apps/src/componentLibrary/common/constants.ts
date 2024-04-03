@@ -3,6 +3,7 @@
  */
 
 import {VisualAppearance} from '@cdo/apps/componentLibrary/typography/types';
+
 import {ComponentSizeXSToL, DropdownColor} from './types';
 
 /**

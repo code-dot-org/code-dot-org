@@ -1181,7 +1181,7 @@ es-MX:
   game_lab_documentation: Documentación del Laboratorio de juegos
   game_lab_tutorials: Tutoriales del Laboratorio de juegos
   gamelab_name: Laboratorio de juegos
-  gender: Sexo
+  gender: Género
   get_a_certificate_message: Te enviaremos un certificado e información sobre cómo
     hacer para que <a href='/learn/beyond'> aprenda más allá de una hora</a>
   get_a_certificate_message_after: Haz clic en el certificado para descargarlo o imprimirlo.
