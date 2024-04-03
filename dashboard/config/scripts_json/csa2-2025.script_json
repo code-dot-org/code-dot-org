@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-30 17:43:09 UTC",
+    "serialized_at": "2024-04-02 18:21:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7402,28 +7402,6 @@
       ]
     },
     {
-      "chapter": 86,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice: Implementing String Algorithms"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "c87aded0-c376-4a71-8c33-d44ceadf1d96"
-      },
-      "level_keys": [
-        "CSA U6L2-L5_-modular"
-      ]
-    },
-    {
       "chapter": 87,
       "position": 6,
       "activity_section_position": 2,
@@ -8689,18 +8667,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
         "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L5_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "c87aded0-c376-4a71-8c33-d44ceadf1d96"
       }
     },
     {
