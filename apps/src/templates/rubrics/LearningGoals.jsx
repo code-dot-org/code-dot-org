@@ -470,6 +470,7 @@ export default function LearningGoals({
           ...(reportingData || {}),
           learningGoalKey: learningGoals[currentIndex].key,
           learningGoal: learningGoals[currentIndex].learningGoal,
+          studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
         });
       }
     }
