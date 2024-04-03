@@ -3,7 +3,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import * as Table from 'reactabular-table';
 
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 import {
   getStore,
   registerReducers,
@@ -25,6 +24,8 @@ import teacherSections, {
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 import {assert, expect} from '../../../util/reconfiguredChai';
+
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
 const GRADE_COLUMN = COLUMNS.GRADE.toString();
 

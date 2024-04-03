@@ -2449,9 +2449,7 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.finish_url.include?(unit.name)
   end
 
-  private
-
-  def has_unlaunched_unit?(units)
+  private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end
 end

@@ -284,26 +284,24 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     assert_equal expected_keys.map(&:to_s), @controller.filter_params.keys
   end
 
-  private
-
-  def params(additional_params)
+  private def params(additional_params)
     @params.merge!(additional_params)
   end
 
   # Sets up expectation for Pd::Workshop.in_state('Ended') to return the mocked @workshop_query and calls
   # @controller.load_filtered_ended_workshops
-  def load_filtered_ended_workshops
+  private def load_filtered_ended_workshops
     Pd::Workshop.expects(:in_state).with('Ended').returns(@workshop_query)
     @controller.load_filtered_ended_workshops
   end
 
   # Defaults to 1 week ending today by scheduled start date
-  def set_default_date_expectations
+  private def set_default_date_expectations
     expects(:scheduled_start_on_or_before).with(Time.zone.today)
     expects(:scheduled_start_on_or_after).with(Time.zone.today - 1.week)
   end
 
-  def expects(method_name)
+  private def expects(method_name)
     @workshop_query.expects(method_name).returns(@workshop_query)
   end
 end

@@ -62,20 +62,18 @@ module Pd
       redirect(key_params)
     end
 
-    protected
-
-    def response_exists?(key_params)
+    protected def response_exists?(key_params)
       MiscSurvey.response_exists?(
         user_id: key_params[:userId],
         form_id: key_params[:formId]
       )
     end
 
-    def redirect(key_params)
+    protected def redirect(key_params)
       redirect_to action: :thanks
     end
 
-    def key_params
+    protected def key_params
       @key_params ||= params.require(:key).tap do |key_params|
         raise ActiveRecord::RecordNotFound unless key_params[:environment] == Rails.env
       end

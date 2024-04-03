@@ -13,9 +13,7 @@ module I18n
             prepare_marketing_announcements_data
           end
 
-          private
-
-          def prepare_marketing_announcements_data
+          private def prepare_marketing_announcements_data
             banners = I18nScriptUtils.parse_file(ORIGIN_I18N_FILE_PATH)['banners']
 
             banners.each_value do |banner|

@@ -830,34 +830,32 @@ class FilesTest < FilesApiTestBase
     assert successful?
   end
 
-  private
-
-  def delete_all_files(bucket)
+  private def delete_all_files(bucket)
     delete_all_objects(CDO.files_s3_bucket, bucket)
   end
 
-  def copy_all(src_channel_id, dest_channel_id)
+  private def copy_all(src_channel_id, dest_channel_id)
     FileBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
   end
 
-  def post_file(api, uploaded_file)
+  private def post_file(api, uploaded_file)
     body = {files: [uploaded_file]}
     headers = {'CONTENT_TYPE' => 'multipart/form-data'}
     api.post_object '', body, headers
   end
 
-  def post_file_data(api, filename, file_contents, content_type)
+  private def post_file_data(api, filename, file_contents, content_type)
     file = api.create_uploaded_file(filename, file_contents, content_type)
     post_file(api, file)
   end
 
-  def delete_all_file_versions(*filenames)
+  private def delete_all_file_versions(*filenames)
     filenames.each do |filename|
       delete_all_versions(CDO.files_s3_bucket, "files_test/1/1/#{filename}")
     end
   end
 
-  def delete_all_manifest_versions
+  private def delete_all_manifest_versions
     delete_all_file_versions 'manifest.json'
   end
 end

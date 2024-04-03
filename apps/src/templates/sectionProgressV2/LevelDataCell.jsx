@@ -65,7 +65,7 @@ function LevelDataCell({
       !studentLevelProgress ||
       studentLevelProgress.status === LevelStatus.not_tried
     ) {
-      return;
+      return ITEM_TYPE.NO_PROGRESS;
     }
     if (
       studentLevelProgress.status === LevelStatus.perfect ||
@@ -85,6 +85,7 @@ function LevelDataCell({
     ) {
       return ITEM_TYPE.IN_PROGRESS;
     }
+    return ITEM_TYPE.NO_PROGRESS;
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   const feedbackStyle = React.useMemo(() => {
