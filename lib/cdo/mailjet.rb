@@ -1,4 +1,5 @@
 require 'mailjet'
+require 'mailgun-ruby'
 require 'honeybadger/ruby'
 require_relative './shared_constants/mailjet_constants'
 
@@ -7,6 +8,7 @@ module MailJet
 
   API_KEY = CDO.try(:mailjet_api_key).freeze
   SECRET_KEY = CDO.try(:mailjet_secret_key).freeze
+  MAILGUN_API_KEY = CDO.try(:mailgun_api_key).freeze
 
   # We use MailJet when the following are true:
   # - The use_mailjet DCDO is true
@@ -16,7 +18,8 @@ module MailJet
     DCDO.get('use_mailjet', false) &&
       !Rails.env.test? &&
       API_KEY.present? &&
-      SECRET_KEY.present?
+      SECRET_KEY.present? &&
+      MAILGUN_API_KEY.present?
   end
 
   def self.subaccount
@@ -80,6 +83,7 @@ module MailJet
 
   def self.send_template_email(to_email, to_name, email_config)
     return unless enabled?
+    return unless valid_email?(to_email)
 
     Mailjet.configure do |config|
       config.api_key = API_KEY
@@ -107,5 +111,16 @@ module MailJet
         TemplateLanguage: true,
       }]
     )
+  end
+
+  def self.valid_email?(email)
+    return false unless enabled?
+
+    Mailgun.api_key = MAILGUN_API_KEY
+    email_validator = Mailgun::Address.new
+
+    validation_response = email_validator.validate(email)
+    return false if %w(do_not_send undeliverable).include?(validation_response['result'])
+    return true
   end
 end
