@@ -132,7 +132,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   setInfiniteLoopTrap: () => void;
   clearInfiniteLoopTrap: () => void;
   getInfiniteLoopTrap: () => string;
-  loopHighlight: () => void;
+  loopHighlight: (apiName: string, blockId: string) => string;
   getWorkspaceCode: () => string;
   addChangeListener: (
     blockspace: Workspace,

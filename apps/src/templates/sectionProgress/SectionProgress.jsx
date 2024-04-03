@@ -11,7 +11,6 @@ import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTable
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../lib/ui/Headings';
@@ -29,6 +28,7 @@ import {
 import UnitSelector from './UnitSelector';
 
 import styleConstants from './progressTables/progress-table-constants.module.scss';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
 
