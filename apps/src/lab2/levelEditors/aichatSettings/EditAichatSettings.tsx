@@ -197,7 +197,7 @@ const EditAichatSettings: React.FunctionComponent<{
               </label>
               <Checkbox
                 name="hidePresentationPanel"
-                checked={aichatSettings.hidePresentationPanel || false}
+                checked={aichatSettings.hidePresentationPanel}
                 onChange={e => {
                   setAichatSettings({
                     ...aichatSettings,

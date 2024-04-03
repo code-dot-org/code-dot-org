@@ -75,5 +75,5 @@ export interface LevelAichatSettings {
   initialCustomizations: AiCustomizations;
   visibilities: {[key in keyof AiCustomizations]: Visibility};
   /** If the presentation panel is hidden from the student. */
-  hidePresentationPanel?: boolean;
+  hidePresentationPanel: boolean;
 }
