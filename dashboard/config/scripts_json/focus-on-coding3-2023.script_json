@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-01 17:04:29 UTC",
+    "serialized_at": "2024-04-03 13:01:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -20351,6 +20351,14 @@
   ],
   "rubrics": [
     {
+      "level_name": "CSD web project animated review_2023",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
       "level_name": "CSD U3 Sprites scene challenge_2023",
       "seeding_key": {
         "lesson.key": "Mini-Project - Captioned Scenes",
@@ -20436,6 +20444,19 @@
         "learning_goal.key": "14ad9d5a-819b-45c6-9d3c-d66c8554806b",
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "key": "2b305644-8c1a-43b4-9ada-63046fb0d69c",
+      "position": 4,
+      "learning_goal": "Creating a Digital Artifact",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "2b305644-8c1a-43b4-9ada-63046fb0d69c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "focus-on-coding3-2023"
       }
     },
@@ -20540,6 +20561,19 @@
         "learning_goal.key": "5be8537e-c918-45c7-b8e7-3ade5ba52f94",
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "key": "670f095a-944a-46ca-bbcb-30197af6de7e",
+      "position": 2,
+      "learning_goal": "Modularity - Sprites and Sprite Properties",
+      "ai_enabled": false,
+      "tips": "(2) **Updated after creation**\n  - Sprites are created with these two lines of code: \n    ```\n    var sprite = createSprite(200, 200); \n    sprite.setAnimation(\"animation_1\");\n    ```\n  - After the above two lines, a sprite property listed below should be updated\n    - `rotation`\n    - `scale`\n    - `tint`\n    - `alpha`\n    - `width`\n    - `height`",
+      "seeding_key": {
+        "learning_goal.key": "670f095a-944a-46ca-bbcb-30197af6de7e",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "focus-on-coding3-2023"
       }
     },
@@ -20739,6 +20773,19 @@
       }
     },
     {
+      "key": "bfbfa0d8-bcf6-4cd7-b908-ced7545b167c",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others\n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.",
+      "seeding_key": {
+        "learning_goal.key": "bfbfa0d8-bcf6-4cd7-b908-ced7545b167c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
       "key": "c4b03fc3-90d6-4e2b-87b2-3f0b6e588486",
       "position": 3,
       "learning_goal": "Variables / Storing Information",
@@ -20812,6 +20859,19 @@
       "seeding_key": {
         "learning_goal.key": "dfb47c81-f653-43e8-b8d8-16702104ce4f",
         "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "key": "e9493bb2-69a6-4486-b64b-9cdf8b5cc7bb",
+      "position": 3,
+      "learning_goal": "Position - Elements and the Coordinate System",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e9493bb2-69a6-4486-b64b-9cdf8b5cc7bb",
+        "lesson.key": "Mini-Project - Animation",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "focus-on-coding3-2023"
       }
@@ -21037,6 +21097,54 @@
         "learning_goal.key": "14ad9d5a-819b-45c6-9d3c-d66c8554806b",
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project guide is not filled out or is unrelated to the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "2b305644-8c1a-43b4-9ada-63046fb0d69c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Some elements are used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "2b305644-8c1a-43b4-9ada-63046fb0d69c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Elements are generally used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "2b305644-8c1a-43b4-9ada-63046fb0d69c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Elements are used as described in the project guide and clearly display a captioned scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "2b305644-8c1a-43b4-9ada-63046fb0d69c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "focus-on-coding3-2023"
       }
     },
@@ -21421,6 +21529,54 @@
         "learning_goal.key": "5be8537e-c918-45c7-b8e7-3ade5ba52f94",
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "670f095a-944a-46ca-bbcb-30197af6de7e",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 sprite created. No properties updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "670f095a-944a-46ca-bbcb-30197af6de7e",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 sprite created with at least one property updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "670f095a-944a-46ca-bbcb-30197af6de7e",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation (2).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "670f095a-944a-46ca-bbcb-30197af6de7e",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "focus-on-coding3-2023"
       }
     },
@@ -22146,6 +22302,54 @@
     },
     {
       "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "bfbfa0d8-bcf6-4cd7-b908-ced7545b167c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program has significant sequencing errors, resulting in many elements unintentionally hidden or overlapping others.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "bfbfa0d8-bcf6-4cd7-b908-ced7545b167c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program may contain a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "bfbfa0d8-bcf6-4cd7-b908-ced7545b167c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well(1) and and all elements on the screen appear as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "bfbfa0d8-bcf6-4cd7-b908-ced7545b167c",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 0,
       "teacher_description": "No variables or randomNumbers are used in the program.",
       "ai_prompt": "",
       "seeding_key": {
@@ -22428,6 +22632,54 @@
         "understanding": 3,
         "learning_goal.key": "dfb47c81-f653-43e8-b8d8-16702104ce4f",
         "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No elements (shapes, sprites, or text) are placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e9493bb2-69a6-4486-b64b-9cdf8b5cc7bb",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A cumulative of at least a total of 3 elements are placed on the screen using the coordinate system (e.g 2 sprites & 1 line of text or 1 sprite, 1 shape, & 1 line of text)",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e9493bb2-69a6-4486-b64b-9cdf8b5cc7bb",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 shape, 2 sprites, and 1 line of text are placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e9493bb2-69a6-4486-b64b-9cdf8b5cc7bb",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "focus-on-coding3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e9493bb2-69a6-4486-b64b-9cdf8b5cc7bb",
+        "lesson.key": "Mini-Project - Animation",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "focus-on-coding3-2023"
       }
