@@ -24,8 +24,12 @@ describe('EditorAnnotator', () => {
     aceSessionStub = jest.fn();
     aceSessionDocumentStub = jest.fn();
     aceSessionDocumentStub.getLength = jest.fn().mockReturnValue(24);
-    aceSessionStub.getDocument = jest.fn().mockReturnValue(aceSessionDocumentStub);
-    dropletStub.aceEditor.getSession = jest.fn().mockReturnValue(aceSessionStub);
+    aceSessionStub.getDocument = jest
+      .fn()
+      .mockReturnValue(aceSessionDocumentStub);
+    dropletStub.aceEditor.getSession = jest
+      .fn()
+      .mockReturnValue(aceSessionStub);
 
     dropletSessionStub = jest.fn();
     dropletStub.session = dropletSessionStub;
@@ -43,7 +47,10 @@ describe('EditorAnnotator', () => {
     stubStudioApp();
 
     // And do not allow patching
-    patchStub = jest.spyOn(DropletAnnotator.prototype, 'patch').mockClear().mockReturnValue(true);
+    patchStub = jest
+      .spyOn(DropletAnnotator.prototype, 'patch')
+      .mockClear()
+      .mockReturnValue(true);
 
     // Stub out the app reference to the editor
     stubDroplet();
@@ -59,8 +66,14 @@ describe('EditorAnnotator', () => {
     let annotationListStub, annotationListAttachStub;
 
     beforeEach(() => {
-      annotationListStub = jest.spyOn(annotationList, 'addRuntimeAnnotation').mockClear().mockImplementation();
-      annotationListAttachStub = jest.spyOn(annotationList, 'attachToSession').mockClear().mockImplementation();
+      annotationListStub = jest
+        .spyOn(annotationList, 'addRuntimeAnnotation')
+        .mockClear()
+        .mockImplementation();
+      annotationListAttachStub = jest
+        .spyOn(annotationList, 'attachToSession')
+        .mockClear()
+        .mockImplementation();
     });
     afterEach(() => {
       annotationListAttachStub.mockRestore();
@@ -172,8 +185,14 @@ describe('EditorAnnotator', () => {
   describe('clearAnnotations', () => {
     let annotationListFilterStub, annotationListAttachStub;
     beforeEach(() => {
-      annotationListFilterStub = jest.spyOn(annotationList, 'filterOutRuntimeAnnotations').mockClear().mockImplementation();
-      annotationListAttachStub = jest.spyOn(annotationList, 'attachToSession').mockClear().mockImplementation();
+      annotationListFilterStub = jest
+        .spyOn(annotationList, 'filterOutRuntimeAnnotations')
+        .mockClear()
+        .mockImplementation();
+      annotationListAttachStub = jest
+        .spyOn(annotationList, 'attachToSession')
+        .mockClear()
+        .mockImplementation();
     });
     afterEach(() => {
       annotationListAttachStub.mockRestore();
@@ -319,11 +338,22 @@ describe('EditorAnnotator', () => {
       };
 
       // Stub out getBlocksOnLine
-      getBlocksOnLineStub = jest.spyOn(EditorAnnotator, 'getBlocksForLine').mockClear()
+      getBlocksOnLineStub = jest
+        .spyOn(EditorAnnotator, 'getBlocksForLine')
+        .mockClear()
         .mockReturnValue(blocks);
-      dimBlocksStub = jest.spyOn(EditorAnnotator, 'dimBlocks').mockClear().mockReturnValue();
-      undimBlockStub = jest.spyOn(EditorAnnotator, 'undimBlock').mockClear().mockReturnValue();
-      undimBlocksStub = jest.spyOn(EditorAnnotator, 'undimBlocks').mockClear().mockReturnValue();
+      dimBlocksStub = jest
+        .spyOn(EditorAnnotator, 'dimBlocks')
+        .mockClear()
+        .mockReturnValue();
+      undimBlockStub = jest
+        .spyOn(EditorAnnotator, 'undimBlock')
+        .mockClear()
+        .mockReturnValue();
+      undimBlocksStub = jest
+        .spyOn(EditorAnnotator, 'undimBlocks')
+        .mockClear()
+        .mockReturnValue();
     });
     afterEach(() => {
       getBlocksOnLineStub.mockRestore();
@@ -336,9 +366,13 @@ describe('EditorAnnotator', () => {
       EditorAnnotator.highlightLine(4);
       // It should create just one range with the (0-based) line index we
       // passed it. The 42 is the length of the line which is stubbed out.
-      sinon.assert.calledOnceWithExactly(rangeStub, 3, 0, 3, 42);
-      sinon.assert.calledWithNew(rangeStub);
-      expect(aceSessionStub.addMarker).toHaveBeenCalledWith(expect.anything()(rangeStub), expect.anything(), 'text');
+      expect(rangeStub).toHaveBeenCalledWith(3, 0, 3, 42);
+
+      expect(aceSessionStub.addMarker).toHaveBeenCalledWith(
+        expect.anything()(rangeStub),
+        expect.anything(),
+        'text'
+      );
 
       // Hopefully this function clears the state
       EditorAnnotator.clearHighlightedLines();
@@ -385,7 +419,11 @@ describe('EditorAnnotator', () => {
 
       // It should create just one range with the (0-based) line index we
       // passed it. The 42 is the length of the line which is stubbed out.
-      expect(aceSessionStub.addMarker).toHaveBeenCalledWith(expect.anything()(rangeStub), expect.anything(), 'text');
+      expect(aceSessionStub.addMarker).toHaveBeenCalledWith(
+        expect.anything()(rangeStub),
+        expect.anything(),
+        'text'
+      );
 
       // Detect that the <head> contains some styling including our color
       expect(document.head.innerHTML.includes('#042')).to.be.true;
@@ -418,11 +456,22 @@ describe('EditorAnnotator', () => {
         }),
       };
 
-      getBlocksOnLineStub = jest.spyOn(EditorAnnotator, 'getBlocksForLine').mockClear()
+      getBlocksOnLineStub = jest
+        .spyOn(EditorAnnotator, 'getBlocksForLine')
+        .mockClear()
         .mockReturnValue([jest.fn()]);
-      dimBlocksStub = jest.spyOn(EditorAnnotator, 'dimBlocks').mockClear().mockReturnValue();
-      undimBlockStub = jest.spyOn(EditorAnnotator, 'undimBlock').mockClear().mockReturnValue();
-      undimBlocksStub = jest.spyOn(EditorAnnotator, 'undimBlocks').mockClear().mockReturnValue();
+      dimBlocksStub = jest
+        .spyOn(EditorAnnotator, 'dimBlocks')
+        .mockClear()
+        .mockReturnValue();
+      undimBlockStub = jest
+        .spyOn(EditorAnnotator, 'undimBlock')
+        .mockClear()
+        .mockReturnValue();
+      undimBlocksStub = jest
+        .spyOn(EditorAnnotator, 'undimBlocks')
+        .mockClear()
+        .mockReturnValue();
     });
     afterEach(() => {
       getBlocksOnLineStub.mockRestore();

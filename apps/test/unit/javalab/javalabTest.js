@@ -52,7 +52,10 @@ describe('Javalab', () => {
     });
 
     it('triggers an autosave if there are unsaved changes', () => {
-      jest.spyOn(project, 'hasOwnerChangedProject').mockClear().mockReturnValue(true);
+      jest
+        .spyOn(project, 'hasOwnerChangedProject')
+        .mockClear()
+        .mockReturnValue(true);
 
       javalab.beforeUnload(eventStub);
 

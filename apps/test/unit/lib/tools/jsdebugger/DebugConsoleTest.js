@@ -41,7 +41,9 @@ describe('The DebugConsole component when the console is enabled', () => {
       </Provider>
     );
     const debugConsoleInstance = root.find('DebugConsole').instance();
-    jumpToBottomSpy = jest.spyOn(debugConsoleInstance, 'jumpToBottom').mockClear();
+    jumpToBottomSpy = jest
+      .spyOn(debugConsoleInstance, 'jumpToBottom')
+      .mockClear();
   });
 
   afterEach(() => {
@@ -307,7 +309,10 @@ describe('The DebugConsole component when the console is enabled', () => {
       selection = '';
       inputEl = debugInput().instance();
       jest.spyOn(inputEl, 'focus').mockClear();
-      jest.spyOn(window, 'getSelection').mockClear().mockImplementation(() => selection);
+      jest
+        .spyOn(window, 'getSelection')
+        .mockClear()
+        .mockImplementation(() => selection);
     });
 
     afterEach(() => {

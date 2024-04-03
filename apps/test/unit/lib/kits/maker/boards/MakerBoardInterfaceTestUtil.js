@@ -1,5 +1,5 @@
 /** @file Exports a set of tests that verify the MakerBoard interface */
-import { EventEmitter } from 'events';
+import {EventEmitter} from 'events';
 import {expect} from '../../../../../util/reconfiguredChai';
 
 /**

@@ -3,6 +3,7 @@ import {mount, shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedResourcesEditor as ResourcesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import resourceTestData from './resourceTestData';
+import sinon from 'sinon';
 
 describe('ResourcesEditor', () => {
   const defaultResourceContext = 'testResource';

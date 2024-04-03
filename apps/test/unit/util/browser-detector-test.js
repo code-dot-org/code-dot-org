@@ -10,8 +10,14 @@ describe('Browser Detector', () => {
   let appVersionStub;
 
   beforeEach(() => {
-    userAgentStub = jest.spyOn(navigator, 'userAgent').mockClear().mockImplementation();
-    appVersionStub = jest.spyOn(navigator, 'appVersion').mockClear().mockImplementation();
+    userAgentStub = jest
+      .spyOn(navigator, 'userAgent')
+      .mockClear()
+      .mockImplementation();
+    appVersionStub = jest
+      .spyOn(navigator, 'appVersion')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {

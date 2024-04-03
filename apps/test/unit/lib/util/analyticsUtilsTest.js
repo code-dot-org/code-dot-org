@@ -9,7 +9,10 @@ describe('AnalyticsUtils', () => {
       readonlyWorkspace: true,
       submitted: false,
     };
-    const queryParamsSpy = jest.spyOn(utils, 'queryParams').mockClear().mockImplementation();
+    const queryParamsSpy = jest
+      .spyOn(utils, 'queryParams')
+      .mockClear()
+      .mockImplementation();
     queryParamsSpy.mockImplementation((...args) => {
       if (args[0] === 'user_id') {
         return '123';

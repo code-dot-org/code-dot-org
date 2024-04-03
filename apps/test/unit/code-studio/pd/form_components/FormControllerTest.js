@@ -3,6 +3,7 @@ import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponen
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
+import sinon from 'sinon';
 
 class DummyPage1 extends FormComponent {
   static associatedFields = [];
@@ -108,7 +109,10 @@ describe('FormController', () => {
     describe('Page validation', () => {
       let validateCurrentPageRequiredFields;
       beforeEach(() => {
-        validateCurrentPageRequiredFields = jest.spyOn(DummyForm.prototype, 'validateCurrentPageRequiredFields').mockClear().mockImplementation();
+        validateCurrentPageRequiredFields = jest
+          .spyOn(DummyForm.prototype, 'validateCurrentPageRequiredFields')
+          .mockClear()
+          .mockImplementation();
       });
       afterEach(() => {
         validateCurrentPageRequiredFields.mockRestore();
@@ -194,7 +198,10 @@ describe('FormController', () => {
             {'Content-Type': 'application/json'},
             JSON.stringify({}),
           ]);
-          const onSuccessfulSubmit = jest.spyOn(DummyForm.prototype, 'onSuccessfulSubmit').mockClear().mockImplementation();
+          const onSuccessfulSubmit = jest
+            .spyOn(DummyForm.prototype, 'onSuccessfulSubmit')
+            .mockClear()
+            .mockImplementation();
 
           submitButton().simulate('submit');
           server.respond();
@@ -214,13 +221,18 @@ describe('FormController', () => {
       let render;
       before(() => {
         // Skip rendering
-        render = jest.spyOn(DummyForm.prototype, 'render').mockClear().mockImplementation();
+        render = jest
+          .spyOn(DummyForm.prototype, 'render')
+          .mockClear()
+          .mockImplementation();
         render.mockReturnValue(null);
       });
 
       let getRequiredFields;
       const stubRequiedFields = requriredFields => {
-        getRequiredFields = jest.spyOn(DummyForm.prototype, 'getRequiredFields').mockClear();
+        getRequiredFields = jest
+          .spyOn(DummyForm.prototype, 'getRequiredFields')
+          .mockClear();
         getRequiredFields.mockReturnValue(requriredFields);
       };
 
@@ -271,7 +283,10 @@ describe('FormController', () => {
           page1Field3: 'will be modified',
         };
 
-        const processPageData = jest.spyOn(DummyPage1, 'processPageData').mockClear().mockImplementation();
+        const processPageData = jest
+          .spyOn(DummyPage1, 'processPageData')
+          .mockClear()
+          .mockImplementation();
         processPageData.mockImplementation((...args) => {
           if (args[0] === pageData) {
             return {

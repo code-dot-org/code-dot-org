@@ -9,7 +9,10 @@ import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 describe('Authored Hints', () => {
   // stub (and restore) redux and a utils method
   beforeEach(() => {
-    jest.spyOn(utils, 'showGenericQtip').mockClear().mockImplementation(() => {});
+    jest
+      .spyOn(utils, 'showGenericQtip')
+      .mockClear()
+      .mockImplementation(() => {});
     stubRedux();
     registerReducers({authoredHints: authoredHintsReducer});
   });

@@ -17,7 +17,9 @@ describe('AnnouncementsEditor', () => {
   let defaultProps, updateAnnouncements, createUuid;
   beforeEach(() => {
     updateAnnouncements = jest.fn();
-    createUuid = jest.spyOn(utils, 'createUuid').mockClear()
+    createUuid = jest
+      .spyOn(utils, 'createUuid')
+      .mockClear()
       .mockReturnValue('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa');
     defaultProps = {
       announcements: [],

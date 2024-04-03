@@ -14,7 +14,9 @@ describe('ExternalLed', function () {
         pin: 0,
         isOn: false,
       });
-      setDigitalOutputSpy = jest.spyOn(boardClient, 'setDigitalOutput').mockClear();
+      setDigitalOutputSpy = jest
+        .spyOn(boardClient, 'setDigitalOutput')
+        .mockClear();
     });
 
     after(() => {
@@ -45,7 +47,9 @@ describe('ExternalLed', function () {
         pin: 0,
         isOn: false,
       });
-      setDigitalOutputSpy = jest.spyOn(boardClient, 'setDigitalOutput').mockClear();
+      setDigitalOutputSpy = jest
+        .spyOn(boardClient, 'setDigitalOutput')
+        .mockClear();
       onSpy = jest.spyOn(led, 'on').mockClear();
       offSpy = jest.spyOn(led, 'off').mockClear();
     });
@@ -71,6 +75,7 @@ describe('ExternalLed', function () {
   });
 
   describe('blink()', () => {
+    let led;
     let boardClient = new MBFirmataClientStub();
 
     before(() => {

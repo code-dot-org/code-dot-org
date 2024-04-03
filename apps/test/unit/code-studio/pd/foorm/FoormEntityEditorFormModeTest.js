@@ -17,6 +17,7 @@ import foorm, {
   setFormData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+import sinon from 'sinon';
 
 global.$ = require('jquery');
 

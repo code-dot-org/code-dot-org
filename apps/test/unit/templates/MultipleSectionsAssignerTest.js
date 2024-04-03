@@ -200,8 +200,8 @@ describe('MultipleSectionsAssigner', () => {
   });
 
   it('unassigns a unit but keeps the course assignment on the UNIT landing page of a non-standalone course when checkbox is unchecked', () => {
-    let assignToSection = sinon.fake();
-    let reassignConfirm = sinon.fake();
+    let assignToSection = jest.fn();
+    let reassignConfirm = jest.fn();
 
     const wrapper = setUp({
       isAssigningCourse: false,
@@ -241,9 +241,9 @@ describe('MultipleSectionsAssigner', () => {
   });
 
   it('assigns a unit on the unit landing page of STANDALONE course when checkbox is checked', () => {
-    let assignToSection = sinon.fake();
-    let reassignConfirm = sinon.fake();
-    let updateHiddenScript = sinon.fake();
+    let assignToSection = jest.fn();
+    let reassignConfirm = jest.fn();
+    let updateHiddenScript = jest.fn();
 
     const wrapper = setUp({
       isAssigningCourse: false,
@@ -285,8 +285,8 @@ describe('MultipleSectionsAssigner', () => {
   });
 
   it('unassigns a unit on the unit landing page of STANDALONE course when checkbox is unchecked', () => {
-    let unassignSection = sinon.fake();
-    let reassignConfirm = sinon.fake();
+    let unassignSection = jest.fn();
+    let reassignConfirm = jest.fn();
 
     const wrapper = setUp({
       isAssigningCourse: false,
@@ -323,9 +323,9 @@ describe('MultipleSectionsAssigner', () => {
   });
 
   it('assigns a unit on the UNIT landing page of non-standalone course when checkbox is checked', () => {
-    let reassignConfirm = sinon.fake();
-    let assignToSection = sinon.fake();
-    let updateHiddenScript = sinon.fake();
+    let reassignConfirm = jest.fn();
+    let assignToSection = jest.fn();
+    let updateHiddenScript = jest.fn();
 
     const wrapper = setUp({
       isAssigningCourse: false,
@@ -368,8 +368,8 @@ describe('MultipleSectionsAssigner', () => {
   });
 
   it('unassigns a course on the COURSE landing page checkbox is unchecked', () => {
-    let unassignSection = sinon.fake();
-    let reassignConfirm = sinon.fake();
+    let unassignSection = jest.fn();
+    let reassignConfirm = jest.fn();
 
     const wrapper = setUp({
       isAssigningCourse: true,
@@ -407,8 +407,8 @@ describe('MultipleSectionsAssigner', () => {
   });
 
   it('assigns a course on the COURSE landing page checkbox is checked', () => {
-    let assignToSection = sinon.fake();
-    let reassignConfirm = sinon.fake();
+    let assignToSection = jest.fn();
+    let reassignConfirm = jest.fn();
 
     const wrapper = setUp({
       isAssigningCourse: true,

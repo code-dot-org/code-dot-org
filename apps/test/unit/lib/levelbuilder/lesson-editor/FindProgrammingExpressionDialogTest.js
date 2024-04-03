@@ -84,7 +84,10 @@ describe('FindProgrammingExpressionDialog', () => {
         programmingEnvironments={[]}
       />
     );
-    const searchStub = jest.spyOn(wrapper.instance(), 'doSearch').mockClear().mockImplementation();
+    const searchStub = jest
+      .spyOn(wrapper.instance(), 'doSearch')
+      .mockClear()
+      .mockImplementation();
 
     // searches on a new query
     wrapper.instance().handleSearch({
@@ -121,7 +124,11 @@ describe('FindProgrammingExpressionDialog', () => {
   });
 
   it('searches the programming_expressions endpoint', () => {
-    const fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation().resolves();
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation()
+      .resolves();
     const wrapper = shallow(
       <FindProgrammingExpressionDialog
         isOpen={true}

@@ -808,9 +808,14 @@ describe('The CustomMarshalingInterpreter', () => {
 
     describe('when given an object that should be custom marshaled', () => {
       beforeEach(() => {
-        jest.spyOn(interpreter.customMarshaler, 'shouldCustomMarshalObject').mockClear()
+        jest
+          .spyOn(interpreter.customMarshaler, 'shouldCustomMarshalObject')
+          .mockClear()
           .mockReturnValue(true);
-        jest.spyOn(interpreter.customMarshaler, 'createCustomMarshalObject').mockClear().mockImplementation();
+        jest
+          .spyOn(interpreter.customMarshaler, 'createCustomMarshalObject')
+          .mockClear()
+          .mockImplementation();
       });
       it("will delegate to the custom marshaler's createCustomMarshalObject", () => {
         const nativeParentObj = {foo: 'bar'};

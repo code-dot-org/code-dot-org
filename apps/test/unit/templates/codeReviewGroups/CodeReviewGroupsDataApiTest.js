@@ -60,7 +60,9 @@ describe('CodeReviewGroupsDataApi', () => {
     });
     api.getCodeReviewGroups();
 
-    expect(getJSON).toHaveBeenCalledWith(`/api/v1/sections/${sectionId}/code_review_groups`);
+    expect(getJSON).toHaveBeenCalledWith(
+      `/api/v1/sections/${sectionId}/code_review_groups`
+    );
 
     expect(clientGroupsList).to.deep.equal(convertedResponse);
   });
@@ -68,7 +70,9 @@ describe('CodeReviewGroupsDataApi', () => {
   it('makes a POST request with converted group data when calling setCodeReviewGroups', () => {
     api.setCodeReviewGroups(clientGroupsList);
 
-    expect(postJSON).toHaveBeenCalledWith(`/api/v1/sections/${sectionId}/code_review_groups`);
+    expect(postJSON).toHaveBeenCalledWith(
+      `/api/v1/sections/${sectionId}/code_review_groups`
+    );
 
     const data = postJSON.mock.calls[0][1];
     expect(serverGroupsResponse).to.deep.equal(data);
@@ -77,6 +81,9 @@ describe('CodeReviewGroupsDataApi', () => {
   it('makes a POST request with enabled value when calling setCodeReviewEnabled', () => {
     api.setCodeReviewEnabled(true);
 
-    expect(postJSON).toHaveBeenCalledWith(`/api/v1/sections/${sectionId}/code_review_enabled`, {enabled: true});
+    expect(postJSON).toHaveBeenCalledWith(
+      `/api/v1/sections/${sectionId}/code_review_enabled`,
+      {enabled: true}
+    );
   });
 });

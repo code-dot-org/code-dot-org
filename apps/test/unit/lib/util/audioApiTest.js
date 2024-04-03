@@ -122,7 +122,10 @@ describe('Audio API', function () {
           createSoundPromise: jest.fn(),
           enqueueAndPlay: jest.fn(),
         };
-        jest.spyOn(AzureTextToSpeech, 'getSingleton').mockClear().mockReturnValue(azureTTSStub);
+        jest
+          .spyOn(AzureTextToSpeech, 'getSingleton')
+          .mockClear()
+          .mockReturnValue(azureTTSStub);
         setAppOptions({
           azureSpeechServiceVoices: {
             English: {female: 'en-female', locale: 'en-US'},

@@ -38,7 +38,9 @@ describe('useFetch', () => {
 
   it('returns expected data on successful fetch', async () => {
     const expectedData = {name: 'Joe', age: 10};
-    fetchSpy.mockReturnValue(Promise.resolve({ok: true, json: () => expectedData}));
+    fetchSpy.mockReturnValue(
+      Promise.resolve({ok: true, json: () => expectedData})
+    );
 
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();

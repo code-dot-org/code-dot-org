@@ -1,3 +1,5 @@
+import sinon from 'sinon';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {

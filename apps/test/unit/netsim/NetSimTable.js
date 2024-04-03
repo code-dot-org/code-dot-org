@@ -6,6 +6,8 @@ var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 describe('NetSimTable', function () {
+  let apiTable, netsimTable, callback, notified, notifyCount, fakeChannel;
+
   beforeEach(function () {
     jest.useFakeTimers().setSystemTime(Date.now());
     fakeChannel = {

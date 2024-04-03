@@ -10,8 +10,10 @@ import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 
 describe('Timeout API', () => {
+  let testErrorHandler;
+
   beforeEach(() => {
-    testErrorHandler = sinon.createStubInstance(JavaScriptModeErrorHandler);
+    testErrorHandler = jest.spyOn(JavaScriptModeErrorHandler);
     jest.useFakeTimers();
     injectErrorHandler(testErrorHandler);
   });

@@ -25,11 +25,26 @@ describe('libraryLoader.load', () => {
   });
 
   beforeEach(() => {
-    getJSLintAnnotationsStub = jest.spyOn(annotationList, 'getJSLintAnnotations').mockClear().mockImplementation();
-    sourceStub = jest.spyOn(window.dashboard.project, 'getUpdatedSourceAndHtml_').mockClear().mockImplementation();
-    functionStub = jest.spyOn(libraryParser, 'getFunctions').mockClear().mockImplementation();
-    jest.spyOn(window.dashboard.project, 'getLevelName').mockClear().mockReturnValue(libraryName);
-    fetchStub = jest.spyOn(libraryClientApi, 'fetchLatest').mockClear().mockImplementation();
+    getJSLintAnnotationsStub = jest
+      .spyOn(annotationList, 'getJSLintAnnotations')
+      .mockClear()
+      .mockImplementation();
+    sourceStub = jest
+      .spyOn(window.dashboard.project, 'getUpdatedSourceAndHtml_')
+      .mockClear()
+      .mockImplementation();
+    functionStub = jest
+      .spyOn(libraryParser, 'getFunctions')
+      .mockClear()
+      .mockImplementation();
+    jest
+      .spyOn(window.dashboard.project, 'getLevelName')
+      .mockClear()
+      .mockReturnValue(libraryName);
+    fetchStub = jest
+      .spyOn(libraryClientApi, 'fetchLatest')
+      .mockClear()
+      .mockImplementation();
     onErrorStub = jest.fn();
     onSuccessStub = jest.fn();
   });
@@ -72,7 +87,10 @@ describe('libraryLoader.load', () => {
     functionStub.mockReturnValue(sourceFunctionList);
     sourceStub.yields({source: source, libraries: [library]});
     fetchStub.mockImplementation((...args) => args[1](undefined, 404));
-    jest.spyOn(libraryParser, 'createLibraryClosure').mockClear().mockReturnValue(library);
+    jest
+      .spyOn(libraryParser, 'createLibraryClosure')
+      .mockClear()
+      .mockReturnValue(library);
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
@@ -102,7 +120,9 @@ describe('libraryLoader.load', () => {
     getJSLintAnnotationsStub.mockReturnValue([]);
     functionStub.mockReturnValue(sourceFunctionList);
     sourceStub.yields({source: source});
-    fetchStub.mockImplementation((...args) => args[0](JSON.stringify(existingLibrary)));
+    fetchStub.mockImplementation((...args) =>
+      args[0](JSON.stringify(existingLibrary))
+    );
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 

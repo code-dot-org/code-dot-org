@@ -77,9 +77,10 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
           expect(jsInterpreter.globalProperties[constructor]).to.be.a(
             'function'
           );
-          const passedObjects = jsInterpreter.addCustomMarshalObject.mock.calls.map(
-            call => call[0].instance
-          );
+          const passedObjects =
+            jsInterpreter.addCustomMarshalObject.mock.calls.map(
+              call => call[0].instance
+            );
           expect(passedObjects).to.include(
             jsInterpreter.globalProperties[constructor]
           );

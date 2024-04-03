@@ -7,7 +7,10 @@ describe('Thermometer', function () {
   let testObj;
 
   beforeEach(() => {
-    jest.spyOn(Playground.Thermometer.initialize, 'value').mockClear().mockImplementation();
+    jest
+      .spyOn(Playground.Thermometer.initialize, 'value')
+      .mockClear()
+      .mockImplementation();
     testObj = {};
   });
 

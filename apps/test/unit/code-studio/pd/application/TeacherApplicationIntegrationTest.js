@@ -28,15 +28,24 @@ describe('TeacherApplication', () => {
   beforeEach(() => {
     jest.spyOn($, 'ajax').mockClear().mockReturnValue(new $.Deferred());
     jest.spyOn($, 'param').mockClear().mockReturnValue(new $.Deferred());
-    jest.spyOn(window, 'fetch').mockClear().mockReturnValue(Promise.resolve({ok: true}));
+    jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockReturnValue(Promise.resolve({ok: true}));
     jest.spyOn(utils, 'reload').mockClear().mockImplementation();
-    jest.spyOn(window.sessionStorage, 'getItem').mockClear().mockImplementation((...args) => {
-      if (args[0] === 'TeacherApplication') {
-        return JSON.stringify({});
-      }
-    });
-    jest.spyOn(window.sessionStorage, 'setItem').mockClear().mockImplementation();
-    window.ga = sinon.fake();
+    jest
+      .spyOn(window.sessionStorage, 'getItem')
+      .mockClear()
+      .mockImplementation((...args) => {
+        if (args[0] === 'TeacherApplication') {
+          return JSON.stringify({});
+        }
+      });
+    jest
+      .spyOn(window.sessionStorage, 'setItem')
+      .mockClear()
+      .mockImplementation();
+    window.ga = jest.fn();
   });
 
   afterEach(() => {
@@ -64,11 +73,14 @@ describe('TeacherApplication', () => {
 
   it('Sets the school dropdown value from storage', () => {
     window.sessionStorage.getItem.mockRestore();
-    jest.spyOn(window.sessionStorage, 'getItem').mockClear().mockImplementation((...args) => {
-      if (args[0] === 'TeacherApplication') {
-        return {program: 'CSD', school: '25'};
-      }
-    });
+    jest
+      .spyOn(window.sessionStorage, 'getItem')
+      .mockClear()
+      .mockImplementation((...args) => {
+        if (args[0] === 'TeacherApplication') {
+          return {program: 'CSD', school: '25'};
+        }
+      });
     const page = mount(
       <FindYourRegion
         {...defaultProps}

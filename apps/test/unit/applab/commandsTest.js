@@ -131,15 +131,18 @@ describe('openUrl', () => {
     };
     injectErrorHandler(errorHandler);
     jest.spyOn(window, 'open').mockClear();
-    jest.spyOn($, 'ajax').mockClear().mockImplementation(() => {
-      return {
-        success() {
-          return {
-            fail() {},
-          };
-        },
-      };
-    });
+    jest
+      .spyOn($, 'ajax')
+      .mockClear()
+      .mockImplementation(() => {
+        return {
+          success() {
+            return {
+              fail() {},
+            };
+          },
+        };
+      });
   });
 
   afterEach(() => {

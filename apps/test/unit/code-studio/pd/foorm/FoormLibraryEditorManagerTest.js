@@ -5,6 +5,7 @@ import {assert} from 'chai';
 import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
 import FoormEntityLoadButtons from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
 import {UnconnectedFoormLibraryEditorManager as FoormLibraryEditorManager} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
+import sinon from 'sinon';
 
 global.$ = require('jquery');
 

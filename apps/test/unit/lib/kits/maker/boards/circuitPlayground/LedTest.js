@@ -61,6 +61,8 @@ describe('Led', function () {
   });
 
   describe('blink()', () => {
+    let led;
+
     beforeEach(() => {
       jest.useFakeTimers();
       led = newTestLed();

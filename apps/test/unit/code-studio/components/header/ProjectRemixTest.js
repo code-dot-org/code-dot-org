@@ -39,8 +39,14 @@ describe('ProjectRemix', () => {
   });
 
   it('will attempt serverside remix when possible', () => {
-    jest.spyOn(window.dashboard.project, 'getCurrentId').mockClear().mockReturnValue(true);
-    jest.spyOn(window.dashboard.project, 'canServerSideRemix').mockClear().mockReturnValue(true);
+    jest
+      .spyOn(window.dashboard.project, 'getCurrentId')
+      .mockClear()
+      .mockReturnValue(true);
+    jest
+      .spyOn(window.dashboard.project, 'canServerSideRemix')
+      .mockClear()
+      .mockReturnValue(true);
     jest.spyOn(window.dashboard.project, 'serverSideRemix').mockClear();
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
@@ -68,7 +74,11 @@ describe('ProjectRemix', () => {
   });
 
   it('will copy the project', () => {
-    jest.spyOn(window.dashboard.project, 'copy').mockClear().mockImplementation().resolves();
+    jest
+      .spyOn(window.dashboard.project, 'copy')
+      .mockClear()
+      .mockImplementation()
+      .resolves();
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} isSignedIn />);
     wrapper.simulate('click');

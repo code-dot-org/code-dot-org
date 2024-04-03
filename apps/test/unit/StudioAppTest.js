@@ -61,8 +61,14 @@ describe('StudioApp', () => {
       let files;
       beforeEach(() => {
         files = [];
-        jest.spyOn(studioApp(), 'configureDom').mockClear().mockImplementation();
-        jest.spyOn(assetsApi, 'getFiles').mockClear().mockImplementation(cb => cb({files}));
+        jest
+          .spyOn(studioApp(), 'configureDom')
+          .mockClear()
+          .mockImplementation();
+        jest
+          .spyOn(assetsApi, 'getFiles')
+          .mockClear()
+          .mockImplementation(cb => cb({files}));
         jest.spyOn(listStore, 'reset').mockClear();
       });
 
@@ -128,7 +134,10 @@ describe('StudioApp', () => {
 
       it('no-ops if app is not running', () => {
         jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(false);
-        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
+        jest
+          .spyOn(studio, 'getCode')
+          .mockClear()
+          .mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
 
         studio.editDuringRunAlertHandler();
 
@@ -148,7 +157,10 @@ describe('StudioApp', () => {
 
       it('no-ops if editDuringRunAlert is not undefined', () => {
         jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(true);
-        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
+        jest
+          .spyOn(studio, 'getCode')
+          .mockClear()
+          .mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
         studio.editDuringRunAlert = '<div/>';
 
         studio.editDuringRunAlertHandler();
@@ -159,7 +171,10 @@ describe('StudioApp', () => {
 
       it('clears block highlighting', () => {
         jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(true);
-        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
+        jest
+          .spyOn(studio, 'getCode')
+          .mockClear()
+          .mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
 
         studio.editDuringRunAlertHandler();
 
@@ -169,8 +184,14 @@ describe('StudioApp', () => {
       it('checks localStorage if showEditDuringRunAlert is true', () => {
         studio.showEditDuringRunAlert = true;
         jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(true);
-        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
-        jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockImplementation();
+        jest
+          .spyOn(studio, 'getCode')
+          .mockClear()
+          .mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
+        jest
+          .spyOn(utils, 'tryGetLocalStorage')
+          .mockClear()
+          .mockImplementation();
 
         studio.editDuringRunAlertHandler();
 
@@ -182,10 +203,16 @@ describe('StudioApp', () => {
 
       it('renders editDuringRunAlert if showEditDuringRunAlert is true and editDuringRunAlert is undefined', () => {
         jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(true);
-        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
+        jest
+          .spyOn(studio, 'getCode')
+          .mockClear()
+          .mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
         studio.showEditDuringRunAlert = true;
         studio.editDuringRunAlert = undefined;
-        jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue(null); // user has not dismissed this alert before
+        jest
+          .spyOn(utils, 'tryGetLocalStorage')
+          .mockClear()
+          .mockReturnValue(null); // user has not dismissed this alert before
         studio.displayWorkspaceAlert = jest.fn();
 
         studio.editDuringRunAlertHandler();
@@ -228,6 +255,8 @@ describe('StudioApp', () => {
     });
 
     describe('The StudioApp.report function', () => {
+      let studio, onAttemptSpy;
+
       beforeEach(() => {
         jest.useFakeTimers();
         studio = studioApp();
@@ -255,17 +284,20 @@ describe('StudioApp', () => {
 
       it('dispatches resetIdleTime', () => {
         const stubbedDispatch = jest.fn();
-        jest.spyOn(redux, 'getStore').mockClear().mockReturnValue({
-          getState: () => ({
-            studioAppActivity: {
-              idleTimeSinceLastReport: 3000,
-            },
-            pageConstants: {
-              isReadOnlyWorkspace: false,
-            },
-          }),
-          dispatch: stubbedDispatch,
-        });
+        jest
+          .spyOn(redux, 'getStore')
+          .mockClear()
+          .mockReturnValue({
+            getState: () => ({
+              studioAppActivity: {
+                idleTimeSinceLastReport: 3000,
+              },
+              pageConstants: {
+                isReadOnlyWorkspace: false,
+              },
+            }),
+            dispatch: stubbedDispatch,
+          });
 
         studio.report({});
 
@@ -281,17 +313,20 @@ describe('StudioApp', () => {
       });
 
       it('calculates the timeSinceLastMilestone', () => {
-        jest.spyOn(redux, 'getStore').mockClear().mockReturnValue({
-          getState: () => ({
-            studioAppActivity: {
-              idleTimeSinceLastReport: 1000,
-            },
-            pageConstants: {
-              isReadOnlyWorkspace: false,
-            },
-          }),
-          dispatch: jest.fn(),
-        });
+        jest
+          .spyOn(redux, 'getStore')
+          .mockClear()
+          .mockReturnValue({
+            getState: () => ({
+              studioAppActivity: {
+                idleTimeSinceLastReport: 1000,
+              },
+              pageConstants: {
+                isReadOnlyWorkspace: false,
+              },
+            }),
+            dispatch: jest.fn(),
+          });
 
         studio.milestoneStartTime = 1000;
         studio.initTime = 1000;
@@ -401,7 +436,9 @@ describe('StudioApp', () => {
 
     it('should get the blockly workspace code if it is read only', () => {
       studioApp().editCode = false;
-      let stub = jest.spyOn(Blockly, 'getWorkspaceCode').mockClear()
+      let stub = jest
+        .spyOn(Blockly, 'getWorkspaceCode')
+        .mockClear()
         .mockReturnValue('blockly workspace');
       expect(studioApp().getCode()).to.equal('blockly workspace');
       stub.mockRestore();
@@ -421,8 +458,14 @@ describe('StudioApp', () => {
   describe('playAudio', () => {
     let playStub, isPlayingStub;
     beforeEach(() => {
-      playStub = jest.spyOn(Sounds.getSingleton(), 'play').mockClear().mockImplementation();
-      isPlayingStub = jest.spyOn(Sounds.getSingleton(), 'isPlaying').mockClear().mockImplementation();
+      playStub = jest
+        .spyOn(Sounds.getSingleton(), 'play')
+        .mockClear()
+        .mockImplementation();
+      isPlayingStub = jest
+        .spyOn(Sounds.getSingleton(), 'isPlaying')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
@@ -607,7 +650,10 @@ describe('StudioApp', () => {
   describe('The StudioApp.validateCodeChanged function', () => {
     let studio, codeDifferentStub;
     beforeEach(() => {
-      codeDifferentStub = jest.spyOn(project, 'isCurrentCodeDifferent').mockClear().mockImplementation();
+      codeDifferentStub = jest
+        .spyOn(project, 'isCurrentCodeDifferent')
+        .mockClear()
+        .mockImplementation();
       studio = studioApp();
     });
 

@@ -41,12 +41,16 @@ const mockApiResponse = (status = 200, body = {}) => {
 };
 
 describe('useRegionalPartner tests', () => {
+  let fetchStub, debounceStub;
   beforeEach(() => {
     regionalPartnerData = undefined;
     regionalPartnerError = false;
     jest.useFakeTimers();
     fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
-    debounceStub = jest.spyOn(_, 'debounce').mockClear().mockImplementation(f => f);
+    debounceStub = jest
+      .spyOn(_, 'debounce')
+      .mockClear()
+      .mockImplementation(f => f);
   });
   afterEach(() => {
     jest.useRealTimers();
@@ -93,7 +97,7 @@ describe('useRegionalPartner tests', () => {
         />
       );
     });
-    await clock.runAllAsync();
+    jest.runAllTimers();
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);
     expect(regionalPartner).to.equal(null);
@@ -115,7 +119,7 @@ describe('useRegionalPartner tests', () => {
           }}
         />
       );
-      await clock.runAllAsync();
+      jest.runAllTimers();
     });
 
     const [regionalPartner, regionalPartnerError] =
@@ -142,7 +146,7 @@ describe('useRegionalPartner tests', () => {
           }}
         />
       );
-      await clock.runAllAsync();
+      jest.runAllTimers();
     });
 
     const [regionalPartner, regionalPartnerError] =

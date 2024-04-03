@@ -68,7 +68,10 @@ describe('SectionSelector', () => {
   describe('handleSelectChange', () => {
     beforeEach(() => {
       jest.spyOn(utils, 'reload').mockClear().mockImplementation();
-      jest.spyOn(codeStudioUtils, 'updateQueryParam').mockClear().mockImplementation();
+      jest
+        .spyOn(codeStudioUtils, 'updateQueryParam')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {

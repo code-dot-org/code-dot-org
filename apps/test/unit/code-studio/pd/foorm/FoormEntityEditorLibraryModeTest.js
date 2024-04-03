@@ -19,6 +19,7 @@ import foorm, {
   setLibraryQuestionData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
 import _ from 'lodash';
+import sinon from 'sinon';
 global.$ = require('jquery');
 
 describe('FoormEntityEditor in Library editing mode', () => {

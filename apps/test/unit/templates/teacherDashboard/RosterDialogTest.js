@@ -50,7 +50,10 @@ describe('RosterDialog', () => {
 
     wrapper.find('button[id="cancel-button"]').simulate('click');
     assert(analyticsSpy.calledOnce);
-    assert.equal(analyticsSpy.mock.calls[0].firstArg, 'Section Setup Cancelled');
+    assert.equal(
+      analyticsSpy.mock.calls[0].firstArg,
+      'Section Setup Cancelled'
+    );
     assert.deepEqual(analyticsSpy.mock.calls[0].lastArg, {
       oauthSource: OAuthSectionTypes.google_classroom,
     });
@@ -89,7 +92,10 @@ describe('RosterDialog', () => {
     rosterDialog.instance().setState({selectedId: '2'});
     rosterDialog.instance().importClassroom();
     assert(analyticsSpy.calledOnce);
-    assert.equal(analyticsSpy.mock.calls[0].firstArg, 'Section Setup Completed');
+    assert.equal(
+      analyticsSpy.mock.calls[0].firstArg,
+      'Section Setup Completed'
+    );
     assert.deepEqual(analyticsSpy.mock.calls[0].lastArg, {
       oauthSource: OAuthSectionTypes.google_classroom,
     });

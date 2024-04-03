@@ -388,7 +388,10 @@ describe('block utils', () => {
       const dropdownArg = fakeBlockly.FieldDropdown.mock.calls[0][0];
       expect(dropdownArg).to.deep.equal(TEST_SPRITES);
       expect(appendEndRowInput).to.have.been.calledOnce;
-      expect(appendField).to.have.been.calledWith(expect.anything(), 'ANIMATION');
+      expect(appendField).to.have.been.calledWith(
+        expect.anything(),
+        'ANIMATION'
+      );
     });
 
     it('adds a value input', () => {
@@ -450,7 +453,10 @@ describe('block utils', () => {
         ])
       );
 
-      expect(appendField).to.have.been.calledWith(expect.anything(), 'ANIMATION');
+      expect(appendField).to.have.been.calledWith(
+        expect.anything(),
+        'ANIMATION'
+      );
       expect(appendField).to.have.been.calledWith('value label');
       expect(appendField).to.have.been.calledWith('dummy label');
     });
@@ -761,7 +767,9 @@ describe('block utils', () => {
           'test'
         );
 
-        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+        const valueToCodeStub = jest
+          .spyOn(Blockly.JavaScript, 'valueToCode')
+          .mockClear()
           .mockImplementation((block, name) => {
             return {
               NAME1: 'elrond',
@@ -794,7 +802,9 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+        const valueToCodeStub = jest
+          .spyOn(Blockly.JavaScript, 'valueToCode')
+          .mockClear()
           .mockReturnValue('"a string value"');
 
         expect(generator['test_simpleValue']()[0]).to.equal('"a string value"');
@@ -812,7 +822,9 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+        const valueToCodeStub = jest
+          .spyOn(Blockly.JavaScript, 'valueToCode')
+          .mockClear()
           .mockImplementation((block, name) => {
             return {
               VAR: 'myVariable',
@@ -840,7 +852,9 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+        const valueToCodeStub = jest
+          .spyOn(Blockly.JavaScript, 'valueToCode')
+          .mockClear()
           .mockImplementation((block, name) => {
             return {
               VAR1: 'i',
@@ -901,7 +915,9 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+        const valueToCodeStub = jest
+          .spyOn(Blockly.JavaScript, 'valueToCode')
+          .mockClear()
           .mockImplementation((block, name) => {
             return {
               THIS: 'myDog',
@@ -942,7 +958,9 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+        const valueToCodeStub = jest
+          .spyOn(Blockly.JavaScript, 'valueToCode')
+          .mockClear()
           .mockImplementation((block, name) => {
             return {
               THIS: 'myDog',
@@ -967,7 +985,9 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const blockToCodeStub = jest.spyOn(Blockly.JavaScript, 'blockToCode').mockClear()
+        const blockToCodeStub = jest
+          .spyOn(Blockly.JavaScript, 'blockToCode')
+          .mockClear()
           .mockImplementation(() => {
             return 'someHandlerCode();\n';
           });
@@ -1026,7 +1046,9 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const stub = jest.spyOn(Blockly.JavaScript, 'statementToCode').mockClear()
+        const stub = jest
+          .spyOn(Blockly.JavaScript, 'statementToCode')
+          .mockClear()
           .mockImplementation(() => `  console.log("I'm in a callback!");\n`);
         const code = generator['test_runThisCallback']();
 

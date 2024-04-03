@@ -12,7 +12,10 @@ describe('themes: ', () => {
     designModeViz = document.createElement('div');
     designModeViz.id = 'designModeViz';
     document.body.appendChild(designModeViz);
-    jest.spyOn(designMode, 'renderDesignWorkspace').mockClear().mockImplementation();
+    jest
+      .spyOn(designMode, 'renderDesignWorkspace')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {
@@ -300,12 +303,18 @@ describe('themes: ', () => {
 
   describe('onCopyElementToScreen', () => {
     beforeEach(() => {
-      jest.spyOn(designMode, 'changeScreen').mockClear().mockImplementation(screenId => {
-        // Manually change the screen with a fake to avoid pulling in redux, Applab, etc.
-        designMode.activeScreen().style.display = 'none';
-        getPrefixedElementById(screenId).style.display = 'block';
-      });
-      jest.spyOn(studioApp(), 'displayPlayspaceAlert').mockClear().mockImplementation();
+      jest
+        .spyOn(designMode, 'changeScreen')
+        .mockClear()
+        .mockImplementation(screenId => {
+          // Manually change the screen with a fake to avoid pulling in redux, Applab, etc.
+          designMode.activeScreen().style.display = 'none';
+          getPrefixedElementById(screenId).style.display = 'block';
+        });
+      jest
+        .spyOn(studioApp(), 'displayPlayspaceAlert')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {

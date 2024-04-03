@@ -10,6 +10,7 @@ import {
 } from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
 import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
 import LibraryPublisher from '@cdo/apps/code-studio/components/libraries/LibraryPublisher.jsx';
+import sinon from 'sinon';
 
 describe('LibraryCreationDialog', () => {
   describe('UI', () => {

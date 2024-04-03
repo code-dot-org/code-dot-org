@@ -30,12 +30,14 @@ import {Provider} from 'react-redux';
 import * as utils from '@cdo/apps/utils';
 import _ from 'lodash';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+import sinon from 'sinon';
 
 describe('LessonEditor', () => {
   // Warnings allowed due to usage of deprecated  componentWillReceiveProps
   // lifecycle method.
   allowConsoleWarnings();
 
+  let defaultProps, store;
   beforeEach(() => {
     jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     stubRedux();
@@ -92,10 +94,7 @@ describe('LessonEditor', () => {
   afterEach(() => {
     restoreRedux();
     utils.navigateToHref.mockRestore();
-    if (clock) {
-      jest.useRealTimers();
-      clock = undefined;
-    }
+    jest.useRealTimers();
   });
 
   const createWrapper = overrideProps => {

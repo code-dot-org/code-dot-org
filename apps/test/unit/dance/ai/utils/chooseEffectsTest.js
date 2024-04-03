@@ -6,7 +6,9 @@ import {EffectsQuality} from '@cdo/apps/dance/ai/types';
 describe('chooseEffects', () => {
   beforeEach(() => {
     jest.spyOn(Math, 'random').mockClear().mockReturnValue(0.99);
-    jest.spyOn(calculateOutputSummedWeights, 'calculateOutputSummedWeights').mockClear()
+    jest
+      .spyOn(calculateOutputSummedWeights, 'calculateOutputSummedWeights')
+      .mockClear()
       .mockReturnValue([
         [2.9, 'blooming_petals (1st)'],
         [1.2, 'quads (3rd)'],

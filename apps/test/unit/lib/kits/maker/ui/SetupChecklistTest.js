@@ -25,17 +25,29 @@ describe('SetupChecklist', () => {
   beforeEach(() => {
     jest.spyOn(utils, 'reload').mockClear().mockImplementation();
     jest.spyOn(window.console, 'error').mockClear().mockImplementation();
-    jest.spyOn(SetupChecker.prototype, 'detectSupportedBrowser').mockClear()
+    jest
+      .spyOn(SetupChecker.prototype, 'detectSupportedBrowser')
+      .mockClear()
       .mockImplementation(() => Promise.resolve());
-    jest.spyOn(SetupChecker.prototype, 'detectBoardPluggedIn').mockClear()
+    jest
+      .spyOn(SetupChecker.prototype, 'detectBoardPluggedIn')
+      .mockClear()
       .mockImplementation(() => Promise.resolve());
-    jest.spyOn(SetupChecker.prototype, 'detectCorrectFirmware').mockClear()
+    jest
+      .spyOn(SetupChecker.prototype, 'detectCorrectFirmware')
+      .mockClear()
       .mockImplementation(() => Promise.resolve());
-    jest.spyOn(SetupChecker.prototype, 'detectBoardType').mockClear()
+    jest
+      .spyOn(SetupChecker.prototype, 'detectBoardType')
+      .mockClear()
       .mockImplementation(() => Promise.resolve());
-    jest.spyOn(SetupChecker.prototype, 'detectComponentsInitialize').mockClear()
+    jest
+      .spyOn(SetupChecker.prototype, 'detectComponentsInitialize')
+      .mockClear()
       .mockImplementation(() => Promise.resolve());
-    jest.spyOn(SetupChecker.prototype, 'celebrate').mockClear()
+    jest
+      .spyOn(SetupChecker.prototype, 'celebrate')
+      .mockClear()
       .mockImplementation(() => Promise.resolve());
     stubRedux();
     registerReducers({microBit: microBitReducer});
@@ -63,7 +75,10 @@ describe('SetupChecklist', () => {
   }
   describe('Should use WebSerial', () => {
     before(() => {
-      jest.spyOn(boardUtils, 'shouldUseWebSerial').mockClear().mockReturnValue(true);
+      jest
+        .spyOn(boardUtils, 'shouldUseWebSerial')
+        .mockClear()
+        .mockReturnValue(true);
     });
 
     after(() => {
@@ -81,7 +96,10 @@ describe('SetupChecklist', () => {
 
     it('sends analytic event when a board is connected on /maker/setup page', async () => {
       const {rerender} = renderDefault();
-      const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear().mockImplementation();
+      const sendEventSpy = jest
+        .spyOn(analyticsReporter, 'sendEvent')
+        .mockClear()
+        .mockImplementation();
       await yieldUntilDoneDetecting(screen, rerender);
       expect(sendEventSpy).to.be.calledOnce;
       expect(sendEventSpy).calledWith('Board Type On Maker Setup Page');

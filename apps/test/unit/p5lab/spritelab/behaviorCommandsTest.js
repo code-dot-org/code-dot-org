@@ -19,9 +19,18 @@ describe('Behavior Commands', () => {
   describe('draggableFunc', () => {
     let mousePressedOverStub, mouseWentDownStub, mouseWentUpStub;
     beforeEach(() => {
-      mousePressedOverStub = jest.spyOn(coreLibrary.p5, 'mousePressedOver').mockClear().mockImplementation();
-      mouseWentDownStub = jest.spyOn(coreLibrary.p5, 'mouseWentDown').mockClear().mockImplementation();
-      mouseWentUpStub = jest.spyOn(coreLibrary.p5, 'mouseWentUp').mockClear().mockImplementation();
+      mousePressedOverStub = jest
+        .spyOn(coreLibrary.p5, 'mousePressedOver')
+        .mockClear()
+        .mockImplementation();
+      mouseWentDownStub = jest
+        .spyOn(coreLibrary.p5, 'mouseWentDown')
+        .mockClear()
+        .mockImplementation();
+      mouseWentUpStub = jest
+        .spyOn(coreLibrary.p5, 'mouseWentUp')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {

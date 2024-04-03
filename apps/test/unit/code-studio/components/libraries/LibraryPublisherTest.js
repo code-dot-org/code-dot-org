@@ -7,6 +7,7 @@ import LibraryPublisher, {
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
+import sinon from 'sinon';
 
 describe('LibraryPublisher', () => {
   let publishSpy,
@@ -30,12 +31,23 @@ describe('LibraryPublisher', () => {
         setLibraryDetails: () => {},
       },
     });
-    jest.spyOn(window.dashboard.project, 'setLibraryDetails').mockClear()
+    jest
+      .spyOn(window.dashboard.project, 'setLibraryDetails')
+      .mockClear()
       .mockReturnValue(undefined);
-    jest.spyOn(libraryParser, 'suggestName').mockClear().mockReturnValue(libraryName);
-    jest.spyOn(libraryParser, 'sanitizeName').mockClear().mockReturnValue(libraryName);
+    jest
+      .spyOn(libraryParser, 'suggestName')
+      .mockClear()
+      .mockReturnValue(libraryName);
+    jest
+      .spyOn(libraryParser, 'sanitizeName')
+      .mockClear()
+      .mockReturnValue(libraryName);
     libraryClientApi = new LibraryClientApi('123');
-    publishSpy = jest.spyOn(libraryClientApi, 'publish').mockClear().mockImplementation();
+    publishSpy = jest
+      .spyOn(libraryClientApi, 'publish')
+      .mockClear()
+      .mockImplementation();
   });
 
   after(() => {
@@ -256,9 +268,11 @@ describe('LibraryPublisher', () => {
 
     describe('with valid input', () => {
       it('sets error state when publish fails', async () => {
-        publishSpy.mockImplementation((...args) => args[1]({
-          message: '',
-        }));
+        publishSpy.mockImplementation((...args) =>
+          args[1]({
+            message: '',
+          })
+        );
         jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
@@ -275,9 +289,11 @@ describe('LibraryPublisher', () => {
       });
 
       it('sets error state if library is too long', async () => {
-        publishSpy.mockImplementation((...args) => args[1]({
-          message: 'httpStatusCode: 413; status: error; error: ',
-        }));
+        publishSpy.mockImplementation((...args) =>
+          args[1]({
+            message: 'httpStatusCode: 413; status: error; error: ',
+          })
+        );
         jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
@@ -292,10 +308,12 @@ describe('LibraryPublisher', () => {
       });
 
       it('sets error state if library contains PII', async () => {
-        publishSpy.mockImplementation((...args) => args[1]({
-          message: 'httpStatusCode: 400; status: error; error: Bad request',
-          cause: {pIIWords: ['123-456-7890']},
-        }));
+        publishSpy.mockImplementation((...args) =>
+          args[1]({
+            message: 'httpStatusCode: 400; status: error; error: Bad request',
+            cause: {pIIWords: ['123-456-7890']},
+          })
+        );
         jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
@@ -311,10 +329,12 @@ describe('LibraryPublisher', () => {
       });
 
       it('sets generic error state if error has null cause', async () => {
-        publishSpy.mockImplementation((...args) => args[1]({
-          message: 'httpStatusCode: 400; status: error; error: Bad request',
-          cause: null,
-        }));
+        publishSpy.mockImplementation((...args) =>
+          args[1]({
+            message: 'httpStatusCode: 400; status: error; error: Bad request',
+            cause: null,
+          })
+        );
         jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
@@ -331,10 +351,12 @@ describe('LibraryPublisher', () => {
       });
 
       it('sets generic error state if error has another cause', async () => {
-        publishSpy.mockImplementation((...args) => args[1]({
-          message: 'httpStatusCode: 400; status: error; error: Bad request',
-          cause: {profaneWords: ['fart']},
-        }));
+        publishSpy.mockImplementation((...args) =>
+          args[1]({
+            message: 'httpStatusCode: 400; status: error; error: Bad request',
+            cause: {profaneWords: ['fart']},
+          })
+        );
         jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
@@ -363,7 +385,10 @@ describe('LibraryPublisher', () => {
       });
 
       it('publishes only the selected functions and description', async () => {
-        let libraryJsonSpy = jest.spyOn(libraryParser, 'createLibraryJson').mockClear().mockImplementation();
+        let libraryJsonSpy = jest
+          .spyOn(libraryParser, 'createLibraryJson')
+          .mockClear()
+          .mockImplementation();
         let description = 'description';
         let selectedFunctions = {bar: true};
         let newFunction = {functionName: 'bar', comment: 'comment'};
@@ -397,7 +422,10 @@ describe('LibraryPublisher', () => {
   describe('unpublish', () => {
     let wrapper, deleteSpy;
     beforeEach(() => {
-      deleteSpy = jest.spyOn(libraryClientApi, 'delete').mockClear().mockImplementation();
+      deleteSpy = jest
+        .spyOn(libraryClientApi, 'delete')
+        .mockClear()
+        .mockImplementation();
       libraryDetails.alreadyPublished = true;
       wrapper = shallow(
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />

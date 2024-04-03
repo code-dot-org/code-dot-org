@@ -61,7 +61,10 @@ describe('SchoolInfoConfirmationDialog', () => {
         }}
       />
     );
-    const handleClickUpdateStub = jest.spyOn(wrapper.instance(), 'handleClickUpdate').mockClear().mockImplementation();
+    const handleClickUpdateStub = jest
+      .spyOn(wrapper.instance(), 'handleClickUpdate')
+      .mockClear()
+      .mockImplementation();
     handleClickUpdateStub.callsFake(() => {});
     wrapper.setState({showSchoolInterstitial: false});
     wrapper.find('Button');
@@ -72,7 +75,10 @@ describe('SchoolInfoConfirmationDialog', () => {
     let stubedFetch;
 
     beforeEach(() => {
-      stubedFetch = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+      stubedFetch = jest
+        .spyOn(window, 'fetch')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
@@ -109,7 +115,9 @@ describe('SchoolInfoConfirmationDialog', () => {
       it('calls handleClickYes method when a user does not need to update school information', async () => {
         stubedFetch.resolves();
         const wrapperInstance = wrapper.instance();
-        const handleClickYesSpy = jest.spyOn(wrapperInstance, 'handleClickYes').mockClear();
+        const handleClickYesSpy = jest
+          .spyOn(wrapperInstance, 'handleClickYes')
+          .mockClear();
         wrapper.setState({showSchoolInterstitial: false});
         wrapper.find('button#yes-button').simulate('click');
 
@@ -145,7 +153,9 @@ describe('SchoolInfoConfirmationDialog', () => {
 
     it('renders school info form when school info interstitial is set to true', () => {
       const wrapperInstance = wrapper.instance();
-      const renderSchoolInformationForm = jest.spyOn(wrapperInstance, 'renderSchoolInformationForm').mockClear();
+      const renderSchoolInformationForm = jest
+        .spyOn(wrapperInstance, 'renderSchoolInformationForm')
+        .mockClear();
       wrapper.setState({showSchoolInterstitial: true});
 
       expect(renderSchoolInformationForm).to.have.been.called;
@@ -153,7 +163,9 @@ describe('SchoolInfoConfirmationDialog', () => {
 
     it('renders school info confirmation dialog when school info interstitial is set to false', () => {
       const wrapperInstance = wrapper.instance();
-      const renderSchoolInfoConfirmationDialog = jest.spyOn(wrapperInstance, 'renderInitialContent').mockClear();
+      const renderSchoolInfoConfirmationDialog = jest
+        .spyOn(wrapperInstance, 'renderInitialContent')
+        .mockClear();
       wrapper.setState({showSchoolInterstitial: false});
 
       expect(renderSchoolInfoConfirmationDialog).to.have.been.called;

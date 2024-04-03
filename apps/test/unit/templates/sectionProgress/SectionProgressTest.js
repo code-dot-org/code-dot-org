@@ -19,7 +19,10 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    jest.spyOn(progressLoader, 'loadUnitProgress').mockClear().mockImplementation();
+    jest
+      .spyOn(progressLoader, 'loadUnitProgress')
+      .mockClear()
+      .mockImplementation();
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
       setCurrentView: () => {},

@@ -7,16 +7,19 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
     let reduxStub, result;
 
     beforeEach(() => {
-      reduxStub = jest.spyOn(redux, 'getStore').mockClear().mockReturnValue({
-        getState: () => ({
-          level: {
-            name: 'test-level',
-          },
-          pageConstants: {
-            isCurriculumLevel: true,
-          },
-        }),
-      });
+      reduxStub = jest
+        .spyOn(redux, 'getStore')
+        .mockClear()
+        .mockReturnValue({
+          getState: () => ({
+            level: {
+              name: 'test-level',
+            },
+            pageConstants: {
+              isCurriculumLevel: true,
+            },
+          }),
+        });
     });
 
     afterEach(() => {

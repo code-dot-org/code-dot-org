@@ -29,7 +29,9 @@ describe('CircuitPlaygroundBoard', () => {
   beforeEach(() => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
     // for real firmata (see webpack.js) changing Playground's parent class.
-    jest.spyOn(CircuitPlaygroundBoard, 'makePlaygroundTransport').mockClear()
+    jest
+      .spyOn(CircuitPlaygroundBoard, 'makePlaygroundTransport')
+      .mockClear()
       .mockImplementation(() => {
         playground = new Playground({});
         playground.SERIAL_PORT_IDs.DEFAULT = 0x08;
@@ -43,9 +45,17 @@ describe('CircuitPlaygroundBoard', () => {
         jest.spyOn(playground, 'reset').mockClear();
         jest.spyOn(playground, 'pinMode').mockClear();
         jest.spyOn(playground, 'digitalWrite').mockClear();
-        jest.spyOn(playground, 'digitalRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
+        jest
+          .spyOn(playground, 'digitalRead')
+          .mockClear()
+          .mockImplementation()
+          .mockImplementation((...args) => args[1](0));
         jest.spyOn(playground, 'analogWrite').mockClear();
-        jest.spyOn(playground, 'analogRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
+        jest
+          .spyOn(playground, 'analogRead')
+          .mockClear()
+          .mockImplementation()
+          .mockImplementation((...args) => args[1](0));
 
         // Pretend to be totally ready
         playground.emit('connect');
@@ -57,9 +67,12 @@ describe('CircuitPlaygroundBoard', () => {
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
     circuitPlaygroundBoardSetup();
-    jest.spyOn(CircuitPlaygroundBoard, 'openWebSerial').mockClear().mockImplementation(() => {
-      return Promise.resolve();
-    });
+    jest
+      .spyOn(CircuitPlaygroundBoard, 'openWebSerial')
+      .mockClear()
+      .mockImplementation(() => {
+        return Promise.resolve();
+      });
   });
 
   afterEach(() => {
@@ -72,7 +85,11 @@ describe('CircuitPlaygroundBoard', () => {
 
   function circuitPlaygroundBoardSetup() {
     // 'CrOS' represents ChromeOS
-    userAgentSpy = jest.spyOn(navigator, 'userAgent').mockClear().mockImplementation().value('CrOS');
+    userAgentSpy = jest
+      .spyOn(navigator, 'userAgent')
+      .mockClear()
+      .mockImplementation()
+      .value('CrOS');
   }
 
   function circuitPlaygroundBoardTeardown() {
@@ -166,7 +183,9 @@ describe('CircuitPlaygroundBoard', () => {
     let wrappedPort;
     beforeEach(() => {
       wrappedPort = new WebSerialPortWrapper();
-      jest.spyOn(wrappedPort, 'openCPPort').mockClear()
+      jest
+        .spyOn(wrappedPort, 'openCPPort')
+        .mockClear()
         .mockReturnValue(new Promise(resolve => resolve(wrappedPort)));
       board = new CircuitPlaygroundBoard(wrappedPort);
       board.port_.vendorId = '0x239A';
@@ -287,6 +306,8 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`celebrateSuccessfulConnection()`, () => {
+    let yieldToPromiseChain;
+
     beforeEach(() => {
       // Promise chains and fake timers don't work together so well, so we
       // give ourselves a real `setTimeout(cb, 0)` function that will let any
@@ -317,9 +338,9 @@ describe('CircuitPlaygroundBoard', () => {
         .connect()
         .then(() => {
           // Mock board components that will be used to celebrate
-          const buzzer = sinon.mock(board.prewiredComponents_.buzzer);
+          const buzzer = jest.spyOn(board.prewiredComponents_.buzzer);
           const leds = board.prewiredComponents_.colorLeds.map(led =>
-            sinon.mock(led)
+            jest.spyOn(led)
           );
 
           // Right after the first call we'll expect the buzzer to start playing

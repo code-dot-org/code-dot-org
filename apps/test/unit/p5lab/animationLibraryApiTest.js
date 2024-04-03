@@ -108,7 +108,10 @@ describe('animationLibraryApi', () => {
   describe('regenerateDefaultSpriteMetadata', () => {
     it('generates sprite metadata from animation library', () => {
       fetchSpy.mockImplementation((...args) => {
-        if (args[0] === '/api/v1/animation-library/default-spritelab-metadata/levelbuilder') {
+        if (
+          args[0] ===
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        ) {
           return Promise.resolve({ok: true});
         }
       });
@@ -139,7 +142,10 @@ describe('animationLibraryApi', () => {
 
     it('sends data to middleware in POST', () => {
       fetchSpy.mockImplementation((...args) => {
-        if (args[0] === '/api/v1/animation-library/default-spritelab-metadata/levelbuilder') {
+        if (
+          args[0] ===
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        ) {
           return Promise.resolve({ok: true});
         }
       });
@@ -154,7 +160,10 @@ describe('animationLibraryApi', () => {
 
     it('throws error when bad response', () => {
       fetchSpy.mockImplementation((...args) => {
-        if (args[0] === '/api/v1/animation-library/default-spritelab-metadata/levelbuilder') {
+        if (
+          args[0] ===
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        ) {
           return Promise.resolve({
             ok: false,
             status: '000',

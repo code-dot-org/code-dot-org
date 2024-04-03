@@ -132,7 +132,10 @@ describe('Theater', () => {
     theater.onPhotoPrompterFileSelected(new File([], 'file'));
 
     expect(uploadFile).not.toHaveBeenCalled();
-    expect(onJavabuilderMessage).toHaveBeenCalledWith(InputMessageType.THEATER, InputMessage.UPLOAD_ERROR);
+    expect(onJavabuilderMessage).toHaveBeenCalledWith(
+      InputMessageType.THEATER,
+      InputMessage.UPLOAD_ERROR
+    );
   });
 
   it('sends success or failure message based on upload result', () => {
@@ -152,10 +155,16 @@ describe('Theater', () => {
 
     onJavabuilderMessage.mockReset();
     onSuccess();
-    expect(onJavabuilderMessage).toHaveBeenCalledWith(InputMessageType.THEATER, InputMessage.UPLOAD_SUCCESS);
+    expect(onJavabuilderMessage).toHaveBeenCalledWith(
+      InputMessageType.THEATER,
+      InputMessage.UPLOAD_SUCCESS
+    );
 
     onJavabuilderMessage.mockReset();
     onError();
-    expect(onJavabuilderMessage).toHaveBeenCalledWith(InputMessageType.THEATER, InputMessage.UPLOAD_ERROR);
+    expect(onJavabuilderMessage).toHaveBeenCalledWith(
+      InputMessageType.THEATER,
+      InputMessage.UPLOAD_ERROR
+    );
   });
 });

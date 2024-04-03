@@ -7,7 +7,7 @@ import DropletTooltipManager from '@cdo/apps/blockTooltips/DropletTooltipManager
  * @param {Object} blockInfo - The block information.
  */
 export function DropletTooltipManagerStub(config = {}, blockInfo = {}) {
-  let tooltipManager = sinon.createStubInstance(DropletTooltipManager);
+  let tooltipManager = jest.spyOn(DropletTooltipManager);
 
   // Establish the droplet configuration.
   tooltipManager.dropletConfig = Object.assign(

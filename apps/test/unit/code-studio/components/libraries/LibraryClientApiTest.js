@@ -1,5 +1,6 @@
 import {assert} from '../../../../util/reconfiguredChai';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+import sinon from 'sinon';
 
 describe('LibraryClientApi', () => {
   const channelId = 'abc123';
@@ -12,7 +13,10 @@ describe('LibraryClientApi', () => {
     beforeEach(() => {
       libraryApi = new LibraryClientApi(channelId);
       server = sinon.fakeServer.create();
-      channelUpdateStub = jest.spyOn(libraryApi.channelApi, 'update').mockClear().mockImplementation();
+      channelUpdateStub = jest
+        .spyOn(libraryApi.channelApi, 'update')
+        .mockClear()
+        .mockImplementation();
       project = {
         name: 'My Project',
         libraryName: 'My Library',

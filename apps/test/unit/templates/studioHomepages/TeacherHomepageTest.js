@@ -1,6 +1,7 @@
 import {assert} from 'chai';
 import {shallow} from 'enzyme';
 import React from 'react';
+import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';

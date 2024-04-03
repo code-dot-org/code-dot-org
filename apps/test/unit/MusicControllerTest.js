@@ -23,7 +23,10 @@ describe('MusicController', () => {
     });
     sound = sounds.soundsById[sourceURL];
     jest.spyOn(sound, 'play').mockClear();
-    jest.spyOn(Sounds.prototype, 'registerByFilenamesAndID').mockClear().mockReturnValue(sound);
+    jest
+      .spyOn(Sounds.prototype, 'registerByFilenamesAndID')
+      .mockClear()
+      .mockReturnValue(sound);
   });
 
   afterEach(() => {

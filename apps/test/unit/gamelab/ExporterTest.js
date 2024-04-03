@@ -12,6 +12,7 @@ import {
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import sinon from 'sinon';
 
 const emptyAnimationOpts = {
   animationList: {
@@ -86,7 +87,10 @@ describe('The Gamelab Exporter,', function () {
     });
 
     if (!window.dashboard.assets.listStore.list.returns) {
-      jest.spyOn(window.dashboard.assets.listStore, 'list').mockClear().mockImplementation();
+      jest
+        .spyOn(window.dashboard.assets.listStore, 'list')
+        .mockClear()
+        .mockImplementation();
     }
     window.dashboard.assets.listStore.list.mockReturnValue([
       {filename: 'foo.png'},

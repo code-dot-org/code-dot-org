@@ -52,11 +52,14 @@ describe('TeacherApplication', () => {
       ).to.deep.equal({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
-      jest.spyOn(window.sessionStorage, 'getItem').mockClear().mockImplementation((...args) => {
-        if (args[0] === 'TeacherApplication') {
-          return JSON.stringify({data: {school: '25'}});
-        }
-      });
+      jest
+        .spyOn(window.sessionStorage, 'getItem')
+        .mockClear()
+        .mockImplementation((...args) => {
+          if (args[0] === 'TeacherApplication') {
+            return JSON.stringify({data: {school: '25'}});
+          }
+        });
       teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()

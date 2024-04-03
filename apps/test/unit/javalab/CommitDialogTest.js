@@ -14,8 +14,10 @@ describe('CommitDialog test', () => {
   beforeEach(() => {
     handleCommitSpy = jest.fn();
 
-    backpackApiStub = sinon.createStubInstance(BackpackClientApi);
-    backpackApiStub.getFileList.mockImplementation((...args) => args[1](['backpackFile.java']));
+    backpackApiStub = jest.spyOn(BackpackClientApi);
+    backpackApiStub.getFileList.mockImplementation((...args) =>
+      args[1](['backpackFile.java'])
+    );
     backpackApiStub.hasBackpack.mockReturnValue(true);
     setCommitSaveStatusSpy = jest.fn();
 

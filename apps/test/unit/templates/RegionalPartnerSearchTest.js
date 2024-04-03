@@ -1,6 +1,7 @@
 import {shallow} from 'enzyme';
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
+import sinon from 'sinon';
 
 import {
   WorkshopApplicationStates,
@@ -61,7 +62,10 @@ const createServerResponses = (
 describe('RegionalPartnerSearch', () => {
   let server;
   beforeEach(() => {
-    jest.spyOn(utils, 'currentLocation').mockClear().mockReturnValue({search: '?zip=11111'});
+    jest
+      .spyOn(utils, 'currentLocation')
+      .mockClear()
+      .mockReturnValue({search: '?zip=11111'});
     server = sinon.fakeServer.create();
   });
 

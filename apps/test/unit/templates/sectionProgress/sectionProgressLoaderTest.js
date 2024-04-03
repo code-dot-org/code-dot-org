@@ -226,8 +226,14 @@ describe('sectionProgressLoader.loadScript', () => {
   beforeEach(() => {
     fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
     reduxStub = jest.spyOn(redux, 'getStore').mockClear().mockImplementation();
-    startLoadingProgressStub = jest.spyOn(sectionProgress, 'startLoadingProgress').mockClear().mockImplementation();
-    startRefreshingProgressStub = jest.spyOn(sectionProgress, 'startRefreshingProgress').mockClear().mockImplementation();
+    startLoadingProgressStub = jest
+      .spyOn(sectionProgress, 'startLoadingProgress')
+      .mockClear()
+      .mockImplementation();
+    startRefreshingProgressStub = jest
+      .spyOn(sectionProgress, 'startRefreshingProgress')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {
@@ -262,9 +268,20 @@ describe('sectionProgressLoader.loadScript', () => {
     let addDataByUnitStub, finishLoadingProgressStub;
     let finishRefreshingProgressStub;
     beforeEach(() => {
-      jest.spyOn(Promise, 'all').mockClear().mockReturnValue({then: jest.fn().mockImplementation((...args) => args[0]())});
-      finishLoadingProgressStub = jest.spyOn(sectionProgress, 'finishLoadingProgress').mockClear().mockImplementation();
-      finishRefreshingProgressStub = jest.spyOn(sectionProgress, 'finishRefreshingProgress').mockClear().mockImplementation();
+      jest
+        .spyOn(Promise, 'all')
+        .mockClear()
+        .mockReturnValue({
+          then: jest.fn().mockImplementation((...args) => args[0]()),
+        });
+      finishLoadingProgressStub = jest
+        .spyOn(sectionProgress, 'finishLoadingProgress')
+        .mockClear()
+        .mockImplementation();
+      finishRefreshingProgressStub = jest
+        .spyOn(sectionProgress, 'finishRefreshingProgress')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
@@ -276,7 +293,10 @@ describe('sectionProgressLoader.loadScript', () => {
 
     it('refreshes the data if data already exists', () => {
       const selectedSectionId = 5;
-      addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear().mockImplementation();
+      addDataByUnitStub = jest
+        .spyOn(sectionProgress, 'addDataByUnit')
+        .mockClear()
+        .mockImplementation();
       reduxStub.mockReturnValue({
         getState: () => {
           return {
@@ -333,13 +353,20 @@ describe('sectionProgressLoader.loadScript', () => {
         dispatch: () => {},
       });
 
-      jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockImplementation((...args) => args[0]);
-      addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
+      jest
+        .spyOn(progressHelpers, 'processedLevel')
+        .mockClear()
+        .mockImplementation((...args) => args[0]);
+      addDataByUnitStub = jest
+        .spyOn(sectionProgress, 'addDataByUnit')
+        .mockClear();
       fetchStub.mockImplementation(() => {
         if (fetchStub.mock.calls.length === 0) {
           return {
             then: jest.fn().mockReturnValue({
-              then: jest.fn().mockImplementation((...args) => args[0](serverScriptResponse)),
+              then: jest
+                .fn()
+                .mockImplementation((...args) => args[0](serverScriptResponse)),
             }),
           };
         }
@@ -348,7 +375,11 @@ describe('sectionProgressLoader.loadScript', () => {
         if (fetchStub.mock.calls.length === 1) {
           return {
             then: jest.fn().mockReturnValue({
-              then: jest.fn().mockImplementation((...args) => args[0](firstServerProgressResponse)),
+              then: jest
+                .fn()
+                .mockImplementation((...args) =>
+                  args[0](firstServerProgressResponse)
+                ),
             }),
           };
         }
@@ -357,7 +388,11 @@ describe('sectionProgressLoader.loadScript', () => {
         if (fetchStub.mock.calls.length === 2) {
           return {
             then: jest.fn().mockReturnValue({
-              then: jest.fn().mockImplementation((...args) => args[0](secondServerProgressResponse)),
+              then: jest
+                .fn()
+                .mockImplementation((...args) =>
+                  args[0](secondServerProgressResponse)
+                ),
             }),
           };
         }
@@ -395,7 +430,10 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       it('starts and finishes loading progress', () => {
-        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear().mockImplementation();
+        addDataByUnitStub = jest
+          .spyOn(sectionProgress, 'addDataByUnit')
+          .mockClear()
+          .mockImplementation();
         fetchStub.mockReturnValue({
           then: jest.fn().mockReturnValue({
             then: jest.fn().mockImplementation((...args) => args[0]({})),
@@ -411,8 +449,13 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       it('processes levels before updating the redux store', () => {
-        jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockReturnValue('success');
-        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
+        jest
+          .spyOn(progressHelpers, 'processedLevel')
+          .mockClear()
+          .mockReturnValue('success');
+        addDataByUnitStub = jest
+          .spyOn(sectionProgress, 'addDataByUnit')
+          .mockClear();
         const serverResponse = {
           lessons: [{levels: ['fail']}],
         };
@@ -441,7 +484,9 @@ describe('sectionProgressLoader.loadScript', () => {
           if (fetchStub.mock.calls.length === 0) {
             return {
               then: jest.fn().mockReturnValue({
-                then: jest.fn().mockImplementation((...args) => args[0](serverResponse)),
+                then: jest
+                  .fn()
+                  .mockImplementation((...args) => args[0](serverResponse)),
               }),
             };
           }
@@ -461,13 +506,22 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       it('transforms the data provided by the server', () => {
-        jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockImplementation((...args) => args[0]);
-        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
+        jest
+          .spyOn(progressHelpers, 'processedLevel')
+          .mockClear()
+          .mockImplementation((...args) => args[0]);
+        addDataByUnitStub = jest
+          .spyOn(sectionProgress, 'addDataByUnit')
+          .mockClear();
         fetchStub.mockImplementation(() => {
           if (fetchStub.mock.calls.length === 0) {
             return {
               then: jest.fn().mockReturnValue({
-                then: jest.fn().mockImplementation((...args) => args[0](serverScriptResponse)),
+                then: jest
+                  .fn()
+                  .mockImplementation((...args) =>
+                    args[0](serverScriptResponse)
+                  ),
               }),
             };
           }
@@ -476,7 +530,11 @@ describe('sectionProgressLoader.loadScript', () => {
           if (fetchStub.mock.calls.length === 1) {
             return {
               then: jest.fn().mockReturnValue({
-                then: jest.fn().mockImplementation((...args) => args[0](serverProgressResponse)),
+                then: jest
+                  .fn()
+                  .mockImplementation((...args) =>
+                    args[0](serverProgressResponse)
+                  ),
               }),
             };
           }
@@ -491,14 +549,21 @@ describe('sectionProgressLoader.loadScript', () => {
         const scriptResponse = _.cloneDeep(serverScriptResponse);
         scriptResponse.lessons[0].levels.push({bonus: true});
 
-        jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockImplementation((...args) => args[0]);
-        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
+        jest
+          .spyOn(progressHelpers, 'processedLevel')
+          .mockClear()
+          .mockImplementation((...args) => args[0]);
+        addDataByUnitStub = jest
+          .spyOn(sectionProgress, 'addDataByUnit')
+          .mockClear();
 
         fetchStub.mockImplementation(() => {
           if (fetchStub.mock.calls.length === 0) {
             return {
               then: jest.fn().mockReturnValue({
-                then: jest.fn().mockImplementation((...args) => args[0](scriptResponse)),
+                then: jest
+                  .fn()
+                  .mockImplementation((...args) => args[0](scriptResponse)),
               }),
             };
           }
@@ -507,7 +572,11 @@ describe('sectionProgressLoader.loadScript', () => {
           if (fetchStub.mock.calls.length === 1) {
             return {
               then: jest.fn().mockReturnValue({
-                then: jest.fn().mockImplementation((...args) => args[0](serverProgressResponse)),
+                then: jest
+                  .fn()
+                  .mockImplementation((...args) =>
+                    args[0](serverProgressResponse)
+                  ),
               }),
             };
           }
@@ -527,14 +596,21 @@ describe('sectionProgressLoader.loadScript', () => {
         const expectedResult = _.cloneDeep(fullExpectedResult);
         expectedResult.unitDataByUnit[123].lessons[0].levels.push(bonusLevel);
 
-        jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockImplementation((...args) => args[0]);
-        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
+        jest
+          .spyOn(progressHelpers, 'processedLevel')
+          .mockClear()
+          .mockImplementation((...args) => args[0]);
+        addDataByUnitStub = jest
+          .spyOn(sectionProgress, 'addDataByUnit')
+          .mockClear();
 
         fetchStub.mockImplementation(() => {
           if (fetchStub.mock.calls.length === 0) {
             return {
               then: jest.fn().mockReturnValue({
-                then: jest.fn().mockImplementation((...args) => args[0](scriptResponse)),
+                then: jest
+                  .fn()
+                  .mockImplementation((...args) => args[0](scriptResponse)),
               }),
             };
           }
@@ -543,7 +619,11 @@ describe('sectionProgressLoader.loadScript', () => {
           if (fetchStub.mock.calls.length === 1) {
             return {
               then: jest.fn().mockReturnValue({
-                then: jest.fn().mockImplementation((...args) => args[0](serverProgressResponse)),
+                then: jest
+                  .fn()
+                  .mockImplementation((...args) =>
+                    args[0](serverProgressResponse)
+                  ),
               }),
             };
           }

@@ -6,6 +6,7 @@ import queryString from 'query-string';
 import * as viewAsRedux from '@cdo/apps/code-studio/viewAsRedux';
 import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {initViewAs} from '@cdo/apps/code-studio/progress';
+import sinon from 'sinon';
 
 describe('bestResultLevelId', function () {
   var progressData;
@@ -46,8 +47,14 @@ describe('initViewAs', function () {
       dispatch: sinon.fake(),
     };
 
-    mockSetViewType = jest.spyOn(viewAsRedux, 'setViewType').mockClear().mockImplementation();
-    mockQueryStringParse = jest.spyOn(queryString, 'parse').mockClear().mockReturnValue({});
+    mockSetViewType = jest
+      .spyOn(viewAsRedux, 'setViewType')
+      .mockClear()
+      .mockImplementation();
+    mockQueryStringParse = jest
+      .spyOn(queryString, 'parse')
+      .mockClear()
+      .mockReturnValue({});
   });
 
   after(function () {
@@ -66,13 +73,17 @@ describe('initViewAs', function () {
   });
 
   it('prevents overriding default if current user is not an instructor', function () {
-    mockQueryStringParse.mockReturnValue({viewAs: viewAsRedux.ViewType.Instructor});
+    mockQueryStringParse.mockReturnValue({
+      viewAs: viewAsRedux.ViewType.Instructor,
+    });
     initViewAs(mockStore, true, false);
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
   });
 
   it('allows overriding default if current user is not a student', function () {
-    mockQueryStringParse.mockReturnValue({viewAs: viewAsRedux.ViewType.Instructor});
+    mockQueryStringParse.mockReturnValue({
+      viewAs: viewAsRedux.ViewType.Instructor,
+    });
 
     initViewAs(mockStore, null, false);
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
@@ -80,7 +91,9 @@ describe('initViewAs', function () {
     initViewAs(mockStore, true, true);
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
 
-    mockQueryStringParse.mockReturnValue({viewAs: viewAsRedux.ViewType.Participant});
+    mockQueryStringParse.mockReturnValue({
+      viewAs: viewAsRedux.ViewType.Participant,
+    });
 
     initViewAs(mockStore, true, true);
     assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));

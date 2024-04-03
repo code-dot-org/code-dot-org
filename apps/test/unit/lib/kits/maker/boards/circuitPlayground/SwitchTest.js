@@ -9,7 +9,9 @@ describe('Switch', () => {
   let fakeJohnnyFiveSwitch;
 
   before(() =>
-    jest.spyOn(Switch, '_constructFiveSwitchController').mockClear()
+    jest
+      .spyOn(Switch, '_constructFiveSwitchController')
+      .mockClear()
       .mockImplementation((board, pin) => {
         fakeJohnnyFiveSwitch = new FakeJohnnyFiveSwitch({board, pin});
         return fakeJohnnyFiveSwitch;

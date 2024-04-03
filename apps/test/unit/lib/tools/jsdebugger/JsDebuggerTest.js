@@ -56,7 +56,9 @@ describe('The JSDebugger component', () => {
 
     // Stub getTouchEventName to return valid event names as if we were in Chrome on a
     // mobile device, regardless of what browser the tests are running on.
-    jest.spyOn(dom, 'getTouchEventName').mockClear()
+    jest
+      .spyOn(dom, 'getTouchEventName')
+      .mockClear()
       .mockImplementation(name => dom.TOUCH_MAP[name]['standard']);
 
     ({addEventSpy, removeEventSpy} = getBodyEventSpies());
@@ -215,7 +217,8 @@ describe('The JSDebugger component', () => {
           beforeEach(() => {
             document.body.dispatchEvent(createMouseEvent('touchmove', 0, 120));
             addEventSpy
-              .withArgs('touchend').mock.calls.forEach(args => args[1](new CustomEvent('touchend')));
+              .withArgs('touchend')
+              .mock.calls.forEach(args => args[1](new CustomEvent('touchend')));
           });
 
           it('will stop responding to mouse move events', () => {
@@ -271,7 +274,8 @@ describe('The JSDebugger component', () => {
           beforeEach(() => {
             document.body.dispatchEvent(createMouseEvent('touchmove', -320, 0));
             addEventSpy
-              .withArgs('touchend').mock.calls.forEach(args => args[1](new CustomEvent('touchend')));
+              .withArgs('touchend')
+              .mock.calls.forEach(args => args[1](new CustomEvent('touchend')));
           });
 
           it('will stop responding to mouse move events', () => {

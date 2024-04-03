@@ -61,7 +61,9 @@ describe('EditableProjectName', () => {
     expect(wrapper.find('.project_save')).to.have.lengthOf(1);
 
     // Modifying the input and clicking save will update the name
-    const renameSpy = jest.spyOn(window.dashboard.project, 'rename').mockClear();
+    const renameSpy = jest
+      .spyOn(window.dashboard.project, 'rename')
+      .mockClear();
     wrapper.find('.project_name').getDOMNode().value = 'New Name';
     wrapper.find('.project_save').simulate('click');
     expect(renameSpy.calledOnce).to.be.true;
@@ -81,12 +83,17 @@ describe('EditableProjectName', () => {
 
   it('calls lab2 rename if lab2 projects are enabled', () => {
     const renameStub = jest.fn().mockReturnValue(Promise.resolve());
-    const projectManagerStub = sinon.createStubInstance(ProjectManager, {
+    const projectManagerStub = jest.mock(ProjectManager, {
       rename: renameStub,
     });
-    jest.spyOn(Lab2Registry, 'getInstance').mockClear()
+    jest
+      .spyOn(Lab2Registry, 'getInstance')
+      .mockClear()
       .mockReturnValue({getProjectManager: () => projectManagerStub});
-    jest.spyOn(Lab2Registry, 'hasEnabledProjects').mockClear().mockReturnValue(true);
+    jest
+      .spyOn(Lab2Registry, 'hasEnabledProjects')
+      .mockClear()
+      .mockReturnValue(true);
 
     const wrapper = mount(
       <Provider store={store}>

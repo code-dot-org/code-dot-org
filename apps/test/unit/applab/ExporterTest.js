@@ -13,6 +13,7 @@ var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
+import sinon from 'sinon';
 const assets = require('@cdo/apps/code-studio/assets');
 
 const WEBPACK_RUNTIME_JS_CONTENT = 'webpack-runtime.js content';
@@ -127,7 +128,9 @@ describe('Applab Exporter,', function () {
     server.respondWith('/blockly/media/third.jpg', 'blockly third.jpg content');
 
     // Needed to simulate fetch() response to '/projects/applab/fake_id/export_create_channel'
-    jest.spyOn(window, 'fetch').mockClear()
+    jest
+      .spyOn(window, 'fetch')
+      .mockClear()
       .mockReturnValue(
         Promise.resolve(
           new Response(JSON.stringify({channel_id: 'new_fake_id'}))

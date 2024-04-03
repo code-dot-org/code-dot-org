@@ -40,9 +40,14 @@ describe('getContainedLevelResultInfo', () => {
   let attemptedRunButtonClickListener;
 
   beforeEach(() => {
-    jest.spyOn(codeStudioLevels, 'getContainedLevelResult').mockClear()
+    jest
+      .spyOn(codeStudioLevels, 'getContainedLevelResult')
+      .mockClear()
       .mockReturnValue(containedLevelResult);
-    jest.spyOn(codeStudioLevels, 'hasValidContainedLevelResult').mockClear().mockImplementation();
+    jest
+      .spyOn(codeStudioLevels, 'hasValidContainedLevelResult')
+      .mockClear()
+      .mockImplementation();
     stubRedux();
     registerReducers(commonReducers);
 
@@ -61,8 +66,14 @@ describe('getContainedLevelResultInfo', () => {
     );
     document.body.appendChild(gameButtons);
 
-    jest.spyOn(codeStudioLevels, 'lockContainedLevelAnswers').mockClear().mockImplementation();
-    jest.spyOn(codeStudioLevels, 'registerAnswerChangedFn').mockClear().mockImplementation();
+    jest
+      .spyOn(codeStudioLevels, 'lockContainedLevelAnswers')
+      .mockClear()
+      .mockImplementation();
+    jest
+      .spyOn(codeStudioLevels, 'registerAnswerChangedFn')
+      .mockClear()
+      .mockImplementation();
     jest.spyOn(callouts, 'addCallouts').mockClear().mockImplementation();
     attemptedRunButtonClickListener = jest.fn();
     $(window).on('attemptedRunButtonClick', attemptedRunButtonClickListener);

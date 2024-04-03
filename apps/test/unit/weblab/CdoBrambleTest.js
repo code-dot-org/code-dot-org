@@ -77,9 +77,13 @@ describe('CdoBramble', () => {
   describe('initProject', () => {
     describe('with an existing project', () => {
       beforeEach(() => {
-        jest.spyOn(cdoBramble.api, 'getCurrentFileEntries').mockClear()
+        jest
+          .spyOn(cdoBramble.api, 'getCurrentFileEntries')
+          .mockClear()
           .mockReturnValue([{name: 'index.html'}]);
-        jest.spyOn(cdoBramble.api, 'getCurrentFilesVersionId').mockClear()
+        jest
+          .spyOn(cdoBramble.api, 'getCurrentFilesVersionId')
+          .mockClear()
           .mockReturnValue('a1b2c3');
       });
       afterEach(() => {
@@ -87,7 +91,9 @@ describe('CdoBramble', () => {
       });
 
       it('syncs files after creating root directory', () => {
-        jest.spyOn(cdoBramble, 'createProjectRootDir').mockClear()
+        jest
+          .spyOn(cdoBramble, 'createProjectRootDir')
+          .mockClear()
           .mockImplementation(callback => callback());
         jest.spyOn(cdoBramble, 'syncFiles').mockClear().mockImplementation();
         cdoBramble.initProject(() => {});
@@ -96,7 +102,9 @@ describe('CdoBramble', () => {
       });
 
       it('does not sync files if root directory creation fails', () => {
-        jest.spyOn(cdoBramble, 'createProjectRootDir').mockClear()
+        jest
+          .spyOn(cdoBramble, 'createProjectRootDir')
+          .mockClear()
           .mockImplementation(callback => callback(new Error()));
         jest.spyOn(cdoBramble, 'syncFiles').mockClear().mockImplementation();
         cdoBramble.initProject(() => {});
@@ -124,7 +132,10 @@ describe('CdoBramble', () => {
       beforeEach(() => {
         cdoBramble.lastSyncedVersionId = projectVersion;
         cdoBramble.recentChanges = [{operation: 'delete', file: 'old.html'}];
-        jest.spyOn(cdoBramble, 'recursivelySaveChangesToServer').mockClear().mockImplementation();
+        jest
+          .spyOn(cdoBramble, 'recursivelySaveChangesToServer')
+          .mockClear()
+          .mockImplementation();
 
         cdoBramble.syncFiles([{name: 'index.html'}], projectVersion, () => {});
       });
@@ -147,7 +158,10 @@ describe('CdoBramble', () => {
       beforeEach(() => {
         cdoBramble.lastSyncedVersionId = 'd4e5f6';
         cdoBramble.recentChanges = [{operation: 'change', file: 'index.html'}];
-        jest.spyOn(cdoBramble, 'overwriteProject').mockClear().mockImplementation();
+        jest
+          .spyOn(cdoBramble, 'overwriteProject')
+          .mockClear()
+          .mockImplementation();
       });
       afterEach(() => {
         jest.restoreAllMocks();
@@ -167,7 +181,10 @@ describe('CdoBramble', () => {
       });
 
       it('clears any registered beforeFirstWrite hook', () => {
-        jest.spyOn(cdoBramble.api, 'registerBeforeFirstWriteHook').mockClear().mockImplementation();
+        jest
+          .spyOn(cdoBramble.api, 'registerBeforeFirstWriteHook')
+          .mockClear()
+          .mockImplementation();
         cdoBramble.syncFiles([{name: 'index.html'}], projectVersion, () => {});
         expect(
           cdoBramble.api.registerBeforeFirstWriteHook
@@ -230,7 +247,9 @@ describe('CdoBramble', () => {
 
     it('no-ops if reading file errored', () => {
       const error = new Error('oh no');
-      jest.spyOn(cdoBramble, 'getFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getFileData')
+        .mockClear()
         .mockImplementation((path, callback) => callback(error, null));
       jest.spyOn(cdoBramble, 'domFromString').mockClear().mockImplementation();
       const callbackSpy = jest.fn();
@@ -242,7 +261,9 @@ describe('CdoBramble', () => {
     });
 
     it('invokes callback with disallowed content', () => {
-      jest.spyOn(cdoBramble, 'getFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getFileData')
+        .mockClear()
         .mockImplementation((path, callback) => callback(null, INVALID_HTML));
       const callbackSpy = jest.fn();
 
@@ -255,7 +276,9 @@ describe('CdoBramble', () => {
     });
 
     it('invokes callback with empty tags if no disallowed content is found', () => {
-      jest.spyOn(cdoBramble, 'getFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getFileData')
+        .mockClear()
         .mockImplementation((path, callback) => callback(null, VALID_HTML));
       const callbackSpy = jest.fn();
 
@@ -273,9 +296,14 @@ describe('CdoBramble', () => {
       jest.restoreAllMocks();
     });
     it('no-ops if detecting disallowed content errored', () => {
-      jest.spyOn(cdoBramble, 'detectDisallowedHtml').mockClear()
+      jest
+        .spyOn(cdoBramble, 'detectDisallowedHtml')
+        .mockClear()
         .mockImplementation((path, callback) => callback(new Error(), {}));
-      jest.spyOn(cdoBramble.api, 'openDisallowedHtmlDialog').mockClear().mockImplementation();
+      jest
+        .spyOn(cdoBramble.api, 'openDisallowedHtmlDialog')
+        .mockClear()
+        .mockImplementation();
       const callbackSpy = jest.fn();
 
       cdoBramble.preprocessHtml('/index.html', callbackSpy);
@@ -285,9 +313,14 @@ describe('CdoBramble', () => {
     });
 
     it('no-ops if no disallowed tags are detected', () => {
-      jest.spyOn(cdoBramble, 'detectDisallowedHtml').mockClear()
+      jest
+        .spyOn(cdoBramble, 'detectDisallowedHtml')
+        .mockClear()
         .mockImplementation((path, callback) => callback(null, {tags: []}));
-      jest.spyOn(cdoBramble.api, 'openDisallowedHtmlDialog').mockClear().mockImplementation();
+      jest
+        .spyOn(cdoBramble.api, 'openDisallowedHtmlDialog')
+        .mockClear()
+        .mockImplementation();
       const callbackSpy = jest.fn();
 
       cdoBramble.preprocessHtml('/index.html', callbackSpy);
@@ -305,13 +338,19 @@ describe('CdoBramble', () => {
         enableReadOnly: jest.fn(),
         disableReadOnly: jest.fn(),
       };
-      jest.spyOn(cdoBramble, 'detectDisallowedHtml').mockClear()
+      jest
+        .spyOn(cdoBramble, 'detectDisallowedHtml')
+        .mockClear()
         .mockImplementation((path, callback) =>
           callback(null, {tags: disallowedTags, newDom})
         );
-      jest.spyOn(cdoBramble.api, 'openDisallowedHtmlDialog').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'openDisallowedHtmlDialog')
+        .mockClear()
         .mockImplementation((filename, tags, onClose) => onClose());
-      jest.spyOn(cdoBramble, 'writeFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'writeFileData')
+        .mockClear()
         .mockImplementation((path, data, callback) => callback());
       const callbackSpy = jest.fn();
 
@@ -394,9 +433,13 @@ describe('CdoBramble', () => {
         {name: 'index.html', data: '<div></div>'},
         {name: 'style.css', data: '* {margin: 0;}'},
       ];
-      jest.spyOn(cdoBramble, 'getAllFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getAllFileData')
+        .mockClear()
         .mockImplementation(callback => callback(null, fileData));
-      jest.spyOn(cdoBramble.api, 'changeProjectFile').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'changeProjectFile')
+        .mockClear()
         .mockImplementation((filename, fileData, callback) =>
           callback(null, 'new-version-id')
         );
@@ -415,7 +458,9 @@ describe('CdoBramble', () => {
 
     it('exits early if files cannot be read', done => {
       cdoBramble.getAllFileData.mockRestore();
-      jest.spyOn(cdoBramble, 'getAllFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getAllFileData')
+        .mockClear()
         .mockImplementation(callback => callback(new Error(), null));
 
       cdoBramble.uploadAllFilesToServer((error, wasSuccessful) => {
@@ -429,7 +474,9 @@ describe('CdoBramble', () => {
 
     it('exits early if file fails to save to server', done => {
       cdoBramble.api.changeProjectFile.mockRestore();
-      jest.spyOn(cdoBramble.api, 'changeProjectFile').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'changeProjectFile')
+        .mockClear()
         .mockImplementation((filename, fileData, callback) =>
           callback(new Error(), null)
         );
@@ -446,13 +493,21 @@ describe('CdoBramble', () => {
 
   describe('recursivelySaveChangesToServer', () => {
     beforeEach(() => {
-      jest.spyOn(cdoBramble.api, 'deleteProjectFile').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'deleteProjectFile')
+        .mockClear()
         .mockImplementation((filename, callback) => callback());
-      jest.spyOn(cdoBramble.api, 'renameProjectFile').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'renameProjectFile')
+        .mockClear()
         .mockImplementation((oldFilename, newFilename, callback) => callback());
-      jest.spyOn(cdoBramble, 'getFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getFileData')
+        .mockClear()
         .mockImplementation((path, callback) => callback(null, 'my file data'));
-      jest.spyOn(cdoBramble.api, 'changeProjectFile').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'changeProjectFile')
+        .mockClear()
         .mockImplementation((filename, fileData, callback) => callback());
     });
 
@@ -504,8 +559,12 @@ describe('CdoBramble', () => {
 
     it('saves the next change if a change fails to save', done => {
       cdoBramble.api.deleteProjectFile.mockRestore();
-      jest.spyOn(cdoBramble.api, 'deleteProjectFile').mockClear()
-        .mockImplementation((filename, callback) => callback(new Error(), null));
+      jest
+        .spyOn(cdoBramble.api, 'deleteProjectFile')
+        .mockClear()
+        .mockImplementation((filename, callback) =>
+          callback(new Error(), null)
+        );
 
       const changes = [
         {operation: 'delete', file: 'style.css'},
@@ -521,7 +580,9 @@ describe('CdoBramble', () => {
 
     it('updates lastSyncedVersionId if received from the server', done => {
       cdoBramble.api.renameProjectFile.mockRestore();
-      jest.spyOn(cdoBramble.api, 'renameProjectFile').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'renameProjectFile')
+        .mockClear()
         .mockImplementation((oldFilename, newFilename, callback) =>
           callback(null, 'new-version-id')
         );
@@ -544,9 +605,13 @@ describe('CdoBramble', () => {
 
   describe('recursivelyWriteFiles', () => {
     beforeEach(() => {
-      jest.spyOn(cdoBramble, 'downloadFile').mockClear()
+      jest
+        .spyOn(cdoBramble, 'downloadFile')
+        .mockClear()
         .mockImplementation((url, callback) => callback('my file data', null));
-      jest.spyOn(cdoBramble, 'writeFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'writeFileData')
+        .mockClear()
         .mockImplementation((path, data, callback) => callback(null));
     });
     afterEach(() => {
@@ -561,21 +626,25 @@ describe('CdoBramble', () => {
       cdoBramble.recursivelyWriteFiles(files, 0, () => {
         expect(cdoBramble.downloadFile).to.have.been.calledTwice;
         assert(
-          cdoBramble.downloadFile.mock.calls[0]
-            .calledWith('/v3/files/a1b2c3/index.html?version=1')
+          cdoBramble.downloadFile.mock.calls[0].calledWith(
+            '/v3/files/a1b2c3/index.html?version=1'
+          )
         );
         assert(
-          cdoBramble.downloadFile.mock.calls[1]
-            .calledWith('/v3/files/a1b2c3/style.css')
+          cdoBramble.downloadFile.mock.calls[1].calledWith(
+            '/v3/files/a1b2c3/style.css'
+          )
         );
         expect(cdoBramble.writeFileData).to.have.been.calledTwice;
         assert(
-          cdoBramble.writeFileData.mock.calls[0]
-            .calledWith(projectPath + 'index.html')
+          cdoBramble.writeFileData.mock.calls[0].calledWith(
+            projectPath + 'index.html'
+          )
         );
         assert(
-          cdoBramble.writeFileData.mock.calls[1]
-            .calledWith(projectPath + 'style.css')
+          cdoBramble.writeFileData.mock.calls[1].calledWith(
+            projectPath + 'style.css'
+          )
         );
         expect(console.error).not.to.have.been.called;
         done();
@@ -598,7 +667,10 @@ describe('CdoBramble', () => {
 
     it('writes the next file if a file fails to download', done => {
       cdoBramble.downloadFile.mockRestore();
-      const downloadFileStub = jest.spyOn(cdoBramble, 'downloadFile').mockClear().mockImplementation();
+      const downloadFileStub = jest
+        .spyOn(cdoBramble, 'downloadFile')
+        .mockClear()
+        .mockImplementation();
       downloadFileStub
         .onFirstCall()
         .callsFake((url, callback) => callback(null, new Error()));
@@ -620,9 +692,13 @@ describe('CdoBramble', () => {
 
   describe('recursivelyWriteSourceFiles', () => {
     beforeEach(() => {
-      jest.spyOn(cdoBramble, 'downloadFile').mockClear()
+      jest
+        .spyOn(cdoBramble, 'downloadFile')
+        .mockClear()
         .mockImplementation((url, callback) => callback('my file data', null));
-      jest.spyOn(cdoBramble, 'writeFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'writeFileData')
+        .mockClear()
         .mockImplementation((path, data, callback) => callback(null));
     });
     afterEach(() => {
@@ -678,7 +754,9 @@ describe('CdoBramble', () => {
 
     it('writes next file if a file fails', done => {
       cdoBramble.downloadFile.mockRestore();
-      jest.spyOn(cdoBramble, 'downloadFile').mockClear()
+      jest
+        .spyOn(cdoBramble, 'downloadFile')
+        .mockClear()
         .mockImplementation((url, callback) => callback(null, new Error()));
 
       const files = [
@@ -698,7 +776,10 @@ describe('CdoBramble', () => {
   describe('validateProjectChanged', () => {
     beforeEach(() => {
       const startSources = {files: [{name: 'index.html', data: '<div></div>'}]};
-      jest.spyOn(cdoBramble.api, 'getStartSources').mockClear().mockReturnValue(startSources);
+      jest
+        .spyOn(cdoBramble.api, 'getStartSources')
+        .mockClear()
+        .mockReturnValue(startSources);
     });
     afterEach(() => {
       jest.restoreAllMocks();
@@ -706,7 +787,9 @@ describe('CdoBramble', () => {
 
     it('is true if source files and user files have different lengths', done => {
       const userFiles = [{name: 'index.html'}, {name: 'style.css'}];
-      jest.spyOn(cdoBramble, 'getAllFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getAllFileData')
+        .mockClear()
         .mockImplementation(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
@@ -717,7 +800,9 @@ describe('CdoBramble', () => {
 
     it('is true if user files are missing a file in source files', done => {
       const userFiles = [{name: 'style.css'}];
-      jest.spyOn(cdoBramble, 'getAllFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getAllFileData')
+        .mockClear()
         .mockImplementation(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
@@ -728,7 +813,9 @@ describe('CdoBramble', () => {
 
     it('is true if file data is different between source and user files', done => {
       const userFiles = [{name: 'index.html', data: '<p></p>'}];
-      jest.spyOn(cdoBramble, 'getAllFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getAllFileData')
+        .mockClear()
         .mockImplementation(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
@@ -749,8 +836,13 @@ describe('CdoBramble', () => {
         {name: 'other.html', data: '<p></p>'},
       ];
       cdoBramble.api.getStartSources.mockRestore();
-      jest.spyOn(cdoBramble.api, 'getStartSources').mockClear().mockReturnValue(startSources);
-      jest.spyOn(cdoBramble, 'getAllFileData').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'getStartSources')
+        .mockClear()
+        .mockReturnValue(startSources);
+      jest
+        .spyOn(cdoBramble, 'getAllFileData')
+        .mockClear()
         .mockImplementation(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
@@ -765,9 +857,13 @@ describe('CdoBramble', () => {
         {name: 'other.html', data: '<p></p>'},
       ];
       cdoBramble.api.getStartSources.mockRestore();
-      jest.spyOn(cdoBramble.api, 'getStartSources').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'getStartSources')
+        .mockClear()
         .mockReturnValue({files: [...files]});
-      jest.spyOn(cdoBramble, 'getAllFileData').mockClear()
+      jest
+        .spyOn(cdoBramble, 'getAllFileData')
+        .mockClear()
         .mockImplementation(callback => callback(null, [...files]));
 
       cdoBramble.validateProjectChanged(projectChanged => {
@@ -782,8 +878,13 @@ describe('CdoBramble', () => {
       };
       const userFiles = [{name: 'img.png', data: 'stringified-image-data'}];
       cdoBramble.api.getStartSources.mockRestore();
-      jest.spyOn(cdoBramble.api, 'getStartSources').mockClear().mockReturnValue(startSources);
-      jest.spyOn(cdoBramble, 'getAllFileData').mockClear()
+      jest
+        .spyOn(cdoBramble.api, 'getStartSources')
+        .mockClear()
+        .mockReturnValue(startSources);
+      jest
+        .spyOn(cdoBramble, 'getAllFileData')
+        .mockClear()
         .mockImplementation(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {

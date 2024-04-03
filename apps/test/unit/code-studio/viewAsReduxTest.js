@@ -21,7 +21,10 @@ describe('viewAs redux', () => {
     registerReducers({viewAs: reducer});
     store = getStore();
 
-    jest.spyOn(codeStudioUtils, 'updateQueryParam').mockClear().mockImplementation();
+    jest
+      .spyOn(codeStudioUtils, 'updateQueryParam')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {
@@ -72,8 +75,10 @@ describe('viewAs redux', () => {
 
   describe('with stubs', () => {
     before(() => {
-      stub(appsUtils, 'reload');
-      stub(codeStudioUtils, 'queryParams').callsFake(() => 'fake_user_id');
+      jest.spyOn(appsUtils, 'reload');
+      jest
+        .spyOn(codeStudioUtils, 'queryParams')
+        .callsFake(() => 'fake_user_id');
     });
 
     after(() => {

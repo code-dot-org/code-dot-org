@@ -13,7 +13,10 @@ describe('DropletBlockTooltipManager', () => {
   describe('getTooltipHTML', () => {
     it('should render localized string for "Show Code"', () => {
       // Stub the i18n calls.
-      jest.spyOn(commonI18n, 'showGeneratedCode').mockClear().mockReturnValue('i18n-show-code');
+      jest
+        .spyOn(commonI18n, 'showGeneratedCode')
+        .mockClear()
+        .mockReturnValue('i18n-show-code');
 
       // Mock a DropletTooltipManager.
       let dropletConfig = {};
@@ -37,7 +40,10 @@ describe('DropletBlockTooltipManager', () => {
 
     it('should render localized string for "Examples"', () => {
       // Stub the i18n calls.
-      jest.spyOn(commonI18n, 'examples').mockClear().mockReturnValue('i18n-examples');
+      jest
+        .spyOn(commonI18n, 'examples')
+        .mockClear()
+        .mockReturnValue('i18n-examples');
 
       // Mock a DropletTooltipManager.
       let dropletConfig = {};

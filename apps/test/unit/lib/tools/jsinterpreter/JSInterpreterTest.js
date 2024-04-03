@@ -404,8 +404,9 @@ myCallback("this message is coming from inside the interpreter");
   describe('basic usage when studioApp.hideSource = false', () => {
     let aceGetSessionStub;
     beforeEach(() => {
-      aceGetSessionStub = jest.fn()
-        .mockReturnValue({getBreakpoints: () => [false, false, true, false, true]});
+      aceGetSessionStub = jest.fn().mockReturnValue({
+        getBreakpoints: () => [false, false, true, false, true],
+      });
       jsInterpreter = new JSInterpreter({
         studioApp: {
           editor: {
@@ -611,7 +612,9 @@ myCallback("this message is coming from inside the interpreter");
           it('will remove the highlight marker for the most recent highlight', () => {
             expect(
               aceEditor.getSession().removeMarker.mock.lastCall[0]
-            ).to.equal(aceEditor.getSession().addMarker.mock.lastCall.returnValue);
+            ).to.equal(
+              aceEditor.getSession().addMarker.mock.lastCall.returnValue
+            );
           });
         });
       });
@@ -904,7 +907,9 @@ myCallback("this message is coming from inside the interpreter");
           it('will remove the highlight marker for the most recent highlight', () => {
             expect(
               aceEditor.getSession().removeMarker.mock.lastCall[0]
-            ).to.equal(aceEditor.getSession().addMarker.mock.lastCall.returnValue);
+            ).to.equal(
+              aceEditor.getSession().addMarker.mock.lastCall.returnValue
+            );
           });
           it('will make the interpreter no longer paused', () => {
             expect(jsInterpreter.paused).to.be.false;

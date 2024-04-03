@@ -70,7 +70,10 @@ describe('GameLab', () => {
       describe('Muting', () => {
         let unmuteSpy;
         beforeEach(() => {
-          unmuteSpy = jest.spyOn(Sounds.getSingleton(), 'unmuteURLs').mockClear().mockImplementation();
+          unmuteSpy = jest
+            .spyOn(Sounds.getSingleton(), 'unmuteURLs')
+            .mockClear()
+            .mockImplementation();
           instance.p5Wrapper.p5 = jest.fn();
           instance.p5Wrapper.p5.allSprites = jest.fn();
           instance.p5Wrapper.p5.allSprites.removeSprites = jest.fn();

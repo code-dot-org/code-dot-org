@@ -4,6 +4,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {isolateComponent} from 'isolate-react';
 import {PROGRAM_CSD} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import $ from 'jquery';
+import sinon from 'sinon';
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;
@@ -273,14 +274,21 @@ describe('FormController', () => {
     });
 
     it('Shows apps closed message if RP has closed applications', async () => {
-      jest.spyOn(window, 'fetch').mockClear().mockReturnValue(
-        Promise.resolve({
-          ok: true,
-          json: () => {
-            return {id: 1, pl_programs_offered: ['CSD'], are_apps_closed: true};
-          },
-        })
-      );
+      jest
+        .spyOn(window, 'fetch')
+        .mockClear()
+        .mockReturnValue(
+          Promise.resolve({
+            ok: true,
+            json: () => {
+              return {
+                id: 1,
+                pl_programs_offered: ['CSD'],
+                are_apps_closed: true,
+              };
+            },
+          })
+        );
 
       const initialData = {
         school: 'New School',
@@ -290,7 +298,7 @@ describe('FormController', () => {
       form = isolateComponent(
         <FormController {...defaultProps} getInitialData={() => initialData} />
       );
-      await clock.runAllAsync();
+      jest.runAllTimers();
 
       const alerts = form.findAll('Alert');
       expect(alerts).to.have.length(1);
@@ -307,7 +315,11 @@ describe('FormController', () => {
           return Promise.resolve({
             ok: true,
             json: () => {
-              return {id: 1, pl_programs_offered: ['CSD'], are_apps_closed: true};
+              return {
+                id: 1,
+                pl_programs_offered: ['CSD'],
+                are_apps_closed: true,
+              };
             },
           });
         }
@@ -335,7 +347,7 @@ describe('FormController', () => {
       form = isolateComponent(
         <FormController {...defaultProps} getInitialData={() => initialData} />
       );
-      await clock.runAllAsync();
+      jest.runAllTimers();
 
       const alerts = form.findAll('Alert');
       expect(alerts).to.have.length(1);
@@ -345,7 +357,7 @@ describe('FormController', () => {
 
       const page = form.findOne('DummyPage1');
       page.props.onChange({school: 'Updated school'});
-      await clock.runAllAsync();
+      jest.runAllTimers();
 
       expect(form.findAll('Alert')).to.have.length(0);
 

@@ -50,7 +50,10 @@ describe('PoemEditor', () => {
     });
 
     it('is successful if no profanity', () => {
-      jest.spyOn(utils, 'findProfanity').mockClear().mockReturnValue($.Deferred().resolve(null));
+      jest
+        .spyOn(utils, 'findProfanity')
+        .mockClear()
+        .mockReturnValue($.Deferred().resolve(null));
       const wrapper = mount(<PoemEditor isOpen handleClose={handleCloseSpy} />);
 
       // Update title, author, and poem and save.
@@ -71,7 +74,10 @@ describe('PoemEditor', () => {
     });
 
     it('is successful on server failure', () => {
-      jest.spyOn(utils, 'findProfanity').mockClear().mockReturnValue($.Deferred().reject());
+      jest
+        .spyOn(utils, 'findProfanity')
+        .mockClear()
+        .mockReturnValue($.Deferred().reject());
       const wrapper = mount(<PoemEditor isOpen handleClose={handleCloseSpy} />);
 
       // Update title, author, and poem and save.
@@ -92,7 +98,9 @@ describe('PoemEditor', () => {
     });
 
     it('is unsuccessful if profanity', () => {
-      jest.spyOn(utils, 'findProfanity').mockClear()
+      jest
+        .spyOn(utils, 'findProfanity')
+        .mockClear()
         .mockReturnValue($.Deferred().resolve(['swear']));
       const wrapper = mount(<PoemEditor isOpen handleClose={handleCloseSpy} />);
 

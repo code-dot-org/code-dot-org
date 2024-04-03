@@ -5,6 +5,7 @@ import {
   studio,
   metaTagDescription,
 } from '@cdo/apps/lib/util/urlHelpers';
+import sinon from 'sinon';
 
 describe('pegasus()', () => {
   describe('from dashboard', () => {

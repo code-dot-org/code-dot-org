@@ -16,6 +16,7 @@ import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+import sinon from 'sinon';
 
 describe('maker/commands.js - CircuitPlayground', () => {
   let stubBoardController, errorHandler;

@@ -33,9 +33,13 @@ describe.skip('DownloadReplayVideoButton', () => {
     );
 
     checkVideoSpy = jest.spyOn(wrapper.instance(), 'checkVideo').mockClear();
-    checkVideoUntilSuccessSpy = jest.spyOn(wrapper.instance(), 'checkVideoUntilSuccess').mockClear();
+    checkVideoUntilSuccessSpy = jest
+      .spyOn(wrapper.instance(), 'checkVideoUntilSuccess')
+      .mockClear();
     fetchSpy = jest.spyOn(window, 'fetch').mockClear();
-    tryDownloadVideoSpy = jest.spyOn(wrapper.instance(), 'tryDownloadVideo').mockClear();
+    tryDownloadVideoSpy = jest
+      .spyOn(wrapper.instance(), 'tryDownloadVideo')
+      .mockClear();
   });
 
   afterEach(function () {
@@ -95,9 +99,7 @@ describe.skip('DownloadReplayVideoButton', () => {
 
     expect(tryDownloadVideoSpy).toHaveBeenCalledTimes(1);
     expect(fetchSpy).toHaveBeenCalledTimes(1);
-    expect(
-      fetchSpy
-    ).toHaveBeenCalledWith(wrapper.instance().getVideoUrl(), {
+    expect(fetchSpy).toHaveBeenCalledWith(wrapper.instance().getVideoUrl(), {
       method: 'GET',
     });
   });
@@ -111,9 +113,7 @@ describe.skip('DownloadReplayVideoButton', () => {
 
     expect(tryDownloadVideoSpy).toHaveBeenCalledTimes(1);
     expect(fetchSpy).toHaveBeenCalledTimes(1);
-    expect(
-      fetchSpy
-    ).toHaveBeenCalledWith(wrapper.instance().getVideoUrl(), {
+    expect(fetchSpy).toHaveBeenCalledWith(wrapper.instance().getVideoUrl(), {
       method: 'HEAD',
     });
   });

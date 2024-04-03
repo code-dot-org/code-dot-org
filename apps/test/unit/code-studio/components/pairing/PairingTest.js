@@ -3,6 +3,7 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
+import sinon from 'sinon';
 
 describe('Pairing component', function () {
   function createDomElement() {

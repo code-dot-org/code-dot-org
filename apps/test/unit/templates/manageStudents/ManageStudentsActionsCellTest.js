@@ -69,10 +69,15 @@ describe('ManageStudentsActionsCell', () => {
 
   describe('onDelete', () => {
     beforeEach(() => {
-      jest.spyOn($, 'ajax').mockClear().mockReturnValue({
-        done: jest.fn().mockImplementation((...args) => args[0]())
-          .mockReturnValue({fail: () => {}}),
-      });
+      jest
+        .spyOn($, 'ajax')
+        .mockClear()
+        .mockReturnValue({
+          done: jest
+            .fn()
+            .mockImplementation((...args) => args[0]())
+            .mockReturnValue({fail: () => {}}),
+        });
     });
 
     afterEach(() => {

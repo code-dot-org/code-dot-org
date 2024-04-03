@@ -55,7 +55,7 @@ describe('Petition on submit', () => {
 
   beforeEach(() => {
     jest.spyOn($, 'ajax').mockClear();
-    window.ga = sinon.fake();
+    window.ga = jest.fn();
   });
 
   afterEach(() => {

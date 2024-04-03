@@ -1,5 +1,6 @@
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
+import sinon from 'sinon';
 
 describe('BackpackClientApi', () => {
   const channelId = 'fake_channel_id';
@@ -34,7 +35,10 @@ describe('BackpackClientApi', () => {
     beforeEach(() => {
       server = sinon.fakeServer.create();
       backpackClientApi = new BackpackClientApi(channelId);
-      fetchChannelIdStub = jest.spyOn(backpackClientApi, 'fetchChannelId').mockClear().mockImplementation();
+      fetchChannelIdStub = jest
+        .spyOn(backpackClientApi, 'fetchChannelId')
+        .mockClear()
+        .mockImplementation();
       errorCallback = sinon.fake();
       successCallback = sinon.fake();
     });
@@ -120,7 +124,10 @@ describe('BackpackClientApi', () => {
     beforeEach(() => {
       server = sinon.fakeServer.create();
       backpackClientApi = new BackpackClientApi();
-      fetchChannelIdStub = jest.spyOn(backpackClientApi, 'fetchChannelId').mockClear().mockImplementation();
+      fetchChannelIdStub = jest
+        .spyOn(backpackClientApi, 'fetchChannelId')
+        .mockClear()
+        .mockImplementation();
       errorCallback = sinon.fake();
       successCallback = sinon.fake();
     });

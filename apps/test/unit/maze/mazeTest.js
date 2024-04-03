@@ -35,9 +35,18 @@ describe('Maze', function () {
     let getActionsSpy;
 
     beforeEach(function () {
-      animateActionSpy = jest.spyOn(maze, 'animateAction_').mockClear().mockImplementation();
-      finishAnimationsSpy = jest.spyOn(maze, 'finishAnimations_').mockClear().mockImplementation();
-      getActionsSpy = jest.spyOn(maze.executionInfo, 'getActions').mockClear().mockImplementation();
+      animateActionSpy = jest
+        .spyOn(maze, 'animateAction_')
+        .mockClear()
+        .mockImplementation();
+      finishAnimationsSpy = jest
+        .spyOn(maze, 'finishAnimations_')
+        .mockClear()
+        .mockImplementation();
+      getActionsSpy = jest
+        .spyOn(maze.executionInfo, 'getActions')
+        .mockClear()
+        .mockImplementation();
       getActionsSpy.mockReturnValue(new Array(2));
     });
 
@@ -57,7 +66,10 @@ describe('Maze', function () {
     });
 
     it('can be rate-adjusted', function () {
-      const scheduleSingleAnimationSpy = jest.spyOn(maze, 'scheduleSingleAnimation_').mockClear().mockImplementation();
+      const scheduleSingleAnimationSpy = jest
+        .spyOn(maze, 'scheduleSingleAnimation_')
+        .mockClear()
+        .mockImplementation();
 
       expect(finishAnimationsSpy.called).to.be.false;
 
@@ -89,7 +101,10 @@ describe('Maze', function () {
     });
 
     it('can be canceled by a reset', function () {
-      const controllerResetSpy = jest.spyOn(maze.controller, 'reset').mockClear().mockImplementation();
+      const controllerResetSpy = jest
+        .spyOn(maze.controller, 'reset')
+        .mockClear()
+        .mockImplementation();
 
       maze.scheduleAnimations_(false);
       expect(finishAnimationsSpy.called).to.be.false;

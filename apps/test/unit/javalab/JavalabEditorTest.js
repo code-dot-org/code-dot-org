@@ -72,9 +72,11 @@ describe('Java Lab Editor Test', () => {
       })
     );
 
-    backpackApiStub = sinon.createStubInstance(BackpackClientApi);
+    backpackApiStub = jest.spyOn(BackpackClientApi);
     backpackApiStub.hasBackpack.mockReturnValue(true);
-    backpackApiStub.getFileList.mockImplementation((...args) => args[1](['backpackFile.java']));
+    backpackApiStub.getFileList.mockImplementation((...args) =>
+      args[1](['backpackFile.java'])
+    );
 
     store.dispatch(setBackpackEnabled(true));
   });

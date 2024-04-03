@@ -15,7 +15,9 @@ describe('achievements', () => {
 
   describe('usingHints', () => {
     it('is achieved if you used one hint', () => {
-      const stub = jest.spyOn(authoredHintUtils, 'currentOpenedHintCount').mockClear()
+      const stub = jest
+        .spyOn(authoredHintUtils, 'currentOpenedHintCount')
+        .mockClear()
         .mockImplementation(() => 1);
       const state = {
         pageConstants: {
@@ -32,7 +34,9 @@ describe('achievements', () => {
     });
 
     it('is not achieved if you used too many hints', () => {
-      const stub = jest.spyOn(authoredHintUtils, 'currentOpenedHintCount').mockClear()
+      const stub = jest
+        .spyOn(authoredHintUtils, 'currentOpenedHintCount')
+        .mockClear()
         .mockImplementation(() => 3);
       const state = {
         pageConstants: {

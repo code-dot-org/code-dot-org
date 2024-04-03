@@ -10,7 +10,10 @@ describe('GoogleChartWrapper', () => {
     let spy;
     beforeEach(() => {
       GoogleChart.lib = {};
-      spy = jest.spyOn(GoogleChart.prototype, 'drawChart').mockClear().mockImplementation();
+      spy = jest
+        .spyOn(GoogleChart.prototype, 'drawChart')
+        .mockClear()
+        .mockImplementation();
     });
     afterEach(() => {
       spy.mockRestore();

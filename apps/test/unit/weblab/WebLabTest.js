@@ -95,9 +95,12 @@ describe('WebLab', () => {
     });
 
     it('rejects with error showing deleteAll succeeded when filesApi deleteAll succeeds', async () => {
-      jest.spyOn(filesApi, 'deleteAll').mockClear().mockImplementation((success, error) => {
-        success({responseText: 'yay'});
-      });
+      jest
+        .spyOn(filesApi, 'deleteAll')
+        .mockClear()
+        .mockImplementation((success, error) => {
+          success({responseText: 'yay'});
+        });
       weblab.fileEntries = 'entries';
       expect(config.afterClearPuzzle()).to.eventually.be.rejectedWith(
         'deleteAll succeeded, weblab handling reload to avoid saving'
@@ -107,9 +110,12 @@ describe('WebLab', () => {
     });
 
     it('rejects with error showing deleteAll failed when filesApi deleteAll fails', async () => {
-      jest.spyOn(filesApi, 'deleteAll').mockClear().mockImplementation((success, error) => {
-        error({status: 'status'});
-      });
+      jest
+        .spyOn(filesApi, 'deleteAll')
+        .mockClear()
+        .mockImplementation((success, error) => {
+          error({status: 'status'});
+        });
       jest.spyOn(console, 'warn').mockClear().mockImplementation();
       weblab.fileEntries = 'entries';
       expect(config.afterClearPuzzle()).to.eventually.be.rejectedWith('status');
@@ -133,14 +139,20 @@ describe('WebLab', () => {
     });
 
     it('disables inspector if inspectorOn', () => {
-      jest.spyOn(getStore(), 'getState').mockClear().mockReturnValue({inspectorOn: true});
+      jest
+        .spyOn(getStore(), 'getState')
+        .mockClear()
+        .mockReturnValue({inspectorOn: true});
       weblab.onToggleInspector();
       expect(brambleHost.disableInspector).to.have.been.calledOnce;
       getStore().getState.mockRestore();
     });
 
     it('enables inspector if inspectorOn false', () => {
-      jest.spyOn(getStore(), 'getState').mockClear().mockReturnValue({inspectorOn: false});
+      jest
+        .spyOn(getStore(), 'getState')
+        .mockClear()
+        .mockReturnValue({inspectorOn: false});
       weblab.onToggleInspector();
       expect(brambleHost.enableInspector).to.have.been.calledOnce;
       getStore().getState.mockRestore();
@@ -154,10 +166,22 @@ describe('WebLab', () => {
         containerId: 'container-id',
       };
       weblab.studioApp_ = studioApp();
-      jest.spyOn(studioApp(), 'setConfigValues_').mockClear().mockImplementation();
-      jest.spyOn(studioApp(), 'initProjectTemplateWorkspaceIconCallout').mockClear().mockImplementation();
-      jest.spyOn(studioApp(), 'alertIfCompletedWhilePairing').mockClear().mockImplementation();
-      jest.spyOn(studioApp(), 'initVersionHistoryUI').mockClear().mockImplementation();
+      jest
+        .spyOn(studioApp(), 'setConfigValues_')
+        .mockClear()
+        .mockImplementation();
+      jest
+        .spyOn(studioApp(), 'initProjectTemplateWorkspaceIconCallout')
+        .mockClear()
+        .mockImplementation();
+      jest
+        .spyOn(studioApp(), 'alertIfCompletedWhilePairing')
+        .mockClear()
+        .mockImplementation();
+      jest
+        .spyOn(studioApp(), 'initVersionHistoryUI')
+        .mockClear()
+        .mockImplementation();
       jest.spyOn(studioApp(), 'initTimeSpent').mockClear().mockImplementation();
       weblab.level = {unsubmitUrl: 'url'};
       jest.spyOn(dom, 'addClickTouchEvent').mockClear().mockImplementation();
@@ -169,22 +193,32 @@ describe('WebLab', () => {
 
     it('adds clickTouchEvent 3 times if there is a finishButton', () => {
       const finishButton = {className: 'test'};
-      jest.spyOn(document, 'getElementById').mockClear().mockReturnValue(finishButton);
+      jest
+        .spyOn(document, 'getElementById')
+        .mockClear()
+        .mockReturnValue(finishButton);
       weblab.onMount(config);
       expect(dom.addClickTouchEvent).to.have.been.calledWith(finishButton);
       document.getElementById.mockRestore();
     });
 
     it('adds clickTouchEvent 2 times if there is no finishButton', () => {
-      jest.spyOn(document, 'getElementById').mockClear()
+      jest
+        .spyOn(document, 'getElementById')
+        .mockClear()
         .onCall(0)
-        .mockReturnValue({className: 'test'}).mockImplementation(() => {
-        if (jest.spyOn(document, 'getElementById').mockClear()
-          .onCall(0)
-          .mockReturnValue({className: 'test'}).mock.calls.length === 1) {
-          return null;
-        }
-      });
+        .mockReturnValue({className: 'test'})
+        .mockImplementation(() => {
+          if (
+            jest
+              .spyOn(document, 'getElementById')
+              .mockClear()
+              .onCall(0)
+              .mockReturnValue({className: 'test'}).mock.calls.length === 1
+          ) {
+            return null;
+          }
+        });
       weblab.onMount(config);
       expect(dom.addClickTouchEvent).to.not.have.been.called;
       document.getElementById.mockRestore();
@@ -202,14 +236,20 @@ describe('WebLab', () => {
     });
 
     it('disables inspector if inspectorOn', () => {
-      jest.spyOn(getStore(), 'getState').mockClear().mockReturnValue({inspectorOn: true});
+      jest
+        .spyOn(getStore(), 'getState')
+        .mockClear()
+        .mockReturnValue({inspectorOn: true});
       weblab.onStartFullScreenPreview();
       expect(brambleHost.disableInspector).to.have.been.calledOnce;
       getStore().getState.mockRestore();
     });
 
     it('dispatches the changeFullScreenPreviewOn action', () => {
-      jest.spyOn(getStore(), 'getState').mockClear().mockReturnValue({inspectorOn: true});
+      jest
+        .spyOn(getStore(), 'getState')
+        .mockClear()
+        .mockReturnValue({inspectorOn: true});
       weblab.onStartFullScreenPreview();
       expect(getStore().dispatch).to.have.been.calledWith(
         changeFullScreenPreviewOn(true)
@@ -234,7 +274,10 @@ describe('WebLab', () => {
     });
 
     it('triggers an autosave if there are unsaved changes', () => {
-      jest.spyOn(project, 'hasOwnerChangedProject').mockClear().mockReturnValue(true);
+      jest
+        .spyOn(project, 'hasOwnerChangedProject')
+        .mockClear()
+        .mockReturnValue(true);
 
       weblab.beforeUnload(eventStub);
 
@@ -246,7 +289,10 @@ describe('WebLab', () => {
     });
 
     it('deletes event returnValue if there are no unsaved changes', () => {
-      jest.spyOn(project, 'hasOwnerChangedProject').mockClear().mockReturnValue(false);
+      jest
+        .spyOn(project, 'hasOwnerChangedProject')
+        .mockClear()
+        .mockReturnValue(false);
       eventStub.returnValue = 'I should be deleted!';
 
       weblab.beforeUnload(eventStub);
@@ -263,7 +309,10 @@ describe('WebLab', () => {
     let reportStub;
 
     beforeEach(() => {
-      reportStub = jest.spyOn(weblab, 'reportResult').mockClear().mockImplementation();
+      reportStub = jest
+        .spyOn(weblab, 'reportResult')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
@@ -299,7 +348,11 @@ describe('WebLab', () => {
     };
 
     beforeEach(() => {
-      jest.spyOn(project, 'autosave').mockClear().mockImplementation().mockImplementation((...args) => args[0]());
+      jest
+        .spyOn(project, 'autosave')
+        .mockClear()
+        .mockImplementation()
+        .mockImplementation((...args) => args[0]());
       reportStub = jest.fn();
       weblab.studioApp_ = {report: reportStub};
       weblab.level = {id: 123};
@@ -396,7 +449,10 @@ describe('WebLab', () => {
         },
       ];
       jest.spyOn(assetListStore, 'list').mockClear().mockReturnValue(files);
-      jest.spyOn(filesApi, 'basePath').mockClear().mockReturnValue('stubbedpath');
+      jest
+        .spyOn(filesApi, 'basePath')
+        .mockClear()
+        .mockReturnValue('stubbedpath');
     });
 
     afterEach(() => {

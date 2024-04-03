@@ -32,6 +32,7 @@ import {
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import sinon from 'sinon';
 
 describe('animationList', function () {
   setExternalGlobals(beforeEach, afterEach);

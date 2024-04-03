@@ -7,6 +7,7 @@ import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
 import msg from '@cdo/locale';
 import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import sinon from 'sinon';
 
 describe('project.js', () => {
   let sourceHandler;
@@ -20,7 +21,10 @@ describe('project.js', () => {
     replaceAppOptions();
     jest.spyOn(utils, 'reload').mockClear().mockImplementation();
     jest.spyOn(header, 'showProjectHeader').mockClear().mockImplementation();
-    jest.spyOn(header, 'showMinimalProjectHeader').mockClear().mockImplementation();
+    jest
+      .spyOn(header, 'showMinimalProjectHeader')
+      .mockClear()
+      .mockImplementation();
     jest.spyOn(header, 'updateTimestamp').mockClear().mockImplementation();
   });
 
@@ -347,7 +351,10 @@ describe('project.js', () => {
     let url;
 
     beforeEach(function () {
-      stubUrl = jest.spyOn(project, 'getUrl').mockClear().mockImplementation(() => url);
+      stubUrl = jest
+        .spyOn(project, 'getUrl')
+        .mockClear()
+        .mockImplementation(() => url);
     });
 
     afterEach(function () {
@@ -408,8 +415,14 @@ describe('project.js', () => {
     const CODEPROJECTS_APP_TYPES = ['weblab'];
 
     beforeEach(() => {
-      jest.spyOn(project, 'getLocation').mockClear().mockImplementation(() => fakeLocation);
-      jest.spyOn(project, 'getCurrentId').mockClear().mockReturnValue(fakeProjectId);
+      jest
+        .spyOn(project, 'getLocation')
+        .mockClear()
+        .mockImplementation(() => fakeLocation);
+      jest
+        .spyOn(project, 'getCurrentId')
+        .mockClear()
+        .mockReturnValue(fakeProjectId);
       jest.spyOn(project, 'getStandaloneApp').mockClear().mockImplementation();
     });
 
@@ -608,7 +621,9 @@ describe('project.js', () => {
 
   describe('setProjectLibraries()', () => {
     beforeEach(() => {
-      jest.spyOn(project, 'saveSourceAndHtml_').mockClear()
+      jest
+        .spyOn(project, 'saveSourceAndHtml_')
+        .mockClear()
         .mockImplementation((source, callback) => {
           callback();
         });
@@ -624,9 +639,9 @@ describe('project.js', () => {
       project.init(sourceHandler);
       return project.setProjectLibraries(library).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
-        expect(
-          project.saveSourceAndHtml_.mock.calls[0][0].libraries
-        ).to.equal(library);
+        expect(project.saveSourceAndHtml_.mock.calls[0][0].libraries).to.equal(
+          library
+        );
       });
     });
 
@@ -635,9 +650,9 @@ describe('project.js', () => {
       let result = [];
       project.init(sourceHandler);
       return project.setProjectLibraries(library).then(() => {
-        expect(
-          project.saveSourceAndHtml_.mock.calls[0][0].libraries
-        ).to.equal(library);
+        expect(project.saveSourceAndHtml_.mock.calls[0][0].libraries).to.equal(
+          library
+        );
         return project.setProjectLibraries(result).then(() => {
           expect(
             project.saveSourceAndHtml_.mock.calls[1][0].libraries
@@ -649,7 +664,9 @@ describe('project.js', () => {
 
   describe('setMakerEnabled()', () => {
     beforeEach(() => {
-      jest.spyOn(project, 'saveSourceAndHtml_').mockClear()
+      jest
+        .spyOn(project, 'saveSourceAndHtml_')
+        .mockClear()
         .mockImplementation((source, callback) => {
           callback();
         });
@@ -675,8 +692,8 @@ describe('project.js', () => {
       project.init(sourceHandler);
       return project.setMakerEnabled(null).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
-        expect(project.saveSourceAndHtml_.mock.calls[0][0].makerAPIsEnabled)
-          .to.be.null;
+        expect(project.saveSourceAndHtml_.mock.calls[0][0].makerAPIsEnabled).to
+          .be.null;
       });
     });
 
@@ -705,7 +722,10 @@ describe('project.js', () => {
     let server;
 
     beforeEach(() => {
-      jest.spyOn(project, 'getStandaloneApp').mockClear().mockReturnValue('artist');
+      jest
+        .spyOn(project, 'getStandaloneApp')
+        .mockClear()
+        .mockReturnValue('artist');
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
     });
@@ -741,7 +761,10 @@ describe('project.js', () => {
         pathname: '/projects/artist/mychannel',
         search: '',
       });
-      jest.spyOn(project, 'getStandaloneApp').mockClear().mockReturnValue('artist');
+      jest
+        .spyOn(project, 'getStandaloneApp')
+        .mockClear()
+        .mockReturnValue('artist');
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
     });
@@ -843,8 +866,14 @@ describe('project.js', () => {
     let server;
 
     beforeEach(() => {
-      jest.spyOn(project, 'getStandaloneApp').mockClear().mockReturnValue('dance');
-      jest.spyOn(project, 'save').mockClear().mockReturnValue(Promise.resolve());
+      jest
+        .spyOn(project, 'getStandaloneApp')
+        .mockClear()
+        .mockReturnValue('dance');
+      jest
+        .spyOn(project, 'save')
+        .mockClear()
+        .mockReturnValue(Promise.resolve());
       jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);

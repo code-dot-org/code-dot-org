@@ -41,7 +41,9 @@ describe('MicroBit Compass', function () {
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
       let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
-      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       compass.start();
       expect(startSpy).to.have.been.calledTwice;
       expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.magX);

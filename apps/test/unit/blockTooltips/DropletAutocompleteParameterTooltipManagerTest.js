@@ -38,7 +38,10 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
 
     it('should render localized string for "Choose..."', () => {
       // Stub the i18n calls.
-      jest.spyOn(commonI18n, 'choosePrefix').mockClear().mockReturnValue('i18n-choose-prefix');
+      jest
+        .spyOn(commonI18n, 'choosePrefix')
+        .mockClear()
+        .mockReturnValue('i18n-choose-prefix');
 
       // Create the parameter tooltip manager class.
       let tooltip = new DropletAutocompleteParameterTooltipManager(manager);
@@ -55,7 +58,10 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
 
     it('should render localized string for "Examples"', () => {
       // Stub the i18n calls.
-      jest.spyOn(commonI18n, 'examples').mockClear().mockReturnValue('i18n-examples');
+      jest
+        .spyOn(commonI18n, 'examples')
+        .mockClear()
+        .mockReturnValue('i18n-examples');
 
       // Create the parameter tooltip manager class.
       let tooltip = new DropletAutocompleteParameterTooltipManager(manager);

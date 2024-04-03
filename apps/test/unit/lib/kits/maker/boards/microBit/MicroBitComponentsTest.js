@@ -272,7 +272,9 @@ describe('MicroBit Components', () => {
 
     it('starts components with sensors', () => {
       const tempSpy = jest.spyOn(components.tempSensor, 'start').mockClear();
-      const accelSpy = jest.spyOn(components.accelerometer, 'start').mockClear();
+      const accelSpy = jest
+        .spyOn(components.accelerometer, 'start')
+        .mockClear();
       const compassSpy = jest.spyOn(components.compass, 'start').mockClear();
       enableMicroBitComponents(components);
       expect(tempSpy).to.have.been.calledOnce;

@@ -9,6 +9,7 @@ import _ from 'lodash';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
+import sinon from 'sinon';
 
 describe('DetailViewContents', () => {
   allowConsoleWarnings();

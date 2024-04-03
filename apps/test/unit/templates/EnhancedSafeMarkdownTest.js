@@ -40,7 +40,9 @@ describe('EnhancedSafeMarkdown', () => {
 
   describe('ExpandableImagesWrapper', () => {
     it('renders expandable images', () => {
-      const renderSpy = jest.spyOn(expandableImages, 'renderExpandableImages').mockClear();
+      const renderSpy = jest
+        .spyOn(expandableImages, 'renderExpandableImages')
+        .mockClear();
       // We use mount rather than shallow here because renderExpandableImages
       // expects an actual node as an argument
       mount(

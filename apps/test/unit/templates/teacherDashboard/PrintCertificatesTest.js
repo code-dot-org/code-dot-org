@@ -1,5 +1,6 @@
 import {shallow} from 'enzyme';
 import React from 'react';
+import sinon from 'sinon';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';

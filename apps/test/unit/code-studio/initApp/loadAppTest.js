@@ -18,31 +18,53 @@ describe('loadApp.js', () => {
 
   before(() => {
     oldAppOptions = window.appOptions;
-    jest.spyOn(clientState, 'writeSourceForLevel').mockClear()
+    jest
+      .spyOn(clientState, 'writeSourceForLevel')
+      .mockClear()
       .mockImplementation((scriptName, levelId, date, program) => {
         writtenLevelId = levelId;
       });
-    jest.spyOn(clientState, 'sourceForLevel').mockClear()
+    jest
+      .spyOn(clientState, 'sourceForLevel')
+      .mockClear()
       .mockImplementation((scriptName, levelId, timestamp) => {
         readLevelId = levelId;
         return OLD_CODE;
       });
-    jest.spyOn(project, 'load').mockClear().mockImplementation(() => ({
-      then: successCallback => successCallback(),
-    }));
-    jest.spyOn(project, 'hideBecauseAbusive').mockClear().mockReturnValue(false);
-    jest.spyOn(project, 'hideBecausePrivacyViolationOrProfane').mockClear().mockReturnValue(false);
-    jest.spyOn(project, 'getSharingDisabled').mockClear().mockReturnValue(false);
+    jest
+      .spyOn(project, 'load')
+      .mockClear()
+      .mockImplementation(() => ({
+        then: successCallback => successCallback(),
+      }));
+    jest
+      .spyOn(project, 'hideBecauseAbusive')
+      .mockClear()
+      .mockReturnValue(false);
+    jest
+      .spyOn(project, 'hideBecausePrivacyViolationOrProfane')
+      .mockClear()
+      .mockReturnValue(false);
+    jest
+      .spyOn(project, 'getSharingDisabled')
+      .mockClear()
+      .mockReturnValue(false);
   });
   beforeEach(() => {
-    jest.spyOn(clientState, 'queryParams').mockClear().mockReturnValue(undefined);
-    jest.spyOn($, 'ajax').mockClear().mockImplementation(() => ({
-      done: successCallback => ({
-        fail: failureCallback => {
-          successCallback({signedIn: false});
-        },
-      }),
-    }));
+    jest
+      .spyOn(clientState, 'queryParams')
+      .mockClear()
+      .mockReturnValue(undefined);
+    jest
+      .spyOn($, 'ajax')
+      .mockClear()
+      .mockImplementation(() => ({
+        done: successCallback => ({
+          fail: failureCallback => {
+            successCallback({signedIn: false});
+          },
+        }),
+      }));
     writtenLevelId = undefined;
     readLevelId = undefined;
     appOptions = {
@@ -66,8 +88,12 @@ describe('loadApp.js', () => {
 
   const stubQueryParams = (paramName, paramValue) => {
     clientState.queryParams.mockRestore(); // restore the default stub
-    jest.spyOn(clientState, 'queryParams').mockClear()
-      .mockImplementation(param => (param === paramName ? paramValue : undefined));
+    jest
+      .spyOn(clientState, 'queryParams')
+      .mockClear()
+      .mockImplementation(param =>
+        param === paramName ? paramValue : undefined
+      );
   };
 
   const stubAppOptionsRequests = (

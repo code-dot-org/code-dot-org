@@ -42,7 +42,9 @@ const responses = [
 describe('TextResponses', () => {
   describe('when there are text responses', () => {
     beforeEach(() => {
-      jest.spyOn(textReponsesDataApi, 'loadTextResponsesFromServer').mockClear()
+      jest
+        .spyOn(textReponsesDataApi, 'loadTextResponsesFromServer')
+        .mockClear()
         .mockReturnValue(Promise.resolve(responses));
     });
 
@@ -133,7 +135,9 @@ describe('TextResponses', () => {
 
   describe('when there are no text responses', () => {
     beforeEach(() => {
-      jest.spyOn(textReponsesDataApi, 'loadTextResponsesFromServer').mockClear()
+      jest
+        .spyOn(textReponsesDataApi, 'loadTextResponsesFromServer')
+        .mockClear()
         .mockReturnValue(Promise.resolve({}));
     });
 

@@ -16,7 +16,10 @@ const SIGNED_IN_USER = {
 describe('NetSimLobby', () => {
   let rootDiv, netsim, getUserSectionsStub;
   beforeEach(function () {
-    getUserSectionsStub = jest.spyOn(userSectionClient, 'getUserSections').mockClear().mockImplementation();
+    getUserSectionsStub = jest
+      .spyOn(userSectionClient, 'getUserSections')
+      .mockClear()
+      .mockImplementation();
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     rootDiv = $('<div>');
     netsim = {

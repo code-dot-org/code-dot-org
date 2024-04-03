@@ -20,7 +20,10 @@ describe('AppLabTooltipOverlay', () => {
   var result, stubDraggedElementDropPoint;
 
   beforeEach(() => {
-    stubDraggedElementDropPoint = jest.spyOn(gridUtils, 'draggedElementDropPoint').mockClear().mockImplementation();
+    stubDraggedElementDropPoint = jest
+      .spyOn(gridUtils, 'draggedElementDropPoint')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {

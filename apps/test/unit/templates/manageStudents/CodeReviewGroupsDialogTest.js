@@ -62,6 +62,6 @@ describe('CodeReviewGroupsDialog', () => {
       newGroups
     );
     wrapper.findOne(StylizedBaseDialog).props.handleConfirmation();
-    sinon.assert.calledOnceWithExactly(dataApi.setCodeReviewGroups, newGroups);
+    expect(dataApi.setCodeReviewGroups).toBeCalledWith(newGroups);
   });
 });

@@ -26,7 +26,9 @@ describe('CapacitiveTouchSensor', function () {
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
       let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
-      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       sensor.start();
       expect(startSpy).to.have.been.calledOnce;
       expect(startSpy).to.have.been.calledWith(testPin);

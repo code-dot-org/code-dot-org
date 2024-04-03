@@ -89,7 +89,10 @@ describe('SpriteLab', () => {
         instance.onStepSpeedChange = jest.fn();
         instance.level = {};
 
-        muteSpy = jest.spyOn(Sounds.getSingleton(), 'muteURLs').mockClear().mockImplementation();
+        muteSpy = jest
+          .spyOn(Sounds.getSingleton(), 'muteURLs')
+          .mockClear()
+          .mockImplementation();
       });
 
       afterEach(() => {
@@ -163,10 +166,16 @@ describe('SpriteLab', () => {
       describe('reactToExecutionError', () => {
         let alertSpy;
         beforeEach(() => {
-          alertSpy = jest.spyOn(studioApp(), 'displayWorkspaceAlert').mockClear().mockImplementation();
-          jest.spyOn(instance, 'getMsg').mockClear().mockReturnValue({
-            workspaceAlertError: () => 'translated string',
-          });
+          alertSpy = jest
+            .spyOn(studioApp(), 'displayWorkspaceAlert')
+            .mockClear()
+            .mockImplementation();
+          jest
+            .spyOn(instance, 'getMsg')
+            .mockClear()
+            .mockReturnValue({
+              workspaceAlertError: () => 'translated string',
+            });
         });
 
         afterEach(() => {
@@ -192,7 +201,10 @@ describe('SpriteLab', () => {
           instance.setupReduxSubscribers(store);
           originalMainBlockSpace = Blockly.blockly_.mainBlockSpace;
           Blockly.blockly_.mainBlockSpace = {events: {dispatchEvent: () => {}}};
-          eventSpy = jest.spyOn(Blockly.mainBlockSpace.events, 'dispatchEvent').mockClear().mockImplementation();
+          eventSpy = jest
+            .spyOn(Blockly.mainBlockSpace.events, 'dispatchEvent')
+            .mockClear()
+            .mockImplementation();
 
           const initialAnimationList = {
             orderedKeys: ['key1'],

@@ -27,6 +27,7 @@ import {
   lessonExtrasUrl,
   __testonly__ as __testonly__selectors,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import sinon from 'sinon';
 
 // This is some sample lesson data taken from a course. I truncated to the first two
 // lessons, and also truncated the second lesson to the first 3 levels

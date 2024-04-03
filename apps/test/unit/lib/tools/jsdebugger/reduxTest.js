@@ -32,7 +32,10 @@ describe('The JSDebugger redux duck', () => {
     jest.spyOn(interpreter, 'handleStepOver').mockClear();
 
     // override evalInCurrentScope so we don't have to set up the full interpreter.
-    jest.spyOn(interpreter, 'evalInCurrentScope').mockClear()
+    jest
+      .spyOn(interpreter, 'evalInCurrentScope')
+      .mockClear()
+      // eslint-disable-next-line no-eval
       .mockImplementation(input => eval(input));
   });
   afterEach(() => {

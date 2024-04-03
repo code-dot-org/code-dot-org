@@ -345,9 +345,14 @@ describe('TeacherContentToggle', () => {
       };
 
       it('sets locked hidden to true when locked and hidden', () => {
-        jest.spyOn(progressHelpers, 'lessonIsLockedForAllStudents').mockClear()
+        jest
+          .spyOn(progressHelpers, 'lessonIsLockedForAllStudents')
+          .mockClear()
           .mockReturnValue(true);
-        jest.spyOn(hiddenLessonRedux, 'isLessonHiddenForSection').mockClear().mockReturnValue(true);
+        jest
+          .spyOn(hiddenLessonRedux, 'isLessonHiddenForSection')
+          .mockClear()
+          .mockReturnValue(true);
 
         const props = mapStateToProps(state);
 
@@ -356,9 +361,13 @@ describe('TeacherContentToggle', () => {
       });
 
       it('sets locked hidden to false when not locked or hidden', () => {
-        jest.spyOn(progressHelpers, 'lessonIsLockedForAllStudents').mockClear()
+        jest
+          .spyOn(progressHelpers, 'lessonIsLockedForAllStudents')
+          .mockClear()
           .mockReturnValue(false);
-        jest.spyOn(hiddenLessonRedux, 'isLessonHiddenForSection').mockClear()
+        jest
+          .spyOn(hiddenLessonRedux, 'isLessonHiddenForSection')
+          .mockClear()
           .mockReturnValue(false);
 
         const props = mapStateToProps(state);

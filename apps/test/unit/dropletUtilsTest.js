@@ -146,7 +146,10 @@ describe('dropletUtils', () => {
     });
 
     it('returns a number if I enter a number', () => {
-      const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+      const prompt = jest
+        .spyOn(window, 'prompt')
+        .mockClear()
+        .mockImplementation();
       prompt.mockReturnValue('123');
 
       const val = globalFunctions.promptNum('Enter a value');
@@ -155,7 +158,10 @@ describe('dropletUtils', () => {
     });
 
     it('can handle non-integer numbers', () => {
-      const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+      const prompt = jest
+        .spyOn(window, 'prompt')
+        .mockClear()
+        .mockImplementation();
       prompt.mockReturnValue('1.23');
 
       const val = globalFunctions.promptNum('Enter a value');
@@ -164,7 +170,10 @@ describe('dropletUtils', () => {
     });
 
     it('reprompts if I enter a non-numerical value', () => {
-      const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+      const prompt = jest
+        .spyOn(window, 'prompt')
+        .mockClear()
+        .mockImplementation();
       prompt.mockImplementation(() => {
         if (prompt.mock.calls.length === 0) {
           return 'onetwothree';

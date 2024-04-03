@@ -92,7 +92,10 @@ describe('LearningGoalItem', () => {
   });
 
   it('displays confirmation dialog when learning goal name input receives focus and AI assessment is checked', () => {
-    const dialogStub = jest.spyOn(window, 'confirm').mockClear().mockReturnValue(true);
+    const dialogStub = jest
+      .spyOn(window, 'confirm')
+      .mockClear()
+      .mockReturnValue(true);
 
     const enabledAiData = {
       key: 'learningGoal-1',

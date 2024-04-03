@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/redux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 import Craft from '@cdo/apps/craft/code-connection/craft';
+import sinon from 'sinon';
 
 describe('Craft', () => {
   before(() => jest.spyOn(Craft, 'render').mockClear().mockImplementation());

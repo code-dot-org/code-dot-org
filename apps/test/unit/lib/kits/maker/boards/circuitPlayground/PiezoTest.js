@@ -26,7 +26,10 @@ describe('Piezo', function () {
       let piezo;
 
       beforeEach(function () {
-        jest.spyOn(five.Piezo.prototype, 'play').mockClear().mockImplementation();
+        jest
+          .spyOn(five.Piezo.prototype, 'play')
+          .mockClear()
+          .mockImplementation();
         piezo = new Piezo({
           controller: makeStubPiezoController(),
         });
@@ -121,6 +124,8 @@ describe('Piezo', function () {
   // through the same set of tests.
   ['stop', 'off'].forEach(methodUnderTest => {
     describe(`${methodUnderTest}()`, () => {
+      let controller, piezo;
+
       beforeEach(() => {
         jest.useFakeTimers();
         controller = makeStubPiezoController();

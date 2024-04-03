@@ -6,6 +6,7 @@ import {
   removeIncompleteApplications,
 } from '@cdo/apps/code-studio/pd/application_dashboard/summary';
 import {expect} from 'chai';
+import sinon from 'sinon';
 
 describe('Summary', () => {
   const dataWithoutIncompleteApps = {

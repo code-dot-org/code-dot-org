@@ -12,7 +12,10 @@ describe('craft utils', () => {
     const defaultPlayer = 'Alex';
 
     beforeEach(() => {
-      jest.spyOn(craftRedux, 'closePlayerSelectionDialog').mockClear().mockImplementation();
+      jest
+        .spyOn(craftRedux, 'closePlayerSelectionDialog')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
@@ -20,7 +23,9 @@ describe('craft utils', () => {
     });
 
     it('closes dialog after selecting a player', () => {
-      jest.spyOn(craftRedux, 'openPlayerSelectionDialog').mockClear()
+      jest
+        .spyOn(craftRedux, 'openPlayerSelectionDialog')
+        .mockClear()
         .mockImplementation(callback => callback('Steve'));
 
       utils.handlePlayerSelection(defaultPlayer, () => {});
@@ -31,7 +36,9 @@ describe('craft utils', () => {
 
     it('invokes onComplete with selectedPlayer', () => {
       const selectedPlayer = 'Tom';
-      jest.spyOn(craftRedux, 'openPlayerSelectionDialog').mockClear()
+      jest
+        .spyOn(craftRedux, 'openPlayerSelectionDialog')
+        .mockClear()
         .mockImplementation(callback => callback(selectedPlayer));
       const onCompleteSpy = jest.fn();
 
@@ -41,7 +48,9 @@ describe('craft utils', () => {
     });
 
     it('invokes callback with default player if no selectedPlayer is given', () => {
-      jest.spyOn(craftRedux, 'openPlayerSelectionDialog').mockClear()
+      jest
+        .spyOn(craftRedux, 'openPlayerSelectionDialog')
+        .mockClear()
         .mockImplementation(callback => callback(undefined));
       const onCompleteSpy = jest.fn();
 

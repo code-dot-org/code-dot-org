@@ -70,7 +70,9 @@ describe('MicroBitAccelerometer', function () {
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
       let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
-      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       accelerometer.start();
       expect(startSpy).to.have.been.calledThrice;
       expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.accelX);

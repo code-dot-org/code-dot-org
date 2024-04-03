@@ -1,6 +1,7 @@
 import {mount} from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
+import sinon from 'sinon';
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
@@ -24,7 +25,10 @@ describe('The ShowCodeToggle component', () => {
     server = sinon.fakeServerWithClock.create();
     jest.spyOn($, 'post').mockClear();
     jest.spyOn($, 'getJSON').mockClear();
-    jest.spyOn(project, 'getCurrentId').mockClear().mockReturnValue('some-project-id');
+    jest
+      .spyOn(project, 'getCurrentId')
+      .mockClear()
+      .mockReturnValue('some-project-id');
     jest.spyOn(utils, 'fireResizeEvent').mockClear().mockImplementation(); // Called by StudioApp.js
   });
   afterEach(() => {
@@ -37,7 +41,9 @@ describe('The ShowCodeToggle component', () => {
 
   beforeEach(stubStudioApp);
   afterEach(restoreStudioApp);
-  beforeEach(() => jest.spyOn(LegacyDialog.prototype, 'show').mockClear().mockImplementation());
+  beforeEach(() =>
+    jest.spyOn(LegacyDialog.prototype, 'show').mockClear().mockImplementation()
+  );
   afterEach(() => LegacyDialog.prototype.show.mockRestore());
   beforeEach(() => {
     stubRedux();
@@ -58,9 +64,12 @@ describe('The ShowCodeToggle component', () => {
         focus() {},
       },
     };
-    jest.spyOn(studioApp(), 'handleEditCode_').mockClear().mockImplementation(function () {
-      this.editor = editor;
-    });
+    jest
+      .spyOn(studioApp(), 'handleEditCode_')
+      .mockClear()
+      .mockImplementation(function () {
+        this.editor = editor;
+      });
   });
 
   beforeEach(() => {
@@ -101,9 +110,16 @@ describe('The ShowCodeToggle component', () => {
     document.body.removeChild(containerDiv);
   });
 
-  beforeEach(() => jest.spyOn(studioApp(), 'onDropletToggle').mockClear().mockImplementation());
+  beforeEach(() =>
+    jest.spyOn(studioApp(), 'onDropletToggle').mockClear().mockImplementation()
+  );
 
-  beforeEach(() => jest.spyOn(studioApp(), 'showGeneratedCode').mockClear().mockImplementation());
+  beforeEach(() =>
+    jest
+      .spyOn(studioApp(), 'showGeneratedCode')
+      .mockClear()
+      .mockImplementation()
+  );
 
   describe('when the studioApp editor has currentlyUsingBlocks=false', () => {
     beforeEach(() => {

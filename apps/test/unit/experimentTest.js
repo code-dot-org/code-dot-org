@@ -4,6 +4,7 @@ import experiments from '@cdo/apps/util/experiments';
 
 describe('experiments', function () {
   let mockedQueryString = '';
+  let date, now, expirationTime;
 
   setExternalGlobals();
 

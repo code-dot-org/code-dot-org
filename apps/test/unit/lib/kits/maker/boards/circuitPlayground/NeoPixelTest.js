@@ -80,6 +80,8 @@ describe('NeoPixel', function () {
   });
 
   describe('blink()', () => {
+    let led;
+
     beforeEach(() => {
       jest.useFakeTimers();
       led = new NeoPixel({

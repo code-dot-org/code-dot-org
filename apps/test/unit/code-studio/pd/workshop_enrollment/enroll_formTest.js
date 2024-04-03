@@ -5,6 +5,7 @@ import jQuery from 'jquery';
 import {pick, omit} from 'lodash';
 import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import sinon from 'sinon';
 
 const refute = p => assert.isNotOk(p);
 

@@ -150,7 +150,10 @@ describe('RubricsContainerTest', () => {
   });
 
   it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
-    const mockFetch = jest.spyOn(global, 'fetch').mockClear().mockImplementation();
+    const mockFetch = jest
+      .spyOn(global, 'fetch')
+      .mockClear()
+      .mockImplementation();
     mockFetch.mockReturnValue(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
@@ -183,7 +186,10 @@ describe('RubricsContainerTest', () => {
   });
 
   it('calls the save helper on save click', () => {
-    const mockSave = jest.spyOn(rubricHelper, 'saveRubricToTable').mockClear().mockImplementation();
+    const mockSave = jest
+      .spyOn(rubricHelper, 'saveRubricToTable')
+      .mockClear()
+      .mockImplementation();
     mockSave.mockReturnValue(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );

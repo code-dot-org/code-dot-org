@@ -28,8 +28,14 @@ describe('JavabuilderConnection', () => {
   beforeEach(() => {
     jest.spyOn(project, 'getCurrentId').mockClear().mockImplementation();
     onOutputMessage = jest.fn();
-    handleException = jest.spyOn(ExceptionHandler, 'handleException').mockClear().mockImplementation();
-    handleTestResult = jest.spyOn(TestResultHandler, 'onTestResult').mockClear().mockImplementation();
+    handleException = jest
+      .spyOn(ExceptionHandler, 'handleException')
+      .mockClear()
+      .mockImplementation();
+    handleTestResult = jest
+      .spyOn(TestResultHandler, 'onTestResult')
+      .mockClear()
+      .mockImplementation();
     onValidationPassed = jest.fn();
     onValidationFailed = jest.fn();
     setIsRunning = jest.fn();

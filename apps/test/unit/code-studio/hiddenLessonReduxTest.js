@@ -17,6 +17,7 @@ import {
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
+import sinon from 'sinon';
 
 function fakeLessonLockReducer(state, action) {
   return {

@@ -9,6 +9,7 @@ import Permission, {
   ProgramManager,
   WorkshopAdmin,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
+import sinon from 'sinon';
 
 describe('WorkshopIndex', () => {
   const fakeRouter = {

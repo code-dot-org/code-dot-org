@@ -1,5 +1,6 @@
 import {assert, expect} from '../util/reconfiguredChai';
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
+import sinon from 'sinon';
 
 const assertSoundResponsesEqual = (expected, actual) => {
   assert.deepEqual(expected.bytes, actual.bytes);
@@ -19,7 +20,10 @@ describe('AzureTextToSpeech', () => {
 
   beforeEach(() => {
     azureTTS = new AzureTextToSpeech();
-    playBytesStub = jest.spyOn(azureTTS, 'playBytes_').mockClear().mockImplementation();
+    playBytesStub = jest
+      .spyOn(azureTTS, 'playBytes_')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {
@@ -170,7 +174,9 @@ describe('AzureTextToSpeech', () => {
         describe('on success', () => {
           beforeEach(() => {
             const bytes = new ArrayBuffer();
-            jest.spyOn(azureTTS, 'convertTextToSpeech').mockClear()
+            jest
+              .spyOn(azureTTS, 'convertTextToSpeech')
+              .mockClear()
               .mockReturnValue(new Promise(resolve => resolve(bytes)));
             options = {
               text: 'hello',
@@ -203,7 +209,9 @@ describe('AzureTextToSpeech', () => {
         describe('on failure', () => {
           beforeEach(() => {
             const error = {status: 400};
-            jest.spyOn(azureTTS, 'convertTextToSpeech').mockClear()
+            jest
+              .spyOn(azureTTS, 'convertTextToSpeech')
+              .mockClear()
               .mockReturnValue(new Promise((_, reject) => reject(error)));
             options = {
               text: 'hello',
@@ -254,7 +262,10 @@ describe('AzureTextToSpeech', () => {
     });
 
     it('no-ops if sound is already playing', async () => {
-      const dequeueStub = jest.spyOn(azureTTS, 'dequeue_').mockClear().mockImplementation();
+      const dequeueStub = jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockClear()
+        .mockImplementation();
       azureTTS.playing = true;
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
@@ -265,7 +276,10 @@ describe('AzureTextToSpeech', () => {
     });
 
     it('no-ops if queue is empty', async () => {
-      const dequeueStub = jest.spyOn(azureTTS, 'dequeue_').mockClear().mockReturnValue(undefined);
+      const dequeueStub = jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockClear()
+        .mockReturnValue(undefined);
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
       expect(dequeueStub).to.have.been.calledOnce;
@@ -275,7 +289,9 @@ describe('AzureTextToSpeech', () => {
     });
 
     it('plays sound if response was successful', async () => {
-      const dequeueStub = jest.spyOn(azureTTS, 'dequeue_').mockClear()
+      const dequeueStub = jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockClear()
         .mockReturnValue(() => Promise.resolve(successfulResponse));
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
@@ -289,7 +305,9 @@ describe('AzureTextToSpeech', () => {
         error: new Error(),
       });
       unsuccessfulResponse.playbackOptions.onEnded = jest.fn();
-      const dequeueStub = jest.spyOn(azureTTS, 'dequeue_').mockClear()
+      const dequeueStub = jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockClear()
         .mockReturnValue(() => Promise.resolve(unsuccessfulResponse));
 
       await azureTTS.asyncPlayFromQueue_(playSpy);

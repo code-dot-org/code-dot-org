@@ -20,6 +20,7 @@ import {
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+import sinon from 'sinon';
 
 const defaultProps = {
   name: 'test-course',
@@ -118,15 +119,14 @@ describe('CourseEditor', () => {
   });
 
   describe('Saving Course Editor', () => {
+    let server;
+
     beforeEach(() => {
       server = sinon.fakeServer.create();
     });
 
     afterEach(() => {
-      if (clock) {
-        jest.useRealTimers();
-        clock = undefined;
-      }
+      jest.useRealTimers();
       server.mockRestore();
     });
 

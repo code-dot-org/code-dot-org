@@ -45,7 +45,10 @@ describe('SignInOrAgeDialog', () => {
   });
 
   it('renders null if seen before', () => {
-    let getItem = jest.spyOn(DEFAULT_PROPS.storage, 'getItem').mockClear().mockImplementation();
+    let getItem = jest
+      .spyOn(DEFAULT_PROPS.storage, 'getItem')
+      .mockClear()
+      .mockImplementation();
     getItem.mockImplementation((...args) => {
       if (args[0] === 'anon_over13') {
         return 'true';
@@ -81,7 +84,9 @@ describe('SignInOrAgeDialog', () => {
     });
 
     it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
-      const setItemSpy = jest.spyOn(DEFAULT_PROPS.storage, 'setItem').mockClear();
+      const setItemSpy = jest
+        .spyOn(DEFAULT_PROPS.storage, 'setItem')
+        .mockClear();
       // We stub cookies, as the domain portion of our cookies.remove in SignInOrAgeDialog
       // does not work in unit tests
       jest.spyOn(cookies, 'get').mockClear().mockReturnValue('something');

@@ -30,10 +30,22 @@ describe('FeedbackUtils', () => {
             },
           };
 
-          jest.spyOn(msg, 'finalStage').mockClear().mockImplementation(() => finalStageMsg);
-          jest.spyOn(msg, 'endOfLesson').mockClear().mockImplementation(() => endOfLesson);
-          jest.spyOn(msg, 'nextStage').mockClear().mockImplementation(() => nextStageMsg);
-          jest.spyOn(msg, 'nextLevel').mockClear().mockImplementation(() => nextLevelMsg);
+          jest
+            .spyOn(msg, 'finalStage')
+            .mockClear()
+            .mockImplementation(() => finalStageMsg);
+          jest
+            .spyOn(msg, 'endOfLesson')
+            .mockClear()
+            .mockImplementation(() => endOfLesson);
+          jest
+            .spyOn(msg, 'nextStage')
+            .mockClear()
+            .mockImplementation(() => nextStageMsg);
+          jest
+            .spyOn(msg, 'nextLevel')
+            .mockClear()
+            .mockImplementation(() => nextLevelMsg);
         });
 
         afterEach(() => {

@@ -69,11 +69,13 @@ describe('WorkspaceAlert', () => {
   });
 
   it('not isBlockly uses .droplet-gutter and .droplet-palette-element for left', () => {
-    jQueryWidth.mockImplementation(() => {
-      if (jQueryWidth.mock.calls.length === 0) {
-        return 1;
-      }
-    }).mockReturnValue(2);
+    jQueryWidth
+      .mockImplementation(() => {
+        if (jQueryWidth.mock.calls.length === 0) {
+          return 1;
+        }
+      })
+      .mockReturnValue(2);
     const neither = mount(
       <WorkspaceAlert
         type="warning"

@@ -21,7 +21,10 @@ describe('AgeDialog', () => {
   });
 
   it('renders null if dialog was seen before', () => {
-    let getItem = jest.spyOn(defaultProps.storage, 'getItem').mockClear().mockImplementation();
+    let getItem = jest
+      .spyOn(defaultProps.storage, 'getItem')
+      .mockClear()
+      .mockImplementation();
     getItem.mockImplementation((...args) => {
       if (args[0] === 'ad_anon_over13') {
         return 'true';

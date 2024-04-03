@@ -5,6 +5,7 @@ import {
   SAVE_COMPLETED_TEXT,
 } from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import sinon from 'sinon';
 
 describe('rubricHelperTest.js', () => {
   const learningGoalList = [
@@ -63,14 +64,20 @@ describe('rubricHelperTest.js', () => {
     const setSaveNotificationText = jest.fn();
     const setLearningGoalList = jest.fn();
 
-    const mockFetch = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    const mockFetch = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation();
     mockFetch.mockReturnValue(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
 
-    const mockTimeout = jest.spyOn(window, 'setTimeout').mockClear().mockImplementation((f, n) => {
-      f();
-    });
+    const mockTimeout = jest
+      .spyOn(window, 'setTimeout')
+      .mockClear()
+      .mockImplementation((f, n) => {
+        f();
+      });
 
     await saveRubricToTable(
       setSaveNotificationText,
@@ -102,7 +109,10 @@ describe('rubricHelperTest.js', () => {
   it('redirects when creating a new rubric', async () => {
     const setSaveNotificationText = jest.fn();
     const setLearningGoalList = jest.fn();
-    const mockFetch = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    const mockFetch = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation();
     mockFetch.mockReturnValue(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );

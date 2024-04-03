@@ -34,7 +34,10 @@ describe('SectionProgressToggle', () => {
 
     wrapper.instance().onChange();
     expect(analyticsSpy).to.be.calledOnce;
-    assert.equal(analyticsSpy.mock.calls[0].firstArg, 'Section Progress Toggled');
+    assert.equal(
+      analyticsSpy.mock.calls[0].firstArg,
+      'Section Progress Toggled'
+    );
 
     analyticsSpy.mockRestore();
   });

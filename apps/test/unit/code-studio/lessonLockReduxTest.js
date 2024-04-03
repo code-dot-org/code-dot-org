@@ -27,6 +27,7 @@ import reducer, {
   setSectionLockStatus,
   refetchSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
+import sinon from 'sinon';
 
 // some arbitrary data in a form we expect to receive from the server
 // We get this from our call to /api/lock_status
@@ -436,12 +437,15 @@ describe('refetchSectionLockStatus', () => {
     registerReducers({lessonLock: reducer});
     store = getStore();
 
-    jest.spyOn($, 'ajax').mockClear().mockReturnValue({
-      done: successCallback => {
-        successCallback(lockStatusResponse);
-        return {fail: () => {}};
-      },
-    });
+    jest
+      .spyOn($, 'ajax')
+      .mockClear()
+      .mockReturnValue({
+        done: successCallback => {
+          successCallback(lockStatusResponse);
+          return {fail: () => {}};
+        },
+      });
   });
 
   afterEach(() => {

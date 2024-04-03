@@ -3,6 +3,7 @@ import React from 'react';
 import _ from 'lodash';
 import {expect} from 'chai';
 import {mount, shallow} from 'enzyme';
+import sinon from 'sinon';
 
 describe('WorkshopTableLoader', () => {
   let server;
@@ -10,7 +11,10 @@ describe('WorkshopTableLoader', () => {
 
   before(() => {
     // stub out debounce to return the original function, so it's called immediately
-    debounceStub = jest.spyOn(_, 'debounce').mockClear().mockImplementation(f => f);
+    debounceStub = jest
+      .spyOn(_, 'debounce')
+      .mockClear()
+      .mockImplementation(f => f);
   });
 
   after(() => {

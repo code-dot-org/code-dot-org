@@ -26,6 +26,8 @@ import {
 process.hrtime = require('browser-process-hrtime');
 
 describe('Circuit Playground Components', () => {
+  let board;
+
   // Use this value as the fake initial value for all analog sensors in unit tests.
   // 235 raw sensor value = 0C = 32F for the thermometer
   const INITIAL_ANALOG_VALUE = 235;
@@ -495,7 +497,10 @@ describe('Circuit Playground Components', () => {
       });
 
       it('getOrientation returns an array if called without any arguments', () => {
-        const stub = jest.spyOn(accelerometer, 'getOrientation').mockClear().mockImplementation();
+        const stub = jest
+          .spyOn(accelerometer, 'getOrientation')
+          .mockClear()
+          .mockImplementation();
         stub.mockImplementation((...args) => {
           if (args[0] === 'x') {
             return 1;
@@ -531,7 +536,10 @@ describe('Circuit Playground Components', () => {
       });
 
       it('getAcceleration returns an array if called without any arguments', () => {
-        const stub = jest.spyOn(accelerometer, 'getAcceleration').mockClear().mockImplementation();
+        const stub = jest
+          .spyOn(accelerometer, 'getAcceleration')
+          .mockClear()
+          .mockImplementation();
         stub.mockImplementation((...args) => {
           if (args[0] === 'x') {
             return 1;
@@ -605,8 +613,12 @@ describe('Circuit Playground Components', () => {
     });
 
     it('calls off and stop on every color LED', () => {
-      const stopSpies = components.colorLeds.map(led => jest.spyOn(led, 'stop').mockClear());
-      const offSpies = components.colorLeds.map(led => jest.spyOn(led, 'off').mockClear());
+      const stopSpies = components.colorLeds.map(led =>
+        jest.spyOn(led, 'stop').mockClear()
+      );
+      const offSpies = components.colorLeds.map(led =>
+        jest.spyOn(led, 'off').mockClear()
+      );
       cleanupCircuitPlaygroundComponents(
         components,
         true /* shouldDestroyComponents */
@@ -697,7 +709,9 @@ describe('Circuit Playground Components', () => {
 
         beforeEach(() => {
           // Spy on 'frequency' which play calls internally.
-          frequencySpy = jest.spyOn(Playground.Piezo.frequency, 'value').mockClear();
+          frequencySpy = jest
+            .spyOn(Playground.Piezo.frequency, 'value')
+            .mockClear();
         });
 
         afterEach(() => {
@@ -772,7 +786,9 @@ describe('Circuit Playground Components', () => {
     it('calls stop on the accelerometer and clears events', () => {
       // Spy on the controller template, because stop() ends up readonly on
       // the returned component.
-      const spy = jest.spyOn(Playground.Accelerometer.stop, 'value').mockClear();
+      const spy = jest
+        .spyOn(Playground.Accelerometer.stop, 'value')
+        .mockClear();
       return createCircuitPlaygroundComponents(board).then(components => {
         cleanupCircuitPlaygroundComponents(
           components,

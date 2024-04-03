@@ -34,7 +34,7 @@ describe('WorkshopManagement', () => {
   let mockRouter;
 
   beforeEach(() => {
-    mockRouter = sinon.mock(fakeRouter);
+    mockRouter = jest.fn().mockReturnValue(fakeRouter);
   });
 
   afterEach(() => {

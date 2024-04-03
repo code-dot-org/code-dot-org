@@ -8,6 +8,7 @@ import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryL
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
+import sinon from 'sinon';
 
 describe('LibraryManagerDialog', () => {
   const ID = 123;
@@ -62,9 +63,20 @@ describe('LibraryManagerDialog', () => {
     it('are set by fetchLatestLibrary', () => {
       let library = {channelId: ID};
       let callback = sinon.fake();
-      jest.spyOn(libraryParser, 'prepareLibraryForImport').mockClear().mockReturnValue(library);
-      jest.spyOn(LibraryClientApi.prototype, 'fetchByVersion').mockClear().mockImplementation().mockImplementation((...args) => args[1](library));
-      jest.spyOn(LibraryClientApi.prototype, 'fetchLatestVersionId').mockClear().mockImplementation().mockImplementation((...args) => args[0](ID));
+      jest
+        .spyOn(libraryParser, 'prepareLibraryForImport')
+        .mockClear()
+        .mockReturnValue(library);
+      jest
+        .spyOn(LibraryClientApi.prototype, 'fetchByVersion')
+        .mockClear()
+        .mockImplementation()
+        .mockImplementation((...args) => args[1](library));
+      jest
+        .spyOn(LibraryClientApi.prototype, 'fetchLatestVersionId')
+        .mockClear()
+        .mockImplementation()
+        .mockImplementation((...args) => args[0](ID));
 
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
@@ -89,8 +101,14 @@ describe('LibraryManagerDialog', () => {
           setProjectLibraries: () => {},
         },
       });
-      getProjectLibrariesStub = jest.spyOn(window.dashboard.project, 'getProjectLibraries').mockClear().mockImplementation();
-      getClassLibrariesStub = jest.spyOn(LibraryClientApi.prototype, 'getClassLibraries').mockClear().mockImplementation();
+      getProjectLibrariesStub = jest
+        .spyOn(window.dashboard.project, 'getProjectLibraries')
+        .mockClear()
+        .mockImplementation();
+      getClassLibrariesStub = jest
+        .spyOn(LibraryClientApi.prototype, 'getClassLibraries')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
@@ -201,7 +219,9 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('addLibraryById adds the library to the project if given libraryJson', () => {
-      let setProjectLibrariesSpy = jest.spyOn(window.dashboard.project, 'setProjectLibraries').mockClear();
+      let setProjectLibrariesSpy = jest
+        .spyOn(window.dashboard.project, 'setProjectLibraries')
+        .mockClear();
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
@@ -229,7 +249,9 @@ describe('LibraryManagerDialog', () => {
         {name: 'second', channelId: 'def456', sectionName: 'section'},
       ];
       getProjectLibrariesStub.mockReturnValue(projectLibraries);
-      let setProjectLibraries = jest.spyOn(window.dashboard.project, 'setProjectLibraries').mockClear();
+      let setProjectLibraries = jest
+        .spyOn(window.dashboard.project, 'setProjectLibraries')
+        .mockClear();
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );

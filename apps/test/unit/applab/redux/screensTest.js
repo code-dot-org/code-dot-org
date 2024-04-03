@@ -14,6 +14,7 @@ import screensReducer, {
   importIntoProject,
 } from '@cdo/apps/applab/redux/screens';
 import * as importFuncs from '@cdo/apps/applab/import';
+import sinon from 'sinon';
 
 describe('Applab Screens Reducer', function () {
   var store;
@@ -64,11 +65,23 @@ describe('Applab Screens Reducer', function () {
       };
 
       jest.spyOn(sourcesApi, 'ajax').mockClear().mockImplementation();
-      jest.spyOn(sourcesApi, 'withProjectId').mockClear().mockImplementation().returnsThis();
+      jest
+        .spyOn(sourcesApi, 'withProjectId')
+        .mockClear()
+        .mockImplementation()
+        .returnsThis();
       jest.spyOn(channelsApi, 'ajax').mockClear().mockImplementation();
-      jest.spyOn(channelsApi, 'withProjectId').mockClear().mockImplementation().returnsThis();
+      jest
+        .spyOn(channelsApi, 'withProjectId')
+        .mockClear()
+        .mockImplementation()
+        .returnsThis();
       jest.spyOn(assetsApi, 'getFiles').mockClear().mockImplementation();
-      jest.spyOn(assetsApi, 'withProjectId').mockClear().mockImplementation().returnsThis();
+      jest
+        .spyOn(assetsApi, 'withProjectId')
+        .mockClear()
+        .mockImplementation()
+        .returnsThis();
     });
 
     afterEach(() => {
@@ -179,12 +192,15 @@ describe('Applab Screens Reducer', function () {
     var resolve, reject;
 
     beforeEach(() => {
-      jest.spyOn(importFuncs, 'importScreensAndAssets').mockClear().mockReturnValue(
-        new Promise((_resolve, _reject) => {
-          resolve = _resolve;
-          reject = _reject;
-        })
-      );
+      jest
+        .spyOn(importFuncs, 'importScreensAndAssets')
+        .mockClear()
+        .mockReturnValue(
+          new Promise((_resolve, _reject) => {
+            resolve = _resolve;
+            reject = _reject;
+          })
+        );
     });
 
     afterEach(() => {

@@ -3,6 +3,7 @@ import manageLinkedAccounts, {
   initializeState,
   convertServerAuthOptions,
 } from '@cdo/apps/lib/ui/accounts/manageLinkedAccountsRedux';
+import sinon from 'sinon';
 
 describe('manageLinkedAccountsRedux', () => {
   let server;

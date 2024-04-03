@@ -1,5 +1,6 @@
 import {expect} from '../util/reconfiguredChai';
 import Sound from '@cdo/apps/Sound';
+import sinon from 'sinon';
 
 describe('Sound', () => {
   let sound;
@@ -21,7 +22,9 @@ describe('Sound', () => {
     it('uses the reusable audio buffer when available', () => {
       let fakeStartMethod = sinon.fake();
       sound.reusableBuffer = sinon.fake();
-      jest.spyOn(sound, 'newPlayableBufferSource').mockClear()
+      jest
+        .spyOn(sound, 'newPlayableBufferSource')
+        .mockClear()
         .mockReturnValue({start: fakeStartMethod});
       sound.play();
       expect(sound.newPlayableBufferSource).to.have.been.calledOnce;
@@ -150,7 +153,10 @@ describe('Sound', () => {
   describe('preloadFile method', () => {
     beforeEach(() => {
       sound = new Sound({});
-      jest.spyOn(sound, 'getPlayableFile').mockClear().mockReturnValue('/path/to/file');
+      jest
+        .spyOn(sound, 'getPlayableFile')
+        .mockClear()
+        .mockReturnValue('/path/to/file');
     });
 
     afterEach(() => {
@@ -175,7 +181,10 @@ describe('Sound', () => {
   describe('preloadBytes method', () => {
     beforeEach(() => {
       sound = new Sound({});
-      jest.spyOn(sound, 'getPlayableBytes').mockClear().mockReturnValue('bytes');
+      jest
+        .spyOn(sound, 'getPlayableBytes')
+        .mockClear()
+        .mockReturnValue('bytes');
     });
 
     afterEach(() => {
@@ -184,7 +193,10 @@ describe('Sound', () => {
 
     it('calls audioContext.decodeAudioData when AudioContext is provided', () => {
       sound.audioContext = new AudioContext();
-      jest.spyOn(sound.audioContext, 'decodeAudioData').mockClear().mockImplementation();
+      jest
+        .spyOn(sound.audioContext, 'decodeAudioData')
+        .mockClear()
+        .mockImplementation();
       sound.preloadBytes();
       expect(sound.audioContext.decodeAudioData).to.have.been.calledOnce;
     });
@@ -199,7 +211,10 @@ describe('Sound', () => {
 
   describe('getPlayableFile method', () => {
     it('returns file location from config preferring mp3 > ogg > wav', () => {
-      let canPlayTypeStub = jest.spyOn(window.Audio.prototype, 'canPlayType').mockClear().mockImplementation();
+      let canPlayTypeStub = jest
+        .spyOn(window.Audio.prototype, 'canPlayType')
+        .mockClear()
+        .mockImplementation();
       let config = {mp3: 'file.mp3', ogg: 'file.ogg', wav: 'file.wav'};
       sound = new Sound(config);
       canPlayTypeStub.mockImplementation((...args) => {
@@ -251,12 +266,18 @@ describe('Sound', () => {
     });
 
     it('returns this.config.bytes when browser can play audio/mp3', () => {
-      jest.spyOn(window.Audio.prototype, 'canPlayType').mockClear().mockReturnValue(true);
+      jest
+        .spyOn(window.Audio.prototype, 'canPlayType')
+        .mockClear()
+        .mockReturnValue(true);
       expect(sound.getPlayableBytes()).to.equal(sound.config.bytes);
     });
 
     it('returns false when browser cannot play audio/mp3', () => {
-      jest.spyOn(window.Audio.prototype, 'canPlayType').mockClear().mockReturnValue(false);
+      jest
+        .spyOn(window.Audio.prototype, 'canPlayType')
+        .mockClear()
+        .mockReturnValue(false);
       expect(sound.getPlayableBytes()).to.equal(false);
     });
   });

@@ -21,7 +21,10 @@ describe('ProjectImport', () => {
       },
     });
 
-    showImportPopupStub = jest.spyOn(window.Craft, 'showImportFromShareLinkPopup').mockClear().mockImplementation();
+    showImportPopupStub = jest
+      .spyOn(window.Craft, 'showImportFromShareLinkPopup')
+      .mockClear()
+      .mockImplementation();
     wrapper = shallow(<ProjectImport />);
   });
 
@@ -52,8 +55,12 @@ describe('ProjectImport', () => {
   });
 
   it('can import from channel-backed sources', () => {
-    showImportPopupStub.mockImplementation((...args) => args[0]('/projects/minecraft_hero/123abc'));
-    const getSourceSpy = jest.spyOn(window.dashboard.project, 'getSourceForChannel').mockClear();
+    showImportPopupStub.mockImplementation((...args) =>
+      args[0]('/projects/minecraft_hero/123abc')
+    );
+    const getSourceSpy = jest
+      .spyOn(window.dashboard.project, 'getSourceForChannel')
+      .mockClear();
     wrapper.simulate('click');
     expect(getSourceSpy.calledOnce).to.be.true;
     expect(getSourceSpy.calledWith('123abc')).to.be.true;
@@ -61,8 +68,12 @@ describe('ProjectImport', () => {
   });
 
   it('displays an error if given an invalid link', () => {
-    showImportPopupStub.mockImplementation((...args) => args[0]('some invalid link'));
-    const errorMessageSpy = jest.spyOn(window.Craft, 'showErrorMessagePopup').mockClear();
+    showImportPopupStub.mockImplementation((...args) =>
+      args[0]('some invalid link')
+    );
+    const errorMessageSpy = jest
+      .spyOn(window.Craft, 'showErrorMessagePopup')
+      .mockClear();
     wrapper.simulate('click');
     expect(errorMessageSpy.calledOnce).to.be.true;
     errorMessageSpy.mockRestore();

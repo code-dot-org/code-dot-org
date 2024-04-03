@@ -2,6 +2,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
+import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
   uploadsEnabled: true,

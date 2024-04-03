@@ -323,7 +323,10 @@ describe('ProgressBubble', () => {
 
   describe('href', () => {
     it('links to the level url', () => {
-      jest.spyOn(utils, 'currentLocation').mockClear().mockReturnValue({search: ''});
+      jest
+        .spyOn(utils, 'currentLocation')
+        .mockClear()
+        .mockReturnValue({search: ''});
       const wrapper = mount(
         <ProgressBubble
           {...defaultProps}
@@ -363,7 +366,9 @@ describe('ProgressBubble', () => {
     });
 
     it('preserves the queryparams of the current location', () => {
-      jest.spyOn(utils, 'currentLocation').mockClear()
+      jest
+        .spyOn(utils, 'currentLocation')
+        .mockClear()
         .mockReturnValue({search: `section_id=${fakeSectionId}&user_id=559`});
       const wrapper = mount(<ProgressBubble {...defaultProps} />);
       const href = wrapper.find('a').prop('href');
@@ -373,7 +378,9 @@ describe('ProgressBubble', () => {
     });
 
     it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
-      jest.spyOn(utils, 'currentLocation').mockClear()
+      jest
+        .spyOn(utils, 'currentLocation')
+        .mockClear()
         .mockReturnValue({search: 'section_id=212&user_id=559'});
       const wrapper = mount(
         <ProgressBubble {...defaultProps} selectedSectionId={fakeSectionId} />
