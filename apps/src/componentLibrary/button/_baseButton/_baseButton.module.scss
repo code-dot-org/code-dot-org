@@ -2,7 +2,8 @@
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 // Button common styles
-.button {
+.button,
+a.button {
   display: inline-flex;
   justify-content: center;
   text-align: center;
@@ -56,7 +57,8 @@
 }
 
 // Button Colors
-.button-primary {
+.button-primary,
+a.button-primary {
   &.button-purple {
     background-color: $light_secondary_500;
     color: $light_white;
@@ -100,7 +102,8 @@
   }
 }
 
-.button-secondary {
+.button-secondary,
+a.button-secondary {
   &.button-purple {
     border: 1px solid $light_secondary_500;
     color: $light_secondary_500;
@@ -168,7 +171,8 @@
   }
 }
 
-.button-tertiary {
+.button-tertiary,
+a.button-tertiary {
   &.button-purple {
     color: $light_secondary_500;
 
@@ -228,7 +232,8 @@
 }
 
 // Button Sizes
-.button-l {
+.button-l,
+a.button-l {
   padding: 0.625rem 1rem;
   gap: 0.5rem;
 
@@ -248,7 +253,8 @@
   }
 }
 
-.button-m {
+.button-m,
+a.button-m {
   padding: 0.5rem 1rem;
   gap: 0.5rem;
 
@@ -268,7 +274,8 @@
   }
 }
 
-.button-s {
+.button-s,
+a.button-s {
   padding: 0.3125rem 1rem;
   gap: 0.5rem;
 
@@ -288,7 +295,8 @@
   }
 }
 
-.button-xs {
+.button-xs,
+a.button-xs {
   padding: 0.125rem 0.5rem;
   gap: 0.25rem;
 
