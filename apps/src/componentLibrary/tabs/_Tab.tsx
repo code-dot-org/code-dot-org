@@ -50,8 +50,6 @@ const checkTabForErrors = (
   }
 };
 
-console.log('test');
-
 const _Tab: React.FunctionComponent<TabsProps> = ({
   isSelected,
   onClick,
