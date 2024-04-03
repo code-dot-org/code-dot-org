@@ -178,7 +178,7 @@ be manually installed.
     - Groups
     - Resources
 6. Configuration Type: `Manual`
-7. Privacy: `Send Name and Email/Username of user who luanches the tool`
+7. Privacy: `Send Name and Email/Username of user who launches the tool`
 8. Check `Names and Roles Services`, leave `Assignment and Grade Services` unchecked
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/73ab74e1-4c70-4ba6-8c41-5e5d46bc543f)
 
@@ -241,9 +241,9 @@ the Code.org LTI app, and select `API Info`.
 
 ## Using Code.org as an LTI Tool
 
-To install Code.org in your Canvas course, first ensure the LTI Key is enabled from the admin panel. Next, select `Code.org` from the `External Tool` dialogue when adding an Item to your App Modules. **Code.org must be configured to open in a new tab, and will not work in an iFrame.**
+- To install Code.org in your Canvas course, first ensure the LTI Key is enabled from the admin panel. Next, select `Code.org` from the `External Tool` dialogue when adding an Item to your App Modules. **Code.org must be configured to open in a new tab, and will not work in an iFrame.**
 
-The Code.org LTI integration does not yet support Deep Linking. Some of the placments for LTI Tools in Canvas will trigger a Deep Link request that is not curently supported by Code.org.
+- The Code.org LTI integration does not yet support Deep Linking. Some of the placments for LTI Tools- will trigger a Deep Link request that is not curently supported by Code.org.
 
 
 ## References
@@ -252,7 +252,6 @@ Canvas provides installation and configuration instructions for LTI Tools. Use
 these instructions, or refer to the steps above for Code.org specific details.
 
 - [Create a new LTI Key][install-canvas] which configures Code.org as an LTI Tool
-- [Configure the LTI app][configure-canvas] to generate the Deployment ID
 
 [install-canvas]: https://community.canvaslms.com/t5/Admin-Guide/How-do-I-configure-an-LTI-key-for-an-account/ta-p/140
 
