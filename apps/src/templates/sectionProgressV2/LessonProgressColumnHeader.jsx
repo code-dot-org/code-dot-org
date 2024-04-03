@@ -15,7 +15,7 @@ import styles from './progress-table-v2.module.scss';
 const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
   return (
     <div
-      className={classNames(styles.gridBox, styles.lessonHeaderCell)}
+      className={styles.lessonHeaderCell}
       key={lesson.id}
       data-tip
       data-for={getTooltipId(lesson)}
@@ -32,7 +32,6 @@ const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
 const getSkeletonLessonHeader = lessonId => (
   <div
     className={classNames(
-      styles.gridBox,
       styles.lessonHeaderCell,
       styles.lessonHeaderCellContainer
     )}
