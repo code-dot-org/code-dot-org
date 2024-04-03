@@ -13,11 +13,12 @@ a.button {
 
   margin: 0;
   padding: 0;
-  border: none;
+  border: 1px solid;
   background-color: transparent;
   color: unset;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
   &:focus-visible, &:focus {
     text-decoration: none;
@@ -52,7 +53,7 @@ a.button {
 
   &:disabled, &[aria-disabled="true"] {
     cursor: not-allowed;
-    border: none;
+    border-color: $light_gray_200;
   }
 }
 
