@@ -40,36 +40,38 @@ const PromptCustomization: React.FunctionComponent = () => {
     [dispatch]
   );
 
+  const renderChooseAndCompareModels = () => {
+    return (
+      <div className={classNames(styles.inputContainer)}>
+        <SimpleDropdown
+          labelText="Pick a model:"
+          onChange={e => setChosenModel(e.target.value)}
+          items={[
+            {value: 'llama2', text: 'LLama 2'},
+            {value: 'gpt', text: 'ChatGPT'},
+          ]}
+          selectedValue={chosenModel}
+          name="model"
+          size="s"
+          className={styles.updateButton}
+        />
+        <Button
+          text="Compare Models"
+          onClick={() => setIsShowingModelDialog(true)}
+          type="secondary"
+          className={styles.updateButton}
+        />
+        {isShowingModelDialog && (
+          <CompareModelsDialog onClose={() => setIsShowingModelDialog(false)} />
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        <div className={classNames(styles.inputContainer)}>
-          <SimpleDropdown
-            labelText="Pick a model:"
-            onChange={e => setChosenModel(e.target.value)}
-            items={[
-              {value: 'llama2', text: 'LLama 2'},
-              {value: 'gpt', text: 'ChatGPT'},
-            ]}
-            selectedValue={chosenModel}
-            name="model"
-            size="s"
-            className={styles.updateButton}
-          />
-          <div>
-            <Button
-              text="Compare Models"
-              onClick={() => setIsShowingModelDialog(true)}
-              type="secondary"
-              className={styles.updateButton}
-            />
-          </div>
-          {isShowingModelDialog && (
-            <CompareModelsDialog
-              onClose={() => setIsShowingModelDialog(false)}
-            />
-          )}
-        </div>
+        {renderChooseAndCompareModels()}
         {isVisible(botName) && (
           <div className={styles.inputContainer}>
             <label htmlFor="chatbot-name">
