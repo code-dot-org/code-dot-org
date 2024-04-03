@@ -124,8 +124,6 @@ tr.introjs-showElement > th {
   border-right-color: #fff;
 }
 .introjs-tooltip {
-  @include main-font-regular;
-  font-size: 1rem;
   box-sizing: content-box;
   position: absolute;
   visibility: visible;
@@ -138,6 +136,10 @@ tr.introjs-showElement > th {
 }
 .introjs-tooltiptext {
   padding: 20px;
+  p {
+    @include main-font-regular;
+    font-size: 1rem;
+  }
 }
 .introjs-dontShowAgain {
   padding-left: 20px;
@@ -165,7 +167,7 @@ tr.introjs-showElement > th {
 .introjs-tooltip-title {
   font-family: $barlowSemiCondensed-semibold;
   color: $light_black;
-  font-size: 1rem;
+  font-size: 1.5rem;
   width: 90%;
   min-height: 1.5em;
   margin: 0;
@@ -259,10 +261,49 @@ tr.introjs-showElement > th {
   text-decoration: none;
 }
 .introjs-prevbutton {
+  @include main-font-regular;
+  text-shadow: none;
+  font-size: 1rem;
   float: left;
+  color: $light_secondary_500;
+  border-radius: 4px;
+  border-color: $light_secondary_500;
+  border-width: 1px;
+  padding: 5px 16px;
+  background-color: $light_white;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: $light_white;
+    background-color: $light_secondary_100;
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+  }
 }
 .introjs-nextbutton {
+  @include main-font-regular;
+  text-shadow: none;
+  font-size: 1rem;
   float: right;
+  color: $light_white;
+  border-radius: 4px;
+  border: none;
+  padding: 5px 16px;
+  background-color: $light_secondary_500;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: $light_white;
+    background-color: #6c468a;
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+  }
 }
 .introjs-disabled {
   color: #9e9e9e;
