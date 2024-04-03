@@ -904,9 +904,6 @@ Dashboard::Application.routes.draw do
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
 
-        post 'users/post_ai_rubrics_tour_seen', to: 'users#post_ai_rubrics_tour_seen'
-        get 'users/get_ai_rubrics_tour_seen', to: 'users#get_ai_rubrics_tour_seen'
-
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
