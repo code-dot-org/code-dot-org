@@ -51,6 +51,7 @@
     "long_instructions": "Can you spot the difference between the two functions in your workspace? \r\n \r\nUse these functions with other code from the toolbox to clear a path for the Minecart, then collect the **Flint and Steel** [flint_and_steel]. \r\n ",
     "level_verification_timeout": "0",
     "songs": "[\"vignette5-shortpiano\", \"vignette7-funky-chirps-short\", \"vignette8-free-play\", \"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\"]",
+    "top_level_procedure_autopopulate": "true",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't know where to go?  See if you can find the dotted line!\",\"hint_id\":\"MC_HOC_2017_10_Cole_b\",\"hint_type\":\"general\",\"hint_path\":\"[[4,9],[0,9],[0,4]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/012a11d3b096b20415487b7e60419260/MC_HOC_2017_10_RETRY.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use functions to make solving this puzzle easier!\",\"hint_id\":\"MC_HOC_2017_10_Cole_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/25b0c4124fc1a0a63fde4a5b4273cd99/MC_HOC_2017_10_RETRY.mp3\"}]",
     "available_blocks": [
       "rails"
@@ -122,12 +123,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="fix short path"/>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="fix long path"/>
-        </block>
         <block type="craft_moveForward"/>
         <block type="craft_moveBackward"/>
         <block type="craft_turn">

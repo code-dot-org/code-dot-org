@@ -22,8 +22,6 @@ export default function initializeGenerator(
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function (name, opt_typeFilter) {
-    const generator = blocklyWrapper.getGenerator();
-    generator.init(blocklyWrapper.mainBlockSpace);
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
     );
@@ -35,6 +33,21 @@ export default function initializeGenerator(
         (opt_typeFilter as string[]).includes(block.type)
       );
     }
+    return blocklyWrapper.Generator.blocksToCode(name, blocksToGenerate);
+  };
+
+  // Used to generate code for an array of top blocks.
+  blocklyWrapper.Generator.blocksToCode = function (
+    name: string,
+    blocksToGenerate: Block[]
+  ) {
+    if (name !== 'JavaScript') {
+      console.warn(
+        `Can only generate code in JavaScript. ${name} is unsupported.`
+      );
+    }
+    const generator = blocklyWrapper.getGenerator();
+    generator.init(blocklyWrapper.getMainWorkspace());
     const code: string[] = [];
     blocksToGenerate.forEach(block => {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));

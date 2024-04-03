@@ -855,6 +855,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :panels, parent: :level, class: Panels do
+    game {Game.panels}
+    level_num {'custom'}
+  end
+
   factory :block do
     transient do
       sequence(:index)

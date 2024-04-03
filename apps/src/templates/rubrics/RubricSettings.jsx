@@ -9,7 +9,9 @@ import {
   Heading4,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
-import {rubricShape} from './rubricShapes';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {reportingDataShape, rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
 import SectionSelector from './SectionSelector';
 import Link from '@cdo/apps/componentLibrary/link/Link';
@@ -73,6 +75,7 @@ export default function RubricSettings({
   rubric,
   sectionId,
   tabSelectCallback,
+  reportingData,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -246,6 +249,13 @@ export default function RubricSettings({
     tabSelectCallback(TAB_NAMES.RUBRIC);
   };
 
+  const onClickDownloadCSV = () => {
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_CSV_DOWNLOADED, {
+      ...(reportingData || {}),
+      sectionId: sectionId,
+    });
+  };
+
   return (
     <div
       className={classnames('uitest-rubric-settings', {
@@ -340,7 +350,7 @@ export default function RubricSettings({
                   className="uitest-rubric-download-csv"
                   text={i18n.downloadCSV()}
                   color={Button.ButtonColor.brandSecondaryDefault}
-                  onClick={() => {}}
+                  onClick={onClickDownloadCSV}
                   style={{margin: 0}}
                 />
               </CSVLink>
@@ -360,4 +370,5 @@ RubricSettings.propTypes = {
   rubric: rubricShape.isRequired,
   sectionId: PropTypes.number,
   tabSelectCallback: PropTypes.func,
+  reportingData: reportingDataShape,
 };
