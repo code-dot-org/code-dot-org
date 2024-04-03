@@ -126,6 +126,7 @@
     "istanbul-instrumenter-loader": "^3.0.1",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
     "jest-transform-stub": "^2.0.0",
     "json-parse-better-errors": "^1.0.1",
     "karma": "^6.4.2",

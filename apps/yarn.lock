@@ -4472,7 +4472,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/test-result@npm:^29.7.0":
+"@jest/test-result@npm:^29.0.2, @jest/test-result@npm:^29.7.0":
   version: 29.7.0
   resolution: "@jest/test-result@npm:29.7.0"
   dependencies:
@@ -4519,7 +4519,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:^29.6.3":
+"@jest/types@npm:^29.0.2, @jest/types@npm:^29.6.3":
   version: 29.6.3
   resolution: "@jest/types@npm:29.6.3"
   dependencies:
@@ -9209,6 +9209,7 @@ __metadata:
     istanbul-instrumenter-loader: ^3.0.1
     jest: ^29.7.0
     jest-environment-jsdom: ^29.7.0
+    jest-html-reporter: ^3.10.2
     jest-transform-stub: ^2.0.0
     jquery: 1.12.1
     jquery-ui: ^1.12.1
@@ -11364,6 +11365,13 @@ canvg@gabelerner/canvg:
   version: 0.1.4
   resolution: "date-now@npm:0.1.4"
   checksum: 7f4762ce64c3535cb004d8f8517dae23b57fed221ffd661ef7db0142dc639a66e95700da10e98b9225d86dd2655d81a3d7bc2186adcb09a6a8e13647265a621d
+  languageName: node
+  linkType: hard
+
+"dateformat@npm:3.0.2":
+  version: 3.0.2
+  resolution: "dateformat@npm:3.0.2"
+  checksum: 47506f5c5d56b937034051f6befa92fc725011ddf85072876a2a65867382735cba1f9df38454b9c06505cfee68667ffc3ad814424c634d1048f630478e2b7522
   languageName: node
   linkType: hard
 
@@ -18061,6 +18069,23 @@ es6-shim@latest:
     fsevents:
       optional: true
   checksum: c2c8f2d3e792a963940fbdfa563ce14ef9e14d4d86da645b96d3cd346b8d35c5ce0b992ee08593939b5f718cf0a1f5a90011a056548a1dbf58397d4356786f01
+  languageName: node
+  linkType: hard
+
+"jest-html-reporter@npm:^3.10.2":
+  version: 3.10.2
+  resolution: "jest-html-reporter@npm:3.10.2"
+  dependencies:
+    "@jest/test-result": ^29.0.2
+    "@jest/types": ^29.0.2
+    dateformat: 3.0.2
+    mkdirp: ^1.0.3
+    strip-ansi: 6.0.1
+    xmlbuilder: 15.0.0
+  peerDependencies:
+    jest: 19.x - 29.x
+    typescript: ^3.7.x || ^4.3.x || ^5.x
+  checksum: a8376fbfde183d1c797393113e55e20bdba06f84cd66f6f97af60d67b9d160e7f593211146c4c37feb0e809c26c5bf0aef966473cdd74227330fd24156cbef8b
   languageName: node
   linkType: hard
 
@@ -26504,7 +26529,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1, strip-ansi@npm:^6.0.0, strip-ansi@npm:^6.0.1":
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1, strip-ansi@npm:6.0.1, strip-ansi@npm:^6.0.0, strip-ansi@npm:^6.0.1":
   version: 6.0.1
   resolution: "strip-ansi@npm:6.0.1"
   dependencies:
@@ -29583,6 +29608,13 @@ temporal@latest:
   version: 12.0.0
   resolution: "xmlbuilder@npm:12.0.0"
   checksum: b384b2ae80f42fc8f4671078dc7b4266849ead31c7be8393cf95906103cacf48c98eac10cf3686c87baeb4a4e44f2639ef49a67a60acd105e87526b4d98d4ef8
+  languageName: node
+  linkType: hard
+
+"xmlbuilder@npm:15.0.0":
+  version: 15.0.0
+  resolution: "xmlbuilder@npm:15.0.0"
+  checksum: b1917a90c37d5a6b17db72cb5d5c443448c67615280b8cb40eeee34efed62f897dab523bf69cb6568163fe9f4f299c177b36e98241c87dbde1b968a549edfff4
   languageName: node
   linkType: hard
 
