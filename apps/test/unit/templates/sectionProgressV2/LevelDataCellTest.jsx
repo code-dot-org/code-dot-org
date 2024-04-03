@@ -22,11 +22,24 @@ const DEFAULT_PROPS = {
   sectionId: 1,
   studentLevelProgress: PROGRESS,
   expandedChoiceLevel: false,
+  lessonId: 1,
 };
 
-describe('ProgressTableV2', () => {
+const wrapInTableStructure = element => (
+  <table>
+    <tbody>
+      <tr>{element}</tr>
+    </tbody>
+  </table>
+);
+
+describe('LevelDataCell', () => {
   const renderDefault = (propOverrides = {}) => {
-    render(<UnconnectedLevelDataCell {...DEFAULT_PROPS} {...propOverrides} />);
+    render(
+      wrapInTableStructure(
+        <UnconnectedLevelDataCell {...DEFAULT_PROPS} {...propOverrides} />
+      )
+    );
   };
 
   it('Redirects with sectionId and studentId when specified', () => {

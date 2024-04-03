@@ -727,7 +727,7 @@ class UnitEditor extends React.Component {
                   </div>
                 )}
               {!this.props.hasCourse && (
-                <div>
+                <div data-testid="course-version-publishing-editor">
                   <CourseVersionPublishingEditor
                     pilotExperiment={this.state.pilotExperiment}
                     versionYear={this.state.versionYear}
