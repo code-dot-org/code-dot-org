@@ -152,7 +152,7 @@ As part of certain in-browser programming tools available on Code.org (such as �
 ### Internet Simulator and Other Messages
 Code.org offers a tool called the [“Internet Simulator”](https://code.org/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, Students participating in a Teacher-supervised classroom activity can send text-based messages to their Teacher and to other Students in their specific classroom section. Message contents are visible to the classroom Teacher and are not accessed or used by Code.org for any purpose other than in this educational tool. All messages are deleted after two hours of class inactivity, or upon a manual reset by the Teacher.
 
-In select courses, such as the Code.org CSA AP course, Teachers may optionally enable peer review groups within their classroom sections to allow students to provide feedback on other students’ projects. The student feedback is visible only to the Teacher and to students within the group designated by the Teacher. The Teacher may disable the feature at any time and may also delete specific feedback.
+In select courses, such as the Code.org AP® CSA course, Teachers may optionally enable peer review groups within their classroom sections to allow students to provide feedback on other students’ projects. The student feedback is visible only to the Teacher and to students within the group designated by the Teacher. The Teacher may disable the feature at any time and may also delete specific feedback.
 
 In addition, Teachers may provide written feedback to their Students on coursework. Users may also send messages to Code.org for customer-support requests.
 
