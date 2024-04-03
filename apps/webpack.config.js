@@ -168,7 +168,14 @@ const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
   localeDoNotImport(cdo.replace(/^@cdo/, `${dir}/p5lab`)),
 ];
 
-const WEBPACK_ALIASES = {
+const APPLICATION_ALIASES = {
+  '@cdo/apps': p('src'),
+  '@cdo/static': p('static'),
+  repl: p('src/noop'),
+  '@cdo/storybook': p('.storybook'),
+};
+
+const LOCALE_ALIASES = {
   '@cdo/locale': path.resolve(__dirname, 'src/util/locale-do-not-import.js'),
   ...Object.fromEntries([
     localeDoNotImport('@cdo/aichat/locale'),
@@ -185,10 +192,11 @@ const WEBPACK_ALIASES = {
     localeDoNotImportP5Lab('@cdo/poetry/locale'),
     localeDoNotImportP5Lab('@cdo/spritelab/locale'),
   ]),
-  '@cdo/apps': p('src'),
-  '@cdo/static': p('static'),
-  repl: p('src/noop'),
-  '@cdo/storybook': p('.storybook'),
+};
+
+const WEBPACK_ALIASES = {
+  ...APPLICATION_ALIASES,
+  ...LOCALE_ALIASES,
 };
 
 // Our base webpack config, from which our other webpack configs are derived,
@@ -733,5 +741,6 @@ module.exports = {
   localeDoNotImport,
   // Used as the basis for karma and storybook webpack configs:
   WEBPACK_BASE_CONFIG,
-  WEBPACK_ALIASES,
+  APPLICATION_ALIASES,
+  LOCALE_ALIASES,
 };
