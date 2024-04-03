@@ -10,13 +10,16 @@ module ActionDispatch
     # Intended for short-term use, just to confirm that our assessment of our
     # Redis needs is accurate and build some confidence in stability in advance
     # of the actual switchover.
+    #
+    # TODO infra: replace this with an actual Redis-based implementation (a la
+    # https://github.com/code-dot-org/code-dot-org/pull/57252) once we're ready.
     class MirrorCookiesInRedisStore < CookieStore
       def initialize(app, options = {})
         @redis = Redis.new(url: options[:server])
         super(app, options.except(:server))
       end
 
-      # @see https://github.com/rails/rails/blob/ac87f58207cff18880593263be9d83456aa3a2ef/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L104-L107
+      # @see https://github.com/rails/rails/blob/v6.1.7.7/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L104-L107
       private def write_session(req, session_id, session_data, options)
         mirror_session_in_redis(session_id, session_data) if DCDO.get('mirror_session_in_redis_enabled', false)
         super(req, session_id, session_data, options)
