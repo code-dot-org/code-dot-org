@@ -10,9 +10,9 @@
 #  type               :string(255)
 #  project_id         :string(255)
 #  project_version_id :string(255)
-#  prompt             :text(16777215)
+#  prompt             :text(65535)
 #  status             :string(255)
-#  ai_response        :text(16777215)
+#  ai_response        :text(65535)
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
