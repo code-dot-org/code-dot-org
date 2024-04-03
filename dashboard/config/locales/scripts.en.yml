@@ -16222,3 +16222,12 @@ en:
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+        computer-vision-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: computer-vision-pilot
+          title: Computer Vision
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

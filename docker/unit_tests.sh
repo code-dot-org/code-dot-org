@@ -26,6 +26,7 @@ dashboard_enable_pegasus: true
 dashboard_workers: 5
 disable_all_eyes_running: true
 google_maps_api_key: boguskey
+geocoder_redis_url: 'redis://unit-tests-redis:6379/0/geocoder'
 ignore_eyes_mismatches: true
 localize_apps: true
 optimize_rails_assets: false

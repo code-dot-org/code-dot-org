@@ -10,7 +10,7 @@ export const ITEM_TYPE = Object.freeze({
   CHOICE_LEVEL: ['split', color.neutral_dark60],
   KEEP_WORKING: ['rotate-left', color.neutral_dark],
   NO_ONLINE_WORK: ['dash', color.neutral_dark],
-  IN_PROGRESS: ['circle-o', color.neutral_dark],
+  IN_PROGRESS: ['circle-o', color.product_affirmative_default],
   SUBMITTED: ['circle', color.product_affirmative_default],
   VALIDATED: ['circle-check', color.product_affirmative_default],
 });
