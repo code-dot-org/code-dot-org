@@ -3,7 +3,7 @@
 #ai-tutor-container.in.collapse
 
 %script{src: webpack_asset_path('js/levels/editors/fields/_ai_tutor_fields.js'),
-  data: {aitutoravailable: @level.properties["ai_tutor_available"], aitutorlevelspecificprompt: (@level.properties["ai_tutor_level_specific_prompt"] || '').to_json}}
+  data: {aitutoravailable: (@level.properties["ai_tutor_available"] || true).to_json, aitutorlevelspecificprompt: (@level.properties["ai_tutor_level_specific_prompt"] || '').to_json}}
 
   -# data: {aicustomizations: (@level.properties["initial_ai_customizations"] || {}).to_json, levelname: @level.name, appname: @level.game&.app}
     = f.label :ai_tutor_level_specific_prompt, 'Level-Specific Prompt'
