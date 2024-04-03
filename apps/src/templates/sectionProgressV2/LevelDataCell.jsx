@@ -101,10 +101,16 @@ function LevelDataCell({
 
   return (
     <Link
+      id="ui-level-data-cell"
       href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
       openInNewTab
       external
-      className={classNames(styles.gridBox, styles.gridBoxLevel, feedbackStyle)}
+      className={classNames(
+        styles.gridBox,
+        styles.gridBoxLevel,
+        feedbackStyle,
+        'ui-level-data-cell'
+      )}
       onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
     >
       {itemType && <ProgressIcon itemType={itemType} />}

@@ -61,11 +61,11 @@ export default function LessonProgressColumnHeader({
   return (
     <div className={styles.lessonHeaderCellContainer}>
       <div
+        id="ui-progress-column"
         className={classNames(
           styles.gridBox,
           styles.lessonHeaderCell,
-          styles.pointerMouse,
-          'ui-progress-column'
+          styles.pointerMouse
         )}
         data-tip
         data-for={getTooltipId(lesson)}
