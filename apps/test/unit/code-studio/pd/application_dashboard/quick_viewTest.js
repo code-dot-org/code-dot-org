@@ -3,7 +3,6 @@ import {shallow} from 'enzyme';
 import {QuickView} from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';
 import QuickViewTable from '@cdo/apps/code-studio/pd/application_dashboard/quick_view_table';
 import {expect} from 'chai';
-import sinon from 'sinon';
 
 describe('Quick View', () => {
   const fakeRouter = {
@@ -87,7 +86,7 @@ describe('Quick View', () => {
       quickView.update();
     });
     after(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     it('Is no longer loading', () => {

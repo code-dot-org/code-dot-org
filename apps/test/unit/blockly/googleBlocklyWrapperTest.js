@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import GoogleBlockly from 'blockly/core';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
 import {expect} from '../../util/reconfiguredChai';
@@ -7,7 +6,7 @@ import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load B
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
   beforeEach(() => {
-    GoogleBlockly.JavaScript = sinon.spy();
+    GoogleBlockly.JavaScript = jest.fn();
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
   });
   afterEach(() => {
@@ -16,7 +15,7 @@ describe('Google Blockly Wrapper', () => {
     // Reset Blockly for other tests.
     Blockly = cdoBlockly; // eslint-disable-line no-global-assign
     // Reset context menu for other tests.
-    GoogleBlockly.ContextMenuRegistry.registry.reset();
+    GoogleBlockly.ContextMenuRegistry.registry.mockReset();
   });
 
   it('readOnly properties cannot be set', () => {

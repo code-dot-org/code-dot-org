@@ -1,6 +1,5 @@
 /* eslint no-unused-vars: "error" */
 import React from 'react';
-import sinon from 'sinon';
 import {shallow, mount} from 'enzyme';
 import {expect} from '../../util/reconfiguredChai';
 import Dialog, {
@@ -178,7 +177,7 @@ describe('ImportScreensDialog', () => {
                  id="img2">
           </div>
         </div>`;
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -260,7 +259,7 @@ describe('ImportScreensDialog', () => {
   describe('When given other assets that can be imported', () => {
     let checkboxSelector;
     beforeEach(() => {
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -317,7 +316,7 @@ describe('ImportScreensDialog', () => {
                  id="img2">
           </div>
         </div>`;
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -386,7 +385,7 @@ describe('ImportScreensDialog', () => {
                  id="img2">
           </div>
         </div>`;
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop

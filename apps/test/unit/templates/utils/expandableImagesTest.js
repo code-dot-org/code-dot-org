@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon';
 
 import {renderExpandableImages} from '@cdo/apps/templates/utils/expandableImages';
 
@@ -10,11 +9,11 @@ describe('expandableImages', () => {
     let renderSpy;
 
     beforeEach(() => {
-      renderSpy = sinon.spy(ReactDOM, 'render');
+      renderSpy = jest.spyOn(ReactDOM, 'render').mockClear();
     });
 
     afterEach(() => {
-      renderSpy.restore();
+      renderSpy.mockRestore();
     });
 
     const createExpandableImage = url => {
@@ -33,10 +32,10 @@ describe('expandableImages', () => {
 
       expect(renderSpy).to.have.been.calledOnce;
 
-      const renderElement = renderSpy.args[0][0];
+      const renderElement = renderSpy.mock.calls[0][0];
       expect(renderElement.props.url).to.equal('https://example.com/img.jpg');
 
-      const renderContainer = renderSpy.args[0][1];
+      const renderContainer = renderSpy.mock.calls[0][1];
       expect(renderContainer).to.equal(image);
     });
 
@@ -51,7 +50,7 @@ describe('expandableImages', () => {
       }
 
       renderExpandableImages(containerNode);
-      expect(renderSpy.callCount).to.equal(N);
+      expect(renderSpy).toHaveBeenCalledTimes(N);
     });
   });
 });

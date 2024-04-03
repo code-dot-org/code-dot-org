@@ -1,5 +1,4 @@
 import {expect} from '../util/reconfiguredChai';
-import sinon from 'sinon';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import * as dontMarshalApi from '@cdo/apps/dontMarshalApi';
 
@@ -87,7 +86,7 @@ describe('removeItem', () => {
 
   it('warns and does nothing when passed a large index', () => {
     const errorHandler = {
-      outputWarning: sinon.spy(),
+      outputWarning: jest.fn(),
     };
     injectErrorHandler(errorHandler);
 

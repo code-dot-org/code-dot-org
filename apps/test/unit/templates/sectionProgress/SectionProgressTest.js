@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
@@ -20,7 +19,7 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadUnitProgress');
+    jest.spyOn(progressLoader, 'loadUnitProgress').mockClear().mockImplementation();
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
       setCurrentView: () => {},
@@ -55,7 +54,7 @@ describe('SectionProgress', () => {
   });
 
   afterEach(() => {
-    progressLoader.loadUnitProgress.restore();
+    progressLoader.loadUnitProgress.mockRestore();
   });
 
   const setUp = (overrideProps = {}) => {
@@ -99,15 +98,15 @@ describe('SectionProgress', () => {
 
   it('sends Amplitude progress event when onChangeScript is called', () => {
     const wrapper = setUp({currentView: ViewType.DETAIL});
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     wrapper.instance().onChangeScript(123);
     expect(analyticsSpy).to.be.calledOnce;
     assert.equal(
-      analyticsSpy.getCall(0).firstArg,
+      analyticsSpy.mock.calls[0].firstArg,
       'Section Progress Unit Changed'
     );
 
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 });

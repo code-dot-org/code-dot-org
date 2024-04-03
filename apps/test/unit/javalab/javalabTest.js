@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import ReactDOM from 'react-dom';
 import {expect} from '../../util/reconfiguredChai';
 import Javalab from '@cdo/apps/javalab/Javalab';
@@ -25,9 +24,9 @@ describe('Javalab', () => {
     javalab = new Javalab();
     stubRedux();
     registerReducers(commonReducers);
-    sinon.stub(project, 'autosave');
-    sinon.stub(ReactDOM, 'render');
-    sinon.stub(getStore(), 'dispatch');
+    jest.spyOn(project, 'autosave').mockClear().mockImplementation();
+    jest.spyOn(ReactDOM, 'render').mockClear().mockImplementation();
+    jest.spyOn(getStore(), 'dispatch').mockClear().mockImplementation();
     stubStudioApp();
     javalab.studioApp_ = studioApp();
     config = {
@@ -37,7 +36,7 @@ describe('Javalab', () => {
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
     restoreRedux();
     restoreStudioApp();
   });
@@ -47,13 +46,13 @@ describe('Javalab', () => {
 
     beforeEach(() => {
       eventStub = {
-        preventDefault: sinon.stub(),
+        preventDefault: jest.fn(),
         returnValue: undefined,
       };
     });
 
     it('triggers an autosave if there are unsaved changes', () => {
-      sinon.stub(project, 'hasOwnerChangedProject').returns(true);
+      jest.spyOn(project, 'hasOwnerChangedProject').mockClear().mockReturnValue(true);
 
       javalab.beforeUnload(eventStub);
 
@@ -61,7 +60,7 @@ describe('Javalab', () => {
       expect(eventStub.preventDefault).to.have.been.calledOnce;
       expect(eventStub.returnValue).to.equal('');
 
-      project.hasOwnerChangedProject.restore();
+      project.hasOwnerChangedProject.mockRestore();
     });
   });
 

@@ -8,7 +8,6 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
 import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 
 export function itMakesMicroBitComponentsAvailable(
   Board,
@@ -32,7 +31,7 @@ export function itMakesMicroBitComponentsAvailable(
         createGlobalProperty: function (key, value) {
           jsInterpreter.globalProperties[key] = value;
         },
-        addCustomMarshalObject: sinon.spy(),
+        addCustomMarshalObject: jest.fn(),
       };
       // Opportunity to stub anything needed to test a board
       if (boardSpecificSetup) {
@@ -67,7 +66,7 @@ export function itMakesMicroBitComponentsAvailable(
           expect(jsInterpreter.globalProperties[constructor]).to.be.a(
             'function'
           );
-          const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
+          const passedObjects = jsInterpreter.addCustomMarshalObject.mock.calls.map(
             call => call[0].instance
           );
           expect(passedObjects).to.include(

@@ -2,7 +2,6 @@ import {mount} from 'enzyme';
 import $ from 'jquery';
 import {mapValues} from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
@@ -55,12 +54,12 @@ describe('Petition on submit', () => {
     mount(<PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />);
 
   beforeEach(() => {
-    sinon.spy($, 'ajax');
+    jest.spyOn($, 'ajax').mockClear();
     window.ga = sinon.fake();
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
     window.ga = undefined;
   });
 
@@ -75,7 +74,7 @@ describe('Petition on submit', () => {
     addInputsToPetition(petition, minimumInputs);
     submitForm(petition);
 
-    const serverCalledWith = $.ajax.getCall(0).args[0];
+    const serverCalledWith = $.ajax.mock.calls[0][0];
     expect(JSON.parse(serverCalledWith.data)).to.deep.equal(
       expectedDataFromInputs(minimumInputs)
     );
@@ -93,7 +92,7 @@ describe('Petition on submit', () => {
     addInputsToPetition(petition, inputs);
     submitForm(petition);
 
-    const serverCalledWith = $.ajax.getCall(0).args[0];
+    const serverCalledWith = $.ajax.mock.calls[0][0];
     expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
       ...expectedDataFromInputs(inputs),
       name_s: '',
@@ -118,7 +117,7 @@ describe('Petition on submit', () => {
     addInputsToPetition(petition, inputs);
     submitForm(petition);
 
-    const serverCalledWith = $.ajax.getCall(0).args[0];
+    const serverCalledWith = $.ajax.mock.calls[0][0];
     expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
       ...expectedDataFromInputs(inputs),
       role_s: 'engineer', // The 'role' value has a consistent name regardless of language
@@ -129,11 +128,11 @@ describe('Petition on submit', () => {
     addInputsToPetition(petition, minimumInputs);
     submitForm(petition);
 
-    sinon.assert.calledOnce(window.ga);
+    expect(window.ga).toHaveBeenCalledTimes(1);
   });
   it('does not report to google analytics if unsuccessful submit', () => {
     const petition = mountPetition();
     submitForm(petition);
-    sinon.assert.notCalled(window.ga);
+    expect(window.ga).not.toHaveBeenCalled();
   });
 });

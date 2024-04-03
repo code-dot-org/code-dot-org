@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
@@ -35,14 +34,14 @@ describe('The DebugConsole component when the console is enabled', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers(reducers);
-    getStore().dispatch(actions.initialize(sinon.spy()));
+    getStore().dispatch(actions.initialize(jest.fn()));
     root = mount(
       <Provider store={getStore()}>
         <DebugConsole debugConsoleDisabled={false} />
       </Provider>
     );
     const debugConsoleInstance = root.find('DebugConsole').instance();
-    jumpToBottomSpy = sinon.spy(debugConsoleInstance, 'jumpToBottom');
+    jumpToBottomSpy = jest.spyOn(debugConsoleInstance, 'jumpToBottom').mockClear();
   });
 
   afterEach(() => {
@@ -307,13 +306,13 @@ describe('The DebugConsole component when the console is enabled', () => {
       submit('1+1');
       selection = '';
       inputEl = debugInput().instance();
-      sinon.spy(inputEl, 'focus');
-      sinon.stub(window, 'getSelection').callsFake(() => selection);
+      jest.spyOn(inputEl, 'focus').mockClear();
+      jest.spyOn(window, 'getSelection').mockClear().mockImplementation(() => selection);
     });
 
     afterEach(() => {
-      inputEl.focus.restore();
-      window.getSelection.restore();
+      inputEl.focus.mockRestore();
+      window.getSelection.mockRestore();
     });
 
     it('clicking the debug output window without selecting text will refocus the input', () => {
@@ -365,7 +364,7 @@ describe('The DebugConsole component when the debug console is disabled', () => 
   beforeEach(() => {
     stubRedux();
     registerReducers(reducers);
-    getStore().dispatch(actions.initialize(sinon.spy()));
+    getStore().dispatch(actions.initialize(jest.fn()));
     root = mount(
       <Provider store={getStore()}>
         <DebugConsole debugConsoleDisabled={true} />

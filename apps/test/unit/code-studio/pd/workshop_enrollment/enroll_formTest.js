@@ -1,7 +1,6 @@
 import React from 'react';
 import {assert, expect} from 'chai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import jQuery from 'jquery';
 import {pick, omit} from 'lodash';
 import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
@@ -15,11 +14,11 @@ describe('Enroll Form', () => {
   let enrollForm;
   beforeEach(() => {
     server = sinon.fakeServer.create();
-    sinon.spy(jQuery, 'ajax');
+    jest.spyOn(jQuery, 'ajax').mockClear();
   });
   afterEach(() => {
-    server.restore();
-    jQuery.ajax.restore();
+    server.mockRestore();
+    jQuery.ajax.mockRestore();
   });
 
   const props = {
@@ -470,7 +469,7 @@ describe('Enroll Form', () => {
       enrollForm.find('#submit').simulate('click');
 
       expect(jQuery.ajax.calledOnce).to.be.true;
-      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal(
+      expect(JSON.parse(jQuery.ajax.mock.calls[0][0].data)).to.deep.equal(
         expectedData
       );
     });
@@ -480,7 +479,7 @@ describe('Enroll Form', () => {
       enrollForm.find('#submit').simulate('click');
 
       expect(jQuery.ajax.calledOnce).to.be.true;
-      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal({
+      expect(JSON.parse(jQuery.ajax.mock.calls[0][0].data)).to.deep.equal({
         ...requiredParams,
         school_info: {school_id: school_id},
       });

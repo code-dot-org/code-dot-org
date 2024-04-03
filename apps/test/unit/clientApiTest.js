@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {expect, assert} from '../util/reconfiguredChai';
 const project = require('@cdo/apps/code-studio/initApp/project');
 var clientApi = require('@cdo/apps/clientApi');
@@ -7,7 +6,7 @@ describe('clientApi module', () => {
   var xhr, requests;
 
   beforeEach(() => {
-    sinon.stub(project, 'getCurrentId').returns('some-project');
+    jest.spyOn(project, 'getCurrentId').mockClear().mockReturnValue('some-project');
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
     xhr.onCreate = function (xhr) {
@@ -16,8 +15,8 @@ describe('clientApi module', () => {
   });
 
   afterEach(() => {
-    project.getCurrentId.restore();
-    xhr.restore();
+    project.getCurrentId.mockRestore();
+    xhr.mockRestore();
   });
 
   describe('the withProjectId function', () => {

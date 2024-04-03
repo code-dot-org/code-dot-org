@@ -1,5 +1,4 @@
 import {assert, expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 
 describe('BackpackClientApi', () => {
@@ -35,14 +34,14 @@ describe('BackpackClientApi', () => {
     beforeEach(() => {
       server = sinon.fakeServer.create();
       backpackClientApi = new BackpackClientApi(channelId);
-      fetchChannelIdStub = sinon.stub(backpackClientApi, 'fetchChannelId');
+      fetchChannelIdStub = jest.spyOn(backpackClientApi, 'fetchChannelId').mockClear().mockImplementation();
       errorCallback = sinon.fake();
       successCallback = sinon.fake();
     });
 
     afterEach(() => {
-      server.restore();
-      fetchChannelIdStub.restore();
+      server.mockRestore();
+      fetchChannelIdStub.mockRestore();
     });
 
     it('save does not fetch channel id', () => {
@@ -121,14 +120,14 @@ describe('BackpackClientApi', () => {
     beforeEach(() => {
       server = sinon.fakeServer.create();
       backpackClientApi = new BackpackClientApi();
-      fetchChannelIdStub = sinon.stub(backpackClientApi, 'fetchChannelId');
+      fetchChannelIdStub = jest.spyOn(backpackClientApi, 'fetchChannelId').mockClear().mockImplementation();
       errorCallback = sinon.fake();
       successCallback = sinon.fake();
     });
 
     afterEach(() => {
-      server.restore();
-      fetchChannelIdStub.restore();
+      server.mockRestore();
+      fetchChannelIdStub.mockRestore();
     });
 
     it('save fetches channel id', () => {

@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import _ from 'lodash';
 
 import {expect} from '../../util/reconfiguredChai';
@@ -35,7 +34,7 @@ describe('item', () => {
         item.x = 100;
         item.y = 100;
 
-        item.hasWall = sinon.stub().returns(false);
+        item.hasWall = jest.fn().mockReturnValue(false);
 
         targetSprite = new Sprite({});
         targetSprite.x = 200;
@@ -46,11 +45,11 @@ describe('item', () => {
         // the destination-setting logic uses _.shuffle to semi-randomize the
         // set of possible destinations before sorting them by score. We would
         // instead like to make it deterministic.
-        shuffleSpy = sinon.stub(_, 'shuffle').callsFake(ar => ar);
+        shuffleSpy = jest.spyOn(_, 'shuffle').mockClear().mockImplementation(ar => ar);
       });
 
       afterEach(() => {
-        _.shuffle.restore();
+        _.shuffle.mockRestore();
       });
 
       it('sets an arbitrary direction on wander', () => {
@@ -61,9 +60,9 @@ describe('item', () => {
         // be the coordinates to which we are headed. Since North happens to be
         // the first direction considered, North will be our final result.
         item.update();
-        expect(shuffleSpy.callCount).to.equal(1);
+        expect(shuffleSpy).toHaveBeenCalledTimes(1);
 
-        const firstDestination = shuffleSpy.firstCall.args[0][0];
+        const firstDestination = shuffleSpy.mock.calls[0][0][0];
         expect(firstDestination.gridX).to.equal(2);
         expect(firstDestination.gridY).to.equal(1);
 

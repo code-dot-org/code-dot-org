@@ -2,7 +2,6 @@ import {WorkshopIndex} from '@cdo/apps/code-studio/pd/workshop_dashboard/worksho
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import Permission, {
   Facilitator,
   CsfFacilitator,

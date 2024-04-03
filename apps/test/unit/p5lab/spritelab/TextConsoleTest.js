@@ -4,7 +4,6 @@ import TextConsole, {
   AUTO_CLOSE_TIME,
 } from '@cdo/apps/p5lab/spritelab/TextConsole';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 
 describe('Sprite Lab Text Console', () => {
   let wrapper;
@@ -25,14 +24,13 @@ describe('Sprite Lab Text Console', () => {
   });
 
   describe('after a line is added', () => {
-    let clock;
     beforeEach(() => {
-      clock = sinon.useFakeTimers();
+      jest.useFakeTimers();
       wrapper.setProps({consoleMessages: ['hello world2']});
     });
 
     afterEach(() => {
-      clock.restore();
+      jest.useRealTimers();
     });
 
     it('opens', () => {
@@ -47,7 +45,7 @@ describe('Sprite Lab Text Console', () => {
     });
 
     it('closes after AUTO_CLOSE_TIME ms', () => {
-      clock.tick(AUTO_CLOSE_TIME);
+      jest.advanceTimersByTime(AUTO_CLOSE_TIME);
       expect(wrapper.state().open).to.be.false;
 
       const button = wrapper.findWhere(node => {
@@ -79,7 +77,7 @@ describe('Sprite Lab Text Console', () => {
       it('opens and stays open when the button is clicked', () => {
         wrapper.instance().toggleConsole();
         expect(wrapper.state().open).to.be.true;
-        clock.tick(AUTO_CLOSE_TIME * 2);
+        jest.advanceTimersByTime(AUTO_CLOSE_TIME * 2);
         expect(wrapper.state().open).to.be.true;
       });
     });

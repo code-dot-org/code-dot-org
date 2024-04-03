@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import sinon from 'sinon';
 import {assert, expect} from '../../util/reconfiguredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
 import commonMsg from '@cdo/locale';
@@ -46,11 +45,11 @@ describe('Applab', () => {
   testUtils.setExternalGlobals();
 
   beforeEach(() => {
-    sinon.stub(utils, 'fireResizeEvent');
+    jest.spyOn(utils, 'fireResizeEvent').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    utils.fireResizeEvent.restore();
+    utils.fireResizeEvent.mockRestore();
   });
 
   describe('designMode.addScreenIfNecessary', function () {
@@ -543,8 +542,8 @@ describe('Applab', () => {
   });
 
   describe('Applab.init()', () => {
-    before(() => sinon.stub(Applab, 'render'));
-    after(() => Applab.render.restore());
+    before(() => jest.spyOn(Applab, 'render').mockClear().mockImplementation());
+    after(() => Applab.render.mockRestore());
 
     beforeEach(() => {
       stubRedux();
@@ -648,15 +647,15 @@ describe('Applab', () => {
 
   describe('makeFooterMenuItems ', () => {
     beforeEach(() => {
-      sinon.stub(project, 'getUrl');
+      jest.spyOn(project, 'getUrl').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      project.getUrl.restore();
+      project.getUrl.mockRestore();
     });
 
     it('returns How-It-Works item before Report-Abuse item', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed'
       );
       var footItems = Applab.makeFooterMenuItems(true);
@@ -670,7 +669,7 @@ describe('Applab', () => {
     });
 
     it('returns How-It-Works item before Make-Own-App item', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed'
       );
       var footItems = Applab.makeFooterMenuItems(true);
@@ -684,7 +683,7 @@ describe('Applab', () => {
     });
 
     it('returns How-It-Works item before Report-Abuse item in AppLab', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'https://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ'
       );
       var footItems = Applab.makeFooterMenuItems(true);

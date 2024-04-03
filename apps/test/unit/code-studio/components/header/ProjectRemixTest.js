@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import {shallow} from 'enzyme';
 
 import {expect} from '../../../../util/reconfiguredChai';
@@ -40,21 +39,21 @@ describe('ProjectRemix', () => {
   });
 
   it('will attempt serverside remix when possible', () => {
-    sinon.stub(window.dashboard.project, 'getCurrentId').returns(true);
-    sinon.stub(window.dashboard.project, 'canServerSideRemix').returns(true);
-    sinon.spy(window.dashboard.project, 'serverSideRemix');
+    jest.spyOn(window.dashboard.project, 'getCurrentId').mockClear().mockReturnValue(true);
+    jest.spyOn(window.dashboard.project, 'canServerSideRemix').mockClear().mockReturnValue(true);
+    jest.spyOn(window.dashboard.project, 'serverSideRemix').mockClear();
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
     wrapper.simulate('click');
     expect(window.dashboard.project.serverSideRemix.calledOnce).to.be.true;
 
-    window.dashboard.project.getCurrentId.restore();
-    window.dashboard.project.canServerSideRemix.restore();
-    window.dashboard.project.serverSideRemix.restore();
+    window.dashboard.project.getCurrentId.mockRestore();
+    window.dashboard.project.canServerSideRemix.mockRestore();
+    window.dashboard.project.serverSideRemix.mockRestore();
   });
 
   it('will redirect to sign in if necessary', () => {
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
     wrapper.simulate('click');
@@ -65,11 +64,11 @@ describe('ProjectRemix', () => {
       )
     ).to.be.true;
 
-    utils.navigateToHref.restore();
+    utils.navigateToHref.mockRestore();
   });
 
   it('will copy the project', () => {
-    sinon.stub(window.dashboard.project, 'copy').resolves();
+    jest.spyOn(window.dashboard.project, 'copy').mockClear().mockImplementation().resolves();
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} isSignedIn />);
     wrapper.simulate('click');
@@ -77,6 +76,6 @@ describe('ProjectRemix', () => {
     expect(window.dashboard.project.copy.calledWith('Remix: Test Project')).to
       .be.true;
 
-    window.dashboard.project.copy.restore();
+    window.dashboard.project.copy.mockRestore();
   });
 });

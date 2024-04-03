@@ -1,13 +1,12 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import {KeyCodes} from '@cdo/apps/constants';
 import {InlineDropdownMenu} from '@cdo/apps/templates/InlineDropdownMenu';
 
 import {expect} from '../../util/reconfiguredChai';
 
-const clickSpy = sinon.spy();
+const clickSpy = jest.fn();
 
 const defaultProps = {
   icon: 'icon',
@@ -15,7 +14,7 @@ const defaultProps = {
 };
 
 describe('InlineDropdownMenu', () => {
-  beforeEach(() => clickSpy.resetHistory());
+  beforeEach(() => clickSpy.mockReset());
 
   it('is initially just a button', () => {
     const wrapper = shallow(<InlineDropdownMenu {...defaultProps} />);

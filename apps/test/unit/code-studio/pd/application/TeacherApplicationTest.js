@@ -1,6 +1,5 @@
 import React from 'react';
 import {expect} from 'chai';
-import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 
@@ -53,15 +52,16 @@ describe('TeacherApplication', () => {
       ).to.deep.equal({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
-      sinon
-        .stub(window.sessionStorage, 'getItem')
-        .withArgs('TeacherApplication')
-        .returns(JSON.stringify({data: {school: '25'}}));
+      jest.spyOn(window.sessionStorage, 'getItem').mockClear().mockImplementation((...args) => {
+        if (args[0] === 'TeacherApplication') {
+          return JSON.stringify({data: {school: '25'}});
+        }
+      });
       teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal(parsedData);
-      window.sessionStorage.getItem.restore();
+      window.sessionStorage.getItem.mockRestore();
     });
     it('includes saved form data even if partial saving is not allowed', () => {
       teacherApplication.mergeProps({

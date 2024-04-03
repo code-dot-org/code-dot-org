@@ -1,6 +1,5 @@
 /** @file Exports a set of tests that verify the MakerBoard interface */
-import sinon from 'sinon';
-import {EventEmitter} from 'events'; // see node-libs-browser
+import { EventEmitter } from 'events';
 import {expect} from '../../../../../util/reconfiguredChai';
 
 /**
@@ -88,7 +87,7 @@ export function itImplementsTheMakerBoardInterface(
           createGlobalProperty: function (key, value) {
             jsInterpreter.globalProperties[key] = value;
           },
-          addCustomMarshalObject: sinon.spy(),
+          addCustomMarshalObject: jest.fn(),
         };
 
         return board.connect();

@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {assert} from '../../util/reconfiguredChai';
 
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -8,16 +6,8 @@ var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 describe('NetSimTable', function () {
-  let clock,
-    apiTable,
-    netsimTable,
-    callback,
-    notified,
-    notifyCount,
-    fakeChannel;
-
   beforeEach(function () {
-    clock = sinon.useFakeTimers(Date.now());
+    jest.useFakeTimers().setSystemTime(Date.now());
     fakeChannel = {
       subscribe: function () {},
     };
@@ -42,7 +32,7 @@ describe('NetSimTable', function () {
   });
 
   afterEach(function () {
-    clock.restore();
+    jest.useRealTimers();
   });
 
   it('throws if constructed with missing arguments', function () {
@@ -491,20 +481,20 @@ describe('NetSimTable', function () {
   describe('polling', function () {
     it('polls table on tick', function () {
       // Initial tick always triggers a poll event.
-      netsimTable.tick();
-      clock.tick(0);
+      jest.advanceTimersByTime();
+      jest.advanceTimersByTime(0);
       assert.equal(apiTable.log(), 'readAll');
 
       // Additional tick does not trigger poll event...
       apiTable.log('');
-      netsimTable.tick();
-      clock.tick(0);
+      jest.advanceTimersByTime();
+      jest.advanceTimersByTime(0);
       assert.equal(apiTable.log(), '');
 
       // Until poll interval is reached.
-      clock.tick(netsimTable.pollingInterval_);
-      netsimTable.tick();
-      clock.tick(0);
+      jest.advanceTimersByTime(netsimTable.pollingInterval_);
+      jest.advanceTimersByTime();
+      jest.advanceTimersByTime(0);
       assert.equal(apiTable.log(), 'readAll');
     });
   });
@@ -520,7 +510,7 @@ describe('NetSimTable', function () {
     it('does not read until minimum delay passes', function () {
       netsimTable.refreshTable_(callback);
       assert.equal('', apiTable.log());
-      clock.tick(COALESCE_WINDOW);
+      jest.advanceTimersByTime(COALESCE_WINDOW);
       assert.equal('readAll', apiTable.log());
     });
 
@@ -530,17 +520,17 @@ describe('NetSimTable', function () {
       netsimTable.refreshTable_(callback);
       assert.equal('', apiTable.log());
 
-      clock.tick(COALESCE_WINDOW / 2);
+      jest.advanceTimersByTime(COALESCE_WINDOW / 2);
       netsimTable.refreshTable_(callback);
       netsimTable.refreshTable_(callback);
       netsimTable.refreshTable_(callback);
       assert.equal('', apiTable.log());
 
-      clock.tick(COALESCE_WINDOW / 2);
+      jest.advanceTimersByTime(COALESCE_WINDOW / 2);
       // Only one request at initial delay
       assert.equal('readAll', apiTable.log());
 
-      clock.tick(COALESCE_WINDOW / 2);
+      jest.advanceTimersByTime(COALESCE_WINDOW / 2);
       // Still only one request has occurred - the calls at 50ms
       // were coalesced into the initial call.
       assert.equal('readAll', apiTable.log());
@@ -548,14 +538,14 @@ describe('NetSimTable', function () {
 
     it('does not coalesce if requests are far enough apart', function () {
       netsimTable.refreshTable_(callback);
-      clock.tick(COALESCE_WINDOW);
+      jest.advanceTimersByTime(COALESCE_WINDOW);
       assert.equal('readAll', apiTable.log());
 
       // This kicks off another delayed request
       netsimTable.refreshTable_(callback);
       assert.equal('readAll', apiTable.log());
 
-      clock.tick(COALESCE_WINDOW);
+      jest.advanceTimersByTime(COALESCE_WINDOW);
       // Both requests occur
       assert.equal('readAllreadAll', apiTable.log());
     });
@@ -569,7 +559,7 @@ describe('NetSimTable', function () {
 
     it('still reads immediately on first request', function () {
       netsimTable.refreshTable_(callback);
-      clock.tick(0);
+      jest.advanceTimersByTime(0);
       assert.equal(apiTable.log(), 'readAll');
     });
 
@@ -577,13 +567,13 @@ describe('NetSimTable', function () {
       for (var i = 0; i < 5; i++) {
         netsimTable.refreshTable_(callback);
       }
-      clock.tick(0);
+      jest.advanceTimersByTime(0);
       assert.equal(apiTable.log(), 'readAll');
     });
 
     it('does not issue trailing request when only one request occurred', function () {
       netsimTable.refreshTable_(callback);
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
       assert.equal(apiTable.log(), 'readAll');
     });
 
@@ -592,37 +582,37 @@ describe('NetSimTable', function () {
         netsimTable.refreshTable_(callback);
       }
       assert.equal('readAll', apiTable.log());
-      clock.tick(10);
+      jest.advanceTimersByTime(10);
       assert.equal('readAll', apiTable.log());
-      clock.tick(40);
+      jest.advanceTimersByTime(40);
       // See the second request come in by 50ms of delay
       assert.equal('readAllreadAll', apiTable.log());
     });
 
     it('throttles requests', function () {
       assert.equal('', apiTable.log());
-      clock.tick(10);
+      jest.advanceTimersByTime(10);
 
       // Call at 10ms happens immediately, even when delayed
       assert.equal('', apiTable.log());
       netsimTable.refreshTable_(callback);
-      clock.tick(0);
+      jest.advanceTimersByTime(0);
 
       assert.equal('readAll', apiTable.log());
-      clock.tick(10);
+      jest.advanceTimersByTime(10);
 
       // Call at 20ms causes no request (yet)
       assert.equal('readAll', apiTable.log());
       netsimTable.refreshTable_(callback);
       assert.equal('readAll', apiTable.log());
-      clock.tick(40);
+      jest.advanceTimersByTime(40);
 
       // Trailing request from second call has already happened, but
       // third call does not cause immediate request.
       assert.equal('readAllreadAll', apiTable.log());
       netsimTable.refreshTable_(callback);
       assert.equal('readAllreadAll', apiTable.log());
-      clock.tick(60);
+      jest.advanceTimersByTime(60);
 
       // Trailing request from third call has arrived
       assert.equal('readAllreadAllreadAll', apiTable.log());
@@ -640,10 +630,10 @@ describe('NetSimTable', function () {
       // With this seed, the refresh fires sometime between 30-40ms.
 
       netsimTable.refresh();
-      clock.tick(30);
+      jest.advanceTimersByTime(30);
       assert.equal('', apiTable.log());
 
-      clock.tick(10);
+      jest.advanceTimersByTime(10);
       assert.equal('readAll', apiTable.log());
     });
 
@@ -654,7 +644,7 @@ describe('NetSimTable', function () {
       netsimTable.refresh();
       assert.equal('', apiTable.log());
 
-      clock.tick(10);
+      jest.advanceTimersByTime(10);
       assert.equal('readAll', apiTable.log());
     });
 
@@ -670,11 +660,11 @@ describe('NetSimTable', function () {
       assert.equal('', apiTable.log());
 
       // First one has fired after 20ms
-      clock.tick(20);
+      jest.advanceTimersByTime(20);
       assert.equal('readAll', apiTable.log());
 
       // Second has fired after 20ms more
-      clock.tick(20);
+      jest.advanceTimersByTime(20);
       assert.equal('readAllreadAll', apiTable.log());
     });
   });
@@ -698,7 +688,7 @@ describe('NetSimTable', function () {
     it('Initially requests from row 1', function () {
       assert.equal('', apiTable.log());
       netsimTable.refreshTable_(callback);
-      clock.tick(0);
+      jest.advanceTimersByTime(0);
       assert.equal('readAllFromID[1]', apiTable.log());
       assert.deepEqual([], netsimTable.readAll());
 
@@ -706,7 +696,7 @@ describe('NetSimTable', function () {
       apiTable.clearLog();
       assert.equal('', apiTable.log());
       netsimTable.refreshTable_(callback);
-      clock.tick(0);
+      jest.advanceTimersByTime(0);
       assert.equal('readAllFromID[1]', apiTable.log());
     });
 
@@ -725,7 +715,7 @@ describe('NetSimTable', function () {
 
       apiTable.clearLog();
       netsimTable.refreshTable_(callback);
-      clock.tick(0);
+      jest.advanceTimersByTime(0);
       // Intentionally "1" here - we update our internal "latestRowID"
       // until after an incremental or full read.
       assert.equal('readAllFromID[1]', apiTable.log());
@@ -736,7 +726,7 @@ describe('NetSimTable', function () {
         row4 = result;
       });
       netsimTable.refreshTable_(callback);
-      clock.tick(0);
+      jest.advanceTimersByTime(0);
       // Got 1, 2, 3 in last refresh, so we read all from 4 this time.
       assert.equal('create[{}]readAllFromID[4]', apiTable.log());
       assert.deepEqual([row1, row2, row3, row4], netsimTable.readAll());

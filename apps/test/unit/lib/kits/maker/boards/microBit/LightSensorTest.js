@@ -1,6 +1,5 @@
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
 import {
   SENSOR_CHANNELS,
@@ -15,7 +14,7 @@ describe('LightSensor', function () {
     lightSensor = new LightSensor({mb: boardClient});
   });
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it(`value attribute is readonly`, () => {
@@ -64,8 +63,8 @@ describe('LightSensor', function () {
 
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
-      let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
-      let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
+      let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
+      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
       lightSensor.start();
       expect(startSpy).to.have.been.calledOnce;
       expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.lightSensor);
@@ -79,7 +78,7 @@ describe('LightSensor', function () {
   describe('emitsEvent', () => {
     let emitSpy;
     beforeEach(() => {
-      emitSpy = sinon.spy(lightSensor, 'emit');
+      emitSpy = jest.spyOn(lightSensor, 'emit').mockClear();
     });
 
     describe('emits the data event', () => {

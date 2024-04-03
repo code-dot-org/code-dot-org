@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import AssignmentSelector, {
   getCourseOfferingsByCategory,
@@ -341,7 +340,7 @@ describe('AssignmentSelector', () => {
     let wrapper, onChange;
 
     beforeEach(() => {
-      onChange = sinon.spy();
+      onChange = jest.fn();
       wrapper = shallow(
         <AssignmentSelector {...defaultProps} onChange={onChange} />
       );
@@ -368,7 +367,7 @@ describe('AssignmentSelector', () => {
         .find('select')
         .at(0)
         .simulate('change', {target: {value: 2}});
-      onChange.resetHistory();
+      onChange.mockReset();
       wrapper
         .find('select')
         .at(1)

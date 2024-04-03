@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import {assert, expect} from '../util/reconfiguredChai';
-import sinon from 'sinon';
 import * as testUtils from './../util/testUtils';
 import * as dropletUtils from '@cdo/apps/dropletUtils';
 import {globalFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';
@@ -142,13 +141,13 @@ describe('dropletUtils', () => {
   describe('promptNum', () => {
     afterEach(() => {
       if (window.prompt.restore) {
-        window.prompt.restore();
+        window.prompt.mockRestore();
       }
     });
 
     it('returns a number if I enter a number', () => {
-      const prompt = sinon.stub(window, 'prompt');
-      prompt.returns('123');
+      const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+      prompt.mockReturnValue('123');
 
       const val = globalFunctions.promptNum('Enter a value');
       assert.strictEqual(prompt.callCount, 1);
@@ -156,8 +155,8 @@ describe('dropletUtils', () => {
     });
 
     it('can handle non-integer numbers', () => {
-      const prompt = sinon.stub(window, 'prompt');
-      prompt.returns('1.23');
+      const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+      prompt.mockReturnValue('1.23');
 
       const val = globalFunctions.promptNum('Enter a value');
       assert.strictEqual(prompt.callCount, 1);
@@ -165,9 +164,17 @@ describe('dropletUtils', () => {
     });
 
     it('reprompts if I enter a non-numerical value', () => {
-      const prompt = sinon.stub(window, 'prompt');
-      prompt.onCall(0).returns('onetwothree');
-      prompt.onCall(1).returns('123');
+      const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+      prompt.mockImplementation(() => {
+        if (prompt.mock.calls.length === 0) {
+          return 'onetwothree';
+        }
+      });
+      prompt.mockImplementation(() => {
+        if (prompt.mock.calls.length === 1) {
+          return '123';
+        }
+      });
 
       const val = globalFunctions.promptNum('Enter a value');
       assert.strictEqual(prompt.callCount, 2);

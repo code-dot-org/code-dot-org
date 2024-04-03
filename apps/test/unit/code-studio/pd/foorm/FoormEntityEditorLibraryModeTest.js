@@ -18,7 +18,6 @@ import foorm, {
   setLibraryData,
   setLibraryQuestionData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
-import sinon from 'sinon';
 import _ from 'lodash';
 global.$ = require('jquery');
 
@@ -66,7 +65,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
   afterEach(() => {
     restoreRedux();
-    server.restore();
+    server.mockRestore();
   });
 
   const sampleExistingLibraryQuestionData = {

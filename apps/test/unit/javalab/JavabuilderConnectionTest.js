@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import {
@@ -27,20 +26,20 @@ describe('JavabuilderConnection', () => {
     onValidationFailed;
 
   beforeEach(() => {
-    sinon.stub(project, 'getCurrentId');
-    onOutputMessage = sinon.stub();
-    handleException = sinon.stub(ExceptionHandler, 'handleException');
-    handleTestResult = sinon.stub(TestResultHandler, 'onTestResult');
-    onValidationPassed = sinon.stub();
-    onValidationFailed = sinon.stub();
-    setIsRunning = sinon.stub();
-    setIsTesting = sinon.stub();
+    jest.spyOn(project, 'getCurrentId').mockClear().mockImplementation();
+    onOutputMessage = jest.fn();
+    handleException = jest.spyOn(ExceptionHandler, 'handleException').mockClear().mockImplementation();
+    handleTestResult = jest.spyOn(TestResultHandler, 'onTestResult').mockClear().mockImplementation();
+    onValidationPassed = jest.fn();
+    onValidationFailed = jest.fn();
+    setIsRunning = jest.fn();
+    setIsTesting = jest.fn();
     connection = new JavabuilderConnection(
       onOutputMessage,
       null,
       null,
       null,
-      sinon.stub(),
+      jest.fn(),
       setIsRunning,
       setIsTesting,
       ExecutionType.RUN,
@@ -54,9 +53,9 @@ describe('JavabuilderConnection', () => {
   });
 
   afterEach(() => {
-    ExceptionHandler.handleException.restore();
-    TestResultHandler.onTestResult.restore();
-    project.getCurrentId.restore();
+    ExceptionHandler.handleException.mockRestore();
+    TestResultHandler.onTestResult.mockRestore();
+    project.getCurrentId.mockRestore();
   });
 
   describe('onMessage', () => {
@@ -97,7 +96,7 @@ describe('JavabuilderConnection', () => {
       const event = {
         data: JSON.stringify(data),
       };
-      handleTestResult.returns({
+      handleTestResult.mockReturnValue({
         success: true,
         isValidation: false,
       });
@@ -122,8 +121,8 @@ describe('JavabuilderConnection', () => {
 
   describe('onClose', () => {
     it('closes web socket on closeConnection', () => {
-      const closeStub = sinon.stub();
-      sinon.stub(window, 'WebSocket').returns({
+      const closeStub = jest.fn();
+      jest.spyOn(window, 'WebSocket').mockClear().mockReturnValue({
         close: closeStub,
       });
       const javabuilderConnection = new JavabuilderConnection(
@@ -131,7 +130,7 @@ describe('JavabuilderConnection', () => {
         null,
         null,
         null,
-        sinon.stub()
+        jest.fn()
       );
 
       javabuilderConnection.establishWebsocketConnection('fake-token');
@@ -141,7 +140,7 @@ describe('JavabuilderConnection', () => {
       expect(onOutputMessage).to.have.been.calledWith(
         `${STATUS_MESSAGE_PREFIX} Program stopped.`
       );
-      window.WebSocket.restore();
+      window.WebSocket.mockRestore();
     });
   });
 
@@ -151,8 +150,8 @@ describe('JavabuilderConnection', () => {
 
       connection.handleExecutionFinished();
 
-      sinon.assert.calledWith(setIsRunning, false);
-      sinon.assert.notCalled(setIsTesting);
+      expect(setIsRunning).toHaveBeenCalledWith(false);
+      expect(setIsTesting).not.toHaveBeenCalled();
     });
 
     it('Sets testing to false if execution type TEST has finished', () => {
@@ -160,8 +159,8 @@ describe('JavabuilderConnection', () => {
 
       connection.handleExecutionFinished();
 
-      sinon.assert.calledWith(setIsTesting, false);
-      sinon.assert.notCalled(setIsRunning);
+      expect(setIsTesting).toHaveBeenCalledWith(false);
+      expect(setIsRunning).not.toHaveBeenCalled();
     });
 
     it('Calls validation passed if validation passed', () => {
@@ -177,15 +176,15 @@ describe('JavabuilderConnection', () => {
       const event = {
         data: JSON.stringify(data),
       };
-      handleTestResult.returns({
+      handleTestResult.mockReturnValue({
         success: true,
         isValidation: true,
       });
       // send a single passed validation message
       connection.onMessage(event);
       connection.handleExecutionFinished();
-      sinon.assert.called(onValidationPassed);
-      sinon.assert.notCalled(onValidationFailed);
+      expect(onValidationPassed).toHaveBeenCalled();
+      expect(onValidationFailed).not.toHaveBeenCalled();
     });
 
     it('Calls validation failed if validation failed', () => {
@@ -202,19 +201,27 @@ describe('JavabuilderConnection', () => {
         data: JSON.stringify(data),
       };
       // two tests, first succeeds, second passes
-      handleTestResult.onCall(0).returns({
-        success: true,
-        isValidation: true,
+      handleTestResult.mockImplementation(() => {
+        if (handleTestResult.mock.calls.length === 0) {
+          return {
+            success: true,
+            isValidation: true,
+          };
+        }
       });
-      handleTestResult.onCall(1).returns({
-        success: false,
-        isValidation: true,
+      handleTestResult.mockImplementation(() => {
+        if (handleTestResult.mock.calls.length === 1) {
+          return {
+            success: false,
+            isValidation: true,
+          };
+        }
       });
       connection.onMessage(event);
       connection.onMessage(event);
       connection.handleExecutionFinished();
-      sinon.assert.called(onValidationFailed);
-      sinon.assert.notCalled(onValidationPassed);
+      expect(onValidationFailed).toHaveBeenCalled();
+      expect(onValidationPassed).not.toHaveBeenCalled();
     });
 
     it('Does not call validation passed or failed if no validation tests were seen', () => {
@@ -230,14 +237,14 @@ describe('JavabuilderConnection', () => {
       const event = {
         data: JSON.stringify(data),
       };
-      handleTestResult.returns({
+      handleTestResult.mockReturnValue({
         success: true,
         isValidation: false,
       });
       connection.onMessage(event);
       connection.handleExecutionFinished();
-      sinon.assert.notCalled(onValidationFailed);
-      sinon.assert.notCalled(onValidationPassed);
+      expect(onValidationFailed).not.toHaveBeenCalled();
+      expect(onValidationPassed).not.toHaveBeenCalled();
     });
 
     function createJavabuilderConnection(executionType) {
@@ -246,7 +253,7 @@ describe('JavabuilderConnection', () => {
         null,
         null,
         null,
-        sinon.stub(),
+        jest.fn(),
         setIsRunning,
         setIsTesting,
         executionType,

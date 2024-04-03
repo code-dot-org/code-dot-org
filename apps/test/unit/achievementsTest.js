@@ -1,6 +1,5 @@
 import {expect} from '../util/reconfiguredChai';
 import * as achievements from '@cdo/apps/achievements';
-import sinon from 'sinon';
 import authoredHintUtils from '@cdo/apps/authoredHintUtils';
 
 describe('achievements', () => {
@@ -16,9 +15,8 @@ describe('achievements', () => {
 
   describe('usingHints', () => {
     it('is achieved if you used one hint', () => {
-      const stub = sinon
-        .stub(authoredHintUtils, 'currentOpenedHintCount')
-        .callsFake(() => 1);
+      const stub = jest.spyOn(authoredHintUtils, 'currentOpenedHintCount').mockClear()
+        .mockImplementation(() => 1);
       const state = {
         pageConstants: {
           serverLevelId: 123,
@@ -30,13 +28,12 @@ describe('achievements', () => {
         message: 'Using just one hint!',
       });
 
-      stub.restore();
+      stub.mockRestore();
     });
 
     it('is not achieved if you used too many hints', () => {
-      const stub = sinon
-        .stub(authoredHintUtils, 'currentOpenedHintCount')
-        .callsFake(() => 3);
+      const stub = jest.spyOn(authoredHintUtils, 'currentOpenedHintCount').mockClear()
+        .mockImplementation(() => 3);
       const state = {
         pageConstants: {
           serverLevelId: 123,
@@ -48,7 +45,7 @@ describe('achievements', () => {
         message: 'Using hints',
       });
 
-      stub.restore();
+      stub.mockRestore();
     });
 
     after(() => {});

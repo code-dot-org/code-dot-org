@@ -1,5 +1,4 @@
 import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
 import commonI18n from '@cdo/locale';
 
 import {DropletTooltipManagerStub} from './stubs';
@@ -8,7 +7,7 @@ import DropletAutocompleteParameterTooltipManager from '@cdo/apps/blockTooltips/
 
 describe('DropletAutocompleteParameterTooltipManager', () => {
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   describe('getTooltipHTML', () => {
@@ -39,7 +38,7 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
 
     it('should render localized string for "Choose..."', () => {
       // Stub the i18n calls.
-      sinon.stub(commonI18n, 'choosePrefix').returns('i18n-choose-prefix');
+      jest.spyOn(commonI18n, 'choosePrefix').mockClear().mockReturnValue('i18n-choose-prefix');
 
       // Create the parameter tooltip manager class.
       let tooltip = new DropletAutocompleteParameterTooltipManager(manager);
@@ -56,7 +55,7 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
 
     it('should render localized string for "Examples"', () => {
       // Stub the i18n calls.
-      sinon.stub(commonI18n, 'examples').returns('i18n-examples');
+      jest.spyOn(commonI18n, 'examples').mockClear().mockReturnValue('i18n-examples');
 
       // Create the parameter tooltip manager class.
       let tooltip = new DropletAutocompleteParameterTooltipManager(manager);

@@ -1,6 +1,5 @@
 /** @file Tests for our johnny-five Piezo wrapper */
 import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
 import Piezo from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Piezo';
 
@@ -8,11 +7,11 @@ describe('Piezo', function () {
   beforeEach(function () {
     // We stub five.Piezo's superclass to avoid calling any johnny-five
     // logic that requires a board.
-    sinon.stub(five.Board, 'Component');
+    jest.spyOn(five.Board, 'Component').mockClear().mockImplementation();
   });
 
   afterEach(function () {
-    five.Board.Component.restore();
+    five.Board.Component.mockRestore();
   });
 
   it('is a johnny-five Piezo component', function () {
@@ -27,14 +26,14 @@ describe('Piezo', function () {
       let piezo;
 
       beforeEach(function () {
-        sinon.stub(five.Piezo.prototype, 'play');
+        jest.spyOn(five.Piezo.prototype, 'play').mockClear().mockImplementation();
         piezo = new Piezo({
           controller: makeStubPiezoController(),
         });
       });
 
       afterEach(function () {
-        five.Piezo.prototype.play.restore();
+        five.Piezo.prototype.play.mockRestore();
       });
 
       it(`converts a song and tempo to the 'tune' format expected by five.Piezo`, function () {
@@ -101,12 +100,12 @@ describe('Piezo', function () {
       expect(controller.frequency.value).to.have.been.calledWith(440);
 
       // C4 = 262Hz
-      controller.frequency.value.resetHistory();
+      controller.frequency.value.mockReset();
       piezo.note('C4');
       expect(controller.frequency.value).to.have.been.calledWith(262);
 
       // C2 = 65Hz
-      controller.frequency.value.resetHistory();
+      controller.frequency.value.mockReset();
       piezo.note('C2');
       expect(controller.frequency.value).to.have.been.calledWith(65);
     });
@@ -122,16 +121,14 @@ describe('Piezo', function () {
   // through the same set of tests.
   ['stop', 'off'].forEach(methodUnderTest => {
     describe(`${methodUnderTest}()`, () => {
-      let clock, controller, piezo;
-
       beforeEach(() => {
-        clock = sinon.useFakeTimers();
+        jest.useFakeTimers();
         controller = makeStubPiezoController();
         piezo = new Piezo({controller});
       });
 
       afterEach(() => {
-        clock.restore();
+        jest.useRealTimers();
       });
 
       it('cancels frequency()', () => {
@@ -165,14 +162,14 @@ describe('Piezo', function () {
         expect(controller.frequency.value).to.have.been.calledOnce;
 
         // Let the second note play
-        clock.tick(150);
+        jest.advanceTimersByTime(150);
         expect(controller.frequency.value).to.have.been.calledTwice;
 
         // Stop the song
         piezo[methodUnderTest]();
 
         // Make sure the third note didn't play
-        clock.tick(150);
+        jest.advanceTimersByTime(150);
         expect(controller.frequency.value).to.have.been.calledTwice;
       });
     });
@@ -182,10 +179,10 @@ describe('Piezo', function () {
 function makeStubPiezoController() {
   return {
     frequency: {
-      value: sinon.spy(),
+      value: jest.fn(),
     },
     noTone: {
-      value: sinon.spy(),
+      value: jest.fn(),
     },
   };
 }

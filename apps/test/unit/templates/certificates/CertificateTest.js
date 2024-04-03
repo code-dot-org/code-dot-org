@@ -2,7 +2,6 @@ import {mount} from 'enzyme';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
-import sinon from 'sinon';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
@@ -42,7 +41,7 @@ describe('Certificate', () => {
     });
 
     afterEach(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     it('renders code studio image urls', () => {

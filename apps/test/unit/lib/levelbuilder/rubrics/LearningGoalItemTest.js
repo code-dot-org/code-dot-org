@@ -2,11 +2,10 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
-import sinon from 'sinon';
 
 describe('LearningGoalItem', () => {
   let defaultProps;
-  const deleteLearningGoalSpy = sinon.spy();
+  const deleteLearningGoalSpy = jest.fn();
   const exisitingLearningGoalData = {
     key: 'learningGoal-1',
     id: 'learningGoal-1',
@@ -73,7 +72,7 @@ describe('LearningGoalItem', () => {
   });
 
   it('calls updateLearningGoal when tips text is changed', () => {
-    const updateLearningGoalSpy = sinon.spy();
+    const updateLearningGoalSpy = jest.fn();
     const wrapper = shallow(
       <LearningGoalItem
         {...defaultProps}
@@ -93,7 +92,7 @@ describe('LearningGoalItem', () => {
   });
 
   it('displays confirmation dialog when learning goal name input receives focus and AI assessment is checked', () => {
-    const dialogStub = sinon.stub(window, 'confirm').returns(true);
+    const dialogStub = jest.spyOn(window, 'confirm').mockClear().mockReturnValue(true);
 
     const enabledAiData = {
       key: 'learningGoal-1',
@@ -110,6 +109,6 @@ describe('LearningGoalItem', () => {
 
     wrapper.find('input').first().prop('onFocus')();
     expect(dialogStub.calledOnce).to.be.true;
-    dialogStub.restore();
+    dialogStub.mockRestore();
   });
 });

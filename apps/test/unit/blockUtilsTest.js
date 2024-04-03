@@ -10,7 +10,6 @@ import {
 } from '@cdo/apps/block_utils';
 import {parseElement, serialize} from '@cdo/apps/xml.js';
 import {expect} from '../util/reconfiguredChai';
-import sinon from 'sinon';
 import {allowConsoleWarnings} from '../util/testUtils';
 
 describe('block utils', () => {
@@ -351,23 +350,23 @@ describe('block utils', () => {
     let fakeBlockly, fakeBlock, fakeInput;
     let appendEndRowInput, appendField, setCheck, appendValueInput, setAlign;
     beforeEach(() => {
-      appendEndRowInput = sinon.stub();
-      appendValueInput = sinon.stub();
+      appendEndRowInput = jest.fn();
+      appendValueInput = jest.fn();
       fakeBlock = {appendEndRowInput, appendValueInput};
 
-      appendField = sinon.stub();
-      setCheck = sinon.stub();
-      setAlign = sinon.stub();
+      appendField = jest.fn();
+      setCheck = jest.fn();
+      setAlign = jest.fn();
       fakeInput = {setCheck, appendField, setAlign};
 
-      appendEndRowInput.returns(fakeInput);
-      appendValueInput.returns(fakeInput);
-      appendField.returns(fakeInput);
-      setCheck.returns(fakeInput);
-      setAlign.returns(fakeInput);
+      appendEndRowInput.mockReturnValue(fakeInput);
+      appendValueInput.mockReturnValue(fakeInput);
+      appendField.mockReturnValue(fakeInput);
+      setCheck.mockReturnValue(fakeInput);
+      setAlign.mockReturnValue(fakeInput);
 
       fakeBlockly = {
-        FieldDropdown: sinon.stub(),
+        FieldDropdown: jest.fn(),
       };
     });
 
@@ -386,10 +385,10 @@ describe('block utils', () => {
       );
 
       expect(fakeBlockly.FieldDropdown).to.have.been.calledOnce;
-      const dropdownArg = fakeBlockly.FieldDropdown.firstCall.args[0];
+      const dropdownArg = fakeBlockly.FieldDropdown.mock.calls[0][0];
       expect(dropdownArg).to.deep.equal(TEST_SPRITES);
       expect(appendEndRowInput).to.have.been.calledOnce;
-      expect(appendField).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
+      expect(appendField).to.have.been.calledWith(expect.anything(), 'ANIMATION');
     });
 
     it('adds a value input', () => {
@@ -451,7 +450,7 @@ describe('block utils', () => {
         ])
       );
 
-      expect(appendField).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
+      expect(appendField).to.have.been.calledWith(expect.anything(), 'ANIMATION');
       expect(appendField).to.have.been.calledWith('value label');
       expect(appendField).to.have.been.calledWith('dummy label');
     });
@@ -704,7 +703,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getFieldValue: sinon.stub().returns('someVar'),
+          getFieldValue: jest.fn().mockReturnValue('someVar'),
         };
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('someVar = foo(someVar);\n');
@@ -762,9 +761,8 @@ describe('block utils', () => {
           'test'
         );
 
-        const valueToCodeStub = sinon
-          .stub(Blockly.JavaScript, 'valueToCode')
-          .callsFake((block, name) => {
+        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+          .mockImplementation((block, name) => {
             return {
               NAME1: 'elrond',
               NAME2: 'isildur',
@@ -780,7 +778,7 @@ describe('block utils', () => {
           });
         `);
 
-        valueToCodeStub.restore();
+        valueToCodeStub.mockRestore();
       });
     });
     describe('simpleValue', () => {
@@ -796,13 +794,12 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = sinon
-          .stub(Blockly.JavaScript, 'valueToCode')
-          .returns('"a string value"');
+        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+          .mockReturnValue('"a string value"');
 
         expect(generator['test_simpleValue']()[0]).to.equal('"a string value"');
 
-        valueToCodeStub.restore();
+        valueToCodeStub.mockRestore();
       });
       it('generates code for a simple value assignment', () => {
         createBlock(
@@ -815,9 +812,8 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = sinon
-          .stub(Blockly.JavaScript, 'valueToCode')
-          .callsFake((block, name) => {
+        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+          .mockImplementation((block, name) => {
             return {
               VAR: 'myVariable',
               VAL: '"some other value"',
@@ -827,7 +823,7 @@ describe('block utils', () => {
 
         expect(code.trim()).to.equal('myVariable = "some other value";');
 
-        valueToCodeStub.restore();
+        valueToCodeStub.mockRestore();
       });
       it('generates code for a simple value double assignment', () => {
         createBlock(
@@ -844,9 +840,8 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = sinon
-          .stub(Blockly.JavaScript, 'valueToCode')
-          .callsFake((block, name) => {
+        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+          .mockImplementation((block, name) => {
             return {
               VAR1: 'i',
               VAR2: 'j',
@@ -857,7 +852,7 @@ describe('block utils', () => {
 
         expect(code.trim()).to.equal('i = j = "yet another value";');
 
-        valueToCodeStub.restore();
+        valueToCodeStub.mockRestore();
       });
       it('throws for a simpleValue block with too many args', () => {
         expect(() => {
@@ -906,9 +901,8 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = sinon
-          .stub(Blockly.JavaScript, 'valueToCode')
-          .callsFake((block, name) => {
+        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+          .mockImplementation((block, name) => {
             return {
               THIS: 'myDog',
             }[name];
@@ -917,7 +911,7 @@ describe('block utils', () => {
 
         expect(code.trim()).to.equal('myDog.bark();');
 
-        valueToCodeStub.restore();
+        valueToCodeStub.mockRestore();
       });
       it('generates code for a method call with specific this object', () => {
         createBlock(
@@ -948,9 +942,8 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const valueToCodeStub = sinon
-          .stub(Blockly.JavaScript, 'valueToCode')
-          .callsFake((block, name) => {
+        const valueToCodeStub = jest.spyOn(Blockly.JavaScript, 'valueToCode').mockClear()
+          .mockImplementation((block, name) => {
             return {
               THIS: 'myDog',
             }[name];
@@ -959,7 +952,7 @@ describe('block utils', () => {
 
         expect(code.trim()).to.equal('myDog.favoriteToy');
 
-        valueToCodeStub.restore();
+        valueToCodeStub.mockRestore();
       });
     });
     describe('eventBlock', () => {
@@ -974,9 +967,8 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const blockToCodeStub = sinon
-          .stub(Blockly.JavaScript, 'blockToCode')
-          .callsFake(() => {
+        const blockToCodeStub = jest.spyOn(Blockly.JavaScript, 'blockToCode').mockClear()
+          .mockImplementation(() => {
             return 'someHandlerCode();\n';
           });
         const code = generator['test_whenJump']();
@@ -986,7 +978,7 @@ describe('block utils', () => {
             someHandlerCode();
           });`);
 
-        blockToCodeStub.restore();
+        blockToCodeStub.mockRestore();
       });
     });
     describe('expression blocks', () => {
@@ -1034,9 +1026,8 @@ describe('block utils', () => {
           '',
           'test'
         );
-        const stub = sinon
-          .stub(Blockly.JavaScript, 'statementToCode')
-          .callsFake(() => `  console.log("I'm in a callback!");\n`);
+        const stub = jest.spyOn(Blockly.JavaScript, 'statementToCode').mockClear()
+          .mockImplementation(() => `  console.log("I'm in a callback!");\n`);
         const code = generator['test_runThisCallback']();
 
         expect(code.trim()).to.equal(dedent`
@@ -1044,7 +1035,7 @@ describe('block utils', () => {
               console.log("I'm in a callback!");
             });
           `);
-        stub.restore();
+        stub.mockRestore();
       });
       it('generates no code for an empty input', () => {
         createBlock(

@@ -1,6 +1,5 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
@@ -11,10 +10,10 @@ describe('GoogleChartWrapper', () => {
     let spy;
     beforeEach(() => {
       GoogleChart.lib = {};
-      spy = sinon.stub(GoogleChart.prototype, 'drawChart');
+      spy = jest.spyOn(GoogleChart.prototype, 'drawChart').mockClear().mockImplementation();
     });
     afterEach(() => {
-      spy.restore();
+      spy.mockRestore();
     });
 
     it('can show a bar chart', () => {
@@ -52,7 +51,7 @@ describe('GoogleChartWrapper', () => {
       };
 
       expect(spy).to.have.been.calledOnce;
-      expect(spy.getCalls()[0].args).to.deep.equal([
+      expect(spy.mock.calls[0]).to.deep.equal([
         expectedChartData,
         ['category1', 'count'],
         expectedChartOptions,
@@ -93,7 +92,7 @@ describe('GoogleChartWrapper', () => {
       );
 
       expect(spy).to.have.been.calledOnce;
-      expect(spy.getCalls()[0].args).to.deep.equal([
+      expect(spy.mock.calls[0]).to.deep.equal([
         expectedChartData,
         ['category2'],
         {...expectedChartOptions, histogram: {bucketSize: '2'}},
@@ -131,7 +130,7 @@ describe('GoogleChartWrapper', () => {
         />
       );
       expect(spy).to.have.been.calledOnce;
-      expect(spy.getCalls()[0].args).to.deep.equal([
+      expect(spy.mock.calls[0]).to.deep.equal([
         expectedChartData,
         ['category2', 'category3'],
         expectedChartOptions,

@@ -2,7 +2,6 @@ import UsPhoneNumberInput from '@cdo/apps/code-studio/pd/form_components/UsPhone
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 
 describe('UsPhoneNumberInput', () => {
   it('Displays initial value properly formatted', () => {
@@ -49,7 +48,7 @@ describe('UsPhoneNumberInput', () => {
     });
 
     it('Calls supplied onChange function with just the numbers', () => {
-      const onChange = sinon.spy();
+      const onChange = jest.fn();
       usPhoneNumberInput.setProps({onChange});
 
       sendText('xxx(123');

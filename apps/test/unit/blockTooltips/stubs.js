@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import DropletTooltipManager from '@cdo/apps/blockTooltips/DropletTooltipManager.js';
 
 /**
@@ -20,7 +18,7 @@ export function DropletTooltipManagerStub(config = {}, blockInfo = {}) {
   );
 
   // We need one to give us a code link.
-  tooltipManager.getDropletTooltip.returns(
+  tooltipManager.getDropletTooltip.mockReturnValue(
     Object.assign(
       {
         functionName: 'exampleFunction',

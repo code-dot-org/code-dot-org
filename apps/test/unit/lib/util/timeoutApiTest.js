@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {
   commands,
@@ -11,11 +10,9 @@ import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 
 describe('Timeout API', () => {
-  let testErrorHandler, clock;
-
   beforeEach(() => {
     testErrorHandler = sinon.createStubInstance(JavaScriptModeErrorHandler);
-    clock = sinon.useFakeTimers();
+    jest.useFakeTimers();
     injectErrorHandler(testErrorHandler);
   });
 
@@ -24,7 +21,7 @@ describe('Timeout API', () => {
     apiTimeoutList.clearIntervals();
 
     injectErrorHandler(null);
-    clock.restore();
+    jest.useRealTimers();
   });
 
   // Check that every command
@@ -72,11 +69,11 @@ describe('Timeout API', () => {
       expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
-      let spy = sinon.spy();
+      let spy = jest.fn();
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two', 'three');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({
+      expect(spy.mock.calls[0][2]).to.deep.equal({
         callback: 'one',
         milliseconds: 'two',
       });
@@ -93,13 +90,13 @@ describe('Timeout API', () => {
     });
 
     it('sets a timeout', () => {
-      const spy = sinon.spy();
+      const spy = jest.fn();
       commands[funcName]({
         callback: spy,
         milliseconds: 3,
       });
       expect(spy).not.to.have.been.called;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.called;
     });
   });
@@ -113,11 +110,11 @@ describe('Timeout API', () => {
       expect(dropletConfig[funcName].params).to.have.length(1);
 
       // Check executors map arguments to object correctly
-      let spy = sinon.spy();
+      let spy = jest.fn();
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({timeoutId: 'one'});
+      expect(spy.mock.calls[0][2]).to.deep.equal({timeoutId: 'one'});
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'timeoutId', {
@@ -125,14 +122,14 @@ describe('Timeout API', () => {
     });
 
     it('clears a timeout', () => {
-      const spy = sinon.spy();
+      const spy = jest.fn();
       const key = commands.setTimeout({
         callback: spy,
         milliseconds: 2,
       });
       expect(spy).not.to.have.been.called;
       commands.clearTimeout({timeoutId: key});
-      clock.tick(2);
+      jest.advanceTimersByTime(2);
       expect(spy).not.to.have.been.called;
     });
   });
@@ -149,11 +146,11 @@ describe('Timeout API', () => {
       expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
-      let spy = sinon.spy();
+      let spy = jest.fn();
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two', 'three');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({
+      expect(spy.mock.calls[0][2]).to.deep.equal({
         callback: 'one',
         milliseconds: 'two',
       });
@@ -170,17 +167,17 @@ describe('Timeout API', () => {
     });
 
     it('sets an interval', () => {
-      const spy = sinon.spy();
+      const spy = jest.fn();
       commands[funcName]({
         callback: spy,
         milliseconds: 3,
       });
       expect(spy).not.to.have.been.called;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledOnce;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledTwice;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledThrice;
     });
   });
@@ -194,11 +191,11 @@ describe('Timeout API', () => {
       expect(dropletConfig[funcName].params).to.have.length(1);
 
       // Check executors map arguments to object correctly
-      let spy = sinon.spy();
+      let spy = jest.fn();
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({intervalId: 'one'});
+      expect(spy.mock.calls[0][2]).to.deep.equal({intervalId: 'one'});
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'intervalId', {
@@ -206,19 +203,19 @@ describe('Timeout API', () => {
     });
 
     it('clears an interval', () => {
-      const spy = sinon.spy();
+      const spy = jest.fn();
       const key = commands.setInterval({
         callback: spy,
         milliseconds: 3,
       });
       expect(spy).not.to.have.been.called;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledOnce;
 
       commands.clearInterval({intervalId: key});
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledOnce;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledOnce;
     });
   });
@@ -235,11 +232,11 @@ describe('Timeout API', () => {
       expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
-      let spy = sinon.spy();
+      let spy = jest.fn();
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two', 'three');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({ms: 'one', callback: 'two'});
+      expect(spy.mock.calls[0][2]).to.deep.equal({ms: 'one', callback: 'two'});
     });
 
     itComplainsIfArgumentIsNotAFunction(funcName, 'callback', {
@@ -253,17 +250,17 @@ describe('Timeout API', () => {
     });
 
     it('sets an interval', () => {
-      const spy = sinon.spy();
+      const spy = jest.fn();
       commands[funcName]({
         callback: spy,
         ms: 3,
       });
       expect(spy).not.to.have.been.called;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledOnce;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledTwice;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledThrice;
     });
   });
@@ -281,17 +278,17 @@ describe('Timeout API', () => {
       });
 
       // Check executors map arguments to object correctly
-      let spy = sinon.spy();
+      let spy = jest.fn();
       injectExecuteCmd(spy);
       executors[funcName](); // Called with no args
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({key: undefined});
+      expect(spy.mock.calls[0][2]).to.deep.equal({key: undefined});
 
-      spy = sinon.spy();
+      spy = jest.fn();
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two'); // Called with extra args
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({key: 'one'});
+      expect(spy.mock.calls[0][2]).to.deep.equal({key: 'one'});
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'key', {
@@ -299,19 +296,19 @@ describe('Timeout API', () => {
     });
 
     it('clears an interval started by setTimedLoop', () => {
-      const spy = sinon.spy();
+      const spy = jest.fn();
       const key = commands.timedLoop({
         callback: spy,
         ms: 3,
       });
       expect(spy).not.to.have.been.called;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledOnce;
 
       commands.stopTimedLoop({key});
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledOnce;
-      clock.tick(3);
+      jest.advanceTimersByTime(3);
       expect(spy).to.have.been.calledOnce;
     });
   });
@@ -376,35 +373,35 @@ describe('Timeout API', () => {
 
     it(`complains if argument ${argName} is not a ${expectedType}`, () => {
       if (expectedType !== 'number') {
-        testErrorHandler.outputWarning.resetHistory();
+        testErrorHandler.outputWarning.mockReset();
         callFuncWithArgValue(42);
         expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
-        expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
+        expect(testErrorHandler.outputWarning.mock.calls[0][0]).to.equal(
           `${funcName}() ${argName} parameter value (42) is not a ${expectedType}.`
         );
       }
 
       if (expectedType !== 'string') {
-        testErrorHandler.outputWarning.resetHistory();
+        testErrorHandler.outputWarning.mockReset();
         callFuncWithArgValue('foobar');
         expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
-        expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
+        expect(testErrorHandler.outputWarning.mock.calls[0][0]).to.equal(
           `${funcName}() ${argName} parameter value (foobar) is not a ${expectedType}.`
         );
       }
 
       if (expectedType !== 'object') {
-        testErrorHandler.outputWarning.resetHistory();
+        testErrorHandler.outputWarning.mockReset();
         callFuncWithArgValue(null);
         expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
-        expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
+        expect(testErrorHandler.outputWarning.mock.calls[0][0]).to.equal(
           `${funcName}() ${argName} parameter value (null) is not a ${expectedType}.`
         );
 
-        testErrorHandler.outputWarning.resetHistory();
+        testErrorHandler.outputWarning.mockReset();
         callFuncWithArgValue({obj: 5});
         expect(testErrorHandler.outputWarning).to.have.been.calledOnce;
-        expect(testErrorHandler.outputWarning.firstCall.args[0]).to.equal(
+        expect(testErrorHandler.outputWarning.mock.calls[0][0]).to.equal(
           `${funcName}() ${argName} parameter value ([object Object]) is not a ${expectedType}.`
         );
       }

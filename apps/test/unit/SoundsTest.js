@@ -1,6 +1,5 @@
 import {expect} from '../util/reconfiguredChai';
 import Sounds from '@cdo/apps/Sounds';
-import sinon from 'sinon';
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
 describe('Sounds', () => {
@@ -11,11 +10,11 @@ describe('Sounds', () => {
     sourceURL = winMp3;
     sounds.register({id: sourceURL, mp3: sourceURL});
     sound = sounds.soundsById[sourceURL];
-    sinon.stub(sound, 'playAfterLoad');
+    jest.spyOn(sound, 'playAfterLoad').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
     sounds.unmuteURLs();
   });
 
@@ -41,7 +40,7 @@ describe('Sounds', () => {
     sounds.muteURLs();
 
     let soundFromId = sounds.soundsById['testSound'];
-    sinon.stub(soundFromId, 'play');
+    jest.spyOn(soundFromId, 'play').mockClear().mockImplementation();
     sounds.play(soundId);
     expect(soundFromId.play).to.have.been.calledOnce;
   });

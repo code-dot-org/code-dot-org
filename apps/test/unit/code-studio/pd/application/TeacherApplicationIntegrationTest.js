@@ -1,7 +1,6 @@
 import React from 'react';
 import {expect} from 'chai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 import * as utils from '@cdo/apps/utils';
@@ -27,20 +26,21 @@ describe('TeacherApplication', () => {
   };
 
   beforeEach(() => {
-    sinon.stub($, 'ajax').returns(new $.Deferred());
-    sinon.stub($, 'param').returns(new $.Deferred());
-    sinon.stub(window, 'fetch').returns(Promise.resolve({ok: true}));
-    sinon.stub(utils, 'reload');
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns(JSON.stringify({}));
-    sinon.stub(window.sessionStorage, 'setItem');
+    jest.spyOn($, 'ajax').mockClear().mockReturnValue(new $.Deferred());
+    jest.spyOn($, 'param').mockClear().mockReturnValue(new $.Deferred());
+    jest.spyOn(window, 'fetch').mockClear().mockReturnValue(Promise.resolve({ok: true}));
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
+    jest.spyOn(window.sessionStorage, 'getItem').mockClear().mockImplementation((...args) => {
+      if (args[0] === 'TeacherApplication') {
+        return JSON.stringify({});
+      }
+    });
+    jest.spyOn(window.sessionStorage, 'setItem').mockClear().mockImplementation();
     window.ga = sinon.fake();
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
     window.ga = undefined;
   });
 
@@ -63,11 +63,12 @@ describe('TeacherApplication', () => {
   });
 
   it('Sets the school dropdown value from storage', () => {
-    window.sessionStorage.getItem.restore();
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns({program: 'CSD', school: '25'});
+    window.sessionStorage.getItem.mockRestore();
+    jest.spyOn(window.sessionStorage, 'getItem').mockClear().mockImplementation((...args) => {
+      if (args[0] === 'TeacherApplication') {
+        return {program: 'CSD', school: '25'};
+      }
+    });
     const page = mount(
       <FindYourRegion
         {...defaultProps}
@@ -81,6 +82,6 @@ describe('TeacherApplication', () => {
 
   it('Reports to google analytics', () => {
     mount(<TeacherApplication {...defaultProps} />);
-    sinon.assert.called(window.ga);
+    expect(window.ga).toHaveBeenCalled();
   });
 });

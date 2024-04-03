@@ -1,5 +1,4 @@
 import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
 
 import {
   getResponsiveBreakpoint,
@@ -20,7 +19,7 @@ describe('responsiveRedux', () => {
     expect(getResponsiveBreakpoint(500)).to.equal(ResponsiveSize.xs);
   });
   it('getResponsiveBreakpoint returns xs if 0', () => {
-    sinon.stub(console, 'error');
+    jest.spyOn(console, 'error').mockClear().mockImplementation();
     expect(getResponsiveBreakpoint(0)).to.equal(ResponsiveSize.xs);
     expect(console.error).to.have.been.calledOnce;
   });

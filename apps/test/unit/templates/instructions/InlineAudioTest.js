@@ -1,6 +1,5 @@
 import {mount} from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import {StatelessInlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
 
@@ -156,7 +155,7 @@ describe('InlineAudio', function () {
   });
 
   it('only initializes Audio once', function () {
-    sinon.spy(window, 'Audio');
+    jest.spyOn(window, 'Audio').mockClear();
     const component = getComponent(<StatelessInlineAudio {...DEFAULT_PROPS} />);
 
     expect(window.Audio).to.have.been.calledOnce;
@@ -166,7 +165,7 @@ describe('InlineAudio', function () {
     expect(window.Audio).to.have.been.calledOnce;
     component.instance().playAudio();
     expect(window.Audio).to.have.been.calledOnce;
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it('handles source update gracefully, stopping audio', async function () {

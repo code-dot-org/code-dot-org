@@ -2,16 +2,15 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
-import sinon from 'sinon';
 
 describe('FindVocabularyDialog', () => {
   let defaultProps, handleConfirm;
   beforeEach(() => {
-    handleConfirm = sinon.spy();
+    handleConfirm = jest.fn();
     defaultProps = {
       isOpen: true,
       handleConfirm,
-      handleClose: sinon.spy(),
+      handleClose: jest.fn(),
       vocabularies: [
         {
           id: 1,

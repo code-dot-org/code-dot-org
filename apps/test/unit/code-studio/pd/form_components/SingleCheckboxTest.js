@@ -3,7 +3,6 @@ import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-i
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 
 describe('SingleCheckbox', () => {
   it('renders a basic checkbox', () => {
@@ -35,7 +34,7 @@ describe('SingleCheckbox', () => {
   });
 
   it('Calls supplied onChange function with the updated value', () => {
-    const onChangeCallback = sinon.spy();
+    const onChangeCallback = jest.fn();
     const singleCheckbox = shallow(
       <SingleCheckbox
         name="testCheckbox"
@@ -50,7 +49,7 @@ describe('SingleCheckbox', () => {
     expect(onChangeCallback).to.have.been.calledOnce;
     expect(onChangeCallback).to.have.been.calledWith({testCheckbox: true});
 
-    onChangeCallback.resetHistory();
+    onChangeCallback.mockReset();
     singleCheckbox
       .find('Checkbox')
       .simulate('change', {target: {checked: false}});

@@ -1,6 +1,5 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
@@ -87,7 +86,7 @@ describe('VisualizerModal', () => {
     let wrapper;
     beforeEach(() => {
       wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
-      sinon.spy(wrapper.instance(), 'parseRecords');
+      jest.spyOn(wrapper.instance(), 'parseRecords').mockClear();
     });
 
     it('ignores empty records', () => {

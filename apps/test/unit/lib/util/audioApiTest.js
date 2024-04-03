@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {
   commands,
@@ -54,11 +53,11 @@ describe('Audio API', function () {
       expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
-      let spy = sinon.spy();
+      let spy = jest.fn();
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two', 'three', 'four');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({
+      expect(spy.mock.calls[0][2]).to.deep.equal({
         url: 'one',
         loop: 'two',
         callback: 'three',
@@ -74,11 +73,11 @@ describe('Audio API', function () {
       expect(dropletConfig[funcName].params).to.have.length(1);
 
       // Check executors map arguments to object correctly
-      let spy = sinon.spy();
+      let spy = jest.fn();
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({url: 'one'});
+      expect(spy.mock.calls[0][2]).to.deep.equal({url: 'one'});
     });
   });
 
@@ -94,7 +93,7 @@ describe('Audio API', function () {
       expect(dropletConfig[funcName].params).to.have.length(3);
 
       // Check that executors map arguments to object correctly
-      let spy = sinon.spy();
+      let spy = jest.fn();
       injectExecuteCmd(spy);
       const onCompleteCallback = () => console.log('done');
       executors[funcName](
@@ -105,7 +104,7 @@ describe('Audio API', function () {
         'no fifth arg'
       );
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({
+      expect(spy.mock.calls[0][2]).to.deep.equal({
         text: 'this is text',
         gender: 'female',
         language: 'English',
@@ -117,13 +116,13 @@ describe('Audio API', function () {
       let outputWarningSpy, azureTTSStub, options;
 
       beforeEach(function () {
-        outputWarningSpy = sinon.spy();
+        outputWarningSpy = jest.fn();
         injectErrorHandler({outputWarning: outputWarningSpy});
         azureTTSStub = {
-          createSoundPromise: sinon.spy(),
-          enqueueAndPlay: sinon.spy(),
+          createSoundPromise: jest.fn(),
+          enqueueAndPlay: jest.fn(),
         };
-        sinon.stub(AzureTextToSpeech, 'getSingleton').returns(azureTTSStub);
+        jest.spyOn(AzureTextToSpeech, 'getSingleton').mockClear().mockReturnValue(azureTTSStub);
         setAppOptions({
           azureSpeechServiceVoices: {
             English: {female: 'en-female', locale: 'en-US'},
@@ -137,7 +136,7 @@ describe('Audio API', function () {
       });
 
       afterEach(function () {
-        AzureTextToSpeech.getSingleton.restore();
+        AzureTextToSpeech.getSingleton.mockRestore();
       });
 
       it('truncates text longer than MAX_SPEECH_TEXT_LENGTH', async function () {
@@ -147,7 +146,7 @@ describe('Audio API', function () {
 
         expect(outputWarningSpy).to.have.been.calledOnce;
         expect(azureTTSStub.createSoundPromise).to.have.been.calledOnce;
-        const args = azureTTSStub.createSoundPromise.firstCall.args[0];
+        const args = azureTTSStub.createSoundPromise.mock.calls[0][0];
         expect(args.text).to.equal(expectedText);
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
@@ -159,7 +158,7 @@ describe('Audio API', function () {
 
         expect(outputWarningSpy).not.to.have.been.called;
         expect(azureTTSStub.createSoundPromise).to.have.been.calledOnce;
-        const args = azureTTSStub.createSoundPromise.firstCall.args[0];
+        const args = azureTTSStub.createSoundPromise.mock.calls[0][0];
         expect(args.gender).to.equal('female');
         expect(args.locale).to.equal('en-US');
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
@@ -170,7 +169,7 @@ describe('Audio API', function () {
 
         expect(outputWarningSpy).not.to.have.been.called;
         expect(azureTTSStub.createSoundPromise).to.have.been.calledOnce;
-        const args = azureTTSStub.createSoundPromise.firstCall.args[0];
+        const args = azureTTSStub.createSoundPromise.mock.calls[0][0];
         expect(args.text).to.equal('hello world');
         expect(args.gender).to.equal('female');
         expect(args.locale).to.equal('en-US');

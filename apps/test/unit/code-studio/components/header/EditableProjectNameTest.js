@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import {mount} from 'enzyme';
@@ -62,7 +61,7 @@ describe('EditableProjectName', () => {
     expect(wrapper.find('.project_save')).to.have.lengthOf(1);
 
     // Modifying the input and clicking save will update the name
-    const renameSpy = sinon.spy(window.dashboard.project, 'rename');
+    const renameSpy = jest.spyOn(window.dashboard.project, 'rename').mockClear();
     wrapper.find('.project_name').getDOMNode().value = 'New Name';
     wrapper.find('.project_save').simulate('click');
     expect(renameSpy.calledOnce).to.be.true;
@@ -77,18 +76,17 @@ describe('EditableProjectName', () => {
     expect(wrapper.find('.project_name').type()).to.equal('div');
     expect(wrapper.find('.project_edit')).to.have.lengthOf(1);
     expect(wrapper.find('.project_save')).to.have.lengthOf(0);
-    renameSpy.restore();
+    renameSpy.mockRestore();
   });
 
   it('calls lab2 rename if lab2 projects are enabled', () => {
-    const renameStub = sinon.stub().returns(Promise.resolve());
+    const renameStub = jest.fn().mockReturnValue(Promise.resolve());
     const projectManagerStub = sinon.createStubInstance(ProjectManager, {
       rename: renameStub,
     });
-    sinon
-      .stub(Lab2Registry, 'getInstance')
-      .returns({getProjectManager: () => projectManagerStub});
-    sinon.stub(Lab2Registry, 'hasEnabledProjects').returns(true);
+    jest.spyOn(Lab2Registry, 'getInstance').mockClear()
+      .mockReturnValue({getProjectManager: () => projectManagerStub});
+    jest.spyOn(Lab2Registry, 'hasEnabledProjects').mockClear().mockReturnValue(true);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -104,7 +102,7 @@ describe('EditableProjectName', () => {
     expect(renameStub.calledOnce).to.be.true;
     expect(renameStub.calledWith('New Name')).to.be.true;
 
-    Lab2Registry.getInstance.restore();
-    Lab2Registry.hasEnabledProjects.restore();
+    Lab2Registry.getInstance.mockRestore();
+    Lab2Registry.hasEnabledProjects.mockRestore();
   });
 });

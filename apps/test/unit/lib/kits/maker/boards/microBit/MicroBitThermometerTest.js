@@ -1,6 +1,5 @@
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitThermometer';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
@@ -12,7 +11,7 @@ describe('MicroBitThermometer', function () {
     thermometer = new MicroBitThermometer({mb: boardClient});
   });
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it(`attributes are readonly`, () => {
@@ -39,8 +38,8 @@ describe('MicroBitThermometer', function () {
 
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
-      let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
-      let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
+      let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
+      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
       thermometer.start();
       expect(startSpy).to.have.been.calledOnce;
       expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.tempSensor);
@@ -54,7 +53,7 @@ describe('MicroBitThermometer', function () {
   describe('emitsEvent', () => {
     let emitSpy;
     beforeEach(() => {
-      emitSpy = sinon.spy(thermometer, 'emit');
+      emitSpy = jest.spyOn(thermometer, 'emit').mockClear();
     });
 
     it('emits the data event when it receives data', () => {

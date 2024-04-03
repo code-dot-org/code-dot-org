@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import sinon from 'sinon';
 
 import * as userSectionClient from '@cdo/apps/util/userSectionClient';
 
@@ -17,7 +16,7 @@ const SIGNED_IN_USER = {
 describe('NetSimLobby', () => {
   let rootDiv, netsim, getUserSectionsStub;
   beforeEach(function () {
-    getUserSectionsStub = sinon.stub(userSectionClient, 'getUserSections');
+    getUserSectionsStub = jest.spyOn(userSectionClient, 'getUserSections').mockClear().mockImplementation();
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     rootDiv = $('<div>');
     netsim = {
@@ -30,7 +29,7 @@ describe('NetSimLobby', () => {
   });
 
   afterEach(function () {
-    userSectionClient.getUserSections.restore();
+    userSectionClient.getUserSections.mockRestore();
   });
 
   it('performs an async request to fetch user sections', () => {

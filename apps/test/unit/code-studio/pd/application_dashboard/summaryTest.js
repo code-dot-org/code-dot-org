@@ -6,7 +6,6 @@ import {
   removeIncompleteApplications,
 } from '@cdo/apps/code-studio/pd/application_dashboard/summary';
 import {expect} from 'chai';
-import sinon from 'sinon';
 
 describe('Summary', () => {
   const dataWithoutIncompleteApps = {
@@ -75,7 +74,7 @@ describe('Summary', () => {
 
     expect(summary.find('Spinner')).to.have.length(0);
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('removeIncompleteApplications strips incomplete applications from data', () => {

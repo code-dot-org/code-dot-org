@@ -1,6 +1,5 @@
 import {expect} from '../util/reconfiguredChai';
 import MusicController from '@cdo/apps/MusicController';
-import sinon from 'sinon';
 import Sounds from '@cdo/apps/Sounds';
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
@@ -23,13 +22,13 @@ describe('MusicController', () => {
       mp3: winMp3,
     });
     sound = sounds.soundsById[sourceURL];
-    sinon.spy(sound, 'play');
-    sinon.stub(Sounds.prototype, 'registerByFilenamesAndID').returns(sound);
+    jest.spyOn(sound, 'play').mockClear();
+    jest.spyOn(Sounds.prototype, 'registerByFilenamesAndID').mockClear().mockReturnValue(sound);
   });
 
   afterEach(() => {
-    Sounds.prototype.registerByFilenamesAndID.restore();
-    sound.play.restore();
+    Sounds.prototype.registerByFilenamesAndID.mockRestore();
+    sound.play.mockRestore();
   });
 
   function musicControllerSetup(isMutedToStart) {

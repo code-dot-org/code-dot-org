@@ -2,7 +2,6 @@
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
@@ -27,8 +26,6 @@ import {
 process.hrtime = require('browser-process-hrtime');
 
 describe('Circuit Playground Components', () => {
-  let board, clock;
-
   // Use this value as the fake initial value for all analog sensors in unit tests.
   // 235 raw sensor value = 0C = 32F for the thermometer
   const INITIAL_ANALOG_VALUE = 235;
@@ -36,7 +33,7 @@ describe('Circuit Playground Components', () => {
   beforeEach(() => {
     // Fake timers to avoid memory leaks in tests from components that don't
     // clean up their setInterval calls properly.
-    clock = sinon.useFakeTimers();
+    jest.useFakeTimers();
 
     board = newBoard();
 
@@ -48,7 +45,7 @@ describe('Circuit Playground Components', () => {
   });
 
   afterEach(() => {
-    clock.restore();
+    jest.useRealTimers();
     restoreComponentInitialization(five.Sensor);
     restoreComponentInitialization(five.Thermometer);
   });
@@ -477,7 +474,7 @@ describe('Circuit Playground Components', () => {
       // No pin?  Doesn't report one.
 
       it('with a start() method', () => {
-        accelerometer.io.sysexCommand.resetHistory(); // Reset spy
+        accelerometer.io.sysexCommand.mockReset(); // Reset spy
         expect(accelerometer).to.haveOwnProperty('start');
         expect(accelerometer.io.sysexCommand).not.to.have.been.called;
 
@@ -498,10 +495,22 @@ describe('Circuit Playground Components', () => {
       });
 
       it('getOrientation returns an array if called without any arguments', () => {
-        const stub = sinon.stub(accelerometer, 'getOrientation');
-        stub.withArgs('x').returns(1);
-        stub.withArgs('y').returns(2);
-        stub.withArgs('z').returns(3);
+        const stub = jest.spyOn(accelerometer, 'getOrientation').mockClear().mockImplementation();
+        stub.mockImplementation((...args) => {
+          if (args[0] === 'x') {
+            return 1;
+          }
+        });
+        stub.mockImplementation((...args) => {
+          if (args[0] === 'y') {
+            return 2;
+          }
+        });
+        stub.mockImplementation((...args) => {
+          if (args[0] === 'z') {
+            return 3;
+          }
+        });
         stub.callThrough(); // Call original method if none of the above matched.
 
         expect(accelerometer.getOrientation()).to.deep.equal([
@@ -510,7 +519,7 @@ describe('Circuit Playground Components', () => {
           accelerometer.getOrientation('z'),
         ]);
 
-        stub.restore();
+        stub.mockRestore();
       });
 
       it('and a getAcceleration method', () => {
@@ -522,10 +531,22 @@ describe('Circuit Playground Components', () => {
       });
 
       it('getAcceleration returns an array if called without any arguments', () => {
-        const stub = sinon.stub(accelerometer, 'getAcceleration');
-        stub.withArgs('x').returns(1);
-        stub.withArgs('y').returns(2);
-        stub.withArgs('z').returns(3);
+        const stub = jest.spyOn(accelerometer, 'getAcceleration').mockClear().mockImplementation();
+        stub.mockImplementation((...args) => {
+          if (args[0] === 'x') {
+            return 1;
+          }
+        });
+        stub.mockImplementation((...args) => {
+          if (args[0] === 'y') {
+            return 2;
+          }
+        });
+        stub.mockImplementation((...args) => {
+          if (args[0] === 'z') {
+            return 3;
+          }
+        });
         stub.callThrough(); // Call original method if none of the above matched.
 
         expect(accelerometer.getAcceleration()).to.deep.equal([
@@ -534,7 +555,7 @@ describe('Circuit Playground Components', () => {
           accelerometer.getAcceleration('z'),
         ]);
 
-        stub.restore();
+        stub.mockRestore();
       });
     });
   });
@@ -584,8 +605,8 @@ describe('Circuit Playground Components', () => {
     });
 
     it('calls off and stop on every color LED', () => {
-      const stopSpies = components.colorLeds.map(led => sinon.spy(led, 'stop'));
-      const offSpies = components.colorLeds.map(led => sinon.spy(led, 'off'));
+      const stopSpies = components.colorLeds.map(led => jest.spyOn(led, 'stop').mockClear());
+      const offSpies = components.colorLeds.map(led => jest.spyOn(led, 'off').mockClear());
       cleanupCircuitPlaygroundComponents(
         components,
         true /* shouldDestroyComponents */
@@ -596,16 +617,16 @@ describe('Circuit Playground Components', () => {
 
     it('stops Led.RGB.blink()', () => {
       // Spy on 'toggle' which blink calls internally.
-      const spy = sinon.spy(components.colorLeds[0], 'toggle');
+      const spy = jest.spyOn(components.colorLeds[0], 'toggle').mockClear();
 
       // Set up a blink behavior
       components.colorLeds[0].blink(50);
       expect(spy).not.to.have.been.called;
 
       // Make sure the blink has started
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
       expect(spy).to.have.been.calledOnce;
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
       expect(spy).to.have.been.calledTwice;
 
       // Now destroy the component
@@ -615,15 +636,15 @@ describe('Circuit Playground Components', () => {
       );
 
       // Blink should no longer be calling toggle().
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
       expect(spy).to.have.been.calledTwice;
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
       expect(spy).to.have.been.calledTwice;
     });
 
     it('calls off and stop on the red LED', () => {
-      const stopSpy = sinon.spy(components.led, 'stop');
-      const offSpy = sinon.spy(components.led, 'off');
+      const stopSpy = jest.spyOn(components.led, 'stop').mockClear();
+      const offSpy = jest.spyOn(components.led, 'off').mockClear();
       cleanupCircuitPlaygroundComponents(
         components,
         true /* shouldDestroyComponents */
@@ -634,16 +655,16 @@ describe('Circuit Playground Components', () => {
 
     it('stops Led.blink()', () => {
       // Spy on 'toggle' which blink calls internally.
-      const spy = sinon.spy(components.led, 'toggle');
+      const spy = jest.spyOn(components.led, 'toggle').mockClear();
 
       // Set up a blink behavior
       components.led.blink(50);
       expect(spy).not.to.have.been.called;
 
       // Make sure the blink has started
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
       expect(spy).to.have.been.calledOnce;
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
       expect(spy).to.have.been.calledTwice;
 
       // Now destroy the component
@@ -653,15 +674,15 @@ describe('Circuit Playground Components', () => {
       );
 
       // Blink should no longer be calling toggle().
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
       expect(spy).to.have.been.calledTwice;
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
       expect(spy).to.have.been.calledTwice;
     });
 
     it('calls off and stop on the buzzer', () => {
-      const stopSpy = sinon.spy(components.buzzer, 'stop');
-      const offSpy = sinon.spy(components.buzzer, 'off');
+      const stopSpy = jest.spyOn(components.buzzer, 'stop').mockClear();
+      const offSpy = jest.spyOn(components.buzzer, 'off').mockClear();
       cleanupCircuitPlaygroundComponents(
         components,
         true /* shouldDestroyComponents */
@@ -676,11 +697,11 @@ describe('Circuit Playground Components', () => {
 
         beforeEach(() => {
           // Spy on 'frequency' which play calls internally.
-          frequencySpy = sinon.spy(Playground.Piezo.frequency, 'value');
+          frequencySpy = jest.spyOn(Playground.Piezo.frequency, 'value').mockClear();
         });
 
         afterEach(() => {
-          frequencySpy.restore();
+          frequencySpy.mockRestore();
         });
 
         it('stops Piezo.play()', function () {
@@ -696,9 +717,9 @@ describe('Circuit Playground Components', () => {
 
             // Make sure the song is playing
             const msPerBeat = 15000 / tempoBPM;
-            clock.tick(msPerBeat);
+            jest.advanceTimersByTime(msPerBeat);
             expect(frequencySpy).to.have.been.calledTwice;
-            clock.tick(msPerBeat);
+            jest.advanceTimersByTime(msPerBeat);
             expect(frequencySpy).to.have.been.calledThrice;
 
             // Now destroy the component(s)
@@ -708,9 +729,9 @@ describe('Circuit Playground Components', () => {
             );
 
             // And ensure the song has stopped
-            clock.tick(msPerBeat);
+            jest.advanceTimersByTime(msPerBeat);
             expect(frequencySpy).to.have.been.calledThrice;
-            clock.tick(msPerBeat);
+            jest.advanceTimersByTime(msPerBeat);
             expect(frequencySpy).to.have.been.calledThrice;
           });
         });
@@ -718,7 +739,7 @@ describe('Circuit Playground Components', () => {
     });
 
     it('calls disable on the soundSensor and clears events', () => {
-      const spy = sinon.spy(components.soundSensor, 'disable');
+      const spy = jest.spyOn(components.soundSensor, 'disable').mockClear();
       cleanupCircuitPlaygroundComponents(
         components,
         false /* shouldDestroyComponents */
@@ -729,7 +750,7 @@ describe('Circuit Playground Components', () => {
     });
 
     it('calls disable on the lightSensor and clears events', () => {
-      const spy = sinon.spy(components.lightSensor, 'disable');
+      const spy = jest.spyOn(components.lightSensor, 'disable').mockClear();
       cleanupCircuitPlaygroundComponents(
         components,
         false /* shouldDestroyComponents */
@@ -739,7 +760,7 @@ describe('Circuit Playground Components', () => {
     });
 
     it('calls disable on the tempSensor and clears events', () => {
-      const spy = sinon.spy(components.tempSensor, 'disable');
+      const spy = jest.spyOn(components.tempSensor, 'disable').mockClear();
       cleanupCircuitPlaygroundComponents(
         components,
         false /* shouldDestroyComponents */
@@ -751,7 +772,7 @@ describe('Circuit Playground Components', () => {
     it('calls stop on the accelerometer and clears events', () => {
       // Spy on the controller template, because stop() ends up readonly on
       // the returned component.
-      const spy = sinon.spy(Playground.Accelerometer.stop, 'value');
+      const spy = jest.spyOn(Playground.Accelerometer.stop, 'value').mockClear();
       return createCircuitPlaygroundComponents(board).then(components => {
         cleanupCircuitPlaygroundComponents(
           components,
@@ -767,7 +788,7 @@ describe('Circuit Playground Components', () => {
 
         expect(components.accelerometer._events).to.be.empty;
 
-        spy.restore();
+        spy.mockRestore();
         if (assertionError) {
           throw assertionError;
         }

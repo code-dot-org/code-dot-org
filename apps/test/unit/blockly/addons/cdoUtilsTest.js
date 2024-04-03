@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {getCode, moveHiddenBlocks} from '@cdo/apps/blockly/addons/cdoUtils';
 import * as cdoSerializationHelpers from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import * as cdoXml from '@cdo/apps/blockly/addons/cdoXml';
@@ -197,17 +196,17 @@ describe('CdoUtils', () => {
     });
 
     afterEach(() => {
-      sandbox.restore();
+      sandbox.mockRestore();
     });
 
     it('should call Blockly.Xml methods when getSourceAsJson is false', () => {
       const workspaceStub = {};
       const domToTextStub = sandbox
         .stub(Blockly.Xml, 'domToText')
-        .returns('xml_text');
+        .mockReturnValue('xml_text');
       const getProjectXmlStub = sandbox
         .stub(cdoXml, 'getProjectXml')
-        .returns('dom');
+        .mockReturnValue('dom');
 
       const result = getCode(workspaceStub, false);
 
@@ -226,7 +225,7 @@ describe('CdoUtils', () => {
 
       const getProjectSerializationStub = sandbox
         .stub(cdoSerializationHelpers, 'getProjectSerialization')
-        .returns(serializationStub);
+        .mockReturnValue(serializationStub);
 
       const result = getCode(workspaceStub, true);
 

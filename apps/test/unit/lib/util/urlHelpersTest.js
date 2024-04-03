@@ -5,7 +5,6 @@ import {
   studio,
   metaTagDescription,
 } from '@cdo/apps/lib/util/urlHelpers';
-import sinon from 'sinon';
 
 describe('pegasus()', () => {
   describe('from dashboard', () => {
@@ -83,7 +82,7 @@ describe('metaTagDescription() for valid urls', () => {
   });
 
   afterEach(() => {
-    sandbox.restore();
+    sandbox.mockRestore();
   });
 
   it('retrieves the content from the description meta tag', () => {
@@ -93,7 +92,7 @@ describe('metaTagDescription() for valid urls', () => {
         'Content-type': 'text/html',
       },
     });
-    sandbox.stub(window, 'fetch').returns(Promise.resolve(res));
+    sandbox.stub(window, 'fetch').mockReturnValue(Promise.resolve(res));
 
     const promise = metaTagDescription('/valid/url/');
     return expect(promise).to.eventually.equal('Valid Description Here');
@@ -106,7 +105,7 @@ describe('metaTagDescription() for valid urls', () => {
         'Content-type': 'text/html',
       },
     });
-    sandbox.stub(window, 'fetch').returns(Promise.resolve(res));
+    sandbox.stub(window, 'fetch').mockReturnValue(Promise.resolve(res));
 
     const promise = metaTagDescription('/valid/url/wo/tag');
     return expect(promise).to.eventually.equal('/valid/url/wo/tag');

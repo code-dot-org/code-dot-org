@@ -1,6 +1,5 @@
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 
 describe('CapacitiveTouchSensor', function () {
@@ -12,7 +11,7 @@ describe('CapacitiveTouchSensor', function () {
     sensor = new CapacitiveTouchSensor({mb: boardClient, pin: testPin});
   });
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it(`attributes are readonly`, () => {
@@ -26,8 +25,8 @@ describe('CapacitiveTouchSensor', function () {
 
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
-      let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
-      let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
+      let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
+      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
       sensor.start();
       expect(startSpy).to.have.been.calledOnce;
       expect(startSpy).to.have.been.calledWith(testPin);
@@ -44,11 +43,11 @@ describe('CapacitiveTouchSensor', function () {
     let emitSpy;
 
     beforeEach(() => {
-      emitSpy = sinon.spy(sensor, 'emit');
+      emitSpy = jest.spyOn(sensor, 'emit').mockClear();
     });
 
     afterEach(() => {
-      emitSpy.restore();
+      emitSpy.mockRestore();
     });
 
     it('emits the down event when it receives a high enough reading', async () => {

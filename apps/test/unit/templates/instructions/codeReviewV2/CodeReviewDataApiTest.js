@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import CodeReviewDataApi, {
   timelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
@@ -90,12 +88,11 @@ describe('CodeReviewDataApi', () => {
         fakeProjectLevelId,
         fakeScriptId
       );
-      sinon.stub(CodeReviewDataApi.prototype, 'getCommits').callsFake(() => {
+      jest.spyOn(CodeReviewDataApi.prototype, 'getCommits').mockClear().mockImplementation(() => {
         return Promise.resolve(fakeCommitData);
       });
-      sinon
-        .stub(CodeReviewDataApi.prototype, 'getCodeReviews')
-        .callsFake(() => {
+      jest.spyOn(CodeReviewDataApi.prototype, 'getCodeReviews').mockClear()
+        .mockImplementation(() => {
           return Promise.resolve(fakeReviewData);
         });
     });
@@ -140,7 +137,7 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = sinon.stub($, 'ajax').returns({
+      ajaxStub = jest.spyOn($, 'ajax').mockClear().mockReturnValue({
         done: successCallback => {
           successCallback(fakeReviewData[0]);
           return {fail: () => {}};
@@ -149,7 +146,7 @@ describe('CodeReviewDataApi', () => {
     });
 
     afterEach(() => {
-      ajaxStub.restore();
+      ajaxStub.mockRestore();
     });
 
     it('calls patch code review endpoint with isClosed true', async () => {
@@ -183,7 +180,7 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = sinon.stub($, 'ajax').returns({
+      ajaxStub = jest.spyOn($, 'ajax').mockClear().mockReturnValue({
         done: successCallback => {
           successCallback(fakeReviewData[0]);
           return {fail: () => {}};
@@ -192,7 +189,7 @@ describe('CodeReviewDataApi', () => {
     });
 
     afterEach(() => {
-      ajaxStub.restore();
+      ajaxStub.mockRestore();
     });
 
     it('calls code reveiw POST endpoint with the expected data', async () => {
@@ -231,7 +228,7 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = sinon.stub($, 'ajax').returns({
+      ajaxStub = jest.spyOn($, 'ajax').mockClear().mockReturnValue({
         done: successCallback => {
           successCallback(fakeReviewData[0]);
           return {fail: () => {}};
@@ -240,14 +237,13 @@ describe('CodeReviewDataApi', () => {
     });
 
     afterEach(() => {
-      ajaxStub.restore();
+      ajaxStub.mockRestore();
     });
 
     it('rejects with profanity error if profanity is found', async () => {
       const profaneWordsRes = ['word1', 'word2'];
-      sinon
-        .stub(utils, 'findProfanity')
-        .returns({done: successCallback => successCallback(profaneWordsRes)});
+      jest.spyOn(utils, 'findProfanity').mockClear()
+        .mockReturnValue({done: successCallback => successCallback(profaneWordsRes)});
 
       try {
         await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
@@ -258,11 +254,11 @@ describe('CodeReviewDataApi', () => {
         );
       }
 
-      utils.findProfanity.restore();
+      utils.findProfanity.mockRestore();
     });
 
     it('calls code_review_comments endpoint if profanity is not found', async () => {
-      sinon.stub(utils, 'findProfanity').returns({
+      jest.spyOn(utils, 'findProfanity').mockClear().mockReturnValue({
         done: successCallback => successCallback(null),
       });
 
@@ -277,7 +273,7 @@ describe('CodeReviewDataApi', () => {
           comment: fakeComment,
         },
       });
-      utils.findProfanity.restore();
+      utils.findProfanity.mockRestore();
     });
   });
 
@@ -293,7 +289,7 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = sinon.stub($, 'ajax').returns({
+      ajaxStub = jest.spyOn($, 'ajax').mockClear().mockReturnValue({
         done: successCallback => {
           successCallback(fakeReviewData[0]);
           return {fail: () => {}};
@@ -302,7 +298,7 @@ describe('CodeReviewDataApi', () => {
     });
 
     afterEach(() => {
-      ajaxStub.restore();
+      ajaxStub.mockRestore();
     });
 
     it('calls code_review_comments PATCH endpoint with the isResolved value to set', async () => {

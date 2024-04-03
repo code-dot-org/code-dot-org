@@ -1,7 +1,6 @@
 import {mount} from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
@@ -23,23 +22,23 @@ describe('The ShowCodeToggle component', () => {
 
   beforeEach(() => {
     server = sinon.fakeServerWithClock.create();
-    sinon.spy($, 'post');
-    sinon.spy($, 'getJSON');
-    sinon.stub(project, 'getCurrentId').returns('some-project-id');
-    sinon.stub(utils, 'fireResizeEvent'); // Called by StudioApp.js
+    jest.spyOn($, 'post').mockClear();
+    jest.spyOn($, 'getJSON').mockClear();
+    jest.spyOn(project, 'getCurrentId').mockClear().mockReturnValue('some-project-id');
+    jest.spyOn(utils, 'fireResizeEvent').mockClear().mockImplementation(); // Called by StudioApp.js
   });
   afterEach(() => {
-    server.restore();
-    $.post.restore();
-    $.getJSON.restore();
-    project.getCurrentId.restore();
-    utils.fireResizeEvent.restore();
+    server.mockRestore();
+    $.post.mockRestore();
+    $.getJSON.mockRestore();
+    project.getCurrentId.mockRestore();
+    utils.fireResizeEvent.mockRestore();
   });
 
   beforeEach(stubStudioApp);
   afterEach(restoreStudioApp);
-  beforeEach(() => sinon.stub(LegacyDialog.prototype, 'show'));
-  afterEach(() => LegacyDialog.prototype.show.restore());
+  beforeEach(() => jest.spyOn(LegacyDialog.prototype, 'show').mockClear().mockImplementation());
+  afterEach(() => LegacyDialog.prototype.show.mockRestore());
   beforeEach(() => {
     stubRedux();
     registerReducers(commonReducers);
@@ -59,7 +58,7 @@ describe('The ShowCodeToggle component', () => {
         focus() {},
       },
     };
-    sinon.stub(studioApp(), 'handleEditCode_').callsFake(function () {
+    jest.spyOn(studioApp(), 'handleEditCode_').mockClear().mockImplementation(function () {
       this.editor = editor;
     });
   });
@@ -102,14 +101,14 @@ describe('The ShowCodeToggle component', () => {
     document.body.removeChild(containerDiv);
   });
 
-  beforeEach(() => sinon.stub(studioApp(), 'onDropletToggle'));
+  beforeEach(() => jest.spyOn(studioApp(), 'onDropletToggle').mockClear().mockImplementation());
 
-  beforeEach(() => sinon.stub(studioApp(), 'showGeneratedCode'));
+  beforeEach(() => jest.spyOn(studioApp(), 'showGeneratedCode').mockClear().mockImplementation());
 
   describe('when the studioApp editor has currentlyUsingBlocks=false', () => {
     beforeEach(() => {
       editor.session.currentlyUsingBlocks = false;
-      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
+      toggle = mount(<ShowCodeToggle onToggle={jest.fn()} />);
       studioApp().init(config);
     });
 
@@ -131,7 +130,7 @@ describe('The ShowCodeToggle component', () => {
 
   describe('when initially mounted', () => {
     beforeEach(() => {
-      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
+      toggle = mount(<ShowCodeToggle onToggle={jest.fn()} />);
     });
 
     it("renders a PaneButton with a 'Show Text' label", () => {
@@ -221,7 +220,7 @@ describe('The ShowCodeToggle component', () => {
   describe('when passed in an onToggle prop', () => {
     let onToggle;
     beforeEach(() => {
-      onToggle = sinon.spy();
+      onToggle = jest.fn();
       toggle = mount(<ShowCodeToggle onToggle={onToggle} />);
     });
 
@@ -231,14 +230,14 @@ describe('The ShowCodeToggle component', () => {
       expect(onToggle).to.have.been.calledWith(false);
       toggle.simulate('click');
       expect(onToggle).to.have.been.calledTwice;
-      expect(onToggle.secondCall).to.have.been.calledWith(true);
+      expect(onToggle.mock.calls[1]).to.have.been.calledWith(true);
     });
   });
 
   describe('When studioApp() has been configured with editCode turned off', () => {
     beforeEach(() => {
       studioApp().editCode = false;
-      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
+      toggle = mount(<ShowCodeToggle onToggle={jest.fn()} />);
     });
 
     it("will render the button with 'Show Code' instead of 'Show Text'", () => {
@@ -292,7 +291,7 @@ describe('The ShowCodeToggle component', () => {
   describe('when studioApp() is configured with enableShowCode turned off', () => {
     beforeEach(() => {
       studioApp().enableShowCode = false;
-      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
+      toggle = mount(<ShowCodeToggle onToggle={jest.fn()} />);
     });
 
     it('will appear hidden', () => {
@@ -313,7 +312,7 @@ describe('The ShowCodeToggle component', () => {
 
   describe('when studioApp() is initialized with enableShowCode=false, after the component has been mounted', () => {
     beforeEach(() => {
-      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
+      toggle = mount(<ShowCodeToggle onToggle={jest.fn()} />);
       config.enableShowCode = false;
       studioApp().init(config);
       toggle.update();

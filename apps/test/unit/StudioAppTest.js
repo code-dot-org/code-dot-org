@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import sinon from 'sinon';
 import {expect} from '../util/reconfiguredChai';
 import {
   singleton as studioApp,
@@ -62,14 +61,14 @@ describe('StudioApp', () => {
       let files;
       beforeEach(() => {
         files = [];
-        sinon.stub(studioApp(), 'configureDom');
-        sinon.stub(assetsApi, 'getFiles').callsFake(cb => cb({files}));
-        sinon.spy(listStore, 'reset');
+        jest.spyOn(studioApp(), 'configureDom').mockClear().mockImplementation();
+        jest.spyOn(assetsApi, 'getFiles').mockClear().mockImplementation(cb => cb({files}));
+        jest.spyOn(listStore, 'reset').mockClear();
       });
 
       afterEach(() => {
-        assetsApi.getFiles.restore();
-        listStore.reset.restore();
+        assetsApi.getFiles.mockRestore();
+        listStore.reset.mockRestore();
       });
 
       it('will pre-populate assets for levels that use assets', () => {
@@ -93,7 +92,7 @@ describe('StudioApp', () => {
       });
 
       it('will emit an afterInit event', () => {
-        const listener = sinon.spy();
+        const listener = jest.fn();
         studioApp().on('afterInit', listener);
         studioApp().init({
           usesAssets: true,
@@ -120,16 +119,16 @@ describe('StudioApp', () => {
       beforeEach(() => {
         studio = studioApp();
         studio.executingCode = mockCode;
-        studio.clearHighlighting = sinon.spy();
+        studio.clearHighlighting = jest.fn();
       });
 
       afterEach(() => {
-        sinon.restore();
+        jest.restoreAllMocks();
       });
 
       it('no-ops if app is not running', () => {
-        sinon.stub(studio, 'isRunning').returns(false);
-        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(false);
+        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
 
         studio.editDuringRunAlertHandler();
 
@@ -138,8 +137,8 @@ describe('StudioApp', () => {
       });
 
       it('no-ops if code has not changed', () => {
-        sinon.stub(studio, 'isRunning').returns(true);
-        sinon.stub(studio, 'getCode').returns(mockCode);
+        jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(true);
+        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode);
 
         studio.editDuringRunAlertHandler();
 
@@ -148,8 +147,8 @@ describe('StudioApp', () => {
       });
 
       it('no-ops if editDuringRunAlert is not undefined', () => {
-        sinon.stub(studio, 'isRunning').returns(true);
-        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(true);
+        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
         studio.editDuringRunAlert = '<div/>';
 
         studio.editDuringRunAlertHandler();
@@ -159,8 +158,8 @@ describe('StudioApp', () => {
       });
 
       it('clears block highlighting', () => {
-        sinon.stub(studio, 'isRunning').returns(true);
-        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(true);
+        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
 
         studio.editDuringRunAlertHandler();
 
@@ -169,9 +168,9 @@ describe('StudioApp', () => {
 
       it('checks localStorage if showEditDuringRunAlert is true', () => {
         studio.showEditDuringRunAlert = true;
-        sinon.stub(studio, 'isRunning').returns(true);
-        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
-        sinon.stub(utils, 'tryGetLocalStorage');
+        jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(true);
+        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
+        jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockImplementation();
 
         studio.editDuringRunAlertHandler();
 
@@ -182,12 +181,12 @@ describe('StudioApp', () => {
       });
 
       it('renders editDuringRunAlert if showEditDuringRunAlert is true and editDuringRunAlert is undefined', () => {
-        sinon.stub(studio, 'isRunning').returns(true);
-        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        jest.spyOn(studio, 'isRunning').mockClear().mockReturnValue(true);
+        jest.spyOn(studio, 'getCode').mockClear().mockReturnValue(mockCode + '<xml>more xml</xml'); // code has changed
         studio.showEditDuringRunAlert = true;
         studio.editDuringRunAlert = undefined;
-        sinon.stub(utils, 'tryGetLocalStorage').returns(null); // user has not dismissed this alert before
-        studio.displayWorkspaceAlert = sinon.spy();
+        jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue(null); // user has not dismissed this alert before
+        studio.displayWorkspaceAlert = jest.fn();
 
         studio.editDuringRunAlertHandler();
 
@@ -207,7 +206,7 @@ describe('StudioApp', () => {
         };
         studio.reset = () => {};
 
-        reportSpy = sinon.spy();
+        reportSpy = jest.fn();
         studio.debouncedSilentlyReport = reportSpy;
       });
 
@@ -229,26 +228,25 @@ describe('StudioApp', () => {
     });
 
     describe('The StudioApp.report function', () => {
-      let clock, studio, onAttemptSpy;
       beforeEach(() => {
-        clock = sinon.useFakeTimers();
+        jest.useFakeTimers();
         studio = studioApp();
         studio.feedback_ = {
           canContinueToNextLevel: () => {},
           getNumBlocksUsed: () => {},
         };
 
-        onAttemptSpy = sinon.spy();
+        onAttemptSpy = jest.fn();
         studio.onAttempt = onAttemptSpy;
       });
 
       afterEach(() => {
-        clock.restore();
+        jest.useRealTimers();
       });
 
       it('sets the milestoneStartTime to the current time', () => {
         studio.milestoneStartTime = 0;
-        clock.tick(2000);
+        jest.advanceTimersByTime(2000);
 
         studio.report({});
 
@@ -256,8 +254,8 @@ describe('StudioApp', () => {
       });
 
       it('dispatches resetIdleTime', () => {
-        const stubbedDispatch = sinon.stub();
-        sinon.stub(redux, 'getStore').returns({
+        const stubbedDispatch = jest.fn();
+        jest.spyOn(redux, 'getStore').mockClear().mockReturnValue({
           getState: () => ({
             studioAppActivity: {
               idleTimeSinceLastReport: 3000,
@@ -273,7 +271,7 @@ describe('StudioApp', () => {
 
         expect(stubbedDispatch).to.have.been.calledWith(resetIdleTime());
 
-        redux.getStore.restore();
+        redux.getStore.mockRestore();
       });
 
       it('sets hasReported to true', () => {
@@ -283,7 +281,7 @@ describe('StudioApp', () => {
       });
 
       it('calculates the timeSinceLastMilestone', () => {
-        sinon.stub(redux, 'getStore').returns({
+        jest.spyOn(redux, 'getStore').mockClear().mockReturnValue({
           getState: () => ({
             studioAppActivity: {
               idleTimeSinceLastReport: 1000,
@@ -292,12 +290,12 @@ describe('StudioApp', () => {
               isReadOnlyWorkspace: false,
             },
           }),
-          dispatch: sinon.stub(),
+          dispatch: jest.fn(),
         });
 
         studio.milestoneStartTime = 1000;
         studio.initTime = 1000;
-        clock.tick(3000);
+        jest.advanceTimersByTime(3000);
 
         studio.report({});
 
@@ -310,27 +308,27 @@ describe('StudioApp', () => {
           lines: undefined,
         });
 
-        redux.getStore.restore();
+        redux.getStore.mockRestore();
       });
     });
   });
 
   describe('The StudioApp.makeFooterMenuItems function', () => {
     beforeEach(() => {
-      sinon.stub(project, 'getUrl');
-      sinon.stub(project, 'getStandaloneApp');
+      jest.spyOn(project, 'getUrl').mockClear().mockImplementation();
+      jest.spyOn(project, 'getStandaloneApp').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      project.getUrl.restore();
-      project.getStandaloneApp.restore();
+      project.getUrl.mockRestore();
+      project.getStandaloneApp.mockRestore();
     });
 
     it('returns a How It Works link to the project edit page from an embed page in GameLab', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/embed'
       );
-      project.getStandaloneApp.returns('gamelab');
+      project.getStandaloneApp.mockReturnValue('gamelab');
       const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(
         item => item.key === 'how-it-works'
@@ -341,10 +339,10 @@ describe('StudioApp', () => {
     });
 
     it('returns a How It Works link to the project edit page from a share page in GameLab', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/'
       );
-      project.getStandaloneApp.returns('gamelab');
+      project.getStandaloneApp.mockReturnValue('gamelab');
       const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(
         item => item.key === 'how-it-works'
@@ -355,10 +353,10 @@ describe('StudioApp', () => {
     });
 
     it('returns How-It-Works item before Report-Abuse item in GameLab', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw'
       );
-      project.getStandaloneApp.returns('gamelab');
+      project.getStandaloneApp.mockReturnValue('gamelab');
       var footItems = makeFooterMenuItems();
       var howItWorksIndex = footItems.findIndex(
         item => item.key === 'how-it-works'
@@ -370,20 +368,20 @@ describe('StudioApp', () => {
     });
 
     it('does not return Try-HOC menu item in GameLab', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/'
       );
-      project.getStandaloneApp.returns('gamelab');
+      project.getStandaloneApp.mockReturnValue('gamelab');
       var footItems = makeFooterMenuItems();
       var itemKeys = footItems.map(item => item.key);
       expect(itemKeys).not.to.include('try-hoc');
     });
 
     it('does return Try-HOC menu item in PlayLab', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'http://localhost-studio.code.org:3000/projects/playlab/NTMBaBSuxs0t714y4WITMg/'
       );
-      project.getStandaloneApp.returns('playlab');
+      project.getStandaloneApp.mockReturnValue('playlab');
       var footItems = makeFooterMenuItems();
       var itemKeys = footItems.map(item => item.key);
       expect(itemKeys).to.include('try-hoc');
@@ -403,19 +401,18 @@ describe('StudioApp', () => {
 
     it('should get the blockly workspace code if it is read only', () => {
       studioApp().editCode = false;
-      let stub = sinon
-        .stub(Blockly, 'getWorkspaceCode')
-        .returns('blockly workspace');
+      let stub = jest.spyOn(Blockly, 'getWorkspaceCode').mockClear()
+        .mockReturnValue('blockly workspace');
       expect(studioApp().getCode()).to.equal('blockly workspace');
-      stub.restore();
+      stub.mockRestore();
     });
 
     it('should get the code from the editor itself if editable and the source is not hidden', () => {
       studioApp().editCode = true;
       studioApp().hideSource = false;
       let oldEditor = studioApp().editor;
-      studioApp().editor = sinon.stub();
-      studioApp().editor.getValue = sinon.stub().returns('editor code');
+      studioApp().editor = jest.fn();
+      studioApp().editor.getValue = jest.fn().mockReturnValue('editor code');
       expect(studioApp().getCode()).to.equal('editor code');
       studioApp().editor = oldEditor;
     });
@@ -424,27 +421,35 @@ describe('StudioApp', () => {
   describe('playAudio', () => {
     let playStub, isPlayingStub;
     beforeEach(() => {
-      playStub = sinon.stub(Sounds.getSingleton(), 'play');
-      isPlayingStub = sinon.stub(Sounds.getSingleton(), 'isPlaying');
+      playStub = jest.spyOn(Sounds.getSingleton(), 'play').mockClear().mockImplementation();
+      isPlayingStub = jest.spyOn(Sounds.getSingleton(), 'isPlaying').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      playStub.restore();
-      isPlayingStub.restore();
+      playStub.mockRestore();
+      isPlayingStub.mockRestore();
     });
 
     it('does not play audio over itself when noOverlap is true', () => {
-      isPlayingStub.onCall(0).returns(true);
+      isPlayingStub.mockImplementation(() => {
+        if (isPlayingStub.mock.calls.length === 0) {
+          return true;
+        }
+      });
       studioApp().playAudio('testAudio', {noOverlap: true});
       expect(playStub).not.to.have.been.called;
 
-      isPlayingStub.onCall(1).returns(false);
+      isPlayingStub.mockImplementation(() => {
+        if (isPlayingStub.mock.calls.length === 1) {
+          return false;
+        }
+      });
       studioApp().playAudio('testAudio', {noOverlap: true});
       expect(playStub).to.have.been.calledOnce;
     });
 
     it('does play audio over itself when noOverlap is false or unspecified', () => {
-      isPlayingStub.returns(true);
+      isPlayingStub.mockReturnValue(true);
       studioApp().playAudio('testAudio', {noOverlap: false});
       studioApp().playAudio('testAudio');
       expect(playStub).to.have.been.calledTwice;
@@ -602,12 +607,12 @@ describe('StudioApp', () => {
   describe('The StudioApp.validateCodeChanged function', () => {
     let studio, codeDifferentStub;
     beforeEach(() => {
-      codeDifferentStub = sinon.stub(project, 'isCurrentCodeDifferent');
+      codeDifferentStub = jest.spyOn(project, 'isCurrentCodeDifferent').mockClear().mockImplementation();
       studio = studioApp();
     });
 
     afterEach(() => {
-      codeDifferentStub.restore();
+      codeDifferentStub.mockRestore();
     });
 
     it('returns true if validationEnabled is not set', () => {
@@ -624,7 +629,7 @@ describe('StudioApp', () => {
 
     it('returns the result of project.isCurrentCodeDifferent', () => {
       studio.config = {level: {validationEnabled: true}};
-      codeDifferentStub.returns(false);
+      codeDifferentStub.mockReturnValue(false);
       expect(studio.validateCodeChanged()).to.be.false;
       expect(codeDifferentStub).to.have.been.called;
     });

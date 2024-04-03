@@ -4,7 +4,6 @@ import {shallow} from 'enzyme';
 import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
 import color from '@cdo/apps/util/color';
-import sinon from 'sinon';
 
 describe('SoundListEntry', () => {
   const sounds = new Sounds();
@@ -58,12 +57,12 @@ describe('SoundListEntry', () => {
 
   it('stops playing the sound when deselected', () => {
     const wrapper = shallow(<SoundListEntry {...defaultProps} />);
-    sinon.stub(sounds, 'stopPlayingURL');
+    jest.spyOn(sounds, 'stopPlayingURL').mockClear().mockImplementation();
     wrapper.setProps({isSelected: false});
 
     assert.equal(sounds.isPlaying(sourceURL), false);
     expect(sounds.stopPlayingURL).to.have.been.calledOnce;
 
-    sounds.stopPlayingURL.restore();
+    sounds.stopPlayingURL.mockRestore();
   });
 });

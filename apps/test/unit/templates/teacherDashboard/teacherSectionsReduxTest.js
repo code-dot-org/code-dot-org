@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
@@ -652,7 +650,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     afterEach(function () {
-      server.restore();
+      server.mockRestore();
     });
 
     it('immediately makes saveInProgress true', () => {
@@ -837,12 +835,12 @@ describe('teacherSectionsRedux', () => {
     beforeEach(function () {
       // Stub server responses
       server = sinon.fakeServer.create();
-      sinon.stub(console, 'error');
+      jest.spyOn(console, 'error').mockClear().mockImplementation();
     });
 
     afterEach(function () {
-      console.error.restore();
-      server.restore();
+      console.error.mockRestore();
+      server.mockRestore();
     });
 
     it('immediately sets asyncLoadComplete to false', () => {
@@ -886,7 +884,7 @@ describe('teacherSectionsRedux', () => {
       return promise.then(() => {
         expect(state().asyncLoadComplete).to.be.true;
         expect(console.error).to.have.been.calledOnce;
-        expect(console.error.getCall(0).args[0])
+        expect(console.error.mock.calls[0][0])
           .to.include('url: /dashboardapi/sections')
           .and.to.include('status: 500')
           .and.to.include('statusText: Internal Server Error')
@@ -1221,7 +1219,7 @@ describe('teacherSectionsRedux', () => {
         successResponse()
       );
     });
-    afterEach(() => server.restore());
+    afterEach(() => server.mockRestore());
 
     const successResponse = (body = {}) => [
       200,
@@ -1385,7 +1383,7 @@ describe('teacherSectionsRedux', () => {
         successResponse({availableParticipantTypes: ['student']})
       );
     });
-    afterEach(() => server.restore());
+    afterEach(() => server.mockRestore());
 
     const successResponse = (body = {}) => [
       200,
@@ -1730,18 +1728,18 @@ describe('teacherSectionsRedux', () => {
 
     beforeEach(() => {
       store.dispatch(setSections(sections));
-      analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+      analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     });
 
     afterEach(() => {
-      analyticsSpy.restore();
+      analyticsSpy.mockRestore();
     });
 
     it('sends an event when course offering is assigned', () => {
       const testSection = getState().teacherSections.sections[11];
       store.dispatch(assignToSection(testSection.id, 100, 101, 102, 103));
       expect(analyticsSpy).to.be.called.once;
-      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      assert.deepEqual(analyticsSpy.mock.calls[0].lastArg, {
         sectionName: testSection.name,
         sectionId: testSection.id,
         sectionLoginType: testSection.loginType,
@@ -1766,7 +1764,7 @@ describe('teacherSectionsRedux', () => {
         )
       );
       expect(analyticsSpy).to.be.called.once;
-      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      assert.deepEqual(analyticsSpy.mock.calls[0].lastArg, {
         sectionName: testSection.name,
         sectionId: testSection.id,
         sectionLoginType: testSection.loginType,

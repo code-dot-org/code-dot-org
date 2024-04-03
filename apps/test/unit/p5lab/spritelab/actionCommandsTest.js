@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
@@ -78,7 +77,7 @@ describe('Action Commands', () => {
     });
 
     it('console.warn on unknown target types', () => {
-      sinon.stub(console, 'warn');
+      jest.spyOn(console, 'warn').mockClear().mockImplementation();
       coreLibrary.addSprite({name: spriteName});
       const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
       expect(sprite.targetSet).to.be.undefined;
@@ -91,7 +90,7 @@ describe('Action Commands', () => {
         'unkknown targetType: other'
       );
       expect(sprite.targetSet).to.be.undefined;
-      console.warn.restore();
+      console.warn.mockRestore();
     });
   });
 

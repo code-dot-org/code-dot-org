@@ -2,7 +2,6 @@
 import React from 'react';
 import {expect} from '../../../../../util/deprecatedChai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import OverlayButton from '@cdo/apps/lib/kits/maker/ui/OverlayButton';
 
 describe('OverlayButton', () => {
@@ -24,7 +23,7 @@ describe('OverlayButton', () => {
   });
 
   it('calls onClick when clicked', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
     const wrapper = mount(<OverlayButton text="OK" onClick={spy} />);
     expect(spy).not.to.have.been.called;
     wrapper.find('button').simulate('click');

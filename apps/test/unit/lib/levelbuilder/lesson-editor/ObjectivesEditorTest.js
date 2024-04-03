@@ -2,7 +2,6 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
-import sinon from 'sinon';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('ObjectivesEditor', () => {
@@ -12,7 +11,7 @@ describe('ObjectivesEditor', () => {
 
   let defaultProps, updateObjectives;
   beforeEach(() => {
-    updateObjectives = sinon.spy();
+    updateObjectives = jest.fn();
     defaultProps = {
       objectives: [{key: '1', description: 'description'}],
       updateObjectives,
@@ -49,7 +48,7 @@ describe('ObjectivesEditor', () => {
       ],
     });
 
-    updateObjectives.resetHistory();
+    updateObjectives.mockReset();
     const objectiveInput = wrapper
       .find('ObjectiveLine')
       .at(1)
@@ -78,7 +77,7 @@ describe('ObjectivesEditor', () => {
       ],
     });
 
-    updateObjectives.resetHistory();
+    updateObjectives.mockReset();
     const cancelEditButton = wrapper
       .find('ObjectiveLine')
       .last()

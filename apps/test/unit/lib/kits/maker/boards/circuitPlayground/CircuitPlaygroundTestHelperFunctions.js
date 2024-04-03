@@ -1,6 +1,5 @@
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import sinon from 'sinon';
 
 const INITIAL_ANALOG_VALUE = 235;
 
@@ -12,7 +11,7 @@ const INITIAL_ANALOG_VALUE = 235;
  */
 export function setSensorAnalogValue(component, rawValue) {
   const {board, pin} = component;
-  const readCallback = board.io.analogRead.args.find(
+  const readCallback = board.io.analogRead.mock.calls.find(
     callArgs => callArgs[0] === pin
   )[1];
   readCallback(rawValue);
@@ -33,11 +32,11 @@ export function newBoard() {
 
   // mock-firmata doesn't implement these (yet) - and we want to monitor how
   // they get called.
-  io.sysexCommand = sinon.spy();
-  io.sysexResponse = sinon.spy();
+  io.sysexCommand = jest.fn();
+  io.sysexResponse = jest.fn();
 
   // Spy on this so we can retrieve and use the registered callbacks if needed
-  sinon.spy(io, 'analogRead');
+  jest.spyOn(io, 'analogRead').mockClear();
 
   const board = new five.Board({
     io: io,
@@ -53,7 +52,7 @@ export function newBoard() {
 
 export function stubComponentInitialization(component) {
   // component would be a reference to five.Sensor, etc.
-  sinon.stub(component.prototype, 'once');
+  jest.spyOn(component.prototype, 'once').mockClear().mockImplementation();
   component.prototype.once.withArgs('data').callsFake(function (_, callback) {
     // Pretend we got a real analog value back on the component's pin.
     setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
@@ -62,5 +61,5 @@ export function stubComponentInitialization(component) {
 }
 
 export function restoreComponentInitialization(component) {
-  component.prototype.once.restore();
+  component.prototype.once.mockRestore();
 }

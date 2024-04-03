@@ -3,7 +3,6 @@ import {shallow} from 'enzyme';
 import CohortCalculator from '@cdo/apps/code-studio/pd/application_dashboard/cohort_calculator';
 import {AllPartnersValue} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import {expect} from 'chai';
-import sinon from 'sinon';
 
 describe('Cohort Calculator', () => {
   describe('Initially', () => {
@@ -23,7 +22,7 @@ describe('Cohort Calculator', () => {
     });
 
     after(() => {
-      xhr.restore();
+      xhr.mockRestore();
     });
 
     it('Is loading', () => {
@@ -59,7 +58,7 @@ describe('Cohort Calculator', () => {
       server.respond();
     });
     after(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     it('Is no longer loading', () => {

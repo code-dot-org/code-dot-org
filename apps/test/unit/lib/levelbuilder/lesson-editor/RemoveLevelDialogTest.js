@@ -1,15 +1,14 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {UnconnectedRemoveLevelDialog as RemoveLevelDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
 import {sampleActivities} from './activitiesTestData';
 
 describe('RemoveLevelDialog', () => {
   let handleClose, removeLevel, props;
   beforeEach(() => {
-    handleClose = sinon.spy();
-    removeLevel = sinon.spy();
+    handleClose = jest.fn();
+    removeLevel = jest.fn();
     props = {
       activityPosition: 1,
       activitySection: sampleActivities[0].activitySections[2],

@@ -14,7 +14,6 @@ import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
 import {createStore, combineReducers} from 'redux';
-import sinon from 'sinon';
 
 // Returns a fake "today" for the stubbed out "getToday" method in workshop_form.jsx.
 // isEndOfYear:
@@ -81,7 +80,7 @@ describe('WorkshopForm test', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({}),
     ]);
-    const onPublish = sinon.spy();
+    const onPublish = jest.fn();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -128,7 +127,7 @@ describe('WorkshopForm test', () => {
 
     expect(onPublish).to.have.been.calledOnce;
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('edits form and can save', () => {
@@ -139,7 +138,7 @@ describe('WorkshopForm test', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({}),
     ]);
-    const onSave = sinon.spy();
+    const onSave = jest.fn();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -174,7 +173,7 @@ describe('WorkshopForm test', () => {
       newCapacity
     );
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('inputs disabled in readonly', () => {

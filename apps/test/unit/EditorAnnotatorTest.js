@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import EditorAnnotator, {DropletAnnotator} from '@cdo/apps/EditorAnnotator';
 import {expect} from '../util/reconfiguredChai';
 import {
@@ -14,25 +13,25 @@ describe('EditorAnnotator', () => {
   let dropletStub, dropletSessionStub;
 
   const stubDroplet = () => {
-    dropletStub = sinon.stub();
+    dropletStub = jest.fn();
     oldEditor = studioApp().editor;
     studioApp().editor = dropletStub;
 
-    dropletStub.aceEditor = sinon.stub();
-    dropletStub.getValue = sinon.stub();
+    dropletStub.aceEditor = jest.fn();
+    dropletStub.getValue = jest.fn();
 
     // Stub out the editor session instance
-    aceSessionStub = sinon.stub();
-    aceSessionDocumentStub = sinon.stub();
-    aceSessionDocumentStub.getLength = sinon.stub().returns(24);
-    aceSessionStub.getDocument = sinon.stub().returns(aceSessionDocumentStub);
-    dropletStub.aceEditor.getSession = sinon.stub().returns(aceSessionStub);
+    aceSessionStub = jest.fn();
+    aceSessionDocumentStub = jest.fn();
+    aceSessionDocumentStub.getLength = jest.fn().mockReturnValue(24);
+    aceSessionStub.getDocument = jest.fn().mockReturnValue(aceSessionDocumentStub);
+    dropletStub.aceEditor.getSession = jest.fn().mockReturnValue(aceSessionStub);
 
-    dropletSessionStub = sinon.stub();
+    dropletSessionStub = jest.fn();
     dropletStub.session = dropletSessionStub;
 
-    dropletSessionStub.view = sinon.stub();
-    dropletSessionStub.tree = sinon.stub();
+    dropletSessionStub.view = jest.fn();
+    dropletSessionStub.tree = jest.fn();
   };
 
   const restoreDroplet = () => {
@@ -40,38 +39,38 @@ describe('EditorAnnotator', () => {
   };
 
   beforeEach(() => {
-    EditorAnnotator.reset();
+    EditorAnnotator.mockReset();
     stubStudioApp();
 
     // And do not allow patching
-    patchStub = sinon.stub(DropletAnnotator.prototype, 'patch').returns(true);
+    patchStub = jest.spyOn(DropletAnnotator.prototype, 'patch').mockClear().mockReturnValue(true);
 
     // Stub out the app reference to the editor
     stubDroplet();
   });
   afterEach(() => {
-    patchStub.restore();
+    patchStub.mockRestore();
     restoreDroplet();
     restoreStudioApp();
-    EditorAnnotator.reset();
+    EditorAnnotator.mockReset();
   });
 
   describe('annotateLine', () => {
     let annotationListStub, annotationListAttachStub;
 
     beforeEach(() => {
-      annotationListStub = sinon.stub(annotationList, 'addRuntimeAnnotation');
-      annotationListAttachStub = sinon.stub(annotationList, 'attachToSession');
+      annotationListStub = jest.spyOn(annotationList, 'addRuntimeAnnotation').mockClear().mockImplementation();
+      annotationListAttachStub = jest.spyOn(annotationList, 'attachToSession').mockClear().mockImplementation();
     });
     afterEach(() => {
-      annotationListAttachStub.restore();
-      annotationListStub.restore();
+      annotationListAttachStub.mockRestore();
+      annotationListStub.mockRestore();
     });
 
     it('should add the given annotation to the annotation list', () => {
       let message = 'This is a line of code';
       EditorAnnotator.annotateLine(4, message, 'INFO');
-      sinon.assert.calledWith(annotationListStub, 'INFO', 4, message);
+      expect(annotationListStub).toHaveBeenCalledWith('INFO', 4, message);
     });
 
     it('should amend the styling for the annotation when given a color', () => {
@@ -173,20 +172,17 @@ describe('EditorAnnotator', () => {
   describe('clearAnnotations', () => {
     let annotationListFilterStub, annotationListAttachStub;
     beforeEach(() => {
-      annotationListFilterStub = sinon.stub(
-        annotationList,
-        'filterOutRuntimeAnnotations'
-      );
-      annotationListAttachStub = sinon.stub(annotationList, 'attachToSession');
+      annotationListFilterStub = jest.spyOn(annotationList, 'filterOutRuntimeAnnotations').mockClear().mockImplementation();
+      annotationListAttachStub = jest.spyOn(annotationList, 'attachToSession').mockClear().mockImplementation();
     });
     afterEach(() => {
-      annotationListAttachStub.restore();
-      annotationListFilterStub.restore();
+      annotationListAttachStub.mockRestore();
+      annotationListFilterStub.mockRestore();
     });
 
     it('should tell the annotation list to filter out by the given log type', () => {
       EditorAnnotator.clearAnnotations('ERROR');
-      sinon.assert.calledWith(annotationListFilterStub, 'ERROR');
+      expect(annotationListFilterStub).toHaveBeenCalledWith('ERROR');
     });
   });
 
@@ -202,7 +198,7 @@ describe('EditorAnnotator', () => {
     `;
 
     beforeEach(() => {
-      dropletStub.getValue = sinon.stub().returns(code);
+      dropletStub.getValue = jest.fn().mockReturnValue(code);
     });
 
     it('returns undefined for both lines when the snippet is not found', () => {
@@ -260,7 +256,7 @@ describe('EditorAnnotator', () => {
     `;
 
     beforeEach(() => {
-      dropletStub.getValue = sinon.stub().returns(code);
+      dropletStub.getValue = jest.fn().mockReturnValue(code);
     });
 
     it('returns the code from the editor', () => {
@@ -303,34 +299,37 @@ describe('EditorAnnotator', () => {
 
     beforeEach(() => {
       // Stub out the editor session instance
-      aceSessionStub.addMarker = sinon.stub();
-      aceSessionStub.removeMarker = sinon.stub();
+      aceSessionStub.addMarker = jest.fn();
+      aceSessionStub.removeMarker = jest.fn();
 
       // All lines are 42 characters long
-      aceSessionStub.getLine = sinon.stub().returns('x'.repeat(42));
+      aceSessionStub.getLine = jest.fn().mockReturnValue('x'.repeat(42));
 
       // Stub out the ace editor itself and the Range class
-      rangeStub = sinon.stub();
+      rangeStub = jest.fn();
 
       window.ace = {
-        require: sinon.stub().withArgs('ace/range').returns({
-          Range: rangeStub,
+        require: jest.fn().mockImplementation((...args) => {
+          if (args[0] === 'ace/range') {
+            return {
+              Range: rangeStub,
+            };
+          }
         }),
       };
 
       // Stub out getBlocksOnLine
-      getBlocksOnLineStub = sinon
-        .stub(EditorAnnotator, 'getBlocksForLine')
-        .returns(blocks);
-      dimBlocksStub = sinon.stub(EditorAnnotator, 'dimBlocks').returns();
-      undimBlockStub = sinon.stub(EditorAnnotator, 'undimBlock').returns();
-      undimBlocksStub = sinon.stub(EditorAnnotator, 'undimBlocks').returns();
+      getBlocksOnLineStub = jest.spyOn(EditorAnnotator, 'getBlocksForLine').mockClear()
+        .mockReturnValue(blocks);
+      dimBlocksStub = jest.spyOn(EditorAnnotator, 'dimBlocks').mockClear().mockReturnValue();
+      undimBlockStub = jest.spyOn(EditorAnnotator, 'undimBlock').mockClear().mockReturnValue();
+      undimBlocksStub = jest.spyOn(EditorAnnotator, 'undimBlocks').mockClear().mockReturnValue();
     });
     afterEach(() => {
-      getBlocksOnLineStub.restore();
-      dimBlocksStub.restore();
-      undimBlockStub.restore();
-      undimBlocksStub.restore();
+      getBlocksOnLineStub.mockRestore();
+      dimBlocksStub.mockRestore();
+      undimBlockStub.mockRestore();
+      undimBlocksStub.mockRestore();
     });
 
     it('should mark the given line in the editor', () => {
@@ -339,12 +338,7 @@ describe('EditorAnnotator', () => {
       // passed it. The 42 is the length of the line which is stubbed out.
       sinon.assert.calledOnceWithExactly(rangeStub, 3, 0, 3, 42);
       sinon.assert.calledWithNew(rangeStub);
-      sinon.assert.calledWith(
-        aceSessionStub.addMarker,
-        sinon.match.instanceOf(rangeStub),
-        sinon.match.any,
-        'text'
-      );
+      expect(aceSessionStub.addMarker).toHaveBeenCalledWith(expect.anything()(rangeStub), expect.anything(), 'text');
 
       // Hopefully this function clears the state
       EditorAnnotator.clearHighlightedLines();
@@ -353,7 +347,7 @@ describe('EditorAnnotator', () => {
     it('should dim blocks when possible', () => {
       EditorAnnotator.highlightLine(4);
 
-      sinon.assert.calledOnce(dimBlocksStub);
+      expect(dimBlocksStub).toHaveBeenCalledTimes(1);
 
       // Hopefully this function clears the state
       EditorAnnotator.clearHighlightedLines();
@@ -363,7 +357,7 @@ describe('EditorAnnotator', () => {
       EditorAnnotator.highlightLine(4);
       EditorAnnotator.highlightLine(5);
 
-      sinon.assert.calledOnce(dimBlocksStub);
+      expect(dimBlocksStub).toHaveBeenCalledTimes(1);
 
       // Hopefully this function clears the state
       EditorAnnotator.clearHighlightedLines();
@@ -371,15 +365,15 @@ describe('EditorAnnotator', () => {
 
     it('should undim the blocks for the highlighted line', () => {
       // Ensure that these stubbed blocks are part of the highlighted line
-      blocks.push(sinon.stub());
-      blocks.push(sinon.stub());
+      blocks.push(jest.fn());
+      blocks.push(jest.fn());
 
       EditorAnnotator.highlightLine(4);
 
       // It should call undimBlock on each of them
-      expect(undimBlockStub.callCount).to.equal(blocks.length);
+      expect(undimBlockStub).toHaveBeenCalledTimes(blocks.length);
       for (const block of blocks) {
-        sinon.assert.calledWith(undimBlockStub, block);
+        expect(undimBlockStub).toHaveBeenCalledWith(block);
       }
 
       // Hopefully this function clears the state
@@ -391,12 +385,7 @@ describe('EditorAnnotator', () => {
 
       // It should create just one range with the (0-based) line index we
       // passed it. The 42 is the length of the line which is stubbed out.
-      sinon.assert.calledWith(
-        aceSessionStub.addMarker,
-        sinon.match.instanceOf(rangeStub),
-        sinon.match.any,
-        'text'
-      );
+      expect(aceSessionStub.addMarker).toHaveBeenCalledWith(expect.anything()(rangeStub), expect.anything(), 'text');
 
       // Detect that the <head> contains some styling including our color
       expect(document.head.innerHTML.includes('#042')).to.be.true;
@@ -412,31 +401,34 @@ describe('EditorAnnotator', () => {
 
     beforeEach(() => {
       // We will call add marker, so we need to stub it out too
-      aceSessionStub.addMarker = sinon.stub();
-      aceSessionStub.removeMarker = sinon.stub();
+      aceSessionStub.addMarker = jest.fn();
+      aceSessionStub.removeMarker = jest.fn();
 
       // All lines are 42 characters long
-      aceSessionStub.getLine = sinon.stub().returns('x'.repeat(42));
+      aceSessionStub.getLine = jest.fn().mockReturnValue('x'.repeat(42));
 
       // Stub out 'highlightLine's use of ace.Range
       window.ace = {
-        require: sinon.stub().withArgs('ace/range').returns({
-          Range: sinon.stub(),
+        require: jest.fn().mockImplementation((...args) => {
+          if (args[0] === 'ace/range') {
+            return {
+              Range: jest.fn(),
+            };
+          }
         }),
       };
 
-      getBlocksOnLineStub = sinon
-        .stub(EditorAnnotator, 'getBlocksForLine')
-        .returns([sinon.stub()]);
-      dimBlocksStub = sinon.stub(EditorAnnotator, 'dimBlocks').returns();
-      undimBlockStub = sinon.stub(EditorAnnotator, 'undimBlock').returns();
-      undimBlocksStub = sinon.stub(EditorAnnotator, 'undimBlocks').returns();
+      getBlocksOnLineStub = jest.spyOn(EditorAnnotator, 'getBlocksForLine').mockClear()
+        .mockReturnValue([jest.fn()]);
+      dimBlocksStub = jest.spyOn(EditorAnnotator, 'dimBlocks').mockClear().mockReturnValue();
+      undimBlockStub = jest.spyOn(EditorAnnotator, 'undimBlock').mockClear().mockReturnValue();
+      undimBlocksStub = jest.spyOn(EditorAnnotator, 'undimBlocks').mockClear().mockReturnValue();
     });
     afterEach(() => {
-      getBlocksOnLineStub.restore();
-      dimBlocksStub.restore();
-      undimBlockStub.restore();
-      undimBlocksStub.restore();
+      getBlocksOnLineStub.mockRestore();
+      dimBlocksStub.mockRestore();
+      undimBlockStub.mockRestore();
+      undimBlocksStub.mockRestore();
     });
 
     it('should remove each highlighted line previously highlighted', () => {
@@ -447,7 +439,7 @@ describe('EditorAnnotator', () => {
       EditorAnnotator.clearHighlightedLines();
 
       // Should call the removeMarker as many times as we called highlightLine
-      expect(aceSessionStub.removeMarker.callCount).to.equal(3);
+      expect(aceSessionStub.removeMarker).toHaveBeenCalledTimes(3);
     });
 
     it('should undim all blocks', () => {
@@ -456,7 +448,7 @@ describe('EditorAnnotator', () => {
       EditorAnnotator.highlightLine(6, '#ff0');
       EditorAnnotator.clearHighlightedLines();
 
-      sinon.assert.calledOnce(undimBlocksStub);
+      expect(undimBlocksStub).toHaveBeenCalledTimes(1);
     });
   });
 });

@@ -6,7 +6,6 @@ import {
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import React from 'react';
 import _ from 'lodash';
-import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
@@ -22,7 +21,7 @@ describe('DetailViewContents', () => {
   });
 
   after(() => {
-    server.restore();
+    server.mockRestore();
   });
 
   let context;

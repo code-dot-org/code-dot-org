@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {assert} from '../../../../util/reconfiguredChai';
 import manageLinkedAccounts, {
   initializeState,
@@ -12,7 +11,7 @@ describe('manageLinkedAccountsRedux', () => {
     server = sinon.fakeServer.create();
   });
 
-  afterEach(() => server.restore());
+  afterEach(() => server.mockRestore());
 
   describe('initializeState', () => {
     it('sets state from action state', () => {

@@ -1,5 +1,4 @@
 import {assert, expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
 import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
@@ -114,7 +113,7 @@ describe('Applab Exporter,', function () {
       assetPathPrefix: '/v3/assets/',
     });
 
-    assets.listStore.list.returns([
+    assets.listStore.list.mockReturnValue([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
       {filename: 'zoo.mp3'},
@@ -128,9 +127,8 @@ describe('Applab Exporter,', function () {
     server.respondWith('/blockly/media/third.jpg', 'blockly third.jpg content');
 
     // Needed to simulate fetch() response to '/projects/applab/fake_id/export_create_channel'
-    sinon
-      .stub(window, 'fetch')
-      .returns(
+    jest.spyOn(window, 'fetch').mockClear()
+      .mockReturnValue(
         Promise.resolve(
           new Response(JSON.stringify({channel_id: 'new_fake_id'}))
         )
@@ -258,8 +256,8 @@ describe('Applab Exporter,', function () {
   });
 
   afterEach(function () {
-    server.restore();
-    window.fetch.restore();
+    server.mockRestore();
+    window.fetch.mockRestore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
     restoreRedux();
@@ -557,7 +555,7 @@ describe('Applab Exporter,', function () {
     });
 
     it('should run custom marshall methods', done => {
-      sinon.spy(window, 'write');
+      jest.spyOn(window, 'write').mockClear();
       runExportedApp(
         `
           var a = 'abcdef'.split('');

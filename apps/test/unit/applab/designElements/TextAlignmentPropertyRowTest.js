@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import EnumPropertyRow from '@cdo/apps/applab/designElements/EnumPropertyRow';
@@ -17,7 +16,7 @@ describe('TextAlignmentPropertyRow', () => {
 
   beforeEach(() => {
     initialValue = TEXT_ALIGNMENT_LEFT;
-    handleChange = sinon.stub();
+    handleChange = jest.fn();
     wrapper = shallow(
       <TextAlignmentPropertyRow
         initialValue={initialValue}

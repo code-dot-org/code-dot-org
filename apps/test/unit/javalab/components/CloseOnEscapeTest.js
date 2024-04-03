@@ -1,7 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
 describe('CloseOnEscape', () => {
@@ -9,7 +8,7 @@ describe('CloseOnEscape', () => {
 
   beforeEach(() => {
     className = '.class-name';
-    handleClose = sinon.spy();
+    handleClose = jest.fn();
     wrapper = shallow(
       <CloseOnEscape handleClose={handleClose} className={className} />
     );
@@ -18,7 +17,7 @@ describe('CloseOnEscape', () => {
   it('calls handleClose() function when Escape pressed', () => {
     wrapper.find('div').first().props().onKeyDown({key: 'Escape'});
 
-    sinon.assert.calledOnce(handleClose);
+    expect(handleClose).toHaveBeenCalledTimes(1);
   });
 
   it('passes through provided class name', () => {

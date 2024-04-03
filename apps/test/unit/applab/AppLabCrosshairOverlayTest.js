@@ -1,5 +1,4 @@
 import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
 import React from 'react';
 import {shallow} from 'enzyme';
 import AppLabCrosshairOverlay from '@cdo/apps/applab/AppLabCrosshairOverlay';
@@ -14,18 +13,15 @@ describe('AppLabCrosshairOverlay', () => {
   var stubDraggedElementDropPoint;
 
   beforeEach(() => {
-    stubDraggedElementDropPoint = sinon.stub(
-      gridUtils,
-      'draggedElementDropPoint'
-    );
+    stubDraggedElementDropPoint = jest.spyOn(gridUtils, 'draggedElementDropPoint').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    stubDraggedElementDropPoint.restore();
+    stubDraggedElementDropPoint.mockRestore();
   });
 
   it('renders to CrosshairOverlay with unmodified properties when not dragging', () => {
-    stubDraggedElementDropPoint.returns(null);
+    stubDraggedElementDropPoint.mockReturnValue(null);
     var element = shallow(
       <AppLabCrosshairOverlay
         width={TEST_APP_WIDTH}
@@ -47,7 +43,7 @@ describe('AppLabCrosshairOverlay', () => {
   it('renders to CrosshairOverlay with overridden mouse coordinates when dragging', () => {
     const dropPointX = 42;
     const dropPointY = 43;
-    stubDraggedElementDropPoint.returns({left: dropPointX, top: dropPointY});
+    stubDraggedElementDropPoint.mockReturnValue({left: dropPointX, top: dropPointY});
     var element = shallow(
       <AppLabCrosshairOverlay
         width={TEST_APP_WIDTH}

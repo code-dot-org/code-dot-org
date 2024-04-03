@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/reconfiguredChai';
 import {ImportProjectDialog} from '@cdo/apps/applab/ImportProjectDialog';
@@ -16,13 +15,13 @@ describe('Applab ImportProjectDialog component', function () {
   };
 
   beforeEach(() => {
-    sinon.stub(sourcesApi, 'ajax');
-    sinon.stub(channelsApi, 'ajax');
+    jest.spyOn(sourcesApi, 'ajax').mockClear().mockImplementation();
+    jest.spyOn(channelsApi, 'ajax').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    sourcesApi.ajax.restore();
-    channelsApi.ajax.restore();
+    sourcesApi.ajax.mockRestore();
+    channelsApi.ajax.mockRestore();
   });
 
   function render(theForm) {
@@ -52,7 +51,7 @@ describe('Applab ImportProjectDialog component', function () {
   });
 
   it('calls the onImport prop with the url when the next button is clicked', () => {
-    var onImport = sinon.spy();
+    var onImport = jest.fn();
     render(<ImportProjectDialog {...defaultProps} onImport={onImport} />);
     urlInput.simulate('change', {target: {value: 'some url'}});
     nextButton.simulate('click');

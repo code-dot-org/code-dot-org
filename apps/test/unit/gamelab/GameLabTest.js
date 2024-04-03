@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
 import Sounds from '@cdo/apps/Sounds';
@@ -19,8 +18,8 @@ import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 describe('GameLab', () => {
   setExternalGlobals();
 
-  before(() => sinon.stub(ReactDOM, 'render'));
-  after(() => ReactDOM.render.restore());
+  before(() => jest.spyOn(ReactDOM, 'render').mockClear().mockImplementation());
+  after(() => ReactDOM.render.mockRestore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
@@ -51,13 +50,13 @@ describe('GameLab', () => {
       registerReducers({...commonReducers, ...reducers});
       instance = new GameLab();
       studioApp = {
-        setCheckForEmptyBlocks: sinon.spy(),
-        showRateLimitAlert: sinon.spy(),
-        setPageConstants: sinon.spy(),
-        init: sinon.spy(),
+        setCheckForEmptyBlocks: jest.fn(),
+        showRateLimitAlert: jest.fn(),
+        setPageConstants: jest.fn(),
+        init: jest.fn(),
         isUsingBlockly: () => false,
         loadLibraries: () => Promise.resolve(),
-        loadLibraryBlocks: sinon.spy(),
+        loadLibraryBlocks: jest.fn(),
       };
     });
 
@@ -71,25 +70,25 @@ describe('GameLab', () => {
       describe('Muting', () => {
         let unmuteSpy;
         beforeEach(() => {
-          unmuteSpy = sinon.stub(Sounds.getSingleton(), 'unmuteURLs');
-          instance.p5Wrapper.p5 = sinon.spy();
-          instance.p5Wrapper.p5.allSprites = sinon.spy();
-          instance.p5Wrapper.p5.allSprites.removeSprites = sinon.spy();
-          instance.p5Wrapper.p5.redraw = sinon.spy();
-          instance.p5Wrapper.p5.World = sinon.spy();
-          instance.p5Wrapper.setLoop = sinon.spy();
-          instance.p5Wrapper.startExecution = sinon.spy();
-          instance.initInterpreter = sinon.spy();
-          instance.onP5Setup = sinon.spy();
-          instance.reset = sinon.spy();
-          instance.studioApp_.clearAndAttachRuntimeAnnotations = sinon.spy();
-          instance.JSInterpreter = sinon.spy();
-          instance.JSInterpreter.deinitialize = sinon.spy();
-          instance.JSInterpreter.initialized = sinon.spy();
+          unmuteSpy = jest.spyOn(Sounds.getSingleton(), 'unmuteURLs').mockClear().mockImplementation();
+          instance.p5Wrapper.p5 = jest.fn();
+          instance.p5Wrapper.p5.allSprites = jest.fn();
+          instance.p5Wrapper.p5.allSprites.removeSprites = jest.fn();
+          instance.p5Wrapper.p5.redraw = jest.fn();
+          instance.p5Wrapper.p5.World = jest.fn();
+          instance.p5Wrapper.setLoop = jest.fn();
+          instance.p5Wrapper.startExecution = jest.fn();
+          instance.initInterpreter = jest.fn();
+          instance.onP5Setup = jest.fn();
+          instance.reset = jest.fn();
+          instance.studioApp_.clearAndAttachRuntimeAnnotations = jest.fn();
+          instance.JSInterpreter = jest.fn();
+          instance.JSInterpreter.deinitialize = jest.fn();
+          instance.JSInterpreter.initialized = jest.fn();
         });
 
         afterEach(() => {
-          unmuteSpy.restore();
+          unmuteSpy.mockRestore();
         });
 
         it('Execute unmutes URLs', () => {

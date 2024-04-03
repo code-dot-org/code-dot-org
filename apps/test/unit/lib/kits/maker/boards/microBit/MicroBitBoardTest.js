@@ -1,7 +1,6 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 import {itMakesMicroBitComponentsAvailable} from './MicroBitComponentTestUtil';
 import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
@@ -22,14 +21,14 @@ describe('MicroBitBoard', () => {
 
   afterEach(() => {
     board = undefined;
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   describe('Maker Board Interface', () => {
     itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
       boardSetupAndStub(board);
-      sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
-      sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
+      jest.spyOn(board.boardClient_, 'analogRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
+      jest.spyOn(board.boardClient_, 'digitalRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
     });
     itMakesMicroBitComponentsAvailable(MicroBitBoard);
   });
@@ -57,10 +56,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         // Spy on the accelerometer to see if enableComponents called
         // enableMicroBitComponents which then starts the accelerometer.
-        let accelerometerSpy = sinon.spy(
-          board.prewiredComponents_.accelerometer,
-          'start'
-        );
+        let accelerometerSpy = jest.spyOn(board.prewiredComponents_.accelerometer, 'start').mockClear();
         board.enableComponents();
         expect(accelerometerSpy).to.have.been.calledOnce;
       });
@@ -82,7 +78,7 @@ describe('MicroBitBoard', () => {
   describe(`pinMode(pin, modeConstant)`, () => {
     it('forwards the call to board', () => {
       return board.connect().then(() => {
-        let pinModeSpy = sinon.spy(board.boardClient_, 'setPinMode');
+        let pinModeSpy = jest.spyOn(board.boardClient_, 'setPinMode').mockClear();
         const pin = 11;
         const arg2 = 1023;
         board.pinMode(pin, arg2);
@@ -94,7 +90,7 @@ describe('MicroBitBoard', () => {
   describe(`digitalWrite(pin, value)`, () => {
     it('forwards the call to firmata', () => {
       return board.connect().then(() => {
-        let digitalWriteSpy = sinon.spy(board.boardClient_, 'digitalWrite');
+        let digitalWriteSpy = jest.spyOn(board.boardClient_, 'digitalWrite').mockClear();
         const pin = 11;
         const arg2 = 1023;
         board.digitalWrite(pin, arg2);
@@ -106,7 +102,7 @@ describe('MicroBitBoard', () => {
   describe(`digitalRead(pin, callback)`, () => {
     it('forwards the call to firmata', () => {
       return board.connect().then(() => {
-        let digitalReadSpy = sinon.spy(board.boardClient_, 'digitalRead');
+        let digitalReadSpy = jest.spyOn(board.boardClient_, 'digitalRead').mockClear();
         const pin = 11;
         const arg2 = () => {};
         board.digitalRead(pin, arg2);
@@ -118,7 +114,7 @@ describe('MicroBitBoard', () => {
   describe(`analogWrite(pin, value)`, () => {
     it('forwards the call to firmata', () => {
       return board.connect().then(() => {
-        let analogWriteSpy = sinon.spy(board.boardClient_, 'analogWrite');
+        let analogWriteSpy = jest.spyOn(board.boardClient_, 'analogWrite').mockClear();
         const pin = 11;
         const arg2 = 1023;
         board.analogWrite(pin, arg2);
@@ -130,7 +126,7 @@ describe('MicroBitBoard', () => {
   describe(`analogRead(pin, callback)`, () => {
     it('forwards the call to firmata', () => {
       return board.connect().then(() => {
-        let analogReadSpy = sinon.spy(board.boardClient_, 'analogRead');
+        let analogReadSpy = jest.spyOn(board.boardClient_, 'analogRead').mockClear();
         const pin = 11;
         const arg2 = () => {};
         board.analogRead(pin, arg2);
@@ -172,11 +168,8 @@ describe('MicroBitBoard', () => {
   describe(`reset()`, () => {
     it('triggers a component cleanup', () => {
       return board.connect().then(() => {
-        let ledScreenSpy = sinon.spy(
-          board.prewiredComponents_.ledScreen,
-          'clear'
-        );
-        board.reset();
+        let ledScreenSpy = jest.spyOn(board.prewiredComponents_.ledScreen, 'clear').mockClear();
+        board.mockReset();
         expect(ledScreenSpy).to.have.been.calledOnce;
       });
     });
@@ -185,11 +178,11 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const led1 = board.createLed(0);
         const led2 = board.createLed(1);
-        sinon.spy(led1, 'off');
-        sinon.spy(led2, 'off');
+        jest.spyOn(led1, 'off').mockClear();
+        jest.spyOn(led2, 'off').mockClear();
         expect(led1.off).not.to.have.been.called;
         expect(led2.off).not.to.have.been.called;
-        board.reset();
+        board.mockReset();
         expect(led1.off).to.have.been.calledOnce;
         expect(led2.off).to.have.been.calledOnce;
       });
@@ -198,7 +191,7 @@ describe('MicroBitBoard', () => {
 
   describe(`destroy()`, () => {
     it('sends the board reset signal', () => {
-      let resetSpy = sinon.spy(board.boardClient_, 'reset');
+      let resetSpy = jest.spyOn(board.boardClient_, 'reset').mockClear();
       return board
         .connect()
         .then(() => board.destroy())
@@ -211,8 +204,8 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const led1 = board.createLed(0);
         const led2 = board.createLed(1);
-        sinon.spy(led1, 'off');
-        sinon.spy(led2, 'off');
+        jest.spyOn(led1, 'off').mockClear();
+        jest.spyOn(led2, 'off').mockClear();
 
         expect(led1.off).not.to.have.been.called;
         expect(led2.off).not.to.have.been.called;

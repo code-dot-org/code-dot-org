@@ -1,5 +1,4 @@
 import {assert} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {
   getStore,
   registerReducers,
@@ -10,8 +9,8 @@ import pageConstants from '@cdo/apps/redux/pageConstants';
 import Craft from '@cdo/apps/craft/code-connection/craft';
 
 describe('Craft', () => {
-  before(() => sinon.stub(Craft, 'render'));
-  after(() => Craft.render.restore());
+  before(() => jest.spyOn(Craft, 'render').mockClear().mockImplementation());
+  after(() => Craft.render.mockRestore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
@@ -37,6 +36,6 @@ describe('Craft', () => {
     Craft.init(config);
     server.respond();
     assert(getStore().getState().pageConstants.isMinecraft);
-    server.restore();
+    server.mockRestore();
   });
 });

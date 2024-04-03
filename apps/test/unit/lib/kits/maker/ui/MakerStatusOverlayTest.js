@@ -2,7 +2,6 @@
 import React from 'react';
 import {expect} from '../../../../../util/deprecatedChai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
 import applabI18n from '@cdo/applab/locale';
 
@@ -20,12 +19,12 @@ describe('MakerStatusOverlay', () => {
     };
 
     for (const key in i18n) {
-      sinon.stub(applabI18n, key).returns(i18n[key]);
+      jest.spyOn(applabI18n, key).mockClear().mockReturnValue(i18n[key]);
     }
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
   const testProps = {
     width: 10,
@@ -149,9 +148,9 @@ describe('MakerStatusOverlay', () => {
     let wrapper, handleTryAgain, useVirtualBoardOnNextRun, handleOpenSetupPage;
 
     beforeEach(() => {
-      handleTryAgain = sinon.spy();
-      useVirtualBoardOnNextRun = sinon.spy();
-      handleOpenSetupPage = sinon.spy();
+      handleTryAgain = jest.fn();
+      useVirtualBoardOnNextRun = jest.fn();
+      handleOpenSetupPage = jest.fn();
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
           {...testProps}

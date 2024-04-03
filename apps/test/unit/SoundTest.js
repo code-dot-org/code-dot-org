@@ -1,6 +1,5 @@
 import {expect} from '../util/reconfiguredChai';
 import Sound from '@cdo/apps/Sound';
-import sinon from 'sinon';
 
 describe('Sound', () => {
   let sound;
@@ -13,23 +12,22 @@ describe('Sound', () => {
     it('calls handlePlayFailed when there is no method to play audio', () => {
       expect(sound.audioElement).to.be.null;
       expect(sound.reusableBuffer).to.be.null;
-      sinon.stub(sound, 'handlePlayFailed');
+      jest.spyOn(sound, 'handlePlayFailed').mockClear().mockImplementation();
       sound.play();
       expect(sound.handlePlayFailed).to.have.been.calledOnce;
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('uses the reusable audio buffer when available', () => {
       let fakeStartMethod = sinon.fake();
       sound.reusableBuffer = sinon.fake();
-      sinon
-        .stub(sound, 'newPlayableBufferSource')
-        .returns({start: fakeStartMethod});
+      jest.spyOn(sound, 'newPlayableBufferSource').mockClear()
+        .mockReturnValue({start: fakeStartMethod});
       sound.play();
       expect(sound.newPlayableBufferSource).to.have.been.calledOnce;
       expect(sound.playableBuffers).to.have.length(1);
       expect(fakeStartMethod).to.have.been.calledOnce;
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('uses HTML5 audio when there is no reusable audio buffer', () => {
@@ -41,7 +39,7 @@ describe('Sound', () => {
       expect(sound.reusableBuffer).to.be.null;
       sound.play();
       expect(sound.audioElement.play).to.have.been.calledOnce;
-      sinon.restore();
+      jest.restoreAllMocks();
     });
   });
 
@@ -152,23 +150,23 @@ describe('Sound', () => {
   describe('preloadFile method', () => {
     beforeEach(() => {
       sound = new Sound({});
-      sinon.stub(sound, 'getPlayableFile').returns('/path/to/file');
+      jest.spyOn(sound, 'getPlayableFile').mockClear().mockReturnValue('/path/to/file');
     });
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('calls preloadViaWebAudio when AudioContext is provided', () => {
       sound.audioContext = new AudioContext();
-      sinon.stub(sound, 'preloadViaWebAudio');
+      jest.spyOn(sound, 'preloadViaWebAudio').mockClear().mockImplementation();
       sound.preloadFile();
       expect(sound.preloadViaWebAudio).to.have.been.calledOnce;
     });
 
     it('calls preloadAudioElement when AudioContext is not provided', () => {
       sound.audioContext = null;
-      sinon.stub(sound, 'preloadAudioElement');
+      jest.spyOn(sound, 'preloadAudioElement').mockClear().mockImplementation();
       sound.preloadFile();
       expect(sound.preloadAudioElement).to.have.been.calledOnce;
     });
@@ -177,23 +175,23 @@ describe('Sound', () => {
   describe('preloadBytes method', () => {
     beforeEach(() => {
       sound = new Sound({});
-      sinon.stub(sound, 'getPlayableBytes').returns('bytes');
+      jest.spyOn(sound, 'getPlayableBytes').mockClear().mockReturnValue('bytes');
     });
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('calls audioContext.decodeAudioData when AudioContext is provided', () => {
       sound.audioContext = new AudioContext();
-      sinon.stub(sound.audioContext, 'decodeAudioData');
+      jest.spyOn(sound.audioContext, 'decodeAudioData').mockClear().mockImplementation();
       sound.preloadBytes();
       expect(sound.audioContext.decodeAudioData).to.have.been.calledOnce;
     });
 
     it('calls preloadAudioElement when no AudioContext is provided', () => {
       sound.audioContext = null;
-      sinon.stub(sound, 'preloadAudioElement');
+      jest.spyOn(sound, 'preloadAudioElement').mockClear().mockImplementation();
       sound.preloadBytes();
       expect(sound.preloadAudioElement).to.have.been.calledOnce;
     });
@@ -201,20 +199,44 @@ describe('Sound', () => {
 
   describe('getPlayableFile method', () => {
     it('returns file location from config preferring mp3 > ogg > wav', () => {
-      let canPlayTypeStub = sinon.stub(window.Audio.prototype, 'canPlayType');
+      let canPlayTypeStub = jest.spyOn(window.Audio.prototype, 'canPlayType').mockClear().mockImplementation();
       let config = {mp3: 'file.mp3', ogg: 'file.ogg', wav: 'file.wav'};
       sound = new Sound(config);
-      canPlayTypeStub.withArgs('audio/mp3').returns(true);
-      canPlayTypeStub.withArgs('audio/ogg').returns(true);
-      canPlayTypeStub.withArgs('audio/wav').returns(true);
+      canPlayTypeStub.mockImplementation((...args) => {
+        if (args[0] === 'audio/mp3') {
+          return true;
+        }
+      });
+      canPlayTypeStub.mockImplementation((...args) => {
+        if (args[0] === 'audio/ogg') {
+          return true;
+        }
+      });
+      canPlayTypeStub.mockImplementation((...args) => {
+        if (args[0] === 'audio/wav') {
+          return true;
+        }
+      });
       expect(sound.getPlayableFile()).to.equal(config.mp3);
-      canPlayTypeStub.withArgs('audio/mp3').returns(false);
+      canPlayTypeStub.mockImplementation((...args) => {
+        if (args[0] === 'audio/mp3') {
+          return false;
+        }
+      });
       expect(sound.getPlayableFile()).to.equal(config.ogg);
-      canPlayTypeStub.withArgs('audio/ogg').returns(false);
+      canPlayTypeStub.mockImplementation((...args) => {
+        if (args[0] === 'audio/ogg') {
+          return false;
+        }
+      });
       expect(sound.getPlayableFile()).to.equal(config.wav);
-      canPlayTypeStub.withArgs('audio/wav').returns(false);
+      canPlayTypeStub.mockImplementation((...args) => {
+        if (args[0] === 'audio/wav') {
+          return false;
+        }
+      });
       expect(sound.getPlayableFile()).to.equal(false);
-      sinon.restore();
+      jest.restoreAllMocks();
     });
   });
 
@@ -225,16 +247,16 @@ describe('Sound', () => {
     });
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('returns this.config.bytes when browser can play audio/mp3', () => {
-      sinon.stub(window.Audio.prototype, 'canPlayType').returns(true);
+      jest.spyOn(window.Audio.prototype, 'canPlayType').mockClear().mockReturnValue(true);
       expect(sound.getPlayableBytes()).to.equal(sound.config.bytes);
     });
 
     it('returns false when browser cannot play audio/mp3', () => {
-      sinon.stub(window.Audio.prototype, 'canPlayType').returns(false);
+      jest.spyOn(window.Audio.prototype, 'canPlayType').mockClear().mockReturnValue(false);
       expect(sound.getPlayableBytes()).to.equal(false);
     });
   });

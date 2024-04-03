@@ -3,7 +3,6 @@ import {shallow} from 'enzyme';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import * as utils from '@cdo/apps/utils';
 import {expect, assert} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 
 const sampleAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
@@ -17,10 +16,9 @@ const sampleAnnouncement = {
 describe('AnnouncementsEditor', () => {
   let defaultProps, updateAnnouncements, createUuid;
   beforeEach(() => {
-    updateAnnouncements = sinon.spy();
-    createUuid = sinon
-      .stub(utils, 'createUuid')
-      .returns('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa');
+    updateAnnouncements = jest.fn();
+    createUuid = jest.spyOn(utils, 'createUuid').mockClear()
+      .mockReturnValue('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa');
     defaultProps = {
       announcements: [],
       inputStyle: {},
@@ -29,7 +27,7 @@ describe('AnnouncementsEditor', () => {
   });
 
   afterEach(() => {
-    createUuid.restore();
+    createUuid.mockRestore();
   });
 
   it('renders an Announce when we have an announcement', () => {

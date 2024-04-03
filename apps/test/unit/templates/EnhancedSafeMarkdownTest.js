@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import EnhancedSafeMarkdown, {
   ExpandableImagesWrapper,
@@ -41,7 +40,7 @@ describe('EnhancedSafeMarkdown', () => {
 
   describe('ExpandableImagesWrapper', () => {
     it('renders expandable images', () => {
-      const renderSpy = sinon.spy(expandableImages, 'renderExpandableImages');
+      const renderSpy = jest.spyOn(expandableImages, 'renderExpandableImages').mockClear();
       // We use mount rather than shallow here because renderExpandableImages
       // expects an actual node as an argument
       mount(
@@ -50,7 +49,7 @@ describe('EnhancedSafeMarkdown', () => {
         </UnconnectedExpandableImagesWrapper>
       );
       expect(renderSpy).to.have.been.calledOnce;
-      renderSpy.restore();
+      renderSpy.mockRestore();
     });
   });
 });

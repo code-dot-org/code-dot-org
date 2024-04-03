@@ -1,14 +1,13 @@
 import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {executeUserCode} from '@cdo/apps/craft/code-connection/craft';
 
 describe('Code Connection extension', () => {
   beforeEach(() => {
-    sinon.stub(studioApp(), 'highlight');
+    jest.spyOn(studioApp(), 'highlight').mockClear().mockImplementation();
   });
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
   it('move forward block to verify single key-value parsing', done => {
     const mockClient = {

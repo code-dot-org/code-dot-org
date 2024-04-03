@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 
@@ -21,7 +20,7 @@ describe('Pairing component', function () {
   }
 
   function teardownFakeAjax(server) {
-    server.restore();
+    server.mockRestore();
   }
 
   function verifyStartingValues(component, student = 0, select = 0, stop = 0) {

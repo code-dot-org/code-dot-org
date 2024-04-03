@@ -5,7 +5,6 @@ import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imp
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import Permission, {
   Organizer,
   ProgramManager,
@@ -143,16 +142,16 @@ describe('WorkshopManagement', () => {
     let deleteStub;
 
     beforeEach(() => {
-      deleteStub = sinon.spy();
+      deleteStub = jest.fn();
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref')
+        .mockReturnValue('viewHref')
         .atLeast(1);
       mockRouter
         .expects('createHref')
         .withExactArgs('editUrl')
-        .returns('editHref')
+        .mockReturnValue('editHref')
         .atLeast(1);
 
       workshopManagement = shallow(
@@ -217,7 +216,7 @@ describe('WorkshopManagement', () => {
       it('Calls the supplied onDelete func when confirmed', () => {
         deleteConfirmationDialog.props().onOk();
         expect(deleteStub.withArgs(123).calledOnce).to.be.true;
-        deleteStub.resetHistory();
+        deleteStub.mockReset();
       });
     });
   });
@@ -227,7 +226,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref')
+        .mockReturnValue('viewHref')
         .atLeast(1);
 
       workshopManagement = shallow(<WorkshopManagement {...defaultProps} />, {
@@ -246,7 +245,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -272,7 +271,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -298,7 +297,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -324,11 +323,11 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
       mockRouter
         .expects('createHref')
         .withExactArgs('/daily_survey_results/123')
-        .returns('surveyResultsHref');
+        .mockReturnValue('surveyResultsHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -347,11 +346,11 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
       mockRouter
         .expects('createHref')
         .withExactArgs('/workshop_daily_survey_results/123')
-        .returns('surveyResultsHref');
+        .mockReturnValue('surveyResultsHref');
 
       workshopManagement = shallow(
         <WorkshopManagement

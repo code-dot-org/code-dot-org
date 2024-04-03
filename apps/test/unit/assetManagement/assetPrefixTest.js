@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import * as redux from '@cdo/apps/redux';
 import {init, fixPath} from '@cdo/apps/assetManagement/assetPrefix';
 import {expect} from '../../util/reconfiguredChai';
@@ -8,7 +7,7 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
     let reduxStub, result;
 
     beforeEach(() => {
-      reduxStub = sinon.stub(redux, 'getStore').returns({
+      reduxStub = jest.spyOn(redux, 'getStore').mockClear().mockReturnValue({
         getState: () => ({
           level: {
             name: 'test-level',
@@ -21,7 +20,7 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
     });
 
     afterEach(() => {
-      reduxStub.restore();
+      reduxStub.mockRestore();
     });
 
     it('should route an absolute URL through the MEDIA_PROXY', () => {

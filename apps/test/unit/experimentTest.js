@@ -1,11 +1,9 @@
 import {assert} from '../util/reconfiguredChai';
 import {setExternalGlobals} from '../util/testUtils';
 import experiments from '@cdo/apps/util/experiments';
-import sinon from 'sinon';
 
 describe('experiments', function () {
   let mockedQueryString = '';
-  let date, now, expirationTime, clock;
 
   setExternalGlobals();
 
@@ -24,11 +22,11 @@ describe('experiments', function () {
     const expriationDate = new Date(now);
     expriationDate.setHours(expriationDate.getHours() + 12);
     expirationTime = expriationDate.getTime();
-    clock = sinon.useFakeTimers(date.getTime());
+    jest.useFakeTimers().setSystemTime(date.getTime());
   });
 
   afterEach(function () {
-    clock.restore();
+    jest.useRealTimers();
   });
 
   it('can load experiment state from localStorage "experimentsList" key', function () {
@@ -98,7 +96,7 @@ describe('experiments', function () {
     assert.isFalse(experiments.isEnabled('awesome-feature'));
     mockedQueryString = '?enableExperiments=awesome-feature';
     assert.isTrue(experiments.isEnabled('awesome-feature'));
-    clock.tick(13 * 60 * 60 * 1000);
+    jest.advanceTimersByTime(13 * 60 * 60 * 1000);
     assert.isTrue(experiments.isEnabled('awesome-feature'));
   });
 
@@ -113,7 +111,7 @@ describe('experiments', function () {
     mockedQueryString = '?tempEnableExperiments=awesome-feature';
     assert.isTrue(experiments.isEnabled('awesome-feature'));
     mockedQueryString = '';
-    clock.tick(13 * 60 * 60 * 1000);
+    jest.advanceTimersByTime(13 * 60 * 60 * 1000);
     assert.isFalse(experiments.isEnabled('awesome-feature'));
   });
 
@@ -163,19 +161,19 @@ describe('experiments', function () {
 
   it('still registers a temporary experiment as enabled 11 hours after enabling it', function () {
     experiments.setEnabled('best-feature', true, expirationTime);
-    clock.tick(11 * 60 * 60 * 1000);
+    jest.advanceTimersByTime(11 * 60 * 60 * 1000);
     assert.isTrue(experiments.isEnabled('best-feature'));
   });
 
   it('no longer registers a temporary experiment as enabled 13 hours after enabling it', function () {
     experiments.setEnabled('best-feature', true, expirationTime);
-    clock.tick(13 * 60 * 60 * 1000);
+    jest.advanceTimersByTime(13 * 60 * 60 * 1000);
     assert.isFalse(experiments.isEnabled('best-feature'));
   });
 
   it('still registers a non-expiring experiment as enabled 13 hours after enabling it', function () {
     experiments.setEnabled('best-feature', true);
-    clock.tick(13 * 60 * 60 * 1000);
+    jest.advanceTimersByTime(13 * 60 * 60 * 1000);
     assert.isTrue(experiments.isEnabled('best-feature'));
   });
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/deprecatedChai';
@@ -41,7 +40,7 @@ describe('The JSDebugger component', () => {
     codeApp.id = 'codeApp';
     document.body.appendChild(codeApp);
 
-    const runApp = sinon.spy();
+    const runApp = jest.fn();
     getStore().dispatch(
       setPageConstants({
         appType: 'applab',
@@ -57,9 +56,8 @@ describe('The JSDebugger component', () => {
 
     // Stub getTouchEventName to return valid event names as if we were in Chrome on a
     // mobile device, regardless of what browser the tests are running on.
-    sinon
-      .stub(dom, 'getTouchEventName')
-      .callsFake(name => dom.TOUCH_MAP[name]['standard']);
+    jest.spyOn(dom, 'getTouchEventName').mockClear()
+      .mockImplementation(name => dom.TOUCH_MAP[name]['standard']);
 
     ({addEventSpy, removeEventSpy} = getBodyEventSpies());
     ['mousemove', 'touchmove', 'mouseup', 'touchend'].forEach(e => {
@@ -67,11 +65,11 @@ describe('The JSDebugger component', () => {
       removeEventSpy.withArgs(e);
     });
 
-    sinon.stub(utils, 'fireResizeEvent');
+    jest.spyOn(utils, 'fireResizeEvent').mockClear().mockImplementation();
 
     root = mount(
       <Provider store={getStore()}>
-        <JsDebugger onSlideOpen={sinon.spy()} onSlideShut={sinon.spy()} />
+        <JsDebugger onSlideOpen={jest.fn()} onSlideShut={jest.fn()} />
       </Provider>
     );
     // Get the inner JsDebugger component by name (inside the Radium and
@@ -81,8 +79,8 @@ describe('The JSDebugger component', () => {
 
   afterEach(() => {
     root.unmount();
-    dom.getTouchEventName.restore();
-    utils.fireResizeEvent.restore();
+    dom.getTouchEventName.mockRestore();
+    utils.fireResizeEvent.mockRestore();
     restoreRedux();
   });
 
@@ -217,8 +215,7 @@ describe('The JSDebugger component', () => {
           beforeEach(() => {
             document.body.dispatchEvent(createMouseEvent('touchmove', 0, 120));
             addEventSpy
-              .withArgs('touchend')
-              .args.forEach(args => args[1](new CustomEvent('touchend')));
+              .withArgs('touchend').mock.calls.forEach(args => args[1](new CustomEvent('touchend')));
           });
 
           it('will stop responding to mouse move events', () => {
@@ -274,8 +271,7 @@ describe('The JSDebugger component', () => {
           beforeEach(() => {
             document.body.dispatchEvent(createMouseEvent('touchmove', -320, 0));
             addEventSpy
-              .withArgs('touchend')
-              .args.forEach(args => args[1](new CustomEvent('touchend')));
+              .withArgs('touchend').mock.calls.forEach(args => args[1](new CustomEvent('touchend')));
           });
 
           it('will stop responding to mouse move events', () => {
@@ -338,14 +334,14 @@ function createOrCaptureSpy(parentObj, methodName) {
       expect(spyFn).not.to.have.been.called;
       wasCaptured = true;
     } else {
-      spyFn = sinon.spy(parentObj, methodName);
+      spyFn = jest.spyOn(parentObj, methodName).mockClear();
       wasCaptured = false;
     }
   });
 
   afterEach(() => {
     if (!wasCaptured) {
-      spyFn.restore();
+      spyFn.mockRestore();
     }
   });
 

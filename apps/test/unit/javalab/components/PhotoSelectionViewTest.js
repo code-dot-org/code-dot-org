@@ -1,7 +1,6 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
 
 describe('PhotoSelectionView', () => {
@@ -9,7 +8,7 @@ describe('PhotoSelectionView', () => {
   let onPhotoSelected, promptText;
 
   beforeEach(() => {
-    onPhotoSelected = sinon.stub();
+    onPhotoSelected = jest.fn();
     promptText = 'prompt';
   });
 
@@ -31,6 +30,6 @@ describe('PhotoSelectionView', () => {
 
     wrapper.find('input').invoke('onChange')({target: {files: [file]}});
 
-    sinon.assert.calledWith(onPhotoSelected, file);
+    expect(onPhotoSelected).toHaveBeenCalledWith(file);
   });
 });

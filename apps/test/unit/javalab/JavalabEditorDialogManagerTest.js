@@ -1,7 +1,6 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {
   getStore,
@@ -87,8 +86,8 @@ describe('JavalabEditorDialogManager', () => {
 
   describe('Rename File Dialog', () => {
     it('Displays Rename File Dialog if selected', () => {
-      const closeEditorDialog = sinon.stub();
-      const clearRenameFileError = sinon.stub();
+      const closeEditorDialog = jest.fn();
+      const clearRenameFileError = jest.fn();
       const filenameToRename = 'fileToRename';
       const renameFileError = 'error';
 
@@ -121,8 +120,8 @@ describe('JavalabEditorDialogManager', () => {
 
   describe('Create File Dialog', () => {
     it('Displays the Create File Dialog if selected', () => {
-      const closeEditorDialog = sinon.stub();
-      const clearNewFileError = sinon.stub();
+      const closeEditorDialog = jest.fn();
+      const clearNewFileError = jest.fn();
       const newFileError = 'error';
 
       const wrapper = createWrapper({

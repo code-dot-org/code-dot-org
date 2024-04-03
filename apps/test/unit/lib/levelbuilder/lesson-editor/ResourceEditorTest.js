@@ -1,6 +1,5 @@
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedResourcesEditor as ResourcesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import resourceTestData from './resourceTestData';
@@ -9,9 +8,9 @@ describe('ResourcesEditor', () => {
   const defaultResourceContext = 'testResource';
   let defaultProps, addResource, editResource, removeResource;
   beforeEach(() => {
-    addResource = sinon.spy();
-    editResource = sinon.spy();
-    removeResource = sinon.spy();
+    addResource = jest.fn();
+    editResource = jest.fn();
+    removeResource = jest.fn();
     defaultProps = {
       resources: resourceTestData,
       resourceContext: defaultResourceContext,
@@ -122,6 +121,6 @@ describe('ResourcesEditor', () => {
       .calledOnce;
     expect(addResource.withArgs(defaultResourceContext, vocabRollup)).to.be
       .calledOnce;
-    server.restore();
+    server.mockRestore();
   });
 });

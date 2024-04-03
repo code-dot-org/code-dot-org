@@ -1,7 +1,6 @@
 import {assert} from '../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import {JavalabEditorTabMenu} from '@cdo/apps/javalab/JavalabEditorTabMenu';
 import javalabMsg from '@cdo/javalab/locale';
 
@@ -15,12 +14,12 @@ describe('JavalabEditorTabMenu', () => {
     defaultProps;
 
   beforeEach(() => {
-    cancelTabMenu = sinon.stub();
-    renameFromTabMenu = sinon.stub();
-    moveTabLeft = sinon.stub();
-    moveTabRight = sinon.stub();
-    deleteFromTabMenu = sinon.stub();
-    changeFileTypeFromTabMenu = sinon.stub();
+    cancelTabMenu = jest.fn();
+    renameFromTabMenu = jest.fn();
+    moveTabLeft = jest.fn();
+    moveTabRight = jest.fn();
+    deleteFromTabMenu = jest.fn();
+    changeFileTypeFromTabMenu = jest.fn();
 
     defaultProps = {
       cancelTabMenu,

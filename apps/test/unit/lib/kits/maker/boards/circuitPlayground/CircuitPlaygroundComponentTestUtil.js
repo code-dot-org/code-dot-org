@@ -3,7 +3,6 @@
  * components and component constructors are available from the interpreter
  */
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
-import sinon from 'sinon';
 import {expect} from '../../../../../../util/reconfiguredChai';
 
 export function itMakesCircuitPlaygroundComponentsAvailable(
@@ -43,7 +42,7 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
         createGlobalProperty: function (key, value) {
           jsInterpreter.globalProperties[key] = value;
         },
-        addCustomMarshalObject: sinon.spy(),
+        addCustomMarshalObject: jest.fn(),
       };
       // Opportunity to stub anything needed to test a board
       if (boardSpecificSetup) {
@@ -78,7 +77,7 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
           expect(jsInterpreter.globalProperties[constructor]).to.be.a(
             'function'
           );
-          const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
+          const passedObjects = jsInterpreter.addCustomMarshalObject.mock.calls.map(
             call => call[0].instance
           );
           expect(passedObjects).to.include(

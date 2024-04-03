@@ -16,7 +16,6 @@ import FoormFormSaveBar, {
 import foorm, {
   setFormData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
-import sinon from 'sinon';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 global.$ = require('jquery');
@@ -62,7 +61,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
   afterEach(() => {
     restoreRedux();
-    server.restore();
+    server.mockRestore();
   });
 
   const createWrapper = overrideProps => {

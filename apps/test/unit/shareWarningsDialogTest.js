@@ -1,14 +1,13 @@
 import React from 'react';
 import {expect} from '../util/deprecatedChai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import ShareWarningsDialog from '@cdo/apps/templates/ShareWarningsDialog';
 import commonMsg from '@cdo/locale';
 
 describe('ShareWarningsDialog', () => {
   it('renders ShareWarnings with age prompt', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={false}
@@ -30,8 +29,8 @@ describe('ShareWarningsDialog', () => {
   });
 
   it('renders ShareWarnings with data alert', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -56,8 +55,8 @@ describe('ShareWarningsDialog', () => {
   });
 
   it('renders ShareWarnings with both data alert and age prompt', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -86,8 +85,8 @@ describe('ShareWarningsDialog', () => {
   });
 
   it('does not show the dialog if not needed', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={false}
@@ -100,8 +99,8 @@ describe('ShareWarningsDialog', () => {
   });
 
   it('calls handleClose if we click OK when age is known', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -121,8 +120,8 @@ describe('ShareWarningsDialog', () => {
   });
 
   it('does not calls handleClose if we click OK when age is unknown', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -142,8 +141,8 @@ describe('ShareWarningsDialog', () => {
   });
 
   it('calls handleClose if we specify age >=13, then click OK', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -169,8 +168,8 @@ describe('ShareWarningsDialog', () => {
   });
 
   it('calls handleTooYoung if we specify age < 13, then click OK', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}

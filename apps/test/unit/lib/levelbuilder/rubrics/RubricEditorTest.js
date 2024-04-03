@@ -4,11 +4,10 @@ import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalIte
 import Button from '@cdo/apps/templates/Button';
 import {expect} from '../../../../util/reconfiguredChai';
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
-import sinon from 'sinon';
 
 describe('RubricEditorTest ', () => {
   let wrapper;
-  const addNewConceptSpy = sinon.spy();
+  const addNewConceptSpy = jest.fn();
   const sampleLearningGoalList = [
     {id: 1, learningGoal: 'Goal 1', aiEnabled: true},
     {id: 2, learningGoal: 'Goal 2', aiEnabled: false},

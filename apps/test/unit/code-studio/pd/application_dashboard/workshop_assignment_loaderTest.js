@@ -2,7 +2,6 @@ import WorkshopAssignmentLoader from '@cdo/apps/code-studio/pd/application_dashb
 import React from 'react';
 import {expect} from 'chai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 
 const defer = () => new Promise(resolve => setTimeout(resolve, 0));
 
@@ -15,7 +14,7 @@ describe('WorkshopAssignmentLoader', () => {
     handleChange = sandbox.spy();
   });
   afterEach(() => {
-    sandbox.restore();
+    sandbox.mockRestore();
   });
 
   let workshopAssignmentLoader;

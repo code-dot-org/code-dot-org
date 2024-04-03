@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import {mount} from 'enzyme';
 
 import {expect} from '../../../util/reconfiguredChai';
@@ -33,21 +32,18 @@ describe.skip('DownloadReplayVideoButton', () => {
       <DownloadReplayVideoButton channelId="test" appType="dance" />
     );
 
-    checkVideoSpy = sinon.spy(wrapper.instance(), 'checkVideo');
-    checkVideoUntilSuccessSpy = sinon.spy(
-      wrapper.instance(),
-      'checkVideoUntilSuccess'
-    );
-    fetchSpy = sinon.spy(window, 'fetch');
-    tryDownloadVideoSpy = sinon.spy(wrapper.instance(), 'tryDownloadVideo');
+    checkVideoSpy = jest.spyOn(wrapper.instance(), 'checkVideo').mockClear();
+    checkVideoUntilSuccessSpy = jest.spyOn(wrapper.instance(), 'checkVideoUntilSuccess').mockClear();
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear();
+    tryDownloadVideoSpy = jest.spyOn(wrapper.instance(), 'tryDownloadVideo').mockClear();
   });
 
   afterEach(function () {
     wrapper.unmount();
-    checkVideoSpy.restore();
-    checkVideoUntilSuccessSpy.restore();
-    fetchSpy.restore();
-    tryDownloadVideoSpy.restore();
+    checkVideoSpy.mockRestore();
+    checkVideoUntilSuccessSpy.mockRestore();
+    fetchSpy.mockRestore();
+    tryDownloadVideoSpy.mockRestore();
   });
 
   it('initially renders as enabled', () => {
@@ -79,46 +75,46 @@ describe.skip('DownloadReplayVideoButton', () => {
   });
 
   it('begins checking for video immediately', () => {
-    expect(checkVideoSpy.callCount).to.equal(0);
-    expect(checkVideoUntilSuccessSpy.callCount).to.equal(0);
-    expect(fetchSpy.callCount).to.equal(0);
+    expect(checkVideoSpy).toHaveBeenCalledTimes(0);
+    expect(checkVideoUntilSuccessSpy).toHaveBeenCalledTimes(0);
+    expect(fetchSpy).toHaveBeenCalledTimes(0);
 
     wrapper.instance().componentDidMount();
 
-    expect(checkVideoSpy.callCount).to.equal(1);
-    expect(checkVideoUntilSuccessSpy.callCount).to.equal(1);
-    expect(fetchSpy.callCount).to.equal(1);
+    expect(checkVideoSpy).toHaveBeenCalledTimes(1);
+    expect(checkVideoUntilSuccessSpy).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
   });
 
   it('downloads video directly if it exists', () => {
-    expect(tryDownloadVideoSpy.callCount).to.equal(0);
-    expect(fetchSpy.callCount).to.equal(0);
+    expect(tryDownloadVideoSpy).toHaveBeenCalledTimes(0);
+    expect(fetchSpy).toHaveBeenCalledTimes(0);
 
     wrapper.setState({videoExists: true});
     wrapper.find('button').simulate('click');
 
-    expect(tryDownloadVideoSpy.callCount).to.equal(1);
-    expect(fetchSpy.callCount).to.equal(1);
+    expect(tryDownloadVideoSpy).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
     expect(
-      fetchSpy.calledWith(wrapper.instance().getVideoUrl(), {
-        method: 'GET',
-      })
-    ).to.equal(true);
+      fetchSpy
+    ).toHaveBeenCalledWith(wrapper.instance().getVideoUrl(), {
+      method: 'GET',
+    });
   });
 
   it('disables button until video exists if it does not', () => {
-    expect(tryDownloadVideoSpy.callCount).to.equal(0);
-    expect(fetchSpy.callCount).to.equal(0);
+    expect(tryDownloadVideoSpy).toHaveBeenCalledTimes(0);
+    expect(fetchSpy).toHaveBeenCalledTimes(0);
 
     wrapper.setState({videoExists: false});
     wrapper.find('button').simulate('click');
 
-    expect(tryDownloadVideoSpy.callCount).to.equal(1);
-    expect(fetchSpy.callCount).to.equal(1);
+    expect(tryDownloadVideoSpy).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
     expect(
-      fetchSpy.calledWith(wrapper.instance().getVideoUrl(), {
-        method: 'HEAD',
-      })
-    ).to.equal(true);
+      fetchSpy
+    ).toHaveBeenCalledWith(wrapper.instance().getVideoUrl(), {
+      method: 'HEAD',
+    });
   });
 });

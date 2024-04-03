@@ -2,7 +2,6 @@
 import React from 'react';
 import {expect} from '../../../../../util/deprecatedChai';
 import {render, screen} from '@testing-library/react';
-import sinon from 'sinon';
 import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
 import applabI18n from '@cdo/applab/locale';
 
@@ -15,7 +14,7 @@ describe('MakerSetupGuide', () => {
         makerSetupGeneralDescription: 'i18n-general-description',
       };
       for (const key in i18n) {
-        sinon.stub(applabI18n, key).returns(i18n[key]);
+        jest.spyOn(applabI18n, key).mockClear().mockReturnValue(i18n[key]);
       }
 
       render(<SetupGuide />);
@@ -25,7 +24,7 @@ describe('MakerSetupGuide', () => {
         })
       ).to.exist;
       expect(screen.getByText('i18n-general-description')).to.exist;
-      sinon.restore();
+      jest.restoreAllMocks();
     });
   });
 });

@@ -1,6 +1,5 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import {expect, assert} from '../../../util/reconfiguredChai';
 import BubbleChoice from '@cdo/apps/code-studio/components/BubbleChoice';
 import * as utils from '@cdo/apps/utils';
@@ -51,11 +50,11 @@ describe('BubbleChoice', () => {
 
   describe('back and finish buttons', () => {
     beforeEach(() => {
-      sinon.stub(utils, 'navigateToHref');
+      jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      utils.navigateToHref.restore();
+      utils.navigateToHref.mockRestore();
     });
 
     it('redirect to previous/next levels', () => {

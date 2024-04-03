@@ -3,7 +3,6 @@ import {
   isIE11,
   getBrowserName,
 } from '@cdo/apps/util/browser-detector';
-import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('Browser Detector', () => {
@@ -11,13 +10,13 @@ describe('Browser Detector', () => {
   let appVersionStub;
 
   beforeEach(() => {
-    userAgentStub = sinon.stub(navigator, 'userAgent');
-    appVersionStub = sinon.stub(navigator, 'appVersion');
+    userAgentStub = jest.spyOn(navigator, 'userAgent').mockClear().mockImplementation();
+    appVersionStub = jest.spyOn(navigator, 'appVersion').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    userAgentStub.restore();
-    appVersionStub.restore();
+    userAgentStub.mockRestore();
+    appVersionStub.mockRestore();
   });
 
   describe('IE', () => {

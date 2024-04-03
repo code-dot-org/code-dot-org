@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
@@ -32,10 +31,10 @@ describe('The DebugConsole component', () => {
         hideSource: true,
       },
     });
-    sinon.spy(interpreter, 'handleStepOver');
-    sinon.spy(interpreter, 'handlePauseContinue');
-    sinon.spy(interpreter, 'handleStepIn');
-    sinon.spy(interpreter, 'handleStepOut');
+    jest.spyOn(interpreter, 'handleStepOver').mockClear();
+    jest.spyOn(interpreter, 'handlePauseContinue').mockClear();
+    jest.spyOn(interpreter, 'handleStepIn').mockClear();
+    jest.spyOn(interpreter, 'handleStepOut').mockClear();
     getStore().dispatch(actions.attach(interpreter));
     interpreter.parse({code: EXAMPLE_CODE});
     interpreter.executeInterpreter(true);

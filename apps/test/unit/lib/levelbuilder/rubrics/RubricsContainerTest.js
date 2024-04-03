@@ -7,7 +7,6 @@ import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalIte
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
 import Button from '@cdo/apps/templates/Button';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import sinon from 'sinon';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
@@ -151,8 +150,8 @@ describe('RubricsContainerTest', () => {
   });
 
   it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
-    const mockFetch = sinon.stub(global, 'fetch');
-    mockFetch.returns(
+    const mockFetch = jest.spyOn(global, 'fetch').mockClear().mockImplementation();
+    mockFetch.mockReturnValue(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
 
@@ -180,12 +179,12 @@ describe('RubricsContainerTest', () => {
     expect(notification.text()).to.contain('Save complete!');
     saveButton = wrapper.find('Button.ui-test-save-button');
     expect(saveButton.props().disabled).to.be.false;
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it('calls the save helper on save click', () => {
-    const mockSave = sinon.stub(rubricHelper, 'saveRubricToTable');
-    mockSave.returns(
+    const mockSave = jest.spyOn(rubricHelper, 'saveRubricToTable').mockClear().mockImplementation();
+    mockSave.mockReturnValue(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
 
@@ -201,7 +200,7 @@ describe('RubricsContainerTest', () => {
     let saveButton = wrapper.find('Button.ui-test-save-button');
     expect(saveButton.props().disabled).to.be.false;
     saveButton.simulate('click');
-    sinon.assert.calledWith(mockSave);
-    sinon.restore();
+    expect(mockSave).toHaveBeenCalledWith();
+    jest.restoreAllMocks();
   });
 });

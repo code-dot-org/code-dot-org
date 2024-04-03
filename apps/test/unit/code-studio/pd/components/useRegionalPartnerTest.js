@@ -3,7 +3,6 @@ import {act} from 'react-dom/test-utils';
 import PropTypes from 'prop-types';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
 import {
   PROGRAM_CSD,
@@ -42,23 +41,22 @@ const mockApiResponse = (status = 200, body = {}) => {
 };
 
 describe('useRegionalPartner tests', () => {
-  let clock, fetchStub, debounceStub;
   beforeEach(() => {
     regionalPartnerData = undefined;
     regionalPartnerError = false;
-    clock = sinon.useFakeTimers();
-    fetchStub = sinon.stub(window, 'fetch');
-    debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
+    jest.useFakeTimers();
+    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    debounceStub = jest.spyOn(_, 'debounce').mockClear().mockImplementation(f => f);
   });
   afterEach(() => {
-    clock.restore();
-    fetchStub.restore();
-    debounceStub.restore();
+    jest.useRealTimers();
+    fetchStub.mockRestore();
+    debounceStub.mockRestore();
   });
 
   it('returns undefined when loading', async () => {
     let rendered;
-    fetch.resetBehavior();
+    fetch.mockReset();
     rendered = await mount(<RegionalPartnerUser data={{}} />);
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);

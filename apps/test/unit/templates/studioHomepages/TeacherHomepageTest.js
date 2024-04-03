@@ -1,7 +1,6 @@
 import {assert} from 'chai';
 import {shallow} from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
@@ -45,13 +44,13 @@ describe('TeacherHomepage', () => {
   beforeEach(() => {
     server = sinon.fakeServer.create();
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
-    sinon.stub(sessionStorage, 'getItem');
-    sinon.stub(sessionStorage, 'setItem');
+    jest.spyOn(sessionStorage, 'getItem').mockClear().mockImplementation();
+    jest.spyOn(sessionStorage, 'setItem').mockClear().mockImplementation();
   });
   afterEach(() => {
-    server.restore();
-    sessionStorage.setItem.restore();
-    sessionStorage.getItem.restore();
+    server.mockRestore();
+    sessionStorage.setItem.mockRestore();
+    sessionStorage.getItem.mockRestore();
   });
 
   it('shows a Header Banner that says My Dashboard', () => {
@@ -66,8 +65,12 @@ describe('TeacherHomepage', () => {
   });
 
   it('logs an Amplitude event only on first render', () => {
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
-    sessionStorage.getItem.withArgs('logged_teacher_session').returns(false);
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
+    sessionStorage.getItem.mockImplementation((...args) => {
+      if (args[0] === 'logged_teacher_session') {
+        return false;
+      }
+    });
     setUp();
 
     expect(sessionStorage.setItem).to.have.been.calledOnce;
@@ -76,18 +79,22 @@ describe('TeacherHomepage', () => {
       'true'
     );
     expect(analyticsSpy).to.have.been.calledOnce;
-    expect(analyticsSpy.firstCall.args).to.deep.eq([
+    expect(analyticsSpy.mock.calls[0]).to.deep.eq([
       'Teacher Login',
       {'user id': 42},
     ]);
 
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
-    sessionStorage.getItem.withArgs('logged_teacher_session').returns('true');
+    sessionStorage.getItem.mockImplementation((...args) => {
+      if (args[0] === 'logged_teacher_session') {
+        return 'true';
+      }
+    });
     setUp();
     expect(sessionStorage.setItem).to.have.been.calledOnce;
     expect(analyticsSpy).to.have.been.calledOnce;
 
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 
   it('renders a NpsSurveyBlock if showNpsSurvey is true', () => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {Body} from '@cdo/apps/templates/Dialog';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
@@ -62,10 +61,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         }}
       />
     );
-    const handleClickUpdateStub = sinon.stub(
-      wrapper.instance(),
-      'handleClickUpdate'
-    );
+    const handleClickUpdateStub = jest.spyOn(wrapper.instance(), 'handleClickUpdate').mockClear().mockImplementation();
     handleClickUpdateStub.callsFake(() => {});
     wrapper.setState({showSchoolInterstitial: false});
     wrapper.find('Button');
@@ -76,15 +72,15 @@ describe('SchoolInfoConfirmationDialog', () => {
     let stubedFetch;
 
     beforeEach(() => {
-      stubedFetch = sinon.stub(window, 'fetch');
+      stubedFetch = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      stubedFetch.restore();
+      stubedFetch.mockRestore();
     });
 
     describe('school info confirmation dialog behavior', () => {
-      const onClose = sinon.spy();
+      const onClose = jest.fn();
       const wrapper = mount(
         <SchoolInfoConfirmationDialog
           {...MINIMUM_PROPS}
@@ -101,7 +97,7 @@ describe('SchoolInfoConfirmationDialog', () => {
 
       it('calls handleClickUpdate method when a user clicks the button to update school information', async () => {
         const wrapperInstance = wrapper.instance();
-        sinon.spy(wrapperInstance, 'handleClickUpdate');
+        jest.spyOn(wrapperInstance, 'handleClickUpdate').mockClear();
         wrapper.setState({showSchoolInterstitial: false});
         wrapper.find('button#update-button').simulate('click');
 
@@ -113,7 +109,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       it('calls handleClickYes method when a user does not need to update school information', async () => {
         stubedFetch.resolves();
         const wrapperInstance = wrapper.instance();
-        const handleClickYesSpy = sinon.spy(wrapperInstance, 'handleClickYes');
+        const handleClickYesSpy = jest.spyOn(wrapperInstance, 'handleClickYes').mockClear();
         wrapper.setState({showSchoolInterstitial: false});
         wrapper.find('button#yes-button').simulate('click');
 
@@ -122,7 +118,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         expect(onClose).to.have.been.called;
         await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.false;
-        handleClickYesSpy.restore();
+        handleClickYesSpy.mockRestore();
       });
     });
   });
@@ -131,7 +127,7 @@ describe('SchoolInfoConfirmationDialog', () => {
     let onClose, wrapper;
 
     beforeEach(() => {
-      onClose = sinon.spy();
+      onClose = jest.fn();
       wrapper = mount(
         <SchoolInfoConfirmationDialog
           {...MINIMUM_PROPS}
@@ -149,10 +145,7 @@ describe('SchoolInfoConfirmationDialog', () => {
 
     it('renders school info form when school info interstitial is set to true', () => {
       const wrapperInstance = wrapper.instance();
-      const renderSchoolInformationForm = sinon.spy(
-        wrapperInstance,
-        'renderSchoolInformationForm'
-      );
+      const renderSchoolInformationForm = jest.spyOn(wrapperInstance, 'renderSchoolInformationForm').mockClear();
       wrapper.setState({showSchoolInterstitial: true});
 
       expect(renderSchoolInformationForm).to.have.been.called;
@@ -160,10 +153,7 @@ describe('SchoolInfoConfirmationDialog', () => {
 
     it('renders school info confirmation dialog when school info interstitial is set to false', () => {
       const wrapperInstance = wrapper.instance();
-      const renderSchoolInfoConfirmationDialog = sinon.spy(
-        wrapperInstance,
-        'renderInitialContent'
-      );
+      const renderSchoolInfoConfirmationDialog = jest.spyOn(wrapperInstance, 'renderInitialContent').mockClear();
       wrapper.setState({showSchoolInterstitial: false});
 
       expect(renderSchoolInfoConfirmationDialog).to.have.been.called;

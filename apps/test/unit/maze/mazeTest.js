@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {expect} from '../../util/reconfiguredChai';
 
 import Maze from '@cdo/apps/maze/maze';
@@ -8,10 +6,9 @@ import {MazeController} from '@code-dot-org/maze';
 
 describe('Maze', function () {
   let maze;
-  let clock;
 
   beforeEach(function () {
-    clock = sinon.useFakeTimers();
+    jest.useFakeTimers();
     maze = new Maze();
     maze.controller = new MazeController(
       {
@@ -29,7 +26,7 @@ describe('Maze', function () {
   });
 
   afterEach(function () {
-    clock.restore();
+    jest.useRealTimers();
   });
 
   describe('animation queue', function () {
@@ -38,32 +35,29 @@ describe('Maze', function () {
     let getActionsSpy;
 
     beforeEach(function () {
-      animateActionSpy = sinon.stub(maze, 'animateAction_');
-      finishAnimationsSpy = sinon.stub(maze, 'finishAnimations_');
-      getActionsSpy = sinon.stub(maze.executionInfo, 'getActions');
-      getActionsSpy.returns(new Array(2));
+      animateActionSpy = jest.spyOn(maze, 'animateAction_').mockClear().mockImplementation();
+      finishAnimationsSpy = jest.spyOn(maze, 'finishAnimations_').mockClear().mockImplementation();
+      getActionsSpy = jest.spyOn(maze.executionInfo, 'getActions').mockClear().mockImplementation();
+      getActionsSpy.mockReturnValue(new Array(2));
     });
 
     afterEach(function () {
-      animateActionSpy.restore();
-      finishAnimationsSpy.restore();
-      getActionsSpy.restore();
+      animateActionSpy.mockRestore();
+      finishAnimationsSpy.mockRestore();
+      getActionsSpy.mockRestore();
     });
 
     it('is initiated by scheduleAnimations', function () {
       maze.scheduleAnimations_(false);
       expect(finishAnimationsSpy.called).to.be.false;
-      clock.tick(999);
+      jest.advanceTimersByTime(999);
       expect(finishAnimationsSpy.called).to.be.false;
-      clock.tick(1);
+      jest.advanceTimersByTime(1);
       expect(finishAnimationsSpy.called).to.be.true;
     });
 
     it('can be rate-adjusted', function () {
-      const scheduleSingleAnimationSpy = sinon.stub(
-        maze,
-        'scheduleSingleAnimation_'
-      );
+      const scheduleSingleAnimationSpy = jest.spyOn(maze, 'scheduleSingleAnimation_').mockClear().mockImplementation();
 
       expect(finishAnimationsSpy.called).to.be.false;
 
@@ -91,19 +85,19 @@ describe('Maze', function () {
           .calledOnce
       ).to.be.true;
 
-      scheduleSingleAnimationSpy.restore();
+      scheduleSingleAnimationSpy.mockRestore();
     });
 
     it('can be canceled by a reset', function () {
-      const controllerResetSpy = sinon.stub(maze.controller, 'reset');
+      const controllerResetSpy = jest.spyOn(maze.controller, 'reset').mockClear().mockImplementation();
 
       maze.scheduleAnimations_(false);
       expect(finishAnimationsSpy.called).to.be.false;
       maze.reset_();
-      clock.tick(1000);
+      jest.advanceTimersByTime(1000);
       expect(finishAnimationsSpy.called).to.be.false;
 
-      controllerResetSpy.restore();
+      controllerResetSpy.mockRestore();
     });
   });
 });

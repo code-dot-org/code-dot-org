@@ -1,7 +1,6 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import sinon from 'sinon';
 
 import * as textReponsesDataApi from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/textResponses/TextResponses';
@@ -43,13 +42,12 @@ const responses = [
 describe('TextResponses', () => {
   describe('when there are text responses', () => {
     beforeEach(() => {
-      sinon
-        .stub(textReponsesDataApi, 'loadTextResponsesFromServer')
-        .returns(Promise.resolve(responses));
+      jest.spyOn(textReponsesDataApi, 'loadTextResponsesFromServer').mockClear()
+        .mockReturnValue(Promise.resolve(responses));
     });
 
     afterEach(() => {
-      textReponsesDataApi.loadTextResponsesFromServer.restore();
+      textReponsesDataApi.loadTextResponsesFromServer.mockRestore();
     });
 
     it('renders the UnitSelector dropdown', async () => {
@@ -135,13 +133,12 @@ describe('TextResponses', () => {
 
   describe('when there are no text responses', () => {
     beforeEach(() => {
-      sinon
-        .stub(textReponsesDataApi, 'loadTextResponsesFromServer')
-        .returns(Promise.resolve({}));
+      jest.spyOn(textReponsesDataApi, 'loadTextResponsesFromServer').mockClear()
+        .mockReturnValue(Promise.resolve({}));
     });
 
     afterEach(() => {
-      textReponsesDataApi.loadTextResponsesFromServer.restore();
+      textReponsesDataApi.loadTextResponsesFromServer.mockRestore();
     });
 
     it('does not render actions when there are no text responses', async () => {

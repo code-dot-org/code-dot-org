@@ -1,5 +1,4 @@
 import {assert} from '../util/reconfiguredChai';
-import sinon from 'sinon';
 import FeedbackUtils from '@cdo/apps/feedback';
 import {TestResults} from '@cdo/apps/constants';
 import msg from '@cdo/locale';
@@ -31,14 +30,14 @@ describe('FeedbackUtils', () => {
             },
           };
 
-          sinon.stub(msg, 'finalStage').callsFake(() => finalStageMsg);
-          sinon.stub(msg, 'endOfLesson').callsFake(() => endOfLesson);
-          sinon.stub(msg, 'nextStage').callsFake(() => nextStageMsg);
-          sinon.stub(msg, 'nextLevel').callsFake(() => nextLevelMsg);
+          jest.spyOn(msg, 'finalStage').mockClear().mockImplementation(() => finalStageMsg);
+          jest.spyOn(msg, 'endOfLesson').mockClear().mockImplementation(() => endOfLesson);
+          jest.spyOn(msg, 'nextStage').mockClear().mockImplementation(() => nextStageMsg);
+          jest.spyOn(msg, 'nextLevel').mockClear().mockImplementation(() => nextLevelMsg);
         });
 
         afterEach(() => {
-          sinon.restore();
+          jest.restoreAllMocks();
         });
 
         describe('with sharing enabled', () => {

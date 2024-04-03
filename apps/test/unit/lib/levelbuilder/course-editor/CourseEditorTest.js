@@ -11,7 +11,6 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
 import {
@@ -54,7 +53,7 @@ describe('CourseEditor', () => {
   allowConsoleWarnings();
 
   beforeEach(() => {
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     stubRedux();
     registerReducers({
       teacherSections,
@@ -65,7 +64,7 @@ describe('CourseEditor', () => {
 
   afterEach(() => {
     restoreRedux();
-    utils.navigateToHref.restore();
+    utils.navigateToHref.mockRestore();
   });
 
   const createWrapper = overrideProps => {
@@ -119,18 +118,16 @@ describe('CourseEditor', () => {
   });
 
   describe('Saving Course Editor', () => {
-    let clock, server;
-
     beforeEach(() => {
       server = sinon.fakeServer.create();
     });
 
     afterEach(() => {
       if (clock) {
-        clock.restore();
+        jest.useRealTimers();
         clock = undefined;
       }
-      server.restore();
+      server.mockRestore();
     });
 
     it('can save and keep editing', () => {
@@ -157,10 +154,10 @@ describe('CourseEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(courseEditor.state().isSaving).to.equal(true);
 
-      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
       server.respond();
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
 
       courseEditor.update();
       expect(utils.navigateToHref).to.not.have.been.called;
@@ -203,7 +200,7 @@ describe('CourseEditor', () => {
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).to.be.true;
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('can save and close', () => {
@@ -235,7 +232,7 @@ describe('CourseEditor', () => {
         `/courses/test-course${window.location.search}`
       );
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -271,11 +268,11 @@ describe('CourseEditor', () => {
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).to.be.true;
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('shows error when published state is pilot but no pilot experiment given', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({});
 
       const courseEditor = wrapper.find('CourseEditor');
@@ -306,12 +303,12 @@ describe('CourseEditor', () => {
           )
       ).to.be.true;
 
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
   });
 
   it('shows error when version year is set but family name is not', () => {
-    sinon.stub($, 'ajax');
+    jest.spyOn($, 'ajax').mockClear().mockImplementation();
     const wrapper = createWrapper({});
 
     const courseEditor = wrapper.find('CourseEditor');
@@ -340,11 +337,11 @@ describe('CourseEditor', () => {
         .contains('Error Saving: Please set both version year and family name.')
     ).to.be.true;
 
-    $.ajax.restore();
+    $.ajax.mockRestore();
   });
 
   it('shows error when family name is set but version year is not', () => {
-    sinon.stub($, 'ajax');
+    jest.spyOn($, 'ajax').mockClear().mockImplementation();
     const wrapper = createWrapper({});
 
     const courseEditor = wrapper.find('CourseEditor');
@@ -373,6 +370,6 @@ describe('CourseEditor', () => {
         .contains('Error Saving: Please set both version year and family name.')
     ).to.be.true;
 
-    $.ajax.restore();
+    $.ajax.mockRestore();
   });
 });

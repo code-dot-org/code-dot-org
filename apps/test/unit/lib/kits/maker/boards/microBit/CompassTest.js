@@ -2,7 +2,6 @@ import {expect} from '../../../../../../util/reconfiguredChai';
 import Compass from '@cdo/apps/lib/kits/maker/boards/microBit/Compass';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import sinon from 'sinon';
 
 describe('MicroBit Compass', function () {
   let boardClient;
@@ -13,7 +12,7 @@ describe('MicroBit Compass', function () {
     compass = new Compass({mb: boardClient});
   });
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it(`attributes are readonly`, () => {
@@ -41,8 +40,8 @@ describe('MicroBit Compass', function () {
 
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
-      let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
-      let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
+      let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
+      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
       compass.start();
       expect(startSpy).to.have.been.calledTwice;
       expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.magX);
@@ -58,7 +57,7 @@ describe('MicroBit Compass', function () {
   describe('emitsEvent', () => {
     let emitSpy;
     beforeEach(() => {
-      emitSpy = sinon.spy(compass, 'emit');
+      emitSpy = jest.spyOn(compass, 'emit').mockClear();
     });
 
     it('emits the data event when it receives data', () => {

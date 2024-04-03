@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import {allowConsoleErrors} from '../../util/testUtils';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
@@ -29,17 +28,17 @@ describe('useFetch', () => {
   let fetchSpy;
 
   beforeEach(() => {
-    fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
     useFetchReturnValue.current = undefined;
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('returns expected data on successful fetch', async () => {
     const expectedData = {name: 'Joe', age: 10};
-    fetchSpy.returns(Promise.resolve({ok: true, json: () => expectedData}));
+    fetchSpy.mockReturnValue(Promise.resolve({ok: true, json: () => expectedData}));
 
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
@@ -51,7 +50,7 @@ describe('useFetch', () => {
   });
 
   it('returns error on fetch error', async () => {
-    fetchSpy.returns(Promise.reject('some network error'));
+    fetchSpy.mockReturnValue(Promise.reject('some network error'));
 
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
@@ -63,7 +62,7 @@ describe('useFetch', () => {
   });
 
   it('returns error on HTTP error', async () => {
-    fetchSpy.returns(Promise.resolve({ok: false, status: 500}));
+    fetchSpy.mockReturnValue(Promise.resolve({ok: false, status: 500}));
 
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
@@ -79,7 +78,7 @@ describe('useFetch', () => {
     const promise = new Promise(resolve => {
       resolvePromise = resolve;
     });
-    fetchSpy.returns(promise);
+    fetchSpy.mockReturnValue(promise);
 
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();

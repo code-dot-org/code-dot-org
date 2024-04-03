@@ -2,7 +2,6 @@ import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {ShareTeacherLibraries} from '@cdo/apps/code-studio/components/libraries/ShareTeacherLibraries.jsx';
-import sinon from 'sinon';
 
 describe('ShareTeacherLibraries', () => {
   const SECTIONS = [
@@ -22,7 +21,7 @@ describe('ShareTeacherLibraries', () => {
 
   describe('assignLibrary', () => {
     it('sets the shared sections to the currently selected sections', () => {
-      let updateProjectLibrary = sinon.spy();
+      let updateProjectLibrary = jest.fn();
       const selectedSections = [{id: 1}, {id: 2}];
       const selectedLibraryId = 'abc';
       const props = {

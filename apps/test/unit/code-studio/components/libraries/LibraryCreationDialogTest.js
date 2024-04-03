@@ -1,7 +1,6 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import {
   UnconnectedLibraryCreationDialog as LibraryCreationDialog,
   DialogState,
@@ -70,7 +69,7 @@ describe('LibraryCreationDialog', () => {
     });
 
     afterEach(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     const stubFindProfanityRequest = (status, serverData) => {

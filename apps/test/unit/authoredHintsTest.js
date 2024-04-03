@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {expect} from '../util/reconfiguredChai';
 
 import * as utils from '@cdo/apps/utils';
@@ -10,14 +9,14 @@ import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 describe('Authored Hints', () => {
   // stub (and restore) redux and a utils method
   beforeEach(() => {
-    sinon.stub(utils, 'showGenericQtip').callsFake(() => {});
+    jest.spyOn(utils, 'showGenericQtip').mockClear().mockImplementation(() => {});
     stubRedux();
     registerReducers({authoredHints: authoredHintsReducer});
   });
 
   afterEach(() => {
     restoreRedux();
-    utils.showGenericQtip.restore();
+    utils.showGenericQtip.mockRestore();
   });
 
   // set up structures to be tested

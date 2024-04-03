@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import ReactDOM from 'react-dom';
 import {expect} from '../../util/reconfiguredChai';
 import {
@@ -42,14 +41,14 @@ describe('WebLab', () => {
       skin: {},
       level: {},
     };
-    sinon.stub(ReactDOM, 'render');
-    sinon.stub(getStore(), 'dispatch');
+    jest.spyOn(ReactDOM, 'render').mockClear().mockImplementation();
+    jest.spyOn(getStore(), 'dispatch').mockClear().mockImplementation();
   });
 
   afterEach(() => {
     restoreRedux();
     restoreStudioApp();
-    ReactDOM.render.restore();
+    ReactDOM.render.mockRestore();
   });
 
   describe('init', () => {
@@ -88,15 +87,15 @@ describe('WebLab', () => {
   describe('afterClearPuzzle', () => {
     beforeEach(() => {
       weblab.init(config);
-      sinon.stub(utils, 'reload');
+      jest.spyOn(utils, 'reload').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      utils.reload.restore();
+      utils.reload.mockRestore();
     });
 
     it('rejects with error showing deleteAll succeeded when filesApi deleteAll succeeds', async () => {
-      sinon.stub(filesApi, 'deleteAll').callsFake((success, error) => {
+      jest.spyOn(filesApi, 'deleteAll').mockClear().mockImplementation((success, error) => {
         success({responseText: 'yay'});
       });
       weblab.fileEntries = 'entries';
@@ -104,22 +103,22 @@ describe('WebLab', () => {
         'deleteAll succeeded, weblab handling reload to avoid saving'
       );
       expect(weblab.fileEntries).to.equal(null);
-      filesApi.deleteAll.restore();
+      filesApi.deleteAll.mockRestore();
     });
 
     it('rejects with error showing deleteAll failed when filesApi deleteAll fails', async () => {
-      sinon.stub(filesApi, 'deleteAll').callsFake((success, error) => {
+      jest.spyOn(filesApi, 'deleteAll').mockClear().mockImplementation((success, error) => {
         error({status: 'status'});
       });
-      sinon.stub(console, 'warn');
+      jest.spyOn(console, 'warn').mockClear().mockImplementation();
       weblab.fileEntries = 'entries';
       expect(config.afterClearPuzzle()).to.eventually.be.rejectedWith('status');
       expect(console.warn).to.have.been.calledOnceWith(
         'WebLab: error deleteAll failed: status'
       );
       expect(weblab.fileEntries).to.equal('entries');
-      filesApi.deleteAll.restore();
-      console.warn.restore();
+      filesApi.deleteAll.mockRestore();
+      console.warn.mockRestore();
     });
   });
 
@@ -127,24 +126,24 @@ describe('WebLab', () => {
     let brambleHost;
     beforeEach(() => {
       brambleHost = {
-        disableInspector: sinon.stub(),
-        enableInspector: sinon.stub(),
+        disableInspector: jest.fn(),
+        enableInspector: jest.fn(),
       };
       weblab.brambleHost = brambleHost;
     });
 
     it('disables inspector if inspectorOn', () => {
-      sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
+      jest.spyOn(getStore(), 'getState').mockClear().mockReturnValue({inspectorOn: true});
       weblab.onToggleInspector();
       expect(brambleHost.disableInspector).to.have.been.calledOnce;
-      getStore().getState.restore();
+      getStore().getState.mockRestore();
     });
 
     it('enables inspector if inspectorOn false', () => {
-      sinon.stub(getStore(), 'getState').returns({inspectorOn: false});
+      jest.spyOn(getStore(), 'getState').mockClear().mockReturnValue({inspectorOn: false});
       weblab.onToggleInspector();
       expect(brambleHost.enableInspector).to.have.been.calledOnce;
-      getStore().getState.restore();
+      getStore().getState.mockRestore();
     });
   });
 
@@ -155,37 +154,40 @@ describe('WebLab', () => {
         containerId: 'container-id',
       };
       weblab.studioApp_ = studioApp();
-      sinon.stub(studioApp(), 'setConfigValues_');
-      sinon.stub(studioApp(), 'initProjectTemplateWorkspaceIconCallout');
-      sinon.stub(studioApp(), 'alertIfCompletedWhilePairing');
-      sinon.stub(studioApp(), 'initVersionHistoryUI');
-      sinon.stub(studioApp(), 'initTimeSpent');
+      jest.spyOn(studioApp(), 'setConfigValues_').mockClear().mockImplementation();
+      jest.spyOn(studioApp(), 'initProjectTemplateWorkspaceIconCallout').mockClear().mockImplementation();
+      jest.spyOn(studioApp(), 'alertIfCompletedWhilePairing').mockClear().mockImplementation();
+      jest.spyOn(studioApp(), 'initVersionHistoryUI').mockClear().mockImplementation();
+      jest.spyOn(studioApp(), 'initTimeSpent').mockClear().mockImplementation();
       weblab.level = {unsubmitUrl: 'url'};
-      sinon.stub(dom, 'addClickTouchEvent');
+      jest.spyOn(dom, 'addClickTouchEvent').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      dom.addClickTouchEvent.restore();
+      dom.addClickTouchEvent.mockRestore();
     });
 
     it('adds clickTouchEvent 3 times if there is a finishButton', () => {
       const finishButton = {className: 'test'};
-      sinon.stub(document, 'getElementById').returns(finishButton);
+      jest.spyOn(document, 'getElementById').mockClear().mockReturnValue(finishButton);
       weblab.onMount(config);
       expect(dom.addClickTouchEvent).to.have.been.calledWith(finishButton);
-      document.getElementById.restore();
+      document.getElementById.mockRestore();
     });
 
     it('adds clickTouchEvent 2 times if there is no finishButton', () => {
-      sinon
-        .stub(document, 'getElementById')
+      jest.spyOn(document, 'getElementById').mockClear()
         .onCall(0)
-        .returns({className: 'test'})
-        .onCall(1)
-        .returns(null);
+        .mockReturnValue({className: 'test'}).mockImplementation(() => {
+        if (jest.spyOn(document, 'getElementById').mockClear()
+          .onCall(0)
+          .mockReturnValue({className: 'test'}).mock.calls.length === 1) {
+          return null;
+        }
+      });
       weblab.onMount(config);
       expect(dom.addClickTouchEvent).to.not.have.been.called;
-      document.getElementById.restore();
+      document.getElementById.mockRestore();
     });
   });
 
@@ -194,25 +196,25 @@ describe('WebLab', () => {
     beforeEach(() => {
       brambleHost = {
         enableFullscreenPreview: callback => callback(),
-        disableInspector: sinon.stub(),
+        disableInspector: jest.fn(),
       };
       weblab.brambleHost = brambleHost;
     });
 
     it('disables inspector if inspectorOn', () => {
-      sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
+      jest.spyOn(getStore(), 'getState').mockClear().mockReturnValue({inspectorOn: true});
       weblab.onStartFullScreenPreview();
       expect(brambleHost.disableInspector).to.have.been.calledOnce;
-      getStore().getState.restore();
+      getStore().getState.mockRestore();
     });
 
     it('dispatches the changeFullScreenPreviewOn action', () => {
-      sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
+      jest.spyOn(getStore(), 'getState').mockClear().mockReturnValue({inspectorOn: true});
       weblab.onStartFullScreenPreview();
       expect(getStore().dispatch).to.have.been.calledWith(
         changeFullScreenPreviewOn(true)
       );
-      getStore().getState.restore();
+      getStore().getState.mockRestore();
     });
   });
 
@@ -220,19 +222,19 @@ describe('WebLab', () => {
     let eventStub;
 
     beforeEach(() => {
-      sinon.stub(project, 'autosave');
+      jest.spyOn(project, 'autosave').mockClear().mockImplementation();
       eventStub = {
-        preventDefault: sinon.stub(),
+        preventDefault: jest.fn(),
         returnValue: undefined,
       };
     });
 
     afterEach(() => {
-      project.autosave.restore();
+      project.autosave.mockRestore();
     });
 
     it('triggers an autosave if there are unsaved changes', () => {
-      sinon.stub(project, 'hasOwnerChangedProject').returns(true);
+      jest.spyOn(project, 'hasOwnerChangedProject').mockClear().mockReturnValue(true);
 
       weblab.beforeUnload(eventStub);
 
@@ -240,11 +242,11 @@ describe('WebLab', () => {
       expect(eventStub.preventDefault).to.have.been.calledOnce;
       expect(eventStub.returnValue).to.equal('');
 
-      project.hasOwnerChangedProject.restore();
+      project.hasOwnerChangedProject.mockRestore();
     });
 
     it('deletes event returnValue if there are no unsaved changes', () => {
-      sinon.stub(project, 'hasOwnerChangedProject').returns(false);
+      jest.spyOn(project, 'hasOwnerChangedProject').mockClear().mockReturnValue(false);
       eventStub.returnValue = 'I should be deleted!';
 
       weblab.beforeUnload(eventStub);
@@ -253,7 +255,7 @@ describe('WebLab', () => {
       expect(eventStub.preventDefault).to.not.have.been.calledOnce;
       expect(eventStub.returnValue).to.be.undefined;
 
-      project.hasOwnerChangedProject.restore();
+      project.hasOwnerChangedProject.mockRestore();
     });
   });
 
@@ -261,11 +263,11 @@ describe('WebLab', () => {
     let reportStub;
 
     beforeEach(() => {
-      reportStub = sinon.stub(weblab, 'reportResult');
+      reportStub = jest.spyOn(weblab, 'reportResult').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      reportStub.restore();
+      reportStub.mockRestore();
     });
 
     it('skips validation if validationEnabled is set to false', () => {
@@ -297,14 +299,14 @@ describe('WebLab', () => {
     };
 
     beforeEach(() => {
-      sinon.stub(project, 'autosave').callsArg(0);
-      reportStub = sinon.stub();
+      jest.spyOn(project, 'autosave').mockClear().mockImplementation().mockImplementation((...args) => args[0]());
+      reportStub = jest.fn();
       weblab.studioApp_ = {report: reportStub};
       weblab.level = {id: 123};
     });
 
     afterEach(() => {
-      project.autosave.restore();
+      project.autosave.mockRestore();
     });
 
     it('calls report with success conditions if validated is true', () => {
@@ -317,7 +319,7 @@ describe('WebLab', () => {
     });
 
     it('calls report with failure conditions if validated is false', () => {
-      weblab.studioApp_.displayFeedback = sinon.stub();
+      weblab.studioApp_.displayFeedback = jest.fn();
       weblab.reportResult(true, false);
       expect(reportStub).to.have.been.calledWith({
         ...defaultValues,
@@ -359,11 +361,11 @@ describe('WebLab', () => {
 
   describe('onProjectChanged', () => {
     beforeEach(() => {
-      sinon.stub(project, 'projectChanged');
+      jest.spyOn(project, 'projectChanged').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      project.projectChanged.restore();
+      project.projectChanged.mockRestore();
     });
 
     it('does not call projectChanged if it is readonly', () => {
@@ -382,7 +384,7 @@ describe('WebLab', () => {
   describe('onFilesReady', () => {
     let files;
     beforeEach(() => {
-      sinon.stub(assetListStore, 'reset');
+      jest.spyOn(assetListStore, 'reset').mockClear().mockImplementation();
       files = [
         {
           filename: 'file1.html',
@@ -393,14 +395,14 @@ describe('WebLab', () => {
           versionId: '2',
         },
       ];
-      sinon.stub(assetListStore, 'list').returns(files);
-      sinon.stub(filesApi, 'basePath').returns('stubbedpath');
+      jest.spyOn(assetListStore, 'list').mockClear().mockReturnValue(files);
+      jest.spyOn(filesApi, 'basePath').mockClear().mockReturnValue('stubbedpath');
     });
 
     afterEach(() => {
-      assetListStore.reset.restore();
-      assetListStore.list.restore();
-      filesApi.basePath.restore();
+      assetListStore.reset.mockRestore();
+      assetListStore.list.mockRestore();
+      filesApi.basePath.mockRestore();
     });
 
     it('updates fileEntries and initialFilesVersionId', () => {
@@ -409,7 +411,7 @@ describe('WebLab', () => {
       project.filesVersionId = '1';
       const newFilesVersionId = '2';
       weblab.brambleHost = {
-        syncFiles: sinon.stub(),
+        syncFiles: jest.fn(),
       };
       weblab.onFilesReady(files, newFilesVersionId);
       expect(assetListStore.reset).to.have.been.calledOnceWith(files);

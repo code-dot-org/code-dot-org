@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 import {expect} from '../../../../util/reconfiguredChai';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -13,14 +12,14 @@ describe('The CustomMarshalingInterpreter', () => {
   beforeEach(() => {
     customMarshaler = new CustomMarshaler({});
     interpreter = new CustomMarshalingInterpreter('', customMarshaler);
-    sinon.spy(Interpreter.prototype, 'getProperty');
-    sinon.spy(Interpreter.prototype, 'setProperty');
-    sinon.spy(Interpreter.prototype, 'hasProperty');
+    jest.spyOn(Interpreter.prototype, 'getProperty').mockClear();
+    jest.spyOn(Interpreter.prototype, 'setProperty').mockClear();
+    jest.spyOn(Interpreter.prototype, 'hasProperty').mockClear();
   });
   afterEach(() => {
-    Interpreter.prototype.getProperty.restore();
-    Interpreter.prototype.setProperty.restore();
-    Interpreter.prototype.hasProperty.restore();
+    Interpreter.prototype.getProperty.mockRestore();
+    Interpreter.prototype.setProperty.mockRestore();
+    Interpreter.prototype.hasProperty.mockRestore();
   });
 
   describe('when given an object that should be custom marshaled', () => {
@@ -498,9 +497,9 @@ describe('The CustomMarshalingInterpreter', () => {
     let hooks, globals;
     beforeEach(() => {
       globals = {
-        a: sinon.spy(),
-        b: sinon.spy(),
-        c: sinon.spy(),
+        a: jest.fn(),
+        b: jest.fn(),
+        c: jest.fn(),
       };
     });
 
@@ -620,7 +619,7 @@ describe('The CustomMarshalingInterpreter', () => {
           );
         }
       );
-      sinon.spy(interpreter, 'createPrimitive');
+      jest.spyOn(interpreter, 'createPrimitive').mockClear();
     });
 
     function boundMakeAssertableObj(nativeVar, nativeParentObj, maxDepth) {
@@ -809,10 +808,9 @@ describe('The CustomMarshalingInterpreter', () => {
 
     describe('when given an object that should be custom marshaled', () => {
       beforeEach(() => {
-        sinon
-          .stub(interpreter.customMarshaler, 'shouldCustomMarshalObject')
-          .returns(true);
-        sinon.stub(interpreter.customMarshaler, 'createCustomMarshalObject');
+        jest.spyOn(interpreter.customMarshaler, 'shouldCustomMarshalObject').mockClear()
+          .mockReturnValue(true);
+        jest.spyOn(interpreter.customMarshaler, 'createCustomMarshalObject').mockClear().mockImplementation();
       });
       it("will delegate to the custom marshaler's createCustomMarshalObject", () => {
         const nativeParentObj = {foo: 'bar'};
@@ -829,10 +827,10 @@ describe('The CustomMarshalingInterpreter', () => {
     let options;
     beforeEach(() => {
       options = {
-        add: sinon.spy(),
+        add: jest.fn(),
         a: 3,
       };
-      window.nativeAdd = sinon.spy();
+      window.nativeAdd = jest.fn();
     });
 
     afterEach(() => {
@@ -921,7 +919,7 @@ describe('The CustomMarshalingInterpreter', () => {
 
     it('marshals functions by delegating to CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction', () => {
       CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction =
-        sinon.stub().returns('foo');
+        jest.fn().mockReturnValue('foo');
       expect(evalExpression(`function (a,b) { return a+b; }`)).to.equal('foo');
       expect(
         CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction
@@ -994,7 +992,7 @@ describe('The CustomMarshalingInterpreter', () => {
     describe('when dontMarshal=true', () => {
       runWithOptions('var result = memberFunc(1,2,3)', () => ({
         dontMarshal: true,
-        nativeFunc: sinon.stub().returns(6),
+        nativeFunc: jest.fn().mockReturnValue(6),
         nativeParentObj: {},
         maxDepth: 5,
       }));
@@ -1002,7 +1000,7 @@ describe('The CustomMarshalingInterpreter', () => {
       testTheBasics();
 
       it('will pass along the unmarshaled interpreter arguments to the nativeFunc', () => {
-        const args = options.nativeFunc.firstCall.args;
+        const args = options.nativeFunc.mock.calls[0];
         expect(args.length).to.equal(3);
         expect(args[0]).to.be.an.instanceOf(Interpreter.Primitive);
         expect(args[0].toNumber()).to.equal(1);
@@ -1014,14 +1012,14 @@ describe('The CustomMarshalingInterpreter', () => {
     describe('when dontMarshal=false', () => {
       runWithOptions('var result = memberFunc(1,2,3)', () => ({
         dontMarshal: false,
-        nativeFunc: sinon.stub().returns(6),
+        nativeFunc: jest.fn().mockReturnValue(6),
         nativeParentObj: {},
         maxDepth: 5,
       }));
       testTheBasics();
 
       it('will pass along marshaled arguments to the nativeFunc', () => {
-        const args = options.nativeFunc.firstCall.args;
+        const args = options.nativeFunc.mock.calls[0];
         expect(args.length).to.equal(3);
         expect(args[0]).to.equal(1);
         expect(args[1]).to.equal(2);
@@ -1032,7 +1030,7 @@ describe('The CustomMarshalingInterpreter', () => {
     describe('when dontMarshal=false and nativeIsAsync=true', () => {
       runWithOptions('var result = memberFunc(1,2)', () => ({
         dontMarshal: false,
-        nativeFunc: sinon.stub().returns(6),
+        nativeFunc: jest.fn().mockReturnValue(6),
         nativeParentObj: {},
         maxDepth: 5,
         nativeIsAsync: true,
@@ -1054,24 +1052,24 @@ describe('The CustomMarshalingInterpreter', () => {
       });
 
       it('will automatically tack on an extra callback argument to be passed to the native func', () => {
-        const args = options.nativeFunc.firstCall.args;
+        const args = options.nativeFunc.mock.calls[0];
         expect(args.length).to.equal(3);
       });
 
       it('will pass along marshaled arguments to the nativeFunc', () => {
-        const args = options.nativeFunc.firstCall.args;
+        const args = options.nativeFunc.mock.calls[0];
         expect(args[0]).to.equal(1);
         expect(args[1]).to.equal(2);
       });
 
       it('will make the last marshaled argument a native callback function', () => {
-        const args = options.nativeFunc.firstCall.args;
+        const args = options.nativeFunc.mock.calls[0];
         expect(args[args.length - 1]).to.be.an.instanceOf(Function);
       });
 
       describe('when the native callback function is eventually called', () => {
         it('the result will be populated after the interpreter gets run again', done => {
-          const args = options.nativeFunc.firstCall.args;
+          const args = options.nativeFunc.mock.calls[0];
           window.setTimeout(() => {
             args[args.length - 1]('new value');
             result = interpreter.getProperty(interpreter.global, 'result');
@@ -1102,7 +1100,7 @@ describe('The CustomMarshalingInterpreter', () => {
         `,
         () => ({
           dontMarshal: false,
-          nativeFunc: sinon.stub().returns(6),
+          nativeFunc: jest.fn().mockReturnValue(6),
           nativeParentObj: {},
           maxDepth: 5,
           nativeCallsBackInterpreter: true,
@@ -1112,20 +1110,20 @@ describe('The CustomMarshalingInterpreter', () => {
       testTheBasics();
 
       it('will pass along marshaled arguments to the nativeFunc', () => {
-        const args = options.nativeFunc.firstCall.args;
+        const args = options.nativeFunc.mock.calls[0];
         expect(args[0]).to.equal(1);
         expect(args[1]).to.equal(2);
       });
 
       it('will wrap any interpreter function arguments into a native function', () => {
-        const args = options.nativeFunc.firstCall.args;
+        const args = options.nativeFunc.mock.calls[0];
         expect(args[2]).to.be.an.instanceOf(Function);
       });
 
       describe('when the interpreter function passed to the native func is called', () => {
         let returnToInterpreter;
         beforeEach(() => {
-          returnToInterpreter = options.nativeFunc.firstCall.args[2];
+          returnToInterpreter = options.nativeFunc.mock.calls[0][2];
         });
 
         it('will call the interpreter function the next time the interpreter is run', () => {

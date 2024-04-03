@@ -1,6 +1,5 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {mount} from 'enzyme';
 import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
 import {Provider} from 'react-redux';
@@ -74,8 +73,8 @@ describe('Java Lab Editor Test', () => {
     );
 
     backpackApiStub = sinon.createStubInstance(BackpackClientApi);
-    backpackApiStub.hasBackpack.returns(true);
-    backpackApiStub.getFileList.callsArgWith(1, ['backpackFile.java']);
+    backpackApiStub.hasBackpack.mockReturnValue(true);
+    backpackApiStub.getFileList.mockImplementation((...args) => args[1](['backpackFile.java']));
 
     store.dispatch(setBackpackEnabled(true));
   });
@@ -118,7 +117,7 @@ describe('Java Lab Editor Test', () => {
           .first()
           .props()
           .onClick({
-            preventDefault: sinon.stub(),
+            preventDefault: jest.fn(),
             target: {
               getBoundingClientRect: () => {
                 return {
@@ -160,7 +159,7 @@ describe('Java Lab Editor Test', () => {
           .first()
           .props()
           .onClick({
-            preventDefault: sinon.stub(),
+            preventDefault: jest.fn(),
             target: {
               getBoundingClientRect: () => {
                 return {
@@ -394,7 +393,7 @@ describe('Java Lab Editor Test', () => {
         const javalabCodeMirrors = javalabEditor.editors;
         const firstEditor = Object.values(javalabCodeMirrors)[0];
 
-        const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
+        const dispatchSpy = jest.spyOn(firstEditor, 'dispatch').mockClear();
         store.dispatch(setDisplayTheme(DisplayTheme.DARK));
         expect(dispatchSpy).to.have.been.calledWith({
           effects:
@@ -405,7 +404,7 @@ describe('Java Lab Editor Test', () => {
           effects:
             javalabEditor.editorModeConfigCompartment.reconfigure(lightMode),
         });
-        dispatchSpy.restore();
+        dispatchSpy.mockRestore();
       });
 
       it('toggles between read-only and editable', () => {
@@ -414,7 +413,7 @@ describe('Java Lab Editor Test', () => {
         const javalabCodeMirrors = javalabEditor.editors;
         const firstEditor = Object.values(javalabCodeMirrors)[0];
 
-        const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
+        const dispatchSpy = jest.spyOn(firstEditor, 'dispatch').mockClear();
         store.dispatch(setIsReadOnlyWorkspace(true));
         expect(dispatchSpy).to.have.been.called;
         expect(firstEditor.state.facet(EditorView.editable)).to.be.false;
@@ -425,7 +424,7 @@ describe('Java Lab Editor Test', () => {
         expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
         expect(firstEditor.state.facet(EditorState.readOnly)).to.be.false;
 
-        dispatchSpy.restore();
+        dispatchSpy.mockRestore();
       });
     });
 

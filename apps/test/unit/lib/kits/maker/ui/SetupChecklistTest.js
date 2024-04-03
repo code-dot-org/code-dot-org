@@ -1,6 +1,5 @@
 /** @file Test SetupChecklist component */
 import React from 'react';
-import sinon from 'sinon';
 import {expect} from '../../../../../util/reconfiguredChai';
 import {fireEvent, render, screen} from '@testing-library/react';
 import * as utils from '@cdo/apps/utils';
@@ -24,40 +23,34 @@ const STEP_DELAY_MS = 1;
 
 describe('SetupChecklist', () => {
   beforeEach(() => {
-    sinon.stub(utils, 'reload');
-    sinon.stub(window.console, 'error');
-    sinon
-      .stub(SetupChecker.prototype, 'detectSupportedBrowser')
-      .callsFake(() => Promise.resolve());
-    sinon
-      .stub(SetupChecker.prototype, 'detectBoardPluggedIn')
-      .callsFake(() => Promise.resolve());
-    sinon
-      .stub(SetupChecker.prototype, 'detectCorrectFirmware')
-      .callsFake(() => Promise.resolve());
-    sinon
-      .stub(SetupChecker.prototype, 'detectBoardType')
-      .callsFake(() => Promise.resolve());
-    sinon
-      .stub(SetupChecker.prototype, 'detectComponentsInitialize')
-      .callsFake(() => Promise.resolve());
-    sinon
-      .stub(SetupChecker.prototype, 'celebrate')
-      .callsFake(() => Promise.resolve());
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
+    jest.spyOn(window.console, 'error').mockClear().mockImplementation();
+    jest.spyOn(SetupChecker.prototype, 'detectSupportedBrowser').mockClear()
+      .mockImplementation(() => Promise.resolve());
+    jest.spyOn(SetupChecker.prototype, 'detectBoardPluggedIn').mockClear()
+      .mockImplementation(() => Promise.resolve());
+    jest.spyOn(SetupChecker.prototype, 'detectCorrectFirmware').mockClear()
+      .mockImplementation(() => Promise.resolve());
+    jest.spyOn(SetupChecker.prototype, 'detectBoardType').mockClear()
+      .mockImplementation(() => Promise.resolve());
+    jest.spyOn(SetupChecker.prototype, 'detectComponentsInitialize').mockClear()
+      .mockImplementation(() => Promise.resolve());
+    jest.spyOn(SetupChecker.prototype, 'celebrate').mockClear()
+      .mockImplementation(() => Promise.resolve());
     stubRedux();
     registerReducers({microBit: microBitReducer});
     getStore().dispatch(setMicroBitFirmataUpdatePercent(0));
   });
 
   afterEach(() => {
-    window.console.error.restore();
-    utils.reload.restore();
-    SetupChecker.prototype.detectSupportedBrowser.restore();
-    SetupChecker.prototype.detectBoardPluggedIn.restore();
-    SetupChecker.prototype.detectCorrectFirmware.restore();
-    SetupChecker.prototype.detectBoardType.restore();
-    SetupChecker.prototype.detectComponentsInitialize.restore();
-    SetupChecker.prototype.celebrate.restore();
+    window.console.error.mockRestore();
+    utils.reload.mockRestore();
+    SetupChecker.prototype.detectSupportedBrowser.mockRestore();
+    SetupChecker.prototype.detectBoardPluggedIn.mockRestore();
+    SetupChecker.prototype.detectCorrectFirmware.mockRestore();
+    SetupChecker.prototype.detectBoardType.mockRestore();
+    SetupChecker.prototype.detectComponentsInitialize.mockRestore();
+    SetupChecker.prototype.celebrate.mockRestore();
     restoreRedux();
   });
 
@@ -70,11 +63,11 @@ describe('SetupChecklist', () => {
   }
   describe('Should use WebSerial', () => {
     before(() => {
-      sinon.stub(boardUtils, 'shouldUseWebSerial').returns(true);
+      jest.spyOn(boardUtils, 'shouldUseWebSerial').mockClear().mockReturnValue(true);
     });
 
     after(() => {
-      boardUtils.shouldUseWebSerial.restore();
+      boardUtils.shouldUseWebSerial.mockRestore();
     });
 
     it('renders success', async () => {
@@ -88,11 +81,11 @@ describe('SetupChecklist', () => {
 
     it('sends analytic event when a board is connected on /maker/setup page', async () => {
       const {rerender} = renderDefault();
-      const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
+      const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear().mockImplementation();
       await yieldUntilDoneDetecting(screen, rerender);
       expect(sendEventSpy).to.be.calledOnce;
       expect(sendEventSpy).calledWith('Board Type On Maker Setup Page');
-      analyticsReporter.sendEvent.restore();
+      analyticsReporter.sendEvent.mockRestore();
     });
 
     it('does reload the page on re-detect', async () => {

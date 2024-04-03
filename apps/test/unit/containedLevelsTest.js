@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {assert} from '../util/reconfiguredChai';
-import sinon from 'sinon';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import * as callouts from '@cdo/apps/code-studio/callouts';
 import {
@@ -41,10 +40,9 @@ describe('getContainedLevelResultInfo', () => {
   let attemptedRunButtonClickListener;
 
   beforeEach(() => {
-    sinon
-      .stub(codeStudioLevels, 'getContainedLevelResult')
-      .returns(containedLevelResult);
-    sinon.stub(codeStudioLevels, 'hasValidContainedLevelResult');
+    jest.spyOn(codeStudioLevels, 'getContainedLevelResult').mockClear()
+      .mockReturnValue(containedLevelResult);
+    jest.spyOn(codeStudioLevels, 'hasValidContainedLevelResult').mockClear().mockImplementation();
     stubRedux();
     registerReducers(commonReducers);
 
@@ -63,21 +61,21 @@ describe('getContainedLevelResultInfo', () => {
     );
     document.body.appendChild(gameButtons);
 
-    sinon.stub(codeStudioLevels, 'lockContainedLevelAnswers');
-    sinon.stub(codeStudioLevels, 'registerAnswerChangedFn');
-    sinon.stub(callouts, 'addCallouts');
-    attemptedRunButtonClickListener = sinon.stub();
+    jest.spyOn(codeStudioLevels, 'lockContainedLevelAnswers').mockClear().mockImplementation();
+    jest.spyOn(codeStudioLevels, 'registerAnswerChangedFn').mockClear().mockImplementation();
+    jest.spyOn(callouts, 'addCallouts').mockClear().mockImplementation();
+    attemptedRunButtonClickListener = jest.fn();
     $(window).on('attemptedRunButtonClick', attemptedRunButtonClickListener);
   });
 
   afterEach(() => {
-    codeStudioLevels.lockContainedLevelAnswers.restore();
-    codeStudioLevels.registerAnswerChangedFn.restore();
-    callouts.addCallouts.restore();
+    codeStudioLevels.lockContainedLevelAnswers.mockRestore();
+    codeStudioLevels.registerAnswerChangedFn.mockRestore();
+    callouts.addCallouts.mockRestore();
     $(window).off('attemptedRunButtonClick', attemptedRunButtonClickListener);
 
-    codeStudioLevels.getContainedLevelResult.restore();
-    codeStudioLevels.hasValidContainedLevelResult.restore();
+    codeStudioLevels.getContainedLevelResult.mockRestore();
+    codeStudioLevels.hasValidContainedLevelResult.mockRestore();
     restoreRedux();
     document.body.removeChild(gameButtons);
   });
@@ -135,7 +133,7 @@ describe('getContainedLevelResultInfo', () => {
 
   it('locks contained level answer if valid', () => {
     setHasContainedLevels(true);
-    codeStudioLevels.hasValidContainedLevelResult.returns(true);
+    codeStudioLevels.hasValidContainedLevelResult.mockReturnValue(true);
     initializeContainedLevel();
     assert.isTrue(codeStudioLevels.lockContainedLevelAnswers.calledOnce);
     assert.isFalse($('#runButton').prop('disabled'));
@@ -143,7 +141,7 @@ describe('getContainedLevelResultInfo', () => {
 
   it('disables run button if no valid answer and reenables when answer is valid', () => {
     setHasContainedLevels(true);
-    codeStudioLevels.hasValidContainedLevelResult.returns(false);
+    codeStudioLevels.hasValidContainedLevelResult.mockReturnValue(false);
     initializeContainedLevel();
     const runButton = $('#runButton');
     const gameButtons = $('#gameButtons');
@@ -157,11 +155,11 @@ describe('getContainedLevelResultInfo', () => {
     assert.isTrue(attemptedRunButtonClickListener.calledOnce);
 
     // Change answer to valid, should re-enable run button and unbind click listener.
-    codeStudioLevels.hasValidContainedLevelResult.returns(true);
-    codeStudioLevels.registerAnswerChangedFn.firstCall.args[0]();
+    codeStudioLevels.hasValidContainedLevelResult.mockReturnValue(true);
+    codeStudioLevels.registerAnswerChangedFn.mock.calls[0][0]();
     assert.isFalse(runButton.prop('disabled'));
 
-    attemptedRunButtonClickListener.resetHistory();
+    attemptedRunButtonClickListener.mockReset();
     runButton.click();
     assert.isFalse(attemptedRunButtonClickListener.called);
   });

@@ -3,7 +3,6 @@ import SignInCalloutWrapper from '@cdo/apps/code-studio/components/header/SignIn
 import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
-import sinon from 'sinon';
 import cookies from 'js-cookie';
 
 describe('ViewPopup', () => {
@@ -35,23 +34,23 @@ describe('Check popup does not appear when flag is set', () => {
 describe('Check cookies and session storage appear on click', () => {
   afterEach(() => {
     if (cookies.get.restore) {
-      cookies.get.restore();
+      cookies.get.mockRestore();
     }
     if (cookies.set.restore) {
-      cookies.set.restore();
+      cookies.set.mockRestore();
     }
     if (sessionStorage.getItem.restore) {
-      sessionStorage.getItem.restore();
+      sessionStorage.getItem.mockRestore();
     }
     if (sessionStorage.setItem.restore) {
-      sessionStorage.setItem.restore();
+      sessionStorage.setItem.mockRestore();
     }
   });
 
   it('cookies appear when clicked', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
     wrapper.setState({hideCallout: false});
-    var cookieSetStub = sinon.stub(cookies, 'set');
+    var cookieSetStub = jest.spyOn(cookies, 'set').mockClear().mockImplementation();
     wrapper.find('.uitest-login-callout').simulate('click');
     expect(cookieSetStub).to.have.been.calledWith(
       'hide_signin_callout',
@@ -63,7 +62,7 @@ describe('Check cookies and session storage appear on click', () => {
   it('session storage appears when clicked', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
     wrapper.setState({hideCallout: false});
-    var sessionSetStub = sinon.stub(sessionStorage, 'setItem');
+    var sessionSetStub = jest.spyOn(sessionStorage, 'setItem').mockClear().mockImplementation();
     wrapper.find('.uitest-login-callout').simulate('click');
     expect(sessionSetStub).to.have.been.calledWith(
       'hide_signin_callout',
@@ -73,16 +72,21 @@ describe('Check cookies and session storage appear on click', () => {
 
   it('if cookie is set, callout does not appear', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
-    sinon.stub(cookies, 'get').withArgs('hide_signin_callout').returns('true');
+    jest.spyOn(cookies, 'get').mockClear().mockImplementation((...args) => {
+      if (args[0] === 'hide_signin_callout') {
+        return 'true';
+      }
+    });
     expect(wrapper.html()).to.be.null;
   });
 
   it('if session storage flag is set, callout does not appear', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
-    sinon
-      .stub(sessionStorage, 'getItem')
-      .withArgs('hide_signin_callout')
-      .returns('true');
+    jest.spyOn(sessionStorage, 'getItem').mockClear().mockImplementation((...args) => {
+      if (args[0] === 'hide_signin_callout') {
+        return 'true';
+      }
+    });
     expect(wrapper.html()).to.be.null;
   });
 

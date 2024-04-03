@@ -1,6 +1,5 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import javalabMsg from '@cdo/javalab/locale';
 import {UnconnectedJavalabCaptchaDialog as JavalabCaptchaDialog} from '@cdo/apps/javalab/JavalabCaptchaDialog';
@@ -15,15 +14,17 @@ describe('JavalabCaptchaDialog', () => {
     fetchSpy;
 
   beforeEach(() => {
-    fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy
-      .withArgs('/dashboardapi/v1/users/me/verify_captcha')
-      .returns(Promise.resolve({ok: true}));
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchSpy.mockImplementation((...args) => {
+      if (args[0] === '/dashboardapi/v1/users/me/verify_captcha') {
+        return Promise.resolve({ok: true});
+      }
+    });
 
-    onVerifySpy = sinon.spy();
-    appendNewlineToConsoleLogSpy = sinon.spy();
-    appendOutputLogSpy = sinon.spy();
-    setDialogOpenSpy = sinon.spy();
+    onVerifySpy = jest.fn();
+    appendNewlineToConsoleLogSpy = jest.fn();
+    appendOutputLogSpy = jest.fn();
+    setDialogOpenSpy = jest.fn();
 
     defaultProps = {
       onVerify: onVerifySpy,
@@ -37,7 +38,7 @@ describe('JavalabCaptchaDialog', () => {
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('renders', () => {

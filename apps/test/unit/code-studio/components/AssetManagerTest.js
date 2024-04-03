@@ -1,5 +1,4 @@
 import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import React from 'react';
 import {shallow} from 'enzyme';
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
@@ -20,7 +19,7 @@ describe('AssetManager', () => {
   });
 
   afterEach(() => {
-    xhr.restore();
+    xhr.mockRestore();
   });
 
   describe('componentDidMount', () => {

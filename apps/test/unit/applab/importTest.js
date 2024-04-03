@@ -1,6 +1,5 @@
 /* eslint no-unused-vars: "error" */
-import sinon from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
+import { expect } from '../../util/reconfiguredChai';
 import {allowConsoleErrors} from '../../util/testUtils';
 import designMode from '@cdo/apps/applab/designMode';
 import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
@@ -28,16 +27,16 @@ describe('The applab/import module', () => {
     designModeViz = document.createElement('div');
     designModeViz.id = 'designModeViz';
     document.body.appendChild(designModeViz);
-    sinon.stub(designMode, 'changeScreen');
-    sinon.stub(designMode, 'resetPropertyTab');
-    sinon.stub(assetsApi, 'copyAssets');
+    jest.spyOn(designMode, 'changeScreen').mockClear().mockImplementation();
+    jest.spyOn(designMode, 'resetPropertyTab').mockClear().mockImplementation();
+    jest.spyOn(assetsApi, 'copyAssets').mockClear().mockImplementation();
   });
 
   afterEach(() => {
     designModeViz.parentNode.removeChild(designModeViz);
-    designMode.changeScreen.restore();
-    designMode.resetPropertyTab.restore();
-    assetsApi.copyAssets.restore();
+    designMode.changeScreen.mockRestore();
+    designMode.resetPropertyTab.mockRestore();
+    assetsApi.copyAssets.mockRestore();
   });
 
   function getProjectWithHTML(html) {
@@ -371,8 +370,8 @@ describe('The applab/import module', () => {
           <div class="screen" id="screen2"></div>
         `)
         );
-        onResolve = sinon.spy();
-        onReject = sinon.spy();
+        onResolve = jest.fn();
+        onReject = jest.fn();
         promise = importScreensAndAssets(
           project.id,
           [project.screens[0], project.screens[1]],
@@ -392,7 +391,7 @@ describe('The applab/import module', () => {
       });
 
       it('will import the specified screens', () => {
-        var [, , success] = assetsApi.copyAssets.lastCall.args;
+        var [, , success] = assetsApi.copyAssets.mock.lastCall;
         success();
         expect(designMode.getAllScreenIds()).to.deep.equal([
           'screen1',
@@ -407,7 +406,7 @@ describe('The applab/import module', () => {
       it('will copy the assets that are going to be replaced', () => {
         expect(assetsApi.copyAssets).to.have.been.called;
         var [projectId, allAssetsToReplace] =
-          assetsApi.copyAssets.firstCall.args;
+          assetsApi.copyAssets.mock.calls[0];
         expect(projectId).to.equal(project.id);
         expect(allAssetsToReplace).to.have.members([
           'asset1.png',
@@ -418,7 +417,7 @@ describe('The applab/import module', () => {
       });
 
       it('will call resolve if the operation was successful', () => {
-        var [, , success] = assetsApi.copyAssets.lastCall.args;
+        var [, , success] = assetsApi.copyAssets.mock.lastCall;
         expect(onResolve).not.to.have.been.called;
         success();
         return promise.then(() => {
@@ -428,7 +427,7 @@ describe('The applab/import module', () => {
       });
 
       it('will call reject if the operation was not successful', () => {
-        var [, , , failure] = assetsApi.copyAssets.lastCall.args;
+        var [, , , failure] = assetsApi.copyAssets.mock.lastCall;
         expect(onReject).not.to.have.been.called;
         failure();
         return promise.then(() => {

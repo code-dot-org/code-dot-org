@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {mount} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {
   LockStatus,
   saveLockState,
@@ -50,7 +49,7 @@ describe('LessonLockDataApi', () => {
           },
         },
       };
-      sinon.stub(useFetch, 'useFetch').returns({
+      jest.spyOn(useFetch, 'useFetch').mockClear().mockReturnValue({
         loading: false,
         data: fakeLockStatusData,
       });
@@ -75,13 +74,13 @@ describe('LessonLockDataApi', () => {
           userLevelData: {},
         },
       ]);
-      useFetch.useFetch.restore();
+      useFetch.useFetch.mockRestore();
     });
   });
 
   describe('saveLockState', () => {
     it('calls lock_status api with changes in the lock state', () => {
-      const fetchSpy = sinon.spy(window, 'fetch');
+      const fetchSpy = jest.spyOn(window, 'fetch').mockClear();
       const previousLockState = [
         {
           name: 'Student1',
@@ -127,7 +126,7 @@ describe('LessonLockDataApi', () => {
         }),
       });
 
-      window.fetch.restore();
+      window.fetch.mockRestore();
     });
   });
 

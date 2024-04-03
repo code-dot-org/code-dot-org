@@ -4,7 +4,6 @@ import commonI18n from '@cdo/locale'; // eslint-disable-line no-unused-vars
 import craftI18n from '@cdo/apps/craft/locale'; // eslint-disable-line no-unused-vars
 
 import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
 import * as utils from '@cdo/apps/craft/utils';
 import * as craftRedux from '@cdo/apps/craft/redux';
 
@@ -13,17 +12,16 @@ describe('craft utils', () => {
     const defaultPlayer = 'Alex';
 
     beforeEach(() => {
-      sinon.stub(craftRedux, 'closePlayerSelectionDialog');
+      jest.spyOn(craftRedux, 'closePlayerSelectionDialog').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('closes dialog after selecting a player', () => {
-      sinon
-        .stub(craftRedux, 'openPlayerSelectionDialog')
-        .callsFake(callback => callback('Steve'));
+      jest.spyOn(craftRedux, 'openPlayerSelectionDialog').mockClear()
+        .mockImplementation(callback => callback('Steve'));
 
       utils.handlePlayerSelection(defaultPlayer, () => {});
 
@@ -33,10 +31,9 @@ describe('craft utils', () => {
 
     it('invokes onComplete with selectedPlayer', () => {
       const selectedPlayer = 'Tom';
-      sinon
-        .stub(craftRedux, 'openPlayerSelectionDialog')
-        .callsFake(callback => callback(selectedPlayer));
-      const onCompleteSpy = sinon.spy();
+      jest.spyOn(craftRedux, 'openPlayerSelectionDialog').mockClear()
+        .mockImplementation(callback => callback(selectedPlayer));
+      const onCompleteSpy = jest.fn();
 
       utils.handlePlayerSelection(defaultPlayer, onCompleteSpy);
 
@@ -44,10 +41,9 @@ describe('craft utils', () => {
     });
 
     it('invokes callback with default player if no selectedPlayer is given', () => {
-      sinon
-        .stub(craftRedux, 'openPlayerSelectionDialog')
-        .callsFake(callback => callback(undefined));
-      const onCompleteSpy = sinon.spy();
+      jest.spyOn(craftRedux, 'openPlayerSelectionDialog').mockClear()
+        .mockImplementation(callback => callback(undefined));
+      const onCompleteSpy = jest.fn();
 
       utils.handlePlayerSelection(defaultPlayer, onCompleteSpy);
 

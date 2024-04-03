@@ -1,15 +1,14 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedVocabulariesEditor as VocabulariesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 
 describe('VocabulariesEditor', () => {
   let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;
   beforeEach(() => {
-    addVocabulary = sinon.spy();
-    updateVocabulary = sinon.spy();
-    removeVocabulary = sinon.spy();
+    addVocabulary = jest.fn();
+    updateVocabulary = jest.fn();
+    removeVocabulary = jest.fn();
     defaultProps = {
       vocabularies: [
         {

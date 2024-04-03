@@ -1,7 +1,6 @@
 import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormController';
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
 import {PROGRAM_CSD} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import $ from 'jquery';
@@ -23,7 +22,7 @@ DummyPage3.associatedFields = [];
 
 describe('FormController', () => {
   let form;
-  let onSuccessfulSubmit = sinon.stub();
+  let onSuccessfulSubmit = jest.fn();
   const fakeEndpoint = '/fake/endpoint';
   let defaultProps = {
     apiEndpoint: fakeEndpoint,
@@ -34,7 +33,7 @@ describe('FormController', () => {
     allowPartialSaving: true,
   };
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
 
     DummyPage1 = () => {
       return <div>Page 1</div>;
@@ -244,10 +243,10 @@ describe('FormController', () => {
 
   describe('Saving', () => {
     it('Sends isSaving on save', () => {
-      sinon.spy($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear();
       form = isolateComponent(<FormController {...defaultProps} />);
       clickSaveButton();
-      const serverCalledWith = $.ajax.getCall(0).args[0];
+      const serverCalledWith = $.ajax.mock.calls[0][0];
       expect(JSON.parse(serverCalledWith.data).isSaving).to.equal(true);
     });
 
@@ -270,11 +269,11 @@ describe('FormController', () => {
       expect(form.findAll('Button')[1].props).to.be.disabled;
       expect(form.findAll('Spinner')).to.have.length(0);
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('Shows apps closed message if RP has closed applications', async () => {
-      sinon.stub(window, 'fetch').returns(
+      jest.spyOn(window, 'fetch').mockClear().mockReturnValue(
         Promise.resolve({
           ok: true,
           json: () => {
@@ -287,7 +286,7 @@ describe('FormController', () => {
         school: 'New School',
         program: PROGRAM_CSD,
       };
-      const clock = sinon.useFakeTimers();
+      jest.useFakeTimers();
       form = isolateComponent(
         <FormController {...defaultProps} getInitialData={() => initialData} />
       );
@@ -298,37 +297,41 @@ describe('FormController', () => {
       expect(alerts[0].content()).to.contain(
         'Applications are closed for this region'
       );
-      clock.restore();
+      jest.useRealTimers();
     });
 
     it('hides apps closed message if selecting a different RP with applications open', async () => {
-      const stub = sinon.stub(window, 'fetch');
-      stub.onCall(0).returns(
-        Promise.resolve({
-          ok: true,
-          json: () => {
-            return {id: 1, pl_programs_offered: ['CSD'], are_apps_closed: true};
-          },
-        })
-      );
-      stub.onCall(1).returns(
-        Promise.resolve({
-          ok: true,
-          json: () => {
-            return {
-              id: 2,
-              pl_programs_offered: ['CSD'],
-              are_apps_closed: false,
-            };
-          },
-        })
-      );
+      const stub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+      stub.mockImplementation(() => {
+        if (stub.mock.calls.length === 0) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {id: 1, pl_programs_offered: ['CSD'], are_apps_closed: true};
+            },
+          });
+        }
+      });
+      stub.mockImplementation(() => {
+        if (stub.mock.calls.length === 1) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {
+                id: 2,
+                pl_programs_offered: ['CSD'],
+                are_apps_closed: false,
+              };
+            },
+          });
+        }
+      });
 
       const initialData = {
         school: 'New School',
         program: PROGRAM_CSD,
       };
-      const clock = sinon.useFakeTimers();
+      jest.useFakeTimers();
       form = isolateComponent(
         <FormController {...defaultProps} getInitialData={() => initialData} />
       );
@@ -346,7 +349,7 @@ describe('FormController', () => {
 
       expect(form.findAll('Alert')).to.have.length(0);
 
-      clock.restore();
+      jest.useRealTimers();
     });
 
     it('Shows error message if user tries to save an application that already exists', () => {
@@ -362,7 +365,7 @@ describe('FormController', () => {
       expect(alerts).to.have.length(2);
       expect(alerts[0].content()).to.contain(appAlreadyExistsErrorText);
 
-      server.restore();
+      server.mockRestore();
     });
 
     [
@@ -388,7 +391,7 @@ describe('FormController', () => {
 
         expect(form.findAll('Button')[1].props).to.be.disabled;
 
-        server.restore();
+        server.mockRestore();
       });
     });
 
@@ -416,7 +419,7 @@ describe('FormController', () => {
 
       expect(form.findAll('Button')[1].props).to.be.disabled;
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('Saved message alert disappears after changing pages', () => {
@@ -438,7 +441,7 @@ describe('FormController', () => {
       setPage(1);
       expect(form.findAll('Alert')).to.have.length(0);
 
-      server.restore();
+      server.mockRestore();
     });
   });
 
@@ -466,7 +469,7 @@ describe('FormController', () => {
 
     describe('Submitting', () => {
       const triggerSubmit = () =>
-        form.findOne('form').props.onSubmit({preventDefault: sinon.stub()});
+        form.findOne('form').props.onSubmit({preventDefault: jest.fn()});
 
       const setupValid = (applicationId = undefined) => {
         form = isolateComponent(
@@ -491,7 +494,7 @@ describe('FormController', () => {
         server = sinon.fakeServer.create();
       });
       afterEach(() => {
-        server.restore();
+        server.mockRestore();
       });
 
       it('Does not submit when the last page has errors', () => {
@@ -567,11 +570,11 @@ describe('FormController', () => {
       });
 
       it('Sends isSaving as false on submit', () => {
-        sinon.spy($, 'ajax');
+        jest.spyOn($, 'ajax').mockClear();
         form = isolateComponent(<FormController {...defaultProps} />);
         setPage(2);
         triggerSubmit();
-        const serverCalledWith = $.ajax.getCall(0).args[0];
+        const serverCalledWith = $.ajax.mock.calls[0][0];
         expect(JSON.parse(serverCalledWith.data).isSaving).to.equal(false);
       });
 
@@ -642,9 +645,13 @@ describe('FormController', () => {
         page1Field3: 'will be modified',
       };
 
-      DummyPage1.processPageData = sinon.stub().withArgs(pageData).returns({
-        page1Field2: undefined,
-        page1Field3: 'modified',
+      DummyPage1.processPageData = jest.fn().mockImplementation((...args) => {
+        if (args[0] === pageData) {
+          return {
+            page1Field2: undefined,
+            page1Field3: 'modified',
+          };
+        }
       });
 
       DummyPage1.associatedFields = [

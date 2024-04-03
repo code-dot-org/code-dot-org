@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {
   replaceOnWindow,
   restoreOnWindow,
@@ -228,7 +227,7 @@ describe('studio', function () {
       Studio.interpreter = interpreter;
       Studio.eventHandlers = [];
       Studio.setLevel({});
-      cb = sinon.spy();
+      cb = jest.fn();
       interpreterFunc = Studio.interpreter.createNativeFunction(
         Studio.interpreter.makeNativeMemberFunction({
           nativeFunc: cb,

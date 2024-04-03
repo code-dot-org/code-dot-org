@@ -1,6 +1,5 @@
 import {expect} from '../../../util/reconfiguredChai';
 import {allowConsoleErrors} from '../../../util/testUtils';
-import sinon from 'sinon';
 
 import {
   sources as sourcesApi,
@@ -64,23 +63,23 @@ describe('Applab Screens Reducer', function () {
         lastRequest = req;
       };
 
-      sinon.stub(sourcesApi, 'ajax');
-      sinon.stub(sourcesApi, 'withProjectId').returnsThis();
-      sinon.stub(channelsApi, 'ajax');
-      sinon.stub(channelsApi, 'withProjectId').returnsThis();
-      sinon.stub(assetsApi, 'getFiles');
-      sinon.stub(assetsApi, 'withProjectId').returnsThis();
+      jest.spyOn(sourcesApi, 'ajax').mockClear().mockImplementation();
+      jest.spyOn(sourcesApi, 'withProjectId').mockClear().mockImplementation().returnsThis();
+      jest.spyOn(channelsApi, 'ajax').mockClear().mockImplementation();
+      jest.spyOn(channelsApi, 'withProjectId').mockClear().mockImplementation().returnsThis();
+      jest.spyOn(assetsApi, 'getFiles').mockClear().mockImplementation();
+      jest.spyOn(assetsApi, 'withProjectId').mockClear().mockImplementation().returnsThis();
     });
 
     afterEach(() => {
-      sourcesApi.ajax.restore();
-      sourcesApi.withProjectId.restore();
-      channelsApi.ajax.restore();
-      channelsApi.withProjectId.restore();
-      assetsApi.getFiles.restore();
-      assetsApi.withProjectId.restore();
+      sourcesApi.ajax.mockRestore();
+      sourcesApi.withProjectId.mockRestore();
+      channelsApi.ajax.mockRestore();
+      channelsApi.withProjectId.mockRestore();
+      assetsApi.getFiles.mockRestore();
+      assetsApi.withProjectId.mockRestore();
 
-      xhr.restore();
+      xhr.mockRestore();
     });
 
     describe('when given an invalid url', () => {
@@ -124,10 +123,10 @@ describe('Applab Screens Reducer', function () {
           assetsSuccess,
           existingAssetsSuccess;
         beforeEach(() => {
-          [, , sourcesSuccess, sourcesFail] = sourcesApi.ajax.firstCall.args;
-          [, , channelsSuccess, channelsFail] = channelsApi.ajax.firstCall.args;
-          [existingAssetsSuccess] = assetsApi.getFiles.firstCall.args;
-          [assetsSuccess] = assetsApi.getFiles.secondCall.args;
+          [, , sourcesSuccess, sourcesFail] = sourcesApi.ajax.mock.calls[0];
+          [, , channelsSuccess, channelsFail] = channelsApi.ajax.mock.calls[0];
+          [existingAssetsSuccess] = assetsApi.getFiles.mock.calls[0];
+          [assetsSuccess] = assetsApi.getFiles.mock.calls[1];
         });
 
         describe('and sources fail', () => {
@@ -180,7 +179,7 @@ describe('Applab Screens Reducer', function () {
     var resolve, reject;
 
     beforeEach(() => {
-      sinon.stub(importFuncs, 'importScreensAndAssets').returns(
+      jest.spyOn(importFuncs, 'importScreensAndAssets').mockClear().mockReturnValue(
         new Promise((_resolve, _reject) => {
           resolve = _resolve;
           reject = _reject;
@@ -189,7 +188,7 @@ describe('Applab Screens Reducer', function () {
     });
 
     afterEach(() => {
-      importFuncs.importScreensAndAssets.restore();
+      importFuncs.importScreensAndAssets.mockRestore();
     });
 
     it('will set the isImportingProject flag to true at first', () => {

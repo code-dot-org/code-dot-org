@@ -1,6 +1,5 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedStandardsEditor as StandardsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
 
@@ -26,8 +25,8 @@ const fakeStandards = [
 describe('StandardsEditor', () => {
   let defaultProps, addStandard, removeStandard;
   beforeEach(() => {
-    addStandard = sinon.spy();
-    removeStandard = sinon.spy();
+    addStandard = jest.fn();
+    removeStandard = jest.fn();
     defaultProps = {
       standardType: 'standard',
       standards: fakeStandards,

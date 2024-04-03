@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -47,16 +46,16 @@ describe('RosterDialog', () => {
         rosterProvider={OAuthSectionTypes.google_classroom}
       />
     );
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     wrapper.find('button[id="cancel-button"]').simulate('click');
     assert(analyticsSpy.calledOnce);
-    assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
-    assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+    assert.equal(analyticsSpy.mock.calls[0].firstArg, 'Section Setup Cancelled');
+    assert.deepEqual(analyticsSpy.mock.calls[0].lastArg, {
       oauthSource: OAuthSectionTypes.google_classroom,
     });
 
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 
   it('displays classroom options when no loadError and classrooms exist', () => {
@@ -85,17 +84,17 @@ describe('RosterDialog', () => {
         rosterProvider={OAuthSectionTypes.google_classroom}
       />
     );
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     rosterDialog.instance().setState({selectedId: '2'});
     rosterDialog.instance().importClassroom();
     assert(analyticsSpy.calledOnce);
-    assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
-    assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+    assert.equal(analyticsSpy.mock.calls[0].firstArg, 'Section Setup Completed');
+    assert.deepEqual(analyticsSpy.mock.calls[0].lastArg, {
       oauthSource: OAuthSectionTypes.google_classroom,
     });
 
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 
   it('displays import and redirect button to new section setup', () => {

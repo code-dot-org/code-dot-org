@@ -2,7 +2,6 @@ import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 /* eslint-disable no-restricted-imports */
 import {
   Radio,
@@ -19,7 +18,7 @@ describe('ButtonList', () => {
     let onChangeCallback;
 
     before(() => {
-      onChangeCallback = sinon.spy();
+      onChangeCallback = jest.fn();
 
       radioList = shallow(
         <ButtonList
@@ -65,7 +64,7 @@ describe('ButtonList', () => {
     let onChangeCallback;
 
     beforeEach(() => {
-      onChangeCallback = sinon.spy();
+      onChangeCallback = jest.fn();
 
       checkboxList = shallow(
         <ButtonList
@@ -176,7 +175,7 @@ describe('ButtonList', () => {
     let dogBreedInput;
 
     before(() => {
-      onDogBreedInputChange = sinon.spy();
+      onDogBreedInputChange = jest.fn();
 
       buttonList = shallow(
         <ButtonList
