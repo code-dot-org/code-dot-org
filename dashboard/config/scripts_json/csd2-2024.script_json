@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "b5e30a50-5108-43e7-982a-02b97bb466bb",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Want to teach CS Discoveries, but not sure where to start? Code.org has released a professional learning module all about CSD's Unit 2: Web Development. This two-hour, self-paced module will teach you what you need to know to teach CSD. Check it out at this link!",
+          "link": "https://studio.code.org/courses/self-paced-pl-csd-unit2-2023",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Unit 2 Self-Paced PL"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -16,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-28 18:25:57 UTC",
+    "serialized_at": "2024-04-02 17:31:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
