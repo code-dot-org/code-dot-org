@@ -16,7 +16,7 @@ const CompareModelsDialog: React.FunctionComponent<{onClose: () => void}> = ({
   return (
     <AccessibleDialog onClose={onClose} modalId={styles.modelComparisonDialog}>
       <div>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <div className={styles.headerContainer}>
           <Heading3>Compare Models</Heading3>
         </div>
         <button type="button" onClick={onClose} className={styles.xCloseButton}>

@@ -50,6 +50,11 @@
   width: 100%;
 }
 
+.headerContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .xCloseButton {
   // Clear default button styles
   background: none;
