@@ -16,7 +16,14 @@ export const MODEL_CARD_FIELDS_AND_LABELS: [keyof ModelCardInfo, string][] = [
   ['intendedUse', 'Intended Use'],
   ['limitationsAndWarnings', 'Limitations and Warnings'],
   ['testingAndEvaluation', 'Testing and Evaluation'],
-  ['exampleTopics', 'Example Topics'],
+];
+
+export const TECHNICAL_INFO_FIELDS: string[] = [
+  'Model name',
+  'Training Data',
+  'System Prompt',
+  'Temperature',
+  'Retrieval Used',
 ];
 
 export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {

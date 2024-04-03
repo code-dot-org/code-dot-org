@@ -1,6 +1,9 @@
 import React from 'react';
 import ModelCardRow from './ModelCardRow';
-import {MODEL_CARD_FIELDS_AND_LABELS} from '@cdo/apps/aichat/views/modelCustomization/constants';
+import {
+  MODEL_CARD_FIELDS_AND_LABELS,
+  TECHNICAL_INFO_FIELDS,
+} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './presentation-view.module.scss';
@@ -30,6 +33,21 @@ const PresentationView: React.FunctionComponent = () => {
     'vial-circle-check',
   ];
 
+  const TECHNICAL_INFO_VALUES: (string | number | boolean)[] = [
+    'Model A', // from json
+    'Model A Training Data', // from json
+    currentAiCustomizations.systemPrompt,
+    currentAiCustomizations.temperature,
+    currentAiCustomizations.retrievalContexts.length > 0,
+  ];
+
+  const getTechnicalInfo = () => {
+    const technicalInfo = TECHNICAL_INFO_FIELDS.map((field, index) => {
+      return `${field}: ${TECHNICAL_INFO_VALUES[index]}`;
+    });
+    return technicalInfo;
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
       <Heading4 className={moduleStyles.modelCardTitle}>
@@ -46,10 +64,16 @@ const PresentationView: React.FunctionComponent = () => {
         );
       })}
       <ModelCardRow
+        keyName="examplePrompts"
+        title="Example Prompts and Topics"
+        titleIcon="message-lines"
+        expandedContent={modelCardInfo.exampleTopics}
+      />
+      <ModelCardRow
         keyName="technicalInfo"
         title="Technical Info"
         titleIcon="screwdriver-wrench"
-        expandedContent="Example TEXT - Technical Info"
+        expandedContent={getTechnicalInfo()}
       />
     </div>
   );
