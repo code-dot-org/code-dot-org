@@ -8,9 +8,8 @@ import {
 import {UpdateContext} from './UpdateContext';
 
 const ModelCardFields: React.FunctionComponent = () => {
-  const {setModelCardPropertyValue, aichatSettings: aiCustomizations} =
-    useContext(UpdateContext);
-  const modelCardInfo = aiCustomizations.initialCustomizations.modelCardInfo;
+  const {setModelCardPropertyValue, aichatSettings} = useContext(UpdateContext);
+  const modelCardInfo = aichatSettings.initialCustomizations.modelCardInfo;
   const exampleTopics = modelCardInfo.exampleTopics;
   return (
     <div className={moduleStyles['model-card-fields']}>
