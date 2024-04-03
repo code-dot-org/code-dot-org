@@ -15,13 +15,16 @@ require_relative '../../../dashboard/config/environment'
 DRY_RUN = !((ARGV.find {|arg| arg.casecmp('-dryrun')}).nil?)
 
 def update_reference_guide_format(unit_group_name, course_version_id, reference_guide_link)
+  # Reference guide formats
+  # in the old unversioned framework - /docs/concepts/patterns/random-list-access/
+  # in the versioned framework - /courses/csd-2024/guides/animation-tab
   if !reference_guide_link.starts_with?("/docs/") && !reference_guide_link.starts_with?("/courses/")
     return reference_guide_link
   end
 
   reference_guide_key = reference_guide_link.split("/").reject(&:blank?).map(&:strip).last
-  reference_guide = ReferenceGuide.find_by(key: reference_guide_key, course_version_id: course_version_id)
 
+  reference_guide = ReferenceGuide.find_by(key: reference_guide_key, course_version_id: course_version_id)
   if reference_guide.nil?
     ref_guide_missing_err = "Unable to find reference guide with key #{reference_guide_key}"
     puts ref_guide_missing_err
@@ -52,15 +55,12 @@ def backfill_level_reference_guides
         level_updates = false
 
         unless level.reference_links.nil?
-          # create new array and have each existing ref go through above method
-          # update reference_link with new array
           new_references = level.reference_links.map {|rl| update_reference_guide_format(unit_gp, course_ver_id, rl)}
           level.reference_links = new_references
           level_updates = true
         end
 
         unless level.map_reference.nil?
-          # directly update map_reference property, which is a string
           level.map_reference = update_reference_guide_format(unit_gp, course_ver_id, level.map_reference)
           level_updates = true
         end
