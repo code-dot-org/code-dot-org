@@ -1,7 +1,7 @@
-import {useCDOIDEContext} from '@cdoide/cdo-ide-context';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import {sortFilesByName} from '@cdoide/utils';
 import React from 'react';
-import './styles/file-nav.css';
+import './styles/fileNav.css';
 
 export const FileNav = React.memo(() => {
   const {project, closeFile, setActiveFile} = useCDOIDEContext();

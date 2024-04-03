@@ -1,7 +1,7 @@
-import {useCDOIDEContext} from '@cdoide/cdo-ide-context';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import React from 'react';
 
-import './styles/side-bar.css';
+import './styles/sideBar.css';
 
 const defaultCallback = () => window.alert('Not implemented');
 

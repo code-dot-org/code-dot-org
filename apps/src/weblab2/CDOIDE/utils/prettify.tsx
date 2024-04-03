@@ -13,7 +13,7 @@ import cssParser from 'prettier/plugins/postcss';
 import estreeParser from 'prettier/plugins/estree';
 import babelParser from 'prettier/plugins/babel';
 
-import {editableFileType} from '@cdoide/utils/editable-file-type';
+import {editableFileType} from '@cdoide/utils/editableFileType';
 
 export const prettify = async (val: string, language: string) => {
   if (!editableFileType(language)) {

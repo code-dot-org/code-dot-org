@@ -1,10 +1,10 @@
 import {DebuggerWrapper} from '@cdoide/debugger/DebuggerWrapper';
-import {RunBar} from '@cdoide/run-bar';
+import {RunBar} from '@cdoide/RunBar';
 import {ProjectFileType} from '@cdoide/types';
 import React, {useState} from 'react';
 import Sandbox from 'websandbox';
 
-import './styles/js-preview.css';
+import './styles/jsPreview.css';
 
 type JSPreviewProps = {
   file: ProjectFileType;

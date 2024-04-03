@@ -2,7 +2,7 @@ import {ProjectFileType} from '@cdoide/types';
 import {getErrorMessage} from '@cdoide/utils';
 import React from 'react';
 
-import './styles/json-preview.css';
+import './styles/jsonPreview.css';
 
 type JSONPreviewProps = {
   file: ProjectFileType;

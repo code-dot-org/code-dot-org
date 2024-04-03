@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/run-bar.css';
+import './styles/runBar.css';
 
 const defaultCallback = () => window.alert('Not implemented');
 

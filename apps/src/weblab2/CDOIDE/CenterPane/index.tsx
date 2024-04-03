@@ -1,9 +1,9 @@
-import {useCDOIDEContext} from '@cdoide/cdo-ide-context';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import React from 'react';
 
 import InternalEditor from './DisabledEditor';
 import {FileNav} from './FileNav';
-import './styles/center-pane.css';
+import './styles/centerPane.css';
 //import InternalEditor from './InternalEditor';
 
 export const CenterPane = React.memo(() => {

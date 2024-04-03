@@ -13,12 +13,12 @@ import {javascript as js} from '@codemirror/lang-javascript';
 //import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
 
-import {useCDOIDEContext} from '@cdoide/cdo-ide-context';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import {editableFileType, prettify} from '@cdoide/utils';
 import {useEmptyEditor} from '@cdoide/hooks';
 import {EditorTheme} from '@cdoide/types';
 
-import './styles/internal-editor.css';
+import './styles/internalEditor.css';
 
 const codeMirrorLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),

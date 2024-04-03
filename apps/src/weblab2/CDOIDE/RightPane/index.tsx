@@ -1,4 +1,4 @@
-import {useCDOIDEContext} from '@cdoide/cdo-ide-context';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import {ProjectFileType, ConfigType, PreviewComponent} from '@cdoide/types';
 import {previewFileType} from '@cdoide/utils';
 import React, {useState, useEffect} from 'react';
@@ -6,7 +6,7 @@ import React, {useState, useEffect} from 'react';
 import {HTMLPreview} from './HTMLPreview';
 import {JSONPreview} from './JSONPreview';
 import {JSPreview} from './JSPreview';
-import './styles/right-pane.css';
+import './styles/rightPane.css';
 
 const fileTypeMap: {
   [key: string]: PreviewComponent;

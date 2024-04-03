@@ -1,8 +1,8 @@
-import {useCDOIDEContext} from '@cdoide/cdo-ide-context';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import React from 'react';
 
 import {Debugger} from './Debugger';
-import './styles/debugger-wrapper.css';
+import './styles/debuggerWrapper.css';
 
 type DebuggerWrapperProps = React.PropsWithChildren & {
   contentFrameHeight?: string;

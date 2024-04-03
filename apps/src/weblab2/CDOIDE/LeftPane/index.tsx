@@ -1,10 +1,10 @@
-import {useCDOIDEContext} from '@cdoide/cdo-ide-context';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import React, {useState} from 'react';
 
-import {Instructions, Files, Search} from './nav-bar-components';
 import {NavBar} from './NavBar';
+import {Instructions, Files, Search} from './navBarComponents';
 import {SideBar} from './SideBar';
-import './styles/left-pane.css';
+import './styles/leftPane.css';
 
 const dispatch: Record<string, React.FunctionComponent> = {
   Instructions,

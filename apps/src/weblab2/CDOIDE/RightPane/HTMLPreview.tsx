@@ -1,4 +1,4 @@
-import {useCDOIDEContext} from '@cdoide/cdo-ide-context';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import {ProjectFileType} from '@cdoide/types';
 import {findFolder} from '@cdoide/utils';
 import React, {useRef, useMemo} from 'react';

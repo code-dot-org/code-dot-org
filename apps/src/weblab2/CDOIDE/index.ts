@@ -1,5 +1,5 @@
 export * from './CDOIDE';
 export * from './types';
-export * from './cdo-ide-context';
-export * from './cdo-ide-context/types';
+export * from './cdoIDEContext';
+export * from './cdoIDEContext/types';
 export * from './utils';

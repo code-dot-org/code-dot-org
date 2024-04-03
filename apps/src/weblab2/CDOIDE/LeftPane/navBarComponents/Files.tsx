@@ -2,7 +2,7 @@ import {
   useCDOIDEContext,
   getNextFileId,
   getNextFolderId,
-} from '@cdoide/cdo-ide-context';
+} from '@cdoide/cdoIDEContext';
 import {DEFAULT_FOLDER_ID} from '@cdoide/constants';
 import {ProjectType, FileId, FolderId} from '@cdoide/types';
 import {findFolder, getErrorMessage} from '@cdoide/utils';

@@ -2,11 +2,11 @@ import {
   CDOIDEContextProvider,
   projectReducer,
   useProjectUtilities,
-} from '@cdoide/cdo-ide-context';
-import {CenterPane} from '@cdoide/center-pane';
-import {LeftPane} from '@cdoide/left-pane';
-import {RightPane} from '@cdoide/right-pane';
-import {RunBar} from '@cdoide/run-bar';
+} from '@cdoide/cdoIDEContext';
+import {CenterPane} from '@cdoide/CenterPane';
+import {LeftPane} from '@cdoide/LeftPane';
+import {RightPane} from '@cdoide/RightPane';
+import {RunBar} from '@cdoide/RunBar';
 import {
   ProjectType,
   ConfigType,
@@ -14,7 +14,7 @@ import {
   SetConfigFunction,
 } from '@cdoide/types';
 import React, {useRef, useReducer, useEffect} from 'react';
-import './styles/cdo-ide.css';
+import './styles/cdoIDE.css';
 
 type CDOIDEProps = {
   project: ProjectType;
@@ -24,21 +24,21 @@ type CDOIDEProps = {
 };
 
 type PaneKey = {
-  key: keyof typeof configVisDefaults;
+  key: keyof typeof configVisibilityDefaults;
 };
 
-const configVisDefaults = {
+const configVisibilityDefaults = {
   showPreview: true,
   showEditor: true,
   showLeftNav: true,
   showRunBar: false,
 };
 
-const getConfigVisVal = (
-  key: keyof typeof configVisDefaults,
+const getConfigVisibilityVal = (
+  key: keyof typeof configVisibilityDefaults,
   config: ConfigType
 ) => {
-  return config[key] ?? configVisDefaults[key] ?? false;
+  return config[key] ?? configVisibilityDefaults[key] ?? false;
 };
 
 const paneWidths: (PaneKey & {width: string})[] = [
@@ -86,14 +86,14 @@ export const CDOIDE = React.memo(
 
     const outerGridRows = ['auto'];
     paneHeights.forEach(pair => {
-      if (getConfigVisVal(pair.key, config)) {
+      if (getConfigVisibilityVal(pair.key, config)) {
         outerGridRows.push(pair.height);
       }
     });
 
     const innerGridCols: string[] = [];
     paneWidths.forEach(pair => {
-      if (getConfigVisVal(pair.key, config)) {
+      if (getConfigVisibilityVal(pair.key, config)) {
         innerGridCols.push(pair.width);
       }
     });
@@ -117,19 +117,19 @@ export const CDOIDE = React.memo(
               gridTemplateColumns: innerGridCols.join(' '),
             }}
           >
-            {getConfigVisVal('showLeftNav', config) && (
+            {getConfigVisibilityVal('showLeftNav', config) && (
               <div className="cdo-ide-area">
                 <LeftPane />
               </div>
             )}
-            {getConfigVisVal('showEditor', config) && (
+            {getConfigVisibilityVal('showEditor', config) && (
               <div className="cdo-ide-area">
                 <CenterPane />
               </div>
             )}
-            {getConfigVisVal('showPreview', config) && <RightPane />}
+            {getConfigVisibilityVal('showPreview', config) && <RightPane />}
           </div>
-          {getConfigVisVal('showRunBar', config) && <RunBar />}
+          {getConfigVisibilityVal('showRunBar', config) && <RunBar />}
         </div>
       </CDOIDEContextProvider>
     );
