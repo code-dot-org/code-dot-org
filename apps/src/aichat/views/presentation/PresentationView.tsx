@@ -4,8 +4,25 @@ import {MODEL_CARD_FIELDS_AND_LABELS} from '@cdo/apps/aichat/views/modelCustomiz
 import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './presentation-view.module.scss';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 const PresentationView: React.FunctionComponent = () => {
+  const currentAiCustomizations = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
+  const modelCardInfo = {...currentAiCustomizations.modelCardInfo};
+  // const exampleTopicsArray = modelCardInfo.exampleTopics;
+  const exampleTopicsArray = [
+    'Example Topic 1',
+    'Example Topic 2',
+    'Example Topic 3',
+  ];
+  modelCardInfo.exampleTopics = exampleTopicsArray;
+  console.log(
+    'exampleTopicsArray outside of function',
+    modelCardInfo.exampleTopics
+  );
+
   const modelCardIcons = [
     'memo',
     'bullseye-pointer',
@@ -21,22 +38,14 @@ const PresentationView: React.FunctionComponent = () => {
         </Heading4>
         {MODEL_CARD_FIELDS_AND_LABELS.map(([property, label], index) => {
           return (
-            <>
-              <ModelCardRow
-                keyName={property}
-                title={label}
-                titleIcon={modelCardIcons[index]}
-                expandedContent={`Example TEXT ${label}`}
-              />
-            </>
+            <ModelCardRow
+              keyName={property}
+              title={label}
+              titleIcon={modelCardIcons[index]}
+              expandedContent={modelCardInfo[property]}
+            />
           );
         })}
-        <ModelCardRow
-          keyName="examplePrompts"
-          title="Example Prompts and Topics"
-          titleIcon="message-lines"
-          expandedContent="Example TEXT - Example Prompts and Topics Every paragraph you write should include clear opening, supporting, and closing sentences. The opening sentence introduces the topic of the paragraph or signals a change of direction."
-        />
         <ModelCardRow
           keyName="technicalInfo"
           title="Technical Info"
