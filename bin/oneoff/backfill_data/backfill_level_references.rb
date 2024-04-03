@@ -15,6 +15,10 @@ require_relative '../../../dashboard/config/environment'
 DRY_RUN = !((ARGV.find {|arg| arg.casecmp('-dryrun')}).nil?)
 
 def update_reference_guide_format(unit_group_name, course_version_id, reference_guide_link)
+  if !reference_guide_link.starts_with?("/docs/") && !reference_guide_link.starts_with?("/courses/")
+    return reference_guide_link
+  end
+
   reference_guide_key = reference_guide_link.split("/").reject(&:blank?).map(&:strip).last
   reference_guide = ReferenceGuide.find_by(key: reference_guide_key, course_version_id: course_version_id)
 
