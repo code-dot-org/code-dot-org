@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import Tabs from '@cdo/apps/componentLibrary/tabs';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const valuesMap = {};
 const onSelectedTabChange = (name, value) => (valuesMap[name] = value);
@@ -23,6 +23,7 @@ describe('Design System - Tabs', () => {
           {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
         ]}
         onChange={value => onSelectedTabChange('test1', value)}
+        name={'test1'}
       />
     );
 
@@ -53,6 +54,7 @@ describe('Design System - Tabs', () => {
           {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
         ]}
         onChange={onChange}
+        name={'test2'}
       />
     );
 
@@ -109,6 +111,7 @@ describe('Design System - Tabs', () => {
           },
         ]}
         onChange={onChange}
+        name={'test3'}
       />
     );
 
