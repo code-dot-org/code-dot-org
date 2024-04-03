@@ -189,7 +189,6 @@ const WEBPACK_ALIASES = {
   '@cdo/static': p('static'),
   repl: p('src/noop'),
   '@cdo/storybook': p('.storybook'),
-  serialport: false,
 };
 
 // Our base webpack config, from which our other webpack configs are derived,
@@ -210,7 +209,10 @@ const WEBPACK_BASE_CONFIG = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: {...nodePolyfillConfig.resolve.fallback},
-    alias: WEBPACK_ALIASES,
+    alias: {
+      ...WEBPACK_ALIASES,
+      serialport: false,
+    },
   },
   module: {
     rules: [
