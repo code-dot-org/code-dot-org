@@ -105,7 +105,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
     sectionCode = i18n.loginTypeGoogleClassroom();
   } else if (rowData.loginType === SectionLoginType.lti_v1) {
-    sectionCode = i18n.loginTypeLti();
+    sectionCode = rowData.loginTypeName;
   } else {
     sectionCode = rowData.code;
   }
