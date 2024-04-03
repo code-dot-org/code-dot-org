@@ -60,18 +60,14 @@ export default function LessonProgressColumnHeader({
   }
   return (
     <div className={styles.lessonHeaderCellContainer}>
-      <div
-        className={classNames(
-          styles.gridBox,
-          styles.lessonHeaderCell,
-          styles.pointerMouse
-        )}
+      <button
+        className={styles.lessonHeaderCellInteractive}
         data-tip
         data-for={getTooltipId(lesson)}
         onClick={() => addExpandedLesson(lesson)}
         aria-label={lesson.title}
         aria-expanded={false}
-        role="button"
+        type="button"
         tabIndex={0}
       >
         <LessonTitleTooltip lesson={lesson} />
@@ -81,7 +77,7 @@ export default function LessonProgressColumnHeader({
           title={i18n.expand()}
         />
         {lesson.relative_position}
-      </div>
+      </button>
     </div>
   );
 }

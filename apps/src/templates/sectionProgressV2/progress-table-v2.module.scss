@@ -5,6 +5,17 @@
   background-color: white;
 }
 
+@mixin remove-default-button-styles {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 0;
+  display: inline-block;
+}
+
 .progressTableV2 {
   width: 100%;
   font-size: 16px;
@@ -129,15 +140,33 @@ $level-cell-width: 52;
   }
 
   &HeaderCell {
+    border: 1px solid $neutral_dark40;
+    margin: 0;
     height: 42px;
     line-height: 42px;
-    min-width:47px;
-    border-bottom: 1px solid $neutral_dark40;
-    border-right: 1px solid $neutral_dark40;
+    min-width: 52px;
     margin-bottom: 32px;
     text-align: center;
     background-color: $light_gray_50;
   }
+
+  &HeaderCellInteractive {
+    @include remove-default-button-styles;
+    border: 1px solid $neutral_dark40;
+    margin: 0;
+    height: 44px;
+    line-height: 44px;
+    min-width: 54px;
+    margin-bottom: 32px;
+    text-align: center;
+    background-color: $light_gray_50;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
   
   &HeaderTooltip {
     height: 18px;
