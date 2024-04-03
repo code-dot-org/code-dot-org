@@ -218,15 +218,13 @@ module Cdo
         super unless lazy_load?
       end
 
-      protected
-
-      def loaded_files
+      protected def loaded_files
         @loaded_files ||= Set.new
       end
 
       # Get the set of valid locales for a given base locale code. For example,
       # for a base of `:pt`, we expect valid locales `:pt`, `:"pt-BR"`, `:"en-US"`, and `en`
-      def valid_locales_for(base_locale)
+      protected def valid_locales_for(base_locale)
         @valid_locales ||= {}
 
         unless @valid_locales[base_locale]
@@ -242,7 +240,7 @@ module Cdo
       # The original method has been modified to also load files for the current locale's fallbacks,
       # like loading "en-US" files for the "en" locale and vice versa.
       # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L164-L171
-      def filenames_for_current_locale
+      protected def filenames_for_current_locale
         valid_locales = valid_locales_for(::I18n.locale)
         # Excludes already loaded i18n files to prevent them from being reloaded during locale switching.
         # For example, for the "de-DE" locale, the i18n fallbacks are "de", "en", and "en-US".
@@ -262,7 +260,7 @@ module Cdo
       # the details to the console, because the error isn't all that critical
       # to catch and the new loading logic includes more weird edge cases.
       # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L173-L181
-      def assert_file_named_correctly!(file, translations)
+      protected def assert_file_named_correctly!(file, translations)
         expected_locale = ::I18n::Backend::LocaleExtractor.locale_from_path(file)
         return if expected_locale.nil?
 

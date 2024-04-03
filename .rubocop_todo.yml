@@ -184,12 +184,6 @@ Rails/TimeZone:
 Security/MarshalLoad:
   Enabled: false
 
-# Offense count: 52
-# Configuration parameters: EnforcedStyle, AllowModifiersOnSymbols.
-# SupportedStyles: inline, group
-Style/AccessModifierDeclarations:
-  Enabled: false
-
 # Offense count: 151
 Style/ClassVars:
   Enabled: false
