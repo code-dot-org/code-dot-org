@@ -7,8 +7,9 @@ import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import Button from '@cdo/apps/templates/Button';
 
+const SELECT_A_SCHOOL = 'selectASchool';
 const SEARCH_DEFAULTS = [
-  {value: 'selectASchool', text: i18n.selectASchool()},
+  {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
   {value: 'clickToAdd', text: i18n.schoolClickToAdd()},
   {value: 'noSchoolSetting', text: i18n.noSchoolSetting()},
 ];
@@ -41,6 +42,15 @@ export default function SchoolZipSearch({fieldNames, zip}) {
     text: `${school.name}`,
   });
 
+  const sortSchoolsByName = schools => {
+    const sortedSchools = schools.sort((a, b) => {
+      if (a.text < b.text) {
+        return -1;
+      }
+    });
+    return sortedSchools;
+  };
+
   return (
     <div>
       {!inputManually && (
@@ -54,7 +64,7 @@ export default function SchoolZipSearch({fieldNames, zip}) {
           <SimpleDropdown
             className={style.dropdown}
             name={fieldNames.ncesSchoolId}
-            items={SEARCH_DEFAULTS.concat(dropdownSchools)}
+            items={SEARCH_DEFAULTS.concat(sortSchoolsByName(dropdownSchools))}
             selectedValue={selectedSchoolNcesId}
             onChange={onSchoolChange}
             size="m"
@@ -69,7 +79,7 @@ export default function SchoolZipSearch({fieldNames, zip}) {
             styleAsText={true}
             onClick={() => {
               setInputManually(false);
-              setSelectedSchoolNcesId('selectASchool');
+              setSelectedSchoolNcesId(SELECT_A_SCHOOL);
             }}
           />
         </div>
