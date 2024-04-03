@@ -177,7 +177,7 @@ export default class MusicLibrary {
     foldersCopy = foldersCopy.filter(
       (folder: SoundFolder) =>
         folder.type === folderType &&
-        ((!this.currentPackId && folder.restricted) ||
+        ((!this.currentPackId && !folder.restricted) ||
           (this.currentPackId &&
             (!folder.restricted || this.currentPackId === folder.id)))
     );
