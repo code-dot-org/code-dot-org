@@ -22,9 +22,7 @@ module I18n
             I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
-          private
-
-          def distribute_localization(language, file_path)
+          private def distribute_localization(language, file_path)
             crowdin_translations = I18nScriptUtils.parse_file(file_path)
 
             i18n_data = I18nScriptUtils.to_dashboard_i18n_data(language[:locale_s], MARKETING_ANNOUNCEMENTS_TYPE, crowdin_translations)

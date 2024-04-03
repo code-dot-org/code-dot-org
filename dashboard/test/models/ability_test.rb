@@ -958,9 +958,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(student).can? :chat_completion, :openai_chat
   end
 
-  private
-
-  def put_students_in_section_and_code_review_group(students, section)
+  private def put_students_in_section_and_code_review_group(students, section)
     code_review_group = create :code_review_group, section: section
     students.each do |student|
       follower = create :follower, student_user: student, section: section

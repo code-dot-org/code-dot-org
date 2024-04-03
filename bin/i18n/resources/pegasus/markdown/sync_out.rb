@@ -21,9 +21,7 @@ module I18n
             I18nScriptUtils.remove_empty_dir crowdin_locale_dir
           end
 
-          private
-
-          def distribute(locale, crowdin_locale_resource_dir)
+          private def distribute(locale, crowdin_locale_resource_dir)
             Dir.glob(File.join(crowdin_locale_resource_dir, '**/*.md')) do |crowdin_file_path|
               crowdin_file_subpath = crowdin_file_path.delete_prefix(File.join(crowdin_locale_resource_dir, '/'))
 

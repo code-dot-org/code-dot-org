@@ -9,7 +9,7 @@ $(document).ready(function () {
   );
 
   ReactDOM.render(
-    <MiniMusicPlayer projects={channelIds} libraryName="default" />,
+    <MiniMusicPlayer projects={channelIds} libraryName="launch2024" />,
     document.getElementById('musiclab-container')
   );
 });

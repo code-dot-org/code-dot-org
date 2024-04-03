@@ -45,23 +45,21 @@ module I18n
         clear_worksheet_data
       end
 
-      private
-
-      def update_worksheet_data(key, file_name, translation)
+      private def update_worksheet_data(key, file_name, translation)
         worksheet_data << [key, file_name, translation]
       end
 
-      def clear_worksheet_data
+      private def clear_worksheet_data
         remove_instance_variable(:@worksheet_data)
       end
 
       # @param translation [String] a translation line
       # @return [true, false]
-      def contains_invalid_syntax?(translation)
+      private def contains_invalid_syntax?(translation)
         INVALID_TRANSLATION_PATTERNS.any? {|malformed_i18n_regexp| translation.match?(malformed_i18n_regexp)}
       end
 
-      def collect_malformed_translations(key, file_name, translation)
+      private def collect_malformed_translations(key, file_name, translation)
         return if translation.nil? || translation.empty?
 
         case translation

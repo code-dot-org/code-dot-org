@@ -20,6 +20,7 @@ import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import MusicPlayer from '../player/MusicPlayer';
 import useUpdatePlayer from './hooks/useUpdatePlayer';
 import AdvancedControls from './AdvancedControls';
+import PackDialog from './PackDialog';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -33,6 +34,7 @@ interface MusicLabViewProps {
   clearCode: () => void;
   validator: MusicValidator;
   player: MusicPlayer;
+  allowPackSelection: boolean;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -47,6 +49,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   clearCode,
   validator,
   player,
+  allowPackSelection,
 }) => {
   useUpdatePlayer(player);
   const dispatch = useAppDispatch();
@@ -177,6 +180,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
+      {allowPackSelection && <PackDialog player={player} />}
+
       {showInstructions &&
         instructionsPosition === InstructionsPosition.TOP &&
         renderInstructions(InstructionsPosition.TOP)}
@@ -198,6 +203,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 onClickUndo={undo}
                 onClickRedo={redo}
                 clearCode={clearCode}
+                allowPackSelection={allowPackSelection}
               />
             }
           >

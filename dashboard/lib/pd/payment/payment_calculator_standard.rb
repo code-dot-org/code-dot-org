@@ -9,12 +9,10 @@ module Pd::Payment
     PAYMENT_VENUE_SMALL_PER_DAY = 400
     PAYMENT_VENUE_LARGE_PER_DAY = 450
 
-    protected
-
     # Calculates payment amounts.
     # @param workshop_summary [WorkshopSummary] calculated workshop details that go into payment amount calculation.
     # @return [Hash{String => Numeric}] Map of payment parts (e.g. :food) to their dollar amounts.
-    def calculate_payment_amounts(workshop_summary)
+    protected def calculate_payment_amounts(workshop_summary)
       plp_multiplier = workshop_summary.plp&.urban? ? PLP_URBAN_MULTIPLIER : 1
 
       venue_payment_per_day = workshop_summary.num_qualified_teachers > VENUE_SIZE_TEACHER_THRESHOLD ?

@@ -27,17 +27,15 @@ module I18n
             write_to_yml(PARAMETER_NAMES_TYPE, parameter_strings)
           end
 
-          private
-
-          def variable_strings
+          private def variable_strings
             @variable_strings ||= {}
           end
 
-          def parameter_strings
+          private def parameter_strings
             @parameter_strings ||= {}
           end
 
-          def get_all_placeholder_text_types(blocks)
+          private def get_all_placeholder_text_types(blocks)
             results = {}
 
             results.merge! get_placeholder_texts(blocks, 'text', %w[TEXT])
@@ -47,7 +45,7 @@ module I18n
             results
           end
 
-          def get_placeholder_texts(document, block_type, title_names)
+          private def get_placeholder_texts(document, block_type, title_names)
             results = {}
 
             document.xpath("//block[@type=\"#{block_type}\"]").each do |block|
@@ -67,7 +65,7 @@ module I18n
             results
           end
 
-          def get_i18n_strings(level)
+          private def get_i18n_strings(level)
             i18n_strings = {}
 
             case level
@@ -182,6 +180,15 @@ module I18n
                 end
               end
 
+              # Panels
+              if level.is_a? Panels
+                panels = level.panels
+                i18n_strings['panels'] = Hash.new unless panels.empty?
+                panels.each do |panel|
+                  i18n_strings['panels'][panel['key']] = panel['text']
+                end
+              end
+
               level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
               blocks = level_xml.xpath('//blocks').first
               if blocks
@@ -275,7 +282,7 @@ module I18n
             i18n_strings.delete_if {|_, value| value.blank?}
           end
 
-          def write_to_yml(type, strings)
+          private def write_to_yml(type, strings)
             FileUtils.mkdir_p(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH)
 
             File.open(File.join(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH, "#{type}.yml"), 'w') do |file|
@@ -292,7 +299,7 @@ module I18n
             end
           end
 
-          def prepare_level_content
+          private def prepare_level_content
             block_category_strings = {}
             progression_strings = {}
 
@@ -354,7 +361,7 @@ module I18n
             write_to_yml(PROGRESSIONS_TYPE, progression_strings)
           end
 
-          def prepare_project_content
+          private def prepare_project_content
             project_content_file = File.join(I18N_SOURCE_DIR_PATH, 'projects.json')
             project_strings = {}
 
@@ -386,13 +393,14 @@ module I18n
             redact_json_file(project_content_file)
           end
 
-          def select_redactable(i18n_strings)
+          private def select_redactable(i18n_strings)
             redactable_content = %w(
               authored_hints
               long_instructions
               short_instructions
               teacher_markdown
               validations
+              panels
             )
 
             redactable = i18n_strings.select do |key, _|
@@ -406,7 +414,7 @@ module I18n
             redactable.delete_if {|_k, v| v.blank?}
           end
 
-          def redact_json_file(source_path)
+          private def redact_json_file(source_path)
             source_data = JSON.load_file(source_path)
             return if source_data.blank?
 
