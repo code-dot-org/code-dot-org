@@ -231,6 +231,12 @@ export default function RubricSettings({
     setStatusAll(STATUS_ALL.EVALUATION_PENDING);
     const url = `/rubrics/${rubricId}/run_ai_evaluations_for_all`;
     const params = {section_id: sectionId};
+    const eventName = EVENTS.TA_RUBRIC_SECTION_AI_EVAL;
+    analyticsReporter.sendEvent(eventName, {
+      ...(reportingData || {}),
+      rubricId: rubricId,
+      sectionId: sectionId,
+    });
     fetch(url, {
       method: 'POST',
       headers: {
