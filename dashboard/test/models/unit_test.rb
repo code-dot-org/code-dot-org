@@ -7,7 +7,7 @@ class UnitTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    setup_units
+    seed_deprecated_unit_fixtures
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)

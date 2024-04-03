@@ -133,7 +133,7 @@ class ActiveSupport::TestCase
   include ActiveSupport::Testing::TransactionalTestCase
   include CaptureQueries
 
-  def setup_units
+  def seed_deprecated_unit_fixtures
     # Some of the functionality we're testing here relies on Scripts with
     # certain hardcoded names. In the old fixture-based model, this data was
     # all provided; in the new factory-based model, we need to do a little
