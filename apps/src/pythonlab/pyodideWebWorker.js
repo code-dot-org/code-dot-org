@@ -4,7 +4,11 @@ async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
     indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full',
   });
-  await self.pyodide.loadPackage(['numpy']);
+  //await self.pyodide.loadPackage(['numpy', 'matplotlib']);
+  await self.pyodide.loadPackage('micropip');
+  const micropip = self.pyodide.pyimport('micropip');
+  await micropip.install('numpy');
+  await micropip.install('matplotlib');
   self.pyodide.setStdout({
     batched: msg => {
       self.postMessage({type: 'sysout', message: msg, id: 'none'});
