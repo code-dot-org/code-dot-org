@@ -17,7 +17,6 @@ import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/Delet
 import FrozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/FrozenProjectInfoDialog';
 import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {filter} from 'lodash';
 import {DEPRECATED_LABS} from '@cdo/apps/constants';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
