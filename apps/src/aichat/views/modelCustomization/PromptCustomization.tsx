@@ -2,6 +2,7 @@ import React, {useCallback} from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import {
   setAiCustomizationProperty,
   updateAiCustomization,
@@ -102,9 +103,13 @@ const PromptCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={allFieldsDisabled} onClick={onUpdate}>
-          Update
-        </button>
+        <Button
+          text="Update"
+          disabled={allFieldsDisabled}
+          iconLeft={{iconName: 'edit'}}
+          onClick={onUpdate}
+          className={styles.updateButton}
+        />
       </div>
     </div>
   );

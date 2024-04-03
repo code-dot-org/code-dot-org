@@ -266,9 +266,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       params: valid_params.delete('email'), as: :json
   end
 
-  private
-
-  def capture_csta_args_for_request(request_params)
+  private def capture_csta_args_for_request(request_params)
     captured_args = nil
     Services::CSTAEnrollment.expects(:submit).with do |args|
       captured_args = args; true
@@ -284,7 +282,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     captured_args
   end
 
-  def valid_params
+  private def valid_params
     {
       'firstName' => 'test',
       'lastName' => 'test',
@@ -299,7 +297,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     }
   end
 
-  def fake_response
+  private def fake_response
     mock.tap do |fake|
       fake.stubs(:code).returns('200')
       fake.stubs(:body).returns('')

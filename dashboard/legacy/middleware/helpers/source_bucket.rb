@@ -131,9 +131,7 @@ class SourceBucket < BucketHelper
     0
   end
 
-  private
-
-  def library_animation?(animation_props)
+  private def library_animation?(animation_props)
     source_url = animation_props['sourceUrl']
     source_url && source_url =~ /^#{'/api/v1/animation-library'}/
   end

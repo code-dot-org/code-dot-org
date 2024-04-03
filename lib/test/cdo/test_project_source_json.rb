@@ -206,9 +206,7 @@ class ProjectSourceJsonTest < Minitest::Test
     refute psj.animation_manifest?
   end
 
-  private
-
-  def assert_equal_json(expected_json, actual_json)
+  private def assert_equal_json(expected_json, actual_json)
     pretty_expected = JSON.pretty_generate JSON.parse expected_json
     pretty_actual = JSON.pretty_generate JSON.parse actual_json
     assert_equal pretty_expected, pretty_actual
