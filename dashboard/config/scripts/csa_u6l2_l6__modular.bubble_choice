@@ -1,6 +1,6 @@
 name 'CSA U6L2-L6_-modular'
-display_name 'Practice: Checking String objects for certain criteria'
-description 'Practice using the `substring()` method to check if `String` objects meet a criteria.'
+display_name 'Practice: Counting instances of a criteria in String objects'
+description 'Practice using the `substring()` method and a loop count how many times a criteria is met in a `String`.'
 
 sublevels
 level 'CSA U6L2-L6a_-modular'

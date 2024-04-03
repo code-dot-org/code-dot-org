@@ -51,6 +51,8 @@ function SectionProgressV2({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
       sectionId: sectionId,
       unitId: scriptId,
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight,
     });
   }, [scriptId, sectionId]);
 

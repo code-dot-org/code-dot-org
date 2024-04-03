@@ -496,21 +496,19 @@ module Pd
       assert_includes(e.message, 'Submission all: Entire batch failed. Aborting')
     end
 
-    private
-
-    def get_form_id
+    private def get_form_id
       @next_form_id = (@next_form_id || FORM_ID) + 1
     end
 
-    def get_submission_id
+    private def get_submission_id
       @next_submission_id = (@next_submission_id || SUBMISSION_ID) + 1
     end
 
-    def generate_unique_key
+    private def generate_unique_key
       SecureRandom.hex(10)
     end
 
-    def placeholder_params
+    private def placeholder_params
       {
         form_id: get_form_id,
         unique_key: generate_unique_key,
@@ -518,11 +516,11 @@ module Pd
       }
     end
 
-    def params_with_answers
+    private def params_with_answers
       placeholder_params.merge(answers: FAKE_ANSWERS.to_json)
     end
 
-    def expect_get_and_process_answers(form_id:, answers:, processed_answers:)
+    private def expect_get_and_process_answers(form_id:, answers:, processed_answers:)
       DummyForm.expects(:get_questions).with(form_id).returns(
         mock do |_mock_survey_questions|
           expects(:process_answers).

@@ -77,27 +77,25 @@ class I18nSync
     end
   end
 
-  private
-
   attr_reader :options
 
-  def sync_in
+  private def sync_in
     I18n::SyncIn.perform
   end
 
-  def sync_up
+  private def sync_up
     I18n::SyncUp.perform(options)
   end
 
-  def sync_down
+  private def sync_down
     I18n::SyncDown.perform(options)
   end
 
-  def sync_out
+  private def sync_out
     I18n::SyncOut.perform(options)
   end
 
-  def parse_options(args)
+  private def parse_options(args)
     options = {}
     opt_parser = nil
 
@@ -142,7 +140,7 @@ class I18nSync
     options
   end
 
-  def should_i(question)
+  private def should_i(question)
     return true if @options[:yes]
 
     loop do
@@ -162,7 +160,7 @@ class I18nSync
     end
   end
 
-  def return_to_staging_branch(force: false)
+  private def return_to_staging_branch(force: false)
     case GitUtils.current_branch
     when "staging"
       # If we're already on staging, we don't need to bother

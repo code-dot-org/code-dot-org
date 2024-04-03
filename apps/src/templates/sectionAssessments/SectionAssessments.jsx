@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {CSVLink} from 'react-csv';
+import {connect} from 'react-redux';
+
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
@@ -11,28 +16,26 @@ import {
   setStudentId,
   ASSESSMENT_FEEDBACK_OPTION_ID,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import {connect} from 'react-redux';
+import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
+import i18n from '@cdo/locale';
+
 import {h3Style} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
-import i18n from '@cdo/locale';
-import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
-import MultipleChoiceAssessmentsOverviewContainer from './MultipleChoiceAssessmentsOverviewContainer';
-import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
-import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
+
+import AssessmentSelector from './AssessmentSelector';
+import FeedbackDownload from './FeedbackDownload';
+import FreeResponseDetailsDialog from './FreeResponseDetailsDialog';
 import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContainer';
 import FreeResponsesSurveyContainer from './FreeResponsesSurveyContainer';
-import FreeResponseDetailsDialog from './FreeResponseDetailsDialog';
-import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
-import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
 import MatchAssessmentsOverviewContainer from './MatchAssessmentsOverviewContainer';
-import MatchDetailsDialog from './MatchDetailsDialog';
 import MatchByStudentContainer from './MatchByStudentContainer';
-import AssessmentSelector from './AssessmentSelector';
+import MatchDetailsDialog from './MatchDetailsDialog';
+import MultipleChoiceAssessmentsOverviewContainer from './MultipleChoiceAssessmentsOverviewContainer';
+import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
+import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
+import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
 import StudentSelector from './StudentSelector';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {CSVLink} from 'react-csv';
-import FeedbackDownload from './FeedbackDownload';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},

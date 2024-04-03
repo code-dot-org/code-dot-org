@@ -2,6 +2,7 @@
  * @overview UI component: An animated SVG metronome.
  */
 import $ from 'jquery';
+
 var markup = require('./NetSimMetronome.html.ejs');
 
 /**

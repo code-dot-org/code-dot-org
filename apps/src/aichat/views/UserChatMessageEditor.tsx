@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
 import aichatI18n from '../locale';
 import {AichatState, submitChatMessage} from '../redux/aichatRedux';
@@ -26,21 +26,22 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
   }, [userMessage, dispatch, isWaitingForChatResponse]);
 
   return (
-    <div className={moduleStyles.UserChatMessageEditor}>
+    <div className={moduleStyles.editorContainer}>
       <textarea
         className={moduleStyles.textArea}
         placeholder={aichatI18n.userChatMessagePlaceholder()}
         onChange={e => setUserMessage(e.target.value)}
         value={userMessage}
       />
-      <Button
-        key="submit"
-        text="Submit"
-        icon="arrow-up"
-        onClick={() => handleSubmit()}
-        color={Button.ButtonColor.brandSecondaryDefault}
-        disabled={isWaitingForChatResponse}
-      />
+
+      <div className={moduleStyles.centerSingleItemContainer}>
+        <Button
+          isIconOnly
+          icon={{iconName: 'paper-plane'}}
+          onClick={handleSubmit}
+          disabled={isWaitingForChatResponse}
+        />
+      </div>
     </div>
   );
 };

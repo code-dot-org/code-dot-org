@@ -2,7 +2,7 @@ require 'cdo/google/drive'
 
 # Squash an unhelpful warning that's causing a Honeybadger error when we use
 # this module in a cronjob, because the cronjob helper sends an HB error if
-# any unexpected output to STDERR occurs.
+# any unexpected output to $stderr occurs.
 # see https://github.com/nahi/httpclient/issues/252#issuecomment-302427338
 # If we end up using Google::Sheets very broadly, it might be better for this
 # monkeypatch to live in our bin/cronjob helper instead.

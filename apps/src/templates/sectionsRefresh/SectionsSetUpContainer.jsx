@@ -1,25 +1,28 @@
-import React, {useState, useCallback, useRef} from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import i18n from '@cdo/locale';
-import SingleSectionSetUp from './SingleSectionSetUp';
-import CurriculumQuickAssign from './CurriculumQuickAssign';
-import AdvancedSettingToggles from './AdvancedSettingToggles';
-import Button from '@cdo/apps/templates/Button';
-import moduleStyles from './sections-refresh.module.scss';
+import PropTypes from 'prop-types';
+import React, {useState, useCallback, useRef} from 'react';
+
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {navigateToHref} from '@cdo/apps/utils';
+import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import {
   BodyTwoText,
   Heading1,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
+import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {showVideoDialog} from '@cdo/apps/code-studio/videos';
+import Button from '@cdo/apps/templates/Button';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import {navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import AdvancedSettingToggles from './AdvancedSettingToggles';
 import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import CurriculumQuickAssign from './CurriculumQuickAssign';
+import SingleSectionSetUp from './SingleSectionSetUp';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -304,6 +307,10 @@ export default function SectionsSetUpContainer({
   };
 
   const renderCoteacherSection = () => {
+    const isCoTeacherManagementDisabled =
+      sections[0].primaryInstructor?.ltiRosterSyncEnabled === true &&
+      sections[0].loginType === 'ltiV1';
+
     return renderExpandableSection(
       'uitest-expandable-coteacher',
       () => (
@@ -325,6 +332,7 @@ export default function SectionsSetUpContainer({
           sectionMetricInformation={getCoteacherMetricInfoFromSection(
             sections[0]
           )}
+          disabled={isCoTeacherManagementDisabled}
         />
       ),
       isCoteacherOpen,
