@@ -1,9 +1,9 @@
 import {DEFAULT_FOLDER_ID} from '@cdoide/constants';
-import {ProjectFolderType} from '@cdoide/types';
+import {ProjectFolder} from '@cdoide/types';
 
 export const findFolder = (
   folderLineage: string[] = [],
-  options: {folders: ProjectFolderType[]; required?: boolean}
+  options: {folders: ProjectFolder[]; required?: boolean}
 ) => {
   return folderLineage.reduce((parentId: string, name: string) => {
     if (!name.length) {

@@ -6,7 +6,6 @@ import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';
 import {css} from '@codemirror/lang-css';
-import {json} from '@codemirror/lang-json';
 import {javascript as js} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 //import prettier from 'prettier/standalone';
@@ -17,7 +16,6 @@ const codeMirrorLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
   js: js(),
-  json: json(),
 };
 
 const Editor = () => {

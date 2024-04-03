@@ -1,18 +1,18 @@
-import {MultiFileSource, ProjectFileType} from '@cdo/lab2/types';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
 export type {
-  ProjectFolderType,
-  ProjectFileType,
   FileId,
   FolderId,
-} from '@cdo/labs2/types';
+  ProjectFolder,
+  ProjectFile,
+} from '@cdo/apps/lab2/types';
 
 export type LeftNavElement = {
   icon: string;
   component: string;
 };
 
-export type PreviewComponent = (args: {file: ProjectFileType}) => JSX.Element;
+export type PreviewComponent = (args: {file: ProjectFile}) => JSX.Element;
 export type EditorComponent = () => JSX.Element;
 export type EmptyEditorComponent = () => JSX.Element;
 

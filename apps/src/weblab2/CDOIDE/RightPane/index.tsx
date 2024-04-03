@@ -1,5 +1,5 @@
 import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import {ProjectFileType, ConfigType, PreviewComponent} from '@cdoide/types';
+import {ProjectFile, ConfigType, PreviewComponent} from '@cdoide/types';
 import {previewFileType} from '@cdoide/utils';
 import React, {useState, useEffect} from 'react';
 
@@ -17,7 +17,7 @@ const fileTypeMap: {
 };
 
 const getPreviewComponent = (
-  previewFile: ProjectFileType | undefined,
+  previewFile: ProjectFile | undefined,
   previewComponents: ConfigType['PreviewComponents'] = {}
 ) => {
   if (!previewFile) {
@@ -38,14 +38,14 @@ export const RightPane = () => {
     project: {files},
     config: {previewFileTypes, PreviewComponents},
   } = useCDOIDEContext();
-  const [previewFile, setPreviewFile] = useState<ProjectFileType | undefined>(
+  const [previewFile, setPreviewFile] = useState<ProjectFile | undefined>(
     Object.values(files).find(
-      (f: ProjectFileType) => f.name === 'index.html' && !f.folderId
+      (f: ProjectFile) => f.name === 'index.html' && !f.folderId
     )
   );
 
-  const activeFile: ProjectFileType | undefined = Object.values(files).find(
-    (f: ProjectFileType) => f.active && previewFileType(f.language)
+  const activeFile: ProjectFile | undefined = Object.values(files).find(
+    (f: ProjectFile) => f.active && previewFileType(f.language)
   ); //*/
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export const RightPane = () => {
   useEffect(() => {
     if (previewFile && !files[previewFile.id]) {
       setPreviewFile(
-        Object.values(files).find((f: ProjectFileType) =>
+        Object.values(files).find((f: ProjectFile) =>
           previewFileType(f.language, previewFileTypes)
         )
       );
@@ -71,13 +71,13 @@ export const RightPane = () => {
       <select
         onChange={e => {
           const newFile = Object.values(files).find(
-            (f: ProjectFileType) => f.id === e.target.value
+            (f: ProjectFile) => f.id === e.target.value
           );
           setPreviewFile(newFile);
         }}
         value={previewFile?.id}
       >
-        {(Object.values(files) as ProjectFileType[])
+        {(Object.values(files) as ProjectFile[])
           .sort()
           .filter(f => previewFileType(f.language, previewFileTypes))
           .map(file => (

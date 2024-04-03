@@ -1,10 +1,10 @@
 import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import {ProjectFileType} from '@cdoide/types';
+import {ProjectFile} from '@cdoide/types';
 import {findFolder} from '@cdoide/utils';
 import React, {useRef, useMemo} from 'react';
 
 type HTMLPreviewProps = {
-  file: ProjectFileType;
+  file: ProjectFile;
 };
 
 export const HTMLPreview = ({file}: HTMLPreviewProps) => {
@@ -20,7 +20,7 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
 
     const contents = file.contents.replace(
       new RegExp('<link rel="stylesheet" href="([^"]+)"\\s*/>', 'g'),
-      (_, styleURI) => {
+      (_: unknown, styleURI: string) => {
         // this is tedious. Break apart the style URI and look up all folders to get the final folder ID.
         // THEN look for a file with the same name and folder and that's what we need.
 

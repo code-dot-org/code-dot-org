@@ -1,7 +1,7 @@
 import {
   ProjectType,
-  ProjectFileType,
-  ProjectFolderType,
+  ProjectFile,
+  ProjectFolder,
   ReducerAction,
 } from '@cdoide/types';
 import {useMemo} from 'react';
@@ -27,17 +27,14 @@ import {
 
 const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
 
-export const getNextFileId = (files: ProjectFileType[]) =>
+export const getNextFileId = (files: ProjectFile[]) =>
   String(Math.max(...files.map(f => Number(f.id))) + 1);
 
-export const getNextFolderId = (folders: ProjectFolderType[]) =>
+export const getNextFolderId = (folders: ProjectFolder[]) =>
   String(Math.max(...folders.map(f => Number(f.id))) + 1);
 
-export const findSubFolders = (
-  parentId: string,
-  folders: ProjectFolderType[]
-) =>
-  folders.reduce((bucket, f: ProjectFolderType) => {
+export const findSubFolders = (parentId: string, folders: ProjectFolder[]) =>
+  folders.reduce((bucket, f: ProjectFolder) => {
     if (f.parentId === parentId) {
       bucket.push(f.id, ...findSubFolders(f.id, folders));
     }
@@ -46,13 +43,13 @@ export const findSubFolders = (
 
 export const findFiles = (
   folderId: string,
-  files: ProjectFileType[],
-  folders?: ProjectFolderType[]
+  files: ProjectFile[],
+  folders?: ProjectFolder[]
 ) => {
   const folderIds = new Set(
     folders ? [folderId, ...findSubFolders(folderId, folders)] : [folderId]
   );
-  return files.reduce((bucket, f: ProjectFileType) => {
+  return files.reduce((bucket, f: ProjectFile) => {
     if (folderIds.has(f.folderId)) {
       bucket.push(f.id);
     }

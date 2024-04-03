@@ -1,11 +1,11 @@
-import {ProjectFileType} from '@cdoide/types';
+import {ProjectFile} from '@cdoide/types';
 import {getErrorMessage} from '@cdoide/utils';
 import React from 'react';
 
 import './styles/jsonPreview.css';
 
 type JSONPreviewProps = {
-  file: ProjectFileType;
+  file: ProjectFile;
 };
 
 export const JSONPreview = ({file}: JSONPreviewProps) => {
