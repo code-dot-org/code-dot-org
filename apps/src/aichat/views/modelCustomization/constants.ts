@@ -1,4 +1,3 @@
-import { digitalRead } from '@cdo/apps/lib/kits/maker/api';
 import {
   AiCustomizations,
   LevelAiCustomizations,
