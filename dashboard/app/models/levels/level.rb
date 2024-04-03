@@ -748,6 +748,23 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_panels
+    if should_localize?
+      panels_clone = panels.map(&:clone)
+      panels_clone.each do |panel|
+        panel['text'] = I18n.t(
+          panel["key"],
+          scope: [:data, :panels, name],
+          default: panel["text"],
+          smart: true
+        )
+      end
+      panels_clone
+    else
+      panels
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -816,6 +833,7 @@ class Level < ApplicationRecord
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
     # Localized properties
     properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
+    properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized
   end
 
