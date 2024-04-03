@@ -23,7 +23,10 @@ const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
       <LessonTitleTooltip lesson={lesson} />
       {!lesson.lockable && lesson.relative_position}
       {lesson.lockable && (
-        <FontAwesome icon={allLocked ? 'lock' : 'lock-open'} />
+        <FontAwesome
+          icon={allLocked ? 'lock' : 'lock-open'}
+          title={i18n.locked()}
+        />
       )}
     </div>
   );
@@ -31,6 +34,7 @@ const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
 
 const getSkeletonLessonHeader = lessonId => (
   <div
+    aria-label={i18n.loadingLesson()}
     className={classNames(
       styles.lessonHeaderCell,
       styles.lessonHeaderCellContainer
