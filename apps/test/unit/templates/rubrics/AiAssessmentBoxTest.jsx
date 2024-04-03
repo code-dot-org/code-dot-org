@@ -1,8 +1,10 @@
 import {mount} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
-import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
+
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
+import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
