@@ -1,11 +1,14 @@
 /** @file Tests for NetSimLogPanel */
 import $ from 'jquery';
+
 import {assert} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
+
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var EncodingType = require('@cdo/apps/netsim/NetSimConstants').EncodingType;
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
+
+var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 /** ascii to binary */
 function to_b(ascii) {

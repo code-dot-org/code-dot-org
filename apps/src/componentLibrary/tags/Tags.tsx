@@ -1,8 +1,10 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+
 import Tag, {TagProps} from './_Tag';
+
 import moduleStyles from './tags.module.scss';
 
 export interface TagsProps {

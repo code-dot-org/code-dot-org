@@ -2,6 +2,7 @@ import React, {useState, useCallback} from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
@@ -10,19 +11,14 @@ import {
   setAiCustomizationProperty,
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
-import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [newRetrievalContext, setNewRetrievalContext] = useState('');
 
   const dispatch = useAppDispatch();
-
-  const {visibility} = useAppSelector(
-    state =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
-  ).retrievalContexts;
+  const visibility = useAppSelector(
+    state => state.aichat.fieldVisibilities.retrievalContexts
+  );
   const {retrievalContexts} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
@@ -77,13 +73,13 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           />
         </div>
         <div className={styles.addItemContainer}>
-          <button
-            type="button"
+          <Button
+            text="Add"
+            type="secondary"
             onClick={onAdd}
+            iconLeft={{iconName: 'plus'}}
             disabled={!newRetrievalContext || isDisabled(visibility)}
-          >
-            Add
-          </button>
+          />
         </div>
         {retrievalContexts.map((message, index) => {
           return (
@@ -105,13 +101,13 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <button
-          type="button"
-          disabled={isDisabled(visibility)}
+        <Button
+          text="Update"
           onClick={onUpdate}
-        >
-          Update
-        </button>
+          iconLeft={{iconName: 'edit'}}
+          className={modelCustomizationStyles.updateButton}
+          disabled={isDisabled(visibility)}
+        />
       </div>
     </div>
   );

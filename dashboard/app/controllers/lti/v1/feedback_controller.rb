@@ -28,9 +28,7 @@ module Lti
         end
       end
 
-      private
-
-      def feedback_params
+      private def feedback_params
         params.require(:lti_feedback).permit(:satisfied)
       end
     end
