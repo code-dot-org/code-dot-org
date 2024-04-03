@@ -16231,3 +16231,25 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        k5aisandbox-2024:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: What is AI
+          lesson_groups: {}
+          name: k5aisandbox-2024
+          title: K5 AI Sandbox
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        k5gamedesignsandbox-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: k5gamedesignsandbox-2024
+          title: K5 Game Design Sandbox
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
