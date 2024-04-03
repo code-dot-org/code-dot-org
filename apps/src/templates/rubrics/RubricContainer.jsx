@@ -21,7 +21,7 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
 
 // intro.js
-import 'intro.js/introjs.css';
+import './introjs.scss';
 import {Steps} from 'intro.js-react';
 
 export default function RubricContainer({
@@ -279,8 +279,8 @@ export default function RubricContainer({
               exitOnOverlayClick: false,
               hidePrev: true,
               nextLabel: tourButtonLabel,
-              tooltipClass: style.productTourToolTip,
-              buttonClass: style.productTourButtons,
+              //tooltipClass: style.productTourToolTip,
+              //buttonClass: style.productTourButtons,
               showBullets: false,
               showStepNumbers: true,
             }}
