@@ -6,6 +6,10 @@ class LevelsControllerTest < ActionController::TestCase
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
+  setup_all do
+    seed_deprecated_unit_fixtures
+  end
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
@@ -83,7 +87,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => [], "usesProjects" => false}, body)
+    assert_equal({"id" => level.id, "levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => [], "usesProjects" => false}, body)
   end
 
   test "should get filtered levels with just page param" do

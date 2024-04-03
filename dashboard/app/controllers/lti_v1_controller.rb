@@ -330,6 +330,7 @@ class LtiV1Controller < ApplicationController
       metadata: metadata,
     )
 
+    result[:course_name] = nrps_response.dig(:context, :title)
     @lti_section_sync_result = result
     @lms_name = lti_integration.platform_name
 

@@ -29,6 +29,10 @@ Dashboard::Application.configure do
 
     # Version of your assets, change this if you want to expire all your assets.
     config.assets.version = '1.0'
+
+    # Avoid loading all i18n files up front, which can significantly slow down initialization.
+    # Instead, it only loads i18n files that belong to the current locale.
+    config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
   end
 
   config.assets.quiet = true

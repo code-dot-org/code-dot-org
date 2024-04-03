@@ -8,7 +8,7 @@ import color from '@cdo/apps/util/color';
 import {getStore} from '../../redux';
 import fontConstants from '@cdo/apps/fontConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export const styles = {
   button: {
@@ -73,13 +73,21 @@ class SchoolInfoConfirmationDialog extends Component {
   }
 
   closeModal = () => {
-    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED);
+    analyticsReporter.sendEvent(
+      EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED,
+      {},
+      PLATFORMS.BOTH
+    );
     this.setState({isOpen: false});
     this.props.onClose();
   };
 
   handleClickYes = () => {
-    analyticsReporter.sendEvent(EVENTS.CONFIRM_SCHOOL_CLICKED);
+    analyticsReporter.sendEvent(
+      EVENTS.CONFIRM_SCHOOL_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
     const {authTokenName, authTokenValue} = this.props.scriptData;
     const formData = new FormData();
     formData.append(authTokenName, authTokenValue);
@@ -97,12 +105,20 @@ class SchoolInfoConfirmationDialog extends Component {
   };
 
   handleClickUpdate = () => {
-    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_CLICKED);
+    analyticsReporter.sendEvent(
+      EVENTS.UPDATE_SCHOOL_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
     this.setState({showSchoolInterstitial: true});
   };
 
   renderInitialContent = () => {
-    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN);
+    analyticsReporter.sendEvent(
+      EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN,
+      {},
+      PLATFORMS.BOTH
+    );
     const {schoolName} = this.state;
     const isRTL = getStore().getState()?.isRtl;
     return (

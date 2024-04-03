@@ -23,6 +23,10 @@ export enum InstructionsPosition {
 }
 
 export interface MusicState {
+  /** Current music library name */
+  libraryName: string | null;
+  /** Current pack ID, if a specific restricted pack from the current music library is selected */
+  packId: string | null;
   /** If the song is currently playing */
   isPlaying: boolean;
   /** The current 1-based playhead position, scaled to measures */
@@ -72,6 +76,8 @@ export interface MusicState {
 }
 
 const initialState: MusicState = {
+  libraryName: null,
+  packId: null,
   isPlaying: false,
   currentPlayheadPosition: 0,
   selectedBlockId: undefined,
@@ -106,6 +112,12 @@ const musicSlice = createSlice({
   name: 'music',
   initialState,
   reducers: {
+    setLibraryName: (state, action: PayloadAction<string>) => {
+      state.libraryName = action.payload;
+    },
+    setPackId: (state, action: PayloadAction<string>) => {
+      state.packId = action.payload;
+    },
     setIsPlaying: (state, action: PayloadAction<boolean>) => {
       state.isPlaying = action.payload;
     },
@@ -288,6 +300,8 @@ export const getCurrentlyPlayingBlockIds = (state: {
 registerReducers({music: musicSlice.reducer});
 
 export const {
+  setLibraryName,
+  setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,
   selectBlockId,

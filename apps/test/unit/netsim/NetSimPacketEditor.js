@@ -1,10 +1,12 @@
 /** @file Tests for NetSimPacketEditor */
 import {assert} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimPacketEditor = require('@cdo/apps/netsim/NetSimPacketEditor');
+
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var EncodingType = require('@cdo/apps/netsim/NetSimConstants').EncodingType;
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimPacketEditor = require('@cdo/apps/netsim/NetSimPacketEditor');
+
+var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 describe('NetSimPacketEditor', function () {
   var editor, rootDiv;
