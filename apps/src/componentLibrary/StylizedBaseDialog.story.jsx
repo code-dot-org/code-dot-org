@@ -1,5 +1,6 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
 import StylizedBaseDialog from './StylizedBaseDialog';
 
 export default {

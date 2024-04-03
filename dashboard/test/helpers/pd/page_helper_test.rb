@@ -94,14 +94,12 @@ class Pd::PageHelperTest < ActionView::TestCase
     )
   end
 
-  private
-
   # Sets up expectations for, and then calls, page_header
   # @param collection_params [Hash] param hash for mock collection class
   #   Expected keys are [:current_page, :first_page?, :last_page?, :total_pages, :limit_value]
   # @param page_button_params [Array<Hash>] An array of hashes, each with keys
   #   [:text, :page, :disabled] representing expected params to the new_page_button method
-  def assert_page_header(collection_params, page_button_params, extra_buttons: [])
+  private def assert_page_header(collection_params, page_button_params, extra_buttons: [])
     collection = OpenStruct.new(collection_params)
     page_buttons = set_page_button_expectations page_button_params
     page_buttons += extra_buttons
@@ -139,7 +137,7 @@ class Pd::PageHelperTest < ActionView::TestCase
   # @param buttons_param_set [Array<Hash>] An array of hashes, each with keys
   #   [:text, :page, :disabled] representing expected params to the new_page_button method
   # @return array of mock buttons that will be returned from the expectations
-  def set_page_button_expectations(buttons_param_set)
+  private def set_page_button_expectations(buttons_param_set)
     buttons_param_set.map do |button_params|
       text = button_params[:text]
       page = button_params[:page]

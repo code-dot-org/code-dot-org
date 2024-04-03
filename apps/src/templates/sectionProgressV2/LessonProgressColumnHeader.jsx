@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../FontAwesome';
@@ -11,6 +10,7 @@ import {lessonHasLevels} from '../progress/progressHelpers';
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
 
 import styles from './progress-table-v2.module.scss';
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
 const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
   return (

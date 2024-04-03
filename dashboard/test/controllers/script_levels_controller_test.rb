@@ -10,6 +10,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher

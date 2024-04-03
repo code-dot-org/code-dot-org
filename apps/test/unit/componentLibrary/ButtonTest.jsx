@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import _BaseButton from '@cdo/apps/componentLibrary/button/_baseButton/_BaseButton';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - _BaseButton', () => {
   it('_BaseButton - renders with correct text', () => {
