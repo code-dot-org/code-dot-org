@@ -399,9 +399,11 @@ export default function LearningGoals({
     }
   }, [studentLevelInfo, learningGoals, currentLearningGoal, open, productTour]);
 
-  useEffect(() =>
-    document.addEventListener('keydown', handleKeyDown, {once: true})
-  );
+  useEffect(() => {
+    if (!productTour) {
+      document.addEventListener('keydown', handleKeyDown, {once: true});
+    }
+  });
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
