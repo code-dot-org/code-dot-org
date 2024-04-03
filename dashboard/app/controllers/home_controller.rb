@@ -66,11 +66,8 @@ class HomeController < ApplicationController
   # Signed in: render home page
   # Signed out: redirect to sign in
   def home
-    puts "COUNTRY: " + request.country
     authenticate_user!
-    puts "COUNTRY: " + request.country
     init_homepage
-    puts "COUNTRY: " + request.country
     @is_teacher_homepage = true
     render 'home/index'
   end
