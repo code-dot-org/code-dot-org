@@ -3,22 +3,16 @@
   "name": "randomNumber(min, max)",
   "category": "Math",
   "category_key": "math",
-  "content": "You will find many opportunities in your apps to utilize random numbers. For turtle drawing you can randomize all the movement functions, the pen RGB color, pen thickness, and dot size. Any numeric function parameter with a valid range of values can be randomized.",
+  "content": "You will find many opportunities in your apps to utilize random numbers. Any numeric function parameter with a valid range of values can be randomized.",
   "examples": [
     {
       "name": "Example: generate a random number",
       "code": "```\n// Generates a random number in the range 5 to 20 (inclusive).\nconsole.log(randomNumber(5, 20));\n```"
     },
     {
-      "name": "Example: random walk",
-      "description": "Do a \"random walk\" of 4 steps, turning a random number of degrees after each step.",
-      "code": "```\n// Do a \"random walk\" of 4 steps, turning a random number of degrees after each step.\nmoveForward();\nturnRight(randomNumber(-90, 90));\nmoveForward();\nturnRight(randomNumber(-90, 90));\nmoveForward();\nturnRight(randomNumber(-90, 90));\nmoveForward();\n```"
-    },
-    {
-      "name": "Example: random clouds",
-      "description": "Draw a cloud mass using randomly sized dots at random locations near each other.",
-      "code": "```\n// Draw a cloud mass using randomly sized dots at random locations near each other.\npenColor(\"skyblue\");\ndot(300);\npenUp();\npenRGB(245, 245, 245,0.3);\nmoveTo(randomNumber(0, 320),randomNumber(0, 450));\nfor (var i = 0; i &lt; 50; i++) {\n  moveTo(getX()+randomNumber(-25, 25),getY()+randomNumber(-25, 25));\n  dot(randomNumber(25,50));\n}\n```",
-      "image": "https://images.code.org/b3f96418d84bf7ebe1977070d7d745d2-image-1446232619392.gif"
+      "name": "Example: random circle",
+      "description": "Draw an orange circle at a random place between the middle and left hand side of the screen",
+      "code": "```\n// Draws a randomly wide ellipse at a random location horizontally\nbackground(\"tomato\");\nfill(\"orange\");\nellipse(randomNumber(100,300), 200, randomNumber(50,80), 50);\n```"
     }
   ],
   "palette_params": [

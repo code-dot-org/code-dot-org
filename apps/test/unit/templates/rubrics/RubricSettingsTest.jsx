@@ -1,19 +1,23 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
+import React from 'react';
 import {act} from 'react-dom/test-utils';
+import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
 import * as utils from '@cdo/apps/code-studio/utils';
-import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {Provider} from 'react-redux';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricSettings', () => {
   let clock;
@@ -85,6 +89,13 @@ describe('RubricSettings', () => {
     csrfToken: 'abcdef',
   };
 
+  const onePending = {
+    attemptedCount: 1,
+    attemptedUnevaluatedCount: 1,
+    pendingCount: 1,
+    csrfToken: 'abcdef',
+  };
+
   const noEvals = [
     {
       user_name: 'Stilgar',
@@ -114,6 +125,12 @@ describe('RubricSettings', () => {
       ],
     },
   ];
+
+  const reportingData = {
+    unitName: 'test-2023',
+    courseName: 'course-2023',
+    levelName: 'Test Blah Blah Blah',
+  };
 
   it('displays Section selector', () => {
     stubFetchEvalStatusForAll(ready);
@@ -194,6 +211,44 @@ describe('RubricSettings', () => {
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
 
+  it('shows pending status when eval is pending', async () => {
+    // show ready state on initial load
+
+    stubFetchEvalStatusForAll(ready);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    // Perform fetches and re-render
+    await wait();
+    wrapper.update();
+
+    let status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
+    expect(status.text()).to.include(
+      i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1})
+    );
+    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+
+    // show pending state after clicking run
+
+    stubFetchEvalStatusForAll(onePending);
+
+    wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
+
+    status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
+    expect(status.text()).to.include(i18n.aiEvaluationStatus_pending());
+
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+  });
+
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetchEvalStatusForAll(ready);
 
@@ -265,7 +320,7 @@ describe('RubricSettings', () => {
     wrapper.update();
     expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
     expect(wrapper.find('Button').at(1).text()).to.include(
-      i18n.rubricViewStudentRubric()
+      i18n.rubricTabStudent()
     );
   });
 
@@ -276,9 +331,6 @@ describe('RubricSettings', () => {
     fetchStub
       .onCall(1)
       .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    // fetchStub.onCall(2).returns(
-    //   Promise.resolve(new Response(JSON.stringify(evals)))
-    // );
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -298,15 +350,58 @@ describe('RubricSettings', () => {
       await Promise.resolve();
     });
     wrapper.update();
-    // await act(async () => {
-    //   await Promise.resolve();
-    // });
-    // wrapper.update();
     expect(wrapper.text()).to.include(
       i18n.rubricNumberStudentEvals({
         teacherEvalCount: 2,
       })
     );
     expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
+  });
+
+  it('sends event when download CSV is clicked', async () => {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          reportingData={reportingData}
+          sectionId={1}
+        />
+      </Provider>
+    );
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    expect(wrapper.text()).to.include(
+      i18n.rubricNumberStudentEvals({
+        teacherEvalCount: 2,
+      })
+    );
+    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
+    wrapper.find('Button').at(1).simulate('click');
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_CSV_DOWNLOADED,
+      {
+        unitName: 'test-2023',
+        courseName: 'course-2023',
+        levelName: 'Test Blah Blah Blah',
+        sectionId: 1,
+      }
+    );
+    sendEventSpy.restore();
   });
 });

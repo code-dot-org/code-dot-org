@@ -1,18 +1,21 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import _ from 'lodash';
-import OwnedSectionsTable from './OwnedSectionsTable';
-import Button from '@cdo/apps/templates/Button';
-import {beginEditingSection} from './teacherSectionsRedux';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
+import LtiFeedbackBanner from '@cdo/apps/lib/ui/lti/feedback/LtiFeedbackBanner';
 import styleConstants from '@cdo/apps/styleConstants';
-import {recordOpenEditSectionDetails} from './sectionHelpers';
+import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
 import {recordImpression} from './impressionHelpers';
+import OwnedSectionsTable from './OwnedSectionsTable';
+import {recordOpenEditSectionDetails} from './sectionHelpers';
+import {beginEditingSection} from './teacherSectionsRedux';
 
 class OwnedSections extends React.Component {
   static propTypes = {
@@ -77,6 +80,7 @@ class OwnedSections extends React.Component {
       >
         {hasSections && (
           <div>
+            <LtiFeedbackBanner />
             <OwnedSectionsTable
               isPlSections={isPlSections}
               sectionIds={visibleSectionIds}

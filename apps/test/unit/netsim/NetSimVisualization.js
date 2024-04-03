@@ -1,16 +1,19 @@
 import $ from 'jquery';
+
 import {assert} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
+
 var NetSim = require('@cdo/apps/netsim/netsim');
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
+var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
 var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode');
 var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+
+var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 var DnsMode = NetSimConstants.DnsMode;
 var EncodingType = NetSimConstants.EncodingType;

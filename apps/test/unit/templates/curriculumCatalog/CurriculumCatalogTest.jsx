@@ -1,11 +1,7 @@
-import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
+import React from 'react';
 import {Provider} from 'react-redux';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import {
-  setWindowLocation,
-  resetWindowLocation,
-} from '../../../../src/code-studio/utils';
+
 import responsive, {
   setResponsiveSize,
   ResponsiveSize,
@@ -17,6 +13,23 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  getSimilarRecommendations,
+  getStretchRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage} from '@cdo/apps/utils';
+
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '../../../../src/code-studio/utils';
+import {assert, expect} from '../../../util/reconfiguredChai';
+import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
+import {sections} from '../studioHomepages/fakeSectionUtils';
+
 import {
   allCurricula,
   allShownCurricula,
@@ -32,16 +45,6 @@ import {
   noGradesCurriculum,
   noPathCurriculum,
 } from './CurriculumCatalogTestHelper';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {sections} from '../studioHomepages/fakeSectionUtils';
-import {
-  getSimilarRecommendations,
-  getStretchRecommendations,
-} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
-import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
-import {tryGetSessionStorage} from '@cdo/apps/utils';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {
@@ -672,6 +675,9 @@ describe('CurriculumCatalog', () => {
         exact: false,
       });
 
+      // Track the number of times the Similar and Stretch recommenders output the same top result
+      let numOverlapTopResults = 0;
+
       for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
         const currCurriculum = FULL_TEST_COURSES[i];
 
@@ -689,11 +695,15 @@ describe('CurriculumCatalog', () => {
           currCurriculum.key,
           null
         );
-        const recommendedStretchCurriculum =
+        let recommendedStretchCurriculum =
+          recommendedStretchCurriculumResults[0];
+        if (
           recommendedSimilarCurriculum.key ===
           recommendedStretchCurriculumResults[0].key
-            ? recommendedStretchCurriculumResults[1]
-            : recommendedStretchCurriculumResults[0];
+        ) {
+          numOverlapTopResults++;
+          recommendedStretchCurriculum = recommendedStretchCurriculumResults[1];
+        }
 
         // Open expanded card of the current test curriculum
         fireEvent.click(quickViewButtons[i]);
@@ -717,6 +727,10 @@ describe('CurriculumCatalog', () => {
             .innerHTML.includes(recommendedStretchCurriculum.display_name)
         );
       }
+
+      // Ensure that there were instances of the Similar and Stretch recommenders outputting the same result, meaning the Stretch
+      // recommender had to suggest its next top result.
+      assert(numOverlapTopResults === 1);
     });
 
     it('does not recommend similar or stretch curricula the user has already taught', () => {

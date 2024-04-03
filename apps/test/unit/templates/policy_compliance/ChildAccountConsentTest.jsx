@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import ChildAccountConsent from '@cdo/apps/templates/policy_compliance/ChildAccountConsent';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ChildAccountConsent', () => {
   it('given no permission, shows the link expired message', () => {

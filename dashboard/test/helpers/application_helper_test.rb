@@ -261,9 +261,7 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 
-  private
-
-  def assert_equal_unordered(array1, array2)
+  private def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
   end
 end

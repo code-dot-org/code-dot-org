@@ -1,14 +1,16 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+import React from 'react';
+import sinon from 'sinon';
+
+import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {UnconnectedMultipleSectionsAssigner as MultipleSectionsAssigner} from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
 import {
   assignToSection,
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import sinon from 'sinon';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('MultipleSectionsAssigner', () => {
   const assigedStandaloneUnitSection = fakeTeacherSectionsForDropdown[3];

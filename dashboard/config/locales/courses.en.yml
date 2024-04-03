@@ -699,3 +699,93 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        self-paced-pl-csd-unit1-2024:
+          title: self-paced-pl-csd-unit1-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csd-unit2-2024:
+          title: self-paced-pl-csd-unit2-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csd-unit3-2024:
+          title: self-paced-pl-csd-unit3-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csd-unit5-2024:
+          title: self-paced-pl-csd-unit5-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-physical-computing-2024:
+          title: self-paced-pl-physical-computing-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        pl-csd-summer-2024:
+          title: pl-csd-summer-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        virtual-pl-csd-summer-2024:
+          title: virtual-pl-csd-summer-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csd-2024:
+          title: vpl-csd-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csa-2024:
+          title: vpl-csa-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csa-2024:
+          title: self-paced-pl-csa-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csp-2024:
+          title: vpl-csp-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csp-2024:
+          title: self-paced-pl-csp-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csf-sandbox-2024:
+          title: csf-sandbox-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-aiml-2024:
+          title: self-paced-pl-aiml-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csd-unit4-2024:
+          title: self-paced-pl-csd-unit4-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

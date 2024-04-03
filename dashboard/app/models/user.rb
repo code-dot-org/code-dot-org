@@ -71,6 +71,7 @@
 
 require 'digest/md5'
 require 'cdo/aws/metrics'
+require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
@@ -149,6 +150,7 @@ class User < ApplicationRecord
     show_progress_table_v2
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
+    ai_tutor_access_denied
   )
 
   attr_accessor(
@@ -193,8 +195,8 @@ class User < ApplicationRecord
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = 'student'.freeze,
-    TYPE_TEACHER = 'teacher'.freeze
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
   validates_presence_of :user_type
@@ -1523,10 +1525,21 @@ class User < ApplicationRecord
 
   # Students
   def has_ai_tutor_access?
-    !DCDO.get('ai-tutor-disabled', false) && (
-    permission?(UserPermission::AI_TUTOR_ACCESS) ||
-      (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)))
+    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
+    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
+  end
+
+  private def ai_tutor_feature_globally_disabled?
+    DCDO.get('ai-tutor-disabled', false)
+  end
+
+  private def permission_for_ai_tutor?
+    permission?(UserPermission::AI_TUTOR_ACCESS)
+  end
+
+  private def in_ai_tutor_experiment_with_enabled_section?
+    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
+      sections_as_student.any?(&:ai_tutor_enabled)
   end
 
   def student_of_verified_instructor?
@@ -2213,6 +2226,7 @@ class User < ApplicationRecord
       age: age,
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
+      ai_tutor_access_denied: !!ai_tutor_access_denied,
     }
   end
 

@@ -1422,6 +1422,7 @@ en:
       missing_params: "Missing required param(s): School/District name, Client ID, LMS, Email"
       unsupported_lms_type: "Unsupported LMS platform type"
       wrong_resource_type: "Only LtiResourceLink is supported right now"
+      missing_tool_config: 'Your LTI Tool configuration is missing the required "%{field}" field'
     iframe_button: "Open in New Tab"
     iframe_message: "Code.org cannot be run in an embedded window. Please open it in a new tab."
     iframe_title: "Opening Code.org in New Tab"

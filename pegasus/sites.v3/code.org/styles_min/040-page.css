@@ -303,7 +303,16 @@ input[type="submit"] {
     .flex-wrapper {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
+    }
+
+    &.has-external-link {
+      display: inline-flex;
+      gap: 0.25rem;
+
+      &::after {
+        margin-top: 2px;
+      }
     }
   }
 
@@ -357,6 +366,7 @@ input[type="submit"] {
   an "a" tag when a link opens in a new tab or window */
 .has-external-link a::after,
 a.has-external-link::after {
+  display: inline-block;
   font: var(--fa-font-solid);
   content: "\f08e";
   font-size: 0.875em;
@@ -366,6 +376,11 @@ a.has-external-link::after {
 .has-external-link a.link-button::after,
 a.link-button.has-external-link::after {
   margin-inline: 4px 0;
+}
+
+html[dir="rtl"] .has-external-link a::after,
+html[dir="rtl"] a.has-external-link::after {
+  transform: scaleX(-1);
 }
 
 li > ul {
@@ -425,6 +440,11 @@ td {
 /* Applies text-wrap: balance to an element */
 .wrap-balance {
   text-wrap: balance;
+}
+
+/* Applies text-wrap: pretty to an element */
+.wrap-pretty {
+  text-wrap: pretty;
 }
 
 /* Styles for the "OR" divider line between paragraphs

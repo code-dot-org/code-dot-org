@@ -302,7 +302,6 @@ const ExpandedCurriculumCatalogCard = ({
                 <img
                   id="similarCurriculumImage"
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
-                  style={{height: '100%'}}
                   alt={recommendedSimilarCurriculum.display_name}
                 />
                 <Button
@@ -317,7 +316,6 @@ const ExpandedCurriculumCatalogCard = ({
                 <img
                   id="stretchCurriculumImage"
                   src={recommendedStretchCurriculum.image || defaultImageSrc}
-                  style={{height: '100%'}}
                   alt={recommendedStretchCurriculum.display_name}
                 />
                 <Button

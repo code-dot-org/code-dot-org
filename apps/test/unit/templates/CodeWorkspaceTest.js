@@ -1,15 +1,17 @@
-import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
-import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
+import React from 'react';
+import sinon from 'sinon';
+
+import {workspaceAlertTypes} from '@cdo/apps/code-studio/projectRedux';
 import {
   singleton as studioAppSingleton,
   stubStudioApp,
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
-import sinon from 'sinon';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
-import {workspaceAlertTypes} from '@cdo/apps/code-studio/projectRedux';
+
+import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
+import {expect} from '../../util/deprecatedChai';
 
 describe('CodeWorkspace', () => {
   const MINIMUM_PROPS = {

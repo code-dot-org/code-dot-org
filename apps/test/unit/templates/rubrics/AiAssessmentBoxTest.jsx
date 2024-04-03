@@ -1,10 +1,12 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
+import React from 'react';
+
 import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
+import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('AiAssessmentBox', () => {
   const mockAiInfo = {
@@ -18,6 +20,33 @@ describe('AiAssessmentBox', () => {
       firstLine: 1,
       lastLine: 10,
       message: 'This is evidence.',
+      observations:
+        'This is the original observations. This is another line. This is a third line.',
+    },
+    {
+      firstLine: 42,
+      lastLine: 45,
+      message: 'This is some other evidence.',
+      observations:
+        'This is the original observations. This is another line. This is a third line.',
+    },
+  ];
+  const mockEvidenceWithObservations = [
+    {
+      firstLine: 1,
+      lastLine: 10,
+      message:
+        'This is the original observations. This is another line. This is a third line.',
+      observations:
+        'This is the original observations. This is another line. This is a third line.',
+    },
+    {
+      firstLine: 42,
+      lastLine: 45,
+      message:
+        'This is the original observations. This is another line. This is a third line.',
+      observations:
+        'This is the original observations. This is another line. This is a third line.',
     },
   ];
   const props = {
@@ -134,7 +163,7 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('ul li')).to.have.lengthOf(1);
+    expect(wrapper.find('ul li')).to.have.lengthOf(2);
     expect(wrapper.html().includes(props.aiEvidence[0].message)).to.be.true;
     expect(
       wrapper
@@ -143,5 +172,30 @@ describe('AiAssessmentBox', () => {
           `Lines ${props.aiEvidence[0].firstLine}-${props.aiEvidence[0].lastLine}`
         )
     ).to.be.true;
+  });
+
+  it('falls back to rendering evidence as observations if there is no message', () => {
+    const updatedProps = {...props, aiEvidence: mockEvidenceWithObservations};
+    const wrapper = mount(
+      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+        <AiAssessmentBox {...updatedProps} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
+    // One item per sentence in 'observations'
+    expect(wrapper.find('ul li')).to.have.lengthOf(3);
+    // It should not render the entire message this time, but rather each sentence
+    expect(wrapper.html().includes(props.aiEvidence[0].message)).to.be.false;
+    expect(
+      wrapper.html().includes(props.aiEvidence[0].observations.split('.')[0])
+    ).to.be.true;
+    // And it should not render line numbers in this case since it does not know
+    // where any particular observation actually is.
+    expect(
+      wrapper
+        .html()
+        .includes(
+          `Lines ${props.aiEvidence[0].firstLine}-${props.aiEvidence[0].lastLine}`
+        )
+    ).to.be.false;
   });
 });

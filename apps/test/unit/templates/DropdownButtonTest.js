@@ -1,9 +1,11 @@
-import {assert} from '../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import {DropdownButton} from '@cdo/apps/templates/DropdownButton';
+
 import Button from '@cdo/apps/templates/Button';
+import {DropdownButton} from '@cdo/apps/templates/DropdownButton';
+
+import {assert} from '../../util/reconfiguredChai';
 
 const clickSpy = sinon.spy();
 

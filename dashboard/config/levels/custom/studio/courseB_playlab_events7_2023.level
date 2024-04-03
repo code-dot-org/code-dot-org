@@ -1,5 +1,6 @@
 <Studio>
   <config><![CDATA[{
+  "published": true,
   "game_id": 33,
   "created_at": "2023-03-14T20:16:03.000Z",
   "level_num": "custom",
@@ -36,7 +37,7 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "timeout_failure_tick": "550",
+    "timeout_failure_tick": "650",
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This is the event block that you will need:\\n\\n<xml>\\n<block type=\\\"studio_whenSpriteCollided\\\">\\n    <title name=\\\"SPRITE1\\\">0</title>\\n    <title name=\\\"SPRITE2\\\">1</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/86d17462def855f484a6f9c7f8a56058/courseB_playlab_events7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the block you need to play a sound.\\n\\n<xml>\\n<block type=\\\"studio_playSound\\\">\\n    <title name=\\\"SOUND\\\">slap</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4c8a1b6a9d02f41ea21740fbb1d39e98/courseB_playlab_events7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the block you need to make the knight vanish:\\n\\n<xml>\\n<block type=\\\"studio_vanish\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6d140ed3907c5ed49ba38fb120562ad6/courseB_playlab_events7.mp3\"}]",
@@ -45,8 +46,8 @@
     "soft_buttons": [
       "leftButton",
       "rightButton",
-      "downButton",
-      "upButton"
+      "upButton",
+      "downButton"
     ],
     "instructions_important": "false",
     "hide_share_and_remix": "false",
@@ -58,11 +59,16 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "remove_items_when_actor_collides": "false",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "hint_prompt_attempts_threshold": "1",
+    "default_num_example_blocks": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:16:03.546+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_events72022\\\"\"],\"cloned_from\":\"courseB_playlab_events72022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:16:03.546+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_events72022\\\"\"],\"cloned_from\":\"courseB_playlab_events72022\"},{\"changed_at\":\"2024-03-28 18:06:42 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"timeout_failure_tick\",\"soft_buttons\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "events": 4

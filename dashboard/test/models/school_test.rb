@@ -195,9 +195,7 @@ class SchoolTest < ActiveSupport::TestCase
     assert_equal "12345678901", normalized_id
   end
 
-  private
-
-  def clear_schools_and_dependent_models
+  private def clear_schools_and_dependent_models
     # Clear tables with hard dependencies (ie, MySQL foreign keys)
     # on the schools table.
     Census::CensusSummary.delete_all

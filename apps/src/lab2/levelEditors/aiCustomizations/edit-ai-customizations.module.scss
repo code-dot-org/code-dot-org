@@ -1,5 +1,5 @@
 @import 'color.scss';
-@import '../../../mixins.scss';
+@import '@cdo/apps/mixins.scss';
 
 .fieldSection {
   display: flex;
@@ -10,22 +10,6 @@
 .fieldRow {
   display: flex;
   flex-direction: row;
-}
-
-.titleRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.fieldTitle {
-  margin-left: 10px;
-  margin-bottom: 0;
-}
-
-.expandCollapseButton {
-  @include remove-button-styles;
 }
 
 .inlineLabel {
