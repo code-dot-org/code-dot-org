@@ -4,7 +4,8 @@ import React, {useCallback} from 'react';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import moduleStyles from '@cdo/apps/componentLibrary/tabs/tabs.module.scss';
+
+import moduleStyles from './tabs.module.scss';
 
 export interface TabModel {
   /** Unique value of the tab */
