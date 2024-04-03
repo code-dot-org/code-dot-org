@@ -1,6 +1,7 @@
 import {getStore} from '@cdo/apps/redux';
-import {appendOutput} from './pythonlabRedux';
 import {applyPatches, importFileCode} from './patches/pythonScriptUtils';
+import {MATPLOTLIB_IMG_TAG} from './patches/patches';
+import {appendOutputImage, appendSystemOutMessage} from './pythonlabRedux';
 
 // A default file to import into the user's script.
 const otherFileContents = "def hello():\n  print('hello')\n";
@@ -17,7 +18,13 @@ pyodideWorker.onmessage = event => {
   console.log('in onmessage');
   console.log({event});
   if (type === 'sysout') {
-    getStore().dispatch(appendOutput(data.message));
+    if (data.message.startsWith(MATPLOTLIB_IMG_TAG)) {
+      // This is a matplotlib image, so we need to append it to the output
+      const image = data.message.slice(MATPLOTLIB_IMG_TAG.length + 1);
+      getStore().dispatch(appendOutputImage(image));
+      return;
+    }
+    getStore().dispatch(appendSystemOutMessage(data.message));
     return;
   }
   const onSuccess = callbacks[id];

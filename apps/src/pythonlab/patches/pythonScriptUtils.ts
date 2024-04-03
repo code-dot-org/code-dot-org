@@ -21,8 +21,8 @@ export function applyPatches(originalCode: string) {
   ];
   for (const patch of patches) {
     finalCode = patch.shouldPrepend
-      ? patch.contents + finalCode
-      : finalCode + patch.contents;
+      ? patch.contents + '\n' + finalCode
+      : finalCode + '\n' + patch.contents;
   }
   console.log({finalCode});
   return finalCode;
