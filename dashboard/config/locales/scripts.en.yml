@@ -16253,3 +16253,20 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        coursea-2024:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+            lessonGroup-5:
+              display_name: End of Course Project
+          title: Course A (2023)
+          description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
+          student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+          description_audience: 'Ages: 4-7'
