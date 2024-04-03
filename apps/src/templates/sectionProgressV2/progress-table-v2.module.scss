@@ -198,7 +198,7 @@ $level-cell-width: 52;
 
 .expanded {
   &Header {
-    min-width: 47px;
+    min-width: 80px;
 
     &LessonCell {
       @include remove-default-button-styles;
@@ -206,7 +206,7 @@ $level-cell-width: 52;
       border-left: 1px solid $neutral_dark40;
       height: 43px;
       line-height: 42px;
-      min-width: 49px;
+      min-width: 82px;
       border: 0;
       background-color: $light_primary_500;
       color: $light_white;
