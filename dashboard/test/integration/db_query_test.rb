@@ -2,10 +2,6 @@ require 'test_helper'
 
 # Prevent regressions in the number of database queries on high-traffic routes.
 class DBQueryTest < ActionDispatch::IntegrationTest
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   def setup
     setup_script_cache
   end
