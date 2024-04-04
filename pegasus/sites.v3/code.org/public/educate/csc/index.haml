@@ -9,9 +9,9 @@ theme: responsive_full_width
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
-      %h1{style: "color: white"}
+      %h1.white
         =hoc_s(:curriculum_name_csc)
-      %p{style: "color: white"}
+      %p.white
         =hoc_s(:csc_page_top_desc)
       %a.link-button.white{href: "#csc-modules"}
         =hoc_s(:call_to_action_explore_modules)
@@ -35,6 +35,8 @@ theme: responsive_full_width
       %a.link-button{href: "#csc-modules"}
         =hoc_s(:call_to_action_explore_modules)
     .clear
+
+= view :poetry_banner
 
 %section.bg-neutral-light
   .wrapper

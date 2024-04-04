@@ -855,6 +855,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :panels, parent: :level, class: Panels do
+    game {Game.panels}
+    level_num {'custom'}
+  end
+
   factory :block do
     transient do
       sequence(:index)
@@ -1010,11 +1015,12 @@ FactoryBot.define do
     end
   end
 
-  # WARNING: Using this factory in new tests may cause other tests, including
-  # ProjectsController tests, to fail.
   factory :project_storage do
   end
 
+  # WARNING: using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail with: `Mysql2::Error::TimeoutError`
+  # See: https://codedotorg.atlassian.net/browse/TEACH-230
   factory :project do
     transient do
       owner {create :user}
@@ -1029,7 +1035,14 @@ FactoryBot.define do
   end
 
   factory :featured_project do
-    project_id {456}
+    factory :active_featured_project do
+      featured_at {DateTime.now}
+    end
+
+    factory :archived_featured_project do
+      featured_at {DateTime.now}
+      unfeatured_at {DateTime.now}
+    end
   end
 
   factory :user_ml_model do
@@ -1766,6 +1779,13 @@ FactoryBot.define do
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}
     data_synced_at {Time.now.utc}
+  end
+
+  factory :lti_feedback, class: 'Lti::Feedback' do
+    association :user, factory: :teacher
+
+    locale {I18n.locale.to_s}
+    satisfied {true}
   end
 
   factory :lti_integration do

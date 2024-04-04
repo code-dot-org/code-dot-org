@@ -327,10 +327,8 @@ module OmniauthCallbacksControllerTests
       assert_equal 'teacher', assigns(:user).user_type
     end
 
-    private
-
     # @return [OmniAuth::AuthHash] that will be passed to the callback when test-mode OAuth is invoked
-    def mock_oauth
+    private def mock_oauth
       mock_oauth_for AuthenticationOption::GOOGLE, generate_auth_hash(
         provider: AuthenticationOption::GOOGLE,
         refresh_token: 'fake-refresh-token'

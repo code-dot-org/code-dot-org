@@ -1,3 +1,5 @@
+// TODO: post-firebase-cleanup, remove this file #56994
+
 import {getProjectDatabase, getPathRef} from './firebaseUtils';
 import _ from 'lodash';
 

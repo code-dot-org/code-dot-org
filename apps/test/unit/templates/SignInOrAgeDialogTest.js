@@ -1,15 +1,17 @@
-import {assert} from 'chai';
-import React from 'react';
-import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from '@cdo/apps/templates/SignInOrAgeDialog';
 import {render, screen, fireEvent} from '@testing-library/react';
-import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
-import i18n from '@cdo/locale';
-import * as utils from '@cdo/apps/utils';
+import {assert} from 'chai';
 import cookies from 'js-cookie';
+import React from 'react';
+import sinon from 'sinon';
+
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
-import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
+import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from '@cdo/apps/templates/SignInOrAgeDialog';
+import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
 import FakeStorage from '../../util/FakeStorage';
+import {expect} from '../../util/reconfiguredChai';
+import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 
 const DEFAULT_PROPS = {
   age13Required: true,

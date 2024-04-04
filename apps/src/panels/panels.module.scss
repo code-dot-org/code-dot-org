@@ -64,6 +64,11 @@
         }
       }
 
+      &TopLeft {
+        top: 40px;
+        left: -20px;
+      }
+
       &TopRight {
         top: 40px;
         right: -20px;
@@ -72,6 +77,12 @@
       &BottomLeft {
         bottom: 40px;
         left: -20px;
+      }
+
+
+      &BottomRight {
+        bottom: 40px;
+        right: -20px;
       }
     }
   }

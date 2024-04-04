@@ -382,7 +382,16 @@ namespace :test do
 
     desc 'Runs lib tests if lib might have changed from staging.'
     timed_task_with_logging :lib do
-      run_tests_if_changed('lib', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'lib/**/*']) do
+      run_tests_if_changed(
+        'lib',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'lib/**/*',
+          'config/**/*'
+        ]
+      ) do
         TestRunUtils.run_lib_tests
       end
     end

@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import React from 'react';
 import sinon from 'sinon';
+
 import {UnconnectedManageStudentAgeCell as ManageStudentAgeCell} from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
+
+import {expect} from '../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   id: 2,

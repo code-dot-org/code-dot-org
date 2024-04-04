@@ -1,15 +1,17 @@
-import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import {
-  getSummaryCellFormatters,
-  getDetailCellFormatters,
-  unitTestExports,
-} from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
+
 import {
   fakeLessonWithLevels,
   fakeStudents,
   fakeStudentLevelProgress,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import {
+  getSummaryCellFormatters,
+  getDetailCellFormatters,
+  unitTestExports,
+} from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('progressTableHelpers', () => {
   describe('formatTimeSpent', () => {

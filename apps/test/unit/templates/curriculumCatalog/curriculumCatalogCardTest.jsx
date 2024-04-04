@@ -1,24 +1,26 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {pull} from 'lodash';
-import {expect} from '../../../util/reconfiguredChai';
-import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import {
-  subjectsAndTopicsOrder,
-  translatedCourseOfferingCsTopics,
-  translatedLabels,
-} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import {sections} from '../studioHomepages/fakeSectionUtils';
+import React from 'react';
 import {Provider} from 'react-redux';
+
 import {
   getStore,
   registerReducers,
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
+import {
+  subjectsAndTopicsOrder,
+  translatedCourseOfferingCsTopics,
+  translatedLabels,
+} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
+import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalogCard', () => {
   const translationIconTitle = 'Curriculum is available in your language';
@@ -66,6 +68,7 @@ describe('CurriculumCatalogCard', () => {
       isTeacher: true,
       setExpandedCardKey: () => {},
       getRecommendedSimilarCurriculum: () => {},
+      getRecommendedStretchCurriculum: () => {},
     };
   });
 

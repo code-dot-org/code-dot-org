@@ -1,10 +1,12 @@
-import React from 'react';
-import {expect} from '../../../util/deprecatedChai';
 import {shallow} from 'enzyme';
-import LessonLock from '@cdo/apps/templates/progress/LessonLock';
+import React from 'react';
+
 import LessonLockDialog from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
 import Button from '@cdo/apps/templates/Button';
+import LessonLock from '@cdo/apps/templates/progress/LessonLock';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/deprecatedChai';
 
 const FAKE_LESSON_ID = 33;
 const FAKE_UNIT_ID = 1;

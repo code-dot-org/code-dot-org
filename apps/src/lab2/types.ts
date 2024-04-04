@@ -55,18 +55,21 @@ export interface BlocklySource {
   variables: BlocklyVariable[];
 }
 
+export type FileId = string;
+export type FolderId = string;
+
 // This structure (as well as ProjectFolder and ProjectFile) is still in flux
 // and may change going forward. It should only be used for labs that are not released
 // yet.
 // Note that if it changes files_api.has_valid_encoding? may need to be updated to correctly validate
 // the new structure.
 export interface MultiFileSource {
-  folders: Record<string, ProjectFolder>;
-  files: Record<string, ProjectFile>;
+  folders: Record<FolderId, ProjectFolder>;
+  files: Record<FileId, ProjectFile>;
 }
 
 export interface ProjectFile {
-  id: string;
+  id: FileId;
   name: string;
   language: string;
   contents: string;
@@ -76,7 +79,7 @@ export interface ProjectFile {
 }
 
 export interface ProjectFolder {
-  id: string;
+  id: FolderId;
   name: string;
   parentId: string;
   open?: boolean;
@@ -116,6 +119,7 @@ export interface Level {
  */
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
+  id: number;
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
   usesProjects?: boolean;

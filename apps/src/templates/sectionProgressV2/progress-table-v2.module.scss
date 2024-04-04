@@ -2,7 +2,7 @@
 
 .progressV2Page {
   padding: 24px 64px 64px 64px;
-  background-color: $light_gray_50;
+  background-color: white;
 }
 
 .progressTableV2 {
@@ -40,9 +40,13 @@ $level-cell-width: 52;
 }
 
 .gridBox {
-  border-top: 1px solid $light_gray_200;
-  border-left: 1px solid $light_gray_200;
+  border-top: 1px solid $neutral_dark40;
+  border-left: 1px solid $neutral_dark40;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 0;
   background-color: white;
+  font-size: 16px;
 
   &Student {
     height: 47px;
@@ -52,12 +56,13 @@ $level-cell-width: 52;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    background-color: $light_gray_50;
   }
 
   &Lesson {
     text-align: center;
-    min-width: 80px;
-    max-width: 80px;  
+    min-width: 52px;
+    max-width: 52px;  
     height: 47px;
     line-height: 47px !important;
   }
@@ -68,10 +73,9 @@ $level-cell-width: 52;
   
   &Level {
     width: $level-cell-width + px;
-    text-align: center;
     height: 47px;
-    line-height: 47px !important;
     color: inherit !important;
+    padding: 0;
   }
 }
 
@@ -87,8 +91,8 @@ $level-cell-width: 52;
 }
 
 .grid {
-  border-bottom: 1px solid $light_gray_200;
-  border-right: 1px solid $light_gray_200;
+  border-bottom: 1px solid $neutral_dark40;
+  border-right: 1px solid $neutral_dark40;
 }
 
 .title {
@@ -130,11 +134,12 @@ $level-cell-width: 52;
   &HeaderCell {
     height: 42px;
     line-height: 42px;
-    min-width: 80px;
-    border-bottom: 1px solid $light_gray_200;
-    border-right: 1px solid $light_gray_200;
+min-width:47px;
+    border-bottom: 1px solid $neutral_dark40;
+    border-right: 1px solid $neutral_dark40;
     margin-bottom: 32px;
     text-align: center;
+    background-color: $light_gray_50;
   }
   
   &HeaderTooltip {
@@ -143,7 +148,7 @@ $level-cell-width: 52;
   }
 
   &HeaderCaret {
-    margin-inline-end: 12px;
+    margin-inline-end: 8px;
   }
 
   &SkeletonHeaderCell {
@@ -160,19 +165,19 @@ $level-cell-width: 52;
   &DataColumn {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid $light_gray_200;
-    border-right: 1px solid $light_gray_200;
+    border-bottom: 1px solid $neutral_dark40;
+    border-right: 1px solid $neutral_dark40;
   }
 }
 
 .expanded {
   &Header {
-    min-width: 80px;
+    min-width: 47px;
 
     &LessonCell {
       height: 43px;
       line-height: 42px;
-      min-width: 82px;
+      min-width: 49px;
       border: 0;
       background-color: $light_primary_500;
       color: $light_white;
@@ -198,8 +203,8 @@ $level-cell-width: 52;
       flex-direction: row;
       width: fit-content;
 
-      & .expandedHeaderChild:last-child {
-        border-right: 1px solid $light_gray_200;
+      & .expandedHeaderLevelCell:last-child {
+        border-right: 1px solid $neutral_dark40;
       }
     }
 
@@ -214,36 +219,39 @@ $level-cell-width: 52;
       justify-content: space-evenly;
       overflow: hidden;
       flex-wrap: nowrap;
+      color: inherit;
+      background-color: inherit;
 
       &LevelNumber {
         margin-top: 0.0625em;
       }
 
       &Unexpanded {
-        background-color: white;
-      }
-    }
-
-    &ExpandedLevel {
-      background-color: $light_primary_500;
-      color: $light_white;
-      display: flex;
-      flex-direction: row;
-      border-left: 1px solid $light_gray_200;
-      border-top: 1px solid $light_gray_200;
-
-      & .assessmentLevelIcon {
-        color: $light_white;
-      }
-
-      .expandedHeaderExpandedLevelCell:first-child {
-        border-left: 0;
+        background-color: $brand_teal_5;
       }
     }
 
     &ExpandedLevelCell {
+      border: 0;
       // Invisible border to match sizing of table
-      border-left: 1px solid $light_primary_500;
+      border-top: 1px solid $neutral_dark40;
+      color: $light_white;
+      background-color: $light_primary_500;
+      width: fit-content;
+
+      &Inner {
+        border-left: 1px solid transparent;
+        width: 52px;
+      }
+
+      & .assessmentLevelIcon {
+        color: $light_white;
+      }
+    }
+
+    &ExpandedLevelCellFirst { 
+      border-left: 1px solid $neutral_dark40;
+      width: 52px;
     }
   }
   &Column {
@@ -258,15 +266,27 @@ $level-cell-width: 52;
 
   &Table {
     display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid $light_gray_200;
-    border-right: 1px solid $light_gray_200;
+    flex-direction: column;
+    border-bottom: 1px solid $neutral_dark40;
+    border-right: 1px solid $neutral_dark40;
     width: fit-content;
   }
 
   &LevelColumn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  &LevelLink {
+    height: 100%;
+    width: 100%;
+    text-align: center; 
+    line-height: 47px !important;
+  }
+
+  &LevelEmpty {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -293,5 +313,6 @@ $level-cell-width: 52;
 
 .assessmentLevelIcon {
   font-size: 12px;
-  color: $neutral_dark60;
+  color: black;
 }
+

@@ -1,10 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class SignInInstructions extends React.Component {
   static propTypes = {

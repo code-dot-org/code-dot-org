@@ -46,6 +46,7 @@ export default function RubricContent({
   aiEvaluations,
   feedbackAdded,
   setFeedbackAdded,
+  sectionId,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
@@ -53,6 +54,8 @@ export default function RubricContent({
   let infoText = null;
   if (!onLevelForEvaluation) {
     infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
+  } else if (!sectionId) {
+    infoText = i18n.selectASectionToEvaluateAlert();
   } else if (!studentLevelInfo) {
     infoText = i18n.selectAStudentToEvaluateAlert();
   }
@@ -80,6 +83,8 @@ export default function RubricContent({
             styleName={style.studentSelector}
             selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
             reloadOnChange={true}
+            sectionId={sectionId}
+            reportingData={reportingData}
           />
         </div>
 
@@ -152,6 +157,7 @@ RubricContent.propTypes = {
   aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
+  sectionId: PropTypes.number,
 };
 
 export const InfoAlert = ({text, dismissable}) => {

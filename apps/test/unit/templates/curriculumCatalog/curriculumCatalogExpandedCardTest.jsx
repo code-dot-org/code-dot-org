@@ -1,17 +1,19 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/ExpandedCurriculumCatalogCard';
-import {translatedAvailableResources} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
 import {
   getStore,
   registerReducers,
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/ExpandedCurriculumCatalogCard';
+import {translatedAvailableResources} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import sinon from 'sinon';
+
+import {expect} from '../../../util/reconfiguredChai';
 import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
 
 describe('CurriculumCatalogExpandedCard', () => {
@@ -54,6 +56,9 @@ describe('CurriculumCatalogExpandedCard', () => {
       setExpandedCardKey: () => {},
       getRecommendedSimilarCurriculum: () => {
         return FULL_TEST_COURSES[0];
+      },
+      getRecommendedStretchCurriculum: () => {
+        return FULL_TEST_COURSES[1];
       },
     };
   });
@@ -121,8 +126,9 @@ describe('CurriculumCatalogExpandedCard', () => {
       video: null,
     });
 
-    // Expect to find 2 images: one as the video replacement and one from the Similar Curriculum recommendation
-    expect(screen.getAllByRole('img', {hidden: true}).length).to.equal(2);
+    // Expect to find 3 images: one as the video replacement, one from the Similar
+    // Curriculum recommendation, and one from the Stretch Curriculum recommendation
+    expect(screen.getAllByRole('img', {hidden: true}).length).to.equal(3);
   });
 
   it('renders image with alt text if passed and no video', () => {

@@ -3,7 +3,7 @@ require 'authentication_option'
 
 class Queries::Lti
   def self.get_user(id_token)
-    auth_id = Policies::Lti.generate_auth_id(id_token)
+    auth_id = Services::Lti::AuthIdGenerator.new(id_token).call
     User.find_by_credential(type: AuthenticationOption::LTI_V1, id: auth_id)
   end
 
@@ -14,6 +14,11 @@ class Queries::Lti
 
   def self.get_lti_integration(issuer, client_id)
     LtiIntegration.find_by(issuer: issuer, client_id: client_id)
+  end
+
+  def self.get_lms_name_from_user(user)
+    return nil unless Policies::Lti.lti? user
+    user.lti_user_identities.first.lti_integration&.platform_name
   end
 
   def self.get_user_from_nrps(client_id:, issuer:, nrps_member:)

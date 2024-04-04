@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import React from 'react';
+
 import {ImagePreview} from '@cdo/apps/templates/instructions/AniGifPreview';
+
+import {expect} from '../../../util/deprecatedChai';
 
 describe('ImagePreview', () => {
   it('renders normal size if noVisualization is false', () => {

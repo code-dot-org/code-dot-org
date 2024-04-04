@@ -12,7 +12,11 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {
+  getSimilarRecommendations,
+  getStretchRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -76,12 +80,73 @@ const CurriculumCatalog = ({
   // Get the top recommended similar curriculum based on the curriculum with the given
   // curriculumKey
   const getRecommendedSimilarCurriculum = curriculumKey => {
+    // Check if Similar Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const similarRecommenderResults =
+      JSON.parse(tryGetSessionStorage('similarRecommenderResults', '{}')) || {};
+    const similarRecommenderCurrKeyResult =
+      similarRecommenderResults[curriculumKey];
+    if (similarRecommenderCurrKeyResult) {
+      return similarRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended similar curriculum
     const recommendations = getSimilarRecommendations(
       curriculaData,
       curriculumKey,
       curriculaTaught
     );
-    return recommendations[0];
+    const recommendedCurriculum = recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    similarRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'similarRecommenderResults',
+      JSON.stringify(similarRecommenderResults)
+    );
+
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_SHOWN, {
+      current_curriculum_offering: curriculumKey,
+      recommended_curriculum_offering: recommendedCurriculum.key,
+    });
+
+    return recommendedCurriculum;
+  };
+
+  // Get the top recommended stretch curriculum based on the curriculum with the given
+  // curriculumKey. If the top result is the same as the similar curriculum, show the
+  // second result.
+  const getRecommendedStretchCurriculum = (
+    curriculumKey,
+    similarCurriculumKey
+  ) => {
+    // Check if Stretch Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const stretchRecommenderResults =
+      JSON.parse(tryGetSessionStorage('stretchRecommenderResults', '{}')) || {};
+    const stretchRecommenderCurrKeyResult =
+      stretchRecommenderResults[curriculumKey];
+    if (stretchRecommenderCurrKeyResult) {
+      return stretchRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended stretch curriculum
+    const recommendations = getStretchRecommendations(
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
+    );
+    const recommendedCurriculum =
+      similarCurriculumKey === recommendations[0].key
+        ? recommendations[1]
+        : recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    stretchRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'stretchRecommenderResults',
+      JSON.stringify(stretchRecommenderResults)
+    );
+
+    return recommendedCurriculum;
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -159,6 +224,9 @@ const CurriculumCatalog = ({
                   isTeacher={isTeacher}
                   getRecommendedSimilarCurriculum={
                     getRecommendedSimilarCurriculum
+                  }
+                  getRecommendedStretchCurriculum={
+                    getRecommendedStretchCurriculum
                   }
                   {...props}
                 />

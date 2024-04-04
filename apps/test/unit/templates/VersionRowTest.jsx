@@ -1,9 +1,11 @@
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import msg from '@cdo/locale';
+
+import {expect} from '../../util/deprecatedChai';
 
 describe('VersionRow', () => {
   const MINIMUM_PROPS = {

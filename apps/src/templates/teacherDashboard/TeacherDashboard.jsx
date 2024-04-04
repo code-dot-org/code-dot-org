@@ -1,27 +1,29 @@
-import React, {useEffect, useRef} from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import React, {useEffect, useRef} from 'react';
 import {Route, Switch} from 'react-router-dom';
+
+import AITutorTeacherDashboard from '@cdo/apps/code-studio/components/aiTutor/aiTutorTeacherDashboard';
+import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
+import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
+import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
+import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
+import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+import i18n from '@cdo/locale';
+
+import {Heading1} from '../../lib/ui/Headings';
+import firehoseClient from '../../lib/util/firehose';
+import StandardsReport from '../sectionProgress/standards/StandardsReport';
+import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+
+import EmptySection from './EmptySection';
+import StatsTableWithData from './StatsTableWithData';
+import TeacherDashboardHeader from './TeacherDashboardHeader';
 import TeacherDashboardNavigation, {
   TeacherDashboardPath,
 } from './TeacherDashboardNavigation';
-import TeacherDashboardHeader from './TeacherDashboardHeader';
-import StatsTableWithData from './StatsTableWithData';
-import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
-import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
-import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
-import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
-import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
-import EmptySection from './EmptySection';
-import _ from 'lodash';
-import firehoseClient from '../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import StandardsReport from '../sectionProgress/standards/StandardsReport';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import i18n from '@cdo/locale';
-import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
-import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
 
 const applyV1TeacherDashboardWidth = children => {
   return <div className={dashboardStyles.dashboardPage}>{children}</div>;
@@ -72,11 +74,6 @@ function TeacherDashboard({
       },
       {includeUserId: true}
     );
-    if (newTab === 'progress') {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-        sectionId: sectionId,
-      });
-    }
   });
 
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
@@ -95,6 +92,30 @@ function TeacherDashboard({
   const includeHeader =
     location.pathname !== TeacherDashboardPath.loginInfo &&
     location.pathname !== TeacherDashboardPath.standardsReport;
+
+  const generateEmptySectionGraphic = (hasStudents, hasCurriculumAssigned) => {
+    return (
+      <div className={dashboardStyles.emptyClassroomDiv}>
+        {location.pathname === TeacherDashboardPath.progress && (
+          <div>
+            <Heading1>{i18n.progress()}</Heading1>
+            <EmptySection
+              className={dashboardStyles.emptyClassroomProgress}
+              hasStudents={hasStudents}
+              hasCurriculumAssigned={hasCurriculumAssigned}
+            />
+          </div>
+        )}
+        {location.pathname !== TeacherDashboardPath.progress && (
+          <EmptySection
+            className={dashboardStyles.emptyClassroom}
+            hasStudents={hasStudents}
+            hasCurriculumAssigned={hasCurriculumAssigned}
+          />
+        )}
+      </div>
+    );
+  };
 
   return (
     <div>
@@ -119,25 +140,22 @@ function TeacherDashboard({
         />
         <Route
           path={TeacherDashboardPath.loginInfo}
-          component={props => (
-            <SectionLoginInfo
-              studioUrlPrefix={studioUrlPrefix}
-              sectionProviderName={sectionProviderName}
-            />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionLoginInfo
+                studioUrlPrefix={studioUrlPrefix}
+                sectionProviderName={sectionProviderName}
+              />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.standardsReport}
           component={props => applyV1TeacherDashboardWidth(<StandardsReport />)}
         />
-        {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
         {studentCount === 0 && (
           <Route
-            component={props =>
-              applyV1TeacherDashboardWidth(
-                <EmptySection sectionId={sectionId} />
-              )
-            }
+            component={props => generateEmptySectionGraphic(false, true)}
           />
         )}
         <Route
@@ -156,13 +174,7 @@ function TeacherDashboard({
         />
         {coursesWithProgress.length === 0 && (
           <Route
-            component={() =>
-              applyV1TeacherDashboardWidth(
-                <div className={dashboardStyles.text}>
-                  <SafeMarkdown markdown={i18n.noProgressSection()} />
-                </div>
-              )
-            }
+            component={props => generateEmptySectionGraphic(true, false)}
           />
         )}
         <Route
@@ -186,7 +198,7 @@ function TeacherDashboard({
             path={TeacherDashboardPath.aiTutorChatMessages}
             component={props =>
               applyV1TeacherDashboardWidth(
-                <AITutorChatMessagesTable sectionId={sectionId} />
+                <AITutorTeacherDashboard sectionId={sectionId} />
               )
             }
           />
