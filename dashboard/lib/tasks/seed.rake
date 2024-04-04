@@ -139,6 +139,7 @@ namespace :seed do
     step
     oceans
     sports
+    csa4-2022
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
   SEEDED = 'config/scripts/.seeded'.freeze
 
