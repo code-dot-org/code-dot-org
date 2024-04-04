@@ -28,7 +28,7 @@ const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 
 const isAssistant = (role: string) => role === Role.ASSISTANT;
 const isUser = (role: string) => role === Role.USER;
-const isSystem = (role: string) => role === Role.SYSTEM;
+const isModelUpdate = (role: string) => role === Role.MODEL_UPDATE;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK || status === Status.UNKNOWN) {
@@ -94,7 +94,7 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
   }
 };
 
-const displaySystemMessage = (
+const displayModelUpdateMessage = (
   message: ChatCompletionMessage,
   onRemove: () => void
 ) => {
@@ -104,7 +104,7 @@ const displaySystemMessage = (
     <>
       <div>
         <FontAwesomeV6Icon iconName="check" className={moduleStyles.check} />
-        <span className={moduleStyles.systemMessageTextContainer}>
+        <span className={moduleStyles.modelUpdateMessageTextContainer}>
           <StrongText>{chatMessageText}</StrongText> has been updated
         </span>
         <StrongText>{timestamp}</StrongText>
@@ -147,9 +147,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
         </div>
       )}
 
-      {isSystem(message.role) && (
-        <div className={moduleStyles.systemMessageContainer}>
-          {displaySystemMessage(message, () =>
+      {isModelUpdate(message.role) && (
+        <div className={moduleStyles.modelUpdateMessageContainer}>
+          {displayModelUpdateMessage(message, () =>
             dispatch(removeChatMessage(message.id))
           )}
         </div>

@@ -108,7 +108,7 @@ export const updateAiCustomization = createAsyncThunk(
       thunkAPI.dispatch(
         addChatMessage({
           id: 0,
-          role: Role.SYSTEM,
+          role: Role.MODEL_UPDATE,
           chatMessageText:
             READABLE_AI_CUSTOMIZATIONS[property as keyof AiCustomizations],
           status: Status.OK,
@@ -197,7 +197,6 @@ const aichatSlice = createSlice({
       state.chatMessages.push(newMessage);
     },
     removeChatMessage: (state, action: PayloadAction<number>) => {
-      console.log('here');
       const updatedMessages = [...state.chatMessages];
       const messageToRemovePosition = updatedMessages.findIndex(
         message => message.id === action.payload
@@ -205,9 +204,8 @@ const aichatSlice = createSlice({
       if (!messageToRemovePosition) {
         return;
       }
-      console.log(updatedMessages);
       updatedMessages.splice(messageToRemovePosition, 1);
-      console.log(updatedMessages);
+
       state.chatMessages = updatedMessages;
     },
     clearChatMessages: state => {
