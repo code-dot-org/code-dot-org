@@ -1,16 +1,23 @@
 import React from 'react';
-import moduleStyles from './chatMessage.module.scss';
+import {useSelector} from 'react-redux';
 import classNames from 'classnames';
-import aichatI18n from '../locale';
+
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import Button from '@cdo/apps/componentLibrary/button';
+
+import {removeChatMessage} from '../redux/aichatRedux';
 import {
   AichatLevelProperties,
   ChatCompletionMessage,
   Role,
   Status,
 } from '../types';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import {useSelector} from 'react-redux';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import aichatI18n from '../locale';
+import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
   message: ChatCompletionMessage;
@@ -19,13 +26,9 @@ interface ChatMessageProps {
 const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
 const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 
-const isAssistant = (role: string) => {
-  return role === Role.ASSISTANT;
-};
-
-const isUser = (role: string) => {
-  return role === Role.USER;
-};
+const isAssistant = (role: string) => role === Role.ASSISTANT;
+const isUser = (role: string) => role === Role.USER;
+const isSystem = (role: string) => role === Role.SYSTEM;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK || status === Status.UNKNOWN) {
@@ -92,12 +95,15 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
 };
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
+  const dispatch = useAppDispatch();
+
   const botTitle =
     useSelector(
       (state: {lab: LabState}) =>
         (state.lab.levelProperties as AichatLevelProperties | undefined)
           ?.botTitle
     ) || 'EduBot';
+
   return (
     <div id={`ChatMessage id: ${message.id}`}>
       {isUser(message.role) && (
@@ -112,6 +118,27 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
             {botTitle} ({message.role})
           </Typography>
           {displayAssistantMessage(message.status, message.chatMessageText)}
+        </div>
+      )}
+
+      {isSystem(message.role) && (
+        <div className={moduleStyles.systemMessageContainer}>
+          <div className={moduleStyles.systemMessageDetailsContainer}>
+            <FontAwesomeV6Icon
+              iconName="check"
+              className={moduleStyles.check}
+            />
+            <span>
+              <StrongText>{message.chatMessageText}</StrongText> has been
+              updated
+            </span>
+            <StrongText>{message.timestamp}</StrongText>
+          </div>
+          <Button
+            onClick={() => dispatch(removeChatMessage(message.id))}
+            isIconOnly
+            icon={{iconName: 'x'}}
+          />
         </div>
       )}
     </div>

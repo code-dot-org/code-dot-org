@@ -53,6 +53,7 @@ const findChangedProperties = (
 };
 
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
+const getCurrentTime = () => moment(Date.now()).format('LT');
 
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
@@ -102,14 +103,17 @@ export const updateAiCustomization = createAsyncThunk(
       previouslySavedAiCustomizations,
       currentAiCustomizations
     );
-    thunkAPI.dispatch(
-      addChatMessage({
-        id: 0,
-        role: Role.ASSISTANT,
-        chatMessageText: `${changedProperties} were updated`,
-        status: Status.OK,
-      })
-    );
+    changedProperties.forEach(property => {
+      thunkAPI.dispatch(
+        addChatMessage({
+          id: 0,
+          role: Role.SYSTEM,
+          chatMessageText: property,
+          status: Status.OK,
+          timestamp: getCurrentTime(),
+        })
+      );
+    });
   }
 );
 
@@ -189,6 +193,20 @@ const aichatSlice = createSlice({
         id: newMessageId,
       };
       state.chatMessages.push(newMessage);
+    },
+    removeChatMessage: (state, action: PayloadAction<number>) => {
+      console.log('here');
+      const updatedMessages = [...state.chatMessages];
+      const messageToRemovePosition = updatedMessages.findIndex(
+        message => message.id === action.payload
+      );
+      if (!messageToRemovePosition) {
+        return;
+      }
+      console.log(updatedMessages);
+      updatedMessages.splice(messageToRemovePosition, 1);
+      console.log(updatedMessages);
+      state.chatMessages = updatedMessages;
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
@@ -298,6 +316,7 @@ const aichatSlice = createSlice({
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
+  removeChatMessage,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,

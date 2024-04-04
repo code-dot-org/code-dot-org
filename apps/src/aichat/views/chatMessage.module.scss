@@ -18,6 +18,21 @@
     }
 }
 
+.systemMessageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $light_affirmative_100;
+}
+
+.systemMessageDetailsContainer {
+  gap: 5px;
+}
+
+.check {
+  color: $light_affirmative_500;
+}
+
 .userMessage {
     background-color: $lightest_cyan;
 }
