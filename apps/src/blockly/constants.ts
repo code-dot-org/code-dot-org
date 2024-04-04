@@ -59,6 +59,7 @@ export const BlockColors = {
   // The colors below do not have a corresponding style and are incompatible with themes.
   COMMENT: [0, 0, 0.6],
   UNKNOWN: [0, 0, 0.8],
+  DISABLED: [0, 0, 0.5],
 };
 
 export const Renderers = {

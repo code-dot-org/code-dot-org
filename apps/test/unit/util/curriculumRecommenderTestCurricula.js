@@ -314,6 +314,26 @@ const FULL_TEST_COURSES = [
       '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
     course_version_path: '/fullTestCourse5-path',
   },
+  {
+    key: 'fullTestCourse6',
+    course_offering_id: 6,
+    display_name: 'Full Test Course 6',
+    display_name_with_latest_year: 'Full Test Course 6 (3 years ago)',
+    description: 'Full Test Course 6 description',
+    is_featured: true,
+    duration: 'quarter',
+    marketing_initiative: 'markInit2',
+    grade_levels: '3,4,5,6,7',
+    cs_topic: 'app_design',
+    school_subject: null,
+    published_date: moment
+      .utc()
+      .subtract(3, 'years')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse6-path',
+  },
 ];
 
 export default {

@@ -22,7 +22,7 @@ class StatsigReporter {
     if (user_id) {
       user = {
         userID: this.formatUserId(user_id),
-        custom: {type: user_type},
+        custom: {userType: user_type},
       };
     }
     const api_element = document.querySelector(
@@ -53,14 +53,11 @@ class StatsigReporter {
   }
 
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
-  async setUserProperties(userId, userType, enabledExperiments) {
+  async setUserProperties(userId, userType) {
     const formattedUserId = this.formatUserId(userId);
     const user = {
       userID: formattedUserId,
-      custom: {
-        type: userType,
-        experiments: enabledExperiments,
-      },
+      custom: {userType: userType},
     };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
