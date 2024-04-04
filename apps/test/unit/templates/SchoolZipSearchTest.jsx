@@ -23,6 +23,16 @@ const fakeSchools = [
   {nces_id: 999999, name: 'ABC Academy'},
 ];
 
+const arraysEqual = (a, b) => {
+  if (a === b) return true;
+  if (a === null || b === null) return false;
+  if (a.length !== b.length) return false;
+  for (var i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+  return true;
+};
+
 describe('SchoolDataInputs', () => {
   allowConsoleWarnings();
 
@@ -50,17 +60,20 @@ describe('SchoolDataInputs', () => {
     });
     await waitFor(() => {
       expect(
-        [...screen.queryAllByRole('option')].map(o => o.innerText)
-      ).to.equal([
-        'Select a school',
-        'Not listed here - click to add',
-        "I don't teach CS in a school setting",
-        'ABC Academy',
-        'Duplicate School Name',
-        'Duplicate School Name',
-        'First School',
-        'Other School',
-      ]);
+        arraysEqual(
+          [...screen.queryAllByRole('option')].map(o => o.innerText),
+          [
+            'Select a school',
+            'Not listed here - click to add',
+            "I don't teach CS in a school setting",
+            'ABC Academy',
+            'Duplicate School Name',
+            'Duplicate School Name',
+            'First School',
+            'Other School',
+          ]
+        )
+      );
     });
   });
 });
