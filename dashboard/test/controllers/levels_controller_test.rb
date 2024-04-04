@@ -7,7 +7,7 @@ class LevelsControllerTest < ActionController::TestCase
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   setup_all do
-    seed_deprecated_unit_fixtures
+    setup_units
   end
 
   setup do

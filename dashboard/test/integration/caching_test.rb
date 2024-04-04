@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
   setup_all do
-    seed_deprecated_unit_fixtures
+    setup_units
   end
 
   def setup
