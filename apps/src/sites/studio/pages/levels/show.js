@@ -100,6 +100,8 @@ function initPage() {
     };
     getStore().dispatch(setTaRubric(rubric));
 
+    console.log(config);
+    console.log(rubric);
     const rubricFabMountPoint = document.getElementById(
       'rubric-fab-mount-point'
     );
@@ -108,7 +110,8 @@ function initPage() {
       if (
         experiments.isEnabled('ai-rubrics') &&
         !!rubric &&
-        rubric.learningGoals.some(lg => lg.aiEnabled)
+        rubric.learningGoals.some(lg => lg.aiEnabled) &&
+        config.level_name === rubric.level.name
       ) {
         analyticsReporter.sendEvent(
           EVENTS.TA_RUBRIC_AI_PAGE_VISITED,
