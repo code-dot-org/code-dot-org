@@ -346,16 +346,6 @@ export default function RubricContainer({
               setFeedbackAdded={setFeedbackAdded}
               sectionId={sectionId}
             />
-            {/* {showSettings && (
-              <RubricSettings
-                productTour={stepsEnabled}
-                visible={selectedTab === TAB_NAMES.SETTINGS}
-                refreshAiEvaluations={fetchAiEvaluations}
-                rubric={rubric}
-                sectionId={sectionId}
-                tabSelectCallback={tabSelectCallback}
-              />
-            )} */}
           </div>
           {canProvideFeedback && (
             <RubricSubmitFooter

@@ -34,18 +34,6 @@ const STATUS_ALL = {
   ERROR: 'error',
 };
 
-const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
-  return fetch(
-    `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
-  );
-};
-
-const fetchTeacherEvaluationAll = (rubricId, sectionId) => {
-  return fetch(
-    `/rubrics/${rubricId}/get_teacher_evaluations_for_all?section_id=${sectionId}`
-  );
-};
-
 export default function RubricSettings({
   visible,
   refreshAiEvaluations,
@@ -73,6 +61,18 @@ export default function RubricSettings({
       return {label: String(lg.learningGoal), key: String(lg.id)};
     })
   );
+
+  const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
+    return fetch(
+      `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
+    );
+  };
+
+  const fetchTeacherEvaluationAll = (rubricId, sectionId) => {
+    return fetch(
+      `/rubrics/${rubricId}/get_teacher_evaluations_for_all?section_id=${sectionId}`
+    );
+  };
 
   const getHeadersSlice = () => {
     return headers.slice(2, headers.length);
