@@ -29,6 +29,9 @@ const PresentationView: React.FunctionComponent = () => {
 
   const getTechnicalInfo = () => {
     const technicalInfo = TECHNICAL_INFO_FIELDS.map((field, index) => {
+      if (typeof TECHNICAL_INFO_VALUES[index] === 'boolean') {
+        return `${field}: ${TECHNICAL_INFO_VALUES[index] ? 'Yes' : 'No'}`;
+      }
       return `${field}: ${TECHNICAL_INFO_VALUES[index]}`;
     });
     return technicalInfo;
