@@ -1,7 +1,7 @@
 import React from 'react';
 import ModelCardRow from './ModelCardRow';
 import {
-  ALL_MODEL_CARD_FIELDS_LABELS_ICONS,
+  MODEL_CARD_FIELDS_LABELS_ICONS,
   TECHNICAL_INFO_FIELDS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
 import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
@@ -43,18 +43,16 @@ const PresentationView: React.FunctionComponent = () => {
         <Heading4 className={moduleStyles.modelCardTitle}>
           Title of Model Card
         </Heading4>
-        {ALL_MODEL_CARD_FIELDS_LABELS_ICONS.map(
-          ([property, label, iconName]) => {
-            return (
-              <ModelCardRow
-                keyName={property}
-                title={label}
-                titleIcon={iconName}
-                expandedContent={modelCardInfo[property]}
-              />
-            );
-          }
-        )}
+        {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, iconName]) => {
+          return (
+            <ModelCardRow
+              keyName={property}
+              title={label}
+              titleIcon={iconName}
+              expandedContent={modelCardInfo[property]}
+            />
+          );
+        })}
         <ModelCardRow
           keyName="technicalInfo"
           title="Technical Info"

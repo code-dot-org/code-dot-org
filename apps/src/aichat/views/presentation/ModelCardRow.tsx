@@ -7,7 +7,7 @@ interface ModelCardRowProps {
   keyName: string;
   title: string;
   titleIcon: string;
-  expandedContent: React.ReactNode;
+  expandedContent: string | string[];
 }
 
 const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
@@ -23,7 +23,7 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
         content => content.length !== 0
       );
       if (checkedExpandedContent.length === 0) {
-        return <p>No examples available</p>;
+        return <p>Not available</p>;
       }
       return (
         <ul>
