@@ -18,6 +18,7 @@ import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
 import {Source, SourceOptions} from 'tone/build/esm/source/Source';
 import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
 import {Effects} from './interfaces/Effects';
+import {generateEffectsKeyString} from './utils';
 
 const EMPTY_EFFECTS_KEY = '';
 
@@ -228,7 +229,7 @@ class ToneJSPlayer implements AudioPlayer {
     }
 
     const effectKeyString = effects
-      ? this.generateKeyString(effects)
+      ? generateEffectsKeyString(effects)
       : EMPTY_EFFECTS_KEY;
 
     events.forEach(({notes, playbackPosition}) => {
@@ -338,26 +339,14 @@ class ToneJSPlayer implements AudioPlayer {
       }
 
       if (firstNode && lastNode) {
-        this.effectBusses[this.generateKeyString(effects)] = firstNode;
+        this.effectBusses[generateEffectsKeyString(effects)] = firstNode;
         lastNode.toDestination();
       }
     });
   }
 
-  // Generate a unique key string for a given set of effects.
-  private generateKeyString(effects: Effects) {
-    const keyStrings: string[] = [];
-    for (const key of Object.keys(effects)) {
-      const keyTyped = key as keyof Effects;
-      if (keyTyped !== 'volume' && effects[keyTyped] !== 'normal') {
-        keyStrings.push(`${key}_${effects[keyTyped]}`);
-      }
-    }
-    return keyStrings.join('_');
-  }
-
   private connectNodeToEffects(node: ToneAudioNode, effects: Effects) {
-    const key = this.generateKeyString(effects);
+    const key = generateEffectsKeyString(effects);
     if (this.effectBusses[key]) {
       node.connect(this.effectBusses[key]);
     } else {
