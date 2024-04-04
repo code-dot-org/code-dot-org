@@ -5,7 +5,6 @@ import sinon from 'sinon';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 
 import {expect} from '../../util/deprecatedChai';
-import {allowConsoleWarnings} from '../../util/throwOnConsole';
 
 const DEFAULT_PROPS = {
   fieldNames: {
@@ -33,9 +32,7 @@ const arraysEqual = (a, b) => {
   return true;
 };
 
-describe('SchoolDataInputs', () => {
-  allowConsoleWarnings();
-
+describe('SchoolZipSearch', () => {
   let fetchStub;
 
   beforeEach(() => {
