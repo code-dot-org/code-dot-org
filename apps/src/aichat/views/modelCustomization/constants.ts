@@ -11,7 +11,14 @@ export const SET_TEMPERATURE_STEP = 0.1;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
 export const MAX_ASK_ABOUT_TOPICS = 10;
 
-export const MODEL_CARD_FIELDS_AND_LABELS: [
+export const MODEL_CARD_FIELDS_AND_LABELS: [keyof ModelCardInfo, string][] = [
+  ['description', 'Description'],
+  ['intendedUse', 'Intended Use'],
+  ['limitationsAndWarnings', 'Limitations and Warnings'],
+  ['testingAndEvaluation', 'Testing and Evaluation'],
+];
+
+export const ALL_MODEL_CARD_FIELDS_LABELS_ICONS: [
   keyof ModelCardInfo,
   string,
   string
@@ -20,6 +27,15 @@ export const MODEL_CARD_FIELDS_AND_LABELS: [
   ['intendedUse', 'Intended Use', 'bullseye-pointer'],
   ['limitationsAndWarnings', 'Limitations and Warnings', 'diamond-exclamation'],
   ['testingAndEvaluation', 'Testing and Evaluation', 'vial-circle-check'],
+  ['exampleTopics', 'Example Topics', 'message-lines'],
+];
+
+export const TECHNICAL_INFO_FIELDS: string[] = [
+  'Model name',
+  'Training Data',
+  'System Prompt',
+  'Temperature',
+  'Retrieval Used',
 ];
 
 export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {

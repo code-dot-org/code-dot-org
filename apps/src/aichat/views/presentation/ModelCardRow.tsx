@@ -7,7 +7,7 @@ interface ModelCardRowProps {
   keyName: string;
   title: string;
   titleIcon: string;
-  expandedContent: string;
+  expandedContent: React.ReactNode;
 }
 
 const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
@@ -16,6 +16,26 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
   titleIcon,
   expandedContent,
 }) => {
+  const getExpandedContentToDisplay = () => {
+    if (Array.isArray(expandedContent)) {
+      // Remove empty strings from the array.
+      const checkedExpandedContent = expandedContent.filter(
+        content => content.length !== 0
+      );
+      if (checkedExpandedContent.length === 0) {
+        return <p>No examples available</p>;
+      }
+      return (
+        <ul>
+          {checkedExpandedContent.map(content => (
+            <li>{content}</li>
+          ))}
+        </ul>
+      );
+    }
+    return expandedContent;
+  };
+
   return (
     <>
       <div key={keyName} className={moduleStyles.modelCardAttributes}>
@@ -28,7 +48,7 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
           expandedIcon="caret-down"
         >
           <BodyThreeText className={moduleStyles.expandedContent}>
-            {expandedContent}
+            <div>{getExpandedContentToDisplay()}</div>
           </BodyThreeText>
         </CollapsibleSection>
       </div>
