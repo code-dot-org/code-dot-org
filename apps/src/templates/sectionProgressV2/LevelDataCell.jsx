@@ -19,11 +19,30 @@ import legendStyles from './progress-table-legend.module.scss';
 import styles from './progress-table-v2.module.scss';
 
 const levelClickedAmplitude = (sectionId, isAssessment) => () => {
-  console.log('levelClickedAmplitude', sectionId, isAssessment);
   analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_LEVEL_DETAILS, {
     sectionId: sectionId,
     isAssessment: isAssessment,
   });
+};
+
+export const getStudentRowHeaderId = studentId => `s-${studentId}`;
+export const getLessonColumnHeaderId = lessonId => `l-${lessonId}`;
+export const getLevelColumnHeaderId = (levelId, parentLevelId) =>
+  parentLevelId !== undefined
+    ? `lvl-${parentLevelId}.${levelId}`
+    : `lvl-${levelId}`;
+
+const getHeadersForCell = (studentId, levelId, parentLevelId, lessonId) => {
+  return (
+    getStudentRowHeaderId(studentId) +
+    ' ' +
+    getLevelColumnHeaderId(levelId) +
+    ' ' +
+    (parentLevelId !== undefined
+      ? getLevelColumnHeaderId(levelId, parentLevelId) + ' '
+      : '') +
+    getLessonColumnHeaderId(lessonId)
+  );
 };
 
 export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
@@ -50,6 +69,8 @@ function LevelDataCell({
   sectionId,
   studentLevelProgress,
   expandedChoiceLevel,
+  parentLevelId,
+  lessonId,
 }) {
   const itemType = React.useMemo(() => {
     if (expandedChoiceLevel) {
@@ -101,15 +122,24 @@ function LevelDataCell({
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   return (
-    <Link
-      href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
-      openInNewTab
-      external
+    <td
       className={classNames(styles.gridBox, styles.gridBoxLevel, feedbackStyle)}
-      onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
+      headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
-      {itemType && <ProgressIcon itemType={itemType} />}
-    </Link>
+      <Link
+        href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
+        openInNewTab
+        external
+        onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
+        className={styles.expandedLevelLink}
+      >
+        {itemType ? (
+          <ProgressIcon itemType={itemType} />
+        ) : (
+          <div className={styles.expandedLevelEmpty} />
+        )}
+      </Link>
+    </td>
   );
 }
 
@@ -125,4 +155,6 @@ LevelDataCell.propTypes = {
   studentLevelProgress: studentLevelProgressType,
   level: PropTypes.object.isRequired,
   expandedChoiceLevel: PropTypes.bool,
+  parentLevelId: PropTypes.string,
+  lessonId: PropTypes.number.isRequired,
 };

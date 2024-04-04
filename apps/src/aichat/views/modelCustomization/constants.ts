@@ -11,11 +11,15 @@ export const SET_TEMPERATURE_STEP = 0.1;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
 export const MAX_ASK_ABOUT_TOPICS = 10;
 
-export const MODEL_CARD_FIELDS_AND_LABELS: [keyof ModelCardInfo, string][] = [
-  ['description', 'Description'],
-  ['intendedUse', 'Intended Use'],
-  ['limitationsAndWarnings', 'Limitations and Warnings'],
-  ['testingAndEvaluation', 'Testing and Evaluation'],
+export const MODEL_CARD_FIELDS_AND_LABELS: [
+  keyof ModelCardInfo,
+  string,
+  string
+][] = [
+  ['description', 'Description', 'memo'],
+  ['intendedUse', 'Intended Use', 'bullseye-pointer'],
+  ['limitationsAndWarnings', 'Limitations and Warnings', 'diamond-exclamation'],
+  ['testingAndEvaluation', 'Testing and Evaluation', 'vial-circle-check'],
 ];
 
 export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
