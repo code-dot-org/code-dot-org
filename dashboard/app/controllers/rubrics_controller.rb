@@ -196,6 +196,7 @@ class RubricsController < ApplicationController
         'studentId' => @user.id,
         'unitName' => script_level.script.name,
         'levelName' => script_level.level.name,
+        'sectionId' => section_id,
       }
       Metrics::Events.log_event(
         user: current_user,
