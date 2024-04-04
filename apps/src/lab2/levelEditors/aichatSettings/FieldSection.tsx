@@ -2,7 +2,7 @@ import {AiCustomizations} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
-import moduleStyles from './edit-ai-customizations.module.scss';
+import moduleStyles from './edit-aichat-settings.module.scss';
 import VisibilityDropdown from './VisibilityDropdown';
 import {UpdateContext} from './UpdateContext';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
@@ -28,8 +28,9 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
   max,
   step,
 }) => {
-  const {aiCustomizations, setPropertyValue} = useContext(UpdateContext);
+  const {aichatSettings, setPropertyValue} = useContext(UpdateContext);
   const InputTag = inputType === 'textarea' ? 'textarea' : 'input';
+  const {initialCustomizations, visibilities} = aichatSettings;
   return (
     <div className={moduleStyles.fieldSection}>
       <hr />
@@ -48,10 +49,7 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
               <InputTag
                 id={fieldName}
                 type={inputType}
-                value={
-                  (aiCustomizations[fieldName]?.value as string | number) ||
-                  (inputType === 'number' ? 0 : '')
-                }
+                value={initialCustomizations[fieldName] as string | number}
                 onChange={e => setPropertyValue(fieldName, e.target.value)}
                 className={classNames(
                   inputType === 'textarea' && moduleStyles.textarea
@@ -61,7 +59,7 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
             )}
           </div>
           <VisibilityDropdown
-            value={aiCustomizations[fieldName]?.visibility || 'editable'}
+            value={visibilities[fieldName]}
             property={fieldName}
           />
         </div>
