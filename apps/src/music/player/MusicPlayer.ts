@@ -539,7 +539,7 @@ export default class MusicPlayer {
       return;
     }
 
-    for (const instrument of library.folders.filter(
+    for (const instrument of library.instruments.filter(
       folder => folder.type === 'instrument' || folder.type === 'kit'
     )) {
       console.log(`Creating sampler for ${instrument.id}`);
