@@ -28,6 +28,7 @@ const defaultArgs = {
   onQuickViewClick: () => {},
   setExpandedCardKey: () => {},
   getRecommendedSimilarCurriculum: () => {},
+  getRecommendedStretchCurriculum: () => {},
 };
 
 export const AllOptionsCard = Template.bind({});
