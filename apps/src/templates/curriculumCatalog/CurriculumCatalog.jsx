@@ -119,15 +119,34 @@ const CurriculumCatalog = ({
     curriculumKey,
     similarCurriculumKey
   ) => {
+    // Check if Stretch Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const stretchRecommenderResults =
+      JSON.parse(tryGetSessionStorage('stretchRecommenderResults', '{}')) || {};
+    const stretchRecommenderCurrKeyResult =
+      stretchRecommenderResults[curriculumKey];
+    if (stretchRecommenderCurrKeyResult) {
+      return stretchRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended stretch curriculum
     const recommendations = getStretchRecommendations(
       curriculaData,
       curriculumKey,
       curriculaTaught
     );
+    const recommendedCurriculum =
+      similarCurriculumKey === recommendations[0].key
+        ? recommendations[1]
+        : recommendations[0];
 
-    return similarCurriculumKey === recommendations[0].key
-      ? recommendations[1]
-      : recommendations[0];
+    // Update sessionStorage with new recommendation result
+    stretchRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'stretchRecommenderResults',
+      JSON.stringify(stretchRecommenderResults)
+    );
+
+    return recommendedCurriculum;
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
