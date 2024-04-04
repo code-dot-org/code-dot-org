@@ -94,6 +94,32 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
   }
 };
 
+const displaySystemMessage = (
+  message: ChatCompletionMessage,
+  onRemove: () => void
+) => {
+  const {chatMessageText, timestamp} = message;
+
+  return (
+    <>
+      <div>
+        <FontAwesomeV6Icon iconName="check" className={moduleStyles.check} />
+        <span className={moduleStyles.systemMessageTextContainer}>
+          <StrongText>{chatMessageText}</StrongText> has been updated
+        </span>
+        <StrongText>{timestamp}</StrongText>
+      </div>
+      <Button
+        onClick={onRemove}
+        isIconOnly
+        icon={{iconName: 'xmark'}}
+        size="s"
+        className={moduleStyles.removeStatusUpdate}
+      />
+    </>
+  );
+};
+
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
   const dispatch = useAppDispatch();
 
@@ -123,22 +149,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
 
       {isSystem(message.role) && (
         <div className={moduleStyles.systemMessageContainer}>
-          <div className={moduleStyles.systemMessageDetailsContainer}>
-            <FontAwesomeV6Icon
-              iconName="check"
-              className={moduleStyles.check}
-            />
-            <span>
-              <StrongText>{message.chatMessageText}</StrongText> has been
-              updated
-            </span>
-            <StrongText>{message.timestamp}</StrongText>
-          </div>
-          <Button
-            onClick={() => dispatch(removeChatMessage(message.id))}
-            isIconOnly
-            icon={{iconName: 'x'}}
-          />
+          {displaySystemMessage(message, () =>
+            dispatch(removeChatMessage(message.id))
+          )}
         </div>
       )}
     </div>

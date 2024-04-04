@@ -7,6 +7,7 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
+  READABLE_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
@@ -108,7 +109,8 @@ export const updateAiCustomization = createAsyncThunk(
         addChatMessage({
           id: 0,
           role: Role.SYSTEM,
-          chatMessageText: property,
+          chatMessageText:
+            READABLE_AI_CUSTOMIZATIONS[property as keyof AiCustomizations],
           status: Status.OK,
           timestamp: getCurrentTime(),
         })
