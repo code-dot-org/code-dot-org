@@ -13,7 +13,7 @@ a.button {
 
   margin: 0;
   padding: 0;
-  border: 1px solid;
+  border: 1px solid transparent;
   background-color: transparent;
   color: unset;
   text-decoration: none !important;
@@ -48,7 +48,7 @@ a.button {
 
   &:active {
     // !important is used here to override the ./apps/style/common.scss line 655 styles
-    border: none !important;
+    border: 1px solid transparent !important;
   }
 
   &:disabled, &[aria-disabled="true"] {
