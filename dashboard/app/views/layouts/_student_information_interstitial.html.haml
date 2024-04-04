@@ -15,14 +15,14 @@
               .age-required *
             = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: t('signup_form.select_age')
             .required-message.age-required= t('activerecord.attributes.user.required')
-        - if isLtiUser || (isInUS && ageUnderThirteen)
+        - if isLtiStudent || (isInUS && ageUnderThirteen)
           .form-group
             %div{style: 'display: flex;'}
               = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-title'
               .state-required *
             = f.select :us_state, us_state_options, include_blank: t('school_info.select_state')
             .required-message.state-required= t('activerecord.attributes.user.required')
-        -if isLtiUser
+        -if isLtiStudent
           .field
             = f.label :gender_student_input, t('gender'), class: 'label-title'
             = f.text_field :gender_student_input
