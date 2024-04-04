@@ -1,14 +1,16 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from '@cdo/apps/templates/Button';
+
 import {
   Heading2,
   BodyOneText,
   BodyThreeText,
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
+import Button from '@cdo/apps/templates/Button';
+
 import styles from './twoColumnActionBlock.module.scss';
-import classNames from 'classnames';
 
 export default function TwoColumnActionBlock({
   id,
