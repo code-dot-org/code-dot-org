@@ -232,12 +232,17 @@ min-width:47px;
     }
 
     &ExpandedLevelCell {
-      // Invisible border to match sizing of table
       border: 0;
-      width: 53px;
+      // Invisible border to match sizing of table
       border-top: 1px solid $neutral_dark40;
       color: $light_white;
       background-color: $light_primary_500;
+      width: fit-content;
+
+      &Inner {
+        border-left: 1px solid transparent;
+        width: 52px;
+      }
 
       & .assessmentLevelIcon {
         color: $light_white;
