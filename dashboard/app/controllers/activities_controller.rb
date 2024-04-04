@@ -126,8 +126,8 @@ class ActivitiesController < ApplicationController
       is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(@script_level)
       if is_ai_experiment_enabled && is_level_ai_enabled && params[:submitted] == 'true'
         metadata = {
-          'userId' => current_user.id,
-          'levelId' => @level.id,
+          'studentId' => current_user.id,
+          'unitName' => @script_level.script.name,
           'levelName' => @level.name,
         }
         Metrics::Events.log_event(
