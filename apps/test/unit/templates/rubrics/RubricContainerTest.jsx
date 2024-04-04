@@ -1,5 +1,5 @@
 // react testing library import
-import {render, fireEvent, act} from '@testing-library/react';
+import {render, fireEvent, act, screen} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
@@ -61,6 +61,12 @@ describe('RubricContainer', () => {
   function stubFetchTeacherEvaluations(data) {
     return fetchStub
       .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
+  function stubFetchProductTourStatus(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/get_ai_rubrics_tour_seen.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
@@ -685,5 +691,62 @@ describe('RubricContainer', () => {
       />
     );
     expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+  });
+
+  it('displays product tour when getTourStatus returns false', async () => {
+    stubFetchEvalStatusForUser(successJson);
+    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchProductTourStatus({seen: 'false'});
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    expect(
+      screen.getByText('Getting Started with AI Teaching Assistant').textContent
+    ).to.equal('Getting Started with AI Teaching Assistant');
+  });
+
+  it('does not display product tour when getTourStatus returns true', async () => {
+    stubFetchEvalStatusForUser(successJson);
+    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchProductTourStatus({seen: 'true'});
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    expect(screen.findAllByText('Getting Started with AI Teaching Assistant'))
+      .to.be.empty;
   });
 });

@@ -47,7 +47,6 @@ const fetchTeacherEvaluationAll = (rubricId, sectionId) => {
 };
 
 export default function RubricSettings({
-  productTour,
   visible,
   refreshAiEvaluations,
   rubric,
@@ -113,7 +112,7 @@ export default function RubricSettings({
 
   // load initial ai evaluation status
   useEffect(() => {
-    if (!!rubricId && !!sectionId && !productTour) {
+    if (!!rubricId && !!sectionId) {
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
         if (!response.ok) {
           setStatusAll(STATUS_ALL.ERROR);
@@ -136,10 +135,10 @@ export default function RubricSettings({
         }
       });
     }
-  }, [rubricId, sectionId, productTour]);
+  }, [rubricId, sectionId]);
 
   useEffect(() => {
-    if (!!rubricId && !!sectionId && !productTour) {
+    if (!!rubricId && !!sectionId) {
       fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
         if (response.ok) {
           response.json().then(data => {
@@ -176,7 +175,7 @@ export default function RubricSettings({
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [rubricId, sectionId, productTour]);
+  }, [rubricId, sectionId]);
 
   // after ai eval is requested, poll for status changes
   useEffect(() => {
@@ -343,7 +342,6 @@ export default function RubricSettings({
 }
 
 RubricSettings.propTypes = {
-  productTour: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   updateTeacherAiSetting: PropTypes.func,
   visible: PropTypes.bool,

@@ -475,43 +475,51 @@ export default function LearningGoals({
     if (!!aiEvalInfo?.evidence && !productTour) {
       return annotateLines(aiEvalInfo.evidence, aiEvalInfo.observations);
     } else if (productTour) {
-      return [aiEvalInfo.evidence];
+      return [
+        {
+          firstLine: 12,
+          lastLine: 13,
+          message: 'A sprite is defined here.',
+        },
+      ];
     }
     return [];
   }, [aiEvalInfo, productTour]);
 
   const onCarouselPress = buttonValue => {
-    let currentIndex = currentLearningGoal;
-    currentIndex += buttonValue;
-    if (currentIndex < 0) {
-      currentIndex = learningGoals.length;
-    } else if (currentIndex > learningGoals.length) {
-      currentIndex = 0;
-    }
-    currentLearningGoalRef.current = currentIndex;
-    setCurrentLearningGoal(currentIndex);
+    if (!productTour) {
+      let currentIndex = currentLearningGoal;
+      currentIndex += buttonValue;
+      if (currentIndex < 0) {
+        currentIndex = learningGoals.length;
+      } else if (currentIndex > learningGoals.length) {
+        currentIndex = 0;
+      }
+      currentLearningGoalRef.current = currentIndex;
+      setCurrentLearningGoal(currentIndex);
 
-    // Clear feedback (without sending it)
-    setAiFeedback(-1);
+      // Clear feedback (without sending it)
+      setAiFeedback(-1);
 
-    // Annotate the lines based on the AI observation
-    clearAnnotations();
-    if (currentIndex !== learningGoals.length) {
-      if (!isStudent) {
-        const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
-        analyticsReporter.sendEvent(eventName, {
-          ...(reportingData || {}),
-          learningGoalKey: learningGoals[currentIndex].key,
-          learningGoal: learningGoals[currentIndex].learningGoal,
-        });
+      // Annotate the lines based on the AI observation
+      clearAnnotations();
+      if (currentIndex !== learningGoals.length) {
+        if (!isStudent) {
+          const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
+          analyticsReporter.sendEvent(eventName, {
+            ...(reportingData || {}),
+            learningGoalKey: learningGoals[currentIndex].key,
+            learningGoal: learningGoals[currentIndex].learningGoal,
+          });
+        }
       }
     }
   };
 
   const handleKeyDown = event => {
-    if (event.key === 'ArrowLeft') {
+    if (event.key === 'ArrowLeft' && !productTour) {
       onCarouselPress(-1);
-    } else if (event.key === 'ArrowRight') {
+    } else if (event.key === 'ArrowRight' && !productTour) {
       onCarouselPress(1);
     }
   };

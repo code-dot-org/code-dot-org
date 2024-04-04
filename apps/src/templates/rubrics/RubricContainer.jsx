@@ -65,7 +65,7 @@ export default function RubricContainer({
   };
 
   const fetchAiEvaluations = useCallback(() => {
-    if (!!studentLevelInfo && teacherHasEnabledAi) {
+    if (!!studentLevelInfo && teacherHasEnabledAi && !stepsEnabled) {
       const studentId = studentLevelInfo.user_id;
       const rubricId = rubric.id;
       const dataUrl = `/rubrics/${rubricId}/get_ai_evaluations?student_id=${studentId}`;
@@ -87,7 +87,7 @@ export default function RubricContainer({
           );
         });
     }
-  }, [studentLevelInfo, teacherHasEnabledAi, rubric.id]);
+  }, [studentLevelInfo, teacherHasEnabledAi, rubric.id, stepsEnabled]);
 
   useEffect(() => {
     fetchAiEvaluations();
@@ -122,7 +122,6 @@ export default function RubricContainer({
         } else {
           setStepsEnabled(true);
         }
-        console.log('status updated to', json['seen']);
       });
   };
 
@@ -138,7 +137,6 @@ export default function RubricContainer({
         } else {
           setStepsEnabled(true);
         }
-        console.log('tour status is', json['seen']);
       });
   };
 
@@ -149,7 +147,8 @@ export default function RubricContainer({
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
-  const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
+  const showSettings =
+    onLevelForEvaluation && teacherHasEnabledAi && !stepsEnabled;
 
   // Steps for product tour
   const initialStep = 0;
@@ -158,7 +157,7 @@ export default function RubricContainer({
       element: '#ui-floatingActionButton',
       title: 'Getting Started with AI Teaching Assistant',
       intro:
-        '<p>Launch AI Teaching Assistant from the bottom left corner of the screen.</p><p><b>Click on the AI Teaching Assistant to get started!</b></p>',
+        '<p>Launch AI Teaching Assistant from the bottom left corner of the screen.</p>',
     },
     {
       element: '#tour-ai-assessment',
@@ -188,7 +187,7 @@ export default function RubricContainer({
       element: '#tour-ai-assessment-feedback',
       title: 'How did we do?',
       intro:
-        '<p>Your feedback helps us make the AI Teaching Assistant more helpful to you –  let us know how it did.</p><p><b>Finish up by providing feedback about the AI Assessment.</b></p>',
+        '<p>Your feedback helps us make the AI Teaching Assistant more helpful to you – let us know how it did.</p>',
     },
   ];
 
@@ -199,7 +198,7 @@ export default function RubricContainer({
       {
         id: 1,
         key: '1',
-        learningGoal: 'goal 1',
+        learningGoal: 'Variables',
         aiEnabled: true,
         evidenceLevels: rubric.learningGoals[0].evidenceLevels,
       },
@@ -227,19 +226,12 @@ export default function RubricContainer({
       learning_goal_id: 1,
       understanding: 2,
       aiConfidencePassFail: 2,
-      evidence: {
-        firstLine: 12,
-        lastLine: 13,
-        message: 'A sprite is defined here.',
-      },
+      evidence: '',
     },
   ];
 
   const onTourStart = stepIndex => {
     setTourButtonLabel('Next Tip');
-    let elems = document.getElementsByClassName('introjs-helperLayer');
-    console.log(elems);
-    console.log(elems[0]);
   };
 
   const onTourExit = () => {
@@ -254,8 +246,11 @@ export default function RubricContainer({
 
   const beforeStepChange = (nextStepIndex, nextElement) => {
     if (nextStepIndex === 1) {
-      return open;
-    } else if (nextStepIndex === 2) {
+      if (!open) {
+        document.getElementById('ui-floatingActionButton').click();
+      }
+    }
+    if (nextStepIndex === 2) {
       document
         .getElementById('tour-ai-assessment')
         .setAttribute('z-index', 99999);
@@ -351,7 +346,7 @@ export default function RubricContainer({
               setFeedbackAdded={setFeedbackAdded}
               sectionId={sectionId}
             />
-            {showSettings && (
+            {/* {showSettings && (
               <RubricSettings
                 productTour={stepsEnabled}
                 visible={selectedTab === TAB_NAMES.SETTINGS}
@@ -360,7 +355,7 @@ export default function RubricContainer({
                 sectionId={sectionId}
                 tabSelectCallback={tabSelectCallback}
               />
-            )}
+            )} */}
           </div>
           {canProvideFeedback && (
             <RubricSubmitFooter
