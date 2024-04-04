@@ -78,6 +78,7 @@ describe('CurriculumCatalog', () => {
     restoreRedux();
     resetWindowLocation();
     sessionStorage.removeItem('similarRecommenderResults');
+    sessionStorage.removeItem('stretchRecommenderResults');
     window.history.replaceState = replaceStateOrig;
   });
 
@@ -828,6 +829,52 @@ describe('CurriculumCatalog', () => {
       );
       expect(storedRecommenderResults[firstTestCurriculum.key].key).to.equal(
         similarCurriculumRecommendations[0].key
+      );
+    });
+
+    it('sets sessionStorage for Stretch Curriculum Recommender result', () => {
+      const props = {...defaultProps, curriculaData: FULL_TEST_COURSES};
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+      const firstQuickViewButton = screen.getAllByText('Quick View', {
+        exact: false,
+      })[0];
+
+      // Get the top Stretch Recommended Curriculum for the first test curriculum.
+      // (As per the logic in CurriculumCatalog.jsx, if the top Stretch result is
+      // the same as the top Similar result, then it will get the 2nd Stretch
+      // result)
+      const firstTestCurriculum = FULL_TEST_COURSES[0];
+      const recommendedSimilarCurriculum = getSimilarRecommendations(
+        FULL_TEST_COURSES,
+        firstTestCurriculum.key,
+        null
+      )[0];
+      const stretchCurriculumRecommendations = getStretchRecommendations(
+        FULL_TEST_COURSES,
+        firstTestCurriculum.key,
+        null
+      );
+      const recommendedStretchCurriculum =
+        recommendedSimilarCurriculum.key ===
+        stretchCurriculumRecommendations[0].key
+          ? stretchCurriculumRecommendations[1]
+          : stretchCurriculumRecommendations[0];
+
+      // Open expanded card of the first test curriculum
+      fireEvent.click(firstQuickViewButton);
+      screen.getByText(firstTestCurriculum.description);
+
+      // Check that sessionStorage has result of Stretch Curriculum Recommender
+      const storedRecommenderResults = JSON.parse(
+        tryGetSessionStorage('stretchRecommenderResults', '{}')
+      );
+
+      expect(storedRecommenderResults[firstTestCurriculum.key].key).to.equal(
+        recommendedStretchCurriculum.key
       );
     });
   });
