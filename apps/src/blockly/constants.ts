@@ -59,6 +59,7 @@ export const BlockColors = {
   // The colors below do not have a corresponding style and are incompatible with themes.
   COMMENT: [0, 0, 0.6],
   UNKNOWN: [0, 0, 0.8],
+  DISABLED: [0, 0, 0.5],
 };
 
 export const Renderers = {
@@ -86,6 +87,7 @@ export const DEFAULT_SOUND = 'sound://category_digital/ping.mp3';
 export const NO_OPTIONS_MESSAGE = 'uninitialized';
 export const EMPTY_OPTION = '???';
 export const WORKSPACE_PADDING = 16;
+export const FIELD_IMAGE_DEFAULT_SIZE = 40;
 
 export function stringIsXml(str: string) {
   try {

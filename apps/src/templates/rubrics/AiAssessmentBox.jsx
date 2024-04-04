@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
+import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {
   EmText,
   StrongText,
@@ -45,6 +46,68 @@ export default function AiAssessmentBox({
       : i18n.aiAssessmentDoesNotMeet();
   };
 
+  // When a line number is clicked in the evidence listing
+  const lineNumberClickHandler = (lineNumber, e) => {
+    e.preventDefault();
+    EditorAnnotator.scrollToLine(lineNumber);
+  };
+
+  const renderEvidenceItem = (evidence, i) => {
+    let text = evidence.message;
+
+    /* When the message is the same as the whole observations, this
+     * was evidence that did not have a dedicated message. In this
+     * case, this is where we fall back to just showing a list of
+     * observations instead of the evidence. This won't have line
+     * numbers and is certainly worse but better than nothing. */
+    if (evidence.firstLine === undefined) {
+      return <p key={i}>{text}</p>;
+    } else if (evidence.firstLine === evidence.lastLine) {
+      // Line [lineNumber]: [message]
+      text = i18n.aiAssessmentEvidenceLine({
+        lineNumber: '<><first-line><>',
+        feedbackForLine: evidence.message,
+      });
+    } else {
+      // Lines [firstLineNumber]-[lastLineNumber]: [message]
+      text = i18n.aiAssessmentEvidenceLines({
+        firstLineNumber: '<><first-line><>',
+        lastLineNumber: '<><last-line><>',
+        feedbackForLines: evidence.message,
+      });
+    }
+
+    return (
+      <p key={i}>
+        {text.split('<>').map((subtext, k) => {
+          if (subtext === '<first-line>') {
+            return (
+              <a
+                key={`${i}-${k}`}
+                href="#"
+                onClick={lineNumberClickHandler.bind(this, evidence.firstLine)}
+              >
+                {evidence.firstLine}
+              </a>
+            );
+          } else if (subtext === '<last-line>') {
+            return (
+              <a
+                key={`${i}-${k}`}
+                href="#"
+                onClick={lineNumberClickHandler.bind(this, evidence.lastLine)}
+              >
+                {evidence.lastLine}
+              </a>
+            );
+          } else {
+            return <span key={`${i}-${k}`}>{subtext}</span>;
+          }
+        })}
+      </p>
+    );
+  };
+
   const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
 
   return (
@@ -73,26 +136,9 @@ export default function AiAssessmentBox({
             <StrongText>{i18n.aiAssessmentEvidence()}</StrongText>
           </BodyFourText>
           <ul>
-            {aiEvidence.map(
-              (info, i) =>
-                info &&
-                info.firstLine && (
-                  <li key={i}>
-                    {/* Lines [firstLine]-[lastLine]: [message] */}
-                    {info.firstLine === info.lastLine &&
-                      i18n.aiAssessmentEvidenceLine({
-                        lineNumber: info.firstLine,
-                        feedbackForLine: info.message,
-                      })}
-                    {info.firstLine !== info.lastLine &&
-                      i18n.aiAssessmentEvidenceLines({
-                        firstLineNumber: info.firstLine,
-                        lastLineNumber: info.lastLine,
-                        feedbackForLines: info.message,
-                      })}
-                  </li>
-                )
-            )}
+            {aiEvidence.map((info, i) => (
+              <li key={i}>{renderEvidenceItem(info, i)}</li>
+            ))}
           </ul>
         </div>
       )}

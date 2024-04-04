@@ -19,6 +19,9 @@ import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
+// These are test observations that would be given by the AI.
+const observations = 'This is an observation. This is another observation.';
+
 const learningGoals = [
   {
     id: 2,
@@ -59,7 +62,8 @@ const aiEvaluations = [
     understanding: 2,
     aiConfidencePassFail: 2,
     aiConfidenceExactMatch: 1,
-    observations:
+    observations: observations,
+    evidence:
       'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
   },
 ];
@@ -72,6 +76,12 @@ const code = `// code
     var z = x + y;
     */
     draw();
+
+    if (something) {
+      doSomething();
+    }
+
+    exit();
   `;
 
 const studentLevelInfo = {
@@ -83,6 +93,35 @@ const studentLevelInfo = {
 };
 
 describe('LearningGoals - React Testing Library', () => {
+  let annotatorStub,
+    annotateLineStub,
+    highlightLineStub,
+    clearAnnotationsStub,
+    clearHighlightedLinesStub;
+
+  // Stub out our references to the singleton and editor
+  beforeEach(() => {
+    let annotatorInstanceStub = sinon.stub();
+    annotatorInstanceStub.getCode = sinon.stub().returns(code);
+    annotatorStub = sinon
+      .stub(EditorAnnotator, 'annotator')
+      .returns(annotatorInstanceStub);
+    annotateLineStub = sinon.stub(EditorAnnotator, 'annotateLine');
+    clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
+    highlightLineStub = sinon.stub(EditorAnnotator, 'highlightLine');
+    clearHighlightedLinesStub = sinon.stub(
+      EditorAnnotator,
+      'clearHighlightedLines'
+    );
+  });
+  afterEach(() => {
+    annotatorStub.restore();
+    annotateLineStub.restore();
+    clearAnnotationsStub.restore();
+    highlightLineStub.restore();
+    clearHighlightedLinesStub.restore();
+  });
+
   it('renders EvidenceLevels without canProvideFeedback', () => {
     render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
 
@@ -204,8 +243,8 @@ describe('LearningGoals - Enzyme', () => {
     clearHighlightedLinesStub;
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
 
-  // Stub out our references to the singleton and editor
-  beforeEach(() => {
+  function stubAnnotator() {
+    // Stub out our references to the singleton and editor
     let annotatorInstanceStub = sinon.stub();
     annotatorInstanceStub.getCode = sinon.stub().returns(code);
     annotatorStub = sinon
@@ -218,53 +257,97 @@ describe('LearningGoals - Enzyme', () => {
       EditorAnnotator,
       'clearHighlightedLines'
     );
-  });
-  afterEach(() => {
+  }
+
+  function restoreAnnotator() {
     annotatorStub.restore();
     annotateLineStub.restore();
     clearAnnotationsStub.restore();
     highlightLineStub.restore();
     clearHighlightedLinesStub.restore();
-  });
+  }
 
   describe('annotateLines', () => {
+    beforeEach(() => {
+      stubAnnotator();
+    });
+    afterEach(() => {
+      restoreAnnotator();
+    });
+
     it('should do nothing if the AI observation does not reference any lines', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('This is just a basic observation.');
+      annotateLines('This is just a basic observation.', observations);
       expect(annotateLineStub.notCalled).to.be.true;
     });
 
     it('should annotate a single line of code referenced by the AI', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('Line 1: This is a line of code `var x = 5;`');
+      annotateLines(
+        'Line 1: This is a line of code `var x = 5;`',
+        observations
+      );
       sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
     });
 
+    it('should annotate a truncated line of code referenced by the AI', () => {
+      // The AI tends to misreport the line number, so we shouldn't rely on it
+      annotateLines(
+        'Line 1: This is a line of code `if (something) { ... }`',
+        observations
+      );
+      sinon.assert.calledWith(annotateLineStub, 10, 'This is a line of code');
+    });
+
     it('should annotate the first line of code referenced by the AI', () => {
-      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      annotateLines(
+        'Line 1: This is a line of code `var x = 5; var y = 6;`',
+        observations
+      );
       sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
     });
 
     it('should highlight a single line of code referenced by the AI', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
-      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      annotateLines(
+        'Line 1: This is a line of code `var x = 5; var y = 6;`',
+        observations
+      );
       sinon.assert.calledWith(highlightLineStub, 2);
     });
 
+    it('should highlight a truncated line of code referenced by the AI', () => {
+      // The AI tends to misreport the line number, so we shouldn't rely on it
+      annotateLines(
+        'Line 1: This is a line of code `if (something) { ... }`',
+        observations
+      );
+      sinon.assert.calledWith(highlightLineStub, 10);
+    });
+
     it('should highlight all lines of code referenced by the AI', () => {
-      annotateLines('Line 1: This is a line of code `var x = 5; var y = 6;`');
+      annotateLines(
+        'Line 1: This is a line of code `var x = 5; var y = 6;`',
+        observations
+      );
       sinon.assert.calledWith(highlightLineStub, 2);
       sinon.assert.calledWith(highlightLineStub, 3);
     });
 
     it('should just highlight the lines the AI thinks if the referenced code does not exist', () => {
-      annotateLines('Line 45: This is a line of code `var z = 0`');
+      annotateLines(
+        'Line 45: This is a line of code `var z = 0`',
+        observations
+      );
       sinon.assert.calledWith(annotateLineStub, 45, 'This is a line of code');
       sinon.assert.calledWith(highlightLineStub, 45);
     });
 
     it('should just highlight all of the lines the AI thinks if the referenced code does not exist', () => {
-      annotateLines('Line 42-44: This is a line of code `var z = 0`');
+      annotateLines(
+        'Line 42-44: This is a line of code `var z = 0`',
+        observations
+      );
       sinon.assert.calledWith(annotateLineStub, 42, 'This is a line of code');
       sinon.assert.calledWith(highlightLineStub, 42);
       sinon.assert.calledWith(highlightLineStub, 43);
@@ -272,12 +355,12 @@ describe('LearningGoals - Enzyme', () => {
     });
 
     it('should annotate the last line of code when referenced by the AI', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
+      annotateLines('Line 55: This is a line of code `draw();`', observations);
       sinon.assert.calledWith(annotateLineStub, 8, 'This is a line of code');
     });
 
     it('should pass along the correct info type for the annotation', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
+      annotateLines('Line 55: This is a line of code `draw();`', observations);
       sinon.assert.calledWith(
         annotateLineStub,
         sinon.match.any,
@@ -287,7 +370,7 @@ describe('LearningGoals - Enzyme', () => {
     });
 
     it('should pass along a hex color', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
+      annotateLines('Line 55: This is a line of code `draw();`', observations);
       sinon.assert.calledWith(
         annotateLineStub,
         sinon.match.any,
@@ -298,7 +381,7 @@ describe('LearningGoals - Enzyme', () => {
     });
 
     it('should pass along the appropriate image as an icon', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
+      annotateLines('Line 55: This is a line of code `draw();`', observations);
 
       sinon.assert.calledWith(
         annotateLineStub,
@@ -311,7 +394,7 @@ describe('LearningGoals - Enzyme', () => {
     });
 
     it('should pass along the appropriate image as an icon for the tooltip', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
+      annotateLines('Line 55: This is a line of code `draw();`', observations);
 
       sinon.assert.calledWith(
         annotateLineStub,
@@ -325,22 +408,56 @@ describe('LearningGoals - Enzyme', () => {
     });
 
     it('should highlight the last line of code when referenced by the AI', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
+      annotateLines('Line 55: This is a line of code `draw();`', observations);
       sinon.assert.calledWith(highlightLineStub, 8);
     });
 
     it('should highlight the line with a hex color', () => {
-      annotateLines('Line 55: This is a line of code `draw();`');
+      annotateLines('Line 55: This is a line of code `draw();`', observations);
       sinon.assert.calledWith(highlightLineStub, 8, sinon.match('#'));
     });
 
-    it('should ignore code snippets that are empty', () => {
-      annotateLines('Line 42: This is totally a thing ` `');
-      sinon.assert.notCalled(highlightLineStub);
+    it('should use the provided line numbers if the code snippet is empty', () => {
+      annotateLines('Line 42: This is totally a thing ` `', observations);
+      sinon.assert.calledWith(annotateLineStub, 42, 'This is totally a thing');
+    });
+
+    it('should use the provided line numbers if the code snippet is missing', () => {
+      annotateLines(
+        'Line 42: This is totally a thing Lines 45-56: This is also a thing `some code`',
+        observations
+      );
+      sinon.assert.calledWith(annotateLineStub, 42, 'This is totally a thing');
+    });
+
+    it('should annotate with the observations if the evidence has no message.', () => {
+      annotateLines('Line 42: `draw()`', observations);
+      sinon.assert.calledWith(annotateLineStub, 8, observations);
+    });
+
+    it('should return the set of sentences reflected in observations if the evidence has no message.', () => {
+      const annotations = annotateLines('Line 42: `draw()`', observations);
+
+      // One for each sentence
+      expect(annotations.length).to.be.equal(2);
+
+      // The lines are undefined for the written annotation since we don't know
+      // if it is relevant.
+      expect(annotations[0].firstLine).to.be.undefined;
+
+      // And they are in the order provided by the given observations string.
+      expect(annotations[0].message).to.be.equal(observations.split('.')[0]);
     });
   });
 
   describe('clearAnnotations', () => {
+    beforeEach(() => {
+      stubAnnotator();
+    });
+    afterEach(() => {
+      restoreAnnotator();
+    });
+
     it('should clear annotations and clear highlighted lines', () => {
       clearAnnotations();
       sinon.assert.called(clearAnnotationsStub);
@@ -388,6 +505,27 @@ describe('LearningGoals - Enzyme', () => {
       2
     );
     expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
+  });
+
+  it('renders AiAssessment with the annotated list of evidence', () => {
+    const aiEvidence = annotateLines(
+      aiEvaluations[0].evidence,
+      aiEvaluations[0].observations
+    );
+
+    const wrapper = shallow(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={aiEvaluations}
+      />
+    );
+
+    expect(wrapper.find('AiAssessment').props().aiEvidence).to.deep.equal(
+      aiEvidence
+    );
   });
 
   it('does not renders AiAssessment when teacher has disabled ai', () => {

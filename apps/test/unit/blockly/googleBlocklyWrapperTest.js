@@ -44,7 +44,6 @@ describe('Google Blockly Wrapper', () => {
       'FieldColour',
       'FieldColourDropdown',
       'FieldIcon',
-      'FieldLabel',
       'FieldParameter',
       'FieldRectangularDropdown',
       'fish_locale',

@@ -39,6 +39,7 @@ const OneColumnActionBlock = ({
               size="m"
               text={button.text}
               type={button.type}
+              ariaLabel={button.ariaLabel}
             />
           ))}
       </div>
@@ -59,6 +60,7 @@ OneColumnActionBlock.propTypes = {
       text: PropTypes.string,
       target: PropTypes.string,
       type: PropTypes.string,
+      ariaLabel: PropTypes.string,
     })
   ),
 };

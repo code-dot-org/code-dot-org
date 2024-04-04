@@ -8,7 +8,11 @@ import {
 } from '@blockly/plugin-scroll-options';
 import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
-import {BlocklyVersion, WORKSPACE_EVENTS} from '@cdo/apps/blockly/constants';
+import {
+  BlockColors,
+  BlocklyVersion,
+  WORKSPACE_EVENTS,
+} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
@@ -16,6 +20,7 @@ import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import CdoFieldLabel from './addons/cdoFieldLabel';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
@@ -266,7 +271,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldColour');
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
-  blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('fieldRegistry');
@@ -330,6 +334,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // CdoFieldBitmap extends from a JavaScript class without typing.
     // We know it's a field, so it's safe to cast as unknown.
     ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
+    ['field_label', 'FieldLabel', CdoFieldLabel],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -499,6 +504,25 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return false;
   };
 
+  // Labs like Maze and Artist turn undeletable blocks gray.
+  extendedBlockSvg.shouldBeGrayedOut = function () {
+    return (
+      blocklyWrapper.grayOutUndeletableBlocks &&
+      !this.workspace.isReadOnly() &&
+      !this.isDeletable()
+    );
+  };
+
+  const originalSetDeletable = blocklyWrapper.Block.prototype.setDeletable;
+  // Replace the original setDeletable with a version that will also re-color
+  // blocks if they are meant to be gray.
+  extendedBlockSvg.setDeletable = function (deletable) {
+    originalSetDeletable.call(this, deletable);
+    if (this.shouldBeGrayedOut()) {
+      Blockly.cdoUtils.setHSV(this, ...BlockColors.DISABLED);
+    }
+  };
+
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
 
   extendedInput.setStrictCheck = function (check) {
@@ -540,6 +564,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   extendedWorkspaceSvg.getAllUsedBlocks = function () {
     return this.getAllBlocks().filter(block => block.isEnabled());
+  };
+
+  extendedWorkspaceSvg.isReadOnly = function () {
+    return blocklyWrapper.readOnly || this.options.readOnly;
   };
 
   // Used in levels when starting over or resetting Version History
@@ -740,8 +768,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options
     ) as ExtendedWorkspaceSvg;
 
+    blocklyWrapper.grayOutUndeletableBlocks =
+      !!options.grayOutUndeletableBlocks;
     blocklyWrapper.topLevelProcedureAutopopulate =
       !!options.topLevelProcedureAutopopulate;
+    blocklyWrapper.readOnly = !!opt_options.readOnly;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
