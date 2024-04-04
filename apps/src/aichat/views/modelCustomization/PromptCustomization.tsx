@@ -42,9 +42,14 @@ const PromptCustomization: React.FunctionComponent = () => {
 
   const renderChooseAndCompareModels = () => {
     return (
-      <div className={classNames(styles.inputContainer)}>
+      <div
+        className={classNames(
+          styles.inputContainer,
+          styles.fullWidthDropdownContainer
+        )}
+      >
         <SimpleDropdown
-          labelText="Pick a model:"
+          labelText="Selected model:"
           onChange={e => setChosenModel(e.target.value)}
           items={[
             {value: 'llama2', text: 'LLama 2'},
@@ -53,7 +58,7 @@ const PromptCustomization: React.FunctionComponent = () => {
           selectedValue={chosenModel}
           name="model"
           size="s"
-          className={styles.updateButton}
+          className={styles.selectedModelDropdown}
         />
         <Button
           text="Compare Models"

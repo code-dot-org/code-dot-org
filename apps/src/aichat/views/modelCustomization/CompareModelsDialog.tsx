@@ -14,7 +14,10 @@ const CompareModelsDialog: React.FunctionComponent<{onClose: () => void}> = ({
   const [chosenModelRight, setChosenModelRight] = useState<string>('mistral');
 
   return (
-    <AccessibleDialog onClose={onClose} modalId={styles.modelComparisonDialog}>
+    <AccessibleDialog
+      onClose={onClose}
+      className={styles.modelComparisonDialog}
+    >
       <div>
         <div className={styles.headerContainer}>
           <Heading3>Compare Models</Heading3>
