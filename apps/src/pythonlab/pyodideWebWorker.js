@@ -1,15 +1,17 @@
 import {loadPyodide} from 'pyodide';
+import {initPyodide} from 'pyodide-worker-runner';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
     indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full',
   });
-  await self.pyodide.loadPackage(['numpy']);
   self.pyodide.setStdout({
     batched: msg => {
       self.postMessage({type: 'sysout', message: msg, id: 'none'});
     },
   });
+  initPyodide(self.pyodide);
+  await self.pyodide.loadPackage(['numpy']);
 }
 
 let pyodideReadyPromise = null;

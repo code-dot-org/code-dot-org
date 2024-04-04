@@ -1,17 +1,26 @@
+import {makeAtomicsChannel, makeChannel, makeServiceWorkerChannel} from 'sync-message';
 import {getStore} from '@cdo/apps/redux';
 import {appendOutput} from './pythonlabRedux';
+import {PyodideClient} from 'pyodide-worker-runner';
 
 // A default file to import into the user's script.
 const otherFileContents = "def hello():\n  print('hello')\n";
 
+//navigator.serviceWorker.register('messagingServiceWorker.ts');
+const channel = makeAtomicsChannel();
+
 // This syntax doesn't work with typescript, so this file is in js.
-const pyodideWorker = new Worker(
-  new URL('./pyodideWebWorker.js', import.meta.url)
+// const pyodideWorker = new Worker(
+//   new URL('./pyodideWebWorker.js', import.meta.url)
+// );
+
+const pyodideClient = new PyodideClient(
+  () => new Worker(new URL('./pyodideWebWorker.js', import.meta.url), channel)
 );
 
 const callbacks = {};
 
-pyodideWorker.onmessage = event => {
+pyodideClient.onmessage = event => {
   const {type, id, ...data} = event.data;
   if (type === 'sysout') {
     getStore().dispatch(appendOutput(data.message));
@@ -40,7 +49,7 @@ const asyncRun = (() => {
         python: wrappedScript,
         id,
       };
-      pyodideWorker.postMessage(messageData);
+      pyodideClient.postMessage(messageData);
     });
   };
 })();
