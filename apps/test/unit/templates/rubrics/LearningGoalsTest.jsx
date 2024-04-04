@@ -434,6 +434,20 @@ describe('LearningGoals - Enzyme', () => {
       annotateLines('Line 42: `draw()`', observations);
       sinon.assert.calledWith(annotateLineStub, 8, observations);
     });
+
+    it('should return the set of sentences reflected in observations if the evidence has no message.', () => {
+      const annotations = annotateLines('Line 42: `draw()`', observations);
+
+      // One for each sentence
+      expect(annotations.length).to.be.equal(2);
+
+      // The lines are undefined for the written annotation since we don't know
+      // if it is relevant.
+      expect(annotations[0].firstLine).to.be.undefined;
+
+      // And they are in the order provided by the given observations string.
+      expect(annotations[0].message).to.be.equal(observations.split('.')[0]);
+    });
   });
 
   describe('clearAnnotations', () => {
