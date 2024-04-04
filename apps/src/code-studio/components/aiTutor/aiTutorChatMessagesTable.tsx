@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {fetchStudentChatMessages} from '@cdo/apps/aiTutor/interactionsApi';
+import {fetchAITutorInteractions} from '@cdo/apps/aiTutor/interactionsApi';
 import AITutorChatMessagesTableRow from './aiTutorChatMessageTableRow';
 import style from './chat-messages-table.module.scss';
 import {StudentChatRow} from '@cdo/apps/aiTutor/types';
@@ -19,7 +19,7 @@ const AITutorChatMessagesTable: React.FunctionComponent<
   useEffect(() => {
     (async () => {
       try {
-        const chatMessages = await fetchStudentChatMessages(sectionId);
+        const chatMessages = await fetchAITutorInteractions({sectionId});
         setChatMessages(chatMessages);
       } catch (error) {
         console.log('error', error);

@@ -45,6 +45,7 @@ Dashboard::Application.routes.draw do
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/gallery", to: "musiclab#gallery"
+    get "/musiclab/embed", to: "musiclab#embed"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
@@ -608,6 +609,11 @@ Dashboard::Application.routes.draw do
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
     get '/lti/v1/integrations', to: 'lti_v1#new_integration'
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+    namespace :lti do
+      namespace :v1 do
+        resource :feedback, controller: :feedback, only: %i[create show]
+      end
+    end
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -896,6 +902,7 @@ Dashboard::Application.routes.draw do
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
+        post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'

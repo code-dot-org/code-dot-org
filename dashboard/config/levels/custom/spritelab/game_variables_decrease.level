@@ -25,9 +25,9 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Variable values can increase or decrease.** Program the Health variable to decrease when the bomb sprite is clicked.\r\n- Under the event `when sprite touches sprite` add a `change Health by -1` \r\n\r\n- Press `Run` and watch the variables change when you click on the sprites ",
+    "long_instructions": "**Variable values can increase or decrease.** Program the **health** variable to decrease when the bomb sprite is clicked.\r\n- Under the event `when sprite clicked` add a `change health by -1` \r\n\r\n- Press `Run` and watch the variables change when you click on the sprites ",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
@@ -47,14 +47,13 @@
       "downButton"
     ],
     "name_suffix": "_simplified",
-    "short_instructions": "Set the Health variable to change by -1 every time the sprites touch.",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_code": "if (World.frameCount == 1) {\r\n\r\n   addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'spritelabFeedbackClickSprite'); // Failure message: \"Make sure to click on your sprite after pressing *\"Run\"*.\"\r\n  \r\n  addCriteria(function() {\r\n    return variableValueChanged('decrease'); // Check whether the value of the variable decreased.\r\n  }, \"variableDecreaseValue\");  // Failure message: \"The value of your variable didn't decrease.\"\r\n}\r\ncheck();\r\n"
+    "short_instructions": "Set the `health` variable to change by -1 every time the bomb sprite is clicked.",
+    "validation_code": "if (World.frameCount == 1) {\r\n\r\n   addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'spritelabFeedbackClickSprite'); // Failure message: \"Make sure to click on your sprite after pressing *\"Run\"*.\"\r\n  \r\n  addCriteria(function() {\r\n    return variableValueChanged('decrease'); // Check whether the value of the variable decreased.\r\n  }, \"variableDecreaseValue\");  // Failure message: \"The value of your variable didn't decrease.\"\r\n}\r\ncheck();\r\n",
+    "encrypted_examples": "fDAyomACpQcjPwwolaNycAXS8CI+5g/mXy7JKmgoCD+MuDClMY26gR83hM30\nEWyeB9qRmGXK9c86W/dOifbv6g==\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"This time the variable should decrease when the player sprite touches the enemy sprite. To decrease the value, you will use a negative number.\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"math_change\\\" id=\\\"~0jqmFx/!a[v4n)xN]$F\\\">\\n  <field name=\\\"VAR\\\" id=\\\"xplzL-PU=*{_JUv=yc59\\\">Health</field>\\n  <value name=\\\"DELTA\\\">\\n    <shadow type=\\\"math_number\\\" id=\\\"~,.{(?Hs/,c=lm`$c_z9\\\">\\n      <field name=\\\"NUM\\\">-1</field>\\n    </shadow>\\n    <block type=\\\"math_number\\\" id=\\\"Dsygy)_vgya%_J|C?^+(\\\">\\n      <field name=\\\"NUM\\\">-1</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0e74d786235e2ba444f482a287c2f0a0/game_variables_decrease.mp3\"}]",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:22:48.511+00:00\",\"changed\":[\"cloned from \\\"game_dev_score_change\\\"\"],\"cloned_from\":\"game_dev_score_change\"},{\"changed_at\":\"2024-03-18 20:22:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 17:56:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 18:03:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 18:04:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:22:48.511+00:00\",\"changed\":[\"cloned from \\\"game_dev_score_change\\\"\"],\"cloned_from\":\"game_dev_score_change\"},{\"changed_at\":\"2024-03-18 20:22:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 17:56:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 18:03:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 18:04:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 15:43:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 15:44:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 15:44:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:10:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:35:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:35:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:36:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:42:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:42:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:43:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:44:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,10 +61,10 @@
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable id="brBn}v{CpUvR[.64ZYc{">Score</variable>
-          <variable id="xplzL-PU=*{_JUv=yc59">Health</variable>
+          <variable id="brBn}v{CpUvR[.64ZYc{">score</variable>
+          <variable id="xplzL-PU=*{_JUv=yc59">health</variable>
         </variables>
-        <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="30" y="26">
+        <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="16" y="16">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"video_game_bg"</field>
@@ -79,7 +78,7 @@
                   </value>
                   <next>
                     <block type="gamelab_showVariable">
-                      <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Score</field>
+                      <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
                           <field name="LOCATION">{"x":120,"y":120}</field>
@@ -87,7 +86,7 @@
                       </value>
                       <next>
                         <block type="variables_set">
-                          <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Score</field>
+                          <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
                           <value name="VALUE">
                             <block type="math_number">
                               <field name="NUM">0</field>
@@ -103,7 +102,7 @@
                               </value>
                               <next>
                                 <block type="gamelab_showVariable">
-                                  <field name="VAR" id="xplzL-PU=*{_JUv=yc59">Health</field>
+                                  <field name="VAR" id="xplzL-PU=*{_JUv=yc59">health</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
                                       <field name="LOCATION">{"x":280,"y":120}</field>
@@ -111,7 +110,7 @@
                                   </value>
                                   <next>
                                     <block type="variables_set">
-                                      <field name="VAR" id="xplzL-PU=*{_JUv=yc59">Health</field>
+                                      <field name="VAR" id="xplzL-PU=*{_JUv=yc59">health</field>
                                       <value name="VALUE">
                                         <block type="math_number">
                                           <field name="NUM">5</field>
@@ -132,7 +131,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="35" y="364">
+        <block type="gamelab_spriteClicked" x="16" y="330">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
@@ -143,7 +142,7 @@
           </value>
           <next>
             <block type="math_change">
-              <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Score</field>
+              <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
               <value name="DELTA">
                 <shadow type="math_number" id="td+,z6H?W+jBM=cX;sFs">
                   <field name="NUM">1</field>
@@ -155,7 +154,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="36" y="486">
+        <block type="gamelab_spriteClicked" x="16" y="440">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
@@ -1306,39 +1305,15 @@
     <toolbox_blocks>
       <xml>
         <variables>
-          <variable id="dKti-@**nJ/2gX?M8eQ}">Health</variable>
+          <variable id="dKti-@**nJ/2gX?M8eQ}">health</variable>
         </variables>
-        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="16" y="52">
-          <field name="VAR" id="dKti-@**nJ/2gX?M8eQ}">Health</field>
-          <value name="DELTA">
-            <shadow type="math_number" id="Dsygy)_vgya%_J|C?^+(">
-              <field name="NUM">-1</field>
-            </shadow>
-            <block type="math_number" id="Dsygy)_vgya%_J|C?^+(">
-              <field name="NUM">-1</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_showVariable" id="CX]E4@VU[,b3Rb$gNv6@" x="52" y="111">
-          <field name="VAR" id="dKti-@**nJ/2gX?M8eQ}">Health</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="-OyFO}@bmFm.tQyEPF8L">
-              <field name="LOCATION">{"x":280,"y":120}</field>
-            </block>
-          </value>
-        </block>
-        <block type="variables_set" id="vfHl|%AE}ZTDYwycPNsB" x="16" y="168">
-          <field name="VAR" id="dKti-@**nJ/2gX?M8eQ}">Health</field>
-          <value name="VALUE">
-            <block type="math_number" id="it,if~~;$kMchS*:VO!|">
-              <field name="NUM">5</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="f]Cw(ghVRIynr$j.-8=8" x="49" y="230">
+        <block type="gamelab_setBackgroundImageAs" id="f]Cw(ghVRIynr$j.-8=8" x="59" y="24">
           <field name="IMG">"video_game_bg"</field>
         </block>
-        <block type="gamelab_makeNewSpriteAnon" id="C]re@s%v}=+,$pFZI9-g" x="16" y="318">
+        <block type="gamelab_playSoundOptions" id="`nxg2C!0cUq29SoV|V7e" x="62" y="136">
+          <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="C]re@s%v}=+,$pFZI9-g" x="52" y="196">
           <field name="ANIMATION_NAME">"gameplayobject_item_03"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="C}[[hzy:~3{Jo%d=.PU~">
@@ -1346,8 +1321,32 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_playSoundOptions" id="`nxg2C!0cUq29SoV|V7e" x="16" y="447">
-          <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
+        <block type="gamelab_showVariable" id="CX]E4@VU[,b3Rb$gNv6@" x="23" y="299">
+          <field name="VAR" id="dKti-@**nJ/2gX?M8eQ}">health</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="-OyFO}@bmFm.tQyEPF8L">
+              <field name="LOCATION">{"x":280,"y":120}</field>
+            </block>
+          </value>
+        </block>
+        <block type="variables_set" id="vfHl|%AE}ZTDYwycPNsB" x="26" y="383">
+          <field name="VAR" id="dKti-@**nJ/2gX?M8eQ}">health</field>
+          <value name="VALUE">
+            <block type="math_number" id="it,if~~;$kMchS*:VO!|">
+              <field name="NUM">5</field>
+            </block>
+          </value>
+        </block>
+        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="62" y="453">
+          <field name="VAR" id="dKti-@**nJ/2gX?M8eQ}">health</field>
+          <value name="DELTA">
+            <shadow type="math_number" id="2VLYyl,vQRcB)]5UE(x[">
+              <field name="NUM">-1</field>
+            </shadow>
+            <block type="math_number" id="Dsygy)_vgya%_J|C?^+(">
+              <field name="NUM">-1</field>
+            </block>
+          </value>
         </block>
         <block type="gamelab_spriteClicked" id="YB|(*_n_qm*?$C*|5v7!" x="36" y="519">
           <mutation useDefaultIcon="true"/>

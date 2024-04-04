@@ -5,9 +5,11 @@
 
 require('../utils'); // For Function.prototype.inherits()
 import $ from 'jquery';
+
 var i18n = require('@cdo/netsim/locale');
-var markup = require('./NetSimStatusPanel.html.ejs');
+
 var NetSimPanel = require('./NetSimPanel.js');
+var markup = require('./NetSimStatusPanel.html.ejs');
 var NetSimUtils = require('./NetSimUtils');
 
 /**

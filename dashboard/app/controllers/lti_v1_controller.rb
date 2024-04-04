@@ -85,7 +85,9 @@ class LtiV1Controller < ApplicationController
     return log_unauthorized('Missing "aud" or "iss" from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
-
+    # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
+    # unable to access values using dot notation and instead must use brackets. This still works with the value returned by Active Record,
+    # as it has a '[]' method that behaves in the same way https://api.rubyonrails.org/classes/ActiveRecord/AttributeMethods.html#method-i-5B-5D
     integration = read_cache(integration_cache_key) || LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
     return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id}) unless integration
     # Cache integration for fast retrieval on subsequent LTI launches. Set
@@ -163,7 +165,7 @@ class LtiV1Controller < ApplicationController
 
         metadata = {
           'user_type' => user.user_type,
-          'lms_type' => integration[:platform_name],
+          'lms_name' => integration[:platform_name],
         }
         Metrics::Events.log_event(
           user: user,
@@ -200,12 +202,13 @@ class LtiV1Controller < ApplicationController
     JSON::JWT.decode(id_token, jwk_set)
   end
 
-  def render_sync_course_error(message, status, error = nil)
-    @lti_section_sync_result = {error: error}
+  def render_sync_course_error(reason, status, error = nil, message: nil)
+    @lti_section_sync_result = {error: error, message: message}
     Honeybadger.notify(
       'LTI roster sync error',
       context: {
-        reason: message,
+        reason: reason,
+        details: message,
       }
     )
     return respond_to do |format|
@@ -277,12 +280,26 @@ class LtiV1Controller < ApplicationController
       nrps_url = params[:nrps_url]
     end
 
-    result = {
-      all: {},
-      changed: {}
-    }
+    lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+    nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+    if Policies::Lti.issuer_accepts_resource_link?(lti_integration.issuer)
+      nrps_response_errors = Services::Lti::NRPSResponseValidator.call(nrps_response)
 
+      if nrps_response_errors.present?
+        return render_sync_course_error(
+          'Invalid LTI key configuration',
+          :unprocessable_entity,
+          'invalid_configs',
+          message: nrps_response_errors.join("\n")
+        )
+      end
+    end
+    nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
+
+    result = nil
     had_changes = false
+    total_sections = 0
+    total_students = 0
     ActiveRecord::Base.transaction do
       lti_course ||= Queries::Lti.find_or_create_lti_course(
         lti_integration_id: lti_integration.id,
@@ -292,27 +309,30 @@ class LtiV1Controller < ApplicationController
         resource_link_id: resource_link_id
       )
 
-      lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
-      nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
-      nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
+      result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
+      had_changes ||= !result[:changed].empty?
 
-      sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
-      had_changes ||= sync_course_roster_results
-
-      # Report which sections were updated
-      nrps_sections.each do |section_id, section|
-        student_count = section[:members].count do |member|
-          member[:roles].include?(Policies::Lti::CONTEXT_LEARNER_ROLE)
-        end
-
-        result[:all][section_id] = {
-          name: section[:name],
-          size: student_count,
-        }
+      result[:changed].each_value do |section|
+        total_sections += 1
+        total_students += section[:size]
       end
     end
+    metadata = {
+      'number_of_sections' => total_sections,
+      'number_of_students' => total_students,
+    }
+    # If section code present, this is a sync from the teacher dashboard by button, otherwise it's a sync
+    # by LTI launch
+    event_name = params[:section_code] ? 'lti_section_update_by_button' : 'lti_section_update_by_launch'
+    Metrics::Events.log_event(
+      user: current_user,
+      event_name: event_name,
+      metadata: metadata,
+    )
 
+    result[:course_name] = nrps_response.dig(:context, :title)
     @lti_section_sync_result = result
+    @lms_name = lti_integration.platform_name
 
     respond_to do |format|
       format.html do
@@ -398,42 +418,40 @@ class LtiV1Controller < ApplicationController
     render status: :ok, json: {}
   end
 
-  private
-
   NAMESPACE = 'lti_v1_controller'.freeze
 
-  def unauthorized_status
+  private def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
   end
 
-  def wrong_resource_type
+  private def wrong_resource_type
     render(status: :not_acceptable, json: {error: I18n.t('lti.error.wrong_resource_type')})
   end
 
-  def create_state_and_nonce
+  private def create_state_and_nonce
     state = generate_random_string 10
     nonce = Digest::SHA2.hexdigest(generate_random_string(10))
 
     {state: state, nonce: nonce}
   end
 
-  def write_cache(key, value, expires_in = 1.minute)
+  private def write_cache(key, value, expires_in = 1.minute)
     # TODO: Add error handling
     CDO.shared_cache.write("#{NAMESPACE}/#{key}", value.to_json, expires_in: expires_in)
   end
 
-  def read_cache(key)
+  private def read_cache(key)
     # TODO: Add error handling
     json_value = CDO.shared_cache.read("#{NAMESPACE}/#{key}")
     return nil unless json_value
     JSON.parse(json_value).symbolize_keys
   end
 
-  def generate_random_string(length)
+  private def generate_random_string(length)
     SecureRandom.alphanumeric length
   end
 
-  def log_unauthorized(exception, context = nil)
+  private def log_unauthorized(exception, context = nil)
     Honeybadger.notify(
       exception,
       context: context

@@ -1567,19 +1567,17 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
-  private
-
   # Try to link a credential to the provided user
   # @return [OmniAuth::AuthHash] the auth hash, useful for validating
   #   linked credentials with assert_auth_option
-  def link_credential(user, type:, id:)
+  private def link_credential(user, type:, id:)
     auth = generate_auth_user_hash(provider: type, uid: id)
     setup_should_connect_provider(user, auth)
     get :google_oauth2
     auth
   end
 
-  def generate_auth_user_hash(args)
+  private def generate_auth_user_hash(args)
     OmniAuth::AuthHash.new(
       uid: args[:uid] || '1111',
       provider: args[:provider] || 'facebook',
@@ -1598,13 +1596,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
   end
 
-  def setup_should_connect_provider(user, auth_hash)
+  private def setup_should_connect_provider(user, auth_hash)
     @request.env['omniauth.auth'] = auth_hash
     @request.env['omniauth.params'] = {'action' => 'connect'}
     sign_in user
   end
 
-  def assert_auth_option(user, oauth_hash)
+  private def assert_auth_option(user, oauth_hash)
     auth_option = user.authentication_options.last
 
     assert_authentication_option auth_option,

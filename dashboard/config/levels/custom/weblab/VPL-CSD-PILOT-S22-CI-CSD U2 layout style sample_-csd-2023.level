@@ -1,11 +1,12 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2024-03-14T20:02:52.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "long_instructions": "# Styling Elements with CSS\r\n\r\nAfter learning how to style text using CSS, students will move on to style other elements of their web page such as background color and image placement. \r\n\r\n# Do this\r\n\r\n1) Look through web page below for new styles.\r\n* Open the style sheet.\r\n* Identify parts of the CSS code that are making the page appear different.\r\n  * What makes the entire page blue?\r\n  * How are the images positioned to the left of all the other elements?\r\n",
+    "long_instructions": "# Styling Elements with CSS\r\n\r\n#### After learning how to style text using CSS, students will move on to style other elements of their web page such as background color and image placement. \r\n\r\n# Do This\r\n\r\n#### 1. Look through the web page below for new styles.\r\n#### 2. Open the style sheet.\r\n#### 3. Identify parts of the CSS code that are making the page appear different.\r\n  * #### What makes the entire page blue?\r\n  * #### How are the images positioned to the left of all the other elements?\r\n",
     "instructions_important": "false",
     "project_template_level_name": "CSDU2 - layout style template_-csd-2023",
     "hide_share_and_remix": "false",
@@ -26,10 +27,12 @@
       "/courses/vpl-csd-summer-pilot-ci-2022/guides/headings-and-paragraphs",
       "/courses/vpl-csd-summer-pilot-ci-2022/guides/html-tags"
     ],
-    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/layout-properties"
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/layout-properties",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-14T20:02:52.100+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2023\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-14T20:02:52.100+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2023\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2023\"},{\"changed_at\":\"2024-03-29 03:00:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-03-29 21:44:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Weblab>

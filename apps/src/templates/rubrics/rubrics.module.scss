@@ -476,6 +476,7 @@ h2.studentName {
   flex-direction: row;
   width: 100%;
   gap: 8px;
+  min-height: 92px;
 }
 
 .evidenceLevelInnerDiv:first-child {
@@ -618,6 +619,10 @@ p.aiAssessmentScoreText {
 
 p.aiAssessmentEvidenceBlock {
   margin: 0;
+
+  + ul li p {
+    margin: 0;
+  }
 }
 
 .aiConfidenceBox {
@@ -866,35 +871,35 @@ em.aiFeedbackReceived {
   min-width: 100%;
 }
 
-.learningGoalButton {
-  background: none;
-  border: none;
-  align-self: center;
-  flex: 0 0 auto;
-}
-
 .learningGoalRing {
   flex: 0 0 auto;
 }
 
 button.learningGoalButton {
+  align-self: center;
+  background: none;
+  border: none;
   box-shadow: none;
-  border: 1px solid transparent;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.5rem;
 
   &:active,
   &:hover {
     box-shadow: none;
+    // The important is needed here to override the common button:active style
+    border: none !important;
   }
 }
 
-.learningGoalButtonLeft {
-  margin: 0 0.625rem 0 0;
-  padding: 0 0.5rem 0 0;
+button.learningGoalButtonLeft {
+  margin-left: 0.5rem;
+  margin-right: 0.625rem;
 }
 
-.learningGoalButtonRight {
-  margin: 0 0 0 0.625rem;
-  padding: 0 0 0 0.5rem;
+button.learningGoalButtonRight {
+  margin-left: 0.625rem;
+  margin-right: 0.5rem;
 }
 
 .learningGoalsHeader {
@@ -905,7 +910,7 @@ button.learningGoalButton {
   align-self: stretch;
   line-height: 154%;
   position: relative;
-  margin: 1rem 1rem 0 1rem;
+  margin: 1rem 0 0 0;
   padding: 0 0 0.75rem 0;
   border-bottom: 1px $light_gray_100 solid;
   overflow: hidden;
@@ -960,6 +965,16 @@ h5.learningGoalsHeaderTextBody {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+}
+
+.learningGoalSummary {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px $light_gray_100 solid;
+  margin: 1rem 1rem 0 1rem;
 }
 
 .aiTokenContainer {
@@ -1144,6 +1159,12 @@ button.infoAlertRight {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+}
+
+.settingsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .settingsContainers {

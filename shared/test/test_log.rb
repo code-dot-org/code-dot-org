@@ -17,7 +17,7 @@ class LogTest < Minitest::Test
   end
 
   def test_override_log
-    CDO.log = Logger.new(STDOUT).tap do |l|
+    CDO.log = Logger.new($stdout).tap do |l|
       l.formatter = proc do |_, _, _, msg|
         "TEST LOG: #{msg}"
       end

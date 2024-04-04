@@ -16,7 +16,12 @@ import ProgressIcon from './ProgressIcon';
 
 import styles from './progress-table-legend.module.scss';
 
-export default function MoreDetailsDialog({hasValidation, onClose}) {
+export default function MoreDetailsDialog({onClose}) {
+  const regionRef = React.useRef(null);
+  React.useEffect(() => {
+    regionRef.current.focus();
+  }, [regionRef]);
+
   const renderItem = (itemType, itemTitle, itemDetails) => (
     <div className={styles.item}>
       <ProgressIcon itemType={itemType} />
@@ -28,24 +33,19 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
   );
 
   return (
-    <AccessibleDialog onClose={onClose}>
+    <AccessibleDialog
+      onClose={onClose}
+      closeOnClickBackdrop={true}
+      initialFocus={false}
+    >
       <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
       <button type="button" onClick={onClose} className={styles.xCloseButton}>
         <i id="x-close" className="fa-solid fa-xmark" />
       </button>
       <hr />
-      <div role="region" className={styles.dialog}>
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+      <div role="region" className={styles.dialog} tabIndex={0} ref={regionRef}>
         <Heading6>{i18n.assignmentCompletionStates()}</Heading6>
-        {renderItem(
-          ITEM_TYPE.NOT_STARTED,
-          i18n.notStarted(),
-          i18n.progressLegendDetailsNotStarted()
-        )}
-        {renderItem(
-          ITEM_TYPE.NO_ONLINE_WORK,
-          i18n.noOnlineWork(),
-          i18n.progressLegendDetailsNoOnlineWork()
-        )}
         {renderItem(
           ITEM_TYPE.IN_PROGRESS,
           i18n.inProgress(),
@@ -66,12 +66,16 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
             />
           </div>
         </div>
-        {hasValidation &&
-          renderItem(
-            ITEM_TYPE.VALIDATED,
-            i18n.validated(),
-            i18n.progressLegendDetailsValidated()
-          )}
+        {renderItem(
+          ITEM_TYPE.VALIDATED,
+          i18n.validated(),
+          i18n.progressLegendDetailsValidated()
+        )}
+        {renderItem(
+          ITEM_TYPE.NO_ONLINE_WORK,
+          i18n.noOnlineWork(),
+          i18n.progressLegendDetailsNoOnlineWork()
+        )}
         <Heading6>{i18n.teacherActions()}</Heading6>
         {renderItem(
           ITEM_TYPE.NEEDS_FEEDBACK,
@@ -105,6 +109,5 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
 }
 
 MoreDetailsDialog.propTypes = {
-  hasValidation: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
 };

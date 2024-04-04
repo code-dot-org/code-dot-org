@@ -827,6 +827,9 @@ en:
         PL_CSD_Unit4_Chapter2Project: 'Unit 4: The Design Process Chapter 2 Project'
         maker_with_microbit_PL_overview: Introduction to CSF Maker with micro:bit Professional Learning
         elementary_machine_learning: Elementary Machine Learning
+        variables_sprite_lab_game_design: 'Variables for Sprite Lab Game Design '
+        csd_weblab_flexboxforteachers1: Using Flexbox in Web Development
+        csd_weblab_flexboxforteachers2: Flexbox Children
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

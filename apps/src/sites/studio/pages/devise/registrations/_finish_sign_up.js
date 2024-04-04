@@ -6,7 +6,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -98,9 +98,13 @@ $(document).ready(() => {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
-    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
-      'user type': user_type,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_FINISHED_EVENT,
+      {
+        'user type': user_type,
+      },
+      PLATFORMS.BOTH
+    );
   });
 
   function cleanSchoolInfo() {
@@ -203,9 +207,13 @@ $(document).ready(() => {
       event: 'select-' + type,
       data_string: signUpUID,
     });
-    analyticsReporter.sendEvent(EVENTS.ACCOUNT_TYPE_PICKED_EVENT, {
-      'account type': type,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.ACCOUNT_TYPE_PICKED_EVENT,
+      {
+        'account type': type,
+      },
+      PLATFORMS.BOTH
+    );
   }
 
   function fadeInFields(fields) {
@@ -257,6 +265,11 @@ $(document).ready(() => {
     if (event) {
       schoolData.country = event.value;
       schoolData.countryCode = event.label;
+      analyticsReporter.sendEvent(
+        EVENTS.COUNTRY_SELECTED,
+        {country: schoolData.country, countryCode: schoolData.countryCode},
+        PLATFORMS.BOTH
+      );
     }
     isInUnitedStates = schoolData.countryCode === 'US';
     toggleVisShareEmailRegPartner(isInUnitedStates);
@@ -270,6 +283,15 @@ $(document).ready(() => {
 
   function onSchoolChange(_, event) {
     schoolData.ncesSchoolId = event ? event.value : '';
+    // ID is set to -1 and '' respectively as user toggles 'I cannot find my
+    // school above': exlude these from school selection events
+    if (!['-1', ''].includes(schoolData.ncesSchoolId)) {
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_SELECTED_FROM_LIST,
+        {ncesId: schoolData.ncesSchoolId},
+        PLATFORMS.BOTH
+      );
+    }
     renderSchoolInfo();
   }
 

@@ -9,6 +9,8 @@ import {
 import style from './school-association.module.scss';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
+import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
+import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 
 export default function SchoolDataInputs({
   includeHeaders = true,
@@ -23,7 +25,6 @@ export default function SchoolDataInputs({
   const [isOutsideUS, setIsOutsideUS] = useState(false);
   const [zip, setZip] = useState('');
   const [country, setCountry] = useState('');
-  const [schoolName, setSchoolName] = useState('');
   const [zipSearchReady, setZipSearchReady] = useState(false);
 
   let COUNTRY_ITEMS = [{value: 'selectCountry', text: i18n.selectCountry()}];
@@ -98,33 +99,20 @@ export default function SchoolDataInputs({
           </label>
         )}
         {isOutsideUS && (
-          <label>
-            <BodyTwoText
-              className={style.padding}
-              visualAppearance={'heading-xs'}
-            >
-              {i18n.schoolOrganizationQuestion()}
-            </BodyTwoText>
-            <input
-              type="text"
-              name={fieldNames.schoolName}
-              onChange={e => {
-                setSchoolName(e.target.value);
-              }}
-              value={schoolName}
-            />
-          </label>
+          <SchoolNameInput
+            fieldNames={{
+              schoolName: fieldNames.schoolName,
+            }}
+          />
         )}
         {askForZip && zipSearchReady && (
-          <div>
-            <BodyTwoText
-              className={style.padding}
-              visualAppearance={'heading-xs'}
-            >
-              {i18n.selectYourSchool()}
-            </BodyTwoText>
-            {/*<SchoolZipSearch fieldName={fieldNames.ncesSchoolId} /> Write new component to search with zip*/}
-          </div>
+          <SchoolZipSearch
+            fieldNames={{
+              ncesSchoolId: fieldNames.ncesSchoolId,
+              schoolName: fieldNames.schoolName,
+            }}
+            zip={zip}
+          />
         )}
       </div>
     </div>

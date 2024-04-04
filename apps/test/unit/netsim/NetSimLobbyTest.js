@@ -1,8 +1,11 @@
-import sinon from 'sinon';
 import $ from 'jquery';
-import {expect} from '../../util/reconfiguredChai';
-import NetSimLobby from '../../../src/netsim/NetSimLobby.js';
+import sinon from 'sinon';
+
 import * as userSectionClient from '@cdo/apps/util/userSectionClient';
+
+import NetSimLobby from '../../../src/netsim/NetSimLobby.js';
+import {expect} from '../../util/reconfiguredChai';
+
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 const SIGNED_IN_USER = {
