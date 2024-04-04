@@ -1,4 +1,9 @@
 import React from 'react';
+
+type JSPreviewProps = {
+  file: ProjectFile;
+};
+
 export const JSPreview = ({file}: JSPreviewProps) => (
   <div>this component is disabled because websandbox is not installed</div>
 );
