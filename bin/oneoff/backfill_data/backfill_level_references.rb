@@ -26,11 +26,8 @@ def update_reference_guide_format(unit_group_name, course_version_id, reference_
 
   reference_guide = ReferenceGuide.find_by(key: reference_guide_key, course_version_id: course_version_id)
   if reference_guide.nil?
-    ref_guide_missing_err = "Unable to find reference guide with key #{reference_guide_key}"
-    puts ref_guide_missing_err
-
-    raise ref_guide_missing_err unless DRY_RUN
-    return nil
+    puts "Unable to find reference guide with key #{reference_guide_key}, should be udpated manually"
+    return reference_guide_link
   end
 
   "/courses/#{unit_group_name}/guides/#{reference_guide_key}"
