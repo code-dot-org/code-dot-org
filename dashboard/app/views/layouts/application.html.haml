@@ -66,11 +66,12 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
-    - isLtiStudent = Policies::Lti.lti?(current_user) if current_user&.student?
+    - retrieveInfoForLti = current_user.us_state.nil? && Policies::Lti.lti?(current_user) if current_user&.student?
     - isInUS = request.country.nil? || ['US', 'RD'].include?(request.country.to_s.upcase)
     - ageUnderThirteen = current_user&.age.present? && current_user.age.to_i < 13
-    - if current_user&.student? && (current_user.age.nil? || (current_user.us_state.nil? && (isLtiStudent || (isInUS && ageUnderThirteen))))
-      = render partial: 'layouts/student_information_interstitial', locals: {isLtiStudent: isLtiStudent, isInUS: isInUS, ageUnderThirteen: ageUnderThirteen}
+    - retrieveStateForCpa = current_user&.us_state.nil? && isInUS && ageUnderThirteen
+    - if current_user&.student? && (current_user.age.nil? || retrieveInfoForLti || retrieveStateForCpa)
+      = render partial: 'layouts/student_information_interstitial', locals: {retrieveInfoForLti: retrieveInfoForLti, retrieveStateForCpa: retrieveStateForCpa}
 
     - cookie_key = environment_specific_cookie_name('_user_type')
     - user_type = request.cookies[cookie_key]
