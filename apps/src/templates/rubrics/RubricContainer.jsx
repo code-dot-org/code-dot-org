@@ -167,14 +167,14 @@ export default function RubricContainer({
         '<p>AI Teaching Assistant analyzes students’ code for each learning goal with AI enabled, then recommends a rubric score(s). AI will provide one score for learning goals where our AI has trained extensively. It will provide two scores where more training data is needed.</p><p>The final score is always up to you. AI Teaching Assistant will provide evidence for its recommendation.</p>',
     },
     {
-      // TODO: Add evidence image
-      element: '#draggable-id',
+      element: '#tour-ai-evidence',
       title: 'Using Evidence',
+      position: 'top',
       intro: `<p>Where possible, AI Teaching Assistant will highlight the relevant lines of code in the student’s project so it is easy for you to double-check.</p><img src=${evidenceDemo}>`,
     },
     {
       element: '#tour-ai-confidence',
-      title: 'How did we do?',
+      title: 'Understanding AI Confidence',
       intro:
         "<p>The confidence rating gives you an idea of how often the AI agreed with teachers when scoring this learning goal. Just like humans, AI isn't perfect.</p>",
     },
@@ -227,7 +227,11 @@ export default function RubricContainer({
       learning_goal_id: 1,
       understanding: 2,
       aiConfidencePassFail: 2,
-      evidence: 'Line 1: This is a line of code `var x = 5;`',
+      evidence: {
+        firstLine: 12,
+        lastLine: 13,
+        message: 'A sprite is defined here.',
+      },
     },
   ];
 
@@ -262,6 +266,12 @@ export default function RubricContainer({
     }
   };
 
+  const onAfterStepChange = (newStepIndex, newElement) => {
+    if (newStepIndex === 4) {
+      document.getElementsByClassName(style.evidenceLevel)[3].click();
+    }
+  };
+
   return (
     <Draggable
       defaultPosition={{x: positionX, y: positionY}}
@@ -282,6 +292,7 @@ export default function RubricContainer({
             onExit={onTourExit}
             onChange={onStepChange}
             onBeforeChange={beforeStepChange}
+            onAfterChange={onAfterStepChange}
             onStart={onTourStart}
             options={{
               scrollToElement: false,
@@ -342,6 +353,7 @@ export default function RubricContainer({
             />
             {showSettings && (
               <RubricSettings
+                productTour={stepsEnabled}
                 visible={selectedTab === TAB_NAMES.SETTINGS}
                 refreshAiEvaluations={fetchAiEvaluations}
                 rubric={rubric}

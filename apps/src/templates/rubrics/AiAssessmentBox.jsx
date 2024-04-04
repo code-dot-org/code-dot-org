@@ -67,7 +67,7 @@ export default function AiAssessmentBox({
         <AiAssessmentFeedback aiEvalInfo={aiEvalInfo} />
       )}
       {isAiAssessed && aiEvidence && aiEvidence.length > 0 && (
-        <div>
+        <div id="tour-ai-evidence">
           <BodyFourText className={style.aiAssessmentEvidenceBlock}>
             {/* Evidence: */}
             <StrongText>{i18n.aiAssessmentEvidence()}</StrongText>

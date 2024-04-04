@@ -400,9 +400,7 @@ export default function LearningGoals({
   }, [studentLevelInfo, learningGoals, currentLearningGoal, open, productTour]);
 
   useEffect(() => {
-    if (!productTour) {
-      document.addEventListener('keydown', handleKeyDown, {once: true});
-    }
+    document.addEventListener('keydown', handleKeyDown, {once: true});
   });
 
   // Callback to retrieve understanding data from EvidenceLevels
@@ -474,11 +472,13 @@ export default function LearningGoals({
   const aiEvidence = useMemo(() => {
     // Annotate the lines based on the AI observation
     clearAnnotations();
-    if (!!aiEvalInfo?.evidence) {
+    if (!!aiEvalInfo?.evidence && !productTour) {
       return annotateLines(aiEvalInfo.evidence, aiEvalInfo.observations);
+    } else if (productTour) {
+      return [aiEvalInfo.evidence];
     }
     return [];
-  }, [aiEvalInfo]);
+  }, [aiEvalInfo, productTour]);
 
   const onCarouselPress = buttonValue => {
     let currentIndex = currentLearningGoal;

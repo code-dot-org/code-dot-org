@@ -491,7 +491,6 @@ class RegistrationsController < Devise::RegistrationsController
       :us_state,
       :country_code,
       :ai_rubrics_disabled,
-      :ai_rubrics_tour_seen,
       :lti_roster_sync_enabled,
       school_info_attributes: [
         :country,
