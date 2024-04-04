@@ -65,7 +65,9 @@ export default function ExpandedProgressColumnHeader({
             className={styles.expandedHeaderCaret}
             title={i18n.unexpand()}
           />
-          <div className={styles.expandedHeaderLessonText}>{headerText}</div>
+          <div className={styles.expandedHeaderLessonText} title={lesson.title}>
+            {headerText}
+          </div>
         </th>
       </tr>
       <tr
