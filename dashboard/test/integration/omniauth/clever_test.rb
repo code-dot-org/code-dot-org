@@ -119,9 +119,7 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
-    private
-
-    def mock_oauth(override_params = {})
+    private def mock_oauth(override_params = {})
       mock_oauth_for AuthenticationOption::CLEVER, generate_auth_hash(
         {
           provider: AuthenticationOption::CLEVER
@@ -131,7 +129,7 @@ module OmniauthCallbacksControllerTests
 
     # The user signs in through Clever, which hits the oauth callback
     # and redirects to something else: homepage, finish_sign_up, etc.
-    def sign_in_through_clever
+    private def sign_in_through_clever
       sign_in_through AuthenticationOption::CLEVER
     end
   end

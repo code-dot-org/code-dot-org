@@ -1,6 +1,7 @@
-import React from 'react';
-import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from './index';
 import {Meta, StoryFn} from '@storybook/react';
+import React from 'react';
+
+import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from './index';
 
 export default {
   title: 'DesignSystem/FontAwesomeV6Icon', // eslint-disable-line storybook/no-title-property-in-meta

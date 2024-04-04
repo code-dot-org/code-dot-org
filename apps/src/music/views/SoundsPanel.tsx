@@ -53,7 +53,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   onPreview,
   currentFolderRefCallback,
 }) => {
-  const previewSound = folder.sounds.find(sound => sound.preview);
+  const previewSound = folder.sounds.find(sound => sound.type === 'preview');
   const soundPath = previewSound && folder.id + '/' + previewSound.src;
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc =
@@ -231,7 +231,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   onSelect,
   onPreview,
 }) => {
-  const folders = library.getAllowedSounds(undefined);
+  const folders = library.getAllowedSounds(undefined, false);
   const libraryGroupPath = library.libraryJson.path;
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
@@ -254,7 +254,8 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   }, []);
 
   useEffect(() => {
-    // This timeout allows the scrolling to work when wrapping the content with FocusLock.
+    // This timeout allows the initial scroll-to-current-selection to work
+    // when wrapping the content with FocusLock.
     setTimeout(() => {
       currentFolderRef.current?.scrollIntoView();
       currentSoundRef.current?.scrollIntoView();
@@ -273,6 +274,9 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   let rightColumnSoundEntries: SoundEntry[] = [];
 
   if (mode === 'packs') {
+    folders.sort((a, b) =>
+      a.restricted === b.restricted ? 0 : a.restricted ? -1 : 1
+    );
     possibleSoundEntries = selectedFolder.sounds.map(sound => ({
       folder: selectedFolder,
       sound,
@@ -286,10 +290,13 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   }
 
   if (filter === 'all') {
-    rightColumnSoundEntries = possibleSoundEntries;
+    rightColumnSoundEntries = possibleSoundEntries.filter(
+      soundEntry => soundEntry.sound.type !== 'preview'
+    );
   } else {
     rightColumnSoundEntries = possibleSoundEntries.filter(
-      soundEntry => soundEntry.sound.type === filter
+      soundEntry =>
+        soundEntry.sound.type === filter && soundEntry.sound.type !== 'preview'
     );
   }
 

@@ -443,9 +443,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     )
   end
 
-  private
-
-  def create_peer_review_module_for_learner(learner)
+  private def create_peer_review_module_for_learner(learner)
     # Create a one-level peer review module
     course_unit = create :plc_course_unit
     level = create :free_response, peer_reviewable: true
@@ -473,7 +471,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     [course_unit, level]
   end
 
-  def create_peer_reviews_for_user_and_level(user, level, course_unit = @course_unit)
+  private def create_peer_reviews_for_user_and_level(user, level, course_unit = @course_unit)
     level_source = create :level_source, level: level
     user_level = create :user_level,
       user: user,
@@ -485,7 +483,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     PeerReview.create_for_submission(user_level, level_source.id)
   end
 
-  def create_peer_reviews_for_user(user)
+  private def create_peer_reviews_for_user(user)
     course_unit = create :plc_course_unit
     level = create :free_response, peer_reviewable: true
     create :script_level, script: course_unit.script, levels: [level]

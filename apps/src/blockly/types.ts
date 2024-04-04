@@ -74,6 +74,8 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  readOnly: boolean;
+  grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   getNewCursor: (type: string) => Cursor;
   LineCursor: typeof GoogleBlockly.BasicCursor;
@@ -132,7 +134,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   setInfiniteLoopTrap: () => void;
   clearInfiniteLoopTrap: () => void;
   getInfiniteLoopTrap: () => string;
-  loopHighlight: () => void;
+  loopHighlight: (apiName: string, blockId: string) => string;
   getWorkspaceCode: () => string;
   addChangeListener: (
     blockspace: Workspace,
@@ -171,6 +173,7 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 export interface ExtendedBlockSvg extends BlockSvg {
   isVisible: () => boolean;
   isUserVisible: () => boolean;
+  shouldBeGrayedOut: () => boolean;
   // imageSourceId, shortString, longString and thumbnailSize are used for sprite pointer blocks
   imageSourceId?: string;
   shortString?: string;
@@ -209,6 +212,7 @@ export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
   getContainer: () => ParentNode | null;
   setEnableToolbox: () => void;
   traceOn: () => void;
+  isReadOnly: () => boolean;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {
@@ -229,6 +233,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   noFunctionBlockFrame: boolean;
   useModalFunctionEditor: boolean;
   useBlocklyDynamicCategories: boolean;
+  grayOutUndeletableBlocks: boolean | undefined;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -242,6 +247,7 @@ export interface ExtendedGenerator extends CodeGeneratorType {
     name: string,
     opt_typeFilter?: string | string[]
   ) => string;
+  blocksToCode: (name: string, blocksToGenerate: Block[]) => string;
   prefixLines: (text: string, prefix: string) => string;
 }
 

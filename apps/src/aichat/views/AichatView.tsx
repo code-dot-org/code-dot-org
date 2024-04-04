@@ -11,13 +11,13 @@ const aichatI18n = require('@cdo/aichat/locale');
 import {setStartingAiCustomizations} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
+import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import moduleStyles from './aichatView.module.scss';
 import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
-import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const AichatView: React.FunctionComponent = () => {
   const [viewMode, setViewMode] = useState<string>(ViewMode.EDIT);
@@ -27,12 +27,11 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
 
-  const levelAiCustomizationsWithVisibility = useAppSelector(
+  const levelAichatSettings = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+        ?.aichatSettings
   );
-  const {hidePresentationPanel} = levelAiCustomizationsWithVisibility;
 
   const initialSources = useAppSelector(
     state => (state.lab.initialSources?.source as string) || '{}'
@@ -42,11 +41,11 @@ const AichatView: React.FunctionComponent = () => {
     const studentAiCustomizations = JSON.parse(initialSources);
     dispatch(
       setStartingAiCustomizations({
-        levelAiCustomizationsWithVisibility,
+        levelAichatSettings,
         studentAiCustomizations,
       })
     );
-  }, [dispatch, initialSources, levelAiCustomizationsWithVisibility]);
+  }, [dispatch, initialSources, levelAichatSettings]);
 
   const {botName} = useAppSelector(
     state => state.aichat.currentAiCustomizations
@@ -78,52 +77,56 @@ const AichatView: React.FunctionComponent = () => {
     viewMode === ViewMode.EDIT ? aichatI18n.aichatWorkspaceHeader() : botName;
 
   return (
-    <>
-      {!hidePresentationPanel && (
-        <div className={moduleStyles.viewModeButtons}>
-          <SegmentedButtons {...viewModeButtonsProps} />
-        </div>
-      )}
-      <div id="aichat-lab" className={moduleStyles.aichatLab}>
-        {viewMode === ViewMode.EDIT && (
-          <>
-            <div className={moduleStyles.instructionsArea}>
-              <PanelContainer
-                id="aichat-instructions-panel"
-                headerText={commonI18n.instructions()}
-              >
-                <Instructions beforeNextLevel={beforeNextLevel} />
-              </PanelContainer>
-            </div>
-            <div className={moduleStyles.customizationArea}>
-              <PanelContainer
-                id="aichat-model-customization-panel"
-                headerText="Model Customization"
-              >
-                <ModelCustomizationWorkspace />
-              </PanelContainer>
-            </div>
-          </>
-        )}
-        {viewMode === ViewMode.PRESENTATION && (
-          <div className={moduleStyles.presentationArea}>
-            <PanelContainer
-              id="aichat-presentation-panel"
-              headerText={'Model Card'}
-            />
+    <div id="aichat-lab" className={moduleStyles.aichatLab}>
+      <div className={moduleStyles.columnFlexContainer}>
+        {!levelAichatSettings?.hidePresentationPanel && (
+          <div className={moduleStyles.viewModeButtons}>
+            <SegmentedButtons {...viewModeButtonsProps} />
           </div>
         )}
-        <div className={moduleStyles.chatWorkspaceArea}>
-          <PanelContainer
-            id="aichat-workspace-panel"
-            headerText={chatWorkspaceHeader}
-            rightHeaderContent={<CopyButton />}
-          >
-            <ChatWorkspace />
-          </PanelContainer>
+        <div className={moduleStyles.labCoreContainer}>
+          {viewMode === ViewMode.EDIT && (
+            <>
+              <div className={moduleStyles.instructionsArea}>
+                <PanelContainer
+                  id="aichat-instructions-panel"
+                  headerText={commonI18n.instructions()}
+                >
+                  <Instructions beforeNextLevel={beforeNextLevel} />
+                </PanelContainer>
+              </div>
+              <div className={moduleStyles.customizationArea}>
+                <PanelContainer
+                  id="aichat-model-customization-panel"
+                  headerText="Model Customization"
+                >
+                  <ModelCustomizationWorkspace />
+                </PanelContainer>
+              </div>
+            </>
+          )}
+          {viewMode === ViewMode.PRESENTATION && (
+            <div className={moduleStyles.presentationArea}>
+              <PanelContainer
+                id="aichat-presentation-panel"
+                headerText={'Model Card'}
+              >
+                <PresentationView />
+              </PanelContainer>
+            </div>
+          )}
+          <div className={moduleStyles.chatWorkspaceArea}>
+            <PanelContainer
+              id="aichat-workspace-panel"
+              headerText={chatWorkspaceHeader}
+              rightHeaderContent={<CopyButton />}
+            >
+              <ChatWorkspace />
+            </PanelContainer>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

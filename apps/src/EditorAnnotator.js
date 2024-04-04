@@ -747,7 +747,7 @@ export default class EditorAnnotator {
    * @returns {bool} Returns true when the editor is line based.
    */
   static isLineBased() {
-    return EditorAnnotator.annotator().isLineBased();
+    return EditorAnnotator.annotator()?.isLineBased() || false;
   }
 
   /**
@@ -756,7 +756,7 @@ export default class EditorAnnotator {
    * It may or not be still line-based.
    */
   static hasBlocks() {
-    return EditorAnnotator.annotator().hasBlocks();
+    return EditorAnnotator.annotator()?.hasBlocks() || false;
   }
 
   /**
@@ -766,7 +766,7 @@ export default class EditorAnnotator {
    * @returns {bool} Returns true when the editor is block based.
    */
   static isBlockBased() {
-    return EditorAnnotator.annotator().isBlockBased();
+    return EditorAnnotator.annotator()?.isBlockBased() || false;
   }
 
   static anonymizeCode_(code) {
@@ -1095,7 +1095,7 @@ export default class EditorAnnotator {
     icon = null,
     tipStyle = {}
   ) {
-    EditorAnnotator.annotator().annotateLine(
+    EditorAnnotator.annotator()?.annotateLine(
       lineNumber,
       message,
       logLevel,
@@ -1109,7 +1109,7 @@ export default class EditorAnnotator {
    * Removes annotations of a particular type.
    */
   static clearAnnotations(logLevel = 'INFO') {
-    EditorAnnotator.annotator().clearAnnotations(logLevel);
+    EditorAnnotator.annotator()?.clearAnnotations(logLevel);
   }
 }
 

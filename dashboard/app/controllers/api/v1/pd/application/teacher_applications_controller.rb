@@ -60,9 +60,7 @@ module Api::V1::Pd::Application
       render json: {principal_approval: @application.principal_approval_state}
     end
 
-    protected
-
-    def on_successful_create
+    protected def on_successful_create
       @application.on_successful_create
       @application.update_status_timestamp_change_log(current_user)
     end

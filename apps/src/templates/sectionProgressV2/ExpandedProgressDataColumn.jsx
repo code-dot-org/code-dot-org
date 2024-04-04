@@ -4,14 +4,18 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import i18n from '@cdo/locale';
 
 import {studentLevelProgressType} from '../progress/progressTypes';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 
 import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
-import LevelDataCell from './LevelDataCell';
+import LevelDataCell, {getStudentRowHeaderId} from './LevelDataCell';
 
 import styles from './progress-table-v2.module.scss';
+
+const getFullName = student =>
+  student.familyName ? `${student.name} ${student.familyName}` : student.name;
 
 function ExpandedProgressDataColumn({
   lesson,
@@ -39,56 +43,68 @@ function ExpandedProgressDataColumn({
   };
 
   const getSingleLevelColumn = React.useCallback(
-    (level, propOverrides = {}) => {
+    (level, studentId, propOverrides = {}) => {
       return (
-        <div
-          className={styles.expandedLevelColumn}
-          key={lesson.id + '.' + level.id}
-        >
-          {sortedStudents.map(student => (
-            <LevelDataCell
-              studentId={student.id}
-              level={level}
-              studentLevelProgress={
-                levelProgressByStudent[student.id][level.id]
-              }
-              key={student.id + '.' + lesson.id + '.' + level.id}
-              {...propOverrides}
-            />
-          ))}
-        </div>
+        <LevelDataCell
+          studentId={studentId}
+          level={level}
+          studentLevelProgress={levelProgressByStudent[studentId][level.id]}
+          key={studentId + '.' + lesson.id + '.' + level.id}
+          lessonId={lesson.id}
+          {...propOverrides}
+        />
       );
     },
-    [levelProgressByStudent, sortedStudents, lesson]
+    [levelProgressByStudent, lesson]
   );
 
   const getExpandedChoiceLevel = React.useCallback(
-    level => [
-      getSingleLevelColumn(level, {expandedChoiceLevel: true}),
-      ...level.sublevels.map(sublevel => getSingleLevelColumn(sublevel)),
+    (level, studentId) => [
+      getSingleLevelColumn(level, studentId, {expandedChoiceLevel: true}),
+      ...level.sublevels.map(sublevel => {
+        return getSingleLevelColumn(sublevel, studentId, {
+          parentLevelId: level.id,
+        });
+      }),
     ],
     [getSingleLevelColumn]
   );
 
   const progress = React.useMemo(
     () => (
-      <div className={styles.expandedTable}>
-        {lesson.levels.flatMap(level => {
-          if (
-            level.sublevels?.length > 0 &&
-            expandedChoiceLevels.includes(level.id)
-          ) {
-            return getExpandedChoiceLevel(level);
-          }
-          return [getSingleLevelColumn(level)];
-        })}
-      </div>
+      <tbody className={styles.expandedTable}>
+        {sortedStudents.map(student => (
+          <tr className={styles.expandedLevelColumn} key={student.id}>
+            <th hidden={true} id={getStudentRowHeaderId(student.id)}>
+              {getFullName(student)}
+            </th>
+            {lesson.levels.flatMap(level => {
+              if (
+                level.sublevels?.length > 0 &&
+                expandedChoiceLevels.includes(level.id)
+              ) {
+                return getExpandedChoiceLevel(level, student.id);
+              }
+              return [getSingleLevelColumn(level, student.id)];
+            })}
+          </tr>
+        ))}
+      </tbody>
     ),
-    [lesson, expandedChoiceLevels, getSingleLevelColumn, getExpandedChoiceLevel]
+    [
+      lesson,
+      sortedStudents,
+      expandedChoiceLevels,
+      getSingleLevelColumn,
+      getExpandedChoiceLevel,
+    ]
   );
 
   return (
-    <div key={lesson.id} className={styles.expandedColumn}>
+    <table key={lesson.id} className={styles.expandedColumn}>
+      <caption hidden={true}>
+        {i18n.progressForLesson({lessonName: lesson.title})}
+      </caption>
       <ExpandedProgressColumnHeader
         lesson={lesson}
         removeExpandedLesson={removeExpandedLesson}
@@ -96,7 +112,7 @@ function ExpandedProgressDataColumn({
         toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
       />
       {progress}
-    </div>
+    </table>
   );
 }
 
