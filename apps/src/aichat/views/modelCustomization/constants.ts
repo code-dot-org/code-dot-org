@@ -23,13 +23,13 @@ export const MODEL_CARD_FIELDS_LABELS_ICONS: [
   ['exampleTopics', 'Example Prompts and Topics', 'message-lines'],
 ];
 
-export const TECHNICAL_INFO_FIELDS: string[] = [
+export const TECHNICAL_INFO_FIELDS = [
   'Model Name',
   'Training Data',
   'System Prompt',
   'Temperature',
   'Retrieval Used',
-];
+] as const;
 
 export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   description: '',
