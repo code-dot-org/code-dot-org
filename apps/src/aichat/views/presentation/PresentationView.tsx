@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import ModelCardRow from './ModelCardRow';
 import {
   MODEL_CARD_FIELDS_LABELS_ICONS,
@@ -13,21 +13,22 @@ const PresentationView: React.FunctionComponent = () => {
   const currentAiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
+  const {systemPrompt, temperature, retrievalContexts} =
+    currentAiCustomizations;
   const modelCardInfo = currentAiCustomizations.modelCardInfo;
 
   // These are temporary constants. They will be retrieved from s3.
   const EXAMPLE_MODEL_NAME = 'Model A';
   const EXAMPLE_MODEL_TRAINING_DATA = 'Model A Training Data';
 
-  const TECHNICAL_INFO_VALUES: (string | number | boolean)[] = [
-    EXAMPLE_MODEL_NAME,
-    EXAMPLE_MODEL_TRAINING_DATA,
-    currentAiCustomizations.systemPrompt,
-    currentAiCustomizations.temperature,
-    currentAiCustomizations.retrievalContexts.length > 0,
-  ];
-
-  const getTechnicalInfo = () => {
+  const technicalInfo = useMemo(() => {
+    const TECHNICAL_INFO_VALUES: (string | number | boolean)[] = [
+      EXAMPLE_MODEL_NAME,
+      EXAMPLE_MODEL_TRAINING_DATA,
+      systemPrompt,
+      temperature,
+      retrievalContexts.length > 0,
+    ];
     const technicalInfo = TECHNICAL_INFO_FIELDS.map((field, index) => {
       if (typeof TECHNICAL_INFO_VALUES[index] === 'boolean') {
         return `${field}: ${TECHNICAL_INFO_VALUES[index] ? 'Yes' : 'No'}`;
@@ -35,7 +36,7 @@ const PresentationView: React.FunctionComponent = () => {
       return `${field}: ${TECHNICAL_INFO_VALUES[index]}`;
     });
     return technicalInfo;
-  };
+  }, [retrievalContexts, systemPrompt, temperature]);
 
   return (
     <div className={styles.verticalFlexContainer}>
@@ -57,7 +58,7 @@ const PresentationView: React.FunctionComponent = () => {
           keyName="technicalInfo"
           title="Technical Info"
           titleIcon="screwdriver-wrench"
-          expandedContent={getTechnicalInfo()}
+          expandedContent={technicalInfo}
         />
       </div>
     </div>
