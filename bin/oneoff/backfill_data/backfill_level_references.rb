@@ -18,7 +18,7 @@ def update_reference_guide_format(unit_group_name, course_version_id, reference_
   # Reference guide formats
   # in the old unversioned framework - /docs/concepts/patterns/random-list-access/
   # in the versioned framework - /courses/csd-2024/guides/animation-tab
-  if !reference_guide_link.starts_with?("/docs/") && !reference_guide_link.starts_with?("/courses/")
+  if !reference_guide_link.starts_with?("/docs/concepts") && !reference_guide_link.starts_with?("/courses/")
     return reference_guide_link
   end
 
