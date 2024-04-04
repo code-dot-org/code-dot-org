@@ -17,9 +17,12 @@ export type GetResponse<ResponseType> = {
  * reference to the response object.
  */
 export class NetworkError extends Error {
-  constructor(message: string, public response: Response) {
+  public response: Response;
+
+  constructor(message: string, response: Response) {
     super(message);
     this.name = 'NetworkError';
+    this.response = response;
 
     // Needed for TypeScript to register this class correctly in ES5
     // https://github.com/Microsoft/TypeScript/wiki/Breaking-Changes#extending-built-ins-like-error-array-and-map-may-no-longer-work

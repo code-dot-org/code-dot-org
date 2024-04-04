@@ -29,8 +29,9 @@ const ALWAYS_SEND = false;
  */
 class MetricsReporter {
   private lastCheckCanReportTime: number;
+  private metricsApi: MetricsApi;
 
-  constructor(private readonly metricsApi: MetricsApi) {
+  constructor(metricsApi: MetricsApi) {
     this.metricsApi = metricsApi;
     this.lastCheckCanReportTime =
       parseInt(localStorage.getItem(LOCAL_STORAGE_KEY_NAME) || '0') || 0;
