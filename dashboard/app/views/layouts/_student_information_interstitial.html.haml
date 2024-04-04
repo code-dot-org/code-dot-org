@@ -65,7 +65,7 @@
         url: $(this).attr('action') + '/set_student_information',
         data: $(this).serialize(),
         dataType: 'json',
-        success: function(data) {$("#student-information-modal").modal('hide');}
+        success: function(data) {location.reload();}
       });
     });
 
