@@ -1,3 +1,9 @@
+import React from 'react';
+export const JSPreview = ({file}: JSPreviewProps) => (
+  <div>this component is disabled because websandbox is not installed</div>
+);
+
+/*
 import {DebuggerWrapper} from '@cdoide/Debugger/DebuggerWrapper';
 import {RunBar} from '@cdoide/RunBar';
 import {ProjectFile} from '@cdoide/types';
@@ -50,3 +56,4 @@ export const JSPreview = ({file}: JSPreviewProps) => {
     </div>
   );
 };
+*/
