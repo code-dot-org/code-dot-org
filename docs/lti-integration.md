@@ -218,8 +218,9 @@ for where you want to install it, click `Add to Organization`.
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/8ac87431-6a21-4b6c-af94-0cd9696260a4)
 
 
-4. A modal will open, where you'll be prompted to select who and where this app
-will be available for.
+4. A modal will open, where you'll be prompted to select where and for whom this
+app will be available.
+
 
 
 <p align="center">
