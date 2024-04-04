@@ -335,6 +335,9 @@ class DatablockStorageController < ApplicationController
 
   private def table_or_create
     where_table.first_or_create
+  rescue ActiveRecord::RecordNotUnique
+    # first_or_create() is not atomic, retry in case a create was done in parallel
+    where_table.first_or_create
   end
 
   private def validate_channel_id

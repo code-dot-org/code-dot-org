@@ -1,6 +1,7 @@
-import React from 'react';
-import Link, {LinkProps} from './index';
 import {Meta, StoryFn} from '@storybook/react';
+import React from 'react';
+
+import Link, {LinkProps} from './index';
 
 export default {
   title: 'DesignSystem/Link', // eslint-disable-line storybook/no-title-property-in-meta

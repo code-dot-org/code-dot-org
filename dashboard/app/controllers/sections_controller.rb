@@ -28,6 +28,7 @@ class SectionsController < ApplicationController
     @section['primaryInstructor'] = {
       email: existing_section.teacher.email,
       name: existing_section.teacher.name,
+      lti_roster_sync_enabled: existing_section.teacher&.properties&.[]("lti_roster_sync_enabled")
     }
 
     @section = @section.to_json.camelize

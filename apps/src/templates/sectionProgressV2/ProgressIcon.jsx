@@ -13,6 +13,7 @@ export default function ProgressIcon({itemType}) {
   const needsFeedbackTriangle = () => (
     <div
       className={classNames(styles.needsFeedback, styles.cornerBox)}
+      aria-label={itemType['title']}
       data-testid="needs-feedback-triangle"
     />
   );
@@ -20,27 +21,31 @@ export default function ProgressIcon({itemType}) {
   const feedbackGivenTriangle = () => (
     <div
       className={classNames(styles.feedbackGiven, styles.cornerBox)}
+      aria-label={itemType['title']}
       data-testid="feedback-given-triangle"
     />
   );
 
   return (
     <div data-testid="progress-icon">
-      {itemType?.length && (
+      {itemType['icon'] !== undefined && (
         <FontAwesome
-          id={'uitest-' + itemType[0]}
-          icon={itemType[0]}
-          style={{color: itemType[1]}}
+          id={'uitest-' + itemType['icon']}
+          icon={itemType['icon']}
+          style={{color: itemType['color']}}
           className={styles.fontAwesomeIcon}
-          aria-label={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
+          aria-label={itemType['title']}
         />
       )}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
       {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
+      {itemType === ITEM_TYPE.NO_PROGRESS && (
+        <div aria-label={itemType['title']} />
+      )}
     </div>
   );
 }
 
 ProgressIcon.propTypes = {
-  itemType: ITEM_TYPE_SHAPE,
+  itemType: ITEM_TYPE_SHAPE.isRequired,
 };

@@ -214,6 +214,7 @@ describe('similarRecommender', () => {
       'fullTestCourse3' /* 5 points = (1 overlapping topic * overlappingDesiredTopic(2)) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
                           publishedWithinTwoYearsAgo(1) */,
       'fullTestCourse4' /* 1 point = hasAnySchoolSubject(2) */,
+      'fullTestCourse6' /* 0 points */,
     ]);
   });
 });
@@ -232,6 +233,8 @@ describe('stretchRecommender', () => {
       'fullTestCourse3' /* 6 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(1) + hasImportantButNotDesiredTopic(2) +
                            publishedWithinTwoYearsAgo(1) */,
       'fullTestCourse4' /* 4 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(1) + overlappingDesiredSchoolSubject(1) */,
+      'fullTestCourse6' /* 3 points = hasDesiredMarketingInitiative(1) + hasAnySchoolSubject(2) [sorted before fullTestCourse2 because fullTestCourse6
+                           is marked as featured] */,
       'fullTestCourse2' /* 3 points = hasDesiredDuration(2) + publishedWithinTwoYearsAgo(1) */,
     ]);
   });
