@@ -31,7 +31,7 @@ export const ALL_MODEL_CARD_FIELDS_LABELS_ICONS: [
 ];
 
 export const TECHNICAL_INFO_FIELDS: string[] = [
-  'Model name',
+  'Model Name',
   'Training Data',
   'System Prompt',
   'Temperature',
