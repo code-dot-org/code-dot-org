@@ -179,7 +179,7 @@ class ApplicationController < ActionController::Base
     Thread.current[:current_request_url] = request.url
   end
 
-  protected def with_locale
+  protected def with_locale(&block)
     I18n.with_locale(locale, &block)
   end
 
