@@ -167,7 +167,8 @@ be manually installed.
 
 3. You can leave the App logo Feature graphic empty
 4. Type of App: `LTI 1.3 App`
-5. Select where the tool can be installed, `Can Be Installed For`:
+5. Uncheck the box for `Launch app in Schoology`
+6. Select where the tool can be installed, `Can Be Installed For`:
     - Users
       - App Center Dropdown
       - User Profile Left Navigation Menu
@@ -177,33 +178,33 @@ be manually installed.
       - External Tool
     - Groups
     - Resources
-6. Configuration Type: `Manual`
-7. Privacy: `Send Name and Email/Username of user who launches the tool`
-8. Check `Names and Roles Services`, leave `Assignment and Grade Services` unchecked
+7. Configuration Type: `Manual`
+8. Privacy: `Send Name and Email/Username of user who launches the tool`
+9. Check `Names and Roles Services`, leave `Assignment and Grade Services` unchecked
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/73ab74e1-4c70-4ba6-8c41-5e5d46bc543f)
 
-9. JWKS URL: `https://studio.code.org/oauth/jwks`
-10. Domain/URL: `https://studio.code.org/lti/v1/sync_course`
-11. Custom Parameters:
+10. JWKS URL: `https://studio.code.org/oauth/jwks`
+11. Domain/URL: `https://studio.code.org/lti/v1/sync_course`
+12. Custom Parameters:
     - `display_name=$User.username`
-12. OIDC Login Init Url: `https://studio.code.org/lti/v1/login`
-13. Redirect URLs: `https://studio.code.org/lti/v1/authenticate`
-![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/c1be38ac-a136-4e47-9bfb-b41f3ece713f)
+13. OIDC Login Init Url: `https://studio.code.org/lti/v1/login`
+14. Redirect URLs: `https://studio.code.org/lti/v1/authenticate`
 
-14. Click toggle to accept Schoology Terms of Use
-15. Click `Save Changes`
+![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/2bcfef58-57b2-4306-9558-4e7acd189bfa)
 
-### Step 2: Configure the App
+16. Click toggle to accept Schoology Terms of Use
+17. Click `Submit`
 
-After you install the App to the district, you also need to install it to the
-areas where it should appear (Courses, Groups, etc). Click the `Install` button
-next to your app on the District App list to complete that additional installation
-process.
+### Step 2: Install the App
 
-![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/f78e0051-922e-4eff-b96f-8bf99c1d4768)
+After you create the App, you'll be directed to the page to install the App in
+your district.
 
+1. Click on the `Install LTI 1.3 App` button
 
-1. This will open a modal, where you'll need to accept and continue. When prompted
+![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/2001fc33-0f5f-4f73-ab38-0ebdb6c2db0e)
+
+2. This will open a modal, where you'll need to accept and continue. When prompted
 for where you want to install it, click `Add to Organization`.
 
 
@@ -211,13 +212,13 @@ for where you want to install it, click `Add to Organization`.
 <img width="368" alt="image" src="https://github.com/code-dot-org/code-dot-org/assets/8847422/03e2dd29-1f23-4408-867a-2c8fde1e74d2">
 </p>
 
-2. This will take you to the Organization Apps page, where you will click on the
+3. This will take you to the Organization Apps page, where you will click on the
 `Install/Remove` button for the Code.org tool.
 
 ![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/8ac87431-6a21-4b6c-af94-0cd9696260a4)
 
 
-3. A modal will open, where you'll be prompted to select who and where this app
+4. A modal will open, where you'll be prompted to select who and where this app
 will be available for.
 
 
@@ -225,7 +226,13 @@ will be available for.
 <img width="496" alt="image" src="https://github.com/code-dot-org/code-dot-org/assets/8847422/08b2fc57-6e39-42d1-aa2b-29f5e4ef5665">
 </p>
 
-4. Once you make your selection, click `Submit`.
+5. Once you make your selection, click `Submit`.
+6. From the Organization Apps page, click the `App Center` link at the top left
+of the page, which will take you back to the My Developer Apps section, and we
+will move on to Step 3.
+
+![image](https://github.com/code-dot-org/code-dot-org/assets/8847422/4b774828-3b65-4151-ba3a-9eb2c512c1a0)
+
 
 ### Step 3: Copy your Client ID
 
