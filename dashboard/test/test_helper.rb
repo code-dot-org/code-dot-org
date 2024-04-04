@@ -174,6 +174,10 @@ class ActiveSupport::TestCase
     end
   end
 
+  setup_all do
+    seed_deprecated_unit_fixtures
+  end
+
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
       yield

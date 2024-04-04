@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2024-04-02 15:26:23 UTC",
+    "serialized_at": "2024-04-02 23:03:36 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3327,6 +3327,27 @@
       "level_keys": [
         "game_design_spr_types"
       ]
+    },
+    {
+      "chapter": 89,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_new_panel"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "b53faa4b-bf64-4116-b530-69ec026f24ed"
+      },
+      "level_keys": [
+        "game_new_panel"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4379,6 +4400,18 @@
         "level.key": "game_design_spr_types",
         "script_level.level_keys": [
           "game_design_spr_types"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "b53faa4b-bf64-4116-b530-69ec026f24ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_new_panel",
+        "script_level.level_keys": [
+          "game_new_panel"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "",

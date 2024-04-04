@@ -12,7 +12,10 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {
+  getSimilarRecommendations,
+  getStretchRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 const CurriculumCatalog = ({
@@ -109,6 +112,24 @@ const CurriculumCatalog = ({
     return recommendedCurriculum;
   };
 
+  // Get the top recommended stretch curriculum based on the curriculum with the given
+  // curriculumKey. If the top result is the same as the similar curriculum, show the
+  // second result.
+  const getRecommendedStretchCurriculum = (
+    curriculumKey,
+    similarCurriculumKey
+  ) => {
+    const recommendations = getStretchRecommendations(
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
+    );
+
+    return similarCurriculumKey === recommendations[0].key
+      ? recommendations[1]
+      : recommendations[0];
+  };
+
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
   const renderSearchResults = () => {
@@ -184,6 +205,9 @@ const CurriculumCatalog = ({
                   isTeacher={isTeacher}
                   getRecommendedSimilarCurriculum={
                     getRecommendedSimilarCurriculum
+                  }
+                  getRecommendedStretchCurriculum={
+                    getRecommendedStretchCurriculum
                   }
                   {...props}
                 />

@@ -88,9 +88,7 @@ module RegistrationsControllerTests
       assert_equal 'teacher', assigns(:user).user_type
     end
 
-    private
-
-    def start_email_password_signup
+    private def start_email_password_signup
       post '/users/begin_sign_up', params: {
         user: {
           email: 'myemail@example.com',

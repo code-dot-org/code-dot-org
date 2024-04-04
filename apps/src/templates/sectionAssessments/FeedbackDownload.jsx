@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import Button from '@cdo/apps/templates/Button';
-import moduleStyles from '@cdo/apps/templates/button.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
@@ -15,6 +14,8 @@ import {
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import moduleStyles from '@cdo/apps/templates/button.module.scss';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},

@@ -3,11 +3,12 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 
-import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.scss';
 import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../../util/reconfiguredChai';
+
+import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.scss';
 
 const JS_DATA = {
   response_count: 1,

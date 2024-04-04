@@ -2,6 +2,7 @@ import React, {useState, useCallback} from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
@@ -72,13 +73,13 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           />
         </div>
         <div className={styles.addItemContainer}>
-          <button
-            type="button"
+          <Button
+            text="Add"
+            type="secondary"
             onClick={onAdd}
+            iconLeft={{iconName: 'plus'}}
             disabled={!newRetrievalContext || isDisabled(visibility)}
-          >
-            Add
-          </button>
+          />
         </div>
         {retrievalContexts.map((message, index) => {
           return (
@@ -100,13 +101,13 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <button
-          type="button"
-          disabled={isDisabled(visibility)}
+        <Button
+          text="Update"
           onClick={onUpdate}
-        >
-          Update
-        </button>
+          iconLeft={{iconName: 'edit'}}
+          className={modelCustomizationStyles.updateButton}
+          disabled={isDisabled(visibility)}
+        />
       </div>
     </div>
   );

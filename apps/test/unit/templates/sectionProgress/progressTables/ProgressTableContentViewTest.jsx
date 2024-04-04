@@ -9,7 +9,6 @@ import {
   fakeStudents,
   fakeStudentLevelProgress,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import progressTableStyleConstants from '@cdo/apps/templates/sectionProgress/progressTables/progress-table-constants.module.scss';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
 import ProgressTableLessonNumber from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import {
@@ -19,6 +18,8 @@ import {
 
 import {expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
+
+import progressTableStyleConstants from '@cdo/apps/templates/sectionProgress/progressTables/progress-table-constants.module.scss';
 
 const STUDENTS = fakeStudents(3);
 const LESSON_1 = fakeLessonWithLevels({position: 1});
