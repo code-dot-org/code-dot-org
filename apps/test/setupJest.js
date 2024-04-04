@@ -6,28 +6,11 @@ enzyme.configure({adapter: new Adapter()});
 window.IN_UNIT_TEST = true;
 window.IN_STORYBOOK = false;
 
-const localeModules = [
-  '@cdo/locale',
-  '@cdo/aichat/locale',
-  '@cdo/applab/locale',
-  '@cdo/javalab/locale',
-  '@cdo/music/locale',
-  '@cdo/netsim/locale',
-  '@cdo/regionalPartnerMiniContact/locale',
-  '@cdo/regionalPartnerSearch/locale',
-  '@cdo/standaloneVideo/locale',
-  '@cdo/tutorialExplorer/locale',
-  '@cdo/weblab/locale',
-  '@cdo/gamelab/locale',
-  '@cdo/poetry/locale',
-  '@cdo/spritelab/locale',
-];
-
 const localeMock = moduleName => {
   return new Proxy(jest.requireActual(moduleName), {
     get(target, prop) {
       if (prop !== '__esModule') {
-        return jest.fn();
+        return jest.fn().mockReturnValue(prop);
       }
 
       return undefined;

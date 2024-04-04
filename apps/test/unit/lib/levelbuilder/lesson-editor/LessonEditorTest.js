@@ -27,19 +27,19 @@ import createStandardsReducer, {
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import resourceTestData from './resourceTestData';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import _ from 'lodash';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
-import sinon from 'sinon';
 
 describe('LessonEditor', () => {
   // Warnings allowed due to usage of deprecated  componentWillReceiveProps
   // lifecycle method.
   allowConsoleWarnings();
 
-  let defaultProps, store;
+  let defaultProps, store, clock;
   beforeEach(() => {
-    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
+    sinon.stub(utils, 'navigateToHref');
     stubRedux();
     registerReducers({
       ...reducers,
@@ -93,8 +93,11 @@ describe('LessonEditor', () => {
 
   afterEach(() => {
     restoreRedux();
-    utils.navigateToHref.mockRestore();
-    jest.useRealTimers();
+    utils.navigateToHref.restore();
+    if (clock) {
+      clock.restore();
+      clock = undefined;
+    }
   });
 
   const createWrapper = overrideProps => {
@@ -223,10 +226,10 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(lessonEditor.state().isSaving).to.equal(true);
 
-    jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
+    clock = sinon.useFakeTimers(new Date('2020-12-01'));
     const expectedLastSaved = Date.now();
     server.respond();
-    jest.advanceTimersByTime(50);
+    clock.tick(50);
 
     lessonEditor.update();
     expect(utils.navigateToHref).to.not.have.been.called;
@@ -235,7 +238,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     //check that last saved message is showing
     expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
-    server.mockRestore();
+    server.restore();
   });
 
   it('shows error when save and keep editing has error saving', () => {
@@ -271,7 +274,7 @@ describe('LessonEditor', () => {
       wrapper.find('.saveBar').contains('Error Saving: There was an error')
     ).to.be.true;
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('can save and close lesson with lesson plan', () => {
@@ -302,7 +305,7 @@ describe('LessonEditor', () => {
       `/lessons/1${window.location.search}`
     );
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('can save and close lesson without lesson plan', () => {
@@ -334,7 +337,7 @@ describe('LessonEditor', () => {
       `/s/my-script/${window.location.search}`
     );
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('shows error when save and keep editing has error saving', () => {
@@ -371,7 +374,7 @@ describe('LessonEditor', () => {
       wrapper.find('.saveBar').contains('Error Saving: There was an error')
     ).to.be.true;
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('should render "Add Rubric" button when hasRubric prop is false', () => {

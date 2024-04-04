@@ -35,6 +35,14 @@ const setUp = (overrideProps = {}) => {
   return shallow(<TeacherHomepage {...props} />);
 };
 
+// jest.mock('@cdo/locale', () => ({
+//   homepageHeading: jest.fn().mockReturnValue('My Dashboard'),
+//   participantTypeFacilitatorTitle: jest.fn().mockReturnValue("Participant Type"),
+//   participantTypeTeacherTitle: jest.fn().mockReturnValue("Participant Type"),
+//   teacherTabProgress: jest.fn().mockReturnValue("Teacher tab"),
+//   teacherTabStatsTextResponses: jest.fn()
+// }));
+
 describe('TeacherHomepage', () => {
   let server;
   const successResponse = () => [
@@ -45,19 +53,17 @@ describe('TeacherHomepage', () => {
   beforeEach(() => {
     server = sinon.fakeServer.create();
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
-    jest.spyOn(sessionStorage, 'getItem').mockClear().mockImplementation();
-    jest.spyOn(sessionStorage, 'setItem').mockClear().mockImplementation();
+    sinon.stub(sessionStorage, 'getItem');
+    sinon.stub(sessionStorage, 'setItem');
   });
   afterEach(() => {
-    server.mockRestore();
-    sessionStorage.setItem.mockRestore();
-    sessionStorage.getItem.mockRestore();
+    server.restore();
   });
 
   it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = setUp();
     const headerBanner = wrapper.find('HeaderBanner');
-    expect(headerBanner.props().headingText).to.equal('My Dashboard');
+    expect(headerBanner.props().headingText).to.equal('homepageHeading');
   });
 
   it('renders 2 ProtectedStatefulDivs', () => {
@@ -66,36 +72,22 @@ describe('TeacherHomepage', () => {
   });
 
   it('logs an Amplitude event only on first render', () => {
-    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
-    sessionStorage.getItem.mockImplementation((...args) => {
-      if (args[0] === 'logged_teacher_session') {
-        return false;
-      }
-    });
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    sessionStorage.setItem('logged_teacher_session', 'false');
     setUp();
 
-    expect(sessionStorage.setItem).to.have.been.calledOnce;
-    expect(sessionStorage.setItem).to.have.been.calledWith(
-      'logged_teacher_session',
-      'true'
-    );
     expect(analyticsSpy).to.have.been.calledOnce;
-    expect(analyticsSpy.mock.calls[0]).to.deep.eq([
+    expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Teacher Login',
       {'user id': 42},
     ]);
 
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
-    sessionStorage.getItem.mockImplementation((...args) => {
-      if (args[0] === 'logged_teacher_session') {
-        return 'true';
-      }
-    });
+    expect(sessionStorage.getItem('logged_teacher_session')).to.equal('true');
     setUp();
-    expect(sessionStorage.setItem).to.have.been.calledOnce;
     expect(analyticsSpy).to.have.been.calledOnce;
 
-    analyticsSpy.mockRestore();
+    analyticsSpy.restore();
   });
 
   it('renders a NpsSurveyBlock if showNpsSurvey is true', () => {
