@@ -8,19 +8,21 @@
         = t('activerecord.attributes.user.finish_sign_up_header_account_information')
         = t('age_interstitial.disclaimer', url: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, markdown: :inline).html_safe
       = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
-        .form-group
-          %div{style: 'display: flex;'}
-            = f.label :age, t('signup_form.age'), class: 'label-title'
-            .age-required *
-          = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: t('signup_form.select_age')
-          .required-message.age-required= t('activerecord.attributes.user.required')
-        - if Policies::Lti.lti?(current_user)
+        - if current_user.age.nil?
+          .form-group
+            %div{style: 'display: flex;'}
+              = f.label :age, t('signup_form.age'), class: 'label-title'
+              .age-required *
+            = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: t('signup_form.select_age')
+            .required-message.age-required= t('activerecord.attributes.user.required')
+        - if retrieveInfoForLti || retrieveStateForCpa
           .form-group
             %div{style: 'display: flex;'}
               = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-title'
               .state-required *
             = f.select :us_state, us_state_options, include_blank: t('school_info.select_state')
             .required-message.state-required= t('activerecord.attributes.user.required')
+        -if retrieveInfoForLti
           .field
             = f.label :gender_student_input, t('gender'), class: 'label-title'
             = f.text_field :gender_student_input
@@ -63,7 +65,7 @@
         url: $(this).attr('action') + '/set_student_information',
         data: $(this).serialize(),
         dataType: 'json',
-        success: function(data) {$("#student-information-modal").modal('hide');}
+        success: function(data) {#{retrieveStateForCpa} ? location.reload() : $("#student-information-modal").modal('hide')}
       });
     });
 
