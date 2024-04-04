@@ -43,7 +43,6 @@ type CDOIDEContextType = {
 
 export const CDOIDEContext = createContext<CDOIDEContextType | null>(null);
 
-// TODO: useAnalysisFactsContext
 export const useCDOIDEContext = () => {
   const context = useContext(CDOIDEContext);
   if (context === null) {

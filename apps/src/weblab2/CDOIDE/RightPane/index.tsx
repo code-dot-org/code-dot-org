@@ -4,16 +4,12 @@ import {previewFileType} from '@cdoide/utils';
 import React, {useState, useEffect} from 'react';
 
 import {HTMLPreview} from './HTMLPreview';
-import {JSONPreview} from './JSONPreview';
-import {JSPreview} from './JSPreview';
 import './styles/rightPane.css';
 
 const fileTypeMap: {
   [key: string]: PreviewComponent;
 } = {
   html: HTMLPreview,
-  js: JSPreview,
-  json: JSONPreview,
 };
 
 const getPreviewComponent = (

@@ -1,4 +1,4 @@
-const defaultEditableFileTypesArray = ['html', 'css', 'js', 'json'];
+const defaultEditableFileTypesArray = ['html', 'css'];
 export const editableFileType = (
   language: string,
   editableFileTypesArray = defaultEditableFileTypesArray
