@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Link from '@cdo/apps/componentLibrary/link';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {
@@ -8,7 +9,8 @@ import {
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
 import styles from './selfPacedProgressTable.module.scss';
-import './tableStyles.scss'; // Generic table styles that are share with LandingPage.jsx
+// Generic table styles that are shared with LandingPage.jsx
+import './tableStyles.scss';
 
 const CourseRow = ({
   name,
@@ -19,7 +21,7 @@ const CourseRow = ({
 }) => (
   <tr>
     <td>
-      <Link href={`/${name}`} size="s" type="secondary">
+      <Link href={studio(`/s/${name}`)} size="s" type="secondary">
         {title}
       </Link>
     </td>
@@ -27,7 +29,7 @@ const CourseRow = ({
       <BodyThreeText>{current_lesson_name}</BodyThreeText>
     </td>
     <td>
-      {percent_completed === '100' ? (
+      {percent_completed === 100 ? (
         <BodyFourText className={styles.completePill}>
           {i18n.selfPacedPlCompleted()}
         </BodyFourText>
@@ -42,7 +44,7 @@ const CourseRow = ({
         {percent_completed < 100 && (
           <LinkButton
             color={'purple'}
-            href={`/${name}`}
+            href={studio(`/s/${name}`)}
             size="s"
             text={i18n.selfPacedPlContinueCourse()}
           />
@@ -50,7 +52,7 @@ const CourseRow = ({
         {finish_url && (
           <LinkButton
             color={'black'}
-            href={finish_url}
+            href={studio(finish_url)}
             size="s"
             text={i18n.printCertificate()}
             type={'secondary'}
@@ -69,7 +71,7 @@ CourseRow.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   current_lesson_name: PropTypes.string.isRequired,
-  percent_completed: PropTypes.string.isRequired,
+  percent_completed: PropTypes.number.isRequired,
   finish_url: PropTypes.string,
 };
 
@@ -89,7 +91,7 @@ export default function SelfPacedProgressTable({plCoursesStarted}) {
           {plCoursesStarted.map((course, index) => (
             <CourseRow
               key={index}
-              name={`/s/${course.name}`}
+              name={course.name}
               title={course.title}
               current_lesson_name={course.current_lesson_name}
               percent_completed={course.percent_completed}
