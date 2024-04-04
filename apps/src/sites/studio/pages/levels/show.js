@@ -100,8 +100,6 @@ function initPage() {
     };
     getStore().dispatch(setTaRubric(rubric));
 
-    console.log(config);
-    console.log(rubric);
     const rubricFabMountPoint = document.getElementById(
       'rubric-fab-mount-point'
     );
