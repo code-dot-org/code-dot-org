@@ -1,3 +1,4 @@
+import {ProjectFile} from '@cdoide/types';
 import React from 'react';
 
 type JSPreviewProps = {
