@@ -43,6 +43,7 @@ const ExpandedCurriculumCatalogCard = ({
   isSignedOut,
   isTeacher,
   getRecommendedSimilarCurriculum,
+  getRecommendedStretchCurriculum,
 }) => {
   const isTeacherOrSignedOut = isSignedOut || isTeacher;
   const expandedCardRef = useRef(null);
@@ -83,6 +84,11 @@ const ExpandedCurriculumCatalogCard = ({
 
   const recommendedSimilarCurriculum =
     getRecommendedSimilarCurriculum(courseKey);
+
+  const recommendedStretchCurriculum = getRecommendedStretchCurriculum(
+    courseKey,
+    recommendedSimilarCurriculum.key
+  );
 
   const handleClickRecommendedSimilarCurriculum = () => {
     analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_CLICKED, {
@@ -296,7 +302,6 @@ const ExpandedCurriculumCatalogCard = ({
                 <img
                   id="similarCurriculumImage"
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
-                  style={{height: '100%'}}
                   alt={recommendedSimilarCurriculum.display_name}
                 />
                 <Button
@@ -307,6 +312,22 @@ const ExpandedCurriculumCatalogCard = ({
                   className={style.relatedCurriculaLink}
                   text={recommendedSimilarCurriculum.display_name}
                   onClick={handleClickRecommendedSimilarCurriculum}
+                />
+                <img
+                  id="stretchCurriculumImage"
+                  src={recommendedStretchCurriculum.image || defaultImageSrc}
+                  alt={recommendedStretchCurriculum.display_name}
+                />
+                <Button
+                  id="stretchCurriculumButton"
+                  name={recommendedStretchCurriculum.display_name}
+                  type="button"
+                  styleAsText
+                  className={style.relatedCurriculaLink}
+                  text={recommendedStretchCurriculum.display_name}
+                  onClick={() =>
+                    setExpandedCardKey(recommendedStretchCurriculum.key)
+                  }
                 />
               </div>
             </div>
@@ -340,5 +361,6 @@ ExpandedCurriculumCatalogCard.propTypes = {
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
+  getRecommendedStretchCurriculum: PropTypes.func.isRequired,
 };
 export default ExpandedCurriculumCatalogCard;

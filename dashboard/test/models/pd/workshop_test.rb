@@ -1587,29 +1587,27 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_automated_emails
   end
 
-  private
-
-  def session_on_day(day_offset)
+  private def session_on_day(day_offset)
     # 9am-5pm
     session_on(day_offset, 9.hours, 17.hours)
   end
 
-  def session_on_day_late(day_offset)
+  private def session_on_day_late(day_offset)
     # Ending at 11:59pm
     session_on(day_offset, 12.hours, 23.hours + 59.minutes)
   end
 
-  def session_on_day_early(day_offset)
+  private def session_on_day_early(day_offset)
     # Starting at midnight
     session_on(day_offset, 0, 9.hours)
   end
 
-  def session_on(day_offset, start_offset, end_offset)
+  private def session_on(day_offset, start_offset, end_offset)
     day = today + day_offset.days
     create :pd_session, start: day + start_offset, end: day + end_offset
   end
 
-  def today
+  private def today
     Time.zone.today
   end
 end

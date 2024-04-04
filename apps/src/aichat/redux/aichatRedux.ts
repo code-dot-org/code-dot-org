@@ -1,9 +1,13 @@
 import moment from 'moment';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
-import {EMPTY_AI_CUSTOMIZATIONS_STUDENT} from '../views/modelCustomization/constants';
+import {
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
 import {
@@ -13,9 +17,43 @@ import {
   Status,
   AiCustomizations,
   ModelCardInfo,
+  Visibility,
+  LevelAichatSettings,
 } from '../types';
+import {RootState} from '@cdo/apps/types/redux';
+
+const haveDifferentValues = (
+  value1: AiCustomizations[keyof AiCustomizations],
+  value2: AiCustomizations[keyof AiCustomizations]
+): boolean => {
+  if (typeof value1 === 'object' && typeof value2 === 'object') {
+    return JSON.stringify(value1) !== JSON.stringify(value2);
+  }
+
+  return value1 !== value2;
+};
+
+const findChangedProperties = (
+  previous: AiCustomizations | undefined,
+  next: AiCustomizations
+) => {
+  if (!previous) {
+    return Object.keys(next);
+  }
+
+  const changedProperties: string[] = [];
+  Object.keys(next).forEach(key => {
+    const typedKey = key as keyof AiCustomizations;
+    if (haveDifferentValues(previous[typedKey], next[typedKey])) {
+      changedProperties.push(key);
+    }
+  });
+
+  return changedProperties;
+};
 
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
+
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
   // Messages will be logged and stored.
@@ -27,6 +65,8 @@ export interface AichatState {
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
+  previouslySavedAiCustomizations?: AiCustomizations;
+  fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
 }
 
 const initialState: AichatState = {
@@ -34,10 +74,44 @@ const initialState: AichatState = {
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
-  currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS_STUDENT,
+  currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  fieldVisibilities: DEFAULT_VISIBILITIES,
 };
 
 // THUNKS
+
+// This thunk saves a student's AI customizations using the Project Manager (ie, to S3 typically),
+// then does a comparison between the previous and current saved customizations in order to
+// output a message to the chat window with the list of customizations that were updated.
+export const updateAiCustomization = createAsyncThunk(
+  'aichat/updateAiCustomization',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState() as RootState;
+    const {currentAiCustomizations, previouslySavedAiCustomizations} =
+      state.aichat;
+
+    await Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
+
+    thunkAPI.dispatch(
+      setPreviouslySavedAiCustomizations(currentAiCustomizations)
+    );
+
+    const changedProperties = findChangedProperties(
+      previouslySavedAiCustomizations,
+      currentAiCustomizations
+    );
+    thunkAPI.dispatch(
+      addChatMessage({
+        id: 0,
+        role: Role.ASSISTANT,
+        chatMessageText: `${changedProperties} were updated`,
+        status: Status.OK,
+      })
+    );
+  }
+);
 
 // This thunk's callback function submits a user chat message to the chat completion endpoint,
 // waits for a chat completion response, and updates the user message state.
@@ -108,7 +182,13 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessages.push(action.payload);
+      const newMessageId =
+        state.chatMessages[state.chatMessages.length - 1].id + 1;
+      const newMessage = {
+        ...action.payload,
+        id: newMessageId,
+      };
+      state.chatMessages.push(newMessage);
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
@@ -129,8 +209,46 @@ const aichatSlice = createSlice({
         chatMessage.status = status;
       }
     },
-    setAiCustomizations: (state, action: PayloadAction<AiCustomizations>) => {
-      state.currentAiCustomizations = action.payload;
+    setStartingAiCustomizations: (
+      state,
+      action: PayloadAction<{
+        levelAichatSettings?: LevelAichatSettings;
+        studentAiCustomizations: AiCustomizations;
+      }>
+    ) => {
+      const {levelAichatSettings, studentAiCustomizations} = action.payload;
+
+      let reconciledAiCustomizations: AiCustomizations = {
+        ...(levelAichatSettings?.initialCustomizations ||
+          EMPTY_AI_CUSTOMIZATIONS),
+      };
+
+      for (const customizationUntyped in reconciledAiCustomizations) {
+        const customization = customizationUntyped as keyof AiCustomizations;
+
+        if (
+          (levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES)[
+            customization
+          ] === Visibility.EDITABLE &&
+          studentAiCustomizations[customization]
+        ) {
+          reconciledAiCustomizations = {
+            ...reconciledAiCustomizations,
+            [customization]: studentAiCustomizations[customization],
+          };
+        }
+      }
+
+      state.previouslySavedAiCustomizations = reconciledAiCustomizations;
+      state.currentAiCustomizations = reconciledAiCustomizations;
+      state.fieldVisibilities =
+        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+    },
+    setPreviouslySavedAiCustomizations: (
+      state,
+      action: PayloadAction<AiCustomizations>
+    ) => {
+      state.previouslySavedAiCustomizations = action.payload;
     },
     setAiCustomizationProperty: (
       state,
@@ -184,7 +302,8 @@ export const {
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
-  setAiCustomizations,
+  setStartingAiCustomizations,
+  setPreviouslySavedAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
 } = aichatSlice.actions;

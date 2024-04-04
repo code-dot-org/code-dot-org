@@ -198,7 +198,7 @@ export const setUpWithoutLevel = createAsyncThunk(
         {
           initialSources: sources,
           channel,
-          levelProperties: {appName: payload.appName},
+          levelProperties: {id: 0, appName: payload.appName},
         },
         thunkAPI.signal.aborted,
         thunkAPI.dispatch

@@ -77,9 +77,7 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal @most_recent_devices_version, MakerController.maker_script(@student)
   end
 
-  private
-
-  def ensure_script(script_name, version_year = '2000', is_stable = true)
+  private def ensure_script(script_name, version_year = '2000', is_stable = true)
     Unit.find_by_name(script_name) ||
       create(:script, name: script_name, family_name: 'devices', version_year: version_year, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script

@@ -211,6 +211,7 @@ const WEBPACK_BASE_CONFIG = {
       repl: p('src/noop'),
       '@cdo/storybook': p('.storybook'),
       serialport: false,
+      '@cdoide': p('src/weblab2/CDOIDE'),
     },
   },
   module: {
@@ -691,7 +692,7 @@ function createWebpackConfig({
           ]
         : []),
     ],
-    devServer: envConstants.HOT
+    devServer: envConstants.DEV
       ? {
           allowedHosts: ['localhost-studio.code.org', 'localhost.code.org'],
           client: {overlay: false},
@@ -705,7 +706,8 @@ function createWebpackConfig({
             },
           ],
           host: '0.0.0.0',
-          hot: true,
+          hot: envConstants.HOT,
+          liveReload: envConstants.HOT,
           devMiddleware: {
             writeToDisk: true,
           },

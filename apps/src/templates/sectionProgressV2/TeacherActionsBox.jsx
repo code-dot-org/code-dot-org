@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
@@ -9,37 +8,27 @@ import LegendItem from './LegendItem';
 
 import styles from './progress-table-legend.module.scss';
 
-export default function TeacherActionsBox({isViewingLevelProgress}) {
-  const legendIcons = () =>
-    isViewingLevelProgress ? (
-      <div className={styles.icons}>
-        <div className={styles.legendColumn}>
-          <LegendItem
-            itemType={ITEM_TYPE.NEEDS_FEEDBACK}
-            labelText={i18n.needsFeedback()}
-          />
-          <LegendItem
-            itemType={ITEM_TYPE.FEEDBACK_GIVEN}
-            labelText={i18n.feedbackGiven()}
-          />
-        </div>
-        <div className={styles.legendColumn}>
-          <LegendItem
-            itemType={ITEM_TYPE.KEEP_WORKING}
-            labelText={i18n.markedAsKeepWorking()}
-          />
-        </div>
+export default function TeacherActionsBox() {
+  const legendIcons = () => (
+    <div className={styles.icons}>
+      <div className={styles.legendColumn}>
+        <LegendItem
+          itemType={ITEM_TYPE.NEEDS_FEEDBACK}
+          labelText={i18n.needsFeedback()}
+        />
+        <LegendItem
+          itemType={ITEM_TYPE.FEEDBACK_GIVEN}
+          labelText={i18n.feedbackGiven()}
+        />
       </div>
-    ) : (
-      <div className={styles.icons}>
-        <div className={styles.legendColumn}>
-          <LegendItem
-            itemType={ITEM_TYPE.NEEDS_FEEDBACK}
-            labelText={i18n.needsFeedback()}
-          />
-        </div>
+      <div className={styles.legendColumn}>
+        <LegendItem
+          itemType={ITEM_TYPE.KEEP_WORKING}
+          labelText={i18n.markedAsKeepWorking()}
+        />
       </div>
-    );
+    </div>
+  );
 
   return (
     <div className={styles.legend}>
@@ -50,7 +39,3 @@ export default function TeacherActionsBox({isViewingLevelProgress}) {
     </div>
   );
 }
-
-TeacherActionsBox.propTypes = {
-  isViewingLevelProgress: PropTypes.bool,
-};

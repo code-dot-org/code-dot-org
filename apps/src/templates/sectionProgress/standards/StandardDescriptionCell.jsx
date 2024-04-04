@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
-import i18n from '@cdo/locale';
-import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {LessonIcons} from './standardsConstants';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import i18n from '@cdo/locale';
+
+import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
+import {LessonIcons} from './standardsConstants';
 
 class StandardDescriptionCell extends Component {
   static propTypes = {

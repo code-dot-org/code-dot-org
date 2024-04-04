@@ -26,25 +26,65 @@ SuccessfulSync.args = {
     all: {
       1: {
         name: 'CSD - Period 1',
+        short_name: 'Period 1',
         size: 34,
+        instructors: [
+          {
+            name: 'Teacher 1',
+            id: '0',
+            isOwner: true,
+          },
+        ],
       },
       2: {
         name: 'CSD - Period 2',
+        short_name: 'Period 2',
         size: 27,
+        instructors: [
+          {
+            name: 'Teacher 1',
+            id: '0',
+            isOwner: true,
+          },
+        ],
       },
       3: {
         name: 'CSD - Period 3',
+        short_name: 'Period 3',
         size: 32,
+        instructors: [
+          {
+            name: 'Teacher 1',
+            id: '0',
+            isOwner: true,
+          },
+        ],
       },
     },
-    updated: {
+    changed: {
       2: {
         name: 'CSD - Period 2',
+        short_name: 'Period 2',
         size: 27,
+        instructors: [
+          {
+            name: 'Teacher 1',
+            id: '0',
+            isOwner: true,
+          },
+        ],
       },
       3: {
         name: 'CSD - Period 3',
+        short_name: 'Period 3',
         size: 32,
+        instructors: [
+          {
+            name: 'Teacher 1',
+            id: '0',
+            isOwner: true,
+          },
+        ],
       },
     },
   },

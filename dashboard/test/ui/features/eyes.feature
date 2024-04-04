@@ -7,6 +7,7 @@ Background:
 Scenario:
   When I open my eyes to test "multi"
   Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2?noautoplay=true"
+  And The header is finished animating
   Then element ".submitButton" is visible
   And I see no difference for "level load"
   And I close my eyes
@@ -14,6 +15,7 @@ Scenario:
 Scenario:
   When I open my eyes to test "match"
   Given I am on "http://studio.code.org/s/course1/lessons/14/levels/13?noautoplay=true"
+  And The header is finished animating
   Then element ".submitButton" is visible
   And I see no difference for "level load"
   And I close my eyes
@@ -21,6 +23,7 @@ Scenario:
 Scenario:
   When I open my eyes to test "text-only match"
   Given I am on "http://studio.code.org/s/course3/lessons/10/levels/2?noautoplay=true"
+  And The header is finished animating
   Then element ".submitButton" is visible
   And I see no difference for "level load"
   And I close my eyes
@@ -28,6 +31,7 @@ Scenario:
 Scenario:
   When I open my eyes to test "text compression"
   Given I am on "http://studio.code.org/s/allthethings/lessons/16/levels/1?noautoplay=true"
+  And The header is finished animating
   And I see no difference for "level load"
   And I set text compression dictionary to "pitter\npatter\n"
   And I see no difference for "simple substitution"
@@ -36,6 +40,7 @@ Scenario:
 Scenario:
   When I open my eyes to test "pixelation with range"
   Given I am on "http://studio.code.org/s/allthethings/lessons/17/levels/2?noautoplay=true"
+  And The header is finished animating
   And I see no difference for "level load"
   And I close my eyes
 
@@ -50,6 +55,7 @@ Scenario:
 
   Then I am on "http://studio.code.org/s/allthethings/lessons/2/levels/1/lang/ar-sa"
   And I wait for the page to fully load
+  And The header is finished animating
   And I see no difference for "maze RTL"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
@@ -58,6 +64,7 @@ Scenario:
 Scenario:
   When I open my eyes to test "star wars RTL"
   Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/15/lang/ar-sa?noautoplay=true"
+  And The header is finished animating
   And I wait to see ".header_user"
   And I wait to see "#runButton"
   # close the video dialog, because the noautoplay param may be lost in the

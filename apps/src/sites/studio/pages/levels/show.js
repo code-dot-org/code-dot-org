@@ -61,14 +61,21 @@ function initPage() {
 
   if (hasScriptData('script[data-aitutordata]')) {
     const aiTutorData = getScriptData('aitutordata');
-    const {levelId, type, hasValidation, isAssessment, isProjectBacked} =
-      aiTutorData;
+    const {
+      levelId,
+      type,
+      hasValidation,
+      isProjectBacked,
+      aiTutorAvailable,
+      isAssessment,
+    } = aiTutorData;
     const level = {
       id: levelId,
-      type: type,
-      hasValidation: hasValidation,
-      isAssessment: isAssessment,
-      isProjectBacked: isProjectBacked,
+      type,
+      hasValidation,
+      isProjectBacked,
+      aiTutorAvailable,
+      isAssessment,
     };
     getStore().dispatch(setLevel(level));
     getStore().dispatch(setScriptId(aiTutorData.scriptId));
