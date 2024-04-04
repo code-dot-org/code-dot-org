@@ -27,7 +27,7 @@ export const ALL_MODEL_CARD_FIELDS_LABELS_ICONS: [
   ['intendedUse', 'Intended Use', 'bullseye-pointer'],
   ['limitationsAndWarnings', 'Limitations and Warnings', 'diamond-exclamation'],
   ['testingAndEvaluation', 'Testing and Evaluation', 'vial-circle-check'],
-  ['exampleTopics', 'Example Topics', 'message-lines'],
+  ['exampleTopics', 'Example Prompts and Topics', 'message-lines'],
 ];
 
 export const TECHNICAL_INFO_FIELDS: string[] = [
