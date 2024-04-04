@@ -169,7 +169,8 @@ class ToneJSPlayer implements AudioPlayer {
         notes,
         `+${Transport.toSeconds(
           this.playbackTimeToTransportTime(playbackPosition)
-        )}`
+        )}`,
+        1
       );
     });
   }
