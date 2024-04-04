@@ -8,14 +8,7 @@ import {
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
 import styles from './selfPacedProgressTable.module.scss';
-import './tableStyles.scss';
-
-const rowHeadings = [
-  i18n.selfPacedPlCourseName(),
-  i18n.selfPacedPlCurrentLesson(),
-  i18n.selfPacedPlCourseCompletion(),
-  i18n.selfPacedPlActions(),
-];
+import './tableStyles.scss'; // Generic table styles that are share with LandingPage.jsx
 
 const CourseRow = ({
   name,
@@ -86,9 +79,10 @@ export default function SelfPacedProgressTable({plCoursesStarted}) {
       <table className={styles.selfPacedProgressTable}>
         <thead>
           <tr>
-            {rowHeadings.map(heading => (
-              <th key={heading}>{heading}</th>
-            ))}
+            <th>{i18n.selfPacedPlCourseName()}</th>
+            <th>{i18n.selfPacedPlCurrentLesson()}</th>
+            <th>{i18n.selfPacedPlCourseCompletion()}</th>
+            <th>{i18n.selfPacedPlActions()}</th>
           </tr>
         </thead>
         <tbody>
