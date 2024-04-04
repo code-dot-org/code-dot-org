@@ -6,12 +6,16 @@ import style from './school-association.module.scss';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import Button from '@cdo/apps/templates/Button';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SELECT_A_SCHOOL = 'selectASchool';
+const CLICK_TO_ADD = 'clickToAdd';
+const NO_SCHOOL_SETTING = 'noSchoolSetting';
 const SEARCH_DEFAULTS = [
   {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
-  {value: 'clickToAdd', text: i18n.schoolClickToAdd()},
-  {value: 'noSchoolSetting', text: i18n.noSchoolSetting()},
+  {value: CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
+  {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
 
 export default function SchoolZipSearch({fieldNames, zip}) {
@@ -37,10 +41,39 @@ export default function SchoolZipSearch({fieldNames, zip}) {
 
   const onSchoolChange = e => {
     const schoolId = e.target.value;
-    setSelectedSchoolNcesId(schoolId);
-    if (schoolId === 'clickToAdd') {
+    let ncesId;
+    if (schoolId === NO_SCHOOL_SETTING) {
+      ncesId = '';
+      analyticsReporter.sendEvent(
+        EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
+        {},
+        PLATFORMS.BOTH
+      );
+    } else if (schoolId === SELECT_A_SCHOOL) {
+      ncesId = '';
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_LIST_OPENED,
+        {},
+        PLATFORMS.BOTH
+      );
+    } else if (schoolId === CLICK_TO_ADD) {
+      ncesId = '';
       setInputManually(true);
+      analyticsReporter.sendEvent(
+        EVENTS.ADD_MANUALLY_CLICKED,
+        {},
+        PLATFORMS.BOTH
+      );
+    } else {
+      // In the case the value given is a real school ID, use that
+      ncesId = schoolId;
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_SELECTED_FROM_LIST,
+        {ncesId: ncesId},
+        PLATFORMS.BOTH
+      );
     }
+    setSelectedSchoolNcesId(ncesId);
   };
 
   const constructSchoolOption = school => ({
