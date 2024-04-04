@@ -192,6 +192,16 @@ class RubricsController < ApplicationController
       end
 
       next unless attempted && (!last_eval_time || last_eval_time < attempted)
+      metadata = {
+        'studentId' => @user.id,
+        'unitName' => script_level.script.name,
+        'levelName' => script_level.level.name,
+      }
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'TA Rubric AI Eval started from section request',
+        metadata: metadata,
+      )
       EvaluateRubricJob.perform_later(
         user_id: @user.id,
         requester_id: current_user.id,
