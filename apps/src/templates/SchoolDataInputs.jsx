@@ -111,6 +111,7 @@ export default function SchoolDataInputs({
               ncesSchoolId: fieldNames.ncesSchoolId,
               schoolName: fieldNames.schoolName,
             }}
+            zip={zip}
           />
         )}
       </div>
