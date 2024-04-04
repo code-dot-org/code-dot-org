@@ -1,3 +1,4 @@
+import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import {parseElement} from '@cdo/apps/xml';
 import {Position} from '@cdo/apps/constants';
@@ -81,9 +82,10 @@ describe('Artist', () => {
 
       artist.visualization = new Artist.Visualization();
       artist.visualization.currentPathPattern = img;
-      const setDrawPatternBackwardSpy = jest
-        .spyOn(artist.visualization.ctxScratch, 'drawImage')
-        .mockClear();
+      const setDrawPatternBackwardSpy = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
       artist.visualization.drawForwardLineWithPattern_(-100);
 
       expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(
@@ -98,7 +100,7 @@ describe('Artist', () => {
         100
       );
 
-      setDrawPatternBackwardSpy.mockRestore();
+      setDrawPatternBackwardSpy.restore();
     });
 
     it('draws a pattern forward', () => {
@@ -109,9 +111,10 @@ describe('Artist', () => {
 
       artist.visualization = new Artist.Visualization();
       artist.visualization.currentPathPattern = img;
-      const setDrawPatternForwardSpy = jest
-        .spyOn(artist.visualization.ctxScratch, 'drawImage')
-        .mockClear();
+      const setDrawPatternForwardSpy = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
       artist.visualization.drawForwardLineWithPattern_(100);
 
       expect(setDrawPatternForwardSpy).to.be.have.been.calledWith(
@@ -126,7 +129,7 @@ describe('Artist', () => {
         100
       );
 
-      setDrawPatternForwardSpy.mockRestore();
+      setDrawPatternForwardSpy.restore();
     });
   });
 
@@ -139,9 +142,10 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = jest
-        .spyOn(artist.visualization.ctxScratch, 'drawImage')
-        .mockClear();
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
@@ -157,7 +161,7 @@ describe('Artist', () => {
         100
       );
 
-      setStickerSize.mockRestore();
+      setStickerSize.restore();
     });
     it('draws a sticker when size is 0', () => {
       let artist = new Artist();
@@ -167,9 +171,10 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = jest
-        .spyOn(artist.visualization.ctxScratch, 'drawImage')
-        .mockClear();
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
@@ -185,7 +190,7 @@ describe('Artist', () => {
         0
       );
 
-      setStickerSize.mockRestore();
+      setStickerSize.restore();
     });
     it('draws a sticker when size is 50 px', () => {
       let artist = new Artist();
@@ -195,9 +200,10 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = jest
-        .spyOn(artist.visualization.ctxScratch, 'drawImage')
-        .mockClear();
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
@@ -213,7 +219,7 @@ describe('Artist', () => {
         50
       );
 
-      setStickerSize.mockRestore();
+      setStickerSize.restore();
     });
     it('draws a sticker when size is 200 px', () => {
       // Test condition when width < size && height < size
@@ -224,9 +230,10 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = jest
-        .spyOn(artist.visualization.ctxScratch, 'drawImage')
-        .mockClear();
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
@@ -242,7 +249,7 @@ describe('Artist', () => {
         100
       );
 
-      setStickerSize.mockRestore();
+      setStickerSize.restore();
     });
     it('draws a sticker when size is 30 px', () => {
       let artist = new Artist();
@@ -253,9 +260,10 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = jest
-        .spyOn(artist.visualization.ctxScratch, 'drawImage')
-        .mockClear();
+      const setStickerSize = sinon.spy(
+        artist.visualization.ctxScratch,
+        'drawImage'
+      );
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
@@ -271,7 +279,7 @@ describe('Artist', () => {
         12
       );
 
-      setStickerSize.mockRestore();
+      setStickerSize.restore();
     });
   });
 
@@ -285,15 +293,13 @@ describe('Artist', () => {
     it('can point to a specific direction', () => {
       const absoluteDirection = [0, 30, 45, 60, 180, 270];
       const blockId = 'block_id_4';
-      const pointToSpy = jest
-        .spyOn(artist.visualization, 'pointTo')
-        .mockClear();
+      const pointToSpy = sinon.spy(artist.visualization, 'pointTo');
 
       absoluteDirection.forEach(angle => {
         artist.step('PT', [angle, blockId]);
         expect(pointToSpy).to.be.have.been.calledWith(angle);
       });
-      pointToSpy.mockRestore();
+      pointToSpy.restore();
     });
 
     it('can point to a 50 degrees', () => {
@@ -310,15 +316,12 @@ describe('Artist', () => {
       let angle = 60;
       let blockId = 'block_id_8';
 
-      const setHeadingStub = jest
-        .spyOn(artist.visualization, 'setHeading')
-        .mockClear()
-        .mockImplementation();
+      const setHeadingStub = sinon.stub(artist.visualization, 'setHeading');
       artist.step('PT', [angle, blockId]);
 
       expect(setHeadingStub).to.be.have.been.calledOnce;
 
-      setHeadingStub.mockRestore();
+      setHeadingStub.restore();
     });
   });
 
@@ -368,10 +371,7 @@ describe('Artist', () => {
 
     it('executes upon reset', done => {
       const artist = new Artist();
-      const execute = jest
-        .spyOn(artist, 'execute')
-        .mockClear()
-        .mockImplementation();
+      const execute = sinon.stub(artist, 'execute');
       artist.injectStudioApp(studioApp);
       artist
         .init({
@@ -386,15 +386,12 @@ describe('Artist', () => {
       artist.resetButtonClick();
 
       expect(execute).to.have.been.called;
-      execute.mockRestore();
+      execute.restore();
     });
 
     it('executes upon code changes', done => {
       const artist = new Artist();
-      const execute = jest
-        .spyOn(Artist.prototype, 'execute')
-        .mockClear()
-        .mockImplementation();
+      const execute = sinon.stub(Artist.prototype, 'execute');
       const container = document.createElement('div');
       container.id = 'artistContainer';
       document.body.appendChild(container);
@@ -412,7 +409,7 @@ describe('Artist', () => {
       studioApp.runChangeHandlers();
 
       expect(execute).to.have.been.called;
-      execute.mockRestore();
+      execute.restore();
     });
   });
 
@@ -537,10 +534,7 @@ describe('Artist', () => {
 
   it('Does not alert for infinite loops', () => {
     const artist = new Artist();
-    const alertStub = jest
-      .spyOn(window, 'alert')
-      .mockClear()
-      .mockImplementation();
+    const alertStub = sinon.stub(window, 'alert');
 
     artist.evalCode('while(true) executionInfo.checkTimeout();', {
       ...DEFAULT_EXECUTION_INFO,
@@ -549,6 +543,6 @@ describe('Artist', () => {
 
     expect(alertStub).to.not.have.been.called;
 
-    alertStub.mockRestore();
+    alertStub.restore();
   });
 });
