@@ -104,11 +104,6 @@ const CurriculumCatalog = ({
       JSON.stringify(similarRecommenderResults)
     );
 
-    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_SHOWN, {
-      current_curriculum_offering: curriculumKey,
-      recommended_curriculum_offering: recommendedCurriculum.key,
-    });
-
     return recommendedCurriculum;
   };
 

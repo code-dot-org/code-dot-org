@@ -90,12 +90,26 @@ const ExpandedCurriculumCatalogCard = ({
     recommendedSimilarCurriculum.key
   );
 
+  analyticsReporter.sendEvent(EVENTS.RECOMMENDED_CATALOG_CURRICULUM_SHOWN, {
+    current_curriculum_offering: courseKey,
+    recommended_similar_curriculum_offering: recommendedSimilarCurriculum.key,
+    recommended_stretch_curriculum_offering: recommendedStretchCurriculum.key,
+  });
+
   const handleClickRecommendedSimilarCurriculum = () => {
     analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_CLICKED, {
       current_curriculum_offering: courseKey,
-      recommended_curriculum_offering: recommendedSimilarCurriculum.key,
+      recommended_similar_curriculum_offering: recommendedSimilarCurriculum.key,
     });
     setExpandedCardKey(recommendedSimilarCurriculum.key);
+  };
+
+  const handleClickRecommendedStretchCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_STRETCH_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_stretch_curriculum_offering: recommendedStretchCurriculum.key,
+    });
+    setExpandedCardKey(recommendedStretchCurriculum.key);
   };
 
   useEffect(() => {
@@ -325,9 +339,7 @@ const ExpandedCurriculumCatalogCard = ({
                   styleAsText
                   className={style.relatedCurriculaLink}
                   text={recommendedStretchCurriculum.display_name}
-                  onClick={() =>
-                    setExpandedCardKey(recommendedStretchCurriculum.key)
-                  }
+                  onClick={handleClickRecommendedStretchCurriculum}
                 />
               </div>
             </div>
