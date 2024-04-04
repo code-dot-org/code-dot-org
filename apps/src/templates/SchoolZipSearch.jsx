@@ -26,6 +26,12 @@ export default function SchoolZipSearch({fieldNames, zip}) {
       .then(json => {
         const schools = json.map(school => constructSchoolOption(school));
         setDropdownSchools(schools);
+      })
+      .catch(error => {
+        console.log(
+          'There was a problem with the fetch operation:',
+          error.message
+        );
       });
   }, [zip]);
 
