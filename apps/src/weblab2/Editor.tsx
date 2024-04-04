@@ -1,6 +1,7 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback} from 'react';
 
-import {useCDOIDEContext, editableFileType, prettify} from 'cdo-ide-poc';
+import {editableFileType} from '@cdoide/utils';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';
@@ -25,7 +26,6 @@ const Editor = () => {
   // for now we just key the component off of the file ID + an incrementing value that
   // hits every time the format button is pressed. That'll force a re-render and make it work.
   // let's swap this out with something better.
-  const [formats, setFormats] = useState(1);
 
   const onChange = useCallback(
     (value: string) => {
@@ -34,11 +34,10 @@ const Editor = () => {
     [file, saveFile]
   );
 
-  const format = async () => {
+  /* const format = async () => {
     const prettified = await prettify(file.contents, file.language);
     saveFile(file.id, prettified);
-    setFormats(f => f + 1);
-  };
+  };*/
 
   if (!editableFileType(file.language)) {
     return <div>Cannot currently edit files of type {file.language}</div>;
@@ -46,13 +45,13 @@ const Editor = () => {
 
   return (
     <div className="editor-container">
-      <button type="button" onClick={() => format()}>
+      {/*<button type="button" onClick={() => format()}>
         Format
-      </button>
+      </button> */}
       {file && (
         <CodeEditor
-          key={`${file.id}/${formats}`}
-          darkMode={false}
+          key={`${file.id}/${1}`}
+          darkMode={true}
           onCodeChange={onChange}
           startCode={file.contents}
           editorConfigExtensions={[codeMirrorLangMapping[file.language]]}
