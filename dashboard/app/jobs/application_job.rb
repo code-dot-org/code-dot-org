@@ -37,7 +37,6 @@ class ApplicationJob < ActiveJob::Base
 
   after_enqueue do |_job|
     job_count = Delayed::Job.count
-
     metrics = [
       {
         # Same metric as "bin/cron/report_activejob_metrics"
