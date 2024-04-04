@@ -17,6 +17,7 @@ import {
   BOOT_DRIVE_NAME,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import styles from './setup-instructions.module.scss';
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 // These are used for jumplinks between the
 // two sets of instructions in this component.
@@ -77,7 +78,8 @@ class ConnectionInstructions extends React.Component {
       : this.renderWebSerialConnectButton();
 
     if (!shouldUseWebSerial()) {
-      return null;
+      // return at least some text that says you need to use supported browser.
+      // return null;
     }
 
     return (
@@ -112,7 +114,14 @@ class ConnectionInstructions extends React.Component {
           openExternalLinksInNewTab={true}
         />
         {connectionState}
-        <CPExpressInstallInstructions />
+        <CollapsibleSection
+          title={applabI18n.makerSetupCPXInstallHeader()}
+          titleSemanticTag="h3"
+          titleVisualAppearance="heading-l"
+          titleStyle={styles.collapsibleTitleOverride}
+        >
+          <CPExpressInstallInstructions />
+        </CollapsibleSection>
       </div>
     );
   }
@@ -197,7 +206,7 @@ class CPExpressInstallInstructions extends React.Component {
   render() {
     return (
       <div id={installInstructionsId}>
-        <h2>{applabI18n.makerSetupCPXInstallHeader()}</h2>
+        {/* <h2>{applabI18n.makerSetupCPXInstallHeader()}</h2> */}
         <ol>
           <li>{this.renderStepOne()}</li>
           <li>{this.renderStepTwo()}</li>
