@@ -2180,9 +2180,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil ContactRollupsPardotMemory.find_by_email(teacher_email).marked_for_deletion_at
   end
 
-  private
-
-  def assert_logged(expected_message)
+  private def assert_logged(expected_message)
     assert_includes @log.string, expected_message
   end
 
@@ -2191,7 +2189,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Performs our account purge on the provided user instance, and then reloads
   # that instance so we can assert things about its final state.
   #
-  def purge_user(user)
+  private def purge_user(user)
     unpurged_users_before = User.with_deleted.where(purged_at: nil).count
 
     DeleteAccountsHelper.new(log: @log).purge_user(user)
@@ -2206,17 +2204,17 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user.reload
   end
 
-  def unsafe_purge_user(user)
+  private def unsafe_purge_user(user)
     DeleteAccountsHelper.new(log: @log, bypass_safety_constraints: true).purge_user(user)
 
     user.reload
   end
 
-  def purge_all_accounts_with_email(email)
+  private def purge_all_accounts_with_email(email)
     DeleteAccountsHelper.new(log: @log).purge_all_accounts_with_email(email)
   end
 
-  def assert_removes_field_from_forms(field, expect: :nil)
+  private def assert_removes_field_from_forms(field, expect: :nil)
     user = create :teacher
     with_form(user: user) do |form_id|
       initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
@@ -2245,7 +2243,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  def assert_removes_field_from_form_geos(field)
+  private def assert_removes_field_from_form_geos(field)
     user = create :teacher
     with_form_geo(user) do |form_geo_id|
       initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
@@ -2268,7 +2266,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # @param [String] email - An email for the form submitter.
   # @yields [Integer] The id for the created form.
   #
-  def with_form(user: nil, email: nil)
+  private def with_form(user: nil, email: nil)
     use_name = user&.name || 'Fake Name'
     use_email = user ? user.email : email
     form_id = PEGASUS_DB[:forms].insert(
@@ -2303,7 +2301,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # @param [User] user to create an associated form.
   # @yields [Integer] the id of the form_geos row.
   #
-  def with_form_geo(user)
+  private def with_form_geo(user)
     with_form(user: user) do |form_id|
       form_geo_id = PEGASUS_DB[:form_geos].insert(
         {

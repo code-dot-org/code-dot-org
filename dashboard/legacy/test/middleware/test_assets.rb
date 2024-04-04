@@ -517,30 +517,27 @@ class AssetsTest < FilesApiTestBase
     assert_newrelic_metrics []
   end
 
-  # Methods below this line are test utilities, not actual tests
-  private
-
-  def post_asset(api, uploaded_file)
+  private def post_asset(api, uploaded_file)
     body = {files: [uploaded_file]}
     headers = {'CONTENT_TYPE' => 'multipart/form-data'}
     api.post_object '', body, headers
   end
 
-  def post_asset_file(api, filename, file_contents, content_type)
+  private def post_asset_file(api, filename, file_contents, content_type)
     file, tmp_filename = api.create_temp_file(filename, file_contents, content_type)
     response = post_asset(api, file)
     [response, tmp_filename]
   end
 
-  def delete_all_assets(bucket)
+  private def delete_all_assets(bucket)
     delete_all_objects(CDO.assets_s3_bucket, bucket)
   end
 
-  def copy_all(src_channel_id, dest_channel_id)
+  private def copy_all(src_channel_id, dest_channel_id)
     AssetBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
   end
 
-  def assert_assets_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)
+  private def assert_assets_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)
     # Filter out metrics from other test cases.
     metrics = NewRelic::Agent.get_metrics %r{^Custom/FilesApi}
     length_msg ||= "custom metrics recorded: #{index}"
@@ -550,7 +547,7 @@ class AssetsTest < FilesApiTestBase
     assert_equal expected_value, last_metric.last, "#{metric_type} metric value"
   end
 
-  def assert_assets_custom_event(index, event_type)
+  private def assert_assets_custom_event(index, event_type)
     # Filter out events from other test cases.
     events = NewRelic::Agent.get_events %r{^FilesApi}
     assert_equal index, events.length, "custom events recorded: #{index}"

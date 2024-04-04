@@ -126,15 +126,13 @@ class LibrariesTest < FilesApiTestBase
     assert_equal 400, last_response.status
   end
 
-  private
-
   #
   # Upload a new version of an library.
   # @param [String] filename of the library
   # @param [String] body of the library
   # @return [String] S3 version id of the newly uploaded library
   #
-  def upload(filename, body)
+  private def upload(filename, body)
     @api.put_object(filename, body, {'CONTENT_TYPE' => 'application/json'})
     assert successful?
     JSON.parse(last_response.body)['versionId']
@@ -145,12 +143,12 @@ class LibrariesTest < FilesApiTestBase
   # on the end of its history.
   # @param [String] filename of the library
   #
-  def soft_delete(filename)
+  private def soft_delete(filename)
     @api.delete_object(filename)
     assert successful?
   end
 
-  def delete_all_library_versions(filename)
+  private def delete_all_library_versions(filename)
     delete_all_versions(CDO.libraries_s3_bucket, "libraries_test/1/1/#{filename}")
   end
 end

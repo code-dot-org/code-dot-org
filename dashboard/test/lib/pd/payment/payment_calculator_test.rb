@@ -101,9 +101,7 @@ module Pd::Payment
       assert_equal 0, PaymentCalculator.instance.calculate(@csp_workshop)
     end
 
-    private
-
-    def create_passed_levels(enrollments)
+    private def create_passed_levels(enrollments)
       enrollments.map(&:user).each do |user|
         PaymentCalculator::MINIMUM_PUZZLES_FOR_CSF_QUALIFICATION.times do
           create(:user_level, user: user, best_result: ActivityConstants::MINIMUM_PASS_RESULT)

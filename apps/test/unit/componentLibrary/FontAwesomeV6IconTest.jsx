@@ -1,9 +1,9 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
-
-import {expect} from '../../util/reconfiguredChai';
+import React from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - FontAwesomeV6Icon', () => {
   it('FontAwesomeV6Icon - renders with correct classNames and title', () => {
