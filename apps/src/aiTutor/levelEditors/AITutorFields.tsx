@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import moduleStyles from '@cdo/apps/lab2/levelEditors/aiCustomizations/edit-ai-customizations.module.scss';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import {generalChatSystemPrompt} from '../constants';
 
 interface AITutorFieldsProps {
   isAvailable: boolean;
@@ -57,7 +58,7 @@ const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
                 id="levelPrompt"
                 value={levelSpecificPrompt || ''}
                 className={moduleStyles.textarea}
-                placeholder="Enter a prompt to be added with the default AI Tutor system prompt on this level"
+                placeholder={`Enter a prompt specific to this level to be added with the default AI Tutor system prompt:\n${generalChatSystemPrompt}`}
                 rows={3}
                 onChange={e => {
                   setlevelSpecificPrompt(e.target.value);
