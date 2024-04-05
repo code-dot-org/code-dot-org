@@ -19,6 +19,7 @@ table.selfPacedProgressTable {
   margin-block-start: 0.25rem;
 
   .progressBarFill {
+    display: block;
     background-color: $light_primary_500;
     height: 0.5rem;
     border-start-start-radius: 1rem;

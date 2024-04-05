@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -11,25 +11,6 @@ import {
 import styles from './selfPacedProgressTable.module.scss';
 // Generic table styles that are shared with LandingPage.jsx
 import './tableStyles.scss';
-
-const ProgressBar = ({percentCompleted}) => {
-  const [progressWidth, setProgressWidth] = useState(0);
-  useEffect(() => {
-    setProgressWidth(percentCompleted);
-  }, [percentCompleted]);
-  return (
-    <div className={styles.progressBar}>
-      <div
-        className={styles.progressBarFill}
-        style={{width: `${progressWidth}%`}}
-      />
-    </div>
-  );
-};
-
-ProgressBar.propTypes = {
-  percentCompleted: PropTypes.number.isRequired,
-};
 
 const CourseRow = ({
   name,
@@ -57,7 +38,13 @@ const CourseRow = ({
           <BodyThreeText>
             {percent_completed}% {i18n.selfPacedPlCompleted()}
           </BodyThreeText>
-          <ProgressBar percentCompleted={percent_completed} />
+          {/* Progress bar */}
+          <div className={styles.progressBar}>
+            <span
+              className={styles.progressBarFill}
+              style={{width: `${percent_completed}%`}}
+            />
+          </div>
         </div>
       )}
     </td>
