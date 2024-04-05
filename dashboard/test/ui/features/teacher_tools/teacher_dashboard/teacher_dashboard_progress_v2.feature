@@ -32,3 +32,4 @@ Scenario: Teacher can open and close Icon Key and details
   And I wait until element "h3:contains(Progress Tracking Icon Key)" is visible
   And I click selector "#ui-close-dialog"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
+  
