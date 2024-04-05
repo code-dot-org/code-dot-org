@@ -76,30 +76,30 @@ class ApplicationJob < ActiveJob::Base
     Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 
-  after_perform do |job|
-    perform_complete_at = Time.now
-    execution_time = perform_complete_at - @perform_started_at
-    total_time = perform_complete_at - @enqueued_or_started_at
+  # after_perform do |job|
+  #   perform_complete_at = Time.now
+  #   execution_time = perform_complete_at - @perform_started_at
+  #   total_time = perform_complete_at - @enqueued_or_started_at
 
-    metrics = [
-      {
-        metric_name: 'ExecutionTime',
-        value: execution_time,
-        unit: 'Seconds',
-        timestamp: Time.now,
-        dimensions: job.class.common_dimensions,
-      },
-      {
-        metric_name: 'TotalTime',
-        value: total_time,
-        unit: 'Seconds',
-        timestamp: Time.now,
-        dimensions: job.class.common_dimensions,
-      }
-    ]
+  #   metrics = [
+  #     {
+  #       metric_name: 'ExecutionTime',
+  #       value: execution_time,
+  #       unit: 'Seconds',
+  #       timestamp: Time.now,
+  #       dimensions: job.class.common_dimensions,
+  #     },
+  #     {
+  #       metric_name: 'TotalTime',
+  #       value: total_time,
+  #       unit: 'Seconds',
+  #       timestamp: Time.now,
+  #       dimensions: job.class.common_dimensions,
+  #     }
+  #   ]
 
-    Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
-  rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
-  end
+  #   Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
+  # rescue => exception
+  #   Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+  # end
 end
