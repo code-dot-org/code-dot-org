@@ -223,6 +223,7 @@ ThickAndThinIconDropdowns.args = {
         icon: {iconName: 'check', iconStyle: 'solid'},
       },
       labelText: 'Thin Dropdown',
+      labelType: 'thin',
       onChange: args => null,
       size: 'm',
       disabled: false,
