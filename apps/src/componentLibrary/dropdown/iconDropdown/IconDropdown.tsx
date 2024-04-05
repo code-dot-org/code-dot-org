@@ -37,6 +37,8 @@ export interface IconDropdownProps {
   /** IconDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
+  /** IconDropdown label style type*/
+  labelType?: 'thick' | 'thin';
   /** IconDropdown options */
   options: IconDropdownOption[];
   /** IconDropdown checked options */
@@ -48,6 +50,7 @@ export interface IconDropdownProps {
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
   labelText,
+  labelType,
   options,
   selectedOption = {},
   onChange,
@@ -70,6 +73,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
     <CustomDropdown
       name={name}
       labelText={labelText}
+      labelType={labelType}
       disabled={disabled}
       color={color}
       icon={selectedOption?.icon}

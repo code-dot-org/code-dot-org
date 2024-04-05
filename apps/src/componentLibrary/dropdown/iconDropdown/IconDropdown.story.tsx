@@ -175,6 +175,61 @@ WithDisabledOptionIconDropdown.args = {
   size: 'm',
 };
 
+export const ThickAndThinIconDropdowns = MultipleTemplate.bind({});
+ThickAndThinIconDropdowns.args = {
+  components: [
+    {
+      name: 'thick-iconDropdown',
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      labelText: 'Thick Dropdown',
+      labelType: 'thick',
+      onChange: args => null,
+      size: 'm',
+      disabled: false,
+    },
+    {
+      name: 'thin-iconDropdown',
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      labelText: 'Thin Dropdown',
+      onChange: args => null,
+      size: 'm',
+      disabled: false,
+    },
+  ],
+};
+
 export const GroupOfIconDropdownColors = MultipleTemplate.bind({});
 GroupOfIconDropdownColors.args = {
   components: [

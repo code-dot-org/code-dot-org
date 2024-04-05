@@ -189,6 +189,42 @@ WithDisabledOptionCheckboxDropdown.args = {
   size: 'm',
 };
 
+export const ThickAndThinCheckboxDropdowns = MultipleTemplate.bind({});
+ThickAndThinCheckboxDropdowns.args = {
+  components: [
+    {
+      name: 'thick-dropdown',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Thick Dropdown',
+      labelType: 'thick',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      disabled: false,
+    },
+    {
+      name: 'thin-dropdown',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Thin Dropdown',
+      labelType: 'thin',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      disabled: false,
+    },
+  ],
+};
+
 export const GroupOfCheckboxDropdownColors = MultipleTemplate.bind({});
 GroupOfCheckboxDropdownColors.args = {
   components: [
