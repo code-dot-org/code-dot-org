@@ -54,15 +54,16 @@ describe('TeacherApplication', () => {
       ).to.deep.equal({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
-      sinon
-        .stub(window.sessionStorage, 'getItem')
-        .withArgs('TeacherApplication')
-        .returns(JSON.stringify({data: {school: '25'}}));
+      sessionStorage.setItem(
+        'TeacherApplication',
+        JSON.stringify({data: {school: '25'}})
+      );
+
       teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal(parsedData);
-      window.sessionStorage.getItem.restore();
+      sessionStorage.removeItem('TeacherApplication');
     });
     it('includes saved form data even if partial saving is not allowed', () => {
       teacherApplication.mergeProps({

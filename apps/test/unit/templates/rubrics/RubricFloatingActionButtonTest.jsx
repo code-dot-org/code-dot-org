@@ -56,8 +56,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
     });
 
     afterEach(() => {
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(null);
-      sessionStorage.getItem.restore();
+      sessionStorage.removeItem('RubricFabOpenStateKey');
     });
 
     it('renders pulse animation when session storage is empty', () => {
@@ -90,7 +89,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
 
     it('sends open on page load event when open state is true in session storage', () => {
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(true);
+      sessionStorage.setItem('RubricFabOpenStateKey', 'true');
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
@@ -112,7 +111,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
 
     it('does not render pulse animation when open state is present in session storage', () => {
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(false);
+      sessionStorage.setItem('RubricFabOpenStateKey', 'false');
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
