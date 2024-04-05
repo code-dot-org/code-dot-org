@@ -4,7 +4,7 @@ import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
-import {rubricShape} from './rubricShapes';
+import {reportingDataShape, rubricShape} from './rubricShapes';
 import {InfoAlert} from './RubricContent';
 import {TAB_NAMES} from './rubricHelpers';
 
@@ -18,6 +18,7 @@ export default function RubricTabButtons({
   refreshAiEvaluations,
   rubric,
   studentName,
+  reportingData,
 }) {
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
 
@@ -74,6 +75,7 @@ export default function RubricTabButtons({
               studentName={studentName}
               status={status}
               setStatus={setStatus}
+              reportingData={reportingData}
             />
           </div>
         )}
@@ -102,4 +104,5 @@ RubricTabButtons.propTypes = {
   refreshAiEvaluations: PropTypes.func,
   rubric: rubricShape.isRequired,
   studentName: PropTypes.string,
+  reportingData: reportingDataShape,
 };

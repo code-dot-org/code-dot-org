@@ -332,7 +332,7 @@ export default function LearningGoals({
   };
 
   const aiEvalInfo = useMemo(() => {
-    if (!!aiEvaluations) {
+    if (!!aiEvaluations && currentLearningGoal < learningGoals.length) {
       const aiInfo = aiEvaluations.find(
         item => item.learning_goal_id === learningGoals[currentLearningGoal].id
       );
@@ -546,17 +546,17 @@ export default function LearningGoals({
       // Clear feedback (without sending it)
       setAiFeedback(-1);
 
-      // Annotate the lines based on the AI observation
-      clearAnnotations();
-      if (currentIndex !== learningGoals.length) {
-        if (!isStudent) {
-          const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
-          analyticsReporter.sendEvent(eventName, {
-            ...(reportingData || {}),
-            learningGoalKey: learningGoals[currentIndex].key,
-            learningGoal: learningGoals[currentIndex].learningGoal,
-          });
-        }
+    // Annotate the lines based on the AI observation
+    clearAnnotations();
+    if (currentIndex !== learningGoals.length) {
+      if (!isStudent) {
+        const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
+        analyticsReporter.sendEvent(eventName, {
+          ...(reportingData || {}),
+          learningGoalKey: learningGoals[currentIndex].key,
+          learningGoal: learningGoals[currentIndex].learningGoal,
+          studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+        });
       }
     }
   };
