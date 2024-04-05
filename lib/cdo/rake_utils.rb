@@ -340,12 +340,10 @@ module RakeUtils
   # threaded_each provide a simple way to process an array of elements using multiple threads.
   # create_threads is a helper for threaded_each.
   #
-  def self.create_threads(count)
+  def self.create_threads(count, &block)
     [].tap do |threads|
       count.times do
-        threads << Thread.new do
-          yield
-        end
+        threads << Thread.new(&block)
       end
     end
   end

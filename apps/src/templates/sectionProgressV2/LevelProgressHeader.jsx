@@ -54,8 +54,10 @@ export default function ExpandedProgressColumnHeader({
             scope="col"
             id={getLevelColumnHeaderId(sublevel.id, level.id)}
           >
-            <div className={styles.expandedHeaderLevelCellLevelNumber}>
-              {sublevel.bubbleText}
+            <div className={styles.expandedHeaderExpandedLevelCellInner}>
+              <div className={styles.expandedHeaderLevelCellLevelNumber}>
+                {sublevel.bubbleText}
+              </div>
             </div>
           </th>
         ))}

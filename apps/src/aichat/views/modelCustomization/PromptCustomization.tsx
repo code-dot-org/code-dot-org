@@ -1,8 +1,10 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
+import classNames from 'classnames';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
 import {
   setAiCustomizationProperty,
   updateAiCustomization,
@@ -14,9 +16,15 @@ import {
   SET_TEMPERATURE_STEP,
 } from './constants';
 import {isVisible, isDisabled} from './utils';
+import CompareModelsDialog from './CompareModelsDialog';
 
 const PromptCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
+
+  const [chosenModel, setChosenModel] = useState<string>('llama2');
+  const [isShowingModelDialog, setIsShowingModelDialog] =
+    useState<boolean>(false);
+
   const {botName, temperature, systemPrompt} = useAppSelector(
     state => state.aichat.fieldVisibilities
   );
@@ -32,9 +40,43 @@ const PromptCustomization: React.FunctionComponent = () => {
     [dispatch]
   );
 
+  const renderChooseAndCompareModels = () => {
+    return (
+      <div
+        className={classNames(
+          styles.inputContainer,
+          styles.fullWidthDropdownContainer
+        )}
+      >
+        <SimpleDropdown
+          labelText="Selected model:"
+          onChange={e => setChosenModel(e.target.value)}
+          items={[
+            {value: 'llama2', text: 'LLama 2'},
+            {value: 'gpt', text: 'ChatGPT'},
+          ]}
+          selectedValue={chosenModel}
+          name="model"
+          size="s"
+          className={styles.selectedModelDropdown}
+        />
+        <Button
+          text="Compare Models"
+          onClick={() => setIsShowingModelDialog(true)}
+          type="secondary"
+          className={styles.updateButton}
+        />
+        {isShowingModelDialog && (
+          <CompareModelsDialog onClose={() => setIsShowingModelDialog(false)} />
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
+        {renderChooseAndCompareModels()}
         {isVisible(botName) && (
           <div className={styles.inputContainer}>
             <label htmlFor="chatbot-name">

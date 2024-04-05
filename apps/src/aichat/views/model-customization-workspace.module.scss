@@ -47,6 +47,10 @@
   padding: 10px;
 }
 
+.selectedModelDropdown {
+  @extend %full-width;
+}
+
 .updateButton {
   width: 100%;
 }
