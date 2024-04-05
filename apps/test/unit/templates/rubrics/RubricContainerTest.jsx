@@ -532,7 +532,7 @@ describe('RubricContainer', () => {
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_error());
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
   });
 
   it('shows PII error message for status 1001', async () => {
