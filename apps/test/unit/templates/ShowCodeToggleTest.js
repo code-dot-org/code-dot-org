@@ -3,7 +3,6 @@ import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
 
-import project from '@cdo/apps/code-studio/initApp/project';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
@@ -18,6 +17,11 @@ import * as utils from '@cdo/apps/utils';
 
 import {expect} from '../../util/reconfiguredChai';
 
+jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
+  ...jest.requireActual('@cdo/apps/code-studio/initApp/project'),
+  getCurrentId: jest.fn().mockReturnValue('some-project-id'),
+}));
+
 describe('The ShowCodeToggle component', () => {
   let config, toggle, containerDiv, codeWorkspaceDiv, server, editor;
 
@@ -25,14 +29,12 @@ describe('The ShowCodeToggle component', () => {
     server = sinon.fakeServerWithClock.create();
     sinon.spy($, 'post');
     sinon.spy($, 'getJSON');
-    sinon.stub(project, 'getCurrentId').returns('some-project-id');
     sinon.stub(utils, 'fireResizeEvent'); // Called by StudioApp.js
   });
   afterEach(() => {
     server.restore();
     $.post.restore();
     $.getJSON.restore();
-    project.getCurrentId.restore();
     utils.fireResizeEvent.restore();
   });
 
