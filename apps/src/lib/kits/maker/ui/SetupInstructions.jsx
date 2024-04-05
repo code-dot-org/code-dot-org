@@ -73,7 +73,7 @@ class ConnectionInstructions extends React.Component {
       : this.renderWebSerialConnectButton();
 
     if (!shouldUseWebSerial()) {
-      // return <p>{applabI18n.makerSetupWebSerialNotSupported()}</p>;
+      return <p>{applabI18n.makerSetupWebSerialNotSupported()}</p>;
     }
 
     return (
@@ -93,7 +93,7 @@ class ConnectionInstructions extends React.Component {
               <li>
                 {applabI18n.makerSetupCpNoCompatibleDevices()}
                 <CollapsibleSection
-                  title="Additional instructions for Circuit Playground Express"
+                  title={applabI18n.makerSetupCpAdditionalInstructions()}
                   titleVisualAppearance="body-four"
                   collapsedIcon="caret-right"
                   expandedIcon="caret-down"

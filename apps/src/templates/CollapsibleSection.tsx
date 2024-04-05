@@ -79,8 +79,6 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
           </Typography>
         </button>
       </div>
-      {/* The tradeoff for the nice animation here is that everything gets loaded even if collapsed. 
-      We might not want that on every usage of this? I think it's pretty neat tho.? */}
       <div
         ref={contentRef}
         className={moduleStyles.contentParent}

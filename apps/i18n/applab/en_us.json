@@ -513,6 +513,7 @@
   "makerSetupWebSerialWindowConnect": "A window should pop up with a row that includes \"Circuit Playground\" or \"micro:bit\". Select that row, then click \"Connect\".",
   "makerSetupWebSerialNotSupported": "WebSerial port is not available in the current browser. To continue, try loading this site from a computer or browser that supports WebSerial.",
   "makerSetupCpNoCompatibleDevices":"Connecting a Circuit Playground Express and seeing \"No compatible devices found\"?",
+  "makerSetupCpAdditionalInstructions": "Additional instructions for Circuit Playground Express",
   "makerSetupWebSerialSuccessfulConnection": "You should see several green checkmarks below. When full connected, the Circuit Playground will display a sequence of green lights and emit a series of beeps, and the micro:bit will show a short animation.",
   "makerSetupWebSerialSupportArticle": "If you have any issues, please refer to our ['Connecting the Circuit Playground or micro:bit to Your Browser: A Step-by-Step Guide' Support Article](https://support.code.org/hc/en-us/articles/9953258694669).",
   "makerSetupWindows7Drivers": "(Windows 7) Install the [Adafruit Windows drivers](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only).",
