@@ -51,7 +51,7 @@ const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
         />
         {aiTutorAvailable && (
           <div className={moduleStyles.fieldRow}>
-            <div className={moduleStyles.fieldValue}>
+            <div className={moduleStyles['field-value']}>
               <label htmlFor="levelPrompt">Level-Specific Prompt</label>
               <textarea
                 id="levelPrompt"
