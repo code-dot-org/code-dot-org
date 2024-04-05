@@ -78,11 +78,12 @@ export const askAITutor = createAsyncThunk(
       systemPrompt = generalChatSystemPrompt;
     }
 
-    const instructions = instructionsState.instructions.longInstructions;
+    const levelInstructions = instructionsState.instructions.longInstructions;
 
-    if (instructions.length > 0) {
+    if (levelInstructions.length > 0) {
       systemPrompt +=
-        '\n Here are the student instructions for this level: ' + instructions;
+        '\n Here are the student instructions for this level: ' +
+        levelInstructions;
     }
 
     const storedMessages = state.aiTutor.chatMessages;
