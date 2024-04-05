@@ -39,39 +39,27 @@ export default function SchoolZipSearch({fieldNames, zip}) {
       });
   }, [zip]);
 
+  const sendAnalyticsEvent = (eventName, data) => {
+    analyticsReporter.sendEvent(eventName, data, PLATFORMS.BOTH);
+  };
+
   const onSchoolChange = e => {
     const schoolId = e.target.value;
     let ncesId;
     if (schoolId === NO_SCHOOL_SETTING) {
       ncesId = '';
-      analyticsReporter.sendEvent(
-        EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-        {},
-        PLATFORMS.BOTH
-      );
+      sendAnalyticsEvent(EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED, {});
     } else if (schoolId === SELECT_A_SCHOOL) {
       ncesId = '';
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_LIST_OPENED,
-        {},
-        PLATFORMS.BOTH
-      );
+      // sendAnalyticsEvent(EVENTS.SCHOOL_LIST_OPENED, {});
     } else if (schoolId === CLICK_TO_ADD) {
       ncesId = '';
       setInputManually(true);
-      analyticsReporter.sendEvent(
-        EVENTS.ADD_MANUALLY_CLICKED,
-        {},
-        PLATFORMS.BOTH
-      );
+      sendAnalyticsEvent(EVENTS.ADD_MANUALLY_CLICKED, {});
     } else {
       // In the case the value given is a real school ID, use that
       ncesId = schoolId;
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_SELECTED_FROM_LIST,
-        {ncesId: ncesId},
-        PLATFORMS.BOTH
-      );
+      sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {ncesId: ncesId});
     }
     setSelectedSchoolNcesId(ncesId);
   };
