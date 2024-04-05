@@ -18,8 +18,8 @@ Scenario: Signed out user in English should see 7 header links
   And element "#header-about" contains text "About"
   And I see "#header-incubator"
   And element "#header-incubator" contains text "Incubator"
-  And I see "#header-projects"
-  And element "#header-projects" contains text "Projects"
+  And I see "#header-districts"
+  And element "#header-districts" contains text "Districts"
 
 Scenario: Student in English should see 4 header links
   Given I create a student named "Sally Student" and go home
@@ -61,8 +61,8 @@ Scenario: Signed out user in Spanish should see 7 header links
   And element "#header-stats" has "es" text from key "nav.header.stats"
   And I see "#header-help"
   And element "#header-help" has "es" text from key "nav.header.help_us"
-  And I see "#header-projects"
-  And element "#header-projects" has "es" text from key "nav.header.project_gallery"
+  And I see "#header-districts"
+  And element "#header-districts" has "es" text from key "nav.header.districts"
   And I see "#header-incubator"
   And element "#header-incubator" has "es" text from key "nav.header.incubator"
   And I see "#header-about"

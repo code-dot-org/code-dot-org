@@ -22,9 +22,7 @@ module I18n
             I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
-          private
-
-          def restore(locale, crowdin_file_path)
+          private def restore(locale, crowdin_file_path)
             return unless File.exist?(I18N_BACKUP_FILE_PATH)
 
             malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(locale)
@@ -41,7 +39,7 @@ module I18n
             malformed_i18n_reporter.report
           end
 
-          def distribute_localization(locale, crowdin_file_path)
+          private def distribute_localization(locale, crowdin_file_path)
             target_i18n_file_path = CDO.dir("dashboard/config/locales/blocks.#{locale}.yml")
             I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
           end

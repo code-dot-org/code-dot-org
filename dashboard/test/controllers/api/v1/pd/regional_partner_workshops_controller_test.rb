@@ -159,9 +159,7 @@ module Api::V1::Pd
       assert_equal expected, JSON.parse(response.body)
     end
 
-    private
-
-    def workshop_in_index_results(expected_workshop)
+    private def workshop_in_index_results(expected_workshop)
       JSON.parse(response.body).any? do |partner|
         partner['workshops'].any? do |workshop|
           workshop['id'] == expected_workshop.id
@@ -169,7 +167,7 @@ module Api::V1::Pd
       end
     end
 
-    def expected_partner_workshops_all
+    private def expected_partner_workshops_all
       {
         id: @regional_partner.id,
         name: @regional_partner.name,
@@ -198,7 +196,7 @@ module Api::V1::Pd
       }
     end
 
-    def expected_partner_workshops_csd
+    private def expected_partner_workshops_csd
       {
         id: @regional_partner.id,
         name: @regional_partner.name,
@@ -219,7 +217,7 @@ module Api::V1::Pd
       }
     end
 
-    def expected_partner_no_workshops
+    private def expected_partner_no_workshops
       {
         id: @regional_partner.id,
         name: @regional_partner.name,

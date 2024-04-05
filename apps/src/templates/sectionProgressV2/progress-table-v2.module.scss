@@ -42,7 +42,11 @@ $level-cell-width: 52;
 .gridBox {
   border-top: 1px solid $neutral_dark40;
   border-left: 1px solid $neutral_dark40;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 0;
   background-color: white;
+  font-size: 16px;
 
   &Student {
     height: 47px;
@@ -69,10 +73,9 @@ $level-cell-width: 52;
   
   &Level {
     width: $level-cell-width + px;
-    text-align: center;
     height: 47px;
-    line-height: 47px !important;
     color: inherit !important;
+    padding: 0;
   }
 }
 
@@ -200,7 +203,7 @@ min-width:47px;
       flex-direction: row;
       width: fit-content;
 
-      & .expandedHeaderChild:last-child {
+      & .expandedHeaderLevelCell:last-child {
         border-right: 1px solid $neutral_dark40;
       }
     }
@@ -216,6 +219,8 @@ min-width:47px;
       justify-content: space-evenly;
       overflow: hidden;
       flex-wrap: nowrap;
+      color: inherit;
+      background-color: inherit;
 
       &LevelNumber {
         margin-top: 0.0625em;
@@ -226,26 +231,27 @@ min-width:47px;
       }
     }
 
-    &ExpandedLevel {
-      background-color: $light_primary_500;
-      color: $light_white;
-      display: flex;
-      flex-direction: row;
-      border-left: 1px solid $neutral_dark40;
+    &ExpandedLevelCell {
+      border: 0;
+      // Invisible border to match sizing of table
       border-top: 1px solid $neutral_dark40;
+      color: $light_white;
+      background-color: $light_primary_500;
+      width: fit-content;
+
+      &Inner {
+        border-left: 1px solid transparent;
+        width: 52px;
+      }
 
       & .assessmentLevelIcon {
         color: $light_white;
       }
-
-      .expandedHeaderExpandedLevelCell:first-child {
-        border-left: 0;
-      }
     }
 
-    &ExpandedLevelCell {
-      // Invisible border to match sizing of table
-      border-left: 1px solid $light_primary_500;
+    &ExpandedLevelCellFirst { 
+      border-left: 1px solid $neutral_dark40;
+      width: 52px;
     }
   }
   &Column {
@@ -260,7 +266,7 @@ min-width:47px;
 
   &Table {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-bottom: 1px solid $neutral_dark40;
     border-right: 1px solid $neutral_dark40;
     width: fit-content;
@@ -268,7 +274,19 @@ min-width:47px;
 
   &LevelColumn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  &LevelLink {
+    height: 100%;
+    width: 100%;
+    text-align: center; 
+    line-height: 47px !important;
+  }
+
+  &LevelEmpty {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -297,3 +315,4 @@ min-width:47px;
   font-size: 12px;
   color: black;
 }
+

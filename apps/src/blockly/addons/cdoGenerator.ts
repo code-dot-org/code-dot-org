@@ -77,4 +77,15 @@ export default function initializeGenerator(
   blocklyWrapper.Generator.prefixLines = function (text, prefix) {
     return blocklyWrapper.JavaScript.prefixLines(text, prefix);
   };
+
+  blocklyWrapper.Generator.xmlToCode = function (
+    name: string,
+    domBlocks: Element
+  ) {
+    const blocksToGenerate = blocklyWrapper.Generator.xmlToBlocks(
+      name,
+      domBlocks
+    );
+    return blocklyWrapper.Generator.blocksToCode(name, blocksToGenerate);
+  };
 }

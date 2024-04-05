@@ -209,10 +209,12 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
               layout: e.target.value as PanelLayout,
             })
           }
-          selectedValue={panel.layout}
+          selectedValue={panel.layout || 'text-top-right'}
           items={[
+            {value: 'text-top-left', text: 'Top Left'},
             {value: 'text-top-right', text: 'Top Right'},
             {value: 'text-bottom-left', text: 'Bottom Left'},
+            {value: 'text-bottom-right', text: 'Bottom Right'},
           ]}
         />
       </div>

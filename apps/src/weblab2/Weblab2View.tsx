@@ -4,9 +4,10 @@ import './styles/Weblab2View.css';
 
 import {Config} from './Config';
 
-import {CDOIDE, ConfigType, ProjectType} from 'cdo-ide-poc';
+import {CDOIDE} from '@cdoide/CDOIDE';
+import {ConfigType, ProjectType} from '@cdoide/types';
 
-//import CDOEditor from './Editor';
+import CDOEditor from './Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -15,8 +16,6 @@ const instructions = `Add html pages and preview them in the right pane.
 
 Add css pages (and link them to your html).
 
-Add javascript files (ending in .js) and execute javascript code in the right pane.
-
 Use the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)`;
 
 const defaultConfig: ConfigType = {
@@ -24,10 +23,8 @@ const defaultConfig: ConfigType = {
   // showLeftNav: false,
   // showEditor: false,
   // showPreview: false,
-  // showRunBar: true,
-  // showDebug: true,
   activeLeftNav: 'Files',
-  //EditorComponent: CDOEditor,
+  EditorComponent: CDOEditor,
   // editableFileTypes: ["html"],
   // previewFileTypes: ["html"],
   leftNav: [
@@ -44,14 +41,23 @@ const defaultConfig: ConfigType = {
       component: 'Search',
     },
   ],
-  sideBar: ['fa-circle-question', 'fa-folder'],
+  sideBar: [
+    {
+      icon: 'fa-circle-question',
+      label: 'Help',
+      action: () => window.alert('Help is not currently implemented'),
+    },
+    {
+      icon: 'fa-folder',
+      label: 'Files',
+      action: () => window.alert('You are already on the file browser'),
+    },
+  ],
   instructions,
-  //editableFileTypes: ["html", "json", "js", "css"],
-  //previewFileTypes: ["json", "html", "js"],
+  //editableFileTypes: ["html", "css"],
+  //previewFileTypes: ["html"],
   /* PreviewComponents: {
     html: () => <div>I am previewing HTML</div>,
-    js: () => <div>I am previewing JavaSript</div>,
-    json: () => <div>I am previewing JSON</div>,
   }, */
   //blankEmptyEditor: true,
   //EmptyEditorComponent: () => <div>Nothing is open.</div>,
@@ -67,24 +73,7 @@ const defaultProject: ProjectType = {
     '5': {id: '5', name: 'f2', parentId: '1'},
     '6': {id: '6', name: 'b1', parentId: '2'},
   },
-  /*files: {
-    "1": {
-      id: "1",
-      name: "index.html",
-      language: "html",
-      contents: `<!DOCTYPE html><html>
-    <link rel="stylesheet" href="styles.css"/>
-    <body>
-      Content goes here!
-      <div class="foo">Foo class!</div>
-    </body>
-  </html>
-  `,
-      open: true,
-      active: true,
-      folderId: "0",
-    },
-  },*/
+
   files: {
     '1': {
       id: '1',
@@ -145,14 +134,6 @@ const defaultProject: ProjectType = {
         '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
       open: false,
       folderId: '1',
-    },
-    '7': {
-      id: '7',
-      name: 'some-javascript.js',
-      language: 'js',
-      contents: 'const a = 5; const b = 7; console.log(a + b);',
-      open: false,
-      folderId: '0',
     },
   },
 };

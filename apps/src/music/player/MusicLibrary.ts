@@ -68,7 +68,7 @@ export default class MusicLibrary {
   // Determine the available sound types available in this library.
   // Only currently-allowed sounds from packs are included.
   private determineAvailableSoundTypes() {
-    const folders = this.getAllowedSounds(undefined);
+    const folders = this.getAllowedSounds(undefined, false);
 
     folders.forEach(folder => {
       folder.sounds.forEach(sound => {
@@ -147,7 +147,7 @@ export default class MusicLibrary {
     folderType: string | undefined,
     folderId: string
   ): SoundFolder | null {
-    const folders = this.getAllowedSounds(folderType);
+    const folders = this.getAllowedSounds(folderType, false);
     return folders.find(folder => folder.id === folderId) || null;
   }
 
@@ -167,17 +167,28 @@ export default class MusicLibrary {
 
   // A sound picker might want to show the subset of sounds permitted by the
   // progression's currently allowed sounds.
-  getAllowedSounds(folderType: string | undefined): SoundFolder[] {
+  getAllowedSounds(
+    folderType: string | undefined,
+    enumerateRestrictedPacks: boolean
+  ): SoundFolder[] {
     // Let's just do a deep copy and then do filtering in-place.
     let foldersCopy: SoundFolder[] = JSON.parse(
       JSON.stringify(this.folders)
     ) as SoundFolder[];
 
     // Whether or not we have allowedSounds, we need to filter by type.
+    // If we are enumerating restricted packs, then we only allow them.
+    // If we are enumerating available sounds, then we only allow
+    // restricted sounds if they are the current pack.
     foldersCopy = foldersCopy.filter(
       (folder: SoundFolder) =>
         folder.type === folderType &&
-        ((!this.currentPackId && folder.restricted) ||
+        ((!this.currentPackId &&
+          enumerateRestrictedPacks &&
+          folder.restricted) ||
+          (!this.currentPackId &&
+            !enumerateRestrictedPacks &&
+            !folder.restricted) ||
           (this.currentPackId &&
             (!folder.restricted || this.currentPackId === folder.id)))
     );

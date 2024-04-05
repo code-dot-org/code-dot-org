@@ -20398,7 +20398,7 @@
       "key": "00c79579-1d6c-41b8-bd5c-51e740c9f7dd",
       "position": 4,
       "learning_goal": "Algorithms and Control - Player Control Conditionals",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(4) **Conditionals to respond to multiple types of user input that control the player sprite’s movement**\n- This includes the use of 3 conditionals that use different keyboard input (left arrow and right arrow) and/or mouse input.\n- This also includes using the counter pattern with the sprite’s y velocity in order to create the complex acceleration movement (i.e. falling behavior)\n\n(5) **Sprite does not respond as expected**\n- The sprite’s movement should simulate the player going up when the “up” key is pressed, followed by the sprite accelerating falling back down the screen on its own. The sprite should also move left and right when those keys are pressed.",
       "seeding_key": {
         "learning_goal.key": "00c79579-1d6c-41b8-bd5c-51e740c9f7dd",
@@ -20411,7 +20411,7 @@
       "key": "03811f4b-c06d-4103-b884-ae9eca93687c",
       "position": 6,
       "learning_goal": "Algorithms and Control - Interaction Conditionals",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(7) **Conditionals to control multiple sprite interactions**\n- This includes the use of at least 1 conditional for the target sprite and at least 1 conditional for the obstacle sprite. \n- _Examples:_\n  - _The conditional for the target sprite should use the `isTouching()` to detect interaction between the player sprite and target sprite._\n     - _If the two sprites touch, the score variable should increase and the x value of the target sprite should reset to the right side of the screen_\n  - _The conditional for the obstacle sprite should also use the `isTouching()` to detect interaction between the player sprite and the obstacle sprite._\n    - _If the two sprites touch, the health variable should decrease and the obstacle sprite should change in some way_\n      - _For example, the obstacle sprite’s rotation property could change to make the sprite appear to be knocked over or the tint property of the obstacle sprite could change to make the sprite appear red indicating it was touched)._\n",
       "seeding_key": {
         "learning_goal.key": "03811f4b-c06d-4103-b884-ae9eca93687c",
@@ -20437,7 +20437,7 @@
       "key": "0d41a1e4-dc3e-4558-af8d-009993f48859",
       "position": 6,
       "learning_goal": "Algorithms and Control - Interaction Conditionals & Collision Detection",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(7) **Conditional and at least 2 collision detection blocks to control multiple sprite interactions**\n- This includes the use of at least 1 conditional that checks if the player sprite is touching the target sprite and then moves the target to a random location\n- This also includes the use of at least two collision detection blocks, such as `collide()` or `bounceOff()`, to have the obstacles interact with the player sprite ",
       "seeding_key": {
         "learning_goal.key": "0d41a1e4-dc3e-4558-af8d-009993f48859",
@@ -20463,7 +20463,7 @@
       "key": "1427cef9-e46f-4c4d-8287-0bfecbd2daf6",
       "position": 6,
       "learning_goal": "Algorithms and Control - User Input",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(5) **Different types of user input**\n- This includes keyboard and mouse inputs. \n- Different types can include two different keyboard inputs such as `keyDown(“left”)` and `keyDown(“space”)`",
       "seeding_key": {
         "learning_goal.key": "1427cef9-e46f-4c4d-8287-0bfecbd2daf6",
@@ -20476,7 +20476,7 @@
       "key": "1afa2635-73be-40b4-b48b-a78a4fe30f68",
       "position": 3,
       "learning_goal": "Modularity - Multiple Sprites",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(3) **Updating in the draw loop**\n- Sprites are created with these two lines of code outside of the draw loop: \n  ```\n  var sprite = createSprite(200, 200); \n  sprite.setAnimation(\"animation_1\");\n  ```\n- After the above two lines, a sprite property, such as the ones listed below, should be **updating inside** the draw loop.\n  - x\n  - y\n  - rotation\n  - scale\n  - tint\n  - alpha\n  - width\n  - height\n  - visible\n- Assigning value to a sprite property inside the draw loop, such as `sprite.scale = 0.4`, does not count as updating a property unless it is in a conditional. \n",
       "seeding_key": {
         "learning_goal.key": "1afa2635-73be-40b4-b48b-a78a4fe30f68",
@@ -20489,7 +20489,7 @@
       "key": "239b1e8f-30cd-44b2-9332-23ad17fc8146",
       "position": 5,
       "learning_goal": "Algorithms and Control - Looping Conditionals",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(6) **Conditionals to control the obstacle sprites’ looping behavior**\nThis includes the use of at least 1 conditional per obstacle sprite to control the looping on both the x and y axis.\n",
       "seeding_key": {
         "learning_goal.key": "239b1e8f-30cd-44b2-9332-23ad17fc8146",
@@ -20502,7 +20502,7 @@
       "key": "29f5b703-030c-4414-b9e8-d21a3068909e",
       "position": 1,
       "learning_goal": "Program Development - Program Sequence",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others\n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.",
       "seeding_key": {
         "learning_goal.key": "29f5b703-030c-4414-b9e8-d21a3068909e",
@@ -20515,7 +20515,7 @@
       "key": "462f3e9e-6954-418a-ba47-b0f5a4868b0e",
       "position": 3,
       "learning_goal": "Position - Elements and the Coordinate System",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "462f3e9e-6954-418a-ba47-b0f5a4868b0e",
@@ -20528,7 +20528,7 @@
       "key": "53b107f9-9623-4c48-92a2-4b4cf4e32865",
       "position": 8,
       "learning_goal": "Position and Movement",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(7) **Instances of complex movement**\n- This includes code that simulates movement such as acceleration, moving in a curve, looping from one side of the screen to the other, or jumping \n\n(8) **Simple, independent movement**\n- This includes movement such as moving in a straight line or rotation\n",
       "seeding_key": {
         "learning_goal.key": "53b107f9-9623-4c48-92a2-4b4cf4e32865",
@@ -20541,7 +20541,7 @@
       "key": "55b67c1f-5734-4835-a160-16326479ba97",
       "position": 5,
       "learning_goal": "Algorithms and Control - Conditionals",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(5) **Triggered by a variable or sprite property**\n- A conditional should have a boolean statement that uses a variable, such as `(count > 10)`, or a sprite property, such as `(sprite.scale > 50)`. \n- Using `World.mouseX` or `World.mouseY` can also count for this conditional.",
       "seeding_key": {
         "learning_goal.key": "55b67c1f-5734-4835-a160-16326479ba97",
@@ -20554,7 +20554,7 @@
       "key": "57a676cd-c75e-405c-9162-c12e0f8e41a4",
       "position": 7,
       "learning_goal": "Variables",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "57a676cd-c75e-405c-9162-c12e0f8e41a4",
@@ -20567,7 +20567,7 @@
       "key": "5c2392bd-d745-4178-867f-306d6dc1d574",
       "position": 5,
       "learning_goal": "Algorithms and Control - Backgrounds and Variables",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(3) **Three backgrounds that are displayed during run time**\n- Three different backgrounds should appear during a single play of the game.\n- Example backgrounds include (but are not limited to): an instructions screen, different backgrounds for various difficulty levels, win screen, lose screen, etc. \n\n(4) **Backgrounds is triggered automatically through a variable**\n- For example, the game play background is changed to a _“You lose”_ background when the variable named “score” reaches the value of 0.\n",
       "seeding_key": {
         "learning_goal.key": "5c2392bd-d745-4178-867f-306d6dc1d574",
@@ -20580,7 +20580,7 @@
       "key": "5f2711b5-ed82-44b1-9859-9a86943c69cf",
       "position": 2,
       "learning_goal": "Modularity - Sprites and Sprite Properties",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(3) **Updating in the draw loop**\n- Sprites are created with these two lines of code outside of the draw loop: \n  ```\nvar sprite = createSprite(200, 200); \nsprite.setAnimation(\"animation_1\");\n```\n- After the above two lines, a sprite property, such as the ones listed below, should be continuously updating inside the draw loop\n  - x \n  - y\n  - rotation\n  - scale\n  - tint\n  - alpha\n  - width\n  - height",
       "seeding_key": {
         "learning_goal.key": "5f2711b5-ed82-44b1-9859-9a86943c69cf",
@@ -20632,7 +20632,7 @@
       "key": "7153e050-fef5-457b-ad86-d5d4fa67e8aa",
       "position": 3,
       "learning_goal": "Modularity - Multiple Sprites",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(3) **Sprites created and animations set**\n- Sprites are created and their animations are set with these two lines of code **outside** of the draw loop: \n  ```\n  var sprite = createSprite(200, 200); \n  sprite.setAnimation(\"animation_1\");\n```\n",
       "seeding_key": {
         "learning_goal.key": "7153e050-fef5-457b-ad86-d5d4fa67e8aa",
@@ -20645,7 +20645,7 @@
       "key": "71e0f6ed-5524-434c-94f0-2dd2fd97896a",
       "position": 3,
       "learning_goal": "Position and Movement",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(4) **Move in different ways**\n- One element should have random movement using `randomNumber()`\n- One element should move using the **counter pattern** `(x = x + 1)`",
       "seeding_key": {
         "learning_goal.key": "71e0f6ed-5524-434c-94f0-2dd2fd97896a",
@@ -20671,7 +20671,7 @@
       "key": "78f6d042-f22d-45bf-b6f9-19e4504d98ec",
       "position": 3,
       "learning_goal": "Modularity - Multiple Sprites",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(3) **Sprites are created and their animations are set properly**\n- Sprites are created and their animations are set with these two lines of code outside of the draw loop: \n  ```\n  var sprite = createSprite(200, 200); \n  sprite.setAnimation(\"animation_1\");\n  ```",
       "seeding_key": {
         "learning_goal.key": "78f6d042-f22d-45bf-b6f9-19e4504d98ec",
@@ -20710,7 +20710,7 @@
       "key": "8534a429-ae56-4fb9-928e-bf4bdeffb74f",
       "position": 2,
       "learning_goal": "Modularity - Sprites and Sprite Properties",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(2) **Updated after creation**\n  - Sprites are created with these two lines of code: \n    ```\n    var sprite = createSprite(200, 200); \n    sprite.setAnimation(\"animation_1\");\n    ```\n  - After the above two lines, a sprite property listed below should be updated\n    - `rotation`\n    - `scale`\n    - `tint`\n    - `alpha`\n    - `width`\n    - `height`",
       "seeding_key": {
         "learning_goal.key": "8534a429-ae56-4fb9-928e-bf4bdeffb74f",
@@ -20736,7 +20736,7 @@
       "key": "9e75c721-eee8-4a99-ae7f-e46911d7fcb0",
       "position": 4,
       "learning_goal": "Modularity - Use of Functions",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "9e75c721-eee8-4a99-ae7f-e46911d7fcb0",
@@ -20749,7 +20749,7 @@
       "key": "a117adee-5f26-4d08-a61e-2096be7253e0",
       "position": 4,
       "learning_goal": "Optional “Stretch” Feature - Variables",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "a117adee-5f26-4d08-a61e-2096be7253e0",
@@ -20775,7 +20775,7 @@
       "key": "b246c895-5954-4b86-99d2-45c78d66b4dc",
       "position": 6,
       "learning_goal": "Position and Movement",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(6) **Move in different ways**\n- Both types of the following movement should be used:\n  - Random movement using `randomNumber()`\n  - Smooth movement using the **counter pattern** `(sprite.x = sprite.x + 1)`",
       "seeding_key": {
         "learning_goal.key": "b246c895-5954-4b86-99d2-45c78d66b4dc",
@@ -20788,7 +20788,7 @@
       "key": "bc6e8ba1-501c-472a-afb0-3ba337080d8a",
       "position": 5,
       "learning_goal": "Algorithms and Control - Looping Conditionals",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(6) **Conditionals to control multiple sprites’ looping behavior**\n- This includes the use of at least 1 conditional for the target sprite and at least 1 conditional for the obstacle sprite.\n- Examples:\n  - _The conditional for the target sprite should check if the sprite’s x value has reached the left side of the screen and then reset it’s x value to the right side of the screen_\n  - _The conditional for the obstacle sprite should also check if the sprite’s x value has reached the left side of the screen and then reset it’s x value to the right side of the screen_\n",
       "seeding_key": {
         "learning_goal.key": "bc6e8ba1-501c-472a-afb0-3ba337080d8a",
@@ -20801,7 +20801,7 @@
       "key": "c5378e22-cef3-456d-a13c-13c22c48ef2b",
       "position": 9,
       "learning_goal": "Variables",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(9) **Affect how the game is played**\n- Examples include (but are not limited to): moving to a different level at a certain point value, losing the game at a certain score value,  game play becomes harder or speeds up at a certain variable value, etc.\n",
       "seeding_key": {
         "learning_goal.key": "c5378e22-cef3-456d-a13c-13c22c48ef2b",
@@ -20827,7 +20827,7 @@
       "key": "ccc2606d-c073-4ed9-83ec-1735c3cc9467",
       "position": 4,
       "learning_goal": "Algorithms and Control - User Input",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(4) **Different types of user input**\n- This includes keyboard and mouse inputs. \n- Two different types can include two different keyboard inputs such as `keyDown(“left”)` and `keyDown(“space”)`",
       "seeding_key": {
         "learning_goal.key": "ccc2606d-c073-4ed9-83ec-1735c3cc9467",
@@ -20840,7 +20840,7 @@
       "key": "ce47c50b-0700-40ee-837b-e8246db95183",
       "position": 2,
       "learning_goal": "Program Development - Program Sequence",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program and its starting elements (creating sprites, setting sprite properties that won’t change, etc). \n- Code inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.",
       "seeding_key": {
         "learning_goal.key": "ce47c50b-0700-40ee-837b-e8246db95183",
@@ -20879,7 +20879,7 @@
       "key": "de84daa0-42e9-40b4-b9f2-6cbe2ccd4cc3",
       "position": 4,
       "learning_goal": "Algorithms and Control - Player Control Conditionals",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(4) **Conditionals to control the player sprite’s jumping**\n- This includes the use of at least 3 conditionals (at least one of which utilizes user input)\n- Examples:\n  - _One responding to user input with the keyDown(“up”) to change the sprite’s y velocity_\n  - _One checking the y value of the player sprite to see if it has reached the “top” of it’s jump and then send the sprite back down the screen_\n  - _One checking the y value of the player sprite to see if it is “on the ground” and then stop the sprite from falling_\n\n(5) **Sprite does not respond as expected**\n- The sprite’s movement should simulate the player jumping up when the “up” key is pressed, followed by the sprite coming back down to the ground on its own once it reaches the height of its jump. The sprite should also “land” back on the ground where it started.\n",
       "seeding_key": {
         "learning_goal.key": "de84daa0-42e9-40b4-b9f2-6cbe2ccd4cc3",
@@ -20918,7 +20918,7 @@
       "key": "eee8984f-707f-4926-87d3-4bb7d2650cb4",
       "position": 7,
       "learning_goal": "Algorithms and Control - Interaction Conditionals",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(6) **Complex interactions between sprites**\n- The use of a single collision block, such as `collide()` or `displace()`, without the use of a conditional does not count as complex interactions",
       "seeding_key": {
         "learning_goal.key": "eee8984f-707f-4926-87d3-4bb7d2650cb4",
@@ -20931,7 +20931,7 @@
       "key": "f4be86b5-c3e3-4fb1-a17f-74fa06859344",
       "position": 7,
       "learning_goal": "Optional “Stretch” Feature - Variables",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "f4be86b5-c3e3-4fb1-a17f-74fa06859344",

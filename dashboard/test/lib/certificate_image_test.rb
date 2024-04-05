@@ -145,9 +145,7 @@ class CertificateImageTest < ActiveSupport::TestCase
     refute CertificateImage.hoc_course?('other')
   end
 
-  private
-
-  def assert_image(image, width, height, format)
+  private def assert_image(image, width, height, format)
     info_line = image.inspect
     assert info_line.match(/#{format}/)
     assert info_line.match(/#{width}x/)
