@@ -3,11 +3,11 @@
 table.selfPacedProgressTable {
   th {
     &:nth-child(3) {
-      width: 22%;
+      width: 20%;
     }
 
     &:nth-child(4) {
-      width: 25%;
+      width: 22%;
     }
   }
 }
@@ -21,7 +21,10 @@ table.selfPacedProgressTable {
   .progressBarFill {
     background-color: $light_primary_500;
     height: 0.5rem;
-    border-radius: 1rem 0 0 1rem;
+    border-start-start-radius: 1rem;
+    border-end-end-radius: 0;
+    border-start-end-radius: 0;
+    border-end-start-radius: 1rem;
   }
 }
 
@@ -33,10 +36,12 @@ table.selfPacedProgressTable {
   font-weight: $medium-font-weight;
   line-height: 1;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
 
   &::before {
     font: var(--fa-font-solid);
     content: '\f00c';
-    margin-inline-end: 6px;
   }
 }

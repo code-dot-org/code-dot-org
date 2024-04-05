@@ -76,7 +76,7 @@ const CourseRow = ({
             color={'black'}
             href={studio(finish_url)}
             size="s"
-            text={i18n.printCertificate()}
+            text={i18n.selfPacedPlPrintCertificate()}
             type={'secondary'}
             iconLeft={{
               iconName: 'print',
@@ -99,7 +99,7 @@ CourseRow.propTypes = {
 
 export default function SelfPacedProgressTable({plCoursesStarted}) {
   return (
-    <div className={styles.tableWrapper}>
+    <div className="tableWrapper">
       <table className={styles.selfPacedProgressTable}>
         <thead>
           <tr>
