@@ -1,5 +1,5 @@
-import React, {useCallback, useState} from 'react';
 import classNames from 'classnames';
+import React, {useCallback, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
@@ -11,13 +11,13 @@ import {
   updateAiCustomization,
 } from '../../redux/aichatRedux';
 
+import CompareModelsDialog from './CompareModelsDialog';
 import {
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
 import {isVisible, isDisabled} from './utils';
-import CompareModelsDialog from './CompareModelsDialog';
 
 import styles from '../model-customization-workspace.module.scss';
 
