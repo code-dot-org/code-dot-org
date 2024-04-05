@@ -2,7 +2,7 @@ import {loadPyodide} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
-    indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full',
+    indexURL: '/assets/js/pyodide/',
   });
   await self.pyodide.loadPackage(['numpy']);
   self.pyodide.setStdout({
