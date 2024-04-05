@@ -1,5 +1,5 @@
 // react testing library import
-import {render, fireEvent, act} from '@testing-library/react';
+import {render, fireEvent, act, screen} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
@@ -17,7 +17,7 @@ import {
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-// import HttpClient from '@cdo/apps/util/HttpClient';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -29,7 +29,7 @@ describe('RubricContainer', () => {
   let fetchStub;
   let ajaxStub;
   let request;
-  // let postStub;
+  let postStub;
 
   async function wait() {
     for (let _ = 0; _ < 10; _++) {
@@ -42,7 +42,7 @@ describe('RubricContainer', () => {
   // Stubs out getting the AI status for a particular user
   function stubFetchEvalStatusForUser(data) {
     return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_user.*/))
+      .withArgs(sinon.match(/\/rubrics\/\d+\/ai_evaluation_status_for_user.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
@@ -50,26 +50,28 @@ describe('RubricContainer', () => {
   // useful to track alongside the user status, here
   function stubFetchEvalStatusForAll(data) {
     return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
+      .withArgs(sinon.match(/\/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
   // This stubs out polling the AI evaluation list which can be provided by 'data'
   function stubFetchAiEvaluations(data) {
     return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/get_ai_evaluations.*/))
+      .withArgs(sinon.match(/\/rubrics\/\d+\/get_ai_evaluations.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
   function stubFetchTeacherEvaluations(data) {
     return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
+      .withArgs(
+        sinon.match(/\/rubrics\/\d+\/get_teacher_evaluations_for_all.*/)
+      )
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
   function stubFetchProductTourStatus(data) {
     return fetchStub
-      .withArgs(sinon.match(/rubrics\/.+\/get_ai_rubrics_tour_seen/))
+      .withArgs(sinon.match(/\/rubrics\/\d+\/get_ai_rubrics_tour_seen/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
@@ -92,12 +94,12 @@ describe('RubricContainer', () => {
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
     store = getStore();
-    // postStub = sinon.stub(HttpClient, 'post');
-    // postStub.returns(
-    //   Promise.resolve(
-    //     new Response(JSON.stringify({}), {status: 200, statusText: 'OK'})
-    //   )
-    // );
+    postStub = sinon.stub(HttpClient, 'post');
+    postStub.returns(
+      Promise.resolve(
+        new Response(JSON.stringify({}), {status: 200, statusText: 'OK'})
+      )
+    );
   });
 
   afterEach(() => {
@@ -108,7 +110,7 @@ describe('RubricContainer', () => {
     utils.queryParams.restore();
     fetchStub.restore();
     ajaxStub.restore();
-    // postStub.restore();
+    postStub.restore();
   });
 
   const notAttemptedJson = {
@@ -233,8 +235,8 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForUser(successJson);
     stubFetchEvalStatusForAll(successJsonAll);
     stubFetchTeacherEvaluations(noEvals);
-    stubFetchProductTourStatus({seen: 'true'});
     const evalFetch = stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -280,7 +282,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForAll(successJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -311,7 +313,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -338,7 +340,7 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(notAttemptedJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -366,7 +368,7 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(successJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -399,7 +401,7 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -441,7 +443,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -525,7 +527,7 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -567,7 +569,7 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -609,7 +611,7 @@ describe('RubricContainer', () => {
     const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -643,7 +645,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForAll(successJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
-    stubFetchProductTourStatus({seen: 'true'});
+    stubFetchProductTourStatus({seen: true});
 
     const {getByTestId} = render(
       <Provider store={store}>
@@ -717,56 +719,54 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
   });
 
-  // it('displays product tour when getTourStatus returns false', async () => {
-  //   stubFetchEvalStatusForUser(successJson);
-  //   stubFetchEvalStatusForAll(successJsonAll);
-  //   stubFetchAiEvaluations(mockAiEvaluations);
-  //   stubFetchTeacherEvaluations(noEvals);
-  //   stubFetchProductTourStatus({seen: 'false'});
+  it('displays product tour when getTourStatus returns false', async () => {
+    stubFetchEvalStatusForUser(successJson);
+    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchProductTourStatus({seen: false});
 
-  //   render(
-  //     <Provider store={store}>
-  //       <RubricContainer
-  //         rubric={defaultRubric}
-  //         studentLevelInfo={defaultStudentInfo}
-  //         teacherHasEnabledAi={true}
-  //         currentLevelName={'test_level'}
-  //         reportingData={{}}
-  //         open
-  //       />
-  //     </Provider>
-  //   );
+    const {getByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
 
-  //   await wait();
+    await wait();
 
-  //   expect(
-  //     screen.getByText('Getting Started with AI Teaching Assistant').textContent
-  //   ).to.equal('Getting Started with AI Teaching Assistant');
-  // });
+    expect(getByText('Getting Started with AI Teaching Assistant')).to.exist;
+  });
 
-  // it('does not display product tour when getTourStatus returns true', async () => {
-  //   stubFetchEvalStatusForUser(successJson);
-  //   stubFetchEvalStatusForAll(successJsonAll);
-  //   stubFetchAiEvaluations(mockAiEvaluations);
-  //   stubFetchTeacherEvaluations(noEvals);
-  //   stubFetchProductTourStatus({seen: 'true'});
+  it('does not display product tour when getTourStatus returns true', async () => {
+    stubFetchEvalStatusForUser(successJson);
+    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchProductTourStatus({seen: true});
 
-  //   render(
-  //     <Provider store={store}>
-  //       <RubricContainer
-  //         rubric={defaultRubric}
-  //         studentLevelInfo={defaultStudentInfo}
-  //         teacherHasEnabledAi={true}
-  //         currentLevelName={'test_level'}
-  //         reportingData={{}}
-  //         open
-  //       />
-  //     </Provider>
-  //   );
+    const {findAllByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
 
-  //   await wait();
+    await wait();
 
-  //   expect(screen.findAllByText('Getting Started with AI Teaching Assistant'))
-  //     .to.be.empty;
-  // });
+    expect(findAllByText('Getting Started with AI Teaching Assistant')).to.be
+      .empty;
+  });
 });

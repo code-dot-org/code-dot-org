@@ -59,7 +59,6 @@ export default function RubricContainer({
   const [feedbackAdded, setFeedbackAdded] = useState(false);
 
   const [productTour, setProductTour] = useState(false);
-  const [tourButtonLabel, setTourButtonLabel] = useState('Next');
 
   const tabSelectCallback = tabSelection => {
     setSelectedTab(tabSelection);
@@ -141,7 +140,7 @@ export default function RubricContainer({
         return response.json();
       })
       .then(json => {
-        if (json['seen'] === 'true') {
+        if (json['seen']) {
           setProductTour(false);
         } else {
           setProductTour(true);
@@ -152,10 +151,6 @@ export default function RubricContainer({
   useEffect(() => {
     getTourStatus();
   }, [getTourStatus]);
-
-  const onTourStart = stepIndex => {
-    setTourButtonLabel('Next Tip');
-  };
 
   const onTourExit = () => {
     updateTourStatus();
@@ -194,19 +189,18 @@ export default function RubricContainer({
         })}
       >
         <Steps
-          enabled={productTour && onLevelForEvaluation}
+          enabled={onLevelForEvaluation && productTour}
           initialStep={INITIAL_STEP}
           steps={STEPS}
           onExit={onTourExit}
           onChange={onStepChange}
           onBeforeChange={beforeStepChange}
           onAfterChange={onAfterStepChange}
-          onStart={onTourStart}
           options={{
             scrollToElement: false,
             exitOnOverlayClick: false,
             hidePrev: true,
-            nextLabel: tourButtonLabel,
+            nextLabel: 'Next Tip',
             showBullets: false,
             showStepNumbers: true,
           }}
