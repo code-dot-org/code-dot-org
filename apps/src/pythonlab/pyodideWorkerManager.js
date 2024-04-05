@@ -6,8 +6,10 @@ import {PyodideClient} from 'pyodide-worker-runner';
 // A default file to import into the user's script.
 const otherFileContents = "def hello():\n  print('hello')\n";
 
-//navigator.serviceWorker.register('messagingServiceWorker.ts');
-const channel = makeAtomicsChannel();
+navigator.serviceWorker.register(
+  '/assets/js/pyodide/messagingServiceWorker.js'
+);
+const channel = makeServiceWorkerChannel();
 
 // This syntax doesn't work with typescript, so this file is in js.
 // const pyodideWorker = new Worker(

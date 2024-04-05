@@ -229,6 +229,12 @@ module.exports = function (grunt) {
           src: ['*.js'],
           dest: 'build/minifiable-lib/fileupload/',
         },
+        {
+          expand: true,
+          cwd: 'lib/pyodide',
+          src: ['*.js'],
+          dest: 'build/package/js/pyodide/',
+        },
       ],
     },
     unhash: {
