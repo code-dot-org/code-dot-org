@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import MultiItemInput from './MultiItemInput';
-import moduleStyles from './edit-ai-customizations.module.scss';
+import moduleStyles from './edit-aichat-settings.module.scss';
 import {
   MAX_ASK_ABOUT_TOPICS,
   MODEL_CARD_FIELDS_AND_LABELS,
@@ -8,9 +8,9 @@ import {
 import {UpdateContext} from './UpdateContext';
 
 const ModelCardFields: React.FunctionComponent = () => {
-  const {setModelCardPropertyValue, aiCustomizations} =
-    useContext(UpdateContext);
-  const exampleTopics = aiCustomizations.modelCardInfo?.value?.exampleTopics;
+  const {setModelCardPropertyValue, aichatSettings} = useContext(UpdateContext);
+  const modelCardInfo = aichatSettings.initialCustomizations.modelCardInfo;
+  const exampleTopics = modelCardInfo.exampleTopics;
   return (
     <div className={moduleStyles['model-card-fields']}>
       {MODEL_CARD_FIELDS_AND_LABELS.map(([property, label]) => {
@@ -19,7 +19,7 @@ const ModelCardFields: React.FunctionComponent = () => {
             <label htmlFor={`modelCard-${property}`}>{label}</label>
             <textarea
               id={`modelCard-${property}`}
-              value={aiCustomizations.modelCardInfo?.value?.[property] || ''}
+              value={modelCardInfo[property]}
               onChange={e =>
                 setModelCardPropertyValue(property, e.target.value)
               }

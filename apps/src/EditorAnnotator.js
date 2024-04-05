@@ -193,6 +193,13 @@ export class Annotator {
    * @param {string} logLevel The type of annotation to clear ('ERROR', 'INFO', etc)
    */
   clearAnnotations(logLevel = 'INFO') {}
+
+  /**
+   * Makes the given line visible on the screen, if in a line-based editor.
+   *
+   * @param {number} lineNumber The line to scroll to where 1 is the first line.
+   */
+  scrollToLine(lineNumber) {}
 }
 
 /**
@@ -663,6 +670,16 @@ export class DropletAnnotator extends Annotator {
     this.knownAnnotations_ = [];
     this.annotationList_().filterOutRuntimeAnnotations(logLevel);
   }
+
+  /**
+   * Makes the given line visible on the screen, if in a line-based editor.
+   *
+   * @param {number} lineNumber The line to scroll to where 1 is the first line.
+   */
+  scrollToLine(lineNumber) {
+    const aceEditor = this.droplet().aceEditor;
+    aceEditor.scrollToLine(lineNumber, true, true);
+  }
 }
 
 /**
@@ -1110,6 +1127,15 @@ export default class EditorAnnotator {
    */
   static clearAnnotations(logLevel = 'INFO') {
     EditorAnnotator.annotator()?.clearAnnotations(logLevel);
+  }
+
+  /**
+   * Makes the given line visible on the screen, if in a line-based editor.
+   *
+   * @param {number} lineNumber The line to scroll to where 1 is the first line.
+   */
+  static scrollToLine(lineNumber) {
+    EditorAnnotator.annotator()?.scrollToLine(lineNumber);
   }
 }
 
