@@ -99,4 +99,5 @@ export interface SamplerSequence {
   instrument: string;
   // Notes to play
   events: {notes: string[]; playbackPosition: number}[];
+  effects?: Effects;
 }
