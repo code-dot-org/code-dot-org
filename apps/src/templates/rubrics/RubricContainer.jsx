@@ -245,7 +245,6 @@ export default function RubricContainer({
             refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
             studentName={studentLevelInfo && studentLevelInfo.name}
-            reportingData={reportingData}
           />
           <RubricContent
             productTour={productTour}
