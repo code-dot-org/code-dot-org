@@ -22,7 +22,7 @@ const PresentationView: React.FunctionComponent = () => {
   const EXAMPLE_MODEL_TRAINING_DATA = 'Model A Training Data';
 
   const technicalInfo = useMemo(() => {
-    const TECHNICAL_INFO: {
+    const technicalInfoData: {
       [key in (typeof TECHNICAL_INFO_FIELDS)[number]]:
         | string
         | number
@@ -35,10 +35,10 @@ const PresentationView: React.FunctionComponent = () => {
       'Retrieval Used': retrievalContexts.length > 0,
     };
     const technicalInfo = TECHNICAL_INFO_FIELDS.map(field => {
-      if (typeof TECHNICAL_INFO[field] === 'boolean') {
-        return `${field}: ${TECHNICAL_INFO[field] ? 'Yes' : 'No'}`;
+      if (typeof technicalInfoData[field] === 'boolean') {
+        return `${field}: ${technicalInfoData[field] ? 'Yes' : 'No'}`;
       }
-      return `${field}: ${TECHNICAL_INFO[field]}`;
+      return `${field}: ${technicalInfoData[field]}`;
     });
     return technicalInfo;
   }, [retrievalContexts, systemPrompt, temperature]);
