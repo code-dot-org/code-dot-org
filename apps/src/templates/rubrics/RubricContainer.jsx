@@ -18,11 +18,11 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import Draggable from 'react-draggable';
 import {TAB_NAMES} from './rubricHelpers';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
-// import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
 
-// intro.js
-// import './introjs.scss';
-// import {Steps} from 'intro.js-react';
+// product Tour
+import './introjs.scss';
+import {Steps} from 'intro.js-react';
+import {INITIAL_STEP, STEPS, DUMMY_PROPS} from './productTourHelpers';
 
 export default function RubricContainer({
   rubric,
@@ -57,8 +57,8 @@ export default function RubricContainer({
 
   const [feedbackAdded, setFeedbackAdded] = useState(false);
 
-  // const [stepsEnabled, setStepsEnabled] = useState(false);
-  // const [tourButtonLabel, setTourButtonLabel] = useState('Next');
+  const [productTour, setProductTour] = useState(false);
+  const [tourButtonLabel, setTourButtonLabel] = useState('Next');
 
   const tabSelectCallback = tabSelection => {
     setSelectedTab(tabSelection);
@@ -115,155 +115,67 @@ export default function RubricContainer({
   // add more functionality to the settings tab.
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
-  // const updateTourStatus = useCallback(() => {
-  //   const url = `/rubrics/${rubric.id}/update_ai_rubrics_tour_seen?seen=${stepsEnabled}`;
-  //   fetch(url)
-  //     .then(response => {
-  //       return response.json();
-  //     })
-  //     .then(json => {
-  //       if (json['seen'] === 'true') {
-  //         setStepsEnabled(false);
-  //       } else {
-  //         setStepsEnabled(true);
-  //       }
-  //     });
-  // }, [rubric.id, stepsEnabled]);
+  const updateTourStatus = useCallback(() => {
+    const url = `/rubrics/${rubric.id}/update_ai_rubrics_tour_seen?seen=${productTour}`;
+    fetch(url)
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        if (json['seen'] === 'true') {
+          setProductTour(false);
+        } else {
+          setProductTour(true);
+        }
+      });
+  }, [rubric.id, productTour]);
 
-  // const getTourStatus = useCallback(() => {
-  //   const url = `/rubrics/${rubric.id}/get_ai_rubrics_tour_seen`;
-  //   fetch(url)
-  //     .then(response => {
-  //       return response.json();
-  //     })
-  //     .then(json => {
-  //       if (json['seen'] === 'true') {
-  //         setStepsEnabled(false);
-  //       } else {
-  //         setStepsEnabled(true);
-  //       }
-  //     });
-  // }, [rubric.id]);
+  const getTourStatus = useCallback(() => {
+    const url = `/rubrics/${rubric.id}/get_ai_rubrics_tour_seen`;
+    fetch(url)
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        if (json['seen'] === 'true') {
+          setProductTour(false);
+        } else {
+          setProductTour(true);
+        }
+      });
+  }, [rubric.id]);
 
-  // useEffect(() => {
-  //   getTourStatus();
-  // }, [getTourStatus]);
+  useEffect(() => {
+    getTourStatus();
+  }, [getTourStatus]);
 
-  // const initialStep = 0;
-  // const steps = [
-  //   {
-  //     element: '#ui-floatingActionButton',
-  //     title: 'Getting Started with AI Teaching Assistant',
-  //     intro:
-  //       '<p>Launch AI Teaching Assistant from the bottom left corner of the screen.</p>',
-  //   },
-  //   {
-  //     element: '#tour-ai-assessment',
-  //     title: 'Understanding the AI Assessment',
-  //     intro:
-  //       '<p>AI Teaching Assistant analyzes students’ code for each learning goal with AI enabled, then recommends a rubric score(s). AI will provide one score for learning goals where our AI has trained extensively. It will provide two scores where more training data is needed.</p><p>The final score is always up to you. AI Teaching Assistant will provide evidence for its recommendation.</p>',
-  //   },
-  //   {
-  //     element: '#tour-ai-evidence',
-  //     title: 'Using Evidence',
-  //     position: 'top',
-  //     intro: `<p>Where possible, AI Teaching Assistant will highlight the relevant lines of code in the student’s project so it is easy for you to double-check.</p><img src=${evidenceDemo}>`,
-  //   },
-  //   {
-  //     element: '#tour-ai-confidence',
-  //     title: 'Understanding AI Confidence',
-  //     intro:
-  //       "<p>The confidence rating gives you an idea of how often the AI agreed with teachers when scoring this learning goal. Just like humans, AI isn't perfect.</p>",
-  //   },
-  //   {
-  //     element: '#tour-evidence-levels',
-  //     title: 'Assigning a Rubric Score',
-  //     intro:
-  //       "<p>Once you have reviewed the AI Assessment and the student's code, assign a rubric score for the learning goal.</p>",
-  //   },
-  //   {
-  //     element: '#tour-ai-assessment-feedback',
-  //     title: 'How did we do?',
-  //     intro:
-  //       '<p>Your feedback helps us make the AI Teaching Assistant more helpful to you – let us know how it did.</p>',
-  //   },
-  // ];
+  const onTourStart = stepIndex => {
+    setTourButtonLabel('Next Tip');
+  };
 
-  // // Dummy props for product tour
-  // const rubricDummy = {
-  //   id: 1,
-  //   learningGoals: [
-  //     {
-  //       id: 1,
-  //       key: '1',
-  //       learningGoal: 'Variables',
-  //       aiEnabled: true,
-  //       evidenceLevels: rubric.learningGoals[0].evidenceLevels,
-  //     },
-  //   ],
-  //   lesson: {
-  //     position: 3,
-  //     name: 'Data Structures',
-  //   },
-  //   level: {
-  //     name: 'test_level',
-  //     position: 7,
-  //   },
-  // };
+  const onTourExit = () => {
+    updateTourStatus();
+  };
 
-  // const studentLevelInfoDummy = {
-  //   name: 'Grace Hopper',
-  //   timeSpent: 305,
-  //   lastAttempt: '1980-07-31T00:00:00.000Z',
-  //   attempts: 6,
-  // };
+  const onStepChange = (nextStepIndex, nextElement) => {
+    if (nextStepIndex === 1) {
+      document.getElementById('tour-fab-bg').scrollBy(0, 1000);
+    }
+  };
 
-  // const aiEvaluationsDummy = [
-  //   {
-  //     id: 1,
-  //     learning_goal_id: 1,
-  //     understanding: 2,
-  //     aiConfidencePassFail: 2,
-  //     evidence: '',
-  //   },
-  // ];
+  const beforeStepChange = (nextStepIndex, nextElement) => {
+    if (nextStepIndex === 1) {
+      if (!open) {
+        document.getElementById('ui-floatingActionButton').click();
+      }
+    }
+  };
 
-  // const onTourStart = stepIndex => {
-  //   setTourButtonLabel('Next Tip');
-  // };
-
-  // const onTourExit = () => {
-  //   updateTourStatus();
-  // };
-
-  // const onStepChange = (nextStepIndex, nextElement) => {
-  //   if (nextStepIndex === 1) {
-  //     document.getElementById('tour-fab-bg').scrollBy(0, 1000);
-  //   }
-  // };
-
-  // const beforeStepChange = (nextStepIndex, nextElement) => {
-  //   if (nextStepIndex === 1) {
-  //     if (!open) {
-  //       document.getElementById('ui-floatingActionButton').click();
-  //     }
-  //   }
-  //   if (nextStepIndex === 2) {
-  //     document
-  //       .getElementById('tour-ai-assessment')
-  //       .setAttribute('z-index', 99999);
-  //   } else if (nextStepIndex === 4) {
-  //     document
-  //       .getElementById('tour-ai-confidence')
-  //       .setAttribute('z-index', 99999);
-  //   }
-  // };
-
-  // const onAfterStepChange = (newStepIndex, newElement) => {
-  //   if (newStepIndex === 4) {
-  //     document.getElementsByClassName(style.evidenceLevel)[3].click();
-  //   }
-  // };
+  const onAfterStepChange = (newStepIndex, newElement) => {
+    if (newStepIndex === 4) {
+      document.getElementsByClassName(style.evidenceLevel)[3].click();
+    }
+  };
 
   return (
     <Draggable
@@ -277,24 +189,24 @@ export default function RubricContainer({
           [style.hiddenRubricContainer]: !open,
         })}
       >
-        {/* <Steps
-            enabled={stepsEnabled}
-            initialStep={initialStep}
-            steps={steps}
-            onExit={onTourExit}
-            onChange={onStepChange}
-            onBeforeChange={beforeStepChange}
-            onAfterChange={onAfterStepChange}
-            onStart={onTourStart}
-            options={{
-              scrollToElement: false,
-              exitOnOverlayClick: false,
-              hidePrev: true,
-              nextLabel: tourButtonLabel,
-              showBullets: false,
-              showStepNumbers: true,
-            }}
-          /> */}
+        <Steps
+          enabled={productTour}
+          initialStep={INITIAL_STEP}
+          steps={STEPS}
+          onExit={onTourExit}
+          onChange={onStepChange}
+          onBeforeChange={beforeStepChange}
+          onAfterChange={onAfterStepChange}
+          onStart={onTourStart}
+          options={{
+            scrollToElement: false,
+            exitOnOverlayClick: false,
+            hidePrev: true,
+            nextLabel: tourButtonLabel,
+            showBullets: false,
+            showStepNumbers: true,
+          }}
+        />
         <div className={style.rubricHeaderRedesign}>
           <div className={style.rubricHeaderLeftSide}>
             <img
@@ -305,13 +217,13 @@ export default function RubricContainer({
             <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
-            {/* <button
+            <button
               type="button"
               onClick={updateTourStatus}
               className={classnames(style.buttonStyle, style.closeButton)}
             >
               <FontAwesome icon="circle-question" />
-            </button> */}
+            </button>
             <button
               type="button"
               onClick={closeRubric}
@@ -322,7 +234,7 @@ export default function RubricContainer({
           </div>
         </div>
 
-        <div className={style.fabBackground}>
+        <div id="tour-fab-bg" className={style.fabBackground}>
           <RubricTabButtons
             tabSelectCallback={tabSelectCallback}
             selectedTab={selectedTab}
@@ -336,15 +248,22 @@ export default function RubricContainer({
           />
 
           <RubricContent
-            rubric={rubric}
+            productTour={productTour}
+            rubric={productTour ? DUMMY_PROPS['rubricDummy'] : rubric}
             open={open}
-            studentLevelInfo={studentLevelInfo}
+            studentLevelInfo={
+              productTour
+                ? DUMMY_PROPS['studentLevelInfoDummy']
+                : studentLevelInfo
+            }
             teacherHasEnabledAi={teacherHasEnabledAi}
             canProvideFeedback={canProvideFeedback}
             onLevelForEvaluation={onLevelForEvaluation}
             reportingData={reportingData}
             visible={selectedTab === TAB_NAMES.RUBRIC}
-            aiEvaluations={aiEvaluations}
+            aiEvaluations={
+              productTour ? DUMMY_PROPS['aiEvaluationsDummy'] : aiEvaluations
+            }
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
