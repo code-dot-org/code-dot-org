@@ -283,6 +283,14 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
                                 }
     )
 
+    # The superclass, ApplicationJob, logs metrics around all jobs.
+    # Those calls must be stubbed to test metrics for this job.
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      anything
+    )
+
+    # Expect metrics to be logged for the AI evaluation
     Cdo::Metrics.expects(:push).with(
       EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
