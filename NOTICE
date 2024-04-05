@@ -1,16 +1,19 @@
 Code.org tutorial platform
-Copyright 2016 Code.org
+Copyright 2024 Code.org
 
 This product includes software developed at Code.org (http://code.org), in
 collaboration with engineers from Google, Microsoft, Facebook, Twitter.
 
-The Code.org proprietary or licensed graphics, artwork, sounds, lectures, videos, logos,
-characters, fonts, etc., are all the copyrighted property of Code.org or the licensor identified herein and
-may not be used or distributed or accessed in any manner other than directly
-via Code.org's own website, mobile applications, or social media channels,
-as-is without modification or embedding in another format. Any use or distribution of the Third-Party Licensed Materials requires the consent/license of the licensor identified below.
+The Code.org proprietary or licensed graphics, artwork, sounds, lectures,
+videos, logos, characters, fonts, etc., are all the copyrighted property of
+Code.org or the licensor identified herein and may not be used or distributed
+or accessed in any manner other than directly via Code.org's own website,
+mobile applications, or social media channels, as-is without modification or
+embedding in another format. Any use or distribution of the Third-Party
+Licensed Materials requires the consent/license of the licensor identified
+below.
 
-<u>Third-Party Licensed Materials</u>
+Third-Party Licensed Materials
 
 The branded graphics, artwork, sounds, lectures, videos, logos, characters,
 screenshots, and trademarked names of Minecraft are the sole property of
@@ -65,4 +68,7 @@ distribution of the software in this repository outside of Code.org's own
 website may not include any use of this proprietary IP without a separate
 agreement with DreamWorks Animation LLC.
 
-Code.org uses a set of Font Awesome proprietary icons, related computer software, and other material published at github.com/FortAwesome/Font-Awesome and fontawesome.com licensed under the Font Awesome Pro License (https://fontawesome.com/license).
+Code.org uses a set of Font Awesome proprietary icons, related computer
+software, and other material published at github.com/FortAwesome/Font-Awesome
+and fontawesome.com licensed under the Font Awesome Pro License
+(https://fontawesome.com/license).

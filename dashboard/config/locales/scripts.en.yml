@@ -16403,3 +16403,34 @@ en:
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
+        gen-ai-foudations-pilot-v1:
+          lessons:
+            lesson-1:
+              name: Introduction to Generative AI
+            lesson-2:
+              name: Input & Training Data
+            lesson-3:
+              name: Bias in the Machine
+            lesson-4:
+              name: Understanding Embeddings
+            lesson-5:
+              name: 'Embeddings: How They''re Created'
+            lesson-6:
+              name: Understanding Neural Networks
+            lesson-7:
+              name: 'Neural Networks: How They''re Trained'
+            lesson-8:
+              name: Attention Is All You Need
+            lesson-9:
+              name: Outputs & Probabilities
+            lesson-10:
+              name: Hallucinations and Fabrications
+            lesson-11:
+              name: 'Project: Demystifying Generative AI'
+          lesson_groups: {}
+          name: gen-ai-foudations-pilot-v1
+          title: 'Generative AI: Foundations'
+          description_audience: ''
+          description_short: ''
+          description: This unit introduces the foundational aspects of generative AI.
+          student_description: ''
