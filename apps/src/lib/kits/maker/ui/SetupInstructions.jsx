@@ -19,11 +19,6 @@ import {
 import styles from './setup-instructions.module.scss';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
-// These are used for jumplinks between the
-// two sets of instructions in this component.
-const checklistId = 'connectYourBoardChecklist';
-const installInstructionsId = 'installInstructions';
-
 export default class SetupInstructions extends React.Component {
   constructor(props) {
     super(props);
@@ -78,15 +73,12 @@ class ConnectionInstructions extends React.Component {
       : this.renderWebSerialConnectButton();
 
     if (!shouldUseWebSerial()) {
-      // return at least some text that says you need to use supported browser.
-      // return null;
+      // return <p>{applabI18n.makerSetupWebSerialNotSupported()}</p>;
     }
 
     return (
-      <div>
-        <h2 id={checklistId}>
-          {applabI18n.makerSetupConnectBoardChecklistTitle()}
-        </h2>
+      <>
+        <h2>{applabI18n.makerSetupConnectBoardChecklistTitle()}</h2>
         <p>
           {applabI18n.makerSetupConnectWithWebSerial()}
           <strong>{applabI18n.makerSetupConnectOnlyOneTab()}</strong>
@@ -99,11 +91,15 @@ class ConnectionInstructions extends React.Component {
             {applabI18n.makerSetupWebSerialWindowConnect()}
             <ul className={styles.troubleshootList}>
               <li>
-                <SafeMarkdown
-                  markdown={applabI18n.makerSetupNoCompatibleDevices({
-                    installInstructionsId,
-                  })}
-                />
+                {applabI18n.makerSetupCpNoCompatibleDevices()}
+                <CollapsibleSection
+                  title="Additional instructions for Circuit Playground Express"
+                  titleVisualAppearance="body-four"
+                  collapsedIcon="caret-right"
+                  expandedIcon="caret-down"
+                >
+                  <CPExpressInstallInstructions />
+                </CollapsibleSection>
               </li>
             </ul>
           </li>
@@ -114,15 +110,7 @@ class ConnectionInstructions extends React.Component {
           openExternalLinksInNewTab={true}
         />
         {connectionState}
-        <CollapsibleSection
-          title={applabI18n.makerSetupCPXInstallHeader()}
-          titleSemanticTag="h3"
-          titleVisualAppearance="heading-l"
-          titleStyle={styles.collapsibleTitleOverride}
-        >
-          <CPExpressInstallInstructions />
-        </CollapsibleSection>
-      </div>
+      </>
     );
   }
 }
@@ -205,16 +193,12 @@ class CPExpressInstallInstructions extends React.Component {
 
   render() {
     return (
-      <div id={installInstructionsId}>
-        {/* <h2>{applabI18n.makerSetupCPXInstallHeader()}</h2> */}
+      <div className={styles.collapsedContent}>
+        <h4>{applabI18n.makerSetupCPXInstallHeader()}</h4>
         <ol>
           <li>{this.renderStepOne()}</li>
           <li>{this.renderStepTwo()}</li>
-          <li>
-            <SafeMarkdown
-              markdown={applabI18n.makerSetupCPXInstallStep3({checklistId})}
-            />
-          </li>
+          <li>{applabI18n.makerSetupCPXInstallFinalStep()}</li>
         </ol>
       </div>
     );

@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useRef} from 'react';
 import moduleStyles from './collapsible-section.module.scss';
 import {
   SemanticTag as TypographyElementSemanticTag,
@@ -37,6 +37,7 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
     setCollapsed(!collapsed);
   }, [collapsed, setCollapsed]);
   const hasTitleIcon = titleIcon !== undefined;
+  const contentRef = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   return (
     <>
@@ -78,7 +79,19 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
           </Typography>
         </button>
       </div>
-      {!collapsed && children}
+      {/* The tradeoff for the nice animation here is that everything gets loaded even if collapsed. 
+      We might not want that on every usage of this? I think it's pretty neat tho.? */}
+      <div
+        ref={contentRef}
+        className={moduleStyles.contentParent}
+        style={
+          collapsed
+            ? {height: '0px'}
+            : {height: contentRef.current.scrollHeight + 'px'}
+        }
+      >
+        {children}
+      </div>
     </>
   );
 };

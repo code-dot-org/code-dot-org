@@ -17,7 +17,7 @@ li p {
 }
 
 .troubleshootList {
-  list-style-type: "⚠️ ";
+  list-style-type: '⚠️ ';
 }
 
 figure {
@@ -25,10 +25,16 @@ figure {
   margin-inline-start: 0;
   padding: 8px;
   border-radius: 4px;
-  background: $neutral_light;
+  background: $neutral_dark10;
   border: 1px solid $neutral_dark20;
 }
 
 .collapsibleTitleOverride {
   margin-left: 10px;
+}
+
+.collapsedContent {
+  background-color: $neutral_light;
+  padding: 10px;
+  border-radius: 4px;
 }
