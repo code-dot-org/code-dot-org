@@ -59,6 +59,7 @@ export default function RunAIAssessmentButton({
     return i18n.runAiAssessment();
   };
 
+  // fetch initial status
   useEffect(() => {
     if (!!rubricId && !!studentUserId) {
       fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
@@ -94,6 +95,7 @@ export default function RunAIAssessmentButton({
     }
   }, [rubricId, studentUserId, setStatus]);
 
+  // poll for status updates
   useEffect(() => {
     if (polling && !!rubricId && !!studentUserId) {
       const intervalId = setInterval(() => {
@@ -169,7 +171,7 @@ export default function RunAIAssessmentButton({
             color={Button.ButtonColor.neutralDark}
             onClick={handleRunAiAssessment}
             style={{margin: 0}}
-            disabled={status !== STATUS.READY}
+            disabled={status !== STATUS.READY && status !== STATUS.ERROR}
           >
             {polling && <i className="fa fa-spinner fa-spin" />}
           </Button>
