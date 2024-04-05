@@ -619,6 +619,10 @@ p.aiAssessmentScoreText {
 
 p.aiAssessmentEvidenceBlock {
   margin: 0;
+
+  + ul li p {
+    margin: 0;
+  }
 }
 
 .aiConfidenceBox {
@@ -1161,6 +1165,7 @@ button.infoAlertRight {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 .settingsContainers {
