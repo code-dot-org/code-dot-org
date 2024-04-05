@@ -4,9 +4,10 @@ import './styles/Weblab2View.css';
 
 import {Config} from './Config';
 
-import {CDOIDE, ConfigType, ProjectType} from 'cdo-ide-poc';
+import {CDOIDE} from '@cdoide/CDOIDE';
+import {ConfigType, ProjectType} from '@cdoide/types';
 
-//import CDOEditor from './Editor';
+import CDOEditor from './Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -24,10 +25,10 @@ const defaultConfig: ConfigType = {
   // showLeftNav: false,
   // showEditor: false,
   // showPreview: false,
-  // showRunBar: true,
+  showRunBar: true,
   // showDebug: true,
   activeLeftNav: 'Files',
-  //EditorComponent: CDOEditor,
+  EditorComponent: CDOEditor,
   // editableFileTypes: ["html"],
   // previewFileTypes: ["html"],
   leftNav: [
@@ -44,7 +45,18 @@ const defaultConfig: ConfigType = {
       component: 'Search',
     },
   ],
-  sideBar: ['fa-circle-question', 'fa-folder'],
+  sideBar: [
+    {
+      icon: 'fa-circle-question',
+      label: 'Help',
+      action: () => window.alert('Help is not currently implemented'),
+    },
+    {
+      icon: 'fa-folder',
+      label: 'Files',
+      action: () => window.alert('You are already on the file browser'),
+    },
+  ],
   instructions,
   //editableFileTypes: ["html", "json", "js", "css"],
   //previewFileTypes: ["json", "html", "js"],

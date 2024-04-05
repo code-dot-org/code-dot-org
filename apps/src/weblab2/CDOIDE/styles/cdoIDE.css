@@ -1,0 +1,17 @@
+.cdo-ide-outer {
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+.cdo-ide-inner {
+  display: grid;
+
+  border: 1px solid lightgray;
+  width: 100%;
+  height: 100%;
+}
+
+.cdo-ide-area {
+  width: 100%;
+  border: 1px solid lightgray;
+}
