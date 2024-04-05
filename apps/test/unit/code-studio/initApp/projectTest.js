@@ -14,6 +14,8 @@ import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 describe('project.js', () => {
   let sourceHandler;
 
+  window.dashboard = {...window.dashboard, project};
+
   const setData = project.__TestInterface.setCurrentData;
   const setSources = project.__TestInterface.setCurrentSources;
   const setInitialSaveComplete = project.__TestInterface.setInitialSaveComplete;
