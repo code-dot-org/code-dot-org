@@ -472,6 +472,20 @@ describe('LearningGoals - Enzyme', () => {
     );
   });
 
+  it('renders the summary page after AI evaluations are run', () => {
+    const wrapper = shallow(
+      <LearningGoals
+        learningGoals={learningGoals}
+        aiEvaluations={aiEvaluations}
+        teacherHasEnabledAi
+      />
+    );
+    wrapper.find('button').first().simulate('click');
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
+      i18n.rubricLearningGoalSummary()
+    );
+  });
+
   it('renders AiAssessment when teacher has AiEnabled and the learning goal can be tested by AI', () => {
     const wrapper = shallow(
       <LearningGoals
