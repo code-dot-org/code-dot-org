@@ -2,7 +2,7 @@
 // studio.code.org/my-professional-learning
 
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -14,7 +14,34 @@ import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnA
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
 import style from './landingPage.module.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
-import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
+
+const DEFAULT_SELECTED_TAB = 'myPL';
+
+const getAvailableTabs = () => {
+  // [TODO]: return a subset of the tabs below based on the user's permission level
+  return [
+    {
+      value: 'myPL',
+      text: i18n.plLandingHeading(),
+    },
+    {
+      value: 'myFacilitatorCenter',
+      text: i18n.plLandingTabFacilitatorCenter(),
+    },
+    {
+      value: 'myRPCenter',
+      text: i18n.plLandingTabRPCenter(),
+    },
+    {
+      value: 'myWorkshopOrganizerCenter',
+      text: i18n.plLandingTabWorkshopOrganizerCenter(),
+    },
+    {
+      value: 'myInstructorCenter',
+      text: i18n.plLandingTabInstructorCenter(),
+    },
+  ];
+};
 
 export default function LandingPage({
   lastWorkshopSurveyUrl,
@@ -24,24 +51,14 @@ export default function LandingPage({
   workshopsAsParticipant,
   plCoursesStarted,
 }) {
-  const [currentTab, setCurrentTab] = useState('tab1');
+  // [TODO]: Uncomment this out once currentTab will affect what content is showed.
+  // const [currentTab, setCurrentTab] = useState(DEFAULT_SELECTED_TAB);
+  const availableTabs = getAvailableTabs();
 
   const showGettingStartedBanner =
     !currentYearApplicationId &&
     workshopsAsParticipant?.length === 0 &&
     plCoursesStarted?.length === 0;
-
-  const handleChangeTab = tab => {
-
-
-
-    console.log(tab);
-
-
-
-
-    setCurrentTab(tab);
-  };
 
   const RenderGettingStartedBanner = () => (
     <TwoColumnActionBlock
@@ -115,27 +132,22 @@ export default function LandingPage({
         headingText={i18n.professionalLearning()}
         backgroundColor={color.light_gray_50}
       >
-        {
-          <Tabs
-            name="default_tabs"
-            tabs={[
-              {
-                value: 'tab1',
-                text: 'Tab 1',
-              },
-              {
-                value: 'tab2',
-                text: 'Tab 2',
-              },
-              {
-                value: 'tab3',
-                text: 'Tab 3',
-              },
-            ]}
-            defaultSelectedTabValue="tab1"
-            onChange={tab => handleChangeTab(tab)}
-          />
-        }
+        {availableTabs && (
+          <div className={style.myPlTabsContainer}>
+            <Tabs
+              name="myPLTabs"
+              tabs={availableTabs}
+              defaultSelectedTabValue={DEFAULT_SELECTED_TAB}
+              onChange={tab => {
+                // [TODO]: Uncomment this out once
+                // currentTab affects what content
+                // is shown.
+                //setCurrentTab(tab);
+                console.log(tab);
+              }}
+            />
+          </div>
+        )}
       </HeaderBannerNoImage>
       <main className={style.wrapper}>
         {showGettingStartedBanner && RenderGettingStartedBanner()}

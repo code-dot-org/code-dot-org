@@ -8,6 +8,14 @@ main.wrapper {
   margin-inline: auto;
 }
 
+section {
+  padding: 4rem 1rem 0 1rem !important;
+}
+
+.myPlTabsContainer {
+  margin-top: 1.5rem;
+}
+
 // TODO - this can be removed once the components on this page
 // are updated to use the Typography component.
 h2 {
