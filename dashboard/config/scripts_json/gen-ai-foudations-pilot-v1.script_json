@@ -1,0 +1,716 @@
+{
+  "script": {
+    "name": "gen-ai-foudations-pilot-v1",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_course": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": "gen-ai-foudations-pilot-v1",
+    "serialized_at": "2024-04-05 06:56:29 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "gen-ai-foudations-pilot-v1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Generative AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Input & Training Data",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Bias in the Machine",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Understanding Embeddings",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Embeddings: How They're Created",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Understanding Neural Networks",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Neural Networks: How They're Trained",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Attention Is All You Need",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Outputs & Probabilities",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Hallucinations and Fabrications",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Project: Demystifying Generative AI",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "dc94a28e-390f-4a8b-8fb2-297b8b51b812",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc94a28e-390f-4a8b-8fb2-297b8b51b812",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "a6ea3582-7c5f-4ae4-92ee-62acb9a93842",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a6ea3582-7c5f-4ae4-92ee-62acb9a93842",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "daeb4aa6-675c-42c8-a526-e1179c8259fd",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "daeb4aa6-675c-42c8-a526-e1179c8259fd",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "9b565363-fe3d-4018-b389-f980f8864f32",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b565363-fe3d-4018-b389-f980f8864f32",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "c2210dad-3299-4204-81e9-0a2b05c6ae03",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c2210dad-3299-4204-81e9-0a2b05c6ae03",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "be1d8ad2-b54c-4480-b5c3-920d9ccfae10",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be1d8ad2-b54c-4480-b5c3-920d9ccfae10",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "587bac02-2e17-4d4a-a823-63809d6fca72",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "587bac02-2e17-4d4a-a823-63809d6fca72",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "cf6d97c1-66b8-4160-940a-3cca68bdc45d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cf6d97c1-66b8-4160-940a-3cca68bdc45d",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "ec6ba39b-83b9-44b8-a816-0173bde0672f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec6ba39b-83b9-44b8-a816-0173bde0672f",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "6fcac46f-78ba-4e6a-835c-7f3fd958a673",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/fb07b0240483d78f9887b0bcf661c05c-image-1712299393149.png\" target=\"_blank\"><img src=\"https://images.code.org/fb07b0240483d78f9887b0bcf661c05c-image-1712299393149.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What animal do you see in the picture below?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This image is an optical illusion - some students may see a duck, while others will see a rabbit. Students who see the duck will think the animal is facing to the left, with the two long appenges acting as the beak. Students who see the rabbit will think the animal is facing to the right, with the two long appendages acting as the ears. Once students know how to view the image, they may find themselves switching back and forth in how they view the image. In the class discussion, both views are correct and let students surface that there are two different ways to view the image before pointing it out explicitly.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/ff2d805a04f849f1503a6829fcaed341-image-1712299416251.png\" target=\"_blank\"><img src=\"https://images.code.org/ff2d805a04f849f1503a6829fcaed341-image-1712299416251.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Suppose I wanted you to see this animal as a duck. What could I have done to make that clearer?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are many possible answers to this, such as adding color or drawing more items in the scene to indicate a setting (like water for a duck or a hole in the ground for a rabbit) or drawing more of the body. Emphasize answers that focus on how having additional information in the image helps add context that your brain can use to make sense of the image. Avoid answers that suggest re-drawing the image or clarifying details - the focus should be on how, even with this same ambiguous drawing, the surrounding details (like color or setting) can still give clues as to what this image is supposed to be.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/ac26ebc884565ad49f238256ba239e45-image-1712299418331.png\" target=\"_blank\"><img src=\"https://images.code.org/ac26ebc884565ad49f238256ba239e45-image-1712299418331.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> A key detail in viewing this illusion is context - the surrounding details that help us decide the meaning of what we’re looking at. In this version of the illusion, it’s the same object but it’s orientation is the context we need to know what we’re supposed to be looking at - a duck on the left, and a rabbit on the right.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/47c4101ffab0cbe1bc304a54ee4630f7-image-1712299420089.png\" target=\"_blank\"><img src=\"https://images.code.org/47c4101ffab0cbe1bc304a54ee4630f7-image-1712299420089.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The same thing can happen with language, where words or sentences can sometimes have ambiguous meanings. For example, is this sentence saying “I saw the man…” [pause] “...with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Or is it saying “I saw…” [pause] “... the man with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/b747987dd8e04251165e87196dbaac5d-image-1712299422405.png\" target=\"_blank\"><img src=\"https://images.code.org/b747987dd8e04251165e87196dbaac5d-image-1712299422405.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This can be a problem for language models when they try to generate responses - how do they know the intended meaning of sentences as they get more complex? This is what we’re going to investigate today.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "6fcac46f-78ba-4e6a-835c-7f3fd958a673",
+        "lesson_activity.key": "dc94a28e-390f-4a8b-8fb2-297b8b51b812"
+      }
+    },
+    {
+      "key": "a71ffb5a-a1b1-41e0-9666-31dc27d3e979",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/3be86e0e75d1fdfb6709a54efc490bb6-image-1712299426683.png\" target=\"_blank\"><img src=\"https://images.code.org/3be86e0e75d1fdfb6709a54efc490bb6-image-1712299426683.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We are exploring how words can have multiple meanings, but we can usually determine the intended meaning based on context clues in the sentence. This could be from looking at other words in the sentence or the grammar of the sentence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/55a9c74b12b6ef9922d6a9796d94793c-image-1712299428720.png\" target=\"_blank\"><img src=\"https://images.code.org/55a9c74b12b6ef9922d6a9796d94793c-image-1712299428720.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are the different meanings of the word “bat” used in each passage?\n\t\t<br />\n\t\t<br />Have students share with a partner before regrouping as a full class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> These passages were used in an earlier lesson, so students should quickly recall these differences: one passage uses “bat” in the context of a team sport, while another uses “bat” in the context of the flying animal.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/7509f82f0f2a2ab6981357b258c90c65-image-1712299430297.png\" target=\"_blank\"><img src=\"https://images.code.org/7509f82f0f2a2ab6981357b258c90c65-image-1712299430297.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are other possible meanings of the word bat?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may come up with a variety of meanings, or link the word as parts of phrases. For example, “didn’t bat an eyelash” is a phrase meaning “not surprised”. Or combining, “bat-man” describes a certain superhero. There may be other new slang meanings that didn’t exist at the time this lesson was written that you can rely on. However, if no one suggests it, make sure to explicitly call out “bat” as a verb meaning a swatting motion like when a cat plays with toys. This will be important for the next activity.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/0d557b0faf6055a451ce028b39b629c5-image-1712299431821.png\" target=\"_blank\"><img src=\"https://images.code.org/0d557b0faf6055a451ce028b39b629c5-image-1712299431821.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Which meaning is being used in this sentence: the tiny animal was overwhelmed with confetti and it attempted to bat away the glitter with its little paws.\n\t\t<br />\n\t\t<br />Have students discuss in small groups before quickly voting as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should vote for choice (C). Wait to ask students to justify their choice until the next slide.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Whiteboards or Posters:** Consider having this sentence written on a whiteboard or poster paper, since the next slide involves drawing arrows to represent how other words influenced how we understood the word ‘bat’ in this sentence."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a71ffb5a-a1b1-41e0-9666-31dc27d3e979",
+        "lesson_activity.key": "a6ea3582-7c5f-4ae4-92ee-62acb9a93842"
+      }
+    },
+    {
+      "key": "4f177aeb-3c28-4e3c-967e-082acb735031",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/fb442093fe0cc0722595b14b9a4e1f93-image-1712299433460.png\" target=\"_blank\"><img src=\"https://images.code.org/fb442093fe0cc0722595b14b9a4e1f93-image-1712299433460.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How did the other words in the sentence help you determine the meaning? Draw arrows from the other words in the sentence that helped you figure out the intended meaning\n\t\t<br />\n\t\t<br />If you are able to draw on the screen or write the sentence on a whiteboard or another surface, it’s best to ask students to respond and draw arrows in real-time based on their answers. Prompt students to explain why these particular words helped with an understanding of the word “bat”. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are many possible answers as long as students can justify their reasoning. However, make sure to emphasize the following words as contributing to this word’s meaning:\n\t\t<br />\n\t\t<br />“Animal” - because bats could be animals or they could be a motion used by animals, this word provides a strong signal\n\t\t<br />“To” and “Away” - these together give clues that the word may be a verb rather than a noun\n\t\t<br />“Paws” - because “batting” is something that happens with animal paws\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Here’s one way a language model could have used other words in the sentence to help understand which meaning of “bat” should be used. Notice that some words help in different ways - for example, “to” and “away” give clues to the grammar of the sentence and indicate “bat” is likely a verb, but “animal” and “paws” give clues to the meaning of the word itself. Now that we’ve done one example, it’s your turn to come up with words like this!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/95570aa4bbcdd46fa47d90c51ed16e4a-image-1712299435061.png\" target=\"_blank\"><img src=\"https://images.code.org/95570aa4bbcdd46fa47d90c51ed16e4a-image-1712299435061.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the Meaning from Context Activity Guide\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/950baa973f04c3cc06ae49dc16f870dc-image-1712299437089.png\" target=\"_blank\"><img src=\"https://images.code.org/950baa973f04c3cc06ae49dc16f870dc-image-1712299437089.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Point out to students that the first page of the activity guide is the same example just completed as a class, then have them flip to the back side\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/e2dc3a08a723c0964f8f894a3088b6fd-image-1712299438707.png\" target=\"_blank\"><img src=\"https://images.code.org/e2dc3a08a723c0964f8f894a3088b6fd-image-1712299438707.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> 1) Come up with a word that has at least 3 different meanings\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> 2) Write a sentence that could help a language model determine one of these intended meanings\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Repeat this for all 3 words. Do not fill in the last box of each table\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give students time work through each example and generate their own words. If students are struggling, encourage them to think of phrases that mean something different at home or with friends than they do at school. If a student is really stuck, consider suggesting any of the following words to get them started:\n\t\t<br />- Date\n\t\t<br />- Spring\n\t\t<br />- Bark\n\t\t<br />- Ring\n\t\t<br />- Bow\n\t\t<br />- Match\n\t\t<br />- Light\n\t\t<br />- Bank\n\t\t<br />- Rock\n\t\t<br />- Fly\n\t\t<br />\n\t\t<br />Notice any words and sentences that stand out and could be shared as a full class. Once students have progressed far enough, continue to have them trade papers with a partner.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Complex Sentences:** As an extension, some students may find it enriching or challenging to design a single sentence that uses all three meanings of the word. For example, this sentence uses three different definitions of the word “fly”: “The angler, wanting to match his fly to the insects that were hatching that afternoon, quickly snatched a small fly from a flower to examine it closer, before it could escape his grasp and fly away”. If a student decides to do this, their partner would draw arrows to all three uses of the word in the sentence and justify what each one means."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4f177aeb-3c28-4e3c-967e-082acb735031",
+        "lesson_activity.key": "a6ea3582-7c5f-4ae4-92ee-62acb9a93842"
+      }
+    },
+    {
+      "key": "85b3ee57-006c-491e-aa78-285e58903481",
+      "position": 3,
+      "properties": {
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/f325cea9ca38e2b1f4aeff9531904bd6-image-1712299440360.png\" target=\"_blank\"><img src=\"https://images.code.org/f325cea9ca38e2b1f4aeff9531904bd6-image-1712299440360.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Trade activity guides with a partner!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/53bd394ef68fe04b3af0b8f3b51ddf7d-image-1712299442026.png\" target=\"_blank\"><img src=\"https://images.code.org/53bd394ef68fe04b3af0b8f3b51ddf7d-image-1712299442026.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students read the meaning of each word, then read the provided sentence. In the last box, write down which meaning is being used in the sentence. Draw arrows to show how the other words in the sentence helped you understand the intended meaning of the word\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they guess the meaning the other person included. Make sure they are also drawing arrows from the words that helped inform the meaning. The number of arrows will vary from sentence to sentence, but look for at least 2 arrows with each sentence as a minimum. Consider also asking students if they’d be willing to share with the class in the next part of the lesson so they have a heads-up before being called on and can choose to opt-out if they don’t feel comfortable sharing.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment: Contextual Meanings:** A key learning goal in this lesson is modeling how words in a sentence add context to help determine the correct meaning of words, which is also a process language models use. Monitoring students as they complete this section of the activity guide can help inform how well students are grasping this concept. If students are struggling, consider regrouping and doing a few examples as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "85b3ee57-006c-491e-aa78-285e58903481",
+        "lesson_activity.key": "a6ea3582-7c5f-4ae4-92ee-62acb9a93842"
+      }
+    },
+    {
+      "key": "16d9721a-3e77-40cd-a938-56e5e61afd38",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/d2a6b10799f62d62252fda1935e6d5ab-image-1712299443709.png\" target=\"_blank\"><img src=\"https://images.code.org/d2a6b10799f62d62252fda1935e6d5ab-image-1712299443709.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Give students an opportunity to share out examples, or call out any examples you noticed while circulating. Use this as an opportunity to highlight student creativity in choosing words and designing sentences that help us understand an intended meaning.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve now examined how we, as humans, determine the meanings of words from context clues. Now let’s examine how a language model does something similar\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/0c60002de6410b78f577962d03c508fd-image-1712299445492.png\" target=\"_blank\"><img src=\"https://images.code.org/0c60002de6410b78f577962d03c508fd-image-1712299445492.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> In this exercise, we wrote down the potential meanings and uses of a word. How does a language model represent this same thing?\n\t\t<br />\n\t\t<br />Have students discuss with a neighbor before regrouping. You can also encourage students to use their graphic organizer to help with this question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question has a single intended answer: Embeddings. Try to get to this answer quickly rather than having students continually guess and try to “read your mind”. If students don’t answer correctly after two or three guesses, it’s okay to tell them explicitly.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment: Key Unit Concepts:** A key learning goal throughout the unit is how embeddings represent the semantic “definition” meaning of words, and neural networks represent the relational meanings of words. This discussion question and the next one are an opportunity to see how well students have internalized these concepts. If students aren’t able to think up these vocabulary words in response to these questions, consider finding time for students to review the big ideas and vocabulary from this unit in a later class period, but avoid the instinct to dwell on it in this moment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "16d9721a-3e77-40cd-a938-56e5e61afd38",
+        "lesson_activity.key": "a6ea3582-7c5f-4ae4-92ee-62acb9a93842"
+      }
+    },
+    {
+      "key": "e01e5ea5-7c78-4b70-aff0-7d65911055e5",
+      "position": 5,
+      "properties": {
+        "description": "\n<table>\n\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/7f96e109d08f28547535dda1478c15b6-image-1712299447233.png\" target=\"_blank\"><img src=\"https://images.code.org/7f96e109d08f28547535dda1478c15b6-image-1712299447233.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Embeddings are how language models represent words using numbers. These embeddings are created in such a way that they approximate the meaning of words, based on how they’ve been used in the training data.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/0b805eab53beac1105d39490a7920712-image-1712299448942.png\" target=\"_blank\"><img src=\"https://images.code.org/0b805eab53beac1105d39490a7920712-image-1712299448942.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> In this exercise, we drew arrows to represent relationships between words within a sentence. How does a language model represent this same thing?\n\t\t<br />\n\t\t<br />Have students discuss with a neighbor before regrouping. You can also encourage students to use their graphic organizer to help with this question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question has a single intended answer: Neural Networks. Try to get to this answer quickly rather than having students continually guess and try to “read your mind”. If students don’t answer correctly after two or three guesses, it’s okay to tell them explicitly.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/ca03d5cf92c30e21b028824e001fd4c3-image-1712299450653.png\" target=\"_blank\"><img src=\"https://images.code.org/ca03d5cf92c30e21b028824e001fd4c3-image-1712299450653.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Neural Networks are how language models represent relationships between words in a sentence. These networks are created in such a way that they approximate common sentence structures like subject/noun or verb/object grammatical relationships, based on how the training data is structured.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Generative AI:** The next set of slides introduce a core innovation with language models - the Attention Mechanism. This innovation was first introduced in 2017 from a team at Google in a paper titled Attention is All You Need (what a clever name!). It introduces this Attention Mechanism, wrapped up in a special kind of computing architecture called a Transformer (essentially the combined Storage and Processing components in our model). Before presenting these slides, you should consider exploring the interactive website [“Generative AI exists because of the transformer” from the Financial Times](https://ig.ft.com/generative-ai/). This interactive website offers a similar explanation as the one to follow, with very engaging graphics and visuals. You can also consider showing it to students to reinforce the concepts on the next few slides, although it does go into more depth than is required in this unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e01e5ea5-7c78-4b70-aff0-7d65911055e5",
+        "lesson_activity.key": "a6ea3582-7c5f-4ae4-92ee-62acb9a93842"
+      }
+    },
+    {
+      "key": "46c1c557-b20c-4747-b398-6d643ffffe23",
+      "position": 6,
+      "properties": {
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/2d6cad5bb7c33c3f055993a3fcc35647-image-1712299453594.png\" target=\"_blank\"><img src=\"https://images.code.org/2d6cad5bb7c33c3f055993a3fcc35647-image-1712299453594.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Embeddings and Neural Networks have existed for a long time, even before language models exploded in popularity. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The true innovations in language models was a new concept that tied these two together: a process called Attention\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/72ca587d4f71de0d225a733b34082ddd-image-1712299455381.png\" target=\"_blank\"><img src=\"https://images.code.org/72ca587d4f71de0d225a733b34082ddd-image-1712299455381.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Attention is a process that updates the meaning of each word by using the context from other words in the input.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> the model starts with an initial set of embeddings for all the words in the input\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Then the input itself is analyzed with a neural network, looking for the relationship between words.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this example, it will look at how all of the other words in the sentence influence the meaning of the word bat.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And after going through the neural network, it will determine which words are most important in understanding the intended meaning of the word “bat”.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> These results are then used to update the embeddings that the model is using to represent words.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this case, the other words around “bat” in this sentence make it seem less likely that it’s being used as a verb, like to bat an eyelash or how a cat bats away yarn.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/bf733014f8f830344bf4bddee87e9fd6-image-1712299457563.png\" target=\"_blank\"><img src=\"https://images.code.org/bf733014f8f830344bf4bddee87e9fd6-image-1712299457563.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This process repeats multiple times, which is why our diagram has a cycle. Each time, the meaning of the word is updated to better reflect its meaning in the entire sentence.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Eventually, the process ends and the embeddings have been updated for the last time. In this case, the words “The”, “lived”, and “cave” are most important for determining the intended meaning of the word “bat”.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And these are used to update the embeddings one last time, indicating the model has changed how it represents the word “bat” to refer to the animal rather than anything else. These updated embeddings are called Contextual Embeddings, and represent the intended meaning of the word in the context of the sentence.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> At this point, we’ve reached a high level understanding of the intended meaning of the word in the sentence and we’re ready to continue to the final step in the process: the output, where we actually generate words in our response. We’re going to learn more about this in the next lesson!\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "46c1c557-b20c-4747-b398-6d643ffffe23",
+        "lesson_activity.key": "a6ea3582-7c5f-4ae4-92ee-62acb9a93842"
+      }
+    },
+    {
+      "key": "b5ae75a9-2cd9-4aff-a1fb-811fc498b7c1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b5ae75a9-2cd9-4aff-a1fb-811fc498b7c1",
+        "lesson_activity.key": "daeb4aa6-675c-42c8-a526-e1179c8259fd"
+      }
+    },
+    {
+      "key": "61d0a114-97c3-4f8a-82a8-49c82c6b23e5",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/befa8a890bbf7930d5ffcb7a6829f87d-image-1712298204342.png\" target=\"_blank\"><img src=\"https://images.code.org/befa8a890bbf7930d5ffcb7a6829f87d-image-1712298204342.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Give students an overview of the Fortunately / Unfortunately game:\n\t\t<br />We start with a simple sentence. For example: Steve needed to go to the store to get some apples\n\t\t<br />The next person continues the story with a generally positive sentence that starts with “Fortunately: …”\n\t\t<br />The next person continues the sentence with a generally negative sentence that starts with “Unfortunately: …”\n\t\t<br />Repeat five or six times, then pick a new starting sentence\n\t\t<br />\n\t\t<br />Play 1-2 rounds of this as a class before continuing to the next slide that adds a new twist.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Video Example:** For a video explanation of how this game works, consider reviewing <a href=\"https://www.youtube.com/watch?v=6wtU4FxsOTQ\">this video</a> before presenting the game to the class"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "61d0a114-97c3-4f8a-82a8-49c82c6b23e5",
+        "lesson_activity.key": "9b565363-fe3d-4018-b389-f980f8864f32"
+      }
+    },
+    {
+      "key": "cd745a59-b2e3-4752-8261-bfaf6f87059f",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/4fc9325a9f833727caa1734aa4bea06a-image-1712298229304.png\" target=\"_blank\"><img src=\"https://images.code.org/4fc9325a9f833727caa1734aa4bea06a-image-1712298229304.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’re going to add a new element to this: your responses must now align to a scale from “realistic” and “likely”, to “fantastical” and “unlikely. For example, if our starting sentence was still “Steve needed to go to the store to get some apples”, then:\n\t\t<br />A realistic “fortunately” answer might be “Fortunately, he had a full tank of gas in his car”\n\t\t<br />And a fantastical “fortunately” answer might be “Fortunately, Steve secretly a superhero and could fly wherever he wanted, so he could easily get to the store”\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play and additional 1-2 rounds. While playing, point on the screen to where responses should fall on this scale, or draw the scale on a whiteboard or poster paper to point out where responses should lie. Lean into the silliness of fantastical answers, especially in contrast to more realistic ones.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/777bf47fa8cb99b7f18010fdef1cd2c1-image-1712298231809.png\" target=\"_blank\"><img src=\"https://images.code.org/777bf47fa8cb99b7f18010fdef1cd2c1-image-1712298231809.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This storytelling game illustrates how it’s possible to generate a spectrum of possible results - some that are realistic and more likely to happen in real life, and some that are fantastical and unlikely to happen in real life. It turns out this same idea applies to how language models generate responses on a word-by-word basis. This is the final step in the language model process - the output layer - where a list of possible responses is generated and then it needs to decide which one to pick - something more probable based on the data it has? Or something improbable? Today we’ll explore what this looks like for a language model on a word-by-word basis.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "cd745a59-b2e3-4752-8261-bfaf6f87059f",
+        "lesson_activity.key": "9b565363-fe3d-4018-b389-f980f8864f32"
+      }
+    },
+    {
+      "key": "977714e9-09a6-47f9-af66-94cd6a95dfec",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/81c478935e478a2c13718340025633ec-image-1712298235196.png\" target=\"_blank\"><img src=\"https://images.code.org/81c478935e478a2c13718340025633ec-image-1712298235196.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’re going to explore this last facet of language models by returning to the idea of a mad-lib. Let’s read this mad-lib together:\n\t\t<br />\n\t\t<br />Once upon a time, in a vast and mystical _______, there lived a small yet adventurous ________. Every morning, it would set out to explore the _______, searching for hidden treasures and secret _________.  One day, during its travels, it stumbled upon an ancient ________, covered in vines and mystery. Inside, there was a magical ________ that promised to grant the finder their heart's deepest desire.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/91db47fa0053ceee0fa95eabf6eb83e8-image-1712298237109.png\" target=\"_blank\"><img src=\"https://images.code.org/91db47fa0053ceee0fa95eabf6eb83e8-image-1712298237109.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Unlike a traditional mad-lib where you can fill in whatever you want, we’re going to play with a set amount of words that we can use.\n\t\t<br />\n\t\t<br />Group: Have students get into groups, ideally 6 groups in total.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the Mad-Lib cards to each group. These should have been cut into individual cards before class. There are 48 cards total - with 6 groups, each group will get 12 cards. You can keep cards in the same group on the handout, or completely randomize the cards - either will work for this activity.\n\t\t<br />\n\t\t<br />Also pass out the Mad-Lib Story handout for easy access for groups. This also should be cut up before distributing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/3198cf3388163f9eb9c3808a762a31f8-image-1712298239288.png\" target=\"_blank\"><img src=\"https://images.code.org/3198cf3388163f9eb9c3808a762a31f8-image-1712298239288.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Create a mad-lib using the cards in your group. You can be as silly or as serious as you’d like. Once you’re done, we’ll share a few as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with groups as they use the cards to complete their mad-libs. Identify a few unique stories to share out as a class.\n\t\t<br />\n\t\t<br />As groups are finishing up, bring up the Mad Lib Generator app and go into the “Generate Mad Lib” screen. This app does not need to be used by students - instead, you can drive this app while projecting to the class.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "977714e9-09a6-47f9-af66-94cd6a95dfec",
+        "lesson_activity.key": "c2210dad-3299-4204-81e9-0a2b05c6ae03"
+      }
+    },
+    {
+      "key": "1498e79a-44aa-40f4-a466-5889092b5f55",
+      "position": 2,
+      "properties": {
+        "progression_name": "[For Teachers] Mad Lib Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "1498e79a-44aa-40f4-a466-5889092b5f55",
+        "lesson_activity.key": "c2210dad-3299-4204-81e9-0a2b05c6ae03"
+      }
+    },
+    {
+      "key": "fdfbedb7-2f47-4243-bc47-93fddbd2f36a",
+      "position": 3,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/70aa0e56c14d6b39b7c4821a781abf80-image-1712298241973.png\" target=\"_blank\"><img src=\"https://images.code.org/70aa0e56c14d6b39b7c4821a781abf80-image-1712298241973.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Any groups want to share their mad-lib?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/c719c7d52575eac62cc2a3203e5bc30a-image-1712298243618.png\" target=\"_blank\"><img src=\"https://images.code.org/c719c7d52575eac62cc2a3203e5bc30a-image-1712298243618.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This app has data from 1000 people who completed this mad-lib with those same words. How do you think your choices compare to what others said?\n\t\t<br />\n\t\t<br />Model: Navigate to the “View Data” section of the app. Show the data behind-the-scenes of this app. You can also press the “Random Mad Lib from Data” button to generate one of these mad libs, which is pulled from one of these 1000 examples.\n    </td>\n  </tr>\n</table>",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**1,000 People Did This Mad-Lib? Really?** No - not really; this data is generated from a program designed to create certain probabilities that will be important later in the lesson. However, the result is identical to what would happen if we did survey people and gather data. If students ask about this, feel free to tell them that the data is as real as it can be for the lesson, but there aren’t actually 1000 people who’ve done this mad-lib."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fdfbedb7-2f47-4243-bc47-93fddbd2f36a",
+        "lesson_activity.key": "c2210dad-3299-4204-81e9-0a2b05c6ae03"
+      }
+    },
+    {
+      "key": "d6081919-4e97-4650-8d92-e958674721c3",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/13a295f97d09c675bdae14d246d0eaf8-image-1712298245078.png\" target=\"_blank\"><img src=\"https://images.code.org/13a295f97d09c675bdae14d246d0eaf8-image-1712298245078.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It’s time for the computer to make a mad lib, using a combination of our choices and this training data. We’re going to combine all of the choices we made as a class and see which ones are the most popular in this app. Whichever one is the most popular compared to our initial data is the one we’ll pick\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Family Feud:** There’s an aspect to this part of the activity that is very similar to the television show Family Feud. In this game, a survey is given to 100 people and the contestants have to try and guess the “most popular” answers - the more popular the answer, the more points they get. This is similar to what’s happened here: we have data from 1000 versions of this mad-lib, and we’re trying to guess which choices are the most popular. You could decide to frame this section of the activity around this game, but be sure to explain it thoroughly (or even show a clip from the show) to make sure all students in the room understand how the show works."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6081919-4e97-4650-8d92-e958674721c3",
+        "lesson_activity.key": "c2210dad-3299-4204-81e9-0a2b05c6ae03"
+      }
+    },
+    {
+      "key": "fee5d940-d5a3-444a-ab09-8e90d9fa0e01",
+      "position": 5,
+      "properties": {
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/5b6f4b722ff0b1a7b1dff282bfd4ce52-image-1712298246619.png\" target=\"_blank\"><img src=\"https://images.code.org/5b6f4b722ff0b1a7b1dff282bfd4ce52-image-1712298246619.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Navigate to the Probability section of the App. Follow these steps:\n\t\t<br />Ask each group to share their choice for the first noun in the mad lib. Type each noun into the inputs on the left\n\t\t<br />Press the “Calculate Scores” button. A list of numbers will appear - this represents how often that choice appears in the initial data. Point out to the class which word has the highest score - the higher the number: the more popular that choice.\n\t\t<br />Press the “Continue” button. The highest rated word will get chosen, and the top-section of the app will update. Then the side-panel will reset.\n\t\t<br />Repeat this process for each of the blanks in the mad-lib - each group shares their word, the words are compared with the input data, and the highest score is chosen.\n\t\t<br />Once all the words have been chosen, we can generate the mad lib.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Probability, not Preference:** At the end of the day, this screen involves choosing the “best” word for the computer to use from the choices that each group in the class made. It can be very easy for this to slip into the realm of “favorites” or “preferences”, where groups might argue one word is better than others for a variety of reasons. Ideally, the structure of this lesson steers away from these conversations by leaving that choice up to mathematics and probability - we aren’t making any kind of “value judgement” on the words, but instead comparing them to the data and seeing how frequently those words appeared in the data we collected. Hopefully this helps ground this decision away from ideas of “favorite” or “best”, and more towards “most probable from the data”. However, the underlying point - that there is some kind of preference or favoritism happening - is still fair, but the real place to have that conversation is when collecting the initial data used in the app. If students want the app to make different choices, they should collect more data and see how it influences the app."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fee5d940-d5a3-444a-ab09-8e90d9fa0e01",
+        "lesson_activity.key": "c2210dad-3299-4204-81e9-0a2b05c6ae03"
+      }
+    },
+    {
+      "key": "6b02ed20-019d-41b9-b5ce-162b1fb27219",
+      "position": 6,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/a6b10c422747e880071daf484c2d3261-image-1712298247994.png\" target=\"_blank\"><img src=\"https://images.code.org/a6b10c422747e880071daf484c2d3261-image-1712298247994.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Anyone else think the madlib that the computer generated is kinda…. Boring?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before sharing as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This prompt is purposefully leading, helping students notice that the most probable responses are also the least surprising. This can lead to pretty generic responses that may seem uncreative or bland. This is also what tends to happen with real language models - when asked to be creative without special prompting, the results from a language model can be bland and lukewarm since it’s pulling from the most commonly used phrases associated with the input. In the next chapter of the unit, students will learn techniques to make models more creative.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> By taking the highest-rated word in each group, we’ve created a “realistic” version of the mad-lib - even if a little unsurprising - where each response is the most probable choice based on the data already in the app. It turns out this whole process is pretty similar to what happens in actual language models\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/99dc397ceb30657f99313b294eddab5e-image-1712298249478.png\" target=\"_blank\"><img src=\"https://images.code.org/99dc397ceb30657f99313b294eddab5e-image-1712298249478.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We know enough about how language models work that we can start to represent how a language model could interpret this mad-lib. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Using the attention process, it can identify which other words in the mad-lib are influencing what words make sense to generate in these blanks. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It can also probably identify that these words will likely be nouns from the structure of the sentence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/91f7331f49c9422190c1330b3421b6b6-image-1712298254053.png\" target=\"_blank\"><img src=\"https://images.code.org/91f7331f49c9422190c1330b3421b6b6-image-1712298254053.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There’s one final step, where the model uses a special neural network to take all the calculations it’s done so far and generate a list of words that could potentially go in these blanks. This is similar to what each group did in this activity - as a class, we generated a list of potential words to fit in the mad-lib.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This network also creates a probability for each word, representing how likely it thinks this is the best choice to go in the blank. This is what the app helped with - by comparing our choices with the training data already in the app, we can see the probabilities for how often each word appears in that blank.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And then using this list of probabilities, it just picks the top one.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Reinforcing with Video:** The concepts in this lesson are reinforced with the [Large Language Models](https://www.youtube.com/watch?v=X-AWdfSFCHQ) video, featuring an explanation of language models by Mira Murati from OpenAI and Cristóbal Valenzuela of RunwayML. Specifically, the presenters discuss how probability is the primary way language models choose which words to use next when generating output. The truth is more complicated, as discussed throughout this unit, but if looking at just the output layer: this video can be a good supplement to this lesson. The only reason it’s not included is for timing - the video is long at 7 minutes in length. If you have extra time in your class period, consider showing the video and asking students to consider what they left out of the video and something new they learned in the video."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6b02ed20-019d-41b9-b5ce-162b1fb27219",
+        "lesson_activity.key": "c2210dad-3299-4204-81e9-0a2b05c6ae03"
+      }
+    },
+    {
+      "key": "c2543d55-36a1-41f8-874d-6f58b76b2e35",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/642dbe5a77536ba8692a4060239590b3-image-1712298260394.png\" target=\"_blank\"><img src=\"https://images.code.org/642dbe5a77536ba8692a4060239590b3-image-1712298260394.png\"></a></td>\n    <td style=\"width: 75%\">\n      \n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "c2543d55-36a1-41f8-874d-6f58b76b2e35",
+        "lesson_activity.key": "be1d8ad2-b54c-4480-b5c3-920d9ccfae10"
+      }
+    },
+    {
+      "key": "05317ea4-9fc8-4686-afca-2b866e5c5497",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/db5f7325736581605bc55ca1cf246ce8-image-1712296529155.png\" target=\"_blank\"><img src=\"https://images.code.org/db5f7325736581605bc55ca1cf246ce8-image-1712296529155.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Fill in the following mad-libs:\n\t\t<br />Thank ___.\n\t\t<br />He dipped his french fries in _________.\n\t\t<br />The current President is _________.\n\t\t<br />\n\t\t<br />Have students share with a partner before discussing as a full group.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will likely use common phrases or personal knowledge to answer these questions. Thank You will likely be a common answer to the first mad-lib. The second answer may vary depending on the region you live in or the cultural background of your students - ketchup is a common US condiment to serve with french fries, but some countries use mayonnaise or vinegar, while others may use hot sauce. If this comes up, emphasize how prior experiences inform our answers here.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/510a4f16351932b503ba686ef62de055-image-1712296536060.png\" target=\"_blank\"><img src=\"https://images.code.org/510a4f16351932b503ba686ef62de055-image-1712296536060.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> A language model answered these mad-libs with:\n\t\t<br />Thank you\n\t\t<br />He dipped his french fries in ketchup\n\t\t<br />The current President is Roosevelt\n\t\t<br />\n\t\t<br />Why do you think it gave these answers?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students might be skeptical that a language mode would truly give this answer, which is true - this is a made-up example for the purpose of this warm-up. However, if you imagine that a language model did give this answer, is there any logic behind that? From last class, students should recall that language models use probability to choose the words they generate. And since there were two different presidents named Roosevelt, one of which served 4 terms, it may be conceivable that the name “President” and “Roosevelt” are so highly correlated that the language model always picks this word to fill in this blank.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/a9776cd44d41831c989ebf0c3c4fbfcc-image-1712296615794.png\" target=\"_blank\"><img src=\"https://images.code.org/a9776cd44d41831c989ebf0c3c4fbfcc-image-1712296615794.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Language models are capable of incredibly complex behavior, but they can also be wrong. In fact, there are some very simple things that it can be wrong about. In this example, you can see the language model says there are 14 words in the sentence… when there are actually 17 words.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/0234072ba1b1b3c9aa4828c211d53865-image-1712296618788.png\" target=\"_blank\"><img src=\"https://images.code.org/0234072ba1b1b3c9aa4828c211d53865-image-1712296618788.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’ll examine other ways a language model can be inaccurate and explore how we, as designers and users of these models, can respond.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "05317ea4-9fc8-4686-afca-2b866e5c5497",
+        "lesson_activity.key": "587bac02-2e17-4d4a-a823-63809d6fca72"
+      }
+    },
+    {
+      "key": "6e6b44dc-ac1b-458d-8e0c-564b3d476ba4",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/3c7d603eda73e1114d124da91f2f20d9-image-1712296624446.png\" target=\"_blank\"><img src=\"https://images.code.org/3c7d603eda73e1114d124da91f2f20d9-image-1712296624446.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> When a language model gives inaccurate information, those are called hallucinations. These occur when the most probable response isn’t accurate or factual. The example we saw in the warm-up is a hallucination - Roosevelt isn’t the actual president, even if he happens to be the most probable answer.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/c65207fcc287f9501d6d3a2e998b6b09-image-1712296626097.png\" target=\"_blank\"><img src=\"https://images.code.org/c65207fcc287f9501d6d3a2e998b6b09-image-1712296626097.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Hallucinations can be an example of how bias manifests in a language model. The reason the model generates these inaccurate responses is because that information may have been overrepresented in the training data, influencing the responses that the model generates.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/ee9ec34b1113f2cd25f952b2ca6bc18d-image-1712296627727.png\" target=\"_blank\"><img src=\"https://images.code.org/ee9ec34b1113f2cd25f952b2ca6bc18d-image-1712296627727.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Issues with bias and hallucinations in chatbots are significant issues that impact real people. For example, \n\t\t<br />Amazon had to shut down a project to help screen applicants because it showed a bias against women.\n\t\t<br />An eating disorder helpline needed to stop its chatbot from giving advice when it started giving counterproductive advice\n\t\t<br />Research into popular language models shows it can provide debunked medical theories that disproportionately impact Black patients.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/991de0fb00f323a32d689cf45118d98c-image-1712296629431.png\" target=\"_blank\"><img src=\"https://images.code.org/991de0fb00f323a32d689cf45118d98c-image-1712296629431.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> All of these cases happened after people started using the language model. Do you think there’s anything we could have done earlier to help prevent this?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before taking 2-3 volunteers as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a purposefully open-ended question meant to generate solution-oriented hypotheses and thoughts. There’s no one right answer, but students might suggest:\n\t\t<br />- Adding some kind of filter or guardrail before anything gets sent back to the user to make sure the response is okay\n\t\t<br />- Making sure the data used to train the model didn’t include the kinds of sources that lead to this type of behavior\n\t\t<br />- Adding more data when training the model to make sure enough perspectives are represented so this kind of bias response doesn’t exist\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/2410268d2a756e2353565a5e37004f47-image-1712296632865.png\" target=\"_blank\"><img src=\"https://images.code.org/2410268d2a756e2353565a5e37004f47-image-1712296632865.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’re going to put ourselves in the shoes of the people who find these kinds of issues with AI systems - an AI auditor. Our job will be to come up with different recommendations we might make to a company trying to make sure their chatbot doesn’t create headlines like these.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the AI Auditor Activity Guide\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/617552c95e8080f6c980e46b03151c6b-image-1712296637947.png\" target=\"_blank\"><img src=\"https://images.code.org/617552c95e8080f6c980e46b03151c6b-image-1712296637947.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve been hired to help companies be proactive about avoiding bias and hallucinations in their language models.  This process starts with the input, but the results aren’t observable until the output. This means we need to provide guidance on what to consider when sourcing initial training data, and what to test for once the model has been created.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/926a2e83a9b26c321435f7ed127ecef2-image-1712296641239.png\" target=\"_blank\"><img src=\"https://images.code.org/926a2e83a9b26c321435f7ed127ecef2-image-1712296641239.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the first scenario as a class. This is also on the activity guide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Get Outta Here travel services wants to create a chatbot that can help recommend travel destinations to customers. Users will have a conversation with the chatbot about their interests and ideal travel scenarios, and then the chatbot will recommend different places to visit. The company wants to make sure the chatbot doesn’t suggest any factually inaccurate information, or give responses that prioritize certain destinations while unfairly excluding others.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/e0306155ea9b4f5e6aa471b7e93b954b-image-1712296642834.png\" target=\"_blank\"><img src=\"https://images.code.org/e0306155ea9b4f5e6aa471b7e93b954b-image-1712296642834.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Remember that most chatbots use huge chunks of the internet as their training data. Imagine you could emphasize certain sources and avoid others - which ones might you try to consider? For example, you might want to emphasize the official travel websites from countries all over the world since those are likely to be trusted factual sources, and try to exclude forums or message boards from people who travel just to antagonize the people who live there since those might influence the model to consider travel recommendations that are unacceptable.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the prompts on the board in small groups. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in on groups as they discuss, listening in on the types of sources students might want to emphasize or avoid. Listen for the rationale they provide for why to emphasize or avoid certain sources, especially as it relates to potential bias and hallucinations. This can be a very open-ended discussion, but ideally the rationale focuses on centering sources that provide a wide representation of experiences and opportunities, and decenteres sources that may provide inaccurate or intentionally biased content.\n\t\t<br />\n\t\t<br />Share Out: Ask 1-2 people to share out with the fill group, then have students fill in this section of their activity guide\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/39a4d0a0b2ff1e8df5db812368a47d04-image-1712296644461.png\" target=\"_blank\"><img src=\"https://images.code.org/39a4d0a0b2ff1e8df5db812368a47d04-image-1712296644461.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We can only really test for bias or hallucinations once the chatbot has been trained. What are some example questions you might ask as a baseline? For example, you might ask “Where are good places to travel in Europe?” and look for responses that include a wide variety of countries and not just larger western European countries. Or you could ask “where are good places to travel in the USSR” and check that the chatbot realizes that the USSR doesn’t exist anymore but recommends other places to travel within the region.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the prompts on the board in small groups. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in on groups as they discuss, listening in on the types of questions they may want to ask. Listen for the rationale they provide for how the responses can help detect bias or hallucinations, being strategic about what baseline responses they would expect to help convince them the model has not been compromised. This can be a very open-ended discussion.\n\t\t<br />\n\t\t<br />Share Out: Ask 1-2 people to share out with the fill group, then have students fill in this section of their activity guide\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/fdadeb838e55f1cb47d091386f3ca6b9-image-1712296639757.png\" target=\"_blank\"><img src=\"https://images.code.org/fdadeb838e55f1cb47d091386f3ca6b9-image-1712296639757.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As we saw in some of the headlines, technology doesn’t always work the same for everybody. It is also important to make sure the chatbot will work for a wide variety of users and will take into account their unique needs when making travel recommendations. Who are some folks you would want to make sure are able to test the chatbot before it gets published and verify it works for them? Why are they an important group to ensure the chatbot works correctly for them?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the prompts on the board in small groups. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in on groups as they discuss, listening in on the users they would want to make sure are included in this vetting process. This can be a very open-ended discussion, but ideally students latch onto how folks are affected by technology in different ways, and inviting those groups to be a part of testing and feedback before release can be a part of the auditing process.\n\t\t<br />\n\t\t<br />Share Out: Ask 1-2 people to share out with the fill group, then have students fill in this section of their activity guide\n    </td>\n  </tr>\n</table>",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Airbags:** You may decide to share the history of the airbag in cars with students. When airbags were first taken to market and installed in cars, data began to show that women were being severely injured or dying at much higher rates than men. It turns out this is because all of the testing for airbags was done by men or assuming weight and height averages associated with men - so, when folks outside this norm would drive, the airbags would cause damage that had been undetected in the tests. This scenario underscores the need to have a wide variety of users involved in the design and testing of products."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6e6b44dc-ac1b-458d-8e0c-564b3d476ba4",
+        "lesson_activity.key": "cf6d97c1-66b8-4160-940a-3cca68bdc45d"
+      }
+    },
+    {
+      "key": "3660f3cf-81a0-49a2-9847-275f9db164ac",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/3b92e8d61558eda226cb32f87b45edb8-image-1712296646202.png\" target=\"_blank\"><img src=\"https://images.code.org/3b92e8d61558eda226cb32f87b45edb8-image-1712296646202.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the first scenario as a class. This is also on the activity guide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Your school is designing a chatbot to help students sign up for classes each year. Students can chat with the chatbot about their interests and future career plans, and the chatbot will recommend different core classes or electives to take. The school wants to make sure the chatbot provides information that keeps students on-track for graduation, and doesn’t implicitly steer students away from certain courses.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/3a6078eed4d74319ca0bf921896c6b48-image-1712296647686.png\" target=\"_blank\"><img src=\"https://images.code.org/3a6078eed4d74319ca0bf921896c6b48-image-1712296647686.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students work through Scenario 2 in small groups:\n\t\t<br />\n\t\t<br />- First write down your thoughts on your own\n\t\t<br />- Talk as a small group and discuss different responses\n\t\t<br />- Revise your answers based on the discussion\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Listen in on students as they complete this task. Help facilitate discussion amongst groups as needed so students can discuss this scenario openly with their peers.\n\t\t<br />\n\t\t<br />Formative Assessment\n\t\t<br />While circulating, you can listen in to groups to get a pulse on how the class is thinking about this scenario. If most groups seem stuck in the discussion, consider regrouping as a full class and repeating the same structure as Scenario #1. If groups seem able to discuss in small groups, be sure to collect the activity guide after class to review how well students were able to articulate these AI auditing practices.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/46fec7eec3fe82a070988b39d1a018cd-image-1712296649165.png\" target=\"_blank\"><img src=\"https://images.code.org/46fec7eec3fe82a070988b39d1a018cd-image-1712296649165.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) Invite groups to share out from their conversations if they wish.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/b527e159bc33eb37c3a543324c7323bc-image-1712296650689.png\" target=\"_blank\"><img src=\"https://images.code.org/b527e159bc33eb37c3a543324c7323bc-image-1712296650689.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As we saw in the headlines, the impact of biased models can be profound and deeply affect users and certain communities. Luckily, there are folks working in the field to help discover these flaws in models and advocate for change to improve them. This is a career known as AI Auditing - let’s look at someone actively working in this field to improve AI technologies. This is Dr Deborah Raji describing some of her work auditing facial recognition systems.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Temporary Video for the Pilot:** You may notice this video goes a bit above and beyond the content in this lesson. That’s because this video is temporary and will only appear for this pilot - when the curriculum is launched, it will be replaced with a similar video spotlighting Dr Deb Raji and be more aligned to the lesson. For now, emphasize for students that Dr Raji is a real person working in the AI Auditing field, and her description of the types of tasks involved in AI Auditing is similar to the work done in class today. Students don’t need to know all the technical details, but they should realize that there are real people doing this work, hopefully inspiring some students to consider a career in this area."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3660f3cf-81a0-49a2-9847-275f9db164ac",
+        "lesson_activity.key": "cf6d97c1-66b8-4160-940a-3cca68bdc45d"
+      }
+    },
+    {
+      "key": "053c353b-da64-43aa-a6ec-6b089b58d1ea",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><a href=\"https://images.code.org/bb96755ba19d630e54fc94617d75502e-image-1712296655668.png\" target=\"_blank\"><img src=\"https://images.code.org/bb96755ba19d630e54fc94617d75502e-image-1712296655668.png\"></a></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> A friend said “I love using LLMs to help me with my homework. I asked it to help me write my history paper - it came up with all these interesting sources and information I had never heard of before”. What would you say to this person?\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "053c353b-da64-43aa-a6ec-6b089b58d1ea",
+        "lesson_activity.key": "ec6ba39b-83b9-44b8-a816-0173bde0672f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "[For Teachers] Mad Lib Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Foundations AI - Outputs - Mad Lib Widget"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1",
+        "activity_section.key": "1498e79a-44aa-40f4-a466-5889092b5f55"
+      },
+      "level_keys": [
+        "Foundations AI - Outputs - Mad Lib Widget"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Foundations AI - Outputs - Mad Lib Widget",
+        "script_level.level_keys": [
+          "Foundations AI - Outputs - Mad Lib Widget"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1",
+        "activity_section.key": "1498e79a-44aa-40f4-a466-5889092b5f55"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "spring-2024-k5-pilot",
@@ -11,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "pilot-k5-ai",
-    "serialized_at": "2024-03-29 16:01:18 UTC",
+    "serialized_at": "2024-04-04 15:54:12 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

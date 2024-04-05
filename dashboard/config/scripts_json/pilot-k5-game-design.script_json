@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "spring-2024-k5-pilot",
@@ -11,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "pilot-k5-game-design",
-    "serialized_at": "2024-04-03 20:25:17 UTC",
+    "serialized_at": "2024-04-04 15:54:28 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1127,6 +1128,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_variables_about_panel"
+        ],
         "progression": "Intro to Variables"
       },
       "bonus": false,
@@ -1399,6 +1403,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_development_sprites_type_panel"
+        ],
         "progression": "Sprite Type: Environment"
       },
       "bonus": false,
@@ -1471,6 +1478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_development_player_type_panel"
+        ],
         "progression": "Sprite Type: Player"
       },
       "bonus": false,
