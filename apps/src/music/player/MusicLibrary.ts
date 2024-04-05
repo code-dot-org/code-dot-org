@@ -15,9 +15,12 @@ export default class MusicLibrary {
   }
 
   name: string;
+
   packs: SoundFolder[];
   instruments: SoundFolder[];
   kits: SoundFolder[];
+
+  private folders: SoundFolder[];
 
   private libraryJson: LibraryJson;
   private allowedSounds: Sounds | null;
@@ -35,6 +38,13 @@ export default class MusicLibrary {
     this.name = name;
     this.libraryJson = libraryJson;
     this.allowedSounds = null;
+
+    // Combine the JSON-specified folders into one flat list of folders.
+    this.folders = [
+      ...libraryJson.packs,
+      ...libraryJson.instruments,
+      ...libraryJson.kits,
+    ];
 
     this.packs = libraryJson.packs;
     this.instruments = libraryJson.instruments;
@@ -128,9 +138,9 @@ export default class MusicLibrary {
     return this.getFolderForFolderId(folderId);
   }
 
-  // Given a folder ID (e.g. "pack1") return the SoundFolder.
+  // Given a folder ID (e.g. "pack1", "kit1", or "instrument1") return the SoundFolder.
   getFolderForFolderId(folderId: string): SoundFolder | null {
-    return this.packs.find(folder => folder.id === folderId) || null;
+    return this.folders.find(folder => folder.id === folderId) || null;
   }
 
   // Given a a sound ID (e.g. "pack1/sound1"), return only an
