@@ -21,5 +21,6 @@ class TestAiProxyController < ApplicationController
       }
     end
     render json: {data: response_data}
+    # render json: {data: {foo: 'bar'}}, status: :bad_request
   end
 end
