@@ -54,7 +54,13 @@ class S3Packaging
   # Uploads the created package to s3
   # @return package
   def upload_package_to_s3(package)
-    raise "Generated different package for same contents" unless package_matches_download(package)
+    error_message <<~ERRORMESSAGE
+      ===================================================================================
+      ERROR: Generated different package for same contents
+      see https://stackoverflowteams.com/c/code-org/questions/56 for advice on resolution
+      ===================================================================================
+    ERRORMESSAGE
+    raise error_message unless package_matches_download(package)
     upload_package(package)
     package
   end
