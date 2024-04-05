@@ -39,8 +39,8 @@ const backgroundSprite = {
 describe('SpriteLab', () => {
   setExternalGlobals();
 
-  before(() => sinon.stub(ReactDOM, 'render'));
-  after(() => ReactDOM.render.restore());
+  beforeAll(() => sinon.stub(ReactDOM, 'render'));
+  afterAll(() => ReactDOM.render.restore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);

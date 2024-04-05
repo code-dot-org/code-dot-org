@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 
 describe('dialogHelper', () => {
-  before(() => {
+  beforeAll(() => {
     // We need bootstrap-sass for $.fn.modal. In the real app, this is provided by dashboard
     // boostrap-sass also depends on window.jQuery being set. We use require instead
     // of import for boostrap-sass, otherwise babel moves the import to the top of
@@ -22,7 +22,7 @@ describe('dialogHelper', () => {
     require('bootstrap-sass');
   });
 
-  after(() => {
+  afterAll(() => {
     delete window.jQuery;
   });
   describe('showDialog', () => {

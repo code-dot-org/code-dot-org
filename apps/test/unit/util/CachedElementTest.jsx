@@ -43,7 +43,7 @@ describe('CachedElement', () => {
     unitTestExports.clearElementsCache(defaultType);
   });
 
-  after(() => {
+  afterAll(() => {
     spy.resetHistory();
     unitTestExports.clearElementsCache(defaultType);
   });

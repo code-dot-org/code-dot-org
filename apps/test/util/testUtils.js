@@ -12,7 +12,10 @@ export {
 } from './throwOnConsole';
 export {clearTimeoutsBetweenTests} from './clearTimeoutsBetweenTests';
 
-export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
+export function setExternalGlobals(
+  beforeFunc = beforeAll,
+  afterFunc = afterAll
+) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
@@ -299,8 +302,8 @@ export function sandboxDocumentBody(runOncePerTest = true) {
     beforeEach(storeBody);
     afterEach(restoreBody);
   } else {
-    before(storeBody);
-    after(restoreBody);
+    beforeAll(storeBody);
+    afterAll(restoreBody);
   }
 }
 
@@ -393,8 +396,8 @@ export function enforceDocumentBodyCleanup(
  */
 export function stubWindowDashboard(value) {
   let originalDashboard;
-  before(() => (originalDashboard = window.dashboard));
-  after(() => (window.dashboard = originalDashboard));
+  beforeAll(() => (originalDashboard = window.dashboard));
+  afterAll(() => (window.dashboard = originalDashboard));
   beforeEach(() => (window.dashboard = value));
 }
 
@@ -414,7 +417,7 @@ export function stubWindowDashboard(value) {
  */
 export function stubWindowPegasus(value) {
   let originalPegasus;
-  before(() => (originalPegasus = window.pegasus));
-  after(() => (window.pegasus = originalPegasus));
+  beforeAll(() => (originalPegasus = window.pegasus));
+  afterAll(() => (window.pegasus = originalPegasus));
   beforeEach(() => (window.pegasus = value));
 }

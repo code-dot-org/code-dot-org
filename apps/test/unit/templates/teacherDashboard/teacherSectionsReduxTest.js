@@ -475,7 +475,7 @@ describe('teacherSectionsRedux', () => {
   describe('editSectionProperties', () => {
     let editingNewSectionState;
 
-    before(() => {
+    beforeAll(() => {
       editingNewSectionState = reducer(initialState, beginEditingSection());
     });
 

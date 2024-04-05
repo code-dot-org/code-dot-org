@@ -545,8 +545,8 @@ describe('Applab', () => {
   });
 
   describe('Applab.init()', () => {
-    before(() => sinon.stub(Applab, 'render'));
-    after(() => Applab.render.restore());
+    beforeAll(() => sinon.stub(Applab, 'render'));
+    afterAll(() => Applab.render.restore());
 
     beforeEach(() => {
       stubRedux();
