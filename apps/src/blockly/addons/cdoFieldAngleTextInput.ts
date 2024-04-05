@@ -8,7 +8,7 @@ import {FieldAngle} from '@blockly/field-angle';
 // Artist, and Play Lab. We can potentially add additional handling of
 // this argument to this class in the future should we need it.
 export default class CdoFieldAngleTextInput extends FieldAngle {
-  constructor(value?: undefined, options?: undefined, config?: undefined) {
-    super(value, options, config);
+  constructor() {
+    super();
   }
 }
