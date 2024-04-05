@@ -57,6 +57,9 @@ describe('CurriculumCatalogExpandedCard', () => {
       getRecommendedSimilarCurriculum: () => {
         return FULL_TEST_COURSES[0];
       },
+      getRecommendedStretchCurriculum: () => {
+        return FULL_TEST_COURSES[1];
+      },
     };
   });
 
@@ -123,8 +126,9 @@ describe('CurriculumCatalogExpandedCard', () => {
       video: null,
     });
 
-    // Expect to find 2 images: one as the video replacement and one from the Similar Curriculum recommendation
-    expect(screen.getAllByRole('img', {hidden: true}).length).to.equal(2);
+    // Expect to find 3 images: one as the video replacement, one from the Similar
+    // Curriculum recommendation, and one from the Stretch Curriculum recommendation
+    expect(screen.getAllByRole('img', {hidden: true}).length).to.equal(3);
   });
 
   it('renders image with alt text if passed and no video', () => {

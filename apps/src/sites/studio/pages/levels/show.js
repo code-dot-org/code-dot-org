@@ -16,6 +16,8 @@ import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import AITutorFloatingActionButton from '@cdo/apps/code-studio/components/aiTutor/aiTutorFloatingActionButton';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 $(document).ready(initPage);
 
@@ -109,6 +111,22 @@ function initPage() {
       'rubric-fab-mount-point'
     );
     if (rubricFabMountPoint) {
+      //rubric fab mount point is only true for teachers
+      if (
+        experiments.isEnabled('ai-rubrics') &&
+        !!rubric &&
+        rubric.learningGoals.some(lg => lg.aiEnabled) &&
+        config.level_name === rubric.level.name
+      ) {
+        analyticsReporter.sendEvent(
+          EVENTS.TA_RUBRIC_AI_PAGE_VISITED,
+          {
+            ...reportingData,
+            studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+          },
+          PLATFORMS.BOTH
+        );
+      }
       ReactDOM.render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton

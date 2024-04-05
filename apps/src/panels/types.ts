@@ -10,7 +10,11 @@ export interface PanelsLevelProperties extends LevelProperties {
   panels: Panel[];
 }
 
-export type PanelLayout = 'text-bottom-left' | 'text-top-right';
+export type PanelLayout =
+  | 'text-top-left'
+  | 'text-top-right'
+  | 'text-bottom-left'
+  | 'text-bottom-right';
 
 export interface Panel {
   imageUrl: string;

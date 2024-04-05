@@ -150,6 +150,8 @@ Feature: Curriculum Catalog Page
     And I wait until element "a:contains(See curriculum details)" is visible
     And I wait until element "#similarCurriculumImage" is visible
     And I wait until element "#similarCurriculumButton" is visible
+    And I wait until element "#stretchCurriculumImage" is visible
+    And I wait until element "#stretchCurriculumButton" is visible
 
   @no_mobile
   Scenario: Signed-out user sees course offering page when clicking on see curriculum details on expanded card
