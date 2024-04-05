@@ -34,12 +34,10 @@ SMTP_OPTIONS = {
 #  domain:'code.org',
 #}
 
-def create_threads(count)
+def create_threads(count, &block)
   [].tap do |threads|
     count.times do
-      threads << Thread.new do
-        yield
-      end
+      threads << Thread.new(&block)
     end
   end
 end
