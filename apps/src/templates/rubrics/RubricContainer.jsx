@@ -18,6 +18,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import Draggable from 'react-draggable';
 import {TAB_NAMES} from './rubricHelpers';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 // product Tour
 import './introjs.scss';
@@ -116,13 +117,16 @@ export default function RubricContainer({
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
   const updateTourStatus = useCallback(() => {
-    const url = `/rubrics/${rubric.id}/update_ai_rubrics_tour_seen?seen=${productTour}`;
-    fetch(url)
+    const bodyData = JSON.stringify({seen: productTour});
+    const url = `/rubrics/${rubric.id}/update_ai_rubrics_tour_seen`;
+    HttpClient.post(url, bodyData, true, {
+      'Content-Type': 'application/json',
+    })
       .then(response => {
         return response.json();
       })
       .then(json => {
-        if (json['seen'] === 'true') {
+        if (json['seen']) {
           setProductTour(false);
         } else {
           setProductTour(true);
@@ -190,7 +194,7 @@ export default function RubricContainer({
         })}
       >
         <Steps
-          enabled={productTour}
+          enabled={productTour && onLevelForEvaluation}
           initialStep={INITIAL_STEP}
           steps={STEPS}
           onExit={onTourExit}
@@ -217,13 +221,15 @@ export default function RubricContainer({
             <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
-            <button
-              type="button"
-              onClick={updateTourStatus}
-              className={classnames(style.buttonStyle, style.closeButton)}
-            >
-              <FontAwesome icon="circle-question" />
-            </button>
+            {onLevelForEvaluation && (
+              <button
+                type="button"
+                onClick={updateTourStatus}
+                className={classnames(style.buttonStyle, style.closeButton)}
+              >
+                <FontAwesome icon="circle-question" />
+              </button>
+            )}
             <button
               type="button"
               onClick={closeRubric}
@@ -246,13 +252,16 @@ export default function RubricContainer({
             rubric={rubric}
             studentName={studentLevelInfo && studentLevelInfo.name}
           />
-
           <RubricContent
             productTour={productTour}
-            rubric={productTour ? DUMMY_PROPS['rubricDummy'] : rubric}
+            rubric={
+              productTour && onLevelForEvaluation
+                ? DUMMY_PROPS['rubricDummy']
+                : rubric
+            }
             open={open}
             studentLevelInfo={
-              productTour
+              productTour && onLevelForEvaluation
                 ? DUMMY_PROPS['studentLevelInfoDummy']
                 : studentLevelInfo
             }
@@ -262,7 +271,9 @@ export default function RubricContainer({
             reportingData={reportingData}
             visible={selectedTab === TAB_NAMES.RUBRIC}
             aiEvaluations={
-              productTour ? DUMMY_PROPS['aiEvaluationsDummy'] : aiEvaluations
+              productTour && onLevelForEvaluation
+                ? DUMMY_PROPS['aiEvaluationsDummy']
+                : aiEvaluations
             }
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}

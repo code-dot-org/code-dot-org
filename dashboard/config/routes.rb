@@ -1083,7 +1083,7 @@ Dashboard::Application.routes.draw do
         get 'ai_evaluation_status_for_user'
         get 'ai_evaluation_status_for_all'
         get 'get_ai_rubrics_tour_seen'
-        get 'update_ai_rubrics_tour_seen'
+        post 'update_ai_rubrics_tour_seen'
         post 'run_ai_evaluations_for_user'
         post 'run_ai_evaluations_for_all'
         post 'submit_evaluations'
