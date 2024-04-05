@@ -12,6 +12,19 @@ table.selfPacedProgressTable {
   }
 }
 
+.progressBar {
+  background-color: $light_gray_100;
+  height: 0.5rem;
+  border-radius: 1rem;
+  margin-block-start: 0.25rem;
+
+  .progressBarFill {
+    background-color: $light_primary_500;
+    height: 0.5rem;
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+
 .completePill {
   background: $light_gray_100;
   border-radius: 1rem;
