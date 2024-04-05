@@ -46,23 +46,32 @@ export default function ExpandedProgressColumnHeader({
       <tr>
         <th
           className={styles.expandedHeaderLessonCell}
-          style={{width: headerWidth + 'px'}}
-          onClick={() => removeExpandedLesson(lesson.id)}
-          aria-label={headerText}
+          style={{width: headerWidth + 'px', maxWidth: headerWidth + 'px'}}
           data-tip
           data-for={getTooltipId(lesson)}
           id={getLessonColumnHeaderId(lesson.id)}
           scope="colgroup"
         >
-          <LessonTitleTooltip lesson={lesson} />
-          <FontAwesome
-            icon="caret-down"
-            className={styles.expandedHeaderCaret}
-            title={i18n.unexpand()}
-          />
-          <div className={styles.expandedHeaderLessonText} title={lesson.title}>
-            {headerText}
-          </div>
+          <button
+            onClick={() => removeExpandedLesson(lesson.id)}
+            aria-label={headerText}
+            aria-expanded={true}
+            type="button"
+            className={styles.expandedHeaderLessonCellButton}
+          >
+            <LessonTitleTooltip lesson={lesson} />
+            <FontAwesome
+              icon="caret-down"
+              className={styles.expandedHeaderCaret}
+              title={i18n.unexpand()}
+            />
+            <div
+              className={styles.expandedHeaderLessonText}
+              title={lesson.title}
+            >
+              {headerText}
+            </div>
+          </button>
         </th>
       </tr>
       <tr

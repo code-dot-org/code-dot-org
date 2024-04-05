@@ -14,6 +14,7 @@
   cursor: pointer;
   border-radius: 0;
   display: inline-block;
+  margin: 0;
 
   &:hover {
     box-shadow: none;
@@ -203,7 +204,6 @@ $level-cell-width: 52;
     min-width: 80px;
 
     &LessonCell {
-      @include remove-default-button-styles;
       border-top: 1px solid $neutral_dark40;
       border-left: 1px solid $neutral_dark40;
       height: 43px;
@@ -212,6 +212,14 @@ $level-cell-width: 52;
       border: 0;
       background-color: $light_primary_500;
       color: $light_white;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    &LessonCellButton {
+      @include remove-default-button-styles;
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
