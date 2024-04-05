@@ -6,7 +6,6 @@ import {
 import {CenterPane} from '@cdoide/CenterPane';
 import {LeftPane} from '@cdoide/LeftPane';
 import {RightPane} from '@cdoide/RightPane';
-import {RunBar} from '@cdoide/RunBar';
 import {
   ProjectType,
   ConfigType,
@@ -31,7 +30,6 @@ const configVisibilityDefaults = {
   showPreview: true,
   showEditor: true,
   showLeftNav: true,
-  showRunBar: false,
 };
 
 const getConfigVisibilityVal = (
@@ -47,9 +45,7 @@ const paneWidths: (PaneKey & {width: string})[] = [
   {key: 'showEditor', width: '2fr'},
 ];
 
-const paneHeights: (PaneKey & {height: string})[] = [
-  {key: 'showRunBar', height: '40px'},
-];
+const paneHeights: (PaneKey & {height: string})[] = [];
 
 export const CDOIDE = React.memo(
   ({project, config, setProject, setConfig}: CDOIDEProps) => {
@@ -129,7 +125,6 @@ export const CDOIDE = React.memo(
             )}
             {getConfigVisibilityVal('showPreview', config) && <RightPane />}
           </div>
-          {getConfigVisibilityVal('showRunBar', config) && <RunBar />}
         </div>
       </CDOIDEContextProvider>
     );

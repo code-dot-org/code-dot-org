@@ -6,16 +6,11 @@ import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';
 import {css} from '@codemirror/lang-css';
-import {javascript as js} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
-//import prettier from 'prettier/standalone';
-//import htmlParser from 'prettier/parser-html';
-//import cssParser from 'prettier/parser-postcss';
 
 const codeMirrorLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
-  js: js(),
 };
 
 const Editor = () => {
@@ -34,20 +29,12 @@ const Editor = () => {
     [file, saveFile]
   );
 
-  /* const format = async () => {
-    const prettified = await prettify(file.contents, file.language);
-    saveFile(file.id, prettified);
-  };*/
-
   if (!editableFileType(file.language)) {
     return <div>Cannot currently edit files of type {file.language}</div>;
   }
 
   return (
     <div className="editor-container">
-      {/*<button type="button" onClick={() => format()}>
-        Format
-      </button> */}
       {file && (
         <CodeEditor
           key={`${file.id}/${1}`}
