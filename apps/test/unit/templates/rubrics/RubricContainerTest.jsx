@@ -1,5 +1,5 @@
 // react testing library import
-import {render, fireEvent, act, screen, cleanup} from '@testing-library/react';
+import {render, fireEvent, act, screen} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
@@ -17,6 +17,7 @@ import {
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -27,8 +28,8 @@ describe('RubricContainer', () => {
   let store;
   let fetchStub;
   let ajaxStub;
-  let tokenStub;
   let request;
+  let postStub;
 
   async function wait() {
     for (let _ = 0; _ < 10; _++) {
@@ -72,20 +73,6 @@ describe('RubricContainer', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
-  function stubGetToken() {
-    return tokenStub.returns('some-csrf-token');
-  }
-
-  function stubGetOrCreateEvaluation(data) {
-    return fetchStub
-      .withArgs('/learning_goal_teacher_evaluations/get_or_create_evaluation')
-      .returns(
-        Promise.resolve(
-          new Response(JSON.stringify(data), {status: 200, statusText: 'OK'})
-        )
-      );
-  }
-
   beforeEach(() => {
     ajaxStub = sinon.stub($, 'ajax');
     request = sinon.stub();
@@ -105,9 +92,11 @@ describe('RubricContainer', () => {
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
     store = getStore();
-    tokenStub = sinon.stub(
-      require('@cdo/apps/util/AuthenticityTokenStore.ts'),
-      'getAuthenticityToken'
+    postStub = sinon.stub(HttpClient, 'post');
+    postStub.returns(
+      Promise.resolve(
+        new Response(JSON.stringify({}), {status: 200, statusText: 'OK'})
+      )
     );
   });
 
@@ -119,8 +108,7 @@ describe('RubricContainer', () => {
     utils.queryParams.restore();
     fetchStub.restore();
     ajaxStub.restore();
-    tokenStub.restore();
-    cleanup();
+    postStub.restore();
   });
 
   const notAttemptedJson = {
@@ -246,9 +234,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForAll(successJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
     const evalFetch = stubFetchAiEvaluations(mockAiEvaluations);
-    stubGetOrCreateEvaluation({});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -295,7 +281,6 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -327,7 +312,6 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -355,7 +339,6 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -384,7 +367,6 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -418,7 +400,6 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -461,7 +442,6 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -546,7 +526,6 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -589,7 +568,6 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -632,7 +610,6 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -667,7 +644,6 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     const {getByTestId} = render(
       <Provider store={store}>
@@ -747,7 +723,6 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchProductTourStatus({seen: 'false'});
-    stubGetToken();
 
     render(
       <Provider store={store}>
@@ -775,7 +750,6 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchProductTourStatus({seen: 'true'});
-    stubGetToken();
 
     render(
       <Provider store={store}>
