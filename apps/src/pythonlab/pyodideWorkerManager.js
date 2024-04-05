@@ -1,4 +1,4 @@
-import {makeAtomicsChannel, makeChannel, makeServiceWorkerChannel} from 'sync-message';
+import {makeServiceWorkerChannel} from 'sync-message';
 import {getStore} from '@cdo/apps/redux';
 import {appendOutput} from './pythonlabRedux';
 import {PyodideClient} from 'pyodide-worker-runner';
