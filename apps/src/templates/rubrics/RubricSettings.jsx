@@ -112,6 +112,7 @@ export default function RubricSettings({
 
   // load initial ai evaluation status
   useEffect(() => {
+    const abort = new AbortController();
     if (!!rubricId && !!sectionId) {
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
         if (!response.ok) {
@@ -135,9 +136,11 @@ export default function RubricSettings({
         }
       });
     }
+    return () => abort.abort();
   }, [rubricId, sectionId]);
 
   useEffect(() => {
+    const abort = new AbortController();
     if (!!rubricId && !!sectionId) {
       fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
         if (response.ok) {
@@ -174,11 +177,13 @@ export default function RubricSettings({
         }
       });
     }
+    return () => abort.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricId, sectionId]);
 
   // after ai eval is requested, poll for status changes
   useEffect(() => {
+    const abort = new AbortController();
     if (polling && !!rubricId && !!sectionId) {
       const intervalId = setInterval(() => {
         refreshAiEvaluations();
@@ -204,6 +209,7 @@ export default function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
+    return () => abort.abort();
   }, [rubricId, polling, sectionId, statusAll, refreshAiEvaluations]);
 
   const handleRunAiAssessmentAll = () => {
