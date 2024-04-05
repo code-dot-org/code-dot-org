@@ -241,7 +241,7 @@ describe('LearningGoals - Enzyme', () => {
     highlightLineStub,
     clearAnnotationsStub,
     clearHighlightedLinesStub;
-  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
+  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706, user_id: 1};
 
   function stubAnnotator() {
     // Stub out our references to the singleton and editor
@@ -613,6 +613,7 @@ describe('LearningGoals - Enzyme', () => {
       <LearningGoals
         learningGoals={learningGoals}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
+        studentLevelInfo={studentLevelInfo}
       />
     );
     wrapper.find('button').at(1).simulate('click');
@@ -623,6 +624,7 @@ describe('LearningGoals - Enzyme', () => {
         levelName: 'test-level',
         learningGoalKey: 'efgh',
         learningGoal: 'Learning Goal 2',
+        studentId: 1,
       }
     );
     wrapper.find('button').first().simulate('click');
@@ -633,6 +635,7 @@ describe('LearningGoals - Enzyme', () => {
         levelName: 'test-level',
         learningGoalKey: 'abcd',
         learningGoal: 'Learning Goal 1',
+        studentId: 1,
       }
     );
     sendEventSpy.restore();
