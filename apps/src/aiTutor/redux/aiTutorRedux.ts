@@ -27,6 +27,10 @@ export interface AITutorState {
   chatMessageError: boolean;
 }
 
+export interface InstructionsState {
+  longInstructions: string;
+}
+
 const initialChatMessages: ChatCompletionMessage[] = [
   {
     id: 0,
@@ -51,6 +55,9 @@ export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
   async (chatContext: ChatContext, thunkAPI) => {
     const state = thunkAPI.getState() as {aiTutor: AITutorState};
+    const instructionsState = thunkAPI.getState() as {
+      instructions: InstructionsState;
+    };
     const levelContext = {
       levelId: state.aiTutor.level?.id,
       isProjectBacked: state.aiTutor.level?.isProjectBacked,
@@ -69,6 +76,13 @@ export const askAITutor = createAsyncThunk(
       systemPrompt = compilationSystemPrompt;
     } else {
       systemPrompt = generalChatSystemPrompt;
+    }
+
+    const instructions = instructionsState.instructions.longInstructions;
+
+    if (instructions.length > 0) {
+      systemPrompt +=
+        '\n Here are the student instructions for this level: ' + instructions;
     }
 
     const storedMessages = state.aiTutor.chatMessages;
