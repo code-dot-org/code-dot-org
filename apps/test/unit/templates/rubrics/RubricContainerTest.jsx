@@ -1,5 +1,5 @@
 // react testing library import
-import {render, fireEvent, act, screen} from '@testing-library/react';
+import {render, fireEvent, act} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
