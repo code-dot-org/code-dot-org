@@ -19,7 +19,6 @@ import {
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -31,7 +30,6 @@ describe('RubricContainer', () => {
   let fetchStub;
   let ajaxStub;
   let request;
-  let postStub;
 
   async function wait() {
     for (let _ = 0; _ < 10; _++) {
@@ -96,12 +94,6 @@ describe('RubricContainer', () => {
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
     store = getStore();
-    postStub = sinon.stub(HttpClient, 'post');
-    postStub.returns(
-      Promise.resolve(
-        new Response(JSON.stringify({}), {status: 200, statusText: 'OK'})
-      )
-    );
   });
 
   afterEach(() => {
@@ -112,7 +104,6 @@ describe('RubricContainer', () => {
     utils.queryParams.restore();
     fetchStub.restore();
     ajaxStub.restore();
-    postStub.restore();
     cleanup();
   });
 
