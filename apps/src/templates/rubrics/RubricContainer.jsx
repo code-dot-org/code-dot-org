@@ -189,7 +189,7 @@ export default function RubricContainer({
         })}
       >
         <Steps
-          enabled={onLevelForEvaluation && productTour}
+          enabled={canProvideFeedback && productTour}
           initialStep={INITIAL_STEP}
           steps={STEPS}
           onExit={onTourExit}
@@ -215,7 +215,7 @@ export default function RubricContainer({
             <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
-            {onLevelForEvaluation && (
+            {canProvideFeedback && (
               <button
                 type="button"
                 onClick={updateTourStatus}
@@ -249,13 +249,13 @@ export default function RubricContainer({
           <RubricContent
             productTour={productTour}
             rubric={
-              productTour && onLevelForEvaluation
+              canProvideFeedback && productTour
                 ? DUMMY_PROPS['rubricDummy']
                 : rubric
             }
             open={open}
             studentLevelInfo={
-              productTour && onLevelForEvaluation
+              canProvideFeedback && productTour
                 ? DUMMY_PROPS['studentLevelInfoDummy']
                 : studentLevelInfo
             }
@@ -265,7 +265,7 @@ export default function RubricContainer({
             reportingData={reportingData}
             visible={selectedTab === TAB_NAMES.RUBRIC}
             aiEvaluations={
-              productTour && onLevelForEvaluation
+              canProvideFeedback && productTour
                 ? DUMMY_PROPS['aiEvaluationsDummy']
                 : aiEvaluations
             }

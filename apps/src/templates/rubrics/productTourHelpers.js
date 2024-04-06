@@ -1,42 +1,38 @@
 import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
+import i18n from '@cdo/locale';
 
 export const INITIAL_STEP = 0;
 export const STEPS = [
   {
     element: '#ui-floatingActionButton',
-    title: 'Getting Started with AI Teaching Assistant',
-    intro:
-      '<p>Launch AI Teaching Assistant from the bottom left corner of the screen.</p>',
+    title: i18n.rubricTourStepOneTitle(),
+    intro: i18n.rubricTourStepOneText(),
   },
   {
     element: '#tour-ai-assessment',
-    title: 'Understanding the AI Assessment',
-    intro:
-      '<p>AI Teaching Assistant analyzes students’ code for each learning goal with AI enabled, then recommends a rubric score(s). AI will provide one score for learning goals where our AI has trained extensively. It will provide two scores where more training data is needed.</p><p>The final score is always up to you. AI Teaching Assistant will provide evidence for its recommendation.</p>',
+    title: i18n.rubricTourStepTwoTitle(),
+    intro: i18n.rubricTourStepTwoText(),
   },
   {
     element: '#tour-ai-evidence',
-    title: 'Using Evidence',
+    title: i18n.rubricTourStepThreeTitle(),
     position: 'top',
-    intro: `<p>Where possible, AI Teaching Assistant will highlight the relevant lines of code in the student’s project so it is easy for you to double-check.</p><img src=${evidenceDemo}>`,
+    intro: `<p>${i18n.rubricTourStepThreeText()}</p><img src=${evidenceDemo}>`,
   },
   {
     element: '#tour-ai-confidence',
-    title: 'Understanding AI Confidence',
-    intro:
-      "<p>The confidence rating gives you an idea of how often the AI agreed with teachers when scoring this learning goal. Just like humans, AI isn't perfect.</p>",
+    title: i18n.rubricTourStepFourTitle(),
+    intro: i18n.rubricTourStepFourText(),
   },
   {
     element: '#tour-evidence-levels',
-    title: 'Assigning a Rubric Score',
-    intro:
-      "<p>Once you have reviewed the AI Assessment and the student's code, assign a rubric score for the learning goal.</p>",
+    title: i18n.rubricTourStepFiveTitle(),
+    intro: i18n.rubricTourStepFiveText(),
   },
   {
     element: '#tour-ai-assessment-feedback',
-    title: 'How did we do?',
-    intro:
-      '<p>Your feedback helps us make the AI Teaching Assistant more helpful to you – let us know how it did.</p>',
+    title: i18n.rubricTourStepSixTitle(),
+    intro: i18n.rubricTourStepSixText(),
   },
 ];
 
@@ -48,7 +44,7 @@ export const DUMMY_PROPS = {
       {
         id: 1,
         key: '1',
-        learningGoal: 'Variables',
+        learningGoal: i18n.catVariables(),
         aiEnabled: true,
         evidenceLevels: [
           {
