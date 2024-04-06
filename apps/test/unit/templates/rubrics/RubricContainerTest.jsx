@@ -740,7 +740,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchProductTourStatus({seen: false});
 
-    const {getByText} = render(
+    const {queryByText} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -755,7 +755,7 @@ describe('RubricContainer', () => {
 
     await wait();
 
-    expect(getByText('Getting Started with AI Teaching Assistant')).to.exist;
+    expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
   });
 
   it('does not display product tour when getTourStatus returns true', async () => {
