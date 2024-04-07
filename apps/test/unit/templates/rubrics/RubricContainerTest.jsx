@@ -710,12 +710,13 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
   });
 
-  it('displays product tour when getTourStatus returns false', async function () {
+  it('displays product tour when getTourStatus is false', async function () {
+    const clock = sinon.useFakeTimers();
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: false});
+    stubFetchTourStatus({seen: null});
 
     const {queryByText} = render(
       <Provider store={store}>
@@ -731,8 +732,9 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-
+    clock.tick(5000);
     expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
+    clock.restore();
   });
 
   it('does not display product tour when getTourStatus returns true', async function () {
