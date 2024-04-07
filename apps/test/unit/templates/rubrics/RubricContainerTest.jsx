@@ -730,8 +730,6 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchProductTourStatus({seen: false});
 
-    const clock = sinon.useFakeTimers();
-
     const {queryByText} = render(
       <Provider store={store}>
         <RubricContainer
@@ -746,7 +744,6 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    clock.tick(5000);
 
     expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
   });
@@ -757,7 +754,6 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchProductTourStatus({seen: true});
-    const clock = sinon.useFakeTimers();
 
     const {queryByText} = render(
       <Provider store={store}>
@@ -773,7 +769,6 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    clock.tick(5000);
 
     expect(queryByText('Getting Started with AI Teaching Assistant')).to.not
       .exist;
