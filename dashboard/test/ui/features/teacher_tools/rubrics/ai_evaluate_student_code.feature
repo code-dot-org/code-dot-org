@@ -1,4 +1,4 @@
-# AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
+exists# AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 @no_firefox
 @no_mobile
 Feature: Evaluate student code against rubrics using AI
@@ -37,9 +37,9 @@ Feature: Evaluate student code against rubrics using AI
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
-    And I click selector ".introjs-skipbutton" if it exists
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I click selector ".introjs-skipbutton" if it exists
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -84,9 +84,9 @@ Feature: Evaluate student code against rubrics using AI
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
-    And I click selector ".introjs-skipbutton" if it exists
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I click selector ".introjs-skipbutton" if it exists
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -134,9 +134,9 @@ Feature: Evaluate student code against rubrics using AI
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
-    And I click selector ".introjs-skipbutton" if it exists
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I click selector ".introjs-skipbutton" if it exists
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 

@@ -24,8 +24,9 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait to see "#ui-floatingActionButton"
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".student-table" is visible
-  And I click selector ".introjs-skipbutton" if it exists
   And I click selector ".student-table tr:nth(1)" to load a new page
+  And I wait for the page to fully load
+  And I click selector ".introjs-skipbutton" if it exists
   And I click selector "#ui-floatingActionButton" once I see it
   And I wait until element "h5:contains(Code Quality)" is visible
   And I wait until element "button:contains(Extensive)" is visible
@@ -63,9 +64,9 @@ Scenario: Teachers can give and send feedback on the rubric to students.
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
-    And I click selector ".introjs-skipbutton" if it exists
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I click selector ".introjs-skipbutton" if it exists
 
     When I open my eyes to test "teaching assistant rubric"
     Then I see no difference for "floating action button icon"
