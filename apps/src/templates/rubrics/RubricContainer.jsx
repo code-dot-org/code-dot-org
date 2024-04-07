@@ -117,7 +117,8 @@ export default function RubricContainer({
 
   const updateTourStatus = useCallback(() => {
     const bodyData = JSON.stringify({seen: productTour});
-    const url = `/rubrics/${rubric.id}/update_ai_rubrics_tour_seen`;
+    const rubricId = rubric.id;
+    const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
     HttpClient.post(url, bodyData, true, {
       'Content-Type': 'application/json',
     })
@@ -134,7 +135,8 @@ export default function RubricContainer({
   }, [rubric.id, productTour]);
 
   const getTourStatus = useCallback(() => {
-    const url = `/rubrics/${rubric.id}/get_ai_rubrics_tour_seen`;
+    const rubricId = rubric.id;
+    const url = `/rubrics/${rubricId}/get_ai_rubrics_tour_seen`;
     fetch(url)
       .then(response => {
         return response.json();

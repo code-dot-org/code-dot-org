@@ -41,7 +41,7 @@ describe('RubricContainer', () => {
   // Stubs out getting the AI status for a particular user
   function stubFetchEvalStatusForUser(data) {
     return fetchStub
-      .withArgs(sinon.match(/\/rubrics\/\d+\/ai_evaluation_status_for_user.*/))
+      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_user.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
@@ -49,28 +49,26 @@ describe('RubricContainer', () => {
   // useful to track alongside the user status, here
   function stubFetchEvalStatusForAll(data) {
     return fetchStub
-      .withArgs(sinon.match(/\/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
+      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
   // This stubs out polling the AI evaluation list which can be provided by 'data'
   function stubFetchAiEvaluations(data) {
     return fetchStub
-      .withArgs(sinon.match(/\/rubrics\/\d+\/get_ai_evaluations.*/))
+      .withArgs(sinon.match(/rubrics\/\d+\/get_ai_evaluations.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
   function stubFetchTeacherEvaluations(data) {
     return fetchStub
-      .withArgs(
-        sinon.match(/\/rubrics\/\d+\/get_teacher_evaluations_for_all.*/)
-      )
+      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
   function stubFetchTourStatus(data) {
     return fetchStub
-      .withArgs(sinon.match(/\/rubrics\/\w+\/get_ai_rubrics_tour_seen/))
+      .withArgs(sinon.match(/rubrics\/\w+\/get_ai_rubrics_tour_seen/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
@@ -713,10 +711,11 @@ describe('RubricContainer', () => {
   });
 
   it('displays product tour when getTourStatus returns false', async function () {
-    stubFetchEvalStatusForUser(successJson);
-    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: false});
 
     const {queryByText} = render(
       <Provider store={store}>
@@ -737,8 +736,8 @@ describe('RubricContainer', () => {
   });
 
   it('does not display product tour when getTourStatus returns true', async function () {
-    stubFetchEvalStatusForUser(successJson);
-    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchTourStatus({seen: true});
