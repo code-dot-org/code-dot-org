@@ -70,7 +70,7 @@ describe('RubricContainer', () => {
 
   function stubFetchTourStatus(data) {
     return fetchStub
-      .withArgs(sinon.match(/\/rubrics\/\d+\/get_ai_rubrics_tour_seen/))
+      .withArgs(sinon.match(/\/rubrics\/\w+\/get_ai_rubrics_tour_seen/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
