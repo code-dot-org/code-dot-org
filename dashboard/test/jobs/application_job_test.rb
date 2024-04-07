@@ -3,12 +3,6 @@ require 'testing/includes_metrics'
 
 # Testing Docs for ActiveJob 6: https://api.rubyonrails.org/v6.0.6.1/classes/ActiveJob/TestHelper.html#method-i-perform_enqueued_jobs
 class ApplicationJobTest < ActiveJob::TestCase
-
-  # setup do
-  #   # Ignore other metrics calls
-  #   Cdo::Metrics.stubs(:push)
-  # end
-
   # ApplicationJob is a base class for all jobs in the application.
   # Create a testable job class that inherits from ApplicationJob.
   class TestableJob < ApplicationJob
@@ -17,16 +11,6 @@ class ApplicationJobTest < ActiveJob::TestCase
     def perform
       # No-op
     end
-  end
-
-  test 'stuff' do
-    # assert_enqueued_jobs 0
-    # TestableJob.perform_later
-    # assert_enqueued_jobs 1
-    # TestableJob.perform_later
-    # assert_enqueued_jobs 2
-    # perform_enqueued_jobs
-    # assert_performed_jobs 2
   end
 
   test 'jobs log JobCount when enqueued' do
@@ -138,7 +122,7 @@ class ApplicationJobTest < ActiveJob::TestCase
       ApplicationJob::METRICS_NAMESPACE,
       includes_metrics(ExecutionTime: anything, TotalTime: anything)
     ).raises('An error that should be squashed')
-    
+
     # Stub other calls
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
@@ -157,5 +141,4 @@ class ApplicationJobTest < ActiveJob::TestCase
       raise exception, 'Expected error to be squashed'
     end
   end
-
 end
