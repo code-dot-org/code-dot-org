@@ -50,4 +50,13 @@
       }
     }
   }
+
+  &Skip {
+    width: initial;
+    padding: 0 11px;
+
+    &Content {
+      margin-right: 9px;
+    }
+  }
 }
