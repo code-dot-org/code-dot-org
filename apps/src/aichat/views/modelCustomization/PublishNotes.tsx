@@ -10,6 +10,8 @@ import {
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
+import {ModelCardInfo} from '@cdo/apps/aichat/types';
+import {get} from 'jquery';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -26,34 +28,59 @@ const PublishNotes: React.FunctionComponent = () => {
     [dispatch]
   );
 
+  const getPropertyInput = (property: keyof ModelCardInfo) => {
+    if (property === 'botName') {
+      return (
+        <input
+          id="chatbot-name"
+          value={modelCardInfo[property]}
+          disabled={isDisabled(visibility)}
+          onChange={event =>
+            dispatch(
+              setModelCardProperty({
+                property: property,
+                value: event.target.value,
+              })
+            )
+          }
+        />
+      );
+    }
+    return (
+      <textarea
+        id={property}
+        disabled={isDisabled(visibility)}
+        value={modelCardInfo[property]}
+        onChange={event =>
+          dispatch(
+            setModelCardProperty({
+              property: property,
+              value: event.target.value,
+            })
+          )
+        }
+      />
+    );
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
-      <div>
-        {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label]) => {
-          return (
-            isVisible(visibility) && (
-              <div className={styles.inputContainer} key={property}>
-                <label htmlFor={property}>
-                  <StrongText>{label}</StrongText>
-                </label>
-                <textarea
-                  id={property}
-                  disabled={isDisabled(visibility)}
-                  value={modelCardInfo[property]}
-                  onChange={event =>
-                    dispatch(
-                      setModelCardProperty({
-                        property: property,
-                        value: event.target.value,
-                      })
-                    )
-                  }
-                />
-              </div>
-            )
-          );
-        })}
-      </div>
+      {isVisible(visibility) && (
+        <div>
+          {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label]) => {
+            return (
+              <>
+                <div className={styles.inputContainer} key={property}>
+                  <label htmlFor={property}>
+                    <StrongText>{label}</StrongText>
+                  </label>
+                </div>
+                {getPropertyInput(property)}
+              </>
+            );
+          })}
+        </div>
+      )}
       <div className={styles.footerButtonContainer}>
         <Button
           text="Publish"
