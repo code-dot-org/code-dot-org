@@ -1,10 +1,11 @@
+import {expect} from 'chai';
+
 import {
   isEmail,
   isZipCode,
   isInt,
   isPercent,
 } from '@cdo/apps/util/formatValidation';
-import {expect} from 'chai';
 
 describe('formatValidation', () => {
   describe('isEmail', () => {
