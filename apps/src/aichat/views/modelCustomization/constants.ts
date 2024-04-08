@@ -54,7 +54,7 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   hidePresentationPanel: false,
 };
 
-export const READABLE_AI_CUSTOMIZATIONS: {
+export const AI_CUSTOMIZATIONS_LABELS: {
   [key in keyof AiCustomizations]: string;
 } = {
   botName: 'Bot name',

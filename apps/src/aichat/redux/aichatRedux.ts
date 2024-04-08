@@ -7,7 +7,7 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
-  READABLE_AI_CUSTOMIZATIONS,
+  AI_CUSTOMIZATIONS_LABELS,
 } from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
@@ -110,7 +110,7 @@ export const updateAiCustomization = createAsyncThunk(
           id: 0,
           role: Role.MODEL_UPDATE,
           chatMessageText:
-            READABLE_AI_CUSTOMIZATIONS[property as keyof AiCustomizations],
+            AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
           status: Status.OK,
           timestamp: getCurrentTime(),
         })
@@ -197,16 +197,12 @@ const aichatSlice = createSlice({
       state.chatMessages.push(newMessage);
     },
     removeChatMessage: (state, action: PayloadAction<number>) => {
-      const updatedMessages = [...state.chatMessages];
-      const messageToRemovePosition = updatedMessages.findIndex(
-        message => message.id === action.payload
+      const updatedMessages = state.chatMessages.filter(
+        message => message.id !== action.payload
       );
-      if (!messageToRemovePosition) {
-        return;
+      if (updatedMessages.length !== state.chatMessages.length) {
+        state.chatMessages = updatedMessages;
       }
-      updatedMessages.splice(messageToRemovePosition, 1);
-
-      state.chatMessages = updatedMessages;
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
