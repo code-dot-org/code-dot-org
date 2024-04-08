@@ -15,13 +15,25 @@ import {
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import pageConstantsReducer from '@cdo/apps/redux/pageConstants';
 import shareWarnings from '@cdo/apps/shareWarnings';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import * as utils from '@cdo/apps/utils';
 import commonMsg from '@cdo/locale';
 
 import {assert, expect} from '../../util/reconfiguredChai';
+import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
 import * as testUtils from '../../util/testUtils';
+
+window.Applab = Applab;
+
+jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
+  ...jest.requireActual('@cdo/apps/code-studio/initApp/project'),
+  getCurrentId: jest.fn().mockReturnValue('some-project-id'),
+  exceedsAbuseThreshold: jest.fn(),
+  hasPrivacyProfanityViolation: jest.fn(),
+}));
 
 function setupVizDom() {
   // Create a sample DOM to test against
@@ -44,6 +56,8 @@ function setupVizDom() {
 }
 
 describe('Applab', () => {
+  setupBlocklyGlobal();
+
   testUtils.sandboxDocumentBody();
   testUtils.setExternalGlobals();
 
@@ -547,10 +561,43 @@ describe('Applab', () => {
   describe('Applab.init()', () => {
     beforeAll(() => sinon.stub(Applab, 'render'));
     afterAll(() => Applab.render.restore());
+    let containerDiv, codeWorkspaceDiv;
 
     beforeEach(() => {
       stubRedux();
+      registerReducers(commonReducers);
       registerReducers({...reducers, pageConstants: pageConstantsReducer});
+
+      codeWorkspaceDiv = document.createElement('div');
+      codeWorkspaceDiv.id = 'codeWorkspace';
+      document.body.appendChild(codeWorkspaceDiv);
+      containerDiv = document.createElement('div');
+      containerDiv.id = 'foo';
+      containerDiv.innerHTML = `
+      <button id="runButton" />
+      <button id="resetButton" />
+      <div id="visualizationColumn" />
+      <div id="toolbox-header" />
+      `;
+      document.body.appendChild(containerDiv);
+
+      let testDivApplab = document.createElement('div');
+      testDivApplab.setAttribute('id', 'divApplab');
+      document.body.appendChild(testDivApplab);
+
+      studioApp().init({
+        enableShowCode: true,
+        containerId: 'foo',
+        level: {
+          id: 'some-level-id',
+          editCode: true,
+          codeFunctions: {},
+        },
+        dropletConfig: {
+          blocks: [],
+        },
+        skin: {},
+      });
     });
 
     afterEach(restoreRedux);
