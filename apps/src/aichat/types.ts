@@ -13,6 +13,7 @@ export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',
   SYSTEM = 'system',
+  MODEL_UPDATE = 'update',
 }
 
 export type Status =
