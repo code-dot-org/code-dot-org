@@ -20,6 +20,12 @@
   &:hover {
     box-shadow: none;
   }
+
+  // note: unless border is set, you will need to override
+  // the active border state
+  // &:active {
+  //   border: ____;
+  // }
 }
 
 .progressTableV2 {
@@ -224,6 +230,10 @@ $level-cell-width: 52;
       display: flex;
       flex-direction: row;
       align-items: center;
+
+      &:active {
+        border: none;
+      }
     }
     
     &LessonText {
