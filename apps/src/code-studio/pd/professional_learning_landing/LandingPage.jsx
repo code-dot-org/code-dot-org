@@ -111,7 +111,7 @@ export default function LandingPage({
         <EnrolledWorkshops />
         {plCoursesStarted?.length >= 1 && (
           <section>
-            <Heading2>{i18n.selfPacedProfessionalLearningCourses()}</Heading2>
+            <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
             {RenderSelfPacedProgressTable()}
           </section>
         )}
