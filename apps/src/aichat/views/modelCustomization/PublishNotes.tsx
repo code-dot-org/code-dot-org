@@ -3,7 +3,7 @@ import React, {useCallback} from 'react';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import {MODEL_CARD_FIELDS_AND_LABELS} from './constants';
+import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import {isVisible, isDisabled} from './utils';
 import {
   setModelCardProperty,
@@ -29,21 +29,21 @@ const PublishNotes: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        {MODEL_CARD_FIELDS_AND_LABELS.map(([id, text]) => {
+        {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label]) => {
           return (
             isVisible(visibility) && (
-              <div className={styles.inputContainer} key={id}>
-                <label htmlFor={id}>
-                  <StrongText>{text}</StrongText>
+              <div className={styles.inputContainer} key={property}>
+                <label htmlFor={property}>
+                  <StrongText>{label}</StrongText>
                 </label>
                 <textarea
-                  id={id}
+                  id={property}
                   disabled={isDisabled(visibility)}
-                  value={modelCardInfo[id]}
+                  value={modelCardInfo[property]}
                   onChange={event =>
                     dispatch(
                       setModelCardProperty({
-                        property: id,
+                        property: property,
                         value: event.target.value,
                       })
                     )

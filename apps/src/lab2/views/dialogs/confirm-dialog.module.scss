@@ -1,7 +1,7 @@
 @import 'color.scss';
 @import './dialog-manager.module.scss';
 
-.startOverDialog {
+.confirmDialog {
   @extend %dialog;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
     }
   }
 
-  .startOver {
+  .confirm {
     @extend %button;
     background-color: $brand_secondary_default;
     border-color: $brand_secondary_default;

@@ -15,6 +15,22 @@ import {
   TRIGGER_FIELD,
 } from './constants';
 
+const instrumentCommonOptions = {
+  getLibrary: () => MusicLibrary.getInstance(),
+  cancelPreviews: () => {
+    Globals.getPlayer().cancelPreviews();
+  },
+  setupSampler: (instrument, onLoadFinished) =>
+    Globals.getPlayer().setupSampler(instrument, onLoadFinished),
+  isInstrumentLoading: instrument =>
+    Globals.getPlayer().isInstrumentLoading(instrument),
+  isInstrumentLoaded: instrument =>
+    Globals.getPlayer().isInstrumentLoaded(instrument),
+  registerInstrumentLoadCallback: callback => {
+    Globals.getPlayer().registerCallback('InstrumentLoaded', callback);
+  },
+};
+
 export const fieldSoundsDefinition = {
   type: FIELD_SOUNDS_TYPE,
   name: FIELD_SOUNDS_NAME,
@@ -30,33 +46,27 @@ export const fieldPatternDefinition = {
   type: FIELD_PATTERN_TYPE,
   name: FIELD_PATTERN_NAME,
   getBPM: () => Globals.getPlayer().getBPM(),
-  getLibrary: () => MusicLibrary.getInstance(),
   previewSound: (id, onStop) => {
     Globals.getPlayer().previewSound(id, onStop);
   },
   previewPattern: (patternValue, onStop) => {
     Globals.getPlayer().previewPattern(patternValue, onStop);
   },
-  cancelPreviews: () => {
-    Globals.getPlayer().cancelPreviews();
-  },
   currentValue: DEFAULT_PATTERN,
+  ...instrumentCommonOptions,
 };
 
 export const fieldChordDefinition = {
   type: FIELD_CHORD_TYPE,
   name: FIELD_CHORD_NAME,
-  getLibrary: () => MusicLibrary.getInstance(),
   previewChord: (chordValue, onStop) => {
     Globals.getPlayer().previewChord(chordValue, onStop);
   },
   previewNote: (note, instrument, onStop) => {
     Globals.getPlayer().previewNote(note, instrument, onStop);
   },
-  cancelPreviews: () => {
-    Globals.getPlayer().cancelPreviews();
-  },
   currentValue: DEFAULT_CHORD,
+  ...instrumentCommonOptions,
 };
 
 export const fieldRestDurationDefinition = {

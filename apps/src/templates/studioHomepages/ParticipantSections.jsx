@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import ContentContainer from '../ContentContainer';
-import Button from '@cdo/apps/templates/Button';
-import SectionsAsStudentTable from './SectionsAsStudentTable';
-import color from '@cdo/apps/util/color';
+
 import styleConstants from '@cdo/apps/styleConstants';
+import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import ContentContainer from '../ContentContainer';
+
+import SectionsAsStudentTable from './SectionsAsStudentTable';
 
 export default class ParticipantSections extends Component {
   static propTypes = {

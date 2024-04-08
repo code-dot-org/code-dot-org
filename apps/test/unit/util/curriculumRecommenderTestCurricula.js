@@ -1,8 +1,9 @@
+import moment from 'moment';
+
 import {
   IMPORTANT_TOPICS,
   UTC_PUBLISHED_DATE_FORMAT,
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
-import moment from 'moment';
 
 // "nullCourse" and "emptyCourse" have more recent publish dates than the test courses with a single trait so that
 // it'll be clear which courses received points and which didn't. After sorting by points, the recommended curricula

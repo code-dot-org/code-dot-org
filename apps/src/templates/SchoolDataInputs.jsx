@@ -11,6 +11,8 @@ import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default function SchoolDataInputs({
   includeHeaders = true,
@@ -35,15 +37,25 @@ export default function SchoolDataInputs({
   useEffect(() => {
     if (zip.length === 5) {
       setZipSearchReady(true);
+      analyticsReporter.sendEvent(
+        EVENTS.ZIP_CODE_ENTERED,
+        {zip: zip},
+        PLATFORMS.BOTH
+      );
     } else {
       // Removes the school dropdown if you delete part of the zip
       setZipSearchReady(false);
     }
-  }, [zip.length]);
+  }, [zip]);
 
   const onCountryChange = e => {
     const country = e.target.value;
     setCountry(country);
+    analyticsReporter.sendEvent(
+      EVENTS.COUNTRY_SELECTED,
+      {country: country},
+      PLATFORMS.BOTH
+    );
     // We don't want to display any fields to start that won't eventually be
     // necessary, so updating both of these any time country changes
     if (country === 'US') {
