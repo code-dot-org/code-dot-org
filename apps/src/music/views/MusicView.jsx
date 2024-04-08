@@ -334,9 +334,6 @@ class UnconnectedMusicView extends React.Component {
       this.library.getKey()
     );
 
-    // Temporarily loading all instruments for ToneJS player.
-    this.player.loadAllInstruments();
-
     this.props.setLibraryName(libraryName);
 
     this.props.setIsLoading(false);
