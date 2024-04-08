@@ -27,6 +27,7 @@ import {
 } from './sectionProgressRedux';
 import UnitSelector from './UnitSelector';
 
+import styleConstants from './progressTables/progress-table-constants.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
@@ -234,7 +235,7 @@ class SectionProgress extends Component {
   }
 }
 
-const sortOrderMargin = 22;
+const sortOrderMargin = 15;
 
 const styles = {
   heading: {
@@ -269,6 +270,7 @@ const styles = {
   },
   sortOrderSelect: {
     marginRight: sortOrderMargin,
+    width: parseInt(styleConstants.STUDENT_LIST_WIDTH) - sortOrderMargin,
   },
 };
 
