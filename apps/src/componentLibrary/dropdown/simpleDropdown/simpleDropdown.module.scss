@@ -1,5 +1,6 @@
 @import "color";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import "@cdo/apps/componentLibrary/typography/typography.module";
 
 // Dropdown common styles
 .dropdownContainer {
@@ -144,13 +145,26 @@
 
 // Sizes
 .dropdownContainer-l {
+  &.dropdownContainer-thick {
+    select {
+      @include button-one-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include body-one;
+      margin-bottom: 0;
+    }
+  }
+
   .dropdownLabel {
     @include label-one;
     margin-bottom: 0.37rem;
   }
 
   select {
-    @include button-one-text;
     height: 3rem;
     padding: 0.625rem 1rem;
     padding-right: 3rem;
@@ -167,13 +181,26 @@
 }
 
 .dropdownContainer-m {
+  &.dropdownContainer-thick {
+    select {
+      @include button-two-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include body-two;
+      margin-bottom: 0;
+    }
+  }
+
   .dropdownLabel {
     @include label-two;
     margin-bottom: 0.37rem;
   }
 
   select {
-    @include button-two-text;
     height: 2.5rem;
     padding: 0.5rem 1rem;
     padding-right: 2.75rem;
@@ -190,13 +217,26 @@
 }
 
 .dropdownContainer-s {
+  &.dropdownContainer-thick {
+    select {
+      @include button-three-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include body-three;
+      margin-bottom: 0;
+    }
+  }
+
   .dropdownLabel {
     @include label-three;
     margin-bottom: 0.37rem;
   }
 
   select {
-    @include button-three-text;
     height: 2rem;
     padding: 0.3125rem 1rem;
     padding-right: 2.625rem;
@@ -213,13 +253,26 @@
 }
 
 .dropdownContainer-xs {
+  &.dropdownContainer-thick {
+    select {
+      @include button-four-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include body-four;
+      margin-bottom: 0;
+    }
+  }
+
   .dropdownLabel {
     @include label-four;
     margin-bottom: 0.37rem;
   }
 
   select {
-    @include button-four-text;
     height: 1.5rem;
     padding: 0.125rem 0.5rem;
     padding-right: 1.75rem;

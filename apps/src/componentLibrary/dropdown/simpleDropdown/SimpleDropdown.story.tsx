@@ -131,6 +131,36 @@ GroupedOptionsDropdown.args = {
   size: 'm',
 };
 
+export const ThickAndThinDropdowns = MultipleTemplate.bind({});
+ThickAndThinDropdowns.args = {
+  components: [
+    {
+      name: 'default-dropdown-white',
+      items: [
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
+      ],
+      selectedValue: 'option-1',
+      labelText: 'Thick Dropdown',
+      dropdownTextThickness: 'thick',
+      onChange: args => console.log(args),
+      size: 'm',
+    },
+    {
+      name: 'default-dropdown-black',
+      items: [
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
+      ],
+      selectedValue: 'option-1',
+      labelText: 'Thin Dropdown',
+      dropdownTextThickness: 'thin',
+      onChange: args => console.log(args),
+      size: 'm',
+    },
+  ],
+};
+
 export const GroupOfDropdownColors = MultipleTemplate.bind({});
 GroupOfDropdownColors.args = {
   components: [
