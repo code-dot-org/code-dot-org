@@ -79,6 +79,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
           to: editorView.state.doc.length,
           insert: startCode,
         },
+        selection: editorView.state.selection,
       });
     }
   }, [startCode, editorView, channelId]);
