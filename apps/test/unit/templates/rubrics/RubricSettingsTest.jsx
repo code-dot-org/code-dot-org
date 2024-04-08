@@ -46,7 +46,7 @@ describe('RubricSettings', () => {
 
   beforeEach(() => {
     fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(Promise.resolve(new Response('')));
+    fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
     refreshAiEvaluationsSpy = sinon.spy();
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
@@ -139,6 +139,7 @@ describe('RubricSettings', () => {
 
   it('displays Section selector', () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -156,6 +157,7 @@ describe('RubricSettings', () => {
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -177,6 +179,7 @@ describe('RubricSettings', () => {
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
     stubFetchEvalStatusForAll(noAttempts);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -198,6 +201,7 @@ describe('RubricSettings', () => {
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
     stubFetchEvalStatusForAll(noUnevaluated);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -221,6 +225,7 @@ describe('RubricSettings', () => {
     // show ready state on initial load
 
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
