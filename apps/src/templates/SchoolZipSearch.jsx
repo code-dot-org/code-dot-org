@@ -51,7 +51,6 @@ export default function SchoolZipSearch({fieldNames, zip}) {
       sendAnalyticsEvent(EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED, {});
     } else if (schoolId === SELECT_A_SCHOOL) {
       ncesId = '';
-      // sendAnalyticsEvent(EVENTS.SCHOOL_LIST_OPENED, {});
     } else if (schoolId === CLICK_TO_ADD) {
       ncesId = '';
       setInputManually(true);
