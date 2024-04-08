@@ -439,7 +439,7 @@ en:
       driver: 'Logged in'
       navigator: 'Partner'
       create: 'Create'
-      new_product: "New Project"
+      new_project: "New Project"
       algebra_game: 'Algebra'
       applab: 'App Lab'
       artist: 'Artist'
