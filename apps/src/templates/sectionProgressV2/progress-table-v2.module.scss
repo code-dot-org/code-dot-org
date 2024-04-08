@@ -15,6 +15,7 @@
   border-radius: 0;
   display: inline-block;
   margin: 0;
+  box-sizing: inherit;
 
   &:hover {
     box-shadow: none;
@@ -162,9 +163,9 @@ $level-cell-width: 52;
     @include remove-default-button-styles;
     border: 1px solid $neutral_dark40;
     margin: 0;
-    height: 44px;
-    line-height: 44px;
-    min-width: 54px;
+    height: 42px;
+    line-height: 42px;
+    min-width: 52px;
     margin-bottom: 32px;
     text-align: center;
     background-color: $light_gray_50;
@@ -206,7 +207,7 @@ $level-cell-width: 52;
     &LessonCell {
       border-top: 1px solid $neutral_dark40;
       border-left: 1px solid $neutral_dark40;
-      height: 43px;
+      height: 42px;
       line-height: 42px;
       min-width: 82px;
       border: 0;
@@ -250,7 +251,7 @@ $level-cell-width: 52;
     &LevelCell {
       width: $level-cell-width + px;
       text-align: center;
-      height: 32px;
+      height: 33px;
       line-height: 32px;
       display: flex;
       flex-direction: row;

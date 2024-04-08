@@ -62,26 +62,24 @@ export default function LessonProgressColumnHeader({
     return getUninteractiveLessonColumnHeader(lesson, allLocked);
   }
   return (
-    <div className={styles.lessonHeaderCellContainer}>
-      <button
-        className={styles.lessonHeaderCellInteractive}
-        data-tip
-        data-for={getTooltipId(lesson)}
-        onClick={() => addExpandedLesson(lesson)}
-        aria-label={lesson.title}
-        aria-expanded={false}
-        type="button"
-        tabIndex={0}
-      >
-        <LessonTitleTooltip lesson={lesson} />
-        <FontAwesome
-          icon="caret-right"
-          className={styles.lessonHeaderCaret}
-          title={i18n.expand()}
-        />
-        {lesson.relative_position}
-      </button>
-    </div>
+    <button
+      className={styles.lessonHeaderCellInteractive}
+      data-tip
+      data-for={getTooltipId(lesson)}
+      onClick={() => addExpandedLesson(lesson)}
+      aria-label={lesson.title}
+      aria-expanded={false}
+      type="button"
+      tabIndex={0}
+    >
+      <LessonTitleTooltip lesson={lesson} />
+      <FontAwesome
+        icon="caret-right"
+        className={styles.lessonHeaderCaret}
+        title={i18n.expand()}
+      />
+      {lesson.relative_position}
+    </button>
   );
 }
 
