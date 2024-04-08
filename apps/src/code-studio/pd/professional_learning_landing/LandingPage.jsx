@@ -9,10 +9,12 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {EnrolledWorkshops} from './EnrolledWorkshops';
+import SelfPacedProgressTable from './SelfPacedProgressTable';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
 import style from './landingPage.module.scss';
+import './tableStyles.scss';
 
 export default function LandingPage({
   lastWorkshopSurveyUrl,
@@ -61,6 +63,10 @@ export default function LandingPage({
     />
   );
 
+  const RenderSelfPacedProgressTable = () => {
+    return <SelfPacedProgressTable plCoursesStarted={plCoursesStarted} />;
+  };
+
   const RenderStaticRecommendedPL = () => {
     const actionBlocks = [
       {
@@ -103,6 +109,12 @@ export default function LandingPage({
         {showGettingStartedBanner && RenderGettingStartedBanner()}
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <EnrolledWorkshops />
+        {plCoursesStarted?.length >= 1 && (
+          <section>
+            <Heading2>{i18n.selfPacedProfessionalLearningCourses()}</Heading2>
+            {RenderSelfPacedProgressTable()}
+          </section>
+        )}
         {deeperLearningCourseData?.length >= 1 && (
           <div>
             <Heading2>Online Professional Learning Courses</Heading2>
@@ -111,7 +123,7 @@ export default function LandingPage({
             />
           </div>
         )}
-        <section style={{marginTop: '3rem'}}>
+        <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
           {RenderStaticRecommendedPL()}
         </section>
