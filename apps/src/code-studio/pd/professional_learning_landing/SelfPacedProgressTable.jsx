@@ -39,7 +39,7 @@ const CourseRow = ({
             {percent_completed}% {i18n.selfPacedPlCompleted()}
           </BodyThreeText>
           {/* Progress bar */}
-          <div className={styles.progressBar}>
+          <div className={styles.progressBar} data-testid="progress-bar">
             <span
               className={styles.progressBarFill}
               style={{width: `${percent_completed}%`}}
