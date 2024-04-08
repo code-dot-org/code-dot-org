@@ -4,7 +4,6 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import style from './ai-tutor.module.scss';
 import classnames from 'classnames';
 import AITutor from './aiTutor';
-import TutorTypeSelector from './tutorTypeSelector';
 const icon = require('@cdo/static/ai-bot.png');
 
 interface AITutorPanelProps {
@@ -29,8 +28,6 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
         {renderAITutor ? (
           <div>
             <AITutor />
-            <h4> What would you like AI Tutor to help you with?</h4>
-            <TutorTypeSelector />
           </div>
         ) : (
           <h4>You don't have access on this level.</h4>

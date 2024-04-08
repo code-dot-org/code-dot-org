@@ -49,17 +49,17 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
 
   const dispatch = useAppDispatch();
 
-  const canSubmit = () => {
-    if (compilation) {
-      return !isRunning && hasRunOrTestedCode && hasCompilationError;
-    } else if (validation) {
-      return hasRunOrTestedCode && !hasCompilationError && !validationPassed;
-    } else {
-      return generalChat;
-    }
-  };
+  // const canSubmit = () => {
+  //   if (compilation) {
+  //     return !isRunning && hasRunOrTestedCode && hasCompilationError;
+  //   } else if (validation) {
+  //     return hasRunOrTestedCode && !hasCompilationError && !validationPassed;
+  //   } else {
+  //     return generalChat;
+  //   }
+  // };
 
-  const showSubmitButton = canSubmit();
+  // const showSubmitButton = canSubmit();
 
   const getButtonText = () => {
     if (compilation) {
@@ -110,26 +110,19 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
 
   return (
     <div className={style.UserChatMessageEditor}>
-      {generalChat && (
-        <textarea
-          className={style.textArea}
-          onChange={e => setUserMessage(e.target.value)}
-          value={userMessage}
-        />
-      )}
-      {showSubmitButton && (
-        <Button
-          key="submit"
-          text={buttonText}
-          icon="arrow-up"
-          onClick={() => handleSubmit()}
-          color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={isWaitingForChatResponse}
-        />
-      )}
-      <div>
-        <CopyButton />
-      </div>
+      <textarea
+        className={style.textArea}
+        onChange={e => setUserMessage(e.target.value)}
+        value={userMessage}
+      />
+      <Button
+        key="submit"
+        text={buttonText}
+        icon="arrow-up"
+        onClick={() => handleSubmit()}
+        color={Button.ButtonColor.brandSecondaryDefault}
+        disabled={isWaitingForChatResponse}
+      />
     </div>
   );
 };
