@@ -1,10 +1,12 @@
-import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
+
+import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
 import {
   compilationSystemPrompt,
   generalChatSystemPrompt,
   validationSystemPrompt,
 } from '@cdo/apps/aiTutor/constants';
+
 import {savePromptAndResponse} from '../interactionsApi';
 import {
   TutorType,

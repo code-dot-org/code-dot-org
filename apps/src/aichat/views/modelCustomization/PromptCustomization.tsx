@@ -1,22 +1,25 @@
-import React, {useCallback, useState} from 'react';
 import classNames from 'classnames';
+import React, {useCallback, useState} from 'react';
 
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
+import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {
   setAiCustomizationProperty,
   updateAiCustomization,
 } from '../../redux/aichatRedux';
-import styles from '../model-customization-workspace.module.scss';
+
+import CompareModelsDialog from './CompareModelsDialog';
 import {
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
 import {isVisible, isDisabled} from './utils';
-import CompareModelsDialog from './CompareModelsDialog';
+
+import styles from '../model-customization-workspace.module.scss';
 
 const PromptCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();

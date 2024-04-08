@@ -186,9 +186,6 @@ module.exports = {
       files: [
         'src/*',
         'src/acemode/*',
-        'src/aichat/**',
-        'src/ailab/*',
-        'src/aiTutor/**',
         'src/applab/**',
         'src/assetManagement/*',
         'src/blockly/**',

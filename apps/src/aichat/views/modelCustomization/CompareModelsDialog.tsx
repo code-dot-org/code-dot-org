@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {Heading3} from '@cdo/apps/componentLibrary/typography';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 
 import ModelDescriptionPanel from './ModelDescriptionPanel';
+
 import styles from './compare-models-dialog.module.scss';
 
 const CompareModelsDialog: React.FunctionComponent<{onClose: () => void}> = ({

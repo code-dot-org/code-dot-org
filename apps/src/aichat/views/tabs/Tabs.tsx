@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
 import classNames from 'classnames';
+import React, {useState} from 'react';
+
+import TabPanel from './TabPanel';
 
 import styles from './tabs.module.scss';
-import TabPanel from './TabPanel';
 
 export type Tab = {
   title: string;

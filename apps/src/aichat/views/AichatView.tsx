@@ -1,23 +1,27 @@
 /** @file Top-level view for AI Chat Lab */
 
 import React, {useCallback, useEffect, useState} from 'react';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-const commonI18n = require('@cdo/locale');
-const aichatI18n = require('@cdo/aichat/locale');
 
-import {setStartingAiCustomizations} from '../redux/aichatRedux';
-import ChatWorkspace from './ChatWorkspace';
-import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
-import PresentationView from './presentation/PresentationView';
-import CopyButton from './CopyButton';
+import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
+import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+import Instructions from '@cdo/apps/lab2/views/components/Instructions';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {setStartingAiCustomizations} from '../redux/aichatRedux';
+
+import ChatWorkspace from './ChatWorkspace';
+import CopyButton from './CopyButton';
+import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
+import PresentationView from './presentation/PresentationView';
+
 import moduleStyles from './aichatView.module.scss';
-import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
+
+const aichatI18n = require('@cdo/aichat/locale');
+const commonI18n = require('@cdo/locale');
 
 const AichatView: React.FunctionComponent = () => {
   const [viewMode, setViewMode] = useState<string>(ViewMode.EDIT);
