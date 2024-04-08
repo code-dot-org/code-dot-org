@@ -63,7 +63,7 @@ const CourseRow = ({
             color={'black'}
             href={studio(finish_url)}
             size="s"
-            text={i18n.selfPacedPlPrintCertificate()}
+            text={i18n.selfPacedPlPrintCertificates()}
             type={'secondary'}
             iconLeft={{
               iconName: 'print',
