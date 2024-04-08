@@ -2,6 +2,7 @@ require 'test_helper'
 
 class RubricsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include SharedConstants
 
   setup do
     @levelbuilder = create :levelbuilder
@@ -9,17 +10,19 @@ class RubricsControllerTest < ActionController::TestCase
     @level = create(:level)
     @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
 
+    # set up a section containing 6 students: 1 @student and 5 other_students.
+
     @teacher = create :teacher
     @student = create :student
     @follower = create :follower, student_user: @student, user: @teacher
     @rubric = create :rubric, lesson: @lesson, level: @level
 
-    @followers = []
-    @students = []
+    other_followers = []
+    other_students = []
 
     5.times do
-      @students << create(:student)
-      @followers << create(:follower, section: @follower.section, student_user: @students[-1], user: @teacher)
+      other_students << create(:student)
+      other_followers << create(:follower, section: @follower.section, student_user: other_students[-1], user: @teacher)
     end
 
     @fake_ip = '127.0.0.1'
@@ -212,7 +215,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric: @rubric,
       user: student,
       requester: @teacher,
-      status: 1
+      status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
     )
     ai_evaluation1 = create(
       :learning_goal_ai_evaluation,
@@ -234,7 +237,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: classmate,
         requester: @teacher,
-        status: 1
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -276,7 +279,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric: learning_goal.rubric,
       user: student,
       requester: @teacher,
-      status: 1
+      status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
     )
     create(
       :learning_goal_ai_evaluation,
@@ -305,7 +308,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric: learning_goal.rubric,
       user: student,
       requester: @teacher,
-      status: 1
+      status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
     )
     create(
       :learning_goal_ai_evaluation,
@@ -319,7 +322,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: learning_goal.rubric,
         user: student,
         requester: @teacher,
-        status: 1
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -407,6 +410,7 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 0, json_response['attemptedCount']
     assert_equal 0, json_response['attemptedUnevaluatedCount']
     assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 0, json_response['pendingCount']
     assert json_response['csrfToken']
   end
 
@@ -426,6 +430,71 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 1, json_response['attemptedCount']
     assert_equal 1, json_response['attemptedUnevaluatedCount']
     assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 0, json_response['pendingCount']
+    assert json_response['csrfToken']
+  end
+
+  test "returns ok and pending count when getting aggregate status if work is queued" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    Timecop.freeze do
+      Timecop.travel 1.minute
+      create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: @student,
+        requester: @teacher,
+        status: RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
+      )
+    end
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :success
+
+    assert_equal 5, json_response['notAttemptedCount']
+    assert_equal 1, json_response['attemptedCount']
+    assert_equal 1, json_response['attemptedUnevaluatedCount']
+    assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 1, json_response['pendingCount']
+    assert json_response['csrfToken']
+  end
+
+  test "returns ok and pending count when getting aggregate status if work is running" do
+    sign_in @teacher
+
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+
+    Timecop.freeze do
+      Timecop.travel 1.minute
+      create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: @student,
+        requester: @teacher,
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
+      )
+    end
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @follower.section.id,
+    }
+
+    assert_response :success
+
+    assert_equal 5, json_response['notAttemptedCount']
+    assert_equal 1, json_response['attemptedCount']
+    assert_equal 1, json_response['attemptedUnevaluatedCount']
+    assert_equal 0, json_response['lastAttemptEvaluatedCount']
+    assert_equal 1, json_response['pendingCount']
     assert json_response['csrfToken']
   end
 
@@ -462,7 +531,7 @@ class RubricsControllerTest < ActionController::TestCase
           rubric: @rubric,
           user: s,
           requester: @teacher,
-          status: 2 # successful
+          status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
         )
         create(
           :learning_goal_ai_evaluation,
@@ -488,6 +557,7 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 6, json_response['attemptedCount']
     assert_equal 1, json_response['attemptedUnevaluatedCount']
     assert_equal 5, json_response['lastAttemptEvaluatedCount']
+    assert_equal 0, json_response['pendingCount']
     assert json_response['csrfToken']
   end
 
@@ -495,6 +565,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(false)
+    Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -509,6 +580,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.expects(:ai_enabled?).with(@script_level).returns(false)
+    Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -533,6 +605,7 @@ class RubricsControllerTest < ActionController::TestCase
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
+    Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -575,7 +648,7 @@ class RubricsControllerTest < ActionController::TestCase
           rubric: @rubric,
           user: s,
           requester: @teacher,
-          status: 2 # successful
+          status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
         )
         create(
           :learning_goal_ai_evaluation,
@@ -591,6 +664,7 @@ class RubricsControllerTest < ActionController::TestCase
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).once
+    Metrics::Events.stubs(:log_event).once
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -619,7 +693,7 @@ class RubricsControllerTest < ActionController::TestCase
           rubric: @rubric,
           user: s,
           requester: @teacher,
-          status: 2 # successful
+          status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
         )
         create(
           :learning_goal_ai_evaluation,
@@ -656,6 +730,8 @@ class RubricsControllerTest < ActionController::TestCase
     assert json_response['csrfToken']
 
     EvaluateRubricJob.expects(:perform_later).times(5)
+    Metrics::Events.stubs(:log_event).times(5)
+
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
       sectionId: follower.section.id,
@@ -866,7 +942,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
+        status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -883,7 +959,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
+        status: RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -924,7 +1000,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: 1
+        status: RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
       )
       create(
         :learning_goal_ai_evaluation,

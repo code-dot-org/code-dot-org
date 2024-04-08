@@ -8,14 +8,23 @@ import {
 } from '@blockly/plugin-scroll-options';
 import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
-import {BlocklyVersion, WORKSPACE_EVENTS} from '@cdo/apps/blockly/constants';
+import {
+  BlockColors,
+  BlocklyVersion,
+  READ_ONLY_PROPERTIES,
+  SETTABLE_PROPERTIES,
+  WORKSPACE_EVENTS,
+} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
+import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
 import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import CdoFieldLabel from './addons/cdoFieldLabel';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
@@ -98,6 +107,7 @@ const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
+const LOOP_HIGHLIGHT = 'loopHighlight();\n';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -187,7 +197,16 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return Blockly.JavaScript.INFINITE_LOOP_TRAP;
   };
 
-  blocklyWrapper.loopHighlight = function () {}; // TODO
+  blocklyWrapper.loopHighlight = function (apiName, blockId) {
+    let args = "'block_id_" + blockId + "'";
+    if (blockId === undefined) {
+      args = '%1';
+    }
+    return (
+      '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')')
+    );
+  };
+
   blocklyWrapper.getWorkspaceCode = function () {
     return getWorkspaceCodeHelper(0, this.getHiddenDefinitionWorkspace());
   };
@@ -222,95 +241,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return workspaceCode;
   };
 
-  blocklyWrapper.wrapReadOnlyProperty('ALIGN_CENTRE');
-  blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
-  blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
-  blocklyWrapper.wrapReadOnlyProperty('applab_locale');
-  blocklyWrapper.wrapReadOnlyProperty('BasicCursor');
-  blocklyWrapper.wrapReadOnlyProperty('blockRendering');
-  blocklyWrapper.wrapReadOnlyProperty('Block');
-  blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
-  blocklyWrapper.wrapReadOnlyProperty('Blocks');
-  blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
-  blocklyWrapper.wrapReadOnlyProperty('browserEvents');
-  blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
-  blocklyWrapper.wrapReadOnlyProperty('common');
-  blocklyWrapper.wrapReadOnlyProperty('common_locale');
-  blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
-  blocklyWrapper.wrapReadOnlyProperty('config');
-  blocklyWrapper.wrapReadOnlyProperty('Connection');
-  blocklyWrapper.wrapReadOnlyProperty('ConnectionType');
-  blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
-  blocklyWrapper.wrapReadOnlyProperty('contractEditor');
-  blocklyWrapper.wrapReadOnlyProperty('createBlockDefinitionsFromJsonArray');
-  blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
-  blocklyWrapper.wrapReadOnlyProperty('Css');
-  blocklyWrapper.wrapReadOnlyProperty('Cursor');
-  blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
-  blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
-  blocklyWrapper.wrapReadOnlyProperty('Events');
-  blocklyWrapper.wrapReadOnlyProperty('Extensions');
-  blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
-  blocklyWrapper.wrapReadOnlyProperty('FieldAngleInput');
-  blocklyWrapper.wrapReadOnlyProperty('FieldAngleTextInput');
-  blocklyWrapper.wrapReadOnlyProperty('FieldColour');
-  blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
-  blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
-  blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
-  blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
-  blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
-  blocklyWrapper.wrapReadOnlyProperty('fieldRegistry');
-  blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
-  blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
-  blocklyWrapper.wrapReadOnlyProperty('FieldAngle');
-  blocklyWrapper.wrapReadOnlyProperty('FieldMultilineInput');
-  blocklyWrapper.wrapReadOnlyProperty('fish_locale');
-  blocklyWrapper.wrapReadOnlyProperty('Flyout');
-  blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
-  blocklyWrapper.wrapReadOnlyProperty('FunctionalTypeColors');
-  blocklyWrapper.wrapReadOnlyProperty('FunctionEditor');
-  blocklyWrapper.wrapReadOnlyProperty('gamelab_locale');
-  blocklyWrapper.wrapReadOnlyProperty('Generator');
-  blocklyWrapper.wrapReadOnlyProperty('geras');
-  blocklyWrapper.wrapReadOnlyProperty('thrasos');
-  blocklyWrapper.wrapReadOnlyProperty('zelos');
-  blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
-  blocklyWrapper.wrapReadOnlyProperty('googlecode');
-  blocklyWrapper.wrapReadOnlyProperty('hasCategories');
-  blocklyWrapper.wrapReadOnlyProperty('html');
-  blocklyWrapper.wrapReadOnlyProperty('Input');
-  blocklyWrapper.wrapReadOnlyProperty('inputTypes');
-  blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
-  blocklyWrapper.wrapReadOnlyProperty('js');
-  blocklyWrapper.wrapReadOnlyProperty('MenuItem');
-  blocklyWrapper.wrapReadOnlyProperty('MetricsManager');
-  blocklyWrapper.wrapReadOnlyProperty('modalBlockSpace');
-  blocklyWrapper.wrapReadOnlyProperty('Msg');
-  blocklyWrapper.wrapReadOnlyProperty('Names');
-  blocklyWrapper.wrapReadOnlyProperty('netsim_locale');
-  blocklyWrapper.wrapReadOnlyProperty('Procedures');
-  blocklyWrapper.wrapReadOnlyProperty('registry');
-  blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
-  blocklyWrapper.wrapReadOnlyProperty('RTL');
-  blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
-  blocklyWrapper.wrapReadOnlyProperty('serialization');
-  blocklyWrapper.wrapReadOnlyProperty('SPRITE');
-  blocklyWrapper.wrapReadOnlyProperty('svgResize');
-  blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
-  blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
-  blocklyWrapper.wrapReadOnlyProperty('utils');
-  blocklyWrapper.wrapReadOnlyProperty('Toolbox');
-  blocklyWrapper.wrapReadOnlyProperty('Touch');
-  blocklyWrapper.wrapReadOnlyProperty('Trashcan');
-  blocklyWrapper.wrapReadOnlyProperty('VARIABLE_CATEGORY_NAME');
-  blocklyWrapper.wrapReadOnlyProperty('Variables');
-  blocklyWrapper.wrapReadOnlyProperty('VariableMap');
-  blocklyWrapper.wrapReadOnlyProperty('VariableModel');
-  blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
-  blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');
-  blocklyWrapper.wrapReadOnlyProperty('Workspace');
-  blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
-  blocklyWrapper.wrapReadOnlyProperty('Xml');
+  READ_ONLY_PROPERTIES.forEach(prop => {
+    blocklyWrapper.wrapReadOnlyProperty(prop);
+  });
 
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
@@ -320,6 +253,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // CdoFieldBitmap extends from a JavaScript class without typing.
     // We know it's a field, so it's safe to cast as unknown.
     ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
+    ['field_label', 'FieldLabel', CdoFieldLabel],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -339,6 +273,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.FieldFlyout = CdoFieldFlyout;
   blocklyWrapper.FieldBehaviorPicker = CdoFieldBehaviorPicker;
   blocklyWrapper.FieldAnimationDropdown = CdoFieldAnimationDropdown;
+  blocklyWrapper.FieldAngleDropdown = CdoFieldAngleDropdown;
+  blocklyWrapper.FieldAngleTextInput = CdoFieldAngleTextInput;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -417,17 +353,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   });
 
   // Properties cannot be modified until wrapSettableProperty has been called
-  blocklyWrapper.wrapSettableProperty('assetUrl');
-  blocklyWrapper.wrapSettableProperty('behaviorEditor');
-  blocklyWrapper.wrapSettableProperty('customSimpleDialog');
-  blocklyWrapper.wrapSettableProperty('BROKEN_CONTROL_POINTS');
-  blocklyWrapper.wrapSettableProperty('BUMP_UNCONNECTED');
-  blocklyWrapper.wrapSettableProperty('HSV_SATURATION');
-  blocklyWrapper.wrapSettableProperty('JavaScript');
-  blocklyWrapper.wrapSettableProperty('readOnly');
-  blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
-  blocklyWrapper.wrapSettableProperty('typeHints');
-  blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
+  SETTABLE_PROPERTIES.forEach(property =>
+    blocklyWrapper.wrapSettableProperty(property)
+  );
 
   // Allows for dynamically setting the workspace theme with workspace.setTheme()
   blocklyWrapper.themes = {
@@ -489,6 +417,25 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return false;
   };
 
+  // Labs like Maze and Artist turn undeletable blocks gray.
+  extendedBlockSvg.shouldBeGrayedOut = function () {
+    return (
+      blocklyWrapper.grayOutUndeletableBlocks &&
+      !this.workspace.isReadOnly() &&
+      !this.isDeletable()
+    );
+  };
+
+  const originalSetDeletable = blocklyWrapper.Block.prototype.setDeletable;
+  // Replace the original setDeletable with a version that will also re-color
+  // blocks if they are meant to be gray.
+  extendedBlockSvg.setDeletable = function (deletable) {
+    originalSetDeletable.call(this, deletable);
+    if (this.shouldBeGrayedOut()) {
+      Blockly.cdoUtils.setHSV(this, ...BlockColors.DISABLED);
+    }
+  };
+
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
 
   extendedInput.setStrictCheck = function (check) {
@@ -530,6 +477,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   extendedWorkspaceSvg.getAllUsedBlocks = function () {
     return this.getAllBlocks().filter(block => block.isEnabled());
+  };
+
+  extendedWorkspaceSvg.isReadOnly = function () {
+    return blocklyWrapper.readOnly || this.options.readOnly;
   };
 
   // Used in levels when starting over or resetting Version History
@@ -730,8 +681,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options
     ) as ExtendedWorkspaceSvg;
 
+    blocklyWrapper.grayOutUndeletableBlocks =
+      !!options.grayOutUndeletableBlocks;
     blocklyWrapper.topLevelProcedureAutopopulate =
       !!options.topLevelProcedureAutopopulate;
+    blocklyWrapper.readOnly = !!opt_options.readOnly;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;

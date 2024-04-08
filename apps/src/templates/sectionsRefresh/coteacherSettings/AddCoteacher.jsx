@@ -93,6 +93,7 @@ export default function AddCoteacher({
   addError,
   setAddError,
   sectionMetricInformation,
+  disabled,
 }) {
   const [inputValue, setInputValue] = useState('');
 
@@ -195,6 +196,10 @@ export default function AddCoteacher({
   const isMaxCoteachers = numCoteachers >= 5;
 
   const getErrorOrCount = () => {
+    if (disabled) {
+      return null;
+    }
+
     if (addError) {
       return (
         <Figcaption
@@ -220,7 +225,7 @@ export default function AddCoteacher({
         <input
           className={classNames(styles.input, !!addError && styles.inputError)}
           type="text"
-          disabled={isMaxCoteachers}
+          disabled={isMaxCoteachers || !!disabled}
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleSubmitAddEmail}
@@ -232,7 +237,7 @@ export default function AddCoteacher({
           type="submit"
           text={i18n.coteacherAddButton()}
           onClick={handleAddEmail}
-          disabled={isMaxCoteachers}
+          disabled={isMaxCoteachers || !!disabled}
         />
       </div>
       {getErrorOrCount()}
@@ -249,4 +254,5 @@ AddCoteacher.propTypes = {
   addSavedCoteacher: PropTypes.func.isRequired,
   setAddError: PropTypes.func.isRequired,
   sectionMetricInformation: PropTypes.object,
+  disabled: PropTypes.bool,
 };

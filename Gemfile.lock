@@ -382,8 +382,8 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     fakefs (2.5.0)
-    fakeredis (0.6.0)
-      redis (~> 3.2)
+    fakeredis (0.9.2)
+      redis (~> 4.8)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -742,7 +742,7 @@ GEM
     recaptcha (4.6.3)
       json
     redcarpet (3.5.1)
-    redis (3.3.3)
+    redis (4.8.1)
     regexp_parser (2.8.1)
     representable (3.2.0)
       declarative (< 0.1.0)
@@ -1090,7 +1090,7 @@ DEPENDENCIES
   rambling-trie (>= 2.1.1)
   recaptcha
   redcarpet (~> 3.5.1)
-  redis (~> 3.3.3)
+  redis (~> 4.8.1)
   redis-slave-read!
   require_all
   rerun

@@ -1,6 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import moduleStyles from './dialog-manager.module.scss';
 import StartOverDialog from './StartOverDialog';
+import SkipDialog from './SkipDialog';
 
 /**
  * Manages displaying common dialogs for Lab2.
@@ -8,6 +9,7 @@ import StartOverDialog from './StartOverDialog';
 
 export enum DialogType {
   StartOver = 'StartOver',
+  Skip = 'Skip',
 }
 
 export interface BaseDialogProps {
@@ -19,6 +21,7 @@ const DialogViews: {
   [key in DialogType]: React.FunctionComponent<BaseDialogProps>;
 } = {
   [DialogType.StartOver]: StartOverDialog,
+  [DialogType.Skip]: SkipDialog,
 };
 
 interface DialogManagerProps {

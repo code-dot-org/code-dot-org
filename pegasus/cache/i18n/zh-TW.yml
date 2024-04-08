@@ -840,6 +840,7 @@ zh-TW:
   header_about_us: 關於我們
   header_course_catalog: 課程目錄
   header_courses: 課程
+  header_districts: 地區
   header_documentation: 說明文件
   header_educate_beyond: 超越 Code.org
   header_educate_community: 線上社群
@@ -1827,6 +1828,7 @@ zh-TW:
   user_header_applab: App Lab
   user_header_artist: '演出者 '
   user_header_create: '創造 '
+  user_header_create_account: 建立帳戶
   user_header_dance: 舞蹈派對
   user_header_flappy: 像素鳥
   user_header_gamelab: Game Lab

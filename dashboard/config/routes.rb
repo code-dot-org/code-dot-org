@@ -45,6 +45,7 @@ Dashboard::Application.routes.draw do
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/gallery", to: "musiclab#gallery"
+    get "/musiclab/embed", to: "musiclab#embed"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]

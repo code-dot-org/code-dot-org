@@ -13,8 +13,6 @@
   overflow: hidden;
   user-select: none;
   display: flex;
-  flex-direction: row;
-  gap: 2px;
   margin: 2px;
 
   .instructionsArea {
@@ -33,6 +31,19 @@
 
   .presentationArea {
     width: 50%;
-    height: 100%;
+    height: 90%;
+    overflow-y: auto;
   }
+}
+
+.columnFlexContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.labCoreContainer {
+  display: flex;
+  flex: 1;
+  gap: 2px;
 }

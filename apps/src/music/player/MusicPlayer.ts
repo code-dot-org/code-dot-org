@@ -471,6 +471,7 @@ export default class MusicPlayer {
 
     return {
       instrument,
+      effects: event.effects,
       events: generatedNotes.map(({note, tick}) => ({
         notes: [getPitchName(note)],
         playbackPosition: event.when + (tick - 1) / 16,
@@ -496,6 +497,7 @@ export default class MusicPlayer {
 
     return {
       instrument: kit,
+      effects: patternEvent.effects,
       events: patternEvent.value.events.map(event => {
         return {
           notes: [getPitchName(event.note)],

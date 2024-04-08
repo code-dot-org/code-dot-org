@@ -1,7 +1,8 @@
 import React, {useEffect, useRef, memo} from 'react';
 
-const commonI18n = require('@cdo/locale');
 import moduleStyles from './chip.module.scss';
+
+const commonI18n = require('@cdo/locale');
 
 interface ChipProps {
   /** Chip label */
