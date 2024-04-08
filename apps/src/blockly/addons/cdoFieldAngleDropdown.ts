@@ -66,18 +66,22 @@ export default class CdoFieldAngleDropdown extends FieldAngle {
       return super.doClassValidation_(newValue);
     }
 
+    // Get a valid angle value, then find the nearest custom option.
+    const validAngleValue = super.doClassValidation_(newValue);
+
     // A field wouldn't normally have both a menu generator and xml config values.
     // If both are present, we favor the config values as they come directly
     // from the serialization.
     const customValues = this.configValues || this.menuGeneratorValues;
     const closestCustomValue = customValues.reduce(
       (prev: number, curr: number) => {
-        return Math.abs(curr - newValue) < Math.abs(prev - newValue)
+        return Math.abs(curr - validAngleValue) <
+          Math.abs(prev - validAngleValue)
           ? curr
           : prev;
       }
     );
-    return super.doClassValidation_(closestCustomValue);
+    return closestCustomValue;
   }
 
   /**
