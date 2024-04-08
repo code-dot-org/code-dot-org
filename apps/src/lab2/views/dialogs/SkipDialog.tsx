@@ -5,19 +5,19 @@ import moduleStyles from './confirm-dialog.module.scss';
 const commonI18n = require('@cdo/locale');
 
 /**
- * Start Over dialog used in Lab2 labs.
+ * Skip dialog used in Lab2 labs.
  */
-const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
+const SkipDialog: React.FunctionComponent<BaseDialogProps> = ({
   handleConfirm,
   handleCancel,
 }) => {
   return (
     <div className={moduleStyles.confirmDialog}>
       <Typography semanticTag="h1" visualAppearance="heading-lg">
-        {commonI18n.startOverTitle()}
+        {commonI18n.skipTitle()}
       </Typography>
       <Typography semanticTag="p" visualAppearance="body-two">
-        {commonI18n.startOverWorkspace()}
+        {commonI18n.skipBody()}
       </Typography>
       <div className={moduleStyles.buttonContainer}>
         <button
@@ -32,11 +32,11 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
           type="button"
           onClick={handleConfirm}
         >
-          {commonI18n.startOver()}
+          {commonI18n.skipToProject()}
         </button>
       </div>
     </div>
   );
 };
 
-export default StartOverDialog;
+export default SkipDialog;
