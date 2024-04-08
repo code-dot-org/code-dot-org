@@ -240,7 +240,7 @@ min-width:47px;
       width: fit-content;
 
       &Inner {
-        border-left: 1px solid transparent;
+        border-left: thin solid transparent;
         width: 52px;
       }
 
@@ -282,6 +282,27 @@ min-width:47px;
     width: 100%;
     text-align: center; 
     line-height: 47px !important;
+  }
+
+  &ChoiceLevelLink {
+    border-left: thin solid $neutral_dark40;
+    height: 31px;
+    padding: 8px 0;
+    width: $level-cell-width;
+  }
+
+  &LevelCell {
+    border-left: 0;
+
+    &First {
+      border-inline-start: 4px solid $neutral_dark40;
+      width: $level-cell-width - 3 + px;
+    }
+
+    &Last {
+      border-inline-end: 3px solid $neutral_dark40;
+      width: $level-cell-width - 2 + px;
+    }
   }
 
   &LevelEmpty {
