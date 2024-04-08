@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import * as React from 'react';
 
-import Parser from '@code-dot-org/redactable-markdown';
+// import redactableMarkdownProcessor from '@code-dot-org/redactable-markdown';
 
 import {
+  //divclass,
+  //link,
   details,
   clickableText,
   expandableImages,
@@ -11,6 +13,8 @@ import {
   xmlAsTopLevelBlock,
 } from '@code-dot-org/remark-plugins';
 
+import unified from 'unified';
+import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
@@ -32,16 +36,21 @@ class SafeMarkdown extends React.Component {
   };
 
   render() {
+    // debugger;
     // We only open external links in a new tab if it's explicitly specified
     // that we do so; this is absolutely not something we want to do as a
     // general practice, but unfortunately there are some situations in which
     // it is currently a requirement.
-    const parser = this.props.openExternalLinksInNewTab
+    const processor = this.props.openExternalLinksInNewTab
       ? markdownToReactExternalLinks
       : markdownToReact;
 
-    const rendered = parser.processSync(this.props.markdown).contents;
+    console.log(this.props.markdown);
 
+    const rendered = processor.processSync(this.props.markdown).result;
+
+    console.log('DEBUGGING');
+    console.log(rendered);
     const markdownProps = {};
     if (this.props.className) {
       markdownProps.className = this.props.className;
@@ -112,8 +121,8 @@ blocklyTags.forEach(tag => {
   };
 });
 
-const markdownToReact = Parser.create()
-  .getParser()
+const markdownToReact = unified()
+  .use(remarkParse)
   // include custom plugins
   .use([
     clickableText,
