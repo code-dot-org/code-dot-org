@@ -159,7 +159,7 @@ export default function LandingPage({
             />
           </div>
         )}
-        <section className={style.recommendedPlContainer}>
+        <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
           {RenderStaticRecommendedPL()}
         </section>
