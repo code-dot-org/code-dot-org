@@ -54,14 +54,13 @@ const initialState: AITutorState = {
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
   async (chatContext: ChatContext, thunkAPI) => {
-    const state = thunkAPI.getState() as {aiTutor: AITutorState};
-    const instructionsState = thunkAPI.getState() as {
-      instructions: InstructionsState;
-    };
+    const state = thunkAPI.getState();
+    const aiTutorState = state as {aiTutor: AITutorState};
+    const instructionsState = state as {instructions: InstructionsState};
     const levelContext = {
-      levelId: state.aiTutor.level?.id,
-      isProjectBacked: state.aiTutor.level?.isProjectBacked,
-      scriptId: state.aiTutor.scriptId,
+      levelId: aiTutorState.aiTutor.level?.id,
+      isProjectBacked: aiTutorState.aiTutor.level?.isProjectBacked,
+      scriptId: aiTutorState.aiTutor.scriptId,
     };
 
     const tutorType = chatContext.tutorType;
@@ -86,7 +85,7 @@ export const askAITutor = createAsyncThunk(
         levelInstructions;
     }
 
-    const storedMessages = state.aiTutor.chatMessages;
+    const storedMessages = aiTutorState.aiTutor.chatMessages;
 
     const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
 
