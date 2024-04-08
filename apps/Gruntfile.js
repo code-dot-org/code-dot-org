@@ -232,7 +232,7 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'lib/pyodide',
-          src: ['**'],
+          src: ['*.whl'],
           dest: 'build/package/js/pyodide/',
         },
       ],
