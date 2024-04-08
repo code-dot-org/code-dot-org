@@ -88,6 +88,7 @@ export default function SchoolZipSearch({fieldNames, zip}) {
             {i18n.selectYourSchool()}
           </BodyTwoText>
           <SimpleDropdown
+            id="uitest-school-dropdown"
             className={style.dropdown}
             name={fieldNames.ncesSchoolId}
             items={SEARCH_DEFAULTS.concat(sortSchoolsByName(dropdownSchools))}
