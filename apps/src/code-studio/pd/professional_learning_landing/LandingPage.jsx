@@ -130,7 +130,7 @@ export default function LandingPage({
       <div className={`${headerContainerStyles} ${style.headerContainer}`}>
         <HeaderBannerNoImage headingText={i18n.professionalLearning()}>
           {availableTabs.length > 1 && (
-            <div className={style.myPlTabsContainer}>
+            <nav className={style.myPlTabsContainer}>
               <Tabs
                 name="myPLTabs"
                 tabs={availableTabs}
@@ -143,7 +143,7 @@ export default function LandingPage({
                   console.log(tab);
                 }}
               />
-            </div>
+            </nav>
           )}
         </HeaderBannerNoImage>
       </div>
@@ -159,7 +159,7 @@ export default function LandingPage({
             />
           </div>
         )}
-        <section style={{marginTop: '3rem'}}>
+        <section className={style.recommendedPlContainer}>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
           {RenderStaticRecommendedPL()}
         </section>
