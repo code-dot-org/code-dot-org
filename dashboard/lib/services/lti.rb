@@ -35,7 +35,7 @@ module Services
       auth_option = user.authentication_options.find(&:lti?)
       issuer, client_id, subject = auth_option.authentication_id.split('|')
       lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
-      LtiUserIdentity.create(user: user, subject: subject, lti_integration: lti_integration)
+      LtiUserIdentity.create!(user: user, subject: subject, lti_integration: lti_integration)
     end
 
     def self.create_lti_integration(
