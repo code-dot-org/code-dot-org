@@ -75,6 +75,7 @@ export default function LandingPage({
           text: i18n.plLandingGettingStartedButton(),
         },
       ]}
+      marginBottom={0}
     />
   );
 
