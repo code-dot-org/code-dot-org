@@ -7,10 +7,13 @@ import {Config} from './Config';
 import {CDOIDE} from '@cdoide/CDOIDE';
 import {ConfigType, ProjectType} from '@cdoide/types';
 
-import CDOEditor from './Editor';
+import CDOEditor from './CDOIDE/CenterPane/Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {html} from '@codemirror/lang-html';
+import {LanguageSupport} from '@codemirror/language';
+import {css} from '@codemirror/lang-css';
 
 const instructions = `Add html pages and preview them in the right pane.
 
@@ -18,13 +21,18 @@ Add css pages (and link them to your html).
 
 Use the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)`;
 
+const weblabLangMapping: {[key: string]: LanguageSupport} = {
+  html: html(),
+  css: css(),
+};
+
 const defaultConfig: ConfigType = {
   //showSideBar: true,
   // showLeftNav: false,
   // showEditor: false,
   // showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: CDOEditor,
+  EditorComponent: () => CDOEditor(weblabLangMapping, ['html', 'css']),
   // editableFileTypes: ["html"],
   // previewFileTypes: ["html"],
   leftNav: [
