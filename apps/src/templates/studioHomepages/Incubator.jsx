@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import Button from '@cdo/apps/templates/Button';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import i18n from '@cdo/locale';
-import {getStore} from '@cdo/apps/redux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {LmsLinks} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
 
 import HeaderBanner from '../HeaderBanner';
 
