@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import TwoColumnActionBlock from './TwoColumnActionBlock';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
+
+import TwoColumnActionBlock from './TwoColumnActionBlock';
 
 /*
 This component differs from the SpecialAnnouncementActionBlock because it

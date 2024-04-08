@@ -1,10 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
+import PropTypes from 'prop-types';
+import React from 'react';
 import sinon from 'sinon';
-import {allowConsoleErrors} from '../../util/testUtils';
+
 import {useFetch} from '@cdo/apps/util/useFetch';
+
+import {expect} from '../../util/reconfiguredChai';
+import {allowConsoleErrors} from '../../util/testUtils';
 
 // Functional react component to host the useFetch hook
 let useFetchReturnValue = {current: null};

@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
-import TwoColumnActionBlock from './TwoColumnActionBlock';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
-import Button from '@cdo/apps/templates/Button';
-import color from '../../util/color';
-import shapes from './shapes';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import Button from '@cdo/apps/templates/Button';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+
+import color from '../../util/color';
+
+import shapes from './shapes';
+import TwoColumnActionBlock from './TwoColumnActionBlock';
 
 // MarketingAnnouncementBanner is a wrapper around TwoColumnActionBlock
 // which adds a button to dismiss the banner.

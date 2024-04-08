@@ -565,6 +565,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(false)
+    Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -579,6 +580,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.expects(:ai_enabled?).with(@script_level).returns(false)
+    Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -603,6 +605,7 @@ class RubricsControllerTest < ActionController::TestCase
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
+    Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -661,6 +664,7 @@ class RubricsControllerTest < ActionController::TestCase
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).once
+    Metrics::Events.stubs(:log_event).once
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
@@ -726,6 +730,8 @@ class RubricsControllerTest < ActionController::TestCase
     assert json_response['csrfToken']
 
     EvaluateRubricJob.expects(:perform_later).times(5)
+    Metrics::Events.stubs(:log_event).times(5)
+
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
       sectionId: follower.section.id,

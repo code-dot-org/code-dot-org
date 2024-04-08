@@ -108,6 +108,7 @@ cron:
     remove_column: [admin_email]
 - dashboard.lti_deployments
 - dashboard.lti_courses
+- dashboard.lti_feedbacks
 - dashboard.lti_sections
 - dashboard.lti_user_identities
 cron-user-hierarchy:
