@@ -1,4 +1,4 @@
-#@eyes
+@eyes
 Feature: Teacher can create a new account
 
 Scenario: Teacher can create an account with the new school association flow
