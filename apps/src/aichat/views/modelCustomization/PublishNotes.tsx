@@ -34,16 +34,14 @@ const PublishNotes: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       {isVisible(visibility) && (
-        <div>
+        <>
           {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label]) => {
             const InputTag = getInputTag(property);
             return (
-              <>
-                <div className={styles.inputContainer} key={property}>
-                  <label htmlFor={property}>
-                    <StrongText>{label}</StrongText>
-                  </label>
-                </div>
+              <div className={styles.inputContainer} key={property}>
+                <label htmlFor={property}>
+                  <StrongText>{label}</StrongText>
+                </label>
                 <InputTag
                   id={property}
                   disabled={isDisabled(visibility)}
@@ -57,10 +55,10 @@ const PublishNotes: React.FunctionComponent = () => {
                     )
                   }
                 />
-              </>
+              </div>
             );
           })}
-        </div>
+        </>
       )}
       <div className={styles.footerButtonContainer}>
         <Button
