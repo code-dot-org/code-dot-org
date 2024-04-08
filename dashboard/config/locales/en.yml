@@ -372,7 +372,6 @@ en:
       my_dashboard: "My Dashboard"
       course_catalog: "Course Catalog"
       project_gallery: "Projects"
-      new_product: "New Project"
       schools: "Schools"
       districts: "Districts"
       sections: "Sections"
@@ -440,6 +439,7 @@ en:
       driver: 'Logged in'
       navigator: 'Partner'
       create: 'Create'
+      new_product: "New Project"
       algebra_game: 'Algebra'
       applab: 'App Lab'
       artist: 'Artist'
