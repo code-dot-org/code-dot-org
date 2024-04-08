@@ -27,7 +27,6 @@ export type ConfigType = {
   showEditor?: boolean;
   showPreview?: boolean;
   showSideBar?: boolean;
-  showRunBar?: boolean;
   showDebug?: boolean;
   activeLeftNav: string;
   sideBar: SideBarItem[];

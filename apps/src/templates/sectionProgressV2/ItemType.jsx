@@ -17,7 +17,7 @@ export const ITEM_TYPE = Object.freeze({
   ASSESSMENT_LEVEL: makeObjectType(
     i18n.assessmentLevel(),
     'star',
-    color.neutral_dark60
+    color.neutral_dark
   ),
   CHOICE_LEVEL: makeObjectType(
     i18n.choiceLevel(),
