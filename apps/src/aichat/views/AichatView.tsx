@@ -8,7 +8,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
-import {setStartingAiCustomizations} from '../redux/aichatRedux';
+import {
+  setStartingAiCustomizations,
+  clearChatMessages,
+} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
@@ -16,8 +19,25 @@ import CopyButton from './CopyButton';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import moduleStyles from './aichatView.module.scss';
 import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
+
+const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
+  return (
+    <div>
+      <Button
+        onClick={onClear}
+        text="Clear"
+        iconLeft={{iconName: 'paintbrush'}}
+        size="xs"
+        color="white"
+        type="secondary"
+      />
+      <CopyButton />
+    </div>
+  );
+};
 
 const AichatView: React.FunctionComponent = () => {
   const [viewMode, setViewMode] = useState<string>(ViewMode.EDIT);
@@ -119,7 +139,9 @@ const AichatView: React.FunctionComponent = () => {
             <PanelContainer
               id="aichat-workspace-panel"
               headerText={chatWorkspaceHeader}
-              rightHeaderContent={<CopyButton />}
+              rightHeaderContent={renderChatWorkspaceHeaderRight(() =>
+                dispatch(clearChatMessages())
+              )}
             >
               <ChatWorkspace />
             </PanelContainer>

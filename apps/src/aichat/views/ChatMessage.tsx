@@ -1,21 +1,14 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Button from '@cdo/apps/componentLibrary/button';
+import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
 import {removeChatMessage} from '../redux/aichatRedux';
-import {
-  AichatLevelProperties,
-  ChatCompletionMessage,
-  Role,
-  Status,
-} from '../types';
+import {ChatCompletionMessage, Role, Status} from '../types';
 import aichatI18n from '../locale';
 import moduleStyles from './chatMessage.module.scss';
 
@@ -82,7 +75,6 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK) {
     return (
       <div
-        id={'chat-workspace-message-body'}
         className={classNames(
           moduleStyles.message,
           moduleStyles.assistantMessage
@@ -123,13 +115,6 @@ const displayModelUpdateMessage = (
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
   const dispatch = useAppDispatch();
 
-  const botTitle =
-    useSelector(
-      (state: {lab: LabState}) =>
-        (state.lab.levelProperties as AichatLevelProperties | undefined)
-          ?.botTitle
-    ) || 'EduBot';
-
   return (
     <div id={`ChatMessage id: ${message.id}`}>
       {isUser(message.role) && (
@@ -140,9 +125,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
 
       {isAssistant(message.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
-          <Typography semanticTag="h5" visualAppearance="heading-xs">
-            {botTitle} ({message.role})
-          </Typography>
+          <img src={aiBotIcon} alt="An icon depicting a robot" />
           {displayAssistantMessage(message.status, message.chatMessageText)}
         </div>
       )}

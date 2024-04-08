@@ -62,7 +62,7 @@ $level-cell-width: 52;
   &Lesson {
     text-align: center;
     min-width: 52px;
-    max-width: 52px;  
+    max-width: 52px;
     height: 47px;
     line-height: 47px !important;
   }
@@ -70,7 +70,7 @@ $level-cell-width: 52;
   &Skeleton {
     vertical-align: middle;
   }
-  
+
   &Level {
     width: $level-cell-width + px;
     height: 47px;
@@ -110,7 +110,7 @@ $level-cell-width: 52;
     flex-direction: column;
     justify-content: flex-end;
   }
-  
+
   &UnitSelector {
     display: flex;
     flex-direction: row;
@@ -141,7 +141,7 @@ min-width:47px;
     text-align: center;
     background-color: $light_gray_50;
   }
-  
+
   &HeaderTooltip {
     height: 18px;
     line-height: 18px;
@@ -185,7 +185,7 @@ min-width:47px;
       flex-direction: row;
       align-items: center;
     }
-    
+
     &LessonText {
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -249,7 +249,7 @@ min-width:47px;
       }
     }
 
-    &ExpandedLevelCellFirst { 
+    &ExpandedLevelCellFirst {
       border-left: 1px solid $neutral_dark40;
       width: 52px;
     }
@@ -280,7 +280,7 @@ min-width:47px;
   &LevelLink {
     height: 100%;
     width: 100%;
-    text-align: center; 
+    text-align: center;
     line-height: 47px !important;
   }
 
@@ -292,7 +292,6 @@ min-width:47px;
 
 .sortDropdown {
   height: 72px;
-  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
