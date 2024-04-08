@@ -1,6 +1,8 @@
-import {createThumbnail} from '@cdo/apps/util/thumbnail';
 import {toCanvas} from '@cdo/apps/imageUtils';
+import {createThumbnail} from '@cdo/apps/util/thumbnail';
+
 import assertVisualMatch from '../../util/assertVisualMatch';
+
 import squarePlayspaceImage from './squarePlayspaceImage.png';
 import squarePlayspaceThumbnail from './squarePlayspaceThumbnail.png';
 import tallPlayspaceImage from './tallPlayspaceImage.png';

@@ -35,15 +35,15 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
-  setExpandedCardKey,
+  handleSetExpandedCardKey,
   isInUS,
   imageSrc,
   imageAltText,
   availableResources,
   isSignedOut,
   isTeacher,
-  getRecommendedSimilarCurriculum,
-  getRecommendedStretchCurriculum,
+  recommendedSimilarCurriculum,
+  recommendedStretchCurriculum,
 }) => {
   const isTeacherOrSignedOut = isSignedOut || isTeacher;
   const expandedCardRef = useRef(null);
@@ -82,20 +82,20 @@ const ExpandedCurriculumCatalogCard = ({
     return ++availableResourceCounter < availableResourcesCount;
   };
 
-  const recommendedSimilarCurriculum =
-    getRecommendedSimilarCurriculum(courseKey);
-
-  const recommendedStretchCurriculum = getRecommendedStretchCurriculum(
-    courseKey,
-    recommendedSimilarCurriculum.key
-  );
-
   const handleClickRecommendedSimilarCurriculum = () => {
     analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_CLICKED, {
       current_curriculum_offering: courseKey,
-      recommended_curriculum_offering: recommendedSimilarCurriculum.key,
+      recommended_similar_curriculum_offering: recommendedSimilarCurriculum.key,
     });
-    setExpandedCardKey(recommendedSimilarCurriculum.key);
+    handleSetExpandedCardKey(recommendedSimilarCurriculum.key);
+  };
+
+  const handleClickRecommendedStretchCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_STRETCH_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_stretch_curriculum_offering: recommendedStretchCurriculum.key,
+    });
+    handleSetExpandedCardKey(recommendedStretchCurriculum.key);
   };
 
   useEffect(() => {
@@ -325,9 +325,7 @@ const ExpandedCurriculumCatalogCard = ({
                   styleAsText
                   className={style.relatedCurriculaLink}
                   text={recommendedStretchCurriculum.display_name}
-                  onClick={() =>
-                    setExpandedCardKey(recommendedStretchCurriculum.key)
-                  }
+                  onClick={handleClickRecommendedStretchCurriculum}
                 />
               </div>
             </div>
@@ -353,14 +351,14 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
-  setExpandedCardKey: PropTypes.func.isRequired,
+  handleSetExpandedCardKey: PropTypes.func.isRequired,
   isInUS: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
-  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
-  getRecommendedStretchCurriculum: PropTypes.func.isRequired,
+  recommendedSimilarCurriculum: PropTypes.object,
+  recommendedStretchCurriculum: PropTypes.object,
 };
 export default ExpandedCurriculumCatalogCard;

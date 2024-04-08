@@ -1,7 +1,9 @@
 import React from 'react';
-import TeacherResources from './TeacherResources';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import TeacherResources from './TeacherResources';
 
 export default {
   component: TeacherResources,

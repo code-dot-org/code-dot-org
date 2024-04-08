@@ -1,0 +1,279 @@
+{
+  "script": {
+    "name": "self-paced-pl-ai-101-mod5",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "is_migrated": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-04-05 20:04:12 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-ai-101-mod5"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Ensuring a Responsible Approach to AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c4cd36d2-6aa0-4f8d-aa33-268cda15f15c",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c4cd36d2-6aa0-4f8d-aa33-268cda15f15c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "da518036-2791-4379-bf22-e7f70c94a55e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Opening (10 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "da518036-2791-4379-bf22-e7f70c94a55e",
+        "lesson_activity.key": "c4cd36d2-6aa0-4f8d-aa33-268cda15f15c"
+      }
+    },
+    {
+      "key": "d940c441-39d6-439d-861d-b8b6b889d1a2",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d940c441-39d6-439d-861d-b8b6b889d1a2",
+        "lesson_activity.key": "c4cd36d2-6aa0-4f8d-aa33-268cda15f15c"
+      }
+    },
+    {
+      "key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up (10 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3",
+        "lesson_activity.key": "c4cd36d2-6aa0-4f8d-aa33-268cda15f15c"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Opening (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-introduction_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "da518036-2791-4379-bf22-e7f70c94a55e"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod5-introduction_2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Opening (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-opening_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "da518036-2791-4379-bf22-e7f70c94a55e"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod5-opening_2024"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-closing_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod5-closing_2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-closing_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod5-closing_02_2024"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod5-introduction_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-introduction_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "da518036-2791-4379-bf22-e7f70c94a55e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod5-opening_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-opening_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "da518036-2791-4379-bf22-e7f70c94a55e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod5-closing_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-closing_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod5-closing_02_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-closing_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

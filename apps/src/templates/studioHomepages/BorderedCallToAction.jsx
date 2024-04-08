@@ -1,9 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
-import styleConstants from '@cdo/apps/styleConstants';
+import React from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import styleConstants from '@cdo/apps/styleConstants';
 import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 
 const BorderedCallToAction = ({

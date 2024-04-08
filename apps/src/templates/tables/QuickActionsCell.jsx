@@ -1,11 +1,13 @@
+import throttle from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '../../util/color';
+
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
-import styleConstants from '../../styleConstants';
-import throttle from 'lodash/debounce';
-import FontAwesome from '../FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+import FontAwesome from '../FontAwesome';
 
 export const QuickActionsCellType = {
   header: 'header',

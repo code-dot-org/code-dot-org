@@ -65,10 +65,11 @@ describe('CurriculumCatalogCard', () => {
       scriptId: 1,
       isSignedOut: true,
       onQuickViewClick: () => {},
+      handleSetExpandedCardKey: () => {},
       isTeacher: true,
       setExpandedCardKey: () => {},
-      getRecommendedSimilarCurriculum: () => {},
-      getRecommendedStretchCurriculum: () => {},
+      recommendedSimilarCurriculum: {},
+      recommendedStretchCurriculum: {},
     };
   });
 

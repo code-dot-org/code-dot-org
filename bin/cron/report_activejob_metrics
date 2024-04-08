@@ -12,6 +12,7 @@ def push_queue_length_metric
   Cdo::Metrics.push(METRICS_NAMESPACE,
     [
       {
+        # Same metric as "dashboard/app/jobs/application_job.rb"
         metric_name: 'JobCount',
         value: job_count,
         unit: 'Count',
@@ -19,7 +20,7 @@ def push_queue_length_metric
         dimensions: [
           {
             name: 'Environment',
-            value: CDO.rack_env # is this the right value?
+            value: CDO.rack_env
           }
         ]
       }
@@ -41,7 +42,7 @@ def push_oldest_job_age_metric
         dimensions: [
           {
             name: 'Environment',
-            value: CDO.rack_env # is this the right value?
+            value: CDO.rack_env
           }
         ]
       }
