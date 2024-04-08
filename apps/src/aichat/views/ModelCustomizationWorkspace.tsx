@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Tabs, {Tab} from './tabs/Tabs';
-import PromptCustomization from './modelCustomization/PromptCustomization';
+import SetupCustomization from './modelCustomization/SetupCustomization';
 import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
 import PublishNotes from './modelCustomization/PublishNotes';
 import styles from './model-customization-workspace.module.scss';
@@ -12,7 +12,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   const {temperature, systemPrompt, retrievalContexts, modelCardInfo} =
     useAppSelector(state => state.aichat.fieldVisibilities);
 
-  const showPromptCustomization =
+  const showSetupCustomization =
     isVisible(temperature) || isVisible(systemPrompt);
 
   return (
@@ -20,9 +20,9 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       <Tabs
         tabs={
           [
-            showPromptCustomization && {
+            showSetupCustomization && {
               title: 'Setup',
-              content: <PromptCustomization />,
+              content: <SetupCustomization />,
             },
             isVisible(retrievalContexts) && {
               title: 'Retrieval',

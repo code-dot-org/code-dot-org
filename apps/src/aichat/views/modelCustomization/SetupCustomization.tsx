@@ -18,7 +18,7 @@ import {
 import {isVisible, isDisabled} from './utils';
 import CompareModelsDialog from './CompareModelsDialog';
 
-const PromptCustomization: React.FunctionComponent = () => {
+const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const [chosenModel, setChosenModel] = useState<string>('llama2');
@@ -136,4 +136,4 @@ const PromptCustomization: React.FunctionComponent = () => {
   );
 };
 
-export default PromptCustomization;
+export default SetupCustomization;
