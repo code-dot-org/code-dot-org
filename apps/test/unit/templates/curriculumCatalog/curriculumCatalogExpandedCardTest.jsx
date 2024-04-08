@@ -53,13 +53,9 @@ describe('CurriculumCatalogExpandedCard', () => {
         'https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png',
       isSignedOut: false,
       isTeacher: true,
-      setExpandedCardKey: () => {},
-      getRecommendedSimilarCurriculum: () => {
-        return FULL_TEST_COURSES[0];
-      },
-      getRecommendedStretchCurriculum: () => {
-        return FULL_TEST_COURSES[1];
-      },
+      handleSetExpandedCardKey: () => {},
+      recommendedSimilarCurriculum: FULL_TEST_COURSES[0],
+      recommendedStretchCurriculum: FULL_TEST_COURSES[1],
     };
   });
 
