@@ -9,11 +9,11 @@ import {isVisible} from './modelCustomization/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
-  const {botName, temperature, systemPrompt, retrievalContexts, modelCardInfo} =
+  const {temperature, systemPrompt, retrievalContexts, modelCardInfo} =
     useAppSelector(state => state.aichat.fieldVisibilities);
 
   const showPromptCustomization =
-    isVisible(botName) || isVisible(temperature) || isVisible(systemPrompt);
+    isVisible(temperature) || isVisible(systemPrompt);
 
   return (
     <div className={styles.modelCustomizationWorkspace}>

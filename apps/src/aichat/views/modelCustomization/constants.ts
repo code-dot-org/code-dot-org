@@ -16,6 +16,7 @@ export const MODEL_CARD_FIELDS_LABELS_ICONS: [
   string,
   string
 ][] = [
+  ['botName', 'Chatbot Name', ''],
   ['description', 'Description', 'memo'],
   ['intendedUse', 'Intended Use', 'bullseye-pointer'],
   ['limitationsAndWarnings', 'Limitations and Warnings', 'diamond-exclamation'],
@@ -32,6 +33,7 @@ export const TECHNICAL_INFO_FIELDS = [
 ] as const;
 
 export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
+  botName: '',
   description: '',
   intendedUse: '',
   limitationsAndWarnings: '',
@@ -40,7 +42,6 @@ export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
 };
 
 export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
-  botName: '',
   temperature: 0.5,
   systemPrompt: '',
   retrievalContexts: [],
@@ -50,7 +51,6 @@ export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
 export const DEFAULT_VISIBILITIES: {
   [key in keyof AiCustomizations]: Visibility;
 } = {
-  botName: Visibility.EDITABLE,
   temperature: Visibility.EDITABLE,
   systemPrompt: Visibility.EDITABLE,
   retrievalContexts: Visibility.EDITABLE,
