@@ -5,7 +5,7 @@ class CreateAiTutorInteractionFeedbacks < ActiveRecord::Migration[6.1]
       t.bigint :user_id, null: false
       t.boolean :thumbs_up
       t.boolean :thumbs_down
-      
+
       t.timestamps
     end
 
