@@ -39,6 +39,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I click selector ".introjs-skipbutton" if it exists
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -85,6 +86,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I click selector ".introjs-skipbutton" if it exists
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -134,6 +136,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
+    And I click selector ".introjs-skipbutton" if it exists
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 

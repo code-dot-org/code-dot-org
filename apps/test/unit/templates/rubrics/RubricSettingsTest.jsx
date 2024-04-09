@@ -320,14 +320,10 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
     expect(wrapper.find('Button').at(1).text()).to.include(
@@ -352,14 +348,10 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.text()).to.include(
       i18n.rubricNumberStudentEvals({
@@ -388,14 +380,10 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.text()).to.include(
       i18n.rubricNumberStudentEvals({

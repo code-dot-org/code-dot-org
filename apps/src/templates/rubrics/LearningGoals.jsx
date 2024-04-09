@@ -263,6 +263,7 @@ export function annotateLines(evidence, observations) {
 }
 
 export default function LearningGoals({
+  productTour,
   open,
   learningGoals,
   teacherHasEnabledAi,
@@ -362,36 +363,38 @@ export default function LearningGoals({
   }
 
   const autosave = () => {
-    setAutosaveStatus(STATUS.IN_PROGRESS);
-    const bodyData = JSON.stringify({
-      studentId: studentLevelInfo.user_id,
-      learningGoalId: learningGoals[currentLearningGoal].id,
-      feedback: teacherFeedbacks.current[currentLearningGoal],
-      understanding: understandingLevels.current[currentLearningGoal],
-    });
-    HttpClient.put(
-      `${base_teacher_evaluation_endpoint}/${learningGoalEvalIds.current[currentLearningGoal]}`,
-      bodyData,
-      true,
-      {
-        'Content-Type': 'application/json',
-      }
-    )
-      .then(() => {
-        setAutosaveStatus(STATUS.FINISHED);
-        if (!feedbackAdded) {
-          setFeedbackAdded(true);
-        }
-      })
-      .catch(error => {
-        console.error(error);
-        setAutosaveStatus(STATUS.ERROR);
+    if (!productTour) {
+      setAutosaveStatus(STATUS.IN_PROGRESS);
+      const bodyData = JSON.stringify({
+        studentId: studentLevelInfo.user_id,
+        learningGoalId: learningGoals[currentLearningGoal].id,
+        feedback: teacherFeedbacks.current[currentLearningGoal],
+        understanding: understandingLevels.current[currentLearningGoal],
       });
-    clearTimeout(autosaveTimer.current);
+      HttpClient.put(
+        `${base_teacher_evaluation_endpoint}/${learningGoalEvalIds.current[currentLearningGoal]}`,
+        bodyData,
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      )
+        .then(() => {
+          setAutosaveStatus(STATUS.FINISHED);
+          if (!feedbackAdded) {
+            setFeedbackAdded(true);
+          }
+        })
+        .catch(error => {
+          console.error(error);
+          setAutosaveStatus(STATUS.ERROR);
+        });
+      clearTimeout(autosaveTimer.current);
+    }
   };
 
   useEffect(() => {
-    if (studentLevelInfo && learningGoals) {
+    if (studentLevelInfo && learningGoals && !productTour) {
       // Set our current idea of the feedback immediately
       setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
       setLoaded(teacherFeedbacksLoaded.current[currentLearningGoal]);
@@ -441,11 +444,11 @@ export default function LearningGoals({
             .catch(error => console.error(error));
         });
     }
-  }, [studentLevelInfo, learningGoals, currentLearningGoal, open]);
+  }, [studentLevelInfo, learningGoals, currentLearningGoal, open, productTour]);
 
-  useEffect(() =>
-    document.addEventListener('keydown', handleKeyDown, {once: true})
-  );
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown, {once: true});
+  });
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
@@ -516,48 +519,64 @@ export default function LearningGoals({
   const aiEvidence = useMemo(() => {
     // Annotate the lines based on the AI observation
     clearAnnotations();
-    if (!!aiEvalInfo?.evidence) {
+    if (!!aiEvalInfo?.evidence && !productTour) {
       return annotateLines(aiEvalInfo.evidence, aiEvalInfo.observations);
+    } else if (productTour) {
+      return [
+        {
+          firstLine: 12,
+          lastLine: 13,
+          message: 'A sprite is defined here.',
+        },
+      ];
     }
     return [];
-  }, [aiEvalInfo]);
+  }, [aiEvalInfo, productTour]);
 
   const onCarouselPress = buttonValue => {
-    let currentIndex = currentLearningGoal;
-    currentIndex += buttonValue;
-    if (currentIndex < 0) {
-      currentIndex = learningGoals.length;
-    } else if (currentIndex > learningGoals.length) {
-      currentIndex = 0;
-    }
-    currentLearningGoalRef.current = currentIndex;
-    setCurrentLearningGoal(currentIndex);
+    if (!productTour) {
+      let currentIndex = currentLearningGoal;
+      currentIndex += buttonValue;
+      if (currentIndex < 0) {
+        currentIndex = learningGoals.length;
+      } else if (currentIndex > learningGoals.length) {
+        currentIndex = 0;
+      }
+      currentLearningGoalRef.current = currentIndex;
+      setCurrentLearningGoal(currentIndex);
 
-    // Clear feedback (without sending it)
-    setAiFeedback(-1);
+      // Clear feedback (without sending it)
+      setAiFeedback(-1);
 
-    // Annotate the lines based on the AI observation
-    clearAnnotations();
-    if (currentIndex !== learningGoals.length) {
-      if (!isStudent) {
-        const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
-        analyticsReporter.sendEvent(eventName, {
-          ...(reportingData || {}),
-          learningGoalKey: learningGoals[currentIndex].key,
-          learningGoal: learningGoals[currentIndex].learningGoal,
-          studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
-        });
+      // Annotate the lines based on the AI observation
+      clearAnnotations();
+      if (currentIndex !== learningGoals.length) {
+        if (!isStudent) {
+          const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
+          analyticsReporter.sendEvent(eventName, {
+            ...(reportingData || {}),
+            learningGoalKey: learningGoals[currentIndex].key,
+            learningGoal: learningGoals[currentIndex].learningGoal,
+            studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+          });
+        }
       }
     }
   };
 
   const handleKeyDown = event => {
-    if (event.key === 'ArrowLeft') {
-      onCarouselPress(-1);
-    } else if (event.key === 'ArrowRight') {
-      onCarouselPress(1);
+    if (open && !productTour) {
+      if (event.key === 'ArrowLeft') {
+        onCarouselPress(-1);
+      } else if (event.key === 'ArrowRight') {
+        onCarouselPress(1);
+      }
     }
   };
+
+  if (productTour && currentLearningGoal !== 0) {
+    setCurrentLearningGoal(0);
+  }
 
   return (
     <div className={style.learningGoalsContainer}>
@@ -652,6 +671,7 @@ export default function LearningGoals({
               {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
               <div>
                 <EvidenceLevels
+                  productTour={productTour}
                   aiEvalInfo={aiEvalInfo}
                   isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
                   learningGoalKey={learningGoals[currentLearningGoal].key}
@@ -669,7 +689,10 @@ export default function LearningGoals({
                   !!studentLevelInfo &&
                   !!aiEvalInfo &&
                   aiEvalInfo.understanding !== undefined && (
-                    <div className={style.aiAssessmentOuterBlock}>
+                    <div
+                      id="tour-ai-assessment"
+                      className={style.aiAssessmentOuterBlock}
+                    >
                       <AiAssessment
                         isAiAssessed={
                           learningGoals[currentLearningGoal].aiEnabled
@@ -700,7 +723,7 @@ export default function LearningGoals({
             </AiAssessmentFeedbackContext.Provider>
           </div>
         )}
-        {currentLearningGoal === learningGoals.length && (
+        {currentLearningGoal === learningGoals.length && !productTour && (
           <div>
             {learningGoals.map((lg, i) => (
               <div className={style.learningGoalSummary} key={i}>
@@ -720,6 +743,7 @@ export default function LearningGoals({
 }
 
 LearningGoals.propTypes = {
+  productTour: PropTypes.bool,
   open: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
