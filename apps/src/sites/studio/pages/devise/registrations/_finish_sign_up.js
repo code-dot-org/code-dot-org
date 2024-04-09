@@ -54,7 +54,6 @@ $(document).ready(() => {
   function init() {
     let hiddenUserType = $('#user_user_type').attr('type') === 'hidden';
     if (!hiddenUserType) {
-      // If in variant, toggle large buttons
       document.getElementById('select-user-type-original').style.cssText =
         'display:none;';
       document.getElementById('select-user-type-variant').style.cssText =
