@@ -15,7 +15,7 @@ import instructions, {
 import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import AITutorFloatingActionButton from '@cdo/apps/code-studio/components/aiTutor/aiTutorFloatingActionButton';
+import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
 
 $(document).ready(initPage);
 

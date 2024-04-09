@@ -7,7 +7,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import AITutor from './aiTutor';
-import AITutorFooter from './AITutorFooter';
+import AITutorFooter from '../AITutorFooter';
 import style from './ai-tutor.module.scss';
 
 interface AITutorContainerProps {
