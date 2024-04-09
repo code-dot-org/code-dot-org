@@ -1,7 +1,6 @@
 import React from 'react';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import ChatMessage from './chatMessage';
-import UserChatMessageEditor from './userChatMessageEditor';
 import style from './chat-workspace.module.scss';
 import WarningModal from './warningModal';
 import {AITutorTypes as TutorTypes} from '@cdo/apps/aiTutor/types';
@@ -39,9 +38,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
           <ChatMessage message={message} key={message.id} />
         ))}
         {showWaitingAnimation()}
-      </div>
-      <div id="chat-workspace-editor" className={style.userChatMessageEditor}>
-        <UserChatMessageEditor />
       </div>
     </div>
   );

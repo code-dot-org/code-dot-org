@@ -2,6 +2,34 @@
 @import 'font';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 
+.aiTutorContainer {
+  position: fixed;
+  left: 10px;
+  bottom: 120px;
+  z-index: 2000;
+  width: 760px;
+}
+
+button.buttonStyle {
+  border-width: 0;
+  margin: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.closeButton {
+  display: flex;
+  padding: 11px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background-color: $neutral_dark;
+  color: $neutral_white;
+}
+
 .floatingActionButton {
   position: fixed;
   left: 10px;
