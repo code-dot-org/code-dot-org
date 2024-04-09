@@ -1751,6 +1751,16 @@
     top_list_03: "Collaborate with fellow teachers"
     top_list_04: "Earn a certificate of completion"
     button: "Find a workshop near you"
+    quote:
+      text: "It was great to put myself in situations that my students might face. Talking with others about our lessons was super helpful because we could bounce ideas off of one another."
+      byline: "Music Teacher"
+    additional_programs:
+      heading: "Additional professional learning offerings"
+      desc: "In addition to our facilitator led options for elementary teachers we have several other programs to meet the diverse needs of our teachers."
+      workshops:
+        title: "6-12 Workshops"
+        desc: "Do you teach middle or high school grades? Check out the link below to learn more about our 6-12 workshops."
+        button: "Explore 6-12 workshops"
 
   intl_pl_page:
     page_title: "International Professional Learning Resources"
