@@ -15,7 +15,7 @@ Scenario: Teacher can open and close Icon Key and details
   Then I append "/?enableExperiments=section_progress_v2" to the URL
 
   # toggle to V2 progress view
-  Then I click selector "#ui-test-link-to-new-progress-view"
+  Then I click selector "#ui-test-toggle-progress-view"
   And I wait until element "h6:contains(Icon Key)" is visible
   And I wait until element "#ui-test-progress-table-v2" is visible
   And element "#ui-test-progress-table-v2" is visible 
@@ -32,4 +32,3 @@ Scenario: Teacher can open and close Icon Key and details
   And I wait until element "h3:contains(Progress Tracking Icon Key)" is visible
   And I click selector "#ui-close-dialog"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
-  

@@ -69,7 +69,7 @@ function SectionProgressSelector({
         type="primary"
         size="s"
         onClick={onShowProgressTableV2Change}
-        id="ui-test-link-to-new-progress-view"
+        id="ui-test-toggle-progress-view"
       >
         {displayV2
           ? i18n.switchToOldProgressView()
