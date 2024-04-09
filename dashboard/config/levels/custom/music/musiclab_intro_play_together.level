@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "skipUrl": "/projects/music/new",
     "long_instructions": "#### Play Together\r\n\r\nThis code currently plays a bass sound after a drum sound.\r\n\r\nBut you can also play them together at the same time.\r\n\r\nConnect [play together](#clickable=play-sounds-together-block) to [when run](#clickable=when-run-block).\r\n\r\nThen, move the two [play](#clickable=play-sound-block-workspace) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
     "level_data": {
       "library": "intro2024",

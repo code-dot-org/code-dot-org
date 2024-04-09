@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {editStudent} from './manageStudentsRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
+
 import color from '../../util/color';
+
+import {editStudent} from './manageStudentsRedux';
 
 class ManageStudentsSharingCell extends Component {
   static propTypes = {

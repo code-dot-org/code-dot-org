@@ -7,24 +7,30 @@ import {
 } from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
-  TutorType,
   Role,
-  Status,
+  AITutorInteractionStatus as Status,
   ChatCompletionMessage,
   Level,
   ChatContext,
+  AITutorTypesValue,
+  AITutorTypes as TutorTypes,
+  AITutorInteractionStatusValue,
 } from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AITutorState {
-  selectedTutorType: TutorType | undefined;
+  selectedTutorType: AITutorTypesValue | undefined;
   level: Level | undefined;
   scriptId: number | undefined;
   aiResponse: string | undefined;
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   chatMessageError: boolean;
+}
+
+export interface InstructionsState {
+  longInstructions: string;
 }
 
 const initialChatMessages: ChatCompletionMessage[] = [
@@ -50,17 +56,19 @@ const initialState: AITutorState = {
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
   async (chatContext: ChatContext, thunkAPI) => {
-    const state = thunkAPI.getState() as {aiTutor: AITutorState};
+    const state = thunkAPI.getState();
+    const aiTutorState = state as {aiTutor: AITutorState};
+    const instructionsState = state as {instructions: InstructionsState};
     const levelContext = {
-      levelId: state.aiTutor.level?.id,
-      isProjectBacked: state.aiTutor.level?.isProjectBacked,
-      scriptId: state.aiTutor.scriptId,
+      levelId: aiTutorState.aiTutor.level?.id,
+      isProjectBacked: aiTutorState.aiTutor.level?.isProjectBacked,
+      scriptId: aiTutorState.aiTutor.scriptId,
     };
 
     const tutorType = chatContext.tutorType;
-    const generalChat = tutorType === TutorType.GENERAL_CHAT;
-    const compilation = tutorType === TutorType.COMPILATION;
-    const validation = tutorType === TutorType.VALIDATION;
+    const generalChat = tutorType === TutorTypes.GENERAL_CHAT;
+    const compilation = tutorType === TutorTypes.COMPILATION;
+    const validation = tutorType === TutorTypes.VALIDATION;
 
     let systemPrompt;
     if (validation) {
@@ -74,7 +82,15 @@ export const askAITutor = createAsyncThunk(
       systemPrompt += '\n' + state.aiTutor.level?.levelSpecificPrompt;
     }
 
-    const storedMessages = state.aiTutor.chatMessages;
+    const levelInstructions = instructionsState.instructions.longInstructions;
+
+    if (levelInstructions.length > 0) {
+      systemPrompt +=
+        '\n Here are the student instructions for this level: ' +
+        levelInstructions;
+    }
+
+    const storedMessages = aiTutorState.aiTutor.chatMessages;
 
     const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
 
@@ -132,7 +148,7 @@ const aiTutorSlice = createSlice({
   reducers: {
     setSelectedTutorType: (
       state,
-      action: PayloadAction<TutorType | undefined>
+      action: PayloadAction<AITutorTypesValue | undefined>
     ) => {
       state.selectedTutorType = action.payload;
     },
@@ -162,7 +178,7 @@ const aiTutorSlice = createSlice({
     },
     updateChatMessageStatus: (
       state,
-      action: PayloadAction<{id: number; status: Status}>
+      action: PayloadAction<{id: number; status: AITutorInteractionStatusValue}>
     ) => {
       const {id, status} = action.payload;
       const chatMessage = state.chatMessages.find(msg => msg.id === id);

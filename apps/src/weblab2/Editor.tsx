@@ -1,20 +1,16 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
-import {useCDOIDEContext, editableFileType, prettify} from 'cdo-ide-poc';
+import {editableFileType} from '@cdoide/utils';
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';
 import {css} from '@codemirror/lang-css';
-import {javascript as js} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
-//import prettier from 'prettier/standalone';
-//import htmlParser from 'prettier/parser-html';
-//import cssParser from 'prettier/parser-postcss';
 
 const codeMirrorLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
-  js: js(),
 };
 
 const Editor = () => {
@@ -25,20 +21,18 @@ const Editor = () => {
   // for now we just key the component off of the file ID + an incrementing value that
   // hits every time the format button is pressed. That'll force a re-render and make it work.
   // let's swap this out with something better.
-  const [formats, setFormats] = useState(1);
 
   const onChange = useCallback(
     (value: string) => {
       saveFile(file.id, value);
     },
-    [file, saveFile]
+    [file.id, saveFile]
   );
 
-  const format = async () => {
-    const prettified = await prettify(file.contents, file.language);
-    saveFile(file.id, prettified);
-    setFormats(f => f + 1);
-  };
+  const editorConfigExtensions = useMemo(
+    () => [codeMirrorLangMapping[file.language]],
+    [file.language]
+  );
 
   if (!editableFileType(file.language)) {
     return <div>Cannot currently edit files of type {file.language}</div>;
@@ -46,16 +40,13 @@ const Editor = () => {
 
   return (
     <div className="editor-container">
-      <button type="button" onClick={() => format()}>
-        Format
-      </button>
       {file && (
         <CodeEditor
-          key={`${file.id}/${formats}`}
-          darkMode={false}
+          key={`${file.id}/${1}`}
+          darkMode={true}
           onCodeChange={onChange}
           startCode={file.contents}
-          editorConfigExtensions={[codeMirrorLangMapping[file.language]]}
+          editorConfigExtensions={editorConfigExtensions}
         />
       )}
     </div>

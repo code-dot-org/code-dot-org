@@ -1,6 +1,5 @@
 @import 'color.scss';
 
-$message-editor-height: 100px;
 $default-spacing: 2px;
 
 .chatWorkspace {
@@ -8,6 +7,7 @@ $default-spacing: 2px;
   display: flex;
   flex-direction: column;
   background-color: $neutral_light;
+  padding: 10px;
 }
 
 .conversationArea {
@@ -18,16 +18,6 @@ $default-spacing: 2px;
   gap: $default-spacing;
   box-sizing: border-box;
   overflow-y: scroll;
-}
-
-.userChatMessageEditor {
-  padding: 1% 1%;
-  margin: 10px 2%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: $message-editor-height;
-  box-sizing: border-box;
 }
 
 .waitingForResponse {

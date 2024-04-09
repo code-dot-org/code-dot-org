@@ -461,6 +461,7 @@ en:
       minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
+      music: 'Project Beats'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (Pre-reader)'
       poetry: 'Poetry'
@@ -947,7 +948,7 @@ en:
     age: Your age
     header: Account Information Update
     warning: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here."
-    disclaimer: "Code.org will never rent, sell or share this information with any third parties."
+    disclaimer: 'Code.org [will never rent, sell or share this information with any third parties](%{url}).'
     sign_out_markdown: 'If you do not wish to provide your age you may [sign out](%{url}).'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
@@ -1421,6 +1422,9 @@ en:
       missing_params: "Missing required param(s): School/District name, Client ID, LMS, Email"
       unsupported_lms_type: "Unsupported LMS platform type"
       wrong_resource_type: "Only LtiResourceLink is supported right now"
+    iframe_button: "Open in New Tab"
+    iframe_message: "Code.org cannot be run in an embedded window. Please open it in a new tab."
+    iframe_title: "Opening Code.org in New Tab"
     integration:
       client_id: "LMS Client ID"
       email: "Your email"
@@ -1457,3 +1461,7 @@ en:
     upgrade_to_teacher_account:
       error:
         missing_email: "Missing required parameter: Email"
+  certificates:
+    alt_text_with_name: "Certificate for %{student_name} for completion of %{course_name}"
+    alt_text_no_name: "Certificate for completion of %{course_name}"
+    one_hour_of_code: "One Hour of Code"

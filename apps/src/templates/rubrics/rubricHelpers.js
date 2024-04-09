@@ -14,3 +14,8 @@ export const UNDERSTANDING_LEVEL_STRINGS_V2 = {
   [RubricUnderstandingLevels.LIMITED]: i18n.limited(),
   [RubricUnderstandingLevels.NONE]: i18n.none(),
 };
+
+export const TAB_NAMES = {
+  RUBRIC: 'rubric',
+  SETTINGS: 'settings',
+};

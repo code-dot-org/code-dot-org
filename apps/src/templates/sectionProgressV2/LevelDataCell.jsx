@@ -5,6 +5,8 @@ import queryString from 'query-string';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
@@ -15,6 +17,33 @@ import ProgressIcon from './ProgressIcon';
 
 import legendStyles from './progress-table-legend.module.scss';
 import styles from './progress-table-v2.module.scss';
+
+const levelClickedAmplitude = (sectionId, isAssessment) => () => {
+  analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_LEVEL_DETAILS, {
+    sectionId: sectionId,
+    isAssessment: isAssessment,
+  });
+};
+
+export const getStudentRowHeaderId = studentId => `s-${studentId}`;
+export const getLessonColumnHeaderId = lessonId => `l-${lessonId}`;
+export const getLevelColumnHeaderId = (levelId, parentLevelId) =>
+  parentLevelId !== undefined
+    ? `lvl-${parentLevelId}.${levelId}`
+    : `lvl-${levelId}`;
+
+const getHeadersForCell = (studentId, levelId, parentLevelId, lessonId) => {
+  return (
+    getStudentRowHeaderId(studentId) +
+    ' ' +
+    getLevelColumnHeaderId(levelId) +
+    ' ' +
+    (parentLevelId !== undefined
+      ? getLevelColumnHeaderId(levelId, parentLevelId) + ' '
+      : '') +
+    getLessonColumnHeaderId(lessonId)
+  );
+};
 
 export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
@@ -40,6 +69,8 @@ function LevelDataCell({
   sectionId,
   studentLevelProgress,
   expandedChoiceLevel,
+  parentLevelId,
+  lessonId,
 }) {
   const itemType = React.useMemo(() => {
     if (expandedChoiceLevel) {
@@ -55,7 +86,7 @@ function LevelDataCell({
       !studentLevelProgress ||
       studentLevelProgress.status === LevelStatus.not_tried
     ) {
-      return;
+      return ITEM_TYPE.NO_PROGRESS;
     }
     if (
       studentLevelProgress.status === LevelStatus.perfect ||
@@ -75,6 +106,7 @@ function LevelDataCell({
     ) {
       return ITEM_TYPE.IN_PROGRESS;
     }
+    return ITEM_TYPE.NO_PROGRESS;
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   const feedbackStyle = React.useMemo(() => {
@@ -90,14 +122,24 @@ function LevelDataCell({
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   return (
-    <Link
-      href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
-      openInNewTab
-      external
+    <td
       className={classNames(styles.gridBox, styles.gridBoxLevel, feedbackStyle)}
+      headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
-      {itemType && <ProgressIcon itemType={itemType} />}
-    </Link>
+      <Link
+        href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
+        openInNewTab
+        external
+        onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
+        className={styles.expandedLevelLink}
+      >
+        {itemType ? (
+          <ProgressIcon itemType={itemType} />
+        ) : (
+          <div className={styles.expandedLevelEmpty} />
+        )}
+      </Link>
+    </td>
   );
 }
 
@@ -113,4 +155,6 @@ LevelDataCell.propTypes = {
   studentLevelProgress: studentLevelProgressType,
   level: PropTypes.object.isRequired,
   expandedChoiceLevel: PropTypes.bool,
+  parentLevelId: PropTypes.string,
+  lessonId: PropTypes.number.isRequired,
 };

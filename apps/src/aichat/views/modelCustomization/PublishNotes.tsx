@@ -1,47 +1,73 @@
-import React from 'react';
-import {useSelector} from 'react-redux';
+import React, {useCallback} from 'react';
 
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import styles from '../model-customization-workspace.module.scss';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
-import {
-  EMPTY_AI_CUSTOMIZATIONS,
-  MODEL_CARD_FIELDS_AND_LABELS,
-} from './constants';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import {isVisible, isDisabled} from './utils';
+import {
+  setModelCardProperty,
+  updateAiCustomization,
+} from '@cdo/apps/aichat/redux/aichatRedux';
+import styles from '../model-customization-workspace.module.scss';
+import {ModelCardInfo} from '@cdo/apps/aichat/types';
 
 const PublishNotes: React.FunctionComponent = () => {
-  const {modelCardInfo} = useSelector(
-    (state: {lab: LabState}) =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  const dispatch = useAppDispatch();
+
+  const visibility = useAppSelector(
+    state => state.aichat.fieldVisibilities.modelCardInfo
   );
+  const {modelCardInfo} = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
+
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
+
+  const getInputTag = (property: keyof ModelCardInfo) => {
+    return property === 'botName' ? 'input' : 'textarea';
+  };
 
   return (
     <div className={styles.verticalFlexContainer}>
-      <div>
-        {MODEL_CARD_FIELDS_AND_LABELS.map(([id, text]) => {
-          return (
-            isVisible(modelCardInfo.visibility) && (
-              <div className={styles.inputContainer} key={id}>
-                <label htmlFor={id}>
-                  <StrongText>{text}</StrongText>
+      {isVisible(visibility) && (
+        <div className={styles.customizationContainer}>
+          {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label]) => {
+            const InputTag = getInputTag(property);
+            return (
+              <div className={styles.inputContainer} key={property}>
+                <label htmlFor={property}>
+                  <StrongText>{label}</StrongText>
                 </label>
-                <textarea
-                  id={id}
-                  disabled={isDisabled(modelCardInfo.visibility)}
-                  value={modelCardInfo.value[id]}
+                <InputTag
+                  id={property}
+                  disabled={isDisabled(visibility)}
+                  value={modelCardInfo[property]}
+                  onChange={event =>
+                    dispatch(
+                      setModelCardProperty({
+                        property: property,
+                        value: event.target.value,
+                      })
+                    )
+                  }
                 />
               </div>
-            )
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={isDisabled(modelCardInfo.visibility)}>
-          Publish
-        </button>
+        <Button
+          text="Publish"
+          iconLeft={{iconName: 'upload'}}
+          disabled={isDisabled(visibility)}
+          onClick={onUpdate}
+          className={styles.updateButton}
+        />
       </div>
     </div>
   );

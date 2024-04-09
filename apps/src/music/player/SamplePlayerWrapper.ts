@@ -1,7 +1,7 @@
 import {DEFAULT_BEATS_PER_MEASURE, DEFAULT_BPM} from '../constants';
 import {SoundLoadCallbacks} from '../types';
 import SamplePlayer from './SamplePlayer';
-import {AudioPlayer, SampleEvent} from './types';
+import {AudioPlayer, InstrumentData, SampleEvent} from './types';
 
 /**
  * An {@link AudioPlayer} implementation that wraps the {@link SamplePlayer}.
@@ -33,6 +33,7 @@ class SamplePlayerWrapper implements AudioPlayer {
 
   async loadSounds(
     sampleUrls: string[],
+    instruments: InstrumentData[],
     callbacks?: SoundLoadCallbacks
   ): Promise<void> {
     return this.samplePlayer.loadSounds(sampleUrls, callbacks);
@@ -42,8 +43,14 @@ class SamplePlayerWrapper implements AudioPlayer {
     console.warn('loadInstrument not supported');
   }
 
-  isInstrumentLoaded(): boolean {
+  isInstrumentLoading(): boolean {
+    // Assume instruments are always loaded since samples will be loaded directly
     return false;
+  }
+
+  isInstrumentLoaded(): boolean {
+    // Assume instruments are always loaded since samples will be loaded directly
+    return true;
   }
 
   async playSampleImmediately(
@@ -114,6 +121,10 @@ class SamplePlayerWrapper implements AudioPlayer {
 
   jumpToPosition() {
     console.warn('jumpToPosition not supported');
+  }
+
+  registerCallback(): void {
+    // No events are currently supported; ignore.
   }
 
   // Converts actual seconds used by the audio system into a playhead

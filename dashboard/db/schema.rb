@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_08_234208) do
+ActiveRecord::Schema.define(version: 2024_03_21_184256) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -435,6 +435,40 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
     t.index ["name"], name: "index_data_docs_on_name"
   end
 
+  create_table "datablock_storage_kvps", primary_key: ["project_id", "key"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "key", limit: 700, null: false
+    t.json "value"
+    t.index ["project_id"], name: "index_datablock_storage_kvps_on_project_id"
+  end
+
+  create_table "datablock_storage_library_manifest", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.json "library_manifest"
+    t.integer "singleton_guard", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["singleton_guard"], name: "index_datablock_storage_library_manifest_on_singleton_guard", unique: true
+  end
+
+  create_table "datablock_storage_records", primary_key: ["project_id", "table_name", "record_id"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "table_name", limit: 700, null: false
+    t.integer "record_id", null: false
+    t.json "record_json"
+    t.index ["project_id", "table_name"], name: "index_datablock_storage_records_on_project_id_and_table_name"
+    t.index ["project_id"], name: "index_datablock_storage_records_on_project_id"
+  end
+
+  create_table "datablock_storage_tables", primary_key: ["project_id", "table_name"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "table_name", limit: 700, null: false
+    t.json "columns"
+    t.string "is_shared_table", limit: 700
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_datablock_storage_tables_on_project_id"
+  end
+
   create_table "delayed_jobs", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
@@ -829,6 +863,16 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["deployment_id"], name: "index_lti_deployments_on_deployment_id"
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
+  end
+
+  create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.boolean "satisfied", null: false
+    t.string "locale"
+    t.boolean "early_access"
+    t.datetime "created_at", null: false
+    t.index ["satisfied"], name: "index_lti_feedbacks_on_satisfied"
+    t.index ["user_id"], name: "index_lti_feedbacks_on_user_id", unique: true
   end
 
   create_table "lti_integrations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1567,6 +1611,12 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
     t.datetime "updated_at", null: false
     t.index ["storage_app_id", "object_version_id"], name: "index_project_commits_on_storage_app_id_and_object_version_id", unique: true
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
+  end
+
+  create_table "project_use_datablock_storages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.boolean "use_datablock_storage", default: false, null: false
+    t.index ["project_id"], name: "index_project_use_datablock_storages_on_project_id"
   end
 
   create_table "projects", id: :integer, charset: "utf8mb4", force: :cascade do |t|
@@ -2332,6 +2382,7 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
   add_foreign_key "lti_courses", "lti_deployments"
   add_foreign_key "lti_courses", "lti_integrations"
   add_foreign_key "lti_deployments", "lti_integrations"
+  add_foreign_key "lti_feedbacks", "users"
   add_foreign_key "lti_sections", "lti_courses"
   add_foreign_key "lti_sections", "sections"
   add_foreign_key "lti_user_identities", "lti_integrations"
@@ -2368,8 +2419,4 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
-
-  create_view "users_view", sql_definition: <<-SQL
-      select `users`.`id` AS `id`,`users`.`studio_person_id` AS `studio_person_id`,if((`users`.`provider` = 'migrated'),`authentication_options`.`email`,`users`.`email`) AS `email`,`users`.`parent_email` AS `parent_email`,`users`.`encrypted_password` AS `encrypted_password`,`users`.`reset_password_token` AS `reset_password_token`,`users`.`reset_password_sent_at` AS `reset_password_sent_at`,`users`.`remember_created_at` AS `remember_created_at`,`users`.`sign_in_count` AS `sign_in_count`,`users`.`current_sign_in_at` AS `current_sign_in_at`,`users`.`last_sign_in_at` AS `last_sign_in_at`,`users`.`current_sign_in_ip` AS `current_sign_in_ip`,`users`.`last_sign_in_ip` AS `last_sign_in_ip`,`users`.`created_at` AS `created_at`,`users`.`updated_at` AS `updated_at`,`users`.`username` AS `username`,`users`.`provider` AS `provider`,`users`.`uid` AS `UID`,`users`.`admin` AS `ADMIN`,`users`.`gender` AS `gender`,`users`.`name` AS `name`,`users`.`locale` AS `locale`,`users`.`birthday` AS `birthday`,`users`.`user_type` AS `user_type`,`users`.`school` AS `school`,`users`.`full_address` AS `full_address`,`users`.`school_info_id` AS `school_info_id`,`users`.`total_lines` AS `total_lines`,`users`.`secret_picture_id` AS `secret_picture_id`,`users`.`active` AS `active`,if((`users`.`provider` = 'migrated'),`authentication_options`.`hashed_email`,`users`.`hashed_email`) AS `hashed_email`,`users`.`deleted_at` AS `deleted_at`,`users`.`purged_at` AS `purged_at`,`users`.`secret_words` AS `secret_words`,`users`.`properties` AS `properties`,`users`.`invitation_token` AS `invitation_token`,`users`.`invitation_created_at` AS `invitation_created_at`,`users`.`invitation_sent_at` AS `invitation_sent_at`,`users`.`invitation_accepted_at` AS `invitation_accepted_at`,`users`.`invitation_limit` AS `invitation_limit`,`users`.`invited_by_id` AS `invited_by_id`,`users`.`invited_by_type` AS `invited_by_type`,`users`.`invitations_count` AS `invitations_count`,`users`.`terms_of_service_version` AS `terms_of_service_version`,`users`.`urm` AS `urm`,`users`.`races` AS `races`,`users`.`primary_contact_info_id` AS `primary_contact_info_id` from (`users` left join `authentication_options` on((`users`.`primary_contact_info_id` = `authentication_options`.`id`)))
-  SQL
 end

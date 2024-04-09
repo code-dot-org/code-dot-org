@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-11 22:05:15 UTC",
+    "serialized_at": "2024-03-27 22:54:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -20601,7 +20601,7 @@
       "key": "57428b8b-954f-4e25-b6cf-1dd6338ef623",
       "position": 3,
       "learning_goal": "Program Development - Program Sequence",
-      "ai_enabled": true,
+      "ai_enabled": false,
       "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program, its starting elements, and all created functions. \n- Code inside the draw loop at this point should be primarily function calls and perhaps some conditionals used with function calls in addition to the `drawSprites()` block.",
       "seeding_key": {
         "learning_goal.key": "57428b8b-954f-4e25-b6cf-1dd6338ef623",

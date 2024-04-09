@@ -84,10 +84,6 @@ class Policies::Lti
     (Set.new(roles) & TEACHER_ROLES).any?
   end
 
-  def self.generate_auth_id(id_token)
-    "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
-  end
-
   def self.lti?(user)
     !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end
@@ -151,5 +147,9 @@ class Policies::Lti
   # Force Schoology through iframe mitigation flow
   def self.force_iframe_launch?(issuer)
     ['Schoology'].include?(issuer_name(issuer))
+  end
+
+  def self.feedback_available?(user)
+    user.teacher? && lti?(user) && user.created_at <= 2.days.ago
   end
 end

@@ -1,25 +1,28 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+// react testing library import
+import {render, fireEvent, act} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
+import $ from 'jquery';
+import React from 'react';
+import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import * as utils from '@cdo/apps/code-studio/utils';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
-import {Provider} from 'react-redux';
-import * as utils from '@cdo/apps/code-studio/utils';
+import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
-import $ from 'jquery';
 
-// react testing library import
-import {render, fireEvent, act} from '@testing-library/react';
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricContainer', () => {
   let clock;
@@ -54,6 +57,12 @@ describe('RubricContainer', () => {
   function stubFetchAiEvaluations(data) {
     return fetchStub
       .withArgs(sinon.match(/rubrics\/\d+\/get_ai_evaluations.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
+  function stubFetchTeacherEvaluations(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
@@ -168,6 +177,19 @@ describe('RubricContainer', () => {
     },
   };
 
+  const noEvals = [
+    {
+      user_name: 'Stilgar',
+      user_id: 1,
+      eval: [],
+    },
+    {
+      user_name: 'Chani',
+      user_id: 1,
+      eval: [],
+    },
+  ];
+
   const defaultStudentInfo = {user_id: 1, name: 'Jane Doe'};
 
   const mockAiEvaluations = [
@@ -191,6 +213,7 @@ describe('RubricContainer', () => {
   it('fetches AI evaluations and passes them to children', async () => {
     stubFetchEvalStatusForUser(successJson);
     stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     const evalFetch = stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -236,6 +259,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForUser(successJson);
     stubFetchEvalStatusForAll(successJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -264,6 +288,7 @@ describe('RubricContainer', () => {
   it('shows a a button for running analysis if canProvideFeedback is true', async () => {
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
     const wrapper = mount(
@@ -280,7 +305,7 @@ describe('RubricContainer', () => {
     );
     await wait();
     wrapper.update();
-    expect(wrapper.find('Button')).to.have.lengthOf(3);
+    expect(wrapper.find('Button')).to.have.lengthOf(4);
     expect(wrapper.find('Button').first().props().text).to.equal(
       i18n.runAiAssessment()
     );
@@ -289,6 +314,7 @@ describe('RubricContainer', () => {
   it('shows status text when student has not attempted level', async () => {
     const userFetchStub = stubFetchEvalStatusForUser(notAttemptedJson);
     const allFetchStub = stubFetchEvalStatusForAll(notAttemptedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
     const wrapper = mount(
@@ -315,6 +341,7 @@ describe('RubricContainer', () => {
   it('shows status text when level has already been evaluated', async () => {
     const userFetchStub = stubFetchEvalStatusForUser(successJson);
     const allFetchStub = stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -346,6 +373,7 @@ describe('RubricContainer', () => {
   it('allows teacher to run analysis when level has not been evaluated', async () => {
     const userFetchStub = stubFetchEvalStatusForUser(readyJson);
     const allFetchStub = stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
     const wrapper = mount(
@@ -384,8 +412,10 @@ describe('RubricContainer', () => {
     */
     clock = sinon.useFakeTimers();
 
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
 
     const wrapper = mount(
@@ -416,6 +446,15 @@ describe('RubricContainer', () => {
       .returns(Promise.resolve(new Response(JSON.stringify({}))));
     stubFetchEvalStatusForUser(pendingJson);
     wrapper.find('Button').at(0).simulate('click');
+
+    //expect amplitude event on click
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_INDIVIDUAL_AI_EVAL,
+      {
+        rubricId: defaultRubric.id,
+        studentId: defaultStudentInfo.user_id,
+      }
+    );
 
     // Wait for fetches and re-render
     clock.tick(5000);
@@ -452,6 +491,7 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
       mockAiEvaluations
     );
+    sendEventSpy.restore();
   });
 
   it('shows general error message for status 1000', async () => {
@@ -468,6 +508,7 @@ describe('RubricContainer', () => {
 
     const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
     const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -491,7 +532,7 @@ describe('RubricContainer', () => {
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_error());
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
   });
 
   it('shows PII error message for status 1001', async () => {
@@ -508,6 +549,7 @@ describe('RubricContainer', () => {
 
     const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
     const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -548,6 +590,7 @@ describe('RubricContainer', () => {
 
     const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
     const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -581,6 +624,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForUser(successJson);
     stubFetchEvalStatusForAll(successJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
 
     const {getByTestId} = render(
       <Provider store={store}>

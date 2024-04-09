@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ProgressBox from './ProgressBox';
 
 export default {

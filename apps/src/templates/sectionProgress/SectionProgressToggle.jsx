@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ToggleGroup from '../ToggleGroup';
-import color from '@cdo/apps/util/color';
 import {connect} from 'react-redux';
-import {setCurrentView} from './sectionProgressRedux';
-import {ViewType} from './sectionProgressConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import ToggleGroup from '../ToggleGroup';
+
+import {ViewType} from './sectionProgressConstants';
+import {setCurrentView} from './sectionProgressRedux';
 
 /**
  * A toggle that provides a way to switch between detail, summary, and standards views of

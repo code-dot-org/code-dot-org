@@ -753,6 +753,25 @@ Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
+Then /^element "([^"]*)" is (not )?categorized by OneTrust$/ do |selector, negation|
+  wait_for_jquery
+  elements = @browser.execute_script("return $(\"#{selector}\").map((index, elem) => { return {src:elem.src, class:elem.className}}).get()")
+  # The element needs to exist if we want to verify it is categorized.
+  if negation.nil?
+    expect(elements).to satisfy('have at least one element should be found', &:any?)
+  end
+  # Check each element which matches the selector to see if it has the
+  # expected OneTrust categorization.
+  elements.each do |element|
+    # When OneTrust categorizes an element, it adds the class
+    # "optanon-category-..." to it, for example "optanon-category-C0002"
+    element_class = element['class'] || ''
+    has_category = element_class.include?('optanon-category-')
+    desc = "#{negation ? 'not ' : ''}have a category"
+    expect(element).to satisfy(desc) {|_| has_category == !negation}
+  end
+end
+
 Then /^element "([^"]*)" is (not )?read-?only$/ do |selector, negation|
   readonly = @browser.execute_script("return $(\"#{selector}\").attr(\"readonly\");")
   if negation.nil?

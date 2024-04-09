@@ -2,7 +2,7 @@ import React, {useCallback, useEffect} from 'react';
 import style from './ai-tutor.module.scss';
 import ChatWorkspace from './chatWorkspace';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {TutorType} from '@cdo/apps/aiTutor/types';
+import {AITutorTypes as TutorTypes} from '@cdo/apps/aiTutor/types';
 import {
   compilationError,
   compilationErrorFirst,
@@ -74,13 +74,13 @@ const AITutor: React.FunctionComponent = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    if (tutorType === TutorType.COMPILATION) {
+    if (tutorType === TutorTypes.COMPILATION) {
       setCompilationChatMessages();
     }
-    if (tutorType === TutorType.GENERAL_CHAT) {
+    if (tutorType === TutorTypes.GENERAL_CHAT) {
       setGeneralChatMessages();
     }
-    if (tutorType === TutorType.VALIDATION) {
+    if (tutorType === TutorTypes.VALIDATION) {
       setValidationChatMessages();
     }
   }, [

@@ -22,7 +22,7 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 
 import {expect} from '../../../util/reconfiguredChai';
 
-const V1_PAGE_LINK_TEXT = 'Switch to new progress view';
+const V1_PAGE_LINK_TEXT = 'Try out new progress view (beta)';
 const V2_PAGE_LINK_TEXT = 'Switch to old progress view';
 const V1_TEST_ID = 'section-progress-v1';
 const V2_TEST_ID = 'section-progress-v2';

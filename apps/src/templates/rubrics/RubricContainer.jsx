@@ -16,11 +16,8 @@ import RubricTabButtons from './RubricTabButtons';
 import RubricSubmitFooter from './RubricSubmitFooter';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import Draggable from 'react-draggable';
-
-const TAB_NAMES = {
-  RUBRIC: 'rubric',
-  SETTINGS: 'settings',
-};
+import {TAB_NAMES} from './rubricHelpers';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 export default function RubricContainer({
   rubric,
@@ -35,11 +32,22 @@ export default function RubricContainer({
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const rubricTabSessionKey = 'rubricFABTabSessionKey';
+  const rubricPositionX = 'rubricFABPositionX';
+  const rubricPositionY = 'rubricFABPositionY';
 
   const [selectedTab, setSelectedTab] = useState(
     tryGetSessionStorage(rubricTabSessionKey, TAB_NAMES.RUBRIC) ||
       TAB_NAMES.RUBRIC
   );
+
+  const [positionX, setPositionX] = useState(
+    parseInt(tryGetSessionStorage(rubricPositionX, 0)) || 0
+  );
+
+  const [positionY, setPositionY] = useState(
+    parseInt(tryGetSessionStorage(rubricPositionY, 0)) || 0
+  );
+
   const [aiEvaluations, setAiEvaluations] = useState(null);
 
   const [feedbackAdded, setFeedbackAdded] = useState(false);
@@ -81,13 +89,29 @@ export default function RubricContainer({
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
   }, [selectedTab]);
 
+  useEffect(() => {
+    trySetSessionStorage(rubricPositionX, positionX);
+  }, [positionX]);
+
+  useEffect(() => {
+    trySetSessionStorage(rubricPositionY, positionY);
+  }, [positionY]);
+
+  const onStopHandler = (event, dragElement) => {
+    setPositionX(dragElement.x);
+    setPositionY(dragElement.y);
+  };
+
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
   return (
-    <Draggable>
+    <Draggable
+      defaultPosition={{x: positionX, y: positionY}}
+      onStop={onStopHandler}
+    >
       <div
         data-testid="draggable-test-id"
         id="draggable-id"
@@ -97,8 +121,12 @@ export default function RubricContainer({
       >
         <div className={style.rubricHeaderRedesign}>
           <div className={style.rubricHeaderLeftSide}>
-            <FontAwesome icon="house" />
-            {i18n.rubricAiHeaderText()}
+            <img
+              src={aiBotOutlineIcon}
+              className={style.aiBotOutlineIcon}
+              alt={i18n.rubricAiHeaderText()}
+            />
+            <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
             <button
@@ -122,6 +150,7 @@ export default function RubricContainer({
             refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
             studentName={studentLevelInfo && studentLevelInfo.name}
+            reportingData={reportingData}
           />
 
           <RubricContent
@@ -136,6 +165,7 @@ export default function RubricContainer({
             aiEvaluations={aiEvaluations}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
+            sectionId={sectionId}
           />
           {showSettings && (
             <RubricSettings
@@ -143,6 +173,8 @@ export default function RubricContainer({
               refreshAiEvaluations={fetchAiEvaluations}
               rubric={rubric}
               sectionId={sectionId}
+              tabSelectCallback={tabSelectCallback}
+              reportingData={reportingData}
             />
           )}
         </div>

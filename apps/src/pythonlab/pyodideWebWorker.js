@@ -4,7 +4,8 @@ async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
     indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full',
   });
-  await self.pyodide.loadPackage(['numpy']);
+  // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
+  await self.pyodide.loadPackage(['numpy', 'matplotlib']);
   self.pyodide.setStdout({
     batched: msg => {
       self.postMessage({type: 'sysout', message: msg, id: 'none'});
@@ -19,6 +20,9 @@ async function initializePyodide() {
   }
   await pyodideReadyPromise;
 }
+
+// Get pyodide ready as soon as possible.
+initializePyodide();
 
 self.onmessage = async event => {
   // make sure loading is done

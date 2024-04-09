@@ -1,6 +1,7 @@
 /* A very simple responsive layout system.
  */
 import $ from 'jquery';
+
 import * as utils from '../utils';
 
 /**

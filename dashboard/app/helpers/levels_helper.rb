@@ -2,7 +2,7 @@ require 'cdo/script_config'
 require 'cdo/redcarpet/inline'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
-require 'firebase_token_generator'
+require 'firebase_token_generator' # TODO: post-firebase-cleanup, remove this code: #56994
 require 'image_size'
 require 'cdo/firehose'
 require 'cdo/languages'
@@ -578,17 +578,26 @@ module LevelsHelper
     app_options
   end
 
-  def firebase_options
-    fb_options = {}
+  def datablock_storage_options
+    storage_options = {}
 
-    if @level.game.use_firebase?
-      fb_options[:firebaseName] = CDO.firebase_name
-      fb_options[:firebaseAuthToken] = firebase_auth_token
-      fb_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
-      fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
+    # TODO: post-firebase-cleanup, remove this whole if statement: #56994
+    if DatablockStorageController::SUPPORTED_PROJECT_TYPES.include? @level.game.app
+      channel_id = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
+
+      # TODO: post-firebase-cleanup, remove ProjectUseDatablockStorage once we reach 100% datablock storage: #56994
+      storage_options[:useDatablockStorage] = ProjectUseDatablockStorage.use_data_block_storage_for?(channel_id)
+
+      # TODO: post-firebase-cleanup, remove all code in this unless block: #56994
+      unless storage_options[:useDatablockStorage]
+        storage_options[:firebaseName] = CDO.firebase_name
+        storage_options[:firebaseAuthToken] = firebase_auth_token
+        storage_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
+        storage_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
+      end
     end
 
-    fb_options
+    storage_options
   end
 
   def azure_speech_service_options
@@ -677,7 +686,7 @@ module LevelsHelper
     app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    app_options.merge!(firebase_options)
+    app_options.merge!(datablock_storage_options)
     app_options[:canResetAbuse] = true if current_user&.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
@@ -902,6 +911,8 @@ module LevelsHelper
   # Today, anyone can edit the data in any channel, so this meets our current needs.
   # In the future, if we need to assign special privileges to channel owners,
   # we could include the storage_id associated with the user id (if one exists).
+  #
+  # TODO: post-firebase-cleanup, remove this method: #56994
   def firebase_shared_auth_token
     return nil unless CDO.firebase_shared_secret
 
@@ -928,6 +939,8 @@ module LevelsHelper
   # Today, anyone can edit the data in any channel, so this meets our current needs.
   # In the future, if we need to assign special privileges to channel owners,
   # we could include the storage_id associated with the user id (if one exists).
+  #
+  # TODO: post-firebase-cleanup, remove this method: #56994
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 

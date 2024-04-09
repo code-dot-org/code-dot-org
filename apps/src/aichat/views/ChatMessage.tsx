@@ -1,16 +1,23 @@
 import React from 'react';
-import moduleStyles from './chatMessage.module.scss';
+import {useSelector} from 'react-redux';
 import classNames from 'classnames';
-import aichatI18n from '../locale';
+
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import Button from '@cdo/apps/componentLibrary/button';
+
+import {removeChatMessage} from '../redux/aichatRedux';
 import {
   AichatLevelProperties,
   ChatCompletionMessage,
   Role,
-  Status,
+  AITutorInteractionStatus as Status,
 } from '../types';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import {useSelector} from 'react-redux';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import aichatI18n from '../locale';
+import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
   message: ChatCompletionMessage;
@@ -19,13 +26,9 @@ interface ChatMessageProps {
 const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
 const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 
-const isAssistant = (role: string) => {
-  return role === Role.ASSISTANT;
-};
-
-const isUser = (role: string) => {
-  return role === Role.USER;
-};
+const isAssistant = (role: string) => role === Role.ASSISTANT;
+const isUser = (role: string) => role === Role.USER;
+const isModelUpdate = (role: string) => role === Role.MODEL_UPDATE;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK || status === Status.UNKNOWN) {
@@ -36,7 +39,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {chatMessageText}
       </div>
     );
-  } else if (status === Status.INAPPROPRIATE) {
+  } else if (status === Status.PROFANITY_VIOLATION) {
     return (
       <div
         className={classNames(
@@ -47,7 +50,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {INAPPROPRIATE_MESSAGE}
       </div>
     );
-  } else if (status === Status.PERSONAL) {
+  } else if (status === Status.PII_VIOLATION) {
     return (
       <div
         className={classNames(
@@ -91,13 +94,42 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
   }
 };
 
+const displayModelUpdateMessage = (
+  message: ChatCompletionMessage,
+  onRemove: () => void
+) => {
+  const {chatMessageText, timestamp} = message;
+
+  return (
+    <>
+      <div>
+        <FontAwesomeV6Icon iconName="check" className={moduleStyles.check} />
+        <span className={moduleStyles.modelUpdateMessageTextContainer}>
+          <StrongText>{chatMessageText}</StrongText> has been updated
+        </span>
+        <StrongText>{timestamp}</StrongText>
+      </div>
+      <Button
+        onClick={onRemove}
+        isIconOnly
+        icon={{iconName: 'xmark'}}
+        size="s"
+        className={moduleStyles.removeStatusUpdate}
+      />
+    </>
+  );
+};
+
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
+  const dispatch = useAppDispatch();
+
   const botTitle =
     useSelector(
       (state: {lab: LabState}) =>
         (state.lab.levelProperties as AichatLevelProperties | undefined)
           ?.botTitle
     ) || 'EduBot';
+
   return (
     <div id={`ChatMessage id: ${message.id}`}>
       {isUser(message.role) && (
@@ -112,6 +144,14 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
             {botTitle} ({message.role})
           </Typography>
           {displayAssistantMessage(message.status, message.chatMessageText)}
+        </div>
+      )}
+
+      {isModelUpdate(message.role) && (
+        <div className={moduleStyles.modelUpdateMessageContainer}>
+          {displayModelUpdateMessage(message, () =>
+            dispatch(removeChatMessage(message.id))
+          )}
         </div>
       )}
     </div>

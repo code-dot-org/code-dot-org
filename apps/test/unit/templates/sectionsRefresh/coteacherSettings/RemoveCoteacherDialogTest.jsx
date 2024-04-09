@@ -1,8 +1,10 @@
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import React from 'react';
+import sinon from 'sinon';
+
 import RemoveCoteacherDialog from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/RemoveCoteacherDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const createStubbedCoteacherDialog = coteacherToRemove => {
   const setCoteacherToRemove = sinon.spy();

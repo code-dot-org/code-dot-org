@@ -46,9 +46,9 @@ module MiniTest
   class Spec
     before do
       if ENV['CIRCLECI']
-        STDOUT.stubs(:print)
-        STDOUT.stubs(:puts)
-        STDOUT.stubs(:warn)
+        $stdout.stubs(:print)
+        $stdout.stubs(:puts)
+        $stdout.stubs(:warn)
       end
     end
   end
