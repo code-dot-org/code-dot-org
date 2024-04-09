@@ -89,9 +89,24 @@ const PythonlabView: React.FunctionComponent = () => {
 
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
+    if (initialSources?.source) {
+      // backwards compatibility: add active flag to first file if no file is active
+      let hasActiveFile = false;
+      const files = (initialSources.source as MultiFileSource).files;
+      Object.values(files).forEach(file => {
+        if (file.active) {
+          hasActiveFile = true;
+        }
+      });
+      if (!hasActiveFile && files) {
+        const firstKey = Object.keys(files)[0];
+        files[firstKey].active = true;
+      }
+      console.log({source: initialSources});
+    }
+    console.log({initialSources});
     setCurrentProject(
-      //(initialSources?.source as MultiFileSource) || defaultProject
-      defaultProject
+      (initialSources?.source as MultiFileSource) || defaultProject
     );
   }, [channelId, initialSources]);
 
