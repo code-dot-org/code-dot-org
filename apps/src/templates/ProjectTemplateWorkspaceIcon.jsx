@@ -8,7 +8,7 @@ const IMAGE_BASE_URL = '/blockly/media/';
 
 export default class ProjectTemplateWorkspaceIcon extends React.Component {
   static propTypes = {
-    place: PropTypes.string,
+    tooltipPlace: PropTypes.string,
   };
 
   constructor(props) {
@@ -33,7 +33,7 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
           role="tooltip"
           wrapper="div"
           effect="solid"
-          place={this.props.place}
+          place={this.props.tooltipPlace}
         >
           <div style={styles.tooltip}>
             {msg.workspaceProjectTemplateLevel()}

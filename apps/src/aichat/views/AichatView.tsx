@@ -18,7 +18,6 @@ import SegmentedButtons, {
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import moduleStyles from './aichatView.module.scss';
 import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
-import {useSelector} from 'react-redux';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 
@@ -40,7 +39,7 @@ const AichatView: React.FunctionComponent = () => {
     state => (state.lab.initialSources?.source as string) || '{}'
   );
 
-  const projectTemplateLevel = useSelector(isProjectTemplateLevel);
+  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(initialSources);
@@ -80,7 +79,9 @@ const AichatView: React.FunctionComponent = () => {
 
   const chatWorkspaceHeader = (
     <div>
-      {projectTemplateLevel && <ProjectTemplateWorkspaceIcon place="bottom" />}
+      {projectTemplateLevel && (
+        <ProjectTemplateWorkspaceIcon tooltipPlace="bottom" />
+      )}
       {viewMode === ViewMode.EDIT
         ? aichatI18n.aichatWorkspaceHeader()
         : botName}
