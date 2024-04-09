@@ -1,0 +1,6 @@
+@import '@cdo/apps/mixins.scss';
+@import 'color.scss';
+
+.projectTemplateButton {
+    @include remove-button-styles;
+}

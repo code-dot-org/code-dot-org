@@ -2,6 +2,7 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+import moduleStyles from './project-template-workspace-icon.module.scss';
 var msg = require('@cdo/locale');
 
 const IMAGE_BASE_URL = '/blockly/media/';
@@ -19,15 +20,21 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
   render() {
     return (
       <div style={styles.container}>
-        <img
-          style={styles.projectTemplateIcon}
-          className="projectTemplateWorkspaceIcon"
-          src={IMAGE_BASE_URL + 'connect.svg'}
+        <button
+          type="button"
           data-tip
           data-for={this.tooltipId}
           aria-describedby={this.tooltipId}
-          alt={msg.workspaceProjectTemplateLevel()}
-        />
+          data-event="mouseenter mouseleave click"
+          className={moduleStyles.projectTemplateButton}
+        >
+          <img
+            style={styles.projectTemplateIcon}
+            className="projectTemplateWorkspaceIcon"
+            src={IMAGE_BASE_URL + 'connect.svg'}
+            alt={msg.workspaceProjectTemplateLevel()}
+          />
+        </button>
         <ReactTooltip
           id={this.tooltipId}
           role="tooltip"
@@ -55,6 +62,6 @@ const styles = {
   },
   projectTemplateIcon: {
     marginRight: 5,
-    marginTop: -1,
+    padding: 10,
   },
 };
