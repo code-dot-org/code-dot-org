@@ -107,12 +107,10 @@ class FieldPattern extends GoogleBlockly.Field {
         library={this.options.getLibrary()}
         initValue={this.getValue()}
         bpm={this.options.getBPM()}
-        previewSound={this.options.previewSound}
-        previewPattern={this.options.previewPattern}
-        cancelPreviews={this.options.cancelPreviews}
         onChange={value => {
           this.setValue(value);
         }}
+        {...this.options}
       />,
       this.newDiv_
     );

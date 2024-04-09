@@ -62,3 +62,13 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   visibilities: DEFAULT_VISIBILITIES,
   hidePresentationPanel: false,
 };
+
+export const AI_CUSTOMIZATIONS_LABELS: {
+  [key in keyof AiCustomizations]: string;
+} = {
+  botName: 'Bot name',
+  temperature: 'Temperature',
+  systemPrompt: 'System prompt',
+  retrievalContexts: 'Retrieval',
+  modelCardInfo: 'Model description',
+};

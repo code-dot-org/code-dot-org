@@ -72,7 +72,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // When we have a new channelId and/or start code, reset the editor with the start code.
   // A new channelId means we are loading a new project, and we need to reset the editor.
   useEffect(() => {
-    if (editorView) {
+    if (editorView && editorView.state.doc.toString() !== startCode) {
       editorView.dispatch({
         changes: {
           from: 0,

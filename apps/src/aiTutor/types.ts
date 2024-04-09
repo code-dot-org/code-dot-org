@@ -64,6 +64,8 @@ export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',
   SYSTEM = 'system',
+  // only used in Aichat, but our types are currently tangled up :)
+  MODEL_UPDATE = 'update',
 }
 export type Status =
   (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];

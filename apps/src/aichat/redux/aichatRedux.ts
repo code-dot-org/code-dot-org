@@ -7,6 +7,7 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
+  AI_CUSTOMIZATIONS_LABELS,
 } from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
@@ -53,6 +54,7 @@ const findChangedProperties = (
 };
 
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
+const getCurrentTime = () => moment(Date.now()).format('LT');
 
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
@@ -102,14 +104,18 @@ export const updateAiCustomization = createAsyncThunk(
       previouslySavedAiCustomizations,
       currentAiCustomizations
     );
-    thunkAPI.dispatch(
-      addChatMessage({
-        id: 0,
-        role: Role.ASSISTANT,
-        chatMessageText: `${changedProperties} were updated`,
-        status: Status.OK,
-      })
-    );
+    changedProperties.forEach(property => {
+      thunkAPI.dispatch(
+        addChatMessage({
+          id: 0,
+          role: Role.MODEL_UPDATE,
+          chatMessageText:
+            AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
+          status: Status.OK,
+          timestamp: getCurrentTime(),
+        })
+      );
+    });
   }
 );
 
@@ -189,6 +195,14 @@ const aichatSlice = createSlice({
         id: newMessageId,
       };
       state.chatMessages.push(newMessage);
+    },
+    removeChatMessage: (state, action: PayloadAction<number>) => {
+      const updatedMessages = state.chatMessages.filter(
+        message => message.id !== action.payload
+      );
+      if (updatedMessages.length !== state.chatMessages.length) {
+        state.chatMessages = updatedMessages;
+      }
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
@@ -298,6 +312,7 @@ const aichatSlice = createSlice({
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
+  removeChatMessage,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,

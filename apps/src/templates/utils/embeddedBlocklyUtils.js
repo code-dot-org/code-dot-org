@@ -1,15 +1,15 @@
+import {installCustomBlocks} from '@cdo/apps/block_utils';
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import {getStore} from '@cdo/apps/code-studio/redux';
-import {registerReducers} from '@cdo/apps/redux';
-import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import animationList, {
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
+import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {
   valueTypeTabShapeMap,
   exampleSprites,
 } from '@cdo/apps/p5lab/spritelab/constants';
-import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import {installCustomBlocks} from '@cdo/apps/block_utils';
+import {registerReducers} from '@cdo/apps/redux';
 
 /**
  * Prepares the blockly environment to allow for embedding blocks in divs
