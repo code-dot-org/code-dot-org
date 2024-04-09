@@ -9,8 +9,7 @@ module MailJet
   SECRET_KEY = CDO.try(:mailjet_secret_key).freeze
 
   def self.enabled?
-    return false unless DCDO.get('use_mailjet', false)
-    !API_KEY.nil? && !SECRET_KEY.nil?
+    DCDO.get('use_mailjet', false) && API_KEY.present? && SECRET_KEY.present?
   end
 
   def self.subaccount
@@ -27,7 +26,7 @@ module MailJet
   def self.create_contact_and_send_welcome_email(user)
     return unless enabled?
 
-    return if user&.id.nil?
+    return unless user&.id.present?
     return unless user.teacher?
 
     create_contact(user.email, user.name, user.created_at.to_datetime.rfc3339)
