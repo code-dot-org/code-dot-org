@@ -231,7 +231,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   onSelect,
   onPreview,
 }) => {
-  const folders = library.getAllowedSounds(undefined);
+  const folders = library.getAllowedSounds(undefined, false);
   const libraryGroupPath = library.libraryJson.path;
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(

@@ -130,7 +130,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
-  'levels/editors/fields/_ai_customizations': './src/sites/studio/pages/levels/editors/fields/_ai_customizations.js',
+  'levels/editors/fields/_aichat_settings': './src/sites/studio/pages/levels/editors/fields/_aichat_settings.js',
   'levels/editors/fields/_animation': './src/sites/studio/pages/levels/editors/fields/_animation.js',
   'levels/editors/fields/_bubble_choice_sublevel': './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
   'levels/editors/fields/_blockly': './src/sites/studio/pages/levels/editors/fields/_blockly.js',

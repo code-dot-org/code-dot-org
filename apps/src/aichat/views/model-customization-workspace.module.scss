@@ -14,7 +14,7 @@
   textarea {
     @extend %full-width;
     height: 100px;
-    resize: none;
+    resize: vertical;
     margin: 0;
   }
 
@@ -39,12 +39,22 @@
   justify-content: space-between;
 }
 
+.customizationContainer {
+  overflow-y: auto;
+  height: 65vh;
+}
+
 .footerButtonContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid $light_gray_200;
   padding: 10px;
+  height: 50px;
+}
+
+.selectedModelDropdown {
+  @extend %full-width;
 }
 
 .updateButton {

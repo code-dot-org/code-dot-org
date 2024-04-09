@@ -619,6 +619,10 @@ p.aiAssessmentScoreText {
 
 p.aiAssessmentEvidenceBlock {
   margin: 0;
+
+  + ul li p {
+    margin: 0;
+  }
 }
 
 .aiConfidenceBox {
@@ -890,9 +894,11 @@ button.learningGoalButton {
 
 button.learningGoalButtonLeft {
   margin-left: 0.5rem;
+  margin-right: 0.625rem;
 }
 
 button.learningGoalButtonRight {
+  margin-left: 0.625rem;
   margin-right: 0.5rem;
 }
 
@@ -1159,6 +1165,7 @@ button.infoAlertRight {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 .settingsContainers {

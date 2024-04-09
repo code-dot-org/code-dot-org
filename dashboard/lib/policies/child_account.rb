@@ -52,7 +52,7 @@ class Policies::ChildAccount
 
   # Authentication option types which we consider to be "owned" by the school
   # the student attends because the school has admin control of the account.
-  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER].freeze
+  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
 
   # Does the user login using credentials they personally control?
   # For example, some accounts are created and owned by schools (Clever).

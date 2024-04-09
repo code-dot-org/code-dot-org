@@ -41,6 +41,8 @@ import BlockSvgFrame from './addons/blockSvgFrame';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
+import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
+import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
 
 export interface BlockDefinition {
   category: string;
@@ -95,6 +97,8 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     onMainBlockSpaceCreated: (callback: () => void) => void;
   };
 
+  FieldAngleDropdown: typeof CdoFieldAngleDropdown;
+  FieldAngleTextInput: typeof CdoFieldAngleTextInput;
   FieldBehaviorPicker: typeof CdoFieldBehaviorPicker;
   FieldButton: typeof CdoFieldButton;
   FieldImageDropdown: typeof CdoFieldImageDropdown;
@@ -242,6 +246,7 @@ export interface ExtendedWorkspace extends Workspace {
 
 type CodeGeneratorType = typeof CodeGenerator;
 export interface ExtendedGenerator extends CodeGeneratorType {
+  xmlToCode: (name: string, domBlocks: Element) => string;
   xmlToBlocks: (name: string, xml: Node) => Block[];
   blockSpaceToCode: (
     name: string,

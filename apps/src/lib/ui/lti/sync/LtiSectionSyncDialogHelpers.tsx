@@ -4,7 +4,9 @@ import {LtiSectionSyncResult} from '@cdo/apps/lib/ui/lti/sync/types';
 export const getRosterSyncErrorMessage = (syncResult: LtiSectionSyncResult) => {
   switch (syncResult.error) {
     case 'wrong_context':
-      return i18n.ltiSectionSyncDialogErrorWrongContext({url: '/'});
+      return i18n.ltiSectionSyncDialogErrorWrongContext({
+        url: 'https://support.code.org/hc/en-us/articles/23622036958093-Create-and-sync-rosters-with-Schoology',
+      });
     case 'no_integration':
       return i18n.ltiSectionSyncDialogErrorNoIntegration();
     case 'no_section':

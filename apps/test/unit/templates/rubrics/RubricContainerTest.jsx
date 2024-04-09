@@ -8,6 +8,8 @@ import sinon from 'sinon';
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
@@ -410,6 +412,7 @@ describe('RubricContainer', () => {
     */
     clock = sinon.useFakeTimers();
 
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
@@ -443,6 +446,15 @@ describe('RubricContainer', () => {
       .returns(Promise.resolve(new Response(JSON.stringify({}))));
     stubFetchEvalStatusForUser(pendingJson);
     wrapper.find('Button').at(0).simulate('click');
+
+    //expect amplitude event on click
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_INDIVIDUAL_AI_EVAL,
+      {
+        rubricId: defaultRubric.id,
+        studentId: defaultStudentInfo.user_id,
+      }
+    );
 
     // Wait for fetches and re-render
     clock.tick(5000);
@@ -479,6 +491,7 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
       mockAiEvaluations
     );
+    sendEventSpy.restore();
   });
 
   it('shows general error message for status 1000', async () => {
@@ -519,7 +532,7 @@ describe('RubricContainer', () => {
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_error());
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
   });
 
   it('shows PII error message for status 1001', async () => {

@@ -11,6 +11,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :unknown_us_region], true],
       [[:non_compliant_child, :not_U13], true],
       [[:non_compliant_child, :migrated_imported_from_clever], true],
+      [[:non_compliant_child, :with_lti_auth], true],
     ]
     test_matrix.each do |traits, compliance|
       user = create(*traits)

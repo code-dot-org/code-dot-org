@@ -1,6 +1,7 @@
-import color from '../../util/color';
-import styleConstants from '../../styleConstants';
 import fontConstants from '@cdo/apps/fontConstants';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
 
 // Constants for React tables
 

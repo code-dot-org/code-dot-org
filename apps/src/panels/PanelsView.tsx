@@ -21,6 +21,7 @@ const childrenAreaHeight = 70;
 interface PanelsProps {
   panels: Panel[];
   onContinue: (nextUrl?: string) => void;
+  onSkip?: () => void;
   targetWidth: number;
   targetHeight: number;
   resetOnChange?: boolean;
@@ -32,6 +33,7 @@ interface PanelsProps {
 const PanelsView: React.FunctionComponent<PanelsProps> = ({
   panels,
   onContinue,
+  onSkip,
   targetWidth,
   targetHeight,
   resetOnChange = true,
@@ -156,6 +158,20 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           </div>
         )}
       </div>
+      {onSkip && (
+        <div className={styles.skipContainer}>
+          <button onClick={onSkip} type="button" className={styles.buttonSkip}>
+            <span className={styles.buttonSkipContent}>
+              {commonI18n.skipToProject()}
+            </span>
+            <FontAwesome
+              title={commonI18n.skipToProject()}
+              icon="arrow-right"
+              className={'icon'}
+            />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
