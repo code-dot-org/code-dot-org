@@ -60,8 +60,8 @@
     color: $light_black;
   }
 
-  &:has(.dropdown:hover) {
-    .dropdown:not(:disabled) {
+  &:has(select:hover) {
+    select:not(:disabled) {
       color: $light_black;
       background-color: $light_gray_100;
     }
@@ -71,8 +71,8 @@
     }
   }
 
-  &:has(.dropdown:active) {
-    .dropdown:not(:disabled) {
+  &:has(select:active) {
+    select:not(:disabled) {
       color: $light_black;
       background-color: unset;
     }
@@ -82,7 +82,7 @@
     }
   }
 
-  &:has(.dropdown:disabled) {
+  &:has(select:disabled) {
     select {
       color: $light_gray_200;
       border-color: $light_gray_200;
@@ -104,8 +104,8 @@
     border-color: $light_white;
   }
 
-  &:has(.dropdown:hover) {
-    .dropdown:not(:disabled) {
+  &:has(select:hover) {
+    select:not(:disabled) {
       color: $light_white;
       background-color: $light_gray_900;
     }
@@ -115,8 +115,8 @@
     }
   }
 
-  &:has(.dropdown:active) {
-    .dropdown:not(:disabled) {
+  &:has(select:active) {
+    select:not(:disabled) {
       color: $light_white;
       background-color: unset;
     }
@@ -126,7 +126,7 @@
     }
   }
 
-  &:has(.dropdown:disabled) {
+  &:has(select:disabled) {
     select {
       color: $light_gray_900;
       border-color: $light_gray_900;
