@@ -81,7 +81,7 @@ Scenario: Teacher views rubric product tour
   And I wait until element "h1:contains(Assigning a Rubric Score)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
-  And I wait until element "h1:contains("How did AI do?)" is visible
+  And I wait until element "h1:contains(How did AI do?)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Done)" once I see it
 
