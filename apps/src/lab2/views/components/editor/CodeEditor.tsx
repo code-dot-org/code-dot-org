@@ -84,7 +84,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }, [startCode, editorView, channelId]);
 
   return (
-    <PanelContainer id="code-editor" headerText="Editor" hideHeaders={false}>
+    <PanelContainer id="code-editor" headerContent="Editor" hideHeaders={false}>
       <div ref={editorRef} className={classNames('codemirror-container')} />
     </PanelContainer>
   );

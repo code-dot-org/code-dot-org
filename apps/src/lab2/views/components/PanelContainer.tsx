@@ -5,7 +5,7 @@ import {ThemeContext} from '../ThemeWrapper';
 
 interface PanelContainerProps {
   id: string;
-  headerText: string;
+  headerContent: React.ReactNode;
   children?: React.ReactNode;
   rightHeaderContent?: React.ReactNode;
   leftHeaderContent?: React.ReactNode;
@@ -22,7 +22,7 @@ interface PanelContainerProps {
  */
 const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   id,
-  headerText,
+  headerContent,
   rightHeaderContent,
   leftHeaderContent,
   children,
@@ -65,7 +65,7 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
               moduleStyles.panelContainerHeaderItemText
             )}
           >
-            {headerText}
+            {headerContent}
           </div>
           {rightHeaderContent && (
             <div
