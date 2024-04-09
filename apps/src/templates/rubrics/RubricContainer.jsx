@@ -172,15 +172,6 @@ export default function RubricContainer({
     }
   };
 
-  const onAfterStepChange = (newStepIndex, newElement) => {
-    // if (newStepIndex === 4) {
-    //   const focusEvent = new Event('focusin');
-    //   document
-    //     .getElementsByClassName(style.evidenceLevel)[3]
-    //     .dispatchEvent(focusEvent);
-    // }
-  };
-
   return (
     <Draggable
       defaultPosition={{x: positionX, y: positionY}}
@@ -200,7 +191,6 @@ export default function RubricContainer({
           onExit={onTourExit}
           onChange={onStepChange}
           onBeforeChange={onBeforeStepChange}
-          onAfterChange={onAfterStepChange}
           options={{
             scrollToElement: false,
             exitOnOverlayClick: false,
