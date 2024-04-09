@@ -59,6 +59,7 @@ const PresentationView: React.FunctionComponent = () => {
               title={label}
               titleIcon={iconName}
               expandedContent={modelCardInfo[property]}
+              key={property}
             />
           );
         })}

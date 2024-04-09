@@ -27,8 +27,8 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
       }
       return (
         <ul>
-          {checkedExpandedContent.map(content => (
-            <li>{content}</li>
+          {checkedExpandedContent.map((content, index) => (
+            <li key={index}>{content}</li>
           ))}
         </ul>
       );
