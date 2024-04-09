@@ -33,8 +33,8 @@ const EVENTS = {
   SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
 
   // Child Account Policy
-  CPA_STATE_FORM_SHOW: 'CPA State Form Shown',
-  CPA_STATE_FORM_PROVIDED: 'CPA State Submitted Form',
+  CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
+  CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',

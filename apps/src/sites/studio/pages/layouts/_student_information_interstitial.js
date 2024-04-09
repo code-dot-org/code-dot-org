@@ -13,7 +13,7 @@ $(document).ready(function () {
   if (pathName !== '/lti/v1/authenticate') {
     $('#student-information-modal').modal('show');
     retrieveInfoForCap &&
-      analyticsReporter.sendEvent(EVENTS.CPA_STATE_FORM_SHOW, {
+      analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_SHOW, {
         user_id: userId,
         in_section: inSection,
       });
@@ -46,7 +46,7 @@ $(document).ready(function () {
     event.preventDefault($(this).serialize());
     const stateValue = $('#user_us_state').val();
     if (stateValue !== '')
-      analyticsReporter.sendEvent(EVENTS.CPA_STATE_FORM_PROVIDED, {
+      analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_PROVIDED, {
         user_id: userId,
         in_section: inSection,
         us_state: stateValue,
