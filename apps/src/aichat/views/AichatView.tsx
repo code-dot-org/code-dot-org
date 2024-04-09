@@ -48,7 +48,7 @@ const AichatView: React.FunctionComponent = () => {
   }, [dispatch, initialSources, levelAichatSettings]);
 
   const {botName} = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+    state => state.aichat.currentAiCustomizations.modelCardInfo
   );
 
   const viewModeButtonsProps: SegmentedButtonsProps = {
