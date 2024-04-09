@@ -41,12 +41,12 @@
 
 .customizationContainer {
   overflow-y: auto;
-  height: 70vh;
+  height: 65vh;
 }
 
 .footerButtonContainer {
   display: flex;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
   border-top: 1px solid $light_gray_200;
   padding: 10px;
