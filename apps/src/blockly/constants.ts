@@ -29,6 +29,7 @@ export enum Themes {
 }
 
 export const DARK_THEME_SUFFIX = 'dark';
+export const CLOCKWISE_TURN_DIRECTION = 'turnRight';
 
 export enum BlockStyles {
   DEFAULT = 'default',

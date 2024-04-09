@@ -82,7 +82,6 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           onChange={onChange}
           value={selectedValue}
           id={id}
-          className={moduleStyles.dropdown}
           disabled={disabled}
         >
           {itemGroups.length > 0
