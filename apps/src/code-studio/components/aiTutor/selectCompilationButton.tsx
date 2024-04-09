@@ -2,13 +2,13 @@ import React from 'react';
 import Button from '@cdo/apps/templates/Button';
 import {setSelectedTutorType} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {TutorType} from '@cdo/apps/aiTutor/types';
+import {AITutorTypes as TutorTypes} from '@cdo/apps/aiTutor/types';
 
 const SelectCompilationButton: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const onClick = () => {
-    dispatch(setSelectedTutorType(TutorType.COMPILATION));
+    dispatch(setSelectedTutorType(TutorTypes.COMPILATION));
   };
 
   return (

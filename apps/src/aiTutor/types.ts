@@ -1,74 +1,82 @@
 import {
-  AiTutorInteractionSaveStatus,
-  AiTutorTypes,
+  AiTutorInteractionStatus as AITutorInteractionStatus,
+  AiTutorTypes as AITutorTypes,
+  PiiTypes as PII,
 } from '@cdo/apps/util/sharedConstants';
 
-export type ChatCompletionMessage = {
+// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
+export type AITutorTypesValue = string;
+export type AITutorInteractionStatusValue = string;
+
+export {AITutorInteractionStatus, AITutorTypes, PII};
+
+export interface ChatCompletionMessage {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: Status;
+  status: string;
   timestamp?: string;
-};
+}
 
-export type AITutorInteraction = {
+export interface AITutorInteraction {
   userId?: number;
   levelId?: number;
   scriptId?: number;
-  type: TutorType | undefined;
+  type: AITutorTypesValue | undefined;
   isProjectBacked?: boolean;
   prompt: string;
-  status: string;
+  status: AITutorInteractionStatusValue;
   aiResponse?: string;
-};
+}
 
-export type StudentChatRow = {
-  id: number;
-  studentName: string;
-  type: TutorType;
-  prompt: string;
-  status: string;
+export interface StudentChatRow {
+  aiModelVersion: string;
   aiResponse?: string;
   createdAt: string;
-};
+  id: number;
+  levelId?: number;
+  projectId?: string;
+  prompt: string;
+  scriptId?: number;
+  status: AITutorInteractionStatusValue;
+  studentName: string;
+  type: AITutorTypesValue;
+  updatedAt?: string;
+  userId: number;
+}
 
-export type StudentServerData = {
+export interface StudentServerData {
   id: number;
   name: string;
   ai_tutor_access_denied: boolean;
-};
+}
 
-export type StudentAccessData = {
+export interface StudentAccessData {
   id: number;
   name: string;
   aiTutorAccessDenied: boolean;
-};
+}
 
-export type Level = {
+export interface Level {
   id: number;
   type: string;
   hasValidation: boolean;
   isProjectBacked: boolean;
   aiTutorAvailable: boolean;
   isAssessment: boolean;
-};
+}
 
 export interface ChatContext {
   // studentInput is the last user message for general chat
   // or the student's code for compilation and validaiton.
   studentInput: string;
-  tutorType: TutorType | undefined;
+  tutorType: AITutorTypesValue | undefined;
 }
 
 export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',
   SYSTEM = 'system',
+  // only used in Aichat, but our types are currently tangled up :)
+  MODEL_UPDATE = 'update',
 }
-export type Status =
-  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
-export const Status = AiTutorInteractionSaveStatus;
-export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
-
-export type TutorType = (typeof AiTutorTypes)[keyof typeof AiTutorTypes];
-export const TutorType = AiTutorTypes;

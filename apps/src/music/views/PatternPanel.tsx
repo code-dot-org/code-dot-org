@@ -1,9 +1,17 @@
-import React, {ChangeEvent, useCallback, useMemo, useState} from 'react';
+import React, {
+  ChangeEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import classNames from 'classnames';
 import styles from './patternPanel.module.scss';
 import PreviewControls from './PreviewControls';
 import MusicLibrary, {SoundData} from '../player/MusicLibrary';
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
+import LoadingOverlay from './LoadingOverlay';
+import {LoadFinishedCallback} from '../types';
 
 // Generate an array containing tick numbers from 1..16.
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
@@ -16,6 +24,10 @@ interface PatternPanelProps {
   previewSound: (path: string) => void;
   previewPattern: (pattern: PatternEventValue, onStop: () => void) => void;
   cancelPreviews: () => void;
+  setupSampler: (kit: string, onLoadFinished?: LoadFinishedCallback) => void;
+  isInstrumentLoading: (kit: string) => boolean;
+  isInstrumentLoaded: (kit: string) => boolean;
+  registerInstrumentLoadCallback: (callback: (kit: string) => void) => void;
 }
 
 /*
@@ -30,7 +42,12 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   previewSound,
   previewPattern,
   cancelPreviews,
+  setupSampler,
+  isInstrumentLoading,
+  isInstrumentLoaded,
+  registerInstrumentLoadCallback,
 }) => {
+  const [isLoading, setIsLoading] = useState(false);
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
   const currentValue: PatternEventValue = JSON.parse(JSON.stringify(initValue));
@@ -107,6 +124,30 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
     });
   }, [previewPattern, bpm, setCurrentPreviewTick, currentValue]);
 
+  useEffect(() => {
+    if (!isInstrumentLoaded(currentValue.kit)) {
+      setIsLoading(true);
+      if (isInstrumentLoading(currentValue.kit)) {
+        // If the instrument is already loading, register a callback and wait for it to finish.
+        registerInstrumentLoadCallback(kit => {
+          if (kit === currentValue.kit) {
+            setIsLoading(false);
+          }
+        });
+      } else {
+        // Otherwise, initiate the load.
+        setupSampler(currentValue.kit, () => setIsLoading(false));
+      }
+    }
+  }, [
+    setupSampler,
+    isInstrumentLoading,
+    isInstrumentLoaded,
+    currentValue.kit,
+    setIsLoading,
+    registerInstrumentLoadCallback,
+  ]);
+
   return (
     <div className={styles.patternPanel}>
       <select value={currentValue.kit} onChange={handleFolderChange}>
@@ -116,6 +157,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
           </option>
         ))}
       </select>
+      <LoadingOverlay show={isLoading} />
       {currentFolder.sounds.map((sound, index) => {
         return (
           <div className={styles.row} key={sound.src}>

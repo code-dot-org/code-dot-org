@@ -1,30 +1,33 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
-import HeaderBanner from '../HeaderBanner';
-import Notification from '@cdo/apps/templates/Notification';
-import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
-import RecentCourses from './RecentCourses';
-import TeacherSections from './TeacherSections';
-import TeacherResources from './TeacherResources';
-import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import shapes from './shapes';
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import NpsSurveyBlock from './NpsSurveyBlock';
-import i18n from '@cdo/locale';
-import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
-import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
-import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
-import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
-import Button from '@cdo/apps/templates/Button';
-import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import IncubatorBanner from './IncubatorBanner';
-import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/templates/Button';
+import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import Notification from '@cdo/apps/templates/Notification';
+import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import HeaderBanner from '../HeaderBanner';
 import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
+
+import IncubatorBanner from './IncubatorBanner';
+import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
+import NpsSurveyBlock from './NpsSurveyBlock';
+import RecentCourses from './RecentCourses';
+import shapes from './shapes';
+import TeacherResources from './TeacherResources';
+import TeacherSections from './TeacherSections';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 

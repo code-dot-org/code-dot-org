@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import moduleStyles from './model-card-row.module.scss';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
@@ -7,7 +7,7 @@ interface ModelCardRowProps {
   keyName: string;
   title: string;
   titleIcon: string;
-  expandedContent: string;
+  expandedContent: string | string[];
 }
 
 const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
@@ -16,6 +16,26 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
   titleIcon,
   expandedContent,
 }) => {
+  const expandedContentToDisplay = useMemo(() => {
+    if (Array.isArray(expandedContent)) {
+      // Remove empty strings from the array.
+      const checkedExpandedContent = expandedContent.filter(
+        content => content.length !== 0
+      );
+      if (checkedExpandedContent.length === 0) {
+        return <p>Not available</p>;
+      }
+      return (
+        <ul>
+          {checkedExpandedContent.map(content => (
+            <li>{content}</li>
+          ))}
+        </ul>
+      );
+    }
+    return expandedContent;
+  }, [expandedContent]);
+
   return (
     <>
       <div key={keyName} className={moduleStyles.modelCardAttributes}>
@@ -28,7 +48,7 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
           expandedIcon="caret-down"
         >
           <BodyThreeText className={moduleStyles.expandedContent}>
-            {expandedContent}
+            <div>{expandedContentToDisplay}</div>
           </BodyThreeText>
         </CollapsibleSection>
       </div>
