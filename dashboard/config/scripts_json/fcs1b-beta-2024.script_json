@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-13 14:57:18 UTC",
+    "serialized_at": "2024-04-05 19:37:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1176,19 +1176,6 @@
       }
     },
     {
-      "key": "9ab0999f-5418-4a0c-a337-77bdc422009a",
-      "position": 2,
-      "properties": {
-        "description": "**Code Studio:** Have students answer a quick survey at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
-        "name": "Reflection",
-        "progression_name": "Check-In Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "9ab0999f-5418-4a0c-a337-77bdc422009a",
-        "lesson_activity.key": "dec98fde-da39-45b9-9aab-b6e5deeab0dd"
-      }
-    },
-    {
       "key": "ae282f21-d451-4840-b6c2-70a8c32839a9",
       "position": 1,
       "properties": {
@@ -1272,7 +1259,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Digging Deeper:** For more tips about programming levels, see the [Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially."
           }
         ]
       },
@@ -1290,7 +1277,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level."
           }
         ]
       },
@@ -1336,7 +1323,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class."
           }
         ]
       },
@@ -1353,7 +1340,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [Guide to Assessment](https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/preview)."
+            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -1370,7 +1357,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels."
           }
         ]
       },
@@ -1441,13 +1428,7 @@
       "key": "04d06f26-d80d-4a1a-8ed3-3ed58e22a71f",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview). This document includes strategies and best-practices for facilitating programming levels with students."
-          }
-        ]
+        "description": "**Transition:** Send students to Code Studio"
       },
       "seeding_key": {
         "activity_section.key": "04d06f26-d80d-4a1a-8ed3-3ed58e22a71f",
@@ -1620,13 +1601,7 @@
       "key": "c87ac902-10f5-4abc-9bb9-543b74f50d1c",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview). This document includes strategies and best-practices for facilitating programming levels with students."
-          }
-        ]
+        "description": "**Transition:** Send students to Code Studio"
       },
       "seeding_key": {
         "activity_section.key": "c87ac902-10f5-4abc-9bb9-543b74f50d1c",
@@ -1750,13 +1725,7 @@
       "key": "ace4ffec-e064-4c6f-b696-77fe0ed7a610",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview)**. This document includes strategies and best-practices for facilitating programming levels with students."
-          }
-        ]
+        "description": "**Transition:** Send students to Code Studio"
       },
       "seeding_key": {
         "activity_section.key": "ace4ffec-e064-4c6f-b696-77fe0ed7a610",
@@ -2246,13 +2215,7 @@
       "key": "1a422618-056a-4c61-b38c-af5bb978157b",
       "position": 1,
       "properties": {
-        "description": "**Code Studio:** Send students to Code Studio",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview). This document includes strategies and best-practices for facilitating programming levels with students."
-          }
-        ]
+        "description": "**Code Studio:** Send students to Code Studio"
       },
       "seeding_key": {
         "activity_section.key": "1a422618-056a-4c61-b38c-af5bb978157b",
@@ -2453,13 +2416,7 @@
       "key": "ab1224a7-20a7-4bc7-b052-769b69167184",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview)**. This document includes strategies and best-practices for facilitating programming levels with students."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio"
       },
       "seeding_key": {
         "activity_section.key": "ab1224a7-20a7-4bc7-b052-769b69167184",
@@ -2865,6 +2822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Getting Started_mb2022"
+        ],
         "progression": "App Lab Intro - Video"
       },
       "bonus": false,
@@ -2887,6 +2847,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color_mb2022"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -2909,6 +2872,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2_mb2022"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -2931,6 +2897,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text_mb2022"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -2953,6 +2922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_mb2022"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -2975,6 +2947,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro_mb2022"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -2997,6 +2972,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_mb2022"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -3019,6 +2997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_mb2022"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -3041,6 +3022,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound_mb2022"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -3063,6 +3047,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3085,6 +3072,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3107,6 +3097,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3129,6 +3122,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3151,6 +3147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App_mb2022"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -3173,6 +3172,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_mb2022"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -3195,6 +3197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L1 - Design Templates_2023a"
+        ],
         "progression": "Physical Design Prototypes"
       },
       "bonus": false,
@@ -3213,32 +3218,13 @@
     },
     {
       "chapter": 17,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check-In Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "devices-pre-survey-levelgroup_mb2022"
-        ],
-        "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "fcs1b-beta-2024",
-        "activity_section.key": "9ab0999f-5418-4a0c-a337-77bdc422009a"
-      },
-      "level_keys": [
-        "devices-pre-survey-levelgroup_mb2022"
-      ]
-    },
-    {
-      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 Circuit Playground Test_mb2022"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -3256,11 +3242,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3278,11 +3267,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3300,11 +3292,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB3v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3322,11 +3317,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB4v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3344,11 +3342,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - P2v2_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3366,11 +3367,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB6v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3388,11 +3392,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB7v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3410,11 +3417,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3432,11 +3442,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3454,11 +3467,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3476,11 +3492,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3498,11 +3517,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3520,11 +3542,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3542,11 +3567,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3564,11 +3592,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3586,11 +3617,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3608,11 +3642,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3630,11 +3667,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - ChalB_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3652,11 +3692,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3674,11 +3717,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3696,11 +3742,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3718,11 +3767,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3740,11 +3792,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB2.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3762,11 +3817,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3784,11 +3842,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - PracB_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3806,11 +3867,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3828,11 +3892,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3850,11 +3917,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB0_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3872,11 +3942,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3894,11 +3967,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3916,11 +3992,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3938,11 +4017,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB5_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3960,11 +4042,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P2_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3982,11 +4067,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB7_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4004,11 +4092,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB6_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4026,11 +4117,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4048,11 +4142,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4070,11 +4167,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Design_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -4092,11 +4192,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Events_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -4114,11 +4217,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Logic_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -4136,11 +4242,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Review_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -4158,11 +4267,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4180,11 +4292,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4202,11 +4317,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4224,11 +4342,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4246,11 +4367,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4268,11 +4392,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4290,11 +4417,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB5_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4312,11 +4442,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4334,11 +4467,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4356,11 +4492,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4378,11 +4517,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4400,11 +4542,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4422,11 +4567,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4444,11 +4592,14 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB4v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4466,11 +4617,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB5v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4488,11 +4642,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB6_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4510,11 +4667,14 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4532,11 +4692,14 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4554,11 +4717,14 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4576,11 +4742,14 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Design_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -4598,11 +4767,14 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Events_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -4620,11 +4792,14 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Logic_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -4642,11 +4817,14 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 81,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Review_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -4664,11 +4842,14 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 82,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_mb2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4877,18 +5058,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "fcs1b-beta-2024",
         "activity_section.key": "e95e474f-1e8a-4610-b607-56d79cbae691"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "devices-pre-survey-levelgroup_mb2022",
-        "script_level.level_keys": [
-          "devices-pre-survey-levelgroup_mb2022"
-        ],
-        "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "fcs1b-beta-2024",
-        "activity_section.key": "9ab0999f-5418-4a0c-a337-77bdc422009a"
       }
     },
     {

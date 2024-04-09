@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .chordPanelContainer {
   background-color: $neutral_dark;
@@ -41,7 +41,7 @@
 
       &.blackKey {
         border-width: 2px 2px;
-        z-index: 10;
+        z-index: 1;
         width: 10px;
         height: 23px;
         background-color: black;

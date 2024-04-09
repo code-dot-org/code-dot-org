@@ -149,6 +149,12 @@ const EVENTS = {
   TA_RUBRIC_LEARNING_GOAL_SELECTED: 'TA Rubric Learning Goal Selected',
   TA_RUBRIC_DROPDOWN_STUDENT_SELECTED: 'TA Rubric Student Switched',
   TA_RUBRIC_CSV_DOWNLOADED: 'TA Rubric CSV Downloaded',
+  TA_RUBRIC_INDIVIDUAL_AI_EVAL: 'TA Rubric Individual AI Eval Requested',
+  TA_RUBRIC_SECTION_AI_EVAL: 'TA Rubric Section AI Eval Requested',
+  TA_RUBRIC_AI_PAGE_VISITED: 'TA Rubric AI Level Page Visited',
+  TA_RUBRIC_STUDENT_AI_SUBMITTED: 'TA Rubric Student AI Level Submitted',
+  TA_RUBRIC_AI_EVAL_FROM_SECTION:
+    'TA Rubric AI Eval started from section request',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -230,9 +236,15 @@ const EVENTS = {
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
   // Curriculumm Recommender
-  RECOMMENDED_SIMILAR_CURRICULUM_SHOWN: 'Recommended Similar Curriculum Shown',
+  RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
   RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
     'Recommended Similar Curriculum Clicked',
+  RECOMMENDED_STRETCH_CURRICULUM_CLICKED:
+    'Recommended Stretch Curriculum Clicked',
+
+  // LTI Incubator
+  LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
+  LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
 };
 
 const EVENT_GROUP_NAMES = {

@@ -1,11 +1,28 @@
 // Styles for studio.code.org/my-professional-learning
 
+@use 'color.scss';
 @import 'typography';
 
 main.wrapper {
   max-width: 60rem;
   padding: 4rem 1rem;
   margin-inline: auto;
+}
+
+section {
+  padding: 4rem 1rem 0 1rem !important;
+}
+
+.headerContainer {
+  background-color: color.$light_gray_50;
+}
+
+.headerWithoutTabsContainer {
+  padding-bottom: 4rem;
+}
+
+.myPlTabsContainer {
+  margin-top: 1.5rem;
 }
 
 // TODO - this can be removed once the components on this page

@@ -11,6 +11,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './HeaderButtons.module.scss';
 import musicI18n from '../locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import {getBaseAssetUrl} from '../appConfig';
@@ -63,6 +64,7 @@ interface HeaderButtonsProps {
   onClickRedo: () => void;
   clearCode: () => void;
   allowPackSelection: boolean;
+  skipUrl: string | undefined;
 }
 
 /**
@@ -73,6 +75,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   onClickRedo,
   clearCode,
   allowPackSelection,
+  skipUrl,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
   const {canUndo, canRedo} = useSelector(
@@ -126,6 +129,16 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       '_blank'
     );
   };
+
+  const onClickSkip = useCallback(() => {
+    if (dialogControl) {
+      dialogControl.showDialog(DialogType.Skip, () => {
+        if (skipUrl) {
+          window.location.href = skipUrl;
+        }
+      });
+    }
+  }, [dialogControl, skipUrl]);
 
   return (
     <div className={moduleStyles.container}>
@@ -204,6 +217,22 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           className={'icon'}
         />
       </button>
+      {skipUrl && (
+        <button
+          onClick={onClickSkip}
+          type="button"
+          className={classNames(moduleStyles.button, moduleStyles.buttonSkip)}
+        >
+          <span className={moduleStyles.buttonSkipContent}>
+            {commonI18n.skipToProject()}
+          </span>
+          <FontAwesome
+            title={commonI18n.skipToProject()}
+            icon="arrow-right"
+            className={'icon'}
+          />
+        </button>
+      )}
     </div>
   );
 };

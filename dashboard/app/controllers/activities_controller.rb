@@ -2,6 +2,7 @@ require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 require 'cdo/firehose'
 require 'cdo/web_purify'
+require 'metrics/events'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -124,6 +125,16 @@ class ActivitiesController < ApplicationController
       is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: @script_level&.script, experiment_name: 'ai-rubrics')
       is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(@script_level)
       if is_ai_experiment_enabled && is_level_ai_enabled && params[:submitted] == 'true'
+        metadata = {
+          'studentId' => current_user.id,
+          'unitName' => @script_level.script.name,
+          'levelName' => @level.name,
+        }
+        Metrics::Events.log_event(
+          user: current_user,
+          event_name: 'TA Rubric Student AI Level Submitted',
+          metadata: metadata,
+        )
         EvaluateRubricJob.perform_later(user_id: current_user.id, requester_id: current_user.id, script_level_id: @script_level.id)
       end
     end

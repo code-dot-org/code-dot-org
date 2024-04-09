@@ -1,11 +1,9 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {reduxStore} from '@cdo/storybook/decorators';
 import sinon from 'sinon';
-import teacherSections, {
-  serverSectionFromSection,
-} from '../teacherDashboard/teacherSectionsRedux';
-import TeacherHomepage from './TeacherHomepage';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
 import {
   announcement,
   courses,
@@ -15,6 +13,11 @@ import {
   joinedStorySections,
   joinedPlSections,
 } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
+import teacherSections, {
+  serverSectionFromSection,
+} from '../teacherDashboard/teacherSectionsRedux';
+
+import TeacherHomepage from './TeacherHomepage';
 
 const serverSections = joinedStorySections.map(serverSectionFromSection);
 const joinedPlServerSections = joinedPlSections.map(serverSectionFromSection);

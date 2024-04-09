@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {beginEditingSection} from '../teacherDashboard/teacherSectionsRedux';
-import BorderedCallToAction from './BorderedCallToAction';
+
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import i18n from '@cdo/locale';
+
+import {beginEditingSection} from '../teacherDashboard/teacherSectionsRedux';
+
+import BorderedCallToAction from './BorderedCallToAction';
 
 // Amplitude analytics events.
 const STARTED_EVENT = 'Section Setup Started';

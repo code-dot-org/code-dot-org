@@ -15,6 +15,12 @@ import i18n from '@cdo/locale';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
+export interface CheckboxOption {
+  value: string;
+  label: string;
+  isOptionDisabled?: boolean;
+}
+
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
@@ -29,7 +35,7 @@ export interface CheckboxDropdownProps {
    * The user-facing label of the dropdown */
   labelText: string;
   /** CheckboxDropdown options */
-  allOptions: {value: string; label: string; isOptionDisabled?: boolean}[];
+  allOptions: CheckboxOption[];
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
