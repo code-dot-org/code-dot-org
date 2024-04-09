@@ -101,7 +101,7 @@ const AichatView: React.FunctionComponent = () => {
             <div className={moduleStyles.instructionsArea}>
               <PanelContainer
                 id="aichat-instructions-panel"
-                headerText={commonI18n.instructions()}
+                headerContent={commonI18n.instructions()}
               >
                 <Instructions beforeNextLevel={beforeNextLevel} />
               </PanelContainer>
@@ -109,7 +109,7 @@ const AichatView: React.FunctionComponent = () => {
             <div className={moduleStyles.customizationArea}>
               <PanelContainer
                 id="aichat-model-customization-panel"
-                headerText="Model Customization"
+                headerContent="Model Customization"
               >
                 <ModelCustomizationWorkspace />
               </PanelContainer>
@@ -120,7 +120,7 @@ const AichatView: React.FunctionComponent = () => {
           <div className={moduleStyles.presentationArea}>
             <PanelContainer
               id="aichat-presentation-panel"
-              headerText={'Model Card'}
+              headerContent={'Model Card'}
             >
               <PresentationView />
             </PanelContainer>
@@ -129,7 +129,7 @@ const AichatView: React.FunctionComponent = () => {
         <div className={moduleStyles.chatWorkspaceArea}>
           <PanelContainer
             id="aichat-workspace-panel"
-            headerText={chatWorkspaceHeader}
+            headerContent={chatWorkspaceHeader}
             rightHeaderContent={<CopyButton />}
           >
             <ChatWorkspace />
