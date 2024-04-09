@@ -34,8 +34,9 @@
       },
       "hidePresentationPanel": false
     },
-    "project_template_level_name": "Aichat Test - Template"
+    "project_template_level_name": "Aichat Test - Template",
+    "long_instructions": "Project Template Backed Level #3"
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-08 17:16:53 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-08 17:16:53 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-04-08 18:35:31 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
 </Aichat>
