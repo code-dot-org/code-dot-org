@@ -35,12 +35,13 @@ export default function ExpandedProgressColumnHeader({
   );
 
   const expandedLevel = React.useCallback(
-    icon => (
+    isExpanded => (
       <button
         type="button"
         className={styles.expandedHeaderLevelCellExpandable}
+        aria-expanded={isExpanded}
       >
-        {<FontAwesome icon={icon} />}
+        {<FontAwesome icon={isExpanded ? 'caret-down' : 'caret-right'} />}
         {getLevelHeaderContent()}
       </button>
     ),
@@ -63,7 +64,7 @@ export default function ExpandedProgressColumnHeader({
           onClick={() => toggleExpandedChoiceLevel(level)}
         >
           {level.sublevels?.length > 0
-            ? expandedLevel('caret-down')
+            ? expandedLevel(true)
             : getLevelHeaderContent()}
         </th>
         {level.sublevels?.map((sublevel, index) => (
@@ -111,7 +112,7 @@ export default function ExpandedProgressColumnHeader({
         id={getLevelColumnHeaderId(level.id)}
       >
         {level.sublevels?.length > 0
-          ? expandedLevel('caret-right')
+          ? expandedLevel(false)
           : getLevelHeaderContent()}
       </th>
     ),
