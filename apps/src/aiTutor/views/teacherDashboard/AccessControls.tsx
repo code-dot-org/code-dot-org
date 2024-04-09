@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {fetchStudents} from '@cdo/apps/aiTutor/accessControlsApi';
 import StudentAccessToggle from './StudentAccessToggle';
-import style from './chat-messages-table.module.scss';
+import style from './interactions-table.module.scss';
 import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 
 /**

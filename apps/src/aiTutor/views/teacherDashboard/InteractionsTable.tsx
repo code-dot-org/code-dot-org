@@ -2,7 +2,7 @@ import moment from 'moment';
 import React, {useEffect, useState} from 'react';
 import {fetchAITutorInteractions} from '@cdo/apps/aiTutor/interactionsApi';
 import InteractionsTableRow from './InteractionsTableRow';
-import style from './chat-messages-table.module.scss';
+import style from './interactions-table.module.scss';
 import {
   StudentChatRow,
   AITutorInteractionStatus,
