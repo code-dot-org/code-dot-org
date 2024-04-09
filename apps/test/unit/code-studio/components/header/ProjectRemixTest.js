@@ -62,7 +62,7 @@ describe('ProjectRemix', () => {
     expect(utils.navigateToHref.calledOnce).to.be.true;
     expect(
       utils.navigateToHref.calledWith(
-        '/users/sign_in?user_return_to=/context.html'
+        '/users/sign_in?user_return_to=/'
       )
     ).to.be.true;
 
