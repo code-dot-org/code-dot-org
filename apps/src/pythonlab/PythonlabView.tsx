@@ -11,7 +11,7 @@ import Lab2Registry from '../lab2/Lab2Registry';
 import {useAppSelector} from '../util/reduxHooks';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
-  python: python(),
+  py: python(),
 };
 
 const defaultProject: MultiFileSource = {
@@ -19,7 +19,7 @@ const defaultProject: MultiFileSource = {
     '0': {
       id: '0',
       name: 'main.py',
-      language: 'python',
+      language: 'py',
       contents: 'print("Hello world!")',
       folderId: '1',
       active: true,
@@ -40,7 +40,7 @@ const defaultConfig: ConfigType = {
   // showEditor: false,
   showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: () => Editor(pythonlabLangMapping, ['python']),
+  EditorComponent: () => Editor(pythonlabLangMapping, ['py']),
   leftNav: [
     {
       icon: 'fa-square-check',
@@ -90,23 +90,6 @@ const PythonlabView: React.FunctionComponent = () => {
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
     console.log({initialSources, channelId});
-    // if (initialSources?.source) {
-    //   // backwards compatibility: add active flag to first file if no file is active
-    //   let hasActiveFile = false;
-    //   const files = (initialSources.source as MultiFileSource).files;
-    //   Object.values(files).forEach(file => {
-    //     if (file.active) {
-    //       hasActiveFile = true;
-    //     }
-    //   });
-    //   if (!hasActiveFile && files) {
-    //     const firstKey = Object.keys(files)[0];
-    //     console.log(`setting ${firstKey} as active`);
-    //     files[firstKey].active = true;
-    //     console.log({files});
-    //   }
-    //   console.log({source: initialSources});
-    // }
     console.log({initialSources});
     setCurrentProject(
       (initialSources?.source as MultiFileSource) || defaultProject
