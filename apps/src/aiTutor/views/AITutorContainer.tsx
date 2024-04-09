@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {Fragment, useState} from 'react';
+import React, {useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -7,7 +7,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import AITutor from './aiTutor';
-import AITutorFooter from '../AITutorFooter';
+import AITutorFooter from './AITutorFooter';
 import style from './ai-tutor.module.scss';
 
 interface AITutorContainerProps {
@@ -60,19 +60,17 @@ const AITutorContainer: React.FC<AITutorContainerProps> = ({
               onClick={closeTutor}
               className={classnames(style.buttonStyle, style.closeButton)}
             >
-              <FontAwesome icon="xrk" className={undefined} title={undefined} />
+              <FontAwesome icon="xrk" className="" title="Close AI Tutor" />
             </button>
           </div>
         </div>
 
         <div className={style.fabBackground}>
-          <>
-            {renderAITutor ? (
-              <AITutor />
-            ) : (
-              <h4>You don't have access on this level.</h4>
-            )}
-          </>
+          {renderAITutor ? (
+            <AITutor />
+          ) : (
+            <h4>You don't have access on this level.</h4>
+          )}
         </div>
         <AITutorFooter />
       </div>

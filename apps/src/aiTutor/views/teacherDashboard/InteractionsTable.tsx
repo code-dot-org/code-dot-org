@@ -1,7 +1,7 @@
 import moment from 'moment';
 import React, {useEffect, useState} from 'react';
 import {fetchAITutorInteractions} from '@cdo/apps/aiTutor/interactionsApi';
-import AITutorChatMessagesTableRow from '../../aiTutorChatMessageTableRow';
+import InteractionsTableRow from './InteractionsTableRow';
 import style from './chat-messages-table.module.scss';
 import {
   StudentChatRow,
@@ -44,13 +44,11 @@ const TIME_FILTER_OPTIONS = [
 /**
  * Renders a table showing the section's students' chat messages with AI Tutor.
  */
-interface AITutorChatMessagesTableProps {
+interface InteractionsTableProps {
   sectionId: number;
 }
 
-const AITutorChatMessagesTable: React.FunctionComponent<
-  AITutorChatMessagesTableProps
-> = ({sectionId}) => {
+const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   const [chatMessages, setChatMessages] = useState<StudentChatRow[]>([]);
   const [studentFilterOptions, setStudentFilterOptions] = useState<
     CheckboxOption[]
@@ -212,7 +210,7 @@ const AITutorChatMessagesTable: React.FunctionComponent<
             </tr>
           ) : (
             filteredChatMessages.map(chatMessage => (
-              <AITutorChatMessagesTableRow
+              <InteractionsTableRow
                 key={chatMessage.id}
                 chatMessage={chatMessage}
               />
@@ -224,4 +222,4 @@ const AITutorChatMessagesTable: React.FunctionComponent<
   );
 };
 
-export default AITutorChatMessagesTable;
+export default InteractionsTable;

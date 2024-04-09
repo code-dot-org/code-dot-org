@@ -1,8 +1,8 @@
 import React from 'react';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import ChatMessage from './chatMessage';
+import ChatMessage from './ChatMessage';
 import style from './chat-workspace.module.scss';
-import WarningModal from '../warningModal';
+import WarningModal from './warningModal';
 import {AITutorTypes as TutorTypes} from '@cdo/apps/aiTutor/types';
 
 /**

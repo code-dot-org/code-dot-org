@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './chat-messages-table.module.scss';
+import style from './interactions-table.module.scss';
 import {
   StudentChatRow,
   AITutorTypes as TutorTypes,
@@ -9,13 +9,13 @@ import {
   genericValidation,
 } from '@cdo/apps/aiTutor/constants';
 
-interface AITutorChatMessagesTableRowProps {
+interface InteractionsTableRowProps {
   chatMessage: StudentChatRow;
 }
 
-const AITutorChatMessagesTableRow: React.FunctionComponent<
-  AITutorChatMessagesTableRowProps
-> = ({chatMessage}) => {
+const InteractionsTableRow: React.FC<InteractionsTableRowProps> = ({
+  chatMessage,
+}) => {
   const getTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();
   };
@@ -46,4 +46,4 @@ const AITutorChatMessagesTableRow: React.FunctionComponent<
   );
 };
 
-export default AITutorChatMessagesTableRow;
+export default InteractionsTableRow;
