@@ -92,7 +92,7 @@ describe('Applab designElements/elementThemes', () => {
   }
 
   describe('screen elements', () => {
-    it('screen has proper background color theme values', () => {
+    describe('screen has proper background color theme values', () => {
       const screen = library.createElement(
         library.ElementType.SCREEN,
         0,
