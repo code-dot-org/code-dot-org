@@ -19,9 +19,11 @@ const Editor = (
 
   const onChange = useCallback(
     (value: string) => {
-      saveFile(file.id, value);
+      if (file?.id) {
+        saveFile(file.id, value);
+      }
     },
-    [file.id, saveFile]
+    [file?.id, saveFile]
   );
 
   const editorConfigExtensions = useMemo(
