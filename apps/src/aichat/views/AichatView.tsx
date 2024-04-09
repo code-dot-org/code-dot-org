@@ -18,6 +18,9 @@ import SegmentedButtons, {
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import moduleStyles from './aichatView.module.scss';
 import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
+import {useSelector} from 'react-redux';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
+import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 
 const AichatView: React.FunctionComponent = () => {
   const [viewMode, setViewMode] = useState<string>(ViewMode.EDIT);
@@ -36,6 +39,8 @@ const AichatView: React.FunctionComponent = () => {
   const initialSources = useAppSelector(
     state => (state.lab.initialSources?.source as string) || '{}'
   );
+
+  const projectTemplateLevel = useSelector(isProjectTemplateLevel);
 
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(initialSources);
@@ -73,8 +78,14 @@ const AichatView: React.FunctionComponent = () => {
     onChange: setViewMode,
   };
 
-  const chatWorkspaceHeader =
-    viewMode === ViewMode.EDIT ? aichatI18n.aichatWorkspaceHeader() : botName;
+  const chatWorkspaceHeader = (
+    <div>
+      {projectTemplateLevel && <ProjectTemplateWorkspaceIcon place="bottom" />}
+      {viewMode === ViewMode.EDIT
+        ? aichatI18n.aichatWorkspaceHeader()
+        : botName}
+    </div>
+  );
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
@@ -90,7 +101,7 @@ const AichatView: React.FunctionComponent = () => {
               <div className={moduleStyles.instructionsArea}>
                 <PanelContainer
                   id="aichat-instructions-panel"
-                  headerText={commonI18n.instructions()}
+                  headerContent={commonI18n.instructions()}
                 >
                   <Instructions beforeNextLevel={beforeNextLevel} />
                 </PanelContainer>
@@ -98,7 +109,7 @@ const AichatView: React.FunctionComponent = () => {
               <div className={moduleStyles.customizationArea}>
                 <PanelContainer
                   id="aichat-model-customization-panel"
-                  headerText="Model Customization"
+                  headerContent="Model Customization"
                 >
                   <ModelCustomizationWorkspace />
                 </PanelContainer>
@@ -109,7 +120,7 @@ const AichatView: React.FunctionComponent = () => {
             <div className={moduleStyles.presentationArea}>
               <PanelContainer
                 id="aichat-presentation-panel"
-                headerText={'Model Card'}
+                headerContent={'Model Card'}
               >
                 <PresentationView />
               </PanelContainer>
@@ -118,7 +129,7 @@ const AichatView: React.FunctionComponent = () => {
           <div className={moduleStyles.chatWorkspaceArea}>
             <PanelContainer
               id="aichat-workspace-panel"
-              headerText={chatWorkspaceHeader}
+              headerContent={chatWorkspaceHeader}
               rightHeaderContent={<CopyButton />}
             >
               <ChatWorkspace />
