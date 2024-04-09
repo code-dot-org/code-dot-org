@@ -12,10 +12,10 @@ class MailJetTest < Minitest::Test
 
     Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: true, email: email, name: name)
 
-    time = Time.now.to_datetime.rfc3339
+    time = Time.now.to_datetime
     mock_contact = mock('Mailjet::Contactdata')
     Mailjet::Contactdata.expects(:find).with(email).returns(mock_contact)
-    mock_contact.expects(:update_attributes).with(data: [{name: 'sign_up_date', value: time}])
+    mock_contact.expects(:update_attributes).with(data: [{name: 'sign_up_date', value: time.rfc3339}])
 
     MailJet.create_contact(email, name, time)
   end

@@ -29,7 +29,7 @@ module MailJet
     return unless user&.id.present?
     return unless user.teacher?
 
-    create_contact(user.email, user.name, user.created_at.to_datetime.rfc3339)
+    create_contact(user.email, user.name, user.created_at.to_datetime)
     send_template_email(
       user.email,
       EMAILS[:welcome][:from_address],
@@ -67,11 +67,12 @@ module MailJet
     # but not block sign up.
     begin
       contact = Mailjet::Contactdata.find(email)
+      sign_up_date_rfc3339 = sign_up_date.rfc3339
       contact.update_attributes(
         data: [
           {
             name: 'sign_up_date',
-            value: sign_up_date
+            value: sign_up_date_rfc3339
           }
         ]
       )
