@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../../deployment'
-
 $experiment_name = 'ai-rubrics'
 
 $teacher_emails = ARGV[0].split(',').compact.map(&:strip)

@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../../deployment'
-
 $experiment_name = 'ai-rubrics'
 
 # map from CSD course to that course's unit which supports the experiment
