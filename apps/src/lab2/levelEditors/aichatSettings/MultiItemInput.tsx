@@ -10,7 +10,16 @@ export const MultiItemInput: React.FunctionComponent<{
   onChange: (index: number, value: string) => void;
   multiline?: boolean;
   max?: number;
-}> = ({items, onAdd, onRemove, onChange, max, multiline = false}) => {
+  readOnly?: boolean;
+}> = ({
+  items,
+  onAdd,
+  onRemove,
+  onChange,
+  max,
+  multiline = false,
+  readOnly = false,
+}) => {
   const Tag = multiline ? 'textarea' : 'input';
   const showPlus = max === undefined || items.length < max;
   return (
@@ -31,28 +40,31 @@ export const MultiItemInput: React.FunctionComponent<{
                 multiline ? moduleStyles.textarea : moduleStyles.inlineLabel
               )}
               onChange={e => onChange(index, e.target.value)}
+              disabled={readOnly}
             />
           );
         })}
       </div>
-      <div className={moduleStyles.buttonsRow}>
-        {showPlus && (
+      {!readOnly && (
+        <div className={moduleStyles.buttonsRow}>
+          {showPlus && (
+            <button
+              type="button"
+              className={moduleStyles.plusMinusButton}
+              onClick={onAdd}
+            >
+              <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+            </button>
+          )}
           <button
             type="button"
             className={moduleStyles.plusMinusButton}
-            onClick={onAdd}
+            onClick={onRemove}
           >
-            <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+            <FontAwesomeV6Icon iconName="minus" iconStyle="solid" />
           </button>
-        )}
-        <button
-          type="button"
-          className={moduleStyles.plusMinusButton}
-          onClick={onRemove}
-        >
-          <FontAwesomeV6Icon iconName="minus" iconStyle="solid" />
-        </button>
-      </div>
+        </div>
+      )}
     </div>
   );
 };
