@@ -11,7 +11,7 @@ const DEFAULT_PROPS = {
   deeperLearningCourseData: [{data: 'oh yeah'}],
   currentYearApplicationId: 2024,
   workshopsAsParticipant: [{data: 'workshops'}],
-  plCoursesStarted: [{data: selfPacedCourseConstants}],
+  plCoursesStarted: selfPacedCourseConstants,
 };
 
 describe('LandingPage', () => {
@@ -77,15 +77,13 @@ describe('LandingPage', () => {
   it('page shows self-paced progress table if enrolled in self-paced courses', () => {
     renderDefault();
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    // expect(screen.getAllByTestId('progress-bar').length.to.equal(2));
-    // expect(screen.getByText(i18n.selfPacedPlCompleted()));
+    expect(screen.getAllByTestId('progress-bar').length).to.equal(2);
+    expect(screen.getByText(i18n.selfPacedPlCompleted()));
     expect(
-      screen.getAllByText(i18n.selfPacedPlContinueCourse()).length.to.equal(2)
-    );
+      screen.getAllByText(i18n.selfPacedPlContinueCourse()).length
+    ).to.equal(2);
     expect(
-      screen
-        .getAllByText(i18n.selfPacedPlPrintCertificates())
-        .length.to.equal(2)
-    );
+      screen.getAllByText(i18n.selfPacedPlPrintCertificates()).length
+    ).to.equal(2);
   });
 });
