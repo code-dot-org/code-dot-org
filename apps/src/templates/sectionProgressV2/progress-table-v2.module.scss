@@ -240,7 +240,7 @@ min-width:47px;
       width: fit-content;
 
       &Inner {
-        border-left: thin solid transparent;
+        border-left: 1px solid transparent;
         width: 52px;
       }
 
@@ -285,14 +285,17 @@ min-width:47px;
   }
 
   &ChoiceLevelLink {
-    border-left: thin solid $neutral_dark40;
-    height: 31px;
-    padding: 8px 0;
+    border-left: 1px solid $neutral_dark40;
+    height: 32px;
+    margin: 8px 0;
+    line-height: 32px !important;
+    width: $level-cell-width + px;
   }
 
   &LevelCell {
+    display: flex;
     border-left: 0;
-    width: $level-cell-width + 1 + px;
+    width: auto;
 
     &First {
       border-inline-start: 4px solid $neutral_dark40;
