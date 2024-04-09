@@ -24,6 +24,7 @@ import {
 } from '@cdo/apps/weblab/actions';
 import reducers from '@cdo/apps/weblab/reducers';
 import WebLab from '@cdo/apps/weblab/WebLab';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 
 import {expect} from '../../util/reconfiguredChai';
 
@@ -41,6 +42,7 @@ describe('WebLab', () => {
     weblab.studioApp_ = studioApp();
     registerReducers(commonReducers);
     registerReducers(reducers);
+    registerReducers({currentUser});
     config = {
       skin: {},
       level: {},
@@ -76,7 +78,7 @@ describe('WebLab', () => {
 
     it('does not set startSources if it is given invalid JSON', () => {
       config.level.startSources = '{:';
-      expect(() => weblab.init(config)).to.throw(Error);
+      weblab.init(config);
       expect(weblab.startSources).to.be.undefined;
     });
 
@@ -335,26 +337,26 @@ describe('WebLab', () => {
   describe('getCodeAsync', () => {
     it('resolves with empty string if brambleHost is null', () => {
       weblab.brambleHost = null;
-      weblab.getCodeAsync().then(value => {
+      return weblab.getCodeAsync().then(value => {
         expect(value).to.equal('');
       });
     });
 
     it('rejects with error if brambleHost syncFiles has an error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => callback('error'),
+        syncFiles: (files, projectVersion, callback) => callback('error'),
       };
-      weblab.getCodeAsync().catch(error => {
+      return weblab.getCodeAsync().catch(error => {
         expect(error).to.equal('error');
       });
     });
 
     it('resolves with files version id when brambleHost syncFiles has no error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => callback('error'),
+        syncFiles: (files, projectVersion, callback) => callback(),
       };
       weblab.initialFilesVersionId = 'version-id';
-      weblab.getCodeAsync().then(val => {
+      return weblab.getCodeAsync().then(val => {
         expect(val).to.equal('version-id');
       });
     });
