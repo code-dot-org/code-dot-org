@@ -12,10 +12,27 @@ class MailJetTest < Minitest::Test
 
     Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: true, email: email, name: name)
 
-    time = Time.now.to_datetime
     mock_contact = mock('Mailjet::Contactdata')
-    Mailjet::Contactdata.expects(:find).with(email).returns(mock_contact)
+    Mailjet::Contactdata.stubs(:find).with(email).returns(nil).then.returns(mock_contact)
+
+    time = Time.now.to_datetime
     mock_contact.expects(:update_attributes).with(data: [{name: 'sign_up_date', value: time.rfc3339}])
+
+    MailJet.create_contact(email, name, time)
+  end
+
+  def test_create_contact_with_existing_contact
+    email = 'fake.email@email.com'
+    name = 'Fake Name'
+
+    mock_existing_contact = mock('Mailjet::Contactdata')
+    mock_existing_contact.stubs(:id).returns(123)
+    Mailjet::Contactdata.expects(:find).with(email).returns(mock_existing_contact)
+
+    Mailjet::Contact.expects(:create).never
+
+    time = Time.now.to_datetime
+    mock_existing_contact.expects(:update_attributes).with(data: [{name: 'sign_up_date', value: time.rfc3339}])
 
     MailJet.create_contact(email, name, time)
   end
