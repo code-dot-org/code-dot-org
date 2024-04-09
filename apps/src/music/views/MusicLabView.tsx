@@ -62,6 +62,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -204,6 +205,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 onClickRedo={redo}
                 clearCode={clearCode}
                 allowPackSelection={allowPackSelection}
+                skipUrl={skipUrl}
               />
             }
           >

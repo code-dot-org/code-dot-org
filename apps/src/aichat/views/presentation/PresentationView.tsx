@@ -1,40 +1,72 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import ModelCardRow from './ModelCardRow';
-import {MODEL_CARD_FIELDS_AND_LABELS} from '@cdo/apps/aichat/views/modelCustomization/constants';
+import {
+  MODEL_CARD_FIELDS_LABELS_ICONS,
+  TECHNICAL_INFO_FIELDS,
+} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './presentation-view.module.scss';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 const PresentationView: React.FunctionComponent = () => {
+  const currentAiCustomizations = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
+  const {systemPrompt, temperature, retrievalContexts} =
+    currentAiCustomizations;
+  const modelCardInfo = currentAiCustomizations.modelCardInfo;
+
+  // These are temporary constants. They will be retrieved from s3.
+  const EXAMPLE_MODEL_NAME = 'Model A';
+  const EXAMPLE_MODEL_TRAINING_DATA = 'Model A Training Data';
+
+  const technicalInfo = useMemo(() => {
+    const technicalInfoData: {
+      [key in (typeof TECHNICAL_INFO_FIELDS)[number]]:
+        | string
+        | number
+        | boolean;
+    } = {
+      'Model Name': EXAMPLE_MODEL_NAME,
+      'Training Data': EXAMPLE_MODEL_TRAINING_DATA,
+      'System Prompt': systemPrompt,
+      Temperature: temperature,
+      'Retrieval Used': retrievalContexts.length > 0,
+    };
+    const technicalInfo = TECHNICAL_INFO_FIELDS.map(field => {
+      if (typeof technicalInfoData[field] === 'boolean') {
+        return `${field}: ${technicalInfoData[field] ? 'Yes' : 'No'}`;
+      }
+      return `${field}: ${technicalInfoData[field]}`;
+    });
+    return technicalInfo;
+  }, [retrievalContexts, systemPrompt, temperature]);
+
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
         <Heading4 className={moduleStyles.modelCardTitle}>
-          Title of Model Card
+          {modelCardInfo['botName']}
         </Heading4>
-        {MODEL_CARD_FIELDS_AND_LABELS.map(
-          ([property, label, iconName], index) => {
-            return (
-              <ModelCardRow
-                keyName={property}
-                title={label}
-                titleIcon={iconName}
-                expandedContent={`Example TEXT ${label}`}
-              />
-            );
+        {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, iconName]) => {
+          if (property === 'botName') {
+            return null;
           }
-        )}
-        <ModelCardRow
-          keyName="examplePrompts"
-          title="Example Prompts and Topics"
-          titleIcon="message-lines"
-          expandedContent="Example TEXT - Example Prompts and Topics Every paragraph you write should include clear opening, supporting, and closing sentences. The opening sentence introduces the topic of the paragraph or signals a change of direction."
-        />
+          return (
+            <ModelCardRow
+              keyName={property}
+              title={label}
+              titleIcon={iconName}
+              expandedContent={modelCardInfo[property]}
+            />
+          );
+        })}
         <ModelCardRow
           keyName="technicalInfo"
           title="Technical Info"
           titleIcon="screwdriver-wrench"
-          expandedContent="Example TEXT - Technical Info"
+          expandedContent={technicalInfo}
         />
       </div>
     </div>

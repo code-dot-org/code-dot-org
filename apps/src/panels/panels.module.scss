@@ -1,5 +1,6 @@
 @import "color.scss";
 @import 'font.scss';
+@import '../mixins.scss';
 
 @keyframes fade-in {
   0%, 50% {
@@ -117,6 +118,32 @@
       &NotCurrent {
         color: $neutral_dark70;
         cursor: pointer;
+      }
+    }
+  }
+
+  .skipContainer {
+    position: absolute;
+    top: 1px;
+    right: 4px;
+
+    .buttonSkip {
+      @include remove-button-styles;
+      background-color: $neutral_dark;
+      color: $neutral_light;
+      display: flex;
+      height: 24px;
+      width: initial;
+      padding: 0 11px;
+      font-size: 13px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      margin: 2px;
+      transition: opacity 0.2s ease;
+
+      &Content {
+        margin-right: 9px;
       }
     }
   }

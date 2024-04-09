@@ -236,9 +236,15 @@ const EVENTS = {
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
   // Curriculumm Recommender
-  RECOMMENDED_SIMILAR_CURRICULUM_SHOWN: 'Recommended Similar Curriculum Shown',
+  RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
   RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
     'Recommended Similar Curriculum Clicked',
+  RECOMMENDED_STRETCH_CURRICULUM_CLICKED:
+    'Recommended Stretch Curriculum Clicked',
+
+  // LTI Incubator
+  LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
+  LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
 };
 
 const EVENT_GROUP_NAMES = {

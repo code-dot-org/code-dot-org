@@ -33,6 +33,10 @@ const CurriculumCatalog = ({
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
   const [expandedCardKey, setExpandedCardKey] = useState(null);
+  const [recommendedSimilarCurriculum, setRecommendedSimilarCurriculum] =
+    useState(null);
+  const [recommendedStretchCurriculum, setRecommendedStretchCurriculum] =
+    useState(null);
 
   useEffect(() => {
     const expandedCardFound = filteredCurricula.some(
@@ -41,6 +45,8 @@ const CurriculumCatalog = ({
 
     if (!expandedCardFound) {
       setExpandedCardKey(null);
+      setRecommendedSimilarCurriculum(null);
+      setRecommendedStretchCurriculum(null);
     }
   }, [expandedCardKey, filteredCurricula]);
 
@@ -65,16 +71,42 @@ const CurriculumCatalog = ({
     setAssignSuccessMessage('');
   };
 
-  const handleExpandedCardChange = key => {
-    if (expandedCardKey !== key) {
+  const handleQuickViewClicked = key => {
+    if (expandedCardKey === key) {
+      // If Quick View is clicked again to close the card (or the 'X' on the expanded card is clicked)
+      setExpandedCardKey(null);
+      setRecommendedSimilarCurriculum(null);
+      setRecommendedStretchCurriculum(null);
+    } else {
       analyticsReporter.sendEvent(
         EVENTS.CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT,
         {
           curriculum_offering: key,
         }
       );
+      handleSetExpandedCardKey(key);
     }
-    setExpandedCardKey(expandedCardKey === key ? null : key);
+  };
+
+  const handleSetExpandedCardKey = key => {
+    const newRecommendedSimilarCurriculum =
+      getRecommendedSimilarCurriculum(key);
+    const newRecommendedStretchCurriculum = getRecommendedStretchCurriculum(
+      key,
+      newRecommendedSimilarCurriculum.key
+    );
+
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_CATALOG_CURRICULUM_SHOWN, {
+      current_curriculum_offering: key,
+      recommended_similar_curriculum_offering:
+        newRecommendedSimilarCurriculum.key,
+      recommended_stretch_curriculum_offering:
+        newRecommendedStretchCurriculum.key,
+    });
+
+    setRecommendedSimilarCurriculum(newRecommendedSimilarCurriculum);
+    setRecommendedStretchCurriculum(newRecommendedStretchCurriculum);
+    setExpandedCardKey(key);
   };
 
   // Get the top recommended similar curriculum based on the curriculum with the given
@@ -103,11 +135,6 @@ const CurriculumCatalog = ({
       'similarRecommenderResults',
       JSON.stringify(similarRecommenderResults)
     );
-
-    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_SHOWN, {
-      current_curriculum_offering: curriculumKey,
-      recommended_curriculum_offering: recommendedCurriculum.key,
-    });
 
     return recommendedCurriculum;
   };
@@ -216,18 +243,14 @@ const CurriculumCatalog = ({
                     self_paced_pl_course_offering_path
                   }
                   isExpanded={expandedCardKey === key}
-                  setExpandedCardKey={setExpandedCardKey}
-                  onQuickViewClick={() => handleExpandedCardChange(key)}
+                  handleSetExpandedCardKey={handleSetExpandedCardKey}
+                  onQuickViewClick={() => handleQuickViewClicked(key)}
                   isInUS={isInUS}
                   availableResources={available_resources}
                   isSignedOut={isSignedOut}
                   isTeacher={isTeacher}
-                  getRecommendedSimilarCurriculum={
-                    getRecommendedSimilarCurriculum
-                  }
-                  getRecommendedStretchCurriculum={
-                    getRecommendedStretchCurriculum
-                  }
+                  recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+                  recommendedStretchCurriculum={recommendedStretchCurriculum}
                   {...props}
                 />
               )

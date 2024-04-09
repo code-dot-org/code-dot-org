@@ -3,6 +3,10 @@ import {
   getSimilarRecommendations,
   getStretchRecommendations,
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
+
+import {expect} from '../../util/reconfiguredChai';
+
 import {
   IS_FEATURED_TEST_COURSES,
   DURATION_TEST_COURSES,
@@ -12,8 +16,6 @@ import {
   PUBLISHED_DATE_TEST_COURSES,
   FULL_TEST_COURSES,
 } from './curriculumRecommenderTestCurricula';
-import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
-import {expect} from '../../util/reconfiguredChai';
 
 describe('testRecommender', () => {
   it('curricula marked as is_featured sorted before other curricula with same score', () => {

@@ -18,22 +18,21 @@ import {
 import {isVisible, isDisabled} from './utils';
 import CompareModelsDialog from './CompareModelsDialog';
 
-const PromptCustomization: React.FunctionComponent = () => {
+const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const [chosenModel, setChosenModel] = useState<string>('llama2');
   const [isShowingModelDialog, setIsShowingModelDialog] =
     useState<boolean>(false);
 
-  const {botName, temperature, systemPrompt} = useAppSelector(
+  const {temperature, systemPrompt} = useAppSelector(
     state => state.aichat.fieldVisibilities
   );
   const aiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
 
-  const allFieldsDisabled =
-    isDisabled(botName) && isDisabled(temperature) && isDisabled(systemPrompt);
+  const allFieldsDisabled = isDisabled(temperature) && isDisabled(systemPrompt);
 
   const onUpdate = useCallback(
     () => dispatch(updateAiCustomization()),
@@ -77,26 +76,6 @@ const PromptCustomization: React.FunctionComponent = () => {
     <div className={styles.verticalFlexContainer}>
       <div>
         {renderChooseAndCompareModels()}
-        {isVisible(botName) && (
-          <div className={styles.inputContainer}>
-            <label htmlFor="chatbot-name">
-              <StrongText>Chatbot name</StrongText>
-            </label>
-            <input
-              id="chatbot-name"
-              value={aiCustomizations.botName}
-              disabled={isDisabled(botName)}
-              onChange={event =>
-                dispatch(
-                  setAiCustomizationProperty({
-                    property: 'botName',
-                    value: event.target.value,
-                  })
-                )
-              }
-            />
-          </div>
-        )}
         {isVisible(temperature) && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>
@@ -157,4 +136,4 @@ const PromptCustomization: React.FunctionComponent = () => {
   );
 };
 
-export default PromptCustomization;
+export default SetupCustomization;
