@@ -34,7 +34,7 @@ const PublishNotes: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       {isVisible(visibility) && (
-        <>
+        <div className={styles.customizationContainer}>
           {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label]) => {
             const InputTag = getInputTag(property);
             return (
@@ -58,7 +58,7 @@ const PublishNotes: React.FunctionComponent = () => {
               </div>
             );
           })}
-        </>
+        </div>
       )}
       <div className={styles.footerButtonContainer}>
         <Button

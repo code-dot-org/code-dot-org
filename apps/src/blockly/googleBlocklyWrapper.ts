@@ -8,6 +8,7 @@ import {
 } from '@blockly/plugin-scroll-options';
 import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
+import {installAllBlocks as installColourBlocks} from '@blockly/field-colour';
 import {
   BlockColors,
   BlocklyVersion,
@@ -374,7 +375,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // Assign all of the properties of the javascript generator to the forBlock array
   // Prevents deprecation warnings related to https://github.com/google/blockly/pull/7150
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
-
+  // Installs all colour blocks, the colour field, and the JS generator functions.
+  installColourBlocks({
+    javascript: javascriptGenerator,
+  });
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.LineCursor = LineCursor;
   blocklyWrapper.navigationController = new NavigationController();
