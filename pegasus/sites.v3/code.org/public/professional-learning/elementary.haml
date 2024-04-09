@@ -1,0 +1,33 @@
+---
+title: K-5 Professional Learning Workshops
+theme: responsive_full_width
+---
+
+- button_url = "#map"
+- button_string = hoc_s("pl_page_k5.button")
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+
+%section
+  .wrapper
+    %h1=hoc_s("pl_page_k5.heading")
+    .grid-container.two-col.justify-space-between.align-items-start.gap-2
+      .text-wrapper
+        %p=hoc_s("pl_page_k5.desc_01")
+        %p.body-three.wrap-pretty
+          %strong=hoc_s("pl_page_k5.desc_02")
+        %ul
+          %li=hoc_s("pl_page_k5.top_list_01")
+          %li=hoc_s("pl_page_k5.top_list_02")
+          %li=hoc_s("pl_page_k5.top_list_03")
+          %li=hoc_s("pl_page_k5.top_list_04")
+        %a.link-button{href: button_url, target: "_blank", rel: "noopener noreferrer"}
+          =button_string
+      %figure
+        %img.rounded-corners{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%; margin-block: 0.5rem 0"}
+
+-# = view :workshop_search
+
+-# = view :professional_development_workshops_regional_partner_search
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::ELEMENTARY_SCHOOL_PL_PAGE_VISITED_EVENT
