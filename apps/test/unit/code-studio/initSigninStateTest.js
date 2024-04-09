@@ -4,8 +4,9 @@ import cookies from 'js-cookie';
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
-import {allowConsoleErrors} from '../../util/testUtils';
+import {allowConsoleErrors, setExternalGlobals} from '../../util/testUtils';
 
+setExternalGlobals()
 describe('initSigninStateTest', () => {
   describe('getUserSignedInFromCookieAndDom', () => {
     allowConsoleErrors();
