@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5aisandbox",
-    "serialized_at": "2024-04-04 20:08:12 UTC",
+    "serialized_at": "2024-04-08 21:57:25 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -68,12 +68,27 @@
       }
     },
     {
-      "key": "Next Steps",
-      "name": "Next Steps",
+      "key": "lesson-4",
+      "name": "AI and Machine Learning",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024"
+      }
+    },
+    {
+      "key": "Next Steps",
+      "name": "Next Steps",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
       "properties": {
         "overview": "#### This lesson will help you get started teaching with micro:bits\n\n#### **You will:**\n- ####  Learn more about the assessment feature, JuiceMind\n\n- #### Plan the best course pathway for your class\n\n- #### Explore best practices for teaching with physical computing devices \n\n#### **Suggested time:** 15 minutes\n",
         "student_overview": "#### This lesson will help you get started teaching with micro:bits\n\n#### **You will:**\n- ####  Learn more about the assessment feature, JuiceMind\n\n- #### Plan the best course pathway for your class\n\n- #### Explore best practices for teaching with physical computing devices \n\n#### **Suggested time:** 15 minutes"
@@ -108,6 +123,18 @@
       "seeding_key": {
         "lesson_activity.key": "cda7cc92-82c7-4fb5-a229-cd99ed11ac9d",
         "lesson.key": "Implementing with Codeorg [Optional]",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024"
+      }
+    },
+    {
+      "key": "4571a50e-5c1a-452e-8a52-c781bd9aace0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4571a50e-5c1a-452e-8a52-c781bd9aace0",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5aisandbox-2024"
       }
@@ -172,6 +199,27 @@
       }
     },
     {
+      "key": "8d66224c-c660-416d-ba1d-7e0341db21bb",
+      "position": 1,
+      "properties": {
+        "progression_name": "What is AI?"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb",
+        "lesson_activity.key": "4571a50e-5c1a-452e-8a52-c781bd9aace0"
+      }
+    },
+    {
+      "key": "ea44749f-13a3-4dc7-9b0b-dc391326a7ad",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ea44749f-13a3-4dc7-9b0b-dc391326a7ad",
+        "lesson_activity.key": "4571a50e-5c1a-452e-8a52-c781bd9aace0"
+      }
+    },
+    {
       "key": "0a8bdf78-8687-4d99-aeb9-511b40636c23",
       "position": 1,
       "properties": {
@@ -202,6 +250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening1MB_1"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -224,6 +275,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_202_1"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -246,6 +300,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2022MB_1"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -268,6 +325,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_maker_microbit_pl_introVideo_1"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -290,6 +350,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_1"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -312,6 +375,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_maker_PL_course pathways_1"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -334,6 +400,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How this curriculum works_1"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -356,6 +425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-features_2023MB_1"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -378,6 +450,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-classsection_2023MB_1"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -400,6 +475,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-STexperience_2023MB_1"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -422,6 +500,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-assessment_2023mb_1"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -444,6 +525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-TeachersInClassrooms_1"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -466,6 +550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-NavigatingLessonPlans_1"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -488,6 +575,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ExploreLessonPlan_1"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -510,6 +600,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL_21-mod2-MakeAPlan-LessonPlanning_1"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -532,6 +625,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-NavigatingTeacherResources_1"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -554,6 +650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-TaskResources_1"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -576,6 +675,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-navigating support_1"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -598,6 +700,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ReadSupportArticles_1"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -620,6 +725,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ReportAProblem_1"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -642,6 +750,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-JoinTheTeacherCommunity_1"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -664,6 +775,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_certificate_1"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -686,6 +800,185 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "What is AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23K5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23K5"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "What is AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ML-vid_23K5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-ML-vid_23K5"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "What is AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Intro-Quotes_-22_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-Intro-Quotes_-22_23k5"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "What is AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-lesson1-Overview-AIML_-22_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-lesson1-Overview-AIML_-22_23k5"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "What is AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-U7L1L1_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-U7L1L1_23k5"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "What is AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-MLintro-c4u_-22_23K5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-MLintro-c4u_-22_23K5"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "What is AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_23k5"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_juiceMInd_intro_2"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -703,11 +996,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_deciding_your_path_2"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -725,11 +1021,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_courses-C-F_2"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -747,11 +1046,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_reflecting_2"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -769,11 +1071,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_Best_Practices_2"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -791,11 +1096,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced_PL_microbit_Closing2_2"
+        ],
         "progression": "Continue learning"
       },
       "bonus": false,
@@ -1076,6 +1384,102 @@
         "lesson_group.key": "",
         "script.name": "k5aisandbox-2024",
         "activity_section.key": "9b798248-4d03-4567-a727-b898c8c84143"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23K5",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23K5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-ML-vid_23K5",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ML-vid_23K5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-Intro-Quotes_-22_23k5",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Intro-Quotes_-22_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-lesson1-Overview-AIML_-22_23k5",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-lesson1-Overview-AIML_-22_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-U7L1L1_23k5",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-U7L1L1_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-MLintro-c4u_-22_23K5",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-MLintro-c4u_-22_23K5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_23k5",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_23k5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "8d66224c-c660-416d-ba1d-7e0341db21bb"
       }
     },
     {
