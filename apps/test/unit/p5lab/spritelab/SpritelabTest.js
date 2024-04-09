@@ -20,6 +20,7 @@ import Sounds from '@cdo/apps/Sounds';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
 
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
@@ -38,6 +39,7 @@ const backgroundSprite = {
 
 describe('SpriteLab', () => {
   setExternalGlobals();
+  setBlocklyGlobal();
 
   beforeAll(() => sinon.stub(ReactDOM, 'render'));
   afterAll(() => ReactDOM.render.restore());
