@@ -10,6 +10,7 @@ import {
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
+import {ModelCardInfo} from '@cdo/apps/aichat/types';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -26,17 +27,22 @@ const PublishNotes: React.FunctionComponent = () => {
     [dispatch]
   );
 
+  const getInputTag = (property: keyof ModelCardInfo) => {
+    return property === 'botName' ? 'input' : 'textarea';
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
-      <div>
-        {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label]) => {
-          return (
-            isVisible(visibility) && (
+      {isVisible(visibility) && (
+        <div className={styles.customizationContainer}>
+          {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label]) => {
+            const InputTag = getInputTag(property);
+            return (
               <div className={styles.inputContainer} key={property}>
                 <label htmlFor={property}>
                   <StrongText>{label}</StrongText>
                 </label>
-                <textarea
+                <InputTag
                   id={property}
                   disabled={isDisabled(visibility)}
                   value={modelCardInfo[property]}
@@ -50,10 +56,10 @@ const PublishNotes: React.FunctionComponent = () => {
                   }
                 />
               </div>
-            )
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
       <div className={styles.footerButtonContainer}>
         <Button
           text="Publish"
