@@ -8,8 +8,15 @@ module MailJet
   API_KEY = CDO.try(:mailjet_api_key).freeze
   SECRET_KEY = CDO.try(:mailjet_secret_key).freeze
 
+  # We use MailJet when the following are true:
+  # - The use_mailjet DCDO is true
+  # - We are not in the test environment
+  # - We have the required secrets set
   def self.enabled?
-    DCDO.get('use_mailjet', false) && API_KEY.present? && SECRET_KEY.present?
+    DCDO.get('use_mailjet', false) &&
+      !Rails.env.test? &&
+      API_KEY.present? &&
+      SECRET_KEY.present?
   end
 
   def self.subaccount
@@ -32,10 +39,8 @@ module MailJet
     create_contact(user.email, user.name, user.created_at.to_datetime)
     send_template_email(
       user.email,
-      EMAILS[:welcome][:from_address],
       user.name,
-      EMAILS[:welcome][:from_name],
-      EMAILS[:welcome][:template_id][subaccount.to_sym]
+      EMAILS[:welcome]
     )
   end
 
@@ -70,7 +75,7 @@ module MailJet
     )
   end
 
-  def self.send_template_email(to_email, from_email, to_name, from_name, template_id)
+  def self.send_template_email(to_email, to_name, email_config)
     return unless enabled?
 
     Mailjet.configure do |config|
@@ -79,10 +84,14 @@ module MailJet
       config.api_version = "v3.1"
     end
 
+    from_address = email_config[:from_address]
+    from_name = email_config[:from_name]
+    template_id = email_config[:template_id][subaccount.to_sym]
+
     Mailjet::Send.create(messages:
       [{
         From: {
-          Email: from_email,
+          Email: from_address,
           Name: from_name
         },
         To: [

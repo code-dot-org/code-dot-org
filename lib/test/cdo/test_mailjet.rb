@@ -40,14 +40,24 @@ class MailJetTest < Minitest::Test
   def test_send_template_email
     to_email = 'fake.email@email.com'
     to_name = 'Fake Name'
-    from_email = 'test@code.org'
+    from_address = 'test@code.org'
     from_name = 'Test Name'
     template_id = 123
+
+    MailJet.stubs(:subaccount).returns('unit_test')
+
+    email_config = {
+      from_address: from_address,
+      from_name: from_name,
+      template_id: {
+        unit_test: template_id
+      }
+    }
 
     Mailjet::Send.expects(:create).with do |params|
       messages = params[:messages]
       messages.length == 1 &&
-        messages[0][:From][:Email] == from_email &&
+        messages[0][:From][:Email] == from_address &&
         messages[0][:From][:Name] == from_name &&
         messages[0][:To].length == 1 &&
         messages[0][:To][0][:Email] == to_email &&
@@ -55,6 +65,6 @@ class MailJetTest < Minitest::Test
         messages[0][:TemplateID] == template_id
     end
 
-    MailJet.send_template_email(to_email, from_email, to_name, from_name, template_id)
+    MailJet.send_template_email(to_email, to_name, email_config)
   end
 end
