@@ -13,7 +13,7 @@ const PresentationView: React.FunctionComponent = () => {
   const currentAiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
-  const {botName, systemPrompt, temperature, retrievalContexts} =
+  const {systemPrompt, temperature, retrievalContexts} =
     currentAiCustomizations;
   const modelCardInfo = currentAiCustomizations.modelCardInfo;
 
@@ -46,8 +46,13 @@ const PresentationView: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        <Heading4 className={moduleStyles.modelCardTitle}>{botName}</Heading4>
+        <Heading4 className={moduleStyles.modelCardTitle}>
+          {modelCardInfo['botName']}
+        </Heading4>
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, iconName]) => {
+          if (property === 'botName') {
+            return null;
+          }
           return (
             <ModelCardRow
               keyName={property}

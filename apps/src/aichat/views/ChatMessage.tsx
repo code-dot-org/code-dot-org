@@ -8,7 +8,11 @@ import Button from '@cdo/apps/componentLibrary/button';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
 import {removeChatMessage} from '../redux/aichatRedux';
-import {ChatCompletionMessage, Role, Status} from '../types';
+import {
+  ChatCompletionMessage,
+  Role,
+  AITutorInteractionStatus as Status,
+} from '../types';
 import aichatI18n from '../locale';
 import moduleStyles from './chatMessage.module.scss';
 
@@ -32,7 +36,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {chatMessageText}
       </div>
     );
-  } else if (status === Status.INAPPROPRIATE) {
+  } else if (status === Status.PROFANITY_VIOLATION) {
     return (
       <div
         className={classNames(
@@ -43,7 +47,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {INAPPROPRIATE_MESSAGE}
       </div>
     );
-  } else if (status === Status.PERSONAL) {
+  } else if (status === Status.PII_VIOLATION) {
     return (
       <div
         className={classNames(
