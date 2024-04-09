@@ -43,41 +43,22 @@ const MultipleTemplate: StoryFn<{
       </p>
       <p>Multiple Dropdowns:</p>
       <div style={{display: 'flex', gap: '20px'}}>
-        {args.components?.map(componentArg =>
-          componentArg.color === 'white' ? (
-            <div style={{background: 'black', padding: 10}}>
-              <SimpleDropdown
-                key={`${componentArg.name}`}
-                {...componentArg}
-                selectedValue={
-                  values[componentArg.name] || componentArg.selectedValue
-                }
-                onChange={e => {
-                  setValues({
-                    ...values,
-                    [componentArg.name]: e.target.value,
-                  });
-                  componentArg.onChange(e);
-                }}
-              />
-            </div>
-          ) : (
-            <SimpleDropdown
-              key={`${componentArg.name}`}
-              {...componentArg}
-              selectedValue={
-                values[componentArg.name] || componentArg.selectedValue
-              }
-              onChange={e => {
-                setValues({
-                  ...values,
-                  [componentArg.name]: e.target.value,
-                });
-                componentArg.onChange(e);
-              }}
-            />
-          )
-        )}
+        {args.components?.map(componentArg => (
+          <SimpleDropdown
+            key={`${componentArg.name}`}
+            {...componentArg}
+            selectedValue={
+              values[componentArg.name] || componentArg.selectedValue
+            }
+            onChange={e => {
+              setValues({
+                ...values,
+                [componentArg.name]: e.target.value,
+              });
+              componentArg.onChange(e);
+            }}
+          />
+        ))}
       </div>
     </>
   );

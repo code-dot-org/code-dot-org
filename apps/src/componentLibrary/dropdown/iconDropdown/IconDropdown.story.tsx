@@ -65,16 +65,7 @@ const MultipleTemplate: StoryFn<{
             componentArg.onChange(option);
           };
 
-          return componentArg.color === 'white' ? (
-            <div style={{background: 'black', padding: 10}}>
-              <IconDropdown
-                key={`${componentArg.name}`}
-                {...componentArg}
-                selectedOption={values[componentArg.name]}
-                onChange={onChange}
-              />
-            </div>
-          ) : (
+          return (
             <IconDropdown
               key={`${componentArg.name}`}
               {...componentArg}

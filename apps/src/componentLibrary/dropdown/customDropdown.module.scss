@@ -188,6 +188,7 @@
   .dropdownButton {
     color: $light_black;
     border-color: $light_black;
+    background-color: $light_white;
   }
 
   &:has(.dropdownButton:hover) {
@@ -225,6 +226,7 @@
   .dropdownButton {
     color: $light_white;
     border-color: $light_white;
+    background-color: $light_black;
   }
 
   &:has(.dropdownButton:hover) {
@@ -237,7 +239,6 @@
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
       color: $light_white;
-      background-color: unset;
     }
   }
 

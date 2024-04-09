@@ -108,18 +108,7 @@ const MultipleTemplate: StoryFn<{
             componentArg.onClearAll(e);
           };
 
-          return componentArg.color === 'white' ? (
-            <div style={{background: 'black', padding: 10}}>
-              <CheckboxDropdown
-                key={`${componentArg.name}`}
-                {...componentArg}
-                checkedOptions={values[componentArg.name]}
-                onChange={onChange}
-                onSelectAll={onSelectAll}
-                onClearAll={onClearAll}
-              />
-            </div>
-          ) : (
+          return (
             <CheckboxDropdown
               key={`${componentArg.name}`}
               {...componentArg}
