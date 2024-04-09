@@ -8,7 +8,9 @@ import {python} from '@codemirror/lang-python';
 import {CDOIDE} from '../weblab2/CDOIDE';
 import {MultiFileSource} from '../lab2/types';
 import Lab2Registry from '../lab2/Lab2Registry';
-import {useAppSelector} from '../util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
+import {setSource} from './pythonlabRedux';
+import PythonConsole from './PythonConsole';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -71,14 +73,17 @@ const defaultConfig: ConfigType = {
 };
 
 const PythonlabView: React.FunctionComponent = () => {
-  const [currentProject, setCurrentProject] =
-    useState<MultiFileSource>(defaultProject);
+  const [currentProject, setCurrentProject] = useState<MultiFileSource>();
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const initialSources = useAppSelector(state => state.lab.initialSources);
   const channelId = useAppSelector(state => state.lab.channel?.id);
+  const dispatch = useAppDispatch();
 
   const setProject = (newProject: MultiFileSource) => {
+    console.log('in setProject');
+    console.log({newProject});
     setCurrentProject(newProject);
+    dispatch(setSource(newProject));
     if (Lab2Registry.getInstance().getProjectManager()) {
       const projectSources = {
         source: newProject,
@@ -98,12 +103,15 @@ const PythonlabView: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.pythonlab}>
-      <CDOIDE
-        project={currentProject}
-        config={config}
-        setProject={setProject}
-        setConfig={setConfig}
-      />
+      {currentProject && (
+        <CDOIDE
+          project={currentProject}
+          config={config}
+          setProject={setProject}
+          setConfig={setConfig}
+        />
+      )}
+      <PythonConsole />
     </div>
   );
 };

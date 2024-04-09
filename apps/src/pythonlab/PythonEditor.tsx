@@ -57,7 +57,7 @@ const PythonEditor: React.FunctionComponent = () => {
         '0': {
           id: '0',
           name: 'main.py',
-          language: 'python',
+          language: 'py',
           contents: updatedCode,
           folderId: '1',
         },
