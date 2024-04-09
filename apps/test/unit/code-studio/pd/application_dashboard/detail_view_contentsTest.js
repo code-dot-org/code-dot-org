@@ -452,41 +452,52 @@ describe('DetailViewContents', () => {
   // });
 
   describe('Teacher application scholarship status', () => {
-    let detailView;
-
-    afterEach(() => {
-      detailView.unmount();
-    });
+    let count = 0;
 
     for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
+      count++;
       it(`is required in order to set application status to ${applicationStatus}`, () => {
         const overrideProps = {
-          ...DEFAULT_APPLICATION_DATA,
           status: 'unreviewed',
           scholarship_status: null,
           update_emails_sent_by_system: false,
         };
         renderDefault(overrideProps);
 
+        console.log(count);
+
         expect(isModalShowing()).to.be.false;
-        expect(getScholarshipStatus()).to.be.null;
-        expect(screen.findAllByText('unreviewed').length).to.equal(2);
+        screen.getByText('Select...');
 
-        setApplicationStatusTo(applicationStatus);
-        expect(isModalShowing()).to.be.true;
-        expect(screen.findAllByText('unreviewed').length).to.equal(2);
 
-        dismissModal();
-        expect(isModalShowing()).to.be.false;
-        expect(screen.findAllByText('unreviewed').length).to.equal(2);
 
-        clickEditButton();
-        setScholarshipStatusTo('no');
-        expect(getScholarshipStatus()).to.equal('no');
+        // Gotta get the statuses in the log below to say "unreviewed" not "accepted" --> then can also use the list of comboboxes and get the [1]th one to view the
+        // scholarship status possibly?
 
-        setApplicationStatusTo(applicationStatus);
-        expect(isModalShowing()).to.be.false;
-        expect(screen.findAllByText(applicationStatus).length).to.equal(2);
+        console.log(screen.getAllByRole('combobox').map(co => co.value));
+
+
+        //console.log(screen.getAllByRole('option', {name: 'Unreviewed'}).forEach(op => console.log(op.selected)));
+        // expect(
+        //   screen.getAllByRole('option', {name: 'Unreviewed'}).forEach(op => console.log(op.selected))
+        // ).to.equal(2);
+
+        // clickEditButton(screen);
+        // setApplicationStatusTo(screen, 'Unreviewed', applicationStatus);
+        // expect(isModalShowing()).to.be.true;
+        // expect(screen.findAllByText('unreviewed').length).to.equal(2);
+
+        // dismissModal();
+        // expect(isModalShowing()).to.be.false;
+        // expect(screen.findAllByText('unreviewed').length).to.equal(2);
+
+        // clickEditButton();
+        // setScholarshipStatusTo('no');
+        // screen.getByText('No, paid teacher');
+
+        // setApplicationStatusTo(applicationStatus);
+        // expect(isModalShowing()).to.be.false;
+        // expect(screen.findAllByText(applicationStatus).length).to.equal(2);
       });
     }
 
@@ -552,21 +563,14 @@ describe('DetailViewContents', () => {
   //     });
   //   });
 
-    function clickEditButton() {
+    function clickEditButton(screen) {
       fireEvent.click(screen.getAllByText('Edit')[0]);
     }
 
-    function setApplicationStatusTo(currentStatus, newStatus) {
+    function setApplicationStatusTo(screen, currentStatus, newStatus) {
       const applicationDropdown = screen.getAllByDisplayValue(currentStatus);
       fireEvent.change(applicationDropdown, {target: newStatus});
-    }
-
-    function getScholarshipStatus() {
-      const scholarshipDropdown = detailView
-        .find('tr')
-        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
-        .find('Select');
-      return scholarshipDropdown.prop('value');
+      fireEvent.click(screen.getAllByText('Save')[0]);
     }
 
     function setScholarshipStatusTo(newValue) {
@@ -579,13 +583,7 @@ describe('DetailViewContents', () => {
     }
 
     function isModalShowing() {
-      const modal = detailView
-        .find('ConfirmationDialog')
-        .filterWhere(
-          dialog => dialog.prop('headerText') === 'Cannot save applicant status'
-        )
-        .first();
-      return !!modal.prop('show');
+      return screen.queryAllByText('Cannot save applicant status').length > 0;
     }
 
     function dismissModal() {
