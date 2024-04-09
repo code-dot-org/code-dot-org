@@ -8,6 +8,7 @@ import {
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import reducer, {
   __testInterface__,
@@ -176,7 +177,7 @@ describe('teacherSectionsRedux', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections: reducer});
+    registerReducers({currentUser, teacherSections: reducer});
     store = getStore();
   });
 
