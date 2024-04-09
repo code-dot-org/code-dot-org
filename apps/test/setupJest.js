@@ -79,3 +79,7 @@ global.IN_UNIT_TEST = true;
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.PISKEL_DEVELOPMENT_MODE = 'false';
+
+jest.mock('@cdo/apps/lib/util/firehose', () => ({
+  putRecord: jest.fn(),
+}));
