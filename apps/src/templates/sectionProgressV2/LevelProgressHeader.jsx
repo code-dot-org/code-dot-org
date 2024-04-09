@@ -16,6 +16,37 @@ export default function ExpandedProgressColumnHeader({
 }) {
   const isExpandable = level.sublevels?.length > 0;
 
+  const getLevelHeaderContent = React.useCallback(
+    () => (
+      <>
+        <div className={styles.expandedHeaderLevelCellLevelNumber}>
+          {lesson.relative_position + '.' + level.bubbleText}
+        </div>
+        {level.kind === 'assessment' && (
+          <FontAwesome
+            icon="star"
+            aria-label="assessment"
+            className={styles.assessmentLevelIcon}
+          />
+        )}
+      </>
+    ),
+    [lesson, level]
+  );
+
+  const expandedLevel = React.useCallback(
+    icon => (
+      <button
+        type="button"
+        className={styles.expandedHeaderLevelCellExpandable}
+      >
+        {<FontAwesome icon={icon} />}
+        {getLevelHeaderContent()}
+      </button>
+    ),
+    [getLevelHeaderContent]
+  );
+
   const expandedChoiceLevel = React.useCallback(
     () => (
       <>
@@ -31,17 +62,9 @@ export default function ExpandedProgressColumnHeader({
           id={getLevelColumnHeaderId(level.id)}
           onClick={() => toggleExpandedChoiceLevel(level)}
         >
-          {level.sublevels?.length > 0 && <FontAwesome icon="caret-down" />}
-          <div className={styles.expandedHeaderLevelCellLevelNumber}>
-            {lesson.relative_position + '.' + level.bubbleText}
-          </div>
-          {level.kind === 'assessment' && (
-            <FontAwesome
-              icon="star"
-              aria-label="assessment"
-              className={styles.assessmentLevelIcon}
-            />
-          )}
+          {level.sublevels?.length > 0
+            ? expandedLevel('caret-down')
+            : getLevelHeaderContent()}
         </th>
         {level.sublevels?.map((sublevel, index) => (
           <th
@@ -63,7 +86,14 @@ export default function ExpandedProgressColumnHeader({
         ))}
       </>
     ),
-    [lesson, level, isExpandable, toggleExpandedChoiceLevel]
+    [
+      lesson,
+      level,
+      isExpandable,
+      toggleExpandedChoiceLevel,
+      expandedLevel,
+      getLevelHeaderContent,
+    ]
   );
 
   const unexpandedLevel = React.useCallback(
@@ -80,22 +110,19 @@ export default function ExpandedProgressColumnHeader({
         onClick={() => toggleExpandedChoiceLevel(level)}
         id={getLevelColumnHeaderId(level.id)}
       >
-        {level.sublevels?.length > 0 && <FontAwesome icon="caret-right" />}
-        <div className={styles.expandedHeaderLevelCellLevelNumber}>
-          {`${lesson.relative_position}.${
-            level.isUnplugged ? 0 : level.bubbleText
-          }`}
-        </div>
-        {level.kind === 'assessment' && (
-          <FontAwesome
-            icon="star"
-            aria-label="assessment"
-            className={styles.assessmentLevelIcon}
-          />
-        )}
+        {level.sublevels?.length > 0
+          ? expandedLevel('caret-right')
+          : getLevelHeaderContent()}
       </th>
     ),
-    [lesson, level, toggleExpandedChoiceLevel, isExpandable]
+    [
+      lesson,
+      level,
+      toggleExpandedChoiceLevel,
+      isExpandable,
+      expandedLevel,
+      getLevelHeaderContent,
+    ]
   );
 
   return level.sublevels?.length > 0 && isLevelExpanded
