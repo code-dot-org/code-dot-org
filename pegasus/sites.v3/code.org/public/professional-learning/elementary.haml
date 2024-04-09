@@ -41,14 +41,18 @@ theme: responsive_full_width
 
 %section#workshops-map
   .wrapper
+    %h2=hoc_s("pl_page_k5.workshops_map.heading")
+    %p=hoc_s("pl_page_k5.workshops_map.desc")
     = view :workshop_search
 
 %section.bg-neutral-light
   .wrapper
+    %h2=hoc_s("pl_page_k5.curriculum.heading")
+    %h2=hoc_s("pl_page_k5.curriculum.desc")
 
 %section
   .wrapper
-    = view :"professional_learning/additional_programs", heading: hoc_s("pl_page_k5.additional_programs.heading"), desc: hoc_s("pl_page_k5.additional_programs.desc"), middle_high: false
+    = view :"professional_learning/additional_programs", heading: hoc_s("pl_page_k5.additional_offerings.heading"), desc: hoc_s("pl_page_k5.additional_offerings.desc"), middle_high: false
 
 = view :section_divider_line
 

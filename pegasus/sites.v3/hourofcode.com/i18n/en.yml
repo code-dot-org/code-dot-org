@@ -1742,26 +1742,6 @@
         desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
         button: "Visit our support center"
 
-  pl_page_k5:
-    heading: "K-5 professional learning workshops"
-    desc_01: "Our engaging workshops are for new and experienced computer science teachers!"
-    desc_02: "During these in-person or virtual facilitator-led workshops you will:"
-    top_list_01: "Explore the curriculum and learning tools"
-    top_list_02: "Experience the course as a teacher and a learner"
-    top_list_03: "Collaborate with fellow teachers"
-    top_list_04: "Earn a certificate of completion"
-    button: "Find a workshop near you"
-    quote:
-      text: "It was great to put myself in situations that my students might face. Talking with others about our lessons was super helpful because we could bounce ideas off of one another."
-      byline: "Music Teacher"
-    additional_programs:
-      heading: "Additional professional learning offerings"
-      desc: "In addition to our facilitator led options for elementary teachers we have several other programs to meet the diverse needs of our teachers."
-      workshops:
-        title: "6-12 Workshops"
-        desc: "Do you teach middle or high school grades? Check out the link below to learn more about our 6-12 workshops."
-        button: "Explore 6-12 workshops"
-
   intl_pl_page:
     page_title: "International Professional Learning Resources"
     heading: "Global professional learning opportunities"
