@@ -1,4 +1,5 @@
 import {FieldAngle} from '@blockly/field-angle';
+import {CLOCKWISE_TURN_DIRECTION} from '../constants';
 
 interface AngleTextInputOptions {
   directionTitle: string; // Ex. 'DIR'
@@ -34,7 +35,7 @@ export default class CdoFieldAngleTextInput extends FieldAngle {
       );
     }
 
-    if (this.direction === 'turnRight') {
+    if (this.direction === CLOCKWISE_TURN_DIRECTION) {
       this.clockwise = true;
     }
     super.showEditor_(e);
