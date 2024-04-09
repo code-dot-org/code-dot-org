@@ -1776,7 +1776,7 @@
       csf:
         overline: "K-5 Teachers"
         title: "Computer Science Fundamentals"
-        desc: "Introduce students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
+        desc: "Introduce students to the foundational concepts of computer science and challenge them to explore how computing and technology can impact the world."
         button: "Explore CS Fundamentals"
       csc:
         overline: "3-5 Teachers"
