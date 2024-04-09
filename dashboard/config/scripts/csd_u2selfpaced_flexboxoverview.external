@@ -21,7 +21,7 @@ markdown <<MARKDOWN
 
 #### Once your elements are set up in a div container, you can begin organizing it. Flex provides a more efficient way to lay out, align, and distribute space among items in a container.
 
-#### All Flex properties are add to a CSS style sheet. They include:
+#### All Flex properties are added to a CSS style sheet. They include:
 
 * #### `display`
 * #### `flex-direction`
