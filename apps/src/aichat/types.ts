@@ -21,6 +21,7 @@ export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',
   SYSTEM = 'system',
+  MODEL_UPDATE = 'update',
 }
 
 export enum ViewMode {
@@ -43,12 +44,10 @@ export interface AichatLevelProperties extends LevelProperties {
    * the value if it is set to editable.
    */
   aichatSettings?: LevelAichatSettings;
-  initialAiCustomizations?: LevelAiCustomizations;
 }
 
 /** AI customizations for student chat bots */
 export interface AiCustomizations {
-  botName: string;
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
@@ -57,6 +56,7 @@ export interface AiCustomizations {
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {
+  botName: string;
   description: string;
   intendedUse: string;
   limitationsAndWarnings: string;
@@ -79,19 +79,5 @@ export interface LevelAichatSettings {
   initialCustomizations: AiCustomizations;
   visibilities: {[key in keyof AiCustomizations]: Visibility};
   /** If the presentation panel is hidden from the student. */
-  hidePresentationPanel?: boolean;
+  hidePresentationPanel: boolean;
 }
-
-/**
- * Level-defined AI customizations for student chat bots set by levelbuilders on the level's properties.
- * Each field is the same as AiCustomizations, but with an additional visibility property.
- */
-export type LevelAiCustomizations = {
-  [key in keyof AiCustomizations]: {
-    value: AiCustomizations[key];
-    visibility: Visibility;
-  };
-} & {
-  /** If the presentation panel is hidden from the student. */
-  hidePresentationPanel?: boolean;
-};

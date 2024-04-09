@@ -23,9 +23,7 @@ module I18n
             I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
-          private
-
-          def spritelab_manifest_builder
+          private def spritelab_manifest_builder
             @spritelab_manifest_builder ||= begin
               spritelab_manifest_builder = ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
 

@@ -17,6 +17,7 @@ import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/Delet
 import FrozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/FrozenProjectInfoDialog';
 import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {DEPRECATED_LABS} from '@cdo/apps/constants';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -186,6 +187,11 @@ class PersonalProjectsTable extends React.Component {
   render() {
     const personalProjectsList = this.props.personalProjectsList || [];
 
+    // Filter out projects of deprecated labs, like Calc and Eval.
+    const supportedPersonalProjectsList = personalProjectsList.filter(
+      project => !DEPRECATED_LABS.includes(project.type)
+    );
+
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -199,9 +205,9 @@ class PersonalProjectsTable extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(personalProjectsList);
+    })(supportedPersonalProjectsList);
 
-    const noProjects = personalProjectsList.length === 0;
+    const noProjects = supportedPersonalProjectsList.length === 0;
 
     return (
       <div>

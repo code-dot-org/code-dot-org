@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {
   Heading2,
   OverlineTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+
 import styles from './actionBlocksWrapper.module.scss';
 
 const OneColumnActionBlock = ({
@@ -39,6 +41,7 @@ const OneColumnActionBlock = ({
               size="m"
               text={button.text}
               type={button.type}
+              ariaLabel={button.ariaLabel}
             />
           ))}
       </div>
@@ -59,6 +62,7 @@ OneColumnActionBlock.propTypes = {
       text: PropTypes.string,
       target: PropTypes.string,
       type: PropTypes.string,
+      ariaLabel: PropTypes.string,
     })
   ),
 };

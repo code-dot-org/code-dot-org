@@ -35,14 +35,15 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
-  setExpandedCardKey,
+  handleSetExpandedCardKey,
   isInUS,
   imageSrc,
   imageAltText,
   availableResources,
   isSignedOut,
   isTeacher,
-  getRecommendedSimilarCurriculum,
+  recommendedSimilarCurriculum,
+  recommendedStretchCurriculum,
 }) => {
   const isTeacherOrSignedOut = isSignedOut || isTeacher;
   const expandedCardRef = useRef(null);
@@ -81,15 +82,20 @@ const ExpandedCurriculumCatalogCard = ({
     return ++availableResourceCounter < availableResourcesCount;
   };
 
-  const recommendedSimilarCurriculum =
-    getRecommendedSimilarCurriculum(courseKey);
-
   const handleClickRecommendedSimilarCurriculum = () => {
     analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_CLICKED, {
       current_curriculum_offering: courseKey,
-      recommended_curriculum_offering: recommendedSimilarCurriculum.key,
+      recommended_similar_curriculum_offering: recommendedSimilarCurriculum.key,
     });
-    setExpandedCardKey(recommendedSimilarCurriculum.key);
+    handleSetExpandedCardKey(recommendedSimilarCurriculum.key);
+  };
+
+  const handleClickRecommendedStretchCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_STRETCH_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_stretch_curriculum_offering: recommendedStretchCurriculum.key,
+    });
+    handleSetExpandedCardKey(recommendedStretchCurriculum.key);
   };
 
   useEffect(() => {
@@ -296,7 +302,6 @@ const ExpandedCurriculumCatalogCard = ({
                 <img
                   id="similarCurriculumImage"
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
-                  style={{height: '100%'}}
                   alt={recommendedSimilarCurriculum.display_name}
                 />
                 <Button
@@ -307,6 +312,20 @@ const ExpandedCurriculumCatalogCard = ({
                   className={style.relatedCurriculaLink}
                   text={recommendedSimilarCurriculum.display_name}
                   onClick={handleClickRecommendedSimilarCurriculum}
+                />
+                <img
+                  id="stretchCurriculumImage"
+                  src={recommendedStretchCurriculum.image || defaultImageSrc}
+                  alt={recommendedStretchCurriculum.display_name}
+                />
+                <Button
+                  id="stretchCurriculumButton"
+                  name={recommendedStretchCurriculum.display_name}
+                  type="button"
+                  styleAsText
+                  className={style.relatedCurriculaLink}
+                  text={recommendedStretchCurriculum.display_name}
+                  onClick={handleClickRecommendedStretchCurriculum}
                 />
               </div>
             </div>
@@ -332,13 +351,14 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
-  setExpandedCardKey: PropTypes.func.isRequired,
+  handleSetExpandedCardKey: PropTypes.func.isRequired,
   isInUS: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
-  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
+  recommendedSimilarCurriculum: PropTypes.object,
+  recommendedStretchCurriculum: PropTypes.object,
 };
 export default ExpandedCurriculumCatalogCard;

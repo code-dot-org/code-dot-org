@@ -41,6 +41,8 @@ import BlockSvgFrame from './addons/blockSvgFrame';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
+import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
+import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
 
 export interface BlockDefinition {
   category: string;
@@ -74,6 +76,8 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  readOnly: boolean;
+  grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   getNewCursor: (type: string) => Cursor;
   LineCursor: typeof GoogleBlockly.BasicCursor;
@@ -93,6 +97,8 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     onMainBlockSpaceCreated: (callback: () => void) => void;
   };
 
+  FieldAngleDropdown: typeof CdoFieldAngleDropdown;
+  FieldAngleTextInput: typeof CdoFieldAngleTextInput;
   FieldBehaviorPicker: typeof CdoFieldBehaviorPicker;
   FieldButton: typeof CdoFieldButton;
   FieldImageDropdown: typeof CdoFieldImageDropdown;
@@ -171,6 +177,7 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 export interface ExtendedBlockSvg extends BlockSvg {
   isVisible: () => boolean;
   isUserVisible: () => boolean;
+  shouldBeGrayedOut: () => boolean;
   // imageSourceId, shortString, longString and thumbnailSize are used for sprite pointer blocks
   imageSourceId?: string;
   shortString?: string;
@@ -209,6 +216,7 @@ export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
   getContainer: () => ParentNode | null;
   setEnableToolbox: () => void;
   traceOn: () => void;
+  isReadOnly: () => boolean;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {
@@ -229,6 +237,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   noFunctionBlockFrame: boolean;
   useModalFunctionEditor: boolean;
   useBlocklyDynamicCategories: boolean;
+  grayOutUndeletableBlocks: boolean | undefined;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -237,6 +246,7 @@ export interface ExtendedWorkspace extends Workspace {
 
 type CodeGeneratorType = typeof CodeGenerator;
 export interface ExtendedGenerator extends CodeGeneratorType {
+  xmlToCode: (name: string, domBlocks: Element) => string;
   xmlToBlocks: (name: string, xml: Node) => Block[];
   blockSpaceToCode: (
     name: string,

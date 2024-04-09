@@ -1,4 +1,5 @@
 import React from 'react';
+
 import TwoColumnActionBlock from './TwoColumnActionBlock';
 
 export default {

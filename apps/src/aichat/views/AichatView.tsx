@@ -11,6 +11,7 @@ const aichatI18n = require('@cdo/aichat/locale');
 import {setStartingAiCustomizations} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
+import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
 import SegmentedButtons, {
   SegmentedButtonsProps,
@@ -47,7 +48,7 @@ const AichatView: React.FunctionComponent = () => {
   }, [dispatch, initialSources, levelAichatSettings]);
 
   const {botName} = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+    state => state.aichat.currentAiCustomizations.modelCardInfo
   );
 
   const viewModeButtonsProps: SegmentedButtonsProps = {
@@ -76,52 +77,56 @@ const AichatView: React.FunctionComponent = () => {
     viewMode === ViewMode.EDIT ? aichatI18n.aichatWorkspaceHeader() : botName;
 
   return (
-    <>
-      {!levelAichatSettings?.hidePresentationPanel && (
-        <div className={moduleStyles.viewModeButtons}>
-          <SegmentedButtons {...viewModeButtonsProps} />
-        </div>
-      )}
-      <div id="aichat-lab" className={moduleStyles.aichatLab}>
-        {viewMode === ViewMode.EDIT && (
-          <>
-            <div className={moduleStyles.instructionsArea}>
-              <PanelContainer
-                id="aichat-instructions-panel"
-                headerText={commonI18n.instructions()}
-              >
-                <Instructions beforeNextLevel={beforeNextLevel} />
-              </PanelContainer>
-            </div>
-            <div className={moduleStyles.customizationArea}>
-              <PanelContainer
-                id="aichat-model-customization-panel"
-                headerText="Model Customization"
-              >
-                <ModelCustomizationWorkspace />
-              </PanelContainer>
-            </div>
-          </>
-        )}
-        {viewMode === ViewMode.PRESENTATION && (
-          <div className={moduleStyles.presentationArea}>
-            <PanelContainer
-              id="aichat-presentation-panel"
-              headerText={'Model Card'}
-            />
+    <div id="aichat-lab" className={moduleStyles.aichatLab}>
+      <div className={moduleStyles.columnFlexContainer}>
+        {!levelAichatSettings?.hidePresentationPanel && (
+          <div className={moduleStyles.viewModeButtons}>
+            <SegmentedButtons {...viewModeButtonsProps} />
           </div>
         )}
-        <div className={moduleStyles.chatWorkspaceArea}>
-          <PanelContainer
-            id="aichat-workspace-panel"
-            headerText={chatWorkspaceHeader}
-            rightHeaderContent={<CopyButton />}
-          >
-            <ChatWorkspace />
-          </PanelContainer>
+        <div className={moduleStyles.labCoreContainer}>
+          {viewMode === ViewMode.EDIT && (
+            <>
+              <div className={moduleStyles.instructionsArea}>
+                <PanelContainer
+                  id="aichat-instructions-panel"
+                  headerText={commonI18n.instructions()}
+                >
+                  <Instructions beforeNextLevel={beforeNextLevel} />
+                </PanelContainer>
+              </div>
+              <div className={moduleStyles.customizationArea}>
+                <PanelContainer
+                  id="aichat-model-customization-panel"
+                  headerText="Model Customization"
+                >
+                  <ModelCustomizationWorkspace />
+                </PanelContainer>
+              </div>
+            </>
+          )}
+          {viewMode === ViewMode.PRESENTATION && (
+            <div className={moduleStyles.presentationArea}>
+              <PanelContainer
+                id="aichat-presentation-panel"
+                headerText={'Model Card'}
+              >
+                <PresentationView />
+              </PanelContainer>
+            </div>
+          )}
+          <div className={moduleStyles.chatWorkspaceArea}>
+            <PanelContainer
+              id="aichat-workspace-panel"
+              headerText={chatWorkspaceHeader}
+              rightHeaderContent={<CopyButton />}
+            >
+              <ChatWorkspace />
+            </PanelContainer>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

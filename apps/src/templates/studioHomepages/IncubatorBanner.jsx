@@ -1,7 +1,10 @@
 import React from 'react';
-import ContentContainer from '../ContentContainer';
-import TwoColumnActionBlock from './TwoColumnActionBlock';
+
 import i18n from '@cdo/locale';
+
+import ContentContainer from '../ContentContainer';
+
+import TwoColumnActionBlock from './TwoColumnActionBlock';
 
 const IncubatorBanner = () => {
   return (

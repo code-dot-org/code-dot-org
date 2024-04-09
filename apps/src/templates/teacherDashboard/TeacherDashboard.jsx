@@ -8,7 +8,6 @@ import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import i18n from '@cdo/locale';
 
@@ -23,6 +22,8 @@ import TeacherDashboardHeader from './TeacherDashboardHeader';
 import TeacherDashboardNavigation, {
   TeacherDashboardPath,
 } from './TeacherDashboardNavigation';
+
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const applyV1TeacherDashboardWidth = children => {
   return <div className={dashboardStyles.dashboardPage}>{children}</div>;

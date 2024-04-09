@@ -32,6 +32,16 @@ const EVENTS = {
   SCHOOL_INTERSTITIAL_SAVE_FAILURE: 'School Interstitial Save Failure',
   SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
 
+  // School Selection Component
+  COUNTRY_SELECTED: 'User Selects Country',
+  ZIP_CODE_ENTERED: 'Valid Zip Code Entered',
+  SCHOOL_SEARCH_INPUT_ENTERED: 'School Search Input Entered',
+  SCHOOL_LIST_OPENED: 'School List Opened',
+  SCHOOL_SELECTED_FROM_LIST: 'School Selected from Dropdown',
+  ADD_MANUALLY_CLICKED: 'User Elects to Add School Name Manually',
+  DO_NOT_TEACH_AT_SCHOOL_CLICKED:
+    'User Clicks I Do Not Teach In A School Setting',
+
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Course Overview Page Visited By Teacher',
@@ -139,6 +149,12 @@ const EVENTS = {
   TA_RUBRIC_LEARNING_GOAL_SELECTED: 'TA Rubric Learning Goal Selected',
   TA_RUBRIC_DROPDOWN_STUDENT_SELECTED: 'TA Rubric Student Switched',
   TA_RUBRIC_CSV_DOWNLOADED: 'TA Rubric CSV Downloaded',
+  TA_RUBRIC_INDIVIDUAL_AI_EVAL: 'TA Rubric Individual AI Eval Requested',
+  TA_RUBRIC_SECTION_AI_EVAL: 'TA Rubric Section AI Eval Requested',
+  TA_RUBRIC_AI_PAGE_VISITED: 'TA Rubric AI Level Page Visited',
+  TA_RUBRIC_STUDENT_AI_SUBMITTED: 'TA Rubric Student AI Level Submitted',
+  TA_RUBRIC_AI_EVAL_FROM_SECTION:
+    'TA Rubric AI Eval started from section request',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -220,9 +236,15 @@ const EVENTS = {
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
   // Curriculumm Recommender
-  RECOMMENDED_SIMILAR_CURRICULUM_SHOWN: 'Recommended Similar Curriculum Shown',
+  RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
   RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
     'Recommended Similar Curriculum Clicked',
+  RECOMMENDED_STRETCH_CURRICULUM_CLICKED:
+    'Recommended Stretch Curriculum Clicked',
+
+  // LTI Incubator
+  LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
+  LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
 };
 
 const EVENT_GROUP_NAMES = {

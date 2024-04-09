@@ -1,8 +1,10 @@
-import React from 'react';
-import ParticipantSections from './ParticipantSections';
 import {action} from '@storybook/addon-actions';
-import {reduxStore} from '@cdo/storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import ParticipantSections from './ParticipantSections';
 
 const sections = [
   {

@@ -184,12 +184,6 @@ Rails/TimeZone:
 Security/MarshalLoad:
   Enabled: false
 
-# Offense count: 52
-# Configuration parameters: EnforcedStyle, AllowModifiersOnSymbols.
-# SupportedStyles: inline, group
-Style/AccessModifierDeclarations:
-  Enabled: false
-
 # Offense count: 151
 Style/ClassVars:
   Enabled: false
@@ -220,11 +214,6 @@ Style/EvalWithLocation:
 # Offense count: 106
 # This cop supports safe auto-correction (--auto-correct).
 Style/ExpandPathArguments:
-  Enabled: false
-
-# Offense count: 13
-# This cop supports safe auto-correction (--auto-correct).
-Style/ExplicitBlockArgument:
   Enabled: false
 
 # Offense count: 170

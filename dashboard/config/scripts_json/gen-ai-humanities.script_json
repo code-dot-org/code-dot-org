@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-humanities",
-    "serialized_at": "2024-03-30 13:33:26 UTC",
+    "serialized_at": "2024-04-06 00:14:24 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1752,7 +1752,66 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "2f252494-0e66-42ab-b9b9-ec6c48f5bfe0",
+      "properties": {
+        "description": "Build Values for using AI with your class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "2f252494-0e66-42ab-b9b9-ec6c48f5bfe0"
+      }
+    },
+    {
+      "key": "9f8ce5d8-bb91-452b-bb66-5542c01b9dde",
+      "properties": {
+        "description": "Learn how to more effectively prompt a chatbot in the process"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "9f8ce5d8-bb91-452b-bb66-5542c01b9dde"
+      }
+    },
+    {
+      "key": "bd7939db-6207-4353-94b7-fc57db43523e",
+      "properties": {
+        "description": "Discuss what kind of research AI is helpful for"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "bd7939db-6207-4353-94b7-fc57db43523e"
+      }
+    },
+    {
+      "key": "d299e860-4291-438c-924c-2df2e1c4e0f3",
+      "properties": {
+        "description": "Prompt a chatbot to help brainstorm, draft or revise an essay"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "d299e860-4291-438c-924c-2df2e1c4e0f3"
+      }
+    },
+    {
+      "key": "f78505db-7830-4415-b3ac-5e0380d8c692",
+      "properties": {
+        "description": "Discuss with your classmates which of these uses supported your learning, versus detracted from it, and why"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "f78505db-7830-4415-b3ac-5e0380d8c692"
+      }
+    },
+    {
+      "key": "fa34d1c0-b320-4034-943a-71dc2b3e2585",
+      "properties": {
+        "description": "Use a chatbot and a search engine to research and verify information"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "fa34d1c0-b320-4034-943a-71dc2b3e2585"
+      }
+    }
   ],
   "lessons_standards": [
     {

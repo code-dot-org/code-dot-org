@@ -89,6 +89,13 @@ describe('RubricSettings', () => {
     csrfToken: 'abcdef',
   };
 
+  const onePending = {
+    attemptedCount: 1,
+    attemptedUnevaluatedCount: 1,
+    pendingCount: 1,
+    csrfToken: 'abcdef',
+  };
+
   const noEvals = [
     {
       user_name: 'Stilgar',
@@ -204,8 +211,47 @@ describe('RubricSettings', () => {
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
 
+  it('shows pending status when eval is pending', async () => {
+    // show ready state on initial load
+
+    stubFetchEvalStatusForAll(ready);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    // Perform fetches and re-render
+    await wait();
+    wrapper.update();
+
+    let status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
+    expect(status.text()).to.include(
+      i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1})
+    );
+    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+
+    // show pending state after clicking run
+
+    stubFetchEvalStatusForAll(onePending);
+
+    wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
+
+    status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
+    expect(status.text()).to.include(i18n.aiEvaluationStatus_pending());
+
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+  });
+
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetchEvalStatusForAll(ready);
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     clock = sinon.useFakeTimers();
 
@@ -229,6 +275,15 @@ describe('RubricSettings', () => {
 
     wrapper.find('Button').first().simulate('click');
 
+    //sends event on click
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_SECTION_AI_EVAL,
+      {
+        rubricId: defaultRubric.id,
+        sectionId: 1,
+      }
+    );
+
     // Perform fetches and re-renders
     await wait();
     wrapper.update();
@@ -245,6 +300,7 @@ describe('RubricSettings', () => {
     expect(fetchStub).to.have.callCount(4);
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
+    sendEventSpy.restore();
   });
 
   it('displays switch tab text and button when there are no evaluations', async () => {

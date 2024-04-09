@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import Button from '@cdo/apps/templates/Button';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -23,6 +22,8 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
 import {getSectionRows} from './teacherSectionsRedux';
+
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -104,7 +105,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
     sectionCode = i18n.loginTypeGoogleClassroom();
   } else if (rowData.loginType === SectionLoginType.lti_v1) {
-    sectionCode = i18n.loginTypeLti();
+    sectionCode = rowData.loginTypeName;
   } else {
     sectionCode = rowData.code;
   }

@@ -64,7 +64,6 @@ export const askAITutor = createAsyncThunk(
       status: Status.UNKNOWN,
       chatMessageText: chatContext.studentInput,
     };
-    console.log('newMessage', newMessage);
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     const chatApiResponse = await getChatCompletionMessage(
@@ -75,8 +74,6 @@ export const askAITutor = createAsyncThunk(
       levelContext.levelId,
       chatContext.tutorType
     );
-
-    console.log('chatApiResponse', chatApiResponse);
 
     thunkAPI.dispatch(
       updateChatMessageStatus({

@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import JoinSectionNotifications from './JoinSectionNotifications';
+
+import i18n from '@cdo/locale';
+
+import ContentContainer from '../ContentContainer';
+
 import JoinSection from './JoinSection';
+import JoinSectionNotifications from './JoinSectionNotifications';
 import ParticipantSections from './ParticipantSections';
 import shapes from './shapes';
-import ContentContainer from '../ContentContainer';
-import i18n from '@cdo/locale';
 
 export default function JoinSectionArea({
   initialJoinedPlSections,

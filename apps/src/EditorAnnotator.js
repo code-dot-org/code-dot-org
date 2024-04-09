@@ -193,6 +193,13 @@ export class Annotator {
    * @param {string} logLevel The type of annotation to clear ('ERROR', 'INFO', etc)
    */
   clearAnnotations(logLevel = 'INFO') {}
+
+  /**
+   * Makes the given line visible on the screen, if in a line-based editor.
+   *
+   * @param {number} lineNumber The line to scroll to where 1 is the first line.
+   */
+  scrollToLine(lineNumber) {}
 }
 
 /**
@@ -663,6 +670,16 @@ export class DropletAnnotator extends Annotator {
     this.knownAnnotations_ = [];
     this.annotationList_().filterOutRuntimeAnnotations(logLevel);
   }
+
+  /**
+   * Makes the given line visible on the screen, if in a line-based editor.
+   *
+   * @param {number} lineNumber The line to scroll to where 1 is the first line.
+   */
+  scrollToLine(lineNumber) {
+    const aceEditor = this.droplet().aceEditor;
+    aceEditor.scrollToLine(lineNumber, true, true);
+  }
 }
 
 /**
@@ -747,7 +764,7 @@ export default class EditorAnnotator {
    * @returns {bool} Returns true when the editor is line based.
    */
   static isLineBased() {
-    return EditorAnnotator.annotator().isLineBased();
+    return EditorAnnotator.annotator()?.isLineBased() || false;
   }
 
   /**
@@ -756,7 +773,7 @@ export default class EditorAnnotator {
    * It may or not be still line-based.
    */
   static hasBlocks() {
-    return EditorAnnotator.annotator().hasBlocks();
+    return EditorAnnotator.annotator()?.hasBlocks() || false;
   }
 
   /**
@@ -766,7 +783,7 @@ export default class EditorAnnotator {
    * @returns {bool} Returns true when the editor is block based.
    */
   static isBlockBased() {
-    return EditorAnnotator.annotator().isBlockBased();
+    return EditorAnnotator.annotator()?.isBlockBased() || false;
   }
 
   static anonymizeCode_(code) {
@@ -1095,7 +1112,7 @@ export default class EditorAnnotator {
     icon = null,
     tipStyle = {}
   ) {
-    EditorAnnotator.annotator().annotateLine(
+    EditorAnnotator.annotator()?.annotateLine(
       lineNumber,
       message,
       logLevel,
@@ -1109,7 +1126,16 @@ export default class EditorAnnotator {
    * Removes annotations of a particular type.
    */
   static clearAnnotations(logLevel = 'INFO') {
-    EditorAnnotator.annotator().clearAnnotations(logLevel);
+    EditorAnnotator.annotator()?.clearAnnotations(logLevel);
+  }
+
+  /**
+   * Makes the given line visible on the screen, if in a line-based editor.
+   *
+   * @param {number} lineNumber The line to scroll to where 1 is the first line.
+   */
+  static scrollToLine(lineNumber) {
+    EditorAnnotator.annotator()?.scrollToLine(lineNumber);
   }
 }
 

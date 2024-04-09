@@ -2,13 +2,15 @@ import React, {useCallback} from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {MODEL_CARD_FIELDS_AND_LABELS} from './constants';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import {isVisible, isDisabled} from './utils';
 import {
   setModelCardProperty,
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
+import {ModelCardInfo} from '@cdo/apps/aichat/types';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -25,42 +27,47 @@ const PublishNotes: React.FunctionComponent = () => {
     [dispatch]
   );
 
+  const getInputTag = (property: keyof ModelCardInfo) => {
+    return property === 'botName' ? 'input' : 'textarea';
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
-      <div>
-        {MODEL_CARD_FIELDS_AND_LABELS.map(([id, text]) => {
-          return (
-            isVisible(visibility) && (
-              <div className={styles.inputContainer} key={id}>
-                <label htmlFor={id}>
-                  <StrongText>{text}</StrongText>
+      {isVisible(visibility) && (
+        <>
+          {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label]) => {
+            const InputTag = getInputTag(property);
+            return (
+              <div className={styles.inputContainer} key={property}>
+                <label htmlFor={property}>
+                  <StrongText>{label}</StrongText>
                 </label>
-                <textarea
-                  id={id}
+                <InputTag
+                  id={property}
                   disabled={isDisabled(visibility)}
-                  value={modelCardInfo[id]}
+                  value={modelCardInfo[property]}
                   onChange={event =>
                     dispatch(
                       setModelCardProperty({
-                        property: id,
+                        property: property,
                         value: event.target.value,
                       })
                     )
                   }
                 />
               </div>
-            )
-          );
-        })}
-      </div>
+            );
+          })}
+        </>
+      )}
       <div className={styles.footerButtonContainer}>
-        <button
-          type="button"
+        <Button
+          text="Publish"
+          iconLeft={{iconName: 'upload'}}
           disabled={isDisabled(visibility)}
           onClick={onUpdate}
-        >
-          Publish
-        </button>
+          className={styles.updateButton}
+        />
       </div>
     </div>
   );

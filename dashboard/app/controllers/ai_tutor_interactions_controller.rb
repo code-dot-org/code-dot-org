@@ -75,21 +75,19 @@ class AiTutorInteractionsController < ApplicationController
     render json: format_ai_tutor_interactions(interactions)
   end
 
-  private
-
-  def user_has_chat_access?
+  private def user_has_chat_access?
     current_user.can_view_student_ai_chat_messages? || current_user.has_ai_tutor_access?
   end
 
-  def student_belongs_to_teacher?(student_id)
+  private def student_belongs_to_teacher?(student_id)
     current_user.students.exists?(id: student_id)
   end
 
-  def section_owned_by_current_user?(section_id)
+  private def section_owned_by_current_user?(section_id)
     current_user.sections.exists?(id: section_id)
   end
 
-  def determine_user_ids_for_interactions
+  private def determine_user_ids_for_interactions
     # If the current user is a student, ignore any filters and return their own ID.
     unless current_user.can_view_student_ai_chat_messages?
       return [current_user.id] if params[:userId].blank? && params[:sectionId].blank?
@@ -116,7 +114,7 @@ class AiTutorInteractionsController < ApplicationController
     end
   end
 
-  def format_ai_tutor_interactions(interactions)
+  private def format_ai_tutor_interactions(interactions)
     interactions.includes(:user).map do |interaction|
       interaction.attributes.merge({
                                      'studentName' => interaction.user.name

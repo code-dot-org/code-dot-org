@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "skipUrl": "/projects/music/new",
     "long_instructions": "#### Play Live\r\n\r\nDid you know you can do a live performance?\r\n\r\nAttach a [play](#clickable=play-sound-block) block to the [triggered](#clickable=trigger-block-workspace) block.\r\n\r\nPress [Run](#clickable=run-button) and press [1](#clickable=trigger-button-1) to trigger the sound.",
     "level_data": {
       "library": "intro2024",

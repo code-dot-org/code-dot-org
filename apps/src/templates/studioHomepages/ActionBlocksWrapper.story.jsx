@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ActionBlocksWrapper from './ActionBlocksWrapper';
 
 export default {
@@ -20,6 +21,7 @@ const generateActionBlocks = tileCount => {
           color: 'purple',
           url: '#',
           text: 'Primary button',
+          ariaLabel: 'Aria label goes here',
         },
         {
           color: 'black',
