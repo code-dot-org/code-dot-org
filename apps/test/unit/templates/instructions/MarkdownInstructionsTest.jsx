@@ -7,7 +7,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 
 describe('MarkdownInstructions', function () {
-  beforeAll(setExternalGlobals);
+  setExternalGlobals();
 
   it('standard case had top padding and no left margin', function () {
     const wrapper = shallow(
