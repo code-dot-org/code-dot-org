@@ -2,8 +2,9 @@ import {stub} from 'sinon';
 
 import {validateFirehoseDataSize} from '@cdo/apps/lib/util/firehose';
 import logToCloud from '@cdo/apps/logToCloud';
-
 import {expect} from '../../../util/reconfiguredChai';
+
+jest.unmock('@cdo/apps/lib/util/firehose');
 
 describe('firehoseDataSize', () => {
   const maxDataJSONBytes = 65500;
