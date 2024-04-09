@@ -1,12 +1,32 @@
 import {SoundLoadCallbacks} from '../types';
 import SoundCache from './SoundCache';
-import {GrainPlayer, Player, Sampler, Transport, getContext, start} from 'tone';
+import {
+  Filter,
+  GrainPlayer,
+  PingPongDelay,
+  Player,
+  Sampler,
+  ToneAudioNode,
+  Transport,
+  getContext,
+  start,
+} from 'tone';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
+import {
+  AudioPlayer,
+  InstrumentData,
+  PlayerEvent,
+  SampleEvent,
+  SamplerSequence,
+} from './types';
 import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
 import {Source, SourceOptions} from 'tone/build/esm/source/Source';
-import {DEFAULT_BPM} from '../constants';
+import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
+import {Effects} from './interfaces/Effects';
+import {generateEffectsKeyString} from './utils';
+
+const EMPTY_EFFECTS_KEY = '';
 
 /**
  * An {@link AudioPlayer} implementation using the Tone.js library.
@@ -16,12 +36,17 @@ import {DEFAULT_BPM} from '../constants';
  * - Sample sequences
  */
 class ToneJSPlayer implements AudioPlayer {
-  private samplers: {[instrument: string]: Sampler};
+  private samplers: {[instrument: string]: {[effectsKey: string]: Sampler}};
   private activePlayers: Source<SourceOptions>[];
   private currentPreview: {
     url: string;
     player: Source<SourceOptions>;
   } | null;
+  private effectBusses: {[key: string]: ToneAudioNode};
+  private registeredCallbacks: {
+    [event in PlayerEvent]?: ((payload?: string) => void)[];
+  };
+  private loadingInstruments: {[instrumentName: string]: boolean};
 
   constructor(
     bpm = DEFAULT_BPM,
@@ -32,6 +57,10 @@ class ToneJSPlayer implements AudioPlayer {
     this.activePlayers = [];
     this.samplers = {};
     this.currentPreview = null;
+    this.effectBusses = {};
+    this.registeredCallbacks = {};
+    this.loadingInstruments = {};
+    this.generateEffectBusses();
   }
 
   supportsSamplers(): boolean {
@@ -60,8 +89,23 @@ class ToneJSPlayer implements AudioPlayer {
     Transport.loopEnd = this.playbackTimeToTransportTime(endPosition);
   }
 
-  async loadSounds(sampleUrls: string[], callbacks?: SoundLoadCallbacks) {
-    return this.soundCache.loadSounds(sampleUrls, callbacks);
+  async loadSounds(
+    sampleUrls: string[],
+    instruments: InstrumentData[],
+    callbacks?: SoundLoadCallbacks
+  ) {
+    // Combine sound sample URLs and instrument sample URLs to load together.
+    const urlsToLoad = [...sampleUrls];
+    for (const {instrumentName, sampleMap} of instruments) {
+      urlsToLoad.push(...Object.values(sampleMap));
+      this.loadingInstruments[instrumentName] = true;
+    }
+    await this.soundCache.loadSounds(urlsToLoad, callbacks);
+
+    for (const {instrumentName, sampleMap} of instruments) {
+      // Instrument loads should now be instantaneous since the samples are already loaded.
+      await this.loadInstrument(instrumentName, sampleMap);
+    }
   }
 
   async loadInstrument(
@@ -72,6 +116,7 @@ class ToneJSPlayer implements AudioPlayer {
     if (this.samplers[instrumentName]) {
       return;
     }
+    this.loadingInstruments[instrumentName] = true;
     const urls: {[note: number]: AudioBuffer} = {};
     await this.soundCache.loadSounds(Object.values(sampleMap), callbacks);
     Object.keys(sampleMap).forEach(note => {
@@ -81,8 +126,26 @@ class ToneJSPlayer implements AudioPlayer {
       }
     });
 
-    const sampler = new Sampler(urls).toDestination();
-    this.samplers[instrumentName] = sampler;
+    // Create a separate sampler for each set of effects
+    const effectsSamplers: {[effectsKey: string]: Sampler} = {
+      // Default Sampler without effects
+      [EMPTY_EFFECTS_KEY]: new Sampler(urls).toDestination(),
+    };
+    for (const keyString of Object.keys(this.effectBusses)) {
+      const sampler = new Sampler(urls);
+      sampler.connect(this.effectBusses[keyString]);
+      effectsSamplers[keyString] = sampler;
+    }
+
+    this.samplers[instrumentName] = effectsSamplers;
+    for (const callback of this.registeredCallbacks['InstrumentLoaded'] || []) {
+      callback(instrumentName);
+    }
+    this.loadingInstruments[instrumentName] = false;
+  }
+
+  isInstrumentLoading(instrumentName: string): boolean {
+    return this.loadingInstruments[instrumentName];
   }
 
   isInstrumentLoaded(instrumentName: string): boolean {
@@ -139,11 +202,12 @@ class ToneJSPlayer implements AudioPlayer {
 
     await this.startContextIfNeeded();
     events.forEach(({notes, playbackPosition}) => {
-      this.samplers[instrument].triggerAttack(
+      this.samplers[instrument][EMPTY_EFFECTS_KEY].triggerAttack(
         notes,
         `+${Transport.toSeconds(
           this.playbackTimeToTransportTime(playbackPosition)
-        )}`
+        )}`,
+        1
       );
     });
   }
@@ -153,7 +217,7 @@ class ToneJSPlayer implements AudioPlayer {
       this.currentPreview.player.stop();
     }
 
-    Object.values(this.samplers).forEach(sampler => sampler.releaseAll());
+    this.stopAllSamplers();
   }
 
   setBpm(bpm: number) {
@@ -171,26 +235,46 @@ class ToneJSPlayer implements AudioPlayer {
     }
 
     const playbackRate = Transport.bpm.value / sample.originalBpm;
-    const player = this.createPlayer(buffer, playbackRate, sample.pitchShift)
-      .toDestination()
+    const player = this.createPlayer(buffer, playbackRate, sample.pitchShift);
+
+    if (sample.effects) {
+      this.connectNodeToEffects(player, sample.effects);
+      if (sample.effects.volume && sample.effects.volume !== 'normal') {
+        player.volume.value = sample.effects.volume === 'low' ? -9 : -4;
+      }
+    } else {
+      player.toDestination();
+    }
+
+    player
       .sync()
       .start(this.playbackTimeToTransportTime(sample.playbackPosition));
 
     this.activePlayers.push(player);
   }
 
-  scheduleSamplerSequence({instrument, events}: SamplerSequence) {
+  scheduleSamplerSequence({instrument, events, effects}: SamplerSequence) {
     if (this.samplers[instrument] === undefined) {
       this.metricsReporter.logError(`Instrument not loaded: ${instrument}`);
       return;
     }
 
+    let velocity = 1;
+    if (effects?.volume && effects?.volume !== 'normal') {
+      velocity = effects.volume === 'low' ? 0.4 : 0.75;
+    }
+
+    const effectKeyString = effects
+      ? generateEffectsKeyString(effects)
+      : EMPTY_EFFECTS_KEY;
+
     events.forEach(({notes, playbackPosition}) => {
-      this.samplers[instrument]
+      this.samplers[instrument][effectKeyString]
         .sync()
         .triggerAttack(
           notes,
-          this.playbackTimeToTransportTime(playbackPosition)
+          this.playbackTimeToTransportTime(playbackPosition),
+          velocity
         );
     });
   }
@@ -206,6 +290,7 @@ class ToneJSPlayer implements AudioPlayer {
   }
 
   stop() {
+    Transport.cancel();
     Transport.stop();
     this.stopAllPlayers();
   }
@@ -215,12 +300,20 @@ class ToneJSPlayer implements AudioPlayer {
     Transport.cancel();
   }
 
+  registerCallback(
+    event: PlayerEvent,
+    callback: (payload?: string) => void
+  ): void {
+    if (!this.registeredCallbacks[event]) {
+      this.registeredCallbacks[event] = [];
+    }
+    this.registeredCallbacks[event]?.push(callback);
+  }
+
   private stopAllPlayers() {
     this.activePlayers.forEach(player => player.dispose());
     this.activePlayers = [];
-    Object.values(this.samplers).forEach(sampler =>
-      sampler.releaseAll().unsync()
-    );
+    this.stopAllSamplers();
   }
 
   private async startContextIfNeeded() {
@@ -251,16 +344,59 @@ class ToneJSPlayer implements AudioPlayer {
     pitchShift: number
   ): Source<SourceOptions> {
     if (pitchShift === 0 && playbackRate === 1) {
-      return new Player(buffer).toDestination();
+      return new Player(buffer);
     } else {
       const player = new GrainPlayer({
         url: buffer,
         grainSize: playbackRate * 0.1,
-      }).toDestination();
+      });
 
       player.detune = pitchShift * 100;
       player.playbackRate = playbackRate;
       return player;
+    }
+  }
+
+  private stopAllSamplers() {
+    Object.values(this.samplers).forEach(samplerList =>
+      Object.values(samplerList).forEach(sampler => sampler.releaseAll())
+    );
+  }
+
+  private generateEffectBusses() {
+    BUS_EFFECT_COMBINATIONS.forEach(effects => {
+      const {filter, delay} = effects;
+      let firstNode, lastNode;
+      if (filter) {
+        const filterNode = new Filter(filter === 'low' ? 800 : 3000, 'lowpass');
+        firstNode = filterNode;
+        lastNode = filterNode;
+      }
+
+      if (delay) {
+        const delayNode = new PingPongDelay('8n', delay === 'low' ? 0.2 : 0.5);
+        delayNode.wet.value = delay === 'low' ? 0.1 : 0.25;
+        if (!firstNode) {
+          firstNode = delayNode;
+        } else {
+          firstNode.connect(delayNode);
+        }
+        lastNode = delayNode;
+      }
+
+      if (firstNode && lastNode) {
+        this.effectBusses[generateEffectsKeyString(effects)] = firstNode;
+        lastNode.toDestination();
+      }
+    });
+  }
+
+  private connectNodeToEffects(node: ToneAudioNode, effects: Effects) {
+    const key = generateEffectsKeyString(effects);
+    if (this.effectBusses[key]) {
+      node.connect(this.effectBusses[key]);
+    } else {
+      node.toDestination();
     }
   }
 }

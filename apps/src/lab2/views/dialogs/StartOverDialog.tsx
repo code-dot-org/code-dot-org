@@ -1,7 +1,7 @@
 import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
 import {BaseDialogProps} from './DialogManager';
-import moduleStyles from './start-over-dialog.module.scss';
+import moduleStyles from './confirm-dialog.module.scss';
 const commonI18n = require('@cdo/locale');
 
 /**
@@ -12,7 +12,7 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
   handleCancel,
 }) => {
   return (
-    <div className={moduleStyles.startOverDialog}>
+    <div className={moduleStyles.confirmDialog}>
       <Typography semanticTag="h1" visualAppearance="heading-lg">
         {commonI18n.startOverTitle()}
       </Typography>
@@ -28,7 +28,7 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
           {commonI18n.cancel()}
         </button>
         <button
-          className={moduleStyles.startOver}
+          className={moduleStyles.confirm}
           type="button"
           onClick={handleConfirm}
         >

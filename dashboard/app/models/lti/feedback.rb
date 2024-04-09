@@ -3,7 +3,7 @@
 # Table name: lti_feedbacks
 #
 #  id           :bigint           not null, primary key
-#  user_id      :bigint           not null
+#  user_id      :integer          not null
 #  satisfied    :boolean          not null
 #  locale       :string(255)
 #  early_access :boolean

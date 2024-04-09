@@ -113,7 +113,7 @@ cat <<JSON > $FIRST_BOOT
   },
   "cdo-secrets": {
 <% if frontends -%>
-    "session_store_server": "redis://${SessionStoreGroup.PrimaryEndPoint.Address}:${SessionStoreGroup.PrimaryEndPoint.Port}",
+    "session_store_server": "rediss://${SessionStoreGroup.PrimaryEndPoint.Address}:${SessionStoreGroup.PrimaryEndPoint.Port}",
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
     "redis_primary": "${GeocoderGroup.PrimaryEndPoint.Address}:${GeocoderGroup.PrimaryEndPoint.Port}",
     "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",

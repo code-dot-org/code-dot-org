@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-10 06:48:27 UTC",
+    "serialized_at": "2024-04-08 00:03:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -499,6 +499,10 @@
       "has_lesson_plan": true,
       "relative_position": 22,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* To Be Updated\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "overview": "**What happens if a value in your program falls beyond the maximum or minimum range of values?**\n\nIn this lesson, students explore what it means for computers to have a specified amount of memory for data storage, and how different data types have storage allotted. They discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors. They investigate strategies for avoiding overflow errors, and adapt those strategies to avoid roundoff errors. Students then practice writing methods to check for and avoid overflow errors. \n",
+        "preparation": "* **(Optional)** Print copies of the Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What happens if a value in your program falls beyond the maximum or minimum range of values?**\n\nIn this lesson, you will dive into how computers store data and the limits each data type has. You'll uncover the boundaries for integers and what happens if you go beyond them, leading to overflow or underflow errors. We'll explore ways to prevent these errors and also learn about roundoff errors. Finally, you'll get hands-on experience writing methods to detect and steer clear of overflow errors."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -1379,6 +1383,48 @@
       "seeding_key": {
         "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625",
         "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "30e66e2c-4845-4ce0-baaf-11315079d9f6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "36396447-a8a1-4c70-bfa1-72f615be4575",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "36396447-a8a1-4c70-bfa1-72f615be4575",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025"
       }
@@ -6496,6 +6542,183 @@
       }
     },
     {
+      "key": "d61f294f-b384-4edb-853d-0a8b92de752c",
+      "position": 1,
+      "properties": {
+        "description": "There are many examples in software engineering of real-world consequences for a computer’s storage limitations. Let’s watch a short clip and see an example of one situation where the consequences cost hundreds of millions of dollars..",
+        "name": "Overflow Errors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d61f294f-b384-4edb-853d-0a8b92de752c",
+        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6"
+      }
+    },
+    {
+      "key": "0602f79e-4fad-42e3-ad14-4afae49a3724",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – Ariane 5 rocket launch explosion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The first two minutes of the video are a valuable support for the warm-up discussion. Teachers may choose to show the entire five minute video, but it is not necessary for the discussion to be productive.\n\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0602f79e-4fad-42e3-ad14-4afae49a3724",
+        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6"
+      }
+    },
+    {
+      "key": "4302b825-e2ab-4dd7-b252-ded32f6bf236",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *What other situations involving very large numbers might be impacted by overflow errors?.*\n\n**Discussion Goal:** Students should recognize that there is a maximum value that computers can hold. They might point to examples like Gangnam Style overflowing YouTube, an odometer overflowing, or Y2K.."
+      },
+      "seeding_key": {
+        "activity_section.key": "4302b825-e2ab-4dd7-b252-ded32f6bf236",
+        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6"
+      }
+    },
+    {
+      "key": "0abc9855-530c-4a9a-a021-9a557c6c2a8a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Introduce the lesson objectives.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Introduce the Question of the Day.",
+        "duration": "10",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "0abc9855-530c-4a9a-a021-9a557c6c2a8a",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "ae39ba84-75d0-47e1-8d7f-3c9c023e7e73",
+      "position": 2,
+      "properties": {
+        "description": "We have seen an example of the consequences of overflow errors. Now let’s take a look at some of the ways to anticipate overflow errors in Java.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ae39ba84-75d0-47e1-8d7f-3c9c023e7e73",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "baa2d793-a062-4572-bdb0-3bdcebca7b77",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Overflow Errors"
+      },
+      "seeding_key": {
+        "activity_section.key": "baa2d793-a062-4572-bdb0-3bdcebca7b77",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "7d22722d-2249-49aa-b34f-b3a8f6e76fa4",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts\n\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that in the overflow example, the value becomes negative, and in the underflow example, the negative value becomes positive. Students may wonder about how the Integer class works and how to avoid overflow errors. "
+      },
+      "seeding_key": {
+        "activity_section.key": "7d22722d-2249-49aa-b34f-b3a8f6e76fa4",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "ca429f0f-11a1-46a9-8047-fe080682c965",
+      "position": 5,
+      "properties": {
+        "description": "The `Integer` and `Double` classes are known as wrapper classes. Java provides a wrapper class for each primitive type, which also gives us access to constants we can use for `int` and `double` values. We will learn much more about wrapper classes later in the course.",
+        "duration": "15",
+        "name": "Exploring Overflow and Roundoff",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ca429f0f-11a1-46a9-8047-fe080682c965",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "6f298776-4cc3-40e4-825d-e1ddba4dd761",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Click through the animated slide to introduce the `Integer` and `Double` classes and their constants.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.\n",
+        "progression_name": "Investigate and Modify: Roundoff Errors"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "2e5f7ed0-833d-4da4-a77f-c5d1130a5e50",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n**Discussion Goal:** Students should notice a different behavior from exceeding the maximum value of `Double` objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the minimum and maximum values for integers:\n* Integers in Java have 32 bits of space\n* `Integer.MIN_VALUE`\n* `Integer.MAX_VALUE`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **overflow**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **underflow**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the connection between doubles and **round-off errors.**"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e5f7ed0-833d-4da4-a77f-c5d1130a5e50",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "70a73d92-2ec0-4cae-988f-d98ffc1208a2",
+      "position": 8,
+      "properties": {
+        "description": "As we saw in the discussion we had during the warm up, overflow errors do have consequences in many situations. By recognizing the possibility of a round-off error occurring, software engineers can design programs that anticipate and prevent roundoff errors. ",
+        "duration": "15",
+        "name": "Practice: Handling Overflow ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "70a73d92-2ec0-4cae-988f-d98ffc1208a2",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "22349c1a-2761-475e-b951-b59c2b1fa37e",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. Students complete a Check for Understanding, then continue to complete a choice level on Level 5 to practice anticipating and working around potential overflow errors.",
+        "progression_name": "Practice: Handling Overflow"
+      },
+      "seeding_key": {
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "ba020374-d2a2-40a5-b339-6f8c95ad7046",
+      "position": 1,
+      "properties": {
+        "description": "We’ve talked a lot about overflow errors, and had a chance to experiment with overflow errors in our own programs. Now think back to the impact an overflow error had on the Ariane 5 rocket disaster. ",
+        "duration": "5",
+        "name": "Avoiding Overflow Errors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ba020374-d2a2-40a5-b339-6f8c95ad7046",
+        "lesson_activity.key": "36396447-a8a1-4c70-bfa1-72f615be4575"
+      }
+    },
+    {
+      "key": "01580ef3-3a84-4333-9cc2-8157ebf6980f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what you know now about the range of variables, do you think this was an avoidable error? What could the engineers have done differently?*\n\n**Discussion Goal:** Students may suggest that the error made with the Ariane 5 rocket was avoidable. They could mention a variety of strategies for avoiding overflow errors, such as peer reviewing code, using conditionals, and widening data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Review the concepts covered in this lesson\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "01580ef3-3a84-4333-9cc2-8157ebf6980f",
+        "lesson_activity.key": "36396447-a8a1-4c70-bfa1-72f615be4575"
+      }
+    },
+    {
       "key": "7b33f786-dd3b-4f06-a6ce-ed05db117a46",
       "position": 1,
       "properties": {
@@ -8724,6 +8947,116 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict and Run: Overflow Errors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "baa2d793-a062-4572-bdb0-3bdcebca7b77"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L1"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Roundoff Errors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L2"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Roundoff Errors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L3"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Handling Overflow"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L4"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Handling Overflow"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L5-parent"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L5-parent"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSA 2023 Neighborhood Sandbox_2025"
         ],
@@ -8744,7 +9077,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9828,6 +10161,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L1",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "baa2d793-a062-4572-bdb0-3bdcebca7b77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L2",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L3",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L4",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L5-parent",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L5-parent"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA 2023 Neighborhood Sandbox_2025",
         "script_level.level_keys": [
           "CSA 2023 Neighborhood Sandbox_2025"
@@ -10392,6 +10785,42 @@
       }
     },
     {
+      "name": "casting and range of variables",
+      "url": "https://docs.google.com/presentation/d/1NMPI0Mf7W41-kjwFLJBetDnIFuJ57LuyjbWtWVbrC30/edit?usp=sharing",
+      "key": "casting_and_range_of_variables",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "casting_and_range_of_variables"
+      }
+    },
+    {
+      "name": "casting and range of variables extra practice",
+      "url": "https://docs.google.com/document/d/1IUs2z8VnyCE7wNwFopqg11MOFKPgrfW16SxNbjMnKPE/edit?usp=sharing",
+      "key": "casting_and_range_of_variables_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "casting_and_range_of_variables_extra_practice"
+      }
+    },
+    {
+      "name": "casting and range of variables guided notes ",
+      "url": "https://docs.google.com/document/d/1vjMmIwHGFTmcZ-DUSCQqJcLH2SgZRNNzbS5dcOcK5TI/edit?usp=drive_link",
+      "key": "casting_and_range_of_variables_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "casting_and_range_of_variables_guided_notes"
+      }
+    },
+    {
       "name": "Change the Face of Computer Science",
       "url": "https://youtu.be/uhcA6K8rWp0",
       "key": "change_the_face_of_computer_science",
@@ -10535,6 +10964,18 @@
       },
       "seeding_key": {
         "resource.key": "decomposition_and_design"
+      }
+    },
+    {
+      "name": "exemplar casting and range of variables guided notes",
+      "url": "https://docs.google.com/document/d/1EWPtEdKfAYIQLbxblFu-1PJWnk3wA-2ZdLHoBx83n_I/edit?usp=drive_link",
+      "key": "exemplar_casting_and_range_of_variables_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_casting_and_range_of_variables_guided_notes"
       }
     },
     {
@@ -10696,6 +11137,18 @@
       },
       "seeding_key": {
         "resource.key": "java_lab"
+      }
+    },
+    {
+      "name": "key casting and range of variables extra practice",
+      "url": "https://docs.google.com/document/d/1aSYW76WE82e2bNi-rlYadED-7N8NX3rlQ-QerpWH428/edit?usp=sharing",
+      "key": "key_casting_and_range_of_variables_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_casting_and_range_of_variables_extra_practice"
       }
     },
     {
@@ -12245,6 +12698,42 @@
         "lesson.key": "Writing Methods",
         "resource.key": "writing_methods"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "casting_and_range_of_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "casting_and_range_of_variables_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "casting_and_range_of_variables_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "exemplar_casting_and_range_of_variables_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "key_casting_and_range_of_variables_extra_practice"
+      }
     }
   ],
   "scripts_resources": [
@@ -12580,6 +13069,16 @@
       }
     },
     {
+      "key": "overflow_error",
+      "word": "overflow error",
+      "definition": "an error that occurs when an operation makes an integer value greater than its maximum",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
       "key": "parameter",
       "word": "parameter",
       "definition": "defines the type of value to receive when a method or constructor is called",
@@ -12637,6 +13136,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "return_type"
+      }
+    },
+    {
+      "key": "round_off_error",
+      "word": "round-off error",
+      "definition": "an error due to limited floating-point precision, causing discrepancies in computation.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "round_off_error"
       }
     },
     {
@@ -12757,6 +13266,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "two_way_selection_statement"
+      }
+    },
+    {
+      "key": "underflow_error",
+      "word": "underflow error",
+      "definition": "an error that occurs when an operation makes an integer value less than its minimum",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "underflow_error"
       }
     },
     {
@@ -13072,6 +13591,24 @@
         "lesson.key": "Writing Methods",
         "vocabulary.key": "void"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "round_off_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "underflow_error"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -13206,6 +13743,16 @@
       "seeding_key": {
         "lesson.key": "Decomposition and Design",
         "objective.key": "48b55ac1-e078-4c8f-a49b-8830bf4718f5"
+      }
+    },
+    {
+      "key": "4ae23693-adbf-4a43-b0cd-bcf053020a18",
+      "properties": {
+        "description": "Understand that computers allot a specified amount of memory to store data based on the data type. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "4ae23693-adbf-4a43-b0cd-bcf053020a18"
       }
     },
     {
@@ -13469,6 +14016,26 @@
       }
     },
     {
+      "key": "dea83bb5-db8a-4f01-a2e2-6df11b8c0b7b",
+      "properties": {
+        "description": "Use Integer.MIN_VALUE and Integer.MAX_VALUE to describe the range of possible int values."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "dea83bb5-db8a-4f01-a2e2-6df11b8c0b7b"
+      }
+    },
+    {
+      "key": "e0a0ec14-758a-4cb4-b0e4-4844cc4f2919",
+      "properties": {
+        "description": "Describe roundoff errors and one strategy to avoid them. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "e0a0ec14-758a-4cb4-b0e4-4844cc4f2919"
+      }
+    },
+    {
       "key": "e2aba353-077c-4a1b-9a9f-39151e04a135",
       "properties": {
         "description": "Write two-way selection statements to execute specific blocks of code based on the outcome of a condition"
@@ -13476,6 +14043,16 @@
       "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
         "objective.key": "e2aba353-077c-4a1b-9a9f-39151e04a135"
+      }
+    },
+    {
+      "key": "e458dc4a-ee55-46bd-a666-9e6db46af92e",
+      "properties": {
+        "description": "Describe the result of exceeding the maximum or falling below the minimum values for an int. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "e458dc4a-ee55-46bd-a666-9e6db46af92e"
       }
     },
     {

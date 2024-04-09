@@ -241,7 +241,7 @@ describe('LearningGoals - Enzyme', () => {
     highlightLineStub,
     clearAnnotationsStub,
     clearHighlightedLinesStub;
-  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
+  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706, user_id: 1};
 
   function stubAnnotator() {
     // Stub out our references to the singleton and editor
@@ -434,6 +434,20 @@ describe('LearningGoals - Enzyme', () => {
       annotateLines('Line 42: `draw()`', observations);
       sinon.assert.calledWith(annotateLineStub, 8, observations);
     });
+
+    it('should return the set of sentences reflected in observations if the evidence has no message.', () => {
+      const annotations = annotateLines('Line 42: `draw()`', observations);
+
+      // One for each sentence
+      expect(annotations.length).to.be.equal(2);
+
+      // The lines are undefined for the written annotation since we don't know
+      // if it is relevant.
+      expect(annotations[0].firstLine).to.be.undefined;
+
+      // And they are in the order provided by the given observations string.
+      expect(annotations[0].message).to.be.equal(observations.split('.')[0]);
+    });
   });
 
   describe('clearAnnotations', () => {
@@ -469,6 +483,20 @@ describe('LearningGoals - Enzyme', () => {
     wrapper.find('button').at(1).simulate('click');
     expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
+    );
+  });
+
+  it('renders the summary page after AI evaluations are run', () => {
+    const wrapper = shallow(
+      <LearningGoals
+        learningGoals={learningGoals}
+        aiEvaluations={aiEvaluations}
+        teacherHasEnabledAi
+      />
+    );
+    wrapper.find('button').first().simulate('click');
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
+      i18n.rubricLearningGoalSummary()
     );
   });
 
@@ -599,6 +627,7 @@ describe('LearningGoals - Enzyme', () => {
       <LearningGoals
         learningGoals={learningGoals}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
+        studentLevelInfo={studentLevelInfo}
       />
     );
     wrapper.find('button').at(1).simulate('click');
@@ -609,6 +638,7 @@ describe('LearningGoals - Enzyme', () => {
         levelName: 'test-level',
         learningGoalKey: 'efgh',
         learningGoal: 'Learning Goal 2',
+        studentId: 1,
       }
     );
     wrapper.find('button').first().simulate('click');
@@ -619,6 +649,7 @@ describe('LearningGoals - Enzyme', () => {
         levelName: 'test-level',
         learningGoalKey: 'abcd',
         learningGoal: 'Learning Goal 1',
+        studentId: 1,
       }
     );
     sendEventSpy.restore();

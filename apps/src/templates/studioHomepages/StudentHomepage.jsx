@@ -1,17 +1,20 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import HeaderBanner from '../HeaderBanner';
-import RecentCourses from './RecentCourses';
-import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
+
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import shapes from './shapes';
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import i18n from '@cdo/locale';
-import $ from 'jquery';
+
+import HeaderBanner from '../HeaderBanner';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
+import RecentCourses from './RecentCourses';
+import shapes from './shapes';
 
 export default class StudentHomepage extends Component {
   static propTypes = {

@@ -24,6 +24,10 @@
       question: hoc_s("ai_ta_page.faq.keep_up.question"),
       answer: hoc_s("ai_ta_page.faq.keep_up.answer", markdown: :inline),
     },
+    {
+      question: hoc_s("ai_ta_page.faq.demo.question"),
+      answer: hoc_s("ai_ta_page.faq.demo.answer", markdown: :inline),
+    },
   ]
 
 - faq_items.each_with_index do |faq_item, index|
@@ -39,4 +43,6 @@
           %li= faq_item[:list_02]
           %li= faq_item[:list_03]
         = faq_item[:answer_02]
+      - if index === 5
+        = view :display_video_thumbnail, id: "ai_ta_demo", video_code: "Lj7uZx-BKhw", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/ai_teaching_assistant/ai_ta_demo_v1.mp4"
 
