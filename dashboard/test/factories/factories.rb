@@ -1947,6 +1947,6 @@ FactoryBot.define do
   factory :ai_tutor_interaction do
     association :user
     type {SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT]}
-    status {SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:OK]}
+    status {SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK]}
   end
 end

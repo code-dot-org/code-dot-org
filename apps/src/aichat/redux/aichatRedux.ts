@@ -15,7 +15,8 @@ import {
   ChatCompletionMessage,
   AichatLevelProperties,
   Role,
-  Status,
+  AITutorInteractionStatus as Status,
+  AITutorInteractionStatusType,
   AiCustomizations,
   ModelCardInfo,
   Visibility,
@@ -215,7 +216,7 @@ const aichatSlice = createSlice({
     },
     updateChatMessageStatus: (
       state,
-      action: PayloadAction<{id: number; status: Status}>
+      action: PayloadAction<{id: number; status: AITutorInteractionStatusType}>
     ) => {
       const {id, status} = action.payload;
       const chatMessage = state.chatMessages.find(msg => msg.id === id);

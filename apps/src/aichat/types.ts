@@ -1,11 +1,19 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {AiTutorInteractionSaveStatus} from '@cdo/apps/util/sharedConstants';
+import {
+  AiTutorInteractionStatus as AITutorInteractionStatus,
+  PiiTypes as PII,
+} from '@cdo/apps/util/sharedConstants';
+
+// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
+export type AITutorInteractionStatusType = string;
+
+export {PII, AITutorInteractionStatus};
 
 export type ChatCompletionMessage = {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: Status;
+  status: AITutorInteractionStatusType;
   timestamp?: string;
 };
 
@@ -15,11 +23,6 @@ export enum Role {
   SYSTEM = 'system',
   MODEL_UPDATE = 'update',
 }
-
-export type Status =
-  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
-export const Status = AiTutorInteractionSaveStatus;
-export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
 export enum ViewMode {
   EDIT = 'edit-mode',

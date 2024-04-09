@@ -1,4 +1,7 @@
-import {Role, Status} from '@cdo/apps/aiTutor/types';
+import {
+  Role,
+  AITutorInteractionStatus as Status,
+} from '@cdo/apps/aiTutor/types';
 
 export const compilationSystemPrompt =
   'You are a tutor in a high school computer science class. Students in the class are studying Java and they would like to know in age-appropriate, clear language why their code does not compile. Do not write any code.';
