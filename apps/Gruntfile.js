@@ -3,6 +3,7 @@ var child_process = require('child_process');
 var fs = require('fs');
 var _ = require('lodash');
 var path = require('path');
+var pyodide = require('pyodide');
 var sass = require('sass');
 
 var envConstants = require('./envConstants');
@@ -233,7 +234,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'lib/pyodide',
           src: ['*.whl'],
-          dest: 'build/package/js/pyodide/',
+          dest: `build/package/js/pyodide/${pyodide.version}`,
         },
       ],
     },

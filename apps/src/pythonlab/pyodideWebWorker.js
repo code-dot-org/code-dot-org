@@ -1,8 +1,8 @@
-import {loadPyodide} from 'pyodide';
+import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
-    indexURL: '/assets/js/pyodide/',
+    indexURL: `/assets/js/pyodide/${version}/`,
   });
   // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
   // TODO: Re-enable matplotlib after adding wheel to our repo.
