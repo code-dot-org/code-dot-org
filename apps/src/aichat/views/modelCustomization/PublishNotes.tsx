@@ -1,5 +1,4 @@
 import React, {useCallback} from 'react';
-import {AnyAction, ThunkDispatch} from '@reduxjs/toolkit';
 
 import {
   setModelCardProperty,
@@ -8,52 +7,12 @@ import {
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import MultiItemInput from '@cdo/apps/lab2/levelEditors/aichatSettings/MultiItemInput';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import {isVisible, isDisabled} from './utils';
+import ExampleTopicsInputs from './ExampleTopicsInputs';
 import styles from '../model-customization-workspace.module.scss';
-import {ModelCardInfo} from '@cdo/apps/aichat/types';
-
-const renderExampleTopicsInputs = (
-  topics: string[],
-  dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
-  readOnly: boolean
-) => {
-  return (
-    <MultiItemInput
-      key="exampleTopics"
-      items={topics}
-      onAdd={() =>
-        dispatch(
-          setModelCardProperty({
-            property: 'exampleTopics',
-            value: [...topics].concat(''),
-          })
-        )
-      }
-      onRemove={() => {
-        dispatch(
-          setModelCardProperty({
-            property: 'exampleTopics',
-            value: [...topics].slice(0, -1),
-          })
-        );
-      }}
-      onChange={(index, value) => {
-        const updatedTopics = topics.slice();
-        updatedTopics[index] = value;
-        dispatch(
-          setModelCardProperty({
-            property: 'exampleTopics',
-            value: updatedTopics,
-          })
-        );
-      }}
-      readOnly={readOnly}
-    />
-  );
-};
+import {ModelCardInfo} from '../../types';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -86,12 +45,12 @@ const PublishNotes: React.FunctionComponent = () => {
                 <label htmlFor={property}>
                   <StrongText>{label}</StrongText>
                 </label>
-                {property === 'exampleTopics' &&
-                  renderExampleTopicsInputs(
-                    modelCardInfo.exampleTopics,
-                    dispatch,
-                    isDisabled(visibility)
-                  )}
+                {property === 'exampleTopics' && (
+                  <ExampleTopicsInputs
+                    topics={modelCardInfo.exampleTopics}
+                    readOnly={isDisabled(visibility)}
+                  />
+                )}
                 {property !== 'exampleTopics' && (
                   <InputTag
                     id={property}

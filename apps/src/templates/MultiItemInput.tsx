@@ -1,7 +1,8 @@
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
-import moduleStyles from './edit-aichat-settings.module.scss';
+
+import moduleStyles from './multi-item-input.module.scss';
 
 export const MultiItemInput: React.FunctionComponent<{
   items: string[];

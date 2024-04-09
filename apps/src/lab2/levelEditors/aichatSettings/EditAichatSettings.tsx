@@ -1,15 +1,16 @@
+import React, {useCallback, useState} from 'react';
+
+import {
+  BodyFourText,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 import {
   AiCustomizations,
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
 } from '@cdo/apps/aichat/types';
-import React, {useCallback, useState} from 'react';
-import {
-  BodyFourText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
-import moduleStyles from './edit-aichat-settings.module.scss';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
@@ -17,13 +18,14 @@ import {
   SET_TEMPERATURE_STEP,
   DEFAULT_LEVEL_AICHAT_SETTINGS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
-import MultiItemInput from './MultiItemInput';
+import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
 import VisibilityDropdown from './VisibilityDropdown';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {UpdateContext} from './UpdateContext';
-import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+import moduleStyles from './edit-aichat-settings.module.scss';
 
 /**
  * Editor for the AI Customizations on the level edit page.
