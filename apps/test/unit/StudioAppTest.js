@@ -25,9 +25,11 @@ import {
 } from '../util/testUtils';
 
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
+import setBlocklyGlobal from '../util/setupBlocklyGlobal';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
+  setBlocklyGlobal();
 
   describe('StudioApp.singleton', () => {
     let containerDiv, codeWorkspaceDiv;
