@@ -9,7 +9,7 @@ import {
   generalChatMessage,
   runCode,
   testCode,
-  vaildationError,
+  validationError,
   validationSuccess,
 } from '@cdo/apps/aiTutor/constants';
 import {addChatMessage} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -59,7 +59,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
         dispatch(addChatMessage(validationSuccess));
       }
       if (hasRunOrTestedCode && !hasCompilationError && !validationPassed) {
-        dispatch(addChatMessage(vaildationError));
+        dispatch(addChatMessage(validationError));
       }
     }
   }, [
@@ -121,6 +121,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
           {storedMessages.map(message => (
             <ChatMessage message={message} key={message.id} />
           ))}
+          {/* TODO: This is massive and needs to be smaller*/}
           {showWaitingAnimation()}
         </div>
       </div>

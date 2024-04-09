@@ -1,10 +1,6 @@
 import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {
-  compilationSystemPrompt,
-  generalChatSystemPrompt,
-  validationSystemPrompt,
-} from '@cdo/apps/aiTutor/constants';
+import {systemPrompt} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
   Role,
@@ -13,7 +9,6 @@ import {
   Level,
   ChatContext,
   AITutorTypesValue,
-  AITutorTypes as TutorTypes,
   AITutorInteractionStatusValue,
 } from '../types';
 
@@ -59,33 +54,18 @@ export const askAITutor = createAsyncThunk(
       scriptId: state.aiTutor.scriptId,
     };
 
-    const tutorType = chatContext.tutorType;
-    const generalChat = tutorType === TutorTypes.GENERAL_CHAT;
-    const compilation = tutorType === TutorTypes.COMPILATION;
-    const validation = tutorType === TutorTypes.VALIDATION;
-
-    let systemPrompt;
-    if (validation) {
-      systemPrompt = validationSystemPrompt;
-    } else if (compilation) {
-      systemPrompt = compilationSystemPrompt;
-    } else {
-      systemPrompt = generalChatSystemPrompt;
-    }
-
     const storedMessages = state.aiTutor.chatMessages;
 
     const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
 
-    if (generalChat) {
-      const newMessage: ChatCompletionMessage = {
-        id: newMessageId,
-        role: Role.USER,
-        status: Status.UNKNOWN,
-        chatMessageText: chatContext.studentInput,
-      };
-      thunkAPI.dispatch(addChatMessage(newMessage));
-    }
+    const newMessage: ChatCompletionMessage = {
+      id: newMessageId,
+      role: Role.USER,
+      status: Status.UNKNOWN,
+      chatMessageText: chatContext.studentInput,
+    };
+    console.log('newMessage', newMessage);
+    thunkAPI.dispatch(addChatMessage(newMessage));
 
     const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
@@ -95,6 +75,8 @@ export const askAITutor = createAsyncThunk(
       levelContext.levelId,
       chatContext.tutorType
     );
+
+    console.log('chatApiResponse', chatApiResponse);
 
     thunkAPI.dispatch(
       updateChatMessageStatus({
