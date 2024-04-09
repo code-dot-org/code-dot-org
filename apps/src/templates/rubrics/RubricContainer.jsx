@@ -164,7 +164,7 @@ export default function RubricContainer({
     }
   };
 
-  const beforeStepChange = (nextStepIndex, nextElement) => {
+  const onBeforeStepChange = (nextStepIndex, nextElement) => {
     if (nextStepIndex === 1) {
       if (!open) {
         document.getElementById('ui-floatingActionButton').click();
@@ -173,9 +173,12 @@ export default function RubricContainer({
   };
 
   const onAfterStepChange = (newStepIndex, newElement) => {
-    if (newStepIndex === 4) {
-      document.getElementsByClassName(style.evidenceLevel)[3].click();
-    }
+    // if (newStepIndex === 4) {
+    //   const focusEvent = new Event('focusin');
+    //   document
+    //     .getElementsByClassName(style.evidenceLevel)[3]
+    //     .dispatchEvent(focusEvent);
+    // }
   };
 
   return (
@@ -196,13 +199,15 @@ export default function RubricContainer({
           steps={STEPS}
           onExit={onTourExit}
           onChange={onStepChange}
-          onBeforeChange={beforeStepChange}
+          onBeforeChange={onBeforeStepChange}
           onAfterChange={onAfterStepChange}
           options={{
             scrollToElement: false,
             exitOnOverlayClick: false,
             hidePrev: true,
-            nextLabel: 'Next Tip',
+            nextLabel: i18n.rubricTourNextButtonText(),
+            prevLabel: i18n.back(),
+            doneLabel: i18n.done(),
             showBullets: false,
             showStepNumbers: true,
           }}

@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo, useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import classnames from 'classnames';
@@ -18,6 +18,7 @@ import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 const INVALID_UNDERSTANDING = -1;
 
 export default function EvidenceLevelsForTeachersV2({
+  productTour,
   evidenceLevels,
   understanding,
   radioButtonCallback,
@@ -62,6 +63,14 @@ export default function EvidenceLevelsForTeachersV2({
   const handleMouseOut = () => {
     setShowDescription(INVALID_UNDERSTANDING);
   };
+
+  useEffect(() => {
+    if (productTour) {
+      setShowDescription(3);
+    } else {
+      setShowDescription(INVALID_UNDERSTANDING);
+    }
+  }, [productTour]);
 
   if (canProvideFeedback) {
     return (
@@ -133,6 +142,7 @@ export default function EvidenceLevelsForTeachersV2({
 }
 
 EvidenceLevelsForTeachersV2.propTypes = {
+  productTour: PropTypes.bool,
   evidenceLevels: PropTypes.arrayOf(evidenceLevelShape).isRequired,
   learningGoalKey: PropTypes.string,
   understanding: PropTypes.number,
