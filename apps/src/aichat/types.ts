@@ -48,7 +48,6 @@ export interface AichatLevelProperties extends LevelProperties {
 
 /** AI customizations for student chat bots */
 export interface AiCustomizations {
-  botName: string;
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
@@ -57,6 +56,7 @@ export interface AiCustomizations {
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {
+  botName: string;
   description: string;
   intendedUse: string;
   limitationsAndWarnings: string;
