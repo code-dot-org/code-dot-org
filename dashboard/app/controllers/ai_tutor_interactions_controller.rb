@@ -35,7 +35,7 @@ class AiTutorInteractionsController < ApplicationController
   end
 
   def valid_status
-    SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS.value?(params[:status])
+    SharedConstants::AI_TUTOR_INTERACTION_STATUS.value?(params[:status])
   end
 
   def find_project_and_version_id(level_id, script_id)

@@ -3,7 +3,7 @@ import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {TutorType} from '@cdo/apps/aiTutor/types';
+import {AITutorTypes as TutorTypes} from '@cdo/apps/aiTutor/types';
 import CopyButton from './copyButton';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -43,9 +43,9 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     state => state.javalab.validationPassed
   );
 
-  const generalChat = tutorType === TutorType.GENERAL_CHAT;
-  const compilation = tutorType === TutorType.COMPILATION;
-  const validation = tutorType === TutorType.VALIDATION;
+  const generalChat = tutorType === TutorTypes.GENERAL_CHAT;
+  const compilation = tutorType === TutorTypes.COMPILATION;
+  const validation = tutorType === TutorTypes.VALIDATION;
 
   const dispatch = useAppDispatch();
 
