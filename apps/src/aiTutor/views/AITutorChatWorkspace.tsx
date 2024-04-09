@@ -1,6 +1,5 @@
 import React, {useCallback, useEffect} from 'react';
 import style from './ai-tutor.module.scss';
-import ChatWorkspace from './chatWorkspace';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AITutorTypes as TutorTypes} from '@cdo/apps/aiTutor/types';
 import {
@@ -14,11 +13,13 @@ import {
   validationSuccess,
 } from '@cdo/apps/aiTutor/constants';
 import {addChatMessage} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import ChatMessage from './ChatMessage';
+import WarningModal from './WarningModal';
 
 // AI Tutor feature that allows students to ask for help with compilation errors
 // or general questions about the curriculum.
 
-const AITutor: React.FunctionComponent = () => {
+const AITutorChatWorkspace: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const tutorType = useAppSelector(state => state.aiTutor.selectedTutorType);
   const hasCompilationError = useAppSelector(
@@ -90,11 +91,41 @@ const AITutor: React.FunctionComponent = () => {
     setValidationChatMessages,
   ]);
 
+  const storedMessages = useAppSelector(state => state.aiTutor.chatMessages);
+  const isWaitingForChatResponse = useAppSelector(
+    state => state.aiTutor.isWaitingForChatResponse
+  );
+
+  const showWaitingAnimation = () => {
+    if (isWaitingForChatResponse) {
+      return (
+        <img
+          src="/blockly/media/aichat/typing-animation.gif"
+          alt={'Waiting for response'}
+          className={style.waitingForResponse}
+        />
+      );
+    }
+  };
+
+  const generalChat = tutorType === TutorTypes.GENERAL_CHAT;
+
   return (
     <div className={style.tutorContainer}>
-      <ChatWorkspace />
+      <div id="chat-workspace-area" className={style.chatWorkspace}>
+        {generalChat && <WarningModal />}
+        <div
+          id="chat-workspace-conversation"
+          className={style.conversationArea}
+        >
+          {storedMessages.map(message => (
+            <ChatMessage message={message} key={message.id} />
+          ))}
+          {showWaitingAnimation()}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default AITutor;
+export default AITutorChatWorkspace;

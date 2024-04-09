@@ -6,7 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
-import AITutor from './aiTutor';
+import AITutorChatWorkspace from './AITutorChatWorkspace';
 import AITutorFooter from './AITutorFooter';
 import style from './ai-tutor.module.scss';
 
@@ -67,7 +67,7 @@ const AITutorContainer: React.FC<AITutorContainerProps> = ({
 
         <div className={style.fabBackground}>
           {renderAITutor ? (
-            <AITutor />
+            <AITutorChatWorkspace />
           ) : (
             <h4>You don't have access on this level.</h4>
           )}
