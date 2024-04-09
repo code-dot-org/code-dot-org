@@ -288,11 +288,11 @@ min-width:47px;
     border-left: thin solid $neutral_dark40;
     height: 31px;
     padding: 8px 0;
-    width: $level-cell-width;
   }
 
   &LevelCell {
     border-left: 0;
+    width: $level-cell-width + 1 + px;
 
     &First {
       border-inline-start: 4px solid $neutral_dark40;
