@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
-import styleConstants from '../../styleConstants';
-import i18n from '@cdo/locale';
-import shapes from './shapes';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import Button from '@cdo/apps/templates/Button';
-import {tableLayoutStyles} from '../tables/tableConstants';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
+import {tableLayoutStyles} from '../tables/tableConstants';
+
+import shapes from './shapes';
 
 class SectionsAsStudentTable extends React.Component {
   static propTypes = {
