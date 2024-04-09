@@ -465,26 +465,25 @@ describe('DetailViewContents', () => {
         renderDefault(overrideProps);
 
         // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
-        expect(isModalShowing()).to.be.false;
+        assert(!isModalShowing());
         screen.getByText('Select...');
         expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
 
         // Attempt to change application status without updating scholarship status, resulting in modal that instructs
-        // the user to set the scholarship status
+        // the user to set the scholarship status first
         clickEditButton();
         setApplicationStatusTo('Unreviewed', applicationStatus);
+        assert(isModalShowing());
+        dismissModal();
+        assert(!isModalShowing());
+        expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
 
-        // do I need to click save button?
+
+        // CURRENT SPOT IS TRYING TO CLOSE MODAL
 
 
-        // expect(isModalShowing()).to.be.true;
-        // expect(screen.findAllByText('unreviewed').length).to.equal(2);
+        //console.log(screen.getAllByRole('combobox').map(co => co.value));
 
-        console.log(screen.getAllByRole('combobox').map(co => co.value));
-
-        // dismissModal();
-        // expect(isModalShowing()).to.be.false;
-        // expect(screen.findAllByText('unreviewed').length).to.equal(2);
 
         // clickEditButton();
         // setScholarshipStatusTo('no');
@@ -568,7 +567,7 @@ describe('DetailViewContents', () => {
 
     function setApplicationStatusTo(currentStatus, newStatus) {
       const applicationDropdown = screen.getAllByDisplayValue(currentStatus)[0];
-      fireEvent.change(applicationDropdown, {target: newStatus});
+      fireEvent.change(applicationDropdown, {target: {value: newStatus}});
     }
 
     function setScholarshipStatusTo(newValue) {
@@ -585,8 +584,11 @@ describe('DetailViewContents', () => {
     }
 
     function dismissModal() {
-      detailView.find('ConfirmationDialog').first().prop('onOk')();
-      detailView.update();
+      screen.debug(screen.getAllByText('OK'));
+      fireEvent.click(screen.getAllByText('OK')[0]);
+      // fireEvent.click(
+      //   screen.getAllByRole('button', {hidden: true, name: 'OK'})[0]
+      // );
     }
   });
 });
