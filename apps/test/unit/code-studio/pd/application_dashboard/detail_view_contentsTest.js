@@ -452,40 +452,35 @@ describe('DetailViewContents', () => {
   // });
 
   describe('Teacher application scholarship status', () => {
-    let count = 0;
-
     for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
-      count++;
       it(`is required in order to set application status to ${applicationStatus}`, () => {
         const overrideProps = {
-          status: 'unreviewed',
-          scholarship_status: null,
-          update_emails_sent_by_system: false,
+          applicationData: {
+            ...DEFAULT_APPLICATION_DATA,
+            status: 'unreviewed',
+            scholarship_status: null,
+            update_emails_sent_by_system: false,
+          },
         };
         renderDefault(overrideProps);
 
-        console.log(count);
-
+        // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
         expect(isModalShowing()).to.be.false;
         screen.getByText('Select...');
+        expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
+
+        // Attempt to change application status without updating scholarship status, resulting in modal that instructs
+        // the user to set the scholarship status
+        clickEditButton();
+        setApplicationStatusTo('Unreviewed', applicationStatus);
+
+        // do I need to click save button?
 
 
-
-        // Gotta get the statuses in the log below to say "unreviewed" not "accepted" --> then can also use the list of comboboxes and get the [1]th one to view the
-        // scholarship status possibly?
-
-        console.log(screen.getAllByRole('combobox').map(co => co.value));
-
-
-        //console.log(screen.getAllByRole('option', {name: 'Unreviewed'}).forEach(op => console.log(op.selected)));
-        // expect(
-        //   screen.getAllByRole('option', {name: 'Unreviewed'}).forEach(op => console.log(op.selected))
-        // ).to.equal(2);
-
-        // clickEditButton(screen);
-        // setApplicationStatusTo(screen, 'Unreviewed', applicationStatus);
         // expect(isModalShowing()).to.be.true;
         // expect(screen.findAllByText('unreviewed').length).to.equal(2);
+
+        console.log(screen.getAllByRole('combobox').map(co => co.value));
 
         // dismissModal();
         // expect(isModalShowing()).to.be.false;
@@ -563,14 +558,17 @@ describe('DetailViewContents', () => {
   //     });
   //   });
 
-    function clickEditButton(screen) {
+    function clickEditButton() {
       fireEvent.click(screen.getAllByText('Edit')[0]);
     }
 
-    function setApplicationStatusTo(screen, currentStatus, newStatus) {
-      const applicationDropdown = screen.getAllByDisplayValue(currentStatus);
-      fireEvent.change(applicationDropdown, {target: newStatus});
+    function clickSaveButton() {
       fireEvent.click(screen.getAllByText('Save')[0]);
+    }
+
+    function setApplicationStatusTo(currentStatus, newStatus) {
+      const applicationDropdown = screen.getAllByDisplayValue(currentStatus)[0];
+      fireEvent.change(applicationDropdown, {target: newStatus});
     }
 
     function setScholarshipStatusTo(newValue) {
