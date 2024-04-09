@@ -30,4 +30,4 @@
         .form-group#information_form_buttons
           = f.button t('nav.user.logout'), type: 'button', class: 'btn primary-button', disabled: false, id: 'sign-out-btn'
           = f.submit t('continue'), class: 'btn primary-button', disabled: true, id: 'submit-btn'
-%script{src: webpack_asset_path('js/layouts/_student_information_interstitial.js'), data: {retrieveInfoForLti: retrieve_info_for_lti.to_json, retrieveInfoForCap: retrieve_info_for_cap.to_json}}
+%script{src: webpack_asset_path('js/layouts/_student_information_interstitial.js'), data: {retrieveInfoForCap: retrieve_info_for_cap.to_json, userId: current_user.id.to_json, inSection: (!current_user.sections_as_student.empty?).to_json}}

@@ -33,10 +33,8 @@ const EVENTS = {
   SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
 
   // Child Account Policy
-  STUDENT_INFORMATION_INTERSTITIAL_SHOW:
-    'Student Information Interstitial Shown for CPA',
-  STUDENT_INFORMATION_INTERSTITIAL_STATE_PROVIDED:
-    'Student Provided State in Student Information Interstitial',
+  CPA_STATE_FORM_SHOW: 'CPA State Form Shown',
+  CPA_STATE_FORM_PROVIDED: 'CPA State Submitted Form',
 
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:

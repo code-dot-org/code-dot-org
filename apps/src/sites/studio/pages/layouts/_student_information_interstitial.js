@@ -4,6 +4,8 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const retrieveInfoForCap = getScriptData('retrieveInfoForCap');
+const userId = getScriptData('userId');
+const inSection = getScriptData('inSection');
 
 $(document).ready(function () {
   const pathName = window.location.pathname;
@@ -11,7 +13,10 @@ $(document).ready(function () {
   if (pathName !== '/lti/v1/authenticate') {
     $('#student-information-modal').modal('show');
     retrieveInfoForCap &&
-      analyticsReporter.sendEvent(EVENTS.STUDENT_INFORMATION_INTERSTITIAL_SHOW);
+      analyticsReporter.sendEvent(EVENTS.CPA_STATE_FORM_SHOW, {
+        user_id: userId,
+        in_section: inSection,
+      });
   }
 
   function checkInputs() {
@@ -41,9 +46,11 @@ $(document).ready(function () {
     event.preventDefault($(this).serialize());
     const stateValue = $('#user_us_state').val();
     if (stateValue !== '')
-      analyticsReporter.sendEvent(
-        EVENTS.STUDENT_INFORMATION_INTERSTITIAL_STATE_PROVIDED
-      );
+      analyticsReporter.sendEvent(EVENTS.CPA_STATE_FORM_PROVIDED, {
+        user_id: userId,
+        in_section: inSection,
+        us_state: stateValue,
+      });
     $.ajax({
       type: 'POST',
       url: $(this).attr('action') + '/set_student_information',
