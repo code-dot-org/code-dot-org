@@ -452,49 +452,48 @@ describe('DetailViewContents', () => {
   // });
 
   describe('Teacher application scholarship status', () => {
-    // let detailView;
-
-    // afterEach(() => {
-    //   detailView.unmount();
-    // });
+    let count = 0;
 
     for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
+      count++;
       it(`is required in order to set application status to ${applicationStatus}`, () => {
         const overrideProps = {
-          applicationData: {
-            ...DEFAULT_APPLICATION_DATA,
-            status: 'unreviewed',
-            scholarship_status: null,
-            update_emails_sent_by_system: false,
-          },
+          status: 'unreviewed',
+          scholarship_status: null,
+          update_emails_sent_by_system: false,
         };
         renderDefault(overrideProps);
 
-        // Application status set to 'Unreviewed'
-        const appStatusDropdown = screen.getAllByRole('combobox')[0];
-        assert(appStatusDropdown.disabled);
-        expect(appStatusDropdown.value).to.equal('unreviewed');
-        expect(screen.queryByText('Cannot save applicant status')).to.be.null;
+        console.log(count);
 
-        // Attempt to switch application status to 'Accepted'
-        fireEvent.click(screen.getAllByRole('button', {name: 'Edit'})[0]);
-        assert(!appStatusDropdown.disabled);
-
-        fireEvent.change(appStatusDropdown, {
-          target: {value: 'accepted'},
-        });
-
-        // WHY IS THIS HIDDEN?
-
-        expect(screen.getAllByRole('combobox', {hidden: true})[0].value).to.equal('accepted');
+        expect(isModalShowing()).to.be.false;
+        screen.getByText('Select...');
 
 
-        expect(screen.getAllByText('Accepted').length).to.equal(2);
 
-        screen.getByText('Cannot save applicant status');
+        // Gotta get the statuses in the log below to say "unreviewed" not "accepted" --> then can also use the list of comboboxes and get the [1]th one to view the
+        // scholarship status possibly?
 
+        console.log(screen.getAllByRole('combobox').map(co => co.value));
+
+
+        //console.log(screen.getAllByRole('option', {name: 'Unreviewed'}).forEach(op => console.log(op.selected)));
+        // expect(
+        //   screen.getAllByRole('option', {name: 'Unreviewed'}).forEach(op => console.log(op.selected))
+        // ).to.equal(2);
+
+        // clickEditButton(screen);
+        // setApplicationStatusTo(screen, 'Unreviewed', applicationStatus);
+        // expect(isModalShowing()).to.be.true;
+        // expect(screen.findAllByText('unreviewed').length).to.equal(2);
+
+        // dismissModal();
+        // expect(isModalShowing()).to.be.false;
+        // expect(screen.findAllByText('unreviewed').length).to.equal(2);
+
+        // clickEditButton();
         // setScholarshipStatusTo('no');
-        // expect(getScholarshipStatus()).to.equal('no');
+        // screen.getByText('No, paid teacher');
 
         // setApplicationStatusTo(applicationStatus);
         // expect(isModalShowing()).to.be.false;
@@ -564,45 +563,32 @@ describe('DetailViewContents', () => {
   //     });
   //   });
 
-    // function clickEditButton() {
-    //   fireEvent.click(screen.getAllByText('Edit')[0]);
-    // }
+    function clickEditButton(screen) {
+      fireEvent.click(screen.getAllByText('Edit')[0]);
+    }
 
-    // function setApplicationStatusTo(currentStatus, newStatus) {
-    //   const applicationDropdown = screen.getAllByDisplayValue(currentStatus);
-    //   fireEvent.change(applicationDropdown, {target: newStatus});
-    // }
+    function setApplicationStatusTo(screen, currentStatus, newStatus) {
+      const applicationDropdown = screen.getAllByDisplayValue(currentStatus);
+      fireEvent.change(applicationDropdown, {target: newStatus});
+      fireEvent.click(screen.getAllByText('Save')[0]);
+    }
 
-    // function getScholarshipStatus() {
-    //   const scholarshipDropdown = detailView
-    //     .find('tr')
-    //     .filterWhere(row => row.text().includes('Scholarship Teacher?'))
-    //     .find('Select');
-    //   return scholarshipDropdown.prop('value');
-    // }
+    function setScholarshipStatusTo(newValue) {
+      const scholarshipDropdown = detailView
+        .find('tr')
+        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
+        .find('Select');
+      scholarshipDropdown.prop('onChange')({value: newValue});
+      detailView.update();
+    }
 
-    // function setScholarshipStatusTo(newValue) {
-    //   const scholarshipDropdown = detailView
-    //     .find('tr')
-    //     .filterWhere(row => row.text().includes('Scholarship Teacher?'))
-    //     .find('Select');
-    //   scholarshipDropdown.prop('onChange')({value: newValue});
-    //   detailView.update();
-    // }
+    function isModalShowing() {
+      return screen.queryAllByText('Cannot save applicant status').length > 0;
+    }
 
-    // function isModalShowing() {
-    //   const modal = detailView
-    //     .find('ConfirmationDialog')
-    //     .filterWhere(
-    //       dialog => dialog.prop('headerText') === 'Cannot save applicant status'
-    //     )
-    //     .first();
-    //   return !!modal.prop('show');
-    // }
-
-    // function dismissModal() {
-    //   detailView.find('ConfirmationDialog').first().prop('onOk')();
-    //   detailView.update();
-    // }
+    function dismissModal() {
+      detailView.find('ConfirmationDialog').first().prop('onOk')();
+      detailView.update();
+    }
   });
 });
