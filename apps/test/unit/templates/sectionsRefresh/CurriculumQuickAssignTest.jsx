@@ -6,6 +6,8 @@ import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
+fetch.mockResponse(JSON.stringify(null));
+
 describe('CurriculumQuickAssign', () => {
   it('renders headers and the top row of buttons', () => {
     const wrapper = mount(
