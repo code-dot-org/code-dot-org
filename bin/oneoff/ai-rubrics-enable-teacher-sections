@@ -20,6 +20,7 @@ $teacher_emails.each do |email|
 end
 
 # this can take up to 60 seconds
+ENV['SKIP_I18N_INIT'] = '1'
 require_relative '../../dashboard/config/environment'
 
 # given the course and unit a section is assigned to, assign the unit for which

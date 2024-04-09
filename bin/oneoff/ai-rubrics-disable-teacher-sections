@@ -10,6 +10,7 @@ $teacher_emails.each do |email|
 end
 
 # this can take up to 60 seconds
+ENV['SKIP_I18N_INIT'] = '1'
 require_relative '../../dashboard/config/environment'
 
 def main
