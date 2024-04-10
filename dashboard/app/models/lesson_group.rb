@@ -19,10 +19,9 @@
 class LessonGroup < ApplicationRecord
   include SerializedProperties
 
+  Counters = Struct.new(:numbered_lesson_count, :unnumbered_lesson_count, :lesson_position, :chapter)
+
   belongs_to :script, class_name: 'Unit', optional: true
-  def script
-    Unit.get_from_cache(script_id)
-  end
 
   has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
   has_many :script_levels, through: :lessons
@@ -43,8 +42,6 @@ class LessonGroup < ApplicationRecord
     description
     big_questions
   )
-
-  Counters = Struct.new(:numbered_lesson_count, :unnumbered_lesson_count, :lesson_position, :chapter)
 
   # Finds or creates Lesson Groups with the correct position.
   # In addition it check for 3 things:
@@ -118,6 +115,10 @@ class LessonGroup < ApplicationRecord
         raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
       end
     end
+  end
+
+  def script
+    Unit.get_from_cache(script_id)
   end
 
   def localized_display_name

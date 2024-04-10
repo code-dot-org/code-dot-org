@@ -68,6 +68,8 @@ class FirehoseClient
   TRANSACTIONS_PER_SECOND = 2000.0
 
   class Buffer < Cdo::Buffer
+    RECORD_OVERHEAD = {Data: ''}.to_json.bytesize
+
     # @param stream_name [String] The AWS Firehose stream to send records to. Must be defined.
     def initialize(stream_name:)
       super(
@@ -98,8 +100,6 @@ class FirehoseClient
         log.info "Skipped sending records to #{@stream_name}:\n#{records}"
       end
     end
-
-    RECORD_OVERHEAD = {Data: ''}.to_json.bytesize
 
     # Calculate the exact request size of a PutRecordBatch call given the provided records.
     def size(records)

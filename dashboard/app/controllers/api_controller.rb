@@ -5,6 +5,11 @@ class ApiController < ApplicationController
   layout false
   include LevelsHelper
 
+  GOOGLE_AUTH_SCOPES = [
+    Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
+    Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
+  ].freeze
+
   # Calls Azure Cognitive Services in order to get a temporary OAuth token with access to the Immersive Reader API.
   # Requires the following configurations
   #   CDO.imm_reader_tenant_id
@@ -94,21 +99,6 @@ class ApiController < ApplicationController
       render json: section.summarize
     end
   end
-  private def query_clever_service(endpoint)
-    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
-    begin
-      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
-      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
-      yield JSON.parse(response)['data']
-    rescue RestClient::ExceptionWithResponse => exception
-      render status: exception.response.code, json: {error: exception.response.body}
-    end
-  end
-
-  GOOGLE_AUTH_SCOPES = [
-    Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
-    Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
-  ].freeze
 
   def google_classrooms
     return head :forbidden unless current_user
@@ -550,6 +540,18 @@ class ApiController < ApplicationController
       }
     )
   end
+
+  private def query_clever_service(endpoint)
+    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
+    begin
+      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
+      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
+      yield JSON.parse(response)['data']
+    rescue RestClient::ExceptionWithResponse => exception
+      render status: exception.response.code, json: {error: exception.response.body}
+    end
+  end
+
   private def query_google_classroom_service
     tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)
     client = Signet::OAuth2::Client.new(

@@ -8,6 +8,11 @@ class TestFlakiness
   TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
   # Each feature should be retried until the chance of flaky failure is less than this amount.
   MAX_FAILURE_RATE = 0.001 # 0.1%
+
+  FLAKINESS_TIMESTAMP_FILENAME = (File.dirname(__FILE__) + "/../../bin/ui_test_flakiness_timestamp.json").freeze
+  CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/test_summary.json").freeze
+  CACHE_TTL = 86400 # 1 day of seconds
+
   def self.sauce_username
     ENV['SAUCE_USERNAME'] || CDO.saucelabs_username
   end
@@ -75,17 +80,12 @@ class TestFlakiness
     return [max_reruns, confidence]
   end
 
-  FLAKINESS_TIMESTAMP_FILENAME = (File.dirname(__FILE__) + "/../../bin/ui_test_flakiness_timestamp.json").freeze
-
   # Sets a timestamp that corresponds to the oldest results we will request from SauceLabs
   # for calculating flakiness.
   # @param timestamp [Integer] Unix timestamp (e.g., Time.now.to_i)
   def self.reset(timestamp)
     File.write(FLAKINESS_TIMESTAMP_FILENAME, {timestamp: timestamp}.to_json)
   end
-
-  CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/test_summary.json").freeze
-  CACHE_TTL = 86400 # 1 day of seconds
 
   using CacheMethod
 

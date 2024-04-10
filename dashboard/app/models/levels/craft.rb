@@ -33,9 +33,6 @@ class Craft < Blockly
     :action_plane
   ].freeze
   EMPTY_STRING = ''.freeze
-  def shared_blocks
-    Block.for('craft') if JSONValue.value(is_aquatic_level)
-  end
 
   serialized_attrs(
     :ground_plane,
@@ -550,6 +547,10 @@ class Craft < Blockly
 
   def self.skins
     ['craft']
+  end
+
+  def shared_blocks
+    Block.for('craft') if JSONValue.value(is_aquatic_level)
   end
 
   # Use a DCDO flag here so we can revert back to CDO Blockly without a deploy

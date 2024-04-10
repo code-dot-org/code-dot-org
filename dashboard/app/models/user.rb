@@ -201,6 +201,44 @@ class User < ApplicationRecord
     TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
+  # FND-1130: This field will no longer be required
+  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
+
+  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
+  US_STATE_DROPDOWN_OPTIONS = {
+    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
+    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
+    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
+    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
+    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
+    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
+    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
+    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
+    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
+    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
+    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
+    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
+    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
+    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
+    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
+    'WY' => 'Wyoming'
+  }.freeze
+
+  DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
+    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
+    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
+  ].freeze
+
+  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
+  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
+
+  # When adding a new version, append to the end of the array
+  # using the next increasing natural number.
+  TERMS_OF_SERVICE_VERSIONS = [
+    1  # (July 2016) Teachers can grant access to labs for U13 students.
+  ].freeze
+  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
+
   validates_presence_of :user_type
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
@@ -491,11 +529,6 @@ class User < ApplicationRecord
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
-  DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
-    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
-    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
-  ].freeze
-
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
@@ -540,10 +573,8 @@ class User < ApplicationRecord
   defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
-  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
-  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
@@ -567,12 +598,6 @@ class User < ApplicationRecord
   validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
 
-  # When adding a new version, append to the end of the array
-  # using the next increasing natural number.
-  TERMS_OF_SERVICE_VERSIONS = [
-    1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ].freeze
-  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
   end
@@ -850,123 +875,6 @@ class User < ApplicationRecord
   validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
   validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
 
-  def requires_email?
-    provider_changed? && provider.nil? && encrypted_password_changed? && encrypted_password.present?
-  end
-
-  def presence_of_hashed_email_or_parent_email
-    if hashed_email.blank? && parent_email.blank?
-      errors.add :email, I18n.t('activerecord.errors.messages.blank')
-    end
-  end
-
-  def presence_of_email
-    if email.blank?
-      errors.add :email, I18n.t('activerecord.errors.messages.blank')
-    end
-  end
-
-  def presence_of_email_or_hashed_email
-    if email.blank? && hashed_email.blank?
-      errors.add :email, I18n.t('activerecord.errors.messages.blank')
-    end
-  end
-
-  def email_and_hashed_email_must_be_unique
-    # skip the db lookup if we are already invalid
-    return if errors.present?
-
-    if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
-        (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
-        other_user != self
-      errors.add :email, I18n.t('errors.messages.taken')
-    end
-  end
-
-  # For a user signing up with email/password, we require certain fields to be present and valid
-  # before the user can move on to the "finish signup" step.
-  def validate_for_finish_sign_up
-    raise "Cannot call validate_for_finish_sign_up on a persisted user" if persisted?
-
-    valid? # Run all validations
-
-    # For this step, we only care about email, password, and password confirmation.
-    # Remove any other validation errors for now.
-    required_fields = [:email, :password, :password_confirmation]
-    errors.each do |attribute, _|
-      errors.delete(attribute) unless required_fields.include?(attribute)
-    end
-
-    email_and_hashed_email_must_be_unique # Always check email uniqueness
-  end
-
-  def oauth?
-    if migrated?
-      authentication_options.any?(&:oauth?)
-    else
-      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
-    end
-  end
-
-  def oauth_only?
-    if migrated?
-      authentication_options.all?(&:oauth?) && encrypted_password.blank?
-    else
-      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
-    end
-  end
-
-  def managing_own_credentials?
-    if provider.blank?
-      true
-    elsif manual?
-      true
-    elsif migrated?
-      authentication_options.any? do |ao|
-        ao.credential_type == AuthenticationOption::EMAIL
-      end
-    else
-      false
-    end
-  end
-
-  def password_required?
-    # If the user is changing their password, then we should run all the password
-    # field verifications.
-    is_changing_password = password.present? || password_confirmation.present?
-    return true if is_changing_password
-
-    # Password is not required if the user is not managing their own account
-    # (i.e., someone is creating their account for them or the user is using OAuth).
-    return false unless managing_own_credentials?
-
-    # Password is required for:
-    # New users with no encrypted_password set
-    !persisted? && encrypted_password.blank?
-  end
-
-  # FND-1130: This field will no longer be required
-  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
-
-  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
-  US_STATE_DROPDOWN_OPTIONS = {
-    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
-    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
-    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
-    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
-    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
-    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
-    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
-    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
-    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
-    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
-    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
-    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
-    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
-    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
-    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
-    'WY' => 'Wyoming'
-  }.freeze
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
   def self.find_for_authentication(tainted_conditions)
@@ -1248,6 +1156,101 @@ class User < ApplicationRecord
   def self.us_state_dropdown_options
     {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
       merge(US_STATE_DROPDOWN_OPTIONS)
+  end
+
+  def requires_email?
+    provider_changed? && provider.nil? && encrypted_password_changed? && encrypted_password.present?
+  end
+
+  def presence_of_hashed_email_or_parent_email
+    if hashed_email.blank? && parent_email.blank?
+      errors.add :email, I18n.t('activerecord.errors.messages.blank')
+    end
+  end
+
+  def presence_of_email
+    if email.blank?
+      errors.add :email, I18n.t('activerecord.errors.messages.blank')
+    end
+  end
+
+  def presence_of_email_or_hashed_email
+    if email.blank? && hashed_email.blank?
+      errors.add :email, I18n.t('activerecord.errors.messages.blank')
+    end
+  end
+
+  def email_and_hashed_email_must_be_unique
+    # skip the db lookup if we are already invalid
+    return if errors.present?
+
+    if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
+        (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
+        other_user != self
+      errors.add :email, I18n.t('errors.messages.taken')
+    end
+  end
+
+  # For a user signing up with email/password, we require certain fields to be present and valid
+  # before the user can move on to the "finish signup" step.
+  def validate_for_finish_sign_up
+    raise "Cannot call validate_for_finish_sign_up on a persisted user" if persisted?
+
+    valid? # Run all validations
+
+    # For this step, we only care about email, password, and password confirmation.
+    # Remove any other validation errors for now.
+    required_fields = [:email, :password, :password_confirmation]
+    errors.each do |attribute, _|
+      errors.delete(attribute) unless required_fields.include?(attribute)
+    end
+
+    email_and_hashed_email_must_be_unique # Always check email uniqueness
+  end
+
+  def oauth?
+    if migrated?
+      authentication_options.any?(&:oauth?)
+    else
+      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+    end
+  end
+
+  def oauth_only?
+    if migrated?
+      authentication_options.all?(&:oauth?) && encrypted_password.blank?
+    else
+      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
+    end
+  end
+
+  def managing_own_credentials?
+    if provider.blank?
+      true
+    elsif manual?
+      true
+    elsif migrated?
+      authentication_options.any? do |ao|
+        ao.credential_type == AuthenticationOption::EMAIL
+      end
+    else
+      false
+    end
+  end
+
+  def password_required?
+    # If the user is changing their password, then we should run all the password
+    # field verifications.
+    is_changing_password = password.present? || password_confirmation.present?
+    return true if is_changing_password
+
+    # Password is not required if the user is not managing their own account
+    # (i.e., someone is creating their account for them or the user is using OAuth).
+    return false unless managing_own_credentials?
+
+    # Password is required for:
+    # New users with no encrypted_password set
+    !persisted? && encrypted_password.blank?
   end
 
   # Determines if email is a required field for a teacher.

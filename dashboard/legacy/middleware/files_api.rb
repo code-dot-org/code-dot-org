@@ -10,6 +10,20 @@ require 'nokogiri'
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
 
+  SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
+
+  CONTENT_TYPE = 'Content-Type'.freeze
+  TEXT_HTML = 'text/html'.freeze
+  METADATA_PATH = '.metadata'.freeze
+  THUMBNAIL_FILENAME = 'thumbnail.png'
+
+  METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
+
+  MODERATE_THUMBNAILS_FOR_PROJECT_TYPES = %w(
+    applab
+    gamelab
+  )
+
   def max_file_size
     5_000_000 # 5 MB
   end
@@ -18,12 +32,6 @@ class FilesApi < Sinatra::Base
     2_000_000_000 # 2 GB
   end
 
-  SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
-
-  CONTENT_TYPE = 'Content-Type'.freeze
-  TEXT_HTML = 'text/html'.freeze
-  METADATA_PATH = '.metadata'.freeze
-  THUMBNAIL_FILENAME = 'thumbnail.png'
   def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
@@ -964,8 +972,6 @@ class FilesApi < Sinatra::Base
   # a new "metadata" section of the manifest.
   #
 
-  METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
-
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
   #
@@ -995,11 +1001,6 @@ class FilesApi < Sinatra::Base
   get %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
   end
-
-  MODERATE_THUMBNAILS_FOR_PROJECT_TYPES = %w(
-    applab
-    gamelab
-  )
 
   #
   # GET /v3/files-public/<channel-id>/.metadata/<filename>?version=<version-id>

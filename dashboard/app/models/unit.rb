@@ -47,7 +47,19 @@ class Unit < ApplicationRecord
   include Rails.application.routes.url_helpers
   include Unit::TextToSpeech
 
+  include SerializedToFileValidation
+  include SerializedProperties
+
   include Seeded
+
+  UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+
+  TEACHER_FEEDBACK_INITIATIVES = %w(CSF CSC CSD CSP CSA).freeze
+
+  UNIT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+
+  UNIT_CACHE_KEY = 'script-cache'.freeze
+
   has_many :lesson_groups, -> {order(:position)}, foreign_key: 'script_id', dependent: :destroy
   has_many :lessons, through: :lesson_groups
   has_many :script_levels, through: :lessons
@@ -138,19 +150,7 @@ class Unit < ApplicationRecord
 
   attr_accessor :skip_name_format_validation
 
-  include SerializedToFileValidation
-
   after_save :hide_pilot_units
-
-  include SerializedProperties
-  # Ideally this would be done in a before_validation hook, to avoid saving twice.
-  # however this is not practical to do given how rails validations work for
-  # activerecord-import during the seed process.
-  def hide_pilot_units
-    if !unit_group && pilot_experiment.present? && published_state != Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
-      update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
-    end
-  end
 
   # As we read and write to files with the unit name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
@@ -166,53 +166,14 @@ class Unit < ApplicationRecord
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
   validate :deeper_learning_courses_cannot_be_launched
 
-  def deeper_learning_courses_cannot_be_launched
-    if old_professional_learning_course? && (launched? || pilot?)
-      errors.add(:published_state, 'can never be pilot, preview or stable for a deeper learning course.')
-    end
-  end
-
   after_save :check_course_type_settings
 
-  def check_course_type_settings
-    if is_course?
-      raise 'Published state must be set on the unit if its a standalone unit.' if published_state.nil?
-      raise 'Instructor audience must be set on the unit if its a standalone unit.' if instructor_audience.nil?
-      raise 'Participant audience must be set on the unit if its a standalone unit.' if participant_audience.nil?
-      raise 'Instruction type must be set on the unit if its a standalone unit.' if instruction_type.nil?
-    end
-  end
-
-  def prevent_new_duplicate_levels(old_dup_level_keys = [])
-    new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
-    raise "new duplicate levels detected in unit: #{new_dup_level_keys}" if new_dup_level_keys.any?
-  end
-
-  def duplicate_level_keys
-    return [] if levels.count == levels.uniq.count
-    levels_by_key = levels.map(&:key).group_by {|key| key}
-    levels_by_key.select {|_key, values| values.count > 1}.keys
-  end
-
   after_save :generate_plc_objects
-
-  UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
-
-  TEACHER_FEEDBACK_INITIATIVES = %w(CSF CSC CSD CSP CSA).freeze
 
   def self.unit_directory
     UNIT_DIRECTORY
   end
 
-  def prevent_course_version_change?
-    resources.any? ||
-      student_resources.any? ||
-      lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
-  end
-
-  UNIT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
-
-  UNIT_CACHE_KEY = 'script-cache'.freeze
   def self.unit_json_directory
     UNIT_JSON_DIRECTORY
   end
@@ -794,6 +755,47 @@ class Unit < ApplicationRecord
 
   def self.script_json_filepath(unit_name)
     "#{unit_json_directory}/#{unit_name}.script_json"
+  end
+
+  # Ideally this would be done in a before_validation hook, to avoid saving twice.
+  # however this is not practical to do given how rails validations work for
+  # activerecord-import during the seed process.
+  def hide_pilot_units
+    if !unit_group && pilot_experiment.present? && published_state != Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+      update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
+    end
+  end
+
+  def deeper_learning_courses_cannot_be_launched
+    if old_professional_learning_course? && (launched? || pilot?)
+      errors.add(:published_state, 'can never be pilot, preview or stable for a deeper learning course.')
+    end
+  end
+
+  def check_course_type_settings
+    if is_course?
+      raise 'Published state must be set on the unit if its a standalone unit.' if published_state.nil?
+      raise 'Instructor audience must be set on the unit if its a standalone unit.' if instructor_audience.nil?
+      raise 'Participant audience must be set on the unit if its a standalone unit.' if participant_audience.nil?
+      raise 'Instruction type must be set on the unit if its a standalone unit.' if instruction_type.nil?
+    end
+  end
+
+  def prevent_new_duplicate_levels(old_dup_level_keys = [])
+    new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
+    raise "new duplicate levels detected in unit: #{new_dup_level_keys}" if new_dup_level_keys.any?
+  end
+
+  def duplicate_level_keys
+    return [] if levels.count == levels.uniq.count
+    levels_by_key = levels.map(&:key).group_by {|key| key}
+    levels_by_key.select {|_key, values| values.count > 1}.keys
+  end
+
+  def prevent_course_version_change?
+    resources.any? ||
+      student_resources.any? ||
+      lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
 
   # We have two different ways to create professional learning courses
