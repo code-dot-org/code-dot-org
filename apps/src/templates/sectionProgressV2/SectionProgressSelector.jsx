@@ -65,7 +65,12 @@ function SectionProgressSelector({
 
   const toggleV1OrV2Link = () => (
     <div className={styles.toggleViews}>
-      <Link type="primary" size="s" onClick={onShowProgressTableV2Change}>
+      <Link
+        type="primary"
+        size="s"
+        onClick={onShowProgressTableV2Change}
+        id="ui-test-toggle-progress-view"
+      >
         {displayV2
           ? i18n.switchToOldProgressView()
           : i18n.switchToNewProgressView()}
