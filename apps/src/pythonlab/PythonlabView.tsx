@@ -101,16 +101,20 @@ const PythonlabView: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {currentProject && (
-        <CDOIDE
-          project={currentProject}
-          config={config}
-          setProject={setProject}
-          setConfig={setConfig}
-        />
-      )}
+      <div className={moduleStyles.editor}>
+        {currentProject && (
+          <CDOIDE
+            project={currentProject}
+            config={config}
+            setProject={setProject}
+            setConfig={setConfig}
+          />
+        )}
+      </div>
       {/** TODO: Should the console be a part of CDOIDE? */}
-      <PythonConsole />
+      <div className={moduleStyles.console}>
+        <PythonConsole />
+      </div>
     </div>
   );
 };

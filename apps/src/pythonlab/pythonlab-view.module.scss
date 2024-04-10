@@ -13,6 +13,16 @@ $default-spacing: 2px;
   overflow: hidden;
   user-select: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: $default-spacing;
+}
+
+.editor {
+  min-height: 400px;
+  flex-grow: 3;
+}
+
+.console {
+  max-height: 250px;
+  flex-grow: 1;
 }
