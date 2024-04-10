@@ -1,23 +1,23 @@
 module CustomCops
   # Based on https://github.com/rubocop/rubocop/blob/v1.52.1/lib/rubocop/cop/style/access_modifier_declarations.rb
   class InlinePlusGroupedAccessModifierDeclarations < RuboCop::Cop::Base
-    RESTRICT_ON_SEND = %i[private].freeze
+    RESTRICT_ON_SEND = %i[private private_class_method].freeze
     MESSAGE = 'inlined private methods should all be grouped together at the end of the file.'.freeze
 
     # @!method access_modifier_with_symbol?(node)
     def_node_matcher :access_modifier_with_symbol?, <<~PATTERN
-      (send nil? {:private} (sym _))
+      (send nil? {#{RESTRICT_ON_SEND.map(&:inspect).join(' ')}} (sym _))
     PATTERN
 
     def on_send(node)
       return unless node.access_modifier?
-      add_offense(node.loc.selector, message: MESSAGE) unless right_sibling_same_inline_method?(node)
+      return if node.right_siblings.empty?
+      right_sibling = node.right_siblings.first
+      add_offense(node.loc.selector, message: MESSAGE) unless node_is_private?(right_sibling)
     end
 
-    private def right_sibling_same_inline_method?(node)
-      return true if node.right_siblings.empty?
-      sibling = node.right_siblings.first
-      return sibling.send_type? && sibling.method?(node.method_name) && !sibling.arguments.empty?
+    private def node_is_private?(node)
+      return node.send_type? && RESTRICT_ON_SEND.include?(node.method_name) && !node.arguments.empty?
     end
   end
 end
