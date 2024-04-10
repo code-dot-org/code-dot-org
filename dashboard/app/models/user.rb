@@ -397,207 +397,6 @@ class User < ApplicationRecord
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
 
-  def save_email_preference
-    if teacher?
-      EmailPreference.upsert!(
-        email: email,
-        opt_in: email_preference_opt_in.casecmp?("yes"),
-        ip_address: email_preference_request_ip,
-        source: email_preference_source,
-        form_kind: email_preference_form_kind,
-      )
-    end
-  end
-
-  # Enables/disables email notifications for the parent.
-  def save_parent_email_preference
-    if student? && parent_email.present?
-      EmailPreference.upsert!(
-        email: parent_email,
-        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
-        ip_address: parent_email_preference_request_ip,
-        source: parent_email_preference_source,
-        form_kind: nil
-      )
-    end
-  end
-
-  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
-  def save_email_reg_partner_preference
-    user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
-      user.share_teacher_email_regional_partner_opt_in = DateTime.now
-      user.save!
-    end
-  end
-
-  # after_create :send_new_teacher_email
-  # def send_new_teacher_email
-  # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
-  # flag, we send the email from the controller instead. This should ultimately live here, though.
-  # TeacherMailer.new_teacher_email(self).deliver_now if teacher?
-  # end
-
-  # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
-  # based on the passed attributes.
-  # @param school_info_attr the attributes to set and check
-  # @return [Boolean] true if we should reject (ignore and skip writing) the record,
-  # false if we should accept and write it
-  def preprocess_school_info(school_info_attr)
-    # Suppress validation - all parts of this form are optional when accesssed through the registration form
-    school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
-    # students are never asked to fill out this data, so silently reject it for them
-    student? || deduplicate_school_info(school_info_attr, self)
-  end
-
-  # takes a new school info object collected somewhere (e.g., PD enrollment) and compares to
-  # a user's current school information.
-  # overwrites if:
-  # new school info object has a NCES school ID associated with it
-  # old school info object doesn't have a NCES school ID associated with it
-  # @param new_school_info a school_info object to compare to the user current school information.
-  def update_school_info(new_school_info)
-    if new_school_info.complete?
-      self.school_info_id = new_school_info.id
-      save(validate: false)
-    end
-  end
-
-  def update_and_add_users_school_infos
-    last_school = user_school_infos.find_by(end_date: nil)
-    current_time = DateTime.now
-    if last_school
-      last_school.end_date = current_time
-      last_school.save!
-    end
-    UserSchoolInfo.create(
-      user: self,
-      school_info: school_info,
-      start_date: last_school ? current_time : created_at,
-      last_confirmation_date: current_time
-    )
-  end
-
-  def complete_school_info
-    # Check user_school_infos count to verify if new or existing user
-    # If user_school_infos count == 0, new user
-    # If user_school_infos count > 0, existing user
-    if user_school_infos.count > 0 && !school_info&.complete?
-      errors.add(:school_info_id, "cannot add new school id")
-    end
-  end
-
-  belongs_to :invited_by, polymorphic: true, optional: true
-
-  validate :admins_must_be_teachers_without_followeds
-
-  def admins_must_be_teachers_without_followeds
-    if admin
-      errors.add(:admin, 'must be a teacher') unless teacher?
-      errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
-    end
-  end
-
-  def email
-    return read_attribute(:email) unless migrated?
-    primary_contact_info.try(:email) || ''
-  end
-
-  def hashed_email
-    return read_attribute(:hashed_email) unless migrated?
-    primary_contact_info.try(:hashed_email) || ''
-  end
-
-  # Email used for the user's enrollments:
-  # Returns the 'alternateEmail' field from the user's latest accepted teacher application if it exists to
-  # help ensure the enrollment emails are delivered. Otherwise, returns the user's email.
-  def email_for_enrollments
-    latest_accepted_app = Pd::Application::TeacherApplication.where(
-      user: self,
-      status: 'accepted'
-    ).order(application_year: :desc).first&.form_data_hash
-    alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
-    alternate_email&.empty? ? email : alternate_email
-  end
-
-  # assign a course to a facilitator that is qualified to teach it
-  def course_as_facilitator=(course)
-    courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
-  end
-
-  def delete_course_as_facilitator(course)
-    courses_as_facilitator.find_by(course: course).try(:destroy)
-  end
-
-  has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
-
-  has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
-
-  has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
-  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
-  has_many :sections_instructed, -> {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
-
-  # "sections" previously referred to what is now called :sections_owned.
-  def sections
-    sections_instructed
-  end
-
-  # Relationships (sections/followers/students) from being a teacher.
-  has_many :sections_owned, dependent: :destroy, class_name: 'Section'
-  has_many :followers, -> {without_deleted}, through: :sections_instructed
-  has_many :students, through: :followers, source: :student_user
-
-  # Relationships (sections_as_students/followeds/teachers) from being a
-  # student.
-  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
-  has_many :sections_as_student, through: :followeds, source: :section
-  has_many :teachers, through: :sections_as_student, source: :instructors
-
-  belongs_to :secret_picture, optional: true
-  before_create :generate_secret_picture
-
-  before_create :generate_secret_words
-
-  before_create :update_default_share_setting
-
-  # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
-  # This SQL string is not at risk for injection vulnerabilites because it's
-  # just a hardcoded string, so it's safe to wrap in Arel.sql
-  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
-  has_many :scripts, through: :user_scripts, source: :script
-
-  validates :name, presence: true, unless: -> {purged_at}
-  validates :name, length: {within: 1..70}, allow_blank: true
-  validates :name, no_utf8mb4: true
-
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
-
-  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
-  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
-
-  validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, with: USERNAME_REGEX, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
-  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
-  validates_presence_of :username, if: :username_required?
-  before_validation :generate_username, on: :create
-
-  validates_presence_of     :password, if: :password_required?
-  validates_confirmation_of :password, if: :password_required?
-  validates_length_of       :password, within: 6..128, allow_blank: true
-
-  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
-  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
-
-  # Validations for adding parent email notifications
-  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
-  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
-
   def self.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
   end
@@ -719,161 +518,6 @@ class User < ApplicationRecord
       Services::User.assign_form_params(user, params)
     end
   end
-
-  def parent_email_preference_opt_in_required?
-    # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
-    # user_type 'student' is the only type which supports have a parent_email associated with it.
-    parent_email_preference_opt_in_required == '1' && user_type == 'student'
-  end
-
-  def parent_email_update_only?
-    parent_email_update_only == '1' && user_type == 'student'
-  end
-
-  def parent_email_preference_setup
-    self.parent_email = parent_email_preference_email
-  end
-
-  def memoized_teachers
-    @memoized_teachers ||= teachers.to_a
-  end
-
-  validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
-  validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
-  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
-  validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
-  validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
-
-  validates :terms_of_service_version,
-    inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
-    allow_nil: true
-
-  # NOTE: Order is important here.
-  before_save :make_teachers_21,
-    :normalize_email,
-    :hash_email,
-    :sanitize_race_data_set_urm,
-    :fix_by_user_type
-
-  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
-
-  before_save :strip_display_family_names
-  def strip_display_family_names
-    self.name = name.strip if name && will_save_change_to_name?
-    self.family_name = family_name.strip if family_name && will_save_change_to_properties?
-  end
-
-  validate :no_family_name_for_teachers
-  def no_family_name_for_teachers
-    if family_name && (teacher? || sections_as_pl_participant.any?)
-      errors.add(:family_name, "can't be set for teachers or PL participants")
-    end
-  end
-
-  before_validation :update_share_setting, unless: :under_13?
-
-  def make_teachers_21
-    return unless teacher?
-    self.age = 21
-  end
-
-  def normalize_email
-    return if email.blank?
-    self.email = email.strip.downcase
-  end
-
-  def hash_email
-    return if email.blank?
-    self.hashed_email = User.hash_email(email)
-  end
-
-  def sanitize_race_data_set_urm
-    return unless races_changed?
-
-    self.races = Policies::Races.sanitized(races).join(',')
-    self.races = nil if races.empty?
-    self.urm = Policies::Races.any_urm?(races)
-
-    # Make sure we explicitly return true here so Rails doesn't interpret a
-    # potential `self.urm = false` as us trying to halt the callback chain
-    true
-  end
-
-  # Only allow admin permission for studio accounts with Google OAuth authentication.
-  validate :enforce_google_sso_for_admin
-  def enforce_google_sso_for_admin
-    return unless admin
-
-    errors.add(:admin, 'must be a migrated user') unless migrated?
-
-    # Exception for development and adhoc environments where Google is not available as an authentication provider by default
-    return if rack_env?(:development, :adhoc)
-
-    unless (authentication_options.count == 1) && (authentication_options.all? {|ao| ao.google? && ao.codeorg_email?})
-      errors.add(:admin, 'must be a code.org account with only google oauth')
-    end
-
-    # Code studio admins should not have a password
-    errors.add(:admin, 'cannot have a password') if password.present?
-  end
-
-  def fix_by_user_type
-    if student?
-      self.email = ''
-      self.full_address = nil
-      self.school_info = nil
-      studio_person&.destroy!
-      self.studio_person_id = nil
-    end
-
-    # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
-    # without an explicit acceptance, we clear the version accepted.
-    if teacher? && purged_at.nil?
-      self.studio_person = StudioPerson.create!(emails: email) unless studio_person
-      if user_type_changed? && !terms_of_service_version_changed?
-        self.terms_of_service_version = nil
-      end
-    end
-  end
-
-  # Remove all cleartext email addresses (including soft-deleted ones)
-  # in migrated students' AuthenticationOptions.
-  def remove_cleartext_emails
-    authentication_options.with_deleted.update_all(email: '')
-  end
-
-  def add_credential(type:, id:, email:, hashed_email:, data:)
-    return false unless migrated?
-    AuthenticationOption.create(
-      user: self,
-      email: email,
-      hashed_email: hashed_email,
-      credential_type: type,
-      authentication_id: id,
-      data: data
-    )
-  end
-
-  # Get information for an SSO provider.
-  # @param [String] type A credential type / provider type.
-  # @returns [AuthenticationOption|Hash|nil] Returns an AuthenticationOption for migrated
-  #   users, a Hash for non-migrated users, or nil if there is no matching credential.
-  def find_credential(type)
-    if migrated?
-      authentication_options.find_by(credential_type: type)
-    else
-      return nil unless provider == type
-      {authentication_id: uid, credential_type: provider}
-    end
-  end
-
-  validate :presence_of_email, if: :teacher_email_required?
-  validate :presence_of_email_or_hashed_email, if:
-      :email_or_hashed_email_required?, on: :create
-  validates :email, no_utf8mb4: true
-  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
-  validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
-  validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
@@ -1157,6 +801,362 @@ class User < ApplicationRecord
     {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
       merge(US_STATE_DROPDOWN_OPTIONS)
   end
+
+  def save_email_preference
+    if teacher?
+      EmailPreference.upsert!(
+        email: email,
+        opt_in: email_preference_opt_in.casecmp?("yes"),
+        ip_address: email_preference_request_ip,
+        source: email_preference_source,
+        form_kind: email_preference_form_kind,
+      )
+    end
+  end
+
+  # Enables/disables email notifications for the parent.
+  def save_parent_email_preference
+    if student? && parent_email.present?
+      EmailPreference.upsert!(
+        email: parent_email,
+        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
+        ip_address: parent_email_preference_request_ip,
+        source: parent_email_preference_source,
+        form_kind: nil
+      )
+    end
+  end
+
+  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
+  def save_email_reg_partner_preference
+    user = User.find_by_email_or_hashed_email(email)
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
+      user.share_teacher_email_regional_partner_opt_in = DateTime.now
+      user.save!
+    end
+  end
+
+  # after_create :send_new_teacher_email
+  # def send_new_teacher_email
+  # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
+  # flag, we send the email from the controller instead. This should ultimately live here, though.
+  # TeacherMailer.new_teacher_email(self).deliver_now if teacher?
+  # end
+
+  # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
+  # based on the passed attributes.
+  # @param school_info_attr the attributes to set and check
+  # @return [Boolean] true if we should reject (ignore and skip writing) the record,
+  # false if we should accept and write it
+  def preprocess_school_info(school_info_attr)
+    # Suppress validation - all parts of this form are optional when accesssed through the registration form
+    school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
+    # students are never asked to fill out this data, so silently reject it for them
+    student? || deduplicate_school_info(school_info_attr, self)
+  end
+
+  # takes a new school info object collected somewhere (e.g., PD enrollment) and compares to
+  # a user's current school information.
+  # overwrites if:
+  # new school info object has a NCES school ID associated with it
+  # old school info object doesn't have a NCES school ID associated with it
+  # @param new_school_info a school_info object to compare to the user current school information.
+  def update_school_info(new_school_info)
+    if new_school_info.complete?
+      self.school_info_id = new_school_info.id
+      save(validate: false)
+    end
+  end
+
+  def update_and_add_users_school_infos
+    last_school = user_school_infos.find_by(end_date: nil)
+    current_time = DateTime.now
+    if last_school
+      last_school.end_date = current_time
+      last_school.save!
+    end
+    UserSchoolInfo.create(
+      user: self,
+      school_info: school_info,
+      start_date: last_school ? current_time : created_at,
+      last_confirmation_date: current_time
+    )
+  end
+
+  def complete_school_info
+    # Check user_school_infos count to verify if new or existing user
+    # If user_school_infos count == 0, new user
+    # If user_school_infos count > 0, existing user
+    if user_school_infos.count > 0 && !school_info&.complete?
+      errors.add(:school_info_id, "cannot add new school id")
+    end
+  end
+
+  belongs_to :invited_by, polymorphic: true, optional: true
+
+  validate :admins_must_be_teachers_without_followeds
+
+  def admins_must_be_teachers_without_followeds
+    if admin
+      errors.add(:admin, 'must be a teacher') unless teacher?
+      errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
+    end
+  end
+
+  def email
+    return read_attribute(:email) unless migrated?
+    primary_contact_info.try(:email) || ''
+  end
+
+  def hashed_email
+    return read_attribute(:hashed_email) unless migrated?
+    primary_contact_info.try(:hashed_email) || ''
+  end
+
+  # Email used for the user's enrollments:
+  # Returns the 'alternateEmail' field from the user's latest accepted teacher application if it exists to
+  # help ensure the enrollment emails are delivered. Otherwise, returns the user's email.
+  def email_for_enrollments
+    latest_accepted_app = Pd::Application::TeacherApplication.where(
+      user: self,
+      status: 'accepted'
+    ).order(application_year: :desc).first&.form_data_hash
+    alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
+    alternate_email&.empty? ? email : alternate_email
+  end
+
+  # assign a course to a facilitator that is qualified to teach it
+  def course_as_facilitator=(course)
+    courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
+  end
+
+  def delete_course_as_facilitator(course)
+    courses_as_facilitator.find_by(course: course).try(:destroy)
+  end
+
+  has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
+
+  has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
+
+  has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
+  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
+  has_many :sections_instructed, -> {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
+
+  # "sections" previously referred to what is now called :sections_owned.
+  def sections
+    sections_instructed
+  end
+
+  # Relationships (sections/followers/students) from being a teacher.
+  has_many :sections_owned, dependent: :destroy, class_name: 'Section'
+  has_many :followers, -> {without_deleted}, through: :sections_instructed
+  has_many :students, through: :followers, source: :student_user
+
+  # Relationships (sections_as_students/followeds/teachers) from being a
+  # student.
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
+  has_many :sections_as_student, through: :followeds, source: :section
+  has_many :teachers, through: :sections_as_student, source: :instructors
+
+  belongs_to :secret_picture, optional: true
+  before_create :generate_secret_picture
+
+  before_create :generate_secret_words
+
+  before_create :update_default_share_setting
+
+  # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
+  # This SQL string is not at risk for injection vulnerabilites because it's
+  # just a hardcoded string, so it's safe to wrap in Arel.sql
+  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
+  has_many :scripts, through: :user_scripts, source: :script
+
+  validates :name, presence: true, unless: -> {purged_at}
+  validates :name, length: {within: 1..70}, allow_blank: true
+  validates :name, no_utf8mb4: true
+
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
+
+  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
+  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
+
+  validates_length_of :username, within: 5..20, allow_blank: true
+  validates_format_of :username, with: USERNAME_REGEX, allow_blank: true
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
+  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
+  validates_presence_of :username, if: :username_required?
+  before_validation :generate_username, on: :create
+
+  validates_presence_of     :password, if: :password_required?
+  validates_confirmation_of :password, if: :password_required?
+  validates_length_of       :password, within: 6..128, allow_blank: true
+
+  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
+  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
+
+  # Validations for adding parent email notifications
+  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
+  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
+
+  def parent_email_preference_opt_in_required?
+    # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
+    # user_type 'student' is the only type which supports have a parent_email associated with it.
+    parent_email_preference_opt_in_required == '1' && user_type == 'student'
+  end
+
+  def parent_email_update_only?
+    parent_email_update_only == '1' && user_type == 'student'
+  end
+
+  def parent_email_preference_setup
+    self.parent_email = parent_email_preference_email
+  end
+
+  def memoized_teachers
+    @memoized_teachers ||= teachers.to_a
+  end
+
+  validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
+  validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
+  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
+
+  validates :terms_of_service_version,
+    inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
+    allow_nil: true
+
+  # NOTE: Order is important here.
+  before_save :make_teachers_21,
+    :normalize_email,
+    :hash_email,
+    :sanitize_race_data_set_urm,
+    :fix_by_user_type
+
+  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
+
+  before_save :strip_display_family_names
+  def strip_display_family_names
+    self.name = name.strip if name && will_save_change_to_name?
+    self.family_name = family_name.strip if family_name && will_save_change_to_properties?
+  end
+
+  validate :no_family_name_for_teachers
+  def no_family_name_for_teachers
+    if family_name && (teacher? || sections_as_pl_participant.any?)
+      errors.add(:family_name, "can't be set for teachers or PL participants")
+    end
+  end
+
+  before_validation :update_share_setting, unless: :under_13?
+
+  def make_teachers_21
+    return unless teacher?
+    self.age = 21
+  end
+
+  def normalize_email
+    return if email.blank?
+    self.email = email.strip.downcase
+  end
+
+  def hash_email
+    return if email.blank?
+    self.hashed_email = User.hash_email(email)
+  end
+
+  def sanitize_race_data_set_urm
+    return unless races_changed?
+
+    self.races = Policies::Races.sanitized(races).join(',')
+    self.races = nil if races.empty?
+    self.urm = Policies::Races.any_urm?(races)
+
+    # Make sure we explicitly return true here so Rails doesn't interpret a
+    # potential `self.urm = false` as us trying to halt the callback chain
+    true
+  end
+
+  # Only allow admin permission for studio accounts with Google OAuth authentication.
+  validate :enforce_google_sso_for_admin
+  def enforce_google_sso_for_admin
+    return unless admin
+
+    errors.add(:admin, 'must be a migrated user') unless migrated?
+
+    # Exception for development and adhoc environments where Google is not available as an authentication provider by default
+    return if rack_env?(:development, :adhoc)
+
+    unless (authentication_options.count == 1) && (authentication_options.all? {|ao| ao.google? && ao.codeorg_email?})
+      errors.add(:admin, 'must be a code.org account with only google oauth')
+    end
+
+    # Code studio admins should not have a password
+    errors.add(:admin, 'cannot have a password') if password.present?
+  end
+
+  def fix_by_user_type
+    if student?
+      self.email = ''
+      self.full_address = nil
+      self.school_info = nil
+      studio_person&.destroy!
+      self.studio_person_id = nil
+    end
+
+    # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
+    # without an explicit acceptance, we clear the version accepted.
+    if teacher? && purged_at.nil?
+      self.studio_person = StudioPerson.create!(emails: email) unless studio_person
+      if user_type_changed? && !terms_of_service_version_changed?
+        self.terms_of_service_version = nil
+      end
+    end
+  end
+
+  # Remove all cleartext email addresses (including soft-deleted ones)
+  # in migrated students' AuthenticationOptions.
+  def remove_cleartext_emails
+    authentication_options.with_deleted.update_all(email: '')
+  end
+
+  def add_credential(type:, id:, email:, hashed_email:, data:)
+    return false unless migrated?
+    AuthenticationOption.create(
+      user: self,
+      email: email,
+      hashed_email: hashed_email,
+      credential_type: type,
+      authentication_id: id,
+      data: data
+    )
+  end
+
+  # Get information for an SSO provider.
+  # @param [String] type A credential type / provider type.
+  # @returns [AuthenticationOption|Hash|nil] Returns an AuthenticationOption for migrated
+  #   users, a Hash for non-migrated users, or nil if there is no matching credential.
+  def find_credential(type)
+    if migrated?
+      authentication_options.find_by(credential_type: type)
+    else
+      return nil unless provider == type
+      {authentication_id: uid, credential_type: provider}
+    end
+  end
+
+  validate :presence_of_email, if: :teacher_email_required?
+  validate :presence_of_email_or_hashed_email, if:
+      :email_or_hashed_email_required?, on: :create
+  validates :email, no_utf8mb4: true
+  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
+  validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
+  validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
 
   def requires_email?
     provider_changed? && provider.nil? && encrypted_password_changed? && encrypted_password.present?
