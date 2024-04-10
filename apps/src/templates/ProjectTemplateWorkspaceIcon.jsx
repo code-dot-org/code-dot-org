@@ -2,9 +2,6 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import moduleStyles from './project-template-workspace-icon.module.scss';
-import classNames from 'classnames';
-
 var msg = require('@cdo/locale');
 
 const IMAGE_BASE_URL = '/blockly/media/';
@@ -21,24 +18,16 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
 
   render() {
     return (
-      <div className={moduleStyles.container}>
-        <button
-          type="button"
+      <div style={styles.container}>
+        <img
+          style={styles.projectTemplateIcon}
+          className="projectTemplateWorkspaceIcon"
+          src={IMAGE_BASE_URL + 'connect.svg'}
           data-tip
           data-for={this.tooltipId}
           aria-describedby={this.tooltipId}
-          data-event="mouseenter mouseleave click"
-          className={moduleStyles.projectTemplateButton}
-        >
-          <img
-            className={classNames(
-              'projectTemplateWorkspaceIcon',
-              moduleStyles.projectTemplateIcon
-            )}
-            src={IMAGE_BASE_URL + 'connect.svg'}
-            alt={msg.workspaceProjectTemplateLevel()}
-          />
-        </button>
+          alt={msg.workspaceProjectTemplateLevel()}
+        />
         <ReactTooltip
           id={this.tooltipId}
           role="tooltip"
@@ -46,7 +35,7 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
           effect="solid"
           place={this.props.tooltipPlace}
         >
-          <div className={moduleStyles.tooltip}>
+          <div style={styles.tooltip}>
             {msg.workspaceProjectTemplateLevel()}
           </div>
         </ReactTooltip>
@@ -54,3 +43,18 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'inline-block',
+  },
+  tooltip: {
+    maxWidth: 200,
+    lineHeight: '20px',
+    whiteSpace: 'normal',
+  },
+  projectTemplateIcon: {
+    marginRight: 5,
+    marginTop: -1,
+  },
+};
