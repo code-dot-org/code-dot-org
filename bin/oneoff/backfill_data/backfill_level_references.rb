@@ -4,7 +4,7 @@
 # Context
 # Reference guides for curriculum was migrated to a framework that supports versioning
 # But, the corresponding change needed to update version for linked reference guides when
-# cloning scripts is currently missing. That is tracked by task TEACH-
+# cloning scripts is currently missing. That is tracked by task https://codedotorg.atlassian.net/browse/TEACH-1008
 
 # This script is a backfill to fix the reference guide version for scripts that are already
 # cloned for 2024.
