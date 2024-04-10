@@ -34,6 +34,8 @@ const V2_TEST_ID = 'section-progress-v2';
 
 const DEFAULT_PROPS = {};
 
+jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
+
 describe('SectionProgressSelector', () => {
   let store;
 
