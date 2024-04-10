@@ -77,10 +77,10 @@ section.bg-pattern-dark {
 
 // Adds 2rem of space above or below an element
 .add-margin-top {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 .add-margin-bottom {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 
