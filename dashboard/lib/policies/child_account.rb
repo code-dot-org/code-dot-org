@@ -25,6 +25,10 @@ class Policies::ChildAccount
     }
   }.freeze
 
+  # Authentication option types which we consider to be "owned" by the school
+  # the student attends because the school has admin control of the account.
+  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
+
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
@@ -49,10 +53,6 @@ class Policies::ChildAccount
     return false unless user.age.to_i <= policy[:max_age].to_i
     personal_account?(user)
   end
-
-  # Authentication option types which we consider to be "owned" by the school
-  # the student attends because the school has admin control of the account.
-  SCHOOL_OWNED_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
 
   # Does the user login using credentials they personally control?
   # For example, some accounts are created and owned by schools (Clever).

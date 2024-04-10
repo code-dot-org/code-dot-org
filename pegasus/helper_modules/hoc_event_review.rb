@@ -5,13 +5,6 @@ module HocEventReview
   Sequel.extension :core_refinements
   using Sequel::CoreRefinements
 
-  # Converts a simple x.y JSON-attribute path to a MySQL 5.7 JSON expression using the inline-path operator.
-  # Ref: https://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-inline-path
-  private_class_method def self.json(path)
-    column, attribute = path.split('.')
-    "#{column}->>'$.#{attribute}'".lit
-  end
-
   FORMS = ::PEGASUS_DB[:forms]
   COUNTRY_CODE_COLUMN = json('data.hoc_event_country_s')
   STATE_CODE_COLUMN = json('processed_data.location_state_code_s')
@@ -51,6 +44,17 @@ module HocEventReview
       end
   end
 
+  def self.kind
+    "HocSignup#{DCDO.get('hoc_year', 2017)}"
+  end
+
+  # Converts a simple x.y JSON-attribute path to a MySQL 5.7 JSON expression using the inline-path operator.
+  # Ref: https://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-inline-path
+  private_class_method def self.json(path)
+    column, attribute = path.split('.')
+    "#{column}->>'$.#{attribute}'".lit
+  end
+
   private_class_method def self.events_query(
     special_events_only: false,
     reviewed: nil,
@@ -74,9 +78,5 @@ module HocEventReview
     end
 
     query
-  end
-
-  def self.kind
-    "HocSignup#{DCDO.get('hoc_year', 2017)}"
   end
 end
