@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState, useCallback, useRef} from 'react';
+import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
@@ -12,7 +13,9 @@ import {
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import Button from '@cdo/apps/templates/Button';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -80,6 +83,7 @@ export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
   canEnableAITutor,
+  showChildAccountPolicy,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -361,7 +365,19 @@ export default function SectionsSetUpContainer({
           </>
         )}
       </div>
-
+      {showChildAccountPolicy && (
+        <Provider store={getStore()}>
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.childAccountPolicy_CreateSectionsWarning()}
+            detailsLink="https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
+            detailsLinkNewWindow={true}
+            detailsLinkText={i18n.childAccountPolicy_LearnMore()}
+            dismissible={false}
+          />
+        </Provider>
+      )}
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
@@ -431,4 +447,5 @@ SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
   canEnableAITutor: PropTypes.bool,
+  showChildAccountPolicy: PropTypes.bool,
 };
