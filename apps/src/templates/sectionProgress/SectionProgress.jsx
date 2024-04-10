@@ -235,7 +235,7 @@ class SectionProgress extends Component {
   }
 }
 
-const sortOrderMargin = 15;
+const sortOrderMargin = 22;
 
 const styles = {
   heading: {
