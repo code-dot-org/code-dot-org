@@ -89,19 +89,18 @@ const LtiFeedbackBanner: React.FC = () => {
 
   return (
     <FeedbackBanner
-      key={key}
+      alertKey={key}
       answerStatus={status}
-      bannerPrefix="lti-"
       answer={answer}
       close={close}
       isLoading={isLoading}
-      closeLabel={i18n.closeLabel()}
+      closeLabel={i18n.closeDialog()}
       question={i18n.lti_feedbackBanner_question()}
       positiveAnswer={i18n.lti_feedbackBanner_answer_positive()}
       negativeAnswer={i18n.lti_feedbackBanner_answer_negative()}
       shareMore={i18n.lti_feedbackBanner_shareMore_text()}
       shareMoreLink={LmsLinks.ADDITIONAL_FEEDBACK_URL}
-      shareMoreLinkText={i18n.lti_feedbackBanner_shareMore_linkText()}
+      shareMoreLinkText={i18n.lti_feedbackBanner_shareMore_link()}
     />
   );
 };
