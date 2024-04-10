@@ -1,6 +1,7 @@
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
+
+import Button from '@cdo/apps/componentLibrary/button/Button';
 
 import moduleStyles from './multi-item-input.module.scss';
 
@@ -49,21 +50,23 @@ export const MultiItemInput: React.FunctionComponent<{
       {!readOnly && (
         <div className={moduleStyles.buttonsRow}>
           {showPlus && (
-            <button
-              type="button"
+            <Button
               className={moduleStyles.plusMinusButton}
               onClick={onAdd}
-            >
-              <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-            </button>
+              isIconOnly
+              size="s"
+              type="secondary"
+              icon={{iconName: 'plus'}}
+            />
           )}
-          <button
-            type="button"
+          <Button
             className={moduleStyles.plusMinusButton}
             onClick={onRemove}
-          >
-            <FontAwesomeV6Icon iconName="minus" iconStyle="solid" />
-          </button>
+            isIconOnly
+            size="s"
+            type="secondary"
+            icon={{iconName: 'minus'}}
+          />
         </div>
       )}
     </div>
