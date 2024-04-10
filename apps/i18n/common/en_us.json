@@ -1508,6 +1508,7 @@
   "linux": "Linux",
   "listVariable": "list",
   "loading": "Loading...",
+  "loadingLesson": "Loading lesson",
   "loadingError": "An error occurred. Please reload the page and try again.",
   "locked": "Locked",
   "lockFollowing": "Lock the following lessons that are currently unlocked:",

@@ -5,6 +5,29 @@
   background-color: white;
 }
 
+@mixin remove-default-button-styles {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 0;
+  display: inline-block;
+  margin: 0;
+  box-sizing: inherit;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  // note: unless border is set, you will need to override
+  // the active border state
+  // &:active {
+  //   border: ____;
+  // }
+}
+
 .progressTableV2 {
   width: 100%;
   font-size: 16px;
@@ -132,15 +155,28 @@ $level-cell-width: 52;
   }
 
   &HeaderCell {
+    border: 1px solid $neutral_dark40;
+    margin: 0;
     height: 42px;
     line-height: 42px;
-min-width:47px;
-    border-bottom: 1px solid $neutral_dark40;
-    border-right: 1px solid $neutral_dark40;
+    min-width: 52px;
     margin-bottom: 32px;
     text-align: center;
     background-color: $light_gray_50;
   }
+
+  &HeaderCellInteractive {
+    @include remove-default-button-styles;
+    border: 1px solid $neutral_dark40;
+    margin: 0;
+    height: 42px;
+    line-height: 42px;
+    min-width: 52px;
+    margin-bottom: 32px;
+    text-align: center;
+    background-color: $light_gray_50;
+  }
+
   
   &HeaderTooltip {
     height: 18px;
@@ -172,18 +208,32 @@ min-width:47px;
 
 .expanded {
   &Header {
-    min-width: 47px;
+    min-width: 80px;
 
     &LessonCell {
-      height: 43px;
+      border-top: 1px solid $neutral_dark40;
+      border-left: 1px solid $neutral_dark40;
+      height: 42px;
       line-height: 42px;
-      min-width: 49px;
+      min-width: 82px;
       border: 0;
       background-color: $light_primary_500;
       color: $light_white;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    &LessonCellButton {
+      @include remove-default-button-styles;
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
+
+      &:active {
+        border: none;
+      }
     }
     
     &LessonText {
@@ -211,7 +261,7 @@ min-width:47px;
     &LevelCell {
       width: $level-cell-width + px;
       text-align: center;
-      height: 32px;
+      height: 33px;
       line-height: 32px;
       display: flex;
       flex-direction: row;
