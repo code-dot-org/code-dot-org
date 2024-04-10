@@ -112,30 +112,6 @@ class Pd::TeacherconSurvey < ApplicationRecord
     ].freeze
   end
 
-  def get_facilitator_names
-    pd_enrollment ? pd_enrollment.workshop.facilitators.pluck(:name) : []
-  end
-
-  # Returns whether the associated user has been deleted, returning false if the user does not
-  # exist. Overrides Pd::Form#owner_deleted?.
-  # @return [Boolean] Whether the associated user has been deleted.
-  def owner_deleted?
-    !!pd_enrollment.try(:user).try(:deleted?)
-  end
-
-  def validate_required_fields
-    return if owner_deleted?
-
-    hash = sanitized_form_data_hash
-
-    # validate conditional required fields
-    if DISAGREES.include?(hash.try(:[], :personal_learning_needs_met)) && !hash.key?(:how_could_improve)
-      add_key_error(:how_could_improve)
-    end
-
-    super
-  end
-
   def self.options
     {
       personal_learning_needs_met: STRONGLY_DISAGREE_TO_STRONGLY_AGREE,
@@ -209,4 +185,28 @@ class Pd::TeacherconSurvey < ApplicationRecord
 
     }.freeze
   end
+  def get_facilitator_names
+    pd_enrollment ? pd_enrollment.workshop.facilitators.pluck(:name) : []
+  end
+
+  # Returns whether the associated user has been deleted, returning false if the user does not
+  # exist. Overrides Pd::Form#owner_deleted?.
+  # @return [Boolean] Whether the associated user has been deleted.
+  def owner_deleted?
+    !!pd_enrollment.try(:user).try(:deleted?)
+  end
+
+  def validate_required_fields
+    return if owner_deleted?
+
+    hash = sanitized_form_data_hash
+
+    # validate conditional required fields
+    if DISAGREES.include?(hash.try(:[], :personal_learning_needs_met)) && !hash.key?(:how_could_improve)
+      add_key_error(:how_could_improve)
+    end
+
+    super
+  end
+
 end

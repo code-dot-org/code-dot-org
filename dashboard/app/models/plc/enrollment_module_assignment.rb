@@ -31,14 +31,6 @@ class Plc::EnrollmentModuleAssignment < ApplicationRecord
     COMPLETED = :completed
   ].freeze
 
-  def status
-    Plc::EnrollmentModuleAssignment.lessons_based_status(
-      [plc_learning_module.lesson],
-      user,
-      plc_enrollment_unit_assignment.plc_course_unit.script
-    )
-  end
-
   # Legacy PD courses do not have modules. However, they have user-completion-status for different sections
   # in similar ways - look at all the levels, and see what the user progress is for them.
   def self.lessons_based_status(lessons, user, script)
@@ -60,4 +52,12 @@ class Plc::EnrollmentModuleAssignment < ApplicationRecord
       IN_PROGRESS
     end
   end
+  def status
+    Plc::EnrollmentModuleAssignment.lessons_based_status(
+      [plc_learning_module.lesson],
+      user,
+      plc_enrollment_unit_assignment.plc_course_unit.script
+    )
+  end
+
 end

@@ -57,13 +57,6 @@ class Dancelab < GamelabJr
     )
   end
 
-  def uses_google_blockly?
-    true
-  end
-
-  def common_blocks(type)
-  end
-
   # Used by levelbuilders to set a default song on a Dance Party level.
   def self.hoc_songs
     manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: "hoc_song_meta/#{DANCE_SONG_MANIFEST_FILENAME}")[:body].read
@@ -75,4 +68,11 @@ class Dancelab < GamelabJr
       [name, song['id']]
     end
   end
+  def uses_google_blockly?
+    true
+  end
+
+  def common_blocks(type)
+  end
+
 end

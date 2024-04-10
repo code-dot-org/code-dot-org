@@ -104,57 +104,6 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
 
-  private def soft_delete_lti_section
-    lti_section.destroy if lti_section
-  end
-
-  # PL courses which are run with adults should be set up with teacher accounts so they must use
-  # email logins
-  def pl_sections_must_use_email_logins
-    if pl_section? && login_type != LOGIN_TYPE_EMAIL
-      errors.add(:login_type, 'must be email for professional learning sections.')
-    end
-  end
-
-  # PL courses which are run with adults should have the grade type of 'pl'.
-  # This value was recommended by RED team.
-  def pl_sections_must_use_pl_grade
-    if pl_section? && grades != [SharedConstants::PL_GRADE_VALUE]
-      errors.add(:grades, 'must be ["pl"] for pl section.')
-    end
-  end
-
-  # Once a section is set with a certain participant type we do not want to allow changing it
-  # as that could cause a bad state where users in the section do not have permissions to view
-  # the course the section is assigned to
-  def participant_type_not_changed
-    if participant_type_changed? && persisted?
-      errors.add(:participant_type, "can not be update once set.")
-    end
-  end
-
-  # We want the `grades` attribute to be a list that only includes elements
-  # that exist in the list of valid grades.
-  def grades_are_subset_of_valid_grades
-    unless Section.valid_grades?(grades)
-      errors.add(:grades, "must be one or more of the valid student grades. Expected: #{VALID_GRADES}. Got: #{grades}.")
-    end
-  end
-
-  # If the grades include 'pl', they must *ONLY* include 'pl'.
-  # E.g.: You can't have a section with 'K' and 'pl'.
-  def grades_with_pl_are_only_pl
-    if grades.include?(SharedConstants::PL_GRADE_VALUE) && grades.length != 1
-      errors.add(:grades, "cannot combine pl with other grades")
-    end
-  end
-
-  def pl_section?
-    participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
-  end
-
-  serialized_attrs %w(code_review_expires_at)
-
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
     LOGIN_TYPE_EMAIL = 'email'.freeze,
@@ -164,11 +113,62 @@ class Section < ApplicationRecord
     LOGIN_TYPE_CLEVER = 'clever'.freeze,
     LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
   ]
-
   LOGIN_TYPES_OAUTH = [
     LOGIN_TYPE_GOOGLE_CLASSROOM,
     LOGIN_TYPE_CLEVER
   ]
+  # PL courses which are run with adults should be set up with teacher accounts so they must use
+  # email logins
+  def pl_sections_must_use_email_logins
+    if pl_section? && login_type != LOGIN_TYPE_EMAIL
+      errors.add(:login_type, 'must be email for professional learning sections.')
+    end
+  end
+  # PL courses which are run with adults should have the grade type of 'pl'.
+  # This value was recommended by RED team.
+  def pl_sections_must_use_pl_grade
+    if pl_section? && grades != [SharedConstants::PL_GRADE_VALUE]
+      errors.add(:grades, 'must be ["pl"] for pl section.')
+    end
+  end
+  # Once a section is set with a certain participant type we do not want to allow changing it
+  # as that could cause a bad state where users in the section do not have permissions to view
+  # the course the section is assigned to
+  def participant_type_not_changed
+    if participant_type_changed? && persisted?
+      errors.add(:participant_type, "can not be update once set.")
+    end
+  end
+  # We want the `grades` attribute to be a list that only includes elements
+  # that exist in the list of valid grades.
+  def grades_are_subset_of_valid_grades
+    unless Section.valid_grades?(grades)
+      errors.add(:grades, "must be one or more of the valid student grades. Expected: #{VALID_GRADES}. Got: #{grades}.")
+    end
+  end
+  # If the grades include 'pl', they must *ONLY* include 'pl'.
+  # E.g.: You can't have a section with 'K' and 'pl'.
+  def grades_with_pl_are_only_pl
+    if grades.include?(SharedConstants::PL_GRADE_VALUE) && grades.length != 1
+      errors.add(:grades, "cannot combine pl with other grades")
+    end
+  end
+  def pl_section?
+    participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+  end
+  private def soft_delete_lti_section
+    lti_section.destroy if lti_section
+  end
+
+
+
+
+
+
+
+  serialized_attrs %w(code_review_expires_at)
+
+
 
   TYPES = [
     # Insert non-workshop section types here.
@@ -206,6 +206,11 @@ class Section < ApplicationRecord
     (grades - VALID_GRADES).empty?
   end
 
+  # Sections can not be assigned courses where participants in the section
+  # can not be participants in the course
+  def self.can_be_assigned_course?(participant_audience, participant_type)
+    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
+  end
   # Override default script accessor to use our cache
   def script
     Unit.get_from_cache(script_id) if script_id
@@ -295,11 +300,6 @@ class Section < ApplicationRecord
     false
   end
 
-  # Sections can not be assigned courses where participants in the section
-  # can not be participants in the course
-  def self.can_be_assigned_course?(participant_audience, participant_type)
-    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
-  end
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
@@ -613,6 +613,58 @@ class Section < ApplicationRecord
     self.code_review_expires_at = enable_code_review ? Time.now.utc + 90.days : nil
   end
 
+  # Adds an instructor to the section
+  # If the instructor was previously deleted, restore the instructor
+  # Make the instructor active if they had a different status
+  # If the instructor did not previously exist, create the section instructor relationship
+  # Returns true if successful
+  def add_instructor(user)
+    transaction do
+      Follower.find_by(section: self, student_user: user)&.destroy
+      si = SectionInstructor.with_deleted.find_or_initialize_by(instructor: user, section_id: id)
+      si.restore if si.deleted?
+      si.active!
+    end
+
+    true
+  end
+  # Removes an instructor
+  # Note: Will not remove the primary instructor to prevent orphaned sections
+  def remove_instructor(user)
+    SectionInstructor.find_by(instructor: user, section_id: id)&.destroy unless self.user == user
+  end
+  def invite_instructor(email, current_user)
+    instructor = User.find_by!(email: email, user_type: :teacher)
+    raise ArgumentError.new('inviting self') if instructor == current_user
+
+    deleted_section_instructor = validate_instructor(instructor)
+    deleted_section_instructor&.really_destroy!
+
+    SectionInstructor.create!(
+      section: self,
+      instructor: instructor,
+      status: :invited,
+      invited_by: current_user
+    )
+  end
+  # Validates instructor can be added to the section, returns soft-deleted section instructor (if any)
+  public def validate_instructor(instructor)
+    if section_instructors.count >= INSTRUCTOR_LIMIT
+      raise ArgumentError.new('section full')
+    end
+
+    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: self)
+
+    # Return the instructor for actual deletion if they were soft-deleted
+    if si&.deleted_at.present?
+      return si
+    # Can't re-add someone who is already an instructor (or invited/declined)
+    elsif si.present?
+      raise ArgumentError.new('already invited')
+    elsif students.exists?(email: instructor.email)
+      raise ArgumentError.new('already a student')
+    end
+  end
   private def unused_random_code
     CodeGeneration.random_unique_code length: 6, model: Section
   end
@@ -633,59 +685,7 @@ class Section < ApplicationRecord
   end
   before_validation :strip_emoji_from_name
 
-  # Adds an instructor to the section
-  # If the instructor was previously deleted, restore the instructor
-  # Make the instructor active if they had a different status
-  # If the instructor did not previously exist, create the section instructor relationship
-  # Returns true if successful
-  def add_instructor(user)
-    transaction do
-      Follower.find_by(section: self, student_user: user)&.destroy
-      si = SectionInstructor.with_deleted.find_or_initialize_by(instructor: user, section_id: id)
-      si.restore if si.deleted?
-      si.active!
-    end
 
-    true
-  end
 
-  # Removes an instructor
-  # Note: Will not remove the primary instructor to prevent orphaned sections
-  def remove_instructor(user)
-    SectionInstructor.find_by(instructor: user, section_id: id)&.destroy unless self.user == user
-  end
 
-  def invite_instructor(email, current_user)
-    instructor = User.find_by!(email: email, user_type: :teacher)
-    raise ArgumentError.new('inviting self') if instructor == current_user
-
-    deleted_section_instructor = validate_instructor(instructor)
-    deleted_section_instructor&.really_destroy!
-
-    SectionInstructor.create!(
-      section: self,
-      instructor: instructor,
-      status: :invited,
-      invited_by: current_user
-    )
-  end
-
-  # Validates instructor can be added to the section, returns soft-deleted section instructor (if any)
-  public def validate_instructor(instructor)
-    if section_instructors.count >= INSTRUCTOR_LIMIT
-      raise ArgumentError.new('section full')
-    end
-
-    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: self)
-
-    # Return the instructor for actual deletion if they were soft-deleted
-    if si&.deleted_at.present?
-      return si
-    # Can't re-add someone who is already an instructor (or invited/declined)
-    elsif si.present?
-      raise ArgumentError.new('already invited')
-    elsif students.exists?(email: instructor.email)
-      raise ArgumentError.new('already a student')
-    end
-  end
 end

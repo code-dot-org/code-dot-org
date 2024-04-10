@@ -32,6 +32,16 @@ class UserScript < ApplicationRecord
     version_warning_dismissed
   )
 
+  # Given a set of scripts, look up which of them a user has progress in, using a single query.
+  def self.lookup_hash(for_user, script_names)
+    filtered_progress = Set.new UserScript.
+      joins(:script).
+      where(user: for_user, scripts: {name: script_names}).
+      pluck(:name)
+    script_names.index_with do |name|
+      filtered_progress.include?(name)
+    end
+  end
   def script
     Unit.get_from_cache(script_id)
   end
@@ -47,14 +57,4 @@ class UserScript < ApplicationRecord
     started_at.nil? && assigned_at.nil?
   end
 
-  # Given a set of scripts, look up which of them a user has progress in, using a single query.
-  def self.lookup_hash(for_user, script_names)
-    filtered_progress = Set.new UserScript.
-      joins(:script).
-      where(user: for_user, scripts: {name: script_names}).
-      pluck(:name)
-    script_names.index_with do |name|
-      filtered_progress.include?(name)
-    end
-  end
 end

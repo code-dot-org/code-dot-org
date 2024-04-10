@@ -111,13 +111,13 @@ class HttpCache
     'flappy' => '/flappy/*'
   ).freeze
 
+  ALLOWED_WEB_REQUEST_HEADERS = %w(
+    Authorization
+  )
   def self.cached_scripts
     CACHED_UNITS_MAP.keys
   end
 
-  ALLOWED_WEB_REQUEST_HEADERS = %w(
-    Authorization
-  )
 
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
   # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.

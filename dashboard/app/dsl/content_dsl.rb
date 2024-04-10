@@ -1,5 +1,16 @@
 # Abstract class for DSL types which provide a standard set of content-definition methods.
 class ContentDSL < LevelDSL
+  # @override
+  def self.i18n_fields
+    super + %w(
+      content1
+      content2
+      content3
+      markdown
+      teacher_markdown
+      title
+    )
+  end
   def initialize
     super
     @hash.merge! options: {}
@@ -37,15 +48,4 @@ class ContentDSL < LevelDSL
     @hash[:options][key.to_sym] = args.first
   end
 
-  # @override
-  def self.i18n_fields
-    super + %w(
-      content1
-      content2
-      content3
-      markdown
-      teacher_markdown
-      title
-    )
-  end
 end

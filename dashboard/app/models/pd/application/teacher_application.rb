@@ -92,254 +92,55 @@ module Pd::Application
       principal_approval_not_required
     )
 
-    # Updates the associated user's school info with the info from this teacher application
-    # based on these rules in order:
-    # 1. Application has a specific school? always overwrite the user's school info
-    # 2. User doesn't have a specific school? overwrite with the custom school info.
-    # Will only update the school info if we have enough information for it because
-    # an incomplete application may not have all the information we need to update
-    def update_user_school_info!
-      return unless school_id || user.school_info.try(&:school).nil?
-      school_info = school_info_attr
-      return unless school_info
-      user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info))
-    end
-
-    def update_scholarship_status(scholarship_status)
-      Pd::ScholarshipInfo.update_or_create(user, application_year, course, scholarship_status)
-    end
-
-    def scholarship_status
-      if user && application_year && course
-        Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.scholarship_status
+    # memoize in a hash, per course
+    FILTERED_LABELS = Hash.new do |h, key|
+      labels_to_remove = (
+      case key
+      when 'csd'
+        [
+          :csp_which_grades,
+          :csp_how_offer,
+          :csp_ap_exam,
+          :csa_which_grades,
+          :csa_how_offer,
+          :csa_already_know,
+          :csa_phone_screen
+        ]
+      when 'csp'
+        [
+          :csd_which_grades,
+          :csa_which_grades,
+          :csa_how_offer,
+          :csa_already_know,
+          :csa_phone_screen
+        ]
+      when 'csa'
+        [
+          :csp_which_grades,
+          :csp_how_offer,
+          :csp_ap_exam,
+          :csd_which_grades
+        ]
       end
-    end
+      )
 
-    # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
-    def year
-      application_year
-    end
+      # school contains NCES id
+      # the other fields are empty in the form data unless they selected "Other" school,
+      # so we add it when we construct the csv row.
+      labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
 
+      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
     def self.next_year(year)
       current_year_index = APPLICATION_YEARS.index(year)
       current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
     end
-
-    # The census lags by a year, so the census year is the first application year minus 1
-    # For example, for the 2023-2025 application year, we want to look at 2023 census data
-    def census_year
-      application_year.split('-').first.to_i - 1
-    end
-
-    # @override
-    def set_type_and_year
-      self.application_type = TEACHER_APPLICATION
-      self.application_year = ActiveApplicationModels::APPLICATION_CURRENT_YEAR unless application_year
-    end
-
-    def set_course_from_program
-      self.course = PROGRAMS.key(program)
-    end
-
-    def set_status_from_admin_approval
-      return if status == 'incomplete'
-      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
-
-      # Do not modify status if admin approval status has not changed.
-      # Since principal_approval_not_required is a serialized attribute, we cannot use the Dirty
-      # API easily –– instead, use the Dirty API to look at the properties attribute.
-      return if properties_change.include?(nil)
-      return unless properties_change.map(&:keys)&.flatten&.include?('principal_approval_not_required')
-
-      if !principal_approval_not_required && status != 'awaiting_admin_approval'
-        self.status = 'awaiting_admin_approval'
-        send_pd_application_email(:needs_admin_approval)
-      elsif principal_approval_not_required && status == 'awaiting_admin_approval'
-        self.status = 'unreviewed'
-      end
-    end
-
-    def save_partner
-      self.regional_partner_id = sanitized_form_data_hash[:regional_partner_id]
-    end
-
-    def program
-      sanitized_form_data_hash[:program]
-    end
-
-    def zip_code
-      sanitized_form_data_hash[:zip_code]
-    end
-
-    def state_name
-      sanitized_form_data_hash[:state]
-    end
-
-    def district_name
-      school ?
-        school.try(:school_district).try(:name).try(:titleize) :
-        sanitized_form_data_hash[:school_district_name]
-    end
-
-    def school_name
-      school ? school.name.try(:titleize) : sanitized_form_data_hash[:school_name]
-    end
-
-    def school_zip_code
-      school ? school.zip : sanitized_form_data_hash[:zip_code]
-    end
-
-    def school_state
-      if school
-        school.state.try(:upcase)
-      else
-        STATE_ABBR_WITH_DC_HASH.key(sanitized_form_data_hash[:state]).try(:to_s)
-      end
-    end
-
-    def school_city
-      school ? school.city.try(:titleize) : sanitized_form_data_hash[:city]
-    end
-
-    def school_address
-      if school
-        address = ""
-        [
-          school.address_line1,
-          school.address_line2,
-          school.address_line3
-        ].each do |line|
-          if line
-            address << line << " "
-          end
-        end
-        address.titleize
-      else
-        sanitized_form_data_hash[:address]
-      end
-    end
-
-    def school_type
-      school ? school.try(:school_type).try(:titleize) : sanitized_form_data_hash[:school_type]
-    end
-
-    def first_name
-      hash = sanitized_form_data_hash
-      hash[:preferred_first_name] || hash[:first_name]
-    end
-    alias_method :teacher_first_name, :first_name
-
-    def last_name
-      sanitized_form_data_hash[:last_name]
-    end
-
-    def state_code
-      STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
-    end
-
-    def application_url
-      CDO.studio_url("/pd/application_dashboard/#{course}_teachers/#{id}", CDO.default_scheme)
-    end
-
-    def principal_email
-      sanitized_form_data_hash[:principal_email]
-    end
-
-    # Title & last name, or full name if no title was provided.
-    def principal_greeting
-      hash = sanitized_form_data_hash
-      title = hash[:principal_title]
-      "#{title.presence || hash[:principal_first_name]} #{hash[:principal_last_name]}"
-    end
-
-    def principal_approval_url
-      pd_application_principal_approval_url(application_guid) if application_guid
-    end
-
-    # @override
-    # Add account_email (based on the associated user's email) to the sanitized form data hash
-    def sanitized_form_data_hash
-      super.merge(account_email: user.email)
-    end
-
-    def school_id
-      raw_school_id = sanitized_form_data_hash[:school]
-
-      # -1 designates custom school info, in which case return nil
-      raw_school_id.to_i == -1 ? nil : raw_school_id
-    end
-
-    def school_info_attr
-      if school_id
-        {
-          school_id: school_id
-        }
-      else
-        hash = sanitized_form_data_hash
-        return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
-        {
-          country: 'US',
-          # Take the first word in school type, downcased. E.g. "Public school" -> "public"
-          school_type: hash[:school_type].split.first.downcase,
-          state: hash[:school_state],
-          zip: hash[:school_zip_code],
-          school_name: hash[:school_name],
-          full_address: hash[:school_address],
-          validation_type: SchoolInfo::VALIDATION_COMPLETE
-        }
-      end
-    end
-
-    # @override
-    def find_default_workshop
-      get_first_selected_workshop || super
-    end
-
-    def get_first_selected_workshop
-      hash = sanitized_form_data_hash
-      return nil if hash[:teachercon]
-
-      workshop_ids = hash[:regional_partner_workshop_ids]
-      return nil unless workshop_ids.try(:any?)
-
-      return Pd::Workshop.find_by(id: workshop_ids.first) if workshop_ids.length == 1
-
-      # able_to_attend_multiple responses are in the format:
-      # "${friendly_date_range} in ${location} hosted by ${regionalPartnerName}"
-      # Map back to actual workshops by reconstructing the friendly_date_range
-      workshops = Pd::Workshop.where(id: workshop_ids)
-      hash[:able_to_attend_multiple].each do |response|
-        workshops_for_date = workshops.select {|w| response.start_with?(w.friendly_date_range)}
-        return workshops_for_date.first if workshops_for_date.size == 1
-
-        location = response.scan(/in (.+) hosted/).first.try(:first) || ''
-        workshops_for_date_and_location = workshops_for_date.find {|w| w.location_address == location} || workshops_for_date.first
-        return workshops_for_date_and_location if workshops_for_date_and_location
-      end
-
-      # No match? Return the first workshop
-      workshops.first
-    end
-
-    def enrollment
-      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id)
-    end
-
-    def enrolled?
-      enrollment.present?
-    end
-
-    def friendly_registered_workshop
-      enrolled? ? 'Yes' : 'No'
-    end
-
     def self.prefetch_associated_models(applications)
       prefetch_workshops applications.map(&:pd_workshop_id).uniq.compact
 
       # also prefetch schools
       prefetch_schools applications.map(&:school_id).uniq.compact
     end
-
     def self.prefetch_schools(school_ids)
       return if school_ids.empty?
 
@@ -347,11 +148,9 @@ module Pd::Application
         Rails.cache.write get_school_cache_key(school.id), school, expires_in: CACHE_TTL
       end
     end
-
     def self.get_school_cache_key(school_id)
       "#{self.class.name}.school(#{school_id})"
     end
-
     # @override
     def self.statuses
       %w(
@@ -366,12 +165,6 @@ module Pd::Application
         withdrawn
       )
     end
-
-    def status_including_enrolled
-      return 'enrolled' if enrolled?
-      status
-    end
-
     # This is called by the scheduled_pd_application_emails cronjob which is run
     # on the production-daemon machine every day
     def self.send_admin_approval_reminders_to_teachers
@@ -383,68 +176,6 @@ module Pd::Application
         end
       end
     end
-
-    def workshop_present_if_required_for_status
-      if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
-          WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
-        errors.add :status, "#{status} requires workshop to be assigned"
-      end
-    end
-
-    def should_send_decision_email?
-      if regional_partner.nil? || regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
-        false
-      else
-        AUTO_EMAIL_STATUSES.include?(status)
-      end
-    end
-
-    def log_status
-      self.status_log ||= []
-      status_log.push({status: status, at: Time.zone.now})
-    end
-
-    def send_decision_email
-      send_pd_application_email(status)
-    end
-
-    # @override
-    # @param [Pd::Application::Email] email
-    # Note - this should only be called from within Pd::Application::Email.send!
-    def deliver_email(email)
-      unless email.pd_application_id == id
-        raise "Expected application id #{id} from email #{email.id}. Actual: #{email.pd_application_id}"
-      end
-
-      # email_type maps to the mailer action
-      TeacherApplicationMailer.send(email.email_type, self).deliver_now
-    end
-
-    # Return a string if the principal approval state is complete, in-progress, or not required.
-    # Otherwise return nil.
-    def principal_approval_state
-      response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      return "#{PRINCIPAL_APPROVAL_STATE[:complete]}Admin said #{response.full_answers[:do_you_approve]} on #{response.applied_at&.strftime('%b %-d')}" if response
-
-      principal_approval_email = emails.where(email_type: 'admin_approval').order(:created_at).last
-      if principal_approval_email
-        # Format sent date as short-month day, e.g. Oct 8
-        return PRINCIPAL_APPROVAL_STATE[:in_progress] + principal_approval_email.sent_at&.strftime('%b %-d')
-      end
-
-      return PRINCIPAL_APPROVAL_STATE[:not_required] if principal_approval_not_required
-
-      nil
-    end
-
-    def formatted_principal_email
-      ActionMailer::Base.email_address_with_name(principal_email, principal_greeting)
-    end
-
-    def effective_regional_partner_name
-      regional_partner&.name || 'Code.org'
-    end
-
     # @override
     def self.options(year = APPLICATION_CURRENT_YEAR)
       {
@@ -663,7 +394,6 @@ module Pd::Application
         completing_on_behalf_of_someone_else: [YES, NO],
       }
     end
-
     # @override
     def self.required_fields
       %i(
@@ -696,6 +426,402 @@ module Pd::Application
         will_teach
       )
     end
+    # @override
+    # Filter out extraneous answers based on selected program (course)
+    def self.filtered_labels(course, status = 'unreviewed')
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course) || status == 'incomplete'
+      status == 'incomplete' ? {} : FILTERED_LABELS[course]
+    end
+    # List of columns to be filtered out based on selected program (course)
+    def self.columns_to_remove(course)
+      case course
+      when 'csd'
+        {
+          teacher: [
+            :csp_which_grades,
+            :csp_how_offer,
+            :csa_which_grades,
+            :csa_how_offer,
+            :csa_already_know,
+            :csa_phone_screen
+          ],
+          principal: [
+            :share_ap_scores,
+            :csp_implementation,
+            :csa_implementation
+          ]
+        }
+      when 'csp'
+        {
+          teacher: [
+            :csd_which_grades,
+            :csa_which_grades,
+            :csa_how_offer,
+            :csa_already_know,
+            :csa_phone_screen
+          ],
+          principal: [
+            :csd_implementation,
+            :csa_implementation
+          ]
+        }
+      when 'csa'
+        {
+          teacher: [
+            :csp_which_grades,
+            :csp_how_offer,
+            :csd_which_grades
+          ],
+          principal: [
+            :csp_implementation,
+            :csd_implementation
+          ]
+        }
+      end
+    end
+    def self.csv_filtered_labels(course)
+      labels = {
+        teacher: {},
+        principal: {},
+        nces: {}
+      }
+      labels_to_remove = columns_to_remove(course)
+
+      CSV_COLUMNS.each_key do |source|
+        CSV_COLUMNS[source].each do |k|
+          unless labels_to_remove[source]&.include? k.to_sym
+            labels[source][k] = CSV_LABELS[source][k] || ALL_LABELS_WITH_OVERRIDES[k]
+          end
+        end
+      end
+      labels
+    end
+    def self.csv_header(course)
+      labels = csv_filtered_labels(course)
+      CSV.generate do |csv|
+        columns = []
+        labels.each_key do |source|
+          labels[source].each_key do |k|
+            columns.push(labels[source][k])
+          end
+        end
+        csv << columns
+      end
+    end
+    # @override
+    # Additional labels to include in the form data hash
+    def self.additional_labels
+      ADDITIONAL_KEYS_IN_ANSWERS
+    end
+    # Updates the associated user's school info with the info from this teacher application
+    # based on these rules in order:
+    # 1. Application has a specific school? always overwrite the user's school info
+    # 2. User doesn't have a specific school? overwrite with the custom school info.
+    # Will only update the school info if we have enough information for it because
+    # an incomplete application may not have all the information we need to update
+    def update_user_school_info!
+      return unless school_id || user.school_info.try(&:school).nil?
+      school_info = school_info_attr
+      return unless school_info
+      user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info))
+    end
+
+    def update_scholarship_status(scholarship_status)
+      Pd::ScholarshipInfo.update_or_create(user, application_year, course, scholarship_status)
+    end
+
+    def scholarship_status
+      if user && application_year && course
+        Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.scholarship_status
+      end
+    end
+
+    # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
+    def year
+      application_year
+    end
+
+
+    # The census lags by a year, so the census year is the first application year minus 1
+    # For example, for the 2023-2025 application year, we want to look at 2023 census data
+    def census_year
+      application_year.split('-').first.to_i - 1
+    end
+
+    # @override
+    def set_type_and_year
+      self.application_type = TEACHER_APPLICATION
+      self.application_year = ActiveApplicationModels::APPLICATION_CURRENT_YEAR unless application_year
+    end
+
+    def set_course_from_program
+      self.course = PROGRAMS.key(program)
+    end
+
+    def set_status_from_admin_approval
+      return if status == 'incomplete'
+      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
+
+      # Do not modify status if admin approval status has not changed.
+      # Since principal_approval_not_required is a serialized attribute, we cannot use the Dirty
+      # API easily –– instead, use the Dirty API to look at the properties attribute.
+      return if properties_change.include?(nil)
+      return unless properties_change.map(&:keys)&.flatten&.include?('principal_approval_not_required')
+
+      if !principal_approval_not_required && status != 'awaiting_admin_approval'
+        self.status = 'awaiting_admin_approval'
+        send_pd_application_email(:needs_admin_approval)
+      elsif principal_approval_not_required && status == 'awaiting_admin_approval'
+        self.status = 'unreviewed'
+      end
+    end
+
+    def save_partner
+      self.regional_partner_id = sanitized_form_data_hash[:regional_partner_id]
+    end
+
+    def program
+      sanitized_form_data_hash[:program]
+    end
+
+    def zip_code
+      sanitized_form_data_hash[:zip_code]
+    end
+
+    def state_name
+      sanitized_form_data_hash[:state]
+    end
+
+    def district_name
+      school ?
+        school.try(:school_district).try(:name).try(:titleize) :
+        sanitized_form_data_hash[:school_district_name]
+    end
+
+    def school_name
+      school ? school.name.try(:titleize) : sanitized_form_data_hash[:school_name]
+    end
+
+    def school_zip_code
+      school ? school.zip : sanitized_form_data_hash[:zip_code]
+    end
+
+    def school_state
+      if school
+        school.state.try(:upcase)
+      else
+        STATE_ABBR_WITH_DC_HASH.key(sanitized_form_data_hash[:state]).try(:to_s)
+      end
+    end
+
+    def school_city
+      school ? school.city.try(:titleize) : sanitized_form_data_hash[:city]
+    end
+
+    def school_address
+      if school
+        address = ""
+        [
+          school.address_line1,
+          school.address_line2,
+          school.address_line3
+        ].each do |line|
+          if line
+            address << line << " "
+          end
+        end
+        address.titleize
+      else
+        sanitized_form_data_hash[:address]
+      end
+    end
+
+    def school_type
+      school ? school.try(:school_type).try(:titleize) : sanitized_form_data_hash[:school_type]
+    end
+
+    def first_name
+      hash = sanitized_form_data_hash
+      hash[:preferred_first_name] || hash[:first_name]
+    end
+    alias_method :teacher_first_name, :first_name
+
+    def last_name
+      sanitized_form_data_hash[:last_name]
+    end
+
+    def state_code
+      STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
+    end
+
+    def application_url
+      CDO.studio_url("/pd/application_dashboard/#{course}_teachers/#{id}", CDO.default_scheme)
+    end
+
+    def principal_email
+      sanitized_form_data_hash[:principal_email]
+    end
+
+    # Title & last name, or full name if no title was provided.
+    def principal_greeting
+      hash = sanitized_form_data_hash
+      title = hash[:principal_title]
+      "#{title.presence || hash[:principal_first_name]} #{hash[:principal_last_name]}"
+    end
+
+    def principal_approval_url
+      pd_application_principal_approval_url(application_guid) if application_guid
+    end
+
+    # @override
+    # Add account_email (based on the associated user's email) to the sanitized form data hash
+    def sanitized_form_data_hash
+      super.merge(account_email: user.email)
+    end
+
+    def school_id
+      raw_school_id = sanitized_form_data_hash[:school]
+
+      # -1 designates custom school info, in which case return nil
+      raw_school_id.to_i == -1 ? nil : raw_school_id
+    end
+
+    def school_info_attr
+      if school_id
+        {
+          school_id: school_id
+        }
+      else
+        hash = sanitized_form_data_hash
+        return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
+        {
+          country: 'US',
+          # Take the first word in school type, downcased. E.g. "Public school" -> "public"
+          school_type: hash[:school_type].split.first.downcase,
+          state: hash[:school_state],
+          zip: hash[:school_zip_code],
+          school_name: hash[:school_name],
+          full_address: hash[:school_address],
+          validation_type: SchoolInfo::VALIDATION_COMPLETE
+        }
+      end
+    end
+
+    # @override
+    def find_default_workshop
+      get_first_selected_workshop || super
+    end
+
+    def get_first_selected_workshop
+      hash = sanitized_form_data_hash
+      return nil if hash[:teachercon]
+
+      workshop_ids = hash[:regional_partner_workshop_ids]
+      return nil unless workshop_ids.try(:any?)
+
+      return Pd::Workshop.find_by(id: workshop_ids.first) if workshop_ids.length == 1
+
+      # able_to_attend_multiple responses are in the format:
+      # "${friendly_date_range} in ${location} hosted by ${regionalPartnerName}"
+      # Map back to actual workshops by reconstructing the friendly_date_range
+      workshops = Pd::Workshop.where(id: workshop_ids)
+      hash[:able_to_attend_multiple].each do |response|
+        workshops_for_date = workshops.select {|w| response.start_with?(w.friendly_date_range)}
+        return workshops_for_date.first if workshops_for_date.size == 1
+
+        location = response.scan(/in (.+) hosted/).first.try(:first) || ''
+        workshops_for_date_and_location = workshops_for_date.find {|w| w.location_address == location} || workshops_for_date.first
+        return workshops_for_date_and_location if workshops_for_date_and_location
+      end
+
+      # No match? Return the first workshop
+      workshops.first
+    end
+
+    def enrollment
+      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id)
+    end
+
+    def enrolled?
+      enrollment.present?
+    end
+
+    def friendly_registered_workshop
+      enrolled? ? 'Yes' : 'No'
+    end
+
+
+
+
+
+    def status_including_enrolled
+      return 'enrolled' if enrolled?
+      status
+    end
+
+
+    def workshop_present_if_required_for_status
+      if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
+          WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
+        errors.add :status, "#{status} requires workshop to be assigned"
+      end
+    end
+
+    def should_send_decision_email?
+      if regional_partner.nil? || regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
+        false
+      else
+        AUTO_EMAIL_STATUSES.include?(status)
+      end
+    end
+
+    def log_status
+      self.status_log ||= []
+      status_log.push({status: status, at: Time.zone.now})
+    end
+
+    def send_decision_email
+      send_pd_application_email(status)
+    end
+
+    # @override
+    # @param [Pd::Application::Email] email
+    # Note - this should only be called from within Pd::Application::Email.send!
+    def deliver_email(email)
+      unless email.pd_application_id == id
+        raise "Expected application id #{id} from email #{email.id}. Actual: #{email.pd_application_id}"
+      end
+
+      # email_type maps to the mailer action
+      TeacherApplicationMailer.send(email.email_type, self).deliver_now
+    end
+
+    # Return a string if the principal approval state is complete, in-progress, or not required.
+    # Otherwise return nil.
+    def principal_approval_state
+      response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
+      return "#{PRINCIPAL_APPROVAL_STATE[:complete]}Admin said #{response.full_answers[:do_you_approve]} on #{response.applied_at&.strftime('%b %-d')}" if response
+
+      principal_approval_email = emails.where(email_type: 'admin_approval').order(:created_at).last
+      if principal_approval_email
+        # Format sent date as short-month day, e.g. Oct 8
+        return PRINCIPAL_APPROVAL_STATE[:in_progress] + principal_approval_email.sent_at&.strftime('%b %-d')
+      end
+
+      return PRINCIPAL_APPROVAL_STATE[:not_required] if principal_approval_not_required
+
+      nil
+    end
+
+    def formatted_principal_email
+      ActionMailer::Base.email_address_with_name(principal_email, principal_greeting)
+    end
+
+    def effective_regional_partner_name
+      regional_partner&.name || 'Code.org'
+    end
+
+
 
     # @override
     def dynamic_required_fields(hash)
@@ -814,131 +940,10 @@ module Pd::Application
       return allow_sending_principal_email?
     end
 
-    # memoize in a hash, per course
-    FILTERED_LABELS = Hash.new do |h, key|
-      labels_to_remove = (
-      case key
-      when 'csd'
-        [
-          :csp_which_grades,
-          :csp_how_offer,
-          :csp_ap_exam,
-          :csa_which_grades,
-          :csa_how_offer,
-          :csa_already_know,
-          :csa_phone_screen
-        ]
-      when 'csp'
-        [
-          :csd_which_grades,
-          :csa_which_grades,
-          :csa_how_offer,
-          :csa_already_know,
-          :csa_phone_screen
-        ]
-      when 'csa'
-        [
-          :csp_which_grades,
-          :csp_how_offer,
-          :csp_ap_exam,
-          :csd_which_grades
-        ]
-      end
-      )
 
-      # school contains NCES id
-      # the other fields are empty in the form data unless they selected "Other" school,
-      # so we add it when we construct the csv row.
-      labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
 
-      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
-    end
 
-    # @override
-    # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course, status = 'unreviewed')
-      raise "Invalid course #{course}" unless VALID_COURSES.include?(course) || status == 'incomplete'
-      status == 'incomplete' ? {} : FILTERED_LABELS[course]
-    end
 
-    # List of columns to be filtered out based on selected program (course)
-    def self.columns_to_remove(course)
-      case course
-      when 'csd'
-        {
-          teacher: [
-            :csp_which_grades,
-            :csp_how_offer,
-            :csa_which_grades,
-            :csa_how_offer,
-            :csa_already_know,
-            :csa_phone_screen
-          ],
-          principal: [
-            :share_ap_scores,
-            :csp_implementation,
-            :csa_implementation
-          ]
-        }
-      when 'csp'
-        {
-          teacher: [
-            :csd_which_grades,
-            :csa_which_grades,
-            :csa_how_offer,
-            :csa_already_know,
-            :csa_phone_screen
-          ],
-          principal: [
-            :csd_implementation,
-            :csa_implementation
-          ]
-        }
-      when 'csa'
-        {
-          teacher: [
-            :csp_which_grades,
-            :csp_how_offer,
-            :csd_which_grades
-          ],
-          principal: [
-            :csp_implementation,
-            :csd_implementation
-          ]
-        }
-      end
-    end
-
-    def self.csv_filtered_labels(course)
-      labels = {
-        teacher: {},
-        principal: {},
-        nces: {}
-      }
-      labels_to_remove = columns_to_remove(course)
-
-      CSV_COLUMNS.each_key do |source|
-        CSV_COLUMNS[source].each do |k|
-          unless labels_to_remove[source]&.include? k.to_sym
-            labels[source][k] = CSV_LABELS[source][k] || ALL_LABELS_WITH_OVERRIDES[k]
-          end
-        end
-      end
-      labels
-    end
-
-    def self.csv_header(course)
-      labels = csv_filtered_labels(course)
-      CSV.generate do |csv|
-        columns = []
-        labels.each_key do |source|
-          labels[source].each_key do |k|
-            columns.push(labels[source][k])
-          end
-        end
-        csv << columns
-      end
-    end
 
     # @override
     def to_csv_row(course)
@@ -983,11 +988,6 @@ module Pd::Application
       end
     end
 
-    # @override
-    # Additional labels to include in the form data hash
-    def self.additional_labels
-      ADDITIONAL_KEYS_IN_ANSWERS
-    end
 
     def get_latest_school_stats(school_id)
       School.find_by_id(school_id)&.school_stats_by_year&.order(school_year: :desc)&.first

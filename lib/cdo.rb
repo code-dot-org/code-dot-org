@@ -14,6 +14,8 @@ module Cdo
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
 
+    # Simple backtrace filter
+    FILTER_GEMS = %w(rake).freeze
     def initialize
       super
       root = File.expand_path('..', __dir__)
@@ -309,8 +311,6 @@ module Cdo
       end
     end
 
-    # Simple backtrace filter
-    FILTER_GEMS = %w(rake).freeze
 
     def backtrace(exception)
       filter_backtrace exception.backtrace

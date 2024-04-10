@@ -97,6 +97,9 @@ class Applab < Blockly
     )
   end
 
+  def self.palette
+    SharedConstants::APPLAB_BLOCKS
+  end
   def xml_blocks
     %w()
   end
@@ -164,9 +167,6 @@ class Applab < Blockly
     true
   end
 
-  def self.palette
-    SharedConstants::APPLAB_BLOCKS
-  end
 
   # Add a starter asset to the level and save it in properties.
   # Starter assets are stored as an object, where the key is the

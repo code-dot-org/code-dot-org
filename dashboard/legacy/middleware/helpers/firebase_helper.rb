@@ -20,6 +20,29 @@ require 'uri'
 # A wrapper around the firebase gem. For gem documentation, see
 # https://github.com/oscardelben/firebase-ruby.
 class FirebaseHelper
+  def self.delete_channels(encrypted_channel_ids)
+    firebase_client = create_client
+    encrypted_channel_ids.each do |encrypted_channel_id|
+      firebase_client.delete "/v3/channels/#{encrypted_channel_id}/"
+    end
+  end
+  def self.delete_channel(encrypted_channel_id)
+    raise "channel_id must be non-empty" if encrypted_channel_id.nil? || encrypted_channel_id.empty?
+    create_client.delete "/v3/channels/#{encrypted_channel_id}/"
+  end
+  def self.create_shared_client
+    raise "CDO.firebase_shared_secret not defined" unless CDO.firebase_shared_secret
+    Firebase::Client.new \
+      'https://cdo-v3-shared.firebaseio.com/',
+      CDO.firebase_shared_secret
+  end
+  def self.create_client
+    raise "CDO.firebase_name not defined" unless CDO.firebase_name
+    raise "CDO.firebase_secret not defined" unless CDO.firebase_secret
+    Firebase::Client.new \
+      "https://#{CDO.firebase_name}.firebaseio.com/",
+      CDO.firebase_secret
+  end
   def initialize(channel_id)
     raise "channel_id must be non-empty" if channel_id.nil? || channel_id.empty?
     @firebase = channel_id == 'shared' ? FirebaseHelper.create_shared_client : FirebaseHelper.create_client
@@ -134,30 +157,7 @@ class FirebaseHelper
     @firebase.set("/v3/channels/shared/metadata/manifest", manifest)
   end
 
-  def self.delete_channels(encrypted_channel_ids)
-    firebase_client = create_client
-    encrypted_channel_ids.each do |encrypted_channel_id|
-      firebase_client.delete "/v3/channels/#{encrypted_channel_id}/"
-    end
-  end
 
-  def self.delete_channel(encrypted_channel_id)
-    raise "channel_id must be non-empty" if encrypted_channel_id.nil? || encrypted_channel_id.empty?
-    create_client.delete "/v3/channels/#{encrypted_channel_id}/"
-  end
 
-  def self.create_shared_client
-    raise "CDO.firebase_shared_secret not defined" unless CDO.firebase_shared_secret
-    Firebase::Client.new \
-      'https://cdo-v3-shared.firebaseio.com/',
-      CDO.firebase_shared_secret
-  end
 
-  def self.create_client
-    raise "CDO.firebase_name not defined" unless CDO.firebase_name
-    raise "CDO.firebase_secret not defined" unless CDO.firebase_secret
-    Firebase::Client.new \
-      "https://#{CDO.firebase_name}.firebaseio.com/",
-      CDO.firebase_secret
-  end
 end

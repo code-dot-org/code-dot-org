@@ -7,6 +7,7 @@ require 'dynamic_config/dcdo'
 class SharedResources < Sinatra::Base
   use Sass::Plugin::Rack
 
+  ONE_HOUR = 3600
   # Use dynamic config for max_age settings, with the provided default as fallback.
   def self.set_max_age(type, default)
     default = 60 if rack_env? :staging
@@ -14,7 +15,6 @@ class SharedResources < Sinatra::Base
     set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
-  ONE_HOUR = 3600
 
   configure do
     # Note 1: pegasus/router.rb has additional configuration for Sass::Plugin

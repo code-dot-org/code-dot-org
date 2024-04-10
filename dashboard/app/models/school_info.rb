@@ -50,15 +50,6 @@ class SchoolInfo < ApplicationRecord
 
   has_many :user_school_infos
 
-  # Remap what the form has (e.g. school_zip) to what we write to (e.g. zip)
-  def school_zip=(input)
-    self.zip = input
-  end
-
-  def school_state=(input)
-    self.state = input
-  end
-
   ATTRIBUTES = %w(
     country
     school_type
@@ -72,6 +63,15 @@ class SchoolInfo < ApplicationRecord
     school_name
     full_address
   ).freeze
+  # Remap what the form has (e.g. school_zip) to what we write to (e.g. zip)
+  def school_zip=(input)
+    self.zip = input
+  end
+
+  def school_state=(input)
+    self.state = input
+  end
+
 
   before_validation do
     ATTRIBUTES.each do |attr|

@@ -12,6 +12,30 @@ class ScriptLevelsController < ApplicationController
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
 
+  def self.get_script_level(script, params)
+    if params[:chapter]
+      script.get_script_level_by_chapter(params[:chapter])
+    elsif params[:lesson_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lesson_position], params[:id], false)
+    elsif params[:lockable_lesson_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_lesson_position], params[:id], true)
+    else
+      script.get_script_level_by_id(params[:id])
+    end
+  end
+  def self.get_script(request)
+    script_id = request.params[:script_id]
+    script = Unit.get_from_cache(script_id, raise_exceptions: false)
+    if script.nil? && Unit.family_names.include?(script_id)
+      # Due to a programming error, we have been inadvertently passing user: nil
+      # to Unit.get_unit_family_redirect_for_user . Since end users may be
+      # depending on this incorrect behavior, and we are trying to deprecate this
+      # codepath anyway, the current plan is to not fix this bug.
+      script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+    end
+    raise ActiveRecord::RecordNotFound unless script
+    script
+  end
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
     script = ScriptLevelsController.get_script(request)
@@ -182,17 +206,6 @@ class ScriptLevelsController < ApplicationController
     present_level
   end
 
-  def self.get_script_level(script, params)
-    if params[:chapter]
-      script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:lesson_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:lesson_position], params[:id], false)
-    elsif params[:lockable_lesson_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_lesson_position], params[:id], true)
-    else
-      script.get_script_level_by_id(params[:id])
-    end
-  end
 
   # Get a JSON summary of a level's information, used in modern labs that don't
   # reload the page between level views.  Note that this can be cached for a relatively
@@ -333,19 +346,6 @@ class ScriptLevelsController < ApplicationController
     render json: lesson.summary_for_lesson_plans
   end
 
-  def self.get_script(request)
-    script_id = request.params[:script_id]
-    script = Unit.get_from_cache(script_id, raise_exceptions: false)
-    if script.nil? && Unit.family_names.include?(script_id)
-      # Due to a programming error, we have been inadvertently passing user: nil
-      # to Unit.get_unit_family_redirect_for_user . Since end users may be
-      # depending on this incorrect behavior, and we are trying to deprecate this
-      # codepath anyway, the current plan is to not fix this bug.
-      script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
-    end
-    raise ActiveRecord::RecordNotFound unless script
-    script
-  end
 
   private def next_script_level
     user_or_session_level || @script.starting_level

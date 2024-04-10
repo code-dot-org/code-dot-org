@@ -89,57 +89,12 @@ class Pd::Enrollment < ApplicationRecord
     planning_to_teach_ap
   )
 
-  def set_default_scholarship_info
-    if user && workshop.csf? && workshop.school_year
-      Pd::ScholarshipInfo.update_or_create(user, workshop.school_year, COURSE_KEY_MAP[workshop.course], Pd::ScholarshipInfoConstants::YES_CDO)
-    end
-  end
-
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email_for_enrollments, user.id)
   end
-
-  # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
-  def created_before_name_split?
-    persisted? && created_at < '2016-11-10'
-  end
-
-  # School info (https://github.com/code-dot-org/code-dot-org/pull/9023) was deployed on 2016-08-30
-  def created_before_school_info?
-    persisted? && created_at < '2016-08-30'
-  end
-
-  def school_forbidden
-    errors.add(:school, 'is forbidden') if read_attribute(:school)
-  end
-
-  def school_info_country_required
-    errors.add(:school_info, 'must have a country') unless school_info.try(:country)
-  end
-
   def self.for_school_district(school_district)
     joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
-
-  scope :attended, -> {joins(:attendances).group('pd_enrollments.id')}
-  scope :not_attended, -> {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
-  scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
-
-  # Any enrollment with attendance, for an ended workshop, has a survey.
-  # Except for FiT workshops - no exit surveys for them!
-  # This scope is used in ProfessionalLearningLandingController to direct the teacher
-  #   to their latest pending survey.
-  scope :with_surveys, (lambda do
-    for_ended_workshops.
-      attended.
-      where.not(pd_workshops: {course: COURSE_FACILITATOR}).
-      where('pd_workshops.subject != ? or pd_workshops.subject is null', [SUBJECT_FIT])
-  end)
-
-  def has_user?
-    user_id
-  end
-
   # Filters a list of workshops user is enrolled in with (in)complete surveys (dependent on select_completed).
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
   # @param select_completed [Boolean] if true, return only enrollments with completed surveys,
@@ -162,6 +117,58 @@ class Pd::Enrollment < ApplicationRecord
     # (there are multiple post-survey options, therefore the facilitators must provide a link themselves).
     filter_for_foorm_survey_completion(foorm_enrollments, select_completed)
   end
+  # Maps enrollments to safe names
+  # @return [Array<Array<String, Pd::Enrollment>>] Array of tuples
+  #   representing the safe name and associated enrollment
+  def self.get_safe_names
+    # Use full name
+    all.map {|enrollment| [enrollment.full_name, enrollment]}
+  end
+  def set_default_scholarship_info
+    if user && workshop.csf? && workshop.school_year
+      Pd::ScholarshipInfo.update_or_create(user, workshop.school_year, COURSE_KEY_MAP[workshop.course], Pd::ScholarshipInfoConstants::YES_CDO)
+    end
+  end
+
+
+  # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
+  def created_before_name_split?
+    persisted? && created_at < '2016-11-10'
+  end
+
+  # School info (https://github.com/code-dot-org/code-dot-org/pull/9023) was deployed on 2016-08-30
+  def created_before_school_info?
+    persisted? && created_at < '2016-08-30'
+  end
+
+  def school_forbidden
+    errors.add(:school, 'is forbidden') if read_attribute(:school)
+  end
+
+  def school_info_country_required
+    errors.add(:school_info, 'must have a country') unless school_info.try(:country)
+  end
+
+
+  scope :attended, -> {joins(:attendances).group('pd_enrollments.id')}
+  scope :not_attended, -> {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
+  scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
+
+  # Any enrollment with attendance, for an ended workshop, has a survey.
+  # Except for FiT workshops - no exit surveys for them!
+  # This scope is used in ProfessionalLearningLandingController to direct the teacher
+  #   to their latest pending survey.
+  scope :with_surveys, (lambda do
+    for_ended_workshops.
+      attended.
+      where.not(pd_workshops: {course: COURSE_FACILITATOR}).
+      where('pd_workshops.subject != ? or pd_workshops.subject is null', [SUBJECT_FIT])
+  end)
+
+  def has_user?
+    user_id
+  end
+
 
   before_create :assign_code
   def assign_code
@@ -247,13 +254,6 @@ class Pd::Enrollment < ApplicationRecord
     write_attribute :last_name, last_name || ''
   end
 
-  # Maps enrollments to safe names
-  # @return [Array<Array<String, Pd::Enrollment>>] Array of tuples
-  #   representing the safe name and associated enrollment
-  def self.get_safe_names
-    # Use full name
-    all.map {|enrollment| [enrollment.full_name, enrollment]}
-  end
 
   # TODO: Migrate existing school entries into schoolInfo and delete school column
   def school

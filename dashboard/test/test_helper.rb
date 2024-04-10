@@ -100,6 +100,25 @@ class ActiveSupport::TestCase
     set_env :test
   end
 
+  # Add more helper methods to be used by all tests here...
+  include FactoryBot::Syntax::Methods
+  include ActiveSupport::Testing::SetupAllAndTeardownAll
+  include ActiveSupport::Testing::TransactionalTestCase
+  include CaptureQueries
+  # Freeze time for the each test case to 9am, or the specified time
+  # To use, declare anywhere in the test class:
+  #   class MyTest < ActiveSupport::TestCase
+  #     freeze_time
+  #     #...
+  def self.freeze_time(time = nil)
+    time ||= Time.now.utc.to_date + 9.hours
+    setup do
+      Timecop.freeze time
+    end
+    teardown do
+      Timecop.return
+    end
+  end
   def panda_panda
     # this is the panda face emoji which is a 4 byte utf8 character
     # (some of our db tables can't handle these)
@@ -127,11 +146,6 @@ class ActiveSupport::TestCase
     AWS::S3.expects(:upload_to_bucket).never
   end
 
-  # Add more helper methods to be used by all tests here...
-  include FactoryBot::Syntax::Methods
-  include ActiveSupport::Testing::SetupAllAndTeardownAll
-  include ActiveSupport::Testing::TransactionalTestCase
-  include CaptureQueries
 
   def seed_deprecated_unit_fixtures
     # Some of the functionality we're testing here relies on Scripts with
@@ -343,20 +357,6 @@ class ActiveSupport::TestCase
     assert_cache_control_match expected_directives, cache_control_header
   end
 
-  # Freeze time for the each test case to 9am, or the specified time
-  # To use, declare anywhere in the test class:
-  #   class MyTest < ActiveSupport::TestCase
-  #     freeze_time
-  #     #...
-  def self.freeze_time(time = nil)
-    time ||= Time.now.utc.to_date + 9.hours
-    setup do
-      Timecop.freeze time
-    end
-    teardown do
-      Timecop.return
-    end
-  end
 
   def no_database
     Rails.logger.info '--------------'
@@ -386,34 +386,11 @@ class ActionController::TestCase
     request.env['cdo.locale'] = 'en-US'
   end
 
-  # As `current_user` is not accessible from controller tests (only from within the controller),
-  # the signed in user is only accessible from the session.
-  # @returns [Integer, nil] The ID of the signed in user, nil if no user is signed in.
-  def signed_in_user_id
-    session['warden.user.user.key'].try(:first).try(:first)
-  end
-
-  # override default html document to ask it to raise errors on invalid html
-  def html_document
-    @html_document ||= if @response.content_type == Mime[:xml]
-                         Nokogiri::XML::Document.parse(@response.body, &:strict)
-                       else
-                         # TODO: Enable strict parsing after fixing html errors (FND-1573)
-                         Nokogiri::HTML::Document.parse(@response.body)
-                       end
-  end
-
-  def assert_redirected_to_sign_in
-    assert_response :redirect
-    assert_redirected_to "http://test.host/users/sign_in"
-  end
-
   def self.generate_admin_only_tests_for(action, params = {})
     test_user_gets_response_for action, user: :admin, params: params
     test_user_gets_response_for action, user: :user, response: :forbidden, params: params
     test_redirect_to_sign_in_for action, params: params
   end
-
   # Generates a test case ensuring redirect to sign in for not signed in users
   # @param action [String] the controller action to test
   # @param method [Symbol, String] http method with which to perform the action (default :get)
@@ -430,7 +407,6 @@ class ActionController::TestCase
       assert_redirected_to_sign_in
     end
   end
-
   # Generates a basic response validation test case for a user, logged-in or not.
   # @param action [String] the controller action to test
   # @param method [Symbol, String] http method with which to perform the action (default :get)
@@ -510,6 +486,30 @@ class ActionController::TestCase
       instance_exec(&block) if block
     end
   end
+  # As `current_user` is not accessible from controller tests (only from within the controller),
+  # the signed in user is only accessible from the session.
+  # @returns [Integer, nil] The ID of the signed in user, nil if no user is signed in.
+  def signed_in_user_id
+    session['warden.user.user.key'].try(:first).try(:first)
+  end
+
+  # override default html document to ask it to raise errors on invalid html
+  def html_document
+    @html_document ||= if @response.content_type == Mime[:xml]
+                         Nokogiri::XML::Document.parse(@response.body, &:strict)
+                       else
+                         # TODO: Enable strict parsing after fixing html errors (FND-1573)
+                         Nokogiri::HTML::Document.parse(@response.body)
+                       end
+  end
+
+  def assert_redirected_to_sign_in
+    assert_response :redirect
+    assert_redirected_to "http://test.host/users/sign_in"
+  end
+
+
+
 
   def css(selector)
     Nokogiri::HTML(@response.body).css(selector)

@@ -32,6 +32,9 @@ class External < DSLDefined
     associated_blocks
   )
 
+  def self.possible_associated_blocks
+    %w(bounce flappy jigsaw maze studio turtle)
+  end
   # Check if the level has a hand-written submit button. Once all submit buttons are removed from markdown, this can go away.
   def has_submit_button?
     (properties['markdown'].try(:include?, 'next-stage') || properties['markdown'].try(:include?, 'next-lesson')) && properties['markdown'].try(:include?, 'submitButton')
@@ -69,9 +72,6 @@ class External < DSLDefined
     properties['associated_blocks']
   end
 
-  def self.possible_associated_blocks
-    %w(bounce flappy jigsaw maze studio turtle)
-  end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
     super.merge(

@@ -26,6 +26,16 @@ class ScaryChangeDetector
     @all = @added + @deleted + @modified
   end
 
+  def detect_scary_changes
+    detect_new_models
+    detect_new_table_or_new_column
+    detect_column_rename
+    detect_migration_causing_db_performance_risk
+    detect_missing_yarn_lock
+    detect_special_files
+    detect_dropbox_conflicts
+    detect_changed_feature_files
+  end
   private def detect_new_models
     changes = @added.grep(/^dashboard\/app\/models\/levels\//)
     return if changes.empty?
@@ -155,16 +165,6 @@ class ScaryChangeDetector
     end
   end
 
-  def detect_scary_changes
-    detect_new_models
-    detect_new_table_or_new_column
-    detect_column_rename
-    detect_migration_causing_db_performance_risk
-    detect_missing_yarn_lock
-    detect_special_files
-    detect_dropbox_conflicts
-    detect_changed_feature_files
-  end
 end
 
 ScaryChangeDetector.new.detect_scary_changes

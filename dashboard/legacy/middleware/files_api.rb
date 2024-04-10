@@ -20,6 +20,10 @@ class FilesApi < Sinatra::Base
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
+  CONTENT_TYPE = 'Content-Type'.freeze
+  TEXT_HTML = 'text/html'.freeze
+  METADATA_PATH = '.metadata'.freeze
+  THUMBNAIL_FILENAME = 'thumbnail.png'
   def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
@@ -325,8 +329,6 @@ class FilesApi < Sinatra::Base
     %w(.jpg .jpeg .gif .png).include? extension.downcase
   end
 
-  CONTENT_TYPE = 'Content-Type'.freeze
-  TEXT_HTML = 'text/html'.freeze
 
   def html?(headers)
     headers[CONTENT_TYPE]&.include?(TEXT_HTML)
@@ -963,8 +965,6 @@ class FilesApi < Sinatra::Base
   # a new "metadata" section of the manifest.
   #
 
-  METADATA_PATH = '.metadata'.freeze
-  THUMBNAIL_FILENAME = 'thumbnail.png'
   METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
 
   #

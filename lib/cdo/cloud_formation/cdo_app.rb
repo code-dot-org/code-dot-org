@@ -49,6 +49,9 @@ module Cdo::CloudFormation
     delegate :commit, :frontends, :database, :load_balancer, :alarms, :cdn_enabled, :branch, :domain,
       to: :options
 
+    # Lookup ACM certificate for ELB and CloudFront SSL.
+    # Choose latest expiration among multiple active matching certificates.
+    ACM_REGION = 'us-east-1'.freeze
     def initialize(**options)
       options[:stack_name]  ||= CDO.stack_name
       options[:filename]    ||= 'cloud_formation_stack.yml.erb'
@@ -113,9 +116,6 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
       subdomain nil, 'studio'
     end
 
-    # Lookup ACM certificate for ELB and CloudFront SSL.
-    # Choose latest expiration among multiple active matching certificates.
-    ACM_REGION = 'us-east-1'.freeze
     def certificate_arn
       acm = Aws::ACM::Client.new(region: ACM_REGION)
       wildcard = "*.#{domain}"

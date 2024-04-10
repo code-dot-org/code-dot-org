@@ -13,13 +13,6 @@ require 'cdo/firehose'
 class StudioPerson < ApplicationRecord
   has_many :users
 
-  # Returns the emails associated with the StudioPerson as an array.
-  # @returns [Array[String]] An array of emails associated with the studio_person.
-  def emails_as_array
-    return [] if emails.nil?
-    emails.split(',')
-  end
-
   # Merges two StudioPersons into one StudioPerson, logging the event to Firehose. In doing so,
   # deletes a StudioPerson.
   # @param [StudioPerson] studio_person_a The first StudioPerson.
@@ -58,7 +51,6 @@ class StudioPerson < ApplicationRecord
     # Delete the now orphaned StudioPerson.
     studio_person_b.destroy!
   end
-
   # Splits a StudioPerson into multiple StudioPersons, logging the event to Firehose.
   # @raise [ArgumentError] If the StudioPerson does not have two associated emails, if more than two
   #   people share the StudioPerson.
@@ -95,6 +87,14 @@ class StudioPerson < ApplicationRecord
       }
     )
   end
+  # Returns the emails associated with the StudioPerson as an array.
+  # @returns [Array[String]] An array of emails associated with the studio_person.
+  def emails_as_array
+    return [] if emails.nil?
+    emails.split(',')
+  end
+
+
 
   # Adds email to the list of emails contained within emails and logs the event to Firehose.
   # @param email [String] The email to associate with this studio_person.

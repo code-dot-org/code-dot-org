@@ -8,6 +8,7 @@ require 'rmagick'
 class OptimizeTest < Minitest::Test
   include Rack::Test::Methods
 
+  LOGO_SIZE = 3374
   def setup
     require 'cdo/optimizer'
     # Stub cache so content doesn't persist across tests.
@@ -22,7 +23,6 @@ class OptimizeTest < Minitest::Test
     end
   end
 
-  LOGO_SIZE = 3374
 
   def test_optimize_image
     # First request returns original image, begins optimization in background.

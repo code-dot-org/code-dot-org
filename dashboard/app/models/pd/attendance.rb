@@ -35,6 +35,28 @@ class Pd::Attendance < ApplicationRecord
 
   alias_method :user, :teacher
 
+  def self.for_teacher(teacher)
+    where(teacher_id: teacher.id)
+  end
+  def self.for_workshop(workshop)
+    joins(:workshop).where(pd_workshops: {id: workshop.id})
+  end
+  def self.distinct_teachers
+    User.where(id: all.select(:teacher_id).distinct)
+  end
+  # Idempotent: Find existing, restore deleted, or create a new attendance row.
+  # @param search_params [Hash] params to search, or create by
+  # @return [Pd::Attendance] resulting attendance model
+  def self.find_restore_or_create_by!(search_params)
+    attendance = nil
+    Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
+      attendance = Pd::Attendance.with_deleted.find_by(search_params) ||
+        Pd::Attendance.create!(search_params)
+    end
+
+    attendance.restore! if attendance.deleted?
+    attendance
+  end
   def teacher_or_enrollment_must_be_present
     if teacher.nil? && enrollment.nil?
       errors.add(:base, 'Teacher or enrollment must be present.')
@@ -56,29 +78,7 @@ class Pd::Attendance < ApplicationRecord
       workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email_for_enrollments))
   end
 
-  def self.for_teacher(teacher)
-    where(teacher_id: teacher.id)
-  end
 
-  def self.for_workshop(workshop)
-    joins(:workshop).where(pd_workshops: {id: workshop.id})
-  end
 
-  def self.distinct_teachers
-    User.where(id: all.select(:teacher_id).distinct)
-  end
 
-  # Idempotent: Find existing, restore deleted, or create a new attendance row.
-  # @param search_params [Hash] params to search, or create by
-  # @return [Pd::Attendance] resulting attendance model
-  def self.find_restore_or_create_by!(search_params)
-    attendance = nil
-    Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      attendance = Pd::Attendance.with_deleted.find_by(search_params) ||
-        Pd::Attendance.create!(search_params)
-    end
-
-    attendance.restore! if attendance.deleted?
-    attendance
-  end
 end

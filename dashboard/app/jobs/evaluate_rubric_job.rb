@@ -58,6 +58,8 @@ class EvaluateRubricJob < ApplicationJob
   # The CloudWatch metric namespace
   AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
 
+  RETRIES_ON_RATE_LIMIT = 3
+  RETRIES_ON_TIMEOUT = 2
   # Write out metrics reflected in the response to CloudWatch
   #
   # Currently, this keeps track of a curated set of metrics returned
@@ -91,6 +93,108 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  def self.ai_enabled?(script_level)
+    !!get_lesson_s3_name(script_level)
+  end
+  # returns the path suffix of the location in S3 which contains the config
+  # needed to evaluate the rubric for the given script level.
+  def self.get_lesson_s3_name(script_level)
+    UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
+  end
+  def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
+    user = User.find(user_id)
+    script_level = ScriptLevel.find(script_level_id)
+    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
+
+    # Find the rubric evaluation record (or raise RecordNotFound)
+    raise "ERROR: must provide rubric ai evaluation record id" unless rubric_ai_evaluation_id
+    rubric_ai_evaluation = RubricAiEvaluation.find(rubric_ai_evaluation_id)
+
+    raise 'CDO.openai_evaluate_rubric_api_key not set' unless CDO.openai_evaluate_rubric_api_key
+    raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
+
+    # Find the rubric (or raise RecordNotFound)
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+
+    channel_id = get_channel_id(user, script_level)
+    code, project_version = read_user_code(channel_id)
+
+    # Check for PII / sharing failures
+    # Get the 2-character language code from the user's preferred locale
+    locale = (user.locale || 'en')[0...2]
+    ShareFiltering.find_share_failure(code, locale, exceptions: true)
+
+    openai_params = get_openai_params(lesson_s3_name, code)
+    response = get_openai_evaluations(openai_params)
+
+    # Log tokens and usage information
+    EvaluateRubricJob.log_metrics(response)
+
+    # Get and validate the response data
+    ai_evaluations = response['data']
+    validate_evaluations(ai_evaluations, rubric)
+
+    ai_confidence_levels_pass_fail = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
+    confidence_exact_json = read_file_from_s3(lesson_s3_name, 'confidence-exact.json', allow_missing: true)
+    ai_confidence_levels_exact_match = confidence_exact_json ? JSON.parse(confidence_exact_json) : nil
+    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
+
+    write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
+  end
+  # The client for s3 access made directly by this job, not via SourceBucket.
+  def s3_client
+    @s3_client ||= AWS::S3.create_client
+  end
+  def validate_ai_config
+    lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
+    code = 'hello world'
+    lesson_s3_names.each do |lesson_s3_name|
+      validate_ai_config_for_lesson(lesson_s3_name, code)
+    end
+    validate_learning_goals
+    S3_AI_RELEASE_PATH
+  end
+  def validate_ai_config_for_lesson(lesson_s3_name, code)
+    # this step should raise an error if any essential config files are missing
+    # from the S3 release directory
+    get_openai_params(lesson_s3_name, code)
+  rescue Aws::S3::Errors::NoSuchKey => exception
+    raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
+  end
+  # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
+  # ai-enabled learning goal in its rubric in the database has a corresponding
+  # learning goal in the rubric in S3.
+  def validate_learning_goals
+    UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
+      levels = level_to_lesson.keys
+      unless Unit.find_by_name(unit_name)
+        raise "Unit not found: #{unit_name.inspect}. Make sure you ran `rake seed:scripts` locally, and added it to UI_TEST_SCRIPTS for drone/ci."
+      end
+      levels.each do |level_name|
+        level = Level.find_by_name!(level_name)
+        script_level = level.script_levels.select {|sl| sl.script.name == unit_name}.first
+        lesson = script_level.lesson
+        rubric = Rubric.find_by!(lesson: lesson, level: level)
+        validate_learning_goals_for_rubric(rubric)
+      rescue StandardError => exception
+        raise "Error validating learning goals for unit #{unit_name} lesson #{lesson&.relative_position.inspect} level #{level_name.inspect}: #{exception.message}"
+      end
+    end
+  end
+  def validate_learning_goals_for_rubric(rubric)
+    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
+    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
+    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
+    missing_learning_goals = db_learning_goals - s3_learning_goals
+    if missing_learning_goals.any?
+      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
+    end
+  end
+  def get_s3_learning_goals(lesson_s3_name)
+    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
+    rubric_rows.map {|row| row['Key Concept']}
+  end
   # Ensure that the RubricAiEvaluation exists as an argument to the job
   private def pass_in_or_create_rubric_ai_evaluation(job)
     # Get the first argument to perform() which is the hash of named arguments
@@ -188,7 +292,6 @@ class EvaluateRubricJob < ApplicationJob
     # We gracefully just fail, here, and we do not file this exception
   end
 
-  RETRIES_ON_RATE_LIMIT = 3
 
   # Retry on any reported rate limit (429 status) 'exponentially_longer' waits 3s, 18s, and then 83s.
   retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: RETRIES_ON_RATE_LIMIT do |job, error|
@@ -204,7 +307,6 @@ class EvaluateRubricJob < ApplicationJob
     )
   end
 
-  RETRIES_ON_TIMEOUT = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
   retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
@@ -220,61 +322,9 @@ class EvaluateRubricJob < ApplicationJob
     )
   end
 
-  def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
-    user = User.find(user_id)
-    script_level = ScriptLevel.find(script_level_id)
-    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
 
-    # Find the rubric evaluation record (or raise RecordNotFound)
-    raise "ERROR: must provide rubric ai evaluation record id" unless rubric_ai_evaluation_id
-    rubric_ai_evaluation = RubricAiEvaluation.find(rubric_ai_evaluation_id)
 
-    raise 'CDO.openai_evaluate_rubric_api_key not set' unless CDO.openai_evaluate_rubric_api_key
-    raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
-    # Find the rubric (or raise RecordNotFound)
-    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
-
-    channel_id = get_channel_id(user, script_level)
-    code, project_version = read_user_code(channel_id)
-
-    # Check for PII / sharing failures
-    # Get the 2-character language code from the user's preferred locale
-    locale = (user.locale || 'en')[0...2]
-    ShareFiltering.find_share_failure(code, locale, exceptions: true)
-
-    openai_params = get_openai_params(lesson_s3_name, code)
-    response = get_openai_evaluations(openai_params)
-
-    # Log tokens and usage information
-    EvaluateRubricJob.log_metrics(response)
-
-    # Get and validate the response data
-    ai_evaluations = response['data']
-    validate_evaluations(ai_evaluations, rubric)
-
-    ai_confidence_levels_pass_fail = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
-    confidence_exact_json = read_file_from_s3(lesson_s3_name, 'confidence-exact.json', allow_missing: true)
-    ai_confidence_levels_exact_match = confidence_exact_json ? JSON.parse(confidence_exact_json) : nil
-    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
-
-    write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
-  end
-
-  def self.ai_enabled?(script_level)
-    !!get_lesson_s3_name(script_level)
-  end
-
-  # returns the path suffix of the location in S3 which contains the config
-  # needed to evaluate the rubric for the given script level.
-  def self.get_lesson_s3_name(script_level)
-    UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
-  end
-
-  # The client for s3 access made directly by this job, not via SourceBucket.
-  def s3_client
-    @s3_client ||= AWS::S3.create_client
-  end
 
   # get the channel id of the project which stores the user's code on this script level.
   private def get_channel_id(user, script_level)
@@ -343,60 +393,10 @@ class EvaluateRubricJob < ApplicationJob
     )
   end
 
-  def validate_ai_config
-    lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
-    code = 'hello world'
-    lesson_s3_names.each do |lesson_s3_name|
-      validate_ai_config_for_lesson(lesson_s3_name, code)
-    end
-    validate_learning_goals
-    S3_AI_RELEASE_PATH
-  end
 
-  def validate_ai_config_for_lesson(lesson_s3_name, code)
-    # this step should raise an error if any essential config files are missing
-    # from the S3 release directory
-    get_openai_params(lesson_s3_name, code)
-  rescue Aws::S3::Errors::NoSuchKey => exception
-    raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
-  end
 
-  # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
-  # ai-enabled learning goal in its rubric in the database has a corresponding
-  # learning goal in the rubric in S3.
-  def validate_learning_goals
-    UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
-      levels = level_to_lesson.keys
-      unless Unit.find_by_name(unit_name)
-        raise "Unit not found: #{unit_name.inspect}. Make sure you ran `rake seed:scripts` locally, and added it to UI_TEST_SCRIPTS for drone/ci."
-      end
-      levels.each do |level_name|
-        level = Level.find_by_name!(level_name)
-        script_level = level.script_levels.select {|sl| sl.script.name == unit_name}.first
-        lesson = script_level.lesson
-        rubric = Rubric.find_by!(lesson: lesson, level: level)
-        validate_learning_goals_for_rubric(rubric)
-      rescue StandardError => exception
-        raise "Error validating learning goals for unit #{unit_name} lesson #{lesson&.relative_position.inspect} level #{level_name.inspect}: #{exception.message}"
-      end
-    end
-  end
 
-  def validate_learning_goals_for_rubric(rubric)
-    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
-    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
-    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
-    missing_learning_goals = db_learning_goals - s3_learning_goals
-    if missing_learning_goals.any?
-      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
-    end
-  end
 
-  def get_s3_learning_goals(lesson_s3_name)
-    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
-    rubric_rows.map {|row| row['Key Concept']}
-  end
 
   private def get_openai_evaluations(openai_params)
     origin = get_ai_proxy_origin

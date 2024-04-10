@@ -21,6 +21,14 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
   belongs_to :pd_enrollment, class_name: 'Pd::Enrollment'
   has_one :workshop, through: :pd_enrollment
 
+  def self.required_fields
+    [
+      :unit
+    ].freeze
+  end
+  def self.units_and_lessons(workshop)
+    workshop.pre_survey_units_and_lessons.unshift([UNIT_NOT_STARTED, nil])
+  end
   # PreWorkshopSurvey has dynamic options based on the workshop
   def dynamic_options
     {
@@ -29,11 +37,6 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
     }.compact
   end
 
-  def self.required_fields
-    [
-      :unit
-    ].freeze
-  end
 
   # @override
   def dynamic_required_fields(sanitized_form_data_hash)
@@ -41,9 +44,6 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
     unit_not_started? ? [] : [:lesson]
   end
 
-  def self.units_and_lessons(workshop)
-    workshop.pre_survey_units_and_lessons.unshift([UNIT_NOT_STARTED, nil])
-  end
 
   def unit
     sanitized_form_data_hash[:unit]

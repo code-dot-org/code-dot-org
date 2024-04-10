@@ -65,6 +65,16 @@ class ProgrammingEnvironment < ApplicationRecord
     environment.name
   end
 
+  def self.get_published_environments_from_cache
+    Rails.cache.fetch("published_programming_environments", force: !Unit.should_cache?) do
+      @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
+    end
+  end
+  def self.get_from_cache(name)
+    Rails.cache.fetch("programming_environment/#{name}", force: !Unit.should_cache?) do
+      ProgrammingEnvironment.find_by_name(name)
+    end
+  end
   def file_path
     Rails.root.join("config/programming_environments/#{name.parameterize}.json")
   end
@@ -153,15 +163,5 @@ class ProgrammingEnvironment < ApplicationRecord
     end
   end
 
-  def self.get_published_environments_from_cache
-    Rails.cache.fetch("published_programming_environments", force: !Unit.should_cache?) do
-      @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
-    end
-  end
 
-  def self.get_from_cache(name)
-    Rails.cache.fetch("programming_environment/#{name}", force: !Unit.should_cache?) do
-      ProgrammingEnvironment.find_by_name(name)
-    end
-  end
 end

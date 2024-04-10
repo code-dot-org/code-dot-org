@@ -27,12 +27,6 @@ class Foorm::Form < ApplicationRecord
 
   after_commit :write_form_to_file
 
-  # We have a uniqueness constraint on form name and version for this table.
-  # This key format is used elsewhere in Foorm to uniquely identify a form.
-  def key
-    "#{name}.#{version}"
-  end
-
   def self.setup
     # Seed all forms inside of a transaction, such that all forms are imported/updated successfully
     # or none at all.
@@ -63,6 +57,127 @@ class Foorm::Form < ApplicationRecord
       end
     end
   end
+  def self.get_questions_and_latest_version_for_name(form_name)
+    latest_published_version = Foorm::Form.where(name: form_name, published: true).maximum(:version)
+    return nil if latest_published_version.nil?
+
+    questions = get_questions_for_name_and_version(form_name, latest_published_version)
+
+    return questions, latest_published_version
+  end
+  def self.get_questions_for_name_and_version(form_name, form_version)
+    form = Foorm::Form.where(name: form_name, version: form_version).first
+
+    # Substitute any questions from the library.
+    questions = JSON.parse(form.questions)
+    questions = fill_in_library_items(questions)
+
+    return questions
+  end
+  def self.fill_in_library_items(questions)
+    questions["pages"]&.each do |page|
+      page["elements"]&.map! do |element|
+        if element["type"] == "library_item"
+          library_question = Foorm::LibraryQuestion.where(
+            library_name: element["library_name"],
+            library_version: element["library_version"].to_i,
+            question_name: element["name"]
+          ).first
+          unless library_question
+            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']}, " \
+                                        "version: #{element['library_version']} and question name #{element['name']}."
+          end
+          JSON.parse(library_question.question)
+        else
+          element
+        end
+      end
+    end
+    return questions
+  end
+  def self.validate_questions(questions)
+    # fill_in_library_items will throw an exception if any library items are invalid.
+    # If the questions are not valid JSON, JSON.parse will throw an exception.
+    errors = []
+    begin
+      filled_questions = Foorm::Form.fill_in_library_items(questions)
+    rescue StandardError => exception
+      errors.append(exception.message)
+      return errors
+    end
+    filled_questions.deep_symbolize_keys!
+    element_names = Set.new
+    filled_questions[:pages]&.each do |page|
+      page[:elements]&.each do |element_data|
+        # validate_element will throw an exception if the element is invalid
+        Foorm::Form.validate_element(element_data, element_names)
+      rescue StandardError => exception
+        errors.append(exception.message)
+      end
+    end
+    errors
+  end
+  # Checks that the element name is not in element_names and the choices/rows/columns are unique and all have
+  # value/text parameters. If any of the above are not true, will raise an InvalidFoormConfigurationError.
+  # Note that this method is also used to validate library_questions.
+  def self.validate_element(element_data, element_names)
+    return unless PANEL_TYPES.include?(element_data[:type]) || QUESTION_TYPES.include?(element_data[:type])
+    unless element_data[:name]
+      raise InvalidFoormConfigurationError, "No name provided for element with title ''#{element_data[:title]}''"
+    end
+    if element_names.include?(element_data[:name])
+      raise InvalidFoormConfigurationError, "Duplicate element name #{element_data[:name]}."
+    end
+    element_names.add(element_data[:name])
+    if PANEL_TYPES.include?(element_data[:type])
+      elements = element_data[:elements]
+      if element_data[:type] == TYPE_PANEL_DYNAMIC
+        elements = element_data[:templateElements]
+      end
+      elements.each do |panel_question_data|
+        validate_element(panel_question_data, element_names)
+      end
+    elsif QUESTION_TYPES.include?(element_data[:type])
+      validate_question(element_data)
+    end
+  end
+  def self.validate_question(question_data)
+    case question_data[:type]
+    when TYPE_CHECKBOX, TYPE_RADIO, TYPE_DROPDOWN
+      validate_choices(question_data[:choices], question_data[:name])
+    when TYPE_MATRIX
+      validate_choices(question_data[:rows], question_data[:name])
+      validate_choices(question_data[:columns], question_data[:name])
+    end
+  end
+  def self.validate_choices(choices, question_name)
+    choice_values = Set.new
+    choices.each do |choice|
+      if choice.instance_of?(Hash) && choice.key?(:value) && choice.key?(:text)
+        if choice_values.include?(choice[:value])
+          raise InvalidFoormConfigurationError, "Duplicate choice value #{choice[:value]} in question #{question_name}."
+        end
+        choice_values.add(choice[:value])
+      elsif choice.instance_of?(Hash)
+        unless choice.key?(:value)
+          error_msg = "Foorm configuration contains question '#{question_name}' without a  value for a choice. Choice text is '#{choice[:text]}'."
+          raise InvalidFoormConfigurationError, error_msg
+        end
+      elsif choice.instance_of?(String)
+        error_msg = "Foorm configuration contains question '#{question_name}' without key-value choice. Choice is '#{choice}'."
+        raise InvalidFoormConfigurationError,  error_msg
+      end
+    end
+  end
+  def self.get_matrix_question_id(parent_question_id, sub_question_id)
+    parent_question_id + '-' + sub_question_id
+  end
+  # We have a uniqueness constraint on form name and version for this table.
+  # This key format is used elsewhere in Foorm to uniquely identify a form.
+  def key
+    "#{name}.#{version}"
+  end
+
 
   def validate_questions
     errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
@@ -88,128 +203,13 @@ class Foorm::Form < ApplicationRecord
     end
   end
 
-  def self.get_questions_and_latest_version_for_name(form_name)
-    latest_published_version = Foorm::Form.where(name: form_name, published: true).maximum(:version)
-    return nil if latest_published_version.nil?
 
-    questions = get_questions_for_name_and_version(form_name, latest_published_version)
 
-    return questions, latest_published_version
-  end
 
-  def self.get_questions_for_name_and_version(form_name, form_version)
-    form = Foorm::Form.where(name: form_name, version: form_version).first
 
-    # Substitute any questions from the library.
-    questions = JSON.parse(form.questions)
-    questions = fill_in_library_items(questions)
 
-    return questions
-  end
 
-  def self.fill_in_library_items(questions)
-    questions["pages"]&.each do |page|
-      page["elements"]&.map! do |element|
-        if element["type"] == "library_item"
-          library_question = Foorm::LibraryQuestion.where(
-            library_name: element["library_name"],
-            library_version: element["library_version"].to_i,
-            question_name: element["name"]
-          ).first
-          unless library_question
-            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']}, " \
-                                        "version: #{element['library_version']} and question name #{element['name']}."
-          end
-          JSON.parse(library_question.question)
-        else
-          element
-        end
-      end
-    end
-    return questions
-  end
 
-  def self.validate_questions(questions)
-    # fill_in_library_items will throw an exception if any library items are invalid.
-    # If the questions are not valid JSON, JSON.parse will throw an exception.
-    errors = []
-    begin
-      filled_questions = Foorm::Form.fill_in_library_items(questions)
-    rescue StandardError => exception
-      errors.append(exception.message)
-      return errors
-    end
-    filled_questions.deep_symbolize_keys!
-    element_names = Set.new
-    filled_questions[:pages]&.each do |page|
-      page[:elements]&.each do |element_data|
-        # validate_element will throw an exception if the element is invalid
-        Foorm::Form.validate_element(element_data, element_names)
-      rescue StandardError => exception
-        errors.append(exception.message)
-      end
-    end
-    errors
-  end
-
-  # Checks that the element name is not in element_names and the choices/rows/columns are unique and all have
-  # value/text parameters. If any of the above are not true, will raise an InvalidFoormConfigurationError.
-  # Note that this method is also used to validate library_questions.
-  def self.validate_element(element_data, element_names)
-    return unless PANEL_TYPES.include?(element_data[:type]) || QUESTION_TYPES.include?(element_data[:type])
-    unless element_data[:name]
-      raise InvalidFoormConfigurationError, "No name provided for element with title ''#{element_data[:title]}''"
-    end
-    if element_names.include?(element_data[:name])
-      raise InvalidFoormConfigurationError, "Duplicate element name #{element_data[:name]}."
-    end
-    element_names.add(element_data[:name])
-    if PANEL_TYPES.include?(element_data[:type])
-      elements = element_data[:elements]
-      if element_data[:type] == TYPE_PANEL_DYNAMIC
-        elements = element_data[:templateElements]
-      end
-      elements.each do |panel_question_data|
-        validate_element(panel_question_data, element_names)
-      end
-    elsif QUESTION_TYPES.include?(element_data[:type])
-      validate_question(element_data)
-    end
-  end
-
-  def self.validate_question(question_data)
-    case question_data[:type]
-    when TYPE_CHECKBOX, TYPE_RADIO, TYPE_DROPDOWN
-      validate_choices(question_data[:choices], question_data[:name])
-    when TYPE_MATRIX
-      validate_choices(question_data[:rows], question_data[:name])
-      validate_choices(question_data[:columns], question_data[:name])
-    end
-  end
-
-  def self.validate_choices(choices, question_name)
-    choice_values = Set.new
-    choices.each do |choice|
-      if choice.instance_of?(Hash) && choice.key?(:value) && choice.key?(:text)
-        if choice_values.include?(choice[:value])
-          raise InvalidFoormConfigurationError, "Duplicate choice value #{choice[:value]} in question #{question_name}."
-        end
-        choice_values.add(choice[:value])
-      elsif choice.instance_of?(Hash)
-        unless choice.key?(:value)
-          error_msg = "Foorm configuration contains question '#{question_name}' without a  value for a choice. Choice text is '#{choice[:text]}'."
-          raise InvalidFoormConfigurationError, error_msg
-        end
-      elsif choice.instance_of?(String)
-        error_msg = "Foorm configuration contains question '#{question_name}' without key-value choice. Choice is '#{choice}'."
-        raise InvalidFoormConfigurationError,  error_msg
-      end
-    end
-  end
-
-  def self.get_matrix_question_id(parent_question_id, sub_question_id)
-    parent_question_id + '-' + sub_question_id
-  end
 
   # For a given Form, this method will produce a CSV of all responses
   # received for that Form. It includes the content of the form submitted

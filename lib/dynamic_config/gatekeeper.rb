@@ -24,6 +24,12 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class GatekeeperBase < DynamicConfigBase
+  # Factory method for creating GatekeeperBase objects
+  # @returns [GatekeeperBase]
+  def self.create
+    datastore_cache = EnvironmentAwareDynamicConfigHelper.create_datastore_cache(CDO.gatekeeper_table_name)
+    GatekeeperBase.new datastore_cache
+  end
   # @param feature [String] the name of the feature
   # @param where [Hash] a hash of conditions
   # @param default [Bool] the default value to return
@@ -99,12 +105,6 @@ class GatekeeperBase < DynamicConfigBase
     Oj.dump(stringify_keys(where).sort, mode: :strict)
   end
 
-  # Factory method for creating GatekeeperBase objects
-  # @returns [GatekeeperBase]
-  def self.create
-    datastore_cache = EnvironmentAwareDynamicConfigHelper.create_datastore_cache(CDO.gatekeeper_table_name)
-    GatekeeperBase.new datastore_cache
-  end
 
   # Returns the hash version of gatekeeper
   def to_hash

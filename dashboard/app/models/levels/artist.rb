@@ -42,6 +42,21 @@ class Artist < Blockly
     enable_download_image
   )
 
+  # List of possible skins, the first is used as a default.
+  def self.skins
+    %w(artist artist_zombie elsa anna)
+  end
+  def self.create_from_level_builder(params, level_params)
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.custom_artist,
+        level_num: 'custom',
+        validation_enabled: true,
+        enable_download_image: false
+      )
+    )
+  end
   def xml_blocks
     super + %w(predraw_blocks)
   end
@@ -56,22 +71,7 @@ class Artist < Blockly
     end
   end
 
-  # List of possible skins, the first is used as a default.
-  def self.skins
-    %w(artist artist_zombie elsa anna)
-  end
 
-  def self.create_from_level_builder(params, level_params)
-    create!(
-      level_params.merge(
-        user: params[:user],
-        game: Game.custom_artist,
-        level_num: 'custom',
-        validation_enabled: true,
-        enable_download_image: false
-      )
-    )
-  end
 
   def toolbox(type)
     <<~XML.strip_heredoc.chomp

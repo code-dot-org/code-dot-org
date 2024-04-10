@@ -14,6 +14,14 @@
 #  index_frameworks_on_shortcode  (shortcode) UNIQUE
 #
 class Framework < ApplicationRecord
+  def self.seed_all
+    filename = 'config/standards/frameworks.csv'
+    CSV.foreach(filename, headers: true) do |row|
+      framework = Framework.find_or_initialize_by(shortcode: row['framework'])
+      framework.name = row['name']
+      framework.save! if framework.changed?
+    end
+  end
   def summarize_for_lesson_edit
     {
       name: name,
@@ -29,12 +37,4 @@ class Framework < ApplicationRecord
     Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name, crowdin_key)
   end
 
-  def self.seed_all
-    filename = 'config/standards/frameworks.csv'
-    CSV.foreach(filename, headers: true) do |row|
-      framework = Framework.find_or_initialize_by(shortcode: row['framework'])
-      framework.name = row['name']
-      framework.save! if framework.changed?
-    end
-  end
 end

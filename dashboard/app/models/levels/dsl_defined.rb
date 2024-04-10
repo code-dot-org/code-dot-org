@@ -33,6 +33,92 @@ class DSLDefined < Level
 
   DEFAULT_LEVEL_NAME = 'unique level name here'
 
+  # Localized content for DSL-Defined levels can be any combination of strings,
+  # arrays, or hashes. In every case, when we do not yet have a translation for
+  # a piece of content it comes back as nil. When that happens, we want to
+  # default back to the source (English) content; but we also want to make sure
+  # that we can deal with cases when _some_ of the content has been translated,
+  # but other parts return nil.
+  def self.resolve_partially_localized(localized, source)
+    if localized.blank?
+      source
+    elsif localized.is_a? Hash
+      source.deep_merge(localized).deep_stringify_keys
+    elsif localized.is_a? Array
+      localized.zip(source).map do |loc, src|
+        resolve_partially_localized(loc, src)
+      end
+    else
+      localized
+    end
+  end
+  def self.setup(data, md5 = nil)
+    level = find_or_create_by({name: data[:name].strip})
+    level.send(:write_attribute, 'properties', {})
+
+    level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties], md5: md5)
+
+    level
+  end
+  def self.dsl_class
+    "#{self}DSL".constantize
+  end
+  # Use DSL class to parse string
+  def self.parse(str, filename, name = nil)
+    dsl_class.parse(str, filename, name)
+  end
+  def self.create_from_level_builder(params, level_params, old_name = nil)
+    text = level_params[:dsl_text] || params[:dsl_text]
+    text = set_editor_experiment(text, level_params[:editor_experiment])
+    transaction do
+      # Parse data, save updated level data to database
+      data, _ = dsl_class.parse(text, '')
+      level_params.delete(:name)
+      level_params.delete(:type) if data[:properties][:type]
+      data[:properties].merge! level_params
+
+      if old_name && data[:name] != old_name
+        raise "Renaming of DSLDefined levels is not allowed: '#{old_name}' --> '#{data[:name]}'"
+      end
+
+      # prevent levelbuilder from reseeding this level during the next deploy.
+      md5 = Digest::MD5.hexdigest(text)
+
+      level = setup data, md5
+
+      # Save updated level data to external files
+      if Rails.application.config.levelbuilder_mode
+        if level.existing_filename.blank? && File.exist?(Rails.root.join(level.canonical_filename))
+          raise ArgumentError, "Cannot create level named #{level.name.dump} because file #{level.canonical_filename.dump} already exists"
+        end
+        level.rewrite_dsl_file(text)
+      end
+
+      level
+    end
+  end
+  def self.decrypt_dsl_text_if_necessary(dsl_text)
+    if dsl_text =~ /^encrypted '(.*)'$/m
+      begin
+        return Encryption.decrypt_object($1)
+      rescue Exception
+        # just return the encrypted text
+      end
+    end
+    return dsl_text
+  end
+  def self.set_editor_experiment(dsl_text, editor_experiment)
+    return dsl_text unless editor_experiment
+
+    # remove previous editor experiment
+    dsl_text = dsl_text.sub(/\neditor_experiment.*/, '')
+
+    # define editor_experiment on the second line of the dsl file.
+    index = dsl_text.index("\n")
+    dsl_text = dsl_text.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
+
+    dsl_text
+  end
   def validate_level_name
     errors.add(:name, "cannot be the default level name") if name == DEFAULT_LEVEL_NAME
   end
@@ -68,74 +154,10 @@ class DSLDefined < Level
     self.class.resolve_partially_localized(localized, source)
   end
 
-  # Localized content for DSL-Defined levels can be any combination of strings,
-  # arrays, or hashes. In every case, when we do not yet have a translation for
-  # a piece of content it comes back as nil. When that happens, we want to
-  # default back to the source (English) content; but we also want to make sure
-  # that we can deal with cases when _some_ of the content has been translated,
-  # but other parts return nil.
-  def self.resolve_partially_localized(localized, source)
-    if localized.blank?
-      source
-    elsif localized.is_a? Hash
-      source.deep_merge(localized).deep_stringify_keys
-    elsif localized.is_a? Array
-      localized.zip(source).map do |loc, src|
-        resolve_partially_localized(loc, src)
-      end
-    else
-      localized
-    end
-  end
 
-  def self.setup(data, md5 = nil)
-    level = find_or_create_by({name: data[:name].strip})
-    level.send(:write_attribute, 'properties', {})
 
-    level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties], md5: md5)
 
-    level
-  end
 
-  def self.dsl_class
-    "#{self}DSL".constantize
-  end
-
-  # Use DSL class to parse string
-  def self.parse(str, filename, name = nil)
-    dsl_class.parse(str, filename, name)
-  end
-
-  def self.create_from_level_builder(params, level_params, old_name = nil)
-    text = level_params[:dsl_text] || params[:dsl_text]
-    text = set_editor_experiment(text, level_params[:editor_experiment])
-    transaction do
-      # Parse data, save updated level data to database
-      data, _ = dsl_class.parse(text, '')
-      level_params.delete(:name)
-      level_params.delete(:type) if data[:properties][:type]
-      data[:properties].merge! level_params
-
-      if old_name && data[:name] != old_name
-        raise "Renaming of DSLDefined levels is not allowed: '#{old_name}' --> '#{data[:name]}'"
-      end
-
-      # prevent levelbuilder from reseeding this level during the next deploy.
-      md5 = Digest::MD5.hexdigest(text)
-
-      level = setup data, md5
-
-      # Save updated level data to external files
-      if Rails.application.config.levelbuilder_mode
-        if level.existing_filename.blank? && File.exist?(Rails.root.join(level.canonical_filename))
-          raise ArgumentError, "Cannot create level named #{level.name.dump} because file #{level.canonical_filename.dump} already exists"
-        end
-        level.rewrite_dsl_file(text)
-      end
-
-      level
-    end
-  end
 
   # Write the specified text to the dsl level definition file for this level.
   def rewrite_dsl_file(text)
@@ -167,16 +189,6 @@ class DSLDefined < Level
      "encrypted '#{Encryption.encrypt_object(dsl_text)}'"].join("\n")
   end
 
-  def self.decrypt_dsl_text_if_necessary(dsl_text)
-    if dsl_text =~ /^encrypted '(.*)'$/m
-      begin
-        return Encryption.decrypt_object($1)
-      rescue Exception
-        # just return the encrypted text
-      end
-    end
-    return dsl_text
-  end
 
   def clone_with_name(new_name, editor_experiment: nil)
     raise ArgumentError, "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
@@ -224,18 +236,6 @@ class DSLDefined < Level
     false
   end
 
-  def self.set_editor_experiment(dsl_text, editor_experiment)
-    return dsl_text unless editor_experiment
-
-    # remove previous editor experiment
-    dsl_text = dsl_text.sub(/\neditor_experiment.*/, '')
-
-    # define editor_experiment on the second line of the dsl file.
-    index = dsl_text.index("\n")
-    dsl_text = dsl_text.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
-
-    dsl_text
-  end
 
   private def delete_level_file
     FileUtils.rm_f(file_path)

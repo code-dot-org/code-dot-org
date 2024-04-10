@@ -36,6 +36,22 @@ class BubbleChoice < DSLDefined
 
   ALPHABET = ('a'..'z').to_a
 
+  # Returns an array of BubbleChoice parent levels for any given sublevel name.
+  # @param [String] level_name. The name of the sublevel.
+  # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
+  def self.parent_levels(level_name)
+    includes(:child_levels).where(child_levels_levels: {name: level_name}).to_a
+  end
+  def self.setup(data, md5)
+    sublevel_names = data[:properties].delete(:sublevels)
+    level = super(data, md5)
+    level.setup_sublevels(sublevel_names)
+    level
+  end
+  # Some BubbleChoice sublevels also have a contained level
+  def self.level_for_progress_for_sublevel(sublevel)
+    sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
+  end
   def dsl_default
     <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
@@ -204,12 +220,6 @@ class BubbleChoice < DSLDefined
     user_levels.max_by(&:best_result)&.level_id
   end
 
-  # Returns an array of BubbleChoice parent levels for any given sublevel name.
-  # @param [String] level_name. The name of the sublevel.
-  # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
-  def self.parent_levels(level_name)
-    includes(:child_levels).where(child_levels_levels: {name: level_name}).to_a
-  end
 
   def supports_markdown?
     true
@@ -226,12 +236,6 @@ class BubbleChoice < DSLDefined
     level
   end
 
-  def self.setup(data, md5)
-    sublevel_names = data[:properties].delete(:sublevels)
-    level = super(data, md5)
-    level.setup_sublevels(sublevel_names)
-    level
-  end
 
   def setup_sublevels(sublevel_names)
     # if our existing sublevels already match the given names, do nothing
@@ -251,10 +255,6 @@ class BubbleChoice < DSLDefined
     reload
   end
 
-  # Some BubbleChoice sublevels also have a contained level
-  def self.level_for_progress_for_sublevel(sublevel)
-    sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
-  end
 
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]

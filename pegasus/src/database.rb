@@ -7,6 +7,9 @@ require 'active_support/core_ext/enumerable'
 require 'active_support/core_ext/object/deep_dup'
 
 class Tutorials
+  def self.sort_by_popularity?(site, hoc_mode)
+    (hoc_mode == "post-hoc") || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
+  end
   # This class uses data from two GSheets:
   #   GoogleDrive://Pegasus/v3/cdo-tutorials
   #   GoogleDrive://Pegasus/v3/cdo-beyond-tutorials
@@ -75,9 +78,6 @@ class Tutorials
     by_short_code[short_code]
   end
 
-  def self.sort_by_popularity?(site, hoc_mode)
-    (hoc_mode == "post-hoc") || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
-  end
 end
 
 def no_credit_count

@@ -41,6 +41,16 @@ class StandaloneVideo < Level
 
   validate :has_video_key?
 
+  def self.create_from_level_builder(params, level_params)
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.standalone_video,
+        level_num: 'custom',
+        properties: {}
+      )
+    )
+  end
   def has_video_key?
     if video_key.blank?
       errors.add :video_key, :blank
@@ -64,16 +74,6 @@ class StandaloneVideo < Level
     uses_lab2
   end
 
-  def self.create_from_level_builder(params, level_params)
-    create!(
-      level_params.merge(
-        user: params[:user],
-        game: Game.standalone_video,
-        level_num: 'custom',
-        properties: {}
-      )
-    )
-  end
 
   def localized_long_instructions
     return nil unless long_instructions

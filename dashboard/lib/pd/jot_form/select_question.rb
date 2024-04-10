@@ -1,6 +1,9 @@
 module Pd
   module JotForm
     class SelectQuestion < QuestionWithOptions
+      # JotForm designates the "other" option with this key.
+      # Other question keys are numbered.
+      OTHER_ANSWER_KEY = 'other'.freeze
       def self.supported_types
         [
           TYPE_DROPDOWN,
@@ -9,9 +12,6 @@ module Pd
         ]
       end
 
-      # JotForm designates the "other" option with this key.
-      # Other question keys are numbered.
-      OTHER_ANSWER_KEY = 'other'.freeze
 
       attr_accessor(
         :allow_other,

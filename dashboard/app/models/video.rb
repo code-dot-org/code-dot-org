@@ -91,6 +91,19 @@ class Video < ApplicationRecord
     {}
   end
 
+  def self.download_url(key)
+    "#{CDO.videos_url}/youtube/#{key}.mp4"
+  end
+  def self.videos_for_course_offering_editor
+    Video.all.map do |video|
+      {
+        name: video.localized_name,
+        youtube_url: video.youtube_url,
+        thumbnail: video.thumbnail_path,
+        locale: video.locale
+      }
+    end
+  end
   def fetch_thumbnail
     return unless Rails.application.config.levelbuilder_mode
     return unless locale == I18n.default_locale.to_s
@@ -121,9 +134,6 @@ class Video < ApplicationRecord
     "#{Video.youtube_base_url}/embed/#{youtube_code}/?#{defaults.to_query}"
   end
 
-  def self.download_url(key)
-    "#{CDO.videos_url}/youtube/#{key}.mp4"
-  end
 
   def thumbnail_url
     "#{CDO.videos_url}/youtube/#{key}.jpg"
@@ -156,14 +166,4 @@ class Video < ApplicationRecord
     end
   end
 
-  def self.videos_for_course_offering_editor
-    Video.all.map do |video|
-      {
-        name: video.localized_name,
-        youtube_url: video.youtube_url,
-        thumbnail: video.thumbnail_path,
-        locale: video.locale
-      }
-    end
-  end
 end

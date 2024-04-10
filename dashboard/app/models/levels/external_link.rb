@@ -33,6 +33,9 @@ class ExternalLink < Level
   validates_presence_of :url
   validates_presence_of :link_title
 
+  def self.create_from_level_builder(params, level_params)
+    create!(level_params.merge(user: params[:user], game: Game.external_link, level_num: 'custom'))
+  end
   def icon
     'fa-external-link-square'
   end
@@ -43,7 +46,4 @@ class ExternalLink < Level
     end
   end
 
-  def self.create_from_level_builder(params, level_params)
-    create!(level_params.merge(user: params[:user], game: Game.external_link, level_num: 'custom'))
-  end
 end

@@ -89,12 +89,14 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
-  def summarize_for_lab2_properties(script)
-    level_properties = super
-    level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
-    level_properties
-  end
-
+  XML_OPTIONS = Nokogiri::XML::Node::SaveOptions::NO_DECLARATION
+  CATEGORY_CUSTOM_NAMES = {
+    Behavior: 'Behaviors',
+    Location: 'Locations',
+    PROCEDURE: 'Functions',
+    VARIABLE: 'Variables',
+  }
+  GOOGLE_BLOCKLY_NAMESPACE_XML = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
   def self.field_or_title(xml_doc)
     num_fields = xml_doc.xpath('//field').count
     num_titles = xml_doc.xpath('//title').count
@@ -102,6 +104,119 @@ class Blockly < Level
     return "field" unless num_fields == 0
     "title"
   end
+  # Overriden by different Blockly level types
+  def self.skins
+    []
+  end
+  def self.count_xml_blocks(xml_string)
+    if xml_string.present?
+      xml = Nokogiri::XML(xml_string, &:noblanks)
+      # The structure of the XML will be
+      # <document>
+      #   <xml>
+      #     ... blocks ...
+      # So the blocks will be the children of the first child of the document
+      return xml.try(:children).try(:first).try(:children).try(:length) || 0
+    end
+    0
+  end
+  # This function converts category blocks used by levelbuilders to edit the toolbox to category tags
+  # and places the appropriate blocks within each category
+  def self.convert_toolbox_to_category(xml_string)
+    is_google_blockly = false
+    if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
+      is_google_blockly = true
+      xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
+    end
+    xml = Nokogiri::XML(xml_string, &:noblanks)
+    tag = Blockly.field_or_title(xml)
+    return xml_string if xml.nil? || (xml.xpath('/xml/block[@type="category"]').empty? && xml.xpath('xml/block[@type="custom_category"]').empty?)
+    default_category = category_node = Nokogiri::XML("<category name='Default'>").child
+    xml.child << default_category
+    xml.xpath('/xml/block').each do |block|
+      case block.attr('type')
+      when 'category'
+        category_name = block.xpath(tag).text
+        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
+        category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
+        category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
+        xml.child << category_node
+        block.remove
+      when 'custom_category'
+        custom_type = block.xpath(tag).text
+        category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
+        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
+        category_node['custom'] = custom_type
+        xml.child << category_node
+        block.remove
+      else
+        block.remove_attribute('x')
+        block.remove_attribute('y')
+        block.remove
+        category_node << block
+      end
+    end
+    default_category.remove if default_category.element_children.empty?
+    xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+    if is_google_blockly
+      xml_string["<xml>"] = GOOGLE_BLOCKLY_NAMESPACE_XML
+    end
+    return xml_string
+  end
+  # This function converts category tags to blocks so that levelbuilders can more easily edit
+  # a toolbox that contains categories.
+  def self.convert_category_to_toolbox(xml_string)
+    if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
+      xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
+    end
+    xml = Nokogiri::XML(xml_string, &:noblanks).child
+    tag = Blockly.field_or_title(xml)
+    return xml_string if xml.nil?
+    xml.xpath('/xml/category').map(&:remove).each do |category|
+      category_name = category.xpath('@name')
+      custom_category = category.xpath('@custom')
+      category_xml =
+        if custom_category.present?
+          <<-XML.strip_heredoc.chomp
+            <block type="custom_category">
+              <#{tag} name="CUSTOM">#{custom_category}</#{tag}>
+            </block>
+          XML
+        else
+          <<-XML.strip_heredoc.chomp
+            <block type="category">
+              <#{tag} name="CATEGORY">#{category_name}</#{tag}>
+            </block>
+          XML
+        end
+      block = Nokogiri::XML(category_xml, &:noblanks).child
+      xml << block
+      xml << category.children
+      #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
+    end
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+  end
+  # "counter" mutations should not be stored because it results in the language being
+  # hardcoded. The only exception to this is student saved projects.
+  def self.remove_counter_mutations(xml_string)
+    xml = Nokogiri::XML(xml_string, &:noblanks)
+    return xml_string if xml.nil?
+    xml.xpath("//block[@type='controls_for_counter']//mutation[@counter='counter']").each(&:remove)
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+  end
+  def self.base_url
+    "#{Blockly.asset_host_prefix}/blockly/"
+  end
+  def self.asset_host_prefix
+    host = ActionController::Base.asset_host
+    (host.blank?) ? "" : "//#{host}"
+  end
+  def summarize_for_lab2_properties(script)
+    level_properties = super
+    level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
+    level_properties
+  end
+
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
@@ -146,7 +261,6 @@ class Blockly < Level
     xml_blocks.each {|attr| normalize_xml attr}
   end
 
-  XML_OPTIONS = Nokogiri::XML::Node::SaveOptions::NO_DECLARATION
 
   def normalize_xml(attr)
     attr_val = send(attr)
@@ -157,124 +271,17 @@ class Blockly < Level
     end
   end
 
-  # Overriden by different Blockly level types
-  def self.skins
-    []
-  end
 
   def pretty_block(block_name)
     xml_string = send("#{block_name}_blocks")
     self.class.pretty_print_xml(xml_string)
   end
 
-  def self.count_xml_blocks(xml_string)
-    if xml_string.present?
-      xml = Nokogiri::XML(xml_string, &:noblanks)
-      # The structure of the XML will be
-      # <document>
-      #   <xml>
-      #     ... blocks ...
-      # So the blocks will be the children of the first child of the document
-      return xml.try(:children).try(:first).try(:children).try(:length) || 0
-    end
-    0
-  end
 
-  CATEGORY_CUSTOM_NAMES = {
-    Behavior: 'Behaviors',
-    Location: 'Locations',
-    PROCEDURE: 'Functions',
-    VARIABLE: 'Variables',
-  }
 
-  GOOGLE_BLOCKLY_NAMESPACE_XML = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
 
-  # This function converts category blocks used by levelbuilders to edit the toolbox to category tags
-  # and places the appropriate blocks within each category
-  def self.convert_toolbox_to_category(xml_string)
-    is_google_blockly = false
-    if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
-      is_google_blockly = true
-      xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
-    end
-    xml = Nokogiri::XML(xml_string, &:noblanks)
-    tag = Blockly.field_or_title(xml)
-    return xml_string if xml.nil? || (xml.xpath('/xml/block[@type="category"]').empty? && xml.xpath('xml/block[@type="custom_category"]').empty?)
-    default_category = category_node = Nokogiri::XML("<category name='Default'>").child
-    xml.child << default_category
-    xml.xpath('/xml/block').each do |block|
-      case block.attr('type')
-      when 'category'
-        category_name = block.xpath(tag).text
-        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
-        category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
-        category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
-        xml.child << category_node
-        block.remove
-      when 'custom_category'
-        custom_type = block.xpath(tag).text
-        category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
-        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
-        category_node['custom'] = custom_type
-        xml.child << category_node
-        block.remove
-      else
-        block.remove_attribute('x')
-        block.remove_attribute('y')
-        block.remove
-        category_node << block
-      end
-    end
-    default_category.remove if default_category.element_children.empty?
-    xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
-    if is_google_blockly
-      xml_string["<xml>"] = GOOGLE_BLOCKLY_NAMESPACE_XML
-    end
-    return xml_string
-  end
 
-  # This function converts category tags to blocks so that levelbuilders can more easily edit
-  # a toolbox that contains categories.
-  def self.convert_category_to_toolbox(xml_string)
-    if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
-      xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
-    end
-    xml = Nokogiri::XML(xml_string, &:noblanks).child
-    tag = Blockly.field_or_title(xml)
-    return xml_string if xml.nil?
-    xml.xpath('/xml/category').map(&:remove).each do |category|
-      category_name = category.xpath('@name')
-      custom_category = category.xpath('@custom')
-      category_xml =
-        if custom_category.present?
-          <<-XML.strip_heredoc.chomp
-            <block type="custom_category">
-              <#{tag} name="CUSTOM">#{custom_category}</#{tag}>
-            </block>
-          XML
-        else
-          <<-XML.strip_heredoc.chomp
-            <block type="category">
-              <#{tag} name="CATEGORY">#{category_name}</#{tag}>
-            </block>
-          XML
-        end
-      block = Nokogiri::XML(category_xml, &:noblanks).child
-      xml << block
-      xml << category.children
-      #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
-    end
-    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
-  end
 
-  # "counter" mutations should not be stored because it results in the language being
-  # hardcoded. The only exception to this is student saved projects.
-  def self.remove_counter_mutations(xml_string)
-    xml = Nokogiri::XML(xml_string, &:noblanks)
-    return xml_string if xml.nil?
-    xml.xpath("//block[@type='controls_for_counter']//mutation[@counter='counter']").each(&:remove)
-    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
-  end
 
   # for levels with solutions
   def update_ideal_level_source
@@ -848,14 +855,7 @@ class Blockly < Level
     block_xml
   end
 
-  def self.base_url
-    "#{Blockly.asset_host_prefix}/blockly/"
-  end
 
-  def self.asset_host_prefix
-    host = ActionController::Base.asset_host
-    (host.blank?) ? "" : "//#{host}"
-  end
 
   # If true, don't autoplay videos before this level (but do keep them in the
   # related videos collection).

@@ -49,6 +49,7 @@ def http_vary_add_type(vary, type)
 end
 
 class Documents < Sinatra::Base
+  ONE_HOUR = 3600
   def self.get_head_or_post(url, &block)
     get(url, &block)
     head(url, &block)
@@ -84,7 +85,6 @@ class Documents < Sinatra::Base
     set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
-  ONE_HOUR = 3600
 
   configure do
     dir = pegasus_dir('sites.v3')

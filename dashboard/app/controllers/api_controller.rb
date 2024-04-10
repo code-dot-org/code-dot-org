@@ -5,17 +5,6 @@ class ApiController < ApplicationController
   layout false
   include LevelsHelper
 
-  private def query_clever_service(endpoint)
-    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
-    begin
-      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
-      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
-      yield JSON.parse(response)['data']
-    rescue RestClient::ExceptionWithResponse => exception
-      render status: exception.response.code, json: {error: exception.response.body}
-    end
-  end
-
   # Calls Azure Cognitive Services in order to get a temporary OAuth token with access to the Immersive Reader API.
   # Requires the following configurations
   #   CDO.imm_reader_tenant_id
@@ -74,7 +63,6 @@ class ApiController < ApplicationController
       render status: :internal_server_error, json: {error: 'Unable to get token from Azure.'}
     end
   end
-
   def clever_classrooms
     return head :forbidden unless current_user
 
@@ -93,7 +81,6 @@ class ApiController < ApplicationController
       render json: {courses: json}
     end
   end
-
   def import_clever_classroom
     return head :forbidden unless current_user
 
@@ -105,33 +92,24 @@ class ApiController < ApplicationController
       render json: section.summarize
     end
   end
+  private def query_clever_service(endpoint)
+    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
+    begin
+      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
+      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
+      yield JSON.parse(response)['data']
+    rescue RestClient::ExceptionWithResponse => exception
+      render status: exception.response.code, json: {error: exception.response.body}
+    end
+  end
+
+
+
 
   GOOGLE_AUTH_SCOPES = [
     Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
     Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
   ].freeze
-
-  private def query_google_classroom_service
-    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)
-    client = Signet::OAuth2::Client.new(
-      authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
-      token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
-      client_id: CDO.dashboard_google_key,
-      client_secret: CDO.dashboard_google_secret,
-      refresh_token: tokens[:oauth_refresh_token],
-      access_token: tokens[:oauth_token],
-      expires_at: tokens[:oauth_token_expiration],
-      scope: GOOGLE_AUTH_SCOPES,
-    )
-    service = Google::Apis::ClassroomV1::ClassroomService.new
-    service.authorization = client
-
-    begin
-      yield service
-    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
-      render status: :forbidden, json: {error: exception}
-    end
-  end
 
   def google_classrooms
     return head :forbidden unless current_user
@@ -140,7 +118,6 @@ class ApiController < ApplicationController
       render json: response.to_h
     end
   end
-
   def import_google_classroom
     return head :forbidden unless current_user
     course_id = params[:courseId].to_s
@@ -161,7 +138,6 @@ class ApiController < ApplicationController
       render json: section.summarize
     end
   end
-
   def user_menu
     prevent_caching
     show_pairing_dialog = !!session.delete(:show_pairing_dialog)
@@ -172,7 +148,6 @@ class ApiController < ApplicationController
     @user_header_options[:loc_prefix] = 'nav.user.'
     @user_header_options[:show_create_menu] = params[:showCreateMenu]
   end
-
   def update_lockable_state
     return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.no_updates")} if params[:updates].blank?
     updates = params.require(:updates)
@@ -206,9 +181,6 @@ class ApiController < ApplicationController
     end
     render json: {}
   end
-
-  use_reader_connection_for_route(:lockable_state)
-
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
     prevent_caching
@@ -233,9 +205,6 @@ class ApiController < ApplicationController
 
     render json: data
   end
-
-  use_reader_connection_for_route(:section_progress)
-
   def section_progress
     prevent_caching
     section = load_section
@@ -310,9 +279,6 @@ class ApiController < ApplicationController
 
     render json: data
   end
-
-  use_reader_connection_for_route(:section_level_progress)
-
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
   # If not specified, the API will default to a page size of 50, providing the first page
@@ -348,7 +314,6 @@ class ApiController < ApplicationController
       }
     }
   end
-
   # GET /api/teacher_panel_progress/:section_id
   # Get complete details of a particular section for the teacher panel progress
   def teacher_panel_progress
@@ -388,7 +353,6 @@ class ApiController < ApplicationController
 
     render json: student_progress.unshift(teacher_progress)
   end
-
   # Get /api/teacher_panel_section
   def teacher_panel_section
     prevent_caching
@@ -414,7 +378,6 @@ class ApiController < ApplicationController
 
     head :no_content
   end
-
   def script_structure
     script = Unit.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
@@ -422,15 +385,11 @@ class ApiController < ApplicationController
     summary[:path] = overview_path
     render json: summary
   end
-
   def script_standards
     script = Unit.get_from_cache(params[:script])
     standards = script.standards
     render json: standards
   end
-
-  use_reader_connection_for_route(:user_progress)
-
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
     prevent_caching
@@ -454,9 +413,6 @@ class ApiController < ApplicationController
       render json: {signedIn: false}
     end
   end
-
-  use_reader_connection_for_route(:user_app_options)
-
   # Returns app_options values that are user-specific. This is used on cached
   # levels.
   def user_app_options
@@ -513,6 +469,116 @@ class ApiController < ApplicationController
 
     render json: response
   end
+  # GET /api/example_solutions/:script_level_id/:level_id
+  def example_solutions
+    script_level = Unit.cache_find_script_level params[:script_level_id].to_i
+    level = Unit.cache_find_level params[:level_id].to_i
+    section_id = params[:section_id].present? ? params[:section_id].to_i : nil
+    render json: script_level.get_example_solutions(level, current_user, section_id)
+  end
+  def section_text_responses
+    section = load_section
+    script = load_script(section)
+
+    text_response_levels = script.text_response_levels
+
+    data = section.students.map do |student|
+      student_hash = {id: student.id, name: student.name}
+
+      text_response_levels.filter_map do |level_hash|
+        last_attempt = student.last_attempt_for_any(level_hash[:levels])
+        response = last_attempt.try(:level_source).try(:data)
+        next unless response
+        {
+          student: student_hash,
+          lesson: level_hash[:script_level].lesson.localized_title,
+          puzzle: level_hash[:script_level].position,
+          question: last_attempt.level.properties['title'],
+          response: response,
+          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
+        }
+      end
+    end.flatten
+
+    render json: data
+  end
+  # GET /dashboardapi/sign_cookies
+  def sign_cookies
+    # length of time the browser can privately cache this request for cookies
+    expires_in 1.hour
+
+    # length of time these cookies are considered valid by cloudfront
+    expiration_date = Time.now + 4.hours
+    resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
+
+    cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
+
+    cloudfront_cookies.each do |k, v|
+      cookies[k] = v
+    end
+
+    head :ok
+  end
+  # PUT /api/firehose_unreachable
+  def firehose_unreachable
+    original_data = params.require(:original_data)
+    event = original_data['event']
+    project_id = original_data['project_id'] || nil
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'firehose-error-unreachable',
+        event: event,
+        project_id: project_id,
+        data_string: params.require(:error_text),
+        data_json: original_data.to_json
+      }
+    )
+  end
+  private def query_google_classroom_service
+    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)
+    client = Signet::OAuth2::Client.new(
+      authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
+      token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
+      client_id: CDO.dashboard_google_key,
+      client_secret: CDO.dashboard_google_secret,
+      refresh_token: tokens[:oauth_refresh_token],
+      access_token: tokens[:oauth_token],
+      expires_at: tokens[:oauth_token_expiration],
+      scope: GOOGLE_AUTH_SCOPES,
+    )
+    service = Google::Apis::ClassroomV1::ClassroomService.new
+    service.authorization = client
+
+    begin
+      yield service
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
+      render status: :forbidden, json: {error: exception}
+    end
+  end
+
+
+
+
+
+  use_reader_connection_for_route(:lockable_state)
+
+
+  use_reader_connection_for_route(:section_progress)
+
+
+  use_reader_connection_for_route(:section_level_progress)
+
+
+
+
+
+
+  use_reader_connection_for_route(:user_progress)
+
+
+  use_reader_connection_for_route(:user_app_options)
+
 
   # Gets progress-related app_options for the given script and level for the
   # given user. This code is analogous to parts of LevelsHelper#app_options.
@@ -551,75 +617,9 @@ class ApiController < ApplicationController
     response
   end
 
-  # GET /api/example_solutions/:script_level_id/:level_id
-  def example_solutions
-    script_level = Unit.cache_find_script_level params[:script_level_id].to_i
-    level = Unit.cache_find_level params[:level_id].to_i
-    section_id = params[:section_id].present? ? params[:section_id].to_i : nil
-    render json: script_level.get_example_solutions(level, current_user, section_id)
-  end
 
-  def section_text_responses
-    section = load_section
-    script = load_script(section)
 
-    text_response_levels = script.text_response_levels
 
-    data = section.students.map do |student|
-      student_hash = {id: student.id, name: student.name}
-
-      text_response_levels.filter_map do |level_hash|
-        last_attempt = student.last_attempt_for_any(level_hash[:levels])
-        response = last_attempt.try(:level_source).try(:data)
-        next unless response
-        {
-          student: student_hash,
-          lesson: level_hash[:script_level].lesson.localized_title,
-          puzzle: level_hash[:script_level].position,
-          question: last_attempt.level.properties['title'],
-          response: response,
-          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
-        }
-      end
-    end.flatten
-
-    render json: data
-  end
-
-  # GET /dashboardapi/sign_cookies
-  def sign_cookies
-    # length of time the browser can privately cache this request for cookies
-    expires_in 1.hour
-
-    # length of time these cookies are considered valid by cloudfront
-    expiration_date = Time.now + 4.hours
-    resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
-
-    cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
-
-    cloudfront_cookies.each do |k, v|
-      cookies[k] = v
-    end
-
-    head :ok
-  end
-
-  # PUT /api/firehose_unreachable
-  def firehose_unreachable
-    original_data = params.require(:original_data)
-    event = original_data['event']
-    project_id = original_data['project_id'] || nil
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'firehose-error-unreachable',
-        event: event,
-        project_id: project_id,
-        data_string: params.require(:error_text),
-        data_json: original_data.to_json
-      }
-    )
-  end
 
   private def load_section
     section = Section.find(params[:section_id])

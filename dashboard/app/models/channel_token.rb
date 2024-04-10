@@ -29,10 +29,6 @@ class ChannelToken < ApplicationRecord
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
   alias_attribute :project_id, :storage_app_id
 
-  def channel
-    storage_encrypt_channel_id(storage_id, project_id)
-  end
-
   # @param [Level] level The level associated with the channel token request.
   # @param [String] ip The IP address making the channel token request.
   # @param [String] user_storage_id The ID of the project associated with the channel token request.
@@ -62,7 +58,6 @@ class ChannelToken < ApplicationRecord
       end
     end
   end
-
   # Finds the channel token. If a channel token exists for the user and level with and without a script ID,
   # the channel token with the script_id takes precedence.
   #
@@ -79,7 +74,6 @@ class ChannelToken < ApplicationRecord
   def self.find_channel_token(level, user_storage_id, script_id)
     order(script_id: 'desc').find_by(level: level.host_level, storage_id: user_storage_id, script_id: [nil, script_id])
   end
-
   # Create a new channel.
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
@@ -102,4 +96,10 @@ class ChannelToken < ApplicationRecord
       level: level,
     )
   end
+  def channel
+    storage_encrypt_channel_id(storage_id, project_id)
+  end
+
+
+
 end

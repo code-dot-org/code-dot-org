@@ -24,6 +24,9 @@ class LevelSourceImage < ApplicationRecord
   S3_BUCKET = 'cdo-art'.freeze
   S3_URL = 'https://d3p74s6bwmy6t9.cloudfront.net/'.freeze
 
+  def self.hashify_filename(plain)
+    [Digest::MD5.hexdigest(plain), plain].join('=')
+  end
   def save_to_s3(image)
     return false if CDO.disable_s3_image_uploads
     return false if image.blank?
@@ -74,9 +77,6 @@ class LevelSourceImage < ApplicationRecord
     'app/assets/images/blank_sharing_drawing.png'
   end
 
-  def self.hashify_filename(plain)
-    [Digest::MD5.hexdigest(plain), plain].join('=')
-  end
 
   def s3_filename
     LevelSourceImage.hashify_filename "#{Rails.env}/#{level_source.id}.png"

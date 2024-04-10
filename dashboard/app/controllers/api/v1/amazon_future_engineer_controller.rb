@@ -10,6 +10,21 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
   # Necessary since Pegasus pages use this controller via dashboardapi
   skip_before_action :verify_authenticity_token
 
+  REQUIRED_PARAMETERS = %w(
+    firstName
+    lastName
+    email
+    schoolId
+    inspirationKit
+    csta
+    consentAFE
+  )
+  PERMITTED_PARAMETERS = [
+    *REQUIRED_PARAMETERS,
+    'primaryProfessionalRole',
+    'gradesTeaching',
+    'consentCSTA'
+  ]
   def submit
     return head :forbidden unless current_user&.teacher?
 
@@ -73,22 +88,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     render json: exception.to_s, status: :bad_request
   end
 
-  REQUIRED_PARAMETERS = %w(
-    firstName
-    lastName
-    email
-    schoolId
-    inspirationKit
-    csta
-    consentAFE
-  )
 
-  PERMITTED_PARAMETERS = [
-    *REQUIRED_PARAMETERS,
-    'primaryProfessionalRole',
-    'gradesTeaching',
-    'consentCSTA'
-  ]
 
   private def submit_params
     params.require(:amazon_future_engineer).

@@ -34,14 +34,9 @@ class LevelSource < ApplicationRecord
 
   before_save :recompute_md5
 
-  def recompute_md5
-    self.md5 = Digest::MD5.hexdigest(data)
-  end
-
   def self.cache_key(level_id, md5)
     "#{level_id}-#{md5}"
   end
-
   def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
 
@@ -51,13 +46,6 @@ class LevelSource < ApplicationRecord
       end
     end
   end
-
-  # @param [Integer] user_id The ID of the user performing the obfuscation.
-  # @return [String] The encrypted (with the user_id) level source ID.
-  def encrypt_level_source_id(user_id)
-    Base64.urlsafe_encode64 Encryption.encrypt_string("#{id}:#{user_id}")
-  end
-
   # @param [String] encrypted_level_source_id_user_id The encrypted (with the user_id) level_source
   #   ID.
   # @param [Boolean] ignore_missing_user Whether to ignore the absence of the user specified by the
@@ -73,4 +61,16 @@ class LevelSource < ApplicationRecord
   rescue
     return nil
   end
+  def recompute_md5
+    self.md5 = Digest::MD5.hexdigest(data)
+  end
+
+
+
+  # @param [Integer] user_id The ID of the user performing the obfuscation.
+  # @return [String] The encrypted (with the user_id) level source ID.
+  def encrypt_level_source_id(user_id)
+    Base64.urlsafe_encode64 Encryption.encrypt_string("#{id}:#{user_id}")
+  end
+
 end

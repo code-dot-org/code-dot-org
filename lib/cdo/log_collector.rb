@@ -9,6 +9,9 @@
 class LogCollector
   attr_reader :exceptions, :logs, :metrics, :task_name
 
+  def self.get_friendly_time(value)
+    "#{value.round(2)} seconds" if value.respond_to?(:round)
+  end
   # @param task_name [String] friendly name of the task to collect logs for
   # @param print_log_immediately [Boolean] print a log as soon as it is added to the log collector
   def initialize(task_name = nil, print_log_immediately: true)
@@ -112,7 +115,4 @@ class LogCollector
   end
   alias_method :inspect, :to_s
 
-  def self.get_friendly_time(value)
-    "#{value.round(2)} seconds" if value.respond_to?(:round)
-  end
 end

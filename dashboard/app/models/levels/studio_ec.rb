@@ -48,21 +48,10 @@ class StudioEC < Studio
     level
   end
 
-  def xml_blocks
-    %w()
-  end
-
   # List of possible palette categories
   def self.palette_categories
     %w(commands events)
   end
-
-  def update_palette
-    if code_functions.present? && code_functions.is_a?(String)
-      self.code_functions = JSON.parse(code_functions)
-    end
-  end
-
   def self.palette
     <<-JSON.strip_heredoc.chomp
       {
@@ -74,13 +63,6 @@ class StudioEC < Studio
       }
     JSON
   end
-
-  def update_goal_override
-    if goal_override.present? && goal_override.is_a?(String)
-      self.goal_override = JSON.parse(goal_override)
-    end
-  end
-
   def self.goal_override
     <<-JSON.strip_heredoc.chomp
       {
@@ -88,6 +70,24 @@ class StudioEC < Studio
       }
     JSON
   end
+  def xml_blocks
+    %w()
+  end
+
+
+  def update_palette
+    if code_functions.present? && code_functions.is_a?(String)
+      self.code_functions = JSON.parse(code_functions)
+    end
+  end
+
+
+  def update_goal_override
+    if goal_override.present? && goal_override.is_a?(String)
+      self.goal_override = JSON.parse(goal_override)
+    end
+  end
+
 
   def uses_droplet?
     true

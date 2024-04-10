@@ -14,6 +14,15 @@ module Pd
         MatrixQuestion,
       ].freeze
 
+      # Determine which sub-class of Question will handle parsing a given JotForm question type
+      # @param type [String] the part of the JotForm control type string after "control_"
+      # @return [Class] sub-class of Question
+      # @raise for unrecognized or ignored types
+      def self.get_question_class_for(type)
+        QUESTION_CLASSES.find {|q| q.supported_types.include?(type)}.tap do |klass|
+          raise "Unexpected question type: #{type}" unless klass
+        end
+      end
       # @param [Integer] form_id
       def initialize(form_id)
         @form_id = form_id
@@ -67,15 +76,6 @@ module Pd
         parse_jotform_submission response['content']
       end
 
-      # Determine which sub-class of Question will handle parsing a given JotForm question type
-      # @param type [String] the part of the JotForm control type string after "control_"
-      # @return [Class] sub-class of Question
-      # @raise for unrecognized or ignored types
-      def self.get_question_class_for(type)
-        QUESTION_CLASSES.find {|q| q.supported_types.include?(type)}.tap do |klass|
-          raise "Unexpected question type: #{type}" unless klass
-        end
-      end
 
       protected def parse_jotform_questions(jotform_questions)
         # Questions are in one of several categories:

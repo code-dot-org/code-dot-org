@@ -13,12 +13,6 @@ module Dashboard
   end
 
   class User
-    # Wrap dashboard user row in this helper object.
-    # You can use this, but it's preferred that clients call User.get(user_id).
-    def initialize(user_row)
-      @row = user_row
-    end
-
     # Retrieves the indicated user from the database, respecting soft-deletes.
     # @returns [User] for given user_id, or nil if not found in database
     def self.get(user_id)
@@ -29,6 +23,12 @@ module Dashboard
       Dashboard::User.new(row)
       # rubocop:enable CustomCops/DashboardDbUsage
     end
+    # Wrap dashboard user row in this helper object.
+    # You can use this, but it's preferred that clients call User.get(user_id).
+    def initialize(user_row)
+      @row = user_row
+    end
+
 
     def id
       @row[:id]

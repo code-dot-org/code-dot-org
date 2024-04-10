@@ -7,6 +7,15 @@ class RakeTaskEventLogger
   CURRENT_LOGGING_VERSION = 'v1'.freeze
   @@depth = 0
 
+  def self.depth
+    @@depth
+  end
+  def self.increase_depth
+    @@depth += 1
+  end
+  def self.decrease_depth
+    @@depth -= 1
+  end
   def initialize(rake_task)
     @start_time = 0
     @end_time = 0
@@ -14,17 +23,8 @@ class RakeTaskEventLogger
     @enabled_firehose = !([:development, :test].include?(rack_env))
   end
 
-  def self.depth
-    @@depth
-  end
 
-  def self.increase_depth
-    @@depth += 1
-  end
 
-  def self.decrease_depth
-    @@depth -= 1
-  end
 
   def start_task_logging
     @start_time = Time.new

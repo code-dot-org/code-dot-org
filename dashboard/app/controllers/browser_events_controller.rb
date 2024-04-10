@@ -62,6 +62,10 @@ class BrowserEventsController < ApplicationController
     render status: :internal_server_error, json: {error: exception}
   end
 
+  def check_preconditions
+    return render status: :unauthorized, json: {error: "Browser Cloudwatch logging is currently disabled"} unless
+      Gatekeeper.allows(EXPERIMENT_FLAG_NAME, default: true) && DCDO.get(EXPERIMENT_FLAG_NAME, true)
+  end
   private def convert_metric_datum(metric_datum)
     return nil unless metric_datum["name"]
 
@@ -98,8 +102,4 @@ class BrowserEventsController < ApplicationController
     )
   end
 
-  def check_preconditions
-    return render status: :unauthorized, json: {error: "Browser Cloudwatch logging is currently disabled"} unless
-      Gatekeeper.allows(EXPERIMENT_FLAG_NAME, default: true) && DCDO.get(EXPERIMENT_FLAG_NAME, true)
-  end
 end

@@ -6,6 +6,9 @@ class CurriculumCourse
   COURSES_WITHOUT_UNIT_NUMBERS = %w(course1 course2 course3 course4 msm algebra misc).freeze
   COURSES_WITH_PDF_GENERATION = %w(course1 course2 course3 course4 msm algebra misc csp).freeze
 
+  def self.virtual_to_v3_path(local_virtual_path)
+    local_virtual_path.sub(pegasus_dir('sites/virtual/curriculum-'), sites_v3_dir('code.org/public/curriculum/'))
+  end
   def initialize(kind)
     @kind = kind
     @dir = sites_dir("virtual/curriculum-#{@kind}")
@@ -97,7 +100,4 @@ class CurriculumCourse
     lesson_dirname != '.' && lesson_dirname != '..' && lesson_dirname[0] != '_'
   end
 
-  def self.virtual_to_v3_path(local_virtual_path)
-    local_virtual_path.sub(pegasus_dir('sites/virtual/curriculum-'), sites_v3_dir('code.org/public/curriculum/'))
-  end
 end

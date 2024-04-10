@@ -14,6 +14,19 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
   end
 
+  POPULATE_TABLE_DATA_JSON_STRING = <<~JSON
+    {
+      "cities": [
+        {"city": "Seattle", "state": "WA"},
+        {"city": "Chicago", "state": "IL"}
+      ]
+    }
+  JSON
+
+  POPULATE_TABLE_DATA_RECORDS = [
+    {"city" => "Seattle", "state" => "WA", "id" => 1},
+    {"city" => "Chicago", "state" => "IL", "id" => 2},
+  ]
   def _url(action)
     return "/datablock_storage/#{@channel_id}/#{action}"
   end
@@ -406,19 +419,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     ], read_records
   end
 
-  POPULATE_TABLE_DATA_JSON_STRING = <<~JSON
-    {
-      "cities": [
-        {"city": "Seattle", "state": "WA"},
-        {"city": "Chicago", "state": "IL"}
-      ]
-    }
-  JSON
-
-  POPULATE_TABLE_DATA_RECORDS = [
-    {"city" => "Seattle", "state" => "WA", "id" => 1},
-    {"city" => "Chicago", "state" => "IL", "id" => 2},
-  ]
 
   test "populate_tables" do
     put _url(:populate_tables), params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}

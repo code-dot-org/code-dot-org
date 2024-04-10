@@ -24,6 +24,47 @@ class ReferenceGuide < ApplicationRecord
   validates_uniqueness_of :key, scope: :course_version_id, case_sensitive: true
   validate :validate_key_format
 
+  def self.find_by_course_name_and_key(course_name, key)
+    course_version_id = CurriculumHelper.find_matching_course_version(course_name)&.id
+    return nil unless course_version_id
+    ReferenceGuide.find_by_course_version_id_and_key(course_version_id, key)
+  end
+  # runs through all seed files, creating and deleting records to match the seed files
+  def self.seed_all
+    # collect all existing ids
+    removed_records = all.pluck(:id)
+    Dir.glob(Rails.root.join("config/reference_guides/**/*.json")).each do |path|
+      # for each file, seed the reference guide and remove from the original set the found ids
+      # (new ids won't change anything)
+      removed_records -= [ReferenceGuide.seed_record(path)]
+    end
+    # the remaining ids that were not seeded should be removed
+    where(id: removed_records).destroy_all
+  end
+  # parses a seed file and generates a hash with the course version mapped
+  def self.properties_from_file(content)
+    config = JSON.parse(content)
+    course_version_id = CourseOffering.find_by(key: config['course_offering_key'])&.
+      course_versions&.where(key: config['course_version_key'])&.last&.id
+    {
+      key: config['key'],
+      course_version_id: course_version_id,
+      parent_reference_guide_key: config['parent_reference_guide_key'],
+      display_name: config['display_name'],
+      content: config['content'],
+      position: config['position']
+    }
+  end
+  # returns the local id of the reference guide that was created/updated
+  def self.seed_record(file_path)
+    properties = properties_from_file(File.read(file_path))
+    reference_guide = ReferenceGuide.find_or_initialize_by(
+      key: properties[:key],
+      course_version_id: properties[:course_version_id]
+    )
+    reference_guide.update! properties
+    reference_guide.id
+  end
   def course_offering_version
     "#{course_version.course_offering.key}-#{course_version.key}"
   end
@@ -84,50 +125,9 @@ class ReferenceGuide < ApplicationRecord
     copied_ref_guide.write_serialization
   end
 
-  def self.find_by_course_name_and_key(course_name, key)
-    course_version_id = CurriculumHelper.find_matching_course_version(course_name)&.id
-    return nil unless course_version_id
-    ReferenceGuide.find_by_course_version_id_and_key(course_version_id, key)
-  end
 
-  # runs through all seed files, creating and deleting records to match the seed files
-  def self.seed_all
-    # collect all existing ids
-    removed_records = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/reference_guides/**/*.json")).each do |path|
-      # for each file, seed the reference guide and remove from the original set the found ids
-      # (new ids won't change anything)
-      removed_records -= [ReferenceGuide.seed_record(path)]
-    end
-    # the remaining ids that were not seeded should be removed
-    where(id: removed_records).destroy_all
-  end
 
-  # parses a seed file and generates a hash with the course version mapped
-  def self.properties_from_file(content)
-    config = JSON.parse(content)
-    course_version_id = CourseOffering.find_by(key: config['course_offering_key'])&.
-      course_versions&.where(key: config['course_version_key'])&.last&.id
-    {
-      key: config['key'],
-      course_version_id: course_version_id,
-      parent_reference_guide_key: config['parent_reference_guide_key'],
-      display_name: config['display_name'],
-      content: config['content'],
-      position: config['position']
-    }
-  end
 
-  # returns the local id of the reference guide that was created/updated
-  def self.seed_record(file_path)
-    properties = properties_from_file(File.read(file_path))
-    reference_guide = ReferenceGuide.find_or_initialize_by(
-      key: properties[:key],
-      course_version_id: properties[:course_version_id]
-    )
-    reference_guide.update! properties
-    reference_guide.id
-  end
 
   def summarize_for_show
     {

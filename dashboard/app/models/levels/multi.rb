@@ -27,6 +27,10 @@
 require "csv"
 
 class Multi < Match
+  # Converts a value (e.g. 0 or 1) to its displayed letter (e.g. "A" or "B")
+  def self.value_to_letter(value)
+    ("A".ord + value).chr
+  end
   def dsl_default
     <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
@@ -51,10 +55,6 @@ class Multi < Match
     properties["answers"].each_with_index.select {|a, _index| a["correct"] == true}.map(&:last)
   end
 
-  # Converts a value (e.g. 0 or 1) to its displayed letter (e.g. "A" or "B")
-  def self.value_to_letter(value)
-    ("A".ord + value).chr
-  end
 
   def get_question_text
     # Question text is stored in properties as "questions" or "markdown"

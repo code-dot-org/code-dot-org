@@ -31,6 +31,27 @@ class SharedBlocklyFunction < ApplicationRecord
   SUBDIRECTORY_ATTRIBUTES = [:level_type]
   EXTENSION = 'xml'
 
+  def self.arguments_from_xml(args_xml)
+    JSON.generate(
+      args_xml.map do |arg_xml|
+        [arg_xml.attribute('name'), arg_xml.attribute('type')]
+      end.to_h
+    )
+  end
+  def self.properties_from_file(xml_path, content)
+    level_type = File.basename(File.dirname(xml_path))
+    function_doc = Nokogiri.XML(content) {|config| config.strict.noblanks}
+    {
+      level_type: level_type,
+      block_type: BLOCK_TYPES_BY_DEFINITION_TYPE[
+        function_doc.xpath('/block/@type').text
+      ],
+      name: function_doc.xpath('/block/field[@name="NAME"]/text()').text,
+      description: function_doc.xpath('/block/mutation/description').text,
+      arguments: arguments_from_xml(function_doc.xpath('/block/mutation/arg')),
+      stack: function_doc.xpath('/block/statement[@name="STACK"]/*'),
+    }
+  end
   def file_content
     to_xml_doc.to_xml
   end
@@ -61,26 +82,5 @@ class SharedBlocklyFunction < ApplicationRecord
     end.doc
   end
 
-  def self.arguments_from_xml(args_xml)
-    JSON.generate(
-      args_xml.map do |arg_xml|
-        [arg_xml.attribute('name'), arg_xml.attribute('type')]
-      end.to_h
-    )
-  end
 
-  def self.properties_from_file(xml_path, content)
-    level_type = File.basename(File.dirname(xml_path))
-    function_doc = Nokogiri.XML(content) {|config| config.strict.noblanks}
-    {
-      level_type: level_type,
-      block_type: BLOCK_TYPES_BY_DEFINITION_TYPE[
-        function_doc.xpath('/block/@type').text
-      ],
-      name: function_doc.xpath('/block/field[@name="NAME"]/text()').text,
-      description: function_doc.xpath('/block/mutation/description').text,
-      arguments: arguments_from_xml(function_doc.xpath('/block/mutation/arg')),
-      stack: function_doc.xpath('/block/statement[@name="STACK"]/*'),
-    }
-  end
 end

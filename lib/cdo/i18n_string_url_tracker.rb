@@ -22,6 +22,36 @@ class I18nStringUrlTracker
 
   MAX_BUFFER_SIZE = 250.megabytes
 
+  # Paths where everything after it will be aggregated.
+  # You can also add single pages which don't need aggregation as well e.g. /home
+  SIMPLE_PATHS = %w(home teacher_dashboard courses users).freeze
+  # Checks if a source string or a translation exists.
+  # @param string_key [String]
+  # @param scope [Array, String]
+  # @param locale [Symbol, String]
+  # @return [Boolean]
+  def self.string_exists?(string_key, scope = nil, locale = I18n.default_locale)
+    # By default, I18n.exists? returns true if the input key is nil,
+    # but raises exception if the key is an empty string.
+    return false if string_key.nil? || string_key.empty?
+
+    if scope.nil? || scope.empty?
+      I18n.exists? string_key, locale: locale
+    else
+      options = {
+        locale: locale,
+        scope: scope,
+        # don't report error if there is unused interpolation pattern in the translation
+        safe_interpolation: false,
+        # don't track string translation request
+        tracking: false,
+        # raise error if translation is missing
+        raise: true
+      }
+      source_string = I18n.t(string_key, **options) rescue nil
+      !source_string.nil?
+    end
+  end
   def initialize
     super
     # A buffer of all the given i18n string tracking data. It will be flushed periodically.
@@ -90,65 +120,6 @@ class I18nStringUrlTracker
     add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
   end
 
-  # Checks if a source string or a translation exists.
-  # @param string_key [String]
-  # @param scope [Array, String]
-  # @param locale [Symbol, String]
-  # @return [Boolean]
-  def self.string_exists?(string_key, scope = nil, locale = I18n.default_locale)
-    # By default, I18n.exists? returns true if the input key is nil,
-    # but raises exception if the key is an empty string.
-    return false if string_key.nil? || string_key.empty?
-
-    if scope.nil? || scope.empty?
-      I18n.exists? string_key, locale: locale
-    else
-      options = {
-        locale: locale,
-        scope: scope,
-        # don't report error if there is unused interpolation pattern in the translation
-        safe_interpolation: false,
-        # don't track string translation request
-        tracking: false,
-        # raise error if translation is missing
-        raise: true
-      }
-      source_string = I18n.t(string_key, **options) rescue nil
-      !source_string.nil?
-    end
-  end
-
-  # Records the log data to a buffer which will eventually be flushed
-  private def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
-    # make sure this is the only thread modifying @buffer
-    @buffer.synchronize do
-      # update the buffer size if we are adding any new data to it
-      # duplicate data will not increase the buffer size
-      buffer_url = @buffer[url] ||= {}.tap {@buffer_size += url.bytesize}
-      buffer_normalized_key = buffer_url[normalized_key] ||= Set.new.tap {@buffer_size += normalized_key.bytesize}
-      # add the new data to the buffer
-      buffer_values = [source, string_key, scope, separator]
-
-      if buffer_normalized_key.add?(buffer_values)
-        buffer_values_size = buffer_values.reduce(0) {|sum, s| sum + (s ? s.bytesize : 0)}
-        @buffer_size += buffer_values_size
-      end
-    end
-
-    # if the buffer is too large, trigger an early flush
-    if @buffer_size > @buffer_size_max
-      message = "The I18n string usage tracker is has reached its memory limit so data will be flushed early. Investigate whether there is an issue or if the limit should be increased."
-      Honeybadger.notify(
-        name: 'I18n Usage Tracker buffer reached max memory limits.',
-        message: message,
-        context: {
-          current_buffer_size: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size).to_s,
-          buffer_size_max: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size_max).to_s
-        }
-      )
-      flush
-    end
-  end
 
   # Sends the buffered i18n string usage data to Firehose.
   def flush
@@ -179,11 +150,6 @@ class I18nStringUrlTracker
       end
     end
   end
-
-  # Paths where everything after it will be aggregated.
-  # You can also add single pages which don't need aggregation as well e.g. /home
-  SIMPLE_PATHS = %w(home teacher_dashboard courses users).freeze
-
   # Determines if this URL should be tracked. We want to filter URLs so we don't waste resources recording data we are
   # not interested in.
   def allowed(url)
@@ -219,7 +185,6 @@ class I18nStringUrlTracker
     # Otherwise this URL should not be recorded
     false
   end
-
   # Cleans up the given URL so the data we record is consistent. It also aggregates some URLs so we limit how many
   # unique URLs we are recording.
   def normalize_url(url)
@@ -289,7 +254,6 @@ class I18nStringUrlTracker
 
     parsed_url.to_s
   end
-
   # Clear the buffer and stop the periodic upload of i18n usage data.
   # This should only be used by unit tests.
   def shutdown
@@ -299,7 +263,6 @@ class I18nStringUrlTracker
     @buffer.extend(MonitorMixin) # Adds synchronization
     @task.shutdown
   end
-
   # Sets the interval at which data should be flushed.
   # This should only be used by unit tests.
   def set_flush_interval(interval)
@@ -308,10 +271,47 @@ class I18nStringUrlTracker
     # Start a new flush interval
     @task = Concurrent::TimerTask.execute(execution_interval: interval) {flush}
   end
-
   # Sets the max size (bytes) of the buffer.
   # This should only be used by unit tests.
   def set_buffer_size_max(max)
     @buffer_size_max = max
   end
+  # Records the log data to a buffer which will eventually be flushed
+  private def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
+    # make sure this is the only thread modifying @buffer
+    @buffer.synchronize do
+      # update the buffer size if we are adding any new data to it
+      # duplicate data will not increase the buffer size
+      buffer_url = @buffer[url] ||= {}.tap {@buffer_size += url.bytesize}
+      buffer_normalized_key = buffer_url[normalized_key] ||= Set.new.tap {@buffer_size += normalized_key.bytesize}
+      # add the new data to the buffer
+      buffer_values = [source, string_key, scope, separator]
+
+      if buffer_normalized_key.add?(buffer_values)
+        buffer_values_size = buffer_values.reduce(0) {|sum, s| sum + (s ? s.bytesize : 0)}
+        @buffer_size += buffer_values_size
+      end
+    end
+
+    # if the buffer is too large, trigger an early flush
+    if @buffer_size > @buffer_size_max
+      message = "The I18n string usage tracker is has reached its memory limit so data will be flushed early. Investigate whether there is an issue or if the limit should be increased."
+      Honeybadger.notify(
+        name: 'I18n Usage Tracker buffer reached max memory limits.',
+        message: message,
+        context: {
+          current_buffer_size: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size).to_s,
+          buffer_size_max: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size_max).to_s
+        }
+      )
+      flush
+    end
+  end
+
+
+
+
+
+
+
 end

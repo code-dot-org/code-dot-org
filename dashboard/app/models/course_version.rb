@@ -41,39 +41,6 @@ class CourseVersion < ApplicationRecord
   # features that come with a course version (resources, vocab, etc)
   UNVERSIONED = 'unversioned'.freeze
 
-  def units
-    content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
-  end
-
-  # "Interface" for content_root:
-  #
-  # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
-  #   For example, this should return True for the CourseA-2019 Unit and the CSP-2019 UnitGroup. This should return
-  #   False for the CSP1-2019 Unit.
-  belongs_to :content_root, polymorphic: true, optional: true
-
-  alias_attribute :version_year, :key
-
-  # For now, delegate any fields stored on the content root so that we can start
-  # accessing them via course version. In the future, these fields will be moved
-  # into the course version itself.
-
-  delegate :name, to: :content_root, allow_nil: true
-  delegate :localized_title, to: :content_root, allow_nil: true
-  delegate :pl_course?, to: :content_root, allow_nil: true
-  delegate :stable?, to: :content_root, allow_nil: true
-  delegate :launched?, to: :content_root, allow_nil: true
-  delegate :in_development?, to: :content_root, allow_nil: true
-  delegate :pilot?, to: :content_root, allow_nil: true
-  delegate :has_pilot_experiment?, to: :content_root, allow_nil: true
-  delegate :has_editor_experiment?, to: :content_root, allow_nil: true
-  delegate :can_be_instructor?, to: :content_root, allow_nil: true
-  delegate :course_assignable?, to: :content_root, allow_nil: true
-  delegate :can_view_version?, to: :content_root, allow_nil: true
-  delegate :included_in_units?, to: :content_root, allow_nil: true
-  delegate :link, to: :content_root, allow_nil: false
-  delegate :localized_assignment_family_title, to: :content_root, allow_nil: false
-
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -120,6 +87,64 @@ class CourseVersion < ApplicationRecord
 
     course_version
   end
+  def self.should_cache?
+    Unit.should_cache?
+  end
+  def self.course_offering_keys(content_root_type)
+    Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
+      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).filter_map {|cv| cv.course_offering&.key}.uniq.sort
+    end
+  end
+  # We use Course Offerings for single unit course offerings because
+  # we want to group together all the course offerings across years.
+  # So all the Course A's are together under the Course A header.
+  # Where as for unit group courses we want to have all the units for a
+  # specific year grouped together under the unit group for that year. So
+  # CSD has multiple headers in the list with the units for that year under it.
+  # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
+  # the resulting data looks like
+  def self.courses_for_unit_selector(unit_ids)
+    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids)).sort_by {|c| c[:display_name]}
+  end
+  def self.unit_group_course_versions_with_units(unit_ids)
+    CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
+  end
+  def self.unit_group_course_versions_with_units_info(unit_ids)
+    unit_group_course_versions_with_units(unit_ids).map(&:summarize_for_unit_selector)
+  end
+  def units
+    content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
+  end
+
+  # "Interface" for content_root:
+  #
+  # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
+  #   For example, this should return True for the CourseA-2019 Unit and the CSP-2019 UnitGroup. This should return
+  #   False for the CSP1-2019 Unit.
+  belongs_to :content_root, polymorphic: true, optional: true
+
+  alias_attribute :version_year, :key
+
+  # For now, delegate any fields stored on the content root so that we can start
+  # accessing them via course version. In the future, these fields will be moved
+  # into the course version itself.
+
+  delegate :name, to: :content_root, allow_nil: true
+  delegate :localized_title, to: :content_root, allow_nil: true
+  delegate :pl_course?, to: :content_root, allow_nil: true
+  delegate :stable?, to: :content_root, allow_nil: true
+  delegate :launched?, to: :content_root, allow_nil: true
+  delegate :in_development?, to: :content_root, allow_nil: true
+  delegate :pilot?, to: :content_root, allow_nil: true
+  delegate :has_pilot_experiment?, to: :content_root, allow_nil: true
+  delegate :has_editor_experiment?, to: :content_root, allow_nil: true
+  delegate :can_be_instructor?, to: :content_root, allow_nil: true
+  delegate :course_assignable?, to: :content_root, allow_nil: true
+  delegate :can_view_version?, to: :content_root, allow_nil: true
+  delegate :included_in_units?, to: :content_root, allow_nil: true
+  delegate :link, to: :content_root, allow_nil: false
+  delegate :localized_assignment_family_title, to: :content_root, allow_nil: false
+
 
   # Destroys this CourseVersion. Then, if its parent CourseOffering now has no CourseVersions, destroy it too.
   def destroy_and_destroy_parent_if_empty
@@ -135,15 +160,7 @@ class CourseVersion < ApplicationRecord
     content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
   end
 
-  def self.should_cache?
-    Unit.should_cache?
-  end
 
-  def self.course_offering_keys(content_root_type)
-    Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
-      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).filter_map {|cv| cv.course_offering&.key}.uniq.sort
-    end
-  end
 
   def recommended?(locale_code = 'en-us')
     return false unless stable?
@@ -155,17 +172,6 @@ class CourseVersion < ApplicationRecord
     latest_stable_version == content_root
   end
 
-  # We use Course Offerings for single unit course offerings because
-  # we want to group together all the course offerings across years.
-  # So all the Course A's are together under the Course A header.
-  # Where as for unit group courses we want to have all the units for a
-  # specific year grouped together under the unit group for that year. So
-  # CSD has multiple headers in the list with the units for that year under it.
-  # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
-  # the resulting data looks like
-  def self.courses_for_unit_selector(unit_ids)
-    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids)).sort_by {|c| c[:display_name]}
-  end
 
   def summarize_for_assignment_dropdown(user, locale_code)
     [
@@ -186,13 +192,7 @@ class CourseVersion < ApplicationRecord
     ]
   end
 
-  def self.unit_group_course_versions_with_units(unit_ids)
-    CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
-  end
 
-  def self.unit_group_course_versions_with_units_info(unit_ids)
-    unit_group_course_versions_with_units(unit_ids).map(&:summarize_for_unit_selector)
-  end
 
   def summarize_for_unit_selector
     {

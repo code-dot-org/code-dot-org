@@ -53,6 +53,31 @@ module Pd
       }
     end
 
+    def self.get_form_id_for_subjects_and_day(subjects, day)
+      subjects.filter_map do |subject|
+        get_form_id_for_subject_and_day subject, day
+      rescue
+        nil
+      end
+    end
+    def self.get_form_id_for_subject_and_day(subject, day)
+      # Day could be an int, or an integer as a string, or a string saying "pre/post workshop"
+      get_form_id CATEGORY_MAP[subject], (day.is_a?(Integer) || day =~ /\d+/) ? "day_#{day}" : day
+    end
+    def self.get_day_for_subject_and_form_id(subject, form_id)
+      VALID_DAYS[CATEGORY_MAP[subject]].find {|d|  get_form_id_for_subject_and_day(subject, d) == form_id}
+    end
+    def self.all_form_ids
+      FORM_CATEGORIES.map do |category|
+        VALID_DAYS[category].map do |day|
+          form_name = category == CSF_CATEGORY ? CSF_SURVEY_NAMES[day] : "day_#{day}"
+          get_form_id category, form_name
+        end
+      end.flatten.compact.uniq
+    end
+    def self.unique_attributes
+      [:user_id, :pd_workshop_id, :day]
+    end
     # @override
     def map_answers_to_attributes
       super
@@ -65,35 +90,10 @@ module Pd
       self.day = self.class.get_day_for_subject_and_form_id(pd_workshop.subject, form_id)
     end
 
-    def self.get_form_id_for_subjects_and_day(subjects, day)
-      subjects.filter_map do |subject|
-        get_form_id_for_subject_and_day subject, day
-      rescue
-        nil
-      end
-    end
 
-    def self.get_form_id_for_subject_and_day(subject, day)
-      # Day could be an int, or an integer as a string, or a string saying "pre/post workshop"
-      get_form_id CATEGORY_MAP[subject], (day.is_a?(Integer) || day =~ /\d+/) ? "day_#{day}" : day
-    end
 
-    def self.get_day_for_subject_and_form_id(subject, form_id)
-      VALID_DAYS[CATEGORY_MAP[subject]].find {|d|  get_form_id_for_subject_and_day(subject, d) == form_id}
-    end
 
-    def self.all_form_ids
-      FORM_CATEGORIES.map do |category|
-        VALID_DAYS[category].map do |day|
-          form_name = category == CSF_CATEGORY ? CSF_SURVEY_NAMES[day] : "day_#{day}"
-          get_form_id category, form_name
-        end
-      end.flatten.compact.uniq
-    end
 
-    def self.unique_attributes
-      [:user_id, :pd_workshop_id, :day]
-    end
 
     private def day_for_subject
       unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day

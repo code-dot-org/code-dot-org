@@ -89,6 +89,51 @@ module Pd::Application
       csa
     ).index_by(&:to_sym).freeze
 
+    # Override in derived class
+    def self.statuses
+      %w(
+        unreviewed
+        pending
+        accepted
+        declined
+        waitlisted
+        withdrawn
+      )
+    end
+    # Override in derived class to provide headers
+    # @param course [String] course name used to choose fields, since they differ between courses
+    # @return [String] csv text row of column headers, ending in a newline
+    def self.csv_header(course)
+      raise 'Abstract method must be overridden by inheriting class'
+    end
+    # Get the answers from form_data with additional text appended
+    # @param [Hash] hash - sanitized form data hash (see #sanitized_form_data_hash)
+    # @param [Symbol] field_name - name of the multi-choice option
+    # @param [String] option (optional, defaults to "Other:") value for the option that is associated with additional text
+    # @param [Symbol] additional_text_field_name (optional, defaults to field_name + "_other")
+    #                 Field name for the additional text field associated with this option.
+    # @returns [String, Array] - adjusted string or array of user response(s) with additional text appended in place
+    def self.answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
+      additional_text_field_name ||= "#{field_name}_other".to_sym
+      answer = hash[field_name]
+      case answer
+      when String
+        answer = [option, hash[additional_text_field_name]].flatten.join(' ') if answer == option
+      when Array
+        index = answer.index(option)
+        answer[index] = [option, hash[additional_text_field_name]].flatten.join(' ') if index
+      end
+
+      answer
+    end
+    def self.filtered_labels(course, status = 'unreviewed')
+      raise 'Abstract method must be overridden in inheriting class'
+    end
+    # Additional labels that we need in the form data hash, but aren't necessarily
+    # single answers to questions
+    def self.additional_labels
+      []
+    end
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
@@ -167,17 +212,6 @@ module Pd::Application
       emails.unsent.destroy_all
     end
 
-    # Override in derived class
-    def self.statuses
-      %w(
-        unreviewed
-        pending
-        accepted
-        declined
-        waitlisted
-        withdrawn
-      )
-    end
 
     def status_including_enrolled
       status
@@ -211,12 +245,6 @@ module Pd::Application
       []
     end
 
-    # Override in derived class to provide headers
-    # @param course [String] course name used to choose fields, since they differ between courses
-    # @return [String] csv text row of column headers, ending in a newline
-    def self.csv_header(course)
-      raise 'Abstract method must be overridden by inheriting class'
-    end
 
     # Override in derived class to provide the relevant csv data
     # @param course [String] course name used to choose fields, since they differ between courses
@@ -226,36 +254,8 @@ module Pd::Application
       raise 'Abstract method must be overridden by inheriting class'
     end
 
-    # Get the answers from form_data with additional text appended
-    # @param [Hash] hash - sanitized form data hash (see #sanitized_form_data_hash)
-    # @param [Symbol] field_name - name of the multi-choice option
-    # @param [String] option (optional, defaults to "Other:") value for the option that is associated with additional text
-    # @param [Symbol] additional_text_field_name (optional, defaults to field_name + "_other")
-    #                 Field name for the additional text field associated with this option.
-    # @returns [String, Array] - adjusted string or array of user response(s) with additional text appended in place
-    def self.answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
-      additional_text_field_name ||= "#{field_name}_other".to_sym
-      answer = hash[field_name]
-      case answer
-      when String
-        answer = [option, hash[additional_text_field_name]].flatten.join(' ') if answer == option
-      when Array
-        index = answer.index(option)
-        answer[index] = [option, hash[additional_text_field_name]].flatten.join(' ') if index
-      end
 
-      answer
-    end
 
-    def self.filtered_labels(course, status = 'unreviewed')
-      raise 'Abstract method must be overridden in inheriting class'
-    end
-
-    # Additional labels that we need in the form data hash, but aren't necessarily
-    # single answers to questions
-    def self.additional_labels
-      []
-    end
 
     # Include additional text for all the multi-select fields that have the option
     def full_answers

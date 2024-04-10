@@ -13,6 +13,11 @@ module Api::V1::Pd
     REGIONAL_PARTNERS_ALL = "all"
     REGIONAL_PARTNERS_NONE = "none"
 
+    TYPES_BY_ROLE = {
+      csd_teachers: TEACHER_APPLICATION_CLASS,
+      csp_teachers: TEACHER_APPLICATION_CLASS,
+      csa_teachers: TEACHER_APPLICATION_CLASS
+    }
     # GET /api/v1/pd/applications?regional_partner_value=:regional_partner_value
     # :regional_partner_value can be "all", "none", or a regional_partner_id
     def index
@@ -222,11 +227,6 @@ module Api::V1::Pd
       end
     end
 
-    TYPES_BY_ROLE = {
-      csd_teachers: TEACHER_APPLICATION_CLASS,
-      csp_teachers: TEACHER_APPLICATION_CLASS,
-      csa_teachers: TEACHER_APPLICATION_CLASS
-    }
     ROLES = TYPES_BY_ROLE.keys
     TEACHER_ROLES = ROLES.select {|role| role.to_s.include?('teachers')}
 

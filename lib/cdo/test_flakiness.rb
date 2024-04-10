@@ -2,6 +2,12 @@ require 'rest-client'
 require 'cdo/cache_method'
 
 class TestFlakiness
+  PER_REQUEST = 1500 # maximum returned per API call (undocumented)
+  NUM_REQUESTS = 50 # rate limit: 15 request/s with 300 request burst https://wiki.saucelabs.com/display/DOCS/Rate+Limits+for+the+Sauce+Labs+REST+API
+  MIN_SAMPLES = 10
+  TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
+  # Each feature should be retried until the chance of flaky failure is less than this amount.
+  MAX_FAILURE_RATE = 0.001 # 0.1%
   def self.sauce_username
     ENV['SAUCE_USERNAME'] || CDO.saucelabs_username
   end
@@ -10,13 +16,7 @@ class TestFlakiness
     ENV['SAUCE_ACCESS_KEY'] || CDO.saucelabs_authkey
   end
 
-  PER_REQUEST = 1500 # maximum returned per API call (undocumented)
-  NUM_REQUESTS = 50 # rate limit: 15 request/s with 300 request burst https://wiki.saucelabs.com/display/DOCS/Rate+Limits+for+the+Sauce+Labs+REST+API
-  MIN_SAMPLES = 10
-  TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
 
-  # Each feature should be retried until the chance of flaky failure is less than this amount.
-  MAX_FAILURE_RATE = 0.001 # 0.1%
 
   # Queries the SauceLabs API for jobs
   # @param options [Hash] Optional, options overrides.

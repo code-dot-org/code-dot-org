@@ -75,6 +75,88 @@ class RegionalPartner < ApplicationRecord
     SENT_BY_SYSTEM = 'sent_by_system'.freeze
   ].freeze
 
+  # Make sure the phone number contains at least 10 digits.
+  # Allow any format and additional text, such as extensions.
+  PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/
+  CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
+  # find a Regional Partner that services a particular region
+  # @param [String] zip_code
+  # @param [String] state - 2-letter state code
+  def self.find_by_region(zip_code, state)
+    return nil if zip_code.nil? && state.nil?
+
+    base_query = RegionalPartner.joins(:mappings)
+    state_query = base_query.where(pd_regional_partner_mappings: {state: state}) if state
+    zip_code_query = base_query.where(pd_regional_partner_mappings: {zip_code: zip_code}) if zip_code
+
+    find_by_region_query =
+      if state && zip_code.nil?
+        state_query
+      elsif state.nil? && zip_code
+        zip_code_query
+      elsif state && zip_code
+        state_query.or(zip_code_query)
+      end
+
+    # prefer match by zip code when multiple partners cover the same state
+    # This SQL string is not at risk for injection vulnerabilites because it's
+    # just a hardcoded string, so it's safe to wrap in Arel.sql
+    return find_by_region_query.order(Arel.sql('pd_regional_partner_mappings.zip_code IS NOT NULL DESC')).first
+  end
+  # Find a Regional Partner that services a particular ZIP.
+  # This works similarly to find_by_region, above, but it does one extra thing: if a US ZIP is provided
+  # and we don't find a partner with that ZIP, we geocode that ZIP to get a state and try with that
+  # state.
+  # @param [String] zip_code
+  def self.find_by_zip(zip_code_raw)
+    partner = nil
+    state = nil
+
+    # Force to be a string, ignore "-" and anything after it,
+    # and only allow digits 0-9.
+    zip_code = zip_code_raw.to_s.split("-")[0]&.tr('^0-9', '')
+
+    if RegexpUtils.us_zip_code?(zip_code)
+      # Try to find the matching partner using the ZIP code.
+      partner = RegionalPartner.find_by_region(zip_code, nil)
+
+      # Otherwise, get the state for the ZIP code and try to find the matching partner using that.
+      unless partner
+        begin
+          Geocoder.with_errors do
+            # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
+            # See https://github.com/alexreisner/geocoder#error-handling
+            Retryable.retryable(on: StandardError) do
+              state = Geocoder.search(zip_code, params: {country: 'us'})&.first&.state_code
+            end
+          end
+        rescue StandardError => exception
+          # Log geocoding errors to honeybadger but don't fail
+          Honeybadger.notify(exception,
+            error_message: 'Error geocoding regional partner workshop zip_code',
+            context: {
+              zip_code: zip_code
+            }
+          )
+        end
+
+        if state
+          partner = RegionalPartner.find_by_region(nil, state)
+        end
+      end
+    end
+
+    return partner, state
+  end
+  def self.find_or_create_all_from_tsv(filename)
+    CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
+      params = {
+        name: row['name'],
+        group: row['group'],
+      }
+      RegionalPartner.where(params).first_or_create!
+    end
+  end
   def are_apps_closed
     apps_close_str = apps_close_date_teacher
     if apps_close_str
@@ -136,9 +218,6 @@ class RegionalPartner < ApplicationRecord
     model.pl_programs_offered&.reject!(&:blank?)
   end
 
-  # Make sure the phone number contains at least 10 digits.
-  # Allow any format and additional text, such as extensions.
-  PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/
 
   validates :name, length: {minimum: 1, maximum: 255}
   validates :group, numericality: {only_integer: true, greater_than: 0}, if: -> {group.present?}
@@ -167,86 +246,7 @@ class RegionalPartner < ApplicationRecord
     contact_email || program_managers&.first&.email
   end
 
-  # find a Regional Partner that services a particular region
-  # @param [String] zip_code
-  # @param [String] state - 2-letter state code
-  def self.find_by_region(zip_code, state)
-    return nil if zip_code.nil? && state.nil?
 
-    base_query = RegionalPartner.joins(:mappings)
-    state_query = base_query.where(pd_regional_partner_mappings: {state: state}) if state
-    zip_code_query = base_query.where(pd_regional_partner_mappings: {zip_code: zip_code}) if zip_code
 
-    find_by_region_query =
-      if state && zip_code.nil?
-        state_query
-      elsif state.nil? && zip_code
-        zip_code_query
-      elsif state && zip_code
-        state_query.or(zip_code_query)
-      end
 
-    # prefer match by zip code when multiple partners cover the same state
-    # This SQL string is not at risk for injection vulnerabilites because it's
-    # just a hardcoded string, so it's safe to wrap in Arel.sql
-    return find_by_region_query.order(Arel.sql('pd_regional_partner_mappings.zip_code IS NOT NULL DESC')).first
-  end
-
-  # Find a Regional Partner that services a particular ZIP.
-  # This works similarly to find_by_region, above, but it does one extra thing: if a US ZIP is provided
-  # and we don't find a partner with that ZIP, we geocode that ZIP to get a state and try with that
-  # state.
-  # @param [String] zip_code
-  def self.find_by_zip(zip_code_raw)
-    partner = nil
-    state = nil
-
-    # Force to be a string, ignore "-" and anything after it,
-    # and only allow digits 0-9.
-    zip_code = zip_code_raw.to_s.split("-")[0]&.tr('^0-9', '')
-
-    if RegexpUtils.us_zip_code?(zip_code)
-      # Try to find the matching partner using the ZIP code.
-      partner = RegionalPartner.find_by_region(zip_code, nil)
-
-      # Otherwise, get the state for the ZIP code and try to find the matching partner using that.
-      unless partner
-        begin
-          Geocoder.with_errors do
-            # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
-            # See https://github.com/alexreisner/geocoder#error-handling
-            Retryable.retryable(on: StandardError) do
-              state = Geocoder.search(zip_code, params: {country: 'us'})&.first&.state_code
-            end
-          end
-        rescue StandardError => exception
-          # Log geocoding errors to honeybadger but don't fail
-          Honeybadger.notify(exception,
-            error_message: 'Error geocoding regional partner workshop zip_code',
-            context: {
-              zip_code: zip_code
-            }
-          )
-        end
-
-        if state
-          partner = RegionalPartner.find_by_region(nil, state)
-        end
-      end
-    end
-
-    return partner, state
-  end
-
-  CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze
-
-  def self.find_or_create_all_from_tsv(filename)
-    CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      params = {
-        name: row['name'],
-        group: row['group'],
-      }
-      RegionalPartner.where(params).first_or_create!
-    end
-  end
 end

@@ -1,6 +1,10 @@
 require 'json'
 
 class Form2 < OpenStruct
+  def self.from_row(row)
+    return nil unless row
+    new row
+  end
   def initialize(params = {})
     params = params.dup
     params[:data] = JSON.parse(params[:data]) if params[:data].present?
@@ -8,8 +12,4 @@ class Form2 < OpenStruct
     super params
   end
 
-  def self.from_row(row)
-    return nil unless row
-    new row
-  end
 end

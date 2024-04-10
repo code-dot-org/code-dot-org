@@ -44,6 +44,73 @@ class ApiControllerTest < ActionController::TestCase
     sign_in @teacher
   end
 
+  # Helper for setting up student lock tests
+  def get_student_response(script, level, lesson, student_number)
+    get :lockable_state, params: {script_id: script.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+
+    student_responses = body[@section.id.to_s]['lessons'][lesson.id.to_s]
+    if student_responses
+      return student_responses[student_number - 1]
+    else
+      return nil
+    end
+  end
+  #
+  # Given two arrays, checks that they represent equivalent bags (or multisets)
+  # of elements.
+  #
+  # Equivalent:     [1, 1, 2], [1, 2, 1]
+  # Not equivalent: [1, 1, 2], [1, 2, 2]
+  #
+  # Optionally takes a comparator block.  If omitted, == comparison is used.
+  #
+  # equivalent_bags?([2, 3, 4], [12, 13, 14]) {|a,b| a%10 == b%10}
+  #
+  # @param [Array] bag_a
+  # @param [Array] bag_b
+  # @param [Block] (optional) comparator
+  # @return [Boolean] true if sets are equivalent, false if not
+  #
+  def equivalent_bags?(bag_a, bag_b)
+    bag_b_remaining = bag_b.clone
+    bag_a.each do |a|
+      match_index = bag_b_remaining.find_index do |b|
+        if block_given?
+          yield a, b
+        else
+          a == b
+        end
+      end
+      if match_index.nil?
+        return false
+      else
+        bag_b_remaining.delete_at match_index
+      end
+    end
+    bag_b_remaining.empty?
+  end
+  def assert_levelgroup_results_match(expected_results, actual_results)
+    match = equivalent_bags?(expected_results, actual_results) do |expected, actual|
+      expected['type'] == actual['type'] &&
+        expected['question'] == actual['question'] &&
+        expected['answer_texts'] == actual['answer_texts'] &&
+        equivalent_bags?(expected['results'], actual['results'])
+    end
+    assert match, <<~MESSAGE
+      Mismatched results:
+
+      Expected:
+
+      #{expected_results.join("\n")}
+
+      Actual:
+
+      #{actual_results.join("\n")}
+
+    MESSAGE
+  end
   private def create_script_with_bonus_levels
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -325,19 +392,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal @student_flappy_1.name, flappy_section_response['lessons'][lesson.id.to_s][0]['name']
   end
 
-  # Helper for setting up student lock tests
-  def get_student_response(script, level, lesson, student_number)
-    get :lockable_state, params: {script_id: script.id}
-    assert_response :success
-    body = JSON.parse(response.body)
-
-    student_responses = body[@section.id.to_s]['lessons'][lesson.id.to_s]
-    if student_responses
-      return student_responses[student_number - 1]
-    else
-      return nil
-    end
-  end
 
   test "student should show unlocked and not readonly" do
     # student_1 is unlocked
@@ -1706,40 +1760,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  #
-  # Given two arrays, checks that they represent equivalent bags (or multisets)
-  # of elements.
-  #
-  # Equivalent:     [1, 1, 2], [1, 2, 1]
-  # Not equivalent: [1, 1, 2], [1, 2, 2]
-  #
-  # Optionally takes a comparator block.  If omitted, == comparison is used.
-  #
-  # equivalent_bags?([2, 3, 4], [12, 13, 14]) {|a,b| a%10 == b%10}
-  #
-  # @param [Array] bag_a
-  # @param [Array] bag_b
-  # @param [Block] (optional) comparator
-  # @return [Boolean] true if sets are equivalent, false if not
-  #
-  def equivalent_bags?(bag_a, bag_b)
-    bag_b_remaining = bag_b.clone
-    bag_a.each do |a|
-      match_index = bag_b_remaining.find_index do |b|
-        if block_given?
-          yield a, b
-        else
-          a == b
-        end
-      end
-      if match_index.nil?
-        return false
-      else
-        bag_b_remaining.delete_at match_index
-      end
-    end
-    bag_b_remaining.empty?
-  end
 
   test 'equivalent_bags? helper' do
     assert equivalent_bags? [], []
@@ -1749,26 +1769,6 @@ class ApiControllerTest < ActionController::TestCase
     refute equivalent_bags?([2, 3, 4], [11, 12, 13]) {|a, b| a % 10 == b % 10}
   end
 
-  def assert_levelgroup_results_match(expected_results, actual_results)
-    match = equivalent_bags?(expected_results, actual_results) do |expected, actual|
-      expected['type'] == actual['type'] &&
-        expected['question'] == actual['question'] &&
-        expected['answer_texts'] == actual['answer_texts'] &&
-        equivalent_bags?(expected['results'], actual['results'])
-    end
-    assert match, <<~MESSAGE
-      Mismatched results:
-
-      Expected:
-
-      #{expected_results.join("\n")}
-
-      Actual:
-
-      #{actual_results.join("\n")}
-
-    MESSAGE
-  end
 
   test 'sign_cookies' do
     skip 'TODO: stub secret key for CloudFront cookie signing'

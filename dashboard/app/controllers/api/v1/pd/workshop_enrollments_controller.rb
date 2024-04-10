@@ -4,11 +4,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel', 'move']
 
   before_action :authorize_update_scholarship_info!, only: 'update_scholarship_info'
-  def authorize_update_scholarship_info!
-    @enrollment = Pd::Enrollment.find(params[:enrollment_id])
-    authorize! :update_scholarship_info, @enrollment
-  end
-
   RESPONSE_MESSAGES = {
     SUCCESS: "success".freeze,
     DUPLICATE: "duplicate".freeze,
@@ -18,6 +13,11 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     NOT_FOUND: "not found".freeze,
     ERROR: "error".freeze
   }
+  def authorize_update_scholarship_info!
+    @enrollment = Pd::Enrollment.find(params[:enrollment_id])
+    authorize! :update_scholarship_info, @enrollment
+  end
+
 
   # GET /api/v1/pd/workshops/1/enrollments
   def index
