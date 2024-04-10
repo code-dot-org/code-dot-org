@@ -90,15 +90,16 @@ PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 # If any line fails, the whole block will fail and exit early
 ${PARALLEL} <<SCRIPT || (echo && echo && echo "One of the parallel test jobs FAILED, exiting early." && echo && exit 1)
   yarn lint
-  npx karma start --testType=unit --port=9876
-  npx karma start --testType=storybook --port=9877
-  npx karma start --testType=integration --levelType='turtle' --port=9879
-  npx karma start --testType=integration --levelType='maze' --port=9880
-  npx karma start --testType=integration --levelType='gamelab' --port=9881
-  npx karma start --testType=integration --levelType='craft' --port=9882
-  npx karma start --testType=integration --levelType='applab1' --port=9883
-  npx karma start --testType=integration --levelType='applab2' --port=9884
-  npx karma start --testType=integration --levelType='studio' --port=9885
+  npx jest
+#  npx karma start --testType=unit --port=9876
+#  npx karma start --testType=storybook --port=9877
+#  npx karma start --testType=integration --levelType='turtle' --port=9879
+#  npx karma start --testType=integration --levelType='maze' --port=9880
+#  npx karma start --testType=integration --levelType='gamelab' --port=9881
+#  npx karma start --testType=integration --levelType='craft' --port=9882
+#  npx karma start --testType=integration --levelType='applab1' --port=9883
+#  npx karma start --testType=integration --levelType='applab2' --port=9884
+#  npx karma start --testType=integration --levelType='studio' --port=9885
 SCRIPT
 
 echo && echo
