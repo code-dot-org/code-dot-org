@@ -10,6 +10,10 @@ import {
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 
 describe('dialogHelper', () => {
+  // WARNING: These before and after steps have been confirmed to leak state,
+  // which breaks rendering in other tests. The tests which were broken by this
+  // were using React Testing Library and IntroJS. See PR for details:
+  // https://github.com/code-dot-org/code-dot-org/pull/57939
   let stashedWindowJquery;
   before(() => {
     stashedWindowJquery = window.jQuery;
