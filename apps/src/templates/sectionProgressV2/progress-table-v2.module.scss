@@ -285,7 +285,7 @@ min-width:47px;
   }
 
   &ChoiceLevelLink {
-    border-left: 1px solid $neutral_dark40;
+    border-left: 1px solid $light_gray_100;
     height: 32px;
     margin: 8px 0;
     line-height: 32px !important;
@@ -298,13 +298,7 @@ min-width:47px;
     width: auto;
 
     &First {
-      border-inline-start: 4px solid $neutral_dark40;
-      width: $level-cell-width - 3 + px;
-    }
-
-    &Last {
-      border-inline-end: 3px solid $neutral_dark40;
-      width: $level-cell-width - 2 + px;
+      border-inline-start: 1px solid $neutral_dark40;
     }
   }
 
