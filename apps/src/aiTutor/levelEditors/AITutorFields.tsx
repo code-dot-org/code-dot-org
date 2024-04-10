@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import moduleStyles from '@cdo/apps/lab2/levelEditors/aiCustomizations/edit-ai-customizations.module.scss';
+import moduleStyles from '@cdo/apps/lab2/levelEditors/aichatSettings/edit-aichat-settings.module.scss';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {generalChatSystemPrompt} from '../constants';
 
