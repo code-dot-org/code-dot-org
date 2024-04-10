@@ -18,7 +18,6 @@ import style from './landingPage.module.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 
 const getAvailableTabs = permissions => {
-  // [TODO]: return a subset of the tabs below based on the user's permission level
   let tabs = [
     {
       value: 'myPL',
@@ -55,6 +54,7 @@ export default function LandingPage({
   deeperLearningCourseData,
   currentYearApplicationId,
   workshopsAsParticipant,
+  plCoursesInstructed,
   plCoursesStarted,
   userPermissions,
 }) {
@@ -175,7 +175,7 @@ export default function LandingPage({
             <CoteacherInviteNotification isForPl={true} />
             <OwnedSections
               isPlSections={true}
-              sectionIds={[]}
+              sectionIds={plCoursesInstructed}
               hiddenSectionIds={[]}
             />
           </ContentContainer>
@@ -191,6 +191,7 @@ LandingPage.propTypes = {
   deeperLearningCourseData: PropTypes.array,
   currentYearApplicationId: PropTypes.number,
   workshopsAsParticipant: PropTypes.array,
+  plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
 };
