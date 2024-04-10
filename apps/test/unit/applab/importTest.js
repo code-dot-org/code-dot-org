@@ -21,6 +21,8 @@ import pageConstantsReducer, {
 import {expect} from '../../util/reconfiguredChai';
 import {allowConsoleErrors} from '../../util/testUtils';
 
+$.fn.disableSelection = jest.fn();
+
 describe('The applab/import module', () => {
   allowConsoleErrors();
   var designModeViz;
@@ -269,7 +271,7 @@ describe('The applab/import module', () => {
       ]);
     });
 
-    it('will replace screens with the same screen id', () => {
+    it('will replace screens with the same screen id', async () => {
       setExistingHTML(`
         <div class="screen" id="design_screen1">
           <input id="design_input1">
@@ -286,7 +288,7 @@ describe('The applab/import module', () => {
       expect(designMode.getAllScreenIds()).to.deep.equal(['screen1']);
       expect(elementUtils.getPrefixedElementById('input1')).not.to.be.null;
       expect(elementUtils.getPrefixedElementById('importedInput')).to.be.null;
-      importScreensAndAssets(project.id, [project.screens[0]], []);
+      await importScreensAndAssets(project.id, [project.screens[0]], []);
       expect(designMode.getAllScreenIds()).to.deep.equal(['screen1']);
       expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
       expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be
