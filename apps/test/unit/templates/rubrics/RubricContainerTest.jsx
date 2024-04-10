@@ -771,7 +771,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchTourStatus({seen: true});
 
-    const {queryByText, getByTestId} = render(
+    const {getByTestId} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
