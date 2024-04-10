@@ -710,32 +710,32 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
   });
 
-  // it('displays product tour when getTourStatus is false', async function () {
-  //   const clock = sinon.useFakeTimers();
-  //   stubFetchEvalStatusForUser(readyJson);
-  //   stubFetchEvalStatusForAll(readyJsonAll);
-  //   stubFetchAiEvaluations(mockAiEvaluations);
-  //   stubFetchTeacherEvaluations(noEvals);
-  //   stubFetchTourStatus({seen: null});
+  it('displays product tour when getTourStatus is false', async function () {
+    const clock = sinon.useFakeTimers();
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
 
-  //   const {queryByText} = render(
-  //     <Provider store={store}>
-  //       <RubricContainer
-  //         rubric={defaultRubric}
-  //         studentLevelInfo={defaultStudentInfo}
-  //         teacherHasEnabledAi={true}
-  //         currentLevelName={'test_level'}
-  //         reportingData={{}}
-  //         open
-  //       />
-  //     </Provider>
-  //   );
+    const {queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
 
-  //   await wait();
-  //   clock.tick(5000);
-  //   expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
-  //   clock.restore();
-  // });
+    await wait();
+    clock.tick(5000);
+    expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
+    clock.restore();
+  });
 
   it('does not display product tour when getTourStatus returns true', async function () {
     stubFetchEvalStatusForUser(readyJson);
