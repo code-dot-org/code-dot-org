@@ -2,7 +2,7 @@ module CustomCops
   # Based on https://github.com/rubocop/rubocop/blob/v1.52.1/lib/rubocop/cop/style/access_modifier_declarations.rb
   class InlinePlusGroupedAccessModifierDeclarations < RuboCop::Cop::Base
     RESTRICT_ON_SEND = %i[private private_class_method].freeze
-    MESSAGE = 'inlined private methods should all be grouped together at the end of the file.'.freeze
+    MESSAGE = 'inlined private methods should all be grouped together at the end of the code block.'.freeze
 
     # @!method access_modifier_with_symbol?(node)
     def_node_matcher :access_modifier_with_symbol?, <<~PATTERN
