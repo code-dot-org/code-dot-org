@@ -38,7 +38,7 @@ class SoundCache {
       updateLoadProgress?: (progress: number) => void;
     } = {}
   ): Promise<void> {
-    const failedSounds = [];
+    const failedSounds: string[] = [];
     const {onLoadFinished, updateLoadProgress} = callbacks;
     const startTime = Date.now();
 
@@ -50,20 +50,28 @@ class SoundCache {
       updateLoadProgress(0);
     }
 
-    for (let i = 0; i < paths.length; i++) {
-      try {
-        const sound = await this.loadSound(paths[i]);
-        if (!sound) {
-          failedSounds.push(paths[i]);
-        }
-      } catch (error) {
-        failedSounds.push(paths[i]);
-      }
+    let loadCounter = 0;
+    const loadPromises: Promise<void>[] = [];
 
-      if (updateLoadProgress) {
-        updateLoadProgress((i + 1) / paths.length);
-      }
+    for (const path of paths) {
+      const loadPromise = this.loadSound(path)
+        .then(sound => {
+          if (!sound) {
+            failedSounds.push(path);
+          }
+        })
+        .catch(err => {
+          failedSounds.push(path);
+        })
+        .finally(() => {
+          if (updateLoadProgress) {
+            updateLoadProgress(++loadCounter / paths.length);
+          }
+        });
+      loadPromises.push(loadPromise);
     }
+
+    await Promise.all(loadPromises);
 
     if (onLoadFinished) {
       onLoadFinished(

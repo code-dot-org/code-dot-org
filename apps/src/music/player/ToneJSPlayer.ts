@@ -13,7 +13,13 @@ import {
 } from 'tone';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
+import {
+  AudioPlayer,
+  InstrumentData,
+  PlayerEvent,
+  SampleEvent,
+  SamplerSequence,
+} from './types';
 import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
 import {Source, SourceOptions} from 'tone/build/esm/source/Source';
 import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
@@ -37,6 +43,10 @@ class ToneJSPlayer implements AudioPlayer {
     player: Source<SourceOptions>;
   } | null;
   private effectBusses: {[key: string]: ToneAudioNode};
+  private registeredCallbacks: {
+    [event in PlayerEvent]?: ((payload?: string) => void)[];
+  };
+  private loadingInstruments: {[instrumentName: string]: boolean};
 
   constructor(
     bpm = DEFAULT_BPM,
@@ -48,6 +58,8 @@ class ToneJSPlayer implements AudioPlayer {
     this.samplers = {};
     this.currentPreview = null;
     this.effectBusses = {};
+    this.registeredCallbacks = {};
+    this.loadingInstruments = {};
     this.generateEffectBusses();
   }
 
@@ -77,8 +89,23 @@ class ToneJSPlayer implements AudioPlayer {
     Transport.loopEnd = this.playbackTimeToTransportTime(endPosition);
   }
 
-  async loadSounds(sampleUrls: string[], callbacks?: SoundLoadCallbacks) {
-    return this.soundCache.loadSounds(sampleUrls, callbacks);
+  async loadSounds(
+    sampleUrls: string[],
+    instruments: InstrumentData[],
+    callbacks?: SoundLoadCallbacks
+  ) {
+    // Combine sound sample URLs and instrument sample URLs to load together.
+    const urlsToLoad = [...sampleUrls];
+    for (const {instrumentName, sampleMap} of instruments) {
+      urlsToLoad.push(...Object.values(sampleMap));
+      this.loadingInstruments[instrumentName] = true;
+    }
+    await this.soundCache.loadSounds(urlsToLoad, callbacks);
+
+    for (const {instrumentName, sampleMap} of instruments) {
+      // Instrument loads should now be instantaneous since the samples are already loaded.
+      await this.loadInstrument(instrumentName, sampleMap);
+    }
   }
 
   async loadInstrument(
@@ -89,6 +116,7 @@ class ToneJSPlayer implements AudioPlayer {
     if (this.samplers[instrumentName]) {
       return;
     }
+    this.loadingInstruments[instrumentName] = true;
     const urls: {[note: number]: AudioBuffer} = {};
     await this.soundCache.loadSounds(Object.values(sampleMap), callbacks);
     Object.keys(sampleMap).forEach(note => {
@@ -110,6 +138,14 @@ class ToneJSPlayer implements AudioPlayer {
     }
 
     this.samplers[instrumentName] = effectsSamplers;
+    for (const callback of this.registeredCallbacks['InstrumentLoaded'] || []) {
+      callback(instrumentName);
+    }
+    this.loadingInstruments[instrumentName] = false;
+  }
+
+  isInstrumentLoading(instrumentName: string): boolean {
+    return this.loadingInstruments[instrumentName];
   }
 
   isInstrumentLoaded(instrumentName: string): boolean {
@@ -262,6 +298,16 @@ class ToneJSPlayer implements AudioPlayer {
   cancelPendingEvents() {
     this.stopAllPlayers();
     Transport.cancel();
+  }
+
+  registerCallback(
+    event: PlayerEvent,
+    callback: (payload?: string) => void
+  ): void {
+    if (!this.registeredCallbacks[event]) {
+      this.registeredCallbacks[event] = [];
+    }
+    this.registeredCallbacks[event]?.push(callback);
   }
 
   private stopAllPlayers() {

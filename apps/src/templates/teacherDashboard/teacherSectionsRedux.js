@@ -1304,6 +1304,7 @@ export function getSectionRows(state, sectionIds) {
       'name',
       'courseVersionName',
       'loginType',
+      'loginTypeName',
       'studentCount',
       'code',
       'participantType',
@@ -1331,6 +1332,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
+  loginTypeName: serverSection.login_type_name,
   grades: serverSection.grades,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   lessonExtras: serverSection.lesson_extras,

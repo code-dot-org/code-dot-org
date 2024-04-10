@@ -678,16 +678,12 @@ module SharedConstants
   AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
 
   # These reflect the 'status' of an AI Tutor Interaction
-  AI_TUTOR_INTERACTION_SAVE_STATUS = {
+  AI_TUTOR_INTERACTION_STATUS = {
     ERROR: 'error',
-    PERSONAL: 'personal',
-    PROFANITY: 'profanity',
-    INAPPROPRIATE: 'inappropriate',
+    PII_VIOLATION: 'pii_violation',
+    PROFANITY_VIOLATION: 'profanity_violation',
     OK: 'ok',
     UNKNOWN: 'unknown',
-    EMAIL: 'email',
-    ADDRESS: 'address',
-    PHONE: 'phone',
   }.freeze
 
   # These are the types of assistance AI Tutor can provide
@@ -695,6 +691,12 @@ module SharedConstants
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
+  }.freeze
+
+  PII_TYPES = {
+    EMAIL: 'email',
+    PHONE: 'phone',
+    ADDRESS: 'address',
   }.freeze
 
   USER_TYPES = OpenStruct.new(

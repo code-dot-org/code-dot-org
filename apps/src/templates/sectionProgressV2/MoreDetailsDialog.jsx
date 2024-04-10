@@ -39,7 +39,12 @@ export default function MoreDetailsDialog({onClose}) {
       initialFocus={false}
     >
       <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
-      <button type="button" onClick={onClose} className={styles.xCloseButton}>
+      <button
+        id="ui-close-dialog"
+        type="button"
+        onClick={onClose}
+        className={styles.xCloseButton}
+      >
         <i id="x-close" className="fa-solid fa-xmark" />
       </button>
       <hr />
