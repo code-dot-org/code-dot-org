@@ -1,5 +1,5 @@
 // react testing library import
-import {render, fireEvent, act} from '@testing-library/react';
+import {render, fireEvent, act, screen} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
@@ -729,6 +729,7 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
+    screen.debug();
 
     await wait();
     expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
