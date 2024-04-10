@@ -48,11 +48,11 @@ class QueuedAccountPurge < ApplicationRecord
     # b) Number of selected records should always be double-digits and below.
     joins(:user).where.not(users: {purged_at: nil}).destroy_all
   end
+
   # Used by developers to resolve an account purge queued for manual review,
   # after they've investigated the account and decided it's ready to purge.
   def resolve!
     AccountPurger.new(bypass_safety_constraints: true).purge_data_for_account user
     destroy!
   end
-
 end

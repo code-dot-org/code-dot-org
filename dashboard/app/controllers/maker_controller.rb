@@ -8,6 +8,7 @@ class MakerController < ApplicationController
       Unit.latest_version_with_progress('devices', for_user) ||
       Unit.latest_stable_version('devices')
   end
+
   # Maker Toolkit is currently used in standalone Create Devices with Apps unit.
   # Retrieves the relevant Create Devices with Apps unit version based on self.maker_script.
   def home
@@ -23,7 +24,6 @@ class MakerController < ApplicationController
       linkToLesson: script_next_path(maker_unit_for_user, 'next')
     }
   end
-
 
   def setup
   end

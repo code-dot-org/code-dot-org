@@ -43,6 +43,7 @@ class Vocabulary < ApplicationRecord
       KEY_CHAR_RE.match(character) ? character : '_'
     end.join.squeeze('_')
   end
+
   # Return a version of the given key which does not conflict
   # with any existing key for the given CourseVersion. We
   # achieve this through basic guess-and-check; simply append an
@@ -63,6 +64,7 @@ class Vocabulary < ApplicationRecord
 
     new_key
   end
+
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated
@@ -116,8 +118,6 @@ class Vocabulary < ApplicationRecord
     key = Vocabulary.sanitize_key(key)
     self.key = key
   end
-
-
 
   def serialize_scripts
     if Rails.application.config.levelbuilder_mode

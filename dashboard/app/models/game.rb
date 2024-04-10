@@ -143,7 +143,6 @@ class Game < ApplicationRecord
     @@game_custom_maze ||= find_by_name("CustomMaze")
   end
 
-
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
   end
@@ -295,6 +294,7 @@ class Game < ApplicationRecord
       Game.import! games
     end
   end
+
   def unplugged?
     app == UNPLUG
   end
@@ -370,6 +370,4 @@ class Game < ApplicationRecord
     dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
   end
-
-
 end

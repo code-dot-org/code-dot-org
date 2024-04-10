@@ -7,6 +7,7 @@ class LevelGroupDSL < LevelDSL
       title
     )
   end
+
   def self.serialize(level)
     properties = level.properties
     new_dsl = "name '#{level.name}'"
@@ -23,6 +24,7 @@ class LevelGroupDSL < LevelDSL
     end
     new_dsl
   end
+
   def initialize
     super
     @id = nil
@@ -39,7 +41,6 @@ class LevelGroupDSL < LevelDSL
   def parse_output
     super.merge(pages: @pages)
   end
-
 
   integer :id
   string :title
@@ -106,5 +107,4 @@ class LevelGroupDSL < LevelDSL
   def anonymous(text)
     @hash[:anonymous] = text
   end
-
 end

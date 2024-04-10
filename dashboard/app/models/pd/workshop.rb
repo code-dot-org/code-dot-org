@@ -94,9 +94,11 @@ class Pd::Workshop < ApplicationRecord
   def self.organized_by(organizer)
     where(organizer_id: organizer.id)
   end
+
   def self.facilitated_by(facilitator)
     left_outer_joins(:facilitators).where(users: {id: facilitator.id}).distinct
   end
+
   def self.enrolled_in_by(teacher)
     base_query = joins(:enrollments)
     user_id_where_clause = base_query.where(pd_enrollments: {user_id: teacher.id})
@@ -104,9 +106,11 @@ class Pd::Workshop < ApplicationRecord
 
     user_id_where_clause.or(email_where_clause).distinct
   end
+
   def self.exclude_summer
     where.not(subject: [SUBJECT_SUMMER_WORKSHOP, SUBJECT_TEACHER_CON])
   end
+
   # scopes to workshops managed by the user, which means the user is any of:
   # - the organizer
   # - a facilitator
@@ -120,9 +124,11 @@ class Pd::Workshop < ApplicationRecord
         user.regional_partner_program_managers.select(:regional_partner_id)
       ).distinct
   end
+
   def self.attended_by(teacher)
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).distinct
   end
+
   def self.in_state(state, error_on_bad_state: true)
     case state
     when STATE_NOT_STARTED
@@ -136,14 +142,17 @@ class Pd::Workshop < ApplicationRecord
       none
     end
   end
+
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_before(date)
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) <= ?)', date)
   end
+
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_after(date)
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
+
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_scheduled_start(desc: false)
@@ -154,6 +163,7 @@ class Pd::Workshop < ApplicationRecord
       # a string from hardcoded values, so it's safe to wrap in Arel.sql
       order(Arel.sql('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : '')))
   end
+
   # Orders by the number of active enrollments
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_enrollment_count(desc: false)
@@ -164,6 +174,7 @@ class Pd::Workshop < ApplicationRecord
       # a string from hardcoded values, so it's safe to wrap in Arel.sql
       order(Arel.sql('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : '')))
   end
+
   # Orders by the workshop state, in order: Not Started, In Progress, Ended
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_state(desc: false)
@@ -180,33 +191,41 @@ class Pd::Workshop < ApplicationRecord
       )
     )
   end
+
   # Filters by scheduled end date (date of last session)
   def self.scheduled_end_on_or_before(date)
     joins(:sessions).group_by_id.having("(DATE(MAX(end)) <= ?)", date)
   end
+
   # Filters by scheduled end date (date of last session)
   def self.scheduled_end_on_or_after(date)
     joins(:sessions).group_by_id.having("(DATE(MAX(end)) >= ?)", date)
   end
+
   def self.scheduled_start_in_days(days)
     Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Time.zone.today + days.days)
   end
+
   def self.scheduled_end_in_days(days)
     Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Time.zone.today + days.days)
   end
+
   # Filters by date the workshop actually ended, regardless of scheduled session times.
   def self.end_on_or_before(date)
     where('(DATE(ended_at) <= ?)', date)
   end
+
   # Filters by date the workshop actually ended, regardless of scheduled session times.
   def self.end_on_or_after(date)
     where('(DATE(ended_at) >= ?)', date)
   end
+
   # Filters those those workshops that have not yet ended, but whose
   # final session was scheduled to end more than two days ago
   def self.should_have_ended
     in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(2.days.ago)
   end
+
   # Find the workshop that is closest in time to today
   # @return [Pd::Workshop, nil]
   def self.nearest
@@ -215,6 +234,7 @@ class Pd::Workshop < ApplicationRecord
       order("day_diff ASC").
       first
   end
+
   # Find the workshop with the closest session to today attended by the given teacher
   # @param [User] teacher
   # @return [Pd::Workshop, nil]
@@ -224,6 +244,7 @@ class Pd::Workshop < ApplicationRecord
       order("day_diff").
       first
   end
+
   # Find the workshop with the closest session to today attended by the given teacher,
   # or enrolled in (but not attended by) that same teacher
   # @param [User] teacher
@@ -231,6 +252,7 @@ class Pd::Workshop < ApplicationRecord
   def self.nearest_attended_or_enrolled_in_by(teacher)
     current_scope.with_nearest_attendance_by(teacher) || current_scope.enrolled_in_by(teacher).nearest
   end
+
   # Find the workshop with the closest session to today
   # enrolled in by the given teacher.
   # @param [User] teacher
@@ -238,6 +260,7 @@ class Pd::Workshop < ApplicationRecord
   def self.nearest_enrolled_in_by(teacher)
     current_scope.enrolled_in_by(teacher).nearest
   end
+
   # This is called by the process_pd_workshop_emails cron job which is run
   # on the production-daemon machine, and will send exit surveys to workshops
   # that have been ended in the last two days when they haven't already had
@@ -255,6 +278,7 @@ class Pd::Workshop < ApplicationRecord
       workshop.update!(processed_at: Time.zone.now)
     end
   end
+
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
@@ -295,6 +319,7 @@ class Pd::Workshop < ApplicationRecord
 
     raise "Failed to send #{days} day workshop reminders: #{errors.join(', ')}" unless errors.empty?
   end
+
   def self.send_reminder_to_close
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
@@ -305,6 +330,7 @@ class Pd::Workshop < ApplicationRecord
     end
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
   end
+
   # Send follow up email to teachers that attended CSF Intro workshops which ended exactly X days ago
   def self.send_follow_up_after_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
@@ -330,6 +356,7 @@ class Pd::Workshop < ApplicationRecord
 
     raise "Failed to send follow up: #{errors.join(', ')}" unless errors.empty?
   end
+
   def self.send_teacher_pre_work_csa
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
@@ -344,6 +371,7 @@ class Pd::Workshop < ApplicationRecord
     end
     raise "Failed to send CSA pre-work: #{errors.join(', ')}" unless errors.empty?
   end
+
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
@@ -351,6 +379,7 @@ class Pd::Workshop < ApplicationRecord
     send_follow_up_after_days(30)
     send_teacher_pre_work_csa
   end
+
   def assign_regional_partner
     self.regional_partner = organizer.try {|o| o.regional_partners.first}
   end
@@ -397,16 +426,7 @@ class Pd::Workshop < ApplicationRecord
       regional_partner && regional_partner.link_to_partner_application.blank?
   end
 
-
-
-
-
-
-
-
   scope :group_by_id, -> {group('pd_workshops.id')}
-
-
 
   scope :in_year, ->(year) do
     scheduled_start_on_or_after(Date.new(year)).
@@ -415,20 +435,6 @@ class Pd::Workshop < ApplicationRecord
 
   # Filters to workshops that are scheduled on or after today and have not yet ended
   scope :future, -> {scheduled_start_on_or_after(Time.zone.today).where(ended_at: nil)}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   def course_name
     COURSE_NAME_OVERRIDES[course] || course
@@ -513,7 +519,6 @@ class Pd::Workshop < ApplicationRecord
     # cron job call the process_ends function below on that machine.
   end
 
-
   def state
     return STATE_NOT_STARTED if started_at.nil?
     return STATE_IN_PROGRESS if ended_at.nil?
@@ -543,11 +548,6 @@ class Pd::Workshop < ApplicationRecord
   def suppress_reminders?
     (MUST_SUPPRESS_EMAIL_SUBJECTS.include? subject) || suppress_email?
   end
-
-
-
-
-
 
   # Updates enrollments with resolved users.
   def resolve_enrolled_users

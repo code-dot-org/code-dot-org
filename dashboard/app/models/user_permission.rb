@@ -62,6 +62,7 @@ class UserPermission < ApplicationRecord
   def self.should_log?
     [:staging, :levelbuilder, :production].include? rack_env
   end
+
   def send_verified_teacher_email
     TeacherMailer.verified_teacher_email(user).deliver_now if user&.email.present?
   end
@@ -99,5 +100,4 @@ class UserPermission < ApplicationRecord
         "permission: #{permission}",
       color: 'yellow'
   end
-
 end

@@ -43,6 +43,7 @@ class LevelGroup < DSLDefined
 
     level
   end
+
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.
   def self.get_sublevel_result(sublevel, sublevel_response)
     sublevel_result = {}
@@ -60,6 +61,7 @@ class LevelGroup < DSLDefined
     end
     sublevel_result
   end
+
   # Returns survey results for a single LevelGroup level by students in a single section.
   def self.get_levelgroup_survey_results(script_level, section)
     # Go through each sublevel
@@ -92,6 +94,7 @@ class LevelGroup < DSLDefined
       }
     end
   end
+
   # Surveys: Returns all anonymous survey results, given a script and a section.
   #
   # The results look like this.  For each level_group_id, levelgroup_results is an array
@@ -149,6 +152,7 @@ class LevelGroup < DSLDefined
 
     surveys_by_level_group
   end
+
   # @param {User} current_user - The currently signed in user
   # @param {User} user - The optional user we're trying to see the attempt of
   # @param {Level} level - The sublevel we'd like the last attempt for
@@ -160,6 +164,7 @@ class LevelGroup < DSLDefined
       try(:level_source).
       try(:data)
   end
+
   def dsl_default
     <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
@@ -249,7 +254,6 @@ class LevelGroup < DSLDefined
     end
   end
 
-
   # @param [Array] new_levels_and_texts_by_page A 2D array of levels and texts,
   # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
   def update_levels_and_texts_by_page(new_levels_and_texts_by_page)
@@ -285,7 +289,6 @@ class LevelGroup < DSLDefined
     levels.map(&:class).uniq == [EvaluationMulti]
   end
 
-
   # Perform a deep copy of this level by cloning all of its sublevels
   # using the same suffix, and write them to the new level definition file.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
@@ -318,8 +321,4 @@ class LevelGroup < DSLDefined
   def all_child_levels
     child_levels.all
   end
-
-
-
-
 end

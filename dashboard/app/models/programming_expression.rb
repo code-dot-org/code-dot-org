@@ -151,6 +151,7 @@ class ProgrammingExpression < ApplicationRecord
       ProgrammingExpression.includes([:programming_environment, :programming_environment_category]).find_by(programming_environment_id: env.id, key: key)
     end
   end
+
   def cb_documentation_path
     "/docs/#{programming_environment.name}/#{key}/"
   end
@@ -406,5 +407,4 @@ class ProgrammingExpression < ApplicationRecord
 
     new_exp
   end
-
 end

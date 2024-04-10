@@ -51,6 +51,7 @@ class StandaloneVideo < Level
       )
     )
   end
+
   def has_video_key?
     if video_key.blank?
       errors.add :video_key, :blank
@@ -73,7 +74,6 @@ class StandaloneVideo < Level
   def uses_lab2?
     uses_lab2
   end
-
 
   def localized_long_instructions
     return nil unless long_instructions

@@ -95,6 +95,7 @@ check();
   def self.standalone_app_names
     [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science'], ['Adaptations', 'adaptations'], ['Ecosystems', 'ecosystems'], ['Sprite Lab (Game Design)', 'game_design']]
   end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -122,10 +123,10 @@ check();
       )
     )
   end
+
   def shared_blocks
     Block.for(*block_pools.presence || type)
   end
-
 
   def standalone_app_name_or_default
     return standalone_app_name || 'spritelab'
@@ -134,7 +135,6 @@ check();
   def project_type
     return standalone_app_name_or_default
   end
-
 
   def common_blocks(type)
     <<~XML.chomp
@@ -244,5 +244,4 @@ check();
   def age_13_required?
     false
   end
-
 end

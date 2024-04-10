@@ -104,10 +104,12 @@ class Blockly < Level
     return "field" unless num_fields == 0
     "title"
   end
+
   # Overriden by different Blockly level types
   def self.skins
     []
   end
+
   def self.count_xml_blocks(xml_string)
     if xml_string.present?
       xml = Nokogiri::XML(xml_string, &:noblanks)
@@ -120,6 +122,7 @@ class Blockly < Level
     end
     0
   end
+
   # This function converts category blocks used by levelbuilders to edit the toolbox to category tags
   # and places the appropriate blocks within each category
   def self.convert_toolbox_to_category(xml_string)
@@ -163,6 +166,7 @@ class Blockly < Level
     end
     return xml_string
   end
+
   # This function converts category tags to blocks so that levelbuilders can more easily edit
   # a toolbox that contains categories.
   def self.convert_category_to_toolbox(xml_string)
@@ -196,6 +200,7 @@ class Blockly < Level
     end
     xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
+
   # "counter" mutations should not be stored because it results in the language being
   # hardcoded. The only exception to this is student saved projects.
   def self.remove_counter_mutations(xml_string)
@@ -204,19 +209,21 @@ class Blockly < Level
     xml.xpath("//block[@type='controls_for_counter']//mutation[@counter='counter']").each(&:remove)
     xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
+
   def self.base_url
     "#{Blockly.asset_host_prefix}/blockly/"
   end
+
   def self.asset_host_prefix
     host = ActionController::Base.asset_host
     (host.blank?) ? "" : "//#{host}"
   end
+
   def summarize_for_lab2_properties(script)
     level_properties = super
     level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
     level_properties
   end
-
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
@@ -261,7 +268,6 @@ class Blockly < Level
     xml_blocks.each {|attr| normalize_xml attr}
   end
 
-
   def normalize_xml(attr)
     attr_val = send(attr)
     if attr_val.present?
@@ -271,17 +277,10 @@ class Blockly < Level
     end
   end
 
-
   def pretty_block(block_name)
     xml_string = send("#{block_name}_blocks")
     self.class.pretty_print_xml(xml_string)
   end
-
-
-
-
-
-
 
   # for levels with solutions
   def update_ideal_level_source
@@ -854,8 +853,6 @@ class Blockly < Level
     end
     block_xml
   end
-
-
 
   # If true, don't autoplay videos before this level (but do keep them in the
   # related videos collection).

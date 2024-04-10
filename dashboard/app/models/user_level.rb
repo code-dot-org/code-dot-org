@@ -74,6 +74,7 @@ class UserLevel < ApplicationRecord
     # preserve updated_at, which represents the user's submission timestamp.
     user_level.save!(touch: false)
   end
+
   def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at: true)
     user_level = UserLevel.find_by(
       level_id: level_id,
@@ -88,12 +89,14 @@ class UserLevel < ApplicationRecord
       user_level.save!(touch: touch_updated_at)
     end
   end
+
   # Get number of passed levels per user for the given set of user IDs
   # @param [ActiveRecord::Relation<Collection<User>>] users
   # @return [Hash<Integer, Integer>] user_id => passed_level_count
   def self.count_passed_levels_for_users(users)
     joins(:user).merge(users).passing.group(:user_id).count
   end
+
   def attempted?
     !best_result.nil?
   end
@@ -116,17 +119,20 @@ class UserLevel < ApplicationRecord
     return false if latest_paired_user_level.nil?
     id == latest_paired_user_level.driver_user_level_id
   end
+
   # Returns whether this UserLevel represents progress completed by a pairing
   # group where the user was a navigator.
   def navigator?
     return false if latest_paired_user_level.nil?
     id == latest_paired_user_level.navigator_user_level_id
   end
+
   # Returns whether this UserLevel represents progress completed by a pairing
   # group.
   def paired?
     driver? || navigator?
   end
+
   # Returns the User object representing the driver of the pairing group if this
   # UserLevel represents progress completed by a pairing group and the driver
   # information is available.  It is possible for navigator? to return true but
@@ -134,12 +140,14 @@ class UserLevel < ApplicationRecord
   def driver
     latest_paired_user_level&.driver
   end
+
   # Returns the driver's level_source id if this UserLevel represents progress
   # completed when in a pairing group. For non-channel-backed levels, this is
   # where the source written by the pairing group is stored.
   def driver_level_source_id
     latest_paired_user_level&.driver_level_source_id
   end
+
   # Returns the names of the partners (i.e. other students) in the pairing group
   # if this UserLevel represents progress completed when in a pairing group.
   # Partners whose user account or progress was deleted are omitted from the
@@ -157,6 +165,7 @@ class UserLevel < ApplicationRecord
       return latest_paired_user_level.navigators_names(exclude_self: false)
     end
   end
+
   # Returns the number of partners in the pairing group if this UserLevel
   # represents progress completed when in a pairing group.
   def partner_count
@@ -166,13 +175,16 @@ class UserLevel < ApplicationRecord
     # is latest_paired_user_level.navigator_count.
     latest_paired_user_level&.navigator_count
   end
+
   def calculate_total_time_spent(additional_time)
     existing_time_spent = time_spent ? time_spent : 0
     additional_time && additional_time > 0 ? existing_time_spent + additional_time : existing_time_spent
   end
+
   def submitted_or_resubmitted?
     saved_change_to_submitted?(to: true) || (submitted? && saved_change_to_level_source_id?)
   end
+
   def after_submit
     submitted_level = Level.cache_find(level_id)
 
@@ -183,6 +195,7 @@ class UserLevel < ApplicationRecord
       PeerReview.create_for_submission(self, level_source_id)
     end
   end
+
   def before_unsubmit
     self.best_result = ActivityConstants::UNSUBMITTED_RESULT
 
@@ -191,27 +204,32 @@ class UserLevel < ApplicationRecord
       PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
     end
   end
+
   # `locked` is a virtual attribute because it relies on `unlocked_at` to
   # automatically return `true` after `AUTOLOCK_PERIOD`, so the following
   # are its getter and setter
   def locked
     unlocked_at.nil? || unlocked_at < AUTOLOCK_PERIOD.ago
   end
+
   def locked=(is_locked)
     self.unlocked_at = is_locked ? nil : Time.now
   end
+
   # this is the "locked" value we return to the client.
   # if the lesson isn't lockable, we always return `false`.
   def show_as_locked?(lesson)
     return false unless lesson.lockable?
     locked
   end
+
   # `readonly` and `locked` are mutually exclusive on the client, so we use
   # this helper to override the value of `readonly_answers` when we're supposed
   # to show as locked.
   def show_as_readonly?(lesson)
     readonly_answers? && !show_as_locked?(lesson)
   end
+
   # First ScriptLevel in this Unit containing this Level.
   # Cached equivalent to `level.script_levels.where(script_id: script.id).first`.
   def script_level
@@ -237,25 +255,6 @@ class UserLevel < ApplicationRecord
         or(PairedUserLevel.where(navigator_user_level_id: id)).
         last
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   # Making unlocked_at private ensures future updates will use the locked
   # virtual attribute directly, avoiding the need to recalculate a value

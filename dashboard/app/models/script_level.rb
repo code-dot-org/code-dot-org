@@ -73,6 +73,7 @@ class ScriptLevel < ApplicationRecord
     end
     extra_levels
   end
+
   def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)
     # Just get the most recently lesson extra they worked on
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
@@ -107,9 +108,11 @@ class ScriptLevel < ApplicationRecord
       }
     end
   end
+
   def self.cache_find(id)
     Unit.cache_find_script_level(id)
   end
+
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
   def anonymous_must_be_assessment
@@ -485,7 +488,6 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-
   def summarize_as_bonus
     localized_level_description = I18n.t(level.name, scope: [:data, :bubble_choice_description], default: level.bubble_choice_description)
     localized_level_display_name = I18n.t(level.name, scope: [:data, :display_name], default: level.display_name)
@@ -505,7 +507,6 @@ class ScriptLevel < ApplicationRecord
       }.camelize_keys
     }
   end
-
 
   def contained_levels
     levels.map(&:contained_levels).flatten
@@ -563,7 +564,6 @@ class ScriptLevel < ApplicationRecord
       unitName: lesson.script.title_for_display
     }
   end
-
 
   def to_param
     position.to_s

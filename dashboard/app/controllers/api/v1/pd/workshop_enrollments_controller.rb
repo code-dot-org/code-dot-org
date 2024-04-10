@@ -18,7 +18,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     authorize! :update_scholarship_info, @enrollment
   end
 
-
   # GET /api/v1/pd/workshops/1/enrollments
   def index
     respond_to do |format|

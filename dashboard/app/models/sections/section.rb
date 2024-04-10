@@ -124,6 +124,7 @@ class Section < ApplicationRecord
       errors.add(:login_type, 'must be email for professional learning sections.')
     end
   end
+
   # PL courses which are run with adults should have the grade type of 'pl'.
   # This value was recommended by RED team.
   def pl_sections_must_use_pl_grade
@@ -131,6 +132,7 @@ class Section < ApplicationRecord
       errors.add(:grades, 'must be ["pl"] for pl section.')
     end
   end
+
   # Once a section is set with a certain participant type we do not want to allow changing it
   # as that could cause a bad state where users in the section do not have permissions to view
   # the course the section is assigned to
@@ -139,6 +141,7 @@ class Section < ApplicationRecord
       errors.add(:participant_type, "can not be update once set.")
     end
   end
+
   # We want the `grades` attribute to be a list that only includes elements
   # that exist in the list of valid grades.
   def grades_are_subset_of_valid_grades
@@ -146,6 +149,7 @@ class Section < ApplicationRecord
       errors.add(:grades, "must be one or more of the valid student grades. Expected: #{VALID_GRADES}. Got: #{grades}.")
     end
   end
+
   # If the grades include 'pl', they must *ONLY* include 'pl'.
   # E.g.: You can't have a section with 'K' and 'pl'.
   def grades_with_pl_are_only_pl
@@ -153,6 +157,7 @@ class Section < ApplicationRecord
       errors.add(:grades, "cannot combine pl with other grades")
     end
   end
+
   def pl_section?
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
@@ -160,15 +165,7 @@ class Section < ApplicationRecord
     lti_section.destroy if lti_section
   end
 
-
-
-
-
-
-
   serialized_attrs %w(code_review_expires_at)
-
-
 
   TYPES = [
     # Insert non-workshop section types here.
@@ -211,6 +208,7 @@ class Section < ApplicationRecord
   def self.can_be_assigned_course?(participant_audience, participant_type)
     Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
   end
+
   # Override default script accessor to use our cache
   def script
     Unit.get_from_cache(script_id) if script_id
@@ -299,7 +297,6 @@ class Section < ApplicationRecord
 
     false
   end
-
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
@@ -628,11 +625,13 @@ class Section < ApplicationRecord
 
     true
   end
+
   # Removes an instructor
   # Note: Will not remove the primary instructor to prevent orphaned sections
   def remove_instructor(user)
     SectionInstructor.find_by(instructor: user, section_id: id)&.destroy unless self.user == user
   end
+
   def invite_instructor(email, current_user)
     instructor = User.find_by!(email: email, user_type: :teacher)
     raise ArgumentError.new('inviting self') if instructor == current_user
@@ -684,8 +683,4 @@ class Section < ApplicationRecord
     self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
   before_validation :strip_emoji_from_name
-
-
-
-
 end

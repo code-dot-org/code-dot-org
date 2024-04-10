@@ -87,6 +87,7 @@ module Cdo
       rescue StandardError
         nil
       end
+
       # This attribute is used by the Cdo::Secrets.required (and require!) methods to determine which AWS Secret to get.
       def key
         stack_specific_secret_path
@@ -121,7 +122,6 @@ module Cdo
         @stack ||= Cdo::SecretsConfig::StackSecret.current_stack_name
         @stack ? "CfnStack/#{@stack}/#{secret_key}" : nil
       end
-
     end
 
     SECRET_REGEX = /\${(.*)}/

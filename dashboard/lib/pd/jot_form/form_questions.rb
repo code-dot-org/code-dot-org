@@ -19,6 +19,7 @@ module Pd
 
         new(form_id, questions)
       end
+
       def initialize(form_id, questions)
         @form_id = form_id
         @questions_by_id = questions.index_by {|q| q.id.to_i}
@@ -28,7 +29,6 @@ module Pd
       def question_ids
         @questions_by_id.keys
       end
-
 
       # Serialize the questions as an array of question hashes
       # @see Question::to_h

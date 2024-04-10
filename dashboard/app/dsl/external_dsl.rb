@@ -5,6 +5,7 @@ class ExternalDSL < ContentDSL
     # whatever reason, so we actually want to _exclude_ that field from super
     super - %w(title)
   end
+
   def initialize
     @hash = {href: '', options: {skip_dialog: true}}
   end
@@ -12,5 +13,4 @@ class ExternalDSL < ContentDSL
   def associated_blocks(text)
     @hash[:associated_blocks] = text
   end
-
 end

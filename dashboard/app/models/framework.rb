@@ -22,6 +22,7 @@ class Framework < ApplicationRecord
       framework.save! if framework.changed?
     end
   end
+
   def summarize_for_lesson_edit
     {
       name: name,
@@ -36,5 +37,4 @@ class Framework < ApplicationRecord
   def localized_name
     Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name, crowdin_key)
   end
-
 end

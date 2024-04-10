@@ -118,7 +118,6 @@ class HttpCache
     CACHED_UNITS_MAP.keys
   end
 
-
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
   # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
   # This hash provides extra application-specific configuration for allowlisting specific request headers and

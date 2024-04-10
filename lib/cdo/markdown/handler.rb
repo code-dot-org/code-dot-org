@@ -9,12 +9,15 @@ module Cdo
       def self.register(*args)
         ActionView::Template.register_template_handler :md, Handler.new(*args)
       end
+
       def self.register_html_safe(*args)
         ActionView::Template.register_template_handler :safe_md, Handler.new(*args)
       end
+
       def self.register_inline(*args)
         ActionView::Template.register_template_handler :inline_md, Handler.new(*args)
       end
+
       def initialize(renderer = Redcarpet::Render::HTML, options = {})
         @parser = Redcarpet::Markdown.new(renderer, options)
       end
@@ -22,9 +25,6 @@ module Cdo
       def call(template, source)
         "#{@parser.render(source).inspect}.html_safe"
       end
-
-
-
     end
   end
 end

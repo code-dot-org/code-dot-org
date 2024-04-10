@@ -119,6 +119,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
   def section_surveys
     render json: LevelGroup.get_summarized_survey_results(@script, @section)
   end
+
   def section_feedback
     render json: @script.get_feedback_for_section(@section)
   end
@@ -274,6 +275,4 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
 
     level_result
   end
-
-
 end

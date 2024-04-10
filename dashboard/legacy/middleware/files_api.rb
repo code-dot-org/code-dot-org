@@ -329,7 +329,6 @@ class FilesApi < Sinatra::Base
     %w(.jpg .jpeg .gif .png).include? extension.downcase
   end
 
-
   def html?(headers)
     headers[CONTENT_TYPE]&.include?(TEXT_HTML)
   end

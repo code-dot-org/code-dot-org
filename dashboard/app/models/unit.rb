@@ -194,7 +194,6 @@ class Unit < ApplicationRecord
     levels_by_key.select {|_key, values| values.count > 1}.keys
   end
 
-
   after_save :generate_plc_objects
 
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
@@ -204,12 +203,12 @@ class Unit < ApplicationRecord
   def self.unit_directory
     UNIT_DIRECTORY
   end
+
   def prevent_course_version_change?
     resources.any? ||
       student_resources.any? ||
       lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
-
 
   UNIT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
 
@@ -221,22 +220,28 @@ class Unit < ApplicationRecord
   def self.twenty_hour_unit
     Unit.get_from_cache(Unit::TWENTY_HOUR_NAME)
   end
+
   def self.hoc_2014_unit
     Unit.get_from_cache(Unit::HOC_NAME)
   end
+
   def self.starwars_unit
     Unit.get_from_cache(Unit::STARWARS_NAME)
   end
+
   def self.course1_unit
     Unit.get_from_cache(Unit::COURSE1_NAME)
   end
+
   def self.flappy_unit
     Unit.get_from_cache(Unit::FLAPPY_NAME)
   end
+
   # @return [Array<Unit>] An array of modern elementary units.
   def self.modern_elementary_courses
     Unit::CATEGORIES[:csf].map {|name| Unit.get_from_cache(name)}
   end
+
   # @param locale [String] An "xx-YY" locale string.
   # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
   def self.modern_elementary_courses_available?(locale)
@@ -245,6 +250,7 @@ class Unit < ApplicationRecord
       supported_languages.any? {|s| locale.casecmp?(s)}
     end
   end
+
   # Caching is disabled when editing units and levels or running unit tests.
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
@@ -252,15 +258,18 @@ class Unit < ApplicationRecord
     return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
+
   def self.unit_cache_to_cache
     Rails.cache.write(UNIT_CACHE_KEY, (@@unit_cache = unit_cache_from_db))
   end
+
   def self.unit_cache_from_cache
     [
       ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly, UnitGroupUnit
     ].each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read UNIT_CACHE_KEY
   end
+
   def self.unit_cache_from_db
     {}.tap do |cache|
       Unit.with_associated_models.find_each do |unit|
@@ -269,11 +278,13 @@ class Unit < ApplicationRecord
       end
     end
   end
+
   def self.script_cache
     return nil unless should_cache?
     @@unit_cache ||=
       unit_cache_from_cache || unit_cache_from_db
   end
+
   # Returns a cached map from script level id to script_level, or nil if in level_builder mode
   # which disables caching.
   def self.script_level_cache
@@ -284,6 +295,7 @@ class Unit < ApplicationRecord
       end
     end
   end
+
   # Returns a cached map from level id and level name to level, or nil if in
   # level_builder mode which disables caching.
   def self.level_cache
@@ -297,6 +309,7 @@ class Unit < ApplicationRecord
       end
     end
   end
+
   # Returns a cached map from family_name to units, or nil if caching is disabled.
   def self.unit_family_cache
     return nil unless should_cache?
@@ -308,6 +321,7 @@ class Unit < ApplicationRecord
       cache.merge!(family_units)
     end
   end
+
   # Find the script level with the given id from the cache, unless the level build mode
   # is enabled in which case it is always fetched from the database. If we need to fetch
   # the unit and we're not in level mode (for example because the unit was created after
@@ -323,6 +337,7 @@ class Unit < ApplicationRecord
     end
     script_level
   end
+
   # Find the level with the given id or name from the cache, unless the level
   # build mode is enabled in which case it is always fetched from the database.
   # If we need to fetch the level and we're not in level mode (for example
@@ -348,6 +363,7 @@ class Unit < ApplicationRecord
   rescue => exception
     raise exception, "Error finding level #{level_identifier}: #{exception}"
   end
+
   def self.get_without_cache(id_or_name, with_associated_models: true)
     # Also serve any unit by its new_name, if it has one.
     unit = id_or_name && Unit.find_by(new_name: id_or_name)
@@ -361,6 +377,7 @@ class Unit < ApplicationRecord
     unit = unit_model.find_by(find_by => id_or_name)
     return unit if unit
   end
+
   # Returns the unit with the specified id, or a unit with the specified
   # name. Also populates the unit cache so that future responses will be cached.
   # For example:
@@ -385,11 +402,13 @@ class Unit < ApplicationRecord
       raise ActiveRecord::RecordNotFound.new("Couldn't find Unit with id|name=#{id_or_name}")
     end
   end
+
   def self.get_family_without_cache(family_name)
     # This SQL string is not at risk for injection vulnerabilites because it's
     # just a hardcoded string, so it's safe to wrap in Arel.sql
     Unit.where(family_name: family_name).order(Arel.sql("properties -> '$.version_year' DESC"))
   end
+
   # Returns all units within a family from the Rails cache.
   # Populates the cache with units in that family upon cache miss.
   # @param family_name [String] Family name for the desired units.
@@ -402,9 +421,11 @@ class Unit < ApplicationRecord
       unit_family_cache[family_name] = Unit.get_family_without_cache(family_name)
     end
   end
+
   def self.remove_from_cache(unit_name)
     script_cache&.delete(unit_name)
   end
+
   def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
@@ -457,6 +478,7 @@ class Unit < ApplicationRecord
         participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
       ) : nil
   end
+
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
     FirehoseClient.instance.put_record(
       :analysis,
@@ -475,6 +497,7 @@ class Unit < ApplicationRecord
       }
     )
   end
+
   # @param family_name [String] The family name for a unit family.
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
@@ -499,6 +522,7 @@ class Unit < ApplicationRecord
 
     supported_stable_units&.first
   end
+
   # @param family_name [String] The family name for a unit family.
   # @param user [User]
   # @return [Unit|nil] Returns the latest version in a family that the user is assigned to.
@@ -517,6 +541,7 @@ class Unit < ApplicationRecord
       order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
   end
+
   # @param family_name [String] The family name for a unit family.
   # @param user [User]
   # @return [Unit|nil] Returns the latest unit version in a family that the user has progress in.
@@ -534,12 +559,15 @@ class Unit < ApplicationRecord
     end
     latest_version_with_progress
   end
+
   def self.unit_in_category?(category, script)
     return Unit.get_from_cache(script)&.course_version&.course_offering&.category == category
   end
+
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
     Unit.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
+
   def self.add_unit(options, raw_lesson_groups)
     transaction do
       unit = fetch_unit(options)
@@ -582,6 +610,7 @@ class Unit < ApplicationRecord
       unit
     end
   end
+
   # If there is more than 1 lesson group then the key should never
   # be nil because this means some lessons are in a lesson group
   # and some are not
@@ -594,11 +623,13 @@ class Unit < ApplicationRecord
       end
     end
   end
+
   def self.base_name(name)
     # strip existing year suffix, if there is one
     m = /^(.*)-([0-9]{4})$/.match(name)
     m ? m[1] : name
   end
+
   # unit is found/created by 'id' (if provided), or by 'new_name' (if provided
   # and found), otherwise by 'name'.
   #
@@ -621,9 +652,11 @@ class Unit < ApplicationRecord
     unit.update!(options.merge(skip_name_format_validation: true))
     unit
   end
+
   def self.with_default_fields
     Unit.includes(:levels, :script_levels, lessons: :script_levels)
   end
+
   def self.rake
     # cf. http://stackoverflow.com/a/9943895
     require 'rake'
@@ -631,6 +664,7 @@ class Unit < ApplicationRecord
     Dashboard::Application.load_tasks
     Rake::FileTask['config/scripts/.seeded'].invoke
   end
+
   # This method updates scripts.en.yml with i18n data from the units.
   # There are three types of i18n data
   # 1. Lesson names are passed in as lessons_i18n here. The script edit page
@@ -665,6 +699,7 @@ class Unit < ApplicationRecord
       )
     end
   end
+
   def self.update_i18n(existing_i18n, lessons_i18n, unit_name = '', metadata_i18n = {})
     if metadata_i18n != {}
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {unit_name => metadata_i18n.to_h}}}}}
@@ -673,6 +708,7 @@ class Unit < ApplicationRecord
     lessons_i18n = {'en' => {'data' => {'script' => {'name' => lessons_i18n}}}}
     existing_i18n.deep_merge(lessons_i18n).deep_merge!(metadata_i18n)
   end
+
   def self.clear_cache
     raise "only call this in a test!" unless Rails.env.test?
     @@unit_cache = nil
@@ -683,6 +719,7 @@ class Unit < ApplicationRecord
     @@visible_units = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
+
   # Returns a property hash that always has the same keys, even if those keys were missing
   # from the input. This ensures that values can be un-set via seeding or the unit edit UI.
   def self.build_property_hash(unit_data)
@@ -725,14 +762,17 @@ class Unit < ApplicationRecord
     boolean_keys.each {|k| result[k] = !!unit_data[k]}
     result
   end
+
   def self.locale_native_name_map
     locales = Dashboard::Application::LOCALES.select {|_, data| data.is_a?(Hash)}
     locales.reduce({}) {|acc, (locale_code, data)| acc.merge({locale_code => data[:native]})}
   end
+
   def self.locale_english_name_map
     locales = Dashboard::Application::LOCALES.select {|_, data| data.is_a?(Hash)}
     locales.reduce({}) {|acc, (locale_code, data)| acc.merge({locale_code => data[:english]})}
   end
+
   # returns true if the user is a levelbuilder, or a teacher with any pilot
   # unit experiments enabled.
   def self.has_any_pilot_access?(user = nil)
@@ -740,18 +780,22 @@ class Unit < ApplicationRecord
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|unit| unit.has_pilot_experiment?(user)}
   end
+
   def self.get_version_year_options
     UnitGroup.get_version_year_options
   end
+
   # @param [String] unit_name - name of the unit to seed from .script_json
   # @returns [Unit] - the newly seeded unit object
   def self.seed_from_json_file(unit_name)
     filepath = script_json_filepath(unit_name)
     Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
   end
+
   def self.script_json_filepath(unit_name)
     "#{unit_json_directory}/#{unit_name}.script_json"
   end
+
   # We have two different ways to create professional learning courses
   # You can create them in the normal curriculum model or you can create
   # them using the PLC course models(which build on top of the normal curriculum model).
@@ -853,11 +897,6 @@ class Unit < ApplicationRecord
     is_deprecated
   )
 
-
-
-
-
-
   class << self
     def all_scripts
       return all.to_a unless should_cache?
@@ -895,8 +934,6 @@ class Unit < ApplicationRecord
     end
   end
 
-
-
   def starting_level
     raise "Unit #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level
@@ -920,27 +957,10 @@ class Unit < ApplicationRecord
   # distributed cache (Rails.cache)
   @@unit_cache = nil
 
-
-
-
-
-
-
-
-
-
-
   def cached
     return self unless Unit.should_cache?
     self.class.get_from_cache(id)
   end
-
-
-
-
-
-
-
 
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
@@ -1008,9 +1028,6 @@ class Unit < ApplicationRecord
     other_units[self_index + 1] if self_index
   end
 
-
-
-
   def text_response_levels
     return @text_response_levels if Unit.should_cache? && @text_response_levels
     @text_response_levels = text_response_levels_without_cache
@@ -1047,7 +1064,6 @@ class Unit < ApplicationRecord
     name
   end
 
-
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
     [
@@ -1075,7 +1091,6 @@ class Unit < ApplicationRecord
   def csf_international?
     Unit.unit_in_category?('csf_international', name)
   end
-
 
   def has_standards_associations?
     curriculum_umbrella == 'CSF' && version_year && version_year >= '2019'
@@ -1273,8 +1288,6 @@ class Unit < ApplicationRecord
     get_course_version&.course_offering&.course_versions&.many?
   end
 
-
-
   # Lesson groups can only show up once in a unit
   def prevent_duplicate_lesson_groups(raw_lesson_groups)
     previous_lesson_groups = []
@@ -1425,7 +1438,6 @@ class Unit < ApplicationRecord
     Unit.base_name(name)
   end
 
-
   # Creates a copy of all translations associated with this unit, and adds
   # them as translations for the unit named new_name.
   def copy_and_write_i18n(new_name, new_course_version)
@@ -1434,8 +1446,6 @@ class Unit < ApplicationRecord
     i18n.deep_merge!(summarize_i18n_for_copy(new_name, new_course_version))
     File.write(units_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
   end
-
-
 
   def get_lesson_groups_i18n(lesson_groups_data)
     lessons_data = lesson_groups_data.map {|lg| lg['lessons']}.flatten
@@ -1521,9 +1531,6 @@ class Unit < ApplicationRecord
   def update_student_resources(resource_ids)
     self.student_resources = (resource_ids || []).map {|id| Resource.find(id)}
   end
-
-
-
 
   def hoc_finish_url
     if name == Unit::HOC_2013_NAME
@@ -1802,7 +1809,6 @@ class Unit < ApplicationRecord
     course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-
   def localized_title
     I18n.t(
       "title",
@@ -1861,7 +1867,6 @@ class Unit < ApplicationRecord
   def disable_post_milestone?
     !Gatekeeper.allows('postMilestone', where: {script_name: name}, default: true)
   end
-
 
   # A unit is considered to have a matching course if there is exactly one
   # unit_group for this unit
@@ -1965,14 +1970,17 @@ class Unit < ApplicationRecord
       }
     ]
   end
+
   def supported_locale_codes
     locales = supported_locales || []
     locales += ['en-US'] unless locales.include? 'en-US'
     locales.sort
   end
+
   def supported_locale_names
     supported_locale_codes.map {|l| Unit.locale_native_name_map[l] || l}.uniq
   end
+
   # Get all script levels that are level groups, and return a list of those that are
   # not anonymous assessments.
   def get_assessment_script_levels
@@ -1980,6 +1988,7 @@ class Unit < ApplicationRecord
       sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && !sl.anonymous?
     end
   end
+
   def get_feedback_for_section(section)
     feedback = {}
 
@@ -2015,9 +2024,11 @@ class Unit < ApplicationRecord
 
     return feedback
   end
+
   def pilot?
     get_pilot_experiment.present?
   end
+
   def has_pilot_access?(user = nil)
     return false unless pilot? && user
     return true if user.permission?(UserPermission::LEVELBUILDER)
@@ -2032,19 +2043,23 @@ class Unit < ApplicationRecord
     has_progress = !!UserScript.find_by(user: user, script: self)
     has_progress && user.teachers.any? {|t| has_pilot_experiment?(t)}
   end
+
   # Whether this particular user has the pilot experiment enabled.
   def has_pilot_experiment?(user)
     user.has_pilot_experiment?(get_pilot_experiment)
   end
+
   # If a user is in the editor experiment of this unit, that indicates that
   # they are a platformization partner who owns this unit.
   def has_editor_experiment?(user)
     user.has_pilot_experiment?(editor_experiment)
   end
+
   def all_descendant_levels
     sublevels = levels.map(&:all_descendant_levels).flatten
     levels + sublevels
   end
+
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
@@ -2057,15 +2072,18 @@ class Unit < ApplicationRecord
   def seeding_key(seed_context)
     {'script.name': name}.stringify_keys
   end
+
   # Wrapper for convenience
   def serialize_seeding_json
     Services::ScriptSeed.serialize_seeding_json(self)
   end
+
   def get_unit_overview_pdf_url
     if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_script_overview_url(self)
     end
   end
+
   def get_unit_resources_pdf_url
     return nil unless is_migrated?
     return nil if use_legacy_lesson_plans?
@@ -2075,6 +2093,7 @@ class Unit < ApplicationRecord
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end
+
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
@@ -2084,25 +2103,4 @@ class Unit < ApplicationRecord
     initiative = get_course_version&.course_offering&.marketing_initiative
     TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end

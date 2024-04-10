@@ -52,6 +52,7 @@ class I18nStringUrlTracker
       !source_string.nil?
     end
   end
+
   def initialize
     super
     # A buffer of all the given i18n string tracking data. It will be flushed periodically.
@@ -120,7 +121,6 @@ class I18nStringUrlTracker
     add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
   end
 
-
   # Sends the buffered i18n string usage data to Firehose.
   def flush
     buffer = nil
@@ -150,6 +150,7 @@ class I18nStringUrlTracker
       end
     end
   end
+
   # Determines if this URL should be tracked. We want to filter URLs so we don't waste resources recording data we are
   # not interested in.
   def allowed(url)
@@ -185,6 +186,7 @@ class I18nStringUrlTracker
     # Otherwise this URL should not be recorded
     false
   end
+
   # Cleans up the given URL so the data we record is consistent. It also aggregates some URLs so we limit how many
   # unique URLs we are recording.
   def normalize_url(url)
@@ -254,6 +256,7 @@ class I18nStringUrlTracker
 
     parsed_url.to_s
   end
+
   # Clear the buffer and stop the periodic upload of i18n usage data.
   # This should only be used by unit tests.
   def shutdown
@@ -263,6 +266,7 @@ class I18nStringUrlTracker
     @buffer.extend(MonitorMixin) # Adds synchronization
     @task.shutdown
   end
+
   # Sets the interval at which data should be flushed.
   # This should only be used by unit tests.
   def set_flush_interval(interval)
@@ -271,6 +275,7 @@ class I18nStringUrlTracker
     # Start a new flush interval
     @task = Concurrent::TimerTask.execute(execution_interval: interval) {flush}
   end
+
   # Sets the max size (bytes) of the buffer.
   # This should only be used by unit tests.
   def set_buffer_size_max(max)
@@ -307,11 +312,4 @@ class I18nStringUrlTracker
       flush
     end
   end
-
-
-
-
-
-
-
 end

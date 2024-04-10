@@ -10,6 +10,7 @@ class Tutorials
   def self.sort_by_popularity?(site, hoc_mode)
     (hoc_mode == "post-hoc") || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
   end
+
   # This class uses data from two GSheets:
   #   GoogleDrive://Pegasus/v3/cdo-tutorials
   #   GoogleDrive://Pegasus/v3/cdo-beyond-tutorials
@@ -77,7 +78,6 @@ class Tutorials
     by_short_code = CDO.cache.fetch("Tutorials/#{@table}/by_short_code") {@contents.index_by {|row| row[:short_code]}}
     by_short_code[short_code]
   end
-
 end
 
 def no_credit_count

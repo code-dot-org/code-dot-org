@@ -7,6 +7,7 @@ class MatchDSL < ContentDSL
       questions
     )
   end
+
   def initialize
     super
     @hash.merge! questions: [], answers: []
@@ -28,5 +29,4 @@ class MatchDSL < ContentDSL
   def allow_multiple_attempts(bool)
     @hash[:allow_multiple_attempts] = ActiveModel::Type::Boolean.new.cast(bool)
   end
-
 end

@@ -34,6 +34,7 @@ class FeaturedProject < ApplicationRecord
   rescue ArgumentError
     false
   end
+
   def active?
     !featured_at.nil? && unfeatured_at.nil?
   end
@@ -43,5 +44,4 @@ class FeaturedProject < ApplicationRecord
     return SharedConstants::FEATURED_PROJECT_STATUS.archived if !featured_at.nil? && !unfeatured_at.nil?
     SharedConstants::FEATURED_PROJECT_STATUS.bookmarked
   end
-
 end

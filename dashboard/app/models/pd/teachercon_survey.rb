@@ -185,6 +185,7 @@ class Pd::TeacherconSurvey < ApplicationRecord
 
     }.freeze
   end
+
   def get_facilitator_names
     pd_enrollment ? pd_enrollment.workshop.facilitators.pluck(:name) : []
   end
@@ -208,5 +209,4 @@ class Pd::TeacherconSurvey < ApplicationRecord
 
     super
   end
-
 end

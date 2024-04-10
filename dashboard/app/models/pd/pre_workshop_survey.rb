@@ -26,9 +26,11 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
       :unit
     ].freeze
   end
+
   def self.units_and_lessons(workshop)
     workshop.pre_survey_units_and_lessons.unshift([UNIT_NOT_STARTED, nil])
   end
+
   # PreWorkshopSurvey has dynamic options based on the workshop
   def dynamic_options
     {
@@ -37,13 +39,11 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
     }.compact
   end
 
-
   # @override
   def dynamic_required_fields(sanitized_form_data_hash)
     # Require lesson also when a unit is selected
     unit_not_started? ? [] : [:lesson]
   end
-
 
   def unit
     sanitized_form_data_hash[:unit]

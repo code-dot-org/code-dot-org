@@ -20,9 +20,6 @@ class HoneybadgerTest < Minitest::Test
     ENV.unstub(:with_sensitive_values_redacted)
   end
 
-
-
-
   def test_parse_exception_dump
     error_message, backtrace = Honeybadger.parse_exception_dump ERROR
 

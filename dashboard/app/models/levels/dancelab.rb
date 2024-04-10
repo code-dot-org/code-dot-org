@@ -68,11 +68,11 @@ class Dancelab < GamelabJr
       [name, song['id']]
     end
   end
+
   def uses_google_blockly?
     true
   end
 
   def common_blocks(type)
   end
-
 end

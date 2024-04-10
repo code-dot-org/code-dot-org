@@ -311,7 +311,6 @@ module Cdo
       end
     end
 
-
     def backtrace(exception)
       filter_backtrace exception.backtrace
     end

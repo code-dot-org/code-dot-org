@@ -46,6 +46,7 @@ class Artist < Blockly
   def self.skins
     %w(artist artist_zombie elsa anna)
   end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -57,6 +58,7 @@ class Artist < Blockly
       )
     )
   end
+
   def xml_blocks
     super + %w(predraw_blocks)
   end
@@ -70,8 +72,6 @@ class Artist < Blockly
       'artist'
     end
   end
-
-
 
   def toolbox(type)
     <<~XML.strip_heredoc.chomp

@@ -29,6 +29,7 @@ class ReferenceGuide < ApplicationRecord
     return nil unless course_version_id
     ReferenceGuide.find_by_course_version_id_and_key(course_version_id, key)
   end
+
   # runs through all seed files, creating and deleting records to match the seed files
   def self.seed_all
     # collect all existing ids
@@ -41,6 +42,7 @@ class ReferenceGuide < ApplicationRecord
     # the remaining ids that were not seeded should be removed
     where(id: removed_records).destroy_all
   end
+
   # parses a seed file and generates a hash with the course version mapped
   def self.properties_from_file(content)
     config = JSON.parse(content)
@@ -55,6 +57,7 @@ class ReferenceGuide < ApplicationRecord
       position: config['position']
     }
   end
+
   # returns the local id of the reference guide that was created/updated
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
@@ -65,6 +68,7 @@ class ReferenceGuide < ApplicationRecord
     reference_guide.update! properties
     reference_guide.id
   end
+
   def course_offering_version
     "#{course_version.course_offering.key}-#{course_version.key}"
   end
@@ -124,10 +128,6 @@ class ReferenceGuide < ApplicationRecord
     end
     copied_ref_guide.write_serialization
   end
-
-
-
-
 
   def summarize_for_show
     {

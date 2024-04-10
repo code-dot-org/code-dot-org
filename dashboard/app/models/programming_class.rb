@@ -80,6 +80,7 @@ class ProgrammingClass < ApplicationRecord
       ProgrammingClass.includes([:programming_environment, :programming_environment_category, :programming_methods]).find_by(programming_environment_id: env.id, key: key)
     end
   end
+
   def file_path
     Rails.root.join("config/programming_classes/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
   end
@@ -171,7 +172,6 @@ class ProgrammingClass < ApplicationRecord
     end
     methods
   end
-
 
   private def parsed_examples
     examples.blank? ? [] : JSON.parse(examples)

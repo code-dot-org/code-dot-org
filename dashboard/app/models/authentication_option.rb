@@ -93,6 +93,7 @@ class AuthenticationOption < ApplicationRecord
   def self.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
   end
+
   def google?
     credential_type == GOOGLE
   end
@@ -129,7 +130,6 @@ class AuthenticationOption < ApplicationRecord
     return if email.blank?
     self.email = email.strip.downcase
   end
-
 
   def hash_email
     return if email.blank?

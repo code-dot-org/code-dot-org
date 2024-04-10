@@ -84,6 +84,7 @@ class PardotV2
 
     total_results_retrieved
   end
+
   # Creates URL and query string for use with Pardot prospect query API
   # @param id_greater_than [String, Integer]
   # @param fields [Array<String>]
@@ -99,6 +100,7 @@ class PardotV2
     url += "&deleted=true" if deleted
     url
   end
+
   # Deletes all prospects with the same email address from Pardot.
   # @param email [String]
   # @return [Boolean] all prospects are deleted or not
@@ -111,6 +113,7 @@ class PardotV2
     end
     success
   end
+
   # Deletes a prospect from Pardot using Pardot Id.
   # This method only runs in the production environment to avoid accidentally deleting prospect.
   # @param [Integer, String] pardot_id of the prospects to be deleted.
@@ -130,6 +133,7 @@ class PardotV2
     return false if /Pardot request failed with HTTP 400/.match?(exception.message)
     raise exception
   end
+
   # Finds prospects using email address and extract their Pardot ids.
   # @param email [String]
   # @return [Array<String>]
@@ -142,6 +146,7 @@ class PardotV2
     return [] if /Pardot request failed with HTTP 400/.match?(exception.message)
     raise exception
   end
+
   # Converts contact keys and values to Pardot prospect keys and values.
   # @example
   #   input contact = {email: 'test@domain.com', pardot_id: 10, opt_in: 1}
@@ -177,6 +182,7 @@ class PardotV2
 
     prospect
   end
+
   # Extracts prospect info from a prospect node in a Pardot's XML response.
   # @see test method for example.
   # @param [Nokogiri::XML::Element] prospect_node
@@ -203,6 +209,7 @@ class PardotV2
       end
     end
   end
+
   # Create a batch request URL containing one or more prospects in its query string.
   # Example return:
   #   https://pi.pardot.com/api/prospect/version/4/do/batchCreate?prospects=<data>
@@ -221,6 +228,7 @@ class PardotV2
 
     "#{api_endpoint}?prospects=#{prospects_payload_json_encoded}"
   end
+
   # Submits a request to Pardot to create/update a batch of prospects.
   # @see http://developer.pardot.com/kb/api-version-4/prospects/#endpoints-for-batch-processing
   #
@@ -246,6 +254,7 @@ class PardotV2
 
     errors
   end
+
   # Extracts errors from a Pardot response.
   # @param [Nokogiri::XML] doc a Pardot XML response for a batch request
   # @return [Array<Hash>] an array of hashes, each containing an index and an error message
@@ -254,6 +263,7 @@ class PardotV2
       {prospect_index: node.attr("identifier").to_i, error_msg: node.text}
     end
   end
+
   # Identifies additional information that is in new data but not in old data.
   # Example:
   #   old_data = {key1: 'v1', key2: 'v2', key3: nil}
@@ -276,6 +286,7 @@ class PardotV2
       end
     end
   end
+
   def initialize(is_dry_run: false)
     @new_prospects = []
     @updated_prospects = []
@@ -285,8 +296,6 @@ class PardotV2
     @dry_run = is_dry_run
     @dry_run_api_endpoints_hit = []
   end
-
-
 
   # Compiles a batch of prospects and batch-create them in Pardot when batch size
   # is big enough. If +eager_submit+ is true, creates the batch in Pardot immediately.
@@ -409,13 +418,4 @@ class PardotV2
 
     [submissions, errors]
   end
-
-
-
-
-
-
-
-
-
 end

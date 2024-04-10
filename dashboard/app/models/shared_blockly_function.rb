@@ -38,6 +38,7 @@ class SharedBlocklyFunction < ApplicationRecord
       end.to_h
     )
   end
+
   def self.properties_from_file(xml_path, content)
     level_type = File.basename(File.dirname(xml_path))
     function_doc = Nokogiri.XML(content) {|config| config.strict.noblanks}
@@ -52,6 +53,7 @@ class SharedBlocklyFunction < ApplicationRecord
       stack: function_doc.xpath('/block/statement[@name="STACK"]/*'),
     }
   end
+
   def file_content
     to_xml_doc.to_xml
   end
@@ -81,6 +83,4 @@ class SharedBlocklyFunction < ApplicationRecord
       end
     end.doc
   end
-
-
 end

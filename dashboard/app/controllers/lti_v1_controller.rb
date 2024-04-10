@@ -419,7 +419,6 @@ class LtiV1Controller < ApplicationController
     render status: :ok, json: {}
   end
 
-
   private def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
   end

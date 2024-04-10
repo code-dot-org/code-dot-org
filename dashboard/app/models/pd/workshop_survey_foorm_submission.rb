@@ -46,13 +46,13 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
 
     !submissions.empty?
   end
+
   def save_with_foorm_submission(answers, form_name, form_version)
     ActiveRecord::Base.transaction do
       create_foorm_submission!(form_name: form_name, form_version: form_version, answers: answers)
       save!
     end
   end
-
 
   def facilitator_specific?
     !facilitator_id.nil?

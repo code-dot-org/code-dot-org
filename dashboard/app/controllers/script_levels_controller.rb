@@ -23,6 +23,7 @@ class ScriptLevelsController < ApplicationController
       script.get_script_level_by_id(params[:id])
     end
   end
+
   def self.get_script(request)
     script_id = request.params[:script_id]
     script = Unit.get_from_cache(script_id, raise_exceptions: false)
@@ -36,6 +37,7 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless script
     script
   end
+
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
     script = ScriptLevelsController.get_script(request)
@@ -206,7 +208,6 @@ class ScriptLevelsController < ApplicationController
     present_level
   end
 
-
   # Get a JSON summary of a level's information, used in modern labs that don't
   # reload the page between level views.  Note that this can be cached for a relatively
   # long amount of time, including by the CDN, and does not vary per user.
@@ -345,7 +346,6 @@ class ScriptLevelsController < ApplicationController
 
     render json: lesson.summary_for_lesson_plans
   end
-
 
   private def next_script_level
     user_or_session_level || @script.starting_level

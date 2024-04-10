@@ -60,13 +60,16 @@ module Pd
         nil
       end
     end
+
     def self.get_form_id_for_subject_and_day(subject, day)
       # Day could be an int, or an integer as a string, or a string saying "pre/post workshop"
       get_form_id CATEGORY_MAP[subject], (day.is_a?(Integer) || day =~ /\d+/) ? "day_#{day}" : day
     end
+
     def self.get_day_for_subject_and_form_id(subject, form_id)
       VALID_DAYS[CATEGORY_MAP[subject]].find {|d|  get_form_id_for_subject_and_day(subject, d) == form_id}
     end
+
     def self.all_form_ids
       FORM_CATEGORIES.map do |category|
         VALID_DAYS[category].map do |day|
@@ -75,9 +78,11 @@ module Pd
         end
       end.flatten.compact.uniq
     end
+
     def self.unique_attributes
       [:user_id, :pd_workshop_id, :day]
     end
+
     # @override
     def map_answers_to_attributes
       super
@@ -89,11 +94,6 @@ module Pd
     def set_day_from_form_id
       self.day = self.class.get_day_for_subject_and_form_id(pd_workshop.subject, form_id)
     end
-
-
-
-
-
 
     private def day_for_subject
       unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day

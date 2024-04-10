@@ -27,6 +27,7 @@ class LevelSourceImage < ApplicationRecord
   def self.hashify_filename(plain)
     [Digest::MD5.hexdigest(plain), plain].join('=')
   end
+
   def save_to_s3(image)
     return false if CDO.disable_s3_image_uploads
     return false if image.blank?
@@ -76,7 +77,6 @@ class LevelSourceImage < ApplicationRecord
     end
     'app/assets/images/blank_sharing_drawing.png'
   end
-
 
   def s3_filename
     LevelSourceImage.hashify_filename "#{Rails.env}/#{level_source.id}.png"

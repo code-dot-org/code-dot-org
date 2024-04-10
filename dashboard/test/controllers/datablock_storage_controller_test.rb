@@ -419,7 +419,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     ], read_records
   end
 
-
   test "populate_tables" do
     put _url(:populate_tables), params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}
     assert_response :success

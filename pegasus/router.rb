@@ -85,7 +85,6 @@ class Documents < Sinatra::Base
     set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
-
   configure do
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now

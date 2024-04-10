@@ -31,6 +31,7 @@ class Multi < Match
   def self.value_to_letter(value)
     ("A".ord + value).chr
   end
+
   def dsl_default
     <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
@@ -54,7 +55,6 @@ class Multi < Match
     # We use variable name _index so that the linter ignores the fact that it's not explicitly used.
     properties["answers"].each_with_index.select {|a, _index| a["correct"] == true}.map(&:last)
   end
-
 
   def get_question_text
     # Question text is stored in properties as "questions" or "markdown"

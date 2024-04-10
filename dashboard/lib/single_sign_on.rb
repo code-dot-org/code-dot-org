@@ -67,6 +67,7 @@ class SingleSignOn
 
     sso
   end
+
   def sso_secret
     @sso_secret || self.class.sso_secret
   end
@@ -74,7 +75,6 @@ class SingleSignOn
   def sso_url
     @sso_url || self.class.sso_url
   end
-
 
   def custom_fields
     @custom_fields ||= {}

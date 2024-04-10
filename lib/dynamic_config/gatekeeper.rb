@@ -30,6 +30,7 @@ class GatekeeperBase < DynamicConfigBase
     datastore_cache = EnvironmentAwareDynamicConfigHelper.create_datastore_cache(CDO.gatekeeper_table_name)
     GatekeeperBase.new datastore_cache
   end
+
   # @param feature [String] the name of the feature
   # @param where [Hash] a hash of conditions
   # @param default [Bool] the default value to return
@@ -104,7 +105,6 @@ class GatekeeperBase < DynamicConfigBase
   def where_key(where)
     Oj.dump(stringify_keys(where).sort, mode: :strict)
   end
-
 
   # Returns the hash version of gatekeeper
   def to_hash

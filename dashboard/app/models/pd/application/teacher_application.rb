@@ -135,12 +135,14 @@ module Pd::Application
       current_year_index = APPLICATION_YEARS.index(year)
       current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
     end
+
     def self.prefetch_associated_models(applications)
       prefetch_workshops applications.map(&:pd_workshop_id).uniq.compact
 
       # also prefetch schools
       prefetch_schools applications.map(&:school_id).uniq.compact
     end
+
     def self.prefetch_schools(school_ids)
       return if school_ids.empty?
 
@@ -148,9 +150,11 @@ module Pd::Application
         Rails.cache.write get_school_cache_key(school.id), school, expires_in: CACHE_TTL
       end
     end
+
     def self.get_school_cache_key(school_id)
       "#{self.class.name}.school(#{school_id})"
     end
+
     # @override
     def self.statuses
       %w(
@@ -165,6 +169,7 @@ module Pd::Application
         withdrawn
       )
     end
+
     # This is called by the scheduled_pd_application_emails cronjob which is run
     # on the production-daemon machine every day
     def self.send_admin_approval_reminders_to_teachers
@@ -176,6 +181,7 @@ module Pd::Application
         end
       end
     end
+
     # @override
     def self.options(year = APPLICATION_CURRENT_YEAR)
       {
@@ -394,6 +400,7 @@ module Pd::Application
         completing_on_behalf_of_someone_else: [YES, NO],
       }
     end
+
     # @override
     def self.required_fields
       %i(
@@ -426,12 +433,14 @@ module Pd::Application
         will_teach
       )
     end
+
     # @override
     # Filter out extraneous answers based on selected program (course)
     def self.filtered_labels(course, status = 'unreviewed')
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course) || status == 'incomplete'
       status == 'incomplete' ? {} : FILTERED_LABELS[course]
     end
+
     # List of columns to be filtered out based on selected program (course)
     def self.columns_to_remove(course)
       case course
@@ -479,6 +488,7 @@ module Pd::Application
         }
       end
     end
+
     def self.csv_filtered_labels(course)
       labels = {
         teacher: {},
@@ -496,6 +506,7 @@ module Pd::Application
       end
       labels
     end
+
     def self.csv_header(course)
       labels = csv_filtered_labels(course)
       CSV.generate do |csv|
@@ -508,11 +519,13 @@ module Pd::Application
         csv << columns
       end
     end
+
     # @override
     # Additional labels to include in the form data hash
     def self.additional_labels
       ADDITIONAL_KEYS_IN_ANSWERS
     end
+
     # Updates the associated user's school info with the info from this teacher application
     # based on these rules in order:
     # 1. Application has a specific school? always overwrite the user's school info
@@ -540,7 +553,6 @@ module Pd::Application
     def year
       application_year
     end
-
 
     # The census lags by a year, so the census year is the first application year minus 1
     # For example, for the 2023-2025 application year, we want to look at 2023 census data
@@ -750,15 +762,10 @@ module Pd::Application
       enrolled? ? 'Yes' : 'No'
     end
 
-
-
-
-
     def status_including_enrolled
       return 'enrolled' if enrolled?
       status
     end
-
 
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
@@ -820,8 +827,6 @@ module Pd::Application
     def effective_regional_partner_name
       regional_partner&.name || 'Code.org'
     end
-
-
 
     # @override
     def dynamic_required_fields(hash)
@@ -940,11 +945,6 @@ module Pd::Application
       return allow_sending_principal_email?
     end
 
-
-
-
-
-
     # @override
     def to_csv_row(course)
       columns_to_exclude = Pd::Application::TeacherApplication.columns_to_remove(course)
@@ -987,7 +987,6 @@ module Pd::Application
         csv << row
       end
     end
-
 
     def get_latest_school_stats(school_id)
       School.find_by_id(school_id)&.school_stats_by_year&.order(school_year: :desc)&.first

@@ -74,7 +74,6 @@ class Craft < Blockly
     :songs
   )
 
-
   DEFAULT_MAP_VALUE = EMPTY_STRING.freeze # no item
 
   ALL_BLOCKS = {
@@ -473,6 +472,7 @@ class Craft < Blockly
   def self.start_directions
     [['North', 0], ['East', 1], ['South', 2], ['West', 3]]
   end
+
   def self.song_options
     %w(
       vignette1
@@ -485,10 +485,12 @@ class Craft < Blockly
       nether2
     )
   end
+
   def self.show_popup_options
     [['Player Select Popup', 'playerSelection'],
      ['House Layout Select Popup', 'houseLayoutSelection']]
   end
+
   def self.special_level_type_options
     [
       ['House wall build level', 'houseWallBuild'],
@@ -498,6 +500,7 @@ class Craft < Blockly
       ['Spawn Agent on success level', 'agentSpawn']
     ]
   end
+
   def self.create_from_level_builder(params, level_params)
     default_game_params = {}
     default_game_params[:ground_plane] = '[' + ([(['"grass"'] * 12).join(',')] * 12).join(",\n") + ']'
@@ -523,6 +526,7 @@ class Craft < Blockly
         merge(default_game_params)
     )
   end
+
   # Attributes that are stored as JSON strings but should be passed through to the app as
   # actual JSON objects.  You can list attributes in snake_case here for consistency, but this method
   # returns camelCase properties because of where it's used in the pipeline.
@@ -543,17 +547,15 @@ class Craft < Blockly
       songs
     ).map {|x| x.camelize(:lower)}
   end
+
   def self.skins
     ['craft']
   end
+
   # Use a DCDO flag here so we can revert back to CDO Blockly without a deploy
   def uses_google_blockly?
     DCDO.get('minecraft_google_blockly', true)
   end
-
-
-
-
 
   def get_width
     grid_width || 10
@@ -576,9 +578,6 @@ class Craft < Blockly
       'minecraft_adventurer'
     end
   end
-
-
-
 
   def adventurer_blocks
     <<~XML.chomp

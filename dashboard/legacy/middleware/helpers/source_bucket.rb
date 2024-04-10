@@ -11,6 +11,7 @@ class SourceBucket < BucketHelper
   def self.main_json_filename
     MAIN_JSON_FILENAME
   end
+
   def initialize
     super CDO.sources_s3_bucket, CDO.sources_s3_directory
   end
@@ -26,7 +27,6 @@ class SourceBucket < BucketHelper
   def cache_duration_seconds
     0
   end
-
 
   # Copies the given version of the file to make it the current revision.
   # (All intermediate versions are preserved.)

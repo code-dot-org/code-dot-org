@@ -88,8 +88,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     render json: exception.to_s, status: :bad_request
   end
 
-
-
   private def submit_params
     params.require(:amazon_future_engineer).
       permit(*PERMITTED_PARAMETERS).

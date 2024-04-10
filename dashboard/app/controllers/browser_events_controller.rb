@@ -101,5 +101,4 @@ class BrowserEventsController < ApplicationController
       }
     )
   end
-
 end

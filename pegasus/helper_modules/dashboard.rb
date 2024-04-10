@@ -23,12 +23,12 @@ module Dashboard
       Dashboard::User.new(row)
       # rubocop:enable CustomCops/DashboardDbUsage
     end
+
     # Wrap dashboard user row in this helper object.
     # You can use this, but it's preferred that clients call User.get(user_id).
     def initialize(user_row)
       @row = user_row
     end
-
 
     def id
       @row[:id]

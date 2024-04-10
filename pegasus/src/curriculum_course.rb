@@ -9,6 +9,7 @@ class CurriculumCourse
   def self.virtual_to_v3_path(local_virtual_path)
     local_virtual_path.sub(pegasus_dir('sites/virtual/curriculum-'), sites_v3_dir('code.org/public/curriculum/'))
   end
+
   def initialize(kind)
     @kind = kind
     @dir = sites_dir("virtual/curriculum-#{@kind}")
@@ -99,5 +100,4 @@ class CurriculumCourse
   def valid_lesson_directory_name(lesson_dirname)
     lesson_dirname != '.' && lesson_dirname != '..' && lesson_dirname[0] != '_'
   end
-
 end

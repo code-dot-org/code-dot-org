@@ -86,6 +86,7 @@ class Pd::InternationalOptIn < ApplicationRecord
 
     super.merge(entries)
   end
+
   def self.labels
     keys = %w(
       firstName
@@ -117,6 +118,7 @@ class Pd::InternationalOptIn < ApplicationRecord
 
     keys.index_with {|v| I18n.t("pd.form_labels.#{v.underscore}")}
   end
+
   def validate_with(options)
     # Because we're using the special "answerText/answerValue" format in
     # self.options, we need to normalize to just answerValue here for
@@ -142,7 +144,6 @@ class Pd::InternationalOptIn < ApplicationRecord
     end
   end
 
-
   # @override
   def dynamic_required_fields(hash)
     [].tap do |required|
@@ -163,7 +164,6 @@ class Pd::InternationalOptIn < ApplicationRecord
       end
     end
   end
-
 
   def email_opt_in?
     sanitized_form_data_hash[:email_opt_in].casecmp?("yes")

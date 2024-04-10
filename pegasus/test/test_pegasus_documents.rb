@@ -71,9 +71,6 @@ class PegasusTest < Minitest::Test
     assert_operator documents.length, :>, 1500
   end
 
-
-
-
   def test_render_pegasus_documents
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.

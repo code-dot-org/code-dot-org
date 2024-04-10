@@ -83,6 +83,7 @@ class PeerReview < ApplicationRecord
       end
     end
   end
+
   def self.get_review_for_user(script, user)
     PeerReview.get_potential_reviews(script, user).where(
       status: nil,
@@ -91,6 +92,7 @@ class PeerReview < ApplicationRecord
       'reviewer_id is null or created_at < now() - interval 1 day'
     ).take
   end
+
   def self.create_for_submission(user_level, level_source_id)
     return if PeerReview.exists?(
       submitter: user_level.user,
@@ -126,6 +128,7 @@ class PeerReview < ApplicationRecord
       find_or_create_by!(base_peer_review_attributes.merge({status: 2}))
     end
   end
+
   def self.get_review_completion_status(user, script)
     if user &&
         script.has_peer_reviews? &&
@@ -143,6 +146,7 @@ class PeerReview < ApplicationRecord
       end
     end
   end
+
   def self.get_peer_review_summaries(user, script)
     if user &&
         script.has_peer_reviews? &&
@@ -163,6 +167,7 @@ class PeerReview < ApplicationRecord
       end
     end
   end
+
   def self.get_potential_reviews(script, user)
     where(
       script: script
@@ -172,6 +177,7 @@ class PeerReview < ApplicationRecord
       level_source_id: PeerReview.where(reviewer: user, script: script).pluck(:level_source_id)
     )
   end
+
   # Helper method that summarizes things at the user_level level of granularity
   def self.get_submission_summary_for_user_level(user_level, script)
     reviews = PeerReview.where(submitter: user_level.user, level: user_level.level, script: script)
@@ -199,6 +205,7 @@ class PeerReview < ApplicationRecord
       status: status
     }
   end
+
   def add_assignment_to_audit_trail
     message = reviewer_id.present? ? "ASSIGNED to user id #{reviewer_id}" : 'UNASSIGNED'
     append_audit_trail message
@@ -215,8 +222,6 @@ class PeerReview < ApplicationRecord
   def user_level
     UserLevel.find_by!(user: submitter, level: level)
   end
-
-
 
   def mark_user_level
     user_level = UserLevel.find_by!(user: submitter, level: level)
@@ -242,9 +247,6 @@ class PeerReview < ApplicationRecord
     # rubocop:enable Rails/OutputSafety
   end
 
-
-
-
   def summarize
     return {
       id: id,
@@ -254,7 +256,6 @@ class PeerReview < ApplicationRecord
       locked: false
     }
   end
-
 
   def clear_data
     update(data: SYSTEM_DELETED_DATA)
@@ -274,7 +275,6 @@ class PeerReview < ApplicationRecord
       review_id: id
     }
   end
-
 
   def related_reviews
     PeerReview.where(submitter: submitter, level: level).where.not(id: id)

@@ -28,6 +28,7 @@ class DeleteAccountsHelper
     @bypass_safety_constraints = bypass_safety_constraints
     raise ArgumentError, 'bypass_safety_constraints must be boolean' unless [true, false].include? @bypass_safety_constraints
   end
+
   def sql_query_to_anonymize_field(table_name, new_attribute_values, selector)
     set = "SET " + new_attribute_values.map {|k, v| "`#{table_name}`.`#{k}` = #{v}"}.join(', ')
     new_attribute_values.each do |k, v|
@@ -36,7 +37,6 @@ class DeleteAccountsHelper
     where = "WHERE `#{table_name}`.`#{selector.keys[0]}` = #{selector.values[0]}"
     "UPDATE `#{table_name}` #{set} #{where}"
   end
-
 
   # Deletes all project-backed progress associated with a user.
   # @param [User] user The user to delete the project-backed progress of.

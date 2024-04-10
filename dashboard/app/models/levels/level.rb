@@ -163,24 +163,30 @@ class Level < ApplicationRecord
   # Overriden by different level types.
   def self.start_directions
   end
+
   # Overriden by different level types.
   def self.step_modes
   end
+
   # Overriden by different level types.
   def self.flower_types
   end
+
   # Overriden by different level types.
   def self.palette_categories
   end
+
   def self.pretty_print_xml(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     xml.serialize(PRETTY_PRINT).strip
   end
+
   def self.where_we_want_to_calculate_ideal_level_source
     where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
       where(ideal_level_source_id: nil).
       to_a.reject {|level| level.try(:free_play)}
   end
+
   def self.find_by_key(key)
     # this is the key used in the script files, as a way to uniquely
     # identify a level that can be defined by the .level file or in a
@@ -189,6 +195,7 @@ class Level < ApplicationRecord
     # level 'scrat 16'
     find_by(key_to_params(key))
   end
+
   def self.key_to_params(key)
     if key.start_with?('blockly:')
       _, game_name, level_num = key.split(':')
@@ -197,9 +204,11 @@ class Level < ApplicationRecord
       {name: key}
     end
   end
+
   def self.cache_find(id)
     Unit.cache_find_level(id)
   end
+
   # Define search filter fields
   def self.search_options
     {
@@ -217,6 +226,7 @@ class Level < ApplicationRecord
       ]
     }
   end
+
   # https://github.com/rails/rails/issues/3508#issuecomment-29858772
   # Include type in serialization.
   def serializable_hash(options = nil)
@@ -289,10 +299,6 @@ class Level < ApplicationRecord
   def enable_examples?
     is_a?(Blockly)
   end
-
-
-
-
 
   # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
   # All custom levels will have a 'custom' level_num, except for DSLDefined levels.
@@ -383,8 +389,6 @@ class Level < ApplicationRecord
     builder.to_xml(PRETTY_PRINT)
   end
 
-
-
   def filter_level_attributes(level_hash)
     %w(name id updated_at type solution_level_source_id ideal_level_source_id md5).each {|field| level_hash.delete field}
     level_hash.compact!
@@ -402,8 +406,6 @@ class Level < ApplicationRecord
     {}
   end
 
-
-
   def calculate_ideal_level_source_id
     ideal_level_source =
       level_sources.
@@ -412,8 +414,6 @@ class Level < ApplicationRecord
 
     update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
-
-
 
   # Returns whether this level is backed by a channel, whose id may
   # be passed to the client, typically to save and load user progress
@@ -494,7 +494,6 @@ class Level < ApplicationRecord
       end
     end
   end
-
 
   def icon
   end
@@ -695,7 +694,6 @@ class Level < ApplicationRecord
     end
   end
 
-
   # Returns the first level name of the form "<base_name>_copy<num>_<suffix>" which
   # is not already used by another level.
   # @param [String] suffix
@@ -788,7 +786,6 @@ class Level < ApplicationRecord
   def hint_prompt_enabled?
     script_levels.map(&:script).any?(&:hint_prompt_enabled?)
   end
-
 
   def get_level_for_progress(student = nil, script = nil)
     # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1

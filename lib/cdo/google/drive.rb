@@ -39,10 +39,10 @@ module Google
       raise "Google Authentication Key not provided." if service_account_key.nil?
       @session = GoogleDrive::Session.from_service_account_key StringIO.new(service_account_key)
     end
+
     def raw_session
       @session
     end
-
 
     def file(path)
       file = @session.file_by_title(path_to_title_array(path))

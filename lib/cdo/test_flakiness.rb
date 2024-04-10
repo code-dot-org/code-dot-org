@@ -16,8 +16,6 @@ class TestFlakiness
     ENV['SAUCE_ACCESS_KEY'] || CDO.saucelabs_authkey
   end
 
-
-
   # Queries the SauceLabs API for jobs
   # @param options [Hash] Optional, options overrides.
   # @return [JSON] The JSON parsed response.

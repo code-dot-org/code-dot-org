@@ -57,6 +57,7 @@ class Foorm::Form < ApplicationRecord
       end
     end
   end
+
   def self.get_questions_and_latest_version_for_name(form_name)
     latest_published_version = Foorm::Form.where(name: form_name, published: true).maximum(:version)
     return nil if latest_published_version.nil?
@@ -65,6 +66,7 @@ class Foorm::Form < ApplicationRecord
 
     return questions, latest_published_version
   end
+
   def self.get_questions_for_name_and_version(form_name, form_version)
     form = Foorm::Form.where(name: form_name, version: form_version).first
 
@@ -74,6 +76,7 @@ class Foorm::Form < ApplicationRecord
 
     return questions
   end
+
   def self.fill_in_library_items(questions)
     questions["pages"]&.each do |page|
       page["elements"]&.map! do |element|
@@ -95,6 +98,7 @@ class Foorm::Form < ApplicationRecord
     end
     return questions
   end
+
   def self.validate_questions(questions)
     # fill_in_library_items will throw an exception if any library items are invalid.
     # If the questions are not valid JSON, JSON.parse will throw an exception.
@@ -117,6 +121,7 @@ class Foorm::Form < ApplicationRecord
     end
     errors
   end
+
   # Checks that the element name is not in element_names and the choices/rows/columns are unique and all have
   # value/text parameters. If any of the above are not true, will raise an InvalidFoormConfigurationError.
   # Note that this method is also used to validate library_questions.
@@ -141,6 +146,7 @@ class Foorm::Form < ApplicationRecord
       validate_question(element_data)
     end
   end
+
   def self.validate_question(question_data)
     case question_data[:type]
     when TYPE_CHECKBOX, TYPE_RADIO, TYPE_DROPDOWN
@@ -150,6 +156,7 @@ class Foorm::Form < ApplicationRecord
       validate_choices(question_data[:columns], question_data[:name])
     end
   end
+
   def self.validate_choices(choices, question_name)
     choice_values = Set.new
     choices.each do |choice|
@@ -169,15 +176,16 @@ class Foorm::Form < ApplicationRecord
       end
     end
   end
+
   def self.get_matrix_question_id(parent_question_id, sub_question_id)
     parent_question_id + '-' + sub_question_id
   end
+
   # We have a uniqueness constraint on form name and version for this table.
   # This key format is used elsewhere in Foorm to uniquely identify a form.
   def key
     "#{name}.#{version}"
   end
-
 
   def validate_questions
     errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
@@ -202,14 +210,6 @@ class Foorm::Form < ApplicationRecord
       File.write(file_path, questions)
     end
   end
-
-
-
-
-
-
-
-
 
   # For a given Form, this method will produce a CSV of all responses
   # received for that Form. It includes the content of the form submitted

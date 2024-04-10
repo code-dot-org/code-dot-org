@@ -50,13 +50,16 @@ class Bounce < Grid
       upButton
     )
   end
+
   def self.themes
     ["", "retro", "basketball", "soccer", "hockey", "football"]
   end
+
   # List of possible skins, the first is used as a default.
   def self.skins
     %w(bounce basketball sports)
   end
+
   def self.create_from_level_builder(params, level_params)
     puts params
     puts level_params
@@ -68,10 +71,12 @@ class Bounce < Grid
       )
     )
   end
+
   def self.parse_maze(maze_json, _ = nil)
     maze_json = maze_json.to_json if maze_json.is_a? Array
     {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell['tileType'])}}.to_json}
   end
+
   def validate_skin_and_theme
     return unless skin && theme
     # the sports skin can have any theme except retro
@@ -88,11 +93,6 @@ class Bounce < Grid
     errors.add(:theme, "#{skin} skin and #{theme} theme are incompatible") if
       sport_skin_non_sport_theme || sport_theme_non_sport_skin
   end
-
-
-
-
-
 
   def uses_google_blockly?
     true

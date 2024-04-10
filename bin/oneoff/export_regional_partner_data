@@ -44,22 +44,22 @@ class User
       )
     )
   end
+
   def self.import_program_manager(hash)
     import(hash).tap do |user|
       user.permission = UserPermission::WORKSHOP_ORGANIZER
     end
   end
+
   def self.import_facilitator(hash)
     import(hash).tap do |user|
       user.permission = UserPermission::FACILITATOR
     end
   end
+
   def export
     attributes.slice(*ATTRIBUTES)
   end
-
-
-
 end
 
 class RegionalPartner
@@ -89,13 +89,13 @@ class RegionalPartner
       end
     end
   end
+
   def export
     attributes.slice(*ATTRIBUTES).merge(
       program_managers: program_managers.map(&:export),
       mappings: mappings.map(&:export)
     ).compact.deep_stringify_keys
   end
-
 end
 
 class Pd::RegionalPartnerMapping
@@ -107,10 +107,10 @@ class Pd::RegionalPartnerMapping
   def self.import(hash)
     Pd::RegionalPartnerMapping.find_or_create_by!(hash)
   end
+
   def export
     attributes.slice(*ATTRIBUTES)
   end
-
 end
 
 class Pd::CourseFacilitator
@@ -120,13 +120,13 @@ class Pd::CourseFacilitator
       facilitator: User.import_facilitator(hash['facilitator'])
     )
   end
+
   def export
     {
       course: course,
       facilitator: facilitator.export
     }
   end
-
 end
 
 def export_to(filename)

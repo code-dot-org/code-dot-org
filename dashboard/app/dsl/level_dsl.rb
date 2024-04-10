@@ -6,6 +6,7 @@ class LevelDSL < BaseDSL
   def self.i18n_fields
     []
   end
+
   def initialize
     super
     @hash[:editor_experiment] = nil
@@ -51,5 +52,4 @@ class LevelDSL < BaseDSL
       # filter out any entries with nil key or value
       select {|key, value| key.present? && value.present?}
   end
-
 end

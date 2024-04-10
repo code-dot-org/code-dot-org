@@ -52,6 +52,7 @@ class DSLDefined < Level
       localized
     end
   end
+
   def self.setup(data, md5 = nil)
     level = find_or_create_by({name: data[:name].strip})
     level.send(:write_attribute, 'properties', {})
@@ -60,13 +61,16 @@ class DSLDefined < Level
 
     level
   end
+
   def self.dsl_class
     "#{self}DSL".constantize
   end
+
   # Use DSL class to parse string
   def self.parse(str, filename, name = nil)
     dsl_class.parse(str, filename, name)
   end
+
   def self.create_from_level_builder(params, level_params, old_name = nil)
     text = level_params[:dsl_text] || params[:dsl_text]
     text = set_editor_experiment(text, level_params[:editor_experiment])
@@ -97,6 +101,7 @@ class DSLDefined < Level
       level
     end
   end
+
   def self.decrypt_dsl_text_if_necessary(dsl_text)
     if dsl_text =~ /^encrypted '(.*)'$/m
       begin
@@ -107,6 +112,7 @@ class DSLDefined < Level
     end
     return dsl_text
   end
+
   def self.set_editor_experiment(dsl_text, editor_experiment)
     return dsl_text unless editor_experiment
 
@@ -119,6 +125,7 @@ class DSLDefined < Level
 
     dsl_text
   end
+
   def validate_level_name
     errors.add(:name, "cannot be the default level name") if name == DEFAULT_LEVEL_NAME
   end
@@ -154,11 +161,6 @@ class DSLDefined < Level
     self.class.resolve_partially_localized(localized, source)
   end
 
-
-
-
-
-
   # Write the specified text to the dsl level definition file for this level.
   def rewrite_dsl_file(text)
     File.write(file_path, (level_encrypted? ? encrypted_dsl_text(text) : text))
@@ -188,7 +190,6 @@ class DSLDefined < Level
     ["name '#{name}'",
      "encrypted '#{Encryption.encrypt_object(dsl_text)}'"].join("\n")
   end
-
 
   def clone_with_name(new_name, editor_experiment: nil)
     raise ArgumentError, "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
@@ -235,7 +236,6 @@ class DSLDefined < Level
   def supports_markdown?
     false
   end
-
 
   private def delete_level_file
     FileUtils.rm_f(file_path)

@@ -23,7 +23,6 @@ class OptimizeTest < Minitest::Test
     end
   end
 
-
   def test_optimize_image
     # First request returns original image, begins optimization in background.
     get('/images/logo.png')

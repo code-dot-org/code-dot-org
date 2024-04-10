@@ -33,6 +33,7 @@ class Pd::Session < ApplicationRecord
     return nil unless code
     find_by(code: code)
   end
+
   def starts_and_ends_on_the_same_day
     return unless start && self.end
     unless start.to_datetime.to_date == self.end.to_datetime.to_date
@@ -80,7 +81,6 @@ class Pd::Session < ApplicationRecord
   def remove_code
     update! code: nil
   end
-
 
   def open_for_attendance?
     code.present? &&

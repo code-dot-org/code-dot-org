@@ -100,6 +100,7 @@ class Applab < Blockly
   def self.palette
     SharedConstants::APPLAB_BLOCKS
   end
+
   def xml_blocks
     %w()
   end
@@ -166,7 +167,6 @@ class Applab < Blockly
   def age_13_required?
     true
   end
-
 
   # Add a starter asset to the level and save it in properties.
   # Starter assets are stored as an object, where the key is the

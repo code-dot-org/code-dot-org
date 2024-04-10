@@ -42,6 +42,7 @@ class Standard < ApplicationRecord
       end
     end
   end
+
   def summarize
     {
       id: id,
@@ -83,5 +84,4 @@ class Standard < ApplicationRecord
   def localized_description
     Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description, crowdin_key)
   end
-
 end

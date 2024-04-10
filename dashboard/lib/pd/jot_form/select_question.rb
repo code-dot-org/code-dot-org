@@ -12,7 +12,6 @@ module Pd
         ]
       end
 
-
       attr_accessor(
         :allow_other,
         :other_text,

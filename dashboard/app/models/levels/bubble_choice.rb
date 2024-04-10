@@ -42,16 +42,19 @@ class BubbleChoice < DSLDefined
   def self.parent_levels(level_name)
     includes(:child_levels).where(child_levels_levels: {name: level_name}).to_a
   end
+
   def self.setup(data, md5)
     sublevel_names = data[:properties].delete(:sublevels)
     level = super(data, md5)
     level.setup_sublevels(sublevel_names)
     level
   end
+
   # Some BubbleChoice sublevels also have a contained level
   def self.level_for_progress_for_sublevel(sublevel)
     sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
   end
+
   def dsl_default
     <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
@@ -220,7 +223,6 @@ class BubbleChoice < DSLDefined
     user_levels.max_by(&:best_result)&.level_id
   end
 
-
   def supports_markdown?
     true
   end
@@ -235,7 +237,6 @@ class BubbleChoice < DSLDefined
     level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
     level
   end
-
 
   def setup_sublevels(sublevel_names)
     # if our existing sublevels already match the given names, do nothing
@@ -254,7 +255,6 @@ class BubbleChoice < DSLDefined
 
     reload
   end
-
 
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]

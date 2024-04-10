@@ -91,5 +91,4 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
 
     render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
   end
-
 end

@@ -119,6 +119,7 @@ class ActiveSupport::TestCase
       Timecop.return
     end
   end
+
   def panda_panda
     # this is the panda face emoji which is a 4 byte utf8 character
     # (some of our db tables can't handle these)
@@ -145,7 +146,6 @@ class ActiveSupport::TestCase
     CDO.stubs(disable_s3_image_uploads: false)
     AWS::S3.expects(:upload_to_bucket).never
   end
-
 
   def seed_deprecated_unit_fixtures
     # Some of the functionality we're testing here relies on Scripts with
@@ -357,7 +357,6 @@ class ActiveSupport::TestCase
     assert_cache_control_match expected_directives, cache_control_header
   end
 
-
   def no_database
     Rails.logger.info '--------------'
     Rails.logger.info 'DISCONNECTING DATABASE'
@@ -391,6 +390,7 @@ class ActionController::TestCase
     test_user_gets_response_for action, user: :user, response: :forbidden, params: params
     test_redirect_to_sign_in_for action, params: params
   end
+
   # Generates a test case ensuring redirect to sign in for not signed in users
   # @param action [String] the controller action to test
   # @param method [Symbol, String] http method with which to perform the action (default :get)
@@ -407,6 +407,7 @@ class ActionController::TestCase
       assert_redirected_to_sign_in
     end
   end
+
   # Generates a basic response validation test case for a user, logged-in or not.
   # @param action [String] the controller action to test
   # @param method [Symbol, String] http method with which to perform the action (default :get)
@@ -486,6 +487,7 @@ class ActionController::TestCase
       instance_exec(&block) if block
     end
   end
+
   # As `current_user` is not accessible from controller tests (only from within the controller),
   # the signed in user is only accessible from the session.
   # @returns [Integer, nil] The ID of the signed in user, nil if no user is signed in.
@@ -507,9 +509,6 @@ class ActionController::TestCase
     assert_response :redirect
     assert_redirected_to "http://test.host/users/sign_in"
   end
-
-
-
 
   def css(selector)
     Nokogiri::HTML(@response.body).css(selector)

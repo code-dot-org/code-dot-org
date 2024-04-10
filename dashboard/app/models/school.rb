@@ -70,11 +70,13 @@ class School < ApplicationRecord
   def self.normalize_school_id(raw_school_id)
     raw_school_id.length == 12 ? raw_school_id.to_i.to_s : raw_school_id
   end
+
   # Gets the seeding file name.
   # @param stub_school_data [Boolean] True for stub file.
   def self.get_seed_filename(stub_school_data)
     stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
   end
+
   # @param unsanitized [String, nil] the unsanitized string
   # @returns [String, nil] the sanitized version of the string, with equal signs and double
   #   quotations removed. Returns nil on nil input, or if value is a dash (signifies missing in NCES data).
@@ -82,6 +84,7 @@ class School < ApplicationRecord
     unsanitized = nil if NIL_CHARS.include?(unsanitized)
     unsanitized&.tr('="', '')
   end
+
   # Seeds all the data from the source file.
   # @param options [Hash] Optional map of options.
   def self.seed_all(options = {})
@@ -97,6 +100,7 @@ class School < ApplicationRecord
       School.seed_from_s3
     end
   end
+
   def self.seed_from_s3
     # NCES school data has been built up in the DB over time by pulling in different
     # data files. This seeding recreates the order in which they were incorporated.
@@ -408,10 +412,12 @@ class School < ApplicationRecord
       end
     end
   end
+
   # format a list of schools to a string
   def self.pretty_print_school_list(schools)
     schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")
   end
+
   # Loads/merges the data from a CSV into the schools table.
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
@@ -513,6 +519,7 @@ class School < ApplicationRecord
 
     schools
   end
+
   def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, ignore_attributes: [], &parse_row)
     AWS::S3.seed_from_file(bucket, filepath) do |filename|
       merge_from_csv(
@@ -527,6 +534,7 @@ class School < ApplicationRecord
       CDO.log.info "This is a dry run. No data is written to the database." if is_dry_run
     end
   end
+
   # Download the data in the table to a CSV file.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
@@ -542,6 +550,7 @@ class School < ApplicationRecord
     end
     return filename
   end
+
   # Gets the full address of the school.
   # @return [String] The full address.
   def full_address
@@ -570,19 +579,4 @@ class School < ApplicationRecord
     # Return false if we don't have all data for a given school.
     stats.title_i_eligible? || (stats.urm_percent || 0) >= 40 || (stats.frl_eligible_percent || 0) >= 40
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end

@@ -48,6 +48,7 @@ module Pd::Application
       current_year_index = APPLICATION_YEARS.index(year)
       current_year_index.nil? ? nil : APPLICATION_YEARS[current_year_index + 1]
     end
+
     def self.create_placeholder_and_send_mail(teacher_application)
       teacher_application.send_pd_application_email :admin_approval
 
@@ -56,6 +57,7 @@ module Pd::Application
         application_guid: teacher_application.application_guid
       )
     end
+
     def self.options(year = APPLICATION_CURRENT_YEAR)
       {
         title: COMMON_OPTIONS[:title],
@@ -65,9 +67,11 @@ module Pd::Application
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
       }
     end
+
     def self.filtered_labels(course, status = 'unreviewed')
       ALL_LABELS
     end
+
     # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       application_year
@@ -76,7 +80,6 @@ module Pd::Application
     def update_teacher_app_status
       teacher_application.update!(status: 'unreviewed') if teacher_application.status == 'awaiting_admin_approval'
     end
-
 
     # @override
     def set_type_and_year
@@ -100,14 +103,12 @@ module Pd::Application
       JSON.parse(form_data).empty?
     end
 
-
     # @override
     def check_idempotency
       existing_application = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
 
       (!existing_application || existing_application.placeholder?) ? nil : existing_application
     end
-
 
     def dynamic_required_fields(hash)
       [].tap do |required|
@@ -136,7 +137,6 @@ module Pd::Application
         end
       end
     end
-
 
     def additional_text_fields
       [

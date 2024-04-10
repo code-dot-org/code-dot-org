@@ -15,7 +15,6 @@ class SharedResources < Sinatra::Base
     set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
-
   configure do
     # Note 1: pegasus/router.rb has additional configuration for Sass::Plugin
     # Note 2: the generated css files written to /pegasus/cache/css are served

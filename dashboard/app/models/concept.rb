@@ -42,7 +42,6 @@ class Concept < ApplicationRecord
     end
   end
 
-
   def self.setup
     setup_with_concepts(CONCEPT_NAMES_BY_INDEX)
   end

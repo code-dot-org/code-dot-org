@@ -72,7 +72,6 @@ class SchoolInfo < ApplicationRecord
     self.state = input
   end
 
-
   before_validation do
     ATTRIBUTES.each do |attr|
       self[attr] = nil if self[attr].blank?

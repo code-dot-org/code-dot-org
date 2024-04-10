@@ -42,6 +42,7 @@ class UserScript < ApplicationRecord
       filtered_progress.include?(name)
     end
   end
+
   def script
     Unit.get_from_cache(script_id)
   end
@@ -56,5 +57,4 @@ class UserScript < ApplicationRecord
   def empty?
     started_at.nil? && assigned_at.nil?
   end
-
 end

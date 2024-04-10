@@ -13,6 +13,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     end
     @user = current_user
   end
+
   # GET /api/v1/users/current
   def current
     prevent_caching
@@ -40,6 +41,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       }
     end
   end
+
   # GET /api/v1/users/netsim_signed_in
   def netsim_signed_in
     prevent_caching
@@ -55,12 +57,14 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       raise CanCan::AccessDenied
     end
   end
+
   # GET /api/v1/users/<user_id>/school_name
   def get_school_name
     render json: {
       school_name: current_user&.school
     }
   end
+
   # GET /api/v1/users/<user_id>/contact_details
   def get_contact_details
     render json: {
@@ -69,18 +73,22 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
     }
   end
+
   # GET /api/v1/users/<user_id>/using_text_mode
   def get_using_text_mode
     render json: {using_text_mode: !!@user&.using_text_mode}
   end
+
   # GET /api/v1/users/<user_id>/display_theme
   def get_display_theme
     render json: {display_theme: @user&.display_theme}
   end
+
   # GET /api/v1/users/<user_id>/mute_music
   def get_mute_music
     render json: {mute_music: !!@user&.mute_music}
   end
+
   # GET /api/v1/users/<user_id>/get_donor_teacher_banner_details
   def get_donor_teacher_banner_details
     if current_user.teacher?
@@ -105,14 +113,17 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       }
     end
   end
+
   # GET /api/v1/users/<user_id>/school_donor_name
   def get_school_donor_name
     render json: @user.school_donor_name.nil? ? 'null' : @user.school_donor_name.inspect
   end
+
   # GET /api/v1/users/<user_id>/tos_version
   def get_tos_version
     render json: @user.terms_of_service_version.nil? ? -1 : @user.terms_of_service_version.inspect
   end
+
   # GET /api/v1/users/current/permissions
   def get_current_permissions
     prevent_caching
@@ -126,6 +137,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       }
     end
   end
+
   # POST /api/v1/users/<user_id>/using_text_mode
   def post_using_text_mode
     @user.using_text_mode = !!params[:using_text_mode].try(:to_bool)
@@ -133,6 +145,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     render json: {using_text_mode: !!@user&.using_text_mode}
   end
+
   # POST /api/v1/users/<user_id>/mute_music
   def post_mute_music
     @user.mute_music = !!params[:mute_music].try(:to_bool)
@@ -140,6 +153,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     render json: {mute_music: !!@user&.mute_music}
   end
+
   # POST /api/v1/users/sort_by_family_name
   def post_sort_by_family_name
     return head :unauthorized unless current_user
@@ -149,6 +163,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     head :no_content
   end
+
   # POST /api/v1/users/show_progress_table_v2
   def post_show_progress_table_v2
     return head :unauthorized unless current_user
@@ -158,6 +173,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     head :no_content
   end
+
   # POST /api/v1/users/disable_lti_roster_sync
   def post_disable_lti_roster_sync
     return head :unauthorized unless current_user&.teacher?
@@ -167,6 +183,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     head :no_content
   end
+
   # POST /api/v1/users/<user_id>/display_theme
   def update_display_theme
     @user.display_theme = params[:display_theme]
@@ -174,6 +191,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     render json: {display_theme: @user.display_theme}
   end
+
   # POST /api/v1/users/<user_id>/ai_tutor_access
   def update_ai_tutor_access
     return head :unauthorized unless current_user&.teacher?
@@ -188,6 +206,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     head :no_content
   end
+
   # POST /api/v1/users/accept_data_transfer_agreement
   def accept_data_transfer_agreement
     unless @user.data_transfer_agreement_accepted
@@ -201,6 +220,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     head :no_content
   end
+
   # POST /api/v1/users/<user_id>/postpone_census_banner
   def postpone_census_banner
     today = Time.zone.today
@@ -220,6 +240,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     render status: :ok, json: {next_census_display: @user.next_census_display}
   end
+
   # POST /api/v1/users/<user_id>/dismiss_census_banner
   def dismiss_census_banner
     today = Time.zone.today
@@ -233,6 +254,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     render status: :ok, json: {next_census_display: @user.next_census_display}
   end
+
   # POST /api/v1/users/<user_id>/dismiss_donor_teacher_banner
   def dismiss_donor_teacher_banner
     @user.donor_teacher_banner_dismissed = {
@@ -243,6 +265,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     head :ok
   end
+
   # POST /api/v1/users/<user_id>/dismiss_parent_email_banner
   def dismiss_parent_email_banner
     @user.parent_email_banner_dismissed = "true"
@@ -250,11 +273,13 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     head :ok
   end
+
   # POST /api/v1/users/<user_id>/set_standards_report_info_to_seen
   def set_standards_report_info_to_seen
     @user.has_seen_standards_report_info_dialog = true
     @user.save!
   end
+
   # Expects a param with the key "g-recaptcha-response" that is used
   # to validate whether a user isn't a bot
   # POST /dashboardapi/v1/users/<user_id>/verify_captcha
@@ -271,30 +296,4 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   private def to_bool(val)
     ActiveModel::Type::Boolean.new.cast val
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end

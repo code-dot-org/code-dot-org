@@ -12,7 +12,6 @@ class AwsS3IntegrationTest < Minitest::Test
     Aws::S3::Client.expects(:new).never
   end
 
-
   # An integration test of the AWS S3 wrapper that runs against the actual AWS service.
   def test_aws_s3
     # Test upload_to_bucket and download_from_bucket with :no_random.

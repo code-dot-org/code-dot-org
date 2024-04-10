@@ -23,6 +23,7 @@ module Pd
           raise "Unexpected question type: #{type}" unless klass
         end
       end
+
       # @param [Integer] form_id
       def initialize(form_id)
         @form_id = form_id
@@ -75,7 +76,6 @@ module Pd
         response = @client.get_submission submission_id
         parse_jotform_submission response['content']
       end
-
 
       protected def parse_jotform_questions(jotform_questions)
         # Questions are in one of several categories:

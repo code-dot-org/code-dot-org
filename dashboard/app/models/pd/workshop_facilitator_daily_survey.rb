@@ -77,30 +77,30 @@ module Pd
         day: 'day'
       }
     end
+
     def self.form_ids_for_subjects(subjects)
       subjects.map do |subject|
         form_id subject
       end
     end
+
     def self.form_id(subject)
       get_form_id CATEGORY_MAP[subject], FACILITATOR_FORM_KEY
     end
+
     def self.all_form_ids
       CATEGORY_MAP.keys.map do |subject|
         form_id(subject)
       end.flatten.compact.uniq
     end
+
     def self.unique_attributes
       [:user_id, :pd_session_id, :facilitator_id]
     end
+
     def set_workshop_from_session
       self.pd_workshop_id = pd_session&.pd_workshop_id
     end
-
-
-
-
-
 
     private def day_for_subject
       unless VALID_DAYS[Pd::WorkshopDailySurvey::CATEGORY_MAP[pd_workshop.subject]].include? day

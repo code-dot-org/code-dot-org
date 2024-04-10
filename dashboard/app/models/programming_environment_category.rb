@@ -34,6 +34,7 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
       KEY_CHAR_RE.match(character) ? character : '_'
     end.join.squeeze('_')
   end
+
   def serialize
     {
       key: key,
@@ -95,7 +96,6 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
     key = ProgrammingEnvironmentCategory.sanitize_key(name)
     self.key = key
   end
-
 
   def name_with_environment
     "#{programming_environment.title}:#{name}"

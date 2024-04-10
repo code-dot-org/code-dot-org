@@ -31,6 +31,7 @@ class DataDoc < ApplicationRecord
     # the remaining ids that were not seeded should be removed
     where(id: records_to_be_removed).destroy_all
   end
+
   # parses a seed file and generates a hash of the data doc
   def self.properties_from_file(content)
     config = JSON.parse(content)
@@ -40,6 +41,7 @@ class DataDoc < ApplicationRecord
       content: config['content'],
     }
   end
+
   # returns the local id of the data doc that was created/updated
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
@@ -49,6 +51,7 @@ class DataDoc < ApplicationRecord
     data_doc.update! properties
     data_doc.id
   end
+
   def to_param
     key
   end
@@ -77,7 +80,4 @@ class DataDoc < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
     FileUtils.rm_f(file_path)
   end
-
-
-
 end

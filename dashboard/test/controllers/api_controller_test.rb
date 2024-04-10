@@ -57,6 +57,7 @@ class ApiControllerTest < ActionController::TestCase
       return nil
     end
   end
+
   #
   # Given two arrays, checks that they represent equivalent bags (or multisets)
   # of elements.
@@ -91,6 +92,7 @@ class ApiControllerTest < ActionController::TestCase
     end
     bag_b_remaining.empty?
   end
+
   def assert_levelgroup_results_match(expected_results, actual_results)
     match = equivalent_bags?(expected_results, actual_results) do |expected, actual|
       expected['type'] == actual['type'] &&
@@ -391,7 +393,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 1, flappy_section_response['lessons'][lesson.id.to_s].length
     assert_equal @student_flappy_1.name, flappy_section_response['lessons'][lesson.id.to_s][0]['name']
   end
-
 
   test "student should show unlocked and not readonly" do
     # student_1 is unlocked
@@ -1760,7 +1761,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-
   test 'equivalent_bags? helper' do
     assert equivalent_bags? [], []
     assert equivalent_bags? [1, 1, 1, 2, 2], [2, 1, 2, 1, 1]
@@ -1768,7 +1768,6 @@ class ApiControllerTest < ActionController::TestCase
     assert equivalent_bags?([2, 3, 4], [12, 13, 14]) {|a, b| a % 10 == b % 10}
     refute equivalent_bags?([2, 3, 4], [11, 12, 13]) {|a, b| a % 10 == b % 10}
   end
-
 
   test 'sign_cookies' do
     skip 'TODO: stub secret key for CloudFront cookie signing'

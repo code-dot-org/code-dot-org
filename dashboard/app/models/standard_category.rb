@@ -38,6 +38,7 @@ class StandardCategory < ApplicationRecord
       end
     end
   end
+
   def crowdin_key
     [framework.shortcode, shortcode].join('/')
   end
@@ -45,5 +46,4 @@ class StandardCategory < ApplicationRecord
   def localized_description
     Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description, crowdin_key)
   end
-
 end

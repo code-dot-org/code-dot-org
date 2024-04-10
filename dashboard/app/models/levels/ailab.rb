@@ -54,6 +54,7 @@ class Ailab < Level
       dynamic_instructions
     ).map {|x| x.camelize(:lower)}
   end
+
   def localized_dynamic_instructions
     default_value = JSONValue.value(properties['dynamic_instructions'].presence)
     return default_value if default_value.nil?
@@ -106,5 +107,4 @@ class Ailab < Level
     end
     options.freeze
   end
-
 end

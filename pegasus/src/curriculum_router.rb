@@ -53,6 +53,7 @@ class HttpDocument
     content_type = content_type_from_path(path)
     new(File.read(path), {'Content-Type' => content_type, 'X-Pegasus-File' => path}.merge(headers))
   end
+
   def initialize(body, headers = {}, status = 200)
     @body = body
 
@@ -62,7 +63,6 @@ class HttpDocument
 
     @status = status
   end
-
 
   def charset?(charset)
     @headers['Content-Type'].to_s.include?("charset=#{charset}")

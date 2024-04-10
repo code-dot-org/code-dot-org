@@ -48,8 +48,8 @@ class EmailPreference < ApplicationRecord
     # This is a write-only helper method.  Don't return data to the caller.
     return
   end
+
   def email=(value)
     super(value&.strip&.downcase)
   end
-
 end

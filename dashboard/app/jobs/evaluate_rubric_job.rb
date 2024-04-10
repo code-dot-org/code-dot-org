@@ -96,11 +96,13 @@ class EvaluateRubricJob < ApplicationJob
   def self.ai_enabled?(script_level)
     !!get_lesson_s3_name(script_level)
   end
+
   # returns the path suffix of the location in S3 which contains the config
   # needed to evaluate the rubric for the given script level.
   def self.get_lesson_s3_name(script_level)
     UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
   end
+
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
@@ -141,10 +143,12 @@ class EvaluateRubricJob < ApplicationJob
 
     write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
   end
+
   # The client for s3 access made directly by this job, not via SourceBucket.
   def s3_client
     @s3_client ||= AWS::S3.create_client
   end
+
   def validate_ai_config
     lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
     code = 'hello world'
@@ -154,6 +158,7 @@ class EvaluateRubricJob < ApplicationJob
     validate_learning_goals
     S3_AI_RELEASE_PATH
   end
+
   def validate_ai_config_for_lesson(lesson_s3_name, code)
     # this step should raise an error if any essential config files are missing
     # from the S3 release directory
@@ -161,6 +166,7 @@ class EvaluateRubricJob < ApplicationJob
   rescue Aws::S3::Errors::NoSuchKey => exception
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
   end
+
   # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
   # ai-enabled learning goal in its rubric in the database has a corresponding
   # learning goal in the rubric in S3.
@@ -181,6 +187,7 @@ class EvaluateRubricJob < ApplicationJob
       end
     end
   end
+
   def validate_learning_goals_for_rubric(rubric)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
     db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
@@ -190,6 +197,7 @@ class EvaluateRubricJob < ApplicationJob
       raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
     end
   end
+
   def get_s3_learning_goals(lesson_s3_name)
     rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
@@ -292,7 +300,6 @@ class EvaluateRubricJob < ApplicationJob
     # We gracefully just fail, here, and we do not file this exception
   end
 
-
   # Retry on any reported rate limit (429 status) 'exponentially_longer' waits 3s, 18s, and then 83s.
   retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: RETRIES_ON_RATE_LIMIT do |job, error|
     # Job arguments are always serializable, so we just pull out the hash
@@ -307,7 +314,6 @@ class EvaluateRubricJob < ApplicationJob
     )
   end
 
-
   # Retry just once on a timeout. It is likely to timeout again.
   retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
     # Job arguments are always serializable, so we just pull out the hash
@@ -321,10 +327,6 @@ class EvaluateRubricJob < ApplicationJob
       context: options
     )
   end
-
-
-
-
 
   # get the channel id of the project which stores the user's code on this script level.
   private def get_channel_id(user, script_level)
@@ -392,11 +394,6 @@ class EvaluateRubricJob < ApplicationJob
       'api-key' => CDO.openai_evaluate_rubric_api_key,
     )
   end
-
-
-
-
-
 
   private def get_openai_evaluations(openai_params)
     origin = get_ai_proxy_origin

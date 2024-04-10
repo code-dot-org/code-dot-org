@@ -57,6 +57,7 @@ class Block < ApplicationRecord
       helper_code: helper_code,
     }
   end
+
   def block_options
     {
       name: name,
@@ -67,7 +68,6 @@ class Block < ApplicationRecord
     }
   end
 
-
   def file_content
     JSON.pretty_generate(
       {
@@ -76,7 +76,6 @@ class Block < ApplicationRecord
       }
     )
   end
-
 
   def write_additional_files
     if helper_code.try(:present?)

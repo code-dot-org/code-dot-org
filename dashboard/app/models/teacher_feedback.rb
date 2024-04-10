@@ -47,6 +47,7 @@ class TeacherFeedback < ApplicationRecord
   def self.get_latest_feedback_given(student_id, level_id, teacher_id, script_id)
     get_latest_feedbacks_given(student_id, level_id, script_id, teacher_id).first
   end
+
   # returns the latest feedback from each teacher for the student on the level
   def self.get_latest_feedbacks_received(student_id, level_id, script_id, teacher_id = nil)
     query = {
@@ -60,6 +61,7 @@ class TeacherFeedback < ApplicationRecord
       latest_per_teacher.
       order(created_at: :desc)
   end
+
   # Returns the latest feedback for each student on every level in a script given by the teacher
   # Get number of passed levels per user for the given set of user IDs
   # @param [Array<Integer>|Integer] student_ids: (optional) one or a list of student_ids. If nil student_id is excluded from the query
@@ -85,6 +87,7 @@ class TeacherFeedback < ApplicationRecord
       )
     )
   end
+
   def self.latest_per_teacher
     # Only select feedback from teachers who lead sections in which the student is still enrolled
     # and get the latest feedback per teacher for each student on each level
@@ -96,11 +99,13 @@ class TeacherFeedback < ApplicationRecord
         pluck(Arel.sql('MAX(teacher_feedbacks.id)'))
   )
   end
+
   def self.has_feedback?(student_id)
     where(
       student_id: student_id
     ).count > 0
   end
+
   def self.get_unseen_feedback_count(student_id)
     all_unseen_feedbacks = where(
       student_id: student_id,
@@ -112,9 +117,11 @@ class TeacherFeedback < ApplicationRecord
 
     all_unseen_feedbacks.count
   end
+
   def self.latest
     find_by(id: maximum(:id))
   end
+
   # Finds the script level associated with this object, using script id and
   # level id.
   def get_script_level
@@ -131,13 +138,6 @@ class TeacherFeedback < ApplicationRecord
     raise "no script level found for teacher feedback #{id}" unless script_level
     script_level
   end
-
-
-
-
-
-
-
 
   def user_level
     @user_level ||= user_levels.where(level_id: level_id, script_id: script_id)&.first

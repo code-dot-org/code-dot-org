@@ -323,6 +323,7 @@ class User < ApplicationRecord
     # @see https://app.honeybadger.io/projects/3240/faults/44740400
     nil
   end
+
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
 
@@ -353,9 +354,11 @@ class User < ApplicationRecord
 
     user
   end
+
   def self.find_or_create_facilitator(params, invited_by_user)
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
+
   def save_email_preference
     if teacher?
       EmailPreference.upsert!(
@@ -488,9 +491,6 @@ class User < ApplicationRecord
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
-
-
-
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
@@ -576,6 +576,7 @@ class User < ApplicationRecord
   def self.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
   end
+
   # Given a cleartext email finds the first user that has a matching email or hash.
   # @param [String] email (cleartext)
   # @return [User|nil]
@@ -583,6 +584,7 @@ class User < ApplicationRecord
     return nil if email.blank?
     find_by_hashed_email User.hash_email email
   end
+
   # Given a cleartext email, finds the first user that has a matching email.
   # This will not find users (students) who only have hashed_emails stored.
   # For that, use #find_by_email_or_hashed_email.
@@ -593,6 +595,7 @@ class User < ApplicationRecord
     migrated_user = AuthenticationOption.trusted_email.find_by(email: email)&.user
     migrated_user || User.find_by(email: email)
   end
+
   # Given an email hash, finds the first user that has a matching email hash.
   # @param [String] hashed_email
   # @return [User|nil]
@@ -601,6 +604,7 @@ class User < ApplicationRecord
     migrated_user = AuthenticationOption.trusted_email.find_by(hashed_email: hashed_email)&.user
     migrated_user || User.find_by(hashed_email: hashed_email)
   end
+
   # Locate an SSO user by SSO provider and associated user id.
   # @param [String] type A credential type / provider type.  In the future this
   #   should always be one of the valid credential types from AuthenticationOption
@@ -613,6 +617,7 @@ class User < ApplicationRecord
     )
     authentication_option&.user || User.find_by(provider: type, uid: id)
   end
+
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = user_id_for_storage_id(owner_storage_id)
@@ -620,11 +625,13 @@ class User < ApplicationRecord
   rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
     nil
   end
+
   def self.name_from_omniauth(raw_name)
     return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
     # clever returns a hash instead of a string for name
     "#{raw_name['first']} #{raw_name['last']}".squish
   end
+
   def self.from_omniauth(auth, params, session = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
@@ -638,6 +645,7 @@ class User < ApplicationRecord
     omniauth_user.update_oauth_credential_tokens(auth)
     omniauth_user
   end
+
   def self.initialize_new_oauth_user(user, auth, params)
     user.provider = auth.provider
     user.uid = auth.uid
@@ -679,12 +687,14 @@ class User < ApplicationRecord
     user.gender_third_party_input = auth.info.gender
     user.gender = Policies::Gender.normalize auth.info.gender
   end
+
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
       Services::User.assign_form_params(user, params)
     end
   end
+
   def parent_email_preference_opt_in_required?
     # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
     # user_type 'student' is the only type which supports have a parent_email associated with it.
@@ -747,7 +757,6 @@ class User < ApplicationRecord
     self.email = email.strip.downcase
   end
 
-
   def hash_email
     return if email.blank?
     self.hashed_email = User.hash_email(email)
@@ -808,10 +817,6 @@ class User < ApplicationRecord
     authentication_options.with_deleted.update_all(email: '')
   end
 
-
-
-
-
   def add_credential(type:, id:, email:, hashed_email:, data:)
     return false unless migrated?
     AuthenticationOption.create(
@@ -836,7 +841,6 @@ class User < ApplicationRecord
       {authentication_id: uid, credential_type: provider}
     end
   end
-
 
   validate :presence_of_email, if: :teacher_email_required?
   validate :presence_of_email_or_hashed_email, if:
@@ -896,9 +900,6 @@ class User < ApplicationRecord
     email_and_hashed_email_must_be_unique # Always check email uniqueness
   end
 
-
-
-
   def oauth?
     if migrated?
       authentication_options.any?(&:oauth?)
@@ -914,7 +915,6 @@ class User < ApplicationRecord
       AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
     end
   end
-
 
   def managing_own_credentials?
     if provider.blank?
@@ -991,10 +991,12 @@ class User < ApplicationRecord
       nil
     end
   end
+
   def self.authenticate_with_section(section:, params:)
     User.authenticate_with_section_and_secret_words(section: section, params: params.slice(:user_id, :secret_words)) ||
       User.authenticate_with_section_and_secret_picture(section: section, params: params.slice(:user_id, :secret_picture_id))
   end
+
   def self.authenticate_with_section_and_secret_words(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
@@ -1004,6 +1006,7 @@ class User < ApplicationRecord
       followers: {section: section}
     )
   end
+
   def self.authenticate_with_section_and_secret_picture(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
@@ -1013,6 +1016,7 @@ class User < ApplicationRecord
       followers: {section: section}
     )
   end
+
   # There is a bug (fix: https://codedotorg.atlassian.net/browse/INF-571) where some users have
   # duplicate user levels for the same level. To ensure that we return the relevant user level for
   # each level and not one of the duplicates, the list is first sorted so that the
@@ -1024,6 +1028,7 @@ class User < ApplicationRecord
     relevant_user_levels_last = user_levels.sort {|a, b| [a.updated_at, b.id] <=> [b.updated_at, a.id]}
     relevant_user_levels_last.index_by(&:level_id)
   end
+
   # Retrieves all user_level objects for the given users, script, and levels.
   # The return value is a hash from user_id to an array of UserLevel objects
   # sorted in descending order by updated_at:
@@ -1042,6 +1047,7 @@ class User < ApplicationRecord
       order('updated_at DESC').
       group_by(&:user_id)
   end
+
   # Retrieve all user levels for the designated set of users in the given
   # script, with a single query.
   # @param [Enumerable<User>] users
@@ -1071,6 +1077,7 @@ class User < ApplicationRecord
         memo
       end
   end
+
   # Returns an array of users associated with an email address.
   # Will contain all users that have this email either in
   # plaintext, hashed, or as a parent email. Empty array
@@ -1087,6 +1094,7 @@ class User < ApplicationRecord
 
     result
   end
+
   def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
     if attributes[:email].blank?
@@ -1099,6 +1107,7 @@ class User < ApplicationRecord
     associated_users = User.associated_users(email)
     return User.new(email: email).send_reset_password_for_users(email, associated_users)
   end
+
   # This method is meant to indicate a user has made progress (i.e. made a milestone
   # post on a particular level) in a script
   def self.track_script_progress(user_id, script_id)
@@ -1113,6 +1122,7 @@ class User < ApplicationRecord
       user_script.save!
     end
   end
+
   # Increases the level counts for the concept-difficulties associated with the
   # completed level.
   def self.track_proficiency(user_id, script_id, level_id)
@@ -1139,6 +1149,7 @@ class User < ApplicationRecord
       user_proficiency.save!
     end
   end
+
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
   def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false, time_spent: nil)
@@ -1221,13 +1232,16 @@ class User < ApplicationRecord
     end
     [user_level, new_level_completed]
   end
+
   def self.csv_attributes
     # same as in UserSerializer
     [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races]
   end
+
   def self.marketing_segment_data_keys
     %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i school_state)
   end
+
   # Returns a Hash of US state codes to state names meant for use in dropdown
   # selection inputs for User accounts.
   # Includes a '??' state code for a location not listed.
@@ -1235,6 +1249,7 @@ class User < ApplicationRecord
     {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
       merge(US_STATE_DROPDOWN_OPTIONS)
   end
+
   # Determines if email is a required field for a teacher.
   # Currently, we have some old teacher accounts which don't have an email
   # address associated with them because it wasn't required when they were
@@ -1438,18 +1453,11 @@ class User < ApplicationRecord
     sections_as_student.find_by_login_type(Section::LOGIN_TYPES_OAUTH).present?
   end
 
-
-
-
-
-
   def user_levels_by_level(script)
     user_levels_for_script = user_levels.
       where(script_id: script.id)
     User.index_user_levels_by_level_id(user_levels_for_script)
   end
-
-
 
   def has_activity?
     user_levels.attempted.exists?
@@ -1694,7 +1702,6 @@ class User < ApplicationRecord
       permission?(UserPermission::LEVELBUILDER)
   end
 
-
   # Teachers
   def can_enable_ai_tutor?
     !DCDO.get('ai-tutor-disabled', false) && (
@@ -1716,15 +1723,19 @@ class User < ApplicationRecord
   def student_of_verified_instructor?
     teachers.any?(&:verified_instructor?)
   end
+
   def student_of?(teacher)
     teachers.include? teacher
   end
+
   def locale
     read_attribute(:locale).try(:to_sym)
   end
+
   def confirmation_required?
     false
   end
+
   def age=(val)
     @age = val
     val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
@@ -1734,6 +1745,7 @@ class User < ApplicationRecord
 
     self.birthday = val.years.ago
   end
+
   def age
     return @age unless birthday
     age = UserHelpers.age_from_birthday(birthday)
@@ -1744,38 +1756,48 @@ class User < ApplicationRecord
     end
     age
   end
+
   # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
   def under_13?
     age.nil? || age.to_i < 13
   end
+
   def over_21?
     !age.nil? && age.to_i >= 21
   end
+
   def mute_music?
     !!mute_music
   end
+
   def sort_by_family_name?
     !!sort_by_family_name
   end
+
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
     return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
+
   def short_name
     return username if name.blank?
 
     name.split.first # 'first name'
   end
+
   def second_name
     name.split.second # 'second name'
   end
+
   def initial
     UserHelpers.initial(name)
   end
+
   def valid_secret_words?(words)
     words == secret_words
   end
+
   # override the default devise password to support old and new style hashed passwords
   # based on Devise::Models::DatabaseAuthenticatable#valid_password?
   # https://github.com/plataformatec/devise/blob/master/lib/devise/models/database_authenticatable.rb#L46
@@ -1798,6 +1820,7 @@ class User < ApplicationRecord
 
     return false
   end
+
   def send_reset_password_for_users(email, users)
     if users.empty?
       not_found_user = User.new(email: email)
@@ -1834,6 +1857,7 @@ class User < ApplicationRecord
       return nil
     end
   end
+
   # Send a password reset email to the user (not to their parent)
   def send_reset_password_instructions(email)
     raw, enc = Devise.token_generator.generate(self.class, :reset_password_token)
@@ -1848,10 +1872,12 @@ class User < ApplicationRecord
     errors.add :base, I18n.t('password.reset_errors.invalid_email')
     return nil
   end
+
   def reset_secrets
     generate_secret_picture
     generate_secret_words
   end
+
   def generate_secret_picture
     MAX_SECRET_RESET_ATTEMPTS.times do
       new_secret_picture = SecretPicture.random
@@ -1863,6 +1889,7 @@ class User < ApplicationRecord
       break
     end
   end
+
   def generate_secret_words
     MAX_SECRET_RESET_ATTEMPTS.times do
       new_secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
@@ -1874,10 +1901,12 @@ class User < ApplicationRecord
       break
     end
   end
+
   # Returns an array of experiment name strings
   def get_active_experiment_names
     Experiment.get_all_enabled(user: self).pluck(:name)
   end
+
   # Returns an array of experiment name strings that a student's teachers are enrolled in
   def get_active_experiment_names_by_teachers
     experiments = []
@@ -1886,21 +1915,26 @@ class User < ApplicationRecord
     end
     experiments.uniq
   end
+
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
     section_courses.map(&:summarize_short)
   end
+
   def assigned_course?(course)
     section_courses.include?(course)
   end
+
   def assigned_script?(script)
     section_scripts.include?(script) || section_courses.include?(script&.unit_group)
   end
+
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
     visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
   end
+
   # Checks if there are any launched scripts assigned to the user.
   # @return [Array] of Scripts
   def visible_assigned_scripts
@@ -1908,11 +1942,13 @@ class User < ApplicationRecord
       map {|user_script| Unit.where(id: user_script.script.id).select(&:launched?)}.
       flatten
   end
+
   # Checks if there are any launched scripts assigned to the user.
   # @return [Boolean]
   def any_visible_assigned_scripts?
     visible_assigned_scripts.any?
   end
+
   # Query to get the user_script the user was most recently assigned.
   def most_recently_assigned_user_script
     user_scripts.
@@ -1920,16 +1956,19 @@ class User < ApplicationRecord
       order(assigned_at: :desc).
       first
   end
+
   # Get script object of the user_script the user was most recently
   # assigned.
   def most_recently_assigned_script
     most_recently_assigned_user_script.script
   end
+
   def can_access_most_recently_assigned_script?
     return false unless script = most_recently_assigned_user_script&.script
 
     !script.pilot? || script.has_pilot_access?(self)
   end
+
   # Query to get the user_script the user made the most recent progress
   # in.
   def user_script_with_most_recent_progress
@@ -1938,33 +1977,39 @@ class User < ApplicationRecord
       order(last_progress_at: :desc).
       first
   end
+
   # Get script object of the user_script the user made the most recent
   # progress in.
   def script_with_most_recent_progress
     user_script_with_most_recent_progress.script
   end
+
   # Check if the user's most recently-assigned script is the same one
   # that they've most recently made progress in.
   def most_recent_progress_in_recently_assigned_script?
     script_with_most_recent_progress == most_recently_assigned_script
   end
+
   # Check if the user has been assigned a new script since their most
   # recent progress in a script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
       user_script_with_most_recent_progress[:last_progress_at]
   end
+
   # Check if the user's most recently assigned script is associated with at least
   # 1 live section they are enrolled in.
   def most_recent_assigned_script_in_live_section?
     recent_assigned_script_id = most_recently_assigned_script.id
     sections_as_student.any? {|section| section.script_id == recent_assigned_script_id && section.hidden == false}
   end
+
   # Checks if there are any launched scripts or courses assigned to the user.
   # @return [Boolean]
   def assigned_course_or_script?
     assigned_courses.any? || any_visible_assigned_scripts?
   end
+
   # Return a collection of courses and scripts for the user.
   # First in the list will be courses enrolled in by the user's sections.
   # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
@@ -2004,6 +2049,7 @@ class User < ApplicationRecord
 
     user_course_data + user_script_data
   end
+
   def pl_units_started
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self)
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
@@ -2031,6 +2077,7 @@ class User < ApplicationRecord
       }
     end
   end
+
   # Return a collection of courses and scripts for the user.
   # First in the list will be courses enrolled in by the user's sections.
   # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
@@ -2070,16 +2117,20 @@ class User < ApplicationRecord
 
     user_course_data + user_script_data
   end
+
   def sections_as_student_participant
     sections_as_student.select {|s| !s.pl_section?}
   end
+
   def sections_as_pl_participant
     sections_as_student.select(&:pl_section?)
   end
+
   def all_sections
     sections_as_teacher = student? ? [] : sections_instructed.to_a
     sections_as_teacher.concat(sections_as_student).uniq
   end
+
   # Figures out the unique set of courses assigned to sections that this user
   # is a part of.
   # @return [Array<Course>]
@@ -2088,9 +2139,11 @@ class User < ApplicationRecord
     # script has a default course, it shows up as a course here
     all_sections.filter_map(&:unit_group).uniq
   end
+
   def visible_scripts
     scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
+
   # Figures out the unique set of scripts assigned to sections that this user
   # is a part of. Includes default scripts for any assigned courses as well.
   # @return [Array<Unit>]
@@ -2106,26 +2159,32 @@ class User < ApplicationRecord
 
     all_scripts
   end
+
   # return the id of the most-recently-created section the user instructs.
   def last_section_id
     teacher? ? sections_instructed.where(hidden: false).last&.id : nil
   end
+
   # The section which the user most recently joined as a student, or nil if none exists.
   # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
+
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i
   end
+
   def first_sign_in_date
     sign_ins.find_by(sign_in_count: 1)&.sign_in_at
   end
+
   def days_since_first_sign_in
     return nil if first_sign_in_date.nil?
     (DateTime.now - first_sign_in_date.to_datetime).to_i
   end
+
   # This method is called when a section the user belongs to is assigned to
   # a script. We find or create a new UserScript entry, and set assigned_at
   # if not already set.
@@ -2138,15 +2197,19 @@ class User < ApplicationRecord
       return user_script
     end
   end
+
   def can_pair?
     sections_as_student.any?(&:pairing_allowed)
   end
+
   def can_pair_with?(other_user)
     self != other_user && sections_as_student.any? {|section| other_user.sections_as_student.include? section}
   end
+
   def to_csv
     User.csv_attributes.map {|attr| send(attr)}
   end
+
   # Format user information for the JSON API
   def summarize
     {
@@ -2170,15 +2233,19 @@ class User < ApplicationRecord
       ai_tutor_access_denied: !!ai_tutor_access_denied,
     }
   end
+
   def has_ever_signed_in?
     current_sign_in_at.present?
   end
+
   def migrated?
     provider == PROVIDER_MIGRATED
   end
+
   def manual?
     provider == PROVIDER_MANUAL
   end
+
   def sponsored?
     if migrated?
       authentication_options.empty? && encrypted_password.blank?
@@ -2186,6 +2253,7 @@ class User < ApplicationRecord
       provider == PROVIDER_SPONSORED
     end
   end
+
   def should_see_edit_email_link?
     if migrated?
       # Hide from students with no password (i.e., oauth-only and sponsored students)
@@ -2195,16 +2263,20 @@ class User < ApplicationRecord
       can_edit_email? && !oauth?
     end
   end
+
   def should_see_add_password_form?
     !can_create_personal_login? && # mutually exclusive with personal login UI
       can_edit_password? && encrypted_password.blank?
   end
+
   def should_disable_user_type?
     user_type.present? && oauth_provided_user_type
   end
+
   def oauth_provided_user_type
     [AuthenticationOption::CLEVER].include?(provider)
   end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -2217,12 +2289,14 @@ class User < ApplicationRecord
       encrypted_password.present? || oauth?
     end
   end
+
   # We restrict certain users from editing their password; in particular, those
   # users that don't have a password because they authenticate via oauth, secret
   # picture, or some other unusual method
   def can_edit_password?
     !sponsored?
   end
+
   # Whether the current user has permission to change their own account type
   # from the account edit page.
   def can_change_own_user_type?
@@ -2236,6 +2310,7 @@ class User < ApplicationRecord
       sections_instructed.empty?
     end
   end
+
   # Whether the current user has permission to delete their own account from
   # the account edit page.
   def can_delete_own_account?
@@ -2245,12 +2320,15 @@ class User < ApplicationRecord
     # Students in sections may not delete their own account.
     sections_as_student.empty?
   end
+
   def shared_sections_with(other_user)
     sections_as_student & other_user.sections_as_student
   end
+
   def in_code_review_group_with?(other_user)
     (code_review_groups & other_user.code_review_groups).any?
   end
+
   # Users who might otherwise have orphaned accounts should have the option
   # to create personal logins (using e-mail/password or oauth) so they can
   # continue to use our site without losing progress.
@@ -2258,6 +2336,7 @@ class User < ApplicationRecord
     return false unless student?
     teacher_managed_account? || (migrated? && oauth_only?)
   end
+
   def teacher_managed_account?
     return false unless student?
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
@@ -2269,19 +2348,23 @@ class User < ApplicationRecord
     # Lastly, we check for oauth.
     !oauth?
   end
+
   def roster_managed_account?
     return false unless student?
     return false if migrated? && authentication_options.many?
 
     encrypted_password.blank? && sections_as_student.any?(&:externally_rostered?)
   end
+
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
   end
+
   # Returns true when the parent email matches the account email.
   def parent_created_account?
     student? && parent_email.present? && hashed_email == User.hash_email(parent_email)
   end
+
   # Temporary: Allow single-auth students to add a parent email so it's possible
   # to add a recovery option to their account.  Once they are on multi-auth they
   # can just add an email or another SSO, so this is no longer needed.
@@ -2290,15 +2373,18 @@ class User < ApplicationRecord
       !can_create_personal_login? && # mutually exclusive with personal login UI
       !migrated? # only for single-auth
   end
+
   def no_personal_email?
     under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
+
   # Get a section a user is in that is assigned to this script. Look first for
   # sections they are in as a student, otherwise sections they instruct
   def section_for_script(script)
     sections_as_student.find {|section| section.script_id == script.id} ||
       sections_instructed.find {|section| section.script_id == script.id}
   end
+
   def lesson_extras_enabled?(unit)
     return false unless unit.lesson_extras_available?
     return true if unit.can_be_instructor?(self)
@@ -2307,6 +2393,7 @@ class User < ApplicationRecord
       section.script_id == unit.id && section.lesson_extras
     end
   end
+
   # Returns the version of our Terms of Service we consider the user as having
   # accepted. For teachers, this is the latest major version of the Terms of
   # Service accepted. For students, this is the latest major version accepted by
@@ -2317,14 +2404,17 @@ class User < ApplicationRecord
     end
     teachers.pluck(:terms_of_service_version).try(:compact).try(:max)
   end
+
   # Returns whether the user has accepted the latest major version of the Terms of Service
   def accepted_latest_terms?
     terms_of_service_version == TERMS_OF_SERVICE_VERSIONS.last
   end
+
   # Returns the latest major version of the Terms of Service
   def latest_terms_version
     TERMS_OF_SERVICE_VERSIONS.last
   end
+
   # Updates user's most recently accepted Terms of Service version to the latest version
   def update_user_tos_version_accept
     terms_of_service_version = latest_terms_version
@@ -2332,16 +2422,19 @@ class User < ApplicationRecord
 
     save!
   end
+
   # Ideally this would just be called school, but school is already a column
   # on the user table representing the school name
   def school_info_school
     Queries::SchoolInfo.last_complete(self)&.school
   end
+
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
     teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
+
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
   # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
   def school_donor_name
@@ -2350,6 +2443,7 @@ class User < ApplicationRecord
 
     donor_name
   end
+
   # Removes PII and other information from the user and marks the user as having been purged.
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
@@ -2385,9 +2479,11 @@ class User < ApplicationRecord
 
     save!
   end
+
   def within_united_states?
     user_geos.first&.country == 'United States'
   end
+
   def associate_with_potential_pd_enrollments
     if teacher?
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
@@ -2395,17 +2491,20 @@ class User < ApplicationRecord
       end
     end
   end
+
   # Disable sharing of advanced projects for students under 13 upon
   # account creation
   def update_default_share_setting
     self.sharing_disabled = true if under_13?
   end
+
   # If a user is now over age 13, we should update
   # their share setting to enabled, if they are in no sections.
   def update_share_setting
     self.sharing_disabled = false if sections_as_student.empty?
     return true
   end
+
   # When creating an account, we want to look for any channels that got created
   # for this user before they signed in, and if any of them are in our Applab HOC
   # course, we will create a UserScript entry so that they get a course card
@@ -2460,6 +2559,7 @@ class User < ApplicationRecord
       end
     end
   end
+
   def record_soft_delete
     Cdo::Metrics.push(
       'User',
@@ -2475,13 +2575,16 @@ class User < ApplicationRecord
       ]
     )
   end
+
   def has_pilot_experiment?(pilot_name)
     return false unless pilot_name
     SingleUserExperiment.enabled?(user: self, experiment_name: pilot_name)
   end
+
   def user_storage_id
     @user_storage_id ||= storage_id_for_user_id(id)
   end
+
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
   # destroys done around the time of the delete / destroy.
   # Note: This does not restore any of the user's permissions, which are hard-deleted.
@@ -2497,14 +2600,17 @@ class User < ApplicationRecord
     Projects.new(user_storage_id).restore_if_deleted_after(deleted_time) if user_storage_id
     result
   end
+
   def depended_upon_for_login?
     students.any?(&:depends_on_teacher_for_login?)
   end
+
   def depends_on_teacher_for_login?
     # Student depends on teacher for login if their account is teacher-managed or roster-managed
     # and only have one teacher.
     student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
   end
+
   # Returns an array of summarized students that depend on this user.
   # These map to the students that will be deleted if this user deletes their account.
   def dependent_students
@@ -2514,6 +2620,7 @@ class User < ApplicationRecord
     end
     dependent_students
   end
+
   def providers
     if migrated?
       authentication_options.map(&:credential_type)
@@ -2521,11 +2628,13 @@ class User < ApplicationRecord
       [provider]
     end
   end
+
   # Returns number of times a user has attempted to join a section in the last 24 hours
   # Returns 0 if no section join attempts
   def num_section_attempts
     section_attempts || 0
   end
+
   # There are two possible states in which we would want to reset section attempts
   # 1) Initialize for the first time 2) 24 hours have passed since last reset
   def reset_section_attempts?
@@ -2533,6 +2642,7 @@ class User < ApplicationRecord
     # By casting to an int, we can check whether at least a full day has passed.
     !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
   end
+
   def display_join_section_captcha?
     # If 24 hours has passed since last reset, return false.
     if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
@@ -2541,6 +2651,7 @@ class User < ApplicationRecord
       return num_section_attempts >= 3
     end
   end
+
   def increment_section_attempts
     if reset_section_attempts?
       self.section_attempts = 0
@@ -2551,6 +2662,7 @@ class User < ApplicationRecord
     # so we should not save section attempts if new user hasn't been persisted
     save! if persisted?
   end
+
   # The data returned by this method is set to cookies for the marketing team to
   # use in Google Optimize for segmenting teacher user experience.
   def marketing_segment_data
@@ -2568,6 +2680,7 @@ class User < ApplicationRecord
       school_state: school_info_school&.state
     }
   end
+
   def code_review_groups
     followeds.filter_map(&:code_review_group)
   end
@@ -2584,10 +2697,6 @@ class User < ApplicationRecord
       sections_as_student.any?(&:ai_tutor_enabled)
   end
 
-
-
-
-
   # There are some shenanigans going on with this age stuff. The
   # actual persisted column is birthday -- so we convert age to a
   # birthday when writing and convert birthday to an age when
@@ -2597,108 +2706,12 @@ class User < ApplicationRecord
   # we use to save the (possibly invalid) value that the user entered
   # for age so we can generate the correct error message.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   # Override how devise tries to find users by email to reset password
   # to also look for the hashed email. For users who have their email
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   after_destroy :record_soft_delete
-
 
   # Called before_destroy.
   # Soft-deletes any projects and other channel-backed progress belonging to
@@ -2718,19 +2731,6 @@ class User < ApplicationRecord
     # Soft-delete all of the user's projects
     project.soft_delete_all
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   private def account_age_in_years
     ((Time.now - created_at.to_time) / 1.year).round
@@ -2819,8 +2819,6 @@ class User < ApplicationRecord
     errors.add(:parent_email) unless parent_email.nil? ||
       Cdo::EmailValidator.email_address?(parent_email)
   end
-
-
 
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.

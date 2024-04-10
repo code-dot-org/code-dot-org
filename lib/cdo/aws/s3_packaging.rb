@@ -96,6 +96,7 @@ class S3Packaging
     @logger.info 'Created'
     package
   end
+
   def log_bundle_size
     stats = JSON.parse(File.read(@source_location + '/build/package/js/stats.json'))
     Metrics.write_batch_metric(
@@ -124,8 +125,6 @@ class S3Packaging
     return nil unless File.exist?(filename)
     File.read(filename)
   end
-
-
 
   private def ensure_updated_package
     if commit_hash == target_commit_hash(@target_location)

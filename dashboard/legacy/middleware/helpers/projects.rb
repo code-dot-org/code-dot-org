@@ -29,10 +29,12 @@ class Projects
       publishedAt: project[:published_at],
     }
   end
+
   # This method can be removed once thumbnails are being served with s3 version ids.
   def self.make_thumbnail_url_cacheable(url)
     url&.sub('/v3/files/', '/v3/files-public/')
   end
+
   # Returns the row value with 'id' and 'isOwner' merged from input params, and
   # 'createdAt', 'updatedAt', 'publishedAt' and 'projectType' merged from the
   # corresponding database row values.
@@ -48,6 +50,7 @@ class Projects
       }
     )
   end
+
   #
   # Looks up the set of ancestors in the remix history for a particular project.
   # This can require several queries, so be careful exposing this in the UI
@@ -79,18 +82,22 @@ class Projects
   rescue
     []
   end
+
   def self.get_abuse(channel_id)
     _, project_id = storage_decrypt_channel_id(channel_id)
     project_info = Projects.table.where(id: project_id).first
     project_info[:abuse_score]
   end
+
   # Returns projects with id in ids
   def self.get_by_ids(ids)
     Projects.table.where(id: ids)
   end
+
   def self.table
     DASHBOARD_DB[:projects]
   end
+
   def self.in_restricted_share_mode(channel_id, project_type)
     # Only do this check if the project type is one that can be restricted, as this check
     # requires a call to S3.
@@ -103,6 +110,7 @@ class Projects
     project_src = ProjectSourceJson.new(source_body)
     return project_src.in_restricted_share_mode?
   end
+
   def initialize(storage_id)
     @storage_id = storage_id
 
@@ -279,8 +287,6 @@ class Projects
       update(state: 'active', updated_at: Time.now)
   end
 
-
-
   def unpublish(channel_id)
     owner, project_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
@@ -428,7 +434,6 @@ class Projects
     JSON.parse(row[:value])['id']
   end
 
-
   #
   # Given an encrypted channel id, attempt to determine the channel's
   # project type.
@@ -443,11 +448,6 @@ class Projects
   def project_type_from_channel_id(channel_id)
     project_type_from_merged_row(get(channel_id))
   end
-
-
-
-
-
 
   # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage
   private def set_use_datablock_storage(project_id, project_type)

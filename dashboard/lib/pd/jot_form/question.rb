@@ -33,28 +33,30 @@ module Pd
           hidden: jotform_question['hidden'] == 'Yes'
         )
       end
+
       # Remove the JotForm "control_" prefix from type names, if present.
       def self.sanitize_type(type)
         type.delete_prefix('control_')
       end
+
       # Override in derived classes to designate types they represent.
       # All question types are defined in Constants::QUESTION_TYPES
       def self.supported_types
         []
       end
+
       # Construct from a hash of attributes
       def initialize(params)
         params.each do |k, v|
           send "#{k}=", v
         end
       end
+
       def type=(value)
         value = self.class.sanitize_type(value)
         raise "Invalid type #{value} for #{self.class}" unless self.class.supported_types.include? value
         @type = value
       end
-
-
 
       # Serialize to hash
       def to_h
@@ -68,8 +70,6 @@ module Pd
           hash[:hidden] = true if hidden
         end
       end
-
-
 
       # @return [String] one of ANSWER_TYPES
       def answer_type

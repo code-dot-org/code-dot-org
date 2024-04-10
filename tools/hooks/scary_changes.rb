@@ -164,7 +164,6 @@ class ScaryChangeDetector
       raise "Commit blocked."
     end
   end
-
 end
 
 ScaryChangeDetector.new.detect_scary_changes

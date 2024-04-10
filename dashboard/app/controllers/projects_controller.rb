@@ -428,10 +428,12 @@ class ProjectsController < ApplicationController
     )
     render 'levels/show'
   end
+
   def edit
     return if redirect_under_13_without_tos_teacher(@level)
     show
   end
+
   def remix
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
@@ -457,6 +459,7 @@ class ProjectsController < ApplicationController
     FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
     redirect_to action: 'edit', channel_id: new_channel_id
   end
+
   def can_publish_age_status
     project = Project.find_by_channel_id(params[:channel_id])
     unless project.apply_project_age_publish_limits?
@@ -471,6 +474,7 @@ class ProjectsController < ApplicationController
       user_existed_long_enough_to_publish: project.owner_existed_long_enough_to_publish?
     }
   end
+
   def export_create_channel
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
@@ -494,6 +498,7 @@ class ProjectsController < ApplicationController
     )
     render json: {channel_id: new_channel_id}
   end
+
   def export_config
     return if redirect_under_13_without_tos_teacher(@level)
     # TODO: post-firebase-cleanup, remove both branches of this conditional: #56994
@@ -503,10 +508,12 @@ class ProjectsController < ApplicationController
       render json: datablock_storage_options
     end
   end
+
   def set_level
     @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
   end
+
   # Due to risk of inappropriate content, we can hide non-featured Applab
   # and Gamelab projects via DCDO. Internally, project_validators should
   # always have access to all Applab and Gamelab projects, even if there is a
@@ -526,10 +533,6 @@ class ProjectsController < ApplicationController
     data[:thumbnailUrl] = default_image_url if default_image_url
     data
   end
-
-
-
-
 
   private def uses_asset_bucket?(project_type)
     %w(applab makerlab gamelab spritelab javalab).include? project_type
@@ -551,10 +554,6 @@ class ProjectsController < ApplicationController
   private def uses_starter_assets?(project_type)
     %w(javalab applab).include? project_type
   end
-
-
-
-
 
   # @param iframe_embed [Boolean] Whether the project view event was via iframe.
   # @param sharing [Boolean] Whether the project view event was via share page.

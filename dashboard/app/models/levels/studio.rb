@@ -65,10 +65,12 @@ class Studio < Grid
     level.create_maze(level_params, params)
     level
   end
+
   def self.load_maze(maze_file, size)
     raw_maze = maze_file.read[0...size]
     raw_maze.map {|row| row.map {|cell| JSON.parse(cell)}}
   end
+
   # Attempt to parse the maze using the legacy parser, which assumes
   # nothing but integers. If it raises a TypeError, attempt to parse the
   # maze using the new parse, which expects hashes and insists each has
@@ -88,10 +90,12 @@ class Studio < Grid
 
     {'maze' => maze_json}
   end
+
   # List of possible skins, the first is used as a default.
   def self.skins
     %w(studio infinity hoc2015 iceage gumball)
   end
+
   def self.default_success_condition
     <<-JS.strip_heredoc.chomp
         function () {
@@ -103,12 +107,14 @@ class Studio < Grid
         }
     JS
   end
+
   def self.default_failure_condition
     <<-JS.strip_heredoc.chomp
         function () {
         }
     JS
   end
+
   def project_type
     if use_contract_editor == 'true'
       'algebra_game'
@@ -126,12 +132,6 @@ class Studio < Grid
       'playlab'
     end
   end
-
-
-
-
-
-
 
   def common_blocks(type)
     <<~XML.chomp

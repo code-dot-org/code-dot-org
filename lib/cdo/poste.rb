@@ -213,7 +213,6 @@ class Deliverer
     File.join(POSTE_BASE_URL, *parts)
   end
 
-
   def send(delivery)
     recipient = POSTE_DB[:contacts].where(id: delivery[:contact_id]).first
     message = MESSAGE_TEMPLATES[delivery[:message_id]]

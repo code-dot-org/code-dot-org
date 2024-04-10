@@ -27,7 +27,6 @@ class TablesTest < Minitest::Test
     CDO.unstub(:firebase_channel_id_suffix)
   end
 
-
   def test_firebase_export
     create_channel
 

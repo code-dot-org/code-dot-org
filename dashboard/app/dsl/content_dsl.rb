@@ -11,6 +11,7 @@ class ContentDSL < LevelDSL
       title
     )
   end
+
   def initialize
     super
     @hash.merge! options: {}
@@ -47,5 +48,4 @@ class ContentDSL < LevelDSL
     @hash[:options] ||= {}
     @hash[:options][key.to_sym] = args.first
   end
-
 end

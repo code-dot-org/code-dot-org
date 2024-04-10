@@ -3,6 +3,7 @@ class BubbleChoiceDSL < ContentDSL
   def self.i18n_fields
     super + %w(description display_name)
   end
+
   def self.serialize(level)
     new_dsl = "name '#{escape(level.name)}'"
     new_dsl += "\neditor_experiment '#{level.editor_experiment}'" if level.editor_experiment.present?
@@ -17,16 +18,17 @@ class BubbleChoiceDSL < ContentDSL
     new_dsl += "\n"
     new_dsl
   end
+
   def self.escape(str)
     str.gsub("'", "\\\\'")
   end
+
   def initialize
     super
     @hash[:display_name] = nil
     @hash[:description] = nil
     @hash[:sublevels] = []
   end
-
 
   def display_name(text) @hash[:display_name] = text end
 
@@ -49,6 +51,4 @@ class BubbleChoiceDSL < ContentDSL
 
     @hash[:sublevels] << name
   end
-
-
 end

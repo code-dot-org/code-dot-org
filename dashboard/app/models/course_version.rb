@@ -87,14 +87,17 @@ class CourseVersion < ApplicationRecord
 
     course_version
   end
+
   def self.should_cache?
     Unit.should_cache?
   end
+
   def self.course_offering_keys(content_root_type)
     Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
       CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).filter_map {|cv| cv.course_offering&.key}.uniq.sort
     end
   end
+
   # We use Course Offerings for single unit course offerings because
   # we want to group together all the course offerings across years.
   # So all the Course A's are together under the Course A header.
@@ -106,12 +109,15 @@ class CourseVersion < ApplicationRecord
   def self.courses_for_unit_selector(unit_ids)
     CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids)).sort_by {|c| c[:display_name]}
   end
+
   def self.unit_group_course_versions_with_units(unit_ids)
     CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
   end
+
   def self.unit_group_course_versions_with_units_info(unit_ids)
     unit_group_course_versions_with_units(unit_ids).map(&:summarize_for_unit_selector)
   end
+
   def units
     content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
   end
@@ -145,7 +151,6 @@ class CourseVersion < ApplicationRecord
   delegate :link, to: :content_root, allow_nil: false
   delegate :localized_assignment_family_title, to: :content_root, allow_nil: false
 
-
   # Destroys this CourseVersion. Then, if its parent CourseOffering now has no CourseVersions, destroy it too.
   def destroy_and_destroy_parent_if_empty
     destroy!
@@ -160,8 +165,6 @@ class CourseVersion < ApplicationRecord
     content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
   end
 
-
-
   def recommended?(locale_code = 'en-us')
     return false unless stable?
     return true if course_offering.course_versions.length == 1
@@ -171,7 +174,6 @@ class CourseVersion < ApplicationRecord
 
     latest_stable_version == content_root
   end
-
 
   def summarize_for_assignment_dropdown(user, locale_code)
     [
@@ -191,8 +193,6 @@ class CourseVersion < ApplicationRecord
       }
     ]
   end
-
-
 
   def summarize_for_unit_selector
     {

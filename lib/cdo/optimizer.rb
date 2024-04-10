@@ -53,7 +53,6 @@ module Cdo
       nil
     end
 
-
     # Optimizes image content.
     def self.optimize_image(data)
       # Skip image optimization if image is too big.
@@ -69,7 +68,6 @@ module Cdo
       sleep SLEEP_INTERVAL until (result = cache.read(cache_key))
       result
     end
-
 
     def self.cache_key(data)
       "optimize-#{OPTIMIZE_VERSION}-#{Digest::MD5.hexdigest(data)}"

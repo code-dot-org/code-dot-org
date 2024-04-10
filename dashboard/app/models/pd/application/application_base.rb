@@ -100,12 +100,14 @@ module Pd::Application
         withdrawn
       )
     end
+
     # Override in derived class to provide headers
     # @param course [String] course name used to choose fields, since they differ between courses
     # @return [String] csv text row of column headers, ending in a newline
     def self.csv_header(course)
       raise 'Abstract method must be overridden by inheriting class'
     end
+
     # Get the answers from form_data with additional text appended
     # @param [Hash] hash - sanitized form data hash (see #sanitized_form_data_hash)
     # @param [Symbol] field_name - name of the multi-choice option
@@ -126,14 +128,17 @@ module Pd::Application
 
       answer
     end
+
     def self.filtered_labels(course, status = 'unreviewed')
       raise 'Abstract method must be overridden in inheriting class'
     end
+
     # Additional labels that we need in the form data hash, but aren't necessarily
     # single answers to questions
     def self.additional_labels
       []
     end
+
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
@@ -212,7 +217,6 @@ module Pd::Application
       emails.unsent.destroy_all
     end
 
-
     def status_including_enrolled
       status
     end
@@ -245,7 +249,6 @@ module Pd::Application
       []
     end
 
-
     # Override in derived class to provide the relevant csv data
     # @param course [String] course name used to choose fields, since they differ between courses
     # @return [String] csv text row of values, ending in a newline
@@ -253,9 +256,6 @@ module Pd::Application
     def to_csv_row(course)
       raise 'Abstract method must be overridden by inheriting class'
     end
-
-
-
 
     # Include additional text for all the multi-select fields that have the option
     def full_answers

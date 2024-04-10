@@ -52,6 +52,7 @@ class Plc::EnrollmentModuleAssignment < ApplicationRecord
       IN_PROGRESS
     end
   end
+
   def status
     Plc::EnrollmentModuleAssignment.lessons_based_status(
       [plc_learning_module.lesson],
@@ -59,5 +60,4 @@ class Plc::EnrollmentModuleAssignment < ApplicationRecord
       plc_enrollment_unit_assignment.plc_course_unit.script
     )
   end
-
 end

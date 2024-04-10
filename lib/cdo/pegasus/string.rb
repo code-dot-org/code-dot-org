@@ -6,6 +6,7 @@ class String
     right = [right] unless right.is_a?(Enumerable)
     left.map {|l| right.map {|r| l.to_s + r.to_s}}.flatten
   end
+
   # Returns true if the string ends with the string passed
   def ends_with?(s)
     self[-s.length..] == s
@@ -27,7 +28,6 @@ class String
       raise ArgumentError.new("'#{self}' is not convertable to true/false.")
     end
   end
-
 
   # squish and squish! copied from rails:
   # https://github.com/rails/rails/blob/cada218f539265c6c44002833dc41b36be7738d3/activesupport/lib/active_support/core_ext/string/filters.rb#L11

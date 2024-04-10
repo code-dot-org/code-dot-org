@@ -5,10 +5,10 @@ class ContractMatchDSL < ContentDSL
   def self.i18n_fields
     super + %w(answers)
   end
+
   def initialize
     @hash = {answers: []}
   end
 
   def answer(text) @hash[:answers] << text end
-
 end
