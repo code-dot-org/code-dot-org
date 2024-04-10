@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2024-04-08 21:56:53 UTC",
+    "serialized_at": "2024-04-09 21:24:32 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1263,7 +1263,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - Follow the ***20/20/20 Rule** - How to Prevent Eye Strain\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle). \n - Ask your partner before you ask the teacher\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n\n"
+            "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n- Keep your log in information and password private\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - Follow the ***20/20/20 Rule** - How to Prevent Eye Strain\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle). \n - Ask your partner before you ask the teacher\n- Work respectfully and responsibly with others online.\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n- Remember to log out when you're done using the computer\n\n"
           }
         ]
       },
@@ -1276,7 +1276,13 @@
       "key": "d0f77786-3ffc-40de-8252-fa207e74a7a0",
       "position": 3,
       "properties": {
-        "description": "\n**Discuss:**\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - *Is running in the computer lab okay?*\n - *How loudly should we talk when we are in the computer lab?*\n - *What should you do if you get stuck on a puzzle?*\n - *If you get frustrated, will it help to hit the computer?*\n - *When we're about to go to the computer lab, how should we get ready?*"
+        "description": "\n**Discuss:**\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - *Is running in the computer lab okay?*\n - *How loudly should we talk when we are in the computer lab?*\n- *When you're ready to start using the computer, should you show your log in information to everyone?* \n - *What should you do if you get stuck on a puzzle?*\n - *If you get frustrated, will it help to hit the computer?*\n- *What should you remember to do when you're done using the computer?*\n - *When we're about to go to the computer lab, how should we get ready?*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to go into a more detailed discussion of securing personal internet accounts. Consider asking students:\n- *What would happen if everyone's password was easy to guess?*\n- *Why is it important to log out of shared devices when we finish using them?*"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d0f77786-3ffc-40de-8252-fa207e74a7a0",
@@ -1406,7 +1412,7 @@
       "key": "4a3fee7c-69e7-4e41-9ff4-2e81bf3a016f",
       "position": 1,
       "properties": {
-        "description": "This warm-up is meant to get the class thinking about how to break a big problem down into a list of individual steps.\n\n    \n**Model:** Start by asking the class for step-by-step directions on how to get to the chalkboard. Make sure that you ask students to break apart any large instructions, like \"Walk to the chalkboard,\" into smaller instructions like \"Step forward.\"\n\nWhen you reach the board, ask for instructions to draw a smiley face and try to get them to keep their instructions equally small.",
+        "description": "This warm-up is meant to get the class thinking about how to break a big problem down into a list of individual steps.\n\n    \n**Model:** Start by asking the class for step-by-step directions on how to get to the chalkboard. Make sure that you ask students to break apart any large instructions, like \"Walk to the chalkboard,\" into smaller instructions like \"Step forward.\"\n\nWhen you reach the board, ask for instructions to draw a smiley face and try to get them to keep their instructions equally small.\n\n**Do This:** Before students give you any instructions, ask them to describe the **goal** of the program (\"Walk to the chalkboard and draw a smiley face\") and the **expected outcome** (\"A smiley face will be drawn on the chalkboard). Remind students that it is good practice to articulate the goal and outcome of the programs they will create before beginning to write their algorithms.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1877,7 +1883,7 @@
       "key": "db9e868f-26d8-4c6f-bbce-33aa32815618",
       "position": 1,
       "properties": {
-        "description": "####Happy Maps Review\n\nThis lesson builds off of the Happy Maps activity from earlier in the year.  Students might benefit from a quick refresher before you hop into the difficult stuff.\n\n**Display:**\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-22-13.07.53.png)\n\n**Model:**  Select one of the maps that your class covered together in the last lesson.\n\nHave students look at the puzzle, then think-pair-share their solution for how they would get the flurb to the fruit (using the symbols from last time).\n\n**Think:**  _Do you remember writing programs to get the flurbs to the fruit?  What would this program look like coded with arrows?_\n\n**Pair:**  Have students discuss for about 90 seconds.\n\n**Share:** Ask a student to use their fingers to point in the direction of the arrows that they chose to solve this puzzle.",
+        "description": "####Happy Maps Review\n\nThis lesson builds off of the Happy Maps activity from earlier in the year.  Students might benefit from a quick refresher before you hop into the difficult stuff.\n\n**Display:**\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-22-13.07.53.png)\n\n**Model:**  Select one of the maps that your class covered together in the last lesson.\n\nHave students look at the puzzle, then think-pair-share their solution for how they would get the flurb to the fruit (using the symbols from last time).\n\n**Think:**  _Do you remember writing programs to get the flurbs to the fruit?  What would this program look like coded with arrows?_\n\n**Pair:**  Have students discuss for about 90 seconds.\n\n**Share:** Ask a student to use their fingers to point in the direction of the arrows that they chose to solve this puzzle.\n\n####Debugging Review\n\nThis activity is designed to help students review how to debug. \n\n![](https://images.code.org/e5e3f5beaf89b2229dfb4f9be3ca19b8-image-1712692256392.49.03 PM.png)\n\n**Display:**\n\n**Model:** Ask students if they can spot the error with the code. Ask them where the Flurb ends up with the current algorithm. \n\n**Think:** _What should we change in the algorithm to get the Flurb to the banana?_  \n\n**Pair:**  Have students discuss for about 30 seconds.\n\n**Share:** Ask a student to use their fingers to point in the direction of the arrows that they chose to solve this puzzle.\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1890,7 +1896,7 @@
       "position": 1,
       "properties": {
         "name": "Happy Loops",
-        "progression_name": "Happy Loops Unplugged Activity"
+        "progression_name": "Happy Loops - Unplugged Activity"
       },
       "seeding_key": {
         "activity_section.key": "e207d0c8-45bf-4b2a-8c3d-7be47b039a79",
@@ -2520,7 +2526,7 @@
       "key": "de412899-3618-4e89-a8c2-3d1a09c10fd7",
       "position": 3,
       "properties": {
-        "description": "\nIn earlier lessons, we created algorithms that allowed us to control a friend or flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- \n**Project** ***The Big Event (Courses A, B) - Controller Image** onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
+        "description": "\nIn earlier lessons, we created algorithms that allowed us to control a friend or flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- \n**Project** ***The Big Event (Courses A, B) - Controller Image** onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
       },
       "seeding_key": {
         "activity_section.key": "de412899-3618-4e89-a8c2-3d1a09c10fd7",
@@ -4007,6 +4013,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Happy Loops - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_a_unplugged_happy_loops_markdown"
+        ],
+        "lesson.key": "Happy Loops",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursea-2024",
+        "activity_section.key": "e207d0c8-45bf-4b2a-8c3d-7be47b039a79"
+      },
+      "level_keys": [
+        "course_a_unplugged_happy_loops_markdown"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "courseB_iceage_loops12022_2024"
         ],
@@ -4027,7 +4055,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4052,7 +4080,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4077,7 +4105,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4102,7 +4130,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4127,7 +4155,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4152,7 +4180,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -4177,7 +4205,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -4202,7 +4230,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -4227,7 +4255,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4253,7 +4281,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4278,7 +4306,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -4303,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4328,7 +4356,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4353,7 +4381,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4378,7 +4406,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4403,7 +4431,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4428,7 +4456,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4453,7 +4481,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4478,7 +4506,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -4503,7 +4531,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -4528,7 +4556,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -4553,7 +4581,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4579,7 +4607,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4604,7 +4632,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -4629,7 +4657,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 14,
       "activity_section_position": 3,
       "assessment": false,
@@ -4654,7 +4682,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -4679,7 +4707,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -4704,7 +4732,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4729,7 +4757,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4754,7 +4782,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4779,7 +4807,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4804,7 +4832,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4829,7 +4857,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4854,7 +4882,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4879,7 +4907,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -4904,7 +4932,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -4929,7 +4957,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -4954,7 +4982,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4980,7 +5008,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -5005,7 +5033,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -5030,7 +5058,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -5055,7 +5083,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -5080,7 +5108,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -5105,7 +5133,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5130,7 +5158,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5155,7 +5183,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5180,7 +5208,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5205,7 +5233,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5230,7 +5258,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5255,7 +5283,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5280,7 +5308,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -5305,7 +5333,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -5330,7 +5358,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5355,7 +5383,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5380,7 +5408,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5968,6 +5996,18 @@
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2024",
         "activity_section.key": "3a65f526-f6d5-4794-b6cf-c96b61262d5b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_a_unplugged_happy_loops_markdown",
+        "script_level.level_keys": [
+          "course_a_unplugged_happy_loops_markdown"
+        ],
+        "lesson.key": "Happy Loops",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursea-2024",
+        "activity_section.key": "e207d0c8-45bf-4b2a-8c3d-7be47b039a79"
       }
     },
     {
@@ -7783,6 +7823,12 @@
     {
       "seeding_key": {
         "lesson.key": "Happy Loops",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Happy Loops",
         "vocabulary.key": "loop"
       }
     },
@@ -7808,6 +7854,24 @@
       "seeding_key": {
         "lesson.key": "Happy Maps",
         "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "vocabulary.key": "drag"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "vocabulary.key": "drop"
       }
     },
     {
@@ -7838,6 +7902,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: On the Move with Play Lab",
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "algorithm"
       }
     },
     {
@@ -7939,6 +8009,12 @@
     {
       "seeding_key": {
         "lesson.key": "The Big Event Jr",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Big Event Jr",
         "vocabulary.key": "event"
       }
     }
@@ -7955,6 +8031,16 @@
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
         "objective.key": "00c56fd5-cd23-4b5e-9654-bd062a46e495"
+      }
+    },
+    {
+      "key": "068d1616-2cee-4df8-b04c-de5547da5591",
+      "properties": {
+        "description": "Construct a program using loops to solve puzzles with repeated sections of code."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "objective.key": "068d1616-2cee-4df8-b04c-de5547da5591"
       }
     },
     {
@@ -7988,6 +8074,16 @@
       }
     },
     {
+      "key": "2705a7ce-c234-4d53-afe7-e13cf5e07cf8",
+      "properties": {
+        "description": "Construct a precise sequence of instructions for dragging and dropping. "
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "2705a7ce-c234-4d53-afe7-e13cf5e07cf8"
+      }
+    },
+    {
       "key": "2a657988-491a-4f89-89e7-3c8296aaf486",
       "properties": {
         "description": "Experiment with standard block-based programming actions such as: clicking, drag and drop, etc."
@@ -8018,6 +8114,16 @@
       }
     },
     {
+      "key": "3fc59447-4a15-44ce-860c-7d1ba5d37011",
+      "properties": {
+        "description": "Explain best practices for logging into a computer and logging out when done."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "3fc59447-4a15-44ce-860c-7d1ba5d37011"
+      }
+    },
+    {
       "key": "58b1b650-413c-42ad-8f05-61d5ac372934",
       "properties": {
         "description": "Identify the benefits of using a loop structure instead of manual repetition."
@@ -8030,7 +8136,7 @@
     {
       "key": "594c5a42-17b5-4ad6-9d9a-a79c4868a41b",
       "properties": {
-        "description": "Improve existing code by finding areas of repetition and moving them into looping structures"
+        "description": "Improve existing code by finding areas of repetition and replacing them with a loop."
       },
       "seeding_key": {
         "lesson.key": "Loops with Scrat",
@@ -8108,6 +8214,16 @@
       }
     },
     {
+      "key": "7d42ccc3-bb1c-4c90-bfed-a85d64de266d",
+      "properties": {
+        "description": "Translate an algorithm into a program"
+      },
+      "seeding_key": {
+        "lesson.key": "Happy Maps",
+        "objective.key": "7d42ccc3-bb1c-4c90-bfed-a85d64de266d"
+      }
+    },
+    {
       "key": "7dd6f9dc-eed7-4f06-a0ad-2f57ff24c7e7",
       "properties": {
         "description": "Sequence commands in a logical order."
@@ -8115,16 +8231,6 @@
       "seeding_key": {
         "lesson.key": "Programming with Rey and BB-8",
         "objective.key": "7dd6f9dc-eed7-4f06-a0ad-2f57ff24c7e7"
-      }
-    },
-    {
-      "key": "7ece7c93-08f0-4ece-aa52-108e3e1ce753",
-      "properties": {
-        "description": "Translate an algorithm into a program"
-      },
-      "seeding_key": {
-        "lesson.key": "Happy Maps",
-        "objective.key": "7ece7c93-08f0-4ece-aa52-108e3e1ce753"
       }
     },
     {
@@ -8140,7 +8246,7 @@
     {
       "key": "8388a09f-0be8-4e14-b0e5-59d4f649aa11",
       "properties": {
-        "description": "Identify repeating code and shorten multiple actions into a single loop."
+        "description": "Identify repeating code and use numbers to shorten multiple actions into a single loop."
       },
       "seeding_key": {
         "lesson.key": "Happy Loops",
@@ -8178,6 +8284,16 @@
       }
     },
     {
+      "key": "99dc6e4d-420c-4111-9580-756dff674a0b",
+      "properties": {
+        "description": "Articulate an algorithm for a daily task"
+      },
+      "seeding_key": {
+        "lesson.key": "Happy Maps",
+        "objective.key": "99dc6e4d-420c-4111-9580-756dff674a0b"
+      }
+    },
+    {
       "key": "a7b29756-07bd-40c2-8398-06e83e3a2ed1",
       "properties": {
         "description": "Repeat commands given by an instructor."
@@ -8208,6 +8324,16 @@
       }
     },
     {
+      "key": "d04ac1b1-582f-4992-ba27-6c45de27b31f",
+      "properties": {
+        "description": "Examine a program with loops and debug to solve the puzzle."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "objective.key": "d04ac1b1-582f-4992-ba27-6c45de27b31f"
+      }
+    },
+    {
       "key": "d04be7b7-fb65-49f9-8f9e-8c3af5ae1e0c",
       "properties": {
         "description": "Identify actions that correlate to input events."
@@ -8225,16 +8351,6 @@
       "seeding_key": {
         "lesson.key": "Safety in My Online Neighborhood",
         "objective.key": "e1837fe4-9aa7-42bd-a8a1-3b01c9ba2a8d"
-      }
-    },
-    {
-      "key": "ebf3fd58-986e-4fcb-9bd5-182c59444bbc",
-      "properties": {
-        "description": "Construct a program using structures that repeat areas of code"
-      },
-      "seeding_key": {
-        "lesson.key": "Loops with Scrat",
-        "objective.key": "ebf3fd58-986e-4fcb-9bd5-182c59444bbc"
       }
     },
     {
@@ -8274,6 +8390,20 @@
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-15"
       }
     },
     {
@@ -8362,6 +8492,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Loops with Laurel",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
@@ -8449,13 +8586,6 @@
         "lesson.key": "Ocean Scene with Loops",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
       }
     },
     {
@@ -8505,6 +8635,20 @@
         "lesson.key": "Sequencing with Scrat",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Big Event Jr",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-08"
       }
     },
     {

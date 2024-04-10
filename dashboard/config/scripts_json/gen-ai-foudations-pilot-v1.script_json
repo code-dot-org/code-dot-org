@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-foudations-pilot-v1",
-    "serialized_at": "2024-04-09 05:56:22 UTC",
+    "serialized_at": "2024-04-09 22:30:12 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -279,6 +279,19 @@
       }
     },
     {
+      "key": "36564d77-c721-49ae-b491-224af154bacd",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "36564d77-c721-49ae-b491-224af154bacd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
       "key": "70a15401-14dc-4fa6-92a7-65f990a53988",
       "position": 1,
       "properties": {
@@ -315,6 +328,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "fde95abb-74cb-46ee-9ab4-bbe4d81990cb",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "230db07e-1da7-4fba-a37c-3f5f8cb840b5",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "230db07e-1da7-4fba-a37c-3f5f8cb840b5",
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "gen-ai-foudations-pilot-v1"
@@ -363,6 +389,19 @@
       }
     },
     {
+      "key": "3f11b91e-e2c3-45d4-bb92-3e3d32c2bc4d",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f11b91e-e2c3-45d4-bb92-3e3d32c2bc4d",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
       "key": "4fee6687-f663-4aaa-a28c-4dda4250e6f7",
       "position": 1,
       "properties": {
@@ -399,6 +438,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "3e56d6ab-48b1-41d3-88e0-896effe98371",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "4cb9bc69-650b-486a-92ee-c090b9ca68be",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4cb9bc69-650b-486a-92ee-c090b9ca68be",
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "gen-ai-foudations-pilot-v1"
@@ -447,6 +499,19 @@
       }
     },
     {
+      "key": "a5415f1c-5fa1-422e-930b-e216ef36971f",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a5415f1c-5fa1-422e-930b-e216ef36971f",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
       "key": "6218e625-a879-448b-9a31-3e75bb4230e7",
       "position": 1,
       "properties": {
@@ -483,6 +548,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "4c0eb371-f144-4015-b1a5-f4f12da7554f",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "c59455c9-0f93-4631-ba98-f0db4317b668",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c59455c9-0f93-4631-ba98-f0db4317b668",
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "gen-ai-foudations-pilot-v1"
@@ -531,6 +609,19 @@
       }
     },
     {
+      "key": "649a38cb-0b08-4a01-9ebf-ff8c73d8e19b",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "649a38cb-0b08-4a01-9ebf-ff8c73d8e19b",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
       "key": "dc94a28e-390f-4a8b-8fb2-297b8b51b812",
       "position": 1,
       "properties": {
@@ -567,6 +658,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "daeb4aa6-675c-42c8-a526-e1179c8259fd",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "7874b6ca-89f3-474d-bf62-076b66fb8d6b",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7874b6ca-89f3-474d-bf62-076b66fb8d6b",
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "gen-ai-foudations-pilot-v1"
@@ -615,6 +719,19 @@
       }
     },
     {
+      "key": "8d45f729-4420-460f-a0bc-2b75a9e1c92c",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d45f729-4420-460f-a0bc-2b75a9e1c92c",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
       "key": "587bac02-2e17-4d4a-a823-63809d6fca72",
       "position": 1,
       "properties": {
@@ -651,6 +768,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ec6ba39b-83b9-44b8-a816-0173bde0672f",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "a762343d-9c81-41cd-a612-2a5b440e57fa",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a762343d-9c81-41cd-a612-2a5b440e57fa",
         "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "gen-ai-foudations-pilot-v1"
@@ -802,6 +932,17 @@
       }
     },
     {
+      "key": "858b1c78-7547-4d14-a76c-7d583f371707",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "858b1c78-7547-4d14-a76c-7d583f371707",
+        "lesson_activity.key": "36564d77-c721-49ae-b491-224af154bacd"
+      }
+    },
+    {
       "key": "0572646f-befb-48aa-af59-c1244de3fab7",
       "position": 1,
       "properties": {
@@ -931,6 +1072,17 @@
       }
     },
     {
+      "key": "1844e168-8209-46b4-b1df-aaf1df84b292",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "1844e168-8209-46b4-b1df-aaf1df84b292",
+        "lesson_activity.key": "230db07e-1da7-4fba-a37c-3f5f8cb840b5"
+      }
+    },
+    {
       "key": "785c20dc-d7af-42ae-864c-250589cd92e6",
       "position": 1,
       "properties": {
@@ -978,6 +1130,17 @@
       "seeding_key": {
         "activity_section.key": "ca4c79ee-446e-4bbc-803e-b46505da500d",
         "lesson_activity.key": "392f3fcb-4a85-4b06-a288-5a26c4b3f180"
+      }
+    },
+    {
+      "key": "e040c048-b041-4d22-8612-73bae6cd5983",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "e040c048-b041-4d22-8612-73bae6cd5983",
+        "lesson_activity.key": "3f11b91e-e2c3-45d4-bb92-3e3d32c2bc4d"
       }
     },
     {
@@ -1140,6 +1303,17 @@
       }
     },
     {
+      "key": "7762643c-d974-4f89-89c0-bf38f032b15f",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7762643c-d974-4f89-89c0-bf38f032b15f",
+        "lesson_activity.key": "4cb9bc69-650b-486a-92ee-c090b9ca68be"
+      }
+    },
+    {
       "key": "1174e191-1554-4037-8720-70a8c189f05e",
       "position": 1,
       "properties": {
@@ -1252,6 +1426,17 @@
       }
     },
     {
+      "key": "a0edfc50-5dee-478e-95a8-3fb5237ca52d",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0edfc50-5dee-478e-95a8-3fb5237ca52d",
+        "lesson_activity.key": "a5415f1c-5fa1-422e-930b-e216ef36971f"
+      }
+    },
+    {
       "key": "30386fcf-7712-4f42-8cb2-6000328e23a9",
       "position": 1,
       "properties": {
@@ -1350,6 +1535,17 @@
       "seeding_key": {
         "activity_section.key": "7a9c8599-5842-41f6-bda2-03141bc8833b",
         "lesson_activity.key": "4c0eb371-f144-4015-b1a5-f4f12da7554f"
+      }
+    },
+    {
+      "key": "3a3542e4-011d-48ec-aea3-6bc57271d71a",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a3542e4-011d-48ec-aea3-6bc57271d71a",
+        "lesson_activity.key": "c59455c9-0f93-4631-ba98-f0db4317b668"
       }
     },
     {
@@ -1516,6 +1712,17 @@
       }
     },
     {
+      "key": "e4b12740-9181-4765-90e4-57863bf843ad",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4b12740-9181-4765-90e4-57863bf843ad",
+        "lesson_activity.key": "649a38cb-0b08-4a01-9ebf-ff8c73d8e19b"
+      }
+    },
+    {
       "key": "6fcac46f-78ba-4e6a-835c-7f3fd958a673",
       "position": 1,
       "properties": {
@@ -1631,6 +1838,17 @@
       "seeding_key": {
         "activity_section.key": "b5ae75a9-2cd9-4aff-a1fb-811fc498b7c1",
         "lesson_activity.key": "daeb4aa6-675c-42c8-a526-e1179c8259fd"
+      }
+    },
+    {
+      "key": "77f4dc74-2eec-464f-86e7-a322ea5643ad",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "77f4dc74-2eec-464f-86e7-a322ea5643ad",
+        "lesson_activity.key": "7874b6ca-89f3-474d-bf62-076b66fb8d6b"
       }
     },
     {
@@ -1763,6 +1981,17 @@
       }
     },
     {
+      "key": "85668b3a-0ebb-4bf4-b8a0-e19121c16f86",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "85668b3a-0ebb-4bf4-b8a0-e19121c16f86",
+        "lesson_activity.key": "8d45f729-4420-460f-a0bc-2b75a9e1c92c"
+      }
+    },
+    {
       "key": "05317ea4-9fc8-4686-afca-2b866e5c5497",
       "position": 1,
       "properties": {
@@ -1816,6 +2045,17 @@
       "seeding_key": {
         "activity_section.key": "053c353b-da64-43aa-a6ec-6b089b58d1ea",
         "lesson_activity.key": "ec6ba39b-83b9-44b8-a816-0173bde0672f"
+      }
+    },
+    {
+      "key": "5ffa19c4-320b-446c-ab5e-9fd39c4afc30",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ffa19c4-320b-446c-ab5e-9fd39c4afc30",
+        "lesson_activity.key": "a762343d-9c81-41cd-a612-2a5b440e57fa"
       }
     },
     {
@@ -1978,6 +2218,18 @@
       },
       "seeding_key": {
         "resource.key": "data_intake_form"
+      }
+    },
+    {
+      "name": "Foundations of Generative AI [All Lessons]",
+      "url": "https://docs.google.com/presentation/d/1hnfkUUeVmCh_1qfWwrzBzM2mxGd_c2zFAHuqpQ51Qmc/template/preview",
+      "key": "foundations_of_generative_ai_all_lessons_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "foundations_of_generative_ai_all_lessons_"
       }
     },
     {
@@ -2455,6 +2707,12 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "foundations_of_generative_ai_all_lessons_",
         "script.name": "gen-ai-foudations-pilot-v1"
       }
     }
