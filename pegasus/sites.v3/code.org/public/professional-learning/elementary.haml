@@ -59,15 +59,14 @@ theme: responsive_full_width
     %a.link-button.secondary.add-margin-top{href: CDO.studio_url("/catalog?grade=grade_1&grade=grade_2&grade=grade_3&grade=grade_4&grade=grade_5&grade=kindergarten")}
       =hoc_s("pl_page_k5.curriculum.button")
 
--# TODO show these once the views PR is merged
--# %section
--#   .wrapper
--#     = view :"professional_learning/additional_programs", heading: hoc_s("pl_page_k5.additional_offerings.heading"), desc: hoc_s("pl_page_k5.additional_offerings.desc"), middle_high: false
+%section
+  .wrapper
+    = view :"professional_learning/additional_programs", heading: hoc_s("pl_page_k5.additional_offerings.heading"), desc: hoc_s("pl_page_k5.additional_offerings.desc"), middle_high: false
 
--# = view :section_divider_line
+= view :section_divider_line
 
--# %section
--#   .wrapper
--#     = view :"professional_learning/regional_partners_questions"
+%section
+  .wrapper
+    = view :"professional_learning/regional_partners_questions"
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::ELEMENTARY_SCHOOL_PL_PAGE_VISITED_EVENT
