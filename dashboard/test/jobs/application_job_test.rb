@@ -6,8 +6,6 @@ class ApplicationJobTest < ActiveJob::TestCase
   # ApplicationJob is a base class for all jobs in the application.
   # Create a testable job class that inherits from ApplicationJob.
   class TestableJob < ApplicationJob
-    # Using the test adapter to simulate enqueuing jobs (vs `async` or `inline`)
-    self.queue_adapter = :test
     def perform
       # No-op
     end
