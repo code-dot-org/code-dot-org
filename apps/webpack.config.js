@@ -1,5 +1,6 @@
 /* eslint-disable import/order */
 const path = require('path');
+var pyodide = require('pyodide');
 const sass = require('sass');
 const webpack = require('webpack');
 
@@ -660,7 +661,9 @@ function createWebpackConfig({
               }),
             ]),
       }),
-      new PyodidePlugin(),
+      new PyodidePlugin({
+        outDirectory: `pyodide/${pyodide.version}`,
+      }),
       ...(envConstants.HOT
         ? [
             new webpack.HotModuleReplacementPlugin({}),
