@@ -16241,6 +16241,8 @@ en:
               name: What is AI
             lesson-4:
               name: AI and Machine Learning
+            lesson-5:
+              name: Code.org's AI Module
           lesson_groups: {}
           name: k5aisandbox-2024
           title: K5 AI Sandbox
