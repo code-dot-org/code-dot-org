@@ -294,7 +294,7 @@ class Level < ApplicationRecord
 
   def report_bug_url(request)
     message = "Bug in Level #{name}\n#{request.url}\n#{request.user_agent}\n"
-    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+    "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
