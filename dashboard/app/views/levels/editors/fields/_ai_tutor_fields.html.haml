@@ -2,12 +2,6 @@
   AI Tutor
 #ai-tutor-container.in.collapse
 
-%script{src: webpack_asset_path('js/levels/editors/fields/_ai_tutor_fields.js'),
-  data: {aitutoravailable: (@level.properties["ai_tutor_available"] || true).to_json, aitutorlevelspecificprompt: (@level.properties["ai_tutor_level_specific_prompt"] || '').to_json}}
-
-  -# data: {aicustomizations: (@level.properties["initial_ai_customizations"] || {}).to_json, levelname: @level.name, appname: @level.game&.app}
-    = f.label :ai_tutor_level_specific_prompt, 'Level-Specific Prompt'
-    %p Prompt used to specify the behavior of AI Tutor on a per level basis.
-    = f.text_area :ai_tutor_level_specific_prompt, placeholder: 'Write your level-specific prompt here. If left blank, this level will use the default system prompt.', rows: 4, class:"input-block-level"
-
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ai_tutor_available, description: "Make AI Tutor Available"}
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_ai_tutor_fields.js'),
+        data: {aitutoravailable: (@level.properties["ai_tutor_available"] || true).to_json, aitutorlevelspecificprompt: (@level.properties["ai_tutor_level_specific_prompt"] || '').to_json}}

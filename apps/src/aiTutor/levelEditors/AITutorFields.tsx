@@ -48,17 +48,22 @@ const AITutorFields: React.FunctionComponent<AITutorFieldsProps> = ({
           type="hidden"
           id="level_ai_tutor_level_specific_prompt"
           name="level[ai_tutor_level_specific_prompt]"
-          value={levelSpecificPrompt.toString()}
+          value={levelSpecificPrompt}
         />
         {aiTutorAvailable && (
           <div className={moduleStyles.fieldRow}>
             <div className={moduleStyles['field-value']}>
               <label htmlFor="levelPrompt">Level-Specific Prompt</label>
+              <p>
+                Enter a prompt specific to this level to be added with the
+                default AI Tutor system prompt:
+                <br />"{generalChatSystemPrompt}"
+              </p>
               <textarea
                 id="levelPrompt"
                 value={levelSpecificPrompt || ''}
                 className={moduleStyles.textarea}
-                placeholder={`Enter a prompt specific to this level to be added with the default AI Tutor system prompt:\n${generalChatSystemPrompt}`}
+                placeholder={`Enter a prompt specific to this level`}
                 rows={3}
                 onChange={e => {
                   setlevelSpecificPrompt(e.target.value);
