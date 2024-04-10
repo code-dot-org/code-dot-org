@@ -711,7 +711,6 @@ describe('RubricContainer', () => {
   });
 
   it('displays product tour when getTourStatus is false', async function () {
-    const clock = sinon.useFakeTimers();
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
@@ -732,9 +731,7 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    clock.tick(5000);
     expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
-    clock.restore();
   });
 
   it('does not display product tour when getTourStatus returns true', async function () {
