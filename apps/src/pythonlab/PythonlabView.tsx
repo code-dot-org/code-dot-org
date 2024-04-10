@@ -25,6 +25,7 @@ const defaultProject: MultiFileSource = {
       contents: 'print("Hello world!")',
       folderId: '1',
       active: true,
+      open: true,
     },
   },
   folders: {
@@ -79,9 +80,8 @@ const PythonlabView: React.FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
 
+  // TODO: This is repeated in Weblab2View. Can we extract this out somewhere?
   const setProject = (newProject: MultiFileSource) => {
-    console.log('in setProject');
-    console.log({newProject});
     setCurrentProject(newProject);
     dispatch(setSource(newProject));
     if (Lab2Registry.getInstance().getProjectManager()) {
@@ -94,8 +94,6 @@ const PythonlabView: React.FunctionComponent = () => {
 
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
-    console.log({initialSources, channelId});
-    console.log({initialSources});
     setCurrentProject(
       (initialSources?.source as MultiFileSource) || defaultProject
     );
@@ -111,6 +109,7 @@ const PythonlabView: React.FunctionComponent = () => {
           setConfig={setConfig}
         />
       )}
+      {/** TODO: Should the console be a part of CDOIDE? */}
       <PythonConsole />
     </div>
   );
