@@ -1,0 +1,33 @@
+{
+  "codeFunctions": {},
+  "libraries": [
+    {
+      "name": "twoFunctionLibrary",
+      "functions": ["functionWithParams", "functionWithGlobalVariable"],
+      "dropletConfig": [
+        {
+          "func": "twoFunctionLibrary.functionWithParams",
+          "category": "Functions",
+          "paletteParams": ["one", "two"],
+          "params": ["one", "two"]
+        },
+        {
+          "func": "twoFunctionLibrary.functionWithGlobalVariable",
+          "category": "Functions"
+        }
+      ],
+      "source": "var GLOBAL_VARIABLE = 'GLOBAL_VARIABLE'; function functionWithParams(one, two) {console.log(one+two)}; function functionWithGlobalVariable() {console.log(GLOBAL_VARIABLE)}"
+    },
+    {
+      "name": "oneFunctionLibrary",
+      "functions": ["functionWithPrivateFunctionCall"],
+      "dropletConfig": [
+        {
+          "func": "oneFunctionLibrary.functionWithPrivateFunctionCall",
+          "category": "Functions"
+        }
+      ],
+      "source": "function() {function functionWithPrivateFunctionCall() {privateFunction();}; function privateFunction() {console.log('oneFunctionLibrary.functionWithPrivateFunctionCall')}"
+    }
+  ]
+}
