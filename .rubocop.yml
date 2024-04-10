@@ -36,6 +36,9 @@ CustomCops/OnlyAllowedCharacters:
   Include:
     - '**/*_mailer.rb'
 
+Layout/ClassStructure:
+  Enabled: true
+
 Layout/DotPosition:
   EnforcedStyle: trailing
 
