@@ -25,6 +25,8 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".student-table" is visible
   And I click selector ".student-table tr:nth(1)" to load a new page
+  And I wait for the page to fully load
+  And I click selector ".introjs-skipbutton" if it exists
   And I click selector "#ui-floatingActionButton" once I see it
   And I wait until element "h5:contains(Code Quality)" is visible
   And I wait until element "button:contains(Extensive)" is visible
@@ -51,36 +53,69 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I click selector "h6:contains(Code Quality)" once I see it
   And I wait until element "textarea:contains(Nice work Lillian!)" is visible
 
-  @eyes
-  Scenario: Teacher views Rubric and Settings tabs
-    Given I create a teacher-associated student named "Aiden"
-    And I sign in as "Teacher_Aiden" and go home
-    And I add the current user to the "ai-rubrics" single section experiment for the "allthethings" course
-    And I wait until element "#homepage-container" is visible
-    And element "#sign_in_or_user" contains text "Teacher_Aiden"
-    And I add the current user to the "ai-rubrics" single user experiment
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
-    And element ".teacher-panel td:eq(1)" contains text "Aiden"
-    And I click selector ".teacher-panel td:eq(1)" to load a new page
-    And I wait for the page to fully load
+Scenario: Teacher views rubric product tour
+  # Teacher signs in and views product tour
+  Given I create a teacher-associated student named "Aiden"
+  And I sign in as "Teacher_Aiden" and go home
+  And I add the current user to the "ai-rubrics" single section experiment for the "allthethings" course
+  And I wait until element "#homepage-container" is visible
+  And element "#sign_in_or_user" contains text "Teacher_Aiden"
+  And I add the current user to the "ai-rubrics" single user experiment
+  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+  And I wait for the page to fully load
+  And element ".teacher-panel td:eq(1)" contains text "Aiden"
+  And I click selector ".teacher-panel td:eq(1)" to load a new page
+  And I wait for the page to fully load
+  And I wait until element "h1:contains(Getting Started with AI Teaching Assistant)" is visible
+  And I wait until element ".introjs-tooltiptext" is visible
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I wait until element "h1:contains(Understanding the AI Assessment)" is visible
+  And I wait until element ".introjs-tooltiptext" is visible
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I wait until element "h1:contains(Using Evidence)" is visible
+  And I wait until element ".introjs-tooltiptext" is visible
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I wait until element "h1:contains(Understanding AI Confidence)" is visible
+  And I wait until element ".introjs-tooltiptext" is visible
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I wait until element "h1:contains(Assigning a Rubric Score)" is visible
+  And I wait until element ".introjs-tooltiptext" is visible
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I wait until element "h1:contains(How did AI do?)" is visible
+  And I wait until element ".introjs-tooltiptext" is visible
+  And I click selector ".introjs-button:contains(Done)" once I see it
 
-    When I open my eyes to test "teaching assistant rubric"
-    Then I see no difference for "floating action button icon"
+@eyes
+Scenario: Teacher views Rubric and Settings tabs
+  Given I create a teacher-associated student named "Aiden"
+  And I sign in as "Teacher_Aiden" and go home
+  And I add the current user to the "ai-rubrics" single section experiment for the "allthethings" course
+  And I wait until element "#homepage-container" is visible
+  And element "#sign_in_or_user" contains text "Teacher_Aiden"
+  And I add the current user to the "ai-rubrics" single user experiment
+  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+  And I wait for the page to fully load
+  And element ".teacher-panel td:eq(1)" contains text "Aiden"
+  And I click selector ".teacher-panel td:eq(1)" to load a new page
+  And I wait for the page to fully load
+  And I click selector ".introjs-skipbutton" if it exists
 
-    When I click selector "#ui-floatingActionButton"
-    And I wait until element ".uitest-rubric-tab-buttons:contains('Class Data')" is visible
-    And I wait until element "h5:contains(Code Quality)" is visible
-    Then I see no difference for "rubric tab, Code Quality learning goal"
-    And element ".uitest-run-ai-assessment" is disabled
-    And element ".uitest-info-alert" is visible
+  When I open my eyes to test "teaching assistant rubric"
+  Then I see no difference for "floating action button icon"
 
-    When I click selector "#uitest-next-goal"
-    And I wait until element "h5:contains(Sprites)" is visible
-    Then I see no difference for "rubric tab, Sprites learning goal"
+  When I click selector "#ui-floatingActionButton"
+  And I wait until element ".uitest-rubric-tab-buttons:contains('Class Data')" is visible
+  And I wait until element "h5:contains(Code Quality)" is visible
+  Then I see no difference for "rubric tab, Code Quality learning goal"
+  And element ".uitest-run-ai-assessment" is disabled
+  And element ".uitest-info-alert" is visible
 
-    When I click selector "button:contains('Class Data')"
-    And I wait until element ".uitest-rubric-settings" is visible
-    Then I see no difference for "rubric settings tab"
+  When I click selector "#uitest-next-goal"
+  And I wait until element "h5:contains(Sprites)" is visible
+  Then I see no difference for "rubric tab, Sprites learning goal"
 
-    Then I close my eyes
+  When I click selector "button:contains('Class Data')"
+  And I wait until element ".uitest-rubric-settings" is visible
+  Then I see no difference for "rubric settings tab"
+
+  Then I close my eyes

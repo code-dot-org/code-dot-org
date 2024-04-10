@@ -112,7 +112,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         >
           <PanelContainer
             id="instructions-panel"
-            headerText={musicI18n.panelHeaderInstructions()}
+            headerContent={musicI18n.panelHeaderInstructions()}
             hideHeaders={hideHeaders}
           >
             <Instructions
@@ -146,7 +146,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           <div id="controls-area" className={moduleStyles.controlsArea}>
             <PanelContainer
               id="controls-panel"
-              headerText={musicI18n.panelHeaderControls()}
+              headerContent={musicI18n.panelHeaderControls()}
               hideHeaders={hideHeaders}
             >
               <Controls
@@ -163,7 +163,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           <div id="timeline-area" className={moduleStyles.timelineArea}>
             <PanelContainer
               id="timeline-panel"
-              headerText={musicI18n.panelHeaderTimeline()}
+              headerContent={musicI18n.panelHeaderTimeline()}
               hideHeaders={hideHeaders}
             >
               <Timeline />
@@ -197,7 +197,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
           <PanelContainer
             id="workspace-panel"
-            headerText={musicI18n.panelHeaderWorkspace()}
+            headerContent={musicI18n.panelHeaderWorkspace()}
             hideHeaders={hideHeaders}
             rightHeaderContent={
               <HeaderButtons

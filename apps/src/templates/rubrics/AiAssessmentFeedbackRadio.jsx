@@ -26,7 +26,7 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
   };
 
   return (
-    <div className={style.aiFeedbackRadioBox}>
+    <div id="tour-ai-assessment-feedback" className={style.aiFeedbackRadioBox}>
       <div className={style.aiFeedbackRadioRow}>
         <label>
           <span
