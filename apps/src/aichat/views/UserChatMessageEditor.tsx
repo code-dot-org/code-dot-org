@@ -2,7 +2,7 @@ import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
 import aichatI18n from '../locale';
-import {AichatState, submitChatMessage} from '../redux/aichatRedux';
+import {AichatState, submitChatContents} from '../redux/aichatRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 
@@ -20,7 +20,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const handleSubmit = useCallback(() => {
     if (!isWaitingForChatResponse) {
-      dispatch(submitChatMessage(userMessage));
+      dispatch(submitChatContents(userMessage));
       setUserMessage('');
     }
   }, [userMessage, dispatch, isWaitingForChatResponse]);

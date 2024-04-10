@@ -10,13 +10,11 @@ import {
   AI_CUSTOMIZATIONS_LABELS,
 } from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
-import {getChatCompletionMessage} from '../chatApi';
+import {getAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   ChatCompletionMessage,
-  AichatLevelProperties,
   Role,
-  AITutorInteractionStatus as Status,
-  AITutorInteractionStatusType,
+  AichatInteractionStatus as Status,
   AiCustomizations,
   ModelCardInfo,
   Visibility,
@@ -120,67 +118,37 @@ export const updateAiCustomization = createAsyncThunk(
   }
 );
 
-// This thunk's callback function submits a user chat message to the chat completion endpoint,
-// waits for a chat completion response, and updates the user message state.
-export const submitChatMessage = createAsyncThunk(
-  'aichat/submitChatMessage',
-  async (message: string, thunkAPI) => {
+// This thunk's callback function submits a user's chat content and AI customizations to
+// the chat completion endpoint, then waits for a chat completion response, and updates
+// the user messages.
+export const submitChatContents = createAsyncThunk(
+  'aichat/submitChatContents',
+  async (newMessageText: string, thunkAPI) => {
     const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
-    const systemPrompt = (state.lab.levelProperties as AichatLevelProperties)
-      ?.systemPrompt;
-    // TODO: move a check for undefined systemPrompt to AIchatView and throw an error dialog
-    // there if systemPrompt is undefined.
-    if (systemPrompt === undefined) {
-      throw new Error('systemPrompt is undefined');
-    }
+    const aiCustomizations = state.aichat.currentAiCustomizations;
     const storedMessages = state.aichat.chatMessages;
     const newMessageId =
       storedMessages.length === 0
         ? 1
         : storedMessages[storedMessages.length - 1].id + 1;
-    const appropriateChatMessages = storedMessages.filter(
-      msg => msg.status === Status.OK
-    );
 
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
       id: newMessageId,
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: message,
+      chatMessageText: newMessageText,
       timestamp: getCurrentTimestamp(),
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
-    // Send user message to backend and retrieve assistant response.
-    const chatApiResponse = await getChatCompletionMessage(
-      systemPrompt,
-      newMessageId,
-      message,
-      appropriateChatMessages
+    // Post user content and messages to backend and retrieve assistant response.
+    const chatApiResponse = await getAichatCompletionMessage(
+      aiCustomizations,
+      newMessage,
+      storedMessages
     );
-
-    // Find message in chatMessages and update status.
-    thunkAPI.dispatch(
-      updateChatMessageStatus({
-        id: chatApiResponse.id,
-        status: chatApiResponse.status,
-      })
-    );
-
-    // Add assistant chat messages to chatMessages.
-    if (chatApiResponse.assistantResponse) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: chatApiResponse.id + 1,
-        role: Role.ASSISTANT,
-        status: Status.OK,
-        chatMessageText: chatApiResponse.assistantResponse,
-        // The accuracy of this timestamp is debatable since it's not when our backend
-        // issued the message, but it's good enough for user testing.
-        timestamp: getCurrentTimestamp(),
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-    }
+    console.log('chatApiResponse', chatApiResponse);
   }
 );
 
@@ -216,7 +184,7 @@ const aichatSlice = createSlice({
     },
     updateChatMessageStatus: (
       state,
-      action: PayloadAction<{id: number; status: AITutorInteractionStatusType}>
+      action: PayloadAction<{id: number; status: Status}>
     ) => {
       const {id, status} = action.payload;
       const chatMessage = state.chatMessages.find(msg => msg.id === id);
@@ -296,15 +264,15 @@ const aichatSlice = createSlice({
     },
   },
   extraReducers: builder => {
-    builder.addCase(submitChatMessage.fulfilled, state => {
+    builder.addCase(submitChatContents.fulfilled, state => {
       state.isWaitingForChatResponse = false;
     });
-    builder.addCase(submitChatMessage.rejected, (state, action) => {
+    builder.addCase(submitChatContents.rejected, (state, action) => {
       state.isWaitingForChatResponse = false;
       state.chatMessageError = true;
       console.error(action.error);
     });
-    builder.addCase(submitChatMessage.pending, state => {
+    builder.addCase(submitChatContents.pending, state => {
       state.isWaitingForChatResponse = true;
     });
   },
