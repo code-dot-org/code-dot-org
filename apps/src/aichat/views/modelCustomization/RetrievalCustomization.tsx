@@ -32,7 +32,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
     dispatch(
       setAiCustomizationProperty({
         property: 'retrievalContexts',
-        value: [...retrievalContexts, newRetrievalContext],
+        value: [newRetrievalContext, ...retrievalContexts],
       })
     );
     setNewRetrievalContext('');
@@ -60,7 +60,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
 
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
-      <div>
+      <div className={modelCustomizationStyles.customizationContainer}>
         <div className={modelCustomizationStyles.inputContainer}>
           <label htmlFor="system-prompt">
             <StrongText>Retrieval</StrongText>

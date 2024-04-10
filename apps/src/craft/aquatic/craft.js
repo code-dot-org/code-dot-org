@@ -579,7 +579,8 @@ Craft.executeUserCode = function () {
   };
 
   // Run user code.
-  code += Blockly.getWorkspaceCode();
+  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+  code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   interpreter = CustomMarshalingInterpreter.evalWith(
     code,
     {
