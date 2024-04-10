@@ -12,8 +12,8 @@ module CustomCops
     def on_send(node)
       return unless node.access_modifier?
       return if node.right_siblings.empty?
-      right_sibling = node.right_siblings.first
-      add_offense(node.loc.selector, message: MESSAGE) unless node_is_private?(right_sibling)
+      return if node_is_private?(node.right_siblings.first)
+      add_offense(node.loc.selector, message: MESSAGE)
     end
 
     private def node_is_private?(node)
