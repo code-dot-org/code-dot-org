@@ -19,6 +19,8 @@ import Draggable from 'react-draggable';
 import {TAB_NAMES} from './rubricHelpers';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // product Tour
 import './introjs.scss';
@@ -108,6 +110,19 @@ export default function RubricContainer({
   const onStopHandler = (event, dragElement) => {
     setPositionX(dragElement.x);
     setPositionY(dragElement.y);
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_WINDOW_MOVE_END, {
+      ...(reportingData || {}),
+      window_x_end: dragElement.x,
+      window_y_end: dragElement.y,
+    });
+  };
+
+  const onStartHandler = (event, dragElement) => {
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_WINDOW_MOVE_START, {
+      ...(reportingData || {}),
+      window_x_start: dragElement.x,
+      window_y_start: dragElement.y,
+    });
   };
 
   // Currently the settings tab only provides a way to manually run AI.
@@ -175,6 +190,7 @@ export default function RubricContainer({
   return (
     <Draggable
       defaultPosition={{x: positionX, y: positionY}}
+      onStart={onStartHandler}
       onStop={onStopHandler}
     >
       <div
