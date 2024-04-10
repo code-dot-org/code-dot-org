@@ -141,7 +141,7 @@ const AichatView: React.FunctionComponent = () => {
             <PanelContainer
               id="aichat-presentation-panel"
               headerContent={'Model Card'}
-                rightHeaderContent={renderChatWorkspaceHeaderRight(() =>
+              rightHeaderContent={renderChatWorkspaceHeaderRight(() =>
                 dispatch(clearChatMessages())
               )}
             >
