@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';
@@ -51,12 +53,7 @@ class TeacherSections extends Component {
   }
 
   render() {
-    const {
-      plSectionIds,
-      studentSectionIds,
-      hiddenPlSectionIds,
-      hiddenStudentSectionIds,
-    } = this.props;
+    const {studentSectionIds, hiddenStudentSectionIds} = this.props;
 
     return (
       <div id="classroom-sections">
@@ -77,12 +74,13 @@ class TeacherSections extends Component {
         )}
         {this.shouldRenderPlSections() && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
-            <CoteacherInviteNotification isForPl={true} />
-            <OwnedSections
-              isPlSections={true}
-              sectionIds={plSectionIds}
-              hiddenSectionIds={hiddenPlSectionIds}
-            />
+            <BodyTwoText>
+              <SafeMarkdown
+                markdown={i18n.plSectionsMoved({
+                  myPlPageLink: '/my-professional-learning',
+                })}
+              />
+            </BodyTwoText>
           </ContentContainer>
         )}
         <RosterDialog />

@@ -2,7 +2,7 @@
 // studio.code.org/my-professional-learning
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
@@ -11,33 +11,42 @@ import {EnrolledWorkshops} from './EnrolledWorkshops';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
+import ContentContainer from '@cdo/apps/templates/ContentContainer';
+import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
+import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import style from './landingPage.module.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 
-const getAvailableTabs = () => {
+const getAvailableTabs = permissions => {
   // [TODO]: return a subset of the tabs below based on the user's permission level
-  return [
+  let tabs = [
     {
       value: 'myPL',
       text: i18n.plLandingHeading(),
     },
-    // {
-    //   value: 'myFacilitatorCenter',
-    //   text: i18n.plLandingTabFacilitatorCenter(),
-    // },
-    // {
-    //   value: 'myRPCenter',
-    //   text: i18n.plLandingTabRPCenter(),
-    // },
-    // {
-    //   value: 'myWorkshopOrganizerCenter',
-    //   text: i18n.plLandingTabWorkshopOrganizerCenter(),
-    // },
-    // {
-    //   value: 'myInstructorCenter',
-    //   text: i18n.plLandingTabInstructorCenter(),
-    // },
   ];
+
+  if (permissions.includes('facilitator')) {
+    tabs.push({
+      value: 'myFacilitatorCenter',
+      text: i18n.plLandingTabFacilitatorCenter(),
+    });
+  }
+
+  // {
+  //   value: 'myRPCenter',
+  //   text: i18n.plLandingTabRPCenter(),
+  // },
+  // {
+  //   value: 'myWorkshopOrganizerCenter',
+  //   text: i18n.plLandingTabWorkshopOrganizerCenter(),
+  // },
+  // {
+  //   value: 'myInstructorCenter',
+  //   text: i18n.plLandingTabInstructorCenter(),
+  // },
+
+  return tabs;
 };
 
 export default function LandingPage({
@@ -47,12 +56,12 @@ export default function LandingPage({
   currentYearApplicationId,
   workshopsAsParticipant,
   plCoursesStarted,
+  userPermissions,
 }) {
-  const availableTabs = getAvailableTabs();
+  const availableTabs = getAvailableTabs(userPermissions);
+  const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
   const headerContainerStyles =
     availableTabs.length > 1 ? '' : style.headerWithoutTabsContainer;
-  // [TODO]: Uncomment this out once currentTab will affect what content is showed.
-  // const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
 
   const showGettingStartedBanner =
     !currentYearApplicationId &&
@@ -135,34 +144,42 @@ export default function LandingPage({
                 name="myPLTabs"
                 tabs={availableTabs}
                 defaultSelectedTabValue={availableTabs[0].value}
-                onChange={tab => {
-                  // [TODO]: Uncomment this out once
-                  // currentTab affects what content
-                  // is shown.
-                  //setCurrentTab(tab);
-                  console.log(tab);
-                }}
+                onChange={tab => setCurrentTab(tab)}
               />
             </nav>
           )}
         </HeaderBannerNoImage>
       </div>
       <main className={style.wrapper}>
-        {showGettingStartedBanner && RenderGettingStartedBanner()}
-        {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
-        <EnrolledWorkshops />
-        {deeperLearningCourseData?.length >= 1 && (
-          <div>
-            <Heading2>Online Professional Learning Courses</Heading2>
-            <ProfessionalLearningCourseProgress
-              deeperLearningCourseData={deeperLearningCourseData}
-            />
-          </div>
+        {currentTab === 'myPL' && (
+          <>
+            {showGettingStartedBanner && RenderGettingStartedBanner()}
+            {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+            <EnrolledWorkshops />
+            {deeperLearningCourseData?.length >= 1 && (
+              <div>
+                <Heading2>Online Professional Learning Courses</Heading2>
+                <ProfessionalLearningCourseProgress
+                  deeperLearningCourseData={deeperLearningCourseData}
+                />
+              </div>
+            )}
+            <section>
+              <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
+              {RenderStaticRecommendedPL()}
+            </section>
+          </>
         )}
-        <section>
-          <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
-          {RenderStaticRecommendedPL()}
-        </section>
+        {currentTab === 'myFacilitatorCenter' && (
+          <ContentContainer heading={i18n.plSectionsInstructorTitle()}>
+            <CoteacherInviteNotification isForPl={true} />
+            <OwnedSections
+              isPlSections={true}
+              sectionIds={[]}
+              hiddenSectionIds={[]}
+            />
+          </ContentContainer>
+        )}
       </main>
     </>
   );
@@ -175,4 +192,5 @@ LandingPage.propTypes = {
   currentYearApplicationId: PropTypes.number,
   workshopsAsParticipant: PropTypes.array,
   plCoursesStarted: PropTypes.array,
+  userPermissions: PropTypes.arrayOf(PropTypes.string),
 };

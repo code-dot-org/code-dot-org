@@ -1952,6 +1952,8 @@
   "plLandingStaticPLSelfPacedButton": "Start professional learning courses",
   "plSectionsJoined": "Professional Learning Sections I've Joined",
   "plSectionsTitle": "Professional Learning Sections",
+  "plSectionsInstructorTitle": "Instructor Professional Learning Sections",
+  "plSectionsMoved": "Your instructor professional learning sections have moved! Find them on the [My Professional Learning page]({myPlPageLink}).",
   "plugged": "Plugged",
   "pluggedLessonsNote": "*Online or ‘plugged’ lessons are automatically marked as complete on your behalf once 80% of your class has completed 60% of the available lesson.",
   "picturePassword": "Picture password",
