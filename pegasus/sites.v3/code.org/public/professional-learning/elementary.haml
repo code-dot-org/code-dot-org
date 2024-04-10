@@ -50,14 +50,15 @@ theme: responsive_full_width
     %h2=hoc_s("pl_page_k5.curriculum.heading")
     %h2=hoc_s("pl_page_k5.curriculum.desc")
 
-%section
-  .wrapper
-    = view :"professional_learning/additional_programs", heading: hoc_s("pl_page_k5.additional_offerings.heading"), desc: hoc_s("pl_page_k5.additional_offerings.desc"), middle_high: false
+-# TODO show these once the views PR is merged
+-# %section
+-#   .wrapper
+-#     = view :"professional_learning/additional_programs", heading: hoc_s("pl_page_k5.additional_offerings.heading"), desc: hoc_s("pl_page_k5.additional_offerings.desc"), middle_high: false
 
-= view :section_divider_line
+-# = view :section_divider_line
 
-%section
-  .wrapper
-    = view :"professional_learning/regional_partners_questions"
+-# %section
+-#   .wrapper
+-#     = view :"professional_learning/regional_partners_questions"
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::ELEMENTARY_SCHOOL_PL_PAGE_VISITED_EVENT
