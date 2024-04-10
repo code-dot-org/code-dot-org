@@ -91,38 +91,6 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  # Ensure that the RubricAiEvaluation exists as an argument to the job
-  private def pass_in_or_create_rubric_ai_evaluation(job)
-    # Get the first argument to perform() which is the hash of named arguments
-    options = job.arguments.first
-
-    # Get the level containing the rubric
-    script_level = ScriptLevel.find(options[:script_level_id])
-
-    # Will raise an exception if the rubric does not exist
-    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
-
-    user = User.find(options[:user_id])
-    channel_id = get_channel_id(user, script_level)
-    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
-
-    # Create a queued record of this work request (if none were given)
-    rubric_ai_evaluation_id = options[:rubric_ai_evaluation_id]
-    rubric_ai_evaluation = (rubric_ai_evaluation_id && RubricAiEvaluation.find(rubric_ai_evaluation_id)) || RubricAiEvaluation.create!(
-      user_id: options[:user_id],
-      requester_id: options[:requester_id],
-      rubric: rubric,
-      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
-      project_id: project_id,
-    )
-
-    # Set it back so the job can reference it
-    options[:rubric_ai_evaluation_id] = rubric_ai_evaluation.id
-
-    # Return the Rubric
-    rubric_ai_evaluation
-  end
-
   before_enqueue do |job|
     rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(job)
     rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
@@ -276,6 +244,93 @@ class EvaluateRubricJob < ApplicationJob
     @s3_client ||= AWS::S3.create_client
   end
 
+  def validate_ai_config
+    lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
+    code = 'hello world'
+    lesson_s3_names.each do |lesson_s3_name|
+      validate_ai_config_for_lesson(lesson_s3_name, code)
+    end
+    validate_learning_goals
+    S3_AI_RELEASE_PATH
+  end
+
+  def validate_ai_config_for_lesson(lesson_s3_name, code)
+    # this step should raise an error if any essential config files are missing
+    # from the S3 release directory
+    get_openai_params(lesson_s3_name, code)
+  rescue Aws::S3::Errors::NoSuchKey => exception
+    raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
+  end
+
+  # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
+  # ai-enabled learning goal in its rubric in the database has a corresponding
+  # learning goal in the rubric in S3.
+  def validate_learning_goals
+    UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
+      levels = level_to_lesson.keys
+      unless Unit.find_by_name(unit_name)
+        raise "Unit not found: #{unit_name.inspect}. Make sure you ran `rake seed:scripts` locally, and added it to UI_TEST_SCRIPTS for drone/ci."
+      end
+      levels.each do |level_name|
+        level = Level.find_by_name!(level_name)
+        script_level = level.script_levels.select {|sl| sl.script.name == unit_name}.first
+        lesson = script_level.lesson
+        rubric = Rubric.find_by!(lesson: lesson, level: level)
+        validate_learning_goals_for_rubric(rubric)
+      rescue StandardError => exception
+        raise "Error validating learning goals for unit #{unit_name} lesson #{lesson&.relative_position.inspect} level #{level_name.inspect}: #{exception.message}"
+      end
+    end
+  end
+
+  def validate_learning_goals_for_rubric(rubric)
+    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
+    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
+    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
+    missing_learning_goals = db_learning_goals - s3_learning_goals
+    if missing_learning_goals.any?
+      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
+    end
+  end
+
+  def get_s3_learning_goals(lesson_s3_name)
+    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
+    rubric_rows.map {|row| row['Key Concept']}
+  end
+
+  # Ensure that the RubricAiEvaluation exists as an argument to the job
+  private def pass_in_or_create_rubric_ai_evaluation(job)
+    # Get the first argument to perform() which is the hash of named arguments
+    options = job.arguments.first
+
+    # Get the level containing the rubric
+    script_level = ScriptLevel.find(options[:script_level_id])
+
+    # Will raise an exception if the rubric does not exist
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+
+    user = User.find(options[:user_id])
+    channel_id = get_channel_id(user, script_level)
+    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+
+    # Create a queued record of this work request (if none were given)
+    rubric_ai_evaluation_id = options[:rubric_ai_evaluation_id]
+    rubric_ai_evaluation = (rubric_ai_evaluation_id && RubricAiEvaluation.find(rubric_ai_evaluation_id)) || RubricAiEvaluation.create!(
+      user_id: options[:user_id],
+      requester_id: options[:requester_id],
+      rubric: rubric,
+      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
+      project_id: project_id,
+    )
+
+    # Set it back so the job can reference it
+    options[:rubric_ai_evaluation_id] = rubric_ai_evaluation.id
+
+    # Return the Rubric
+    rubric_ai_evaluation
+  end
+
   # get the channel id of the project which stores the user's code on this script level.
   private def get_channel_id(user, script_level)
     # get the user's storage id from the database
@@ -341,61 +396,6 @@ class EvaluateRubricJob < ApplicationJob
       'examples' => examples.to_json,
       'api-key' => CDO.openai_evaluate_rubric_api_key,
     )
-  end
-
-  def validate_ai_config
-    lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
-    code = 'hello world'
-    lesson_s3_names.each do |lesson_s3_name|
-      validate_ai_config_for_lesson(lesson_s3_name, code)
-    end
-    validate_learning_goals
-    S3_AI_RELEASE_PATH
-  end
-
-  def validate_ai_config_for_lesson(lesson_s3_name, code)
-    # this step should raise an error if any essential config files are missing
-    # from the S3 release directory
-    get_openai_params(lesson_s3_name, code)
-  rescue Aws::S3::Errors::NoSuchKey => exception
-    raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
-  end
-
-  # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
-  # ai-enabled learning goal in its rubric in the database has a corresponding
-  # learning goal in the rubric in S3.
-  def validate_learning_goals
-    UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
-      levels = level_to_lesson.keys
-      unless Unit.find_by_name(unit_name)
-        raise "Unit not found: #{unit_name.inspect}. Make sure you ran `rake seed:scripts` locally, and added it to UI_TEST_SCRIPTS for drone/ci."
-      end
-      levels.each do |level_name|
-        level = Level.find_by_name!(level_name)
-        script_level = level.script_levels.select {|sl| sl.script.name == unit_name}.first
-        lesson = script_level.lesson
-        rubric = Rubric.find_by!(lesson: lesson, level: level)
-        validate_learning_goals_for_rubric(rubric)
-      rescue StandardError => exception
-        raise "Error validating learning goals for unit #{unit_name} lesson #{lesson&.relative_position.inspect} level #{level_name.inspect}: #{exception.message}"
-      end
-    end
-  end
-
-  def validate_learning_goals_for_rubric(rubric)
-    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
-    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
-    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
-    missing_learning_goals = db_learning_goals - s3_learning_goals
-    if missing_learning_goals.any?
-      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
-    end
-  end
-
-  def get_s3_learning_goals(lesson_s3_name)
-    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
-    rubric_rows.map {|row| row['Key Concept']}
   end
 
   private def get_openai_evaluations(openai_params)
