@@ -83,7 +83,7 @@ const defaultProject: ProjectType = {
   <link rel="stylesheet" href="styles.css"/>
   <body>
     Content goes here!
-    <div class="foo">Foo class!</div>
+    <div class="foo">[DEFAULT] Foo class!</div>
   </body>
 </html>
 `,
@@ -148,7 +148,10 @@ const Weblab2View = () => {
 
   const setProject = (newProject: MultiFileSource) => {
     setCurrentProject(newProject);
-    if (Lab2Registry.getInstance().getProjectManager()) {
+    if (
+      Lab2Registry.getInstance().getProjectManager() &&
+      newProject !== currentProject
+    ) {
       const projectSources = {
         source: newProject,
       };
