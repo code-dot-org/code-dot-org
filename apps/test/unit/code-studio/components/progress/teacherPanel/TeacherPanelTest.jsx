@@ -65,6 +65,8 @@ const setUpWithMount = async overrideProps => {
   );
 };
 
+fetch.mockResponse(JSON.stringify({}));
+
 describe('TeacherPanel', () => {
   describe('on unit page', () => {
     it('initial view as participant has teacher panel header and view toggle', () => {
