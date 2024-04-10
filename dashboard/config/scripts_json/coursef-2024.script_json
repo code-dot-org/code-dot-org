@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-04-08 22:07:47 UTC",
+    "serialized_at": "2024-04-09 22:16:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1802,8 +1802,31 @@
       }
     },
     {
-      "key": "ed195d87-ca46-4785-988f-62650602ed22",
+      "key": "e4eedbf1-6ece-46fb-9250-0133812cd047",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"How do events work?\" slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4eedbf1-6ece-46fb-9250-0133812cd047",
+        "lesson_activity.key": "9c192c26-5570-4c19-bd37-2c1089e58674"
+      }
+    },
+    {
+      "key": "29c6e2c0-cbad-48fb-a2b7-9c781814132c",
+      "position": 4,
+      "properties": {
+        "description": "How do events work?\n\n1. The user presses a key on the keyboard.\n2. The keyboard sends a signal to the computer.\n3. The computer makes a decision based on the code.\n4. The computer updates the display.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "29c6e2c0-cbad-48fb-a2b7-9c781814132c",
+        "lesson_activity.key": "9c192c26-5570-4c19-bd37-2c1089e58674"
+      }
+    },
+    {
+      "key": "ed195d87-ca46-4785-988f-62650602ed22",
+      "position": 5,
       "properties": {
         "description": "####Skill Building and Practice (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - 7 - Skill Building” slide\n\n**Transition:** Have students move to their computer and sign in. These activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
         "progression_name": "Skill Building"
@@ -1815,7 +1838,7 @@
     },
     {
       "key": "34782cb4-e649-4ee7-969b-c49a3530e023",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Practice” slide \n",
         "progression_name": "Practice"
@@ -1827,7 +1850,7 @@
     },
     {
       "key": "e7fdc7f3-a51b-40c0-9567-930dcdcdb44a",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "####Free Play (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n\n**Transition:** Students should now skip to the final level in the lesson where they will see the same free play choices as the previous lessons. Encourage students to add events to their projects from last time, or begin a new project.\n\n",
         "progression_name": "Free Play: Make an Interactive Scene",
@@ -1844,31 +1867,8 @@
       }
     },
     {
-      "key": "7de939b7-6d3d-4be0-8d58-d87bc9e9fe4e",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"How do events work?\" slide\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "7de939b7-6d3d-4be0-8d58-d87bc9e9fe4e",
-        "lesson_activity.key": "b2ec2f11-63c6-4848-85d3-a0f881bd78e9"
-      }
-    },
-    {
-      "key": "07440956-d416-4c9e-8521-6e3de727d720",
-      "position": 2,
-      "properties": {
-        "description": "How do events work?\n\n1. The user presses a key on the keyboard.\n2. The keyboard sends a signal to the computer.\n3. The computer makes a decision based on the code.\n4. The computer updates the display.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "07440956-d416-4c9e-8521-6e3de727d720",
-        "lesson_activity.key": "b2ec2f11-63c6-4848-85d3-a0f881bd78e9"
-      }
-    },
-    {
       "key": "2059ef8c-2e99-44b7-a14a-7e9c601efd2c",
-      "position": 3,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n_Arrow keys are one way to make a program more interactive._\n\n* _What other ways could we give a user control over what happens in an app or game?_\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.",
         "name": "Reflect"
@@ -9157,6 +9157,16 @@
       }
     },
     {
+      "key": "098646d6-ec55-482f-becb-60a84e8e720d",
+      "properties": {
+        "description": "Identify ways to refine an algorithm to include more advanced features."
+      },
+      "seeding_key": {
+        "lesson.key": "Making Sprites",
+        "objective.key": "098646d6-ec55-482f-becb-60a84e8e720d"
+      }
+    },
+    {
       "key": "0a0987f9-5854-4c88-b2c6-f02b021f0fb2",
       "properties": {
         "description": "Use variables in conjunction with prompts."
@@ -9624,7 +9634,21 @@
       "seeding_key": {
         "lesson.key": "Introducing Sprite Lab",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-18"
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introducing Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introducing Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
       }
     },
     {
@@ -9666,7 +9690,21 @@
       "seeding_key": {
         "lesson.key": "Making Sprites",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sprites",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {

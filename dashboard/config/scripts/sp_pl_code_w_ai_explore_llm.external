@@ -3,33 +3,53 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction to Machine Learning 
+# Exploring Large Language Models 
 
-## Role of the teacher 
+#### There are many different large language models available. Let’s begin by exploring some of the most popular models. You may have experience with one or more of these LLMs. For this activity, feel free to explore one or all of them to get comfortable with how they work. 
 
-##### The lessons at the start of the unit are designed to help students build foundational knowledge about how machine learning works before moving into AI Lab where students will create machine learning models of their own. These lessons, and all lessons within the AI and Machine Learning unit, are intended to be facilitated by a teacher. These lessons are not designed as self-paced experiences for students to work through at their own pace. 
+#### **First, decide which LLM you want to start with.**
 
-## Introduction to App Lab
+<table border="1">
+    <tr>
+        <th width = "250px" style="font-size: 20px;"> Open AI's ChatGPT</th>
+        <th width = 250px style="font-size: 20px;"> Microsoft's Copilot</th>
+        <th width = 250px style="font-size: 20px;"> Google's Gemini </th>
+    </tr>
+    <tr>
+        <td style="font-size: 16px;"><br>1. Go to <a href="https://chat.openai.com/" target="blank" rel="noopener noreferrer">ChatGPT</a> <br> <br> 2. Sign-up to make a free account.<br> <br> <i>Need Help Getting Started?</i> <br> <a href="https://docs.google.com/document/d/1X9RLIpeAwlxckdAugepxS4h7hyjvHUTSDn-knipVneE/edit?usp=sharing" target="blank" rel="noopener noreferrer">ChatGPT Teacher Guide </a>
+</td>
+        <td style="font-size: 16px;"> <br> 1. Go to <a href="https://www.bing.com/chat" target="blank" rel="noopener noreferrer"> Bing</a> <br> <br> 2. Sign-up to make a free account. <br><br> <i>Need Help Getting Started?</i> <br> <a href="https://docs.google.com/document/d/1Pqz-xjN1btqSvFj4vYMOZS0boJ0Bw_DFDZ3v_3nwUVk/" target="blank" rel="noopener noreferrer">Copilot Teacher Guide </a></td>
+        
+        <td style="font-size: 16px;"><br> 1. Go to<a href="https://gemini.google.com/" target="blank" rel="noopener noreferrer"> Gemini</a>  <br><br> 2. Sign-up to make a free account. <br><br> <i>Need Help Getting Started?</i> <br> <a href="https://docs.google.com/document/d/1NFPloHIzAxZca_86Up4Ubrji4xLjGKBIH9gqoBRopAg/" target="blank" rel="noopener noreferrer">Gemini Teacher Guide </a> </td>
+    </tr>
+     
 
-##### The Creating Apps for Devices unit begins with a lesson on App Lab to get your students familiar with the tool they will use this unit. If your students are already familiar with App Lab, you may decide to skip this lesson. <a href="https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students" target="blank" rel="noopener noreferrer">Click here</a> to learn more about skipping this lesson, allowing your classes to start right away with Chapter 1: Lesson 2.
+</table>
+<br>
 
-## Overview of Lesson 2
+#### **Next, start exploring by chatting with the bot.** 
 
-<img src="https://images.code.org/f4302117de331dd83e94c497dd711c1e-image-1636126730503.37.01 AM.png" alt="Image of a fish" width="150px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+#### Spend about 10 - 15 minutes exploring the capabilities of the LLM of your choice. 
 
-##### **Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?
+## Example Prompts: 
 
-##### **Lesson Overview:** In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.
+#### Here is a list of example prompts you can explore. Feel free to play around and be as creative as possible when chatting. 
 
-##### **Students will be able to:** Apply the Problem Solving Process to train a computer to solve a problem.
+#### **1.** Explain a [complex scientific concept] in a way that a middle school student can understand. *(For example: "Explain the theory of relativity in a way that is engaging for a 12-year-old.")*
 
 
-<div style="clear:both"/>
+#### **2.** Write a short narrative poem from the perspective of a historical figure. *(For example: "Write a poem from the perspective of Cleopatra about her relationship with Mark Antony.")*
 
-## Let's start learning!
 
-##### In the next level of this professional learning module, you will  practice training A.I. Bot to differentiate between trash and fish. This is one of the first activities students will engage with in the AI and Machine learning unit.
+#### **3.** Create a dialogue between two characters from a famous work of literature and discuss a contemporary issue. *(For example: "Write a conversation between Romeo and Juliet about social media and its impact on relationships.")* 
 
+
+#### **4.** Plan a day trip itinerary for me in a nearby city, considering my interests in art and local cuisine. *(For example: "I want to explore a nearby city for a day trip. I love visiting museums and trying new foods. Craft a day trip itinerary for me!")*
+
+## Tips and Tricks: 
+
+- #### When you’re prompting the AI don’t just stop after the first prompt! Keep asking it more questions and diving deeper.
+- #### Keep your critical thinking cap on. Use your better judgment and fact check anything that maybe doesn’t sound right. 
 
 
 MARKDOWN
