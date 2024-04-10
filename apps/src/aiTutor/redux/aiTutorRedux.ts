@@ -8,14 +8,13 @@ import {
   ChatCompletionMessage,
   Level,
   ChatContext,
-  AITutorTypesValue,
   AITutorInteractionStatusValue,
+  AITutorTypes,
 } from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AITutorState {
-  selectedTutorType: AITutorTypesValue | undefined;
   level: Level | undefined;
   scriptId: number | undefined;
   aiResponse: string | undefined;
@@ -34,13 +33,28 @@ const initialChatMessages: ChatCompletionMessage[] = [
 ];
 
 const initialState: AITutorState = {
-  selectedTutorType: undefined,
   level: undefined,
   scriptId: undefined,
   aiResponse: '',
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   chatMessageError: false,
+};
+
+const formatQuestionForAITutor = (chatContext: ChatContext) => {
+  console.log('checking chatContext.actionType', chatContext.actionType);
+  console.log('against', AITutorTypes.GENERAL_CHAT);
+  if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
+    return chatContext.studentInput;
+  }
+
+  const separator = '\n\n---\n\n';
+  const codePrefix = "Here is the student's code:\n\n```\n";
+  const codePostfix = '\n```';
+  // Construct the formatted question
+  const formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
+
+  return formattedQuestion;
 };
 
 // THUNKS
@@ -66,14 +80,19 @@ export const askAITutor = createAsyncThunk(
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
+    const formattedQuestion = formatQuestionForAITutor(chatContext);
+
+    // TODO: Handle additional context
     const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
       newMessageId,
-      chatContext.studentInput,
+      formattedQuestion,
       storedMessages,
       levelContext.levelId,
-      chatContext.tutorType
+      chatContext.actionType
     );
+
+    console.log('chatApiResponse', chatApiResponse);
 
     thunkAPI.dispatch(
       updateChatMessageStatus({
@@ -94,11 +113,13 @@ export const askAITutor = createAsyncThunk(
 
     const interactionData = {
       ...levelContext,
-      type: chatContext.tutorType,
+      type: chatContext.actionType,
       prompt: JSON.stringify(chatContext.studentInput),
       status: chatApiResponse?.status,
       aiResponse: chatApiResponse?.assistantResponse,
     };
+
+    console.log('interactionData', interactionData);
 
     await savePromptAndResponse(interactionData);
   }
@@ -108,12 +129,6 @@ const aiTutorSlice = createSlice({
   name: 'aiTutor',
   initialState,
   reducers: {
-    setSelectedTutorType: (
-      state,
-      action: PayloadAction<AITutorTypesValue | undefined>
-    ) => {
-      state.selectedTutorType = action.payload;
-    },
     addAIResponse: (state, action: PayloadAction<string | undefined>) => {
       state.aiResponse = action.payload;
     },
@@ -165,7 +180,6 @@ const aiTutorSlice = createSlice({
 
 registerReducers({aiTutor: aiTutorSlice.reducer});
 export const {
-  setSelectedTutorType,
   setLevel,
   setScriptId,
   addAIResponse,

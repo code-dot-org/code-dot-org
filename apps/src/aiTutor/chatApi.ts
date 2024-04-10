@@ -12,6 +12,8 @@ const CHAT_COMPLETION_URL = '/openai/chat_completion';
 
 /**
  * This function sends a POST request to the chat completion backend controller.
+ * Note: This function needs access to the tutorType so it can decide whether to include
+ * validation code on the backend.
  */
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
@@ -22,9 +24,18 @@ export async function postOpenaiChatCompletion(
     ? {levelId: levelId, messages: messagesToSend, type: tutorType}
     : {messages: messagesToSend, type: tutorType};
 
+  console.log('payload', payload);
+  let stringifiedPayload;
+  try {
+    stringifiedPayload = JSON.stringify(payload);
+  } catch (err) {
+    console.log('error converting payload to JSON', err);
+    return null;
+  }
+
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
-    JSON.stringify(payload),
+    stringifiedPayload,
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',
@@ -52,7 +63,7 @@ const formatForChatCompletion = (
 export async function getChatCompletionMessage(
   systemPrompt: string,
   userMessageId: number,
-  newMessage: string,
+  formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
   levelId?: number,
   tutorType?: AITutorTypesValue
@@ -60,7 +71,7 @@ export async function getChatCompletionMessage(
   const messagesToSend = [
     {role: Role.SYSTEM, content: systemPrompt},
     ...formatForChatCompletion(chatMessages),
-    {role: Role.USER, content: newMessage},
+    {role: Role.USER, content: formattedQuestion},
   ];
   let response;
   try {
@@ -70,6 +81,7 @@ export async function getChatCompletionMessage(
       tutorType
     );
   } catch (error) {
+    console.log('error in chat completion request', error as Error);
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Error in chat completion request', error as Error);

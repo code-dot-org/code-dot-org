@@ -28,7 +28,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   return (
     <div className={style.tutorContainer}>
       <div id="chat-workspace-area" className={style.chatWorkspace}>
-        <WarningModal />
+        {/* <WarningModal /> */}
         <div
           id="chat-workspace-conversation"
           className={style.conversationArea}
