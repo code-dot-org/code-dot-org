@@ -262,6 +262,28 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  const renderChildAccountPolicyNotification = () => {
+    const isEmailLoggin = queryParams('loginType') === 'email';
+
+    // We want to display a Child Account Policy warning notification for US
+    // teachers who are creating a new section with email logins.
+    if (showChildAccountPolicy && isEmailLoggin)
+      return (
+        <Provider store={getStore()}>
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.childAccountPolicy_CreateSectionsWarning()}
+            detailsLink="https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
+            detailsLinkNewWindow={true}
+            detailsLinkText={i18n.childAccountPolicy_LearnMore()}
+            dismissible={false}
+          />
+        </Provider>
+      );
+    else return;
+  };
+
   const renderExpandableSection = (
     sectionId,
     sectionTitle,
@@ -365,19 +387,9 @@ export default function SectionsSetUpContainer({
           </>
         )}
       </div>
-      {showChildAccountPolicy && (
-        <Provider store={getStore()}>
-          <Notification
-            type={NotificationType.warning}
-            notice=""
-            details={i18n.childAccountPolicy_CreateSectionsWarning()}
-            detailsLink="https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
-            detailsLinkNewWindow={true}
-            detailsLinkText={i18n.childAccountPolicy_LearnMore()}
-            dismissible={false}
-          />
-        </Provider>
-      )}
+
+      {renderChildAccountPolicyNotification()}
+
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
