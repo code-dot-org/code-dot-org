@@ -6,7 +6,7 @@ import {
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {CHAT_COMPLETION_URL} from './constants';
+import {CHAT_COMPLETION_URL} from '../aichat/constants';
 import Lab2Registry from '../lab2/Lab2Registry';
 
 /**

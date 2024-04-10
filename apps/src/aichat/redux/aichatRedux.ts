@@ -10,7 +10,7 @@ import {
   AI_CUSTOMIZATIONS_LABELS,
 } from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
-import {getChatCompletionMessage} from '../chatApi';
+import {getChatCompletionMessage} from '../../aiTutor/chatApi';
 import {
   ChatCompletionMessage,
   AichatLevelProperties,
