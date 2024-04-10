@@ -6,8 +6,9 @@ import {
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {CHAT_COMPLETION_URL} from '../aichat/constants';
 import Lab2Registry from '../lab2/Lab2Registry';
+
+const CHAT_COMPLETION_URL = '/openai/chat_completion';
 
 /**
  * This function sends a POST request to the chat completion backend controller.
