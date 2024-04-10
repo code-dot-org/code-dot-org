@@ -264,10 +264,10 @@ export default function SectionsSetUpContainer({
 
   const renderChildAccountPolicyNotification = () => {
     const isEmailLoggin = queryParams('loginType') === 'email';
-
+    const isStudentSection = queryParams('participantType') === 'student';
     // We want to display a Child Account Policy warning notification for US
     // teachers who are creating a new section with email logins.
-    if (showChildAccountPolicy && isEmailLoggin)
+    if (showChildAccountPolicy && isStudentSection && isEmailLoggin) {
       return (
         <Provider store={getStore()}>
           <Notification
@@ -281,7 +281,9 @@ export default function SectionsSetUpContainer({
           />
         </Provider>
       );
-    else return;
+    } else {
+      return null;
+    }
   };
 
   const renderExpandableSection = (
