@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-05 20:03:56 UTC",
+    "serialized_at": "2024-04-09 18:54:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -79,6 +79,7 @@
       "key": "d6d2d733-9e27-4d17-8a0a-7adb091a7e62",
       "position": 2,
       "properties": {
+        "progression_name": "Impact of AI (20 min)"
       },
       "seeding_key": {
         "activity_section.key": "d6d2d733-9e27-4d17-8a0a-7adb091a7e62",
@@ -104,6 +105,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-introduction_2024"
+        ],
         "progression": "Opening (10 min)"
       },
       "bonus": false,
@@ -126,6 +130,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-opening_2024"
+        ],
         "progression": "Opening (10 min)"
       },
       "bonus": false,
@@ -145,9 +152,122 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Opening (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-vhold_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "fde5b762-c27a-4a0d-ae35-32aa10569891"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-vhold_2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Opening (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod1-opening_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "fde5b762-c27a-4a0d-ae35-32aa10569891"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod1-opening_02_2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Impact of AI (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod1-impact_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "d6d2d733-9e27-4d17-8a0a-7adb091a7e62"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod1-impact_2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Impact of AI (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod1-impact_03_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "d6d2d733-9e27-4d17-8a0a-7adb091a7e62"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod1-impact_03_2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Impact of AI (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod1-impact_05_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "d6d2d733-9e27-4d17-8a0a-7adb091a7e62"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod1-impact_05_2024"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-closing_2024"
+        ],
         "progression": "Wrap Up (5 min)"
       },
       "bonus": false,
@@ -165,11 +285,14 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-closing_02_2024"
+        ],
         "progression": "Wrap Up (5 min)"
       },
       "bonus": false,
@@ -210,6 +333,66 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-ai-101-mod1",
         "activity_section.key": "fde5b762-c27a-4a0d-ae35-32aa10569891"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-vhold_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-vhold_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "fde5b762-c27a-4a0d-ae35-32aa10569891"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod1-opening_02_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod1-opening_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "fde5b762-c27a-4a0d-ae35-32aa10569891"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod1-impact_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod1-impact_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "d6d2d733-9e27-4d17-8a0a-7adb091a7e62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod1-impact_03_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod1-impact_03_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "d6d2d733-9e27-4d17-8a0a-7adb091a7e62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod1-impact_05_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod1-impact_05_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod1",
+        "activity_section.key": "d6d2d733-9e27-4d17-8a0a-7adb091a7e62"
       }
     },
     {
