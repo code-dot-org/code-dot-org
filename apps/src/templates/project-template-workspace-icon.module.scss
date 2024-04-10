@@ -12,13 +12,11 @@
 }
 
 .projectTemplateIcon {
-  padding-top: 9px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
   opacity: 1;
 }
 
 .projectTemplateButton {
   @include remove-button-styles;
   margin-right: 5px;
-  margin-bottom: -1px;
 }
