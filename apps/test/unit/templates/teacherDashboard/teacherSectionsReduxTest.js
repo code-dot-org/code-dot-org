@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import sinon from 'sinon';
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
@@ -1737,15 +1738,19 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('AnalyticsReporter events', () => {
-    let analyticsSpy;
+    let analyticsSpy, jqueryStub;
 
     beforeEach(() => {
       store.dispatch(setSections(sections));
       analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+      jqueryStub = sinon.stub($, 'ajax');
+      jqueryStub.returns({done: sinon.stub().returns({fail: sinon.stub()})});
     });
 
     afterEach(() => {
       analyticsSpy.restore();
+      jqueryStub.restore();
     });
 
     it('sends an event when course offering is assigned', () => {

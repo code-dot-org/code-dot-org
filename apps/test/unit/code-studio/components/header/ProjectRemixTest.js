@@ -60,11 +60,8 @@ describe('ProjectRemix', () => {
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
     wrapper.simulate('click');
     expect(utils.navigateToHref.calledOnce).to.be.true;
-    expect(
-      utils.navigateToHref.calledWith(
-        '/users/sign_in?user_return_to=/'
-      )
-    ).to.be.true;
+    expect(utils.navigateToHref.calledWith('/users/sign_in?user_return_to=/'))
+      .to.be.true;
 
     utils.navigateToHref.restore();
   });
