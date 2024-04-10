@@ -13,7 +13,6 @@ const ExampleTopicsInputs: React.FunctionComponent<{
 
   return (
     <MultiItemInput
-      key="exampleTopics"
       items={topics}
       onAdd={() =>
         dispatch(
