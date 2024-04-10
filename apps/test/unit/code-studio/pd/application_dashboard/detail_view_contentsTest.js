@@ -8,36 +8,22 @@ import React from 'react';
 import {render, screen, fireEvent, within} from '@testing-library/react';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
-import {
-  getStore,
-  registerReducers,
-  restoreRedux,
-  stubRedux,
-} from '@cdo/apps/redux';
+import {getStore, restoreRedux, stubRedux} from '@cdo/apps/redux';
 import {BrowserRouter as Router} from 'react-router-dom';
-import { assert } from 'chai';
 
 describe('DetailViewContents', () => {
   allowConsoleWarnings();
   let store;
 
-  // We aren't testing any of the responses of the workshop selector control, so just
-  // have a fake server to handle calls and suppress warnings
-  let server;
-
   beforeEach(() => {
     stubRedux();
     store = getStore();
-    server = sinon.fakeServer.create();
   });
 
   afterEach(() => {
     restoreRedux();
-    server.restore();
   });
 
   const DEFAULT_APPLICATION_DATA = {
@@ -107,353 +93,363 @@ describe('DetailViewContents', () => {
     );
   }
 
-  // const mountDetailView = (overrides = {}) => {
-  //   const defaultApplicationData = {
-  //     ...DEFAULT_APPLICATION_DATA,
-  //   };
-  //   const defaultProps = {
-  //     canLock: true,
-  //     applicationId: '1',
-  //     applicationData: defaultApplicationData,
-  //     isWorkshopAdmin: false,
-  //   };
+  describe('Notes', () => {
+    it('Does not supply value for teacher applications with no notes', () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          notes: '',
+        },
+      };
+      renderDefault(overrideProps);
 
-  //  No-op router context
-  //  context = {
-  //    router: {
-  //      push() {},
-  //    },
-  //  };
+      expect(screen.getAllByDisplayValue('')[0].id).to.eql('notes');
+    });
+  });
 
-  //   return mount(<DetailViewContents {..._.merge(defaultProps, overrides)} />, {
-  //     context,
-  //   });
-  // };
+  describe('Edit controls in Teacher', () => {
+    it("cannot change status if application is currently in 'Awaiting Admin Approval'", () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'awaiting_admin_approval',
+        },
+      };
+      renderDefault(overrideProps);
 
+      const statusDropdowns = screen.getAllByDisplayValue(
+        'Awaiting Admin Approval'
+      );
+      statusDropdowns.forEach(statusDropdown => {
+        assert(statusDropdown.disabled);
+      });
+    });
 
+    it("cannot make status 'Awaiting Admin Approval' from dropdown", () => {
+      renderDefault();
 
+      const statusDropdowns = screen.getAllByDisplayValue('Accepted');
+      statusDropdowns.forEach(statusDropdown => {
+        expect(within(statusDropdown).queryByText('Awaiting Admin Approval')).to
+          .be.null;
+      });
+    });
 
+    it("cannot make status 'Incomplete' from dropdown", () => {
+      renderDefault();
 
+      const statusDropdowns = screen.getAllByDisplayValue('Accepted');
+      statusDropdowns.forEach(statusDropdown => {
+        expect(within(statusDropdown).queryByText('Incomplete')).to.be.null;
+      });
+    });
 
+    it('incomplete status is in dropdown if teacher application is incomplete', () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'incomplete',
+          scholarship_status: null,
+          update_emails_sent_by_system: false,
+        },
+      };
+      renderDefault(overrideProps);
 
+      const statusDropdowns = screen.getAllByDisplayValue('Incomplete');
+      expect(statusDropdowns.length).to.equal(2);
+      statusDropdowns.forEach(statusDropdown => {
+        within(statusDropdown).queryByText('Incomplete');
+      });
+    });
 
+    it('changelog logs all possible status changes', () => {
+      let status_change_log = [];
 
-  // describe('Notes', () => {
-  //   it('Does not supply value for teacher applications with no notes', () => {
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         notes: '',
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
+      // Get logs for changing through possible status
+      Object.keys(getSelectableApplicationStatuses()).forEach(status => {
+        status_change_log.push({
+          changing_user: 'Test use',
+          time: '2018-06-01 12:00 PDT',
+          title: status,
+        });
+      });
 
-  //     expect(screen.getAllByDisplayValue('')[0].id).to.eql('notes');
-  //   });
-  // });
+      // Check that recorded change logs are rendered in ChangeLog element
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status_change_log: status_change_log,
+        },
+      };
+      renderDefault(overrideProps);
 
-  // describe('Edit controls in Teacher', () => {
-  //   it("cannot change status if application is currently in 'Awaiting Admin Approval'", () => {
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         status: 'awaiting_admin_approval',
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
+      Object.keys(getSelectableApplicationStatuses()).forEach(status => {
+        screen.getByText(status);
+      });
+    });
+  });
 
-  //     const statusDropdowns = screen.getAllByDisplayValue(
-  //       'Awaiting Admin Approval'
-  //     );
-  //     statusDropdowns.forEach(statusDropdown => {
-  //       assert(statusDropdown.disabled);
-  //     });
-  //   });
+  describe('Admin edit dropdown', () => {
+    it('Is not visible to regional partners', () => {
+      const overrideProps = {
+        isWorkshopAdmin: false,
+      };
+      renderDefault(overrideProps);
 
-  //   it("cannot make status 'Awaiting Admin Approval' from dropdown", () => {
-  //     renderDefault();
+      expect(screen.queryByLabelText('Edit')).to.be.null;
+      expect(screen.queryByText('(Admin) Edit Form Data')).to.be.null;
+      expect(screen.queryByText('Delete Application')).to.be.null;
+    });
 
-  //     const statusDropdowns = screen.getAllByDisplayValue('Accepted');
-  //     statusDropdowns.forEach(statusDropdown => {
-  //       expect(within(statusDropdown).queryByText('Awaiting Admin Approval')).to
-  //         .be.null;
-  //     });
-  //   });
+    it('Is visible to admins', () => {
+      const overrideProps = {
+        isWorkshopAdmin: true,
+      };
+      renderDefault(overrideProps);
 
-  //   it("cannot make status 'Incomplete' from dropdown", () => {
-  //     renderDefault();
+      expect(screen.getAllByLabelText('Edit').length).to.equal(2);
+      expect(screen.getAllByText('(Admin) Edit Form Data').length).to.equal(2);
+      expect(screen.getAllByText('Delete Application').length).to.equal(2);
+    });
+  });
 
-  //     const statusDropdowns = screen.getAllByDisplayValue('Accepted');
-  //     statusDropdowns.forEach(statusDropdown => {
-  //       expect(within(statusDropdown).queryByText('Incomplete')).to.be.null;
-  //     });
-  //   });
+  describe('Edit controls behavior', () => {
+    it('the dropdown is disabled until the Edit button is clicked in Teacher Application', () => {
+      renderDefault();
 
-  //   it('incomplete status is in dropdown if teacher application is incomplete', () => {
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         status: 'incomplete',
-  //         scholarship_status: null,
-  //         update_emails_sent_by_system: false,
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
+      // Dropdowns and notes are disabled before Edit button is clicked
+      screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
+        assert(dropdown.disabled);
+      });
+      assert(screen.getByDisplayValue('notes').disabled);
 
-  //     const statusDropdowns = screen.getAllByDisplayValue('Incomplete');
-  //     expect(statusDropdowns.length).to.equal(2);
-  //     statusDropdowns.forEach(statusDropdown => {
-  //       within(statusDropdown).queryByText('Incomplete');
-  //     });
-  //   });
+      // Dropdowns and notes are enabled after Edit button is clicked
+      fireEvent.click(screen.getAllByText('Edit')[0]);
+      screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
+        assert(!dropdown.disabled);
+      });
+      assert(!screen.getByDisplayValue('notes').disabled);
 
-  //   it('changelog logs all possible status changes', () => {
-  //     let status_change_log = [];
+      // Dropdowns and notes are disabled after Cancel or Save button is clicked
+      fireEvent.click(screen.getAllByText('Cancel')[0]);
+      screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
+        assert(dropdown.disabled);
+      });
+      assert(screen.getByDisplayValue('notes').disabled);
+    });
+  });
 
-  //     // get logs for changing through possible status
-  //     Object.keys(getSelectableApplicationStatuses()).forEach(status => {
-  //       status_change_log.push({
-  //         changing_user: 'Test use',
-  //         time: '2018-06-01 12:00 PDT',
-  //         title: status,
-  //       });
-  //     });
+  describe('Principal Approvals', () => {
+    it(`Shows principal responses if approval is complete`, () => {
+      renderDefault();
 
-  //     // check that recorded change logs are rendered in ChangeLog element
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         status_change_log: status_change_log,
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
+      screen.getByText('Administrator Approval and School Information');
+    });
 
-  //     Object.keys(getSelectableApplicationStatuses()).forEach(status => {
-  //       screen.getByText(status);
-  //     });
-  //   });
-  // });
+    it(`Shows URL to principal approval if sent and incomplete`, () => {
+      const guid = '1020304';
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          application_guid: guid,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+        },
+      };
+      renderDefault(overrideProps);
 
-  // describe('Admin edit dropdown', () => {
-  //   it('Is not visible to regional partners', () => {
-  //     const overrideProps = {
-  //       isWorkshopAdmin: false,
-  //     };
-  //     renderDefault(overrideProps);
+      assert(
+        screen
+          .getAllByRole('link')[1]
+          .href.includes(`/pd/application/principal_approval/${guid}`)
+      );
+    });
 
-  //     expect(screen.queryByLabelText('Edit')).to.be.null;
-  //     expect(screen.queryByText('(Admin) Edit Form Data')).to.be.null;
-  //     expect(screen.queryByText('Delete Application')).to.be.null;
-  //   });
+    it(`Shows complete text for principal approval if complete`, () => {
+      const guid = '1020305';
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          application_guid: guid,
+          principal_approval_state: PrincipalApprovalState.complete,
+        },
+      };
+      renderDefault(overrideProps);
 
-  //   it('Is visible to admins', () => {
-  //     const overrideProps = {
-  //       isWorkshopAdmin: true,
-  //     };
-  //     renderDefault(overrideProps);
+      screen.getByText(PrincipalApprovalState.complete.trim());
+    });
 
-  //     expect(screen.getAllByLabelText('Edit').length).to.equal(2);
-  //     expect(screen.getAllByText('(Admin) Edit Form Data').length).to.equal(2);
-  //     expect(screen.getAllByText('Delete Application').length).to.equal(2);
-  //   });
+    it(`Shows button to make principal approval required if not`, () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_not_required: true,
+        },
+      };
+      renderDefault(overrideProps);
 
-  // //   it('Edit redirects to edit page', () => {
-  // //     const detailView = mountDetailView({
-  // //       isWorkshopAdmin: true,
-  // //     });
-  // //     const mockRouter = sinon.mock(context.router);
+      screen.getByRole('button', {name: 'Make required'});
+    });
 
-  // //     detailView.find('button#admin-edit').first().simulate('click');
-  // //     const adminEditMenuitem = detailView
-  // //       .find('.dropdown.open a')
-  // //       .findWhere(a => a.text() === '(Admin) Edit Form Data')
-  // //       .first();
+    it(`Shows button to make principal approval not required if it is`, () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_not_required: null, // principal approval is required
+        },
+      };
+      renderDefault(overrideProps);
 
-  // //     mockRouter.expects('push').withExactArgs('/1/edit');
-  // //     adminEditMenuitem.simulate('click');
-  // //     mockRouter.verify();
-  // //   });
-  // });
+      screen.getByRole('button', {name: 'Make not required'});
+    });
 
-  // describe('Edit controls behavior', () => {
-  //   it('the dropdown is disabled until the Edit button is clicked in Teacher Application', () => {
-  //     renderDefault();
+    it(`Shows button to resend admin email if status is awaiting_admin_approval and it is allowed to be resent`, () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+          allow_sending_principal_email: true,
+          status: 'awaiting_admin_approval',
+        },
+      };
+      renderDefault(overrideProps);
 
-  //     // Dropdowns and notes are disabled before Edit button is clicked
-  //     screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
-  //       assert(dropdown.disabled);
-  //     });
-  //     assert(screen.getByDisplayValue('notes').disabled);
+      screen.getByRole('button', {name: 'Resend request'});
+    });
 
-  //     // Dropdowns and notes are enabled after Edit button is clicked
-  //     fireEvent.click(screen.getAllByText('Edit')[0]);
-  //     screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
-  //       assert(!dropdown.disabled);
-  //     });
-  //     assert(!screen.getByDisplayValue('notes').disabled);
+    it(`Does not show button to resend admin email if status is awaiting_admin_approval but is not allowed to be resent`, () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+          allow_sending_principal_email: false,
+          status: 'awaiting_admin_approval',
+        },
+      };
+      renderDefault(overrideProps);
 
-  //     // Dropdowns and notes are disabled after Cancel or Save button is clicked
-  //     fireEvent.click(screen.getAllByText('Cancel')[0]);
-  //     screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
-  //       assert(dropdown.disabled);
-  //     });
-  //     assert(screen.getByDisplayValue('notes').disabled);
-  //   });
-  // });
+      expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
+    });
 
-  // describe('Principal Approvals', () => {
-  //   it(`Shows principal responses if approval is complete`, () => {
-  //     renderDefault();
+    it(`Does not show button to resend admin email if is allowed to be resent but status is pending`, () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_state: PrincipalApprovalState.inProgress,
+          allow_sending_principal_email: true,
+          status: 'pending',
+        },
+      };
+      renderDefault(overrideProps);
 
-  //     screen.findByText('Administrator Approval and School Information');
-  //   });
+      expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
+    });
+  });
 
-  //   it(`Shows URL to principal approval if sent and incomplete`, () => {
-  //     const guid = '1020304';
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         application_guid: guid,
-  //         principal_approval_state: PrincipalApprovalState.inProgress,
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
+  describe('Regional Partner View', () => {
+    it('has delete button', () => {
+      const overrideProps = {
+        isWorkshopAdmin: false,
+      };
+      renderDefault(overrideProps);
 
-  //     assert(
-  //       screen
-  //         .getAllByRole('link')[1]
-  //         .href.includes(`/pd/application/principal_approval/${guid}`)
-  //     );
-  //   });
+      expect(screen.getAllByText('Delete').length).to.equal(2);
+    });
+  });
 
-  //   it(`Shows complete text for principal approval if complete`, () => {
-  //     const guid = '1020305';
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         application_guid: guid,
-  //         principal_approval_state: PrincipalApprovalState.complete,
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
+  describe('Scholarship Teacher? row', () => {
+    it('on teacher applications', () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          scholarship_status: 'no',
+        },
+        isWorkshopAdmin: true,
+        regionalPartners: [{id: 1, name: 'test'}],
+      };
+      renderDefault(overrideProps);
 
-  //     screen.getByText(PrincipalApprovalState.complete.trim());
-  //   });
+      const selectDropdown =
+        screen.getByText('No, paid teacher').parentElement.parentElement
+          .parentElement.parentElement;
 
-  //   it(`Shows button to make principal approval required if not`, () => {
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         principal_approval_not_required: true,
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
+      // Dropdown is disabled
+      assert(selectDropdown.classList.contains('is-disabled'));
 
-  //     screen.getByRole('button', {name: 'Make required'});
-  //   });
+      // Click "Edit"
+      fireEvent.click(screen.getAllByText('Edit')[0]);
 
-  //   it(`Shows button to make principal approval not required if it is`, () => {
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         principal_approval_not_required: null, // principal approval is required
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
+      // Dropdown is no longer disabled
+      assert(!selectDropdown.classList.contains('is-disabled'));
 
-  //     screen.getByRole('button', {name: 'Make not required'});
-  //   });
+      // Click "Cancel"
+      fireEvent.click(screen.getAllByText('Cancel')[0]);
 
-  //   it(`Shows button to resend admin email if status is awaiting_admin_approval and it is allowed to be resent`, () => {
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         principal_approval_state: PrincipalApprovalState.inProgress,
-  //         allow_sending_principal_email: true,
-  //         status: 'awaiting_admin_approval',
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
-
-  //     screen.getByRole('button', {name: 'Resend request'});
-  //   });
-
-  //   it(`Does not show button to resend admin email if status is awaiting_admin_approval but is not allowed to be resent`, () => {
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         principal_approval_state: PrincipalApprovalState.inProgress,
-  //         allow_sending_principal_email: false,
-  //         status: 'awaiting_admin_approval',
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
-
-  //     expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
-  //   });
-
-  //   it(`Does not show button to resend admin email if is allowed to be resent but status is pending`, () => {
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         principal_approval_state: PrincipalApprovalState.inProgress,
-  //         allow_sending_principal_email: true,
-  //         status: 'pending',
-  //       },
-  //     };
-  //     renderDefault(overrideProps);
-
-  //     expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
-  //   });
-  // });
-
-  // describe('Regional Partner View', () => {
-  //   it('has delete button', () => {
-  //     const overrideProps = {
-  //       isWorkshopAdmin: false,
-  //     };
-  //     renderDefault(overrideProps);
-
-  //     expect(screen.getAllByText('Delete').length).to.equal(2);
-  //   });
-  // });
-
-  // describe('Scholarship Teacher? row', () => {
-  //   it('on teacher applications', () => {
-  //     const overrideProps = {
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         scholarship_status: 'no',
-  //       },
-  //       isWorkshopAdmin: true,
-  //       regionalPartners: [{id: 1, name: 'test'}],
-  //     };
-  //     renderDefault(overrideProps);
-
-  //     const selectDropdown =
-  //       screen.getByText('No, paid teacher').parentElement.parentElement
-  //         .parentElement.parentElement;
-
-  //     // Dropdown is disabled
-  //     assert(selectDropdown.classList.contains('is-disabled'));
-
-  //     // Click "Edit"
-  //     fireEvent.click(screen.getAllByText('Edit')[0]);
-
-  //     // Dropdown is no longer disabled
-  //     assert(!selectDropdown.classList.contains('is-disabled'));
-
-  //     // Click "Cancel"
-  //     fireEvent.click(screen.getAllByText('Cancel')[0]);
-
-  //     // Dropdown is disabled
-  //     assert(selectDropdown.classList.contains('is-disabled'));
-  //   });
-  // });
+      // Dropdown is disabled
+      assert(selectDropdown.classList.contains('is-disabled'));
+    });
+  });
 
   describe('Teacher application scholarship status', () => {
-    for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
-      it(`is required in order to set application status to ${applicationStatus}`, () => {
+    it('appends auto email text if set to true', () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'unreviewed',
+          scholarship_status: null,
+          update_emails_sent_by_system: true,
+        },
+      };
+      renderDefault(overrideProps);
+
+      expect(screen.getAllByText('Accepted (auto-email)').length).to.equal(2);
+      expect(screen.getAllByText('Declined (auto-email)').length).to.equal(2);
+    });
+
+    it('does not append auto email text if set to false', () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'unreviewed',
+          scholarship_status: null,
+          update_emails_sent_by_system: false,
+        },
+      };
+      renderDefault(overrideProps);
+
+      expect(screen.queryAllByText('Accepted (auto-email)').length).to.equal(0);
+      expect(screen.queryAllByText('Declined (auto-email)').length).to.equal(0);
+      expect(screen.getAllByText('Accepted').length).to.equal(2);
+      expect(screen.getAllByText('Declined').length).to.equal(2);
+    });
+
+    it(`is required in order to set application status to accepted`, () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'unreviewed',
+          scholarship_status: null,
+          update_emails_sent_by_system: false,
+        },
+      };
+      renderDefault(overrideProps);
+
+      // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
+      assert(!isModalShowing());
+      screen.getByText('Select...');
+      expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
+
+      // Attempt to change application status without updating scholarship status, resulting in modal that instructs
+      // the user to set the scholarship status first
+      clickEditButton();
+      setApplicationStatusTo('Unreviewed', 'accepted');
+      assert(isModalShowing());
+    });
+
+    for (const applicationStatus of _.difference(
+      Object.keys(getSelectableApplicationStatuses()),
+      ScholarshipStatusRequiredStatuses
+    )) {
+      it(`is not required to set application status to ${applicationStatus}`, () => {
         const overrideProps = {
           applicationData: {
             ...DEFAULT_APPLICATION_DATA,
@@ -469,100 +465,21 @@ describe('DetailViewContents', () => {
         screen.getByText('Select...');
         expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
 
-        // Attempt to change application status without updating scholarship status, resulting in modal that instructs
-        // the user to set the scholarship status first
+        // Change application status without updating scholarship status, and ensure that no modal pops up
         clickEditButton();
         setApplicationStatusTo('Unreviewed', applicationStatus);
-        assert(isModalShowing());
-        dismissModal();
         assert(!isModalShowing());
-        expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
 
-
-        // CURRENT SPOT IS TRYING TO CLOSE MODAL
-
-
-        //console.log(screen.getAllByRole('combobox').map(co => co.value));
-
-
-        // clickEditButton();
-        // setScholarshipStatusTo('no');
-        // screen.getByText('No, paid teacher');
-
-        // setApplicationStatusTo(applicationStatus);
-        // expect(isModalShowing()).to.be.false;
-        // expect(screen.findAllByText(applicationStatus).length).to.equal(2);
+        // Check that status successfully updated
+        const statusDisplayValue = getApplicationStatuses()[applicationStatus];
+        expect(screen.getAllByDisplayValue(statusDisplayValue).length).to.equal(
+          2
+        );
       });
     }
 
-  //   for (const applicationStatus of _.difference(
-  //     Object.keys(getSelectableApplicationStatuses()),
-  //     ScholarshipStatusRequiredStatuses
-  //   )) {
-  //     it(`is not required to set application status to ${applicationStatus}`, () => {
-  //       detailView = mountDetailView({
-  //         applicationData: {
-  //           ...DEFAULT_APPLICATION_DATA,
-  //           status: 'unreviewed',
-  //           scholarship_status: null,
-  //           update_emails_sent_by_system: false,
-  //         },
-  //       });
-  //       expect(isModalShowing()).to.be.false;
-  //       expect(getScholarshipStatus()).to.be.null;
-
-  //       setApplicationStatusTo(applicationStatus);
-  //       expect(isModalShowing()).to.be.false;
-  //       expect(getApplicationStatus()).to.equal(applicationStatus);
-  //     });
-  //   }
-
-  //   it('appends auto email text if set to true', () => {
-  //     detailView = mountDetailView({
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         status: 'unreviewed',
-  //         scholarship_status: null,
-  //         update_emails_sent_by_system: true,
-  //       },
-  //     });
-  //     let options = detailView.find('#DetailViewHeader select').find('option');
-  //     let applicationStatuses = Object.values(
-  //       getSelectableApplicationStatuses(true)
-  //     );
-  //     var i = 0;
-  //     options.forEach(option => {
-  //       expect(option.text()).to.equal(applicationStatuses[i]);
-  //       i++;
-  //     });
-  //   });
-
-  //   it('does not append auto email text if set to false', () => {
-  //     detailView = mountDetailView({
-  //       applicationData: {
-  //         ...DEFAULT_APPLICATION_DATA,
-  //         status: 'unreviewed',
-  //         scholarship_status: null,
-  //         update_emails_sent_by_system: false,
-  //       },
-  //     });
-  //     let options = detailView.find('#DetailViewHeader select').find('option');
-  //     let applicationStatuses = Object.values(
-  //       getSelectableApplicationStatuses(false)
-  //     );
-  //     var i = 0;
-  //     options.forEach(option => {
-  //       expect(option.text()).to.equal(applicationStatuses[i]);
-  //       i++;
-  //     });
-  //   });
-
     function clickEditButton() {
       fireEvent.click(screen.getAllByText('Edit')[0]);
-    }
-
-    function clickSaveButton() {
-      fireEvent.click(screen.getAllByText('Save')[0]);
     }
 
     function setApplicationStatusTo(currentStatus, newStatus) {
@@ -570,25 +487,8 @@ describe('DetailViewContents', () => {
       fireEvent.change(applicationDropdown, {target: {value: newStatus}});
     }
 
-    function setScholarshipStatusTo(newValue) {
-      const scholarshipDropdown = detailView
-        .find('tr')
-        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
-        .find('Select');
-      scholarshipDropdown.prop('onChange')({value: newValue});
-      detailView.update();
-    }
-
     function isModalShowing() {
       return screen.queryAllByText('Cannot save applicant status').length > 0;
-    }
-
-    function dismissModal() {
-      screen.debug(screen.getAllByText('OK'));
-      fireEvent.click(screen.getAllByText('OK')[0]);
-      // fireEvent.click(
-      //   screen.getAllByRole('button', {hidden: true, name: 'OK'})[0]
-      // );
     }
   });
 });
