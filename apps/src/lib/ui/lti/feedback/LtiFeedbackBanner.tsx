@@ -11,8 +11,6 @@ import i18n from '@cdo/locale';
 
 import FeedbackBanner, {BANNER_STATUS} from '../../feedback/FeedbackBanner';
 
-import './LtiFeedbackBanner.scss';
-
 /**
  * LtiFeedbackBanner component
  * This component is responsible for displaying the LMS Feedback banner for LTI teachers.
