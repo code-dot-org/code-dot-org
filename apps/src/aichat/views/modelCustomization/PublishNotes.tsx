@@ -1,4 +1,5 @@
 import React, {useCallback} from 'react';
+import classNames from 'classnames';
 
 import {
   setModelCardProperty,
@@ -9,9 +10,11 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import Button from '@cdo/apps/componentLibrary/button/Button';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
-import {isVisible, isDisabled} from './utils';
+import {isDisabled} from './utils';
 import ExampleTopicsInputs from './ExampleTopicsInputs';
-import styles from '../model-customization-workspace.module.scss';
+import Notification from './Notification';
+import moduleStyles from './publish-notes.module.scss';
+import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import {ModelCardInfo} from '../../types';
 
 const PublishNotes: React.FunctionComponent = () => {
@@ -29,19 +32,21 @@ const PublishNotes: React.FunctionComponent = () => {
     [dispatch]
   );
 
-  const getInputTag = (property: keyof ModelCardInfo) => {
-    return property === 'botName' ? 'input' : 'textarea';
-  };
-
   return (
-    <div className={styles.verticalFlexContainer}>
-      {isVisible(visibility) && (
-        <div className={styles.customizationContainer}>
+    <div className={modelCustomizationStyles.verticalFlexContainer}>
+      <div style={{display: 'flex', flexDirection: 'column'}}>
+        {hasFilledOutModelCard(modelCardInfo)
+          ? renderPublishOkNotification()
+          : renderCompleteToPublishNotification()}
+        <div className={modelCustomizationStyles.customizationContainer}>
           {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, _]) => {
             const InputTag = getInputTag(property);
 
             return (
-              <div className={styles.inputContainer} key={property}>
+              <div
+                className={modelCustomizationStyles.inputContainer}
+                key={property}
+              >
                 <label htmlFor={property}>
                   <StrongText>{label}</StrongText>
                 </label>
@@ -70,17 +75,81 @@ const PublishNotes: React.FunctionComponent = () => {
             );
           })}
         </div>
-      )}
-      <div className={styles.footerButtonContainer}>
+      </div>
+      <div className={modelCustomizationStyles.footerButtonContainerPublish}>
+        <Button
+          text="Save"
+          iconLeft={{iconName: 'download'}}
+          type="secondary"
+          color="black"
+          disabled={isDisabled(visibility)}
+          onClick={onUpdate}
+          className={modelCustomizationStyles.updateButton}
+        />
         <Button
           text="Publish"
           iconLeft={{iconName: 'upload'}}
-          disabled={isDisabled(visibility)}
+          disabled={
+            isDisabled(visibility) || !hasFilledOutModelCard(modelCardInfo)
+          }
           onClick={onUpdate}
-          className={styles.updateButton}
+          className={modelCustomizationStyles.updateButton}
         />
       </div>
     </div>
+  );
+};
+
+const getInputTag = (property: keyof ModelCardInfo) => {
+  return property === 'botName' ? 'input' : 'textarea';
+};
+
+const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
+  for (const key of Object.keys(modelCardInfo)) {
+    const typedKey = key as keyof ModelCardInfo;
+
+    if (typedKey === 'exampleTopics') {
+      if (
+        !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
+      ) {
+        return false;
+      }
+    }
+
+    if (!modelCardInfo[typedKey].length) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const renderPublishOkNotification = () => {
+  return (
+    <Notification
+      iconName="check"
+      iconStyle={moduleStyles.check}
+      content="Ready to publish"
+      contentStyle={moduleStyles.messageTextContainer}
+      containerStyle={moduleStyles.messageContainerPublishOk}
+    />
+  );
+};
+
+const renderCompleteToPublishNotification = () => {
+  return (
+    <Notification
+      iconName="triangle-exclamation"
+      iconStyle={moduleStyles.alert}
+      content={
+        <>
+          In order to publish, you <StrongText>must</StrongText> fill out a
+          model card
+        </>
+      }
+      contentStyle={moduleStyles.messageTextContainer}
+      containerStyle={classNames(moduleStyles.messageContainerAlert)}
+    />
   );
 };
 
