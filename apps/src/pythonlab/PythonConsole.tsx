@@ -28,7 +28,7 @@ const PythonConsole: React.FunctionComponent = () => {
         if (code) {
           runPythonCode(code);
         } else {
-          appendSystemMessage('No main.py to run.');
+          dispatch(appendSystemMessage('No main.py to run.'));
         }
       }
     } else {

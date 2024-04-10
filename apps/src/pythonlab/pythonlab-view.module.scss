@@ -18,11 +18,11 @@ $default-spacing: 2px;
 }
 
 .editor {
-  min-height: 400px;
+  max-height: 60%;
   flex-grow: 3;
 }
 
 .console {
-  max-height: 250px;
+  max-height: 35%;
   flex-grow: 1;
 }
