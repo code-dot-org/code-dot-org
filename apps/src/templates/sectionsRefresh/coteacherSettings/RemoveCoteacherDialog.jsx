@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
