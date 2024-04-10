@@ -4,7 +4,7 @@ import ChatMessage from './chatMessage';
 import UserChatMessageEditor from './userChatMessageEditor';
 import style from './chat-workspace.module.scss';
 import WarningModal from './warningModal';
-import {TutorType} from '@cdo/apps/aiTutor/types';
+import {AITutorTypes as TutorTypes} from '@cdo/apps/aiTutor/types';
 
 /**
  * Renders the AI Tutor main chat workspace component.
@@ -29,7 +29,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
     }
   };
 
-  const generalChat = tutorType === TutorType.GENERAL_CHAT;
+  const generalChat = tutorType === TutorTypes.GENERAL_CHAT;
 
   return (
     <div id="chat-workspace-area" className={style.chatWorkspace}>

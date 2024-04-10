@@ -4,7 +4,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
@@ -13,6 +12,33 @@ import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
 import style from './landingPage.module.scss';
+import Tabs from '@cdo/apps/componentLibrary/tabs';
+
+const getAvailableTabs = () => {
+  // [TODO]: return a subset of the tabs below based on the user's permission level
+  return [
+    {
+      value: 'myPL',
+      text: i18n.plLandingHeading(),
+    },
+    // {
+    //   value: 'myFacilitatorCenter',
+    //   text: i18n.plLandingTabFacilitatorCenter(),
+    // },
+    // {
+    //   value: 'myRPCenter',
+    //   text: i18n.plLandingTabRPCenter(),
+    // },
+    // {
+    //   value: 'myWorkshopOrganizerCenter',
+    //   text: i18n.plLandingTabWorkshopOrganizerCenter(),
+    // },
+    // {
+    //   value: 'myInstructorCenter',
+    //   text: i18n.plLandingTabInstructorCenter(),
+    // },
+  ];
+};
 
 export default function LandingPage({
   lastWorkshopSurveyUrl,
@@ -22,6 +48,12 @@ export default function LandingPage({
   workshopsAsParticipant,
   plCoursesStarted,
 }) {
+  const availableTabs = getAvailableTabs();
+  const headerContainerStyles =
+    availableTabs.length > 1 ? '' : style.headerWithoutTabsContainer;
+  // [TODO]: Uncomment this out once currentTab will affect what content is showed.
+  // const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
+
   const showGettingStartedBanner =
     !currentYearApplicationId &&
     workshopsAsParticipant?.length === 0 &&
@@ -95,10 +127,26 @@ export default function LandingPage({
 
   return (
     <>
-      <HeaderBannerNoImage
-        headingText={i18n.professionalLearning()}
-        backgroundColor={color.light_gray_50}
-      />
+      <div className={`${headerContainerStyles} ${style.headerContainer}`}>
+        <HeaderBannerNoImage headingText={i18n.professionalLearning()}>
+          {availableTabs.length > 1 && (
+            <nav className={style.myPlTabsContainer}>
+              <Tabs
+                name="myPLTabs"
+                tabs={availableTabs}
+                defaultSelectedTabValue={availableTabs[0].value}
+                onChange={tab => {
+                  // [TODO]: Uncomment this out once
+                  // currentTab affects what content
+                  // is shown.
+                  //setCurrentTab(tab);
+                  console.log(tab);
+                }}
+              />
+            </nav>
+          )}
+        </HeaderBannerNoImage>
+      </div>
       <main className={style.wrapper}>
         {showGettingStartedBanner && RenderGettingStartedBanner()}
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
@@ -111,7 +159,7 @@ export default function LandingPage({
             />
           </div>
         )}
-        <section style={{marginTop: '3rem'}}>
+        <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
           {RenderStaticRecommendedPL()}
         </section>

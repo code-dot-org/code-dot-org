@@ -1,35 +1,64 @@
 @import 'color.scss';
 
 .message {
-    padding: 10px 10px;
-    border-radius: 10px;
-    overflow: hidden;
+  padding: 10px 10px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .userMessageContainer {
-    margin: 0 0 15px 50px;
+  margin: 0 0 15px 50px;
 }
 
 .assistantMessageContainer {
-    margin: 0 50px 15px 0;
+  margin: 0 50px 15px 0;
 
-    h5 {
-        margin: 5px 0 5px 0;
+  h5 {
+    margin: 5px 0 5px 0;
+  }
+}
+
+.modelUpdateMessageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $light_affirmative_100;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 3px 0;
+
+  .removeStatusUpdate {
+    background-color: transparent;
+    color: $light_gray_700;
+
+    &:hover {
+      background-color: transparent;
+      color: $light_gray_700;
     }
+  }
+}
+
+.modelUpdateMessageTextContainer {
+  margin: 0 10px;
+}
+
+.check {
+  color: $light_affirmative_500;
+  font-size: 16px;
 }
 
 .userMessage {
-    background-color: $lightest_cyan;
+  background-color: $lightest_cyan;
 }
 
 .assistantMessage {
-    background-color: $lightest_gray;
+  background-color: $lightest_gray;
 }
 
 .inappropriateMessage {
-    background-color: $lightest_red;
+  background-color: $lightest_red;
 }
 
 .tooPersonalMessage {
-    background-color: $lightest_yellow;
+  background-color: $lightest_yellow;
 }

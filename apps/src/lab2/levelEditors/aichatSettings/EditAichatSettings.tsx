@@ -113,12 +113,6 @@ const EditAichatSettings: React.FunctionComponent<{
           <b>Hidden:</b> the field is not shown on the customization panel.
         </BodyThreeText>
         <FieldSection
-          fieldName="botName"
-          labelText="Bot Name"
-          inputType="text"
-          description="Name of the chat bot."
-        />
-        <FieldSection
           fieldName="temperature"
           labelText="Temperature"
           inputType="number"
