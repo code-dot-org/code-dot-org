@@ -44,6 +44,12 @@ describe('RubricSettings', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  function stubFetchTeacherEvaluations(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
   beforeEach(() => {
     fetchStub = sinon.stub(window, 'fetch');
     fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
@@ -262,6 +268,7 @@ describe('RubricSettings', () => {
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     clock = sinon.useFakeTimers();
