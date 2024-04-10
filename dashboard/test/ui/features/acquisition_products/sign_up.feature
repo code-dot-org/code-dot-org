@@ -3,13 +3,13 @@ Feature: Teacher can create a new account
 
 Scenario: Teacher can create an account with the new school association flow
 
-  Given I am on "http://studio.code.org/users/sign_up?enableExperiments=school_association_v2"
+  Given I am on "http://studio.code.org/users/sign_up"
   And I press keys "my@validemail.com" for element "#user_email"
   And I press keys "password" for element "#user_password"
   And I press keys "password" for element "#user_password_confirmation"
   And I press "#signup_form_submit" using jQuery
   # Add the experiment flag
-  And I am on "http://studio.code.org/users/sign_up"
+  And I am on "http://studio.code.org/users/sign_up?enableExperiments=school_association_v2"
   And I press "select-user-type-teacher"
   And I press keys "myDisplayName" for element "#user_name"
   And I select the "United States" option in dropdown "uitest-country-dropdown"
