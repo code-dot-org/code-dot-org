@@ -2,7 +2,7 @@ class CreateAiTutorInteractionFeedbacks < ActiveRecord::Migration[6.1]
   def change
     create_table :ai_tutor_interaction_feedbacks do |t|
       t.bigint :ai_tutor_interaction_id, null: false
-      t.bigint :user_id, null: false
+      t.integer :user_id, null: false
       t.boolean :thumbs_up
       t.boolean :thumbs_down
 
