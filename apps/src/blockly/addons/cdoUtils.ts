@@ -318,11 +318,48 @@ export function isWorkspaceReadOnly() {
   return false; // TODO - used for feedback
 }
 
-export function blockLimitExceeded() {
-  return false;
+/**
+ * Checks if any block type's usage count exceeds its defined limit and returns
+ * the type of the first block found to exceed.
+ * @returns {string | undefined} The type of the first block that exceeds its limit,
+ * or undefined if no block exceeds the limit.
+ */
+export function blockLimitExceeded(): string | undefined {
+  const blockLimitMap = Blockly.blockLimitMap;
+  const blockCountMap = Blockly.blockCountMap;
+
+  // Ensure both maps are defined
+  if (!blockLimitMap || !blockCountMap) {
+    return undefined;
+  }
+
+  // Iterate over the block count map
+  for (const [type, count] of blockCountMap) {
+    const limit = blockLimitMap.get(type);
+    // If a limit is defined and the count exceeds this limit, return the type
+    if (limit !== undefined && count > limit) {
+      return type;
+    }
+  }
+
+  // If no count exceeds the limit, return undefined
+  return undefined;
 }
 
-export function getBlockLimit() {
+/**
+ * Retrieves the block limit for a given block type from the block limit map.
+ * @param {string} type The type of the block to check the limit for.
+ * @returns {number} The limit for the specified block type, or 0 if not found.
+ */
+export function getBlockLimit(type: string): number {
+  const blockLimitMap = Blockly.blockLimitMap;
+
+  // Check if the block limit map is defined and has the requested type
+  if (blockLimitMap && blockLimitMap.has(type)) {
+    return blockLimitMap.get(type) || 0;
+  }
+
+  // Return undefined if the map is not defined or the type is not found
   return 0;
 }
 
@@ -501,6 +538,44 @@ export function getLevelToolboxBlocks(customCategory: string) {
   } else {
     return undefined;
   }
+}
+
+/**
+ * Creates a map of block types and limits, based on limit attribtues found
+ * in the block XML for the current toolbox.
+ * @returns {Map} A map of block limits
+ */
+export function createBlockLimitMap() {
+  const parser = new DOMParser();
+  // This method only works for string toolboxes.
+  if (!Blockly.toolboxBlocks || typeof Blockly.toolboxBlocks !== 'string') {
+    return;
+  }
+
+  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
+  // Define blockLimitMap
+  const blockLimitMap = new Map<string, number>();
+
+  // Select all block elements and convert NodeList to array
+  const blocks = Array.from(xmlDoc.querySelectorAll('block'));
+
+  // Iterate over each block element using forEach
+  blocks.forEach(block => {
+    // Check if the block has a limit attribute
+    const limitAttribute = block.getAttribute('limit');
+    if (limitAttribute !== null) {
+      // Check if the limit attribute is a valid number
+      const limit = parseInt(limitAttribute);
+      if (!isNaN(limit)) {
+        // Extract type and add to blockLimitMap
+        const type = block.getAttribute('type');
+        if (type !== null) {
+          blockLimitMap.set(type, limit);
+        }
+      }
+    }
+  });
+  return blockLimitMap;
 }
 
 /**

@@ -6,7 +6,9 @@ import {Abstract} from 'blockly/core/events/events_abstract';
 import {BlockChange} from 'blockly/core/events/events_block_change';
 import {BlockMove} from 'blockly/core/events/events_block_move';
 import {BlockCreate} from 'blockly/core/events/events_block_create';
-import {Block, WorkspaceSvg} from 'blockly';
+import {Block, Flyout, WorkspaceSvg} from 'blockly';
+import {ExtendedBlockSvg, ExtendedWorkspaceSvg} from './types';
+import BlockSvgLimit from './addons/blockSvgLimit';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.
@@ -116,4 +118,76 @@ export function reflowToolbox() {
     const modalWorkspace = Blockly.getFunctionEditorWorkspace() as WorkspaceSvg;
     modalWorkspace?.getFlyout()?.reflow();
   }
+}
+export function updateBlockLimits(event: Abstract) {
+  // This check is to update bubbles that show block limits whenever
+  // blocks on the main workspace are updated.
+  if (
+    event.type !== Blockly.Events.BLOCK_CHANGE &&
+    event.type !== Blockly.Events.BLOCK_MOVE &&
+    event.type !== Blockly.Events.BLOCK_CREATE
+  ) {
+    return;
+  }
+  const blockEvent = event as BlockChange | BlockMove | BlockCreate;
+  const blockLimitMap = Blockly.blockLimitMap;
+
+  if (
+    !blockEvent.blockId ||
+    !blockEvent.workspaceId ||
+    !blockLimitMap ||
+    !(blockLimitMap?.size > 0)
+  ) {
+    return;
+  }
+  const eventWorkspace = Blockly.Workspace.getById(
+    blockEvent.workspaceId
+  ) as ExtendedWorkspaceSvg;
+  const allWorkspaceBlocks = eventWorkspace?.getAllBlocks();
+  if (!allWorkspaceBlocks) {
+    return;
+  }
+  // Define a Map to store block counts for each type
+  const blockCountMap = new Map<string, number>();
+  Blockly.blockCountMap = blockCountMap;
+  // Initialize block counts based on blockLimitMap
+  blockLimitMap.forEach((_, type) => {
+    blockCountMap.set(type, 0);
+  });
+
+  // Count the enabled blocks of each type
+  allWorkspaceBlocks
+    .filter(block => blockLimitMap.has(block.type) && block.isEnabled())
+    .forEach(block => {
+      const type = block.type;
+      if (blockCountMap.has(type)) {
+        const currentCount = blockCountMap.get(type) || 0;
+        blockCountMap.set(type, currentCount + 1);
+      }
+    });
+
+  const flyout = eventWorkspace.getFlyout();
+  if (!flyout) {
+    return;
+  }
+  // Get all blocks from the flyout
+  const flyoutBlocks = flyout
+    .getWorkspace()
+    .getTopBlocks() as ExtendedBlockSvg[];
+
+  // Get the flyout blocks that have limits
+  const limitedFlyoutBlocks = flyoutBlocks.filter(block => {
+    return blockLimitMap.has(block.type);
+  });
+
+  limitedFlyoutBlocks.forEach(flyoutBlock => {
+    const blockLimitCount = blockLimitMap.get(flyoutBlock.type) as number;
+    const blockUsedCount = blockCountMap.get(flyoutBlock.type) || 0;
+    const remainingCount = blockLimitCount - blockUsedCount;
+    if (flyoutBlock.blockLimit_) {
+      flyoutBlock.blockLimit_.updateCount(remainingCount);
+    } else {
+      flyoutBlock.blockLimit_ = new BlockSvgLimit(flyoutBlock, remainingCount);
+    }
+  });
 }
