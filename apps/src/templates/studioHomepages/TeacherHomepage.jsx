@@ -297,6 +297,10 @@ export const UnconnectedTeacherHomepage = ({
             <LinkButton
               color={'purple'}
               href={studio('/my-professional-learning#self-paced-pl')}
+              iconLeft={{
+                iconName: 'book-circle-arrow-right',
+                iconStyle: 'solid',
+              }}
               size="s"
               text={i18n.myProfessionalLearningCoursesHomepageButton()}
             />
