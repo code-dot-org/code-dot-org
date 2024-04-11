@@ -1,14 +1,11 @@
 import {getStore} from '@cdo/apps/redux';
-import {applyPatches, importFileCode} from './patches/pythonScriptUtils';
+import {applyPatches} from './patches/pythonScriptUtils';
 import {MATPLOTLIB_IMG_TAG} from './patches/patches';
 import {
   appendOutputImage,
   appendSystemMessage,
   appendSystemOutMessage,
 } from './pythonlabRedux';
-
-// A default file to import into the user's script.
-const otherFileContents = "def hello():\n  print('hello')\n";
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
@@ -40,19 +37,17 @@ pyodideWorker.onmessage = event => {
 
 const asyncRun = (() => {
   let id = 0; // identify a Promise
-  return (script, context) => {
+  return (script, sources) => {
+    console.log({script, sources});
     // the id could be generated more carefully
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
     return new Promise(onSuccess => {
       callbacks[id] = onSuccess;
-      // Proof of concept that we can import a local file (in a multi-file scenario)
-      let wrappedScript =
-        importFileCode('helpers.py', otherFileContents) + script;
-      wrappedScript = applyPatches(wrappedScript);
+      const wrappedScript = applyPatches(script);
       const messageData = {
-        ...context,
         python: wrappedScript,
         id,
+        sources,
       };
       pyodideWorker.postMessage(messageData);
     });
