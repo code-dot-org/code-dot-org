@@ -9,6 +9,7 @@ import {BlockCreate} from 'blockly/core/events/events_block_create';
 import {Block, WorkspaceSvg} from 'blockly';
 import {ExtendedBlockSvg, ExtendedWorkspaceSvg} from './types';
 import BlockSvgLimit from './addons/blockSvgLimit';
+import {ThemeChange} from 'blockly/core/events/events_theme_change';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.
@@ -125,19 +126,19 @@ export function updateBlockLimits(event: Abstract) {
   if (
     event.type !== Blockly.Events.BLOCK_CHANGE &&
     event.type !== Blockly.Events.BLOCK_MOVE &&
-    event.type !== Blockly.Events.BLOCK_CREATE
+    event.type !== Blockly.Events.BLOCK_CREATE &&
+    event.type !== Blockly.Events.THEME_CHANGE
   ) {
     return;
   }
-  const blockEvent = event as BlockChange | BlockMove | BlockCreate;
+  const blockEvent = event as
+    | BlockChange
+    | BlockMove
+    | BlockCreate
+    | ThemeChange;
   const blockLimitMap = Blockly.blockLimitMap;
 
-  if (
-    !blockEvent.blockId ||
-    !blockEvent.workspaceId ||
-    !blockLimitMap ||
-    !(blockLimitMap?.size > 0)
-  ) {
+  if (!blockEvent.workspaceId || !blockLimitMap || !(blockLimitMap?.size > 0)) {
     return;
   }
   const eventWorkspace = Blockly.Workspace.getById(
