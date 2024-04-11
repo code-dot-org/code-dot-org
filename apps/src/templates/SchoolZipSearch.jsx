@@ -13,13 +13,13 @@ const SELECT_A_SCHOOL = 'selectASchool';
 const CLICK_TO_ADD = 'clickToAdd';
 const NO_SCHOOL_SETTING = 'noSchoolSetting';
 const SEARCH_DEFAULTS = [
-  {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
   {value: CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
 
 export default function SchoolZipSearch({fieldNames, zip}) {
-  const [selectedSchoolNcesId, setSelectedSchoolNcesId] = useState('');
+  const [selectedSchoolNcesId, setSelectedSchoolNcesId] =
+    useState(SELECT_A_SCHOOL);
   const [inputManually, setInputManually] = useState(false);
   const [dropdownSchools, setDropdownSchools] = useState([]);
 
@@ -91,7 +91,18 @@ export default function SchoolZipSearch({fieldNames, zip}) {
             id="uitest-school-dropdown"
             className={style.dropdown}
             name={fieldNames.ncesSchoolId}
-            items={SEARCH_DEFAULTS.concat(sortSchoolsByName(dropdownSchools))}
+            itemGroups={[
+              {
+                label: i18n.schools(),
+                groupItems: [
+                  {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
+                ].concat(sortSchoolsByName(dropdownSchools)),
+              },
+              {
+                label: i18n.additionalOptions(),
+                groupItems: SEARCH_DEFAULTS,
+              },
+            ]}
             selectedValue={selectedSchoolNcesId}
             onChange={onSchoolChange}
             size="m"
