@@ -108,9 +108,6 @@ export default class BlockSvgLimit {
       return;
     }
 
-    const svgGroup = this.blockSvg.getSvgRoot();
-    svgGroup.append(this.limitGroup);
-
     const textBBox = (this.limitText as SVGGraphicsElement).getBBox();
     const rectWidth = Math.max(
       textBBox.width + this.halfBubbleSize,
