@@ -464,6 +464,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :unauthorized
   end
 
+  test 'auth - if cached value is nil during the state/nonce check, return unauthorized' do
+    aud_is_array = false
+    jwt = create_valid_jwt(aud_is_array)
+    LtiV1Controller.any_instance.stubs(:read_cache).with(@state)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_response :unauthorized
+  end
+
   test 'auth - given a valid jwt with the audience as an array, redirect to target_link_url' do
     aud_is_array = true
     jwt = create_valid_jwt(aud_is_array)

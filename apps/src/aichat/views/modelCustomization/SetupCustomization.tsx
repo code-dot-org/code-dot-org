@@ -74,7 +74,7 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   return (
     <div className={styles.verticalFlexContainer}>
-      <div>
+      <div className={styles.customizationContainer}>
         {renderChooseAndCompareModels()}
         {isVisible(temperature) && (
           <div className={styles.inputContainer}>

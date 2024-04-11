@@ -1,10 +1,11 @@
 /**
  * Blocks specific to Planter
  */
-var msg = require('./locale');
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;
 var BlockColors = require('../blockly/constants').BlockColors;
+
+var msg = require('./locale');
 
 exports.install = function (blockly, blockInstallOptions) {
   var generator = blockly.getGenerator();
