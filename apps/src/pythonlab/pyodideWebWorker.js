@@ -1,5 +1,5 @@
 import {loadPyodide} from 'pyodide';
-import {writeSources} from './patches/pythonScriptUtils';
+import {clearSources, writeSources} from './patches/pythonScriptUtils';
 import {DEFAULT_FOLDER_ID} from '../weblab2/CDOIDE/constants';
 
 async function loadPyodideAndPackages() {
@@ -13,6 +13,9 @@ async function loadPyodideAndPackages() {
       self.postMessage({type: 'sysout', message: msg, id: 'none'});
     },
   });
+  console.log('getting file info post load...');
+  const pathData = self.pyodide.FS.analyzePath('/', true);
+  console.log({pathData});
 }
 
 let pyodideReadyPromise = null;
@@ -32,8 +35,6 @@ self.onmessage = async event => {
   const {id, python, sources} = event.data;
   // Now is the easy part, the one that is similar to working in the main thread:
   try {
-    console.log('in on message...');
-    console.log({event});
     await self.pyodide.loadPackagesFromImports(python);
     writeSources(sources, DEFAULT_FOLDER_ID, '', self.pyodide);
     let results = await self.pyodide.runPythonAsync(python);
@@ -44,4 +45,5 @@ self.onmessage = async event => {
   console.log('getting file info...');
   const pathData = self.pyodide.FS.analyzePath('/', true);
   console.log({pathData});
+  clearSources(self.pyodide);
 };

@@ -34,7 +34,8 @@ export function writeSources(
   currentPath: string,
   pyodide: PyodideInterface
 ) {
-  // Need to make sure we don't recreate things every time...
+  // Need to make sure we don't recreate things every time
+  // (although that seems to be quick so maybe is fine)
   // and delete old files/folders.
   // write all files in this folder
   Object.values(sources.files)
@@ -61,4 +62,9 @@ export function writeSources(
       // recurse to get all child folders
       writeSources(sources, folder.id, newPath + '/', pyodide);
     });
+}
+
+export function clearSources(pyodide: PyodideInterface) {
+  console.log('clearing sources?');
+  console.log(pyodide.FS.cwd());
 }
