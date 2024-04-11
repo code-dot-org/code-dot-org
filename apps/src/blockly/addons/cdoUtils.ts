@@ -349,15 +349,7 @@ export function blockLimitExceeded(): string | null {
  * @returns {number} The limit for the specified block type, or 0 if not found.
  */
 export function getBlockLimit(type: string): number {
-  const blockLimitMap = Blockly.blockLimitMap;
-
-  // Check if the block limit map is defined and has the requested type
-  if (blockLimitMap && blockLimitMap.has(type)) {
-    return blockLimitMap.get(type) || 0;
-  }
-
-  // Return undefined if the map is not defined or the type is not found
-  return 0;
+  return Blockly.blockLimitMap?.get(type) ?? 0;
 }
 
 /**
