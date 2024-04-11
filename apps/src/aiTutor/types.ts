@@ -62,7 +62,6 @@ export interface Level {
   type: string;
   hasValidation: boolean;
   isProjectBacked: boolean;
-  levelSpecificPrompt?: string;
   aiTutorAvailable: boolean;
   isAssessment: boolean;
 }
