@@ -31,7 +31,6 @@ export async function postAichatCompletionMessage(
       'Content-Type': 'application/json; charset=UTF-8',
     }
   );
-  console.log('response in postAichatCompletionMessage', response);
   // For now, response will be null if there was an error.
   if (response.ok) {
     return await response.json();

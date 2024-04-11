@@ -16,7 +16,7 @@ class AichatController < ApplicationController
     # TODO: Format input to send to Sagemaker.
     payload = {
       inputs: [params[:inputs]],
-      parameters: {"temperature": params[:temperature]},
+      parameters: {temperature: params[:temperature]},
     }
     response = request_chat_completion(payload)
     render(status: response[:status], json: response[:json])
@@ -27,7 +27,6 @@ class AichatController < ApplicationController
   end
 
   def request_chat_completion(payload)
-    puts "Requesting chat completion from Sagemaker"
     response_body = {role: "assistant", content: "This is an assistant response from Sagemaker"}
     response_code = 200
     return {status: response_code, json: response_body}
