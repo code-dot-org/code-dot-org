@@ -1587,6 +1587,7 @@
   user_header_signin: "Sign in"
   user_header_create_account: "Create Account"
   user_header_create: 'Create '
+  user_header_new_project: "New Project"
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
   user_header_gamelab: "Game Lab"

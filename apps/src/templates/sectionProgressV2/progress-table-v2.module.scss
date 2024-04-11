@@ -351,6 +351,24 @@ $level-cell-width: 52;
     line-height: 47px !important;
   }
 
+  &ChoiceLevelLink {
+    border-left: 1px solid $light_gray_100;
+    height: 32px;
+    margin: 8px 0;
+    line-height: 32px !important;
+    width: $level-cell-width + px;
+  }
+
+  &LevelCell {
+    display: flex;
+    border-left: 0;
+    width: auto;
+
+    &First {
+      border-inline-start: 1px solid $neutral_dark40;
+    }
+  }
+
   &LevelEmpty {
     height: 100%;
     width: 100%;

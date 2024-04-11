@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2024_04_03_074309) do
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
   end
 
-  create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "ai_tutor_interaction_id", null: false
     t.integer "user_id", null: false
     t.boolean "thumbs_up"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2024_04_03_074309) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["ai_tutor_interaction_id", "user_id"], name: "index_ai_tutor_feedback_on_interaction_and_user", unique: true
+    t.index ["user_id"], name: "fk_rails_105c1f9428"
   end
 
   create_table "ai_tutor_interactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
@@ -2383,6 +2384,8 @@ ActiveRecord::Schema.define(version: 2024_04_03_074309) do
     t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
 
+  add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
+  add_foreign_key "ai_tutor_interaction_feedbacks", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "hint_view_requests", "users"
