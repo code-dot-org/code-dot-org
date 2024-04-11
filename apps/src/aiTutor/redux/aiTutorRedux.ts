@@ -71,14 +71,9 @@ export const askAITutor = createAsyncThunk(
       scriptId: aiTutorState.aiTutor.scriptId,
     };
 
-    // TODO: We should extract all the things we're appending here into a helper
     let systemPrompt = baseSystemPrompt;
-    if (aiTutorState.aiTutor.level?.levelSpecificPrompt) {
-      systemPrompt += '\n' + aiTutorState.aiTutor.level?.levelSpecificPrompt;
-    }
-
     const levelInstructions = instructionsState.instructions.longInstructions;
-    
+
     if (levelInstructions.length > 0) {
       systemPrompt +=
         '\n Here are the student instructions for this level: ' +

@@ -70,7 +70,6 @@ function initPage() {
       isProjectBacked,
       aiTutorAvailable,
       isAssessment,
-      levelSpecificPrompt,
     } = aiTutorData;
     const level = {
       id: levelId,
@@ -79,7 +78,6 @@ function initPage() {
       isProjectBacked,
       aiTutorAvailable,
       isAssessment,
-      levelSpecificPrompt,
     };
     getStore().dispatch(setLevel(level));
     getStore().dispatch(setScriptId(aiTutorData.scriptId));
