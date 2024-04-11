@@ -1,0 +1,7 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#ai-tutor-container"}}
+  AI Tutor
+#ai-tutor-container.in.collapse
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_ai_tutor_fields.js'),
+        data: {aitutoravailable: (@level.properties["ai_tutor_available"] || true).to_json, aitutorlevelspecificprompt: (@level.properties["ai_tutor_level_specific_prompt"] || '').to_json}}
