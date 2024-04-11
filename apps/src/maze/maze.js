@@ -1,34 +1,35 @@
+import {TestResults, ResultType} from '../constants';
+import AppView from '../templates/AppView';
+
+const maze = require('@code-dot-org/maze');
 const React = require('react');
 const ReactDOM = require('react-dom');
 const Provider = require('react-redux').Provider;
 
-const timeoutList = require('../lib/util/timeoutList');
-import AppView from '../templates/AppView';
+const containedLevels = require('../containedLevels');
+const dom = require('../dom');
+const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
 const CustomMarshalingInterpreter =
   require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter').default;
-const dom = require('../dom');
-const utils = require('../utils');
-import {TestResults, ResultType} from '../constants';
-const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
+const timeoutList = require('../lib/util/timeoutList');
 const getStore = require('../redux').getStore;
 const studioApp = require('../StudioApp').singleton;
-const containedLevels = require('../containedLevels');
+const utils = require('../utils');
+
+const api = require('./api');
+const dropletConfig = require('./dropletConfig');
+const ExecutionInfo = require('./executionInfo');
+const MazeVisualizationColumn = require('./MazeVisualizationColumn');
+const mazeReducer = require('./redux');
+const createResultsHandlerForSubtype =
+  require('./results/utils').createResultsHandlerForSubtype;
+
 const getContainedLevelResultInfo = containedLevels.getContainedLevelResultInfo;
 const postContainedLevelAttempt = containedLevels.postContainedLevelAttempt;
 const runAfterPostContainedLevel = containedLevels.runAfterPostContainedLevel;
 
-const ExecutionInfo = require('./executionInfo');
-const MazeVisualizationColumn = require('./MazeVisualizationColumn');
-const api = require('./api');
-const dropletConfig = require('./dropletConfig');
-const mazeReducer = require('./redux');
-
-const maze = require('@code-dot-org/maze');
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
-
-const createResultsHandlerForSubtype =
-  require('./results/utils').createResultsHandlerForSubtype;
 
 module.exports = class Maze {
   constructor() {

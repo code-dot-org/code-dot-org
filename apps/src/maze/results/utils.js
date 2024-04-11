@@ -1,12 +1,12 @@
 const subtypes = require('@code-dot-org/maze').subtypes;
 
-const FarmerHandler = require('./farmer');
 const BeeHandler = require('./bee');
 const CollectorHandler = require('./collector');
-const WordsearchHandler = require('./wordsearch');
+const FarmerHandler = require('./farmer');
 const HarvesterHandler = require('./harvester');
 const PlanterHandler = require('./planter');
 const ResultsHandler = require('./resultsHandler');
+const WordsearchHandler = require('./wordsearch');
 
 export function createResultsHandlerForSubtype(controller, config) {
   let handler = ResultsHandler;

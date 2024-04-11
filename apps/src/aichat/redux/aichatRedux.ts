@@ -92,15 +92,35 @@ export const updateAiCustomization = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = state.aichat;
 
+    // Remove any empty example topics on save
+    const trimmedExampleTopics =
+      currentAiCustomizations.modelCardInfo.exampleTopics.filter(
+        topic => topic.length
+      );
+    thunkAPI.dispatch(
+      setModelCardProperty({
+        property: 'exampleTopics',
+        value: trimmedExampleTopics,
+      })
+    );
+
+    const trimmedCurrentAiCustomizations = {
+      ...currentAiCustomizations,
+      modelCardInfo: {
+        ...currentAiCustomizations.modelCardInfo,
+        exampleTopics: trimmedExampleTopics,
+      },
+    };
+
     await Lab2Registry.getInstance()
       .getProjectManager()
-      ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
+      ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
 
-    thunkAPI.dispatch(setSavedAiCustomizations(currentAiCustomizations));
+    thunkAPI.dispatch(setSavedAiCustomizations(trimmedCurrentAiCustomizations));
 
     const changedProperties = findChangedProperties(
       savedAiCustomizations,
-      currentAiCustomizations
+      trimmedCurrentAiCustomizations
     );
     changedProperties.forEach(property => {
       thunkAPI.dispatch(

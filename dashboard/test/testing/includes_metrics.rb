@@ -25,7 +25,7 @@ module Mocha
       def matches?(available_parameters)
         actual_metrics = available_parameters.shift
         @expected_metrics.all? do |expected_metric_name, expected_value|
-          sought_metric = actual_metrics.find {|m| m[:metric_name] == expected_metric_name}
+          sought_metric = actual_metrics.find {|m| m[:metric_name].to_sym == expected_metric_name}
           actual_value = sought_metric&.[](:value)
           actual_value && expected_value.to_matcher.matches?([actual_value])
         end
@@ -49,7 +49,7 @@ module Mocha
       def matches?(available_parameters)
         actual_metrics = available_parameters.shift
         @expected_dimensions.all? do |expected_dimension_name, expected_value|
-          sought_metric = actual_metrics.find {|m| m[:metric_name] == @expected_metric_name}
+          sought_metric = actual_metrics.find {|m| m[:metric_name].to_sym == @expected_metric_name}
           actual_values = sought_metric&.[](:dimensions)
           actual_values&.any? {|dim| expected_dimension_name.to_matcher.matches?([dim[:name].intern]) && expected_value.to_matcher.matches?([dim[:value]])}
         end

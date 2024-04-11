@@ -94,6 +94,7 @@ class Level < ApplicationRecord
     thumbnail_url
     start_libraries
     ai_tutor_available
+    ai_tutor_level_specific_prompt
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -294,7 +295,7 @@ class Level < ApplicationRecord
 
   def report_bug_url(request)
     message = "Bug in Level #{name}\n#{request.url}\n#{request.user_agent}\n"
-    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+    "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the

@@ -8,6 +8,7 @@ import {
 } from '@blockly/plugin-scroll-options';
 import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
+import {installAllBlocks as installColourBlocks} from '@blockly/field-colour';
 import {
   BlockColors,
   BlocklyVersion,
@@ -79,7 +80,12 @@ import {
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
-import {handleCodeGenerationFailure} from './utils';
+import {
+  INFINITE_LOOP_TRAP,
+  LOOP_HIGHLIGHT,
+  handleCodeGenerationFailure,
+  strip,
+} from './utils';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 import {
   BlocklyWrapperType,
@@ -103,11 +109,8 @@ const options = {
 const plugin = new CrossTabCopyPaste();
 plugin.init(options);
 
-const INFINITE_LOOP_TRAP =
-  '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
-const LOOP_HIGHLIGHT = 'loopHighlight();\n';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -223,6 +226,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       if (hiddenWorkspace) {
         workspaceCode += Blockly.JavaScript.workspaceToCode(hiddenWorkspace);
       }
+      workspaceCode = strip(workspaceCode);
       getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
       if (retryCount < MAX_GET_CODE_RETRIES) {
@@ -374,7 +378,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // Assign all of the properties of the javascript generator to the forBlock array
   // Prevents deprecation warnings related to https://github.com/google/blockly/pull/7150
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
-
+  // Installs all colour blocks, the colour field, and the JS generator functions.
+  installColourBlocks({
+    javascript: javascriptGenerator,
+  });
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.LineCursor = LineCursor;
   blocklyWrapper.navigationController = new NavigationController();
