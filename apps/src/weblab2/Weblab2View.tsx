@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useMemo} from 'react';
 
 import './styles/Weblab2View.css';
 
@@ -146,18 +146,18 @@ const Weblab2View = () => {
   const initialSources = useAppSelector(state => state.lab.initialSources);
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
-  const setProject = (newProject: MultiFileSource) => {
-    setCurrentProject(newProject);
-    if (
-      Lab2Registry.getInstance().getProjectManager() &&
-      newProject !== currentProject
-    ) {
-      const projectSources = {
-        source: newProject,
-      };
-      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-    }
-  };
+  const setProject = useMemo(
+    () => (newProject: MultiFileSource) => {
+      setCurrentProject(newProject);
+      if (Lab2Registry.getInstance().getProjectManager()) {
+        const projectSources = {
+          source: newProject,
+        };
+        Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
+      }
+    },
+    [setCurrentProject]
+  );
 
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.

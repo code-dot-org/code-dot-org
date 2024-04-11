@@ -18,7 +18,6 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
       const {project: newProject} = action.payload as {
         project: ProjectType;
       };
-
       return newProject;
     }
     case PROJECT_REDUCER_ACTIONS.NEW_FILE: {
@@ -64,6 +63,10 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
       const {fileId, contents} = <DefaultFilePayload & {contents: string}>(
         action.payload
       );
+
+      if (project.files[fileId].contents === contents) {
+        return project;
+      }
 
       return {
         ...project,
