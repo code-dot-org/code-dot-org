@@ -130,9 +130,6 @@ export default class BlockSvgLimit {
     // Stretch the bubble to to fit longer numbers as text.
     this.limitRect_.setAttribute('width', `${rectWidth}`);
     // Center the text in the bubble.
-    this.limitText_.setAttribute(
-      'x',
-      `${Math.round(rectWidth * 0.5) - HALF_BUBBLE_SIZE}`
-    );
+    this.limitText_.setAttribute('x', `${rectWidth * 0.5 - HALF_BUBBLE_SIZE}`);
   }
 }
