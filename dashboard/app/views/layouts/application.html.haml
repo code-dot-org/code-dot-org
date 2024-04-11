@@ -66,12 +66,14 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
-    - is_student = current_user&.student?
-    - is_in_us = request.country.nil? || ['US', 'RD'].include?(request.country.to_s.upcase)
-    - under_age_13 = current_user.age.nil? || current_user.age.to_i < 13 if is_student
-    - retrieve_info_for_lti = current_user&.us_state.nil? && Policies::Lti.lti?(current_user) if is_student
-    - retrieve_info_for_cap = current_user&.us_state.nil? && is_in_us && under_age_13 && Policies::ChildAccount.personal_account?(current_user) if is_student
-    - if is_student && (current_user.age.nil? || retrieve_info_for_lti || retrieve_info_for_cap)
+    - missing_student_data = false
+    - if current_user&.student?
+      - is_in_us = request.country.nil? || ['US', 'RD'].include?(request.country.to_s.upcase)
+      - under_age_13 = current_user.age.nil? || current_user.age.to_i < 13
+      - retrieve_info_for_lti = current_user&.us_state.nil? && Policies::Lti.lti?(current_user)
+      - retrieve_info_for_cap = current_user&.us_state.nil? && is_in_us && under_age_13 && Policies::ChildAccount.personal_account?(current_user)
+      - missing_student_data = (current_user.age.nil? || retrieve_info_for_lti || retrieve_info_for_cap)
+    - if missing_student_data
       = render partial: 'layouts/student_information_interstitial', locals: {retrieve_info_for_lti: retrieve_info_for_lti, retrieve_info_for_cap: retrieve_info_for_cap}
 
     - cookie_key = environment_specific_cookie_name('_user_type')
