@@ -9,6 +9,7 @@ import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
 import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
 
 export default function EvidenceLevels({
+  productTour,
   evidenceLevels,
   canProvideFeedback,
   learningGoalKey,
@@ -34,6 +35,7 @@ export default function EvidenceLevels({
   } else {
     return (
       <EvidenceLevelsForTeachersV2
+        productTour={productTour}
         aiEvalInfo={aiEvalInfo}
         isAiAssessed={isAiAssessed}
         learningGoalKey={learningGoalKey}
@@ -48,6 +50,7 @@ export default function EvidenceLevels({
 }
 
 EvidenceLevels.propTypes = {
+  productTour: PropTypes.bool,
   evidenceLevels: PropTypes.arrayOf(evidenceLevelShape).isRequired,
   canProvideFeedback: PropTypes.bool,
   learningGoalKey: PropTypes.string,

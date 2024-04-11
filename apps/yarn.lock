@@ -3142,6 +3142,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/field-colour@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@blockly/field-colour@npm:4.0.0"
+  peerDependencies:
+    blockly: ^10.4.3
+  checksum: 206c614cc3b405d18ecf66f47c0cbe1938726f4a99a48806edda4509f6f6721cc63670bd756d85cf1b0820459af43404a7e7bba6424eff27bcaee291f694845b
+  languageName: node
+  linkType: hard
+
 "@blockly/field-grid-dropdown@npm:~4.0.9":
   version: 4.0.10
   resolution: "@blockly/field-grid-dropdown@npm:4.0.10"
@@ -8109,6 +8118,7 @@ __metadata:
     "@blockly/block-shareable-procedures": ~4.0.5
     "@blockly/field-angle": ^4.0.0
     "@blockly/field-bitmap": ^4.0.13
+    "@blockly/field-colour": ^4.0.0
     "@blockly/field-grid-dropdown": ~4.0.9
     "@blockly/keyboard-navigation": ~0.5.6
     "@blockly/plugin-cross-tab-copy-paste": ~5.0.4
@@ -8238,6 +8248,8 @@ __metadata:
     htmlhint: ^1.1.4
     http-server: ^0.9.0
     immutable: 3.8.1
+    intro.js: ^7.2.0
+    intro.js-react: ^1.0.0
     isolate-react: ^2.3.0
     istanbul-instrumenter-loader: ^3.0.1
     jquery: 1.12.1
@@ -15451,6 +15463,23 @@ es6-shim@latest:
   version: 1.1.0
   resolution: "interpret@npm:1.1.0"
   checksum: 978a142dd380c5087cc85af5d6856cb5d78ea31a69e817733279aa4abbd9e0eebe0966ed6c7bf6f7d5e5fd01e3c94839d68ef4757b06881533ba35353a6c7514
+  languageName: node
+  linkType: hard
+
+"intro.js-react@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "intro.js-react@npm:1.0.0"
+  peerDependencies:
+    intro.js: ">=2.5.0"
+    react: ">=0.14.0"
+  checksum: 97e1526965de95832f57a1a7b53ebeb8bba0ca101becf49840a88ff70dd2d07bd9b616a61a6af63824a6c2d8e4ac0db57597d96e2b309560fc0f1a6a59cd14e5
+  languageName: node
+  linkType: hard
+
+"intro.js@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "intro.js@npm:7.2.0"
+  checksum: 466b95f64d746890e1dce20c28c9813e74ea238fbd7270abf90997c1e70d8ad146a7035feee02f47a5b9328b65fdc54a4b2c204bfca07c605f18122d888de3a3
   languageName: node
   linkType: hard
 

@@ -1241,9 +1241,13 @@ FirebaseStorage.getColumn = function (
     tableName,
     {},
     records => {
-      let columnValues = [];
-      records.forEach(row => columnValues.push(row[columnName]));
-      onSuccess(columnValues);
+      if (records === null) {
+        onSuccess(null);
+      } else {
+        let columnValues = [];
+        records.forEach(row => columnValues.push(row[columnName]));
+        onSuccess(columnValues);
+      }
     },
     onError
   );

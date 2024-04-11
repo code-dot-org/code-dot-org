@@ -1,6 +1,6 @@
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {systemPrompt} from '@cdo/apps/aiTutor/constants';
+import {systemPrompt as baseSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
   Role,
@@ -21,6 +21,10 @@ export interface AITutorState {
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   chatMessageError: boolean;
+}
+
+export interface InstructionsState {
+  longInstructions: string;
 }
 
 const initialChatMessages: ChatCompletionMessage[] = [
@@ -58,15 +62,25 @@ const formatQuestionForAITutor = (chatContext: ChatContext) => {
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
   async (chatContext: ChatContext, thunkAPI) => {
-    const state = thunkAPI.getState() as {aiTutor: AITutorState};
+    const state = thunkAPI.getState();
+    const aiTutorState = state as {aiTutor: AITutorState};
+    const instructionsState = state as {instructions: InstructionsState};
     const levelContext = {
-      levelId: state.aiTutor.level?.id,
-      isProjectBacked: state.aiTutor.level?.isProjectBacked,
-      scriptId: state.aiTutor.scriptId,
+      levelId: aiTutorState.aiTutor.level?.id,
+      isProjectBacked: aiTutorState.aiTutor.level?.isProjectBacked,
+      scriptId: aiTutorState.aiTutor.scriptId,
     };
 
-    const storedMessages = state.aiTutor.chatMessages;
+    let systemPrompt = baseSystemPrompt;
+    const levelInstructions = instructionsState.instructions.longInstructions;
+    
+    if (levelInstructions.length > 0) {
+      systemPrompt +=
+        '\n Here are the student instructions for this level: ' +
+        levelInstructions;
+    }
 
+    const storedMessages = aiTutorState.aiTutor.chatMessages;
     const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
 
     const newMessage: ChatCompletionMessage = {

@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 var msg = require('@cdo/locale');
 
 const IMAGE_BASE_URL = '/blockly/media/';
 
 export default class ProjectTemplateWorkspaceIcon extends React.Component {
+  static propTypes = {
+    tooltipPlace: PropTypes.string,
+  };
+
   constructor(props) {
     super(props);
     this.tooltipId = _.uniqueId();
@@ -28,6 +33,7 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
           role="tooltip"
           wrapper="div"
           effect="solid"
+          place={this.props.tooltipPlace}
         >
           <div style={styles.tooltip}>
             {msg.workspaceProjectTemplateLevel()}

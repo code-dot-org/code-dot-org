@@ -21,8 +21,10 @@
  * @fileoverview Demonstration of Blockly: Solving a maze.
  * @author fraser@google.com (Neil Fraser)
  */
-var commonMsg = require('@cdo/locale');
+
 var mazeUtils = require('@code-dot-org/maze').utils;
+
+var commonMsg = require('@cdo/locale');
 
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;

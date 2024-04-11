@@ -15994,6 +15994,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: pl-csd-summer-2024-day1
         pl-csd-summer-2024-day2:
           lesson_groups:
             lessonGroup-2:
@@ -16237,6 +16239,10 @@ en:
               name: Lesson 1
             lesson-2:
               name: What is AI
+            lesson-4:
+              name: AI and Machine Learning
+            lesson-5:
+              name: Code.org's AI Module
           lesson_groups: {}
           name: k5aisandbox-2024
           title: K5 AI Sandbox
@@ -16432,7 +16438,10 @@ en:
           title: 'Generative AI: Foundations'
           description_audience: ''
           description_short: ''
-          description: This unit introduces the foundational aspects of generative AI.
+          description: |-
+            ##Unit Overview
+
+            This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
           student_description: ''
         self-paced-pl-ai-101-mod1:
           lessons:
@@ -16575,3 +16584,18 @@ en:
 
             **Suggested time:** 60 minutes
           student_description: ''
+        sandbox-coding-with-ai:
+          lessons:
+            lesson-1:
+              name: 'Introduction to Coding with AI '
+            lesson-2:
+              name: 'Lesson Exploration '
+            lesson-3:
+              name: Teaching Resources
+          lesson_groups: {}
+          name: sandbox-coding-with-ai
+          title: 'Coding with AI '
+          description_audience: ''
+          description_short: ''
+          description: "\n## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "
+          student_description: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "

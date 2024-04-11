@@ -70,6 +70,81 @@ export default {
     },
 
     {
+      description:
+        'Data getColumn returns correct console message for nonexistant table',
+      editCode: true,
+      xml: `var names = getColumn('nonexistant table', 'name');`,
+
+      runBeforeClick(assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 200, () => {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // Error text includes correct info
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(
+          String(debugOutput.textContent).startsWith('ERROR'),
+          true,
+          `log message contains error: ${debugOutput.textContent}`
+        );
+        assert.equal(
+          String(debugOutput.textContent).endsWith(
+            "but that table doesn't exist in this app"
+          ),
+          true,
+          `log message contains correct info about nonexistant table: ${debugOutput.textContent}`
+        );
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+
+    {
+      description:
+        'Data getColumn returns correct console message for nonexistant column',
+      editCode: true,
+      xml: `
+        createRecord("mytable", {name:'Alice'}, function(record) {
+          createRecord("mytable", {name: 'Bob'}, function (record) {
+            var names = getColumn('mytable', 'nonexistant column');
+          });
+        });`,
+
+      runBeforeClick(assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 200, () => {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // Error text includes correct info
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(
+          String(debugOutput.textContent).startsWith('ERROR'),
+          true,
+          `log message contains error: ${debugOutput.textContent}`
+        );
+        assert.equal(
+          String(debugOutput.textContent).endsWith(
+            "but that column doesn't exist. "
+          ),
+          true,
+          `log message contains correct info about nonexistant column: ${debugOutput.textContent}`
+        );
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+
+    {
       description: 'Data createRecord again to confirm mock is reset',
       editCode: true,
       xml: `
