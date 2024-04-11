@@ -284,8 +284,8 @@ export const UnconnectedTeacherHomepage = ({
             isProfessionalLearningCourse={true}
           />
         )}
-        {/* Making the myProfessionalLearningCourses h2 look like an h3
-        to match the other headings on this page */}
+        {/* TODO - We will eventually remove this section
+          once enough time has passed */}
         {(plCourses?.length > 0 || topPlCourse) && (
           <section style={{marginBlock: '6rem'}}>
             <Heading2 visualAppearance="heading-md">
