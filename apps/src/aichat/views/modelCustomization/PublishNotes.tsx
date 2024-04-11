@@ -44,7 +44,7 @@ const PublishNotes: React.FunctionComponent = () => {
 
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
-      <div style={{display: 'flex', flexDirection: 'column'}}>
+      <div>
         {hasFilledOutModelCard(modelCardInfo)
           ? renderPublishOkNotification()
           : renderCompleteToPublishNotification()}

@@ -1,7 +1,11 @@
 import moment from 'moment';
 import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
+
+import {registerReducers} from '@cdo/apps/redux';
+import {RootState} from '@cdo/apps/types/redux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
 import {
   AI_CUSTOMIZATIONS_LABELS,
   DEFAULT_VISIBILITIES,
@@ -21,9 +25,6 @@ import {
   ViewMode,
   Visibility,
 } from '../types';
-import {RootState} from '@cdo/apps/types/redux';
-
-const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],
