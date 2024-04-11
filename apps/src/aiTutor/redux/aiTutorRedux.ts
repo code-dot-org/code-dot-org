@@ -78,9 +78,6 @@ export const askAITutor = createAsyncThunk(
     } else {
       systemPrompt = generalChatSystemPrompt;
     }
-    if (aiTutorState.aiTutor.level?.levelSpecificPrompt) {
-      systemPrompt += '\n' + aiTutorState.aiTutor.level?.levelSpecificPrompt;
-    }
 
     const levelInstructions = instructionsState.instructions.longInstructions;
 
