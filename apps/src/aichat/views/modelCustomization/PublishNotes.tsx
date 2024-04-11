@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {
   setModelCardProperty,
   setViewMode,
+  setHasPublished,
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -28,13 +29,16 @@ const PublishNotes: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const onSave = useCallback(
-    () => dispatch(updateAiCustomization()),
-    [dispatch]
-  );
+  const onSave = useCallback(() => {
+    dispatch(updateAiCustomization());
+    if (!hasFilledOutModelCard(modelCardInfo)) {
+      dispatch(setHasPublished(false));
+    }
+  }, [dispatch, modelCardInfo]);
 
   const onPublish = useCallback(() => {
     dispatch(updateAiCustomization());
+    dispatch(setHasPublished(true));
     dispatch(setViewMode(ViewMode.PRESENTATION));
   }, [dispatch]);
 

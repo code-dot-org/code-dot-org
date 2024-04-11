@@ -40,7 +40,7 @@ const AichatView: React.FunctionComponent = () => {
 
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
-  const {currentAiCustomizations, viewMode} = useAppSelector(
+  const {currentAiCustomizations, viewMode, hasPublished} = useAppSelector(
     state => state.aichat
   );
   const {botName} = currentAiCustomizations.modelCardInfo;
@@ -90,7 +90,7 @@ const AichatView: React.FunctionComponent = () => {
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
-      {!levelAichatSettings?.hidePresentationPanel && (
+      {!levelAichatSettings?.hidePresentationPanel && hasPublished && (
         <div className={moduleStyles.viewModeButtons}>
           <SegmentedButtons {...viewModeButtonsProps} />
         </div>

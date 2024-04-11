@@ -69,9 +69,10 @@ export interface AichatState {
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
-  previouslySavedAiCustomizations?: AiCustomizations;
+  previouslySavedAiCustomizations: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
   viewMode: ViewMode;
+  hasPublished: boolean;
 }
 
 const initialState: AichatState = {
@@ -80,8 +81,10 @@ const initialState: AichatState = {
   showWarningModal: true,
   chatMessageError: false,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  previouslySavedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
   viewMode: ViewMode.EDIT,
+  hasPublished: false,
 };
 
 // THUNKS
@@ -250,6 +253,9 @@ const aichatSlice = createSlice({
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
     },
+    setHasPublished: (state, action: PayloadAction<boolean>) => {
+      state.hasPublished = action.payload;
+    },
     setStartingAiCustomizations: (
       state,
       action: PayloadAction<{
@@ -345,6 +351,7 @@ export const {
   setShowWarningModal,
   updateChatMessageStatus,
   setViewMode,
+  setHasPublished,
   setStartingAiCustomizations,
   setPreviouslySavedAiCustomizations,
   setAiCustomizationProperty,
