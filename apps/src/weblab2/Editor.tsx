@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {editableFileType} from '@cdoide/utils';
 import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
@@ -26,7 +26,12 @@ const Editor = () => {
     (value: string) => {
       saveFile(file.id, value);
     },
-    [file, saveFile]
+    [file.id, saveFile]
+  );
+
+  const editorConfigExtensions = useMemo(
+    () => [codeMirrorLangMapping[file.language]],
+    [file.language]
   );
 
   if (!editableFileType(file.language)) {
@@ -41,7 +46,7 @@ const Editor = () => {
           darkMode={true}
           onCodeChange={onChange}
           startCode={file.contents}
-          editorConfigExtensions={[codeMirrorLangMapping[file.language]]}
+          editorConfigExtensions={editorConfigExtensions}
         />
       )}
     </div>

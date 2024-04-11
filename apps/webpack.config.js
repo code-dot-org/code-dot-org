@@ -1,5 +1,6 @@
 /* eslint-disable import/order */
 const path = require('path');
+var pyodide = require('pyodide');
 const sass = require('sass');
 const webpack = require('webpack');
 
@@ -45,6 +46,7 @@ const nodeModulesToTranspile = [
   '@blockly/field-grid-dropdown',
   '@blockly/keyboard-navigation',
   '@blockly/plugin-scroll-options',
+  '@blockly/field-angle',
   '@blockly/field-bitmap',
   'blockly',
   '@code-dot-org/dance-party',
@@ -659,7 +661,9 @@ function createWebpackConfig({
               }),
             ]),
       }),
-      new PyodidePlugin(),
+      new PyodidePlugin({
+        outDirectory: `pyodide/${pyodide.version}`,
+      }),
       ...(envConstants.HOT
         ? [
             new webpack.HotModuleReplacementPlugin({}),

@@ -18,6 +18,8 @@ import SegmentedButtons, {
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import moduleStyles from './aichatView.module.scss';
 import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
+import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 
 const AichatView: React.FunctionComponent = () => {
   const [viewMode, setViewMode] = useState<string>(ViewMode.EDIT);
@@ -37,6 +39,8 @@ const AichatView: React.FunctionComponent = () => {
     state => (state.lab.initialSources?.source as string) || '{}'
   );
 
+  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(initialSources);
     dispatch(
@@ -48,7 +52,7 @@ const AichatView: React.FunctionComponent = () => {
   }, [dispatch, initialSources, levelAichatSettings]);
 
   const {botName} = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+    state => state.aichat.currentAiCustomizations.modelCardInfo
   );
 
   const viewModeButtonsProps: SegmentedButtonsProps = {
@@ -73,57 +77,63 @@ const AichatView: React.FunctionComponent = () => {
     onChange: setViewMode,
   };
 
-  const chatWorkspaceHeader =
-    viewMode === ViewMode.EDIT ? aichatI18n.aichatWorkspaceHeader() : botName;
+  const chatWorkspaceHeader = (
+    <div>
+      {projectTemplateLevel && (
+        <ProjectTemplateWorkspaceIcon tooltipPlace="bottom" />
+      )}
+      {viewMode === ViewMode.EDIT
+        ? aichatI18n.aichatWorkspaceHeader()
+        : botName}
+    </div>
+  );
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
-      <div className={moduleStyles.columnFlexContainer}>
-        {!levelAichatSettings?.hidePresentationPanel && (
-          <div className={moduleStyles.viewModeButtons}>
-            <SegmentedButtons {...viewModeButtonsProps} />
-          </div>
-        )}
-        <div className={moduleStyles.labCoreContainer}>
-          {viewMode === ViewMode.EDIT && (
-            <>
-              <div className={moduleStyles.instructionsArea}>
-                <PanelContainer
-                  id="aichat-instructions-panel"
-                  headerText={commonI18n.instructions()}
-                >
-                  <Instructions beforeNextLevel={beforeNextLevel} />
-                </PanelContainer>
-              </div>
-              <div className={moduleStyles.customizationArea}>
-                <PanelContainer
-                  id="aichat-model-customization-panel"
-                  headerText="Model Customization"
-                >
-                  <ModelCustomizationWorkspace />
-                </PanelContainer>
-              </div>
-            </>
-          )}
-          {viewMode === ViewMode.PRESENTATION && (
-            <div className={moduleStyles.presentationArea}>
+      {!levelAichatSettings?.hidePresentationPanel && (
+        <div className={moduleStyles.viewModeButtons}>
+          <SegmentedButtons {...viewModeButtonsProps} />
+        </div>
+      )}
+      <div className={moduleStyles.labCoreContainer}>
+        {viewMode === ViewMode.EDIT && (
+          <>
+            <div className={moduleStyles.instructionsArea}>
               <PanelContainer
-                id="aichat-presentation-panel"
-                headerText={'Model Card'}
+                id="aichat-instructions-panel"
+                headerContent={commonI18n.instructions()}
               >
-                <PresentationView />
+                <Instructions beforeNextLevel={beforeNextLevel} />
               </PanelContainer>
             </div>
-          )}
-          <div className={moduleStyles.chatWorkspaceArea}>
+            <div className={moduleStyles.customizationArea}>
+              <PanelContainer
+                id="aichat-model-customization-panel"
+                headerContent="Model Customization"
+              >
+                <ModelCustomizationWorkspace />
+              </PanelContainer>
+            </div>
+          </>
+        )}
+        {viewMode === ViewMode.PRESENTATION && (
+          <div className={moduleStyles.presentationArea}>
             <PanelContainer
-              id="aichat-workspace-panel"
-              headerText={chatWorkspaceHeader}
-              rightHeaderContent={<CopyButton />}
+              id="aichat-presentation-panel"
+              headerContent={'Model Card'}
             >
-              <ChatWorkspace />
+              <PresentationView />
             </PanelContainer>
           </div>
+        )}
+        <div className={moduleStyles.chatWorkspaceArea}>
+          <PanelContainer
+            id="aichat-workspace-panel"
+            headerContent={chatWorkspaceHeader}
+            rightHeaderContent={<CopyButton />}
+          >
+            <ChatWorkspace />
+          </PanelContainer>
         </div>
       </div>
     </div>

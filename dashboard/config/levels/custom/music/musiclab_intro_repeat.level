@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "skipUrl": "/projects/music/new",
     "long_instructions": "#### Repeat\r\n\r\nSave effort and use code to repeat a sound.\r\n\r\nUse the [repeat](#clickable=repeat-block) block to play the same sound [three](#clickable=repeat-block-field-workspace) times.",
     "level_data": {
       "library": "intro2024",

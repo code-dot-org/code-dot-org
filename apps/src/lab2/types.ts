@@ -135,6 +135,10 @@ export interface LevelProperties {
   // We are moving level validations out of level data and into level properties.
   // Temporarily keeping them in both places to avoid breaking existing code.
   validations?: Validation[];
+  // An optional URL that allows the user to skip the progression.
+  skipUrl?: string;
+  // Project Template level name for the level if it exists.
+  projectTemplateLevelName?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require

@@ -1,6 +1,9 @@
 import React from 'react';
 import style from './chat-messages-table.module.scss';
-import {StudentChatRow, TutorType} from '@cdo/apps/aiTutor/types';
+import {
+  StudentChatRow,
+  AITutorTypes as TutorTypes,
+} from '@cdo/apps/aiTutor/types';
 import {
   genericCompilation,
   genericValidation,
@@ -18,9 +21,9 @@ const AITutorChatMessagesTableRow: React.FunctionComponent<
   };
 
   const getPrompt = (chatMessage: StudentChatRow) => {
-    if (chatMessage.type === TutorType.COMPILATION) {
+    if (chatMessage.type === TutorTypes.COMPILATION) {
       return genericCompilation;
-    } else if (chatMessage.type === TutorType.VALIDATION) {
+    } else if (chatMessage.type === TutorTypes.VALIDATION) {
       return genericValidation;
     } else {
       return chatMessage.prompt;

@@ -178,10 +178,6 @@ class ActiveSupport::TestCase
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
 
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   def assert_does_not_create(*args, &block)
     assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end

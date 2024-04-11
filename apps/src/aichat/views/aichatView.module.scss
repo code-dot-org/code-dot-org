@@ -13,10 +13,11 @@
   overflow: hidden;
   user-select: none;
   display: flex;
+  flex-direction: column;
   margin: 2px;
 
   .instructionsArea {
-    width: 20%;
+    width: 30%;
     height: 100%;
   }
 
@@ -26,7 +27,7 @@
 
   .customizationArea {
     height: 100%;
-    width: 400px;
+    width: 30%;
   }
 
   .presentationArea {
@@ -34,12 +35,6 @@
     height: 90%;
     overflow-y: auto;
   }
-}
-
-.columnFlexContainer {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
 }
 
 .labCoreContainer {

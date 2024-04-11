@@ -3,7 +3,7 @@
 // This is a React client for a panels level.  Note that this is
 // only used for levels that use Lab2.
 
-import React, {useCallback} from 'react';
+import React, {useCallback, useContext} from 'react';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   sendSuccessReport,
@@ -12,6 +12,10 @@ import {
 import {PanelsLevelData, PanelsLevelProperties} from './types';
 import PanelsView from './PanelsView';
 import useWindowSize from '../util/hooks/useWindowSize';
+import {
+  DialogContext,
+  DialogType,
+} from '@cdo/apps/lab2/views/dialogs/DialogManager';
 
 const appName = 'panels';
 
@@ -27,6 +31,9 @@ const PanelsLabView: React.FunctionComponent = () => {
   const currentAppName = useAppSelector(
     state => state.lab.levelProperties?.appName
   );
+  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+
+  const dialogControl = useContext(DialogContext);
 
   const onContinue = useCallback(
     (nextUrl?: string) => {
@@ -42,6 +49,16 @@ const PanelsLabView: React.FunctionComponent = () => {
     [dispatch]
   );
 
+  const onSkip = useCallback(() => {
+    if (dialogControl) {
+      dialogControl.showDialog(DialogType.Skip, () => {
+        if (skipUrl) {
+          window.location.href = skipUrl;
+        }
+      });
+    }
+  }, [dialogControl, skipUrl]);
+
   const [windowWidth, windowHeight] = useWindowSize();
 
   if (!panels || currentAppName !== appName) {
@@ -52,6 +69,7 @@ const PanelsLabView: React.FunctionComponent = () => {
     <PanelsView
       panels={panels}
       onContinue={onContinue}
+      onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}
       targetHeight={windowHeight}
     />

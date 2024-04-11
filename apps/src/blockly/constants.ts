@@ -29,6 +29,7 @@ export enum Themes {
 }
 
 export const DARK_THEME_SUFFIX = 'dark';
+export const CLOCKWISE_TURN_DIRECTION = 'turnRight';
 
 export enum BlockStyles {
   DEFAULT = 'default',
@@ -178,9 +179,7 @@ export const READ_ONLY_PROPERTIES = [
   'Events',
   'Extensions',
   'FieldAngle',
-  'FieldAngleDropdown',
   'FieldAngleInput',
-  'FieldAngleTextInput',
   'FieldColour',
   'FieldColourDropdown',
   'FieldIcon',

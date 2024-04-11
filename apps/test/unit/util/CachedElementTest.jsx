@@ -1,8 +1,10 @@
-import {expect} from '../../util/reconfiguredChai';
-import React from 'react';
 import {mount} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
+
 import CachedElement, {unitTestExports} from '@cdo/apps/util/CachedElement';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const cache = unitTestExports.elementsHtmlCache;
 const defaultType = 'div';

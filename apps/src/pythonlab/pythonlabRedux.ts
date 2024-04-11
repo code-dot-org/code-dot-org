@@ -4,7 +4,12 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface PythonlabState {
   source: MultiFileSource | undefined;
-  output: string[];
+  output: ConsoleLog[];
+}
+
+export interface ConsoleLog {
+  type: 'system_out' | 'system_in' | 'img' | 'system_msg';
+  contents: string;
 }
 
 export const initialState: PythonlabState = {
@@ -19,8 +24,17 @@ const pythonlabSlice = createSlice({
     setSource(state, action: PayloadAction<MultiFileSource>) {
       state.source = action.payload;
     },
-    appendOutput(state, action: PayloadAction<string>) {
-      state.output.push(action.payload);
+    appendSystemOutMessage(state, action: PayloadAction<string>) {
+      state.output.push({type: 'system_out', contents: action.payload});
+    },
+    appendSystemInMessage(state, action: PayloadAction<string>) {
+      state.output.push({type: 'system_in', contents: action.payload});
+    },
+    appendOutputImage(state, action: PayloadAction<string>) {
+      state.output.push({type: 'img', contents: action.payload});
+    },
+    appendSystemMessage(state, action: PayloadAction<string>) {
+      state.output.push({type: 'system_msg', contents: action.payload});
     },
     resetOutput(state) {
       state.output = [];
@@ -30,4 +44,11 @@ const pythonlabSlice = createSlice({
 
 registerReducers({pythonlab: pythonlabSlice.reducer});
 
-export const {setSource, appendOutput, resetOutput} = pythonlabSlice.actions;
+export const {
+  setSource,
+  appendSystemOutMessage,
+  appendSystemInMessage,
+  appendOutputImage,
+  appendSystemMessage,
+  resetOutput,
+} = pythonlabSlice.actions;
