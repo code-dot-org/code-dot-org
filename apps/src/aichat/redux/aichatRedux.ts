@@ -1,28 +1,29 @@
 import moment from 'moment';
-import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-const registerReducers = require('@cdo/apps/redux').registerReducers;
-
 import {
+  AI_CUSTOMIZATIONS_LABELS,
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
-  AI_CUSTOMIZATIONS_LABELS,
 } from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
 import {
-  ChatCompletionMessage,
   AichatLevelProperties,
-  Role,
+  AiCustomizations,
   AITutorInteractionStatus as Status,
   AITutorInteractionStatusType,
-  AiCustomizations,
-  ModelCardInfo,
-  Visibility,
+  ChatCompletionMessage,
   LevelAichatSettings,
+  ModelCardInfo,
+  Role,
+  ViewMode,
+  Visibility,
 } from '../types';
 import {RootState} from '@cdo/apps/types/redux';
+
+const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],
@@ -70,6 +71,7 @@ export interface AichatState {
   currentAiCustomizations: AiCustomizations;
   previouslySavedAiCustomizations?: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
+  viewMode: ViewMode;
 }
 
 const initialState: AichatState = {
@@ -79,6 +81,7 @@ const initialState: AichatState = {
   chatMessageError: false,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
+  viewMode: ViewMode.EDIT,
 };
 
 // THUNKS
@@ -244,6 +247,9 @@ const aichatSlice = createSlice({
         chatMessage.status = status;
       }
     },
+    setViewMode: (state, action: PayloadAction<ViewMode>) => {
+      state.viewMode = action.payload;
+    },
     setStartingAiCustomizations: (
       state,
       action: PayloadAction<{
@@ -338,6 +344,7 @@ export const {
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
+  setViewMode,
   setStartingAiCustomizations,
   setPreviouslySavedAiCustomizations,
   setAiCustomizationProperty,

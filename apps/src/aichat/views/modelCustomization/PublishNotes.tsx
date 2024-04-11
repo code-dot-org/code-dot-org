@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import {
   setModelCardProperty,
+  setViewMode,
   updateAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -15,7 +16,7 @@ import ExampleTopicsInputs from './ExampleTopicsInputs';
 import PublishStatus from './PublishStatus';
 import moduleStyles from './publish-notes.module.scss';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
-import {ModelCardInfo} from '../../types';
+import {ModelCardInfo, ViewMode} from '../../types';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -32,10 +33,10 @@ const PublishNotes: React.FunctionComponent = () => {
     [dispatch]
   );
 
-  const onPublish = useCallback(
-    () => dispatch(updateAiCustomization()),
-    [dispatch]
-  );
+  const onPublish = useCallback(() => {
+    dispatch(updateAiCustomization());
+    dispatch(setViewMode(ViewMode.PRESENTATION));
+  }, [dispatch]);
 
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>

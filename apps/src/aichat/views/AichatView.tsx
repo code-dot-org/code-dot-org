@@ -1,6 +1,6 @@
 /** @file Top-level view for AI Chat Lab */
 
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
@@ -8,7 +8,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
-import {setStartingAiCustomizations} from '../redux/aichatRedux';
+import {setStartingAiCustomizations, setViewMode} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
@@ -22,7 +22,6 @@ import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 
 const AichatView: React.FunctionComponent = () => {
-  const [viewMode, setViewMode] = useState<string>(ViewMode.EDIT);
   const dispatch = useAppDispatch();
 
   const beforeNextLevel = useCallback(() => {
@@ -41,6 +40,11 @@ const AichatView: React.FunctionComponent = () => {
 
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
+  const {currentAiCustomizations, viewMode} = useAppSelector(
+    state => state.aichat
+  );
+  const {botName} = currentAiCustomizations.modelCardInfo;
+
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(initialSources);
     dispatch(
@@ -50,10 +54,6 @@ const AichatView: React.FunctionComponent = () => {
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
-
-  const {botName} = useAppSelector(
-    state => state.aichat.currentAiCustomizations.modelCardInfo
-  );
 
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
@@ -74,7 +74,7 @@ const AichatView: React.FunctionComponent = () => {
     ],
     size: 'm',
     selectedButtonValue: viewMode,
-    onChange: setViewMode,
+    onChange: viewMode => dispatch(setViewMode(viewMode as ViewMode)),
   };
 
   const chatWorkspaceHeader = (
