@@ -3,13 +3,15 @@
 import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
 import {BLOCK_TYPES} from './constants';
 import {Abstract} from 'blockly/core/events/events_abstract';
-import {BlockChange} from 'blockly/core/events/events_block_change';
-import {BlockMove} from 'blockly/core/events/events_block_move';
-import {BlockCreate} from 'blockly/core/events/events_block_create';
 import {Block, WorkspaceSvg} from 'blockly';
 import {ExtendedBlockSvg, ExtendedWorkspaceSvg} from './types';
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
-import {ThemeChange} from 'blockly/core/events/events_theme_change';
+import type {
+  BlockChange,
+  BlockMove,
+  BlockCreate,
+  ThemeChange,
+} from 'blockly/core/events/events';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.

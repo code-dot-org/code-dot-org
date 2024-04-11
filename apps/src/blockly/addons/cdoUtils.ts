@@ -552,15 +552,15 @@ export function createBlockLimitMap() {
   blocks.forEach(block => {
     // Check if the block has a limit attribute
     const limitAttribute = block.getAttribute('limit');
-    if (limitAttribute !== null) {
-      // Check if the limit attribute is a valid number
-      const limit = parseInt(limitAttribute);
-      if (!isNaN(limit)) {
-        // Extract type and add to blockLimitMap
-        const type = block.getAttribute('type');
-        if (type !== null) {
-          blockLimitMap.set(type, limit);
-        }
+
+    // Directly parse the attribute. Template string is used to handle null values.
+    const limit = parseInt(`${limitAttribute}`);
+
+    if (!isNaN(limit)) {
+      // Extract type and add to blockLimitMap
+      const type = block.getAttribute('type');
+      if (type !== null) {
+        blockLimitMap.set(type, limit);
       }
     }
   });
