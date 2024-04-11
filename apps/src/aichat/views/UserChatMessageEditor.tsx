@@ -1,17 +1,14 @@
-import React, {useState, useCallback, useEffect} from 'react';
+import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
 import aichatI18n from '../locale';
-import {
-  AichatState,
-  submitChatContents,
-} from '../redux/aichatRedux';
+import {AichatState, submitChatContents} from '../redux/aichatRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
-import {} from '@cdo/apps/templates/currentUserRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {ChatContext} from '../types';
+import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
 /**
  * Renders the AI Chat Lab user chat message editor component.
  */
@@ -34,7 +31,8 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     (state: {progress: ProgressState}) => state.progress.scriptId
   );
 
-
+  const channel = getStandaloneProjectId();
+  console.log('channel', channel);
 
   const dispatch = useAppDispatch();
 
@@ -78,6 +76,5 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     </div>
   );
 };
-
 
 export default UserChatMessageEditor;
