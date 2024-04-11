@@ -31,9 +31,7 @@ class AiTutorInteractionsController < ApplicationController
       ai_tutor_interaction_params[:project_id] = project_data[:project_id]
       ai_tutor_interaction_params[:project_version_id] = project_data[:version_id]
     end
-    puts "*** AI_TUTOR_INTERACTION_PARAMS ***"
-    puts ai_tutor_interaction_params
-    
+
     ai_tutor_interaction_params
   end
 
