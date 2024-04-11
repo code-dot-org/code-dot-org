@@ -155,6 +155,8 @@ const EVENTS = {
   TA_RUBRIC_STUDENT_AI_SUBMITTED: 'TA Rubric Student AI Level Submitted',
   TA_RUBRIC_AI_EVAL_FROM_SECTION:
     'TA Rubric AI Eval started from section request',
+  TA_RUBRIC_WINDOW_MOVE_START: 'TA Rubric window move start',
+  TA_RUBRIC_WINDOW_MOVE_END: 'TA Rubric window move end',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
