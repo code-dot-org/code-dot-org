@@ -3,8 +3,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';
@@ -73,15 +74,22 @@ class TeacherSections extends Component {
           </ContentContainer>
         )}
         {this.shouldRenderPlSections() && (
-          <ContentContainer heading={i18n.plSectionsTitle()}>
-            <BodyTwoText>
-              <SafeMarkdown
-                markdown={i18n.plSectionsMoved({
-                  myPlPageLink: '/my-professional-learning',
-                })}
-              />
-            </BodyTwoText>
-          </ContentContainer>
+          <>
+            <Heading2 visualAppearance="heading-md">
+              {i18n.plSectionsTitle()}
+            </Heading2>
+            <BodyTwoText>{i18n.plSectionsMoved()}</BodyTwoText>
+            <LinkButton
+              color={'purple'}
+              href={studio('/my-professional-learning')}
+              iconLeft={{
+                iconName: 'book-circle-arrow-right',
+                iconStyle: 'solid',
+              }}
+              size="s"
+              text={i18n.myProfessionalLearningCoursesHomepageButton()}
+            />
+          </>
         )}
         <RosterDialog />
         <AddSectionDialog />
