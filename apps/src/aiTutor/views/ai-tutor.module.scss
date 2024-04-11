@@ -137,7 +137,8 @@ button.buttonStyle {
   border-bottom: 2px solid $neutral_dark;
   color: $neutral_white;
   display: flex;
-  flex-direction: row;
+  // flex-direction: row
+  flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem 2rem 0.5rem 1rem;
 }
@@ -155,6 +156,10 @@ button.buttonStyle {
       color: $neutral_white;
     }
   }
+}
+
+.aiTutorFooterInputArea {
+  flex-direction: row;
 }
 
 // TODO: Change name

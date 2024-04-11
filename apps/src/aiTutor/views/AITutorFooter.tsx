@@ -10,18 +10,13 @@ import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
 } from '@cdo/apps/aiTutor/types';
-import {convertOptionalStringToBoolean} from '@cdo/apps/types/utils';
-
-console.log('AITutorTypes', ActionType);
 
 const QuickActions = {
   [ActionType.COMPILATION]: "Why doesn't my code compile?",
   [ActionType.VALIDATION]: "Why aren't my tests passing?",
 };
 
-interface AITutorFooterProps {}
-
-const AITutorFooter: React.FC<AITutorFooterProps> = () => {
+const AITutorFooter: React.FC = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
   const isWaitingForChatResponse = useAppSelector(
@@ -39,22 +34,24 @@ const AITutorFooter: React.FC<AITutorFooterProps> = () => {
   );
   const studentCode = sources[fileMetadata[activeTabKey]].text;
 
-  // const hasCompilationError = useAppSelector(
-  //   state => state.javalabEditor.hasCompilationError
-  // );
-  // const hasRunOrTestedCode = useAppSelector(
-  //   state => state.javalab.hasRunOrTestedCode
-  // );
-  // const isRunning = useAppSelector(state => state.javalab.isRunning);
-  // const validationPassed = useAppSelector(
-  //   state => state.javalab.validationPassed
-  // );
+  const hasCompilationError = useAppSelector(
+    state => state.javalabEditor.hasCompilationError
+  );
+  const hasRunOrTestedCode = useAppSelector(
+    state => state.javalab.hasRunOrTestedCode
+  );
+  const isRunning = useAppSelector(state => state.javalab.isRunning);
+  const validationPassed = useAppSelector(
+    state => state.javalab.validationPassed
+  );
 
   const dispatch = useAppDispatch();
 
   // TODO: Uncomment actual conditions
-  const showCompilationOption = true; // !isRunning && hasRunOrTestedCode && hasCompilationError;
-  const showValidationOption = true; // hasRunOrTestedCode && !hasCompilationError && !validationPassed;
+  const showCompilationOption =
+    !isRunning && hasRunOrTestedCode && hasCompilationError;
+  const showValidationOption =
+    hasRunOrTestedCode && !hasCompilationError && !validationPassed;
 
   const handleSubmit = useCallback(
     (actionType: AITutorTypesValue) => {
@@ -81,15 +78,12 @@ const AITutorFooter: React.FC<AITutorFooterProps> = () => {
           break;
       }
 
-      console.log('actionType', actionType);
-      console.log('ActionType.GENERAL_CHAT', ActionType.GENERAL_CHAT);
       const chatContext = {
         studentInput,
         studentCode,
         actionType,
       };
 
-      console.log('chatContext', chatContext);
       dispatch(askAITutor(chatContext));
       setUserMessage('');
 
@@ -103,41 +97,48 @@ const AITutorFooter: React.FC<AITutorFooterProps> = () => {
 
   return (
     <div className={style.aiTutorFooter}>
-      <p>Here is a suggested question</p>
-      <textarea
-        className={style.textArea}
-        // TODO: Update to support i18n
-        placeholder={'Add a chat message...'}
-        onChange={e => setUserMessage(e.target.value)}
-        value={userMessage}
-      />
-      <div className={style.submitToStudentButtonAndError}>
-        <Button
-          className={style.submitToStudentButton}
-          color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={isWaitingForChatResponse}
-          icon="arrow-up"
-          key="submit"
-          onClick={() => handleSubmit(ActionType.GENERAL_CHAT)}
-          text="Submit"
+      <div className={style.aiTutorFooterInputArea}>
+        <textarea
+          className={style.textArea}
+          // TODO: Update to support i18n
+          placeholder={'Add a chat message...'}
+          onChange={e => setUserMessage(e.target.value)}
+          value={userMessage}
         />
-        {/*TODO: Add error handling*/}
+        <div className={style.submitToStudentButtonAndError}>
+          <Button
+            className={style.submitToStudentButton}
+            color={Button.ButtonColor.brandSecondaryDefault}
+            disabled={isWaitingForChatResponse}
+            icon="arrow-up"
+            key="submit"
+            onClick={() => handleSubmit(ActionType.GENERAL_CHAT)}
+            text="Submit"
+          />
+        </div>
       </div>
-      {/* TODO: Get these working */}
-      {/* <div>
+      <div>
         {showCompilationOption && (
           <Button
-            text={QuickActions.compile}
+            className={style.submitToStudentButton}
+            color={Button.ButtonColor.teal}
+            disabled={isWaitingForChatResponse}
+            key="compilation"
+            text={QuickActions.compilation}
             onClick={() => handleSubmit(ActionType.COMPILATION)}
           />
         )}
         {showValidationOption && (
           <Button
-            text={QuickActions.validate}
+            className={style.submitToStudentButton}
+            color={Button.ButtonColor.teal}
+            disabled={isWaitingForChatResponse}
+            key="validation"
+            text={QuickActions.validation}
             onClick={() => handleSubmit(ActionType.VALIDATION)}
           />
         )}
-      </div> */}
+      </div>
     </div>
   );
 };
