@@ -1,4 +1,9 @@
-import {ChatCompletionMessage, AiCustomizations} from './types';
+import {
+  Role,
+  ChatCompletionMessage,
+  AiCustomizations,
+  ChatContext,
+} from './types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
@@ -9,22 +14,15 @@ const CHAT_COMPLETION_URL = '/aichat/chat_completion';
  */
 
 export async function postAichatCompletionMessage(
-  aiCustomizations: AiCustomizations,
-  newMessage: ChatCompletionMessage,
-  storedMessages: ChatCompletionMessage[],
-  userId: number,
-  currentLevelId: string | null,
-  scriptId: number | null
+  messagesToSend: AichatCompletionMessage[],
+  temperature: number,
+  chatContext: ChatContext
 ): Promise<ChatCompletionMessage | null> {
   const payload = {
-    aiCustomizations,
-    newMessage,
-    storedMessages,
-    userId,
-    currentLevelId,
-    scriptId,
+    inputs: messagesToSend,
+    temperature,
+    chatContext,
   };
-
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
     JSON.stringify(payload),
@@ -48,21 +46,23 @@ export async function postAichatCompletionMessage(
  */
 export async function getAichatCompletionMessage(
   aiCustomizations: AiCustomizations,
-  newMessage: ChatCompletionMessage,
+  newMessageText: string,
   storedMessages: ChatCompletionMessage[],
-  userId: number,
-  currentLevelId: string | null,
-  scriptId: number | null
+  chatContext: ChatContext
 ) {
+  const {systemPrompt, temperature, retrievalContexts} = aiCustomizations;
+  const messagesToSend = [
+    {role: Role.SYSTEM, content: systemPrompt},
+    ...formatRetrievalContextsForAichatCompletion(retrievalContexts),
+    ...formatMessagesForAichatCompletion(storedMessages),
+    {role: Role.USER, content: newMessageText},
+  ];
   let response;
   try {
     response = await postAichatCompletionMessage(
-      aiCustomizations,
-      newMessage,
-      storedMessages,
-      userId,
-      currentLevelId,
-      scriptId
+      messagesToSend,
+      temperature,
+      chatContext
     );
   } catch (error) {
     Lab2Registry.getInstance()
@@ -71,3 +71,24 @@ export async function getAichatCompletionMessage(
   }
   return response;
 }
+
+const formatRetrievalContextsForAichatCompletion = (
+  retrievalContexts: string[]
+): AichatCompletionMessage[] => {
+  return retrievalContexts.map(context => {
+    return {role: Role.USER, content: context};
+  });
+};
+
+const formatMessagesForAichatCompletion = (
+  chatMessages: ChatCompletionMessage[]
+): AichatCompletionMessage[] => {
+  return chatMessages.map(message => {
+    return {role: message.role, content: message.chatMessageText};
+  });
+};
+
+type AichatCompletionMessage = {
+  role: Role;
+  content: string;
+};

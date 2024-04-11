@@ -13,6 +13,7 @@ export type ChatContext = {
   userId: number;
   currentLevelId: string | null;
   scriptId: number | null;
+  channelId: string | undefined;
 };
 
 export enum AichatInteractionStatus {

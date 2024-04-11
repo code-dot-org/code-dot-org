@@ -31,8 +31,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     (state: {progress: ProgressState}) => state.progress.scriptId
   );
 
-  const channel = getStandaloneProjectId();
-  console.log('channel', channel);
+  const channelId = getStandaloneProjectId();
 
   const dispatch = useAppDispatch();
 
@@ -43,6 +42,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
         userId,
         currentLevelId,
         scriptId,
+        channelId,
       };
       dispatch(submitChatContents(chatContents));
       setUserMessage('');
@@ -54,6 +54,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     userMessage,
     currentLevelId,
     scriptId,
+    channelId,
   ]);
 
   return (
