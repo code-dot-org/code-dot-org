@@ -159,7 +159,7 @@ export default function LandingPage({
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <EnrolledWorkshops />
         {plCoursesStarted?.length >= 1 && (
-          <section>
+          <section id={'self-paced-pl'}>
             <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
             {RenderSelfPacedProgressTable()}
           </section>
