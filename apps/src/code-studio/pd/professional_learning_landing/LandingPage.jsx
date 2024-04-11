@@ -165,12 +165,12 @@ export default function LandingPage({
           </section>
         )}
         {deeperLearningCourseData?.length >= 1 && (
-          <div>
+          <section>
             <Heading2>Online Professional Learning Courses</Heading2>
             <ProfessionalLearningCourseProgress
               deeperLearningCourseData={deeperLearningCourseData}
             />
-          </div>
+          </section>
         )}
         <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
