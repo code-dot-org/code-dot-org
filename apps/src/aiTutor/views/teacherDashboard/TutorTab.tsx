@@ -6,11 +6,11 @@ import Button from '@cdo/apps/templates/Button';
 /**
  * Renders table of student chat messages and toggles to control student access to AI Tutor.
  */
-interface TeacherDashboardProps {
+interface TutorTabProps {
   sectionId: number;
 }
 
-const TeacherDashboard: React.FC<TeacherDashboardProps> = ({sectionId}) => {
+const TutorTab: React.FC<TutorTabProps> = ({sectionId}) => {
   const [showControls, setShowControls] = useState<boolean>(false);
 
   const onClickControls = () => {
@@ -48,4 +48,4 @@ const TeacherDashboard: React.FC<TeacherDashboardProps> = ({sectionId}) => {
   );
 };
 
-export default TeacherDashboard;
+export default TutorTab;
