@@ -67,7 +67,7 @@ export interface AichatState {
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
-  previouslySavedAiCustomizations?: AiCustomizations;
+  savedAiCustomizations?: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
 }
 
@@ -89,19 +89,16 @@ export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, previouslySavedAiCustomizations} =
-      state.aichat;
+    const {currentAiCustomizations, savedAiCustomizations} = state.aichat;
 
     await Lab2Registry.getInstance()
       .getProjectManager()
       ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
 
-    thunkAPI.dispatch(
-      setPreviouslySavedAiCustomizations(currentAiCustomizations)
-    );
+    thunkAPI.dispatch(setSavedAiCustomizations(currentAiCustomizations));
 
     const changedProperties = findChangedProperties(
-      previouslySavedAiCustomizations,
+      savedAiCustomizations,
       currentAiCustomizations
     );
     changedProperties.forEach(property => {
@@ -237,16 +234,16 @@ const aichatSlice = createSlice({
         }
       }
 
-      state.previouslySavedAiCustomizations = reconciledAiCustomizations;
+      state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
     },
-    setPreviouslySavedAiCustomizations: (
+    setSavedAiCustomizations: (
       state,
       action: PayloadAction<AiCustomizations>
     ) => {
-      state.previouslySavedAiCustomizations = action.payload;
+      state.savedAiCustomizations = action.payload;
     },
     setAiCustomizationProperty: (
       state,
@@ -302,7 +299,7 @@ export const {
   setShowWarningModal,
   updateChatMessageStatus,
   setStartingAiCustomizations,
-  setPreviouslySavedAiCustomizations,
+  setSavedAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
 } = aichatSlice.actions;
