@@ -83,6 +83,13 @@ require 'policies/lti'
 require 'services/user'
 
 class User < ApplicationRecord
+  # We would prefer to enforce standard class structure for all our Ruby code,
+  # but this class unfortunately has too many violations to be fixed all at
+  # once. We should plan to reorganize the file manually, or ideally even slim
+  # it down by extracting discrete chunks of related functionality into modules
+  # or concerns.
+  #
+  # rubocop:disable Layout/ClassStructure
   include SerializedProperties
   include SchoolInfoDeduplicator
   include LocaleHelper
@@ -201,44 +208,6 @@ class User < ApplicationRecord
     TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
-  # FND-1130: This field will no longer be required
-  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
-
-  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
-  US_STATE_DROPDOWN_OPTIONS = {
-    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
-    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
-    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
-    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
-    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
-    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
-    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
-    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
-    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
-    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
-    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
-    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
-    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
-    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
-    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
-    'WY' => 'Wyoming'
-  }.freeze
-
-  DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
-    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
-    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
-  ].freeze
-
-  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
-  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
-
-  # When adding a new version, append to the end of the array
-  # using the next increasing natural number.
-  TERMS_OF_SERVICE_VERSIONS = [
-    1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ].freeze
-  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
-
   validates_presence_of :user_type
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
@@ -349,457 +318,6 @@ class User < ApplicationRecord
 
   validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
     self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
-  end
-
-  # Given a user_id, username, or email, attempts to find the relevant user
-  def self.from_identifier(identifier)
-    (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
-      where(username: identifier).first ||
-      find_by_email_or_hashed_email(identifier)
-  rescue ActiveModel::RangeError
-    # Given too large of a user id this can produce a range error
-    # @see https://app.honeybadger.io/projects/3240/faults/44740400
-    nil
-  end
-
-  def self.find_or_create_teacher(params, invited_by_user, permission = nil)
-    user = User.find_by_email_or_hashed_email(params[:email])
-
-    if user
-      user.update!(params.merge(user_type: TYPE_TEACHER))
-    else
-      # initialize new users with name and school
-      if params[:ops_first_name] || params[:ops_last_name]
-        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
-      end
-      params[:school] ||= params[:ops_school]
-      params[:user_type] = TYPE_TEACHER
-      params[:age] ||= 21
-
-      # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
-      # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
-      ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
-        raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
-      end
-      user = User.invite!(attributes: params)
-      user.update!(invited_by: invited_by_user)
-    end
-
-    if permission
-      user.permission = permission
-      user.save!
-    end
-
-    user
-  end
-
-  def self.find_or_create_facilitator(params, invited_by_user)
-    find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
-  end
-
-  def self.hash_email(email)
-    Digest::MD5.hexdigest(email.downcase)
-  end
-
-  # Given a cleartext email finds the first user that has a matching email or hash.
-  # @param [String] email (cleartext)
-  # @return [User|nil]
-  def self.find_by_email_or_hashed_email(email)
-    return nil if email.blank?
-    find_by_hashed_email User.hash_email email
-  end
-
-  # Given a cleartext email, finds the first user that has a matching email.
-  # This will not find users (students) who only have hashed_emails stored.
-  # For that, use #find_by_email_or_hashed_email.
-  # @param [String] email (cleartext)
-  # @return [User|nil]
-  def self.find_by_email(email)
-    return nil if email.blank?
-    migrated_user = AuthenticationOption.trusted_email.find_by(email: email)&.user
-    migrated_user || User.find_by(email: email)
-  end
-
-  # Given an email hash, finds the first user that has a matching email hash.
-  # @param [String] hashed_email
-  # @return [User|nil]
-  def self.find_by_hashed_email(hashed_email)
-    return nil if hashed_email.blank?
-    migrated_user = AuthenticationOption.trusted_email.find_by(hashed_email: hashed_email)&.user
-    migrated_user || User.find_by(hashed_email: hashed_email)
-  end
-
-  # Locate an SSO user by SSO provider and associated user id.
-  # @param [String] type A credential type / provider type.  In the future this
-  #   should always be one of the valid credential types from AuthenticationOption
-  # @param [String] id A user id associated with the particular provider.
-  # @returns [User|nil]
-  def self.find_by_credential(type:, id:)
-    authentication_option = AuthenticationOption.find_by(
-      credential_type: type,
-      authentication_id: id
-    )
-    authentication_option&.user || User.find_by(provider: type, uid: id)
-  end
-
-  def self.find_channel_owner(encrypted_channel_id)
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    user_id = user_id_for_storage_id(owner_storage_id)
-    User.find(user_id)
-  rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
-    nil
-  end
-
-  def self.name_from_omniauth(raw_name)
-    return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
-    # clever returns a hash instead of a string for name
-    "#{raw_name['first']} #{raw_name['last']}".squish
-  end
-
-  def self.from_omniauth(auth, params, session = nil)
-    omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
-
-    unless omniauth_user
-      omniauth_user = create
-      initialize_new_oauth_user(omniauth_user, auth, params)
-      omniauth_user.save
-      SignUpTracking.log_sign_up_result(omniauth_user, session)
-    end
-
-    omniauth_user.update_oauth_credential_tokens(auth)
-    omniauth_user
-  end
-
-  def self.initialize_new_oauth_user(user, auth, params)
-    user.provider = auth.provider
-    user.uid = auth.uid
-    user.name = name_from_omniauth auth.info.name
-    user.family_name = auth.info.family_name if auth.info.family_name.present?
-    user.user_type = params['user_type'] || auth.info.user_type
-    user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
-
-    # Store emails, except when using an authentication provider whose emails
-    # we don't trust
-    user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
-
-    if auth.provider == :the_school_project
-      user.username = auth.extra.raw_info.nickname
-      user.user_type = auth.extra.raw_info.role
-      user.locale = auth.extra.raw_info.locale
-      user.school = auth.extra.raw_info.school.name
-    end
-
-    # treat clever admin types as teachers
-    if CLEVER_ADMIN_USER_TYPES.include? user.user_type
-      user.user_type = User::TYPE_TEACHER
-    end
-
-    # clever provides us these fields
-    if user.user_type == TYPE_TEACHER
-      user.age = 21
-    else
-      # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
-      # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
-      # handle any necessary conversion, setting birthday from auth.info.dob. The later
-      # shenanigans ensure that we store the user's age rather than birthday.
-      user.birthday = auth.info.dob
-      user_age = user.age
-      user.birthday = nil
-      user.age = user_age
-    end
-
-    user.gender_third_party_input = auth.info.gender
-    user.gender = Policies::Gender.normalize auth.info.gender
-  end
-
-  def self.new_with_session(params, session)
-    return super unless PartialRegistration.in_progress? session
-    new_from_partial_registration session do |user|
-      Services::User.assign_form_params(user, params)
-    end
-  end
-
-  # overrides Devise::Authenticatable#find_first_by_auth_conditions
-  # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
-  def self.find_for_authentication(tainted_conditions)
-    max_credential_size = 255
-    conditions = devise_parameter_filter.filter(tainted_conditions.dup)
-    # we get either a login (username) or hashed_email
-    login = conditions.delete(:login)
-    if login.present?
-      return nil if login.size > max_credential_size || login.utf8mb4?
-      # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
-      # indexing problems bit us on the users table don't affect the multi-auth table
-      ignore_deleted_at_index.where(
-        [
-          'username = :value OR email = :value OR hashed_email = :hashed_value',
-          {value: login.downcase, hashed_value: hash_email(login.downcase)}
-        ]
-      ).first
-    elsif (hashed_email = conditions.delete(:hashed_email))
-      return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
-      return find_by_hashed_email(hashed_email)
-    else
-      nil
-    end
-  end
-
-  def self.authenticate_with_section(section:, params:)
-    User.authenticate_with_section_and_secret_words(section: section, params: params.slice(:user_id, :secret_words)) ||
-      User.authenticate_with_section_and_secret_picture(section: section, params: params.slice(:user_id, :secret_picture_id))
-  end
-
-  def self.authenticate_with_section_and_secret_words(section:, params:)
-    return if section.login_type != Section::LOGIN_TYPE_WORD
-
-    User.joins(:sections_as_student).find_by(
-      id: params[:user_id],
-      secret_words: params[:secret_words],
-      followers: {section: section}
-    )
-  end
-
-  def self.authenticate_with_section_and_secret_picture(section:, params:)
-    return if section.login_type != Section::LOGIN_TYPE_PICTURE
-
-    User.joins(:sections_as_student).find_by(
-      id: params[:user_id],
-      secret_picture_id: params[:secret_picture_id],
-      followers: {section: section}
-    )
-  end
-
-  # There is a bug (fix: https://codedotorg.atlassian.net/browse/INF-571) where some users have
-  # duplicate user levels for the same level. To ensure that we return the relevant user level for
-  # each level and not one of the duplicates, the list is first sorted so that the
-  # most relevant user levels are at the end. The list is then indexed by level ID, which will
-  # pick up the last matching user level in the list.
-  def self.index_user_levels_by_level_id(user_levels)
-    # Sorts by updated_at asc then id desc
-    # the correct user level is the one most recently updated or the first created
-    relevant_user_levels_last = user_levels.sort {|a, b| [a.updated_at, b.id] <=> [b.updated_at, a.id]}
-    relevant_user_levels_last.index_by(&:level_id)
-  end
-
-  # Retrieves all user_level objects for the given users, script, and levels.
-  # The return value is a hash from user_id to an array of UserLevel objects
-  # sorted in descending order by updated_at:
-  # {
-  #   1: [<UserLevel>, <UserLevel>, ...],
-  #   2: [<UserLevel>, <UserLevel>, ...]
-  # }
-  #
-  # A given user with no UserLevel matching the given criteria is omitted from
-  # the returned hash. The associated LevelSource data for each UserLevel is also
-  # prefetched to prevent n+1 query issues.
-  def self.user_levels_by_user(user_ids, script_id, level_ids)
-    UserLevel.
-      includes(:level_source).
-      where({user_id: user_ids, script_id: script_id, level_id: level_ids}).
-      order('updated_at DESC').
-      group_by(&:user_id)
-  end
-
-  # Retrieve all user levels for the designated set of users in the given
-  # script, with a single query.
-  # @param [Enumerable<User>] users
-  # @param [Unit] script
-  # @return [Hash] UserLevels by user id by level id
-  # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
-  # {
-  #   1: {
-  #     101: <UserLevel ...>,
-  #     102: <UserLevel ...>
-  #   },
-  #   2: {
-  #     101: <UserLevel ...>,
-  #     102: <UserLevel ...>
-  #   },
-  #   3: {}
-  # }
-  def self.user_levels_by_user_by_level(users, script)
-    initial_hash = users.map {|user| [user.id, {}]}.to_h
-    UserLevel.where(
-      script_id: script.id,
-      user_id: users.map(&:id)
-    ).
-      group_by(&:user_id).
-      inject(initial_hash) do |memo, (user_id, user_levels)|
-        memo[user_id] = User.index_user_levels_by_level_id(user_levels)
-        memo
-      end
-  end
-
-  # Returns an array of users associated with an email address.
-  # Will contain all users that have this email either in
-  # plaintext, hashed, or as a parent email. Empty array
-  # if no associated users are found.
-  def self.associated_users(email)
-    result = []
-    return result if email.blank?
-
-    primary_account = User.find_by_email_or_hashed_email(email)
-    result.push(primary_account) if primary_account
-
-    child_accounts = User.where(parent_email: email)
-    result += child_accounts
-
-    result
-  end
-
-  def self.send_reset_password_instructions(attributes = {})
-    # override of Devise method
-    if attributes[:email].blank?
-      user = User.new
-      user.errors.add :email, I18n.t('activerecord.errors.messages.blank')
-      return user
-    end
-
-    email = attributes[:email]
-    associated_users = User.associated_users(email)
-    return User.new(email: email).send_reset_password_for_users(email, associated_users)
-  end
-
-  # This method is meant to indicate a user has made progress (i.e. made a milestone
-  # post on a particular level) in a script
-  def self.track_script_progress(user_id, script_id)
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
-      time_now = Time.now
-
-      user_script.started_at = time_now unless user_script.started_at
-      user_script.last_progress_at = time_now
-      user_script.completed_at = time_now if !user_script.completed_at && user_script.check_completed?
-
-      user_script.save!
-    end
-  end
-
-  # Increases the level counts for the concept-difficulties associated with the
-  # completed level.
-  def self.track_proficiency(user_id, script_id, level_id)
-    level_concept_difficulty = Unit.cache_find_level(level_id).level_concept_difficulty
-    return unless level_concept_difficulty
-
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
-      time_now = Time.now
-      user_proficiency.last_progress_at = time_now
-
-      ConceptDifficulties::CONCEPTS.each do |concept|
-        difficulty_number = level_concept_difficulty.send(concept)
-        unless difficulty_number.nil?
-          user_proficiency.increment_level_count(concept, difficulty_number)
-        end
-      end
-
-      if user_proficiency.basic_proficiency_at.nil? &&
-          user_proficiency.proficient?
-        user_proficiency.basic_proficiency_at = time_now
-      end
-
-      user_proficiency.save!
-    end
-  end
-
-  # The synchronous handler for the track_level_progress helper.
-  # @return [UserLevel]
-  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false, time_spent: nil)
-    new_level_completed = false
-    new_csf_level_perfected = false
-
-    user_level = nil
-    script = nil
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_level = UserLevel.
-        where(user_id: user_id, level_id: level_id, script_id: script_id).
-        first_or_initialize
-
-      if !user_level.passing? && ActivityConstants.passing?(new_result)
-        new_level_completed = true
-      end
-
-      script = Unit.get_from_cache(script_id)
-      script_valid = script.csf? && script.name != Unit::COURSE1_NAME
-      if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-          new_result >= ActivityConstants::BEST_PASS_RESULT &&
-          script_valid &&
-          HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
-          AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
-        new_csf_level_perfected = true
-      end
-
-      # Update user_level with the new attempt.
-      # We increment the attempt count unless they've already perfected the level.
-      user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
-      user_level.best_result = new_result if user_level.best_result.nil? ||
-        new_result > user_level.best_result
-
-      user_level.submitted = submitted
-      # We only lock levels of type LevelGroup
-      # When the student submits an assessment, lock the level so they no
-      # longer have access for the remainder of the autolock period
-      is_level_group = user_level.level.type == 'LevelGroup'
-      if submitted && is_level_group
-        user_level.locked = true
-      end
-      if level_source_id && !is_navigator
-        user_level.level_source_id = level_source_id
-      end
-
-      total_time_spent = user_level.calculate_total_time_spent(time_spent)
-      user_level.time_spent = total_time_spent if total_time_spent
-
-      user_level.atomic_save!
-    end
-
-    if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)
-      pairing_user_ids.each do |navigator_user_id|
-        navigator_user_level, _ = User.track_level_progress(
-          user_id: navigator_user_id,
-          level_id: level_id,
-          script_id: script_id,
-          new_result: new_result,
-          submitted: submitted,
-          level_source_id: level_source_id,
-          pairing_user_ids: nil,
-          is_navigator: true,
-          time_spent: time_spent
-        )
-        Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-          PairedUserLevel.find_or_create_by(
-            navigator_user_level_id: navigator_user_level.id,
-            driver_user_level_id: user_level.id
-          )
-        end
-      end
-    end
-
-    if new_level_completed && script_id
-      User.track_script_progress(user_id, script_id)
-    end
-
-    if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
-      User.track_proficiency(user_id, script_id, level_id)
-    end
-    [user_level, new_level_completed]
-  end
-
-  def self.csv_attributes
-    # same as in UserSerializer
-    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races]
-  end
-
-  def self.marketing_segment_data_keys
-    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i school_state)
-  end
-
-  # Returns a Hash of US state codes to state names meant for use in dropdown
-  # selection inputs for User accounts.
-  # Includes a '??' state code for a location not listed.
-  def self.us_state_dropdown_options
-    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
-      merge(US_STATE_DROPDOWN_OPTIONS)
   end
 
   def save_email_preference
@@ -934,6 +452,57 @@ class User < ApplicationRecord
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
+  # Given a user_id, username, or email, attempts to find the relevant user
+  def self.from_identifier(identifier)
+    (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
+      where(username: identifier).first ||
+      find_by_email_or_hashed_email(identifier)
+  rescue ActiveModel::RangeError
+    # Given too large of a user id this can produce a range error
+    # @see https://app.honeybadger.io/projects/3240/faults/44740400
+    nil
+  end
+
+  def self.find_or_create_teacher(params, invited_by_user, permission = nil)
+    user = User.find_by_email_or_hashed_email(params[:email])
+
+    if user
+      user.update!(params.merge(user_type: TYPE_TEACHER))
+    else
+      # initialize new users with name and school
+      if params[:ops_first_name] || params[:ops_last_name]
+        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
+      end
+      params[:school] ||= params[:ops_school]
+      params[:user_type] = TYPE_TEACHER
+      params[:age] ||= 21
+
+      # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
+      # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
+      ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
+        raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
+      end
+      user = User.invite!(attributes: params)
+      user.update!(invited_by: invited_by_user)
+    end
+
+    if permission
+      user.permission = permission
+      user.save!
+    end
+
+    user
+  end
+
+  def self.find_or_create_facilitator(params, invited_by_user)
+    find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
+  end
+
+  DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
+    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
+    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
+  ].freeze
+
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
@@ -978,8 +547,10 @@ class User < ApplicationRecord
   defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
+  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
+  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
@@ -1027,6 +598,11 @@ class User < ApplicationRecord
   validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
   validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
 
+  # When adding a new version, append to the end of the array
+  # using the next increasing natural number.
+  TERMS_OF_SERVICE_VERSIONS = [
+    1  # (July 2016) Teachers can grant access to labs for U13 students.
+  ].freeze
   validates :terms_of_service_version,
     inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
     allow_nil: true
@@ -1063,6 +639,10 @@ class User < ApplicationRecord
   def normalize_email
     return if email.blank?
     self.email = email.strip.downcase
+  end
+
+  def self.hash_email(email)
+    Digest::MD5.hexdigest(email.downcase)
   end
 
   def hash_email
@@ -1125,6 +705,47 @@ class User < ApplicationRecord
     authentication_options.with_deleted.update_all(email: '')
   end
 
+  # Given a cleartext email finds the first user that has a matching email or hash.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
+  def self.find_by_email_or_hashed_email(email)
+    return nil if email.blank?
+    find_by_hashed_email User.hash_email email
+  end
+
+  # Given a cleartext email, finds the first user that has a matching email.
+  # This will not find users (students) who only have hashed_emails stored.
+  # For that, use #find_by_email_or_hashed_email.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
+  def self.find_by_email(email)
+    return nil if email.blank?
+    migrated_user = AuthenticationOption.trusted_email.find_by(email: email)&.user
+    migrated_user || User.find_by(email: email)
+  end
+
+  # Given an email hash, finds the first user that has a matching email hash.
+  # @param [String] hashed_email
+  # @return [User|nil]
+  def self.find_by_hashed_email(hashed_email)
+    return nil if hashed_email.blank?
+    migrated_user = AuthenticationOption.trusted_email.find_by(hashed_email: hashed_email)&.user
+    migrated_user || User.find_by(hashed_email: hashed_email)
+  end
+
+  # Locate an SSO user by SSO provider and associated user id.
+  # @param [String] type A credential type / provider type.  In the future this
+  #   should always be one of the valid credential types from AuthenticationOption
+  # @param [String] id A user id associated with the particular provider.
+  # @returns [User|nil]
+  def self.find_by_credential(type:, id:)
+    authentication_option = AuthenticationOption.find_by(
+      credential_type: type,
+      authentication_id: id
+    )
+    authentication_option&.user || User.find_by(provider: type, uid: id)
+  end
+
   def add_credential(type:, id:, email:, hashed_email:, data:)
     return false unless migrated?
     AuthenticationOption.create(
@@ -1148,6 +769,14 @@ class User < ApplicationRecord
       return nil unless provider == type
       {authentication_id: uid, credential_type: provider}
     end
+  end
+
+  def self.find_channel_owner(encrypted_channel_id)
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    user_id = user_id_for_storage_id(owner_storage_id)
+    User.find(user_id)
+  rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
+    nil
   end
 
   validate :presence_of_email, if: :teacher_email_required?
@@ -1208,6 +837,69 @@ class User < ApplicationRecord
     email_and_hashed_email_must_be_unique # Always check email uniqueness
   end
 
+  def self.name_from_omniauth(raw_name)
+    return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
+    # clever returns a hash instead of a string for name
+    "#{raw_name['first']} #{raw_name['last']}".squish
+  end
+
+  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
+  def self.from_omniauth(auth, params, session = nil)
+    omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
+
+    unless omniauth_user
+      omniauth_user = create
+      initialize_new_oauth_user(omniauth_user, auth, params)
+      omniauth_user.save
+      SignUpTracking.log_sign_up_result(omniauth_user, session)
+    end
+
+    omniauth_user.update_oauth_credential_tokens(auth)
+    omniauth_user
+  end
+
+  def self.initialize_new_oauth_user(user, auth, params)
+    user.provider = auth.provider
+    user.uid = auth.uid
+    user.name = name_from_omniauth auth.info.name
+    user.family_name = auth.info.family_name if auth.info.family_name.present?
+    user.user_type = params['user_type'] || auth.info.user_type
+    user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
+
+    # Store emails, except when using an authentication provider whose emails
+    # we don't trust
+    user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
+
+    if auth.provider == :the_school_project
+      user.username = auth.extra.raw_info.nickname
+      user.user_type = auth.extra.raw_info.role
+      user.locale = auth.extra.raw_info.locale
+      user.school = auth.extra.raw_info.school.name
+    end
+
+    # treat clever admin types as teachers
+    if CLEVER_ADMIN_USER_TYPES.include? user.user_type
+      user.user_type = User::TYPE_TEACHER
+    end
+
+    # clever provides us these fields
+    if user.user_type == TYPE_TEACHER
+      user.age = 21
+    else
+      # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
+      # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
+      # handle any necessary conversion, setting birthday from auth.info.dob. The later
+      # shenanigans ensure that we store the user's age rather than birthday.
+      user.birthday = auth.info.dob
+      user_age = user.age
+      user.birthday = nil
+      user.age = user_age
+    end
+
+    user.gender_third_party_input = auth.info.gender
+    user.gender = Policies::Gender.normalize auth.info.gender
+  end
+
   def oauth?
     if migrated?
       authentication_options.any?(&:oauth?)
@@ -1221,6 +913,13 @@ class User < ApplicationRecord
       authentication_options.all?(&:oauth?) && encrypted_password.blank?
     else
       AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
+    end
+  end
+
+  def self.new_with_session(params, session)
+    return super unless PartialRegistration.in_progress? session
+    new_from_partial_registration session do |user|
+      Services::User.assign_form_params(user, params)
     end
   end
 
@@ -1252,6 +951,9 @@ class User < ApplicationRecord
     # New users with no encrypted_password set
     !persisted? && encrypted_password.blank?
   end
+
+  # FND-1130: This field will no longer be required
+  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
 
   # Determines if email is a required field for a teacher.
   # Currently, we have some old teacher accounts which don't have an email
@@ -1456,10 +1158,121 @@ class User < ApplicationRecord
     sections_as_student.find_by_login_type(Section::LOGIN_TYPES_OAUTH).present?
   end
 
+  # overrides Devise::Authenticatable#find_first_by_auth_conditions
+  # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
+  def self.find_for_authentication(tainted_conditions)
+    max_credential_size = 255
+    conditions = devise_parameter_filter.filter(tainted_conditions.dup)
+    # we get either a login (username) or hashed_email
+    login = conditions.delete(:login)
+    if login.present?
+      return nil if login.size > max_credential_size || login.utf8mb4?
+      # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
+      # indexing problems bit us on the users table don't affect the multi-auth table
+      ignore_deleted_at_index.where(
+        [
+          'username = :value OR email = :value OR hashed_email = :hashed_value',
+          {value: login.downcase, hashed_value: hash_email(login.downcase)}
+        ]
+      ).first
+    elsif (hashed_email = conditions.delete(:hashed_email))
+      return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
+      return find_by_hashed_email(hashed_email)
+    else
+      nil
+    end
+  end
+
+  def self.authenticate_with_section(section:, params:)
+    User.authenticate_with_section_and_secret_words(section: section, params: params.slice(:user_id, :secret_words)) ||
+      User.authenticate_with_section_and_secret_picture(section: section, params: params.slice(:user_id, :secret_picture_id))
+  end
+
+  def self.authenticate_with_section_and_secret_words(section:, params:)
+    return if section.login_type != Section::LOGIN_TYPE_WORD
+
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_words: params[:secret_words],
+      followers: {section: section}
+    )
+  end
+
+  def self.authenticate_with_section_and_secret_picture(section:, params:)
+    return if section.login_type != Section::LOGIN_TYPE_PICTURE
+
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_picture_id: params[:secret_picture_id],
+      followers: {section: section}
+    )
+  end
+
+  # There is a bug (fix: https://codedotorg.atlassian.net/browse/INF-571) where some users have
+  # duplicate user levels for the same level. To ensure that we return the relevant user level for
+  # each level and not one of the duplicates, the list is first sorted so that the
+  # most relevant user levels are at the end. The list is then indexed by level ID, which will
+  # pick up the last matching user level in the list.
+  def self.index_user_levels_by_level_id(user_levels)
+    # Sorts by updated_at asc then id desc
+    # the correct user level is the one most recently updated or the first created
+    relevant_user_levels_last = user_levels.sort {|a, b| [a.updated_at, b.id] <=> [b.updated_at, a.id]}
+    relevant_user_levels_last.index_by(&:level_id)
+  end
+
   def user_levels_by_level(script)
     user_levels_for_script = user_levels.
       where(script_id: script.id)
     User.index_user_levels_by_level_id(user_levels_for_script)
+  end
+
+  # Retrieves all user_level objects for the given users, script, and levels.
+  # The return value is a hash from user_id to an array of UserLevel objects
+  # sorted in descending order by updated_at:
+  # {
+  #   1: [<UserLevel>, <UserLevel>, ...],
+  #   2: [<UserLevel>, <UserLevel>, ...]
+  # }
+  #
+  # A given user with no UserLevel matching the given criteria is omitted from
+  # the returned hash. The associated LevelSource data for each UserLevel is also
+  # prefetched to prevent n+1 query issues.
+  def self.user_levels_by_user(user_ids, script_id, level_ids)
+    UserLevel.
+      includes(:level_source).
+      where({user_id: user_ids, script_id: script_id, level_id: level_ids}).
+      order('updated_at DESC').
+      group_by(&:user_id)
+  end
+
+  # Retrieve all user levels for the designated set of users in the given
+  # script, with a single query.
+  # @param [Enumerable<User>] users
+  # @param [Unit] script
+  # @return [Hash] UserLevels by user id by level id
+  # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
+  # {
+  #   1: {
+  #     101: <UserLevel ...>,
+  #     102: <UserLevel ...>
+  #   },
+  #   2: {
+  #     101: <UserLevel ...>,
+  #     102: <UserLevel ...>
+  #   },
+  #   3: {}
+  # }
+  def self.user_levels_by_user_by_level(users, script)
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
+    UserLevel.where(
+      script_id: script.id,
+      user_id: users.map(&:id)
+    ).
+      group_by(&:user_id).
+      inject(initial_hash) do |memo, (user_id, user_levels)|
+        memo[user_id] = User.index_user_levels_by_level_id(user_levels)
+        memo
+      end
   end
 
   def has_activity?
@@ -1705,6 +1518,8 @@ class User < ApplicationRecord
       permission?(UserPermission::LEVELBUILDER)
   end
 
+  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
+
   # Teachers
   def can_enable_ai_tutor?
     !DCDO.get('ai-tutor-disabled', false) && (
@@ -1723,6 +1538,19 @@ class User < ApplicationRecord
     permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
   end
 
+  private def ai_tutor_feature_globally_disabled?
+    DCDO.get('ai-tutor-disabled', false)
+  end
+
+  private def permission_for_ai_tutor?
+    permission?(UserPermission::AI_TUTOR_ACCESS)
+  end
+
+  private def in_ai_tutor_experiment_with_enabled_section?
+    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
+      sections_as_student.any?(&:ai_tutor_enabled)
+  end
+
   def student_of_verified_instructor?
     teachers.any?(&:verified_instructor?)
   end
@@ -1738,6 +1566,15 @@ class User < ApplicationRecord
   def confirmation_required?
     false
   end
+
+  # There are some shenanigans going on with this age stuff. The
+  # actual persisted column is birthday -- so we convert age to a
+  # birthday when writing and convert birthday to an age when
+  # reading. However -- when we are generating error messages for the
+  # user on an unsaved record, we actually 'read' and 'write' the
+  # attribute via these accessors. @age is a non-persisted member that
+  # we use to save the (possibly invalid) value that the user entered
+  # for age so we can generate the correct error message.
 
   def age=(val)
     @age = val
@@ -1822,6 +1659,41 @@ class User < ApplicationRecord
     end
 
     return false
+  end
+
+  # Returns an array of users associated with an email address.
+  # Will contain all users that have this email either in
+  # plaintext, hashed, or as a parent email. Empty array
+  # if no associated users are found.
+  def self.associated_users(email)
+    result = []
+    return result if email.blank?
+
+    primary_account = User.find_by_email_or_hashed_email(email)
+    result.push(primary_account) if primary_account
+
+    child_accounts = User.where(parent_email: email)
+    result += child_accounts
+
+    result
+  end
+
+  # Override how devise tries to find users by email to reset password
+  # to also look for the hashed email. For users who have their email
+  # stored hashed (and not in plaintext), we can still allow them to
+  # reset their password with their email (by looking up the hash)
+
+  def self.send_reset_password_instructions(attributes = {})
+    # override of Devise method
+    if attributes[:email].blank?
+      user = User.new
+      user.errors.add :email, I18n.t('activerecord.errors.messages.blank')
+      return user
+    end
+
+    email = attributes[:email]
+    associated_users = User.associated_users(email)
+    return User.new(email: email).send_reset_password_for_users(email, associated_users)
   end
 
   def send_reset_password_for_users(email, users)
@@ -2188,6 +2060,131 @@ class User < ApplicationRecord
     (DateTime.now - first_sign_in_date.to_datetime).to_i
   end
 
+  # This method is meant to indicate a user has made progress (i.e. made a milestone
+  # post on a particular level) in a script
+  def self.track_script_progress(user_id, script_id)
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
+      time_now = Time.now
+
+      user_script.started_at = time_now unless user_script.started_at
+      user_script.last_progress_at = time_now
+      user_script.completed_at = time_now if !user_script.completed_at && user_script.check_completed?
+
+      user_script.save!
+    end
+  end
+
+  # Increases the level counts for the concept-difficulties associated with the
+  # completed level.
+  def self.track_proficiency(user_id, script_id, level_id)
+    level_concept_difficulty = Unit.cache_find_level(level_id).level_concept_difficulty
+    return unless level_concept_difficulty
+
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
+      time_now = Time.now
+      user_proficiency.last_progress_at = time_now
+
+      ConceptDifficulties::CONCEPTS.each do |concept|
+        difficulty_number = level_concept_difficulty.send(concept)
+        unless difficulty_number.nil?
+          user_proficiency.increment_level_count(concept, difficulty_number)
+        end
+      end
+
+      if user_proficiency.basic_proficiency_at.nil? &&
+          user_proficiency.proficient?
+        user_proficiency.basic_proficiency_at = time_now
+      end
+
+      user_proficiency.save!
+    end
+  end
+
+  # The synchronous handler for the track_level_progress helper.
+  # @return [UserLevel]
+  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false, time_spent: nil)
+    new_level_completed = false
+    new_csf_level_perfected = false
+
+    user_level = nil
+    script = nil
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      user_level = UserLevel.
+        where(user_id: user_id, level_id: level_id, script_id: script_id).
+        first_or_initialize
+
+      if !user_level.passing? && ActivityConstants.passing?(new_result)
+        new_level_completed = true
+      end
+
+      script = Unit.get_from_cache(script_id)
+      script_valid = script.csf? && script.name != Unit::COURSE1_NAME
+      if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
+          new_result >= ActivityConstants::BEST_PASS_RESULT &&
+          script_valid &&
+          HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+          AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
+        new_csf_level_perfected = true
+      end
+
+      # Update user_level with the new attempt.
+      # We increment the attempt count unless they've already perfected the level.
+      user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
+      user_level.best_result = new_result if user_level.best_result.nil? ||
+        new_result > user_level.best_result
+
+      user_level.submitted = submitted
+      # We only lock levels of type LevelGroup
+      # When the student submits an assessment, lock the level so they no
+      # longer have access for the remainder of the autolock period
+      is_level_group = user_level.level.type == 'LevelGroup'
+      if submitted && is_level_group
+        user_level.locked = true
+      end
+      if level_source_id && !is_navigator
+        user_level.level_source_id = level_source_id
+      end
+
+      total_time_spent = user_level.calculate_total_time_spent(time_spent)
+      user_level.time_spent = total_time_spent if total_time_spent
+
+      user_level.atomic_save!
+    end
+
+    if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)
+      pairing_user_ids.each do |navigator_user_id|
+        navigator_user_level, _ = User.track_level_progress(
+          user_id: navigator_user_id,
+          level_id: level_id,
+          script_id: script_id,
+          new_result: new_result,
+          submitted: submitted,
+          level_source_id: level_source_id,
+          pairing_user_ids: nil,
+          is_navigator: true,
+          time_spent: time_spent
+        )
+        Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+          PairedUserLevel.find_or_create_by(
+            navigator_user_level_id: navigator_user_level.id,
+            driver_user_level_id: user_level.id
+          )
+        end
+      end
+    end
+
+    if new_level_completed && script_id
+      User.track_script_progress(user_id, script_id)
+    end
+
+    if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
+      User.track_proficiency(user_id, script_id, level_id)
+    end
+    [user_level, new_level_completed]
+  end
+
   # This method is called when a section the user belongs to is assigned to
   # a script. We find or create a new UserScript entry, and set assigned_at
   # if not already set.
@@ -2207,6 +2204,11 @@ class User < ApplicationRecord
 
   def can_pair_with?(other_user)
     self != other_user && sections_as_student.any? {|section| other_user.sections_as_student.include? section}
+  end
+
+  def self.csv_attributes
+    # same as in UserSerializer
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender, :races]
   end
 
   def to_csv
@@ -2563,6 +2565,7 @@ class User < ApplicationRecord
     end
   end
 
+  after_destroy :record_soft_delete
   def record_soft_delete
     Cdo::Metrics.push(
       'User',
@@ -2582,6 +2585,25 @@ class User < ApplicationRecord
   def has_pilot_experiment?(pilot_name)
     return false unless pilot_name
     SingleUserExperiment.enabled?(user: self, experiment_name: pilot_name)
+  end
+
+  # Called before_destroy.
+  # Soft-deletes any projects and other channel-backed progress belonging to
+  # this user.  Unfeatures any featured projects belonging to this user.
+  private def soft_delete_channels
+    return unless user_storage_id
+
+    project = Projects.new(user_storage_id)
+    project_ids = project.get_all_project_ids
+
+    # Unfeature any featured projects owned by the user
+    FeaturedProject.
+      where(project_id: project_ids, unfeatured_at: nil).
+      where.not(featured_at: nil).
+      update_all(unfeatured_at: Time.now)
+
+    # Soft-delete all of the user's projects
+    project.soft_delete_all
   end
 
   def user_storage_id
@@ -2684,55 +2706,12 @@ class User < ApplicationRecord
     }
   end
 
+  def self.marketing_segment_data_keys
+    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i school_state)
+  end
+
   def code_review_groups
     followeds.filter_map(&:code_review_group)
-  end
-  private def ai_tutor_feature_globally_disabled?
-    DCDO.get('ai-tutor-disabled', false)
-  end
-
-  private def permission_for_ai_tutor?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
-  private def in_ai_tutor_experiment_with_enabled_section?
-    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)
-  end
-
-  # There are some shenanigans going on with this age stuff. The
-  # actual persisted column is birthday -- so we convert age to a
-  # birthday when writing and convert birthday to an age when
-  # reading. However -- when we are generating error messages for the
-  # user on an unsaved record, we actually 'read' and 'write' the
-  # attribute via these accessors. @age is a non-persisted member that
-  # we use to save the (possibly invalid) value that the user entered
-  # for age so we can generate the correct error message.
-
-  # Override how devise tries to find users by email to reset password
-  # to also look for the hashed email. For users who have their email
-  # stored hashed (and not in plaintext), we can still allow them to
-  # reset their password with their email (by looking up the hash)
-
-  after_destroy :record_soft_delete
-
-  # Called before_destroy.
-  # Soft-deletes any projects and other channel-backed progress belonging to
-  # this user.  Unfeatures any featured projects belonging to this user.
-  private def soft_delete_channels
-    return unless user_storage_id
-
-    project = Projects.new(user_storage_id)
-    project_ids = project.get_all_project_ids
-
-    # Unfeature any featured projects owned by the user
-    FeaturedProject.
-      where(project_id: project_ids, unfeatured_at: nil).
-      where.not(featured_at: nil).
-      update_all(unfeatured_at: Time.now)
-
-    # Soft-delete all of the user's projects
-    project.soft_delete_all
   end
 
   private def account_age_in_years
@@ -2823,6 +2802,33 @@ class User < ApplicationRecord
       Cdo::EmailValidator.email_address?(parent_email)
   end
 
+  US_STATE_DROPDOWN_OPTIONS = {
+    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
+    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
+    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
+    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
+    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
+    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
+    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
+    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
+    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
+    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
+    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
+    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
+    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
+    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
+    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
+    'WY' => 'Wyoming'
+  }.freeze
+
+  # Returns a Hash of US state codes to state names meant for use in dropdown
+  # selection inputs for User accounts.
+  # Includes a '??' state code for a location not listed.
+  def self.us_state_dropdown_options
+    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
+      merge(US_STATE_DROPDOWN_OPTIONS)
+  end
+
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state
@@ -2840,4 +2846,5 @@ class User < ApplicationRecord
       errors.add(:us_state, :invalid)
     end
   end
+  # rubocop:enable Layout/ClassStructure
 end
