@@ -83,3 +83,4 @@ global.PISKEL_DEVELOPMENT_MODE = 'false';
 jest.mock('@cdo/apps/lib/util/firehose', () => ({
   putRecord: jest.fn(),
 }));
+fetch.mockIf('/api/v1/users/current', JSON.stringify(''));

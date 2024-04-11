@@ -18,6 +18,14 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 
 import {expect} from '../../../util/reconfiguredChai';
 
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  post: jest.fn().mockResolvedValue({
+    json: jest.fn().mockReturnValue({}),
+  }),
+}));
+
+fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
+
 const defaultProps = {
   rubric: {
     level: {
