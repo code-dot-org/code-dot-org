@@ -2,7 +2,7 @@ import React from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
-const Notification: React.FunctionComponent<{
+const PublishStatus: React.FunctionComponent<{
   iconName: string;
   iconStyle: string;
   content: React.ReactNode;
@@ -17,4 +17,4 @@ const Notification: React.FunctionComponent<{
   );
 };
 
-export default Notification;
+export default PublishStatus;

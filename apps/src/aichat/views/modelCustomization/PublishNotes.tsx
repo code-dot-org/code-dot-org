@@ -12,7 +12,7 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import {isDisabled} from './utils';
 import ExampleTopicsInputs from './ExampleTopicsInputs';
-import Notification from './Notification';
+import PublishStatus from './PublishStatus';
 import moduleStyles from './publish-notes.module.scss';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import {ModelCardInfo} from '../../types';
@@ -126,7 +126,7 @@ const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
 
 const renderPublishOkNotification = () => {
   return (
-    <Notification
+    <PublishStatus
       iconName="check"
       iconStyle={moduleStyles.check}
       content="Ready to publish"
@@ -138,7 +138,7 @@ const renderPublishOkNotification = () => {
 
 const renderCompleteToPublishNotification = () => {
   return (
-    <Notification
+    <PublishStatus
       iconName="triangle-exclamation"
       iconStyle={moduleStyles.alert}
       content={
