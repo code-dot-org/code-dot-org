@@ -57,9 +57,6 @@ const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
 const getCurrentTime = () => moment(Date.now()).format('LT');
 
 export interface AichatState {
-  levelId: string | null;
-  scriptId: number | null;
-  userId: number | null;
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
   // Messages will be logged and stored.
   chatMessages: ChatCompletionMessage[];
@@ -75,9 +72,6 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  levelId: null,
-  scriptId: null,
-  userId: null,
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   showWarningModal: true,
@@ -184,15 +178,6 @@ const aichatSlice = createSlice({
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
-    },
-    setLevelId: (state, action: PayloadAction<string | null>) => {
-      state.levelId = action.payload;
-    },
-    setScriptId: (state, action: PayloadAction<number | null>) => {
-      state.scriptId = action.payload;
-    },
-    setUserId: (state, action: PayloadAction<number | null>) => {
-      state.userId = action.payload;
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
@@ -301,9 +286,6 @@ export const {
   addChatMessage,
   removeChatMessage,
   clearChatMessages,
-  setLevelId,
-  setScriptId,
-  setUserId,
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
