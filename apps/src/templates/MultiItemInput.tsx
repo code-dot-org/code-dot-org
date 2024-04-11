@@ -1,7 +1,9 @@
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
-import moduleStyles from './edit-aichat-settings.module.scss';
+
+import Button from '@cdo/apps/componentLibrary/button/Button';
+
+import moduleStyles from './multi-item-input.module.scss';
 
 export const MultiItemInput: React.FunctionComponent<{
   items: string[];
@@ -10,7 +12,16 @@ export const MultiItemInput: React.FunctionComponent<{
   onChange: (index: number, value: string) => void;
   multiline?: boolean;
   max?: number;
-}> = ({items, onAdd, onRemove, onChange, max, multiline = false}) => {
+  readOnly?: boolean;
+}> = ({
+  items,
+  onAdd,
+  onRemove,
+  onChange,
+  max,
+  multiline = false,
+  readOnly = false,
+}) => {
   const Tag = multiline ? 'textarea' : 'input';
   const showPlus = max === undefined || items.length < max;
   return (
@@ -31,28 +42,33 @@ export const MultiItemInput: React.FunctionComponent<{
                 multiline ? moduleStyles.textarea : moduleStyles.inlineLabel
               )}
               onChange={e => onChange(index, e.target.value)}
+              disabled={readOnly}
             />
           );
         })}
       </div>
-      <div className={moduleStyles.buttonsRow}>
-        {showPlus && (
-          <button
-            type="button"
+      {!readOnly && (
+        <div className={moduleStyles.buttonsRow}>
+          {showPlus && (
+            <Button
+              className={moduleStyles.plusMinusButton}
+              onClick={onAdd}
+              isIconOnly
+              size="s"
+              type="secondary"
+              icon={{iconName: 'plus'}}
+            />
+          )}
+          <Button
             className={moduleStyles.plusMinusButton}
-            onClick={onAdd}
-          >
-            <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-          </button>
-        )}
-        <button
-          type="button"
-          className={moduleStyles.plusMinusButton}
-          onClick={onRemove}
-        >
-          <FontAwesomeV6Icon iconName="minus" iconStyle="solid" />
-        </button>
-      </div>
+            onClick={onRemove}
+            isIconOnly
+            size="s"
+            type="secondary"
+            icon={{iconName: 'minus'}}
+          />
+        </div>
+      )}
     </div>
   );
 };
