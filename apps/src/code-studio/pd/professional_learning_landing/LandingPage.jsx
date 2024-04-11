@@ -2,7 +2,8 @@
 // studio.code.org/my-professional-learning
 
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {connect, useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
@@ -16,6 +17,10 @@ import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/Cot
 import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import style from './landingPage.module.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
+import {
+  asyncLoadSectionData,
+  hiddenPlSectionIds,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const getAvailableTabs = permissions => {
   let tabs = [
@@ -48,15 +53,16 @@ const getAvailableTabs = permissions => {
   return tabs;
 };
 
-export default function LandingPage({
+function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   deeperLearningCourseData,
   currentYearApplicationId,
   workshopsAsParticipant,
-  plCoursesInstructed,
   plCoursesStarted,
   userPermissions,
+  plSectionIds,
+  hiddenPlSectionIds,
 }) {
   const availableTabs = getAvailableTabs(userPermissions);
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
@@ -67,6 +73,12 @@ export default function LandingPage({
     !currentYearApplicationId &&
     workshopsAsParticipant?.length === 0 &&
     plCoursesStarted?.length === 0;
+
+  // Load PL section info into redux
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(asyncLoadSectionData());
+  }, [dispatch]);
 
   const RenderGettingStartedBanner = () => (
     <TwoColumnActionBlock
@@ -175,8 +187,8 @@ export default function LandingPage({
             <CoteacherInviteNotification isForPl={true} />
             <OwnedSections
               isPlSections={true}
-              sectionIds={plCoursesInstructed}
-              hiddenSectionIds={[]}
+              sectionIds={plSectionIds}
+              hiddenSectionIds={hiddenPlSectionIds}
             />
           </ContentContainer>
         )}
@@ -184,6 +196,13 @@ export default function LandingPage({
     </>
   );
 }
+
+export const UnconnectedLandingPage = LandingPage;
+
+export default connect(state => ({
+  plSectionIds: state.teacherSections.plSectionIds,
+  hiddenPlSectionIds: hiddenPlSectionIds(state),
+}))(LandingPage);
 
 LandingPage.propTypes = {
   lastWorkshopSurveyUrl: PropTypes.string,
@@ -194,4 +213,6 @@ LandingPage.propTypes = {
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
+  plSectionIds: PropTypes.arrayOf(PropTypes.number),
+  hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),
 };

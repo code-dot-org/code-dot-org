@@ -1109,6 +1109,8 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === ASYNC_LOAD_END) {
+    console.log('LOAD END');
+    console.log(state);
     return {
       ...state,
       asyncLoadComplete: true,
