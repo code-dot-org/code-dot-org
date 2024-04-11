@@ -287,7 +287,7 @@ export const UnconnectedTeacherHomepage = ({
         {/* TODO - We will eventually remove this section
           once enough time has passed */}
         {(plCourses?.length > 0 || topPlCourse) && (
-          <section style={{marginBlock: '6rem'}}>
+          <section id={'pl-courses-placeholder'} style={{marginBlock: '6rem'}}>
             <Heading2 visualAppearance="heading-md">
               {i18n.myProfessionalLearningCourses()}
             </Heading2>
