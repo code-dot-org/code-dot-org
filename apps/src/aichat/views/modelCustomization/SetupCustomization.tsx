@@ -17,11 +17,12 @@ import {
 } from './constants';
 import {isVisible, isDisabled} from './utils';
 import CompareModelsDialog from './CompareModelsDialog';
+import {models as allModels} from '../../constants';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
-  const [chosenModel, setChosenModel] = useState<string>('llama2');
   const [isShowingModelDialog, setIsShowingModelDialog] =
     useState<boolean>(false);
 
@@ -32,6 +33,17 @@ const SetupCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
+  /** defaults to all models if not set */
+  const availableModelIds = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.aichatSettings?.availableModels ?? allModels.map(model => model.id)
+  );
+  const availableModels = allModels.filter(model =>
+    availableModelIds.includes(model.id)
+  );
+
+  const chosenModel = aiCustomizations.selectedModel ?? availableModels[0].id;
   const allFieldsDisabled = isDisabled(temperature) && isDisabled(systemPrompt);
 
   const onUpdate = useCallback(
@@ -49,11 +61,17 @@ const SetupCustomization: React.FunctionComponent = () => {
       >
         <SimpleDropdown
           labelText="Selected model:"
-          onChange={e => setChosenModel(e.target.value)}
-          items={[
-            {value: 'llama2', text: 'LLama 2'},
-            {value: 'gpt', text: 'ChatGPT'},
-          ]}
+          onChange={event =>
+            dispatch(
+              setAiCustomizationProperty({
+                property: 'selectedModel',
+                value: event.target.value,
+              })
+            )
+          }
+          items={availableModels.map(model => {
+            return {value: model.id, text: model.name};
+          })}
           selectedValue={chosenModel}
           name="model"
           size="s"
@@ -66,7 +84,10 @@ const SetupCustomization: React.FunctionComponent = () => {
           className={styles.updateButton}
         />
         {isShowingModelDialog && (
-          <CompareModelsDialog onClose={() => setIsShowingModelDialog(false)} />
+          <CompareModelsDialog
+            onClose={() => setIsShowingModelDialog(false)}
+            availableModels={availableModels}
+          />
         )}
       </div>
     );

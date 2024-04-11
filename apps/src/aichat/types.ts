@@ -48,6 +48,7 @@ export interface AichatLevelProperties extends LevelProperties {
 
 /** AI customizations for student chat bots */
 export interface AiCustomizations {
+  selectedModel: string;
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
@@ -62,6 +63,13 @@ export interface ModelCardInfo {
   limitationsAndWarnings: string;
   testingAndEvaluation: string;
   exampleTopics: string[];
+}
+
+export interface ModelDescription {
+  id: string;
+  name: string;
+  overview: string;
+  trainingData: string;
 }
 
 // Visibility for AI customization fields set by levelbuilders.
@@ -80,4 +88,6 @@ export interface LevelAichatSettings {
   visibilities: {[key in keyof AiCustomizations]: Visibility};
   /** If the presentation panel is hidden from the student. */
   hidePresentationPanel: boolean;
+  /** list of ModelDescription.ids to limit the models available to choose from in the level */
+  availableModels: string[];
 }

@@ -1,17 +1,29 @@
 import React, {useState} from 'react';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 
 import ModelDescriptionPanel from './ModelDescriptionPanel';
 import styles from './compare-models-dialog.module.scss';
+import {ModelDescription} from '../../types';
 
-const CompareModelsDialog: React.FunctionComponent<{onClose: () => void}> = ({
-  onClose,
-}) => {
-  const [chosenModelLeft, setChosenModelLeft] = useState<string>('llama2');
-  const [chosenModelRight, setChosenModelRight] = useState<string>('mistral');
+const CompareModelsDialog: React.FunctionComponent<{
+  onClose: () => void;
+  availableModels: ModelDescription[];
+}> = ({onClose, availableModels}) => {
+  const selectedModelId = useAppSelector(
+    state =>
+      state.aichat.currentAiCustomizations.selectedModel ??
+      availableModels[0].id
+  );
+  const [chosenModelLeft, setChosenModelLeft] =
+    useState<string>(selectedModelId);
+  const [chosenModelRight, setChosenModelRight] = useState<string>(
+    availableModels.find(model => model.id !== selectedModelId)?.id ??
+      selectedModelId
+  );
 
   return (
     <AccessibleDialog
@@ -30,12 +42,14 @@ const CompareModelsDialog: React.FunctionComponent<{onClose: () => void}> = ({
       <div className={styles.modelComparisonContainer}>
         <ModelDescriptionPanel
           onChange={setChosenModelLeft}
-          selectedModelName={chosenModelLeft}
+          selectedModelId={chosenModelLeft}
+          availableModels={availableModels}
           dropdownName="choose-model-1"
         />
         <ModelDescriptionPanel
           onChange={setChosenModelRight}
-          selectedModelName={chosenModelRight}
+          selectedModelId={chosenModelRight}
+          availableModels={availableModels}
           dropdownName="choose-model-2"
         />
       </div>

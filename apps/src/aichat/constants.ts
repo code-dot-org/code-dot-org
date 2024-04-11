@@ -3,7 +3,9 @@ import {
   ChatCompletionMessage,
   Role,
   AITutorInteractionStatus as Status,
+  ModelDescription,
 } from './types';
+import modelsJson from '../../static/aichat/modelDescriptions.json';
 
 const initialChatMessages: ChatCompletionMessage[] = [
   {
@@ -16,3 +18,7 @@ const initialChatMessages: ChatCompletionMessage[] = [
 ];
 
 export {initialChatMessages};
+
+const models: ModelDescription[] = modelsJson as ModelDescription[];
+
+export {models};
