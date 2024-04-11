@@ -317,33 +317,30 @@ export function bindBrowserEvent(
 export function isWorkspaceReadOnly() {
   return false; // TODO - used for feedback
 }
-
 /**
  * Checks if any block type's usage count exceeds its defined limit and returns
  * the type of the first block found to exceed.
- * @returns {string | undefined} The type of the first block that exceeds its limit,
- * or undefined if no block exceeds the limit.
+ * @returns {string | null} The type of the first block that exceeds its limit,
+ * or null if no block exceeds the limit.
  */
-export function blockLimitExceeded(): string | undefined {
-  const blockLimitMap = Blockly.blockLimitMap;
-  const blockCountMap = Blockly.blockCountMap;
+export function blockLimitExceeded(): string | null {
+  const {blockLimitMap, blockCountMap} = Blockly;
 
   // Ensure both maps are defined
   if (!blockLimitMap || !blockCountMap) {
-    return undefined;
+    return null;
   }
 
-  // Iterate over the block count map
+  // Find the first instance where the limit is exceeded for a block type.
   for (const [type, count] of blockCountMap) {
     const limit = blockLimitMap.get(type);
-    // If a limit is defined and the count exceeds this limit, return the type
     if (limit !== undefined && count > limit) {
       return type;
     }
   }
 
-  // If no count exceeds the limit, return undefined
-  return undefined;
+  // If no count exceeds the limit, return null.
+  return null;
 }
 
 /**
@@ -541,9 +538,9 @@ export function getLevelToolboxBlocks(customCategory: string) {
 }
 
 /**
- * Creates a map of block types and limits, based on limit attribtues found
+ * Creates a map of block types and limits, based on limit attributes found
  * in the block XML for the current toolbox.
- * @returns {Map} A map of block limits
+ * @returns {Map<string, number>} A map of block limits
  */
 export function createBlockLimitMap() {
   const parser = new DOMParser();
