@@ -126,10 +126,19 @@ export default class BlockSvgLimit {
 
     const textBBox = (this.limitText_ as SVGGraphicsElement).getBBox();
     const rectWidth = Math.max(textBBox.width + HALF_BUBBLE_SIZE, BUBBLE_SIZE);
+    const rectHeight = Math.max(
+      textBBox.height + HALF_BUBBLE_SIZE / 2,
+      BUBBLE_SIZE
+    );
 
     // Stretch the bubble to to fit longer numbers as text.
     this.limitRect_.setAttribute('width', `${rectWidth}`);
+    this.limitRect_.setAttribute('height', `${rectHeight}`);
     // Center the text in the bubble.
     this.limitText_.setAttribute('x', `${rectWidth * 0.5 - HALF_BUBBLE_SIZE}`);
+    this.limitText_.setAttribute(
+      'y',
+      `${Math.ceil(rectHeight * 0.5) - HALF_BUBBLE_SIZE}`
+    );
   }
 }
