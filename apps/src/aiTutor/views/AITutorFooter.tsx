@@ -16,7 +16,11 @@ const QuickActions = {
   [ActionType.VALIDATION]: "Why aren't my tests passing?",
 };
 
-const AITutorFooter: React.FC = () => {
+interface AITutorFooterProps {
+  renderAITutor: boolean;
+}
+
+const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
   const [userMessage, setUserMessage] = useState<string>('');
 
   const isWaitingForChatResponse = useAppSelector(
@@ -95,6 +99,8 @@ const AITutorFooter: React.FC = () => {
     [userMessage, studentCode, isWaitingForChatResponse, level, dispatch]
   );
 
+  const disabled = !renderAITutor || isWaitingForChatResponse;
+
   return (
     <div className={style.aiTutorFooter}>
       <div className={style.aiTutorFooterInputArea}>
@@ -104,12 +110,13 @@ const AITutorFooter: React.FC = () => {
           placeholder={'Add a chat message...'}
           onChange={e => setUserMessage(e.target.value)}
           value={userMessage}
+          disabled={disabled}
         />
         <div className={style.submitToStudentButtonAndError}>
           <Button
             className={style.submitToStudentButton}
             color={Button.ButtonColor.brandSecondaryDefault}
-            disabled={isWaitingForChatResponse}
+            disabled={disabled}
             icon="arrow-up"
             key="submit"
             onClick={() => handleSubmit(ActionType.GENERAL_CHAT)}
@@ -122,7 +129,7 @@ const AITutorFooter: React.FC = () => {
           <Button
             className={style.submitToStudentButton}
             color={Button.ButtonColor.teal}
-            disabled={isWaitingForChatResponse}
+            disabled={disabled}
             key="compilation"
             text={QuickActions.compilation}
             onClick={() => handleSubmit(ActionType.COMPILATION)}
@@ -132,7 +139,7 @@ const AITutorFooter: React.FC = () => {
           <Button
             className={style.submitToStudentButton}
             color={Button.ButtonColor.teal}
-            disabled={isWaitingForChatResponse}
+            disabled={disabled}
             key="validation"
             text={QuickActions.validation}
             onClick={() => handleSubmit(ActionType.VALIDATION)}

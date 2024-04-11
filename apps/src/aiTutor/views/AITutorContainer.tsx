@@ -26,9 +26,7 @@ const AITutorContainer: React.FC<AITutorContainerProps> = ({
   const [positionY, setPositionY] = useState(0);
 
   const level = useAppSelector(state => state.aiTutor.level);
-  const isAssessmentLevel = level?.isAssessment;
-  const aiTutorAvailable = level?.aiTutorAvailable;
-  const renderAITutor = !isAssessmentLevel && aiTutorAvailable;
+  const renderAITutor = !level?.isAssessment && !!level?.aiTutorAvailable;
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
@@ -72,7 +70,7 @@ const AITutorContainer: React.FC<AITutorContainerProps> = ({
             <h4>You don't have access on this level.</h4>
           )}
         </div>
-        <AITutorFooter />
+        <AITutorFooter renderAITutor={renderAITutor} />
       </div>
     </Draggable>
   );
