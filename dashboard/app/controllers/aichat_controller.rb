@@ -13,17 +13,15 @@ class AichatController < ApplicationController
     filter_result = ShareFiltering.find_failure(newMessageText, locale) if newMessageText
     # If the content is inappropriate, we skip sending to endpoint and instead hardcode a warning response on the front-end.   
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
-  
     inputs = params[:inputs]
     temperature = params[:temperature]
-    # TODO: Format input to send to Sagemaker - for now, send the messages as is.
+    # TODO: Format input to send to Sagemaker.
     payload = {
       "inputs": [inputs],
       "parameters": {"temperature": temperature},
     }
-
     response = request_chat_completion(payload)
-    return render(status: 200, json: {response: response})
+    render(status: response[:status], json: response[:json])
   end
 
   def has_required_params?
@@ -32,6 +30,8 @@ class AichatController < ApplicationController
 
   def request_chat_completion(payload)
     puts "Requesting chat completion from Sagemaker"
-    payload
+    response_body = {"role":"assistant", "content": "This is an assistant response from Sagemaker"}
+    response_code = 200
+    return {status: response_code, json: response_body}    
   end
 end

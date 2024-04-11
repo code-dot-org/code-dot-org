@@ -17,7 +17,7 @@ export async function postAichatCompletionMessage(
   messagesToSend: AichatCompletionMessage[],
   temperature: number,
   chatContext: ChatContext
-): Promise<ChatCompletionMessage | null> {
+): Promise<AichatCompletionMessage | null> {
   const payload = {
     inputs: messagesToSend,
     temperature,
@@ -31,6 +31,8 @@ export async function postAichatCompletionMessage(
       'Content-Type': 'application/json; charset=UTF-8',
     }
   );
+  console.log('response in postAichatCompletionMessage', response);
+  // For now, response will be null if there was an error.
   if (response.ok) {
     return await response.json();
   } else {
@@ -46,7 +48,6 @@ export async function postAichatCompletionMessage(
  */
 export async function getAichatCompletionMessage(
   aiCustomizations: AiCustomizations,
-  newMessageText: string,
   storedMessages: ChatCompletionMessage[],
   chatContext: ChatContext
 ) {
@@ -55,7 +56,7 @@ export async function getAichatCompletionMessage(
     {role: Role.SYSTEM, content: systemPrompt},
     ...formatRetrievalContextsForAichatCompletion(retrievalContexts),
     ...formatMessagesForAichatCompletion(storedMessages),
-    {role: Role.USER, content: newMessageText},
+    {role: Role.USER, content: chatContext['userMessage']},
   ];
   let response;
   try {

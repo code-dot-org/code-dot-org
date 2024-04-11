@@ -138,7 +138,7 @@ export const submitChatContents = createAsyncThunk(
     const newMessage: ChatCompletionMessage = {
       id: newMessageId,
       role: Role.USER,
-      status: Status.UNKNOWN,
+      status: Status.OK,
       chatMessageText: newMessageText,
       timestamp: getCurrentTimestamp(),
     };
@@ -147,11 +147,23 @@ export const submitChatContents = createAsyncThunk(
     // Post user content and messages to backend and retrieve assistant response.
     const chatApiResponse = await getAichatCompletionMessage(
       aiCustomizations,
-      newMessageText,
       storedMessages,
-      chatContext,
+      chatContext
     );
     console.log('chatApiResponse', chatApiResponse);
+    if (chatApiResponse?.role === Role.ASSISTANT) {
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: newMessageId + 1,
+        role: Role.ASSISTANT,
+        status: Status.OK,
+        chatMessageText: chatApiResponse.content,
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+    } else {
+      // TODO: Update most recent user message's status if PII or profanity violation.
+      // latest message's id is stored at `newMessageId`.
+      console.log('Did not receive assistant response.');
+    }
   }
 );
 
