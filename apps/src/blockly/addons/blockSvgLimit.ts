@@ -1,4 +1,3 @@
-import color from '@cdo/apps/util/color';
 import {BlockSvg} from 'blockly';
 
 const BUBBLE_SIZE = 18;
@@ -78,15 +77,6 @@ export default class BlockSvgLimit {
    * Initializes the SVG elements that make up the limit bubble.
    */
   initChildren() {
-    const position = this.element_.getRelativeToSurfaceXY();
-    // Google Blockly's block ids are randomly generated and can
-    // include invalid characters for element ids. Remove everything
-    // except alphanumeric characters and whitespace, then collapse
-    // multiple adjacent whitespace to single spaces.
-    const safeCharBlockId = this.element_.id
-      .replace(/[^\w\s\']|_/g, '')
-      .replace(/\s+/g, ' ');
-
     this.limitGroup_ = Blockly.utils.dom.createSvgElement(
       'g',
       {

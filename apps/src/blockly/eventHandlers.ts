@@ -6,7 +6,7 @@ import {Abstract} from 'blockly/core/events/events_abstract';
 import {BlockChange} from 'blockly/core/events/events_block_change';
 import {BlockMove} from 'blockly/core/events/events_block_move';
 import {BlockCreate} from 'blockly/core/events/events_block_create';
-import {Block, Flyout, WorkspaceSvg} from 'blockly';
+import {Block, WorkspaceSvg} from 'blockly';
 import {ExtendedBlockSvg, ExtendedWorkspaceSvg} from './types';
 import BlockSvgLimit from './addons/blockSvgLimit';
 
