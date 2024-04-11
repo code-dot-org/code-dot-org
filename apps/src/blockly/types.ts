@@ -43,7 +43,7 @@ import CdoFieldVariable from './addons/cdoFieldVariable';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
 import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
-import BlockSvgLimit from './addons/blockSvgLimit';
+import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 
 export interface BlockDefinition {
   category: string;
@@ -188,7 +188,7 @@ export interface ExtendedBlockSvg extends BlockSvg {
   thumbnailSize?: number;
   // used for function blocks
   functionalSvg_?: BlockSvgFrame;
-  blockLimit_?: BlockSvgLimit;
+  blockSvgLimitIndicator?: BlockSvgLimitIndicator;
   workspace: ExtendedWorkspaceSvg;
 }
 

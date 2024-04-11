@@ -4,7 +4,7 @@ import {BlockSvg} from 'blockly';
  * Represents a bubble on a Blockly block, displaying the count of blocks remaining
  * based on a limit initially stated in the toolbox XML.
  */
-export default class BlockSvgLimit {
+export default class BlockSvgLimitIndicator {
   private readonly blockSvg: BlockSvg;
   private count: number;
   private readonly bubbleSize: number = 18;

@@ -8,7 +8,7 @@ import {BlockMove} from 'blockly/core/events/events_block_move';
 import {BlockCreate} from 'blockly/core/events/events_block_create';
 import {Block, WorkspaceSvg} from 'blockly';
 import {ExtendedBlockSvg, ExtendedWorkspaceSvg} from './types';
-import BlockSvgLimit from './addons/blockSvgLimit';
+import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 import {ThemeChange} from 'blockly/core/events/events_theme_change';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
@@ -185,10 +185,13 @@ export function updateBlockLimits(event: Abstract) {
     const blockLimitCount = blockLimitMap.get(flyoutBlock.type) as number;
     const blockUsedCount = blockCountMap.get(flyoutBlock.type) || 0;
     const remainingCount = blockLimitCount - blockUsedCount;
-    if (flyoutBlock.blockLimit_) {
-      flyoutBlock.blockLimit_.updateCount(remainingCount);
+    if (flyoutBlock.blockSvgLimitIndicator) {
+      flyoutBlock.blockSvgLimitIndicator.updateCount(remainingCount);
     } else {
-      flyoutBlock.blockLimit_ = new BlockSvgLimit(flyoutBlock, remainingCount);
+      flyoutBlock.blockSvgLimitIndicator = new BlockSvgLimitIndicator(
+        flyoutBlock,
+        remainingCount
+      );
     }
   });
 }
