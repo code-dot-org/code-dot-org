@@ -172,7 +172,7 @@ Feature: Curriculum Catalog Page
     Then I wait until element "a:contains(Facilitator led workshops)" is visible
     And I click selector "a:contains(Facilitator led workshops)"
     Then I wait for jquery to load
-    And I wait until current URL contains "/professional-development-workshops"
+    And I wait until current URL contains "/professional-learning/elementary"
 
   @no_mobile
   Scenario: On expanded card, Signed-in teacher sees professional learning section
