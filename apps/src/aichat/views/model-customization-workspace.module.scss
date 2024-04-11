@@ -13,13 +13,19 @@
 
   textarea {
     @extend %full-width;
-    height: 100px;
+    height: 120px;
+    min-height: 50px;
     resize: vertical;
     margin: 0;
+    border-radius: 4px;
+    border-color: $cyan;
   }
 
   input {
     @extend %full-width;
+    height: 30px;
+    border-radius: 4px;
+    border-color: $lighter_gray;
   }
 
   .inputContainer {

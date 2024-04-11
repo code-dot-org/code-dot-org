@@ -61,44 +61,53 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div className={modelCustomizationStyles.customizationContainer}>
-        <div className={modelCustomizationStyles.inputContainer}>
-          <label htmlFor="system-prompt">
-            <StrongText>Retrieval</StrongText>
-          </label>
-          <textarea
-            id="retrieval-input"
-            onChange={event => setNewRetrievalContext(event.target.value)}
-            value={newRetrievalContext}
-            disabled={isDisabled(visibility)}
-          />
+        <div style={{marginBottom: 8}}>
+          <div className={modelCustomizationStyles.inputContainer}>
+            <label htmlFor="system-prompt">
+              <StrongText>Retrieval</StrongText>
+            </label>
+            <textarea
+              id="retrieval-input"
+              onChange={event => setNewRetrievalContext(event.target.value)}
+              value={newRetrievalContext}
+              disabled={isDisabled(visibility)}
+            />
+          </div>
+          <div className={styles.addItemContainer}>
+            <Button
+              text="Add"
+              type="secondary"
+              onClick={onAdd}
+              iconLeft={{iconName: 'plus'}}
+              disabled={!newRetrievalContext || isDisabled(visibility)}
+            />
+          </div>
         </div>
-        <div className={styles.addItemContainer}>
-          <Button
-            text="Add"
-            type="secondary"
-            onClick={onAdd}
-            iconLeft={{iconName: 'plus'}}
-            disabled={!newRetrievalContext || isDisabled(visibility)}
-          />
+        <div>
+          <div style={{borderBottom: '1px solid', fontSize: 14}}>
+            <StrongText>Added</StrongText>
+          </div>
         </div>
-        {retrievalContexts.map((message, index) => {
-          return (
-            <div key={index} className={styles.itemContainer}>
-              <button
-                type="button"
-                onClick={() => onRemove(index)}
-                className={styles.removeItemButton}
-                disabled={isDisabled(visibility)}
-              >
-                <FontAwesomeV6Icon
-                  iconName="circle-xmark"
-                  className={styles.removeItemIcon}
-                />
-              </button>
-              <span className={styles.itemText}>{message}</span>
-            </div>
-          );
-        })}
+        <div>
+          {retrievalContexts.map((message, index) => {
+            return (
+              <div key={index} className={styles.itemContainer}>
+                <span>{message}</span>
+                <button
+                  type="button"
+                  onClick={() => onRemove(index)}
+                  className={styles.removeItemButton}
+                  disabled={isDisabled(visibility)}
+                >
+                  <FontAwesomeV6Icon
+                    iconName="circle-xmark"
+                    className={styles.removeItemIcon}
+                  />
+                </button>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
         <Button

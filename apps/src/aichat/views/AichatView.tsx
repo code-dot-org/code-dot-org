@@ -92,7 +92,7 @@ const AichatView: React.FunctionComponent = () => {
         },
       },
     ],
-    size: 'm',
+    size: 's',
     selectedButtonValue: viewMode,
     onChange: setViewMode,
   };

@@ -3,18 +3,22 @@
 
 .itemContainer {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  border-color: $light_gray_500;
+  border: 1px solid;
+  color: $light_gray_500;
 }
 
 .removeItemIcon {
   color: $light_gray_500;
-}
 
-.itemText {
-  background-color: $light_gray_50;
-  flex: 1;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 4px;
+  &:hover {
+    color: $light_negative_500;
+  }
 }
 
 .removeItemButton {
