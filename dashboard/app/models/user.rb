@@ -83,13 +83,6 @@ require 'policies/lti'
 require 'services/user'
 
 class User < ApplicationRecord
-  # We would prefer to enforce standard class structure for all our Ruby code,
-  # but this class unfortunately has too many violations to be fixed all at
-  # once. We should plan to reorganize the file manually, or ideally even slim
-  # it down by extracting discrete chunks of related functionality into modules
-  # or concerns.
-  #
-  # rubocop:disable Layout/ClassStructure
   include SerializedProperties
   include SchoolInfoDeduplicator
   include LocaleHelper
@@ -2846,5 +2839,4 @@ class User < ApplicationRecord
       errors.add(:us_state, :invalid)
     end
   end
-  # rubocop:enable Layout/ClassStructure
 end

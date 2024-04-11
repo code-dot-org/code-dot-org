@@ -37,13 +37,6 @@
 
 module Pd::Application
   class TeacherApplication < ApplicationBase
-    # We would prefer to enforce standard class structure for all our Ruby code,
-    # but this class unfortunately has too many violations to be fixed all at
-    # once. We should plan to reorganize the file manually, or ideally even slim
-    # it down by extracting discrete chunks of related functionality into modules
-    # or concerns.
-    #
-    # rubocop:disable Layout/ClassStructure
     include Pd::TeacherApplicationConstants
     include Pd::SharedApplicationConstants
     include PdWorkshopHelper
@@ -1213,6 +1206,5 @@ module Pd::Application
         School.includes(:school_district).find_by(id: school_id)
       end
     end
-    # rubocop:enable Layout/ClassStructure
   end
 end

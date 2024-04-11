@@ -37,13 +37,6 @@ TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
 # A sequence of Levels
 class Unit < ApplicationRecord
-  # We would prefer to enforce standard class structure for all our Ruby code,
-  # but this class unfortunately has too many violations to be fixed all at
-  # once. We should plan to reorganize the file manually, or ideally even slim
-  # it down by extracting discrete chunks of related functionality into modules
-  # or concerns.
-  #
-  # rubocop:disable Layout/ClassStructure
   self.table_name = 'scripts'
 
   include ScriptConstants
@@ -2112,5 +2105,4 @@ class Unit < ApplicationRecord
   def show_unit_overview_between_lessons?
     middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
   end
-  # rubocop:enable Layout/ClassStructure
 end
