@@ -6,14 +6,6 @@
   box-sizing: border-box;
 }
 
-%footer-button-container {
-  display: flex;
-  align-items: center;
-  border-top: 1px solid $light_gray_200;
-  padding: 10px;
-  height: 50px;
-}
-
 .modelCustomizationWorkspace {
   height: 100%;
   display: flex;
@@ -53,13 +45,12 @@
 }
 
 .footerButtonContainer {
-  @extend %footer-button-container;
+  display: flex;
   justify-content: center;
-}
-
-.footerButtonContainerPublish {
-  @extend %footer-button-container;
-  //justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $light_gray_200;
+  padding: 10px;
+  height: 50px;
 }
 
 .selectedModelDropdown {

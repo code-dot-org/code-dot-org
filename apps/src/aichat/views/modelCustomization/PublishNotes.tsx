@@ -27,7 +27,12 @@ const PublishNotes: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const onUpdate = useCallback(
+  const onSave = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
+
+  const onPublish = useCallback(
     () => dispatch(updateAiCustomization()),
     [dispatch]
   );
@@ -76,14 +81,14 @@ const PublishNotes: React.FunctionComponent = () => {
           })}
         </div>
       </div>
-      <div className={modelCustomizationStyles.footerButtonContainerPublish}>
+      <div className={modelCustomizationStyles.footerButtonContainer}>
         <Button
           text="Save"
           iconLeft={{iconName: 'download'}}
           type="secondary"
           color="black"
           disabled={isDisabled(visibility)}
-          onClick={onUpdate}
+          onClick={onSave}
           className={modelCustomizationStyles.updateButton}
         />
         <Button
@@ -92,7 +97,7 @@ const PublishNotes: React.FunctionComponent = () => {
           disabled={
             isDisabled(visibility) || !hasFilledOutModelCard(modelCardInfo)
           }
-          onClick={onUpdate}
+          onClick={onPublish}
           className={modelCustomizationStyles.updateButton}
         />
       </div>
@@ -114,9 +119,7 @@ const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
       ) {
         return false;
       }
-    }
-
-    if (!modelCardInfo[typedKey].length) {
+    } else if (!modelCardInfo[typedKey].length) {
       return false;
     }
   }
