@@ -1611,7 +1611,7 @@
   "low": "low",
   "ltiSectionSyncButtonDisabledAltText": "Roster sync is disabled. To re-enable, go to your account settings.",
   "ltiSectionSyncDialogCourseLabel": "Course",
-  "ltiSectionSyncDialogDescription": "New to Code.org? A [section]({aboutSectionsUrl}) is used to manage your classroom and assign curricula. We've identified the following sections & students associated with your course.\n\nYou can re-sync your sections & students at any time! Learn more [about syncing here]({aboutSyncingUrl}).",
+  "ltiSectionSyncDialogDescription": "New to Code.org? A [section]({aboutSectionsUrl}) is used to manage your classroom and assign curricula. We've identified the following sections & students associated with your course.\n\nNot seeing all of your sections? Make sure you are enrolled as a teacher in each section you want to sync. Learn more [about syncing here]({aboutSyncingUrl}).",
   "ltiSectionSyncDialogDescriptionNoChange": "You're all set! Your sections & students are already up to date.\n\nYou can re-sync your sections at any time. Learn more [about syncing here]({aboutSyncingUrl})",
   "ltiSectionSyncDialogError": "We encountered an error when trying to sync with your LMS.",
   "ltiSectionSyncDialogErrorNoIntegration": "LTI Integration not found",

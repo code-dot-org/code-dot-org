@@ -2,7 +2,7 @@
 @import 'color';
 @import 'font';
 
-.lti-feedback-banner {
+.feedback-banner {
   $indent: 1rem;
 
   background-color: $light_info_100;
@@ -10,7 +10,7 @@
   color: $dark_charcoal;
   line-height: 2rem;
 
-  & .lti-feedback-banner-greeting {
+  & .feedback-banner-greeting {
     display: inline-block;
     margin-right: $indent;
 
@@ -32,7 +32,7 @@
     font-size: 1.3rem;
   }
 
-  & #lti-feedback-banner-share-more-link {
+  & #feedback-banner-share-more-link {
     font-weight: normal;
   }
 
@@ -46,7 +46,7 @@
     top: 0;
   }
 
-  & .lti-feedback {
+  & .feedback {
     margin-left: $indent;
 
     & button {
