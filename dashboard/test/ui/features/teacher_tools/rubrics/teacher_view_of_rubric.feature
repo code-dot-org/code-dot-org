@@ -142,3 +142,50 @@ Scenario: Teacher views Rubric and Settings tabs
   Then I see no difference for "rubric settings tab"
 
   Then I close my eyes
+
+@eyes
+Scenario: Teacher views product tour
+  # Teacher signs in and navigates to assessment page
+  Given I create a teacher-associated student named "Aiden"
+  And I sign in as "Teacher_Aiden" and go home
+  And I add the current user to the "ai-rubrics" single section experiment for the "allthethings" course
+  And I wait until element "#homepage-container" is visible
+  And element "#sign_in_or_user" contains text "Teacher_Aiden"
+  And I add the current user to the "ai-rubrics" single user experiment
+  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+  And I wait for the page to fully load
+  And element ".teacher-panel td:eq(1)" contains text "Aiden"
+  And I click selector ".teacher-panel td:eq(1)" to load a new page
+  And I wait for the page to fully load
+
+  # Teacher views product tour step 1
+  And I wait until element "h1:contains(Getting Started with AI Teaching Assistant)" is visible
+  When I open my eyes to test "rubric product tour"
+  Then I see no difference for "product tour step 1"
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+
+  # Teacher views product tour step 2
+  Then I wait until element "h3:contains(Lesson 3: Data Structures)" is visible
+  Then I wait until element "h1:contains(Understanding the AI Assessment)" is visible
+  Then I see no difference for "product tour step 2"
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+
+  # Teacher views product tour step 3
+  Then I wait until element "h1:contains(Using Evidence)" is visible
+  Then I see no difference for "product tour step 3"
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+
+  # Teacher views product tour step 4
+  Then I wait until element "h1:contains(Understanding AI Confidence)" is visible
+  Then I see no difference for "product tour step 4"
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+
+  # Teacher views product tour step 5
+  Then I wait until element "h1:contains(Assigning a Rubric Score)" is visible
+  Then I see no difference for "product tour step 5"
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+
+  # Teacher view product tour step 6
+  Then I wait until element "h1:contains(How did AI do?)" is visible
+  Then I see no difference for "product tour step 6"
+  And I click selector ".introjs-button:contains(Done)" once I see it
