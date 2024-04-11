@@ -67,7 +67,7 @@ export interface AichatState {
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
-  savedAiCustomizations?: AiCustomizations;
+  savedAiCustomizations: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
 }
 
@@ -77,6 +77,7 @@ const initialState: AichatState = {
   showWarningModal: true,
   chatMessageError: false,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
 };
 
@@ -123,7 +124,7 @@ export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (chatContext: ChatContext, thunkAPI) => {
     const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
-    const aiCustomizations = state.aichat.currentAiCustomizations;
+    const aiCustomizations = state.aichat.savedAiCustomizations;
     const storedMessages = state.aichat.chatMessages;
     const newMessageText = chatContext['userMessage'];
     const newMessageId =
