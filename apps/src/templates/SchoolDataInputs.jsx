@@ -29,8 +29,13 @@ export default function SchoolDataInputs({
   const [country, setCountry] = useState('');
   const [zipSearchReady, setZipSearchReady] = useState(false);
 
-  let COUNTRY_ITEMS = [{value: 'selectCountry', text: i18n.selectCountry()}];
-  for (const item of Object.values(COUNTRIES)) {
+  let COUNTRY_ITEMS = [
+    {value: 'selectCountry', text: i18n.selectCountry()},
+    {value: 'US', text: 'United States'},
+  ];
+  for (const item of Object.values(COUNTRIES).filter(function (item) {
+    return item.label !== 'US';
+  })) {
     COUNTRY_ITEMS.push({value: item.label, text: item.value});
   }
 
