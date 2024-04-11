@@ -2423,7 +2423,7 @@
   "sendToPhone": "Send to phone",
   "settings": "Settings",
   "setUpClass": "Set up your class",
-  "setUpClassCapNotice": "By registering an account for a student under the age of 13, you represent that you or your school has obtained appropriate parental/guardian consent for the use of Code.org’s platform for the benefit of the school and for no other commercial purpose.",
+  "setUpClass_childAccountPolicyNotice": "By registering an account for a student under the age of 13, you represent that you or your school has obtained appropriate parental/guardian consent for the use of Code.org’s platform for the benefit of the school and for no other commercial purpose.",
   "setUpClassCleverIntro": "To get your class set up with Clever, do the following:",
   "setUpClassClever1": "1. Make sure your class is set up the way you want it to be in Clever.",
   "setUpClassClever2": "2. Hit the 'sync classroom' button above to copy your Clever students to Code.org.",
