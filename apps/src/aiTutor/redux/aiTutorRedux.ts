@@ -49,9 +49,8 @@ const formatQuestionForAITutor = (chatContext: ChatContext) => {
   const separator = '\n\n---\n\n';
   const codePrefix = "Here is the student's code:\n\n```\n";
   const codePostfix = '\n```';
-  // Construct the formatted question
-  const formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
 
+  const formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
   return formattedQuestion;
 };
 
