@@ -25,6 +25,9 @@ module MailJet
       'production'
     when 'staging'
       'staging'
+    when 'test'
+      # We don't want to send real emails in test
+      ''
     else
       'development'
     end
