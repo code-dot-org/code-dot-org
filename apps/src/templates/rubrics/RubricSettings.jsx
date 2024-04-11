@@ -10,7 +10,7 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
 import SectionSelector from './SectionSelector';
@@ -32,18 +32,6 @@ const STATUS_ALL = {
   // all attempted work has already been evaluated
   ALREADY_EVALUATED: 'already_evaluated',
   ERROR: 'error',
-};
-
-const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
-  return fetch(
-    `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
-  );
-};
-
-const fetchTeacherEvaluationAll = (rubricId, sectionId) => {
-  return fetch(
-    `/rubrics/${rubricId}/get_teacher_evaluations_for_all?section_id=${sectionId}`
-  );
 };
 
 export default function RubricSettings({
@@ -73,6 +61,18 @@ export default function RubricSettings({
       return {label: String(lg.learningGoal), key: String(lg.id)};
     })
   );
+
+  const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
+    return fetch(
+      `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
+    );
+  };
+
+  const fetchTeacherEvaluationAll = (rubricId, sectionId) => {
+    return fetch(
+      `/rubrics/${rubricId}/get_teacher_evaluations_for_all?section_id=${sectionId}`
+    );
+  };
 
   const getHeadersSlice = () => {
     return headers.slice(2, headers.length);
@@ -112,6 +112,7 @@ export default function RubricSettings({
 
   // load initial ai evaluation status
   useEffect(() => {
+    const abort = new AbortController();
     if (!!rubricId && !!sectionId) {
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
         if (!response.ok) {
@@ -135,9 +136,11 @@ export default function RubricSettings({
         }
       });
     }
+    return () => abort.abort();
   }, [rubricId, sectionId]);
 
   useEffect(() => {
+    const abort = new AbortController();
     if (!!rubricId && !!sectionId) {
       fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
         if (response.ok) {
@@ -174,11 +177,13 @@ export default function RubricSettings({
         }
       });
     }
+    return () => abort.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricId, sectionId]);
 
   // after ai eval is requested, poll for status changes
   useEffect(() => {
+    const abort = new AbortController();
     if (polling && !!rubricId && !!sectionId) {
       const intervalId = setInterval(() => {
         refreshAiEvaluations();
@@ -204,12 +209,23 @@ export default function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
+    return () => abort.abort();
   }, [rubricId, polling, sectionId, statusAll, refreshAiEvaluations]);
 
   const handleRunAiAssessmentAll = () => {
     setStatusAll(STATUS_ALL.EVALUATION_PENDING);
     const url = `/rubrics/${rubricId}/run_ai_evaluations_for_all`;
     const params = {section_id: sectionId};
+    const eventName = EVENTS.TA_RUBRIC_SECTION_AI_EVAL;
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        ...(reportingData || {}),
+        rubricId: rubricId,
+        sectionId: sectionId,
+      },
+      PLATFORMS.BOTH
+    );
     fetch(url, {
       method: 'POST',
       headers: {

@@ -251,6 +251,7 @@ describe('RubricSettings', () => {
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetchEvalStatusForAll(ready);
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     clock = sinon.useFakeTimers();
 
@@ -274,6 +275,15 @@ describe('RubricSettings', () => {
 
     wrapper.find('Button').first().simulate('click');
 
+    //sends event on click
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_SECTION_AI_EVAL,
+      {
+        rubricId: defaultRubric.id,
+        sectionId: 1,
+      }
+    );
+
     // Perform fetches and re-renders
     await wait();
     wrapper.update();
@@ -290,6 +300,7 @@ describe('RubricSettings', () => {
     expect(fetchStub).to.have.callCount(4);
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
+    sendEventSpy.restore();
   });
 
   it('displays switch tab text and button when there are no evaluations', async () => {
@@ -309,14 +320,10 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
     expect(wrapper.find('Button').at(1).text()).to.include(
@@ -341,14 +348,10 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.text()).to.include(
       i18n.rubricNumberStudentEvals({
@@ -377,14 +380,10 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.text()).to.include(
       i18n.rubricNumberStudentEvals({

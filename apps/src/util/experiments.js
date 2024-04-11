@@ -34,7 +34,6 @@ experiments.I18N_TRACKING = 'frontend-i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
 experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
@@ -58,6 +57,8 @@ experiments.SPRITE_LAB_DOCS = 'sl_docs';
 experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
 // Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
 experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
+// Enables a user to utilize the new school association flow
+experiments.SCHOOL_ASSOCIATION_V2 = 'school_association_v2';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

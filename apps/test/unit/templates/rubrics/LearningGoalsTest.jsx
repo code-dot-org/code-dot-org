@@ -241,7 +241,7 @@ describe('LearningGoals - Enzyme', () => {
     highlightLineStub,
     clearAnnotationsStub,
     clearHighlightedLinesStub;
-  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
+  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706, user_id: 1};
 
   function stubAnnotator() {
     // Stub out our references to the singleton and editor
@@ -486,6 +486,20 @@ describe('LearningGoals - Enzyme', () => {
     );
   });
 
+  it('renders the summary page after AI evaluations are run', () => {
+    const wrapper = shallow(
+      <LearningGoals
+        learningGoals={learningGoals}
+        aiEvaluations={aiEvaluations}
+        teacherHasEnabledAi
+      />
+    );
+    wrapper.find('button').first().simulate('click');
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
+      i18n.rubricLearningGoalSummary()
+    );
+  });
+
   it('renders AiAssessment when teacher has AiEnabled and the learning goal can be tested by AI', () => {
     const wrapper = shallow(
       <LearningGoals
@@ -613,6 +627,7 @@ describe('LearningGoals - Enzyme', () => {
       <LearningGoals
         learningGoals={learningGoals}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
+        studentLevelInfo={studentLevelInfo}
       />
     );
     wrapper.find('button').at(1).simulate('click');
@@ -623,6 +638,7 @@ describe('LearningGoals - Enzyme', () => {
         levelName: 'test-level',
         learningGoalKey: 'efgh',
         learningGoal: 'Learning Goal 2',
+        studentId: 1,
       }
     );
     wrapper.find('button').first().simulate('click');
@@ -633,6 +649,7 @@ describe('LearningGoals - Enzyme', () => {
         levelName: 'test-level',
         learningGoalKey: 'abcd',
         learningGoal: 'Learning Goal 1',
+        studentId: 1,
       }
     );
     sendEventSpy.restore();

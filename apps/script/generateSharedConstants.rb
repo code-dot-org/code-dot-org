@@ -96,8 +96,9 @@ def main
     CHILD_ACCOUNT_COMPLIANCE_STATES
     CENSUS_CONSTANTS
     DANCE_SONG_MANIFEST_FILENAME
-    AI_TUTOR_INTERACTION_SAVE_STATUS
+    AI_TUTOR_INTERACTION_STATUS
     AI_TUTOR_TYPES
+    PII_TYPES
     FEATURED_PROJECT_STATUS
     FEATURED_PROJECT_CONSTANTS
     LMS_LINKS
@@ -105,6 +106,7 @@ def main
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
+  generate_shared_js_file(generate_constants('VOICES'), "#{REPO_DIR}/apps/src/util/sharedVoices.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabGoalBlocks.js")
   generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/p5lab/gamelab/sharedGamelabBlocks.js")

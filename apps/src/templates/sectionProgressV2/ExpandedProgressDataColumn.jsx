@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -60,10 +61,21 @@ function ExpandedProgressDataColumn({
 
   const getExpandedChoiceLevel = React.useCallback(
     (level, studentId) => [
-      getSingleLevelColumn(level, studentId, {expandedChoiceLevel: true}),
-      ...level.sublevels.map(sublevel => {
+      getSingleLevelColumn(level, studentId, {
+        expandedChoiceLevel: true,
+        className: styles.expandedLevelCellFirst,
+      }),
+      ...level.sublevels.map((sublevel, index) => {
         return getSingleLevelColumn(sublevel, studentId, {
           parentLevelId: level.id,
+          className:
+            index === level.sublevels.length - 1
+              ? classNames(
+                  styles.expandedLevelCellLast,
+                  styles.expandedLevelCell
+                )
+              : styles.expandedLevelCell,
+          linkClassName: styles.expandedChoiceLevelLink,
         });
       }),
     ],

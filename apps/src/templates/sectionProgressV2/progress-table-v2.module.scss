@@ -5,6 +5,30 @@
   background-color: white;
 }
 
+@mixin remove-default-button-styles {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 0;
+  display: inline-block;
+  margin: 0;
+  box-sizing: inherit;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  // note: unless border is set, you will need to override
+  // the active border state. Important is necessary to override
+  // the default !important
+  // &:active {
+  //   border: ____ !important;
+  // }
+}
+
 .progressTableV2 {
   width: 100%;
   font-size: 16px;
@@ -132,15 +156,28 @@ $level-cell-width: 52;
   }
 
   &HeaderCell {
+    border: 1px solid $neutral_dark40;
+    margin: 0;
     height: 42px;
     line-height: 42px;
-min-width:47px;
-    border-bottom: 1px solid $neutral_dark40;
-    border-right: 1px solid $neutral_dark40;
+    min-width: 52px;
     margin-bottom: 32px;
     text-align: center;
     background-color: $light_gray_50;
   }
+
+  &HeaderCellInteractive {
+    @include remove-default-button-styles;
+    border: 1px solid $neutral_dark40;
+    margin: 0;
+    height: 42px;
+    line-height: 42px;
+    min-width: 52px;
+    margin-bottom: 32px;
+    text-align: center;
+    background-color: $light_gray_50;
+  }
+
   
   &HeaderTooltip {
     height: 18px;
@@ -172,18 +209,32 @@ min-width:47px;
 
 .expanded {
   &Header {
-    min-width: 47px;
+    min-width: 80px;
 
     &LessonCell {
-      height: 43px;
+      border-top: 1px solid $neutral_dark40;
+      border-left: 1px solid $neutral_dark40;
+      height: 42px;
       line-height: 42px;
-      min-width: 49px;
+      min-width: 82px;
       border: 0;
       background-color: $light_primary_500;
       color: $light_white;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    &LessonCellButton {
+      @include remove-default-button-styles;
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
+
+      &:active {
+        border: none !important;
+      }
     }
     
     &LessonText {
@@ -211,7 +262,7 @@ min-width:47px;
     &LevelCell {
       width: $level-cell-width + px;
       text-align: center;
-      height: 32px;
+      height: 33px;
       line-height: 32px;
       display: flex;
       flex-direction: row;
@@ -221,6 +272,22 @@ min-width:47px;
       flex-wrap: nowrap;
       color: inherit;
       background-color: inherit;
+
+      &Expandable {
+        @include remove-default-button-styles;
+        display: flex;
+        flex-direction: row;
+        line-height: 32px;
+        align-items: center;
+        overflow: hidden;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        width: 100%;
+
+        &:active {
+          border: none !important;
+        }
+      }
 
       &LevelNumber {
         margin-top: 0.0625em;
@@ -282,6 +349,24 @@ min-width:47px;
     width: 100%;
     text-align: center; 
     line-height: 47px !important;
+  }
+
+  &ChoiceLevelLink {
+    border-left: 1px solid $light_gray_100;
+    height: 32px;
+    margin: 8px 0;
+    line-height: 32px !important;
+    width: $level-cell-width + px;
+  }
+
+  &LevelCell {
+    display: flex;
+    border-left: 0;
+    width: auto;
+
+    &First {
+      border-inline-start: 1px solid $neutral_dark40;
+    }
   }
 
   &LevelEmpty {

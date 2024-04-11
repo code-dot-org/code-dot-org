@@ -232,6 +232,9 @@ export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
   return hideShareAndRemix === undefined ? true : hideShareAndRemix;
 };
 
+export const isProjectTemplateLevel = (state: {lab: LabState}) =>
+  !!state.lab.levelProperties?.projectTemplateLevelName;
+
 const labSlice = createSlice({
   name: 'lab',
   initialState,

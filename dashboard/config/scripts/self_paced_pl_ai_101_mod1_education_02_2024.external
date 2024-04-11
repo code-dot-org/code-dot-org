@@ -1,0 +1,15 @@
+name 'self-paced-pl-ai-101-mod1-education_02_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Realizing the Benefits of AI in Education
+
+#### With guidance, an education system may realize the potential benefits of AI to improve learning outcomes, support teacher instruction and quality of life, and enhance educational equity. Without guidance, teachers and students can be exposed to privacy violations, inconsistent disciplinary consequences, and counterproductive AI adoption practices.
+
+#### Take a look at the graphic below that highlights both some potential benefits and risks of AI in education.
+
+<img src="https://images.code.org/5f643df03b3565e7a1c367ae2a3b468b-image-1710871493815.04.49 AM.png" alt="A brown owl sits on a branch.">
+
+
+MARKDOWN

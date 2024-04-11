@@ -3,7 +3,7 @@ import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
 import {useDispatch} from 'react-redux';
-import {appendOutput, resetOutput, setSource} from './pythonlabRedux';
+import {appendSystemMessage, resetOutput, setSource} from './pythonlabRedux';
 import Button from '@cdo/apps/templates/Button';
 import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
@@ -36,13 +36,13 @@ const PythonEditor: React.FunctionComponent = () => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
     // For now, restrict running python code to levelbuilders.
     if (parsedData.permissions.includes('levelbuilder')) {
-      dispatch(appendOutput('Running code...'));
+      dispatch(appendSystemMessage('Running program...'));
       if (source) {
         const code = getFileByName(source.files, 'main.py')?.contents;
         if (code) {
           runPythonCode(code);
         } else {
-          appendOutput('No main.py to run.');
+          dispatch(appendSystemMessage('No main.py to run.'));
         }
       }
     } else {
@@ -102,7 +102,22 @@ const PythonEditor: React.FunctionComponent = () => {
       <div>
         Output:
         {codeOutput.map((outputLine, index) => {
-          return <div key={index}>{outputLine}</div>;
+          if (outputLine.type === 'img') {
+            return (
+              <img
+                key={index}
+                src={`data:image/png;base64,${outputLine.contents}`}
+                alt="matplotlib_image"
+              />
+            );
+          } else if (
+            outputLine.type === 'system_out' ||
+            outputLine.type === 'system_in'
+          ) {
+            return <div key={index}>{outputLine.contents}</div>;
+          } else {
+            return <div key={index}>[PYTHON LAB] {outputLine.contents}</div>;
+          }
         })}
       </div>
     </div>

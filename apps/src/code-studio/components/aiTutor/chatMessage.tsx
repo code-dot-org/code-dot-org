@@ -1,7 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import style from './chat-workspace.module.scss';
-import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
+import {
+  Role,
+  AITutorInteractionStatus as Status,
+  ChatCompletionMessage,
+} from '@cdo/apps/aiTutor/types';
 
 interface ChatMessageProps {
   message: ChatCompletionMessage;
@@ -25,13 +29,13 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {chatMessageText}
       </div>
     );
-  } else if (status === Status.PROFANITY) {
+  } else if (status === Status.PROFANITY_VIOLATION) {
     return (
       <div className={classNames(style.message, style.inappropriateMessage)}>
         {INAPPROPRIATE_MESSAGE}
       </div>
     );
-  } else if (status === Status.PERSONAL) {
+  } else if (status === Status.PII_VIOLATION) {
     return (
       <div className={classNames(style.message, style.tooPersonalMessage)}>
         {TOO_PERSONAL_MESSAGE}

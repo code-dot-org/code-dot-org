@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {editableFileType} from '@cdoide/utils';
 import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
@@ -6,16 +6,11 @@ import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';
 import {css} from '@codemirror/lang-css';
-import {javascript as js} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
-//import prettier from 'prettier/standalone';
-//import htmlParser from 'prettier/parser-html';
-//import cssParser from 'prettier/parser-postcss';
 
 const codeMirrorLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
-  js: js(),
 };
 
 const Editor = () => {
@@ -31,13 +26,13 @@ const Editor = () => {
     (value: string) => {
       saveFile(file.id, value);
     },
-    [file, saveFile]
+    [file.id, saveFile]
   );
 
-  /* const format = async () => {
-    const prettified = await prettify(file.contents, file.language);
-    saveFile(file.id, prettified);
-  };*/
+  const editorConfigExtensions = useMemo(
+    () => [codeMirrorLangMapping[file.language]],
+    [file.language]
+  );
 
   if (!editableFileType(file.language)) {
     return <div>Cannot currently edit files of type {file.language}</div>;
@@ -45,16 +40,13 @@ const Editor = () => {
 
   return (
     <div className="editor-container">
-      {/*<button type="button" onClick={() => format()}>
-        Format
-      </button> */}
       {file && (
         <CodeEditor
           key={`${file.id}/${1}`}
           darkMode={true}
           onCodeChange={onChange}
           startCode={file.contents}
-          editorConfigExtensions={[codeMirrorLangMapping[file.language]]}
+          editorConfigExtensions={editorConfigExtensions}
         />
       )}
     </div>
