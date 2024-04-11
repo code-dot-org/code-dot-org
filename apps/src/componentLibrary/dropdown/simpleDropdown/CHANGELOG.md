@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/57105)
+* use `width: 100%` instead of `width: auto` as default when styling `select` element.
+* style select element with the use of `select` css selector instead of `.dropdown`
+
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/57105)
 * moved `SimpleDropdown` to dropdown folder
 
