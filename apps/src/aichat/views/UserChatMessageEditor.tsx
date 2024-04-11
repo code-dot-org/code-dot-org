@@ -23,12 +23,8 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     (state: {currentUser: CurrentUserState}) => state.currentUser.userId
   );
 
-  const currentLevelId: string | null = useSelector(
-    (state: {progress: ProgressState}) => state.progress.currentLevelId
-  );
-
-  const scriptId: number | null = useSelector(
-    (state: {progress: ProgressState}) => state.progress.scriptId
+  const {currentLevelId, scriptId} = useSelector(
+    (state: {progress: ProgressState}) => state.progress
   );
 
   const channelId = getStandaloneProjectId();
