@@ -54,7 +54,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element "textarea:contains(Nice work Lillian!)" is visible
 
 Scenario: Teacher views rubric product tour
-  # Teacher signs in and views product tour
+  # Teacher signs in and navigates to assessment page
   Given I create a teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
   And I add the current user to the "ai-rubrics" single section experiment for the "allthethings" course
@@ -66,24 +66,47 @@ Scenario: Teacher views rubric product tour
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
   And I click selector ".teacher-panel td:eq(1)" to load a new page
   And I wait for the page to fully load
+
+  # Teacher views product tour step 1
   And I wait until element "h1:contains(Getting Started with AI Teaching Assistant)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
-  And I wait until element "h1:contains(Understanding the AI Assessment)" is visible
+
+  # Teacher views product tour step 2
+  Then I wait until element "h3:contains(Lesson 3: Data Structures)" is visible
+  Then I wait until element "h1:contains(Understanding the AI Assessment)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
-  And I wait until element "h1:contains(Using Evidence)" is visible
+
+  # Teacher views product tour step 3
+  Then I wait until element "h1:contains(Using Evidence)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
-  And I wait until element "h1:contains(Understanding AI Confidence)" is visible
+
+  # Teacher views product tour step 4
+  Then I wait until element "h1:contains(Understanding AI Confidence)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
-  And I wait until element "h1:contains(Assigning a Rubric Score)" is visible
+
+  # Teacher views product tour step 5
+  Then I wait until element "h1:contains(Assigning a Rubric Score)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
-  And I wait until element "h1:contains(How did AI do?)" is visible
+
+  # Teacher view product tour step 6
+  Then I wait until element "h1:contains(How did AI do?)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Done)" once I see it
+
+  # Teacher views restored rubric after product tour is complete
+  Then I wait until element "h3:contains(Lesson 48: AI Rubrics)" is visible
+  And I wait until element "h5:contains(Code Quality)" is visible
+
+  # Teacher restarts product tour using question button
+  Then I click selector "#ui-restart-product-tour" once I see it
+  And I wait until element "h3:contains(Lesson 3: Data Structures)" is visible
+  And I wait until element "h1:contains(Getting Started with AI Teaching Assistant)" is visible
+  And I wait until element ".introjs-tooltiptext" is visible
 
 @eyes
 Scenario: Teacher views Rubric and Settings tabs

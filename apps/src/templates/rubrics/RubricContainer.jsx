@@ -230,6 +230,7 @@ export default function RubricContainer({
           <div className={style.rubricHeaderRightSide}>
             {canProvideFeedback && (
               <button
+                id="ui-restart-product-tour"
                 type="button"
                 onClick={updateTourStatus}
                 className={classnames(style.buttonStyle, style.closeButton)}
