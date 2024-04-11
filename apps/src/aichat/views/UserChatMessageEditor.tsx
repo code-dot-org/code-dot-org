@@ -1,11 +1,17 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
 import aichatI18n from '../locale';
-import {AichatState, submitChatContents} from '../redux/aichatRedux';
+import {
+  AichatState,
+  submitChatContents,
+} from '../redux/aichatRedux';
+import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+import {} from '@cdo/apps/templates/currentUserRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
-
+import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
+import {ChatContext} from '../types';
 /**
  * Renders the AI Chat Lab user chat message editor component.
  */
@@ -16,14 +22,41 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
   );
 
-  // TODO: If systemPrompt is undefined, handle this error case.
+  const userId: number = useSelector(
+    (state: {currentUser: CurrentUserState}) => state.currentUser.userId
+  );
+
+  const currentLevelId: string | null = useSelector(
+    (state: {progress: ProgressState}) => state.progress.currentLevelId
+  );
+
+  const scriptId: number | null = useSelector(
+    (state: {progress: ProgressState}) => state.progress.scriptId
+  );
+
+
+
   const dispatch = useAppDispatch();
+
   const handleSubmit = useCallback(() => {
     if (!isWaitingForChatResponse) {
-      dispatch(submitChatContents(userMessage));
+      const chatContents: ChatContext = {
+        userMessage,
+        userId,
+        currentLevelId,
+        scriptId,
+      };
+      dispatch(submitChatContents(chatContents));
       setUserMessage('');
     }
-  }, [userMessage, dispatch, isWaitingForChatResponse]);
+  }, [
+    isWaitingForChatResponse,
+    dispatch,
+    userId,
+    userMessage,
+    currentLevelId,
+    scriptId,
+  ]);
 
   return (
     <div className={moduleStyles.editorContainer}>
@@ -45,5 +78,6 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     </div>
   );
 };
+
 
 export default UserChatMessageEditor;

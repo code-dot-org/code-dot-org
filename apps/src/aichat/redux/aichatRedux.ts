@@ -19,6 +19,7 @@ import {
   ModelCardInfo,
   Visibility,
   LevelAichatSettings,
+  ChatContext,
 } from '../types';
 import {RootState} from '@cdo/apps/types/redux';
 
@@ -56,6 +57,9 @@ const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
 const getCurrentTime = () => moment(Date.now()).format('LT');
 
 export interface AichatState {
+  levelId: string | null;
+  scriptId: number | null;
+  userId: number | null;
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
   // Messages will be logged and stored.
   chatMessages: ChatCompletionMessage[];
@@ -71,6 +75,9 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
+  levelId: null,
+  scriptId: null,
+  userId: null,
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   showWarningModal: true,
@@ -123,10 +130,12 @@ export const updateAiCustomization = createAsyncThunk(
 // the user messages.
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
-  async (newMessageText: string, thunkAPI) => {
+  async (chatContents: ChatContext, thunkAPI) => {
     const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
     const aiCustomizations = state.aichat.currentAiCustomizations;
     const storedMessages = state.aichat.chatMessages;
+    const {userMessage, userId, currentLevelId, scriptId} = chatContents;
+    const newMessageText = userMessage;
     const newMessageId =
       storedMessages.length === 0
         ? 1
@@ -146,7 +155,10 @@ export const submitChatContents = createAsyncThunk(
     const chatApiResponse = await getAichatCompletionMessage(
       aiCustomizations,
       newMessage,
-      storedMessages
+      storedMessages,
+      userId,
+      currentLevelId,
+      scriptId
     );
     console.log('chatApiResponse', chatApiResponse);
   }
@@ -175,6 +187,15 @@ const aichatSlice = createSlice({
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
+    },
+    setLevelId: (state, action: PayloadAction<string | null>) => {
+      state.levelId = action.payload;
+    },
+    setScriptId: (state, action: PayloadAction<number | null>) => {
+      state.scriptId = action.payload;
+    },
+    setUserId: (state, action: PayloadAction<number | null>) => {
+      state.userId = action.payload;
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
@@ -283,6 +304,9 @@ export const {
   addChatMessage,
   removeChatMessage,
   clearChatMessages,
+  setLevelId,
+  setScriptId,
+  setUserId,
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,

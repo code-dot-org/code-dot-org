@@ -8,6 +8,13 @@ export type ChatCompletionMessage = {
   timestamp?: string;
 };
 
+export type ChatContext = {
+  userMessage: string;
+  userId: number;
+  currentLevelId: string | null;
+  scriptId: number | null;
+};
+
 export enum AichatInteractionStatus {
   ERROR = 'error',
   PII_VIOLATION = 'pii_violation',

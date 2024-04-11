@@ -12,11 +12,18 @@ export async function postAichatCompletionMessage(
   aiCustomizations: AiCustomizations,
   newMessage: ChatCompletionMessage,
   storedMessages: ChatCompletionMessage[],
-  levelId: number | undefined
+  userId: number,
+  currentLevelId: string | null,
+  scriptId: number | null
 ): Promise<ChatCompletionMessage | null> {
-  const payload = levelId
-    ? {aiCustomizations, newMessage, storedMessages, levelId}
-    : {aiCustomizations, newMessage, storedMessages};
+  const payload = {
+    aiCustomizations,
+    newMessage,
+    storedMessages,
+    userId,
+    currentLevelId,
+    scriptId,
+  };
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -43,7 +50,9 @@ export async function getAichatCompletionMessage(
   aiCustomizations: AiCustomizations,
   newMessage: ChatCompletionMessage,
   storedMessages: ChatCompletionMessage[],
-  levelId?: number
+  userId: number,
+  currentLevelId: string | null,
+  scriptId: number | null
 ) {
   let response;
   try {
@@ -51,7 +60,9 @@ export async function getAichatCompletionMessage(
       aiCustomizations,
       newMessage,
       storedMessages,
-      levelId
+      userId,
+      currentLevelId,
+      scriptId
     );
   } catch (error) {
     Lab2Registry.getInstance()

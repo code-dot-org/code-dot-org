@@ -20,7 +20,7 @@ class AichatController < ApplicationController
   end
 
   def has_required_params?
-    params[:aiCustomizations].present? && params[:newMessage].present? && params[:storedMessages].present?
+    params[:aiCustomizations].present? && params[:newMessage].present? && params[:storedMessages].present? && params[:userId].present?
   end
 
   def request_chat_completion(messages)
