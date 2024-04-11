@@ -17,6 +17,7 @@ table.selfPacedProgressTable {
   height: 0.5rem;
   border-radius: 1rem;
   margin-block-start: 0.25rem;
+  overflow: hidden;
 
   .progressBarFill {
     display: block;
