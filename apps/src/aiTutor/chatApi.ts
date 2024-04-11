@@ -24,18 +24,9 @@ export async function postOpenaiChatCompletion(
     ? {levelId: levelId, messages: messagesToSend, type: tutorType}
     : {messages: messagesToSend, type: tutorType};
 
-  console.log('payload', payload);
-  let stringifiedPayload;
-  try {
-    stringifiedPayload = JSON.stringify(payload);
-  } catch (err) {
-    console.log('error converting payload to JSON', err);
-    return null;
-  }
-
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
-    stringifiedPayload,
+    JSON.stringify(payload),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',
@@ -81,7 +72,6 @@ export async function getChatCompletionMessage(
       tutorType
     );
   } catch (error) {
-    console.log('error in chat completion request', error as Error);
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Error in chat completion request', error as Error);

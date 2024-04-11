@@ -42,8 +42,6 @@ const initialState: AITutorState = {
 };
 
 const formatQuestionForAITutor = (chatContext: ChatContext) => {
-  console.log('checking chatContext.actionType', chatContext.actionType);
-  console.log('against', AITutorTypes.GENERAL_CHAT);
   if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
     return chatContext.studentInput;
   }
@@ -81,8 +79,6 @@ export const askAITutor = createAsyncThunk(
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     const formattedQuestion = formatQuestionForAITutor(chatContext);
-
-    // TODO: Handle additional context
     const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
       newMessageId,
@@ -91,8 +87,6 @@ export const askAITutor = createAsyncThunk(
       levelContext.levelId,
       chatContext.actionType
     );
-
-    console.log('chatApiResponse', chatApiResponse);
 
     thunkAPI.dispatch(
       updateChatMessageStatus({
@@ -118,8 +112,6 @@ export const askAITutor = createAsyncThunk(
       status: chatApiResponse?.status,
       aiResponse: chatApiResponse?.assistantResponse,
     };
-
-    console.log('interactionData', interactionData);
 
     await savePromptAndResponse(interactionData);
   }
