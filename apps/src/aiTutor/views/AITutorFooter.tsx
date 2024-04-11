@@ -51,7 +51,6 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
   const dispatch = useAppDispatch();
 
-  // TODO: Uncomment actual conditions
   const showCompilationOption =
     !isRunning && hasRunOrTestedCode && hasCompilationError;
   const showValidationOption =
@@ -112,22 +111,20 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
           value={userMessage}
           disabled={disabled}
         />
-        <div className={style.submitToStudentButtonAndError}>
-          <Button
-            className={style.submitToStudentButton}
-            color={Button.ButtonColor.brandSecondaryDefault}
-            disabled={disabled}
-            icon="arrow-up"
-            key="submit"
-            onClick={() => handleSubmit(ActionType.GENERAL_CHAT)}
-            text="Submit"
-          />
-        </div>
+        <Button
+          className={style.submitButton}
+          color={Button.ButtonColor.brandSecondaryDefault}
+          disabled={disabled}
+          icon="arrow-up"
+          key="submit"
+          onClick={() => handleSubmit(ActionType.GENERAL_CHAT)}
+          text="Submit"
+        />
       </div>
       <div>
         {showCompilationOption && (
           <Button
-            className={style.submitToStudentButton}
+            className={style.quickActionButton}
             color={Button.ButtonColor.teal}
             disabled={disabled}
             key="compilation"
@@ -137,7 +134,7 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
         )}
         {showValidationOption && (
           <Button
-            className={style.submitToStudentButton}
+            className={style.quickActionButton}
             color={Button.ButtonColor.teal}
             disabled={disabled}
             key="validation"
