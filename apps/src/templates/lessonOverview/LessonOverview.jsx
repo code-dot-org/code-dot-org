@@ -121,6 +121,10 @@ class LessonOverview extends Component {
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
+    this.handlePrintLessonPlan = () => {
+      window.print();
+    };
+
     return (
       <div className="lesson-overview">
         <div className="lesson-overview-header">
