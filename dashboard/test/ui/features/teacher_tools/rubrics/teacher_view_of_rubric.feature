@@ -68,7 +68,7 @@ Scenario: Teacher views rubric product tour
   And I wait for the page to fully load
 
   # Teacher views product tour step 1
-  And I wait until element "h1:contains(Getting Started with AI Teaching Assistant)" is visible
+  And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
 
@@ -93,8 +93,8 @@ Scenario: Teacher views rubric product tour
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
 
-  # Teacher view product tour step 6
-  Then I wait until element "h1:contains(How did AI do?)" is visible
+  # Teacher views product tour step 6
+  Then I wait until element "h1:contains(How did Your AI Teaching Assistant do?)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Done)" once I see it
 
@@ -105,8 +105,29 @@ Scenario: Teacher views rubric product tour
   # Teacher restarts product tour using question button
   Then I click selector "#ui-restart-product-tour" once I see it
   And I wait until element "h3:contains(Lesson 3: Data Structures)" is visible
-  And I wait until element "h1:contains(Getting Started with AI Teaching Assistant)" is visible
+  And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
+
+  # Teacher clicks to the last step in the tour
+  Then I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I wait until element "h1:contains(How did Your AI Teaching Assistant do?)" is visible
+
+
+  # Teacher uses Back button to backtrack through tour
+  Then I click selector ".introjs-button:contains(Back)" once I see it
+  And I wait until element "h1:contains(Assigning a Rubric Score)" is visible
+  And I click selector ".introjs-button:contains(Back)" once I see it
+  And I wait until element "h1:contains(Understanding AI Confidence)" is visible
+  And I click selector ".introjs-button:contains(Back)" once I see it
+  And I wait until element "h1:contains(Using Evidence)" is visible
+  And I click selector ".introjs-button:contains(Back)" once I see it
+  And I wait until element "h1:contains(Understanding the AI Assessment)" is visible
+  And I click selector ".introjs-button:contains(Back)" once I see it
+  And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
 
 @eyes
 Scenario: Teacher views Rubric and Settings tabs
@@ -159,13 +180,12 @@ Scenario: Teacher views product tour
   And I wait for the page to fully load
 
   # Teacher views product tour step 1
-  And I wait until element "h1:contains(Getting Started with AI Teaching Assistant)" is visible
+  And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
   When I open my eyes to test "rubric product tour"
   Then I see no difference for "product tour step 1"
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
 
   # Teacher views product tour step 2
-  Then I wait until element "h3:contains(Lesson 3: Data Structures)" is visible
   Then I wait until element "h1:contains(Understanding the AI Assessment)" is visible
   Then I see no difference for "product tour step 2"
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
@@ -186,6 +206,7 @@ Scenario: Teacher views product tour
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
 
   # Teacher view product tour step 6
-  Then I wait until element "h1:contains(How did AI do?)" is visible
+  Then I wait until element "h1:contains(How did Your AI Teaching Assistant do?)" is visible
   Then I see no difference for "product tour step 6"
-  And I click selector ".introjs-button:contains(Done)" once I see it
+
+  Then I close my eyes
