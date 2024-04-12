@@ -15,6 +15,18 @@ import i18n from '@cdo/locale';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
+export interface CheckboxOption {
+  value: string;
+  label: string;
+  isOptionDisabled?: boolean;
+}
+
+export interface CheckboxOption {
+  value: string;
+  label: string;
+  isOptionDisabled?: boolean;
+}
+
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
@@ -28,8 +40,10 @@ export interface CheckboxDropdownProps {
   /** CheckboxDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
+  /** CheckboxDropdown label style type*/
+  labelType?: 'thick' | 'thin';
   /** CheckboxDropdown options */
-  allOptions: {value: string; label: string; isOptionDisabled?: boolean}[];
+  allOptions: CheckboxOption[];
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
@@ -56,6 +70,7 @@ export interface CheckboxDropdownProps {
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
   labelText,
+  labelType = 'thick',
   allOptions,
   checkedOptions = [],
   onChange,
@@ -69,6 +84,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
     <CustomDropdown
       name={name}
       labelText={labelText}
+      labelType={labelType}
       color={color}
       disabled={disabled}
       size={size}

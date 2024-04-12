@@ -6,7 +6,7 @@ class AiTutorInteractionsController < ApplicationController
   # POST /ai_tutor_interactions
   def create
     return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor.'}) unless current_user.has_ai_tutor_access?
-    return render(status: :not_acceptable, json: {error: 'Staus is unacceptable.'}) unless valid_status
+    return render(status: :not_acceptable, json: {error: 'Status is unacceptable.'}) unless valid_status
     @ai_tutor_interaction = AiTutorInteraction.new(ai_tutor_interaction_params)
     if @ai_tutor_interaction.save
       render json: {message: "successfully created AiTutorInteraction with id: #{@ai_tutor_interaction.id}"}, status: :created
@@ -31,11 +31,12 @@ class AiTutorInteractionsController < ApplicationController
       ai_tutor_interaction_params[:project_id] = project_data[:project_id]
       ai_tutor_interaction_params[:project_version_id] = project_data[:version_id]
     end
+
     ai_tutor_interaction_params
   end
 
   def valid_status
-    SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS.value?(params[:status])
+    SharedConstants::AI_TUTOR_INTERACTION_STATUS.value?(params[:status])
   end
 
   def find_project_and_version_id(level_id, script_id)

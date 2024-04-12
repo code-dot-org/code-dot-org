@@ -1,10 +1,12 @@
 import React, {useContext} from 'react';
-import MultiItemInput from './MultiItemInput';
-import moduleStyles from './edit-aichat-settings.module.scss';
+
+import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 import {
   MAX_ASK_ABOUT_TOPICS,
-  MODEL_CARD_FIELDS_AND_LABELS,
+  MODEL_CARD_FIELDS_LABELS_ICONS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
+
+import moduleStyles from './edit-aichat-settings.module.scss';
 import {UpdateContext} from './UpdateContext';
 
 const ModelCardFields: React.FunctionComponent = () => {
@@ -13,7 +15,10 @@ const ModelCardFields: React.FunctionComponent = () => {
   const exampleTopics = modelCardInfo.exampleTopics;
   return (
     <div className={moduleStyles['model-card-fields']}>
-      {MODEL_CARD_FIELDS_AND_LABELS.map(([property, label]) => {
+      {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, _]) => {
+        if (property === 'exampleTopics') {
+          return null;
+        }
         return (
           <div key={property}>
             <label htmlFor={`modelCard-${property}`}>{label}</label>

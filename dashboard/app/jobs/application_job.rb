@@ -44,10 +44,9 @@ class ApplicationJob < ActiveJob::Base
         value: job_count,
         unit: 'Count',
         timestamp: Time.now,
-        dimensions: {
-          name: 'Environment',
-          value: CDO.rack_env
-        },
+        dimensions: [
+          {name: 'Environment', value: CDO.rack_env},
+        ]
       }
     ]
 
@@ -57,11 +56,15 @@ class ApplicationJob < ActiveJob::Base
   end
 
   before_perform do |job|
-    # Log wait times only jobs that were enqueued
-    return if job.enqueued_at.nil?
-
+    # Record the time the job started
     @perform_started_at = Time.now
-    wait_time = @perform_started_at - Time.parse(job.enqueued_at)
+    @enqueued_or_started_at = Time.now
+
+    # Log wait times only for jobs that were enqueued
+    next if job.enqueued_at.nil?
+
+    @enqueued_or_started_at = Time.parse(job.enqueued_at)
+    wait_time = @perform_started_at - @enqueued_or_started_at
     metrics = [
       {
         metric_name: 'WaitTime',

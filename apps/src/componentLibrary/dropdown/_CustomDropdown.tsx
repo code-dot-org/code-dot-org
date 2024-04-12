@@ -32,6 +32,8 @@ export interface CustomDropdownProps {
   /** CustomDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
+  /** CustomDropdown label style type*/
+  labelType?: 'thick' | 'thin';
   /** Does custom dropdown hase a selected value (Renders a checkmark icon in the dropdown button if true) */
   isSomeValueSelected?: boolean;
   /** Custom icon to show for the dropdown button*/
@@ -48,6 +50,7 @@ export interface CustomDropdownProps {
 const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   name,
   labelText,
+  labelType = 'thick',
   children,
   isSomeValueSelected = false,
   icon,
@@ -133,7 +136,14 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
             className={icon.className}
           />
         )}
-        <span className={moduleStyles.dropdownLabel}>{labelText}</span>
+        <span
+          className={classNames(
+            moduleStyles.dropdownLabel,
+            moduleStyles[`dropdownLabel-${labelType}`]
+          )}
+        >
+          {labelText}
+        </span>
         <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
       </button>
       {/** Dropdown menu content is rendered here as children props*/}

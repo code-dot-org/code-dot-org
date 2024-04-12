@@ -2690,6 +2690,7 @@ es-MX:
   user_header_applab: 'Laboratorio de aplicaciones '
   user_header_artist: 'Artista '
   user_header_create: 'Crear '
+  user_header_create_account: Crear cuenta
   user_header_dance: Fiesta de baile
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorio de juegos

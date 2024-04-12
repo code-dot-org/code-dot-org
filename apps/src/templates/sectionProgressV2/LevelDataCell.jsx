@@ -69,6 +69,8 @@ function LevelDataCell({
   sectionId,
   studentLevelProgress,
   expandedChoiceLevel,
+  className,
+  linkClassName,
   parentLevelId,
   lessonId,
 }) {
@@ -123,7 +125,12 @@ function LevelDataCell({
 
   return (
     <td
-      className={classNames(styles.gridBox, styles.gridBoxLevel, feedbackStyle)}
+      className={classNames(
+        styles.gridBox,
+        styles.gridBoxLevel,
+        feedbackStyle,
+        className
+      )}
       headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
       <Link
@@ -131,7 +138,7 @@ function LevelDataCell({
         openInNewTab
         external
         onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
-        className={styles.expandedLevelLink}
+        className={classNames(styles.expandedLevelLink, linkClassName)}
       >
         {itemType ? (
           <ProgressIcon itemType={itemType} />
@@ -157,4 +164,6 @@ LevelDataCell.propTypes = {
   expandedChoiceLevel: PropTypes.bool,
   parentLevelId: PropTypes.string,
   lessonId: PropTypes.number.isRequired,
+  className: PropTypes.string,
+  linkClassName: PropTypes.string,
 };

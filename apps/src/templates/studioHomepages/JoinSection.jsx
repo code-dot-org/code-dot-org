@@ -1,12 +1,14 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
 import styleConstants from '../../styleConstants';
-import Button from '@cdo/apps/templates/Button';
-import {connect} from 'react-redux';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const INITIAL_STATE = {
   sectionCode: '',
