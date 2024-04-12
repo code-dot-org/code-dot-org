@@ -1,5 +1,10 @@
 import moment from 'moment';
-import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {
+  createAsyncThunk,
+  createSlice,
+  createSelector,
+  PayloadAction,
+} from '@reduxjs/toolkit';
 
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
@@ -342,6 +347,31 @@ const aichatSlice = createSlice({
     });
   },
 });
+
+// Selectors
+const selectModelCardInfo = (state: {aichat: AichatState}) =>
+  state.aichat.currentAiCustomizations.modelCardInfo;
+
+export const selectHasFilledOutModelCard = createSelector(
+  selectModelCardInfo,
+  modelCardInfo => {
+    for (const key of Object.keys(modelCardInfo)) {
+      const typedKey = key as keyof ModelCardInfo;
+
+      if (typedKey === 'exampleTopics') {
+        if (
+          !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
+        ) {
+          return false;
+        }
+      } else if (!modelCardInfo[typedKey].length) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+);
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {

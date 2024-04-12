@@ -13,9 +13,8 @@ const PresentationView: React.FunctionComponent = () => {
   const previouslySavedAiCustomizations = useAppSelector(
     state => state.aichat.previouslySavedAiCustomizations
   );
-  const {systemPrompt, temperature, retrievalContexts} =
+  const {systemPrompt, temperature, retrievalContexts, modelCardInfo} =
     previouslySavedAiCustomizations;
-  const modelCardInfo = previouslySavedAiCustomizations.modelCardInfo;
 
   // These are temporary constants. They will be retrieved from s3.
   const EXAMPLE_MODEL_NAME = 'Model A';

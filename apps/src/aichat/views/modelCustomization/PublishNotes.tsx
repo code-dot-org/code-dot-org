@@ -6,6 +6,7 @@ import {
   setViewMode,
   setHasPublished,
   updateAiCustomization,
+  selectHasFilledOutModelCard,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
@@ -28,13 +29,14 @@ const PublishNotes: React.FunctionComponent = () => {
   const {modelCardInfo} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
+  const hasFilledOutModelCard = useAppSelector(selectHasFilledOutModelCard);
 
   const onSave = useCallback(() => {
     dispatch(updateAiCustomization());
-    if (!hasFilledOutModelCard(modelCardInfo)) {
+    if (!hasFilledOutModelCard) {
       dispatch(setHasPublished(false));
     }
-  }, [dispatch, modelCardInfo]);
+  }, [dispatch, hasFilledOutModelCard]);
 
   const onPublish = useCallback(() => {
     dispatch(updateAiCustomization());
@@ -45,7 +47,7 @@ const PublishNotes: React.FunctionComponent = () => {
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div>
-        {hasFilledOutModelCard(modelCardInfo)
+        {hasFilledOutModelCard
           ? renderPublishOkNotification()
           : renderCompleteToPublishNotification()}
         <div className={modelCustomizationStyles.customizationContainer}>
@@ -99,9 +101,7 @@ const PublishNotes: React.FunctionComponent = () => {
         <Button
           text="Publish"
           iconLeft={{iconName: 'upload'}}
-          disabled={
-            isDisabled(visibility) || !hasFilledOutModelCard(modelCardInfo)
-          }
+          disabled={isDisabled(visibility) || !hasFilledOutModelCard}
           onClick={onPublish}
           className={modelCustomizationStyles.updateButton}
         />
@@ -112,24 +112,6 @@ const PublishNotes: React.FunctionComponent = () => {
 
 const getInputTag = (property: keyof ModelCardInfo) => {
   return property === 'botName' ? 'input' : 'textarea';
-};
-
-const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
-  for (const key of Object.keys(modelCardInfo)) {
-    const typedKey = key as keyof ModelCardInfo;
-
-    if (typedKey === 'exampleTopics') {
-      if (
-        !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
-      ) {
-        return false;
-      }
-    } else if (!modelCardInfo[typedKey].length) {
-      return false;
-    }
-  }
-
-  return true;
 };
 
 const renderPublishOkNotification = () => {
