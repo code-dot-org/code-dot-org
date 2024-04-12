@@ -76,6 +76,7 @@ import {
   adjustCalloutsOnViewportChange,
   disableOrphans,
   reflowToolbox,
+  updateBlockLimits,
 } from './eventHandlers';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
 import {getStore} from '@cdo/apps/redux';
@@ -683,6 +684,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.toolboxBlocks = options.toolbox;
+    blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options
@@ -714,6 +716,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     if (!blocklyWrapper.isStartMode && !optOptionsExtended.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);
+    }
+    if (blocklyWrapper.blockLimitMap && blocklyWrapper.blockLimitMap.size > 0) {
+      workspace.addChangeListener(updateBlockLimits);
     }
 
     // When either the main workspace or the toolbox workspace viewport

@@ -11,6 +11,10 @@
   - @page_title = t('activerecord.attributes.user.finish_sign_up_header_error')
 - else
   - @page_title = t('activerecord.attributes.user.finish_sign_up_header')
+- is_lti = Policies::Lti.lti?(@user)
+- show_lti_warning = is_lti && @user.teacher?
+- issuer_url = is_lti ? Policies::Lti.issuer(@user) : nil
+- issuer_name = is_lti ? Policies::Lti.issuer_name(issuer_url) : nil
 
 #signup
 
@@ -18,13 +22,16 @@
     .span10.header
       %h1= t('activerecord.attributes.user.finish_sign_up_header')
 
+  - if show_lti_warning
+    .row-fluid
+      .span10
+        .row= render partial: 'lti/v1/sing_up_warning_banner', locals: {provider: issuer_name}
+
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
     .row
       .span10
         %p
-          - if Policies::Lti.lti? @user
-            - issuer_url = Policies::Lti.issuer @user
-            - issuer_name = Policies::Lti.issuer_name issuer_url
+          - if is_lti
             = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: issuer_name, email: @user.email, markdown: :inline).html_safe
           - elsif @user.provider.present?
             - provider = t("auth.#{@user.provider}")
@@ -44,7 +51,7 @@
               - @user.errors.full_messages.each do |msg|
                 %li= msg
 
-    - if Policies::Lti.lti? @user
+    - if is_lti
       = f.hidden_field :user_type, value: @user.user_type
     - else
       .row
@@ -214,7 +221,8 @@
         = f.hidden_field :terms_of_service_version, value: User::TERMS_OF_SERVICE_VERSIONS.last
         = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
 
-    %button.submit{:id => 'signup_finish_submit'}= t('signup_form.go_to_account')
+    %button.submit{:id => 'signup_finish_submit'}
+      = show_lti_warning ? t('signup_form.create_new_account').titleize : t('signup_form.go_to_account')
 
 :javascript
   // Selects 'Teacher' as the user type
