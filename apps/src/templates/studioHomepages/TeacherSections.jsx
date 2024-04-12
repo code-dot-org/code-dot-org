@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -74,11 +74,10 @@ class TeacherSections extends Component {
           </ContentContainer>
         )}
         {this.shouldRenderPlSections() && (
-          <>
-            <Heading2 visualAppearance="heading-md">
-              {i18n.plSectionsTitle()}
-            </Heading2>
-            <BodyTwoText>{i18n.plSectionsMoved()}</BodyTwoText>
+          <ContentContainer heading={i18n.plSectionsTitle()}>
+            <BodyTwoText>
+              {i18n.myProfessionalLearningSectionsHomepageDesc()}
+            </BodyTwoText>
             <LinkButton
               color={'purple'}
               href={studio('/my-professional-learning')}
@@ -87,9 +86,9 @@ class TeacherSections extends Component {
                 iconStyle: 'solid',
               }}
               size="s"
-              text={i18n.myProfessionalLearningCoursesHomepageButton()}
+              text={i18n.myProfessionalLearningSectionsHomepageButton()}
             />
-          </>
+          </ContentContainer>
         )}
         <RosterDialog />
         <AddSectionDialog />
