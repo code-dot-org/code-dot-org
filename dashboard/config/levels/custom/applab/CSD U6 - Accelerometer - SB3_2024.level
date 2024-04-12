@@ -62,7 +62,7 @@
     "encrypted_examples": "S309A04NgTlmSMKvdI3+NQwONtRSK7iHV5oQkfHv4KbcLh6Q1qEoFfEVqmr1\nX0vA7dbts0zOfU4K6BYfB8dRoA==\n",
     "parent_level_id": 20560,
     "name_suffix": "_2024",
-    "map_reference": "/courses/csd-2022/guides/the-accelerometer",
+    "map_reference": "/courses/csd-2024/guides/the-accelerometer",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -70,9 +70,9 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/data-and-change-events",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2024/guides/data-and-change-events",
+      "/courses/csd-2024/guides/if-statements",
+      "/courses/csd-2024/guides/variables",
       "/maker/setup"
     ],
     "preload_asset_list": null
