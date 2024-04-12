@@ -12,7 +12,6 @@ export type ChatCompletionMessage = {
 };
 
 export type ChatContext = {
-  userMessage: string;
   userId: number;
   currentLevelId: string | null;
   scriptId: number | null;
@@ -62,6 +61,12 @@ export interface AiCustomizations {
   systemPrompt: string;
   retrievalContexts: string[];
   modelCardInfo: ModelCardInfo;
+}
+
+export interface AiCustomizationsForBackend {
+  temperature: number;
+  systemPrompt: string;
+  retrievalContexts: string[];
 }
 
 /** Chat bot Model Card information */

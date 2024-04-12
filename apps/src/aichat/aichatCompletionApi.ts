@@ -3,6 +3,7 @@ import {
   ChatCompletionMessage,
   AiCustomizations,
   ChatContext,
+  AiCustomizationsForBackend,
 } from './types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -12,15 +13,16 @@ const CHAT_COMPLETION_URL = '/aichat/chat_completion';
 /**
  * This function sends a POST request to the aichat completion backend controller.
  */
-
 export async function postAichatCompletionMessage(
-  messagesToSend: AichatCompletionMessage[],
-  temperature: number,
+  newMessage: string,
+  storedMessages: AichatCompletionMessage[],
+  aiCustomizations: AiCustomizationsForBackend,
   chatContext: ChatContext
 ): Promise<AichatCompletionMessage | null> {
   const payload = {
-    inputs: messagesToSend,
-    temperature,
+    newMessage,
+    storedMessages,
+    aiCustomizations,
     chatContext,
   };
   const response = await HttpClient.post(
@@ -46,22 +48,23 @@ export async function postAichatCompletionMessage(
  * TODO: Awaiting details on how to format input for endpoint.
  */
 export async function getAichatCompletionMessage(
-  aiCustomizations: AiCustomizations,
+  newUserMessageText: string,
   storedMessages: ChatCompletionMessage[],
+  aiCustomizations: AiCustomizations,
   chatContext: ChatContext
 ) {
-  const {systemPrompt, temperature, retrievalContexts} = aiCustomizations;
-  const messagesToSend = [
-    {role: Role.SYSTEM, content: systemPrompt},
-    ...formatRetrievalContextsForAichatCompletion(retrievalContexts),
-    ...formatMessagesForAichatCompletion(storedMessages),
-    {role: Role.USER, content: chatContext['userMessage']},
-  ];
+  const aiCustomizationsForBackend = {
+    temperature: aiCustomizations.temperature,
+    retrievalContexts: aiCustomizations.retrievalContexts,
+    systemPrompt: aiCustomizations.systemPrompt,
+  };
+  const messagesToSend = formatMessagesForAichatCompletion(storedMessages);
   let response;
   try {
     response = await postAichatCompletionMessage(
+      newUserMessageText,
       messagesToSend,
-      temperature,
+      aiCustomizationsForBackend,
       chatContext
     );
   } catch (error) {

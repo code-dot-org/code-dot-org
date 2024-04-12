@@ -2,6 +2,8 @@ import moment from 'moment';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
+import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 import {
@@ -142,10 +144,21 @@ export const updateAiCustomization = createAsyncThunk(
 // the user messages.
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
-  async (chatContext: ChatContext, thunkAPI) => {
-    const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
+  async (newUserMessageText: string, thunkAPI) => {
+    const state = thunkAPI.getState() as {
+      lab: LabState;
+      aichat: AichatState;
+      progress: ProgressState;
+      currentUser: CurrentUserState;
+    };
     const aiCustomizations = state.aichat.savedAiCustomizations;
     const storedMessages = state.aichat.chatMessages;
+    const chatContext: ChatContext = {
+      userId: state.currentUser.userId,
+      currentLevelId: state.progress.currentLevelId,
+      scriptId: state.progress.scriptId,
+      channelId: state.lab.channel?.id,
+    };
     const newMessageId =
       storedMessages.length === 0
         ? 1
@@ -156,15 +169,16 @@ export const submitChatContents = createAsyncThunk(
       id: newMessageId,
       role: Role.USER,
       status: Status.OK,
-      chatMessageText: chatContext.userMessage,
+      chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const chatApiResponse = await getAichatCompletionMessage(
-      aiCustomizations,
+      newUserMessageText,
       storedMessages,
+      aiCustomizations,
       chatContext
     );
     console.log('chatApiResponse', chatApiResponse);
