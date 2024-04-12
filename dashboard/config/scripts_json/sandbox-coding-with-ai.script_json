@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "sandbox-coding-with-ai",
-    "serialized_at": "2024-04-11 16:02:53 UTC",
+    "serialized_at": "2024-04-12 14:43:59 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -957,6 +957,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-chk_lessons"
+        ],
         "progression": "Beyond the Finished Code"
       },
       "bonus": false,
@@ -1029,6 +1032,28 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Teaching Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-Code_w_AI-additionalbestpractice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-coding-with-ai",
+        "activity_section.key": "88932a2c-88b7-41de-9c02-0f0b096a9e34"
+      },
+      "level_keys": [
+        "sp-pl-Code_w_AI-additionalbestpractice"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "sp-pl-Coding_w_AI-teachingTipsCode"
         ],
@@ -1049,9 +1074,9 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1074,8 +1099,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 5,
+      "chapter": 35,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1465,6 +1490,18 @@
         "level.key": "sp-pl-Code_w_AI-bestpractice",
         "script_level.level_keys": [
           "sp-pl-Code_w_AI-bestpractice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-coding-with-ai",
+        "activity_section.key": "88932a2c-88b7-41de-9c02-0f0b096a9e34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-Code_w_AI-additionalbestpractice",
+        "script_level.level_keys": [
+          "sp-pl-Code_w_AI-additionalbestpractice"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
