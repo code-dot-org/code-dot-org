@@ -10,7 +10,7 @@ import {
   AI_CUSTOMIZATIONS_LABELS,
 } from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
-import {getChatCompletionMessage} from '../chatApi';
+import {getChatCompletionMessage} from '../../aiTutor/chatApi';
 import {
   ChatCompletionMessage,
   AichatLevelProperties,
@@ -93,17 +93,37 @@ export const updateAiCustomization = createAsyncThunk(
     const {currentAiCustomizations, previouslySavedAiCustomizations} =
       state.aichat;
 
+    // Remove any empty example topics on save
+    const trimmedExampleTopics =
+      currentAiCustomizations.modelCardInfo.exampleTopics.filter(
+        topic => topic.length
+      );
+    thunkAPI.dispatch(
+      setModelCardProperty({
+        property: 'exampleTopics',
+        value: trimmedExampleTopics,
+      })
+    );
+
+    const trimmedCurrentAiCustomizations = {
+      ...currentAiCustomizations,
+      modelCardInfo: {
+        ...currentAiCustomizations.modelCardInfo,
+        exampleTopics: trimmedExampleTopics,
+      },
+    };
+
     await Lab2Registry.getInstance()
       .getProjectManager()
-      ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
+      ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
 
     thunkAPI.dispatch(
-      setPreviouslySavedAiCustomizations(currentAiCustomizations)
+      setPreviouslySavedAiCustomizations(trimmedCurrentAiCustomizations)
     );
 
     const changedProperties = findChangedProperties(
       previouslySavedAiCustomizations,
-      currentAiCustomizations
+      trimmedCurrentAiCustomizations
     );
     changedProperties.forEach(property => {
       thunkAPI.dispatch(

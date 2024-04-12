@@ -36,7 +36,6 @@ const EVENTS = {
   COUNTRY_SELECTED: 'User Selects Country',
   ZIP_CODE_ENTERED: 'Valid Zip Code Entered',
   SCHOOL_SEARCH_INPUT_ENTERED: 'School Search Input Entered',
-  SCHOOL_LIST_OPENED: 'School List Opened',
   SCHOOL_SELECTED_FROM_LIST: 'School Selected from Dropdown',
   ADD_MANUALLY_CLICKED: 'User Elects to Add School Name Manually',
   DO_NOT_TEACH_AT_SCHOOL_CLICKED:
@@ -155,6 +154,8 @@ const EVENTS = {
   TA_RUBRIC_STUDENT_AI_SUBMITTED: 'TA Rubric Student AI Level Submitted',
   TA_RUBRIC_AI_EVAL_FROM_SECTION:
     'TA Rubric AI Eval started from section request',
+  TA_RUBRIC_WINDOW_MOVE_START: 'TA Rubric window move start',
+  TA_RUBRIC_WINDOW_MOVE_END: 'TA Rubric window move end',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',

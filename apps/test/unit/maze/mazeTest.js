@@ -1,10 +1,10 @@
+import {MazeController} from '@code-dot-org/maze';
 import sinon from 'sinon';
-
-import {expect} from '../../util/reconfiguredChai';
 
 import Maze from '@cdo/apps/maze/maze';
 import ResultsHandler from '@cdo/apps/maze/results/resultsHandler';
-import {MazeController} from '@code-dot-org/maze';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Maze', function () {
   let maze;

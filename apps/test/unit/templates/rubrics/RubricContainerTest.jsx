@@ -710,32 +710,29 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
   });
 
-  // it('displays product tour when getTourStatus is false', async function () {
-  //   const clock = sinon.useFakeTimers();
-  //   stubFetchEvalStatusForUser(readyJson);
-  //   stubFetchEvalStatusForAll(readyJsonAll);
-  //   stubFetchAiEvaluations(mockAiEvaluations);
-  //   stubFetchTeacherEvaluations(noEvals);
-  //   stubFetchTourStatus({seen: null});
+  it('displays product tour when getTourStatus is false', async function () {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
 
-  //   const {queryByText} = render(
-  //     <Provider store={store}>
-  //       <RubricContainer
-  //         rubric={defaultRubric}
-  //         studentLevelInfo={defaultStudentInfo}
-  //         teacherHasEnabledAi={true}
-  //         currentLevelName={'test_level'}
-  //         reportingData={{}}
-  //         open
-  //       />
-  //     </Provider>
-  //   );
+    const {queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
 
-  //   await wait();
-  //   clock.tick(5000);
-  //   expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
-  //   clock.restore();
-  // });
+    await wait();
+    expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
+  });
 
   it('does not display product tour when getTourStatus returns true', async function () {
     stubFetchEvalStatusForUser(readyJson);
@@ -761,5 +758,48 @@ describe('RubricContainer', () => {
 
     expect(queryByText('Getting Started with AI Teaching Assistant')).to.not
       .exist;
+  });
+
+  it('sends event when window is dragged', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: true});
+
+    const {getByTestId} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    const element = getByTestId('draggable-test-id');
+
+    // simulate dragging
+    fireEvent.mouseDown(element, {clientX: 0, clientY: 0});
+    fireEvent.mouseMove(element, {clientX: 100, clientY: 100});
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_WINDOW_MOVE_START,
+      {window_x_start: 0, window_y_start: 0}
+    );
+
+    fireEvent.mouseUp(element);
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_WINDOW_MOVE_END,
+      {window_x_end: 0, window_y_end: 0}
+    );
+    sendEventSpy.restore();
   });
 });
