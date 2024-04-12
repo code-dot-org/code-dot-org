@@ -13,6 +13,7 @@ import i18n from '@cdo/locale';
 
 import SectionProgress from '../sectionProgress/SectionProgress';
 
+import ProgressFeedbackBanner from './ProgressFeedbackBanner';
 import SectionProgressV2 from './SectionProgressV2';
 
 import styles from './progress-header.module.scss';
@@ -78,7 +79,8 @@ function SectionProgressSelector({
     </div>
   );
   return (
-    <div>
+    <div className={styles.pageContent}>
+      <ProgressFeedbackBanner />
       {toggleV1OrV2Link()}
       {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
     </div>
