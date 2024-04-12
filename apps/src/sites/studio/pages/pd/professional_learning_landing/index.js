@@ -27,7 +27,6 @@ $(() => {
           landingPageData['current_year_application_id']
         }
         workshopsAsParticipant={landingPageData['workshops_as_participant']}
-        plCoursesInstructed={landingPageData['pl_courses_instructed']}
         plCoursesStarted={landingPageData['pl_courses_started']}
         userPermissions={landingPageData['user_permissions']}
       />
