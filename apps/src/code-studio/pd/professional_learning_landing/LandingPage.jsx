@@ -21,6 +21,7 @@ import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {
   asyncLoadSectionData,
+  asyncLoadCoteacherInvite,
   hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
@@ -84,6 +85,7 @@ function LandingPage({
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(asyncLoadSectionData());
+    dispatch(asyncLoadCoteacherInvite());
   }, [dispatch]);
 
   const RenderGettingStartedBanner = () => (
