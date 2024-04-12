@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class NewFeatureFeedbackController < ApplicationController
   before_action :authenticate_user!
 
