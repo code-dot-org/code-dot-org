@@ -4,6 +4,7 @@
 
 require 'cdo/rack/process_html'
 require 'dynamic_config/dcdo'
+require 'set'
 
 module Rack
   class UpgradeInsecureRequests < ProcessHtml
@@ -61,9 +62,15 @@ module Rack
         # specified source list (as described in
         # http://w3c.github.io/webappsec-csp/#source-lists) to frame our
         # content.
-        allowed_iframe_ancestors = DCDO.get('allowed_iframe_ancestors', nil) || CDO.allowed_iframe_ancestors
+
+        # If the request path is an allow listed, the frame-ancestors policy is made permissive.
+        # Warning: Only very specific paths can be on the allow list. Contact security for more information.
+        iframe_path_allowlist = Set.new(["/lti/v1/authenticate"])
+        cdo_allowed_iframe_ancestors = DCDO.get('allowed_iframe_ancestors', nil) || CDO.allowed_iframe_ancestors
+        allowed_iframe_ancestors = iframe_path_allowlist.include?(env['REQUEST_PATH']) ? '*' : cdo_allowed_iframe_ancestors
+
         if allowed_iframe_ancestors
-          policies << "frame-ancestors 'self' #{allowed_iframe_ancestors}"
+          (policies << "frame-ancestors 'self' #{allowed_iframe_ancestors}")
 
           # Clear the older X-Frame-Options header because it doesn't support
           # multiple domains. We need to clear this because on Chrome,
