@@ -26,7 +26,6 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
     assert_response :created
     response = JSON.parse(@response.body)
     assert_equal @user.id, response['user_id']
-    assert_equal 'en-US', response['locale']
     assert_equal expected_satisfied, response['satisfied']
     assert_equal expected_form_key, response['form_key']
   end
@@ -42,11 +41,10 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
 
   test 'create - returns validation errors when form_key param is invalid' do
     assert_no_difference('NewFeatureFeedback.count') do
-      post :create, params: {feedback: {satisfied: true, form_key: 'invalid_form_key'}}, format: :json
+      assert_raises ArgumentError do
+        post :create, params: {feedback: {satisfied: true, form_key: 'invalid_form_key'}}, format: :json
+      end
     end
-
-    assert_response :unprocessable_entity
-    assert_equal '["Form key is not included in the list"]', response.body
   end
 
   test 'show - returns the Feedback for the current user' do

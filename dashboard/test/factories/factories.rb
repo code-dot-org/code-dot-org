@@ -1827,7 +1827,6 @@ FactoryBot.define do
     association :user, factory: :teacher
 
     form_key {'progress_v2'}
-    locale {I18n.locale.to_s}
     satisfied {true}
   end
 
