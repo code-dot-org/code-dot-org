@@ -2,16 +2,10 @@
 
 import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
 import {BLOCK_TYPES} from './constants';
-import {Abstract} from 'blockly/core/events/events_abstract';
 import {Block, WorkspaceSvg} from 'blockly';
 import {ExtendedBlockSvg, ExtendedWorkspaceSvg} from './types';
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
-import type {
-  BlockChange,
-  BlockMove,
-  BlockCreate,
-  ThemeChange,
-} from 'blockly/core/events/events';
+import * as GoogleBlockly from 'blockly/core';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.
@@ -33,7 +27,7 @@ import type {
 // We re-disable any orphan call blocks when the definition block is dragged.
 // This bug is tracked by the Blockly team:
 // https://github.com/google/blockly-samples/issues/2035
-export function disableOrphans(event: Abstract) {
+export function disableOrphans(event: GoogleBlockly.Events.Abstract) {
   // This check is for when a block goes from disabled to enabled (value false is enabled).
   // We need to run the check on this event due to the Blockly bug described above.
   if (
@@ -43,12 +37,15 @@ export function disableOrphans(event: Abstract) {
   ) {
     return;
   }
-  const blockEvent = event as BlockChange | BlockMove | BlockCreate;
+  const blockEvent = event as
+    | GoogleBlockly.Events.BlockChange
+    | GoogleBlockly.Events.BlockMove
+    | GoogleBlockly.Events.BlockCreate;
   const isEnabledEvent =
     blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
-    (blockEvent as BlockChange).element === 'disabled' &&
-    !(blockEvent as BlockChange).newValue &&
-    (blockEvent as BlockChange).oldValue;
+    (blockEvent as GoogleBlockly.Events.BlockChange).element === 'disabled' &&
+    !(blockEvent as GoogleBlockly.Events.BlockChange).newValue &&
+    (blockEvent as GoogleBlockly.Events.BlockChange).oldValue;
 
   if (!blockEvent.blockId || !blockEvent.workspaceId) {
     return;
@@ -106,7 +103,9 @@ function updateBlockEnabled(block: Block) {
 
 // When the viewport of the workspace is changed (due to scrolling for example),
 // we need to reposition any callouts.
-export function adjustCalloutsOnViewportChange(event: Abstract) {
+export function adjustCalloutsOnViewportChange(
+  event: GoogleBlockly.Events.Abstract
+) {
   if (event.type === Blockly.Events.VIEWPORT_CHANGE) {
     handleWorkspaceResizeOrScroll();
   }
@@ -124,7 +123,7 @@ export function reflowToolbox() {
 }
 
 // When blocks on the main workspace are changed, update the block limits indicators.
-export function updateBlockLimits(event: Abstract) {
+export function updateBlockLimits(event: GoogleBlockly.Events.Abstract) {
   if (
     ![
       Blockly.Events.BLOCK_CHANGE,
@@ -136,18 +135,14 @@ export function updateBlockLimits(event: Abstract) {
   ) {
     return;
   }
-  const blockEvent = event as
-    | BlockChange
-    | BlockMove
-    | BlockCreate
-    | ThemeChange;
+
   const blockLimitMap = Blockly.blockLimitMap;
 
-  if (!blockEvent.workspaceId || !blockLimitMap || !(blockLimitMap?.size > 0)) {
+  if (!event.workspaceId || !blockLimitMap || !(blockLimitMap?.size > 0)) {
     return;
   }
   const eventWorkspace = Blockly.Workspace.getById(
-    blockEvent.workspaceId
+    event.workspaceId
   ) as ExtendedWorkspaceSvg | null;
   if (!eventWorkspace) {
     return;
