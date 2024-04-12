@@ -34,46 +34,28 @@ export function writeSources(
   currentPath: string,
   pyodide: PyodideInterface
 ) {
-  //clearSources(pyodide);
-  // Need to make sure we don't recreate things every time
-  // (although that seems to be quick so maybe is fine)
-  // and delete old files/folders.
-  // write all files in this folder
-  try {
-    Object.values(sources.files)
-      .filter(f => f.folderId === currentFolderId)
-      .forEach(file => {
-        console.log('about to write file');
-        console.log({
-          path: `${currentPath}${file.name}`,
-          contents: file.contents,
-        });
-        pyodide.FS.writeFile(`${currentPath}${file.name}`, file.contents);
-      });
-    Object.values(sources.folders)
-      .filter(f => f.parentId === currentFolderId)
-      .forEach(folder => {
-        // create folder
-        const newPath =
-          currentPath.length === 0
-            ? `${folder.name}`
-            : `${currentPath}${folder.name}`;
-
-        console.log({newPath});
-        try {
-          pyodide.FS.readdir(newPath);
-        } catch (e) {
-          // folder doesn't exist, create it
-          console.log('creating folder...');
-          pyodide.FS.mkdir(newPath);
-        }
-        console.log(`recursing for ${newPath}`);
-        // recurse to get all child folders
-        writeSources(sources, folder.id, newPath + '/', pyodide);
-      });
-  } catch (e) {
-    console.log({e});
-  }
+  Object.values(sources.files)
+    .filter(f => f.folderId === currentFolderId)
+    .forEach(file => {
+      pyodide.FS.writeFile(`${currentPath}${file.name}`, file.contents);
+    });
+  Object.values(sources.folders)
+    .filter(f => f.parentId === currentFolderId)
+    .forEach(folder => {
+      // create folder
+      const newPath =
+        currentPath.length === 0
+          ? `${folder.name}`
+          : `${currentPath}${folder.name}`;
+      try {
+        pyodide.FS.readdir(newPath);
+      } catch (e) {
+        // folder doesn't exist, create it
+        pyodide.FS.mkdir(newPath);
+      }
+      // recurse to get all child folders
+      writeSources(sources, folder.id, newPath + '/', pyodide);
+    });
 }
 
 export function clearSources(
@@ -83,11 +65,10 @@ export function clearSources(
   Object.values(sources.files).forEach(file => {
     const filePath = getFilePath(file.id, sources);
     try {
-      console.log(`unlinking ${filePath}`);
       pyodide.FS.unlink(filePath);
     } catch (e) {
-      console.log('unlinking failed');
-      console.log({e});
+      // TODO: log error better
+      console.warn(`error unlinking Pyodide file`);
     }
   });
 }

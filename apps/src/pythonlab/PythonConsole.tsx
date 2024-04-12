@@ -24,7 +24,6 @@ const PythonConsole: React.FunctionComponent = () => {
     if (parsedData.permissions.includes('levelbuilder')) {
       dispatch(appendSystemMessage('Running program...'));
       if (source) {
-        console.log({source});
         const code = getFileByName(source.files, 'main.py')?.contents;
         if (code) {
           runPythonCode(code, source);

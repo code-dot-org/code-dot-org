@@ -13,9 +13,6 @@ async function loadPyodideAndPackages() {
       self.postMessage({type: 'sysout', message: msg, id: 'none'});
     },
   });
-  console.log('getting file info post load...');
-  const pathData = self.pyodide.FS.analyzePath('/', true);
-  console.log({pathData});
 }
 
 let pyodideReadyPromise = null;
@@ -43,9 +40,5 @@ self.onmessage = async event => {
     console.log({error});
     self.postMessage({type: 'error', error: error.message, id});
   }
-  console.log('clearing sources...');
   clearSources(self.pyodide, sources);
-  console.log('getting file info...');
-  const pathData = self.pyodide.FS.analyzePath('/', true);
-  console.log({pathData});
 };
