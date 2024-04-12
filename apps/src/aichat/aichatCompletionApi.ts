@@ -42,7 +42,7 @@ export async function postAichatCompletionMessage(
 }
 
 /**
- * This function formats chat completion messages including the system prompt, passes them
+ * This function formats chat completion messages and aiCustomizations, passes data
  * to `postAichatCompletion`, then returns the status of the response and assistant message
  * if successful.
  * TODO: Awaiting details on how to format input for endpoint.
@@ -74,14 +74,6 @@ export async function getAichatCompletionMessage(
   }
   return response;
 }
-
-const formatRetrievalContextsForAichatCompletion = (
-  retrievalContexts: string[]
-): AichatCompletionMessage[] => {
-  return retrievalContexts.map(context => {
-    return {role: Role.USER, content: context};
-  });
-};
 
 const formatMessagesForAichatCompletion = (
   chatMessages: ChatCompletionMessage[]
