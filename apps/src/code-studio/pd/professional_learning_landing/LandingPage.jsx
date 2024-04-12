@@ -9,6 +9,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {EnrolledWorkshops} from './EnrolledWorkshops';
+import SelfPacedProgressTable from './SelfPacedProgressTable';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
@@ -16,6 +17,7 @@ import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
 import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import style from './landingPage.module.scss';
+import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {
   asyncLoadSectionData,
@@ -94,6 +96,7 @@ function LandingPage({
           text: i18n.plLandingGettingStartedButton(),
         },
       ]}
+      marginBottom={'0'}
     />
   );
 
@@ -113,6 +116,10 @@ function LandingPage({
       ]}
     />
   );
+
+  const RenderSelfPacedProgressTable = () => {
+    return <SelfPacedProgressTable plCoursesStarted={plCoursesStarted} />;
+  };
 
   const RenderStaticRecommendedPL = () => {
     const actionBlocks = [
@@ -168,13 +175,19 @@ function LandingPage({
             {showGettingStartedBanner && RenderGettingStartedBanner()}
             {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
             <EnrolledWorkshops />
+            {plCoursesStarted?.length >= 1 && (
+              <section id={'self-paced-pl'}>
+                <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
+                {RenderSelfPacedProgressTable()}
+              </section>
+            )}
             {deeperLearningCourseData?.length >= 1 && (
-              <div>
+              <section>
                 <Heading2>Online Professional Learning Courses</Heading2>
                 <ProfessionalLearningCourseProgress
                   deeperLearningCourseData={deeperLearningCourseData}
                 />
-              </div>
+              </section>
             )}
             <section>
               <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
