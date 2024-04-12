@@ -652,6 +652,33 @@ module SharedConstants
     }
   ).freeze
 
+  VOICES = {
+    en_us: {
+      VOICE: 'sharon22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    es_es: {
+      VOICE: 'ines22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    es_mx: {
+      VOICE: 'rosa22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    it_it: {
+      VOICE: 'vittorio22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    pt_br: {
+      VOICE: 'marcia22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+  }.freeze
   CENSUS_CONSTANTS = OpenStruct.new(
     {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
   )
