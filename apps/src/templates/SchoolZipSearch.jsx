@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
+import classNames from 'classnames';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import Button from '@cdo/apps/templates/Button';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-const SELECT_A_SCHOOL = 'selectASchool';
-const CLICK_TO_ADD = 'clickToAdd';
-const NO_SCHOOL_SETTING = 'noSchoolSetting';
+export const SELECT_A_SCHOOL = 'selectASchool';
+export const CLICK_TO_ADD = 'clickToAdd';
+export const NO_SCHOOL_SETTING = 'noSchoolSetting';
 const SEARCH_DEFAULTS = [
   {value: CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
@@ -45,22 +46,15 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
 
   const onSchoolChange = e => {
     const schoolId = e.target.value;
-    let ncesId;
     if (schoolId === NO_SCHOOL_SETTING) {
-      ncesId = '';
       sendAnalyticsEvent(EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED, {});
-    } else if (schoolId === SELECT_A_SCHOOL) {
-      ncesId = '';
     } else if (schoolId === CLICK_TO_ADD) {
-      ncesId = '';
       setInputManually(true);
       sendAnalyticsEvent(EVENTS.ADD_MANUALLY_CLICKED, {});
     } else {
-      // In the case the value given is a real school ID, use that
-      ncesId = schoolId;
-      sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {ncesId: ncesId});
+      sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {ncesId: schoolId});
     }
-    setSelectedSchoolNcesId(ncesId);
+    setSelectedSchoolNcesId(schoolId);
   };
 
   const constructSchoolOption = school => ({
@@ -77,12 +71,16 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
     return sortedSchools;
   };
 
+  const labelClassName = disabled
+    ? classNames(style.padding, style.disabledLabel)
+    : style.padding;
+
   return (
     <div>
       {!inputManually && (
         <div>
           <BodyTwoText
-            className={style.padding}
+            className={labelClassName}
             visualAppearance={'heading-xs'}
           >
             {i18n.selectYourSchool()}
@@ -107,6 +105,16 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
             selectedValue={selectedSchoolNcesId}
             onChange={onSchoolChange}
             size="m"
+          />
+          <Button
+            text={i18n.noSchoolSetting()}
+            disabled={disabled}
+            styleAsText={true}
+            onClick={e => {
+              e.preventDefault();
+              setSelectedSchoolNcesId(NO_SCHOOL_SETTING);
+              sendAnalyticsEvent(EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED, {});
+            }}
           />
         </div>
       )}

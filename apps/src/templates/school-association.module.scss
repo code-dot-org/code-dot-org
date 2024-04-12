@@ -26,7 +26,7 @@
     box-sizing: border-box;
     height: 46px !important;
     font-size: 1rem;
-    margin-block: 0.37rem !important;
+    margin-top: 0.37rem !important;
     border-radius: 0.25rem;
     border: 1px solid;
     background-color: inherit;
@@ -37,7 +37,11 @@
     padding-top: 0.75rem;
     margin-bottom: 0;
   }
-}
+
+  .disabledLabel {
+      color: $light_gray_300 !important;
+    }
+  }
 
 .dropdown {
   & > div {
