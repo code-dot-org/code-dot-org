@@ -32,7 +32,11 @@ const getAvailableTabs = permissions => {
     },
   ];
 
-  if (permissions.includes('facilitator')) {
+  if (
+    permissions.includes('facilitator') ||
+    permissions.includes('universal_instructor') ||
+    permissions.includes('plc_reviewer')
+  ) {
     tabs.push({
       value: 'myFacilitatorCenter',
       text: i18n.plLandingTabFacilitatorCenter(),
