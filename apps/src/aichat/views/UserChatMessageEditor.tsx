@@ -2,21 +2,22 @@ import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
 import aichatI18n from '../locale';
-import {AichatState, submitChatContents} from '../redux/aichatRedux';
+import {submitChatContents} from '../redux/aichatRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {ChatContext} from '../types';
-import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
+
 /**
  * Renders the AI Chat Lab user chat message editor component.
  */
 const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
-  const isWaitingForChatResponse = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
+  const isWaitingForChatResponse = useAppSelector(
+    state => state.aichat.isWaitingForChatResponse
   );
 
   const userId: number = useSelector(
@@ -27,7 +28,9 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     (state: {progress: ProgressState}) => state.progress
   );
 
-  const channelId = getStandaloneProjectId();
+  const channelId = useSelector(
+    (state: {lab: LabState}) => state.lab.channel?.id
+  );
 
   const dispatch = useAppDispatch();
 

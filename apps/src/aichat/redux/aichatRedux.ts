@@ -146,7 +146,6 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
     const aiCustomizations = state.aichat.savedAiCustomizations;
     const storedMessages = state.aichat.chatMessages;
-    const newMessageText = chatContext['userMessage'];
     const newMessageId =
       storedMessages.length === 0
         ? 1
@@ -157,7 +156,7 @@ export const submitChatContents = createAsyncThunk(
       id: newMessageId,
       role: Role.USER,
       status: Status.OK,
-      chatMessageText: newMessageText,
+      chatMessageText: chatContext.userMessage,
       timestamp: getCurrentTimestamp(),
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
@@ -175,6 +174,9 @@ export const submitChatContents = createAsyncThunk(
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
+        // The accuracy of this timestamp is debatable since it's not when our backend
+        // issued the message, but it's good enough for user testing.
+        timestamp: getCurrentTimestamp(),
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     } else {

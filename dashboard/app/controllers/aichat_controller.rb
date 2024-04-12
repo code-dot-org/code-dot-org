@@ -1,9 +1,8 @@
 class AichatController < ApplicationController
-
   # params
   # inputs: Array of {role: <'user', 'system', or 'assistant'>; content: string}
   # temperature: number
-  # chatContext: 
+  # chatContext:
   # {userMessage: string; userId: number; currentLevelId: string | null; scriptId: number | null; channelId: string | undefined;}
   # POST /aichat/chat_completion
   def chat_completion
