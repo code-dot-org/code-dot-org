@@ -781,7 +781,7 @@ class UserTest < ActiveSupport::TestCase
     assert lti_teacher.verified_teacher?
   end
 
-  test 'LTI student should be verified after creation' do
+  test 'LTI student should not be verified after creation' do
     lti_integration = create(:lti_integration)
     auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
 
