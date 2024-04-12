@@ -1,0 +1,76 @@
+require 'test_helper'
+
+class NewFeatureFeedbackControllerTest < ActionController::TestCase
+  self.use_transactional_test_case = true
+
+  setup_all do
+    @user = create(:teacher)
+  end
+
+  setup do
+    sign_in @user
+  end
+
+  teardown do
+    NewFeatureFeedback.where(user: @user).destroy_all
+  end
+
+  test 'create - creates user New Feature Feedback' do
+    expected_satisfied = true
+    expected_form_key = 'new_feature_banner'
+
+    assert_difference('NewFeatureFeedback.count') do
+      post :create, params: {feedback: {satisfied: expected_satisfied, form_key: expected_form_key}}, format: :json
+    end
+
+    assert_response :created
+    response = JSON.parse(@response.body)
+    assert_equal @user.id, response['user_id']
+    assert_equal 'en-US', response['locale']
+    assert_equal expected_satisfied, response['satisfied']
+    assert_equal expected_form_key, response['form_key']
+  end
+
+  test 'create - returns validation errors when satisfied param is invalid' do
+    assert_no_difference('NewFeatureFeedback.count') do
+      post :create, params: {feedback: {satisfied: nil, form_key: 'new_feature_banner'}}, format: :json
+    end
+
+    assert_response :unprocessable_entity
+    assert_equal '["Satisfied is not included in the list"]', response.body
+  end
+
+  test 'create - returns validation errors when form_key param is invalid' do
+    assert_no_difference('NewFeatureFeedback.count') do
+      post :create, params: {feedback: {satisfied: true, form_key: nil}}, format: :json
+    end
+
+    assert_response :unprocessable_entity
+    assert_equal '["Form key is required"]', response.body
+  end
+
+  test 'show - returns the Feedback for the current user with the same form_key' do
+    feedback = create(:new_feature_feedback, user: @user)
+
+    get :show, params: {form_key: 'new_feature_banner'}, format: :json
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal feedback.id, response['id']
+    assert_equal @user.id, response['user_id']
+  end
+
+  test 'show - returns nothing when no Feedback exists for the current user' do
+    get :show, params: {form_key: 'new_feature_banner'}, format: :json
+
+    assert_response :ok
+  end
+
+  test 'show - returns nothing when no Feedback with the same key exists for the current user' do
+    create(:new_feature_feedback, user: @user, form_key: 'different_feature')
+
+    get :show, params: {form_key: 'new_feature_banner'}, format: :json
+
+    assert_response :ok
+  end
+end

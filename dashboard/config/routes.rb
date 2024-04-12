@@ -1039,6 +1039,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resource :new_feature_feedback, controller: :new_feature_feedback, only: %i[create show]
+
     # These really belong in the foorm namespace,
     # but we leave them outside so that we can easily use the simple "/form" paths.
     get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
