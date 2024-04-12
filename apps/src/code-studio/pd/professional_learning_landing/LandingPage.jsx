@@ -13,9 +13,10 @@ import SelfPacedProgressTable from './SelfPacedProgressTable';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
-import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
 import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
+import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import style from './landingPage.module.scss';
 import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
@@ -202,14 +203,21 @@ function LandingPage({
           </>
         )}
         {currentTab === 'myFacilitatorCenter' && (
-          <ContentContainer heading={i18n.plSectionsInstructorTitle()}>
+          <section>
+            <Heading2>{i18n.plSectionsInstructorTitle()}</Heading2>
+            <SetUpSections
+              headingText={i18n.newSectionCreate()}
+              descriptionText={i18n.newSectionMyPlAdd()}
+              solidBorder={true}
+            />
             <CoteacherInviteNotification isForPl={true} />
             <OwnedSections
               isPlSections={true}
               sectionIds={plSectionIds}
               hiddenSectionIds={hiddenPlSectionIds}
             />
-          </ContentContainer>
+            <AddSectionDialog />
+          </section>
         )}
       </main>
     </>
