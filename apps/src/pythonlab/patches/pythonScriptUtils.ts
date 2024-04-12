@@ -80,12 +80,10 @@ export function clearSources(
   pyodide: PyodideInterface,
   sources: MultiFileSource
 ) {
-  console.log('clearing sources?');
-  console.log(pyodide.FS.cwd());
   Object.values(sources.files).forEach(file => {
     const filePath = getFilePath(file.id, sources);
-    console.log(`unlinking ${filePath}`);
     try {
+      console.log(`unlinking ${filePath}`);
       pyodide.FS.unlink(filePath);
     } catch (e) {
       console.log('unlinking failed');
@@ -98,7 +96,7 @@ const getFilePath = (fileId: string, source: MultiFileSource) => {
   let path = source.files[fileId].name;
   let folderId = source.files[fileId].folderId;
   while (source.folders[folderId]) {
-    path = folderId + '/' + path;
+    path = source.folders[folderId].name + '/' + path;
     folderId = source.folders[folderId].parentId;
   }
   return path;
