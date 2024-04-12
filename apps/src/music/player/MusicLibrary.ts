@@ -214,7 +214,7 @@ export default class MusicLibrary {
       return this.bpm;
     }
     const folder = this.getFolderForFolderId(this.currentPackId);
-    // Read BPM from the folder, or the first sound that has a BPM if not present.
+    // Read BPM from the folder, or the first sound that has a BPM if not present on the folder.
     return (
       folder?.bpm || folder?.sounds.find(sound => sound.bpm !== undefined)?.bpm
     );
@@ -226,7 +226,7 @@ export default class MusicLibrary {
       return this.key;
     }
     const folder = this.getFolderForFolderId(this.currentPackId);
-    // Read key from the folder, or the first sound that has a key if not present.
+    // Read key from the folder, or the first sound that has a key if not present on the folder.
     return (
       folder?.key || folder?.sounds.find(sound => sound.key !== undefined)?.key
     );
