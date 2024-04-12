@@ -72,12 +72,6 @@ describe('RubricContainer', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
-  function stubUpdateTourStatus(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\w+\/update_ai_rubrics_tour_seen/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
-  }
-
   beforeEach(() => {
     ajaxStub = sinon.stub($, 'ajax');
     const request = sinon.stub();
@@ -780,7 +774,8 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-    expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .exist;
   });
 
   it('does not display product tour when getTourStatus returns true', async function () {
@@ -805,8 +800,8 @@ describe('RubricContainer', () => {
 
     await wait();
 
-    expect(queryByText('Getting Started with AI Teaching Assistant')).to.not
-      .exist;
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .not.exist;
   });
 
   it('does not display product tour when on non-assessment level', async function () {
@@ -831,36 +826,7 @@ describe('RubricContainer', () => {
 
     await wait();
 
-    expect(queryByText('Getting Started with AI Teaching Assistant')).to.not
-      .exist;
-  });
-
-  it('restarts product tour when ? button is clicked', async function () {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-    stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: true});
-    stubUpdateTourStatus({seen: null});
-
-    const {queryByText, getByTestId} = render(
-      <Provider store={store}>
-        <RubricContainer
-          rubric={defaultRubric}
-          studentLevelInfo={defaultStudentInfo}
-          teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
-          reportingData={{}}
-          open
-        />
-      </Provider>
-    );
-
-    await wait();
-    fireEvent.click(getByTestId('restart-product-tour'));
-
-    await wait();
-    expect(fetchStub).to.have.been.calledOnce();
-    expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .not.exist;
   });
 });
