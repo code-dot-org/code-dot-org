@@ -1,5 +1,8 @@
 import {BlockSvg} from 'blockly';
 
+const BUBBLE_SIZE = 18;
+const HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
+
 /**
  * Represents a bubble on a Blockly block, displaying the count of blocks remaining
  * based on a limit initially stated in the toolbox XML.
@@ -7,26 +10,49 @@ import {BlockSvg} from 'blockly';
 export default class BlockSvgLimitIndicator {
   private readonly blockSvg: BlockSvg;
   private count: number;
-  private readonly bubbleSize: number = 18;
-  private readonly halfBubbleSize: number;
-  private limitGroup: SVGElement | undefined;
-  private limitRect: SVGElement | undefined;
-  private limitText: SVGElement | undefined;
+  private readonly limitGroup: SVGElement;
+  private readonly limitRect: SVGElement;
+  private readonly limitText: SVGElement;
 
   /**
    * Constructs an SVG group to track a block limit.
-   * @param {Element} element - The block associated with the limit.
-   * @param {string} [count] - The initial count to display.
+   * @param {BlockSvg} element - The block associated with the limit.
+   * @param {number} count - The initial count to display.
    */
   constructor(element: BlockSvg, count: number) {
     this.blockSvg = element;
     this.count = count;
-    this.halfBubbleSize = this.bubbleSize / 2;
 
-    this.limitGroup = undefined;
-    this.limitRect = undefined;
-    this.limitText = undefined;
-    this.initializeSvgElements();
+    // Initialize the SVG elements within the constructor
+    this.limitGroup = Blockly.utils.dom.createSvgElement(
+      'g',
+      {class: 'blocklyLimit'},
+      this.blockSvg.getSvgRoot()
+    );
+
+    this.limitRect = Blockly.utils.dom.createSvgElement(
+      'rect',
+      {
+        height: BUBBLE_SIZE,
+        width: BUBBLE_SIZE,
+        x: -HALF_BUBBLE_SIZE,
+        y: -HALF_BUBBLE_SIZE,
+        rx: HALF_BUBBLE_SIZE,
+        ry: HALF_BUBBLE_SIZE,
+      },
+      this.limitGroup
+    );
+
+    this.limitText = Blockly.utils.dom.createSvgElement(
+      'text',
+      {
+        class: 'blocklyText blocklyLimit',
+        'dominant-baseline': 'central',
+        'text-anchor': 'middle',
+      },
+      this.limitGroup
+    );
+    this.updateTextAndClass();
   }
 
   /**
@@ -45,9 +71,6 @@ export default class BlockSvgLimitIndicator {
    * the bubble and text color.
    */
   private updateTextAndClass() {
-    if (!this.limitText || !this.limitGroup) {
-      return;
-    }
     if (this.count >= 0) {
       this.limitText.textContent = `${this.count}`;
       Blockly.utils.dom.removeClass(this.limitGroup, 'overLimit');
@@ -61,71 +84,26 @@ export default class BlockSvgLimitIndicator {
   }
 
   /**
-   * Initializes the SVG elements that make up the limit bubble.
-   */
-  private initializeSvgElements() {
-    this.limitGroup = Blockly.utils.dom.createSvgElement(
-      'g',
-      {
-        class: 'blocklyLimit',
-      },
-      this.blockSvg.getSvgRoot()
-    );
-
-    this.limitRect = Blockly.utils.dom.createSvgElement(
-      'rect',
-      {
-        height: this.bubbleSize,
-        width: this.bubbleSize,
-        x: -this.halfBubbleSize,
-        y: -this.halfBubbleSize,
-        rx: this.halfBubbleSize,
-        ry: this.halfBubbleSize,
-      },
-      this.limitGroup
-    );
-
-    this.limitText = Blockly.utils.dom.createSvgElement(
-      'text',
-      {
-        class: 'blocklyText blocklyLimit',
-        'dominant-baseline': 'central',
-        'text-anchor': 'middle',
-      },
-      this.limitGroup
-    );
-    this.updateTextAndClass();
-  }
-
-  /**
    * Renders the limit bubble, adjusting its size and position based on the
    * current count text. Called automatically when the instance is created or
    * updated.
    */
   private render() {
-    if (!this.limitGroup || !this.limitRect || !this.limitText) {
-      // If we haven't initialized the children yet, do nothing.
-      return;
-    }
-
     const textBBox = (this.limitText as SVGGraphicsElement).getBBox();
-    const rectWidth = Math.max(
-      textBBox.width + this.halfBubbleSize,
-      this.bubbleSize
-    );
+    const rectWidth = Math.max(textBBox.width + HALF_BUBBLE_SIZE, BUBBLE_SIZE);
     const rectHeight = Math.max(
-      textBBox.height + this.halfBubbleSize / 2,
-      this.bubbleSize
+      textBBox.height + HALF_BUBBLE_SIZE / 2,
+      BUBBLE_SIZE
     );
 
     // Stretch the bubble to to fit longer numbers as text.
     this.limitRect.setAttribute('width', `${rectWidth}`);
     this.limitRect.setAttribute('height', `${rectHeight}`);
     // Center the text in the bubble.
-    this.limitText.setAttribute('x', `${rectWidth / 2 - this.halfBubbleSize}`);
+    this.limitText.setAttribute('x', `${rectWidth / 2 - HALF_BUBBLE_SIZE}`);
     this.limitText.setAttribute(
       'y',
-      `${Math.ceil(rectHeight / 2) - this.halfBubbleSize}`
+      `${Math.ceil(rectHeight / 2) - HALF_BUBBLE_SIZE}`
     );
   }
 }

@@ -346,10 +346,11 @@ export function blockLimitExceeded(): string | null {
 /**
  * Retrieves the block limit for a given block type from the block limit map.
  * @param {string} type The type of the block to check the limit for.
- * @returns {number} The limit for the specified block type, or 0 if not found.
+ * @returns {number | null} The limit for the specified block type, or null if not found.
  */
-export function getBlockLimit(type: string): number {
-  return Blockly.blockLimitMap?.get(type) ?? 0;
+export function getBlockLimit(type: string): number | null {
+  const limit = Blockly.blockLimitMap?.get(type);
+  return limit !== undefined ? limit : null;
 }
 
 /**
@@ -546,19 +547,15 @@ export function createBlockLimitMap() {
   const blockLimitMap = new Map<string, number>();
 
   // Select all block elements and convert NodeList to array
-  const blocks = Array.from(xmlDoc.querySelectorAll('block'));
+  const toolboxBlockElements = Array.from(xmlDoc.querySelectorAll('block'));
 
   // Iterate over each block element using forEach
-  blocks.forEach(block => {
-    // Check if the block has a limit attribute
-    const limitAttribute = block.getAttribute('limit');
-
-    // Directly parse the attribute. Template string is used to handle null values.
-    const limit = parseInt(`${limitAttribute}`);
+  toolboxBlockElements.forEach(blockElement => {
+    const limit = parseInt(blockElement.getAttribute('limit') ?? '');
 
     if (!isNaN(limit)) {
       // Extract type and add to blockLimitMap
-      const type = block.getAttribute('type');
+      const type = blockElement.getAttribute('type');
       if (type !== null) {
         blockLimitMap.set(type, limit);
       }
