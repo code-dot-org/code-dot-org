@@ -8,7 +8,7 @@ class CreateNewFeatureFeedbacks < ActiveRecord::Migration[6.1]
 
       t.index [:user_id, :form_key], unique: true
 
-      t.datetime :created_at, null: false
+      t.timestamps
     end
   end
 end

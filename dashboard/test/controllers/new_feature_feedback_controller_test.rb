@@ -30,6 +30,21 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
     assert_equal expected_form_key, response['form_key']
   end
 
+  test 'create - error when trying to create feedback twice' do
+    expected_satisfied = true
+    expected_form_key = 'progress_v2'
+
+    post :create, params: {feedback: {satisfied: expected_satisfied, form_key: expected_form_key}}, format: :json
+
+    assert_no_difference('NewFeatureFeedback.count') do
+      assert_raises ActiveRecord::RecordNotUnique do
+        post :create, params: {feedback: {satisfied: expected_satisfied, form_key: expected_form_key}}, format: :json
+
+        assert_response :bad_request
+      end
+    end
+  end
+
   test 'create - returns validation errors when satisfied param is invalid' do
     assert_no_difference('NewFeatureFeedback.count') do
       post :create, params: {feedback: {satisfied: nil, form_key: 'progress_v2'}}, format: :json
@@ -43,6 +58,8 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
     assert_no_difference('NewFeatureFeedback.count') do
       assert_raises ArgumentError do
         post :create, params: {feedback: {satisfied: true, form_key: 'invalid_form_key'}}, format: :json
+
+        assert_response :bad_request
       end
     end
   end

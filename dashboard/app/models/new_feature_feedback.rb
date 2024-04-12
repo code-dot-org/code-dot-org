@@ -7,6 +7,7 @@
 #  form_key   :integer          not null
 #  satisfied  :boolean          not null
 #  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 # Indexes
 #
@@ -14,8 +15,6 @@
 #  index_new_feature_feedbacks_on_user_id               (user_id)
 #  index_new_feature_feedbacks_on_user_id_and_form_key  (user_id,form_key) UNIQUE
 #
-# A simple thumbs up/down feedback form.
-# Intended for use by a front-end banner for new feature feedback.
 class NewFeatureFeedback < ApplicationRecord
   belongs_to :user
 

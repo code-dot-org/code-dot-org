@@ -945,7 +945,8 @@ ActiveRecord::Schema.define(version: 2024_04_12_134643) do
     t.integer "user_id", null: false
     t.integer "form_key", null: false
     t.boolean "satisfied", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["satisfied"], name: "index_new_feature_feedbacks_on_satisfied"
     t.index ["user_id", "form_key"], name: "index_new_feature_feedbacks_on_user_id_and_form_key", unique: true
     t.index ["user_id"], name: "index_new_feature_feedbacks_on_user_id"
