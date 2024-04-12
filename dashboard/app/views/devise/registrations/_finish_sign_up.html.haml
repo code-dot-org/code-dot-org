@@ -214,7 +214,7 @@
         = f.hidden_field :terms_of_service_version, value: User::TERMS_OF_SERVICE_VERSIONS.last
         = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
 
-    %button.submit{:id => 'signup_finish_submit'}= t('signup_form.go_to_account')
+    %button.submit= t('signup_form.go_to_account')
 
 :javascript
   // Selects 'Teacher' as the user type

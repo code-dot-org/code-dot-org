@@ -4,7 +4,7 @@ import {handleUpdateAITutorAccess} from '@cdo/apps/aiTutor/accessControlsApi';
 import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 
-import style from './chat-messages-table.module.scss';
+import style from './interactions-table.module.scss';
 
 interface StudentAccessToggleProps {
   student: StudentAccessData;
