@@ -21,17 +21,30 @@ module ActionDispatch
 
       # @see https://github.com/rails/rails/blob/v6.1.7.7/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L104-L107
       private def write_session(req, session_id, session_data, options)
-        mirror_session_in_redis(session_id, session_data) if DCDO.get('mirror_session_in_redis_enabled', false)
+        write_session_to_redis(session_id, session_data) if DCDO.get('mirror_session_in_redis_enabled', false)
         super(req, session_id, session_data, options)
       end
 
-      private def mirror_session_in_redis(session_id, session_data)
-        serialized_session_data = Marshal.dump(session_data)
-        @redis.set(session_id.private_id, serialized_session_data)
+      # @see https://github.com/rails/rails/blob/v6.1.7.7/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L63-L68
+      def delete_session(req, session_id, options)
+        remove_session_from_redis(session_id) if DCDO.get('mirror_session_in_redis_enabled', false)
+        super(req, session_id,  options)
+      end
+
+      private def write_session_to_redis(session_id, session_data)
+        @redis.set(session_id.private_id, session_data)
       rescue => exception
         # Something went wrong writing session data to redis. Fail in a way
         # that lets write_session continue uninterrupted.
         Honeybadger.notify(exception, error_message: 'Error writing session info to redis')
+      end
+
+      private def remove_session_from_redis(session_id)
+        @redis.del(session_id.private_id)
+      rescue => exception
+        # Something went wrong deleting session data from redis. Fail in a way
+        # that lets delete_session continue uninterrupted.
+        Honeybadger.notify(exception, error_message: 'Error deleting session info from redis')
       end
     end
   end
