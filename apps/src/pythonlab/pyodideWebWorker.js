@@ -40,10 +40,12 @@ self.onmessage = async event => {
     let results = await self.pyodide.runPythonAsync(python);
     self.postMessage({type: 'run_complete', results, id});
   } catch (error) {
+    console.log({error});
     self.postMessage({type: 'error', error: error.message, id});
   }
+  console.log('clearing sources...');
+  clearSources(self.pyodide, sources);
   console.log('getting file info...');
   const pathData = self.pyodide.FS.analyzePath('/', true);
   console.log({pathData});
-  clearSources(self.pyodide);
 };
