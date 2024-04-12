@@ -5,9 +5,9 @@ import {
   AITutorInteractionStatus as Status,
   ModelDescription,
 } from './types';
-import modelsJson from '../../static/aichat/modelDescriptions.json';
+import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
-const initialChatMessages: ChatCompletionMessage[] = [
+export const initialChatMessages: ChatCompletionMessage[] = [
   {
     id: 1,
     role: Role.ASSISTANT,
@@ -17,8 +17,4 @@ const initialChatMessages: ChatCompletionMessage[] = [
   },
 ];
 
-export {initialChatMessages};
-
-const models: ModelDescription[] = modelsJson as ModelDescription[];
-
-export {models};
+export const models: ModelDescription[] = modelsJson;
