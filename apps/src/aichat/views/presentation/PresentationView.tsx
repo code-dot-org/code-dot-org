@@ -55,7 +55,6 @@ const PresentationView: React.FunctionComponent = () => {
           }
           return (
             <ModelCardRow
-              keyName={property}
               title={label}
               titleIcon={iconName}
               expandedContent={modelCardInfo[property]}
@@ -64,10 +63,10 @@ const PresentationView: React.FunctionComponent = () => {
           );
         })}
         <ModelCardRow
-          keyName="technicalInfo"
           title="Technical Info"
           titleIcon="screwdriver-wrench"
           expandedContent={technicalInfo}
+          key="technicalInfo"
         />
       </div>
     </div>
