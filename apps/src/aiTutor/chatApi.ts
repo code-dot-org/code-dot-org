@@ -6,11 +6,14 @@ import {
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {CHAT_COMPLETION_URL} from './constants';
 import Lab2Registry from '../lab2/Lab2Registry';
+
+const CHAT_COMPLETION_URL = '/openai/chat_completion';
 
 /**
  * This function sends a POST request to the chat completion backend controller.
+ * Note: This function needs access to the tutorType so it can decide whether to include
+ * validation code on the backend.
  */
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
@@ -51,7 +54,7 @@ const formatForChatCompletion = (
 export async function getChatCompletionMessage(
   systemPrompt: string,
   userMessageId: number,
-  newMessage: string,
+  formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
   levelId?: number,
   tutorType?: AITutorTypesValue
@@ -59,7 +62,7 @@ export async function getChatCompletionMessage(
   const messagesToSend = [
     {role: Role.SYSTEM, content: systemPrompt},
     ...formatForChatCompletion(chatMessages),
-    {role: Role.USER, content: newMessage},
+    {role: Role.USER, content: formattedQuestion},
   ];
   let response;
   try {

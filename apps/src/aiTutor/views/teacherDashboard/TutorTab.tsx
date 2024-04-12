@@ -1,18 +1,16 @@
 import React, {useState} from 'react';
-import AITutorChatMessagesTable from './aiTutorChatMessagesTable';
-import AITutorTeacherControls from './aiTutorTeacherControls';
+import InteractionsTable from './InteractionsTable';
+import AccessControls from './AccessControls';
 import Button from '@cdo/apps/templates/Button';
 
 /**
  * Renders table of student chat messages and toggles to control student access to AI Tutor.
  */
-interface AITutorTeacherDashboardProps {
+interface TutorTabProps {
   sectionId: number;
 }
 
-const AITutorTeacherDashboard: React.FunctionComponent<
-  AITutorTeacherDashboardProps
-> = ({sectionId}) => {
+const TutorTab: React.FC<TutorTabProps> = ({sectionId}) => {
   const [showControls, setShowControls] = useState<boolean>(false);
 
   const onClickControls = () => {
@@ -42,12 +40,12 @@ const AITutorTeacherDashboard: React.FunctionComponent<
         disabled={!showControls}
       />
       {showControls ? (
-        <AITutorTeacherControls sectionId={sectionId} />
+        <AccessControls sectionId={sectionId} />
       ) : (
-        <AITutorChatMessagesTable sectionId={sectionId} />
+        <InteractionsTable sectionId={sectionId} />
       )}
     </div>
   );
 };
 
-export default AITutorTeacherDashboard;
+export default TutorTab;

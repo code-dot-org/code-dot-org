@@ -1,20 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import {fetchStudents} from '@cdo/apps/aiTutor/accessControlsApi';
-import StudentAccessToggle from './studentAccessToggle';
-import style from './chat-messages-table.module.scss';
+import StudentAccessToggle from './StudentAccessToggle';
+import style from './interactions-table.module.scss';
 import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 
 /**
  * Renders toggles to control student access to AI Tutor.
  */
 
-interface AITutorTeacherControlsProps {
+interface AccessControlsProps {
   sectionId: number;
 }
 
-const AITutorTeacherControls: React.FunctionComponent<
-  AITutorTeacherControlsProps
-> = ({sectionId}) => {
+const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
   const [students, setStudents] = useState<StudentAccessData[]>([]);
   const [globalErrorMessage, setGlobalErrorMessage] = useState<string | null>(
     null
@@ -72,4 +70,4 @@ const AITutorTeacherControls: React.FunctionComponent<
   );
 };
 
-export default AITutorTeacherControls;
+export default AccessControls;

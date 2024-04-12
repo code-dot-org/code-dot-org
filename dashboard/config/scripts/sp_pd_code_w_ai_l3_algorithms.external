@@ -1,17 +1,13 @@
 name 'sp-pd-Code_w_AI-L3-Algorithms'
 skip_dialog true
 markdown <<MARKDOWN
-# Sequence
-####Notice how the computer followed your instructions **in sequence** - a set order - to lead Laurel to the treasure.
-## What is a sequence?
+# Lesson Three: Navigating Algorithms with the help of AI 
 
-####**Sequencing** is a **control structure** and describes the process of ordering steps in a linear manner. It's like when you're making a sandwich. You put the bread, then the filling, then another slice of bread. In algorithms, sequencing is the basic order of instructions, **telling the computer what to do step by step**. 
+<img src="https://images.code.org/0a71bc29a0556d364dfce75d09928f4e-image-1712848455200.png" alt="AI bot looking at code" width="200px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
 
-##What is a control structure?
-####A **control structure** is like a set of traffic signals for computer programs. It tells the computer how to move through the steps of the program. Think of it like a recipe: you don't always follow the steps in the exact same order every time, and sometimes you repeat steps. 
+#### In this lesson, students engage in a two-step strategy that integrates AI into algorithm planning. They use AI to help them identify key steps in an algorithm and generate pseudocode. 
 
-## Let's practice some more sequencing. 
+#### The lesson also emphasizes ethical considerations and personal value reflections regarding the use of AI in the creative process of algorithm planning.
 
-
-
+## Let's practice!
 MARKDOWN
