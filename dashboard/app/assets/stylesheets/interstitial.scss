@@ -235,6 +235,9 @@ $almost_white: #eee;
   background-color: transparent;
   border: 1px solid $black;
   color: $black;
+  text-decoration: none;
+  line-height: 1.5rem;
+  height: auto;
 }
 
 #student-information-modal .required-message {

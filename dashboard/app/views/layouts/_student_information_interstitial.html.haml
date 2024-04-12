@@ -7,20 +7,20 @@
         = t('parent_mailer.parent_email_added_subject')
         = t('activerecord.attributes.user.finish_sign_up_header_account_information')
         = t('age_interstitial.disclaimer', url: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, markdown: :inline).html_safe
-      = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
+      = form_for(current_user, url: users_set_student_information_url, remote: true, html: {id: 'edit_user'}) do |f|
         - if current_user.age.nil?
           .form-group
             %div{style: 'display: flex;'}
               = f.label :age, t('signup_form.age'), class: 'label-title'
               .age-required *
-            = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: t('signup_form.select_age')
+            = f.select :age, User::AGE_DROPDOWN_OPTIONS, {include_blank: t('signup_form.select_age')}, required: true
             .required-message.age-required= t('activerecord.attributes.user.required')
         - if retrieve_info_for_lti || retrieve_info_for_cap
           .form-group
             %div{style: 'display: flex;'}
               = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-title'
               .state-required *
-            = f.select :us_state, us_state_options, include_blank: t('school_info.select_state')
+            = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, required: true
             .required-message.state-required= t('activerecord.attributes.user.required')
         -if retrieve_info_for_lti
           .field
@@ -28,6 +28,6 @@
             = f.text_field :gender_student_input
         - haml_tag :hr, class: 'header-divider'
         .form-group#information_form_buttons
-          = f.button t('nav.user.logout'), type: 'button', class: 'btn primary-button', disabled: false, id: 'sign-out-btn'
-          = f.submit t('continue'), class: 'btn primary-button', disabled: true, id: 'submit-btn'
+          = link_to t('nav.user.logout'), destroy_user_session_url, class: 'btn primary-button', id: 'sign-out-btn'
+          = f.submit t('continue'), class: 'btn primary-button', id: 'submit-btn'
 %script{src: webpack_asset_path('js/layouts/_student_information_interstitial.js'), data: {retrieveInfoForCap: retrieve_info_for_cap.to_json, userId: current_user.id.to_json, inSection: (!current_user.sections_as_student.empty?).to_json}}
