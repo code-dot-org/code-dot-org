@@ -61,7 +61,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div className={modelCustomizationStyles.customizationContainer}>
-        <div style={{marginBottom: 8}}>
+        <div style={{marginBottom: 16}}>
           <div className={modelCustomizationStyles.inputContainer}>
             <label htmlFor="system-prompt">
               <StrongText>Retrieval</StrongText>
@@ -83,12 +83,10 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             />
           </div>
         </div>
-        <div>
-          <div style={{borderBottom: '1px solid', fontSize: 14}}>
-            <StrongText>Added</StrongText>
-          </div>
+        <div className={styles.addedItemsHeaderContainer}>
+          <StrongText>Added</StrongText>
         </div>
-        <div>
+        <div style={{padding: '8px 0'}}>
           {retrievalContexts.map((message, index) => {
             return (
               <div key={index} className={styles.itemContainer}>

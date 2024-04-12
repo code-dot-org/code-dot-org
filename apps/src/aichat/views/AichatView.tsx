@@ -25,22 +25,6 @@ import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 
-const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
-  return (
-    <div>
-      <Button
-        onClick={onClear}
-        text="Clear"
-        iconLeft={{iconName: 'paintbrush'}}
-        size="xs"
-        color="white"
-        type="secondary"
-      />
-      <CopyButton />
-    </div>
-  );
-};
-
 const AichatView: React.FunctionComponent = () => {
   const [viewMode, setViewMode] = useState<string>(ViewMode.EDIT);
   const dispatch = useAppDispatch();
@@ -158,6 +142,23 @@ const AichatView: React.FunctionComponent = () => {
           </PanelContainer>
         </div>
       </div>
+    </div>
+  );
+};
+
+const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
+  return (
+    <div className={moduleStyles.chatHeaderRight}>
+      <Button
+        onClick={onClear}
+        text="Clear"
+        iconLeft={{iconName: 'paintbrush'}}
+        size="xs"
+        color="white"
+        type="secondary"
+        className={moduleStyles.clearButton}
+      />
+      <CopyButton />
     </div>
   );
 };

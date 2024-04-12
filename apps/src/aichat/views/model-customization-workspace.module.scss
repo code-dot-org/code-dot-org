@@ -61,8 +61,14 @@
 
 .selectedModelDropdown {
   @extend %full-width;
+  padding-bottom: 10px;
 }
 
 .updateButton {
   width: 100%;
+}
+
+.compareModelsButton {
+  padding: 5px 16px;
+  margin: 10px 0;
 }

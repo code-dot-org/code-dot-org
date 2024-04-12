@@ -63,7 +63,10 @@ const SetupCustomization: React.FunctionComponent = () => {
           text="Compare Models"
           onClick={() => setIsShowingModelDialog(true)}
           type="secondary"
-          className={styles.updateButton}
+          className={classNames(
+            styles.updateButton,
+            styles.compareModelsButton
+          )}
         />
         {isShowingModelDialog && (
           <CompareModelsDialog onClose={() => setIsShowingModelDialog(false)} />
