@@ -4,14 +4,12 @@ import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 
 interface ModelCardRowProps {
-  keyName: string;
   title: string;
   titleIcon: string;
   expandedContent: string | string[];
 }
 
 const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
-  keyName,
   title,
   titleIcon,
   expandedContent,
@@ -27,8 +25,8 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
       }
       return (
         <ul>
-          {checkedExpandedContent.map(content => (
-            <li>{content}</li>
+          {checkedExpandedContent.map((content, index) => (
+            <li key={index}>{content}</li>
           ))}
         </ul>
       );
@@ -38,7 +36,7 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
 
   return (
     <>
-      <div key={keyName} className={moduleStyles.modelCardAttributes}>
+      <div className={moduleStyles.modelCardAttributes}>
         <CollapsibleSection
           title={title}
           titleSemanticTag="h6"

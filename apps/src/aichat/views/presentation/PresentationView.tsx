@@ -55,18 +55,18 @@ const PresentationView: React.FunctionComponent = () => {
           }
           return (
             <ModelCardRow
-              keyName={property}
               title={label}
               titleIcon={iconName}
               expandedContent={modelCardInfo[property]}
+              key={property}
             />
           );
         })}
         <ModelCardRow
-          keyName="technicalInfo"
           title="Technical Info"
           titleIcon="screwdriver-wrench"
           expandedContent={technicalInfo}
+          key="technicalInfo"
         />
       </div>
     </div>
