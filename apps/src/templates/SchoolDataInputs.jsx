@@ -82,7 +82,6 @@ export default function SchoolDataInputs({
           {i18n.whatCountry()}
         </BodyTwoText>
         <SimpleDropdown
-          id="uitest-country-dropdown"
           className={style.dropdown}
           name={fieldNames.country}
           items={COUNTRY_ITEMS}
@@ -99,7 +98,6 @@ export default function SchoolDataInputs({
               {i18n.enterYourSchoolZip()}
             </BodyTwoText>
             <input
-              id="uitest-school-zip"
               type="text"
               name={fieldNames.schoolZip}
               onChange={e => {
