@@ -7,15 +7,14 @@ class AichatController < ApplicationController
   # {userMessage: string; userId: number; currentLevelId: string | null; scriptId: number | null; channelId: string | undefined;}
   # POST /aichat/chat_completion
   def chat_completion
-    unless has_required_params?
-      return render(status: :bad_request, json: {})
-    end
+    params.require([:inputs, :temperature, :chatContext])
+  
     # Check for PII / Profanity
     # Copied from ai_tutor_interactions_controller.rb - not sure if filtering is working.
     locale = params[:locale] || "en"
     # Check only the newest message from the user for inappropriate content.
     new_message_text = params[:chatContext]["userMessage"]
-    puts "new_message_text = #{new_message_text}"
+    return render(status: :ok, json: {role: "assistant", content: "No new user message was received."}) if !new_message_text
     filter_result = ShareFiltering.find_failure(new_message_text, locale) if new_message_text
     # If the content is inappropriate, we skip sending to endpoint and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
@@ -26,10 +25,6 @@ class AichatController < ApplicationController
     }
     response = request_chat_completion(payload)
     render(status: response[:status], json: response[:json])
-  end
-
-  def has_required_params?
-    params[:inputs].present? && params[:temperature].present? && params[:chatContext].present?
   end
 
   def request_chat_completion(payload)

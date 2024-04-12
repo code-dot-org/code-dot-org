@@ -1,4 +1,7 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {PiiTypes as PII} from '@cdo/apps/util/sharedConstants';
+
+export {PII};
 
 export type ChatCompletionMessage = {
   id: number;
@@ -22,12 +25,6 @@ export enum AichatInteractionStatus {
   PROFANITY_VIOLATION = 'profanity_violation',
   OK = 'ok',
   UNKNOWN = 'unknown',
-}
-
-export enum PiiTypes {
-  EMAIL = 'email',
-  PHONE = 'phone',
-  ADDRESS = 'address',
 }
 
 export enum Role {
