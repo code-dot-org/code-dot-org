@@ -5,10 +5,12 @@
 // background: Number of 400x400 background images. Randomly select one if
 // specified, otherwise, use background.png.
 
+import commonMsg from '@cdo/locale';
+
+import skinsBase from '../skins';
+
 import {HIDDEN_VALUE, RANDOM_VALUE} from './constants';
 import msg from './locale';
-import commonMsg from '@cdo/locale';
-import skinsBase from '../skins';
 import {loadStarWarsGrid, loadStarWarsEvents} from './starwars/skins.js';
 
 // Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv

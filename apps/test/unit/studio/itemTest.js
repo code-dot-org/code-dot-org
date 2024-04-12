@@ -1,11 +1,6 @@
-import sinon from 'sinon';
 import _ from 'lodash';
+import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
-import Studio from '@cdo/apps/studio/studio';
-import Item from '@cdo/apps/studio/Item';
-import Sprite from '@cdo/apps/studio/Sprite';
 import {
   Direction,
   BEHAVIOR_CHASE,
@@ -15,6 +10,11 @@ import {
   BEHAVIOR_WATCH_ACTOR,
   BEHAVIOR_GRID_ALIGNED,
 } from '@cdo/apps/studio/constants';
+import Item from '@cdo/apps/studio/Item';
+import Sprite from '@cdo/apps/studio/Sprite';
+import Studio from '@cdo/apps/studio/studio';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('item', () => {
   before(() => {
