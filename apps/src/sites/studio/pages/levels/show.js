@@ -15,7 +15,7 @@ import instructions, {
 import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import AITutorFloatingActionButton from '@cdo/apps/code-studio/components/aiTutor/aiTutorFloatingActionButton';
+import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -70,7 +70,6 @@ function initPage() {
       isProjectBacked,
       aiTutorAvailable,
       isAssessment,
-      levelSpecificPrompt,
     } = aiTutorData;
     const level = {
       id: levelId,
@@ -79,7 +78,6 @@ function initPage() {
       isProjectBacked,
       aiTutorAvailable,
       isAssessment,
-      levelSpecificPrompt,
     };
     getStore().dispatch(setLevel(level));
     getStore().dispatch(setScriptId(aiTutorData.scriptId));

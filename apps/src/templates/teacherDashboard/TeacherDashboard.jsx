@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-import AITutorTeacherDashboard from '@cdo/apps/code-studio/components/aiTutor/aiTutorTeacherDashboard';
+import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
@@ -197,9 +197,7 @@ function TeacherDashboard({
           <Route
             path={TeacherDashboardPath.aiTutorChatMessages}
             component={props =>
-              applyV1TeacherDashboardWidth(
-                <AITutorTeacherDashboard sectionId={sectionId} />
-              )
+              applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)
             }
           />
         )}

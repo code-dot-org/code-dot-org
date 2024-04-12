@@ -1,4 +1,3 @@
-export const CHAT_COMPLETION_URL = '/openai/chat_completion';
 import {
   ChatCompletionMessage,
   Role,

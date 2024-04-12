@@ -1,8 +1,5 @@
 import {ProjectType, FileId, FolderId} from '@cdoide/types';
-export type ReplaceProjectFunction = (
-  project: ProjectType,
-  shouldNotifyProjectUpdate: {current: boolean}
-) => void;
+export type ReplaceProjectFunction = (project: ProjectType) => void;
 
 export type SaveFileFunction = (fileId: FileId, contents: string) => void;
 export type CloseFileFunction = (fileId: FileId) => void;

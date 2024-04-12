@@ -62,16 +62,16 @@ export interface Level {
   type: string;
   hasValidation: boolean;
   isProjectBacked: boolean;
-  levelSpecificPrompt?: string;
   aiTutorAvailable: boolean;
   isAssessment: boolean;
 }
 
 export interface ChatContext {
   // studentInput is the last user message for general chat
-  // or the student's code for compilation and validaiton.
+  // or the student's code for compilation and validation.
   studentInput: string;
-  tutorType: AITutorTypesValue | undefined;
+  studentCode: string;
+  actionType: AITutorTypesValue | undefined;
 }
 
 export enum Role {

@@ -3,11 +3,7 @@ import {
   AITutorInteractionStatus as Status,
 } from '@cdo/apps/aiTutor/types';
 
-export const compilationSystemPrompt =
-  'You are a tutor in a high school computer science class. Students in the class are studying Java and they would like to know in age-appropriate, clear language why their code does not compile. Do not write any code.';
-export const validationSystemPrompt =
-  'You are a tutor in a high school computer science class. Students in the class are studying Java and they would like to know in age-appropriate, clear language why their tests are not passing. Do not write any code.';
-export const generalChatSystemPrompt =
+export const systemPrompt =
   'You are a tutor in a high school classroom where the students are learning Java using the Code.org curriculum. Answer their questions in plain, easy-to-understand English. Do not write any code. Do not answer the question if it is not about Java or computer programming.';
 
 // Initial messages we set when the user selects a tutor type.
@@ -65,7 +61,7 @@ export const compilationErrorFirst = {
     'Uh oh! Your code has to compile successfully before we can work on passing tests.',
 };
 
-export const vaildationError = {
+export const validationError = {
   id: 0,
   role: Role.ASSISTANT,
   status: Status.OK,

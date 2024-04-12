@@ -1,6 +1,4 @@
 import React, {useState, useEffect, useReducer} from 'react';
-import {Alert, Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {LmsLinks} from '@cdo/apps/util/sharedConstants';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 import {getStore} from '@cdo/apps/redux';
@@ -11,18 +9,7 @@ import {
 } from '@cdo/apps/redux/lti/ltiFeedbackReducer';
 import i18n from '@cdo/locale';
 
-import './LtiFeedbackBanner.scss';
-
-// The initial status of the banner. It means that the status has not been set yet.
-const UNSET = '';
-// The status when the banner is not available. This is typically when the user is not an LTI teacher.
-const UNAVAILABLE = 'unavailable';
-// The status when the banner is displayed but the user has not yet provided feedback.
-const UNANSWERED = 'unanswered';
-// The status when the user has provided feedback.
-const ANSWERED = 'answered';
-// The status when the banner has been closed by the user.
-const CLOSED = 'closed';
+import FeedbackBanner, {BANNER_STATUS} from '../../feedback/FeedbackBanner';
 
 /**
  * LtiFeedbackBanner component
@@ -51,10 +38,11 @@ const LtiFeedbackBanner: React.FC = () => {
    * The status is stored in local storage to persist across sessions.
    */
   const [status, setStatus] = useState<string>(() => {
-    if (!currentUser.isLti || !currentUser.isTeacher) return UNAVAILABLE;
+    if (!currentUser.isLti || !currentUser.isTeacher)
+      return BANNER_STATUS.UNAVAILABLE;
 
-    let status = tryGetLocalStorage(key, UNSET);
-    if (status === UNAVAILABLE) status = UNSET;
+    let status = tryGetLocalStorage(key, BANNER_STATUS.UNSET);
+    if (status === BANNER_STATUS.UNAVAILABLE) status = BANNER_STATUS.UNSET;
 
     !status && fetchLtiFeedback(ltiFeedbackAction);
 
@@ -73,9 +61,9 @@ const LtiFeedbackBanner: React.FC = () => {
    */
   useEffect(() => {
     if (ltiFeedback === null) {
-      setStatus(UNANSWERED);
+      setStatus(BANNER_STATUS.UNANSWERED);
     } else if (ltiFeedback) {
-      setStatus(ANSWERED);
+      setStatus(BANNER_STATUS.ANSWERED);
     }
   }, [ltiFeedback]);
 
@@ -83,7 +71,7 @@ const LtiFeedbackBanner: React.FC = () => {
    * Effect for handling errors.
    */
   useEffect(() => {
-    error && setStatus(UNSET);
+    error && setStatus(BANNER_STATUS.UNSET);
   }, [error]);
 
   /**
@@ -95,83 +83,23 @@ const LtiFeedbackBanner: React.FC = () => {
   /**
    * Function for closing the banner.
    */
-  const close = () => setStatus(CLOSED);
+  const close = () => setStatus(BANNER_STATUS.CLOSED);
 
   return (
-    <Fade in={[UNANSWERED, ANSWERED].includes(status)} unmountOnExit={true}>
-      <Alert
-        key={key}
-        bsStyle="info"
-        className="lti-feedback-banner"
-        aria-labelledby="lti-feedback-banner-title"
-        closeLabel={i18n.closeDialog()}
-        onDismiss={status === ANSWERED ? close : undefined}
-      >
-        <span className="lti-feedback-banner-greeting">
-          <FontAwesome
-            icon="hand-wave"
-            className="fa-fw"
-            title=""
-            aria-hidden="true"
-          />
-        </span>
-
-        <Fade in={!isLoading}>
-          {status === UNANSWERED ? (
-            <span>
-              <span id="lti-feedback-banner-title" aria-hidden="true">
-                {i18n.lti_feedbackBanner_question()}
-              </span>
-
-              <span className="lti-feedback">
-                <button
-                  type="button"
-                  title={i18n.lti_feedbackBanner_answer_positive()}
-                  onClick={() => answer(true)}
-                >
-                  <FontAwesome
-                    icon="thumbs-o-up"
-                    className="fa-fw"
-                    title=""
-                    aria-hidden="true"
-                  />
-                </button>
-
-                <button
-                  type="button"
-                  title={i18n.lti_feedbackBanner_answer_negative()}
-                  onClick={() => answer(false)}
-                >
-                  <FontAwesome
-                    icon="thumbs-o-down"
-                    className="fa-fw"
-                    title=""
-                    aria-hidden="true"
-                  />
-                </button>
-              </span>
-            </span>
-          ) : (
-            <span>
-              <span id="lti-feedback-banner-title" aria-hidden="true">
-                {i18n.lti_feedbackBanner_shareMore_text()}
-              </span>
-
-              <span aria-hidden="true"> </span>
-
-              <a
-                id="lti-feedback-banner-share-more-link"
-                href={LmsLinks.ADDITIONAL_FEEDBACK_URL}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {i18n.lti_feedbackBanner_shareMore_link()}
-              </a>
-            </span>
-          )}
-        </Fade>
-      </Alert>
-    </Fade>
+    <FeedbackBanner
+      alertKey={key}
+      answerStatus={status}
+      answer={answer}
+      close={close}
+      isLoading={isLoading}
+      closeLabel={i18n.closeDialog()}
+      question={i18n.lti_feedbackBanner_question()}
+      positiveAnswer={i18n.lti_feedbackBanner_answer_positive()}
+      negativeAnswer={i18n.lti_feedbackBanner_answer_negative()}
+      shareMore={i18n.lti_feedbackBanner_shareMore_text()}
+      shareMoreLink={LmsLinks.ADDITIONAL_FEEDBACK_URL}
+      shareMoreLinkText={i18n.lti_feedbackBanner_shareMore_link()}
+    />
   );
 };
 

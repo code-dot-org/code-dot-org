@@ -55,6 +55,19 @@ export const CDOIDE = React.memo(
     const [internalProject, dispatch] = useReducer(projectReducer, project);
     const projectUtilities = useProjectUtilities(dispatch);
 
+    // okay, so if we replace the project itself, we need to confirm that it actually changed
+    // And we can't do it by checking against the internalProject here, oh no, because that would
+    // require internalProject to be a dependency on this effect. Instead, we hand through our place
+    // to store whether we should fire off the next update. Internally, the reducer will set the flag
+    // to true if we're ACTUALLY replacing the project, which will then make it all work and sync up.
+    //
+    // Yes, this is a little crazy. Yes, I think this should be refactored out into a wrapper that
+    // explicitly calls setProject only on appropriate actions. Yes, I'll look into it.
+    useEffect(() => {
+      shouldNotifyProjectUpdate.current = false;
+      projectUtilities.replaceProject(project);
+    }, [project, projectUtilities]);
+
     // now, when anything has been dispatched, and our internalProject has changed we should
     // notify the external callback. UNLESS it's been disabled.
     // regardless, we always re-enable updates after we're done.
@@ -67,18 +80,6 @@ export const CDOIDE = React.memo(
       }
       shouldNotifyProjectUpdate.current = true;
     }, [internalProject, setProject]);
-
-    // okay, so if we replace the project itself, we need to confirm that it actually changed
-    // And we can't do it by checking against the internalProject here, oh no, because that would
-    // require internalProject to be a dependency on this effect. Instead, we hand through our place
-    // to store whether we should fire off the next update. Internally, the reducer will set the flag
-    // to true if we're ACTUALLY replacing the project, which will then make it all work and sync up.
-    //
-    // Yes, this is a little crazy. Yes, I think this should be refactored out into a wrapper that
-    // explicitly calls setProject only on appropriate actions. Yes, I'll look into it.
-    useEffect(() => {
-      projectUtilities.replaceProject(project, shouldNotifyProjectUpdate);
-    }, [project, projectUtilities]);
 
     const outerGridRows = ['auto'];
     paneHeights.forEach(pair => {
