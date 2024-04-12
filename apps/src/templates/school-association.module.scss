@@ -18,11 +18,11 @@
   display: flex;
   flex-direction: column;
 
-  & > * > * {
+  & > div > label > * {
     width: 100%;
   }
 
-  & > label > input {
+  & > div > label > input {
     box-sizing: border-box;
     height: 46px !important;
     font-size: 1rem;

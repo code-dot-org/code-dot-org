@@ -17,7 +17,7 @@ const SEARCH_DEFAULTS = [
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
 
-export default function SchoolZipSearch({fieldNames, zip}) {
+export default function SchoolZipSearch({fieldNames, zip, disabled}) {
   const [selectedSchoolNcesId, setSelectedSchoolNcesId] =
     useState(SELECT_A_SCHOOL);
   const [inputManually, setInputManually] = useState(false);
@@ -89,6 +89,7 @@ export default function SchoolZipSearch({fieldNames, zip}) {
           </BodyTwoText>
           <SimpleDropdown
             id="uitest-school-dropdown"
+            disabled={disabled}
             className={style.dropdown}
             name={fieldNames.ncesSchoolId}
             itemGroups={[
@@ -129,4 +130,5 @@ export default function SchoolZipSearch({fieldNames, zip}) {
 SchoolZipSearch.propTypes = {
   fieldNames: PropTypes.object,
   zip: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
 };

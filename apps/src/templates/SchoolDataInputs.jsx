@@ -96,41 +96,42 @@ export default function SchoolDataInputs({
           size="m"
         />
         {askForZip && (
-          <label>
-            <BodyTwoText
-              className={style.padding}
-              visualAppearance={'heading-xs'}
-            >
-              {i18n.enterYourSchoolZip()}
-            </BodyTwoText>
-            <input
-              id="uitest-school-zip"
-              type="text"
-              name={fieldNames.schoolZip}
-              onChange={e => {
-                setZip(e.target.value);
+          <div>
+            <label>
+              <BodyTwoText
+                className={style.padding}
+                visualAppearance={'heading-xs'}
+              >
+                {i18n.enterYourSchoolZip()}
+              </BodyTwoText>
+              <input
+                id="uitest-school-zip"
+                type="text"
+                name={fieldNames.schoolZip}
+                onChange={e => {
+                  setZip(e.target.value);
+                }}
+                value={zip}
+              />
+              {zip && !zipSearchReady && (
+                <BodyThreeText>{i18n.zipInvalidMessage()}</BodyThreeText>
+              )}
+            </label>
+            <SchoolZipSearch
+              fieldNames={{
+                ncesSchoolId: fieldNames.ncesSchoolId,
+                schoolName: fieldNames.schoolName,
               }}
-              value={zip}
+              zip={zip}
+              disabled={!zipSearchReady}
             />
-            {zip && !zipSearchReady && (
-              <BodyThreeText>{i18n.zipInvalidMessage()}</BodyThreeText>
-            )}
-          </label>
+          </div>
         )}
         {isOutsideUS && (
           <SchoolNameInput
             fieldNames={{
               schoolName: fieldNames.schoolName,
             }}
-          />
-        )}
-        {askForZip && zipSearchReady && (
-          <SchoolZipSearch
-            fieldNames={{
-              ncesSchoolId: fieldNames.ncesSchoolId,
-              schoolName: fieldNames.schoolName,
-            }}
-            zip={zip}
           />
         )}
       </div>
