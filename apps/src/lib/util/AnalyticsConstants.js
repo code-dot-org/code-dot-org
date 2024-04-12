@@ -36,7 +36,6 @@ const EVENTS = {
   COUNTRY_SELECTED: 'User Selects Country',
   ZIP_CODE_ENTERED: 'Valid Zip Code Entered',
   SCHOOL_SEARCH_INPUT_ENTERED: 'School Search Input Entered',
-  SCHOOL_LIST_OPENED: 'School List Opened',
   SCHOOL_SELECTED_FROM_LIST: 'School Selected from Dropdown',
   ADD_MANUALLY_CLICKED: 'User Elects to Add School Name Manually',
   DO_NOT_TEACH_AT_SCHOOL_CLICKED:
