@@ -72,6 +72,12 @@ describe('RubricContainer', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  function stubUpdateTourStatus(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\w+\/update_ai_rubrics_tour_seen/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
   beforeEach(() => {
     ajaxStub = sinon.stub($, 'ajax');
     const request = sinon.stub();
@@ -667,6 +673,49 @@ describe('RubricContainer', () => {
     expect(newPosition).to.not.equal(initialPosition);
   });
 
+  it('sends event when window is dragged', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: true});
+
+    const {getByTestId} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    const element = getByTestId('draggable-test-id');
+
+    // simulate dragging
+    fireEvent.mouseDown(element, {clientX: 0, clientY: 0});
+    fireEvent.mouseMove(element, {clientX: 100, clientY: 100});
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_WINDOW_MOVE_START,
+      {window_x_start: 0, window_y_start: 0}
+    );
+
+    fireEvent.mouseUp(element);
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_WINDOW_MOVE_END,
+      {window_x_end: 0, window_y_end: 0}
+    );
+    sendEventSpy.restore();
+  });
+
   it('renders a RubricSubmitFooter if student data for an evaluation level', () => {
     const wrapper = shallow(
       <RubricContainer
@@ -710,32 +759,29 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
   });
 
-  // it('displays product tour when getTourStatus is false', async function () {
-  //   const clock = sinon.useFakeTimers();
-  //   stubFetchEvalStatusForUser(readyJson);
-  //   stubFetchEvalStatusForAll(readyJsonAll);
-  //   stubFetchAiEvaluations(mockAiEvaluations);
-  //   stubFetchTeacherEvaluations(noEvals);
-  //   stubFetchTourStatus({seen: null});
+  it('displays product tour when getTourStatus is false', async function () {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
 
-  //   const {queryByText} = render(
-  //     <Provider store={store}>
-  //       <RubricContainer
-  //         rubric={defaultRubric}
-  //         studentLevelInfo={defaultStudentInfo}
-  //         teacherHasEnabledAi={true}
-  //         currentLevelName={'test_level'}
-  //         reportingData={{}}
-  //         open
-  //       />
-  //     </Provider>
-  //   );
+    const {queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
 
-  //   await wait();
-  //   clock.tick(5000);
-  //   expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
-  //   clock.restore();
-  // });
+    await wait();
+    expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
+  });
 
   it('does not display product tour when getTourStatus returns true', async function () {
     stubFetchEvalStatusForUser(readyJson);
@@ -763,21 +809,20 @@ describe('RubricContainer', () => {
       .exist;
   });
 
-  it('sends event when window is dragged', async function () {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+  it('does not display product tour when on non-assessment level', async function () {
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: true});
+    stubFetchTourStatus({seen: null});
 
-    const {getByTestId} = render(
+    const {queryByText} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          currentLevelName={'non-assessment-level'}
           reportingData={{}}
           open
         />
@@ -786,23 +831,35 @@ describe('RubricContainer', () => {
 
     await wait();
 
-    const element = getByTestId('draggable-test-id');
+    expect(queryByText('Getting Started with AI Teaching Assistant')).to.not
+      .exist;
+  });
 
-    // simulate dragging
-    fireEvent.mouseDown(element, {clientX: 0, clientY: 0});
-    fireEvent.mouseMove(element, {clientX: 100, clientY: 100});
+  it('restarts product tour when ? button is clicked', async function () {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: true});
+    stubUpdateTourStatus({seen: null});
 
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_WINDOW_MOVE_START,
-      {window_x_start: 0, window_y_start: 0}
+    const {queryByText, getByTestId} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'non-assessment-level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
     );
 
-    fireEvent.mouseUp(element);
+    await wait();
+    fireEvent.click(getByTestId('restart-product-tour'));
 
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_WINDOW_MOVE_END,
-      {window_x_end: 0, window_y_end: 0}
-    );
-    sendEventSpy.restore();
+    await wait();
+    expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
   });
 });

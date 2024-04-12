@@ -116,7 +116,6 @@ Scenario: Teacher views rubric product tour
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
   And I wait until element "h1:contains(How did Your AI Teaching Assistant do?)" is visible
 
-
   # Teacher uses Back button to backtrack through tour
   Then I click selector ".introjs-button:contains(Back)" once I see it
   And I wait until element "h1:contains(Assigning a Rubric Score)" is visible
@@ -128,6 +127,15 @@ Scenario: Teacher views rubric product tour
   And I wait until element "h1:contains(Understanding the AI Assessment)" is visible
   And I click selector ".introjs-button:contains(Back)" once I see it
   And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
+
+  # Teacher exits product tour using skip button
+  Then I click selector ".introjs-skipbutton" if it exists
+  And I wait until element "h5:contains(Code Quality)" is visible
+
+  # Teacher does not see tour after completing and reloading page
+  Then I reload the page
+  And I wait for the page to fully load
+  And I wait until element "h5:contains(Code Quality)" is visible
 
 @eyes
 Scenario: Teacher views Rubric and Settings tabs
