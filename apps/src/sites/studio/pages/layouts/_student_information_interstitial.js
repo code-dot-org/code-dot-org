@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   form.on('submit', () => {
     const stateValue = $('#user_us_state').val();
-    if (!stateValue)
+    if (stateValue)
       analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_PROVIDED, {
         user_id: userId,
         in_section: inSection,
