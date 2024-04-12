@@ -68,3 +68,32 @@ export const fetchAITutorInteractions = async (
     return null;
   }
 };
+
+interface FeedbackData {
+  thumbsUp?: boolean;
+  thumbsDown?: boolean;
+}
+
+export async function saveFeedback(
+  aiTutorInteractionId: number,
+  feedbackData: FeedbackData
+) {
+  try {
+    await fetch(`/ai_tutor_interactions/${aiTutorInteractionId}/feedbacks`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+      body: JSON.stringify({
+        ...feedbackData,
+      }),
+    });
+  } catch (error) {
+    MetricsReporter.logError({
+      event: MetricEvent.AI_TUTOR_FEEDBACK_SAVE_FAIL,
+      errorMessage:
+        (error as Error).message || 'Failed to save AI Tutor feedback',
+    });
+  }
+}

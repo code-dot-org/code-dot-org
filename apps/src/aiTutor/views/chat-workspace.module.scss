@@ -31,13 +31,13 @@ $default-spacing: 2px;
   overflow: hidden;
 }
 
-.userMessageContainer {
-  margin: 0 0 15px 50px;
-}
+// .userMessageContainer {
+//   margin: 0 0 15px 50px;
+// }
 
-.assistantMessageContainer {
-  margin: 0 50px 15px 0;
-}
+// .assistantMessageContainer {
+//   margin: 0 50px 15px 0;
+// }
 
 .userMessage {
   background-color: $lightest_cyan;
@@ -45,6 +45,7 @@ $default-spacing: 2px;
 
 .assistantMessage {
   background-color: $lightest_gray;
+  flex-grow: 1;
 }
 
 .inappropriateMessage {
@@ -131,4 +132,15 @@ $default-spacing: 2px;
 .bottomSection {
   display: flex;
   justify-content: flex-end;
+}
+
+.assistantMessageButtonRow .hamburgerMenuButton {
+  border: none;
+  padding: 0 10px;
+}
+
+.assistantMessageButtonRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
 }
