@@ -105,7 +105,6 @@ module Services
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?
         user.user_type = ::User::TYPE_TEACHER
-        user.update_primary_contact_info(new_email: email_address, new_hashed_email: ::User.hash_email(email_address))
       else
         user.user_type = ::User::TYPE_STUDENT
         user.family_name = get_claim(nrps_member_message, :family_name)
@@ -122,6 +121,7 @@ module Services
         email: email_address,
         )
       user.authentication_options = [ao]
+      user.primary_contact_info = ao
       # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
       user
     end

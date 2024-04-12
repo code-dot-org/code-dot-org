@@ -340,6 +340,25 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert_nil user.family_name
   end
 
+  test 'should create a new teacher even if an account already exists with their email' do
+    auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
+    user = create :teacher
+    create :lti_authentication_option, user: user, authentication_id: auth_id
+
+    section = create :section, user: user
+
+    lti_course = create :lti_course, lti_integration: @lti_integration
+    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    nrps_section = parsed_response[@lms_section_ids.first.to_s]
+
+    create :teacher, email: @nrps_full_response.dig(:members, 1, :message, 0, @custom_claims_key, :email)
+
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
+    assert_equal lti_section.followers.length, 3
+  end
+
   test 'should parse the members response from NRPS and return a hash of sections' do
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
