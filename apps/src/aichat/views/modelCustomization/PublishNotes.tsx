@@ -3,9 +3,8 @@ import classNames from 'classnames';
 
 import {
   setModelCardProperty,
-  setViewMode,
-  setHasPublished,
-  updateAiCustomization,
+  saveModelCard,
+  publishModel,
   selectHasFilledOutModelCard,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -18,7 +17,7 @@ import ExampleTopicsInputs from './ExampleTopicsInputs';
 import PublishStatus from './PublishStatus';
 import moduleStyles from './publish-notes.module.scss';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
-import {ModelCardInfo, ViewMode} from '../../types';
+import {ModelCardInfo} from '../../types';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -32,16 +31,11 @@ const PublishNotes: React.FunctionComponent = () => {
   const hasFilledOutModelCard = useAppSelector(selectHasFilledOutModelCard);
 
   const onSave = useCallback(() => {
-    dispatch(updateAiCustomization());
-    if (!hasFilledOutModelCard) {
-      dispatch(setHasPublished(false));
-    }
-  }, [dispatch, hasFilledOutModelCard]);
+    dispatch(saveModelCard());
+  }, [dispatch]);
 
   const onPublish = useCallback(() => {
-    dispatch(updateAiCustomization());
-    dispatch(setHasPublished(true));
-    dispatch(setViewMode(ViewMode.PRESENTATION));
+    dispatch(publishModel());
   }, [dispatch]);
 
   return (

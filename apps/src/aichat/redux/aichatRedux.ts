@@ -101,56 +101,83 @@ const initialState: AichatState = {
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
-    const state = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, previouslySavedAiCustomizations} =
-      state.aichat;
-
-    // Remove any empty example topics on save
-    const trimmedExampleTopics =
-      currentAiCustomizations.modelCardInfo.exampleTopics.filter(
-        topic => topic.length
-      );
-    thunkAPI.dispatch(
-      setModelCardProperty({
-        property: 'exampleTopics',
-        value: trimmedExampleTopics,
-      })
-    );
-
-    const trimmedCurrentAiCustomizations = {
-      ...currentAiCustomizations,
-      modelCardInfo: {
-        ...currentAiCustomizations.modelCardInfo,
-        exampleTopics: trimmedExampleTopics,
-      },
-    };
-
-    await Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
-
-    thunkAPI.dispatch(
-      setPreviouslySavedAiCustomizations(trimmedCurrentAiCustomizations)
-    );
-
-    const changedProperties = findChangedProperties(
-      previouslySavedAiCustomizations,
-      trimmedCurrentAiCustomizations
-    );
-    changedProperties.forEach(property => {
-      thunkAPI.dispatch(
-        addChatMessage({
-          id: 0,
-          role: Role.MODEL_UPDATE,
-          chatMessageText:
-            AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
-          status: Status.OK,
-          timestamp: getCurrentTime(),
-        })
-      );
-    });
+    await updateAiCustomizationShared(thunkAPI);
   }
 );
+
+export const publishModel = createAsyncThunk(
+  'aichat/publishModelCard',
+  async (_, thunkAPI) => {
+    thunkAPI.dispatch(setHasPublished(true));
+    await updateAiCustomizationShared(thunkAPI);
+    thunkAPI.dispatch(setViewMode(ViewMode.PRESENTATION));
+  }
+);
+
+export const saveModelCard = createAsyncThunk(
+  'aichat/saveModelCard',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState() as RootState;
+    const {modelCardInfo} = state.aichat.currentAiCustomizations;
+
+    if (!hasFilledOutModelCard(modelCardInfo)) {
+      thunkAPI.dispatch(setHasPublished(false));
+    }
+    await updateAiCustomizationShared(thunkAPI);
+  }
+);
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const updateAiCustomizationShared = async (thunkAPI: any) => {
+  const state = thunkAPI.getState() as RootState;
+  const {currentAiCustomizations, previouslySavedAiCustomizations} =
+    state.aichat;
+
+  // Remove any empty example topics on save
+  const trimmedExampleTopics =
+    currentAiCustomizations.modelCardInfo.exampleTopics.filter(
+      topic => topic.length
+    );
+  thunkAPI.dispatch(
+    setModelCardProperty({
+      property: 'exampleTopics',
+      value: trimmedExampleTopics,
+    })
+  );
+
+  const trimmedCurrentAiCustomizations = {
+    ...currentAiCustomizations,
+    modelCardInfo: {
+      ...currentAiCustomizations.modelCardInfo,
+      exampleTopics: trimmedExampleTopics,
+    },
+  };
+
+  await Lab2Registry.getInstance()
+    .getProjectManager()
+    ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+
+  thunkAPI.dispatch(
+    setPreviouslySavedAiCustomizations(trimmedCurrentAiCustomizations)
+  );
+
+  const changedProperties = findChangedProperties(
+    previouslySavedAiCustomizations,
+    trimmedCurrentAiCustomizations
+  );
+  changedProperties.forEach(property => {
+    thunkAPI.dispatch(
+      addChatMessage({
+        id: 0,
+        role: Role.MODEL_UPDATE,
+        chatMessageText:
+          AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
+        status: Status.OK,
+        timestamp: getCurrentTime(),
+      })
+    );
+  });
+};
 
 // This thunk's callback function submits a user chat message to the chat completion endpoint,
 // waits for a chat completion response, and updates the user message state.
@@ -348,29 +375,31 @@ const aichatSlice = createSlice({
   },
 });
 
+const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
+  for (const key of Object.keys(modelCardInfo)) {
+    const typedKey = key as keyof ModelCardInfo;
+
+    if (typedKey === 'exampleTopics') {
+      if (
+        !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
+      ) {
+        return false;
+      }
+    } else if (!modelCardInfo[typedKey].length) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
 // Selectors
 const selectModelCardInfo = (state: {aichat: AichatState}) =>
   state.aichat.currentAiCustomizations.modelCardInfo;
 
 export const selectHasFilledOutModelCard = createSelector(
   selectModelCardInfo,
-  modelCardInfo => {
-    for (const key of Object.keys(modelCardInfo)) {
-      const typedKey = key as keyof ModelCardInfo;
-
-      if (typedKey === 'exampleTopics') {
-        if (
-          !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
-        ) {
-          return false;
-        }
-      } else if (!modelCardInfo[typedKey].length) {
-        return false;
-      }
-    }
-
-    return true;
-  }
+  hasFilledOutModelCard
 );
 
 registerReducers({aichat: aichatSlice.reducer});
