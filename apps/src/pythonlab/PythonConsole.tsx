@@ -28,11 +28,15 @@ const PythonConsole: React.FunctionComponent = () => {
         if (code) {
           runPythonCode(code, source);
         } else {
-          dispatch(appendSystemMessage('No main.py to run.'));
+          dispatch(appendSystemMessage('You have no main.py to run.'));
         }
+      } else {
+        dispatch(appendSystemMessage('You have no main.py to run.'));
       }
     } else {
-      alert('You do not have permission to run python code.');
+      dispatch(
+        appendSystemMessage('You do not have permission to run python code.')
+      );
     }
   };
 

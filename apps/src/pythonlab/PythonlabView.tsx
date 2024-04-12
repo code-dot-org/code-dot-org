@@ -1,5 +1,5 @@
 // Pythonlab view
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
 import Editor from '../weblab2/CDOIDE/CenterPane/Editor';
@@ -80,24 +80,28 @@ const PythonlabView: React.FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
 
-  // TODO: This is repeated in Weblab2View. Can we extract this out somewhere?
-  const setProject = (newProject: MultiFileSource) => {
-    setCurrentProject(newProject);
-    dispatch(setSource(newProject));
-    if (Lab2Registry.getInstance().getProjectManager()) {
-      const projectSources = {
-        source: newProject,
-      };
-      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-    }
-  };
+  // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
+  const setProject = useMemo(
+    () => (newProject: MultiFileSource) => {
+      setCurrentProject(newProject);
+      dispatch(setSource(newProject));
+      if (Lab2Registry.getInstance().getProjectManager()) {
+        const projectSources = {
+          source: newProject,
+        };
+        Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
+      }
+    },
+    [dispatch]
+  );
 
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
     setCurrentProject(
       (initialSources?.source as MultiFileSource) || defaultProject
     );
-  }, [channelId, initialSources]);
+    dispatch(setSource(initialSources?.source as MultiFileSource));
+  }, [channelId, dispatch, initialSources]);
 
   return (
     <div className={moduleStyles.pythonlab}>
