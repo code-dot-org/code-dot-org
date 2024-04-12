@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
-import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
@@ -219,37 +218,28 @@ $(document).ready(() => {
 
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
-      if (experiments.isEnabled(experiments.SCHOOL_ASSOCIATION_V2)) {
-        ReactDOM.render(
-          <div style={{padding: 10}}>
-            <SchoolDataInputs />
-          </div>,
-          schoolInfoMountPoint
-        );
-      } else {
-        ReactDOM.render(
-          <div style={{padding: 10}}>
-            <SchoolInfoInputs
-              schoolType={schoolData.schoolType}
-              country={schoolData.country}
-              ncesSchoolId={schoolData.ncesSchoolId}
-              schoolName={schoolData.schoolName}
-              schoolCity={schoolData.schoolCity}
-              schoolState={schoolData.schoolState}
-              schoolZip={schoolData.schoolZip}
-              schoolLocation={schoolData.schoolLocation}
-              useLocationSearch={schoolData.useLocationSearch}
-              onCountryChange={onCountryChange}
-              onSchoolTypeChange={onSchoolTypeChange}
-              onSchoolChange={onSchoolChange}
-              onSchoolNotFoundChange={onSchoolNotFoundChange}
-              showRequiredIndicator={false}
-              styles={{width: 580}}
-            />
-          </div>,
-          schoolInfoMountPoint
-        );
-      }
+      ReactDOM.render(
+        <div style={{padding: 10}}>
+          <SchoolInfoInputs
+            schoolType={schoolData.schoolType}
+            country={schoolData.country}
+            ncesSchoolId={schoolData.ncesSchoolId}
+            schoolName={schoolData.schoolName}
+            schoolCity={schoolData.schoolCity}
+            schoolState={schoolData.schoolState}
+            schoolZip={schoolData.schoolZip}
+            schoolLocation={schoolData.schoolLocation}
+            useLocationSearch={schoolData.useLocationSearch}
+            onCountryChange={onCountryChange}
+            onSchoolTypeChange={onSchoolTypeChange}
+            onSchoolChange={onSchoolChange}
+            onSchoolNotFoundChange={onSchoolNotFoundChange}
+            showRequiredIndicator={false}
+            styles={{width: 580}}
+          />
+        </div>,
+        schoolInfoMountPoint
+      );
     }
   }
 
