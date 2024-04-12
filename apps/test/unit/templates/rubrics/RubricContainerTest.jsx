@@ -849,7 +849,7 @@ describe('RubricContainer', () => {
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'non-assessment-level'}
+          currentLevelName={'test_level'}
           reportingData={{}}
           open
         />
@@ -860,6 +860,7 @@ describe('RubricContainer', () => {
     fireEvent.click(getByTestId('restart-product-tour'));
 
     await wait();
+    expect(fetchStub).to.have.been.calledOnce();
     expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
   });
 });
