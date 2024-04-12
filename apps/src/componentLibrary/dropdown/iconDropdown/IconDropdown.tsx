@@ -50,7 +50,7 @@ export interface IconDropdownProps {
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
   labelText,
-  labelType,
+  labelType = 'thick',
   options,
   selectedOption = {},
   onChange,

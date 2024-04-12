@@ -64,7 +64,7 @@ export interface CheckboxDropdownProps {
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
   labelText,
-  labelType,
+  labelType = 'thick',
   allOptions,
   checkedOptions = [],
   onChange,
