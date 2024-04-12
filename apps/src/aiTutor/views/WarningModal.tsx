@@ -19,7 +19,6 @@ const WarningModal = () => {
     return (
       <AccessibleDialog onClose={onClose} className={style.chatWarningModal}>
         <Heading2>Remember to chat responsibly!</Heading2>
-
         <button type="button" onClick={onClose} className={style.xCloseButton}>
           <i id="x-close" className="fa-solid fa-xmark" />
         </button>

@@ -9,6 +9,7 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import AITutorChatWorkspace from './AITutorChatWorkspace';
 import AITutorFooter from './AITutorFooter';
 import style from './ai-tutor.module.scss';
+import WarningModal from './WarningModal';
 
 interface AITutorContainerProps {
   closeTutor?: () => void;
@@ -71,6 +72,7 @@ const AITutorContainer: React.FC<AITutorContainerProps> = ({
           )}
         </div>
         <AITutorFooter renderAITutor={renderAITutor} />
+        <WarningModal />
       </div>
     </Draggable>
   );
