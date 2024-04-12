@@ -15,6 +15,8 @@ export function applyPatches(originalCode: string) {
   return finalCode;
 }
 
+// Write all sources to the Pyodide file system.
+// This enables python files to import from other files in the project.
 export function writeSources(
   sources: MultiFileSource,
   currentFolderId: string,
@@ -30,7 +32,7 @@ export function writeSources(
   Object.values(sources.folders)
     .filter(f => f.parentId === currentFolderId)
     .forEach(folder => {
-      // Create folder.
+      // Create folder if it doesn't exist.
       const newPath =
         currentPath.length === 0
           ? `${folder.name}`
@@ -41,11 +43,14 @@ export function writeSources(
         // Folder doesn't exist, create it.
         pyodide.FS.mkdir(newPath);
       }
-      // Recurse to get all child folders.
+      // Recurse to write all children of the folder (files and folders).
       writeSources(sources, folder.id, newPath + '/', pyodide);
     });
 }
 
+// Remove all source files from the Pyodide file system.
+// This ensures any deleted file is not available to be imported,
+// which could cause confusion.
 export function clearSources(
   pyodide: PyodideInterface,
   sources: MultiFileSource
@@ -55,12 +60,14 @@ export function clearSources(
     try {
       pyodide.FS.unlink(filePath);
     } catch (e) {
-      // TODO: log error better
+      // TODO: log error better. We catch this because it should not prevent
+      // future runs.
       console.warn(`error unlinking Pyodide file ${filePath}, ${e}`);
     }
   });
 }
 
+// For the given fileId, return the full path to the file, including the file name.
 const getFilePath = (fileId: string, source: MultiFileSource) => {
   let path = source.files[fileId].name;
   let folderId = source.files[fileId].folderId;

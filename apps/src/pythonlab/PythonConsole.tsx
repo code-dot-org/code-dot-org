@@ -23,14 +23,15 @@ const PythonConsole: React.FunctionComponent = () => {
     // For now, restrict running python code to levelbuilders.
     if (parsedData.permissions.includes('levelbuilder')) {
       dispatch(appendSystemMessage('Running program...'));
+      let mainFound = false;
       if (source) {
         const code = getFileByName(source.files, 'main.py')?.contents;
         if (code) {
+          mainFound = true;
           runPythonCode(code, source);
-        } else {
-          dispatch(appendSystemMessage('You have no main.py to run.'));
         }
-      } else {
+      }
+      if (!mainFound) {
         dispatch(appendSystemMessage('You have no main.py to run.'));
       }
     } else {
