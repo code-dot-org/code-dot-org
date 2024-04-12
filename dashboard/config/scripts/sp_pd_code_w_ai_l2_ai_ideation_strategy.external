@@ -1,16 +1,20 @@
 name 'sp-pd-Code_w_AI-L2-AI_Ideation_strategy'
 skip_dialog true
 markdown <<MARKDOWN
-# Sequence
-####Notice how the computer followed your instructions **in sequence** - a set order - to lead Laurel to the treasure.
-## What is a sequence?
+# AI Strategies: Differentiation Options
 
-####**Sequencing** is a **control structure** and describes the process of ordering steps in a linear manner. It's like when you're making a sandwich. You put the bread, then the filling, then another slice of bread. In algorithms, sequencing is the basic order of instructions, **telling the computer what to do step by step**. 
+#### Depending on your students’ level of computer science exposure and comfort, you can choose from two strategies:  <a href="url" target="blank" rel="noopener noreferrer">Brainstorming Partner</a> and  <a href="url" target="blank" rel="noopener noreferrer">Pseudocode Assistant</a>.
 
-##What is a control structure?
-####A **control structure** is like a set of traffic signals for computer programs. It tells the computer how to move through the steps of the program. Think of it like a recipe: you don't always follow the steps in the exact same order every time, and sometimes you repeat steps. 
 
-## Let's practice some more sequencing. 
+#### If you have beginning programmers, it is suggested to use the Brainstorming strategy. However, if your students have been exposed to pseudocode (or you would like to use this as an opportunity to have them start working with pseudocode), choose the Pseudocode Assistant strategy for your students.
+
+## Extention activity
+
+#### If you have computer science students who are familiar with libraries, there is also an additional, optional strategy that involves finding libraries to work on a project. It  is a good extension for more experienced programmers who will be working with larger programs, or who might already have experience working with libraries.
+
+#### In this professional learning module, we will explore the Brainstorming Partner Strategy.
+
+##Let's dive in! 
 
 
 
