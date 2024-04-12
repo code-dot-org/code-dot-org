@@ -4,7 +4,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getStore} from '@cdo/apps/redux';
 import style from './ai-tutor.module.scss';
 import aiFabIcon from '@cdo/static/ai-fab-background.png';
-import AITutorPanel from './aiTutorPanel';
+import AITutorContainer from './AITutorContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -39,7 +39,7 @@ const AITutorFloatingActionButton: React.FunctionComponent = () => {
         type="button"
       />
       <Provider store={store}>
-        <AITutorPanel open={isOpen} />
+        <AITutorContainer open={isOpen} closeTutor={handleClick} />
       </Provider>
     </div>
   );
