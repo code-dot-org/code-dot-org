@@ -17,7 +17,7 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
 
   test 'create - creates user New Feature Feedback' do
     expected_satisfied = true
-    expected_form_key = 'new_feature_banner'
+    expected_form_key = 'progress_v2'
 
     assert_difference('NewFeatureFeedback.count') do
       post :create, params: {feedback: {satisfied: expected_satisfied, form_key: expected_form_key}}, format: :json
@@ -33,7 +33,7 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
 
   test 'create - returns validation errors when satisfied param is invalid' do
     assert_no_difference('NewFeatureFeedback.count') do
-      post :create, params: {feedback: {satisfied: nil, form_key: 'new_feature_banner'}}, format: :json
+      post :create, params: {feedback: {satisfied: nil, form_key: 'progress_v2'}}, format: :json
     end
 
     assert_response :unprocessable_entity
@@ -42,17 +42,17 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
 
   test 'create - returns validation errors when form_key param is invalid' do
     assert_no_difference('NewFeatureFeedback.count') do
-      post :create, params: {feedback: {satisfied: true, form_key: nil}}, format: :json
+      post :create, params: {feedback: {satisfied: true, form_key: 'invalid_form_key'}}, format: :json
     end
 
     assert_response :unprocessable_entity
-    assert_equal '["Form key is required"]', response.body
+    assert_equal '["Form key is not included in the list"]', response.body
   end
 
-  test 'show - returns the Feedback for the current user with the same form_key' do
+  test 'show - returns the Feedback for the current user' do
     feedback = create(:new_feature_feedback, user: @user)
 
-    get :show, params: {form_key: 'new_feature_banner'}, format: :json
+    get :show, params: {form_key: 'progress_v2'}, format: :json
 
     assert_response :success
     response = JSON.parse(@response.body)
@@ -61,15 +61,7 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
   end
 
   test 'show - returns nothing when no Feedback exists for the current user' do
-    get :show, params: {form_key: 'new_feature_banner'}, format: :json
-
-    assert_response :ok
-  end
-
-  test 'show - returns nothing when no Feedback with the same key exists for the current user' do
-    create(:new_feature_feedback, user: @user, form_key: 'different_feature')
-
-    get :show, params: {form_key: 'new_feature_banner'}, format: :json
+    get :show, params: {form_key: 'progress_v2'}, format: :json
 
     assert_response :ok
   end

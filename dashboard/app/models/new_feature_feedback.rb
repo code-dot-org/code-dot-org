@@ -21,6 +21,6 @@ class NewFeatureFeedback < ApplicationRecord
 
   validates :user_id, uniqueness: true
   validates :satisfied, inclusion: {in: [true, false]}
-  validates :form_key, presence: true, allow_blank: false
+  validates :form_key, presence: true, allow_blank: false, inclusion: {in: %w[progress_v2]}
   validates :locale, inclusion: {in: I18n.available_locales.map(&:to_s)}, allow_nil: true
 end

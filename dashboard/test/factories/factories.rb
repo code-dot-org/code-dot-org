@@ -1826,7 +1826,7 @@ FactoryBot.define do
   factory :new_feature_feedback do
     association :user, factory: :teacher
 
-    form_key {'new_feature_banner'}
+    form_key {'progress_v2'}
     locale {I18n.locale.to_s}
     satisfied {true}
   end
