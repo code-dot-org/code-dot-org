@@ -65,7 +65,8 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
   end
 
   test 'show - returns the Feedback for the current user' do
-    feedback = create(:new_feature_feedback, user: @user)
+    expected_satisfied = true
+    feedback = create(:new_feature_feedback, user: @user, satisfied: expected_satisfied)
 
     get :show, params: {form_key: 'progress_v2'}, format: :json
 
@@ -73,11 +74,13 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
     assert_equal feedback.id, response['id']
     assert_equal @user.id, response['user_id']
+    assert_equal expected_satisfied, response['satisfied']
   end
 
   test 'show - returns nothing when no Feedback exists for the current user' do
     get :show, params: {form_key: 'progress_v2'}, format: :json
 
     assert_response :ok
+    refute_includes @response, 'body'
   end
 end
