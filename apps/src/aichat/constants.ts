@@ -17,4 +17,4 @@ export const initialChatMessages: ChatCompletionMessage[] = [
   },
 ];
 
-export const models: ModelDescription[] = modelsJson;
+export const modelDescriptions: ModelDescription[] = modelsJson;

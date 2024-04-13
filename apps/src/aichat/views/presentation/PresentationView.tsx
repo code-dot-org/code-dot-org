@@ -8,7 +8,7 @@ import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './presentation-view.module.scss';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {models as modelDescriptions} from '../../constants';
+import {modelDescriptions} from '../../constants';
 
 const PresentationView: React.FunctionComponent = () => {
   const currentAiCustomizations = useAppSelector(
@@ -17,11 +17,8 @@ const PresentationView: React.FunctionComponent = () => {
   const {selectedModel, systemPrompt, temperature, retrievalContexts} =
     currentAiCustomizations;
   const modelCardInfo = currentAiCustomizations.modelCardInfo;
-  const selectedModelDescriptions = modelDescriptions.find(
-    model => model.id === selectedModel
-  );
-  const modelName = selectedModelDescriptions?.name ?? '';
-  const trainingData = selectedModelDescriptions?.trainingData ?? '';
+  const {name: modelName = '', trainingData = ''} =
+    modelDescriptions.find(model => model.id === selectedModel) ?? {};
 
   const technicalInfo = useMemo(() => {
     const technicalInfoData: {

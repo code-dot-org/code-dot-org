@@ -17,7 +17,7 @@ import {
 } from './constants';
 import {isVisible, isDisabled} from './utils';
 import CompareModelsDialog from './CompareModelsDialog';
-import {models as allModels} from '../../constants';
+import {modelDescriptions} from '../../constants';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const SetupCustomization: React.FunctionComponent = () => {
@@ -33,17 +33,17 @@ const SetupCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  /** defaults to all models if not set */
+  /** defaults to all models if not set in levelProperties */
   const availableModelIds = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.aichatSettings?.availableModels ?? allModels.map(model => model.id)
+        ?.aichatSettings?.availableModels
   );
-  const availableModels = allModels.filter(model =>
-    availableModelIds.includes(model.id)
-  );
+  const availableModels = availableModelIds
+    ? modelDescriptions.filter(model => availableModelIds.includes(model.id))
+    : modelDescriptions;
 
-  const chosenModel = aiCustomizations.selectedModel ?? availableModels[0].id;
+  const chosenModelId = aiCustomizations.selectedModel || availableModels[0].id;
   const allFieldsDisabled = isDisabled(temperature) && isDisabled(systemPrompt);
 
   const onUpdate = useCallback(
@@ -72,7 +72,7 @@ const SetupCustomization: React.FunctionComponent = () => {
           items={availableModels.map(model => {
             return {value: model.id, text: model.name};
           })}
-          selectedValue={chosenModel}
+          selectedValue={chosenModelId}
           name="model"
           size="s"
           className={styles.selectedModelDropdown}

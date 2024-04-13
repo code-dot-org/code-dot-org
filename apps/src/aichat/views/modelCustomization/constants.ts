@@ -69,7 +69,7 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
 export const AI_CUSTOMIZATIONS_LABELS: {
   [key in keyof AiCustomizations]: string;
 } = {
-  selectedModel: 'Selected Model',
+  selectedModel: 'Selected model',
   temperature: 'Temperature',
   systemPrompt: 'System prompt',
   retrievalContexts: 'Retrieval',
