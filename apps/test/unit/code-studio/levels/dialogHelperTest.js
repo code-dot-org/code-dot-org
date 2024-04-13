@@ -15,16 +15,9 @@ describe('dialogHelper', () => {
     // boostrap-sass also depends on window.jQuery being set. We use require instead
     // of import for boostrap-sass, otherwise babel moves the import to the top of
     // the file (before we've globalized jQuery)
-    if (Object.hasOwn(window, 'jQuery')) {
-      throw new Error('window.jQuery already set');
-    }
-    window.jQuery = $;
     require('bootstrap-sass');
   });
 
-  afterAll(() => {
-    delete window.jQuery;
-  });
   describe('showDialog', () => {
     let parent;
     beforeEach(() => {
