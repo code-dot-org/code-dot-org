@@ -10,9 +10,12 @@ import {
   BEHAVIOR_WATCH_ACTOR,
   BEHAVIOR_GRID_ALIGNED,
 } from '@cdo/apps/studio/constants';
+// Studio needs to be imported before Item, or we get a TypeError: Cannot read
+// properties of undefined (reading 'prototype').
+// eslint-disable-next-line import/order
+import Studio from '@cdo/apps/studio/studio';
 import Item from '@cdo/apps/studio/Item';
 import Sprite from '@cdo/apps/studio/Sprite';
-import Studio from '@cdo/apps/studio/studio';
 
 import {expect} from '../../util/reconfiguredChai';
 
