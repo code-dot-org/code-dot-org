@@ -63,11 +63,7 @@ export interface AiCustomizations {
   modelCardInfo: ModelCardInfo;
 }
 
-export interface AiCustomizationsForBackend {
-  temperature: number;
-  systemPrompt: string;
-  retrievalContexts: string[];
-}
+export type AichatParameters = Omit<AiCustomizations, 'modelCardInfo'>;
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {

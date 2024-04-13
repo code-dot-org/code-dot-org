@@ -2,12 +2,12 @@ class AichatController < ApplicationController
   # params are
   # newMessage: string
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
-  # aiCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
+  # aichatParameters: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # chatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
-    params.require([:newMessage, :storedMessages, :aiCustomizations, :chatContext])
-  
+    params.require([:newMessage, :storedMessages, :aichatParameters, :chatContext])
+
     # Check for PII / Profanity
     # Copied from ai_tutor_interactions_controller.rb - not sure if filtering is working.
     locale = params[:locale] || "en"

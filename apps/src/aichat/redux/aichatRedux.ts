@@ -1,9 +1,6 @@
 import moment from 'moment';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 import {
@@ -12,7 +9,7 @@ import {
   AI_CUSTOMIZATIONS_LABELS,
 } from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
-import {getAichatCompletionMessage} from '../aichatCompletionApi';
+import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   ChatCompletionMessage,
   Role,
@@ -145,12 +142,7 @@ export const updateAiCustomization = createAsyncThunk(
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
-    const state = thunkAPI.getState() as {
-      lab: LabState;
-      aichat: AichatState;
-      progress: ProgressState;
-      currentUser: CurrentUserState;
-    };
+    const state = thunkAPI.getState() as RootState;
     const aiCustomizations = state.aichat.savedAiCustomizations;
     const storedMessages = state.aichat.chatMessages;
     const chatContext: ChatContext = {
@@ -175,7 +167,7 @@ export const submitChatContents = createAsyncThunk(
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
-    const chatApiResponse = await getAichatCompletionMessage(
+    const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
       storedMessages,
       aiCustomizations,
