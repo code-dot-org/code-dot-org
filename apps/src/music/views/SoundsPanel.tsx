@@ -12,6 +12,7 @@ import MusicLibrary, {
 import SoundStyle from '../utils/SoundStyle';
 import FocusLock from 'react-focus-lock';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
+import musicI18n from '../locale';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -306,12 +307,12 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   };
 
   const allFilterButtons = [
-    {label: 'All', value: 'all'},
-    {label: 'Beats', value: 'beat'},
-    {label: 'Bass', value: 'bass'},
-    {label: 'Leads', value: 'lead'},
-    {label: 'Effects', value: 'fx'},
-    {label: 'Vocals', value: 'vocal'},
+    {label: musicI18n.soundsFilterAll(), value: 'all'},
+    {label: musicI18n.soundsFilterBeats(), value: 'beat'},
+    {label: musicI18n.soundsFilterBass(), value: 'bass'},
+    {label: musicI18n.soundsFilterLeads(), value: 'lead'},
+    {label: musicI18n.soundsFilterEffects(), value: 'fx'},
+    {label: musicI18n.soundsFilterVocals(), value: 'vocal'},
   ];
 
   const filterButtons = allFilterButtons.filter(
@@ -327,8 +328,8 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
             <SegmentedButtons
               selectedButtonValue={mode}
               buttons={[
-                {label: 'Packs', value: 'packs'},
-                {label: 'Sounds', value: 'sounds'},
+                {label: musicI18n.soundsFilterPacks(), value: 'packs'},
+                {label: musicI18n.soundsFilterSounds(), value: 'sounds'},
               ]}
               onChange={value => onModeChange(value as Mode)}
               className={styles.segmentedButtons}

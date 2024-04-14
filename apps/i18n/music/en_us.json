@@ -68,5 +68,13 @@
   "panelHeaderTimeline": "Timeline",
   "continue": "Continue",
   "undo": "Undo",
-  "redo": "Redo"
+  "redo": "Redo",
+  "soundsFilterPacks": "Packs",
+  "soundsFilterSounds": "Sounds",
+  "soundsFilterAll": "All",
+  "soundsFilterBeats": "Beats",
+  "soundsFilterBass": "Bass",
+  "soundsFilterLeads": "Leads",
+  "soundsFilterEffects": "Effects",
+  "soundsFilterVocals": "Vocals"
 }
