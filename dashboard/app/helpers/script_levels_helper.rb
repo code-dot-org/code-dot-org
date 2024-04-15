@@ -44,6 +44,14 @@ module ScriptLevelsHelper
     video_info_response
   end
 
+  def script_completion_redirect(user, script)
+    if Policies::ScriptActivity.can_view_congrats_page?(user, script)
+      script.finish_url
+    else
+      script_path(script)
+    end
+  end
+
   def tracking_pixel_url(script)
     if script.name == Unit::HOC_2013_NAME
       CDO.code_org_url '/api/hour/begin_codeorg.png'

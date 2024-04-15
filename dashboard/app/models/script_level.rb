@@ -178,7 +178,7 @@ class ScriptLevel < ApplicationRecord
     elsif script.pl_course?
       return build_script_level_path(level_to_follow) if level_to_follow
       next_unit = script.next_unit(user)
-      next_unit ? script_path(next_unit) : script.finish_url
+      next_unit ? script_path(next_unit) : script_completion_redirect(user, script)
     elsif bubble_choice? && !bubble_choice_parent
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self)
@@ -197,7 +197,7 @@ class ScriptLevel < ApplicationRecord
           script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
         end
       else
-        level_to_follow ? build_script_level_path(level_to_follow) : script.finish_url
+        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(user, script)
       end
     end
   end
