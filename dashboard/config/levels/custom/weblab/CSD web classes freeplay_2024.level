@@ -1,11 +1,12 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:59:13.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "long_instructions": "# Add CSS to your Personal Webpage\r\n\r\nUse your new knowledge to add to the Personal Web Page project you created in the Personal Webpage Project. The webpage you created for that lesson has been transferred below - add some CSS classes to your webpage!",
+    "long_instructions": "# Add CSS to Your Webpage\r\n\r\nUse your new knowledge and skills to add to the page you started in Lesson 6 about something you enjoy! The webpage you created for that lesson in Level 11, challenge f has been transferred below - add some CSS classes to your webpage!",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "parent_level_id": 23260,
@@ -27,14 +28,16 @@
     "encrypted": "false",
     "display_name": "Add to your Web Page!",
     "mini_rubric": "false",
-    "bubble_choice_description": "Use your new knowledge to add to the Personal Web Page project you created",
+    "bubble_choice_description": "Use your new knowledge to add to the web page you started in a previous challenge level",
     "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"\\r\\n\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
-    "thumbnail_url": "https://images.code.org/43720c5e1c8367e30b7f1a2f8ef06af7-image-1562867963667.JPG",
-    "project_template_level_name": "CSD U2 Project Template_2024",
-    "validation_enabled": "false"
+    "thumbnail_url": "https://images.code.org/b8765be82e1c156bf6a2387c2a0af973-wish-list.png",
+    "project_template_level_name": "CSD add-to-page template_2024",
+    "validation_enabled": "false",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:13.653+00:00\",\"changed\":[\"cloned from \\\"CSD web classes freeplay_2023\\\"\"],\"cloned_from\":\"CSD web classes freeplay_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:13.653+00:00\",\"changed\":[\"cloned from \\\"CSD web classes freeplay_2023\\\"\"],\"cloned_from\":\"CSD web classes freeplay_2023\"},{\"changed_at\":\"2024-02-15 20:05:33 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

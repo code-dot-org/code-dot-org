@@ -16,7 +16,7 @@ Blockly.Msg.COLOUR_BLEND_TOOLTIP = "두 색을 주어진 비율(0.0 - 1.0)로 �
 Blockly.Msg.COLOUR_PICKER_HELPURL = "http://en.wikipedia.org/wiki/Color";
 Blockly.Msg.COLOUR_PICKER_TOOLTIP = "색 팔레트에서 색을 고르세요.";
 Blockly.Msg.COLOUR_RANDOM_HELPURL = "http://randomcolour.com";
-Blockly.Msg.COLOUR_RANDOM_TITLE = "랜덤 색";
+Blockly.Msg.COLOUR_RANDOM_TITLE = "임의 색상";
 Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "무작위로 색이 선택됩니다.";
 Blockly.Msg.COLOUR_RGB_BLUE = "파랑";
 Blockly.Msg.COLOUR_RGB_GREEN = "초록";
@@ -249,7 +249,7 @@ Blockly.Msg.MATH_RANDOM_FLOAT_HELPURL = "http://en.wikipedia.org/wiki/Random_num
 Blockly.Msg.MATH_RANDOM_FLOAT_TITLE_RANDOM = "랜덤 실수(0.0<= f <1.0)";
 Blockly.Msg.MATH_RANDOM_FLOAT_TOOLTIP = "랜덤 실수 값(0.0<= f <1.0)을 돌려줍니다.";
 Blockly.Msg.MATH_RANDOM_INT_HELPURL = "http://en.wikipedia.org/wiki/Random_number_generation";
-Blockly.Msg.MATH_RANDOM_INT_TITLE = "랜덤정수(%1<= n <=%2)";
+Blockly.Msg.MATH_RANDOM_INT_TITLE = "임의의 정수(%1이상 %2이하)";
 Blockly.Msg.MATH_RANDOM_INT_TOOLTIP = "주어진 범위에서, 랜덤 정수값을 돌려줍니다.";
 Blockly.Msg.MATH_ROUND_HELPURL = "http://en.wikipedia.org/wiki/Rounding";
 Blockly.Msg.MATH_ROUND_OPERATOR_ROUND = "반올림";

@@ -1,5 +1,8 @@
-export const CHAT_COMPLETION_URL = '/openai/chat_completion';
-import {ChatCompletionMessage, Role, Status} from './types';
+import {
+  ChatCompletionMessage,
+  Role,
+  AichatInteractionStatus as Status,
+} from './types';
 
 const initialChatMessages: ChatCompletionMessage[] = [
   {

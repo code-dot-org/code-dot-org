@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SummaryViewLegend from './SummaryViewLegend';
 
 export default {

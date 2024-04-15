@@ -1,9 +1,11 @@
+import classNames from 'classnames';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import styles from './progress-table-v2.module.scss';
-import classNames from 'classnames';
+
 import SortByNameDropdown from '../SortByNameDropdown';
-import _ from 'lodash';
+
+import styles from './progress-table-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
@@ -16,6 +18,7 @@ const skeletonCell = key => (
         styles.gridBoxSkeleton
       )}
       style={{width: _.random(30, 90) + '%'}}
+      data-testid="skeleton-cell"
     />
   </div>
 );
@@ -46,13 +49,12 @@ export default function StudentColumn({
 
   return (
     <div className={styles.studentColumn}>
-      <div className={styles.sortDropdown}>
-        <SortByNameDropdown
-          sectionId={sectionId}
-          unitName={unitName}
-          source={SECTION_PROGRESS_V2}
-        />
-      </div>
+      <SortByNameDropdown
+        sectionId={sectionId}
+        unitName={unitName}
+        source={SECTION_PROGRESS_V2}
+        className={styles.sortDropdown}
+      />
       <div className={styles.grid}>
         {sortedStudents.map((student, ind) => studentColumnBox(student, ind))}
       </div>

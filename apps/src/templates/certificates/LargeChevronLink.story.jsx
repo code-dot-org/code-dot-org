@@ -4,7 +4,6 @@ import {reduxStore} from '@cdo/storybook/decorators';
 import LargeChevronLink from './LargeChevronLink';
 
 export default {
-  title: 'LargeChevronLink',
   component: LargeChevronLink,
 };
 

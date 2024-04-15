@@ -1,8 +1,11 @@
 /**
  * Blocks specific to Planter
  */
-var msg = require('./locale');
 var blockUtils = require('../block_utils');
+var BlockStyles = require('../blockly/constants').BlockStyles;
+var BlockColors = require('../blockly/constants').BlockColors;
+
+var msg = require('./locale');
 
 exports.install = function (blockly, blockInstallOptions) {
   var generator = blockly.getGenerator();
@@ -20,7 +23,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.planter_ifAtSoil = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOGIC,
+        BlockStyles.LOGIC
+      );
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg.soil()].join(' ')
       );
@@ -41,7 +48,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.planter_ifAtSprout = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOGIC,
+        BlockStyles.LOGIC
+      );
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg.sprout()].join(' ')
       );

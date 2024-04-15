@@ -1,7 +1,10 @@
 import React from 'react';
-import {UnconnectedRosterDialog as RosterDialog} from './RosterDialog';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+
 import {stubRailsAuthenticityToken} from '../../../test/util/stubRailsAuthenticityToken';
+
+import {UnconnectedRosterDialog as RosterDialog} from './RosterDialog';
 
 export default {
   name: 'RosterDialog',

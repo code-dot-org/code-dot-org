@@ -14,7 +14,7 @@ Although we are still early in terms of making a direct link between Computer Sc
 
 ## Our Research
 
-Our evaluation partner, [Outlier Research & Evaluation](http://outlier.uchicago.edu), examined relationships between student exposure to [CS Fundamentals](/educate/k5) Courses [1](http://studio.code.org/s/course1) and [2](http://studio.code.org/s/course2)  and mathematics, reading and science district test scores in a school district. The analysis was done for grades 1-4. The findings of the study overall are mixed as follows:
+Our evaluation partner, [Outlier Research & Evaluation](http://outlier.uchicago.edu), examined relationships between student exposure to [CS Fundamentals](/educate/k5) Courses [1](http://studio.code.org/s/course1?viewAs=Instructor) and [2](http://studio.code.org/s/course2?viewAs=Instructor) and mathematics, reading and science district test scores in a school district. The analysis was done for grades 1-4. The findings of the study overall are mixed as follows:
 
 - There were no significant relationships between exposure to Code.org lessons and mathematics, science or reading scores in any grades 1-4 with the following three exceptions.
 	- In the first grade there was a significantly positive relationship between exposure to Course 1 and mathematics scores

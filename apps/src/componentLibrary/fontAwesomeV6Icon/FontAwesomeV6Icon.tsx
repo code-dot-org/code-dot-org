@@ -1,5 +1,5 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 export interface FontAwesomeV6IconProps {
   /**
@@ -10,9 +10,19 @@ export interface FontAwesomeV6IconProps {
    *  * light - 300
    *  * thin - 100
    * */
-  iconStyle: 'solid' | 'regular' | 'light' | 'thin';
+  iconStyle?: 'solid' | 'regular' | 'light' | 'thin';
   /** Icon name */
   iconName: string;
+  /** FontAwesome V6 Animation type to use (use it if we want/need to animate icon)*/
+  animationType?:
+    | 'beat'
+    | 'beat-fade'
+    | 'bounce'
+    | 'fade'
+    | 'flip'
+    | 'shake'
+    | 'spin'
+    | 'spin-pulse';
   /**
    *  Icon title.
    *  Title should be used for semantic icons. If not given, the screenreader will not read the icon
@@ -38,10 +48,11 @@ export interface FontAwesomeV6IconProps {
  * Can can be used in any component in/out of the scope of Design System.
  */
 const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
-  iconStyle,
+  iconStyle = 'solid',
   iconName,
   className,
   title,
+  animationType,
 }) => {
   return (
     <i
@@ -49,6 +60,7 @@ const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
       className={classNames(
         iconStyle && `fa-${iconStyle}`,
         iconName && `fa-${iconName}`,
+        animationType && `fa-${animationType}`,
         className
       )}
       title={title}

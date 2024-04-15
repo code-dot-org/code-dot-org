@@ -1,0 +1,42 @@
+
+.scrollingContainer {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.scrollBar {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.bottomScrollBar {
+  position: fixed;
+  bottom: 0;
+}
+
+.emptyScrollContents {
+  // This is necessary for some browsers to show a horizontal scrollbar.
+  // Not entirely sure why, chrome works without, firefox doesn't.
+  height: 1px;
+}
+
+.scrollingContent {
+  width: 100%;
+  height: 100%;
+  // Add an invisible scroll bar to the content in order to enable two-finger scrolling.
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.scrollingContent::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.defaultScroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+}

@@ -8,7 +8,9 @@ require 'psych'
 require 'ruby-progressbar'
 require 'parallel'
 
-I18N_LOCALES_DIR = 'i18n/locales'.freeze
+I18N_DIR = 'i18n'.freeze
+I18N_CROWDIN_DIR = File.join(I18N_DIR, 'crowdin').freeze
+I18N_LOCALES_DIR = File.join(I18N_DIR, 'locales').freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
 I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
@@ -16,14 +18,39 @@ class I18nScriptUtils
   CROWDIN_CREDS_PATH = CDO.dir('bin/i18n/crowdin_credentials.yml').freeze
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count.freeze
-  SOURCE_LOCALE = 'en-US'.freeze
-  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
+  SOURCE_LOCALE = I18n.default_locale.to_s.freeze
+  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %I[#{SOURCE_LOCALE}]).freeze
   TESTING_BY_DEFAULT = false
 
   # @return [Hash] the Crowdin credentials.
   #   @option crowdin_creds [String] 'api_token' the Crowdin API token.
   def self.crowdin_creds
     @crowdin_creds ||= YAML.load_file(CROWDIN_CREDS_PATH).freeze
+  end
+
+  # Parses sync options from the command line
+  #
+  # @param options [Hash] the default options to populate
+  # @return [Hash] the parsed options
+  def self.parse_options(argv = ARGV, options: {})
+    options[:testing] = TESTING_BY_DEFAULT if options[:testing].nil?
+
+    OptionParser.new do |parser|
+      parser.on('-t', '--testing', 'Run in testing mode') do
+        options[:testing] = true
+      end
+
+      yield(parser, options) if block_given?
+    end.parse!(argv)
+
+    options
+  end
+
+  # List of supported CDO Languages
+  # @see https://docs.google.com/spreadsheets/d/10dS5PJKRt846ol9f9L3pKh03JfZkN7UIEcwMmiGS4i0 Supported CDO languages doc
+  # @return [Array<CdoLanguage>] Supported CDO languages
+  def self.cdo_languages
+    @cdo_languages ||= PegasusLanguages.all
   end
 
   # Because we log many of the i18n operations to slack, we often want to
@@ -197,7 +224,9 @@ class I18nScriptUtils
   # Note we could try here to remove the old version of the file both from the
   # filesystem and from github, but it would be significantly harder to also
   # remove it from Crowdin.
-  def self.unit_directory_change?(content_dir, unit_i18n_filename, unit_i18n_filepath)
+  def self.unit_directory_change?(content_dir, unit_i18n_filepath)
+    unit_i18n_filename = File.basename(unit_i18n_filepath)
+
     matching_files = Dir.glob(File.join(content_dir, "**", unit_i18n_filename)).reject do |other_filename|
       other_filename == unit_i18n_filepath
     end
@@ -308,8 +337,8 @@ class I18nScriptUtils
     ProgressBar.create(format: PROGRESS_BAR_FORMAT, **args)
   end
 
-  def self.process_in_threads(data_array, **args)
-    Parallel.each(data_array, in_threads: PARALLEL_PROCESSES, **args) {|data| yield(data)}
+  def self.process_in_threads(data_array, **args, &block)
+    Parallel.each(data_array, in_threads: PARALLEL_PROCESSES, **args, &block)
   end
 
   # Writes file
@@ -367,6 +396,10 @@ class I18nScriptUtils
     FileUtils.rm_r(from_dir)
   end
 
+  def self.crowdin_locale_dir(locale, *paths)
+    CDO.dir(I18N_CROWDIN_DIR, locale, *paths.compact)
+  end
+
   def self.locale_dir(locale, *paths)
     CDO.dir(I18N_LOCALES_DIR, locale, *paths)
   end
@@ -376,13 +409,5 @@ class I18nScriptUtils
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)
-  end
-
-  # Checks if the language is the i18n source language
-  #
-  # @param lang [PegasusLanguage] a pegasus language object
-  # @return [true, false]
-  def self.source_lang?(lang)
-    lang[:locale_s] == SOURCE_LOCALE
   end
 end

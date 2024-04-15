@@ -1,59 +1,99 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import color from '@cdo/apps/util/color';
-import LevelTypesBox from './LevelTypesBox';
-import TeacherActionsBox from './TeacherActionsBox';
-import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
+import React, {useState} from 'react';
 
-export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
-  const [isOpen, setIsOpen] = useState(false);
+import Link from '@cdo/apps/componentLibrary/link';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../FontAwesome';
+
+import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
+import LevelTypesBox from './LevelTypesBox';
+import MoreDetailsDialog from './MoreDetailsDialog.jsx';
+import TeacherActionsBox from './TeacherActionsBox';
+
+import styles from './progress-table-legend.module.scss';
+
+export default function IconKey({sectionId}) {
+  const [isOpen, setIsOpen] = useState(
+    tryGetLocalStorage('iconKeyIsOpen', 'true') !== 'false'
+  );
+  const [isIconDetailsOpen, setIconDetailsOpen] = useState(false);
+
+  const openMoreDetailsDialog = event => {
+    event.preventDefault();
+    setIconDetailsOpen(true);
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_MORE_DETAILS, {
+      sectionId: sectionId,
+    });
+  };
 
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
-  // TO-DO (TEACH-800): Make content responsive to view on page
-  // TO-DO (TEACH-801): Fix spacing between boxes once width of the page is expanded
   const sectionContent = () => (
-    <div>
-      <AssignmentCompletionStatesBox
-        isViewingLevelProgress={isViewingLevelProgress}
-        hasValidatedLevels={hasLevelValidation}
-      />
-      <TeacherActionsBox isViewingLevelProgress={true} />
+    <>
+      <AssignmentCompletionStatesBox />
+      <TeacherActionsBox />
       <LevelTypesBox />
-    </div>
+    </>
   );
 
-  const clickListener = () => setIsOpen(!isOpen);
+  const clickListener = () => {
+    trySetLocalStorage('iconKeyIsOpen', !isOpen);
+    setIsOpen(!isOpen);
+
+    if (!isOpen) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_ICON_KEY, {
+        sectionId: sectionId,
+      });
+    } else {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_ICON_KEY, {
+        sectionId: sectionId,
+      });
+    }
+  };
 
   return (
-    <div>
-      <Button
-        id="icon-key"
-        style={styles.label}
-        styleAsText
-        icon={caret(isOpen)}
-        onClick={clickListener}
-      >
-        {i18n.iconKey()}
-      </Button>
+    <div
+      className={styles.iconKey}
+      aria-expanded={isOpen}
+      aria-label={i18n.iconKey()}
+    >
+      <div className={styles.iconKeyHeader}>
+        <div
+          onClick={clickListener}
+          className={styles.iconKeyTitle}
+          data-testid="expandable-container"
+          role="button"
+          aria-expanded={isOpen}
+          tabIndex="0"
+        >
+          <Heading6>
+            <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
+            {i18n.iconKey()}
+          </Heading6>
+        </div>
+        <Link
+          type="primary"
+          size="s"
+          onClick={openMoreDetailsDialog}
+          className={styles.iconKeyMoreDetailsLink}
+        >
+          {i18n.moreDetails()}
+        </Link>
+      </div>
       {isOpen && sectionContent()}
+      {isIconDetailsOpen && (
+        <MoreDetailsDialog onClose={() => setIconDetailsOpen(false)} />
+      )}
     </div>
   );
 }
 
 IconKey.propTypes = {
-  isViewingLevelProgress: PropTypes.bool,
-  hasLevelValidation: PropTypes.bool,
-};
-
-const styles = {
-  label: {
-    fontFamily: 'Metropolis',
-    color: color.light_gray_900,
-    fontSize: '16px',
-    fontWeight: '600',
-    lineHeight: '148%',
-  },
+  sectionId: PropTypes.number,
 };

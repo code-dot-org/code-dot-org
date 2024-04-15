@@ -191,6 +191,7 @@ ja-JP:
   class_submission_out_of_school_summer_camp: サマーキャンプ
   classicmaze_name: 古典的な迷路
   code_hoc_coming: Hour of Codeはこちら - 12月8日 - 14日です！
+  code_org_logo_alt: Code.orgホーム
   code_sign_up: コンピュタサイエンス教育週間の間に参加する
   codea_beyond_gradelevel: 高校生以上
   codea_beyond_longdescription: iPad アプリの Codea ではゲーム作り、またはあなたの持っているアイデアを表現することができます。タッチ機能や加速度計を使って、そのアイデアを作品にしてみよう。Codea
@@ -841,6 +842,7 @@ ja-JP:
   header_about_us: 私たちについて
   header_course_catalog: コース カタログ
   header_courses: コース
+  header_districts: 地区
   header_documentation: ドキュメント
   header_educate_beyond: Code.org を超えて
   header_educate_community: オンライン コミュニティ
@@ -867,6 +869,7 @@ ja-JP:
   header_project_gallery: プロジェクト
   header_report_abuse: 不正行為を報告
   header_report_bug: バグを報告
+  header_schools: 学校
   header_screen_reader_hamburger: メニュー
   header_screen_reader_help: "[ヘルプ] メニュー"
   header_sections: セクション

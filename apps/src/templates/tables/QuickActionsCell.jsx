@@ -1,11 +1,13 @@
+import throttle from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '../../util/color';
+
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
-import styleConstants from '../../styleConstants';
-import throttle from 'lodash/debounce';
-import FontAwesome from '../FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+import FontAwesome from '../FontAwesome';
 
 export const QuickActionsCellType = {
   header: 'header',
@@ -145,13 +147,11 @@ const styles = {
     [QuickActionsCellType.body]: {
       border: '1px solid ' + color.white,
       borderRadius: 5,
-      color: color.darker_gray,
       margin: 3,
     },
     [QuickActionsCellType.header]: {
       fontSize: 20,
       lineHeight: '15px',
-      color: color.charcoal,
     },
   },
   hoverFocus: {
@@ -159,7 +159,6 @@ const styles = {
       backgroundColor: color.lighter_gray,
       border: '1px solid ' + color.light_gray,
       borderRadius: 5,
-      color: color.white,
     },
   },
 };

@@ -71,6 +71,7 @@
 
 require 'digest/md5'
 require 'cdo/aws/metrics'
+require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
@@ -107,6 +108,8 @@ class User < ApplicationRecord
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
+  #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
+  #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -144,8 +147,12 @@ class User < ApplicationRecord
     country_code
     family_name
     ai_rubrics_disabled
+    ai_rubrics_tour_seen
     sort_by_family_name
     show_progress_table_v2
+    progress_table_v2_closed_beta
+    lti_roster_sync_enabled
+    ai_tutor_access_denied
   )
 
   attr_accessor(
@@ -190,8 +197,8 @@ class User < ApplicationRecord
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = 'student'.freeze,
-    TYPE_TEACHER = 'teacher'.freeze
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
   validates_presence_of :user_type
@@ -212,6 +219,7 @@ class User < ApplicationRecord
     through: :regional_partner_program_managers
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
+  has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
@@ -277,13 +285,15 @@ class User < ApplicationRecord
     Services::Lti.create_lti_user_identity(self)
   end
 
+  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
+
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
     self.gender = Policies::Gender.normalize gender
   end
 
-  validate :validate_us_state, on: :create
+  validate :validate_us_state, if: -> {us_state.present?}
 
   before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
     Services::ChildAccount.lock_out(self)
@@ -300,6 +310,10 @@ class User < ApplicationRecord
 
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
   validates :gender_teacher_input, no_utf8mb4: true
+
+  validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
+    self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
+  end
 
   def save_email_preference
     if teacher?
@@ -490,7 +504,7 @@ class User < ApplicationRecord
 
   has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
-  has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
+  has_many :sections_instructed, -> {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
 
   # "sections" previously referred to what is now called :sections_owned.
   def sections
@@ -499,7 +513,7 @@ class User < ApplicationRecord
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections_owned, dependent: :destroy, class_name: 'Section'
-  has_many :followers, through: :sections_instructed
+  has_many :followers, -> {without_deleted}, through: :sections_instructed
   has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a
@@ -533,7 +547,7 @@ class User < ApplicationRecord
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
+  validates_format_of :username, with: USERNAME_REGEX, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
   validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
@@ -1357,7 +1371,19 @@ class User < ApplicationRecord
     user_levels_by_level = user_levels_by_level(script)
 
     script.script_levels.none? do |script_level|
-      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      user_levels = []
+      script_level.levels.each do |level|
+        curr_user_level = user_levels_by_level[level.id]
+
+        # If level.id is not present in user_levels_by_level, check if level has contained_levels with present ids
+        if !curr_user_level && !level.contained_levels.empty?
+          level.contained_levels.each do |contained_level|
+            user_levels.push(user_levels_by_level[contained_level.id])
+          end
+        else
+          user_levels.push(curr_user_level)
+        end
+      end
       unpassed_progression_level?(script_level, user_levels)
     end
   end
@@ -1468,6 +1494,10 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
+  def verify_teacher!
+    self.permission = UserPermission::AUTHORIZED_TEACHER
+  end
+
   # This method just checks if a user has the authorized teacher permission
   # if you are hoping to know if someone can access content for verified instructors
   # you should use the verified_instructor? method instead which includes checks for a
@@ -1496,12 +1526,28 @@ class User < ApplicationRecord
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
   end
 
+  def can_view_student_ai_chat_messages?
+    sections.any?(&:assigned_csa?) &&
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+  end
+
   # Students
   def has_ai_tutor_access?
-    !DCDO.get('ai-tutor-disabled', false) && (
-    permission?(UserPermission::AI_TUTOR_ACCESS) ||
-      (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)))
+    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
+    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
+  end
+
+  private def ai_tutor_feature_globally_disabled?
+    DCDO.get('ai-tutor-disabled', false)
+  end
+
+  private def permission_for_ai_tutor?
+    permission?(UserPermission::AI_TUTOR_ACCESS)
+  end
+
+  private def in_ai_tutor_experiment_with_enabled_section?
+    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
+      sections_as_student.any?(&:ai_tutor_enabled)
   end
 
   def student_of_verified_instructor?
@@ -1878,6 +1924,34 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
+  def pl_units_started
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self)
+    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
+    pl_scripts = pl_user_scripts.map(&:script)
+
+    user_levels = UserLevel.where(user: self, script: pl_scripts)
+    return [] if user_levels.empty?
+    user_levels_by_script = user_levels.group_by(&:script_id)
+    percent_completed_by_script = {}
+    pl_scripts.each do |pl_script|
+      levels_completed = (user_levels_by_script[pl_script.id] || []).count(&:passing?)
+      total_levels = pl_script.levels.count
+      next if total_levels == 0
+      percent_completed_by_script[pl_script.id] = ((levels_completed.to_f / total_levels) * 100).round
+    end
+
+    pl_scripts.map do |script|
+      percent_completed = percent_completed_by_script[script.id] || 0
+      {
+        name: script.name,
+        title: script.title_for_display,
+        percent_completed: percent_completed,
+        finish_url: percent_completed == 100 ? script.finish_url : nil,
+        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name
+      }
+    end
+  end
+
   # Return a collection of courses and scripts for the user.
   # First in the list will be courses enrolled in by the user's sections.
   # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
@@ -2160,6 +2234,7 @@ class User < ApplicationRecord
       age: age,
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
+      ai_tutor_access_denied: !!ai_tutor_access_denied,
     }
   end
 

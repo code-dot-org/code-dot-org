@@ -6,6 +6,7 @@
     "background": "music-black",
     "hide_share_and_remix": "false",
     "level_data": {
+      "library": "intro2024",
       "text": "Try everything!",
       "startSources": {
         "blocks": {

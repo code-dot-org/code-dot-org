@@ -1,7 +1,9 @@
-import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
+import React from 'react';
+
 import {ImageWithStatus} from '@cdo/apps/templates/ImageWithStatus';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 const BOGUS_IMAGE_URL = '/nonexistent.png';

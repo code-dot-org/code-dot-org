@@ -93,6 +93,7 @@ class Level < ApplicationRecord
     bubble_choice_description
     thumbnail_url
     start_libraries
+    ai_tutor_available
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -293,7 +294,7 @@ class Level < ApplicationRecord
 
   def report_bug_url(request)
     message = "Bug in Level #{name}\n#{request.url}\n#{request.user_agent}\n"
-    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+    "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
@@ -513,12 +514,18 @@ class Level < ApplicationRecord
     unplugged? || properties["display_as_unplugged"] == "true"
   end
 
+  def ai_tutor_available?
+    properties["ai_tutor_available"] == "true"
+  end
+
   def summarize
     {
       level_id: id.to_s,
       type: self.class.to_s,
       name: name,
-      display_name: display_name
+      display_name: display_name,
+      is_validated: validated?,
+      can_have_feedback: can_have_feedback?
     }
   end
 
@@ -724,6 +731,52 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_validations
+    if should_localize?
+      validations_clone = validations.map(&:clone)
+      validations_clone.each do |validation|
+        validation['message'] = I18n.t(
+          validation["key"],
+          scope: [:data, :validations, name],
+          default: validation["message"],
+          smart: true
+        )
+      end
+      validations_clone
+    else
+      validations
+    end
+  end
+
+  def localized_panels
+    if should_localize?
+      panels_clone = panels.map(&:clone)
+      panels_clone.each do |panel|
+        panel['text'] = I18n.t(
+          panel["key"],
+          scope: [:data, :panels, name],
+          default: panel["text"],
+          smart: true
+        )
+      end
+      panels_clone
+    else
+      panels
+    end
+  end
+
+  # FND-985 Create shared API to get localized level properties.
+  def get_localized_property(property_name)
+    if should_localize? && try(property_name)
+      I18n.t(
+        name,
+        scope: [:data, property_name],
+        default: nil,
+        smart: true
+      )
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -784,15 +837,29 @@ class Level < ApplicationRecord
   def summarize_for_lab2_properties(script)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
+    properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
+    properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
+    # Localized properties
+    properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
+    properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
+    properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
     properties_camelized
   end
 
   def project_type
     return game&.app
+  end
+
+  # Whether this level has validation for the completion of student work.
+  def validated?
+    if uses_lab2?
+      return properties.dig('level_data', 'validations').present?
+    end
+    properties['validation_code'].present? || properties['success_condition'].present?
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

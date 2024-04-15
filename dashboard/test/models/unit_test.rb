@@ -7,6 +7,8 @@ class UnitTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)
     # Level names match those in 'test.script'
@@ -2433,9 +2435,21 @@ class UnitTest < ActiveSupport::TestCase
     assert_includes error.message, 'Instruction type must be set on the unit if its a standalone unit.'
   end
 
-  private
+  test 'finish_url returns unit group finish url if in a unit group' do
+    unit_group = create :unit_group
+    unit = create :script
+    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+    unit.reload
 
-  def has_unlaunched_unit?(units)
+    assert unit.finish_url.include?(unit_group.name)
+  end
+
+  test 'finish_url returns unit finish url if not in a unit group' do
+    unit = create :script, is_course: true
+    assert unit.finish_url.include?(unit.name)
+  end
+
+  private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end
 end

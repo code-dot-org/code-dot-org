@@ -172,6 +172,7 @@ th-TH:
   class_submission_out_of_school_summer_camp: ค่ายซัมเมอร์
   classicmaze_name: เขาวงกตสุดคลาสสิค
   code_hoc_coming: นี่คือ Hour of Code - 8-14 ธันวาคม!
+  code_org_logo_alt: Code.org หน้าหลัก
   code_sign_up: ลงทะเบียนเพื่อเข้าร่วมในช่วงสัปดาห์ของวิทยาการคอมพิวเตอร์
   codea_beyond_gradelevel: มัธยมศึกษาตอนปลาย +
   codea_beyond_longdescription: Codea สำหรับ iPad ช่วยให้คุณสร้างเกมและสถานการณ์จำลอง
@@ -808,6 +809,7 @@ th-TH:
   header_about_us: เกี่ยวกับเรา
   header_course_catalog: รายการหลักสูตร
   header_courses: คอร์ส
+  header_districts: อำเภอ
   header_documentation: เอกสารประกอบ
   header_educate_beyond: นอกเหนือจากรหัส.org
   header_educate_community: ชุมชนออนไลน์
@@ -830,6 +832,7 @@ th-TH:
   header_professional_learning: การเรียนรู้อย่างมืออาชีพ
   header_project_gallery: โปรเจกต์
   header_report_bug: รายงานปัญหา
+  header_schools: โรงเรียน
   header_sections: ส่วนต่างๆ ของชั้นเรียน
   header_stats: สถิติ
   header_teach: สอน

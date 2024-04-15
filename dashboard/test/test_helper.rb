@@ -133,7 +133,7 @@ class ActiveSupport::TestCase
   include ActiveSupport::Testing::TransactionalTestCase
   include CaptureQueries
 
-  setup_all do
+  def seed_deprecated_unit_fixtures
     # Some of the functionality we're testing here relies on Scripts with
     # certain hardcoded names. In the old fixture-based model, this data was
     # all provided; in the new factory-based model, we need to do a little
@@ -174,30 +174,22 @@ class ActiveSupport::TestCase
     end
   end
 
-  def assert_creates(*args)
-    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
-      yield
-    end
+  def assert_creates(*args, &block)
+    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
 
-  def assert_does_not_create(*args)
-    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
-      yield
-    end
+  def assert_does_not_create(*args, &block)
+    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
   alias refute_creates assert_does_not_create
   alias refute_creates_or_destroys assert_does_not_create
 
-  def assert_destroys(*args)
-    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1) do
-      yield
-    end
+  def assert_destroys(*args, &block)
+    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1, &block)
   end
 
-  def assert_does_not_destroy(*args)
-    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
-      yield
-    end
+  def assert_does_not_destroy(*args, &block)
+    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
 
   #

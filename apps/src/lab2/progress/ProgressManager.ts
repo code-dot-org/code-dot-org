@@ -1,12 +1,13 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {ProjectLevelData, Condition} from '@cdo/apps/lab2/types';
+import {Condition, Validation} from '@cdo/apps/lab2/types';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
 export abstract class Validator {
   abstract shouldCheckConditions(): boolean;
+  abstract shouldCheckNextConditionsOnly(): boolean;
   abstract checkConditions(): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
@@ -28,13 +29,13 @@ export const getInitialValidationState: () => ValidationState = () => ({
 });
 
 export default class ProgressManager {
-  private levelData: ProjectLevelData | undefined;
+  private currentValidations: Validation[] | undefined;
   private validator: Validator | undefined;
   private onProgressChange: () => void;
   private currentValidationState: ValidationState;
 
   constructor(onProgressChange: () => void) {
-    this.levelData = undefined;
+    this.currentValidations = undefined;
     this.onProgressChange = onProgressChange;
     this.currentValidationState = getInitialValidationState();
   }
@@ -43,8 +44,8 @@ export default class ProgressManager {
    * Update the ProgressManager with level data for a new level.
    * Resets validation status internally.
    */
-  onLevelChange(levelData?: ProjectLevelData) {
-    this.levelData = levelData;
+  onLevelChange(validations?: Validation[]) {
+    this.currentValidations = validations;
     this.resetValidation();
   }
 
@@ -57,9 +58,7 @@ export default class ProgressManager {
   }
 
   updateProgress(): void {
-    const validations = this.levelData?.validations;
-
-    if (!validations || !this.validator) {
+    if (!this.currentValidations || !this.validator) {
       return;
     }
 
@@ -76,7 +75,13 @@ export default class ProgressManager {
     this.validator.checkConditions();
 
     // Go through each validation to see if we have a match.
-    for (const validation of validations) {
+    for (const validation of this.currentValidations) {
+      // If it's a non-successful validation (i.e. validation.next is false), then
+      // make sure the lab-specific validator is ready for it.
+      if (this.validator.shouldCheckNextConditionsOnly() && !validation.next) {
+        continue;
+      }
+
       if (validation.conditions) {
         // Ask the lab-specific validator if this validation's
         // conditions are met.
@@ -103,8 +108,7 @@ export default class ProgressManager {
     }
 
     const hasConditions =
-      (this.levelData?.validations && this.levelData.validations.length > 0) ||
-      false;
+      (this.currentValidations && this.currentValidations.length > 0) || false;
 
     this.currentValidationState = {
       hasConditions,

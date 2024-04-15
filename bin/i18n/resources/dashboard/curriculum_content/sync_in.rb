@@ -29,7 +29,7 @@ module I18n
 
               name = "#{unit.name}.json"
               i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, get_unit_subdirectory(unit), name)
-              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, name, i18n_source_file_path)
+              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, i18n_source_file_path)
 
               i18n_data = i18n_data_of(unit)
               next if i18n_data.blank?
@@ -41,9 +41,7 @@ module I18n
             end
           end
 
-          private
-
-          def translatable_units
+          private def translatable_units
             # Eager loads Unit resources needed for Curriculum i18n data serialization,
             # see: Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer
             @translatable_units ||= Unit.where(name: ScriptConstants::TRANSLATEABLE_UNITS).includes(
@@ -52,7 +50,7 @@ module I18n
             )
           end
 
-          def i18n_data_of(unit)
+          private def i18n_data_of(unit)
             # Select only lessons that pass `numbered_lesson?` for consistent `relative_position` values
             # throughout our translation pipeline
             i18n_data = UNIT_SERIALIZER.new(unit, scope: {only_numbered_lessons: true}).as_json.compact
@@ -67,7 +65,7 @@ module I18n
             i18n_data.compact_blank! # don't want any empty values
           end
 
-          def redact_file_content(i18n_source_file_path)
+          private def redact_file_content(i18n_source_file_path)
             i18n_original_file_path = i18n_source_file_path.sub(I18N_SOURCE_DIR_PATH, I18N_BACKUP_DIR_PATH)
             I18nScriptUtils.copy_file(i18n_source_file_path, i18n_original_file_path)
 
@@ -76,7 +74,7 @@ module I18n
 
           # Helper method to get the desired destination subdirectory of the given
           # unit for the sync in. Note this may be a nested directory like "2021/csf"
-          def get_unit_subdirectory(unit)
+          private def get_unit_subdirectory(unit)
             # special-case Hour of Code units.
             return 'Hour of Code' if Unit.unit_in_category?('hoc', unit.name)
 

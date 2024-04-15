@@ -96,32 +96,12 @@ describe I18n::Utils::SyncUpBase do
   describe '.parse_options' do
     let(:parse_options) {described_class.parse_options}
 
-    it 'returns default options' do
-      _(parse_options).must_equal({testing: false})
-    end
+    it 'returns parsed options' do
+      parsed_options = {parsed: 'options'}
 
-    describe ':testing' do
-      let(:option_testing) {parse_options[:testing]}
+      I18nScriptUtils.expects(:parse_options).returns(parsed_options)
 
-      context 'when "-t" command line option is set' do
-        before do
-          ARGV << '-t'
-        end
-
-        it 'returns true' do
-          _(option_testing).must_equal true
-        end
-      end
-
-      context 'when "--testing" command line option is set' do
-        before do
-          ARGV << '--testing'
-        end
-
-        it 'returns true' do
-          _(option_testing).must_equal true
-        end
-      end
+      _(parse_options).must_equal parsed_options
     end
   end
 
@@ -173,12 +153,14 @@ describe I18n::Utils::SyncUpBase do
     let(:perform) {described_instance.send(:perform)}
 
     let(:crowdin_project) {'expected_crowdin_project'}
-    let(:base_path) {'expected_base_path'}
+    let(:base_path) {'/expected_base_path'}
+
+    let(:crowdin_dir_path) {'/expected_crowdin_dir_path'}
+    let(:source_file_path) {File.join(base_path, crowdin_dir_path, 'expected_source_file_path')}
+    let(:source_files) {[source_file_path]}
 
     let(:config) {stub(crowdin_project: crowdin_project, base_path: base_path)}
-
     let(:crowdin_client) {stub}
-    let(:source_files) {['expected_source_file_path']}
 
     before do
       described_class.stubs(:config).returns(config)
@@ -187,38 +169,11 @@ describe I18n::Utils::SyncUpBase do
     end
 
     it 'uploads source files' do
-      crowdin_client.expects(:upload_source_files).with(source_files, base_path: base_path).once
+      crowdin_client.
+        expects(:upload_source_file).
+        with(source_file_path, crowdin_dir_path).once
+
       perform
-    end
-  end
-
-  describe '#options' do
-    let(:options) {described_instance.send(:options)}
-
-    it 'returns instance of Options struct' do
-      _(options).must_be_instance_of described_class::Options
-    end
-
-    it 'is frozen' do
-      _(options).must_be :frozen?
-    end
-
-    describe ':testing' do
-      let(:option_testing) {options.testing}
-
-      it 'returns false by default' do
-        _(option_testing).must_equal false
-      end
-
-      context 'when value is provided' do
-        let(:described_instance) {described_class.new(testing: expected_option_testing)}
-
-        let(:expected_option_testing) {'expected_option_testing'}
-
-        it 'returns provided value' do
-          _(option_testing).must_equal expected_option_testing
-        end
-      end
     end
   end
 
@@ -229,7 +184,7 @@ describe I18n::Utils::SyncUpBase do
     let(:crowdin_test_project) {'expected_crowdin_test_project'}
 
     let(:config) {stub(crowdin_project: crowdin_prod_project)}
-    let(:options) {stub(testing: is_testing)}
+    let(:options) {{testing: is_testing}}
 
     let(:is_testing) {false}
 

@@ -1,11 +1,14 @@
-import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import CourseCard from './CourseCard';
-import ContentContainer from '../ContentContainer';
-import Button from '../Button';
-import shapes from './shapes';
-import color from '../../util/color';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import Button from '../Button';
+import ContentContainer from '../ContentContainer';
+
+import CourseCard from './CourseCard';
+import shapes from './shapes';
 
 // This component - used on the teacher and student homepages -
 // shows a button to view more courses if the user has more than a few courses.

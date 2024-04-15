@@ -1,0 +1,20 @@
+@import 'color.scss';
+
+@mixin sound-type-style($type, $color, $fill, $background, $border) {
+  &#{$type} {
+    &Color { color: $color }
+    &Fill { fill: $fill }
+    &Background { background: $background }
+    &Border { border-color: $border }
+  }
+}
+
+.sound {
+  @include sound-type-style(Beat, #FC55FF, #FC55FF, #89308a, #FC55FF);
+  @include sound-type-style(Bass, #00C0FF, #00C0FF, #03789e, #00C0FF);
+  @include sound-type-style(Lead, #23C347, #23C347, #14742a, #23C347);
+  @include sound-type-style(Fx, #E3CB0C, #E3CB0C, #928308, #E3CB0C);
+  @include sound-type-style(Vocal, #ff8c00, #ff8c00, #a35a02, #ff8c00);
+  @include sound-type-style(Pattern, black, black, black, $neutral_light);
+  @include sound-type-style(Chord, $light_cyan, $light_cyan, $light_cyan, $neutral_dark80);
+}

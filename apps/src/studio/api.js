@@ -1,5 +1,6 @@
-import {SpriteSize, SpriteSpeed} from './constants';
 import {randomValue} from '../utils';
+
+import {SpriteSize, SpriteSpeed} from './constants';
 
 exports.SpriteSpeed = SpriteSpeed;
 exports.SpriteSize = SpriteSize;

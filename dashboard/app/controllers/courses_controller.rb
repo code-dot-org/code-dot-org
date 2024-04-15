@@ -34,7 +34,6 @@ class CoursesController < ApplicationController
     @is_english = request.language == 'en'
     @is_signed_out = current_user.nil?
     @force_race_interstitial = params[:forceRaceInterstitial]
-    @courses_announcement = Announcements.get_localized_announcement_for_page("/courses")
     @modern_elementary_courses_available = Unit.modern_elementary_courses_available?(request.locale)
   end
 
@@ -181,8 +180,8 @@ class CoursesController < ApplicationController
   private def check_plc_enrollment
     if @unit_group.plc_course
       authorize! :show, Plc::UserCourseEnrollment
-      user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
-      render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
+      @summarized_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)&.summarize]
+      render 'plc/user_course_enrollments/index', locals: {summarized_course_enrollments: @summarized_course_enrollments}
       return
     end
   end

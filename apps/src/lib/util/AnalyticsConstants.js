@@ -1,6 +1,12 @@
 // Analytics constants used within the apps directory.
 // (See pegasus/helpers/analytics_constants.rb for constants in the
 // pegasus directory)
+const PLATFORMS = {
+  AMPLITUDE: 'Amplitude',
+  STATSIG: 'Statsig',
+  BOTH: 'Both',
+};
+
 const EVENTS = {
   // Sign-up flow
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
@@ -10,6 +16,30 @@ const EVENTS = {
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
   TEACHER_LOGIN_EVENT: 'Teacher Login',
+  ACCOUNT_SETTINGS_PAGE_VISITED: 'Account Settings Page Visited',
+
+  // School Association
+  // Update School Info Dialog
+  UPDATE_SCHOOL_INFO_DIALOG_SHOWN: 'Update School Info Dialog Shown',
+  UPDATE_SCHOOL_INFO_DIALOG_CLOSED: 'Update School Info Dialog Closed',
+  CONFIRM_SCHOOL_CLICKED: 'Confirm School Clicked',
+  UPDATE_SCHOOL_CLICKED: 'Update School Clicked',
+
+  // School Interstitial
+  SCHOOL_INTERSTITIAL_SHOW: 'School Interstitial Shown',
+  SCHOOL_INTERSTITIAL_SUBMIT: 'School Interstitial Submitted',
+  SCHOOL_INTERSTITIAL_SAVE_SUCCESS: 'School Interstitial Save Success',
+  SCHOOL_INTERSTITIAL_SAVE_FAILURE: 'School Interstitial Save Failure',
+  SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
+
+  // School Selection Component
+  COUNTRY_SELECTED: 'User Selects Country',
+  ZIP_CODE_ENTERED: 'Valid Zip Code Entered',
+  SCHOOL_SEARCH_INPUT_ENTERED: 'School Search Input Entered',
+  SCHOOL_SELECTED_FROM_LIST: 'School Selected from Dropdown',
+  ADD_MANUALLY_CLICKED: 'User Elects to Add School Name Manually',
+  DO_NOT_TEACH_AT_SCHOOL_CLICKED:
+    'User Clicks I Do Not Teach In A School Setting',
 
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
@@ -61,6 +91,20 @@ const EVENTS = {
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
+  // Section progress v2
+  PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
+  PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
+  PROGRESS_V2_VIEW_OLD_PROGRESS: 'Old Progress Link Clicked',
+  PROGRESS_V2_CHANGE_UNIT: 'Section New Progress Unit Changed',
+  PROGRESS_V2_LESSON_EXPAND: 'Section New Progress Lesson Expand',
+  PROGRESS_V2_LESSON_COLLAPSE: 'Section New Progress Lesson Collapse',
+  PROGRESS_V2_EXPAND_CHOICE_LEVEL: 'Section New Progress Choice Expand',
+  PROGRESS_V2_COLLAPSE_CHOICE_LEVEL: 'Section New Progress Choice Collapse',
+  PROGRESS_V2_EXPAND_ICON_KEY: 'Section New Progress Icon Key Expand',
+  PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
+  PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
+  PROGRESS_V2_VIEW_LEVEL_DETAILS: 'Section New Progress Level Details',
+
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
   RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
@@ -102,12 +146,23 @@ const EVENTS = {
   TA_RUBRIC_RUN_BUTTON_CLICKED:
     'TA Rubric Teacher clicked RUN button on student work',
   TA_RUBRIC_LEARNING_GOAL_SELECTED: 'TA Rubric Learning Goal Selected',
+  TA_RUBRIC_DROPDOWN_STUDENT_SELECTED: 'TA Rubric Student Switched',
+  TA_RUBRIC_CSV_DOWNLOADED: 'TA Rubric CSV Downloaded',
+  TA_RUBRIC_INDIVIDUAL_AI_EVAL: 'TA Rubric Individual AI Eval Requested',
+  TA_RUBRIC_SECTION_AI_EVAL: 'TA Rubric Section AI Eval Requested',
+  TA_RUBRIC_AI_PAGE_VISITED: 'TA Rubric AI Level Page Visited',
+  TA_RUBRIC_STUDENT_AI_SUBMITTED: 'TA Rubric Student AI Level Submitted',
+  TA_RUBRIC_AI_EVAL_FROM_SECTION:
+    'TA Rubric AI Eval started from section request',
+  TA_RUBRIC_WINDOW_MOVE_START: 'TA Rubric window move start',
+  TA_RUBRIC_WINDOW_MOVE_END: 'TA Rubric window move end',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
   AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
   AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
   AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
+  AI_TUTOR_ASK_GENERAL_CHAT: 'AI Tutor was asked a question in general chat',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
@@ -135,9 +190,11 @@ const EVENTS = {
   VIDEO_PAUSED: 'Video Paused',
   VIDEO_ENDED: 'Video Played To Completion',
 
+  // congrats and certificates
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
-  TEACHER_HOC_CONGRATS_PAGE_VISITED:
-    'Teacher Hour of Code Congrats Page Visited ',
+  TEACHER_VISITED_CONGRATS_PAGE: 'Teacher Visited Congrats Page',
+  CERTIFICATE_SHARED: 'Certificate Shared',
+  CERTIFICATE_PRINT_PAGE_VISITED: 'Certificate Print Page Visited',
 
   // Coteacher
   COTEACHER_INVITE_SENT: 'Coteacher Invite Sent',
@@ -148,11 +205,54 @@ const EVENTS = {
 
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
+
+  // Header Create menu
+  SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
+    'Signed Out User Clicks Create Dropdown',
+  SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
+    'Signed Out User Selects Create Dropdown Option',
+
+  // Project sharing via 'Share' button
+  SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
+  SHARING_LINK_COPY: 'User Clicks Project Copy Link In Share Dialog',
+  SHARING_PUBLISH: 'User Clicks Publish In Project Share Dialog',
+  SHARING_FB: 'User Clicks Facebook Icon In Project Share Dialog',
+  SHARING_TWITTER: 'User Clicks Twitter Icon In Project Share Dialog',
+  SHARING_LINK_SEND_TO_PHONE:
+    'User Clicks Send To Phone In Project Share Dialog',
+  SHARING_CLOSE_ESCAPE: 'User Clicks X Or Esc Button In Project Share Dialog',
+
+  // Project sharing via 'Finish' button
+  FINISH_SHARING_LINK_COPY:
+    'User Clicks Project Copy Link In Finish Congrats Dialog',
+  FINISH_SHARING_PUBLISH: 'User Clicks Publish In Finish Congrats Dialog',
+  FINISH_SHARING_FB: 'User Clicks Facebook Icon In Finish Congrats Dialog',
+  FINISH_SHARING_TWITTER: 'User Clicks Twitter Icon In Finish Congrats Dialog',
+  FINISH_SHARING_LINK_SEND_TO_PHONE:
+    'User Clicks Send To Phone In Finish Congrats Dialog',
+  FINISH_BUTTON_CERTIFICATE:
+    'User Clicks on Finish Button in Finish Congrats Dialog - Certificate',
+
+  // Export app
+  EXPORT_APP: 'User Exports App From Share Advanced Options',
+
+  // Curriculumm Recommender
+  RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
+  RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
+    'Recommended Similar Curriculum Clicked',
+  RECOMMENDED_STRETCH_CURRICULUM_CLICKED:
+    'Recommended Stretch Curriculum Clicked',
+
+  // LTI Incubator
+  LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
+  LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
 };
 
 const EVENT_GROUP_NAMES = {
   VIDEO_EVENTS: 'video-events',
   DANCE_PARTY: 'dance-party-events',
+  PROJECT_SHARING: 'project-sharing-events',
+  FINISH_PROJECT_SHARING: 'finish-project-sharing-events',
 };
 
 const EVENT_GROUPS = {
@@ -174,6 +274,23 @@ const EVENT_GROUPS = {
   [EVENTS.VIDEO_STARTED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
   [EVENTS.VIDEO_PAUSED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
   [EVENTS.VIDEO_ENDED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
+
+  // Project sharing via 'Share' button
+  [EVENTS.SHARING_LINK_COPY]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_PUBLISH]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_FB]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_TWITTER]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_LINK_SEND_TO_PHONE]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_CLOSE_ESCAPE]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+
+  // Project sharing via 'Finish' button
+  [EVENTS.FINISH_SHARING_LINK_COPY]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_SHARING_PUBLISH]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_SHARING_FB]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_SHARING_TWITTER]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_SHARING_LINK_SEND_TO_PHONE]:
+    EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_BUTTON_CERTIFICATE]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS};

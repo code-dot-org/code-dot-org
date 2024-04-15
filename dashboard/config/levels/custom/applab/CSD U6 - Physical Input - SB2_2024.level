@@ -50,10 +50,10 @@
     "parent_level_id": 20603,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/circuits-and-leds",
+      "/courses/csd-2024/guides/circuits-and-leds",
       "/maker/setup"
     ],
-    "map_reference": "/courses/csd-2022/guides/circuits-and-buttons",
+    "map_reference": "/courses/csd-2024/guides/circuits-and-buttons",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

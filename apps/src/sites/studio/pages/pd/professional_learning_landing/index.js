@@ -16,7 +16,10 @@ $(() => {
       lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
       lastWorkshopSurveyCourse={landingPageData['last_workshop_survey_course']}
       deeperLearningCourseData={landingPageData['summarized_plc_enrollments']}
+      currentYearApplicationId={landingPageData['current_year_application_id']}
+      workshopsAsParticipant={landingPageData['workshops_as_participant']}
+      plCoursesStarted={landingPageData['pl_courses_started']}
     />,
-    document.getElementById('landing-page-container')
+    document.getElementById('pl-landing-page-container')
   );
 });

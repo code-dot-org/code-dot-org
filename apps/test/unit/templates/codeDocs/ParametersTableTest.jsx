@@ -1,7 +1,9 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import ParametersTable from '@cdo/apps/templates/codeDocs/ParametersTable';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ParametersTable', () => {
   let defaultParameters;

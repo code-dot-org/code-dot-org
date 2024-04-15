@@ -1,9 +1,11 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import {rubricShape} from './rubricShapes';
+import {reportingDataShape, rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 export const STATUS = {
   // we are waiting for initial status from the server
@@ -42,6 +44,7 @@ export default function RunAIAssessmentButton({
   studentName,
   status,
   setStatus,
+  reportingData,
 }) {
   const rubricId = rubric.id;
   const [csrfToken, setCsrfToken] = useState('');
@@ -53,11 +56,10 @@ export default function RunAIAssessmentButton({
   );
 
   const studentButtonText = () => {
-    return i18n.runAiAssessment({
-      studentName: studentName,
-    });
+    return i18n.runAiAssessment();
   };
 
+  // fetch initial status
   useEffect(() => {
     if (!!rubricId && !!studentUserId) {
       fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
@@ -93,6 +95,7 @@ export default function RunAIAssessmentButton({
     }
   }, [rubricId, studentUserId, setStatus]);
 
+  // poll for status updates
   useEffect(() => {
     if (polling && !!rubricId && !!studentUserId) {
       const intervalId = setInterval(() => {
@@ -134,6 +137,16 @@ export default function RunAIAssessmentButton({
     setStatus(STATUS.EVALUATION_PENDING);
     const url = `/rubrics/${rubricId}/run_ai_evaluations_for_user`;
     const params = {user_id: studentUserId};
+    const eventName = EVENTS.TA_RUBRIC_INDIVIDUAL_AI_EVAL;
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        ...(reportingData || {}),
+        rubricId: rubricId,
+        studentId: studentUserId,
+      },
+      PLATFORMS.BOTH
+    );
     fetch(url, {
       method: 'POST',
       headers: {
@@ -155,10 +168,10 @@ export default function RunAIAssessmentButton({
           <Button
             className="uitest-run-ai-assessment"
             text={studentButtonText()}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            color={Button.ButtonColor.neutralDark}
             onClick={handleRunAiAssessment}
             style={{margin: 0}}
-            disabled={status !== STATUS.READY}
+            disabled={status !== STATUS.READY && status !== STATUS.ERROR}
           >
             {polling && <i className="fa fa-spinner fa-spin" />}
           </Button>
@@ -178,4 +191,5 @@ RunAIAssessmentButton.propTypes = {
   studentName: PropTypes.string,
   status: PropTypes.string,
   setStatus: PropTypes.func,
+  reportingData: reportingDataShape,
 };

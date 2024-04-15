@@ -14,6 +14,8 @@ import DCDO from '@cdo/apps/dcdo';
 const queryString = require('query-string');
 
 const experiments = module.exports;
+// Needed to support TypeScript usage.
+export default experiments;
 const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
@@ -32,7 +34,6 @@ experiments.I18N_TRACKING = 'frontend-i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
 experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
@@ -46,14 +47,18 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 experiments.CPA_EXPERIENCE = 'cpa_experience';
 experiments.AI_RUBRICS = 'ai-rubrics';
 experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
-//Experiment for AI Rubrics redesign
-experiments.AI_RUBRICS_REDESIGN = 'ai-rubrics-redesign';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 // Uses Google Blockly for a given user across labs/levels until the experiment is disabled
 experiments.GOOGLE_BLOCKLY = 'google_blockly';
 // Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
 experiments.SPRITE_LAB_DOCS = 'sl_docs';
+// Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
+experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
+// Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
+experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
+// Enables a user to utilize the new school association flow
+experiments.SCHOOL_ASSOCIATION_V2 = 'school_association_v2';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

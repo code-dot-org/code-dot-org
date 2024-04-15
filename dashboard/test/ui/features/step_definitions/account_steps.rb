@@ -180,6 +180,13 @@ And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |inv
   GHERKIN
 end
 
+And(/^I fill in the sign up email field with a random email$/) do
+  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+  steps <<~GHERKIN
+    And I type "#{email}" into "#user_email"
+  GHERKIN
+end
+
 And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps <<~GHERKIN
     And I type "#{@users[name][:email]}" into "#user_login"
@@ -237,4 +244,8 @@ end
 
 And(/^I get plc reviewer access$/) do
   browser_request(url: '/api/test/plc_reviewer_access', method: 'POST')
+end
+
+And(/^I get debug info for the current user$/) do
+  puts browser_request(url: '/api/v1/users/current', method: 'GET')
 end

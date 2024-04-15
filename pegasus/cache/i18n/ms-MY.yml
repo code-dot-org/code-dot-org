@@ -255,6 +255,7 @@ ms-MY:
   class_submission_out_of_school_summer_camp: Kem musim panas
   classicmaze_name: Pagar Sesat Klasik
   code_hoc_coming: Hour of Code sudah tiba - 8-14 Disember!
+  code_org_logo_alt: Halaman Utama Code.org
   code_sign_up: Daftar untuk mengambil bahagian semasa Minggu Pendidikan CS
   codea_beyond_gradelevel: Sekolah Menengah +
   codea_beyond_longdescription: Codea untuk iPad membolehkan anda membuat permainan
@@ -1204,6 +1205,7 @@ ms-MY:
   header_about_us: Tentang Kami
   header_course_catalog: Katalog Kursus
   header_courses: kursus-kursus
+  header_districts: Daerah
   header_documentation: Dokumentasi
   header_educate_beyond: Di luar Code.org
   header_educate_community: Komuniti Dalam Talian
@@ -1230,6 +1232,7 @@ ms-MY:
   header_project_gallery: Projek
   header_report_abuse: Lapor Salah Guna
   header_report_bug: Laporkan masalah
+  header_schools: Sekolah
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Menu Bantuan
   header_sections: 'Bahagian:'

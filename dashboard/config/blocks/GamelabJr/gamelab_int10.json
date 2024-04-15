@@ -5,11 +5,6 @@
     "docFunc": "codestudio_number",
     "blockText": "{VALUE}",
     "returnType": "Number",
-    "color": [
-      258,
-      "0.35",
-      "0.62"
-    ],
     "style": "math_blocks",
     "args": [
       {

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-16 23:02:05 UTC",
+    "serialized_at": "2024-04-08 00:03:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -458,12 +458,80 @@
       }
     },
     {
-      "key": "Sandbox: The Neighborhood",
-      "name": "Sandbox: The Neighborhood",
+      "key": "lesson-2",
+      "name": "Introduction to Algorithms",
       "absolute_position": 21,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "Static Variables and Methods",
+      "name": "Calling Class Methods",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
+      "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "overview": "**Why would I use static variables and methods?**\n\nStudents have written instance variables and methods that require an object to be created. In this lesson, students learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. Students explore the functionality of static variables and methods, then practice using these to solve problems.",
+        "preparation": "* **(Optional)** Print copies of the U4L2 Guided Notes (one for each student)\n* Preview the *Static Variables* and *Static Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-2-static-variables-and-methods/37898) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**Why would I use static variables and methods?**\n\nYou have written instance variables and methods that require an object to be created. In this lesson, you learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. You explore the functionality of static variables and methods, then practice using these to solve problems."
+      },
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Casting and Range of Variables",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 22,
+      "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* To Be Updated\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "overview": "**What happens if a value in your program falls beyond the maximum or minimum range of values?**\n\nIn this lesson, students explore what it means for computers to have a specified amount of memory for data storage, and how different data types have storage allotted. They discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors. They investigate strategies for avoiding overflow errors, and adapt those strategies to avoid roundoff errors. Students then practice writing methods to check for and avoid overflow errors. \n",
+        "preparation": "* **(Optional)** Print copies of the Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What happens if a value in your program falls beyond the maximum or minimum range of values?**\n\nIn this lesson, you will dive into how computers store data and the limits each data type has. You'll uncover the boundaries for integers and what happens if you go beyond them, leading to overflow or underflow errors. We'll explore ways to prevent these errors and also learn about roundoff errors. Finally, you'll get hands-on experience writing methods to detect and steer clear of overflow errors."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Programming Style and Feedback",
+      "absolute_position": 24,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "Sandbox: The Neighborhood",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 25,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -1261,6 +1329,102 @@
       "seeding_key": {
         "lesson_activity.key": "00f4f4e5-b58e-40bb-a8b5-2613d2a2464f",
         "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "52907eac-fc43-457c-9168-f632231a9182",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52907eac-fc43-457c-9168-f632231a9182",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "53d14cf3-c2d7-4209-ae17-3c41e945169b",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53d14cf3-c2d7-4209-ae17-3c41e945169b",
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "ee0827e9-d17f-4128-80df-fc42f27b3b15",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15",
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "4a9bb76a-8f04-42af-83d3-18fb65e43625",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625",
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "30e66e2c-4845-4ce0-baaf-11315079d9f6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "36396447-a8a1-4c70-bfa1-72f615be4575",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "36396447-a8a1-4c70-bfa1-72f615be4575",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025"
       }
@@ -6087,6 +6251,474 @@
       }
     },
     {
+      "key": "5d28c2b3-3be9-428b-9997-e8f8b7b9a66c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5d28c2b3-3be9-428b-9997-e8f8b7b9a66c",
+        "lesson_activity.key": "52907eac-fc43-457c-9168-f632231a9182"
+      }
+    },
+    {
+      "key": "4179c792-ab7c-4917-a633-ffbbb2af1617",
+      "position": 1,
+      "properties": {
+        "description": "We can customize almost anything in the digital world these days, but oftentimes, software engineers need to establish a simple default value for those things we might want to customize. ",
+        "name": "Telling a Story",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4179c792-ab7c-4917-a633-ffbbb2af1617",
+        "lesson_activity.key": "53d14cf3-c2d7-4209-ae17-3c41e945169b"
+      }
+    },
+    {
+      "key": "52fafddd-7a56-48e8-8e99-c58d6ac950f0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Can you think of a situation in your life where you interact with software or apps that have default values? \n\nHow do you think software engineers choose these default values, and how do they affect your experience? \n*\n\n**Discussion Goal:** Students share various default values from apps / software, and mention possible considerations such as accessibility, current trends, and common usages.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students have interacted with Painter and The Neighborhood, have them consider what sort of default values they would like to see in a Painter. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "52fafddd-7a56-48e8-8e99-c58d6ac950f0",
+        "lesson_activity.key": "53d14cf3-c2d7-4209-ae17-3c41e945169b"
+      }
+    },
+    {
+      "key": "5ea21ed9-ef99-49f8-974f-9971b3c0d85b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ea21ed9-ef99-49f8-974f-9971b3c0d85b",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "d7b23d9b-724a-41cf-a9ef-bfa250b7d080",
+      "position": 2,
+      "properties": {
+        "description": "So far, the instance variables and methods we have written in our classes can only be accessed by an instance of the class. However, there are special types of variables and methods that can be used without an object. Today, we'll learn about using the static keyword to create and use class methods.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary Note:** The updated AP CS A framework refers to static variables as class variables. These terms are often used interchangeably, but the Code.org curriculum uses the term static variable. A note regarding this vocabulary can be found in the slides for this lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d7b23d9b-724a-41cf-a9ef-bfa250b7d080",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "1b3d7639-425a-48ac-a259-94e476d4e59c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Static Variables and Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b3d7639-425a-48ac-a259-94e476d4e59c",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "943daf70-cc40-4378-bb4e-c23a83e06e86",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the class contains a static variable that is increased by one in the constructor. They also notice that the value is updated each time an object is created, and that the `static` keyword is also used in the method signature. Students may wonder what the `static` keyword means and when they might use static variables and methods instead of instance variables and methods they call on an object."
+      },
+      "seeding_key": {
+        "activity_section.key": "943daf70-cc40-4378-bb4e-c23a83e06e86",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "5427dfce-ada3-4f98-b406-6ca87e57b11c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that each object gets its own copy of the instance variables that are declared in a class.",
+        "duration": "15",
+        "name": "Static Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "5427dfce-ada3-4f98-b406-6ca87e57b11c",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "1b6dd84d-9192-4162-bc32-fe4f6e8524f2",
+      "position": 6,
+      "properties": {
+        "description": "Sometimes we need to represent information that is shared by all instances of a class. Rather than declaring instance variables for these values, we can use static variables.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1b6dd84d-9192-4162-bc32-fe4f6e8524f2",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate and Modify: The static Keyword"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "ca03ae33-9d27-4671-a759-ab7d56f1d6f6",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `static` keyword and define ***static variable***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Variables*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ca03ae33-9d27-4671-a759-ab7d56f1d6f6",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "6738b6eb-fd14-4c38-8e95-ffcfa83a25e0",
+      "position": 9,
+      "properties": {
+        "description": "Static variables allow us to represent values that are shared by all instances of a class. The syntax for declaring and accessing a static variable is similar to other types of variables, but there are some differences as well.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6738b6eb-fd14-4c38-8e95-ffcfa83a25e0",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "b860eebd-d648-4a65-9632-a85d28b04f37",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that static variables belong to the class and introduce the syntax for accessing a static variable.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students consider what they think it means in the `main` method. Guide students to realizing that since the `main` method is where the program starts running, Java does not need an object of the class to be created to access it. You can ask questions like:\n* *What is the purpose of the `main` method?*\n* *Where do we typically write the `main` method?*\n* *Would it make sense to need to create an object before Java can execute the `main` method?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b860eebd-d648-4a65-9632-a85d28b04f37",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "9db56a63-c74a-4841-a0c7-df864abcd0dd",
+      "position": 11,
+      "properties": {
+        "description": "The `static` keyword can also be used with methods. Like static variables, these can be called on the class instead of an object.",
+        "duration": "15",
+        "name": "Static Methods",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9db56a63-c74a-4841-a0c7-df864abcd0dd",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to create and use a static variable. On Level 7, students complete a choice level to create and use a static method. On Level 8, students complete a choice level to create and use both static variables and methods.",
+        "progression_name": "Practice: Static Variables and Methods",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding is an AP-style multiple choice question that can be used as a formative assessment to gauge understanding of static methods.\n\nThe practice levels can be used as a formative assessment to gauge understanding of creating and using static variables and methods."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f",
+        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+      }
+    },
+    {
+      "key": "4cc5066e-d035-492e-b4a3-a2d56c07fc93",
+      "position": 1,
+      "properties": {
+        "description": "We've now seen how static variables and methods work and some ways that they are used in different programs. Depending on the needs of our programs, there are several reasons why we might use a static variable instead of an instance variable or a static method instead of an instance method.",
+        "name": "Using Static Variables and Methods",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4cc5066e-d035-492e-b4a3-a2d56c07fc93",
+        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+      }
+    },
+    {
+      "key": "75548f21-bcb8-4f2f-af05-194f200fb4d3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When do you think static variables and methods would be useful?*\n\n**Discussion Goal:** Students suggest scenarios for using static variables, such as to keep track of the number of `Student` objects in a program for a school or to represent a discount on an item. Students also suggest scenarios for using static methods, such as to perform calculations in a `Calculator` class or to represent a behavior that does not use any instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce example uses for static variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce example uses for static methods.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to share additional ideas for scenarios where static variables and methods would be useful."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "75548f21-bcb8-4f2f-af05-194f200fb4d3",
+        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+      }
+    },
+    {
+      "key": "7af8e7f3-bd65-4607-89ae-3210b1ffbfcd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Guided Notes include the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7af8e7f3-bd65-4607-89ae-3210b1ffbfcd",
+        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+      }
+    },
+    {
+      "key": "f919069e-f0de-420d-b8fd-721c0a6b5dda",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "f919069e-f0de-420d-b8fd-721c0a6b5dda",
+        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+      }
+    },
+    {
+      "key": "a4899655-ba47-46f2-9650-60710b4efbaf",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4899655-ba47-46f2-9650-60710b4efbaf",
+        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+      }
+    },
+    {
+      "key": "a6b49b2d-d124-40df-a0e8-c2fc3af708c0",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6b49b2d-d124-40df-a0e8-c2fc3af708c0",
+        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+      }
+    },
+    {
+      "key": "d61f294f-b384-4edb-853d-0a8b92de752c",
+      "position": 1,
+      "properties": {
+        "description": "There are many examples in software engineering of real-world consequences for a computer’s storage limitations. Let’s watch a short clip and see an example of one situation where the consequences cost hundreds of millions of dollars..",
+        "name": "Overflow Errors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d61f294f-b384-4edb-853d-0a8b92de752c",
+        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6"
+      }
+    },
+    {
+      "key": "0602f79e-4fad-42e3-ad14-4afae49a3724",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – Ariane 5 rocket launch explosion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The first two minutes of the video are a valuable support for the warm-up discussion. Teachers may choose to show the entire five minute video, but it is not necessary for the discussion to be productive.\n\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0602f79e-4fad-42e3-ad14-4afae49a3724",
+        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6"
+      }
+    },
+    {
+      "key": "4302b825-e2ab-4dd7-b252-ded32f6bf236",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *What other situations involving very large numbers might be impacted by overflow errors?.*\n\n**Discussion Goal:** Students should recognize that there is a maximum value that computers can hold. They might point to examples like Gangnam Style overflowing YouTube, an odometer overflowing, or Y2K.."
+      },
+      "seeding_key": {
+        "activity_section.key": "4302b825-e2ab-4dd7-b252-ded32f6bf236",
+        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6"
+      }
+    },
+    {
+      "key": "0abc9855-530c-4a9a-a021-9a557c6c2a8a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Introduce the lesson objectives.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Introduce the Question of the Day.",
+        "duration": "10",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "0abc9855-530c-4a9a-a021-9a557c6c2a8a",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "ae39ba84-75d0-47e1-8d7f-3c9c023e7e73",
+      "position": 2,
+      "properties": {
+        "description": "We have seen an example of the consequences of overflow errors. Now let’s take a look at some of the ways to anticipate overflow errors in Java.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ae39ba84-75d0-47e1-8d7f-3c9c023e7e73",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "baa2d793-a062-4572-bdb0-3bdcebca7b77",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Overflow Errors"
+      },
+      "seeding_key": {
+        "activity_section.key": "baa2d793-a062-4572-bdb0-3bdcebca7b77",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "7d22722d-2249-49aa-b34f-b3a8f6e76fa4",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts\n\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that in the overflow example, the value becomes negative, and in the underflow example, the negative value becomes positive. Students may wonder about how the Integer class works and how to avoid overflow errors. "
+      },
+      "seeding_key": {
+        "activity_section.key": "7d22722d-2249-49aa-b34f-b3a8f6e76fa4",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "ca429f0f-11a1-46a9-8047-fe080682c965",
+      "position": 5,
+      "properties": {
+        "description": "The `Integer` and `Double` classes are known as wrapper classes. Java provides a wrapper class for each primitive type, which also gives us access to constants we can use for `int` and `double` values. We will learn much more about wrapper classes later in the course.",
+        "duration": "15",
+        "name": "Exploring Overflow and Roundoff",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ca429f0f-11a1-46a9-8047-fe080682c965",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "6f298776-4cc3-40e4-825d-e1ddba4dd761",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Click through the animated slide to introduce the `Integer` and `Double` classes and their constants.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.\n",
+        "progression_name": "Investigate and Modify: Roundoff Errors"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "2e5f7ed0-833d-4da4-a77f-c5d1130a5e50",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n**Discussion Goal:** Students should notice a different behavior from exceeding the maximum value of `Double` objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the minimum and maximum values for integers:\n* Integers in Java have 32 bits of space\n* `Integer.MIN_VALUE`\n* `Integer.MAX_VALUE`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **overflow**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **underflow**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the connection between doubles and **round-off errors.**"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e5f7ed0-833d-4da4-a77f-c5d1130a5e50",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "70a73d92-2ec0-4cae-988f-d98ffc1208a2",
+      "position": 8,
+      "properties": {
+        "description": "As we saw in the discussion we had during the warm up, overflow errors do have consequences in many situations. By recognizing the possibility of a round-off error occurring, software engineers can design programs that anticipate and prevent roundoff errors. ",
+        "duration": "15",
+        "name": "Practice: Handling Overflow ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "70a73d92-2ec0-4cae-988f-d98ffc1208a2",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "22349c1a-2761-475e-b951-b59c2b1fa37e",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. Students complete a Check for Understanding, then continue to complete a choice level on Level 5 to practice anticipating and working around potential overflow errors.",
+        "progression_name": "Practice: Handling Overflow"
+      },
+      "seeding_key": {
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e",
+        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
+      }
+    },
+    {
+      "key": "ba020374-d2a2-40a5-b339-6f8c95ad7046",
+      "position": 1,
+      "properties": {
+        "description": "We’ve talked a lot about overflow errors, and had a chance to experiment with overflow errors in our own programs. Now think back to the impact an overflow error had on the Ariane 5 rocket disaster. ",
+        "duration": "5",
+        "name": "Avoiding Overflow Errors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ba020374-d2a2-40a5-b339-6f8c95ad7046",
+        "lesson_activity.key": "36396447-a8a1-4c70-bfa1-72f615be4575"
+      }
+    },
+    {
+      "key": "01580ef3-3a84-4333-9cc2-8157ebf6980f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what you know now about the range of variables, do you think this was an avoidable error? What could the engineers have done differently?*\n\n**Discussion Goal:** Students may suggest that the error made with the Ariane 5 rocket was avoidable. They could mention a variety of strategies for avoiding overflow errors, such as peer reviewing code, using conditionals, and widening data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Review the concepts covered in this lesson\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "01580ef3-3a84-4333-9cc2-8157ebf6980f",
+        "lesson_activity.key": "36396447-a8a1-4c70-bfa1-72f615be4575"
+      }
+    },
+    {
       "key": "7b33f786-dd3b-4f06-a6ce-ed05db117a46",
       "position": 1,
       "properties": {
@@ -6116,6 +6748,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6137,6 +6772,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L1_2025"
+        ],
         "progression": "Predict and Run: A Java Program"
       },
       "bonus": false,
@@ -6159,6 +6797,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L2_2025"
+        ],
         "progression": "Investigate and Modify: Working with Java Files"
       },
       "bonus": false,
@@ -6181,6 +6822,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L3_2025"
+        ],
         "progression": "Practice: Syntax Errors"
       },
       "bonus": false,
@@ -6203,6 +6847,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L4_2025"
+        ],
         "progression": "Practice: Syntax Errors"
       },
       "bonus": false,
@@ -6225,6 +6872,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6247,6 +6897,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Predict_2025"
+        ],
         "progression": "Predict and Run: Classes and Objects"
       },
       "bonus": false,
@@ -6269,6 +6922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Investigate_2025"
+        ],
         "progression": "Investigate and Modify: The Painter Class"
       },
       "bonus": false,
@@ -6291,6 +6947,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Exit_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6313,6 +6972,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Skill Building_2025"
+        ],
         "progression": "Skill Building: Painter Objects"
       },
       "bonus": false,
@@ -6335,6 +6997,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 CFU_2025"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -6357,6 +7022,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L5_2025"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -6379,6 +7047,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L6_2025"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -6401,6 +7072,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L7_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6423,6 +7097,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1_2025"
+        ],
         "progression": "Predict and Run: Painter Class Methods"
       },
       "bonus": false,
@@ -6445,6 +7122,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2_2025"
+        ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
@@ -6467,6 +7147,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2-2_2025"
+        ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
@@ -6489,6 +7172,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L3_2025"
+        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -6511,6 +7197,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L4_2025"
+        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -6533,6 +7222,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6555,6 +7247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Predict Code_2025"
+        ],
         "progression": "Predict and Run: Painting"
       },
       "bonus": false,
@@ -6577,6 +7272,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate_2025"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -6599,6 +7297,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-2_2025"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -6621,6 +7322,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-3_2025"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -6643,6 +7347,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 CFU_2025"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -6665,6 +7372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Practice_2025"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -6687,6 +7397,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Exit CFU_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6709,6 +7422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1_2025"
+        ],
         "progression": "Predict and Run: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6731,6 +7447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2_2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6753,6 +7472,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-2_2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6775,6 +7497,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-3_2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6797,6 +7522,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-4_2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6819,6 +7547,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_2025"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6841,6 +7572,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_2025"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6863,6 +7597,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6885,6 +7622,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L1_2025"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -6907,6 +7647,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L2_2025"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -6929,6 +7672,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L3_2025"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -6951,6 +7697,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L4_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6973,6 +7722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L1_2025"
+        ],
         "progression": "Predict and Run: Writing Methods"
       },
       "bonus": false,
@@ -6995,6 +7747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2_2025"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -7017,6 +7772,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-2_2025"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -7039,6 +7797,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-3_2025"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -7061,6 +7822,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L3_2025"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -7083,6 +7847,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L4_2025"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -7105,6 +7872,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L5_2025"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -7127,6 +7897,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L6_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7149,6 +7922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L1_2025"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -7171,6 +7947,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L2_2025"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -7193,6 +7972,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L3_2025"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -7215,6 +7997,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L4_2025"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -7237,6 +8022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L5_2025"
+        ],
         "progression": "Practice: Conducting a Code Review"
       },
       "bonus": false,
@@ -7259,6 +8047,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L6_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7281,6 +8072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L1_2025"
+        ],
         "progression": "Predict and Run: Selection Statements"
       },
       "bonus": false,
@@ -7303,6 +8097,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L2_2025"
+        ],
         "progression": "Investigate and Modify: Selection Statements"
       },
       "bonus": false,
@@ -7325,6 +8122,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3_2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -7347,6 +8147,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4_2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -7369,6 +8172,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7391,6 +8197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L1_2025"
+        ],
         "progression": "Predict and Run: Variables and Printing"
       },
       "bonus": false,
@@ -7413,6 +8222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L2_2025"
+        ],
         "progression": "Investigate and Modify: Debugging"
       },
       "bonus": false,
@@ -7435,6 +8247,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L3_2025"
+        ],
         "progression": "Practice: Debugging in The Neighborhood"
       },
       "bonus": false,
@@ -7457,6 +8272,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L4_2025"
+        ],
         "progression": "Practice: Debugging in The Neighborhood"
       },
       "bonus": false,
@@ -7479,6 +8297,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7501,6 +8322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1_2025"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7523,6 +8347,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-2_2025"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7545,6 +8372,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-3_2025"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7567,6 +8397,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-4_2025"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7589,6 +8422,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2_2025"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -7611,6 +8447,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3_2025"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -7633,6 +8472,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7655,6 +8497,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L1_2025"
+        ],
         "progression": "Predict and Run: Selection and Logic"
       },
       "bonus": false,
@@ -7677,6 +8522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L2_2025"
+        ],
         "progression": "Investigate and Modify: Selection and Logic"
       },
       "bonus": false,
@@ -7699,6 +8547,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L3_2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -7721,6 +8572,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L4_2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -7743,6 +8597,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7765,6 +8622,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project_2025"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7787,6 +8647,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Assessment_2025"
+        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,
@@ -7809,6 +8672,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa1_2025"
+        ],
         "progression": "Unit 1 Survey"
       },
       "bonus": false,
@@ -7831,6 +8697,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project 1-Day_2025"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7853,6 +8722,344 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_modular"
+        ],
+        "progression": "Predict and Run: Static Variables and Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L2-L1_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "1b3d7639-425a-48ac-a259-94e476d4e59c"
+      },
+      "level_keys": [
+        "CSA U4L2-L1_modular"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_modular"
+        ],
+        "progression": "Investigate and Modify: The static Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L2-L2_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+      },
+      "level_keys": [
+        "CSA U4L2-L2_modular"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_modular"
+        ],
+        "progression": "Investigate and Modify: The static Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L2-L3_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+      },
+      "level_keys": [
+        "CSA U4L2-L3_modular"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_modular"
+        ],
+        "progression": "Investigate and Modify: The static Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L2-L4_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+      },
+      "level_keys": [
+        "CSA U4L2-L4_modular"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_modular"
+        ],
+        "progression": "Practice: Static Variables and Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L2-L5_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+      },
+      "level_keys": [
+        "CSA U4L2-L5_modular"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U4L2-L6_modular"
+        ],
+        "progression": "Practice: Static Variables and Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L2-L6_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+      },
+      "level_keys": [
+        "CSA U4L2-L6_modular"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U4L2-L7_modular"
+        ],
+        "progression": "Practice: Static Variables and Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L2-L7_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+      },
+      "level_keys": [
+        "CSA U4L2-L7_modular"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U4L2-L8_modular"
+        ],
+        "progression": "Practice: Static Variables and Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L2-L8_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+      },
+      "level_keys": [
+        "CSA U4L2-L8_modular"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U4L2-L9_modular"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L2-L9_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "a6b49b2d-d124-40df-a0e8-c2fc3af708c0"
+      },
+      "level_keys": [
+        "CSA U4L2-L9_modular"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Overflow Errors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "baa2d793-a062-4572-bdb0-3bdcebca7b77"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L1"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Roundoff Errors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L2"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Roundoff Errors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L3"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Handling Overflow"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L4"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Handling Overflow"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L5-parent"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
+      },
+      "level_keys": [
+        "CSA U2_Casting-and-range-of-variables-L5-parent"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -7870,11 +9077,14 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -8843,6 +10053,174 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U4L2-L1_modular",
+        "script_level.level_keys": [
+          "CSA U4L2-L1_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "1b3d7639-425a-48ac-a259-94e476d4e59c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L2-L2_modular",
+        "script_level.level_keys": [
+          "CSA U4L2-L2_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L2-L3_modular",
+        "script_level.level_keys": [
+          "CSA U4L2-L3_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L2-L4_modular",
+        "script_level.level_keys": [
+          "CSA U4L2-L4_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L2-L5_modular",
+        "script_level.level_keys": [
+          "CSA U4L2-L5_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L2-L6_modular",
+        "script_level.level_keys": [
+          "CSA U4L2-L6_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L2-L7_modular",
+        "script_level.level_keys": [
+          "CSA U4L2-L7_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L2-L8_modular",
+        "script_level.level_keys": [
+          "CSA U4L2-L8_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L2-L9_modular",
+        "script_level.level_keys": [
+          "CSA U4L2-L9_modular"
+        ],
+        "lesson.key": "Static Variables and Methods",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "a6b49b2d-d124-40df-a0e8-c2fc3af708c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L1",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "baa2d793-a062-4572-bdb0-3bdcebca7b77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L2",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L3",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L4",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2_Casting-and-range-of-variables-L5-parent",
+        "script_level.level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L5-parent"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA 2023 Neighborhood Sandbox_2025",
         "script_level.level_keys": [
           "CSA 2023 Neighborhood Sandbox_2025"
@@ -9057,6 +10435,18 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_unit_1_guide"
+      }
+    },
+    {
+      "name": "[KEY] Calling Class Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1E5BWPgoZT0qvUVLPs08pCF8EFJIql-4TqLkcKn1sSy4/edit?usp=sharing",
+      "key": "_key_calling_class_methods_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_calling_class_methods_extra_practice"
       }
     },
     {
@@ -9395,6 +10785,42 @@
       }
     },
     {
+      "name": "casting and range of variables",
+      "url": "https://docs.google.com/presentation/d/1NMPI0Mf7W41-kjwFLJBetDnIFuJ57LuyjbWtWVbrC30/edit?usp=sharing",
+      "key": "casting_and_range_of_variables",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "casting_and_range_of_variables"
+      }
+    },
+    {
+      "name": "casting and range of variables extra practice",
+      "url": "https://docs.google.com/document/d/1IUs2z8VnyCE7wNwFopqg11MOFKPgrfW16SxNbjMnKPE/edit?usp=sharing",
+      "key": "casting_and_range_of_variables_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "casting_and_range_of_variables_extra_practice"
+      }
+    },
+    {
+      "name": "casting and range of variables guided notes ",
+      "url": "https://docs.google.com/document/d/1vjMmIwHGFTmcZ-DUSCQqJcLH2SgZRNNzbS5dcOcK5TI/edit?usp=drive_link",
+      "key": "casting_and_range_of_variables_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "casting_and_range_of_variables_guided_notes"
+      }
+    },
+    {
       "name": "Change the Face of Computer Science",
       "url": "https://youtu.be/uhcA6K8rWp0",
       "key": "change_the_face_of_computer_science",
@@ -9541,6 +10967,30 @@
       }
     },
     {
+      "name": "exemplar casting and range of variables guided notes",
+      "url": "https://docs.google.com/document/d/1EWPtEdKfAYIQLbxblFu-1PJWnk3wA-2ZdLHoBx83n_I/edit?usp=drive_link",
+      "key": "exemplar_casting_and_range_of_variables_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_casting_and_range_of_variables_guided_notes"
+      }
+    },
+    {
+      "name": "Exemplar Guided Notes - Calling Class Methods",
+      "url": "https://docs.google.com/document/d/1QM1zE8fWVTTNSDbmSCV0ez7yknjlKXE29UUERnB2kgY/edit?usp=sharing",
+      "key": "exemplar_guided_notes_-_calling_class_methods_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_guided_notes_-_calling_class_methods_1"
+      }
+    },
+    {
       "name": "Guide to Creating and Using Word Walls",
       "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
       "key": "guide_to_creating_and_using_word_walls",
@@ -9562,6 +11012,18 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "Guided Notes - CSA [01] Calling Class Methods ",
+      "url": "https://docs.google.com/document/d/1JUqFtZ6OslmqVhWzb16_38kPZESGSnCRq1LWXhwzjbg/edit?usp=sharing",
+      "key": "guided_notes_-_csa_01_calling_class_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guided_notes_-_csa_01_calling_class_methods"
       }
     },
     {
@@ -9675,6 +11137,18 @@
       },
       "seeding_key": {
         "resource.key": "java_lab"
+      }
+    },
+    {
+      "name": "key casting and range of variables extra practice",
+      "url": "https://docs.google.com/document/d/1aSYW76WE82e2bNi-rlYadED-7N8NX3rlQ-QerpWH428/edit?usp=sharing",
+      "key": "key_casting_and_range_of_variables_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_casting_and_range_of_variables_extra_practice"
       }
     },
     {
@@ -9845,6 +11319,42 @@
       },
       "seeding_key": {
         "resource.key": "spiralpainter_frq_stations"
+      }
+    },
+    {
+      "name": "Static Methods",
+      "url": "https://youtu.be/k3QLkzascYI",
+      "key": "static_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "static_methods"
+      }
+    },
+    {
+      "name": "Static Variables",
+      "url": "https://youtu.be/4dffzoEfufA",
+      "key": "static_variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "static_variables"
+      }
+    },
+    {
+      "name": "Calling Class Methods",
+      "url": "https://docs.google.com/presentation/d/1CXDiY2N7sOYjQknX3QVpQ-MInBK9TnY26HoRKoxOA4o/edit?usp=sharing",
+      "key": "static_variables_and_methods",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "static_variables_and_methods"
       }
     },
     {
@@ -10220,6 +11730,19 @@
       },
       "seeding_key": {
         "resource.key": "u1l9_guided_notes"
+      }
+    },
+    {
+      "name": "Calling Class Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1PaTObYefkKM0Jw3TzJf30s_MVo7_135HQ_QmPPRxtFM/edit?usp=sharing",
+      "key": "u4l2_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u4l2_extra_practice"
       }
     },
     {
@@ -10980,6 +12503,54 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "_key_calling_class_methods_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "exemplar_guided_notes_-_calling_class_methods_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "guided_notes_-_csa_01_calling_class_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "static_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "static_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "static_variables_and_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "u4l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
         "resource.key": "_exemplar_u1l14_guided_notes"
       }
@@ -11126,6 +12697,42 @@
       "seeding_key": {
         "lesson.key": "Writing Methods",
         "resource.key": "writing_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "casting_and_range_of_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "casting_and_range_of_variables_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "casting_and_range_of_variables_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "exemplar_casting_and_range_of_variables_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "key_casting_and_range_of_variables_extra_practice"
       }
     }
   ],
@@ -11382,6 +12989,16 @@
       }
     },
     {
+      "key": "instance_method",
+      "word": "instance method",
+      "definition": "a method that requires an object of the class to be created before it can be called",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "instance_method"
+      }
+    },
+    {
       "key": "instantiate",
       "word": "instantiate",
       "definition": "to call the constructor to create an object",
@@ -11452,6 +13069,16 @@
       }
     },
     {
+      "key": "overflow_error",
+      "word": "overflow error",
+      "definition": "an error that occurs when an operation makes an integer value greater than its maximum",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
       "key": "parameter",
       "word": "parameter",
       "definition": "defines the type of value to receive when a method or constructor is called",
@@ -11512,6 +13139,16 @@
       }
     },
     {
+      "key": "round_off_error",
+      "word": "round-off error",
+      "definition": "an error due to limited floating-point precision, causing discrepancies in computation.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "round_off_error"
+      }
+    },
+    {
       "key": "selection_statement",
       "word": "selection statement",
       "definition": "a statement that only executes when a condition is `true`",
@@ -11539,6 +13176,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "source_code"
+      }
+    },
+    {
+      "key": "static_method",
+      "word": "static method",
+      "definition": "a method that can be called without creating an object of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_method"
+      }
+    },
+    {
+      "key": "static_variable",
+      "word": "static variable",
+      "definition": "a variable that is shared by all instances of a class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_variable"
       }
     },
     {
@@ -11612,6 +13269,16 @@
       }
     },
     {
+      "key": "underflow_error",
+      "word": "underflow error",
+      "definition": "an error that occurs when an operation makes an integer value less than its minimum",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "underflow_error"
+      }
+    },
+    {
       "key": "variable",
       "word": "variable",
       "definition": "a container that stores a value in memory",
@@ -11619,6 +13286,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "vocabulary_note",
+      "word": "Vocabulary Note",
+      "definition": "The updated AP CS A framework refers to static variables as class variables. These terms are often used interchangeably, but the Code.org curriculum uses the term static variable. A note regarding this vocabulary can be found in the slides for this lesson.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "vocabulary_note"
       }
     },
     {
@@ -11851,6 +13528,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "vocabulary.key": "instance_method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "vocabulary.key": "static_method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "vocabulary.key": "static_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "vocabulary.key": "vocabulary_note"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
         "vocabulary.key": "logical_operator"
       }
@@ -11890,6 +13591,24 @@
         "lesson.key": "Writing Methods",
         "vocabulary.key": "void"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "round_off_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "underflow_error"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -11924,6 +13643,16 @@
       "seeding_key": {
         "lesson.key": "Java Lab",
         "objective.key": "09347e8b-99ad-4aa6-ba74-7f297596f1b6"
+      }
+    },
+    {
+      "key": "0a16cfe9-92ca-4600-93af-933d3d951dc5",
+      "properties": {
+        "description": "Write a static method to represent a behavior that doesn't require object state or to use a static variable"
+      },
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "objective.key": "0a16cfe9-92ca-4600-93af-933d3d951dc5"
       }
     },
     {
@@ -12014,6 +13743,16 @@
       "seeding_key": {
         "lesson.key": "Decomposition and Design",
         "objective.key": "48b55ac1-e078-4c8f-a49b-8830bf4718f5"
+      }
+    },
+    {
+      "key": "4ae23693-adbf-4a43-b0cd-bcf053020a18",
+      "properties": {
+        "description": "Understand that computers allot a specified amount of memory to store data based on the data type. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "4ae23693-adbf-4a43-b0cd-bcf053020a18"
       }
     },
     {
@@ -12187,6 +13926,16 @@
       }
     },
     {
+      "key": "c2360744-daec-46e0-87f2-b41450ef1f32",
+      "properties": {
+        "description": "Access a static variable that is declared in another class"
+      },
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "objective.key": "c2360744-daec-46e0-87f2-b41450ef1f32"
+      }
+    },
+    {
       "key": "c416281e-6a0d-4dae-b02e-a375ef7468ae",
       "properties": {
         "description": "Plan a project to meet specifications"
@@ -12227,6 +13976,16 @@
       }
     },
     {
+      "key": "cc9612aa-409f-43ee-ac7e-2afd7bf7cf70",
+      "properties": {
+        "description": "Call a static method that is defined in another class"
+      },
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "objective.key": "cc9612aa-409f-43ee-ac7e-2afd7bf7cf70"
+      }
+    },
+    {
       "key": "d0f10578-e1c9-47bd-b920-8efba78d9bd5",
       "properties": {
         "description": "Declare and assign a value of type `int` or `String` to a variable"
@@ -12257,6 +14016,26 @@
       }
     },
     {
+      "key": "dea83bb5-db8a-4f01-a2e2-6df11b8c0b7b",
+      "properties": {
+        "description": "Use Integer.MIN_VALUE and Integer.MAX_VALUE to describe the range of possible int values."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "dea83bb5-db8a-4f01-a2e2-6df11b8c0b7b"
+      }
+    },
+    {
+      "key": "e0a0ec14-758a-4cb4-b0e4-4844cc4f2919",
+      "properties": {
+        "description": "Describe roundoff errors and one strategy to avoid them. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "e0a0ec14-758a-4cb4-b0e4-4844cc4f2919"
+      }
+    },
+    {
       "key": "e2aba353-077c-4a1b-9a9f-39151e04a135",
       "properties": {
         "description": "Write two-way selection statements to execute specific blocks of code based on the outcome of a condition"
@@ -12264,6 +14043,16 @@
       "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
         "objective.key": "e2aba353-077c-4a1b-9a9f-39151e04a135"
+      }
+    },
+    {
+      "key": "e458dc4a-ee55-46bd-a666-9e6db46af92e",
+      "properties": {
+        "description": "Describe the result of exceeding the maximum or falling below the minimum values for an int. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "e458dc4a-ee55-46bd-a666-9e6db46af92e"
       }
     },
     {
@@ -12304,6 +14093,16 @@
       "seeding_key": {
         "lesson.key": "Methods",
         "objective.key": "ef96ea2c-d460-46f5-9cde-ac37a000a9a1"
+      }
+    },
+    {
+      "key": "f07d3237-17b2-4c53-a6f7-a73443b09b7b",
+      "properties": {
+        "description": "Declare and initialize a static variable to represent a value shared by all instances of a class"
+      },
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "objective.key": "f07d3237-17b2-4c53-a6f7-a73443b09b7b"
       }
     },
     {
@@ -12734,6 +14533,76 @@
     {
       "seeding_key": {
         "lesson.key": "Selection Statements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.G.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.H.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.H.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-22"
       }

@@ -89,9 +89,9 @@ const APP_OPTIONS_ALLOWLIST = {
   hideSource: true,
   share: true,
   labUserId: false,
-  firebaseName: false,
-  firebaseAuthToken: false,
-  firebaseChannelIdSuffix: false,
+  firebaseName: false, // TODO: post-firebase-cleanup: #56994
+  firebaseAuthToken: false, // TODO: post-firebase-cleanup: #56994
+  firebaseChannelIdSuffix: false, // TODO: post-firebase-cleanup: #56994
   isSignedIn: true,
   pinWorkspaceToBottom: true,
   hasVerticalScrollbars: true,
@@ -104,7 +104,7 @@ const APP_OPTIONS_ALLOWLIST = {
   isUS: true,
   send_to_phone_url: true,
   copyrightStrings: {
-    thank_you: true,
+    thanks: true,
     help_from_html: true,
     art_from_html: true,
     code_from_html: true,

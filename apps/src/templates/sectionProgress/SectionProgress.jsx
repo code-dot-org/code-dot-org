@@ -1,29 +1,34 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import UnitSelector from './UnitSelector';
+import {connect} from 'react-redux';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import logToCloud from '@cdo/apps/logToCloud';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
-import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
-import LessonSelector from './LessonSelector';
-import {connect} from 'react-redux';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import i18n from '@cdo/locale';
+
 import {h3Style} from '../../lib/ui/Headings';
+import firehoseClient from '../../lib/util/firehose';
+
+import LessonSelector from './LessonSelector';
+import ProgressViewHeader from './ProgressViewHeader';
+import {ViewType, unitDataPropType} from './sectionProgressConstants';
+import {loadUnitProgress} from './sectionProgressLoader';
 import {
   getCurrentUnitData,
   setLessonOfInterest,
   setCurrentView,
 } from './sectionProgressRedux';
-import {loadUnitProgress} from './sectionProgressLoader';
-import {ViewType, unitDataPropType} from './sectionProgressConstants';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import firehoseClient from '../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import ProgressViewHeader from './ProgressViewHeader';
-import logToCloud from '@cdo/apps/logToCloud';
-import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import UnitSelector from './UnitSelector';
+
 import styleConstants from './progressTables/progress-table-constants.module.scss';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
 
@@ -59,9 +64,16 @@ class SectionProgress extends Component {
 
   componentDidMount() {
     loadUnitProgress(this.props.scriptId, this.props.sectionId);
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight,
+    });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
       logToCloud.addPageAction(
         logToCloud.PageAction.SectionProgressRenderedWithData,
@@ -71,6 +83,18 @@ class SectionProgress extends Component {
         }
       );
       this.setState({reportedInitialRender: true});
+    }
+
+    if (
+      prevProps.scriptId !== this.props.scriptId ||
+      prevProps.sectionId !== this.props.sectionId
+    ) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+        sectionId: this.props.sectionId,
+        unitId: this.props.scriptId,
+        windowWidth: window.innerWidth,
+        windowHeight: window.innerHeight,
+      });
     }
   }
 
@@ -149,7 +173,10 @@ class SectionProgress extends Component {
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
 
     return (
-      <div>
+      <div
+        className={dashboardStyles.dashboardPage}
+        data-testid="section-progress-v1"
+      >
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
@@ -175,12 +202,13 @@ class SectionProgress extends Component {
         </div>
         <div style={styles.topRowContainer}>
           {showProgressTable && (
-            <SortByNameDropdown
-              selectStyles={styles.sortOrderSelect}
-              sectionId={sectionId}
-              unitName={scriptData?.title}
-              source={SECTION_PROGRESS}
-            />
+            <div style={styles.sortOrderSelect}>
+              <SortByNameDropdown
+                sectionId={sectionId}
+                unitName={scriptData?.title}
+                source={SECTION_PROGRESS}
+              />
+            </div>
           )}
           {levelDataInitialized && <ProgressViewHeader />}
         </div>
@@ -207,7 +235,7 @@ class SectionProgress extends Component {
   }
 }
 
-const sortOrderMargin = 22;
+const sortOrderMargin = 15;
 
 const styles = {
   heading: {
@@ -217,6 +245,7 @@ const styles = {
     display: 'flex',
     alignItems: 'flex-end',
     marginBottom: 10,
+    width: '100%',
   },
   chevronLink: {
     display: 'flex',

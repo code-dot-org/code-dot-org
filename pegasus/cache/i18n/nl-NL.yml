@@ -963,7 +963,7 @@ nl-NL:
   dashboard_sections_switch_section: 'switch groep:'
   dashboard_sections_table_code: Groepscode
   dashboard_sections_table_course: Cursus
-  dashboard_sections_table_grade: Cijfer
+  dashboard_sections_table_grade: Klas
   dashboard_sections_table_pairing_allowed: Programmeren in Tweetallen
   dashboard_sections_table_secret: Login-Type
   dashboard_sections_table_section: Groep
@@ -1162,6 +1162,7 @@ nl-NL:
   header_about_us: Over Ons
   header_course_catalog: Cursuscatalogus
   header_courses: Cursussen
+  header_districts: Districten
   header_documentation: Documentatie
   header_educate_beyond: Achter Code.org
   header_educate_community: Online gemeenschap
@@ -1186,6 +1187,7 @@ nl-NL:
   header_project_gallery: Projecten overzicht
   header_report_abuse: Misbruik melden
   header_report_bug: Rapporteer bugs
+  header_schools: Scholen
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Help-menu
   header_sections: Secties

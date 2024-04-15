@@ -4,12 +4,14 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import i18n from '@cdo/netsim/locale';
+
+import NetSimGlobals from './NetSimGlobals';
 import NetSimLogBrowser from './NetSimLogBrowser';
 import NetSimLogEntry from './NetSimLogEntry';
-import Packet from './Packet';
-import NetSimGlobals from './NetSimGlobals';
 import {doesUserOwnShard} from './NetSimUtils';
+import Packet from './Packet';
 
 /** @const {number} */
 var MAXIMUM_ROWS_IN_FULL_RENDER = 500;

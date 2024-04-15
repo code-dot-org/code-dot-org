@@ -264,6 +264,7 @@ el-GR:
   class_submission_out_of_school_summer_camp: Θερινή κατασκήνωση
   classicmaze_name: Κλασικός λαβύρινθος
   code_hoc_coming: Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!
+  code_org_logo_alt: Αρχική σελίδα Code.org
   code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής
   codea_beyond_gradelevel: Λύκειο +
@@ -1241,6 +1242,7 @@ el-GR:
   header_about_us: Σχετικά με εμάς
   header_course_catalog: Κατάλογος Μαθημάτων
   header_courses: Τες
+  header_districts: Περιφέρειες
   header_documentation: Τεκμηρίωση
   header_educate_beyond: Πέρα από το Code.org
   header_educate_community: Online Κοινότητα
@@ -1267,6 +1269,7 @@ el-GR:
   header_project_gallery: Έργα
   header_report_abuse: Αναφορά κατάχρησης
   header_report_bug: Αναφορά προβλήματος
+  header_schools: Σχολείο
   header_screen_reader_hamburger: Μενού
   header_screen_reader_help: Μενού Βοήθειας
   header_sections: Ενότητες

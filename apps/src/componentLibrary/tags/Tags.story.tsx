@@ -1,9 +1,10 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
+
 import Tags, {TagsProps} from './index';
-import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Tags',
+  title: 'DesignSystem/Tags', // eslint-disable-line storybook/no-title-property-in-meta
   component: Tags,
 } as Meta;
 
@@ -11,7 +12,7 @@ export default {
 // TEMPLATE
 //
 //  Using marginTop to separate components in storybook and prevent tooltip from hiding under the Storybook HUD.
-const SingleTemplate: Story<TagsProps> = args => (
+const SingleTemplate: StoryFn<TagsProps> = args => (
   <>
     <p>
       * Margins on this screen does not represent Component's margins, and are
@@ -23,7 +24,7 @@ const SingleTemplate: Story<TagsProps> = args => (
   </>
 );
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: TagsProps[];
 }> = args => (
   <>

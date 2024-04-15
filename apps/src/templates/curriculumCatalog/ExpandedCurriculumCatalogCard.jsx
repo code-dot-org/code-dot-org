@@ -15,8 +15,12 @@ import {
   translatedCourseOfferingDeviceTypes,
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
+import {defaultImageSrc} from './curriculumCatalogConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const ExpandedCurriculumCatalogCard = ({
+  courseKey,
   courseDisplayName,
   duration,
   gradeRange,
@@ -31,13 +35,17 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
+  handleSetExpandedCardKey,
   isInUS,
   imageSrc,
   imageAltText,
   availableResources,
   isSignedOut,
   isTeacher,
+  recommendedSimilarCurriculum,
+  recommendedStretchCurriculum,
 }) => {
+  const isTeacherOrSignedOut = isSignedOut || isTeacher;
   const expandedCardRef = useRef(null);
   const iconData = {
     ideal: {
@@ -74,6 +82,22 @@ const ExpandedCurriculumCatalogCard = ({
     return ++availableResourceCounter < availableResourcesCount;
   };
 
+  const handleClickRecommendedSimilarCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_similar_curriculum_offering: recommendedSimilarCurriculum.key,
+    });
+    handleSetExpandedCardKey(recommendedSimilarCurriculum.key);
+  };
+
+  const handleClickRecommendedStretchCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_STRETCH_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_stretch_curriculum_offering: recommendedStretchCurriculum.key,
+    });
+    handleSetExpandedCardKey(recommendedStretchCurriculum.key);
+  };
+
   useEffect(() => {
     const yOffset =
       expandedCardRef.current.getBoundingClientRect().top +
@@ -82,10 +106,9 @@ const ExpandedCurriculumCatalogCard = ({
     window.scrollTo({top: yOffset, behavior: 'smooth'});
   }, [expandedCardRef]);
 
-  const quickViewButtonColor =
-    !isSignedOut && !isTeacher
-      ? Button.ButtonColor.brandSecondaryDefault
-      : Button.ButtonColor.neutralDark;
+  const quickViewButtonColor = !isTeacherOrSignedOut
+    ? Button.ButtonColor.brandSecondaryDefault
+    : Button.ButtonColor.neutralDark;
 
   return (
     <div ref={expandedCardRef}>
@@ -96,9 +119,7 @@ const ExpandedCurriculumCatalogCard = ({
         <div className={style.expandedCardContainer}>
           <div className={style.flexDivider}>
             <div className={style.courseOfferingContainer}>
-              <Heading3 style={{marginBottom: '8px'}}>
-                {courseDisplayName}
-              </Heading3>
+              <Heading3>{courseDisplayName}</Heading3>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="user" className="fa-solid" />
@@ -119,9 +140,7 @@ const ExpandedCurriculumCatalogCard = ({
               <div className={style.centerContentContainer}>
                 <div className={style.descriptionVideoContainer}>
                   <div className={style.descriptionContainer}>
-                    <BodyTwoText className={style.descriptionText}>
-                      {description}
-                    </BodyTwoText>
+                    <BodyTwoText>{description}</BodyTwoText>
                   </div>
                   <div className={style.mediaContainer}>
                     {video ? (
@@ -238,13 +257,23 @@ const ExpandedCurriculumCatalogCard = ({
                   color={quickViewButtonColor}
                   type="button"
                   href={pathToCourse}
-                  aria-label={i18n.quickViewDescription({
-                    course_name: courseDisplayName,
-                  })}
-                  text={i18n.seeCurriculumDetails()}
+                  aria-label={
+                    isTeacherOrSignedOut
+                      ? i18n.quickViewDescription({
+                          course_name: courseDisplayName,
+                        })
+                      : i18n.tryCourseNow({
+                          course_name: courseDisplayName,
+                        })
+                  }
+                  text={
+                    isTeacherOrSignedOut
+                      ? i18n.seeCurriculumDetails()
+                      : i18n.tryNow()
+                  }
                   className={centererStyle.buttonFlex}
                 />
-                {(isSignedOut || isTeacher) && (
+                {isTeacherOrSignedOut && (
                   <Button
                     color={Button.ButtonColor.brandSecondaryDefault}
                     type="button"
@@ -265,11 +294,39 @@ const ExpandedCurriculumCatalogCard = ({
                   aria-label="Close Button"
                 />
               </div>
-              <div className={style.relatedContainer} style={{display: 'none'}}>
+              <div className={style.relatedContainer}>
                 <Heading4 visualAppearance="heading-xs">
                   {i18n.relatedCurricula()}
                 </Heading4>
                 <hr className={style.thickDivider} />
+                <img
+                  id="similarCurriculumImage"
+                  src={recommendedSimilarCurriculum.image || defaultImageSrc}
+                  alt={recommendedSimilarCurriculum.display_name}
+                />
+                <Button
+                  id="similarCurriculumButton"
+                  name={recommendedSimilarCurriculum.display_name}
+                  type="button"
+                  styleAsText
+                  className={style.relatedCurriculaLink}
+                  text={recommendedSimilarCurriculum.display_name}
+                  onClick={handleClickRecommendedSimilarCurriculum}
+                />
+                <img
+                  id="stretchCurriculumImage"
+                  src={recommendedStretchCurriculum.image || defaultImageSrc}
+                  alt={recommendedStretchCurriculum.display_name}
+                />
+                <Button
+                  id="stretchCurriculumButton"
+                  name={recommendedStretchCurriculum.display_name}
+                  type="button"
+                  styleAsText
+                  className={style.relatedCurriculaLink}
+                  text={recommendedStretchCurriculum.display_name}
+                  onClick={handleClickRecommendedStretchCurriculum}
+                />
               </div>
             </div>
           </div>
@@ -279,6 +336,7 @@ const ExpandedCurriculumCatalogCard = ({
   );
 };
 ExpandedCurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string.isRequired,
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
@@ -293,11 +351,14 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
+  handleSetExpandedCardKey: PropTypes.func.isRequired,
   isInUS: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
+  recommendedSimilarCurriculum: PropTypes.object,
+  recommendedStretchCurriculum: PropTypes.object,
 };
 export default ExpandedCurriculumCatalogCard;

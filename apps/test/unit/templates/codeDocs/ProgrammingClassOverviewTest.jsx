@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import ProgrammingClassOverview from '@cdo/apps/templates/codeDocs/ProgrammingClassOverview';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ProgrammingClassOverview', () => {
   let defaultProgrammingClass;

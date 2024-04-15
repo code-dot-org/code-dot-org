@@ -273,6 +273,7 @@ es-MX:
   class_submission_out_of_school_summer_camp: Campamento de verano
   classicmaze_name: Laberinto clásico
   code_hoc_coming: 'Llega la Hora del Código: ¡del 8 al 14 de diciembre!'
+  code_org_logo_alt: Inicio de Code.org
   code_sign_up: Regístrate para participar durante la Semana de la Educación en Ciencias
     de la Computación
   codea_beyond_gradelevel: Escuela secundaria +
@@ -1180,7 +1181,7 @@ es-MX:
   game_lab_documentation: Documentación del Laboratorio de juegos
   game_lab_tutorials: Tutoriales del Laboratorio de juegos
   gamelab_name: Laboratorio de juegos
-  gender: Sexo
+  gender: Género
   get_a_certificate_message: Te enviaremos un certificado e información sobre cómo
     hacer para que <a href='/learn/beyond'> aprenda más allá de una hora</a>
   get_a_certificate_message_after: Haz clic en el certificado para descargarlo o imprimirlo.
@@ -1267,6 +1268,7 @@ es-MX:
   header_project_gallery: Proyectos
   header_report_abuse: Denunciar abuso
   header_report_bug: Reportar un error
+  header_schools: Escuelas
   header_screen_reader_hamburger: Menú
   header_screen_reader_help: Menú de ayuda
   header_sections: Secciones
@@ -2688,6 +2690,7 @@ es-MX:
   user_header_applab: 'Laboratorio de aplicaciones '
   user_header_artist: 'Artista '
   user_header_create: 'Crear '
+  user_header_create_account: Crear cuenta
   user_header_dance: Fiesta de baile
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorio de juegos

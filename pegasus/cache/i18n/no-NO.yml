@@ -962,6 +962,7 @@ no-NO:
   header_about_us: Om oss
   header_course_catalog: Kurskatalog
   header_courses: kurs
+  header_districts: Distrikt
   header_documentation: Dokumentasjon
   header_educate_beyond: Utover Code.org
   header_educate_community: Nettsamfunn
@@ -983,6 +984,7 @@ no-NO:
   header_professional_learning: Profesjonell opplæring
   header_project_gallery: Prosjekter
   header_report_bug: Rapporter feil
+  header_schools: Skole
   header_sections: Seksjoner
   header_stats: Statistikk
   header_teach: Undervis
@@ -1221,6 +1223,7 @@ no-NO:
   homepage_slot_text_link_pd: Profesjonell utvikling
   homepage_slot_text_link_shop: T-skjorter, hatter, & mer
   homepage_slot_text_link_stats: Se statistikken
+  homepage_slot_text_link_thebadguys: Kod med Barske Bøller
   homepage_slot_text_shop: Butikk
   homepage_slot_text_studio: Alle våre opplæringsprogrammer
   homepage_slot_text_teacher: Lærersider

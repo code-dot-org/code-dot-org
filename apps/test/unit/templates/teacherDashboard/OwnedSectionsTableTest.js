@@ -1,15 +1,15 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow, mount} from 'enzyme';
-import * as Table from 'reactabular-table';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import React from 'react';
 import {Provider} from 'react-redux';
+import * as Table from 'reactabular-table';
+
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import Button from '@cdo/apps/templates/Button';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
@@ -18,10 +18,13 @@ import {
   studentsFormatter,
   COLUMNS,
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
-import Button from '@cdo/apps/templates/Button';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
+
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
 const GRADE_COLUMN = COLUMNS.GRADE.toString();

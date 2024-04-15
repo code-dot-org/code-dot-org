@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-intro",
-    "serialized_at": "2024-01-25 07:56:23 UTC",
+    "serialized_at": "2024-02-15 22:58:00 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",
@@ -172,6 +172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_panels_start"
+        ],
         "progression": "Intro"
       },
       "bonus": false,
@@ -294,6 +297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_panels_function"
+        ],
         "progression": "Functions"
       },
       "bonus": false,

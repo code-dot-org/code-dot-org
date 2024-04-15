@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
 import ContentContainer from '../ContentContainer';
+
 import CourseCard from './CourseCard';
-import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
+import SetUpCourses from './SetUpCourses';
+import shapes from './shapes';
 import TopCourse from './TopCourse';
 import ViewFeedback from './ViewFeedback';
-import styleConstants from '../../styleConstants';
-import i18n from '@cdo/locale';
-import shapes from './shapes';
 
 const contentWidth = styleConstants['content-width'];
 

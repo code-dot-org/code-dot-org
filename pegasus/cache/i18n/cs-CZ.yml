@@ -243,6 +243,7 @@ cs-CZ:
   class_submission_out_of_school_summer_camp: Letní tábor
   classicmaze_name: Klasické bludiště
   code_hoc_coming: Hodina kód je zde - prosinec 8-14!
+  code_org_logo_alt: Hlavní strana Code.org
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   codea_beyond_gradelevel: Střední škola a vyšší
   codea_beyond_longdescription: Codea pro iPad umožňuje vytvářet hry a simulace nebo
@@ -1131,6 +1132,7 @@ cs-CZ:
   header_about_us: O nás
   header_course_catalog: Katalog kurzů
   header_courses: Kurzy
+  header_districts: Kraje
   header_documentation: Dokumentace
   header_educate_beyond: Nad rámec Code.org
   header_educate_community: Online komunita
@@ -1157,6 +1159,7 @@ cs-CZ:
   header_project_gallery: Projekty
   header_report_abuse: Nahlásit zneužití
   header_report_bug: Nahlásit chybu
+  header_schools: Škola
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Nabídka Nápověda
   header_sections: Sekce

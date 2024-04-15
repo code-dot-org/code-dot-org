@@ -26,6 +26,9 @@ const defaultArgs = {
   isSignedOut: false,
   isTeacher: true,
   onQuickViewClick: () => {},
+  handleSetExpandedCardKey: () => {},
+  recommendedSimilarCurriculum: {},
+  recommendedStretchCurriculum: {},
 };
 
 export const AllOptionsCard = Template.bind({});

@@ -174,8 +174,6 @@ module Pd::SurveyPipeline::Helper
     Pd::SurveyPipeline::DailySurveyDecorator.decorate_single_workshop context
   end
 
-  private
-
   # Find all workshops of the same course and facilitated by a facilitator.
   #
   # @param facilitator_id [Number] valid facilitator id
@@ -183,7 +181,7 @@ module Pd::SurveyPipeline::Helper
   #
   # @return [Array<Number>] list of workshop ids
   #
-  def find_related_workshop_ids(facilitator_id, course)
+  private def find_related_workshop_ids(facilitator_id, course)
     return [] unless facilitator_id && course.present?
 
     Pd::Workshop.left_outer_joins(:facilitators).

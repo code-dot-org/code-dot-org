@@ -30,15 +30,17 @@ theme: responsive_full_width
 
 %section.bg-pattern-dark
   .wrapper.centered
-    %h2{style: "color: var(--neutral_white)"}
+    %h2.white
       =hoc_s(:admins_page_district_program_header)
-    %p{style: "color: var(--neutral_white)"}
+    %p.white
       =hoc_s(:admins_page_district_program_desc)
     .button-wrapper.centered
       %a.link-button{href: "/districts"}
         =hoc_s(:call_to_action_discover_district_program)
       %a.link-button.secondary.white{href: "/educate/district/partners"}
         =hoc_s(:call_to_action_see_district_partners)
+    %p.body-three.white.no-margin-bottom{style: "margin-top: 1rem"}
+      =hoc_s(:admins_page_district_program_disclaimer, markdown: :inline, locals: {intl_url: "/professional-learning/international-partners"})
 
 %section.driving-change.bg-neutral-light
   .wrapper
@@ -50,14 +52,14 @@ theme: responsive_full_width
 
 %section.pathways.bg-neutral-dark
   .wrapper
-    %h2.centered{style: "color: var(--neutral_white)"}
+    %h2.centered.white
       =hoc_s(:curriculum_pathway_heading)
-    %p.centered{style: "color: var(--neutral_white); margin-bottom: 3rem"}
+    %p.centered.white{style: "margin-bottom: 3rem"}
       =hoc_s(:curriculum_pathway_desc)
     = view :curriculum_pathway
     %hr.light
     %div.centered
-      %h3{style: "color: var(--neutral_white)"}
+      %h3.white
         =hoc_s(:teach_page_free_curriculum_heading_02)
       .button-wrapper.centered
         %a.link-button{href: "/educate/curriculum/elementary-school"}
@@ -107,3 +109,5 @@ theme: responsive_full_width
     %p.centered
       =hoc_s(:admins_page_resources_desc)
     = view :"administrators/admins_additional_resources"
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::ADMIN_PAGE_VISITED_EVENT

@@ -1,4 +1,4 @@
-@import 'font', 'typography', 'breakpoints';
+@import "font", "typography", "breakpoints";
 
 // Variables
 $border-radius: 4px;
@@ -15,27 +15,31 @@ p {
 }
 
 // Use these classes to change a section's background color
-section.bg-neutral-light { background-color: var(--neutral_light); }
-section.bg-neutral-dark { background-color: var(--neutral_dark); }
-section.bg-secondary { background-color: var(--brand_secondary_light); }
+section.bg-neutral-light {
+  background-color: var(--neutral_light);
+}
+section.bg-neutral-dark {
+  background-color: var(--neutral_dark);
+}
+section.bg-secondary {
+  background-color: var(--brand_secondary_light);
+}
 section.bg-primary-light {
   background-color: rgba(171, 223, 229, 0.5);
 
-  p {
-    @include strong;
-
-    &.body-three {
-      @include body-three;
+  a {
+    color: var(--neutral_dark) !important;
+    &:hover {
+      color: var(--brand_secondary_dark) !important;
     }
-  }
-
-  a { color: var(--neutral_dark) !important;
-    &:hover { color: var(--brand_secondary_dark) !important; }
-    &.link-button { color: var(--neutral_white) !important; }
+    &.link-button {
+      color: var(--neutral_white) !important;
+    }
   }
 }
 section.bg-pattern-dark {
-  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center
+    repeat;
   background-size: 12rem;
   background-color: var(--neutral_dark);
 }
@@ -61,14 +65,30 @@ section.bg-pattern-dark {
   }
 }
 
-// Centers a block-level element
-.centered { text-align: center !important; }
-
 // Removes the bottom margin or padding —
 // often helpful on a last paragraphs or list elements
 // to maintain consistent white space between sections
-.no-margin-bottom { margin-bottom: 0 !important;}
-.no-padding-bottom { padding-bottom: 0 !important;}
+
+// !important is used here to override existing margin
+// or padding bottom styles – this allows this class to
+// work on any element
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+// Adds 2rem of space above or below an element
+// !important is used here to override existing margin
+// – this allows this class to work on any element
+.add-margin-top {
+  margin-top: 2rem !important;
+}
+.add-margin-bottom {
+  margin-bottom: 2rem !important;
+}
+
 
 // FontAwesome icon defaults
 // Sets fixed height on icon container to maintain consistent
@@ -88,26 +108,73 @@ i.fa-fw {
 .flex-container {
   display: flex;
 
-  &.flex-direction-column { flex-direction: column; }
-  &.flex-direction-row { flex-direction: row; }
-  &.justify-space-between { justify-content: space-between }
-  &.justify-center { justify-content: center }
-  &.justify-end { justify-content: end; }
-  &.align-content-baseline { align-content: baseline; }
-  &.align-items-center { align-items: center; }
-  &.align-items-start { align-items: flex-start; }
-  &.wrap { flex-wrap: wrap; }
-  &.wrap-reverse { flex-wrap: wrap-reverse; }
-  &.gap-1 { gap: 1rem }
-  &.gap-1-5 { gap: 1.5rem }
-  &.gap-2 { gap: 2rem }
+  &.flex-direction-column {
+    flex-direction: column;
+  }
+  &.flex-direction-row {
+    flex-direction: row;
+  }
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-end {
+    justify-content: end;
+  }
+  &.align-content-baseline {
+    align-content: baseline;
+  }
+  &.align-items-center {
+    align-items: center;
+  }
+  &.align-items-start {
+    align-items: flex-start;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  &.gap-1 {
+    gap: 1rem;
+  }
+  &.gap-1-5 {
+    gap: 1.5rem;
+  }
+  &.gap-2 {
+    gap: 2rem;
+  }
+
+  & > .flex-1 {
+    flex: 1;
+  }
 }
 
 // Grid container
-// Apply class to containers that use grid, but declare
-// column/row characteristics on a case-by-case basis
+// Apply class to containers that use grid
 .grid-container {
   display: grid;
+
+  &.two-col {
+    @media (min-width: $width-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+  &.align-items-center {
+    align-items: center;
+  }
+  &.gap-2 {
+    gap: 2rem;
+  }
+  &.gap-4 {
+    gap: 4rem;
+  }
 }
 
 // Line divider for use between sections
@@ -145,6 +212,11 @@ div.divider {
   box-shadow: 8px 8px 0 var(--brand_primary_light);
 }
 
+// Add a soft box shadow to an element
+.box-shadow-soft-neutral {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
+}
+
 // Lines (<hr>)
 hr {
   border-top: 1px solid var(--neutral_dark20);
@@ -159,7 +231,8 @@ hr {
 .button-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
 
   &.centered {
     justify-content: center;
@@ -172,6 +245,12 @@ hr {
 .hero-banner-basic {
   position: relative;
   overflow: hidden;
+
+  & > .grid-container {
+    @media (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   .text-wrapper {
     position: relative;
@@ -215,6 +294,25 @@ ul {
     }
   }
 
+  // Show list items in two columns
+  &.two-col {
+    @media screen and (min-width: $width-md) { column-count: 2; }
+
+    li:first-child {
+      margin-top: 0;
+    }
+  }
+
+  // Show list items in three columns
+  &.three-col {
+    @media screen and (min-width: $width-sm) { column-count: 2; }
+    @media screen and (min-width: $width-md) { column-count: 3; }
+
+    li:first-child {
+      margin-top: 0;
+    }
+  }
+
   // Lists that use icons next to content
   &.icon-bullet-list {
     margin: 1rem 0;
@@ -226,7 +324,7 @@ ul {
     // stretch to the width of the container
     &.full-width {
       li {
-        width: 100%
+        width: 100%;
       }
     }
 
@@ -284,7 +382,7 @@ ul {
 
         &:before {
           color: var(--brand_secondary_default);
-          transition: color ease-in-out .2s;
+          transition: color ease-in-out 0.2s;
         }
       }
 
@@ -299,7 +397,6 @@ ul {
       }
 
       &:hover {
-
         i:before {
           color: var(--brand_secondary_dark);
         }
@@ -313,10 +410,8 @@ ul {
     display: grid;
     grid-gap: 1.5rem;
 
-    &.three-col {
-      @media screen and (min-width: $width-lg) {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     li {
@@ -347,37 +442,19 @@ ul {
         border-radius: 1rem;
       }
 
-      &:nth-of-type(1) span { background: var(--brand_primary_light) }
-      &:nth-of-type(2) span { background: var(--brand_primary_default); opacity: 0.75; }
-      &:nth-of-type(3) span { background: var(--brand_primary_dark)}
+      &:nth-of-type(1) span {
+        background: var(--brand_primary_light);
+      }
+      &:nth-of-type(2) span {
+        background: var(--brand_primary_default);
+        opacity: 0.75;
+      }
+      &:nth-of-type(3) span {
+        background: var(--brand_primary_dark);
+      }
 
       h3 {
         @include heading-sm;
-      }
-    }
-  }
-
-  // Lists that show supporters or other text content in a table format
-  &.supporters-list {
-    margin: 3rem auto;
-    display: grid;
-    justify-items: center;
-    gap: 1.5rem;
-
-    @media screen and (min-width: $width-sm) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media screen and (min-width: $width-md) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    li {
-      all: unset;
-      text-align: center;
-
-      &:before {
-        content: "";
       }
     }
   }
@@ -473,7 +550,7 @@ ol.steps-list {
 details {
   padding: 1.5rem 1rem 1rem;
   border-bottom: 1px solid var(--neutral_dark80);
-  transition: background ease-in-out .2s;
+  transition: background ease-in-out 0.2s;
 
   &:hover {
     background: var(--neutral_light);
@@ -500,7 +577,7 @@ details {
 
   // Hides the default arrow on Safari
   & summary::-webkit-details-marker {
-    display:none;
+    display: none;
   }
 
   // Uses FontAwesome arrow icons to
@@ -522,7 +599,6 @@ details {
 
 // Forms
 form {
-
   label {
     display: block;
     text-align: left;
@@ -530,17 +606,18 @@ form {
     font-weight: var(--semi-bold-font-weight);
   }
 
-  input[type="text"], select {
+  input[type="text"],
+  select {
     display: block;
     width: 100%;
-    margin: .25rem auto 1.5rem;
+    margin: 0.25rem auto 1.5rem;
     padding: 0.5rem;
     border: 1px solid;
     border-radius: $border-radius;
     font-family: var(--main-font);
     font-weight: var(--regular-font-weight);
     font-size: 1rem;
-    transition: all ease-in-out .2s;
+    transition: all ease-in-out 0.2s;
 
     &:focus {
       @include focus-outline;
@@ -548,7 +625,7 @@ form {
   }
 
   button,
-  &[type=submit] {
+  &[type="submit"] {
     margin-top: 1rem;
 
     @media screen and (max-width: $width-sm) {
@@ -561,7 +638,8 @@ form {
   .form-group {
     margin: 0;
 
-    input[type="text"], select {
+    input[type="text"],
+    select {
       margin: 0;
     }
   }
@@ -576,6 +654,7 @@ form {
   margin-top: 2rem;
   display: grid;
   grid-gap: 1.5rem;
+  text-align: initial;
 
   @media screen and (min-width: $width-sm) {
     grid-template-columns: repeat(2, 1fr);
@@ -599,6 +678,7 @@ form {
   background: var(--neutral_light);
   border: 1px solid var(--neutral_dark20);
   border-radius: $border-radius;
+  text-align: initial;
   display: flex;
   align-content: baseline;
 
@@ -636,7 +716,6 @@ form {
   }
 
   figure {
-
     &.video-responsive {
       margin-bottom: 1rem;
     }
@@ -648,7 +727,6 @@ form {
   }
 
   &.secondary {
-
     h3 {
       @include heading-sm;
     }
@@ -761,7 +839,8 @@ form {
   }
 
   @media screen and (max-width: $width-sm) {
-    a.link-button, button {
+    a.link-button,
+    button {
       width: 100%;
       text-align: center;
     }
@@ -782,20 +861,13 @@ form {
   .flex-container {
     gap: 1.5rem;
     flex-direction: column;
-
-    &.self-paced-english {
-      gap: 1.3rem;
-
-      @media screen and (max-width: $width-md) {
-        gap: 0;
-      }
-    }
   }
 
   img {
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
+    margin-bottom: 1.5rem;
   }
 
   p {
@@ -862,13 +934,13 @@ form {
       background: none;
       border: none;
       transform: translateY(-50%);
-      transition: .3s;
+      transition: 0.3s;
       padding: 0;
       width: 1.75rem;
 
       &:hover {
         background: none;
-        opacity: .8;
+        opacity: 0.8;
       }
 
       img {
@@ -915,7 +987,7 @@ form {
       }
     }
 
-    a{
+    a {
       background: var(--brand_primary_light);
 
       &.selected {
@@ -937,7 +1009,6 @@ form {
 // See code.org/educate/professional-learning/middle-high
 // and /views/pl_middle_high_carousel.haml for an example
 .quotes-wrapper {
-
   img {
     border-radius: $border-radius;
     width: 100%;
@@ -953,7 +1024,6 @@ form {
   }
 
   .carousel-wrapper {
-
     .with-image {
       display: flex;
       justify-content: space-between;
@@ -986,7 +1056,8 @@ form {
         font-size: 1.5rem;
         line-height: 1.3;
 
-        &:before, &:after {
+        &:before,
+        &:after {
           font: var(--fa-font-solid);
           color: var(--brand_primary_default);
         }
@@ -1014,7 +1085,6 @@ form {
 // See code.org/educate/professional-learning/middle-high
 // and /views/pl_middle_high_carousel.haml for an example
 .photo-carousel-wrapper {
-
   .with-image {
     display: flex;
     justify-content: space-between;
@@ -1066,7 +1136,8 @@ form {
 // Individual quote section
 // See code.org/teach for an example
 section.quote {
-  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center
+    repeat;
   background-size: 12rem;
   background-color: var(--neutral_dark);
 
@@ -1082,7 +1153,8 @@ section.quote {
         font-size: 1.5rem;
       }
 
-      &:before, &:after {
+      &:before,
+      &:after {
         font: var(--fa-font-solid);
         color: var(--brand_primary_default);
       }
@@ -1131,8 +1203,7 @@ section.quote {
 
 // Blog post callout
 .blog-post-callout {
-
-  .wrapper{
+  .wrapper {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -1149,7 +1220,7 @@ section.quote {
 
 // Tabs section
 // See code.org/teach or code.org/donate for examples
-.tabs-section{
+.tabs-section {
   margin-top: 2rem;
   min-height: 408px;
 
@@ -1251,41 +1322,33 @@ section.quote {
   }
 }
 
-
 // At a glance sections
 // See code.org/educate/csp and code.org/teach for examples
 .at-a-glance {
   background: var(--neutral_white);
   border: 1px solid var(--neutral_dark10);
   border-radius: $border-radius;
+  text-align: initial;
   padding: 1.5rem;
   display: grid;
 
-  // Used with two ul elements
-  &.two-col {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-
-    @media screen and (max-width: $width-md) {
-      grid-template-columns: unset;
-      gap: 1rem;
-    }
-  }
-
   ul {
     margin: 0;
-    gap: 1.25rem;
 
     li {
       all: unset;
       font-size: 1rem;
-      margin: 0;
+      margin: 0 0 1.25rem;
       display: flex;
       align-items: baseline;
       gap: 0.75rem;
 
       &:before {
         display: none;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
 
       p {
@@ -1300,7 +1363,8 @@ section.quote {
 // Subscribe form
 // See code.org/csf for an example
 .subscribe-form {
-  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center
+    repeat;
   background-size: 22%;
   background-color: var(--neutral_dark);
   border-radius: $border-radius;
@@ -1326,7 +1390,8 @@ section.quote {
       width: 100%;
     }
 
-    h2, p {
+    h2,
+    p {
       color: var(--neutral_white);
     }
   }
@@ -1347,11 +1412,16 @@ section.quote {
 // Action wrapper
 // See code.org/donate for example
 .action-wrapper {
-  background: url("/images/banners/banner-bg-lines-neutral-light.png") center repeat;
+  background: url("/images/banners/banner-bg-lines-neutral-light.png") center
+    repeat;
   background-size: 10rem;
   background-color: var(--brand_primary_default);
   border-radius: $border-radius;
   padding: 2rem;
+
+  &.solid-bg {
+    background: var(--brand_primary_default);
+  }
 }
 
 // Tables
@@ -1364,12 +1434,55 @@ table {
     background-color: var(--neutral_light);
     border: 1px solid var(--neutral_dark20);
     color: var(--neutral_dark);
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: var(--semi-bold-font-weight);
     text-align: initial;
   }
 
   td {
     border: 1px solid var(--neutral_dark20);
+  }
+}
+
+// Wrap a <table> in this class if the table needs to be responsive
+.table-wrapper {
+  overflow-x: auto;
+
+  @media screen and (max-width: 700px) {
+    border-left: 1px solid var(--neutral_dark20);
+    border-right: 1px solid var(--neutral_dark20);
+  }
+
+  @media screen and (max-width: 700px) {
+    table {
+      margin-left: -1px;
+    }
+  }
+}
+
+// Dashed box
+// See code.org/applab for an example
+.dashed-box {
+  padding: 1.5rem 2rem;
+  border: 3px dashed var(--neutral_dark20);
+  border-radius: 4px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// List of logos
+// Set the max-width of each image inline to maintain consistent ratios
+.logos-wrapper {
+  margin-block: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+
+  img {
+    align-self: center;
+    width: 100%;
   }
 }

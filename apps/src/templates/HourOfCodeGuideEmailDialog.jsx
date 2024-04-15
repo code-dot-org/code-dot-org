@@ -88,7 +88,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
     <div>
       {isOpen && (
         <AccessibleDialog styles={style} onClose={onClose}>
-          <div tabIndex="0">
+          <div>
             <Heading2>{i18n.welcomeToDanceParty()}</Heading2>
           </div>
           <div className={style.middle}>

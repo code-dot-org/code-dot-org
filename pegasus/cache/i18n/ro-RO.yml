@@ -207,6 +207,7 @@ ro-RO:
   class_submission_out_of_school_summer_camp: Tabară de vară
   classicmaze_name: Labirint Clasic
   code_hoc_coming: 'Ora de Programare este aici: 8-14 decembrie!'
+  code_org_logo_alt: Code.org Acasă
   code_sign_up: Înscrieţi-vă pentru a participa în timpul CS Education Week (”Săptămâna
     Informaticii în Educaţie”)
   codea_beyond_gradelevel: Liceu +
@@ -1130,6 +1131,7 @@ ro-RO:
   header_about_us: Despre noi
   header_course_catalog: Catalog de cursuri
   header_courses: cursuri
+  header_districts: Districte
   header_documentation: Documentație
   header_educate_beyond: Dincolo de Code.org
   header_educate_community: Comunitate online
@@ -1155,6 +1157,7 @@ ro-RO:
   header_project_gallery: Proiecte
   header_report_abuse: Raportează abuz
   header_report_bug: Raportare problemă
+  header_schools: Școli
   header_screen_reader_hamburger: Meniu
   header_screen_reader_help: Meniul Ajutor
   header_sections: Secțiuni

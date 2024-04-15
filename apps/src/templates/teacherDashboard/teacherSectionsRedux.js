@@ -1,12 +1,14 @@
-import _ from 'lodash';
 import $ from 'jquery';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
+
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -214,7 +216,7 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * Removes null values from stringified object before sending firehose record
  */
 function removeNullValues(key, val) {
-  if (val === null || typeof val === undefined) {
+  if (val === null || typeof val === 'undefined') {
     return undefined;
   }
   return val;
@@ -444,6 +446,14 @@ export const asyncLoadSectionData = id => dispatch => {
     })
     .then(() => {
       dispatch({type: ASYNC_LOAD_END});
+    });
+};
+
+export const asyncLoadCourseOfferings = () => dispatch => {
+  fetchJSON('/dashboardapi/sections/valid_course_offerings')
+    .then(offerings => dispatch(setCourseOfferings(offerings)))
+    .catch(err => {
+      console.error(err.message);
     });
 };
 
@@ -677,7 +687,6 @@ function newSectionData(participantType) {
     courseVersionId: null,
     unitId: null,
     hidden: false,
-    isAssigned: undefined,
     restrictSection: false,
   };
 }
@@ -1232,6 +1241,10 @@ export function ltiSyncResult(state) {
   return getRoot(state).ltiSyncResult;
 }
 
+export function syncEnabled(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).syncEnabled;
+}
+
 export function sectionUnitName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).courseVersionName;
 }
@@ -1291,6 +1304,7 @@ export function getSectionRows(state, sectionIds) {
       'name',
       'courseVersionName',
       'loginType',
+      'loginTypeName',
       'studentCount',
       'code',
       'participantType',
@@ -1318,6 +1332,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
+  loginTypeName: serverSection.login_type_name,
   grades: serverSection.grades,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   lessonExtras: serverSection.lesson_extras,
@@ -1331,7 +1346,6 @@ export const sectionFromServerSection = serverSection => ({
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
-  isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
   postMilestoneDisabled: serverSection.post_milestone_disabled,
   codeReviewExpiresAt: serverSection.code_review_expires_at
@@ -1340,6 +1354,7 @@ export const sectionFromServerSection = serverSection => ({
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
   sectionInstructors: serverSection.section_instructors,
+  syncEnabled: serverSection.sync_enabled,
 });
 
 /**

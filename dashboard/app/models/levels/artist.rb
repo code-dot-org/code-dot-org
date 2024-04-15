@@ -309,4 +309,8 @@ class Artist < Blockly
       <block type="simple_jump_down_right"></block>
     XML
   end
+
+  def validated?
+    properties['free_play'] == 'false'
+  end
 end

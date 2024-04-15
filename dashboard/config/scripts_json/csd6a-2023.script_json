@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-11-06 16:34:50 UTC",
+    "serialized_at": "2024-04-11 16:45:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11446,6 +11446,7 @@
       "key": "if_statements_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-if-statements-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -11951,6 +11952,7 @@
       "key": "the_counter_pattern",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/variables_shortened-mp4-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -12034,6 +12036,7 @@
       "key": "variables_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-variables-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

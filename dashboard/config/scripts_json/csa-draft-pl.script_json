@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csa-draft-pl",
-    "serialized_at": "2023-11-17 16:28:51 UTC",
+    "serialized_at": "2024-03-12 21:33:54 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -151,21 +151,6 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "csa-draft-pl"
-      }
-    },
-    {
-      "key": "lesson-9",
-      "name": "Module X",
-      "absolute_position": 9,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
         "lesson_group.key": "",
         "script.name": "csa-draft-pl"
       }

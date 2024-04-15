@@ -1,9 +1,10 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
+
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from './index';
-import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/FontAwesomeV6Icon',
+  title: 'DesignSystem/FontAwesomeV6Icon', // eslint-disable-line storybook/no-title-property-in-meta
   component: FontAwesomeV6Icon,
 } as Meta;
 
@@ -12,11 +13,11 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: Story<FontAwesomeV6IconProps> = args => (
+const SingleTemplate: StoryFn<FontAwesomeV6IconProps> = args => (
   <FontAwesomeV6Icon {...args} />
 );
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: FontAwesomeV6IconProps[];
 }> = args => (
   <>

@@ -265,6 +265,7 @@ pl-PL:
   class_submission_out_of_school_summer_camp: Obóz letni
   classicmaze_name: Klasyczny labirynt
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
+  code_org_logo_alt: Strona domowa Code.org
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
   codea_beyond_gradelevel: Szkoła ponadgimnazjalna +
@@ -1212,6 +1213,7 @@ pl-PL:
   header_about_us: O nas
   header_course_catalog: Katalog Kursów
   header_courses: Kursy
+  header_districts: Dystrykty
   header_documentation: Dokumentacja
   header_educate_beyond: Poza Code.org
   header_educate_community: Społeczność online
@@ -1238,6 +1240,7 @@ pl-PL:
   header_project_gallery: Galeria Projektów
   header_report_abuse: Zgłoś nadużycie
   header_report_bug: Zgłoś problem
+  header_schools: Szkoła
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: 'Pomoc Menu '
   header_sections: Sekcje

@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import ProgrammingExpressionOverview from '@cdo/apps/templates/codeDocs/ProgrammingExpressionOverview';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ProgrammingExpressionOverview', () => {
   let defaultProgrammingExpression;

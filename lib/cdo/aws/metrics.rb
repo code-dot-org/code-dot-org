@@ -65,8 +65,7 @@ module Cdo
     # @param [Hash{Symbol => String}] dimensions
     # @param [Hash] options Additional keyword arguments to be merged
     #  into the {Aws::CloudWatch::Types::MetricDatum} object.
-    def self.put(name, value, dimensions, **options)
-      namespace, metric_name = name.split('/', 2)
+    def self.put(namespace, metric_name, value, dimensions, **options)
       metric = {
         metric_name: metric_name,
         dimensions: dimensions.map {|k, v| {name: k, value: v}},
@@ -92,7 +91,7 @@ module Cdo
     end
 
     def self.flush!
-      BUFFERS.values.each(&:flush!)
+      BUFFERS.each_value(&:flush!)
     end
   end
 end

@@ -9,7 +9,7 @@ video_player: true
 
 The following table is intended to outline the main programming topics for the post-AP material in Code Studio, so that teachers may familiarize themselves with the material and feel more comfortable assisting students.
 
-In Code Studio, there is a <a href="https://studio.code.org/s/cspunit6/" target="_blank">collection of levels</a> that are intended to familiarize students with the different components of creating data-driven apps in App Lab. These stages will take several (approximately 4) weeks to complete, and students should work through the material at their own pace. Stage 8 includes examples of apps that can be made using the data tools, which students can use as inspiration for their final projects. The final stage contains a single level, in which students may build their final projects.
+In Code Studio, there is a <a href="https://studio.code.org/s/cspunit6?viewAs=Instructor" target="_blank">collection of levels</a> that are intended to familiarize students with the different components of creating data-driven apps in App Lab. These stages will take several (approximately 4) weeks to complete, and students should work through the material at their own pace. Stage 8 includes examples of apps that can be made using the data tools, which students can use as inspiration for their final projects. The final stage contains a single level, in which students may build their final projects.
 
 For more information about how to teach this material, please refer to this <a href="https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit?usp=sharing" target="_blank">teacher document</a>.
 

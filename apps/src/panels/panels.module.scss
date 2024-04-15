@@ -1,4 +1,6 @@
 @import "color.scss";
+@import 'font.scss';
+@import '../mixins.scss';
 
 @keyframes fade-in {
   0%, 50% {
@@ -45,6 +47,13 @@
       padding: 20px;
       animation: fade-in 1.5s;
 
+      h1, h2, h3, h4 {
+        margin: 0 0 10px 0;
+        font-family: $barlowSemiCondensed-semibold;
+        font-size: 1.75em;
+        line-height: 1.2em;
+      }
+
       p {
         font-size: 16px;
         line-height: 1.5;
@@ -56,6 +65,11 @@
         }
       }
 
+      &TopLeft {
+        top: 40px;
+        left: -20px;
+      }
+
       &TopRight {
         top: 40px;
         right: -20px;
@@ -64,6 +78,12 @@
       &BottomLeft {
         bottom: 40px;
         left: -20px;
+      }
+
+
+      &BottomRight {
+        bottom: 40px;
+        right: -20px;
       }
     }
   }
@@ -98,6 +118,32 @@
       &NotCurrent {
         color: $neutral_dark70;
         cursor: pointer;
+      }
+    }
+  }
+
+  .skipContainer {
+    position: absolute;
+    top: 1px;
+    right: 4px;
+
+    .buttonSkip {
+      @include remove-button-styles;
+      background-color: $neutral_dark;
+      color: $neutral_light;
+      display: flex;
+      height: 24px;
+      width: initial;
+      padding: 0 11px;
+      font-size: 13px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      margin: 2px;
+      transition: opacity 0.2s ease;
+
+      &Content {
+        margin-right: 9px;
       }
     }
   }

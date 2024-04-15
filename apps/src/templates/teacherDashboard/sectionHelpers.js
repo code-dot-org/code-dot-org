@@ -1,6 +1,8 @@
 import _ from 'lodash';
-import {navigateToHref} from '@cdo/apps/utils';
+
 import {TeacherDashboardPath} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation';
+import {navigateToHref} from '@cdo/apps/utils';
+
 import firehoseClient from '../../lib/util/firehose';
 
 export function switchToSection(toSectionId, fromSectionId) {

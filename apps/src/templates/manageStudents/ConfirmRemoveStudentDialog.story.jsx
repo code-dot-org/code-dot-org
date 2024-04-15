@@ -1,10 +1,11 @@
 import React from 'react';
+
 import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS,
 } from './ConfirmRemoveStudentDialog';
 
 export default {
-  title: 'ManageStudents/ConfirmRemoveStudentsDialog',
+  title: 'ManageStudents/ConfirmRemoveStudentsDialog', // eslint-disable-line storybook/no-title-property-in-meta
   component: ConfirmRemoveStudentDialog,
 };
 

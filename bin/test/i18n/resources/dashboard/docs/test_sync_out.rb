@@ -7,14 +7,13 @@ describe I18n::Resources::Dashboard::Docs::SyncOut do
 
   let(:programming_env) {'expected_programming_env'}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'expected_i18n_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
-  let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale, 'docs')}
+  let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'docs')}
   let(:i18n_locale_dir) {CDO.dir('i18n/locales', i18n_locale, 'docs')}
 
-  let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, "docs/#{programming_env}.json")}
+  let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "docs/#{programming_env}.json")}
   let(:i18n_original_file_path) {CDO.dir("i18n/locales/original/docs/#{programming_env}.json")}
   let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "programming_environments.#{i18n_locale}.json")}
 
@@ -33,7 +32,6 @@ describe I18n::Resources::Dashboard::Docs::SyncOut do
 
     before do
       FileUtils.mkdir_p(crowdin_locale_dir)
-      I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
     end
 
     let(:expect_localization_distribution) do
@@ -50,22 +48,6 @@ describe I18n::Resources::Dashboard::Docs::SyncOut do
       expect_crowdin_files_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
 
       process_language
-    end
-
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute the localization' do
-        expect_localization_distribution.never
-        process_language
-      end
-
-      it 'moves Crowdin files to the i18n locale dir' do
-        expect_crowdin_files_to_i18n_locale_dir_moving.once
-        process_language
-      end
     end
 
     context 'when the Crowdin locale dir does not exists' do

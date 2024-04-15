@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedCoteacherInviteNotification as CoteacherInviteNotification} from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
+import React from 'react';
+
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import {UnconnectedCoteacherInviteNotification as CoteacherInviteNotification} from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CoteacherInviteNotification', () => {
   const defaultProps = {

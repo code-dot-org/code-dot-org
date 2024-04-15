@@ -1,8 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import FontAwesome from '../FontAwesome';
+
+import {getLevelColumnHeaderId} from './LevelDataCell';
+
+import styles from './progress-table-v2.module.scss';
 
 export default function ExpandedProgressColumnHeader({
   lesson,
@@ -12,67 +16,114 @@ export default function ExpandedProgressColumnHeader({
 }) {
   const isExpandable = level.sublevels?.length > 0;
 
-  const expandedChoiceLevel = React.useCallback(
+  const getLevelHeaderContent = React.useCallback(
     () => (
-      <div
-        key={lesson.id + '.' + level.id + '-h'}
-        className={classNames(
-          styles.expandedHeaderExpandedLevel,
-          isExpandable && styles.pointerMouse
-        )}
-        onClick={() => toggleExpandedChoiceLevel(level)}
-      >
-        <div
-          className={classNames(
-            styles.expandedHeaderLevelCell,
-            styles.expandedHeaderExpandedLevelCell
-          )}
-        >
-          {level.sublevels?.length > 0 && (
-            <FontAwesome
-              icon="caret-down"
-              className={styles.expandedHeaderLevelCaret}
-            />
-          )}
+      <>
+        <div className={styles.expandedHeaderLevelCellLevelNumber}>
           {lesson.relative_position + '.' + level.bubbleText}
         </div>
-        {level.sublevels?.map(sublevel => (
-          <div
+        {level.kind === 'assessment' && (
+          <FontAwesome
+            icon="star"
+            aria-label="assessment"
+            className={styles.assessmentLevelIcon}
+          />
+        )}
+      </>
+    ),
+    [lesson, level]
+  );
+
+  const expandedLevel = React.useCallback(
+    isExpanded => (
+      <button
+        type="button"
+        className={styles.expandedHeaderLevelCellExpandable}
+        aria-expanded={isExpanded}
+      >
+        {<FontAwesome icon={isExpanded ? 'caret-down' : 'caret-right'} />}
+        {getLevelHeaderContent()}
+      </button>
+    ),
+    [getLevelHeaderContent]
+  );
+
+  const expandedChoiceLevel = React.useCallback(
+    () => (
+      <>
+        <th
+          className={classNames(
+            styles.gridBox,
+            styles.expandedHeaderLevelCell,
+            styles.expandedHeaderExpandedLevelCell,
+            styles.expandedHeaderExpandedLevelCellFirst,
+            isExpandable && styles.pointerMouse
+          )}
+          scope="col"
+          id={getLevelColumnHeaderId(level.id)}
+          onClick={() => toggleExpandedChoiceLevel(level)}
+        >
+          {level.sublevels?.length > 0
+            ? expandedLevel(true)
+            : getLevelHeaderContent()}
+        </th>
+        {level.sublevels?.map((sublevel, index) => (
+          <th
             className={classNames(
+              styles.gridBox,
               styles.expandedHeaderLevelCell,
               styles.expandedHeaderExpandedLevelCell
             )}
             key={lesson.id + '.' + level.id + '-h-' + sublevel.id}
+            scope="col"
+            id={getLevelColumnHeaderId(sublevel.id, level.id)}
           >
-            {sublevel.bubbleText}
-          </div>
+            <div className={styles.expandedHeaderExpandedLevelCellInner}>
+              <div className={styles.expandedHeaderLevelCellLevelNumber}>
+                {sublevel.bubbleText}
+              </div>
+            </div>
+          </th>
         ))}
-      </div>
+      </>
     ),
-    [lesson, level, isExpandable, toggleExpandedChoiceLevel]
+    [
+      lesson,
+      level,
+      isExpandable,
+      toggleExpandedChoiceLevel,
+      expandedLevel,
+      getLevelHeaderContent,
+    ]
   );
 
   const unexpandedLevel = React.useCallback(
     () => (
-      <div
+      <th
         className={classNames(
           styles.gridBox,
+          styles.expandedHeaderChild,
           styles.expandedHeaderLevelCell,
+          styles.expandedHeaderLevelCellUnexpanded,
           isExpandable && styles.pointerMouse
         )}
         key={lesson.id + '.' + level.id + '-h'}
         onClick={() => toggleExpandedChoiceLevel(level)}
+        id={getLevelColumnHeaderId(level.id)}
       >
-        {level.sublevels?.length > 0 && (
-          <FontAwesome
-            icon="caret-right"
-            className={styles.expandedHeaderLevelCaret}
-          />
-        )}
-        {lesson.relative_position + '.' + level.bubbleText}
-      </div>
+        {level.sublevels?.length > 0
+          ? expandedLevel(false)
+          : getLevelHeaderContent()}
+      </th>
     ),
-    [lesson, level, toggleExpandedChoiceLevel, isExpandable]
+    [
+      lesson,
+      level,
+      toggleExpandedChoiceLevel,
+      isExpandable,
+      expandedLevel,
+      getLevelHeaderContent,
+    ]
   );
 
   return level.sublevels?.length > 0 && isLevelExpanded

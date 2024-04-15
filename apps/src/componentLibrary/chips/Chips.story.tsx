@@ -1,17 +1,17 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React, {useState} from 'react';
-import {Meta, Story} from '@storybook/react';
 
 import {Chips, ChipsProps} from './index';
 
 export default {
-  title: 'DesignSystem/Chips',
+  title: 'DesignSystem/Chips', // eslint-disable-line storybook/no-title-property-in-meta
   component: Chips,
 } as Meta;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: Story<ChipsProps> = args => {
+const SingleTemplate: StoryFn<ChipsProps> = args => {
   const [values, setValues] = useState<string[]>([]);
 
   return (
@@ -23,7 +23,7 @@ const SingleTemplate: Story<ChipsProps> = args => {
   );
 };
 
-const MultipleTemplate: Story<{groups: ChipsProps[]}> = args => {
+const MultipleTemplate: StoryFn<{groups: ChipsProps[]}> = args => {
   const [values, setValues] = useState([]);
   const {groups} = args;
 
@@ -85,7 +85,7 @@ SizesOfChips.args = {
         {value: 'Lchip5', label: 'Chip5'},
       ],
       values: [],
-      setValues: values => null,
+      setValues: () => null,
     },
     {
       label: 'Chips M',
@@ -100,7 +100,7 @@ SizesOfChips.args = {
         {value: 'Mchip5', label: 'Chip5'},
       ],
       values: [],
-      setValues: values => null,
+      setValues: () => null,
     },
     {
       label: 'Chips S',
@@ -115,7 +115,7 @@ SizesOfChips.args = {
         {value: 'Schip5', label: 'Chip5'},
       ],
       values: [],
-      setValues: values => null,
+      setValues: () => null,
     },
     {
       label: 'Chips XS',
@@ -130,7 +130,7 @@ SizesOfChips.args = {
         {value: 'XSchip5', label: 'Chip5'},
       ],
       values: [],
-      setValues: values => null,
+      setValues: () => null,
     },
   ],
 };

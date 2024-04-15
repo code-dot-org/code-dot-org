@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-12 03:16:16 UTC",
+    "serialized_at": "2024-04-11 16:45:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -17520,6 +17520,7 @@
       "key": "variables_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-variables-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -20601,7 +20602,7 @@
       "key": "57428b8b-954f-4e25-b6cf-1dd6338ef623",
       "position": 3,
       "learning_goal": "Program Development - Program Sequence",
-      "ai_enabled": true,
+      "ai_enabled": false,
       "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program, its starting elements, and all created functions. \n- Code inside the draw loop at this point should be primarily function calls and perhaps some conditionals used with function calls in addition to the `drawSprites()` block.",
       "seeding_key": {
         "learning_goal.key": "57428b8b-954f-4e25-b6cf-1dd6338ef623",
@@ -20796,7 +20797,7 @@
       "key": "b747206d-550a-4bc5-8fb4-3f104909e68c",
       "position": 2,
       "learning_goal": "Program Development - Program Sequence",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program and its starting elements (creating sprites, setting sprite properties that won’t change, etc). \n- Code inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.",
       "seeding_key": {
         "learning_goal.key": "b747206d-550a-4bc5-8fb4-3f104909e68c",

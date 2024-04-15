@@ -12,19 +12,18 @@ module I18n
       module CourseOfferings
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
-            return unless File.exist?(crowdin_file_path)
+            crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], FILE_PATH)
+            return unless File.file?(crowdin_file_path)
 
             i18n_locale = language[:locale_s]
-            distribute_localization(i18n_locale, crowdin_file_path) unless I18nScriptUtils.source_lang?(language)
+            distribute_localization(i18n_locale, crowdin_file_path)
 
-            i18n_file_path = I18nScriptUtils.locale_dir(i18n_locale, DIR_NAME, FILE_NAME)
+            i18n_file_path = I18nScriptUtils.locale_dir(i18n_locale, FILE_PATH)
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
+            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
-          private
-
-          def distribute_localization(i18n_locale, crowdin_file_path)
+          private def distribute_localization(i18n_locale, crowdin_file_path)
             crowdin_translations = JSON.load_file(crowdin_file_path)
 
             i18n_data = I18nScriptUtils.to_dashboard_i18n_data(i18n_locale, 'course_offerings', crowdin_translations)

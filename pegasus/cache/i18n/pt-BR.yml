@@ -259,6 +259,7 @@ pt-BR:
   class_submission_out_of_school_summer_camp: Acampamento de verão
   classicmaze_name: Labirinto clássico
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
+  code_org_logo_alt: Code.org Home
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
   codea_beyond_gradelevel: A partir do Ensino Médio
@@ -1197,6 +1198,7 @@ pt-BR:
   header_about_us: Quem Somos
   header_course_catalog: Catálogo do Curso
   header_courses: percursos
+  header_districts: Distritos
   header_documentation: Documentação
   header_educate_beyond: Além do Code.org
   header_educate_community: Comunidade On-Line
@@ -1223,6 +1225,7 @@ pt-BR:
   header_project_gallery: Projetos
   header_report_abuse: Reportar abuso
   header_report_bug: Reportar um erro
+  header_schools: Escolas
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Menu de ajuda
   header_sections: Seções
@@ -1717,6 +1720,7 @@ pt-BR:
   hourofcode_longdescription: Espaço reservado para um novo code.org/hoc
   hourofcode_name: Labirinto clássico
   hourofcode_platformtext: Navegadores modernos, smartphones, tablets
+  hourofcode_shortcode: programar
   hourofcode_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   how_ai_works: Como funciona a IA
   how_ai_works_tile_description: Saiba mais sobre como a IA funciona e por que ela
@@ -2641,6 +2645,7 @@ pt-BR:
   user_header_applab: 'Laboratório de Aplicativo '
   user_header_artist: 'Artista '
   user_header_create: 'Criar '
+  user_header_create_account: Criar Conta
   user_header_dance: Festa dançante
   user_header_flappy: Flappy bird
   user_header_gamelab: Laboratório de Jogos

@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
+
+import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
+
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
-import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
 describe('MarkdownInstructions', function () {
   before(setExternalGlobals);

@@ -753,6 +753,25 @@ Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
+Then /^element "([^"]*)" is (not )?categorized by OneTrust$/ do |selector, negation|
+  wait_for_jquery
+  elements = @browser.execute_script("return $(\"#{selector}\").map((index, elem) => { return {src:elem.src, class:elem.className}}).get()")
+  # The element needs to exist if we want to verify it is categorized.
+  if negation.nil?
+    expect(elements).to satisfy('have at least one element should be found', &:any?)
+  end
+  # Check each element which matches the selector to see if it has the
+  # expected OneTrust categorization.
+  elements.each do |element|
+    # When OneTrust categorizes an element, it adds the class
+    # "optanon-category-..." to it, for example "optanon-category-C0002"
+    element_class = element['class'] || ''
+    has_category = element_class.include?('optanon-category-')
+    desc = "#{negation ? 'not ' : ''}have a category"
+    expect(element).to satisfy(desc) {|_| has_category == !negation}
+  end
+end
+
 Then /^element "([^"]*)" is (not )?read-?only$/ do |selector, negation|
   readonly = @browser.execute_script("return $(\"#{selector}\").attr(\"readonly\");")
   if negation.nil?
@@ -769,6 +788,7 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
 end
 
 def jquery_element_exists(selector)
+  wait_for_jquery
   "return $(#{selector.dump}).length > 0"
 end
 
@@ -790,6 +810,10 @@ end
 
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
+end
+
+Then /^element "([^"]*)" does exist/ do |selector|
+  expect(element_exists?(selector)).to eq(true)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
@@ -1465,4 +1489,12 @@ And(/^I see custom certificate image with name "([^"]*)" and course "([^"]*)"$/)
   params = JSON.parse(Base64.urlsafe_decode64(encoded_params))
   expect(params['name']).to eq(name)
   expect(params['course']).to eq(course)
+end
+
+And(/^I validate rubric ai config for all lessons$/) do
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
+    response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_validate_rubric_ai_config"))
+    response_code = response.code
+    expect(response_code).to eq(200), "Error code #{response_code}:\n#{response.body}"
+  end
 end
