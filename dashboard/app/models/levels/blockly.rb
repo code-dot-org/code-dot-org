@@ -453,18 +453,6 @@ class Blockly < Level
     options.freeze
   end
 
-  # FND-985 Create shared API to get localized level properties.
-  def get_localized_property(property_name)
-    if should_localize? && try(property_name)
-      I18n.t(
-        name,
-        scope: [:data, property_name],
-        default: nil,
-        smart: true
-      )
-    end
-  end
-
   def localized_failure_message_override
     get_localized_property('failure_message_override')
   end

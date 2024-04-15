@@ -67,7 +67,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:06:34.111+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events72022_2023\\\"\"],\"cloned_from\":\"courseA_playLab_events72022_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:06:34.111+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events72022_2023\\\"\"],\"cloned_from\":\"courseA_playLab_events72022_2023\"},{\"changed_at\":\"2024-04-11 19:54:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1
@@ -132,46 +132,49 @@
       <xml>
         <block type="when_run"/>
         <block type="studio_whenArrow">
-          <title name="VALUE">up</title>
+          <field name="VALUE">up</field>
         </block>
         <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">1</title>
+          <field name="SPRITE">1</field>
         </block>
         <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
+          <field name="SPRITE1">1</field>
+          <field name="SPRITE2">0</field>
         </block>
         <block type="studio_setBackground">
-          <title name="VALUE">random</title>
+          <field name="VALUE">random</field>
         </block>
         <block type="studio_setSprite">
-          <title name="VALUE">"visible"</title>
-          <title name="SPRITE">0</title>
+          <field name="VALUE">"visible"</field>
+          <field name="SPRITE">0</field>
         </block>
         <block type="studio_move">
-          <title name="SPRITE">1</title>
-          <title name="DIR">1</title>
-        </block>
-        <block type="studio_wait">
-          <title name="VALUE">1000</title>
+          <field name="SPRITE">1</field>
+          <field name="DIR">1</field>
         </block>
         <block type="studio_playSound">
-          <title name="SOUND">random</title>
+          <field name="SOUND">random</field>
+        </block>
+        <block type="studio_wait">
+          <field name="VALUE">1000</field>
         </block>
         <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">0</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">0</field>
         </block>
         <block type="studio_changeScore"/>
         <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">Hi there.</field>
         </block>
         <block type="studio_vanish">
-          <title name="SPRITE">0</title>
+          <field name="SPRITE">0</field>
         </block>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">5</title>
+          <field name="TIMES" config="3-10">5</field>
+        </block>
+        <block type="comment">
+          <field name="TEXT"/>
         </block>
       </xml>
     </toolbox_blocks>

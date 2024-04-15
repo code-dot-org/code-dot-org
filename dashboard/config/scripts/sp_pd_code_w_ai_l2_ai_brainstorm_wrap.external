@@ -1,16 +1,13 @@
 name 'sp-pd-Code_w_AI-L2-AI_Brainstorm_wrap'
 skip_dialog true
 markdown <<MARKDOWN
-# Sequence
-####Notice how the computer followed your instructions **in sequence** - a set order - to lead Laurel to the treasure.
-## What is a sequence?
+# Wrapping Up Lesson Two
 
-####**Sequencing** is a **control structure** and describes the process of ordering steps in a linear manner. It's like when you're making a sandwich. You put the bread, then the filling, then another slice of bread. In algorithms, sequencing is the basic order of instructions, **telling the computer what to do step by step**. 
+#### After exploring the AI strategies that could be used when getting started on a program, your students will have the opportunity to discuss some other considerations through a reflection station activity before making their values statement for working with AI in the initial stages of programming.
 
-##What is a control structure?
-####A **control structure** is like a set of traffic signals for computer programs. It tells the computer how to move through the steps of the program. Think of it like a recipe: you don't always follow the steps in the exact same order every time, and sometimes you repeat steps. 
+<br>
 
-## Let's practice some more sequencing. 
+#### Read the entire lesson plan  <a href="http://studio.code.org/s/coding-with-ai/lessons/2" target="blank" rel="noopener noreferrer">here</a>. 
 
 
 

@@ -759,7 +759,7 @@
     "long_instructions": "##Investigate and Modify\r\n\r\nInvestigate the documentation mentioned below, then run the program to observe the results and answer the questions.\r\n\r\n✅ **TO DO:** Go to the **Documentation** tab ⬆️ and find the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> class. Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">canMove()</code>, <code style=\"background-color: #ececec; color: black; font-weight: bold;\">isOnBucket()</code>, and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">hasPaint()</code> methods. What do each of these methods do? What information do they give when these methods are called?",
     "project_template_level_name": "CSA U1L5-Loops PBT_2024",
     "reference_links": [
-      "/courses/csa-2023/guides/while-loops"
+      "/courses/csa-2024/guides/while-loops"
     ],
     "teacher_markdown": "The `canMove()` method checks if a `Painter` object can move forward in the direction it is facing. It gives a `true` or `false` value based on whether or not a `Painter` object can move.\r\n\r\nThe `isOnBucket()` method checks if a `Painter` object is currently standing on a paint bucket. It gives a `true` or `false` value based on whether or not a `Painter` object is on a paint bucket.\r\n\r\nThe `hasPaint()` method checks if a `Painter` object has any paint. It gives a `true` or `false` value based on whether or not a `Painter` object has paint.",
     "name_suffix": "_2024",

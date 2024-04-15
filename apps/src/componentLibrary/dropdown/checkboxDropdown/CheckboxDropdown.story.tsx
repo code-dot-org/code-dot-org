@@ -108,18 +108,7 @@ const MultipleTemplate: StoryFn<{
             componentArg.onClearAll(e);
           };
 
-          return componentArg.color === 'white' ? (
-            <div style={{background: 'black', padding: 10}}>
-              <CheckboxDropdown
-                key={`${componentArg.name}`}
-                {...componentArg}
-                checkedOptions={values[componentArg.name]}
-                onChange={onChange}
-                onSelectAll={onSelectAll}
-                onClearAll={onClearAll}
-              />
-            </div>
-          ) : (
+          return (
             <CheckboxDropdown
               key={`${componentArg.name}`}
               {...componentArg}
@@ -187,6 +176,42 @@ WithDisabledOptionCheckboxDropdown.args = {
   onSelectAll: args => null,
   onClearAll: args => null,
   size: 'm',
+};
+
+export const ThickAndThinCheckboxDropdowns = MultipleTemplate.bind({});
+ThickAndThinCheckboxDropdowns.args = {
+  components: [
+    {
+      name: 'thick-dropdown',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Thick Dropdown',
+      labelType: 'thick',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      disabled: false,
+    },
+    {
+      name: 'thin-dropdown',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Thin Dropdown',
+      labelType: 'thin',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      disabled: false,
+    },
+  ],
 };
 
 export const GroupOfCheckboxDropdownColors = MultipleTemplate.bind({});
