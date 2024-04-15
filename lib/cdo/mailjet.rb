@@ -99,27 +99,6 @@ module MailJet
     end
   end
 
-  def self.delete_contact(email)
-    return unless enabled?
-
-    Mailjet.configure do |config|
-      config.api_key = API_KEY
-      config.secret_key = SECRET_KEY
-      config.api_version = "v3"
-    end
-
-    contact = Mailjet::Contact.find(email)
-    return unless contact
-
-    delete_uri = URI.parse("https://api.mailjet.com/v4/contacts/#{contact.id}")
-    delete_http_request = Net::HTTP::Delete.new(delete_uri)
-    delete_http_request.basic_auth(API_KEY, SECRET_KEY)
-
-    Net::HTTP.start(delete_uri.hostname, delete_uri.port, use_ssl: true) do |http|
-      http.request(delete_http_request)
-    end
-  end
-
   def self.send_template_email(to_email, to_name, email_config)
     return unless enabled?
 
