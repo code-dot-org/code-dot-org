@@ -19,16 +19,16 @@ module ActionDispatch
         super(app, options.except(:server))
       end
 
-      # @see https://github.com/rails/rails/blob/v6.1.7.7/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L63-L68
-      def delete_session(req, session_id, options)
-        remove_session_from_redis(session_id) if DCDO.get('mirror_session_in_redis_enabled', false)
-        super(req, session_id,  options)
-      end
-
       # @see https://github.com/rails/rails/blob/v6.1.7.7/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L104-L107
       private def write_session(req, session_id, session_data, options)
         write_session_to_redis(session_id, session_data) if DCDO.get('mirror_session_in_redis_enabled', false)
         super(req, session_id, session_data, options)
+      end
+
+      # @see https://github.com/rails/rails/blob/v6.1.7.7/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L63-L68
+      def delete_session(req, session_id, options)
+        remove_session_from_redis(session_id) if DCDO.get('mirror_session_in_redis_enabled', false)
+        super(req, session_id,  options)
       end
 
       private def write_session_to_redis(session_id, session_data)
