@@ -42,7 +42,7 @@ export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
 };
 
 export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
-  selectedModel: '',
+  selectedModelId: '',
   temperature: 0.5,
   systemPrompt: '',
   retrievalContexts: [],
@@ -52,7 +52,7 @@ export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
 export const DEFAULT_VISIBILITIES: {
   [key in keyof AiCustomizations]: Visibility;
 } = {
-  selectedModel: Visibility.EDITABLE,
+  selectedModelId: Visibility.EDITABLE,
   temperature: Visibility.EDITABLE,
   systemPrompt: Visibility.EDITABLE,
   retrievalContexts: Visibility.EDITABLE,
@@ -69,7 +69,7 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
 export const AI_CUSTOMIZATIONS_LABELS: {
   [key in keyof AiCustomizations]: string;
 } = {
-  selectedModel: 'Selected model',
+  selectedModelId: 'Selected model',
   temperature: 'Temperature',
   systemPrompt: 'System prompt',
   retrievalContexts: 'Retrieval',

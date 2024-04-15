@@ -14,11 +14,11 @@ const PresentationView: React.FunctionComponent = () => {
   const currentAiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
-  const {selectedModel, systemPrompt, temperature, retrievalContexts} =
+  const {selectedModelId, systemPrompt, temperature, retrievalContexts} =
     currentAiCustomizations;
   const modelCardInfo = currentAiCustomizations.modelCardInfo;
   const {name: modelName = '', trainingData = ''} =
-    modelDescriptions.find(model => model.id === selectedModel) ?? {};
+    modelDescriptions.find(model => model.id === selectedModelId) ?? {};
 
   const technicalInfo = useMemo(() => {
     const technicalInfoData: {

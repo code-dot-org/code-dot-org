@@ -15,7 +15,7 @@ const CompareModelsDialog: React.FunctionComponent<{
 }> = ({onClose, availableModels}) => {
   const selectedModelId = useAppSelector(
     state =>
-      state.aichat.currentAiCustomizations.selectedModel ??
+      state.aichat.currentAiCustomizations.selectedModelId ??
       availableModels[0].id
   );
   const [chosenModelLeft, setChosenModelLeft] =

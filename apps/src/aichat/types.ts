@@ -47,9 +47,9 @@ export interface AichatLevelProperties extends LevelProperties {
 }
 
 /** AI customizations for student chat bots
- *  selectedModel is a foreign key to ModelDescription.id */
+ *  selectedModelId is a foreign key to ModelDescription.id */
 export interface AiCustomizations {
-  selectedModel: string;
+  selectedModelId: string;
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
