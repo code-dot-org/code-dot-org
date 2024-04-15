@@ -15,13 +15,13 @@ const CompareModelsDialog: React.FunctionComponent<{
 }> = ({onClose, availableModels}) => {
   const selectedModelId = useAppSelector(
     state =>
-      state.aichat.currentAiCustomizations.selectedModelId ??
+      state.aichat.currentAiCustomizations.selectedModelId ||
       availableModels[0].id
   );
   const [chosenModelLeft, setChosenModelLeft] =
     useState<string>(selectedModelId);
   const [chosenModelRight, setChosenModelRight] = useState<string>(
-    availableModels.find(model => model.id !== selectedModelId)?.id ??
+    availableModels.find(model => model.id !== selectedModelId)?.id ||
       selectedModelId
   );
 
@@ -30,14 +30,12 @@ const CompareModelsDialog: React.FunctionComponent<{
       onClose={onClose}
       className={styles.modelComparisonDialog}
     >
-      <div>
-        <div className={styles.headerContainer}>
-          <Heading3>Compare Models</Heading3>
-        </div>
-        <button type="button" onClick={onClose} className={styles.xCloseButton}>
-          <i id="x-close" className="fa-solid fa-xmark" />
-        </button>
+      <div className={styles.headerContainer}>
+        <Heading3>Compare Models</Heading3>
       </div>
+      <button type="button" onClick={onClose} className={styles.xCloseButton}>
+        <i id="x-close" className="fa-solid fa-xmark" />
+      </button>
       <hr />
       <div className={styles.modelComparisonContainer}>
         <ModelDescriptionPanel
