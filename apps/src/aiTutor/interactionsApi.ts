@@ -79,15 +79,14 @@ export async function saveFeedback(
   feedbackData: FeedbackData
 ) {
   try {
+    console.log("here's the body: ", JSON.stringify(feedbackData));
     await fetch(`/ai_tutor_interactions/${aiTutorInteractionId}/feedbacks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'X-CSRF-Token': await getAuthenticityToken(),
       },
-      body: JSON.stringify({
-        ...feedbackData,
-      }),
+      body: JSON.stringify(feedbackData),
     });
   } catch (error) {
     MetricsReporter.logError({
