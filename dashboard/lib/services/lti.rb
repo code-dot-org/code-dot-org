@@ -234,6 +234,7 @@ module Services
         name: lti_section.section.name,
         short_name: nrps_section[:short_name],
         instructors: instructor_list,
+        lti_section_id: lti_section.id,
       }
     end
 
