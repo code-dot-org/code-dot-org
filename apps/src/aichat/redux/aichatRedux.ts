@@ -185,7 +185,7 @@ const saveAiCustomizationShared = async (
     .getProjectManager()
     ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
 
-  dispatch(setsavedAiCustomizations(trimmedCurrentAiCustomizations));
+  dispatch(setSavedAiCustomizations(trimmedCurrentAiCustomizations));
 
   const changedProperties = findChangedProperties(
     savedAiCustomizations,
