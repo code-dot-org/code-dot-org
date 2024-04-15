@@ -19,7 +19,9 @@ async function loadPyodideAndPackages() {
 
 let pyodideReadyPromise = null;
 async function initializePyodide() {
+  console.log('in initializePyodide');
   if (pyodideReadyPromise === null) {
+    console.log('loading pyodide...');
     pyodideReadyPromise = loadPyodideAndPackages();
   }
   await pyodideReadyPromise;
@@ -38,11 +40,18 @@ self.onmessage = async event => {
     // in the pyodide list of packages that we have not put in our repo. We can ignore these,
     // any actual import errors will be caught by the runPythonAsync call.
     await self.pyodide.loadPackagesFromImports(python);
+    // const dict = self.pyodide.globals.get('dict');
+    // const globals = dict();
     let results = await self.pyodide.runPythonAsync(python);
+    // globals.destroy();
+    // dict.destroy();
     self.postMessage({type: 'run_complete', results, id});
   } catch (error) {
     console.log({error});
     self.postMessage({type: 'error', error: error.message, id});
   }
+  // force pyodide to reset
+  //pyodideReadyPromise = null;
+  //initializePyodide();
   clearSources(self.pyodide, sources);
 };

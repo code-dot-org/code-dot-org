@@ -21,22 +21,16 @@ export function importFileCode(
 ) {
   let result = `
 import importlib
-from pathlib import Path`;
+importlib.invalidate_caches()
+`;
   for (const file of Object.values(source.files)) {
     if (file.name !== excludedFileName) {
-      const filePath = getFilePath(file.id, source);
+      const filePath = getModuleName(file.id, source);
       result += `
-Path("${filePath}").write_text("""\
-${file.contents}
-"""
-)
 importlib.reload(${filePath})
 `;
     }
   }
-  result += `
-importlib.invalidate_caches()
-`;
   console.log({importCode: result});
   return result;
 }
@@ -45,7 +39,18 @@ export function removeFileCode(
   source: MultiFileSource,
   excludedFileName: string
 ) {
-  return '';
+  let result = '\n';
+  for (const file of Object.values(source.files)) {
+    if (file.name !== excludedFileName) {
+      const filePath = getModuleName(file.id, source);
+      result += `
+if "${filePath}" in sys.modules:
+  del sys.modules['${filePath}']
+`;
+    }
+  }
+  console.log({removeCode: result});
+  return result;
   //   let result = `
   // import os
   // import importlib
@@ -81,6 +86,7 @@ export function writeSources(
   Object.values(sources.files)
     .filter(f => f.folderId === currentFolderId)
     .forEach(file => {
+      console.log(`writing file ${currentPath}${file.name}`);
       pyodide.FS.writeFile(`${currentPath}${file.name}`, file.contents);
     });
   Object.values(sources.folders)
@@ -130,11 +136,21 @@ export function clearSources(
 }
 
 // For the given fileId, return the full path to the file, including the file name.
-const getFilePath = (fileId: string, source: MultiFileSource) => {
-  let path = source.files[fileId].name;
+// const getFilePath = (fileId: string, source: MultiFileSource) => {
+//   let path = source.files[fileId].name;
+//   let folderId = source.files[fileId].folderId;
+//   while (source.folders[folderId]) {
+//     path = source.folders[folderId].name + '/' + path;
+//     folderId = source.folders[folderId].parentId;
+//   }
+//   return path;
+// };
+
+const getModuleName = (fileId: string, source: MultiFileSource) => {
+  let path = source.files[fileId].name.replace('.py', '');
   let folderId = source.files[fileId].folderId;
   while (source.folders[folderId]) {
-    path = source.folders[folderId].name + '/' + path;
+    path = source.folders[folderId].name + '.' + path;
     folderId = source.folders[folderId].parentId;
   }
   return path;

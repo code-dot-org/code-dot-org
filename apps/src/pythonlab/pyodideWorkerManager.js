@@ -1,9 +1,5 @@
 import {getStore} from '@cdo/apps/redux';
-import {
-  applyPatches,
-  importFileCode,
-  removeFileCode,
-} from './patches/pythonScriptUtils';
+import {applyPatches, removeFileCode} from './patches/pythonScriptUtils';
 import {MATPLOTLIB_IMG_TAG} from './patches/patches';
 import {
   appendOutputImage,
@@ -46,7 +42,8 @@ const asyncRun = (() => {
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
     return new Promise(onSuccess => {
       callbacks[id] = onSuccess;
-      let wrappedScript = importFileCode(sources, 'main.py');
+      //let wrappedScript = importFileCode(sources, 'main.py');
+      let wrappedScript = '';
       wrappedScript = wrappedScript + applyPatches(script);
       wrappedScript = wrappedScript + removeFileCode(sources, 'main.py');
       console.log({wrappedScript});
