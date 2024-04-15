@@ -120,6 +120,7 @@ module MailJet
     email_validator = Mailgun::Address.new
 
     validation_response = email_validator.validate(email)
+    # Description of values in the result field described here: https://documentation.mailgun.com/docs/inboxready/mailgun-validate/single-valid-ir/#result-types
     return false if %w(do_not_send undeliverable).include?(validation_response['result'])
     return true
   end
