@@ -3,6 +3,14 @@ require 'redis-actionpack'
 
 module ActionDispatch
   module Session
+    # Temporary helper module for the transition from cookie-based to
+    # redis-based session storage. If a request contains actual session data
+    # rather than just a session identifier, seamlessly write the session data
+    # to redis. If a session has already been migrated, do nothing.
+    #
+    # TODO infra: once all user sessions have been migrated, remove this helper
+    # and start using a non-customized implementation of redis-based session
+    # storage.
     module MigrateCookiesStore
       # Ultimately loads session data from the database, after first checking
       # for session data in the cookie and persisting it to the database if we
@@ -33,6 +41,7 @@ module ActionDispatch
         end
       end
 
+      # Based on https://github.com/rails/rails/blob/v6.1.7.7/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L86-L96
       private def unpacked_cookie_data(request)
         stale_session_check! do
           if data = get_cookie(request) && data.is_a?(Hash)
