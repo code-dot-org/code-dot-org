@@ -26,9 +26,23 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
     assert_response :created
     response = JSON.parse(@response.body)
     assert_equal @user.id, response['user_id']
-    assert_equal 'en-US', response['locale']
     assert_equal expected_satisfied, response['satisfied']
     assert_equal expected_form_key, response['form_key']
+  end
+
+  test 'create - error when trying to create feedback twice' do
+    expected_satisfied = true
+    expected_form_key = 'progress_v2'
+
+    post :create, params: {feedback: {satisfied: expected_satisfied, form_key: expected_form_key}}, format: :json
+
+    assert_no_difference('NewFeatureFeedback.count') do
+      assert_raises ActiveRecord::RecordNotUnique do
+        post :create, params: {feedback: {satisfied: expected_satisfied, form_key: expected_form_key}}, format: :json
+
+        assert_response :bad_request
+      end
+    end
   end
 
   test 'create - returns validation errors when satisfied param is invalid' do
@@ -42,15 +56,17 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
 
   test 'create - returns validation errors when form_key param is invalid' do
     assert_no_difference('NewFeatureFeedback.count') do
-      post :create, params: {feedback: {satisfied: true, form_key: 'invalid_form_key'}}, format: :json
-    end
+      assert_raises ArgumentError do
+        post :create, params: {feedback: {satisfied: true, form_key: 'invalid_form_key'}}, format: :json
 
-    assert_response :unprocessable_entity
-    assert_equal '["Form key is not included in the list"]', response.body
+        assert_response :bad_request
+      end
+    end
   end
 
   test 'show - returns the Feedback for the current user' do
-    feedback = create(:new_feature_feedback, user: @user)
+    expected_satisfied = true
+    feedback = create(:new_feature_feedback, user: @user, satisfied: expected_satisfied)
 
     get :show, params: {form_key: 'progress_v2'}, format: :json
 
@@ -58,11 +74,13 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
     assert_equal feedback.id, response['id']
     assert_equal @user.id, response['user_id']
+    assert_equal expected_satisfied, response['satisfied']
   end
 
   test 'show - returns nothing when no Feedback exists for the current user' do
     get :show, params: {form_key: 'progress_v2'}, format: :json
 
     assert_response :ok
+    refute_includes @response, 'body'
   end
 end

@@ -102,12 +102,12 @@
       "comment": null
     },
     "reference_links": [
-      "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/multi-screen-apps",
-      "/courses/csd-2022/guides/design-mode-elements",
-      "/courses/csd-2022/guides/changing-screens",
-      "/courses/csd-2022/guides/responding-to-user-input",
-      "/courses/csd-2022/guides/if-statements-2"
+      "/courses/csd-2024/guides/design-mode",
+      "/courses/csd-2024/guides/multi-screen-apps",
+      "/courses/csd-2024/guides/design-mode-elements",
+      "/courses/csd-2024/guides/changing-screens",
+      "/courses/csd-2024/guides/responding-to-user-input",
+      "/courses/csd-2024/guides/if-statements-2"
     ],
     "name_suffix": "_2024",
     "preload_asset_list": null

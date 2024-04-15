@@ -3,6 +3,8 @@
   "pages": [
     {
       "name": "page1",
+      "title": "New Progress View (beta) - Give More Feedback",
+      "description": "Your feedback is invaluable in creating the best possible experience on Code.org. By filling out this survey, you'll help shape the continued improvement of the new progress view. We appreciate your input!",
       "elements": [
         {
           "type": "comment",

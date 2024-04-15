@@ -64,7 +64,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
       }
     end
     assert_response :not_acceptable
-    assert_includes(@response.body, "Staus is unacceptable")
+    assert_includes(@response.body, "Status is unacceptable")
   end
 
   test "create AI Tutor Interaction for project backed level with valid params" do

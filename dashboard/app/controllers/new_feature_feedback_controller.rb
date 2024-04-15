@@ -5,7 +5,6 @@ class NewFeatureFeedbackController < ApplicationController
     @feedback = NewFeatureFeedback.new(feedback_params)
 
     @feedback.user = current_user
-    @feedback.locale = I18n.locale
 
     respond_to do |format|
       if @feedback.save
