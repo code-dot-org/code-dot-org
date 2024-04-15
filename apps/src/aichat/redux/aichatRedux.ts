@@ -3,7 +3,9 @@ import {
   createAsyncThunk,
   createSlice,
   createSelector,
+  AnyAction,
   PayloadAction,
+  ThunkDispatch,
 } from '@reduxjs/toolkit';
 
 import {registerReducers} from '@cdo/apps/redux';
@@ -98,47 +100,78 @@ const initialState: AichatState = {
 // This thunk saves a student's AI customizations using the Project Manager (ie, to S3 typically),
 // then does a comparison between the previous and current saved customizations in order to
 // output a message to the chat window with the list of customizations that were updated.
-export const updateAiCustomization = createAsyncThunk(
-  'aichat/updateAiCustomization',
+export const saveAiCustomization = createAsyncThunk(
+  'aichat/saveAiCustomization',
   async (_, thunkAPI) => {
-    await updateAiCustomizationShared(thunkAPI);
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const {currentAiCustomizations, previouslySavedAiCustomizations} =
+      rootState.aichat;
+    const {dispatch} = thunkAPI;
+
+    await saveAiCustomizationShared(
+      currentAiCustomizations,
+      previouslySavedAiCustomizations,
+      dispatch
+    );
   }
 );
 
+// This thunk is used when a student fills out a model card and "publishes" their model,
+// enabling access to a "presentation view" where they can interact with their model
+// and view its details (temperature, system prompt, etc) in a summary view.
 export const publishModel = createAsyncThunk(
   'aichat/publishModelCard',
   async (_, thunkAPI) => {
-    thunkAPI.dispatch(setHasPublished(true));
-    await updateAiCustomizationShared(thunkAPI);
-    thunkAPI.dispatch(setViewMode(ViewMode.PRESENTATION));
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const {currentAiCustomizations, previouslySavedAiCustomizations} =
+      rootState.aichat;
+    const {dispatch} = thunkAPI;
+
+    dispatch(setHasPublished(true));
+    await saveAiCustomizationShared(
+      currentAiCustomizations,
+      previouslySavedAiCustomizations,
+      dispatch
+    );
+    dispatch(setViewMode(ViewMode.PRESENTATION));
   }
 );
 
+// This thunk enables a student to save a partially completed model card
+// in the "Publish" tab.
 export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
   async (_, thunkAPI) => {
-    const state = thunkAPI.getState() as RootState;
-    const {modelCardInfo} = state.aichat.currentAiCustomizations;
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const {currentAiCustomizations, previouslySavedAiCustomizations} =
+      rootState.aichat;
+    const {dispatch} = thunkAPI;
 
+    const {modelCardInfo} = currentAiCustomizations;
     if (!hasFilledOutModelCard(modelCardInfo)) {
-      thunkAPI.dispatch(setHasPublished(false));
+      dispatch(setHasPublished(false));
     }
-    await updateAiCustomizationShared(thunkAPI);
+    await saveAiCustomizationShared(
+      currentAiCustomizations,
+      previouslySavedAiCustomizations,
+      dispatch
+    );
   }
 );
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const updateAiCustomizationShared = async (thunkAPI: any) => {
-  const state = thunkAPI.getState() as RootState;
-  const {currentAiCustomizations, previouslySavedAiCustomizations} =
-    state.aichat;
-
+// This is the "core" update logic that is shared when a student saves their
+// model customizations (setup, retrieval, and "publish" tab)
+const saveAiCustomizationShared = async (
+  currentAiCustomizations: AiCustomizations,
+  previouslySavedAiCustomizations: AiCustomizations,
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+) => {
   // Remove any empty example topics on save
   const trimmedExampleTopics =
     currentAiCustomizations.modelCardInfo.exampleTopics.filter(
       topic => topic.length
     );
-  thunkAPI.dispatch(
+  dispatch(
     setModelCardProperty({
       property: 'exampleTopics',
       value: trimmedExampleTopics,
@@ -157,16 +190,14 @@ const updateAiCustomizationShared = async (thunkAPI: any) => {
     .getProjectManager()
     ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
 
-  thunkAPI.dispatch(
-    setPreviouslySavedAiCustomizations(trimmedCurrentAiCustomizations)
-  );
+  dispatch(setPreviouslySavedAiCustomizations(trimmedCurrentAiCustomizations));
 
   const changedProperties = findChangedProperties(
     previouslySavedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
   changedProperties.forEach(property => {
-    thunkAPI.dispatch(
+    dispatch(
       addChatMessage({
         id: 0,
         role: Role.MODEL_UPDATE,
@@ -394,11 +425,9 @@ const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
 };
 
 // Selectors
-const selectModelCardInfo = (state: {aichat: AichatState}) =>
-  state.aichat.currentAiCustomizations.modelCardInfo;
-
 export const selectHasFilledOutModelCard = createSelector(
-  selectModelCardInfo,
+  (state: {aichat: AichatState}) =>
+    state.aichat.currentAiCustomizations.modelCardInfo,
   hasFilledOutModelCard
 );
 

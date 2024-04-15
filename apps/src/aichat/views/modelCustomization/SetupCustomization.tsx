@@ -6,7 +6,7 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
 import {
   setAiCustomizationProperty,
-  updateAiCustomization,
+  saveAiCustomization,
 } from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 import {
@@ -34,7 +34,7 @@ const SetupCustomization: React.FunctionComponent = () => {
   const allFieldsDisabled = isDisabled(temperature) && isDisabled(systemPrompt);
 
   const onUpdate = useCallback(
-    () => dispatch(updateAiCustomization()),
+    () => dispatch(saveAiCustomization()),
     [dispatch]
   );
 

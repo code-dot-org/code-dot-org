@@ -9,7 +9,7 @@ import styles from './retrieval-customization.module.scss';
 import {isDisabled} from './utils';
 import {
   setAiCustomizationProperty,
-  updateAiCustomization,
+  saveAiCustomization,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
@@ -24,7 +24,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   );
 
   const onUpdate = useCallback(
-    () => dispatch(updateAiCustomization()),
+    () => dispatch(saveAiCustomization()),
     [dispatch]
   );
 
