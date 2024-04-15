@@ -6,7 +6,6 @@ export async function runPythonCode(
   sources: MultiFileSource
 ) {
   try {
-    console.log({sources});
     const {results, error} = await asyncRun(mainFile, sources);
     if (results) {
       console.log('pyodideWorker return results: ', results);
