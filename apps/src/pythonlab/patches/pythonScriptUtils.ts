@@ -15,6 +15,60 @@ export function applyPatches(originalCode: string) {
   return finalCode;
 }
 
+export function importFileCode(
+  source: MultiFileSource,
+  excludedFileName: string
+) {
+  let result = `
+import importlib
+from pathlib import Path`;
+  for (const file of Object.values(source.files)) {
+    if (file.name !== excludedFileName) {
+      const filePath = getFilePath(file.id, source);
+      result += `
+Path("${filePath}").write_text("""\
+${file.contents}
+"""
+)
+importlib.reload(${filePath})
+`;
+    }
+  }
+  result += `
+importlib.invalidate_caches()
+`;
+  console.log({importCode: result});
+  return result;
+}
+
+export function removeFileCode(
+  source: MultiFileSource,
+  excludedFileName: string
+) {
+  return '';
+  //   let result = `
+  // import os
+  // import importlib
+  // `;
+  //   for (const file of Object.values(source.files)) {
+  //     if (file.name !== excludedFileName) {
+  //       result += `os.remove("${getFilePath(file.id, source)}")\n`;
+  //     }
+  //   }
+  //   result += 'importlib.invalidate_caches()\n';
+  //   return result;
+}
+
+// export function includeImportedFiles(sources: MultiFileSource, script: string) {
+//   let wrappedScript = script;
+//   for (const file of Object.values(sources.files)) {
+//     if (file.name !== 'main.py') {
+//       wrappedScript = importFileCode(file.name, file.contents) + wrappedScript;
+//     }
+//   }
+//   return wrappedScript;
+// }
+
 // Write all sources to the Pyodide file system.
 // This enables python files to import from other files in the project.
 export function writeSources(
@@ -55,24 +109,24 @@ export function clearSources(
   pyodide: PyodideInterface,
   sources: MultiFileSource
 ) {
-  console.log('loaded packages before clear');
-  console.log(pyodide.loadedPackages);
-  Object.values(sources.files).forEach(file => {
-    const filePath = getFilePath(file.id, sources);
-    try {
-      console.log(`unlinking ${filePath}`);
-      pyodide.FS.unlink(filePath);
-    } catch (e) {
-      // TODO: log error better. We catch this because it should not prevent
-      // future runs.
-      console.warn(`error unlinking Pyodide file ${filePath}, ${e}`);
-    }
-  });
-  console.log('getting file info post clear...');
+  console.log('skipping clear');
+  // console.log('loaded packages before clear');
+  // console.log(pyodide.loadedPackages);
+  // Object.values(sources.files).forEach(file => {
+  //   const filePath = getFilePath(file.id, sources);
+  //   try {
+  //     console.log(`overwriting and unlinking ${filePath}`);
+  //     pyodide.FS.writeFile(filePath, '');
+  //     pyodide.FS.unlink(filePath);
+  //   } catch (e) {
+  //     // TODO: log error better. We catch this because it should not prevent
+  //     // future runs.
+  //     console.warn(`error unlinking Pyodide file ${filePath}, ${e}`);
+  //   }
+  // });
+  // console.log('getting file info post clear...');
   const pathData = pyodide.FS.analyzePath('/', true);
   console.log({pathData});
-  console.log('loaded packages post clear');
-  console.log(pyodide.loadedPackages);
 }
 
 // For the given fileId, return the full path to the file, including the file name.
