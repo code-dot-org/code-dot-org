@@ -16225,7 +16225,37 @@ en:
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
         computer-vision-pilot:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction to Computer Vision
+            lesson-2:
+              name: Empathizing with Users
+            lesson-3:
+              name: Gathering User Data
+            lesson-4:
+              name: Data Visualizations
+            lesson-5:
+              name: User Stories and Problem Statements
+            lesson-6:
+              name: Pixels and QR Codes
+            lesson-7:
+              name: Edge Detection
+            lesson-8:
+              name: Datasets and Models
+            lesson-9:
+              name: Training Data and Bias
+            lesson-10:
+              name: Training a Model
+            lesson-11:
+              name: Impacts of Computer Vision
+            lesson-12:
+              name: Prototype Development, Part 1
+            lesson-13:
+              name: Prototype Development, Part 2
+            lesson-14:
+              name: User Feedback
+            lesson-15:
+              name: Implementing Feedback
           lesson_groups: {}
           name: computer-vision-pilot
           title: Computer Vision
