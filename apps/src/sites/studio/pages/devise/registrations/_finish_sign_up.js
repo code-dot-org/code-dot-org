@@ -107,7 +107,7 @@ $(document).ready(() => {
 
     // Clear school_id if the searched school is not found.
     if (
-      ['-1', NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].contains(
+      ['-1', NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
         schoolData.ncesSchoolId
       )
     ) {
