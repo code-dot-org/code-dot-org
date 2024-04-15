@@ -1,22 +1,16 @@
 - video_ai_index = 9
-- video_ai_caption = [hoc_s(:ai_vid_intro_caption), hoc_s(:ai_vid_mlintro_caption), hoc_s(:ai_vid_trainingdata_caption), hoc_s(:ai_vid_neuralnetworks_caption), hoc_s(:ai_vid_computervision_caption), hoc_s(:ai_vid_chatbots_caption), hoc_s(:ai_vid_creativity_caption), hoc_s(:ai_vid_ethics1_caption), hoc_s(:ai_vid_ethics2_caption)]
-- video_id_second = ["intro_to_ai", "machine_learning", "data_bias", "neural_networks", "computer_vision", "ai_101_01", "ai_chatbots", "ethics_ai_01", "ethics_ai_02"]
-- video_ai_first = ["Ok-xpKjKp2g", "OeU5m6vRyCk", "x2mRoFNm22g", "JrXazCEACVo", "2hXG8v8p0KM", "X-AWdfSFCHQ", "X994dDnmRmY", "tJQSyzBUAew", "zNxw5gJtHLc"]
+- video_code = ["X-AWdfSFCHQ", "X994dDnmRmY", "Ok-xpKjKp2g", "OeU5m6vRyCk", "x2mRoFNm22g", "JrXazCEACVo", "2hXG8v8p0KM", "tJQSyzBUAew", "zNxw5gJtHLc"]
+- video_download_path = ["//videos.code.org/ai_series/HowAIWorks_LLM_SM_CoBrand.mp4", "//videos.code.org/ai_series/HowAIWorks_Creativity_SM_CoBrand.mp4", "//videos.code.org/ai_series/ai-01-intro-to-ai.mp4", "//videos.code.org/ai_series/ai-02-machine-learning.mp4", "//videos.code.org/ai_series/ai-03-training-data.mp4", "//videos.code.org/ai_series/ai-04-neural-networks.mp4", "//videos.code.org/ai_series/ai-05-computer-vision.mp4", "//videos.code.org/ai_series/ai-06-ai-ethics-access-bias.mp4", "//videos.code.org/ai_series/ai-07-ai-ethics-privacy-work.mp4"]
+- video_caption = [hoc_s(:ai_vid_chatbots_caption), hoc_s(:ai_vid_creativity_caption), hoc_s(:ai_vid_intro_caption), hoc_s(:ai_vid_mlintro_caption), hoc_s(:ai_vid_trainingdata_caption), hoc_s(:ai_vid_neuralnetworks_caption), hoc_s(:ai_vid_computervision_caption), hoc_s(:ai_vid_ethics1_caption), hoc_s(:ai_vid_ethics2_caption)]
 
-.carousel-wrapper#how-ai-works-videos
-  .carousel.carousel--flexible_units
-    .slides
-      - video_ai_index.times do |index|
-        .slide
-          %figure.flex-space-between.video-wrapper.video-wrapper--one-col
-            .video__container
-              = view :display_video_thumbnail, id: video_id_second[index], video_code: video_ai_first[index], play_button: 'center', letterbox: 'false', caption: video_ai_caption[index]
+.carousel-wrapper.video-carousel
+  %swiper-container.swiper-01{navigation: "true", "navigation-next-el": ".nav-next-01", "navigation-prev-el": ".nav-prev-01", pagination: "true", init: "false"}
+    - video_ai_index.times do |index|
+      %swiper-slide
+        %figure
+          = view :video_with_fallback, video_code: video_code[index], download_path: video_download_path[index]
+          %figcaption.no-margin-bottom
+            = video_caption[index]
 
-  .pagination
-    #how-ai-works-videos-pagination
-  .dd__buttons
-    %button.carousel__prev#prev_1
-      %img{src: "/images/carousel/prev.svg", alt: "previous"}
-
-    %button.carousel__next#next_1
-      %img{src: "/images/carousel/next.svg", alt: "next"}
+  %button.swiper-nav-prev.nav-prev-01
+  %button.swiper-nav-next.nav-next-01
