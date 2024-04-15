@@ -37,7 +37,7 @@ const SetupCustomization: React.FunctionComponent = () => {
   const availableModelIds = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.aichatSettings?.availableModels
+        ?.aichatSettings?.availableModelIds
   );
   const availableModels = availableModelIds
     ? modelDescriptions.filter(model => availableModelIds.includes(model.id))

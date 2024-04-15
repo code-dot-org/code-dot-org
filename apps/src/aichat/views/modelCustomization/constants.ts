@@ -63,7 +63,7 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   initialCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   visibilities: DEFAULT_VISIBILITIES,
   hidePresentationPanel: false,
-  availableModels: [],
+  availableModelIds: [],
 };
 
 export const AI_CUSTOMIZATIONS_LABELS: {
