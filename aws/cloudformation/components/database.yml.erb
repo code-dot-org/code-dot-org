@@ -208,8 +208,25 @@
         - PolicyName: RDSProxy
           PolicyDocument:
             Statement:
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretWriter}
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretReader}
+              -
+                Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource: !Ref DatabaseSecretReader
+              -
+                Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource: !Ref DatabaseSecretWriter
+              # Engineers with database access will have a read-only credential stored in a Secret.
+              # Example: `db_credential_employee_ada.lovelace`
+              -
+                Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/${AWS::StackName}/db_credential_engineer_*"
+              # The admin SQL user is not permitted to login via RDS Proxy.
+              -
+                Effect: Deny
+                Action: secretsmanager:GetSecretValue
+                Resource: !Ref DatabaseSecretAdmin
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   ReportingDBProxy:
     Type: AWS::RDS::DBProxy
