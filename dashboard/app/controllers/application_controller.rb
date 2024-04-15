@@ -16,6 +16,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  # Try to correct cookie overflows
+  before_action :shrink_cookie
+
   before_action :assert_child_account_policy
 
   # this is needed to avoid devise breaking on email param
@@ -326,6 +329,17 @@ class ApplicationController < ActionController::Base
       session.delete(:sign_up_type)
       session.delete(:sign_up_tracking_expiration)
     end
+  end
+
+  # Clean up a big cookie session
+  def shrink_cookie
+    # Ensure the callouts_seen is an Array
+    session[:callouts_seen] ||= []
+    session[:callouts_seen] = session[:callouts_seen].to_a
+
+    # Just re-add the last callout to ensure that the list is maintained
+    # ClientState should be truncating the list
+    client_state.add_callout_seen(session[:callouts_seen][-1]) if session[:callouts_seen].any?
   end
 
   # Check that the user is compliant with the Child Account Policy. If they
