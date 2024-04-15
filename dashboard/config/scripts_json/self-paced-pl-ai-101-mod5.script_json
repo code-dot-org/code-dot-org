@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-05 20:04:12 UTC",
+    "serialized_at": "2024-04-12 20:38:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -79,6 +79,7 @@
       "key": "d940c441-39d6-439d-861d-b8b6b889d1a2",
       "position": 2,
       "properties": {
+        "progression_name": "Misinformation and AI Fiction (10 min)"
       },
       "seeding_key": {
         "activity_section.key": "d940c441-39d6-439d-861d-b8b6b889d1a2",
@@ -86,8 +87,19 @@
       }
     },
     {
-      "key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3",
+      "key": "c8c9cf2c-76bc-468e-b04c-f6b46397550e",
       "position": 3,
+      "properties": {
+        "progression_name": "Algorithmic Bias (15 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8c9cf2c-76bc-468e-b04c-f6b46397550e",
+        "lesson_activity.key": "c4cd36d2-6aa0-4f8d-aa33-268cda15f15c"
+      }
+    },
+    {
+      "key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3",
+      "position": 4,
       "properties": {
         "progression_name": "Wrap Up (10 min)"
       },
@@ -104,6 +116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod5-introduction_2024"
+        ],
         "progression": "Opening (10 min)"
       },
       "bonus": false,
@@ -126,6 +141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod5-opening_2024"
+        ],
         "progression": "Opening (10 min)"
       },
       "bonus": false,
@@ -148,6 +166,75 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Misinformation and AI Fiction (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-fiction_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "d940c441-39d6-439d-861d-b8b6b889d1a2"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod5-fiction_02_2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Misinformation and AI Fiction (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-fiction_05b_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "d940c441-39d6-439d-861d-b8b6b889d1a2"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod5-fiction_05b_2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Algorithmic Bias (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-bias_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "c8c9cf2c-76bc-468e-b04c-f6b46397550e"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod5-bias_02_2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod5-closing_2024"
+        ],
         "progression": "Wrap Up (10 min)"
       },
       "bonus": false,
@@ -165,11 +252,14 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod5-closing_02_2024"
+        ],
         "progression": "Wrap Up (10 min)"
       },
       "bonus": false,
@@ -210,6 +300,42 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-ai-101-mod5",
         "activity_section.key": "da518036-2791-4379-bf22-e7f70c94a55e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod5-fiction_02_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-fiction_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "d940c441-39d6-439d-861d-b8b6b889d1a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod5-fiction_05b_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-fiction_05b_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "d940c441-39d6-439d-861d-b8b6b889d1a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod5-bias_02_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-bias_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "c8c9cf2c-76bc-468e-b04c-f6b46397550e"
       }
     },
     {

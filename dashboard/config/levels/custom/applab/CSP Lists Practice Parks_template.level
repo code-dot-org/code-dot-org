@@ -25,22 +25,33 @@
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
-      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
       "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
       "lessThanOrEqualOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "mathAbs": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "declareAssign_str_hello_world": null
+      "declareAssign_str_hello_world": null,
+      "setText": null,
+      "hideElement": null,
+      "showElement": null,
+      "getColumn": null,
+      "randomNumber_min_max": null,
+      "declareAssign_list_abd": null,
+      "declareAssign_list_123": null,
+      "listLength": null,
+      "insertItem": null,
+      "accessListItem": null,
+      "appendItem": null,
+      "removeItem": null,
+      "join": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
     },
     "embed": "false",
     "mini_rubric": "false",
@@ -73,7 +84,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-10T14:09:58.554+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds_template\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds_template\"},{\"changed_at\":\"2024-04-10 14:10:54 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-10T14:09:58.554+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds_template\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds_template\"},{\"changed_at\":\"2024-04-10 14:10:54 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-12 17:17:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-12 17:21:01 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
