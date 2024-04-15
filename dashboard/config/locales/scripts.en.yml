@@ -16225,7 +16225,37 @@ en:
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
         computer-vision-pilot:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction to Computer Vision
+            lesson-2:
+              name: Empathizing with Users
+            lesson-3:
+              name: Gathering User Data
+            lesson-4:
+              name: Data Visualizations
+            lesson-5:
+              name: User Stories and Problem Statements
+            lesson-6:
+              name: Pixels and QR Codes
+            lesson-7:
+              name: Edge Detection
+            lesson-8:
+              name: Datasets and Models
+            lesson-9:
+              name: Training Data and Bias
+            lesson-10:
+              name: Training a Model
+            lesson-11:
+              name: Impacts of Computer Vision
+            lesson-12:
+              name: Prototype Development, Part 1
+            lesson-13:
+              name: Prototype Development, Part 2
+            lesson-14:
+              name: User Feedback
+            lesson-15:
+              name: Implementing Feedback
           lesson_groups: {}
           name: computer-vision-pilot
           title: Computer Vision
@@ -16349,11 +16379,13 @@ en:
               display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
-          title: Course E (2023)
+          title: Course E (2024)
           description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
+          lessons: {}
+          name: coursee-2024
         coursef-2024:
           lesson_groups:
             lessonGroup-2:
@@ -16599,3 +16631,12 @@ en:
           description_short: ''
           description: "\n## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "
           student_description: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "
+        music-onboard:
+          lessons: {}
+          lesson_groups: {}
+          name: music-onboard
+          title: Music Lab Intro
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-04-09 22:16:38 UTC",
+    "serialized_at": "2024-04-11 23:42:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1954,8 +1954,19 @@
       }
     },
     {
-      "key": "31a68717-2e94-4313-8b16-0a0c6a4326f6",
+      "key": "1cd1c81e-3621-4e16-ab71-232737da8f4a",
       "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 6 - Project Feedback” slide\n\n**Do This:** Have students meet in pairs to share their Virtual Pet project. Guide them to ask the questions on the slide and then reflect on modifications they will make based on the feedback they receive. "
+      },
+      "seeding_key": {
+        "activity_section.key": "1cd1c81e-3621-4e16-ab71-232737da8f4a",
+        "lesson_activity.key": "ea6e4559-19a0-466e-b443-60d67f31d056"
+      }
+    },
+    {
+      "key": "31a68717-2e94-4313-8b16-0a0c6a4326f6",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 7 - Free Play” slide\n",
         "progression_name": "Free Play"
@@ -9541,6 +9552,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Blank Space Stories",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Counting with Variables",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-09"
@@ -9551,6 +9569,13 @@
         "lesson.key": "Counting with Variables",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Counting with Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {
@@ -9662,13 +9687,6 @@
       "seeding_key": {
         "lesson.key": "Lots of Sprites",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lots of Sprites",
-        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
       }
     },
@@ -9737,6 +9755,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Collector Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Collector Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: User Input Programs",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
@@ -9789,6 +9821,27 @@
         "lesson.key": "Mini-Project: Virtual Pet",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outbreak",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outbreak",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outbreak",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {

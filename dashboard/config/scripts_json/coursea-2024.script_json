@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2024-04-09 21:24:32 UTC",
+    "serialized_at": "2024-04-11 22:56:51 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1412,7 +1412,7 @@
       "key": "4a3fee7c-69e7-4e41-9ff4-2e81bf3a016f",
       "position": 1,
       "properties": {
-        "description": "This warm-up is meant to get the class thinking about how to break a big problem down into a list of individual steps.\n\n    \n**Model:** Start by asking the class for step-by-step directions on how to get to the chalkboard. Make sure that you ask students to break apart any large instructions, like \"Walk to the chalkboard,\" into smaller instructions like \"Step forward.\"\n\nWhen you reach the board, ask for instructions to draw a smiley face and try to get them to keep their instructions equally small.\n\n**Do This:** Before students give you any instructions, ask them to describe the **goal** of the program (\"Walk to the chalkboard and draw a smiley face\") and the **expected outcome** (\"A smiley face will be drawn on the chalkboard). Remind students that it is good practice to articulate the goal and outcome of the programs they will create before beginning to write their algorithms.",
+        "description": "This warm-up is meant to get the class thinking about how to break a big problem down into a list of individual steps.\n\n**Do This:** Before students give you any instructions, ask them to describe the **goal** of the program (\"Walk to the chalkboard and draw a smiley face\") and the **expected outcome** (\"A smiley face will be drawn on the chalkboard\"). Remind students that it is good practice to articulate the goal and outcome of the programs they will create before beginning to write their algorithms.    \n\n**Model:** Start by asking the class for step-by-step directions on how to get to the chalkboard. Make sure that you ask students to break apart any large instructions, like \"Walk to the chalkboard,\" into smaller instructions like \"Step forward.\"\n\nWhen you reach the board, ask for instructions to draw a smiley face and try to get them to keep their instructions equally small.\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -4013,6 +4013,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_a_unplugged_happy_loops_markdown"
+        ],
         "progression": "Happy Loops - Unplugged Activity"
       },
       "bonus": false,
@@ -7872,6 +7875,18 @@
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
         "vocabulary.key": "drop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "vocabulary.key": "debugging"
       }
     },
     {

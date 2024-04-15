@@ -104,9 +104,9 @@
     "parent_level_id": 17758,
     "encrypted": "false",
     "reference_links": [
-      "/docs/concepts/patterns/when-to-make-a-function/"
+      "/courses/csp-2024/guides/when-to-make-a-function"
     ],
-    "map_reference": "/docs/concepts/patterns/update-screen-pattern/",
+    "map_reference": "/courses/csp-2024/guides/update-screen-pattern",
     "name_suffix": "_2024",
     "preload_asset_list": null
   },

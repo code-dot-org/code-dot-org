@@ -10,11 +10,12 @@ main.wrapper {
 }
 
 section {
-  padding: 4rem 1rem 0 1rem !important;
+  padding: 4rem 0 0 !important;
 }
 
 .headerContainer {
   background-color: color.$light_gray_50;
+  padding: 0 1rem;
 }
 
 .headerWithoutTabsContainer {

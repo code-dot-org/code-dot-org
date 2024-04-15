@@ -1122,6 +1122,8 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
+    post '/aichat/chat_completion', to: 'aichat#chat_completion'
+
     resources :ai_tutor_interactions, only: [:create, :index]
 
     # Policy Compliance
