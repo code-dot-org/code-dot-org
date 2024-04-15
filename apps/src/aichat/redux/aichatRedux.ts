@@ -98,14 +98,14 @@ const initialState: AichatState = {
 // This thunk saves a student's AI customizations using the Project Manager (ie, to S3 typically),
 // then does a comparison between the previous and current saved customizations in order to
 // output a message to the chat window with the list of customizations that were updated.
-export const saveAiCustomization = createAsyncThunk(
-  'aichat/saveAiCustomization',
+export const updateAiCustomization = createAsyncThunk(
+  'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
     const rootState = (await thunkAPI.getState()) as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     const {dispatch} = thunkAPI;
 
-    await saveAiCustomizationShared(
+    await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
       dispatch
@@ -124,7 +124,7 @@ export const publishModel = createAsyncThunk(
     const {dispatch} = thunkAPI;
 
     dispatch(setHasPublished(true));
-    await saveAiCustomizationShared(
+    await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
       dispatch
@@ -146,7 +146,7 @@ export const saveModelCard = createAsyncThunk(
     if (!hasFilledOutModelCard(modelCardInfo)) {
       dispatch(setHasPublished(false));
     }
-    await saveAiCustomizationShared(
+    await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
       dispatch
@@ -156,7 +156,7 @@ export const saveModelCard = createAsyncThunk(
 
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
-const saveAiCustomizationShared = async (
+const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>

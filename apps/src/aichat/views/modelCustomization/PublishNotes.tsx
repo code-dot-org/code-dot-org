@@ -43,8 +43,8 @@ const PublishNotes: React.FunctionComponent = () => {
       <div>
         {!isDisabled(visibility)
           ? hasFilledOutModelCard
-            ? renderPublishOkNotification()
-            : renderCompleteToPublishNotification()
+            ? PublishOkNotification
+            : CompleteToPublishNotification
           : null}
         <div className={modelCustomizationStyles.customizationContainer}>
           {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, _]) => {
@@ -110,33 +110,29 @@ const getInputTag = (property: keyof ModelCardInfo) => {
   return property === 'botName' ? 'input' : 'textarea';
 };
 
-const renderPublishOkNotification = () => {
-  return (
-    <PublishStatus
-      iconName="check"
-      iconStyle={moduleStyles.check}
-      content="Ready to publish"
-      contentStyle={moduleStyles.messageTextContainer}
-      containerStyle={moduleStyles.messageContainerPublishOk}
-    />
-  );
-};
+const PublishOkNotification = (
+  <PublishStatus
+    iconName="check"
+    iconStyle={moduleStyles.check}
+    content="Ready to publish"
+    contentStyle={moduleStyles.messageTextContainer}
+    containerStyle={moduleStyles.messageContainerPublishOk}
+  />
+);
 
-const renderCompleteToPublishNotification = () => {
-  return (
-    <PublishStatus
-      iconName="triangle-exclamation"
-      iconStyle={moduleStyles.alert}
-      content={
-        <>
-          In order to publish, you <StrongText>must</StrongText> fill out a
-          model card
-        </>
-      }
-      contentStyle={moduleStyles.messageTextContainer}
-      containerStyle={classNames(moduleStyles.messageContainerAlert)}
-    />
-  );
-};
+const CompleteToPublishNotification = (
+  <PublishStatus
+    iconName="triangle-exclamation"
+    iconStyle={moduleStyles.alert}
+    content={
+      <>
+        In order to publish, you <StrongText>must</StrongText> fill out a model
+        card
+      </>
+    }
+    contentStyle={moduleStyles.messageTextContainer}
+    containerStyle={classNames(moduleStyles.messageContainerAlert)}
+  />
+);
 
 export default PublishNotes;
