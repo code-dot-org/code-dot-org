@@ -16,6 +16,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     ]
     @lti_integration = create :lti_integration
     @student_role = Policies::Lti::CONTEXT_LEARNER_ROLE
+    @observer_role = Policies::Lti::CONTEXT_MENTOR_ROLE
     @teacher_role = Policies::Lti::TEACHER_ROLES.first
 
     @id_token = {
@@ -54,6 +55,19 @@ class Services::LtiTest < ActiveSupport::TestCase
           display_name: 'teacher',
           full_name: 'Test Teacher',
           email: 'test-teacher@code.org'
+        }
+      }],
+    }.deep_symbolize_keys
+
+    @nrps_observer = {
+      status: 'Active',
+      user_id: SecureRandom.uuid,
+      roles: [@observer_role],
+      message: [{
+        @custom_claims_key => {
+          display_name: 'parent',
+          full_name: 'Test Parent',
+          email: 'test-parent@code.org'
         }
       }],
     }.deep_symbolize_keys
@@ -124,6 +138,27 @@ class Services::LtiTest < ActiveSupport::TestCase
                 email: "student0@code.org",
                 course_id: "115",
                 full_name: "Test Zero",
+                given_name: "Test",
+                family_name: "Zero",
+                section_ids: @lms_section_ids.join(','),
+                display_name: "Test Zero",
+                section_names: @lms_section_names.to_s
+              },
+            }
+          ]
+        },
+        {
+          status: "Active",
+          user_id: "observer-0",
+          roles: [Policies::Lti::CONTEXT_MENTOR_ROLE],
+          message: [
+            {
+              'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+              locale: "en",
+              'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                email: "parent-0@code.org",
+                course_id: "115",
+                full_name: "Parent Zero",
                 given_name: "Test",
                 family_name: "Zero",
                 section_ids: @lms_section_ids.join(','),
