@@ -15,15 +15,13 @@ module ActionDispatch
         [session_id, session || {}]
       end
 
-      private
-
       # If we already have existing session data in the cookie, this helper
       # method will clear the cookie, write that session data to the database,
       # and return the session id it extracted from the cookie.
       #
       # If the cookie does not contain any existing session data, do nothing
       # and return nothing.
-      def migrate_session_data(request)
+      private def migrate_session_data(request)
         stale_session_check! do
           session_data = unpacked_cookie_data(request)
           if session_data.is_a?(Hash) && !session_data.empty?
@@ -35,21 +33,13 @@ module ActionDispatch
         end
       end
 
-      def unpacked_cookie_data(request)
+      private def unpacked_cookie_data(request)
         stale_session_check! do
           if data = get_cookie(request) && data.is_a?(Hash)
             data.stringify_keys!
           end
           data || {}
         end
-      end
-
-      def get_cookie(request)
-        cookie_jar(request)[@key]
-      end
-
-      def cookie_jar(request)
-        request.cookie_jar.signed_or_encrypted
       end
     end
 
