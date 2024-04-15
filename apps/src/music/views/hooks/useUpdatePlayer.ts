@@ -17,6 +17,7 @@ export default function useUpdatePlayer(player: MusicPlayer) {
     state => state.music.startingPlayheadPosition
   );
   const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const packId = useAppSelector(state => state.music.packId);
 
   const dispatch = useAppDispatch();
   const library = MusicLibrary.getInstance();
@@ -35,13 +36,14 @@ export default function useUpdatePlayer(player: MusicPlayer) {
     }
     const bpm = library.getBPM();
     const key = library.getKey();
-    if (bpm) {
+    if (bpm !== undefined) {
       dispatch(setBpm(bpm));
     }
-    if (key) {
+    if (key !== undefined) {
       dispatch(setKey(key));
     }
-  }, [library, dispatch]);
+    // Update BPM and key whenever current pack ID changes.
+  }, [library, dispatch, packId]);
 
   useEffect(() => {
     player.setLoopEnabled(loopEnabled);

@@ -12,10 +12,7 @@
 
 .assistantMessageContainer {
   margin: 0 50px 15px 0;
-
-  h5 {
-    margin: 5px 0 5px 0;
-  }
+  display: flex;
 }
 
 .modelUpdateMessageContainer {
@@ -57,11 +54,13 @@
 }
 
 .userMessage {
-  background-color: $lightest_cyan;
+  background-color: $brand_teal_5;
+  border-radius: 16px 0 16px 16px;
 }
 
 .assistantMessage {
-  background-color: $lightest_gray;
+  background-color: $light_gray_50;
+  border-radius: 0 16px 16px 16px;
 }
 
 .inappropriateMessage {
