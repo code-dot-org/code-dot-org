@@ -1624,9 +1624,13 @@ class Unit < ApplicationRecord
     summary
   end
 
+  def allow_major_curriculum_changes?
+    get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot
+  end
+
   def summarize_for_lesson_edit
     {
-      allowMajorCurriculumChanges: get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot,
+      allowMajorCurriculumChanges: allow_major_curriculum_changes?,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
@@ -1723,6 +1727,7 @@ class Unit < ApplicationRecord
     raise "only call this in a test!" unless Rails.env.test?
     @@unit_cache = nil
     @@unit_family_cache = nil
+    @@script_level_cache = nil
     @@level_cache = nil
     @@all_scripts = nil
     @@visible_units = nil

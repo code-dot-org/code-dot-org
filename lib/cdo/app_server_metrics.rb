@@ -52,7 +52,8 @@ module Cdo
     def collect_metrics(*_)
       collect_listener_stats.each do |name, value|
         Cdo::Metrics.put(
-          "#{@namespace}/#{name}",
+          @namespace,
+          name,
           value,
           @dimensions,
           storage_resolution: 1,

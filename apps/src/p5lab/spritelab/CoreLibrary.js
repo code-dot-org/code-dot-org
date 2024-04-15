@@ -10,6 +10,7 @@ import {
   displayWorkspaceAlert,
 } from '../../code-studio/projectRedux';
 import msg from '@cdo/locale';
+import {formatForPlayspace} from '../utils';
 
 export default class CoreLibrary {
   constructor(p5, jsInterpreter) {
@@ -131,7 +132,7 @@ export default class CoreLibrary {
       padding: 10,
       strokeWeight: 3,
       strokeRadius: 24,
-      maxLabelLength: 30, // Maximum number of characters to display in the label
+      maxLabelLength: 20, // Maximum number of characters to display in the label
     };
 
     // Calculate the width for the label and value separator (colon and space)
@@ -148,7 +149,8 @@ export default class CoreLibrary {
         return;
       }
 
-      const value = this.getVariableValue(name);
+      // Use variable value or empty string (if undefined).
+      const value = this.getVariableValue(name, '');
 
       // Determine if the label needs truncation and append an ellipsis if so
       const displayLabel =
@@ -166,7 +168,7 @@ export default class CoreLibrary {
         APP_WIDTH - totalReservedSpace - labelWidth;
       const displayValue = drawUtils.truncateText(
         this.p5,
-        `${value}`,
+        formatForPlayspace(value),
         availableSpaceForValue,
         config.textSize
       );
@@ -182,7 +184,7 @@ export default class CoreLibrary {
     });
   }
 
-  getVariableValue(variableName) {
+  getVariableValue(variableName, defaultValue) {
     if (!this.jsInterpreter) {
       console.error('JS Interpreter not set in CoreLibrary');
       return;
@@ -192,7 +194,7 @@ export default class CoreLibrary {
       // Blockly does not execute code or track the runtime values of variables, so we need to
       // evaluate the variable's value using the JSInterpreter.
       const result = this.jsInterpreter.evaluateWatchExpression(variableName);
-      return typeof result === 'undefined' ? '' : result;
+      return typeof result === 'undefined' ? defaultValue : result;
     } catch (e) {
       console.error(`Error evaluating variable '${variableName}': ${e}`);
       return '';
@@ -418,7 +420,14 @@ export default class CoreLibrary {
         );
       }
     }
-    if (spriteArg.group) {
+    if (typeof spriteArg.group === 'string') {
+      // The group property is undefined for sprites unless explicitly set.
+      // We're using '' as a way to signal that we want to return the ones without a group.
+      if (spriteArg.group === '') {
+        return Object.values(this.nativeSpriteMap).filter(
+          sprite => !sprite.group
+        );
+      }
       return Object.values(this.nativeSpriteMap).filter(
         sprite => sprite.group === spriteArg.group
       );

@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+# TODO: unfirebase, also update datablock storage: #56993
+# TODO: post-firebase-cleanup, remove the firebase version: #56994
+
 # This script fetches covid19 data and uploads to the shared firebase channel.
 require_relative '../../../deployment'
 require 'cdo/only_one'
@@ -7,6 +10,8 @@ require 'net/http'
 require 'csv'
 require 'date'
 require 'datapackage'
+
+# TODO: post-firebase-cleanup, remove the firebase reference: #56994
 require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 
 US_DATA_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
@@ -56,59 +61,11 @@ def get_us_covid19_data
   return records, columns
 end
 
-def get_world_covid19_data
-  package = JSON.parse(Net::HTTP.get_response(URI('https://datahub.io/core/covid-19/datapackage.json')).body)
-  resource = package['resources'].find {|r| r['name'] == "countries-aggregated_csv"}
-  return unless resource
-  response = Net::HTTP.get_response(URI(resource['path']))
-  return unless response.code == '200'
-  lines = CSV.parse(response.body, headers: true)
-  weekly_data = {}
-
-  # Group records by week
-  lines.each do |line|
-    parsed_date = Date.strptime(line.field("Date"), "%Y-%m-%d")
-    next unless parsed_date.wday == 0 # Downsample to one data point per week
-    formatted_date = parsed_date.strftime('%a %-m/%-d') # ex Wed 1/7
-    record = {}
-    record['Date'] = formatted_date
-    record['Country'] = line.field("Country")
-    record['Total Confirmed Cases'] = line.field("Confirmed").to_i
-    record['Total Recovered'] = line.field("Recovered").to_i
-    record['Total Deaths'] = line.field("Deaths").to_i
-    weekly_data[formatted_date] ||= []
-    weekly_data[formatted_date].push record
-  end
-
-  # Truncate to MAX_WEEKS most recent weeks
-  weeks = if weekly_data.length > MAX_WEEKS
-            weekly_data.keys.slice(weekly_data.length - MAX_WEEKS, MAX_WEEKS)
-          else
-            weekly_data.keys
-          end
-
-  # Add id to each record
-  columns = ['id', 'Date', 'Country', 'Total Confirmed Cases', 'Total Recovered', 'Total Deaths']
-  records = {}
-  id = 1
-  weeks.each do |week|
-    week_records = weekly_data[week]
-    week_records.each do |record|
-      record['id'] = id
-      records[id] = record.to_json
-      id += 1
-    end
-  end
-  return records, columns
-end
-
 def main
+  # TODO: post-firebase-cleanup, remove the firebase reference: #56994
   fb = FirebaseHelper.new('shared')
   records, columns = get_us_covid19_data
   fb.upload_live_table('COVID-19 Cases per US State', records, columns)
-
-  records, columns = get_world_covid19_data
-  fb.upload_live_table('COVID-19 Cases per Country', records, columns)
 end
 
 main if only_one_running?(__FILE__)

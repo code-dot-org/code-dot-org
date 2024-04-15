@@ -1,12 +1,14 @@
-import {assert} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
-import {UnconnectedSummaryProgressTable as SummaryProgressTable} from '@cdo/apps/templates/progress/SummaryProgressTable';
+import React from 'react';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import {UnconnectedSummaryProgressTable as SummaryProgressTable} from '@cdo/apps/templates/progress/SummaryProgressTable';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('SummaryProgressTable', () => {
   const lessons = [

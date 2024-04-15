@@ -28,6 +28,7 @@ class Policies::Lti
     ]
 ).freeze
   CONTEXT_LEARNER_ROLE = 'http://purl.imsglobal.org/vocab/lis/v2/membership#Learner'.freeze
+  CONTEXT_MENTOR_ROLE = 'http://purl.imsglobal.org/vocab/lis/v2/membership#Mentor'.freeze
   LTI_ROLES_KEY = 'https://purl.imsglobal.org/spec/lti/claim/roles'.freeze
   LTI_CUSTOM_CLAIMS = "https://purl.imsglobal.org/spec/lti/claim/custom".freeze
   LTI_CONTEXT_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/context".freeze
@@ -82,10 +83,6 @@ class Policies::Lti
   # Returns true if any of the user's roles is the LTI instructor role
   def self.lti_teacher?(roles)
     (Set.new(roles) & TEACHER_ROLES).any?
-  end
-
-  def self.generate_auth_id(id_token)
-    "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
   end
 
   def self.lti?(user)
@@ -151,5 +148,9 @@ class Policies::Lti
   # Force Schoology through iframe mitigation flow
   def self.force_iframe_launch?(issuer)
     ['Schoology'].include?(issuer_name(issuer))
+  end
+
+  def self.feedback_available?(user)
+    user.teacher? && lti?(user) && user.created_at <= 2.days.ago
   end
 end

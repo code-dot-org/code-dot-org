@@ -1,33 +1,12 @@
 /* This file is only executed within JSInterpreter */
 /* This library supports validation of Sprite Lab projects that use variables.*/
 
-//This has a specific use in the code below...
-var studentVarToken = false;
+// varLog must be declared at the global scope because validation code in existing levels reference it directly.
+// It should be given a value from buildVariableLog(), which is a native Sprite Lab command that returns an object
+// with properties representing student Blockly variables. varLog is also accessed and updated in the functions below.
+var varLog;
 var previousVarLog;
 
-// Create an array of objects representing within the variables that have been
-// declared or updated within the Blockly environment. All Blockly variables
-// are global, and we would like to find a more efficient way to find just
-// those used by the student.
-function buildVariableLog() {
-  var varLog = {};
-  var windowKeys = Object.keys(window);
-  //Here's where that studentVarToken comes back again
-  var start = windowKeys.indexOf("studentVarToken") + 1;
-  var end = windowKeys.length;
-  var index;
-  for (var i = start; i < end; i++) {
-    var currentKey = windowKeys[i];
-    var currentValue = window[currentKey];
-    // Blockly functions and behaviors should be excluded.
-    var valueTypes = ["number", "string", "boolean"];
-    // ES5 doesn't support .includes or we'd use that here.
-    if (valueTypes.indexOf(typeof currentValue) > -1) {
-      varLog[windowKeys[i]] = currentValue;
-    }
-  }
-  return varLog;
-}
 
 // Returns true if any student-created variable was updated.
 // This function can run multiple times per frame.
@@ -59,11 +38,7 @@ function check() {
 
 // Updates the variable log. This function should run once per frame.
 function updateVariableLog() {
-  if (varLog) {
-    for (var property in varLog) {
-      varLog[property] = window[property];
-    }
-  }
+  varLog = buildVariableLog();
 }
 
 // Perform a deep copy for comparisons during the next frame.

@@ -1,12 +1,14 @@
-import {assert} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
-import {UnconnectedSummaryProgressRow as SummaryProgressRow} from '@cdo/apps/templates/progress/SummaryProgressRow';
+import React from 'react';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import {UnconnectedSummaryProgressRow as SummaryProgressRow} from '@cdo/apps/templates/progress/SummaryProgressRow';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 const baseProps = {
   dark: false,

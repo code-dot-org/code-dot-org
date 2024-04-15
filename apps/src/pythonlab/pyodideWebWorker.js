@@ -1,10 +1,13 @@
-import {loadPyodide} from 'pyodide';
+import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
-    indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full',
+    indexURL: `/assets/js/pyodide/${version}/`,
   });
-  await self.pyodide.loadPackage(['numpy']);
+  // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
+  // TODO: Re-enable matplotlib after adding wheel to our repo.
+  // https://codedotorg.atlassian.net/browse/CT-488
+  await self.pyodide.loadPackage(['numpy', 'matplotlib']);
   self.pyodide.setStdout({
     batched: msg => {
       self.postMessage({type: 'sysout', message: msg, id: 'none'});
@@ -19,6 +22,9 @@ async function initializePyodide() {
   }
   await pyodideReadyPromise;
 }
+
+// Get pyodide ready as soon as possible.
+initializePyodide();
 
 self.onmessage = async event => {
   // make sure loading is done

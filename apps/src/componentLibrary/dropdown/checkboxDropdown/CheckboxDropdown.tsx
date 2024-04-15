@@ -1,22 +1,31 @@
 import React from 'react';
 
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
+import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {
   ComponentSizeXSToL,
   DropdownColor,
 } from '@cdo/apps/componentLibrary/common/types';
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
-import Button from '@cdo/apps/templates/Button';
-
 import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-
+import Button from '@cdo/apps/templates/Button';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import i18n from '@cdo/locale';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
-import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+export interface CheckboxOption {
+  value: string;
+  label: string;
+  isOptionDisabled?: boolean;
+}
+
+export interface CheckboxOption {
+  value: string;
+  label: string;
+  isOptionDisabled?: boolean;
+}
 
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name.
@@ -32,7 +41,7 @@ export interface CheckboxDropdownProps {
    * The user-facing label of the dropdown */
   labelText: string;
   /** CheckboxDropdown options */
-  allOptions: {value: string; label: string; isOptionDisabled?: boolean}[];
+  allOptions: CheckboxOption[];
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */

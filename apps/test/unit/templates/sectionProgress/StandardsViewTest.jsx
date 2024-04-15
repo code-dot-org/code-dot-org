@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import {UnconnectedStandardsView as StandardsView} from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('StandardView', () => {
   let DEFAULT_PROPS;

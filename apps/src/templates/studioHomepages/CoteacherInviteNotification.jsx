@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
+
+import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import Button from '../Button';
-import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import i18n from '@cdo/locale';
+
+import Button from '../Button';
 
 const CoteacherInviteNotification = ({
   isForPl,

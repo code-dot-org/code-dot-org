@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {Heading6, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AiAssessmentBox from './AiAssessmentBox';
 import {aiEvaluationShape, aiEvidenceShape} from './rubricShapes';
 import aiBotImage from './images/AiBot_2x.png';
@@ -16,8 +16,10 @@ export default function AiAssessment({
   aiEvalInfo,
 }) {
   return (
-    <div className="uitest-ai-assessment">
-      <Heading6>{i18n.aiAssessment()}</Heading6>
+    <div id="tour-ai-assessment" className="uitest-ai-assessment">
+      <Heading6 visualAppearance={'body-three'}>
+        <StrongText>{i18n.aiAssessment()}</StrongText>
+      </Heading6>
       <div className={style.aiAssessmentBlock}>
         <img alt={i18n.aiBot()} src={aiBotImage} className={style.aiBotImg} />
         <AiAssessmentBox

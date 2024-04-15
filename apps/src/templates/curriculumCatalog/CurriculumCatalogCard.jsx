@@ -50,13 +50,14 @@ const CurriculumCatalogCard = ({
   publishedDate,
   selfPacedPlCourseOfferingPath,
   isExpanded,
-  setExpandedCardKey,
+  handleSetExpandedCardKey,
   onQuickViewClick,
   isInUS,
   availableResources,
   isSignedOut,
   isTeacher,
-  getRecommendedSimilarCurriculum,
+  recommendedSimilarCurriculum,
+  recommendedStretchCurriculum,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -99,12 +100,13 @@ const CurriculumCatalogCard = ({
     selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
     isExpanded={isExpanded}
     onQuickViewClick={onQuickViewClick}
-    setExpandedCardKey={setExpandedCardKey}
+    handleSetExpandedCardKey={handleSetExpandedCardKey}
     isInUS={isInUS}
     availableResources={availableResources}
     isSignedOut={isSignedOut}
     isTeacher={isTeacher}
-    getRecommendedSimilarCurriculum={getRecommendedSimilarCurriculum}
+    recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+    recommendedStretchCurriculum={recommendedStretchCurriculum}
     {...props}
   />
 );
@@ -140,13 +142,14 @@ CurriculumCatalogCard.propTypes = {
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
-  setExpandedCardKey: PropTypes.func.isRequired,
+  handleSetExpandedCardKey: PropTypes.func.isRequired,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
-  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
+  recommendedSimilarCurriculum: PropTypes.object,
+  recommendedStretchCurriculum: PropTypes.object,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -178,11 +181,12 @@ const CustomizableCurriculumCatalogCard = ({
   publishedDate,
   selfPacedPlCourseOfferingPath,
   isExpanded,
-  setExpandedCardKey,
+  handleSetExpandedCardKey,
   onQuickViewClick,
   isInUS,
   availableResources,
-  getRecommendedSimilarCurriculum,
+  recommendedSimilarCurriculum,
+  recommendedStretchCurriculum,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -347,14 +351,15 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
-          setExpandedCardKey={setExpandedCardKey}
+          handleSetExpandedCardKey={handleSetExpandedCardKey}
           isInUS={isInUS}
           imageSrc={imageSrc}
           imageAltText={imageAltText}
           availableResources={availableResources}
           isSignedOut={isSignedOut}
           isTeacher={isTeacher}
-          getRecommendedSimilarCurriculum={getRecommendedSimilarCurriculum}
+          recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+          recommendedStretchCurriculum={recommendedStretchCurriculum}
         />
       )}
     </div>
@@ -396,11 +401,12 @@ CustomizableCurriculumCatalogCard.propTypes = {
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
-  setExpandedCardKey: PropTypes.func.isRequired,
+  handleSetExpandedCardKey: PropTypes.func.isRequired,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
-  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
+  recommendedSimilarCurriculum: PropTypes.object,
+  recommendedStretchCurriculum: PropTypes.object,
 };
 
 export default connect(

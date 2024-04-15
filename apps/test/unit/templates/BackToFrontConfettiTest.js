@@ -1,8 +1,10 @@
-import sinon from 'sinon';
-import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
-import React from 'react';
-import {expect} from '../../util/deprecatedChai';
 import {mount} from 'enzyme';
+import React from 'react';
+import sinon from 'sinon';
+
+import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
+
+import {expect} from '../../util/deprecatedChai';
 
 describe('BackToFrontConfetti', () => {
   let clock;

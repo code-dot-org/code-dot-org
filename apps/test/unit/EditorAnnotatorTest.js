@@ -459,4 +459,17 @@ describe('EditorAnnotator', () => {
       sinon.assert.calledOnce(undimBlocksStub);
     });
   });
+
+  describe('scrollToLine', () => {
+    let scrollToLineStub;
+
+    beforeEach(() => {
+      scrollToLineStub = dropletStub.aceEditor.scrollToLine = sinon.stub();
+    });
+
+    it('should wrap and call the necessary method in Ace', () => {
+      EditorAnnotator.scrollToLine(42);
+      sinon.assert.calledOnceWithExactly(scrollToLineStub, 42, true, true);
+    });
+  });
 });

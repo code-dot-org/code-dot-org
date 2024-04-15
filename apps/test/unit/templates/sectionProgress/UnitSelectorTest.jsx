@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 let defaultProps = {
   coursesWithProgress: fakeCoursesWithProgress,

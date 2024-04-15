@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import Link from '@cdo/apps/componentLibrary/link';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - Link', () => {
   it('Link - renders with correct text', () => {

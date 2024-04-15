@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
-import {StrongText, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
 
@@ -24,7 +23,7 @@ export default function AiConfidenceBox({aiConfidence}) {
   }, [aiConfidence]);
 
   return (
-    <div className={style.aiConfidenceBox}>
+    <div id="tour-ai-confidence" className={style.aiConfidenceBox}>
       <div>
         {[...Array(3)].map((_, i) => (
           <div
@@ -34,12 +33,12 @@ export default function AiConfidenceBox({aiConfidence}) {
         ))}
       </div>
       <div className={style.aiConfidenceBoxText}>
-        <BodyThreeText>
-          <StrongText>{aiConfidenceText}</StrongText>
+        <p className={style.labelThree}>
+          {aiConfidenceText}
           <span data-tip data-for="info-tip">
             <FontAwesome icon="info-circle" className={style.infoTipIcon} />
           </span>
-        </BodyThreeText>
+        </p>
         <ReactTooltip id="info-tip" effect="solid">
           <div className={style.infoTipText}>{i18n.aiConfidenceTooltip()}</div>
         </ReactTooltip>

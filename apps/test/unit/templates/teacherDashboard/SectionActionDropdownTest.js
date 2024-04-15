@@ -1,9 +1,11 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import React from 'react';
+
+import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+
+import {expect} from '../../../util/deprecatedChai';
 
 const sections = [
   {

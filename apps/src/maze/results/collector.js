@@ -1,17 +1,17 @@
-const studioApp = require('../../StudioApp').singleton;
-
-import ResultsHandler from './resultsHandler';
-import {TestResults} from '../../constants.js';
-const getStore = require('../../redux').getStore;
-
 import experiments from '@cdo/apps/util/experiments';
-import mazeMsg from '../locale';
 
+import {TestResults} from '../../constants.js';
+import mazeMsg from '../locale';
 import {
   setCollectorMinRequired,
   resetCollectorCurrentCollected,
   setCollectorCurrentCollected,
 } from '../redux';
+
+import ResultsHandler from './resultsHandler';
+
+const getStore = require('../../redux').getStore;
+const studioApp = require('../../StudioApp').singleton;
 
 const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;

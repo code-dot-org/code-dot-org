@@ -1,4 +1,5 @@
 import {stub} from 'sinon';
+
 import firehose from '@cdo/apps/lib/util/firehose';
 
 /**

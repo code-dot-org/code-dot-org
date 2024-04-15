@@ -63,6 +63,9 @@ export const POEMS = {
   lomeli1: {author: 'Caia Lomeli'},
   lomeli2: {author: 'Caia Lomeli'},
   frost: {author: 'Robert Frost'},
+  hope: {author: 'Ishmael Angaluuk Hope'},
+  priest: {author: 'Rena Priest'},
+  whitney: {author: 'Jael Whitney'},
   cb: {
     locales: ['en_us'],
     author: 'C. B.',

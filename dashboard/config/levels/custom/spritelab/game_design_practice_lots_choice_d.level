@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:13:38.000Z",
   "level_num": "custom",
@@ -70,8 +69,9 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:13:38.477+00:00\",\"changed\":[\"cloned from \\\"hello_games_groups_practice3\\\"\"],\"cloned_from\":\"hello_games_groups_practice3\"},{\"changed_at\":\"2024-03-18 20:14:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:35:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:13:38.477+00:00\",\"changed\":[\"cloned from \\\"hello_games_groups_practice3\\\"\"],\"cloned_from\":\"hello_games_groups_practice3\"},{\"changed_at\":\"2024-03-18 20:14:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:35:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-21 19:02:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1402,174 +1402,186 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
+      <xml xmlns="https://developers.google.com/blockly/xml">
         <category name="World">
-          <block type="gamelab_setBackground">
+          <block type="gamelab_setBackground" id="D]wGQ8#l)_U/NLBx2W*^">
             <value name="COLOR">
-              <block type="colour_picker">
+              <block type="colour_picker" id="D}[ZBI^H|9kez*t.l!9_">
                 <field name="COLOUR">#99ff99</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_setBackgroundImageAs">
+          <block type="gamelab_setBackgroundImageAs" id="+I:D%P%kg4O}]UlVGy5B">
             <field name="IMG">"hw_plate_background_1"</field>
           </block>
-          <block type="gamelab_playSoundOptions">
+          <block type="gamelab_playSoundOptions" id="C@I0!ioJOr,e0fz7,HhF">
             <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
           </block>
         </category>
         <category name="Sprites">
-          <block type="gamelab_makeNewSpriteAnon">
+          <block type="gamelab_makeNewSpriteAnon" id="%bThepp?oXu(K;Nbqe7j">
             <field name="ANIMATION_NAME">"face_sweet2_1"</field>
             <value name="LOCATION">
-              <block type="gamelab_location_picker">
+              <block type="gamelab_location_picker" id="rwzOKBJLA~T[[O+pHJW)">
                 <field name="LOCATION">{"x":200,"y":200}</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_makeNumSprites">
+          <block type="gamelab_makeNumSprites" id="@GiJ.i9)b(@,(9zv{Pjl">
             <field name="ANIMATION_NAME">"face_sweet2_1"</field>
             <value name="NUM">
-              <block type="math_number">
+              <block type="math_number" id="F-MIp[j+Nlp0rvV-|f4B">
                 <field name="NUM">3</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_allSpritesWithAnimation">
+          <block type="gamelab_makeSpritesGridInput" id="XZCsSZ%_j7@jzf6Z`l~d">
+            <field name="ANIMATION_NAME">"face_sweet2_1"</field>
+            <value name="GRID">
+              <block type="gamelab_bitmap" id="O_#n3sHS.w4I-gg*%i_c">
+                <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_allSpritesWithAnimation" id="J4TW3n!v{ck3]7aXy?Ev">
             <field name="ANIMATION">"face_sweet2_1"</field>
           </block>
-          <block type="gamelab_destroy"/>
-          <block type="gamelab_setProp">
+          <block type="gamelab_destroy" id="$den0)I;;{Maq;QpluIa"/>
+          <block type="gamelab_setProp" id="h*zOFb!I]VdumB+[]:+p">
             <field name="PROPERTY">"scale"</field>
             <value name="VAL">
-              <block type="math_number">
+              <block type="math_number" id="+,bz.sB1)[6h(m6A:Bcl">
                 <field name="NUM">50</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_changePropBy">
+          <block type="gamelab_changePropBy" id="sY@KR*4zL/Gw$iCE~Toa">
             <field name="PROPERTY">"scale"</field>
             <value name="VAL">
-              <block type="math_number">
+              <block type="math_number" id="ef(R[w*(ZY#V.8Z*pQmm">
                 <field name="NUM">10</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_spriteSay">
+          <block type="gamelab_spriteSay" id="jx{}-?gg7dBcy!C$/xV}">
             <field name="SPEECH"/>
           </block>
-          <block type="gamelab_setTint">
+          <block type="gamelab_setTint" id="geovBLEFP;w=II2?|!ho">
             <value name="COLOR">
-              <block type="colour_picker">
+              <block type="colour_picker" id="%peG^JsT0MwbKkV`bFqw">
                 <field name="COLOUR">#ff0000</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_setTint">
+          <block type="gamelab_setTint" id="8Hdvi,Cje5U)208(IDMe">
             <value name="COLOR">
-              <block type="gamelab_randomColor"/>
+              <block type="gamelab_randomColor" id="Di9fHonl;/T+Jm6n^)At"/>
             </value>
           </block>
-          <block type="gamelab_removeTint"/>
-          <block type="gamelab_setAnimation">
+          <block type="gamelab_removeTint" id="5Eu,^X[(d1p]o@u8M(+U"/>
+          <block type="gamelab_setAnimation" id="(Ive[Vdw~3SU72MixeU-">
             <field name="ANIMATION">"face_sweet2_1"</field>
           </block>
-          <block type="gamelab_jumpTo">
+          <block type="gamelab_jumpTo" id="?F}0yeQP_8-dnBGoy{V@">
             <value name="LOCATION">
-              <block type="gamelab_randomLocation"/>
+              <block type="gamelab_randomLocation" id="|dP8C9(X3o.Dn5ByL#_H"/>
             </value>
           </block>
         </category>
         <category name="Events">
-          <block type="gamelab_spriteClicked">
+          <block type="gamelab_spriteClicked" id="mS%gM8/v%jxbM/xhLifY">
+            <mutation useDefaultIcon="true"/>
+            <field name="button_gamelab_spriteClicked"/>
             <field name="CONDITION">"when"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <block type="gamelab_allSpritesWithAnimation" id="sx0e26I/Ihffc;~+@2_A" movable="false">
                 <field name="ANIMATION">"face_sweet2_1"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_checkTouching">
+          <block type="gamelab_checkTouching" id="7{(^aY[!Ieh)eWTO.Z`I">
+            <mutation useDefaultIcon="true"/>
+            <field name="button_gamelab_checkTouching"/>
             <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
-              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <block type="gamelab_allSpritesWithAnimation" id="U3:R0]g(G)}]B=d*]#@_" movable="false">
                 <field name="ANIMATION">"face_sweet2_1"</field>
               </block>
             </value>
             <value name="SPRITE2">
-              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <block type="gamelab_allSpritesWithAnimation" id="#r(TNGl$^(S6U=1VCc.E" movable="false">
                 <field name="ANIMATION">"face_sweet2_1"</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Behaviors">
-          <block type="gamelab_addBehaviorSimple"/>
-          <block type="gamelab_removeBehaviorSimple"/>
-          <block type="gamelab_removeAllBehaviors"/>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="fluttering">fluttering</field>
+          <block type="gamelab_addBehaviorSimple" id="j|;V3mP3hY^XGz`P1~4z"/>
+          <block type="gamelab_removeBehaviorSimple" id="!lCvw3`emg*nt}bqyn8K"/>
+          <block type="gamelab_removeAllBehaviors" id="t:rl^U-K7gX~W[BI,l=^"/>
+          <block type="gamelab_behavior_get" id="]%4:mqN)~twrc;C0}z7@">
+            <mutation behaviorId="fluttering" name="fluttering"/>
+            <field name="NAME">fluttering</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="growing">growing</field>
+          <block type="gamelab_behavior_get" id="z_xkxX.,bejt~,V4jZzO">
+            <mutation behaviorId="growing" name="growing"/>
+            <field name="NAME">growing</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="moving east">moving east</field>
+          <block type="gamelab_behavior_get" id="wPfE3)Wj]i3b1P.L^Xhp">
+            <mutation behaviorId="moving east" name="moving east"/>
+            <field name="NAME">moving east</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="moving east and looping">moving east and looping</field>
+          <block type="gamelab_behavior_get" id="FPVO=1s)#$#z98LX[:M$">
+            <mutation behaviorId="moving east and looping" name="moving east and looping"/>
+            <field name="NAME">moving east and looping</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="moving north">moving north</field>
+          <block type="gamelab_behavior_get" id="wsmfK(^E^#8:4Vmf%w)u">
+            <mutation behaviorId="moving north" name="moving north"/>
+            <field name="NAME">moving north</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="moving north and looping">moving north and looping</field>
+          <block type="gamelab_behavior_get" id="(Ny)%g0[-!^k4-c7g616">
+            <mutation behaviorId="moving north and looping" name="moving north and looping"/>
+            <field name="NAME">moving north and looping</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="moving south">moving south</field>
+          <block type="gamelab_behavior_get" id="M:%2)|XRkYX[3][l3Jlw">
+            <mutation behaviorId="moving south" name="moving south"/>
+            <field name="NAME">moving south</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="moving south and looping">moving south and looping</field>
+          <block type="gamelab_behavior_get" id="(DZ]d5,gKWj]4=^00bK5">
+            <mutation behaviorId="moving south and looping" name="moving south and looping"/>
+            <field name="NAME">moving south and looping</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="moving west">moving west</field>
+          <block type="gamelab_behavior_get" id=";LQq1IsG;_G|R]a+9%q2">
+            <mutation behaviorId="moving west" name="moving west"/>
+            <field name="NAME">moving west</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="moving west and looping">moving west and looping</field>
+          <block type="gamelab_behavior_get" id="ZG8X01LqxG.qyk/-oB0o">
+            <mutation behaviorId="moving west and looping" name="moving west and looping"/>
+            <field name="NAME">moving west and looping</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="patrolling">patrolling</field>
+          <block type="gamelab_behavior_get" id="7}I:D,e`S_vbYSkorBHk">
+            <mutation behaviorId="patrolling" name="patrolling"/>
+            <field name="NAME">patrolling</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="shrinking">shrinking</field>
+          <block type="gamelab_behavior_get" id="Tmdvu|:k6Y#Joq5^G%)C">
+            <mutation behaviorId="shrinking" name="shrinking"/>
+            <field name="NAME">shrinking</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="spinning left">spinning left</field>
+          <block type="gamelab_behavior_get" id="S,x[q1K1tcQ*nFM!blzc">
+            <mutation behaviorId="spinning left" name="spinning left"/>
+            <field name="NAME">spinning left</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="spinning right">spinning right</field>
+          <block type="gamelab_behavior_get" id="|HujO3qrudGk)o#OTA5Y">
+            <mutation behaviorId="spinning right" name="spinning right"/>
+            <field name="NAME">spinning right</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="wandering">wandering</field>
+          <block type="gamelab_behavior_get" id="vu;+/wc/;%5bDnY0L5]y">
+            <mutation behaviorId="wandering" name="wandering"/>
+            <field name="NAME">wandering</field>
           </block>
-          <block type="gamelab_behavior_get">
-            <mutation/>
-            <field name="VAR" id="wobbling">wobbling</field>
+          <block type="gamelab_behavior_get" id="RPKC_k#;nPp*NL+2TS}o">
+            <mutation behaviorId="wobbling" name="wobbling"/>
+            <field name="NAME">wobbling</field>
           </block>
         </category>
       </xml>

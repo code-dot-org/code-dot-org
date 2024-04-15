@@ -1,14 +1,17 @@
 import React from 'react';
-import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
+import {Provider} from 'react-redux';
+
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import teacherSections from '../teacherDashboard/teacherSectionsRedux';
+
 import manageStudents, {
   RowType,
   blankStudentTransfer,
 } from './manageStudentsRedux';
-import teacherSections from '../teacherDashboard/teacherSectionsRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import {reduxStore} from '@cdo/storybook/decorators';
-import {Provider} from 'react-redux';
+import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 
 const initialState = {
   manageStudents: {

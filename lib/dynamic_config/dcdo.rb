@@ -29,7 +29,6 @@ class DCDOBase < DynamicConfigBase
     # 'my-new-feature': DCDO.get('my-new-feature', false)
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
-      clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
       'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
@@ -45,6 +44,9 @@ class DCDOBase < DynamicConfigBase
       # Whether the scholarship dropdown is locked on the application dashboard.
       'scholarship-dropdown-locked': DCDO.get('scholarship-dropdown-locked', true),
       hoc_mode: DCDO.get('hoc_mode', false),
+      # Whether to show the marketing banners for the AI Teacher Assistant launch. Can be removed later.
+      'ai-teaching-assistant-launch': DCDO.get('ai-teaching-assistant-launch', false),
+      'incubator-canvas-block-enabled': DCDO.get('incubator-canvas-block-enabled', true),
     }
   end
 end

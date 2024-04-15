@@ -1,0 +1,15 @@
+name 'self-paced-pl-ai-101-mod3-guiding_02_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Guiding Principles when using AI
+
+#### Let’s take a look at some guiding principles when using AI in education.
+
+<img src="https://images.code.org/5f643df03b3565e7a1c367ae2a3b468b-image-1710871493815.04.49 AM.png" alt="A brown owl sits on a branch.">
+
+## To Do:
+#### Choose one of these seven principles which you’re interested in learning more about. Then, navigate to the <a href="https://www.teachai.org/toolkit-principles">TeachAI website</a> and review that principle. Each principle includes questions to discuss and consider, a description, and real-world examples.
+
+MARKDOWN

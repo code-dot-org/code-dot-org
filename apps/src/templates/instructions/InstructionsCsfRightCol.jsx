@@ -1,11 +1,13 @@
 import $ from 'jquery';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+
+import styleConstants from '../../styleConstants';
+
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
-import styleConstants from '../../styleConstants';
 import {getOuterHeight} from './utils';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];

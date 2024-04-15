@@ -1,7 +1,9 @@
-import React from 'react';
 import {render, screen, within} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import CertificateShare from '@cdo/apps/templates/certificates/CertificateShare';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const defaultImageAlt = 'certificate alt text';
 const defaultProps = {

@@ -1,8 +1,8 @@
+import {Effects} from './player/interfaces/Effects';
 import {Key} from './utils/Notes';
 
 export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
-export const baseAssetUrlRestricted =
-  'https://studio.code.org/restricted/musiclab/';
+export const baseAssetUrlRestricted = '/restricted/musiclab/';
 
 export interface Trigger {
   id: string;
@@ -48,7 +48,7 @@ export const BlockMode = {
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]
 export const DEFAULT_PATTERN = {
-  kit: 'glitch',
+  kit: 'drums',
   events: [],
 };
 
@@ -77,3 +77,14 @@ export const DEFAULT_BEATS_PER_MEASURE = 4;
 export const DEFAULT_KEY = Key.C;
 export const MIN_BPM = 60;
 export const MAX_BPM = 200;
+
+export const BUS_EFFECT_COMBINATIONS: Effects[] = [
+  {filter: 'medium', delay: 'medium'},
+  {filter: 'low', delay: 'low'},
+  {filter: 'low', delay: 'medium'},
+  {filter: 'medium', delay: 'low'},
+  {filter: 'medium'},
+  {filter: 'low'},
+  {delay: 'medium'},
+  {delay: 'low'},
+];

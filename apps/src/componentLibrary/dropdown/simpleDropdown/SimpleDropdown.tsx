@@ -1,7 +1,8 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+
 import moduleStyles from './simpleDropdown.module.scss';
 
 export interface SimpleDropdownProps {
@@ -81,7 +82,6 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           onChange={onChange}
           value={selectedValue}
           id={id}
-          className={moduleStyles.dropdown}
           disabled={disabled}
         >
           {itemGroups.length > 0

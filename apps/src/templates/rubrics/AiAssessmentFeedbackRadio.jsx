@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
-import {BodyThreeText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 import {submitAiFeedback} from './AiAssessmentFeedback';
@@ -27,7 +26,7 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
   };
 
   return (
-    <div className={style.aiFeedbackRadioBox}>
+    <div id="tour-ai-assessment-feedback" className={style.aiFeedbackRadioBox}>
       <div className={style.aiFeedbackRadioRow}>
         <label>
           <span
@@ -75,9 +74,9 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
           />
         </label>
       </div>
-      <BodyThreeText className={style.aiFeedbackRadioBoxText}>
-        <StrongText>{i18n.aiAssessmentFeedbackAsk()}</StrongText>
-      </BodyThreeText>
+      <p className={style.aiFeedbackRadioBoxText}>
+        {i18n.aiAssessmentFeedbackAsk()}
+      </p>
     </div>
   );
 }
