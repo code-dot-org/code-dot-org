@@ -46,6 +46,7 @@ class ScriptsController < ApplicationController
     # Lastly, if user is assigned to newer version of this unit, we will
     # ask if they want to be redirected to the newer version.
     @redirect_unit_url = @script.redirect_to_unit_url(current_user, locale: request.locale)
+    puts @redirect_unit_url.inspect
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
@@ -268,16 +269,16 @@ class ScriptsController < ApplicationController
       params[:action] == "edit" ?
       Unit.get_without_cache(unit_id, with_associated_models: true) :
       Unit.get_from_cache(unit_id, raise_exceptions: false)
-    return script if script
 
     if Unit.family_names.include?(unit_id)
-      script = Unit.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
+      redirect_script = Unit.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
+      return script if script && (script&.name == redirect_script&.redirect_to)
       session[:show_unversioned_redirect_warning] = true
-      Unit.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
-      return script
+      Unit.log_redirect(unit_id, redirect_script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if redirect_script.present?
+      return redirect_script if redirect_script
     end
 
-    return nil
+    return script
   end
 
   private def set_unit
