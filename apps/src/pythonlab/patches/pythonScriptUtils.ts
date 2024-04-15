@@ -55,9 +55,12 @@ export function clearSources(
   pyodide: PyodideInterface,
   sources: MultiFileSource
 ) {
+  console.log('loaded packages before clear');
+  console.log(pyodide.loadedPackages);
   Object.values(sources.files).forEach(file => {
     const filePath = getFilePath(file.id, sources);
     try {
+      console.log(`unlinking ${filePath}`);
       pyodide.FS.unlink(filePath);
     } catch (e) {
       // TODO: log error better. We catch this because it should not prevent
@@ -65,6 +68,11 @@ export function clearSources(
       console.warn(`error unlinking Pyodide file ${filePath}, ${e}`);
     }
   });
+  console.log('getting file info post clear...');
+  const pathData = pyodide.FS.analyzePath('/', true);
+  console.log({pathData});
+  console.log('loaded packages post clear');
+  console.log(pyodide.loadedPackages);
 }
 
 // For the given fileId, return the full path to the file, including the file name.
