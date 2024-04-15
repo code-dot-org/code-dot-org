@@ -1,25 +1,27 @@
 /** @file Top-level view for AI Chat Lab */
 
 import React, {useCallback, useEffect} from 'react';
+
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import SegmentedButtons, {
+  SegmentedButtonsProps,
+} from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
 import {setStartingAiCustomizations, setViewMode} from '../redux/aichatRedux';
+import {AichatLevelProperties, ViewMode} from '../types';
+import {isDisabled} from './modelCustomization/utils';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
-import SegmentedButtons, {
-  SegmentedButtonsProps,
-} from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import moduleStyles from './aichatView.module.scss';
-import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
-import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -54,6 +56,18 @@ const AichatView: React.FunctionComponent = () => {
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
+
+  // Showing presentation view when:
+  // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and
+  // 2) we have a published model card (either by the student, or in readonly form from the levelbuilder)
+  const showPresentationToggle = () => {
+    return (
+      !levelAichatSettings?.hidePresentationPanel &&
+      (hasPublished ||
+        (levelAichatSettings?.visibilities &&
+          isDisabled(levelAichatSettings.visibilities.modelCardInfo)))
+    );
+  };
 
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
@@ -90,7 +104,7 @@ const AichatView: React.FunctionComponent = () => {
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
-      {!levelAichatSettings?.hidePresentationPanel && hasPublished && (
+      {showPresentationToggle() && (
         <div className={moduleStyles.viewModeButtons}>
           <SegmentedButtons {...viewModeButtonsProps} />
         </div>

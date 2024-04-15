@@ -41,9 +41,11 @@ const PublishNotes: React.FunctionComponent = () => {
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div>
-        {hasFilledOutModelCard
-          ? renderPublishOkNotification()
-          : renderCompleteToPublishNotification()}
+        {!isDisabled(visibility)
+          ? hasFilledOutModelCard
+            ? renderPublishOkNotification()
+            : renderCompleteToPublishNotification()
+          : null}
         <div className={modelCustomizationStyles.customizationContainer}>
           {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, _]) => {
             const InputTag = getInputTag(property);
