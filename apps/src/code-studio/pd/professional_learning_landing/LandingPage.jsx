@@ -34,14 +34,20 @@ const getAvailableTabs = permissions => {
     },
   ];
 
+  if (permissions.includes('facilitator')) {
+    tabs.push({
+      value: 'myFacilitatorCenter',
+      text: i18n.plLandingTabFacilitatorCenter(),
+    });
+  }
+
   if (
-    permissions.includes('facilitator') ||
     permissions.includes('universal_instructor') ||
     permissions.includes('plc_reviewer')
   ) {
     tabs.push({
-      value: 'myFacilitatorCenter',
-      text: i18n.plLandingTabFacilitatorCenter(),
+      value: 'instructors',
+      text: i18n.plLandingTabInstructors(),
     });
   }
 
@@ -202,7 +208,7 @@ function LandingPage({
             </section>
           </>
         )}
-        {currentTab === 'myFacilitatorCenter' && (
+        {['myFacilitatorCenter', 'instructors'].includes(currentTab) && (
           <section>
             <Heading2>{i18n.plSectionsInstructorTitle()}</Heading2>
             <SetUpSections
