@@ -42,16 +42,17 @@ module MailJet
     return unless user&.id.present?
     return unless user.teacher?
 
-    create_contact(user.email, user.name, user.created_at.to_datetime)
+    contactdata = find_or_create_contactdata(user.email, user.name)
+    update_contact_field(contactdata, 'sign_up_date', user.created_at.to_datetime.rfc3339)
     send_template_email(
-      user.email,
-      user.name,
+      contactdata,
       EMAILS[:welcome]
     )
   end
 
-  def self.create_contact(email, name, sign_up_date)
-    return unless enabled?
+  def self.find_or_create_contactdata(email, name)
+    return nil unless enabled?
+    return nil unless valid_email?(email)
 
     Mailjet.configure do |config|
       config.api_key = API_KEY
@@ -60,30 +61,33 @@ module MailJet
     end
 
     contact = Mailjet::Contactdata.find(email)
+    return contact if contact&.id.present?
 
-    if contact&.id.nil?
-      Mailjet::Contact.create(
-        is_excluded_from_campaigns: true,
-        email: email,
-        name: name
-      )
-      contact = Mailjet::Contactdata.find(email)
-    end
+    Mailjet::Contact.create(
+      is_excluded_from_campaigns: true,
+      email: email,
+      name: name
+    )
+    Mailjet::Contactdata.find(email)
+  end
 
-    sign_up_date_rfc3339 = sign_up_date.rfc3339
-    contact.update_attributes(
+  def self.update_contact_field(contactdata, field_name, field_value)
+    return unless enabled?
+    return if contactdata.nil?
+
+    contactdata.update_attributes(
       data: [
         {
-          name: 'sign_up_date',
-          value: sign_up_date_rfc3339
+          name: field_name,
+          value: field_value
         }
       ]
     )
   end
 
-  def self.send_template_email(to_email, to_name, email_config)
+  def self.send_template_email(contactdata, email_config)
     return unless enabled?
-    return unless valid_email?(to_email)
+    return unless contactdata&.email.present?
 
     Mailjet.configure do |config|
       config.api_key = API_KEY
@@ -103,8 +107,8 @@ module MailJet
         },
         To: [
           {
-            Email: to_email,
-            Name: to_name
+            Email: contactdata.email,
+            Name: contactdata.name
           }
         ],
         TemplateID: template_id,
