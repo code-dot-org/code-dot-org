@@ -2006,6 +2006,54 @@
         emoji: "App Lab: Make a Whack-E-Moji Game"
         how_to: "App Lab How-to: Make a Choose-Your-Own-Adventure App"
 
+  music_lab:
+    introducing: "Introducing"
+    music_lab: "Music Lab"
+    introducing_music_lab: "Introducing Music Lab"
+    button:
+      try_music_lab: "Try Music Lab"
+      learn_more: "Learn more"
+      access_teachers_guide: "Access teacher's guide"
+      get_teachers_guide: "Get the teacher's guide"
+      amazon_career_tour: "See Career Tour"
+    in_partnerhip_with: "In partnership with"
+    amazon_future_engineer: "Amazon Future Engineer"
+    banner:
+      heading: "Create music with code"
+      desc: "Get creative with your favorite artist's music and code new songs and mixes!"
+    featuring_songs_by: "Featuring songs by:"
+    student_projects:
+      heading: "Listen to what students are creating"
+      subheading: "Getting started is easy!"
+      desc: "Remix one of these featured projects or create your own!"
+      list_create: "Create your own mix with code"
+      list_artist: "Use your favorite artist's music"
+      list_share: "Share your mix and remix others!"
+    amazon:
+      heading: "Check out the Amazon Music Career Tour!"
+      desc: "Discover the jobs that bring technology together with music!"
+    videos:
+      heading: "Watch your favorite artists try Music Lab"
+    quotes:
+      heading: "What teachers and students are saying about Music Lab"
+    teachers_guide:
+      heading: "Get the teacher's guide to Music Lab"
+      desc: "Grab your copy of the teacher's guide to Music Lab to learn how to get started, explore activity ideas, and get answers to frequently asked questions."
+    additional_resources:
+      heading: "Additional resources"
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      videos:
+        title: "Video Library"
+        desc: "Explore our large library of engaging and informative videos to learn about key computer science concepts on a broad range of topics."
+        button: "View video library"
+      hoc:
+        title: "Try an Hour of Code"
+        desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
+        button: "See Hour of Code activities"
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'
