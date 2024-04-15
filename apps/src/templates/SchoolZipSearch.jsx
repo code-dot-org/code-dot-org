@@ -25,20 +25,22 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
   const [dropdownSchools, setDropdownSchools] = useState([]);
 
   useEffect(() => {
-    const searchUrl = `/dashboardapi/v1/schoolsearch/${zip}/40`;
-    fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
-      .then(response => (response.ok ? response.json() : []))
-      .then(json => {
-        const schools = json.map(school => constructSchoolOption(school));
-        setDropdownSchools(schools);
-      })
-      .catch(error => {
-        console.log(
-          'There was a problem with the fetch operation:',
-          error.message
-        );
-      });
-  }, [zip]);
+    if (!disabled) {
+      const searchUrl = `/dashboardapi/v1/schoolsearch/${zip}/40`;
+      fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
+        .then(response => (response.ok ? response.json() : []))
+        .then(json => {
+          const schools = json.map(school => constructSchoolOption(school));
+          setDropdownSchools(schools);
+        })
+        .catch(error => {
+          console.log(
+            'There was a problem with the fetch operation:',
+            error.message
+          );
+        });
+    }
+  }, [zip, disabled]);
 
   const sendAnalyticsEvent = (eventName, data) => {
     analyticsReporter.sendEvent(eventName, data, PLATFORMS.BOTH);
