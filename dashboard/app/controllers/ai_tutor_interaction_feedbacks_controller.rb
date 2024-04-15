@@ -4,9 +4,8 @@ class AiTutorInteractionFeedbacksController < ApplicationController
   before_action :authorize_feedback_creation, only: [:create]
 
   def create
-    # Merge the user id with other feedback parameters to ensure the interaction is associated with the current user
-    feedback_data = feedback_params.merge(user_id: current_user.id)
-    feedback = @ai_tutor_interaction.feedbacks.new(feedback_data)
+    feedback = @ai_tutor_interaction.feedbacks.find_or_initialize_by(user_id: current_user.id)
+    feedback.assign_attributes(feedback_params)
 
     if feedback.save
       render json: {status: 'success', message: 'Feedback saved successfully'}, status: :created
@@ -16,7 +15,10 @@ class AiTutorInteractionFeedbacksController < ApplicationController
   end
 
   private def set_ai_tutor_interaction
-    @ai_tutor_interaction = AiTutorInteraction.find(params[:ai_tutor_interaction_id])
+    @ai_tutor_interaction = AiTutorInteraction.find_by(id: params[:ai_tutor_interaction_id])
+    unless @ai_tutor_interaction
+      render json: {status: 'error', message: 'AI Tutor interaction not found'}, status: :not_found
+    end
   end
 
   private def authorize_feedback_creation
@@ -27,6 +29,6 @@ class AiTutorInteractionFeedbacksController < ApplicationController
   end
 
   private def feedback_params
-    params.require(:feedback).permit(:thumbs_up, :thumbs_down)
+    params.permit(:thumbsUp, :thumbsDown).transform_keys {|key| key.to_s.underscore.to_sym}
   end
 end

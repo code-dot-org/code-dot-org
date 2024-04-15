@@ -27,6 +27,7 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
       setFeedbackState(feedbackData);
       await saveFeedback(messageId, feedbackData);
     } catch (error) {
+      console.log('Failed to save feedback: ', error);
       setFeedbackState({thumbsUp: false, thumbsDown: false});
     }
   };
@@ -44,26 +45,30 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
           >
             {message.chatMessageText}
           </div>
-          <Button
-            onClick={() => handleFeedbackSubmission(message.id, true)}
-            color={Button.ButtonColor.white}
-            icon="thumbs-up"
-            className={style.hamburgerMenuButton}
-            disabled={feedbackState.thumbsUp}
-          />
-          <Button
-            onClick={() => handleFeedbackSubmission(message.id, false)}
-            color={Button.ButtonColor.white}
-            icon="thumbs-down"
-            className={style.hamburgerMenuButton}
-            disabled={feedbackState.thumbsDown}
-          />
-          <Button
-            onClick={() => console.log('Ask AI Tutor')}
-            color={Button.ButtonColor.white}
-            icon="bars"
-            className={style.hamburgerMenuButton}
-          />
+          {message.id > 0 && (
+            <>
+              <Button
+                onClick={() => handleFeedbackSubmission(message.id, true)}
+                color={Button.ButtonColor.white}
+                icon="thumbs-up"
+                className={style.hamburgerMenuButton}
+                disabled={feedbackState.thumbsUp}
+              />
+              <Button
+                onClick={() => handleFeedbackSubmission(message.id, false)}
+                color={Button.ButtonColor.white}
+                icon="thumbs-down"
+                className={style.hamburgerMenuButton}
+                disabled={feedbackState.thumbsDown}
+              />
+              <Button
+                onClick={() => console.log('Ask AI Tutor')}
+                color={Button.ButtonColor.white}
+                icon="bars"
+                className={style.hamburgerMenuButton}
+              />
+            </>
+          )}
         </div>
       </div>
     </div>
