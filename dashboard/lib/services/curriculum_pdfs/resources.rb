@@ -49,6 +49,7 @@ module Services
         def generate_script_resources_pdf(script, directory = "/tmp/")
           ChatClient.log("Generating script resources PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
+          puts pdfs_dir
           pdfs = []
 
           # Gather together PDFs of all resources in all lessons, grouped by
@@ -100,7 +101,7 @@ module Services
             )
             raise exception
           end
-          FileUtils.remove_entry_secure(pdfs_dir)
+          # FileUtils.remove_entry_secure(pdfs_dir)
 
           FileUtils.mkdir_p(File.dirname(fallback_destination))
           FileUtils.cp(destination, fallback_destination)
