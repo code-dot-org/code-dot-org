@@ -138,6 +138,9 @@ export default function LtiSectionSyncDialog({
   };
 
   const handleUpdateSectionOwners = () => {
+    if (!syncResult.changed || Object.keys(syncResult.changed).length === 0) {
+      return handleClose();
+    }
     return $.ajax({
       url: '/lti/v1/sections/bulk_update_owners',
       type: 'PATCH',
