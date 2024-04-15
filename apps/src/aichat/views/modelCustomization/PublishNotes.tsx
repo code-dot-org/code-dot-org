@@ -1,60 +1,84 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
+import {
+  setModelCardProperty,
+  updateAiCustomization,
+} from '@cdo/apps/aichat/redux/aichatRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {
-  EMPTY_AI_CUSTOMIZATIONS,
-  MODEL_CARD_FIELDS_AND_LABELS,
-} from './constants';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+
+import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import {isVisible, isDisabled} from './utils';
-import {setModelCardProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import ExampleTopicsInputs from './ExampleTopicsInputs';
 import styles from '../model-customization-workspace.module.scss';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import {ModelCardInfo} from '../../types';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
-  const {visibility} = useAppSelector(
-    state =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
-  ).modelCardInfo;
+  const visibility = useAppSelector(
+    state => state.aichat.fieldVisibilities.modelCardInfo
+  );
   const {modelCardInfo} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
 
+  const onUpdate = useCallback(
+    () => dispatch(updateAiCustomization()),
+    [dispatch]
+  );
+
+  const getInputTag = (property: keyof ModelCardInfo) => {
+    return property === 'botName' ? 'input' : 'textarea';
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
-      <div>
-        {MODEL_CARD_FIELDS_AND_LABELS.map(([id, text]) => {
-          return (
-            isVisible(visibility) && (
-              <div className={styles.inputContainer} key={id}>
-                <label htmlFor={id}>
-                  <StrongText>{text}</StrongText>
+      {isVisible(visibility) && (
+        <div className={styles.customizationContainer}>
+          {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, _]) => {
+            const InputTag = getInputTag(property);
+
+            return (
+              <div className={styles.inputContainer} key={property}>
+                <label htmlFor={property}>
+                  <StrongText>{label}</StrongText>
                 </label>
-                <textarea
-                  id={id}
-                  disabled={isDisabled(visibility)}
-                  value={modelCardInfo[id]}
-                  onChange={event =>
-                    dispatch(
-                      setModelCardProperty({
-                        property: id,
-                        value: event.target.value,
-                      })
-                    )
-                  }
-                />
+                {property === 'exampleTopics' && (
+                  <ExampleTopicsInputs
+                    topics={modelCardInfo.exampleTopics}
+                    readOnly={isDisabled(visibility)}
+                  />
+                )}
+                {property !== 'exampleTopics' && (
+                  <InputTag
+                    id={property}
+                    disabled={isDisabled(visibility)}
+                    value={modelCardInfo[property]}
+                    onChange={event =>
+                      dispatch(
+                        setModelCardProperty({
+                          property: property,
+                          value: event.target.value,
+                        })
+                      )
+                    }
+                  />
+                )}
               </div>
-            )
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={isDisabled(visibility)}>
-          Publish
-        </button>
+        <Button
+          text="Publish"
+          iconLeft={{iconName: 'upload'}}
+          disabled={isDisabled(visibility)}
+          onClick={onUpdate}
+          className={styles.updateButton}
+        />
       </div>
     </div>
   );

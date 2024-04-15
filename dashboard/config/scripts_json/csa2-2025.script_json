@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 06:24:50 UTC",
+    "serialized_at": "2024-04-02 18:21:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -377,10 +377,9 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "overview": "**Question of the Day**\n\nTeacher-facing overview.",
+        "overview": "**What methods can I use to write algorithms for parsing String objects?**\n\nIn this lesson, students are exposed to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. Students first investigate reversing a `String` object in order to determine if a sentence is a palindrome. Then, students practice using the `substring()` method and conditional expressions to determine if a `String` object meets a certain criteria. Finally, they practice creating algorithms to count how many `String` objects meet a certain criteria.\n",
         "preparation": "* **(Optional)** Print copies of the Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**Question of the Day**\n\nStudent-facing overview"
+        "student_overview": "**How can I implement algorithms for parsing String objects?**\n\nIn this lesson, you will be introduced to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. You will start by exploring how to reverse a `String` object to determine if a sentence is a palindrome. Next, you will practice using the `substring()` method along with conditional expressions to evaluate whether a `String` object meets a specific criteria. Finally, you will develop algorithms to count the occurrences of `String` objects that meet certain criteria.\n"
       },
       "seeding_key": {
         "lesson.key": "Substrings",
@@ -4871,6 +4870,8 @@
       "key": "b535d28b-119d-4b46-9c79-3a81dda42e2b",
       "position": 1,
       "properties": {
+        "description": "You all have used search engines like Google before. These search engines use a technology called “Natural Language Processing,” or NLP for short, to return relevant results. NLP helps the search engine determine, no matter how your words are spelled or combined, what helpful information should be surfaced.",
+        "name": "Search Engines",
         "remarks": true
       },
       "seeding_key": {
@@ -4882,7 +4883,7 @@
       "key": "22c1c981-3be4-47df-8637-82e802417b7f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we ask Siri questions, it performs a specific task or gives a response based on our question or statement. But how does it know what task to perform or how to respond?*\n\n**Discussion Goal:** Students suggest that it identifies keywords in the question or statement to determine what action to perform or how it should respond. For example, if it finds the word \"weather\", then it knows it needs to respond with weather information.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we use search engines like Google, they use Natural Language Processing to return relevant results. How do they know what we are looking for?  How might algorithms to identify key words or phrases in our searches work?*\n\n**Discussion Goal:** Students should recognize that search engines are able to parse the text of what has been searched for in order to extract keywords or phrases. Students should offer suggestions for how a keyword or phrase is found, such as looping through each word in the search query.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4912,7 +4913,7 @@
       "key": "e3dceaae-972c-449f-9d29-ba6c7fe5fb92",
       "position": 2,
       "properties": {
-        "description": "We previously learned about the `String` class and some of its methods we can use to find the location of specific characters in a `String` object or its length. Today, we'll learn about another useful method in the `String` class that allows us to retrieve a portion of a `String`.",
+        "description": "You’ve seen `String` objects in the past. Today, we will learn about the `substring()` method in the `String` class, and how that method can be used in a variety of standard `String` algorithms. ",
         "remarks": true
       },
       "seeding_key": {
@@ -4936,7 +4937,7 @@
       "key": "0663d22b-5794-44b5-979f-1d664efb35c7",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that there are two versions of the `substring()` method. They realize that the two-parameter version of the `substring()` method returns the characters between the specified index values and that the one-parameter version returns the characters starting at the specified index values to the end of the `String`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students should notice that the program iterates through the characters of a `String` using a `for` loop. This should lead to a discussion about what the `String` variable `forward` looks like at the end of the loop. "
       },
       "seeding_key": {
         "activity_section.key": "0663d22b-5794-44b5-979f-1d664efb35c7",
@@ -4947,10 +4948,9 @@
       "key": "c0918877-8cfe-4de3-9eb8-2a0f6081dea7",
       "position": 5,
       "properties": {
-        "description": "When we use the `substring()` method, we can get the characters between a starting and ending index in a `String` object or from a starting index to the end of the `String` object.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the difference between the way the substring() method is used in each line?*\n\n**Discussion Goal:** Students should recall that the substring() method can get the characters between a starting and ending index in a String object or from a starting index to the end of the String object.\n",
         "duration": "15",
-        "name": "The substring() Method",
-        "remarks": true
+        "name": "Reversing a String"
       },
       "seeding_key": {
         "activity_section.key": "c0918877-8cfe-4de3-9eb8-2a0f6081dea7",
@@ -4958,8 +4958,37 @@
       }
     },
     {
-      "key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3",
+      "key": "0248c84c-1083-4d4a-af4c-5d859ccd8e14",
       "position": 6,
+      "properties": {
+        "description": "When we use the `substring()` method, we can get the characters between a starting and ending index in a `String` object or from a starting index to the end of the `String` object.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0248c84c-1083-4d4a-af4c-5d859ccd8e14",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "70a18327-7015-4ced-ab4f-d4f089b9c8b4",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n- *What is the purpose of the `current` variable in this code?*\n- *What happens to the `forward` variable each time the loop executes?*\n- *What modifications would you need to make to print the `palindrome` variable backward?*\n\n\n**Discussion Goal:** Students should recognize that the current variable is “looking at” a single character each time the loop iterates. This should allow them to build the forward variable piece by piece and see that the word is being “constructed”. This should lead students to speculate about how one might build the string backwards. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In the next few Investigate and Modify levels, students will walk through, step by step, how to “construct” the palindrome backwards, so it is okay if they don’t land on the “correct” algorithm in this discussion. Instead, use this as an opportunity to celebrate critical thinking and problem solving skills, and encourage many different ideas. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "70a18327-7015-4ced-ab4f-d4f089b9c8b4",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Reversing a String"
@@ -4971,9 +5000,9 @@
     },
     {
       "key": "6b652d27-4858-4594-9cd9-fb6ff9d847e9",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the one parameter `substring()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the two parameter `substring()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `substring()` method to obtain a single element in a `String`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that `String` objects are immutable and that `String` methods do not change the `String` object."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "6b652d27-4858-4594-9cd9-fb6ff9d847e9",
@@ -4981,22 +5010,16 @@
       }
     },
     {
-      "key": "345f5975-d8f2-4082-a30d-f9361dee45ff",
-      "position": 8,
+      "key": "c87aded0-c376-4a71-8c33-d44ceadf1d96",
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level on Levels 6 and 7 to practice using the `substring()` method to retrieve characters between a starting and ending index and from a starting index to the end of a `String` object. On Level 8, students complete a choice level to use the `indexOf()` and `substring()` methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a choice level on Level 5 to practice using the `substring()` method to find if one or more `substrings` have a particular property. On Level 6, students complete a choice level using the substring() method and conditional expressions to determine the number of substrings that meet specific criteria. \n",
         "duration": "15",
-        "name": "Using the substring() Method",
-        "progression_name": "Practice: Standard String Algorithms",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Check for Understanding is an AP-style multiple choice question that can be used as a formative assessment to gauge understanding of using the `substring()` method.\n\nThe practice level can be used as a formative assessment to gauge understanding of using the `substring()` and `indexOf()` methods."
-          }
-        ]
+        "name": "Implementing String Algorithms",
+        "progression_name": "Practice: Implementing String Algorithms"
       },
       "seeding_key": {
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff",
+        "activity_section.key": "c87aded0-c376-4a71-8c33-d44ceadf1d96",
         "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
       }
     },
@@ -5004,9 +5027,8 @@
       "key": "723e55ad-64a7-4fc4-b161-28b94ab10212",
       "position": 1,
       "properties": {
-        "description": "Natural language processing often uses similar methods and techniques to identify the important parts of a phrase and decide how to respond. For our Natural Language Processing Project, we might use these methods to analyze text to determine what to do next or how we should respond to the user.",
-        "name": "Using String Methods",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can the standard algorithms we learned about today be applied to search engine results to improve functionality and provide more relevant results to users?*\n\n**Discussion Goal:** Students should begin brainstorming and suggesting ideas about applying the algorithms they learned in today’s lesson in order to improve the functionality of search engine results. ",
+        "name": "Implementing String Algorithms"
       },
       "seeding_key": {
         "activity_section.key": "723e55ad-64a7-4fc4-b161-28b94ab10212",
@@ -5017,13 +5039,7 @@
       "key": "0cef5b3f-3ee2-4d60-ad35-f0e2e3743b12",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might we use methods in the `String` class to analyze text and data in our upcoming project?*\n\n**Discussion Goal:** Students will likely have several different ideas for using these methods, such as using the `indexOf()` and `substring()` methods to break a sentence up into words or using the `indexOf()` method to check if a sentence or phrase contains specific characters and provide a response based on the result.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nHave students consider how smart assistants like Siri or Google Assistant might use similar methods and techniques. For example:\n* *When you ask Siri about the meaning of a word, how does it know how to respond? What about when you ask it to set a timer for a certain number of minutes?*"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might we use methods in the `String` class to analyze text and data in our upcoming project?*\n\n**Discussion Goal:** Students will likely have several different ideas for using these methods, such as using the `indexOf()` and `substring()` methods to break a sentence up into words or using the `indexOf()` method to check if a sentence or phrase contains specific characters and provide a response based on the result."
       },
       "seeding_key": {
         "activity_section.key": "0cef5b3f-3ee2-4d60-ad35-f0e2e3743b12",
@@ -5038,30 +5054,6 @@
       },
       "seeding_key": {
         "activity_section.key": "518fb77a-0ff2-47a0-b5f3-f5ac4e169c7d",
-        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
-      }
-    },
-    {
-      "key": "b72c95ea-01d6-4880-9fbb-ac1f7abe472b",
-      "position": 4,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "b72c95ea-01d6-4880-9fbb-ac1f7abe472b",
-        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
-      }
-    },
-    {
-      "key": "24831753-a936-492a-a6ad-44b0b83f6b61",
-      "position": 5,
-      "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding",
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61",
         "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
       }
     },
@@ -7410,15 +7402,12 @@
       ]
     },
     {
-      "chapter": 86,
-      "position": 5,
-      "activity_section_position": 1,
+      "chapter": 87,
+      "position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U6L2-L6_-modular"
-        ],
-        "progression": "Practice: Standard String Algorithms"
+        "progression": "Practice: Implementing String Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -7428,68 +7417,21 @@
         "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+        "activity_section.key": "c87aded0-c376-4a71-8c33-d44ceadf1d96"
       },
       "level_keys": [
         "CSA U6L2-L6_-modular"
       ]
     },
     {
-      "chapter": 87,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U6L2-L7_-modular"
-        ],
-        "progression": "Practice: Standard String Algorithms"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L7_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      },
-      "level_keys": [
-        "CSA U6L2-L7_-modular"
-      ]
-    },
-    {
       "chapter": 88,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U6L2-L9_-modular"
-        ],
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L9_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
-      },
-      "level_keys": [
-        "CSA U6L2-L9_-modular"
-      ]
-    },
-    {
-      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L1 _2025"
+        ],
         "progression": "Predict and Run: Nested Loops"
       },
       "bonus": false,
@@ -7507,11 +7449,14 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L2_2025"
+        ],
         "progression": "Investigate & Modify: Nested Iteration"
       },
       "bonus": false,
@@ -7529,11 +7474,14 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L3_2025"
+        ],
         "progression": "Investigate & Modify: Nested Iteration"
       },
       "bonus": false,
@@ -7551,7 +7499,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -7576,17 +7524,20 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L5_2025"
+        ],
         "progression": "Practice: Nested Iteration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2 Nested Iteration-L6_2025"
+          "CSA U2 Nested Iteration-L5_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
@@ -7594,11 +7545,11 @@
         "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
       },
       "level_keys": [
-        "CSA U2 Nested Iteration-L6_2025"
+        "CSA U2 Nested Iteration-L5_2025"
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7623,7 +7574,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7647,7 +7598,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7672,7 +7623,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8727,31 +8678,7 @@
         "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L7_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L7_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L9_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L9_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
+        "activity_section.key": "c87aded0-c376-4a71-8c33-d44ceadf1d96"
       }
     },
     {
@@ -8804,9 +8731,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2 Nested Iteration-L6_2025",
+        "level.key": "CSA U2 Nested Iteration-L5_2025",
         "script_level.level_keys": [
-          "CSA U2 Nested Iteration-L6_2025"
+          "CSA U2 Nested Iteration-L5_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
@@ -8864,6 +8791,30 @@
     }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] CSA Implementing String Algorithms Extra Practice",
+      "url": "https://docs.google.com/document/d/10UB1f08trGZmaZ4jE9gMsUvfV8960mxKcaG_03QZ-ao/edit?usp=sharing",
+      "key": "_exemplar_csa_implementing_string_algorithms_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_csa_implementing_string_algorithms_extra_practice"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Guided Notes: Implementing String Algorithms",
+      "url": "https://docs.google.com/document/d/1bSS-wlPQH-KxpIVm1lrfpP9o6VqDQvDJ2W2xZGS5RvM/edit?usp=sharing",
+      "key": "_exemplar_guided_notes_implementing_string_algorithms",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_guided_notes_implementing_string_algorithms"
+      }
+    },
     {
       "name": "[EXEMPLAR] Store Management Project Planning Guide",
       "url": "https://docs.google.com/document/d/1_QJOqx8_GlvSo30yUv8AeJOU3v8SJhUAOUv5_zPcSrQ/edit?usp=sharing",
@@ -9006,18 +8957,6 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_u2l9_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] U6L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1xVs_eiJcMO5qV60HmZ2_36wrFJ8C7ZpOMxsJDszkOEo/edit?usp=sharing",
-      "key": "_exemplar_u6l2_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u6l2_guided_notes"
       }
     },
     {
@@ -9186,18 +9125,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_u2l9_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U6L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1IFS1PvC5jeLrIASoDm2--K6lxiHwrCrKk5SzwmeKrY8/edit?usp=share_link",
-      "key": "_key_u6l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u6l2_extra_practice"
       }
     },
     {
@@ -9394,6 +9321,18 @@
       }
     },
     {
+      "name": "CSA Implementing String Algorithms Extra Practice",
+      "url": "https://docs.google.com/document/d/18whzRMSzGaTc_y_zAwJGtaVW9FNI9zL5NA-yKa0C03k/edit?usp=sharing",
+      "key": "csa_implementing_string_algorithms_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csa_implementing_string_algorithms_extra_practice"
+      }
+    },
+    {
       "name": "CSA Unit 2 Slides",
       "url": "https://docs.google.com/presentation/d/1nhCPN0RoHtQMdQ0jgJndUrMPejom-2w5vhGbVFTf3i8/edit?usp=sharing",
       "key": "csa_unit_2_slides",
@@ -9439,6 +9378,30 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "Guided Notes: Implementing String Algorithms",
+      "url": "https://docs.google.com/document/d/1SA4P-qcqKoZAV2nnSFITKF18Y3PL9M-WnTcUBFf2IxM/edit?usp=sharing",
+      "key": "guided_notes_implementing_string_algorithms",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "guided_notes_implementing_string_algorithms"
+      }
+    },
+    {
+      "name": "Implementing String Algorithms",
+      "url": "https://docs.google.com/presentation/d/1_prRAs3i5cr5t0AxPGRFJP9Ps6eZbeuT6PetgfqSmx4/edit?usp=sharing",
+      "key": "implementing_string_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "implementing_string_algorithms"
       }
     },
     {
@@ -9621,18 +9584,6 @@
       },
       "seeding_key": {
         "resource.key": "store_management_project_planning_guide_1"
-      }
-    },
-    {
-      "name": "Substrings",
-      "url": "https://docs.google.com/presentation/d/1IPi8lcAecPmMUhj4Y8BjySTZl9FFah7wv-jDb5rx7MM/edit?usp=sharing",
-      "key": "substrings",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "substrings"
       }
     },
     {
@@ -9929,32 +9880,6 @@
       },
       "seeding_key": {
         "resource.key": "u2l9_guided_notes"
-      }
-    },
-    {
-      "name": "U6L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1S8npMPq0suee4tC4pFBKBplmDv3j_yhL5qalzTIEu4U/edit?usp=share_link",
-      "key": "u6l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l2_extra_practice"
-      }
-    },
-    {
-      "name": "U6L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1PWIxX6EeYsAPyd4mIKYxJWDvct5xFdJy7vCnJ0eTWpg/edit?usp=sharing",
-      "key": "u6l2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l2_guided_notes"
       }
     },
     {
@@ -10456,13 +10381,19 @@
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "resource.key": "_exemplar_u6l2_guided_notes"
+        "resource.key": "_exemplar_csa_implementing_string_algorithms_extra_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "resource.key": "_key_u6l2_extra_practice"
+        "resource.key": "_exemplar_guided_notes_implementing_string_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "resource.key": "csa_implementing_string_algorithms_extra_practice"
       }
     },
     {
@@ -10474,19 +10405,13 @@
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "resource.key": "substrings"
+        "resource.key": "guided_notes_implementing_string_algorithms"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "resource.key": "u6l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Substrings",
-        "resource.key": "u6l2_guided_notes"
+        "resource.key": "implementing_string_algorithms"
       }
     },
     {
@@ -11544,7 +11469,7 @@
     {
       "key": "ccb219a4-4d3f-433d-a286-59c742172009",
       "properties": {
-        "description": "Use the `indexOf()` and `substring()` methods in the `String` class to find and replace specific characters"
+        "description": "use `String` methods in order to check for a certain criteria in a `String` object "
       },
       "seeding_key": {
         "lesson.key": "Substrings",
@@ -11559,6 +11484,16 @@
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
         "objective.key": "dd0584e0-07c6-43c7-a9d9-565737f1a37a"
+      }
+    },
+    {
+      "key": "de5e939e-e00c-4a3b-880a-ff48ef929065",
+      "properties": {
+        "description": "process and return a reversed version of a `String` object"
+      },
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "objective.key": "de5e939e-e00c-4a3b-880a-ff48ef929065"
       }
     },
     {
@@ -11584,7 +11519,7 @@
     {
       "key": "ed95d1a4-cc01-4678-9d6a-ed682f6e3d7d",
       "properties": {
-        "description": "Use the `substring()` method in the `String` class to retrieve a substring of a `String` object"
+        "description": "create algorithms to count how many `String` objects meet a certain criteria"
       },
       "seeding_key": {
         "lesson.key": "Substrings",

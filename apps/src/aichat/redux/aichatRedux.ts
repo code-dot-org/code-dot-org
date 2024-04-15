@@ -1,21 +1,60 @@
 import moment from 'moment';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
-import {EMPTY_AI_CUSTOMIZATIONS_STUDENT} from '../views/modelCustomization/constants';
+import {
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+  AI_CUSTOMIZATIONS_LABELS,
+} from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
-import {getChatCompletionMessage} from '../chatApi';
+import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   ChatCompletionMessage,
-  AichatLevelProperties,
   Role,
-  Status,
+  AichatInteractionStatus as Status,
   AiCustomizations,
   ModelCardInfo,
+  Visibility,
+  LevelAichatSettings,
+  ChatContext,
 } from '../types';
+import {RootState} from '@cdo/apps/types/redux';
+
+const haveDifferentValues = (
+  value1: AiCustomizations[keyof AiCustomizations],
+  value2: AiCustomizations[keyof AiCustomizations]
+): boolean => {
+  if (typeof value1 === 'object' && typeof value2 === 'object') {
+    return JSON.stringify(value1) !== JSON.stringify(value2);
+  }
+
+  return value1 !== value2;
+};
+
+const findChangedProperties = (
+  previous: AiCustomizations | undefined,
+  next: AiCustomizations
+) => {
+  if (!previous) {
+    return Object.keys(next);
+  }
+
+  const changedProperties: string[] = [];
+  Object.keys(next).forEach(key => {
+    const typedKey = key as keyof AiCustomizations;
+    if (haveDifferentValues(previous[typedKey], next[typedKey])) {
+      changedProperties.push(key);
+    }
+  });
+
+  return changedProperties;
+};
 
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
+const getCurrentTime = () => moment(Date.now()).format('LT');
+
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
   // Messages will be logged and stored.
@@ -27,6 +66,8 @@ export interface AichatState {
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
+  savedAiCustomizations: AiCustomizations;
+  fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
 }
 
 const initialState: AichatState = {
@@ -34,71 +75,120 @@ const initialState: AichatState = {
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
-  currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS_STUDENT,
+  currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  fieldVisibilities: DEFAULT_VISIBILITIES,
 };
 
 // THUNKS
 
-// This thunk's callback function submits a user chat message to the chat completion endpoint,
-// waits for a chat completion response, and updates the user message state.
-export const submitChatMessage = createAsyncThunk(
-  'aichat/submitChatMessage',
-  async (message: string, thunkAPI) => {
-    const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
-    const systemPrompt = (state.lab.levelProperties as AichatLevelProperties)
-      ?.systemPrompt;
-    // TODO: move a check for undefined systemPrompt to AIchatView and throw an error dialog
-    // there if systemPrompt is undefined.
-    if (systemPrompt === undefined) {
-      throw new Error('systemPrompt is undefined');
-    }
+// This thunk saves a student's AI customizations using the Project Manager (ie, to S3 typically),
+// then does a comparison between the previous and current saved customizations in order to
+// output a message to the chat window with the list of customizations that were updated.
+export const updateAiCustomization = createAsyncThunk(
+  'aichat/updateAiCustomization',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState() as RootState;
+    const {currentAiCustomizations, savedAiCustomizations} = state.aichat;
+
+    // Remove any empty example topics on save
+    const trimmedExampleTopics =
+      currentAiCustomizations.modelCardInfo.exampleTopics.filter(
+        topic => topic.length
+      );
+    thunkAPI.dispatch(
+      setModelCardProperty({
+        property: 'exampleTopics',
+        value: trimmedExampleTopics,
+      })
+    );
+
+    const trimmedCurrentAiCustomizations = {
+      ...currentAiCustomizations,
+      modelCardInfo: {
+        ...currentAiCustomizations.modelCardInfo,
+        exampleTopics: trimmedExampleTopics,
+      },
+    };
+
+    await Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+
+    thunkAPI.dispatch(setSavedAiCustomizations(trimmedCurrentAiCustomizations));
+
+    const changedProperties = findChangedProperties(
+      savedAiCustomizations,
+      trimmedCurrentAiCustomizations
+    );
+    changedProperties.forEach(property => {
+      thunkAPI.dispatch(
+        addChatMessage({
+          id: 0,
+          role: Role.MODEL_UPDATE,
+          chatMessageText:
+            AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
+          status: Status.OK,
+          timestamp: getCurrentTime(),
+        })
+      );
+    });
+  }
+);
+
+// This thunk's callback function submits a user's chat content and AI customizations to
+// the chat completion endpoint, then waits for a chat completion response, and updates
+// the user messages.
+export const submitChatContents = createAsyncThunk(
+  'aichat/submitChatContents',
+  async (newUserMessageText: string, thunkAPI) => {
+    const state = thunkAPI.getState() as RootState;
+    const aiCustomizations = state.aichat.savedAiCustomizations;
     const storedMessages = state.aichat.chatMessages;
+    const chatContext: ChatContext = {
+      userId: state.currentUser.userId,
+      currentLevelId: state.progress.currentLevelId,
+      scriptId: state.progress.scriptId,
+      channelId: state.lab.channel?.id,
+    };
     const newMessageId =
       storedMessages.length === 0
         ? 1
         : storedMessages[storedMessages.length - 1].id + 1;
-    const appropriateChatMessages = storedMessages.filter(
-      msg => msg.status === Status.OK
-    );
 
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
       id: newMessageId,
       role: Role.USER,
-      status: Status.UNKNOWN,
-      chatMessageText: message,
+      status: Status.OK,
+      chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
-    // Send user message to backend and retrieve assistant response.
-    const chatApiResponse = await getChatCompletionMessage(
-      systemPrompt,
-      newMessageId,
-      message,
-      appropriateChatMessages
+    // Post user content and messages to backend and retrieve assistant response.
+    const chatApiResponse = await postAichatCompletionMessage(
+      newUserMessageText,
+      storedMessages,
+      aiCustomizations,
+      chatContext
     );
-
-    // Find message in chatMessages and update status.
-    thunkAPI.dispatch(
-      updateChatMessageStatus({
-        id: chatApiResponse.id,
-        status: chatApiResponse.status,
-      })
-    );
-
-    // Add assistant chat messages to chatMessages.
-    if (chatApiResponse.assistantResponse) {
+    console.log('chatApiResponse', chatApiResponse);
+    if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: chatApiResponse.id + 1,
+        id: newMessageId + 1,
         role: Role.ASSISTANT,
         status: Status.OK,
-        chatMessageText: chatApiResponse.assistantResponse,
+        chatMessageText: chatApiResponse.content,
         // The accuracy of this timestamp is debatable since it's not when our backend
         // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+    } else {
+      // TODO: Update most recent user message's status if PII or profanity violation.
+      // latest message's id is stored at `newMessageId`.
+      console.log('Did not receive assistant response.');
     }
   }
 );
@@ -108,7 +198,21 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessages.push(action.payload);
+      const newMessageId =
+        state.chatMessages[state.chatMessages.length - 1].id + 1;
+      const newMessage = {
+        ...action.payload,
+        id: newMessageId,
+      };
+      state.chatMessages.push(newMessage);
+    },
+    removeChatMessage: (state, action: PayloadAction<number>) => {
+      const updatedMessages = state.chatMessages.filter(
+        message => message.id !== action.payload
+      );
+      if (updatedMessages.length !== state.chatMessages.length) {
+        state.chatMessages = updatedMessages;
+      }
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
@@ -129,8 +233,46 @@ const aichatSlice = createSlice({
         chatMessage.status = status;
       }
     },
-    setAiCustomizations: (state, action: PayloadAction<AiCustomizations>) => {
-      state.currentAiCustomizations = action.payload;
+    setStartingAiCustomizations: (
+      state,
+      action: PayloadAction<{
+        levelAichatSettings?: LevelAichatSettings;
+        studentAiCustomizations: AiCustomizations;
+      }>
+    ) => {
+      const {levelAichatSettings, studentAiCustomizations} = action.payload;
+
+      let reconciledAiCustomizations: AiCustomizations = {
+        ...(levelAichatSettings?.initialCustomizations ||
+          EMPTY_AI_CUSTOMIZATIONS),
+      };
+
+      for (const customizationUntyped in reconciledAiCustomizations) {
+        const customization = customizationUntyped as keyof AiCustomizations;
+
+        if (
+          (levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES)[
+            customization
+          ] === Visibility.EDITABLE &&
+          studentAiCustomizations[customization]
+        ) {
+          reconciledAiCustomizations = {
+            ...reconciledAiCustomizations,
+            [customization]: studentAiCustomizations[customization],
+          };
+        }
+      }
+
+      state.savedAiCustomizations = reconciledAiCustomizations;
+      state.currentAiCustomizations = reconciledAiCustomizations;
+      state.fieldVisibilities =
+        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+    },
+    setSavedAiCustomizations: (
+      state,
+      action: PayloadAction<AiCustomizations>
+    ) => {
+      state.savedAiCustomizations = action.payload;
     },
     setAiCustomizationProperty: (
       state,
@@ -163,15 +305,15 @@ const aichatSlice = createSlice({
     },
   },
   extraReducers: builder => {
-    builder.addCase(submitChatMessage.fulfilled, state => {
+    builder.addCase(submitChatContents.fulfilled, state => {
       state.isWaitingForChatResponse = false;
     });
-    builder.addCase(submitChatMessage.rejected, (state, action) => {
+    builder.addCase(submitChatContents.rejected, (state, action) => {
       state.isWaitingForChatResponse = false;
       state.chatMessageError = true;
       console.error(action.error);
     });
-    builder.addCase(submitChatMessage.pending, state => {
+    builder.addCase(submitChatContents.pending, state => {
       state.isWaitingForChatResponse = true;
     });
   },
@@ -180,11 +322,13 @@ const aichatSlice = createSlice({
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
+  removeChatMessage,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
-  setAiCustomizations,
+  setStartingAiCustomizations,
+  setSavedAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
 } = aichatSlice.actions;

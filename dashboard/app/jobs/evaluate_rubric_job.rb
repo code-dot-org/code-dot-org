@@ -12,7 +12,7 @@ class EvaluateRubricJob < ApplicationJob
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-15-ai-rubrics-json-evidence/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-25-confidence-exact/'.freeze
 
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
@@ -30,16 +30,11 @@ class EvaluateRubricJob < ApplicationJob
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
     },
-    # TODO: re-enable these once rubrics have been added via levelbuilder
-    'interactive-games-animations-2023' => {
-      # 'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
-      # 'CSD web project animated review_2023' => 'csd3-2023-L14',
-      'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
-      # 'CSD games sidescroll review_2023' => 'csd3-2023-L21',
-      # 'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
-      # 'CSD games project review_2023' => 'csd3-2023-L28',
-    }
   }
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
 
   # This is raised if there is any raised error due to a rate limit, e.g. a 429
   # received from the aiproxy service.

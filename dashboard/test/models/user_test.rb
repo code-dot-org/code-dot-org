@@ -750,9 +750,46 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, user.lti_user_identities.count
   end
 
+  test "LTI users should not be created when something goes wrong during LtiUserIdentity creation" do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :student
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+
+    expected_error_message = 'expected_lti_user_identity_creation_error'
+    Services::Lti.expects(:create_lti_user_identity).with(user).raises(expected_error_message)
+
+    assert_no_difference 'User.count' do
+      actual_error = assert_raises {user.save!}
+      assert_equal expected_error_message, actual_error.message
+    end
+  end
+
   test "non LTI users should not have a LtiUserIdentity when created" do
     user = create :user
     assert_empty user.lti_user_identities
+  end
+
+  test 'LTI teacher should be verified after creation' do
+    lti_integration = create(:lti_integration)
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+
+    lti_teacher = build(:teacher)
+    lti_teacher.authentication_options << build(:lti_authentication_option, user: lti_teacher, authentication_id: auth_id)
+    lti_teacher.save!
+
+    assert lti_teacher.verified_teacher?
+  end
+
+  test 'LTI student should not be verified after creation' do
+    lti_integration = create(:lti_integration)
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+
+    lti_student = build(:student)
+    lti_student.authentication_options << build(:lti_authentication_option, user: lti_student, authentication_id: auth_id)
+    lti_student.save!
+
+    refute lti_student.verified_teacher?
   end
 
   # FND-1130: This test will no longer be required
@@ -3904,7 +3941,8 @@ class UserTest < ActiveSupport::TestCase
         location: "/v2/users/#{@student.id}",
         age: @student.age,
         sharing_disabled: false,
-        has_ever_signed_in: @student.has_ever_signed_in?
+        has_ever_signed_in: @student.has_ever_signed_in?,
+        ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
       },
       @student.summarize
     )

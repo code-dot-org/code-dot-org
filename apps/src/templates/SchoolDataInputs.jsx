@@ -9,6 +9,10 @@ import {
 import style from './school-association.module.scss';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
+import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
+import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default function SchoolDataInputs({
   includeHeaders = true,
@@ -23,7 +27,6 @@ export default function SchoolDataInputs({
   const [isOutsideUS, setIsOutsideUS] = useState(false);
   const [zip, setZip] = useState('');
   const [country, setCountry] = useState('');
-  const [schoolName, setSchoolName] = useState('');
   const [zipSearchReady, setZipSearchReady] = useState(false);
 
   let COUNTRY_ITEMS = [{value: 'selectCountry', text: i18n.selectCountry()}];
@@ -34,15 +37,25 @@ export default function SchoolDataInputs({
   useEffect(() => {
     if (zip.length === 5) {
       setZipSearchReady(true);
+      analyticsReporter.sendEvent(
+        EVENTS.ZIP_CODE_ENTERED,
+        {zip: zip},
+        PLATFORMS.BOTH
+      );
     } else {
       // Removes the school dropdown if you delete part of the zip
       setZipSearchReady(false);
     }
-  }, [zip.length]);
+  }, [zip]);
 
   const onCountryChange = e => {
     const country = e.target.value;
     setCountry(country);
+    analyticsReporter.sendEvent(
+      EVENTS.COUNTRY_SELECTED,
+      {country: country},
+      PLATFORMS.BOTH
+    );
     // We don't want to display any fields to start that won't eventually be
     // necessary, so updating both of these any time country changes
     if (country === 'US') {
@@ -69,6 +82,7 @@ export default function SchoolDataInputs({
           {i18n.whatCountry()}
         </BodyTwoText>
         <SimpleDropdown
+          id="uitest-country-dropdown"
           className={style.dropdown}
           name={fieldNames.country}
           items={COUNTRY_ITEMS}
@@ -85,6 +99,7 @@ export default function SchoolDataInputs({
               {i18n.enterYourSchoolZip()}
             </BodyTwoText>
             <input
+              id="uitest-school-zip"
               type="text"
               name={fieldNames.schoolZip}
               onChange={e => {
@@ -98,33 +113,20 @@ export default function SchoolDataInputs({
           </label>
         )}
         {isOutsideUS && (
-          <label>
-            <BodyTwoText
-              className={style.padding}
-              visualAppearance={'heading-xs'}
-            >
-              {i18n.schoolOrganizationQuestion()}
-            </BodyTwoText>
-            <input
-              type="text"
-              name={fieldNames.schoolName}
-              onChange={e => {
-                setSchoolName(e.target.value);
-              }}
-              value={schoolName}
-            />
-          </label>
+          <SchoolNameInput
+            fieldNames={{
+              schoolName: fieldNames.schoolName,
+            }}
+          />
         )}
         {askForZip && zipSearchReady && (
-          <div>
-            <BodyTwoText
-              className={style.padding}
-              visualAppearance={'heading-xs'}
-            >
-              {i18n.selectYourSchool()}
-            </BodyTwoText>
-            {/*<SchoolZipSearch fieldName={fieldNames.ncesSchoolId} /> Write new component to search with zip*/}
-          </div>
+          <SchoolZipSearch
+            fieldNames={{
+              ncesSchoolId: fieldNames.ncesSchoolId,
+              schoolName: fieldNames.schoolName,
+            }}
+            zip={zip}
+          />
         )}
       </div>
     </div>

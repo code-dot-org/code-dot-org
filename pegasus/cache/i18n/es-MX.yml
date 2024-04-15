@@ -1181,7 +1181,7 @@ es-MX:
   game_lab_documentation: Documentación del Laboratorio de juegos
   game_lab_tutorials: Tutoriales del Laboratorio de juegos
   gamelab_name: Laboratorio de juegos
-  gender: Sexo
+  gender: Género
   get_a_certificate_message: Te enviaremos un certificado e información sobre cómo
     hacer para que <a href='/learn/beyond'> aprenda más allá de una hora</a>
   get_a_certificate_message_after: Haz clic en el certificado para descargarlo o imprimirlo.
@@ -2690,6 +2690,7 @@ es-MX:
   user_header_applab: 'Laboratorio de aplicaciones '
   user_header_artist: 'Artista '
   user_header_create: 'Crear '
+  user_header_create_account: Crear cuenta
   user_header_dance: Fiesta de baile
   user_header_flappy: Flappy
   user_header_gamelab: Laboratorio de juegos

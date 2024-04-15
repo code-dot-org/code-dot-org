@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2023-07-25 20:19:37 UTC",
+    "serialized_at": "2024-04-08 22:48:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1900,6 +1900,29 @@
       }
     },
     {
+      "name": "“The Forest for the Trees” by Rena Priest",
+      "url": "https://poets.org/lesson-plan/teach-poem-forest-trees-rena-priest",
+      "key": "_the_forest_for_the_trees_by_rena_priest",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_the_forest_for_the_trees_by_rena_priest"
+      }
+    },
+    {
+      "name": "“The Forest for the Trees” by Rena Priest",
+      "url": "https://poets.org/lesson-plan/teach-poem-forest-trees-rena-priest",
+      "key": "_the_forest_for_the_trees_by_rena_priest_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_the_forest_for_the_trees_by_rena_priest_1"
+      }
+    },
+    {
       "name": "Standards in Coding with Poetry ",
       "url": "https://studio.code.org/s/poetry-2023/standards",
       "key": "all_standards",
@@ -2219,6 +2242,12 @@
     {
       "seeding_key": {
         "lesson.key": "Poem Art",
+        "resource.key": "_the_forest_for_the_trees_by_rena_priest_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Poem Art",
         "resource.key": "coding_with_poetry_lesson_1"
       }
     },
@@ -2308,6 +2337,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_the_forest_for_the_trees_by_rena_priest",
+        "script.name": "poetry-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_standards",
@@ -2874,6 +2909,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

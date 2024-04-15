@@ -1,14 +1,17 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
-import {assignmentCourseVersionShape} from './shapes';
+
 import PopUpMenu, {STANDARD_PADDING} from '../../lib/ui/PopUpMenu';
+
+import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import AssignmentVersionMenuItem, {
   columnWidths,
 } from './AssignmentVersionMenuItem';
-import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
-import _ from 'lodash';
-import fontConstants from '@cdo/apps/fontConstants';
+import {assignmentCourseVersionShape} from './shapes';
 
 const menuItemWidth = _(columnWidths).values().reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;

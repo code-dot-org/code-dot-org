@@ -107,9 +107,7 @@ class ClientState
     session[:callouts_seen].shift(session[:callouts_seen].length - 20) if session[:callouts_seen].length > 20
   end
 
-  private
-
-  def progress_hash
+  private def progress_hash
     migrate_cookies
     progress = cookies[:progress]
     progress ? JSON.parse(progress) : {}
@@ -118,7 +116,7 @@ class ClientState
   end
 
   # Migrates session state to unencrypted cookies.
-  def migrate_cookies
+  private def migrate_cookies
     if session[:progress]
       cookies.permanent[:progress] = JSON.generate(session[:progress])
       session[:progress] = nil

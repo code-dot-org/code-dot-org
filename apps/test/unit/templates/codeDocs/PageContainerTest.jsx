@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import PageContainer from '@cdo/apps/templates/codeDocs/PageContainer';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('PageContainer', () => {
   it('renders NavigationBar', () => {

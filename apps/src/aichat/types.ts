@@ -1,24 +1,42 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {AiTutorInteractionSaveStatus} from '@cdo/apps/util/sharedConstants';
+import {PiiTypes as PII} from '@cdo/apps/util/sharedConstants';
+
+export {PII};
 
 export type ChatCompletionMessage = {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: Status;
+  status: AichatInteractionStatus;
   timestamp?: string;
 };
+
+export type ChatContext = {
+  userId: number;
+  currentLevelId: string | null;
+  scriptId: number | null;
+  channelId: string | undefined;
+};
+
+export enum AichatInteractionStatus {
+  ERROR = 'error',
+  PII_VIOLATION = 'pii_violation',
+  PROFANITY_VIOLATION = 'profanity_violation',
+  OK = 'ok',
+  UNKNOWN = 'unknown',
+}
 
 export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',
   SYSTEM = 'system',
+  MODEL_UPDATE = 'update',
 }
 
-export type Status =
-  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
-export const Status = AiTutorInteractionSaveStatus;
-export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
+export enum ViewMode {
+  EDIT = 'edit-mode',
+  PRESENTATION = 'presentation-mode',
+}
 
 export interface AichatLevelProperties extends LevelProperties {
   // --- DEPRECATED - used for old AI Chat
@@ -28,26 +46,28 @@ export interface AichatLevelProperties extends LevelProperties {
   // ---
 
   /**
-   * Initial AI customizations set by the level.
+   * Initial AI chat customizations set by the level.
    * For each field, levelbuilders may define the initial default value,
    * and visibility (hidden, readonly, or editable).
    * Visibility is not editable by the student; students can only change
    * the value if it is set to editable.
    */
-  initialAiCustomizations?: LevelAiCustomizations;
+  aichatSettings?: LevelAichatSettings;
 }
 
 /** AI customizations for student chat bots */
 export interface AiCustomizations {
-  botName: string;
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
   modelCardInfo: ModelCardInfo;
 }
 
+export type AichatParameters = Omit<AiCustomizations, 'modelCardInfo'>;
+
 /** Chat bot Model Card information */
 export interface ModelCardInfo {
+  botName: string;
   description: string;
   intendedUse: string;
   limitationsAndWarnings: string;
@@ -64,14 +84,11 @@ export enum Visibility {
 
 /**
  * Level-defined AI customizations for student chat bots set by levelbuilders on the level's properties.
- * Each field is the same as AiCustomizations, but with an additional visibility property.
+ * Levelbuilders can define initial default values for each field, as well as their visibilities.
  */
-export type LevelAiCustomizations = {
-  [key in keyof AiCustomizations]: {
-    value: AiCustomizations[key];
-    visibility: Visibility;
-  };
-} & {
+export interface LevelAichatSettings {
+  initialCustomizations: AiCustomizations;
+  visibilities: {[key in keyof AiCustomizations]: Visibility};
   /** If the presentation panel is hidden from the student. */
-  hidePresentationPanel?: boolean;
-};
+  hidePresentationPanel: boolean;
+}

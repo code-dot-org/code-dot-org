@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_18_185523) do
+ActiveRecord::Schema.define(version: 2024_04_12_134643) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_activity_sections_on_key", unique: true
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
+  end
+
+  create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "ai_tutor_interaction_id", null: false
+    t.integer "user_id", null: false
+    t.boolean "thumbs_up"
+    t.boolean "thumbs_down"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["ai_tutor_interaction_id", "user_id"], name: "index_ai_tutor_feedback_on_interaction_and_user", unique: true
+    t.index ["user_id"], name: "fk_rails_105c1f9428"
   end
 
   create_table "ai_tutor_interactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
@@ -865,6 +876,16 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
+  create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.boolean "satisfied", null: false
+    t.string "locale"
+    t.boolean "early_access"
+    t.datetime "created_at", null: false
+    t.index ["satisfied"], name: "index_lti_feedbacks_on_satisfied"
+    t.index ["user_id"], name: "index_lti_feedbacks_on_user_id", unique: true
+  end
+
   create_table "lti_integrations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "platform_id", limit: 36, null: false
@@ -918,6 +939,17 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
     t.string "metric", null: false
     t.string "submetric", null: false
     t.float "value", null: false
+  end
+
+  create_table "new_feature_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "form_key", null: false
+    t.boolean "satisfied", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["satisfied"], name: "index_new_feature_feedbacks_on_satisfied"
+    t.index ["user_id", "form_key"], name: "index_new_feature_feedbacks_on_user_id_and_form_key", unique: true
+    t.index ["user_id"], name: "index_new_feature_feedbacks_on_user_id"
   end
 
   create_table "objectives", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2363,6 +2395,8 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
     t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
 
+  add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
+  add_foreign_key "ai_tutor_interaction_feedbacks", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "hint_view_requests", "users"
@@ -2372,10 +2406,12 @@ ActiveRecord::Schema.define(version: 2024_03_18_185523) do
   add_foreign_key "lti_courses", "lti_deployments"
   add_foreign_key "lti_courses", "lti_integrations"
   add_foreign_key "lti_deployments", "lti_integrations"
+  add_foreign_key "lti_feedbacks", "users"
   add_foreign_key "lti_sections", "lti_courses"
   add_foreign_key "lti_sections", "sections"
   add_foreign_key "lti_user_identities", "lti_integrations"
   add_foreign_key "lti_user_identities", "users"
+  add_foreign_key "new_feature_feedbacks", "users"
   add_foreign_key "parental_permission_requests", "users"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"

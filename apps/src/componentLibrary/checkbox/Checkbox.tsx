@@ -1,9 +1,10 @@
-import React, {useRef, useEffect, ChangeEvent} from 'react';
 import classnames from 'classnames';
+import React, {useRef, useEffect, ChangeEvent} from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import Typography from '@cdo/apps/componentLibrary/typography';
+
 import moduleStyles from './checkbox.module.scss';
 
 export interface CheckboxProps {

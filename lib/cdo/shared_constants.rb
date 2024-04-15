@@ -652,6 +652,33 @@ module SharedConstants
     }
   ).freeze
 
+  VOICES = {
+    en_us: {
+      VOICE: 'sharon22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    es_es: {
+      VOICE: 'ines22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    es_mx: {
+      VOICE: 'rosa22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    it_it: {
+      VOICE: 'vittorio22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    pt_br: {
+      VOICE: 'marcia22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+  }.freeze
   CENSUS_CONSTANTS = OpenStruct.new(
     {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
   )
@@ -660,9 +687,11 @@ module SharedConstants
     {
       INTEGRATION_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org',
       INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
+      INSTALL_GUIDE_FOR_CANVAS_URL: 'https://support.code.org/hc/en-us/articles/23123273783437-Install-the-Code-org-Integration-for-Canvas',
       ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
       INTEGRATION_EARLY_ACCESS_URL: 'https://docs.google.com/forms/d/e/1FAIpQLScjfVR4CZs8Utf5vI4mz3e1q8vdH6RNIgTUWygZXN0oovBSQg/viewform',
       INTEGRATION_BUG_REPORT_URL: 'https://support.code.org/hc/en-us/requests/new?ticket_form_id=14998494738829&tf_23889708=lms_eaf',
+      ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
     }
   ).freeze
 
@@ -676,16 +705,12 @@ module SharedConstants
   AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
 
   # These reflect the 'status' of an AI Tutor Interaction
-  AI_TUTOR_INTERACTION_SAVE_STATUS = {
+  AI_TUTOR_INTERACTION_STATUS = {
     ERROR: 'error',
-    PERSONAL: 'personal',
-    PROFANITY: 'profanity',
-    INAPPROPRIATE: 'inappropriate',
+    PII_VIOLATION: 'pii_violation',
+    PROFANITY_VIOLATION: 'profanity_violation',
     OK: 'ok',
     UNKNOWN: 'unknown',
-    EMAIL: 'email',
-    ADDRESS: 'address',
-    PHONE: 'phone',
   }.freeze
 
   # These are the types of assistance AI Tutor can provide
@@ -694,4 +719,15 @@ module SharedConstants
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
   }.freeze
+
+  PII_TYPES = {
+    EMAIL: 'email',
+    PHONE: 'phone',
+    ADDRESS: 'address',
+  }.freeze
+
+  USER_TYPES = OpenStruct.new(
+    STUDENT: 'student',
+    TEACHER: 'teacher',
+  ).freeze
 end

@@ -64,6 +64,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedures_block_frame',
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
+      'procedure_def_no_gray_out',
     ],
     mutator: 'procedure_def_mutator',
   },
@@ -280,6 +281,13 @@ GoogleBlockly.Extensions.registerMixin(
   procedureCallerOnChangeMixin
 );
 
+// Labs like Maze and Artist turn undeletable blocks gray. This is not
+// done for special blocks like "when run" or procedure definitions.
+GoogleBlockly.Extensions.registerMixin('procedure_def_no_gray_out', {
+  shouldBeGrayedOut: function () {
+    return false;
+  },
+});
 /**
  * Constructs the blocks required by the flyout for the procedure category.
  * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.

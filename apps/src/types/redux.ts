@@ -14,6 +14,7 @@ import {PythonlabState} from '@cdo/apps/pythonlab/pythonlabRedux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {BlocklyState} from '../redux/blockly';
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
+import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 
 // The type for our global redux store. This is incomplete until we type every slice
 // of our redux store. When converting a slice to typescript, add it to this object
@@ -24,6 +25,7 @@ export interface RootState {
   aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
+  currentUser: CurrentUserState;
   header: HeaderReduxState;
   javalab: JavalabState;
   javalabConsole: JavalabConsoleState;

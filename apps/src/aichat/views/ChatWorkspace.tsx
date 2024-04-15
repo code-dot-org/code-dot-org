@@ -68,12 +68,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         ))}
         {showWaitingAnimation()}
       </div>
-      <div
-        id="chat-workspace-editor"
-        className={moduleStyles.userChatMessageEditor}
-      >
-        <UserChatMessageEditor />
-      </div>
+      <UserChatMessageEditor />
     </div>
   );
 };

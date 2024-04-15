@@ -1,11 +1,7 @@
-import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
+import React from 'react';
 import {Provider} from 'react-redux';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import {
-  setWindowLocation,
-  resetWindowLocation,
-} from '../../../../src/code-studio/utils';
+
 import responsive, {
   setResponsiveSize,
   ResponsiveSize,
@@ -17,6 +13,23 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  getSimilarRecommendations,
+  getStretchRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage} from '@cdo/apps/utils';
+
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '../../../../src/code-studio/utils';
+import {assert, expect} from '../../../util/reconfiguredChai';
+import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
+import {sections} from '../studioHomepages/fakeSectionUtils';
+
 import {
   allCurricula,
   allShownCurricula,
@@ -32,13 +45,6 @@ import {
   noGradesCurriculum,
   noPathCurriculum,
 } from './CurriculumCatalogTestHelper';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {sections} from '../studioHomepages/fakeSectionUtils';
-import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
-import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
-import {tryGetSessionStorage} from '@cdo/apps/utils';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {
@@ -72,6 +78,7 @@ describe('CurriculumCatalog', () => {
     restoreRedux();
     resetWindowLocation();
     sessionStorage.removeItem('similarRecommenderResults');
+    sessionStorage.removeItem('stretchRecommenderResults');
     window.history.replaceState = replaceStateOrig;
   });
 
@@ -657,7 +664,7 @@ describe('CurriculumCatalog', () => {
   });
 
   describe('with recommender test curricula', () => {
-    it('renders image and link of similar recommended curriculum', () => {
+    it('renders image and link of similar and stretch recommended curricula', () => {
       const props = {...defaultProps, curriculaData: FULL_TEST_COURSES};
       render(
         <Provider store={store}>
@@ -667,6 +674,9 @@ describe('CurriculumCatalog', () => {
       const quickViewButtons = screen.getAllByText('Quick View', {
         exact: false,
       });
+
+      // Track the number of times the Similar and Stretch recommenders output the same top result
+      let numOverlapTopResults = 0;
 
       for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
         const currCurriculum = FULL_TEST_COURSES[i];
@@ -678,6 +688,23 @@ describe('CurriculumCatalog', () => {
           null
         )[0];
 
+        // Get the Stretch Recommended Curriculum for the current test curriculum. If the top stretch curriculum result is the same
+        // as the similar curriculum, then get the second stretch curriculum to match the logic in CurriculumCatalog.jsx.
+        const recommendedStretchCurriculumResults = getStretchRecommendations(
+          FULL_TEST_COURSES,
+          currCurriculum.key,
+          null
+        );
+        let recommendedStretchCurriculum =
+          recommendedStretchCurriculumResults[0];
+        if (
+          recommendedSimilarCurriculum.key ===
+          recommendedStretchCurriculumResults[0].key
+        ) {
+          numOverlapTopResults++;
+          recommendedStretchCurriculum = recommendedStretchCurriculumResults[1];
+        }
+
         // Open expanded card of the current test curriculum
         fireEvent.click(quickViewButtons[i]);
         screen.getByText(currCurriculum.description);
@@ -685,18 +712,30 @@ describe('CurriculumCatalog', () => {
         // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
         // Image's alt text is the curriculum's display name.
         screen.getByAltText(recommendedSimilarCurriculum.display_name);
-
         assert(
           document
             .querySelector('#similarCurriculumButton')
             .innerHTML.includes(recommendedSimilarCurriculum.display_name)
         );
+
+        // Check that the recommended stretch curriculum's image and link are present on the current test curriculum's expanded card.
+        // Image's alt text is the curriculum's display name.
+        screen.getByAltText(recommendedStretchCurriculum.display_name);
+        assert(
+          document
+            .querySelector('#stretchCurriculumButton')
+            .innerHTML.includes(recommendedStretchCurriculum.display_name)
+        );
       }
+
+      // Ensure that there were instances of the Similar and Stretch recommenders outputting the same result, meaning the Stretch
+      // recommender had to suggest its next top result.
+      assert(numOverlapTopResults === 1);
     });
 
-    it('does not recommend similar curriculum the user has already taught', () => {
-      // fullTestCourse5 is the top-ranked similar curriculum for 2 other curricula
-      const curriculaTaughtBefore = [FULL_TEST_COURSES[4].course_offering_id];
+    it('does not recommend similar or stretch curricula the user has already taught', () => {
+      // fullTestCourse3 is the top-ranked similar or stretch curriculum for several curricula
+      const curriculaTaughtBefore = [FULL_TEST_COURSES[2].course_offering_id];
       const props = {
         ...defaultProps,
         curriculaData: FULL_TEST_COURSES,
@@ -715,31 +754,33 @@ describe('CurriculumCatalog', () => {
         const currCurriculum = FULL_TEST_COURSES[i];
 
         // Get the Similar Recommended Curriculum for the current test curriculum
-        const similarCurriculumRecommendations = getSimilarRecommendations(
+        const recommendedSimilarCurriculum = getSimilarRecommendations(
+          FULL_TEST_COURSES,
+          currCurriculum.key,
+          curriculaTaughtBefore
+        )[0];
+
+        // Get the Stretch Recommended Curriculum for the current test curriculum. If the top stretch curriculum result is the same as
+        // the Similar Recommended Curriculum, then get the second stretch curriculum to match the logic in CurriculumCatalog.jsx.
+        const stretchCurriculumRecommendations = getStretchRecommendations(
           FULL_TEST_COURSES,
           currCurriculum.key,
           curriculaTaughtBefore
         );
+        const recommendedStretchCurriculum =
+          recommendedSimilarCurriculum.key ===
+          stretchCurriculumRecommendations[0].key
+            ? stretchCurriculumRecommendations[1]
+            : stretchCurriculumRecommendations[0];
 
         // Open expanded card of the current test curriculum
         fireEvent.click(quickViewButtons[i]);
         screen.getByText(currCurriculum.description);
 
-        // Check that the top-recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
-        // If the top-recommended similar curriculum was previously taught by the user, then check that the image and link are of the
-        // next-most-recommended similar curriculum.
-        let recommendedSimilarCurriculum = similarCurriculumRecommendations[0];
-        if (
-          curriculaTaughtBefore.includes(
-            recommendedSimilarCurriculum.course_offering_id
-          )
-        ) {
-          recommendedSimilarCurriculum = similarCurriculumRecommendations[1];
-        }
-
         // Ensure none of the recommendations are ones the user has taught before
         assert(
-          curriculaTaughtBefore[0].key !== recommendedSimilarCurriculum.key
+          !curriculaTaughtBefore.includes(recommendedSimilarCurriculum.key) &&
+            !curriculaTaughtBefore.includes(recommendedStretchCurriculum.key)
         );
 
         // Image's alt text is the curriculum's display name.
@@ -748,6 +789,13 @@ describe('CurriculumCatalog', () => {
           document
             .querySelector('#similarCurriculumButton')
             .innerHTML.includes(recommendedSimilarCurriculum.display_name)
+        );
+
+        screen.getByAltText(recommendedStretchCurriculum.display_name);
+        assert(
+          document
+            .querySelector('#stretchCurriculumButton')
+            .innerHTML.includes(recommendedStretchCurriculum.display_name)
         );
       }
     });
@@ -781,6 +829,52 @@ describe('CurriculumCatalog', () => {
       );
       expect(storedRecommenderResults[firstTestCurriculum.key].key).to.equal(
         similarCurriculumRecommendations[0].key
+      );
+    });
+
+    it('sets sessionStorage for Stretch Curriculum Recommender result', () => {
+      const props = {...defaultProps, curriculaData: FULL_TEST_COURSES};
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+      const firstQuickViewButton = screen.getAllByText('Quick View', {
+        exact: false,
+      })[0];
+
+      // Get the top Stretch Recommended Curriculum for the first test curriculum.
+      // (As per the logic in CurriculumCatalog.jsx, if the top Stretch result is
+      // the same as the top Similar result, then it will get the 2nd Stretch
+      // result)
+      const firstTestCurriculum = FULL_TEST_COURSES[0];
+      const recommendedSimilarCurriculum = getSimilarRecommendations(
+        FULL_TEST_COURSES,
+        firstTestCurriculum.key,
+        null
+      )[0];
+      const stretchCurriculumRecommendations = getStretchRecommendations(
+        FULL_TEST_COURSES,
+        firstTestCurriculum.key,
+        null
+      );
+      const recommendedStretchCurriculum =
+        recommendedSimilarCurriculum.key ===
+        stretchCurriculumRecommendations[0].key
+          ? stretchCurriculumRecommendations[1]
+          : stretchCurriculumRecommendations[0];
+
+      // Open expanded card of the first test curriculum
+      fireEvent.click(firstQuickViewButton);
+      screen.getByText(firstTestCurriculum.description);
+
+      // Check that sessionStorage has result of Stretch Curriculum Recommender
+      const storedRecommenderResults = JSON.parse(
+        tryGetSessionStorage('stretchRecommenderResults', '{}')
+      );
+
+      expect(storedRecommenderResults[firstTestCurriculum.key].key).to.equal(
+        recommendedStretchCurriculum.key
       );
     });
   });

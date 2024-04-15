@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {
   useCallback,
   useMemo,
@@ -5,19 +6,18 @@ import React, {
   useEffect,
   KeyboardEvent,
 } from 'react';
-import classNames from 'classnames';
 
+import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
+import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {
   ComponentSizeXSToL,
   DropdownColor,
 } from '@cdo/apps/componentLibrary/common/types';
-import moduleStyles from './customDropdown.module.scss';
-
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
+
+import moduleStyles from './customDropdown.module.scss';
 
 export interface CustomDropdownProps {
   /** CustomDropdown name.
@@ -32,6 +32,8 @@ export interface CustomDropdownProps {
   /** CustomDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
+  /** CustomDropdown label style type*/
+  labelType?: 'thick' | 'thin';
   /** Does custom dropdown hase a selected value (Renders a checkmark icon in the dropdown button if true) */
   isSomeValueSelected?: boolean;
   /** Custom icon to show for the dropdown button*/
@@ -48,6 +50,7 @@ export interface CustomDropdownProps {
 const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   name,
   labelText,
+  labelType = 'thick',
   children,
   isSomeValueSelected = false,
   icon,
@@ -133,7 +136,14 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
             className={icon.className}
           />
         )}
-        <span className={moduleStyles.dropdownLabel}>{labelText}</span>
+        <span
+          className={classNames(
+            moduleStyles.dropdownLabel,
+            moduleStyles[`dropdownLabel-${labelType}`]
+          )}
+        >
+          {labelText}
+        </span>
         <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
       </button>
       {/** Dropdown menu content is rendered here as children props*/}

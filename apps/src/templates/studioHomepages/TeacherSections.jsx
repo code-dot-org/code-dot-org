@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import i18n from '@cdo/locale';
+
 import ContentContainer from '../ContentContainer';
+import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
 import OwnedSections from '../teacherDashboard/OwnedSections';
+import RosterDialog from '../teacherDashboard/RosterDialog';
 import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
   hiddenPlSectionIds,
   hiddenStudentSectionIds,
 } from '../teacherDashboard/teacherSectionsRedux';
-import SetUpSections from './SetUpSections';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import RosterDialog from '../teacherDashboard/RosterDialog';
-import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
+
 import CoteacherInviteNotification from './CoteacherInviteNotification';
+import SetUpSections from './SetUpSections';
 
 class TeacherSections extends Component {
   static propTypes = {

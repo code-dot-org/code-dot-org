@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 
-import {expect} from '../../../util/reconfiguredChai';
 import {renderExpandableImages} from '@cdo/apps/templates/utils/expandableImages';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('expandableImages', () => {
   describe('renderExpandableImages', () => {

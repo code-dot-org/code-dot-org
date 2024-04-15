@@ -29,6 +29,7 @@ export enum Themes {
 }
 
 export const DARK_THEME_SUFFIX = 'dark';
+export const CLOCKWISE_TURN_DIRECTION = 'turnRight';
 
 export enum BlockStyles {
   DEFAULT = 'default',
@@ -59,6 +60,7 @@ export const BlockColors = {
   // The colors below do not have a corresponding style and are incompatible with themes.
   COMMENT: [0, 0, 0.6],
   UNKNOWN: [0, 0, 0.8],
+  DISABLED: [0, 0, 0.5],
 };
 
 export const Renderers = {
@@ -86,6 +88,7 @@ export const DEFAULT_SOUND = 'sound://category_digital/ping.mp3';
 export const NO_OPTIONS_MESSAGE = 'uninitialized';
 export const EMPTY_OPTION = '???';
 export const WORKSPACE_PADDING = 16;
+export const FIELD_IMAGE_DEFAULT_SIZE = 40;
 
 export function stringIsXml(str: string) {
   try {
@@ -145,6 +148,109 @@ export const WORKSPACE_EVENTS = {
   BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
   RUN_BUTTON_CLICKED: 'runButtonClicked',
 };
+
+export const READ_ONLY_PROPERTIES = [
+  'ALIGN_CENTRE',
+  'ALIGN_LEFT',
+  'ALIGN_RIGHT',
+  'applab_locale',
+  'BasicCursor',
+  'Block',
+  'BlockFieldHelper',
+  'blockRendering',
+  'blockRendering.ConstantProvider',
+  'Blocks',
+  'BlockSvg',
+  'browserEvents',
+  'common',
+  'common_locale',
+  'ComponentManager',
+  'config',
+  'Connection',
+  'ConnectionType',
+  'ContextMenu',
+  'contractEditor',
+  'createBlockDefinitionsFromJsonArray',
+  'createSvgElement',
+  'Css',
+  'Cursor',
+  'disableVariableEditing',
+  'DropDownDiv',
+  'Events',
+  'Extensions',
+  'FieldAngle',
+  'FieldAngleInput',
+  'FieldColour',
+  'FieldColourDropdown',
+  'FieldIcon',
+  'FieldMultilineInput',
+  'FieldNumber',
+  'FieldParameter',
+  'FieldRectangularDropdown',
+  'fieldRegistry',
+  'FieldTextInput',
+  'fish_locale',
+  'Flyout',
+  'FunctionalBlockUtils',
+  'FunctionalTypeColors',
+  'FunctionEditor',
+  'gamelab_locale',
+  'Generator',
+  'geras',
+  'getRelativeXY',
+  'googlecode',
+  'hasCategories',
+  'html',
+  'Input',
+  'INPUT_VALUE',
+  'inputTypes',
+  'js',
+  'MenuItem',
+  'MetricsManager',
+  'modalBlockSpace',
+  'Msg',
+  'Names',
+  'netsim_locale',
+  'Procedures',
+  'registry',
+  'removeChangeListener',
+  'RTL',
+  'Scrollbar',
+  'serialization',
+  'SPRITE',
+  'svgResize',
+  'thrasos',
+  'Toolbox',
+  'Touch',
+  'Trashcan',
+  'tutorialExplorer_locale',
+  'useContractEditor',
+  'utils',
+  'VARIABLE_CATEGORY_NAME',
+  'VariableMap',
+  'VariableModel',
+  'Variables',
+  'weblab_locale',
+  'WidgetDiv',
+  'Workspace',
+  'WorkspaceSvg',
+  'Xml',
+  'zelos',
+];
+
+export const SETTABLE_PROPERTIES = [
+  'assetUrl',
+  'behaviorEditor',
+  'BROKEN_CONTROL_POINTS',
+  'BUMP_UNCONNECTED',
+  'customSimpleDialog',
+  'HSV_SATURATION',
+  'JavaScript',
+  'readOnly',
+  'showUnusedBlocks',
+  'typeHints',
+  'valueTypeTabShapeMap',
+];
 
 // A map of user locales supported by Code.org to locales provided by Google Blockly.
 // For more information, see: https://github.com/google/blockly/tree/master/msg/json

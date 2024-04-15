@@ -9,8 +9,10 @@ module I18n
     class CrowdinClient
       RequestError = Class.new(StandardError)
 
+      # TODO-P20-808: Find a better solution to avoid hitting Crowdin's rate limit than decreasing the concurrent request limit
+      MAX_CONCURRENT_REQUESTS = 10 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
+
       MAX_ITEMS_COUNT = Crowdin::Web::FetchAllExtensions::MAX_ITEMS_COUNT_PER_REQUEST.freeze
-      MAX_CONCURRENT_REQUESTS = 20 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
       REQUEST_RETRY_ATTEMPTS = 2 # Number of retries for a failed request
       REQUEST_RETRY_DELAY = 2 # Number of seconds to wait before retrying a failed request
       RETRIABLE_ERRORS = [
@@ -207,11 +209,9 @@ module I18n
         end
       end
 
-      private
-
       attr_reader :project, :client
 
-      def crowdin_source_name(source_path)
+      private def crowdin_source_name(source_path)
         File.basename(source_path).remove(File::SEPARATOR)
       end
 
@@ -220,7 +220,7 @@ module I18n
       #
       # @param crowdin_dir_path [String] the absolute Crowdin source directory path, e.g "/course_content/2017"
       # @return [Hash, nil] the Crowdin source directory data
-      def source_directory(crowdin_dir_path)
+      private def source_directory(crowdin_dir_path)
         return if crowdin_dir_path.empty? || crowdin_dir_path == File::SEPARATOR
 
         @source_directories ||= {}
@@ -242,7 +242,7 @@ module I18n
         end
       end
 
-      def stringify_errors(errors)
+      private def stringify_errors(errors)
         messages = []
 
         errors.each do |error|
@@ -259,7 +259,7 @@ module I18n
         messages.join("\n")
       end
 
-      def request(endpoint, *params)
+      private def request(endpoint, *params)
         response = client.public_send(endpoint, *params)
 
         if response.is_a?(String) && response.include?('Something went wrong')
@@ -290,7 +290,7 @@ module I18n
         end
       end
 
-      def download_file(url, dest)
+      private def download_file(url, dest)
         opened_uri = URI.parse(url).open
         FileUtils.mkdir_p File.dirname(dest)
         IO.copy_stream(opened_uri, dest)

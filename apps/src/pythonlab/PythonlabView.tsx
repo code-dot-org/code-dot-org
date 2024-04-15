@@ -1,14 +1,120 @@
 // Pythonlab view
-import React from 'react';
-import PythonEditor from './PythonEditor';
+import React, {useEffect, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
-import SidePanel from './SidePanel';
+import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
+import Editor from '../weblab2/CDOIDE/CenterPane/Editor';
+import {LanguageSupport} from '@codemirror/language';
+import {python} from '@codemirror/lang-python';
+import {CDOIDE} from '../weblab2/CDOIDE';
+import {MultiFileSource} from '../lab2/types';
+import Lab2Registry from '../lab2/Lab2Registry';
+import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
+import {setSource} from './pythonlabRedux';
+import PythonConsole from './PythonConsole';
+
+const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
+  py: python(),
+};
+
+const defaultProject: MultiFileSource = {
+  files: {
+    '0': {
+      id: '0',
+      name: 'main.py',
+      language: 'py',
+      contents: 'print("Hello world!")',
+      folderId: '1',
+      active: true,
+      open: true,
+    },
+  },
+  folders: {
+    '1': {
+      id: '1',
+      name: 'src',
+      parentId: '0',
+    },
+  },
+};
+
+const defaultConfig: ConfigType = {
+  //showSideBar: true,
+  // showLeftNav: false,
+  // showEditor: false,
+  showPreview: false,
+  activeLeftNav: 'Files',
+  EditorComponent: () => Editor(pythonlabLangMapping, ['py']),
+  leftNav: [
+    {
+      icon: 'fa-square-check',
+      component: 'Instructions',
+    },
+    {
+      icon: 'fa-file',
+      component: 'Files',
+    },
+    {
+      icon: 'fa-solid fa-magnifying-glass',
+      component: 'Search',
+    },
+  ],
+  sideBar: [
+    {
+      icon: 'fa-circle-question',
+      label: 'Help',
+      action: () => window.alert('Help is not currently implemented'),
+    },
+    {
+      icon: 'fa-folder',
+      label: 'Files',
+      action: () => window.alert('You are already on the file browser'),
+    },
+  ],
+  instructions: 'Welcome to Python Lab!',
+};
 
 const PythonlabView: React.FunctionComponent = () => {
+  const [currentProject, setCurrentProject] = useState<MultiFileSource>();
+  const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const initialSources = useAppSelector(state => state.lab.initialSources);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const dispatch = useAppDispatch();
+
+  // TODO: This is repeated in Weblab2View. Can we extract this out somewhere?
+  const setProject = (newProject: MultiFileSource) => {
+    setCurrentProject(newProject);
+    dispatch(setSource(newProject));
+    if (Lab2Registry.getInstance().getProjectManager()) {
+      const projectSources = {
+        source: newProject,
+      };
+      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
+    }
+  };
+
+  useEffect(() => {
+    // We reset the project when the channelId changes, as this means we are on a new level.
+    setCurrentProject(
+      (initialSources?.source as MultiFileSource) || defaultProject
+    );
+  }, [channelId, initialSources]);
+
   return (
     <div className={moduleStyles.pythonlab}>
-      <SidePanel />
-      <PythonEditor />
+      <div className={moduleStyles.editor}>
+        {currentProject && (
+          <CDOIDE
+            project={currentProject}
+            config={config}
+            setProject={setProject}
+            setConfig={setConfig}
+          />
+        )}
+      </div>
+      {/** TODO: Should the console be a part of CDOIDE? */}
+      <div className={moduleStyles.console}>
+        <PythonConsole />
+      </div>
     </div>
   );
 };

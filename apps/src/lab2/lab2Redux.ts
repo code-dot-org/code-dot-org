@@ -198,7 +198,7 @@ export const setUpWithoutLevel = createAsyncThunk(
         {
           initialSources: sources,
           channel,
-          levelProperties: {appName: payload.appName},
+          levelProperties: {id: 0, appName: payload.appName},
         },
         thunkAPI.signal.aborted,
         thunkAPI.dispatch
@@ -231,6 +231,9 @@ export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
   const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
   return hideShareAndRemix === undefined ? true : hideShareAndRemix;
 };
+
+export const isProjectTemplateLevel = (state: {lab: LabState}) =>
+  !!state.lab.levelProperties?.projectTemplateLevelName;
 
 const labSlice = createSlice({
   name: 'lab',

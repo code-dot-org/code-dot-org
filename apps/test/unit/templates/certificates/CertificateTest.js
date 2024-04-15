@@ -1,12 +1,14 @@
+import {mount} from 'enzyme';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import Certificate from '@cdo/apps/templates/certificates/Certificate';
 import {combineReducers, createStore} from 'redux';
-import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import sinon from 'sinon';
+
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import Certificate from '@cdo/apps/templates/certificates/Certificate';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const store = createStore(combineReducers({responsive, isRtl}));
 

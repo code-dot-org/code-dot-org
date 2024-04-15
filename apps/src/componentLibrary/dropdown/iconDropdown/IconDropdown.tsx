@@ -1,23 +1,21 @@
-import React, {useCallback, memo} from 'react';
 import classNames from 'classnames';
-
-import {
-  ComponentSizeXSToL,
-  DropdownColor,
-} from '@cdo/apps/componentLibrary/common/types';
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
-
-import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import React, {useCallback, memo} from 'react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import {
+  ComponentSizeXSToL,
+  DropdownColor,
+} from '@cdo/apps/componentLibrary/common/types';
+import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
+import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
 export interface IconDropdownOption {
   value: string;
@@ -39,6 +37,8 @@ export interface IconDropdownProps {
   /** IconDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
+  /** IconDropdown label style type*/
+  labelType?: 'thick' | 'thin';
   /** IconDropdown options */
   options: IconDropdownOption[];
   /** IconDropdown checked options */
@@ -50,6 +50,7 @@ export interface IconDropdownProps {
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
   labelText,
+  labelType = 'thick',
   options,
   selectedOption = {},
   onChange,
@@ -72,6 +73,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
     <CustomDropdown
       name={name}
       labelText={labelText}
+      labelType={labelType}
       disabled={disabled}
       color={color}
       icon={selectedOption?.icon}

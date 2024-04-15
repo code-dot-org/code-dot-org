@@ -4,6 +4,7 @@ require 'user'
 require 'authentication_option'
 require 'sections/section'
 require 'set'
+require 'metrics/events'
 
 module Services
   module Lti
@@ -34,7 +35,7 @@ module Services
       auth_option = user.authentication_options.find(&:lti?)
       issuer, client_id, subject = auth_option.authentication_id.split('|')
       lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
-      LtiUserIdentity.create(user: user, subject: subject, lti_integration: lti_integration)
+      LtiUserIdentity.create!(user: user, subject: subject, lti_integration: lti_integration)
     end
 
     def self.create_lti_integration(
@@ -104,7 +105,6 @@ module Services
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?
         user.user_type = ::User::TYPE_TEACHER
-        user.update_primary_contact_info(new_email: email_address, new_hashed_email: ::User.hash_email(email_address))
       else
         user.user_type = ::User::TYPE_STUDENT
         user.family_name = get_claim(nrps_member_message, :family_name)
@@ -121,6 +121,7 @@ module Services
         email: email_address,
         )
       user.authentication_options = [ao]
+      user.primary_contact_info = ao
       # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
       user
     end
@@ -130,7 +131,7 @@ module Services
       members = nrps_response[:members]
       context_title = nrps_response.dig(:context, :title)
       members.each do |member|
-        next if member[:status] == 'Inactive'
+        next if member[:status] == 'Inactive' || member[:roles].include?(Policies::Lti::CONTEXT_MENTOR_ROLE)
         # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
 
         # If the LMS hasn't implemented the resource link level membership service, we don't get the message property in the member object
@@ -140,7 +141,6 @@ module Services
           # Custom variables substitutions must be configured in the LMS.
           custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
 
-          # Handles the possibility of the LMS not having sectionId variable substitution configured.
           member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
           # :section_names from Canvas is a stringified JSON array
           member_section_names = JSON.parse(custom_variables[:section_names])
@@ -156,6 +156,7 @@ module Services
             sections[section_id] = {
               # Schoology provides Course and section name in context_title
               name: member_section_names[index].nil? ? context_title.to_s : "#{context_title}: #{member_section_names[index]}",
+              short_name: member_section_names[index] || context_title.to_s,
               members: [member],
             }
           end
@@ -166,13 +167,15 @@ module Services
 
     # Takes an LTI section and NRPS members array and syncs a single section.
     # @return {boolean} whether any changes were made
-    def self.sync_section_roster(lti_integration, lti_section, nrps_members)
+    def self.sync_section_roster(lti_integration, lti_section, nrps_section)
       had_changes = false
+      nrps_members = nrps_section[:members]
       client_id = lti_integration.client_id
       issuer = lti_integration.issuer
       section = lti_section.section
       current_students = Set.new
       current_teachers = Set.new
+      instructor_list = []
 
       nrps_members.each do |nrps_member|
         account_type = Policies::Lti.get_account_type(nrps_member[:roles])
@@ -190,9 +193,17 @@ module Services
         had_changes ||= (user.new_record? || user.changed?)
         user.save!
         if account_type == ::User::TYPE_TEACHER
-          add_instructor_result = section.add_instructor(user)
-          had_changes ||= add_instructor_result
+          # Skip adding the instructor and reporting changes if the user is already an instructor
+          unless section.instructors.include?(user)
+            add_instructor_result = section.add_instructor(user)
+            had_changes ||= add_instructor_result
+          end
           current_teachers.add(user.id)
+          instructor_list << {
+            name: user.name,
+            id: user.id,
+            isOwner: user.id == section.user_id,
+          }
         else
           add_student_result = section.add_student(user)
           had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
@@ -217,16 +228,23 @@ module Services
         end
       end
 
-      had_changes
+      {
+        had_changes: had_changes,
+        size: current_students.size,
+        name: lti_section.section.name,
+        short_name: nrps_section[:short_name],
+        instructors: instructor_list,
+      }
     end
 
     # Syncs a course and all its sections from an NRPS response.
     def self.sync_course_roster(lti_integration:, lti_course:, nrps_sections:, current_user:)
       had_changes = false
+      course_sync_result = {
+        all: {},
+        changed: {}
+      }
       lti_sections = LtiSection.where(lti_course_id: lti_course.id)
-
-      # Only sync the section if there are no sections or the section's owner is equal to the current user
-      return false unless lti_sections.empty? || lti_sections.first.section.user_id == current_user.id
 
       # Prune sections that have been deleted in the LMS
       lti_sections.each do |lti_section|
@@ -243,7 +261,7 @@ module Services
 
         lti_user_type = lti_user_type(current_user, lti_integration, nrps_section)
 
-        # Skip if the current user is not an instructor
+        # Skip if the current user is not an instructor within this section
         next unless lti_user_type == ::User::TYPE_TEACHER
 
         if lti_section.nil?
@@ -255,6 +273,14 @@ module Services
             }
           )
           lti_section = LtiSection.create(lti_course_id: lti_course.id, lms_section_id: lms_section_id, section: section)
+
+          metadata = {'lms_name' => lti_integration.platform_name}
+          Metrics::Events.log_event(
+            user: current_user,
+            event_name: 'lti_section_created',
+            metadata: metadata,
+          )
+
           had_changes = true
         end
 
@@ -262,10 +288,14 @@ module Services
           lti_section.section.update(name: section_name)
           had_changes = true
         end
-        sync_section_roster_result = sync_section_roster(lti_integration, lti_section, nrps_sections[lms_section_id][:members])
-        had_changes ||= sync_section_roster_result
+        current_section_result = sync_section_roster(lti_integration, lti_section, nrps_sections[lms_section_id])
+        had_changes ||= current_section_result[:had_changes]
+        course_sync_result[:all][lms_section_id] = current_section_result
+        if current_section_result[:had_changes]
+          course_sync_result[:changed][lms_section_id] = current_section_result
+        end
       end
-      had_changes
+      course_sync_result
     end
   end
 end

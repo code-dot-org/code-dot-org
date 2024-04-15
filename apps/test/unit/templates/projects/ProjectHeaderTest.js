@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../util/reconfiguredChai';
-import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
+import React from 'react';
+
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
+import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('ProjectHeader', () => {
   it('Project count data renders properly in subheading ', () => {

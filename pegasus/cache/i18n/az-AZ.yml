@@ -992,7 +992,7 @@ az-AZ:
   dashboard_sections_table_code: Bölmə kodu
   dashboard_sections_table_course: Kurs
   dashboard_sections_table_grade: Sinif
-  dashboard_sections_table_pairing_allowed: Estafet proqramlaşdırması
+  dashboard_sections_table_pairing_allowed: İkili Qrup Şəklində Proqramlaşdırma
   dashboard_sections_table_secret: Daxil olma tipi
   dashboard_sections_table_section: Bölmə
   dashboard_sections_table_stage_extras: Səhnə Əlavələri
@@ -1196,6 +1196,7 @@ az-AZ:
   header_about_us: Haqqımızda
   header_course_catalog: Kurs kataloqu
   header_courses: marşrutlar
+  header_districts: Bölgələr
   header_documentation: Təlimat və sənədlər
   header_educate_beyond: Daha çox Code.org
   header_educate_community: Onlayn icma
