@@ -25,22 +25,33 @@
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
-      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
       "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
       "lessThanOrEqualOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "mathAbs": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "declareAssign_str_hello_world": null
+      "declareAssign_str_hello_world": null,
+      "setText": null,
+      "hideElement": null,
+      "showElement": null,
+      "getColumn": null,
+      "randomNumber_min_max": null,
+      "declareAssign_list_abd": null,
+      "declareAssign_list_123": null,
+      "listLength": null,
+      "insertItem": null,
+      "accessListItem": null,
+      "appendItem": null,
+      "removeItem": null,
+      "join": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
     },
     "embed": "false",
     "mini_rubric": "false",
@@ -67,13 +78,13 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
+    "data_library_tables": "100 Birds of the World",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "data_library_tables": "100 Birds of the World"
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-05T16:00:31.125+00:00\",\"changed\":[\"cloned from \\\"CSP Conditionals Practice MindEase_template\\\"\"],\"cloned_from\":\"CSP Conditionals Practice MindEase_template\"},{\"changed_at\":\"2024-04-05 16:04:00 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_design_mode\",\"start_html\",\"hide_view_data_button\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-05T16:00:31.125+00:00\",\"changed\":[\"cloned from \\\"CSP Conditionals Practice MindEase_template\\\"\"],\"cloned_from\":\"CSP Conditionals Practice MindEase_template\"},{\"changed_at\":\"2024-04-05 16:04:00 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_design_mode\",\"start_html\",\"hide_view_data_button\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-12 17:49:59 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

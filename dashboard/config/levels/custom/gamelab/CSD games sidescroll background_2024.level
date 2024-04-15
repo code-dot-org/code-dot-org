@@ -81,14 +81,14 @@
     "parent_level_id": 23071,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/problem-solving-process-programming",
-      "/courses/csd-2022/guides/collision-detection",
-      "/courses/csd-2022/guides/velocity",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/if-statements",
-      "/courses/csd-2022/guides/if-else-statements",
-      "/courses/csd-2022/guides/the-draw-loop",
-      "/courses/csd-2022/guides/multi-frame-animations"
+      "/courses/csd-2024/guides/problem-solving-process-programming",
+      "/courses/csd-2024/guides/collision-detection",
+      "/courses/csd-2024/guides/velocity",
+      "/courses/csd-2024/guides/booleans-and-comparison-operators",
+      "/courses/csd-2024/guides/if-statements",
+      "/courses/csd-2024/guides/if-else-statements",
+      "/courses/csd-2024/guides/the-draw-loop",
+      "/courses/csd-2024/guides/multi-frame-animations"
     ],
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",

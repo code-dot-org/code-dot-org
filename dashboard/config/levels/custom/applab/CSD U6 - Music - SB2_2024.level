@@ -59,7 +59,7 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/playing-notes",
+      "/courses/csd-2024/guides/playing-notes",
       "/maker/setup"
     ],
     "start_blocks": "onEvent(\"C1\", \"click\", function() {\r\n  buzzer.note(\"C1\", 100);\r\n});\r\nonEvent(\"C2\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C3\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C4\", \"click\", function() {\r\n  buzzer.note(\"C4\", 100);\r\n});\r\nonEvent(\"C5\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C6\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C7\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"C8\", \"click\", function() {\r\n  \r\n});\r\n",
