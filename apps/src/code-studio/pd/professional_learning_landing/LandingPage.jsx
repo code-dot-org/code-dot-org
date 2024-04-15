@@ -159,18 +159,18 @@ export default function LandingPage({
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <EnrolledWorkshops />
         {plCoursesStarted?.length >= 1 && (
-          <section>
+          <section id={'self-paced-pl'}>
             <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
             {RenderSelfPacedProgressTable()}
           </section>
         )}
         {deeperLearningCourseData?.length >= 1 && (
-          <div>
+          <section>
             <Heading2>Online Professional Learning Courses</Heading2>
             <ProfessionalLearningCourseProgress
               deeperLearningCourseData={deeperLearningCourseData}
             />
-          </div>
+          </section>
         )}
         <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>

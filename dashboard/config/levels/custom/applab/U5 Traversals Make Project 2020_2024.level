@@ -78,8 +78,8 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "reference_links": [
-      "/docs/concepts/patterns/list-filter-pattern/",
-      "/docs/concepts/patterns/list-reduce-pattern/"
+      "/courses/csp-2024/guides/list-filter-pattern",
+      "/courses/csp-2024/guides/list-reduce-pattern"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",

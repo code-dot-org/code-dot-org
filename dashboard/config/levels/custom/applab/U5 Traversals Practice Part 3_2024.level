@@ -78,8 +78,8 @@
     "start_blocks": "// Creating and assigning lists\r\n\r\nvar fruits = [\"apples\", \"bananas\", \"peaches\", \"pears\", \"oranges\"];\r\nvar prices = [0.99, 0.69, 1.29, 1.09, 0.89];\r\n\r\n// Traversing both lists to print the price of each fruit\r\nvar fruit;\r\nvar price;\r\n\r\nfor(var i = 0; i < fruits.length; i++){\r\n  fruit = fruits[i];\r\n  price = prices[i];\r\n  console.log(fruit + \" cost \" + price);\r\n}\r\n\r\n// Creating and assigning lists\r\n\r\nvar students = [\"Angelo\",\"Emilia\",\"Abel\",\"Darien\",\"Elly\"];\r\nvar grades    = [11, 10, 12, 10, 9];\r\n\r\n\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"></div></div>",
     "reference_links": [
-      "/docs/concepts/patterns/list-filter-pattern/",
-      "/docs/concepts/patterns/list-reduce-pattern/"
+      "/courses/csp-2024/guides/list-filter-pattern",
+      "/courses/csp-2024/guides/list-reduce-pattern"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",

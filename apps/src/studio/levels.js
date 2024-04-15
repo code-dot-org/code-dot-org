@@ -1,7 +1,8 @@
+import blockUtils from '../block_utils';
+import {extend} from '../utils';
+
 import {Emotions} from './constants';
 import msg from './locale';
-import {extend} from '../utils';
-import blockUtils from '../block_utils';
 
 const tb = blockUtils.createToolbox;
 const blockOfType = blockUtils.blockOfType;
