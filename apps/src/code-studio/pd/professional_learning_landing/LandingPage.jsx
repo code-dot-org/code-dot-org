@@ -81,7 +81,9 @@ function LandingPage({
   const availableTabs = getAvailableTabs(userPermissions);
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
   const headerContainerStyles =
-    availableTabs.length > 1 ? '' : style.headerWithoutTabsContainer;
+    availableTabs.length > 1
+      ? style.headerWithTabsContainer
+      : style.headerWithoutTabsContainer;
 
   const showGettingStartedBanner =
     !currentYearApplicationId &&
