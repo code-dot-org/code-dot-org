@@ -75,6 +75,10 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
     ? classNames(style.padding, style.disabledLabel)
     : style.padding;
 
+  const SORTED_SCHOOLS_OPTION_GROUP = [
+    {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
+  ].concat(sortSchoolsByName(dropdownSchools));
+
   return (
     <div>
       {!inputManually && (
@@ -93,9 +97,7 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
             itemGroups={[
               {
                 label: i18n.schools(),
-                groupItems: [
-                  {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
-                ].concat(sortSchoolsByName(dropdownSchools)),
+                groupItems: SORTED_SCHOOLS_OPTION_GROUP,
               },
               {
                 label: i18n.additionalOptions(),
