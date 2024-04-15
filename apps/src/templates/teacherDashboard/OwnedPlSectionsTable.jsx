@@ -173,7 +173,7 @@ class OwnedPlSectionsTable extends Component {
     },
   };
 
-  gradeFormatter = (grades, {rowData}) => {
+  participantNameFormatter = (participantType, {rowData}) => {
     return <div>{participantNames[rowData.participantType]}</div>;
   };
 
@@ -228,7 +228,7 @@ class OwnedPlSectionsTable extends Component {
           transforms: [sortable],
         },
         cell: {
-          formatters: [this.gradeFormatter],
+          formatters: [this.participantNameFormatter],
           props: {style: plTableLayoutStyles.participantTypeCell},
         },
       },

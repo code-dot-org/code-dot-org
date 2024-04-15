@@ -17,6 +17,7 @@ const serverSections = [
     location: '/v2/sections/11',
     name: 'brent_section',
     login_type: 'picture',
+    participantType: 'facilitator',
     grade: '2',
     code: 'PMTKVH',
     lesson_extras: false,
@@ -31,6 +32,7 @@ const serverSections = [
     location: '/v2/sections/12',
     name: 'section2',
     login_type: 'picture',
+    participantType: 'facilitator',
     grade: '11',
     code: 'DWGMFX',
     lesson_extras: false,
@@ -48,6 +50,7 @@ const serverSections = [
     location: '/v2/sections/20',
     name: 'imported_section',
     login_type: 'clever',
+    participantType: 'teacher',
     grade: null,
     providerManaged: true,
     code: 'C-1234567890',
@@ -66,6 +69,7 @@ const serverSections = [
     location: '/v2/sections/21',
     name: 'imported_section_2',
     login_type: 'google_classroom',
+    participantType: 'facilitator',
     grade: '7',
     providerManaged: true,
     code: 'G-12345',
@@ -84,6 +88,7 @@ const serverSections = [
     location: '/v2/sections/307',
     name: 'plc',
     login_type: 'email',
+    participantType: 'teacher',
     grade: '10',
     code: 'WGYXTR',
     lesson_extras: true,
@@ -99,7 +104,7 @@ const serverSections = [
 ];
 
 export default {
-  name: 'OwnedPlSectionsTable (teacher dashboard)',
+  name: 'OwnedPlSectionsTable (My PL page)',
   component: OwnedPlSectionsTable,
 };
 
