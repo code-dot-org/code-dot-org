@@ -188,7 +188,6 @@
   .dropdownButton {
     color: $light_black;
     border-color: $light_black;
-    background-color: $light_white;
   }
 
   &:has(.dropdownButton:hover) {
@@ -226,7 +225,6 @@
   .dropdownButton {
     color: $light_white;
     border-color: $light_white;
-    background-color: $light_black;
   }
 
   &:has(.dropdownButton:hover) {
@@ -239,6 +237,7 @@
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
       color: $light_white;
+      background-color: unset;
     }
   }
 
@@ -252,13 +251,8 @@
 
 // Sizes
 .dropdownContainer-l {
-  .dropdownLabel-thick {
-    @include button-one-text;
-    margin-bottom: 0;
-  }
-
-  .dropdownLabel-thin {
-    @include body-one;
+  .dropdownLabel {
+    @include label-one;
     margin-bottom: 0;
   }
 
@@ -312,13 +306,8 @@
 }
 
 .dropdownContainer-m {
-  .dropdownLabel-thick {
-    @include button-two-text;
-    margin-bottom: 0;
-  }
-
-  .dropdownLabel-thin {
-    @include body-two;
+  .dropdownLabel {
+    @include label-two;
     margin-bottom: 0;
   }
 
@@ -372,13 +361,8 @@
 }
 
 .dropdownContainer-s {
-  .dropdownLabel-thick {
-    @include button-three-text;
-    margin-bottom: 0;
-  }
-
-  .dropdownLabel-thin {
-    @include body-three;
+  .dropdownLabel {
+    @include label-three;
     margin-bottom: 0;
   }
 
@@ -432,13 +416,8 @@
 }
 
 .dropdownContainer-xs {
-  .dropdownLabel-thick {
-    @include button-four-text;
-    margin-bottom: 0;
-  }
-
-  .dropdownLabel-thin {
-    @include body-four;
+  .dropdownLabel {
+    @include label-four;
     margin-bottom: 0;
   }
 
