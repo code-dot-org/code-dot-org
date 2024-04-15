@@ -29,13 +29,16 @@ export default function SchoolDataInputs({
   const [country, setCountry] = useState('');
   const [zipSearchReady, setZipSearchReady] = useState(false);
 
+  // Add 'Select a country' and 'United States' to the top of the country list
   let COUNTRY_ITEMS = [
     {value: 'selectCountry', text: i18n.selectCountry()},
-    {value: 'US', text: 'United States'},
+    {value: 'US', text: i18n.unitedStates()},
   ];
-  for (const item of Object.values(COUNTRIES).filter(function (item) {
-    return item.label !== 'US';
-  })) {
+  // Pull in the rest of the countries after/below
+  const nonUsCountries = Object.values(COUNTRIES).filter(
+    item => item.label !== 'US'
+  );
+  for (const item of nonUsCountries) {
     COUNTRY_ITEMS.push({value: item.label, text: item.value});
   }
 
