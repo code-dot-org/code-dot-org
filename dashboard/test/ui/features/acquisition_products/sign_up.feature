@@ -14,7 +14,7 @@ Scenario: Teacher can create an account with the new school association flow
   And I press keys "myDisplayName" for element "#user_name"
   And I select the "United States" option in dropdown "uitest-country-dropdown"
   And I press keys "31513" for element "#uitest-school-zip"
-  And I select the "Appling County High School" option in dropdown "uitest-school-dropdown" once I see it
+  And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
   And I open my eyes to test "School Association"
   And I see no difference for "School Association: all fields"
   When I press "user_email_preference_opt_in_no"
