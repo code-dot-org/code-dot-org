@@ -74,11 +74,11 @@ ActiveRecord::Schema.define(version: 2024_04_15_232100) do
     t.integer "level_id"
     t.integer "script_id"
     t.integer "project_id"
-    t.text "model_customizations"
-    t.text "messages"
+    t.json "model_customizations"
+    t.json "messages"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_aichat_sessions_on_user_id"
+    t.index ["user_id", "level_id", "script_id"], name: "index_acs_user_level_script"
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

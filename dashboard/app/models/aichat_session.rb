@@ -7,14 +7,14 @@
 #  level_id             :integer
 #  script_id            :integer
 #  project_id           :integer
-#  model_customizations :text(65535)
-#  messages             :text(65535)
+#  model_customizations :json
+#  messages             :json
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #
 # Indexes
 #
-#  index_aichat_sessions_on_user_id  (user_id)
+#  index_acs_user_level_script  (user_id,level_id,script_id)
 #
 class AichatSession < ApplicationRecord
 end
