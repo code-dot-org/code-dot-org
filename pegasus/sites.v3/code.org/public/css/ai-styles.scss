@@ -24,6 +24,21 @@
   animation-delay: 2s;
 }
 
+.new {
+  color: var(--neutral_white);
+  background: var(--brand_accent_default);
+  font-size: 0.75rem;
+  font-family: var(--main-font);
+  font-weight: var(--medium-font-weight);
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: -2px -8px 6px 0;
+  padding: 6px 8px 5px;
+  border-radius: 1rem;
+  width: 3rem;
+}
+
 // Hero banner
 .hero-banner-basic {
   background: url('/images/banners/ai-bg.png') center center no-repeat;
