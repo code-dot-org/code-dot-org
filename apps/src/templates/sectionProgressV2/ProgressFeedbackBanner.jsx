@@ -15,7 +15,6 @@ import {
 const FOORM_LINK = 'https://studio.code.org/form/new_progress_feedback';
 
 const ProgressFeedbackBanner = ({
-  currentUser,
   canShow,
   isLoading,
   progressV2Feedback,
