@@ -40,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-22 18:07:38 UTC",
+    "serialized_at": "2024-04-15 17:56:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6097,14 +6097,14 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?usp=sharing",
-      "key": "project_guide_exemplar",
+      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit",
+      "key": "project_guide_exemplar_2",
       "properties": {
         "audience": "Verified Teacher",
         "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "project_guide_exemplar"
+        "resource.key": "project_guide_exemplar_2"
       }
     },
     {
@@ -6232,15 +6232,14 @@
     },
     {
       "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit?usp=sharing",
-      "key": "sample_marked_rubrics",
+      "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
+      "key": "sample_marked_rubrics_2",
       "properties": {
         "audience": "Verified Teacher",
-        "include_in_pdf": true,
         "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics"
+        "resource.key": "sample_marked_rubrics_2"
       }
     },
     {
@@ -6719,13 +6718,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "project_guide_exemplar"
+        "resource.key": "project_guide_exemplar_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "sample_marked_rubrics"
+        "resource.key": "sample_marked_rubrics_2"
       }
     },
     {

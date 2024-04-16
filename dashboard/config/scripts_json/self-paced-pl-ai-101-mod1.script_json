@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-10 14:39:26 UTC",
+    "serialized_at": "2024-04-15 17:34:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -302,6 +302,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-impact_06_2024"
+        ],
         "progression": "Impact of AI (20 min)"
       },
       "bonus": false,
@@ -324,6 +327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-education_02_2024"
+        ],
         "progression": "AI in Education (10 min)"
       },
       "bonus": false,
@@ -346,6 +352,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-education_03_2024"
+        ],
         "progression": "AI in Education (10 min)"
       },
       "bonus": false,
@@ -368,6 +377,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-education_04_2024"
+        ],
         "progression": "AI in Education (10 min)"
       },
       "bonus": false,
@@ -390,6 +402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-literacy_02_2024"
+        ],
         "progression": "AI Literacy (15 min)"
       },
       "bonus": false,
@@ -412,6 +427,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-literacy_03_2024"
+        ],
         "progression": "AI Literacy (15 min)"
       },
       "bonus": false,
@@ -434,6 +452,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-literacy_05_2024"
+        ],
         "progression": "AI Literacy (15 min)"
       },
       "bonus": false,
@@ -456,6 +477,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-literacy_06_2024"
+        ],
         "progression": "AI Literacy (15 min)"
       },
       "bonus": false,
@@ -478,6 +502,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-literacy_07_2024"
+        ],
         "progression": "AI Literacy (15 min)"
       },
       "bonus": false,
