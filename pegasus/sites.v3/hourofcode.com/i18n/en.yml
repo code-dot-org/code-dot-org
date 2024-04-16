@@ -1037,6 +1037,7 @@
   ai_pl_desc: "Introduction to artificial intelligence and machine learning. Train a machine learning model using AI Lab. and engage with machine learning apps. Consider real-world implications of AI and machine learning."
   ai_promote_literacy: "Promote AI Literacy. Support Innovation. Provide Guidance."
   ai_section_body: "The latest resource from TeachAI, Foundational Policy Ideas for AI in Education, provides briefs, policy considerations, and presentation materials for policymakers to craft responsible policies for teaching with and about AI. Let's #TeachAI."
+  ai_banner_body: "The latest resource from TeachAI provides briefs, policy considerations, and presentation materials for policymakers."
   ai_video_series_title: "How AI Works"
   ai_video_series_desc: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making. Watch the video series below, or [check out our How AI Works lessons](%{how_ai_works_url})!"
   ai_resources_heading: "Additional resources"
