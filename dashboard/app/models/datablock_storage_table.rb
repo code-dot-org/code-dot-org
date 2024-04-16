@@ -309,7 +309,11 @@ class DatablockStorageTable < ApplicationRecord
         value.to_s
       end
     when 'number'
-      Float(value) rescue raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to number"
+      begin
+        Float(value)
+      rescue
+        raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to number"
+      end
     when 'boolean'
       if [true, 'true'].include? value
         true

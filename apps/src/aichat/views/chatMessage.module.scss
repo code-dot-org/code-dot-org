@@ -33,6 +33,10 @@
       color: $light_gray_700;
     }
   }
+
+  &Alert {
+    background-color: #FEF7DF;
+  }
 }
 
 .modelUpdateMessageTextContainer {
@@ -41,6 +45,11 @@
 
 .check {
   color: $light_affirmative_500;
+  font-size: 16px;
+}
+
+.alert {
+  color: $light_caution_500;
   font-size: 16px;
 }
 

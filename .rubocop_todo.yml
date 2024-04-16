@@ -365,11 +365,6 @@ Style/RedundantSelfAssignment:
 Style/RegexpLiteral:
   Enabled: false
 
-# Offense count: 29
-# This cop supports safe auto-correction (--auto-correct).
-Style/RescueModifier:
-  Enabled: false
-
 # Offense count: 172
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle.

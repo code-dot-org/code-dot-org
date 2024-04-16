@@ -1,5 +1,4 @@
 import React, {useCallback, useState} from 'react';
-import classNames from 'classnames';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
@@ -41,12 +40,7 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const renderChooseAndCompareModels = () => {
     return (
-      <div
-        className={classNames(
-          styles.inputContainer,
-          styles.fullWidthDropdownContainer
-        )}
-      >
+      <div className={styles.inputContainer}>
         <SimpleDropdown
           labelText="Selected model:"
           onChange={e => setChosenModel(e.target.value)}
@@ -63,7 +57,7 @@ const SetupCustomization: React.FunctionComponent = () => {
           text="Compare Models"
           onClick={() => setIsShowingModelDialog(true)}
           type="secondary"
-          className={styles.updateButton}
+          className={styles.buttonNoMargin}
         />
         {isShowingModelDialog && (
           <CompareModelsDialog onClose={() => setIsShowingModelDialog(false)} />
