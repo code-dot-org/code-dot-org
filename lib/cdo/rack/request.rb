@@ -10,11 +10,7 @@ module Cdo
     end
 
     def trusted_proxy?(ip)
-      super(ip) || TRUSTED_PROXIES.any? do |proxy|
-        proxy.include?(ip)
-      rescue
-        false
-      end
+      super(ip) || TRUSTED_PROXIES.any? {|proxy| proxy.include?(ip) rescue false}
     end
 
     def json_body

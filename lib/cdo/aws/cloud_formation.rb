@@ -297,11 +297,7 @@ module AWS
 
     private def wait_for_stack(action)
       log.info "Stack #{action} requested, waiting for provisioning to complete..."
-      begin
-        yield
-      rescue
-        nil
-      end
+      yield rescue nil
       begin
         cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: @stack_id) do |w|
           w.delay = 5 # seconds
@@ -315,21 +311,13 @@ module AWS
           end
         end
       rescue Aws::Waiters::Errors::FailureStateError
-        begin
-          yield
-        rescue
-          nil
-        end
+        yield rescue nil
         if action == :create
           log.info 'Stack will remain in its half-created state for debugging. To delete, run `rake adhoc:stop`.'
         end
         raise "\nError on #{action}."
       end
-      begin
-        yield
-      rescue
-        nil
-      end
+      yield rescue nil
       unless options[:quiet]
         log.info "\nStack #{action} complete."
         unless action == 'delete'
