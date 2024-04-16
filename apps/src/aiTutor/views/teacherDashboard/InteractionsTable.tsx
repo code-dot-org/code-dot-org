@@ -12,6 +12,10 @@ import CheckboxDropdown, {
   CheckboxOption,
 } from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import UnitSelectorV2 from '@cdo/apps/templates/UnitSelectorV2';
+import {Unit} from 'tone';
+import Heading6 from '@cdo/apps/componentLibrary/typography';
+import {useSelector} from 'react-redux';
 
 type StatusLabels = {
   [key in AITutorInteractionStatusValue]: string;
@@ -57,6 +61,10 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   const [selectedUserIds, setSelectedUserIds] = useState<string[]>([]);
   const [selectedTimeFilter, setSelectedTimeFilter] = useState<string>(
     TimeFilter.AllTime
+  );
+
+  const scriptId = useSelector(
+    (state: {unitSelection: {scriptId: number}}) => state.unitSelection.scriptId
   );
 
   useEffect(() => {
@@ -107,6 +115,8 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   };
 
   const filteredChatMessages = chatMessages.filter(message => {
+    const scriptMatch = scriptId === message.scriptId;
+
     const statusMatch =
       selectedStatuses.length === 0 ||
       selectedStatuses.includes(message.status);
@@ -136,7 +146,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
         timeMatch = true;
     }
 
-    return statusMatch && userMatch && timeMatch;
+    return scriptMatch && statusMatch && userMatch && timeMatch;
   });
 
   const statusOptions = Object.values(AITutorInteractionStatus).map(status => ({
@@ -146,7 +156,23 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
 
   return (
     <div>
+      <h3>Select Unit</h3>
+
+      <UnitSelectorV2 />
       <div className={style.filterDropdowns}>
+        <CheckboxDropdown
+          allOptions={statusOptions}
+          checkedOptions={selectedStatuses}
+          color="black"
+          labelText="Filter by Status"
+          name="filter-statuses"
+          onChange={handleStatusFilterChange}
+          onClearAll={() => setSelectedStatuses([])}
+          onSelectAll={() =>
+            setSelectedStatuses(Object.values(AITutorInteractionStatus))
+          }
+          size="s"
+        />
         <CheckboxDropdown
           allOptions={statusOptions}
           checkedOptions={selectedStatuses}
