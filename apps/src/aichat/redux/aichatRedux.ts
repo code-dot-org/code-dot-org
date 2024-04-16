@@ -82,7 +82,7 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  chatMessages: initialChatMessages,
+  chatMessages: [],
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
@@ -267,13 +267,13 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const newMessageId =
-        state.chatMessages[state.chatMessages.length - 1].id + 1;
-      const newMessage = {
-        ...action.payload,
-        id: newMessageId,
-      };
-      state.chatMessages.push(newMessage);
+      // const newMessageId =
+      //   state.chatMessages[state.chatMessages.length - 1].id + 1;
+      // const newMessage = {
+      //   ...action.payload,
+      //   id: newMessageId,
+      // };
+      state.chatMessages.push(action.payload);
     },
     removeChatMessage: (state, action: PayloadAction<number>) => {
       const updatedMessages = state.chatMessages.filter(
