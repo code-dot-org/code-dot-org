@@ -82,6 +82,7 @@ const PythonlabView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
+  // https://codedotorg.atlassian.net/browse/CT-499
   const setProject = useMemo(
     () => (newProject: MultiFileSource) => {
       setCurrentProject(newProject);

@@ -98,6 +98,8 @@ const getFilePath = (fileId: string, source: MultiFileSource) => {
   return path;
 };
 
+// For the given fileId, return the module version of the file. For example, a file at
+// path folder1/folder2/file.py would have a module name of "folder1.folder2.file".
 const getModuleName = (fileId: string, source: MultiFileSource) => {
   let path = source.files[fileId].name.replace('.py', '');
   let folderId = source.files[fileId].folderId;
