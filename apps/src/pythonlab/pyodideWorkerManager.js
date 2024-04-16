@@ -41,18 +41,18 @@ pyodideWorker.onmessage = event => {
 
 const asyncRun = (() => {
   let id = 0; // identify a Promise
-  return (script, sources) => {
+  return (script, source) => {
     // the id could be generated more carefully
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
     return new Promise(onSuccess => {
       callbacks[id] = onSuccess;
       let wrappedScript = applyPatches(script);
       wrappedScript =
-        wrappedScript + deleteCachedUserModules(sources, MAIN_PYTHON_FILE);
+        wrappedScript + deleteCachedUserModules(source, MAIN_PYTHON_FILE);
       const messageData = {
         python: wrappedScript,
         id,
-        sources,
+        source,
       };
       pyodideWorker.postMessage(messageData);
     });
