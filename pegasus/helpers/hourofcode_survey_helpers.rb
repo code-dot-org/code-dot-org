@@ -1,10 +1,6 @@
 def generate_hoc_survey_report
   PEGASUS_DB[:forms].where(kind: 'HocSurvey2014').filter_map do |row|
-    data = begin
-      JSON.parse(row[:data])
-    rescue
-      {}
-    end
+    data = JSON.parse(row[:data]) rescue {}
 
     {
       email: data['email_s'],

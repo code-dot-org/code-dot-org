@@ -1577,11 +1577,7 @@ class User < ApplicationRecord
 
   def age=(val)
     @age = val
-    val = begin
-      val.to_i
-    rescue
-      0 # sometimes we get age: {"Pr" => nil}
-    end
+    val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
     return unless val > 0
     return unless val < 200
     return if birthday && val == age # don't change birthday if we want to stay the same age

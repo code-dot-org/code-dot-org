@@ -77,11 +77,7 @@ module Cdo::CloudFormation
         code_zip = `zip -qr - .`
         key = "#{key_prefix}-#{hash}.zip"
         s3_client = Aws::S3::Client.new(http_read_timeout: 30)
-        object_exists = begin
-          s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key)
-        rescue
-          nil
-        end
+        object_exists = s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key) rescue nil
         unless object_exists
           CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
           s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
@@ -110,11 +106,7 @@ module Cdo::CloudFormation
       code_zip = `zip -qr - #{files.join(' ')}`
       key = "#{key_prefix}-#{hash}.zip"
       s3_client = Aws::S3::Client.new(http_read_timeout: 30)
-      object_exists = begin
-        s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key)
-      rescue
-        nil
-      end
+      object_exists = s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key) rescue nil
       unless object_exists
         CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
         s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
