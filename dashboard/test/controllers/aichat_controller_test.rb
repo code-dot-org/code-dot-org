@@ -9,7 +9,6 @@ class AichatControllerTest < ActionController::TestCase
     @pilot_teacher = create :teacher, pilot_experiment: GENAI_PILOT
     @section = create(:section, user: @pilot_teacher)
     @pilot_student = create(:follower, section: @section).student_user
-    ShareFiltering.stubs(:find_failure).returns(nil)
     @params = {
       storedMessages: [{role: "user", content: "this is a test!"}],
       aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
