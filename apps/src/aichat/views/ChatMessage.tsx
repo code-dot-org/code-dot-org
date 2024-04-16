@@ -11,7 +11,7 @@ import {removeChatMessage} from '../redux/aichatRedux';
 import {
   ChatCompletionMessage,
   Role,
-  AITutorInteractionStatus as Status,
+  AichatInteractionStatus as Status,
 } from '../types';
 import aichatI18n from '../locale';
 import moduleStyles from './chatMessage.module.scss';
