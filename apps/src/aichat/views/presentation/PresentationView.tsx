@@ -17,10 +17,8 @@ const PresentationView: React.FunctionComponent = () => {
   const {selectedModelId, systemPrompt, temperature, retrievalContexts} =
     savedAiCustomizations;
   const modelCardInfo = savedAiCustomizations.modelCardInfo;
-
-  // These are temporary constants. They will be retrieved from s3.
-  const EXAMPLE_MODEL_NAME = 'Model A';
-  const EXAMPLE_MODEL_TRAINING_DATA = 'Model A Training Data';
+  const {name: modelName = '', trainingData = ''} =
+    modelDescriptions.find(model => model.id === selectedModelId) ?? {};
 
   const technicalInfo = useMemo(() => {
     const technicalInfoData: {
