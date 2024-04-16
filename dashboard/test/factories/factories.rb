@@ -1823,6 +1823,13 @@ FactoryBot.define do
     lms_section_id {SecureRandom.uuid}
   end
 
+  factory :new_feature_feedback do
+    association :user, factory: :teacher
+
+    form_key {'progress_v2'}
+    satisfied {true}
+  end
+
   factory :parental_permission_request do
     user {create :young_student, :without_parent_permission}
     parent_email {"contact@example.domain"}
