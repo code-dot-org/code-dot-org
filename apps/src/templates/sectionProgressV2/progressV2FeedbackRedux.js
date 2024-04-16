@@ -24,7 +24,7 @@ export default function progressV2Feedback(state = initialState, action) {
       return {
         ...state,
         isLoading: false,
-        progressv2Feedback: action.progressV2Feedback,
+        progressV2Feedback: action.progressV2Feedback,
       };
     case PROGRESS_V2_FEEDBACK_FETCH_FAILURE:
     case PROGRESS_V2_FEEDBACK_CREATE_FAILURE:
@@ -52,8 +52,9 @@ export const fetchProgressV2Feedback = () => dispatch => {
     .then(progressV2Feedback => {
       dispatch({
         type: PROGRESS_V2_FEEDBACK_FETCH_SUCCESS,
-        progressV2Feedback:
-          progressV2Feedback === null ? {empty: true} : progressV2Feedback,
+        progressV2Feedback: !progressV2Feedback
+          ? {empty: true}
+          : progressV2Feedback,
       });
     })
     .catch(error => {
