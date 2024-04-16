@@ -17,7 +17,18 @@ const InteractionsTableRow: React.FC<InteractionsTableRowProps> = ({
   chatMessage,
 }) => {
   const getTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString();
+    return (
+      new Date(timestamp).toLocaleDateString(undefined, {
+        month: 'numeric',
+        day: 'numeric',
+        year: 'numeric',
+      }) +
+      ', ' +
+      new Date(timestamp).toLocaleTimeString(undefined, {
+        hour: 'numeric',
+        minute: 'numeric',
+      })
+    );
   };
 
   const getPrompt = (chatMessage: StudentChatRow) => {
