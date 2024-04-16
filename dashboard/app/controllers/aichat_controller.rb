@@ -1,4 +1,5 @@
 class AichatController < ApplicationController
+  authorize_resource class: false
   # params are
   # newMessage: string
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
