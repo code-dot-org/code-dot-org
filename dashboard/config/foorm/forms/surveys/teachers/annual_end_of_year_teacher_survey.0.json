@@ -718,7 +718,7 @@
         {
           "type": "radiogroup",
           "name": "features_main_choice",
-          "title": "What is the most important reason why you opt for code.org?",
+          "title": "What is the most important reason why you opt for Code.org?",
           "choices": [
             {
               "value": "student_learning_experience",
@@ -765,7 +765,7 @@
         {
           "type": "radiogroup",
           "name": "features_second_choice",
-          "title": "What is the second most important reason why you opt for code.org?",
+          "title": "What is the second most important reason why you opt for Code.org?",
           "choices": [
             {
               "value": "student_learning_experience",
@@ -848,7 +848,6 @@
           "name": "pd_motivation",
           "visibleIf": "{pd_interest} > 3",
           "title": "What is your main reason for participating in a computer science professional development? ",
-          "description": "Select all that apply",
           "choices": [
             {
               "value": "learn_curriculum",
@@ -1240,14 +1239,14 @@
         {
           "type": "comment",
           "name": "other_feedback_FR",
-          "title": "Is there anything else you’d like to tell us about your experience teaching {course}?",
+          "title": "Is there anything else you’d like to tell us about your experience teaching with Code.org?",
           "cols": 60,
           "rows": 3
         },
         {
           "type": "html",
           "name": "cdo_heart_you",
-          "html": "<p><span style='font-size: 12pt;'><br /><img style='display: block; margin-left: auto; margin-right: auto;' src='https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png' /></span></p>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, commitment and passion for teaching {course} this year.</span>&nbsp;</p>"
+          "html": "<p><span style='font-size: 12pt;'><br /><img style='display: block; margin-left: auto; margin-right: auto;' src='https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png' /></span></p>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, commitment and passion for teaching.</span>&nbsp;</p>"
         },
         {
           "type": "html",

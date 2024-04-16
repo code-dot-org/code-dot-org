@@ -1,19 +1,14 @@
+import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
+import {editableFileType} from '@cdoide/utils';
+import {LanguageSupport} from '@codemirror/language';
 import React, {useCallback, useMemo} from 'react';
 
-import {editableFileType} from '@cdoide/utils';
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
-import {html} from '@codemirror/lang-html';
-import {css} from '@codemirror/lang-css';
-import {LanguageSupport} from '@codemirror/language';
 
-const codeMirrorLangMapping: {[key: string]: LanguageSupport} = {
-  html: html(),
-  css: css(),
-};
-
-const Editor = () => {
+const Editor = (
+  langMapping: {[key: string]: LanguageSupport},
+  editableFileTypes: string[]
+) => {
   const {project, saveFile} = useCDOIDEContext();
   const file = Object.values(project.files).filter(f => f.active)?.[0];
   // this is a stupid hack. the low level code-mirror editor won't update itself
@@ -24,17 +19,19 @@ const Editor = () => {
 
   const onChange = useCallback(
     (value: string) => {
-      saveFile(file.id, value);
+      if (file?.id) {
+        saveFile(file.id, value);
+      }
     },
-    [file.id, saveFile]
+    [file?.id, saveFile]
   );
 
   const editorConfigExtensions = useMemo(
-    () => [codeMirrorLangMapping[file.language]],
-    [file.language]
+    () => (file?.language ? [langMapping[file.language]] : []),
+    [file?.language, langMapping]
   );
 
-  if (!editableFileType(file.language)) {
+  if (file && !editableFileType(file.language, editableFileTypes)) {
     return <div>Cannot currently edit files of type {file.language}</div>;
   }
 

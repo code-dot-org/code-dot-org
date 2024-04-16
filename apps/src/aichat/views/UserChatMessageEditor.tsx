@@ -1,10 +1,9 @@
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import moduleStyles from './userChatMessageEditor.module.scss';
+import moduleStyles from './user-chat-message-editor.module.scss';
 import aichatI18n from '../locale';
-import {AichatState, submitChatMessage} from '../redux/aichatRedux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {useSelector} from 'react-redux';
+import {submitChatContents} from '../redux/aichatRedux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Renders the AI Chat Lab user chat message editor component.
@@ -12,18 +11,18 @@ import {useSelector} from 'react-redux';
 const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
-  const isWaitingForChatResponse = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
+  const isWaitingForChatResponse = useAppSelector(
+    state => state.aichat.isWaitingForChatResponse
   );
 
-  // TODO: If systemPrompt is undefined, handle this error case.
   const dispatch = useAppDispatch();
+
   const handleSubmit = useCallback(() => {
     if (!isWaitingForChatResponse) {
-      dispatch(submitChatMessage(userMessage));
+      dispatch(submitChatContents(userMessage));
       setUserMessage('');
     }
-  }, [userMessage, dispatch, isWaitingForChatResponse]);
+  }, [isWaitingForChatResponse, dispatch, userMessage]);
 
   return (
     <div className={moduleStyles.editorContainer}>
