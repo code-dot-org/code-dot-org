@@ -692,6 +692,8 @@ module SharedConstants
       INTEGRATION_EARLY_ACCESS_URL: 'https://docs.google.com/forms/d/e/1FAIpQLScjfVR4CZs8Utf5vI4mz3e1q8vdH6RNIgTUWygZXN0oovBSQg/viewform',
       INTEGRATION_BUG_REPORT_URL: 'https://support.code.org/hc/en-us/requests/new?ticket_form_id=14998494738829&tf_23889708=lms_eaf',
       ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
+      # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation
+      SUPPORTED_METHODS_URL: 'https://github.com/code-dot-org/code-dot-org/blob/staging/docs/lti-integration.md#option-2-manual-entry',
     }
   ).freeze
 

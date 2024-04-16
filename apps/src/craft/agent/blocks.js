@@ -1,6 +1,8 @@
-var i18n = require('../locale');
-import {blockTypesToDropdownOptions} from '../utils';
 import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
+
+import {blockTypesToDropdownOptions} from '../utils';
+
+var i18n = require('../locale');
 
 var allBlocks = [
   'bedrock',

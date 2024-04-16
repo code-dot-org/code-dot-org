@@ -22,6 +22,7 @@ export async function postAichatCompletionMessage(
   chatContext: ChatContext
 ) {
   const aichatParameters: AichatParameters = {
+    selectedModelId: aiCustomizations.selectedModelId,
     temperature: aiCustomizations.temperature,
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
