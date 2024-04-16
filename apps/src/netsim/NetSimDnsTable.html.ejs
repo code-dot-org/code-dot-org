@@ -1,6 +1,13 @@
 <%
 var DnsMode = require('./NetSimConstants').DnsMode;
 %>
+<%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var dnsMode = locals.dnsMode;
+var tableData = locals.tableData;
+%>
 <div class="netsim-dns-table">
   <h1>My Network</h1>
   <table>
