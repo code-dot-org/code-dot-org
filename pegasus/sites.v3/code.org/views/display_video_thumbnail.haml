@@ -2,6 +2,7 @@
 - twitter ||= nil
 - download_filename ||= nil
 - download_path ||= nil
+- poster_path ||= nil
 - caption ||= nil
 - width ||= '100%'
 - play_button ||= 'center' # 'center' or 'caption' or 'none'
@@ -115,4 +116,4 @@
     .video_caption_link= caption
 
 - unless thumbnail_only
-  = view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path
+  = view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path, poster_path: poster_path

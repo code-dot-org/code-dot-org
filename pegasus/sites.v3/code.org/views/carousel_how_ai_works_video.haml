@@ -8,7 +8,7 @@
     - video_ai_index.times do |index|
       %swiper-slide
         %figure
-          = view :video_with_fallback, video_code: video_code[index], download_path: video_download_path[index]
+          = view :video_with_fallback, video_code: video_code[index], download_path: video_download_path[index], poster_path: "/images/ai/ai-bg.png"
           %figcaption.no-margin-bottom
             = video_caption[index]
 
