@@ -13,9 +13,8 @@ import CheckboxDropdown, {
 } from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import UnitSelectorV2 from '@cdo/apps/templates/UnitSelectorV2';
-import {Unit} from 'tone';
-import Heading6 from '@cdo/apps/componentLibrary/typography';
 import {useSelector} from 'react-redux';
+import Button from '@cdo/apps/templates/Button';
 
 type StatusLabels = {
   [key in AITutorInteractionStatusValue]: string;
@@ -66,6 +65,8 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   const scriptId = useSelector(
     (state: {unitSelection: {scriptId: number}}) => state.unitSelection.scriptId
   );
+
+  //TODO for Ken update for lesson and level ID
 
   useEffect(() => {
     (async () => {
@@ -154,11 +155,41 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
     value: status,
   }));
 
+  // Define the number of items per page
+  const itemsPerPage = 10;
+
+  // Initialize state for the current page
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(filteredChatMessages.length / itemsPerPage);
+
+  // Get the items for the current page
+  const currentItems = filteredChatMessages.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
   return (
     <div>
       <h3>Select Unit</h3>
+      <div className={style.filterDropdowns}>
+        <UnitSelectorV2 />
+        {/* Need to update <CheckboxDropdown
+          allOptions={lessonOptions}
+          checkedOptions={selectedStatuses}
+          color="black"
+          labelText="Filter by Status"
+          name="filter-statuses"
+          onChange={handleStatusFilterChange}
+          onClearAll={() => setSelectedStatuses([])}
+          onSelectAll={() =>
+            setSelectedStatuses(Object.values(AITutorInteractionStatus))
+          }
+          size="s"
+        /> */}
+      </div>
 
-      <UnitSelectorV2 />
       <div className={style.filterDropdowns}>
         <CheckboxDropdown
           allOptions={statusOptions}
@@ -235,7 +266,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
               <td colSpan={4}>No chat messages found.</td>
             </tr>
           ) : (
-            filteredChatMessages.map(chatMessage => (
+            currentItems.map(chatMessage => (
               <InteractionsTableRow
                 key={chatMessage.id}
                 chatMessage={chatMessage}
@@ -244,6 +275,22 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           )}
         </tbody>
       </table>
+      <div>
+        <Button
+          color={Button.ButtonColor.brandSecondaryDefault}
+          disabled={currentPage === 1}
+          onClick={() => setCurrentPage(currentPage - 1)}
+        >
+          Previous
+        </Button>
+        <Button
+          color={Button.ButtonColor.brandSecondaryDefault}
+          disabled={currentPage === totalPages}
+          onClick={() => setCurrentPage(currentPage + 1)}
+        >
+          Next
+        </Button>
+      </div>
     </div>
   );
 };
