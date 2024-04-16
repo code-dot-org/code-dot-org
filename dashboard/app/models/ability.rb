@@ -466,8 +466,8 @@ class Ability
       end
 
       if user.has_pilot_experiment?(GENAI_PILOT) ||
-        (!user.teachers.empty? && 
-        user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
+          (!user.teachers.empty? &&
+          user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
         can :chat_completion, :aichat
       end
     end
