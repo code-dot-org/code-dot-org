@@ -35,7 +35,8 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "supported_locales": [
-        "it-IT"
+        "it-IT",
+        "az-AZ"
       ],
       "tts": true,
       "version_year": "2022",
@@ -43,7 +44,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-31 17:37:42 UTC",
+    "serialized_at": "2024-04-15 20:56:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
