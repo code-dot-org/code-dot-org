@@ -46,7 +46,7 @@ class DatablockStorageTable < ApplicationRecord
   class StudentFacingError < StandardError
     attr_reader :type
 
-    def initialize(type=nil)
+    def initialize(type = nil)
       super
       @type = type
     end
