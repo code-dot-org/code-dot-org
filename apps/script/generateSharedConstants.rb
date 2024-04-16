@@ -105,6 +105,8 @@ def main
     USER_TYPES
   )
 
+  # please place all generated scripts into #{REPO_DIR}/apps/generated_scripts
+  # then import with import { needed } from "@cdo/generated-scripts/generatedFile"
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/generated-scripts/sharedConstants.js")
   generate_shared_js_file(generate_constants('VOICES'), "#{REPO_DIR}/apps/generated-scripts/sharedVoices.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedApplabBlocks.js")
