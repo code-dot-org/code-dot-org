@@ -9,6 +9,7 @@ class AichatControllerTest < ActionController::TestCase
     @pilot_teacher = create :teacher, pilot_experiment: GENAI_PILOT
     @section = create(:section, user: @pilot_teacher)
     @pilot_student = create(:follower, section: @section).student_user
+    ShareFiltering.stubs(:find_failure).returns(nil)
   end
 
   test_user_gets_response_for :chat_completion,
@@ -49,5 +50,33 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@pilot_teacher)
     post :chat_completion, params: {newMessage: "hello"}
     assert_response :bad_request
+  end
+
+  # Post request with a profane messages param returns a failure
+  test 'returns failure when chat message contains profanity' do
+    sign_in(@pilot_student)
+    ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
+    post :chat_completion, params: {
+      newMessage: "Damn you, robot",
+      storedMessages: [{role: "user", content: "this is a test!"}],
+      aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
+      chatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
+    }
+    assert_equal json_response["status"], ShareFiltering::FailureType::PROFANITY
+    assert_equal json_response["flagged_content"], "damn"
+  end
+
+  # Post request with a messages param containing PII returns a failure
+  test 'returns failure when chat message contains PII' do
+    sign_in(@pilot_student)
+    ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'l.lovepadel@sports.edu'))
+    post :chat_completion, params: {
+      newMessage: "hello",
+      storedMessages: [{role: "user", content: "my email is l.lovepadel@sports.edu"}],
+      aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
+      chatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
+    }
+    assert_equal json_response["status"], ShareFiltering::FailureType::EMAIL
+    assert_equal json_response["flagged_content"], "l.lovepadel@sports.edu"
   end
 end
