@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
   include Pd::Application::ActiveApplicationModels
 
-  GENAI_PILOT = 'genai-pilot'
+  GENAI_PILOT = 'gen-ai-customizing-llms'
 
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
