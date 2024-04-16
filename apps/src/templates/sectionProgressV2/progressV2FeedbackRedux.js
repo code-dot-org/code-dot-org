@@ -1,7 +1,7 @@
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 const PROGRESS_V2_FEEDBACK_URL = '/new_feature_feedback';
-const progressV2FeedbackKey = 'progress_v2';
+const PROGRESS_V2_FEEDBACK_KEY = 'progress_v2';
 const PROGRESS_V2_FEEDBACK_FETCH_REQUEST = 'progressv2/feedback/fetchRequest';
 const PROGRESS_V2_FEEDBACK_FETCH_SUCCESS = 'progressv2/feedback/fetchSuccess';
 const PROGRESS_V2_FEEDBACK_FETCH_FAILURE = 'progressv2/feedback/fetchFailure';
@@ -16,24 +16,17 @@ const initialState = {
 
 export default function progressV2Feedback(state = initialState, action) {
   switch (action.type) {
+    case PROGRESS_V2_FEEDBACK_CREATE_REQUEST:
     case PROGRESS_V2_FEEDBACK_FETCH_REQUEST:
       return {...state, isLoading: true};
     case PROGRESS_V2_FEEDBACK_FETCH_SUCCESS:
-      return {
-        ...state,
-        isLoading: false,
-        progressV2Feedback: action.progressV2Feedback,
-      };
-    case PROGRESS_V2_FEEDBACK_FETCH_FAILURE:
-      return {...state, isLoading: false, error: action.error};
-    case PROGRESS_V2_FEEDBACK_CREATE_REQUEST:
-      return {...state, isLoading: true};
     case PROGRESS_V2_FEEDBACK_CREATE_SUCCESS:
       return {
         ...state,
         isLoading: false,
         progressv2Feedback: action.progressV2Feedback,
       };
+    case PROGRESS_V2_FEEDBACK_FETCH_FAILURE:
     case PROGRESS_V2_FEEDBACK_CREATE_FAILURE:
       return {...state, isLoading: false, error: action.error};
     default:
@@ -44,7 +37,7 @@ export default function progressV2Feedback(state = initialState, action) {
 export const fetchProgressV2Feedback = () => dispatch => {
   dispatch({type: PROGRESS_V2_FEEDBACK_FETCH_REQUEST});
 
-  const url = `${PROGRESS_V2_FEEDBACK_URL}?form_key=${progressV2FeedbackKey}`;
+  const url = `${PROGRESS_V2_FEEDBACK_URL}?form_key=${PROGRESS_V2_FEEDBACK_KEY}`;
 
   fetch(url, {
     method: 'GET',
@@ -82,7 +75,7 @@ export const createProgressV2Feedback = satisfied => async dispatch => {
     },
     body: JSON.stringify({
       feedback: {
-        form_key: progressV2FeedbackKey,
+        form_key: PROGRESS_V2_FEEDBACK_KEY,
         satisfied,
       },
     }),
