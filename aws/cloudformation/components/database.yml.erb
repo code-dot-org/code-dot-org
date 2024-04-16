@@ -221,12 +221,7 @@
               -
                 Effect: Allow
                 Action: secretsmanager:GetSecretValue
-                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/${AWS::StackName}/db_credential_engineer_*"
-              # The admin SQL user is not permitted to login via RDS Proxy.
-              -
-                Effect: Deny
-                Action: secretsmanager:GetSecretValue
-                Resource: !Ref DatabaseSecretAdmin
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/${AWS::StackName}/db_credential_employee_*"
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   ReportingDBProxy:
     Type: AWS::RDS::DBProxy
