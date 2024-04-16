@@ -15,6 +15,9 @@ export function applyPatches(originalCode: string) {
   return finalCode;
 }
 
+// Pyodide uses the same interpreter for the lifetime of the browser tab.
+// In order to ensure we get updated user code for each run, we delete the
+// modules created by the user code from the sys.modules cache.
 export function deleteCachedUserModules(
   source: MultiFileSource,
   excludedFileName: string
@@ -32,21 +35,21 @@ if "${filePath}" in sys.modules:
   return result;
 }
 
-// Write all sources to the Pyodide file system.
+// Write source to the Pyodide file system.
 // This enables python files to import from other files in the project.
-export function writeSources(
-  sources: MultiFileSource,
+export function writeSource(
+  source: MultiFileSource,
   currentFolderId: string,
   currentPath: string,
   pyodide: PyodideInterface
 ) {
   // Find all files in this folder and write them.
-  Object.values(sources.files)
+  Object.values(source.files)
     .filter(f => f.folderId === currentFolderId)
     .forEach(file => {
       pyodide.FS.writeFile(`${currentPath}${file.name}`, file.contents);
     });
-  Object.values(sources.folders)
+  Object.values(source.folders)
     .filter(f => f.parentId === currentFolderId)
     .forEach(folder => {
       // Create folder if it doesn't exist.
@@ -61,19 +64,19 @@ export function writeSources(
         pyodide.FS.mkdir(newPath);
       }
       // Recurse to write all children of the folder (files and folders).
-      writeSources(sources, folder.id, newPath + '/', pyodide);
+      writeSource(source, folder.id, newPath + '/', pyodide);
     });
 }
 
 // Remove all source files from the Pyodide file system.
 // This ensures any deleted file is not available to be imported,
 // which could cause confusion.
-export function clearSources(
+export function deleteSourceFiles(
   pyodide: PyodideInterface,
-  sources: MultiFileSource
+  source: MultiFileSource
 ) {
-  Object.values(sources.files).forEach(file => {
-    const filePath = getFilePath(file.id, sources);
+  Object.values(source.files).forEach(file => {
+    const filePath = getFilePath(file.id, source);
     try {
       pyodide.FS.unlink(filePath);
     } catch (e) {

@@ -9,6 +9,7 @@ import {
   appendSystemMessage,
   appendSystemOutMessage,
 } from './pythonlabRedux';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
@@ -47,7 +48,7 @@ const asyncRun = (() => {
       callbacks[id] = onSuccess;
       let wrappedScript = applyPatches(script);
       wrappedScript =
-        wrappedScript + deleteCachedUserModules(sources, 'main.py');
+        wrappedScript + deleteCachedUserModules(sources, MAIN_PYTHON_FILE);
       const messageData = {
         python: wrappedScript,
         id,

@@ -2,15 +2,16 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
-import Editor from '../weblab2/CDOIDE/CenterPane/Editor';
+import Editor from '@cdo/apps/weblab2/CDOIDE/CenterPane/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
-import {CDOIDE} from '../weblab2/CDOIDE';
-import {MultiFileSource} from '../lab2/types';
+import {CDOIDE} from '@cdo/apps/weblab2/CDOIDE';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '../lab2/Lab2Registry';
-import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setSource} from './pythonlabRedux';
 import PythonConsole from './PythonConsole';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -20,7 +21,7 @@ const defaultProject: MultiFileSource = {
   files: {
     '0': {
       id: '0',
-      name: 'main.py',
+      name: MAIN_PYTHON_FILE,
       language: 'py',
       contents: 'print("Hello world!")',
       folderId: '1',

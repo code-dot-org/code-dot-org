@@ -7,6 +7,7 @@ import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 interface PermissionResponse {
   permissions: string[];
@@ -25,14 +26,16 @@ const PythonConsole: React.FunctionComponent = () => {
       dispatch(appendSystemMessage('Running program...'));
       let mainFound = false;
       if (source) {
-        const code = getFileByName(source.files, 'main.py')?.contents;
+        const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
         if (code) {
           mainFound = true;
           runPythonCode(code, source);
         }
       }
       if (!mainFound) {
-        dispatch(appendSystemMessage('You have no main.py to run.'));
+        dispatch(
+          appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`)
+        );
       }
     } else {
       dispatch(
