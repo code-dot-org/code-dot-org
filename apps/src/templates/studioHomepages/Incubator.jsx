@@ -6,7 +6,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import Button from '@cdo/apps/templates/Button';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import {LmsLinks} from '@cdo/apps/util/sharedConstants';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import HeaderBanner from '../HeaderBanner';

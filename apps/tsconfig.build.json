@@ -29,7 +29,7 @@
       "@cdo/static/*": ["./static/*"],
       "@cdo/i18n/*": ["./i18n/*"],
       "@cdoide/*": ["./src/weblab2/CDOIDE/*"],
-      "@cdo/generated-scripts/*": ["./src/generated-scripts/*"]
+      "@cdo/generated-scripts/*": ["./generated-scripts/*"]
     },
     "resolveJsonModule": true,
     "incremental": true,

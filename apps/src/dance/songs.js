@@ -1,6 +1,6 @@
 import Sounds from '../Sounds';
 import {ageDialogSelectedOver13, songFilterOn} from '../templates/AgeDialog';
-import {DanceSongManifestFilename} from '../util/sharedConstants';
+import {DanceSongManifestFilename} from '@cdo/generated-scripts/sharedConstants';
 import {fetchSignedCookies} from '../utils';
 
 const DEPRECATED_SONGS = [

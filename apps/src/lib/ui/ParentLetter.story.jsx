@@ -1,6 +1,6 @@
 import React from 'react';
 import {UnconnectedParentLetter as ParentLetter} from './ParentLetter';
-import {SectionLoginType} from '../../util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import wizardPng from '../../../static/skins/studio/wizard_thumb.png';
 
 const sampleSection = {

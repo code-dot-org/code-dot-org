@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Button from '../Button';

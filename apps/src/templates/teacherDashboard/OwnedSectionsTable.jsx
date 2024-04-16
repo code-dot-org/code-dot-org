@@ -12,7 +12,7 @@ import color from '@cdo/apps/util/color';
 import {
   StudentGradeLevels,
   SectionLoginType,
-} from '@cdo/apps/util/sharedConstants';
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {stringifyQueryParams} from '../../utils';

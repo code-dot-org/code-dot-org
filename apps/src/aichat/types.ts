@@ -1,5 +1,5 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {PiiTypes as PII} from '@cdo/apps/util/sharedConstants';
+import {PiiTypes as PII} from '@cdo/generated-scripts/sharedConstants';
 
 export {PII};
 
