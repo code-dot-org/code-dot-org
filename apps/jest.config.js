@@ -220,6 +220,7 @@ const config = {
       {extends: './babel.config.json', exclude: ['\\.ejs']},
     ],
     '^.+\\.scss$': '<rootDir>/test/jest-scss.transformer.js',
+    '\\.(ejs)$': '<rootDir>/test/jest-ejs.transformer.js',
     '^.+\\.tsx?$': [
       'ts-jest',
       {
