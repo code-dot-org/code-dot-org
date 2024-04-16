@@ -247,12 +247,16 @@ export default function LtiSectionSyncDialog({
             labelText={i18n.ltiSectionSyncDialogHeaderPrimaryInstructor()}
             isLabelVisible={false}
             size={'xs'}
-            onChange={e =>
+            onChange={e => {
+              e.persist();
               setSectionOwners(owners => ({
                 ...owners,
-                [section.lti_section_id]: parseInt(e.target.value, 10),
-              }))
-            }
+                [section.lti_section_id.toString()]: parseInt(
+                  e.target.value,
+                  10
+                ),
+              }));
+            }}
           />
         </td>
         <td style={styles.tableCellNumber}>{section.size}</td>
