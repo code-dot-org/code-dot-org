@@ -55,11 +55,7 @@ module Cdo
     # Optimizes image content.
     def self.optimize_image(data)
       # Skip image optimization if image is too big.
-      pixels = begin
-        ImageSize.new(data).size.inject(&:*)
-      rescue
-        0
-      end
+      pixels = ImageSize.new(data).size.inject(&:*) rescue 0
       if pixels > DCDO.get('image_optim_pixel_max', IMAGE_OPTIM_PIXEL_MAX)
         return data
       end

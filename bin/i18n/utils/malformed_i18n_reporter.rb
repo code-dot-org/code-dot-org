@@ -30,11 +30,7 @@ module I18n
       def process_file(i18n_file_path)
         return unless File.exist?(i18n_file_path)
 
-        translations = begin
-          I18nScriptUtils.parse_file(i18n_file_path)
-        rescue
-          nil
-        end
+        translations = I18nScriptUtils.parse_file(i18n_file_path) rescue nil
         return unless translations
 
         collect_malformed_translations(locale, i18n_file_path, translations)

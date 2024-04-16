@@ -31,11 +31,7 @@ class AddRelativePositionToStages < ActiveRecord::Migration[4.2]
   rescue
     # If an exception occurs, back out of this migration, but ignore any
     # exceptions generated there. Do the best you can.
-    begin
-      down
-    rescue
-      nil
-    end
+    down rescue nil
 
     # Re-raise this exception for diagnostic purposes.
     raise

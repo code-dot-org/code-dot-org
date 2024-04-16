@@ -113,11 +113,7 @@ class I18nStringUrlTracker
         # raise error if translation is missing
         raise: true
       }
-      source_string = begin
-        I18n.t(string_key, **options)
-      rescue
-        nil
-      end
+      source_string = I18n.t(string_key, **options) rescue nil
       !source_string.nil?
     end
   end
