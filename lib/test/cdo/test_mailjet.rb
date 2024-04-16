@@ -7,7 +7,7 @@ class MailJetTest < Minitest::Test
   end
 
   def test_create_contact
-    email = 'fake.email@email.com'
+    email = 'fake.email@test.xx'
     name = 'Fake Name'
 
     Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: true, email: email, name: name)
@@ -22,7 +22,7 @@ class MailJetTest < Minitest::Test
   end
 
   def test_create_contact_with_existing_contact
-    email = 'fake.email@email.com'
+    email = 'fake.email@test.xx'
     name = 'Fake Name'
 
     mock_existing_contact = mock('Mailjet::Contactdata')
@@ -38,7 +38,7 @@ class MailJetTest < Minitest::Test
   end
 
   def test_send_template_email
-    to_email = 'fake.email@email.com'
+    to_email = 'fake.email@test.xx'
     to_name = 'Fake Name'
     from_address = 'test@code.org'
     from_name = 'Test Name'
@@ -66,5 +66,32 @@ class MailJetTest < Minitest::Test
     end
 
     MailJet.send_template_email(to_email, to_name, email_config)
+  end
+
+  def test_deletes_contact
+    email = 'fake.email@test.xx'
+
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:id).returns(123)
+    Mailjet::Contact.expects(:find).with(email).returns(mock_contact)
+
+    mock_http_request = mock('Net::HTTP::Delete')
+    Net::HTTP::Delete.expects(:new).with(URI.parse("https://api.mailjet.com/v4/contacts/#{mock_contact.id}")).returns(mock_http_request)
+    mock_http_request.expects(:basic_auth).once
+
+    Net::HTTP.any_instance.expects(:request).with(mock_http_request)
+
+    MailJet.delete_contact(email)
+  end
+
+  def test_deletes_handles_nonexistent_contact
+    email = 'fake.email@test.xx'
+
+    Mailjet::Contact.expects(:find).with(email).returns(nil)
+
+    Net::HTTP::Delete.expects(:new).never
+    Net::HTTP.any_instance.expects(:request).never
+
+    MailJet.delete_contact(email)
   end
 end

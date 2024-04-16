@@ -953,7 +953,7 @@ ActiveRecord::Schema.define(version: 2024_04_15_232100) do
     t.float "value", null: false
   end
 
-  create_table "new_feature_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "new_feature_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "form_key", null: false
     t.boolean "satisfied", null: false
@@ -1859,7 +1859,9 @@ ActiveRecord::Schema.define(version: 2024_04_15_232100) do
     t.decimal "longitude", precision: 9, scale: 6, comment: "Location longitude"
     t.string "school_category"
     t.string "last_known_school_year_open", limit: 9
+    t.boolean "is_current"
     t.index ["id"], name: "index_schools_on_id", unique: true
+    t.index ["is_current"], name: "index_schools_on_is_current"
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
