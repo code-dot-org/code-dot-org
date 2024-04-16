@@ -5799,6 +5799,14 @@ columns:
     collation: utf8_unicode_ci
     comment:
   - *114
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: is_current
+    sql_type_metadata: *7
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
   script_levels:
   - *5
   - *31
@@ -12075,6 +12083,19 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: schools
+    name: index_schools_on_is_current
+    unique: false
+    columns:
+    - is_current
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: schools
     name: index_schools_on_name_and_city
     unique: false
     columns:
@@ -13353,7 +13374,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240412134643
+version: 20240416200438
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
