@@ -30,7 +30,7 @@ const getAvailableTabs = permissions => {
   let tabs = [
     {
       value: 'myPL',
-      text: i18n.plLandingHeading(),
+      text: i18n.professionalLearning(),
     },
   ];
 
