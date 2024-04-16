@@ -285,6 +285,8 @@ class User < ApplicationRecord
     Services::Lti.create_lti_user_identity(self)
   end
 
+  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
+
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
@@ -1492,6 +1494,10 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
+  def verify_teacher!
+    self.permission = UserPermission::AUTHORIZED_TEACHER
+  end
+
   # This method just checks if a user has the authorized teacher permission
   # if you are hoping to know if someone can access content for verified instructors
   # you should use the verified_instructor? method instead which includes checks for a
@@ -1571,7 +1577,11 @@ class User < ApplicationRecord
 
   def age=(val)
     @age = val
-    val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
+    val = begin
+      val.to_i
+    rescue
+      0 # sometimes we get age: {"Pr" => nil}
+    end
     return unless val > 0
     return unless val < 200
     return if birthday && val == age # don't change birthday if we want to stay the same age

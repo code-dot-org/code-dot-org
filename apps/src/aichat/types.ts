@@ -1,21 +1,30 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {
-  AiTutorInteractionStatus as AITutorInteractionStatus,
-  PiiTypes as PII,
-} from '@cdo/apps/util/sharedConstants';
+import {PiiTypes as PII} from '@cdo/apps/util/sharedConstants';
 
-// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
-export type AITutorInteractionStatusType = string;
-
-export {PII, AITutorInteractionStatus};
+export {PII};
 
 export type ChatCompletionMessage = {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: AITutorInteractionStatusType;
+  status: AichatInteractionStatus;
   timestamp?: string;
 };
+
+export type ChatContext = {
+  userId: number;
+  currentLevelId: string | null;
+  scriptId: number | null;
+  channelId: string | undefined;
+};
+
+export enum AichatInteractionStatus {
+  ERROR = 'error',
+  PII_VIOLATION = 'pii_violation',
+  PROFANITY_VIOLATION = 'profanity_violation',
+  OK = 'ok',
+  UNKNOWN = 'unknown',
+}
 
 export enum Role {
   ASSISTANT = 'assistant',
@@ -55,6 +64,8 @@ export interface AiCustomizations {
   retrievalContexts: string[];
   modelCardInfo: ModelCardInfo;
 }
+
+export type AichatParameters = Omit<AiCustomizations, 'modelCardInfo'>;
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {

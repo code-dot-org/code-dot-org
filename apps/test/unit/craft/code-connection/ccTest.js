@@ -1,7 +1,9 @@
-import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
+
 import {executeUserCode} from '@cdo/apps/craft/code-connection/craft';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Code Connection extension', () => {
   beforeEach(() => {

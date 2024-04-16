@@ -21,6 +21,12 @@ export interface CheckboxOption {
   isOptionDisabled?: boolean;
 }
 
+export interface CheckboxOption {
+  value: string;
+  label: string;
+  isOptionDisabled?: boolean;
+}
+
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */

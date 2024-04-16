@@ -1,8 +1,7 @@
-export const CHAT_COMPLETION_URL = '/openai/chat_completion';
 import {
   ChatCompletionMessage,
   Role,
-  AITutorInteractionStatus as Status,
+  AichatInteractionStatus as Status,
   ModelDescription,
 } from './types';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';

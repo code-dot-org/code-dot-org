@@ -11,14 +11,16 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {modelDescriptions} from '../../constants';
 
 const PresentationView: React.FunctionComponent = () => {
-  const currentAiCustomizations = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+  const savedAiCustomizations = useAppSelector(
+    state => state.aichat.savedAiCustomizations
   );
   const {selectedModelId, systemPrompt, temperature, retrievalContexts} =
-    currentAiCustomizations;
-  const modelCardInfo = currentAiCustomizations.modelCardInfo;
-  const {name: modelName = '', trainingData = ''} =
-    modelDescriptions.find(model => model.id === selectedModelId) ?? {};
+    savedAiCustomizations;
+  const modelCardInfo = savedAiCustomizations.modelCardInfo;
+
+  // These are temporary constants. They will be retrieved from s3.
+  const EXAMPLE_MODEL_NAME = 'Model A';
+  const EXAMPLE_MODEL_TRAINING_DATA = 'Model A Training Data';
 
   const technicalInfo = useMemo(() => {
     const technicalInfoData: {
@@ -54,18 +56,18 @@ const PresentationView: React.FunctionComponent = () => {
           }
           return (
             <ModelCardRow
-              keyName={property}
               title={label}
               titleIcon={iconName}
               expandedContent={modelCardInfo[property]}
+              key={property}
             />
           );
         })}
         <ModelCardRow
-          keyName="technicalInfo"
           title="Technical Info"
           titleIcon="screwdriver-wrench"
           expandedContent={technicalInfo}
+          key="technicalInfo"
         />
       </div>
     </div>
