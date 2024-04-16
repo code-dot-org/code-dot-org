@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2024-04-08 21:58:54 UTC",
+    "serialized_at": "2024-04-11 23:09:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1334,7 +1334,7 @@
       "key": "09bc3af5-14e9-4f84-9da0-dde6fae8ea51",
       "position": 2,
       "properties": {
-        "description": "**Display:** Display the image below so that everyone can see it.\n\n![expandable](https://curriculum.code.org/media/uploads/Screenshot-2018-04-17-19.48.23.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n\n- Start at the compass rose\n- Follow the instructions step-by-step\n- End at the treasure\n\n(*Optional:*  Walk through your program using your fingers on top of the map, under the document camera.  Express frustration when your fingers end up off the map, instead of at the treasure.)\n\n**Think:** _My program says \"East, East, North\"._ *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
+        "description": "**Display:** Display the image below so that everyone can see it.\n\n![expandable](https://images.code.org/4ae475692eb39eb32cb158273834fe94-Screenshot 2024-04-11 at 4.51.33 PM.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working. You want to walk to your desk but your program has a bug. Can your students help you fix it?\n\nTake a moment to walk them through the rules:\n\n- Start at the compass rose\n- Follow the instructions step-by-step\n- End at the desk\n\n**Do This:** Before students give you any instructions, ask them to describe the **goal** of the program (\"Walk from the starting point to the desk\") and the **expected outcome** (\"Arrive at the desk\"). Remind students that it is good practice to articulate the goal and outcome of the programs they will create before beginning to write their algorithms.    \n\n(*Optional:*  Walk through your program using your fingers on top of the map, under the document camera.  Express frustration when your fingers end up off the map, instead of at the treasure.)\n\n**Think:** _My program says \"East, East, North\"._ *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
       },
       "seeding_key": {
         "activity_section.key": "09bc3af5-14e9-4f84-9da0-dde6fae8ea51",
@@ -1926,7 +1926,7 @@
       "key": "8de6dfb9-9222-4eb2-a5d1-6e20266a0d93",
       "position": 1,
       "properties": {
-        "description": "**Model:** Ask for a volunteer and have them stand.\n\n- Instruct your volunteer to walk around the table (or their chair, or a friend).\n- When they finish, instruct them to do it again, using the exact same words you did before.\n- When they finish, instruct again.\n- Then again.\n\n**Prompt:** _Would it have been easier for me to just ask you to go around the table four times?_ \n\n**Think:** _What if I wanted you to do it ten times? How would you reword my instructions so that they were more efficient and I didn't have to repeat myself so much? Feel free to write your instructions down on a piece of scrap paper._\n\n**Share:** Ask a few students to share their instructions with the class, pointing out how each approach has simplified the overall approach to giving instructions.",
+        "description": "**Model:** Ask for a volunteer and have them stand.\n\n- Instruct your volunteer to walk around the table (or their chair, or a friend).\n- When they finish, instruct them to do it again, using the exact same words you did before.\n- When they finish, instruct again.\n- Then again.\n\n**Prompt:** _Would it have been easier for me to just ask you to go around the table four times?_ \n\n**Think:** \n- _What if I wanted you to do it ten times?_ \n- _How would you reword my instructions so that they were more efficient and I didn't have to repeat myself so much?_ \n\nFeel free to write your instructions down on a piece of scrap paper.\n\n**Share:** Ask a few students to share their instructions with the class, pointing out how each approach has simplified the overall approach to giving instructions.",
         "name": "Repeat After Me\r"
       },
       "seeding_key": {
@@ -2643,7 +2643,7 @@
       "key": "b9da5453-84fd-4933-92ef-c014ac09abe6",
       "position": 2,
       "properties": {
-        "description": "**Discuss**: Prepare students for today's activity by recalling previous work they have done. \n\n- Do you remember helping _Angry Bird_ find the pig?\n\t- In that exercise, you knew in advance exactly where you wanted Red to end up, so you could make a program that took the bird from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\n**Say**: _In earlier lessons, we created algorithms that allowed us to control a friend or bird for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!_\n\n\n**Directions:**\n\n- Project the ***Controller Image** onto your classroom screen.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
+        "description": "**Discuss**: Prepare students for today's activity by recalling previous work they have done. \n\n- Do you remember helping _Angry Bird_ find the pig?\n\t- In that exercise, you knew in advance exactly where you wanted Red to end up, so you could make a program that took the bird from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\n**Say**: _In earlier lessons, we created algorithms that allowed us to control a friend or bird for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!_\n\n\n**Directions:**\n\n- Project the ***Controller Image** onto your classroom screen.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
       },
       "seeding_key": {
         "activity_section.key": "b9da5453-84fd-4933-92ef-c014ac09abe6",
@@ -7567,6 +7567,12 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing Gardens with Loops",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
         "vocabulary.key": "loop"
       }
     },
@@ -7591,6 +7597,12 @@
     {
       "seeding_key": {
         "lesson.key": "Loops with Harvester",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Harvester",
         "vocabulary.key": "loop"
       }
     },
@@ -7598,6 +7610,12 @@
       "seeding_key": {
         "lesson.key": "Loops with Harvester",
         "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "vocabulary.key": "debugging"
       }
     },
     {
@@ -7717,6 +7735,12 @@
     {
       "seeding_key": {
         "lesson.key": "The Big Event Jr",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Big Event Jr",
         "vocabulary.key": "event"
       }
     }
@@ -7756,6 +7780,16 @@
       }
     },
     {
+      "key": "2463f52a-9012-433a-b9ff-e9bcc9e395b4",
+      "properties": {
+        "description": "Give examples of being responsible sharing information online."
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "objective.key": "2463f52a-9012-433a-b9ff-e9bcc9e395b4"
+      }
+    },
+    {
       "key": "2d256abd-d6bc-4f7a-bff6-d29502bac24b",
       "properties": {
         "description": "Decompose a shape into its largest repeatable sequence."
@@ -7773,6 +7807,16 @@
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
         "objective.key": "35afcbd0-e928-4e25-a812-2bf9592acd48"
+      }
+    },
+    {
+      "key": "388de265-234a-4eb3-913b-296738a93304",
+      "properties": {
+        "description": "Identify bugs in an existing program and assess how to correct them."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
+        "objective.key": "388de265-234a-4eb3-913b-296738a93304"
       }
     },
     {
@@ -7886,6 +7930,16 @@
       }
     },
     {
+      "key": "6bbfb123-086c-4faf-b8c1-99fa69d1f168",
+      "properties": {
+        "description": "Identify bugs in an existing program and assess how to correct them."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Harvester",
+        "objective.key": "6bbfb123-086c-4faf-b8c1-99fa69d1f168"
+      }
+    },
+    {
       "key": "736c7982-4e56-4aeb-8922-24e07ab0bd0a",
       "properties": {
         "description": "Identify actions that correlate to input events."
@@ -7936,6 +7990,16 @@
       }
     },
     {
+      "key": "b8f4248a-e962-4132-b417-233fcdf93612",
+      "properties": {
+        "description": "Determine a sequence of movements necessary to solve a puzzle."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Harvester",
+        "objective.key": "b8f4248a-e962-4132-b417-233fcdf93612"
+      }
+    },
+    {
       "key": "b937c374-0e28-4975-a553-05ac75a39dc8",
       "properties": {
         "description": "Recommend technology to others based on their unique needs. "
@@ -7983,6 +8047,16 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: A Royal Battle with Events",
         "objective.key": "ce5a8002-04b9-4592-8c51-deda92626191"
+      }
+    },
+    {
+      "key": "d4dd01b8-c623-4ec1-b71d-74d82b2ed160",
+      "properties": {
+        "description": "Identify how to debug a program so that it will solve a puzzle."
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "objective.key": "d4dd01b8-c623-4ec1-b71d-74d82b2ed160"
       }
     },
     {
@@ -8081,13 +8155,6 @@
       "seeding_key": {
         "lesson.key": "Digital Trails",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-IC-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Digital Trails",
-        "framework.shortcode": "csta",
         "standard.shortcode": "1A-IC-17"
       }
     },
@@ -8138,6 +8205,13 @@
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-08"
       }
     },
     {

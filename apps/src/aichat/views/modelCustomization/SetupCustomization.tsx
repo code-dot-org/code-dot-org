@@ -41,12 +41,7 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const renderChooseAndCompareModels = () => {
     return (
-      <div
-        className={classNames(
-          styles.inputContainer,
-          styles.fullWidthDropdownContainer
-        )}
-      >
+      <div className={styles.inputContainer}>
         <SimpleDropdown
           labelText="Selected model:"
           onChange={e => setChosenModel(e.target.value)}
@@ -63,7 +58,10 @@ const SetupCustomization: React.FunctionComponent = () => {
           text="Compare Models"
           onClick={() => setIsShowingModelDialog(true)}
           type="secondary"
-          className={styles.updateButton}
+          className={classNames(
+            styles.updateButton,
+            styles.compareModelsButton
+          )}
         />
         {isShowingModelDialog && (
           <CompareModelsDialog onClose={() => setIsShowingModelDialog(false)} />

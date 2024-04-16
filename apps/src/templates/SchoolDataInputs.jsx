@@ -29,8 +29,16 @@ export default function SchoolDataInputs({
   const [country, setCountry] = useState('');
   const [zipSearchReady, setZipSearchReady] = useState(false);
 
-  let COUNTRY_ITEMS = [{value: 'selectCountry', text: i18n.selectCountry()}];
-  for (const item of Object.values(COUNTRIES)) {
+  // Add 'Select a country' and 'United States' to the top of the country list
+  let COUNTRY_ITEMS = [
+    {value: 'selectCountry', text: i18n.selectCountry()},
+    {value: 'US', text: i18n.unitedStates()},
+  ];
+  // Pull in the rest of the countries after/below
+  const nonUsCountries = Object.values(COUNTRIES).filter(
+    item => item.label !== 'US'
+  );
+  for (const item of nonUsCountries) {
     COUNTRY_ITEMS.push({value: item.label, text: item.value});
   }
 
@@ -82,6 +90,7 @@ export default function SchoolDataInputs({
           {i18n.whatCountry()}
         </BodyTwoText>
         <SimpleDropdown
+          id="uitest-country-dropdown"
           className={style.dropdown}
           name={fieldNames.country}
           items={COUNTRY_ITEMS}
@@ -90,40 +99,42 @@ export default function SchoolDataInputs({
           size="m"
         />
         {askForZip && (
-          <label>
-            <BodyTwoText
-              className={style.padding}
-              visualAppearance={'heading-xs'}
-            >
-              {i18n.enterYourSchoolZip()}
-            </BodyTwoText>
-            <input
-              type="text"
-              name={fieldNames.schoolZip}
-              onChange={e => {
-                setZip(e.target.value);
+          <div>
+            <label>
+              <BodyTwoText
+                className={style.padding}
+                visualAppearance={'heading-xs'}
+              >
+                {i18n.enterYourSchoolZip()}
+              </BodyTwoText>
+              <input
+                id="uitest-school-zip"
+                type="text"
+                name={fieldNames.schoolZip}
+                onChange={e => {
+                  setZip(e.target.value);
+                }}
+                value={zip}
+              />
+              {zip && !zipSearchReady && (
+                <BodyThreeText>{i18n.zipInvalidMessage()}</BodyThreeText>
+              )}
+            </label>
+            <SchoolZipSearch
+              fieldNames={{
+                ncesSchoolId: fieldNames.ncesSchoolId,
+                schoolName: fieldNames.schoolName,
               }}
-              value={zip}
+              zip={zip}
+              disabled={!zipSearchReady}
             />
-            {zip && !zipSearchReady && (
-              <BodyThreeText>{i18n.zipInvalidMessage()}</BodyThreeText>
-            )}
-          </label>
+          </div>
         )}
         {isOutsideUS && (
           <SchoolNameInput
             fieldNames={{
               schoolName: fieldNames.schoolName,
             }}
-          />
-        )}
-        {askForZip && zipSearchReady && (
-          <SchoolZipSearch
-            fieldNames={{
-              ncesSchoolId: fieldNames.ncesSchoolId,
-              schoolName: fieldNames.schoolName,
-            }}
-            zip={zip}
           />
         )}
       </div>
