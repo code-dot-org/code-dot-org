@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2024-04-08 22:04:02 UTC",
+    "serialized_at": "2024-04-15 23:13:40 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1814,7 +1814,7 @@
       "key": "47f82bc7-0677-4361-9132-d906d40db032",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8-10 - Challenge” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose It!” slide\nWhile they are working on a solution to the following challenges, encourage students to press the Run button frequently to see how far the bird gets and to make it easier to see what code to add next. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8-10 - Challenge” slide",
         "progression_name": "Challenge/Practice"
       },
       "seeding_key": {
@@ -1992,7 +1992,7 @@
       "key": "85ddd425-8051-4117-b60b-0d7727a08f06",
       "position": 1,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: *When have you learned a new skill and faced failure?*\n\nOne of the most important parts of learning to program is learning to debug. Ask the class if they have ever learned a new skill and faced failure.\n\nFor example:\n\n - Learning to ride a bike and falling down\n - Learning to bake and burning the food\n - Learning to play a sport and not winning a game\n\nFacing failure is very common when learning new things. Have students discuss past failures and how they overcame them.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nIn programming, computer scientists often run into \"bugs\" in their code.\n\n - **Bug**: Part of a program that does not work correctly.\n\nA bug can really mess up the program, so it's important to learn to \"debug\" your code.\n\n - **Debugging**: Finding and fixing problems in your algorithm or program.\n\nContinue the conversation if you think your class needs more of an introduction, but leave time for one of the bridging activities.",
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: *When have you learned a new skill and faced failure?*\n\nOne of the most important parts of learning to program is learning to debug. Ask the class if they have ever learned a new skill and faced failure.\n\nFor example:\n\n - Learning to ride a bike and falling down\n - Learning to bake and burning the food\n - Learning to play a sport and not winning a game\n\nFacing failure is very common when learning new things. Have students discuss past failures and how they overcame them.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nIn programming, computer scientists often run into \"bugs\" in their code.\n\n - **Bug**: Part of a program that does not work correctly.\n\nA bug can really mess up the program, so it's important to learn to \"debug\" your code.\n\n - **Debugging**: Finding and fixing problems in your algorithm or program.\n\n- **Decompose:** Break problems down into smaller steps. \n\nProblems in and outside of computer science usually need to be broken down into smaller tasks. This will help  you figure out what to do one step at a time. \n\nContinue the conversation if you think your class needs more of an introduction, but leave time for one of the bridging activities.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2075,7 +2075,7 @@
       "key": "be4a2a92-ce80-4af9-8bf2-28305f0ef90b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-9 - Challenge” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose It!” slide\nRemind students to try coding one block at a time, and press Run frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-9 - Challenge” slide",
         "progression_name": "Challenge/Practice"
       },
       "seeding_key": {
@@ -2282,7 +2282,7 @@
       "key": "f0796d9a-3162-4017-aff3-ff5139d0fe00",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n**Do This:** Show the “Build Your Own _Star Wars_ Game” video at the beginning of Level 10.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose It!” slide\nRemind students to use the skills they've just developed  to make your their own game. They can return to previous levels to remind themselves of what to do step by step\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n**Do This:** Show the “Build Your Own _Star Wars_ Game” video at the beginning of Level 10.\n\nLeave time for students to share and remix each other’s games at the end of the lesson.\n\n\n\n\n",
         "progression_name": "Free Play",
         "tips": [
           {
@@ -11190,6 +11190,16 @@
       }
     },
     {
+      "key": "collaborate",
+      "word": "Collaborate",
+      "definition": "Work together on an activity",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "collaborate"
+      }
+    },
+    {
       "key": "command",
       "word": "Command",
       "definition": "An instruction for the computer. Many commands put together make up algorithms and computer programs. ",
@@ -11230,6 +11240,16 @@
       }
     },
     {
+      "key": "decompose",
+      "word": "Decompose",
+      "definition": "Break problems down into smaller steps",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decompose"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -11250,6 +11270,16 @@
       }
     },
     {
+      "key": "hardware",
+      "word": "Hardware",
+      "definition": "The physical parts of the computer that you can see and touch, like the monitor, the central processing unit (CPU), the keyboard, and the mouse. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hardware"
+      }
+    },
+    {
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
@@ -11257,6 +11287,17 @@
       },
       "seeding_key": {
         "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "password_csm",
+      "word": "Password",
+      "definition": "A secret string of letters, symbols, and numbers  that you can use to restrict who can access something digital",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "password_csm"
       }
     },
     {
@@ -11307,6 +11348,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "software",
+      "word": "Software",
+      "definition": "Instructions that tells the hardware how to do specific tasks.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software"
       }
     },
     {
@@ -11376,7 +11427,19 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging with Laurel",
+        "vocabulary.key": "collaborate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
         "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
+        "vocabulary.key": "decompose"
       }
     },
     {
@@ -11399,8 +11462,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "vocabulary.key": "hardware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "vocabulary.key": "software"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Graph Paper Programming",
         "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Graph Paper Programming",
+        "vocabulary.key": "collaborate"
       }
     },
     {
@@ -11489,6 +11570,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Password Power-Up",
+        "vocabulary.key": "password_csm"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Relay Programming",
         "vocabulary.key": "algorithm"
       }
@@ -11497,6 +11584,12 @@
       "seeding_key": {
         "lesson.key": "Relay Programming",
         "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "vocabulary.key": "collaborate"
       }
     },
     {
@@ -11613,6 +11706,16 @@
       }
     },
     {
+      "key": "24aa5cf3-aa21-44f0-b170-e611cc682a31",
+      "properties": {
+        "description": "Try out various roles to collaborate with peers on an algorithm."
+      },
+      "seeding_key": {
+        "lesson.key": "Graph Paper Programming",
+        "objective.key": "24aa5cf3-aa21-44f0-b170-e611cc682a31"
+      }
+    },
+    {
       "key": "2d6fcab7-0287-4773-9017-ae47ebe04487",
       "properties": {
         "description": "Overcome obstacles such as time constraints or bugs."
@@ -11720,6 +11823,16 @@
       "seeding_key": {
         "lesson.key": "Graph Paper Programming",
         "objective.key": "61e82621-f950-41d8-a4f2-7ac641683173"
+      }
+    },
+    {
+      "key": "69ed33ad-e67e-4394-a6f9-7562a2fab33a",
+      "properties": {
+        "description": "Explain how software and hardware work together when programming events."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "objective.key": "69ed33ad-e67e-4394-a6f9-7562a2fab33a"
       }
     },
     {
@@ -11883,6 +11996,26 @@
       }
     },
     {
+      "key": "c1db4971-fa5b-40ff-b21a-f008f60d91a8",
+      "properties": {
+        "description": "Apply sequences and loops in an algorithm."
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "c1db4971-fa5b-40ff-b21a-f008f60d91a8"
+      }
+    },
+    {
+      "key": "c989617d-8802-450e-939a-1325ac8ff44a",
+      "properties": {
+        "description": "Collaborate with classmates by reviewing each other's work."
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "objective.key": "c989617d-8802-450e-939a-1325ac8ff44a"
+      }
+    },
+    {
       "key": "c9bc351c-6330-4899-bfca-8b8fbfd7fc3f",
       "properties": {
         "description": "Identify a bug and the problems it causes in a program."
@@ -12002,7 +12135,21 @@
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {
@@ -12072,6 +12219,13 @@
       "seeding_key": {
         "lesson.key": "Debugging with Laurel",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-16"
       }
     },
@@ -12080,13 +12234,6 @@
         "lesson.key": "Debugging with Laurel",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-CS-03"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing Shapes with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
       }
     },
     {
@@ -12198,6 +12345,13 @@
       "seeding_key": {
         "lesson.key": "Graph Paper Programming",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Graph Paper Programming",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
       }
     },
@@ -12261,35 +12415,21 @@
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {
@@ -12325,6 +12465,13 @@
         "lesson.key": "Password Power-Up",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {
