@@ -14,6 +14,7 @@ const swipers = [
 ];
 
 const swiperParams = {
+  allowTouchMove: false,
   autoHeight: false,
   pagination: {
     clickable: true,
