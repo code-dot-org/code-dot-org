@@ -59,10 +59,6 @@ const getAvailableTabs = permissions => {
   //   value: 'myWorkshopOrganizerCenter',
   //   text: i18n.plLandingTabWorkshopOrganizerCenter(),
   // },
-  // {
-  //   value: 'myInstructorCenter',
-  //   text: i18n.plLandingTabInstructorCenter(),
-  // },
 
   return tabs;
 };
