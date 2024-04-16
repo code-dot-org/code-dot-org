@@ -34,11 +34,15 @@ module ActionDispatch
           session_data = unpacked_cookie_data(request)
           if session_data.is_a?(Hash) && !session_data.empty?
             session_id = Rack::Session::SessionId.new(session_data["session_id"])
-            request.set_header("action_dispatch.request.unsigned_session_cookie", {})
             write_session(request, session_id, session_data.except("session_id"), request.session_options)
+            request.set_header("action_dispatch.request.unsigned_session_cookie", {})
             return session_id
           end
         end
+      rescue => exception
+        # Something went wrong migrating session data to redis. Fail in a way
+        # that lets load_session continue uninterrupted.
+        Honeybadger.notify(exception, error_message: 'Error migrating session info to redis')
       end
 
       # Based on https://github.com/rails/rails/blob/v6.1.7.7/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L86-L96
