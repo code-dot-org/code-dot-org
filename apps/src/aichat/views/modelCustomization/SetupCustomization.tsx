@@ -17,11 +17,12 @@ import {
 } from './constants';
 import {isVisible, isDisabled} from './utils';
 import CompareModelsDialog from './CompareModelsDialog';
+import {modelDescriptions} from '../../constants';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
-  const [chosenModel, setChosenModel] = useState<string>('llama2');
   const [isShowingModelDialog, setIsShowingModelDialog] =
     useState<boolean>(false);
 
@@ -32,6 +33,18 @@ const SetupCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
+  /** defaults to all models if not set in levelProperties */
+  const availableModelIds = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.aichatSettings?.availableModelIds
+  );
+  const availableModels = availableModelIds
+    ? modelDescriptions.filter(model => availableModelIds.includes(model.id))
+    : modelDescriptions;
+
+  const chosenModelId =
+    aiCustomizations.selectedModelId || availableModels[0].id;
   const allFieldsDisabled = isDisabled(temperature) && isDisabled(systemPrompt);
 
   const onUpdate = useCallback(
@@ -44,12 +57,18 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.inputContainer}>
         <SimpleDropdown
           labelText="Selected model:"
-          onChange={e => setChosenModel(e.target.value)}
-          items={[
-            {value: 'llama2', text: 'LLama 2'},
-            {value: 'gpt', text: 'ChatGPT'},
-          ]}
-          selectedValue={chosenModel}
+          onChange={event =>
+            dispatch(
+              setAiCustomizationProperty({
+                property: 'selectedModelId',
+                value: event.target.value,
+              })
+            )
+          }
+          items={availableModels.map(model => {
+            return {value: model.id, text: model.name};
+          })}
+          selectedValue={chosenModelId}
           name="model"
           size="s"
           className={styles.selectedModelDropdown}
@@ -64,7 +83,10 @@ const SetupCustomization: React.FunctionComponent = () => {
           )}
         />
         {isShowingModelDialog && (
-          <CompareModelsDialog onClose={() => setIsShowingModelDialog(false)} />
+          <CompareModelsDialog
+            onClose={() => setIsShowingModelDialog(false)}
+            availableModels={availableModels}
+          />
         )}
       </div>
     );
