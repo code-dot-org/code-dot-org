@@ -12,6 +12,7 @@ class Policies::ScriptActivity
 
     return true if script.hoc?
     return true if script.csf?
+    return true if script.csc?
 
     completed?(user, script)
   end
