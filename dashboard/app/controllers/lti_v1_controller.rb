@@ -101,14 +101,14 @@ class LtiV1Controller < ApplicationController
       Honeybadger.notify(exception, context: {message: 'Error reading state and nonce from cache'})
       return render status: :internal_server_error
     end
-    if (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
+    if cached_state_and_nonce.nil? || (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
       return log_unauthorized(
         'State or nonce mismatch in LTI JWT auth',
         {
           state: params[:state],
           nonce: decoded_jwt_no_auth[:nonce],
-          cached_state: cached_state_and_nonce[:state],
-          cached_nonce: cached_state_and_nonce[:nonce],
+          cached_state: cached_state_and_nonce&.[](:state),
+          cached_nonce: cached_state_and_nonce&.[](:nonce),
         }
       )
     end
@@ -224,10 +224,14 @@ class LtiV1Controller < ApplicationController
   # open in new tab. The experience is unchanged to non-iframe users.
   def iframe
     auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
-    id_token_param = params[:id_token]
-    state_param = params[:state]
-    new_tab_param = 'new_tab=true'
-    @auth_url = "#{auth_url_base}?id_token=#{id_token_param}&state=#{state_param}&#{new_tab_param}"
+
+    query_params = {
+      id_token: ERB::Util.url_encode(params[:id_token]),
+      state: ERB::Util.url_encode(params[:state]),
+      new_tab: ERB::Util.url_encode("true"),
+    }
+
+    @auth_url = "#{auth_url_base}?#{query_params.to_query}"
     render 'lti/v1/iframe', layout: false
   end
 

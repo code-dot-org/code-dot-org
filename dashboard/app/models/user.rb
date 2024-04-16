@@ -108,6 +108,7 @@ class User < ApplicationRecord
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
+  #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
   serialized_attrs %w(
     ops_first_name
@@ -146,6 +147,7 @@ class User < ApplicationRecord
     country_code
     family_name
     ai_rubrics_disabled
+    ai_rubrics_tour_seen
     sort_by_family_name
     show_progress_table_v2
     progress_table_v2_closed_beta
@@ -282,6 +284,8 @@ class User < ApplicationRecord
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
+
+  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
 
   before_destroy :soft_delete_channels
 
@@ -1488,6 +1492,10 @@ class User < ApplicationRecord
 
   def teacher?
     user_type == TYPE_TEACHER
+  end
+
+  def verify_teacher!
+    self.permission = UserPermission::AUTHORIZED_TEACHER
   end
 
   # This method just checks if a user has the authorized teacher permission

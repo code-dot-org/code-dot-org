@@ -206,12 +206,28 @@ export default class MusicLibrary {
     return foldersCopy;
   }
 
+  // Returns the library BPM, or the BPM of the currently selected pack if present.
   getBPM(): number | undefined {
-    return this.bpm;
+    if (!this.currentPackId) {
+      return this.bpm;
+    }
+    const folder = this.getFolderForFolderId(this.currentPackId);
+    // Read BPM from the folder, or the first sound that has a BPM if not present on the folder.
+    return (
+      folder?.bpm || folder?.sounds.find(sound => sound.bpm !== undefined)?.bpm
+    );
   }
 
+  // Returns the library key, or the key of the currently selected pack if present.
   getKey(): Key | undefined {
-    return this.key;
+    if (!this.currentPackId) {
+      return this.key;
+    }
+    const folder = this.getFolderForFolderId(this.currentPackId);
+    // Read key from the folder, or the first sound that has a key if not present on the folder.
+    return (
+      folder?.key || folder?.sounds.find(sound => sound.key !== undefined)?.key
+    );
   }
 }
 
@@ -274,7 +290,7 @@ export interface SoundFolder {
   restricted?: boolean;
   sounds: SoundData[];
   bpm?: number;
-  key?: string;
+  key?: Key;
 }
 
 export type LibraryJson = {

@@ -1039,6 +1039,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resource :new_feature_feedback, controller: :new_feature_feedback, only: %i[create show]
+
     # These really belong in the foorm namespace,
     # but we leave them outside so that we can easily use the simple "/form" paths.
     get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
@@ -1082,6 +1084,8 @@ Dashboard::Application.routes.draw do
         get 'get_teacher_evaluations_for_all'
         get 'ai_evaluation_status_for_user'
         get 'ai_evaluation_status_for_all'
+        get 'get_ai_rubrics_tour_seen'
+        post 'update_ai_rubrics_tour_seen'
         post 'run_ai_evaluations_for_user'
         post 'run_ai_evaluations_for_all'
         post 'submit_evaluations'
@@ -1119,6 +1123,8 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
+
+    post '/aichat/chat_completion', to: 'aichat#chat_completion'
 
     resources :ai_tutor_interactions, only: [:create, :index]
 

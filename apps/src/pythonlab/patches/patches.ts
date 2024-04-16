@@ -7,6 +7,8 @@ export const MATPLOTLIB_IMG_TAG = 'MATPLOTLIB_SHOW_IMG';
 // elsewhere for confusing results.
 // This patch is always prepended to the user's code.
 // Adapted from https://github.com/pyodide/matplotlib-pyodide/issues/6#issuecomment-1242747625
+// TODO: Re-enable matplotlib after adding wheel to our repo.
+// https://codedotorg.atlassian.net/browse/CT-488
 const PATCH_MATPLOTLIB = `
 import base64
 import os

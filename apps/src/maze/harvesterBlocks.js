@@ -2,10 +2,11 @@
  * Blocks specific to Harvester
  */
 
-var msg = require('./locale');
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;
 var BlockColors = require('../blockly/constants').BlockColors;
+
+var msg = require('./locale');
 
 const CROPS = ['corn', 'pumpkin', 'lettuce'];
 

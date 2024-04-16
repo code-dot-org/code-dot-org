@@ -8,10 +8,12 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {EnrolledWorkshops} from './EnrolledWorkshops';
+import SelfPacedProgressTable from './SelfPacedProgressTable';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
 import style from './landingPage.module.scss';
+import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 
 const getAvailableTabs = () => {
@@ -73,6 +75,7 @@ export default function LandingPage({
           text: i18n.plLandingGettingStartedButton(),
         },
       ]}
+      marginBottom={'0'}
     />
   );
 
@@ -92,6 +95,10 @@ export default function LandingPage({
       ]}
     />
   );
+
+  const RenderSelfPacedProgressTable = () => {
+    return <SelfPacedProgressTable plCoursesStarted={plCoursesStarted} />;
+  };
 
   const RenderStaticRecommendedPL = () => {
     const actionBlocks = [
@@ -151,13 +158,19 @@ export default function LandingPage({
         {showGettingStartedBanner && RenderGettingStartedBanner()}
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <EnrolledWorkshops />
+        {plCoursesStarted?.length >= 1 && (
+          <section id={'self-paced-pl'}>
+            <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
+            {RenderSelfPacedProgressTable()}
+          </section>
+        )}
         {deeperLearningCourseData?.length >= 1 && (
-          <div>
+          <section>
             <Heading2>Online Professional Learning Courses</Heading2>
             <ProfessionalLearningCourseProgress
               deeperLearningCourseData={deeperLearningCourseData}
             />
-          </div>
+          </section>
         )}
         <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>

@@ -186,6 +186,7 @@ en:
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
     go_to_account: 'Go to my account'
+    create_new_account: 'Create new account'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
@@ -439,6 +440,7 @@ en:
       driver: 'Logged in'
       navigator: 'Partner'
       create: 'Create'
+      new_project: "New Project"
       algebra_game: 'Algebra'
       applab: 'App Lab'
       artist: 'Artist'
@@ -1426,6 +1428,14 @@ en:
     iframe_button: "Open in New Tab"
     iframe_message: "Code.org cannot be run in an embedded window. Please open it in a new tab."
     iframe_title: "Opening Code.org in New Tab"
+    sign_up:
+      warning1:
+        Looks like you’re using the Code.org Integration for %{provider}!
+        **This will create a new account for you**, using the email below.
+        To access this new account again, **make sure to log-in via the %{provider} integration**!
+      warning2:
+        If have you an existing account with this email (e.g. Google, Clever, or Personal Account),
+        **you can continue to log-in to your existing account** via those methods.
     integration:
       client_id: "LMS Client ID"
       email: "Your email"

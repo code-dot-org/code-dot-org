@@ -1,15 +1,16 @@
+import React, {useCallback, useState} from 'react';
+
+import {
+  BodyFourText,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 import {
   AiCustomizations,
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
 } from '@cdo/apps/aichat/types';
-import React, {useCallback, useState} from 'react';
-import {
-  BodyFourText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
-import moduleStyles from './edit-aichat-settings.module.scss';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
@@ -17,13 +18,14 @@ import {
   SET_TEMPERATURE_STEP,
   DEFAULT_LEVEL_AICHAT_SETTINGS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
-import MultiItemInput from './MultiItemInput';
+import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
 import VisibilityDropdown from './VisibilityDropdown';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {UpdateContext} from './UpdateContext';
-import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+import moduleStyles from './edit-aichat-settings.module.scss';
 
 /**
  * Editor for the AI Customizations on the level edit page.
@@ -178,8 +180,10 @@ const EditAichatSettings: React.FunctionComponent<{
                 customize their chatbot. Published chatbots are able to be
                 viewed in a Presentation View which mimics a user-centered
                 experience by hiding instructions and displaying the model card.
-                Use the setting below to hide the option to enter presentation
-                view in a level.
+                This setting will also hide the "Publish" tab of the model
+                customization area in the Edit View, since students cannot
+                publish their work when this setting is enabled. Use the setting
+                below to hide the option to enter presentation view in a level.
               </i>
             </BodyFourText>
             <div className={moduleStyles.fieldRow}>

@@ -730,11 +730,25 @@ en:
           description_teacher: ''
           version_title: ''
         pl-csd-summer-2024:
-          title: pl-csd-summer-2024
+          title: CSD In-Person PL Workshop Course
           description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_student: |-
+            **You will**:
+
+            * Prepare to teach CS Discoveries.
+            * Practice key concepts in the CS Discoveries curriculum.
+            * Grow in your understanding of equitable CS education.
+            * Develop empathy for the student experience.
+            * Become a part of a network of teachers who are doing similar work.
+          description_teacher: |-
+            **You will**:
+
+            * Prepare to teach CS Discoveries.
+            * Practice key concepts in the CS Discoveries curriculum.
+            * Grow in your understanding of equitable CS education.
+            * Develop empathy for the student experience.
+            * Become a part of a network of teachers who are doing similar work.
+          version_title: "'24-'25"
         virtual-pl-csd-summer-2024:
           title: virtual-pl-csd-summer-2024
           description_short: ''
