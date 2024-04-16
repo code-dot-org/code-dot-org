@@ -80,7 +80,7 @@ function SectionProgressSelector({
   );
   return (
     <div className={styles.pageContent}>
-      <ProgressFeedbackBanner />
+      <ProgressFeedbackBanner canShow={displayV2} />
       {toggleV1OrV2Link()}
       {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
     </div>
