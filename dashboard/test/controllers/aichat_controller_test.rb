@@ -10,6 +10,17 @@ class AichatControllerTest < ActionController::TestCase
     @section = create(:section, user: @pilot_teacher)
     @pilot_student = create(:follower, section: @section).student_user
     ShareFiltering.stubs(:find_failure).returns(nil)
+    @params = {
+      storedMessages: [{role: "user", content: "this is a test!"}],
+      aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
+      chatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
+    }
+    valid_message = "hello"
+    pii_violation_message = "my email is l.lovepadel@sports.edu"
+    profanity_violation_message = "Damn you, robot"
+    @valid_params = @params.merge(newMessage: valid_message)
+    @pii_violation_params = @params.merge(newMessage: pii_violation_message)
+    @profanity_violation_params = @params.merge(newMessage: profanity_violation_message)
   end
 
   test_user_gets_response_for :chat_completion,
@@ -26,23 +37,13 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'pilot teacher has access test' do
     sign_in(@pilot_teacher)
-    post :chat_completion, params: {
-      newMessage: "hello",
-      storedMessages: [{role: "user", content: "this is a test!"}],
-      aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
-      chatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
-    }
+    post :chat_completion, params: @valid_params
     assert_response :success
   end
 
   test 'pilot student has access test' do
     sign_in(@pilot_student)
-    post :chat_completion, params: {
-      newMessage: "hello",
-      storedMessages: [{role: "user", content: "this is a test!"}],
-      aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
-      chatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
-    }
+    post :chat_completion, params: @valid_params
     assert_response :success
   end
 
@@ -56,12 +57,7 @@ class AichatControllerTest < ActionController::TestCase
   test 'returns failure when chat message contains profanity' do
     sign_in(@pilot_student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
-    post :chat_completion, params: {
-      newMessage: "Damn you, robot",
-      storedMessages: [{role: "user", content: "this is a test!"}],
-      aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
-      chatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
-    }
+    post :chat_completion, params: @profanity_violation_params
     assert_equal json_response["status"], ShareFiltering::FailureType::PROFANITY
     assert_equal json_response["flagged_content"], "damn"
   end
@@ -70,12 +66,7 @@ class AichatControllerTest < ActionController::TestCase
   test 'returns failure when chat message contains PII' do
     sign_in(@pilot_student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'l.lovepadel@sports.edu'))
-    post :chat_completion, params: {
-      newMessage: "hello",
-      storedMessages: [{role: "user", content: "my email is l.lovepadel@sports.edu"}],
-      aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
-      chatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
-    }
+    post :chat_completion, params: @pii_violation_params
     assert_equal json_response["status"], ShareFiltering::FailureType::EMAIL
     assert_equal json_response["flagged_content"], "l.lovepadel@sports.edu"
   end
