@@ -1,4 +1,5 @@
 import React, {useCallback, useState} from 'react';
+import classNames from 'classnames';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
@@ -57,7 +58,10 @@ const SetupCustomization: React.FunctionComponent = () => {
           text="Compare Models"
           onClick={() => setIsShowingModelDialog(true)}
           type="secondary"
-          className={styles.buttonNoMargin}
+          className={classNames(
+            styles.updateButton,
+            styles.compareModelsButton
+          )}
         />
         {isShowingModelDialog && (
           <CompareModelsDialog onClose={() => setIsShowingModelDialog(false)} />
