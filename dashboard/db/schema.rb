@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_12_134643) do
+ActiveRecord::Schema.define(version: 2024_04_15_232100) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -37,6 +37,18 @@ ActiveRecord::Schema.define(version: 2024_04_12_134643) do
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_activity_sections_on_key", unique: true
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
+  end
+
+  create_table "ai_chat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "level_id"
+    t.integer "script_id"
+    t.integer "project_id"
+    t.text "model_customizations"
+    t.text "messages"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_ai_chat_sessions_on_user_id"
   end
 
   create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -941,7 +953,7 @@ ActiveRecord::Schema.define(version: 2024_04_12_134643) do
     t.float "value", null: false
   end
 
-  create_table "new_feature_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "new_feature_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "form_key", null: false
     t.boolean "satisfied", null: false
