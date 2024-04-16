@@ -2036,6 +2036,19 @@
       heading: "Watch your favorite artists try Music Lab"
     quotes:
       heading: "What teachers and students are saying about Music Lab"
+      bryant:
+        quote: "Massive success! Kids really enjoyed it; engagement was great, especially for some students that aren't as hooked into other modes of learning/practicing CS skills."
+        byline: "STEM Specialist"
+      lori:
+        quote: "I think Music Lab is a great addition to the Code.org platform…it's a great cross curriculum that can engage students of all different areas and interests and help bring teachers together."
+        byline: "Computer Science Teacher"
+      joe:
+        quote: "So my reaction to seeing Music Lab was one of amazement. I was truly impressed by the ability to blend the field of STEM with what we do in music…there's so much overlap to be had."
+        byline: "Music Teacher"
+      student:
+        quote_01: "It's like you're coding without even knowing you're coding."
+        quote_02: "I never would have imagined I'd be making music with computer science."
+        quote_03: "I think it's a cool way to compose music."
     teachers_guide:
       heading: "Get the teacher's guide to Music Lab"
       desc: "Grab your copy of the teacher's guide to Music Lab to learn how to get started, explore activity ideas, and get answers to frequently asked questions."
