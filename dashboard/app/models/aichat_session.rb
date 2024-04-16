@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: ai_chat_sessions
+# Table name: aichat_sessions
 #
 #  id                   :bigint           not null, primary key
 #  user_id              :integer
@@ -14,7 +14,7 @@
 #
 # Indexes
 #
-#  index_ai_chat_sessions_on_user_id  (user_id)
+#  index_aichat_sessions_on_user_id  (user_id)
 #
-class AiChatSession < ApplicationRecord
+class AichatSession < ApplicationRecord
 end

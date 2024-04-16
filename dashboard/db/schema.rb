@@ -39,18 +39,6 @@ ActiveRecord::Schema.define(version: 2024_04_15_232100) do
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
   end
 
-  create_table "ai_chat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "level_id"
-    t.integer "script_id"
-    t.integer "project_id"
-    t.text "model_customizations"
-    t.text "messages"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_ai_chat_sessions_on_user_id"
-  end
-
   create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "ai_tutor_interaction_id", null: false
     t.integer "user_id", null: false
@@ -79,6 +67,18 @@ ActiveRecord::Schema.define(version: 2024_04_15_232100) do
     t.index ["script_id"], name: "index_ai_tutor_interactions_on_script_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ati_user_level_script"
     t.index ["user_id"], name: "index_ai_tutor_interactions_on_user_id"
+  end
+
+  create_table "aichat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "level_id"
+    t.integer "script_id"
+    t.integer "project_id"
+    t.text "model_customizations"
+    t.text "messages"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_aichat_sessions_on_user_id"
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
