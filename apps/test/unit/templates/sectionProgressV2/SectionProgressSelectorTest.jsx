@@ -17,6 +17,7 @@ import currentUser, {
   setProgressTableV2ClosedBeta,
 } from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
@@ -39,6 +40,7 @@ describe('SectionProgressSelector', () => {
       sectionProgress,
       unitSelection,
       teacherSections,
+      progressV2Feedback,
     });
 
     store = getStore();

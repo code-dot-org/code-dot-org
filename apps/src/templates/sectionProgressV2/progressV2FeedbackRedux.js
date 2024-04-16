@@ -14,7 +14,7 @@ const initialState = {
   progressV2Feedback: null,
 };
 
-export function progressV2Feedback(state = initialState, action) {
+export default function progressV2Feedback(state = initialState, action) {
   switch (action.type) {
     case PROGRESS_V2_FEEDBACK_FETCH_REQUEST:
       return {...state, isLoading: true};

@@ -31,7 +31,7 @@ import {
   setScriptId,
 } from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import {progressV2Feedback} from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
+import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
