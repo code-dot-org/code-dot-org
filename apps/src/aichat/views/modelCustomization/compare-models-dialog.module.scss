@@ -14,7 +14,7 @@
 }
 
 div.modelComparisonDialog {
-  height: calc(90vh - 100px);
+  max-height: calc(90vh - 100px);
   width: 800px;
   max-width: 800px;
   display: flex;

@@ -7,6 +7,13 @@ class Policies::Lti
     CONTEXT_MEMBERSHIP = 'https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly'.freeze
   end
 
+  module MessageType
+    CLAIM = :'https://purl.imsglobal.org/spec/lti/claim/message_type'
+    SUPPORTED = [
+      RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest'.freeze,
+    ].freeze
+  end
+
   ALL_SCOPES = AccessTokenScopes.constants.map do |scope|
     AccessTokenScopes.const_get(scope)
   end
