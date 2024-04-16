@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
@@ -18,12 +18,10 @@ const CompareModelsDialog: React.FunctionComponent<{
       state.aichat.currentAiCustomizations.selectedModelId ||
       availableModels[0].id
   );
-  const [chosenModelLeft, setChosenModelLeft] =
-    useState<string>(selectedModelId);
-  const [chosenModelRight, setChosenModelRight] = useState<string>(
+  const chosenModelLeft = selectedModelId;
+  const chosenModelRight =
     availableModels.find(model => model.id !== selectedModelId)?.id ||
-      selectedModelId
-  );
+    selectedModelId;
 
   return (
     <AccessibleDialog
@@ -39,14 +37,12 @@ const CompareModelsDialog: React.FunctionComponent<{
       <hr />
       <div className={styles.modelComparisonContainer}>
         <ModelDescriptionPanel
-          onChange={setChosenModelLeft}
-          selectedModelId={chosenModelLeft}
+          initialSelectedModelId={chosenModelLeft}
           availableModels={availableModels}
           dropdownName="choose-model-1"
         />
         <ModelDescriptionPanel
-          onChange={setChosenModelRight}
-          selectedModelId={chosenModelRight}
+          initialSelectedModelId={chosenModelRight}
           availableModels={availableModels}
           dropdownName="choose-model-2"
         />

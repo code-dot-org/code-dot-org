@@ -8,11 +8,19 @@ import {ModelDescription} from '../../types';
 import styles from './compare-models-dialog.module.scss';
 
 const ModelDescriptionPanel: React.FunctionComponent<{
-  onChange: (modelId: string) => void;
-  selectedModelId: string;
+  initialSelectedModelId: string;
   availableModels: ModelDescription[];
   dropdownName: string;
-}> = ({onChange, selectedModelId, availableModels, dropdownName}) => {
+}> = ({initialSelectedModelId, availableModels, dropdownName}) => {
+  const getModelFromId = (modelId: string): ModelDescription => {
+    return (
+      availableModels.find(model => model.id === modelId) || availableModels[0]
+    );
+  };
+
+  const [selectedModel, setSelectedModel] = useState<ModelDescription>(
+    getModelFromId(initialSelectedModelId)
+  );
   const [userWantsScroll, setUserWantsScroll] = useState<boolean>(false);
   const [contentNeedsScroll, setContentNeedsScroll] = useState<boolean>(false);
 
@@ -31,20 +39,20 @@ const ModelDescriptionPanel: React.FunctionComponent<{
   const showViewMoreButton = !userWantsScroll && contentNeedsScroll;
   const shouldScroll = userWantsScroll && contentNeedsScroll;
 
-  const selectedModel =
-    availableModels.find(model => model.id === selectedModelId) ||
-    availableModels[0];
+  const onDropdownChange = (value: string) => {
+    setSelectedModel(getModelFromId(value));
+  };
 
   return (
     <div className={styles.modelDescriptionContainer}>
       <SimpleDropdown
         labelText="Choose a model"
         isLabelVisible={false}
-        onChange={event => onChange(event.target.value)}
+        onChange={event => onDropdownChange(event.target.value)}
         items={availableModels.map(model => {
           return {value: model.id, text: model.name};
         })}
-        selectedValue={selectedModelId}
+        selectedValue={selectedModel.id}
         name={dropdownName}
         size="s"
         className={styles.fullWidth}
