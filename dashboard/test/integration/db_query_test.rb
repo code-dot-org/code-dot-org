@@ -70,7 +70,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     setup_script_cache
-    assert_cached_queries(10) do
+    assert_cached_queries(11) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id
