@@ -52,7 +52,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
 
 const UserMessage: React.FC<UserMessageProps> = ({message}) => {
   return (
-    <div id={`chat-message-id-${message.id}`}>
+    <div id={`chat-message`}>
       <div className={style.userMessageContainer}>
         {displayUserMessage(message.status, message.chatMessageText)}
       </div>

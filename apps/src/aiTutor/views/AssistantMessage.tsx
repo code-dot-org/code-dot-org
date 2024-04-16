@@ -41,7 +41,7 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
   };
 
   return (
-    <div id={`chat-message-id-${message.id}`}>
+    <div id={`chat-message`}>
       <div className={style.assistantMessageContainer}>
         <Typography semanticTag="h5" visualAppearance="heading-xs">
           AI Tutor ({message.role})
