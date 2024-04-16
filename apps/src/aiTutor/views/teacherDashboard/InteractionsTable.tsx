@@ -146,7 +146,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
 
   return (
     <div>
-      <div>
+      <div className={style.filterDropdowns}>
         <CheckboxDropdown
           allOptions={statusOptions}
           checkedOptions={selectedStatuses}

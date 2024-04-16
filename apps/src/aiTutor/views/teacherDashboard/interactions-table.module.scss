@@ -30,3 +30,9 @@
   margin: 10px 0;
   border-left: 6px solid red;
 }
+
+.filterDropdowns {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
