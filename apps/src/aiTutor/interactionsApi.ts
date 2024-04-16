@@ -69,17 +69,17 @@ export const fetchAITutorInteractions = async (
   }
 };
 
-interface FeedbackData {
-  thumbsUp?: boolean;
-  thumbsDown?: boolean;
+export interface FeedbackData {
+  thumbsUp?: boolean | null;
+  thumbsDown?: boolean | null;
 }
 
 export async function saveFeedback(
   aiTutorInteractionId: number,
   feedbackData: FeedbackData
 ) {
+  console.log('Feedback data: ', feedbackData);
   try {
-    console.log("here's the body: ", JSON.stringify(feedbackData));
     await fetch(`/ai_tutor_interactions/${aiTutorInteractionId}/feedbacks`, {
       method: 'POST',
       headers: {

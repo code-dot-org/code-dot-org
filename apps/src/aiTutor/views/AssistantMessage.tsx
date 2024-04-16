@@ -5,7 +5,7 @@ import {ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import Button from '@cdo/apps/templates/Button';
 
-import {saveFeedback} from '../interactionsApi';
+import {saveFeedback, FeedbackData} from '../interactionsApi';
 import style from './chat-workspace.module.scss';
 
 interface AssistantMessageProps {
@@ -13,16 +13,24 @@ interface AssistantMessageProps {
 }
 
 const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
-  const [feedbackState, setFeedbackState] = useState({
+  const [feedbackState, setFeedbackState] = useState<FeedbackData>({
     thumbsUp: false,
     thumbsDown: false,
   });
 
   const handleFeedbackSubmission = async (
-    messageId: number,
-    thumbsUp: boolean
+    thumbsUp: boolean,
+    messageId?: number
   ) => {
-    const feedbackData = {thumbsUp, thumbsDown: !thumbsUp};
+    if (!messageId) {
+      return;
+    }
+
+    const feedbackData = {
+      thumbsUp: feedbackState.thumbsUp === thumbsUp ? null : thumbsUp,
+      thumbsDown: feedbackState.thumbsDown === !thumbsUp ? null : !thumbsUp,
+    };
+
     try {
       setFeedbackState(feedbackData);
       await saveFeedback(messageId, feedbackData);
@@ -45,27 +53,29 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
           >
             {message.chatMessageText}
           </div>
-          {message.id > 0 && (
+          {message.id && (
             <>
               <Button
-                onClick={() => handleFeedbackSubmission(message.id, true)}
-                color={Button.ButtonColor.white}
+                onClick={() => handleFeedbackSubmission(true, message.id)}
+                color={
+                  feedbackState.thumbsUp
+                    ? Button.ButtonColor.green
+                    : Button.ButtonColor.white
+                }
                 icon="thumbs-up"
                 className={style.hamburgerMenuButton}
-                disabled={feedbackState.thumbsUp}
+                disabled={false}
               />
               <Button
-                onClick={() => handleFeedbackSubmission(message.id, false)}
-                color={Button.ButtonColor.white}
+                onClick={() => handleFeedbackSubmission(false, message.id)}
+                color={
+                  feedbackState.thumbsDown
+                    ? Button.ButtonColor.red
+                    : Button.ButtonColor.white
+                }
                 icon="thumbs-down"
                 className={style.hamburgerMenuButton}
-                disabled={feedbackState.thumbsDown}
-              />
-              <Button
-                onClick={() => console.log('Ask AI Tutor')}
-                color={Button.ButtonColor.white}
-                icon="bars"
-                className={style.hamburgerMenuButton}
+                disabled={false}
               />
             </>
           )}
