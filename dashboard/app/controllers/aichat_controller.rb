@@ -7,7 +7,7 @@ class AichatController < ApplicationController
   # chatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
-    return render status: :forbidden, json: {} unless can_request_aichat_chat_completion? 
+    return render status: :forbidden, json: {} unless can_request_aichat_chat_completion?
     unless has_required_params?
       return render status: :bad_request, json: {}
     end
