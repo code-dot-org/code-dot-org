@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-10 21:33:55 UTC",
+    "serialized_at": "2024-04-16 18:17:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -98,8 +98,19 @@
       }
     },
     {
-      "key": "23d17067-5b68-4608-922b-47b7a3b96673",
+      "key": "b9badd68-0dda-4029-9d09-b3181ef8831e",
       "position": 4,
+      "properties": {
+        "progression_name": "Applications of AI (10 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9badd68-0dda-4029-9d09-b3181ef8831e",
+        "lesson_activity.key": "fec29aa2-b51c-4ca4-b10d-672f97f391c5"
+      }
+    },
+    {
+      "key": "23d17067-5b68-4608-922b-47b7a3b96673",
+      "position": 5,
       "properties": {
         "progression_name": "Wrap Up (5 min)"
       },
@@ -138,34 +149,34 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-pl-ai-101-mod2-opening_2024"
-        ],
-        "progression": "Opening (5 min)"
+        "progression": "Introduction to AI (20 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod2-opening_2024"
+          "self-paced-pl-ai-101-mod2-intro_02_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-ai-101-mod2",
-        "activity_section.key": "92d13a2a-fdac-4f3f-8b31-c787ee34bb06"
+        "activity_section.key": "3d60f3d3-728b-4921-aec3-eff1c9dd3d2a"
       },
       "level_keys": [
-        "self-paced-pl-ai-101-mod2-opening_2024"
+        "self-paced-pl-ai-101-mod2-intro_02_2024"
       ]
     },
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod2-intro_03_2024"
+        ],
         "progression": "Introduction to AI (20 min)"
       },
       "bonus": false,
@@ -185,9 +196,34 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to AI (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod2-intro_04_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod2",
+        "activity_section.key": "3d60f3d3-728b-4921-aec3-eff1c9dd3d2a"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod2-intro_04_2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod2-intro_05_2024"
+        ],
         "progression": "Introduction to AI (20 min)"
       },
       "bonus": false,
@@ -205,11 +241,36 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Large Language Models (25 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod2-llms_01_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod2",
+        "activity_section.key": "0f8ee704-07ef-4952-a4ac-acf5ea563381"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod2-llms_01_2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod2-llms_02_2024"
+        ],
         "progression": "Large Language Models (25 min)"
       },
       "bonus": false,
@@ -227,11 +288,14 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 2,
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod2-llms_04_2024"
+        ],
         "progression": "Large Language Models (25 min)"
       },
       "bonus": false,
@@ -249,11 +313,36 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Large Language Models (25 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod2-llms_03_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod2",
+        "activity_section.key": "0f8ee704-07ef-4952-a4ac-acf5ea563381"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod2-llms_03_2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod2-llms_05b_2024"
+        ],
         "progression": "Large Language Models (25 min)"
       },
       "bonus": false,
@@ -271,11 +360,14 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 4,
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod1-education_06_2024"
+        ],
         "progression": "Large Language Models (25 min)"
       },
       "bonus": false,
@@ -293,8 +385,30 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Applications of AI (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod2-apps_01_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod2",
+        "activity_section.key": "b9badd68-0dda-4029-9d09-b3181ef8831e"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod2-apps_01_2024"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -318,8 +432,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 14,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -358,14 +472,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-ai-101-mod2-opening_2024",
+        "level.key": "self-paced-pl-ai-101-mod2-intro_02_2024",
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod2-opening_2024"
+          "self-paced-pl-ai-101-mod2-intro_02_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-ai-101-mod2",
-        "activity_section.key": "92d13a2a-fdac-4f3f-8b31-c787ee34bb06"
+        "activity_section.key": "3d60f3d3-728b-4921-aec3-eff1c9dd3d2a"
       }
     },
     {
@@ -373,6 +487,18 @@
         "level.key": "self-paced-pl-ai-101-mod2-intro_03_2024",
         "script_level.level_keys": [
           "self-paced-pl-ai-101-mod2-intro_03_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod2",
+        "activity_section.key": "3d60f3d3-728b-4921-aec3-eff1c9dd3d2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod2-intro_04_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod2-intro_04_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -394,6 +520,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod2-llms_01_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod2-llms_01_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod2",
+        "activity_section.key": "0f8ee704-07ef-4952-a4ac-acf5ea563381"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "self-paced-pl-ai-101-mod2-llms_02_2024",
         "script_level.level_keys": [
           "self-paced-pl-ai-101-mod2-llms_02_2024"
@@ -409,6 +547,18 @@
         "level.key": "self-paced-pl-ai-101-mod2-llms_04_2024",
         "script_level.level_keys": [
           "self-paced-pl-ai-101-mod2-llms_04_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod2",
+        "activity_section.key": "0f8ee704-07ef-4952-a4ac-acf5ea563381"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod2-llms_03_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod2-llms_03_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -438,6 +588,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-ai-101-mod2",
         "activity_section.key": "0f8ee704-07ef-4952-a4ac-acf5ea563381"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod2-apps_01_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod2-apps_01_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod2",
+        "activity_section.key": "b9badd68-0dda-4029-9d09-b3181ef8831e"
       }
     },
     {
