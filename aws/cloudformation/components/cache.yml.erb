@@ -29,7 +29,7 @@
       CacheNodeType: <%= cache_node_type %>
       CacheParameterGroupName: !Ref MemcachedParameterGroup
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
-      ClusterName: <%=stack_name[0..19]%> # Max 20 chars
+      ClusterName: !Ref AWS::StackName # Max 50 chars
       Engine: memcached
       EngineVersion: 1.4
       NumCacheNodes: 2
