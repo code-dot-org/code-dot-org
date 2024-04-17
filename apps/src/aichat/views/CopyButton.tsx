@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 
@@ -30,12 +30,12 @@ const CopyButton: React.FunctionComponent = () => {
 
   return (
     <Button
-      color={Button.ButtonColor.white}
-      icon={'clipboard'}
-      key="copy"
-      onClick={() => handleCopy()}
-      size={Button.ButtonSize.small}
-      text="Copy Conversation History"
+      onClick={handleCopy}
+      text="Copy Chat"
+      iconLeft={{iconName: 'clipboard'}}
+      size="xs"
+      color="white"
+      type="secondary"
     />
   );
 };
