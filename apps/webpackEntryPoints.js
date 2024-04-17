@@ -193,6 +193,7 @@ const PEGASUS_ENTRIES = {
   'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
   'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
   'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
+  'code.org/views/swiper_page_videos': './src/sites/code.org/pages/views/swiper_page_videos.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com
