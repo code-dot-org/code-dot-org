@@ -157,13 +157,15 @@ export default function LandingPage({
       <main className={style.wrapper}>
         {showGettingStartedBanner && RenderGettingStartedBanner()}
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
-        <EnrolledWorkshops />
         {plCoursesStarted?.length >= 1 && (
           <section id={'self-paced-pl'}>
             <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
             {RenderSelfPacedProgressTable()}
           </section>
         )}
+        <section>
+          <EnrolledWorkshops />
+        </section>
         {deeperLearningCourseData?.length >= 1 && (
           <section>
             <Heading2>Online Professional Learning Courses</Heading2>

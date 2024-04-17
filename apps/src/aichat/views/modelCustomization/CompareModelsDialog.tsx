@@ -1,41 +1,49 @@
-import React, {useState} from 'react';
+import React from 'react';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 
 import ModelDescriptionPanel from './ModelDescriptionPanel';
 import styles from './compare-models-dialog.module.scss';
+import {ModelDescription} from '../../types';
 
-const CompareModelsDialog: React.FunctionComponent<{onClose: () => void}> = ({
-  onClose,
-}) => {
-  const [chosenModelLeft, setChosenModelLeft] = useState<string>('llama2');
-  const [chosenModelRight, setChosenModelRight] = useState<string>('mistral');
+const CompareModelsDialog: React.FunctionComponent<{
+  onClose: () => void;
+  availableModels: ModelDescription[];
+}> = ({onClose, availableModels}) => {
+  const selectedModelId = useAppSelector(
+    state =>
+      state.aichat.currentAiCustomizations.selectedModelId ||
+      availableModels[0].id
+  );
+  const chosenModelLeft = selectedModelId;
+  const chosenModelRight =
+    availableModels.find(model => model.id !== selectedModelId)?.id ||
+    selectedModelId;
 
   return (
     <AccessibleDialog
       onClose={onClose}
       className={styles.modelComparisonDialog}
     >
-      <div>
-        <div className={styles.headerContainer}>
-          <Heading3>Compare Models</Heading3>
-        </div>
-        <button type="button" onClick={onClose} className={styles.xCloseButton}>
-          <i id="x-close" className="fa-solid fa-xmark" />
-        </button>
+      <div className={styles.headerContainer}>
+        <Heading3>Compare Models</Heading3>
       </div>
+      <button type="button" onClick={onClose} className={styles.xCloseButton}>
+        <i id="x-close" className="fa-solid fa-xmark" />
+      </button>
       <hr />
       <div className={styles.modelComparisonContainer}>
         <ModelDescriptionPanel
-          onChange={setChosenModelLeft}
-          selectedModelName={chosenModelLeft}
+          initialSelectedModelId={chosenModelLeft}
+          availableModels={availableModels}
           dropdownName="choose-model-1"
         />
         <ModelDescriptionPanel
-          onChange={setChosenModelRight}
-          selectedModelName={chosenModelRight}
+          initialSelectedModelId={chosenModelRight}
+          availableModels={availableModels}
           dropdownName="choose-model-2"
         />
       </div>
