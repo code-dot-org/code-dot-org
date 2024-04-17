@@ -32,7 +32,9 @@ class Services::ChildAccount
       update_compliance(user, Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
       user.save!
       parent_email = permission_request.parent_email
-      ParentMailer.parent_permission_confirmation(parent_email).deliver_now
+      ParentMailer.
+        parent_permission_confirmation(parent_email).
+        deliver_later(wait: Policies::ChildAccount::PERMISSION_GRANTED_MAIL_DELAY.seconds)
     end
   end
 

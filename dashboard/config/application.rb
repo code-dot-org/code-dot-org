@@ -186,6 +186,7 @@ module Dashboard
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
+    config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
     config.cache_store = :memory_store, {
@@ -214,5 +215,6 @@ module Dashboard
     config.exceptions_app = routes
 
     config.active_job.queue_adapter = :delayed_job
+    config.active_job.default_queue_name = CDO.active_job_queues[:default]
   end
 end
