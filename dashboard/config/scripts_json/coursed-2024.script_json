@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2024-04-15 23:13:40 UTC",
+    "serialized_at": "2024-04-16 21:47:16 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1958,7 +1958,7 @@
       "key": "59f47188-d7e3-4468-b295-b43ed4184244",
       "position": 3,
       "properties": {
-        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Relay Programming” slide\n\nGo over the rules of the game with your class:\n\n- Divide students into groups of 3-5.\n- Have each group queue up relay-style.\n- Place an identical image at the other side of the room/gym/field from each team.\n- Have the first student in line dash over to the image, review it, and write down the first symbol in the program to reproduce that image.\n- The first student then runs back and tags the next person in line, then goes to the back of the queue.\n- The next person in line dashes to the image, reviews the image, reviews the program that has already been written, then either debugs the program by crossing out an incorrect symbol, or adds a new one. That student then dashes back to tag the next person, and the process continues until one group has finished their program.\n\nFirst group to finish with a program that matches the image is the winner! \nPlay through this several times, with images of increasing difficulty.\n\nGo through the game as many times as you can before time runs out or your students begin feeling exhausted.\n\n**Transition:** Once the game is over, circle everyone up to share lessons learned.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What did we learn today?” slide\n\n**Discuss:** *What did we learn today?*\n\n- *What if each person on a team were allowed to do five arrows at a time?*\n\t- *How important would it be to debug our own work and the work of the programmer before us?*\n\t- *How about with 10 arrows?*\n\t- *10,000? Would it be more or less important?*\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide.\n- *Do you think a program is better or worse when more than one person has worked on it?*\n- *Do you think people make more or fewer mistakes when they're in a hurry?*\n- *If you find a mistake, do you have to throw out the entire program and start over?*"
+        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Relay Programming” slide\n\nGo over the rules of the game with your class:\n\n- Divide students into groups of 3-5.\n- Have each group queue up relay-style.\n- Place an identical image at the other side of the room/gym/field from each team.\n- Have the first student in line dash over to the image, review it, and write down the first symbol in the program to reproduce that image.\n- The first student then runs back and tags the next person in line, then goes to the back of the queue.\n- The next person in line dashes to the image, reviews the image, reviews the program that has already been written, then either debugs the program by crossing out an incorrect symbol, or adds a new one. That student then dashes back to tag the next person, and the process continues until one group has finished their program.\n\nFirst group to finish with a program that matches the image is the winner! \nPlay through this several times, with images of increasing difficulty.\n\nGo through the game as many times as you can before time runs out or your students begin feeling exhausted.\n\n**Transition:** Once the game is over, circle everyone up to share lessons learned.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own programs we find inspiration from other people’s work. \n\nIf you have gotten permission to use someone else’s work or if multiple people worked together, make sure to give credit to all of the original coders.\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What did we learn today?” slide\n\n**Discuss:** *What did we learn today?*\n\n- *What if each person on a team were allowed to do five arrows at a time?*\n\t- *How important would it be to debug our own work and the work of the programmer before us?*\n\t- *How about with 10 arrows?*\n\t- *10,000? Would it be more or less important?*\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide.\n- *Do you think a program is better or worse when more than one person has worked on it?*\n- *Do you think people make more or fewer mistakes when they're in a hurry?*\n- *If you find a mistake, do you have to throw out the entire program and start over?*"
       },
       "seeding_key": {
         "activity_section.key": "59f47188-d7e3-4468-b295-b43ed4184244",
@@ -3923,6 +3923,29 @@
       }
     },
     {
+      "key": "e890b043-314b-4def-8a09-ba77056cf7ef",
+      "position": 7,
+      "properties": {
+        "description": "Sometimes when we create our own projects we find inspiration from other people’s projects. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e890b043-314b-4def-8a09-ba77056cf7ef",
+        "lesson_activity.key": "f8f808c5-0e75-497f-b6f3-624d6da5797c"
+      }
+    },
+    {
+      "key": "bce0d6fc-63a9-4698-8de7-5b2df3bc37b0",
+      "position": 8,
+      "properties": {
+        "description": "If you have gotten permission to remix a project, make sure to give credit to the original coder:\n- If you remix a Code.org project:\n  - Add a comment block that explains where you remixed from.\n  - You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n- If you want to remix a friend’s project make sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "bce0d6fc-63a9-4698-8de7-5b2df3bc37b0",
+        "lesson_activity.key": "f8f808c5-0e75-497f-b6f3-624d6da5797c"
+      }
+    },
+    {
       "key": "0e4d9f77-9225-4883-8739-931d654a10d4",
       "position": 1,
       "properties": {
@@ -3956,7 +3979,7 @@
       "key": "e3409814-b4e4-4e30-bf68-0a842d8083ee",
       "position": 3,
       "properties": {
-        "description": "&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Create Your Project” slide\n\n**Say:** _Select one of the four to create your own project._",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Create Your Project” slide\n\n**Say:** _Select one of the four to create your own project._",
         "progression_name": "Create your project"
       },
       "seeding_key": {
@@ -11456,6 +11479,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Events in Bounce",
         "vocabulary.key": "event"
       }
@@ -11536,6 +11577,12 @@
       "seeding_key": {
         "lesson.key": "Looking Ahead with Minecraft",
         "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft",
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -11876,6 +11923,16 @@
       }
     },
     {
+      "key": "7f4f5291-bf96-4b0d-84ee-99b637197cf9",
+      "properties": {
+        "description": "Present a project including a description of choices made in creating the algorithm."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "7f4f5291-bf96-4b0d-84ee-99b637197cf9"
+      }
+    },
+    {
       "key": "8713ab85-a64f-4a32-ad06-f690c9331bc4",
       "properties": {
         "description": "Develop programs that respond to timed events"
@@ -11913,6 +11970,16 @@
       "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
         "objective.key": "931ca47b-327f-4307-b79b-1b407b403cbf"
+      }
+    },
+    {
+      "key": "94c5531c-c1dc-47c4-bcaa-284fb5d9c9fa",
+      "properties": {
+        "description": "Devlope a program with a combination of coding blocks including: sequences, events, loops and conditionals."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "94c5531c-c1dc-47c4-bcaa-284fb5d9c9fa"
       }
     },
     {
@@ -12073,6 +12140,16 @@
       "seeding_key": {
         "lesson.key": "Events in Bounce",
         "objective.key": "e7f0bc95-7347-4073-9c4d-21230d79fd4f"
+      }
+    },
+    {
+      "key": "ea6d1c79-29b9-4db1-913c-66cc5977a010",
+      "properties": {
+        "description": "Determine when to use loops in a program to simplify a sequence."
+      },
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft",
+        "objective.key": "ea6d1c79-29b9-4db1-913c-66cc5977a010"
       }
     },
     {
@@ -12289,6 +12366,13 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-16"
       }
     },
@@ -12373,14 +12457,14 @@
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-16"
+        "standard.shortcode": "1B-AP-11"
       }
     },
     {
@@ -12513,7 +12597,28 @@
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {
@@ -12521,6 +12626,13 @@
         "lesson.key": "While Loops in Farmer",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     }
   ],
