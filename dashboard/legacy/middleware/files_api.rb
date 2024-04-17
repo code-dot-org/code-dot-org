@@ -222,7 +222,11 @@ class FilesApi < Sinatra::Base
   #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
-    NewRelic::Agent.ignore_enduser rescue nil
+    begin
+      NewRelic::Agent.ignore_enduser
+    rescue
+      nil
+    end
 
     buckets = get_bucket_impl(endpoint).new
     cache_duration ||= buckets.cache_duration_seconds

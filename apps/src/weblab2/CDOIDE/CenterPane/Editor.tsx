@@ -26,10 +26,13 @@ const Editor = (
     [file?.id, saveFile]
   );
 
-  const editorConfigExtensions = useMemo(
-    () => (file?.language ? [langMapping[file.language]] : []),
-    [file?.language, langMapping]
-  );
+  const editorConfigExtensions = useMemo(() => {
+    if (file?.language && langMapping[file.language]) {
+      return [langMapping[file.language]];
+    } else {
+      return [];
+    }
+  }, [file?.language, langMapping]);
 
   if (file && !editableFileType(file.language, editableFileTypes)) {
     return <div>Cannot currently edit files of type {file.language}</div>;
