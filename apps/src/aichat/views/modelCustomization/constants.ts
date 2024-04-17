@@ -6,7 +6,7 @@ import {
 } from '../../types';
 
 export const MIN_TEMPERATURE = 0;
-export const MAX_TEMPERATURE = 2;
+export const MAX_TEMPERATURE = 1;
 export const SET_TEMPERATURE_STEP = 0.1;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
 export const MAX_ASK_ABOUT_TOPICS = 10;
@@ -42,6 +42,7 @@ export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
 };
 
 export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
+  selectedModelId: '',
   temperature: 0.5,
   systemPrompt: '',
   retrievalContexts: [],
@@ -51,6 +52,7 @@ export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
 export const DEFAULT_VISIBILITIES: {
   [key in keyof AiCustomizations]: Visibility;
 } = {
+  selectedModelId: Visibility.EDITABLE,
   temperature: Visibility.EDITABLE,
   systemPrompt: Visibility.EDITABLE,
   retrievalContexts: Visibility.EDITABLE,
@@ -61,11 +63,13 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   initialCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   visibilities: DEFAULT_VISIBILITIES,
   hidePresentationPanel: false,
+  availableModelIds: [],
 };
 
 export const AI_CUSTOMIZATIONS_LABELS: {
   [key in keyof AiCustomizations]: string;
 } = {
+  selectedModelId: 'Selected model',
   temperature: 'Temperature',
   systemPrompt: 'System prompt',
   retrievalContexts: 'Retrieval',

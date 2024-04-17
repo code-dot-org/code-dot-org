@@ -8,6 +8,11 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {
+  SELECT_A_SCHOOL,
+  CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
+} from '@cdo/apps/templates/SchoolZipSearch';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -101,7 +106,11 @@ $(document).ready(() => {
     countryInputEl.val(schoolData.countryCode);
 
     // Clear school_id if the searched school is not found.
-    if (schoolData.ncesSchoolId === '-1') {
+    if (
+      ['-1', NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
+        schoolData.ncesSchoolId
+      )
+    ) {
       const schoolIdEl = $(
         'input[name="user[school_info_attributes][school_id]"]'
       );

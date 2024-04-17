@@ -12,6 +12,7 @@ const DEFAULT_PROPS = {
     schoolName: 'schoolName',
   },
   zip: '10024',
+  disabled: false,
 };
 
 const fakeSchools = [
