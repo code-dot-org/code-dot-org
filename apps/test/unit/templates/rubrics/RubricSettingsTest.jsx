@@ -7,12 +7,16 @@ import sinon from 'sinon';
 import * as utils from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import currentUser, {
+  setAiRubricsDisabled,
+} from '@cdo/apps/templates/currentUserRedux';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
@@ -45,7 +49,7 @@ describe('RubricSettings', () => {
     refreshAiEvaluationsSpy = sinon.spy();
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
-    registerReducers({teacherSections});
+    registerReducers({teacherSections, currentUser});
     store = getStore();
   });
 
@@ -145,6 +149,7 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
+
     expect(wrapper.find('SectionSelector').length).to.equal(1);
   });
 
@@ -402,5 +407,77 @@ describe('RubricSettings', () => {
       }
     );
     sendEventSpy.restore();
+  });
+
+  it('displays the AI enable toggle', () => {
+    stubFetchEvalStatusForAll(ready);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    const input = wrapper.find(
+      '.uitest-rubric-ai-enable input[type="checkbox"]'
+    );
+    expect(input.length).to.equal(1);
+    expect(input.first().props().checked).to.be.true;
+  });
+
+  it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
+    stubFetchEvalStatusForAll(ready);
+
+    // Set the user's opt-out setting to true (our setting will now be false)
+    store.dispatch(setAiRubricsDisabled(true));
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    const input = wrapper.find(
+      '.uitest-rubric-ai-enable input[type="checkbox"]'
+    );
+    expect(input.length).to.equal(1);
+    expect(input.first().props().checked).to.be.false;
+  });
+
+  it('updates the AI disabled user setting when the toggle is used', () => {
+    stubFetchEvalStatusForAll(ready);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    // Let's stub out setting the field via UserPreferences
+    const setStub = sinon.stub(
+      UserPreferences.prototype,
+      'setAiRubricsDisabled'
+    );
+    const input = wrapper.find(
+      '.uitest-rubric-ai-enable input[type="checkbox"]'
+    );
+    input.simulate('change');
+    expect(setStub).to.have.been.calledWith(true);
+    setStub.restore();
   });
 });
