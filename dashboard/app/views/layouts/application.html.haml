@@ -9,7 +9,10 @@
     - managed_test_server = "#{CDO.running_web_application? && CDO.test_system?}"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
-    = ::NewRelic::Agent.browser_timing_header rescue ''
+    - begin
+      = ::NewRelic::Agent.browser_timing_header
+    - rescue
+      = ''
     - if view_options[:responsive_content]
       = tag :meta, name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
     - else
