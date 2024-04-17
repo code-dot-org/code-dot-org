@@ -42,7 +42,7 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
   });
 
-  it('renders Child Account Policy Notice if showChildAccountPolicy is true for student and email sections', () => {
+  it('renders Child Account Policy Notice for US, student and email sections', () => {
     sinon
       .stub(utils, 'queryParams')
       .withArgs('loginType')
@@ -50,13 +50,11 @@ describe('SectionsSetUpContainer', () => {
       .withArgs('participantType')
       .returns('student');
 
-    const wrapper = shallow(
-      <SectionsSetUpContainer showChildAccountPolicy={true} />
-    );
+    const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
     expect(wrapper.find('Connect(Notification)').exists()).to.equal(true);
   });
 
-  it('does not render Child Account Policy Notice if showChildAccountPolicy is true for students and not email', () => {
+  it('does not render Child Account Policy Notice when sections are not email', () => {
     sinon
       .stub(utils, 'queryParams')
       .withArgs('loginType')
@@ -64,9 +62,19 @@ describe('SectionsSetUpContainer', () => {
       .withArgs('participantType')
       .returns('student');
 
-    const wrapper = shallow(
-      <SectionsSetUpContainer showChildAccountPolicy={true} />
-    );
+    const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
+    expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
+  });
+
+  it('does not render Child Account Policy Notice for country different that US', () => {
+    sinon
+      .stub(utils, 'queryParams')
+      .withArgs('loginType')
+      .returns('email')
+      .withArgs('participantType')
+      .returns('student');
+
+    const wrapper = shallow(<SectionsSetUpContainer userCountry={'ES'} />);
     expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
   });
 
