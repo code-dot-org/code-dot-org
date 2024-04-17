@@ -190,19 +190,32 @@ module Services
             json_key_io: StringIO.new(CDO.gdrive_export_secret.to_json || ""),
             scope: Google::Apis::DriveV3::AUTH_DRIVE,
           )
+
+          # We only need to regenerate if we are creating a pdf using puppeteer
+          regenerate_pdf = false
+
           if url.start_with?("https://docs.google.com/document/d/")
             file_id = url_to_id(url)
             service.export_file(file_id, 'application/pdf', download_dest: path)
-            return path
+            regenerate_pdf = true
           elsif url.start_with?("https://drive.google.com/")
             file_id = url_to_id(url)
             file = service.get_file(file_id)
             return nil unless file.mime_type == "application/pdf"
             service.get_file(file_id, download_dest: path)
-            return path
+            regenerate_pdf = true
           elsif url.end_with?(".pdf")
             IO.copy_stream(URI.parse(url)&.open, path)
-            return path
+            regenerate_pdf = true
+          end
+
+          # Regenerate the PDF
+          if regenerate_pdf && File.exist?(path)
+            new_path = File.join(File.dirname(path), "optimized_#{File.basename(path)}")
+            gs_command = "gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dQUIET -sOutputFile=#{new_path} #{path}"
+            system(gs_command)
+            puts "I regenerated #{path} to #{new_path} using Ghostscript."
+            return new_path
           end
         rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => exception
           ChatClient.log(
