@@ -71,6 +71,7 @@ class AichatControllerTest < ActionController::TestCase
   end
 
   test 'Forbidden if DCDO flag is set to false' do
+    sign_in(@genai_pilot_teacher)
     DCDO.stubs(:get).with('aichat_chat_completion', true).returns(false)
     post :chat_completion, params: @valid_params
     assert_equal json_response["status"], :forbidden
