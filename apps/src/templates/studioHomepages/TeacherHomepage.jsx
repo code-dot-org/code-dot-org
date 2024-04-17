@@ -316,7 +316,25 @@ export const UnconnectedTeacherHomepage = ({
           initialJoinedStudentSections={joinedStudentSections}
           initialJoinedPlSections={joinedPlSections}
           isTeacher={true}
+          showPlSections={false}
         />
+        {joinedPlSections?.length > 0 && (
+          <>
+            <BodyTwoText>
+              {i18n.joinedProfessionalLearningSectionsHomepageDesc()}
+            </BodyTwoText>
+            <LinkButton
+              color={'purple'}
+              href={studio('/my-professional-learning')}
+              iconLeft={{
+                iconName: 'book-circle-arrow-right',
+                iconStyle: 'solid',
+              }}
+              size="s"
+              text={i18n.myProfessionalLearningSectionsHomepageButton()}
+            />
+          </>
+        )}
       </div>
     </div>
   );
