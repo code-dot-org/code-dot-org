@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2024-04-11 23:09:26 UTC",
+    "serialized_at": "2024-04-16 18:11:13 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1384,7 +1384,7 @@
       "key": "4681e4ae-ef1f-4790-98ec-439e2ea8075e",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Hand each group of 2-3 students a ***Map Activity**, as well as the blank papers for the grid on the ground.  Allow students to either cut the halves of each map apart, or fold the sheets in half so that each map is clearly visible (without distraction.)\n\n**Set-Up:** In each group, each player will get a task.\n\n- Player 1: Choose/set-up the map to play\n- Player 2: Programmer\n- Player 3: Walking Machine\n\n\n**Directions for Class:**\n1) Decide who will take each job.\n\n2) Have player 1 set a grid on the floor made up of pieces of paper (as shown on one of the Move It Maps) except with the gem paper facing the ground.\n\n3) Player 3 will start by standing on the page with the compass rose.\n\n4) Player 2 will then guide player 3 step-by-step through the paper maze using the provided arm signals.\n\n5) When player 2 gives the signal to “STOP”, player 3 will flip over the page that they are on. If that page is a gem, then the maze was a success!\n\n6) If there is time, let everyone rotate positions and go again!\n\nNote that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Map Activity” slide\n\n**Distribute:** Hand each group of 2-3 students a ***Map Activity**, as well as the blank papers for the grid on the ground.  Allow students to either cut the halves of each map apart, or fold the sheets in half so that each map is clearly visible (without distraction.)\n\n**Set-Up:** In each group, each player will get a task.\n\n- Player 1: Choose/set-up the map to play\n- Player 2: Programmer\n- Player 3: Walking Machine\n\n**Directions for Class:**\n1) Decide who will take each job.\n\n2) Have player 1 set a grid on the floor made up of pieces of paper (as shown on one of the Move It Maps) except with the gem paper facing the ground.\n\n3) Player 3 will start by standing on the page with the compass rose.\n\n4) Player 2 will then guide player 3 step-by-step through the paper maze using the provided arm signals.\n\n5) When player 2 gives the signal to “STOP”, player 3 will flip over the page that they are on. If that page is a gem, then the maze was a success!\n\n6) If there is time, let everyone rotate positions and go again!\n\nNote that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n",
         "name": "Move It, Move It"
       },
       "seeding_key": {
@@ -1527,6 +1527,7 @@
       "key": "1c9cf0c4-815e-406a-b27b-f25d0379bf28",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video - Maze Intro: Programming with Blocks” slide",
         "progression_name": "Video - Maze Intro: Programming with Blocks"
       },
       "seeding_key": {
@@ -1546,9 +1547,21 @@
       }
     },
     {
-      "key": "f479ba66-694e-4760-9189-31abdf64a170",
+      "key": "e6888a2e-346a-461a-964d-9804f2168ecd",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6888a2e-346a-461a-964d-9804f2168ecd",
+        "lesson_activity.key": "86a467d4-8a22-4a5e-82ee-d934197f5360"
+      }
+    },
+    {
+      "key": "f479ba66-694e-4760-9189-31abdf64a170",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1681,6 +1694,7 @@
       "key": "abb5c2f2-d757-4c34-bf52-04cb0721b754",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Pair Programming” slide",
         "progression_name": "Video: Pair Programming"
       },
       "seeding_key": {
@@ -1692,6 +1706,7 @@
       "key": "c21833c9-1bd1-406d-b2f1-ca32b2625b47",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building: Levels 2-6” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1703,6 +1718,7 @@
       "key": "30ce48fa-aa1a-4b3c-abb9-d07376de4961",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1714,6 +1730,7 @@
       "key": "ccbef390-614a-425b-82b9-cd116e3d0c97",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8-10: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1848,6 +1865,7 @@
       "key": "65a922cd-c4b7-49ea-a07b-b096549d047b",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Harvester” slide",
         "progression_name": "Video: The Harvester"
       },
       "seeding_key": {
@@ -1859,6 +1877,7 @@
       "key": "335239d8-5a13-41ed-93cd-e44d0acfb694",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-4: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1870,6 +1889,7 @@
       "key": "17c5d82b-eb88-45f5-afcf-5d83a4b67123",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Debugging with the Step Button” slide",
         "progression_name": "Video: Debugging with the Step Button"
       },
       "seeding_key": {
@@ -1881,6 +1901,7 @@
       "key": "94ffa6ed-7ca2-45fd-8a4d-7e0f060c4a20",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 6-11: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1892,6 +1913,7 @@
       "key": "ac240afc-6bd7-4165-9564-ac2ea3046e4f",
       "position": 8,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1903,6 +1925,7 @@
       "key": "4fe6d2f6-49e2-4700-90c6-8691148bd2d2",
       "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 13-15: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1950,6 +1973,7 @@
       "key": "5c23f0fb-81a9-4148-9562-06cf42cdda70",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Getting Loopy” slide",
         "progression_name": "Video: Getting Loopy"
       },
       "seeding_key": {
@@ -1961,6 +1985,7 @@
       "key": "c49fb4d7-4b31-4a44-82b2-e4fb8dc7b69c",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each section down into smaller steps.",
         "name": "Getting Loopy"
       },
       "seeding_key": {
@@ -1972,7 +1997,7 @@
       "key": "46d66661-4488-4fe4-83cf-aefc09a1056c",
       "position": 3,
       "properties": {
-        "description": "Introduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party” slide\n\nIntroduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
         "tips": [
           {
             "type": "teachingTip",
@@ -2126,6 +2151,7 @@
       "key": "a5f56165-d518-4765-b12a-2555b829a74d",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 1-2: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2137,6 +2163,7 @@
       "key": "0def5584-cbf4-408d-8d71-2698fe411b8b",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Repeat Blocks” slide",
         "progression_name": "Video: Repeat Blocks"
       },
       "seeding_key": {
@@ -2148,6 +2175,7 @@
       "key": "a18fb36b-fa5b-44fb-8959-8b0ad8e77520",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-10: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2159,6 +2187,7 @@
       "key": "85581e9d-aa3d-4bb4-b693-b3793577b208",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-10: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2170,6 +2199,7 @@
       "key": "aed9e7f5-354e-4a14-b289-dfa2d09e4eac",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 12-13: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2238,7 +2268,7 @@
       "key": "8dde76dd-10e3-4428-80f2-18a1492f6d8b",
       "position": 1,
       "properties": {
-        "description": "We've included a multiple choice prediction level that could be difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\n\nPrediction Level:\n\n - [Course B, Loops in Collector](https://studio.code.org/levels/8746)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Predict” slide\n\nWe've included a multiple choice prediction level that could be difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\n\nPrediction Level:\n\n - [Course B, Loops in Collector](https://studio.code.org/levels/8746)",
         "name": "Teacher Demonstration"
       },
       "seeding_key": {
@@ -2250,6 +2280,7 @@
       "key": "c1a25ca0-440c-4705-8046-b330543c1ad5",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Collector” slide",
         "progression_name": "Video: The Collector"
       },
       "seeding_key": {
@@ -2261,6 +2292,7 @@
       "key": "f3bfbaeb-3f72-4eba-8d4f-1ae2fe593f4d",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-3: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2272,6 +2304,7 @@
       "key": "f8064942-3ee5-4944-b822-b2f703e1dba8",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Using the Repeat Block” slide",
         "progression_name": "Video: Using the Repeat Block"
       },
       "seeding_key": {
@@ -2283,6 +2316,7 @@
       "key": "02a7e8f0-6d17-4fad-82f1-1fd9c8e3e1b2",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 5-9: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2294,6 +2328,7 @@
       "key": "d858a672-ca64-4b8e-ac00-1a15661f6c7e",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2305,6 +2340,7 @@
       "key": "e8466175-fa57-41eb-9098-bfb4e4245167",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 11-13: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2400,6 +2436,7 @@
       "key": "7badb4ac-13dd-4cfb-85d6-652a2223ec59",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Artist in Code Studio” slide",
         "progression_name": "Video: The Artist in Code Studio"
       },
       "seeding_key": {
@@ -2411,6 +2448,7 @@
       "key": "15bb2bc6-691d-4811-8b3a-262b079c3d66",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2: Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2422,6 +2460,7 @@
       "key": "2412a5ef-c549-4cb8-a8f2-d51d086f48f1",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Repeat Blocks with the Artist” slide",
         "progression_name": "Video: Repeat Blocks with the Artist"
       },
       "seeding_key": {
@@ -2433,6 +2472,7 @@
       "key": "d12fcc5a-ec4f-45c2-9911-d7ac414a41a2",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-8: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2444,6 +2484,7 @@
       "key": "7b748d0d-5f6e-42d6-9863-8a4310c4eeb8",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2455,6 +2496,7 @@
       "key": "eee8d548-5d29-404c-819d-97c055476fa0",
       "position": 8,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 10-11: Skill Building” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2466,6 +2508,7 @@
       "key": "004e622d-7b6e-4ea4-8b3a-84e6804121ce",
       "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12: Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2643,7 +2686,7 @@
       "key": "b9da5453-84fd-4933-92ef-c014ac09abe6",
       "position": 2,
       "properties": {
-        "description": "**Discuss**: Prepare students for today's activity by recalling previous work they have done. \n\n- Do you remember helping _Angry Bird_ find the pig?\n\t- In that exercise, you knew in advance exactly where you wanted Red to end up, so you could make a program that took the bird from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\n**Say**: _In earlier lessons, we created algorithms that allowed us to control a friend or bird for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!_\n\n\n**Directions:**\n\n- Project the ***Controller Image** onto your classroom screen.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Big Event” slide\n\n**Discuss**: Prepare students for today's activity by recalling previous work they have done. \n\n- Do you remember helping _Angry Bird_ find the pig?\n\t- In that exercise, you knew in advance exactly where you wanted Red to end up, so you could make a program that took the bird from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\n**Say**: _In earlier lessons, we created algorithms that allowed us to control a friend or bird for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each set of actions down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Project the ***Controller Image** onto your classroom screen.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n**Directions:**\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b9da5453-84fd-4933-92ef-c014ac09abe6",
@@ -2773,6 +2816,7 @@
       "key": "5044af9f-1cfa-4112-99e3-7509cca2fe5c",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Introduction to Play Lab” slide",
         "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
@@ -2784,6 +2828,7 @@
       "key": "56c1c666-8fff-433a-bf3a-4b9c51924b7b",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2: Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2795,6 +2840,7 @@
       "key": "abd754ea-74c4-43cd-9405-46bb05c665d1",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-8: Mini-project” slide",
         "progression_name": "Mini-Project: Royal Battle"
       },
       "seeding_key": {
@@ -2806,6 +2852,7 @@
       "key": "6787f189-ee47-4005-b0dc-31183247c933",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {

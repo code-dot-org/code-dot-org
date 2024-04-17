@@ -25,7 +25,7 @@
   - if show_lti_warning
     .row-fluid
       .span10
-        .row= render partial: 'lti/v1/sing_up_warning_banner', locals: {provider: issuer_name}
+        .row= render partial: 'lti/v1/sign_up_warning_banner', locals: {provider: issuer_name}
 
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
     .row

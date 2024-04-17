@@ -1,0 +1,16 @@
+name 'self-paced-pl-ai-101-mod1-introduction_01_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome to AI 101 Professional Learning!
+
+#### This is a free, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
+
+#### In this five-part series we’ll demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes.
+
+#### Join us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI.
+
+#### Feel free to complete as much or as little of this Professional Learning as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful on your journey to learning how to harness the power of AI in your practice. You'll be able to give Code.org your feedback on the last level of this module.
+
+MARKDOWN
