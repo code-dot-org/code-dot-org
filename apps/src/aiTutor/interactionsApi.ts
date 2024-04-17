@@ -13,7 +13,7 @@ export async function savePromptAndResponse(
   interactionData: AITutorInteraction
 ) {
   try {
-    await fetch('/ai_tutor_interactions', {
+    const response = await fetch('/ai_tutor_interactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -21,6 +21,11 @@ export async function savePromptAndResponse(
       },
       body: JSON.stringify(interactionData),
     });
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
   } catch (error) {
     MetricsReporter.logError({
       event: MetricEvent.AI_TUTOR_CHAT_SAVE_FAIL,

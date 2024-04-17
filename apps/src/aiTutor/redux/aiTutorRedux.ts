@@ -8,7 +8,6 @@ import {
   ChatCompletionMessage,
   Level,
   ChatContext,
-  AITutorInteractionStatusValue,
   AITutorTypes,
 } from '../types';
 
@@ -99,7 +98,7 @@ export const askAITutor = createAsyncThunk(
     console.log('chatApiResponse: ', chatApiResponse);
 
     thunkAPI.dispatch(
-      updateChatMessageStatus({
+      updateLastChatMessage({
         status: chatApiResponse.status,
       })
     );
@@ -123,6 +122,7 @@ export const askAITutor = createAsyncThunk(
 
     const savedMessage = await savePromptAndResponse(interactionData);
     console.log('savedMessage: ', savedMessage);
+    thunkAPI.dispatch(updateLastChatMessage({id: savedMessage.id}));
   }
 );
 
@@ -151,13 +151,20 @@ const aiTutorSlice = createSlice({
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
     },
-    updateChatMessageStatus: (
+    updateLastChatMessage: (
       state,
-      action: PayloadAction<{status: AITutorInteractionStatusValue}>
+      action: PayloadAction<Partial<ChatCompletionMessage>>
     ) => {
-      const {status} = action.payload;
       if (state.chatMessages.length > 0) {
-        state.chatMessages[state.chatMessages.length - 1].status = status;
+        const lastMessage = state.chatMessages[state.chatMessages.length - 1];
+        const payloadKeys = Object.keys(action.payload) as Array<
+          keyof ChatCompletionMessage
+        >;
+
+        payloadKeys.forEach(key => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (lastMessage as any)[key] = action.payload[key];
+        });
       }
     },
   },
@@ -183,5 +190,5 @@ export const {
   addChatMessage,
   clearChatMessages,
   setIsWaitingForChatResponse,
-  updateChatMessageStatus,
+  updateLastChatMessage,
 } = aiTutorSlice.actions;

@@ -27,15 +27,14 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
     }
 
     const feedbackData = {
-      thumbsUp: feedbackState.thumbsUp === thumbsUp ? null : thumbsUp,
-      thumbsDown: feedbackState.thumbsDown === !thumbsUp ? null : !thumbsUp,
+      thumbsUp: thumbsUp ? (feedbackState.thumbsUp ? null : true) : null,
+      thumbsDown: thumbsUp ? null : feedbackState.thumbsDown ? null : true,
     };
 
     try {
       setFeedbackState(feedbackData);
       await saveFeedback(messageId, feedbackData);
     } catch (error) {
-      console.log('Failed to save feedback: ', error);
       setFeedbackState({thumbsUp: false, thumbsDown: false});
     }
   };
