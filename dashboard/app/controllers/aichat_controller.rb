@@ -8,22 +8,21 @@ class AichatController < ApplicationController
   # chatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
-    inputs = BASE_PROMPT
-
     aichat_params = params[:aichatParameters]
+    inputs = BASE_PROMPT
     inputs += aichat_params[:systemPrompt]
     inputs += aichat_params[:retrievalContexts].join(" ") if aichat_params[:retrievalContexts]
 
     if params[:storedMessages].empty?
       inputs += " " + params[:newMessage]
-      inputs = "[INST] #{inputs} [/INST]"
+      inputs = "<s>[INST] #{inputs} [/INST]"
     else
-      inputs = "[INST] #{inputs} [/INST]"
+      inputs = "<s>[INST] #{inputs} [/INST]"
       params[:storedMessages].each do |msg|
         if msg[:role] == 'user'
           inputs += "[INST] #{msg[:content]} [/INST] "
         elsif msg[:role] == 'assistant'
-          inputs += msg[:content]
+          inputs += msg[:content] + "</s>"
         end
       end
       inputs += "[INST] #{params[:newMessage]} [/INST] "
