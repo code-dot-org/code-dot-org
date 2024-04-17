@@ -21,7 +21,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I click selector ".assignment-version-title:contains('19-'20)" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Unit 3 - Intro to Programming ('19-'20)" option in dropdown "uitest-secondary-assignment"
-    And I press the first "#uitest-save-section-changes" element
+    And I press the first "#uitest-save-section-changes" element to load a new page
     And I wait until element "#classroom-sections" is visible
 
     # Progress tab
