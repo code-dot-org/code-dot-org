@@ -38,7 +38,11 @@ const swiperParams = {
     `
       :host .swiper-pagination {
         position: relative;
-        margin-top: 2rem;
+        margin-block: 2rem 0;
+
+        .swiper-pagination-bullet {
+          margin-block: 0.5rem;
+        }
       }
     `,
   ],
