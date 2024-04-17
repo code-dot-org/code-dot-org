@@ -1,8 +1,10 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 import {expect} from '../../../../util/reconfiguredChai';
-import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
+import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
 
 const DEFAULT_PROPS = {
@@ -12,11 +14,19 @@ const DEFAULT_PROPS = {
   currentYearApplicationId: 2024,
   workshopsAsParticipant: [{data: 'workshops'}],
   plCoursesStarted: selfPacedCourseConstants,
+  userPermissions: [],
+  plSectionIds: [],
+  hiddenPlSectionIds: [],
 };
 
 describe('LandingPage', () => {
   function renderDefault(propOverrides = {}) {
-    render(<LandingPage {...DEFAULT_PROPS} {...propOverrides} />);
+    const store = getStore();
+    render(
+      <Provider store={store}>
+        <LandingPage {...DEFAULT_PROPS} {...propOverrides} />
+      </Provider>
+    );
   }
 
   it('page shows a getting started banner for a new teacher without an existing application, upcoming workshop, self-paced courses, or pl course', () => {
@@ -85,5 +95,64 @@ describe('LandingPage', () => {
     expect(
       screen.getAllByText(i18n.selfPacedPlPrintCertificates()).length
     ).to.equal(2);
+  });
+
+  it('page shows no tabs for teacher with no relevant permissions', () => {
+    renderDefault();
+
+    // Should only see the banner header labeled "Professional Learning" but not the tab of the same name
+    expect(screen.queryAllByText(i18n.professionalLearning())).to.have.lengthOf(
+      1
+    );
+    expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
+      .null;
+    expect(screen.queryByText(i18n.plLandingTabInstructors())).to.be.null;
+  });
+
+  it('page shows Professional Learning and Facilitator Center tabs for facilitator', () => {
+    renderDefault({
+      userPermissions: ['facilitator'],
+    });
+
+    expect(screen.queryAllByText(i18n.professionalLearning())).to.have.lengthOf(
+      2
+    );
+    expect(screen.getByText(i18n.plLandingTabFacilitatorCenter()));
+    expect(screen.queryByText(i18n.plLandingTabInstructors())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
+      .null;
+  });
+
+  it('page shows Professional Learning and Instructors tabs for universal instructors', () => {
+    renderDefault({
+      userPermissions: ['universal_instructor'],
+    });
+
+    expect(screen.queryAllByText(i18n.professionalLearning())).to.have.lengthOf(
+      2
+    );
+    expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).to.be.null;
+    expect(screen.getByText(i18n.plLandingTabInstructors()));
+    expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
+      .null;
+  });
+
+  it('page shows Professional Learning and Instructors tabs for peer reviewers', () => {
+    renderDefault({
+      userPermissions: ['plc_reviewer'],
+    });
+
+    expect(screen.queryAllByText(i18n.professionalLearning())).to.have.lengthOf(
+      2
+    );
+    expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).to.be.null;
+    expect(screen.getByText(i18n.plLandingTabInstructors()));
+    expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
+      .null;
   });
 });
