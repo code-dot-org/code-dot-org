@@ -84,7 +84,6 @@ export const askAITutor = createAsyncThunk(
       status: Status.UNKNOWN,
       chatMessageText: chatContext.studentInput,
     };
-    console.log('newMessage: ', newMessage);
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     const formattedQuestion = formatQuestionForAITutor(chatContext);
@@ -95,7 +94,6 @@ export const askAITutor = createAsyncThunk(
       levelContext.levelId,
       chatContext.actionType
     );
-    console.log('chatApiResponse: ', chatApiResponse);
 
     thunkAPI.dispatch(
       updateLastChatMessage({
@@ -120,9 +118,8 @@ export const askAITutor = createAsyncThunk(
       aiResponse: chatApiResponse?.assistantResponse,
     };
 
-    const savedMessage = await savePromptAndResponse(interactionData);
-    console.log('savedMessage: ', savedMessage);
-    thunkAPI.dispatch(updateLastChatMessage({id: savedMessage.id}));
+    const savedInteraction = await savePromptAndResponse(interactionData);
+    thunkAPI.dispatch(updateLastChatMessage({id: savedInteraction.id}));
   }
 );
 

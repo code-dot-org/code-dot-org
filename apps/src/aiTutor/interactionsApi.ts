@@ -83,7 +83,6 @@ export async function saveFeedback(
   aiTutorInteractionId: number,
   feedbackData: FeedbackData
 ) {
-  console.log('Feedback data: ', feedbackData);
   try {
     await fetch(`/ai_tutor_interactions/${aiTutorInteractionId}/feedbacks`, {
       method: 'POST',

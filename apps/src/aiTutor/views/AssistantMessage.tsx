@@ -35,7 +35,7 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
       setFeedbackState(feedbackData);
       await saveFeedback(messageId, feedbackData);
     } catch (error) {
-      setFeedbackState({thumbsUp: false, thumbsDown: false});
+      setFeedbackState({thumbsUp: null, thumbsDown: null});
     }
   };
 
