@@ -456,6 +456,9 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :not_acceptable
+    assert_match 'Unsupported LTI message type', @response.body
+    assert_match 'Sorry! It looks like you are trying to launch the Code.org Integration via a file.', @response.body
+    assert_match 'Please try launching Code.org again from a <a href="https://github.com/code-dot-org/code-dot-org/blob/staging/docs/lti-integration.md#option-2-manual-entry">supported method</a>.', @response.body
   end
 
   test 'auth - error raised in decoding jwt' do

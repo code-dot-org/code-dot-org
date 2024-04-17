@@ -180,8 +180,10 @@ const EditAichatSettings: React.FunctionComponent<{
                 customize their chatbot. Published chatbots are able to be
                 viewed in a Presentation View which mimics a user-centered
                 experience by hiding instructions and displaying the model card.
-                Use the setting below to hide the option to enter presentation
-                view in a level.
+                This setting will also hide the "Publish" tab of the model
+                customization area in the Edit View, since students cannot
+                publish their work when this setting is enabled. Use the setting
+                below to hide the option to enter presentation view in a level.
               </i>
             </BodyFourText>
             <div className={moduleStyles.fieldRow}>
