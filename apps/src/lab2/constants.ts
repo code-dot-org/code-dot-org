@@ -16,3 +16,5 @@ export const BLOCKLY_LABS: AppName[] = [
   'poetry',
   'spritelab',
 ];
+
+export const MAIN_PYTHON_FILE = 'main.py';
