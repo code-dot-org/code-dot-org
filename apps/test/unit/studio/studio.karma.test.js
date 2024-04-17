@@ -19,11 +19,11 @@ const SPEECH_BUBBLE_H_OFFSET = 50;
 const SPEECH_BUBBLE_SIDE_MARGIN = 10;
 
 describe('studio', function () {
-  beforeAll(() => {
+  before(() => {
     replaceOnWindow('appOptions', {});
   });
 
-  afterAll(() => {
+  after(() => {
     restoreOnWindow('appOptions');
   });
 
