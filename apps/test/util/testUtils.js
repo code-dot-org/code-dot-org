@@ -12,9 +12,14 @@ export {
 } from './throwOnConsole';
 export {clearTimeoutsBetweenTests} from './clearTimeoutsBetweenTests';
 
+/**
+ * Temporarily support switching between mocha 'before' and jest 'beforeAll'.
+ *
+ * todo: Remove this code when Karma is fully removed
+ */
 export function setExternalGlobals(
-  beforeFunc = beforeAll,
-  afterFunc = afterAll
+  beforeFunc = typeof beforeAll === 'function' ? beforeAll : before,
+  afterFunc = typeof afterAll === 'function' ? afterAll : after
 ) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
