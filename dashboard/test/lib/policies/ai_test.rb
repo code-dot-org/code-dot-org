@@ -72,9 +72,46 @@ class Policies::AiTest < ActiveSupport::TestCase
     end
 
     test 'ai_rubrics_enabled_for_script_level? should return true if student in one section that does not opt-out' do
-      @teacher.ai_rubrics_disabled = false
-      @teacher.save!
       assert Policies::Ai.ai_rubrics_enabled_for_script_level?(@user, @script_level)
+    end
+
+    test 'ai_rubrics_enabled_for_script_level? should return true as long as a general section the student is in does not opt-out' do
+      # The specific section teacher opts out
+      @teacher.ai_rubrics_disabled = true
+      @teacher.save!
+
+      # Create a section without a Unit
+      alt_teacher = create :teacher
+      alt_section = create :section, user: alt_teacher
+      create(:follower, student_user: @user, section: alt_section)
+
+      assert Policies::Ai.ai_rubrics_enabled_for_script_level?(@user, @script_level)
+    end
+
+    test 'ai_rubrics_enabled_for_script_level? should return true as long as a related section the student is in does not opt-out' do
+      # Create a section without a Unit
+      alt_teacher = create :teacher
+      alt_teacher.ai_rubrics_disabled = true
+      alt_teacher.save!
+      alt_section = create :section, user: alt_teacher
+      create(:follower, student_user: @user, section: alt_section)
+
+      assert Policies::Ai.ai_rubrics_enabled_for_script_level?(@user, @script_level)
+    end
+
+    test 'ai_rubrics_enabled_for_script_level? should return false if all related sections have teachers that opt-out' do
+      # The specific section teacher opts out
+      @teacher.ai_rubrics_disabled = true
+      @teacher.save!
+
+      # Create a section for a different Unit with a different teacher that does not opt out
+      alt_teacher = create :teacher
+      alt_script = create :script
+      alt_section = create :section, user: alt_teacher, script: alt_script
+      create(:follower, student_user: @user, section: alt_section)
+
+      # Should not run the AI analysis
+      refute Policies::Ai.ai_rubrics_enabled_for_script_level?(@user, @script_level)
     end
   end
 end
