@@ -34,7 +34,7 @@ class AichatController < ApplicationController
     return {status: response_code, json: response_body}
   end
 
-  def can_request_aichat_chat_completion?
+  private def can_request_aichat_chat_completion?
     DCDO.get('aichat_chat_completion', true)
   end
 
