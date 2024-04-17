@@ -14,6 +14,8 @@ export default function JoinSectionArea({
   initialJoinedPlSections,
   initialJoinedStudentSections,
   isTeacher = false,
+  showStudentSections = true,
+  showPlSections = true,
 }) {
   const [sectionResults, setSectionResults] = useState({
     action: null,
@@ -66,7 +68,7 @@ export default function JoinSectionArea({
         updateSectionsResult={updateSectionsResult}
         isTeacher={isTeacher}
       />
-      {joinedStudentSections?.length > 0 && (
+      {showStudentSections && joinedStudentSections?.length > 0 && (
         <ParticipantSections
           sections={joinedStudentSections}
           isTeacher={isTeacher}
@@ -74,7 +76,7 @@ export default function JoinSectionArea({
           updateSections={setJoinedStudentSections}
         />
       )}
-      {joinedPlSections?.length > 0 && isTeacher && (
+      {showPlSections && joinedPlSections?.length > 0 && isTeacher && (
         <ParticipantSections
           sections={joinedPlSections}
           isTeacher={isTeacher}
@@ -91,4 +93,6 @@ JoinSectionArea.propTypes = {
   initialJoinedStudentSections: shapes.sections,
   initialJoinedPlSections: shapes.sections,
   isTeacher: PropTypes.bool,
+  showStudentSections: PropTypes.bool,
+  showPlSections: PropTypes.bool,
 };

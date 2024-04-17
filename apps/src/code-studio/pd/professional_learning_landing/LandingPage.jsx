@@ -17,6 +17,7 @@ import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/Cot
 import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import style from './landingPage.module.scss';
 import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
@@ -25,6 +26,7 @@ import {
   asyncLoadCoteacherInvite,
   hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import shapes from '@cdo/apps/templates/studioHomepages/shapes';
 
 const getAvailableTabs = permissions => {
   let tabs = [
@@ -71,6 +73,8 @@ function LandingPage({
   workshopsAsParticipant,
   plCoursesStarted,
   userPermissions,
+  joinedStudentSections,
+  joinedPlSections,
   plSectionIds,
   hiddenPlSectionIds,
 }) {
@@ -199,6 +203,12 @@ function LandingPage({
                 />
               </section>
             )}
+            <JoinSectionArea
+              initialJoinedStudentSections={joinedStudentSections}
+              initialJoinedPlSections={joinedPlSections}
+              isTeacher={true}
+              showPlSections={false}
+            />
             <section>
               <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
               {RenderStaticRecommendedPL()}
@@ -243,6 +253,8 @@ LandingPage.propTypes = {
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
+  joinedStudentSections: shapes.sections,
+  joinedPlSections: shapes.sections,
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),
 };
