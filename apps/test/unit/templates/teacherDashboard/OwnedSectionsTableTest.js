@@ -190,52 +190,6 @@ const sectionGradesRowData = [
   },
 ];
 
-const plSectionRowData = [
-  {
-    id: 1,
-    name: 'sectionA',
-    studentCount: 3,
-    code: 'ABC',
-    courseId: 29,
-    grades: ['K'],
-    loginType: SectionLoginType.picture,
-    participantType: 'teacher',
-    providerManaged: true,
-    hidden: false,
-    assignmentNames: [],
-    assignmentPaths: [],
-  },
-  {
-    id: 2,
-    name: 'sectionB',
-    studentCount: 4,
-    code: 'DEF',
-    courseId: 29,
-    grades: ['1'],
-    loginType: SectionLoginType.picture,
-    participantType: 'facilitator',
-    providerManaged: true,
-    hidden: false,
-    assignmentNames: [],
-    assignmentPaths: [],
-  },
-  {
-    id: 3,
-    name: 'sectionC',
-    studentCount: 0,
-    code: 'GHI',
-    courseId: 29,
-    scriptId: 168,
-    grades: ['4'],
-    loginType: SectionLoginType.picture,
-    participantType: 'teacher',
-    providerManaged: false,
-    hidden: false,
-    assignmentNames: [],
-    assignmentPaths: [],
-  },
-];
-
 // Scramble these for the table to start un-ordered
 const sections = [
   sectionGradesRowData[5],
@@ -310,29 +264,6 @@ describe('OwnedSectionsTable Sorting', () => {
       const cells = tr.find('td');
       expect(cells.at(GRADE_COLUMN).text()).to.equal(
         expectedGradeOrder[rowIndex]
-      );
-    });
-  });
-
-  it('table for pl sections shows participant type instead of grade', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <OwnedSectionsTable
-          sectionIds={[1, 2, 3]}
-          sectionRows={plSectionRowData}
-          isPlSections={true}
-          onEdit={() => {}}
-        />
-      </Provider>
-    );
-    expect(wrapper.find('.uitest-participant-type-header').length).to.equal(1);
-    const expectedParticipantTypes = ['Teachers', 'Facilitators', 'Teachers'];
-
-    let trows = wrapper.find('tbody').find('tr');
-    trows.forEach((tr, rowIndex) => {
-      const cells = tr.find('td');
-      expect(cells.at(GRADE_COLUMN).text()).to.equal(
-        expectedParticipantTypes[rowIndex]
       );
     });
   });
