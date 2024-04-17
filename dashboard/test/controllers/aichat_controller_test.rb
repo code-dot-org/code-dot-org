@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class AichatControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
   GENAI_PILOT = "gen-ai-customizing-llms"
 
   setup_all do
@@ -20,6 +19,10 @@ class AichatControllerTest < ActionController::TestCase
     @valid_params = @common_params.merge(newMessage: valid_message)
     @pii_violation_params = @common_params.merge(newMessage: pii_violation_message)
     @profanity_violation_params = @common_params.merge(newMessage: profanity_violation_message)
+  end
+
+  teardown_all do
+    @genai_pilot.delete
   end
 
   test_user_gets_response_for :chat_completion,
