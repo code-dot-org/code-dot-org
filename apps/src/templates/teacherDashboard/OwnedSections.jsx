@@ -74,13 +74,11 @@ class OwnedSections extends React.Component {
 
     return isPlSections ? (
       <OwnedPlSectionsTable
-        isPlSections={true}
         sectionIds={sectionsToShow}
         onEdit={this.onEditSection}
       />
     ) : (
       <OwnedSectionsTable
-        isPlSections={false}
         sectionIds={sectionsToShow}
         onEdit={this.onEditSection}
       />
