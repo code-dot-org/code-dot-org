@@ -72,17 +72,17 @@ const defaultConfig: ConfigType = {
 };
 
 const PythonlabView: React.FunctionComponent = () => {
-  const [currentProject, setCurrentProject] = useState<MultiFileSource>();
+  //const [currentProject, setCurrentProject] = useState<MultiFileSource>();
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const initialSources = useAppSelector(state => state.lab.initialSources);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
+  const source = useAppSelector(state => state.pythonlab.source);
 
   // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
   // https://codedotorg.atlassian.net/browse/CT-499
   const setProject = useMemo(
     () => (newProject: MultiFileSource) => {
-      setCurrentProject(newProject);
       dispatch(setSource(newProject));
       if (Lab2Registry.getInstance().getProjectManager()) {
         const projectSources = {
@@ -96,18 +96,17 @@ const PythonlabView: React.FunctionComponent = () => {
 
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
-    setCurrentProject(
-      (initialSources?.source as MultiFileSource) || defaultProject
+    dispatch(
+      setSource((initialSources?.source as MultiFileSource) || defaultProject)
     );
-    dispatch(setSource(initialSources?.source as MultiFileSource));
   }, [channelId, dispatch, initialSources]);
 
   return (
     <div className={moduleStyles.pythonlab}>
       <div className={moduleStyles.editor}>
-        {currentProject && (
+        {source && (
           <CDOIDE
-            project={currentProject}
+            project={source}
             config={config}
             setProject={setProject}
             setConfig={setConfig}

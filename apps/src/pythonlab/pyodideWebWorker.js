@@ -1,7 +1,7 @@
 import {
   deleteSourceFiles,
+  getUpdatedSource,
   importPackagesFromFiles,
-  writeCsvAndTextFiles,
   writeSource,
 } from './patches/pythonScriptUtils';
 import {DEFAULT_FOLDER_ID} from '../weblab2/CDOIDE/constants';
@@ -39,10 +39,12 @@ self.onmessage = async event => {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
     await importPackagesFromFiles(source, self.pyodide);
     let results = await self.pyodide.runPythonAsync(python);
+    console.log('getting updated source...');
+    const updatedSource = getUpdatedSource(self.pyodide, source);
+    self.postMessage({type: 'updated_source', updatedSource});
     self.postMessage({type: 'run_complete', results, id});
   } catch (error) {
     self.postMessage({type: 'error', error: error.message, id});
   }
-  writeCsvAndTextFiles(self.pyodide, source);
   deleteSourceFiles(self.pyodide, source);
 };

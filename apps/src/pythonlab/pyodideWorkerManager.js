@@ -8,8 +8,10 @@ import {
   appendOutputImage,
   appendSystemMessage,
   appendSystemOutMessage,
+  setSource,
 } from './pythonlabRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import Lab2Registry from '../lab2/Lab2Registry';
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
@@ -31,11 +33,22 @@ pyodideWorker.onmessage = event => {
     return;
   } else if (type === 'run_complete') {
     getStore().dispatch(appendSystemMessage('Program completed.'));
+  } else if (type === 'updated_source') {
+    // we should probably extract this somewhere...
+    getStore().dispatch(setSource(data.updatedSource));
+    if (Lab2Registry.getInstance().getProjectManager()) {
+      const projectSources = {
+        source: data.updatedSource,
+      };
+      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
+    }
+    return;
   } else if (type === 'error') {
     getStore().dispatch(appendSystemMessage(`Error: ${data.error}`));
   } else {
     console.warn(`Unknown message type ${type} from pyodideWorker.`);
     console.warn({data});
+    return;
   }
   const onSuccess = callbacks[id];
   delete callbacks[id];

@@ -2,6 +2,8 @@ import {PyodideInterface} from 'pyodide';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
+import {PyodidePathContent} from '../types';
+
 import {ALL_PATCHES} from './patches';
 
 export function applyPatches(originalCode: string) {
@@ -65,35 +67,70 @@ export function writeSource(
     });
 }
 
-export function setUpFileChangeTracking(pyodide: PyodideInterface) {
-  pyodide.FS.trackingDelegate['onOpenFile'] = (path: string) => {
-    console.log(`opened file: ${path}`);
-  };
-  pyodide.FS.trackingDelegate['onWriteToFile'] = (
-    path: string,
-    bytesWritten: number
-  ) => {
-    console.log(`wrote ${bytesWritten} bytes to file: ${path}`);
-  };
-  pyodide.FS.trackingDelegate['onMakeDirectory'] = (
-    path: string,
-    mode: string
-  ) => {
-    console.log(`created directory ${path} with mode ${mode}`);
-  };
-}
-
-export function writeCsvAndTextFiles(
+export function getUpdatedSource(
   pyodide: PyodideInterface,
   source: MultiFileSource
-  //setSource: (source: MultiFileSource) => void
 ) {
   const workingDir = pyodide.FS.cwd();
-  // should we store the original list of files and compare??
-  // anything with a .csv or .txt extension should be updated/added to source.
-  // otherwise, we should log an error for every new, non .csv or .txt file.
+  // TODO: we should log an error for every new, non .csv or .txt file.
   // should we do anything with a deleted csv or txt file??
-  console.log(pyodide.FS.lookupPath(workingDir, {}));
+  const directoryData = pyodide.FS.lookupPath(workingDir, {}).node;
+  const directoryContents = Object.values(
+    directoryData.contents
+  ) as PyodidePathContent[];
+  const newSource = {...source};
+  console.log({directoryContents});
+  updateSourceWithContents(pyodide, directoryContents, newSource);
+  return newSource;
+}
+
+function updateSourceWithContents(
+  pyodide: PyodideInterface,
+  contents: PyodidePathContent[],
+  source: MultiFileSource
+) {
+  contents.forEach(content => {
+    const fileExtension = content.name.split('.').pop();
+    if (
+      pyodide.FS.isFile(content.mode) &&
+      (fileExtension === 'csv' || fileExtension === 'txt')
+    ) {
+      const file = Object.values(source.files).find(
+        f => f.name === content.name
+      );
+      try {
+        // todo: need to include directory path here
+        const newContents = pyodide.FS.readFile(content.name, {
+          encoding: 'utf8',
+        });
+        if (!file) {
+          const files = Object.values(source.files);
+          // We get errors if we try to use getNextFileId (perhaps due to web worker weirdness)
+          // so I copied the function here.
+          const newFileId = String(
+            Math.max(0, ...files.map(f => Number(f.id))) + 1
+          );
+          source.files[newFileId] = {
+            id: newFileId,
+            folderId: '0',
+            name: content.name,
+            language: fileExtension,
+            contents: newContents,
+          };
+        } else {
+          file.contents = newContents;
+        }
+      } catch (e) {
+        console.warn(`could not read file ${content.name}, ${e}`);
+      }
+    } else if (pyodide.FS.isDir(content.mode)) {
+      updateSourceWithContents(
+        pyodide,
+        Object.values(content.contents),
+        source
+      );
+    }
+  });
 }
 
 // Remove all source files from the Pyodide file system.
