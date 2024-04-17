@@ -40,8 +40,6 @@ export interface CheckboxDropdownProps {
   /** CheckboxDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
-  /** CheckboxDropdown label style type*/
-  labelType?: 'thick' | 'thin';
   /** CheckboxDropdown options */
   allOptions: CheckboxOption[];
   /** CheckboxDropdown checked options */
@@ -70,7 +68,6 @@ export interface CheckboxDropdownProps {
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
   labelText,
-  labelType = 'thick',
   allOptions,
   checkedOptions = [],
   onChange,
@@ -84,7 +81,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
     <CustomDropdown
       name={name}
       labelText={labelText}
-      labelType={labelType}
       color={color}
       disabled={disabled}
       size={size}

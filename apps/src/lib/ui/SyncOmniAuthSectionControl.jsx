@@ -171,6 +171,7 @@ class SyncOmniAuthSectionControl extends React.Component {
             isOpen={isLtiDialogOpen}
             syncResult={ltiSyncResult}
             onClose={this.onLtiDialogClose}
+            lmsName={sectionProviderName}
           />
         )}
         <BaseDialog

@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
+import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Button from '@cdo/apps/templates/Button';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
@@ -281,14 +284,27 @@ export const UnconnectedTeacherHomepage = ({
             isProfessionalLearningCourse={true}
           />
         )}
+        {/* TODO - We will eventually remove this section
+          once enough time has passed */}
         {(plCourses?.length > 0 || topPlCourse) && (
-          <RecentCourses
-            courses={plCourses}
-            topCourse={topPlCourse}
-            showAllCoursesLink={true}
-            isProfessionalLearningCourse={true}
-            hasFeedback={hasFeedback}
-          />
+          <section id={'pl-courses-placeholder'} style={{marginBlock: '6rem'}}>
+            <Heading2 visualAppearance="heading-md">
+              {i18n.myProfessionalLearningCourses()}
+            </Heading2>
+            <BodyTwoText>
+              {i18n.myProfessionalLearningCoursesHomepageDesc()}
+            </BodyTwoText>
+            <LinkButton
+              color={'purple'}
+              href={studio('/my-professional-learning#self-paced-pl')}
+              iconLeft={{
+                iconName: 'book-circle-arrow-right',
+                iconStyle: 'solid',
+              }}
+              size="s"
+              text={i18n.myProfessionalLearningCoursesHomepageButton()}
+            />
+          </section>
         )}
         <TeacherResources />
         {showIncubatorBanner && <IncubatorBanner />}

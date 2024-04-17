@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_03_074309) do
+ActiveRecord::Schema.define(version: 2024_04_16_200438) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -941,6 +941,17 @@ ActiveRecord::Schema.define(version: 2024_04_03_074309) do
     t.float "value", null: false
   end
 
+  create_table "new_feature_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "form_key", null: false
+    t.boolean "satisfied", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["satisfied"], name: "index_new_feature_feedbacks_on_satisfied"
+    t.index ["user_id", "form_key"], name: "index_new_feature_feedbacks_on_user_id_and_form_key", unique: true
+    t.index ["user_id"], name: "index_new_feature_feedbacks_on_user_id"
+  end
+
   create_table "objectives", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.text "properties"
     t.integer "lesson_id"
@@ -1836,7 +1847,9 @@ ActiveRecord::Schema.define(version: 2024_04_03_074309) do
     t.decimal "longitude", precision: 9, scale: 6, comment: "Location longitude"
     t.string "school_category"
     t.string "last_known_school_year_open", limit: 9
+    t.boolean "is_current"
     t.index ["id"], name: "index_schools_on_id", unique: true
+    t.index ["is_current"], name: "index_schools_on_is_current"
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
@@ -2400,6 +2413,7 @@ ActiveRecord::Schema.define(version: 2024_04_03_074309) do
   add_foreign_key "lti_sections", "sections"
   add_foreign_key "lti_user_identities", "lti_integrations"
   add_foreign_key "lti_user_identities", "users"
+  add_foreign_key "new_feature_feedbacks", "users"
   add_foreign_key "parental_permission_requests", "users"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"

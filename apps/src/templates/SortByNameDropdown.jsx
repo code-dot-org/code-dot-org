@@ -39,6 +39,7 @@ function SortByNameDropdown({
       labelText={i18n.sortBy()}
       className={className}
       size="s"
+      dropdownTextThickness="thin"
     />
   );
 }

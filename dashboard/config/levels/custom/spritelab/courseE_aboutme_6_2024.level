@@ -61,7 +61,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:29:00.450+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_6_2023\\\"\"],\"cloned_from\":\"courseE_aboutme_6_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:29:00.450+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_6_2023\\\"\"],\"cloned_from\":\"courseE_aboutme_6_2023\"},{\"changed_at\":\"2024-04-16 20:09:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "debugging": 1,
@@ -70,180 +70,185 @@
 }]]></config>
   <blocks>
     <toolbox_blocks>
-      <xml>
+      <xml xmlns="https://developers.google.com/blockly/xml">
         <category name="World">
-          <block type="gamelab_setBackground">
+          <block type="gamelab_setBackground" id="htXG?1nxyWmN!^=tvU_Z">
             <value name="COLOR">
-              <block type="colour_picker">
-                <title name="COLOUR">#999999</title>
+              <block type="colour_picker" id="MqVO)dIWSSd^CKAz%gv~">
+                <field name="COLOUR">#999999</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_randomColor"/>
-          <block type="gamelab_setBackgroundImageAs">
-            <title name="IMG">"cave"</title>
+          <block type="gamelab_randomColor" id="EVFLfC5l/V_.k4Z!Wbim"/>
+          <block type="gamelab_setBackgroundImageAs" id="4A,L6F(za-A*_g+:1vd%">
+            <field name="IMG">"cave"</field>
           </block>
-          <block type="gamelab_printText">
+          <block type="gamelab_printText" id="k[GcG[/y/{:l5_]rE1R~">
             <value name="TEXT">
-              <block type="text">
-                <title name="TEXT"/>
+              <block type="text" id="g3K%F-w3NvlkjqXU~%s(">
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
-          <block type="gamelab_playSound">
-            <title name="SOUND">Choose</title>
+          <block type="gamelab_playSound" id="Gs)jlRsEmX818j6eH[mq">
+            <field name="SOUND">sound://category_digital/ping.mp3</field>
           </block>
         </category>
         <category name="Sprites">
-          <block type="gamelab_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"kid_outline_1"</title>
+          <block type="gamelab_makeNewSpriteAnon" id="-a#@Bz#}+A]H^s#Xu2,Z">
+            <field name="ANIMATION_NAME">"kid_outline_1"</field>
             <value name="LOCATION">
-              <block type="gamelab_location_picker">
-                <title name="LOCATION">{"x":100,"y":320}</title>
+              <block type="gamelab_location_picker" id="*-uc2a-:8@MoM1xTeGyj">
+                <field name="LOCATION">{"x":100,"y":320}</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_setProp">
-            <title name="PROPERTY">"scale"</title>
+          <block type="gamelab_setProp" id=";HrS~D2H0S,9=JVb+S]z">
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="/-a1)#Q=ZYrx$*BC259_">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="VAL">
-              <block type="math_number">
-                <title name="NUM">100</title>
+              <block type="math_number" id="EJc}+{Xn0@R(XR[).$7p">
+                <field name="NUM">100</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_changePropBy">
-            <title name="PROPERTY">"scale"</title>
+          <block type="gamelab_changePropBy" id="jF-)8}-vd=nX4wDV1Pk)">
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="idMOM,jz]*l0kFh%x_t?">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="VAL">
-              <block type="math_number">
-                <title name="NUM">1</title>
+              <block type="math_number" id="Xmf!-}5orEFnu[3zfjf:">
+                <field name="NUM">1</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_moveInDirection">
-            <title name="DIRECTION">"North"</title>
+          <block type="gamelab_moveInDirection" id="plKv$^Tf~5Boudz0D3s-">
+            <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="lgB`xX=HL0.0`qYl|jST">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="DISTANCE">
-              <block type="math_number">
-                <title name="NUM">10</title>
+              <block type="math_number" id="-:EG`nkVp;Fn@Z^#N}(H">
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_turn">
-            <title name="DIRECTION">"right"</title>
+          <block type="gamelab_turn" id="AiJ;G~f^/kX!pxz{xhz[">
+            <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="dsx^h=lO=B|^B|?|Lx$i">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="N">
-              <block type="math_number">
-                <title name="NUM">90</title>
+              <block type="math_number" id="kYFJk|s-}yIfv9/1Ey*l">
+                <field name="NUM">90</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_setTint">
+          <block type="gamelab_setTint" id="0Ua85*gAZd%Qi$L*0po:">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id=":DC1e0Ft$)hXSUtWB*Ji">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="COLOR">
-              <block type="colour_picker">
-                <title name="COLOUR">#ff0000</title>
+              <block type="colour_picker" id="a_{+@sw!:xdm2QsEQE=}">
+                <field name="COLOUR">#ff0000</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_randomColor"/>
-          <block type="gamelab_removeTint">
+          <block type="gamelab_randomColor" id="ABP:[Yz5*q81owk9cJ~J"/>
+          <block type="gamelab_removeTint" id="w0TaeWHa31iI]a}=@Oij">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="jjQ)3Pp;2zaCA^mS]T[J">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Locations">
-          <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":100,"y":320}</title>
+          <block type="gamelab_location_picker" id="{Au?!F`y)17J5qUt6x(h">
+            <field name="LOCATION">{"x":100,"y":320}</field>
           </block>
-          <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":200,"y":320}</title>
+          <block type="gamelab_location_picker" id="q.H/q}x-v)6KD[N~R0w.">
+            <field name="LOCATION">{"x":200,"y":320}</field>
           </block>
-          <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":300,"y":320}</title>
+          <block type="gamelab_location_picker" id="OH@?)@F]nlsTf[|?Ma8N">
+            <field name="LOCATION">{"x":300,"y":320}</field>
           </block>
-          <block type="gamelab_randomLocation"/>
+          <block type="gamelab_randomLocation" id="=^IF}OPE^zANXRE-WetD"/>
         </category>
         <category name="Behaviors" custom="Behavior">
-          <block type="gamelab_addBehaviorSimple">
+          <block type="gamelab_addBehaviorSimple" id=".M8.o1*Prm=|``QB]Jgg">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="-ydVJi@TcQB5q=P#Zuzw">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_removeBehaviorSimple">
+          <block type="gamelab_removeBehaviorSimple" id="?!hq9d-y{-CAES[t3?Y%">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="VkFla~crqVyrpUyy^~)j">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_removeAllBehaviors">
+          <block type="gamelab_removeAllBehaviors" id="XpCn]j;3w2]W`fU6/.A]">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="o|=8j4V$j}v7sv,imNRj">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Events">
-          <block type="gamelab_atTime">
-            <title name="UNIT">"seconds"</title>
+          <block type="gamelab_atTime" id=".;gLGd2Ji2N1.,Kt4,cb">
+            <field name="UNIT">"seconds"</field>
             <value name="N">
-              <block type="math_number">
-                <title name="NUM">3</title>
+              <block type="math_number" id="|L/_J)S@j`9OFFODG;$8">
+                <field name="NUM">3</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_keyPressed">
-            <title name="CONDITION">"when"</title>
-            <title name="KEY">"up"</title>
+          <block type="gamelab_keyPressed" id="X0=/eJ|o|)~tMngD0x}2">
+            <field name="CONDITION">"when"</field>
+            <field name="KEY">"up"</field>
           </block>
-          <block type="gamelab_spriteClicked">
-            <title name="CONDITION">"when"</title>
+          <block type="gamelab_spriteClicked" id="dX#O/ZXaJs7HBG(E~h[L">
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="bcv481*0k7J63jz,:;0#">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_checkTouching">
-            <title name="CONDITION">"when"</title>
+          <block type="gamelab_checkTouching" id="mslTK=Np3^[pMcTJ4eu@">
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id=")@fb`VX#SrMch1}b_5fu">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
             <value name="SPRITE2">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"kid_outline_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="F5nzRO0C-{T*|$jx#,{.">
+                <field name="ANIMATION">"kid_outline_1"</field>
               </block>
             </value>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="gamelab_comment" id="Fk1#Ip%ZQd}!{QpJ)M~2">
+            <field name="COMMENT"/>
           </block>
         </category>
       </xml>
