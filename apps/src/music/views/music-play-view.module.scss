@@ -1,0 +1,37 @@
+@import 'color';
+
+.musicPlayViewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: $light_black;
+
+  .musicPlayViewCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background-color: $light_gray_900;
+    gap: .5rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    img {
+      width: 56px;
+      align-self: center;
+    }
+
+    h2, p, a {
+      color: $light_white;
+      margin-bottom: 0;
+    }
+
+    .musicPlayViewButtonsSection {
+      display: flex;
+      gap: .5rem;
+      justify-content: center;
+    }
+  }
+}
