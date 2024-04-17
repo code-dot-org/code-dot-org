@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2024-04-15 23:24:29 UTC",
+    "serialized_at": "2024-04-16 19:30:16 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2686,8 +2686,18 @@
       }
     },
     {
-      "key": "4b8de743-5496-4199-a987-55679bcd0bc7",
+      "key": "1caf5782-bc38-4ed0-9ad1-3062415e0ab2",
       "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1caf5782-bc38-4ed0-9ad1-3062415e0ab2",
+        "lesson_activity.key": "9cece25a-3e38-4e8a-b88c-726462c28d1e"
+      }
+    },
+    {
+      "key": "4b8de743-5496-4199-a987-55679bcd0bc7",
+      "position": 2,
       "properties": {
         "description": "This is the most free-form plugged activity of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, particularly for students who are overwhelmed by too many options.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.",
         "name": "On the Move with Events"
@@ -2699,7 +2709,7 @@
     },
     {
       "key": "0ecf1d69-bc6a-4d20-bf8a-b9ed6d72854e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Introduction to Play Lab” slide",
         "progression_name": "Video: Introduction to Play Lab"
@@ -2711,7 +2721,7 @@
     },
     {
       "key": "c94147cc-c2d2-485e-ba3f-0b901887a598",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2: Free Play” slide",
         "progression_name": "Free Play"
@@ -2723,7 +2733,7 @@
     },
     {
       "key": "0d892878-ca77-44f1-ba59-2df9dea885c0",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3: Practice” slide",
         "progression_name": "Practice"
@@ -2735,9 +2745,9 @@
     },
     {
       "key": "a7e31ab9-b939-44ca-a80a-7f81bd912f4f",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 408: Mini-project” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-8: Mini-project” slide",
         "progression_name": "Mini-project: Jorge the Dog"
       },
       "seeding_key": {
@@ -2747,7 +2757,7 @@
     },
     {
       "key": "0a6fb119-7c1b-45c0-8079-1aef13294e58",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Lesson Extras"
       },
@@ -8630,6 +8640,13 @@
         "lesson.key": "Mini-Project: On the Move with Play Lab",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-13"
       }
     },
     {
