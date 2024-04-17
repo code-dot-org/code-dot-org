@@ -830,6 +830,7 @@ en:
         variables_sprite_lab_game_design: 'Variables for Sprite Lab Game Design '
         csd_weblab_flexboxforteachers1: Using Flexbox in Web Development
         csd_weblab_flexboxforteachers2: Flexbox Children
+        csd-iosp-shortened: What Makes a Computer a Computer?
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

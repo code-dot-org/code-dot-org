@@ -67,6 +67,7 @@ const PublishNotes: React.FunctionComponent = () => {
                 {property !== 'exampleTopics' && (
                   <InputTag
                     id={property}
+                    type="text"
                     disabled={isDisabled(visibility)}
                     value={modelCardInfo[property]}
                     onChange={event =>

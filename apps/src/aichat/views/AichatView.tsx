@@ -28,22 +28,6 @@ import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
 
-const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
-  return (
-    <div>
-      <Button
-        onClick={onClear}
-        text="Clear"
-        iconLeft={{iconName: 'paintbrush'}}
-        size="xs"
-        color="white"
-        type="secondary"
-      />
-      <CopyButton />
-    </div>
-  );
-};
-
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
@@ -107,7 +91,7 @@ const AichatView: React.FunctionComponent = () => {
         },
       },
     ],
-    size: 'm',
+    size: 's',
     selectedButtonValue: viewMode,
     onChange: viewMode => dispatch(setViewMode(viewMode as ViewMode)),
   };
@@ -173,6 +157,23 @@ const AichatView: React.FunctionComponent = () => {
           </PanelContainer>
         </div>
       </div>
+    </div>
+  );
+};
+
+const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
+  return (
+    <div className={moduleStyles.chatHeaderRight}>
+      <Button
+        onClick={onClear}
+        text="Clear"
+        iconLeft={{iconName: 'paintbrush'}}
+        size="xs"
+        color="white"
+        type="secondary"
+        className={moduleStyles.clearButton}
+      />
+      <CopyButton />
     </div>
   );
 };

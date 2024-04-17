@@ -38,12 +38,9 @@ const defaultProject: MultiFileSource = {
 };
 
 const defaultConfig: ConfigType = {
-  //showSideBar: true,
-  // showLeftNav: false,
-  // showEditor: false,
   showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: () => Editor(pythonlabLangMapping, ['py']),
+  EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
   leftNav: [
     {
       icon: 'fa-square-check',
