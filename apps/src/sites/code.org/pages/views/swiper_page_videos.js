@@ -9,12 +9,16 @@ import {register} from 'swiper/element/bundle';
 register();
 
 const swipers = [
-  document.querySelector('swiper-container.swiper-01'),
-  document.querySelector('swiper-container.swiper-02'),
+  document.querySelector('swiper-container.how-ai-works'),
+  document.querySelector('swiper-container.how-computers-work'),
+  document.querySelector('swiper-container.how-internet-works'),
+  document.querySelector('swiper-container.not-hacked'),
+  document.querySelector('swiper-container.blockchain'),
+  document.querySelector('swiper-container.inspirational'),
+  document.querySelector('swiper-container.careers-in-cs'),
 ];
 
 const swiperParams = {
-  allowTouchMove: false,
   autoHeight: false,
   pagination: {
     clickable: true,
