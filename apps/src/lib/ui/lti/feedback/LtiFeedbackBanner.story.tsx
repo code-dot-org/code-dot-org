@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import {StoryFn, Meta} from '@storybook/react';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {BANNER_STATUS} from '@cdo/apps/lib/ui/feedback/FeedbackBanner';
-import {UserTypes} from '@cdo/apps/util/sharedConstants';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import currentUser, {
   setInitialData,
