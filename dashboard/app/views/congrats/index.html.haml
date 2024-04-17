@@ -14,6 +14,8 @@
   congrats_data[:is_pl_course] = @is_pl_course
   congrats_data[:is_k5_pl_course] = @is_k5_pl_course
   congrats_data[:course_name] = @course_name
+  congrats_data[:sections] = @sections
+  congrats_data[:assignable_course_suggestions] = @assignable_course_suggestions
   if current_user
     congrats_data[:current_user] = current_user
     # We need to know the user's age to determine whether we should suggest
