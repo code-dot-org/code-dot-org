@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import classNames from 'classnames';
 
-import {ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
+import {
+  ChatCompletionMessage,
+  AITutorInteractionStatus as Status,
+} from '@cdo/apps/aiTutor/types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import Button from '@cdo/apps/templates/Button';
 
@@ -39,46 +42,50 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
     }
   };
 
+  const shouldRenderFeedbackButtons =
+    message.id &&
+    message.status !== Status.PROFANITY_VIOLATION &&
+    message.status !== Status.PII_VIOLATION;
+  console.log('message', message);
+  console.log('message.status', message.status);
   return (
-    <div id={`chat-message`}>
-      <div className={style.assistantMessageContainer}>
-        <Typography semanticTag="h5" visualAppearance="heading-xs">
-          AI Tutor ({message.role})
-        </Typography>
-        <div className={style.assistantMessageButtonRow}>
-          <div
-            id={'chat-workspace-message-body'}
-            className={classNames(style.message, style.assistantMessage)}
-          >
-            {message.chatMessageText}
-          </div>
-          {message.id && (
-            <>
-              <Button
-                onClick={() => handleFeedbackSubmission(true, message.id)}
-                color={
-                  feedbackState.thumbsUp
-                    ? Button.ButtonColor.green
-                    : Button.ButtonColor.white
-                }
-                icon="thumbs-up"
-                className={style.hamburgerMenuButton}
-                disabled={false}
-              />
-              <Button
-                onClick={() => handleFeedbackSubmission(false, message.id)}
-                color={
-                  feedbackState.thumbsDown
-                    ? Button.ButtonColor.red
-                    : Button.ButtonColor.white
-                }
-                icon="thumbs-down"
-                className={style.hamburgerMenuButton}
-                disabled={false}
-              />
-            </>
-          )}
+    <div className={style.assistantMessageContainer}>
+      <Typography semanticTag="h5" visualAppearance="heading-xs">
+        AI Tutor ({message.role})
+      </Typography>
+      <div className={style.assistantMessageButtonRow}>
+        <div
+          id={'chat-workspace-message-body'}
+          className={classNames(style.message, style.assistantMessage)}
+        >
+          {message.chatMessageText}
         </div>
+        {shouldRenderFeedbackButtons && (
+          <>
+            <Button
+              onClick={() => handleFeedbackSubmission(true, message.id)}
+              color={
+                feedbackState.thumbsUp
+                  ? Button.ButtonColor.green
+                  : Button.ButtonColor.white
+              }
+              icon="thumbs-up"
+              className={style.hamburgerMenuButton}
+              disabled={false}
+            />
+            <Button
+              onClick={() => handleFeedbackSubmission(false, message.id)}
+              color={
+                feedbackState.thumbsDown
+                  ? Button.ButtonColor.red
+                  : Button.ButtonColor.white
+              }
+              icon="thumbs-down"
+              className={style.hamburgerMenuButton}
+              disabled={false}
+            />
+          </>
+        )}
       </div>
     </div>
   );

@@ -715,17 +715,10 @@ module SharedConstants
     UNKNOWN: 'unknown',
   }.freeze
 
-  # These are the types of assistance AI Tutor can provide
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
-  }.freeze
-
-  PII_TYPES = {
-    EMAIL: 'email',
-    PHONE: 'phone',
-    ADDRESS: 'address',
   }.freeze
 
   USER_TYPES = OpenStruct.new(

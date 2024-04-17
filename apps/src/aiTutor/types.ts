@@ -1,14 +1,13 @@
 import {
   AiTutorInteractionStatus as AITutorInteractionStatus,
   AiTutorTypes as AITutorTypes,
-  PiiTypes as PII,
 } from '@cdo/apps/util/sharedConstants';
 
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AITutorTypesValue = string;
 export type AITutorInteractionStatusValue = string;
 
-export {AITutorInteractionStatus, AITutorTypes, PII};
+export {AITutorInteractionStatus, AITutorTypes};
 
 export interface ChatCompletionMessage {
   id?: number;

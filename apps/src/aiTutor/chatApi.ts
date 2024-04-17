@@ -8,6 +8,14 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import Lab2Registry from '../lab2/Lab2Registry';
 
+// These are the possible statuses returned by ShareFiltering.find_failure
+enum ShareFilterStatus {
+  Email = 'email',
+  Phone = 'phone',
+  Address = 'address',
+  Profanity = 'profanity',
+}
+
 const CHAT_COMPLETION_URL = '/openai/chat_completion';
 
 /**
@@ -76,25 +84,25 @@ export async function getChatCompletionMessage(
       .logError('Error in chat completion request', error as Error);
   }
 
-  // For now, response will be null if there was an error.
-  if (!response) {
-    return {status: Status.ERROR};
-  } else if (response?.status === Status.PROFANITY_VIOLATION) {
-    return {
-      status: Status.PROFANITY_VIOLATION,
-      assistantResponse:
-        "I can't respond because your message is inappropriate. Please don't use profanity.",
-    };
-  } else if (response?.status === Status.PII_VIOLATION) {
-    return {
-      status: Status.PII_VIOLATION,
-      assistantResponse: `I can't respond because your message is inappropriate. Please don't include personal information like your ${response.status}.`,
-    };
+  if (!response) return {status: Status.ERROR};
+
+  switch (response.status) {
+    case ShareFilterStatus.Profanity:
+      return {
+        status: Status.PROFANITY_VIOLATION,
+        assistantResponse:
+          'Please revise your message to remove any profanity so that I can assist you further.',
+      };
+    case ShareFilterStatus.Email:
+    case ShareFilterStatus.Phone:
+    case ShareFilterStatus.Address:
+      return {
+        status: Status.PII_VIOLATION,
+        assistantResponse: `To protect your privacy, please remove any personal details like your ${response.status} from your message and try again.`,
+      };
+    default:
+      return {status: Status.OK, assistantResponse: response.content};
   }
-  return {
-    status: Status.OK,
-    assistantResponse: response.content,
-  };
 }
 
 type OpenaiChatCompletionMessage = {

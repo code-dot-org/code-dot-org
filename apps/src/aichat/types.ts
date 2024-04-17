@@ -1,7 +1,4 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {PiiTypes as PII} from '@cdo/apps/util/sharedConstants';
-
-export {PII};
 
 export type ChatCompletionMessage = {
   id: number;
