@@ -4,6 +4,9 @@ class ExperimentsControllerTest < ActionController::TestCase
   setup_all do
     @pilot = create :pilot, allow_joining_via_url: true
     @pilot_name = @pilot.name
+  end
+
+  setup do
     @teacher = create :teacher
     unit_group = create :unit_group, name: 'my-course'
     default_script = create(:script, name: 'default-script')

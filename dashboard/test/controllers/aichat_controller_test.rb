@@ -1,10 +1,12 @@
 require 'test_helper'
 
 class AichatControllerTest < ActionController::TestCase
+  self.use_transactional_test_case = true
   GENAI_PILOT = "gen-ai-customizing-llms"
 
   setup_all do
-    @genai_pilot_teacher = create :teacher, pilot_experiment: GENAI_PILOT
+    @genai_pilot = create :pilot, name: GENAI_PILOT
+    @genai_pilot_teacher = create :teacher, pilot_experiment: @genai_pilot.name
     pilot_section = create(:section, user: @genai_pilot_teacher)
     @genai_pilot_student = create(:follower, section: pilot_section).student_user
     @common_params = {
