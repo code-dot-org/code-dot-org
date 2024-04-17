@@ -56,7 +56,7 @@ function setupVideos(player) {
             height="100%"
             class="video-js lazyload vjs-big-play-centered"
             preload="none"
-            poster="${posterPath ? posterPath : ''}"
+            ${posterPath ? `poster="${posterPath}"` : ''}
             data-setup='{"nativeControlsForTouch": true}'
             controls>
             <source src="${downloadPath}" type="video/mp4"/>
