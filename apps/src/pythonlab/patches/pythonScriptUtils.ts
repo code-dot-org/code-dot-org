@@ -146,18 +146,12 @@ export async function importPackagesFromFiles(
   source: MultiFileSource,
   pyodide: PyodideInterface
 ) {
-  console.log(Object.values(source.files));
+  // Loading can throw erroneous console errors if a user has a package with the same name as one
+  // in the pyodide list of packages that we have not put in our repo. We can ignore these,
+  // any actual import errors will be caught by the runPythonAsync call.
   for (const file of Object.values(source.files)) {
-    console.log(`checking file ${file.name}`);
     if (file.name.endsWith('.py')) {
-      console.log(`loading packages for ${file.name}`);
-      await pyodide.loadPackagesFromImports(file.contents, {
-        messageCallback: message =>
-          console.log(`message: ${message} for ${file.name}`),
-        errorCallback: message =>
-          console.log(`message: ${message} for ${file.name}`),
-      });
-      console.log(`done loading packages for ${file.name}`);
+      await pyodide.loadPackagesFromImports(file.contents);
     }
   }
 }

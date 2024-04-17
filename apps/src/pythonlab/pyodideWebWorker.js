@@ -37,9 +37,6 @@ self.onmessage = async event => {
   const {id, python, source} = event.data;
   try {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
-    // Loading can throw erroneous console errors if a user has a package with the same name as one
-    // in the pyodide list of packages that we have not put in our repo. We can ignore these,
-    // any actual import errors will be caught by the runPythonAsync call.
     await importPackagesFromFiles(source, self.pyodide);
     let results = await self.pyodide.runPythonAsync(python);
     self.postMessage({type: 'run_complete', results, id});
