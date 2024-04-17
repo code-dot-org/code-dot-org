@@ -66,16 +66,9 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
-    - missing_student_data = false
     - if current_user&.student?
-      - is_in_us = request.country.nil? || ['US', 'RD'].include?(request.country.to_s.upcase)
-      - under_age_13 = current_user.age.nil? || current_user.age.to_i < 13
-      - retrieve_info_for_lti = current_user&.us_state.nil? && Policies::Lti.lti?(current_user)
-      - retrieve_info_for_cap = current_user&.us_state.nil? && is_in_us && under_age_13 && Policies::ChildAccount.personal_account?(current_user)
-      - missing_student_data = (current_user.age.nil? || retrieve_info_for_lti || retrieve_info_for_cap)
-    - if missing_student_data
-      = render partial: 'layouts/student_information_interstitial', locals: {retrieve_info_for_lti: retrieve_info_for_lti, retrieve_info_for_cap: retrieve_info_for_cap}
-
+      - if current_user.age.nil? || lti_user_info_required?(current_user) || cap_user_info_required?(current_user, request.country)
+        = render partial: 'layouts/student_information_interstitial', locals: {student: current_user, country: request.country}
     - cookie_key = environment_specific_cookie_name('_user_type')
     - user_type = request.cookies[cookie_key]
     -# The _user_type cookie is set in devise.rb to differentiate under13 students as 'student_y'.
