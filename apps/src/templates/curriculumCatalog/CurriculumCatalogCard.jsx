@@ -153,7 +153,7 @@ CurriculumCatalogCard.propTypes = {
   recommendedStretchCurriculum: PropTypes.object,
 };
 
-const CustomizableCurriculumCatalogCard = ({
+export const CustomizableCurriculumCatalogCard = ({
   courseKey,
   assignButtonDescription,
   assignButtonText,
@@ -411,7 +411,10 @@ const CustomizableCurriculumCatalogCard = ({
             </div>
           </div>
         </div>
-        {isAssignDialogOpen && renderAssignDialog()}
+        {isAssignDialogOpen &&
+          (props.customRenderAssignDialog
+            ? props.customRenderAssignDialog(courseId)
+            : renderAssignDialog())}
       </div>
       {isExpanded && (
         <ExpandedCurriculumCatalogCard
