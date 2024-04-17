@@ -1,4 +1,9 @@
-import {deleteSourceFiles, writeSource} from './patches/pythonScriptUtils';
+import {
+  deleteSourceFiles,
+  importPackagesFromFiles,
+  writeCsvAndTextFiles,
+  writeSource,
+} from './patches/pythonScriptUtils';
 import {DEFAULT_FOLDER_ID} from '../weblab2/CDOIDE/constants';
 import {loadPyodide, version} from 'pyodide';
 
@@ -35,11 +40,12 @@ self.onmessage = async event => {
     // Loading can throw erroneous console errors if a user has a package with the same name as one
     // in the pyodide list of packages that we have not put in our repo. We can ignore these,
     // any actual import errors will be caught by the runPythonAsync call.
-    await self.pyodide.loadPackagesFromImports(python);
+    await importPackagesFromFiles(source, self.pyodide);
     let results = await self.pyodide.runPythonAsync(python);
     self.postMessage({type: 'run_complete', results, id});
   } catch (error) {
     self.postMessage({type: 'error', error: error.message, id});
   }
+  writeCsvAndTextFiles(self.pyodide, source);
   deleteSourceFiles(self.pyodide, source);
 };

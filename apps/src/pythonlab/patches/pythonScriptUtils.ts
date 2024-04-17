@@ -65,6 +65,37 @@ export function writeSource(
     });
 }
 
+export function setUpFileChangeTracking(pyodide: PyodideInterface) {
+  pyodide.FS.trackingDelegate['onOpenFile'] = (path: string) => {
+    console.log(`opened file: ${path}`);
+  };
+  pyodide.FS.trackingDelegate['onWriteToFile'] = (
+    path: string,
+    bytesWritten: number
+  ) => {
+    console.log(`wrote ${bytesWritten} bytes to file: ${path}`);
+  };
+  pyodide.FS.trackingDelegate['onMakeDirectory'] = (
+    path: string,
+    mode: string
+  ) => {
+    console.log(`created directory ${path} with mode ${mode}`);
+  };
+}
+
+export function writeCsvAndTextFiles(
+  pyodide: PyodideInterface,
+  source: MultiFileSource
+  //setSource: (source: MultiFileSource) => void
+) {
+  const workingDir = pyodide.FS.cwd();
+  // should we store the original list of files and compare??
+  // anything with a .csv or .txt extension should be updated/added to source.
+  // otherwise, we should log an error for every new, non .csv or .txt file.
+  // should we do anything with a deleted csv or txt file??
+  console.log(pyodide.FS.lookupPath(workingDir, {}));
+}
+
 // Remove all source files from the Pyodide file system.
 // This ensures any deleted file is not available to be imported,
 // which could cause confusion.
@@ -110,3 +141,23 @@ const addFoldersToPath = (
     folderId = source.folders[folderId].parentId;
   }
 };
+
+export async function importPackagesFromFiles(
+  source: MultiFileSource,
+  pyodide: PyodideInterface
+) {
+  console.log(Object.values(source.files));
+  for (const file of Object.values(source.files)) {
+    console.log(`checking file ${file.name}`);
+    if (file.name.endsWith('.py')) {
+      console.log(`loading packages for ${file.name}`);
+      await pyodide.loadPackagesFromImports(file.contents, {
+        messageCallback: message =>
+          console.log(`message: ${message} for ${file.name}`),
+        errorCallback: message =>
+          console.log(`message: ${message} for ${file.name}`),
+      });
+      console.log(`done loading packages for ${file.name}`);
+    }
+  }
+}

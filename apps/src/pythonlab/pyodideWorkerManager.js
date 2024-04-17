@@ -33,6 +33,9 @@ pyodideWorker.onmessage = event => {
     getStore().dispatch(appendSystemMessage('Program completed.'));
   } else if (type === 'error') {
     getStore().dispatch(appendSystemMessage(`Error: ${data.error}`));
+  } else {
+    console.warn(`Unknown message type ${type} from pyodideWorker.`);
+    console.warn({data});
   }
   const onSuccess = callbacks[id];
   delete callbacks[id];
