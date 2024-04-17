@@ -83,11 +83,14 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   # cached pages do not have a valid user auth token and therefore will attempt to
   # redirect to the sign in page instead of the correct page if the user is signed in.
   # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
-  # NOTE: the `user_return_to` path must not include a redirect back to this path
-  # or there will be an infinite redirect loop. e.g. strip out `login_required` URL
-  # parameters before calling this method.
   # GET /api/v1/users/cached_page_auth_redirect
   def cached_page_auth_redirect
+    # We must ensure that we remove any redirections to this page or we would enter
+    # an infinite loop.
+    [params, session].each do |context|
+      context[:user_return_to] = nil if context[:user_return_to]&.include?('cached_page_auth_redirect')
+    end
+
     if user_signed_in?
       redirect_to params[:user_return_to] || home_url
     else
