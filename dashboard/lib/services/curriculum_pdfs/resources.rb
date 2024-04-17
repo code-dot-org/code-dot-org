@@ -132,11 +132,11 @@ module Services
           # # Or, write to a file
           # File.write('output.html', page_content)
 
-          temp_html_path = File.join(Dir.tmpdir, 'lesson_preview.html')
-          File.write(temp_html_path, page_content)
+          # temp_html_path = File.join(Dir.tmpdir, 'lesson_preview.html')
+          # File.write(temp_html_path, page_content)
 
-          # Assuming you're on a system where you can programmatically open a browser:
-          system("open #{temp_html_path}")  # On macOS
+          # # Assuming you're on a system where you can programmatically open a browser:
+          # system("open #{temp_html_path}")  # On macOS
 
           filename = ActiveStorage::Filename.new("lesson.#{lesson.key.parameterize}.title.pdf").to_s
           path = File.join(directory, filename)
@@ -164,7 +164,12 @@ module Services
           end
           raise "File #{path.inspect} does not exist after generation" unless File.exist?(path)
 
-          return path
+          # Regenerate the PDF using Ghostscript
+          optimized_path = File.join(directory, "optimized_#{filename}")
+          gs_command = "gs -q -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -sOutputFile=#{optimized_path} #{path}"
+          system(gs_command)
+
+          return optimized_path
         end
 
         # Given a Resource object, persist a PDF of that Resource (with a name
