@@ -22,17 +22,17 @@ export function deleteCachedUserModules(
   source: MultiFileSource,
   excludedFileName: string
 ) {
-  let result = '\n';
+  const result = [];
   for (const file of Object.values(source.files)) {
     if (file.name !== excludedFileName) {
       const filePath = getModuleName(file.id, source);
-      result += `
+      result.push(`
 if "${filePath}" in sys.modules:
   del sys.modules['${filePath}']
-`;
+`);
     }
   }
-  return result;
+  return '\n' + result.join('\n') + '\n';
 }
 
 // Write source to the Pyodide file system.
@@ -53,10 +53,7 @@ export function writeSource(
     .filter(f => f.parentId === currentFolderId)
     .forEach(folder => {
       // Create folder if it doesn't exist.
-      const newPath =
-        currentPath.length === 0
-          ? `${folder.name}`
-          : `${currentPath}${folder.name}`;
+      const newPath = `${currentPath}${folder.name}`;
       try {
         pyodide.FS.readdir(newPath);
       } catch (e) {
@@ -89,23 +86,27 @@ export function deleteSourceFiles(
 
 // For the given fileId, return the full path to the file, including the file name.
 const getFilePath = (fileId: string, source: MultiFileSource) => {
-  let path = source.files[fileId].name;
-  let folderId = source.files[fileId].folderId;
-  while (source.folders[folderId]) {
-    path = source.folders[folderId].name + '/' + path;
-    folderId = source.folders[folderId].parentId;
-  }
-  return path;
+  const path = [source.files[fileId].name];
+  addFoldersToPath(fileId, source, path);
+  return path.join('/');
 };
 
 // For the given fileId, return the module version of the file. For example, a file at
 // path folder1/folder2/file.py would have a module name of "folder1.folder2.file".
 const getModuleName = (fileId: string, source: MultiFileSource) => {
-  let path = source.files[fileId].name.replace('.py', '');
+  const path = [source.files[fileId].name.replace('.py', '')];
+  addFoldersToPath(fileId, source, path);
+  return path.join('.');
+};
+
+const addFoldersToPath = (
+  fileId: string,
+  source: MultiFileSource,
+  path: string[]
+) => {
   let folderId = source.files[fileId].folderId;
   while (source.folders[folderId]) {
-    path = source.folders[folderId].name + '.' + path;
+    path.unshift(source.folders[folderId].name);
     folderId = source.folders[folderId].parentId;
   }
-  return path;
 };

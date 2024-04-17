@@ -28,18 +28,11 @@ import {
 const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
 
 export const getNextFileId = (files: ProjectFile[]) => {
-  if (files.length === 0) {
-    return '1';
-  }
-  return String(Math.max(...files.map(f => Number(f.id))) + 1);
+  return String(Math.max(0, ...files.map(f => Number(f.id))) + 1);
 };
 
 export const getNextFolderId = (folders: ProjectFolder[]) => {
-  if (folders.length === 0) {
-    return '1';
-  } else {
-    return String(Math.max(...folders.map(f => Number(f.id))) + 1);
-  }
+  return String(Math.max(0, ...folders.map(f => Number(f.id))) + 1);
 };
 
 export const findSubFolders = (parentId: string, folders: ProjectFolder[]) =>
