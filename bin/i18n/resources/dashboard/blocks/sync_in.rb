@@ -12,7 +12,6 @@ module I18n
         class SyncIn < I18n::Utils::SyncInBase
           def process
             prepare
-            progress_bar.progress = 100
           end
 
           private def blocks_data
