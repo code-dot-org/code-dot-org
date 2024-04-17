@@ -7,10 +7,11 @@ class AichatController < ApplicationController
   # chatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
+    return render status: :forbidden, json: {} unless can_request_aichat_chat_completion? 
     unless has_required_params?
       return render status: :bad_request, json: {}
     end
-
+    # return render status: :forbidden, json: {} unless can_request_aichat_chat_completion?
     # Check for PII / Profanity
     # Copied from ai_tutor_interactions_controller.rb - not sure if filtering is working.
     locale = params[:locale] || "en"
@@ -25,6 +26,10 @@ class AichatController < ApplicationController
     }
     response = request_chat_completion(payload)
     render(status: response[:status], json: response[:json])
+  end
+
+  def can_request_aichat_chat_completion?
+    DCDO.get('aichat_chat_completion', true)
   end
 
   def request_chat_completion(payload)
