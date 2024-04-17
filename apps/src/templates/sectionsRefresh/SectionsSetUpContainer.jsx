@@ -83,7 +83,7 @@ export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
   canEnableAITutor,
-  showChildAccountPolicy,
+  userCountry,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -265,9 +265,10 @@ export default function SectionsSetUpContainer({
   const renderChildAccountPolicyNotification = () => {
     const isEmailLoggin = queryParams('loginType') === 'email';
     const isStudentSection = queryParams('participantType') === 'student';
+    const isCapCountry = ['US', 'RD'].includes(userCountry);
     // We want to display a Child Account Policy warning notification for US
     // teachers who are creating a new section with email logins.
-    if (showChildAccountPolicy && isStudentSection && isEmailLoggin) {
+    if (isCapCountry && isStudentSection && isEmailLoggin) {
       return (
         <Provider store={getStore()}>
           <Notification
@@ -461,5 +462,5 @@ SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
   canEnableAITutor: PropTypes.bool,
-  showChildAccountPolicy: PropTypes.bool,
+  userCountry: PropTypes.string,
 };
