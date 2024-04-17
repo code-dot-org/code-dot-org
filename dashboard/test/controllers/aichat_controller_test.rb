@@ -4,8 +4,6 @@ class AichatControllerTest < ActionController::TestCase
   GENAI_PILOT = "gen-ai-customizing-llms"
 
   setup_all do
-    @genai_pilot = create :pilot
-    @genai_pilot.name = GENAI_PILOT
     @genai_pilot_teacher = create :teacher, pilot_experiment: GENAI_PILOT
     pilot_section = create(:section, user: @genai_pilot_teacher)
     @genai_pilot_student = create(:follower, section: pilot_section).student_user
@@ -20,12 +18,6 @@ class AichatControllerTest < ActionController::TestCase
     @valid_params = @common_params.merge(newMessage: valid_message)
     @pii_violation_params = @common_params.merge(newMessage: pii_violation_message)
     @profanity_violation_params = @common_params.merge(newMessage: profanity_violation_message)
-  end
-
-  teardown_all do
-    @genai_pilot_student.delete
-    @genai_pilot_teacher.delete
-    @genai_pilot.delete
   end
 
   test_user_gets_response_for :chat_completion,
