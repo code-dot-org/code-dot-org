@@ -220,14 +220,8 @@ export const submitChatContents = createAsyncThunk(
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
-    const newMessageId =
-      storedMessages.length === 0
-        ? 1
-        : storedMessages[storedMessages.length - 1].id + 1;
-
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
-      id: newMessageId,
       role: Role.USER,
       status: Status.OK,
       chatMessageText: newUserMessageText,
@@ -245,7 +239,6 @@ export const submitChatContents = createAsyncThunk(
     console.log('chatApiResponse', chatApiResponse);
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: newMessageId + 1,
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
@@ -267,15 +260,14 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const newMessageId =
-        state.chatMessages[state.chatMessages.length - 1].id + 1;
+      const newMessageId = state.chatMessages.length + 1;
       const newMessage = {
         ...action.payload,
         id: newMessageId,
       };
       state.chatMessages.push(newMessage);
     },
-    removeChatMessage: (state, action: PayloadAction<number>) => {
+    removeChatMessage: (state, action: PayloadAction<number | undefined>) => {
       const updatedMessages = state.chatMessages.filter(
         message => message.id !== action.payload
       );
