@@ -75,6 +75,7 @@ export function writeSource(
 // - look for deleted folders or files.
 // - send an error message if a non-csv/txt file is updated (this is currently ignored).
 // - process hidden folders (we currently ignore them).
+// Tracked in https://codedotorg.atlassian.net/browse/CT-509
 export function getUpdatedSourceAndDeleteFiles(
   source: MultiFileSource,
   id: string,
@@ -82,8 +83,6 @@ export function getUpdatedSourceAndDeleteFiles(
   sendMessage: (message: PyodideMessage) => void
 ) {
   const workingDir = pyodide.FS.cwd();
-  // TODO: we should log an error for every new, non .csv or .txt file.
-  // should we do anything with a deleted csv or txt file??
   const directoryData = pyodide.FS.lookupPath(workingDir, {}).node;
   const directoryContents = Object.values(
     directoryData.contents
