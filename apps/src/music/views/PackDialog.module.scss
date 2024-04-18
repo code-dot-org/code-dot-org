@@ -142,17 +142,17 @@
 
   .continue {
     @extend %button;
-    background-color: $brand_secondary_default;
-    border-color: $brand_secondary_default;
-    color: $neutral_light;
+    background-color: $neutral_light;
+    border-color: $neutral_light;
+    color: $neutral_dark;
 
     &:hover {
-      background-color: $brand_secondary_dark;
-      border-color: $brand_secondary_dark !important;
+      background-color: $neutral_light;
+      border-color: $neutral_light !important;
     }
 
     &Disabled {
-      opacity: 50%;
+      opacity: 30%;
       cursor: default;
     }
   }
