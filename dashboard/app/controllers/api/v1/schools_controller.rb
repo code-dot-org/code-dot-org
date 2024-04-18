@@ -50,4 +50,13 @@ class Api::V1::SchoolsController < ApplicationController
     end
     render json: search_results
   end
+
+  # GET /dashboardapi/v1/schoolzipsearch/:q/:limit
+  def zip_search
+    search_results = Api::V1::SchoolAutocomplete.get_zip_matches(
+      params.require(:q),
+      params[:limit]
+    )
+    render json: search_results
+  end
 end

@@ -38,6 +38,16 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
         order(ActiveRecord::Base.sanitize_sql_for_order([Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name"), query]))
     end
 
+    return rows.map do |row|
+      Serializer.new(row).attributes
+    end
+  end
+
+  def self.get_zip_matches(query, limit)
+    limit = format_limit(limit)
+    rows = School.limit(limit)
+    query = "#{query[0, 5]}%"
+    rows = rows.where("zip LIKE ?", query)
     # For private schools, we don't yet have a way to determine churn/inactive
     # schools, so we surface them all to teachers.
     # For public and charter schools, we filter on 'known open' schools as
