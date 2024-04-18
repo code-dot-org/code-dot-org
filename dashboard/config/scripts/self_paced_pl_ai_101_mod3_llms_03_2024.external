@@ -70,7 +70,7 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
-#### **Tips and Tricks**
+## Tips and Tricks
 * #### When you’re prompting the AI don’t just stop after the first prompt! Keep asking it more questions and diving deeper.
 * #### For more accurate and helpful responses, try to be as detailed as possible in your requests. The more context you provide, the better LLMs can tailor their answers to your needs.
 * #### Don’t forget to use the feedback mechanisms to improve your experience. Whether it’s clarifying misunderstandings, asking for further details, or simply exploring different approaches, your interactions can help guide the conversation to more effectively meet your goals.

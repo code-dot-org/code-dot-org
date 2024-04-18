@@ -3,6 +3,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';
@@ -51,12 +54,7 @@ class TeacherSections extends Component {
   }
 
   render() {
-    const {
-      plSectionIds,
-      studentSectionIds,
-      hiddenPlSectionIds,
-      hiddenStudentSectionIds,
-    } = this.props;
+    const {studentSectionIds, hiddenStudentSectionIds} = this.props;
 
     return (
       <div id="classroom-sections">
@@ -77,11 +75,18 @@ class TeacherSections extends Component {
         )}
         {this.shouldRenderPlSections() && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
-            <CoteacherInviteNotification isForPl={true} />
-            <OwnedSections
-              isPlSections={true}
-              sectionIds={plSectionIds}
-              hiddenSectionIds={hiddenPlSectionIds}
+            <BodyTwoText>
+              {i18n.myProfessionalLearningSectionsHomepageDesc()}
+            </BodyTwoText>
+            <LinkButton
+              color={'purple'}
+              href={studio('/my-professional-learning')}
+              iconLeft={{
+                iconName: 'book-circle-arrow-right',
+                iconStyle: 'solid',
+              }}
+              size="s"
+              text={i18n.myProfessionalLearningSectionsHomepageButton()}
             />
           </ContentContainer>
         )}

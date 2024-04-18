@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :post_show_progress_table_v2, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   private def to_bool(val)
@@ -76,6 +76,27 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       email: current_user&.email,
       zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
     }
+  end
+
+  # This is used as a way to redirect correctly to either the sign in page or the
+  # URL specified in the user_return_to parameter. This is necessary because
+  # cached pages do not have a valid user auth token and therefore will attempt to
+  # redirect to the sign in page instead of the correct page if the user is signed in.
+  # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
+  # GET /api/v1/users/cached_page_auth_redirect
+  def cached_page_auth_redirect
+    # We must ensure that we remove any redirections to this page or we would enter
+    # an infinite loop.
+    [params, session].each do |context|
+      context[:user_return_to] = nil if context[:user_return_to]&.include?('cached_page_auth_redirect')
+    end
+
+    if user_signed_in?
+      redirect_to params[:user_return_to] || home_url
+    else
+      session[:user_return_to] ||= params[:user_return_to]
+      authenticate_user!
+    end
   end
 
   # GET /api/v1/users/<user_id>/using_text_mode
