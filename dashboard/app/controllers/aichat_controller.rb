@@ -9,6 +9,7 @@ class AichatController < ApplicationController
   # chatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
+    return render status: :forbidden, json: {} unless can_request_aichat_chat_completion?
     unless has_required_params?
       return render status: :bad_request, json: {}
     end
@@ -34,6 +35,10 @@ class AichatController < ApplicationController
       content: latest_assistant_response
     }
     return render(status: :ok, json: payload.to_json)
+  end
+
+  private def can_request_aichat_chat_completion?
+    DCDO.get('aichat_chat_completion', true)
   end
 
   private def has_required_params?
