@@ -27,7 +27,6 @@ module ActiveJobMetrics
     [
       {name: 'Environment', value: CDO.rack_env},
       {name: 'JobName', value: self.class.name},
-      {name: 'JobId', value: job_id},
       {name: 'QueueName', value: queue_name},
     ]
   end
