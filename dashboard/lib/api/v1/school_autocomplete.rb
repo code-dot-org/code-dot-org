@@ -42,7 +42,7 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
     # schools, so we surface them all to teachers.
     # For public and charter schools, we filter on 'known open' schools as
     # determined by nces 'status' (see school.rb for OPEN_SCHOOL_STATUSES logic)
-    # to prevent what will appear to the user as duplicate schools.
+    # to prevent showing duplicate/inactive schools to the user.
     current_import_year = School.maximum(:last_known_school_year_open)
     rows = rows.where("school_type = 'private' OR last_known_school_year_open = '#{current_import_year}'")
     return rows.map do |row|
