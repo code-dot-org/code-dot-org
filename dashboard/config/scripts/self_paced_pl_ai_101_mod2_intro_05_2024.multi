@@ -1,7 +1,7 @@
 name 'self-paced-pl-ai-101-mod2-intro_05_2024'
 title 'Check for Understanding: What is AI'
 description ''
-question 'Which of the following best defines AI??'
+question 'Which of the following best defines AI?'
 
 right 'AI refers to the ability of machines to perform tasks that typically require human intelligence, such as learning, reasoning, and problem-solving.'
 wrong  'AI involves creating robots capable of performing tasks autonomously without human intervention.'

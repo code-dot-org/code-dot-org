@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2024-04-02 23:03:36 UTC",
+    "serialized_at": "2024-04-17 23:18:17 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -213,6 +213,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Music Lab Testing",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -469,6 +484,18 @@
       "seeding_key": {
         "lesson_activity.key": "cbe40510-ae34-4a96-a918-2767a9a074ed",
         "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "3dd6ce70-cf2e-46ab-b36a-aa646c68d3b5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3dd6ce70-cf2e-46ab-b36a-aa646c68d3b5",
+        "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -1173,6 +1200,16 @@
       "seeding_key": {
         "activity_section.key": "65e0c67b-32a7-44a4-9dc8-fb2a159a14e4",
         "lesson_activity.key": "cbe40510-ae34-4a96-a918-2767a9a074ed"
+      }
+    },
+    {
+      "key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947",
+        "lesson_activity.key": "3dd6ce70-cf2e-46ab-b36a-aa646c68d3b5"
       }
     }
   ],
@@ -2062,6 +2099,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "games_dev_variables_panel"
+        ],
         "progression": "Games - Play & Learn"
       },
       "bonus": false,
@@ -3313,6 +3353,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_design_spr_types"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3334,6 +3377,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_new_panel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3347,6 +3393,237 @@
       },
       "level_keys": [
         "game_new_panel"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_panels_start_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_panels_start_pdx"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_play_sound_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_play_sound_pdx"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_change_sound_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_change_sound_pdx"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_panels_playtogether_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_panels_playtogether_pdx"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_play_together_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_play_together_pdx"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_repeat_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_repeat_pdx"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_panels_function_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_panels_function_pdx"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_function_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_function_pdx"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_panels_trigger_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_panels_trigger_pdx"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_trigger_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_trigger_pdx"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_intro_panels_end_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      },
+      "level_keys": [
+        "musiclab_intro_panels_end_pdx"
       ]
     }
   ],
@@ -4417,6 +4694,138 @@
         "lesson_group.key": "",
         "script.name": "katies-playground",
         "activity_section.key": "b53faa4b-bf64-4116-b530-69ec026f24ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_panels_start_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_panels_start_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_play_sound_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_play_sound_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_change_sound_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_change_sound_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_panels_playtogether_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_panels_playtogether_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_play_together_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_play_together_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_repeat_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_repeat_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_panels_function_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_panels_function_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_function_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_function_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_panels_trigger_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_panels_trigger_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_trigger_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_trigger_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_intro_panels_end_pdx",
+        "script_level.level_keys": [
+          "musiclab_intro_panels_end_pdx"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "d4d8ece0-681c-4f92-bb2b-bb913d4e6947"
       }
     }
   ],
