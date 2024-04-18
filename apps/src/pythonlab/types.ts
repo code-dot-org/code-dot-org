@@ -6,7 +6,7 @@ export interface PyodidePathContent {
 }
 
 export interface PyodideMessage {
-  type: string;
+  type: 'sysout' | 'updated_source' | 'run_complete' | 'error';
   message: string;
   id: string;
 }

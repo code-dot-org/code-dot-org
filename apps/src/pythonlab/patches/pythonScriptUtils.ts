@@ -63,7 +63,7 @@ export function writeSource(
     });
 }
 
-export function getUpdatedSource(
+export function getUpdatedSourceAndDeleteFiles(
   source: MultiFileSource,
   id: string,
   pyodide: PyodideInterface,
@@ -77,8 +77,7 @@ export function getUpdatedSource(
     directoryData.contents
   ) as PyodidePathContent[];
   const newSource = {...source};
-  console.log({directoryContents});
-  updateSourceWithContents(
+  updateAndDeleteSourceWithContents(
     directoryContents,
     newSource,
     workingDir + '/',
@@ -90,7 +89,7 @@ export function getUpdatedSource(
   return newSource;
 }
 
-function updateSourceWithContents(
+function updateAndDeleteSourceWithContents(
   contents: PyodidePathContent[],
   source: MultiFileSource,
   currentPath: string,
@@ -101,15 +100,14 @@ function updateSourceWithContents(
 ) {
   contents.forEach(content => {
     const fileExtension = content.name.split('.').pop();
+    const fullPath = currentPath + content.name;
     if (pyodide.FS.isFile(content.mode)) {
       if (fileExtension === 'csv' || fileExtension === 'txt') {
         const file = Object.values(source.files).find(
           f => f.name === content.name
         );
         try {
-          // todo: need to include directory path here
-          console.log(`trying to read file ${currentPath + content.name}`);
-          const newContents = pyodide.FS.readFile(currentPath + content.name, {
+          const newContents = pyodide.FS.readFile(fullPath, {
             encoding: 'utf8',
           });
           if (!file) {
@@ -141,6 +139,8 @@ function updateSourceWithContents(
           });
         }
       }
+      // Delete the file now that we have handled it.
+      pyodide.FS.unlink(fullPath);
       // Do not create or iterate through folders that start with '.' as these are hidden folders.
     } else if (
       pyodide.FS.isDir(content.mode) &&
@@ -166,7 +166,7 @@ function updateSourceWithContents(
         newFolderId = existingFolder.id;
       }
 
-      updateSourceWithContents(
+      updateAndDeleteSourceWithContents(
         Object.values(content.contents),
         source,
         newPath,
@@ -175,25 +175,6 @@ function updateSourceWithContents(
         pyodide,
         sendMessage
       );
-    }
-  });
-}
-
-// Remove all source files from the Pyodide file system.
-// This ensures any deleted file is not available to be imported,
-// which could cause confusion.
-export function deleteSourceFiles(
-  source: MultiFileSource,
-  pyodide: PyodideInterface
-) {
-  Object.values(source.files).forEach(file => {
-    const filePath = getFilePath(file.id, source);
-    try {
-      pyodide.FS.unlink(filePath);
-    } catch (e) {
-      // TODO: log error better. We catch this because it should not prevent
-      // future runs.
-      console.warn(`error unlinking Pyodide file ${filePath}, ${e}`);
     }
   });
 }
@@ -212,31 +193,16 @@ export async function importPackagesFromFiles(
   }
 }
 
-// For the given fileId, return the full path to the file, including the file name.
-function getFilePath(fileId: string, source: MultiFileSource) {
-  const path = [source.files[fileId].name];
-  addFoldersToPath(fileId, source, path);
-  return path.join('/');
-}
-
 // For the given fileId, return the module version of the file. For example, a file at
 // path folder1/folder2/file.py would have a module name of "folder1.folder2.file".
 function getModuleName(fileId: string, source: MultiFileSource) {
   const path = [source.files[fileId].name.replace('.py', '')];
-  addFoldersToPath(fileId, source, path);
-  return path.join('.');
-}
-
-function addFoldersToPath(
-  fileId: string,
-  source: MultiFileSource,
-  path: string[]
-) {
   let folderId = source.files[fileId].folderId;
   while (source.folders[folderId]) {
     path.unshift(source.folders[folderId].name);
     folderId = source.folders[folderId].parentId;
   }
+  return path.join('.');
 }
 
 function createFolderIfNotExists(

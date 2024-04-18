@@ -1,6 +1,5 @@
 import {
-  deleteSourceFiles,
-  getUpdatedSource,
+  getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
   writeSource,
 } from './patches/pythonScriptUtils';
@@ -40,17 +39,15 @@ self.onmessage = async event => {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
     await importPackagesFromFiles(source, self.pyodide);
     results = await self.pyodide.runPythonAsync(python);
-    console.log('getting updated source...');
-    const updatedSource = getUpdatedSource(
-      source,
-      id,
-      self.pyodide,
-      self.postMessage
-    );
-    self.postMessage({type: 'updated_source', message: updatedSource, id});
   } catch (error) {
     self.postMessage({type: 'error', message: error.message, id});
   }
-  deleteSourceFiles(source, self.pyodide);
+  const updatedSource = getUpdatedSourceAndDeleteFiles(
+    source,
+    id,
+    self.pyodide,
+    self.postMessage
+  );
+  self.postMessage({type: 'updated_source', message: updatedSource, id});
   self.postMessage({type: 'run_complete', message: results, id});
 };
