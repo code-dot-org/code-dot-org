@@ -74,7 +74,6 @@ def build
     File.write(deploy_dir('rebuild'), log)
 
     git_revision = RakeUtils.git_revision
-    git_revision_short = GitUtils.git_revision_short
 
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
 
@@ -118,7 +117,6 @@ def main
     projects = 'websites' if projects.empty?
 
     commit_hash = RakeUtils.git_revision
-    commit_hash_short = GitUtils.git_revision_short
     commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}"
 
     duration = Time.now.to_i - start_time.to_i
