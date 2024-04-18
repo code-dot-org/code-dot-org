@@ -76,5 +76,7 @@
   "soundsFilterBass": "Bass",
   "soundsFilterLeads": "Leads",
   "soundsFilterEffects": "Effects",
-  "soundsFilterVocals": "Vocals"
+  "soundsFilterVocals": "Vocals",
+  "packDialogTitle": "Choose a featured track",
+  "packDialogBody": "Level up your mix by adding sounds from a featured track."
 }

@@ -150,8 +150,9 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
             className={styles.heading}
           >
             {musicI18n.packDialogTitle()}
-            {musicI18n.packDialogBody()}
           </Typography>
+
+          {musicI18n.packDialogBody()}
 
           <div className={styles.packs}>
             {folders.map((folder, folderIndex) => {
