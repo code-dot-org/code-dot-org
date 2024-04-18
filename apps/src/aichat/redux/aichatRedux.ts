@@ -190,6 +190,20 @@ const saveAiCustomization = async (
     savedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
+
+  if (
+    changedProperties.some(property =>
+      [
+        'selectedModelId',
+        'temperature',
+        'systemPrompt',
+        'retrievalContexts',
+      ].includes(property)
+    )
+  ) {
+    dispatch(setNewChatSession());
+  }
+
   changedProperties.forEach(property => {
     dispatch(
       addChatMessage({
@@ -200,6 +214,7 @@ const saveAiCustomization = async (
         status: Status.OK,
         timestamp: getCurrentTime(),
         isVisible: true,
+        inCurrentChatSession: true,
       })
     );
   });
@@ -233,13 +248,14 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
       isVisible: true,
+      inCurrentChatSession: true,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
-      storedMessages,
+      storedMessages.filter(message => message.inCurrentChatSession),
       aiCustomizations,
       chatContext
     );
@@ -254,6 +270,7 @@ export const submitChatContents = createAsyncThunk(
         // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
         isVisible: true,
+        inCurrentChatSession: true,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     } else {
@@ -292,6 +309,11 @@ const aichatSlice = createSlice({
     hideAllChatMessages: state => {
       state.chatMessages.forEach(
         chatMessage => (chatMessage.isVisible = false)
+      );
+    },
+    setNewChatSession: state => {
+      state.chatMessages.forEach(
+        chatMessage => (chatMessage.inCurrentChatSession = false)
       );
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
@@ -432,6 +454,7 @@ export const {
   addChatMessage,
   hideChatMessage,
   hideAllChatMessages,
+  setNewChatSession,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,

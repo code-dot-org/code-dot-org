@@ -10,6 +10,7 @@ export type ChatCompletionMessage = {
   status: AichatInteractionStatus;
   timestamp?: string;
   isVisible: boolean;
+  inCurrentChatSession: boolean;
 };
 
 export type ChatContext = {
