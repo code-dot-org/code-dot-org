@@ -69,6 +69,18 @@ ActiveRecord::Schema.define(version: 2024_04_16_200438) do
     t.index ["user_id"], name: "index_ai_tutor_interactions_on_user_id"
   end
 
+  create_table "aichat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "level_id"
+    t.integer "script_id"
+    t.integer "project_id"
+    t.json "model_customizations"
+    t.json "messages"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "level_id", "script_id"], name: "index_acs_user_level_script"
+  end
+
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
