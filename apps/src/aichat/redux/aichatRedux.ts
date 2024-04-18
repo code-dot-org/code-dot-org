@@ -466,3 +466,19 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
 } = aichatSlice.actions;
+
+// potential alternative, assign session ID to each message:
+// # first message: from user, no session id
+// # request to server: no session id
+// # once response received from ai, save first message and bot message, assign session id
+// # response from server: has session id
+// # assign session id to first message
+// # second message: has session id
+// # once response received from ai, save all messages to existing session id
+// # customization updated -- current session id set to null, update status messages have no session id (doesn't matter?)
+// # new message from user:
+//     # request to server: no session id. include all messages with no session id?
+// # repeat initial steps, assign session id and return from server
+// # another message -- this time, we need to filter existing messages and only send the ones that have the same session id as the current session id
+// # clear messages -- set visibility to none on everything, set current session id to nil
+// # next message: repeat initial steps, assign session id and return from server
