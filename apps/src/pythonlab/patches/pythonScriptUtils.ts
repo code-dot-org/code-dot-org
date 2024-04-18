@@ -1,6 +1,10 @@
 import {PyodideInterface} from 'pyodide';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  getNextFileId,
+  getNextFolderId,
+} from '@cdo/apps/weblab2/CDOIDE/cdoIDEContext/utils';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/weblab2/CDOIDE/constants';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
@@ -63,6 +67,14 @@ export function writeSource(
     });
 }
 
+// Iterate over the pyodide file system and update the source object with any new or updated
+// csv or txt files, or new folders. If we see any other new files, send an error message.
+// In addition, delete every file in the working directory to prepare for the next run.
+// We want a clean working directory for each run.
+// TODO: determine if we want to do the following:
+// - look for deleted folders or files.
+// - send an error message if a non-csv/txt file is updated (this is currently ignored).
+// - process hidden folders (we currently ignore them).
 export function getUpdatedSourceAndDeleteFiles(
   source: MultiFileSource,
   id: string,
@@ -111,12 +123,7 @@ function updateAndDeleteSourceWithContents(
             encoding: 'utf8',
           });
           if (!file) {
-            const files = Object.values(source.files);
-            // We get errors if we try to use getNextFileId (perhaps due to web worker weirdness)
-            // so I copied the function here.
-            const newFileId = String(
-              Math.max(0, ...files.map(f => Number(f.id))) + 1
-            );
+            const newFileId = getNextFileId(Object.values(source.files));
             source.files[newFileId] = {
               id: newFileId,
               folderId,
@@ -153,10 +160,7 @@ function updateAndDeleteSourceWithContents(
       let newFolderId = '';
       if (!existingFolder) {
         createFolderIfNotExists(newPath, pyodide);
-        newFolderId = String(
-          Math.max(0, ...Object.values(source.folders).map(f => Number(f.id))) +
-            1
-        );
+        newFolderId = getNextFolderId(Object.values(source.folders));
         source.folders[newFolderId] = {
           id: newFolderId,
           name: content.name,
@@ -175,6 +179,8 @@ function updateAndDeleteSourceWithContents(
         pyodide,
         sendMessage
       );
+      // Now that we've handled the contents, delete the folder.
+      pyodide.FS.rmdir(newPath);
     }
   });
 }
