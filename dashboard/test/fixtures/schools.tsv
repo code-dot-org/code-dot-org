@@ -1,4 +1,4 @@
-id	name	address_line1	address_line2	address_line3	city	state	zip	latitude	longitude	school_type	school_district_id  last_known_school_year_open
+id	name	address_line1	address_line2	address_line3	city	state	zip	latitude	longitude	school_type	school_district_id	last_known_school_year_open
 00326758	LE JARDIN ACADEMY	917 KALANIANAOLE HWY			KAILUA	HI	96734	21.37924	-157.767901	private 2022-2023
 10000200277	SEQUOYAH SCH - CHALKVILLE CAMPUS	1000 INDUSTRIAL SCHOOL ROAD			BIRMINGHAM	AL	35220	33.673661	-86.628755	public	100002 2022-2023
 10000201402	EUFAULA SCH - EUFAULA CAMPUS	315 OUTBACK ROAD			CLAYTON	AL	36016	31.881567	-85.252761	public	100002 2022-2023
