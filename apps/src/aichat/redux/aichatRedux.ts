@@ -17,7 +17,6 @@ import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
-import {initialChatMessages} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
@@ -82,7 +81,7 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  chatMessages: initialChatMessages,
+  chatMessages: [],
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
@@ -200,6 +199,7 @@ const saveAiCustomization = async (
           AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
         status: Status.OK,
         timestamp: getCurrentTime(),
+        isVisible: true,
       })
     );
   });
@@ -232,6 +232,7 @@ export const submitChatContents = createAsyncThunk(
       status: Status.OK,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
+      isVisible: true,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
@@ -252,6 +253,7 @@ export const submitChatContents = createAsyncThunk(
         // The accuracy of this timestamp is debatable since it's not when our backend
         // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
+        isVisible: true,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     } else {
@@ -267,24 +269,30 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const newMessageId =
-        state.chatMessages[state.chatMessages.length - 1].id + 1;
+      const newMessageId = state.chatMessages.length
+        ? state.chatMessages[state.chatMessages.length - 1].id + 1
+        : 1;
       const newMessage = {
         ...action.payload,
         id: newMessageId,
       };
       state.chatMessages.push(newMessage);
     },
-    removeChatMessage: (state, action: PayloadAction<number>) => {
-      const updatedMessages = state.chatMessages.filter(
-        message => message.id !== action.payload
+    hideChatMessage: (state, action: PayloadAction<number>) => {
+      const messageIndex = state.chatMessages.findIndex(
+        message => message.id === action.payload
       );
-      if (updatedMessages.length !== state.chatMessages.length) {
-        state.chatMessages = updatedMessages;
+      if (messageIndex >= 0) {
+        state.chatMessages[messageIndex].isVisible = false;
       }
     },
     clearChatMessages: state => {
-      state.chatMessages = initialChatMessages;
+      state.chatMessages = [];
+    },
+    hideAllChatMessages: state => {
+      state.chatMessages.forEach(
+        chatMessage => (chatMessage.isVisible = false)
+      );
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
@@ -422,7 +430,8 @@ export const selectHasFilledOutModelCard = createSelector(
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
-  removeChatMessage,
+  hideChatMessage,
+  hideAllChatMessages,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,

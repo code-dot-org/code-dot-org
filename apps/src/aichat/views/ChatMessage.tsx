@@ -7,7 +7,7 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Button from '@cdo/apps/componentLibrary/button';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
-import {removeChatMessage} from '../redux/aichatRedux';
+import {hideChatMessage} from '../redux/aichatRedux';
 import {
   ChatCompletionMessage,
   Role,
@@ -137,7 +137,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
       {isModelUpdate(message.role) && (
         <div className={moduleStyles.modelUpdateMessageContainer}>
           {displayModelUpdateMessage(message, () =>
-            dispatch(removeChatMessage(message.id))
+            dispatch(hideChatMessage(message.id))
           )}
         </div>
       )}

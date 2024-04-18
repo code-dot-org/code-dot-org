@@ -63,9 +63,12 @@ const ChatWorkspace: React.FunctionComponent = () => {
         id="chat-workspace-conversation"
         className={moduleStyles.conversationArea}
       >
-        {storedMessages.map(message => (
-          <ChatMessage message={message} key={message.id} />
-        ))}
+        {storedMessages.map(
+          message =>
+            message.isVisible && (
+              <ChatMessage message={message} key={message.id} />
+            )
+        )}
         {showWaitingAnimation()}
       </div>
       <UserChatMessageEditor />
