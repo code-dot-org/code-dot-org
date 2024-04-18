@@ -72,6 +72,6 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'can_request_aichat_chat_completion returns false when DCDO flag is set to `false`' do
     DCDO.stubs(:get).with('aichat_chat_completion', true).returns(false)
-    assert_equal false, @controller.send(:can_request_aichat_chat_completion?)
+    assert_equal false, AichatHelper.can_request_aichat_chat_completion?
   end
 end

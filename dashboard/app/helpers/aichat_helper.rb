@@ -42,4 +42,8 @@ module AichatHelper
   def self.wrap_as_instructions(message)
     "[INST] #{message} [/INST]"
   end
+
+  def self.can_request_aichat_chat_completion?
+    DCDO.get('aichat_chat_completion', true)
+  end
 end
