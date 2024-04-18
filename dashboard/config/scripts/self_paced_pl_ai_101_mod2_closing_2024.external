@@ -1,0 +1,21 @@
+name 'self-paced-pl-ai-101-mod2-closing_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrap Up
+
+## Great job! 🎉
+
+#### In this module you’ve built a foundational understanding of AI. You...
+
+* #### Defined artificial intelligence and explain its fundamental concepts.
+* #### Identified common applications of AI in various fields, illustrating its broad impact and potential.
+
+
+## Up Next
+
+#### In the next section of this professional learning module, you’ll learn how to use AI to support your role as an educator.
+
+#### Click continue to keep going!
+MARKDOWN

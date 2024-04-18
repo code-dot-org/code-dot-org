@@ -1,17 +1,17 @@
 @import 'color';
 @import 'font';
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
 
 @keyframes pulse {
   0% {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
   }
   100% {
-    transform: scale(.9);
+    transform: scale(0.9);
     box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
   }
 }
@@ -30,7 +30,7 @@
   border-radius: 30px;
 
   img {
-    opacity: 1.0;
+    opacity: 1;
     border-radius: 30px;
   }
 }
@@ -152,7 +152,7 @@
   flex: 1 1 100%;
   padding: 0.25rem 0;
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     & + i::before {
       background: $neutral_white;
     }
@@ -444,7 +444,6 @@ h2.studentName {
   gap: 1rem;
   align-self: stretch;
 
-
   .tipsDetailsSummary {
     font-size: 0.875rem;
 
@@ -475,7 +474,9 @@ h2.studentName {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100px;
   gap: 8px;
+  min-height: 92px;
 }
 
 .evidenceLevelInnerDiv:first-child {
@@ -618,6 +619,10 @@ p.aiAssessmentScoreText {
 
 p.aiAssessmentEvidenceBlock {
   margin: 0;
+
+  + ul li p {
+    margin: 0;
+  }
 }
 
 .aiConfidenceBox {
@@ -866,35 +871,35 @@ em.aiFeedbackReceived {
   min-width: 100%;
 }
 
-.learningGoalButton {
-  background: none;
-  border: none;
-  align-self: center;
-  flex: 0 0 auto;
-}
-
 .learningGoalRing {
   flex: 0 0 auto;
 }
 
 button.learningGoalButton {
+  align-self: center;
+  background: none;
+  border: none;
   box-shadow: none;
-  border: 1px solid transparent;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.5rem;
 
   &:active,
   &:hover {
     box-shadow: none;
+    // The important is needed here to override the common button:active style
+    border: none !important;
   }
 }
 
-.learningGoalButtonLeft {
-  margin: 0 0.625rem 0 0;
-  padding: 0 0.5rem 0 0;
+button.learningGoalButtonLeft {
+  margin-left: 0.5rem;
+  margin-right: 0.625rem;
 }
 
-.learningGoalButtonRight {
-  margin: 0 0 0 0.625rem;
-  padding: 0 0 0 0.5rem;
+button.learningGoalButtonRight {
+  margin-left: 0.625rem;
+  margin-right: 0.5rem;
 }
 
 .learningGoalsHeader {
@@ -905,7 +910,7 @@ button.learningGoalButton {
   align-self: stretch;
   line-height: 154%;
   position: relative;
-  margin: 1rem 1rem 0 1rem;
+  margin: 1rem 0 0 0;
   padding: 0 0 0.75rem 0;
   border-bottom: 1px $light_gray_100 solid;
   overflow: hidden;
@@ -960,6 +965,16 @@ h5.learningGoalsHeaderTextBody {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+}
+
+.learningGoalSummary {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px $light_gray_100 solid;
+  margin: 1rem 1rem 0 1rem;
 }
 
 .aiTokenContainer {
@@ -1048,6 +1063,11 @@ p.evidenceLevelHeaderText {
     box-shadow: none;
     background-color: $light_gray_100;
   }
+
+  &:disabled {
+    border-color: $light_black;
+    background: $neutral_white;
+  }
 }
 
 .evidenceLevelSelected {
@@ -1058,6 +1078,12 @@ p.evidenceLevelHeaderText {
   &:hover {
     box-shadow: none;
     background-color: $light_primary_700;
+  }
+
+  &:disabled {
+    border-color: $light_primary_500;
+    background: $light_primary_500;
+    color: $light_white;
   }
 }
 
@@ -1075,6 +1101,17 @@ p.evidenceLevelHeaderText {
     box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
     background-color: $light_gray_100;
   }
+
+  &:disabled {
+    border-radius: 100px;
+    border: 1px solid $light_black;
+    background: $neutral_white;
+    gap: 10px;
+    padding: 3px 16px 0;
+    font-size: 0.875rem;
+    height: 32px;
+    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
+  }
 }
 
 .fabBackground {
@@ -1088,7 +1125,7 @@ p.evidenceLevelHeaderText {
   box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: 408px;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
 
   &:last-child {
     border-radius: 0 0 0.25rem 0.25rem;
@@ -1120,7 +1157,7 @@ p.evidenceLevelHeaderText {
 
 .infoAlertLeft {
   display: flex;
-  gap: 10px
+  gap: 10px;
 }
 
 .infoAlertRight {
@@ -1144,6 +1181,13 @@ button.infoAlertRight {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+}
+
+.settingsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
 .settingsContainers {
@@ -1202,7 +1246,7 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 4px 10px 0;
   height: 22px;
-  display:inline;
+  display: inline;
   p {
     margin-bottom: 0;
   }
@@ -1213,9 +1257,9 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
-  display:inline;
+  display: inline;
   p {
-    margin: 0,0,0,0;
+    margin: 0, 0, 0, 0;
   }
 }
 
@@ -1224,14 +1268,14 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
-  display:inline;
+  display: inline;
   p {
-    margin: 0,0,0,0;
+    margin: 0, 0, 0, 0;
   }
 }
 
 .submitStatusText {
-  display:inline;
+  display: inline;
   padding-top: 3px;
   p {
     margin-bottom: 0;

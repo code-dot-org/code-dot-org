@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:22:37.000Z",
   "level_num": "custom",
@@ -27,7 +26,7 @@
     "instructions_important": "false",
     "long_instructions": "**Show two variables!**\r\n\r\n1.  Add the `show variable health` block to the `when run` program\r\n- Then connect a `set health to 5` block \r\n- You can change the location of the variable with the `location pin`\r\n\r\n- Press `Run` when you're finished",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
@@ -47,13 +46,13 @@
       "downButton"
     ],
     "short_instructions": "Create a new Health variable and set it to 5.",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_code": "if (World.frameCount == 1) {\r\n\r\n  addCriteria(function() {\r\n    return variableBubblesCreated(2); // Check whether two variable bubbles are visible on screen. \r\n  }, \"variableBubblesTwo\");  // Failure message: \"Make sure to display two variables on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(2); // Check whether both variables have been set to something. \r\n  }, \"variableSetValueTwo\");  // Failure message: \"You need to set the value of both your variables.\"\r\n  \r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();"
+    "validation_code": "if (World.frameCount == 1) {\r\n\r\n  addCriteria(function() {\r\n    return variableBubblesCreated(2); // Check whether two variable bubbles are visible on screen. \r\n  }, \"variableBubblesTwo\");  // Failure message: \"Make sure to display two variables on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(2); // Check whether both variables have been set to something. \r\n  }, \"variableSetValueTwo\");  // Failure message: \"You need to set the value of both your variables.\"\r\n  \r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();",
+    "encrypted_examples": "fDAyomACpQcjPwwolaNycO1Ee9rq6RwCIsq9uxoSmLhQi4USGcSFZM2ZfFxq\nEccDpQS7BxhGpSt+3bYhnRREUg==\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"The Score variable is already shown on the play space. So you need to add a second variable named Health.\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_showVariable\\\" id=\\\"CX]E4@VU[,b3Rb$gNv6@\\\">\\n  <field name=\\\"VAR\\\" id=\\\"g$@Yzsw3_w!Ncw.ve]S-\\\">Health</field>\\n  <value name=\\\"LOCATION\\\">\\n    <block type=\\\"gamelab_location_picker\\\" id=\\\"-OyFO}@bmFm.tQyEPF8L\\\">\\n      <field name=\\\"LOCATION\\\">{\\\"x\\\":280,\\\"y\\\":120}</field>\\n    </block>\\n  </value>\\n</block></xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/03ac09700f4c7ca49a41587a492899e2/game_variables_show_two.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Don't forget to set the value of the Health variable!\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/22a988eeec6b07fe87a22c69e5d589bd/game_variables_show_two.mp3\"}]",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:22:37.970+00:00\",\"changed\":[\"cloned from \\\"game_dev_scoreboard2\\\"\"],\"cloned_from\":\"game_dev_scoreboard2\"},{\"changed_at\":\"2024-03-18 20:22:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:54:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 17:52:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 17:54:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:22:37.970+00:00\",\"changed\":[\"cloned from \\\"game_dev_scoreboard2\\\"\"],\"cloned_from\":\"game_dev_scoreboard2\"},{\"changed_at\":\"2024-03-18 20:22:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:54:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 17:52:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 17:54:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 15:39:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 15:45:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:10:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:33:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 18:34:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -61,7 +60,7 @@
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable id="y5GjhN/!~,kNnJ;H{^Ig">Score</variable>
+          <variable id="y5GjhN/!~,kNnJ;H{^Ig">score</variable>
         </variables>
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="16" y="16">
           <next>
@@ -69,7 +68,7 @@
               <field name="IMG">"video_game_bg"</field>
               <next>
                 <block type="gamelab_showVariable">
-                  <field name="VAR" id="y5GjhN/!~,kNnJ;H{^Ig">Score</field>
+                  <field name="VAR" id="y5GjhN/!~,kNnJ;H{^Ig">score</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
                       <field name="LOCATION">{"x":140,"y":120}</field>
@@ -77,7 +76,7 @@
                   </value>
                   <next>
                     <block type="variables_set">
-                      <field name="VAR" id="y5GjhN/!~,kNnJ;H{^Ig">Score</field>
+                      <field name="VAR" id="y5GjhN/!~,kNnJ;H{^Ig">score</field>
                       <value name="VALUE">
                         <block type="math_number">
                           <field name="NUM">0</field>
@@ -1231,10 +1230,10 @@
     <toolbox_blocks>
       <xml>
         <variables>
-          <variable id="g$@Yzsw3_w!Ncw.ve]S-">Health</variable>
+          <variable id="g$@Yzsw3_w!Ncw.ve]S-">health</variable>
         </variables>
         <block type="gamelab_showVariable" id="CX]E4@VU[,b3Rb$gNv6@" x="16" y="52">
-          <field name="VAR" id="g$@Yzsw3_w!Ncw.ve]S-">Health</field>
+          <field name="VAR" id="g$@Yzsw3_w!Ncw.ve]S-">health</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="-OyFO}@bmFm.tQyEPF8L">
               <field name="LOCATION">{"x":280,"y":120}</field>
@@ -1242,7 +1241,7 @@
           </value>
         </block>
         <block type="variables_set" id="vfHl|%AE}ZTDYwycPNsB" x="53" y="114">
-          <field name="VAR" id="g$@Yzsw3_w!Ncw.ve]S-">Health</field>
+          <field name="VAR" id="g$@Yzsw3_w!Ncw.ve]S-">health</field>
           <value name="VALUE">
             <block type="math_number" id="it,if~~;$kMchS*:VO!|">
               <field name="NUM">5</field>
@@ -1250,7 +1249,7 @@
           </value>
         </block>
         <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="16" y="168">
-          <field name="IMG">"gradient_01"</field>
+          <field name="IMG">"video_game_bg"</field>
         </block>
       </xml>
     </toolbox_blocks>

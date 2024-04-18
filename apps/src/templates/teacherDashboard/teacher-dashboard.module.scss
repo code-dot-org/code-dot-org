@@ -43,3 +43,49 @@
   text-align: center;
   padding-top: 10px;
 }
+
+.emptyClassroom {
+  text-align: center;
+  max-width: 538px;
+  margin: 104px auto 82px auto;
+}
+
+.emptyClassroomProgress {
+  text-align: center;
+  max-width: 538px;
+  margin: auto;
+}
+
+.emptyClassroomDiv {
+  margin: 24px 64px 82px 64px;
+}
+
+.navLink {
+  display: inline-block;
+  background-color: $purple;
+  color: $white;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  height: auto;
+  line-height: 24px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $brand_secondary_dark;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: $brand_primary_default solid 2px;
+    outline-offset: 2px;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.topPadding {
+  padding-top: 24px;
+}

@@ -1,5 +1,9 @@
 @import 'color.scss';
 
+.viewModeButtons {
+  margin: 2px;
+}
+
 .aichatLab {
   position: absolute;
   width: 100%;
@@ -9,11 +13,11 @@
   overflow: hidden;
   user-select: none;
   display: flex;
-  flex-direction: row;
-  gap: 2px;
+  flex-direction: column;
+  margin: 2px;
 
   .instructionsArea {
-    width: 20%;
+    width: 30%;
     height: 100%;
   }
 
@@ -23,6 +27,22 @@
 
   .customizationArea {
     height: 100%;
-    width: 400px;
+    width: 30%;
   }
+
+  .presentationArea {
+    width: 50%;
+    height: 90%;
+    overflow-y: auto;
+  }
+}
+
+.labCoreContainer {
+  display: flex;
+  flex: 1;
+  gap: 2px;
+}
+
+.clearButton {
+  margin-right: 5px;
 }

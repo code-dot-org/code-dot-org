@@ -1,25 +1,31 @@
-import React, {useState, useCallback, useRef} from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import i18n from '@cdo/locale';
-import SingleSectionSetUp from './SingleSectionSetUp';
-import CurriculumQuickAssign from './CurriculumQuickAssign';
-import AdvancedSettingToggles from './AdvancedSettingToggles';
-import Button from '@cdo/apps/templates/Button';
-import moduleStyles from './sections-refresh.module.scss';
+import PropTypes from 'prop-types';
+import React, {useState, useCallback, useRef} from 'react';
+import {Provider} from 'react-redux';
+
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {navigateToHref} from '@cdo/apps/utils';
+import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import {
   BodyTwoText,
   Heading1,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
+import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {showVideoDialog} from '@cdo/apps/code-studio/videos';
+import {getStore} from '@cdo/apps/redux';
+import Button from '@cdo/apps/templates/Button';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import {navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import AdvancedSettingToggles from './AdvancedSettingToggles';
 import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import CurriculumQuickAssign from './CurriculumQuickAssign';
+import SingleSectionSetUp from './SingleSectionSetUp';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -77,6 +83,7 @@ export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
   canEnableAITutor,
+  userCountry,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -255,6 +262,31 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  const renderChildAccountPolicyNotification = () => {
+    const isEmailLoggin = queryParams('loginType') === 'email';
+    const isStudentSection = queryParams('participantType') === 'student';
+    const isCapCountry = ['US', 'RD'].includes(userCountry);
+    // We want to display a Child Account Policy warning notification for US
+    // teachers who are creating a new section with email logins.
+    if (isCapCountry && isStudentSection && isEmailLoggin) {
+      return (
+        <Provider store={getStore()}>
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.childAccountPolicy_CreateSectionsWarning()}
+            detailsLink="https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
+            detailsLinkNewWindow={true}
+            detailsLinkText={i18n.childAccountPolicy_LearnMore()}
+            dismissible={false}
+          />
+        </Provider>
+      );
+    } else {
+      return null;
+    }
+  };
+
   const renderExpandableSection = (
     sectionId,
     sectionTitle,
@@ -304,6 +336,10 @@ export default function SectionsSetUpContainer({
   };
 
   const renderCoteacherSection = () => {
+    const isCoTeacherManagementDisabled =
+      sections[0].primaryInstructor?.ltiRosterSyncEnabled === true &&
+      sections[0].loginType === 'ltiV1';
+
     return renderExpandableSection(
       'uitest-expandable-coteacher',
       () => (
@@ -325,6 +361,7 @@ export default function SectionsSetUpContainer({
           sectionMetricInformation={getCoteacherMetricInfoFromSection(
             sections[0]
           )}
+          disabled={isCoTeacherManagementDisabled}
         />
       ),
       isCoteacherOpen,
@@ -353,6 +390,8 @@ export default function SectionsSetUpContainer({
           </>
         )}
       </div>
+
+      {renderChildAccountPolicyNotification()}
 
       <SingleSectionSetUp
         sectionNum={1}
@@ -423,4 +462,5 @@ SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
   canEnableAITutor: PropTypes.bool,
+  userCountry: PropTypes.string,
 };

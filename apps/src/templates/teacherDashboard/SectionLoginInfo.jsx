@@ -1,19 +1,21 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
-import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
+import color from '@cdo/apps/util/color';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
+
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
-import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;

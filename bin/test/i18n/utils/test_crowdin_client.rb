@@ -31,6 +31,7 @@ describe I18n::Utils::CrowdinClient do
 
       client_config.expects(:api_token=).with(api_token).once
       client_config.expects(:project_id=).with(project_id).once
+      client_config.expects(:request_timeout=).with(60).once
 
       assert_equal client, described_instance.send(:client)
     end
@@ -387,30 +388,6 @@ describe I18n::Utils::CrowdinClient do
         in_sequence(execution_sequence)
 
       assert_equal added_crowdin_source_file_data, upload_source_file
-    end
-  end
-
-  describe '#upload_source_files' do
-    let(:upload_source_files) {described_instance.upload_source_files(source_files, base_path: base_path)}
-
-    let(:base_path) {'/expected_base_path'}
-    let(:crowdin_dir_path) {'/expected_crowdin_dir_path'}
-    let(:source_file_path) {File.join(base_path, crowdin_dir_path, 'expected_source_file_path')}
-    let(:source_files) {[source_file_path]}
-
-    it 'returns uploaded source file data' do
-      expected_source_file_data = 'uploaded_source_file_data'
-
-      described_instance.
-        expects(:upload_source_file).
-        with(source_file_path, crowdin_dir_path).
-        returns(expected_source_file_data)
-
-      source_files_data = upload_source_files do |uploaded_source_file_data|
-        _(uploaded_source_file_data).must_equal expected_source_file_data
-      end
-
-      _(source_files_data).must_equal [expected_source_file_data]
     end
   end
 

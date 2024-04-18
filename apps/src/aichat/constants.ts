@@ -1,7 +1,12 @@
-export const CHAT_COMPLETION_URL = '/openai/chat_completion';
-import {ChatCompletionMessage, Role, Status} from './types';
+import {
+  ChatCompletionMessage,
+  Role,
+  AichatInteractionStatus as Status,
+  ModelDescription,
+} from './types';
+import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
-const initialChatMessages: ChatCompletionMessage[] = [
+export const initialChatMessages: ChatCompletionMessage[] = [
   {
     id: 1,
     role: Role.ASSISTANT,
@@ -11,4 +16,4 @@ const initialChatMessages: ChatCompletionMessage[] = [
   },
 ];
 
-export {initialChatMessages};
+export const modelDescriptions: ModelDescription[] = modelsJson;

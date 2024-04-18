@@ -1,10 +1,12 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {isolateComponent} from 'isolate-react';
-import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import React from 'react';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+
 import Button from '@cdo/apps/templates/Button';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('BorderedCallToAction', () => {
   const headingText = 'Do Something';

@@ -2,15 +2,27 @@
  * Entry point to build a bundle containing a set of globals used when displaying
  * tutorialExplorer.  Includes the TutorialExplorer React class.
  */
+import Immutable from 'immutable';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Immutable from 'immutable';
+import {StickyContainer} from 'react-sticky';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/tutorialExplorer/locale';
+
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
-import TutorialSet from './tutorialSet';
-import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
+import {
+  getResponsiveContainerWidth,
+  isResponsiveCategoryInactive,
+  getResponsiveValue,
+} from './responsive';
 import Search from './search';
+import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
+import TutorialSet from './tutorialSet';
 import {
   isTutorialSortByFieldNamePopularity,
   TutorialsSortByOptions,
@@ -21,16 +33,6 @@ import {
   orgNameCodeOrg,
   orgNameMinecraft,
 } from './util';
-import {
-  getResponsiveContainerWidth,
-  isResponsiveCategoryInactive,
-  getResponsiveValue,
-} from './responsive';
-import i18n from '@cdo/tutorialExplorer/locale';
-import _ from 'lodash';
-import queryString from 'query-string';
-import {StickyContainer} from 'react-sticky';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class TutorialExplorer extends React.Component {
   static propTypes = {

@@ -37,6 +37,7 @@ uk-UA:
   allcancode_shortdescription: Захоплююча гра з керування Марко за допомогою візуальної
     мови програмування.
   anybody_can_learn: Кожен може вчитися.
+  app_lab_documentation: Документація Програмної Лабораторії
   appinventor_beyond_gradelevel: Середня школа +
   appinventor_beyond_longdescription: Розважальні, швидкі відео-уроки поетапного створення
     трьох простих додатків телефону або планшета на Android. Призначені як для новачків,
@@ -920,7 +921,7 @@ uk-UA:
   frozen_platformtext: Сучасні браузери + планшети
   frozen_shortdescription: Вивчимо програмування, приєднавшись до Анни та Ельзи у
     подорожі чарівною зимовою казкою.
-  gamelab_name: Ігрова лабораторія
+  gamelab_name: Ігрова Лабораторія
   gender: Стать
   get_a_certificate_message: Ми надішлемо вам сертифікат та інформацію про те, як
     <a href='/learn/beyond'>вчитися далі після Години коду</a>
@@ -977,6 +978,7 @@ uk-UA:
   header_about_us: Про нас
   header_course_catalog: Каталог курсів
   header_courses: Курси
+  header_districts: Район
   header_documentation: Документація
   header_educate_beyond: Поза Code.org
   header_educate_community: Інтернет-спільнота
@@ -1335,7 +1337,7 @@ uk-UA:
   homepage_slot_text_blurb_at_home: З нашими ресурсами це легко
   homepage_slot_text_blurb_educators: Навчіть Ваших учнів
   homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
-  homepage_slot_text_blurb_hoc_2022: досліджуйте, грайте, створюйте!
+  homepage_slot_text_blurb_hoc_2022: Досліджуйте, грайте, створюйте!
   homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
   homepage_slot_text_blurb_students_courses: Перегляньте наші курси
   homepage_slot_text_course4: Курс 4
@@ -1343,7 +1345,7 @@ uk-UA:
   homepage_slot_text_frozen: Крижане серце з Анною і Ельзою
   homepage_slot_text_hoc: Година Коду
   homepage_slot_text_link_about_hoc: Про Годину Коду
-  homepage_slot_text_link_administrators: Привнесить Інформатику до вашої школи
+  homepage_slot_text_link_administrators: Залучіть до інформатики у школі
   homepage_slot_text_link_buy: Взяти участь
   homepage_slot_text_link_code_break: Зробіть перерву на код
   homepage_slot_text_link_codestudio: Спробуйте Студію Коду
@@ -1399,7 +1401,7 @@ uk-UA:
   if_you_enjoyed: Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчати
     увесь світ.
   infinity_gradelevel: Вік 4-104
-  infinity_name: Ігрова лабораторія Infiinty
+  infinity_name: Ігрова Лабораторія Infiinty
   infinity_shortdescription: За допомогою Ігрової лабораторії створіть гру або історію
     за участі персонажів Діснея Infiinty.
   just_did_accelerated: Щойно завершено Прискорений курс - подивіться! @codeorg
@@ -2182,7 +2184,7 @@ uk-UA:
   user_header_create: 'Творіть '
   user_header_dance: Танцювальна вечірка
   user_header_flappy: Пурх
-  user_header_gamelab: Ігрова лабораторія
+  user_header_gamelab: Ігрова Лабораторія
   user_header_label: Привіт %{username}
   user_header_logout: Вийти
   user_header_minecraft: Майнкрафт

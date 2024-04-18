@@ -67,6 +67,14 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |
   @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 end
 
+And(/^The header is finished animating$/) do
+  wait_for_jquery
+
+  wait_until do
+    @browser.execute_script('return $("#header_middle_content").css("opacity") === \'1\'') == true
+  end
+end
+
 def ensure_eyes_available
   return if @eyes
   @eyes = Applitools::Selenium::Eyes.new

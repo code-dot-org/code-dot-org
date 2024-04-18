@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-04-16T18:17:14.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "flappy_intro",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21258,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "#### AI is being used everywhere! Let's learn more about what sort of impact that will have on other fields.\r\n\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-16T18:17:14.745+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod2-llms_03_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod2-llms_03_2024\"},{\"changed_at\":\"2024-04-16 18:17:16 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 14:35:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

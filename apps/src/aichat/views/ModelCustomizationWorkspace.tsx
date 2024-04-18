@@ -1,46 +1,45 @@
 import React from 'react';
 
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AichatLevelProperties} from '../types';
 import Tabs, {Tab} from './tabs/Tabs';
-import PromptCustomization from './modelCustomization/PromptCustomization';
+import SetupCustomization from './modelCustomization/SetupCustomization';
 import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
 import PublishNotes from './modelCustomization/PublishNotes';
 import styles from './model-customization-workspace.module.scss';
-import {EMPTY_AI_CUSTOMIZATIONS} from './modelCustomization/constants';
 import {isVisible} from './modelCustomization/utils';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
-  const {retrievalContexts, modelCardInfo, botName, temperature, systemPrompt} =
-    useAppSelector(
-      state =>
-        (state.lab.levelProperties as AichatLevelProperties | undefined)
-          ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
-    );
+  const {temperature, systemPrompt, retrievalContexts, modelCardInfo} =
+    useAppSelector(state => state.aichat.fieldVisibilities);
 
-  const showPromptCustomization =
-    isVisible(botName.visibility) ||
-    isVisible(temperature.visibility) ||
-    isVisible(systemPrompt.visibility);
+  const hidePresentationPanel = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.aichatSettings?.hidePresentationPanel
+  );
+
+  const showSetupCustomization =
+    isVisible(temperature) || isVisible(systemPrompt);
 
   return (
     <div className={styles.modelCustomizationWorkspace}>
       <Tabs
         tabs={
           [
-            showPromptCustomization && {
-              title: 'Prompt',
-              content: <PromptCustomization />,
+            showSetupCustomization && {
+              title: 'Setup',
+              content: <SetupCustomization />,
             },
-            isVisible(retrievalContexts.visibility) && {
+            isVisible(retrievalContexts) && {
               title: 'Retrieval',
               content: <RetrievalCustomization />,
             },
-            {title: 'Fine Tuning', content: 'fine tuning content TBD'},
-            isVisible(modelCardInfo.visibility) && {
-              title: 'Publish',
-              content: <PublishNotes />,
-            },
+            isVisible(modelCardInfo) &&
+              !hidePresentationPanel && {
+                title: 'Publish',
+                content: <PublishNotes />,
+              },
           ].filter(Boolean) as Tab[]
         }
         name="model-customization"

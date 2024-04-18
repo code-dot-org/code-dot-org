@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import GameButtons from '@cdo/apps/templates/GameButtons';
-import BelowVisualization from '../templates/BelowVisualization';
-
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import SaveImageButton from './SaveImageButton';
 import msg from '@cdo/locale';
+
+import BelowVisualization from '../templates/BelowVisualization';
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+
+import SaveImageButton from './SaveImageButton';
 
 export default class ArtistVisualizationColumn extends React.Component {
   static propTypes = {

@@ -6,12 +6,14 @@
  */
 
 import _ from 'lodash';
+
 import commonMsg from '@cdo/locale';
-import i18n from './locale';
-import paramLists from './paramLists';
+
+import {BlockColors, BlockStyles} from '../blockly/constants';
 import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
 import {singleton as studioApp} from '../StudioApp';
 import {stripQuotes, valueOr} from '../utils';
+
 import {
   CardinalDirections,
   Direction,
@@ -26,7 +28,8 @@ import {
   RANDOM_VALUE,
   VISIBLE_VALUE,
 } from './constants';
-import {BlockColors, BlockStyles} from '../blockly/constants';
+import i18n from './locale';
+import paramLists from './paramLists';
 
 var msg = i18n;
 

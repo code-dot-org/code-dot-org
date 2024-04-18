@@ -27,14 +27,6 @@ section.bg-secondary {
 section.bg-primary-light {
   background-color: rgba(171, 223, 229, 0.5);
 
-  p {
-    @include strong;
-
-    &.body-three {
-      @include body-three;
-    }
-  }
-
   a {
     color: var(--neutral_dark) !important;
     &:hover {
@@ -76,12 +68,27 @@ section.bg-pattern-dark {
 // Removes the bottom margin or padding —
 // often helpful on a last paragraphs or list elements
 // to maintain consistent white space between sections
+
+// !important is used here to override existing margin
+// or padding bottom styles – this allows this class to
+// work on any element
 .no-margin-bottom {
   margin-bottom: 0 !important;
 }
 .no-padding-bottom {
   padding-bottom: 0 !important;
 }
+
+// Adds 2rem of space above or below an element
+// !important is used here to override existing margin
+// – this allows this class to work on any element
+.add-margin-top {
+  margin-top: 2rem !important;
+}
+.add-margin-bottom {
+  margin-bottom: 2rem !important;
+}
+
 
 // FontAwesome icon defaults
 // Sets fixed height on icon container to maintain consistent
@@ -140,6 +147,10 @@ i.fa-fw {
   &.gap-2 {
     gap: 2rem;
   }
+
+  & > .flex-1 {
+    flex: 1;
+  }
 }
 
 // Grid container
@@ -157,6 +168,9 @@ i.fa-fw {
   }
   &.align-items-center {
     align-items: center;
+  }
+  &.gap-2 {
+    gap: 2rem;
   }
   &.gap-4 {
     gap: 4rem;
@@ -217,7 +231,8 @@ hr {
 .button-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
 
   &.centered {
     justify-content: center;
@@ -230,6 +245,12 @@ hr {
 .hero-banner-basic {
   position: relative;
   overflow: hidden;
+
+  & > .grid-container {
+    @media (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   .text-wrapper {
     position: relative;
@@ -633,6 +654,7 @@ form {
   margin-top: 2rem;
   display: grid;
   grid-gap: 1.5rem;
+  text-align: initial;
 
   @media screen and (min-width: $width-sm) {
     grid-template-columns: repeat(2, 1fr);
@@ -656,6 +678,7 @@ form {
   background: var(--neutral_light);
   border: 1px solid var(--neutral_dark20);
   border-radius: $border-radius;
+  text-align: initial;
   display: flex;
   align-content: baseline;
 
@@ -1447,4 +1470,19 @@ table {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+// List of logos
+// Set the max-width of each image inline to maintain consistent ratios
+.logos-wrapper {
+  margin-block: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+
+  img {
+    align-self: center;
+    width: 100%;
+  }
 }

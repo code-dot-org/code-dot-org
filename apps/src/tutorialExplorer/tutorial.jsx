@@ -3,12 +3,14 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
+import Image from './image';
+import {getResponsiveValue} from './responsive';
 import shapes from './shapes';
 import {getTutorialDetailString} from './util';
-import {getResponsiveValue} from './responsive';
-import Image from './image';
-import LazyLoad from 'react-lazy-load';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class Tutorial extends React.Component {
   static propTypes = {

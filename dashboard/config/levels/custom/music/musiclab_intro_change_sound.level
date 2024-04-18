@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "skipUrl": "/projects/music/new",
     "long_instructions": "####Change a Sound\r\n\r\nThere are tons of sounds you can choose from. Change up the beat!\r\n\r\nClick the [name](#clickable=play-sound-block-workspace) of the sound to select a new one.\r\n\r\nThen press [Run](#clickable=run-button).\r\n",
     "level_data": {
       "library": "intro2024",

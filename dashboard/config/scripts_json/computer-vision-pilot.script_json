@@ -1,0 +1,2491 @@
+{
+  "script": {
+    "name": "computer-vision-pilot",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "AI",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_course": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": "computer-vision-pilot",
+    "serialized_at": "2024-04-17 01:08:37 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "computer-vision-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Computer Vision",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this introductory lesson on computer vision, students explore the fundamentals of how computers interpret visual data. The lesson begins with a warm-up activity where students hypothesize algorithms to differentiate between \"X\" and \"O\". They then engage with a video that discusses the basics of machine learning and the recognition of complex shapes in computer vision. The core activity, \"The Search for Pixel,\" provides a hands-on approach to understanding image processing through a series of problem-solving rounds. By the end of the lesson, students should be able to construct a working definition of computer vision and identify its real-world applications.\n\n**Question of the day:** How can computer vision be used to solve problems?\n",
+        "preparation": "* Print copies of The Search for Pixel activity guide (one for each student)\n* Print the Clue Cards resource (one class set)\n",
+        "student_overview": "Today, we dive into how computers \"see\" and process images. You explore algorithms that distinguish between symbols like \"X\" and \"O\" and watch a video on how machine learning enables computers to recognize complex shapes. Our main activity, \"The Search for Pixel,\" will challenge you to apply these concepts through hands-on image recognition tasks.\n\n**Question of the day:** How can computer vision be used to solve problems?\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Empathizing with Users",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "This lesson delves into understanding user needs and problems through qualitative and quantitative data collection. Students are introduced to the Design Thinking Process, particularly the \"Empathize\" phase, using real-world examples like FarmWise's approach to understanding farmer needs. Students then practice developing empathy and tailored research questions for community-specific issues. The aim is for students to learn effective strategies for gathering user data that will inform the design of practical solutions.\n\n**Question of the Day:** How can we put ourselves in the shoes of our users?",
+        "preparation": "* Print copies of the Communities I Belong To activity guide (one for each student)\n* Print copies of the Problem Observations to Research Questions activity guide (one for each group of students)\n",
+        "student_overview": "Today's lesson focuses on empathizing with users, an essential step in creating technology that meets people's needs. You will look at how companies like Farmwise learn directly from their users by engaging with them in meaningful ways. You will also explore different communities you belong to, identify their unique challenges, and think about questions that can help you better understand these challenges.\n\n**Question of the Day:** How can we put ourselves in the shoes of our users?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Gathering User Data",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "In this lesson, students learn to distinguish between qualitative and quantitative data, which are vital skills for understanding user needs and behaviors. This lesson uses a workout tracking device as a case study to discuss privacy concerns and user demographics. Students then develop a data collection plan that includes crafting questions that yield both data types. By the end of the lesson, students should be able to apply these skills to create surveys tailored to collecting useful user data, which they will use to inform their project designs.\n\n**Question of the day:** How can we collect data that helps us better understand our users?",
+        "preparation": "* (Optional) Print copies of the Paper Survey Template (one for each group of students)\n",
+        "student_overview": "Today, we're learning about collecting data to understand better what users need from technology. You explore the difference between qualitative data, which describes using words, and quantitative data, which uses numbers. By the end of today's lesson, you will know how to ask the right questions to gather valuable information from users, helping you make solutions that truly meet their needs.\n\n**Question of the day:** How can we collect data that helps us better understand our users?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Data Visualizations",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "This lesson focuses on the pivotal role of data in shaping product features and services. Students learn to translate user data into actionable insights through visual representations. Using examples like robotic vacuum cleaners, students explore how data visualizations can highlight user concerns and inform feature development. Activities guide them through creating and interpreting their own visualizations using tools like Google Sheets, culminating in a deep understanding of how visual data can reveal trends and needs within a community.\n\n**Question of the day:** How can data visualizations give insight into a community's needs?\n",
+        "preparation": "* Students will need access to the data that they gathered from the survey that they created and distributed in the previous lesson. If students don’t have access to data, you may provide them with a pre-created set of survey data.\n",
+        "student_overview": "In today's lesson, we discover how visualizing data helps us understand what features a product needs to serve its users better. You learn to create your own data visualizations, like graphs or charts, using Google Sheets. These visual tools will help you see patterns and insights about the needs of a community, guiding you in developing solutions that help. By the end of the lesson, you can take information and turn it into a visual story that can inform better decisions.\n\n**Question of the day:** How can data visualizations give insight into a community's needs?\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "User Stories and Problem Statements",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "This lesson equips students with the tools to deeply understand user needs and articulate problem statements effectively. The lesson focuses on constructing user stories from gathered data and using these to develop specific, insightful problem statements that address real user concerns. Activities will challenge students to analyze user behavior patterns and to think critically about the underlying reasons for these behaviors, using iterative questioning to refine their understanding. By the end of the lesson, students should be able to create user stories and corresponding problem statements that guide the development of user-centered solutions.\n\n**Question of the day:** How can we identify the core problem our product or service should address?",
+        "preparation": "* Print copies of the User Personas and Problem Statements activity guide (one for each project group)\n",
+        "student_overview": "Today's lesson is all about understanding the people who use technology—like you! You learn to create user stories, which are short descriptions that capture what users do and why they might behave a certain way based on our research. From these stories, we craft problem statements that clearly state what issues we must solve. This process helps us think deeply about the needs and challenges of users, guiding us to design technology that truly makes a difference.\n\n**Question of the day:** How can we identify the core problem our product or service should address?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Pixels and QR Codes",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "This lesson introduces students to the fundamental concepts of digital image processing and information encoding. Students explore how images are represented on screens using pixels and color values (RGB) and how QR codes use these principles to encode data. Students engage in activities that illustrate the conversion of binary data into visual patterns and explore decoding mechanisms. By the end of the lesson, students should be able to explain the information stored within a pixel and apply their knowledge to encode and decode QR codes.\n\n**Question of the day:** How should we tell computers what a pixel represents in an image?",
+        "preparation": "* Print or provide a digital copy of the QR Code Exploration Activity Guide\n* Print or provide a digital copy of the Lotus Blossom diagram\n",
+        "student_overview": "In today's lesson, we uncover the science behind digital images and QR codes. You learn how tiny dots called pixels make up the images you see on your screens and how these pixels use colors to convey information. We also investigate how QR codes store data using black-and-white patterns. By the end of the lesson, you know how to read and create your own QR codes, understanding what each part of these codes represents.\n\n**Question of the day:** How should we tell computers what a pixel represents in an image?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Edge Detection",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "This lesson focuses on developing algorithms that help computers identify and outline distinct boundaries within images. Students learn how edge detection algorithms work and their applications in computer vision, particularly in image processing and enhancement. They engage in activities that involve writing and optimizing their own edge detection algorithms and discussing their efficiency and practical applications. By the end of this lesson, students should understand the technical aspects and importance of edge detection in various computer vision tasks.\n\n\n**Question of the day:** Why do we use image filters?\n",
+        "preparation": "* Print a classroom set of the Algorithm Hint Cards\n",
+        "student_overview": "Today, we dive into how computers understand and process images through edge detection. You learn to create algorithms that help a computer highlight the edges of objects in a picture—much like sketching only the outlines of someone's face. We also discuss how these algorithms can be made faster and more effective. By the end of the lesson, you will have a clearer idea of how this technology works and why it's crucial for enhancing images or helping autonomous cars understand their surroundings.\n\n\n**Question of the day:** Why do we use image filters?\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Datasets and Models",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "In this lesson, students explore the role of datasets in training computer vision models and learn how to evaluate the suitability of datasets for specific applications. The lesson includes hands-on exploration of the COCO dataset and object detection models using MediaPipe, allowing students to understand the practical aspects of using pre-trained models and the importance of confidence scores in model predictions. By the end of this lesson, students should be able to assess the relevance and quality of a dataset for solving a particular problem in computer vision.\n\n**Question of the day:** How do we know a dataset is appropriate for a specific problem?\n",
+        "preparation": "* Print copies of the Classifying and Grouping Images resource (one set for each pair of students)\n",
+        "student_overview": "Today, you learn how computer vision systems use large collections of images, known as datasets, to make sense of new images. We explore the COCO dataset to see how images are categorized and use the MediaPipe object detection model to understand how these categories help the model recognize objects in images. You also discover how confidence scores indicate the reliability of the model's predictions. By the end of the lesson, you know how to choose the right dataset for a specific problem and evaluate the effectiveness of computer vision models.\n\n**Question of the day:** How do we know a dataset is appropriate for a specific problem?\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Training Data and Bias",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "This lesson addresses the critical topic of bias in computer vision systems. Students explore how biases in training data can affect the performance and fairness of computer vision applications using practical activities like the COCO dataset exploration and Auto-Doggie Door model testing. Students engage in discussions and activities designed to identify potential biases and propose methods to mitigate them, ensuring more equitable technology solutions. By the end of this lesson, students should be able to recognize bias in datasets and understand strategies to reduce its impact.\n\n**Question of the day:** How might bias affect users who engage with computer vision applications?",
+        "preparation": "* Print copies of the Bingo Cards resource (one card for each student)\n",
+        "student_overview": "Today, we're tackling an important issue in technology: bias in computer vision. You learn how biases can sneak into the data that train AI models, like the ones that recognize faces or interpret commands, and see firsthand how this can lead to unfair outcomes. We experiment with a model designed to recognize dogs to see which ones it identifies correctly and which ones it doesn't, discussing why this happens. By understanding these challenges, you are better equipped to think critically about technology and ensure it works fairly for everyone.\n\n**Question of the day:** How might bias affect users who engage with computer vision applications?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Training a Model",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "This lesson introduces students to the practical aspects of training a computer vision model using the Teachable Machine platform. This lesson emphasizes the importance of visual data in training models and the impact of data quality and quantity on model performance. Students engage in hands-on activities to create, train, and test their own image or pose classification models, understanding the challenges and considerations involved in model development. By the end of the lesson, students should be proficient in the basics of model training and evaluating their models in real-world applications.\n\n**Question of the day:** How does the quality and quantity of training data impact the performance of computer vision models?",
+        "preparation": "* Print the Object Cards resource\n* Print copies of the Training a Model activity guide (one for each student)\n",
+        "student_overview": "Today, we're stepping into machine learning by training our models using a tool called Teachable Machine. You learn how computers use images to learn and make decisions, and you get to create a model that can classify images or poses. We explore how the quality and diversity of your images can affect your model's ability to identify what it sees correctly. By the end of the lesson, you will better understand how AI models work and how to improve them.\n\n**Question of the day:** How does the quality and quantity of training data impact the performance of computer vision models?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Impacts of Computer Vision",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "This lesson examines the ethical implications, potential biases, privacy concerns, and security challenges associated with computer vision technologies. Students are encouraged to think critically about developing and implementing computer vision in various sectors of society and explore how to ethically align technologies with societal needs, ensure privacy protection, and manage biases. By the end of this lesson, students should be able to articulate thoughtful perspectives on how computer vision technologies can be developed and used responsibly.\n\n**Question of the day:** How do the benefits and challenges of computer vision technologies impact society?",
+        "preparation": "* Print copies of the Ethics Exploration activity guide (one for each pair of students)\n",
+        "student_overview": "Today, we're diving into the ethical landscape of computer vision technologies. We explore the benefits and challenges of these technologies, particularly how they impact privacy, security, and society at large. You engage in activities that help you understand the importance of ethical considerations like bias and consent in technology development. By the end of the lesson, you will have a deeper understanding of what needs to be considered to ensure that computer vision technologies are used in a way that benefits everyone.\n\n**Question of the day:** How do the benefits and challenges of computer vision technologies impact society?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Prototype Development, Part 1",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "This lesson is about initiating the prototyping phase in developing computer vision applications. Students are guided through creating and refining prototypes that address societal issues and personal interests. The iterative nature of design is emphasized, encouraging students to apply feedback effectively to enhance their projects. The activities include discussing the scope of their projects, deciding on additional features, and using various methods like storyboards and digital mockups to visualize their ideas. By the end of this lesson, students should clearly understand how to develop and refine a prototype that meets user needs.\n\n**Question of the day:** How might we develop computer vision applications that focus on our user's needs?",
+        "preparation": "* Collect necessary materials for prototype development, which may include paper, markers, crafting supplies, and any specific tools relevant to the computer vision projects being developed.\n* Print the Inspiration Cards resource (one class set)\n* Gather different colored cups or colored construction paper for the status updates (one set for each project group)\n",
+        "student_overview": "Today, we develop our first prototypes by turning our computer vision ideas into reality. You think about what features your project needs and how you can visually represent these ideas. We discuss why creating a prototype is important and how \"failing\" at this stage can help improve your project. By the end of the lesson, you should have a basic prototype that you can test and iterate on based on the feedback you receive.\n\n**Question of the day:** How might we develop computer vision applications that focus on our user's needs?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Prototype Development, Part 2",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "overview": "This lesson continues the practical work of refining and iterating on computer vision prototypes, students began in the previous lesson. Students focus on assessing and enhancing the prototypes based on specific criteria outlined in a rubric. Students are encouraged to identify improvement areas and seek and incorporate feedback effectively. By the end of this lesson, students should have made significant advances in their prototypes, with a clearer understanding of how to align their projects with user needs.\n\n**Question of the day:** How might we develop computer vision applications that focus on our user's needs?",
+        "student_overview": "In today's lesson, we're continuing to develop and refine our computer vision prototypes. You evaluate what's working and what's not, using a rubric to guide your revisions. We also discuss any challenges you're facing and brainstorm solutions together. This iteration process is key to creating a solution that truly meets the needs of its users. By the end of the lesson, your prototype should be closer to something that can be tested and eventually implemented.\n\n**Question of the day:** How might we develop computer vision applications that focus on our user's needs?\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "User Feedback",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "overview": "This lesson is an essential phase in the Design Thinking Process where students learn the value of gathering and incorporating user feedback into their computer vision projects. Students are guided through the process of role-playing different users to understand diverse perspectives and needs. They learn how to receive and interpret feedback constructively to refine their prototypes. By the end of this lesson, students should have actionable insights to enhance their projects based on user feedback.\n\n**Question of the day:** How can testing a design with users help to improve it?",
+        "preparation": "* Print copies of the User Feedback sheets, double-sided (about 6-8 feedback sheets per group)\n",
+        "student_overview": "Today, we're focusing on understanding how real users interact with and feel about your computer vision prototypes. You play the role of different users, like an elderly driver or a retail employee, to see how well computer vision solutions meet their needs. By stepping into their shoes, you gain valuable insights into how your technology can serve people better. We gather feedback on each project, which will help you see your work from new angles and discover ways to improve.\n\n**Question of the day:** How can testing a design with users help to improve it?\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Implementing Feedback",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+        "overview": "In this lesson, students refine their prototypes based on user feedback. Students learn to evaluate, prioritize, and effectively incorporate suggestions to enhance their computer vision projects. The lesson emphasizes the importance of being responsive to user needs and adjusting designs accordingly through a structured activity involving a categorization method (Must Have, Should Have, Could Have, Will Not Have). By the end of this lesson, students should have a refined prototype that better meets the needs of their target users.\n\n**Question of the day:** How can user feedback inform the iterative nature of the Design Thinking Process?",
+        "preparation": "* Gather enough of each type of object used in the Warm-up activity for each group of two to three students so that each group has a physical object to work with during the activity. \n* Create or arrange the materials for students to categorize feedback (e.g., sticky notes in various colors, digital platforms like Miro or Google Slides for virtual categorization, and printed templates for feedback organization).\n* Ensure that necessary tools for prototype iteration are ready and accessible. This could involve software for digital prototypes or materials like paper, markers, and model-making supplies for physical prototypes.\n",
+        "student_overview": "Today, we'll examine the feedback you've received on your prototypes. You'll learn how to categorize this feedback based on its importance and urgency, which will help you decide which suggestions to implement first. This process is crucial for refining your project to ensure it effectively meets the needs of its users. By prioritizing and acting on the most critical feedback, you'll make your project more robust and user-friendly.\n\n**Question of the day:** How can user feedback inform the iterative nature of the Design Thinking Process?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "6711eebe-6fc6-46e7-809f-49cc9e4b597c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6711eebe-6fc6-46e7-809f-49cc9e4b597c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "45a4a3b7-2218-4262-8272-a48bd2d06472",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45a4a3b7-2218-4262-8272-a48bd2d06472",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "a5ec08f7-9768-46f9-83d3-aa9114caa4fa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a5ec08f7-9768-46f9-83d3-aa9114caa4fa",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "925fde10-ed53-4a24-8590-b06dde95962a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "925fde10-ed53-4a24-8590-b06dde95962a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "ee690385-82d5-4c68-896c-9e7e4443531d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee690385-82d5-4c68-896c-9e7e4443531d",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "109e9789-817b-458c-b588-8a6bb9590ad7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "109e9789-817b-458c-b588-8a6bb9590ad7",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "dff7748a-bad0-4526-8a27-042c56bd9fba",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dff7748a-bad0-4526-8a27-042c56bd9fba",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "526a9275-49f1-4f06-9ab7-b2f70633c594",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "526a9275-49f1-4f06-9ab7-b2f70633c594",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "48a791b3-3f92-4ad0-85b7-88c3249328c4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "48a791b3-3f92-4ad0-85b7-88c3249328c4",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "ebb58df1-41d9-44bf-a5d0-03704cf8ea68",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ebb58df1-41d9-44bf-a5d0-03704cf8ea68",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "8ebfce4b-99f2-4fe2-810f-39e548a11bb4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ebfce4b-99f2-4fe2-810f-39e548a11bb4",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "d826cbaf-9965-4310-93cf-636d5638aa65",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d826cbaf-9965-4310-93cf-636d5638aa65",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "c580c155-a5f6-4ef7-b351-cdd3f631fc44",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c580c155-a5f6-4ef7-b351-cdd3f631fc44",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "0557666e-398c-479f-a413-f09164433b8e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0557666e-398c-479f-a413-f09164433b8e",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    },
+    {
+      "key": "1660f8fc-9064-4561-84de-644bc5813ec9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1660f8fc-9064-4561-84de-644bc5813ec9",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "c40b25bd-4afe-41ed-b9f7-bbd64d500360",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c40b25bd-4afe-41ed-b9f7-bbd64d500360",
+        "lesson_activity.key": "6711eebe-6fc6-46e7-809f-49cc9e4b597c"
+      }
+    },
+    {
+      "key": "e12e384b-c215-44fa-8f59-652d429abaaa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e12e384b-c215-44fa-8f59-652d429abaaa",
+        "lesson_activity.key": "45a4a3b7-2218-4262-8272-a48bd2d06472"
+      }
+    },
+    {
+      "key": "cd18fc59-1472-41da-a13a-f0e73121f42e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cd18fc59-1472-41da-a13a-f0e73121f42e",
+        "lesson_activity.key": "a5ec08f7-9768-46f9-83d3-aa9114caa4fa"
+      }
+    },
+    {
+      "key": "23be775b-c8ba-4754-ade2-ab921c8b68be",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "23be775b-c8ba-4754-ade2-ab921c8b68be",
+        "lesson_activity.key": "925fde10-ed53-4a24-8590-b06dde95962a"
+      }
+    },
+    {
+      "key": "7e3dbc4b-df0c-41ed-9dc3-35ddd4ef76e9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7e3dbc4b-df0c-41ed-9dc3-35ddd4ef76e9",
+        "lesson_activity.key": "ee690385-82d5-4c68-896c-9e7e4443531d"
+      }
+    },
+    {
+      "key": "6e83f928-0c10-44ab-962c-69536b0103cc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6e83f928-0c10-44ab-962c-69536b0103cc",
+        "lesson_activity.key": "109e9789-817b-458c-b588-8a6bb9590ad7"
+      }
+    },
+    {
+      "key": "811b0732-4fe6-46e0-afee-b3a7d0578427",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "811b0732-4fe6-46e0-afee-b3a7d0578427",
+        "lesson_activity.key": "dff7748a-bad0-4526-8a27-042c56bd9fba"
+      }
+    },
+    {
+      "key": "f33d8ecb-b6eb-47c5-8540-7193f0817f37",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f33d8ecb-b6eb-47c5-8540-7193f0817f37",
+        "lesson_activity.key": "526a9275-49f1-4f06-9ab7-b2f70633c594"
+      }
+    },
+    {
+      "key": "1fa80c7e-d12a-4987-8e9e-829a5cc52753",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1fa80c7e-d12a-4987-8e9e-829a5cc52753",
+        "lesson_activity.key": "48a791b3-3f92-4ad0-85b7-88c3249328c4"
+      }
+    },
+    {
+      "key": "4afd3bac-7e42-43d2-88e3-9e9c3523662d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4afd3bac-7e42-43d2-88e3-9e9c3523662d",
+        "lesson_activity.key": "ebb58df1-41d9-44bf-a5d0-03704cf8ea68"
+      }
+    },
+    {
+      "key": "51b8c653-acfb-43c6-b0a8-36f6049edcf1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "51b8c653-acfb-43c6-b0a8-36f6049edcf1",
+        "lesson_activity.key": "8ebfce4b-99f2-4fe2-810f-39e548a11bb4"
+      }
+    },
+    {
+      "key": "6a58ad85-9a61-41d7-ad2e-3bf82b5fa225",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6a58ad85-9a61-41d7-ad2e-3bf82b5fa225",
+        "lesson_activity.key": "d826cbaf-9965-4310-93cf-636d5638aa65"
+      }
+    },
+    {
+      "key": "44ee6210-ec4c-47e7-b3c2-773bff88254b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "44ee6210-ec4c-47e7-b3c2-773bff88254b",
+        "lesson_activity.key": "c580c155-a5f6-4ef7-b351-cdd3f631fc44"
+      }
+    },
+    {
+      "key": "241509bd-8917-4062-9fbb-61d77b26a659",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "241509bd-8917-4062-9fbb-61d77b26a659",
+        "lesson_activity.key": "0557666e-398c-479f-a413-f09164433b8e"
+      }
+    },
+    {
+      "key": "1238d4c5-9c6a-472a-94b8-1468b9079549",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1238d4c5-9c6a-472a-94b8-1468b9079549",
+        "lesson_activity.key": "1660f8fc-9064-4561-84de-644bc5813ec9"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+    {
+      "name": "[KEY] QR Code Exploration",
+      "url": "https://docs.google.com/document/d/10AyqbS7iKa0_01VNatrOsn5DjwgW8oxNjI923zDhJrA/edit?usp=sharing",
+      "key": "_key_qr_code_exploration_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_qr_code_exploration_activity_guide"
+      }
+    },
+    {
+      "name": "AI: Training Data and Bias",
+      "url": "https://youtu.be/x2mRoFNm22g?feature=shared",
+      "key": "ai_training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai_training_data_and_bias"
+      }
+    },
+    {
+      "name": "Algorithm Hint Cards",
+      "url": "https://docs.google.com/document/d/1QO-CbYUFljTDnZDIav6PM-BLkXrgGRWVAdPFD1Y5yFw/edit?usp=sharing",
+      "key": "algorithm_hint_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "algorithm_hint_cards"
+      }
+    },
+    {
+      "name": "Binary to Base 10 Converter",
+      "url": "https://www.rapidtables.com/convert/number/binary-to-decimal.html",
+      "key": "binary_to_base_10_converter",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "binary_to_base_10_converter"
+      }
+    },
+    {
+      "name": "Bingo Cards",
+      "url": "https://docs.google.com/document/d/1CVVcl57spqa4X1NZvio48RGahtt03Ic5BIV38t527Lo/edit?usp=sharing",
+      "key": "bingo_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "bingo_cards"
+      }
+    },
+    {
+      "name": "Charts in Google Sheets",
+      "url": "https://support.google.com/docs/answer/190718?hl=en",
+      "key": "charts_in_google_sheets",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "charts_in_google_sheets"
+      }
+    },
+    {
+      "name": "Classifying and Grouping Images ",
+      "url": "https://docs.google.com/document/d/1UxMYBkcHZYrS7GFkjeHhay_c_4scKcxOv-P2Gvn0IAE/edit?usp=sharing",
+      "key": "classifying_and_grouping_images",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "classifying_and_grouping_images"
+      }
+    },
+    {
+      "name": "Clue Cards",
+      "url": "https://docs.google.com/document/d/1BkJLQyl0Ckj0P1uxb5fMUTtjsWBL2pwaJEQHgR4Y8RQ/edit?usp=sharing",
+      "key": "clue_cards",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "clue_cards"
+      }
+    },
+    {
+      "name": "Collecting Data From Users",
+      "url": "https://docs.google.com/document/d/1bkYrK78t2xBZkbW-lB_M7B2w9myTQwA7LqdMuL8W2XQ/edit?usp=drive_link",
+      "key": "collecting_data_from_users",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "collecting_data_from_users"
+      }
+    },
+    {
+      "name": "Data Visualizations",
+      "url": "https://docs.google.com/presentation/d/1rbr1mAhKlYsFtl6_4Xlh2LgkOul_j7YJQ8N42pJZ-Go/template/preview",
+      "key": "data_visualizations",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_visualizations"
+      }
+    },
+    {
+      "name": "Datasets and Models",
+      "url": "https://docs.google.com/presentation/d/1PBNmK5G6jLn5lIjATi1-6AF6D9EyuIZESClGG0MWNpg/template/preview",
+      "key": "datasets_and_models",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "datasets_and_models"
+      }
+    },
+    {
+      "name": "Communities I Belong To",
+      "url": "https://docs.google.com/document/d/1E-WCtundW0divnocQqD34RyWGBPuGm5lO_KR9rXOy88/edit?usp=sharing",
+      "key": "design_thinking_process_and_communities_i_belong_to",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "design_thinking_process_and_communities_i_belong_to"
+      }
+    },
+    {
+      "name": "Design Thinking: Prototype",
+      "url": "https://youtu.be/Q4MzT2MEDHA?si=9bQej0Le5UcyViI2",
+      "key": "design_thinking_prototype",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "design_thinking_prototype"
+      }
+    },
+    {
+      "name": "Dog Images",
+      "url": "https://drive.google.com/file/d/1dnhvbfde7zKupHwz6LjTGTP_OGbp3wPp/view",
+      "key": "dog_images",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "dog_images"
+      }
+    },
+    {
+      "name": "Edge Detection",
+      "url": "https://docs.google.com/presentation/d/1nNaaWxLXLmq9SHehZNhpC5tGB7z9NX9t8hePKeVDbTA/template/preview",
+      "key": "edge_detection",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "edge_detection"
+      }
+    },
+    {
+      "name": "Empathizing with Users",
+      "url": "https://docs.google.com/presentation/d/1HoRS5VKrUOX0uqgc7UBJn6uqZeSIrghF4lBmaEiGWL4/template/preview",
+      "key": "empathizing_with_users",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "empathizing_with_users"
+      }
+    },
+    {
+      "name": "Ethics and AI",
+      "url": "https://www.youtube.com/watch?v=zNxw5gJtHLc&embeds_referring_euri=https%3A%2F%2Fdocs.google.com%2F&embeds_referring_origin=https%3A%2F%2Fdocs.google.com&source_ve_path=Mjg2NjY&feature=emb_logo",
+      "key": "ethics_and_ai",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ethics_and_ai"
+      }
+    },
+    {
+      "name": "Ethics Exploration",
+      "url": "https://docs.google.com/document/d/14ZaytsEbEpUEqPNLLYNuMsFzeXoNdlDwY-PNQ9QTQ-s/edit?usp=sharing",
+      "key": "ethics_exploration",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ethics_exploration"
+      }
+    },
+    {
+      "name": "Farmwise",
+      "url": "https://youtu.be/xIvDGDZkbxM?si=wZ086lYdSQae-3Pm",
+      "key": "farmwise",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "farmwise"
+      }
+    },
+    {
+      "name": "From Data to Viz",
+      "url": "https://www.data-to-viz.com/",
+      "key": "from_data_to_viz",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "from_data_to_viz"
+      }
+    },
+    {
+      "name": "Garden Images",
+      "url": "https://drive.google.com/file/d/1ScSCuXN75ltGUZzMKze1_LTR5PMrM-Ax/view?usp=drive_link",
+      "key": "garden_images",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "garden_images"
+      }
+    },
+    {
+      "name": "Gathering User Data",
+      "url": "https://docs.google.com/presentation/d/1YdzNZSl-5ymN40xluxXbigJVtn00iD82F7I5_f-ZgVU/template/preview",
+      "key": "gathering_user_data",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "gathering_user_data"
+      }
+    },
+    {
+      "name": "Google Color Picker",
+      "url": "https://g.co/kgs/Vgu2j2R",
+      "key": "google_color_picker",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "google_color_picker"
+      }
+    },
+    {
+      "name": "Google Form Survey Template",
+      "url": "https://docs.google.com/forms/d/1uaI8_2R-h8FQO-AZ5x3pVn-a7zlcMYwqeQuZMzzEGC8/template/preview",
+      "key": "google_form_survey_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "google_form_survey_template"
+      }
+    },
+    {
+      "name": "How Computer Vision Works",
+      "url": "https://youtu.be/2hXG8v8p0KM?feature=shared",
+      "key": "how_computer_vision_works",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_computer_vision_works"
+      }
+    },
+    {
+      "name": "Idea Outline",
+      "url": "https://docs.google.com/document/d/122nvyvxl6aLdoSi73SppG6MOU5tgONVbkURwMCIS0Fo/edit?usp=sharing",
+      "key": "idea_outline",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "idea_outline"
+      }
+    },
+    {
+      "name": "Images, Pixels, and RGB",
+      "url": "https://www.youtube.com/watch?v=15aqFQQVBWU&t=43s",
+      "key": "images_pixels_and_rgb",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "images_pixels_and_rgb"
+      }
+    },
+    {
+      "name": "Impacts of Computer Vision",
+      "url": "https://docs.google.com/presentation/d/1TiSRwwa9iRkvVS57FRllTwyGc4nYCnagauYiNeDUBHA/template/preview",
+      "key": "impacts_of_computer_vision",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "impacts_of_computer_vision"
+      }
+    },
+    {
+      "name": "Implementing Feedback",
+      "url": "https://docs.google.com/presentation/d/1-XKe3W1_-M6003kB3f2VQBz7UB1u2QvcgIXPpsnGovc/template/preview",
+      "key": "implementing_feedback",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "implementing_feedback"
+      }
+    },
+    {
+      "name": "Inspiration Cards",
+      "url": "https://docs.google.com/document/d/11CgRRk8LJEygbgjLTNCpItCvz_f8dae-IlDqgz6qs1I/edit?usp=sharing",
+      "key": "inspiration_cards",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "inspiration_cards"
+      }
+    },
+    {
+      "name": "Introduction to Computer Vision",
+      "url": "https://docs.google.com/presentation/d/1fw8_4l-1byQW5aUdhlp0m73-hjvPfsOesAQoJaMFIQA/template/preview",
+      "key": "introduction_to_computer_vision",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_computer_vision"
+      }
+    },
+    {
+      "name": "Lotus Blossom Diagram",
+      "url": "https://docs.google.com/presentation/d/1PqPXAGgH6sgDSVK9B-Haj2aiprI3FOhag9M1ARfLtv8/edit#slide=id.p",
+      "key": "lotus_blossom_diagram",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "lotus_blossom_diagram"
+      }
+    },
+    {
+      "name": "Object Cards",
+      "url": "https://docs.google.com/document/d/1NYkkFT6if68x2aTy0t6GcRJ_A2fWr8P3inns5vPF8Go/edit?usp=sharing",
+      "key": "object_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "object_cards"
+      }
+    },
+    {
+      "name": "Data Visualizations",
+      "url": "https://docs.google.com/document/d/11zhUUIl-tURa8QR8djG8OYSZJQq8yCMlCgi52Nlb9ao/edit?usp=sharing",
+      "key": "our_data_visualizations",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "our_data_visualizations"
+      }
+    },
+    {
+      "name": "Paper Survey Template",
+      "url": "https://docs.google.com/document/d/17mLXUrhEYURVmIFWH8i4GjpMKGmy2u0Sw81QIvc3cM4/edit?usp=drive_link",
+      "key": "paper_survey_template",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "paper_survey_template"
+      }
+    },
+    {
+      "name": "Pixels and QR Codes",
+      "url": "https://docs.google.com/presentation/d/1o_Hu17799s0qfpj65EQHCdtxjm1J3SoOc6PEkjVX01g/template/preview",
+      "key": "pixels_and_qr_codes",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "pixels_and_qr_codes"
+      }
+    },
+    {
+      "name": "Problem Observations to Research Questions",
+      "url": "https://docs.google.com/document/d/1jk9gWHt7jkCuDX4RH6bjdFYd2fVFSoA0Wan06-fmAPA/edit?usp=sharing",
+      "key": "problem_observations_to_research_questions",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "problem_observations_to_research_questions"
+      }
+    },
+    {
+      "name": "Prototype Development, Part 1",
+      "url": "https://docs.google.com/presentation/d/1w4lWpmOWIMCT3KZU9lV6AYrL4e9tlnTgkJXCANi_i_Q/template/preview",
+      "key": "prototype_development_part_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_development_part_1"
+      }
+    },
+    {
+      "name": "Prototype Development, Part 2",
+      "url": "https://docs.google.com/presentation/d/1csnbhTFnNXmhyKjS5RFV-F8I8LzNuDBWaKVbIKQBLeE/template/preview",
+      "key": "prototype_development_part_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_development_part_2"
+      }
+    },
+    {
+      "name": "QR Code Exploration ",
+      "url": "https://docs.google.com/document/d/1NsKMKg7OoisXocruJTP8_qf4GGPZinuh54SZVPAZzA4/edit?usp=sharing",
+      "key": "qr_code_exploration_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "qr_code_exploration_activity_guide"
+      }
+    },
+    {
+      "name": "Sample Dataset",
+      "url": "https://docs.google.com/spreadsheets/d/1yMLeTKjwj6_TmLK_amHL-RhAQ-rZGq6CGTWyB9e0QBs/edit?usp=sharing",
+      "key": "sample_dataset",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "sample_dataset"
+      }
+    },
+    {
+      "name": "Sample QR Code Cards",
+      "url": "https://docs.google.com/presentation/d/10gMppnWkFO-63FTiGQzvpR86TbLEV4aEgkiCCBRkRaY/edit?usp=sharing",
+      "key": "sample_qr_code_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "sample_qr_code_cards"
+      }
+    },
+    {
+      "name": "Teachable Machine",
+      "url": "http://teachablemachine.withgoogle.com/",
+      "key": "teachable_machine",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine"
+      }
+    },
+    {
+      "name": "Teachable Machine 2.0",
+      "url": "https://youtu.be/T2qQGqZxkD0?feature=shared",
+      "key": "teachable_machine_2_0",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine_2_0"
+      }
+    },
+    {
+      "name": "The Search for Pixel",
+      "url": "https://docs.google.com/document/d/16aSne42Z1k8jUx4HXdHsdtDEsAVlC9W-aH5OvpV7s_0/edit?usp=sharing",
+      "key": "the_search_for_pixel",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_search_for_pixel"
+      }
+    },
+    {
+      "name": "Training a Model",
+      "url": "https://docs.google.com/presentation/d/1mk85wn2sT6M5R7STRXHGL7q51bG3CZYW5XR5-N5YjEE/template/preview",
+      "key": "training_a_model",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "training_a_model"
+      }
+    },
+    {
+      "name": "Training a Model",
+      "url": "https://docs.google.com/document/d/12CaimKcrHjEbxK8ZPAUsxS0cQGI1t6k9JeOVbJEJHC0/edit?usp=sharing",
+      "key": "training_a_model_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "training_a_model_1"
+      }
+    },
+    {
+      "name": "Training Data and Bias",
+      "url": "https://docs.google.com/presentation/d/1WCPTEuqRy5oG7rVbA9ZfKj_0Iyla5POTSMhgcTg3GiA/template/preview",
+      "key": "training_data_and_bias",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "training_data_and_bias"
+      }
+    },
+    {
+      "name": "User Feedback",
+      "url": "https://docs.google.com/presentation/d/1Ghe9hwiBMVdiZt2zDxePW26PXCxlfUZfJh4TH28gksU/template/preview",
+      "key": "user_feedback",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_feedback"
+      }
+    },
+    {
+      "name": "User Feedback Sheets",
+      "url": "https://docs.google.com/document/d/18VUG-t4w2a2_TBNaEk_59OD0kKPXxr8mqtJTFKdZ6rA/edit?usp=drive_link",
+      "key": "user_feedback_sheets",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "user_feedback_sheets"
+      }
+    },
+    {
+      "name": "User Stories and Problem Statements",
+      "url": "https://docs.google.com/document/d/1De0SEfO_JFKND4IzXfe7v-dyqq0ok0efysG1iBk3OOI/edit?usp=drive_link",
+      "key": "user_persona_playing_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "user_persona_playing_cards"
+      }
+    },
+    {
+      "name": "User Stories and Problem Statements",
+      "url": "https://docs.google.com/presentation/d/1E8x8qBqTNmqf7TDvvfGydxvVyHF67HkNZaMDTpi3vV4/template/preview",
+      "key": "user_stories_and_problem_statements",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_stories_and_problem_statements"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "clue_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "how_computer_vision_works"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "introduction_to_computer_vision"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "the_search_for_pixel"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "object_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "teachable_machine"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "teachable_machine_2_0"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "training_a_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "training_a_model_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "ethics_and_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "ethics_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "impacts_of_computer_vision"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "design_thinking_prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "inspiration_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "prototype_development_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "prototype_development_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "user_feedback"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "user_feedback_sheets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "implementing_feedback"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "design_thinking_process_and_communities_i_belong_to"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "empathizing_with_users"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "farmwise"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "problem_observations_to_research_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "collecting_data_from_users"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "gathering_user_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "google_form_survey_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "paper_survey_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "charts_in_google_sheets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "data_visualizations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "from_data_to_viz"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "our_data_visualizations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "sample_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "user_persona_playing_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "user_stories_and_problem_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_qr_code_exploration_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "binary_to_base_10_converter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "google_color_picker"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "images_pixels_and_rgb"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "lotus_blossom_diagram"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "pixels_and_qr_codes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "qr_code_exploration_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "sample_qr_code_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "algorithm_hint_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "edge_detection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "classifying_and_grouping_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "datasets_and_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "garden_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "ai_training_data_and_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "bingo_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "dog_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "idea_outline"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "training_data_and_bias"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "bias",
+      "word": "Bias ",
+      "definition": "Decisions that favor some things and deprioritize or exclude others.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "class",
+      "word": "Class ",
+      "definition": "the output category of one’s data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "key": "computer_vision",
+      "word": "Computer Vision",
+      "definition": "A field of artificial intelligence (AI) that allows computers to interpret and understand visual inputs.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_vision"
+      }
+    },
+    {
+      "key": "confidence_score",
+      "word": "Confidence score",
+      "definition": "A percentage that represents a measure of the confidence that a model has in its prediction",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "confidence_score"
+      }
+    },
+    {
+      "key": "data_visualization",
+      "word": "Data visualization",
+      "definition": "The process of using visual elements like charts, graphs, or maps to represent data.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_visualization"
+      }
+    },
+    {
+      "key": "edge_detection_algorithm",
+      "word": "edge detection algorithm",
+      "definition": "a computer process that identifies and highlights lines and boundaries within an image",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "edge_detection_algorithm"
+      }
+    },
+    {
+      "key": "empathy",
+      "word": "Empathy",
+      "definition": "In design, paying attention to a user's feelings and needs when designing a product.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "empathy"
+      }
+    },
+    {
+      "key": "model",
+      "word": "model ",
+      "definition": "programs that detect specific patterns using a collection of data sets",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "model"
+      }
+    },
+    {
+      "key": "pixel",
+      "word": "pixel",
+      "definition": "one of the small dots or squares that make up an image on a computer screen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "key": "problem_statement",
+      "word": "problem statement",
+      "definition": "a statement that describes a larger pattern or issue to solve",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "problem_statement"
+      }
+    },
+    {
+      "key": "qualitative_data",
+      "word": "Qualitative Data",
+      "definition": "A type of information that describes things using words rather than numbers.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "qualitative_data"
+      }
+    },
+    {
+      "key": "quantitative_data",
+      "word": "Quantitative Data",
+      "definition": "Information that you can count or measure with numbers. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "quantitative_data"
+      }
+    },
+    {
+      "key": "rgb",
+      "word": "RGB",
+      "definition": "Red, green, and blue values (0-255) used to construct 16,777,216 unique colors on a monitor.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "rgb"
+      }
+    },
+    {
+      "key": "sampling",
+      "word": "sampling",
+      "definition": "the process of selecting specific pixels from an image to create a new version.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sampling"
+      }
+    },
+    {
+      "key": "scope",
+      "word": "scope",
+      "definition": "the features and functions of a product, and the amount of time in which to complete them.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "scope"
+      }
+    },
+    {
+      "key": "user",
+      "word": "User",
+      "definition": "Someone who uses an object, including software and hardware.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user"
+      }
+    },
+    {
+      "key": "user_persona",
+      "word": "user persona",
+      "definition": "a fictional character created based on research to represent a type of user that might use a product or service",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user_persona"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "computer_vision"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "vocabulary.key": "scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "empathy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "user"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "qualitative_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "quantitative_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "data_visualization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "problem_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "user_persona"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "rgb"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "edge_detection_algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "sampling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "confidence_score"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "bias"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "0b810d06-5395-44b3-97fd-865f3f4b1599",
+      "properties": {
+        "description": "Apply computer vision technologies in ways that address societal issues or personal interests "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "0b810d06-5395-44b3-97fd-865f3f4b1599"
+      }
+    },
+    {
+      "key": "12292f2d-ff96-4778-b8fc-c0d4a67114c7",
+      "properties": {
+        "description": "Give effective and actionable feedback from the viewpoint presented in a user story"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "12292f2d-ff96-4778-b8fc-c0d4a67114c7"
+      }
+    },
+    {
+      "key": "13486cb1-37b0-4689-810b-96ac47f276bb",
+      "properties": {
+        "description": "Explain what information is stored within a pixel"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "13486cb1-37b0-4689-810b-96ac47f276bb"
+      }
+    },
+    {
+      "key": "143331af-c2e7-47f2-ba4c-818b65ea21b9",
+      "properties": {
+        "description": "Describe several different applications of computer vision in modern use"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "143331af-c2e7-47f2-ba4c-818b65ea21b9"
+      }
+    },
+    {
+      "key": "22d4a1af-936a-47c4-a8be-669074e0c09d",
+      "properties": {
+        "description": "Identify potential bias, privacy, and security concerns in computer vision systems"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "22d4a1af-936a-47c4-a8be-669074e0c09d"
+      }
+    },
+    {
+      "key": "2cf3375b-ce30-4454-81e0-cffbfe005ccb",
+      "properties": {
+        "description": "Evaluate and prioritize user feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "2cf3375b-ce30-4454-81e0-cffbfe005ccb"
+      }
+    },
+    {
+      "key": "3b7f8617-8558-4b76-b4de-8d373cebe46f",
+      "properties": {
+        "description": "Differentiate between qualitative and quantitative data"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "3b7f8617-8558-4b76-b4de-8d373cebe46f"
+      }
+    },
+    {
+      "key": "3caa499a-0472-45e0-80b1-7e16f4d67d50",
+      "properties": {
+        "description": "Identify a problem impacting a community"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "3caa499a-0472-45e0-80b1-7e16f4d67d50"
+      }
+    },
+    {
+      "key": "43df1d49-4706-4a91-97a6-692d0ae2c583",
+      "properties": {
+        "description": "Iterate on project prototype based on feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "43df1d49-4706-4a91-97a6-692d0ae2c583"
+      }
+    },
+    {
+      "key": "4c0430ca-e79f-436b-96f5-39dd28cf7961",
+      "properties": {
+        "description": "Iterate on a prototype based on user feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "4c0430ca-e79f-436b-96f5-39dd28cf7961"
+      }
+    },
+    {
+      "key": "51df956b-5554-4727-a4b2-d6e1e934ca4d",
+      "properties": {
+        "description": "Identify trends conveyed in a data visualization"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "51df956b-5554-4727-a4b2-d6e1e934ca4d"
+      }
+    },
+    {
+      "key": "5a1a69af-b862-4b35-929f-a02d55c29875",
+      "properties": {
+        "description": "Propose solutions to mitigate bias"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "5a1a69af-b862-4b35-929f-a02d55c29875"
+      }
+    },
+    {
+      "key": "6502ec5b-0c62-4bd1-aabf-5838d4f57310",
+      "properties": {
+        "description": "Explain how visual data is used to train a model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6502ec5b-0c62-4bd1-aabf-5838d4f57310"
+      }
+    },
+    {
+      "key": "714b1a35-822f-4b06-ac0e-8824319996a0",
+      "properties": {
+        "description": "Prototype computer vision technologies that address societal issues or personal interests"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "714b1a35-822f-4b06-ac0e-8824319996a0"
+      }
+    },
+    {
+      "key": "76092157-66f4-445c-832b-610a4e4d5c76",
+      "properties": {
+        "description": "Explain the importance of testing a design with prospective users"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "76092157-66f4-445c-832b-610a4e4d5c76"
+      }
+    },
+    {
+      "key": "7d98004d-e689-4a2e-87f3-fb1f7449cb1b",
+      "properties": {
+        "description": "Write a problem statement that addresses the user's needs and core issues"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "7d98004d-e689-4a2e-87f3-fb1f7449cb1b"
+      }
+    },
+    {
+      "key": "8005f0b2-6410-48d3-bb1b-2bf2bffe6d32",
+      "properties": {
+        "description": "Encode and decode data to represent information within a pixel"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "8005f0b2-6410-48d3-bb1b-2bf2bffe6d32"
+      }
+    },
+    {
+      "key": "8051569f-eaf1-4b19-88a9-d272b67cfa5e",
+      "properties": {
+        "description": "Construct a working definition of computer vision "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8051569f-eaf1-4b19-88a9-d272b67cfa5e"
+      }
+    },
+    {
+      "key": "86bf4d36-b8ab-4e8c-86cd-11e2fb866d66",
+      "properties": {
+        "description": "Explain the importance of confidence ratings"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "86bf4d36-b8ab-4e8c-86cd-11e2fb866d66"
+      }
+    },
+    {
+      "key": "8709338f-be81-4e61-9ae7-74718f2acd33",
+      "properties": {
+        "description": "Identify potential bias in computer vision systems"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "8709338f-be81-4e61-9ae7-74718f2acd33"
+      }
+    },
+    {
+      "key": "9399f963-ab23-4dc7-a6e6-b11b7fd35f0f",
+      "properties": {
+        "description": "Develop a data collection plan to collect qualitative and quantitative data from users"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "9399f963-ab23-4dc7-a6e6-b11b7fd35f0f"
+      }
+    },
+    {
+      "key": "9946c0d5-4a0d-447e-bb73-7c8579b243a3",
+      "properties": {
+        "description": "Train, validate, and test basic AI classification systems in computer vision"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "9946c0d5-4a0d-447e-bb73-7c8579b243a3"
+      }
+    },
+    {
+      "key": "b2c2ed86-bc84-4b66-a02e-693786a4a627",
+      "properties": {
+        "description": "Represent a data set using a data visualization"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "b2c2ed86-bc84-4b66-a02e-693786a4a627"
+      }
+    },
+    {
+      "key": "d43a686e-8b33-45c4-8501-c36bb8d408cb",
+      "properties": {
+        "description": "Develop research questions for one or more problems impacting a community"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "d43a686e-8b33-45c4-8501-c36bb8d408cb"
+      }
+    },
+    {
+      "key": "ed5f0af0-6d50-4e77-ba67-fc2825119675",
+      "properties": {
+        "description": "Evaluate the suitability of a dataset for a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "ed5f0af0-6d50-4e77-ba67-fc2825119675"
+      }
+    },
+    {
+      "key": "f1794476-6fe3-4afa-9135-91d58707f905",
+      "properties": {
+        "description": "Iterate on project prototype based on feedback "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "f1794476-6fe3-4afa-9135-91d58707f905"
+      }
+    },
+    {
+      "key": "f40631ba-37ab-436d-af40-f0935bd71e4a",
+      "properties": {
+        "description": "Develop an image processing algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "f40631ba-37ab-436d-af40-f0935bd71e4a"
+      }
+    },
+    {
+      "key": "f975b02d-c267-4ad1-a554-4e5c492fc467",
+      "properties": {
+        "description": "Identify user stories based on research"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "f975b02d-c267-4ad1-a554-4e5c492fc467"
+      }
+    },
+    {
+      "key": "fe397160-798d-43b5-b3bc-32d8fd43f170",
+      "properties": {
+        "description": "Explore how image filters might be used in computer vision applications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "fe397160-798d-43b5-b3bc-32d8fd43f170"
+      }
+    },
+    {
+      "key": "fee3830c-dac7-4bfb-b2ef-584457343135",
+      "properties": {
+        "description": "Explain how data informs features and functions of a product or service"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "fee3830c-dac7-4bfb-b2ef-584457343135"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

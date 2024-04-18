@@ -1,5 +1,6 @@
 @import "color";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import "@cdo/apps/componentLibrary/typography/typography.module";
 
 // Dropdown common styles
 .dropdownContainer {
@@ -11,11 +12,11 @@
     display: block;
   }
 
-  .dropdown {
+  select {
     display: inline-flex;
     align-items: center;
     align-self: stretch;
-    width: auto;
+    width: 100%;
     background-color: unset;
     border-radius: 0.25rem;
     border: 1px solid;
@@ -51,17 +52,18 @@
     color: $light_black;
   }
 
-  .dropdown {
+  select {
     color: $light_black;
     border-color: $light_black;
+    background-color: $light_white;
   }
 
   .dropdownArrowDiv:after {
     color: $light_black;
   }
 
-  &:has(.dropdown:hover) {
-    .dropdown:not(:disabled) {
+  &:has(select:hover) {
+    select:not(:disabled) {
       color: $light_black;
       background-color: $light_gray_100;
     }
@@ -71,10 +73,9 @@
     }
   }
 
-  &:has(.dropdown:active) {
-    .dropdown:not(:disabled) {
+  &:has(select:active) {
+    select:not(:disabled) {
       color: $light_black;
-      background-color: unset;
     }
 
     .dropdownArrowDiv:after {
@@ -82,8 +83,8 @@
     }
   }
 
-  &:has(.dropdown:disabled) {
-    .dropdown {
+  &:has(select:disabled) {
+    select {
       color: $light_gray_200;
       border-color: $light_gray_200;
     }
@@ -99,13 +100,14 @@
     color: $light_white;
   }
 
-  .dropdown {
+  select {
     color: $light_white;
     border-color: $light_white;
+    background-color: $light_black;
   }
 
-  &:has(.dropdown:hover) {
-    .dropdown:not(:disabled) {
+  &:has(select:hover) {
+    select:not(:disabled) {
       color: $light_white;
       background-color: $light_gray_900;
     }
@@ -115,10 +117,9 @@
     }
   }
 
-  &:has(.dropdown:active) {
-    .dropdown:not(:disabled) {
+  &:has(select:active) {
+    select:not(:disabled) {
       color: $light_white;
-      background-color: unset;
     }
 
     .dropdownArrowDiv:after {
@@ -126,8 +127,8 @@
     }
   }
 
-  &:has(.dropdown:disabled) {
-    .dropdown {
+  &:has(select:disabled) {
+    select {
       color: $light_gray_900;
       border-color: $light_gray_900;
     }
@@ -144,13 +145,26 @@
 
 // Sizes
 .dropdownContainer-l {
+  &.dropdownContainer-thick {
+    select {
+      @include button-one-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include body-one;
+      margin-bottom: 0;
+    }
+  }
+
   .dropdownLabel {
     @include label-one;
     margin-bottom: 0.37rem;
   }
 
-  .dropdown {
-    @include button-one-text;
+  select {
     height: 3rem;
     padding: 0.625rem 1rem;
     padding-right: 3rem;
@@ -167,13 +181,26 @@
 }
 
 .dropdownContainer-m {
+  &.dropdownContainer-thick {
+    select {
+      @include button-two-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include body-two;
+      margin-bottom: 0;
+    }
+  }
+
   .dropdownLabel {
     @include label-two;
     margin-bottom: 0.37rem;
   }
 
-  .dropdown {
-    @include button-two-text;
+  select {
     height: 2.5rem;
     padding: 0.5rem 1rem;
     padding-right: 2.75rem;
@@ -190,13 +217,26 @@
 }
 
 .dropdownContainer-s {
+  &.dropdownContainer-thick {
+    select {
+      @include button-three-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include body-three;
+      margin-bottom: 0;
+    }
+  }
+
   .dropdownLabel {
     @include label-three;
     margin-bottom: 0.37rem;
   }
 
-  .dropdown {
-    @include button-three-text;
+  select {
     height: 2rem;
     padding: 0.3125rem 1rem;
     padding-right: 2.625rem;
@@ -213,13 +253,26 @@
 }
 
 .dropdownContainer-xs {
+  &.dropdownContainer-thick {
+    select {
+      @include button-four-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include body-four;
+      margin-bottom: 0;
+    }
+  }
+
   .dropdownLabel {
     @include label-four;
     margin-bottom: 0.37rem;
   }
 
-  .dropdown {
-    @include button-four-text;
+  select {
     height: 1.5rem;
     padding: 0.125rem 0.5rem;
     padding-right: 1.75rem;

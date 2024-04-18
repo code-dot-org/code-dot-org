@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '@cdo/apps/redux';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import AppView from '@cdo/apps/templates/AppView';
-import CraftVisualizationColumn from './CraftVisualizationColumn';
-import cc_client from './cc-client';
+
 import dom from '../../dom';
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+
+import cc_client from './cc-client';
+import CraftVisualizationColumn from './CraftVisualizationColumn';
 import items from './items';
 
 const MEDIA_URL = '/blockly/media/craft/';

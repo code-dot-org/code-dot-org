@@ -31,6 +31,7 @@ import {
   setScriptId,
 } from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -49,6 +50,7 @@ $(document).ready(function () {
     teacherSections,
     manageStudents,
     sectionProgress,
+    progressV2Feedback,
     unitSelection,
     stats,
     sectionAssessments,
@@ -56,37 +58,48 @@ $(document).ready(function () {
     sectionStandardsProgress,
     locales,
   });
+
+  const selectedSectionFromList = sections.find(s => s.id === section.id);
+  const selectedSection = {...selectedSectionFromList, ...section};
+
   const store = getStore();
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
   store.dispatch(setSections(sections));
-  store.dispatch(selectSection(section.id));
-  store.dispatch(setStudentsForCurrentSection(section.id, section.students));
-  store.dispatch(setRosterProvider(section.login_type));
-  store.dispatch(setRosterProviderName(section.login_type_name));
-  store.dispatch(setLoginType(section.login_type));
+  store.dispatch(selectSection(selectedSection.id));
+  store.dispatch(
+    setStudentsForCurrentSection(selectedSection.id, selectedSection.students)
+  );
+  store.dispatch(setRosterProvider(selectedSection.login_type));
+  store.dispatch(setRosterProviderName(selectedSection.login_type_name));
+  store.dispatch(setLoginType(selectedSection.login_type));
   store.dispatch(setLocaleCode(localeCode));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
-  if (!section.sharing_disabled && section.script.project_sharing) {
+  if (
+    !selectedSection.sharing_disabled &&
+    selectedSection.script.project_sharing
+  ) {
     store.dispatch(setShowSharingColumn(true));
   }
 
   // Default the scriptId to the script assigned to the section
-  const defaultScriptId = section.script ? section.script.id : null;
+  const defaultScriptId = selectedSection.script
+    ? selectedSection.script.id
+    : null;
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }
   // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
   const reorderedCourses = [
     ...coursesWithProgress.filter(
-      course => course.id !== section.course_version_id
+      course => course.id !== selectedSection.course_version_id
     ),
     ...coursesWithProgress.filter(
-      course => course.id === section.course_version_id
+      course => course.id === selectedSection.course_version_id
     ),
   ].reverse();
   store.dispatch(setCoursesWithProgress(reorderedCourses));
@@ -102,14 +115,14 @@ $(document).ready(function () {
             <TeacherDashboard
               {...props}
               studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={section.id}
-              sectionName={section.name}
-              studentCount={section.students.length}
+              sectionId={selectedSection.id}
+              sectionName={selectedSection.name}
+              studentCount={selectedSection.students.length}
               coursesWithProgress={coursesWithProgress}
               showAITutorTab={showAITutorTab}
               sectionProviderName={sectionProviderName(
                 store.getState(),
-                section.id
+                selectedSection.id
               )}
             />
           )}

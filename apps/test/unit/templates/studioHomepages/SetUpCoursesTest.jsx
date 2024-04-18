@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../util/reconfiguredChai';
-import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
+import React from 'react';
+
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('SetUpCourses', () => {
   it('renders as expected for a teacher', () => {

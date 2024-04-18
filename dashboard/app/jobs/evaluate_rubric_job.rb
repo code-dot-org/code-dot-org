@@ -1,5 +1,6 @@
 # Sending token usage to CloudWatch
 require 'cdo/aws/metrics'
+require 'csv'
 
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
@@ -11,7 +12,7 @@ class EvaluateRubricJob < ApplicationJob
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-15-ai-rubrics-json-evidence/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-25-confidence-exact/'.freeze
 
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
@@ -29,15 +30,11 @@ class EvaluateRubricJob < ApplicationJob
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
     },
-    'interactive-games-animations-2023' => {
-      'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
-      'CSD web project animated review_2023' => 'csd3-2023-L14',
-      'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
-      'CSD games sidescroll review_2023' => 'csd3-2023-L21',
-      'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
-      'CSD games project review_2023' => 'csd3-2023-L28',
-    }
   }
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
 
   # This is raised if there is any raised error due to a rate limit, e.g. a 429
   # received from the aiproxy service.
@@ -275,7 +272,7 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   # The client for s3 access made directly by this job, not via SourceBucket.
-  private def s3_client
+  def s3_client
     @s3_client ||= AWS::S3.create_client
   end
 
@@ -352,6 +349,8 @@ class EvaluateRubricJob < ApplicationJob
     lesson_s3_names.each do |lesson_s3_name|
       validate_ai_config_for_lesson(lesson_s3_name, code)
     end
+    validate_learning_goals
+    S3_AI_RELEASE_PATH
   end
 
   def validate_ai_config_for_lesson(lesson_s3_name, code)
@@ -360,6 +359,43 @@ class EvaluateRubricJob < ApplicationJob
     get_openai_params(lesson_s3_name, code)
   rescue Aws::S3::Errors::NoSuchKey => exception
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
+  end
+
+  # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
+  # ai-enabled learning goal in its rubric in the database has a corresponding
+  # learning goal in the rubric in S3.
+  def validate_learning_goals
+    UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
+      levels = level_to_lesson.keys
+      unless Unit.find_by_name(unit_name)
+        raise "Unit not found: #{unit_name.inspect}. Make sure you ran `rake seed:scripts` locally, and added it to UI_TEST_SCRIPTS for drone/ci."
+      end
+      levels.each do |level_name|
+        level = Level.find_by_name!(level_name)
+        script_level = level.script_levels.select {|sl| sl.script.name == unit_name}.first
+        lesson = script_level.lesson
+        rubric = Rubric.find_by!(lesson: lesson, level: level)
+        validate_learning_goals_for_rubric(rubric)
+      rescue StandardError => exception
+        raise "Error validating learning goals for unit #{unit_name} lesson #{lesson&.relative_position.inspect} level #{level_name.inspect}: #{exception.message}"
+      end
+    end
+  end
+
+  def validate_learning_goals_for_rubric(rubric)
+    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
+    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
+    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
+    missing_learning_goals = db_learning_goals - s3_learning_goals
+    if missing_learning_goals.any?
+      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
+    end
+  end
+
+  def get_s3_learning_goals(lesson_s3_name)
+    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
+    rubric_rows.map {|row| row['Key Concept']}
   end
 
   private def get_openai_evaluations(openai_params)

@@ -1,9 +1,11 @@
 import {assert} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
+
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimVizAutoDnsNode = require('@cdo/apps/netsim/NetSimVizAutoDnsNode');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
-var NetSimVizAutoDnsNode = require('@cdo/apps/netsim/NetSimVizAutoDnsNode');
+
+var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 describe('NetSimVizAutoDnsNode', function () {
   var vizElement;

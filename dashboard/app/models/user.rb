@@ -71,6 +71,7 @@
 
 require 'digest/md5'
 require 'cdo/aws/metrics'
+require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
@@ -107,6 +108,7 @@ class User < ApplicationRecord
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
+  #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
   serialized_attrs %w(
     ops_first_name
@@ -145,10 +147,12 @@ class User < ApplicationRecord
     country_code
     family_name
     ai_rubrics_disabled
+    ai_rubrics_tour_seen
     sort_by_family_name
     show_progress_table_v2
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
+    ai_tutor_access_denied
   )
 
   attr_accessor(
@@ -193,8 +197,8 @@ class User < ApplicationRecord
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = 'student'.freeze,
-    TYPE_TEACHER = 'teacher'.freeze
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
   validates_presence_of :user_type
@@ -280,6 +284,8 @@ class User < ApplicationRecord
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
+
+  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
 
   before_destroy :soft_delete_channels
 
@@ -1488,6 +1494,10 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
+  def verify_teacher!
+    self.permission = UserPermission::AUTHORIZED_TEACHER
+  end
+
   # This method just checks if a user has the authorized teacher permission
   # if you are hoping to know if someone can access content for verified instructors
   # you should use the verified_instructor? method instead which includes checks for a
@@ -1523,10 +1533,21 @@ class User < ApplicationRecord
 
   # Students
   def has_ai_tutor_access?
-    !DCDO.get('ai-tutor-disabled', false) && (
-    permission?(UserPermission::AI_TUTOR_ACCESS) ||
-      (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)))
+    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
+    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
+  end
+
+  private def ai_tutor_feature_globally_disabled?
+    DCDO.get('ai-tutor-disabled', false)
+  end
+
+  private def permission_for_ai_tutor?
+    permission?(UserPermission::AI_TUTOR_ACCESS)
+  end
+
+  private def in_ai_tutor_experiment_with_enabled_section?
+    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
+      sections_as_student.any?(&:ai_tutor_enabled)
   end
 
   def student_of_verified_instructor?
@@ -1556,7 +1577,11 @@ class User < ApplicationRecord
 
   def age=(val)
     @age = val
-    val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
+    val = begin
+      val.to_i
+    rescue
+      0 # sometimes we get age: {"Pr" => nil}
+    end
     return unless val > 0
     return unless val < 200
     return if birthday && val == age # don't change birthday if we want to stay the same age
@@ -2213,6 +2238,7 @@ class User < ApplicationRecord
       age: age,
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
+      ai_tutor_access_denied: !!ai_tutor_access_denied,
     }
   end
 

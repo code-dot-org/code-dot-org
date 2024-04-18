@@ -23,13 +23,11 @@ module I18n
             I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
-          private
-
-          def crowdin_file_path_of(language)
+          private def crowdin_file_path_of(language)
             I18nScriptUtils.crowdin_locale_dir(language[:locale_s], FILE_PATH)
           end
 
-          def restore_localization(language)
+          private def restore_localization(language)
             crowdin_file_path = crowdin_file_path_of(language)
 
             RedactRestoreUtils.restore(
@@ -41,13 +39,13 @@ module I18n
             )
           end
 
-          def report_malformed_i18n(language)
+          private def report_malformed_i18n(language)
             malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(language[:locale_s])
             malformed_i18n_reporter.process_file(crowdin_file_path_of(language))
             malformed_i18n_reporter.report
           end
 
-          def distribute_localization(language)
+          private def distribute_localization(language)
             target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "scripts.#{language[:locale_s]}.yml")
             I18nScriptUtils.sanitize_file_and_write(crowdin_file_path_of(language), target_i18n_file_path)
           end
