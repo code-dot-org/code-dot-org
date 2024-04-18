@@ -22,7 +22,7 @@ class AichatController < ApplicationController
     # If the content is inappropriate, we skip sending to endpoint and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
-    input_json = AichatHelper.format_input_for_sagemaker_request(params[:aichatParameters], params[:storedMessages], params[:newMessage])
+    input_json = AichatHelper.format_inputs_for_sagemaker_request(params[:aichatParameters], params[:storedMessages], params[:newMessage])
     sagemaker_response = AichatHelper.request_sagemaker_chat_completion(input_json)
     parsed_response = JSON.parse(sagemaker_response.body.string)
     generated_text = parsed_response[0]["generated_text"]
