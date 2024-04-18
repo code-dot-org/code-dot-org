@@ -831,6 +831,10 @@ en:
         csd_weblab_flexboxforteachers1: Using Flexbox in Web Development
         csd_weblab_flexboxforteachers2: Flexbox Children
         csd-iosp-shortened: What Makes a Computer a Computer?
+        self-paced-pl-ai-101-Machine_Learning: What is Machine Learning?
+        self-paced-pl-ai-101-Training_Data: Training Data and Bias
+        self-paced-pl-ai-101-Neural_Networks: How Neural Networks Work
+        self-paced-pl-ai-101-How_LLMs_Work: How Chatbots and Large Language Models Work
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

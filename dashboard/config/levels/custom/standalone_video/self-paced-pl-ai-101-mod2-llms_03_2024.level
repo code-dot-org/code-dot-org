@@ -13,10 +13,10 @@
     "parent_level_id": 21258,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "long_instructions": "#### To create impactful use of videos in PL, follow these guidelines to encourage video watching:  \r\n\r\n* #### Keep videos under 5 minutes \r\n* #### Summarize the video in the subsequent level (top 3 takeaways) \r\n* #### To increase engagement, utilize assessment levels after video levels \r\n\r\n\r\n"
+    "long_instructions": "#### Now that we’ve learned about how LLMs work, let’s take a look at some examples of LLMs and Generative AI that are popular today.\r\n\r\n\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-16T18:16:32.339+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod2-llms_01_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod2-llms_01_2024\"},{\"changed_at\":\"2024-04-16 18:16:43 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-16T18:16:32.339+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod2-llms_01_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod2-llms_01_2024\"},{\"changed_at\":\"2024-04-16 18:16:43 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 14:19:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
