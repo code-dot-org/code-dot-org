@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-16 18:23:45 UTC",
+    "serialized_at": "2024-04-17 19:41:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -352,6 +352,28 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Universal Design for Learning (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_03_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod4",
+        "activity_section.key": "ce13b099-9791-47e3-8a31-c05f79dbf898"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod4-UDL_03_02_2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "self-paced-pl-ai-101-mod4-UDL_04_2024"
         ],
@@ -372,9 +394,9 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 5,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -397,11 +419,14 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 13,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-about_01_2024"
+        ],
         "progression": "Teaching about AI (15 min)"
       },
       "bonus": false,
@@ -419,8 +444,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 14,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -444,8 +469,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
+      "chapter": 15,
+      "position": 15,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -469,8 +494,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 15,
+      "chapter": 16,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -494,8 +519,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 16,
+      "chapter": 17,
+      "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -621,6 +646,18 @@
         "level.key": "self-paced-pl-ai-101-mod4-UDL_03_2024",
         "script_level.level_keys": [
           "self-paced-pl-ai-101-mod4-UDL_03_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod4",
+        "activity_section.key": "ce13b099-9791-47e3-8a31-c05f79dbf898"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod4-UDL_03_02_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_03_02_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
