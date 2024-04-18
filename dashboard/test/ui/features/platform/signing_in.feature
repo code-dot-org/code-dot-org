@@ -4,9 +4,9 @@ Feature: Signing in and signing out
 
 Scenario: Student sign in from code.org
   Given I create a student named "Bob"
+  And I set the cookie named "_loc_notice" to "1"
   And I sign out
   Given I am on "http://code.org/"
-  And I reload the page
   Then I wait to see "#header_user_signin"
   Then I click "#header_user_signin"
   And I wait to see "#signin"
@@ -16,6 +16,7 @@ Scenario: Student sign in from code.org
   Then I wait to see "#header_user_menu"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Bob"
+  And I delete the cookie named "_loc_notice"
 
 Scenario: Student sign in from studio.code.org
   Given I create a student named "Alice"

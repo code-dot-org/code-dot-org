@@ -10,7 +10,7 @@ main.wrapper {
 }
 
 section {
-  padding: 4rem 0 0 !important;
+  padding: 0 0 4rem;
 }
 
 .headerContainer {
@@ -19,7 +19,15 @@ section {
 }
 
 .headerWithoutTabsContainer {
-  padding-bottom: 4rem;
+  section {
+    padding: 4rem 0 4rem !important;
+  }
+}
+
+.headerWithTabsContainer {
+  section {
+    padding: 4rem 0 0 !important;
+  }
 }
 
 .myPlTabsContainer {
