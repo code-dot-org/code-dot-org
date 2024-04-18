@@ -1,22 +1,28 @@
-import React from 'react';
+import React, {memo} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './music-play-view.module.scss';
 import Link from '@cdo/apps/componentLibrary/link';
 
+import musicI18n from '../locale';
+
 const codeOrgLogo = require(`@cdo/static/music/code-dot-org-white-logo.png`);
 
-const MusicPlayView: React.FunctionComponent = () => {
+interface MusicPlayViewProps {
+  onPlay: () => void;
+}
+
+const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = props => {
   console.log(navigator);
-  console.log(navigator.share);
+
   return (
     <div className={moduleStyles.musicPlayViewContainer}>
       <div className={moduleStyles.musicPlayViewCard}>
         <img src={codeOrgLogo} alt="Code.org" />
         <Heading2>My Awesome Mix</Heading2>
         <BodyTwoText>
-          made with Music Lab on{' '}
+          {musicI18n.madeWithMusicLabOn()}{' '}
           <Link href="https://studio.code.org/projects/music">Code.org</Link>
         </BodyTwoText>
 
@@ -24,15 +30,15 @@ const MusicPlayView: React.FunctionComponent = () => {
 
         <div className={moduleStyles.musicPlayViewButtonsSection}>
           <Button
-            text="View Code"
+            text={musicI18n.viewCode()}
             type="secondary"
             color="white"
             size="s"
             iconLeft={{iconStyle: 'solid', iconName: 'code'}}
-            onClick={() => console.log('view code, redirect to view')}
+            onClick={() => props.onPlay()}
           />
           <Button
-            text="Remix"
+            text={musicI18n.remix()}
             type="secondary"
             color="white"
             size="s"
@@ -40,10 +46,10 @@ const MusicPlayView: React.FunctionComponent = () => {
             onClick={() => console.log('make my own, redirect to remix')}
           />
         </div>
-        {navigator.share && (
+        {true && (
           <div className={moduleStyles.musicPlayViewButtonsSection}>
             <Button
-              text="Share"
+              text={musicI18n.share()}
               type="secondary"
               color="white"
               size="s"
@@ -62,4 +68,4 @@ const MusicPlayView: React.FunctionComponent = () => {
   );
 };
 
-export default MusicPlayView;
+export default memo(MusicPlayView);
