@@ -21,38 +21,40 @@ const pyodideWorker = new Worker(
 const callbacks = {};
 
 pyodideWorker.onmessage = event => {
-  const {type, id, ...data} = event.data;
+  const {type, id, message} = event.data;
   if (type === 'sysout') {
-    if (data.message.startsWith(MATPLOTLIB_IMG_TAG)) {
+    if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
       // This is a matplotlib image, so we need to append it to the output
-      const image = data.message.slice(MATPLOTLIB_IMG_TAG.length + 1);
+      const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
       getStore().dispatch(appendOutputImage(image));
       return;
     }
-    getStore().dispatch(appendSystemOutMessage(data.message));
+    getStore().dispatch(appendSystemOutMessage(message));
     return;
   } else if (type === 'run_complete') {
     getStore().dispatch(appendSystemMessage('Program completed.'));
   } else if (type === 'updated_source') {
     // we should probably extract this somewhere...
-    getStore().dispatch(setSource(data.updatedSource));
+    getStore().dispatch(setSource(message));
     if (Lab2Registry.getInstance().getProjectManager()) {
       const projectSources = {
-        source: data.updatedSource,
+        source: message,
       };
       Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
     }
     return;
   } else if (type === 'error') {
-    getStore().dispatch(appendSystemMessage(`Error: ${data.error}`));
+    getStore().dispatch(appendSystemMessage(`Error: ${message}`));
+    return;
   } else {
-    console.warn(`Unknown message type ${type} from pyodideWorker.`);
-    console.warn({data});
+    console.warn(
+      `Unknown message type ${type} with message ${message} from pyodideWorker.`
+    );
     return;
   }
   const onSuccess = callbacks[id];
   delete callbacks[id];
-  onSuccess(data);
+  onSuccess(event.data);
 };
 
 const asyncRun = (() => {

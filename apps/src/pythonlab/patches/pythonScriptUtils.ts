@@ -1,8 +1,9 @@
 import {PyodideInterface} from 'pyodide';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {DEFAULT_FOLDER_ID} from '@cdo/apps/weblab2/CDOIDE/constants';
 
-import {PyodidePathContent} from '../types';
+import {PyodideMessage, PyodidePathContent} from '../types';
 
 import {ALL_PATCHES} from './patches';
 
@@ -56,20 +57,17 @@ export function writeSource(
     .forEach(folder => {
       // Create folder if it doesn't exist.
       const newPath = `${currentPath}${folder.name}`;
-      try {
-        pyodide.FS.readdir(newPath);
-      } catch (e) {
-        // Folder doesn't exist, create it.
-        pyodide.FS.mkdir(newPath);
-      }
+      createFolderIfNotExists(newPath, pyodide);
       // Recurse to write all children of the folder (files and folders).
       writeSource(source, folder.id, newPath + '/', pyodide);
     });
 }
 
 export function getUpdatedSource(
+  source: MultiFileSource,
+  id: string,
   pyodide: PyodideInterface,
-  source: MultiFileSource
+  sendMessage: (message: PyodideMessage) => void
 ) {
   const workingDir = pyodide.FS.cwd();
   // TODO: we should log an error for every new, non .csv or .txt file.
@@ -80,54 +78,102 @@ export function getUpdatedSource(
   ) as PyodidePathContent[];
   const newSource = {...source};
   console.log({directoryContents});
-  updateSourceWithContents(pyodide, directoryContents, newSource);
+  updateSourceWithContents(
+    directoryContents,
+    newSource,
+    workingDir + '/',
+    DEFAULT_FOLDER_ID,
+    id,
+    pyodide,
+    sendMessage
+  );
   return newSource;
 }
 
 function updateSourceWithContents(
-  pyodide: PyodideInterface,
   contents: PyodidePathContent[],
-  source: MultiFileSource
+  source: MultiFileSource,
+  currentPath: string,
+  folderId: string,
+  id: string,
+  pyodide: PyodideInterface,
+  sendMessage: (message: PyodideMessage) => void
 ) {
   contents.forEach(content => {
     const fileExtension = content.name.split('.').pop();
-    if (
-      pyodide.FS.isFile(content.mode) &&
-      (fileExtension === 'csv' || fileExtension === 'txt')
-    ) {
-      const file = Object.values(source.files).find(
-        f => f.name === content.name
-      );
-      try {
-        // todo: need to include directory path here
-        const newContents = pyodide.FS.readFile(content.name, {
-          encoding: 'utf8',
-        });
-        if (!file) {
-          const files = Object.values(source.files);
-          // We get errors if we try to use getNextFileId (perhaps due to web worker weirdness)
-          // so I copied the function here.
-          const newFileId = String(
-            Math.max(0, ...files.map(f => Number(f.id))) + 1
-          );
-          source.files[newFileId] = {
-            id: newFileId,
-            folderId: '0',
-            name: content.name,
-            language: fileExtension,
-            contents: newContents,
-          };
-        } else {
-          file.contents = newContents;
+    if (pyodide.FS.isFile(content.mode)) {
+      if (fileExtension === 'csv' || fileExtension === 'txt') {
+        const file = Object.values(source.files).find(
+          f => f.name === content.name
+        );
+        try {
+          // todo: need to include directory path here
+          console.log(`trying to read file ${currentPath + content.name}`);
+          const newContents = pyodide.FS.readFile(currentPath + content.name, {
+            encoding: 'utf8',
+          });
+          if (!file) {
+            const files = Object.values(source.files);
+            // We get errors if we try to use getNextFileId (perhaps due to web worker weirdness)
+            // so I copied the function here.
+            const newFileId = String(
+              Math.max(0, ...files.map(f => Number(f.id))) + 1
+            );
+            source.files[newFileId] = {
+              id: newFileId,
+              folderId,
+              name: content.name,
+              language: fileExtension,
+              contents: newContents,
+            };
+          } else {
+            file.contents = newContents;
+          }
+        } catch (e) {
+          console.warn(`could not read file ${content.name}, ${e}`);
         }
-      } catch (e) {
-        console.warn(`could not read file ${content.name}, ${e}`);
+      } else {
+        if (!Object.values(source.files).some(f => f.name === content.name)) {
+          sendMessage({
+            type: 'error',
+            message: `You cannot write a ${fileExtension} file in Python Lab`,
+            id: id,
+          });
+        }
       }
-    } else if (pyodide.FS.isDir(content.mode)) {
+      // Do not create or iterate through folders that start with '.' as these are hidden folders.
+    } else if (
+      pyodide.FS.isDir(content.mode) &&
+      !content.name.startsWith('.')
+    ) {
+      const newPath = currentPath + content.name + '/';
+      const existingFolder = Object.values(source.folders).find(
+        f => f.name === content.name && f.parentId === folderId
+      );
+      let newFolderId = '';
+      if (!existingFolder) {
+        createFolderIfNotExists(newPath, pyodide);
+        newFolderId = String(
+          Math.max(0, ...Object.values(source.folders).map(f => Number(f.id))) +
+            1
+        );
+        source.folders[newFolderId] = {
+          id: newFolderId,
+          name: content.name,
+          parentId: folderId,
+        };
+      } else {
+        newFolderId = existingFolder.id;
+      }
+
       updateSourceWithContents(
-        pyodide,
         Object.values(content.contents),
-        source
+        source,
+        newPath,
+        newFolderId,
+        id,
+        pyodide,
+        sendMessage
       );
     }
   });
@@ -137,8 +183,8 @@ function updateSourceWithContents(
 // This ensures any deleted file is not available to be imported,
 // which could cause confusion.
 export function deleteSourceFiles(
-  pyodide: PyodideInterface,
-  source: MultiFileSource
+  source: MultiFileSource,
+  pyodide: PyodideInterface
 ) {
   Object.values(source.files).forEach(file => {
     const filePath = getFilePath(file.id, source);
@@ -152,33 +198,6 @@ export function deleteSourceFiles(
   });
 }
 
-// For the given fileId, return the full path to the file, including the file name.
-const getFilePath = (fileId: string, source: MultiFileSource) => {
-  const path = [source.files[fileId].name];
-  addFoldersToPath(fileId, source, path);
-  return path.join('/');
-};
-
-// For the given fileId, return the module version of the file. For example, a file at
-// path folder1/folder2/file.py would have a module name of "folder1.folder2.file".
-const getModuleName = (fileId: string, source: MultiFileSource) => {
-  const path = [source.files[fileId].name.replace('.py', '')];
-  addFoldersToPath(fileId, source, path);
-  return path.join('.');
-};
-
-const addFoldersToPath = (
-  fileId: string,
-  source: MultiFileSource,
-  path: string[]
-) => {
-  let folderId = source.files[fileId].folderId;
-  while (source.folders[folderId]) {
-    path.unshift(source.folders[folderId].name);
-    folderId = source.folders[folderId].parentId;
-  }
-};
-
 export async function importPackagesFromFiles(
   source: MultiFileSource,
   pyodide: PyodideInterface
@@ -190,5 +209,43 @@ export async function importPackagesFromFiles(
     if (file.name.endsWith('.py')) {
       await pyodide.loadPackagesFromImports(file.contents);
     }
+  }
+}
+
+// For the given fileId, return the full path to the file, including the file name.
+function getFilePath(fileId: string, source: MultiFileSource) {
+  const path = [source.files[fileId].name];
+  addFoldersToPath(fileId, source, path);
+  return path.join('/');
+}
+
+// For the given fileId, return the module version of the file. For example, a file at
+// path folder1/folder2/file.py would have a module name of "folder1.folder2.file".
+function getModuleName(fileId: string, source: MultiFileSource) {
+  const path = [source.files[fileId].name.replace('.py', '')];
+  addFoldersToPath(fileId, source, path);
+  return path.join('.');
+}
+
+function addFoldersToPath(
+  fileId: string,
+  source: MultiFileSource,
+  path: string[]
+) {
+  let folderId = source.files[fileId].folderId;
+  while (source.folders[folderId]) {
+    path.unshift(source.folders[folderId].name);
+    folderId = source.folders[folderId].parentId;
+  }
+}
+
+function createFolderIfNotExists(
+  qualifiedFolderName: string,
+  pyodide: PyodideInterface
+) {
+  try {
+    pyodide.FS.readdir(qualifiedFolderName);
+  } catch (e) {
+    pyodide.FS.mkdir(qualifiedFolderName);
   }
 }

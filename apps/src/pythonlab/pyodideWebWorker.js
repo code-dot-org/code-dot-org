@@ -35,16 +35,22 @@ self.onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
   const {id, python, source} = event.data;
+  let results = '';
   try {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
     await importPackagesFromFiles(source, self.pyodide);
-    let results = await self.pyodide.runPythonAsync(python);
+    results = await self.pyodide.runPythonAsync(python);
     console.log('getting updated source...');
-    const updatedSource = getUpdatedSource(self.pyodide, source);
-    self.postMessage({type: 'updated_source', updatedSource});
-    self.postMessage({type: 'run_complete', results, id});
+    const updatedSource = getUpdatedSource(
+      source,
+      id,
+      self.pyodide,
+      self.postMessage
+    );
+    self.postMessage({type: 'updated_source', message: updatedSource, id});
   } catch (error) {
-    self.postMessage({type: 'error', error: error.message, id});
+    self.postMessage({type: 'error', message: error.message, id});
   }
-  deleteSourceFiles(self.pyodide, source);
+  deleteSourceFiles(source, self.pyodide);
+  self.postMessage({type: 'run_complete', message: results, id});
 };
