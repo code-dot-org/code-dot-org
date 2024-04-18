@@ -38,6 +38,13 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
         order(ActiveRecord::Base.sanitize_sql_for_order([Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name"), query]))
     end
 
+    # For private schools, we don't yet have a way to determine churn/inactive
+    # schools, so we surface them all to teachers.
+    # For public and charter schools, we filter on 'known open' schools as
+    # determined by nces 'status' (see school.rb for OPEN_SCHOOL_STATUSES logic)
+    # to prevent what will appear to the user as duplicate schools.
+    current_import_year = School.maximum(:last_known_school_year_open)
+    rows = rows.where("school_type = 'private' OR last_known_school_year_open = '#{current_import_year}'")
     return rows.map do |row|
       Serializer.new(row).attributes
     end
