@@ -988,6 +988,8 @@ DEPENDENCIES
   aws-sdk-rds
   aws-sdk-route53
   aws-sdk-s3
+  aws-sdk-sagemaker
+  aws-sdk-sagemakerruntime
   aws-sdk-secretsmanager
   bcrypt (= 3.1.13)
   benchmark-ips
