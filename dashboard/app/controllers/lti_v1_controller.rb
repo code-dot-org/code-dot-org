@@ -135,8 +135,12 @@ class LtiV1Controller < ApplicationController
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
 
     if jwt_verifier.verify_jwt
-      message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
-      return wrong_resource_type unless message_type == 'LtiResourceLinkRequest'
+      message_type = decoded_jwt[Policies::Lti::MessageType::CLAIM]
+      if Policies::Lti::MessageType::SUPPORTED.exclude?(message_type)
+        return render status: :not_acceptable, template: 'lti/v1/authenticate/unsupported_message_type', locals: {
+          message_type: message_type,
+        }
+      end
 
       user = Queries::Lti.get_user(decoded_jwt)
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
@@ -224,10 +228,14 @@ class LtiV1Controller < ApplicationController
   # open in new tab. The experience is unchanged to non-iframe users.
   def iframe
     auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
-    id_token_param = params[:id_token]
-    state_param = params[:state]
-    new_tab_param = 'new_tab=true'
-    @auth_url = "#{auth_url_base}?id_token=#{id_token_param}&state=#{state_param}&#{new_tab_param}"
+
+    query_params = {
+      id_token: ERB::Util.url_encode(params[:id_token]),
+      state: ERB::Util.url_encode(params[:state]),
+      new_tab: ERB::Util.url_encode("true"),
+    }
+
+    @auth_url = "#{auth_url_base}?#{query_params.to_query}"
     render 'lti/v1/iframe', layout: false
   end
 
@@ -422,10 +430,6 @@ class LtiV1Controller < ApplicationController
 
   private def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
-  end
-
-  private def wrong_resource_type
-    render(status: :not_acceptable, json: {error: I18n.t('lti.error.wrong_resource_type')})
   end
 
   private def create_state_and_nonce

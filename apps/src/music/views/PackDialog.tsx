@@ -109,8 +109,8 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   if (!library) return null;
 
-  const folders = library.getAllowedSounds(undefined, true);
-  const libraryGroupPath = library.libraryJson.path;
+  const folders = library.getRestrictedPacks();
+  const libraryGroupPath = library.getPath();
 
   const setSelectedFolder = (folder: SoundFolder) => {
     dispatch(setPackId(folder.id));

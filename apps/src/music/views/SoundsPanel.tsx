@@ -232,11 +232,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   onSelect,
   onPreview,
 }) => {
-  const folders = library.getAllowedSounds(undefined, false);
-  const libraryGroupPath = library.libraryJson.path;
+  const folders = library.getAvailableSounds();
+  const libraryGroupPath = library.getPath();
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
-    library.getAllowedFolderForSoundId(undefined, currentValue) || folders[0]
+    library.getAllowedFolderForSoundId(currentValue) || folders[0]
   );
   const [mode, setMode] = useState<Mode>('packs');
   const [filter, setFilter] = useState<Filter>('all');

@@ -1,45 +1,16 @@
 @no_mobile
 Feature: Professional learning Sections
 
-  Scenario: Create new professional learning section as levelbuilder
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
-    And I get levelbuilder access
-    And I reload the page
-
-    # Create section button
-    When I see the section set up box
-    Then I press the new section button
-
-    # Participant Type Picker
-    Then I should see the new section dialog
-    Then I wait to see ".uitest-participant-type-picker"
-    And element ".uitest-student-type" is visible
-    And element ".uitest-teacher-type" is visible
-    And element ".uitest-facilitator-type" is visible
-    When I select facilitator participant type
-
-    # New Section details
-    Then I wait to see "#sections-set-up-container"
-    And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
-    And I wait until element "button:contains(Professional Learning)" is visible
-    # TODO TEACH-592: Seed PL courses so we can test course assignment
-    # And I click selector "button:contains(Professional Learning)"
-    # And I press the first "input[name='Teacher PL Course']" element
-    And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element ".uitest-owned-pl-sections" is visible
-
-    # Professional Learning Sections Table
-    Then I should see the professional learning section table
-    Then the professional learning section table should have 1 row
-    And I wait until element "a:contains(My Section of Teachers)" is visible
-    And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
-
   Scenario: Create new professional learning section as universal instructor
     Given I create an authorized teacher-associated student named "Maggie"
     When I sign in as "Teacher_Maggie" and go home
     And I get universal instructor access
     And I reload the page
+    Then I am on "http://studio.code.org/my-professional-learning"
+
+    # Go to the right My PL page tab
+    And I wait until element "button:contains(Instructors)" is visible
+    Then I click selector "button:contains(Instructors)"
 
     # Create section button
     When I see the section set up box
@@ -58,9 +29,12 @@ Feature: Professional learning Sections
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     And I wait until element "button:contains(Professional Learning)" is visible
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element ".uitest-owned-pl-sections" is visible
+    Then I am on "http://studio.code.org/my-professional-learning"
 
     # Professional Learning Sections Table
+    Then I wait until element "button:contains(Instructors)" is visible
+    Then I click selector "button:contains(Instructors)"
+    Then I wait until element ".uitest-owned-pl-sections" is visible
     Then I should see the professional learning section table
     Then the professional learning section table should have 1 row
     And I wait until element "a:contains(My Section of Teachers)" is visible
@@ -71,6 +45,11 @@ Feature: Professional learning Sections
     When I sign in as "Teacher_Arity" and go home
     And I get plc reviewer access
     And I reload the page
+    Then I am on "http://studio.code.org/my-professional-learning"
+
+    # Go to the right My PL page tab
+    And I wait until element "button:contains(Instructors)" is visible
+    Then I click selector "button:contains(Instructors)"
 
     # Create section button
     When I see the section set up box
@@ -89,9 +68,12 @@ Feature: Professional learning Sections
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     And I wait until element "button:contains(Professional Learning)" is visible
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element ".uitest-owned-pl-sections" is visible
+    Then I am on "http://studio.code.org/my-professional-learning"
 
     # Professional Learning Sections Table
+    Then I wait until element "button:contains(Instructors)" is visible
+    Then I click selector "button:contains(Instructors)"
+    Then I wait until element ".uitest-owned-pl-sections" is visible
     Then I should see the professional learning section table
     Then the professional learning section table should have 1 row
     And I wait until element "a:contains(My Section of Teachers)" is visible
@@ -102,6 +84,11 @@ Feature: Professional learning Sections
     When I sign in as "Teacher_Colin" and go home
     And I get facilitator access
     And I reload the page
+    Then I am on "http://studio.code.org/my-professional-learning"
+
+    # Go to the right My PL page tab
+    And I wait until element "button:contains(Facilitator Center)" is visible
+    Then I click selector "button:contains(Facilitator Center)"
 
     # Create section button
     When I see the section set up box
@@ -120,9 +107,12 @@ Feature: Professional learning Sections
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     And I wait until element "button:contains(Professional Learning)" is visible
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element ".uitest-owned-pl-sections" is visible
+    Then I am on "http://studio.code.org/my-professional-learning"
 
     # Professional Learning Sections Table
+    Then I wait until element "button:contains(Facilitator Center)" is visible
+    Then I click selector "button:contains(Facilitator Center)"
+    Then I wait until element ".uitest-owned-pl-sections" is visible
     Then I should see the professional learning section table
     Then the professional learning section table should have 1 row
     And I wait until element "a:contains(My Section of Teachers)" is visible

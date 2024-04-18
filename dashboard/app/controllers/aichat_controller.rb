@@ -1,4 +1,5 @@
 class AichatController < ApplicationController
+  authorize_resource class: false
   # params are
   # newMessage: string
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
@@ -6,7 +7,9 @@ class AichatController < ApplicationController
   # chatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
-    params.require([:newMessage, :storedMessages, :aichatParameters, :chatContext])
+    unless has_required_params?
+      return render status: :bad_request, json: {}
+    end
 
     # Check for PII / Profanity
     # Copied from ai_tutor_interactions_controller.rb - not sure if filtering is working.
@@ -28,5 +31,14 @@ class AichatController < ApplicationController
     response_body = {role: "assistant", content: "This is an assistant response from Sagemaker"}
     response_code = 200
     return {status: response_code, json: response_body}
+  end
+
+  private def has_required_params?
+    begin
+      params.require([:newMessage, :storedMessages, :aichatParameters, :chatContext])
+    rescue ActionController::ParameterMissing
+      return false
+    end
+    true
   end
 end

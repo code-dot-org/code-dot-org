@@ -81,9 +81,13 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             disabled={!newRetrievalContext || isDisabled(visibility)}
           />
         </div>
+        <div className={styles.addedItemsHeaderContainer}>
+          <StrongText>Added</StrongText>
+        </div>
         {retrievalContexts.map((message, index) => {
           return (
             <div key={index} className={styles.itemContainer}>
+              <span>{message}</span>
               <button
                 type="button"
                 onClick={() => onRemove(index)}
@@ -95,7 +99,6 @@ const RetrievalCustomization: React.FunctionComponent = () => {
                   className={styles.removeItemIcon}
                 />
               </button>
-              <span className={styles.itemText}>{message}</span>
             </div>
           );
         })}

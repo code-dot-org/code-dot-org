@@ -915,6 +915,8 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
+        get 'users/cached_page_auth_redirect', to: 'users#cached_page_auth_redirect'
+
         patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
         patch 'user_school_infos', to: 'user_school_infos#update'
@@ -1038,6 +1040,8 @@ Dashboard::Application.routes.draw do
         get 'select_start_animations'
       end
     end
+
+    resource :new_feature_feedback, controller: :new_feature_feedback, only: %i[create show]
 
     # These really belong in the foorm namespace,
     # but we leave them outside so that we can easily use the simple "/form" paths.
