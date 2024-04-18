@@ -8,6 +8,8 @@ import Link from '@cdo/apps/componentLibrary/link';
 const codeOrgLogo = require(`@cdo/static/music/code-dot-org-white-logo.png`);
 
 const MusicPlayView: React.FunctionComponent = () => {
+  console.log(navigator);
+  console.log(navigator.share);
   return (
     <div className={moduleStyles.musicPlayViewContainer}>
       <div className={moduleStyles.musicPlayViewCard}>
@@ -30,7 +32,7 @@ const MusicPlayView: React.FunctionComponent = () => {
             onClick={() => console.log('view code, redirect to view')}
           />
           <Button
-            text="Maky My Own"
+            text="Remix"
             type="secondary"
             color="white"
             size="s"
@@ -38,6 +40,23 @@ const MusicPlayView: React.FunctionComponent = () => {
             onClick={() => console.log('make my own, redirect to remix')}
           />
         </div>
+        {navigator.share && (
+          <div className={moduleStyles.musicPlayViewButtonsSection}>
+            <Button
+              text="Share"
+              type="secondary"
+              color="white"
+              size="s"
+              iconLeft={{iconStyle: 'solid', iconName: 'share'}}
+              onClick={() =>
+                navigator.share({
+                  title: 'My Awesome Mix',
+                  url: window.location.href,
+                })
+              }
+            />
+          </div>
+        )}
       </div>
     </div>
   );
