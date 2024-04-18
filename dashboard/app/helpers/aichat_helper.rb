@@ -40,11 +40,10 @@ module AichatHelper
   end
 
   def self.get_sagemaker_assistant_response(sagemaker_response)
-    begin
-      parsed_response = JSON.parse(sagemaker_response.body.string)
-      generated_text = parsed_response[0]["generated_text"]
-      parts = generated_text.split("[/INST]")
-      parts.last
+    parsed_response = JSON.parse(sagemaker_response.body.string)
+    generated_text = parsed_response[0]["generated_text"]
+    parts = generated_text.split("[/INST]")
+    parts.last
   end
 
   def self.wrap_as_instructions(message)
