@@ -25,11 +25,7 @@ class AichatController < ApplicationController
 
     input_json = AichatHelper.format_inputs_for_sagemaker_request(params[:aichatParameters], params[:storedMessages], params[:newMessage])
     sagemaker_response = AichatHelper.request_sagemaker_chat_completion(input_json)
-    parsed_response = JSON.parse(sagemaker_response.body.string)
-    generated_text = parsed_response[0]["generated_text"]
-    parts = generated_text.split("[/INST]")
-    latest_assistant_response = parts.last
-
+    latest_assistant_response = AichatHelper.get_sagemaker_assistant_response(sagemaker_response)
     payload = {
       role: "assistant",
       content: latest_assistant_response
