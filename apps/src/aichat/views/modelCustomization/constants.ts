@@ -4,6 +4,7 @@ import {
   ModelCardInfo,
   Visibility,
 } from '../../types';
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
 
 export const MIN_TEMPERATURE = 0;
 export const MAX_TEMPERATURE = 1;
@@ -42,7 +43,7 @@ export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
 };
 
 export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
-  selectedModelId: '',
+  selectedModelId: modelDescriptions[0].id,
   temperature: 0.5,
   systemPrompt: '',
   retrievalContexts: [],
@@ -63,7 +64,7 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   initialCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   visibilities: DEFAULT_VISIBILITIES,
   hidePresentationPanel: false,
-  availableModelIds: [],
+  availableModelIds: [modelDescriptions[0].id],
 };
 
 export const AI_CUSTOMIZATIONS_LABELS: {
