@@ -58,9 +58,9 @@ const ModelSelectionFields: React.FunctionComponent = () => {
           <BodyFourText>
             <i>
               Models available to the student to select from and compare to each
-              other. Note that these are only relevant if visibility is
-              Editable. Otherwise, the model selection dropdown will be disabled
-              and compare button will be hidden in the level.
+              other. If making this setting editable, it's best practice to
+              select at least 2 models so students have something to compare -
+              otherwise, consider making this read only or hidden.
             </i>
           </BodyFourText>
           {modelDescriptions.map(model => {

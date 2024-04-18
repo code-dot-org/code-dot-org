@@ -15,7 +15,7 @@ import {
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
-import {isVisible, isDisabled} from './utils';
+import {isVisible, isDisabled, isEditable} from './utils';
 import CompareModelsDialog from './CompareModelsDialog';
 import {modelDescriptions} from '../../constants';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
@@ -26,7 +26,7 @@ const SetupCustomization: React.FunctionComponent = () => {
   const [isShowingModelDialog, setIsShowingModelDialog] =
     useState<boolean>(false);
 
-  const {temperature, systemPrompt} = useAppSelector(
+  const {temperature, systemPrompt, selectedModelId} = useAppSelector(
     state => state.aichat.fieldVisibilities
   );
   const aiCustomizations = useAppSelector(
@@ -72,16 +72,19 @@ const SetupCustomization: React.FunctionComponent = () => {
           name="model"
           size="s"
           className={styles.selectedModelDropdown}
+          disabled={isDisabled(selectedModelId)}
         />
-        <Button
-          text="Compare Models"
-          onClick={() => setIsShowingModelDialog(true)}
-          type="secondary"
-          className={classNames(
-            styles.updateButton,
-            styles.compareModelsButton
-          )}
-        />
+        {isEditable(selectedModelId) && (
+          <Button
+            text="Compare Models"
+            onClick={() => setIsShowingModelDialog(true)}
+            type="secondary"
+            className={classNames(
+              styles.updateButton,
+              styles.compareModelsButton
+            )}
+          />
+        )}
         {isShowingModelDialog && (
           <CompareModelsDialog
             onClose={() => setIsShowingModelDialog(false)}
@@ -95,7 +98,7 @@ const SetupCustomization: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       <div className={styles.customizationContainer}>
-        {renderChooseAndCompareModels()}
+        {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>
