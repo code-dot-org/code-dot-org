@@ -89,11 +89,17 @@ const EditAichatSettings: React.FunctionComponent<{
     [aichatSettings, setAichatSettings, initialCustomizations]
   );
 
-  const setAvailableModelsSetting = useCallback(
-    (availableModelIds: string[]) => {
+  const setModelSelectionValues = useCallback(
+    (availableModelIds: string[], selectedModelId: string = '') => {
       setAichatSettings({
         ...aichatSettings,
         availableModelIds: availableModelIds,
+        initialCustomizations: {
+          ...aichatSettings.initialCustomizations,
+          ['selectedModelId']:
+            selectedModelId ||
+            aichatSettings.initialCustomizations.selectedModelId,
+        },
       });
     },
     [aichatSettings, setAichatSettings]
@@ -106,7 +112,7 @@ const EditAichatSettings: React.FunctionComponent<{
         setPropertyVisibility,
         setPropertyValue,
         setModelCardPropertyValue,
-        setAvailableModelsSetting,
+        setModelSelectionValues,
       }}
     >
       <div>

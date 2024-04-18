@@ -8,10 +8,19 @@ import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import moduleStyles from './edit-aichat-settings.module.scss';
 import {UpdateContext} from './UpdateContext';
 import FieldSection from './FieldSection';
+import {Visibility} from '@cdo/apps/aichat/types';
+
+const unionModelIds = (
+  additionalIds: Set<string>,
+  selectedId: string
+): string[] => {
+  return Array.from(new Set(additionalIds).add(selectedId));
+};
 
 const ModelSelectionFields: React.FunctionComponent = () => {
-  const {setPropertyValue, setAvailableModelsSetting, aichatSettings} =
-    useContext(UpdateContext);
+  const {setModelSelectionValues, aichatSettings} = useContext(UpdateContext);
+  const shouldDisableAdditionalModelSelection =
+    aichatSettings.visibilities.selectedModelId !== Visibility.EDITABLE;
   const [additionalAvailableModelIds, setAdditionalAvailableModelIds] =
     useState<Set<string>>(
       new Set(
@@ -21,14 +30,6 @@ const ModelSelectionFields: React.FunctionComponent = () => {
       )
     );
   const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
-
-  const updateAvailableModels = () => {
-    console.log('updating available models');
-    console.log(selectedModelId);
-    setAvailableModelsSetting(
-      Array.from(new Set(additionalAvailableModelIds).add(selectedModelId))
-    );
-  };
 
   return (
     <FieldSection
@@ -40,14 +41,11 @@ const ModelSelectionFields: React.FunctionComponent = () => {
         <>
           <SimpleDropdown
             labelText=""
-            onChange={event => {
-              setAvailableModelsSetting(
-                Array.from(
-                  new Set(additionalAvailableModelIds).add(event.target.value)
-                )
+            onChange={e => {
+              setModelSelectionValues(
+                unionModelIds(additionalAvailableModelIds, e.target.value),
+                e.target.value
               );
-              setPropertyValue('selectedModelId', event.target.value);
-              // updateAvailableModels();
             }}
             items={modelDescriptions.map(model => {
               return {value: model.id, text: model.name};
@@ -59,10 +57,10 @@ const ModelSelectionFields: React.FunctionComponent = () => {
           <br />
           <BodyFourText>
             <i>
-              Additional models available to the student to select from and
-              compare to each other. Note that these are only relevant if
-              visibility is Editable. Otherwise, the model selection dropdown
-              will be disabled in the level.
+              Models available to the student to select from and compare to each
+              other. Note that these are only relevant if visibility is
+              Editable. Otherwise, the model selection dropdown will be disabled
+              and compare button will be hidden in the level.
             </i>
           </BodyFourText>
           {modelDescriptions.map(model => {
@@ -76,21 +74,34 @@ const ModelSelectionFields: React.FunctionComponent = () => {
                     additionalAvailableModelIds.has(model.id) ||
                     model.id === selectedModelId
                   }
-                  disabled={model.id === selectedModelId}
+                  disabled={
+                    model.id === selectedModelId ||
+                    shouldDisableAdditionalModelSelection
+                  }
                   onChange={e => {
                     if (e.target.checked) {
                       setAdditionalAvailableModelIds(
                         additionalAvailableModelIds.add(e.target.name)
                       );
-                      console.log(additionalAvailableModelIds);
-                      updateAvailableModels();
+                      setModelSelectionValues(
+                        unionModelIds(
+                          additionalAvailableModelIds,
+                          selectedModelId
+                        ),
+                        selectedModelId
+                      );
                     } else {
                       additionalAvailableModelIds.delete(e.target.name);
                       setAdditionalAvailableModelIds(
                         additionalAvailableModelIds
                       );
-                      updateAvailableModels();
-                      console.log(additionalAvailableModelIds);
+                      setModelSelectionValues(
+                        unionModelIds(
+                          additionalAvailableModelIds,
+                          selectedModelId
+                        ),
+                        selectedModelId
+                      );
                     }
                   }}
                 />
