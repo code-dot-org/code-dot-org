@@ -29,7 +29,7 @@ $default-spacing: 2px;
   padding: 10px 10px;
   border-radius: 10px;
   overflow: hidden;
-  max-width: 80%;
+  max-width: calc(100% - 92px - 1rem);
   margin-bottom: 15px;
 }
 
@@ -131,10 +131,12 @@ $default-spacing: 2px;
 .assistantMessageButtonRow .hamburgerMenuButton {
   border: none;
   padding: 0 10px;
+  height: 36px;
 }
 
 .assistantMessageButtonRow {
   display: flex;
   justify-content: space-between;
-  gap: 5px;
+  gap: 10px;
+  align-items: center;
 }
