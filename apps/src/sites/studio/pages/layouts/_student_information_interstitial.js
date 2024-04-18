@@ -9,9 +9,11 @@ const inSection = getScriptData('inSection');
 
 $(document).ready(function () {
   const pathName = window.location.pathname;
+  const modal = $('#student-information-modal');
+  const form = $('#edit_user');
 
   if (pathName !== '/lti/v1/authenticate') {
-    $('#student-information-modal').modal('show');
+    modal.modal('show');
     retrieveInfoForCap &&
       analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_SHOW, {
         user_id: userId,
@@ -19,41 +21,17 @@ $(document).ready(function () {
       });
   }
 
-  const checkInputs = () => {
-    const ageValue = $('#user_age').val();
-    const stateValue = $('#user_us_state').val();
-    $('.age-required').toggle(!ageValue);
-    $('.state-required').toggle(!stateValue);
-    console.log('Age Value: ' + ageValue);
-    console.log('Age Value: ' + stateValue);
-    $('#edit_user #submit-btn').prop(
-      'disabled',
-      ageValue === '' || stateValue === ''
-    );
-  };
+  form.on('ajax:success', () => {
+    retrieveInfoForCap ? location.reload() : modal.modal('hide');
+  });
 
-  $('#edit_user select').on('change', checkInputs);
-
-  $('#edit_user').submit(function (event) {
-    event.preventDefault($(this).serialize());
+  form.on('submit', () => {
     const stateValue = $('#user_us_state').val();
-    if (!stateValue && retrieveInfoForCap)
+    if (stateValue && retrieveInfoForCap)
       analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_PROVIDED, {
         user_id: userId,
         in_section: inSection,
         us_state: stateValue,
       });
-    $.ajax({
-      type: 'POST',
-      url: $(this).attr('action') + '/set_student_information',
-      data: $(this).serialize(),
-      dataType: 'json',
-      success: function (data) {
-        retrieveInfoForCap
-          ? location.reload()
-          : $('#student-information-modal').modal('hide');
-      },
-    });
   });
-  checkInputs();
 });

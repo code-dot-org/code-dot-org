@@ -13,14 +13,14 @@
             %div{style: 'display: flex;'}
               = f.label :age, t('signup_form.age'), class: 'label-title'
               .age-required *
-            = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: t('signup_form.select_age')
+            = f.select :age, User::AGE_DROPDOWN_OPTIONS, {include_blank: t('signup_form.select_age')}, required: true
             .required-message.age-required= t('activerecord.attributes.user.required')
         - if lti_user_info_required?(student) || cap_user_info_required?(student, country)
           .form-group
             %div{style: 'display: flex;'}
               = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-title'
               .state-required *
-            = f.select :us_state, us_state_options, include_blank: t('school_info.select_state')
+            = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, required: true
             .required-message.state-required= t('activerecord.attributes.user.required')
         -if lti_user_info_required?(student)
           .field
@@ -29,5 +29,5 @@
         - haml_tag :hr, class: 'header-divider'
         .form-group#information_form_buttons
           = link_to t('nav.user.logout'), destroy_user_session_url, class: 'btn primary-button', id: 'sign-out-btn'
-          = f.submit t('continue'), class: 'btn primary-button', disabled: true, id: 'submit-btn'
+          = f.submit t('continue'), class: 'btn primary-button', id: 'submit-btn'
 %script{src: webpack_asset_path('js/layouts/_student_information_interstitial.js'), data: {retrieveInfoForCap: cap_user_info_required?(student, country).to_json, userId: current_user.id.to_json, inSection: (!current_user.sections_as_student.empty?).to_json}}
