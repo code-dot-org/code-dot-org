@@ -33,16 +33,21 @@ Scenario: Teacher can open and close Icon Key and details
   And I click selector "#ui-close-dialog"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
 
-Scenario: Teacher can view lesson progress
+@eyes
+Scenario: Teacher can view lesson progress for when students have completed a lesson and when they have started a lesson but not finished
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
   # Student completes one of many levels in lesson 2
   And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
-  # Student completes all the levels in lesson 6
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/6/levels/1"
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/6/levels/2"
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/6/levels/3"
+  # Student completes all the levels in lesson 10 (there is only one level)
+  Given I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
+  Then I wait for 3 seconds
+  And I wait until element ".submitButton" is visible
+  And I press ".answerbutton[index=1]" using jQuery
+  And I press ".answerbutton[index=0]" using jQuery
+  And I press ".submitButton:first" using jQuery
+  And I wait to see ".modal"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
@@ -57,10 +62,8 @@ Scenario: Teacher can view lesson progress
   And I wait until element "h6:contains(Icon Key)" is visible
   And I wait until element "#ui-test-progress-table-v2" is visible
   And element "#ui-test-progress-table-v2" is visible 
+  And I wait until element "#uitest-circle" is visible
 
-  # Teacher can view lesson progress when a student has not started a lesson (show lesson 3 is not started)
-  # Teacher can view lesson progress when student has finished all levels in a lesson (Show lesson 6 is complete)
-  # Teacher can view lesson progress when student has started but not finished a lesson (Show lesson 2 is started)
   And I open my eyes to test "V2 progress dashboard"
   And I see no difference for "V2 progress dashboard"
   And I close my eyes
