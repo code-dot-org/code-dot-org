@@ -19,33 +19,25 @@ $(document).ready(function () {
       });
   }
 
-  function checkInputs() {
+  const checkInputs = () => {
     const ageValue = $('#user_age').val();
     const stateValue = $('#user_us_state').val();
-    if (ageValue !== '') {
-      $('.age-required').hide();
-    } else {
-      $('.age-required').show();
-    }
-    if (stateValue !== '') {
-      $('.state-required').hide();
-    } else {
-      $('.state-required').show();
-    }
+    $('.age-required').toggle(!ageValue);
+    $('.state-required').toggle(!stateValue);
+    console.log('Age Value: ' + ageValue);
+    console.log('Age Value: ' + stateValue);
     $('#edit_user #submit-btn').prop(
       'disabled',
       ageValue === '' || stateValue === ''
     );
-  }
+  };
 
-  $('#edit_user select').on('change', function (event) {
-    checkInputs();
-  });
+  $('#edit_user select').on('change', checkInputs);
 
   $('#edit_user').submit(function (event) {
     event.preventDefault($(this).serialize());
     const stateValue = $('#user_us_state').val();
-    if (stateValue !== '')
+    if (!stateValue && retrieveInfoForCap)
       analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_PROVIDED, {
         user_id: userId,
         in_section: inSection,
@@ -63,10 +55,5 @@ $(document).ready(function () {
       },
     });
   });
-
-  $('#sign-out-btn').click(function (event) {
-    window.location = '#{destroy_user_session_url}';
-  });
-
   checkInputs();
 });
