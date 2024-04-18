@@ -27,6 +27,7 @@ export const MODEL_CARD_FIELDS_LABELS_ICONS: [
 
 export const TECHNICAL_INFO_FIELDS = [
   'Model Name',
+  'Overview',
   'Training Data',
   'System Prompt',
   'Temperature',
