@@ -194,7 +194,6 @@ const saveAiCustomization = async (
   changedProperties.forEach(property => {
     dispatch(
       addChatMessage({
-        id: 0,
         role: Role.MODEL_UPDATE,
         chatMessageText:
           AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
