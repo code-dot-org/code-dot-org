@@ -59,7 +59,6 @@ Scenario: Teacher can view lesson progress for when students have completed a le
 
   # toggle to V2 progress view
   Then I click selector "#ui-test-toggle-progress-view"
-  And I wait until element "h6:contains(Icon Key)" is visible
   And I wait until element "#ui-test-progress-table-v2" is visible
   And element "#ui-test-progress-table-v2" is visible 
   And I wait until element "#uitest-circle" is visible
