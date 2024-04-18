@@ -7,9 +7,8 @@ import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {CDOIDE} from '@cdo/apps/weblab2/CDOIDE';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import Lab2Registry from '../lab2/Lab2Registry';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {setSource} from './pythonlabRedux';
+import {setAndSaveSource, setSource} from './pythonlabRedux';
 import PythonConsole from './PythonConsole';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
@@ -72,7 +71,6 @@ const defaultConfig: ConfigType = {
 };
 
 const PythonlabView: React.FunctionComponent = () => {
-  //const [currentProject, setCurrentProject] = useState<MultiFileSource>();
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const initialSources = useAppSelector(state => state.lab.initialSources);
   const channelId = useAppSelector(state => state.lab.channel?.id);
@@ -83,13 +81,7 @@ const PythonlabView: React.FunctionComponent = () => {
   // https://codedotorg.atlassian.net/browse/CT-499
   const setProject = useMemo(
     () => (newProject: MultiFileSource) => {
-      dispatch(setSource(newProject));
-      if (Lab2Registry.getInstance().getProjectManager()) {
-        const projectSources = {
-          source: newProject,
-        };
-        Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-      }
+      dispatch(setAndSaveSource(newProject));
     },
     [dispatch]
   );
