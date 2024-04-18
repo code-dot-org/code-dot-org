@@ -211,6 +211,14 @@ module Services
         end
       end
 
+      # Handle the case where the primary instructor has been removed from the section in the LMS,
+      # but a single co-instructor remains. In this case, promote the co-instructor to the primary instructor.
+      if current_teachers.size == 1 && current_teachers.first != section.user_id
+        section.update!(user_id: current_teachers.first)
+        instructor_list.find {|i| i[:id] == current_teachers.first}[:isOwner] = true
+        had_changes = true
+      end
+
       # Prune students who have been removed from the section in the LMS
       lti_section.followers.each do |follower|
         unless current_students.include?(follower.student_user_id)

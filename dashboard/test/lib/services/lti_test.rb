@@ -649,4 +649,8 @@ class Services::LtiTest < ActiveSupport::TestCase
 
     assert_equal User::TYPE_STUDENT, user_type
   end
+
+  test 'should promote a single remaining co-instructor to primary instructor when the primary instructor is removed' do
+    
+  end
 end
