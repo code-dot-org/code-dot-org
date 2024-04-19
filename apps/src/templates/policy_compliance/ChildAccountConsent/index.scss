@@ -22,13 +22,6 @@
   & p.permission-granted-date {
     margin: 28px 0;
 
-    & .title {
-      display: inline-block;
-      color: $light_gray_800;
-      background-color: rgb(255 214 0 / 0.25);
-      padding: 0 2px;
-    }
-
     & .date {
       color: $bright_green;
     }

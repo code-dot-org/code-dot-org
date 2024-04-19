@@ -38,9 +38,7 @@ function permissionGrantedMessage(date) {
     <div id="permission_granted_container">
       <Heading4>{i18n.childAccountConsentValidHeader()}</Heading4>
       <BodyTwoText className="permission-granted-date">
-        <StrongText className="title">
-          {i18n.childAccountConsentValidPermission()}
-        </StrongText>{' '}
+        <StrongText>{i18n.childAccountConsentValidPermission()} </StrongText>
         <StrongText className="date">{grantedDateString}</StrongText>
       </BodyTwoText>
       <BodyThreeText>{i18n.childAccountConsentValidMessage()}</BodyThreeText>
