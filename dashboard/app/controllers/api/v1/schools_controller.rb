@@ -53,8 +53,7 @@ class Api::V1::SchoolsController < ApplicationController
 
   # GET /dashboardapi/v1/schoolzipsearch/:zip
   def zip_search
-    zip_string = "#{params.require(:zip)[0, 5]}%"
-    rows = School.where("zip LIKE ?", zip_string)
+    rows = School.where(zip: params.require(:zip))
     # For private schools, we don't yet have a way to determine inactive schools so we consider all active.
     # For public & charter schools, we include only open schools as determined by nces 'status' (see
     # school.rb for OPEN_SCHOOL_STATUSES logic) to prevent showing duplicate/inactive schools to the user.
