@@ -57,11 +57,6 @@ Dashboard::Application.configure do
   # Disable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = false
 
-  # Configure the ActiveJob queue adapter to :test to prevent execution of background jobs during testing.
-  # This ensures that jobs are enqueued but not performed, allowing them to be inspected or tested for proper queuing.
-  # See https://api.rubyonrails.org/v6.1.7.7/classes/ActiveJob/TestHelper.html#method-i-assert_enqueued_with
-  config.active_job.queue_adapter = :test
-
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
