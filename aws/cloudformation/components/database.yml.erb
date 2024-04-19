@@ -208,18 +208,17 @@
         - PolicyName: RDSProxy
           PolicyDocument:
             Statement:
-              -
-                Effect: Allow
+              - Effect: Allow
                 Action: secretsmanager:GetSecretValue
                 Resource: !Ref DatabaseSecretReader
-              -
-                Effect: Allow
+
+              - Effect: Allow
                 Action: secretsmanager:GetSecretValue
                 Resource: !Ref DatabaseSecretWriter
+
               # Engineers with database access will have a read-only credential stored in a Secret.
               # Example: `db_credential_employee_ada.lovelace`
-              -
-                Effect: Allow
+              - Effect: Allow
                 Action: secretsmanager:GetSecretValue
                 Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/${AWS::StackName}/db_credential_employee_*"
       PermissionsBoundary: !ImportValue IAM-DevPermissions
