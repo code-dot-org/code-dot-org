@@ -133,19 +133,19 @@ class Api::V1::SchoolAutocompleteTest < ActiveSupport::TestCase
   end
 
   test 'zip_search returns match' do
-    search_results = Api::V1::SchoolAutocomplete.get_zip_matches('27105', MAXIMUM_RESULTS, false)
+    search_results = Api::V1::SchoolAutocomplete.get_zip_matches('27105')
     # QUALITY EDUCATION ACADEMY is in 27105
     assert(search_results.detect {|school| school[:nces_id] == '370002502096'})
   end
 
   test 'zip_search by zip with no schools in it returns no match' do
-    search_results = Api::V1::SchoolAutocomplete.get_zip_matches('10001', MAXIMUM_RESULTS, false)
+    search_results = Api::V1::SchoolAutocomplete.get_zip_matches('10001')
     assert 0, search_results.count
   end
 
   test 'zip_search for outdated school returns no match' do
     # CHILDREN'S VILLAGE is in 98936, but last_known_school_year_open is a year behind all other schools
-    search_results = Api::V1::SchoolAutocomplete.get_zip_matches('98936', MAXIMUM_RESULTS, false)
+    search_results = Api::V1::SchoolAutocomplete.get_zip_matches('98936')
     assert 0, search_results.count
   end
 end
