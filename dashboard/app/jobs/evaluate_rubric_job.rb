@@ -51,6 +51,21 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  # This is raised if the request is too large for the openai, indicating that
+  # the code was too long relative to the LLM's context window.
+  class RequestTooLargeError < StandardError
+    attr_reader :response
+
+    # Creates a RequestTooLargeError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
+
+      super("Request too large for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
+    end
+  end
+
   # For testing purposes, we can raise this error to simulate a missing key
   class StubNoSuchKey < StandardError
   end
@@ -180,6 +195,23 @@ class EvaluateRubricJob < ApplicationJob
     begin
       rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
       rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION]
+      rubric_ai_evaluation.save!
+    rescue StandardError
+      # Ignore cascading errors when the rubric record does not exist
+    end
+
+    # We gracefully just fail, here, and we do not file this exception
+  end
+
+  rescue_from(RequestTooLargeError) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob RequestTooLargeError: #{exception.message}"
+    end
+
+    # Record the failure, if we can
+    begin
+      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:REQUEST_TOO_LARGE]
       rubric_ai_evaluation.save!
     rescue StandardError
       # Ignore cascading errors when the rubric record does not exist
@@ -411,6 +443,8 @@ class EvaluateRubricJob < ApplicationJob
     # Raise too many requests error if we see a 429
     # The proxy service will bubble up the 429 error from the service itself
     raise TooManyRequestsError.new(response) if response.code == 429
+
+    raise RequestTooLargeError.new(response) if response.code == 413
 
     # General error will raise a generic StandardError
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?

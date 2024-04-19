@@ -74,4 +74,8 @@ class RubricAiEvaluation < ApplicationRecord
   def share_filtering_failure?
     pii_failure? || profanity_failure?
   end
+
+  def request_too_large?
+    status == SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:REQUEST_TOO_LARGE]
+  end
 end
