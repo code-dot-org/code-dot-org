@@ -99,7 +99,7 @@ const initialState: AichatState = {
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
-    const rootState = (await thunkAPI.getState()) as RootState;
+    const rootState = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     const {dispatch} = thunkAPI;
 
@@ -120,7 +120,7 @@ export const publishModel = createAsyncThunk(
     const {dispatch} = thunkAPI;
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
 
-    const rootState = (await thunkAPI.getState()) as RootState;
+    const rootState = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     await saveAiCustomization(
       currentAiCustomizations,
@@ -137,13 +137,13 @@ export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
   async (_, thunkAPI) => {
     const {dispatch} = thunkAPI;
-    const modelCardInfo = await (thunkAPI.getState() as RootState).aichat
+    const modelCardInfo = (thunkAPI.getState() as RootState).aichat
       .currentAiCustomizations.modelCardInfo;
     if (!hasFilledOutModelCard(modelCardInfo)) {
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
 
-    const {currentAiCustomizations, savedAiCustomizations} = await (
+    const {currentAiCustomizations, savedAiCustomizations} = (
       thunkAPI.getState() as RootState
     ).aichat;
     await saveAiCustomization(
@@ -333,10 +333,6 @@ const aichatSlice = createSlice({
             [customization]: studentAiCustomizations[customization],
           };
         }
-      }
-
-      if (studentAiCustomizations.modelCardInfo.isPublished) {
-        reconciledAiCustomizations.modelCardInfo.isPublished = true;
       }
 
       state.savedAiCustomizations = reconciledAiCustomizations;
