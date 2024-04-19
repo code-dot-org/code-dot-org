@@ -1,4 +1,4 @@
-@no_mobile 
+@no_mobile
 Feature: Using the assessments tab in the teacher dashboard to get feedback for script
 
   Background:
@@ -21,7 +21,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I click selector ".assignment-version-title:contains('19-'20)" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Unit 3 - Intro to Programming ('19-'20)" option in dropdown "uitest-secondary-assignment"
-    And I press the first "#uitest-save-section-changes" element
+    And I press the first "#uitest-save-section-changes" element to load a new page
     And I wait until element "#classroom-sections" is visible
 
     # Progress tab
@@ -41,7 +41,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
    # Assign a unit without feedback
     When I sign in as "Teacher_Sally" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
-    And I click selector ".edit-section-details-link"
+    And I click selector ".edit-section-details-link" to load a new page
     Then I wait until element "#uitest-section-name-setup" is visible
     And I press keys "testingSection" for element "#uitest-section-name-setup"
     And I press the first "input[name='grades[]']" element

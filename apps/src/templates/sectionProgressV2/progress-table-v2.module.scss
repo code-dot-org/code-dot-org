@@ -1,7 +1,6 @@
 @import "color.scss";
 
 .progressV2Page {
-  padding: 24px 64px 64px 64px;
   background-color: white;
 }
 
@@ -376,12 +375,12 @@ $level-cell-width: 52;
 }
 
 .sortDropdown {
-  height: 72px;
+  height: 64px;
   width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .studentColumn {

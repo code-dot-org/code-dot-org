@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-15 19:11:38 UTC",
+    "serialized_at": "2024-04-18 18:14:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -152,15 +152,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-pl-ai-101-mod4-opening_2024"
-        ],
         "progression": "Opening (5 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod4-opening_2024"
+          "self-paced-pl-ai-101-certificate"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -168,7 +165,7 @@
         "activity_section.key": "f4fa50d0-54a0-4358-9782-65f2b6ee2721"
       },
       "level_keys": [
-        "self-paced-pl-ai-101-mod4-opening_2024"
+        "self-paced-pl-ai-101-certificate"
       ]
     },
     {
@@ -177,6 +174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod5-withAI_01_2024"
+        ],
         "progression": "Teaching with AI (25 min)"
       },
       "bonus": false,
@@ -199,6 +199,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod5-withAI_02_2024"
+        ],
         "progression": "Teaching with AI (25 min)"
       },
       "bonus": false,
@@ -221,6 +224,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod5-withAI_03_2024"
+        ],
         "progression": "Teaching with AI (25 min)"
       },
       "bonus": false,
@@ -243,6 +249,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod5-withAI_04_2024"
+        ],
         "progression": "Teaching with AI (25 min)"
       },
       "bonus": false,
@@ -265,6 +274,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod5-withAI_05_2024"
+        ],
         "progression": "Teaching with AI (25 min)"
       },
       "bonus": false,
@@ -287,6 +299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_01_2024"
+        ],
         "progression": "Universal Design for Learning (10 min)"
       },
       "bonus": false,
@@ -309,6 +324,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_02_2024"
+        ],
         "progression": "Universal Design for Learning (10 min)"
       },
       "bonus": false,
@@ -331,6 +349,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_03_2024"
+        ],
         "progression": "Universal Design for Learning (10 min)"
       },
       "bonus": false,
@@ -353,6 +374,34 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_03_02_2024"
+        ],
+        "progression": "Universal Design for Learning (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_03_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod4",
+        "activity_section.key": "ce13b099-9791-47e3-8a31-c05f79dbf898"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod4-UDL_03_02_2024"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_04_2024"
+        ],
         "progression": "Universal Design for Learning (10 min)"
       },
       "bonus": false,
@@ -370,11 +419,14 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 5,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_05b_2024"
+        ],
         "progression": "Universal Design for Learning (10 min)"
       },
       "bonus": false,
@@ -392,11 +444,39 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 14,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-about_01_2024"
+        ],
+        "progression": "Teaching about AI (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod4-about_01_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod4",
+        "activity_section.key": "c1797522-d43a-45e7-8efd-80f1c3b79da2"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod4-about_01_2024"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-about_02_2024"
+        ],
         "progression": "Teaching about AI (15 min)"
       },
       "bonus": false,
@@ -414,11 +494,14 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
-      "activity_section_position": 2,
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod4-about_03_2024"
+        ],
         "progression": "Teaching about AI (15 min)"
       },
       "bonus": false,
@@ -436,8 +519,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 15,
+      "chapter": 17,
+      "position": 17,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -461,8 +544,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 16,
+      "chapter": 18,
+      "position": 18,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -501,9 +584,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-ai-101-mod4-opening_2024",
+        "level.key": "self-paced-pl-ai-101-certificate",
         "script_level.level_keys": [
-          "self-paced-pl-ai-101-mod4-opening_2024"
+          "self-paced-pl-ai-101-certificate"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -609,6 +692,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod4-UDL_03_02_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod4-UDL_03_02_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod4",
+        "activity_section.key": "ce13b099-9791-47e3-8a31-c05f79dbf898"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "self-paced-pl-ai-101-mod4-UDL_04_2024",
         "script_level.level_keys": [
           "self-paced-pl-ai-101-mod4-UDL_04_2024"
@@ -629,6 +724,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-ai-101-mod4",
         "activity_section.key": "ce13b099-9791-47e3-8a31-c05f79dbf898"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod4-about_01_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod4-about_01_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod4",
+        "activity_section.key": "c1797522-d43a-45e7-8efd-80f1c3b79da2"
       }
     },
     {

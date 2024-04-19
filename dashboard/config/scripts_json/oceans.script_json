@@ -52,11 +52,12 @@
         "zh-CN",
         "zh-TW"
       ],
+      "tts": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2024-03-19 16:01:22 UTC",
+    "serialized_at": "2024-04-18 18:23:15 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
