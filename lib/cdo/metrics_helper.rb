@@ -1,3 +1,4 @@
+require 'cdo/aws/cloud_watch_logs'
 require_relative './db'
 
 module Metrics
@@ -15,6 +16,7 @@ module Metrics
   MANUAL = 1
 
   # Insert new row into the metrics table.
+  # TODO: (darin) write to cloudwatch logs instead of devinternal_db
   # @param name [String] The name of the metric.
   # @param metadata [String] Data relevant to the specific metric. For example, the commit hash for DTT metrics.
   # @param value [Float] Numerical value relevant to the specific metric. See constants above for examples.
@@ -25,6 +27,19 @@ module Metrics
     data = {name: name, metadata: metadata, value: value}
     data[:created_at] = timestamp if timestamp
     dataset.insert(data)
+  end
+
+  def self.write_log(name, metadata, value, timestamp = nil)
+    # TODO: Placeholders while testing, replace with actual values
+    log_group = 'development/darin'
+    log_stream = 'cloud_watch_logs_dev'
+
+    # convert name, metadata and value into a json string
+    event = {
+      timestamp: timestamp,
+      message: {name: name, metadata: metadata, value: value}.to_json
+    }
+    Cdo::CloudWatchLogs.put_log_events(log_group, log_stream, [event])
   end
 
   # Insert multiple new rows into the metrics table.
