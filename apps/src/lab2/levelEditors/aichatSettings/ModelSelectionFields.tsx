@@ -1,4 +1,4 @@
-import React, {useContext, useState, useMemo, useCallback} from 'react';
+import React, {useContext, useState, useCallback} from 'react';
 
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
@@ -9,6 +9,10 @@ import moduleStyles from './edit-aichat-settings.module.scss';
 import {UpdateContext} from './UpdateContext';
 import FieldSection from './FieldSection';
 import {Visibility} from '@cdo/apps/aichat/types';
+
+const modelDropdownItems = modelDescriptions.map(model => {
+  return {value: model.id, text: model.name};
+});
 
 const ModelSelectionFields: React.FunctionComponent = () => {
   const {setModelSelectionValues, aichatSettings} = useContext(UpdateContext);
@@ -23,12 +27,6 @@ const ModelSelectionFields: React.FunctionComponent = () => {
       )
     );
   const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
-
-  const modelDropdownItems = useMemo(() => {
-    return modelDescriptions.map(model => {
-      return {value: model.id, text: model.name};
-    });
-  }, []);
 
   const onDropdownChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
