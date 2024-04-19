@@ -20,6 +20,9 @@ class AichatControllerTest < ActionController::TestCase
     @valid_params = @common_params.merge(newMessage: valid_message)
     @pii_violation_params = @common_params.merge(newMessage: pii_violation_message)
     @profanity_violation_params = @common_params.merge(newMessage: profanity_violation_message)
+  end
+
+  setup do
     AichatHelper.stubs(:request_sagemaker_chat_completion).returns({status: 200, json: {body: {}}})
     AichatHelper.stubs(:get_sagemaker_assistant_response).returns("This is an assistant response from Sagemaker")
   end
