@@ -56,7 +56,7 @@ class Policies::ChildAccount
 
   # Does the user login using credentials they personally control?
   # For example, some accounts are created and owned by schools (Clever).
-  def self.personal_account?(user)
+  private_class_method def self.personal_account?(user)
     return false if user.sponsored?
     # List of credential types which we believe schools have ownership of.
     # Does the user have an authentication method which is not controlled by

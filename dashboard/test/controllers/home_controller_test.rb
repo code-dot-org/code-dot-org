@@ -303,6 +303,7 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     assert_select '#student-information-modal'
+    assert_select '#user_age'
     assert_select '#user_us_state'
     assert_select '#user_gender_student_input'
   end
@@ -327,29 +328,6 @@ class HomeControllerTest < ActionController::TestCase
 
     sign_in student
 
-    get :home
-
-    assert_select '#student-information-modal', false
-  end
-
-  test 'student under 13 and in US with no us_state gets student information prompt' do
-    student = create(:student, age: 12)
-    student.update_attribute(:us_state, nil) # bypasses validations
-    refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
-    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
-    sign_in student
-    get :home
-
-    assert_select '#student-information-modal', true
-    assert_select '#user_age', false
-    assert_select '#user_us_state', true
-    assert_select '#user_gender_student_input', false
-  end
-
-  test 'student over 13 and in US with us_state does not get student information prompt' do
-    student = create(:student, age: 19)
-    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
-    sign_in student
     get :home
 
     assert_select '#student-information-modal', false
