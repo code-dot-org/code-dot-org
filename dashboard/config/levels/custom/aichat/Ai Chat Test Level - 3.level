@@ -1,0 +1,45 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-04-20T06:27:01.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "mistral",
+        "temperature": "1",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ]
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "editable",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "editable"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "llama2",
+        "mistral"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-04-19 16:28:45 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"cassi.brenci+local@code.org\"}]"
+}]]></config>
+</Aichat>
