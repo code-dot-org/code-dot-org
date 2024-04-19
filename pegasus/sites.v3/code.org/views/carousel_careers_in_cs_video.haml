@@ -1,6 +1,8 @@
 - video_careers_index = 9
 
-- video_careers_caption = [hoc_s(:video_library_page_cs_video_title_1), hoc_s(:video_library_page_cs_video_title_6), hoc_s(:video_library_page_cs_video_title_2), hoc_s(:video_library_page_cs_video_title_7), hoc_s(:video_library_page_cs_video_title_3), hoc_s(:video_library_page_cs_video_title_8), hoc_s(:video_library_page_cs_video_title_4), hoc_s(:video_library_page_cs_video_title_8), hoc_s(:video_library_page_cs_video_title_5), hoc_s(:video_library_page_cs_video_title_9)]
+- video_careers_caption = [hoc_s(:video_library_page_cs_video_title_1), hoc_s(:video_library_page_cs_video_title_6), hoc_s(:video_library_page_cs_video_title_2), hoc_s(:video_library_page_cs_video_title_7), hoc_s(:video_library_page_cs_video_title_3), hoc_s(:video_library_page_cs_video_title_8), hoc_s(:video_library_page_cs_video_title_4), hoc_s(:video_library_page_cs_video_title_9), hoc_s(:video_library_page_cs_video_title_5)]
+
+- video_careers_download = ["", "", "", "", "//videos.code.org/careers-in-tech/my_name_is_brina.mp4", "//videos.code.org/careers-in-tech/my_name_is_federico.mp4", "//videos.code.org/careers-in-tech/my_name_is_kinsley.mp4", "//videos.code.org/careers-in-tech/my_name_is_tess.mp4", "//videos.code.org/careers-in-tech/my_name_is_polina.mp4"]
 
 - video_careers_code = ["dhvQ7L5UScs", "FBTWICxTG08", "2uXTNK9W-gQ", "IRMWwc9gfns", "t0-Z_LfGwUM", "EUF2mad21jo", "suJZ9z426P0",  "RfbbDgx6l1g", "tTSEFaYjV30"]
 
@@ -9,7 +11,7 @@
     - video_careers_index.times do |index|
       %swiper-slide
         %figure
-          = view :video_with_fallback, video_code: video_careers_code[index]
+          = view :video_with_fallback, video_code: video_careers_code[index], download_path: video_careers_download[index]
           %figcaption.no-margin-bottom
             = video_careers_caption[index]
 
