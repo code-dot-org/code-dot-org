@@ -77,7 +77,6 @@ export interface AichatState {
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
   viewMode: ViewMode;
-  hasPublished: boolean;
   currentSessionId?: number;
 }
 
@@ -90,7 +89,6 @@ const initialState: AichatState = {
   savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
   viewMode: ViewMode.EDIT,
-  hasPublished: false,
 };
 
 // THUNKS
@@ -101,7 +99,7 @@ const initialState: AichatState = {
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
-    const rootState = (await thunkAPI.getState()) as RootState;
+    const rootState = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     const {dispatch} = thunkAPI;
 
@@ -119,11 +117,11 @@ export const updateAiCustomization = createAsyncThunk(
 export const publishModel = createAsyncThunk(
   'aichat/publishModelCard',
   async (_, thunkAPI) => {
-    const rootState = (await thunkAPI.getState()) as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     const {dispatch} = thunkAPI;
+    dispatch(setModelCardProperty({property: 'isPublished', value: true}));
 
-    dispatch(setHasPublished(true));
+    const rootState = thunkAPI.getState() as RootState;
+    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
@@ -138,14 +136,16 @@ export const publishModel = createAsyncThunk(
 export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
   async (_, thunkAPI) => {
-    const rootState = (await thunkAPI.getState()) as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
     const {dispatch} = thunkAPI;
-
-    const {modelCardInfo} = currentAiCustomizations;
+    const modelCardInfo = (thunkAPI.getState() as RootState).aichat
+      .currentAiCustomizations.modelCardInfo;
     if (!hasFilledOutModelCard(modelCardInfo)) {
-      dispatch(setHasPublished(false));
+      dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
+
+    const {currentAiCustomizations, savedAiCustomizations} = (
+      thunkAPI.getState() as RootState
+    ).aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
@@ -364,9 +364,6 @@ const aichatSlice = createSlice({
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
     },
-    setHasPublished: (state, action: PayloadAction<boolean>) => {
-      state.hasPublished = action.payload;
-    },
     setStartingAiCustomizations: (
       state,
       action: PayloadAction<{
@@ -457,7 +454,9 @@ const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   for (const key of Object.keys(modelCardInfo)) {
     const typedKey = key as keyof ModelCardInfo;
 
-    if (typedKey === 'exampleTopics') {
+    if (typedKey === 'isPublished') {
+      continue;
+    } else if (typedKey === 'exampleTopics') {
       if (
         !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
       ) {
@@ -491,25 +490,8 @@ export const {
   updateChatMessageStatus,
   updateChatMessageSession,
   setViewMode,
-  setHasPublished,
   setStartingAiCustomizations,
   setSavedAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
 } = aichatSlice.actions;
-
-// potential alternative, assign session ID to each message:
-// # first message: from user, no session id
-// # request to server: no session id
-// # once response received from ai, save first message and bot message, assign session id
-// # response from server: has session id
-// # assign session id to first message
-// # second message: has session id
-// # once response received from ai, save all messages to existing session id
-// # customization updated -- current session id set to null, update status messages have no session id (doesn't matter?)
-// # new message from user:
-//     # request to server: no session id. include all messages with no session id?
-// # repeat initial steps, assign session id and return from server
-// # another message -- this time, we need to filter existing messages and only send the ones that have the same session id as the current session id
-// # clear messages -- set visibility to none on everything, set current session id to nil
-// # next message: repeat initial steps, assign session id and return from server

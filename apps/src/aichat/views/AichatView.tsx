@@ -48,10 +48,10 @@ const AichatView: React.FunctionComponent = () => {
 
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
-  const {currentAiCustomizations, viewMode, hasPublished} = useAppSelector(
+  const {currentAiCustomizations, viewMode} = useAppSelector(
     state => state.aichat
   );
-  const {botName} = currentAiCustomizations.modelCardInfo;
+  const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
 
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(initialSources);
@@ -69,7 +69,7 @@ const AichatView: React.FunctionComponent = () => {
   const showPresentationToggle = () => {
     return (
       !levelAichatSettings?.hidePresentationPanel &&
-      (hasPublished ||
+      (isPublished ||
         (levelAichatSettings?.visibilities &&
           isDisabled(levelAichatSettings.visibilities.modelCardInfo)))
     );

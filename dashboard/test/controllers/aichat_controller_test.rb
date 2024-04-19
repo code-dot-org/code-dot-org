@@ -69,4 +69,9 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal json_response["status"], ShareFiltering::FailureType::EMAIL
     assert_equal json_response["flagged_content"], "l.lovepadel@sports.edu"
   end
+
+  test 'can_request_aichat_chat_completion returns false when DCDO flag is set to `false`' do
+    DCDO.stubs(:get).with('aichat_chat_completion', true).returns(false)
+    assert_equal false, @controller.send(:can_request_aichat_chat_completion?)
+  end
 end

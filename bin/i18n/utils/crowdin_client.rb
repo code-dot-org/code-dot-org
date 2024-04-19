@@ -13,7 +13,7 @@ module I18n
       MAX_CONCURRENT_REQUESTS = 10 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
 
       MAX_ITEMS_COUNT = Crowdin::Web::FetchAllExtensions::MAX_ITEMS_COUNT_PER_REQUEST.freeze
-      REQUEST_TIMEOUT = 60 # Number of seconds to wait for a request to complete
+      REQUEST_TIMEOUT = 120 # Number of seconds to wait for a request to complete
       REQUEST_RETRY_ATTEMPTS = 2 # Number of retries for a failed request
       REQUEST_RETRY_DELAY = 2 # Number of seconds to wait before retrying a failed request
       RETRIABLE_ERRORS = [
@@ -23,6 +23,7 @@ module I18n
         '503 Service Unavailable',
         'Failed to open TCP connection',
         'Timed out connecting to server',
+        'Timed out reading data from server',
       ].freeze # Request errors to retry
 
       # @param project [String] the Crowdin project name, one of the `CDO.crowdin_projects` keys

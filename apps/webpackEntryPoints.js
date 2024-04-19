@@ -64,6 +64,7 @@ const CODE_STUDIO_ENTRIES = {
   'layouts/_school_info_interstitial': './src/sites/studio/pages/layouts/_school_info_interstitial.js',
   'layouts/_small_footer': './src/sites/studio/pages/layouts/_small_footer.js',
   'layouts/_terms_interstitial': './src/sites/studio/pages/layouts/_terms_interstitial.js',
+  'layouts/_student_information_interstitial': './src/sites/studio/pages/layouts/_student_information_interstitial.js',
   'layouts/_initial_section_creation_interstitial': './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
   'levels/_bubble_choice': './src/sites/studio/pages/levels/_bubble_choice.js',
   'levels/_content': './src/sites/studio/pages/levels/_content.js',
