@@ -173,6 +173,7 @@ class DevRoutesTest < Minitest::Test
           GitHub.expects(:sha).returns(fake_sha)
           DevelopersTopic.expects(:set_dtt).with('yes')
           InfraTestTopic.expects(:set_green_commit).with(fake_sha)
+          # TODO: (darin) write to cloudwatch logs instead of devinternal_db
           Metrics.expects(:write_metric).with('dtt_green', fake_sha, Metrics::MANUAL)
           pegasus = make_test_pegasus
           pegasus.post '/api/dev/set-last-dtt-green', DEFAULT_PARAMS

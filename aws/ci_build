@@ -253,6 +253,7 @@ end
 
 # Log details of a build to metrics database.
 # TODO: (suresh) This method will eventually be used to write build status for all managed environments.
+# TODO: (darin) write to cloudwatch logs instead of devinternal_db
 # @param [Symbol] environment
 # @param [String] commit_hash
 # @param [Symbol] status - :start, :success, :failed
