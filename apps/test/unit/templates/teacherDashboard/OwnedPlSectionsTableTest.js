@@ -24,8 +24,7 @@ const plSectionRowData = [
     studentCount: 3,
     code: 'ABC',
     courseOfferingsAreLoaded: true,
-    grades: ['K'],
-    loginType: SectionLoginType.picture,
+    loginType: SectionLoginType.email,
     participantType: 'teacher',
     providerManaged: true,
     hidden: false,
@@ -39,8 +38,7 @@ const plSectionRowData = [
     code: 'DEF',
     courseId: 29,
     courseOfferingsAreLoaded: true,
-    grades: ['1'],
-    loginType: SectionLoginType.picture,
+    loginType: SectionLoginType.email,
     participantType: 'facilitator',
     providerManaged: false,
     hidden: false,
@@ -55,7 +53,6 @@ const plSectionRowData = [
     courseId: 29,
     scriptId: 168,
     courseOfferingsAreLoaded: true,
-    grades: ['4'],
     loginType: SectionLoginType.google_classroom,
     participantType: 'teacher',
     providerManaged: true,
@@ -140,114 +137,84 @@ describe('OwnedPlSectionsTable', () => {
   it('studentsFormatter provides a link to add or manage students', () => {
     renderOwnedPlSectionsTable();
 
-    let hasRowWithAddStudents = false;
-    let hasRowWithNumStudnets = false;
+    // If section has 0 students, shows "Add students" button
+    const noStudentsButton = screen.getByText('Add students').closest('a');
+    assert(
+      noStudentsButton.href.includes(
+        `/teacher_dashboard/sections/${plSectionRowData[2].id}/manage_students`
+      )
+    );
 
-    plSectionRowData.forEach(plSection => {
-      let rowButton = null;
-      const numStudents = plSection.studentCount;
-
-      if (numStudents === 0) {
-        // If section has 0 students, shows "Add students" button
-        rowButton = screen.getByText('Add students').closest('a');
-        hasRowWithAddStudents = true;
-      } else {
-        // If section has 1+ students, displays number of students
-        rowButton = screen.getByText(`${numStudents}`).closest('a');
-        hasRowWithNumStudnets = true;
-      }
-
-      // Check that the button links to the "Manage Students" tab of the given section
-      assert(
-        rowButton.href.includes(
-          `/teacher_dashboard/sections/${plSection.id}/manage_students`
-        )
-      );
-    });
-
-    // Ensure at least one section shows the "Add students" button and at least one shows
-    // the linked student count.
-    assert(hasRowWithAddStudents);
-    assert(hasRowWithNumStudnets);
+    // If section has 1+ students, displays number of students
+    const someStudentsButton = screen
+      .getByText(`${plSectionRowData[0].studentCount}`)
+      .closest('a');
+    assert(
+      someStudentsButton.href.includes(
+        `/teacher_dashboard/sections/${plSectionRowData[0].id}/manage_students`
+      )
+    );
   });
 
   it('loginInfoFormatter shows the section code for sections managed on Code.org', () => {
     renderOwnedPlSectionsTable();
 
-    let hasRowWithThirdParty = false;
-    let hasRowWithSectionCode = false;
+    // For sections with third-party login types, display the provider name rather than the section code
+    const googleClassroomSection = screen
+      .getByText(i18n.loginTypeGoogleClassroom())
+      .closest('a');
+    assert(
+      googleClassroomSection.href.includes(
+        `/teacher_dashboard/sections/${plSectionRowData[2].id}/login_info`
+      )
+    );
+    expect(screen.queryByText(plSectionRowData[2].code)).to.be.null;
 
-    plSectionRowData.forEach(plSection => {
-      let rowSection = null;
-      const loginType = plSection.loginType;
-
-      if (loginType === SectionLoginType.google_classroom) {
-        // If third party login type, display the provider name rather than the section code
-        rowSection = screen
-          .getByText(i18n.loginTypeGoogleClassroom())
-          .closest('a');
-        expect(screen.queryByText(plSection.code)).to.be.null;
-        hasRowWithThirdParty = true;
-      } else {
-        // Otherwise, show the section code
-        rowSection = screen.getByText(plSection.code).closest('a');
-        hasRowWithSectionCode = true;
-      }
-
-      // Check that the button links to the login info tab of the given section
-      assert(
-        rowSection.href.includes(
-          `/teacher_dashboard/sections/${plSection.id}/login_info`
-        )
-      );
-    });
-
-    // Ensure at least one section has a third party login type and one does not to test
-    // both cases.
-    assert(hasRowWithThirdParty);
-    assert(hasRowWithSectionCode);
+    // For sections with non-third-party login types, display section code
+    const pictureSection = screen
+      .getByText(plSectionRowData[0].code)
+      .closest('a');
+    assert(
+      pictureSection.href.includes(
+        `/teacher_dashboard/sections/${plSectionRowData[0].id}/login_info`
+      )
+    );
   });
 
   it('courseLinkFormatter provides links to course information and section information', () => {
     renderOwnedPlSectionsTable();
 
-    let hasRowWithNoAssignmentPaths = false;
-    let hasRowWithOneAssignmentPath = false;
-    let hasRowWithTwoPlusAssignmentPath = false;
+    // For sections with no assignment paths, show button to the catalog page
+    const findCourseButton = screen.getByText('Find a course').closest('a');
+    assert(findCourseButton.href.includes('/catalog'));
 
-    plSectionRowData.forEach(plSection => {
-      const assignmentPaths = plSection.assignmentPaths;
+    // For sections with 1 assignment path, show course name
+    const oneAssignmentPathCourseName = screen
+      .getByText(plSectionRowData[1].assignmentNames[0])
+      .closest('a');
+    assert(
+      oneAssignmentPathCourseName.href.includes(
+        plSectionRowData[1].assignmentPaths[0]
+      )
+    );
 
-      if (assignmentPaths.length === 0) {
-        // If no assignment paths, then show button to the catalog page
-        const findCourseButton = screen.getByText('Find a course').closest('a');
-        assert(findCourseButton.href.includes('/catalog'));
-        hasRowWithNoAssignmentPaths = true;
-      } else {
-        // If 1+ assignment paths, show course name
-        const courseName = screen
-          .getByText(plSection.assignmentNames[0])
-          .closest('a');
-        assert(courseName.href.includes(plSection.assignmentPaths[0]));
-
-        if (assignmentPaths.length === 1) {
-          hasRowWithOneAssignmentPath = true;
-        } else {
-          // If 2 assignment paths, show course and unit names
-          const unitName = screen
-            .getByText(plSection.assignmentNames[1])
-            .closest('a');
-          assert(unitName.href.includes(plSection.assignmentPaths[1]));
-          hasRowWithTwoPlusAssignmentPath = true;
-        }
-      }
-    });
-
-    // Ensure at least one section has no assignment paths, at least one with 1 assignment path,
-    // and at least one with 2 assignment paths to test all 3 cases.
-    assert(hasRowWithNoAssignmentPaths);
-    assert(hasRowWithOneAssignmentPath);
-    assert(hasRowWithTwoPlusAssignmentPath);
+    // For sections with 2 assignment paths, show course name and unit name
+    const twoAssignmentPathsCourseName = screen
+      .getByText(plSectionRowData[2].assignmentNames[0])
+      .closest('a');
+    assert(
+      twoAssignmentPathsCourseName.href.includes(
+        plSectionRowData[2].assignmentPaths[0]
+      )
+    );
+    const twoAssignmentPathsUnitName = screen
+      .getByText(plSectionRowData[2].assignmentNames[1])
+      .closest('a');
+    assert(
+      twoAssignmentPathsUnitName.href.includes(
+        plSectionRowData[2].assignmentPaths[1]
+      )
+    );
   });
 
   it('sectionLinkFormatter contains section link', () => {
