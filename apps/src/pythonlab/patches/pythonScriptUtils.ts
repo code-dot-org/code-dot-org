@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {PyodideInterface} from 'pyodide';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -87,7 +88,7 @@ export function getUpdatedSourceAndDeleteFiles(
   const directoryContents = Object.values(
     directoryData.contents
   ) as PyodidePathContent[];
-  const newSource = {...source};
+  const newSource = _.cloneDeep(source);
   updateAndDeleteSourceWithContents(
     directoryContents,
     newSource,
@@ -115,7 +116,7 @@ function updateAndDeleteSourceWithContents(
     if (pyodide.FS.isFile(content.mode)) {
       if (fileExtension === 'csv' || fileExtension === 'txt') {
         const file = Object.values(source.files).find(
-          f => f.name === content.name
+          f => f.name === content.name && f.folderId === folderId
         );
         try {
           const newContents = pyodide.FS.readFile(fullPath, {
