@@ -21,5 +21,7 @@ class MailDeliveryJob < ActionMailer::MailDeliveryJob
         job: as_json,
       }
     )
+  ensure
+    raise exception
   end
 end
