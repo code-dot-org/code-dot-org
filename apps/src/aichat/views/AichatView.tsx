@@ -61,6 +61,7 @@ const AichatView: React.FunctionComponent = () => {
         studentAiCustomizations,
       })
     );
+    dispatch(setNewChatSession());
   }, [dispatch, initialSources, levelAichatSettings]);
 
   // Showing presentation view when:
