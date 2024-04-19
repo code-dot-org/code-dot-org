@@ -2,6 +2,7 @@ require 'sequel'
 require 'sequel/connection_pool/threaded'
 require 'cdo/cache'
 require pegasus_dir 'data/static_models'
+require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 
 # Connects to database.  Uses the Sequel connection_validator:
