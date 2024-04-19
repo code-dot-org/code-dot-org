@@ -10,7 +10,7 @@ module TestServerStatus
 
   # Marks the most recent DTT green, updating Slack #infra-test and
   # #deploy-status topics appropriately.
-  def self.mark_green(sha, source = Metrics::MANUAL)
+  def self.mark_green(sha)
     DevelopersTopic.set_dtt 'yes'
     InfraTestTopic.set_green_commit sha
   end
@@ -19,7 +19,7 @@ module TestServerStatus
   # allow a new test run, and sends a message to #infra-test reporting the red
   # outcome but leaves the topic alone so it continues to represent the most
   # recent green run.
-  def self.mark_red(sha, source = Metrics::MANUAL)
+  def self.mark_red(sha)
     DevelopersTopic.set_dtt 'yes'
     InfraTestTopic.set_red_commit sha
   end

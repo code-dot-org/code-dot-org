@@ -240,7 +240,7 @@ def mark_dtt_green
   ChatClient.log msg
   ChatClient.message 'deploy-status', msg
 
-  TestServerStatus.mark_green test_branch_sha, Metrics::AUTOMATIC
+  TestServerStatus.mark_green test_branch_sha
 end
 
 def emit_deploy_metric(deployment_stage, successful)
