@@ -20,7 +20,7 @@ const callbacks = {};
 
 pyodideWorker.onmessage = event => {
   const {type, id, ...data} = event.data;
-  if (type === 'sysout') {
+  if (type === 'sysout' || type === 'syserr') {
     if (data.message.startsWith(MATPLOTLIB_IMG_TAG)) {
       // This is a matplotlib image, so we need to append it to the output
       const image = data.message.slice(MATPLOTLIB_IMG_TAG.length + 1);

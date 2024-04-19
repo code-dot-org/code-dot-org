@@ -15,6 +15,11 @@ async function loadPyodideAndPackages() {
       self.postMessage({type: 'sysout', message: msg, id: 'none'});
     },
   });
+  self.pyodide.setStderr({
+    batched: msg => {
+      self.postMessage({type: 'syserr', message: msg, id: 'none'});
+    },
+  });
 }
 
 let pyodideReadyPromise = null;
