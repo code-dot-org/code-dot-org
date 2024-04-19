@@ -18,7 +18,7 @@ const aichatI18n = require('@cdo/aichat/locale');
 import {
   setStartingAiCustomizations,
   setViewMode,
-  hideAllChatMessages,
+  clearChatMessages,
   setNewChatSession,
 } from '../redux/aichatRedux';
 import {AichatLevelProperties, ViewMode} from '../types';
@@ -151,7 +151,7 @@ const AichatView: React.FunctionComponent = () => {
             id="aichat-workspace-panel"
             headerContent={chatWorkspaceHeader}
             rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
-              dispatch(hideAllChatMessages());
+              dispatch(clearChatMessages());
               dispatch(setNewChatSession());
             })}
           >

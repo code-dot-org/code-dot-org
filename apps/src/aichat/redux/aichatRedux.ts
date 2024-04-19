@@ -214,7 +214,6 @@ const saveAiCustomization = async (
           AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
         status: Status.OK,
         timestamp: getCurrentTime(),
-        isVisible: true,
       })
     );
   });
@@ -251,7 +250,6 @@ export const submitChatContents = createAsyncThunk(
       status: Status.OK,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
-      isVisible: true,
       sessionId: currentSessionId,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
@@ -287,7 +285,6 @@ export const submitChatContents = createAsyncThunk(
         // The accuracy of this timestamp is debatable since it's not when our backend
         // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
-        isVisible: true,
         sessionId: chatApiResponse.sessionId,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
@@ -313,21 +310,29 @@ const aichatSlice = createSlice({
       };
       state.chatMessages.push(newMessage);
     },
-    hideChatMessage: (state, action: PayloadAction<number>) => {
-      const messageIndex = state.chatMessages.findIndex(
+    removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
+      const updatedMessages = [...state.chatMessages];
+      const messageToRemovePosition = updatedMessages.findIndex(
         message => message.id === action.payload
       );
-      if (messageIndex >= 0) {
-        state.chatMessages[messageIndex].isVisible = false;
+
+      // Only allow removing individual messages that are model updates,
+      // as we want to retain user and bot message history
+      // when requesting model responses within a chat session.
+      // If we want to clear all history
+      // and start a new session, see clearChatMessages.
+      if (
+        messageToRemovePosition < 0 ||
+        updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE
+      ) {
+        return;
       }
+      updatedMessages.splice(messageToRemovePosition, 1);
+
+      state.chatMessages = updatedMessages;
     },
     clearChatMessages: state => {
       state.chatMessages = [];
-    },
-    hideAllChatMessages: state => {
-      state.chatMessages.forEach(
-        chatMessage => (chatMessage.isVisible = false)
-      );
     },
     setNewChatSession: state => {
       state.currentSessionId = undefined;
@@ -480,8 +485,7 @@ export const selectHasFilledOutModelCard = createSelector(
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
-  hideChatMessage,
-  hideAllChatMessages,
+  removeModelUpdateMessage,
   setNewChatSession,
   setChatSessionId,
   clearChatMessages,
