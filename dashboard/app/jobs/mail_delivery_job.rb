@@ -1,4 +1,4 @@
-# This class is used to handle the delivery of enqueued emails through Active Job.
+# This class is used to enqueue the delivery of emails through ActiveJob.
 #
 # To enqueue an email delivery, use the `deliver_later` method on any mailer object.
 # This method allows scheduling options such as setting a wait time before sending.
