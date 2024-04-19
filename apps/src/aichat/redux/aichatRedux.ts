@@ -78,6 +78,7 @@ export interface AichatState {
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
   viewMode: ViewMode;
   hasPublished: boolean;
+  currentSessionId?: number;
 }
 
 const initialState: AichatState = {
@@ -214,7 +215,6 @@ const saveAiCustomization = async (
         status: Status.OK,
         timestamp: getCurrentTime(),
         isVisible: true,
-        inCurrentChatSession: true,
       })
     );
   });
@@ -248,14 +248,16 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
       isVisible: true,
-      inCurrentChatSession: true,
+      sessionId: state.aichat.currentSessionId,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
-      storedMessages.filter(message => message.inCurrentChatSession),
+      storedMessages.filter(
+        message => message.sessionId === state.aichat.currentSessionId
+      ),
       aiCustomizations,
       chatContext
     );
@@ -270,7 +272,7 @@ export const submitChatContents = createAsyncThunk(
         // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
         isVisible: true,
-        inCurrentChatSession: true,
+        sessionId: chatApiResponse.sessionId,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     } else {
@@ -278,6 +280,8 @@ export const submitChatContents = createAsyncThunk(
       // latest message's id is stored at `newMessageId`.
       console.log('Did not receive assistant response.');
     }
+
+    // also update most recent message with session ID recieved
   }
 );
 
@@ -312,9 +316,7 @@ const aichatSlice = createSlice({
       );
     },
     setNewChatSession: state => {
-      state.chatMessages.forEach(
-        chatMessage => (chatMessage.inCurrentChatSession = false)
-      );
+      state.currentSessionId = undefined;
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;

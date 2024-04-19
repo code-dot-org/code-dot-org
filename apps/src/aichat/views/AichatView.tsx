@@ -19,6 +19,7 @@ import {
   setStartingAiCustomizations,
   setViewMode,
   hideAllChatMessages,
+  setNewChatSession,
 } from '../redux/aichatRedux';
 import {AichatLevelProperties, ViewMode} from '../types';
 import {isDisabled} from './modelCustomization/utils';
@@ -149,9 +150,10 @@ const AichatView: React.FunctionComponent = () => {
           <PanelContainer
             id="aichat-workspace-panel"
             headerContent={chatWorkspaceHeader}
-            rightHeaderContent={renderChatWorkspaceHeaderRight(() =>
-              dispatch(hideAllChatMessages())
-            )}
+            rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
+              dispatch(hideAllChatMessages());
+              dispatch(setNewChatSession());
+            })}
           >
             <ChatWorkspace />
           </PanelContainer>
