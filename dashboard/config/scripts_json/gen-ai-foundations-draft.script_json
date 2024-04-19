@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-foundations-draft",
-    "serialized_at": "2024-04-17 23:37:39 UTC",
+    "serialized_at": "2024-04-18 19:46:35 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -185,6 +185,28 @@
       }
     },
     {
+      "key": "47ac7f40-13f0-4cea-80ed-e8f6a170e804",
+      "position": 7,
+      "properties": {
+        "progression_name": "Chatbot - All Features Available"
+      },
+      "seeding_key": {
+        "activity_section.key": "47ac7f40-13f0-4cea-80ed-e8f6a170e804",
+        "lesson_activity.key": "db98f16f-ef2d-4ed5-b822-b1303d4b3f19"
+      }
+    },
+    {
+      "key": "3c7204d9-5ee5-4248-956a-e063ed7ff423",
+      "position": 8,
+      "properties": {
+        "progression_name": "Panels Tool Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c7204d9-5ee5-4248-956a-e063ed7ff423",
+        "lesson_activity.key": "db98f16f-ef2d-4ed5-b822-b1303d4b3f19"
+      }
+    },
+    {
       "key": "613b270a-bdf1-4b6d-9d74-e6125b884692",
       "position": 1,
       "properties": {
@@ -268,6 +290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-chatbot-template"
+        ],
         "progression": "Chatbot Template"
       },
       "bonus": false,
@@ -290,6 +315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-template"
+        ],
         "progression": "Panels Level Template"
       },
       "bonus": false,
@@ -312,6 +340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-choice-template"
+        ],
         "progression": "Choice Level Template"
       },
       "bonus": false,
@@ -334,6 +365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-response-template"
+        ],
         "progression": "Free Response Template"
       },
       "bonus": false,
@@ -356,6 +390,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-multi-template"
+        ],
         "progression": "Multiple Choice Template"
       },
       "bonus": false,
@@ -378,6 +415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-levelgroup-template"
+        ],
         "progression": "Levelgroup Template"
       },
       "bonus": false,
@@ -396,10 +436,123 @@
     },
     {
       "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chatbot - All Features Available"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-chatbot-all-features"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "47ac7f40-13f0-4cea-80ed-e8f6a170e804"
+      },
+      "level_keys": [
+        "gen-ai-chatbot-all-features"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Panels Tool Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-panels-chatbot-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "3c7204d9-5ee5-4248-956a-e063ed7ff423"
+      },
+      "level_keys": [
+        "gen-ai-panels-chatbot-overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Panels Tool Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-panels-retrieval-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "3c7204d9-5ee5-4248-956a-e063ed7ff423"
+      },
+      "level_keys": [
+        "gen-ai-panels-retrieval-overview"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Panels Tool Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-panels-modelcard-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "3c7204d9-5ee5-4248-956a-e063ed7ff423"
+      },
+      "level_keys": [
+        "gen-ai-panels-modelcard-overview"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Panels Tool Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-panels-presentation-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "3c7204d9-5ee5-4248-956a-e063ed7ff423"
+      },
+      "level_keys": [
+        "gen-ai-panels-presentation-overview"
+      ]
+    },
+    {
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-test-L1"
+        ],
         "progression": "Introducing the System Prompt"
       },
       "bonus": false,
@@ -417,11 +570,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-chatbot-test1-L2"
+        ],
         "progression": "Introducing the System Prompt"
       },
       "bonus": false,
@@ -439,11 +595,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-chatbot-test1-L3"
+        ],
         "progression": "Introducing the System Prompt"
       },
       "bonus": false,
@@ -461,11 +620,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-test1-L4"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -483,11 +645,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-chatbot-test1-L5"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -505,11 +670,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-chatbot-test1-L6"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -527,11 +695,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-test1-L7"
+        ],
         "progression": "Audience & Modality"
       },
       "bonus": false,
@@ -549,11 +720,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-chatbot-test1-L8"
+        ],
         "progression": "Audience & Modality"
       },
       "bonus": false,
@@ -571,11 +745,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-chatbot-test1-L9"
+        ],
         "progression": "Audience & Modality"
       },
       "bonus": false,
@@ -593,11 +770,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-response-test1-L11A"
+        ],
         "progression": "Mid-Lesson Check-In"
       },
       "bonus": false,
@@ -615,11 +795,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 22,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-choice-test1-L12"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -637,11 +820,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 23,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-chatbot-test1-L13"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -730,6 +916,66 @@
         "lesson_group.key": "",
         "script.name": "gen-ai-foundations-draft",
         "activity_section.key": "973317de-2f64-41d5-9959-0a7447bd7ab4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-chatbot-all-features",
+        "script_level.level_keys": [
+          "gen-ai-chatbot-all-features"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "47ac7f40-13f0-4cea-80ed-e8f6a170e804"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-panels-chatbot-overview",
+        "script_level.level_keys": [
+          "gen-ai-panels-chatbot-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "3c7204d9-5ee5-4248-956a-e063ed7ff423"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-panels-retrieval-overview",
+        "script_level.level_keys": [
+          "gen-ai-panels-retrieval-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "3c7204d9-5ee5-4248-956a-e063ed7ff423"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-panels-modelcard-overview",
+        "script_level.level_keys": [
+          "gen-ai-panels-modelcard-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "3c7204d9-5ee5-4248-956a-e063ed7ff423"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-panels-presentation-overview",
+        "script_level.level_keys": [
+          "gen-ai-panels-presentation-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foundations-draft",
+        "activity_section.key": "3c7204d9-5ee5-4248-956a-e063ed7ff423"
       }
     },
     {

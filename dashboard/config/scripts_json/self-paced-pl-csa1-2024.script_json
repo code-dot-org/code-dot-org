@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:51:05 UTC",
+    "serialized_at": "2024-04-18 14:22:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -73,6 +73,7 @@
       "key": "7104ace9-c239-40fd-b336-b30031f32699",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "7104ace9-c239-40fd-b336-b30031f32699",
@@ -85,6 +86,7 @@
       "key": "a2941585-7562-4604-85de-e62ac9d1ae77",
       "position": 1,
       "properties": {
+        "duration": 40
       },
       "seeding_key": {
         "lesson_activity.key": "a2941585-7562-4604-85de-e62ac9d1ae77",
@@ -180,6 +182,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-Overview-Welcome_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -202,6 +207,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2024"
+        ],
         "progression": "What is Code.org?"
       },
       "bonus": false,
@@ -224,6 +232,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2024"
+        ],
         "progression": "What is Code.org?"
       },
       "bonus": false,
@@ -246,6 +257,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-what-is-CSA1_2024"
+        ],
         "progression": "What is AP CSA? "
       },
       "bonus": false,
@@ -268,6 +282,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-why-teach-with-Code_2024"
+        ],
         "progression": "What is AP CSA? "
       },
       "bonus": false,
@@ -290,6 +307,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-csa-framework_2024"
+        ],
         "progression": "The CSA Framework and Curriculum "
       },
       "bonus": false,
@@ -312,6 +332,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-approach-to-curriculum_2024"
+        ],
         "progression": "The CSA Framework and Curriculum "
       },
       "bonus": false,
@@ -334,6 +357,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-college-board-resources_2024"
+        ],
         "progression": "College Board Resources "
       },
       "bonus": false,
@@ -356,6 +382,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-FAQ_2024"
+        ],
         "progression": "Frequently Asked Questions "
       },
       "bonus": false,
@@ -378,6 +407,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod1_2024"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
