@@ -13,9 +13,7 @@ export default function CardLabels({subjectsAndTopics}) {
   tagsList.push({
     label: firstSubjectOrTopic,
     tooltipContent: firstSubjectOrTopic,
-    tooltipId: `subject-topic-tooltip-${firstSubjectOrTopic
-      .replace(/s+/g, '-')
-      .toLowerCase()}`,
+    tooltipId: 'first-label-tooltip',
   });
 
   if (subjectsAndTopics.length > 1) {
@@ -31,7 +29,7 @@ export default function CardLabels({subjectsAndTopics}) {
       label: `+${remainingSubjectsAndTopics.length}`,
       tooltipContent,
       'aria-label': remainingSubjectsAndTopics.join(', '),
-      tooltipId: `remaining-subjects-topics-tooltip`,
+      tooltipId: 'remaining-subjects-topics-tooltip',
     });
   }
 
