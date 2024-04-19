@@ -261,7 +261,9 @@ class LtiV1Controller < ApplicationController
       end
     end
 
-    lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
+    lti_course, lti_integration, deployment_id, context_id,  nrps_url = nil
+    resource_link_id = params[:rlid]
+
     if params[:section_code].present?
       # Section code present, meaning this is a sync from the teacher dashboard.
       # Populate vars from the section associated with the input code.
@@ -272,8 +274,13 @@ class LtiV1Controller < ApplicationController
       lti_integration = lti_course.lti_integration
       deployment_id = lti_course.lti_deployment_id
       context_id = lti_course.context_id
-      resource_link_id = lti_course.resource_link_id
       nrps_url = lti_course.nrps_url
+      # Prefer the resource link from the SSO parameter instead of the course one. The resource link could have changed.
+      # For example, the teacher could have had Code.org in one material/module but deleted that material/module and
+      # made a new one (deleted the old LtiResourceLink and created a brand new one). This results in a mismatch between
+      # what is stored on Code.org's LtiCourse. Therefore, when doing an SSO sync, prefer the latest RLID and update our
+      # records with that.
+      resource_link_id ||= lti_course.resource_link_id
     else
       # Section code isn't present, meaning this is a sync from an LTI launch.
       # Populate vars from the request params.
@@ -284,7 +291,6 @@ class LtiV1Controller < ApplicationController
       end
       deployment_id = params[:deployment_id]
       context_id = params[:context_id]
-      resource_link_id = params[:rlid]
       nrps_url = params[:nrps_url]
     end
 
