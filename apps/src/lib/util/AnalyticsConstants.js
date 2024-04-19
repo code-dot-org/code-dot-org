@@ -32,6 +32,10 @@ const EVENTS = {
   SCHOOL_INTERSTITIAL_SAVE_FAILURE: 'School Interstitial Save Failure',
   SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
 
+  // Child Account Policy
+  CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
+  CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
+
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
   ZIP_CODE_ENTERED: 'Valid Zip Code Entered',
