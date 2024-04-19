@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useMemo, useCallback} from 'react';
 
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
@@ -24,6 +24,35 @@ const ModelSelectionFields: React.FunctionComponent = () => {
     );
   const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
 
+  const modelDropdownItems = useMemo(() => {
+    return modelDescriptions.map(model => {
+      return {value: model.id, text: model.name};
+    });
+  }, []);
+
+  const onDropdownChange = useCallback(
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setModelSelectionValues(additionalAvailableModelIds, e.target.value);
+    },
+    [additionalAvailableModelIds, setModelSelectionValues]
+  );
+
+  const onCheckboxChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (e.target.checked) {
+        setAdditionalAvailableModelIds(
+          additionalAvailableModelIds.add(e.target.name)
+        );
+        setModelSelectionValues(additionalAvailableModelIds, selectedModelId);
+      } else {
+        additionalAvailableModelIds.delete(e.target.name);
+        setAdditionalAvailableModelIds(additionalAvailableModelIds);
+        setModelSelectionValues(additionalAvailableModelIds, selectedModelId);
+      }
+    },
+    [additionalAvailableModelIds, selectedModelId, setModelSelectionValues]
+  );
+
   return (
     <FieldSection
       fieldName="selectedModelId"
@@ -34,15 +63,8 @@ const ModelSelectionFields: React.FunctionComponent = () => {
         <>
           <SimpleDropdown
             labelText=""
-            onChange={e => {
-              setModelSelectionValues(
-                additionalAvailableModelIds,
-                e.target.value
-              );
-            }}
-            items={modelDescriptions.map(model => {
-              return {value: model.id, text: model.name};
-            })}
+            onChange={onDropdownChange}
+            items={modelDropdownItems}
             selectedValue={selectedModelId}
             name="model"
             size="s"
@@ -71,26 +93,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
                     model.id === selectedModelId ||
                     shouldDisableAdditionalModelSelection
                   }
-                  onChange={e => {
-                    if (e.target.checked) {
-                      setAdditionalAvailableModelIds(
-                        additionalAvailableModelIds.add(e.target.name)
-                      );
-                      setModelSelectionValues(
-                        additionalAvailableModelIds,
-                        selectedModelId
-                      );
-                    } else {
-                      additionalAvailableModelIds.delete(e.target.name);
-                      setAdditionalAvailableModelIds(
-                        additionalAvailableModelIds
-                      );
-                      setModelSelectionValues(
-                        additionalAvailableModelIds,
-                        selectedModelId
-                      );
-                    }
-                  }}
+                  onChange={onCheckboxChange}
                 />
               </div>
             );
