@@ -45,7 +45,10 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const chosenModelId =
     aiCustomizations.selectedModelId || availableModels[0].id;
-  const allFieldsDisabled = isDisabled(temperature) && isDisabled(systemPrompt);
+  const allFieldsDisabled =
+    isDisabled(temperature) &&
+    isDisabled(systemPrompt) &&
+    isDisabled(selectedModelId);
 
   const onUpdate = useCallback(
     () => dispatch(updateAiCustomization()),
