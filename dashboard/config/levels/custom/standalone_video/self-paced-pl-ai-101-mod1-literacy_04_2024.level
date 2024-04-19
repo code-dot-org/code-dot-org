@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "flappy_intro",
+    "video_key": "self-paced-pl-ai-101-AI_Literacy_Skills",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -16,7 +16,7 @@
     "long_instructions": "#### Let’s hear from Sal and Hadi on their take on what skills students will need in an AI future.\r\n\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-16T17:41:17.300+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-literacy_01_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-literacy_01_2024\"},{\"changed_at\":\"2024-04-16 17:41:19 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 13:39:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-16T17:41:17.300+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-literacy_01_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-literacy_01_2024\"},{\"changed_at\":\"2024-04-16 17:41:19 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 13:39:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 13:11:34 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
