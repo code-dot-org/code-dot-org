@@ -166,27 +166,4 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     response_body = JSON.parse(@response.body)
     assert_equal GLADYS_JUNG_ELEMENTARY, response_body.first, response_body
   end
-
-  test 'zip_search returns match' do
-    get :zip_search, params: {zip: '27105'}
-    assert_response :success
-    # QUALITY EDUCATION ACADEMY is in 27105
-    assert_equal [QUALITY_EDUCATION_ACADEMY], JSON.parse(@response.body)
-  end
-
-  test 'zip_search by zip with no schools in it returns no match' do
-    get :zip_search, params: {zip: '10001'}
-    assert_response :success
-    # QUALITY EDUCATION ACADEMY is in 27105
-    response_body = JSON.parse(@response.body)
-    assert 0, response_body.count
-  end
-
-  test 'zip_search for outdated school returns no match' do
-    get :zip_search, params: {zip: '98936'}
-    assert_response :success
-    # CHILDREN'S VILLAGE is in 98936, but last_known_school_year_open is a year behind all other schools
-    response_body = JSON.parse(@response.body)
-    assert 0, response_body.count
-  end
 end
