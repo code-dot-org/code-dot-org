@@ -9,7 +9,8 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     state: 'CA',
     zip: '91355',
     latitude: "34.4375",
-    longitude: "-118.576861"
+    longitude: "-118.576861",
+    last_known_school_year_open: "2022-2023"
   }.deep_stringify_keys.freeze
 
   GLADYS_JUNG_ELEMENTARY = {
@@ -20,7 +21,8 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     state: 'AK',
     zip: '99559',
     latitude: "60.80254",
-    longitude: "-161.77072"
+    longitude: "-161.77072",
+    last_known_school_year_open: "2022-2023"
   }.deep_stringify_keys.freeze
 
   JOANN_A_ALEXIE_MEMORIAL_SCHOOL = {
@@ -31,7 +33,8 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     state: 'AK',
     zip: '99559',
     latitude: "60.866944",
-    longitude: "-162.273056"
+    longitude: "-162.273056",
+    last_known_school_year_open: "2022-2023"
   }.deep_stringify_keys.freeze
 
   QUALITY_EDUCATION_ACADEMY = {
@@ -43,6 +46,7 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     school_type: 'charter',
     latitude: "36.15115",
     longitude: "-80.21101",
+    last_known_school_year_open: "2022-2023"
   }.deep_stringify_keys.freeze
 
   CHILDRENS_VILLAGE = {
@@ -53,7 +57,8 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     zip: "98936",
     school_type: "public",
     latitude: "46.552088",
-    longitude: "-120.381461"
+    longitude: "-120.381461",
+    last_known_school_year_open: "2021-2022"
   }.deep_stringify_keys.freeze
 
   test 'search by school name prefix' do
@@ -160,5 +165,28 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     assert_response :success
     response_body = JSON.parse(@response.body)
     assert_equal GLADYS_JUNG_ELEMENTARY, response_body.first, response_body
+  end
+
+  test 'zip_search returns match' do
+    get :zip_search, params: {zip: '27105'}
+    assert_response :success
+    # QUALITY EDUCATION ACADEMY is in 27105
+    assert_equal [QUALITY_EDUCATION_ACADEMY], JSON.parse(@response.body)
+  end
+
+  test 'zip_search by zip with no schools in it returns no match' do
+    get :zip_search, params: {zip: '10001'}
+    assert_response :success
+    # QUALITY EDUCATION ACADEMY is in 27105
+    response_body = JSON.parse(@response.body)
+    assert 0, response_body.count
+  end
+
+  test 'zip_search for outdated school returns no match' do
+    get :zip_search, params: {zip: '98936'}
+    assert_response :success
+    # CHILDREN'S VILLAGE is in 98936, but last_known_school_year_open is a year behind all other schools
+    response_body = JSON.parse(@response.body)
+    assert 0, response_body.count
   end
 end

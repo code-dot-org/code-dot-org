@@ -43,23 +43,6 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
     end
   end
 
-  def self.get_zip_matches(query, limit)
-    limit = format_limit(limit)
-    rows = School.limit(limit)
-    query = "#{query[0, 5]}%"
-    rows = rows.where("zip LIKE ?", query)
-    # For private schools, we don't yet have a way to determine churn/inactive
-    # schools, so we surface them all to teachers.
-    # For public and charter schools, we filter on 'known open' schools as
-    # determined by nces 'status' (see school.rb for OPEN_SCHOOL_STATUSES logic)
-    # to prevent showing duplicate/inactive schools to the user.
-    current_import_year = School.maximum(:last_known_school_year_open)
-    rows = rows.where("school_type = 'private' OR last_known_school_year_open = '#{current_import_year}'")
-    return rows.map do |row|
-      Serializer.new(row).attributes
-    end
-  end
-
   # Determines if we should perform a search by ZIP code rather than by school
   # name or city.
   # @param query [String] the user-define query string
