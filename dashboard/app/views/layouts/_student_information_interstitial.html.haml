@@ -15,7 +15,7 @@
               .age-required *
             = f.select :age, User::AGE_DROPDOWN_OPTIONS, {include_blank: t('signup_form.select_age')}, required: true
             .required-message.age-required= t('activerecord.attributes.user.required')
-        - if lti_user_info_required?(student) || cap_user_info_required?(student, country)
+        - if lti_user_info_required?(student) || cap_user_info_required?(student, country) || forceStudentInterstitial
           .form-group
             %div{style: 'display: flex;'}
               = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-title'
