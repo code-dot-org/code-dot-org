@@ -102,6 +102,9 @@ class Incubator extends Component {
                   text: i18n.incubator_canvasIntegration_earlyAccess_guides_button(),
                   color: Button.ButtonColor.neutralDark,
                   target: '_blank',
+                  onClick: () => {
+                    this.reportEvent(EVENTS.LTI_INCUBATOR_GUIDES_CLICK);
+                  },
                 },
               ]}
             />
