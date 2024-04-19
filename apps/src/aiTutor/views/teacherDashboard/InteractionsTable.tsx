@@ -20,6 +20,23 @@ type StatusLabels = {
   [key in AITutorInteractionStatusValue]: string;
 };
 
+interface UnitData {
+  [index: string]: {
+    lessons: Lesson[];
+  };
+}
+
+interface Lesson {
+  id: number;
+  name: string;
+  levels: Level[]; // Array of level objects
+}
+
+interface Level {
+  id: number;
+  levelNumber: number;
+}
+
 const STATUS_LABELS: StatusLabels = {
   error: 'Error',
   pii_violation: 'PII Violation',
@@ -66,7 +83,82 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
     (state: {unitSelection: {scriptId: number}}) => state.unitSelection.scriptId
   );
 
-  //TODO for Ken update for lesson and level ID
+  console.log(`scriptId`, scriptId);
+
+  const unitList = useSelector(
+    (state: {sectionProgress: {unitDataByUnit: UnitData}}) =>
+      state.sectionProgress.unitDataByUnit
+  );
+
+  console.log(unitList);
+
+  // const lessonOptions = Object.entries(unitList)
+  //   .filter(([id, value]) => id === scriptId.toString())
+  //   .map(([id, value]) => value.lessons)
+  //   .reduce((acc, lessons) => {
+  //     return acc.concat(
+  //       lessons.map((lesson: any) => ({
+  //         text: lesson.name,
+  //         value: lesson.id.toString(),
+  //       }))
+  //     );
+  //   }, []);
+
+  console.log(`unitList[scriptId]`, unitList[scriptId]);
+
+  // const lessonOptions = unitList[scriptId].lessons.map((lesson: any) => ({
+  //   text: lesson.name,
+  //   value: lesson.id.toString(),
+  // }));
+
+  let lessonOptions: {text: string; value: string}[] = [];
+  if (unitList[scriptId] && unitList[scriptId].lessons) {
+    lessonOptions = unitList[scriptId].lessons.map((lesson: Lesson) => ({
+      text: lesson.name,
+      value: lesson.id.toString(),
+    }));
+  }
+
+  console.log('lessonOptions', lessonOptions);
+
+  const [selectedLessonId, setSelectedLessonId] = useState<string>(
+    lessonOptions[0].value
+  );
+
+  // let selectedLessonId = '';
+  // let selectedLesson;
+  // if (lessonOptions.length > 0) {
+  //   selectedLessonId = lessonOptions[0].value;
+  //   selectedLesson = unitList[scriptId].lessons.find(
+  //     lesson => lesson.id.toString() === selectedLessonId
+  //   );
+  // }
+
+  console.log('selectedLessonId', selectedLessonId);
+
+  //console.log(lessonOptions[selectedLessonId]);
+
+  const selectedLesson = unitList[scriptId].lessons.find(
+    lesson => lesson.id.toString() === selectedLessonId
+  );
+  console.log('selected lesson', selectedLesson);
+
+  // const levelOptions = selectedLesson.levels.map((level: Level) => ({
+  //   label: level.levelNumber.toString(),
+  //   value: level.id.toString(),
+  // }));
+
+  let levelOptions: {label: string; value: string}[] = [];
+  if (selectedLesson && selectedLesson.levels) {
+    levelOptions = selectedLesson.levels.map((level: Level) => ({
+      label: level.levelNumber.toString(),
+      value: level.id.toString(),
+    }));
+  }
+
+  console.log('levelOptions', levelOptions);
+
+  const [selectedLevelIds, setSelectedLevelIds] = useState<string[]>([]);
 
   useEffect(() => {
     (async () => {
@@ -175,35 +267,34 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       <h3>Select Unit</h3>
       <div className={style.filterDropdowns}>
         <UnitSelectorV2 />
-        {/* Need to update <CheckboxDropdown
-          allOptions={lessonOptions}
-          checkedOptions={selectedStatuses}
-          color="black"
-          labelText="Filter by Status"
-          name="filter-statuses"
-          onChange={handleStatusFilterChange}
-          onClearAll={() => setSelectedStatuses([])}
-          onSelectAll={() =>
-            setSelectedStatuses(Object.values(AITutorInteractionStatus))
+        <SimpleDropdown
+          items={lessonOptions}
+          selectedValue={selectedLessonId}
+          onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
+            setSelectedLessonId(event.target.value)
           }
-          size="s"
-        /> */}
-      </div>
-
-      <div className={style.filterDropdowns}>
-        <CheckboxDropdown
-          allOptions={statusOptions}
-          checkedOptions={selectedStatuses}
+          name="lesson-filter"
           color="black"
-          labelText="Filter by Status"
-          name="filter-statuses"
+          size="s"
+          labelText="Choose Lesson"
+          isLabelVisible={false}
+        />
+        <CheckboxDropdown
+          allOptions={levelOptions}
+          checkedOptions={selectedLevelIds}
+          color="black"
+          labelText="Filter by Level"
+          name="filter-levels"
           onChange={handleStatusFilterChange}
-          onClearAll={() => setSelectedStatuses([])}
+          onClearAll={() => setSelectedLevelIds([])}
           onSelectAll={() =>
-            setSelectedStatuses(Object.values(AITutorInteractionStatus))
+            setSelectedLevelIds(Object.values(AITutorInteractionStatus))
           }
           size="s"
         />
+      </div>
+
+      <div className={style.filterDropdowns}>
         <CheckboxDropdown
           allOptions={statusOptions}
           checkedOptions={selectedStatuses}
