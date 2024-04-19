@@ -92,7 +92,7 @@ const EditAichatSettings: React.FunctionComponent<{
   const setModelSelectionValues = useCallback(
     (additionalModelIds: Set<string>, selectedModelId: string) => {
       const availableModelIds = Array.from(
-        additionalModelIds.add(selectedModelId)
+        new Set(additionalModelIds).add(selectedModelId)
       );
       setAichatSettings({
         ...aichatSettings,
