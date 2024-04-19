@@ -10,6 +10,7 @@ import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MusicPlayer from '../player/MusicPlayer';
 import {DEFAULT_PACK} from '../constants';
+import musicI18n from '../locale';
 
 interface PackEntryProps {
   libraryGroupPath: string;
@@ -206,8 +207,10 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
             visualAppearance="heading-lg"
             className={styles.heading}
           >
-            Choose Pack
+            {musicI18n.packDialogTitle()}
           </Typography>
+
+          {musicI18n.packDialogBody()}
 
           <div className={styles.packs}>
             {folders.map((folder, folderIndex) => {
