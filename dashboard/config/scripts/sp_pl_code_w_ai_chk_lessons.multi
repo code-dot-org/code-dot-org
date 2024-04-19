@@ -1,7 +1,7 @@
 name 'sp-pl-Code_w_AI-chk_lessons'
 editor_experiment ''
 title 'Check for Understanding: Coding with AI'
-type 'multi2'
+type 'multi1'
 question 'In what ways can AI be used to ethically assist with coding?'
 
 
