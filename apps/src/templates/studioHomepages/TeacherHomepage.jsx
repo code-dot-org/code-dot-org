@@ -19,6 +19,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import ContentContainer from '../ContentContainer';
 import HeaderBanner from '../HeaderBanner';
 import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -316,10 +317,11 @@ export const UnconnectedTeacherHomepage = ({
           initialJoinedStudentSections={joinedStudentSections}
           initialJoinedPlSections={joinedPlSections}
           isTeacher={true}
-          showPlSections={false}
         />
         {joinedPlSections?.length > 0 && (
-          <>
+          <ContentContainer
+            heading={i18n.joinedProfessionalLearningSectionsHomepageTitle()}
+          >
             <BodyTwoText>
               {i18n.joinedProfessionalLearningSectionsHomepageDesc()}
             </BodyTwoText>
@@ -333,7 +335,7 @@ export const UnconnectedTeacherHomepage = ({
               size="s"
               text={i18n.myProfessionalLearningSectionsHomepageButton()}
             />
-          </>
+          </ContentContainer>
         )}
       </div>
     </div>

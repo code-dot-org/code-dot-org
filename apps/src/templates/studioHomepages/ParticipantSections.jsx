@@ -36,10 +36,8 @@ export default class ParticipantSections extends Component {
     const {isTeacher, isPlSections, sections} = this.props;
     const {viewHidden} = this.state;
 
-    const heading = isTeacher
-      ? isPlSections
-        ? i18n.plSectionsJoined()
-        : i18n.sectionsJoined()
+    const nonPlSectionsHeading = isTeacher
+      ? i18n.sectionsJoined()
       : i18n.sectionsTitle();
     const description = isTeacher ? '' : i18n.enrollmentDescription();
 
@@ -75,7 +73,10 @@ export default class ParticipantSections extends Component {
     }
 
     return (
-      <ContentContainer heading={heading} description={description}>
+      <ContentContainer
+        heading={!isPlSections && nonPlSectionsHeading}
+        description={description}
+      >
         {liveSections.length > 0 && (
           <SectionsAsStudentTable
             sections={liveSections}

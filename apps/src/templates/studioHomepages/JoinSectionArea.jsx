@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';
@@ -14,8 +15,7 @@ export default function JoinSectionArea({
   initialJoinedPlSections,
   initialJoinedStudentSections,
   isTeacher = false,
-  showStudentSections = true,
-  showPlSections = true,
+  isPlSections = false,
 }) {
   const [sectionResults, setSectionResults] = useState({
     action: null,
@@ -51,40 +51,55 @@ export default function JoinSectionArea({
     setJoinedPlSections(plSections);
   };
 
-  const heading = i18n.joinASection();
+  const renderSectionContent = () => {
+    return (
+      <>
+        <JoinSectionNotifications
+          action={sectionResults.action}
+          result={sectionResults.result}
+          name={sectionResults.resultName}
+          id={sectionResults.resultId}
+          sectionCapacity={sectionResults.sectionCapacity}
+        />
+        <JoinSection
+          enrolledInASection={true}
+          updateSections={updateSections}
+          updateSectionsResult={updateSectionsResult}
+          isTeacher={isTeacher}
+        />
+        {!isPlSections && joinedStudentSections?.length > 0 && (
+          <ParticipantSections
+            sections={joinedStudentSections}
+            isTeacher={isTeacher}
+            updateSectionsResult={updateSectionsResult}
+            updateSections={setJoinedStudentSections}
+          />
+        )}
+        {isPlSections && joinedPlSections?.length > 0 && isTeacher && (
+          <ParticipantSections
+            sections={joinedPlSections}
+            isTeacher={isTeacher}
+            isPlSections={true}
+            updateSectionsResult={updateSectionsResult}
+            updateSections={setJoinedPlSections}
+          />
+        )}
+      </>
+    );
+  };
 
-  return (
-    <ContentContainer heading={heading}>
-      <JoinSectionNotifications
-        action={sectionResults.action}
-        result={sectionResults.result}
-        name={sectionResults.resultName}
-        id={sectionResults.resultId}
-        sectionCapacity={sectionResults.sectionCapacity}
-      />
-      <JoinSection
-        enrolledInASection={true}
-        updateSections={updateSections}
-        updateSectionsResult={updateSectionsResult}
-        isTeacher={isTeacher}
-      />
-      {showStudentSections && joinedStudentSections?.length > 0 && (
-        <ParticipantSections
-          sections={joinedStudentSections}
-          isTeacher={isTeacher}
-          updateSectionsResult={updateSectionsResult}
-          updateSections={setJoinedStudentSections}
-        />
-      )}
-      {showPlSections && joinedPlSections?.length > 0 && isTeacher && (
-        <ParticipantSections
-          sections={joinedPlSections}
-          isTeacher={isTeacher}
-          isPlSections={true}
-          updateSectionsResult={updateSectionsResult}
-          updateSections={setJoinedPlSections}
-        />
-      )}
+  return isPlSections ? (
+    <>
+      <section>
+        <Heading2>
+          {i18n.joinedProfessionalLearningSectionsHomepageTitle()}
+        </Heading2>
+        {renderSectionContent()}
+      </section>
+    </>
+  ) : (
+    <ContentContainer heading={i18n.joinASection()}>
+      {renderSectionContent()}
     </ContentContainer>
   );
 }
@@ -93,6 +108,5 @@ JoinSectionArea.propTypes = {
   initialJoinedStudentSections: shapes.sections,
   initialJoinedPlSections: shapes.sections,
   isTeacher: PropTypes.bool,
-  showStudentSections: PropTypes.bool,
-  showPlSections: PropTypes.bool,
+  isPlSections: PropTypes.bool,
 };

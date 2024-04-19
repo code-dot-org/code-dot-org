@@ -207,7 +207,7 @@ function LandingPage({
               initialJoinedStudentSections={joinedStudentSections}
               initialJoinedPlSections={joinedPlSections}
               isTeacher={true}
-              showPlSections={false}
+              isPlSections={true}
             />
             <section>
               <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
