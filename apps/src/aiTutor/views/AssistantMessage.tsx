@@ -26,6 +26,8 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
       return;
     }
 
+    // This logic allows the user to "ungive" feedback by clicking the same button again
+    // If the user "ungives" all feedback, a row with null values will persist in the database
     const feedbackData = {
       thumbsUp: thumbsUp ? (feedbackState.thumbsUp ? null : true) : null,
       thumbsDown: thumbsUp ? null : feedbackState.thumbsDown ? null : true,
