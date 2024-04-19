@@ -40,7 +40,7 @@ class AichatController < ApplicationController
 
   private def has_required_params?
     begin
-      params.require([:newMessage, :storedMessages, :aichatParameters, :chatContext])
+      params.require([:newMessage, :aichatParameters, :chatContext])
     rescue ActionController::ParameterMissing
       return false
     end

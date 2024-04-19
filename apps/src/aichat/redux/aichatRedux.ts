@@ -268,6 +268,7 @@ export const submitChatContents = createAsyncThunk(
     );
     console.log('chatApiResponse', chatApiResponse);
 
+    // TODO: error handling
     thunkAPI.dispatch(setChatSessionId(chatApiResponse.sessionId));
     thunkAPI.dispatch(
       updateChatMessageSession({
