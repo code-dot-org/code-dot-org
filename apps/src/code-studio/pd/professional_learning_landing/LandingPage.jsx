@@ -188,7 +188,9 @@ function LandingPage({
           <>
             {showGettingStartedBanner && RenderGettingStartedBanner()}
             {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
-            <EnrolledWorkshops />
+            <section>
+              <EnrolledWorkshops />
+            </section>
             {plCoursesStarted?.length >= 1 && (
               <section id={'self-paced-pl'}>
                 <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>

@@ -313,30 +313,30 @@ export const UnconnectedTeacherHomepage = ({
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
-        <JoinSectionArea
-          initialJoinedStudentSections={joinedStudentSections}
-          initialJoinedPlSections={joinedPlSections}
-          isTeacher={true}
-        />
-        {joinedPlSections?.length > 0 && (
-          <ContentContainer
-            heading={i18n.joinedProfessionalLearningSectionsHomepageTitle()}
-          >
-            <BodyTwoText>
-              {i18n.joinedProfessionalLearningSectionsHomepageDesc()}
-            </BodyTwoText>
-            <LinkButton
-              color={'purple'}
-              href={studio('/my-professional-learning')}
-              iconLeft={{
-                iconName: 'book-circle-arrow-right',
-                iconStyle: 'solid',
-              }}
-              size="s"
-              text={i18n.myProfessionalLearningSectionsHomepageButton()}
-            />
-          </ContentContainer>
-        )}
+        <section>
+          <JoinSectionArea
+            initialJoinedStudentSections={joinedStudentSections}
+            initialJoinedPlSections={joinedPlSections}
+            isTeacher={true}
+          />
+        </section>
+        <ContentContainer
+          heading={i18n.joinedProfessionalLearningSectionsHomepageTitle()}
+        >
+          <BodyTwoText>
+            {i18n.joinedProfessionalLearningSectionsHomepageDesc()}
+          </BodyTwoText>
+          <LinkButton
+            color={'purple'}
+            href={studio('/my-professional-learning')}
+            iconLeft={{
+              iconName: 'book-circle-arrow-right',
+              iconStyle: 'solid',
+            }}
+            size="s"
+            text={i18n.myProfessionalLearningSectionsHomepageButton()}
+          />
+        </ContentContainer>
       </div>
     </div>
   );
