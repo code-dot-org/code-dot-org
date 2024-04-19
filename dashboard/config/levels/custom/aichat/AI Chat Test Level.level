@@ -47,7 +47,7 @@
     },
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "minstral",
+        "selectedModelId": "mistral",
         "temperature": 0.5,
         "systemPrompt": "",
         "retrievalContexts": [
@@ -78,7 +78,7 @@
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "minstral"
+        "mistral"
       ]
     }
   },
