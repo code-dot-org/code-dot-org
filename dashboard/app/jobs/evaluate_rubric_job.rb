@@ -208,16 +208,10 @@ class EvaluateRubricJob < ApplicationJob
       puts "EvaluateRubricJob RequestTooLargeError: #{exception.message}"
     end
 
-    # Record the failure, if we can
-    begin
-      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
-      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:REQUEST_TOO_LARGE]
-      rubric_ai_evaluation.save!
-    rescue StandardError
-      # Ignore cascading errors when the rubric record does not exist
-    end
-
-    # We gracefully just fail, here, and we do not file this exception
+    # Record the failure mode, so we can show the right message to the teacher
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:REQUEST_TOO_LARGE]
+    rubric_ai_evaluation.save!
   end
 
   RETRIES_ON_RATE_LIMIT = 3
