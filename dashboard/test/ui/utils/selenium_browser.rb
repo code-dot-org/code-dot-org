@@ -40,7 +40,11 @@ module SeleniumBrowser
     rescue Selenium::WebDriver::Error::WebDriverError => exception
       if (msg = exception.message.match(/unexpected response, code=(?<code>\d+).*\n(?<error>.*)/))
         error = msg[:error]
-        error = JSON.parse(error)['value']['error'] rescue error
+        error = begin
+          JSON.parse(error)['value']['error']
+        rescue
+          error
+        end
         raise exception, "Error #{msg[:code]}: #{error}", exception.backtrace
       end
       raise

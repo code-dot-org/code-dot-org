@@ -9,9 +9,10 @@ markdown <<MARKDOWN
 
 #### Take a look at the diagram below to get a better idea. Key terms are defined underneath. 
 
-<img src="https://images.code.org/5f643df03b3565e7a1c367ae2a3b468b-image-1710871493815.04.49 AM.png" alt="A brown owl sits on a branch.">
+<p style="text-align:center;">
+<img src="https://images.code.org/6360156161735b4ffe0e2f19d74037d4-Screenshot 2024-04-15 at 1.36.49 PM.png" alt="Venn diagram of nested terms related to AI.">
 
-*Source (https://www.wondavr.com/ai-course/module-1)*
+Image Source: https://www.wondavr.com/ai-course/module-1
 
 >* #### **Artificial Intelligence (AI):** AI is the branch of computer science that aims to develop systems capable of performing tasks that would normally require human intelligence, including decision-making, visual perception, and speech recognition.
 >* #### **Machine Learning (ML):** ML is a subset of AI that involves training algorithms to learn patterns and make decisions with minimal human intervention, based on data.
@@ -35,9 +36,9 @@ markdown <<MARKDOWN
 >* #### **Machine Learning (ML):** A way for computers to learn from experience without being directly programmed every step. For example, this is how Netflix recommendation algorithms work.
 >* #### **Natural Language Processing (NLP):** Helps computers understand and respond to human language, like reading or listening. This is how Siri understands your questions.
 >* #### **Deep Learning:** A method for computers to learn and make decisions by simulating the network of neurons in a human brain. Used to in facial recognition technology such as unlocking smartphones.
->* #### **Large Language Models:** Huge computer programs that are really good at understanding and generating human-like text based on what they've learned from a vast amount of written material. The technology behind ChatGPT.
+>* #### **Large Language Models (LLMs):** Huge computer programs that are really good at understanding and generating human-like text based on what they've learned from a vast amount of written material. The technology behind ChatGPT.
 >* #### **ChatGPT:** A smart chat program that can write and chat about almost anything by using what it's learned from a lot of books, websites, and other texts.
->* #### **Data Science:** the process of finding patterns and answers in a lot of information to help solve problems or make decisions. An example would be how Fitbit and other health trackers to analyze sleep patterns
+>* #### **Data Science:** The process of finding patterns and answers in a lot of information to help solve problems or make decisions. An example would be how Fitbit and other health trackers to analyze sleep patterns
 
 
 </p></div>

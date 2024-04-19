@@ -53,8 +53,8 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   const currentValue: PatternEventValue = JSON.parse(JSON.stringify(initValue));
 
   const availableKits = useMemo(() => {
-    return library.libraryJson.kits;
-  }, [library.libraryJson.kits]);
+    return library.kits;
+  }, [library.kits]);
 
   const currentFolder = useMemo(() => {
     // Default to the first available kit if the current kit is not found in this library.

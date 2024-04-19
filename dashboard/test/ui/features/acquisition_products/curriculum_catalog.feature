@@ -160,7 +160,7 @@ Feature: Curriculum Catalog Page
 
     And I click selector "[aria-label='View details about AI for Oceans']"
 
-    And I click selector "a:contains(See curriculum details)"
+    And I click selector "a:contains(See curriculum details)" to load a new page
     And I wait until element "h1:contains(AI for Oceans)" is visible
 
   @no_mobile

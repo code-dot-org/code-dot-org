@@ -45,7 +45,7 @@ const MultipleTemplate: StoryFn<{
       <div style={{display: 'flex', gap: '20px'}}>
         {args.components?.map(componentArg => (
           <SimpleDropdown
-            key={`${componentArg.name}`}
+            key={componentArg.name}
             {...componentArg}
             selectedValue={
               values[componentArg.name] || componentArg.selectedValue

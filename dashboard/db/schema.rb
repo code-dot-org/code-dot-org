@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_12_134643) do
+ActiveRecord::Schema.define(version: 2024_04_16_200438) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -67,6 +67,18 @@ ActiveRecord::Schema.define(version: 2024_04_12_134643) do
     t.index ["script_id"], name: "index_ai_tutor_interactions_on_script_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ati_user_level_script"
     t.index ["user_id"], name: "index_ai_tutor_interactions_on_user_id"
+  end
+
+  create_table "aichat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "level_id"
+    t.integer "script_id"
+    t.integer "project_id"
+    t.json "model_customizations"
+    t.json "messages"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "level_id", "script_id"], name: "index_acs_user_level_script"
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -941,7 +953,7 @@ ActiveRecord::Schema.define(version: 2024_04_12_134643) do
     t.float "value", null: false
   end
 
-  create_table "new_feature_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "new_feature_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "form_key", null: false
     t.boolean "satisfied", null: false
@@ -1847,7 +1859,9 @@ ActiveRecord::Schema.define(version: 2024_04_12_134643) do
     t.decimal "longitude", precision: 9, scale: 6, comment: "Location longitude"
     t.string "school_category"
     t.string "last_known_school_year_open", limit: 9
+    t.boolean "is_current"
     t.index ["id"], name: "index_schools_on_id", unique: true
+    t.index ["is_current"], name: "index_schools_on_is_current"
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
