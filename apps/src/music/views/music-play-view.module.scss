@@ -28,6 +28,51 @@
       margin-bottom: 0;
     }
 
+    .musicPlayViewPlaySection {
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        cursor: pointer;
+        width: 15rem;
+      }
+
+      /***** Track Styles *****/
+
+      /***** Chrome, Safari, Opera, and Edge Chromium *****/
+      input[type="range"]::-webkit-slider-runnable-track {
+        background: #053a5f;
+        height: 0.5rem;
+      }
+
+      /******** Firefox ********/
+      input[type="range"]::-moz-range-track {
+        background: #053a5f;
+        height: 0.5rem;
+      }
+
+      /***** Thumb Styles *****/
+
+      /***** Chrome, Safari, Opera, and Edge Chromium *****/
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        margin-top: -12px; /* Centers thumb on the track */
+        background-color: #5cd5eb;
+        height: 2rem;
+        width: 1rem;
+      }
+
+      /***** Firefox *****/
+      input[type="range"]::-moz-range-thumb {
+        border: none; /* Removes extra border that FF applies */
+        border-radius: 0; /* Removes default border-radius that FF applies */
+        background-color: #5cd5eb;
+        height: 2rem;
+        width: 1rem;
+      }
+    }
+
     .musicPlayViewButtonsSection {
       display: flex;
       gap: .5rem;

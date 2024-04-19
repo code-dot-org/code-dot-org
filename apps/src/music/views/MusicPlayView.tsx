@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback, useMemo} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
@@ -11,22 +11,56 @@ const codeOrgLogo = require(`@cdo/static/music/code-dot-org-white-logo.png`);
 
 interface MusicPlayViewProps {
   onPlay: () => void;
+  onStop: () => void;
+  isPlaying: boolean;
 }
 
-const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = props => {
+const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
+  isPlaying,
+  onPlay,
+  onStop,
+}) => {
+  const shareData = useMemo(
+    () => ({
+      title: 'Project Name',
+      url: window.location.href,
+    }),
+    []
+  );
+  // Share button will only appear when users browser supports the Web Share API (Can be mobile browsers and some desktop browser like macOS Safari)
+  const canShare =
+    navigator && navigator.canShare && navigator.canShare(shareData);
+  const shareProject = useCallback(() => {
+    navigator?.share(shareData);
+  }, [shareData]);
   console.log(navigator);
+  console.log(shareData);
 
   return (
     <div className={moduleStyles.musicPlayViewContainer}>
       <div className={moduleStyles.musicPlayViewCard}>
         <img src={codeOrgLogo} alt="Code.org" />
-        <Heading2>My Awesome Mix</Heading2>
+        <Heading2>
+          {/*TODO: Project name should be here instead of placeholder text*/}
+          My Awesome Mix
+        </Heading2>
         <BodyTwoText>
           {musicI18n.madeWithMusicLabOn()}{' '}
           <Link href="https://studio.code.org/projects/music">Code.org</Link>
         </BodyTwoText>
 
-        <input type="range" />
+        <div className={moduleStyles.musicPlayViewPlaySection}>
+          <Button
+            isIconOnly={true}
+            icon={{iconStyle: 'solid', iconName: !isPlaying ? 'play' : 'stop'}}
+            onClick={!isPlaying ? onPlay : onStop}
+            size="s"
+            color="white"
+            type="secondary"
+          />
+          {/*TODO: get the total length of the song, show current player position/play progress*/}
+          <input type="range" min="0" max="100" />
+        </div>
 
         <div className={moduleStyles.musicPlayViewButtonsSection}>
           <Button
@@ -35,7 +69,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = props => {
             color="white"
             size="s"
             iconLeft={{iconStyle: 'solid', iconName: 'code'}}
-            onClick={() => props.onPlay()}
+            onClick={onPlay}
           />
           <Button
             text={musicI18n.remix()}
@@ -46,7 +80,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = props => {
             onClick={() => console.log('make my own, redirect to remix')}
           />
         </div>
-        {true && (
+        {canShare && (
           <div className={moduleStyles.musicPlayViewButtonsSection}>
             <Button
               text={musicI18n.share()}
@@ -54,12 +88,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = props => {
               color="white"
               size="s"
               iconLeft={{iconStyle: 'solid', iconName: 'share'}}
-              onClick={() =>
-                navigator.share({
-                  title: 'My Awesome Mix',
-                  url: window.location.href,
-                })
-              }
+              onClick={shareProject}
             />
           </div>
         )}

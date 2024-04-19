@@ -33,8 +33,8 @@ import {
   setSelectedTriggerId,
   clearSelectedTriggerId,
 } from '../redux/musicRedux';
-// import KeyHandler from './KeyHandler';
-// import Callouts from './Callouts';
+import KeyHandler from './KeyHandler';
+import Callouts from './Callouts';
 import {currentLevelIndex} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   isReadOnlyWorkspace,
@@ -51,12 +51,10 @@ import {isEqual} from 'lodash';
 import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {TRIGGER_FIELD} from '../blockly/constants';
-// import MusicLabView from './MusicLabView';
-// import MiniPlayerView from '@cdo/apps/music/views/MiniMusicPlayer';
-// import getCurrentLibraryName from '@cdo/apps/code-studio/initApp/project';
+import MusicLabView from './MusicLabView';
 import MusicPlayView from '@cdo/apps/music/views/MusicPlayView';
 
-// const BLOCKLY_DIV_ID = 'blockly-div';
+const BLOCKLY_DIV_ID = 'blockly-div';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -273,12 +271,12 @@ class UnconnectedMusicView extends React.Component {
     }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
-    // this.musicBlocklyWorkspace.init(
-    //   document.getElementById(BLOCKLY_DIV_ID),
-    //   this.onBlockSpaceChange,
-    //   this.props.isReadOnlyWorkspace,
-    //   levelData?.toolbox
-    // );
+    this.musicBlocklyWorkspace.init(
+      document.getElementById(BLOCKLY_DIV_ID),
+      this.onBlockSpaceChange,
+      this.props.isReadOnlyWorkspace,
+      levelData?.toolbox
+    );
 
     this.library.setAllowedSounds(levelData?.sounds);
     this.props.setShowInstructions(
@@ -651,38 +649,39 @@ class UnconnectedMusicView extends React.Component {
       <AnalyticsContext.Provider
         value={this.props.onProjectBeats ? this.analyticsReporter : null}
       >
-        {/*<KeyHandler*/}
-        {/*  togglePlaying={this.togglePlaying}*/}
-        {/*  playTrigger={this.playTrigger}*/}
-        {/*  uiShortcutsEnabled={*/}
-        {/*    AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'*/}
-        {/*  }*/}
-        {/*/>*/}
-        <MusicPlayView />
-        {/*<MiniPlayerView*/}
-        {/*  projects={[{name: 'test', id: 1}]}*/}
-        {/*  libraryName={this.props.libraryName}*/}
-        {/*/>*/}
+        <KeyHandler
+          togglePlaying={this.togglePlaying}
+          playTrigger={this.playTrigger}
+          uiShortcutsEnabled={
+            AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
+          }
+        />
 
-        {/*<MusicLabView*/}
-        {/*    blocklyDivId={BLOCKLY_DIV_ID}*/}
-        {/*    setPlaying={this.setPlaying}*/}
-        {/*    playTrigger={this.playTrigger}*/}
-        {/*    hasTrigger={id => this.musicBlocklyWorkspace.hasTrigger(id)}*/}
-        {/*    getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}*/}
-        {/*    updateHighlightedBlocks={this.updateHighlightedBlocks}*/}
-        {/*    undo={this.undo}*/}
-        {/*    redo={this.redo}*/}
-        {/*    clearCode={this.clearCode}*/}
-        {/*    validator={this.musicValidator}*/}
-        {/*    player={this.player}*/}
-        {/*    allowPackSelection={*/}
-        {/*        this.library?.getHasRestrictedPacks() &&*/}
-        {/*        !this.props.levelProperties?.levelData?.packId &&*/}
-        {/*        this.props.isProjectLevel*/}
-        {/*    }*/}
-        {/*/>*/}
-        {/*<Callouts />*/}
+        <MusicPlayView
+          onPlay={this.playSong}
+          onStop={this.stopSong}
+          isPlaying={this.props.isPlaying}
+        />
+
+        <MusicLabView
+          blocklyDivId={BLOCKLY_DIV_ID}
+          setPlaying={this.setPlaying}
+          playTrigger={this.playTrigger}
+          hasTrigger={id => this.musicBlocklyWorkspace.hasTrigger(id)}
+          getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
+          updateHighlightedBlocks={this.updateHighlightedBlocks}
+          undo={this.undo}
+          redo={this.redo}
+          clearCode={this.clearCode}
+          validator={this.musicValidator}
+          player={this.player}
+          allowPackSelection={
+            this.library?.getHasRestrictedPacks() &&
+            !this.props.levelProperties?.levelData?.packId &&
+            this.props.isProjectLevel
+          }
+        />
+        <Callouts />
       </AnalyticsContext.Provider>
     );
   }
