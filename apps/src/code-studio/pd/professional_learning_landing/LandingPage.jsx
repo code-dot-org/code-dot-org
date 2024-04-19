@@ -17,6 +17,8 @@ import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/Cot
 import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import Button from '@cdo/apps/templates/Button';
 import style from './landingPage.module.scss';
 import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
@@ -51,10 +53,13 @@ const getAvailableTabs = permissions => {
     });
   }
 
-  // {
-  //   value: 'myRPCenter',
-  //   text: i18n.plLandingTabRPCenter(),
-  // },
+  if (permissions.includes('program_manager')) {
+    tabs.push({
+      value: 'myRPCenter',
+      text: i18n.plLandingTabRPCenter(),
+    });
+  }
+
   // {
   //   value: 'myWorkshopOrganizerCenter',
   //   text: i18n.plLandingTabWorkshopOrganizerCenter(),
@@ -163,6 +168,44 @@ function LandingPage({
     return <ActionBlocksWrapper actionBlocks={actionBlocks} />;
   };
 
+  const RenderRegionalPartnerResources = () => {
+    const resources = [
+      {
+        headingText: i18n.plSectionsRegionalPartnerApplicationTitle(),
+        descriptionText: i18n.plSectionsRegionalPartnerApplicationDesc(),
+        buttonText: i18n.plSectionsRegionalPartnerApplicationButton(),
+        buttonUrl: '/pd/application_dashboard',
+      },
+      {
+        headingText: i18n.plSectionsRegionalPartnerWorkshopTitle(),
+        descriptionText: i18n.plSectionsRegionalPartnerWorkshopDesc(),
+        buttonText: i18n.plSectionsRegionalPartnerWorkshopButton(),
+        buttonUrl: '/pd/workshop_dashboard',
+      },
+      {
+        headingText: i18n.plSectionsRegionalPartnerPlaybookTitle(),
+        descriptionText: i18n.plSectionsRegionalPartnerPlaybookDesc(),
+        buttonText: i18n.plSectionsRegionalPartnerPlaybookButton(),
+        buttonUrl: pegasus('/educate/regional-partner/playbook'),
+      },
+    ];
+    return (
+      <>
+        {resources.map((resource, index) => (
+          <BorderedCallToAction
+            key={index}
+            headingText={resource.headingText}
+            descriptionText={resource.descriptionText}
+            buttonText={resource.buttonText}
+            buttonColor={Button.ButtonColor.brandSecondaryDefault}
+            buttonUrl={resource.buttonUrl}
+            solidBorder={true}
+          />
+        ))}
+      </>
+    );
+  };
+
   return (
     <>
       <div className={`${headerContainerStyles} ${style.headerContainer}`}>
@@ -222,6 +265,12 @@ function LandingPage({
               hiddenSectionIds={hiddenPlSectionIds}
             />
             <AddSectionDialog />
+          </section>
+        )}
+        {['myRPCenter'].includes(currentTab) && (
+          <section>
+            <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
+            {RenderRegionalPartnerResources()}
           </section>
         )}
       </main>
