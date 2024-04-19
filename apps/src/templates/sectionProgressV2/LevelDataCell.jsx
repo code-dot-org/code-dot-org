@@ -138,7 +138,11 @@ function LevelDataCell({
         openInNewTab
         external
         onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
-        className={classNames(styles.expandedLevelLink, linkClassName)}
+        className={classNames(
+          styles.expandedLevelLink,
+          linkClassName,
+          'ui-test-' + level.levelNumber
+        )}
       >
         {itemType ? (
           <ProgressIcon itemType={itemType} />
