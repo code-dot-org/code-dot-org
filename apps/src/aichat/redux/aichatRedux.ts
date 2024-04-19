@@ -227,8 +227,12 @@ export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
-    const aiCustomizations = state.aichat.savedAiCustomizations;
-    const storedMessages = state.aichat.chatMessages;
+    const {
+      savedAiCustomizations: aiCustomizations,
+      chatMessages: storedMessages,
+      currentSessionId,
+    } = state.aichat;
+
     const chatContext: ChatContext = {
       userId: state.currentUser.userId,
       currentLevelId: state.progress.currentLevelId,
@@ -248,20 +252,32 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
       isVisible: true,
-      sessionId: state.aichat.currentSessionId,
+      sessionId: currentSessionId,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
+
     const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
-      storedMessages.filter(
-        message => message.sessionId === state.aichat.currentSessionId
-      ),
+      currentSessionId
+        ? storedMessages.filter(
+            message => message.sessionId === currentSessionId
+          )
+        : [],
       aiCustomizations,
       chatContext
     );
     console.log('chatApiResponse', chatApiResponse);
+
+    thunkAPI.dispatch(setChatSessionId(chatApiResponse.sessionId));
+    thunkAPI.dispatch(
+      updateChatMessageSession({
+        id: newMessageId,
+        sessionId: chatApiResponse.sessionId,
+      })
+    );
+
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
         id: newMessageId + 1,
@@ -280,8 +296,6 @@ export const submitChatContents = createAsyncThunk(
       // latest message's id is stored at `newMessageId`.
       console.log('Did not receive assistant response.');
     }
-
-    // also update most recent message with session ID recieved
   }
 );
 
@@ -318,6 +332,9 @@ const aichatSlice = createSlice({
     setNewChatSession: state => {
       state.currentSessionId = undefined;
     },
+    setChatSessionId: (state, action: PayloadAction<number>) => {
+      state.currentSessionId = action.payload;
+    },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
     },
@@ -332,6 +349,16 @@ const aichatSlice = createSlice({
       const chatMessage = state.chatMessages.find(msg => msg.id === id);
       if (chatMessage) {
         chatMessage.status = status;
+      }
+    },
+    updateChatMessageSession: (
+      state,
+      action: PayloadAction<{id: number; sessionId: number}>
+    ) => {
+      const {id, sessionId} = action.payload;
+      const chatMessage = state.chatMessages.find(msg => msg.id === id);
+      if (chatMessage) {
+        chatMessage.sessionId = sessionId;
       }
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
@@ -457,10 +484,12 @@ export const {
   hideChatMessage,
   hideAllChatMessages,
   setNewChatSession,
+  setChatSessionId,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
+  updateChatMessageSession,
   setViewMode,
   setHasPublished,
   setStartingAiCustomizations,
