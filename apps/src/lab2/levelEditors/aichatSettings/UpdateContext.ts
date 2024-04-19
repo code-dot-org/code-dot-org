@@ -21,7 +21,7 @@ export const UpdateContext = createContext({
     value: ModelCardInfo[keyof ModelCardInfo]
   ) => {},
   setModelSelectionValues: (
-    availableModelIds: string[],
-    selectedModelId: string = ''
+    additionalModelIds: Set<string>,
+    selectedModelId: string
   ) => {},
 });

@@ -10,13 +10,6 @@ import {UpdateContext} from './UpdateContext';
 import FieldSection from './FieldSection';
 import {Visibility} from '@cdo/apps/aichat/types';
 
-const unionModelIds = (
-  additionalIds: Set<string>,
-  selectedId: string
-): string[] => {
-  return Array.from(new Set(additionalIds).add(selectedId));
-};
-
 const ModelSelectionFields: React.FunctionComponent = () => {
   const {setModelSelectionValues, aichatSettings} = useContext(UpdateContext);
   const shouldDisableAdditionalModelSelection =
@@ -43,7 +36,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
             labelText=""
             onChange={e => {
               setModelSelectionValues(
-                unionModelIds(additionalAvailableModelIds, e.target.value),
+                additionalAvailableModelIds,
                 e.target.value
               );
             }}
@@ -84,10 +77,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
                         additionalAvailableModelIds.add(e.target.name)
                       );
                       setModelSelectionValues(
-                        unionModelIds(
-                          additionalAvailableModelIds,
-                          selectedModelId
-                        ),
+                        additionalAvailableModelIds,
                         selectedModelId
                       );
                     } else {
@@ -96,10 +86,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
                         additionalAvailableModelIds
                       );
                       setModelSelectionValues(
-                        unionModelIds(
-                          additionalAvailableModelIds,
-                          selectedModelId
-                        ),
+                        additionalAvailableModelIds,
                         selectedModelId
                       );
                     }
