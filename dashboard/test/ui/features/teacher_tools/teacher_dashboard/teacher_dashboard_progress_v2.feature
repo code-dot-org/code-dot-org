@@ -33,6 +33,80 @@ Scenario: Teacher can open and close Icon Key and details
   And I click selector "#ui-close-dialog"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
 
+Scenario: Teacher can open and close lessons and see level data cells
+  Given I create an authorized teacher-associated student named "Sally"
+  Given I am assigned to unit "allthethings"
+
+  When I sign in as "Teacher_Sally" and go home
+  And I get levelbuilder access
+  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+  And I wait until element "#uitest-teacher-dashboard-nav" is visible
+  And check that the URL contains "/teacher_dashboard/sections/"
+  And I wait until element "#uitest-course-dropdown" is visible
+  Then I append "/?enableExperiments=section_progress_v2" to the URL
+
+  # toggle to V2 progress view
+  Then I click selector "#ui-test-toggle-progress-view"
+  And element "#ui-test-progress-table-v2" is visible 
+
+  # Teacher can open lesson to view level data
+  And I wait until element "#ui-test-lesson-header-2" is visible
+  And I click selector "#ui-test-lesson-header-2"
+  And I wait until element ".ui-test-1" is visible
+
+  # Teacher can close lesson so level data is no longer visible
+  And I click selector "#ui-test-expanded-progress-column-header-2"
+  And element ".ui-test-1" is not visible
+
+Scenario: Teacher can navigate to student work by clicking level cell.
+  Given I create an authorized teacher-associated student named "Sally"
+  Given I am assigned to unit "allthethings"
+
+  When I sign in as "Teacher_Sally" and go home
+  And I get levelbuilder access
+  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+  And I wait until element "#uitest-teacher-dashboard-nav" is visible
+  And check that the URL contains "/teacher_dashboard/sections/"
+  And I wait until element "#uitest-course-dropdown" is visible
+  Then I append "/?enableExperiments=section_progress_v2" to the URL
+
+  # toggle to V2 progress view
+  Then I click selector "#ui-test-toggle-progress-view"
+  And element "#ui-test-progress-table-v2" is visible 
+
+  # Teacher opens lesson data and clicks on level data cell
+  And I wait until element "#ui-test-lesson-header-2" is visible
+  And I click selector "#ui-test-lesson-header-2"
+  And I click selector ".ui-test-1" once I see it to load a new tab
+  And check that the URL contains "&user_id="
+  And check that the URL contains "allthethings/lessons/2/levels/1"
+
+Scenario: Teacher can open lesson data, refresh the page, and lesson data will still be shown
+  Given I create an authorized teacher-associated student named "Sally"
+  Given I am assigned to unit "allthethings"
+
+  When I sign in as "Teacher_Sally" and go home
+  And I get levelbuilder access
+  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+  And I wait until element "#uitest-teacher-dashboard-nav" is visible
+  And check that the URL contains "/teacher_dashboard/sections/"
+  And I wait until element "#uitest-course-dropdown" is visible
+  Then I append "/?enableExperiments=section_progress_v2" to the URL
+
+  # toggle to V2 progress view
+  Then I click selector "#ui-test-toggle-progress-view"
+  And element "#ui-test-progress-table-v2" is visible 
+
+  # Open a lesson to see level data
+  And I wait until element "#ui-test-lesson-header-2" is visible
+  And I click selector "#ui-test-lesson-header-2"
+  And I wait until element ".ui-test-1" is visible
+
+  # Verify the lesson is still open
+  Then I reload the page
+  And I wait until element ".ui-test-1" is visible
+
+
 @eyes
 Scenario: Teacher can view lesson progress for when students have completed a lesson and when they have started a lesson but not finished
   Given I create an authorized teacher-associated student named "Sally"
