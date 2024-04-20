@@ -34,13 +34,14 @@ export const TECHNICAL_INFO_FIELDS = [
   'Retrieval Used',
 ] as const;
 
-export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
+const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   botName: '',
   description: '',
   intendedUse: '',
   limitationsAndWarnings: '',
   testingAndEvaluation: '',
   exampleTopics: [],
+  isPublished: false,
 };
 
 export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {

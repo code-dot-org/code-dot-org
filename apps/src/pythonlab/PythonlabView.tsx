@@ -1,16 +1,17 @@
 // Pythonlab view
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
-import Editor from '../weblab2/CDOIDE/CenterPane/Editor';
+import Editor from '@cdo/apps/weblab2/CDOIDE/CenterPane/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
-import {CDOIDE} from '../weblab2/CDOIDE';
-import {MultiFileSource} from '../lab2/types';
+import {CDOIDE} from '@cdo/apps/weblab2/CDOIDE';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '../lab2/Lab2Registry';
-import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setSource} from './pythonlabRedux';
 import PythonConsole from './PythonConsole';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -20,7 +21,7 @@ const defaultProject: MultiFileSource = {
   files: {
     '0': {
       id: '0',
-      name: 'main.py',
+      name: MAIN_PYTHON_FILE,
       language: 'py',
       contents: 'print("Hello world!")',
       folderId: '1',
@@ -38,12 +39,9 @@ const defaultProject: MultiFileSource = {
 };
 
 const defaultConfig: ConfigType = {
-  //showSideBar: true,
-  // showLeftNav: false,
-  // showEditor: false,
   showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: () => Editor(pythonlabLangMapping, ['py']),
+  EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
   leftNav: [
     {
       icon: 'fa-square-check',
@@ -80,24 +78,29 @@ const PythonlabView: React.FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
 
-  // TODO: This is repeated in Weblab2View. Can we extract this out somewhere?
-  const setProject = (newProject: MultiFileSource) => {
-    setCurrentProject(newProject);
-    dispatch(setSource(newProject));
-    if (Lab2Registry.getInstance().getProjectManager()) {
-      const projectSources = {
-        source: newProject,
-      };
-      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-    }
-  };
+  // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
+  // https://codedotorg.atlassian.net/browse/CT-499
+  const setProject = useMemo(
+    () => (newProject: MultiFileSource) => {
+      setCurrentProject(newProject);
+      dispatch(setSource(newProject));
+      if (Lab2Registry.getInstance().getProjectManager()) {
+        const projectSources = {
+          source: newProject,
+        };
+        Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
+      }
+    },
+    [dispatch]
+  );
 
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
     setCurrentProject(
       (initialSources?.source as MultiFileSource) || defaultProject
     );
-  }, [channelId, initialSources]);
+    dispatch(setSource(initialSources?.source as MultiFileSource));
+  }, [channelId, dispatch, initialSources]);
 
   return (
     <div className={moduleStyles.pythonlab}>

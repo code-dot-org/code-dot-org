@@ -60,7 +60,7 @@ const PresentationView: React.FunctionComponent = () => {
           {modelCardInfo['botName']}
         </Heading4>
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, iconName]) => {
-          if (property === 'botName') {
+          if (property === 'botName' || property === 'isPublished') {
             return null;
           }
           return (

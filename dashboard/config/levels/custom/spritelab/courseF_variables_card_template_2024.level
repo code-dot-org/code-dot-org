@@ -75,7 +75,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:30:52.091+00:00\",\"changed\":[\"cloned from \\\"courseF_variables_card_template_2023\\\"\"],\"cloned_from\":\"courseF_variables_card_template_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:30:52.091+00:00\",\"changed\":[\"cloned from \\\"courseF_variables_card_template_2023\\\"\"],\"cloned_from\":\"courseF_variables_card_template_2023\"},{\"changed_at\":\"2024-04-16 20:28:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-04-16 20:29:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -907,196 +907,205 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <variables>
+          <variable id="`YrG[MnY4@VN/9Qir#Ez">??</variable>
+          <variable id="HouvE0snb#2%/K0zNDmM">???</variable>
+        </variables>
         <category name="World">
-          <block type="gamelab_setBackgroundImageAs">
-            <title name="IMG">"court_1"</title>
+          <block type="gamelab_setBackgroundImageAs" id="*K@bJ8Jf4m8|).3:NGDA">
+            <field name="IMG">"court_1"</field>
           </block>
-          <block type="gamelab_setBackground">
+          <block type="gamelab_setBackground" id="C0ZM`hm7Oa}?t.xh[w;-">
             <value name="COLOR">
-              <block type="colour_picker">
-                <title name="COLOUR">#000000</title>
+              <block type="colour_picker" id="#dsAF%PqpDl@NO9uw2.z">
+                <field name="COLOUR">#000000</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_showTitleScreen">
+          <block type="gamelab_showTitleScreen" id="$f*Wg1I5ju#yLvs?rhe/">
             <value name="TITLE">
-              <block type="text">
-                <title name="TEXT"/>
+              <block type="text" id="R3w67Rrvcg[~`!z@E-xU">
+                <field name="TEXT"/>
               </block>
             </value>
             <value name="SUBTITLE">
-              <block type="text">
-                <title name="TEXT"/>
+              <block type="text" id="tgo9-9mq1To}WhaEC]@K">
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
-          <block type="gamelab_hideTitleScreen"/>
-          <block type="gamelab_printText">
+          <block type="gamelab_hideTitleScreen" id="JD]Q1=#j]0]/c)SJ#xFk"/>
+          <block type="gamelab_printText" id="GqCE371w?M]!g:WoR5a^">
             <value name="TEXT">
-              <block type="text">
-                <title name="TEXT"/>
+              <block type="text" id="4xd)-omyf=mq.j[kAwAQ">
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
-          <block type="gamelab_setPrompt">
+          <block type="gamelab_setPrompt" id="Y1;Gs-|(oQfq00Iq::rh">
             <value name="QUESTION">
-              <block type="text" can_disconnect_from_parent="false">
-                <title name="TEXT">my question</title>
+              <block type="text" id="]LiVy3jL*T;]@gX(S0E6" movable="false">
+                <field name="TEXT">my question</field>
               </block>
             </value>
             <value name="VAR">
-              <block type="variables_get" can_disconnect_from_parent="false">
-                <title name="VAR">???</title>
+              <block type="variables_get" id="3^98Jp9o-g2eTfYl2OAM" movable="false">
+                <field name="VAR" id="HouvE0snb#2%/K0zNDmM">???</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_textJoin">
-            <title name="TEXT1"/>
+          <block type="gamelab_textJoin" id="[I^Gwp7|Phke^gb=[oH#">
+            <field name="TEXT1"/>
           </block>
-          <block type="gamelab_textVariableJoin">
-            <title name="VAR">??</title>
+          <block type="gamelab_textVariableJoin" id="Dkt^c2M)!D9~UBt8JGJD">
+            <field name="VAR" id="`YrG[MnY4@VN/9Qir#Ez">??</field>
           </block>
-          <block type="variables_get">
-            <title name="VAR">???</title>
+          <block type="variables_get" id="5~vKP0pribTRIJ@$@*5a">
+            <field name="VAR" id="HouvE0snb#2%/K0zNDmM">???</field>
           </block>
-          <block type="gamelab_playSound">
-            <title name="SOUND">Choose</title>
+          <block type="gamelab_playSound" id="1dq)y60WTYo98ae/mMO}">
+            <field name="SOUND">sound://category_digital/ping.mp3</field>
           </block>
         </category>
         <category name="Sprites">
-          <block type="gamelab_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"face_birthdaycake_1"</title>
+          <block type="gamelab_makeNewSpriteAnon" id="Q4I}y*Tznh_$(eAL-jT_">
+            <field name="ANIMATION_NAME">"face_birthdaycake_1"</field>
             <value name="LOCATION">
-              <block type="gamelab_location_picker">
-                <title name="LOCATION">{"x":200,"y":200}</title>
+              <block type="gamelab_location_picker" id="Fr8?Hk5@:rbfM(GK|w~`">
+                <field name="LOCATION">{"x":200,"y":200}</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_setProp">
-            <title name="PROPERTY">"scale"</title>
+          <block type="gamelab_setProp" id="qwcsmO4yI^gK{:smu%O$">
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"face_birthdaycake_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="z(?zk+37vve:R1d!r5hx">
+                <field name="ANIMATION">"face_birthdaycake_1"</field>
               </block>
             </value>
             <value name="VAL">
-              <block type="math_number">
-                <title name="NUM">50</title>
+              <block type="math_number" id="bBrW[j1~2?Ed?WGFMN+W">
+                <field name="NUM">50</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_changePropBy">
-            <title name="PROPERTY">"scale"</title>
+          <block type="gamelab_changePropBy" id="X)A|V3qX?f}.LoG7$P-d">
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"face_birthdaycake_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="Vd5q4GB2;I7~(y}o2T?`">
+                <field name="ANIMATION">"face_birthdaycake_1"</field>
               </block>
             </value>
             <value name="VAL">
-              <block type="math_number">
-                <title name="NUM">10</title>
+              <block type="math_number" id="i,Mv-e=#6_v,aDyCR?8V">
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_mirrorSprite">
-            <title name="DIRECTION">"left"</title>
+          <block type="gamelab_mirrorSprite" id="9m0N2RU0cd:H4NBtvLR@">
+            <field name="DIRECTION">"left"</field>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"face_birthdaycake_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="DN})lK93%)%UD.B`1dO+">
+                <field name="ANIMATION">"face_birthdaycake_1"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_destroy">
+          <block type="gamelab_destroy" id="e6^jA|Gl6#G[OW-WV7=5">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"face_birthdaycake_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="E?~J%ra{[lEyLCKEyOtR">
+                <field name="ANIMATION">"face_birthdaycake_1"</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Locations">
-          <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":200,"y":200}</title>
+          <block type="gamelab_location_picker" id="arA+YfJe900x!eK`%_BV">
+            <field name="LOCATION">{"x":200,"y":200}</field>
           </block>
         </category>
         <category name="Behaviors" custom="Behavior">
-          <block type="gamelab_addBehaviorSimple">
+          <block type="gamelab_addBehaviorSimple" id="q4dxn_xvg^Er)ha+z@8a">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"face_birthdaycake_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="BFl]V!+NA~0E$h8!*hKM">
+                <field name="ANIMATION">"face_birthdaycake_1"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_removeBehaviorSimple">
+          <block type="gamelab_removeBehaviorSimple" id=".kd|Ynnyfb1ovBXH+24u">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"face_birthdaycake_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="MzsnZh!t,Z:%BfghUw3Q">
+                <field name="ANIMATION">"face_birthdaycake_1"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_removeAllBehaviors">
+          <block type="gamelab_removeAllBehaviors" id="/FbfeCr*muB9THY3Y|zZ">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"face_birthdaycake_1"</title>
+              <block type="gamelab_allSpritesWithAnimation" id="=,q:|3IR]Iu!t%3L3r_C">
+                <field name="ANIMATION">"face_birthdaycake_1"</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Events">
-          <block type="gamelab_atTime">
-            <title name="UNIT">"seconds"</title>
+          <block type="gamelab_atTime" id="R6@kcNWTl[}(?LnCSN!)">
+            <field name="UNIT">"seconds"</field>
             <value name="N">
-              <block type="math_number" can_disconnect_from_parent="false">
-                <title name="NUM">3</title>
+              <block type="math_number" id="FLoDV=hs=W8}Fl1a%~0M" movable="false">
+                <field name="NUM">3</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_keyPressed">
-            <title name="CONDITION">"when"</title>
-            <title name="KEY">"up"</title>
+          <block type="gamelab_keyPressed" id="S_kSvE.lpxHy9_`}lBZI">
+            <field name="CONDITION">"when"</field>
+            <field name="KEY">"up"</field>
           </block>
-          <block type="gamelab_whenPromptAnswered">
+          <block type="gamelab_whenPromptAnswered" id="F^,LRa],1[j9?PKZNw4o">
             <value name="VAR">
-              <block type="variables_get" can_disconnect_from_parent="false">
-                <title name="VAR">???</title>
+              <block type="variables_get" id="@5U!3D~esqv.LSU]js8F" movable="false">
+                <field name="VAR" id="HouvE0snb#2%/K0zNDmM">???</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Variables  ">
-          <block type="gamelab_setPrompt">
+          <block type="gamelab_setPrompt" id="JQ2;eiXooca~6oREW`}~">
             <value name="QUESTION">
-              <block type="text" can_disconnect_from_parent="false">
-                <title name="TEXT"/>
+              <block type="text" id="^+NPJ%HOTa`$Y,B_X5.d" movable="false">
+                <field name="TEXT"/>
               </block>
             </value>
             <value name="VAR">
-              <block type="variables_get" can_disconnect_from_parent="false">
-                <title name="VAR">???</title>
+              <block type="variables_get" id="Gb{N)}Y#,`xfsBfrFUQj" movable="false">
+                <field name="VAR" id="HouvE0snb#2%/K0zNDmM">???</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_textVariableJoin">
-            <title name="VAR">??</title>
+          <block type="gamelab_textVariableJoin" id="d678`u{L)aJ+TUZ;,kh!">
+            <field name="VAR" id="`YrG[MnY4@VN/9Qir#Ez">??</field>
           </block>
-          <block type="variables_get">
-            <title name="VAR">???</title>
+          <block type="variables_get" id="AEOs$zMlY;gqaC|1GjC[">
+            <field name="VAR" id="HouvE0snb#2%/K0zNDmM">???</field>
           </block>
         </category>
         <category name="Text">
-          <block type="gamelab_printText">
+          <block type="gamelab_printText" id="R6A1BTCI~#h9_J_C1oM2">
             <value name="TEXT">
-              <block type="text">
-                <title name="TEXT"/>
+              <block type="text" id="L0gIVb?szRrhgWs~|!pD">
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
-          <block type="gamelab_textJoin">
-            <title name="TEXT1"/>
+          <block type="gamelab_textJoin" id="rFV#Ds=j/ajD|A6sM@9=">
+            <field name="TEXT1"/>
           </block>
-          <block type="gamelab_textVariableJoin">
-            <title name="VAR">??</title>
+          <block type="gamelab_textVariableJoin" id="d-;{Y,__BT(NGi~$y-O{">
+            <field name="VAR" id="`YrG[MnY4@VN/9Qir#Ez">??</field>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="gamelab_comment" id="}@W^t3lJz/!~:4lur#2T">
+            <field name="COMMENT"/>
           </block>
         </category>
       </xml>
