@@ -78,7 +78,6 @@ export interface AichatState {
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
   viewMode: ViewMode;
-  hasPublished: boolean;
 }
 
 const initialState: AichatState = {
@@ -90,7 +89,6 @@ const initialState: AichatState = {
   savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
   viewMode: ViewMode.EDIT,
-  hasPublished: false,
 };
 
 // THUNKS
@@ -121,12 +119,12 @@ export const updateAiCustomization = createAsyncThunk(
 export const publishModel = createAsyncThunk(
   'aichat/publishModelCard',
   async (_, thunkAPI) => {
-    const rootState = (await thunkAPI.getState()) as RootState;
+    const {dispatch} = thunkAPI;
+    dispatch(setModelCardProperty({property: 'isPublished', value: true}));
+
+    const rootState = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
       rootState.aichat;
-    const {dispatch} = thunkAPI;
-
-    dispatch(setHasPublished(true));
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
@@ -142,15 +140,16 @@ export const publishModel = createAsyncThunk(
 export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
   async (_, thunkAPI) => {
-    const rootState = (await thunkAPI.getState()) as RootState;
-    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
-      rootState.aichat;
     const {dispatch} = thunkAPI;
-
-    const {modelCardInfo} = currentAiCustomizations;
+    const modelCardInfo = (thunkAPI.getState() as RootState).aichat
+      .currentAiCustomizations.modelCardInfo;
     if (!hasFilledOutModelCard(modelCardInfo)) {
-      dispatch(setHasPublished(false));
+      dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
+
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} = (
+      thunkAPI.getState() as RootState
+    ).aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
@@ -309,9 +308,6 @@ const aichatSlice = createSlice({
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
     },
-    setHasPublished: (state, action: PayloadAction<boolean>) => {
-      state.hasPublished = action.payload;
-    },
     setStartingAiCustomizations: (
       state,
       action: PayloadAction<{
@@ -402,7 +398,9 @@ const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   for (const key of Object.keys(modelCardInfo)) {
     const typedKey = key as keyof ModelCardInfo;
 
-    if (typedKey === 'exampleTopics') {
+    if (typedKey === 'isPublished') {
+      continue;
+    } else if (typedKey === 'exampleTopics') {
       if (
         !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
       ) {
@@ -432,7 +430,6 @@ export const {
   setShowWarningModal,
   updateChatMessageStatus,
   setViewMode,
-  setHasPublished,
   setStartingAiCustomizations,
   setSavedAiCustomizations,
   setAiCustomizationProperty,

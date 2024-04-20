@@ -610,8 +610,10 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
 
-Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
-  @browser.execute_script("return #{expression}")
+Then /^execute JavaScript expression "([^"]*)"( to load a new page)?$/ do |expression, load|
+  page_load(load) do
+    @browser.execute_script("return #{expression}")
+  end
 end
 
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|

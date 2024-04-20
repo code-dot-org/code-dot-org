@@ -75,6 +75,7 @@ export interface ModelCardInfo {
   limitationsAndWarnings: string;
   testingAndEvaluation: string;
   exampleTopics: string[];
+  isPublished: boolean;
 }
 
 /** Metadata about a given model, common across all aichat levels */
