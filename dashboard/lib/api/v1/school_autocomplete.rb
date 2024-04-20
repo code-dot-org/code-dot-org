@@ -1,3 +1,4 @@
+require 'cdo/shared_cache'
 class Api::V1::SchoolAutocomplete < AutocompleteHelper
   # Queries the schools lookup table for schools that match the user-defined
   # search criteria.
@@ -48,7 +49,11 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
     # For private schools, we don't yet have a way to determine inactive schools so we consider all active.
     # For public & charter schools, we include only open schools as determined by nces 'status' (see
     # school.rb for OPEN_SCHOOL_STATUSES logic) to prevent showing duplicate/inactive schools to the user.
-    current_import_year = School.maximum(:last_known_school_year_open)
+    current_import_year = CDO.shared_cache.read('current_nces_import_year') if CDO.shared_cache.exist?('current_nces_import_year')
+    if current_import_year.nil?
+      current_import_year = School.maximum(:last_known_school_year_open)
+      CDO.shared_cache.write('current_nces_import_year', current_import_year)
+    end
     rows = rows.where("school_type = 'private' OR last_known_school_year_open = '#{current_import_year}'")
     return rows.map do |row|
       Serializer.new(row).attributes
