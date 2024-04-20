@@ -90,26 +90,9 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       state.sectionProgress.unitDataByUnit
   );
 
-  console.log(unitList);
-
-  // const lessonOptions = Object.entries(unitList)
-  //   .filter(([id, value]) => id === scriptId.toString())
-  //   .map(([id, value]) => value.lessons)
-  //   .reduce((acc, lessons) => {
-  //     return acc.concat(
-  //       lessons.map((lesson: any) => ({
-  //         text: lesson.name,
-  //         value: lesson.id.toString(),
-  //       }))
-  //     );
-  //   }, []);
+  console.log('unitList', unitList);
 
   console.log(`unitList[scriptId]`, unitList[scriptId]);
-
-  // const lessonOptions = unitList[scriptId].lessons.map((lesson: any) => ({
-  //   text: lesson.name,
-  //   value: lesson.id.toString(),
-  // }));
 
   let lessonOptions: {text: string; value: string}[] = [];
   if (unitList[scriptId] && unitList[scriptId].lessons) {
@@ -125,28 +108,12 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
     lessonOptions[0].value
   );
 
-  // let selectedLessonId = '';
-  // let selectedLesson;
-  // if (lessonOptions.length > 0) {
-  //   selectedLessonId = lessonOptions[0].value;
-  //   selectedLesson = unitList[scriptId].lessons.find(
-  //     lesson => lesson.id.toString() === selectedLessonId
-  //   );
-  // }
-
   console.log('selectedLessonId', selectedLessonId);
-
-  //console.log(lessonOptions[selectedLessonId]);
 
   const selectedLesson = unitList[scriptId].lessons.find(
     lesson => lesson.id.toString() === selectedLessonId
   );
   console.log('selected lesson', selectedLesson);
-
-  // const levelOptions = selectedLesson.levels.map((level: Level) => ({
-  //   label: level.levelNumber.toString(),
-  //   value: level.id.toString(),
-  // }));
 
   let levelOptions: {label: string; value: string}[] = [];
   if (selectedLesson && selectedLesson.levels) {
