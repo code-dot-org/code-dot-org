@@ -46,7 +46,7 @@ class DatablockStorageTable < ApplicationRecord
   class StudentFacingError < StandardError
     attr_reader :type
 
-    def initialize(type=nil)
+    def initialize(type = nil)
       super
       @type = type
     end
@@ -309,7 +309,11 @@ class DatablockStorageTable < ApplicationRecord
         value.to_s
       end
     when 'number'
-      Float(value) rescue raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to number"
+      begin
+        Float(value)
+      rescue
+        raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to number"
+      end
     when 'boolean'
       if [true, 'true'].include? value
         true

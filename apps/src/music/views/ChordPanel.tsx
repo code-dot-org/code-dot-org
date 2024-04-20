@@ -59,9 +59,10 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   );
   const [isLoading, setIsLoading] = useState(false);
 
-  const instruments: [string, string][] = library.libraryJson.instruments.map(
-    folder => [folder.name, folder.id]
-  );
+  const instruments: [string, string][] = library.instruments.map(folder => [
+    folder.name,
+    folder.id,
+  ]);
 
   const onPressKey = useCallback(
     (note: number) => {

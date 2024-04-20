@@ -9,6 +9,7 @@ import {getBaseAssetUrl} from '../appConfig';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MusicPlayer from '../player/MusicPlayer';
+import musicI18n from '../locale';
 
 interface PackEntryProps {
   libraryGroupPath: string;
@@ -108,8 +109,8 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   if (!library) return null;
 
-  const folders = library.getAllowedSounds(undefined, true);
-  const libraryGroupPath = library.libraryJson.path;
+  const folders = library.getRestrictedPacks();
+  const libraryGroupPath = library.getPath();
 
   const setSelectedFolder = (folder: SoundFolder) => {
     dispatch(setPackId(folder.id));
@@ -148,8 +149,10 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
             visualAppearance="heading-lg"
             className={styles.heading}
           >
-            Choose Pack
+            {musicI18n.packDialogTitle()}
           </Typography>
+
+          {musicI18n.packDialogBody()}
 
           <div className={styles.packs}>
             {folders.map((folder, folderIndex) => {
