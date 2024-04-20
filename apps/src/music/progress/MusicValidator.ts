@@ -15,6 +15,8 @@ export const MusicConditions: ConditionNames = {
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
   PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
   PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
+  PLAYED_CHORDS: {name: 'played_chords', valueType: 'number'},
+  PLAYED_PATTERNS: {name: 'played_patterns', valueType: 'number'},
 };
 
 export default class MusicValidator extends Validator {
@@ -47,29 +49,46 @@ export default class MusicValidator extends Validator {
     // Get number of sounds that have been started.
     let playedNumberSounds = 0;
 
+    // Get number of patterns that have been started.
+    let playedNumberPatterns = 0;
+
+    // Get number of chords that have been started.
+    let playedNumberChords = 0;
+
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
     this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
       const length = eventData.length;
-      if (
-        eventData.when <= currentPlayheadPosition &&
-        eventData.when + length > currentPlayheadPosition
-      ) {
-        currentNumberSounds++;
 
-        if (eventData.triggered) {
+      if (eventData.type === 'sound') {
+        if (
+          eventData.when <= currentPlayheadPosition &&
+          eventData.when + length > currentPlayheadPosition
+        ) {
+          currentNumberSounds++;
+
+          if (eventData.triggered) {
+            this.conditionsChecker.addSatisfiedCondition({
+              name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
+            });
+          }
+
           this.conditionsChecker.addSatisfiedCondition({
-            name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
+            name: MusicConditions.PLAYED_SOUND_ID.name,
+            value: eventData.id,
           });
         }
 
-        this.conditionsChecker.addSatisfiedCondition({
-          name: MusicConditions.PLAYED_SOUND_ID.name,
-          value: eventData.id,
-        });
-      }
-
-      if (eventData.when <= currentPlayheadPosition) {
-        playedNumberSounds++;
+        if (eventData.when <= currentPlayheadPosition) {
+          playedNumberSounds++;
+        }
+      } else if (eventData.type === 'pattern') {
+        if (eventData.when <= currentPlayheadPosition) {
+          playedNumberPatterns++;
+        }
+      } else if (eventData.type === 'chord') {
+        if (eventData.when <= currentPlayheadPosition) {
+          playedNumberChords++;
+        }
       }
     });
 
@@ -96,6 +115,30 @@ export default class MusicValidator extends Validator {
       this.conditionsChecker.addSatisfiedCondition({
         name: MusicConditions.PLAYED_SOUNDS.name,
         value: numberSounds,
+      });
+    }
+
+    // Check for up to a certain number of patterns played.
+    for (
+      let numberPatterns = playedNumberPatterns;
+      numberPatterns >= 1;
+      numberPatterns--
+    ) {
+      this.conditionsChecker.addSatisfiedCondition({
+        name: MusicConditions.PLAYED_PATTERNS.name,
+        value: numberPatterns,
+      });
+    }
+
+    // Check for up to a certain number of chords played.
+    for (
+      let numberChords = playedNumberChords;
+      numberChords >= 1;
+      numberChords--
+    ) {
+      this.conditionsChecker.addSatisfiedCondition({
+        name: MusicConditions.PLAYED_CHORDS.name,
+        value: numberChords,
       });
     }
   }
