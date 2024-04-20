@@ -186,6 +186,7 @@ en:
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
     go_to_account: 'Go to my account'
+    create_new_account: 'Create new account'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
@@ -1422,11 +1423,23 @@ en:
       integration_exists: "Lti Integration already exists for this Client ID"
       missing_params: "Missing required param(s): School/District name, Client ID, LMS, Email"
       unsupported_lms_type: "Unsupported LMS platform type"
-      wrong_resource_type: "Only LtiResourceLink is supported right now"
+      unsupported_message_type: Unsupported LTI message type
+      unsupported_message_type_desc: |
+        Sorry! It looks like you are trying to launch the Code.org Integration via a %{message_type}.
+        This isn't currently supported.
+        Please try launching Code.org again from a [supported method](%{supported_methods_url}).
       missing_tool_config: 'Your LTI Tool configuration is missing the required "%{field}" field'
     iframe_button: "Open in New Tab"
     iframe_message: "Code.org cannot be run in an embedded window. Please open it in a new tab."
     iframe_title: "Opening Code.org in New Tab"
+    sign_up:
+      warning1:
+        Looks like you’re using the Code.org Integration for %{provider}!
+        **This will create a new account for you**, using the email below.
+        To access this new account again, **make sure to log-in via the %{provider} integration**!
+      warning2:
+        If have you an existing account with this email (e.g. Google, Clever, or Personal Account),
+        **you can continue to log-in to your existing account** via those methods.
     integration:
       client_id: "LMS Client ID"
       email: "Your email"

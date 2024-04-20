@@ -62,13 +62,31 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "post milestone passing" do
+  test "post milestone passing last level of progression" do
     student = create :student
     sign_in student
 
     sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
+    setup_script_cache
+    assert_cached_queries(11) do
+      post milestone_path(
+        user_id: student.id,
+        script_level_id: sl.id
+      ), params: params
+      assert_response :success
+    end
+  end
+
+  test "post milestone passing middle level of progression" do
+    student = create :student
+    sign_in student
+
+    sl = create(:script, :with_levels, levels_count: 3).script_levels[1]
+    params = {program: 'fake program', testResult: 100, result: 'true'}
+
+    setup_script_cache
     assert_cached_queries(9) do
       post milestone_path(
         user_id: student.id,
