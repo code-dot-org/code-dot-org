@@ -72,6 +72,8 @@ export const MIN_NUM_MEASURES = 30;
 export const LEGACY_DEFAULT_LIBRARY = 'default';
 export const DEFAULT_LIBRARY = 'intro2024';
 
+export const DEFAULT_PACK = 'default';
+
 export const DEFAULT_BPM = 120;
 export const DEFAULT_BEATS_PER_MEASURE = 4;
 export const DEFAULT_KEY = Key.C;
