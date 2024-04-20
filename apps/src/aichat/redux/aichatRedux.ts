@@ -102,12 +102,14 @@ export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
     const rootState = (await thunkAPI.getState()) as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
+      rootState.aichat;
     const {dispatch} = thunkAPI;
 
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      chatMessages,
       dispatch
     );
   }
@@ -120,13 +122,15 @@ export const publishModel = createAsyncThunk(
   'aichat/publishModelCard',
   async (_, thunkAPI) => {
     const rootState = (await thunkAPI.getState()) as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
+      rootState.aichat;
     const {dispatch} = thunkAPI;
 
     dispatch(setHasPublished(true));
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      chatMessages,
       dispatch
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -139,7 +143,8 @@ export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
   async (_, thunkAPI) => {
     const rootState = (await thunkAPI.getState()) as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
+      rootState.aichat;
     const {dispatch} = thunkAPI;
 
     const {modelCardInfo} = currentAiCustomizations;
@@ -149,16 +154,24 @@ export const saveModelCard = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      chatMessages,
       dispatch
     );
   }
 );
+
+const getLastMessageId = (storedMessages: ChatCompletionMessage[]) => {
+  return storedMessages.length === 0
+    ? 0
+    : storedMessages[storedMessages.length - 1].id;
+};
 
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
+  storedMessages: ChatCompletionMessage[],
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
@@ -191,9 +204,11 @@ const saveAiCustomization = async (
     savedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
+  let newMessageId = getLastMessageId(storedMessages) + 1;
   changedProperties.forEach(property => {
     dispatch(
       addChatMessage({
+        id: newMessageId,
         role: Role.MODEL_UPDATE,
         chatMessageText:
           AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
@@ -201,6 +216,7 @@ const saveAiCustomization = async (
         timestamp: getCurrentTime(),
       })
     );
+    newMessageId++;
   });
 };
 
@@ -220,7 +236,9 @@ export const submitChatContents = createAsyncThunk(
       channelId: state.lab.channel?.id,
     };
     // Create the new user ChatCompleteMessage and add to chatMessages.
+    const newMessageId = getLastMessageId(storedMessages) + 1;
     const newMessage: ChatCompletionMessage = {
+      id: newMessageId,
       role: Role.USER,
       status: Status.OK,
       chatMessageText: newUserMessageText,
@@ -235,9 +253,9 @@ export const submitChatContents = createAsyncThunk(
       aiCustomizations,
       chatContext
     );
-    console.log('chatApiResponse', chatApiResponse);
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
+        id: newMessageId + 1,
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
@@ -259,12 +277,7 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const newMessageId = state.chatMessages.length + 1;
-      const newMessage = {
-        ...action.payload,
-        id: newMessageId,
-      };
-      state.chatMessages.push(newMessage);
+      state.chatMessages.push(action.payload);
     },
     removeChatMessage: (state, action: PayloadAction<number | undefined>) => {
       const updatedMessages = state.chatMessages.filter(
