@@ -11,8 +11,8 @@ class AichatControllerTest < ActionController::TestCase
     @genai_pilot_student = create(:follower, section: pilot_section).student_user
     @common_params = {
       storedMessages: [{role: "user", content: "this is a test!"}],
-      aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
-      chatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
+      aichatModelCustomizations: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
+      aichatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
     }
     valid_message = "hello"
     pii_violation_message = "my email is l.lovepadel@sports.edu"
@@ -20,6 +20,7 @@ class AichatControllerTest < ActionController::TestCase
     @valid_params = @common_params.merge(newMessage: valid_message)
     @pii_violation_params = @common_params.merge(newMessage: pii_violation_message)
     @profanity_violation_params = @common_params.merge(newMessage: profanity_violation_message)
+    @missing_stored_messages_params = @common_params.except(:storedMessages)
   end
 
   setup do
@@ -54,6 +55,12 @@ class AichatControllerTest < ActionController::TestCase
   test 'Bad request if required params are not included' do
     sign_in(@genai_pilot_teacher)
     post :chat_completion, params: {newMessage: "hello"}
+    assert_response :bad_request
+  end
+
+  test 'Bad request if storedMessages param is not included' do
+    sign_in(@genai_pilot_teacher)
+    post :chat_completion, params: @missing_stored_messages_params
     assert_response :bad_request
   end
 

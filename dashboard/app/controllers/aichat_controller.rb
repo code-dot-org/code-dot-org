@@ -5,8 +5,8 @@ class AichatController < ApplicationController
   # params are
   # newMessage: string
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
-  # aichatParameters: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
-  # chatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
+  # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
+  # aichatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless AichatHelper.can_request_aichat_chat_completion?
@@ -23,7 +23,7 @@ class AichatController < ApplicationController
     # If the content is inappropriate, we skip sending to endpoint and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
-    input_json = AichatHelper.format_inputs_for_sagemaker_request(params[:aichatParameters], params[:storedMessages], params[:newMessage])
+    input_json = AichatHelper.format_inputs_for_sagemaker_request(params[:aichatModelCustomizations], params[:storedMessages], params[:newMessage])
     sagemaker_response = AichatHelper.request_sagemaker_chat_completion(input_json)
     latest_assistant_response = AichatHelper.get_sagemaker_assistant_response(sagemaker_response)
     payload = {
@@ -33,12 +33,15 @@ class AichatController < ApplicationController
     return render(status: :ok, json: payload.to_json)
   end
 
-  private def has_required_params?
+  def has_required_params?
     begin
-      params.require([:newMessage, :aichatParameters, :chatContext])
+      params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
     rescue ActionController::ParameterMissing
       return false
     end
-    true
+    # It is possible that storedMessages is an empty array.
+    # If so, the above require check will not pass.
+    # Check storedMessages param separately.
+    params[:storedMessages].is_a?(Array)
   end
 end

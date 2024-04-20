@@ -23,7 +23,7 @@ import {
   AiCustomizations,
   AichatInteractionStatus as Status,
   ChatCompletionMessage,
-  ChatContext,
+  AichatContext,
   LevelAichatSettings,
   ModelCardInfo,
   Role,
@@ -229,7 +229,7 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const aiCustomizations = state.aichat.savedAiCustomizations;
     const storedMessages = state.aichat.chatMessages;
-    const chatContext: ChatContext = {
+    const aichatContext: AichatContext = {
       userId: state.currentUser.userId,
       currentLevelId: state.progress.currentLevelId,
       scriptId: state.progress.scriptId,
@@ -251,7 +251,7 @@ export const submitChatContents = createAsyncThunk(
       newUserMessageText,
       storedMessages,
       aiCustomizations,
-      chatContext
+      aichatContext
     );
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
