@@ -146,8 +146,6 @@ const defaultProject: ProjectType = {
   },
 };
 
-let lj = '';
-
 const Weblab2View = () => {
   const [currentProject, setCurrentProject] =
     useState<ProjectType>(defaultProject);
@@ -158,12 +156,6 @@ const Weblab2View = () => {
 
   const setProject = useMemo(
     () => (newProject: MultiFileSource) => {
-      const json = JSON.stringify(newProject);
-      console.log('PROJ LENGTH : ', json.length);
-      if (json.length < lj.length) {
-        console.error('OMFG : ', json, lj);
-      }
-      lj = json;
       setCurrentProject(newProject);
       if (Lab2Registry.getInstance().getProjectManager()) {
         const projectSources = {
