@@ -13,9 +13,6 @@
 #   action :upgrade
 # end
 
-# Use patched ProxySQL with fix for Aurora 2.09 bug.
-# See: https://github.com/sysown/proxysql/issues/3082
-# Can we stop using the fork? Our patch was merged upstream https://github.com/sysown/proxysql/pull/3234
 proxysql_filename = 'proxysql_2.6.2-ubuntu20_amd64.deb'
 proxysql_file = "#{Chef::Config[:file_cache_path]}/#{proxysql_filename}"
 remote_file proxysql_file do
