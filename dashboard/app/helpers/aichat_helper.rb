@@ -52,7 +52,7 @@ module AichatHelper
   end
 
   def self.wrap_as_instructions(message)
-    INSTRUCTIONS_START_TAG + "#{message}" + INSTRUCTIONS_END_TAG
+    INSTRUCTIONS_START_TAG + message + INSTRUCTIONS_END_TAG
   end
 
   def self.can_request_aichat_chat_completion?
