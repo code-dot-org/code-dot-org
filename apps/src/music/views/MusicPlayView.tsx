@@ -7,7 +7,7 @@ import Link from '@cdo/apps/componentLibrary/link';
 
 import musicI18n from '../locale';
 
-const codeOrgLogo = require(`@cdo/static/music/code-dot-org-white-logo.png`);
+const codeOrgLogo = require(`@cdo/static/code-dot-org-white-logo.svg`);
 
 interface MusicPlayViewProps {
   onPlay: () => void;
@@ -27,7 +27,8 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
     }),
     []
   );
-  // Share button will only appear when users browser supports the Web Share API (Can be mobile browsers and some desktop browser like macOS Safari)
+  // Share button will only appear when users browser supports the Web Share API
+  // (Can be mobile browsers and some desktop browser like macOS Safari)
   // Requires HTTPS connection (adhoc or production page).
   // Was unable to access it on localhost with our routing (http://localhost-studio.code.org:3000/
   // is not considered a sage URL by browser, only http://localhost:3000/ is).
@@ -46,8 +47,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
           My Awesome Mix
         </Heading2>
         <BodyTwoText>
-          {musicI18n.madeWithMusicLabOn()}{' '}
-          <Link href="https://studio.code.org/projects/music">Code.org</Link>
+          {musicI18n.madeWithMusicLabOn()} <Link href="/">Code.org</Link>
         </BodyTwoText>
 
         <div className={moduleStyles.musicPlayViewPlaySection}>
