@@ -38,6 +38,7 @@ class ManageStudentsLoginInfo extends Component {
 
     return (
       <div style={styles.explanation}>
+        <p>{i18n.setUpClass_childAccountPolicyNotice()}</p>
         {loginType !== SectionLoginType.lti_v1 && (
           <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
         )}

@@ -1,5 +1,5 @@
 import React from 'react';
-import ChildAccountConsent from './ChildAccountConsent';
+import ChildAccountConsent from './index';
 
 export default {
   component: ChildAccountConsent,

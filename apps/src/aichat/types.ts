@@ -11,7 +11,7 @@ export type ChatCompletionMessage = {
   timestamp?: string;
 };
 
-export type ChatContext = {
+export type AichatContext = {
   userId: number;
   currentLevelId: string | null;
   scriptId: number | null;
@@ -65,7 +65,7 @@ export interface AiCustomizations {
   modelCardInfo: ModelCardInfo;
 }
 
-export type AichatParameters = Omit<AiCustomizations, 'modelCardInfo'>;
+export type AichatModelCustomizations = Omit<AiCustomizations, 'modelCardInfo'>;
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {
@@ -75,6 +75,7 @@ export interface ModelCardInfo {
   limitationsAndWarnings: string;
   testingAndEvaluation: string;
   exampleTopics: string[];
+  isPublished: boolean;
 }
 
 /** Metadata about a given model, common across all aichat levels */
