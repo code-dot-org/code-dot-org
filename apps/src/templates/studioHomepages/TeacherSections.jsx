@@ -6,6 +6,7 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';
@@ -46,6 +47,17 @@ function TeacherSections({
     return plSectionIds?.length > 0 || !!coteacherInviteForPl;
   };
 
+  const renderChildAccountPolicyNotification = () => {
+    return (
+      <Notification
+        type={NotificationType.warning}
+        notice="Heads up!"
+        details="Some of your students are under 13 and will require parental consent to continue using their personal accounts after 7/1/2024. "
+        dismissible={false}
+      />
+    );
+  };
+
   return (
     <div id="classroom-sections">
       <ContentContainer heading={i18n.createSection()}>
@@ -54,6 +66,7 @@ function TeacherSections({
       </ContentContainer>
       {shouldRenderSections() && (
         <ContentContainer heading={i18n.sectionsTitle()}>
+          {renderChildAccountPolicyNotification()}
           <CoteacherInviteNotification isForPl={false} />
           <OwnedSections
             sectionIds={studentSectionIds}
@@ -85,6 +98,7 @@ function TeacherSections({
 }
 
 TeacherSections.propTypes = {
+  //Redux provided
   asyncLoadSectionData: PropTypes.func.isRequired,
   asyncLoadCoteacherInvite: PropTypes.func.isRequired,
   coteacherInvite: PropTypes.object,
