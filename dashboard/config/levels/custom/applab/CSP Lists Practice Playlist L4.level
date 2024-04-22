@@ -76,9 +76,12 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Playlist, Milestone 4",
+    "bubble_choice_description": "Allow users to save their favorite artists into a list.",
+    "thumbnail_url": "https://images.code.org/cf44b5dc50aff51cdf2982f3314480b8-Playlist.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T17:33:12.160+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L4\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L4\"},{\"changed_at\":\"2024-04-17 17:35:46 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-17 17:55:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-18 18:31:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T17:33:12.160+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L4\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L4\"},{\"changed_at\":\"2024-04-17 17:35:46 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-17 17:55:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-18 18:31:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-19 18:57:34 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
