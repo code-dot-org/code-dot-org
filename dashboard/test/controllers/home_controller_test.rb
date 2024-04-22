@@ -281,8 +281,10 @@ class HomeControllerTest < ActionController::TestCase
   test 'student without age gets student information prompt with age select' do
     student = create(:student)
     student.update_attribute(:birthday, nil) # bypasses validations
+    student.update_attribute(:us_state, 'DC')
     student = student.reload
     refute student.age, "user should not have age, but value was #{student.age}"
+    assert student.us_state
 
     sign_in student
     get :home
