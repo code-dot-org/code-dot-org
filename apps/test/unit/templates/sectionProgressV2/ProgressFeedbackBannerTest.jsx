@@ -21,7 +21,6 @@ describe('UnconnectedProgressFeedbackBanner', () => {
   };
 
   afterEach(() => {
-    // Reset the spy's history after each test
     fakeCreate.resetHistory();
   });
 
