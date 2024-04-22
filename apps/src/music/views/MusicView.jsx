@@ -52,7 +52,6 @@ import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicLabView from './MusicLabView';
-import MusicPlayView from '@cdo/apps/music/views/MusicPlayView';
 
 const BLOCKLY_DIV_ID = 'blockly-div';
 
@@ -644,7 +643,6 @@ class UnconnectedMusicView extends React.Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <AnalyticsContext.Provider
         value={this.props.onProjectBeats ? this.analyticsReporter : null}
@@ -655,12 +653,6 @@ class UnconnectedMusicView extends React.Component {
           uiShortcutsEnabled={
             AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
           }
-        />
-
-        <MusicPlayView
-          onPlay={this.playSong}
-          onStop={this.stopSong}
-          isPlaying={this.props.isPlaying}
         />
 
         <MusicLabView
