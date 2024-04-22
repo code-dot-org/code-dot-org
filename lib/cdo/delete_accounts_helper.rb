@@ -1,5 +1,6 @@
 require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
+require 'cdo/mailjet'
 require 'cdo/db'
 
 # rubocop:disable CustomCops/PegasusDbUsage
@@ -250,6 +251,10 @@ class DeleteAccountsHelper
     ContactRollupsPardotMemory.find_or_create_by(email: email).update(marked_for_deletion_at: Time.now.utc)
   end
 
+  def remove_mailjet_contact(email)
+    MailJet.delete_contact(email)
+  end
+
   # Removes the StudioPerson record associated with the user IF it is not
   # associated with any other users.
   # @param [User] user The user whose studio person we will delete if it's not shared
@@ -441,6 +446,7 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
+    remove_mailjet_contact(user_email) if user_email&.present?
     purge_contact_rollups(user_email)
     purge_unshared_studio_person(user)
     anonymize_user(user)

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# User Story\r\n\r\nDescribe a user story you created based on your data visualizations. What data informed this story?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# User Story\r\n\r\n#### Describe a user story you created based on your data visualizations. What data informed this story?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
     "teacher_markdown": "This question assesses students' ability to analyze data visualizations and extract insights that inform the creation of a user story, demonstrating the link between data interpretation and user-centered design.\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-19T00:03:34.000+00:00\",\"changed\":[\"cloned from \\\"CV_L5_Reflection_1\\\"\"],\"cloned_from\":\"CV_L5_Reflection_1\"},{\"changed_at\":\"2024-04-19 00:04:08 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-19T00:03:34.000+00:00\",\"changed\":[\"cloned from \\\"CV_L5_Reflection_1\\\"\"],\"cloned_from\":\"CV_L5_Reflection_1\"},{\"changed_at\":\"2024-04-19 00:04:08 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:13:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
