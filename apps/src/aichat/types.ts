@@ -11,7 +11,6 @@ export type ChatCompletionMessage = {
   timestamp?: string;
   sessionId?: number;
 };
-//inCurrentChatSession
 
 export type AichatContext = {
   userId: number;
