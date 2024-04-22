@@ -128,9 +128,9 @@ class LtiV1Controller < ApplicationController
       auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
 
       query_params = {
-        id_token: ERB::Util.url_encode(params[:id_token]),
-        state: ERB::Util.url_encode(params[:state]),
-        new_tab: ERB::Util.url_encode("true"),
+        id_token: params[:id_token],
+        state: params[:state],
+        new_tab: "true",
       }
 
       @auth_url = "#{auth_url_base}?#{query_params.to_query}"
