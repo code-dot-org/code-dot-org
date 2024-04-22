@@ -67,10 +67,9 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
-    - if current_user&.student?
-      - forceStudentInterstitial = params[:forceStudentInterstitial]
-      - if current_user.age.nil? || lti_user_info_required?(current_user) || cap_user_info_required?(current_user, request.country) || forceStudentInterstitial
-        = render partial: 'layouts/student_information_interstitial', locals: {student: current_user, country: request.country, forceStudentInterstitial: forceStudentInterstitial}
+    - if current_user&.student? && (current_user.age.nil? || (current_user.us_state.nil? && Policies::Lti.lti?(current_user)))
+      = render partial: 'layouts/student_information_interstitial'
+
     - cookie_key = environment_specific_cookie_name('_user_type')
     - user_type = request.cookies[cookie_key]
     -# The _user_type cookie is set in devise.rb to differentiate under13 students as 'student_y'.
