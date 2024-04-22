@@ -16,17 +16,14 @@ const modelDropdownItems = modelDescriptions.map(model => {
 
 const ModelSelectionFields: React.FunctionComponent = () => {
   const {setModelSelectionValues, aichatSettings} = useContext(UpdateContext);
-  const shouldDisableAdditionalModelSelection =
-    aichatSettings.visibilities.selectedModelId !== Visibility.EDITABLE;
-  const [additionalAvailableModelIds, setAdditionalAvailableModelIds] =
-    useState<Set<string>>(
-      new Set(
-        aichatSettings.availableModelIds.filter(
-          id => id !== aichatSettings.initialCustomizations.selectedModelId
-        )
-      )
-    );
   const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
+
+  const shouldDisableAdditionalModelSelection =
+    selectedModelId !== Visibility.EDITABLE;
+  const [additionalAvailableModelIds, setAdditionalAvailableModelIds] =
+    useState<string[]>(
+      aichatSettings.availableModelIds.filter(id => id !== selectedModelId)
+    );
 
   const onDropdownChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -38,12 +35,11 @@ const ModelSelectionFields: React.FunctionComponent = () => {
   const onCheckboxChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       if (e.target.checked) {
-        setAdditionalAvailableModelIds(
-          additionalAvailableModelIds.add(e.target.name)
-        );
+        additionalAvailableModelIds.push(e.target.name);
+        setAdditionalAvailableModelIds(additionalAvailableModelIds);
         setModelSelectionValues(additionalAvailableModelIds, selectedModelId);
       } else {
-        additionalAvailableModelIds.delete(e.target.name);
+        additionalAvailableModelIds.filter(id => id !== e.target.name);
         setAdditionalAvailableModelIds(additionalAvailableModelIds);
         setModelSelectionValues(additionalAvailableModelIds, selectedModelId);
       }
@@ -84,7 +80,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
                   name={model.id}
                   label={model.name}
                   checked={
-                    additionalAvailableModelIds.has(model.id) ||
+                    additionalAvailableModelIds.includes(model.id) ||
                     model.id === selectedModelId
                   }
                   disabled={
