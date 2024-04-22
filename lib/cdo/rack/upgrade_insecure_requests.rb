@@ -64,7 +64,9 @@ module Rack
         # content.
 
         # If the request path is an allow listed, the frame-ancestors policy is made permissive.
-        # Warning: Only very specific paths can be on the allow list. Contact security for more information.
+        # Warning: Our default policy is to deny iframes for security concerns.  Allow list entries are only to be
+        # added when absolutely necessary, when the scope is reduced to bare minimum to meet the objectives, and once
+        # security has reviewed and signed off on the specific changed.  Please contact security for more information.
         iframe_path_allowlist = Set.new(["/lti/v1/authenticate"])
         cdo_allowed_iframe_ancestors = DCDO.get('allowed_iframe_ancestors', nil) || CDO.allowed_iframe_ancestors
         allowed_iframe_ancestors = iframe_path_allowlist.include?(env['REQUEST_PATH']) ? '*' : cdo_allowed_iframe_ancestors
