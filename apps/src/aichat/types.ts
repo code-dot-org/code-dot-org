@@ -55,7 +55,7 @@ export interface AichatLevelProperties extends LevelProperties {
   aichatSettings?: LevelAichatSettings;
 }
 
-/** AI customizations for student chat bots
+/** Model customizations and model card information for aichat levels.
  *  selectedModelId is a foreign key to ModelDescription.id */
 export interface AiCustomizations {
   selectedModelId: string;
@@ -65,6 +65,8 @@ export interface AiCustomizations {
   modelCardInfo: ModelCardInfo;
 }
 
+// Model customizations sent to backend for aichat levels - excludes modelCardInfo.
+// The customizations will be included in request to LLM endpoint.
 export type AichatModelCustomizations = Omit<AiCustomizations, 'modelCardInfo'>;
 
 /** Chat bot Model Card information */
