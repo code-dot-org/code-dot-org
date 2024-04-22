@@ -108,6 +108,7 @@ en:
       'Challenge: Updating Variables': 'Challenge: Updating Variables'
       Challenges: Challenges
       Change: Change
+      Change a sound: Change a sound
       Changing Screens: Changing Screens
       Changing Sensor Scale: Changing Sensor Scale
       Check For Understanding: Check For Understanding
@@ -116,6 +117,7 @@ en:
       Check-In Survey: Check-In Survey
       Checking for a Winner: Checking for a Winner
       Choice: Choice
+      'Choice Level: Add Effects': 'Choice Level: Add Effects'
       'Choice Levels: Customize Your App': 'Choice Levels: Customize Your App'
       Choose Your Own Adventure: Choose Your Own Adventure
       Choosing Good IDs: Choosing Good IDs
@@ -301,6 +303,7 @@ en:
       Interactive Characters: Interactive Characters
       Interactive Maps Intro Video: Interactive Maps Intro Video
       Interactive Pet: Interactive Pet
+      Intro: Intro
       Intro Video: Intro Video
       Intro to Design Mode: Intro to Design Mode
       Intro to Flyer Game: Intro to Flyer Game
@@ -399,6 +402,7 @@ en:
       New Shapes: New Shapes
       Noisy Image Widget: Noisy Image Widget
       Orientation: Orientation
+      Outro: Outro
       Overview: Overview
       'Overview: Design Mode': 'Overview: Design Mode'
       'Overview: If Statements': 'Overview: If Statements'
@@ -421,6 +425,9 @@ en:
       Platform Jumper - Platforms: Platform Jumper - Platforms
       Platform Jumper - Player: Platform Jumper - Player
       Platform Jumper Review: Platform Jumper Review
+      Play a sound: Play a sound
+      Play live: Play live
+      Play together: Play together
       Player Controls: Player Controls
       Playing Notes: Playing Notes
       Playing with Notes: Playing with Notes
@@ -459,6 +466,7 @@ en:
       Recognizing Shapes: Recognizing Shapes
       Reflection: Reflection
       Relay Programming - Unplugged Activity: Relay Programming - Unplugged Activity
+      Repeat: Repeat
       Repeat Blocks: Repeat Blocks
       Repeat Blocks with BB-8: Repeat Blocks with BB-8
       Repeat Blocks with the Artist: Repeat Blocks with the Artist
