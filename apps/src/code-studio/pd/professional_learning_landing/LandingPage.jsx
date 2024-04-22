@@ -188,21 +188,10 @@ function LandingPage({
           <>
             {showGettingStartedBanner && RenderGettingStartedBanner()}
             {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
-            <section>
-              <EnrolledWorkshops />
-            </section>
             {plCoursesStarted?.length >= 1 && (
               <section id={'self-paced-pl'}>
                 <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
                 {RenderSelfPacedProgressTable()}
-              </section>
-            )}
-            {deeperLearningCourseData?.length >= 1 && (
-              <section>
-                <Heading2>Online Professional Learning Courses</Heading2>
-                <ProfessionalLearningCourseProgress
-                  deeperLearningCourseData={deeperLearningCourseData}
-                />
               </section>
             )}
             <JoinSectionArea
@@ -211,6 +200,17 @@ function LandingPage({
               isTeacher={true}
               isPlSections={true}
             />
+            <section>
+              <EnrolledWorkshops />
+            </section>
+            {deeperLearningCourseData?.length >= 1 && (
+              <section>
+                <Heading2>Online Professional Learning Courses</Heading2>
+                <ProfessionalLearningCourseProgress
+                  deeperLearningCourseData={deeperLearningCourseData}
+                />
+              </section>
+            )}
             <section>
               <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
               {RenderStaticRecommendedPL()}
