@@ -3,8 +3,6 @@ require 'cdo/aws/metrics'
 require 'csv'
 
 class EvaluateRubricJob < ApplicationJob
-  queue_as :default
-
   S3_AI_BUCKET = 'cdo-ai'.freeze
 
   # The path to the release directory in S3 which contains the AI rubric evaluation config.
