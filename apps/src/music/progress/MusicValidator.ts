@@ -57,13 +57,15 @@ export default class MusicValidator extends Validator {
 
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
     this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
+      // Skip events that we haven't gotten to yet.
+      if (eventData.when > currentPlayheadPosition) {
+        return;
+      }
+
       const length = eventData.length;
 
       if (eventData.type === 'sound') {
-        if (
-          eventData.when <= currentPlayheadPosition &&
-          eventData.when + length > currentPlayheadPosition
-        ) {
+        if (eventData.when + length > currentPlayheadPosition) {
           currentNumberSounds++;
 
           if (eventData.triggered) {
@@ -78,17 +80,11 @@ export default class MusicValidator extends Validator {
           });
         }
 
-        if (eventData.when <= currentPlayheadPosition) {
-          playedNumberSounds++;
-        }
+        playedNumberSounds++;
       } else if (eventData.type === 'pattern') {
-        if (eventData.when <= currentPlayheadPosition) {
-          playedNumberPatterns++;
-        }
+        playedNumberPatterns++;
       } else if (eventData.type === 'chord') {
-        if (eventData.when <= currentPlayheadPosition) {
-          playedNumberChords++;
-        }
+        playedNumberChords++;
       }
     });
 
@@ -106,39 +102,32 @@ export default class MusicValidator extends Validator {
       });
     }
 
-    // Check for up to a certain number of sounds played.
-    for (
-      let numberSounds = playedNumberSounds;
-      numberSounds >= 1;
-      numberSounds--
-    ) {
+    // Add satisfied conditions for the played sounds.
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_SOUNDS.name,
+      playedNumberSounds
+    );
+
+    // Add satisfied conditions for the played patterns.
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_PATTERNS.name,
+      playedNumberPatterns
+    );
+
+    // Add satisfied conditions for the played chords.
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_CHORDS.name,
+      playedNumberChords
+    );
+  }
+
+  // Add satisfied conditions for a given played condition, for the number of times
+  // it was played.
+  private addPlayedConditions(conditionName: string, playedNumber: number) {
+    for (let numberSounds = playedNumber; numberSounds >= 1; numberSounds--) {
       this.conditionsChecker.addSatisfiedCondition({
-        name: MusicConditions.PLAYED_SOUNDS.name,
+        name: conditionName,
         value: numberSounds,
-      });
-    }
-
-    // Check for up to a certain number of patterns played.
-    for (
-      let numberPatterns = playedNumberPatterns;
-      numberPatterns >= 1;
-      numberPatterns--
-    ) {
-      this.conditionsChecker.addSatisfiedCondition({
-        name: MusicConditions.PLAYED_PATTERNS.name,
-        value: numberPatterns,
-      });
-    }
-
-    // Check for up to a certain number of chords played.
-    for (
-      let numberChords = playedNumberChords;
-      numberChords >= 1;
-      numberChords--
-    ) {
-      this.conditionsChecker.addSatisfiedCondition({
-        name: MusicConditions.PLAYED_CHORDS.name,
-        value: numberChords,
       });
     }
   }
