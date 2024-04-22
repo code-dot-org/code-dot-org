@@ -2,44 +2,49 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 import sinon from 'sinon';
 
-import UnconnectedProgressFeedbackBanner from '@cdo/apps/templates/sectionProgressV2/ProgressFeedbackBanner';
+import {UnconnectedProgressFeedbackBanner} from '@cdo/apps/templates/sectionProgressV2/ProgressFeedbackBanner';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
 describe('UnconnectedProgressFeedbackBanner', () => {
-  it('renders correctly with initial state', () => {
+  it('renders correctly when user has not answered survey question', () => {
     const fakeFetch = sinon.spy();
     const fakeCreate = sinon.spy();
     const props = {
-      canShow: false,
+      currentUser: {isAdmin: false},
+      canShow: true,
       isLoading: false,
-      progressV2Feedback: null,
+      progressV2Feedback: {empty: true},
       fetchProgressV2Feedback: fakeFetch,
       createProgressV2Feedback: fakeCreate,
       errorWhenCreatingOrLoading: null,
     };
 
     render(<UnconnectedProgressFeedbackBanner {...props} />);
-    expect(screen.getByText(i18n.progressV2_feedback_question())).not.be
+    expect(screen.getByText(i18n.progressV2_feedback_question())).to.be.visible;
+    expect(screen.getByTitle(i18n.progressV2_feedback_thumbsUp())).to.be
+      .visible;
+    expect(screen.getByTitle(i18n.progressV2_feedback_thumbsDown())).to.be
       .visible;
   });
 
-  //   it('handles answer function when thumbs up is clicked', () => {
-  //     const createFeedbackMock = jest.fn();
+  //   it('renders correctly with initial state', () => {
+  //     const fakeFetch = sinon.spy();
+  //     const fakeCreate = sinon.spy();
   //     const props = {
+  //       currentUser: {isAdmin: false},
+  //       bannerStatus: 'unanswered',
   //       canShow: true,
   //       isLoading: false,
   //       progressV2Feedback: {empty: true},
-  //       fetchProgressV2Feedback: jest.fn(),
-  //       createProgressV2Feedback: createFeedbackMock,
+  //       fetchProgressV2Feedback: fakeFetch,
+  //       createProgressV2Feedback: fakeCreate,
   //       errorWhenCreatingOrLoading: null,
   //     };
 
-  //     const {getByText} = render(
-  //       <UnconnectedProgressFeedbackBanner {...props} />
-  //     );
-  //     fireEvent.click(getByText(/Thumbs Up/i));
-  //     expect(createFeedbackMock).toHaveBeenCalled();
+  //     render(<UnconnectedProgressFeedbackBanner {...props} />);
+  //     screen.debug();
+  //     expect(screen.getByText(i18n.progressV2_feedback_question())).to.be.visible;
   //   });
 });
