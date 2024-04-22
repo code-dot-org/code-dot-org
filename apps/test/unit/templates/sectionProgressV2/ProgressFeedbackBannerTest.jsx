@@ -8,20 +8,20 @@ import i18n from '@cdo/locale';
 import {expect} from '../../../util/reconfiguredChai';
 
 describe('UnconnectedProgressFeedbackBanner', () => {
-  it('renders correctly with initial state', () => {
-    const fakeFetch = sinon.spy();
-    const fakeCreate = sinon.spy();
-    const props = {
-      currentUser: {isAdmin: false},
-      canShow: false,
-      isLoading: false,
-      progressV2Feedback: {empty: true},
-      fetchProgressV2Feedback: fakeFetch,
-      createProgressV2Feedback: fakeCreate,
-      errorWhenCreatingOrLoading: null,
-    };
+  const fakeFetch = sinon.spy();
+  const fakeCreate = sinon.spy();
+  const defaultProps = {
+    currentUser: {isAdmin: false},
+    canShow: false,
+    isLoading: false,
+    progressV2Feedback: {empty: true},
+    fetchProgressV2Feedback: fakeFetch,
+    createProgressV2Feedback: fakeCreate,
+    errorWhenCreatingOrLoading: null,
+  };
 
-    render(<UnconnectedProgressFeedbackBanner {...props} />);
+  it('renders correctly with initial state', () => {
+    render(<UnconnectedProgressFeedbackBanner {...defaultProps} />);
     const questionText = screen.queryByText(
       i18n.progressV2_feedback_question()
     );
@@ -33,19 +33,9 @@ describe('UnconnectedProgressFeedbackBanner', () => {
   });
 
   it('renders correctly when user has not answered survey question', () => {
-    const fakeFetch = sinon.spy();
-    const fakeCreate = sinon.spy();
-    const props = {
-      currentUser: {isAdmin: false},
-      canShow: true,
-      isLoading: false,
-      progressV2Feedback: {empty: true},
-      fetchProgressV2Feedback: fakeFetch,
-      createProgressV2Feedback: fakeCreate,
-      errorWhenCreatingOrLoading: null,
-    };
-
-    render(<UnconnectedProgressFeedbackBanner {...props} />);
+    render(
+      <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
+    );
     expect(screen.getByText(i18n.progressV2_feedback_question())).to.be.visible;
     expect(screen.getByTitle(i18n.progressV2_feedback_thumbsUp())).to.be
       .visible;
@@ -54,19 +44,13 @@ describe('UnconnectedProgressFeedbackBanner', () => {
   });
 
   it('renders correctly when the data is loading', () => {
-    const fakeFetch = sinon.spy();
-    const fakeCreate = sinon.spy();
-    const props = {
-      currentUser: {isAdmin: false},
-      canShow: true,
-      isLoading: true,
-      progressV2Feedback: {empty: true},
-      fetchProgressV2Feedback: fakeFetch,
-      createProgressV2Feedback: fakeCreate,
-      errorWhenCreatingOrLoading: null,
-    };
-
-    render(<UnconnectedProgressFeedbackBanner {...props} />);
+    render(
+      <UnconnectedProgressFeedbackBanner
+        {...defaultProps}
+        canShow={true}
+        isLoading={true}
+      />
+    );
     const questionText = screen.queryByText(
       i18n.progressV2_feedback_question()
     );
@@ -77,20 +61,10 @@ describe('UnconnectedProgressFeedbackBanner', () => {
     expect(shareMoreText).to.not.exist;
   });
 
-  it('clicking thumbs up attempts to send feedback', () => {
-    const fakeFetch = sinon.spy();
-    const fakeCreate = sinon.spy();
-    const props = {
-      currentUser: {isAdmin: false},
-      canShow: true,
-      isLoading: false,
-      progressV2Feedback: {empty: true},
-      fetchProgressV2Feedback: fakeFetch,
-      createProgressV2Feedback: fakeCreate,
-      errorWhenCreatingOrLoading: null,
-    };
-
-    render(<UnconnectedProgressFeedbackBanner {...props} />);
+  it('clicking thumbs up attempts to send feedback and asks for more detailed feedback', () => {
+    render(
+      <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
+    );
     const thumbsUpButton = screen.getByTitle(
       i18n.progressV2_feedback_thumbsUp()
     );
@@ -107,20 +81,10 @@ describe('UnconnectedProgressFeedbackBanner', () => {
     expect(shareMoreText).to.be.visible;
   });
 
-  //   it('clicking thumbs down attempts to send feedback', () => {
-  //     const fakeFetch = sinon.spy();
-  //     const fakeCreate = sinon.spy();
-  //     const props = {
-  //       currentUser: {isAdmin: false},
-  //       canShow: true,
-  //       isLoading: false,
-  //       progressV2Feedback: {empty: true},
-  //       fetchProgressV2Feedback: fakeFetch,
-  //       createProgressV2Feedback: fakeCreate,
-  //       errorWhenCreatingOrLoading: null,
-  //     };
-
-  //     render(<UnconnectedProgressFeedbackBanner {...props} />);
+  //   it('clicking thumbs down attempts to send feedback and asks for more detailed feedback', () => {
+  //     render(
+  //       <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
+  //     );
   //     const thumbsDownButton = screen.getByTitle(
   //       i18n.progressV2_feedback_thumbsDown()
   //     );
@@ -149,9 +113,16 @@ describe('UnconnectedProgressFeedbackBanner', () => {
   //     expect(thumbsUpButton).to.be.visible;
   //     fireEvent.click(thumbsUpButton);
   //     expect(fakeCreate).to.have.been.calledOnce;
-  //     const closeButton = screen.getByText('HEHEHEHE');
+  //     const closeButton = screen.getByText('×');
   //     expect(closeButton).to.be.visible;
   //     fireEvent.click(closeButton);
-  // expect close function to be called
+  //     const questionText = screen.queryByText(
+  //       i18n.progressV2_feedback_question()
+  //     );
+  //     const shareMoreText = screen.queryByText(
+  //       i18n.progressV2_feedback_shareMore()
+  //     );
+  //     expect(questionText).to.not.exist;
+  //     expect(shareMoreText).to.not.exist;
   //   });
 });
