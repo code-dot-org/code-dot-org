@@ -74,7 +74,11 @@ const FeedbackBanner: React.FC<FeedbackBannerProps> = ({
         <Fade in={!isLoading}>
           {answerStatus === BANNER_STATUS.UNANSWERED ? (
             <span>
-              <span id="feedback-banner-title" aria-hidden="true">
+              <span
+                id="feedback-banner-title"
+                className="feedback-title"
+                aria-hidden="true"
+              >
                 {question}
               </span>
 
@@ -107,7 +111,7 @@ const FeedbackBanner: React.FC<FeedbackBannerProps> = ({
               </span>
             </span>
           ) : (
-            <span>
+            <span className="share-more">
               <span id="feedback-banner-title" aria-hidden="true">
                 {shareMore}
               </span>

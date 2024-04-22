@@ -39,7 +39,7 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   }
 
   return (
-    <span>
+    <span className={moduleStyles.currentPack}>
       {packImageSrc && (
         <img
           src={packImageSrc}
