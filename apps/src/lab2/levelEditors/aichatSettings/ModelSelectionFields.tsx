@@ -16,10 +16,9 @@ const modelDropdownItems = modelDescriptions.map(model => {
 
 const ModelSelectionFields: React.FunctionComponent = () => {
   const {setModelSelectionValues, aichatSettings} = useContext(UpdateContext);
-  const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
-
   const shouldDisableAdditionalModelSelection =
-    selectedModelId !== Visibility.EDITABLE;
+    aichatSettings.visibilities.selectedModelId !== Visibility.EDITABLE;
+  const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
   const [additionalAvailableModelIds, setAdditionalAvailableModelIds] =
     useState<string[]>(
       aichatSettings.availableModelIds.filter(id => id !== selectedModelId)
