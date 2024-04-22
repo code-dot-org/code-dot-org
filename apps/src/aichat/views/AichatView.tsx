@@ -19,7 +19,6 @@ import {
   setStartingAiCustomizations,
   setViewMode,
   clearChatMessages,
-  setNewChatSession,
 } from '../redux/aichatRedux';
 import {AichatLevelProperties, ViewMode} from '../types';
 import {isDisabled} from './modelCustomization/utils';
@@ -46,6 +45,8 @@ const AichatView: React.FunctionComponent = () => {
     state => (state.lab.initialSources?.source as string) || '{}'
   );
 
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
   const {currentAiCustomizations, viewMode} = useAppSelector(
@@ -61,8 +62,12 @@ const AichatView: React.FunctionComponent = () => {
         studentAiCustomizations,
       })
     );
-    dispatch(setNewChatSession());
   }, [dispatch, initialSources, levelAichatSettings]);
+
+  // When the level changes, clear the chat message history and start a new session.
+  useEffect(() => {
+    dispatch(clearChatMessages());
+  }, [currentLevelId, dispatch]);
 
   // Showing presentation view when:
   // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and
@@ -153,7 +158,6 @@ const AichatView: React.FunctionComponent = () => {
             headerContent={chatWorkspaceHeader}
             rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
               dispatch(clearChatMessages());
-              dispatch(setNewChatSession());
             })}
           >
             <ChatWorkspace />

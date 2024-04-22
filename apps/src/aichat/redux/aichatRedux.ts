@@ -336,6 +336,7 @@ const aichatSlice = createSlice({
     },
     clearChatMessages: state => {
       state.chatMessages = [];
+      state.currentSessionId = undefined;
     },
     setNewChatSession: state => {
       state.currentSessionId = undefined;
