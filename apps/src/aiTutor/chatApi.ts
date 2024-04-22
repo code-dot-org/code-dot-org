@@ -53,7 +53,6 @@ const formatForChatCompletion = (
  */
 export async function getChatCompletionMessage(
   systemPrompt: string,
-  userMessageId: number,
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
   levelId?: number,
@@ -79,24 +78,21 @@ export async function getChatCompletionMessage(
 
   // For now, response will be null if there was an error.
   if (!response) {
-    return {status: Status.ERROR, id: userMessageId};
+    return {status: Status.ERROR};
   } else if (response?.status === Status.PROFANITY_VIOLATION) {
     return {
       status: Status.PROFANITY_VIOLATION,
-      id: userMessageId,
       assistantResponse:
         "I can't respond because your message is inappropriate. Please don't use profanity.",
     };
   } else if (response?.status === Status.PII_VIOLATION) {
     return {
       status: Status.PII_VIOLATION,
-      id: userMessageId,
       assistantResponse: `I can't respond because your message is inappropriate. Please don't include personal information like your ${response.status}.`,
     };
   }
   return {
     status: Status.OK,
-    id: userMessageId,
     assistantResponse: response.content,
   };
 }
@@ -106,8 +102,8 @@ type OpenaiChatCompletionMessage = {
   role: Role;
   content: string;
 };
+
 type ChatCompletionResponse = {
   status: AITutorInteractionStatusValue;
-  id: number;
   assistantResponse?: string;
 };

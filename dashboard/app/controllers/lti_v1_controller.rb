@@ -125,11 +125,16 @@ class LtiV1Controller < ApplicationController
     # in a new tab. This flow appends a 'new_tab=true' query param, so it will
     # pass this block once the iframe "jail break" has happened.
     if Policies::Lti.force_iframe_launch?(decoded_jwt[:iss]) && !params[:new_tab]
-      id_token = params[:id_token]
-      state = params[:state]
-      token_hash = {id_token: id_token, state: state}
-      redirect_to "#{lti_v1_iframe_url}?#{token_hash.to_query}"
-      return
+      auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
+
+      query_params = {
+        id_token: params[:id_token],
+        state: params[:state],
+        new_tab: "true",
+      }
+
+      @auth_url = "#{auth_url_base}?#{query_params.to_query}"
+      render 'lti/v1/iframe', layout: false and return
     end
 
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
@@ -221,22 +226,6 @@ class LtiV1Controller < ApplicationController
       end
       format.json {render json: @lti_section_sync_result, status: status}
     end
-  end
-
-  # GET /lti/v1/iframe
-  # Detects if an LMS is trying open Code.org in an iframe and prompts user to
-  # open in new tab. The experience is unchanged to non-iframe users.
-  def iframe
-    auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
-
-    query_params = {
-      id_token: ERB::Util.url_encode(params[:id_token]),
-      state: ERB::Util.url_encode(params[:state]),
-      new_tab: ERB::Util.url_encode("true"),
-    }
-
-    @auth_url = "#{auth_url_base}?#{query_params.to_query}"
-    render 'lti/v1/iframe', layout: false
   end
 
   # GET /lti/v1/sync_course
