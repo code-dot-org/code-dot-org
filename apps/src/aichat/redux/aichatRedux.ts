@@ -159,10 +159,12 @@ export const saveModelCard = createAsyncThunk(
   }
 );
 
-const getLastMessageId = (storedMessages: ChatCompletionMessage[]) => {
-  return storedMessages.length === 0
-    ? 0
-    : storedMessages[storedMessages.length - 1].id;
+// This variable keeps track of the most recent message ID so that we can
+// assign a unique message id in increasing sequence to a new message.
+let latestMessageId = 0;
+const getNewMessageId = () => {
+  latestMessageId += 1;
+  return latestMessageId;
 };
 
 // This is the "core" update logic that is shared when a student saves their
@@ -203,11 +205,10 @@ const saveAiCustomization = async (
     savedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
-  let newMessageId = getLastMessageId(storedMessages) + 1;
   changedProperties.forEach(property => {
     dispatch(
       addChatMessage({
-        id: newMessageId,
+        id: getNewMessageId(),
         role: Role.MODEL_UPDATE,
         chatMessageText:
           AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
@@ -215,7 +216,6 @@ const saveAiCustomization = async (
         timestamp: getCurrentTime(),
       })
     );
-    newMessageId++;
   });
 };
 
@@ -235,9 +235,8 @@ export const submitChatContents = createAsyncThunk(
       channelId: state.lab.channel?.id,
     };
     // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newMessageId = getLastMessageId(storedMessages) + 1;
     const newMessage: ChatCompletionMessage = {
-      id: newMessageId,
+      id: getNewMessageId(),
       role: Role.USER,
       status: Status.OK,
       chatMessageText: newUserMessageText,
@@ -254,7 +253,7 @@ export const submitChatContents = createAsyncThunk(
     );
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: newMessageId + 1,
+        id: getNewMessageId(),
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
@@ -278,7 +277,7 @@ const aichatSlice = createSlice({
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
       state.chatMessages.push(action.payload);
     },
-    removeChatMessage: (state, action: PayloadAction<number | undefined>) => {
+    removeChatMessage: (state, action: PayloadAction<number>) => {
       const updatedMessages = state.chatMessages.filter(
         message => message.id !== action.payload
       );
