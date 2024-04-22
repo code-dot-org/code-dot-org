@@ -11,6 +11,7 @@ import {
 } from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 import {
+  DEFAULT_VISIBILITIES,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
@@ -26,9 +27,11 @@ const SetupCustomization: React.FunctionComponent = () => {
   const [isShowingModelDialog, setIsShowingModelDialog] =
     useState<boolean>(false);
 
-  const {temperature, systemPrompt, selectedModelId} = useAppSelector(
-    state => state.aichat.fieldVisibilities
-  );
+  const {
+    temperature,
+    systemPrompt,
+    selectedModelId = DEFAULT_VISIBILITIES.selectedModelId,
+  } = useAppSelector(state => state.aichat.fieldVisibilities);
   const aiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );

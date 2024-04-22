@@ -55,7 +55,7 @@ export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
 export const DEFAULT_VISIBILITIES: {
   [key in keyof AiCustomizations]: Visibility;
 } = {
-  selectedModelId: Visibility.EDITABLE,
+  selectedModelId: Visibility.READONLY,
   temperature: Visibility.EDITABLE,
   systemPrompt: Visibility.EDITABLE,
   retrievalContexts: Visibility.EDITABLE,
