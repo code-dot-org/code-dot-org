@@ -37,33 +37,8 @@ TTSSafeScrubber.tags = ['xml']
 module TextToSpeech
   extend ActiveSupport::Concern
 
-  VOICES = {
-    'en-US': {
-      VOICE: 'sharon22k',
-      SPEED: 180,
-      SHAPE: 100
-    },
-    'es-ES': {
-      VOICE: 'ines22k',
-      SPEED: 180,
-      SHAPE: 100,
-    },
-    'es-MX': {
-      VOICE: 'rosa22k',
-      SPEED: 180,
-      SHAPE: 100,
-    },
-    'it-IT': {
-      VOICE: 'vittorio22k',
-      SPEED: 180,
-      SHAPE: 100,
-    },
-    'pt-BR': {
-      VOICE: 'marcia22k',
-      SPEED: 180,
-      SHAPE: 100,
-    }
-  }.freeze
+  # Pull the VOICES out of the SharedConstants
+  VOICES = SharedConstants::VOICES
 
   # TODO: this concern actually depends on the SerializedProperties
   # concern ... I'm not sure how best to deal with that.
@@ -89,9 +64,19 @@ module TextToSpeech
   end
 
   def self.tts_path(text, name, locale: I18n.locale)
-    content_hash = Digest::MD5.hexdigest(text)
+    content_md5 = Digest::MD5.hexdigest(text)
+    content_sha = Digest::SHA256.hexdigest(text)
     loc_voice = TextToSpeech.localized_voice(locale: locale)
-    "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_hash}/#{name}.mp3"
+
+    # Determine the location based on the experiment enabled
+    use_new_path = DCDO.get('updated_tts_path', false)
+    if use_new_path
+      # New path
+      "generated/#{content_md5}/#{content_sha}/#{loc_voice[:VOICE]}-#{loc_voice[:SPEED]}-#{loc_voice[:SHAPE]}.mp3"
+    else
+      # Old path
+      "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_md5}/#{name}.mp3"
+    end
   end
 
   def self.tts_upload_to_s3(text, filename, context = nil, locale: I18n.locale)
