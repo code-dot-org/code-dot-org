@@ -31,9 +31,9 @@ mysql_defaults: &mysql_defaults
   # `MYSQL_OPT_CONNECT_TIMEOUT`: The connect timeout in seconds.
   connect_timeout: 2
 
-<% if DCDO.get('enable_mysql_client_reconnect', true)
+<% if DCDO.get('enable_mysql_client_reconnect', false)
   # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
-  # reconnect: true
+  reconnect: true
 %>
 
   # `MYSQL_OPT_READ_TIMEOUT`: The timeout in seconds for each attempt to read from the server.

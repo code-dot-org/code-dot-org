@@ -56,7 +56,7 @@ def sequel_connect(writer, reader, validation_frequency: rack_env?(:test) ? -1 :
   }
 
   # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
-  db_options[:reconnect] = true if DCDO.get('enable_mysql_client_reconnect', true)
+  db_options[:reconnect] = true if DCDO.get('enable_mysql_client_reconnect', false)
 
   if query_timeout
     db_options[:read_timeout] = query_timeout
