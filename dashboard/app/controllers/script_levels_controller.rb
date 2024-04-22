@@ -65,7 +65,7 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
-    if @script.is_deprecated
+    if @script.is_deprecated || @script.has_deprecated_levels?
       return render 'errors/deprecated_course'
     end
 

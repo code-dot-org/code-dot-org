@@ -13,7 +13,7 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
-    if @script.is_deprecated
+    if @script.is_deprecated || @script.has_deprecated_levels?
       return render 'errors/deprecated_course'
     end
     if @script.redirect_to?

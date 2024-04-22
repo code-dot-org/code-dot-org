@@ -845,6 +845,11 @@ class Unit < ApplicationRecord
     ].include? name
   end
 
+  # Check if any script_level associated with this script has a deprecated level
+  def has_deprecated_levels?
+    script_levels.any? {|script_level| script_level.level.deprecated?}
+  end
+
   def twenty_hour?
     name == '20-hour'
   end

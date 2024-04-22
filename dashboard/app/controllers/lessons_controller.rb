@@ -23,7 +23,7 @@ class LessonsController < ApplicationController
     script = Unit.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated
 
-    if script.is_deprecated
+    if script.is_deprecated || @script.has_deprecated_levels?
       return render 'errors/deprecated_course'
     end
 
