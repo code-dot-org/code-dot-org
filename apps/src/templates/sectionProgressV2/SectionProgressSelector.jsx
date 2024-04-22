@@ -83,10 +83,15 @@ function SectionProgressSelector({
       </Link>
     </div>
   );
+
+  const callback = (isVisible, isLoading) => {
+    console.log('lfm', isVisible, isLoading);
+  };
   return (
     <div className={styles.pageContent}>
       <ProgressFeedbackBanner
         canShow={showFeedbackBannerLocked ? false : displayV2}
+        visibilityCallback={callback}
       />
       {toggleV1OrV2Link()}
       {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
