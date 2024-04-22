@@ -348,6 +348,10 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    if @level.deprecated?
+      return render 'errors/deprecated_course'
+    end
+
     if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
