@@ -13,7 +13,7 @@
     "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext=.js,.jsx,.ts,.tsx .",
     "lint:scss": "npx stylelint '**/*.scss'",
     "test": "./run-tests-in-parallel.sh",
-    "test:unit": "grunt karma --testType=unit",
+    "test:unit": "jest",
     "test:integration": "grunt karma --testType=integration",
     "test:storybook": "grunt karma --testType=storybook",
     "clean": "grunt clean",
