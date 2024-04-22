@@ -13,7 +13,7 @@ export type ChatCompletionMessage = {
 };
 //inCurrentChatSession
 
-export type ChatContext = {
+export type AichatContext = {
   userId: number;
   currentLevelId: string | null;
   scriptId: number | null;
@@ -67,7 +67,7 @@ export interface AiCustomizations {
   modelCardInfo: ModelCardInfo;
 }
 
-export type AichatParameters = Omit<AiCustomizations, 'modelCardInfo'>;
+export type AichatModelCustomizations = Omit<AiCustomizations, 'modelCardInfo'>;
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {

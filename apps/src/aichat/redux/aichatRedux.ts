@@ -22,7 +22,7 @@ import {
   AiCustomizations,
   AichatInteractionStatus as Status,
   ChatCompletionMessage,
-  ChatContext,
+  AichatContext,
   LevelAichatSettings,
   ModelCardInfo,
   Role,
@@ -99,13 +99,15 @@ const initialState: AichatState = {
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
-    const rootState = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
+      rootState.aichat;
     const {dispatch} = thunkAPI;
 
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      chatMessages,
       dispatch
     );
   }
@@ -121,10 +123,12 @@ export const publishModel = createAsyncThunk(
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
 
     const rootState = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
+      rootState.aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      chatMessages,
       dispatch
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -143,22 +147,32 @@ export const saveModelCard = createAsyncThunk(
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
 
-    const {currentAiCustomizations, savedAiCustomizations} = (
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} = (
       thunkAPI.getState() as RootState
     ).aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      chatMessages,
       dispatch
     );
   }
 );
+
+// This variable keeps track of the most recent message ID so that we can
+// assign a unique message id in increasing sequence to a new message.
+let latestMessageId = 0;
+const getNewMessageId = () => {
+  latestMessageId += 1;
+  return latestMessageId;
+};
 
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
+  storedMessages: ChatCompletionMessage[],
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
@@ -208,7 +222,7 @@ const saveAiCustomization = async (
   changedProperties.forEach(property => {
     dispatch(
       addChatMessage({
-        id: 0,
+        id: getNewMessageId(),
         role: Role.MODEL_UPDATE,
         chatMessageText:
           AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
@@ -232,20 +246,15 @@ export const submitChatContents = createAsyncThunk(
       currentSessionId,
     } = state.aichat;
 
-    const chatContext: ChatContext = {
+    const aichatContext: AichatContext = {
       userId: state.currentUser.userId,
       currentLevelId: state.progress.currentLevelId,
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
-    const newMessageId =
-      storedMessages.length === 0
-        ? 1
-        : storedMessages[storedMessages.length - 1].id + 1;
-
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
-      id: newMessageId,
+      id: getNewMessageId(),
       role: Role.USER,
       status: Status.OK,
       chatMessageText: newUserMessageText,
@@ -264,7 +273,7 @@ export const submitChatContents = createAsyncThunk(
           )
         : [],
       aiCustomizations,
-      chatContext
+      aichatContext
     );
     console.log('chatApiResponse', chatApiResponse);
 
@@ -272,14 +281,14 @@ export const submitChatContents = createAsyncThunk(
     thunkAPI.dispatch(setChatSessionId(chatApiResponse.sessionId));
     thunkAPI.dispatch(
       updateChatMessageSession({
-        id: newMessageId,
+        id: newMessage.id,
         sessionId: chatApiResponse.sessionId,
       })
     );
 
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: newMessageId + 1,
+        id: getNewMessageId(),
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
@@ -302,14 +311,7 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const newMessageId = state.chatMessages.length
-        ? state.chatMessages[state.chatMessages.length - 1].id + 1
-        : 1;
-      const newMessage = {
-        ...action.payload,
-        id: newMessageId,
-      };
-      state.chatMessages.push(newMessage);
+      state.chatMessages.push(action.payload);
     },
     removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
       const updatedMessages = [...state.chatMessages];
