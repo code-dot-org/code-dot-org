@@ -1127,9 +1127,7 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
 
-    resources :ai_tutor_interactions, only: [:create, :index] do
-      resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
-    end
+    resources :ai_tutor_interactions, only: [:create, :index]
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
