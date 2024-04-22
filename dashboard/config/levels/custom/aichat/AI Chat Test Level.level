@@ -12,39 +12,6 @@
     "bot_title": "deprecated",
     "bot_description": "deprecated",
     "disable_projects": true,
-    "initial_ai_customizations": {
-      "botName": {
-        "value": "Ada Lovelace",
-        "visibility": "editable"
-      },
-      "temperature": {
-        "value": 0.5,
-        "visibility": "editable"
-      },
-      "systemPrompt": {
-        "value": "",
-        "visibility": "editable"
-      },
-      "retrievalContexts": {
-        "value": [
-
-        ],
-        "visibility": "editable"
-      },
-      "modelCardInfo": {
-        "value": {
-          "description": "",
-          "intendedUse": "",
-          "limitationsAndWarnings": "",
-          "testingAndEvaluation": "",
-          "exampleTopics": [
-
-          ]
-        },
-        "visibility": "editable"
-      },
-      "hidePresentationPanel": false
-    },
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "mistral",

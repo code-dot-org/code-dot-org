@@ -12,39 +12,6 @@
     "bot_title": "Deprecated",
     "bot_description": "Deprecated",
     "disable_projects": true,
-    "initial_ai_customizations": {
-      "botName": {
-        "value": "",
-        "visibility": "editable"
-      },
-      "temperature": {
-        "value": 0.5,
-        "visibility": "editable"
-      },
-      "systemPrompt": {
-        "value": "",
-        "visibility": "editable"
-      },
-      "retrievalContexts": {
-        "value": [
-
-        ],
-        "visibility": "editable"
-      },
-      "modelCardInfo": {
-        "value": {
-          "description": "",
-          "intendedUse": "",
-          "limitationsAndWarnings": "",
-          "testingAndEvaluation": "",
-          "exampleTopics": [
-
-          ]
-        },
-        "visibility": "editable"
-      },
-      "hidePresentationPanel": true
-    },
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "chatgpt",
