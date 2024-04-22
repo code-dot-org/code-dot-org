@@ -20,7 +20,7 @@ module Metrics
         Honeybadger.notify(
           exception,
           error_message: 'Error logging event',
-        )
+      )
       end
 
       # Logs an event to Statsig
