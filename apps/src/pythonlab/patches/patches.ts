@@ -7,8 +7,6 @@ export const MATPLOTLIB_IMG_TAG = 'MATPLOTLIB_SHOW_IMG';
 // elsewhere for confusing results.
 // This patch is always prepended to the user's code.
 // Adapted from https://github.com/pyodide/matplotlib-pyodide/issues/6#issuecomment-1242747625
-// TODO: Re-enable matplotlib after adding wheel to our repo.
-// https://codedotorg.atlassian.net/browse/CT-488
 const PATCH_MATPLOTLIB = `
 import base64
 import os
@@ -42,6 +40,7 @@ import unittest
 def ensure_unittest_patch():
   _old_main = unittest.main
 
+  # We changed two default values: set verbosity to 2 (more verbose), and set exit to False to avoid a confusing error message.
   def main(module='__main__', defaultTest=None, argv=None, testRunner=None, testLoader=unittest.defaultTestLoader, exit=False, verbosity=2, failfast=None, catchbreak=None, buffer=None, warnings=None):
     _old_main(module, defaultTest, argv, testRunner, testLoader, exit, verbosity, failfast, catchbreak, buffer, warnings)
 
