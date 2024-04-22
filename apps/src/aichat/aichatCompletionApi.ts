@@ -2,8 +2,8 @@ import {
   Role,
   ChatCompletionMessage,
   AiCustomizations,
-  ChatContext,
-  AichatParameters,
+  AichatContext,
+  AichatModelCustomizations,
 } from './types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -19,9 +19,10 @@ export async function postAichatCompletionMessage(
   newMessage: string,
   messagesToSend: ChatCompletionMessage[],
   aiCustomizations: AiCustomizations,
-  chatContext: ChatContext
+  aichatContext: AichatContext
 ) {
-  const aichatParameters: AichatParameters = {
+  const aichatModelCustomizations: AichatModelCustomizations = {
+    selectedModelId: aiCustomizations.selectedModelId,
     temperature: aiCustomizations.temperature,
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
@@ -30,8 +31,8 @@ export async function postAichatCompletionMessage(
   const payload = {
     newMessage,
     storedMessages,
-    aichatParameters,
-    chatContext,
+    aichatModelCustomizations,
+    aichatContext,
   };
   let response;
   try {

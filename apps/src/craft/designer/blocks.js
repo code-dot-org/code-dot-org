@@ -1,10 +1,13 @@
-const i18n = require('../locale');
+import {EventType} from '@code-dot-org/craft';
+import _ from 'lodash';
+
+import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
+
 import {singleton as studioApp} from '../../StudioApp';
 import {stripQuotes} from '../../utils';
-import _ from 'lodash';
-import {EventType} from '@code-dot-org/craft';
 import {BLOCK_NAME_TO_DISPLAY_TEXT} from '../utils';
-import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
+
+const i18n = require('../locale');
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 

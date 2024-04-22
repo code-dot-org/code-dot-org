@@ -1,5 +1,6 @@
-import api from '../api';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+
+import api from '../api';
 
 /**
  * Interface for a set of custom game logic for playlab

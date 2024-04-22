@@ -10433,6 +10433,8 @@ en:
               name: Game Mechanics
             lesson-12:
               name: New Game Design Lesson 3
+            lesson-13:
+              name: Music Lab Testing
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -13981,49 +13983,8 @@ en:
             lessonGroup-3:
               display_name: 'Chapter 2: Multi-page Websites'
           title: Unit 2 - Web Development ('24-'25)
-          description: |-
-            In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.
-
-            ::: details [**Chapter 1 Overview**]
-            **Description:** Students use computing as a form of self expression as they design and develop basic web pages.   Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page. They also explore the privacy and intellectual property implications of publishing their work online.
-
-            **Goals:**
-            * Create digital artifacts that use multiple computer languages to control the structure and style of their content.
-            * Create a website as a form of personal expression.
-            * Use different programming languages to solve different problems.
-            * Examine their role and responsibilities as both creators and consumers of digital media.
-
-            **Big Questions:**
-            * Why do people create websites?
-            * How can text communicate content, structure, and style on a web page?
-            * How do I safely and appropriately make use of the content published on the Internet?
-            * What strategies can I use when coding to find and fix issues?
-            :::
-
-            ::: details [**Chapter 2 Overview**]
-            **Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.
-
-            **Goals:**
-            * Create digital artifacts that use multiple computer languages to control the structure and style of their content.
-            * Create a website that solves a problem.
-            * Use different programming languages to solve different problems.
-            * Examine their role and responsibilities as both creators and consumers of digital media.
-
-            **Big Questions:**
-            * How can websites be used to address problems in the world?
-            * What strategies can teams use to work better together?
-            * How do I know what information can be trusted online?
-            :::
-
-
-            ::: details [**Implementation Guidance for Web Development**]
-            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)
-            - You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit
-            :::
-
-            ## Finished Teaching This Unit?
-            Answer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went.
-          student_description: " In this unit, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          description: "In Web Development, students are put in the shoes of a web developer and empowered to design and create a web page to meet a user’s needs. As students develop the pages and begin to see themselves as web developers and designers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem-solving related to programming while learning valuable skills such as debugging, using resources, and teamwork. At the conclusion of chapter one, students will design and create a web page for a user. After chapter two, students will have worked with a team to create a multi-page website they can publish and share. \n\n::: details [**Chapter 1 Overview**]\n**Description:** Students work as web developers to design and develop web pages to meet users' needs. Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page and CSS to design and organize the content. They also explore the privacy and intellectual property implications of publishing web pages online.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a web page to meet a user's needs.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as creators and consumers of digital media.\n\n**Big Questions:**\n* How do web developers create web pages for users?\n* How can text communicate a web page's content, structure, and style?\n* How do I safely and appropriately create content for the Internet?\n* What strategies can I use when coding to find and fix issues?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a website that solves a problem.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n* How can websites be used to address problems in the world?\n* What strategies can teams use to work better together?\n* How do I know what information can be trusted online?\n:::\n\n\n::: details [**Implementation Guidance for Web Development**]\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went."
+          student_description: " In this unit, you’ll step into the shoes of a web developer and learn how to design and create web pages for a user. You’ll learn how to structure and style your user's pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: " Learn to build your own web site in Web Lab."
           description_audience: ''
           lessons: {}
@@ -14146,9 +14107,13 @@ en:
             lesson-2:
               name: Counter
             lesson-7:
-              name: JuiceMind Bridging Activity
+              name: Cristina - Meet your micro:bit
             lesson-8:
-              name: JuiceMind Content Assessment
+              name: Cristina - Emotion badge with micro:bit
+            lesson-10:
+              name: Cristina - Calming LEDs with micro:bit
+            lesson-9:
+              name: Cristina - Counter with micro:bit
           lesson_groups:
             lessonGroup-2:
               display_name: 'Beginner: Events'
@@ -14179,7 +14144,11 @@ en:
             lesson-7:
               name: Max-min thermometer
             lesson-8:
-              name: Poem Art 2021 (need to clone)
+              name: Cristina - Step counter with micro:bit
+            lesson-9:
+              name: Cristina - Micro:bit pet with micro:bit
+            lesson-10:
+              name: Cristina - Max-min thermometer with micro:bit
           lesson_groups:
             lessonGroup-2:
               display_name: 'Beginner: Events and Variables'
@@ -14209,6 +14178,12 @@ en:
               name: Meet your micro:bit
             lesson-7:
               name: Tilt alarm
+            lesson-8:
+              name: Cristina - Sensory toy with micro:bit
+            lesson-9:
+              name: Cristina - Simple door alarm with micro:bit
+            lesson-10:
+              name: Cristina - Tilt alarm with micro:bit
           lesson_groups:
             lessonGroup-2:
               display_name: 'Beginner: Events and Designing for Accessibility'
@@ -14236,6 +14211,12 @@ en:
               name: Meet your micro:bit
             lesson-2:
               name: Activity picker
+            lesson-7:
+              name: Cristina - Saving sea turtles with micro:bit
+            lesson-8:
+              name: Cristina - Rock, paper, scissors with micro:bit
+            lesson-9:
+              name: Cristina - Activity picker with micro:bit
           lesson_groups:
             lessonGroup-2:
               display_name: 'Beginner: Conditionals'
@@ -14963,7 +14944,7 @@ en:
             lesson-2:
               name: Lesson 2
             lesson-3:
-              name: Lesson 3
+              name: Templates
             lesson-4:
               name: Lesson 4
             lesson-5:
@@ -15329,20 +15310,20 @@ en:
               display_name: 'Chapter 2: Multi-page Websites'
           title: Web Development ('23-'24)
           description: |-
-            In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.
+            In Web Development, students are put in the shoes of a web developer and empowered to design and create a web page to meet a user’s needs. As students develop the pages and begin to see themselves as web developers and designers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem-solving related to programming while learning valuable skills such as debugging, using resources, and teamwork. At the conclusion of chapter one, students will design and create a web page for a user. After chapter two, students will have worked with a team to create a multi-page website they can publish and share.
 
             ::: details [**Chapter 1 Overview**]
-            **Description:** Students use computing as a form of self expression as they design and develop basic web pages.   Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page. They also explore the privacy and intellectual property implications of publishing their work online.
+            **Description:** Students work as web developers to design and develop web pages to meet users' needs. Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page and CSS to design and organize the content. They also explore the privacy and intellectual property implications of publishing web pages online.
 
             **Goals:**
             * Create digital artifacts that use multiple computer languages to control the structure and style of their content.
-            * Create a website as a form of personal expression.
+            * Create a web page to meet a user's needs.
             * Use different programming languages to solve different problems.
-            * Examine their role and responsibilities as both creators and consumers of digital media.
+            * Examine their role and responsibilities as creators and consumers of digital media.
 
             **Big Questions:**
-            * Why do people create websites?
-            * How can text communicate content, structure, and style on a web page?
+            * How do web developers create web pages for users?
+            * How can text communicate a web page's content, structure, and style?
             * How do I safely and appropriately make use of the content published on the Internet?
             * What strategies can I use when coding to find and fix issues?
             :::
@@ -16261,8 +16242,8 @@ en:
           title: Computer Vision
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: This unit introduces students to the fundamentals, applications, and ethical implications of computer vision technologies. The unit starts with basic concepts and gradually builds up to complex topics, including data collection, model training, prototype development, and the integration of user feedback. Each lesson is designed to enhance students' understanding through hands-on activities and discussions culminating in the development of a prototype. The curriculum emphasizes critical thinking, problem-solving, and ethical considerations, equipping students with the skills to develop and evaluate technology that addresses real-world problems. Through iterative design and user-centered approaches, students not only learn the technical aspects of computer vision but also its impact on society, preparing them to be thoughtful innovators in a rapidly advancing technological landscape.
+          student_description: In this unit, you'll dive into how computers interpret and understand visual information from the world around us. You'll start with the basics of how images are captured and processed and move on to more complex topics like training data, model development, and the ethical implications of artificial intelligence. Through a series of interactive lessons, hands-on activities, and project-based learning, you'll get to design your own computer vision app. Along the way, you'll learn not only about the technology itself but also how it can be used responsibly to make a positive impact in various fields like healthcare, automotive, and public safety.
         k5aisandbox-2024:
           lessons:
             lesson-1:
@@ -16281,7 +16262,15 @@ en:
           description: ''
           student_description: ''
         k5gamedesignsandbox-2024:
-          lessons: {}
+          lessons:
+            lesson-4:
+              name: Game Design
+            lesson-5:
+              name: Variables as Score
+            lesson-6:
+              name: Environment and Players
+            lesson-7:
+              name: Game Jam
           lesson_groups: {}
           name: k5gamedesignsandbox-2024
           title: K5 Game Design Sandbox
@@ -16629,13 +16618,22 @@ en:
           title: 'Coding with AI '
           description_audience: ''
           description_short: ''
-          description: "\n## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "
+          description: "\n## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Coding with AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Coding with AI Unit. "
           student_description: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "
         music-onboard:
           lessons: {}
           lesson_groups: {}
           name: music-onboard
           title: Music Lab Intro
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        musiclab-pdx-test:
+          lessons: {}
+          lesson_groups: {}
+          name: musiclab-pdx-test
+          title: 'PDX Playtest for Music Lab '
           description_audience: ''
           description_short: ''
           description: ''

@@ -1,12 +1,18 @@
 class AichatController < ApplicationController
+  include AichatHelper
+  authorize_resource class: false
+
   # params are
   # newMessage: string
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
-  # aichatParameters: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
-  # chatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
+  # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
+  # aichatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
-    params.require([:newMessage, :storedMessages, :aichatParameters, :chatContext])
+    return render status: :forbidden, json: {} unless AichatHelper.can_request_aichat_chat_completion?
+    unless has_required_params?
+      return render status: :bad_request, json: {}
+    end
 
     # Check for PII / Profanity
     # Copied from ai_tutor_interactions_controller.rb - not sure if filtering is working.
@@ -16,17 +22,26 @@ class AichatController < ApplicationController
     filter_result = ShareFiltering.find_failure(new_message_text, locale) if new_message_text
     # If the content is inappropriate, we skip sending to endpoint and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
-    # TODO: Format input to send to Sagemaker.
+
+    input_json = AichatHelper.format_inputs_for_sagemaker_request(params[:aichatModelCustomizations], params[:storedMessages], params[:newMessage])
+    sagemaker_response = AichatHelper.request_sagemaker_chat_completion(input_json)
+    latest_assistant_response = AichatHelper.get_sagemaker_assistant_response(sagemaker_response)
     payload = {
-      message: new_message_text
+      role: "assistant",
+      content: latest_assistant_response
     }
-    response = request_chat_completion(payload)
-    render(status: response[:status], json: response[:json])
+    return render(status: :ok, json: payload.to_json)
   end
 
-  def request_chat_completion(payload)
-    response_body = {role: "assistant", content: "This is an assistant response from Sagemaker"}
-    response_code = 200
-    return {status: response_code, json: response_body}
+  def has_required_params?
+    begin
+      params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
+    rescue ActionController::ParameterMissing
+      return false
+    end
+    # It is possible that storedMessages is an empty array.
+    # If so, the above require check will not pass.
+    # Check storedMessages param separately.
+    params[:storedMessages].is_a?(Array)
   end
 end

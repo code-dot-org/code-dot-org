@@ -1108,6 +1108,9 @@ class User < ApplicationRecord
     self.parent_email = nil
 
     new_attributes = email_preference.nil? ? {} : email_preference
+    if Policies::Lti.lti? self
+      self.lti_roster_sync_enabled = true
+    end
 
     transaction do
       if migrated?
@@ -1577,7 +1580,11 @@ class User < ApplicationRecord
 
   def age=(val)
     @age = val
-    val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
+    val = begin
+      val.to_i
+    rescue
+      0 # sometimes we get age: {"Pr" => nil}
+    end
     return unless val > 0
     return unless val < 200
     return if birthday && val == age # don't change birthday if we want to stay the same age

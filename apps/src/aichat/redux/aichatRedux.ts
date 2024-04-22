@@ -1,26 +1,35 @@
 import moment from 'moment';
-import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
+import {
+  createAsyncThunk,
+  createSlice,
+  createSelector,
+  AnyAction,
+  PayloadAction,
+  ThunkDispatch,
+} from '@reduxjs/toolkit';
+
+import {registerReducers} from '@cdo/apps/redux';
+import {RootState} from '@cdo/apps/types/redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 import {
+  AI_CUSTOMIZATIONS_LABELS,
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
-  AI_CUSTOMIZATIONS_LABELS,
 } from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
-  ChatCompletionMessage,
-  Role,
-  AichatInteractionStatus as Status,
   AiCustomizations,
-  ModelCardInfo,
-  Visibility,
+  AichatInteractionStatus as Status,
+  ChatCompletionMessage,
+  AichatContext,
   LevelAichatSettings,
-  ChatContext,
+  ModelCardInfo,
+  Role,
+  ViewMode,
+  Visibility,
 } from '../types';
-import {RootState} from '@cdo/apps/types/redux';
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],
@@ -68,6 +77,7 @@ export interface AichatState {
   currentAiCustomizations: AiCustomizations;
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
+  viewMode: ViewMode;
 }
 
 const initialState: AichatState = {
@@ -78,6 +88,7 @@ const initialState: AichatState = {
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
+  viewMode: ViewMode.EDIT,
 };
 
 // THUNKS
@@ -88,53 +99,125 @@ const initialState: AichatState = {
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
-    const state = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = state.aichat;
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
+      rootState.aichat;
+    const {dispatch} = thunkAPI;
 
-    // Remove any empty example topics on save
-    const trimmedExampleTopics =
-      currentAiCustomizations.modelCardInfo.exampleTopics.filter(
-        topic => topic.length
-      );
-    thunkAPI.dispatch(
-      setModelCardProperty({
-        property: 'exampleTopics',
-        value: trimmedExampleTopics,
-      })
-    );
-
-    const trimmedCurrentAiCustomizations = {
-      ...currentAiCustomizations,
-      modelCardInfo: {
-        ...currentAiCustomizations.modelCardInfo,
-        exampleTopics: trimmedExampleTopics,
-      },
-    };
-
-    await Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
-
-    thunkAPI.dispatch(setSavedAiCustomizations(trimmedCurrentAiCustomizations));
-
-    const changedProperties = findChangedProperties(
+    await saveAiCustomization(
+      currentAiCustomizations,
       savedAiCustomizations,
-      trimmedCurrentAiCustomizations
+      chatMessages,
+      dispatch
     );
-    changedProperties.forEach(property => {
-      thunkAPI.dispatch(
-        addChatMessage({
-          id: 0,
-          role: Role.MODEL_UPDATE,
-          chatMessageText:
-            AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
-          status: Status.OK,
-          timestamp: getCurrentTime(),
-        })
-      );
-    });
   }
 );
+
+// This thunk is used when a student fills out a model card and "publishes" their model,
+// enabling access to a "presentation view" where they can interact with their model
+// and view its details (temperature, system prompt, etc) in a summary view.
+export const publishModel = createAsyncThunk(
+  'aichat/publishModelCard',
+  async (_, thunkAPI) => {
+    const {dispatch} = thunkAPI;
+    dispatch(setModelCardProperty({property: 'isPublished', value: true}));
+
+    const rootState = thunkAPI.getState() as RootState;
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
+      rootState.aichat;
+    await saveAiCustomization(
+      currentAiCustomizations,
+      savedAiCustomizations,
+      chatMessages,
+      dispatch
+    );
+    dispatch(setViewMode(ViewMode.PRESENTATION));
+  }
+);
+
+// This thunk enables a student to save a partially completed model card
+// in the "Publish" tab.
+export const saveModelCard = createAsyncThunk(
+  'aichat/saveModelCard',
+  async (_, thunkAPI) => {
+    const {dispatch} = thunkAPI;
+    const modelCardInfo = (thunkAPI.getState() as RootState).aichat
+      .currentAiCustomizations.modelCardInfo;
+    if (!hasFilledOutModelCard(modelCardInfo)) {
+      dispatch(setModelCardProperty({property: 'isPublished', value: false}));
+    }
+
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} = (
+      thunkAPI.getState() as RootState
+    ).aichat;
+    await saveAiCustomization(
+      currentAiCustomizations,
+      savedAiCustomizations,
+      chatMessages,
+      dispatch
+    );
+  }
+);
+
+// This variable keeps track of the most recent message ID so that we can
+// assign a unique message id in increasing sequence to a new message.
+let latestMessageId = 0;
+const getNewMessageId = () => {
+  latestMessageId += 1;
+  return latestMessageId;
+};
+
+// This is the "core" update logic that is shared when a student saves their
+// model customizations (setup, retrieval, and "publish" tab)
+const saveAiCustomization = async (
+  currentAiCustomizations: AiCustomizations,
+  savedAiCustomizations: AiCustomizations,
+  storedMessages: ChatCompletionMessage[],
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+) => {
+  // Remove any empty example topics on save
+  const trimmedExampleTopics =
+    currentAiCustomizations.modelCardInfo.exampleTopics.filter(
+      topic => topic.length
+    );
+  dispatch(
+    setModelCardProperty({
+      property: 'exampleTopics',
+      value: trimmedExampleTopics,
+    })
+  );
+
+  const trimmedCurrentAiCustomizations = {
+    ...currentAiCustomizations,
+    modelCardInfo: {
+      ...currentAiCustomizations.modelCardInfo,
+      exampleTopics: trimmedExampleTopics,
+    },
+  };
+
+  await Lab2Registry.getInstance()
+    .getProjectManager()
+    ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+
+  dispatch(setSavedAiCustomizations(trimmedCurrentAiCustomizations));
+
+  const changedProperties = findChangedProperties(
+    savedAiCustomizations,
+    trimmedCurrentAiCustomizations
+  );
+  changedProperties.forEach(property => {
+    dispatch(
+      addChatMessage({
+        id: getNewMessageId(),
+        role: Role.MODEL_UPDATE,
+        chatMessageText:
+          AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
+        status: Status.OK,
+        timestamp: getCurrentTime(),
+      })
+    );
+  });
+};
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -145,20 +228,15 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const aiCustomizations = state.aichat.savedAiCustomizations;
     const storedMessages = state.aichat.chatMessages;
-    const chatContext: ChatContext = {
+    const aichatContext: AichatContext = {
       userId: state.currentUser.userId,
       currentLevelId: state.progress.currentLevelId,
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
-    const newMessageId =
-      storedMessages.length === 0
-        ? 1
-        : storedMessages[storedMessages.length - 1].id + 1;
-
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
-      id: newMessageId,
+      id: getNewMessageId(),
       role: Role.USER,
       status: Status.OK,
       chatMessageText: newUserMessageText,
@@ -171,12 +249,11 @@ export const submitChatContents = createAsyncThunk(
       newUserMessageText,
       storedMessages,
       aiCustomizations,
-      chatContext
+      aichatContext
     );
-    console.log('chatApiResponse', chatApiResponse);
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: newMessageId + 1,
+        id: getNewMessageId(),
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
@@ -198,13 +275,7 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const newMessageId =
-        state.chatMessages[state.chatMessages.length - 1].id + 1;
-      const newMessage = {
-        ...action.payload,
-        id: newMessageId,
-      };
-      state.chatMessages.push(newMessage);
+      state.chatMessages.push(action.payload);
     },
     removeChatMessage: (state, action: PayloadAction<number>) => {
       const updatedMessages = state.chatMessages.filter(
@@ -232,6 +303,9 @@ const aichatSlice = createSlice({
       if (chatMessage) {
         chatMessage.status = status;
       }
+    },
+    setViewMode: (state, action: PayloadAction<ViewMode>) => {
+      state.viewMode = action.payload;
     },
     setStartingAiCustomizations: (
       state,
@@ -319,6 +393,33 @@ const aichatSlice = createSlice({
   },
 });
 
+const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
+  for (const key of Object.keys(modelCardInfo)) {
+    const typedKey = key as keyof ModelCardInfo;
+
+    if (typedKey === 'isPublished') {
+      continue;
+    } else if (typedKey === 'exampleTopics') {
+      if (
+        !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
+      ) {
+        return false;
+      }
+    } else if (!modelCardInfo[typedKey].length) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+// Selectors
+export const selectHasFilledOutModelCard = createSelector(
+  (state: {aichat: AichatState}) =>
+    state.aichat.currentAiCustomizations.modelCardInfo,
+  hasFilledOutModelCard
+);
+
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
@@ -327,6 +428,7 @@ export const {
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
+  setViewMode,
   setStartingAiCustomizations,
   setSavedAiCustomizations,
   setAiCustomizationProperty,
