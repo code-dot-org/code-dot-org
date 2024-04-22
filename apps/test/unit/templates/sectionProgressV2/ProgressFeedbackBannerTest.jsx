@@ -20,6 +20,11 @@ describe('UnconnectedProgressFeedbackBanner', () => {
     errorWhenCreatingOrLoading: null,
   };
 
+  afterEach(() => {
+    // Reset the spy's history after each test
+    fakeCreate.resetHistory();
+  });
+
   it('renders correctly with initial state', () => {
     render(<UnconnectedProgressFeedbackBanner {...defaultProps} />);
     const questionText = screen.queryByText(
@@ -61,37 +66,51 @@ describe('UnconnectedProgressFeedbackBanner', () => {
     expect(shareMoreText).to.not.exist;
   });
 
-  //   it('clicking thumbs up attempts to send feedback and asks for more detailed feedback', () => {
-  //     render(
-  //       <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
-  //     );
-  //     const thumbsUpButton = screen.getByTitle(
-  //       i18n.progressV2_feedback_thumbsUp()
-  //     );
-  //     expect(thumbsUpButton).to.be.visible;
-  //     fireEvent.click(thumbsUpButton);
-  //     expect(fakeCreate).to.have.been.calledOnce;
-  //     const shareMoreText = screen.getByText(
-  //       i18n.progressV2_feedback_shareMore()
-  //     );
-  //     const shareMoreLink = screen.getByRole('link', {
-  //       name: i18n.progressV2_feedback_shareMoreLinkText(),
-  //     });
-  //     expect(shareMoreLink).to.be.visible;
-  //     expect(shareMoreText).to.be.visible;
-  //   });
+  it('clicking thumbs up attempts to send feedback and asks for more detailed feedback', async () => {
+    render(
+      <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
+    );
+    const thumbsUpButton = screen.getByTitle(
+      i18n.progressV2_feedback_thumbsUp()
+    );
+    expect(thumbsUpButton).to.be.visible;
+    fireEvent.click(thumbsUpButton);
 
-  //   it('clicking thumbs down attempts to send feedback and asks for more detailed feedback', () => {
-  //     render(
-  //       <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
-  //     );
-  //     const thumbsDownButton = screen.getByTitle(
-  //       i18n.progressV2_feedback_thumbsDown()
-  //     );
-  //     expect(thumbsDownButton).to.be.visible;
-  //     fireEvent.click(thumbsDownButton);
-  //     expect(fakeCreate).to.have.been.calledOnce;
-  //   });
+    await waitFor(() => {
+      expect(fakeCreate).to.have.been.calledOnce;
+    });
+    const shareMoreText = screen.getByText(
+      i18n.progressV2_feedback_shareMore()
+    );
+    const shareMoreLink = screen.getByRole('link', {
+      name: i18n.progressV2_feedback_shareMoreLinkText(),
+    });
+    expect(shareMoreLink).to.be.visible;
+    expect(shareMoreText).to.be.visible;
+  });
+
+  it('clicking thumbs down attempts to send feedback and asks for more detailed feedback', async () => {
+    render(
+      <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
+    );
+    const thumbsDownButton = screen.getByTitle(
+      i18n.progressV2_feedback_thumbsDown()
+    );
+    expect(thumbsDownButton).to.be.visible;
+    fireEvent.click(thumbsDownButton);
+    await waitFor(() => {
+      expect(fakeCreate).to.have.been.calledOnce;
+    });
+
+    const shareMoreText = screen.getByText(
+      i18n.progressV2_feedback_shareMore()
+    );
+    const shareMoreLink = screen.getByRole('link', {
+      name: i18n.progressV2_feedback_shareMoreLinkText(),
+    });
+    expect(shareMoreLink).to.be.visible;
+    expect(shareMoreText).to.be.visible;
+  });
 
   it('user is able to close the banner', async () => {
     render(
@@ -107,7 +126,6 @@ describe('UnconnectedProgressFeedbackBanner', () => {
     await waitFor(() => {
       expect(fakeCreate).to.have.been.calledOnce;
     });
-    screen.debug();
 
     // Close the banner
     const closeButton = screen.getByText('×');
