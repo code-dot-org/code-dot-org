@@ -19,7 +19,8 @@ export async function postAichatCompletionMessage(
   newMessage: string,
   messagesToSend: ChatCompletionMessage[],
   aiCustomizations: AiCustomizations,
-  aichatContext: AichatContext
+  aichatContext: AichatContext,
+  sessionId?: number
 ) {
   const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
@@ -33,6 +34,7 @@ export async function postAichatCompletionMessage(
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
+    ...(sessionId ? {sessionId} : {}),
   };
   let response;
   try {

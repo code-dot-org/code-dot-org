@@ -273,7 +273,8 @@ export const submitChatContents = createAsyncThunk(
           )
         : [],
       aiCustomizations,
-      aichatContext
+      aichatContext,
+      currentSessionId
     );
     console.log('chatApiResponse', chatApiResponse);
 

@@ -28,12 +28,13 @@ class AichatController < ApplicationController
     latest_assistant_response = AichatHelper.get_sagemaker_assistant_response(sagemaker_response)
     payload = {
       role: "assistant",
-      content: latest_assistant_response
+      content: latest_assistant_response,
     }
-    return render(status: :ok, json: payload.to_json)
+    session_id = log_chat_session(params, payload)
+    return render(status: :ok, json: payload.merge({sessionId: session_id}).to_json)
   end
 
-  def has_required_params?
+  private def has_required_params?
     begin
       params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
     rescue ActionController::ParameterMissing
@@ -43,5 +44,66 @@ class AichatController < ApplicationController
     # If so, the above require check will not pass.
     # Check storedMessages param separately.
     params[:storedMessages].is_a?(Array)
+  end
+
+  # switch to pass in session ID
+  private def log_chat_session(params, response)
+    if params[:sessionId].present?
+      session_id = params[:sessionId].to_i
+      session = AichatSession.find_by(id: session_id)
+
+      if session && matches_existing_session?(session, params)
+        session.messages = params[:storedMessages].push(
+          {role: 'user', content: params[:newMessage]},
+          response
+        ).to_json
+        session.save
+        return session.id
+      end
+    end
+
+    create_session(params, response).id
+  end
+
+  private def matches_existing_session?(session, params)
+    context = params[:aichatContext]
+    if session.level_id != context[:currentLevelId].to_i ||
+        session.script_id != context[:scriptId] ||
+        current_user.id != session.user_id
+      return false
+    end
+
+    _, project_id = storage_decrypt_channel_id(context[:channelId])
+    if session.project_id != project_id
+      return false
+    end
+
+    if params[:aichatModelCustomizations].to_s != JSON.parse(session.model_customizations).to_s
+      return false
+    end
+
+    if params[:storedMessages] & JSON.parse(session.messages) != params[:storedMessages] &&
+        params[:storedMessages].length == JSON.parse(session.messages).length
+      return false
+    end
+
+    true
+  end
+
+  private def create_session(params, response)
+    context = params[:aichatContext]
+    _, project_id = storage_decrypt_channel_id(context[:channelId])
+
+    AichatSession.create(
+      user_id: context[:userId].to_i,
+      level_id: context[:currentLevelId].to_i,
+      script_id: context[:scriptId].to_i,
+      project_id: project_id,
+      model_customizations: params[:aichatModelCustomizations].to_json,
+      messages: params[:storedMessages].push(
+        {role: 'user', content: params[:newMessage]},
+        response
+      ).to_json
+    )
   end
 end
