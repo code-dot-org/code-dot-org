@@ -79,7 +79,7 @@ module TextToSpeech
     end
   end
 
-  def self.tts_upload_to_s3(text, filename, context = nil, locale: I18n.locale)
+  def self.tts_upload_to_s3(text, key, name, filename, context = nil, locale: I18n.locale)
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
     return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
@@ -91,6 +91,16 @@ module TextToSpeech
     Net::HTTP.start(uri.host) do |http|
       resp = http.get(uri.path)
       AWS::S3.upload_to_bucket(TTS_BUCKET, filename, resp.body, no_random: true)
+
+      # Also upload metadata so we know what the text is supposed to be
+      metadata_path = "#{filename}.mp3"
+      metadata = {
+        level: name,
+        key: key,
+        locale: locale,
+        text: text,
+      }
+      AWS::S3.upload_to_bucket(TTS_BUCKET, metadata_path, metadata.to_json, no_random: true)
     end
   end
 
@@ -109,9 +119,9 @@ module TextToSpeech
     TTSSafeRenderer.render(text)
   end
 
-  def tts_upload_to_s3(text, metric_context = nil, locale: I18n.locale)
+  def tts_upload_to_s3(text, key, metric_context = nil, locale: I18n.locale)
     filename = tts_path(text, locale: locale)
-    TextToSpeech.tts_upload_to_s3(text, filename, metric_context, locale: locale)
+    TextToSpeech.tts_upload_to_s3(text, key, name, filename, metric_context, locale: locale)
   end
 
   # Returns the URL where the TTS audio file can be downloaded for the given text and locale
@@ -213,15 +223,15 @@ module TextToSpeech
 
   def tts_update(update_all: false)
     context = 'update_level'
-    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?(update_all: update_all)
+    tts_upload_to_s3(tts_short_instructions_text, 'short_instructions', context) if tts_should_update_short_instructions?(update_all: update_all)
 
-    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?(update_all: update_all)
+    tts_upload_to_s3(tts_long_instructions_text, 'long_instructions', context) if tts_should_update_long_instructions?(update_all: update_all)
 
     if authored_hints && (tts_should_update('authored_hints', update_all))
       hints = JSON.parse(authored_hints)
       hints.each do |hint|
         text = TextToSpeech.sanitize(hint["hint_markdown"])
-        tts_upload_to_s3(text, context)
+        tts_upload_to_s3(text, 'hint_markdown', context)
         hint["tts_url"] = tts_url(text)
       end
       self.authored_hints = JSON.dump(hints)
@@ -231,7 +241,7 @@ module TextToSpeech
     # trigger updates in its parents, since their content is likely at least
     # partially based on this
     parent_levels.contained.each do |containing_level|
-      containing_level.tts_upload_to_s3(containing_level.tts_long_instructions_text, context)
+      containing_level.tts_upload_to_s3(containing_level.tts_long_instructions_text, 'long_instructions', context)
     end
   end
 end
