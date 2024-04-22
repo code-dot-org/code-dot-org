@@ -25,6 +25,10 @@ class Policies::ChildAccount
     }
   }.freeze
 
+  # The delay is intended to provide notice to a parent
+  # when a student may no longer be monitoring the "parent's email."
+  PERMISSION_GRANTED_MAIL_DELAY = 24.hours
+
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
@@ -56,7 +60,7 @@ class Policies::ChildAccount
 
   # Does the user login using credentials they personally control?
   # For example, some accounts are created and owned by schools (Clever).
-  def self.personal_account?(user)
+  private_class_method def self.personal_account?(user)
     return false if user.sponsored?
     # List of credential types which we believe schools have ownership of.
     # Does the user have an authentication method which is not controlled by
