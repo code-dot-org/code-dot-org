@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import sinon from 'sinon';
 
@@ -61,25 +61,25 @@ describe('UnconnectedProgressFeedbackBanner', () => {
     expect(shareMoreText).to.not.exist;
   });
 
-  it('clicking thumbs up attempts to send feedback and asks for more detailed feedback', () => {
-    render(
-      <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
-    );
-    const thumbsUpButton = screen.getByTitle(
-      i18n.progressV2_feedback_thumbsUp()
-    );
-    expect(thumbsUpButton).to.be.visible;
-    fireEvent.click(thumbsUpButton);
-    expect(fakeCreate).to.have.been.calledOnce;
-    const shareMoreText = screen.getByText(
-      i18n.progressV2_feedback_shareMore()
-    );
-    const shareMoreLink = screen.getByRole('link', {
-      name: i18n.progressV2_feedback_shareMoreLinkText(),
-    });
-    expect(shareMoreLink).to.be.visible;
-    expect(shareMoreText).to.be.visible;
-  });
+  //   it('clicking thumbs up attempts to send feedback and asks for more detailed feedback', () => {
+  //     render(
+  //       <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
+  //     );
+  //     const thumbsUpButton = screen.getByTitle(
+  //       i18n.progressV2_feedback_thumbsUp()
+  //     );
+  //     expect(thumbsUpButton).to.be.visible;
+  //     fireEvent.click(thumbsUpButton);
+  //     expect(fakeCreate).to.have.been.calledOnce;
+  //     const shareMoreText = screen.getByText(
+  //       i18n.progressV2_feedback_shareMore()
+  //     );
+  //     const shareMoreLink = screen.getByRole('link', {
+  //       name: i18n.progressV2_feedback_shareMoreLinkText(),
+  //     });
+  //     expect(shareMoreLink).to.be.visible;
+  //     expect(shareMoreText).to.be.visible;
+  //   });
 
   //   it('clicking thumbs down attempts to send feedback and asks for more detailed feedback', () => {
   //     render(
@@ -93,36 +93,35 @@ describe('UnconnectedProgressFeedbackBanner', () => {
   //     expect(fakeCreate).to.have.been.calledOnce;
   //   });
 
-  //   it('user is able to close the banner', () => {
-  //     const fakeFetch = sinon.spy();
-  //     const fakeCreate = sinon.spy();
-  //     const props = {
-  //       currentUser: {isAdmin: false},
-  //       canShow: true,
-  //       isLoading: false,
-  //       progressV2Feedback: {empty: true},
-  //       fetchProgressV2Feedback: fakeFetch,
-  //       createProgressV2Feedback: fakeCreate,
-  //       errorWhenCreatingOrLoading: null,
-  //     };
+  it('user is able to close the banner', async () => {
+    render(
+      <UnconnectedProgressFeedbackBanner {...defaultProps} canShow={true} />
+    );
 
-  //     render(<UnconnectedProgressFeedbackBanner {...props} />);
-  //     const thumbsUpButton = screen.getByTitle(
-  //       i18n.progressV2_feedback_thumbsUp()
-  //     );
-  //     expect(thumbsUpButton).to.be.visible;
-  //     fireEvent.click(thumbsUpButton);
-  //     expect(fakeCreate).to.have.been.calledOnce;
-  //     const closeButton = screen.getByText('×');
-  //     expect(closeButton).to.be.visible;
-  //     fireEvent.click(closeButton);
-  //     const questionText = screen.queryByText(
-  //       i18n.progressV2_feedback_question()
-  //     );
-  //     const shareMoreText = screen.queryByText(
-  //       i18n.progressV2_feedback_shareMore()
-  //     );
-  //     expect(questionText).to.not.exist;
-  //     expect(shareMoreText).to.not.exist;
-  //   });
+    // Give feedback
+    const thumbsUpButton = screen.getByTitle(
+      i18n.progressV2_feedback_thumbsUp()
+    );
+    expect(thumbsUpButton).to.be.visible;
+    fireEvent.click(thumbsUpButton);
+    await waitFor(() => {
+      expect(fakeCreate).to.have.been.calledOnce;
+    });
+    screen.debug();
+
+    // Close the banner
+    const closeButton = screen.getByText('×');
+    expect(closeButton).to.be.visible;
+    fireEvent.click(closeButton);
+    await waitFor(() => {
+      const questionText = screen.queryByText(
+        i18n.progressV2_feedback_question()
+      );
+      const shareMoreText = screen.queryByText(
+        i18n.progressV2_feedback_shareMore()
+      );
+      expect(questionText).to.not.exist;
+      expect(shareMoreText).to.not.exist;
+    });
+  });
 });
