@@ -33,15 +33,19 @@ const ModelSelectionFields: React.FunctionComponent = () => {
 
   const onCheckboxChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
+      let newAdditionalAvailableModelIds;
       if (e.target.checked) {
-        additionalAvailableModelIds.push(e.target.name);
-        setAdditionalAvailableModelIds(additionalAvailableModelIds);
-        setModelSelectionValues(additionalAvailableModelIds, selectedModelId);
+        newAdditionalAvailableModelIds = [
+          ...additionalAvailableModelIds,
+          e.target.name,
+        ];
       } else {
-        additionalAvailableModelIds.filter(id => id !== e.target.name);
-        setAdditionalAvailableModelIds(additionalAvailableModelIds);
-        setModelSelectionValues(additionalAvailableModelIds, selectedModelId);
+        newAdditionalAvailableModelIds = additionalAvailableModelIds.filter(
+          id => id !== e.target.name
+        );
       }
+      setAdditionalAvailableModelIds(newAdditionalAvailableModelIds);
+      setModelSelectionValues(newAdditionalAvailableModelIds, selectedModelId);
     },
     [additionalAvailableModelIds, selectedModelId, setModelSelectionValues]
   );

@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useMemo} from 'react';
 import classNames from 'classnames';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -19,7 +19,7 @@ import {
 import {isVisible, isDisabled, isEditable} from './utils';
 import CompareModelsDialog from './CompareModelsDialog';
 import {modelDescriptions} from '../../constants';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -36,19 +36,33 @@ const SetupCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  /** defaults to all models if not set in levelProperties */
-  const availableModelIds =
-    useAppSelector(
-      state =>
-        (state.lab.levelProperties as AichatLevelProperties | undefined)
-          ?.aichatSettings?.availableModelIds
-    ) || [];
-  const availableModels = availableModelIds.length
-    ? modelDescriptions.filter(model => availableModelIds.includes(model.id))
-    : modelDescriptions;
+  const savedModelIds = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.aichatSettings?.availableModelIds
+  );
 
-  const chosenModelId =
-    aiCustomizations.selectedModelId || availableModels[0].id;
+  // Handle the possibility that modelDescription can change but levels
+  // may be using outdated model ids. Fall back to first modelDescription.
+  const availableModels = useMemo(() => {
+    let models: ModelDescription[] = [];
+    if (savedModelIds && savedModelIds.length) {
+      // Exclude any models that we don't have descriptions for
+      models = modelDescriptions.filter(model =>
+        savedModelIds.includes(model.id)
+      );
+    }
+    return models.length ? models : [modelDescriptions[0]];
+  }, [savedModelIds]);
+
+  const chosenModelId = useMemo(() => {
+    return (
+      availableModels.find(
+        model => model.id === aiCustomizations.selectedModelId
+      )?.id || availableModels[0].id
+    );
+  }, [aiCustomizations.selectedModelId, availableModels]);
+
   const allFieldsDisabled =
     isDisabled(temperature) &&
     isDisabled(systemPrompt) &&
