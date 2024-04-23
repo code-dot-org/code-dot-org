@@ -36,6 +36,10 @@ class AichatControllerTest < ActionController::TestCase
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
+  teardown do
+    @controller.unstub(:storage_decrypt_channel_id)
+  end
+
   test_user_gets_response_for :chat_completion,
     name: "student_no_access_test",
     user: :student,
