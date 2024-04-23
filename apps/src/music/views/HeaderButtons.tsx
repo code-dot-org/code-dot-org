@@ -223,9 +223,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           type="button"
           className={classNames(moduleStyles.button, moduleStyles.buttonSkip)}
         >
-          <span className={moduleStyles.buttonSkipContent}>
-            {commonI18n.skipToProject()}
-          </span>
+          {commonI18n.skipToProject()}
           <FontAwesome
             title={commonI18n.skipToProject()}
             icon="arrow-right"
