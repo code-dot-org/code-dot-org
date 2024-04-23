@@ -1,12 +1,12 @@
 class AichatController < ApplicationController
   include AichatHelper
-  authorize_resource class: false
+  # authorize_resource class: false
 
   # params are
   # newMessage: string
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
-  # aichatContext: {userId: number; currentLevelId: string; scriptId: number; channelId: string;}
+  # aichatContext: {currentLevelId: string; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless AichatHelper.can_request_aichat_chat_completion?
@@ -26,12 +26,12 @@ class AichatController < ApplicationController
     input_json = AichatHelper.format_inputs_for_sagemaker_request(params[:aichatModelCustomizations], params[:storedMessages], params[:newMessage])
     sagemaker_response = AichatHelper.request_sagemaker_chat_completion(input_json)
     latest_assistant_response = AichatHelper.get_sagemaker_assistant_response(sagemaker_response)
-    payload = {
+    assistant_message = {
       role: "assistant",
       content: latest_assistant_response,
     }
-    session_id = log_chat_session(params, payload)
-    return render(status: :ok, json: payload.merge({sessionId: session_id}).to_json)
+    session_id = log_chat_session(params, assistant_message)
+    return render(status: :ok, json: assistant_message.merge({sessionId: session_id}).to_json)
   end
 
   private def has_required_params?
@@ -47,22 +47,22 @@ class AichatController < ApplicationController
   end
 
   # switch to pass in session ID
-  private def log_chat_session(params, response)
+  private def log_chat_session(params, assistant_message)
     if params[:sessionId].present?
-      session_id = params[:sessionId].to_i
+      session_id = params[:sessionId]
       session = AichatSession.find_by(id: session_id)
 
       if session && matches_existing_session?(session, params)
         session.messages = params[:storedMessages].push(
           {role: 'user', content: params[:newMessage]},
-          response
+          assistant_message
         ).to_json
         session.save
         return session.id
       end
     end
 
-    create_session(params, response).id
+    create_session(params, assistant_message).id
   end
 
   private def matches_existing_session?(session, params)
@@ -78,31 +78,27 @@ class AichatController < ApplicationController
       return false
     end
 
-    if params[:aichatModelCustomizations].to_s != JSON.parse(session.model_customizations).to_s
-      return false
-    end
-
-    if params[:storedMessages] & JSON.parse(session.messages) != params[:storedMessages] &&
-        params[:storedMessages].length == JSON.parse(session.messages).length
+    if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations) ||
+        params[:storedMessages] != JSON.parse(session.messages)
       return false
     end
 
     true
   end
 
-  private def create_session(params, response)
+  private def create_session(params, assistant_message)
     context = params[:aichatContext]
     _, project_id = storage_decrypt_channel_id(context[:channelId])
 
     AichatSession.create(
-      user_id: context[:userId].to_i,
+      user_id: current_user.id,
       level_id: context[:currentLevelId].to_i,
       script_id: context[:scriptId].to_i,
       project_id: project_id,
       model_customizations: params[:aichatModelCustomizations].to_json,
       messages: params[:storedMessages].push(
         {role: 'user', content: params[:newMessage]},
-        response
+        assistant_message
       ).to_json
     )
   end

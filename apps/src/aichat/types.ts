@@ -13,7 +13,6 @@ export type ChatCompletionMessage = {
 };
 
 export type AichatContext = {
-  userId: number;
   currentLevelId: string | null;
   scriptId: number | null;
   channelId: string | undefined;

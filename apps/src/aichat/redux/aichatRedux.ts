@@ -247,7 +247,6 @@ export const submitChatContents = createAsyncThunk(
     } = state.aichat;
 
     const aichatContext: AichatContext = {
-      userId: state.currentUser.userId,
       currentLevelId: state.progress.currentLevelId,
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
