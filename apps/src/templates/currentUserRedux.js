@@ -194,7 +194,11 @@ export default function currentUser(state = initialState, action) {
     );
     // Calling Statsig separately to emphasize different user integrations
     // and because dual reporting is aspirationally temporary (March 2024)
-    statsigReporter.setUserProperties(id, user_type);
+    statsigReporter.setUserProperties(
+      id,
+      user_type,
+      experiments.getEnabledExperiments()
+    );
     return {
       ...state,
       userId: id,
