@@ -1,17 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Certificate from './Certificate';
-import style from './certificate_batch.module.scss';
-import i18n from '@cdo/locale';
-import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
+
 import {
   BodyTwoText,
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+import i18n from '@cdo/locale';
 import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
+import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+
+import Certificate from './Certificate';
+
+import style from './certificate_batch.module.scss';
 
 export default function Congrats(props) {
   /**

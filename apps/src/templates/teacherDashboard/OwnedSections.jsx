@@ -79,7 +79,6 @@ class OwnedSections extends React.Component {
       />
     ) : (
       <OwnedSectionsTable
-        isPlSections={false}
         sectionIds={sectionsToShow}
         onEdit={this.onEditSection}
       />

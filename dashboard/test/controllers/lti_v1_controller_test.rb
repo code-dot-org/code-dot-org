@@ -558,8 +558,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_response :redirect
-    assert_redirected_to '/lti/v1/iframe' + "?id_token=#{jwt}&state=#{@state}"
+    assert_template 'lti/v1/iframe'
   end
 
   test 'auth - should NOT redirect to iframe route if LMS caller is Schoology AND new_tab=true param is present' do
@@ -910,13 +909,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'upgrade_account - upgrades current user to teacher' do
-    user = create :student
+    user = create :student, :with_lti_auth
     sign_in user
     post '/lti/v1/upgrade_account', params: {email: 'test-teacher@code.org'}
 
     assert_response :ok
     user.reload
     assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal true, user.lti_roster_sync_enabled
   end
 
   test 'should not sync if the user has roster sync disabled' do

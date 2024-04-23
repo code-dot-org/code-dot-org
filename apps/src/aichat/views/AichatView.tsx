@@ -45,6 +45,8 @@ const AichatView: React.FunctionComponent = () => {
     state => (state.lab.initialSources?.source as string) || '{}'
   );
 
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
   const {currentAiCustomizations, viewMode} = useAppSelector(
@@ -61,6 +63,11 @@ const AichatView: React.FunctionComponent = () => {
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
+
+  // When the level changes, clear the chat message history and start a new session.
+  useEffect(() => {
+    dispatch(clearChatMessages());
+  }, [currentLevelId, dispatch]);
 
   // Showing presentation view when:
   // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and
@@ -149,9 +156,9 @@ const AichatView: React.FunctionComponent = () => {
           <PanelContainer
             id="aichat-workspace-panel"
             headerContent={chatWorkspaceHeader}
-            rightHeaderContent={renderChatWorkspaceHeaderRight(() =>
-              dispatch(clearChatMessages())
-            )}
+            rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
+              dispatch(clearChatMessages());
+            })}
           >
             <ChatWorkspace />
           </PanelContainer>

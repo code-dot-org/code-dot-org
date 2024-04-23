@@ -1,7 +1,13 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import i18n from '@cdo/locale';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
@@ -15,13 +21,26 @@ const DEFAULT_PROPS = {
   workshopsAsParticipant: [{data: 'workshops'}],
   plCoursesStarted: selfPacedCourseConstants,
   userPermissions: [],
+  joinedStudentSections: [],
+  joinedPlSections: [],
   plSectionIds: [],
   hiddenPlSectionIds: [],
 };
 
 describe('LandingPage', () => {
+  let store;
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({isRtl});
+    store = getStore();
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
   function renderDefault(propOverrides = {}) {
-    const store = getStore();
     render(
       <Provider store={store}>
         <LandingPage {...DEFAULT_PROPS} {...propOverrides} />
@@ -154,5 +173,13 @@ describe('LandingPage', () => {
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
     expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
       .null;
+  });
+
+  it('page always shows Join Section area', () => {
+    renderDefault();
+
+    expect(
+      screen.getByText(i18n.joinedProfessionalLearningSectionsHomepageTitle())
+    );
   });
 });
