@@ -10,6 +10,7 @@
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
+      "pilot_experiment": "computer-vision-2024-pilot",
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
@@ -18,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "computer-vision-pilot",
-    "serialized_at": "2024-04-19 00:57:49 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-04-22 15:53:47 UTC",
+    "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1467,6 +1468,7 @@
       "position": 2,
       "properties": {
         "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Within a QR code, data is encoded using bits (1s & 0s) represented by white and black colors. Here we can see that the black squares represent a 0 and the white squares represent a 1.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Knowing the order that these bits are read in a QR code is important! Here is one of the ways that bytes of data can be read from a QR Code. The order that the QR code bits are read represents a corresponding place within a binary number, starting with the left-most digit and moving right.\n\n<img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\n**Group:** Place students in pairs or small groups of 3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the QR Code Exploration activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the QR Code Exploration activity guide.",
+        "progression_name": "QR Code Exploration Activity Guide Links",
         "tips": [
           {
             "type": "teachingTip",
@@ -1529,6 +1531,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 3 to complete their reflection question.&#x20;\n\n* _Considering what you've learned about pixels and RGB values, what kinds of information do you think computer vision algorithms can extract from images, and for what purposes?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** Encouraging students to think broadly about the applications of computer vision, including color detection, pattern recognition, and object identification, and how these capabilities can serve various purposes across industries.\n",
+        "progression_name": "Reflection Question",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1602,6 +1605,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 and 2.\n\n* _Explain the concept of edge detection in computer vision and its importance in image processing._\n* _How might edge detection filters be utilized in the computer vision application you're developing?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** Students should be able to define edge detection as a technique used to identify the boundaries or edges within images, highlighting its significance in distinguishing objects from their background, which is crucial for various computer vision applications. Encourages students to think about the practical application of edge detection in their own computer vision projects, discussing how it could improve object recognition, tracking, or other functionalities.",
+        "progression_name": "Reflection Questions",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1646,7 +1650,19 @@
       "key": "5dea8b88-3ee7-45a3-899f-f8e69ca51568",
       "position": 1,
       "properties": {
-        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** As we just experienced, it can be a lot of work to classify images sometimes. There are lots of different rules and patterns that you can use for how you choose to organize them. However, the act of ordering, sorting, and classifying the objects in images is essential in order to train computer vision applications to learn what they are seeing with their camera. Just like we need to learn to interpret the world around us through repeated use of our five senses, so too must a computer vision application train in order to make sense of what it sees in images.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to the COCO Dataset website. They should first read the purpose of the dataset, and should then navigate to the Explore section.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Take a few minutes to explore COCO and to see what it outputs when you click the various icons that are available in the Explore section.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Allow students several minutes to explore COCO. Encourage them to click around through the different icons and toggles and to run searches to see what comes up.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you explored COCO?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will notice that the dataset made it very easy to search for one or more common objects that might be present in images. They might notice that the object(s) are color-coded as a segment within the larger image. They are able to hover over the various icons in the results in order to toggle which object segments they wish to view. Some students might have seen that there is a context toggle that they can select in the result images that will attempt to describe the scene in five different ways. This adds another layer of possibility with what is possible with COCOs and how it might be used to train computer vision applications.\n\n<img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What do you wonder?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student results will vary. They might wonder who made this dataset and how? What applications might it be useful in creating? Are there any other objects that it can detect?",
+        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** As we just experienced, it can be a lot of work to classify images sometimes. There are lots of different rules and patterns that you can use for how you choose to organize them. However, the act of ordering, sorting, and classifying the objects in images is essential in order to train computer vision applications to learn what they are seeing with their camera. Just like we need to learn to interpret the world around us through repeated use of our five senses, so too must a computer vision application train in order to make sense of what it sees in images.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1.  Have students navigate to the COCO Dataset website. They should first read the purpose of the dataset, and should then navigate to the Explore section.\n\n",
+        "progression_name": "COCO Dataset Link"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dea8b88-3ee7-45a3-899f-f8e69ca51568",
+        "lesson_activity.key": "29047209-5c28-4b57-9dff-174ddb09f7b5"
+      }
+    },
+    {
+      "key": "48b26b03-1493-4943-95c4-3d12b43bc49d",
+      "position": 2,
+      "properties": {
+        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Take a few minutes to explore COCO and to see what it outputs when you click the various icons that are available in the Explore section.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Allow students several minutes to explore COCO. Encourage them to click around through the different icons and toggles and to run searches to see what comes up.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you explored COCO?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will notice that the dataset made it very easy to search for one or more common objects that might be present in images. They might notice that the object(s) are color-coded as a segment within the larger image. They are able to hover over the various icons in the results in order to toggle which object segments they wish to view. Some students might have seen that there is a context toggle that they can select in the result images that will attempt to describe the scene in five different ways. This adds another layer of possibility with what is possible with COCOs and how it might be used to train computer vision applications.\n\n<img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What do you wonder?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student results will vary. They might wonder who made this dataset and how? What applications might it be useful in creating? Are there any other objects that it can detect?",
         "tips": [
           {
             "type": "teachingTip",
@@ -1655,15 +1671,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "5dea8b88-3ee7-45a3-899f-f8e69ca51568",
+        "activity_section.key": "48b26b03-1493-4943-95c4-3d12b43bc49d",
         "lesson_activity.key": "29047209-5c28-4b57-9dff-174ddb09f7b5"
       }
     },
     {
       "key": "808aa24c-d4a6-40c7-ab90-aebecc3d0fd8",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce classes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1. Have students work with a shoulder partner to examine the image in order to see if they can identify classes that COCO would identify in this image.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students select the classes they see on COCO to see if they can find the image.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce classes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students back to Level 1 to access the COCO Dataset website. Have students work with a shoulder partner to examine the image in order to see if they can identify classes that COCO would identify in this image.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students select the classes they see on COCO to see if they can find the image.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1678,7 +1694,7 @@
     },
     {
       "key": "1af4c8de-6eab-4d53-8586-d1b6e2f7d932",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students add in new possible classes that they see– a bench, skateboard, bag, and bowl.",
         "tips": [
@@ -1695,9 +1711,21 @@
     },
     {
       "key": "4bcaf40b-69a8-46ed-8a6f-c5e511483e89",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How might an image dataset labeled with classes help a computer vision application?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Having a well-labeled dataset is crucial in being able to train computer vision models to accurately identify and classify the objects that it sees. However, as seen here with COCO, the classes that it is able to recognize are limited in scope. Oftentimes, there is a need to create and classify one’s own dataset for more niche computer vision applications and tasks.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to access MediaPipe's Object Detection model demo. Have students play around with the model by uploading a sample image.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage them to play around with the model. They will need to upload a sample image in order to have the model run and to detect possible objects. While they are exploring, suggest that they change the various options that are available within the model. However, have them focus on the score threshold. Challenge them to infer what it might be doing to the image.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you played with the model? What do you wonder?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers will vary. However, a few important items to discuss include: The purpose of the score threshold. Students might figure out that it acts as a filter, and seems to get rid of results that are below a certain percentage. They will learn next that the percentage represents a confidence rating that the model has with its own guess. The higher the number, the higher its confidence that it is correct in inferring the object. The max results toggle. This allows the model to put more predictions on the screen at once. It will display the highest confidence objects first, and will include less confident responses as the slider value increases.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the role of the confidence score.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How might an image dataset labeled with classes help a computer vision application?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Having a well-labeled dataset is crucial in being able to train computer vision models to accurately identify and classify the objects that it sees. However, as seen here with COCO, the classes that it is able to recognize are limited in scope. Oftentimes, there is a need to create and classify one’s own dataset for more niche computer vision applications and tasks.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to access MediaPipe's Object Detection model demo. Have students play around with the model by uploading a sample image.\n\n",
+        "progression_name": "MediaPipe Object Detection Link"
+      },
+      "seeding_key": {
+        "activity_section.key": "4bcaf40b-69a8-46ed-8a6f-c5e511483e89",
+        "lesson_activity.key": "29047209-5c28-4b57-9dff-174ddb09f7b5"
+      }
+    },
+    {
+      "key": "52ae9299-69b5-4e2a-adda-74ec9b8cf4ba",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage them to play around with the model. They will need to upload a sample image in order to have the model run and to detect possible objects. While they are exploring, suggest that they change the various options that are available within the model. However, have them focus on the score threshold. Challenge them to infer what it might be doing to the image.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you played with the model? What do you wonder?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers will vary. However, a few important items to discuss include: The purpose of the score threshold. Students might figure out that it acts as a filter, and seems to get rid of results that are below a certain percentage. They will learn next that the percentage represents a confidence rating that the model has with its own guess. The higher the number, the higher its confidence that it is correct in inferring the object. The max results toggle. This allows the model to put more predictions on the screen at once. It will display the highest confidence objects first, and will include less confident responses as the slider value increases.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the role of the confidence score.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1706,15 +1734,39 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4bcaf40b-69a8-46ed-8a6f-c5e511483e89",
+        "activity_section.key": "52ae9299-69b5-4e2a-adda-74ec9b8cf4ba",
         "lesson_activity.key": "29047209-5c28-4b57-9dff-174ddb09f7b5"
       }
     },
     {
       "key": "831d466e-cb47-4c8d-8fba-d4a6e89eb05e",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** We saw in the sample Lotus Blossom brainstorm that one problem that gardeners often deal with is pests. The designers behind this brainstorm want to know if this model would work well for an Auto-Pest Detection application.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** We will now test the Object Detection model that was created using COCO on a variety of different images of common garden pests. This model is a proof of concept that their solution might be a good one to pursue.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 to download the image files.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students select 2 to 3 images to upload to the tool. They can adjust the inference delegate, the model selection, the max results, and the score threshold attributes to see if they can have the model identify the insects.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What were your results?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The student groups should have come to the sad conclusion that the object detection model was not successful in identifying the insects.\n\n<img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Was this the outcome that you expected? Why or why not?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Some students may have recognized that amongst the 91 different classes that COCO is able to identify, insects are not among them. As such, since this model was trained using COCO, it will not be able to be used for an Auto-Pest Detection application. Emphasize the importance of having a dataset that is attuned to the purpose of the application in which you want to use it. A computer vision application is only as good as the data on which it is trained!\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Let’s try a different model – Image Classification. As before, you do not need to upload and test all of the images. Select a few of them and run them through the model. Make sure to try different settings in order to see if you can maximize your results.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 to access MediaPipe’s Image Classification model demo. Have students upload a few of the insect image files using this model.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How did the results differ?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This model will have much higher success rates. That is because it is not trained using COCO. Point out that under the description of the Image Classification model that is says it is trained using ImageNet. This dataset has access to 1000 classes – a much greater amount of possibilities to train a computer vision model with!\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Were there any unexpected results or patterns?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that some of the insects are still misidentified (e.g. the caterpillar and the aphids). They might notice that the confidence scores that are displayed at the bottom are not near 100% even when the prediction is correct.",
+        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** We saw in the sample Lotus Blossom brainstorm that one problem that gardeners often deal with is pests. The designers behind this brainstorm want to know if this model would work well for an Auto-Pest Detection application.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** We will now test the Object Detection model that was created using COCO on a variety of different images of common garden pests. This model is a proof of concept that their solution might be a good one to pursue.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 to download the image files.\n\n",
+        "progression_name": "Garden Image Files"
+      },
+      "seeding_key": {
+        "activity_section.key": "831d466e-cb47-4c8d-8fba-d4a6e89eb05e",
+        "lesson_activity.key": "29047209-5c28-4b57-9dff-174ddb09f7b5"
+      }
+    },
+    {
+      "key": "56796636-4c28-4981-b67a-8f5e27c4b208",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students select 2 to 3 images to upload to the tool. They can adjust the inference delegate, the model selection, the max results, and the score threshold attributes to see if they can have the model identify the insects.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What were your results?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The student groups should have come to the sad conclusion that the object detection model was not successful in identifying the insects.\n\n<img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Was this the outcome that you expected? Why or why not?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Some students may have recognized that amongst the 91 different classes that COCO is able to identify, insects are not among them. As such, since this model was trained using COCO, it will not be able to be used for an Auto-Pest Detection application. Emphasize the importance of having a dataset that is attuned to the purpose of the application in which you want to use it. A computer vision application is only as good as the data on which it is trained!\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Let’s try a different model – Image Classification. As before, you do not need to upload and test all of the images. Select a few of them and run them through the model. Make sure to try different settings in order to see if you can maximize your results.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 to access MediaPipe’s Image Classification model demo. Have students upload a few of the insect image files using this model.\n\n",
+        "progression_name": "MediaPipe Image Classification Link"
+      },
+      "seeding_key": {
+        "activity_section.key": "56796636-4c28-4981-b67a-8f5e27c4b208",
+        "lesson_activity.key": "29047209-5c28-4b57-9dff-174ddb09f7b5"
+      }
+    },
+    {
+      "key": "cdb2fb8e-4a30-44a4-ab1a-702e853ac9cb",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How did the results differ?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This model will have much higher success rates. That is because it is not trained using COCO. Point out that under the description of the Image Classification model that is says it is trained using ImageNet. This dataset has access to 1000 classes – a much greater amount of possibilities to train a computer vision model with!\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Were there any unexpected results or patterns?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that some of the insects are still misidentified (e.g. the caterpillar and the aphids). They might notice that the confidence scores that are displayed at the bottom are not near 100% even when the prediction is correct.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1723,13 +1775,13 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "831d466e-cb47-4c8d-8fba-d4a6e89eb05e",
+        "activity_section.key": "cdb2fb8e-4a30-44a4-ab1a-702e853ac9cb",
         "lesson_activity.key": "29047209-5c28-4b57-9dff-174ddb09f7b5"
       }
     },
     {
       "key": "fd97c6af-3af7-429f-a193-0b6049aeb19c",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to continue brainstorming ideas for their project."
       },
@@ -1743,6 +1795,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 5 to complete their reflection questions on Levels 5, 6, and 7.\n\n* _Can you explain how datasets like COCO and ImageNet are used in training computer vision models?_\n* _What is a confidence score, and why is it important in the output of a computer vision model?_\n* _Reflecting on today’s lesson, how do the suitability and characteristics of different datasets influence the design of computer vision applications?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** Students should discuss the role of large image datasets in providing the labeled data necessary for training computer vision models to recognize and classify objects within images This question assesses students’ understanding of confidence scores as a measure of how certain a computer vision model is about its predictions, emphasizing its importance in determining the reliability of these predictions. To synthesize learning by having students articulate the critical role of selecting appropriate datasets in designing computer vision applications that can accurately perceive and interpret images.",
+        "progression_name": "Reflection Questions",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1784,10 +1837,22 @@
       }
     },
     {
-      "key": "f20b5c6b-ad5a-4ee7-8706-e443748b4df7",
+      "key": "f66fc306-1e29-4a1a-960c-a886c5deccff",
       "position": 2,
       "properties": {
-        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** One thing to keep in mind is that the less intrusive the data-collection process is for people, the more likely they are to participate in it, and to give accurate information.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"Training Data & Bias\" (0:50 to 2:39)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What are some other examples of bias in data that might exist in one of these sources:_\n\n* _Facial recognition_\n* _Voice recognition systems_\n* _Social Media feeds_\n\n**<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> Discussion Goal:** The video walks the students through an example of how medical imaging data that only uses x-rays from men might be biased and unreliable when it comes to making diagnoses on women’s x-rays. Here are some other examples that students might come up given the scenarios above: Facial recognition software - if models are trained on a variety of different ethic groups, then it might not work as intended Voice recognition systems - might be biased around certain types of accents over others Social media feeds - might only show information, groups, and stories based on what the algorithm judges as most likely to engage the user\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Auto-Doggie Door scenario.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to access MediaPipe's Object Detection model and to download the image files to test the model with.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Upload the images one-by-one and examine the results of the object detection algorithm. Remember that you can adjust max results and score threshold to change the output of your results. You can also try changing the model / inference type that is being used within the model. If you have extra time at the end of the exploration, see if you can find your own image of a dog and upload it.\n>\n> As you explore these images, remember the original premise of the scenario: we are building an Auto-Dog Door that will unlock when the camera built into the door recognizes a dog and stay locked if it doesn’t recognize a dog. Therefore, you should pay close attention to the confidence score that is related to the dog images that you are uploading into the model.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students explore these images. Should they have extra time, encourage them to test more and varied images to see what the output might be. They can find additional options searching an image search tool that is available on your campus (Google Images / Pexels / Pixabay / Flickr).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students who are having difficulties with finding / uploading images. Point out the various settings that they can adjust while on the model and encourage them to try different combinations.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What were your results? Which dogs would this model let in or locked out?_&#x20;\n\n* Discuss as a small group first, and then bring to a whole class discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should note which images yield high or low confidence scores. They should share their findings about the model's accuracy in identifying different dogs and any potential patterns or biases in its decisions. Students may also bring up that they notice certain types of dogs (breed, size, face shape, color etc.) were detected less often, which could be an opportunity to reinforce the concept of bias.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How might we mitigate some of the bias that we witnessed?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Since this is the Object Detection model, it was trained using the COCOs image dataset. That might seem to suggest that the image dataset is not robust enough to account for the variety of dogs that might need to be identified. Adding more training images of different breeds, sizes, colors, face shapes, etc. could go a long way towards alleviating low confidence scores that certain images received.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Today, we will be sharing the results of our design work thus far and getting feedback from our classmates about it. These checkpoint moments in the process of creating a project are important to learn about how you might continually iterate on your project to make it the best version possible.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each project group a copy of the Idea Outlines activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work with their group to complete their Idea Outline activity guide.",
+        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** One thing to keep in mind is that the less intrusive the data-collection process is for people, the more likely they are to participate in it, and to give accurate information.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"Training Data & Bias\" (0:50 to 2:39)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What are some other examples of bias in data that might exist in one of these sources:_\n\n* _Facial recognition_\n* _Voice recognition systems_\n* _Social Media feeds_\n\n**<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> Discussion Goal:** The video walks the students through an example of how medical imaging data that only uses x-rays from men might be biased and unreliable when it comes to making diagnoses on women’s x-rays. Here are some other examples that students might come up given the scenarios above: Facial recognition software - if models are trained on a variety of different ethic groups, then it might not work as intended Voice recognition systems - might be biased around certain types of accents over others Social media feeds - might only show information, groups, and stories based on what the algorithm judges as most likely to engage the user\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Auto-Doggie Door scenario.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to access MediaPipe's Object Detection model and to download the image files to test the model with.",
+        "progression_name": "MediaPipe Object Detection & Image Files"
+      },
+      "seeding_key": {
+        "activity_section.key": "f66fc306-1e29-4a1a-960c-a886c5deccff",
+        "lesson_activity.key": "ab64bf47-2b97-497d-bc88-f02cf4cbee20"
+      }
+    },
+    {
+      "key": "f20b5c6b-ad5a-4ee7-8706-e443748b4df7",
+      "position": 3,
+      "properties": {
+        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Upload the images one-by-one and examine the results of the object detection algorithm. Remember that you can adjust max results and score threshold to change the output of your results. You can also try changing the model / inference type that is being used within the model. If you have extra time at the end of the exploration, see if you can find your own image of a dog and upload it.\n>\n> As you explore these images, remember the original premise of the scenario: we are building an Auto-Dog Door that will unlock when the camera built into the door recognizes a dog and stay locked if it doesn’t recognize a dog. Therefore, you should pay close attention to the confidence score that is related to the dog images that you are uploading into the model.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students explore these images. Should they have extra time, encourage them to test more and varied images to see what the output might be. They can find additional options searching an image search tool that is available on your campus (Google Images / Pexels / Pixabay / Flickr).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students who are having difficulties with finding / uploading images. Point out the various settings that they can adjust while on the model and encourage them to try different combinations.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What were your results? Which dogs would this model let in or locked out?_&#x20;\n\n* Discuss as a small group first, and then bring to a whole class discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should note which images yield high or low confidence scores. They should share their findings about the model's accuracy in identifying different dogs and any potential patterns or biases in its decisions. Students may also bring up that they notice certain types of dogs (breed, size, face shape, color etc.) were detected less often, which could be an opportunity to reinforce the concept of bias.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How might we mitigate some of the bias that we witnessed?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Since this is the Object Detection model, it was trained using the COCOs image dataset. That might seem to suggest that the image dataset is not robust enough to account for the variety of dogs that might need to be identified. Adding more training images of different breeds, sizes, colors, face shapes, etc. could go a long way towards alleviating low confidence scores that certain images received.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Today, we will be sharing the results of our design work thus far and getting feedback from our classmates about it. These checkpoint moments in the process of creating a project are important to learn about how you might continually iterate on your project to make it the best version possible.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each project group a copy of the Idea Outlines activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work with their group to complete their Idea Outline activity guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1802,7 +1867,7 @@
     },
     {
       "key": "7e8aec2c-1c84-444b-b80b-90714e085237",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students walk around the room and give general feedback to other groups’ projects. Instruct them to use one sticky note per idea that they share so that it becomes easier to sort and parse through the feedback.",
         "tips": [
@@ -1819,7 +1884,7 @@
     },
     {
       "key": "50a776ad-ba4f-4e20-85c5-db6f04382e1e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students make another pass at projects, except this time they will be focusing on identifying possible sources of bias that might exist in student proposals. They can also provide suggestions for how to mitigate that bias.",
         "tips": [
@@ -1843,6 +1908,7 @@
       "position": 1,
       "properties": {
         "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** In the next class session, please come prepared with any media that you might need to train a sample model for your computer vision application. This can take the form of physical objects, images, video, sounds, music, etc. The more data that you bring, the better the model will likely perform. If the model does not perform as well as you thought it might, there will be opportunities during upcoming project time when you can make adjustments and tweaks to your model.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What physical objects, images, video, or other artifacts are you going to bring to class next to help train your model?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a good time to make sure that students are clear that they will need to be responsible for bringing training data for their model in the next class period. For example, if a student is making proposing an application that would help zookeepers know how many bananas a gorilla has eaten on a given day, then they would need to bring in a banana to train their model with– likely one that is undisturbed, and one that has been eaten and just the peel remains. Using this object, students could train a model to recognize both forms of banana, and could then use this model as a part of their application.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection question.\n\n* _How might bias in computer vision applications impact users differently based on their background or characteristics? How can bias in the data used to train computer vision models affect the performance and reliability of these systems?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** To evaluate students' understanding of the differential impacts of bias, such as how facial recognition systems may perform poorly on certain demographic groups due to underrepresentation in training datasets. Students should discuss how biased training data can lead to computer vision systems that are unfair or inaccurate, particularly by failing to recognize or improperly categorizing objects or people not adequately represented in the training data.\n",
+        "progression_name": "Reflection Questions",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1867,10 +1933,22 @@
       }
     },
     {
-      "key": "4c355ee9-b285-471f-9fac-a8090e2bca7b",
+      "key": "4b4f6415-6683-419f-852e-337364d60fb0",
       "position": 1,
       "properties": {
-        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** We will be moving from Ideating to Prototyping today as we work with making models in Teachable Machine.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Prototyping means to actually try out our ideas so that we can get them in front of users.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to access Teachable Machine.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students explore Teachable Machine. Encourage them to click around through the different sample options, create at least two classes, and to run the training to see what happens.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you explored the Teachable Machine?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Here are some key things students may notice: The Machine Learns Quickly: Students might notice that Teachable Machine starts recognizing patterns or objects almost immediately after a few examples are shown. Different Results with Small Changes: They may observe that slight changes (like moving the object closer or further, changing angles, or altering lighting) can lead to different recognition results. Needs Examples to Understand: The machine requires examples to learn what an object looks like; it doesn't \"know\" anything until it's shown examples. Fun and Interactive: Students might find the process of teaching the machine and seeing instant feedback engaging and surprising.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What do you wonder?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student results will vary. Here are some common questions students might have after a short, five minute session with Teachable Machine: Why does it sometimes get it wrong? Students might be curious about why the machine doesn't always recognize objects correctly, even if they've just shown it similar examples. Does it remember what we showed it? They could wonder if the Teachable Machine retains the information from their session for the next time it's used. Can it learn to recognize me? Some students might be intrigued by the possibility of the machine learning to recognize them personally or specific gestures they make. How does it know what it's seeing so fast? The immediate feedback from the Teachable Machine might lead students to question how it processes information quickly. What else can it learn to do? Curiosity about the scope of Teachable Machine's learning capabilities, wondering if it can learn tasks beyond simple object or gesture recognition.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to discuss what kind of model(s) they want to create with their project group. Each student in the group should create their own model.",
+        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** We will be moving from Ideating to Prototyping today as we work with making models in Teachable Machine.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Prototyping means to actually try out our ideas so that we can get them in front of users.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to access Teachable Machine.",
+        "progression_name": "Teachable Machine Link"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b4f6415-6683-419f-852e-337364d60fb0",
+        "lesson_activity.key": "355ba7b9-7afc-4875-a561-5150e8299cdb"
+      }
+    },
+    {
+      "key": "4c355ee9-b285-471f-9fac-a8090e2bca7b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students explore Teachable Machine. Encourage them to click around through the different sample options, create at least two classes, and to run the training to see what happens.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you explored the Teachable Machine?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Here are some key things students may notice: The Machine Learns Quickly: Students might notice that Teachable Machine starts recognizing patterns or objects almost immediately after a few examples are shown. Different Results with Small Changes: They may observe that slight changes (like moving the object closer or further, changing angles, or altering lighting) can lead to different recognition results. Needs Examples to Understand: The machine requires examples to learn what an object looks like; it doesn't \"know\" anything until it's shown examples. Fun and Interactive: Students might find the process of teaching the machine and seeing instant feedback engaging and surprising.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What do you wonder?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student results will vary. Here are some common questions students might have after a short, five minute session with Teachable Machine: Why does it sometimes get it wrong? Students might be curious about why the machine doesn't always recognize objects correctly, even if they've just shown it similar examples. Does it remember what we showed it? They could wonder if the Teachable Machine retains the information from their session for the next time it's used. Can it learn to recognize me? Some students might be intrigued by the possibility of the machine learning to recognize them personally or specific gestures they make. How does it know what it's seeing so fast? The immediate feedback from the Teachable Machine might lead students to question how it processes information quickly. What else can it learn to do? Curiosity about the scope of Teachable Machine's learning capabilities, wondering if it can learn tasks beyond simple object or gesture recognition.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to discuss what kind of model(s) they want to create with their project group. Each student in the group should create their own model.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1885,7 +1963,7 @@
     },
     {
       "key": "4c8710b1-a2a8-4fe4-8875-caf271c3bc0f",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to start a new Teachable Machine project and choose either an Image or Pose project. Students should document their model on the Training a Model activity guide as they work.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, encourage students to retrain their models to get better results.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you think was the hardest part of creating your model? How did you overcome it? Any surprises about how your model performed?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion should encourage students to articulate the problem-solving strategies they employed, highlighting the importance of creativity, persistence, and adaptability in the field of AI. It aims to provide students with insight into the iterative process of model development, including the importance of troubleshooting and refining based on performance feedback.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How do you envision that your model will be used?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal here is to inspire students to think creatively about the practical applications of their AI models, fostering a forward-thinking mindset. This encourages students to connect their technical skills with the real-world problem they are trying to solve, envisioning how their work could have a tangible impact."
       },
@@ -1899,6 +1977,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection questions on Levels 2, 3, and 4.\n\n* _What challenges did you encounter while creating and training your model, and how did you address them?_\n* _How can the model you created be applied to the real-world problem you are trying to solve with your computer vision application?_\n* _Reflecting on today's lesson, why is the diversity of data crucial in training a computer vision model, and how did the Teachable Machine activity enhance your understanding of this concept?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** Encourages students to reflect on any difficulties faced during model training, such as inadequate data or model misclassification, and discuss the strategies they used to overcome these challenges. This question aims to connect the technical process of model training with its practical application, encouraging students to think about how their model addresses the specific needs identified in their project's problem statement. To synthesize learning by having students articulate the importance of diverse training data in developing effective and equitable computer vision models and reflect on how the hands-on experience with Teachable Machine highlighted these concepts.",
+        "progression_name": "Reflection Questions",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1926,7 +2005,8 @@
       "key": "c6d81ca5-e3b0-428a-83b8-fe5246ac60dc",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in pairs or small groups of 3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students one source from within the computer vision technology information packet (Facial Recognition / Autonomous Vehicles / Health & Medical) and the Ethics Exploration activity guide.",
+        "description": "**Group:** Place students in pairs or small groups of 3.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to choose a computer vision technology (Facial Recognition / Autonomous Vehicles / Health & Medical) and ONE of the source options in Level 1. Have students complete the Ethics Exploration activity guide to document their findings.\n\n",
+        "progression_name": "Ethics Exploration Choices",
         "tips": [
           {
             "type": "teachingTip",
@@ -1943,7 +2023,7 @@
       "key": "ec734f8a-3396-4e53-94b6-60aff7c865c9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to choose a source. Have students complete the Ethics Exploration activity guide to document their findings.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are thoroughly engaging with the material in their packets, not just skimming through. Encourage them to read closely and consider the implications of what they're looking at and reading. Ensure that students are discussing their findings with their partner, sharing insights, and different perspectives. Collaboration should be constructive, with both members contributing. Finally, make sure students are effectively using the graphic organizer to synthesize information from their packets. They should be identifying the benefits as well as ethical implications, potential biases, privacy concerns, or security aspects of their assigned technology.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to share what they learned, discuss potential safeguards, and brainstorm ways to ensure equity and fairness.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around the room, ensure students go beyond sharing their insights and they discuss how this technology could evolve responsibly, considering the ethical and privacy concerns raised and reflect on the safeguards necessary and how we can ensure the technology promotes equity and fairness.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to prepare a summary and to select one person to share the summary with the class.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around the room ensure all group members are actively participating in the preparation process. Check that groups are effectively synthesizing their discussions into concise summaries. Groups should be identifying and agreeing on the most important points to include in their presentation.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How can society navigate the ethical challenges presented by computer vision technologies to ensure they benefit all members equitably?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal here is to encourage students to think broadly about the roles of education, transparency, public engagement and perhaps even policy in addressing ethical challenges. This discussion aims to highlight the importance of multidisciplinary approaches, including ethics, law, and technology, in creating a framework that safeguards individual rights while fostering innovation.",
+        "description": "\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are thoroughly engaging with the material in their packets, not just skimming through. Encourage them to read closely and consider the implications of what they're looking at and reading. Ensure that students are discussing their findings with their partner, sharing insights, and different perspectives. Collaboration should be constructive, with both members contributing. Finally, make sure students are effectively using the graphic organizer to synthesize information from their packets. They should be identifying the benefits as well as ethical implications, potential biases, privacy concerns, or security aspects of their assigned technology.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to share what they learned, discuss potential safeguards, and brainstorm ways to ensure equity and fairness.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around the room, ensure students go beyond sharing their insights and they discuss how this technology could evolve responsibly, considering the ethical and privacy concerns raised and reflect on the safeguards necessary and how we can ensure the technology promotes equity and fairness.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to prepare a summary and to select one person to share the summary with the class.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around the room ensure all group members are actively participating in the preparation process. Check that groups are effectively synthesizing their discussions into concise summaries. Groups should be identifying and agreeing on the most important points to include in their presentation.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How can society navigate the ethical challenges presented by computer vision technologies to ensure they benefit all members equitably?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal here is to encourage students to think broadly about the roles of education, transparency, public engagement and perhaps even policy in addressing ethical challenges. This discussion aims to highlight the importance of multidisciplinary approaches, including ethics, law, and technology, in creating a framework that safeguards individual rights while fostering innovation.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1972,6 +2052,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection questions on Levels 2, 3, and 4.\n\n* _Complete this statement: When investigating my computer vision technology, I originally thought \\_\\_\\_\\_\\_\\_. After comparing and discussing with classmates who had the same tech, I now/still think \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_, because \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_._\n* _How can society navigate the ethical challenges presented by Computer Vision technologies to ensure they benefit all members equitably?_\n* _What is the single most important ethical consideration that you feel needs to be made when a new Computer Vision technology is introduced? Why do you feel that way?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** Completing this statement encourages students to reflect on and articulate how collaborative discussions have deepened or altered their understanding of computer vision technologies, particularly regarding their ethical, privacy, and societal implications. The goal here is to encourage students to think broadly about the roles of education, transparency, public engagement and perhaps even policy in addressing ethical challenges. This discussion aims to highlight the importance of multidisciplinary approaches, including ethics, law, and technology, in creating a framework that safeguards individual rights while fostering innovation. This question aims to personalize the ethical considerations of computer vision technologies, prompting students to reflect on and articulate their values and priorities. The goal is to foster a deeper understanding of the diverse ethical dimensions these technologies entail, such as privacy, consent, transparency, and accountability. By identifying and discussing the most pressing ethical issue from their perspective, students can explore the rationale behind ethical guidelines and the potential consequences of overlooking these considerations.",
+        "progression_name": "Reflection Questions",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2017,6 +2098,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 and 2.\n\n* _What part of today’s prototyping activity was most useful, interesting, or engaging for you? Explain why._\n* _What does 'scope' mean in the context of project planning, and how did you determine the scope of your prototype?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** Reading through student responses before the start of the next class will be helpful to course correct any issues or identify any students who are struggling to identify anything useful, interesting or engaging about the prototyping process and work with them to find something useful or engaging and to better address student needs on Day Two. Students should explain the concept of project scope as it relates to the features, functions, and timeline of their prototype, discussing how they decided what was feasible to accomplish within the constraints of the project.\n",
+        "progression_name": "Reflection Questions",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2030,10 +2112,22 @@
       }
     },
     {
-      "key": "44ee6210-ec4c-47e7-b3c2-773bff88254b",
+      "key": "c8e4d8bf-c25e-4160-afab-f110a8c52dd6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to select the types of prototypes they worked on in the last class. Question– What prototype component(s) have you implemented in your project thus far? Storyboards Paper Prototypes Digital mockup UI Hot Spot activity Annotated images Image filters Flowcharting Other\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the results with students so that they can see how other groups are tackling this phase of the project.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to select the types of prototypes they worked on in the last class. \n* Question – *What prototype component(s) have you implemented in your project thus far?* \n  * Storyboards \n  * Paper Prototypes \n  * Digital mockup \n  * UI Hot Spot activity \n  * Annotated images \n  * Image filters \n  * Flowcharting \n  * Other",
+        "progression_name": "Prototype Components"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8e4d8bf-c25e-4160-afab-f110a8c52dd6",
+        "lesson_activity.key": "c580c155-a5f6-4ef7-b351-cdd3f631fc44"
+      }
+    },
+    {
+      "key": "44ee6210-ec4c-47e7-b3c2-773bff88254b",
+      "position": 2,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the results with students so that they can see how other groups are tackling this phase of the project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2048,7 +2142,7 @@
     },
     {
       "key": "d82bdf7d-71d5-42be-9dce-a172df0dca0a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What is working best about your approach to your prototype thus far?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This allows students the opportunity to share with one another about the status of their project. By sharing positive practices and things that are working well, it can serve as positive reinforcement for other groups– they might adopt the approach / strategy in their own project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What ideas have you had to scrap and/or iterate on?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Asking this question reinforces the important idea that part of prototyping involves trying (and sometimes failing). Reinforce that the act of self-evaluation and iteration are incredibly important components of both Design Thinking and Project-Based Learning. In the event a student states that they have not had to scrap or iterate on any ideas, encourage the student to think more broadly about the design and development process, emphasizing that iteration doesn't always mean making large, noticeable changes. Sometimes, iteration can be as subtle as tweaking a user interface element, adjusting the wording in instructions, or changing the flow of a process based on potential user feedback. Ask the student to reflect on any aspect of their project that required even minor adjustments or where they faced challenges, even if those challenges didn't lead to drastic changes. Highlight that the iterative process is about continuous improvement and learning from both what works and what doesn't, encouraging a mindset of ongoing refinement and resilience."
       },
@@ -2073,6 +2167,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection question on Levels 2 and 3.\n\n* _Reflect on the prototyping process so far. What aspects of your prototype are you most proud of, and why?_\n* _How have you prepared your prototype for user testing, and what are you hoping to learn from this phase?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** Encourages students to think critically about their work, focusing on achievements and innovations they've introduced in their prototype, fostering a sense of accomplishment and encouraging peer-to-peer learning. Students should discuss their preparations for the testing phase, what they aim to learn from user interactions, and how they plan to use this feedback to further refine their computer vision applications.\n",
+        "progression_name": "Reflection Questions",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2112,6 +2207,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 through 3.\n\n* _What can we learn by testing our design in front of our intended users?_\n* _How did role-playing as a user persona change your perspective on the computer vision applications you reviewed?_\n* _What was the most surprising or insightful piece of feedback you received, and how will it influence your project moving forward?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** Responses should reflect an understanding that user testing is essential for creating solutions that are genuinely useful and user-friendly. Students should mention how testing with intended users ensures the product meets real-world needs and usability standards. Encourages students to reflect on how adopting a user persona provided new insights into the user experience, highlighting the value of empathy in designing user-centered solutions. Students should evaluate how feedback from diverse perspectives can offer unexpected insights, and how such feedback can drive the project to better meet user needs or address previously overlooked issues.",
+        "progression_name": "Reflection Questions",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2202,6 +2298,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1, 2, and 3.\n\n* _Reflect on the iteration process of your prototype. What aspects of this process did you find most effective in improving your design, and why do you think these elements were particularly successful?_\n* _Describe a specific instance where implementing feedback was challenging. What was the feedback, why was it difficult to implement, and how did you address the challenge?_\n* _What have you learned about the process of collecting, evaluating, and acting on feedback throughout this project? How will this learning influence your approach to future projects?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** This question encourages students to analyze and articulate which parts of the iteration process contributed most significantly to their prototype's development, fostering an understanding of effective design practices. Students should provide clear examples of successful iteration elements, such as rapid prototyping, user testing sessions, or specific types of feedback that were particularly insightful along with an explanation of why these elements were effective. This question encourages students to reflect on the difficulties encountered in implementing feedback and discuss the strategies or compromises made to navigate these challenges while still striving to meet user needs. This question aims to explore what students have gleaned from their experiences with feedback, emphasizing the importance of feedback in design and how it shapes their approach to projects.",
+        "progression_name": "Reflection Questions",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2222,6 +2319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Search for Pixel - review copy"
+        ],
         "progression": "The Search for Pixel"
       },
       "bonus": false,
@@ -2244,6 +2344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L1_Reflection_1"
+        ],
         "progression": "Reflection Question"
       },
       "bonus": false,
@@ -2266,6 +2369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L2_Reflection_1"
+        ],
         "progression": "Reflection Questions"
       },
       "bonus": false,
@@ -2288,6 +2394,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L2_Reflection_2"
+        ],
         "progression": "Reflection Questions"
       },
       "bonus": false,
@@ -2310,6 +2419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L3_Reflection_1"
+        ],
         "progression": "Reflection Question"
       },
       "bonus": false,
@@ -2332,6 +2444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L4_ResourceLinks"
+        ],
         "progression": "Visualizing Data Resource Links"
       },
       "bonus": false,
@@ -2354,6 +2469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L4_DataToViz_Link"
+        ],
         "progression": "From Data to Viz External Tool"
       },
       "bonus": false,
@@ -2376,6 +2494,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L4_Reflection_1"
+        ],
         "progression": "Reflection Question"
       },
       "bonus": false,
@@ -2398,6 +2519,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L5_Reflection_1"
+        ],
         "progression": "Reflection Questions"
       },
       "bonus": false,
@@ -2420,6 +2544,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L5_Reflection_2"
+        ],
         "progression": "Reflection Questions"
       },
       "bonus": false,
@@ -2442,6 +2569,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L5_Reflection_3"
+        ],
         "progression": "Reflection Questions"
       },
       "bonus": false,
@@ -2456,6 +2586,856 @@
       },
       "level_keys": [
         "CV_L5_Reflection_3"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L6_BaseToBinary_Link"
+        ],
+        "progression": "QR Code Exploration Activity Guide Links"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L6_BaseToBinary_Link"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "bd22162e-a7ef-4f0e-aedd-e2d9e6c448db"
+      },
+      "level_keys": [
+        "CV_L6_BaseToBinary_Link"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L6_GoogleColorPicker_Link"
+        ],
+        "progression": "QR Code Exploration Activity Guide Links"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L6_GoogleColorPicker_Link"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "bd22162e-a7ef-4f0e-aedd-e2d9e6c448db"
+      },
+      "level_keys": [
+        "CV_L6_GoogleColorPicker_Link"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L6_Reflection_1"
+        ],
+        "progression": "Reflection Question"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L6_Reflection_1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "62885cbf-be8e-468a-8108-6aef0609c28d"
+      },
+      "level_keys": [
+        "CV_L6_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L7_Reflection_1"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L7_Reflection_1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "d4753242-5a1a-411c-8c37-5004a3bc0066"
+      },
+      "level_keys": [
+        "CV_L7_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L7_Reflection_2"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L7_Reflection_2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "d4753242-5a1a-411c-8c37-5004a3bc0066"
+      },
+      "level_keys": [
+        "CV_L7_Reflection_2"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L8_COCO_Link"
+        ],
+        "progression": "COCO Dataset Link"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L8_COCO_Link"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5dea8b88-3ee7-45a3-899f-f8e69ca51568"
+      },
+      "level_keys": [
+        "CV_L8_COCO_Link"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L8_MediaPipe_ObjectDet_Link"
+        ],
+        "progression": "MediaPipe Object Detection Link"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L8_MediaPipe_ObjectDet_Link"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "4bcaf40b-69a8-46ed-8a6f-c5e511483e89"
+      },
+      "level_keys": [
+        "CV_L8_MediaPipe_ObjectDet_Link"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L8_ResourceLinks"
+        ],
+        "progression": "Garden Image Files"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L8_ResourceLinks"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "831d466e-cb47-4c8d-8fba-d4a6e89eb05e"
+      },
+      "level_keys": [
+        "CV_L8_ResourceLinks"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L8_MediaPipe_ImageClass_Link"
+        ],
+        "progression": "MediaPipe Image Classification Link"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L8_MediaPipe_ImageClass_Link"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "56796636-4c28-4981-b67a-8f5e27c4b208"
+      },
+      "level_keys": [
+        "CV_L8_MediaPipe_ImageClass_Link"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L8_Reflection_1"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L8_Reflection_1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "51cdb67e-e6ea-417a-b09c-3180fbf21389"
+      },
+      "level_keys": [
+        "CV_L8_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L8_Reflection_2"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L8_Reflection_2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "51cdb67e-e6ea-417a-b09c-3180fbf21389"
+      },
+      "level_keys": [
+        "CV_L8_Reflection_2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L8_Reflection_3"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L8_Reflection_3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "51cdb67e-e6ea-417a-b09c-3180fbf21389"
+      },
+      "level_keys": [
+        "CV_L8_Reflection_3"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L9_MediaPipe_ObDet-Images_Link"
+        ],
+        "progression": "MediaPipe Object Detection & Image Files"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L9_MediaPipe_ObDet-Images_Link"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "f66fc306-1e29-4a1a-960c-a886c5deccff"
+      },
+      "level_keys": [
+        "CV_L9_MediaPipe_ObDet-Images_Link"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L9_Reflection_1"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L9_Reflection_1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5259fa36-d8c0-464f-9314-401e171a7219"
+      },
+      "level_keys": [
+        "CV_L9_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L9_Reflection_2"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L9_Reflection_2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5259fa36-d8c0-464f-9314-401e171a7219"
+      },
+      "level_keys": [
+        "CV_L9_Reflection_2"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L10_TeachableMachine_Link"
+        ],
+        "progression": "Teachable Machine Link"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L10_TeachableMachine_Link"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "4b4f6415-6683-419f-852e-337364d60fb0"
+      },
+      "level_keys": [
+        "CV_L10_TeachableMachine_Link"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L10_Reflection_1"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L10_Reflection_1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "6ca0323f-747b-4bde-81a1-93a4ffa32802"
+      },
+      "level_keys": [
+        "CV_L10_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L10_Reflection_2"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L10_Reflection_2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "6ca0323f-747b-4bde-81a1-93a4ffa32802"
+      },
+      "level_keys": [
+        "CV_L10_Reflection_2"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L10_Reflection_3"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L10_Reflection_3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "6ca0323f-747b-4bde-81a1-93a4ffa32802"
+      },
+      "level_keys": [
+        "CV_L10_Reflection_3"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L11_EthicsExploration_ChoiceLevels"
+        ],
+        "progression": "Ethics Exploration Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L11_EthicsExploration_ChoiceLevels"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "c6d81ca5-e3b0-428a-83b8-fe5246ac60dc"
+      },
+      "level_keys": [
+        "CV_L11_EthicsExploration_ChoiceLevels"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L11_Reflection_1"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L11_Reflection_1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "cb94bb23-b44e-4048-a208-b2c0bc747eab"
+      },
+      "level_keys": [
+        "CV_L11_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L11_Reflection_2"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L11_Reflection_2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "cb94bb23-b44e-4048-a208-b2c0bc747eab"
+      },
+      "level_keys": [
+        "CV_L11_Reflection_2"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L11_Reflection_3"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L11_Reflection_3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "cb94bb23-b44e-4048-a208-b2c0bc747eab"
+      },
+      "level_keys": [
+        "CV_L11_Reflection_3"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L12_Reflection_1"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L12_Reflection_1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "1853513e-54cc-485d-b62e-1bb6fc70e499"
+      },
+      "level_keys": [
+        "CV_L12_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L12_Reflection_2"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L12_Reflection_2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "1853513e-54cc-485d-b62e-1bb6fc70e499"
+      },
+      "level_keys": [
+        "CV_L12_Reflection_2"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L13_PrototypeComponents"
+        ],
+        "progression": "Prototype Components"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L13_PrototypeComponents"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "c8e4d8bf-c25e-4160-afab-f110a8c52dd6"
+      },
+      "level_keys": [
+        "CV_L13_PrototypeComponents"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L13_Reflection_1"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L13_Reflection_1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5b9fd0ff-4c09-4745-a157-344cbdaa961e"
+      },
+      "level_keys": [
+        "CV_L13_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L13_Reflection_2"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L13_Reflection_2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5b9fd0ff-4c09-4745-a157-344cbdaa961e"
+      },
+      "level_keys": [
+        "CV_L13_Reflection_2"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L14_Reflection_1"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L14_Reflection_1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "00e97685-454c-4b9a-a69e-da61daf88cc9"
+      },
+      "level_keys": [
+        "CV_L14_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L14_Reflection_2"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L14_Reflection_2"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "00e97685-454c-4b9a-a69e-da61daf88cc9"
+      },
+      "level_keys": [
+        "CV_L14_Reflection_2"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L14_Reflection_3"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L14_Reflection_3"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "00e97685-454c-4b9a-a69e-da61daf88cc9"
+      },
+      "level_keys": [
+        "CV_L14_Reflection_3"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L15_Reflection_1"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L15_Reflection_1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "e9d597a7-a6e9-4af1-88e0-fe41c11e5d62"
+      },
+      "level_keys": [
+        "CV_L15_Reflection_1"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L15_Reflection_2"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L15_Reflection_2"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "e9d597a7-a6e9-4af1-88e0-fe41c11e5d62"
+      },
+      "level_keys": [
+        "CV_L15_Reflection_2"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CV_L15_Reflection_3"
+        ],
+        "progression": "Reflection Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L15_Reflection_3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "e9d597a7-a6e9-4af1-88e0-fe41c11e5d62"
+      },
+      "level_keys": [
+        "CV_L15_Reflection_3"
       ]
     }
   ],
@@ -2591,6 +3571,414 @@
         "script.name": "computer-vision-pilot",
         "activity_section.key": "903075f6-98f3-43a2-ba26-2d4b6b2b0021"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L6_BaseToBinary_Link",
+        "script_level.level_keys": [
+          "CV_L6_BaseToBinary_Link"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "bd22162e-a7ef-4f0e-aedd-e2d9e6c448db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L6_GoogleColorPicker_Link",
+        "script_level.level_keys": [
+          "CV_L6_GoogleColorPicker_Link"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "bd22162e-a7ef-4f0e-aedd-e2d9e6c448db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L6_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L6_Reflection_1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "62885cbf-be8e-468a-8108-6aef0609c28d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L7_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L7_Reflection_1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "d4753242-5a1a-411c-8c37-5004a3bc0066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L7_Reflection_2",
+        "script_level.level_keys": [
+          "CV_L7_Reflection_2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "d4753242-5a1a-411c-8c37-5004a3bc0066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L8_COCO_Link",
+        "script_level.level_keys": [
+          "CV_L8_COCO_Link"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5dea8b88-3ee7-45a3-899f-f8e69ca51568"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L8_MediaPipe_ObjectDet_Link",
+        "script_level.level_keys": [
+          "CV_L8_MediaPipe_ObjectDet_Link"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "4bcaf40b-69a8-46ed-8a6f-c5e511483e89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L8_ResourceLinks",
+        "script_level.level_keys": [
+          "CV_L8_ResourceLinks"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "831d466e-cb47-4c8d-8fba-d4a6e89eb05e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L8_MediaPipe_ImageClass_Link",
+        "script_level.level_keys": [
+          "CV_L8_MediaPipe_ImageClass_Link"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "56796636-4c28-4981-b67a-8f5e27c4b208"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L8_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L8_Reflection_1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "51cdb67e-e6ea-417a-b09c-3180fbf21389"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L8_Reflection_2",
+        "script_level.level_keys": [
+          "CV_L8_Reflection_2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "51cdb67e-e6ea-417a-b09c-3180fbf21389"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L8_Reflection_3",
+        "script_level.level_keys": [
+          "CV_L8_Reflection_3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "51cdb67e-e6ea-417a-b09c-3180fbf21389"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L9_MediaPipe_ObDet-Images_Link",
+        "script_level.level_keys": [
+          "CV_L9_MediaPipe_ObDet-Images_Link"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "f66fc306-1e29-4a1a-960c-a886c5deccff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L9_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L9_Reflection_1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5259fa36-d8c0-464f-9314-401e171a7219"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L9_Reflection_2",
+        "script_level.level_keys": [
+          "CV_L9_Reflection_2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5259fa36-d8c0-464f-9314-401e171a7219"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L10_TeachableMachine_Link",
+        "script_level.level_keys": [
+          "CV_L10_TeachableMachine_Link"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "4b4f6415-6683-419f-852e-337364d60fb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L10_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L10_Reflection_1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "6ca0323f-747b-4bde-81a1-93a4ffa32802"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L10_Reflection_2",
+        "script_level.level_keys": [
+          "CV_L10_Reflection_2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "6ca0323f-747b-4bde-81a1-93a4ffa32802"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L10_Reflection_3",
+        "script_level.level_keys": [
+          "CV_L10_Reflection_3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "6ca0323f-747b-4bde-81a1-93a4ffa32802"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L11_EthicsExploration_ChoiceLevels",
+        "script_level.level_keys": [
+          "CV_L11_EthicsExploration_ChoiceLevels"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "c6d81ca5-e3b0-428a-83b8-fe5246ac60dc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L11_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L11_Reflection_1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "cb94bb23-b44e-4048-a208-b2c0bc747eab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L11_Reflection_2",
+        "script_level.level_keys": [
+          "CV_L11_Reflection_2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "cb94bb23-b44e-4048-a208-b2c0bc747eab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L11_Reflection_3",
+        "script_level.level_keys": [
+          "CV_L11_Reflection_3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "cb94bb23-b44e-4048-a208-b2c0bc747eab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L12_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L12_Reflection_1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "1853513e-54cc-485d-b62e-1bb6fc70e499"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L12_Reflection_2",
+        "script_level.level_keys": [
+          "CV_L12_Reflection_2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "1853513e-54cc-485d-b62e-1bb6fc70e499"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L13_PrototypeComponents",
+        "script_level.level_keys": [
+          "CV_L13_PrototypeComponents"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "c8e4d8bf-c25e-4160-afab-f110a8c52dd6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L13_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L13_Reflection_1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5b9fd0ff-4c09-4745-a157-344cbdaa961e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L13_Reflection_2",
+        "script_level.level_keys": [
+          "CV_L13_Reflection_2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "5b9fd0ff-4c09-4745-a157-344cbdaa961e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L14_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L14_Reflection_1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "00e97685-454c-4b9a-a69e-da61daf88cc9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L14_Reflection_2",
+        "script_level.level_keys": [
+          "CV_L14_Reflection_2"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "00e97685-454c-4b9a-a69e-da61daf88cc9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L14_Reflection_3",
+        "script_level.level_keys": [
+          "CV_L14_Reflection_3"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "00e97685-454c-4b9a-a69e-da61daf88cc9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L15_Reflection_1",
+        "script_level.level_keys": [
+          "CV_L15_Reflection_1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "e9d597a7-a6e9-4af1-88e0-fe41c11e5d62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L15_Reflection_2",
+        "script_level.level_keys": [
+          "CV_L15_Reflection_2"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "e9d597a7-a6e9-4af1-88e0-fe41c11e5d62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_L15_Reflection_3",
+        "script_level.level_keys": [
+          "CV_L15_Reflection_3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "computer-vision-pilot",
+        "activity_section.key": "e9d597a7-a6e9-4af1-88e0-fe41c11e5d62"
+      }
     }
   ],
   "resources": [
@@ -2628,18 +4016,6 @@
       },
       "seeding_key": {
         "resource.key": "algorithm_hint_cards"
-      }
-    },
-    {
-      "name": "Binary to Base 10 Converter",
-      "url": "https://www.rapidtables.com/convert/number/binary-to-decimal.html",
-      "key": "binary_to_base_10_converter",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "binary_to_base_10_converter"
       }
     },
     {
@@ -2755,18 +4131,6 @@
       }
     },
     {
-      "name": "Dog Images",
-      "url": "https://drive.google.com/file/d/1dnhvbfde7zKupHwz6LjTGTP_OGbp3wPp/view",
-      "key": "dog_images",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "dog_images"
-      }
-    },
-    {
       "name": "Edge Detection",
       "url": "https://docs.google.com/presentation/d/1nNaaWxLXLmq9SHehZNhpC5tGB7z9NX9t8hePKeVDbTA/template/preview",
       "key": "edge_detection",
@@ -2828,18 +4192,6 @@
       }
     },
     {
-      "name": "Garden Images",
-      "url": "https://drive.google.com/file/d/1ScSCuXN75ltGUZzMKze1_LTR5PMrM-Ax/view?usp=drive_link",
-      "key": "garden_images",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "garden_images"
-      }
-    },
-    {
       "name": "Gathering User Data",
       "url": "https://docs.google.com/presentation/d/1YdzNZSl-5ymN40xluxXbigJVtn00iD82F7I5_f-ZgVU/template/preview",
       "key": "gathering_user_data",
@@ -2849,18 +4201,6 @@
       },
       "seeding_key": {
         "resource.key": "gathering_user_data"
-      }
-    },
-    {
-      "name": "Google Color Picker",
-      "url": "https://g.co/kgs/Vgu2j2R",
-      "key": "google_color_picker",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "google_color_picker"
       }
     },
     {
@@ -3086,18 +4426,6 @@
       }
     },
     {
-      "name": "Teachable Machine",
-      "url": "http://teachablemachine.withgoogle.com/",
-      "key": "teachable_machine",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "teachable_machine"
-      }
-    },
-    {
       "name": "Teachable Machine 2.0",
       "url": "https://youtu.be/T2qQGqZxkD0?feature=shared",
       "key": "teachable_machine_2_0",
@@ -3239,12 +4567,6 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "object_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "teachable_machine"
       }
     },
     {
@@ -3412,18 +4734,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "binary_to_base_10_converter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "google_color_picker"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
         "resource.key": "images_pixels_and_rgb"
       }
     },
@@ -3477,12 +4787,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "garden_images"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "ai_training_data_and_bias"
       }
@@ -3491,12 +4795,6 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "bingo_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "resource.key": "dog_images"
       }
     },
     {

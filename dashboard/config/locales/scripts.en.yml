@@ -16629,3 +16629,23 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        musiclab-pdx-test:
+          lessons: {}
+          lesson_groups: {}
+          name: musiclab-pdx-test
+          title: 'PDX Playtest for Music Lab '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        baruch-pilot-v1:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+          lesson_groups: {}
+          name: baruch-pilot-v1
+          title: Baruch Gen AI Pilot
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
