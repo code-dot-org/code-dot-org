@@ -81,8 +81,10 @@ class SectionProgress extends Component {
     if (
       (prevProps.scriptId !== this.props.scriptId ||
         prevProps.sectionId !== this.props.sectionId ||
-        prevProps.isLoadingProgress !== this.props.isLoadingProgress) &&
-      !this.props.isLoadingProgress
+        prevProps.isLoadingProgress !== this.props.isLoadingProgress ||
+        prevProps.isRefreshingProgress !== this.props.isRefreshingProgress) &&
+      !this.props.isLoadingProgress &&
+      !this.props.isRefreshingProgress
     ) {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED_FIXED, {
         sectionId: this.props.sectionId,
