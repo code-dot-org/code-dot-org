@@ -38,11 +38,11 @@ $default-spacing: 2px;
     text-align: center;
   }
 
-  [dir="ltr"] &Right, [dir="rtl"] &Left  {
+  [dir="ltr"] &Right, [dir="rtl"] &Left {
     right: 4px;
   }
 
-  [dir="ltr"] &Left, [dir="rtl"] &Right  {
+  [dir="ltr"] &Left, [dir="rtl"] &Right {
     left: 4px;
   }
 }
