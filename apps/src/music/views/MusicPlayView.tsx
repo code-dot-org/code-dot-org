@@ -2,31 +2,35 @@ import React, {memo, useCallback, useMemo} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import moduleStyles from './music-play-view.module.scss';
 import Link from '@cdo/apps/componentLibrary/link';
+import commonI18n from '@cdo/locale';
+import codeOrgLogo from '@cdo/static/code-dot-org-white-logo.svg';
+
+import moduleStyles from './music-play-view.module.scss';
 
 import musicI18n from '../locale';
 
-const codeOrgLogo = require(`@cdo/static/code-dot-org-white-logo.svg`);
-
 interface MusicPlayViewProps {
+  isPlaying: boolean;
   onPlay: () => void;
   onStop: () => void;
-  isPlaying: boolean;
+  projectName: string;
 }
 
 const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   isPlaying,
   onPlay,
   onStop,
+  projectName,
 }) => {
   const shareData = useMemo(
     () => ({
-      title: 'Project Name',
+      title: projectName,
       url: window.location.href,
     }),
-    []
+    [projectName]
   );
+
   // Share button will only appear when users browser supports the Web Share API
   // (Can be mobile browsers and some desktop browser like macOS Safari)
   // Requires HTTPS connection (adhoc or production page).
@@ -34,18 +38,22 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   // is not considered a sage URL by browser, only http://localhost:3000/ is).
   const canShare =
     navigator && navigator.canShare && navigator.canShare(shareData);
-  const shareProject = useCallback(() => {
+
+  const onShareProject = useCallback(() => {
     navigator?.share(shareData);
   }, [shareData]);
+  const onViewCode = useCallback(() => {
+    console.log('view code');
+  }, []);
+  const onRemix = useCallback(() => {
+    console.log('make my own');
+  }, []);
 
   return (
     <div className={moduleStyles.musicPlayViewContainer}>
       <div className={moduleStyles.musicPlayViewCard}>
         <img src={codeOrgLogo} alt="Code.org" />
-        <Heading2>
-          {/*TODO: Project name should be here instead of placeholder text*/}
-          My Awesome Mix
-        </Heading2>
+        <Heading2>{projectName}</Heading2>
         <BodyTwoText>
           {musicI18n.madeWithMusicLabOn()} <Link href="/">Code.org</Link>
         </BodyTwoText>
@@ -65,20 +73,20 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
 
         <div className={moduleStyles.musicPlayViewButtonsSection}>
           <Button
-            text={musicI18n.viewCode()}
+            text={commonI18n.viewCode()}
             type="secondary"
             color="white"
             size="s"
             iconLeft={{iconStyle: 'solid', iconName: 'code'}}
-            onClick={onPlay}
+            onClick={onViewCode}
           />
           <Button
-            text={musicI18n.remix()}
+            text={commonI18n.makeMyOwn()}
             type="secondary"
             color="white"
             size="s"
             iconLeft={{iconStyle: 'solid', iconName: 'user-music'}}
-            onClick={() => console.log('make my own, redirect to remix')}
+            onClick={onRemix}
           />
         </div>
         {canShare && (
@@ -89,7 +97,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               color="white"
               size="s"
               iconLeft={{iconStyle: 'solid', iconName: 'share'}}
-              onClick={shareProject}
+              onClick={onShareProject}
             />
           </div>
         )}
