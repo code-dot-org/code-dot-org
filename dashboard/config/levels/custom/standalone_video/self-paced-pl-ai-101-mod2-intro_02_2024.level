@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-04-16T18:15:18.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "self-paced-pl-ai-101-Introduction_to_AI",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21258,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "#### We all know that AI is a transformative technology that is already impacting many aspects of our everyday lives, but what is AI?\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-16T18:15:18.717+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-literacy_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-literacy_04_2024\"},{\"changed_at\":\"2024-04-16 18:15:36 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 13:52:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 13:58:49 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

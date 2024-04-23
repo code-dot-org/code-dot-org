@@ -27,11 +27,13 @@ import {
 
 const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
 
-export const getNextFileId = (files: ProjectFile[]) =>
-  String(Math.max(...files.map(f => Number(f.id))) + 1);
+export const getNextFileId = (files: ProjectFile[]) => {
+  return String(Math.max(0, ...files.map(f => Number(f.id))) + 1);
+};
 
-export const getNextFolderId = (folders: ProjectFolder[]) =>
-  String(Math.max(...folders.map(f => Number(f.id))) + 1);
+export const getNextFolderId = (folders: ProjectFolder[]) => {
+  return String(Math.max(0, ...folders.map(f => Number(f.id))) + 1);
+};
 
 export const findSubFolders = (parentId: string, folders: ProjectFolder[]) =>
   folders.reduce((bucket, f: ProjectFolder) => {
@@ -62,13 +64,10 @@ export const useProjectUtilities = (
 ) => {
   return useMemo(() => {
     const utils = {
-      replaceProject: <ReplaceProjectFunction>((
-        project: ProjectType,
-        shouldNotifyProjectUpdate: {current: boolean}
-      ) => {
+      replaceProject: <ReplaceProjectFunction>((project: ProjectType) => {
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.REPLACE_PROJECT,
-          payload: {project, shouldNotifyProjectUpdate},
+          payload: {project},
         });
       }),
       newFile: <NewFileFunction>(({

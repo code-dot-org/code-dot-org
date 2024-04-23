@@ -3,36 +3,19 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Closing a Lesson 
+# Teaching Resources for Coding with AI
 
-#### This page should include: 
+#### So far you have learned how to effectively prompt and use a large language model and explored several activities from the Code with AI curriculum. In this lesson, you will dive into teaching resources to help you get started with AI in your class.
 
-* #### A congratulations for the Learner
-* #### A review of the objectives
-* #### What's up next for the learner
+<img src="https://images.code.org/de1bb1676d5e6cfad1f7525199036dc9-image-1712931002987.png" alt="Image CS Discoveries students" width="250px" style="border-radius:10px; float:right; margin: 0 40px 40px 40px;">
 
-___
+#### **In this lesson you will:** 
 
-## Exemplar: 
+- #### Explore best practices for using LLMs in your class
+- #### Discover resources to help navigate the implementation of AI in your school or district
+- #### Identify next steps to learn more about AI in the classroom
 
-# Wrap Up: Create a Scene
-
-## Great job! 🎉
-
-#### So far, you've learned the basics of Game Lab and how to create and customize shapes. The skills you've learned thus far will take you through Unit 3, Lesson 7. You learned how to:
-
-* #### Use the coordinate grid in Game Lab to draw colorful shapes.
-* #### Customize shapes by adjusting multiple parameters.
-* #### Use variables to store information that is used multiple times in a program.
-
-## Up Next
-
-#### In the next section of this professional learning module, you'll learn more about **sprites**, which will allow you to make creative and exciting scenes and games in Game Lab.
-
-#### Click continue to keep going!
-
-
-
+#### **Suggested time:** 20 minutes
 
 
 MARKDOWN

@@ -323,6 +323,10 @@ a:visited,
     &:hover {
       background-color: unset;
     }
+
+    &:disabled {
+      color: $light_gray_300;
+    }
   }
 
   &.rebrandedTextButton {

@@ -68,6 +68,7 @@ function UnitSelectorV2({
       className={className}
       isLabelVisible={false}
       size="s"
+      dropdownTextThickness="thin"
     />
   );
 }

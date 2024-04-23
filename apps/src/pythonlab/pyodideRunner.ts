@@ -1,8 +1,9 @@
+import {MultiFileSource} from '../lab2/types';
 import {asyncRun} from './pyodideWorkerManager';
 
-export async function runPythonCode(code: string) {
+export async function runPythonCode(mainFile: string, source: MultiFileSource) {
   try {
-    const {results, error} = await asyncRun(code, {});
+    const {results, error} = await asyncRun(mainFile, source);
     if (results) {
       console.log('pyodideWorker return results: ', results);
     } else if (error) {

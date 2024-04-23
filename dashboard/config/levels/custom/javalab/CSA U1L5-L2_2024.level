@@ -759,7 +759,7 @@
     "long_instructions": "##Investigate and Modify\r\n\r\nInvestigate the documentation and code provided, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Go to the **Help & Tips** tab ⬆️ and find the documentation for <code style=\"background-color: #ececec; color: black; font-weight: bold;\">while</code> loops. What does it do? How does it work?",
     "project_template_level_name": "CSA U1L5-Loops PBT_2024",
     "reference_links": [
-      "/courses/csa-2023/guides/while-loops"
+      "/courses/csa-2024/guides/while-loops"
     ],
     "teacher_markdown": "A `while` loop repeats a block of code as long as the condition is `true`.",
     "name_suffix": "_2024",
