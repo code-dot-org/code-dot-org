@@ -21,7 +21,8 @@ const ModelSelectionFields: React.FunctionComponent = () => {
   const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
   const [additionalAvailableModelIds, setAdditionalAvailableModelIds] =
     useState<string[]>(
-      aichatSettings.availableModelIds.filter(id => id !== selectedModelId)
+      aichatSettings.availableModelIds?.filter(id => id !== selectedModelId) ||
+        []
     );
 
   const onDropdownChange = useCallback(
