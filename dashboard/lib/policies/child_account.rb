@@ -13,6 +13,15 @@ class Policies::ChildAccount
 
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.PERMISSION_GRANTED
+
+    # def self.locked_out?(student)
+    # def self.request_sent?(student)
+    # def self.permission_granted?(student)
+    SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.each do |key, value|
+      define_singleton_method("#{key.downcase}?") do |student|
+        student.child_account_compliance_state == value
+      end
+    end
   end
 
   # The individual US State child account policy configuration
@@ -34,7 +43,11 @@ class Policies::ChildAccount
   # parent permission before the student can start using their account.
   def self.compliant?(user)
     return true unless parent_permission_required?(user)
-    user.child_account_compliance_state == ComplianceState::PERMISSION_GRANTED
+    # CPA Part 2: unlock students created before the policy went into effect
+    # who have requested parental permission but have not yet received approval.
+    return true if ComplianceState.request_sent?(user) && user_predates_policy?(user)
+
+    ComplianceState.permission_granted?(user)
   end
 
   # Checks if a user is affected by a state policy but was created prior to the
