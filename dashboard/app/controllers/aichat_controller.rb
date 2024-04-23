@@ -1,6 +1,6 @@
 class AichatController < ApplicationController
   include AichatHelper
-  # authorize_resource class: false
+  authorize_resource class: false
 
   # params are
   # newMessage: string
@@ -30,7 +30,7 @@ class AichatController < ApplicationController
       role: "assistant",
       content: latest_assistant_response,
     }
-    session_id = log_chat_session(params, assistant_message)
+    session_id = log_chat_session(assistant_message)
     return render(status: :ok, json: assistant_message.merge({sessionId: session_id}).to_json)
   end
 
@@ -46,28 +46,21 @@ class AichatController < ApplicationController
     params[:storedMessages].is_a?(Array)
   end
 
-  # switch to pass in session ID
-  private def log_chat_session(params, assistant_message)
+  private def log_chat_session(assistant_message)
     if params[:sessionId].present?
       session_id = params[:sessionId]
       session = AichatSession.find_by(id: session_id)
-
-      if session && matches_existing_session?(session, params)
-        session.messages = params[:storedMessages].push(
-          {role: 'user', content: params[:newMessage]},
-          assistant_message
-        ).to_json
-        session.save
-        return session.id
+      if session && matches_existing_session?(session)
+        return update_session(session, assistant_message)
       end
     end
 
-    create_session(params, assistant_message).id
+    create_session(assistant_message)
   end
 
-  private def matches_existing_session?(session, params)
+  private def matches_existing_session?(session)
     context = params[:aichatContext]
-    if session.level_id != context[:currentLevelId].to_i ||
+    if session.level_id != context[:currentLevelId] ||
         session.script_id != context[:scriptId] ||
         current_user.id != session.user_id
       return false
@@ -86,20 +79,30 @@ class AichatController < ApplicationController
     true
   end
 
-  private def create_session(params, assistant_message)
+  private def update_session(session, assistant_message)
+    session.messages = params[:storedMessages].push(
+      {role: 'user', content: params[:newMessage]},
+      assistant_message
+    ).to_json
+    session.save
+
+    session.id
+  end
+
+  private def create_session(assistant_message)
     context = params[:aichatContext]
     _, project_id = storage_decrypt_channel_id(context[:channelId])
 
     AichatSession.create(
       user_id: current_user.id,
-      level_id: context[:currentLevelId].to_i,
-      script_id: context[:scriptId].to_i,
+      level_id: context[:currentLevelId],
+      script_id: context[:scriptId],
       project_id: project_id,
       model_customizations: params[:aichatModelCustomizations].to_json,
       messages: params[:storedMessages].push(
         {role: 'user', content: params[:newMessage]},
         assistant_message
       ).to_json
-    )
+    ).id
   end
 end

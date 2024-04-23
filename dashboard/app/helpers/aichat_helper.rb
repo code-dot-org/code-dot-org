@@ -19,7 +19,6 @@ module AichatHelper
     inputs = BASE_PROMPT + aichat_params[:systemPrompt]
     inputs += aichat_params[:retrievalContexts].join(" ") if aichat_params[:retrievalContexts]
     inputs = SENTENCE_BEGIN_TOKEN + wrap_as_instructions(inputs)
-    # Filter only messages from user or assistant - ignore model update messages.
     all_messages.each do |msg|
       if msg[:role] == USER
         inputs += wrap_as_instructions(msg[:content])
