@@ -1,4 +1,8 @@
-import {deleteSourceFiles, writeSource} from './patches/pythonScriptUtils';
+import {
+  getUpdatedSourceAndDeleteFiles,
+  importPackagesFromFiles,
+  writeSource,
+} from './patches/pythonScriptUtils';
 import {DEFAULT_FOLDER_ID} from '../weblab2/CDOIDE/constants';
 import {loadPyodide /*, version*/} from 'pyodide';
 
@@ -32,16 +36,20 @@ self.onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
   const {id, python, source} = event.data;
+  let results = '';
   try {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
-    // Loading can throw erroneous console errors if a user has a package with the same name as one
-    // in the pyodide list of packages that we have not put in our repo. We can ignore these,
-    // any actual import errors will be caught by the runPythonAsync call.
-    await self.pyodide.loadPackagesFromImports(python);
-    let results = await self.pyodide.runPythonAsync(python);
-    self.postMessage({type: 'run_complete', results, id});
+    await importPackagesFromFiles(source, self.pyodide);
+    results = await self.pyodide.runPythonAsync(python);
   } catch (error) {
-    self.postMessage({type: 'error', error: error.message, id});
+    self.postMessage({type: 'error', message: error.message, id});
   }
-  deleteSourceFiles(self.pyodide, source);
+  const updatedSource = getUpdatedSourceAndDeleteFiles(
+    source,
+    id,
+    self.pyodide,
+    self.postMessage
+  );
+  self.postMessage({type: 'updated_source', message: updatedSource, id});
+  self.postMessage({type: 'run_complete', message: results, id});
 };

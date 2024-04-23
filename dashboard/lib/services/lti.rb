@@ -105,6 +105,7 @@ module Services
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?
         user.user_type = ::User::TYPE_TEACHER
+        user.lti_roster_sync_enabled = true
       else
         user.user_type = ::User::TYPE_STUDENT
         user.family_name = get_claim(nrps_member_message, :family_name)
@@ -234,6 +235,7 @@ module Services
         name: lti_section.section.name,
         short_name: nrps_section[:short_name],
         instructors: instructor_list,
+        lti_section_id: lti_section.id,
       }
     end
 
