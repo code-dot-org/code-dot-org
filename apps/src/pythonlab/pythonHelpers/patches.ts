@@ -34,21 +34,6 @@ def ensure_matplotlib_patch():
 ensure_matplotlib_patch()
 `;
 
-const PATCH_UNITTEST = `
-import unittest
-
-def ensure_unittest_patch():
-  _old_main = unittest.main
-
-  # We changed two default values: set verbosity to 2 (more verbose), and set exit to False to avoid a confusing error message.
-  def main(module='__main__', defaultTest=None, argv=None, testRunner=None, testLoader=unittest.defaultTestLoader, exit=False, verbosity=2, failfast=None, catchbreak=None, buffer=None, warnings=None):
-    _old_main(module, defaultTest, argv, testRunner, testLoader, exit, verbosity, failfast, catchbreak, buffer, warnings)
-
-  unittest.main = main
-
-ensure_unittest_patch()
-`;
-
 // Ensure stdout is flushed at the end of the user's program
 // so all of their prints show up. This patch is always appended to the end of the user's code.
 const FLUSH_STDOUT = `import sys
@@ -64,5 +49,4 @@ os.fsync(sys.stdout.fileno())
 export const ALL_PATCHES = [
   {contents: PATCH_MATPLOTLIB, shouldPrepend: true},
   {contents: FLUSH_STDOUT, shouldPrepend: false},
-  {contents: PATCH_UNITTEST, shouldPrepend: true},
 ];
