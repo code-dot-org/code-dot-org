@@ -29,6 +29,8 @@ $(() => {
         workshopsAsParticipant={landingPageData['workshops_as_participant']}
         plCoursesStarted={landingPageData['pl_courses_started']}
         userPermissions={landingPageData['user_permissions']}
+        joinedStudentSections={landingPageData['joined_student_sections']}
+        joinedPlSections={landingPageData['joined_pl_sections']}
       />
     </Provider>,
     document.getElementById('pl-landing-page-container')

@@ -78,6 +78,9 @@ export const plTableLayoutStyles = {
   participantTypeCell: {
     fontSize: 14,
   },
+  leaveButton: {
+    fontSize: 14,
+  },
 };
 
 // Settings for WrappedSortable
