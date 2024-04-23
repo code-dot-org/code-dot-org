@@ -177,16 +177,12 @@ class ProgressTableView extends React.Component {
     const initialRows = parseInt(progressTableStyleConstants.MAX_ROWS);
 
     // amountOfRowsToRender is a reactabular internal
-    if (this.studentList) {
-      this.studentList?.bodyComponent.setState({
-        amountOfRowsToRender: initialRows,
-      });
-    }
-    if (this.contentView) {
-      this.contentView?.bodyComponent?.setState({
-        amountOfRowsToRender: initialRows,
-      });
-    }
+    this.studentList?.bodyComponent.setState({
+      amountOfRowsToRender: initialRows,
+    });
+    this.contentView?.bodyComponent?.setState({
+      amountOfRowsToRender: initialRows,
+    });
     this.syncScrollTop();
   }
 
