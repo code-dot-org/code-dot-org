@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "flappy_intro",
+    "video_key": "self-paced-pl-ai-101-Educators_and_AI_Fiction",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -16,7 +16,7 @@
     "long_instructions": "#### As users of AI and as educators, what precautions can we take to make sure we and our students aren’t falling prey to AI fictions? Let’s go over some strategies.\r\n\r\n\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-16T18:25:19.232+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod5-fiction_01_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod5-fiction_01_2024\"},{\"changed_at\":\"2024-04-16 18:26:01 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 15:03:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-16T18:25:19.232+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod5-fiction_01_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod5-fiction_01_2024\"},{\"changed_at\":\"2024-04-16 18:26:01 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 15:03:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 14:22:25 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

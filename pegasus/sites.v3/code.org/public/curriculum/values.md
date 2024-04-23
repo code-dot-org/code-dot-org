@@ -8,17 +8,17 @@ theme: responsive
 
 While Code.org offers a wide range of curricular materials across a wide range of ages, the following values permeate and drive the creation of every lesson we write.
 
-## Computer Science is Foundational for Every Student 
+## Computer Science is Foundational for Every Student
 
 We believe that computing is so fundamental to understanding and participating in society that it is valuable for *every student* to learn as part of a modern education. We see computer science as a liberal art, a subject that provides students with a critical lens for interpreting the world around them. Computer science prepares all students to be active and informed contributors to our increasingly technological society whether they pursue careers in technology or not. Computer science can be life-changing, not just skill training.
 
 ## Teachers in Classrooms
 
-We believe students learn best with the help of an empowered teacher. We design our materials for a classroom setting and provide teachers robust supports that enable them to understand and perform their critical role in supporting student learning.  Because teachers know their students best, we empower them to make choices within the curriculum, even as we recommend and support a variety of pedagogical approaches.  Knowing that many of our teachers are new to computer science themselves, our resources and strategies specifically target their needs. 
+We believe students learn best with the help of an empowered teacher. We design our materials for a classroom setting and provide teachers robust supports that enable them to understand and perform their critical role in supporting student learning.  Because teachers know their students best, we empower them to make choices within the curriculum, even as we recommend and support a variety of pedagogical approaches.  Knowing that many of our teachers are new to computer science themselves, our resources and strategies specifically target their needs.
 
 ## Student Engagement and Learning
 
-We believe that students learn best when they are intrinsically motivated. We prioritize learning experiences that are active, relevant to students’ lives, and provide students authentic choice. We encourage students to be curious, solve personally relevant problems and to express themselves through creation. Learning is an inherently social activity, so we interweave lessons with discussions, presentations, peer feedback, and shared reflections. As students proceed through our pathway, we increasingly shift responsibility to students to formulate their own questions, develop their own solutions, and critique their own work. 
+We believe that students learn best when they are intrinsically motivated. We prioritize learning experiences that are active, relevant to students’ lives, and provide students authentic choice. We encourage students to be curious, solve personally relevant problems and to express themselves through creation. Learning is an inherently social activity, so we interweave lessons with discussions, presentations, peer feedback, and shared reflections. As students proceed through our pathway, we increasingly shift responsibility to students to formulate their own questions, develop their own solutions, and critique their own work.
 
 ## Equity
 
