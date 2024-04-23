@@ -11,6 +11,7 @@ import {
   setAndSaveSource,
 } from './pythonlabRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import MetricsReporter from '../lib/metrics/MetricsReporter';
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
@@ -37,6 +38,12 @@ pyodideWorker.onmessage = event => {
     return;
   } else if (type === 'error') {
     getStore().dispatch(appendSystemMessage(`Error: ${message}`));
+    return;
+  } else if (type === 'internal_error') {
+    MetricsReporter.logError({
+      type: 'PythonLabInternalError',
+      message,
+    });
     return;
   } else {
     console.warn(
