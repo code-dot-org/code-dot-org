@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-06 20:07:30 UTC",
+    "serialized_at": "2024-04-18 14:16:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -56,6 +56,7 @@
       "key": "63dae9b9-e884-4141-9abe-1423f63fd301",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "63dae9b9-e884-4141-9abe-1423f63fd301",

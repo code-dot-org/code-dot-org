@@ -45,12 +45,14 @@ const AichatView: React.FunctionComponent = () => {
     state => (state.lab.initialSources?.source as string) || '{}'
   );
 
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
-  const {currentAiCustomizations, viewMode, hasPublished} = useAppSelector(
+  const {currentAiCustomizations, viewMode} = useAppSelector(
     state => state.aichat
   );
-  const {botName} = currentAiCustomizations.modelCardInfo;
+  const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
 
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(initialSources);
@@ -62,13 +64,18 @@ const AichatView: React.FunctionComponent = () => {
     );
   }, [dispatch, initialSources, levelAichatSettings]);
 
+  // When the level changes, clear the chat message history and start a new session.
+  useEffect(() => {
+    dispatch(clearChatMessages());
+  }, [currentLevelId, dispatch]);
+
   // Showing presentation view when:
   // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and
   // 2) we have a published model card (either by the student, or in readonly form from the levelbuilder)
   const showPresentationToggle = () => {
     return (
       !levelAichatSettings?.hidePresentationPanel &&
-      (hasPublished ||
+      (isPublished ||
         (levelAichatSettings?.visibilities &&
           isDisabled(levelAichatSettings.visibilities.modelCardInfo)))
     );
@@ -149,9 +156,9 @@ const AichatView: React.FunctionComponent = () => {
           <PanelContainer
             id="aichat-workspace-panel"
             headerContent={chatWorkspaceHeader}
-            rightHeaderContent={renderChatWorkspaceHeaderRight(() =>
-              dispatch(clearChatMessages())
-            )}
+            rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
+              dispatch(clearChatMessages());
+            })}
           >
             <ChatWorkspace />
           </PanelContainer>

@@ -28,6 +28,8 @@ export const STATUS = {
   PII_ERROR: 'pii_error',
   // profanity present in code
   PROFANITY_ERROR: 'profanity_error',
+  // request too large
+  REQUEST_TOO_LARGE: 'request_too_large',
 };
 
 const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
@@ -86,6 +88,10 @@ export default function RunAIAssessmentButton({
               data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
             ) {
               setStatus(STATUS.PROFANITY_ERROR);
+            } else if (
+              data.status === RubricAiEvaluationStatus.REQUEST_TOO_LARGE
+            ) {
+              setStatus(STATUS.REQUEST_TOO_LARGE);
             } else {
               setStatus(STATUS.READY);
             }
@@ -124,6 +130,10 @@ export default function RunAIAssessmentButton({
                 data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
               ) {
                 setStatus(STATUS.PROFANITY_ERROR);
+              } else if (
+                data.status === RubricAiEvaluationStatus.REQUEST_TOO_LARGE
+              ) {
+                setStatus(STATUS.REQUEST_TOO_LARGE);
               }
             });
           }
