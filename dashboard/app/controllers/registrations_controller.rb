@@ -118,7 +118,7 @@ class RegistrationsController < Devise::RegistrationsController
 
     if current_user && current_user.errors.blank?
       if current_user.teacher?
-        if MailJet.enabled?
+        if MailJet.enabled? && request.locale != 'es-MX'
           MailJet.create_contact_and_send_welcome_email(current_user)
         else
           TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now
