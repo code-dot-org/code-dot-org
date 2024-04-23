@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AichatControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
-  GENAI_PILOT = "gen-ai-customizing-llms"
+  GENAI_PILOT = "gen-ai-lab-v1"
 
   setup_all do
     @genai_pilot = create :pilot, name: GENAI_PILOT

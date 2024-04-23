@@ -257,9 +257,6 @@ GEM
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
-    aws-sdk-sagemaker (1.211.0)
-      aws-sdk-core (~> 3, >= 3.177.0)
-      aws-sigv4 (~> 1.1)
     aws-sdk-sagemakerruntime (1.55.0)
       aws-sdk-core (~> 3, >= 3.177.0)
       aws-sigv4 (~> 1.1)
@@ -988,7 +985,6 @@ DEPENDENCIES
   aws-sdk-rds
   aws-sdk-route53
   aws-sdk-s3
-  aws-sdk-sagemaker
   aws-sdk-sagemakerruntime
   aws-sdk-secretsmanager
   bcrypt (= 3.1.13)
