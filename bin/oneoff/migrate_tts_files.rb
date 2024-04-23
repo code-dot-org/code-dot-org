@@ -20,8 +20,8 @@
 # fixing this.
 #
 # With this in mind, I also want to record alongside the
-# <md5-hash>/<sha-hash>/<params>.mp3 a <params>.json file that contains information
-# about the provenance of the TTS file which should include:
+# <locale>/<md5-hash>/<sha-hash>/<params>.mp3 a <params>.json file that contains
+# metadata about the provenance of the TTS file which should include:
 #   - text (string) -- The text being read by the agent.
 #   - key (string) -- The source within the level for the text. (long_instructions, etc)
 #   - level (string) -- The name of the level (replacing the old filename)
@@ -85,19 +85,20 @@ Level.all.each do |level|
       next if found.key?(md5_hash + '-' + voice)
       found[md5_hash + '-' + voice] = true
       path = "#{voice}/#{speed}/#{shape}/#{md5_hash}/#{level.name}.mp3"
-      new_path = "generated/#{md5_hash}/#{sha_hash}/#{voice}-#{speed}-#{shape}.mp3"
+      new_path = "#{locale}/#{md5_hash}/#{sha_hash}/#{voice}-#{speed}-#{shape}.mp3"
 
       if AWS::S3.exists_in_bucket(TTS_BUCKET, path)
         if AWS::S3.exists_in_bucket(TTS_BUCKET, new_path)
           puts "[EXST] #{path} -> #{new_path}"
         else
           puts "[COPY] #{path} -> #{new_path}"
-          AWS::S3.create_client.copy_object({
-                                              bucket: TTS_BUCKET,
-            copy_source: "/#{TTS_BUCKET}/#{path}",
-            key: new_path,
-                                            }
-)
+          AWS::S3.create_client.copy_object(
+            {
+              bucket: TTS_BUCKET,
+              copy_source: "/#{TTS_BUCKET}/#{path}",
+              key: new_path,
+            }
+          )
         end
 
         # Create metadata for the copied file based on the info we have

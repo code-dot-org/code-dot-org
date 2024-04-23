@@ -37,13 +37,20 @@ TTSSafeScrubber.tags = ['xml']
 module TextToSpeech
   extend ActiveSupport::Concern
 
-  # Pull the VOICES out of the SharedConstants
-  VOICES = SharedConstants::VOICES
-
-  # TODO: this concern actually depends on the SerializedProperties
-  # concern ... I'm not sure how best to deal with that.
+  # Pull the VOICES out of the SharedConstants (updating the locale keys to
+  # match the expectation of the I18n gem since these locale keys are using
+  # the JavaScript i18n expectations)
+  VOICES = SharedConstants::VOICES.transform_keys do |locale|
+    lang, country = locale.to_s.split('_')
+    :"#{lang}-#{country.upcase}"
+  end.freeze
 
   included do
+    # We require the SerializedProperties to be included first
+    unless respond_to? :serialized_attrs
+      raise "Module must include SerializedProperties before TextToSpeech"
+    end
+
     before_save :tts_update
 
     serialized_attrs %w(
@@ -72,7 +79,7 @@ module TextToSpeech
     use_new_path = DCDO.get('updated_tts_path', false)
     if use_new_path
       # New path
-      "generated/#{content_md5}/#{content_sha}/#{loc_voice[:VOICE]}-#{loc_voice[:SPEED]}-#{loc_voice[:SHAPE]}.mp3"
+      "#{locale}/#{content_md5}/#{content_sha}/#{loc_voice[:VOICE]}-#{loc_voice[:SPEED]}-#{loc_voice[:SHAPE]}.mp3"
     else
       # Old path
       "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_md5}/#{name}.mp3"
