@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-04-19T21:53:40.000Z",
   "level_num": "custom",
@@ -23,9 +24,25 @@
         }
       ]
     },
-    "name_suffix": "_v2"
+    "name_suffix": "_v2",
+    "panels": [
+      {
+        "imageUrl": "https://studio.code.org/shared/images/teacher-announcement/incubator-projectbeats.png",
+        "text": "#### ✨Welcome to Project Beats! ✨ \n\nYou can mix, remix, and even perform music using code. \n\n Let's make some music! 🚀",
+        "key": "musiclab_intro_panels_start_v2-415ec56a-f841-421b-adff-b680e8d4ca35"
+      },
+      {
+        "imageUrl": "https://images.code.org/b09f6697b81c436251fd780b5ac9d49e-sounds.gif",
+        "text": "Connect a block under 'when run' in your Workspace. \n\n Drag it back to delete it.",
+        "key": "musiclab_intro_panels_start_v2-bad2743f-b8f3-4520-b401-4c0b68820a05"
+      },
+      {
+        "imageUrl": "https://images.code.org/b845c84c59e5f0d4b8531d0f89e11d25-choose a sound.gif",
+        "text": "Click on the sound name to access the sound library. \n\nChoose any sound you like!",
+        "key": "musiclab_intro_panels_start_v2-623c36d1-b475-414b-8e2f-da7d27012391"
+      }
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-04-19T21:53:40.155+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_start_pdx\\\"\"],\"cloned_from\":\"musiclab_intro_panels_start_pdx\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-19T21:53:40.155+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_start_pdx\\\"\"],\"cloned_from\":\"musiclab_intro_panels_start_pdx\"},{\"changed_at\":\"2024-04-22 18:27:18 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
