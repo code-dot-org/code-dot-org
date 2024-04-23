@@ -93,12 +93,16 @@ module TextToSpeech
       AWS::S3.upload_to_bucket(TTS_BUCKET, filename, resp.body, no_random: true)
 
       # Also upload metadata so we know what the text is supposed to be
-      metadata_path = "#{filename}.mp3"
-      metadata = {
-        level: name,
+      metadata_path = "#{filename.rpartition('.').first}.json"
+      metadata = {}
+      if AWS::S3.exists_in_bucket(TTS_BUCKET, metadata_path)
+        # Pull down the existing metadata
+        metadata = JSON.parse(AWS::S3.download_from_bucket(TTS_BUCKET, metadata_path))
+      end
+      metadata[name] = {
         key: key,
         locale: locale,
-        text: text,
+        text: text
       }
       AWS::S3.upload_to_bucket(TTS_BUCKET, metadata_path, metadata.to_json, no_random: true)
     end
