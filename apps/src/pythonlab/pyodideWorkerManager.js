@@ -2,8 +2,8 @@ import {getStore} from '@cdo/apps/redux';
 import {
   applyPatches,
   deleteCachedUserModules,
-} from './patches/pythonScriptUtils';
-import {MATPLOTLIB_IMG_TAG} from './patches/patches';
+} from './pythonHelpers/pythonScriptUtils';
+import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 import {
   appendOutputImage,
   appendSystemMessage,

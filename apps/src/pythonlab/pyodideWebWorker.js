@@ -2,7 +2,7 @@ import {
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
   writeSource,
-} from './patches/pythonScriptUtils';
+} from './pythonHelpers/pythonScriptUtils';
 import {DEFAULT_FOLDER_ID} from '../weblab2/CDOIDE/constants';
 import {loadPyodide /*, version*/} from 'pyodide';
 

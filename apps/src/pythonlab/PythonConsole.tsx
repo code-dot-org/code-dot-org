@@ -3,7 +3,7 @@ import moduleStyles from './python-console.module.scss';
 import {useDispatch} from 'react-redux';
 import {appendSystemMessage, resetOutput} from './pythonlabRedux';
 import Button from '@cdo/apps/templates/Button';
-import {runPythonCode} from './pyodideRunner';
+import {runAllTests, runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
@@ -19,23 +19,27 @@ const PythonConsole: React.FunctionComponent = () => {
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
 
-  const handleRun = () => {
+  const handleRun = (runTests: boolean) => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
     // For now, restrict running python code to levelbuilders.
     if (parsedData.permissions.includes('levelbuilder')) {
-      dispatch(appendSystemMessage('Running program...'));
-      let mainFound = false;
       if (source) {
-        const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
-        if (code) {
-          mainFound = true;
-          runPythonCode(code, source);
+        if (runTests) {
+          dispatch(appendSystemMessage('Running tests...'));
+          runAllTests(source);
+        } else {
+          const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
+          if (code) {
+            dispatch(appendSystemMessage('Running program...'));
+            runPythonCode(code, source);
+          } else {
+            dispatch(
+              appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`)
+            );
+          }
         }
-      }
-      if (!mainFound) {
-        dispatch(
-          appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`)
-        );
+      } else {
+        dispatch(appendSystemMessage('You have no code to run.'));
       }
     } else {
       dispatch(
@@ -54,7 +58,13 @@ const PythonConsole: React.FunctionComponent = () => {
         <Button
           type={'button'}
           text="Run"
-          onClick={handleRun}
+          onClick={() => handleRun(false)}
+          disabled={loading}
+        />
+        <Button
+          type={'button'}
+          text="Test"
+          onClick={() => handleRun(true)}
           disabled={loading}
         />
         <Button type={'button'} text="Clear output" onClick={clearOutput} />

@@ -1,5 +1,6 @@
 import {MultiFileSource} from '../lab2/types';
 import {asyncRun} from './pyodideWorkerManager';
+import {FIND_AND_RUN_ALL_TESTS} from './pythonHelpers/scripts';
 
 export async function runPythonCode(mainFile: string, source: MultiFileSource) {
   try {
@@ -15,4 +16,8 @@ export async function runPythonCode(mainFile: string, source: MultiFileSource) {
       `Error in pyodideWorker at ${e.filename}, Line: ${e.lineno}, ${e.message}`
     );
   }
+}
+
+export async function runAllTests(source: MultiFileSource) {
+  await runPythonCode(FIND_AND_RUN_ALL_TESTS, source);
 }
