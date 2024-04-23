@@ -40,7 +40,6 @@ module AichatHelper
   end
 
   def self.request_sagemaker_chat_completion(input_json)
-    puts "Inside aicht_helper.rb - Sending input to SageMaker: #{input_json}"
     SAGEMAKER_CLIENT.invoke_endpoint(
       endpoint_name: SAGEMAKER_MODEL_ENDPOINT, # required
       body: input_json.to_json, # required
