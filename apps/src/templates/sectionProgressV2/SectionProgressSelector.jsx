@@ -13,7 +13,7 @@ import i18n from '@cdo/locale';
 
 import SectionProgress from '../sectionProgress/SectionProgress';
 
-import ProgressFeedbackBanner from './ProgressFeedbackBanner';
+import ProgressBanners from './ProgressBanners';
 import SectionProgressV2 from './SectionProgressV2';
 
 import styles from './progress-header.module.scss';
@@ -84,15 +84,9 @@ function SectionProgressSelector({
     </div>
   );
 
-  const callback = (isVisible, isLoading) => {
-    console.log('lfm', isVisible, isLoading);
-  };
   return (
     <div className={styles.pageContent}>
-      <ProgressFeedbackBanner
-        canShow={showFeedbackBannerLocked ? false : displayV2}
-        visibilityCallback={callback}
-      />
+      <ProgressBanners canShow={showFeedbackBannerLocked ? false : displayV2} />
       {toggleV1OrV2Link()}
       {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
     </div>

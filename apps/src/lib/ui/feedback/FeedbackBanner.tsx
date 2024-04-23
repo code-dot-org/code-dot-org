@@ -33,7 +33,7 @@ interface FeedbackBannerProps {
   shareMoreLinkText: string;
   // An optional function that will be called when the visibility of the banner is set or changes.
   // Useful if you have logic in a parent component that depends on the visibility of the banner.
-  visibilityCallback?: (isVisible: boolean, isLoading: boolean) => void;
+  visibilityCallback?: (isVisible: boolean) => void;
 }
 
 const FeedbackBanner: React.FC<FeedbackBannerProps> = ({
@@ -60,7 +60,7 @@ const FeedbackBanner: React.FC<FeedbackBannerProps> = ({
   );
 
   React.useEffect(
-    () => visibilityCallback?.(isBannerVisible, isLoading),
+    () => visibilityCallback?.(isBannerVisible && !isLoading),
     [isBannerVisible, visibilityCallback, isLoading]
   );
 
