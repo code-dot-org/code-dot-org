@@ -7,11 +7,11 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Button from '@cdo/apps/componentLibrary/button';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
-import {removeChatMessage} from '../redux/aichatRedux';
+import {removeModelUpdateMessage} from '../redux/aichatRedux';
 import {
   ChatCompletionMessage,
   Role,
-  AITutorInteractionStatus as Status,
+  AichatInteractionStatus as Status,
 } from '../types';
 import aichatI18n from '../locale';
 import moduleStyles from './chatMessage.module.scss';
@@ -137,7 +137,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
       {isModelUpdate(message.role) && (
         <div className={moduleStyles.modelUpdateMessageContainer}>
           {displayModelUpdateMessage(message, () =>
-            dispatch(removeChatMessage(message.id))
+            dispatch(removeModelUpdateMessage(message.id))
           )}
         </div>
       )}

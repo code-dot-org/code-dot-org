@@ -270,6 +270,7 @@ const styles = {
   },
   sortOrderSelect: {
     marginRight: sortOrderMargin,
+    marginBottom: 8,
     width: parseInt(styleConstants.STUDENT_LIST_WIDTH) - sortOrderMargin,
   },
 };

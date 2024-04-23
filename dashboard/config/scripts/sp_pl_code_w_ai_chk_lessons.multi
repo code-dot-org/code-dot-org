@@ -1,16 +1,16 @@
 name 'sp-pl-Code_w_AI-chk_lessons'
 editor_experiment ''
-title 'Check for Understanding: Large Language Models'
-type 'multi2'
-question 'Which of the following best describes a Large Language Model (LLM)?'
+title 'Check for Understanding: Coding with AI'
+type 'multi1'
+question 'In what ways can AI be used to ethically assist with coding?'
 
 
 
-wrong 'A type of calculator that can perform complex mathematical operations.'
-wrong 'A software program designed to edit and enhance images.'
-right 'A computer program trained to understand and generate human language.'
-wrong 'A robotic device used for manufacturing and assembly lines'
-
+wrong 'AI can be used as an ideation partner to brainstorm ideas for coding applications.'
+wrong 'AI can be used to help plan and explain algorithms in complex parts of code.'
+wrong 'AI can be used to help debug code.'
+wrong 'AI can be used to suggest improvements and expand features on existing code.'
+right 'All of the above'
 
 
 teacher_markdown <<MARKDOWN

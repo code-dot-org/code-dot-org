@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-15 03:35:44 UTC",
+    "serialized_at": "2024-04-19 18:12:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -365,7 +365,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Conditonals New Practice",
+      "name": "Conditionals New Practice",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -6036,6 +6036,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Conditionals Practice MindEase L0"
+        ],
         "progression": "Conditionals Practice"
       },
       "bonus": false,
@@ -6058,6 +6061,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Conditionals Practice MindEase L1"
+        ],
         "progression": "Conditionals Practice"
       },
       "bonus": false,
@@ -6080,6 +6086,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Conditionals Practice MindEase L2"
+        ],
         "progression": "Conditionals Practice"
       },
       "bonus": false,
@@ -6102,6 +6111,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Conditionals Practice MindEase L3"
+        ],
         "progression": "Conditionals Practice"
       },
       "bonus": false,
@@ -6124,6 +6136,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Conditionals Practice MindEase L4"
+        ],
         "progression": "Conditionals Practice"
       },
       "bonus": false,
@@ -6146,6 +6161,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Conditionals Practice MindEase L5"
+        ],
         "progression": "Conditionals Practice"
       },
       "bonus": false,
@@ -6168,6 +6186,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Conditionals Practice MindEase L6"
+        ],
         "progression": "Conditionals Practice"
       },
       "bonus": false,

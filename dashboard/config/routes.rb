@@ -604,7 +604,6 @@ Dashboard::Application.routes.draw do
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
-    get '/lti/v1/iframe', to: 'lti_v1#iframe'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
     get '/lti/v1/integrations', to: 'lti_v1#new_integration'
@@ -612,6 +611,11 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resource :feedback, controller: :feedback, only: %i[create show]
+        resources :sections, only: [] do
+          collection do
+            patch :bulk_update_owners
+          end
+        end
       end
     end
 
@@ -915,6 +919,8 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
+        get 'users/cached_page_auth_redirect', to: 'users#cached_page_auth_redirect'
+
         patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
         patch 'user_school_infos', to: 'user_school_infos#update'
@@ -1007,6 +1013,7 @@ Dashboard::Application.routes.draw do
     # @see http://guides.rubyonrails.org/routing.html#specifying-constraints
     get '/dashboardapi/v1/districtsearch/:q/:limit', to: 'api/v1/school_districts#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
     get '/dashboardapi/v1/schoolsearch/:q/:limit(/:use_new_search)', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
+    get '/dashboardapi/v1/schoolzipsearch/:zip', to: 'api/v1/schools#zip_search', defaults: {format: 'json'}, constraints: {zip: /\d{5}/}
 
     get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
@@ -1038,6 +1045,8 @@ Dashboard::Application.routes.draw do
         get 'select_start_animations'
       end
     end
+
+    resource :new_feature_feedback, controller: :new_feature_feedback, only: %i[create show]
 
     # These really belong in the foorm namespace,
     # but we leave them outside so that we can easily use the simple "/form" paths.
@@ -1121,6 +1130,8 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
+
+    post '/aichat/chat_completion', to: 'aichat#chat_completion'
 
     resources :ai_tutor_interactions, only: [:create, :index]
 

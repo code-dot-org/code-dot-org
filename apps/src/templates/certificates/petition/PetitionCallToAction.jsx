@@ -1,6 +1,8 @@
 import React from 'react';
-import PetitionForm from './PetitionForm';
+
 import i18n from '@cdo/locale';
+
+import PetitionForm from './PetitionForm';
 import '../../../../style/code-studio/petition.scss';
 
 const PetitionCallToAction = props => (

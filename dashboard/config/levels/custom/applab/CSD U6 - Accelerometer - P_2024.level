@@ -232,7 +232,7 @@
     "makerlab_enabled": "circuitPlayground",
     "parent_level_id": 20555,
     "name_suffix": "_2024",
-    "map_reference": "/courses/csd-2022/guides/the-accelerometer",
+    "map_reference": "/courses/csd-2024/guides/the-accelerometer",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

@@ -71,10 +71,10 @@
     "parent_level_id": 20803,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/multi-frame-animations"
+      "/courses/csd-2024/guides/the-counter-pattern-2",
+      "/courses/csd-2024/guides/multi-frame-animations"
     ],
-    "map_reference": "/courses/csd-2022/guides/velocity",
+    "map_reference": "/courses/csd-2024/guides/velocity",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",

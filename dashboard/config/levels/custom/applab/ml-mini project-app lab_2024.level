@@ -95,13 +95,13 @@
       "addPair": null
     },
     "reference_links": [
-      "/courses/csd-2022/guides/importing-a-model-in-app-lab",
-      "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/multi-screen-apps",
-      "/courses/csd-2022/guides/design-mode-elements",
-      "/courses/csd-2022/guides/changing-screens",
-      "/courses/csd-2022/guides/responding-to-user-input",
-      "/courses/csd-2022/guides/if-statements-2"
+      "/courses/csd-2024/guides/importing-a-model-in-app-lab",
+      "/courses/csd-2024/guides/design-mode",
+      "/courses/csd-2024/guides/multi-screen-apps",
+      "/courses/csd-2024/guides/design-mode-elements",
+      "/courses/csd-2024/guides/changing-screens",
+      "/courses/csd-2024/guides/responding-to-user-input",
+      "/courses/csd-2024/guides/if-statements-2"
     ],
     "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan](.././) for more information about how to support students in completing this level.",
     "name_suffix": "_2024",

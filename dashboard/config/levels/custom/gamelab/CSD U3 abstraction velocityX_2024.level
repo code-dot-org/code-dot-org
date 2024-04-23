@@ -73,10 +73,10 @@
     "name_suffix": "_2024",
     "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# velocityX\r\n\r\nOne way to move sprites in Game Lab is with the counter pattern. For example <img src=\"https://images.code.org/529a7d3b6e09ec9b8b680f704c82eca9-image-1674066632644.png\" style=\"width:200px\"> moves a sprite by 1 pixel each frame of the draw loop. This pattern is so common that sprites have a [`velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX) property that does this for you.\r\n\r\n# Do This\r\n\r\nUse the new [`velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block to make the sprite move!\r\n\r\n1) Add the new movement block **outside** of the draw loop.\r\n   - Drag a [`velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block directly below where your sprite is created. ( [Show me where](#triggercallout=code_triggered) )\r\n   - Make sure to replace \"sprite\" with \"fish\" so the block says [`fish.velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX)\r\n2) Assign the velocity a value of 1.\r\n   - The block should now say [`fish.velocityX = 1;`(#f78183)](/docs/ide/gamelab/expressions/velocityX)\r\n3) Run the code. What happens?\r\n4) Give the velocity a different value and run the code again. What's changing?\r\n\r\n",
     "reference_links": [
-      "/courses/csd-2022/guides/the-counter-pattern-2",
-      "/courses/csd-2022/guides/multi-frame-animations"
+      "/courses/csd-2024/guides/the-counter-pattern-2",
+      "/courses/csd-2024/guides/multi-frame-animations"
     ],
-    "map_reference": "/courses/csd-2022/guides/velocity",
+    "map_reference": "/courses/csd-2024/guides/velocity",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
     "encrypted": "false",

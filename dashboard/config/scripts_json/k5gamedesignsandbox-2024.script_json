@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5gamedesignsandbox",
-    "serialized_at": "2024-04-04 20:07:53 UTC",
+    "serialized_at": "2024-04-19 20:01:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -68,12 +68,72 @@
       }
     },
     {
-      "key": "Next Steps",
-      "name": "Next Steps",
+      "key": "lesson-4",
+      "name": "Game Design",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Variables as Score",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Environment and Players",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Game Jam",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "Next Steps",
+      "name": "Next Steps",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
       "properties": {
         "overview": "#### This lesson will help you get started teaching with micro:bits\n\n#### **You will:**\n- ####  Learn more about the assessment feature, JuiceMind\n\n- #### Plan the best course pathway for your class\n\n- #### Explore best practices for teaching with physical computing devices \n\n#### **Suggested time:** 15 minutes\n",
         "student_overview": "#### This lesson will help you get started teaching with micro:bits\n\n#### **You will:**\n- ####  Learn more about the assessment feature, JuiceMind\n\n- #### Plan the best course pathway for your class\n\n- #### Explore best practices for teaching with physical computing devices \n\n#### **Suggested time:** 15 minutes"
@@ -108,6 +168,54 @@
       "seeding_key": {
         "lesson_activity.key": "b96d4676-85a1-44fd-b530-e361389859c4",
         "lesson.key": "Implementing with Codeorg [Optional]",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "712548a5-e207-424c-b46e-4b04c3406f65",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "712548a5-e207-424c-b46e-4b04c3406f65",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "6b0fa850-c669-4659-910c-db2c1583b98e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b0fa850-c669-4659-910c-db2c1583b98e",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "e71add96-41f5-414f-b8c7-0e2cc4f147a5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e71add96-41f5-414f-b8c7-0e2cc4f147a5",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024"
       }
@@ -172,6 +280,46 @@
       }
     },
     {
+      "key": "c6a63028-1855-4849-b5a8-6e946aa045ca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca",
+        "lesson_activity.key": "712548a5-e207-424c-b46e-4b04c3406f65"
+      }
+    },
+    {
+      "key": "e1ce43ef-3334-4f36-a807-822ca4493655",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655",
+        "lesson_activity.key": "6b0fa850-c669-4659-910c-db2c1583b98e"
+      }
+    },
+    {
+      "key": "165295d4-4939-46fa-9f10-7ff86b9dbf82",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82",
+        "lesson_activity.key": "e71add96-41f5-414f-b8c7-0e2cc4f147a5"
+      }
+    },
+    {
+      "key": "07f45915-cb1b-4b6e-9ce0-d53220298c27",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27",
+        "lesson_activity.key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62"
+      }
+    },
+    {
       "key": "2f326dff-1732-4c02-9db0-1df54bfc07cf",
       "position": 1,
       "properties": {
@@ -202,6 +350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening1MB_2"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -224,6 +375,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_202_2"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -246,6 +400,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2022MB_2"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -268,6 +425,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_maker_microbit_pl_introVideo_2"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -290,6 +450,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_2"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -312,6 +475,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_maker_PL_course pathways_2"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -334,6 +500,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How this curriculum works_2"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -356,6 +525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-features_2023MB_2"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -378,6 +550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-classsection_2023MB_2"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -400,6 +575,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-STexperience_2023MB_2"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -422,6 +600,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-assessment_2023mb_2"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -444,6 +625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-TeachersInClassrooms_2"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -466,6 +650,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-NavigatingLessonPlans_2"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -488,6 +675,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ExploreLessonPlan_2"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -510,6 +700,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL_21-mod2-MakeAPlan-LessonPlanning_2"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -532,6 +725,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-NavigatingTeacherResources_2"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -554,6 +750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-TaskResources_2"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -576,6 +775,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-navigating support_2"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -598,6 +800,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ReadSupportArticles_2"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -620,6 +825,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ReportAProblem_2"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -642,6 +850,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-JoinTheTeacherCommunity_2"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -664,6 +875,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_certificate_2"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -686,6 +900,771 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_design_video_spritesPL"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_video_spritesPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_video_spritesPL"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_playerPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_playerPL"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_locationPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_locationPL"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_sayPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_sayPL"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_behaviorPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_behaviorPL"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_two_behaviorPLs"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_two_behaviorPLs"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_event_clickPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_event_clickPL"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_make_lotsPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_make_lotsPL"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_make_gridPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_make_gridPL"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_toolbox_objectPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_toolbox_objectPL"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_remove_objectPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "game_design_remove_objectPL"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_intro_choicesPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      },
+      "level_keys": [
+        "game_variables_intro_choicesPL"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_video_introPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      },
+      "level_keys": [
+        "game_variables_video_introPL"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_about_panelPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      },
+      "level_keys": [
+        "game_variables_about_panelPL"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_showPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      },
+      "level_keys": [
+        "game_variables_showPL"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_increasePL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      },
+      "level_keys": [
+        "game_variables_increasePL"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_conditionalPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      },
+      "level_keys": [
+        "game_variables_conditionalPL"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_matchPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      },
+      "level_keys": [
+        "game_variables_matchPL"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_decreasePL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      },
+      "level_keys": [
+        "game_variables_decreasePL"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "environmentPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "environmentPL"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_environment_choicesPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_environment_choicesPL"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_sprites_type_panelPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_sprites_type_panelPL"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_environment_typePL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_environment_typePL"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_environment_type2PL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_environment_type2PL"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_player_type_panelPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_player_type_panelPL"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_player_typePL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_player_typePL"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_jumpPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_jumpPL"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_collectiblePL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_collectiblePL"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_scoreboardPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_scoreboardPL"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_freeplayPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      },
+      "level_keys": [
+        "game_development_freeplayPL"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GamejamPL"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+      },
+      "level_keys": [
+        "GamejamPL"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_theme_generatorpl"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+      },
+      "level_keys": [
+        "game_jam_theme_generatorpl"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_create_planPL"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+      },
+      "level_keys": [
+        "game_jam_create_planPL"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_playPL"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+      },
+      "level_keys": [
+        "game_jam_playPL"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_juiceMInd_intro_1"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -703,11 +1682,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_deciding_your_path_1"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -725,11 +1707,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_courses-C-F_1"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -747,11 +1732,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_reflecting_1"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -769,11 +1757,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_Best_Practices_1"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -791,11 +1782,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced_PL_microbit_Closing2_1"
+        ],
         "progression": "Continue learning"
       },
       "bonus": false,
@@ -1076,6 +2070,438 @@
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
         "activity_section.key": "be06b8a2-bec4-4ab3-b20f-7d6325f54dd6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_video_spritesPL",
+        "script_level.level_keys": [
+          "game_design_video_spritesPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_playerPL",
+        "script_level.level_keys": [
+          "game_design_playerPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_locationPL",
+        "script_level.level_keys": [
+          "game_design_locationPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_sayPL",
+        "script_level.level_keys": [
+          "game_design_sayPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_behaviorPL",
+        "script_level.level_keys": [
+          "game_design_behaviorPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_two_behaviorPLs",
+        "script_level.level_keys": [
+          "game_design_two_behaviorPLs"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_event_clickPL",
+        "script_level.level_keys": [
+          "game_design_event_clickPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_make_lotsPL",
+        "script_level.level_keys": [
+          "game_design_make_lotsPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_make_gridPL",
+        "script_level.level_keys": [
+          "game_design_make_gridPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_toolbox_objectPL",
+        "script_level.level_keys": [
+          "game_design_toolbox_objectPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_remove_objectPL",
+        "script_level.level_keys": [
+          "game_design_remove_objectPL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_intro_choicesPL",
+        "script_level.level_keys": [
+          "game_variables_intro_choicesPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_video_introPL",
+        "script_level.level_keys": [
+          "game_variables_video_introPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_about_panelPL",
+        "script_level.level_keys": [
+          "game_variables_about_panelPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_showPL",
+        "script_level.level_keys": [
+          "game_variables_showPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_increasePL",
+        "script_level.level_keys": [
+          "game_variables_increasePL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_conditionalPL",
+        "script_level.level_keys": [
+          "game_variables_conditionalPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_matchPL",
+        "script_level.level_keys": [
+          "game_variables_matchPL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_decreasePL",
+        "script_level.level_keys": [
+          "game_variables_decreasePL"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "environmentPL",
+        "script_level.level_keys": [
+          "environmentPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_environment_choicesPL",
+        "script_level.level_keys": [
+          "game_development_environment_choicesPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_sprites_type_panelPL",
+        "script_level.level_keys": [
+          "game_development_sprites_type_panelPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_environment_typePL",
+        "script_level.level_keys": [
+          "game_development_environment_typePL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_environment_type2PL",
+        "script_level.level_keys": [
+          "game_development_environment_type2PL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_player_type_panelPL",
+        "script_level.level_keys": [
+          "game_development_player_type_panelPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_player_typePL",
+        "script_level.level_keys": [
+          "game_development_player_typePL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_jumpPL",
+        "script_level.level_keys": [
+          "game_development_jumpPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_collectiblePL",
+        "script_level.level_keys": [
+          "game_development_collectiblePL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_scoreboardPL",
+        "script_level.level_keys": [
+          "game_development_scoreboardPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_freeplayPL",
+        "script_level.level_keys": [
+          "game_development_freeplayPL"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GamejamPL",
+        "script_level.level_keys": [
+          "GamejamPL"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_theme_generatorpl",
+        "script_level.level_keys": [
+          "game_jam_theme_generatorpl"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_create_planPL",
+        "script_level.level_keys": [
+          "game_jam_create_planPL"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_playPL",
+        "script_level.level_keys": [
+          "game_jam_playPL"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
       }
     },
     {

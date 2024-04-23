@@ -631,6 +631,49 @@ describe('RubricContainer', () => {
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
   });
 
+  it('shows request too large error message for status 1003', async () => {
+    const returnedJson = {
+      attempted: true,
+      lastAttemptEvaluated: false,
+      status: 1003,
+    };
+    const returnedJsonAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+    };
+
+    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
+    );
+
+    // Perform fetches
+    await wait();
+
+    wrapper.update();
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
+    expect(wrapper.text()).to.include(
+      i18n.aiEvaluationStatus_request_too_large()
+    );
+    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+  });
+
   // react testing library
   it('moves rubric container when user clicks and drags component', async () => {
     stubFetchEvalStatusForUser(successJson);
@@ -665,6 +708,49 @@ describe('RubricContainer', () => {
     const newPosition = element.style.transform;
 
     expect(newPosition).to.not.equal(initialPosition);
+  });
+
+  it('sends event when window is dragged', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: true});
+
+    const {getByTestId} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    const element = getByTestId('draggable-test-id');
+
+    // simulate dragging
+    fireEvent.mouseDown(element, {clientX: 0, clientY: 0});
+    fireEvent.mouseMove(element, {clientX: 100, clientY: 100});
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_WINDOW_MOVE_START,
+      {window_x_start: 0, window_y_start: 0}
+    );
+
+    fireEvent.mouseUp(element);
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_WINDOW_MOVE_END,
+      {window_x_end: 0, window_y_end: 0}
+    );
+    sendEventSpy.restore();
   });
 
   it('renders a RubricSubmitFooter if student data for an evaluation level', () => {
@@ -710,32 +796,30 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
   });
 
-  // it('displays product tour when getTourStatus is false', async function () {
-  //   const clock = sinon.useFakeTimers();
-  //   stubFetchEvalStatusForUser(readyJson);
-  //   stubFetchEvalStatusForAll(readyJsonAll);
-  //   stubFetchAiEvaluations(mockAiEvaluations);
-  //   stubFetchTeacherEvaluations(noEvals);
-  //   stubFetchTourStatus({seen: null});
+  it('displays product tour when getTourStatus is false', async function () {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
 
-  //   const {queryByText} = render(
-  //     <Provider store={store}>
-  //       <RubricContainer
-  //         rubric={defaultRubric}
-  //         studentLevelInfo={defaultStudentInfo}
-  //         teacherHasEnabledAi={true}
-  //         currentLevelName={'test_level'}
-  //         reportingData={{}}
-  //         open
-  //       />
-  //     </Provider>
-  //   );
+    const {queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
 
-  //   await wait();
-  //   clock.tick(5000);
-  //   expect(queryByText('Getting Started with AI Teaching Assistant')).to.exist;
-  //   clock.restore();
-  // });
+    await wait();
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .exist;
+  });
 
   it('does not display product tour when getTourStatus returns true', async function () {
     stubFetchEvalStatusForUser(readyJson);
@@ -759,25 +843,24 @@ describe('RubricContainer', () => {
 
     await wait();
 
-    expect(queryByText('Getting Started with AI Teaching Assistant')).to.not
-      .exist;
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .not.exist;
   });
 
-  it('sends event when window is dragged', async function () {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+  it('does not display product tour when on non-assessment level', async function () {
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
     stubFetchTeacherEvaluations(noEvals);
-    stubFetchTourStatus({seen: true});
+    stubFetchTourStatus({seen: null});
 
-    const {getByTestId} = render(
+    const {queryByText} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
-          currentLevelName={'test_level'}
+          currentLevelName={'non-assessment-level'}
           reportingData={{}}
           open
         />
@@ -786,23 +869,7 @@ describe('RubricContainer', () => {
 
     await wait();
 
-    const element = getByTestId('draggable-test-id');
-
-    // simulate dragging
-    fireEvent.mouseDown(element, {clientX: 0, clientY: 0});
-    fireEvent.mouseMove(element, {clientX: 100, clientY: 100});
-
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_WINDOW_MOVE_START,
-      {window_x_start: 0, window_y_start: 0}
-    );
-
-    fireEvent.mouseUp(element);
-
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_WINDOW_MOVE_END,
-      {window_x_end: 0, window_y_end: 0}
-    );
-    sendEventSpy.restore();
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .not.exist;
   });
 });

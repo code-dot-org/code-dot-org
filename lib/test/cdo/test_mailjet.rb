@@ -122,4 +122,31 @@ class MailJetTest < Minitest::Test
     Mailgun::Address.any_instance.expects(:validate).returns({'result' => 'do_not_send'})
     refute MailJet.valid_email?('test@email.com')
   end
+
+  def test_deletes_contact
+    email = 'fake.email@test.xx'
+
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:id).returns(123)
+    Mailjet::Contact.expects(:find).with(email).returns(mock_contact)
+
+    mock_http_request = mock('Net::HTTP::Delete')
+    Net::HTTP::Delete.expects(:new).with(URI.parse("https://api.mailjet.com/v4/contacts/#{mock_contact.id}")).returns(mock_http_request)
+    mock_http_request.expects(:basic_auth).once
+
+    Net::HTTP.any_instance.expects(:request).with(mock_http_request)
+
+    MailJet.delete_contact(email)
+  end
+
+  def test_deletes_handles_nonexistent_contact
+    email = 'fake.email@test.xx'
+
+    Mailjet::Contact.expects(:find).with(email).returns(nil)
+
+    Net::HTTP::Delete.expects(:new).never
+    Net::HTTP.any_instance.expects(:request).never
+
+    MailJet.delete_contact(email)
+  end
 end
