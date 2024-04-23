@@ -2053,6 +2053,10 @@
     teachers_guide:
       heading: "Get the teacher's guide to Music Lab"
       desc: "Grab your copy of the teacher's guide to Music Lab to learn how to get started, explore activity ideas, and get answers to frequently asked questions."
+    tutorial:
+      heading: "Teach Music Lab in your Classroom"
+      desc: "Use our Music Lab tutorial to unleash your students' musical creativity, combining the joy of music with the principles of coding."
+      button: "Start tutorial"
     additional_resources:
       heading: "Additional resources"
       catalog:
