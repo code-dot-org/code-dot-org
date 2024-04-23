@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import {Provider} from 'react-redux';
 import {
   getStore,
@@ -8,6 +8,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
@@ -32,7 +33,7 @@ describe('LandingPage', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({isRtl});
+    registerReducers({isRtl, teacherSections});
     store = getStore();
   });
 
@@ -116,6 +117,18 @@ describe('LandingPage', () => {
     ).to.equal(2);
   });
 
+  it('page shows joined PL sections table', () => {
+    renderDefault();
+
+    screen.getByText(i18n.joinedProfessionalLearningSectionsHomepageTitle());
+  });
+
+  it('page shows enrolled workshops table', () => {
+    renderDefault();
+
+    screen.getByTestId('enrolled-workshops-loader');
+  });
+
   it('page shows no tabs for teacher with no relevant permissions', () => {
     renderDefault();
 
@@ -124,13 +137,13 @@ describe('LandingPage', () => {
       1
     );
     expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabInstructorCenter())).to.be.null;
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
     expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
       .null;
-    expect(screen.queryByText(i18n.plLandingTabInstructors())).to.be.null;
   });
 
-  it('page shows Professional Learning and Facilitator Center tabs for facilitator', () => {
+  it('page only shows Professional Learning and Facilitator Center tabs for facilitator', () => {
     renderDefault({
       userPermissions: ['facilitator'],
     });
@@ -138,14 +151,29 @@ describe('LandingPage', () => {
     expect(screen.queryAllByText(i18n.professionalLearning())).to.have.lengthOf(
       2
     );
-    expect(screen.getByText(i18n.plLandingTabFacilitatorCenter()));
-    expect(screen.queryByText(i18n.plLandingTabInstructors())).to.be.null;
+    screen.getByText(i18n.plLandingTabFacilitatorCenter());
+    expect(screen.queryByText(i18n.plLandingTabInstructorCenter())).to.be.null;
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
     expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
       .null;
   });
 
-  it('page shows Professional Learning and Instructors tabs for universal instructors', () => {
+  it('page only shows Professional Learning and Facilitator Center tabs for users with facilitator and (universal instructor or peer reviewer) permissions', () => {
+    renderDefault({
+      userPermissions: ['facilitator', 'universal_instructor', 'plc_reviewer'],
+    });
+
+    expect(screen.queryAllByText(i18n.professionalLearning())).to.have.lengthOf(
+      2
+    );
+    screen.getByText(i18n.plLandingTabFacilitatorCenter());
+    expect(screen.queryByText(i18n.plLandingTabInstructorCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
+      .null;
+  });
+
+  it('page only shows Professional Learning and Instructor Center tabs for universal instructors', () => {
     renderDefault({
       userPermissions: ['universal_instructor'],
     });
@@ -154,13 +182,13 @@ describe('LandingPage', () => {
       2
     );
     expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).to.be.null;
-    expect(screen.getByText(i18n.plLandingTabInstructors()));
+    screen.getByText(i18n.plLandingTabInstructorCenter());
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
     expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
       .null;
   });
 
-  it('page shows Professional Learning and Instructors tabs for peer reviewers', () => {
+  it('page only shows Professional Learning and Instructor Center tabs for peer reviewers', () => {
     renderDefault({
       userPermissions: ['plc_reviewer'],
     });
@@ -169,17 +197,96 @@ describe('LandingPage', () => {
       2
     );
     expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).to.be.null;
-    expect(screen.getByText(i18n.plLandingTabInstructors()));
+    screen.getByText(i18n.plLandingTabInstructorCenter());
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
     expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
       .null;
   });
 
-  it('page always shows Join Section area', () => {
-    renderDefault();
+  it('page only shows Professional Learning and Regional Partner Center tabs for program managers', () => {
+    renderDefault({
+      userPermissions: ['program_manager'],
+    });
 
-    expect(
-      screen.getByText(i18n.joinedProfessionalLearningSectionsHomepageTitle())
+    expect(screen.queryAllByText(i18n.professionalLearning())).to.have.lengthOf(
+      2
     );
+    expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabInstructorCenter())).to.be.null;
+    screen.getByText(i18n.plLandingTabRPCenter());
+    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).to.be
+      .null;
+  });
+
+  it('page only shows Professional Learning and Workshop Organizer Center tabs for workshop organizers', () => {
+    renderDefault({
+      userPermissions: ['workshop_organizer'],
+    });
+
+    expect(screen.queryAllByText(i18n.professionalLearning())).to.have.lengthOf(
+      2
+    );
+    expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabInstructorCenter())).to.be.null;
+    expect(screen.queryByText(i18n.plLandingTabRPCenter())).to.be.null;
+    screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter());
+  });
+
+  it('page shows expected sections in Facilitator Center tab', () => {
+    renderDefault({
+      userPermissions: ['facilitator'],
+    });
+    fireEvent.click(screen.getByText(i18n.plLandingTabFacilitatorCenter()));
+
+    // Last workshop survey banner
+    screen.getByText(i18n.plLandingSubheading());
+
+    // Instructor Professional Learning sections table
+    screen.getByText(i18n.plSectionsInstructorTitle());
+
+    // Enrolled workshops table
+    screen.getByTestId('enrolled-workshops-loader');
+  });
+
+  it('page shows expected sections in Instructor Center tab (for universal instructor)', () => {
+    renderDefault({
+      userPermissions: ['universal_instructor'],
+    });
+    fireEvent.click(screen.getByText(i18n.plLandingTabInstructorCenter()));
+
+    // Instructor Professional Learning sections table
+    screen.getByText(i18n.plSectionsInstructorTitle());
+  });
+
+  it('page shows expected sections in Instructor Center tab (for peer reviewer)', () => {
+    renderDefault({
+      userPermissions: ['plc_reviewer'],
+    });
+    fireEvent.click(screen.getByText(i18n.plLandingTabInstructorCenter()));
+
+    // Instructor Professional Learning sections table
+    screen.getByText(i18n.plSectionsInstructorTitle());
+  });
+
+  it('page shows expected sections in Regional Partner Center tab', () => {
+    renderDefault({
+      userPermissions: ['program_manager'],
+    });
+    fireEvent.click(screen.getByText(i18n.plLandingTabRPCenter()));
+
+    // Enrolled workshops table
+    screen.getByTestId('enrolled-workshops-loader');
+  });
+
+  it('page shows expected sections in Workshop Organizer Center tab', () => {
+    renderDefault({
+      userPermissions: ['workshop_organizer'],
+    });
+    fireEvent.click(
+      screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter())
+    );
+
+    // Enrolled workshops table
+    screen.getByTestId('enrolled-workshops-loader');
   });
 });
