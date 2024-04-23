@@ -139,6 +139,8 @@ class AichatControllerTest < ActionController::TestCase
       as: :json
     assert_equal session.id, json_response['sessionId']
 
+    # Check that we added two new messages to the stored messages
+    # (the new user and assistant messages).
     session.reload
     assert_equal 4, JSON.parse(session.messages).length
   end
@@ -157,7 +159,7 @@ class AichatControllerTest < ActionController::TestCase
           {role: 'assistant', content: @assistant_response}.stringify_keys
         ],
         aichatModelCustomizations: @default_model_customizations.merge(
-          retrievalContexts: ["test", "mismatched retrieval context list"],
+          retrievalContexts: ["test", "mismatched retrieval context item"],
         ),
       }
     ),

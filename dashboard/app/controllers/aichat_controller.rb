@@ -6,7 +6,7 @@ class AichatController < ApplicationController
   # newMessage: string
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
-  # aichatContext: {currentLevelId: string; scriptId: number; channelId: string;}
+  # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless AichatHelper.can_request_aichat_chat_completion?
@@ -30,6 +30,7 @@ class AichatController < ApplicationController
       role: "assistant",
       content: latest_assistant_response,
     }
+
     session_id = log_chat_session(assistant_message)
     return render(status: :ok, json: assistant_message.merge({sessionId: session_id}).to_json)
   end
@@ -80,10 +81,7 @@ class AichatController < ApplicationController
   end
 
   private def update_session(session, assistant_message)
-    session.messages = params[:storedMessages].push(
-      {role: 'user', content: params[:newMessage]},
-      assistant_message
-    ).to_json
+    session.messages = updated_message_list(assistant_message).to_json
     session.save
 
     session.id
@@ -99,10 +97,15 @@ class AichatController < ApplicationController
       script_id: context[:scriptId],
       project_id: project_id,
       model_customizations: params[:aichatModelCustomizations].to_json,
-      messages: params[:storedMessages].push(
-        {role: 'user', content: params[:newMessage]},
-        assistant_message
-      ).to_json
+      messages: updated_message_list(assistant_message).to_json
     ).id
+  end
+
+  private def updated_message_list(assistant_message)
+    [
+      *params[:storedMessages],
+      {role: 'user', content: params[:newMessage]},
+      assistant_message
+    ]
   end
 end
