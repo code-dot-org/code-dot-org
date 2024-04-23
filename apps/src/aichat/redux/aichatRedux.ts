@@ -17,7 +17,6 @@ import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
-import {initialChatMessages} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
@@ -78,10 +77,11 @@ export interface AichatState {
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
   viewMode: ViewMode;
+  currentSessionId?: number;
 }
 
 const initialState: AichatState = {
-  chatMessages: initialChatMessages,
+  chatMessages: [],
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
@@ -205,6 +205,20 @@ const saveAiCustomization = async (
     savedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
+
+  if (
+    changedProperties.some(property =>
+      [
+        'selectedModelId',
+        'temperature',
+        'systemPrompt',
+        'retrievalContexts',
+      ].includes(property)
+    )
+  ) {
+    dispatch(setNewChatSession());
+  }
+
   changedProperties.forEach(property => {
     dispatch(
       addChatMessage({
@@ -226,8 +240,12 @@ export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
-    const aiCustomizations = state.aichat.savedAiCustomizations;
-    const storedMessages = state.aichat.chatMessages;
+    const {
+      savedAiCustomizations: aiCustomizations,
+      chatMessages: storedMessages,
+      currentSessionId,
+    } = state.aichat;
+
     const aichatContext: AichatContext = {
       userId: state.currentUser.userId,
       currentLevelId: state.progress.currentLevelId,
@@ -241,16 +259,33 @@ export const submitChatContents = createAsyncThunk(
       status: Status.OK,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
+      sessionId: currentSessionId,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
+
     const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
-      storedMessages,
+      currentSessionId
+        ? storedMessages.filter(
+            message => message.sessionId === currentSessionId
+          )
+        : [],
       aiCustomizations,
       aichatContext
     );
+    console.log('chatApiResponse', chatApiResponse);
+
+    // TODO: error handling
+    thunkAPI.dispatch(setChatSessionId(chatApiResponse.sessionId));
+    thunkAPI.dispatch(
+      updateChatMessageSession({
+        id: newMessage.id,
+        sessionId: chatApiResponse.sessionId,
+      })
+    );
+
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
         id: getNewMessageId(),
@@ -260,6 +295,7 @@ export const submitChatContents = createAsyncThunk(
         // The accuracy of this timestamp is debatable since it's not when our backend
         // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
+        sessionId: chatApiResponse.sessionId,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     } else {
@@ -277,16 +313,36 @@ const aichatSlice = createSlice({
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
       state.chatMessages.push(action.payload);
     },
-    removeChatMessage: (state, action: PayloadAction<number>) => {
-      const updatedMessages = state.chatMessages.filter(
-        message => message.id !== action.payload
+    removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
+      const updatedMessages = [...state.chatMessages];
+      const messageToRemovePosition = updatedMessages.findIndex(
+        message => message.id === action.payload
       );
-      if (updatedMessages.length !== state.chatMessages.length) {
-        state.chatMessages = updatedMessages;
+
+      // Only allow removing individual messages that are model updates,
+      // as we want to retain user and bot message history
+      // when requesting model responses within a chat session.
+      // If we want to clear all history
+      // and start a new session, see clearChatMessages.
+      if (
+        messageToRemovePosition < 0 ||
+        updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE
+      ) {
+        return;
       }
+      updatedMessages.splice(messageToRemovePosition, 1);
+
+      state.chatMessages = updatedMessages;
     },
     clearChatMessages: state => {
-      state.chatMessages = initialChatMessages;
+      state.chatMessages = [];
+      state.currentSessionId = undefined;
+    },
+    setNewChatSession: state => {
+      state.currentSessionId = undefined;
+    },
+    setChatSessionId: (state, action: PayloadAction<number>) => {
+      state.currentSessionId = action.payload;
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
@@ -302,6 +358,16 @@ const aichatSlice = createSlice({
       const chatMessage = state.chatMessages.find(msg => msg.id === id);
       if (chatMessage) {
         chatMessage.status = status;
+      }
+    },
+    updateChatMessageSession: (
+      state,
+      action: PayloadAction<{id: number; sessionId: number}>
+    ) => {
+      const {id, sessionId} = action.payload;
+      const chatMessage = state.chatMessages.find(msg => msg.id === id);
+      if (chatMessage) {
+        chatMessage.sessionId = sessionId;
       }
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
@@ -423,11 +489,14 @@ export const selectHasFilledOutModelCard = createSelector(
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
-  removeChatMessage,
+  removeModelUpdateMessage,
+  setNewChatSession,
+  setChatSessionId,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
+  updateChatMessageSession,
   setViewMode,
   setStartingAiCustomizations,
   setSavedAiCustomizations,

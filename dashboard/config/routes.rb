@@ -611,6 +611,11 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resource :feedback, controller: :feedback, only: %i[create show]
+        resources :sections, only: [] do
+          collection do
+            patch :bulk_update_owners
+          end
+        end
       end
     end
 
