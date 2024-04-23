@@ -1,6 +1,6 @@
-// Find all tests in the project and run them. The tests need to be in the top-level folder,
-// or in a folder with an __init__.py file (the file can be empty). An init file signifies that
-// the folder is a module.
+// Find all tests in the project and run them. The test files need to start with 'test'
+// and end with '.py'. The tests be in the top-level folder or in a folder with an
+// __init__.py file (the file can be empty). An init file signifies that the folder is a module.
 // In order to restrict to find tests in a specific folder or file we can parameterize this
 // and update the start_dir and/or pattern.
 export const FIND_AND_RUN_ALL_TESTS = `
