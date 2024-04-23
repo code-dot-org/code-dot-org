@@ -145,7 +145,7 @@ DefaultCheckboxDropdown.args = {
 
 export const DisabledCheckboxDropdown = SingleTemplate.bind({});
 DisabledCheckboxDropdown.args = {
-  name: 'default-dropdown',
+  name: 'disabled-dropdown',
   allOptions: [
     {value: 'option-1', label: 'Option 1'},
     {value: 'option-2', label: 'Option 2'},
@@ -160,9 +160,26 @@ DisabledCheckboxDropdown.args = {
   size: 'm',
 };
 
+// export const ReadOnlyCheckboxDropdown = SingleTemplate.bind({});
+// ReadOnlyCheckboxDropdown.args = {
+//   name: 'readOnly-dropdown',
+//   allOptions: [
+//     {value: 'option-1', label: 'Option 1'},
+//     {value: 'option-2', label: 'Option 2'},
+//   ],
+//   checkedOptions: ['option-1'],
+//   labelText: 'Disabled Dropdown',
+//   onChange: args => null,
+//   onSelectAll: args => null,
+//   onClearAll: args => null,
+//   disabled: true,
+//   color: dropdownColors.black,
+//   size: 'm',
+// };
+
 export const WithDisabledOptionCheckboxDropdown = SingleTemplate.bind({});
 WithDisabledOptionCheckboxDropdown.args = {
-  name: 'default-dropdown',
+  name: 'withDisabledOption-dropdown',
   allOptions: [
     {value: 'option-1', label: 'Option 1', isOptionDisabled: true},
     {value: 'option-2', label: 'Option 2'},
