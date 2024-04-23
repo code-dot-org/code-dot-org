@@ -1,14 +1,16 @@
-.left-main {
+.file-browser {
   background-color: #3f444b;
+
+  grid-area: file-browser;
 }
-.left-main ul {
+.file-browser ul {
   padding-left: 10px;
 }
 
-.left-main ul li {
+.file-browser ul li {
 }
 
-.left-main ul li span.label {
+.file-browser ul li span.label {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -16,7 +18,7 @@
   background-color: #3f444b;
   color: white;
 }
-.left-main ul li span.title {
+.file-browser ul li span.title {
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
@@ -29,7 +31,7 @@
   padding: 5px;
 }
 
-.left-main ul li span.button-bar {
+.file-browser ul li span.button-bar {
   display: flex;
   justify-content: flex-end;
   cursor: pointer;

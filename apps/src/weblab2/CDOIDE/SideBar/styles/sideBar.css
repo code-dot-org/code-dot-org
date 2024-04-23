@@ -1,9 +1,11 @@
-.nav-bar {
+.side-bar {
   display: flex;
   justify-content: flex-start;
   background-color: black;
   color: white;
   width: 100%;
+
+  grid-area: side-bar;
 }
 
 .nav-bar div {

@@ -1,8 +1,10 @@
 import {CDOIDEContextProvider} from '@cdoide/cdoIDEContext';
-import {CenterPane} from '@cdoide/CenterPane';
+import DisabledEditor from '@cdoide/Editor/DisabledEditor';
+import {FileBrowser} from '@cdoide/FileBrowser';
 import {useSynchronizedProject} from '@cdoide/hooks';
-import {LeftPane} from '@cdoide/LeftPane';
-import {RightPane} from '@cdoide/RightPane';
+import {Instructions} from '@cdoide/Instructions';
+import {PreviewContainer} from '@cdoide/PreviewContainer';
+import {SideBar} from '@cdoide/SideBar';
 import {
   ProjectType,
   ConfigType,
@@ -11,6 +13,10 @@ import {
 } from '@cdoide/types';
 import React from 'react';
 import './styles/cdoIDE.css';
+
+// import {Search} from '@cdoide/Search';
+// import {FileTabs} from '@cdoide/FileTabs';
+// const Editor = () => <div style={{gridArea: 'editor'}}>This is me editor</div>;
 
 type CDOIDEProps = {
   project: ProjectType;
@@ -44,6 +50,12 @@ const paneWidths: (PaneKey & {width: string})[] = [
 
 const paneHeights: (PaneKey & {height: string})[] = [];
 
+const layout = `
+  "instructions editor preview-container"
+  "instructions editor preview-container"
+  "file-browser editor preview-container"
+`;
+
 export const CDOIDE = React.memo(
   ({project, config, setProject, setConfig}: CDOIDEProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
@@ -66,6 +78,9 @@ export const CDOIDE = React.memo(
         innerGridCols.push(pair.width);
       }
     });
+
+    const EditorComponent = config.EditorComponent || DisabledEditor;
+
     return (
       <CDOIDEContextProvider
         value={{
@@ -76,28 +91,15 @@ export const CDOIDE = React.memo(
           ...projectUtilities,
         }}
       >
-        <div
-          className="cdo-ide-outer"
-          style={{gridTemplateRows: outerGridRows.join(' ')}}
-        >
-          <div
-            className="cdo-ide-inner"
-            style={{
-              gridTemplateColumns: innerGridCols.join(' '),
-            }}
-          >
-            {getConfigVisibilityVal('showLeftNav', config) && (
-              <div className="cdo-ide-area">
-                <LeftPane />
-              </div>
-            )}
-            {getConfigVisibilityVal('showEditor', config) && (
-              <div className="cdo-ide-area">
-                <CenterPane />
-              </div>
-            )}
-            {getConfigVisibilityVal('showPreview', config) && <RightPane />}
-          </div>
+        <div className="cdoide-container" style={{gridTemplateAreas: layout}}>
+          <FileBrowser />
+          <SideBar />
+          <EditorComponent />
+          <PreviewContainer />
+          <Instructions />
+          {/*<Search />
+
+          <FileTabs />*/}
         </div>
       </CDOIDEContextProvider>
     );

@@ -4,7 +4,7 @@ import {previewFileType} from '@cdoide/utils';
 import React, {useState, useEffect} from 'react';
 
 import {HTMLPreview} from './HTMLPreview';
-import './styles/rightPane.css';
+import './styles/previewContainer.css';
 
 const fileTypeMap: {
   [key: string]: PreviewComponent;
@@ -29,7 +29,7 @@ const getPreviewComponent = (
   }
 };
 
-export const RightPane = () => {
+export const PreviewContainer = () => {
   const {
     project: {files},
     config: {previewFileTypes, PreviewComponents},
@@ -63,7 +63,7 @@ export const RightPane = () => {
   const PreviewComponent = getPreviewComponent(previewFile, PreviewComponents);
 
   return (
-    <div className="right-pane">
+    <div className="preview-container">
       <select
         onChange={e => {
           const newFile = Object.values(files).find(

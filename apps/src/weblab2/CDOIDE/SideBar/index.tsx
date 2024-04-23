@@ -1,14 +1,19 @@
 import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import React from 'react';
+import React, {useState} from 'react';
 
-import './styles/navBar.css';
+import './styles/sideBar.css';
 
-type NavBarProps = {
+/* type NavBarProps = {
   setActivePane: (newActivePane: string) => void;
   activePane: string;
-};
+}; */
 
-export const NavBar = React.memo(({setActivePane, activePane}: NavBarProps) => {
+export const SideBar = React.memo(() => {
+  const {config} = useCDOIDEContext();
+  const [activePane, setActivePane] = useState<string>(
+    config.activeLeftNav || config.leftNav[0].component
+  );
+
   const {
     config: {leftNav},
   } = useCDOIDEContext();
@@ -16,7 +21,7 @@ export const NavBar = React.memo(({setActivePane, activePane}: NavBarProps) => {
     return null;
   }
   return (
-    <div className="nav-bar">
+    <div className="side-bar">
       {leftNav.map(nav => (
         <div
           key={nav.icon}

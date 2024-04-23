@@ -1,4 +1,4 @@
-.files-nav-bar {
+.file-tabs {
   display: flex;
   justify-content: flex-start;
   gap: 6px;
@@ -6,6 +6,8 @@
   height: 100%;
   overflow-x: scroll;
   max-width: 100%;
+
+  grid-area: file-tabs;
 }
 
 .file-tab {
