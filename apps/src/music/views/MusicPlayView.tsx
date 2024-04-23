@@ -9,6 +9,7 @@ import codeOrgLogo from '@cdo/static/code-dot-org-white-logo.svg';
 import moduleStyles from './music-play-view.module.scss';
 
 import musicI18n from '../locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 interface MusicPlayViewProps {
   isPlaying: boolean;
@@ -18,11 +19,11 @@ interface MusicPlayViewProps {
 }
 
 const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
-  isPlaying,
   onPlay,
   onStop,
-  projectName,
 }) => {
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const projectName = useAppSelector(state => state.lab.channel?.name);
   const shareData = useMemo(
     () => ({
       title: projectName,
