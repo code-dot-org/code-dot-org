@@ -6,8 +6,8 @@ import {getStore} from '../../redux';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import cookies from 'js-cookie';
 import * as color from '../../util/color';
-import headerImage from './images/lockout_penguin.png';
-import headerThanksImage from './images/dancing_penguin.png';
+import headerImage from '@cdo/static/common_images/penguin/yelling.png';
+import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
 import {hashString} from '../../utils';
 
 /**

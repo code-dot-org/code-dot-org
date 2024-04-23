@@ -250,6 +250,13 @@ const EVENTS = {
 
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
+
+  // CPA
+  CPA_PARENT_EMAIL_MODAL_SHOWN: 'cpa_parent_email_modal_shown',
+  CPA_PARENT_EMAIL_MODAL_SUBMITTED: 'cpa_parent_email_modal_submitted',
+  CPA_PARENT_EMAIL_MODAL_UPDATED: 'cpa_parent_email_modal_updated',
+  CPA_PARENT_EMAIL_MODAL_RESEND: 'cpa_parent_email_modal_resend',
+  CPA_PARENT_EMAIL_MODAL_CLOSED: 'cpa_parent_email_modal_closed',
 };
 
 const EVENT_GROUP_NAMES = {

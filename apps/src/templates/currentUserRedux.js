@@ -94,6 +94,7 @@ const initialState = {
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
   over21: false,
+  childAccountComplianceState: null,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -186,6 +187,7 @@ export default function currentUser(state = initialState, action) {
       show_progress_table_v2,
       progress_table_v2_closed_beta,
       is_lti,
+      child_account_compliance_state,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -213,6 +215,7 @@ export default function currentUser(state = initialState, action) {
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,
+      childAccountComplianceState: child_account_compliance_state,
     };
   }
 

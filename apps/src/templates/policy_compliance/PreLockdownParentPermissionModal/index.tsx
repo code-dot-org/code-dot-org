@@ -1,0 +1,359 @@
+import React, {useState, useEffect, useReducer, useMemo} from 'react';
+import PropTypes from 'prop-types';
+import moment from 'moment';
+// eslint-disable-next-line no-restricted-imports
+import {
+  Col,
+  ControlLabel,
+  FormGroup,
+  FormControl,
+  Modal,
+  Fade,
+} from 'react-bootstrap';
+
+import {getStore} from '@cdo/apps/redux';
+import usePrevious from '@cdo/apps/util/usePrevious';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import i18n, {currentLocale} from '@cdo/locale';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Skeleton from '@cdo/apps/util/loadingSkeleton';
+import Button from '@cdo/apps/templates/Button';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import newRequestImg from '@cdo/static/common_images/penguin/yelling.png';
+import updateRequestImg from '@cdo/static/common_images/penguin/dancing.png';
+
+import parentPermissionRequestReducer, {
+  REQUEST_PARENT_PERMISSION_SUCCESS,
+  fetchPendingPermissionRequest,
+  requestParentPermission,
+} from '@cdo/apps/redux/cap/parentPermissionRequestReducer';
+
+import './index.scss';
+
+interface PreLockdownParentPermissionModalProps {
+  lockoutDate: Date;
+}
+
+const PreLockdownParentPermissionModal: React.FC<
+  PreLockdownParentPermissionModalProps
+> = ({lockoutDate}) => {
+  const currentUser = getStore().getState().currentUser;
+  const initConsentStatus = currentUser.childAccountComplianceState;
+  const [show, setShow] = useState(true);
+  const [requestError, setRequestError] = useState('');
+  const [parentEmail, setParentEmail] = useState('');
+  const formattedLockoutDate = useMemo(
+    () => moment(lockoutDate).lang(currentLocale).format('ll'),
+    [lockoutDate]
+  );
+
+  const [
+    {action, isLoading, error, parentPermissionRequest},
+    parentPermissionRequestDispatch,
+  ] = useReducer(parentPermissionRequestReducer, {isLoading: false});
+  const prevParentPermissionRequest = usePrevious(parentPermissionRequest);
+
+  const reportEvent = (eventName: string, payload: object = {}) => {
+    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.STATSIG);
+  };
+
+  useEffect(() => {
+    setParentEmail(parentPermissionRequest?.parent_email || '');
+  }, [parentPermissionRequest]);
+
+  useEffect(() => {
+    setRequestError(error || '');
+  }, [error]);
+
+  useEffect(() => {
+    if (show) {
+      fetchPendingPermissionRequest(parentPermissionRequestDispatch);
+      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_SHOWN, {
+        consentStatus: initConsentStatus,
+      });
+    } else {
+      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_CLOSED, {
+        consentStatus: initConsentStatus,
+      });
+    }
+  }, [show, initConsentStatus]);
+
+  /**
+   * This useEffect hook is responsible for reporting successful parent permission request events:
+   *
+   * Submission event if a previous permission request does not exist.
+   * Resend event if a previous permission request exists and the parent email has not changed.
+   * Update event if a previous permission request exists and the parent email has changed.
+   */
+  useEffect(() => {
+    if (action !== REQUEST_PARENT_PERMISSION_SUCCESS) return;
+    if (!parentPermissionRequest) return;
+
+    const eventPayload = {
+      consentStatusBefore:
+        prevParentPermissionRequest?.consent_status || initConsentStatus,
+      consentStatusAfter: parentPermissionRequest.consent_status,
+    };
+
+    if (!prevParentPermissionRequest) {
+      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_SUBMITTED, eventPayload);
+    } else if (
+      prevParentPermissionRequest.parent_email ===
+      parentPermissionRequest.parent_email
+    ) {
+      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_RESEND, eventPayload);
+    } else {
+      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_UPDATED, eventPayload);
+    }
+  }, [
+    action,
+    initConsentStatus,
+    prevParentPermissionRequest,
+    parentPermissionRequest,
+  ]);
+
+  const handleParentEmailChange: React.FormEventHandler<
+    FormControl
+  > = event => {
+    requestError && setRequestError('');
+    setParentEmail((event.target as HTMLInputElement).value);
+  };
+
+  const requestPermission = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    requestParentPermission(parentPermissionRequestDispatch, parentEmail);
+  };
+
+  const permissionRequestStatusBlock = () => {
+    let status;
+
+    if (isLoading) {
+      status = <Skeleton />;
+    } else if (requestError) {
+      status = <span className="status error">{requestError}</span>;
+    } else if (parentPermissionRequest) {
+      status = (
+        <span className="status pending">
+          {i18n.sessionLockoutStatusPending()}
+        </span>
+      );
+    } else {
+      status = (
+        <span className="status not-submitted">
+          {i18n.sessionLockoutStatusNotSubmitted()}
+        </span>
+      );
+    }
+
+    return (
+      <FormGroup
+        id="parent-permission-request-status"
+        className="row"
+        bsSize="large"
+      >
+        <Col xs={4}>
+          <ControlLabel className="title">
+            {i18n.sessionLockoutParentStatusField()}
+          </ControlLabel>
+        </Col>
+
+        <Col xs={8}>
+          <FormControl.Static>{status}</FormControl.Static>
+        </Col>
+      </FormGroup>
+    );
+  };
+
+  const lastEmailSentAtLabel = () => {
+    if (!parentPermissionRequest?.requested_at) return;
+
+    const lastEmailSentAt = isLoading ? (
+      <Skeleton />
+    ) : (
+      i18n.policyCompliance_preLockdown_parentPermissionModal_lastEmailSentAt({
+        sendingTime: moment(parentPermissionRequest.requested_at)
+          .lang(currentLocale)
+          .format('lll'),
+      })
+    );
+
+    return <span id="last-email-sent-at">{lastEmailSentAt}</span>;
+  };
+
+  const parentEmailField = () => {
+    return (
+      <FormGroup
+        id="parent-permission-request-email"
+        className="row"
+        bsSize="large"
+      >
+        <Col xs={4}>
+          <ControlLabel htmlFor="parentEmail">
+            {i18n.sessionLockoutParentEmailField()}
+          </ControlLabel>
+        </Col>
+
+        <Col xs={8}>
+          <FormControl
+            id="parentEmail"
+            type="email"
+            value={parentEmail}
+            onChange={handleParentEmailChange}
+            required
+          />
+
+          {lastEmailSentAtLabel()}
+        </Col>
+      </FormGroup>
+    );
+  };
+
+  const submitButton = (text: string) => {
+    return (
+      <Button
+        className="primary"
+        type="submit"
+        text={text}
+        pendingText={text}
+        isPending={isLoading}
+        disabled={!!requestError}
+        onClick={() => {}}
+      />
+    );
+  };
+
+  const newPermissionRequestForm = () => {
+    return (
+      <form onSubmit={requestPermission}>
+        <Modal.Header
+          closeButton
+          closeLabel={i18n.closeDialog()}
+          onHide={() => setShow(false)}
+        >
+          <img src={newRequestImg} alt="" aria-hidden="true" />
+
+          <Modal.Title
+            componentClass="h2"
+            id="pre-lockdown-parent-permission-modal-title"
+          >
+            {i18n.policyCompliance_preLockdown_parentPermissionModal_newRequestForm_title()}
+          </Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <SafeMarkdown
+            markdown={i18n.policyCompliance_preLockdown_parentPermissionModal_newRequestForm_text1(
+              {lockoutDate: formattedLockoutDate}
+            )}
+          />
+
+          <p>
+            {i18n.policyCompliance_preLockdown_parentPermissionModal_newRequestForm_text2()}
+          </p>
+
+          <div id="parent-permission-request">
+            {permissionRequestStatusBlock()}
+
+            {parentEmailField()}
+          </div>
+        </Modal.Body>
+
+        <Modal.Footer>{submitButton(i18n.sessionLockoutSubmit())}</Modal.Footer>
+      </form>
+    );
+  };
+
+  const updatePermissionRequestForm = () => {
+    const isResend =
+      parentEmail.toLowerCase() ===
+      parentPermissionRequest?.parent_email?.toLowerCase();
+    const submitText = isResend
+      ? i18n.sessionLockoutResendEmail()
+      : i18n.sessionLockoutUpdateSubmit();
+
+    return (
+      <form onSubmit={requestPermission}>
+        <Modal.Header
+          closeButton
+          closeLabel={i18n.closeDialog()}
+          onHide={() => setShow(false)}
+        >
+          <img src={updateRequestImg} alt="" aria-hidden="true" />
+
+          <Modal.Title
+            componentClass="h2"
+            id="pre-lockdown-parent-permission-modal-title"
+          >
+            {i18n.policyCompliance_preLockdown_parentPermissionModal_updateRequestForm_title()}
+          </Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>
+            {i18n.policyCompliance_preLockdown_parentPermissionModal_updateRequestForm_text1(
+              {lockoutDate: formattedLockoutDate}
+            )}
+          </p>
+
+          <div id="parent-permission-request">
+            {permissionRequestStatusBlock()}
+
+            {parentEmailField()}
+
+            <SafeMarkdown
+              markdown={i18n.policyCompliance_preLockdown_parentPermissionModal_updateRequestForm_text2(
+                {profileUrl: studio('/users/edit')}
+              )}
+            />
+          </div>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button
+            className="secondary"
+            type="button"
+            text={i18n.closeDialog()}
+            color={Button.ButtonColor.gray}
+            onClick={() => setShow(false)}
+          />
+
+          {submitButton(submitText)}
+        </Modal.Footer>
+      </form>
+    );
+  };
+
+  const permissionRequestForm = () => {
+    if (parentPermissionRequest === undefined && isLoading) {
+      return <Skeleton height={500} />;
+    } else if (parentPermissionRequest) {
+      return updatePermissionRequestForm();
+    } else {
+      return newPermissionRequestForm();
+    }
+  };
+
+  return (
+    <>
+      <Fade in={show} mountOnEnter unmountOnExit>
+        <div className="modal-backdrop" />
+      </Fade>
+
+      <Fade in={show} mountOnEnter unmountOnExit>
+        <Modal.Dialog
+          id="pre-lockdown-parental-permission-modal"
+          aria-labelledby="pre-lockdown-parent-permission-modal-title"
+        >
+          {permissionRequestForm()}
+        </Modal.Dialog>
+      </Fade>
+    </>
+  );
+};
+
+PreLockdownParentPermissionModal.propTypes = {
+  lockoutDate: PropTypes.instanceOf(Date).isRequired,
+};
+
+export default PreLockdownParentPermissionModal;
