@@ -16,6 +16,13 @@ const getFunctionBounds = (
     right = 0,
     bottom = 0;
 
+  if (
+    orderedFunction.playbackEvents.length === 0 &&
+    orderedFunction.calledFunctionIds.length === 0
+  ) {
+    return null;
+  }
+
   for (const playbackEvent of orderedFunction.playbackEvents) {
     left = Math.min(left, playbackEvent.when);
     right = Math.max(right, playbackEvent.when + playbackEvent.length);
@@ -39,10 +46,12 @@ const getFunctionBounds = (
         uniqueSounds,
         orderedFunctions
       );
-      left = Math.min(left, bounds.left);
-      right = Math.max(right, bounds.right);
-      top = Math.min(top, bounds.top);
-      bottom = Math.max(bottom, bounds.bottom);
+      if (bounds) {
+        left = Math.min(left, bounds.left);
+        right = Math.max(right, bounds.right);
+        top = Math.min(top, bounds.top);
+        bottom = Math.max(bottom, bounds.bottom);
+      }
     }
   }
 
@@ -110,24 +119,34 @@ const TimelineSimple2Events: React.FunctionComponent<
   return (
     <div id="timeline-events">
       <div id="timeline-events-function-extents">
-        {uniqueFunctionExtentsArray.map((uniqueFunction, index) => (
-          <div
-            key={index}
-            style={{
-              position: 'absolute',
-              backgroundColor:
-                index === 0 ? 'rgba(0 0 0 / 0)' : 'rgba(255 255 255 / 0.12)',
-              borderRadius: 8,
-              left: paddingOffset + (uniqueFunction.left - 1) * barWidth,
-              width: (uniqueFunction.right - uniqueFunction.left) * barWidth,
-              top: 32 + uniqueFunction.top * eventHeight,
-              height:
-                (uniqueFunction.bottom - uniqueFunction.top) * eventHeight - 3,
-            }}
-          >
-            &nbsp;
-          </div>
-        ))}
+        {uniqueFunctionExtentsArray
+          .filter(uniqueFunction => uniqueFunction)
+          .map(
+            (uniqueFunction, index) =>
+              uniqueFunction && (
+                <div
+                  key={index}
+                  style={{
+                    position: 'absolute',
+                    backgroundColor:
+                      index === 0
+                        ? 'rgba(0 0 0 / 0)'
+                        : 'rgba(255 255 255 / 0.12)',
+                    borderRadius: 8,
+                    left: paddingOffset + (uniqueFunction.left - 1) * barWidth,
+                    width:
+                      (uniqueFunction.right - uniqueFunction.left) * barWidth,
+                    top: 32 + uniqueFunction.top * eventHeight,
+                    height:
+                      (uniqueFunction.bottom - uniqueFunction.top) *
+                        eventHeight -
+                      3,
+                  }}
+                >
+                  &nbsp;
+                </div>
+              )
+          )}
       </div>
       <div id="timeline-events-sound-events">
         {soundEvents.map((eventData, index) => (
