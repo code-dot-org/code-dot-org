@@ -1619,6 +1619,8 @@
   "loginTypeWordButton": "Use word logins",
   "loginTypeWordDescription": "You will create accounts for your students. Students will log in with a secret pair of words.",
   "low": "low",
+  "ltiIframeDescription": "Please click the button below to continue to Code.org",
+  "ltiIframeCallToAction": "Continue to Code.org",
   "ltiSectionSyncButtonDisabledAltText": "Roster sync is disabled. To re-enable, go to your account settings.",
   "ltiSectionSyncDialogCourseLabel": "Course",
   "ltiSectionSyncDialogDescription": "New to Code.org? A [section]({aboutSectionsUrl}) is used to manage your classroom and assign curricula. We've identified the following sections & students associated with your course.\n\nNot seeing all of your sections? Make sure you are enrolled as a teacher in each section you want to sync. Learn more [about syncing here]({aboutSyncingUrl}).",

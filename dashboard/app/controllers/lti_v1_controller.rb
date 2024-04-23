@@ -403,8 +403,17 @@ class LtiV1Controller < ApplicationController
     @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.map do |key, value|
       {platform: key, name: value[:name]}
     end
+    auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
 
-    render template: Policies::Lti.early_access? ? 'lti/v1/integrations/early_access' : 'lti/v1/integrations'
+    query_params = {
+      id_token: params[:id_token],
+      state: params[:state],
+      new_tab: "true",
+    }
+
+    @auth_url = "#{auth_url_base}?#{query_params.to_query}"
+
+    render template: Policies::Lti.early_access? ? 'lti/v1/integrations/early_access' : 'lti/v1/iframe', layout: false
   end
 
   # POST /lti/v1/upgrade_account
