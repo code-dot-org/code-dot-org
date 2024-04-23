@@ -1,7 +1,8 @@
-import {OverlayTrigger, Tooltip} from 'react-bootstrap-2';
-import React from 'react';
-import style from '@cdo/apps/templates/curriculumCatalog/curriculum_catalog_card.module.scss';
 import PropTypes from 'prop-types';
+import React from 'react';
+import {OverlayTrigger, Tooltip} from 'react-bootstrap-2';
+
+import style from '@cdo/apps/templates/curriculumCatalog/curriculum_catalog_card.module.scss';
 
 // The arrowProps passed down in ReactBootstrap use styles that
 // conflict with the custom styles that we want, so they
