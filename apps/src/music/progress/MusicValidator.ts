@@ -76,33 +76,27 @@ export default class MusicValidator extends Validator {
     // Check for up to a certain number of sounds playing simultaneously.
     // Note that if, for example, 3 sounds are playing, then we'll consider
     // that 2 sounds and 1 sound have also been played together.
-    const maxNumberSoundsTogether = 3;
     for (
-      let numberSounds = maxNumberSoundsTogether;
+      let numberSounds = currentNumberSounds;
       numberSounds >= 1;
       numberSounds--
     ) {
-      if (currentNumberSounds >= numberSounds) {
-        this.conditionsChecker.addSatisfiedCondition({
-          name: MusicConditions.PLAYED_SOUNDS_TOGETHER.name,
-          value: currentNumberSounds,
-        });
-      }
+      this.conditionsChecker.addSatisfiedCondition({
+        name: MusicConditions.PLAYED_SOUNDS_TOGETHER.name,
+        value: numberSounds,
+      });
     }
 
     // Check for up to a certain number of sounds played.
-    const maxNumberSounds = 3;
     for (
-      let numberSounds = maxNumberSounds;
+      let numberSounds = playedNumberSounds;
       numberSounds >= 1;
       numberSounds--
     ) {
-      if (playedNumberSounds >= numberSounds) {
-        this.conditionsChecker.addSatisfiedCondition({
-          name: MusicConditions.PLAYED_SOUNDS.name,
-          value: playedNumberSounds,
-        });
-      }
+      this.conditionsChecker.addSatisfiedCondition({
+        name: MusicConditions.PLAYED_SOUNDS.name,
+        value: numberSounds,
+      });
     }
   }
 
