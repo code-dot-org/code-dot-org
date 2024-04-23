@@ -13,6 +13,7 @@ class AichatController < ApplicationController
     unless has_required_params?
       return render status: :bad_request, json: {}
     end
+    puts "Received chat completion request with params: #{params}"
 
     # Check for PII / Profanity
     # Copied from ai_tutor_interactions_controller.rb - not sure if filtering is working.
@@ -24,8 +25,11 @@ class AichatController < ApplicationController
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
     input_json = AichatHelper.format_inputs_for_sagemaker_request(params[:aichatModelCustomizations], params[:storedMessages], params[:newMessage])
+    puts "Sending input to SageMaker: #{input_json}"
     sagemaker_response = AichatHelper.request_sagemaker_chat_completion(input_json)
+    puts "sagemaker_response: #{sagemaker_response}"
     latest_assistant_response = AichatHelper.get_sagemaker_assistant_response(sagemaker_response)
+    puts "latest_assistant_response: #{latest_assistant_response}"
     payload = {
       role: "assistant",
       content: latest_assistant_response
