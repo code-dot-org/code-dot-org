@@ -60,7 +60,6 @@ const PythonConsole: React.FunctionComponent = () => {
         <Button type={'button'} text="Clear output" onClick={clearOutput} />
       </div>
       <div>
-        Output:
         {codeOutput.map((outputLine, index) => {
           if (outputLine.type === 'img') {
             return (
