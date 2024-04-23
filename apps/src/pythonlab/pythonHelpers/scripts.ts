@@ -5,9 +5,8 @@
 // and update the start_dir and/or pattern.
 export const FIND_AND_RUN_ALL_TESTS = `
 import unittest
-import src.test1
 
-def discover_and_run(start_dir = '.', pattern = '*.py'):
+def discover_and_run(start_dir = '.', pattern = 'test*.py'):
     loader = unittest.TestLoader()
     test_suite = loader.discover(start_dir, pattern)
     runner = unittest.TextTestRunner(verbosity=2)
