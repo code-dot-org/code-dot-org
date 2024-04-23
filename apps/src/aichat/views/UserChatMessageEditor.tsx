@@ -38,7 +38,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
           isIconOnly
           icon={{iconName: 'paper-plane'}}
           onClick={handleSubmit}
-          disabled={isWaitingForChatResponse}
+          disabled={isWaitingForChatResponse || !userMessage}
         />
       </div>
     </div>

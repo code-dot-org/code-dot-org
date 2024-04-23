@@ -34,12 +34,13 @@ const SetupCustomization: React.FunctionComponent = () => {
   );
 
   /** defaults to all models if not set in levelProperties */
-  const availableModelIds = useAppSelector(
-    state =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.aichatSettings?.availableModelIds
-  );
-  const availableModels = availableModelIds
+  const availableModelIds =
+    useAppSelector(
+      state =>
+        (state.lab.levelProperties as AichatLevelProperties | undefined)
+          ?.aichatSettings?.availableModelIds
+    ) || [];
+  const availableModels = availableModelIds.length
     ? modelDescriptions.filter(model => availableModelIds.includes(model.id))
     : modelDescriptions;
 

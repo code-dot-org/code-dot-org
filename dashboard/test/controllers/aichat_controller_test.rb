@@ -11,8 +11,8 @@ class AichatControllerTest < ActionController::TestCase
     @genai_pilot_student = create(:follower, section: pilot_section).student_user
     @common_params = {
       storedMessages: [{role: "user", content: "this is a test!"}],
-      aichatParameters: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
-      chatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
+      aichatModelCustomizations: {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"},
+      aichatContext: {userId: 1, currentLevelId: "test", scriptId: 1, channelId: "test"}
     }
     valid_message = "hello"
     pii_violation_message = "my email is l.lovepadel@sports.edu"
@@ -20,6 +20,12 @@ class AichatControllerTest < ActionController::TestCase
     @valid_params = @common_params.merge(newMessage: valid_message)
     @pii_violation_params = @common_params.merge(newMessage: pii_violation_message)
     @profanity_violation_params = @common_params.merge(newMessage: profanity_violation_message)
+    @missing_stored_messages_params = @common_params.except(:storedMessages)
+  end
+
+  setup do
+    AichatHelper.stubs(:request_sagemaker_chat_completion).returns({status: 200, json: {body: {}}})
+    AichatHelper.stubs(:get_sagemaker_assistant_response).returns("This is an assistant response from Sagemaker")
   end
 
   test_user_gets_response_for :chat_completion,
@@ -52,6 +58,12 @@ class AichatControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test 'Bad request if storedMessages param is not included' do
+    sign_in(@genai_pilot_teacher)
+    post :chat_completion, params: @missing_stored_messages_params
+    assert_response :bad_request
+  end
+
   # Post request with a profane messages param returns a failure
   test 'returns failure when chat message contains profanity' do
     sign_in(@genai_pilot_student)
@@ -68,5 +80,17 @@ class AichatControllerTest < ActionController::TestCase
     post :chat_completion, params: @pii_violation_params
     assert_equal json_response["status"], ShareFiltering::FailureType::EMAIL
     assert_equal json_response["flagged_content"], "l.lovepadel@sports.edu"
+  end
+
+  test 'can_request_aichat_chat_completion returns false when DCDO flag is set to `false`' do
+    DCDO.stubs(:get).with('aichat_chat_completion', true).returns(false)
+    assert_equal false, AichatHelper.can_request_aichat_chat_completion?
+  end
+
+  test 'returns forbidden when DCDO flag is set to `false`' do
+    AichatHelper.stubs(:can_request_aichat_chat_completion?).returns(false)
+    sign_in(@genai_pilot_teacher)
+    post :chat_completion, params: @valid_params
+    assert_response :forbidden
   end
 end
