@@ -88,10 +88,12 @@ $(document).ready(() => {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
+    let ncesId = document.getElementById('uitest-school-dropdown').value;
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
         'user type': user_type,
+        'nces Id': ncesId,
       },
       PLATFORMS.BOTH
     );
