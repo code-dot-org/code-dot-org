@@ -5,7 +5,6 @@ import {useSynchronizedProject} from '@cdoide/hooks';
 import {Instructions} from '@cdoide/Instructions';
 import {PreviewContainer} from '@cdoide/PreviewContainer';
 import {SideBar} from '@cdoide/SideBar';
-import {useSynchronizedProject} from '@cdoide/hooks';
 import {
   ProjectType,
   ConfigType,
