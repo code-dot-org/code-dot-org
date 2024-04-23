@@ -150,7 +150,7 @@ export default class ProjectManager {
   /**
    * Try to force save with the last sourcesToSave, if it exists.
    * This is used to flush out any remaining enqueued saves.
-   * @returns  a promise that resolves to a Response. If the save is successful, the response
+   * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
   async flushSave() {
@@ -317,6 +317,14 @@ export default class ProjectManager {
       // Even if only the source changed, we still update the channel to modify the last
       // updated time.
       this.channelToSave ||= this.lastChannel;
+
+      if (this.sourcesToSave?.labConfig) {
+        this.channelToSave = {
+          ...this.channelToSave,
+          labConfig: this.sourcesToSave?.labConfig,
+        };
+      }
+
       let channelResponse;
       try {
         channelResponse = await this.channelsStore.save(this.channelToSave);

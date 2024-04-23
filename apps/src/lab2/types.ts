@@ -18,6 +18,8 @@ export interface Channel {
   publishedAt: string | null;
   createdAt: string;
   updatedAt: string;
+  // Optional lab-specific configuration for this project
+  labConfig?: {[key: string]: object};
 }
 
 export type DefaultChannel = Pick<Channel, 'name'>;
