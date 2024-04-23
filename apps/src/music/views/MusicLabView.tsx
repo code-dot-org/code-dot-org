@@ -160,7 +160,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             </PanelContainer>
           </div>
 
-          <div id="timeline-area" className={moduleStyles.timelineArea}>
+          <div
+            dir="ltr"
+            id="timeline-area"
+            className={moduleStyles.timelineArea}
+          >
             <PanelContainer
               id="timeline-panel"
               headerContent={musicI18n.panelHeaderTimeline()}

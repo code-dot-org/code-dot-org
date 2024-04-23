@@ -26,8 +26,7 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
 
   useEffect(() => {
     if (!disabled) {
-      setSelectedSchoolNcesId(SELECT_A_SCHOOL);
-      const searchUrl = `/dashboardapi/v1/schoolzipsearch/${zip}`;
+      const searchUrl = `/dashboardapi/v1/schoolsearch/${zip}/40`;
       fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
         .then(response => (response.ok ? response.json() : []))
         .then(json => {
