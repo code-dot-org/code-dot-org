@@ -1,10 +1,15 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState, useRef} from 'react';
 import styles from './panels.module.scss';
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import classNames from 'classnames';
 import {commonI18n} from '../types/locale';
 import FontAwesome from '../templates/FontAwesome';
 import {Panel} from './types';
+import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
+import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
+import {Renderers} from '@cdo/apps/blockly/constants';
+import {getToolbox} from '../music/blockly/toolbox';
+import {setUpBlocklyForMusicLab} from '../music/blockly/setup';
 
 // Leave a margin to the left and the right of the panels, to the edges
 // of the screen.
@@ -17,6 +22,48 @@ const verticalMargin = 50;
 // We need room below the panels content for the children passed in.  This area
 // can contain things like a Continue button.
 const childrenAreaHeight = 70;
+
+const BlocklyArea: React.FunctionComponent = ({}) => {
+  const workspace = useRef<WorkspaceSvg | null>(null);
+  const container = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    container.current = document.getElementById('panels-blockly-div');
+
+    if (container.current) {
+      setUpBlocklyForMusicLab();
+
+      workspace.current = Blockly.inject(container.current, {
+        toolbox: getToolbox(),
+        grid: {spacing: 20, length: 0, colour: '#444', snap: true},
+        theme: CdoDarkTheme,
+        renderer: Renderers.DEFAULT,
+        // noFunctionBlockFrame is only used by our custom Blockly wrapper, so we cast this object to BlocklyOptions below
+        noFunctionBlockFrame: true,
+        zoom: {
+          startScale: 2,
+        },
+        readOnly: true,
+      } as BlocklyOptions);
+
+      container.current.style.width = '100%';
+      container.current.style.height = '100%';
+      Blockly.svgResize(workspace.current as WorkspaceSvg);
+
+      const code =
+        '{\"variables\":[{\"name\":\"currentTime\",\"id\":\"vxF-5=_*xrh)pMYSa]XT\"},{\"name\":\"i\",\"id\":\"?yN]AS|,cV7Im{UG-$4k\"}],\"blocks\":{\"languageVersion\":0,\"blocks\":[{\"type\":\"when_run_simple2\",\"id\":\"when-run-block\",\"x\":34,\"y\":34,\"deletable\":false,\"movable\":false,\"next\":{\"block\":{\"type\":\"play_sound_at_current_location_simple2\",\"id\":\"play_sound_at_current_location_simple2\",\"fields\":{\"sound\":\"electro/drum_beat_club\"}}}}]}}';
+
+      // Ensure that we have an extensible object for Blockly.
+      const codeCopy = JSON.parse(code);
+
+      Blockly.serialization.workspaces.load(codeCopy, workspace.current);
+    }
+  }, []);
+
+  return (
+    <div id="panels-blockly-div" style={{width: '100%', height: '100%'}}></div>
+  );
+};
 
 interface PanelsProps {
   panels: Panel[];
@@ -113,6 +160,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             backgroundImage: `url("${panel.imageUrl}")`,
           }}
         />
+        <BlocklyArea />
         <EnhancedSafeMarkdown
           markdown={panel.text}
           className={classNames(

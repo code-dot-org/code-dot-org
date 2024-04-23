@@ -15,8 +15,8 @@ const FIELD_PADDING = 2;
  */
 class FieldSounds extends GoogleBlockly.Field {
   constructor(options) {
-    const currentValue =
-      options.currentValue || options.getLibrary().getDefaultSound();
+    const currentValue = 'leads/lucky_guitar';
+    //options.currentValue || options.getLibrary().getDefaultSound();
 
     super(currentValue);
 
@@ -171,9 +171,8 @@ class FieldSounds extends GoogleBlockly.Field {
       height: 20,
     });
 
-    const soundType = this.options
-      .getLibrary()
-      .getSoundForId(this.getValue())?.type;
+    const soundType =
+      this.options.getLibrary()?.getSoundForId(this.getValue())?.type || 'beat';
 
     if (soundType === 'vocal') {
       textElement.setAttribute('font-style', 'italic');
@@ -250,7 +249,9 @@ class FieldSounds extends GoogleBlockly.Field {
   }
 
   getText() {
-    return this.options.getLibrary().getSoundForId(this.getValue())?.name || '';
+    return (
+      this.options.getLibrary()?.getSoundForId(this.getValue())?.name || 'drum'
+    );
   }
 
   updateSize_() {
