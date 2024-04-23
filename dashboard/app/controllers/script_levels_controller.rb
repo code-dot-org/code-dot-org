@@ -66,7 +66,9 @@ class ScriptLevelsController < ApplicationController
     @script = ScriptLevelsController.get_script(request)
     @script_level = ScriptLevelsController.get_script_level(@script, params)
 
-    if @script.is_deprecated || @script_level.level.deprecated?
+    # Check if the script or current level is deprecated
+    level_is_deprecated = @script_level&.level_deprecated?
+    if @script.is_deprecated || level_is_deprecated
       return render 'errors/deprecated_course'
     end
 
