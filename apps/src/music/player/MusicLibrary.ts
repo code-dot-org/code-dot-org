@@ -1,7 +1,7 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
 import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
-import appConfig, {getBaseAssetUrl} from '../appConfig';
+import {getBaseAssetUrl} from '../appConfig';
 
 export default class MusicLibrary {
   private static instance: MusicLibrary;
@@ -183,10 +183,7 @@ export default class MusicLibrary {
 
   getRestrictedPacks(): SoundFolder[] {
     return this.getAllowedSounds().filter(
-      folder =>
-        folder.restricted &&
-        (appConfig.getValue('show-pack-dialog-buttons') !== 'true' ||
-          folder.id !== DEFAULT_PACK)
+      folder => folder.restricted && folder.id !== DEFAULT_PACK
     );
   }
 

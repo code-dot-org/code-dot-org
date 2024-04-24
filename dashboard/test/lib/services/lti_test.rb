@@ -373,6 +373,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert_equal user.user_type, User::TYPE_TEACHER
     assert_equal "test-teacher@code.org", user.email
     assert_nil user.family_name
+    assert_equal user.lti_roster_sync_enabled, true
   end
 
   test 'should create a new teacher even if an account already exists with their email' do

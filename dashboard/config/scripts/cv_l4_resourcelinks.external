@@ -1,15 +1,15 @@
 name 'CV_L4_ResourceLinks'
-title 'Sample Web Pages'
-display_name 'Sample Personal Web Pages'
-description 'Look through these sample web pages and decide what purpose they serve their creators and visitors.'
+title ''
+display_name ''
+description ''
 markdown <<MARKDOWN
 # Sample Dataset
 
-Click [here](https://docs.google.com/spreadsheets/d/1yMLeTKjwj6_TmLK_amHL-RhAQ-rZGq6CGTWyB9e0QBs/copy) to make a copy of the dataset. 
+#### Click [here](https://docs.google.com/spreadsheets/d/1yMLeTKjwj6_TmLK_amHL-RhAQ-rZGq6CGTWyB9e0QBs/copy) to make a copy of the dataset. 
 
 # Data Visualizations Activity Guide
 
-Click [here](https://docs.google.com/document/d/11zhUUIl-tURa8QR8djG8OYSZJQq8yCMlCgi52Nlb9ao/copy) to make a copy of the activity guide.
+#### Click [here](https://docs.google.com/document/d/11zhUUIl-tURa8QR8djG8OYSZJQq8yCMlCgi52Nlb9ao/copy) to make a copy of the activity guide.
 
 
 MARKDOWN
