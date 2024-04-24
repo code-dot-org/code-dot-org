@@ -9,7 +9,7 @@ import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {reload} from '@cdo/apps/utils';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {levelWithProgress} from '@cdo/apps/code-studio/components/progress/teacherPanel/types';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import style from './rubrics.module.scss';
 import {
   BodyThreeText,

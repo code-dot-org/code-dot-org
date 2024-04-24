@@ -189,7 +189,7 @@ Resources:
           # SageMaker Invoke Endpoint access
           - Effect: Allow
             Action: 'sagemaker:InvokeEndpoint'
-            Resource: !Sub “arn:aws:sagemaker:${AWS::Region}:${AWS::AccountId}:endpoint/gen-ai-*”
+            Resource: !Sub "arn:aws:sagemaker:${AWS::Region}:${AWS::AccountId}:endpoint/gen-ai-*"
 
   # ---------------------------------------------
   # Frontend Servers

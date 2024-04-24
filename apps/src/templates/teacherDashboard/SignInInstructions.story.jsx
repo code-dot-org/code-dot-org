@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 import SignInInstructions from './SignInInstructions';
 

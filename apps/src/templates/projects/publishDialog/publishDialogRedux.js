@@ -1,5 +1,5 @@
 import {channels as channelsApi} from '../../../clientApi';
-import {AllPublishableProjectTypes} from '../../../util/sharedConstants';
+import {AllPublishableProjectTypes} from '@cdo/generated-scripts/sharedConstants';
 
 // Action types
 
