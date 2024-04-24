@@ -34,6 +34,8 @@ export interface IconDropdownProps {
   size: ComponentSizeXSToL;
   /** IconDropdown disabled state */
   disabled?: boolean;
+  /** IconDropdown readOnly state */
+  readOnly?: boolean;
   /** IconDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
@@ -55,6 +57,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   selectedOption = {},
   onChange,
   disabled = false,
+  readOnly = false,
   color = dropdownColors.black,
   size = 'm',
 }) => {
@@ -75,6 +78,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       labelText={labelText}
       labelType={labelType}
       disabled={disabled}
+      readOnly={readOnly}
       color={color}
       icon={selectedOption?.icon}
       size={size}
