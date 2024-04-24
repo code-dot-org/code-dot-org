@@ -27,6 +27,7 @@ const SetupCustomization: React.FunctionComponent = () => {
   const [isShowingModelDialog, setIsShowingModelDialog] =
     useState<boolean>(false);
 
+  // we default selectedModelId because it was added later and may not exist in all levels
   const {
     temperature,
     systemPrompt,
@@ -36,7 +37,7 @@ const SetupCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const savedModelIds = useAppSelector(
+  const availableModelIds = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
         ?.aichatSettings?.availableModelIds
@@ -46,14 +47,14 @@ const SetupCustomization: React.FunctionComponent = () => {
   // may be using outdated model ids. Fall back to first modelDescription.
   const availableModels = useMemo(() => {
     let models: ModelDescription[] = [];
-    if (savedModelIds && savedModelIds.length) {
+    if (availableModelIds && availableModelIds.length) {
       // Exclude any models that we don't have descriptions for
       models = modelDescriptions.filter(model =>
-        savedModelIds.includes(model.id)
+        availableModelIds.includes(model.id)
       );
     }
     return models.length ? models : [modelDescriptions[0]];
-  }, [savedModelIds]);
+  }, [availableModelIds]);
 
   const chosenModelId = useMemo(() => {
     return (
