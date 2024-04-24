@@ -5,7 +5,7 @@ import styles from './PackDialog.module.scss';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setPackId} from '../redux/musicRedux';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
-import appConfig, {getBaseAssetUrl} from '../appConfig';
+import {getBaseAssetUrl} from '../appConfig';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MusicPlayer from '../player/MusicPlayer';
@@ -122,27 +122,19 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
 
-  const showButtons = appConfig.getValue('show-pack-dialog-buttons') === 'true';
-
   const handleSelectFolder = useCallback(
     (folder: SoundFolder) => {
       if (!library) {
         return;
       }
 
-      if (showButtons) {
-        if (selectedFolderId === folder.id) {
-          setSelectedFolderId(null);
-        } else {
-          setSelectedFolderId(folder.id);
-        }
+      if (selectedFolderId === folder.id) {
+        setSelectedFolderId(null);
       } else {
-        // Immediately select the pack.
-        dispatch(setPackId(folder.id));
-        library.setCurrentPackId(folder.id);
+        setSelectedFolderId(folder.id);
       }
     },
-    [selectedFolderId, dispatch, library, showButtons]
+    [selectedFolderId, library]
   );
 
   const setPackToDefault = useCallback(() => {
@@ -228,29 +220,27 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
             })}
           </div>
 
-          {showButtons && (
-            <div className={styles.buttonContainer}>
-              <button
-                onClick={setPackToDefault}
-                className={styles.skip}
-                type="button"
-              >
-                Skip
-              </button>
-              <button
-                onClick={setPackToSelectedFolder}
-                className={classNames(
-                  styles.continue,
-                  styles.button,
-                  !selectedFolderId && styles.continueDisabled
-                )}
-                disabled={!selectedFolderId}
-                type="button"
-              >
-                Continue
-              </button>
-            </div>
-          )}
+          <div className={styles.buttonContainer}>
+            <button
+              onClick={setPackToDefault}
+              className={styles.skip}
+              type="button"
+            >
+              Skip
+            </button>
+            <button
+              onClick={setPackToSelectedFolder}
+              className={classNames(
+                styles.continue,
+                styles.button,
+                !selectedFolderId && styles.continueDisabled
+              )}
+              disabled={!selectedFolderId}
+              type="button"
+            >
+              Continue
+            </button>
+          </div>
         </div>
       </div>
     </FocusLock>
