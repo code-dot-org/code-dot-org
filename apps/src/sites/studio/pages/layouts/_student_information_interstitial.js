@@ -1,4 +1,4 @@
-import $, {getScript} from 'jquery';
+import $ from 'jquery';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
