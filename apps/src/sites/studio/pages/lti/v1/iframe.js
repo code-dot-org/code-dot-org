@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const scriptData = getScriptData('json');
   const {logoUrl, authUrl} = scriptData;
 
+  // If running in popup, pass through to the auth url
+  if (window.location === window.parent.location) {
+    window.location.replace(authUrl);
+    return;
+  }
+
   ReactDOM.render(
     <LtiIframePage logoUrl={logoUrl} authUrl={authUrl} />,
     mountPoint
