@@ -1,5 +1,5 @@
 import Typography from '@cdo/apps/componentLibrary/typography';
-import React from 'react';
+import React, {useState} from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import i18n from '@cdo/locale';
 import styles from './styles.module.scss';
@@ -10,8 +10,12 @@ interface LtiIframePageProps {
 }
 
 export const LtiIframePage = ({logoUrl, authUrl}: LtiIframePageProps) => {
+  const [callToActionDisabled, setCallToActionDisabled] =
+    useState<boolean>(false);
+
   const handleCallToAction = () => {
     window.open(authUrl, '_blank');
+    setCallToActionDisabled(true);
   };
 
   return (
@@ -23,10 +27,13 @@ export const LtiIframePage = ({logoUrl, authUrl}: LtiIframePageProps) => {
           visualAppearance="body-one"
           className={styles.description}
         >
-          {i18n.ltiIframeDescription()}
+          {callToActionDisabled
+            ? i18n.ltiIframeRefresh()
+            : i18n.ltiIframeDescription()}
         </Typography>
         <div>
           <Button
+            disabled={callToActionDisabled}
             className={styles.callToAction}
             onClick={handleCallToAction}
             size="l"
