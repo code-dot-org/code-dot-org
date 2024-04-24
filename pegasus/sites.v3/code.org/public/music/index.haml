@@ -1,0 +1,29 @@
+---
+title: Music Lab
+theme: responsive_full_width
+---
+
+- button_url = "#"
+- button_string = hoc_s("music_lab.button.try_music_lab")
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/music-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-4
+    .text-wrapper
+      %p.body-one.white
+        ICON STRING HERE
+      %h1.white
+        =hoc_s("music_lab.banner.heading")
+      %p.body-one.white
+        =hoc_s("music_lab.banner.desc")
+      %a.link-button.white{href: button_url}
+        =button_string
+      .afe.flex-container.align-items-baseline.wrap
+        %p.add-margin-top.no-margin-bottom.white
+          =hoc_s("music_lab.in_partnerhip_with")
+        %figure
+          %img{src: "/images/avatars/amazon_future_engineer_light.png", alt: hoc_s("music_lab.amazon_future_engineer")}
+    %figure
+      %img{src: "/images/music_lab/music-lab-banner-graphic.png", alt: "", style: "width: 100%"}
