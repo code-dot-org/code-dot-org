@@ -5212,7 +5212,7 @@ class UserTest < ActiveSupport::TestCase
       }
     }
     partial_teacher = build :teacher
-    partial_teacher.authentication_options = [AuthenticationOption.new(user: partial_teacher, email: 'old_email@email.com')]
+    partial_teacher.authentication_options = [AuthenticationOption.new(user: partial_teacher, email: 'old_email@email.com', credential_type: AuthenticationOption::EMAIL)]
     PartialRegistration.persist_attributes session, partial_teacher
     fully_registered_teacher = User.new_with_session(params, session)
     fully_registered_teacher.save
