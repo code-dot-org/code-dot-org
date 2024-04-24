@@ -6,6 +6,9 @@ import {ProjectFile} from '../types';
 interface PartialAppOptions {
   channel: string;
   levelId: number;
+  share: boolean;
+  iframeEmbed: boolean;
+  iframeEmbedAppAndCode: boolean;
 }
 
 /**
@@ -24,6 +27,21 @@ export function getStandaloneProjectId(): string | undefined {
 export function getServerLevelId(): number | undefined {
   const appOptions = getScriptData('appoptions') as PartialAppOptions;
   return appOptions.levelId;
+}
+
+export function isShareView(): boolean | undefined {
+  const appOptions = getScriptData('appoptions') as PartialAppOptions;
+  return appOptions.share;
+}
+
+export function isIframeEmbed(): boolean | undefined {
+  const appOptions = getScriptData('appoptions') as PartialAppOptions;
+  return appOptions.iframeEmbed;
+}
+
+export function isIframeEmbedAppAndCode(): boolean | undefined {
+  const appOptions = getScriptData('appoptions') as PartialAppOptions;
+  return appOptions.iframeEmbedAppAndCode;
 }
 
 /**

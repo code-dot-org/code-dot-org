@@ -319,7 +319,7 @@ module LevelsHelper
 
     @app_options =
       if @level.uses_lab2?
-        {channel: view_options[:channel], levelId: @level.id}
+        lab2_options
       elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
@@ -730,6 +730,12 @@ module LevelsHelper
     end
 
     app_options
+  end
+
+  def lab2_options
+    app_options = {channel: view_options[:channel], level_id: @level.id}
+    app_options.merge! level_view_options(@level.id)
+    app_options.camelize_keys
   end
 
   def build_copyright_strings
