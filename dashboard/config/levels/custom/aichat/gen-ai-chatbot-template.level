@@ -39,6 +39,6 @@
       "hidePresentationPanel": true
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T17:54:52.747+00:00\",\"changed\":[\"cloned from \\\"AI Chat Test Level\\\"\"],\"cloned_from\":\"AI Chat Test Level\"},{\"changed_at\":\"2024-04-17 17:55:33 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T17:54:52.747+00:00\",\"changed\":[\"cloned from \\\"AI Chat Test Level\\\"\"],\"cloned_from\":\"AI Chat Test Level\"},{\"changed_at\":\"2024-04-17 17:55:33 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-22 22:43:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-22 22:45:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-22 22:50:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

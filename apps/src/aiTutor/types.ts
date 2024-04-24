@@ -11,7 +11,7 @@ export type AITutorInteractionStatusValue = string;
 export {AITutorInteractionStatus, AITutorTypes, PII};
 
 export interface ChatCompletionMessage {
-  id?: number;
+  id: number;
   role: Role;
   chatMessageText: string;
   status: string;

@@ -611,6 +611,11 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resource :feedback, controller: :feedback, only: %i[create show]
+        resources :sections, only: [] do
+          collection do
+            patch :bulk_update_owners
+          end
+        end
       end
     end
 
@@ -1127,9 +1132,7 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
 
-    resources :ai_tutor_interactions, only: [:create, :index] do
-      resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
-    end
+    resources :ai_tutor_interactions, only: [:create, :index]
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
