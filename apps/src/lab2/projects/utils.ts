@@ -36,7 +36,7 @@ export function getServerLevelId(): number | undefined {
  * Returns if the lab should presented in a share/play-only view,
  * if present in App Options. Only used in standalone project levels.
  */
-export function isShareView(): boolean | undefined {
+export function getIsShareView(): boolean | undefined {
   const appOptions = getScriptData('appoptions') as PartialAppOptions;
   return appOptions.share;
 }

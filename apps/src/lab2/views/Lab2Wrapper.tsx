@@ -22,7 +22,7 @@ import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
 import Lab2Registry from '../Lab2Registry';
 import Loading from './Loading';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {getServerLevelId, isShareView} from '../projects/utils';
+import {getServerLevelId, getIsShareView} from '../projects/utils';
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 
 export interface Lab2WrapperProps {
@@ -52,12 +52,12 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   }, [currentLevelId, serverLevelId, dispatch]);
 
   // Store whether we are in share view in redux, from App Options.
-  const shareView = isShareView();
+  const isShareView = getIsShareView();
   useEffect(() => {
-    if (shareView !== undefined) {
-      dispatch(setIsShareView(shareView));
+    if (isShareView !== undefined) {
+      dispatch(setIsShareView(isShareView));
     }
-  }, [shareView, dispatch]);
+  }, [isShareView, dispatch]);
 
   return (
     <ErrorBoundary
