@@ -253,6 +253,7 @@ tr-TR:
   class_submission_out_of_school_summer_camp: Yaz kampı
   classicmaze_name: Klasik Labirent
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
+  code_org_logo_alt: Code.org Ana Sayfası
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   codea_beyond_gradelevel: Lise +
   codea_beyond_longdescription: Koduna iPad için Java Oyunlar ve simülasyonlar oluşturmayı
@@ -1147,6 +1148,7 @@ tr-TR:
   header_about_us: Hakkımızda
   header_course_catalog: Kurs Kataloğu
   header_courses: kurslar
+  header_districts: İlçeler
   header_documentation: Belgeler
   header_educate_beyond: Code.org ötesi
   header_educate_community: Çevrimiçi Topluluk
@@ -1165,6 +1167,7 @@ tr-TR:
   header_incubator: İnkübatör
   header_learn: Öğren
   header_legal: Gizlilik & Hukuk
+  header_legal_cookie_notice: Çerez Bildirimi
   header_legal_privacy: Gizlilik Politikası
   header_legal_tos: Hizmet Şartları
   header_my_dashboard: Kontrol panelim
@@ -1172,6 +1175,7 @@ tr-TR:
   header_project_gallery: Projeler
   header_report_abuse: Hata Rapor Et
   header_report_bug: Hata bildir
+  header_schools: Okullar
   header_screen_reader_hamburger: 'Menü
 
     '
@@ -2495,6 +2499,7 @@ tr-TR:
   user_header_applab: Uygulama Laboratuvarı
   user_header_artist: 'Sanatçı '
   user_header_create: 'Oluştur '
+  user_header_create_account: 'Hesap oluştur '
   user_header_dance: Dans Partisi
   user_header_flappy: Flappy
   user_header_gamelab: Oyun Laboratuvarı

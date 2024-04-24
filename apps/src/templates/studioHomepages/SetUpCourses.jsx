@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import i18n from '@cdo/locale';
+
 import BorderedCallToAction from './BorderedCallToAction';
 
 const SetUpCourses = ({isTeacher, hasCourse}) => (
@@ -11,7 +13,7 @@ const SetUpCourses = ({isTeacher, hasCourse}) => (
       isTeacher ? i18n.setupCoursesTeacher() : i18n.setupCoursesStudent()
     }
     buttonText={i18n.findCourse()}
-    buttonUrl="/courses"
+    buttonUrl={isTeacher ? '/catalog' : '/courses'}
     solidBorder={true}
   />
 );

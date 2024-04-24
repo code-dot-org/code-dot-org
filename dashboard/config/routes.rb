@@ -4,6 +4,9 @@ Dashboard::Application.routes.draw do
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
+  # Redirect studio.code.org/courses to code.org/students
+  get "/courses", to: redirect(CDO.code_org_url("/students"))
+
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
@@ -42,6 +45,7 @@ Dashboard::Application.routes.draw do
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
     get "/musiclab/gallery", to: "musiclab#gallery"
+    get "/musiclab/embed", to: "musiclab#embed"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
@@ -59,15 +63,6 @@ Dashboard::Application.routes.draw do
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
-    get 'maker/discountcode', to: 'maker#discountcode'
-    post 'maker/apply', to: 'maker#apply'
-    post 'maker/schoolchoice', to: 'maker#schoolchoice'
-    post 'maker/complete', to: 'maker#complete'
-    get 'maker/application_status', to: 'maker#application_status'
-    post 'maker/override', to: 'maker#override'
-    get 'maker/google_oauth_login_code', to: 'maker#login_code'
-    get 'maker/display_google_oauth_code', to: 'maker#display_code'
-    get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false
@@ -188,7 +183,7 @@ Dashboard::Application.routes.draw do
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
-      patch '/users/set_age', to: 'registrations#set_age'
+      patch '/users/set_student_information', to: 'registrations#set_student_information'
       patch '/users/email', to: 'registrations#set_email'
       patch '/users/parent_email', to: 'registrations#set_parent_email'
       patch '/users/user_type', to: 'registrations#set_user_type'
@@ -200,7 +195,6 @@ Dashboard::Application.routes.draw do
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
-      post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
       get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
@@ -233,8 +227,10 @@ Dashboard::Application.routes.draw do
     get "/gallery", to: redirect("/projects/public")
 
     get 'projects/featured', to: 'projects#featured'
-    put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
-    put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
+    delete '/featured_projects/:channel_id', to: 'featured_projects#destroy'
+    put '/featured_projects/:channel_id/unfeature', to: 'featured_projects#unfeature'
+    put '/featured_projects/:channel_id/feature', to: 'featured_projects#feature'
+    put '/featured_projects/:channel_id/bookmark', to: 'featured_projects#bookmark'
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
@@ -265,6 +261,7 @@ Dashboard::Application.routes.draw do
           get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
           get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
           get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+          get "/#{key}/:channel_id/can_publish_age_status", to: 'projects#can_publish_age_status'
         end
 
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
@@ -545,6 +542,8 @@ Dashboard::Application.routes.draw do
     get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
     post 'regional_partners/:id/replace_mappings',  controller: 'regional_partners', action: 'replace_mappings'
 
+    get 'regional-partner-search', to: 'regional_partners#regional_partner_search'
+
     # NPS dashboards
     get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
     post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
@@ -575,10 +574,12 @@ Dashboard::Application.routes.draw do
     post '/admin/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
     get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
     post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
+    post '/admin/delete_user', to: 'admin_users#delete_user', as: 'delete_user'
     post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
     get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
     post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
     get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
+    get '/admin/permissions/csv', to: 'admin_users#permissions_csv', as: 'permissions_csv'
     post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
     get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
     post '/admin/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
@@ -597,10 +598,26 @@ Dashboard::Application.routes.draw do
     get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+    get '/admin/dcdo', to: 'dynamic_config#dcdo_show', as: 'dcdo_show'
+    post '/admin/dcdo/set', to: 'dynamic_config#dcdo_set', as: 'dcdo_set'
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
-    post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+    match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
+    match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
+    post '/lti/v1/integrations', to: 'lti_v1#create_integration'
+    get '/lti/v1/integrations', to: 'lti_v1#new_integration'
+    post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+    namespace :lti do
+      namespace :v1 do
+        resource :feedback, controller: :feedback, only: %i[create show]
+        resources :sections, only: [] do
+          collection do
+            patch :bulk_update_owners
+          end
+        end
+      end
+    end
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -627,6 +644,8 @@ Dashboard::Application.routes.draw do
 
     get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
     get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
+
+    get '/deeper-learning', to: 'plc/user_course_enrollments#index'
 
     namespace :plc do
       root to: 'plc#index'
@@ -664,7 +683,6 @@ Dashboard::Application.routes.draw do
           delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
           get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
-          get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
           get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_report'
           get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
           get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
@@ -872,6 +890,7 @@ Dashboard::Application.routes.draw do
             send(method, action, action: action)
           end
         end
+        post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
     end
 
@@ -885,15 +904,22 @@ Dashboard::Application.routes.draw do
 
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
+        post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+        post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
+        post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
+
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
         get 'users/:user_id/contact_details', to: 'users#get_contact_details'
         get 'users/current', to: 'users#current'
+        get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
+
+        get 'users/cached_page_auth_redirect', to: 'users#cached_page_auth_redirect'
 
         patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
@@ -914,7 +940,7 @@ Dashboard::Application.routes.draw do
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
 
-        get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+        get 'projects/gallery/public/:project_type(/:featured_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
@@ -1019,6 +1045,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resource :new_feature_feedback, controller: :new_feature_feedback, only: %i[create show]
+
     # These really belong in the foorm namespace,
     # but we leave them outside so that we can easily use the simple "/form" paths.
     get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
@@ -1059,8 +1087,13 @@ Dashboard::Application.routes.draw do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
+        get 'get_teacher_evaluations_for_all'
         get 'ai_evaluation_status_for_user'
+        get 'ai_evaluation_status_for_all'
+        get 'get_ai_rubrics_tour_seen'
+        post 'update_ai_rubrics_tour_seen'
         post 'run_ai_evaluations_for_user'
+        post 'run_ai_evaluations_for_all'
         post 'submit_evaluations'
       end
     end
@@ -1069,6 +1102,12 @@ Dashboard::Application.routes.draw do
       collection do
         get :get_evaluation
         post :get_or_create_evaluation
+      end
+    end
+
+    resources :learning_goal_ai_evaluation_feedbacks, only: [:create, :update] do
+      collection do
+        post :get_by_ai_evaluation_id
       end
     end
 
@@ -1084,14 +1123,6 @@ Dashboard::Application.routes.draw do
     post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
     patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
 
-    # offline-service-worker*.js needs to be loaded the the root level of the
-    # domain('studio.code.org/').
-    # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
-    get '/s/express-2021/lessons/1/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
-    # Adds the experiment cookie in the User's browser which allows them to experience offline features
-    get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
-    get '/offline-files.json', action: :offline_files, controller: :offline
-
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
 
@@ -1099,10 +1130,64 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
+    post '/aichat/chat_completion', to: 'aichat#chat_completion'
+
+    resources :ai_tutor_interactions, only: [:create, :index]
+
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent'
     post '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent_request'
+
+    # DatablockStorageController powers the data features of applab,
+    # and the key/value pair store feature of gamelab
+    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
+      collection do
+        # Datablock Storage: Key-Value-Pair API
+        post :set_key_value
+        get :get_key_value
+        delete :delete_key_value
+        get :get_key_values
+        put :populate_key_values
+
+        # Datablock Storage: Table API
+        post :create_table
+        post :add_shared_table
+        post :import_csv
+        get :export_csv
+        delete :clear_table
+        delete :delete_table
+        get :get_table_names
+        put :populate_tables
+
+        # Datablock Storage: Table Column API
+        post :add_column
+        put :rename_column
+        put :coerce_column
+        delete :delete_column
+        get :get_column
+        get :get_columns_for_table
+
+        # Datablock Storage: Table Record API
+        post :create_record
+        get :read_records
+        put :update_record
+        delete :delete_record
+
+        # Datablock Storage: Library Manifest API (=shared table metadata)
+        get :get_library_manifest
+        put :set_library_manifest
+
+        # Datablock Storage: Project API
+        get :project_has_data
+        delete :clear_all_data
+
+        # TODO: post-firebase-cleanup, remove
+        # Project Use Datablock Storage API
+        put :use_datablock_storage
+        put :use_firebase_storage
+      end
+    end
   end
 end

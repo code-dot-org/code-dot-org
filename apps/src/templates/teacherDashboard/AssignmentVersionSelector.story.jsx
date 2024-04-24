@@ -1,10 +1,11 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
-import AssignmentVersionSelector from './AssignmentVersionSelector';
+import React from 'react';
+
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
+import AssignmentVersionSelector from './AssignmentVersionSelector';
+
 export default {
-  title: 'AssignmentVersionSelector',
   component: AssignmentVersionSelector,
 };
 

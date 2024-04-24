@@ -1,9 +1,15 @@
+import $ from 'jquery';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from '../Button';
+
 import i18n from '@cdo/locale';
-import _ from 'lodash';
-import $ from 'jquery';
+
+import Button from '../Button';
+import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
+import SchoolNotFound from '../SchoolNotFound';
+
+import {styles} from './censusFormStyles';
 import {
   howManyStudents,
   roleOptions,
@@ -12,9 +18,6 @@ import {
   pledge,
 } from './censusQuestions';
 import SchoolAutocompleteDropdownWithLabel from './SchoolAutocompleteDropdownWithLabel';
-import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
-import SchoolNotFound from '../SchoolNotFound';
-import {styles} from './censusFormStyles';
 
 export const censusFormPrefillDataShape = PropTypes.shape({
   userName: PropTypes.string,
@@ -394,7 +397,7 @@ class CensusForm extends Component {
                 <input
                   type="text"
                   name="school_name_s"
-                  value={this.state.schoolName}
+                  value={submission.schoolName}
                   onChange={this.handleChange.bind(this, 'schoolName')}
                   style={styles.input}
                 />

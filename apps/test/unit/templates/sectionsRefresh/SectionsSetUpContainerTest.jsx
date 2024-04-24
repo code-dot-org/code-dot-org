@@ -1,15 +1,16 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
+import React from 'react';
 import sinon from 'sinon';
+
 import * as utils from '@cdo/apps/code-studio/utils';
+import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import * as windowUtils from '@cdo/apps/utils';
-import DCDO from '@cdo/apps/dcdo';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('SectionsSetUpContainer', () => {
-  beforeEach(() => {
-    DCDO.set('show-coteacher-ui', true);
+  afterEach(() => {
+    sinon.restore();
   });
   it('renders an initial set up section form', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
@@ -41,19 +42,46 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
   });
 
-  it('does not render coteacher if flag is false', () => {
-    DCDO.set('show-coteacher-ui', false);
+  it('renders Child Account Policy Notice for US, student and email sections', () => {
+    sinon
+      .stub(utils, 'queryParams')
+      .withArgs('loginType')
+      .returns('email')
+      .withArgs('participantType')
+      .returns('student');
 
-    const wrapper = shallow(<SectionsSetUpContainer />);
+    const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
+    expect(wrapper.find('Connect(Notification)').exists()).to.equal(true);
+  });
 
-    expect(wrapper.find('Button').length).to.equal(3);
-    expect(wrapper.find('ReactTooltip').length).to.equal(0);
+  it('does not render Child Account Policy Notice when sections are not email', () => {
+    sinon
+      .stub(utils, 'queryParams')
+      .withArgs('loginType')
+      .returns('word')
+      .withArgs('participantType')
+      .returns('student');
+
+    const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
+    expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
+  });
+
+  it('does not render Child Account Policy Notice for country different that US', () => {
+    sinon
+      .stub(utils, 'queryParams')
+      .withArgs('loginType')
+      .returns('email')
+      .withArgs('participantType')
+      .returns('student');
+
+    const wrapper = shallow(<SectionsSetUpContainer userCountry={'ES'} />);
+    expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
   });
 
   it('renders coteacher settings', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('ReactTooltip').length).to.equal(1);
+    expect(wrapper.find('InfoHelpTip').length).to.equal(1);
   });
 
   it('updates caret direction when Add Coteachers is clicked', () => {
@@ -107,8 +135,6 @@ describe('SectionsSetUpContainer', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(reportSpy).to.have.been.called.once;
-
-    sinon.restore();
   });
 
   it('makes an ajax request when save is clicked', async () => {
@@ -138,8 +164,6 @@ describe('SectionsSetUpContainer', () => {
     await new Promise(resolve => setTimeout(resolve, 0));
     expect(navigateToHrefSpy).to.have.been.called.once;
     expect(navigateToHrefSpy.getCall(0).args[0]).to.include('/home');
-
-    sinon.restore();
   });
 
   it('appends showSectionCreationDialog to url if isUsersFirstSection is true', async () => {
@@ -171,8 +195,6 @@ describe('SectionsSetUpContainer', () => {
     expect(navigateToHrefSpy.getCall(0).args[0]).to.include(
       '/home?showSectionCreationDialog=true'
     );
-
-    sinon.restore();
   });
 
   it('passes participantType and loginType to ajax request when save is clicked', () => {
@@ -205,8 +227,6 @@ describe('SectionsSetUpContainer', () => {
     const fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
     expect(fetchBody.login_type).to.equal('word');
     expect(fetchBody.participant_type).to.equal('student');
-
-    sinon.restore();
   });
 
   it('passes url attribute to make a new section if save and create new is clicked', () => {
@@ -234,7 +254,5 @@ describe('SectionsSetUpContainer', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
-
-    sinon.restore();
   });
 });

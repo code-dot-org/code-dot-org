@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-10-19T18:19:36.000Z",
   "level_num": "custom",
@@ -70,8 +71,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false",
-    "long_instructions": "# Do This\r\n\r\n**Run:** Run the program, watch the code run, and carefully read each individual part of the program.\r\n\r\n**Discuss:** Discuss these questions with a partner and be prepared to share answers with the class.\r\n\r\n* Find four different for loops in the program. What do they each do?\r\n* Take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?\r\n* What happens if you change the text box variable names? Try changing them from `text0`, `text1`, etc. to `textbox0`, `textbox1`, etc. What do you need to change in the code for the program to still work?\r\n\r\n* What happens if you change the Boolean expression `i < 5` in the for loops? Change all the Boolean expressions to each of these options and discuss: \r\n\t* `i < 4`\r\n    * `i < 3`\r\n    * `i <= 4`\r\n\r\n**Modify:** If time allows, make the following modifications to the program.\r\n\r\n* Play a sound when the random button is clicked\r\n* Change the counting variable `i` to a different letter. Does your program still work?\r\n* Add more phrases to the list",
+    "long_instructions": "# Do This\r\n\r\n**Run:** Run the program, watch the code run, and carefully read each individual part of the program.\r\n\r\n**Discuss:** Discuss these questions with a partner and be prepared to share answers with the class.\r\n\r\n* Find four different for loops in the program. What do they each do?\r\n* Take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?\r\n* What happens if you change the text box id names? Try changing them from `text0`, `text1`, etc. to `textbox0`, `textbox1`, etc. What do you need to change in the code for the program to still work?\r\n\r\n* What happens if you change the Boolean expression `i < 5` in the for loops? Change all the Boolean expressions to each of these options and discuss: \r\n\t* `i < 4`\r\n    * `i < 3`\r\n    * `i <= 4`\r\n\r\n**Modify:** If time allows, make the following modifications to the program.\r\n\r\n* Play a sound when the random button is clicked\r\n* Change the counting variable `i` to a different letter. Does your program still work?\r\n* Add more phrases to the list",
     "parent_level_id": 19344,
     "mini_rubric": "false",
     "encrypted": "false",
@@ -87,9 +87,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-19T18:19:36.987+00:00\",\"changed\":[\"cloned from \\\"U5 Loops Investigate Font Tester2022\\\"\"],\"cloned_from\":\"U5 Loops Investigate Font Tester2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-19T18:19:36.987+00:00\",\"changed\":[\"cloned from \\\"U5 Loops Investigate Font Tester2022\\\"\"],\"cloned_from\":\"U5 Loops Investigate Font Tester2022\"},{\"changed_at\":\"2023-11-17 23:32:04 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

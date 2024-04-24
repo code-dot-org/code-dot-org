@@ -189,6 +189,34 @@ module Api::V1::Pd
       assert_equal 2, data['csd_teachers']['unreviewed']['total']
     end
 
+    test 'enrollment count included in index' do
+      sign_in @workshop_admin
+      workshop = create :pd_workshop, num_sessions: 1
+      application = create TEACHER_APPLICATION_FACTORY, course: 'csd', status: 'accepted', pd_workshop_id: workshop.id
+      create :pd_enrollment, application_id: application.id, user: application.user, workshop: workshop
+      get :index
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal 0, data['csd_teachers']['accepted']['total']
+      assert_equal 1, data['csd_teachers']['enrolled']['total']
+    end
+
+    test 'enrollment only counts enrollments for that regional partner' do
+      regional_partner_2 = create :regional_partner
+      workshop = create :pd_workshop, num_sessions: 1
+      application_2 = create TEACHER_APPLICATION_FACTORY, course: 'csd', status: 'accepted', regional_partner: regional_partner_2, pd_workshop_id: workshop.id
+      create :pd_enrollment, application_id: application_2.id, user: application_2.user, pd_workshop_id: workshop.id
+
+      sign_in @workshop_admin
+
+      get :index, params: {regional_partner_value: @regional_partner.id}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal 1, data['csd_teachers']['unreviewed']['total']
+      assert_equal 0, data['csd_teachers']['accepted']['total']
+      assert_equal 0, data['csd_teachers']['enrolled']['total']
+    end
+
     test 'regional partners can show their applications as workshop organizers' do
       sign_in @workshop_organizer
       get :show, params: @test_show_params
@@ -514,6 +542,21 @@ module Api::V1::Pd
       )
     end
 
+    test 'cohort view shows enrolled as a status' do
+      workshop = create :pd_workshop, num_sessions: 1
+      application = create TEACHER_APPLICATION_FACTORY, course: 'csp', status: 'accepted', pd_workshop_id: workshop.id
+      create :pd_enrollment, application_id: application.id, user: application.user, pd_workshop_id: workshop.id
+
+      sign_in @workshop_admin
+      get :cohort_view, params: {role: 'csp_teachers', regional_partner_value: 'none'}
+      assert_response :success
+
+      assert_equal(
+        ['enrolled'],
+        JSON.parse(@response.body).map {|app| app['status']}
+      )
+    end
+
     test 'cohort view as a workshop organizer returns expected columns for a teacher' do
       time = Date.new(2020, 3, 15)
 
@@ -551,7 +594,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             registered_workshop_id: workshop.id,
-            status: 'accepted',
+            status: 'enrolled',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -642,7 +685,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             registered_workshop_id: workshop.id,
-            status: 'accepted',
+            status: 'enrolled',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -749,11 +792,9 @@ module Api::V1::Pd
         "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?",
         "How will you offer CS Principles?",
         "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
-        "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
         "Teacher's race",
@@ -780,13 +821,8 @@ module Api::V1::Pd
         "Percent of student enrollment by race - Native Hawaiian or other Pacific Islander",
         "Percent of student enrollment by race - American Indian or Native Alaskan",
         "Percent of student enrollment by race - Other",
-        "Are you committed to including this course on the master schedule in #{APPLICATION_CURRENT_YEAR} if this teacher is accepted into the program?",
-        "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         "How will you implement CS Principles at your school?",
-        "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
         "Principal authorizes college board to send AP Scores",
-        "Contact name for invoicing",
-        "Contact email or phone number for invoicing",
         "Title I status code (NCES data)",
         "Rural Status",
         "Total student enrollment (NCES data)",

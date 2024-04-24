@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimálne podporované prehliadače a platformy
 
+Od júla 2024 aktualizujeme minimálne verzie potrebné pre prehliadače a operačné systémy. Aj keď staré verzie môžu stále fungovať, nebudeme schopní podporovať žiadosti o opravy chýb v starších verziách.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Prehliadač
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Prehliadač júl '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobilný Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Okraj 119,x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platforma
@@ -62,33 +86,56 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma júl '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Stránky na odblokovanie
 
 Pre ten najlepší zážitok zo stránky Code.org odporúčame konzultovať sprístupnenie a odblokovanie nasledovných stránok s IT oddelením vašej školy alebo okresu.
 
-| Prioritné                                                        | URL                                                                                                        |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Potrebné**                                                     | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Voliteľné**                                                    | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Pre používanie videí na YouTube (režim rozšíreného súkromia)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Pre používanie videí na stránke Code.org**                     | `https://videos.code.org`                                                                                  |
-| **Pre používanie simulátora internetu**                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Pre používanie Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Pre používanie tlačidla na zdieľanie Google Classroom**        | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                      | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Prioritné                                                                                               | URL                                                                                                        |
+| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Potrebné**                                                                                            | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Aby systémy CAPTCHA dokázali rozlíšiť vaše používanie od automatizovanej podvodnej činnosti („bot“)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Voliteľné**                                                                                           | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Pre používanie videí na YouTube (režim rozšíreného súkromia)**                                        | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Pre používanie videí na stránke Code.org**                                                            | `https://videos.code.org`                                                                                  |
+| **Pre používanie simulátora internetu**                                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Pre používanie Web Lab**                                                                              | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Pre používanie tlačidla na zdieľanie Google Classroom**                                               | `https://apis.google.com`                                                                                  |
+| **Používanie súborov údajov App Lab**                                                                   | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Podrobnosti o podpore mobilných zariadení a tabletov
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Väčšina tabletov nie je podporovaná, až na nasledovné výnimky:
+Všetky kurzy CS Discovery, CS Principles, CS A a Intro to App Lab nie sú kompatibilné s tabletmi alebo mobilnými zariadeniami - vyžaduje sa plná klávesnica a myš (alebo touchpad). Väčšina tabletov nie je podporovaná, až na nasledovné výnimky:
 
 - Microsoft Surface Pro s externou klávesnicou
 - iPad so systémom iPadOS 13.4 alebo novším a s externou klávesnicou, externou myšou alebo touchpadom.
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Všetok ostatný obsah, ako napríklad kurzy K-5 (Základy informatiky) a aktivity Hour of Code, sú kompatibilné s iPadmi a inými modernými tabletmi a notebookmi alebo stolnými počítačmi.
 
 ### Mobilné telefóny
 
@@ -104,7 +151,7 @@ Pred začatím kurzov na stránke Code.org, si skúste prehrať video zobrazené
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">
@@ -114,13 +161,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Tento prehrávač sa používa v celom učebnom pláne. Pokúsi sa vám zobraziť video prostredníctvom služby YouTube a v prípade, že je táto služba zablokovaná, zobrazí video zo „záložného“ prehrávača od Code.org.
 
 ### Video sa vám neprehráva?
 
-If video does not work, you can email us at support@code.org.
+Ak video nejde spustiť, kontaktujte nás prostredníctvom e-mailovej adresy na support@code.org.
 
-However, you can still use our tutorials without video.
+Aktivity je však možné využiť aj bez videí.
 
 1. Všetky naše videá sme sprístupnili na stiahnutie [tu](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Ak vaša škola nemá dostatočnú šírku vlnového pásma, odporúčame vám videá stiahnuť a študentom/žiakom premietať na jednej veľkej obrazovke.
 2. Do našich aktivít sme pridali zelenú ikonu s odkazom na stiahnutie <img src="/images/green-download.png" width=25 height=25 /> každého videa. Tak je študentom umožnené stiahnuť si každú jednu z aktivít.
@@ -130,8 +177,8 @@ However, you can still use our tutorials without video.
 
 ## Špeciálne nastavenia pre používateľov Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Ak ste správcom služby G-suite, skontrolujte nastavenia obmedzení pre službu YouTube. Ak ste zvolili nastavenie „Prísne obmedzený prístup na YouTube“ alebo ak sa zobrazujú správy s textom „toto video bolo obmedzené“, pridajte náš kanál do zoznamu schválených kanálov. Pozrite si [tento návod](https://support.google.com/a/answer/6245597) od spoločnosti Google a zistíte, ako môžete pridať náš kanál do zoznamu schválených kanálov. Môžete si tiež pozrieť [tento návod](https://support.google.com/a/answer/6212415?hl=en) a zistiť viac o rôznych nastaveniach a o tom, ktoré je pre vás a vašu triedu to najlepšie.
 
 ## Stále máte problémy?
 
-We'll help you out - just email us at support@code.org!
+Pomôžeme vám – kontaktujte nás prostredníctvom e-mailu na support@code.org

@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-03-31T17:43:42.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -61,7 +65,7 @@
     "validation_enabled": "true",
     "mini_toolbox": "false",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel9();",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hello_world_behavior_blocks\",\r\n  \"callout_text\": \"Use this block with one of the behaviors below.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"19\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hello_world_behavior_blocks\",\"callout_text\":\"Use this block with one of the behaviors below.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"19\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"19\\\"]\",\"localization_key\":\"hello_world_behavior_blocks\",\"callout_text\":\"Use this block with one of the behaviors below.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Let's learn to animate sprites using behaviors. ",
@@ -71,11 +75,7 @@
     "encrypted_examples": "Osk7nlPszFZs/rUC33b4g3fRYu1/0Ln4Dr7UKGkqB2igNdhuEusjyF70+ZqC\nGLztY5YSLxvhU0hkCL/vHoAzuaL4n5Fj9x7QhB1ULMoIo2AQEvKD8ilOhtkS\nzofSQj+IqvBg3BZEFoHQgbMCfTro/d/TwICW+c4zAg7UgEG0u/86zN688td7\nlu6N2X4rZVci/Eki2BL80ib9cURlJNPBHQ==\n",
     "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-03-31T17:43:42.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-31T17:43:42.826+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_behaviors\\\"\"],\"cloned_from\":\"helloworld_food_behaviors\"},{\"changed_at\":\"2022-03-31 17:52:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-08 23:36:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-08 23:37:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-09 22:02:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-09 22:03:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-09 22:03:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-09 22:05:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-11 22:55:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
@@ -2833,7 +2833,7 @@
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false" id="19">
               <title name="ANIMATION">"face_croissant_1"</title>
             </block>
           </value>

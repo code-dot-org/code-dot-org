@@ -1,15 +1,16 @@
 import React from 'react';
-import {UnconnectedStandardsProgressTable as StandardsProgressTable} from './StandardsProgressTable';
-import {standardsData, lessonCompletedByStandard} from './standardsTestHelpers';
-import {combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import sectionStandardsProgress from './sectionStandardsProgressRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {combineReducers} from 'redux';
+
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {reduxStore} from '@cdo/storybook/decorators';
 
+import sectionStandardsProgress from './sectionStandardsProgressRedux';
+import {UnconnectedStandardsProgressTable as StandardsProgressTable} from './StandardsProgressTable';
+import {standardsData, lessonCompletedByStandard} from './standardsTestHelpers';
+
 export default {
-  title: 'StandardsProgressTable',
   component: StandardsProgressTable,
 };
 

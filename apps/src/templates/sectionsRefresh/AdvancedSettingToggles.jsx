@@ -1,8 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import React from 'react';
+
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
+import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import i18n from '@cdo/locale';
+
 import style from './sections-refresh.module.scss';
 
 export default function AdvancedSettingToggles({
@@ -10,6 +12,8 @@ export default function AdvancedSettingToggles({
   section,
   hasLessonExtras,
   hasTextToSpeech,
+  // aiTutorAvailable refers to whether the selected assignment has AI Tutor available,
+  // i.e. have we trained AI to answer questions about that specific course or unit.
   aiTutorAvailable,
 }) {
   const handlePairProgrammingToggle = e => {
@@ -33,11 +37,8 @@ export default function AdvancedSettingToggles({
   };
 
   const handleAITutorEnabledToggle = e => {
-    // TODO: once aiTutorEnabled is a property of a section, and sections API can handle updating it,
-    // make this toggle actually set the aiTutorEnabled :)
-    // const updatedValue = !section.aiTutorEnabled;
-    // updateSection('aiTutorEnabled', updatedValue);
-    console.log('toggled AI Tutor on/off');
+    const updatedValue = !section.aiTutorEnabled;
+    updateSection('aiTutorEnabled', updatedValue);
   };
 
   return (
@@ -100,7 +101,7 @@ export default function AdvancedSettingToggles({
         <div className={style.toolTipContainer}>
           <ToggleSwitch
             id={'uitest-ai-tutor-toggle'}
-            isToggledOn={true}
+            isToggledOn={section.aiTutorEnabled}
             onToggle={e => handleAITutorEnabledToggle(e)}
             label={i18n.enableAITutor()}
           />

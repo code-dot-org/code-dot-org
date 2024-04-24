@@ -13,7 +13,7 @@ library instead of finding and updating all the exising implementation of needed
 (e.g. buttons or typography)
 
 
-**Note(!):** ``StylizedBaseDialog`` and ``TabView`` are in this folder, but they **are not a part of design system**.
+**Note(!):** ``StylizedBaseDialog``, ``skeletonize-content`` and ``TabView`` are in this folder, but they **are not a part of design system**.
 
 
 **Design system** is a work in progress, so some components might be missing, some might be not fully implemented. 

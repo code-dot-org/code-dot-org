@@ -1,8 +1,10 @@
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
+import sinon from 'sinon';
+
 import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,

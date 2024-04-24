@@ -10,16 +10,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
     @facilitator = create :facilitator
     @levelbuilder = create(:levelbuilder)
     @project_validator = create :project_validator
-    @section = create :section, user_id: @teacher.id
+    @section_owner = create :teacher
+    @section = create :section, user: @section_owner
+    create :section_instructor, instructor: @teacher, section: @section
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
-    @pl_section = create :section, user_id: @facilitator.id
+    @pl_section_owner = create :facilitator
+    @pl_section = create :section, user: @pl_section_owner
+    create :section_instructor, instructor: @facilitator, section: @pl_section
     Follower.create!(section_id: @pl_section.id, student_user_id: @teacher.id, user: @facilitator)
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
@@ -60,7 +66,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pilot_lesson = create(:lesson, script: pilot_script, lesson_group: pilot_lesson_group)
     @pilot_script_level = create :script_level, script: pilot_script, lesson: pilot_lesson
     @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
-    pilot_section = create :section, user: @pilot_teacher, script: pilot_script
+    @pilot_section_owner = create :teacher, pilot_experiment: 'pilot-experiment'
+    pilot_section = create :section, user: @pilot_section_owner, script: pilot_script
+    create :section_instructor, instructor: @pilot_teacher, section: pilot_section
     @pilot_student = create(:follower, section: pilot_section).student_user
 
     pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
@@ -68,7 +76,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pilot_pl_lesson = create(:lesson, script: pilot_pl_script, lesson_group: pilot_pl_lesson_group)
     @pilot_pl_script_level = create :script_level, script: pilot_pl_script, lesson: pilot_pl_lesson
     @pilot_instructor = create :facilitator, pilot_experiment: 'pl-pilot-experiment'
-    pilot_pl_section = create :section, user: @pilot_instructor, script: pilot_pl_script
+    @pilot_section_owner = create :facilitator, pilot_experiment: 'pl-pilot-experiment'
+    pilot_pl_section = create :section, user: @pilot_section_owner, script: pilot_pl_script
+    create :section_instructor, instructor: @pilot_instructor, section: pilot_pl_section
     @pilot_participant = create :teacher
     create(:follower, section: pilot_pl_section, student_user: @pilot_participant)
 
@@ -104,7 +114,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false}, body)
+    assert_equal({"id" => level.id, "levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => [], "usesProjects" => false}, body)
   end
 
   test 'should show script level for csp1-2020 lockable lesson with lesson plan' do
@@ -1085,22 +1095,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     stubs(:current_user).returns(@student)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Unit.find_by_name(Unit::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Unit.find_by_name(Unit::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Unit.find_by_name(Unit::FROZEN_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Unit.find_by_name(Unit::STARWARS_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do

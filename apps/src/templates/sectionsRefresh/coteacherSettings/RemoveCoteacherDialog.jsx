@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
+
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
+
 import AccessibleDialog from '../../AccessibleDialog';
+
 import styles from './coteacher-settings.module.scss';
 
 export default function RemoveCoteacherDialog({
@@ -11,6 +16,7 @@ export default function RemoveCoteacherDialog({
   setCoteacherToRemove,
   removeSavedCoteacher,
   setCoteachersToAdd,
+  sectionId,
 }) {
   const closeRemoveDialog = useCallback(() => {
     setCoteacherToRemove(null);
@@ -32,12 +38,15 @@ export default function RemoveCoteacherDialog({
         method: 'DELETE',
       }).then(response => {
         if (response.ok) {
+          analyticsReporter.sendEvent(EVENTS.COTEACHER_REMOVED, {
+            sectionId: sectionId,
+          });
           removeSavedCoteacher(coteacher.id);
         }
         closeRemoveDialog();
       });
     },
-    [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher]
+    [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher, sectionId]
   );
 
   return (
@@ -78,4 +87,5 @@ RemoveCoteacherDialog.propTypes = {
   setCoteacherToRemove: PropTypes.func.isRequired,
   removeSavedCoteacher: PropTypes.func.isRequired,
   setCoteachersToAdd: PropTypes.func.isRequired,
+  sectionId: PropTypes.number,
 };

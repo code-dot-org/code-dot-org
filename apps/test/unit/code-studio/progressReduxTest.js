@@ -59,6 +59,8 @@ const lessonData = [
         sublevels: [],
         app: 'maze',
         uses_lab2: false,
+        is_validated: true,
+        path: '/s/course3/lessons/1/levels/1',
       },
       {
         ids: ['323'],
@@ -75,6 +77,8 @@ const lessonData = [
         sublevels: [],
         app: 'maze',
         uses_lab2: false,
+        is_validated: true,
+        path: '/s/course3/lessons/1/levels/2',
       },
       {
         ids: ['322'],
@@ -92,6 +96,8 @@ const lessonData = [
         sublevels: [],
         app: 'maze',
         uses_lab2: false,
+        is_validated: false,
+        path: '/s/course3/lessons/1/levels/3',
       },
     ],
     lesson_plan_html_url:
@@ -128,6 +134,8 @@ const lessonData = [
         sublevels: [],
         app: 'maze',
         uses_lab2: false,
+        is_validated: true,
+        path: '/s/course3/lessons/2/levels/1',
       },
       {
         ids: ['339'],
@@ -143,6 +151,8 @@ const lessonData = [
         sublevels: [],
         app: 'maze',
         uses_lab2: false,
+        is_validated: false,
+        path: '/s/course3/lessons/2/levels/2',
       },
       {
         ids: ['341'],
@@ -158,6 +168,8 @@ const lessonData = [
         sublevels: [],
         app: 'maze',
         uses_lab2: false,
+        is_validated: false,
+        path: '/s/course3/lessons/2/levels/3',
       },
     ],
     lesson_plan_html_url:
@@ -195,6 +207,7 @@ const lockableLessonData = [
         display_as_unplugged: true,
         sublevels: [],
         uses_lab2: false,
+        path: '/s/course3/lessons/1/levels/1',
       },
     ],
   },
@@ -603,6 +616,9 @@ describe('progressReduxTest', () => {
             teacherFeedbackReviewState: null,
             app: 'maze',
             usesLab2: false,
+            isValidated: true,
+            canHaveFeedback: undefined,
+            path: '/s/course3/lessons/1/levels/1',
           },
           {
             id: '323',
@@ -626,6 +642,9 @@ describe('progressReduxTest', () => {
             teacherFeedbackReviewState: null,
             app: 'maze',
             usesLab2: false,
+            isValidated: true,
+            canHaveFeedback: undefined,
+            path: '/s/course3/lessons/1/levels/2',
           },
           {
             id: '322',
@@ -649,6 +668,9 @@ describe('progressReduxTest', () => {
             teacherFeedbackReviewState: null,
             app: 'maze',
             usesLab2: false,
+            isValidated: false,
+            canHaveFeedback: undefined,
+            path: '/s/course3/lessons/1/levels/3',
           },
         ],
         [
@@ -674,6 +696,9 @@ describe('progressReduxTest', () => {
             teacherFeedbackReviewState: null,
             app: 'maze',
             usesLab2: false,
+            isValidated: true,
+            canHaveFeedback: undefined,
+            path: '/s/course3/lessons/2/levels/1',
           },
           {
             id: '339',
@@ -697,6 +722,9 @@ describe('progressReduxTest', () => {
             teacherFeedbackReviewState: null,
             app: 'maze',
             usesLab2: false,
+            isValidated: false,
+            canHaveFeedback: undefined,
+            path: '/s/course3/lessons/2/levels/2',
           },
           {
             id: '341',
@@ -720,6 +748,9 @@ describe('progressReduxTest', () => {
             teacherFeedbackReviewState: null,
             app: 'maze',
             usesLab2: false,
+            isValidated: false,
+            canHaveFeedback: undefined,
+            path: '/s/course3/lessons/2/levels/3',
           },
         ],
       ];

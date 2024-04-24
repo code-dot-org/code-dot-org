@@ -1,10 +1,10 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
-import {Meta, Story} from '@storybook/react';
 
 import Toggle, {ToggleProps} from './index';
 
 export default {
-  title: 'DesignSystem/Toggle Component',
+  title: 'DesignSystem/Toggle', // eslint-disable-line storybook/no-title-property-in-meta
   /**
    * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
    * This workaround (component: Component.type instead of component: Component) is taken from
@@ -21,9 +21,9 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate:Story<ToggleProps> = (args) => <Toggle {...args} />;
+const SingleTemplate: StoryFn<ToggleProps> = args => <Toggle {...args} />;
 
-const MultipleTemplate: Story<{components: ToggleProps[]}> = args => (
+const MultipleTemplate: StoryFn<{components: ToggleProps[]}> = args => (
   <>
     {args.components?.map(componentArg => (
       <Toggle key={componentArg.name} {...componentArg} />

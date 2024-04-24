@@ -79,7 +79,7 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
 
     getStore().dispatch(
       openAiModal({
-        modalField: this,
+        blockId: this.sourceBlock_.id,
         fromFlyout: isInFlyout,
       })
     );

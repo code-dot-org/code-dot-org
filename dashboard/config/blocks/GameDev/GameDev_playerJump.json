@@ -1,0 +1,27 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "playerJump",
+    "blockText": "make player do {STRENGTH} jump",
+    "args": [
+      {
+        "name": "STRENGTH",
+        "options": [
+          [
+            "small",
+            "6"
+          ],
+          [
+            "medium",
+            "9"
+          ],
+          [
+            "big",
+            "10"
+          ]
+        ]
+      }
+    ],
+    "style": "default"
+  }
+}

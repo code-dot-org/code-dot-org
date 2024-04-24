@@ -29,7 +29,7 @@ namespace :build do
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
 
-      if rack_env?(:staging) && DCDO.get('deploy_storybook', false)
+      if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
         ChatClient.log 'Deploying <b>storybook</b>...'
         RakeUtils.system 'npm run storybook:deploy'
       end
@@ -118,7 +118,9 @@ namespace :build do
           # to manually kill workers 8 and 9 (zero-based). otherwise, those
           # workers will continue to run jobs using older code indefinitely.
           RakeUtils.system 'bin/delayed_job', '-n', '10', 'restart'
-        else
+        elsif !rack_env?(:development)
+          # development environment does not use delayed_job by default.
+          # all other non-production daemons should run one worker.
           RakeUtils.system 'bin/delayed_job', 'restart'
         end
 
@@ -131,12 +133,12 @@ namespace :build do
           RakeUtils.git_push
         end
 
-        # if rack_env?(:staging)
-        #  This step will only complete successfully if we succeed in
-        #  generating all curriculum PDFs.
-        #  ChatClient.log "Generating missing pdfs..."
-        #  RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
-        # end
+        if rack_env?(:staging)
+          # This step will only complete successfully if we succeed in
+          # generating all curriculum PDFs.
+          ChatClient.log "Generating missing pdfs..."
+          RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
+        end
       end
 
       # Skip asset precompile in development.

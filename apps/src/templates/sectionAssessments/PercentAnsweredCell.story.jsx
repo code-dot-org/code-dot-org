@@ -1,8 +1,8 @@
 import React from 'react';
+
 import PercentAnsweredCell from './PercentAnsweredCell';
 
 export default {
-  title: 'PercentAnsweredCell',
   component: PercentAnsweredCell,
 };
 

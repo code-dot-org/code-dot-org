@@ -1,5 +1,7 @@
 import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
+
 import firehoseClient from '../../lib/util/firehose';
+
 import {ViewType} from './sectionProgressConstants';
 
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
@@ -137,7 +139,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
 
 /**
  * Retrieves the unit data for the section in the selected unit
- * @returns {scriptDataPropType} object containing metadata about the unit structure
+ * @returns {unitDataPropType} object containing metadata about the unit structure
  */
 export const getCurrentUnitData = state => {
   return state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId];

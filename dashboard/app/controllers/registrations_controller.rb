@@ -2,6 +2,9 @@ require 'cdo/firehose'
 require 'cdo/honeybadger'
 require 'cpa'
 require_relative '../../../shared/middleware/helpers/experiments'
+require 'metrics/events'
+require 'policies/lti'
+require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
@@ -9,7 +12,7 @@ class RegistrationsController < Devise::RegistrationsController
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
-  skip_before_action :verify_authenticity_token, only: [:set_age]
+  skip_before_action :verify_authenticity_token, only: [:set_student_information]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
 
   #
@@ -111,7 +114,6 @@ class RegistrationsController < Devise::RegistrationsController
       end
       super
     end
-
     should_send_new_teacher_email = current_user&.teacher?
     TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
     should_send_parent_email = current_user && current_user.parent_email.present?
@@ -121,6 +123,18 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
+      if Policies::Lti.lti? current_user
+        lms_name = Queries::Lti.get_lms_name_from_user(current_user)
+        metadata = {
+          'user_type' => current_user.user_type,
+          'lms_name' => lms_name,
+        }
+        Metrics::Events.log_event(
+          user: current_user,
+          event_name: 'lti_user_created',
+          metadata: metadata,
+        )
+      end
     end
 
     SignUpTracking.log_sign_up_result resource, session
@@ -209,12 +223,18 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
-  # Set age for the current user if empty - skips CSRF verification because this can be called
+  # Set age, us_state and gender for the current user if empty - skips CSRF verification because this can be called
   # from cached pages which will not populate the CSRF token. This also skips lockout policy
   # checks since those depend on the age being set.
-  def set_age
+  def set_student_information
     return head(:forbidden) unless current_user
-    current_user.update(age: params[:user][:age]) if current_user.age.blank?
+    student_information = {}
+
+    student_information[:age] = params[:user][:age] if current_user.age.blank?
+    student_information[:us_state] = params[:user][:us_state] if current_user.us_state.blank?
+    student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
+
+    current_user.update(student_information) unless student_information.empty?
   end
 
   def upgrade
@@ -471,6 +491,7 @@ class RegistrationsController < Devise::RegistrationsController
       :us_state,
       :country_code,
       :ai_rubrics_disabled,
+      :lti_roster_sync_enabled,
       school_info_attributes: [
         :country,
         :school_type,

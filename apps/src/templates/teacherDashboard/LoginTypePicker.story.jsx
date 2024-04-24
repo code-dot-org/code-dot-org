@@ -1,9 +1,9 @@
-import React from 'react';
-import {UnconnectedLoginTypePicker as LoginTypePicker} from './LoginTypePicker';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import {UnconnectedLoginTypePicker as LoginTypePicker} from './LoginTypePicker';
 
 export default {
-  title: 'LoginTypePicker',
   component: LoginTypePicker,
 };
 

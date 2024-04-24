@@ -55,7 +55,11 @@ export default class StarWarsGridCellEditor extends CellEditor {
 
     return (
       <form className="span4 offset1">
-        <img src={tileGuide} />
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
+        <img src={tileGuide} alt="" />
         <header>
           <strong>
             Editing Cell ({this.props.row}, {this.props.col})

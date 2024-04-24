@@ -61,78 +61,6 @@ class SchoolTest < ActiveSupport::TestCase
     end
   end
 
-  test 'maker high needs false when no stats data' do
-    school = create :school
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs false when null students total' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999'
-      }
-    )
-    school.save!
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs false when null frl eligible total' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 100
-      }
-    )
-    school.save!
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs false when frl eligible below 50 percent of students' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 100,
-        frl_eligible_total: 49
-      }
-    )
-    school.save!
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs true when frl eligible equal to 50 percent of students' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 1000,
-        frl_eligible_total: 500
-      }
-    )
-    school.save!
-    assert school.maker_high_needs?
-  end
-
-  test 'maker high needs true when frl eligible above 50 percent of students' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 1000,
-        frl_eligible_total: 501
-      }
-    )
-    school.save!
-    assert school.maker_high_needs?
-  end
-
   test 'AFE high needs false when no stats data' do
     school = create :school
     refute school.afe_high_needs?
@@ -267,15 +195,12 @@ class SchoolTest < ActiveSupport::TestCase
     assert_equal "12345678901", normalized_id
   end
 
-  private
-
-  def clear_schools_and_dependent_models
+  private def clear_schools_and_dependent_models
     # Clear tables with hard dependencies (ie, MySQL foreign keys)
     # on the schools table.
     Census::CensusSummary.delete_all
     SchoolInfo.delete_all
     SchoolStatsByYear.delete_all
-    CircuitPlaygroundDiscountApplication.delete_all
 
     School.delete_all
   end

@@ -292,6 +292,30 @@ class UserTest < ActiveSupport::TestCase
     assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
+  test 'email_for_enrollments returns user.email if user has no latest accepted application' do
+    user = create :teacher
+    assert_equal user.email_for_enrollments, user.email
+  end
+
+  test 'email_for_enrollments returns user.email if users latest accepted application has no alternate email' do
+    user = create :teacher
+    application = create :pd_teacher_application, user: user
+    application_form_data = application.form_data_hash
+    application_form_data['alternateEmail'] = ''
+    application.update!(form_data_hash: application_form_data)
+
+    assert application.form_data_hash['alternateEmail'].empty?
+    assert_equal user.email_for_enrollments, user.email
+  end
+
+  test 'email_for_enrollments returns app alternate email if users latest accepted application has alternate email' do
+    user = create :teacher
+    application = create :pd_teacher_application, user: user, status: 'accepted'
+    app_alternate_email = application.form_data_hash['alternateEmail']
+
+    assert_equal user.email_for_enrollments, app_alternate_email
+  end
+
   test "log in with password with pepper" do
     assert Devise.pepper
 
@@ -714,6 +738,58 @@ class UserTest < ActiveSupport::TestCase
       )
     end
     refute_nil user.errors[:email]
+  end
+
+  test "LTI users should have a LtiUserIdentity when created" do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :student
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+    user.save
+    assert user.lti_user_identities
+    assert_equal 1, user.lti_user_identities.count
+  end
+
+  test "LTI users should not be created when something goes wrong during LtiUserIdentity creation" do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :student
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+
+    expected_error_message = 'expected_lti_user_identity_creation_error'
+    Services::Lti.expects(:create_lti_user_identity).with(user).raises(expected_error_message)
+
+    assert_no_difference 'User.count' do
+      actual_error = assert_raises {user.save!}
+      assert_equal expected_error_message, actual_error.message
+    end
+  end
+
+  test "non LTI users should not have a LtiUserIdentity when created" do
+    user = create :user
+    assert_empty user.lti_user_identities
+  end
+
+  test 'LTI teacher should be verified after creation' do
+    lti_integration = create(:lti_integration)
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+
+    lti_teacher = build(:teacher)
+    lti_teacher.authentication_options << build(:lti_authentication_option, user: lti_teacher, authentication_id: auth_id)
+    lti_teacher.save!
+
+    assert lti_teacher.verified_teacher?
+  end
+
+  test 'LTI student should not be verified after creation' do
+    lti_integration = create(:lti_integration)
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+
+    lti_student = build(:student)
+    lti_student.authentication_options << build(:lti_authentication_option, user: lti_student, authentication_id: auth_id)
+    lti_student.save!
+
+    refute lti_student.verified_teacher?
   end
 
   # FND-1130: This test will no longer be required
@@ -1153,6 +1229,72 @@ class UserTest < ActiveSupport::TestCase
 
     next_script_level = user.next_unpassed_progression_level(script)
     refute next_script_level.nil?
+  end
+
+  test 'completed_progression_levels returns false if not all progression levels have a passing result' do
+    user = create :user
+    script = create(:script, :with_levels, levels_count: 3)
+
+    # Only complete the first one
+    UserLevel.create(
+      user: user,
+      level: script.script_levels.first.level,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    refute(user.completed_progression_levels?(script))
+  end
+
+  test 'completed_progression_levels returns true if all progression levels have a passing result' do
+    user = create :user
+    script = create(:script, :with_levels, levels_count: 3)
+
+    script.script_levels.each do |sl|
+      UserLevel.create(
+        user: user,
+        level: sl.level,
+        script: script,
+        attempts: 1,
+        best_result: Activity::MINIMUM_PASS_RESULT
+      )
+    end
+
+    assert(user.completed_progression_levels?(script))
+  end
+
+  test 'completed_progression_levels returns true if all progression levels with contained levels have a passing result' do
+    user = create :user
+    script = create(:script, :with_levels, levels_count: 3)
+
+    # Set up the first level to have contained_levels
+    contained_level = create :free_response, name: 'contained level'
+    level_with_contained_levels = script.script_levels.first.level
+    level_with_contained_levels.contained_level_names = [contained_level.name]
+    level_with_contained_levels.save!
+
+    # User progress in contained_level
+    UserLevel.create(
+      user: user,
+      level: level_with_contained_levels.contained_levels.first,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    # User progress in remaining levels
+    script.script_levels.drop(1).each do |sl|
+      UserLevel.create(
+        user: user,
+        level: sl.level,
+        script: script,
+        attempts: 1,
+        best_result: Activity::MINIMUM_PASS_RESULT
+      )
+    end
+
+    assert(user.completed_progression_levels?(script))
   end
 
   test 'track_level_progress does not record quiz or survey responses for partner when pairing' do
@@ -1840,6 +1982,34 @@ class UserTest < ActiveSupport::TestCase
     assert_empty teacher.sections_instructed
   end
 
+  test 'section_instructors get deleted when user gets deleted' do
+    section = create :section
+    teacher = section.teacher
+    section_instructors = section.section_instructors
+
+    refute_empty section_instructors
+
+    teacher.destroy!
+
+    assert_empty section_instructors
+  end
+
+  test 'sections_instructed omits sections with in-active section_instructors' do
+    section = create :section
+    teacher = create :teacher
+    create :section_instructor, section: section, instructor: teacher, status: :invited
+
+    assert_empty teacher.sections_instructed
+  end
+
+  test 'sections_instructed includes sections with active section_instructors' do
+    section = create :section
+    teacher = create :teacher
+    create :section_instructor, section: section, instructor: teacher, status: :active
+
+    refute_empty teacher.sections_instructed
+  end
+
   test 'cannot change own user type as a teacher with sections' do
     section = create :section
     teacher = section.teacher
@@ -1854,6 +2024,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can delete own account if independent student' do
     user = create :student
+    refute user.teacher_managed_account?
+    assert user.can_delete_own_account?
+  end
+
+  test 'can delete own account if LTI student' do
+    user = create :student
+    user.authentication_options << create(:lti_authentication_option)
     refute user.teacher_managed_account?
     assert user.can_delete_own_account?
   end
@@ -2876,9 +3053,9 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.sections_as_student
     assert_equal [], other_user.sections_as_student
 
-    assert_equal [], student.sections
-    assert_equal [section], teacher.sections
-    assert_equal [], other_user.sections
+    assert_equal [], student.sections_instructed
+    assert_equal [section], teacher.sections_instructed
+    assert_equal [], other_user.sections_instructed
 
     # can_pair? method
     assert_equal true, student.can_pair?
@@ -3764,7 +3941,8 @@ class UserTest < ActiveSupport::TestCase
         location: "/v2/users/#{@student.id}",
         age: @student.age,
         sharing_disabled: false,
-        has_ever_signed_in: @student.has_ever_signed_in?
+        has_ever_signed_in: @student.has_ever_signed_in?,
+        ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
       },
       @student.summarize
     )
@@ -4997,5 +5175,23 @@ class UserTest < ActiveSupport::TestCase
     student = create :non_compliant_child, :with_parent_permission
     student.save!
     assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
+  end
+
+  test "does not return deleted followers from the followers helper" do
+    student = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    follower = create :follower, section: section, user: student
+    follower.destroy
+    assert_empty teacher.reload.followers
+  end
+
+  test 'does not return followers from formerly-instructed sections with deleted SectionInstructor in active status' do
+    student = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    SectionInstructor.where(section: section).destroy_all
+    create :follower, section: section, user: student
+    assert_empty teacher.reload.followers
   end
 end

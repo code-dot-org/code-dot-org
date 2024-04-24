@@ -91,4 +91,25 @@ describe('LearningGoalItem', () => {
       ).calledOnce
     ).to.be.true;
   });
+
+  it('displays confirmation dialog when learning goal name input receives focus and AI assessment is checked', () => {
+    const dialogStub = sinon.stub(window, 'confirm').returns(true);
+
+    const enabledAiData = {
+      key: 'learningGoal-1',
+      id: 'learningGoal-1',
+      learningGoal: '',
+      aiEnabled: true,
+    };
+    const wrapper = shallow(
+      <LearningGoalItem
+        {...defaultProps}
+        exisitingLearningGoalData={enabledAiData}
+      />
+    );
+
+    wrapper.find('input').first().prop('onFocus')();
+    expect(dialogStub.calledOnce).to.be.true;
+    dialogStub.restore();
+  });
 });

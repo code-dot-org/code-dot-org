@@ -19,7 +19,6 @@ const initialState = {
 };
 
 export default {
-  title: 'MiniViewTopRow',
   component: MiniViewTopRow,
 };
 

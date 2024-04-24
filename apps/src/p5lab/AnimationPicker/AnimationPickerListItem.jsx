@@ -18,6 +18,7 @@ export default class AnimationPickerListItem extends React.Component {
     category: PropTypes.string,
     selected: PropTypes.bool,
     isBackgroundsTab: PropTypes.bool,
+    isAnimationJsonMode: PropTypes.bool,
   };
 
   state = {
@@ -37,14 +38,17 @@ export default class AnimationPickerListItem extends React.Component {
       isBackgroundsTab,
     } = this.props;
     const {loaded, hover} = this.state;
-
-    const iconImageSrc = category
-      ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
-      : '';
-
     const multiSelectIconClassName = `fa ${
       selected ? 'fa-check' : 'fa-plus'
     } fa-2x`;
+
+    let iconImageSrc = category
+      ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
+      : '';
+    if (this.props.isAnimationJsonMode && category === 'all') {
+      iconImageSrc =
+        '/blockly/media/p5lab/animation-previews/category_all_including_backgrounds.png';
+    }
 
     const previewSize = parseInt(style.previewSize);
 
@@ -69,6 +73,7 @@ export default class AnimationPickerListItem extends React.Component {
           )}
           type="button"
           aria-label={label}
+          data-category={category}
         >
           <div>
             {animationProps && (
@@ -94,11 +99,11 @@ export default class AnimationPickerListItem extends React.Component {
                 {label}
               </span>
             )}
-            {category && (
+            {iconImageSrc && (
               <img
-                data-category={category}
                 className={style.categoryImage}
                 src={iconImageSrc}
+                alt={''}
               />
             )}
           </div>

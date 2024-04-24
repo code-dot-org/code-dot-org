@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import i18n from '@cdo/locale';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import style from './certificate_batch.module.scss';
+import React, {useState} from 'react';
+
 import {
   Heading1,
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import style from './certificate_batch.module.scss';
 
 const curriculaData = [
   {
@@ -125,6 +127,7 @@ export default function CertificateBatch({
               className={style.textarea}
               value={studentNames}
               onChange={onChange}
+              aria-label={i18n.studentNames()}
             />
             <br />
             <button type="submit" className={style.submit} id="submit-button">

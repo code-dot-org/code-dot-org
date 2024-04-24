@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import {useSelector} from 'react-redux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {projectUpdatedStatuses} from '@cdo/apps/code-studio/projectRedux';
+import {commonI18n} from '@cdo/apps/types/locale';
 
-const commonI18n = require('@cdo/locale');
 const moduleStyles = require('./save-status.module.scss').default;
 
 /**

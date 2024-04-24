@@ -1,17 +1,23 @@
 import React from 'react';
 import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import danceMsg from './locale';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import AgeDialog from '../templates/AgeDialog';
 import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
 import {getFilterStatus} from '@cdo/apps/dance/songs';
 import DanceAiModal from './ai/DanceAiModal';
 import SongSelector from '@cdo/apps/dance/SongSelector';
+import DCDO from '@cdo/apps/dcdo';
+
+const isHocEmailTimeOfYear = ['soon-hoc', 'actual-hoc'].includes(
+  DCDO.get('hoc_mode', false)
+);
 
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
@@ -26,8 +32,9 @@ class DanceVisualizationColumn extends React.Component {
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
     over21: PropTypes.bool.isRequired,
-    currentAiModalField: PropTypes.object,
+    currentAiModalBlockId: PropTypes.string,
     resetProgram: PropTypes.func.isRequired,
+    playSound: PropTypes.func.isRequired,
   };
 
   state = {
@@ -43,16 +50,13 @@ class DanceVisualizationColumn extends React.Component {
 
   componentDidUpdate(prevProps) {
     // Reset the program when the AI modal is opened
-    if (
-      prevProps.currentAiModalField === undefined &&
-      this.props.currentAiModalField
-    ) {
+    if (!prevProps.currentAiModalBlockId && this.props.currentAiModalBlockId) {
       this.props.resetProgram();
     }
   }
 
   render() {
-    const {levelIsRunning} = this.props;
+    const {levelIsRunning, playSound} = this.props;
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
@@ -71,6 +75,7 @@ class DanceVisualizationColumn extends React.Component {
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
         {(this.props.over21 || this.props.userType === 'teacher') &&
+          isHocEmailTimeOfYear &&
           cookies.get('HourOfCodeGuideEmailDialogSeen') !== 'true' && (
             <HourOfCodeGuideEmailDialog
               isSignedIn={isSignedIn}
@@ -100,10 +105,15 @@ class DanceVisualizationColumn extends React.Component {
                 <img
                   src="//curriculum.code.org/images/DancePartyLoading.gif"
                   style={styles.loadingGif}
+                  alt={danceMsg.dancePartyLoading()}
                 />
               </div>
               {this.props.isShareView && (
-                <img src={imgSrc} id="danceClickToRun" />
+                <img
+                  src={imgSrc}
+                  id="danceClickToRun"
+                  alt={danceMsg.clickToRunDanceParty()}
+                />
               )}
             </div>
           </ProtectedVisualizationDiv>
@@ -111,7 +121,9 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-          {this.props.currentAiModalField && <DanceAiModal />}
+          {this.props.currentAiModalBlockId && (
+            <DanceAiModal playSound={playSound} />
+          )}
         </div>
       </div>
     );
@@ -151,5 +163,5 @@ export default connect(state => ({
   over21: state.currentUser.over21,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
-  currentAiModalField: state.dance.currentAiModalField,
+  currentAiModalBlockId: state.dance.currentAiModalBlockId,
 }))(DanceVisualizationColumn);

@@ -3,10 +3,12 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import i18n from '@cdo/tutorialExplorer/locale';
+
+import shapes from './shapes';
 import Tutorial from './tutorial';
 import TutorialDetail from './tutorialDetail';
-import shapes from './shapes';
-import i18n from '@cdo/tutorialExplorer/locale';
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();

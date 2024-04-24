@@ -1,0 +1,242 @@
+{
+  "az-AZ": {
+    "/dashboard/blocks.yml": "c27ea44897653810aca932a5174d764b"
+  },
+  "bg-BG": {
+    "/dashboard/blocks.yml": "f6b1a6636cfd2ee4b8345a061ffb38a7"
+  },
+  "bn-BD": {
+    "/dashboard/blocks.yml": "7bf46dd194c2369365d781eed7a5469e"
+  },
+  "bs-BA": {
+    "/dashboard/blocks.yml": "be49d5772a95f1fe2e3249096080ffe6"
+  },
+  "ca-ES": {
+    "/dashboard/blocks.yml": "ba790a858c2aeff8895b9897497e5810"
+  },
+  "co-CO": {
+    "/dashboard/blocks.yml": "f0c2b8f199b30ef7cb69177ba4f27e16"
+  },
+  "cs-CZ": {
+    "/dashboard/blocks.yml": "a837e2b7459e1f13280eaeae8b5c5374"
+  },
+  "da-DK": {
+    "/dashboard/blocks.yml": "0b3a542636267bee2ebb2e830f5f34f6"
+  },
+  "de-DE": {
+    "/dashboard/blocks.yml": "bed7e24fccea796754479e2f7f6a7d19"
+  },
+  "dv-MV": {
+    "/dashboard/blocks.yml": "8b12eaea864459546dd81ea76d5bb097"
+  },
+  "el-GR": {
+    "/dashboard/blocks.yml": "ef21df7340a1676787db049353390883"
+  },
+  "en-GB": {
+    "/dashboard/blocks.yml": "7213ea9a50dafc46e76aded0db62def1"
+  },
+  "es-ES": {
+    "/dashboard/blocks.yml": "3e493ed98909a10d9814187f120e2654"
+  },
+  "es-MX": {
+    "/dashboard/blocks.yml": "2274d2cd712c0ee9dc5d72679f2acec4"
+  },
+  "et-EE": {
+    "/dashboard/blocks.yml": "8cae9aebba0ad896d332da5fb36f664e"
+  },
+  "ar-SA": {
+    "/dashboard/blocks.yml": "6217d5f366bc464cbdbd7e3f48440a72"
+  },
+  "eu-ES": {
+    "/dashboard/blocks.yml": "2f17fc64328648fc7b119ea1ae57ac50"
+  },
+  "fa-AF": {
+    "/dashboard/blocks.yml": "49a3b22124218055dd5f40dd8844df67"
+  },
+  "fa-IR": {
+    "/dashboard/blocks.yml": "a713f85d24c26758e41179f77ca02370"
+  },
+  "fi-FI": {
+    "/dashboard/blocks.yml": "9447b6287875ddd468b111d236a5ff9f"
+  },
+  "fil-PH": {
+    "/dashboard/blocks.yml": "b1fea1963bcdf7dabc9dc3363049c378"
+  },
+  "fr-FR": {
+    "/dashboard/blocks.yml": "ef58ce011bed44ee5fe2d292f27cd575"
+  },
+  "ga-IE": {
+    "/dashboard/blocks.yml": "28ded3c910e13be641695b771eb974c8"
+  },
+  "gl-ES": {
+    "/dashboard/blocks.yml": "a854a1645c2460877eb8602027622301"
+  },
+  "haw-HI": {
+    "/dashboard/blocks.yml": "6d37b8a2d73c400fba9a370fe25ec2f4"
+  },
+  "he-IL": {
+    "/dashboard/blocks.yml": "aa9488ab2c93f326e39b39c879f0c00b"
+  },
+  "hi-IN": {
+    "/dashboard/blocks.yml": "73c20b05a5b25a7cc7bb33540937a23a"
+  },
+  "hr-HR": {
+    "/dashboard/blocks.yml": "5b8e8554ff198854a8e9e3267c71209b"
+  },
+  "hu-HU": {
+    "/dashboard/blocks.yml": "bd123b65ec388aacdc3a60741bf5e85a"
+  },
+  "hy-AM": {
+    "/dashboard/blocks.yml": "616eff3a5fabb122a7d9f86ea033e232"
+  },
+  "id-ID": {
+    "/dashboard/blocks.yml": "749798ddd1c652b4ea57a01e256e667b"
+  },
+  "is-IS": {
+    "/dashboard/blocks.yml": "db514f9c305cd0306da29c6b3d6d0e87"
+  },
+  "it-IT": {
+    "/dashboard/blocks.yml": "009576958a2f7c15b340215d19b0b3a6"
+  },
+  "ja-JP": {
+    "/dashboard/blocks.yml": "4ef29fa5263b89fdec9d439867f77941"
+  },
+  "ka-GE": {
+    "/dashboard/blocks.yml": "4fafeea6d490f6fc29aa24939a535903"
+  },
+  "kk-KZ": {
+    "/dashboard/blocks.yml": "9f04cf536318ea7b740a4dcb12d247b8"
+  },
+  "kn-IN": {
+    "/dashboard/blocks.yml": "6f32e0accba3b4850fe9c0b46f98550d"
+  },
+  "km-KH": {
+    "/dashboard/blocks.yml": "30b43b8a7beae238c94f16339f3c0e8d"
+  },
+  "ko-KR": {
+    "/dashboard/blocks.yml": "c554447072f7d28e9aafc3406b76ad3f"
+  },
+  "ku-IQ": {
+    "/dashboard/blocks.yml": "2a4cab5a07b5431899f38b25b334150f"
+  },
+  "ky-KG": {
+    "/dashboard/blocks.yml": "9ed42659970ba9cdb52f6efca913ed0c"
+  },
+  "lt-LT": {
+    "/dashboard/blocks.yml": "47eb91119b7d20cf44e40c9fa0fd5614"
+  },
+  "lv-LV": {
+    "/dashboard/blocks.yml": "adb6a073d512b6091293299a258fb0ed"
+  },
+  "mi-NZ": {
+    "/dashboard/blocks.yml": "f0e5d083ad78c87cccca4ca5d03a8ede"
+  },
+  "mk-MK": {
+    "/dashboard/blocks.yml": "22f9d0ab32f4a487e092f3644e945909"
+  },
+  "mn-MN": {
+    "/dashboard/blocks.yml": "258bb3b0367ab4e81e22927e8abe9162"
+  },
+  "mr-IN": {
+    "/dashboard/blocks.yml": "1631de3fb659479a94f729dfe883b59a"
+  },
+  "ms-MY": {
+    "/dashboard/blocks.yml": "847cdf4c6bc86f6af5bc14e7669f6552"
+  },
+  "mt-MT": {
+    "/dashboard/blocks.yml": "bff51267fc05d87351e609d455f7848b"
+  },
+  "my-MM": {
+    "/dashboard/blocks.yml": "b17b41e2369430ae52d5f40e5de66978"
+  },
+  "ne-NP": {
+    "/dashboard/blocks.yml": "850f93a3541e6353e5350e648f56b3f5"
+  },
+  "nl-NL": {
+    "/dashboard/blocks.yml": "081f0d5637304581198e4d7c28334056"
+  },
+  "nn-NO": {
+    "/dashboard/blocks.yml": "27c8b941747453642e06a75c3705b457"
+  },
+  "no-NO": {
+    "/dashboard/blocks.yml": "06a34eaef534fd533584482aec673e45"
+  },
+  "pl-PL": {
+    "/dashboard/blocks.yml": "8ff3a7771a5fe2b5f04ee86ee22cf33f"
+  },
+  "ps-AF": {
+    "/dashboard/blocks.yml": "24b3b4b5f1778287756db0fe60c8eef7"
+  },
+  "pt-BR": {
+    "/dashboard/blocks.yml": "1469b259a64b5f441b641ac0086952e5"
+  },
+  "pt-PT": {
+    "/dashboard/blocks.yml": "659ac5f95aa40ba6f4f27180a71e0b96"
+  },
+  "ro-RO": {
+    "/dashboard/blocks.yml": "41eab5f9e445ef155a069a76fea6ab01"
+  },
+  "ru-RU": {
+    "/dashboard/blocks.yml": "d8183ecd171c623f8c28a2656f4ecf87"
+  },
+  "se-FI": {
+    "/dashboard/blocks.yml": "85b2bebf72fd904ed73b67bf95c6bfa0"
+  },
+  "sm-WS": {
+    "/dashboard/blocks.yml": "5fc981fba526f1ce1b54b5674db411d4"
+  },
+  "si-LK": {
+    "/dashboard/blocks.yml": "4dfe3bec2cdb677de8ae64491f0498ad"
+  },
+  "sk-SK": {
+    "/dashboard/blocks.yml": "3245f2c00c041e2076244415b7692a38"
+  },
+  "sl-SI": {
+    "/dashboard/blocks.yml": "b420bebd5e04e65c25e30d3fb9f2df87"
+  },
+  "sq-AL": {
+    "/dashboard/blocks.yml": "140fde7f18df82ff2e0b07213ef4edba"
+  },
+  "sr-SP": {
+    "/dashboard/blocks.yml": "549e8a235085d14a3ed4463964f52760"
+  },
+  "sv-SE": {
+    "/dashboard/blocks.yml": "4a31c4e3a869329f29e11846679a80cb"
+  },
+  "ta-IN": {
+    "/dashboard/blocks.yml": "1f885d391b2db8eff7bdf65c09c202fc"
+  },
+  "te-IN": {
+    "/dashboard/blocks.yml": "5c6e9602ecdc41d6f858a9335cd6239a"
+  },
+  "tg-TJ": {
+    "/dashboard/blocks.yml": "1ffa89a097c5aaf18c6362ae2acf304a"
+  },
+  "th-TH": {
+    "/dashboard/blocks.yml": "80eb3548de4f399e1beae1a53c757eb3"
+  },
+  "tr-TR": {
+    "/dashboard/blocks.yml": "f9d7dd5ea8ae5df2b91874ab82a9b7ef"
+  },
+  "uk-UA": {
+    "/dashboard/blocks.yml": "cf57bde72105103d3ae7b6fa515f9810"
+  },
+  "ur-PK": {
+    "/dashboard/blocks.yml": "04d6d896619aa736c5e2430819d06ef5"
+  },
+  "uz-UZ": {
+    "/dashboard/blocks.yml": "4deaf8f2f3fd727eceb76c00ec31ee88"
+  },
+  "vi-VN": {
+    "/dashboard/blocks.yml": "185a0a8a79ff996212562d03d8d9f30f"
+  },
+  "zh-CN": {
+    "/dashboard/blocks.yml": "a2da8ed120d921808076e77c34f2bb2d"
+  },
+  "zh-TW": {
+    "/dashboard/blocks.yml": "e5af17c100cddf99126dd0766ba03b0d"
+  },
+  "zu-ZA": {
+    "/dashboard/blocks.yml": "90ec51d355940f04b3a03fc064627b23"
+  }
+}

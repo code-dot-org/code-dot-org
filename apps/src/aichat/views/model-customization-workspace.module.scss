@@ -1,0 +1,80 @@
+@import 'color';
+@import '../../mixins.scss';
+
+%full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modelCustomizationWorkspace {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    @extend %full-width;
+    height: 120px;
+    min-height: 50px;
+    resize: vertical;
+    margin: 0;
+    border-radius: 4px;
+    border-color: $light_black;
+  }
+
+  input {
+    @extend %full-width;
+    height: 30px;
+    border-radius: 4px;
+    border-color: $light_black;
+  }
+
+  .inputContainer {
+    padding: 5px 0;
+  }
+}
+
+.horizontalFlexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.verticalFlexContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.customizationContainer {
+  overflow-y: auto;
+  height: 65vh;
+}
+
+.footerButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $light_gray_200;
+  padding: 10px;
+  height: 50px;
+}
+
+.selectedModelDropdown {
+  @extend %full-width;
+  padding-bottom: 10px;
+}
+
+.updateButton {
+  width: 100%;
+  margin: 10px;
+}
+
+.buttonNoMargin {
+  width: 100%;
+  margin: 0;
+}
+
+.compareModelsButton {
+  padding: 5px 16px;
+  margin: 10px 0;
+}

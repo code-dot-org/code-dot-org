@@ -3282,7 +3282,7 @@
   },
   "https://studio.code.org/s/express-2023/lessons/15/extras?level_name=courseD_bee_conditionals_challenge1_2023": {
     "short_instructions": "Collect all the nectar and make all the honey.",
-    "long_instructions": "Collect all of the nectar and make all of the honey. You can only collect nectar from flowers and make honey from honeycombs. Check every space to see if there is a flower or honeycomb.",
+    "long_instructions": "Collect all of the nectar and make all of the honey. You can only collect nectar from flowers and make honey from honeycombs. Check every space to see if there is a flower or honeycomb.\n\nHint: The light green squares represent obstacles that the bee must move around.",
     "authored_hints": {
       "courseD_bee_conditionals_challenge1_a": "Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.",
       "courseD_bee_conditionals_challenge1_b": "In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square."
@@ -4294,9 +4294,6 @@
       },
       "draw square": {
         "name": "draw square"
-      },
-      "do something": {
-        "name": "do something"
       },
       "staggered squares": {
         "name": "staggered squares"
@@ -5831,70 +5828,7 @@
       "Course E: Frozen Project_examples_2023": {
         "display_name": "Snowflake Flowers",
         "short_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "function_definitions": {
-          "small flower": {
-            "name": "small flower"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "LOGIC FLOWERS2"
-          },
-          "LOGIC FLOWER": {
-            "name": "LOGIC FLOWER"
-          },
-          "LOGIC FLOWERS": {
-            "name": "LOGIC FLOWERS"
-          },
-          "draw a star": {
-            "name": "draw a star",
-            "description": "draw a star with given points and sides of given length",
-            "parameters": {
-              "points": "points",
-              "length": "length"
-            }
-          },
-          "draw a circle": {
-            "name": "draw a circle",
-            "description": "draw a circle of given radius",
-            "parameters": {
-              "radius": "radius"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "draw a pinwheel",
-            "parameters": {
-              "sides": "sides",
-              "length": "length",
-              "repeat": "repeat"
-            }
-          },
-          "draw a triangle": {
-            "name": "draw a triangle",
-            "parameters": {
-              "length": "length"
-            }
-          },
-          "draw a shape": {
-            "name": "draw a shape",
-            "parameters": {
-              "sides": "sides",
-              "length": "length"
-            }
-          },
-          "draw a house": {
-            "name": "draw a house",
-            "parameters": {
-              "length": "length"
-            }
-          },
-          "draw a square": {
-            "name": "draw a square",
-            "parameters": {
-              "length": "length",
-              "sides": "sides"
-            }
-          }
-        }
+        "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects."
       }
     }
   },

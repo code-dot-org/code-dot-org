@@ -5,7 +5,8 @@ import {
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
-import {SongData, SongMetadata, AiOutput} from './types';
+import {SongData, SongMetadata} from './types';
+import {DanceAiModalOutputType} from './ai/types';
 import {queryParams} from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
 import {
@@ -17,29 +18,28 @@ import {
   loadSongMetadata,
   isSongDeprecated,
 } from './songs';
-import {Field} from 'blockly';
 
 export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
-  currentAiModalField?: Field;
-  aiOutput?: AiOutput;
+  currentAiModalBlockId: string | undefined;
+  aiOutput?: DanceAiModalOutputType;
+  aiModalOpenedFromFlyout: boolean;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
-  aiModalOpenedFromFlyout: boolean;
 }
 
 const initialState: DanceState = {
   selectedSong: 'macklemore90',
   songData: {},
   runIsStarting: false,
-  currentAiModalField: undefined,
-  aiOutput: AiOutput.AI_BLOCK,
+  currentAiModalBlockId: undefined,
+  aiOutput: DanceAiModalOutputType.AI_BLOCK,
+  aiModalOpenedFromFlyout: false,
   isRunning: false,
   currentSongMetadata: undefined,
-  aiModalOpenedFromFlyout: false,
 };
 
 // THUNKS
@@ -59,7 +59,7 @@ export const initSongs = createAsyncThunk(
       };
       onAuthError: (songId: string) => void;
       onSongSelected?: (songId: string) => void;
-      onSongUnavailable?: () => void;
+      onSongUnavailable?: (songId: string) => void;
     },
     {dispatch}
   ) => {
@@ -84,10 +84,15 @@ export const initSongs = createAsyncThunk(
 
     // a song should be included if we do NOT have a filtered song set
     // OR if we do have a set and our song's id is in them.
-    const songManifest = unfilteredSongManifest.filter(
+    let songManifest = unfilteredSongManifest.filter(
       (song: {id: string}) =>
         !filteredSongSet.size || filteredSongSet.has(song.id)
     );
+    // Handle dev scenario where there's no overlap between
+    // levelbuilder-configured songs and the list of dev-only songs
+    if (!songManifest.length) {
+      songManifest = unfilteredSongManifest;
+    }
     const songData = parseSongOptions(songManifest) as SongData;
 
     if (
@@ -95,7 +100,7 @@ export const initSongs = createAsyncThunk(
       isSongDeprecated(selectSongOptions.selectedSong) &&
       onSongUnavailable
     ) {
-      onSongUnavailable();
+      onSongUnavailable(selectSongOptions.selectedSong);
     }
     const selectedSong = getSelectedSong(songManifest, selectSongOptions);
 
@@ -183,21 +188,21 @@ const danceSlice = createSlice({
     setCurrentSongMetadata: (state, action: PayloadAction<SongMetadata>) => {
       state.currentSongMetadata = action.payload;
     },
-    setAiOutput: (state, action: PayloadAction<AiOutput>) => {
+    setAiOutput: (state, action: PayloadAction<DanceAiModalOutputType>) => {
       state.aiOutput = action.payload;
     },
     openAiModal: (
       state,
       action: PayloadAction<{
-        modalField: Field;
+        blockId: string;
         fromFlyout: boolean;
       }>
     ) => {
-      state.currentAiModalField = action.payload.modalField;
+      state.currentAiModalBlockId = action.payload.blockId;
       state.aiModalOpenedFromFlyout = action.payload.fromFlyout;
     },
     closeAiModal: state => {
-      state.currentAiModalField = undefined;
+      state.currentAiModalBlockId = undefined;
       state.aiModalOpenedFromFlyout = false;
     },
   },

@@ -1,8 +1,9 @@
+import {Link} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React, {createRef, useEffect} from 'react';
-import {parseElement} from '@cdo/apps/xml';
+
 import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
-import {Link} from '@dsco_/link';
+import {parseElement} from '@cdo/apps/xml';
 
 export default function EmbeddedBlock({blockName, link, ariaLabel}) {
   const blockRef = createRef();
@@ -10,7 +11,7 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
   useEffect(() => {
     if (blockName && blockRef.current) {
       const blocksDom = parseElement(`<block type='${blockName}' />`);
-      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+      const blockSpace = Blockly.createEmbeddedWorkspace(
         blockRef.current,
         blocksDom,
         {

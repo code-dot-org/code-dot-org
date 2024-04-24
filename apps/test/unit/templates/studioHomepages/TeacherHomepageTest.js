@@ -1,12 +1,15 @@
-import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import {assert} from 'chai';
+import {shallow} from 'enzyme';
+import React from 'react';
+import sinon from 'sinon';
+
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
-import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {expect} from '../../../util/reconfiguredChai';
+
+import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
 
 const DEFAULT_PROPS = {
   announcements: [],
@@ -15,7 +18,6 @@ const DEFAULT_PROPS = {
   topCourse,
   plCourses,
   topPlCourse,
-  isEnglish: true,
   joinedStudentSections: [],
   joinedPlSections: [],
   ncesSchoolId: 'school-id',
@@ -140,22 +142,19 @@ describe('TeacherHomepage', () => {
   });
 
   /*
-    We have disabled the Census Teacher Banner on the Teacher Homepage (November 2023) to conserve
-    space. If we decide to show the banner again this test will need to be updated. See
-    TeacherHomepage.jsx to make the banner show.
+   * Update according to whether or not we are showing CensusBanner on TeacherHomepage
    */
-  it('does not render CensusTeacherBanner even if showCensusBanner is true', () => {
+  it('renders CensusTeacherBanner if showCensusBanner is true and forceHide is false', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert(!wrapper.find('CensusTeacherBanner').exists());
+    assert(wrapper.find('CensusTeacherBanner').exists());
   });
 
   /*
-    We have disabled the AFE Banner on the Teacher Homepage (September 2023) to conserve
-    space. If we decide to show the banner again this test will need to be updated. See
-    TeacherHomepage.jsx to make the banner show.
+    This test will need to be updated according to whether the banner is showing,
+    as determined by shouldShowAFEBanner in TeacherHomepage.jsx.
    */
-  it('does not render a DonorTeacherBanner even if isEnglish and afeEligible are true', () => {
-    const wrapper = setUp({isEnglish: true, afeEligible: true});
+  it('renders a DonorTeacherBanner only if afeEligible is true and shouldShowAFEBanner', () => {
+    const wrapper = setUp({afeEligible: true});
     assert(!wrapper.find('DonorTeacherBanner').exists());
   });
 
@@ -164,24 +163,16 @@ describe('TeacherHomepage', () => {
     assert(wrapper.containsMatchingElement(<TeacherSections />));
   });
 
-  it('renders two RecentCourses component', () => {
+  it('renders one RecentCourses component', () => {
     const wrapper = setUp();
     const recentCourses = wrapper.find('RecentCourses');
-    assert.equal(recentCourses.length, 2);
+    assert.equal(recentCourses.length, 1);
     assert.deepEqual(recentCourses.at(0).props(), {
       showAllCoursesLink: true,
       isTeacher: true,
       hasFeedback: false,
       courses: courses,
       topCourse: topCourse,
-    });
-    assert.deepEqual(recentCourses.at(1).props(), {
-      showAllCoursesLink: true,
-      isTeacher: false,
-      hasFeedback: false,
-      isProfessionalLearningCourse: true,
-      courses: plCourses,
-      topCourse: topPlCourse,
     });
   });
 
@@ -198,46 +189,10 @@ describe('TeacherHomepage', () => {
     });
   });
 
-  it('renders PL recentCourse if topPlCourse but no plCourses', () => {
-    const wrapper = setUp({plCourses: [], topPlCourse: topPlCourse});
-    const recentCourses = wrapper.find('RecentCourses');
-    assert.equal(recentCourses.length, 2);
-    assert.deepEqual(recentCourses.at(0).props(), {
-      showAllCoursesLink: true,
-      isTeacher: true,
-      hasFeedback: false,
-      courses: courses,
-      topCourse: topCourse,
-    });
-    assert.deepEqual(recentCourses.at(1).props(), {
-      showAllCoursesLink: true,
-      isTeacher: false,
-      hasFeedback: false,
-      isProfessionalLearningCourse: true,
-      courses: [],
-      topCourse: topPlCourse,
-    });
-  });
-
-  it('renders PL recentCourse if plCourses but no topPlCourse', () => {
-    const wrapper = setUp({plCourses: plCourses, topPlCourse: null});
-    const recentCourses = wrapper.find('RecentCourses');
-    assert.equal(recentCourses.length, 2);
-    assert.deepEqual(recentCourses.at(0).props(), {
-      showAllCoursesLink: true,
-      isTeacher: true,
-      hasFeedback: false,
-      courses: courses,
-      topCourse: topCourse,
-    });
-    assert.deepEqual(recentCourses.at(1).props(), {
-      showAllCoursesLink: true,
-      isTeacher: false,
-      hasFeedback: false,
-      isProfessionalLearningCourse: true,
-      courses: plCourses,
-      topCourse: null,
-    });
+  // TODO - This test can be removed when the corresponding section is removed
+  it('renders PL has moved section if plCourses exist', () => {
+    const wrapper = setUp();
+    wrapper.find('pl-courses-placeholder');
   });
 
   it('renders a TeacherResources component', () => {

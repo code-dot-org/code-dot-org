@@ -20,9 +20,7 @@ module Api::V1::Pd
       application_data = empty_application_data
 
       ROLES.each do |role|
-        apps = get_applications_by_role(role, include_associations: false).
-          select(:status, "count(id) AS total").
-          group(:status)
+        apps = get_applications_by_role(role, include_associations: false)
 
         if regional_partner_value == REGIONAL_PARTNERS_NONE
           apps = apps.where(regional_partner_id: nil)
@@ -30,8 +28,9 @@ module Api::V1::Pd
           apps = apps.where(regional_partner_id: regional_partner_value)
         end
 
-        apps.group(:status).each do |group|
-          application_data[role][group.status] = {total: group.total}
+        apps_statuses = apps&.map(&:status_including_enrolled)&.tally
+        apps_statuses&.each do |status, total|
+          application_data[role][status] = {total: total}
         end
       end
 
@@ -240,6 +239,9 @@ module Api::V1::Pd
               total: 0
             }
           end
+          app_data[role]['enrolled'] = {
+            total: 0
+          }
         end
       end
     end

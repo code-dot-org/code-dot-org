@@ -1,33 +1,36 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {connect} from 'react-redux';
-import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {scriptDataPropType} from '../sectionProgressConstants';
+
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
   setScriptId,
 } from '@cdo/apps/redux/unitSelectionRedux';
-import StandardsProgressTable from './StandardsProgressTable';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {unitDataPropType} from '../sectionProgressConstants';
+import {loadUnitProgress} from '../sectionProgressLoader';
+
+import PrintReportButton from './PrintReportButton';
 import {
   getNumberLessonsCompleted,
   getNumberLessonsInScript,
   setTeacherCommentForReport,
   lessonsByStandard,
 } from './sectionStandardsProgressRedux';
+import {cstaStandardsURL} from './standardsConstants';
 import StandardsLegend from './StandardsLegend';
+import StandardsProgressTable from './StandardsProgressTable';
 import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo';
 import StandardsReportHeader from './StandardsReportHeader';
-import color from '@cdo/apps/util/color';
-import _ from 'lodash';
-import {loadScriptProgress} from '../sectionProgressLoader';
-import PrintReportButton from './PrintReportButton';
-import {cstaStandardsURL} from './standardsConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 class StandardsReport extends Component {
   static propTypes = {
@@ -35,7 +38,7 @@ class StandardsReport extends Component {
     scriptId: PropTypes.number,
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
     teacherName: PropTypes.string,
     sectionName: PropTypes.string,
     teacherComment: PropTypes.string,
@@ -55,7 +58,7 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    loadScriptProgress(scriptIdFromTD, this.props.sectionId);
+    loadUnitProgress(scriptIdFromTD, this.props.sectionId);
   }
 
   getLinkToOverview() {
@@ -157,7 +160,7 @@ class StandardsReport extends Component {
                   markdown={i18n.standardsGetInvolvedDetailsForPrint({
                     adminLink: pegasus('/administrators'),
                     parentLink: pegasus('/help'),
-                    teacherLink: '/courses',
+                    teacherLink: pegasus('/teach'),
                   })}
                 />
               </div>

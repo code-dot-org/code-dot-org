@@ -157,7 +157,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">वाचन-पूर्व विद्यार्थ्यांसाठी एक्स्प्रेस अभ्यासक्रम</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">Express Course for pre-readers</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -224,7 +224,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">App Lab</h3></a>
     <p style="color:#ffffff">अॅप लॅब हे एक असे प्रोग्रॅमिंग एन्व्हायर्नमेंट आहे जिथे तुम्ही सोपी अॅप्स बनवू शकता. अॅप डिझाईन करा, ते चालण्यासाठी ब्लॉक्स किंवा जावास्क्रिप्ट वापरून कोडींग करा आणि नंतर तुमचे अॅप काही सेकंदांमध्ये शेअर करा.</p>
@@ -233,7 +233,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Game Lab</h3></a>
     <p style="color:#ffffff">गेम लॅब हे एक असे प्रोग्रॅमिंग एन्व्हायर्नमेंट आहे जिथे तुम्ही एकमेकांशी संवाद साधणाऱ्या वस्तू आणि पात्रे वापरून सोपी अॅनिमेशन्स आणि गेम्स बनवू शकता.</p>
@@ -243,7 +243,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Web Lab</h3></a>
     <p style="color:#ffffff">वेब लॅब हे एक असे प्रोग्रॅमिंग एन्व्हायर्नमेंट आहे जिथे तुम्ही HTML आणि CSS वापरून सोपी वेब पेजेस बनवू शकता. तुमची वेब पेजेस डिझाईन करा आणि तुमची साईट काही सेकंदांमध्ये शेअर करा.</p>

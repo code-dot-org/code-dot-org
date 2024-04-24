@@ -1,17 +1,21 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/ExpandedCurriculumCatalogCard';
-import {translatedAvailableResources} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
 import {
   getStore,
   registerReducers,
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/ExpandedCurriculumCatalogCard';
+import {translatedAvailableResources} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import sinon from 'sinon';
+
+import {expect} from '../../../util/reconfiguredChai';
+import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
+
 describe('CurriculumCatalogExpandedCard', () => {
   let defaultProps;
   let store;
@@ -28,6 +32,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     registerReducers({teacherSections});
     store = getStore();
     defaultProps = {
+      courseKey: 'oceans',
       courseDisplayName: 'AI for Oceans',
       duration: 'quarter',
       gradeRange: 'Grades: 3-12',
@@ -46,6 +51,11 @@ describe('CurriculumCatalogExpandedCard', () => {
       isInUS: true,
       imageSrc:
         'https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png',
+      isSignedOut: false,
+      isTeacher: true,
+      handleSetExpandedCardKey: () => {},
+      recommendedSimilarCurriculum: FULL_TEST_COURSES[0],
+      recommendedStretchCurriculum: FULL_TEST_COURSES[1],
     };
   });
 
@@ -56,7 +66,10 @@ describe('CurriculumCatalogExpandedCard', () => {
   it('renders course name', () => {
     renderCurriculumExpandedCard();
 
-    screen.getByRole('heading', {name: defaultProps.courseDisplayName});
+    screen.getByRole('heading', {
+      name: defaultProps.courseDisplayName,
+      hidden: true,
+    });
   });
 
   it('renders grade range with icon', () => {
@@ -109,7 +122,9 @@ describe('CurriculumCatalogExpandedCard', () => {
       video: null,
     });
 
-    screen.getByRole('img');
+    // Expect to find 3 images: one as the video replacement, one from the Similar
+    // Curriculum recommendation, and one from the Stretch Curriculum recommendation
+    expect(screen.getAllByRole('img', {hidden: true}).length).to.equal(3);
   });
 
   it('renders image with alt text if passed and no video', () => {
@@ -121,7 +136,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     });
 
     // when alt text is present, the img name is the alt text
-    screen.getByRole('img', {name: altText});
+    screen.getByRole('img', {name: altText, hidden: true});
   });
 
   it('renders available resources section when resources are available', () => {
@@ -224,6 +239,7 @@ describe('CurriculumCatalogExpandedCard', () => {
       name: new RegExp(
         `Assign ${defaultProps.courseDisplayName} to your classroom`
       ),
+      hidden: true,
     });
 
     fireEvent.click(assignButton);
@@ -242,6 +258,7 @@ describe('CurriculumCatalogExpandedCard', () => {
 
     const onCloseButton = screen.getByRole('button', {
       name: 'Close Button',
+      hidden: true,
     });
 
     fireEvent.click(onCloseButton);
@@ -254,5 +271,60 @@ describe('CurriculumCatalogExpandedCard', () => {
     screen.getByLabelText(
       new RegExp(`View details about ${defaultProps.courseDisplayName}`)
     );
+  });
+
+  it('renders Assign button for signed out user', () => {
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      isSignedOut: true,
+      isTeacher: false,
+    });
+    screen.getByText('Assign to class sections');
+  });
+
+  it('renders Assign button for teacher', () => {
+    renderCurriculumExpandedCard();
+    screen.getByText('Assign to class sections');
+  });
+
+  it('does not render Assign button for student', () => {
+    renderCurriculumExpandedCard({...defaultProps, isTeacher: false});
+    expect(screen.queryByText('Assign to class sections')).to.be.null;
+  });
+
+  it('renders Professional Learning section for signed out user', () => {
+    const professional_learning_program = 'https://code.org/apply';
+    const self_paced_pl_course_offering_path = '/courses/vpl-csa-2023';
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      professionalLearningProgram: professional_learning_program,
+      selfPacedPlCourseOfferingPath: self_paced_pl_course_offering_path,
+      isSignedOut: true,
+      isTeacher: false,
+    });
+    screen.getByText('Professional Learning');
+  });
+
+  it('renders Professional Learning section for teacher', () => {
+    const professional_learning_program = 'https://code.org/apply';
+    const self_paced_pl_course_offering_path = '/courses/vpl-csa-2023';
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      professionalLearningProgram: professional_learning_program,
+      selfPacedPlCourseOfferingPath: self_paced_pl_course_offering_path,
+    });
+    screen.getByText('Professional Learning');
+  });
+
+  it('does not render Professional Learning section for student', () => {
+    const professional_learning_program = 'https://code.org/apply';
+    const self_paced_pl_course_offering_path = '/courses/vpl-csa-2023';
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      professionalLearningProgram: professional_learning_program,
+      selfPacedPlCourseOfferingPath: self_paced_pl_course_offering_path,
+      isTeacher: false,
+    });
+    expect(screen.queryByText('Professional Learning')).to.be.null;
   });
 });

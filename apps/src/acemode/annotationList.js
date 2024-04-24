@@ -61,9 +61,15 @@ module.exports = {
   },
 
   /**
-   * @param {string} level
-   * @param {number} lineNumber One index line number
-   * @param {string} text Error string
+   * Annotates the given line by line number with the given text and level.
+   *
+   * The level indicates the type of annotation. For instance, 'error' would
+   * mark the line as having an error. The given text is then depicted generally
+   * as a 'pop-over' when the line marker is hovered and gives further details.
+   *
+   * @param {string} level - The type of annotation ('info', 'warning', 'error', etc)
+   * @param {number} lineNumber - Line number (indexed starting at 1)
+   * @param {string} text - Error string
    */
   addRuntimeAnnotation: function (level, lineNumber, text) {
     var annotation = {
@@ -77,6 +83,21 @@ module.exports = {
     updateGutter();
   },
 
+  /**
+   * Removes all active annotations matching the given level.
+   *
+   * @param {string} level - The type of annotation ('info', 'warning', 'error', etc)
+   */
+  filterOutRuntimeAnnotations: function (level) {
+    runtimeAnnotations = runtimeAnnotations.filter(annotation => {
+      return annotation.type !== level.toLowerCase();
+    });
+    updateGutter();
+  },
+
+  /**
+   * Clears all active annotations.
+   */
   clearRuntimeAnnotations: function () {
     if (runtimeAnnotations.length === 0) {
       return;

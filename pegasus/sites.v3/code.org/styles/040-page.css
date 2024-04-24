@@ -493,12 +493,6 @@ th a:active, th a:hover, th a:link, th a:visited {
   color: #c1c1c1 !important
 }
 
-.btn-white {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc
-}
-
 .btn-carousel-slide {
   background: #ffa401
 }

@@ -145,7 +145,7 @@ class ExperimentTest < ActiveSupport::TestCase
     section = mock('section')
     section.stubs(:user_id).returns(teacher.id)
     student.stubs(:sections_as_student).returns([section])
-    teacher.stubs(:sections).returns([section])
+    teacher.stubs(:sections_instructed).returns([section])
 
     assert Experiment.enabled?(experiment_name: experiment1.name, user: teacher, script: @script)
     assert Experiment.enabled?(experiment_name: experiment1.name, user: student, script: @script)
@@ -200,6 +200,22 @@ class ExperimentTest < ActiveSupport::TestCase
   test "teacher is included in single-section experiment" do
     experiment = create :single_section_experiment, script: @script
     assert Experiment.enabled?(experiment_name: experiment.name, user: experiment.section.user, script: @script)
+  end
+
+  test 'can only create up to max_count single section experiments' do
+    SingleSectionExperiment.any_instance.stubs(:max_count).returns(3)
+
+    3.times do
+      create :single_section_experiment
+    end
+
+    # creating a 4th experiment should fail
+    assert_raises ActiveRecord::RecordInvalid do
+      create :single_section_experiment
+    end
+
+    # once record limit is reached, can still update a record
+    SingleSectionExperiment.last.update!(name: 'new-name')
   end
 
   test 'single user experiment is enabled' do

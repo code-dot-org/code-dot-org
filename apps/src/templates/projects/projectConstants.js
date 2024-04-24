@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const projectDataPropType = PropTypes.shape({
+export const publishedFeaturedProjectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
   name: PropTypes.string,
   studentName: PropTypes.string,
@@ -9,6 +9,7 @@ export const projectDataPropType = PropTypes.shape({
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
   publishedToPublic: PropTypes.bool.isRequired,
+  featuredAt: PropTypes.string,
 });
 
 export const personalProjectDataPropType = PropTypes.shape({
@@ -25,27 +26,23 @@ export const featuredProjectDataPropType = PropTypes.shape({
   projectName: PropTypes.string.isRequired,
   channel: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
   topic: PropTypes.string,
   publishedAt: PropTypes.string,
   thumbnailUrl: PropTypes.string,
-  featuredAt: PropTypes.string.isRequired,
+  featuredAt: PropTypes.string,
   unfeaturedAt: PropTypes.string,
 });
 
-export const projectPropType = PropTypes.shape({
-  projectData: projectDataPropType.isRequired,
-  currentGallery: PropTypes.string.isRequired,
+export const publishedFeaturedProjectPropType = PropTypes.shape({
+  projectData: publishedFeaturedProjectDataPropType,
+  currentGallery: PropTypes.string,
 });
 
 export const Galleries = {
   PUBLIC: 'PUBLIC',
   LIBRARIES: 'LIBRARIES',
   PRIVATE: 'PRIVATE',
-};
-
-export const featuredProjectTableTypes = {
-  current: 'currentFeatured',
-  archived: 'archivedUnfeatured',
 };
 
 export const MAX_PROJECTS_PER_CATEGORY = 100;

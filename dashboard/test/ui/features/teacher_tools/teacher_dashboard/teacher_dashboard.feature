@@ -20,6 +20,7 @@ Feature: Using the teacher dashboard
 
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
@@ -30,8 +31,16 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+
+    # Toggle to V2 progress view
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I wait until element "h6:contains(Icon Key)" is visible
+    And I wait until element "#ui-test-progress-table-v2" is visible
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I wait until element "#uitest-course-dropdown" is visible
 
     # Stats tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
@@ -224,7 +233,7 @@ Feature: Using the teacher dashboard
     Given I am a teacher
     And I create a new student section and go home
     And I attempt to join the section
-    Then I wait until element "#flashes" is visible
+    Then I wait until element "div.alert" is visible
     And element "div.alert" contains text matching "Sorry, you can't join your own section"
 
   Scenario: Attempt to join an invalid section through the homepage
@@ -242,4 +251,4 @@ Feature: Using the teacher dashboard
     And I enter the section code into "input.ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
-    And element ".announcement-notification" contains text matching "You are already the owner of section"
+    And element ".announcement-notification" contains text matching "You are already an instructor for section"

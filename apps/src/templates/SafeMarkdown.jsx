@@ -5,6 +5,7 @@ import Parser from '@code-dot-org/redactable-markdown';
 
 import {
   details,
+  clickableText,
   expandableImages,
   visualCodeBlock,
   xmlAsTopLevelBlock,
@@ -79,6 +80,9 @@ schema.attributes.span = ['dataUrl', 'className'];
 // semantically-significant content
 schema.attributes['*'].push('style', 'className');
 
+// ClickableText uses data-id on a bold tag.
+schema.attributes['b'] = ['dataId'];
+
 // Add support for Blockly XML
 schema.clobber = [];
 const blocklyTags = [
@@ -111,7 +115,13 @@ blocklyTags.forEach(tag => {
 const markdownToReact = Parser.create()
   .getParser()
   // include custom plugins
-  .use([expandableImages, visualCodeBlock, xmlAsTopLevelBlock, details])
+  .use([
+    clickableText,
+    expandableImages,
+    visualCodeBlock,
+    xmlAsTopLevelBlock,
+    details,
+  ])
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST

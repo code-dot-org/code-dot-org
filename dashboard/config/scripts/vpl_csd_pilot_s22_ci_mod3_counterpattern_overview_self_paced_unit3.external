@@ -24,13 +24,13 @@ markdown <<MARKDOWN
 <table style="width:95%; text-align:center;">
 <tr>
 <td style="width:33%;">
-<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_rotate.gif">
+<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_rotate.gif" alt="A gif showing an artist palette rotating counter-clockwise,">
 </td>
 <td style="width:33%;">
-<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_scale.gif">
+<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_scale.gif" alt="A gif showing an artist palette starting small and then taking up the whole screen">
 </td>
 <td style="width:33%;">
-<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_ellipse.gif">
+<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/counter_ellipse.gif" alt="A gif showing an ellipse morphing from being vertically tall to horizontally wide.">
 </td>
 </tr>
 <tr style="background-color: #DCDCDC; font-family: courier new; font-weight: bold; font-size:10px;">
@@ -46,7 +46,7 @@ ellipse(200, 200, width, height);</td>
 
 
 
-## Let's continue practicing! 
+#### Let's continue practicing! 
 
 
 

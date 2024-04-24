@@ -3,7 +3,6 @@ import Meter from '@cdo/apps/templates/Meter';
 import color from '@cdo/apps/util/color';
 
 export default {
-  title: 'Meter',
   component: Meter,
 };
 

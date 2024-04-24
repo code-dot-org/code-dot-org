@@ -1,17 +1,23 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import React from 'react';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+
 import styleConstants from '../../styleConstants';
 
-export default function CertificateShare({announcement, printUrl, imageUrl}) {
+export default function CertificateShare({
+  announcement,
+  printUrl,
+  imageUrl,
+  imageAlt,
+}) {
   return (
     <div style={styles.wrapper}>
       <a href={printUrl}>
         <img
           src={imageUrl}
-          alt={i18n.certificateForCompletion()}
+          alt={imageAlt}
           width="100%"
           style={styles.certificate}
         />
@@ -48,6 +54,7 @@ const styles = {
 
 CertificateShare.propTypes = {
   imageUrl: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
   printUrl: PropTypes.string.isRequired,
   announcement: PropTypes.object,
 };

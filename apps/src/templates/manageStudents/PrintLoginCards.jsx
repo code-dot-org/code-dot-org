@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from '@cdo/apps/templates/Button';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import i18n from '@cdo/locale';
 
 export default class PrintLoginCards extends Component {
   static propTypes = {

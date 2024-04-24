@@ -37,6 +37,13 @@ module Dashboard
     # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
     config.action_dispatch.use_cookies_with_metadata = false
 
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins CDO.pegasus_site_host
+        resource '/dashboardapi/*', headers: :any, methods: [:get]
+      end
+    end
+
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
@@ -179,6 +186,8 @@ module Dashboard
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
+    config.action_mailer.delivery_job = 'MailDeliveryJob'
+    config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
     config.cache_store = :memory_store, {
@@ -205,5 +214,8 @@ module Dashboard
 
     # Use custom routes for error codes
     config.exceptions_app = routes
+
+    config.active_job.queue_adapter = :delayed_job
+    config.active_job.default_queue_name = CDO.active_job_queues[:default]
   end
 end

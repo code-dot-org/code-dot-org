@@ -1,13 +1,13 @@
 import React from 'react';
-import FreeResponsesAssessmentsTable from './FreeResponsesAssessmentsTable';
+
 import {
   questionOne,
   questionTwo,
   questionThree,
 } from './assessmentsTestHelpers';
+import FreeResponsesAssessmentsTable from './FreeResponsesAssessmentsTable';
 
 export default {
-  title: 'FreeResponsesAssessmentsTable',
   component: FreeResponsesAssessmentsTable,
 };
 

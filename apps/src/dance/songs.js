@@ -1,5 +1,6 @@
 import Sounds from '../Sounds';
 import {ageDialogSelectedOver13, songFilterOn} from '../templates/AgeDialog';
+import {DanceSongManifestFilename} from '../util/sharedConstants';
 import {fetchSignedCookies} from '../utils';
 
 const DEPRECATED_SONGS = [
@@ -15,6 +16,9 @@ const DEPRECATED_SONGS = [
   'ymca_villagepeople',
   'firework_katyperry',
   'showdaspoderosas_anitta',
+  'savagelove_jasonderulo',
+  'astronautintheocean_maskedwolf',
+  'dernieredanse_indila',
 ];
 
 /**
@@ -30,7 +34,7 @@ const DEPRECATED_SONGS = [
 export async function getSongManifest(useRestrictedSongs, manifestFilename) {
   if (!manifestFilename || manifestFilename.length === 0) {
     manifestFilename = useRestrictedSongs
-      ? 'songManifest2023_v4.json'
+      ? DanceSongManifestFilename
       : 'testManifest.json';
   }
 

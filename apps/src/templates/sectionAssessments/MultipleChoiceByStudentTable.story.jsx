@@ -1,12 +1,12 @@
 import React from 'react';
-import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
+
 import {
   studentMCData,
   multipleChoiceDataForSingleStudent,
 } from './assessmentsTestHelpers';
+import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
 
 export default {
-  title: 'MultipleChoiceByStudentTable',
   component: MultipleChoiceByStudentTable,
 };
 

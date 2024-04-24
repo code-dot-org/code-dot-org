@@ -30,7 +30,7 @@ describe('OrderControls', () => {
     );
     expect(remove).not.to.have.been.called;
 
-    const deleteButton = wrapper.find('Button').at(1);
+    const deleteButton = wrapper.find('Button').at(2);
     expect(deleteButton.text()).to.include('Delete');
     deleteButton.simulate('click');
     expect(wrapper.find('.modal')).to.have.lengthOf(0);
@@ -40,7 +40,7 @@ describe('OrderControls', () => {
     const wrapper = mount(<OrderControls {...defaultProps} />);
     wrapper.find('.fa-trash').simulate('mousedown');
     expect(wrapper.find('.modal')).to.have.lengthOf(1);
-    const cancelButton = wrapper.find('Button').at(0);
+    const cancelButton = wrapper.find('Button').at(1);
     expect(cancelButton.text()).to.include('Cancel');
     cancelButton.simulate('click');
     expect(remove).not.to.have.been.called;

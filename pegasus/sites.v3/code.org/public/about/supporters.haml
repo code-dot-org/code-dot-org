@@ -4,32 +4,41 @@ nav: about_nav
 theme: responsive
 ---
 
+-# Import gsheet data
+- supporters_data = DB[:cdo_supporters].all
+
 %link{rel: "stylesheet", href:"/css/donors.css"}
 
 %h1 Supporters
 
-%p Code.org gratefully acknowledges current supporters who have made a generous annual commitment of $1,000 or above to support Code.org's fiscal years 2022 or 2023.
+%p Code.org is sincerely grateful for our vibrant community of corporate, institutional, and individual donors. We acknowledge the following supporters who have made generous commitments of $1,000 and above to support our 2023 fiscal year (January 1, 2023 - December 31, 2023).
 
-%p Code.org® believes that every student in every school should have the opportunity to learn computer science. Together with a generous community of institutional, corporate, and individual supporters, we are able to increase access to computer science education globally.
+%p For further details or to explore partnership opportunities with Code.org, please contact our Office of Development at <a href="mailto:giving@code.org">giving@code.org</a>.
+
+%p Code.org® believes that every student in every school should have the opportunity to learn computer science. Thanks to the support listed below, we are able to increase access to computer science education globally.
 
 %p Code.org is a 501(c)(3) nonprofit organization and our Federal Tax ID is 46-0858543.
 
-%a{href: "/donate"}
-  %button Please consider a donation
+%a.link-button{href: "/donate"} Please consider a donation
 
 %h2 Platinum Supporters ($3,000,000+)
-%section.flex-container
-  %img{src: "/images/avatars/amazon.jpg", alt: "Amazon logo"}
-  %img{src: "/images/avatars/microsoft.jpg", alt: "Microsoft logo"}
+%section.grid-container
+  %img{src: "/images/avatars/amazon.png", alt: "Amazon logo"}
+  %img{src: "/images/avatars/google.png", alt: "Google logo"}
+  %img{src: "/images/avatars/microsoft.png", alt: "Microsoft logo"}
+  %img{src: "/images/avatars/ballmer_group.png", alt: "Ballmer Group logo"}
   %p Kenneth C. Griffin
-  %p Anonymous
 
 %h2 Gold Supporters ($1,000,000+)
-%section.flex-container
-  %img{src: "/images/avatars/coinbase.png", alt: "Coinbase logo"}
-  %img{src: "/images/avatars/google.png", alt: "Google logo"}
-  %img{src: "/images/avatars/ballmer_group.jpg", alt: "Ballmer Group logo"}
-  %img{src: "/images/avatars/vista_equity_partners.png", alt: "Vista Equity Partners logo"}
+%section.grid-container
+  %img{src: "/images/avatars/bill_and_melinda_gates_foundation.png", alt: "Bill and Melinda Gates Foundation logo", style: "width: 170px"}
+  %p Musk Foundation
+  %img{src: "/images/avatars/schmidt-futures.png", alt: "Schmidt Futures logo", style: "width: 200px"}
+  %p Alfred and Rebecca Lin
+  %p Charlie Lee and Aileen Tang
+  %p Bret and Karen Taylor
+  %p The Iranian American Community
+  %p Anonymous
 
 %section.lists.no-flex.no-padding
   %section.flex-container.no-padding.mobile-hide
@@ -39,230 +48,111 @@ theme: responsive
   .col-50
     %h5.mobile-show Institutional Supporters
     %ul
-      %li AT&T Foundation
-      %li Atlassian Foundation International
-      %li Cisco Systems Foundation
-      %li Cognizant Foundation
-      %li Infosys Foundation USA
-      %li Pluralsight ONE Fund
-      %li Workiva
+      - supporters_data.select { |list| list[:institutional_500k_s].present? }.each do |list|
+        %li=list[:institutional_500k_s]
   .col-50
     %h5.mobile-show Individual Supporters
     %ul
-      %li Bita Daryabari
-      %li Charlie Lee
-      %li Rebecca and Alfred Lin
-      %li Anonymous
+      - supporters_data.select { |list| list[:individual_500k_s].present? }.each do |list|
+        %li=list[:individual_500k_s]
   .clearfix
   %h4.heading-xs $250,000+
   .col-50
     %h5.mobile-show Institutional Supporters
     %ul
-      %li Danaher Foundation
-      %li Humanitix
-      %li Vianai Systems, Inc.
+      - supporters_data.select { |list| list[:institutional_250k_s].present? }.each do |list|
+        %li=list[:institutional_250k_s]
   .col-50
     %h5.mobile-show Individual Supporters
     %ul
-      %li Garrett Camp
-      %li The Marie-Josée and Henry R. Kravis Foundation
-      %li Vandana and Vishal Sikka
-      %li Anonymous
-      %li Anonymous
+      - supporters_data.select { |list| list[:individual_250k_s].present? }.each do |list|
+        %li=list[:individual_250k_s]
   .clearfix
   %h4.heading-xs $100,000+
   .col-50
     %h5.mobile-show Institutional Supporters
     %ul
-      %li Accenture
-      %li Autodesk Foundation
-      %li Fortive Foundation
-      %li HP
-      %li Koch Companies Community Fund
-      %li Northrop Grumman Foundation
-      %li Santander Bank
-      %li Tesla
+      - supporters_data.select { |list| list[:institutional_100k_s].present? }.each do |list|
+        %li=list[:institutional_100k_s]
   .col-50
     %h5.mobile-show Individual Supporters
     %ul
-      %li Nathan and Elizabeth Blecharczyk
-      %li Arash Ferdowsi
-      %li Kaphan Foundation
-      %li Nellie and Max Levchin
-      %li Jeff and Liesl Wilke
-      %li Jon and Talia Oringer
-      %li Troper Wojcicki Foundation
+      - supporters_data.select { |list| list[:individual_100k_s].present? }.each do |list|
+        %li=list[:individual_100k_s]
   .clearfix
   %h4.heading-xs $50,000+
   .col-50
     %h5.mobile-show Institutional Supporters
     %ul
-      %li America Online
-      %li Charitybuzz
-      %li Illumina
-      %li Motorola Solutions Foundation
-      %li Paypal Giving Fund
-      %li T-Mobile
+      - supporters_data.select { |list| list[:institutional_50k_s].present? }.each do |list|
+        %li=list[:institutional_50k_s]
   .col-50
     %h5.mobile-show Individual Supporters
     %ul
-      %li Hopper-Dean Foundation
-      %li Jeffrey Huber
-      %li Palvi Mehta
-      %li Geoff and Andrea Ralston
-      %li Stanley Tang
+      - supporters_data.select { |list| list[:individual_50k_s].present? }.each do |list|
+        %li=list[:individual_50k_s]
   .clearfix
   %h4.heading-xs $25,000+
   .col-50
     %h5.mobile-show Institutional Supporters
     %ul
-      %li Aramco Americas
-      %li NBC Universal Foundation
-      %li Pareto Holdings
-      %li UKG Inc.
+      - supporters_data.select { |list| list[:institutional_25k_s].present? }.each do |list|
+        %li=list[:institutional_25k_s]
   .col-50
     %h5.mobile-show Individual Supporters
     %ul
-      %li David Sze and Kathleen Donohue
-      %li Molly and Scott Forstall
-      %li Glenn and Sylvia Kelman
-      %li Nate Mitchell
-      %li Shahrokh Mortazavi
-      %li Fritz and Susan Onion
-      %li Jonathan Perlow
-      %li The Smang Family Foundation
+      - supporters_data.select { |list| list[:individual_25k_s].present? }.each do |list|
+        %li=list[:individual_25k_s]
   .clearfix
   %h4.heading-xs $10,000+
   .col-50
     %h5.mobile-show Institutional Supporters
     %ul
-      %li Allstate Foundation
-      %li Bright Funds Foundation
-      %li Crowdstrike
-      %li Fidelity Charitable Gift Fund
-      %li ITMAGINATION
-      %li Robins Nest Family Foundation
-      %li The Kind Foundation
-      %li The Red Hat Charitable Giving Fund of Triangle Community Foundation
+      - supporters_data.select { |list| list[:institutional_10k_s].present? }.each do |list|
+        %li=list[:institutional_10k_s]
   .col-50
     %h5.mobile-show Individual Supporters
     %ul
-      %li John Bevans
-      %li James and Julia Hong
-      %li Adam and Carolyn Nash
-      %li Colin Rust and Jeannie Tseng
-      %li Jennifer and Chris Urmson
-      %li Peter and Chelsea Vessenes
+      - supporters_data.select { |list| list[:individual_10k_s].present? }.each do |list|
+        %li=list[:individual_10k_s]
   .clearfix
   %h4.heading-xs $5,000+
   .col-50
     %h5.mobile-show Institutional Supporters
     %ul
-      %li Barton Family Foundation Household
-      %li ConvergeOne
-      %li Deepfactor
-      %li Geico
-      %li Matson
-      %li Ricoh Foundation
-      %li Tango Card, Inc.
-      %li TaskUs
-      %li The Coder Foundation
-      %li Vanguard Charitable
+      - supporters_data.select { |list| list[:institutional_5k_s].present? }.each do |list|
+        %li=list[:institutional_5k_s]
   .col-50
     %h5.mobile-show Individual Supporters
     %ul
-      %li Chris and Beth Petersen
-      %li Rebecca and Tyler Shaddix
-      %li Ellen Teigeler
+      - supporters_data.select { |list| list[:individual_5k_s].present? }.each do |list|
+        %li=list[:individual_5k_s]
   .clearfix
   %h4.heading-xs $1,000+
   .col-50
     %h5.mobile-show Institutional Supporters
     %ul
-      %li Amalgamated Compassion Fund
-      %li BNY Mellon
-      %li Charities Aid Foundation of America
-      %li Give Lively Foundation
-      %li Inter-American
-      %li Jewish Federation of Cleveland
-      %li JustAnswer
-      %li Momentive
-      %li Mori Associates, Inc.
-      %li Root Insurance
-      %li The Kelly Clarkson Show
-      %li XTL US INC
+      - supporters_data.select { |list| list[:institutional_1k_s].present? }.each do |list|
+        %li=list[:institutional_1k_s]
   .col-50
     %h5.mobile-show Individual Supporters
     %ul
-      %li Jessica Abramson
-      %li Rachel Barratt
-      %li Karl Chen
-      %li April Chu
-      %li Joel Conaway
-      %li Jacob Crosmer
-      %li Beth and Marvin Deam
-      %li Stephen DeSantis
-      %li Craig Dickinson
-      %li Brayden Doig
-      %li Richard Gelhausen
-      %li Hasan Giving Fund
-      %li Conley Henderson
-      %li Courtney Hill
-      %li Frank Jania
-      %li Zach Kirsch
-      %li Rafael Kronzon
-      %li Michael Lehenbauer
-      %li David and Angela Longo
-      %li Maggie Lyon
-      %li Shishir Mehrotra
-      %li Andrew Meier
-      %li Eugene Mesgar
-      %li Jonathon Paul and Kelly Newton
-      %li Sujal Patel
-      %li Erica Spurrier
-      %li Siddharth Sundararajan
-      %li Jordan Toyn
-      %li Kristin Yeoman
-      %li David Youngworth
-      %li Anonymous
+      - supporters_data.select { |list| list[:individual_1k_s].present? }.each do |list|
+        %li=list[:individual_1k_s]
   .clearfix
 
 %h2 In-Kind Supporters
 %p Code.org gratefully acknowledges current supporters who have made a generous annual in-kind commitment to support Code.org's fiscal years 2022 or 2023.
 %ul
-  %li Adobe
-  %li Amazon Web Services
-  %li Grammarly
-  %li Hadi and Negar Partovi
-  %li Hoefler&Co.
-  %li Salesforce
-  %li Sauce Labs
-  %li Trello
+  - supporters_data.select { |list| list[:in_kind_s].present? }.each do |list|
+    %li=list[:in_kind_s]
 
 %h2 Employee Giving Programs
 %p Code.org acknowledges the following companies and organizations for supporting employee contribution programs.
 %ul
-  %li Adobe
-  %li Amazon
-  %li Apple
-  %li AT&T
-  %li Atlassian
-  %li AXIS
-  %li Ball Aerospace
-  %li Dropbox
-  %li Equinor
-  %li Gilead
-  %li GitHub
-  %li Google
-  %li IBM
-  %li Liberty Mutual
-  %li Microsoft
-  %li N1234
-  %li USAA
-  %li VISA
-  %li Workiva
-  %li Zynga
-
+%ul
+  - supporters_data.select { |list| list[:employee_giving_s].present? }.each do |list|
+    %li=list[:employee_giving_s]
 
 %hr
 %a{href: "/about/donation-policy"} Donation Policy

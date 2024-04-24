@@ -1,7 +1,9 @@
 import React from 'react';
-import SeeMoreCourses from './SeeMoreCourses';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import SeeMoreCourses from './SeeMoreCourses';
 
 const courses = [
   {
@@ -24,7 +26,6 @@ const courses = [
 ];
 
 export default {
-  title: 'SeeMoreCourse',
   component: SeeMoreCourses,
 };
 

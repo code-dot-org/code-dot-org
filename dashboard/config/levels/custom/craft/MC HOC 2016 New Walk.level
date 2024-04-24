@@ -68,12 +68,7 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="craft_whenRun" uservisible="false"/>
-        <block type="craft_playSound" uservisible="false">
-          <title name="TYPE">collectedBlock</title>
-        </block>
-      </xml>
+      <xml/>
     </toolbox_blocks>
     <required_blocks>
       <xml>

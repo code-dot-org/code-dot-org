@@ -45,7 +45,34 @@ class MusiclabController < ApplicationController
     end
 
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
-    @channel_ids = Project.where(project_type: "music").last(50).map {|project| JSON.parse(project.value)["id"]}.compact_blank
+
+    @channel_ids = Project.
+      where(project_type: "music").
+      last(15).
+      reverse.
+      map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"]}}.
+      compact_blank.
+      to_json
+  end
+
+  def embed
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
+    response.headers['Content-Security-Policy'] = ''
+
+    view_options(no_header: true, no_footer: true, full_width: true, no_padding_container: true)
+
+    channel_ids = params[:channels] ? params[:channels].split(',') : []
+
+    project_ids = channel_ids.map do |channel_id|
+      _, project_id = storage_decrypt_channel_id(channel_id)
+      project_id
+    end
+
+    @projects = Project.
+      find(project_ids).
+      map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"]}}.
+      compact_blank.
+      to_json
   end
 
   # TODO: This is a temporary addition to serve the analytics API key

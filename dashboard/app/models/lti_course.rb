@@ -26,7 +26,7 @@ class LtiCourse < ApplicationRecord
   belongs_to :lti_integration
   belongs_to :lti_deployment
   has_many :lti_sections, dependent: :destroy
-  has_many :sections, through: :lti_sections, dependent: :destroy
+  has_many :sections, through: :lti_sections
   validates :context_id, presence: true
   validates_uniqueness_of :context_id, scope: :lti_integration_id
   validates :nrps_url, url: {allow_nil: true}

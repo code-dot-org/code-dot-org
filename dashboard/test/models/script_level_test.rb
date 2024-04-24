@@ -8,6 +8,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)
     @lesson = create(:lesson)
@@ -756,6 +758,41 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
   end
 
+  test 'next_level_or_redirect_path_for_user returns to next level if not end of lesson on a pl unit' do
+    unit1 = create :unit
+    unit2 = create :unit
+    unit1.stubs(:pl_course?).returns true
+    unit1.stubs(:next_unit).returns(unit2)
+
+    lesson_group = create(:lesson_group, script: unit1)
+    levels = [
+      create(:level),
+      create(:level)
+    ]
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      lesson = create(:lesson, script: unit1, absolute_position: pos, lesson_group: lesson_group)
+      create(:script_level, script: unit1, lesson: lesson, position: pos, chapter: pos, levels: [level])
+    end
+
+    student = create :student
+
+    assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
+  end
+
+  test 'next_level_or_redirect_path_for_user returns to next unit if at the end of the current self paced pl unit' do
+    unit1 = create :unit
+    unit2 = create :unit
+    unit1.stubs(:pl_course?).returns true
+    unit1.stubs(:next_unit).returns(unit2)
+
+    script_level = create :script_level, script: unit1
+
+    student = create :student
+
+    assert_equal "/s/#{unit2.name}", script_level.next_level_or_redirect_path_for_user(student)
+  end
+
   test 'end of lesson' do
     script = Unit.find_by_name('course1')
 
@@ -1108,9 +1145,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "can only be used on migrated scripts", e.message
   end
 
-  private
-
-  def create_fake_plc_data
+  private def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
     @plc_script.update(professional_learning_course: 'My course name')

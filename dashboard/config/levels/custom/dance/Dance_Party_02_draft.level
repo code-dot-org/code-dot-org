@@ -48,7 +48,7 @@
       "https://curriculum.code.org/images/sprites/dance_20191106/moose_26.png",
       "https://curriculum.code.org/images/sprites/dance_20191106/moose_27.png"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"dance_callout_02\",\r\n  \"callout_text\": \"Add this block to your program!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"dance_callout_02\",\"callout_text\":\"Add this block to your program!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"2\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"bottom left\",\"at\":\"top center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"2\\\"]\",\"localization_key\":\"dance_callout_02\",\"callout_text\":\"Add this block to your program!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"bottom left\",\"at\":\"top center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "parent_level_id": 14624,
     "name_suffix": "_draft",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**How do I pass this level?**\\n* The dancer needs to switch to a new move after 4 measures.\\n\\n*The level ends after 7 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/220ef7e46e304a16ef5a8162a6be7796/Dance_Party_02.mp3\"}]",
@@ -88,7 +88,7 @@
           <title name="NAME">new_dancer</title>
           <title name="LOCATION">{x: 200, y: 200}</title>
         </block>
-        <block type="Dancelab_changeMoveLR">
+        <block type="Dancelab_changeMoveLR" id="2">
           <title name="SPRITE">new_dancer</title>
           <title name="MOVE" config="MOVES.Dab,MOVES.Drop,MOVES.Floss">MOVES.Floss</title>
           <title name="DIR">-1</title>

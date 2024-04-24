@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
 import BaseDialog from '../../BaseDialog';
-import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
+import DialogFooter from '../../teacherDashboard/DialogFooter';
+
 import LessonStatusList from './LessonStatusList';
 
 export default class LessonStatusDialog extends Component {
@@ -28,10 +31,10 @@ export default class LessonStatusDialog extends Component {
         <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
-            __useDeprecatedTag
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.brandSecondaryDefault}
+            style={styles.button}
           />
         </DialogFooter>
       </BaseDialog>
@@ -45,5 +48,8 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
     ...fontConstants['main-font-regular'],
+  },
+  button: {
+    margin: 0,
   },
 };

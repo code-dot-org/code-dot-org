@@ -58,6 +58,7 @@ export interface Level {
   position: number;
   title: number;
   url: string;
+  path: string;
   status?: string;
   usesLab2: boolean;
 }
@@ -77,6 +78,7 @@ export interface UnitProgress {
   result: number;
   status: string;
   teacherFeedbackReviewState: keyof typeof ReviewStates | undefined;
+  teacherFeedbackNew: boolean;
   timeSpent: number | undefined;
 }
 

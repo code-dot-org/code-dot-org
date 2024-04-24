@@ -105,7 +105,7 @@ class Javalab < Level
     options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
       level_prop = {}
 
-      properties.keys.each do |dashboard|
+      properties.each_key do |dashboard|
         apps_prop_name = dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
@@ -168,5 +168,9 @@ class Javalab < Level
 
   def age_13_required?
     true
+  end
+
+  def validated?
+    properties['encrypted_validation'].present?
   end
 end

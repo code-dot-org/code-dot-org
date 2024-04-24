@@ -1,11 +1,13 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {shallow, mount} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('LearningGoal', () => {
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
@@ -40,6 +42,12 @@ describe('LearningGoal', () => {
         aiConfidence={50}
         aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
+        aiEvalInfo={{
+          id: 2,
+          learning_goal_id: 2,
+          understanding: 2,
+          aiConfidencePassFail: 2,
+        }}
       />
     );
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
@@ -81,7 +89,7 @@ describe('LearningGoal', () => {
         isStudent={false}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
+    expect(wrapper.find('Heading6')).to.have.lengthOf(2);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
   });
@@ -95,10 +103,11 @@ describe('LearningGoal', () => {
           evidenceLevels: [],
           tips: 'Tips',
         }}
+        teacherHasEnabledAi={false}
         isStudent={true}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(0);
+    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
   });
 
@@ -113,7 +122,9 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
+    expect(wrapper.find('Heading6').first().props().children).to.equal(
+      'Testing'
+    );
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
@@ -128,7 +139,9 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
+    expect(wrapper.find('Heading6').first().props().children).to.equal(
+      'Testing'
+    );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -143,7 +156,9 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
+    expect(wrapper.find('Heading6').first().props().children).to.equal(
+      'Testing'
+    );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -152,12 +167,14 @@ describe('LearningGoal', () => {
       <LearningGoal
         learningGoal={{
           learningGoal: 'Testing',
+          aiEnabled: true,
           evidenceLevels: [],
         }}
         submittedEvaluation={{
           feedback: 'test feedback',
           understanding: RubricUnderstandingLevels.LIMITED,
         }}
+        teacherHasEnabledAi={false}
       />
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -168,7 +185,11 @@ describe('LearningGoal', () => {
 
     const wrapper = shallow(
       <LearningGoal
-        learningGoal={{key: 'key', learningGoal: 'Testing', evidenceLevels: []}}
+        learningGoal={{
+          key: 'key',
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
       />
     );
@@ -208,7 +229,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').text()).to.include('Evaluate');
+    expect(wrapper.find('BodyThreeText').first().text()).to.include('Evaluate');
     wrapper.unmount();
   });
 
@@ -225,7 +246,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
+    expect(wrapper.find('BodyThreeText').first().text()).to.include('Approve');
     wrapper.unmount();
   });
 

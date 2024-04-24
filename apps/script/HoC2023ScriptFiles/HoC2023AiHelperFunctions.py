@@ -1,16 +1,33 @@
 import json
-from openai.embeddings_utils import (
-    get_embedding,
-    distances_from_embeddings,
-    tsne_components_from_embeddings,
-    chart_from_components,
-    indices_of_nearest_neighbors_from_distances,
-)
 from constants import *
 import pandas as pd
-import pickle 
-import openai
-openai.api_key = '' # Replace with your OpenAI API key
+import pickle
+from scipy.spatial.distance import cosine
+
+# AWS Services Python Libraries
+import boto3
+import botocore
+
+import sys
+import os
+
+module_path = ".."
+sys.path.append(os.path.abspath(module_path))
+
+# aws_utils contains a custom library file unique to their bedrock tutorial located here: https://github.com/aws-samples/amazon-bedrock-workshop/blob/109ed616fd14c9eb26eda9bef96eb78c490d5ef6/utils/bedrock.py
+# See readme.md for more detailed access information and additional amazon documentation links.
+from aws_utils import bedrock
+
+# ---- ⚠️ Un-comment and edit the below lines as needed for your AWS setup ⚠️ ----
+
+# os.environ["AWS_DEFAULT_REGION"] = "us-east-1"  # E.g. "us-east-1"
+# os.environ["AWS_PROFILE"] = "codeorg-dev"
+# os.environ["BEDROCK_ASSUME_ROLE"] = "arn:aws:iam::99999999999:user/JoeyWheeler"  # E.g. "arn:aws:..."
+
+bedrock_runtime = bedrock.get_bedrock_client(
+    assumed_role=os.environ.get("BEDROCK_ASSUME_ROLE", None),
+    region=os.environ.get("AWS_DEFAULT_REGION", None)
+)
 
 def get_json_object(file):
     block_config_file = open(file)
@@ -79,39 +96,69 @@ def load_embeddings_cache(path):
             pickle.dump(embedding_cache, embedding_cache_file)    
     return embedding_cache
 
-# This function retrieves an embedding for a string from the cache if present, and otherwise requests
-# the embedding via the Open AI API
+# This function retrieves an embedding for a string from the cache if present, otherwise requests for the embedding through an available model.
+# As of 01/08/2024, the model being used is AWS's Titan v1 within their Bedrock framework; adjust function body as needed to replace with other models as necessary.
 def retrieve_embedding(string: str,
     cache_path: str,
     embedding_cache,
     model: str = EMBEDDING_MODEL,
 ) -> list:
-    # If the string is not already in the embedding cache, request embedding via
-    # get_embedding and store in cache. Otherwise, retrieve from cache.
+    # If the string is not already in the embedding cache, request embedding and store in cache. Otherwise, retrieve from cache.
     if (string, model) not in embedding_cache.keys():
-        embedding_cache[(string, model)] = get_embedding(string, model)
+        body = json.dumps({"inputText": string})
+        modelId = model 
+        accept = "application/json"
+        contentType = "application/json"
+
+        try:
+
+            response = bedrock_runtime.invoke_model(
+                body=body, modelId=modelId, accept=accept, contentType=contentType
+            )
+            response_body = json.loads(response.get("body").read())
+
+            embedding = response_body.get("embedding")
+            embedding_cache[(string, model)] = embedding
+
+        except botocore.exceptions.ClientError as error:
+
+            if error.response['Error']['Code'] == 'AccessDeniedException':
+                   print(f"\x1b[41m{error.response['Error']['Message']}\
+                        \nTo troubeshoot this issue please refer to the following resources.\
+                         \nhttps://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_access-denied.html\
+                         \nhttps://docs.aws.amazon.com/bedrock/latest/userguide/security-iam.html\x1b[0m\n")
+
+            else:
+                raise error
+
         with open(cache_path, "wb") as embedding_cache_file:
             pickle.dump(embedding_cache, embedding_cache_file)
     return embedding_cache[(string, model)]
 
-# This function calculates the similarity score between an input enmbedding and a list of output embeddings.
+# This function calculates the similarity score between an input embedding and a list of output embeddings.
 def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
-    # distance_from_embeddings returns a list of distances between the input embedding and each output embedding
-    # https://github.com/openai/openai-python/blob/284c1799070c723c6a553337134148a7ab088dd8/openai/embeddings_utils.py#L139
-    # Thus, similarities is an array of arrays of distances, with each subarray representing the distances between
-    # from an input embedding to each output embedding.    
-    similarities = [distances_from_embeddings(input_vector, output_embeddings, distance_metric='cosine')
-                            for input_vector in input_embeddings]
+    # Creates nested array of cosine distances (similarities) where each subarray represents the distance between an input and each possible output
+    # e.g. [[input1:output1, input1:output2...], [input2:output1, output2:output2...]...]
+    vectors = []
+    indexes = []
+    for input_vector in input_embeddings:
+        for output in output_embeddings:
+            indexes.append(cosine(input_vector, output))
+        vectors.append(indexes)
+        indexes = []
+        
+    similarities = vectors
     
-    # Conversion to pandas DataFrame for ease of manipulation
+    # Conversion to pandas DataFrame for ease of manipulation.
     similarities = pd.DataFrame(similarities)
     
-    # We use the emoji_ids and not the emoji modelDescriptiveNames as index for use by client
+    # We use the emoji_ids and not the emoji modelDescriptiveNames as index for use by client.
     similarities.index = emojis.values()
     
-    # Native cosine distance calculation outputs a value between 0 -> 1 where smaller values = greater similarity
-    # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship
-    # Cosine similarity is preferable as we can easily sum them together to take a max value later
+    # Conversion from cosine distance to cosine similarity for easier readability in frontend computations.
+    # Math explanation: Cosine distance outputs a value between 0 -> 1 where smaller values = greater similarity.
+    # Cosine similarity redefines this relationship so that instead larger values = greater ssimilarity.
+    # Since we expose some of these values to students in the frontend, we felt that similarity values growing larger would be easier to understand.
     similarities = similarities.apply(lambda x: round((x-1)*-1, 3), axis = 0)
 
     # Conversion to required JSON lookup format

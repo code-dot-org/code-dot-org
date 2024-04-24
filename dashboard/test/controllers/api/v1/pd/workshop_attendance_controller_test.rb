@@ -108,12 +108,12 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
     assert_manage_response :success, workshop: @other_workshop, user: @other_teacher
   end
 
-  test 'facilitators can read, but cannot manage, attendance for ended workshops' do
+  test 'facilitators can manage attendance for ended workshops' do
     @workshop.end!
     sign_in @facilitator
 
     assert_read_response :success
-    assert_manage_response :forbidden
+    assert_manage_response :success
   end
 
   test 'organizers can read, but cannot manage, attendance for ended workshops' do
@@ -124,12 +124,12 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
     assert_manage_response :forbidden, workshop: @organizer_workshop
   end
 
-  test 'program manager organizers can read, but cannot manage, attendance for ended workshops' do
+  test 'program manager organizers can manage attendance for ended workshops' do
     @workshop.end!
     sign_in @organizer
 
     assert_read_response :success
-    assert_manage_response :forbidden
+    assert_manage_response :success
   end
 
   test 'admins can manage attendance for ended workshops' do
@@ -302,9 +302,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
     refute Pd::Attendance.exists?(session: @session, enrollment: enrollment)
   end
 
-  private
-
-  def assert_manage_response(response, workshop: @workshop, session: nil, user: @teacher)
+  private def assert_manage_response(response, workshop: @workshop, session: nil, user: @teacher)
     session ||= workshop.sessions.first
 
     create_attendance workshop, session, user
@@ -314,7 +312,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
     assert_response response
   end
 
-  def assert_read_response(response, workshop: @workshop, session: nil)
+  private def assert_read_response(response, workshop: @workshop, session: nil)
     session ||= workshop.sessions.first
 
     get_workshop_attendance workshop
@@ -324,7 +322,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
     assert_response response
   end
 
-  def get_session_single_attendance_json(workshop, session)
+  private def get_session_single_attendance_json(workshop, session)
     get_session_attendance workshop, session
     response = JSON.parse(@response.body)
     attendance = response['attendance']

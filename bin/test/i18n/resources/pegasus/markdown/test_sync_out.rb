@@ -5,17 +5,14 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
   let(:described_class) {I18n::Resources::Pegasus::Markdown::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'Test'}
   let(:i18n_locale) {'te-ST'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
-  let(:is_source_language) {false}
+  let(:language) {{locale_s: i18n_locale}}
 
   around do |test|
     FakeFS.with_fresh {test.call}
   end
 
   before do
-    I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
     I18n::Utils::PegasusMarkdown.stubs(:restore_file_header)
   end
 
@@ -26,7 +23,7 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
   describe '#process' do
     let(:process_language) {described_instance.process(language)}
 
-    let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
+    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale)}
     let(:crowdin_locale_resource_dir) {File.join(crowdin_locale_dir, 'codeorg-markdown')}
     let(:crowdin_file_path) {File.join(crowdin_locale_resource_dir, 'test.md')}
     let(:origin_markdown_file_path) {CDO.dir('pegasus/sites.v3/code.org/public/test.md')}
@@ -39,7 +36,7 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
       I18n::Utils::PegasusMarkdown.expects(:restore_file_header).with(origin_markdown_file_path, markdown_i18n_file_path)
     end
     let(:expect_crowdin_locale_resource_dir_removing) do
-      FileUtils.expects(:rm_r).with(crowdin_locale_resource_dir)
+      I18nScriptUtils.expects(:remove_empty_dir).with(crowdin_locale_resource_dir)
     end
 
     before do
@@ -70,20 +67,6 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
 
         expect_localization_distribution.in_sequence(execution_sequence)
         expect_markdown_i18n_file_header_restoration.in_sequence(execution_sequence)
-        expect_crowdin_locale_resource_dir_removing.in_sequence(execution_sequence)
-
-        process_language
-      end
-    end
-
-    context 'when the language is the source language' do
-      let(:is_source_language) {true}
-
-      it 'does not distribute the markdown localization' do
-        execution_sequence = sequence('execution')
-
-        expect_localization_distribution.never
-        expect_markdown_i18n_file_header_restoration.never
         expect_crowdin_locale_resource_dir_removing.in_sequence(execution_sequence)
 
         process_language

@@ -199,6 +199,8 @@ class Unit < ApplicationRecord
 
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
+  TEACHER_FEEDBACK_INITIATIVES = %w(CSF CSC CSD CSP CSA).freeze
+
   def prevent_course_version_change?
     resources.any? ||
       student_resources.any? ||
@@ -450,7 +452,7 @@ class Unit < ApplicationRecord
   def self.script_level_cache
     return nil unless should_cache?
     @@script_level_cache ||= {}.tap do |cache|
-      script_cache.values.each do |unit|
+      script_cache.each_value do |unit|
         cache.merge!(unit.script_levels.index_by(&:id))
       end
     end
@@ -461,7 +463,7 @@ class Unit < ApplicationRecord
   def self.level_cache
     return nil unless should_cache?
     @@level_cache ||= {}.tap do |cache|
-      script_level_cache.values.each do |script_level|
+      script_level_cache.each_value do |script_level|
         level = script_level.level
         next unless level
         cache[level.id] = level unless cache.key? level.id
@@ -717,6 +719,16 @@ class Unit < ApplicationRecord
 
     # A student can view the unit version if they are assigned to it.
     user.assigned_script?(self)
+  end
+
+  # If this unit is in a unit group, returns the next unit in the unit group.
+  # If it's the last unit in the unit group, returns nil.
+  # If it's not in a unit group, returns nil.
+  def next_unit(user)
+    return nil unless unit_group
+    other_units = unit_group.units_for_user(user)
+    self_index = other_units.index {|u| u.id == id}
+    other_units[self_index + 1] if self_index
   end
 
   # @param family_name [String] The family name for a unit family.
@@ -1454,7 +1466,8 @@ class Unit < ApplicationRecord
   def finish_url
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
-    nil
+    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
+    CDO.code_org_url "/congrats/#{name}"
   end
 
   # A unit that the general public can assign. Has been soft or
@@ -1611,9 +1624,13 @@ class Unit < ApplicationRecord
     summary
   end
 
+  def allow_major_curriculum_changes?
+    get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot
+  end
+
   def summarize_for_lesson_edit
     {
-      allowMajorCurriculumChanges: get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot,
+      allowMajorCurriculumChanges: allow_major_curriculum_changes?,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
@@ -1629,7 +1646,7 @@ class Unit < ApplicationRecord
   #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
     return {} unless user && can_be_instructor?(user)
-    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
+    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections_instructed).pluck(:section_id)
     hidden_section_ids.index_with([id])
   end
 
@@ -1710,6 +1727,7 @@ class Unit < ApplicationRecord
     raise "only call this in a test!" unless Rails.env.test?
     @@unit_cache = nil
     @@unit_family_cache = nil
+    @@script_level_cache = nil
     @@level_cache = nil
     @@all_scripts = nil
     @@visible_units = nil
@@ -1901,8 +1919,14 @@ class Unit < ApplicationRecord
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
       position: unit_group_units&.first&.position,
-      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
+      is_feedback_enabled: teacher_feedback_enabled?
     }
+  end
+
+  private def teacher_feedback_enabled?
+    initiative = get_course_version&.course_offering&.marketing_initiative
+    TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 
   def summarize_for_assignment_dropdown

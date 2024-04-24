@@ -1,6 +1,7 @@
-import color from '../../util/color';
-import styleConstants from '../../styleConstants';
 import fontConstants from '@cdo/apps/fontConstants';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
 
 // Constants for React tables
 
@@ -49,6 +50,36 @@ export const tableLayoutStyles = {
   },
   unsortableHeaderRTL: {
     paddingRight: 25,
+  },
+};
+
+export const plTableLayoutStyles = {
+  link: {
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 14,
+    textDecoration: 'none',
+  },
+  sectionLink: {
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 14,
+    color: color.neutral_dark,
+    textDecoration: 'underline',
+  },
+  currentUnit: {
+    marginTop: 10,
+    fontSize: 14,
+  },
+  colButton: {
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingBottom: 20,
+    width: 40,
+  },
+  participantTypeCell: {
+    fontSize: 14,
+  },
+  leaveButton: {
+    fontSize: 14,
   },
 };
 

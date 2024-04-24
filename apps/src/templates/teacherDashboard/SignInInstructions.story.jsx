@@ -1,6 +1,8 @@
 import React from 'react';
-import SignInInstructions from './SignInInstructions';
+
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import SignInInstructions from './SignInInstructions';
 
 export default {
   component: SignInInstructions,
@@ -37,4 +39,9 @@ GoogleClassroom.args = {
 export const Clever = Template.bind({});
 Clever.args = {
   loginType: SectionLoginType.clever,
+};
+
+export const LTI = Template.bind({});
+LTI.args = {
+  loginType: SectionLoginType.lti_v1,
 };

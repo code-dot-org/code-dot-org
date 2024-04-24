@@ -192,6 +192,7 @@ sk-SK:
   class_submission_out_of_school_summer_camp: Letný tábor
   classicmaze_name: Klasické bludisko
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
+  code_org_logo_alt: Code.org Domov
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   codea_beyond_gradelevel: Stredná škola +
   codea_beyond_shortdescription: Vytvor aplikáciu na iPade
@@ -992,6 +993,7 @@ sk-SK:
   header_about_us: O nás
   header_course_catalog: Katalóg kurzov
   header_courses: Kurzy
+  header_districts: Kraje
   header_documentation: Dokumentácia
   header_educate_beyond: Nad rámec Code.org
   header_educate_community: Online komunita
@@ -1010,6 +1012,7 @@ sk-SK:
   header_incubator: Inkubátor
   header_learn: Naučte sa
   header_legal: Ochrana osobných údajov a právne predpisy
+  header_legal_cookie_notice: Oznámenie o súboroch cookie
   header_legal_privacy: Zásady ochrany súkromia
   header_legal_tos: Podmienky používania služby
   header_my_dashboard: Môj hlavný panel
@@ -1017,6 +1020,7 @@ sk-SK:
   header_project_gallery: Projekty
   header_report_abuse: Nahlásiť zneužitie
   header_report_bug: Nahlásiť chybu
+  header_schools: Škola
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Pomocné menu
   header_sections: Triedy

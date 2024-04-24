@@ -159,7 +159,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="دوره اکسپرس قبل از خواننده"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">دوره اکسپرس برای پیش خوانندگان</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="دوره اکسپرس قبل از خواننده"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">دوره اکسپرس برای پیش خوانندگان</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -228,7 +228,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">آزمایشگاه برنامه</h3></a>
     <p style="color:#ffffff">برنامه آزمایشگاه یک محیط برنامه نویسی که در آن شما می توانید برنامه های ساده است. طراحی یک برنامه، کد با بلوک و یا جاوا اسکریپت آن را به کار، و سپس برنامه خود را به اشتراک گذاری در ثانیه.</p>
@@ -237,7 +237,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">آزمایشگاه بازی</h3></a>
     <p style="color:#ffffff">آزمایشگاه بازی یک محیط برنامه نویسی است که در آن شما می توانید انیمیشن ها و بازی های ساده را با اشیاء و شخصیت هایی که با یکدیگر ارتباط برقرار می کنند، ایجاد کنید.</p>
@@ -247,7 +247,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">آزمایشگاه وب</h3></a>
     <p style="color:#ffffff">وب آزمایشگاه یک محیط برنامه نویسی که در آن شما می توانید صفحات وب ساده با استفاده از HTML و CSS است. طراحی صفحات وب خود را و به اشتراک گذاری سایت خود را در ثانیه.</p>

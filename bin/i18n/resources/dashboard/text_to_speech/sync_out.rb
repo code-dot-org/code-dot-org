@@ -36,31 +36,37 @@ module I18n
             progress_bar.finish
           end
 
-          private
-
-          def tts_units
+          private def tts_units
             @tts_units ||= Unit.tts_enabled
           end
 
-          def sanitize_tts(text)
-            ::TextToSpeech.sanitize(text || '')
+          private def mutex
+            @mutex ||= Mutex.new
           end
 
-          def squash(value)
+          private def sanitize_tts(text)
+            # Because the Redcarpet instance is not thread-safe (https://github.com/vmg/redcarpet/issues/570),
+            # sharing the Redcarpet::Markdown formatter in multi-threaded operations may cause the error:
+            # "markdown.c:2897: sd_markdown_render: Assertion `md->work_bufs[BUFFER_BLOCK].size == 0' failed.".
+            # More details here: https://www.redmine.org/issues/32563
+            mutex.synchronize {::TextToSpeech.sanitize(text || '')}
+          end
+
+          private def squash(value)
             case value
             when String then value.gsub(/\s+/, '')
-            when Array then clean(value.join)
-            when Hash then clean(value.values)
+            when Array then squash(value.join)
+            when Hash then squash(value.values)
             else ''
             end
           end
 
-          def localized?(original_value, l10n_value)
+          private def localized?(original_value, l10n_value)
             squash(original_value) != squash(l10n_value)
           end
 
-          def upload_tts_short_instructions_l10n(level, locale)
-            tts_short_instructions_l10n = level.tts_short_instructions_text(locale: locale)
+          private def upload_tts_short_instructions_l10n(level, locale)
+            tts_short_instructions_l10n = mutex.synchronize {level.tts_short_instructions_text(locale: locale)}
             return if tts_short_instructions_l10n.empty?
 
             tts_short_instructions = sanitize_tts(level.short_instructions)
@@ -69,8 +75,8 @@ module I18n
             level.tts_upload_to_s3(tts_short_instructions_l10n, METRIC_CONTEXT, locale: locale)
           end
 
-          def upload_tts_long_instructions_l10n(level, locale)
-            tts_long_instructions_l10n = level.tts_long_instructions_text(locale: locale)
+          private def upload_tts_long_instructions_l10n(level, locale)
+            tts_long_instructions_l10n = mutex.synchronize {level.tts_long_instructions_text(locale: locale)}
             return if tts_long_instructions_l10n.empty?
 
             tts_long_instructions = sanitize_tts(level.long_instructions)
@@ -79,8 +85,10 @@ module I18n
             level.tts_upload_to_s3(tts_long_instructions_l10n, METRIC_CONTEXT, locale: locale)
           end
 
-          def upload_tts_authored_hints_l10n(level, locale)
-            localized_authored_hints = I18n.with_locale(locale) {level.localized_authored_hints}
+          private def upload_tts_authored_hints_l10n(level, locale)
+            localized_authored_hints = I18n.with_locale(locale) do
+              mutex.synchronize {level.localized_authored_hints}
+            end
             return unless localized_authored_hints
 
             original_hints = JSON.parse(level.authored_hints)

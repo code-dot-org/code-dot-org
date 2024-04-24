@@ -1,12 +1,7 @@
-import {ViewType} from './sectionProgressConstants';
-import {
-  startLoadingProgress,
-  setCurrentView,
-  finishLoadingProgress,
-  addDataByUnit,
-  startRefreshingProgress,
-  finishRefreshingProgress,
-} from './sectionProgressRedux';
+import _ from 'lodash';
+
+import logToCloud from '@cdo/apps/logToCloud';
+import {getStore} from '@cdo/apps/redux';
 import {
   processedLevel,
   processServerSectionProgress,
@@ -16,16 +11,26 @@ import {
   fetchStandardsCoveredForScript,
   fetchStudentLevelScores,
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import {getStore} from '@cdo/apps/redux';
-import _ from 'lodash';
-import logToCloud from '@cdo/apps/logToCloud';
+
+import {ViewType} from './sectionProgressConstants';
+import {
+  startLoadingProgress,
+  setCurrentView,
+  finishLoadingProgress,
+  addDataByUnit,
+  startRefreshingProgress,
+  finishRefreshingProgress,
+} from './sectionProgressRedux';
 
 const NUM_STUDENTS_PER_PAGE = 20;
 
-export function loadScriptProgress(scriptId, sectionId) {
+export function loadUnitProgress(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().teacherSections.sections[sectionId];
   const students = getStore().getState().teacherSections.selectedStudents;
+  const startTime = new Date().getTime();
+  let progressLatencyMs = -1;
+  let structureLatencyMs = -1;
 
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
@@ -47,7 +52,7 @@ export function loadScriptProgress(scriptId, sectionId) {
     });
   }
 
-  let sectionProgress = {
+  const sectionProgress = {
     unitDataByUnit: {},
     studentLevelProgressByUnit: {},
     studentLessonProgressByUnit: {},
@@ -60,6 +65,7 @@ export function loadScriptProgress(scriptId, sectionId) {
   })
     .then(response => response.json())
     .then(scriptData => {
+      structureLatencyMs = new Date().getTime() - startTime;
       sectionProgress.unitDataByUnit = {
         [scriptId]: postProcessDataByScript(
           scriptData,
@@ -82,6 +88,7 @@ export function loadScriptProgress(scriptId, sectionId) {
     return fetch(url, {credentials: 'include'})
       .then(response => response.json())
       .then(data => {
+        progressLatencyMs = new Date().getTime() - startTime;
         sectionProgress.studentLevelProgressByUnit = {
           [scriptId]: {
             ...sectionProgress.studentLevelProgressByUnit[scriptId],
@@ -103,6 +110,8 @@ export function loadScriptProgress(scriptId, sectionId) {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
       sectionId,
       scriptId,
+      progressLatencyMs,
+      structureLatencyMs,
     });
 
     sectionProgress.studentLessonProgressByUnit = {
@@ -124,7 +133,7 @@ export function loadScriptProgress(scriptId, sectionId) {
 }
 
 function postProcessDataByScript(scriptData, includeBonusLevels) {
-  // Filter to match scriptDataPropType
+  // Filter to match unitDataPropType
   const filteredScriptData = {
     id: scriptData.id,
     csf: !!scriptData.csf,

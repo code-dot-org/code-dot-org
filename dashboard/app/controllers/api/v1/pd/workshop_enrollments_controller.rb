@@ -115,7 +115,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   def edit
     return head :forbidden unless current_user.workshop_admin?
     enrollment = Pd::Enrollment.find_by(id: params[:id])
-    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name])
+    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
   end
 
   private def enrollment_params
@@ -130,7 +130,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       csf_course_experience: params[:csf_course_experience],
       csf_courses_planned: params[:csf_courses_planned],
       previous_courses: params[:previous_courses],
-      replace_existing: params[:replace_existing],
       csf_intro_intent: params[:csf_intro_intent],
       csf_intro_other_factors: params[:csf_intro_other_factors],
       # params only collected in CSP returning teachers workshop

@@ -1,11 +1,13 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
+import Button from '@cdo/apps/templates/Button';
+import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
+import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import {UnconnectedCommitsAndReviewTab as CommitsAndReviewTab} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import javalabMsg from '@cdo/javalab/locale';
-import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
-import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
-import Button from '@cdo/apps/templates/Button';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   channelId: 'asdfjkl',

@@ -1,0 +1,27 @@
+name 'self-paced-pl-ai-101-mod4-introduction_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Bringing AI to the Classroom
+
+
+#### Welcome! This professional learning module is designed to help you learn how to bring AI to the classroom.
+
+<img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 75px; height: 275px; clear: both; margin: 0 0px 0px 0;">
+
+## In this module, you will:
+
+* #### Critically evaluate AI tools and resources for their applicability and effectiveness in the classroom.
+* #### AI implementation strategies through the lens of Universal Design for Learning and Culturally Responsive Teaching.
+* #### Explore how you could introduce and integrate AI technologies into your own classroom settings, taking into consideration your specific educational contexts and student needs.
+* #### Learn about the resources available to teach about AI in your classroom.
+
+
+### **Suggested time:**  60 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

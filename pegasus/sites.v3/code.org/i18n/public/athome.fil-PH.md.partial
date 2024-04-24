@@ -155,7 +155,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-reader na Mabilisang Kurso"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Mabilisang Kurso para sa mga pre-reader</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-reader na Mabilisang Kurso"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">Express Course for pre-readers</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -222,7 +222,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">App Lab</h3></a>
     <p style="color:#ffffff">Ang App Lab ay isang programming environment na kung saan pwede kang gumawa ng mga simpleng app. Magdisenyo ng app, code na may mga block o JavaScript para gumana, pagkatapos ay ibahagi ang iyong app sa ilang segundo.</p>
@@ -231,7 +231,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Game Lab</h3></a>
     <p style="color:#ffffff">Ang Game Lab ay isang programming environment kung saan pwede kang gumawa ng mga simpleng animation at laro gamit ang mga bagay at character na kayang makipag-ugnayan sa isa't isa.</p>
@@ -241,7 +241,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Web Lab</h3></a>
     <p style="color:#ffffff">Ang Web Lab ay isang programming environment kung saan pwede kang gumawa ng mga simpleng web page gamit ang HTML at CSS. Disenyuhan ang iyong mga web page at ibahagi ang iyong site sa ilang segundo.</p>

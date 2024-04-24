@@ -50,9 +50,7 @@ module Pd
       refute (build :pd_workshop_facilitator_daily_survey, params(@pd_academic_year_workshop).merge({day: 5})).valid?
     end
 
-    private
-
-    def existence_params(workshop)
+    private def existence_params(workshop)
       @existence_params ||= {
         user_id: @user.id,
         pd_session_id: workshop.sessions.first.id,
@@ -61,11 +59,11 @@ module Pd
       }
     end
 
-    def placeholder_params(workshop)
+    private def placeholder_params(workshop)
       @placeholder_params ||= existence_params(workshop).merge(day: 1)
     end
 
-    def params(workshop)
+    private def params(workshop)
       @params ||= placeholder_params(workshop).merge(pd_workshop_id: workshop.id)
     end
   end

@@ -17,7 +17,7 @@ module EnvironmentAwareDynamicConfigHelper
       adapter = JSONFileDatastoreAdapter.new(file_path)
     end
 
-    return DatastoreCache.new adapter, cache_expiration: cache_expiration
+    return DatastoreCache.new(adapter, identifier, cache_expiration: cache_expiration)
   end
 
   def self.rack_or_rails_env

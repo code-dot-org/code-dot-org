@@ -1,20 +1,23 @@
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Button from '@cdo/apps/templates/Button';
-import LessonStatusDialog from './LessonStatusDialog';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
+
+import firehoseClient from '../../../lib/util/firehose';
+
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
+import LessonStatusDialog from './LessonStatusDialog';
 import {
   setTeacherCommentForReport,
   getUnpluggedLessonsForScript,
   fetchStudentLevelScores,
 } from './sectionStandardsProgressRedux';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import firehoseClient from '../../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {TeacherScores} from './standardsConstants';
 
 const STANDARDS = 'standards';
@@ -162,7 +165,6 @@ class StandardsViewHeaderButtons extends Component {
         {this.props.unpluggedLessons.length > 0 && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.openLessonStatusDialog}
               color={Button.ButtonColor.gray}
               text={i18n.updateUnpluggedProgress()}
@@ -176,7 +178,6 @@ class StandardsViewHeaderButtons extends Component {
           </div>
         )}
         <Button
-          __useDeprecatedTag
           onClick={this.openCreateReportDialog}
           color={Button.ButtonColor.gray}
           text={i18n.generatePDFReport()}
@@ -205,7 +206,8 @@ const styles = {
     justifyContent: 'flex-end',
   },
   button: {
-    marginLeft: 20,
+    margin: '0 0 0 20px',
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
   },
 };
 

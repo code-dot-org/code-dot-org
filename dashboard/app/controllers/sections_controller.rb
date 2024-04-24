@@ -6,8 +6,8 @@ class SectionsController < ApplicationController
 
   def new
     redirect_to '/home' unless params[:loginType] && params[:participantType]
-
-    @is_users_first_section = current_user.sections.empty?
+    @user_country = request.country.to_s.upcase
+    @is_users_first_section = current_user.sections_instructed.empty?
   end
 
   def edit
@@ -28,6 +28,7 @@ class SectionsController < ApplicationController
     @section['primaryInstructor'] = {
       email: existing_section.teacher.email,
       name: existing_section.teacher.name,
+      lti_roster_sync_enabled: existing_section.teacher&.properties&.[]("lti_roster_sync_enabled")
     }
 
     @section = @section.to_json.camelize

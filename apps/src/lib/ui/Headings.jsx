@@ -21,11 +21,20 @@ export const h1Style = {
 
 export class Heading1 extends Component {
   static propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]).isRequired,
     style: PropTypes.object,
   };
 
   render() {
-    return <h1 {...this.props} style={{...h1Style, ...this.props.style}} />;
+    const {children, style, ...restProps} = this.props;
+    return (
+      <h1 {...restProps} style={{...h1Style, ...style}}>
+        {children}
+      </h1>
+    );
   }
 }
 
@@ -38,11 +47,20 @@ export const h2Style = {
 
 export class Heading2 extends Component {
   static propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]).isRequired,
     style: PropTypes.object,
   };
 
   render() {
-    return <h2 {...this.props} style={{...h2Style, ...this.props.style}} />;
+    const {children, style, ...restProps} = this.props;
+    return (
+      <h2 {...restProps} style={{...h2Style, ...style}}>
+        {children}
+      </h2>
+    );
   }
 }
 
@@ -62,17 +80,25 @@ export const h3RebrandingStyle = {
 
 export class Heading3 extends Component {
   static propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]).isRequired,
     style: PropTypes.object,
     isRebranded: PropTypes.bool,
   };
 
   render() {
-    const {isRebranded, style, ...restProps} = this.props;
+    const {children, isRebranded, style, ...restProps} = this.props;
     const headingStyles = {
       ...(isRebranded ? h3RebrandingStyle : h3Style),
       ...style,
     };
 
-    return <h3 {...restProps} style={headingStyles} />;
+    return (
+      <h3 {...restProps} style={headingStyles}>
+        {children}
+      </h3>
+    );
   }
 }

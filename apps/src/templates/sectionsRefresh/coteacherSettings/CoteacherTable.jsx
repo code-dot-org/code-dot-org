@@ -1,38 +1,85 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
+
+import {StrongText, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
-import classNames from 'classnames';
 import styles from './coteacher-settings.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
-const getPill = (text, className, icon) => (
-  <div className={classNames(className, styles.tablePill)}>
-    <StrongText>
-      <FontAwesome icon={icon} className={styles.tablePillIcon} />
-      {text}
-    </StrongText>
-  </div>
-);
+const getPendingPill = () => {
+  return (
+    <span>
+      <div
+        className={classNames(styles.tablePending, styles.tablePill)}
+        data-tip
+        data-event="mouseenter focus"
+        data-event-off="mouseleave blur"
+        data-for={'pending-tooltip'}
+      >
+        <StrongText>
+          <FontAwesome icon={'ellipsis'} className={styles.tablePillIcon} />
+          {i18n.coteacherPending()}
+        </StrongText>
+      </div>
+      <ReactTooltip
+        id={'pending-tooltip'}
+        role="tooltip"
+        effect="solid"
+        place="top"
+      >
+        <BodyTwoText className={styles.tableToolTipText}>
+          {i18n.coteacherPendingTooltip()}
+        </BodyTwoText>
+      </ReactTooltip>
+    </span>
+  );
+};
 
 const getStatusPill = status => {
   if (!status) {
-    return getPill(i18n.coteacherPending(), styles.tablePending, 'ellipsis');
+    return getPendingPill();
   }
   switch (status) {
     case 'invited':
-      return getPill(i18n.coteacherPending(), styles.tablePending, 'ellipsis');
+      return getPendingPill();
     case 'active':
-      return getPill(i18n.coteacherAccepted(), styles.tableActive, 'check');
+      return (
+        <div className={classNames(styles.tableActive, styles.tablePill)}>
+          <StrongText>
+            <FontAwesome icon={'check'} className={styles.tablePillIcon} />
+            {i18n.coteacherAccepted()}
+          </StrongText>
+        </div>
+      );
     case 'declined':
-      return getPill(i18n.coteacherDeclined(), styles.tableDeclined, 'xmark');
+      return (
+        <div className={classNames(styles.tableDeclined, styles.tablePill)}>
+          <StrongText>
+            <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
+            {i18n.coteacherDeclined()}
+          </StrongText>
+        </div>
+      );
     default:
-      return getPill(i18n.coteacherError(), styles.tableError, 'xmark');
+      return (
+        <div className={classNames(styles.tableError, styles.tablePill)}>
+          <StrongText>
+            <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
+            {i18n.coteacherError()}
+          </StrongText>
+        </div>
+      );
   }
 };
 
-export default function CoteacherTable({coteachers, setCoteacherToRemove}) {
+export default function CoteacherTable({
+  coteachers,
+  setCoteacherToRemove,
+  disabled,
+}) {
   const tableRow = (index, coteacher) => {
     return (
       <tr key={index} className={styles.tableRow}>
@@ -51,15 +98,19 @@ export default function CoteacherTable({coteachers, setCoteacherToRemove}) {
         <td className={styles.tableStatusCell}>
           {getStatusPill(coteacher.status)}
         </td>
-        <td>
-          <button
-            type="button"
-            onClick={() => setCoteacherToRemove(coteacher)}
-            className={styles.tableRemoveButton}
-          >
-            <i className={classNames('fa-solid fa-trash', styles.trashIcon)} />
-          </button>
-        </td>
+        {!disabled && (
+          <td>
+            <button
+              type="button"
+              onClick={() => setCoteacherToRemove(coteacher)}
+              className={styles.tableRemoveButton}
+            >
+              <i
+                className={classNames('fa-solid fa-trash', styles.trashIcon)}
+              />
+            </button>
+          </td>
+        )}
       </tr>
     );
   };
@@ -80,4 +131,5 @@ export default function CoteacherTable({coteachers, setCoteacherToRemove}) {
 CoteacherTable.propTypes = {
   coteachers: PropTypes.arrayOf(PropTypes.object).isRequired,
   setCoteacherToRemove: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
 };

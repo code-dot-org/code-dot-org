@@ -48,3 +48,21 @@
     }
   }
 }
+
+.see-all-activities {
+  margin: 3rem auto;
+  justify-content: space-between;
+
+  @media screen and (max-width: $width-md) {
+    justify-content: center;
+  }
+
+  img {
+    max-width: 175px;
+    border-radius: 4px;
+
+    @media screen and (max-width: $width-sm) {
+      width: 135px;
+    }
+  }
+}

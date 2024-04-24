@@ -49,10 +49,10 @@ export function setupNavigationHandler(lessonData) {
 // onto the browser session history stack, and updating the window title.
 export function updateBrowserForLevelNavigation(
   progressStoreState,
-  levelUrl,
+  levelPath,
   levelId
 ) {
-  window.history.pushState({}, '', levelUrl + window.location.search);
+  window.history.pushState({}, '', levelPath + window.location.search);
   setWindowTitle(progressStoreState, levelId);
 }
 

@@ -1,17 +1,24 @@
 import React from 'react';
-import Congrats from './Congrats';
-import {reduxStore} from '@cdo/storybook/decorators';
 import {Provider} from 'react-redux';
 
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import Congrats from './Congrats';
+
 export default {
-  title: 'Congrats/Congrats',
+  title: 'Congrats/Congrats', // eslint-disable-line storybook/no-title-property-in-meta
   component: Congrats,
 };
 
 const Template = args => (
   <Provider store={reduxStore()}>
     <Congrats
-      initialCertificateImageUrl={'/images/placeholder-hoc-image.jpg'}
+      certificateData={[
+        {
+          courseName: 'dance',
+          coursePath: '/s/dance',
+        },
+      ]}
       language="en"
       tutorial="other"
       isHocTutorial={true}

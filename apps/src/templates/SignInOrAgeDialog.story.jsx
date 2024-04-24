@@ -2,7 +2,6 @@ import React from 'react';
 import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from './SignInOrAgeDialog';
 
 export default {
-  title: 'SignInOrAgeDialog',
   component: SignInOrAgeDialog,
 };
 

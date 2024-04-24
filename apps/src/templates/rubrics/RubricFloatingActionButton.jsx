@@ -1,8 +1,10 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import style from './rubrics.module.scss';
-import aiFabIcon from '@cdo/static/ai-fab-background.png';
+import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
 import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
+import taIcon from '@cdo/static/ai-bot-tag-TA.png';
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -11,15 +13,29 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
 } from './rubricShapes';
+import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import classNames from 'classnames';
 
-export default function RubricFloatingActionButton({
+function RubricFloatingActionButton({
   rubric,
   studentLevelInfo,
   currentLevelName,
   reportingData,
   aiEnabled,
+  sectionId,
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const sessionStorageKey = 'RubricFabOpenStateKey';
+  const [isOpen, setIsOpen] = useState(
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
+  );
+  // Show the pulse if this is the first time the user has seen the FAB in this
+  // session. Depends on other logic which sets the open state in session storage.
+  const [isFirstSession] = useState(
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null
+  );
+  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
+  const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
 
   const eventData = useMemo(() => {
     return {
@@ -57,18 +73,41 @@ export default function RubricFloatingActionButton({
     }
   }, [eventData, studentLevelInfo]); // Neither of these should change, so this should run once
 
-  const icon = aiEnabled ? aiFabIcon : rubricFabIcon;
+  useEffect(() => {
+    trySetSessionStorage(sessionStorageKey, isOpen);
+  }, [isOpen]);
+
+  const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
+
+  const showPulse = isFirstSession && isFabImageLoaded && isTaImageLoaded;
+  const classes = showPulse
+    ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
+    : style.floatingActionButton;
 
   return (
     <div id="fab-contained">
       <button
         id="ui-floatingActionButton"
-        className={style.floatingActionButton}
-        // I couldn't get an image url to work in the SCSS module, so using an inline style for now
-        style={{backgroundImage: `url(${icon})`}}
+        className={classes}
         onClick={handleClick}
         type="button"
-      />
+      >
+        <img
+          alt="AI bot"
+          src={fabIcon}
+          onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+        />
+      </button>
+      <div
+        className={style.taOverlay}
+        style={{backgroundImage: `url(${taIcon})`}}
+      >
+        <img
+          src={taIcon}
+          alt="TA overlay"
+          onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
+        />
+      </div>
       {/* TODO: do not hardcode in AI setting */}
       <RubricContainer
         rubric={rubric}
@@ -78,6 +117,7 @@ export default function RubricFloatingActionButton({
         teacherHasEnabledAi={aiEnabled}
         open={isOpen}
         closeRubric={handleClick}
+        sectionId={sectionId}
       />
     </div>
   );
@@ -89,4 +129,11 @@ RubricFloatingActionButton.propTypes = {
   currentLevelName: PropTypes.string,
   reportingData: reportingDataShape,
   aiEnabled: PropTypes.bool,
+  sectionId: PropTypes.number,
 };
+
+export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;
+
+export default connect(state => ({
+  sectionId: selectedSection(state)?.id,
+}))(RubricFloatingActionButton);

@@ -32,6 +32,8 @@ class LtiCourseTest < ActiveSupport::TestCase
     sections.each do |section|
       assert section.reload.deleted_at.present?, "section should be deleted"
     end
-    assert LtiSection.where(id: lti_sections.map(&:id)).empty?, "LTI sections should be deleted"
+    lti_sections.each do |lti_section|
+      assert lti_section.reload.deleted_at.present?, "lti_section should be deleted"
+    end
   end
 end

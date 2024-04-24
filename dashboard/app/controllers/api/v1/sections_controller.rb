@@ -1,3 +1,5 @@
+require 'metrics/events'
+
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
@@ -20,7 +22,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   # Get the set of sections taught by the current user
   def index
     prevent_caching
-    render json: current_user.sections_owned_or_instructed.map(&:summarize_without_students)
+    render json: current_user.sections_instructed.map(&:summarize_without_students)
   end
 
   # GET /api/v1/sections/<id>
@@ -64,13 +66,22 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
+        ai_tutor_enabled: params[:ai_tutor_enabled].nil? ? false : params[:ai_tutor_enabled],
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
       }
     )
     return head :bad_request unless section.persisted?
 
+    if Policies::Lti.lti? current_user
+      metadata = {'section_type' => section[:login_type]}
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'lti_section_created_non_lti',
+        metadata: metadata,
+      )
+    end
     # Add all coteachers specified in params
-    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
+    params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
     current_user.assign_script @unit if @unit
@@ -105,6 +116,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
+    fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
 
     section.update!(fields)
     if @unit
@@ -114,7 +126,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
 
     # Add all coteachers specified in params
-    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
+    params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
     render json: section.summarize
   end

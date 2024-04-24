@@ -81,6 +81,13 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'instructor receives correct error when adding themself to a section' do
+    sign_in @teacher
+    post :create, params: {section_id: @section.id, email: @teacher.email}
+    assert_response :bad_request
+    assert_equal '{"error":"inviting self"}', @response.body
+  end
+
   test 'instructor cannot add a student to instruct a section' do
     sign_in @teacher
     section = create(:section, :teacher_participants, user: @teacher)
@@ -119,10 +126,13 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
   end
 
   test 'instructor cannot remove section owner' do
+    section = create(:section, user: @teacher, login_type: 'word')
+    si = section.instructors.first
+    create(:section_instructor, section: section, instructor: @teacher2, status: :active)
     sign_in @teacher2
-    delete :destroy, params: {id: @si2.id}
+    delete :destroy, params: {id: si.id}
     assert_response :forbidden
-    assert @si2.reload.deleted_at.nil?
+    assert si.reload.deleted_at.nil?
   end
 
   test 'instructor can remove themselves if not section owner' do

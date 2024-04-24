@@ -18,6 +18,7 @@
       "supported_locales": [
         "fa-AF",
         "fa-IR",
+        "ko-KR",
         "sq-AL"
       ],
       "tts": true,
@@ -25,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2023-11-01 21:05:04 UTC",
+    "serialized_at": "2024-01-25 18:48:03 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8205,6 +8206,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Programming with Harvester",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
@@ -8219,9 +8227,23 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Programming with Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sequencing with Angry Birds",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
       }
     },
     {

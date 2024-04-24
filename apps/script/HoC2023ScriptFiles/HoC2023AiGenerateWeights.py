@@ -1,7 +1,9 @@
 # Please refer to the README.md file in this directory for more information
 # on how to run this script to generate the cached association maps used by the client.
-
 import json
+import os
+import sys
+
 from HoC2023AiHelperFunctions import *
 from constants import *
 
@@ -75,4 +77,4 @@ for output_category in [PALETTES, BACKGROUND_EFFECTS, FOREGROUND_EFFECTS]:
     association_output[output_category] = {'emojiAssociations': similarities[output_category], 'output': blockly_ids[output_category], 'modelDescriptiveNames': model_descriptive_names[output_category]}
     path = 'apps/static/dance/ai/model/cached_' + output_category + '_map.json'
     with open(path, "w") as json_file:
-        json_file.write(json.dumps(association_output[output_category]))
+        json_file.write(json.dumps(association_output[output_category], sort_keys=True))

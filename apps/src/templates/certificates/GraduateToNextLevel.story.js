@@ -1,10 +1,11 @@
 import React from 'react';
-import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
-import {reduxStore} from '@cdo/storybook/decorators';
 import {Provider} from 'react-redux';
 
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
+import {reduxStore} from '@cdo/storybook/decorators';
+
 export default {
-  title: 'Congrats/GraduateToNextLevel',
+  title: 'Congrats/GraduateToNextLevel', // eslint-disable-line storybook/no-title-property-in-meta
   component: GraduateToNextLevel,
 };
 

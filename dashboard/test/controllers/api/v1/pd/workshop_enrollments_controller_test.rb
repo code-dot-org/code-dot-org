@@ -275,7 +275,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
       years_teaching: "30",
       years_teaching_cs: "10",
       previous_courses: "I don’t have experience teaching any of these courses",
-      replace_existing: "I don’t know",
       csf_intro_other_factors: "I want to learn computer science concepts.",
       taught_ap_before: "Yes, AP CS Principles or AP CS A",
       planning_to_teach_ap: "Yes"
@@ -284,6 +283,35 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     assert_response :success
     assert_equal RESPONSE_MESSAGES[:SUCCESS], JSON.parse(@response.body)["workshop_enrollment_status"]
     refute_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
+  end
+
+  test 'creating an enrollment can find user and submit if enrollment email is alternate email' do
+    teacher = create :teacher
+    sign_in teacher
+
+    application = create :pd_teacher_application, user: teacher, status: 'accepted'
+    app_alt_email = application.form_data_hash['alternateEmail']
+
+    refute_equal teacher.email, app_alt_email
+    assert_equal teacher.email_for_enrollments, app_alt_email
+
+    params = enrollment_test_params.merge(
+      {
+        user_id: teacher.id,
+        email: app_alt_email,
+        email_confirmation: app_alt_email,
+        workshop_id: @workshop.id,
+        school_info: school_info_params
+      }
+    )
+    post :create, params: params
+
+    assert_response :success
+
+    response_body = JSON.parse(@response.body)
+    assert_equal RESPONSE_MESSAGES[:SUCCESS], response_body["workshop_enrollment_status"]
+    assert response_body["account_exists"]
+    refute_nil Pd::Enrollment.find_by(pd_workshop_id: @workshop.id)
   end
 
   test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
@@ -433,7 +461,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
 
   test 'edit' do
     workshop = create :summer_workshop
-    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', workshop: workshop
+    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', email: 'rubeushagrid@code.org', workshop: workshop
 
     admin = create :workshop_admin
     sign_in admin
@@ -441,12 +469,14 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     post :edit, params: {
       id: enrollment.id,
       first_name: 'Harry',
-      last_name: 'Potter'
+      last_name: 'Potter',
+      email: 'harrypotter@code.org'
     }
 
     enrollment.reload
     assert_equal 'Harry', enrollment.first_name
     assert_equal 'Potter', enrollment.last_name
+    assert_equal 'harrypotter@code.org', enrollment.email
   end
 
   test 'non-workshop-admins cannot move enrollments' do
@@ -459,9 +489,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     assert_response 403
   end
 
-  private
-
-  def enrollment_test_params(teacher = nil)
+  private def enrollment_test_params(teacher = nil)
     if teacher
       first_name, last_name = teacher.name.split(' ', 2)
       email = teacher.email
@@ -478,7 +506,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     }
   end
 
-  def school_info_params
+  private def school_info_params
     {
       school_type: 'private',
       school_state: 'WA',

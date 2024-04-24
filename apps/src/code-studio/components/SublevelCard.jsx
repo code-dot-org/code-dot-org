@@ -63,7 +63,11 @@ export default class SublevelCard extends React.Component {
   renderThumbnail = () => {
     const {sublevel} = this.props;
     if (sublevel.thumbnail_url) {
-      return <img src={sublevel.thumbnail_url} style={styles.thumbnail} />;
+      // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+      // Verify or update this alt-text as necessary
+      return (
+        <img src={sublevel.thumbnail_url} style={styles.thumbnail} alt="" />
+      );
     } else if (['Maze', 'Karel'].includes(sublevel.type)) {
       return this.renderWithMazeThumbnail();
     } else {
@@ -159,7 +163,7 @@ const styles = {
     display: 'flex',
     width: WIDTH,
     marginBottom: MARGIN,
-    marginRight: MARGIN,
+    marginInlineEnd: MARGIN,
     backgroundColor: color.white,
     border: '1px solid rgb(187, 187, 187)',
     borderRadius: 2,
@@ -206,7 +210,7 @@ const styles = {
     ...fontConstants['main-font-semi-bold'],
     color: color.teal,
     marginBottom: 10,
-    marginLeft: MARGIN,
+    marginInlineStart: MARGIN,
     overflowWrap: 'break-word',
     wordWrap: 'break-word',
     hyphens: 'auto',

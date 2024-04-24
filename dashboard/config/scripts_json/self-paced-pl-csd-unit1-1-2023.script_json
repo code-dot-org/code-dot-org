@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-13 17:58:19 UTC",
+    "serialized_at": "2024-01-11 15:36:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -111,6 +111,7 @@
       "key": "0472af5c-eb77-4f85-be37-633c7b39bfec",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "0472af5c-eb77-4f85-be37-633c7b39bfec",
@@ -123,6 +124,7 @@
       "key": "dd021e6b-b196-4635-8250-a7fa886a399c",
       "position": 1,
       "properties": {
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "dd021e6b-b196-4635-8250-a7fa886a399c",
@@ -135,6 +137,7 @@
       "key": "b76b3a43-0380-4795-8594-e2931403a3d4",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "b76b3a43-0380-4795-8594-e2931403a3d4",
@@ -147,6 +150,7 @@
       "key": "236f2724-7133-4b8b-bdbd-25f0521a7765",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "236f2724-7133-4b8b-bdbd-25f0521a7765",
@@ -994,6 +998,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

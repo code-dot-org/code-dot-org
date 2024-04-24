@@ -96,17 +96,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal expected, returned_json
   end
 
-  # TODO(TEACH-721): This test is expected to fail after the post-backfill code cleanup.
-  test 'returns owned section even if no SectionInstructor exists' do
-    broken_section = create(:section, user: @teacher, login_type: 'word')
-    # Remove auto-created SectionInstructor to simulate old section that hasn't been backfilled.
-    broken_section.section_instructors.first.really_destroy!
+  test 'returns sections co-taught with a deleted instructor' do
+    cotaught_section = create(:section, user: @teacher, login_type: 'word')
+    coteacher = create(:teacher)
+    create(:section_instructor, instructor: coteacher, section: cotaught_section, status: :active)
+    coteacher.destroy!
 
     sign_in @teacher
     get :index
     assert_response :success
 
-    expected = [@section, @section_with_unit_group, @section_with_script, broken_section].map(&:summarize_without_students).as_json
+    expected = [@section, @section_with_unit_group, @section_with_script, cotaught_section].map(&:summarize_without_students).as_json
     assert_equal expected, returned_json
   end
 
@@ -121,7 +121,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in admin
     get :index
     assert_response :success
-    expected = admin.sections.map(&:summarize_without_students).as_json
+    expected = admin.sections_instructed.map(&:summarize_without_students).as_json
     assert_equal expected, returned_json
   end
 
@@ -384,6 +384,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   Section::LOGIN_TYPES.each do |desired_type|
+    # LTI Section are not created using this API.
+    next if desired_type == Section::LOGIN_TYPE_LTI_V1
     test "can set login_type to #{desired_type} during creation" do
       sign_in @teacher
       post :create, params: {
@@ -1390,9 +1392,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil @section.code_review_expires_at
   end
 
-  private
-
-  def set_up_code_review_groups
+  private def set_up_code_review_groups
     # create a new section to avoid extra unassigned students
     @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
     # Create 5 students

@@ -1,0 +1,25 @@
+name 'self-paced-pl-ai-101-mod1-closing_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrap Up
+
+## Great job! 🎉
+
+#### In this module you’ve been introduced to AI and its impact on your role as an educator. You..
+
+* #### Began to realize the benefits and address the risks of AI in an educational setting. *We’ll continue to address this learning objective in future modules.*
+* #### Described AI Literacy and explained the benefits of AI literacy for both educators and students.
+
+## Up Next
+
+#### In the next section of this professional learning module, you’ll build your foundational understanding of AI.
+
+#### Click continue to keep going!
+
+
+
+
+
+MARKDOWN

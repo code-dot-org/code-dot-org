@@ -2,18 +2,22 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import ContentContainer from '../ContentContainer';
-import SpecialAnnouncement from './SpecialAnnouncement';
-import CourseBlocksWrapper from './CourseBlocksWrapper';
-import {NotificationResponsive} from '@cdo/apps/templates/Notification';
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import i18n from '@cdo/locale';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {NotificationResponsive} from '@cdo/apps/templates/Notification';
 import {
   InternationalGradeBandCards,
   ToolsCards,
   ToolsWidgetsCard,
 } from '@cdo/apps/util/courseBlockCardsConstants';
+import i18n from '@cdo/locale';
+
+import ContentContainer from '../ContentContainer';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+
+import CourseBlocksWrapper from './CourseBlocksWrapper';
+import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
+import shapes from './shapes';
 
 class ModernCsfCourses extends Component {
   componentDidMount() {
@@ -210,6 +214,7 @@ export class CourseBlocksIntl extends Component {
   static propTypes = {
     isTeacher: PropTypes.bool,
     showModernElementaryCourses: PropTypes.bool.isRequired,
+    specialAnnouncement: shapes.specialAnnouncement,
   };
 
   componentDidMount() {
@@ -219,7 +224,8 @@ export class CourseBlocksIntl extends Component {
   }
 
   render() {
-    const {isTeacher, showModernElementaryCourses: modernCsf} = this.props;
+    const {showModernElementaryCourses: modernCsf, specialAnnouncement} =
+      this.props;
     const AcceleratedCourses = () => (
       <ContentContainer>
         <AcceleratedAndUnplugged />
@@ -231,7 +237,12 @@ export class CourseBlocksIntl extends Component {
 
         <CourseBlocksHoc isInternational />
 
-        <SpecialAnnouncement isEnglish={false} isTeacher={isTeacher} />
+        {specialAnnouncement && (
+          <MarketingAnnouncementBanner
+            announcement={specialAnnouncement}
+            marginBottom="30px"
+          />
+        )}
 
         {modernCsf ? <CoursesAToF /> : <Courses1To4 />}
 

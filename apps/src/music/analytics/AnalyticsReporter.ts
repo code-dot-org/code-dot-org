@@ -6,7 +6,7 @@ import {
   setSessionId,
   flush,
 } from '@amplitude/analytics-browser';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 import {Block} from 'blockly';
 
@@ -107,7 +107,9 @@ export default class AnalyticsReporter {
 
       // Log an error if this is not development. On development, this error is expected.
       if (!isDevelopmentEnvironment()) {
-        Lab2MetricsReporter.logError(message, error as Error);
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError(message, error as Error);
       }
     }
   }

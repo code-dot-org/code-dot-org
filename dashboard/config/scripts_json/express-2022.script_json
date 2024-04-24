@@ -18,14 +18,16 @@
       "supported_locales": [
         "fa-AF",
         "fa-IR",
-        "sq-AL"
+        "ko-KR",
+        "sq-AL",
+        "ar-SA"
       ],
       "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2023-11-01 21:17:57 UTC",
+    "serialized_at": "2024-02-16 21:44:04 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

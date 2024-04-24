@@ -7,8 +7,8 @@ fil-PH:
   accelerated_name: Pinabilis na Kurso
   account_sign_up_child_accept_terms: Kinukumpirma ko na may pahintulot ako ng aking
     magulang o ligal na tagapag-alaga na gamitin ang mga serbisyo ng Code.org.
-  account_sign_up_email_opt_in: Maaari ba kaming mag-email sa iyo tungkol sa mga pag-update
-    sa aming mga kurso, lokal na mga oportunidad, o iba pang balita sa agham ng computer?
+  account_sign_up_email_opt_in: Maaari ba kaming mag-email sa iyo tungkol sa mga update
+    sa mga kurso namin, lokal na mga oportunidad, o iba pang balita sa computer science?
     (halos isang beses sa isang buwan)
   ai_activity: Aktibidad
   ai_and_ethics: AI at Mga Etika
@@ -270,6 +270,7 @@ fil-PH:
   class_submission_out_of_school_summer_camp: Summer camp
   classicmaze_name: Klasiko na Maze
   code_hoc_coming: Ang Hour of Code ay andito na - Disyembre 08-14!
+  code_org_logo_alt: Code.org Home
   code_sign_up: Mag-sign up upang lumahok sa CS Edukasyon Week
   codea_beyond_gradelevel: High school +
   codea_beyond_longdescription: Ang Codea para sa iPad ay nagbibigay-daan sa iyo na
@@ -1262,6 +1263,7 @@ fil-PH:
   header_about_us: Tungkol sa Amin
   header_course_catalog: Catalog ng Kurso
   header_courses: Mga kurso
+  header_districts: Distrito
   header_documentation: Dokumentasyon
   header_educate_beyond: Pagkatapos ng Code.org
   header_educate_community: Online na Komunidad
@@ -1280,6 +1282,7 @@ fil-PH:
   header_incubator: Incubator
   header_learn: Matuto
   header_legal: Pagkapribado at Legal
+  header_legal_cookie_notice: Paunawa ng Cookie
   header_legal_privacy: Patakaran sa Pagkapribado
   header_legal_tos: Mga Alituntunin ng Serbisyo
   header_my_dashboard: Aking Dashboard
@@ -1287,6 +1290,7 @@ fil-PH:
   header_project_gallery: Mga Proyekto
   header_report_abuse: I-report ang pag-abuso
   header_report_bug: I-report ang problema
+  header_schools: Paaralan
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Ang tulong na menu
   header_sections: Mga Seksyon

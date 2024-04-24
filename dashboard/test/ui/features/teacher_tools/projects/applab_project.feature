@@ -2,7 +2,7 @@ Feature: Applab Project
 
 # as_student to actually perform sign-in/out before/after scenario
 # no_mobile because we don't end up with open-workspace on mobile
-@as_student
+@as_taught_student
 @no_mobile
 Scenario: Applab Flow
   Given I am on "http://studio.code.org/projects/applab"
@@ -23,25 +23,8 @@ Scenario: Applab Flow
   And I wait until element ".project_updated_at" contains text "Saved"
   And I wait until initial thumbnail capture is complete
 
-  Given I open the project share dialog
-  And the project is unpublished
-  When I publish the project from the share dialog
-  And I open the project share dialog
-  Then the project is published
-
-  When I reload the project page
-  And I open the project share dialog
-  Then the project is published
-
-  When I unpublish the project from the share dialog
-  And I open the project share dialog
-  Then the project is unpublished
-
-  When I reload the project page
-  And I open the project share dialog
-  Then the project is unpublished
-
-  Then I navigate to the share URL
+  Then I open the project share dialog
+  And I navigate to the share URL
   And I wait to see "#footerDiv"
   Then I should see title includes "Code Ninja - App Lab - Code.org"
   And element "#codeWorkspace" is hidden

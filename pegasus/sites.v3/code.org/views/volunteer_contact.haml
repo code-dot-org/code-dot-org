@@ -41,7 +41,7 @@
           %label.help-choice
             %input{name: "type_task_#{key}_b", type: "checkbox", value: "1", required: false}= label
 
-  %p{style: 'color: #00adbc; font-size: 1.125em;'} IMPORTANT: Code.org has performed no references or background checks on these potential volunteers and neither recommends nor certifies any volunteer.
+  %p{style: 'color: var(--brand_primary_default); font-size: 1.125em;'} IMPORTANT: Code.org has performed no references or background checks on these potential volunteers and neither recommends nor certifies any volunteer.
   %p It is entirely your responsibility to thoroughly check references or perform any background checks required by your school or district. Code.org provides no warranty, guarantees of suitability, or information other than the ability to contact these potential volunteers, and all liability in any use of volunteers rests only with you. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on this potential volunteer.
 
   .form-group{style: "margin-bottom: 0px"}
@@ -62,7 +62,7 @@
     %button{type: "submit"} Send
 
   #error-message{style: "display: none;"}
-  #success-message{style: "display: none; color: #00adbc;"}
+  #success-message{style: "display: none; color: var(--brand_primary_default);"}
     %p
       You've successfully contacted this volunteer.
       %a.scroll-to-top{onclick: "adjustScroll('volunteer-map');"}

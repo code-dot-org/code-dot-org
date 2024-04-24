@@ -175,6 +175,10 @@ class ScriptLevel < ApplicationRecord
           script_path(script)
         end
       end
+    elsif script.pl_course?
+      return build_script_level_path(level_to_follow) if level_to_follow
+      next_unit = script.next_unit(user)
+      next_unit ? script_path(next_unit) : script_completion_redirect(user, script)
     elsif bubble_choice? && !bubble_choice_parent
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self)
@@ -193,7 +197,7 @@ class ScriptLevel < ApplicationRecord
           script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
         end
       else
-        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(user, script)
       end
     end
   end
@@ -283,7 +287,7 @@ class ScriptLevel < ApplicationRecord
 
   def report_bug_url(request)
     message = "Bug in Course #{script.name} lesson #{lesson.absolute_position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
-    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+    "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
 
   def level_display_text
@@ -325,16 +329,24 @@ class ScriptLevel < ApplicationRecord
         is_concept_level: level.concept_level?,
         title: level_display_text,
         url: build_script_level_url(self),
+        path: build_script_level_path(self),
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
         display_as_unplugged: level.display_as_unplugged?,
         app: level.game&.app,
-        uses_lab2: level.uses_lab2?
+        uses_lab2: level.uses_lab2?,
+        is_validated: level.validated?,
+        can_have_feedback: level.can_have_feedback?
       }
 
       if progression
         summary[:progression] = progression
-        localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+        localized_progression_name = I18n.t(
+          progression,
+          scope: %i[data progressions],
+          default: progression,
+          smart: true
+        )
         summary[:progression_display_name] = localized_progression_name
       end
 

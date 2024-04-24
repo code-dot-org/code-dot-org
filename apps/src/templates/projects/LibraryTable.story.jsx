@@ -5,7 +5,6 @@ import {reduxStore} from '../../../.storybook/decorators';
 import {Provider} from 'react-redux';
 
 export default {
-  title: 'LibraryTable',
   component: LibraryTable,
 };
 

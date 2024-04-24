@@ -1063,6 +1063,7 @@ describe('project.js', () => {
 
       // change getLevelSource stub to simulate changing source code
       const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
       sourceHandler.getLevelSource = getLevelSourceStub;
@@ -1084,6 +1085,7 @@ describe('project.js', () => {
 
       // change getLevelSource stub to simulate changing source code
       const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
       sourceHandler.getLevelSource = getLevelSourceStub;

@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import React from 'react';
+
 import PromptIcon from '@cdo/apps/templates/instructions/PromptIcon';
+
+import {expect} from '../../../util/deprecatedChai';
 
 const TEST_SRC_URL = 'example.jpg';
 
@@ -16,6 +18,7 @@ describe('PromptIcon', () => {
           maxWidth: 50,
           marginLeft: 5,
         }}
+        alt=""
       />
     );
   });
