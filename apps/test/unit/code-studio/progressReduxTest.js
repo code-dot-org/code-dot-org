@@ -2,7 +2,7 @@ import {assert} from 'chai';
 import sinon from 'sinon';
 import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
