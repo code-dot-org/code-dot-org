@@ -5194,4 +5194,29 @@ class UserTest < ActiveSupport::TestCase
     create :follower, section: section, user: student
     assert_empty teacher.reload.followers
   end
+
+  test 'persists nested attributes when creating a teacher from a partial registration' do
+    session = {}
+    params = {
+      'authentication_options_attributes' => {
+        '0' => {
+          'email' => 'test@email.com',
+        }
+      },
+      'school_info_attributes' => {
+        'country' => 'US',
+        'school_type' => 'public',
+        'school_state' => 'Washington',
+        'school_name' => 'Test School',
+        'school_zip' => '99999'
+      }
+    }
+    partial_teacher = build :teacher
+    partial_teacher.authentication_options = [AuthenticationOption.new(user: partial_teacher, email: 'old_email@email.com')]
+    PartialRegistration.persist_attributes session, partial_teacher
+    fully_registered_teacher = User.new_with_session(params, session)
+    fully_registered_teacher.save
+    assert_equal fully_registered_teacher.school_info.school_name, params.dig('school_info_attributes', 'school_name')
+    assert_equal fully_registered_teacher.authentication_options.first.email, params.dig('authentication_options_attributes', '0', 'email')
+  end
 end

@@ -3,6 +3,7 @@ class Services::User
   # new values to the given User instance.
   def self.assign_form_params(user, params)
     assign_auth_option_params(user, params)
+    assign_school_info_params(user, params)
     # Remove nested attributes, otherwise we might accidentally create new
     # nested objects rather than updating existing ones.
     # '_attributes' is how active_record identifies nested attrs.
@@ -31,6 +32,21 @@ class Services::User
         # Apply the form params to the AuthenticationOption
         user_ao.assign_attributes(params_ao.compact)
       end
+    end
+  end
+
+  # The user model accepts nested attributes for school_info. On the finish
+  # signup form, users can associate themselves with a school. This method
+  # looks for the school_info attributes in the form params and updates the
+  # User object. The user_school_infos record is created separately, in an
+  # after_save hook in the User model, so it doesn't need to be created here.
+  def self.assign_school_info_params(user, params)
+    # "school_info_attributes"=>{"country"=>"US", "school_type"=>"public", "school_state"=>"Washington", "school_name"=>"Foo School", "school_zip"=>"98021"}
+    params_school_info = params['school_info_attributes']
+    if params_school_info
+      # Disable validation because the school info fields are optional on the registration page
+      params_school_info[:validation_type] = SchoolInfo::VALIDATION_NONE
+      user.school_info = SchoolInfo.create(params_school_info)
     end
   end
 end
