@@ -1,4 +1,4 @@
-module AichatHelper
+module AichatSagemakerHelper
   ASSISTANT = "assistant"
   USER = "user"
   BASE_PROMPT = "You are a helpful chatbot for children. Limit your responses to a small paragraph. "
@@ -8,7 +8,7 @@ module AichatHelper
   SENTENCE_END_TOKEN = "</s>"
   MAX_NEW_TOKENS = 300
   SAGEMAKER_CLIENT = Aws::SageMakerRuntime::Client.new
-  SAGEMAKER_MODEL_ENDPOINT = "mistral-7b-inst-v01" # "BioMistral-7B"
+  SAGEMAKER_MODEL_ENDPOINT = "gen-ai-mistral-7b-inst-v01"
   TOP_P = 0.9
 
   # The instruction-tuned version of Mistral accepts formatted instructions where conversation roles
