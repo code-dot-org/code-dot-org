@@ -4,7 +4,8 @@
   grid-area: file-browser;
 }
 .file-browser ul {
-  padding-left: 10px;
+  list-style: none;
+  padding-left: 5px;
 }
 
 .file-browser ul li {
@@ -14,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  width: 100%;
+  //width: 100%;
   background-color: #3f444b;
   color: white;
 }

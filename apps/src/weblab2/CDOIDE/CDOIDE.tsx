@@ -1,6 +1,7 @@
 import {CDOIDEContextProvider} from '@cdoide/cdoIDEContext';
 import DisabledEditor from '@cdoide/Editor/DisabledEditor';
 import {FileBrowser} from '@cdoide/FileBrowser';
+import {FileTabs} from '@cdoide/FileTabs';
 import {useSynchronizedProject} from '@cdoide/hooks';
 import {Instructions} from '@cdoide/Instructions';
 import {PreviewContainer} from '@cdoide/PreviewContainer';
@@ -15,7 +16,6 @@ import React from 'react';
 import './styles/cdoIDE.css';
 
 // import {Search} from '@cdoide/Search';
-// import {FileTabs} from '@cdoide/FileTabs';
 // const Editor = () => <div style={{gridArea: 'editor'}}>This is me editor</div>;
 
 type CDOIDEProps = {
@@ -51,8 +51,8 @@ const paneWidths: (PaneKey & {width: string})[] = [
 const paneHeights: (PaneKey & {height: string})[] = [];
 
 const layout = `
-  "instructions editor preview-container"
-  "instructions editor preview-container"
+  "instructions instructions preview-container"
+  "side-bar file-tabs preview-container"
   "file-browser editor preview-container"
 `;
 
@@ -97,6 +97,7 @@ export const CDOIDE = React.memo(
           <EditorComponent />
           <PreviewContainer />
           <Instructions />
+          <FileTabs />
           {/*<Search />
 
           <FileTabs />*/}

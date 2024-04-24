@@ -6,6 +6,8 @@
   height: 100%;
   overflow-x: scroll;
   max-width: 100%;
+  background-color: #3f444b;
+  color: white;
 
   grid-area: file-tabs;
 }
