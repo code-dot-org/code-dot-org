@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.0](https://github.com/code-dot-org/code-dot-org/pull/58209)
+* added `readOnly` prop to allow for setting the dropdown to read-only
+
 ## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/57827)
 * added dropdownTextThickness prop to allow for setting the font weight of the dropdown text
 * removed unnecessary margin-bottom that was fetched from typography styles
