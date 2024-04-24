@@ -21,12 +21,6 @@ export interface CheckboxOption {
   isOptionDisabled?: boolean;
 }
 
-export interface CheckboxOption {
-  value: string;
-  label: string;
-  isOptionDisabled?: boolean;
-}
-
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
@@ -54,6 +48,19 @@ export interface CheckboxDropdownProps {
   onClearAll: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
+/**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see apps/test/unit/componentLibrary/DropdownMenuTest.jsx)
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Checkbox Dropdown Component.
+ * Used to render checkbox (multiple choice) dropdowns.
+ */
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
   labelText,
@@ -114,19 +121,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   );
 };
 
-/**
- * ### Production-ready Checklist:
- * * (✔) implementation of component approved by design team;
- * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/DropdownMenuTest.jsx)
- * * (?) passes accessibility checks;
- *
- * ###  Status: ```Ready for dev```
- *
- * Design System: Checkbox Dropdown Component.
- * Used to render checkbox (multiple choice) dropdowns.
- */
 const WrappedCheckboxDropdown = (props: CheckboxDropdownProps) => (
   <DropdownProviderWrapper>
     <CheckboxDropdown {...props} />
