@@ -262,7 +262,7 @@
     "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.2",
     "prop-types": "^15.6.2",
     "pusher-js": "4.1.0",
-    "pyodide": "^0.24.1",
+    "pyodide": "^0.25.1",
     "qrcode.react": "^0.8.0",
     "qtip2": "2.2.0",
     "query-string": "4.1.0",
