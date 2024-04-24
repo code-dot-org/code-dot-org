@@ -4,7 +4,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {LmsLinks} from '@cdo/apps/util/sharedConstants';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {

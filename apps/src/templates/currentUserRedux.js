@@ -3,7 +3,7 @@ import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
-import {UserTypes} from '@cdo/apps/util/sharedConstants';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
