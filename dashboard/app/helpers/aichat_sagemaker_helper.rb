@@ -6,7 +6,7 @@ module AichatSagemakerHelper
   INSTRUCTIONS_END_TOKEN = "[/INST]"
   SENTENCE_BEGIN_TOKEN = "<s>"
   SENTENCE_END_TOKEN = "</s>"
-  MAX_NEW_TOKENS = 300
+  MAX_NEW_TOKENS = 512
   SAGEMAKER_CLIENT = Aws::SageMakerRuntime::Client.new
   SAGEMAKER_MODEL_ENDPOINT = "gen-ai-mistral-7b-inst-v01"
   TOP_P = 0.9
