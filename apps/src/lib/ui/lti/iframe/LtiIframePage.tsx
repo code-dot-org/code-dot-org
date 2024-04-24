@@ -18,11 +18,13 @@ export const LtiIframePage = ({logoUrl, authUrl}: LtiIframePageProps) => {
     <main className={styles.mainContentContainer}>
       <div className={styles.mainContent}>
         <img className={styles.logo} src={logoUrl} alt={i18n.codeLogo()} />
-        <div className={styles.description}>
-          <Typography semanticTag="h1" visualAppearance="heading-xxl">
-            {i18n.ltiIframeDescription()}
-          </Typography>
-        </div>
+        <Typography
+          semanticTag="p"
+          visualAppearance="body-one"
+          className={styles.description}
+        >
+          {i18n.ltiIframeDescription()}
+        </Typography>
         <div>
           <Button
             className={styles.callToAction}
