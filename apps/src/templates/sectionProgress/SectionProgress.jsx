@@ -15,6 +15,7 @@ import i18n from '@cdo/locale';
 
 import {h3Style} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
+import InviteToV2ProgressModal from '../sectionProgressV2/InviteToV2ProgressModal';
 
 import LessonSelector from './LessonSelector';
 import ProgressViewHeader from './ProgressViewHeader';
@@ -59,6 +60,7 @@ class SectionProgress extends Component {
 
     this.state = {
       reportedInitialRender: false,
+      invitationOpen: true, // Need to connect this to user data
     };
   }
 
@@ -177,6 +179,11 @@ class SectionProgress extends Component {
         className={dashboardStyles.dashboardPage}
         data-testid="section-progress-v1"
       >
+        {this.state.invitationOpen && (
+          <InviteToV2ProgressModal
+            onClose={() => this.setState({invitationOpen: false})}
+          />
+        )}
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
