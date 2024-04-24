@@ -101,14 +101,6 @@ const optionsList = [
       },
     ],
   },
-  {
-    name: 'show-pack-dialog-buttons',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Hide pack dialog buttons.'},
-      {value: 'true', description: 'Show pack dialog buttons.'},
-    ],
-  },
 ];
 
 export default class MusicMenu extends React.Component {

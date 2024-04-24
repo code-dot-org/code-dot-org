@@ -54,7 +54,9 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
       setInputManually(true);
       sendAnalyticsEvent(EVENTS.ADD_MANUALLY_CLICKED, {});
     } else {
-      sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {ncesId: schoolId});
+      sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {
+        'nces Id': schoolId,
+      });
     }
     setSelectedSchoolNcesId(schoolId);
   };

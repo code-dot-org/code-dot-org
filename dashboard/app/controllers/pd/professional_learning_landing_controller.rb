@@ -42,6 +42,8 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
       workshops_for_regional_partner: workshops_for_regional_partner_data,
       pl_courses_started: current_user.pl_units_started,
       user_permissions: current_user.permissions.map(&:permission),
+      joined_student_sections: current_user.sections_as_student_participant&.map(&:summarize_without_students),
+      joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_without_students),
       courses_as_facilitator: Pd::CourseFacilitator.where(facilitator: current_user).map(&:course).uniq,
     }.compact
   end

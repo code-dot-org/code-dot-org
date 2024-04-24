@@ -113,7 +113,7 @@
     "/course_content/Hour of Code/frozen.json": "662a7f590a96bd861ca87e7f92ef4324",
     "/course_content/Hour of Code/gumball.json": "662a7f590a96bd861ca87e7f92ef4324",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "d7de6f2175a4a0b801bab541c91c4f1e",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d7de6f2175a4a0b801bab541c91c4f1e",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "d7de6f2175a4a0b801bab541c91c4f1e",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "d7de6f2175a4a0b801bab541c91c4f1e",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "a7dbcebc967238e0bc7e9114e53dbf61",
@@ -166,10 +166,12 @@
     "/course_content/other/poetry-hoc3.json": "d7de6f2175a4a0b801bab541c91c4f1e",
     "/course_content/other/vigenere.json": "662a7f590a96bd861ca87e7f92ef4324",
     "/course_content/projects.json": "662a7f590a96bd861ca87e7f92ef4324",
-    "/dashboard/block_categories.yml": "662a7f590a96bd861ca87e7f92ef4324",
-    "/dashboard/progressions.yml": "b9844c5fbfecbe60d5949bbfebc4e788",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "71eab4c9f479a1b4fc4f88233e70286c",
     "/dashboard/parameter_names.yml": "b9844c5fbfecbe60d5949bbfebc4e788",
-    "/dashboard/variable_names.yml": "b9844c5fbfecbe60d5949bbfebc4e788"
+    "/dashboard/variable_names.yml": "b9844c5fbfecbe60d5949bbfebc4e788",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "az-AZ": {
     "/course_content/2017/coursea-2017.json": "c27ea44897653810aca932a5174d764b",
@@ -285,7 +287,7 @@
     "/course_content/Hour of Code/frozen.json": "37d3e34585a7c28cece08c3563cbc690",
     "/course_content/Hour of Code/gumball.json": "37d3e34585a7c28cece08c3563cbc690",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "a5eb4f9d42817b995772aef7a6d0e64b",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "a5eb4f9d42817b995772aef7a6d0e64b",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "a5eb4f9d42817b995772aef7a6d0e64b",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "a5eb4f9d42817b995772aef7a6d0e64b",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "20a1780fab953b0995d2f16f569a6f03",
@@ -338,10 +340,12 @@
     "/course_content/other/poetry-hoc3.json": "a5eb4f9d42817b995772aef7a6d0e64b",
     "/course_content/other/vigenere.json": "37d3e34585a7c28cece08c3563cbc690",
     "/course_content/projects.json": "f8bcfff245ef7135273947e769b7e3a2",
-    "/dashboard/block_categories.yml": "f8bcfff245ef7135273947e769b7e3a2",
-    "/dashboard/progressions.yml": "f8bcfff245ef7135273947e769b7e3a2",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "71eab4c9f479a1b4fc4f88233e70286c",
     "/dashboard/parameter_names.yml": "f8bcfff245ef7135273947e769b7e3a2",
-    "/dashboard/variable_names.yml": "f8bcfff245ef7135273947e769b7e3a2"
+    "/dashboard/variable_names.yml": "f8bcfff245ef7135273947e769b7e3a2",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "bg-BG": {
     "/course_content/2017/coursea-2017.json": "f6b1a6636cfd2ee4b8345a061ffb38a7",
@@ -457,7 +461,7 @@
     "/course_content/Hour of Code/frozen.json": "b4bf405fa6e9bb992fdb282552f10b1c",
     "/course_content/Hour of Code/gumball.json": "b4bf405fa6e9bb992fdb282552f10b1c",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "c0c078a94f962696000e54b39968f313",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "c0c078a94f962696000e54b39968f313",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "c0c078a94f962696000e54b39968f313",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "c0c078a94f962696000e54b39968f313",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "cabd71f65f56b1bc4996b51a519bb05a",
@@ -510,10 +514,12 @@
     "/course_content/other/poetry-hoc3.json": "3f20dd948275142bc49b768e8e4fc591",
     "/course_content/other/vigenere.json": "b4bf405fa6e9bb992fdb282552f10b1c",
     "/course_content/projects.json": "b4bf405fa6e9bb992fdb282552f10b1c",
-    "/dashboard/block_categories.yml": "b4bf405fa6e9bb992fdb282552f10b1c",
-    "/dashboard/progressions.yml": "3f20dd948275142bc49b768e8e4fc591",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "3f20dd948275142bc49b768e8e4fc591",
-    "/dashboard/variable_names.yml": "3f20dd948275142bc49b768e8e4fc591"
+    "/dashboard/variable_names.yml": "3f20dd948275142bc49b768e8e4fc591",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "bn-BD": {
     "/course_content/2017/coursea-2017.json": "7bf46dd194c2369365d781eed7a5469e",
@@ -629,7 +635,7 @@
     "/course_content/Hour of Code/frozen.json": "c1c2368f8092f1eb7f02fdf6314c7dd4",
     "/course_content/Hour of Code/gumball.json": "c1c2368f8092f1eb7f02fdf6314c7dd4",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "78b351bc1d504f86cfb0f41c44e4a2f3",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "78b351bc1d504f86cfb0f41c44e4a2f3",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "78b351bc1d504f86cfb0f41c44e4a2f3",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "78b351bc1d504f86cfb0f41c44e4a2f3",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "edca83f2a5f0280b7b56ce4d5665d5ef",
@@ -682,10 +688,12 @@
     "/course_content/other/poetry-hoc3.json": "78b351bc1d504f86cfb0f41c44e4a2f3",
     "/course_content/other/vigenere.json": "c1c2368f8092f1eb7f02fdf6314c7dd4",
     "/course_content/projects.json": "53309c74f976e9efa9ec52affb3a16ef",
-    "/dashboard/block_categories.yml": "53309c74f976e9efa9ec52affb3a16ef",
-    "/dashboard/progressions.yml": "53309c74f976e9efa9ec52affb3a16ef",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "71eab4c9f479a1b4fc4f88233e70286c",
     "/dashboard/parameter_names.yml": "53309c74f976e9efa9ec52affb3a16ef",
-    "/dashboard/variable_names.yml": "53309c74f976e9efa9ec52affb3a16ef"
+    "/dashboard/variable_names.yml": "53309c74f976e9efa9ec52affb3a16ef",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "bs-BA": {
     "/course_content/2017/coursea-2017.json": "be49d5772a95f1fe2e3249096080ffe6",
@@ -801,7 +809,7 @@
     "/course_content/Hour of Code/frozen.json": "be49d5772a95f1fe2e3249096080ffe6",
     "/course_content/Hour of Code/gumball.json": "be49d5772a95f1fe2e3249096080ffe6",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "4c41020de7fb4be08bdb355493d23e81",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4c41020de7fb4be08bdb355493d23e81",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "4c41020de7fb4be08bdb355493d23e81",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "4c41020de7fb4be08bdb355493d23e81",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "8aff71627f5657343def10877324887f",
@@ -854,10 +862,12 @@
     "/course_content/other/poetry-hoc3.json": "4c41020de7fb4be08bdb355493d23e81",
     "/course_content/other/vigenere.json": "30339f5b2692531d4eeff1576114999f",
     "/course_content/projects.json": "30339f5b2692531d4eeff1576114999f",
-    "/dashboard/block_categories.yml": "30339f5b2692531d4eeff1576114999f",
-    "/dashboard/progressions.yml": "30339f5b2692531d4eeff1576114999f",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "30339f5b2692531d4eeff1576114999f",
-    "/dashboard/variable_names.yml": "30339f5b2692531d4eeff1576114999f"
+    "/dashboard/variable_names.yml": "30339f5b2692531d4eeff1576114999f",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ca-ES": {
     "/course_content/2017/coursea-2017.json": "ba790a858c2aeff8895b9897497e5810",
@@ -973,7 +983,7 @@
     "/course_content/Hour of Code/frozen.json": "b7409c6d8d5923247a4718918ff2d831",
     "/course_content/Hour of Code/gumball.json": "ba790a858c2aeff8895b9897497e5810",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "0c5461c316786793b54bb246d41eb7e8",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "0c5461c316786793b54bb246d41eb7e8",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "0c5461c316786793b54bb246d41eb7e8",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "0c5461c316786793b54bb246d41eb7e8",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "2e7cd736adf8d9aa3c60a57e25b26b48",
@@ -1026,10 +1036,12 @@
     "/course_content/other/poetry-hoc3.json": "e9935edd2e3cfd4c112ecbeb3747ba99",
     "/course_content/other/vigenere.json": "b7409c6d8d5923247a4718918ff2d831",
     "/course_content/projects.json": "b7409c6d8d5923247a4718918ff2d831",
-    "/dashboard/block_categories.yml": "b7409c6d8d5923247a4718918ff2d831",
-    "/dashboard/progressions.yml": "b7409c6d8d5923247a4718918ff2d831",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "e9935edd2e3cfd4c112ecbeb3747ba99",
-    "/dashboard/variable_names.yml": "e9935edd2e3cfd4c112ecbeb3747ba99"
+    "/dashboard/variable_names.yml": "e9935edd2e3cfd4c112ecbeb3747ba99",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "co-CO": {
     "/course_content/2017/coursea-2017.json": "f0c2b8f199b30ef7cb69177ba4f27e16",
@@ -1145,7 +1157,7 @@
     "/course_content/Hour of Code/frozen.json": "ccf13b67c27025c14c89082cf441af51",
     "/course_content/Hour of Code/gumball.json": "ccf13b67c27025c14c89082cf441af51",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "2056181dfc0f2d945048339904380c5d",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "2056181dfc0f2d945048339904380c5d",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "2056181dfc0f2d945048339904380c5d",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "2056181dfc0f2d945048339904380c5d",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "17478a4de1891ccf4c24a41e2bab115c",
@@ -1198,10 +1210,12 @@
     "/course_content/other/poetry-hoc3.json": "2056181dfc0f2d945048339904380c5d",
     "/course_content/other/vigenere.json": "ccf13b67c27025c14c89082cf441af51",
     "/course_content/projects.json": "ccf13b67c27025c14c89082cf441af51",
-    "/dashboard/block_categories.yml": "ccf13b67c27025c14c89082cf441af51",
-    "/dashboard/progressions.yml": "ccf13b67c27025c14c89082cf441af51",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "ccf13b67c27025c14c89082cf441af51",
-    "/dashboard/variable_names.yml": "ccf13b67c27025c14c89082cf441af51"
+    "/dashboard/variable_names.yml": "ccf13b67c27025c14c89082cf441af51",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "cs-CZ": {
     "/course_content/2017/coursea-2017.json": "a837e2b7459e1f13280eaeae8b5c5374",
@@ -1317,7 +1331,7 @@
     "/course_content/Hour of Code/frozen.json": "3f891419e1828e61ea5908e33c96117f",
     "/course_content/Hour of Code/gumball.json": "3f891419e1828e61ea5908e33c96117f",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "be2980829a2f04ec15eec6ff337091ad",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "be2980829a2f04ec15eec6ff337091ad",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "be2980829a2f04ec15eec6ff337091ad",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "be2980829a2f04ec15eec6ff337091ad",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "35c34278ec97bc958d08ef134cd23ab9",
@@ -1370,10 +1384,12 @@
     "/course_content/other/poetry-hoc3.json": "be2980829a2f04ec15eec6ff337091ad",
     "/course_content/other/vigenere.json": "3f891419e1828e61ea5908e33c96117f",
     "/course_content/projects.json": "3f891419e1828e61ea5908e33c96117f",
-    "/dashboard/block_categories.yml": "3f891419e1828e61ea5908e33c96117f",
-    "/dashboard/progressions.yml": "1f1db70a7dc1a73cc61169b9b209bc91",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "1f1db70a7dc1a73cc61169b9b209bc91",
-    "/dashboard/variable_names.yml": "1f1db70a7dc1a73cc61169b9b209bc91"
+    "/dashboard/variable_names.yml": "1f1db70a7dc1a73cc61169b9b209bc91",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "da-DK": {
     "/course_content/2017/coursea-2017.json": "0b3a542636267bee2ebb2e830f5f34f6",
@@ -1489,7 +1505,7 @@
     "/course_content/Hour of Code/frozen.json": "c48b72496bca01da9067aa691667db82",
     "/course_content/Hour of Code/gumball.json": "c48b72496bca01da9067aa691667db82",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "095224daee5cd604c1e97c74373a7ed6",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "095224daee5cd604c1e97c74373a7ed6",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "095224daee5cd604c1e97c74373a7ed6",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "095224daee5cd604c1e97c74373a7ed6",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "baad2fe8bc541a4a30c811db12cb14a0",
@@ -1542,10 +1558,12 @@
     "/course_content/other/poetry-hoc3.json": "095224daee5cd604c1e97c74373a7ed6",
     "/course_content/other/vigenere.json": "c48b72496bca01da9067aa691667db82",
     "/course_content/projects.json": "28159464ff445ccd329f57b31ad54f01",
-    "/dashboard/block_categories.yml": "28159464ff445ccd329f57b31ad54f01",
-    "/dashboard/progressions.yml": "28159464ff445ccd329f57b31ad54f01",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "28159464ff445ccd329f57b31ad54f01",
-    "/dashboard/variable_names.yml": "28159464ff445ccd329f57b31ad54f01"
+    "/dashboard/variable_names.yml": "28159464ff445ccd329f57b31ad54f01",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "de-DE": {
     "/course_content/2017/coursea-2017.json": "bed7e24fccea796754479e2f7f6a7d19",
@@ -1661,7 +1679,7 @@
     "/course_content/Hour of Code/frozen.json": "2a93bbc7f327cb9acae8e94137b6acda",
     "/course_content/Hour of Code/gumball.json": "2a93bbc7f327cb9acae8e94137b6acda",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "7d3ee1777db5040c57f34c89768dc9de",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "7d3ee1777db5040c57f34c89768dc9de",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "7d3ee1777db5040c57f34c89768dc9de",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "7d3ee1777db5040c57f34c89768dc9de",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "d9a91426be5a5e0748b8376cfa31de91",
@@ -1714,10 +1732,12 @@
     "/course_content/other/poetry-hoc3.json": "7d3ee1777db5040c57f34c89768dc9de",
     "/course_content/other/vigenere.json": "2a93bbc7f327cb9acae8e94137b6acda",
     "/course_content/projects.json": "2a93bbc7f327cb9acae8e94137b6acda",
-    "/dashboard/block_categories.yml": "2a93bbc7f327cb9acae8e94137b6acda",
-    "/dashboard/progressions.yml": "c69fb5805a283f7dd6599b123e5c5278",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "c69fb5805a283f7dd6599b123e5c5278",
-    "/dashboard/variable_names.yml": "c69fb5805a283f7dd6599b123e5c5278"
+    "/dashboard/variable_names.yml": "c69fb5805a283f7dd6599b123e5c5278",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "dv-MV": {
     "/course_content/2017/coursea-2017.json": "8b12eaea864459546dd81ea76d5bb097",
@@ -1833,7 +1853,7 @@
     "/course_content/Hour of Code/frozen.json": "8b12eaea864459546dd81ea76d5bb097",
     "/course_content/Hour of Code/gumball.json": "8b12eaea864459546dd81ea76d5bb097",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "4a16f7b5fcb6e4e27f47b81907f7c5bf",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4a16f7b5fcb6e4e27f47b81907f7c5bf",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "4a16f7b5fcb6e4e27f47b81907f7c5bf",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "4a16f7b5fcb6e4e27f47b81907f7c5bf",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "08c01479ee0155bbd5c1df3abd771907",
@@ -1886,10 +1906,12 @@
     "/course_content/other/poetry-hoc3.json": "4a16f7b5fcb6e4e27f47b81907f7c5bf",
     "/course_content/other/vigenere.json": "4949e78a286de60b395a8742921b2f2c",
     "/course_content/projects.json": "4949e78a286de60b395a8742921b2f2c",
-    "/dashboard/block_categories.yml": "4949e78a286de60b395a8742921b2f2c",
-    "/dashboard/progressions.yml": "4949e78a286de60b395a8742921b2f2c",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "4949e78a286de60b395a8742921b2f2c",
-    "/dashboard/variable_names.yml": "4949e78a286de60b395a8742921b2f2c"
+    "/dashboard/variable_names.yml": "4949e78a286de60b395a8742921b2f2c",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "el-GR": {
     "/course_content/2017/coursea-2017.json": "ef21df7340a1676787db049353390883",
@@ -2005,7 +2027,7 @@
     "/course_content/Hour of Code/frozen.json": "dc5d399750e507f7a81bd12653fa1431",
     "/course_content/Hour of Code/gumball.json": "ef21df7340a1676787db049353390883",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "e3f838050032ad70e2999a84f338a8f7",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "e3f838050032ad70e2999a84f338a8f7",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "e3f838050032ad70e2999a84f338a8f7",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "e3f838050032ad70e2999a84f338a8f7",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "fdf9b3277a319f9487ba678c45e2886b",
@@ -2058,10 +2080,12 @@
     "/course_content/other/poetry-hoc3.json": "e3f838050032ad70e2999a84f338a8f7",
     "/course_content/other/vigenere.json": "dc5d399750e507f7a81bd12653fa1431",
     "/course_content/projects.json": "dc5d399750e507f7a81bd12653fa1431",
-    "/dashboard/block_categories.yml": "dc5d399750e507f7a81bd12653fa1431",
-    "/dashboard/progressions.yml": "dc5d399750e507f7a81bd12653fa1431",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "dc5d399750e507f7a81bd12653fa1431",
-    "/dashboard/variable_names.yml": "dc5d399750e507f7a81bd12653fa1431"
+    "/dashboard/variable_names.yml": "dc5d399750e507f7a81bd12653fa1431",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "en-GB": {
     "/course_content/2017/coursea-2017.json": "1a6ad762c8e7c040c50b4e7052f2f06f",
@@ -2177,7 +2201,7 @@
     "/course_content/Hour of Code/frozen.json": "1a6ad762c8e7c040c50b4e7052f2f06f",
     "/course_content/Hour of Code/gumball.json": "1a6ad762c8e7c040c50b4e7052f2f06f",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "31b7ae5de4ae365960484cf135966845",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "31b7ae5de4ae365960484cf135966845",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "31b7ae5de4ae365960484cf135966845",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "31b7ae5de4ae365960484cf135966845",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "f39901c32ffec86e933a4f2e1d12e1ce",
@@ -2230,10 +2254,12 @@
     "/course_content/other/poetry-hoc3.json": "31b7ae5de4ae365960484cf135966845",
     "/course_content/other/vigenere.json": "1a6ad762c8e7c040c50b4e7052f2f06f",
     "/course_content/projects.json": "d0bd94414b3bd4bf3a1d7e1117adc208",
-    "/dashboard/block_categories.yml": "d0bd94414b3bd4bf3a1d7e1117adc208",
-    "/dashboard/progressions.yml": "d0bd94414b3bd4bf3a1d7e1117adc208",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "d0bd94414b3bd4bf3a1d7e1117adc208",
-    "/dashboard/variable_names.yml": "d0bd94414b3bd4bf3a1d7e1117adc208"
+    "/dashboard/variable_names.yml": "d0bd94414b3bd4bf3a1d7e1117adc208",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "es-ES": {
     "/course_content/2017/coursea-2017.json": "3e493ed98909a10d9814187f120e2654",
@@ -2349,7 +2375,7 @@
     "/course_content/Hour of Code/frozen.json": "dc3a9bb9ab26a87bf2f8c8168601c382",
     "/course_content/Hour of Code/gumball.json": "dc3a9bb9ab26a87bf2f8c8168601c382",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "431f8ed37ae17c1f47c0d52df1bbc58c",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "431f8ed37ae17c1f47c0d52df1bbc58c",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "431f8ed37ae17c1f47c0d52df1bbc58c",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "431f8ed37ae17c1f47c0d52df1bbc58c",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "0ee7e2e0b88a3dc3be07150757b19720",
@@ -2402,10 +2428,12 @@
     "/course_content/other/poetry-hoc3.json": "431f8ed37ae17c1f47c0d52df1bbc58c",
     "/course_content/other/vigenere.json": "dc3a9bb9ab26a87bf2f8c8168601c382",
     "/course_content/projects.json": "dc3a9bb9ab26a87bf2f8c8168601c382",
-    "/dashboard/block_categories.yml": "dc3a9bb9ab26a87bf2f8c8168601c382",
-    "/dashboard/progressions.yml": "befc1243aadbf5a53da4aac5a2016506",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "befc1243aadbf5a53da4aac5a2016506",
-    "/dashboard/variable_names.yml": "befc1243aadbf5a53da4aac5a2016506"
+    "/dashboard/variable_names.yml": "befc1243aadbf5a53da4aac5a2016506",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "es-MX": {
     "/course_content/2017/coursea-2017.json": "2274d2cd712c0ee9dc5d72679f2acec4",
@@ -2521,7 +2549,7 @@
     "/course_content/Hour of Code/frozen.json": "db1accb2e1696c30dc248542f2dd2c63",
     "/course_content/Hour of Code/gumball.json": "db1accb2e1696c30dc248542f2dd2c63",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "dc784b62bda3ac56c43364abf22606ad",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "dc784b62bda3ac56c43364abf22606ad",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "dc784b62bda3ac56c43364abf22606ad",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "dc784b62bda3ac56c43364abf22606ad",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "d98a4df95ceba46d4761b13303f5f1d0",
@@ -2574,10 +2602,12 @@
     "/course_content/other/poetry-hoc3.json": "dc784b62bda3ac56c43364abf22606ad",
     "/course_content/other/vigenere.json": "db1accb2e1696c30dc248542f2dd2c63",
     "/course_content/projects.json": "3d9e2353bd3bc67a2e511384faa665f1",
-    "/dashboard/block_categories.yml": "3d9e2353bd3bc67a2e511384faa665f1",
-    "/dashboard/progressions.yml": "72e7fa7772bedae2e6cbb7d1571d9212",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "3d9e2353bd3bc67a2e511384faa665f1",
-    "/dashboard/variable_names.yml": "3d9e2353bd3bc67a2e511384faa665f1"
+    "/dashboard/variable_names.yml": "3d9e2353bd3bc67a2e511384faa665f1",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "et-EE": {
     "/course_content/2017/coursea-2017.json": "8cae9aebba0ad896d332da5fb36f664e",
@@ -2693,7 +2723,7 @@
     "/course_content/Hour of Code/frozen.json": "a8d8c2d8175e860554af17d4f9ca55ad",
     "/course_content/Hour of Code/gumball.json": "8cae9aebba0ad896d332da5fb36f664e",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "746980025eca63452cada171e7fe4be8",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "746980025eca63452cada171e7fe4be8",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "746980025eca63452cada171e7fe4be8",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "746980025eca63452cada171e7fe4be8",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "50879a6ef790ae77509371d0756e460a",
@@ -2746,10 +2776,12 @@
     "/course_content/other/poetry-hoc3.json": "746980025eca63452cada171e7fe4be8",
     "/course_content/other/vigenere.json": "a8d8c2d8175e860554af17d4f9ca55ad",
     "/course_content/projects.json": "a8d8c2d8175e860554af17d4f9ca55ad",
-    "/dashboard/block_categories.yml": "a8d8c2d8175e860554af17d4f9ca55ad",
-    "/dashboard/progressions.yml": "a8d8c2d8175e860554af17d4f9ca55ad",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "a8d8c2d8175e860554af17d4f9ca55ad",
-    "/dashboard/variable_names.yml": "a8d8c2d8175e860554af17d4f9ca55ad"
+    "/dashboard/variable_names.yml": "a8d8c2d8175e860554af17d4f9ca55ad",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "eu-ES": {
     "/course_content/2017/coursea-2017.json": "2f17fc64328648fc7b119ea1ae57ac50",
@@ -2865,7 +2897,7 @@
     "/course_content/Hour of Code/frozen.json": "2f17fc64328648fc7b119ea1ae57ac50",
     "/course_content/Hour of Code/gumball.json": "2f17fc64328648fc7b119ea1ae57ac50",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "fe1f780411f4df5e3ccff82463337bd1",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "fe1f780411f4df5e3ccff82463337bd1",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "fe1f780411f4df5e3ccff82463337bd1",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "fe1f780411f4df5e3ccff82463337bd1",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "5370e5fa23a33acf4444ba1f4c9d8629",
@@ -2918,10 +2950,12 @@
     "/course_content/other/poetry-hoc3.json": "fe1f780411f4df5e3ccff82463337bd1",
     "/course_content/other/vigenere.json": "2f17fc64328648fc7b119ea1ae57ac50",
     "/course_content/projects.json": "7c7d99d0b5b923b65a0ebc9082d1736f",
-    "/dashboard/block_categories.yml": "7c7d99d0b5b923b65a0ebc9082d1736f",
-    "/dashboard/progressions.yml": "7c7d99d0b5b923b65a0ebc9082d1736f",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "71eab4c9f479a1b4fc4f88233e70286c",
     "/dashboard/parameter_names.yml": "7c7d99d0b5b923b65a0ebc9082d1736f",
-    "/dashboard/variable_names.yml": "7c7d99d0b5b923b65a0ebc9082d1736f"
+    "/dashboard/variable_names.yml": "7c7d99d0b5b923b65a0ebc9082d1736f",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "fa-AF": {
     "/course_content/2017/coursea-2017.json": "49a3b22124218055dd5f40dd8844df67",
@@ -3037,7 +3071,7 @@
     "/course_content/Hour of Code/frozen.json": "49a3b22124218055dd5f40dd8844df67",
     "/course_content/Hour of Code/gumball.json": "49a3b22124218055dd5f40dd8844df67",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "1ff29ae2fb44e9d78985cdf9a55f862e",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "1ff29ae2fb44e9d78985cdf9a55f862e",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "1ff29ae2fb44e9d78985cdf9a55f862e",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "1ff29ae2fb44e9d78985cdf9a55f862e",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "c9cac542158cc733ce60cc3700124b5f",
@@ -3090,10 +3124,12 @@
     "/course_content/other/poetry-hoc3.json": "1ff29ae2fb44e9d78985cdf9a55f862e",
     "/course_content/other/vigenere.json": "5a7afb25a8895ad4b8f6f3c865ff9487",
     "/course_content/projects.json": "5a7afb25a8895ad4b8f6f3c865ff9487",
-    "/dashboard/block_categories.yml": "5a7afb25a8895ad4b8f6f3c865ff9487",
-    "/dashboard/progressions.yml": "5a7afb25a8895ad4b8f6f3c865ff9487",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "5a7afb25a8895ad4b8f6f3c865ff9487",
-    "/dashboard/variable_names.yml": "5a7afb25a8895ad4b8f6f3c865ff9487"
+    "/dashboard/variable_names.yml": "5a7afb25a8895ad4b8f6f3c865ff9487",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "fa-IR": {
     "/course_content/2017/coursea-2017.json": "a713f85d24c26758e41179f77ca02370",
@@ -3209,7 +3245,7 @@
     "/course_content/Hour of Code/frozen.json": "a76f80be8db6ff0d58ad2055c7340546",
     "/course_content/Hour of Code/gumball.json": "a76f80be8db6ff0d58ad2055c7340546",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "99a9813b657b4d7d1d7db4f919eeae5b",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "99a9813b657b4d7d1d7db4f919eeae5b",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "99a9813b657b4d7d1d7db4f919eeae5b",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "99a9813b657b4d7d1d7db4f919eeae5b",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "9caa749d66e2f24e13a17b1db12ec0ee",
@@ -3262,10 +3298,12 @@
     "/course_content/other/poetry-hoc3.json": "99a9813b657b4d7d1d7db4f919eeae5b",
     "/course_content/other/vigenere.json": "a76f80be8db6ff0d58ad2055c7340546",
     "/course_content/projects.json": "d04d782b1a2c4fb6b129be65217393dd",
-    "/dashboard/block_categories.yml": "d04d782b1a2c4fb6b129be65217393dd",
-    "/dashboard/progressions.yml": "d04d782b1a2c4fb6b129be65217393dd",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "d04d782b1a2c4fb6b129be65217393dd",
-    "/dashboard/variable_names.yml": "d04d782b1a2c4fb6b129be65217393dd"
+    "/dashboard/variable_names.yml": "d04d782b1a2c4fb6b129be65217393dd",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "fi-FI": {
     "/course_content/2017/coursea-2017.json": "9447b6287875ddd468b111d236a5ff9f",
@@ -3381,7 +3419,7 @@
     "/course_content/Hour of Code/frozen.json": "a73d4b87e348e0548e5a66674de74ea7",
     "/course_content/Hour of Code/gumball.json": "a73d4b87e348e0548e5a66674de74ea7",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "504e9e6b4821d8442ef9ab8ff9d590c3",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "504e9e6b4821d8442ef9ab8ff9d590c3",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "504e9e6b4821d8442ef9ab8ff9d590c3",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "504e9e6b4821d8442ef9ab8ff9d590c3",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "f661522d0969211513042e8e5eb195d4",
@@ -3434,10 +3472,12 @@
     "/course_content/other/poetry-hoc3.json": "504e9e6b4821d8442ef9ab8ff9d590c3",
     "/course_content/other/vigenere.json": "a73d4b87e348e0548e5a66674de74ea7",
     "/course_content/projects.json": "a73d4b87e348e0548e5a66674de74ea7",
-    "/dashboard/block_categories.yml": "a73d4b87e348e0548e5a66674de74ea7",
-    "/dashboard/progressions.yml": "2ef2145ec4c831afe5568dc29da20800",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "2ef2145ec4c831afe5568dc29da20800",
-    "/dashboard/variable_names.yml": "2ef2145ec4c831afe5568dc29da20800"
+    "/dashboard/variable_names.yml": "2ef2145ec4c831afe5568dc29da20800",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "fil-PH": {
     "/course_content/2017/coursea-2017.json": "b1fea1963bcdf7dabc9dc3363049c378",
@@ -3553,7 +3593,7 @@
     "/course_content/Hour of Code/frozen.json": "50f5d3fc6927ef12f942b245920f96db",
     "/course_content/Hour of Code/gumball.json": "50f5d3fc6927ef12f942b245920f96db",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "e3cf20d42135caf19ef4e3693429390d",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "da073fb5b5d174abf9477441546b5b2e",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "e3cf20d42135caf19ef4e3693429390d",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "e3cf20d42135caf19ef4e3693429390d",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "b61c17682a4679e0dd4cdc92273faffd",
@@ -3606,10 +3646,12 @@
     "/course_content/other/poetry-hoc3.json": "da073fb5b5d174abf9477441546b5b2e",
     "/course_content/other/vigenere.json": "50f5d3fc6927ef12f942b245920f96db",
     "/course_content/projects.json": "c297e9cef003c237b65915b91a85eb0d",
-    "/dashboard/block_categories.yml": "c297e9cef003c237b65915b91a85eb0d",
-    "/dashboard/progressions.yml": "c297e9cef003c237b65915b91a85eb0d",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "c297e9cef003c237b65915b91a85eb0d",
-    "/dashboard/variable_names.yml": "c297e9cef003c237b65915b91a85eb0d"
+    "/dashboard/variable_names.yml": "c297e9cef003c237b65915b91a85eb0d",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "fr-FR": {
     "/course_content/2017/coursea-2017.json": "ef58ce011bed44ee5fe2d292f27cd575",
@@ -3725,7 +3767,7 @@
     "/course_content/Hour of Code/frozen.json": "ddbc735fa3671b82f2fc51f08a1b3069",
     "/course_content/Hour of Code/gumball.json": "ddbc735fa3671b82f2fc51f08a1b3069",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "94c2d8a1fb6d1a3c61b0f21869c21950",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "94c2d8a1fb6d1a3c61b0f21869c21950",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "94c2d8a1fb6d1a3c61b0f21869c21950",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "94c2d8a1fb6d1a3c61b0f21869c21950",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "70d187a18a77fbbc99d32679369d7a06",
@@ -3778,10 +3820,12 @@
     "/course_content/other/poetry-hoc3.json": "94c2d8a1fb6d1a3c61b0f21869c21950",
     "/course_content/other/vigenere.json": "ddbc735fa3671b82f2fc51f08a1b3069",
     "/course_content/projects.json": "26e04e46ef9802f9f3c6b796f16e33b5",
-    "/dashboard/block_categories.yml": "26e04e46ef9802f9f3c6b796f16e33b5",
-    "/dashboard/progressions.yml": "26e04e46ef9802f9f3c6b796f16e33b5",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "26e04e46ef9802f9f3c6b796f16e33b5",
-    "/dashboard/variable_names.yml": "26e04e46ef9802f9f3c6b796f16e33b5"
+    "/dashboard/variable_names.yml": "26e04e46ef9802f9f3c6b796f16e33b5",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ga-IE": {
     "/course_content/2017/coursea-2017.json": "28ded3c910e13be641695b771eb974c8",
@@ -3897,7 +3941,7 @@
     "/course_content/Hour of Code/frozen.json": "647fd66088fea16b78755cce3e584c43",
     "/course_content/Hour of Code/gumball.json": "28ded3c910e13be641695b771eb974c8",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "b19538b7ee816f139d67bee7f0086f3b",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "b19538b7ee816f139d67bee7f0086f3b",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "b19538b7ee816f139d67bee7f0086f3b",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "b19538b7ee816f139d67bee7f0086f3b",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "ea7d094e632b3ebb06d604a6c98f7a17",
@@ -3950,10 +3994,12 @@
     "/course_content/other/poetry-hoc3.json": "ddb8f4d4fe06f29c523cbdb0d82d6b5a",
     "/course_content/other/vigenere.json": "647fd66088fea16b78755cce3e584c43",
     "/course_content/projects.json": "647fd66088fea16b78755cce3e584c43",
-    "/dashboard/block_categories.yml": "647fd66088fea16b78755cce3e584c43",
-    "/dashboard/progressions.yml": "647fd66088fea16b78755cce3e584c43",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "ddb8f4d4fe06f29c523cbdb0d82d6b5a",
-    "/dashboard/variable_names.yml": "ddb8f4d4fe06f29c523cbdb0d82d6b5a"
+    "/dashboard/variable_names.yml": "ddb8f4d4fe06f29c523cbdb0d82d6b5a",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "gl-ES": {
     "/course_content/2017/coursea-2017.json": "a854a1645c2460877eb8602027622301",
@@ -4069,7 +4115,7 @@
     "/course_content/Hour of Code/frozen.json": "f59fd24ba690b6cce507e219d227f252",
     "/course_content/Hour of Code/gumball.json": "f59fd24ba690b6cce507e219d227f252",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "7344c1270093c33422fb191cfed48bf7",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "7344c1270093c33422fb191cfed48bf7",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "7344c1270093c33422fb191cfed48bf7",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "7344c1270093c33422fb191cfed48bf7",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "ab9a12b9307de1cbc4450162aa4e985b",
@@ -4122,10 +4168,12 @@
     "/course_content/other/poetry-hoc3.json": "7344c1270093c33422fb191cfed48bf7",
     "/course_content/other/vigenere.json": "f59fd24ba690b6cce507e219d227f252",
     "/course_content/projects.json": "f59fd24ba690b6cce507e219d227f252",
-    "/dashboard/block_categories.yml": "f59fd24ba690b6cce507e219d227f252",
-    "/dashboard/progressions.yml": "f59fd24ba690b6cce507e219d227f252",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "f59fd24ba690b6cce507e219d227f252",
-    "/dashboard/variable_names.yml": "f59fd24ba690b6cce507e219d227f252"
+    "/dashboard/variable_names.yml": "f59fd24ba690b6cce507e219d227f252",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "haw-HI": {
     "/course_content/2017/coursea-2017.json": "6d37b8a2d73c400fba9a370fe25ec2f4",
@@ -4241,7 +4289,7 @@
     "/course_content/Hour of Code/frozen.json": "4428ba80ad390e6a9ac0df3c619a2597",
     "/course_content/Hour of Code/gumball.json": "4428ba80ad390e6a9ac0df3c619a2597",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "c06733b72c6cd9edd16eb43d58d4be8c",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "c23fcb96f6e79c63bd2ea221c02191a3",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "c06733b72c6cd9edd16eb43d58d4be8c",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "c06733b72c6cd9edd16eb43d58d4be8c",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "156baebd60be74289107e2ab7d2e2ca7",
@@ -4294,10 +4342,12 @@
     "/course_content/other/poetry-hoc3.json": "c23fcb96f6e79c63bd2ea221c02191a3",
     "/course_content/other/vigenere.json": "4428ba80ad390e6a9ac0df3c619a2597",
     "/course_content/projects.json": "4428ba80ad390e6a9ac0df3c619a2597",
-    "/dashboard/block_categories.yml": "4428ba80ad390e6a9ac0df3c619a2597",
-    "/dashboard/progressions.yml": "c23fcb96f6e79c63bd2ea221c02191a3",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "c23fcb96f6e79c63bd2ea221c02191a3",
-    "/dashboard/variable_names.yml": "c23fcb96f6e79c63bd2ea221c02191a3"
+    "/dashboard/variable_names.yml": "c23fcb96f6e79c63bd2ea221c02191a3",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "he-IL": {
     "/course_content/2017/coursea-2017.json": "aa9488ab2c93f326e39b39c879f0c00b",
@@ -4413,7 +4463,7 @@
     "/course_content/Hour of Code/frozen.json": "8931d30e81d4c26326fe00055ff80270",
     "/course_content/Hour of Code/gumball.json": "8931d30e81d4c26326fe00055ff80270",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "2170fd186d9e305e4aad2684dcd852ca",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "2170fd186d9e305e4aad2684dcd852ca",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "2170fd186d9e305e4aad2684dcd852ca",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "2170fd186d9e305e4aad2684dcd852ca",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "21e74fff517fff9e817259531918dfce",
@@ -4466,10 +4516,12 @@
     "/course_content/other/poetry-hoc3.json": "2170fd186d9e305e4aad2684dcd852ca",
     "/course_content/other/vigenere.json": "8931d30e81d4c26326fe00055ff80270",
     "/course_content/projects.json": "ad5fe26de267b2bd8f702799b905b921",
-    "/dashboard/block_categories.yml": "ad5fe26de267b2bd8f702799b905b921",
-    "/dashboard/progressions.yml": "ad5fe26de267b2bd8f702799b905b921",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "ad5fe26de267b2bd8f702799b905b921",
-    "/dashboard/variable_names.yml": "ad5fe26de267b2bd8f702799b905b921"
+    "/dashboard/variable_names.yml": "ad5fe26de267b2bd8f702799b905b921",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "hi-IN": {
     "/course_content/2017/coursea-2017.json": "73c20b05a5b25a7cc7bb33540937a23a",
@@ -4585,7 +4637,7 @@
     "/course_content/Hour of Code/frozen.json": "6c9c27990d048a478ffcbfe9bb6a7dd7",
     "/course_content/Hour of Code/gumball.json": "6c9c27990d048a478ffcbfe9bb6a7dd7",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "e7614e41c1324b385f660bd7cc63ef35",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "e7614e41c1324b385f660bd7cc63ef35",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "e7614e41c1324b385f660bd7cc63ef35",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "e7614e41c1324b385f660bd7cc63ef35",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "57f5878d1f6e17233ca4546585e33453",
@@ -4638,10 +4690,12 @@
     "/course_content/other/poetry-hoc3.json": "e7614e41c1324b385f660bd7cc63ef35",
     "/course_content/other/vigenere.json": "6c9c27990d048a478ffcbfe9bb6a7dd7",
     "/course_content/projects.json": "ab9adcbf872548b47c1af2e6ac951dd7",
-    "/dashboard/block_categories.yml": "ab9adcbf872548b47c1af2e6ac951dd7",
-    "/dashboard/progressions.yml": "ab9adcbf872548b47c1af2e6ac951dd7",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "ab9adcbf872548b47c1af2e6ac951dd7",
-    "/dashboard/variable_names.yml": "ab9adcbf872548b47c1af2e6ac951dd7"
+    "/dashboard/variable_names.yml": "ab9adcbf872548b47c1af2e6ac951dd7",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "hr-HR": {
     "/course_content/2017/coursea-2017.json": "5b8e8554ff198854a8e9e3267c71209b",
@@ -4757,7 +4811,7 @@
     "/course_content/Hour of Code/frozen.json": "25f21c9af654046a812d0d54fc5dda99",
     "/course_content/Hour of Code/gumball.json": "25f21c9af654046a812d0d54fc5dda99",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "28329c602fb6a511e03beb527a1acab8",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "28329c602fb6a511e03beb527a1acab8",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "28329c602fb6a511e03beb527a1acab8",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "28329c602fb6a511e03beb527a1acab8",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "f2131b8c1fb791ac56ca5eb371eadc03",
@@ -4810,10 +4864,12 @@
     "/course_content/other/poetry-hoc3.json": "28329c602fb6a511e03beb527a1acab8",
     "/course_content/other/vigenere.json": "25f21c9af654046a812d0d54fc5dda99",
     "/course_content/projects.json": "23101966a4c14f78261c551897f566a8",
-    "/dashboard/block_categories.yml": "23101966a4c14f78261c551897f566a8",
-    "/dashboard/progressions.yml": "23101966a4c14f78261c551897f566a8",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "23101966a4c14f78261c551897f566a8",
-    "/dashboard/variable_names.yml": "23101966a4c14f78261c551897f566a8"
+    "/dashboard/variable_names.yml": "23101966a4c14f78261c551897f566a8",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "hu-HU": {
     "/course_content/2017/coursea-2017.json": "bd123b65ec388aacdc3a60741bf5e85a",
@@ -4929,7 +4985,7 @@
     "/course_content/Hour of Code/frozen.json": "158c38850b30b808fac1e47be45c16a3",
     "/course_content/Hour of Code/gumball.json": "158c38850b30b808fac1e47be45c16a3",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "0a3ed12a10d843d21dd0a108a27c4705",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "0a3ed12a10d843d21dd0a108a27c4705",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "0a3ed12a10d843d21dd0a108a27c4705",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "0a3ed12a10d843d21dd0a108a27c4705",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "8df250326dce5d994219ff3b802e082f",
@@ -4982,10 +5038,12 @@
     "/course_content/other/poetry-hoc3.json": "0a3ed12a10d843d21dd0a108a27c4705",
     "/course_content/other/vigenere.json": "158c38850b30b808fac1e47be45c16a3",
     "/course_content/projects.json": "c78eeb6b2c2f030087f4f22fae277fe4",
-    "/dashboard/block_categories.yml": "c78eeb6b2c2f030087f4f22fae277fe4",
-    "/dashboard/progressions.yml": "c78eeb6b2c2f030087f4f22fae277fe4",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "c78eeb6b2c2f030087f4f22fae277fe4",
-    "/dashboard/variable_names.yml": "c78eeb6b2c2f030087f4f22fae277fe4"
+    "/dashboard/variable_names.yml": "c78eeb6b2c2f030087f4f22fae277fe4",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "hy-AM": {
     "/course_content/2017/coursea-2017.json": "616eff3a5fabb122a7d9f86ea033e232",
@@ -5101,7 +5159,7 @@
     "/course_content/Hour of Code/frozen.json": "f2bda54c8b3d4903c3c501fe4c98fdf0",
     "/course_content/Hour of Code/gumball.json": "f2bda54c8b3d4903c3c501fe4c98fdf0",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "d04f9f46ae777682fbce58e5d664c604",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d04f9f46ae777682fbce58e5d664c604",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "d04f9f46ae777682fbce58e5d664c604",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "d04f9f46ae777682fbce58e5d664c604",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "ac2a13632880c057bf16709558a75b6e",
@@ -5154,10 +5212,12 @@
     "/course_content/other/poetry-hoc3.json": "d04f9f46ae777682fbce58e5d664c604",
     "/course_content/other/vigenere.json": "f2bda54c8b3d4903c3c501fe4c98fdf0",
     "/course_content/projects.json": "1810586b8b2e7c62bd110820a1cc6fcd",
-    "/dashboard/block_categories.yml": "1810586b8b2e7c62bd110820a1cc6fcd",
-    "/dashboard/progressions.yml": "1810586b8b2e7c62bd110820a1cc6fcd",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "71eab4c9f479a1b4fc4f88233e70286c",
     "/dashboard/parameter_names.yml": "1810586b8b2e7c62bd110820a1cc6fcd",
-    "/dashboard/variable_names.yml": "1810586b8b2e7c62bd110820a1cc6fcd"
+    "/dashboard/variable_names.yml": "1810586b8b2e7c62bd110820a1cc6fcd",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "id-ID": {
     "/course_content/2017/coursea-2017.json": "749798ddd1c652b4ea57a01e256e667b",
@@ -5273,7 +5333,7 @@
     "/course_content/Hour of Code/frozen.json": "6cca9dd9c19c96c0c3ba996a123e7658",
     "/course_content/Hour of Code/gumball.json": "6cca9dd9c19c96c0c3ba996a123e7658",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "1d7b85e7a6223e1e3b4b636b6d232c6e",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "1d7b85e7a6223e1e3b4b636b6d232c6e",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "1d7b85e7a6223e1e3b4b636b6d232c6e",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "1d7b85e7a6223e1e3b4b636b6d232c6e",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "ecd1b00a22852b6f2c1347177c9d4702",
@@ -5326,10 +5386,12 @@
     "/course_content/other/poetry-hoc3.json": "ac154aed198c6f406e8558f2d6e799a0",
     "/course_content/other/vigenere.json": "6cca9dd9c19c96c0c3ba996a123e7658",
     "/course_content/projects.json": "498a4e16baee9d4a4e1245860e2348f1",
-    "/dashboard/block_categories.yml": "498a4e16baee9d4a4e1245860e2348f1",
-    "/dashboard/progressions.yml": "498a4e16baee9d4a4e1245860e2348f1",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "498a4e16baee9d4a4e1245860e2348f1",
-    "/dashboard/variable_names.yml": "498a4e16baee9d4a4e1245860e2348f1"
+    "/dashboard/variable_names.yml": "498a4e16baee9d4a4e1245860e2348f1",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "is-IS": {
     "/course_content/2017/coursea-2017.json": "db514f9c305cd0306da29c6b3d6d0e87",
@@ -5445,7 +5507,7 @@
     "/course_content/Hour of Code/frozen.json": "daf9be09970303e733eec5a18cdd2415",
     "/course_content/Hour of Code/gumball.json": "daf9be09970303e733eec5a18cdd2415",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "3e2fcbbcf3ec58a9e3f0146fee9e0fb9",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "3e2fcbbcf3ec58a9e3f0146fee9e0fb9",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "3e2fcbbcf3ec58a9e3f0146fee9e0fb9",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "3e2fcbbcf3ec58a9e3f0146fee9e0fb9",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "ae40934e5d6ee7a6444bf089be0362a7",
@@ -5498,10 +5560,12 @@
     "/course_content/other/poetry-hoc3.json": "3e2fcbbcf3ec58a9e3f0146fee9e0fb9",
     "/course_content/other/vigenere.json": "daf9be09970303e733eec5a18cdd2415",
     "/course_content/projects.json": "cc5b6b756a60dc2bd81751aea3e3a264",
-    "/dashboard/block_categories.yml": "cc5b6b756a60dc2bd81751aea3e3a264",
-    "/dashboard/progressions.yml": "cc5b6b756a60dc2bd81751aea3e3a264",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "cc5b6b756a60dc2bd81751aea3e3a264",
-    "/dashboard/variable_names.yml": "cc5b6b756a60dc2bd81751aea3e3a264"
+    "/dashboard/variable_names.yml": "cc5b6b756a60dc2bd81751aea3e3a264",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "it-IT": {
     "/course_content/2017/coursea-2017.json": "009576958a2f7c15b340215d19b0b3a6",
@@ -5617,7 +5681,7 @@
     "/course_content/Hour of Code/frozen.json": "4a2ca6737347340d014e8761c97de937",
     "/course_content/Hour of Code/gumball.json": "22c8719dfb0d942f4de281ecf217893c",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "6c70ac1aa2dad50d6ac2651d59e17bc3",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "6c70ac1aa2dad50d6ac2651d59e17bc3",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "6c70ac1aa2dad50d6ac2651d59e17bc3",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "6c70ac1aa2dad50d6ac2651d59e17bc3",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "b4188e44820128dfe7ec87b8af735233",
@@ -5670,10 +5734,12 @@
     "/course_content/other/poetry-hoc3.json": "9fedaa1169a6ed0000f3124212b240d2",
     "/course_content/other/vigenere.json": "4a2ca6737347340d014e8761c97de937",
     "/course_content/projects.json": "4a2ca6737347340d014e8761c97de937",
-    "/dashboard/block_categories.yml": "4a2ca6737347340d014e8761c97de937",
-    "/dashboard/progressions.yml": "23247106661a4f0f27af1e5b442ba3aa",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "23247106661a4f0f27af1e5b442ba3aa",
-    "/dashboard/variable_names.yml": "23247106661a4f0f27af1e5b442ba3aa"
+    "/dashboard/variable_names.yml": "23247106661a4f0f27af1e5b442ba3aa",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ja-JP": {
     "/course_content/2017/coursea-2017.json": "4ef29fa5263b89fdec9d439867f77941",
@@ -5789,7 +5855,7 @@
     "/course_content/Hour of Code/frozen.json": "16843ed73011de0f6c2284b102801e01",
     "/course_content/Hour of Code/gumball.json": "16843ed73011de0f6c2284b102801e01",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "96d5ef0bc9c010b0c33dd1c9e946d315",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "96d5ef0bc9c010b0c33dd1c9e946d315",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "96d5ef0bc9c010b0c33dd1c9e946d315",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "96d5ef0bc9c010b0c33dd1c9e946d315",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "9f1afee0df85510ba05500d6a8ab6dec",
@@ -5842,10 +5908,12 @@
     "/course_content/other/poetry-hoc3.json": "96d5ef0bc9c010b0c33dd1c9e946d315",
     "/course_content/other/vigenere.json": "16843ed73011de0f6c2284b102801e01",
     "/course_content/projects.json": "16843ed73011de0f6c2284b102801e01",
-    "/dashboard/block_categories.yml": "16843ed73011de0f6c2284b102801e01",
-    "/dashboard/progressions.yml": "e4211cea74cd0641f88f2c083306a308",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "e4211cea74cd0641f88f2c083306a308",
-    "/dashboard/variable_names.yml": "e4211cea74cd0641f88f2c083306a308"
+    "/dashboard/variable_names.yml": "e4211cea74cd0641f88f2c083306a308",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ka-GE": {
     "/course_content/2017/coursea-2017.json": "4fafeea6d490f6fc29aa24939a535903",
@@ -5961,7 +6029,7 @@
     "/course_content/Hour of Code/frozen.json": "4fafeea6d490f6fc29aa24939a535903",
     "/course_content/Hour of Code/gumball.json": "4fafeea6d490f6fc29aa24939a535903",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "40f8818834b1d8dd2b1255f5a7f439bd",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "40f8818834b1d8dd2b1255f5a7f439bd",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "40f8818834b1d8dd2b1255f5a7f439bd",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "40f8818834b1d8dd2b1255f5a7f439bd",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "c1c733cec0917809cbfa88362d2f5c99",
@@ -6014,10 +6082,12 @@
     "/course_content/other/poetry-hoc3.json": "40f8818834b1d8dd2b1255f5a7f439bd",
     "/course_content/other/vigenere.json": "72c5a812fd3846b70abc4153a02ed3f6",
     "/course_content/projects.json": "72c5a812fd3846b70abc4153a02ed3f6",
-    "/dashboard/block_categories.yml": "72c5a812fd3846b70abc4153a02ed3f6",
-    "/dashboard/progressions.yml": "72c5a812fd3846b70abc4153a02ed3f6",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "72c5a812fd3846b70abc4153a02ed3f6",
-    "/dashboard/variable_names.yml": "72c5a812fd3846b70abc4153a02ed3f6"
+    "/dashboard/variable_names.yml": "72c5a812fd3846b70abc4153a02ed3f6",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "kk-KZ": {
     "/course_content/2017/coursea-2017.json": "9f04cf536318ea7b740a4dcb12d247b8",
@@ -6133,7 +6203,7 @@
     "/course_content/Hour of Code/frozen.json": "319b5e2c0400b33e95c782cbb02d16ec",
     "/course_content/Hour of Code/gumball.json": "319b5e2c0400b33e95c782cbb02d16ec",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "7d012d887f05255961fa22ecb4a7f343",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d6c26b03085724ff7e1414a904123cf3",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "d6c26b03085724ff7e1414a904123cf3",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "7d012d887f05255961fa22ecb4a7f343",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "6e1412172774b1ee0011084ec43faae8",
@@ -6186,10 +6256,12 @@
     "/course_content/other/poetry-hoc3.json": "d6c26b03085724ff7e1414a904123cf3",
     "/course_content/other/vigenere.json": "319b5e2c0400b33e95c782cbb02d16ec",
     "/course_content/projects.json": "a79fa1e2146a4692a7aa27a48f6703e7",
-    "/dashboard/block_categories.yml": "a79fa1e2146a4692a7aa27a48f6703e7",
-    "/dashboard/progressions.yml": "a79fa1e2146a4692a7aa27a48f6703e7",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "a79fa1e2146a4692a7aa27a48f6703e7",
-    "/dashboard/variable_names.yml": "a79fa1e2146a4692a7aa27a48f6703e7"
+    "/dashboard/variable_names.yml": "a79fa1e2146a4692a7aa27a48f6703e7",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "kn-IN": {
     "/course_content/2017/coursea-2017.json": "6f32e0accba3b4850fe9c0b46f98550d",
@@ -6305,7 +6377,7 @@
     "/course_content/Hour of Code/frozen.json": "292d80885270c1a8ed4af7824d033a23",
     "/course_content/Hour of Code/gumball.json": "292d80885270c1a8ed4af7824d033a23",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "d44d909bad674027a7c34b02cdcf40bf",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d44d909bad674027a7c34b02cdcf40bf",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "d44d909bad674027a7c34b02cdcf40bf",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "d44d909bad674027a7c34b02cdcf40bf",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "f94181e8bfc23327024559dfc18636da",
@@ -6358,10 +6430,12 @@
     "/course_content/other/poetry-hoc3.json": "d44d909bad674027a7c34b02cdcf40bf",
     "/course_content/other/vigenere.json": "292d80885270c1a8ed4af7824d033a23",
     "/course_content/projects.json": "292d80885270c1a8ed4af7824d033a23",
-    "/dashboard/block_categories.yml": "292d80885270c1a8ed4af7824d033a23",
-    "/dashboard/progressions.yml": "59eaba01774564889259c4672056867d",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "59eaba01774564889259c4672056867d",
-    "/dashboard/variable_names.yml": "59eaba01774564889259c4672056867d"
+    "/dashboard/variable_names.yml": "59eaba01774564889259c4672056867d",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "km-KH": {
     "/course_content/2017/coursea-2017.json": "30b43b8a7beae238c94f16339f3c0e8d",
@@ -6477,7 +6551,7 @@
     "/course_content/Hour of Code/frozen.json": "1e049934489462a942e27505c67e6842",
     "/course_content/Hour of Code/gumball.json": "1e049934489462a942e27505c67e6842",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "cde4e21f463d6ab51d07fc77e471250a",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "cde4e21f463d6ab51d07fc77e471250a",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "cde4e21f463d6ab51d07fc77e471250a",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "cde4e21f463d6ab51d07fc77e471250a",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "7fd04c5b366e0915af1c7ffc4da5b751",
@@ -6530,10 +6604,12 @@
     "/course_content/other/poetry-hoc3.json": "cde4e21f463d6ab51d07fc77e471250a",
     "/course_content/other/vigenere.json": "1e049934489462a942e27505c67e6842",
     "/course_content/projects.json": "e268c9778da935d617391c460ff44ea6",
-    "/dashboard/block_categories.yml": "e268c9778da935d617391c460ff44ea6",
-    "/dashboard/progressions.yml": "e268c9778da935d617391c460ff44ea6",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "e268c9778da935d617391c460ff44ea6",
-    "/dashboard/variable_names.yml": "e268c9778da935d617391c460ff44ea6"
+    "/dashboard/variable_names.yml": "e268c9778da935d617391c460ff44ea6",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ko-KR": {
     "/course_content/2017/coursea-2017.json": "c554447072f7d28e9aafc3406b76ad3f",
@@ -6649,7 +6725,7 @@
     "/course_content/Hour of Code/frozen.json": "004a276dd2254eecaef598e97e38e0d1",
     "/course_content/Hour of Code/gumball.json": "004a276dd2254eecaef598e97e38e0d1",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "6246fc564f82918eca58442a0802040c",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "6246fc564f82918eca58442a0802040c",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "6246fc564f82918eca58442a0802040c",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "6246fc564f82918eca58442a0802040c",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "097e0edbffa95e78f328dfa2645b2139",
@@ -6702,10 +6778,12 @@
     "/course_content/other/poetry-hoc3.json": "a046162773e9600e132d794f781baf49",
     "/course_content/other/vigenere.json": "004a276dd2254eecaef598e97e38e0d1",
     "/course_content/projects.json": "8dc1dab0ea17f14448b7f503624766d5",
-    "/dashboard/block_categories.yml": "8dc1dab0ea17f14448b7f503624766d5",
-    "/dashboard/progressions.yml": "8dc1dab0ea17f14448b7f503624766d5",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "8dc1dab0ea17f14448b7f503624766d5",
-    "/dashboard/variable_names.yml": "8dc1dab0ea17f14448b7f503624766d5"
+    "/dashboard/variable_names.yml": "8dc1dab0ea17f14448b7f503624766d5",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ku-IQ": {
     "/course_content/2017/coursea-2017.json": "2a4cab5a07b5431899f38b25b334150f",
@@ -6821,7 +6899,7 @@
     "/course_content/Hour of Code/frozen.json": "2a4cab5a07b5431899f38b25b334150f",
     "/course_content/Hour of Code/gumball.json": "2a4cab5a07b5431899f38b25b334150f",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "2e9c24becac5f8c84ddd2b1d21f6e690",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "2e9c24becac5f8c84ddd2b1d21f6e690",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "2e9c24becac5f8c84ddd2b1d21f6e690",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "2e9c24becac5f8c84ddd2b1d21f6e690",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "b5d2344df213c5a30372634a3792bec0",
@@ -6874,10 +6952,12 @@
     "/course_content/other/poetry-hoc3.json": "4dbcbc5cf573c09fbfb68bc487201a89",
     "/course_content/other/vigenere.json": "2a4cab5a07b5431899f38b25b334150f",
     "/course_content/projects.json": "8685d3e45849e6e0c2adbfc39f7e9ab9",
-    "/dashboard/block_categories.yml": "8685d3e45849e6e0c2adbfc39f7e9ab9",
-    "/dashboard/progressions.yml": "8685d3e45849e6e0c2adbfc39f7e9ab9",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "8685d3e45849e6e0c2adbfc39f7e9ab9",
-    "/dashboard/variable_names.yml": "8685d3e45849e6e0c2adbfc39f7e9ab9"
+    "/dashboard/variable_names.yml": "8685d3e45849e6e0c2adbfc39f7e9ab9",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ky-KG": {
     "/course_content/2017/coursea-2017.json": "9ed42659970ba9cdb52f6efca913ed0c",
@@ -6993,7 +7073,7 @@
     "/course_content/Hour of Code/frozen.json": "f79eb72f3d5a9d3f2c683d5a7e3bc8b1",
     "/course_content/Hour of Code/gumball.json": "f79eb72f3d5a9d3f2c683d5a7e3bc8b1",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "b5d4f40d49a728077bac8ac2889eb170",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "b5d4f40d49a728077bac8ac2889eb170",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "b5d4f40d49a728077bac8ac2889eb170",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "b5d4f40d49a728077bac8ac2889eb170",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "d3b1588315557b00fde3f9e712529b77",
@@ -7046,10 +7126,12 @@
     "/course_content/other/poetry-hoc3.json": "b5d4f40d49a728077bac8ac2889eb170",
     "/course_content/other/vigenere.json": "f79eb72f3d5a9d3f2c683d5a7e3bc8b1",
     "/course_content/projects.json": "286f5e29201a7eda7c8e16601693e319",
-    "/dashboard/block_categories.yml": "286f5e29201a7eda7c8e16601693e319",
-    "/dashboard/progressions.yml": "286f5e29201a7eda7c8e16601693e319",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "286f5e29201a7eda7c8e16601693e319",
-    "/dashboard/variable_names.yml": "286f5e29201a7eda7c8e16601693e319"
+    "/dashboard/variable_names.yml": "286f5e29201a7eda7c8e16601693e319",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "lt-LT": {
     "/course_content/2017/coursea-2017.json": "47eb91119b7d20cf44e40c9fa0fd5614",
@@ -7165,7 +7247,7 @@
     "/course_content/Hour of Code/frozen.json": "47eb91119b7d20cf44e40c9fa0fd5614",
     "/course_content/Hour of Code/gumball.json": "47eb91119b7d20cf44e40c9fa0fd5614",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "b6a390f688dcd8c4511194037fdc1ffb",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "b6a390f688dcd8c4511194037fdc1ffb",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "b6a390f688dcd8c4511194037fdc1ffb",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "b6a390f688dcd8c4511194037fdc1ffb",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "5a83f9995b1266e7125b6b66fcd9ebee",
@@ -7218,10 +7300,12 @@
     "/course_content/other/poetry-hoc3.json": "b6a390f688dcd8c4511194037fdc1ffb",
     "/course_content/other/vigenere.json": "47eb91119b7d20cf44e40c9fa0fd5614",
     "/course_content/projects.json": "86548c0a1a5a3b5250833ac4f1e55673",
-    "/dashboard/block_categories.yml": "86548c0a1a5a3b5250833ac4f1e55673",
-    "/dashboard/progressions.yml": "86548c0a1a5a3b5250833ac4f1e55673",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "86548c0a1a5a3b5250833ac4f1e55673",
-    "/dashboard/variable_names.yml": "86548c0a1a5a3b5250833ac4f1e55673"
+    "/dashboard/variable_names.yml": "86548c0a1a5a3b5250833ac4f1e55673",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "lv-LV": {
     "/course_content/2017/coursea-2017.json": "adb6a073d512b6091293299a258fb0ed",
@@ -7337,7 +7421,7 @@
     "/course_content/Hour of Code/frozen.json": "e9ae775863f23634a972c631e4c3ca6b",
     "/course_content/Hour of Code/gumball.json": "e9ae775863f23634a972c631e4c3ca6b",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "96d4df1aae80eeaca955228d6e7983be",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "96d4df1aae80eeaca955228d6e7983be",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "96d4df1aae80eeaca955228d6e7983be",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "96d4df1aae80eeaca955228d6e7983be",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "875e9d18a20229239951d238bc1b4871",
@@ -7390,10 +7474,12 @@
     "/course_content/other/poetry-hoc3.json": "96d4df1aae80eeaca955228d6e7983be",
     "/course_content/other/vigenere.json": "046065e7d306d283299493e317f848f6",
     "/course_content/projects.json": "046065e7d306d283299493e317f848f6",
-    "/dashboard/block_categories.yml": "046065e7d306d283299493e317f848f6",
-    "/dashboard/progressions.yml": "046065e7d306d283299493e317f848f6",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "046065e7d306d283299493e317f848f6",
-    "/dashboard/variable_names.yml": "046065e7d306d283299493e317f848f6"
+    "/dashboard/variable_names.yml": "046065e7d306d283299493e317f848f6",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "mi-NZ": {
     "/course_content/2017/coursea-2017.json": "f0e5d083ad78c87cccca4ca5d03a8ede",
@@ -7509,7 +7595,7 @@
     "/course_content/Hour of Code/frozen.json": "52188b8a5b4ab05b058f47bc16106057",
     "/course_content/Hour of Code/gumball.json": "52188b8a5b4ab05b058f47bc16106057",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "0e5cc546e0b6bccb2e89905d39bc8c45",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "0e5cc546e0b6bccb2e89905d39bc8c45",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "0e5cc546e0b6bccb2e89905d39bc8c45",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "0e5cc546e0b6bccb2e89905d39bc8c45",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "b7ff63880e004311d1610c38d816b9d2",
@@ -7562,10 +7648,12 @@
     "/course_content/other/poetry-hoc3.json": "73158f59d9f1456dfc5d2e036051ec6a",
     "/course_content/other/vigenere.json": "52188b8a5b4ab05b058f47bc16106057",
     "/course_content/projects.json": "52188b8a5b4ab05b058f47bc16106057",
-    "/dashboard/block_categories.yml": "52188b8a5b4ab05b058f47bc16106057",
-    "/dashboard/progressions.yml": "73158f59d9f1456dfc5d2e036051ec6a",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "73158f59d9f1456dfc5d2e036051ec6a",
-    "/dashboard/variable_names.yml": "73158f59d9f1456dfc5d2e036051ec6a"
+    "/dashboard/variable_names.yml": "73158f59d9f1456dfc5d2e036051ec6a",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "mk-MK": {
     "/course_content/2017/coursea-2017.json": "22f9d0ab32f4a487e092f3644e945909",
@@ -7681,7 +7769,7 @@
     "/course_content/Hour of Code/frozen.json": "22f9d0ab32f4a487e092f3644e945909",
     "/course_content/Hour of Code/gumball.json": "22f9d0ab32f4a487e092f3644e945909",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "43d49eb9da7f7d35f20b7050705f0050",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "43d49eb9da7f7d35f20b7050705f0050",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "43d49eb9da7f7d35f20b7050705f0050",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "43d49eb9da7f7d35f20b7050705f0050",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "0850781913bbdc96707d2e0af0de3d3f",
@@ -7734,10 +7822,12 @@
     "/course_content/other/poetry-hoc3.json": "43d49eb9da7f7d35f20b7050705f0050",
     "/course_content/other/vigenere.json": "49c4effecdaecab75fc4aa2205e8cd1b",
     "/course_content/projects.json": "49c4effecdaecab75fc4aa2205e8cd1b",
-    "/dashboard/block_categories.yml": "49c4effecdaecab75fc4aa2205e8cd1b",
-    "/dashboard/progressions.yml": "49c4effecdaecab75fc4aa2205e8cd1b",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "49c4effecdaecab75fc4aa2205e8cd1b",
-    "/dashboard/variable_names.yml": "49c4effecdaecab75fc4aa2205e8cd1b"
+    "/dashboard/variable_names.yml": "49c4effecdaecab75fc4aa2205e8cd1b",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "mn-MN": {
     "/course_content/2017/coursea-2017.json": "258bb3b0367ab4e81e22927e8abe9162",
@@ -7853,7 +7943,7 @@
     "/course_content/Hour of Code/frozen.json": "e2f3ed2da50905a09b8ef11d88cfdc1c",
     "/course_content/Hour of Code/gumball.json": "e2f3ed2da50905a09b8ef11d88cfdc1c",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "e2a533ed9f8a221575f511412e03db83",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "e2a533ed9f8a221575f511412e03db83",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "e2a533ed9f8a221575f511412e03db83",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "e2a533ed9f8a221575f511412e03db83",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "c9ff3eaa86a52c55d8dfc9acfe922a00",
@@ -7906,10 +7996,12 @@
     "/course_content/other/poetry-hoc3.json": "e2a533ed9f8a221575f511412e03db83",
     "/course_content/other/vigenere.json": "e2f3ed2da50905a09b8ef11d88cfdc1c",
     "/course_content/projects.json": "e2f3ed2da50905a09b8ef11d88cfdc1c",
-    "/dashboard/block_categories.yml": "e2f3ed2da50905a09b8ef11d88cfdc1c",
-    "/dashboard/progressions.yml": "59625d84132bbc369cb4fdc4c996e5ae",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "59625d84132bbc369cb4fdc4c996e5ae",
-    "/dashboard/variable_names.yml": "59625d84132bbc369cb4fdc4c996e5ae"
+    "/dashboard/variable_names.yml": "59625d84132bbc369cb4fdc4c996e5ae",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "mr-IN": {
     "/course_content/2017/coursea-2017.json": "1631de3fb659479a94f729dfe883b59a",
@@ -8025,7 +8117,7 @@
     "/course_content/Hour of Code/frozen.json": "1631de3fb659479a94f729dfe883b59a",
     "/course_content/Hour of Code/gumball.json": "1631de3fb659479a94f729dfe883b59a",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "bbbc9803b30bd6a614ba203ff84f3986",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "bbbc9803b30bd6a614ba203ff84f3986",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "bbbc9803b30bd6a614ba203ff84f3986",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "bbbc9803b30bd6a614ba203ff84f3986",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "880947fb2fcefb83ca5a9daf1011d8e9",
@@ -8078,10 +8170,12 @@
     "/course_content/other/poetry-hoc3.json": "030a7b18b5d72b4ed42de12390d730a1",
     "/course_content/other/vigenere.json": "4e3cd50b71b2d9531804f9acc534f906",
     "/course_content/projects.json": "4e3cd50b71b2d9531804f9acc534f906",
-    "/dashboard/block_categories.yml": "4e3cd50b71b2d9531804f9acc534f906",
-    "/dashboard/progressions.yml": "4e3cd50b71b2d9531804f9acc534f906",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "4e3cd50b71b2d9531804f9acc534f906",
-    "/dashboard/variable_names.yml": "4e3cd50b71b2d9531804f9acc534f906"
+    "/dashboard/variable_names.yml": "4e3cd50b71b2d9531804f9acc534f906",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ms-MY": {
     "/course_content/2017/coursea-2017.json": "847cdf4c6bc86f6af5bc14e7669f6552",
@@ -8197,7 +8291,7 @@
     "/course_content/Hour of Code/frozen.json": "c362ec82c8c8c991de5ab12bfccbad52",
     "/course_content/Hour of Code/gumball.json": "c362ec82c8c8c991de5ab12bfccbad52",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "dd3d5baad7e498b5cd7ea91912040c5c",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "dd3d5baad7e498b5cd7ea91912040c5c",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "dd3d5baad7e498b5cd7ea91912040c5c",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "dd3d5baad7e498b5cd7ea91912040c5c",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "5cfa4ceac55ea716d7b7bdcaa90c7bec",
@@ -8250,10 +8344,12 @@
     "/course_content/other/poetry-hoc3.json": "921fedb27cb2b5a2a9869aecea3a2c1a",
     "/course_content/other/vigenere.json": "c362ec82c8c8c991de5ab12bfccbad52",
     "/course_content/projects.json": "d1a8d4d370d63174cefad544c8006699",
-    "/dashboard/block_categories.yml": "d1a8d4d370d63174cefad544c8006699",
-    "/dashboard/progressions.yml": "d1a8d4d370d63174cefad544c8006699",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "d1a8d4d370d63174cefad544c8006699",
-    "/dashboard/variable_names.yml": "d1a8d4d370d63174cefad544c8006699"
+    "/dashboard/variable_names.yml": "d1a8d4d370d63174cefad544c8006699",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "mt-MT": {
     "/course_content/2017/coursea-2017.json": "bff51267fc05d87351e609d455f7848b",
@@ -8369,7 +8465,7 @@
     "/course_content/Hour of Code/frozen.json": "bff51267fc05d87351e609d455f7848b",
     "/course_content/Hour of Code/gumball.json": "bff51267fc05d87351e609d455f7848b",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "890c07402efe2af4179ae3e9df3553df",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "890c07402efe2af4179ae3e9df3553df",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "890c07402efe2af4179ae3e9df3553df",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "890c07402efe2af4179ae3e9df3553df",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "7c21df7dd48f926d2732813c9e0b827e",
@@ -8422,10 +8518,12 @@
     "/course_content/other/poetry-hoc3.json": "890c07402efe2af4179ae3e9df3553df",
     "/course_content/other/vigenere.json": "bff51267fc05d87351e609d455f7848b",
     "/course_content/projects.json": "1d1af194048e5b5ccfe9313158cf737f",
-    "/dashboard/block_categories.yml": "1d1af194048e5b5ccfe9313158cf737f",
-    "/dashboard/progressions.yml": "1d1af194048e5b5ccfe9313158cf737f",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "1d1af194048e5b5ccfe9313158cf737f",
-    "/dashboard/variable_names.yml": "1d1af194048e5b5ccfe9313158cf737f"
+    "/dashboard/variable_names.yml": "1d1af194048e5b5ccfe9313158cf737f",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "my-MM": {
     "/course_content/2017/coursea-2017.json": "b17b41e2369430ae52d5f40e5de66978",
@@ -8541,7 +8639,7 @@
     "/course_content/Hour of Code/frozen.json": "0b6d7550893b4c855efb037defe225dd",
     "/course_content/Hour of Code/gumball.json": "b17b41e2369430ae52d5f40e5de66978",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "18b11137a3e48eb3e1b501688a68224d",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "18b11137a3e48eb3e1b501688a68224d",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "18b11137a3e48eb3e1b501688a68224d",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "18b11137a3e48eb3e1b501688a68224d",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "d61a1290f9b8948dde16ec75bd8308c0",
@@ -8594,10 +8692,12 @@
     "/course_content/other/poetry-hoc3.json": "18b11137a3e48eb3e1b501688a68224d",
     "/course_content/other/vigenere.json": "0b6d7550893b4c855efb037defe225dd",
     "/course_content/projects.json": "0b6d7550893b4c855efb037defe225dd",
-    "/dashboard/block_categories.yml": "0b6d7550893b4c855efb037defe225dd",
-    "/dashboard/progressions.yml": "0b6d7550893b4c855efb037defe225dd",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "0b6d7550893b4c855efb037defe225dd",
-    "/dashboard/variable_names.yml": "0b6d7550893b4c855efb037defe225dd"
+    "/dashboard/variable_names.yml": "0b6d7550893b4c855efb037defe225dd",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ne-NP": {
     "/course_content/2017/coursea-2017.json": "850f93a3541e6353e5350e648f56b3f5",
@@ -8713,7 +8813,7 @@
     "/course_content/Hour of Code/frozen.json": "feaa36b76a101c65f2eba93d77a6d444",
     "/course_content/Hour of Code/gumball.json": "feaa36b76a101c65f2eba93d77a6d444",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "e950ab00dec1cca1d448a43b64888710",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "e950ab00dec1cca1d448a43b64888710",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "e950ab00dec1cca1d448a43b64888710",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "e950ab00dec1cca1d448a43b64888710",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "d9336667f2d8a21869017393ea4faef9",
@@ -8766,10 +8866,12 @@
     "/course_content/other/poetry-hoc3.json": "e950ab00dec1cca1d448a43b64888710",
     "/course_content/other/vigenere.json": "feaa36b76a101c65f2eba93d77a6d444",
     "/course_content/projects.json": "feaa36b76a101c65f2eba93d77a6d444",
-    "/dashboard/block_categories.yml": "feaa36b76a101c65f2eba93d77a6d444",
-    "/dashboard/progressions.yml": "2009d77c366d65ccfb66368f1fa19bc0",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "2009d77c366d65ccfb66368f1fa19bc0",
-    "/dashboard/variable_names.yml": "2009d77c366d65ccfb66368f1fa19bc0"
+    "/dashboard/variable_names.yml": "2009d77c366d65ccfb66368f1fa19bc0",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "nl-NL": {
     "/course_content/2017/coursea-2017.json": "081f0d5637304581198e4d7c28334056",
@@ -8885,7 +8987,7 @@
     "/course_content/Hour of Code/frozen.json": "412b5ebd2d0f1644e239b8fd161a06a6",
     "/course_content/Hour of Code/gumball.json": "081f0d5637304581198e4d7c28334056",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "a81a67ecbb917a99e5d50cbd4a4b68b7",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "a81a67ecbb917a99e5d50cbd4a4b68b7",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "a81a67ecbb917a99e5d50cbd4a4b68b7",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "a81a67ecbb917a99e5d50cbd4a4b68b7",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "bb77e29f5d318c2782f84e9eb001f1ab",
@@ -8938,10 +9040,12 @@
     "/course_content/other/poetry-hoc3.json": "a81a67ecbb917a99e5d50cbd4a4b68b7",
     "/course_content/other/vigenere.json": "412b5ebd2d0f1644e239b8fd161a06a6",
     "/course_content/projects.json": "412b5ebd2d0f1644e239b8fd161a06a6",
-    "/dashboard/block_categories.yml": "412b5ebd2d0f1644e239b8fd161a06a6",
-    "/dashboard/progressions.yml": "412b5ebd2d0f1644e239b8fd161a06a6",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "412b5ebd2d0f1644e239b8fd161a06a6",
-    "/dashboard/variable_names.yml": "412b5ebd2d0f1644e239b8fd161a06a6"
+    "/dashboard/variable_names.yml": "412b5ebd2d0f1644e239b8fd161a06a6",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "nn-NO": {
     "/course_content/2017/coursea-2017.json": "27c8b941747453642e06a75c3705b457",
@@ -9057,7 +9161,7 @@
     "/course_content/Hour of Code/frozen.json": "ffb0f47b4219a21cc926752f576b5202",
     "/course_content/Hour of Code/gumball.json": "ffb0f47b4219a21cc926752f576b5202",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "d3ae9782f1c1cd743f6a010453461f0b",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d3ae9782f1c1cd743f6a010453461f0b",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "d3ae9782f1c1cd743f6a010453461f0b",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "d3ae9782f1c1cd743f6a010453461f0b",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "3e7f7918e65d420e273b5d21ba0692af",
@@ -9110,10 +9214,12 @@
     "/course_content/other/poetry-hoc3.json": "d3ae9782f1c1cd743f6a010453461f0b",
     "/course_content/other/vigenere.json": "ffb0f47b4219a21cc926752f576b5202",
     "/course_content/projects.json": "2229b735a1bb6fe704afa6398331f1c1",
-    "/dashboard/block_categories.yml": "2229b735a1bb6fe704afa6398331f1c1",
-    "/dashboard/progressions.yml": "2229b735a1bb6fe704afa6398331f1c1",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "2229b735a1bb6fe704afa6398331f1c1",
-    "/dashboard/variable_names.yml": "2229b735a1bb6fe704afa6398331f1c1"
+    "/dashboard/variable_names.yml": "2229b735a1bb6fe704afa6398331f1c1",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "no-NO": {
     "/course_content/2017/coursea-2017.json": "06a34eaef534fd533584482aec673e45",
@@ -9229,7 +9335,7 @@
     "/course_content/Hour of Code/frozen.json": "06a34eaef534fd533584482aec673e45",
     "/course_content/Hour of Code/gumball.json": "06a34eaef534fd533584482aec673e45",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "2ad9aeaaeac0ab80400e090f86a7ee31",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "2ad9aeaaeac0ab80400e090f86a7ee31",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "2ad9aeaaeac0ab80400e090f86a7ee31",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "2ad9aeaaeac0ab80400e090f86a7ee31",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "9e8130a42f2c5d7b6fdedb87b6984902",
@@ -9282,10 +9388,12 @@
     "/course_content/other/poetry-hoc3.json": "244dbd3d21a525b6c84807e6ccb36b90",
     "/course_content/other/vigenere.json": "06a34eaef534fd533584482aec673e45",
     "/course_content/projects.json": "244dbd3d21a525b6c84807e6ccb36b90",
-    "/dashboard/block_categories.yml": "06a34eaef534fd533584482aec673e45",
-    "/dashboard/progressions.yml": "244dbd3d21a525b6c84807e6ccb36b90",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "244dbd3d21a525b6c84807e6ccb36b90",
-    "/dashboard/variable_names.yml": "244dbd3d21a525b6c84807e6ccb36b90"
+    "/dashboard/variable_names.yml": "244dbd3d21a525b6c84807e6ccb36b90",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "pl-PL": {
     "/course_content/2017/coursea-2017.json": "8ff3a7771a5fe2b5f04ee86ee22cf33f",
@@ -9401,7 +9509,7 @@
     "/course_content/Hour of Code/frozen.json": "eb1a1810e87a192332ef4f68f3eb8837",
     "/course_content/Hour of Code/gumball.json": "eb1a1810e87a192332ef4f68f3eb8837",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "a31f882b09eca6ec11a115671e34cc93",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "a31f882b09eca6ec11a115671e34cc93",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "a31f882b09eca6ec11a115671e34cc93",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "a31f882b09eca6ec11a115671e34cc93",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "958984f3d4de2362fc72d7aa3b4f4cf8",
@@ -9454,10 +9562,12 @@
     "/course_content/other/poetry-hoc3.json": "a31f882b09eca6ec11a115671e34cc93",
     "/course_content/other/vigenere.json": "576092780fc992a62d6557521fbeb3d4",
     "/course_content/projects.json": "576092780fc992a62d6557521fbeb3d4",
-    "/dashboard/block_categories.yml": "576092780fc992a62d6557521fbeb3d4",
-    "/dashboard/progressions.yml": "576092780fc992a62d6557521fbeb3d4",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "576092780fc992a62d6557521fbeb3d4",
-    "/dashboard/variable_names.yml": "576092780fc992a62d6557521fbeb3d4"
+    "/dashboard/variable_names.yml": "576092780fc992a62d6557521fbeb3d4",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ps-AF": {
     "/course_content/2017/coursea-2017.json": "24b3b4b5f1778287756db0fe60c8eef7",
@@ -9573,7 +9683,7 @@
     "/course_content/Hour of Code/frozen.json": "8c4bd24775dd380290531acdbcf5cf7b",
     "/course_content/Hour of Code/gumball.json": "24b3b4b5f1778287756db0fe60c8eef7",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "b12fae9ebbb6313db78779b2509df704",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "b12fae9ebbb6313db78779b2509df704",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "b12fae9ebbb6313db78779b2509df704",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "b12fae9ebbb6313db78779b2509df704",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "366df5480a9b3f6e9a80b7d6eb6a2541",
@@ -9626,10 +9736,12 @@
     "/course_content/other/poetry-hoc3.json": "b12fae9ebbb6313db78779b2509df704",
     "/course_content/other/vigenere.json": "8c4bd24775dd380290531acdbcf5cf7b",
     "/course_content/projects.json": "8c4bd24775dd380290531acdbcf5cf7b",
-    "/dashboard/block_categories.yml": "8c4bd24775dd380290531acdbcf5cf7b",
-    "/dashboard/progressions.yml": "8c4bd24775dd380290531acdbcf5cf7b",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "8c4bd24775dd380290531acdbcf5cf7b",
-    "/dashboard/variable_names.yml": "8c4bd24775dd380290531acdbcf5cf7b"
+    "/dashboard/variable_names.yml": "8c4bd24775dd380290531acdbcf5cf7b",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "pt-BR": {
     "/course_content/2017/coursea-2017.json": "1469b259a64b5f441b641ac0086952e5",
@@ -9745,7 +9857,7 @@
     "/course_content/Hour of Code/frozen.json": "c952da6cb072b944cf3797b5587f6998",
     "/course_content/Hour of Code/gumball.json": "c952da6cb072b944cf3797b5587f6998",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "4d22d1f68e9a71f44ce7af139f5c9923",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4d22d1f68e9a71f44ce7af139f5c9923",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "4d22d1f68e9a71f44ce7af139f5c9923",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "4d22d1f68e9a71f44ce7af139f5c9923",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "256bca14373054472a7497e1ac111f20",
@@ -9798,10 +9910,12 @@
     "/course_content/other/poetry-hoc3.json": "4d22d1f68e9a71f44ce7af139f5c9923",
     "/course_content/other/vigenere.json": "c952da6cb072b944cf3797b5587f6998",
     "/course_content/projects.json": "fbeb01e085c2e45479dbef5d4865ed3d",
-    "/dashboard/block_categories.yml": "fbeb01e085c2e45479dbef5d4865ed3d",
-    "/dashboard/progressions.yml": "fbeb01e085c2e45479dbef5d4865ed3d",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "fbeb01e085c2e45479dbef5d4865ed3d",
-    "/dashboard/variable_names.yml": "fbeb01e085c2e45479dbef5d4865ed3d"
+    "/dashboard/variable_names.yml": "fbeb01e085c2e45479dbef5d4865ed3d",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "pt-PT": {
     "/course_content/2017/coursea-2017.json": "659ac5f95aa40ba6f4f27180a71e0b96",
@@ -9917,7 +10031,7 @@
     "/course_content/Hour of Code/frozen.json": "b7d32fa5cb424db1eac96947f0155455",
     "/course_content/Hour of Code/gumball.json": "b7d32fa5cb424db1eac96947f0155455",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "76f6951b15ff639087111d6ab8fc765c",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "76f6951b15ff639087111d6ab8fc765c",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "76f6951b15ff639087111d6ab8fc765c",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "76f6951b15ff639087111d6ab8fc765c",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "6863775f39baf101c655bc058bd2d547",
@@ -9970,10 +10084,12 @@
     "/course_content/other/poetry-hoc3.json": "76f6951b15ff639087111d6ab8fc765c",
     "/course_content/other/vigenere.json": "b7d32fa5cb424db1eac96947f0155455",
     "/course_content/projects.json": "7c6a6472d95a7cad450c88497940453f",
-    "/dashboard/block_categories.yml": "7c6a6472d95a7cad450c88497940453f",
-    "/dashboard/progressions.yml": "7c6a6472d95a7cad450c88497940453f",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "7c6a6472d95a7cad450c88497940453f",
-    "/dashboard/variable_names.yml": "7c6a6472d95a7cad450c88497940453f"
+    "/dashboard/variable_names.yml": "7c6a6472d95a7cad450c88497940453f",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ro-RO": {
     "/course_content/2017/coursea-2017.json": "41eab5f9e445ef155a069a76fea6ab01",
@@ -10089,7 +10205,7 @@
     "/course_content/Hour of Code/frozen.json": "87f2a727e7700d93708d6f8912227d84",
     "/course_content/Hour of Code/gumball.json": "87f2a727e7700d93708d6f8912227d84",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "284fa669377cbf2128736cc1d991129c",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "284fa669377cbf2128736cc1d991129c",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "284fa669377cbf2128736cc1d991129c",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "284fa669377cbf2128736cc1d991129c",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "6358011bb615ca186c4ac2738664c6ec",
@@ -10142,10 +10258,12 @@
     "/course_content/other/poetry-hoc3.json": "2ae2b7f5c9fb2c5bccb6ad7f42f2c1a8",
     "/course_content/other/vigenere.json": "87f2a727e7700d93708d6f8912227d84",
     "/course_content/projects.json": "87f2a727e7700d93708d6f8912227d84",
-    "/dashboard/block_categories.yml": "87f2a727e7700d93708d6f8912227d84",
-    "/dashboard/progressions.yml": "8c3b7de8d3aa506f56d3e7035ba529f5",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "8c3b7de8d3aa506f56d3e7035ba529f5",
-    "/dashboard/variable_names.yml": "8c3b7de8d3aa506f56d3e7035ba529f5"
+    "/dashboard/variable_names.yml": "8c3b7de8d3aa506f56d3e7035ba529f5",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "ru-RU": {
     "/course_content/2017/coursea-2017.json": "d8183ecd171c623f8c28a2656f4ecf87",
@@ -10261,7 +10379,7 @@
     "/course_content/Hour of Code/frozen.json": "f96eead6295e4e8a00f47791d10884e1",
     "/course_content/Hour of Code/gumball.json": "f96eead6295e4e8a00f47791d10884e1",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "8aab1a09038efe020dd06ab0f016e3c6",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "8aab1a09038efe020dd06ab0f016e3c6",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "8aab1a09038efe020dd06ab0f016e3c6",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "8aab1a09038efe020dd06ab0f016e3c6",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "e71fca1d81245981d46f47f9b86f65ac",
@@ -10314,10 +10432,12 @@
     "/course_content/other/poetry-hoc3.json": "f6862a338784d135a089519350d0d345",
     "/course_content/other/vigenere.json": "f96eead6295e4e8a00f47791d10884e1",
     "/course_content/projects.json": "9365f32540c468d1c820acbce8da754c",
-    "/dashboard/block_categories.yml": "9365f32540c468d1c820acbce8da754c",
-    "/dashboard/progressions.yml": "9365f32540c468d1c820acbce8da754c",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "9365f32540c468d1c820acbce8da754c",
-    "/dashboard/variable_names.yml": "9365f32540c468d1c820acbce8da754c"
+    "/dashboard/variable_names.yml": "9365f32540c468d1c820acbce8da754c",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "se-FI": {
     "/course_content/2017/coursea-2017.json": "85b2bebf72fd904ed73b67bf95c6bfa0",
@@ -10433,7 +10553,7 @@
     "/course_content/Hour of Code/frozen.json": "aba72255a3b9df26525f1831d6b49ff4",
     "/course_content/Hour of Code/gumball.json": "aba72255a3b9df26525f1831d6b49ff4",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "de0ebd2b7119e511eb38e48266ccc48a",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "de0ebd2b7119e511eb38e48266ccc48a",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "de0ebd2b7119e511eb38e48266ccc48a",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "de0ebd2b7119e511eb38e48266ccc48a",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "f9d2758177f992720f0c10c7344620f4",
@@ -10486,10 +10606,12 @@
     "/course_content/other/poetry-hoc3.json": "de0ebd2b7119e511eb38e48266ccc48a",
     "/course_content/other/vigenere.json": "aba72255a3b9df26525f1831d6b49ff4",
     "/course_content/projects.json": "e87cdada8a44fb7f6d7bcb9c67661d9a",
-    "/dashboard/block_categories.yml": "e87cdada8a44fb7f6d7bcb9c67661d9a",
-    "/dashboard/progressions.yml": "e87cdada8a44fb7f6d7bcb9c67661d9a",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "dfe99479d6297344539fb87b026a8206",
     "/dashboard/parameter_names.yml": "e87cdada8a44fb7f6d7bcb9c67661d9a",
-    "/dashboard/variable_names.yml": "e87cdada8a44fb7f6d7bcb9c67661d9a"
+    "/dashboard/variable_names.yml": "e87cdada8a44fb7f6d7bcb9c67661d9a",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "sm-WS": {
     "/course_content/2017/coursea-2017.json": "5fc981fba526f1ce1b54b5674db411d4",
@@ -10605,7 +10727,7 @@
     "/course_content/Hour of Code/frozen.json": "a3ce6b5c24206307fe32ef6e8cb47052",
     "/course_content/Hour of Code/gumball.json": "a3ce6b5c24206307fe32ef6e8cb47052",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "5165037f4c6bd4e2817438eb81db5c8a",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "5165037f4c6bd4e2817438eb81db5c8a",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "5165037f4c6bd4e2817438eb81db5c8a",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "5165037f4c6bd4e2817438eb81db5c8a",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "f8ed5bff244ca9a4fdb606eaa9ec2b44",
@@ -10658,10 +10780,12 @@
     "/course_content/other/poetry-hoc3.json": "91104e0c5082856551e8c880ce15e5df",
     "/course_content/other/vigenere.json": "a3ce6b5c24206307fe32ef6e8cb47052",
     "/course_content/projects.json": "4234299fe615e45763c6601c592659ea",
-    "/dashboard/block_categories.yml": "4234299fe615e45763c6601c592659ea",
-    "/dashboard/progressions.yml": "4234299fe615e45763c6601c592659ea",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "ceba2ca9e166884f327fa76aaf3700b9",
     "/dashboard/parameter_names.yml": "4234299fe615e45763c6601c592659ea",
-    "/dashboard/variable_names.yml": "4234299fe615e45763c6601c592659ea"
+    "/dashboard/variable_names.yml": "4234299fe615e45763c6601c592659ea",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "si-LK": {
     "/course_content/2017/coursea-2017.json": "4dfe3bec2cdb677de8ae64491f0498ad",
@@ -10777,7 +10901,7 @@
     "/course_content/Hour of Code/frozen.json": "c6ade1302165e7e32b7ed278496b5234",
     "/course_content/Hour of Code/gumball.json": "c6ade1302165e7e32b7ed278496b5234",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "d58c5dd8ffab2372f10cc7136dafeb94",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d58c5dd8ffab2372f10cc7136dafeb94",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "d58c5dd8ffab2372f10cc7136dafeb94",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "d58c5dd8ffab2372f10cc7136dafeb94",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "005bc9aa2e4c6484e2575c0b042d8259",
@@ -10830,10 +10954,12 @@
     "/course_content/other/poetry-hoc3.json": "b5271b958901eab917307200663341da",
     "/course_content/other/vigenere.json": "c6ade1302165e7e32b7ed278496b5234",
     "/course_content/projects.json": "c6ade1302165e7e32b7ed278496b5234",
-    "/dashboard/block_categories.yml": "c6ade1302165e7e32b7ed278496b5234",
-    "/dashboard/progressions.yml": "b5271b958901eab917307200663341da",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "b5271b958901eab917307200663341da",
-    "/dashboard/variable_names.yml": "b5271b958901eab917307200663341da"
+    "/dashboard/variable_names.yml": "b5271b958901eab917307200663341da",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "sk-SK": {
     "/course_content/2017/coursea-2017.json": "3245f2c00c041e2076244415b7692a38",
@@ -10949,7 +11075,7 @@
     "/course_content/Hour of Code/frozen.json": "362dea8cf61e12ed88a7a8b132d4bc6d",
     "/course_content/Hour of Code/gumball.json": "362dea8cf61e12ed88a7a8b132d4bc6d",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "cb95da579f026f8bfbee7f0dc054f0d3",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "cb95da579f026f8bfbee7f0dc054f0d3",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "cb95da579f026f8bfbee7f0dc054f0d3",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "cb95da579f026f8bfbee7f0dc054f0d3",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "b5aba6a4ac8e6261aa1e3315139f865a",
@@ -11002,10 +11128,12 @@
     "/course_content/other/poetry-hoc3.json": "d5c750b869f08a16b54790721af208bc",
     "/course_content/other/vigenere.json": "f260b02679de05ac4e920bd3c31044fc",
     "/course_content/projects.json": "f260b02679de05ac4e920bd3c31044fc",
-    "/dashboard/block_categories.yml": "f260b02679de05ac4e920bd3c31044fc",
-    "/dashboard/progressions.yml": "f260b02679de05ac4e920bd3c31044fc",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "f260b02679de05ac4e920bd3c31044fc",
-    "/dashboard/variable_names.yml": "f260b02679de05ac4e920bd3c31044fc"
+    "/dashboard/variable_names.yml": "f260b02679de05ac4e920bd3c31044fc",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "sl-SI": {
     "/course_content/2017/coursea-2017.json": "b420bebd5e04e65c25e30d3fb9f2df87",
@@ -11121,7 +11249,7 @@
     "/course_content/Hour of Code/frozen.json": "4def285b3bd305f924d378912b6ad0ae",
     "/course_content/Hour of Code/gumball.json": "b420bebd5e04e65c25e30d3fb9f2df87",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "a2114cc0fd81ec7957fa11a7a47e8555",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "a2114cc0fd81ec7957fa11a7a47e8555",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "a2114cc0fd81ec7957fa11a7a47e8555",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "a2114cc0fd81ec7957fa11a7a47e8555",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "dcfd8adbb03c5da975e72c1f71c05b7c",
@@ -11174,10 +11302,12 @@
     "/course_content/other/poetry-hoc3.json": "abca4afaf34b9ed8eb4bde37973d741b",
     "/course_content/other/vigenere.json": "4def285b3bd305f924d378912b6ad0ae",
     "/course_content/projects.json": "4def285b3bd305f924d378912b6ad0ae",
-    "/dashboard/block_categories.yml": "4def285b3bd305f924d378912b6ad0ae",
-    "/dashboard/progressions.yml": "4def285b3bd305f924d378912b6ad0ae",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "4def285b3bd305f924d378912b6ad0ae",
-    "/dashboard/variable_names.yml": "4def285b3bd305f924d378912b6ad0ae"
+    "/dashboard/variable_names.yml": "4def285b3bd305f924d378912b6ad0ae",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "sq-AL": {
     "/course_content/2017/coursea-2017.json": "140fde7f18df82ff2e0b07213ef4edba",
@@ -11293,7 +11423,7 @@
     "/course_content/Hour of Code/frozen.json": "bc6b18ab7b5ef03ea7827fd4247fb141",
     "/course_content/Hour of Code/gumball.json": "bc6b18ab7b5ef03ea7827fd4247fb141",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "00ade4bcbb302ac3d3d1d1cf07d38dee",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "00ade4bcbb302ac3d3d1d1cf07d38dee",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "00ade4bcbb302ac3d3d1d1cf07d38dee",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "00ade4bcbb302ac3d3d1d1cf07d38dee",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "f1dce37f907833961aa7dfda0b7a776b",
@@ -11346,10 +11476,12 @@
     "/course_content/other/poetry-hoc3.json": "00ade4bcbb302ac3d3d1d1cf07d38dee",
     "/course_content/other/vigenere.json": "bc6b18ab7b5ef03ea7827fd4247fb141",
     "/course_content/projects.json": "044d9afb2cc7132ae9e6db53ab1a6374",
-    "/dashboard/block_categories.yml": "4b5a6758b2926065fa583645b67fee0d",
-    "/dashboard/progressions.yml": "6dbe5caaff0b30dbaa16d58149ff7b93",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "71eab4c9f479a1b4fc4f88233e70286c",
     "/dashboard/parameter_names.yml": "6dbe5caaff0b30dbaa16d58149ff7b93",
-    "/dashboard/variable_names.yml": "6dbe5caaff0b30dbaa16d58149ff7b93"
+    "/dashboard/variable_names.yml": "6dbe5caaff0b30dbaa16d58149ff7b93",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "sr-SP": {
     "/course_content/2017/coursea-2017.json": "133ebfa195fb3f457e5c8cf280ff009a",
@@ -11465,7 +11597,7 @@
     "/course_content/Hour of Code/frozen.json": "133ebfa195fb3f457e5c8cf280ff009a",
     "/course_content/Hour of Code/gumball.json": "133ebfa195fb3f457e5c8cf280ff009a",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "0d015e60cfa942f4f4f4bc8b0966e6ae",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "0d015e60cfa942f4f4f4bc8b0966e6ae",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "0d015e60cfa942f4f4f4bc8b0966e6ae",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "0d015e60cfa942f4f4f4bc8b0966e6ae",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "b3b8d59b4e089ba7e6ace9ad9df05e27",
@@ -11518,10 +11650,12 @@
     "/course_content/other/poetry-hoc3.json": "0d015e60cfa942f4f4f4bc8b0966e6ae",
     "/course_content/other/vigenere.json": "133ebfa195fb3f457e5c8cf280ff009a",
     "/course_content/projects.json": "9dcfb95935ec6b97d9087c76779f7b43",
-    "/dashboard/block_categories.yml": "9dcfb95935ec6b97d9087c76779f7b43",
-    "/dashboard/progressions.yml": "9dcfb95935ec6b97d9087c76779f7b43",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "9dcfb95935ec6b97d9087c76779f7b43",
-    "/dashboard/variable_names.yml": "9dcfb95935ec6b97d9087c76779f7b43"
+    "/dashboard/variable_names.yml": "9dcfb95935ec6b97d9087c76779f7b43",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "sv-SE": {
     "/course_content/2017/coursea-2017.json": "4a31c4e3a869329f29e11846679a80cb",
@@ -11637,7 +11771,7 @@
     "/course_content/Hour of Code/frozen.json": "8cf9b06ebde298c7dc5d4e1fd6543299",
     "/course_content/Hour of Code/gumball.json": "8cf9b06ebde298c7dc5d4e1fd6543299",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "38be7d68316aa192b2fbf6693ad00883",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "38be7d68316aa192b2fbf6693ad00883",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "38be7d68316aa192b2fbf6693ad00883",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "38be7d68316aa192b2fbf6693ad00883",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "a0ad191a603f211d486440a6dbb5490a",
@@ -11690,10 +11824,12 @@
     "/course_content/other/poetry-hoc3.json": "38be7d68316aa192b2fbf6693ad00883",
     "/course_content/other/vigenere.json": "8cf9b06ebde298c7dc5d4e1fd6543299",
     "/course_content/projects.json": "0850d1d465dcc6e9ceb49d2d000d087d",
-    "/dashboard/block_categories.yml": "0850d1d465dcc6e9ceb49d2d000d087d",
-    "/dashboard/progressions.yml": "0850d1d465dcc6e9ceb49d2d000d087d",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "0850d1d465dcc6e9ceb49d2d000d087d",
-    "/dashboard/variable_names.yml": "0850d1d465dcc6e9ceb49d2d000d087d"
+    "/dashboard/variable_names.yml": "0850d1d465dcc6e9ceb49d2d000d087d",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "ta-IN": {
     "/course_content/2017/coursea-2017.json": "1f885d391b2db8eff7bdf65c09c202fc",
@@ -11809,7 +11945,7 @@
     "/course_content/Hour of Code/frozen.json": "2115ab67abd85256a4a4e7343c31a793",
     "/course_content/Hour of Code/gumball.json": "2115ab67abd85256a4a4e7343c31a793",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "ea3497e7f3bdbb37ae07352392eb1fa6",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "ea3497e7f3bdbb37ae07352392eb1fa6",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "ea3497e7f3bdbb37ae07352392eb1fa6",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "ea3497e7f3bdbb37ae07352392eb1fa6",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "318e450519136a80effb9ab4e54a1ea6",
@@ -11862,10 +11998,12 @@
     "/course_content/other/poetry-hoc3.json": "ea3497e7f3bdbb37ae07352392eb1fa6",
     "/course_content/other/vigenere.json": "2115ab67abd85256a4a4e7343c31a793",
     "/course_content/projects.json": "dfb0d2a95edc0c9dd60c802611c9c6fc",
-    "/dashboard/block_categories.yml": "dfb0d2a95edc0c9dd60c802611c9c6fc",
-    "/dashboard/progressions.yml": "dfb0d2a95edc0c9dd60c802611c9c6fc",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "dfb0d2a95edc0c9dd60c802611c9c6fc",
-    "/dashboard/variable_names.yml": "dfb0d2a95edc0c9dd60c802611c9c6fc"
+    "/dashboard/variable_names.yml": "dfb0d2a95edc0c9dd60c802611c9c6fc",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "te-IN": {
     "/course_content/2017/coursea-2017.json": "5c6e9602ecdc41d6f858a9335cd6239a",
@@ -11981,7 +12119,7 @@
     "/course_content/Hour of Code/frozen.json": "28e51229594004c4aa43eee596ddc477",
     "/course_content/Hour of Code/gumball.json": "28e51229594004c4aa43eee596ddc477",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "ca40a81c68485cbcaa1465d11f3f500f",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "ca40a81c68485cbcaa1465d11f3f500f",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "ca40a81c68485cbcaa1465d11f3f500f",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "ca40a81c68485cbcaa1465d11f3f500f",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "671c67146d2f39fb4ba3764524adea22",
@@ -12034,10 +12172,12 @@
     "/course_content/other/poetry-hoc3.json": "ca40a81c68485cbcaa1465d11f3f500f",
     "/course_content/other/vigenere.json": "0e23b38b43cb653789791fea10f44c40",
     "/course_content/projects.json": "0e23b38b43cb653789791fea10f44c40",
-    "/dashboard/block_categories.yml": "0e23b38b43cb653789791fea10f44c40",
-    "/dashboard/progressions.yml": "7370b76449e2988877b9a46c086175ae",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "7370b76449e2988877b9a46c086175ae",
-    "/dashboard/variable_names.yml": "7370b76449e2988877b9a46c086175ae"
+    "/dashboard/variable_names.yml": "7370b76449e2988877b9a46c086175ae",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "tg-TJ": {
     "/course_content/2017/coursea-2017.json": "1ffa89a097c5aaf18c6362ae2acf304a",
@@ -12153,7 +12293,7 @@
     "/course_content/Hour of Code/frozen.json": "a14eda5295a83c06c9cd2d134fe1d9ce",
     "/course_content/Hour of Code/gumball.json": "a14eda5295a83c06c9cd2d134fe1d9ce",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "8892db9b38b259b46a70f30d38ccbde2",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "8892db9b38b259b46a70f30d38ccbde2",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "8892db9b38b259b46a70f30d38ccbde2",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "8892db9b38b259b46a70f30d38ccbde2",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "f04ae72ea5bb2177003e7a49e5e4b9b7",
@@ -12206,10 +12346,12 @@
     "/course_content/other/poetry-hoc3.json": "8892db9b38b259b46a70f30d38ccbde2",
     "/course_content/other/vigenere.json": "a14eda5295a83c06c9cd2d134fe1d9ce",
     "/course_content/projects.json": "8378c42fa5fc0845f71e453fd1000604",
-    "/dashboard/block_categories.yml": "a14eda5295a83c06c9cd2d134fe1d9ce",
-    "/dashboard/progressions.yml": "8378c42fa5fc0845f71e453fd1000604",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "8378c42fa5fc0845f71e453fd1000604",
-    "/dashboard/variable_names.yml": "8378c42fa5fc0845f71e453fd1000604"
+    "/dashboard/variable_names.yml": "8378c42fa5fc0845f71e453fd1000604",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "th-TH": {
     "/course_content/2017/coursea-2017.json": "c1310b7c97d421f191e83e97545b6219",
@@ -12325,7 +12467,7 @@
     "/course_content/Hour of Code/frozen.json": "95fc9717e6ac7ca904e0e6cf57678eb7",
     "/course_content/Hour of Code/gumball.json": "95fc9717e6ac7ca904e0e6cf57678eb7",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "a946b7464a5847037e6010edd0a1f158",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "a946b7464a5847037e6010edd0a1f158",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "a946b7464a5847037e6010edd0a1f158",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "a946b7464a5847037e6010edd0a1f158",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "f8957ee90f92d01b7e905236cffe9585",
@@ -12378,10 +12520,12 @@
     "/course_content/other/poetry-hoc3.json": "fd6067cb55005fb567795f6583ca7f2f",
     "/course_content/other/vigenere.json": "95fc9717e6ac7ca904e0e6cf57678eb7",
     "/course_content/projects.json": "95fc9717e6ac7ca904e0e6cf57678eb7",
-    "/dashboard/block_categories.yml": "95fc9717e6ac7ca904e0e6cf57678eb7",
-    "/dashboard/progressions.yml": "bdefe1f7f2a22df2c4e39230b1b7effc",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "bdefe1f7f2a22df2c4e39230b1b7effc",
-    "/dashboard/variable_names.yml": "bdefe1f7f2a22df2c4e39230b1b7effc"
+    "/dashboard/variable_names.yml": "bdefe1f7f2a22df2c4e39230b1b7effc",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "tr-TR": {
     "/course_content/2017/coursea-2017.json": "f9d7dd5ea8ae5df2b91874ab82a9b7ef",
@@ -12497,7 +12641,7 @@
     "/course_content/Hour of Code/frozen.json": "0e4160f588e7b2ba4b512d2aa72cb732",
     "/course_content/Hour of Code/gumball.json": "0e4160f588e7b2ba4b512d2aa72cb732",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "9cbc906c31d337f6ea7845a8177ea7b4",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "9cbc906c31d337f6ea7845a8177ea7b4",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "9cbc906c31d337f6ea7845a8177ea7b4",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "9cbc906c31d337f6ea7845a8177ea7b4",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "33b8172224f1b1c4ce7f716598fabe22",
@@ -12550,10 +12694,12 @@
     "/course_content/other/poetry-hoc3.json": "9cbc906c31d337f6ea7845a8177ea7b4",
     "/course_content/other/vigenere.json": "0e4160f588e7b2ba4b512d2aa72cb732",
     "/course_content/projects.json": "f7525d50ca88452aee569f1058c3a915",
-    "/dashboard/block_categories.yml": "f7525d50ca88452aee569f1058c3a915",
-    "/dashboard/progressions.yml": "f7525d50ca88452aee569f1058c3a915",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "f7525d50ca88452aee569f1058c3a915",
-    "/dashboard/variable_names.yml": "f7525d50ca88452aee569f1058c3a915"
+    "/dashboard/variable_names.yml": "f7525d50ca88452aee569f1058c3a915",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "uk-UA": {
     "/course_content/2017/coursea-2017.json": "cf57bde72105103d3ae7b6fa515f9810",
@@ -12669,7 +12815,7 @@
     "/course_content/Hour of Code/frozen.json": "1d6a697df1565ddfb720d59c331f9add",
     "/course_content/Hour of Code/gumball.json": "a4cba56485373b32f8b8d45fff320176",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "33646489568a33e2d8ca8f2bef87a686",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "18fc46a7c36f5029f6984d0df7b4d951",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "18fc46a7c36f5029f6984d0df7b4d951",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "33646489568a33e2d8ca8f2bef87a686",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "877d338aab15937db44b399405198d49",
@@ -12722,10 +12868,12 @@
     "/course_content/other/poetry-hoc3.json": "18fc46a7c36f5029f6984d0df7b4d951",
     "/course_content/other/vigenere.json": "1d6a697df1565ddfb720d59c331f9add",
     "/course_content/projects.json": "0b47dab94be7236976aef307817792a7",
-    "/dashboard/block_categories.yml": "0b47dab94be7236976aef307817792a7",
-    "/dashboard/progressions.yml": "0b47dab94be7236976aef307817792a7",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "0b47dab94be7236976aef307817792a7",
-    "/dashboard/variable_names.yml": "0b47dab94be7236976aef307817792a7"
+    "/dashboard/variable_names.yml": "0b47dab94be7236976aef307817792a7",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "ur-PK": {
     "/course_content/2017/coursea-2017.json": "04d6d896619aa736c5e2430819d06ef5",
@@ -12841,7 +12989,7 @@
     "/course_content/Hour of Code/frozen.json": "6d3aff20cb6400b0d5a0f67a34111e41",
     "/course_content/Hour of Code/gumball.json": "6d3aff20cb6400b0d5a0f67a34111e41",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "6e063761a00857bf2c804cf003f9053c",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "6e063761a00857bf2c804cf003f9053c",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "6e063761a00857bf2c804cf003f9053c",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "6e063761a00857bf2c804cf003f9053c",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "96e0d421feff5feab8182424df4f6047",
@@ -12894,10 +13042,12 @@
     "/course_content/other/poetry-hoc3.json": "6e063761a00857bf2c804cf003f9053c",
     "/course_content/other/vigenere.json": "6d3aff20cb6400b0d5a0f67a34111e41",
     "/course_content/projects.json": "b450971b52d105266eb36d38fc52d7e9",
-    "/dashboard/block_categories.yml": "b450971b52d105266eb36d38fc52d7e9",
-    "/dashboard/progressions.yml": "b450971b52d105266eb36d38fc52d7e9",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "b450971b52d105266eb36d38fc52d7e9",
-    "/dashboard/variable_names.yml": "b450971b52d105266eb36d38fc52d7e9"
+    "/dashboard/variable_names.yml": "b450971b52d105266eb36d38fc52d7e9",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "uz-UZ": {
     "/course_content/2017/coursea-2017.json": "4deaf8f2f3fd727eceb76c00ec31ee88",
@@ -13013,7 +13163,7 @@
     "/course_content/Hour of Code/frozen.json": "f9cb597390e7d6d3fd6e43f263ef5815",
     "/course_content/Hour of Code/gumball.json": "f9cb597390e7d6d3fd6e43f263ef5815",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "a466744999ba15fecf5c3e139bb29b2f",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "a466744999ba15fecf5c3e139bb29b2f",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "a466744999ba15fecf5c3e139bb29b2f",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "a466744999ba15fecf5c3e139bb29b2f",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "ee9d267baf8b55b504c394ce8779cb20",
@@ -13066,10 +13216,12 @@
     "/course_content/other/poetry-hoc3.json": "963af3771df12b19b65fd8dac0e1cff1",
     "/course_content/other/vigenere.json": "f9cb597390e7d6d3fd6e43f263ef5815",
     "/course_content/projects.json": "ed3e87cceefee3ee746a44f1b079e0ca",
-    "/dashboard/block_categories.yml": "ed3e87cceefee3ee746a44f1b079e0ca",
-    "/dashboard/progressions.yml": "ed3e87cceefee3ee746a44f1b079e0ca",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "7f7414f4ab4cba2bf2f43a4a050b0713",
     "/dashboard/parameter_names.yml": "ed3e87cceefee3ee746a44f1b079e0ca",
-    "/dashboard/variable_names.yml": "ed3e87cceefee3ee746a44f1b079e0ca"
+    "/dashboard/variable_names.yml": "ed3e87cceefee3ee746a44f1b079e0ca",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "vi-VN": {
     "/course_content/2017/coursea-2017.json": "0f2253ed32a9757a10c67a9f692e8e76",
@@ -13185,7 +13337,7 @@
     "/course_content/Hour of Code/frozen.json": "78fef6bf3a681114c34fe9ffeebf3b94",
     "/course_content/Hour of Code/gumball.json": "78fef6bf3a681114c34fe9ffeebf3b94",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "9bc5dd6732bc7651f82e1111fdc31af0",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "9bc5dd6732bc7651f82e1111fdc31af0",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "9bc5dd6732bc7651f82e1111fdc31af0",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "9bc5dd6732bc7651f82e1111fdc31af0",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "aacf5e1687483c0a36a0ed6baf41b3cd",
@@ -13238,10 +13390,12 @@
     "/course_content/other/poetry-hoc3.json": "9bc5dd6732bc7651f82e1111fdc31af0",
     "/course_content/other/vigenere.json": "260335cf03787f8c23f8cae03baeb815",
     "/course_content/projects.json": "260335cf03787f8c23f8cae03baeb815",
-    "/dashboard/block_categories.yml": "260335cf03787f8c23f8cae03baeb815",
-    "/dashboard/progressions.yml": "272402852d8868f8cc097afb9622e5a4",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "ceba2ca9e166884f327fa76aaf3700b9",
     "/dashboard/parameter_names.yml": "272402852d8868f8cc097afb9622e5a4",
-    "/dashboard/variable_names.yml": "272402852d8868f8cc097afb9622e5a4"
+    "/dashboard/variable_names.yml": "272402852d8868f8cc097afb9622e5a4",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   },
   "zh-CN": {
     "/course_content/2017/coursea-2017.json": "a2da8ed120d921808076e77c34f2bb2d",
@@ -13357,7 +13511,7 @@
     "/course_content/Hour of Code/frozen.json": "8563c8c1410f3d69172e2797dbf251b1",
     "/course_content/Hour of Code/gumball.json": "8563c8c1410f3d69172e2797dbf251b1",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "8fdae167915d916d53ea518f38a66bd4",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "8fdae167915d916d53ea518f38a66bd4",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "8fdae167915d916d53ea518f38a66bd4",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "8fdae167915d916d53ea518f38a66bd4",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "42c5ac4b207590274167bb8ee2b23148",
@@ -13410,10 +13564,12 @@
     "/course_content/other/poetry-hoc3.json": "80e140c5323cf85e584bac6dd1109d09",
     "/course_content/other/vigenere.json": "8563c8c1410f3d69172e2797dbf251b1",
     "/course_content/projects.json": "719b17e289ca4ce75ff4f52d87ba3a8e",
-    "/dashboard/block_categories.yml": "719b17e289ca4ce75ff4f52d87ba3a8e",
-    "/dashboard/progressions.yml": "719b17e289ca4ce75ff4f52d87ba3a8e",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "719b17e289ca4ce75ff4f52d87ba3a8e",
-    "/dashboard/variable_names.yml": "719b17e289ca4ce75ff4f52d87ba3a8e"
+    "/dashboard/variable_names.yml": "719b17e289ca4ce75ff4f52d87ba3a8e",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "zh-TW": {
     "/course_content/2017/coursea-2017.json": "da7ba5f454288b83e207065e0b4242e0",
@@ -13529,7 +13685,7 @@
     "/course_content/Hour of Code/frozen.json": "11f2e5eacfc67f45fabde4d8f5e2a231",
     "/course_content/Hour of Code/gumball.json": "11f2e5eacfc67f45fabde4d8f5e2a231",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "440e11b82b1959e20472e75633de663a",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "440e11b82b1959e20472e75633de663a",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "d560e103938f26bf86fd218442056df6",
     "/course_content/Hour of Code/hello-world-food-2021.json": "440e11b82b1959e20472e75633de663a",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "440e11b82b1959e20472e75633de663a",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "0a6938d19c88f16de4f824d4e4691f43",
@@ -13582,10 +13738,12 @@
     "/course_content/other/poetry-hoc3.json": "c1b72fe91bc393b60b5caa34bb79da38",
     "/course_content/other/vigenere.json": "11f2e5eacfc67f45fabde4d8f5e2a231",
     "/course_content/projects.json": "92499a25f8c13aa74742821578fff2ea",
-    "/dashboard/block_categories.yml": "92499a25f8c13aa74742821578fff2ea",
-    "/dashboard/progressions.yml": "92499a25f8c13aa74742821578fff2ea",
+    "/dashboard/block_categories.yml": "6a4b0157a285bc96348f371f39866ae4",
+    "/dashboard/progressions.yml": "24f6523c7593691904082b32bb800747",
     "/dashboard/parameter_names.yml": "92499a25f8c13aa74742821578fff2ea",
-    "/dashboard/variable_names.yml": "92499a25f8c13aa74742821578fff2ea"
+    "/dashboard/variable_names.yml": "92499a25f8c13aa74742821578fff2ea",
+    "/course_content/2024/music-intro-2024.json": "f98c2ffdb737b322c376e6c92569cc11",
+    "/course_content/other/music-onboard.json": "44a82cb618fe868992115191661f6621"
   },
   "zu-ZA": {
     "/course_content/2017/coursea-2017.json": "90ec51d355940f04b3a03fc064627b23",
@@ -13701,7 +13859,7 @@
     "/course_content/Hour of Code/frozen.json": "02171f00f41ac6e633c91e5c3cad8bcb",
     "/course_content/Hour of Code/gumball.json": "ed029928a8274f9c3fb4dc783a23d665",
     "/course_content/Hour of Code/hello-world-animals-2021.json": "05795349d775193801c36f5b6feb4d88",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "05795349d775193801c36f5b6feb4d88",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4b247eebb75f616e8d74369079234487",
     "/course_content/Hour of Code/hello-world-food-2021.json": "05795349d775193801c36f5b6feb4d88",
     "/course_content/Hour of Code/hello-world-retro-2021.json": "05795349d775193801c36f5b6feb4d88",
     "/course_content/Hour of Code/hello-world-soccer-2022.json": "1f428ac5540b2bc8e820f3114b0416b8",
@@ -13754,9 +13912,11 @@
     "/course_content/other/poetry-hoc3.json": "05795349d775193801c36f5b6feb4d88",
     "/course_content/other/vigenere.json": "02171f00f41ac6e633c91e5c3cad8bcb",
     "/course_content/projects.json": "02171f00f41ac6e633c91e5c3cad8bcb",
-    "/dashboard/block_categories.yml": "02171f00f41ac6e633c91e5c3cad8bcb",
-    "/dashboard/progressions.yml": "02171f00f41ac6e633c91e5c3cad8bcb",
+    "/dashboard/block_categories.yml": "c758d74136dacc6e06cca948c9d7b5f1",
+    "/dashboard/progressions.yml": "ceba2ca9e166884f327fa76aaf3700b9",
     "/dashboard/parameter_names.yml": "35cdf9e6e4fc930874d49eff4fc26409",
-    "/dashboard/variable_names.yml": "35cdf9e6e4fc930874d49eff4fc26409"
+    "/dashboard/variable_names.yml": "35cdf9e6e4fc930874d49eff4fc26409",
+    "/course_content/2024/music-intro-2024.json": "de2c5df079ba45ed1ea9c60c3786e3d4",
+    "/course_content/other/music-onboard.json": "20c3d4412fe923fdad6a5cac8cfe3318"
   }
 }

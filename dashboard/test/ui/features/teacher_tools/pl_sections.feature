@@ -138,6 +138,7 @@ Feature: Professional learning Sections
 
     Then I create a teacher named "Teacher"
     And I sign in as "Teacher" and go home
+    Then I am on "http://studio.code.org/my-professional-learning"
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
@@ -153,6 +154,7 @@ Feature: Professional learning Sections
 
     Then I create a teacher named "Teacher"
     And I sign in as "Teacher" and go home
+    Then I am on "http://studio.code.org/my-professional-learning"
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
@@ -171,6 +173,7 @@ Feature: Professional learning Sections
     And I sign in as "Facilitator" and go home
     And I get facilitator access
     And I reload the page
+    Then I am on "http://studio.code.org/my-professional-learning"
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
@@ -188,6 +191,7 @@ Feature: Professional learning Sections
     And I sign in as "Facilitator" and go home
     And I get facilitator access
     And I reload the page
+    Then I am on "http://studio.code.org/my-professional-learning"
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
@@ -205,6 +209,7 @@ Feature: Professional learning Sections
     And I sign in as "Universal Instructor 2" and go home
     And I get universal instructor access
     And I reload the page
+    Then I am on "http://studio.code.org/my-professional-learning"
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
@@ -222,6 +227,7 @@ Feature: Professional learning Sections
     And I sign in as "Universal Instructor 2" and go home
     And I get universal instructor access
     And I reload the page
+    Then I am on "http://studio.code.org/my-professional-learning"
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
