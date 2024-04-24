@@ -25,5 +25,5 @@ export default function ProgressBanners({canShow}) {
 }
 
 ProgressBanners.propTypes = {
-  canShow: PropTypes.bool.isRequired,
+  canShow: PropTypes.bool,
 };

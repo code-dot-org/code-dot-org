@@ -14,6 +14,8 @@ export const BANNER_STATUS = Object.freeze({
   UNANSWERED: 'unanswered',
   // The status when the user has provided feedback.
   ANSWERED: 'answered',
+  // The status when the user has previously submitted feedback and the banner is not shown.
+  PREVIOUSLY_ANSWERED: 'previously_answered',
   // The status when the banner has been closed by the user.
   CLOSED: 'closed',
 });
