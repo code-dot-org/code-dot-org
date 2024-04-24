@@ -12,7 +12,7 @@ import {UnconnectedOwnedPlSectionsTable as OwnedPlSectionsTable} from '@cdo/apps
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {assert, expect} from '../../../util/reconfiguredChai';

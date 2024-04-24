@@ -19,7 +19,7 @@ import {
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
+import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
