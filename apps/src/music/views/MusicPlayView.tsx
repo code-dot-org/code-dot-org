@@ -15,6 +15,7 @@ interface MusicPlayViewProps {
   isPlaying: boolean;
   onPlay: () => void;
   onStop: () => void;
+  getCurrentPlayheadPosition: () => number;
   projectName: string;
 }
 
@@ -22,7 +23,11 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   onPlay,
   onStop,
 }) => {
-  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const {isPlaying, lastMeasure, currentPlayheadPosition} = useAppSelector(
+    state => state.music
+  );
+  const progressSliderValue =
+    ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
   const projectName = useAppSelector(state => state.lab.channel?.name);
   const shareData = useMemo(
     () => ({
@@ -31,7 +36,6 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
     }),
     [projectName]
   );
-
   // Share button will only appear when users browser supports the Web Share API
   // (Can be mobile browsers and some desktop browser like macOS Safari)
   // Requires HTTPS connection (adhoc or production page).
@@ -69,7 +73,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
             type="secondary"
           />
           {/*TODO: get the total length of the song, show current player position/play progress*/}
-          <input type="range" min="0" max="100" />
+          <input type="range" value={progressSliderValue} min="0" max="100" />
         </div>
 
         <div className={moduleStyles.musicPlayViewButtonsSection}>

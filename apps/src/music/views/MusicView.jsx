@@ -128,7 +128,7 @@ class UnconnectedMusicView extends React.Component {
       this.getValidationTimeout,
       this.player
     );
-    this.isPlayView = false;
+    this.isPlayView = true;
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(
@@ -272,14 +272,12 @@ class UnconnectedMusicView extends React.Component {
     }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
-    this.isPlayView
-      ? this.musicBlocklyWorkspace.initHeadless()
-      : this.musicBlocklyWorkspace.init(
-          document.getElementById(BLOCKLY_DIV_ID),
-          this.onBlockSpaceChange,
-          this.props.isReadOnlyWorkspace,
-          levelData?.toolbox
-        );
+    this.musicBlocklyWorkspace.init(
+      document.getElementById(BLOCKLY_DIV_ID),
+      this.onBlockSpaceChange,
+      this.props.isReadOnlyWorkspace,
+      levelData?.toolbox
+    );
 
     this.library.setAllowedSounds(levelData?.sounds);
     this.props.setShowInstructions(
@@ -658,28 +656,27 @@ class UnconnectedMusicView extends React.Component {
             AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
           }
         />
-        {this.isPlayView ? (
+        {this.isPlayView && (
           <MusicPlayView onPlay={this.playSong} onStop={this.stopSong} />
-        ) : (
-          <MusicLabView
-            blocklyDivId={BLOCKLY_DIV_ID}
-            setPlaying={this.setPlaying}
-            playTrigger={this.playTrigger}
-            hasTrigger={id => this.musicBlocklyWorkspace.hasTrigger(id)}
-            getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
-            updateHighlightedBlocks={this.updateHighlightedBlocks}
-            undo={this.undo}
-            redo={this.redo}
-            clearCode={this.clearCode}
-            validator={this.musicValidator}
-            player={this.player}
-            allowPackSelection={
-              this.library?.getHasRestrictedPacks() &&
-              !this.props.levelProperties?.levelData?.packId &&
-              this.props.isProjectLevel
-            }
-          />
         )}
+        <MusicLabView
+          blocklyDivId={BLOCKLY_DIV_ID}
+          setPlaying={this.setPlaying}
+          playTrigger={this.playTrigger}
+          hasTrigger={id => this.musicBlocklyWorkspace.hasTrigger(id)}
+          getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
+          updateHighlightedBlocks={this.updateHighlightedBlocks}
+          undo={this.undo}
+          redo={this.redo}
+          clearCode={this.clearCode}
+          validator={this.musicValidator}
+          player={this.player}
+          allowPackSelection={
+            this.library?.getHasRestrictedPacks() &&
+            !this.props.levelProperties?.levelData?.packId &&
+            this.props.isProjectLevel
+          }
+        />
         <Callouts />
       </AnalyticsContext.Provider>
     );
