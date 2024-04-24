@@ -6225,6 +6225,7 @@ en:
           description_short: ''
           description: Use these levels to explore AI Lab and use in other lessons or activities.
           student_description: Use these levels to explore AI Lab and use in other lessons or activities. You will need to create a Code.org account and sign-in in order to use these tools.
+          lessons: {}
         poster-experiment:
           lesson_groups: {}
           name: poster-experiment
@@ -16634,6 +16635,69 @@ en:
           lesson_groups: {}
           name: musiclab-pdx-test
           title: 'PDX Playtest for Music Lab '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        baruch-pilot-v1:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+          lesson_groups: {}
+          name: baruch-pilot-v1
+          title: Baruch Gen AI Pilot
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        grade2-maker-2024:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Events, Sequencing, and Loops
+            lessonGroup-3:
+              display_name: "[Optional] Extension: Data and Variables"
+          name: grade2-maker-2024
+          title: Grade 2 - Maker with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        grade3-maker-2024:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conditionals and Events
+            lessonGroup-3:
+              display_name: "[Optional] Extension: Conditionals and Text Inputs"
+          name: grade3-maker-2024
+          title: Grade 3 - Maker with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        grade4-maker-2024:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Events, Conditionals, and Designing for Accessibility
+            lessonGroup-3:
+              display_name: "[Optional] Extension: Functions"
+          name: grade4-maker-2024
+          title: Grade 4 - Maker with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        grade5-maker-2024:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Events, Variables, Conditionals, and Sounds
+            lessonGroup-3:
+              display_name: "[Optional] Extension: Events, Conditionals, and Variables"
+          name: grade5-maker-2024
+          title: Grade 5 - Maker with micro:bit
           description_audience: ''
           description_short: ''
           description: ''

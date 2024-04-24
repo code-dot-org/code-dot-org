@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2024-04-22 03:58:18 UTC",
+    "serialized_at": "2024-04-24 02:42:04 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2776,6 +2776,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_calming_leds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3097,6 +3100,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_counter"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3852,7 +3858,7 @@
       }
     },
     {
-      "name": "Finished project",
+      "name": "Meet your micro:bit - Finished project",
       "url": "https://mbit.io/csf-1-project",
       "key": "finished_project",
       "properties": {
