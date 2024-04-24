@@ -348,6 +348,20 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#user_gender_student_input', false
   end
 
+  test 'student under 13 and in US with provided us_state does not get student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:us_state, 'DC')
+    student.update_attribute(:user_provided_us_state, true)
+    student = student.reload
+    assert student.age, 12
+    assert student.us_state
+
+    sign_in student
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
   test 'student over 13 and in US with us_state does not get student information prompt' do
     student = create(:student, age: 19)
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'

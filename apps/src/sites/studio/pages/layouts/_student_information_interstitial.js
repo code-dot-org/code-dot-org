@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $, {getScript} from 'jquery';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -7,6 +7,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 const retrieveInfoForCap = getScriptData('retrieveInfoForCap');
 const userId = getScriptData('userId');
 const inSection = getScriptData('inSection');
+const previousStateValue = getScriptData('currentUsState');
 const forceStudentInterstitial = queryParams('forceStudentInterstitial');
 
 $(document).ready(function () {
@@ -30,12 +31,13 @@ $(document).ready(function () {
   });
 
   form.on('submit', () => {
-    const stateValue = $('#user_us_state').val();
-    if (stateValue && (retrieveInfoForCap || forceStudentInterstitial))
+    const newStateValue = $('#user_us_state').val();
+    if (newStateValue && (retrieveInfoForCap || forceStudentInterstitial))
       analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_PROVIDED, {
         user_id: userId,
         in_section: inSection,
-        us_state: stateValue,
+        us_state: newStateValue,
+        previous_us_state: previousStateValue,
       });
   });
 });

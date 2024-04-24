@@ -109,6 +109,7 @@ class User < ApplicationRecord
   #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
+  #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -151,6 +152,7 @@ class User < ApplicationRecord
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
     ai_tutor_access_denied
+    user_provided_us_state
   )
 
   attr_accessor(

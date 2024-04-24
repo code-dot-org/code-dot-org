@@ -508,8 +508,8 @@ module UsersHelper
 
   def cap_user_info_required?(user, country_code)
     return false unless user.student?
-    return false unless user.us_state.nil?
     return false unless country_code.nil? || usa?(country_code)
+    return false if user.user_provided_us_state
     user.under_13? && Policies::ChildAccount.personal_account?(user)
   end
 
