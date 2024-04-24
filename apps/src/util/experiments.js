@@ -39,8 +39,6 @@ experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
-// Experiment for testing Blockly workspace serialization with the JSON system.
-experiments.BLOCKLY_JSON = 'blocklyJson';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout
