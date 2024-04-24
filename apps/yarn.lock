@@ -7178,6 +7178,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"argue-cli@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "argue-cli@npm:2.1.0"
+  checksum: 1dad41394bcc68177a2faf69659c8641e1faf8e12f861d3fd742d2860b99f1177c4d33e225b2d6a0548bf12f552f83caddca537efa1d474ce07e5d0aeb1d333d
+  languageName: node
+  linkType: hard
+
 "aria-query@npm:^5.0.0":
   version: 5.1.3
   resolution: "aria-query@npm:5.1.3"
@@ -8196,6 +8203,7 @@ __metadata:
     blockly: 10.3.1
     bootstrap-sass: ^3.3.6
     browser-process-hrtime: 0.1.2
+    browserslist-useragent-regexp: ^4.1.3
     buffer: ^6.0.3
     canvg: gabelerner/canvg
     chai: 3.5.0
@@ -8581,6 +8589,24 @@ browser-serialport@latest:
   languageName: node
   linkType: hard
 
+"browserslist-useragent-regexp@npm:^4.1.3":
+  version: 4.1.3
+  resolution: "browserslist-useragent-regexp@npm:4.1.3"
+  dependencies:
+    argue-cli: ^2.1.0
+    easy-table: ^1.2.0
+    picocolors: ^1.0.0
+    regexp-tree: ^0.1.24
+    ua-regexes-lite: ^1.2.1
+  peerDependencies:
+    browserslist: ">=4.0.0"
+  bin:
+    bluare: dist/cli.js
+    browserslist-useragent-regexp: dist/cli.js
+  checksum: fd8c30bf84b248aa91b5d46d429c39055f2d3304e2d5cef82589d859f406c16f3795949da0ab45fe64264df4591ced6f791c77d6e6fb0fa83be0c3b027327e7b
+  languageName: node
+  linkType: hard
+
 "browserslist@npm:^4.20.2, browserslist@npm:^4.21.3":
   version: 4.21.3
   resolution: "browserslist@npm:4.21.3"
@@ -8841,24 +8867,10 @@ browser-serialport@latest:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001370":
-  version: 1.0.30001377
-  resolution: "caniuse-lite@npm:1.0.30001377"
-  checksum: bd42fa4255f30df914bcef846412c2710e032dfd43f5861753befbd45244574a8c281147247a57c11b19684c8516e3ef731b45bc12b1adfdad13b62f548b23fb
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001503":
-  version: 1.0.30001513
-  resolution: "caniuse-lite@npm:1.0.30001513"
-  checksum: 7d783f4f40584e7bdeda3f3abc23ffff21f14c37e1fadf1a6b3d2e299727fe9d5a61096101d9d4e4174f881d4ff4c62204fc41f3bc950f4da1b0edfdea025fa4
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001587":
-  version: 1.0.30001597
-  resolution: "caniuse-lite@npm:1.0.30001597"
-  checksum: ec6a2cf0fd49f37d16732e6595939fc80a125dcd188a950bc936c61b4ad53becc0fe51bf2d9a625415de7b1cb23bd835f220e8b68d8ab951a940edeea65476fd
+"caniuse-lite@npm:^1.0.30001370, caniuse-lite@npm:^1.0.30001503, caniuse-lite@npm:^1.0.30001587":
+  version: 1.0.30001612
+  resolution: "caniuse-lite@npm:1.0.30001612"
+  checksum: 2b6ab6a19c72bdf8dccac824944e828a2a1fae52c6dfeb2d64ccecfd60d0466d2e5a392e996da2150d92850188a5034666dceed34a38d978177f6934e0bf106d
   languageName: node
   linkType: hard
 
@@ -11061,6 +11073,19 @@ canvg@gabelerner/canvg:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 7d00d7cd8e49b9afa762a813faac332dee781932d6f2c848dc348939c4253f1d4564341b7af1d041853bc3f32c2ef141b58e0a4d9862c17a7f08f68df1e0f1ed
+  languageName: node
+  linkType: hard
+
+"easy-table@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "easy-table@npm:1.2.0"
+  dependencies:
+    ansi-regex: ^5.0.1
+    wcwidth: ^1.0.1
+  dependenciesMeta:
+    wcwidth:
+      optional: true
+  checksum: 66961b19751a68d2d30ce9b74ef750c374cc3112bbcac3d1ed5a939e43c035ecf6b1954098df2d5b05f1e853ab2b67de893794390dcbf0abe1f157fddeb52174
   languageName: node
   linkType: hard
 
@@ -22435,6 +22460,15 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"regexp-tree@npm:^0.1.24":
+  version: 0.1.27
+  resolution: "regexp-tree@npm:0.1.27"
+  bin:
+    regexp-tree: bin/regexp-tree
+  checksum: 129aebb34dae22d6694ab2ac328be3f99105143737528ab072ef624d599afecbcfae1f5c96a166fa9e5f64fa1ecf30b411c4691e7924c3e11bbaf1712c260c54
+  languageName: node
+  linkType: hard
+
 "regexp.prototype.flags@npm:^1.4.3":
   version: 1.4.3
   resolution: "regexp.prototype.flags@npm:1.4.3"
@@ -25732,6 +25766,13 @@ temporal@latest:
   version: 0.7.31
   resolution: "ua-parser-js@npm:0.7.31"
   checksum: e2f8324a83d1715601576af85b2b6c03890699aaa7272950fc77ea925c70c5e4f75060ae147dc92124e49f7f0e3d6dd2b0a91e7f40d267e92df8894be967ba8b
+  languageName: node
+  linkType: hard
+
+"ua-regexes-lite@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "ua-regexes-lite@npm:1.2.1"
+  checksum: 3545a3bd0bedc5a66912b5ba8248a230f0f31f6f6446dd0fa83f7bf77a5e9b206122ab30a8c4b1150bb5ffe5407da8d3b7a557adfa542c0af6bae5ebd77dd703
   languageName: node
   linkType: hard
 
