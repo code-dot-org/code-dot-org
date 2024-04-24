@@ -241,6 +241,7 @@ gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3'
+gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
@@ -350,7 +351,7 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.8.1'
+gem 'crowdin-api', '~> 1.10.0'
 
 gem "delayed_job_active_record", "~> 4.1"
 

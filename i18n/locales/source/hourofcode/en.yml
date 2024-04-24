@@ -1037,6 +1037,7 @@
   ai_pl_desc: "Introduction to artificial intelligence and machine learning. Train a machine learning model using AI Lab. and engage with machine learning apps. Consider real-world implications of AI and machine learning."
   ai_promote_literacy: "Promote AI Literacy. Support Innovation. Provide Guidance."
   ai_section_body: "The latest resource from TeachAI, Foundational Policy Ideas for AI in Education, provides briefs, policy considerations, and presentation materials for policymakers to craft responsible policies for teaching with and about AI. Let's #TeachAI."
+  ai_banner_body: "The latest resource from TeachAI provides briefs, policy considerations, and presentation materials for policymakers."
   ai_video_series_title: "How AI Works"
   ai_video_series_desc: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making. Watch the video series below, or [check out our How AI Works lessons](%{how_ai_works_url})!"
   ai_resources_heading: "Additional resources"
@@ -1742,6 +1743,55 @@
         desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
         button: "Visit our support center"
 
+  pl_page_k5:
+    heading: "K-5 professional learning workshops"
+    desc_01: "Our engaging workshops are for new and experienced computer science teachers!"
+    desc_02: "During these in-person or virtual facilitator-led workshops you will:"
+    top_list_01: "Explore the curriculum and learning tools"
+    top_list_02: "Experience the course as a teacher and a learner"
+    top_list_03: "Collaborate with fellow teachers"
+    top_list_04: "Earn a certificate of completion"
+    button: "Find a workshop near you"
+    workshops:
+      heading: "Choose the workshop that meets your needs"
+      desc: "Embark on a journey to master computer science education with our tailored workshops, whether you're starting fresh or looking to deepen your expertise."
+      intro:
+        overline: "The Intro Workshop"
+        title: "I've Never Taught Computer Science Fundamentals"
+        desc: "Dive into CS teaching fundamentals with our Intro Workshop, tailored for new educators in computer science. Join over 85,000 peers to develop actionable plans for implementing CS lessons, connect with a supportive teaching community, and leave equipped with strategies, certification, and exclusive Code.org swag."
+      deep_dive:
+        overline: "Deep-Dive Workshop"
+        title: "I've Already Taught Computer Science Fundamentals"
+        desc: "Enhance your CS teaching with our Deep Dive Workshop, ideal for educators already teaching CS Fundamentals who seek a richer understanding and advanced strategies. Collaborate in problem-solving sessions, address specific classroom challenges, and strengthen your teaching network, culminating in a deeper sense of community and ongoing support."
+    quote:
+      text: "It was great to put myself in situations that my students might face. Talking with others about our lessons was super helpful because we could bounce ideas off of one another."
+      byline: "Music Teacher"
+    workshops_map:
+      heading: "Register for a nearby workshop"
+      desc: "Use the map below to find the next upcoming CS Fundamentals workshop in your region. Because CS Fundamentals courses can be implemented at any point in the school year, workshops are available year round!"
+      deep_dive: "Deep Dive Workshop Available"
+    curriculum:
+      heading: "Curriculum associated with K-5 workshops"
+      desc: "Check out the curriculum offerings which you will explore in a K-5 workshop."
+      button: "See all K-5 curriculum options"
+      csf:
+        overline: "K-5 Teachers"
+        title: "Computer Science Fundamentals"
+        desc: "Introduce students to the foundational concepts of computer science and challenge them to explore how computing and technology can impact the world."
+        button: "Explore CS Fundamentals"
+      csc:
+        overline: "3-5 Teachers"
+        title: "Computer Science Connections"
+        desc: "Make connections between computer science (CS) and other subjects like math, language arts, science, and social studies."
+        button: "Explore CS Connections"
+    additional_offerings:
+      heading: "Additional professional learning offerings"
+      desc: "In addition to our facilitator led options for elementary teachers we have several other programs to meet the diverse needs of our teachers."
+      workshop_6_12:
+        title: "6-12 Workshops"
+        desc: "Do you teach middle or high school grades? Check out the link below to learn more about our 6-12 workshops."
+        button: "Explore 6-12 workshops"
+
   intl_pl_page:
     page_title: "International Professional Learning Resources"
     heading: "Global professional learning opportunities"
@@ -1956,6 +2006,71 @@
         simple: "App Lab: Make a simple app"
         emoji: "App Lab: Make a Whack-E-Moji Game"
         how_to: "App Lab How-to: Make a Choose-Your-Own-Adventure App"
+
+  music_lab:
+    introducing: "Introducing"
+    music_lab: "Music Lab"
+    introducing_music_lab: "Introducing Music Lab"
+    button:
+      try_music_lab: "Try Music Lab"
+      learn_more: "Learn more"
+      access_teachers_guide: "Access teacher's guide"
+      get_teachers_guide: "Get the teacher's guide"
+      amazon_career_tour: "See Career Tour"
+    in_partnerhip_with: "In partnership with"
+    amazon_future_engineer: "Amazon Future Engineer"
+    banner:
+      heading: "Create music with code"
+      desc: "Get creative with your favorite artist's music and code new songs and mixes!"
+    featuring_songs_by: "Featuring songs by:"
+    student_projects:
+      heading: "Listen to what students are creating"
+      subheading: "Getting started is easy!"
+      desc: "Remix one of these featured projects or create your own!"
+      list_create: "Create your own mix with code"
+      list_artist: "Use your favorite artist's music"
+      list_share: "Share your mix and remix others!"
+    amazon:
+      heading: "Check out the Amazon Music Career Tour!"
+      desc: "Discover the jobs that bring technology together with music!"
+    videos:
+      heading: "Watch your favorite artists try Music Lab"
+    quotes:
+      heading: "What teachers and students are saying about Music Lab"
+      bryant:
+        quote: "Massive success! Kids really enjoyed it; engagement was great, especially for some students that aren't as hooked into other modes of learning/practicing CS skills."
+        byline: "STEM Specialist"
+      lori:
+        quote: "I think Music Lab is a great addition to the Code.org platform…it's a great cross curriculum that can engage students of all different areas and interests and help bring teachers together."
+        byline: "Computer Science Teacher"
+      joe:
+        quote: "So my reaction to seeing Music Lab was one of amazement. I was truly impressed by the ability to blend the field of STEM with what we do in music…there's so much overlap to be had."
+        byline: "Music Teacher"
+      student:
+        quote_01: "It's like you're coding without even knowing you're coding."
+        quote_02: "I never would have imagined I'd be making music with computer science."
+        quote_03: "I think it's a cool way to compose music."
+    teachers_guide:
+      heading: "Get the teacher's guide to Music Lab"
+      desc: "Grab your copy of the teacher's guide to Music Lab to learn how to get started, explore activity ideas, and get answers to frequently asked questions."
+    tutorial:
+      heading: "Teach Music Lab in your Classroom"
+      desc: "Use our Music Lab tutorial to unleash your students' musical creativity, combining the joy of music with the principles of coding."
+      button: "Start tutorial"
+    additional_resources:
+      heading: "Additional resources"
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      videos:
+        title: "Video Library"
+        desc: "Explore our large library of engaging and informative videos to learn about key computer science concepts on a broad range of topics."
+        button: "View video library"
+      hoc:
+        title: "Try an Hour of Code"
+        desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
+        button: "See Hour of Code activities"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

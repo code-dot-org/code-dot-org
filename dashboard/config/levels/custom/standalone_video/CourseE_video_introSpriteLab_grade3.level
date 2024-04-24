@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-04-23T19:37:02.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "hello_world_intro",
+    "instructions_important": "false",
+    "display_name": "This is Sprite Lab",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21479,
+    "name_suffix": "_grade3",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:37:02.874+00:00\",\"changed\":[\"cloned from \\\"CourseE_video_introSpriteLab_maker\\\"\"],\"cloned_from\":\"CourseE_video_introSpriteLab_maker\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

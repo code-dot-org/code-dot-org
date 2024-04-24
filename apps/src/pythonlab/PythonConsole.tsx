@@ -7,6 +7,7 @@ import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 interface PermissionResponse {
   permissions: string[];
@@ -23,16 +24,23 @@ const PythonConsole: React.FunctionComponent = () => {
     // For now, restrict running python code to levelbuilders.
     if (parsedData.permissions.includes('levelbuilder')) {
       dispatch(appendSystemMessage('Running program...'));
+      let mainFound = false;
       if (source) {
-        const code = getFileByName(source.files, 'main.py')?.contents;
+        const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
         if (code) {
-          runPythonCode(code);
-        } else {
-          dispatch(appendSystemMessage('No main.py to run.'));
+          mainFound = true;
+          runPythonCode(code, source);
         }
       }
+      if (!mainFound) {
+        dispatch(
+          appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`)
+        );
+      }
     } else {
-      alert('You do not have permission to run python code.');
+      dispatch(
+        appendSystemMessage('You do not have permission to run python code.')
+      );
     }
   };
 
@@ -52,7 +60,6 @@ const PythonConsole: React.FunctionComponent = () => {
         <Button type={'button'} text="Clear output" onClick={clearOutput} />
       </div>
       <div>
-        Output:
         {codeOutput.map((outputLine, index) => {
           if (outputLine.type === 'img') {
             return (

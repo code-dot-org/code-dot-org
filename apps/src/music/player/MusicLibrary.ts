@@ -1,6 +1,6 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
-import {baseAssetUrlRestricted} from '../constants';
+import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
 import {getBaseAssetUrl} from '../appConfig';
 
 export default class MusicLibrary {
@@ -175,12 +175,16 @@ export default class MusicLibrary {
 
   getAvailableSounds() {
     return this.getAllowedSounds().filter(
-      folder => !folder.restricted || this.currentPackId === folder.id
+      folder =>
+        (!folder.restricted || this.currentPackId === folder.id) &&
+        folder.id !== DEFAULT_PACK
     );
   }
 
   getRestrictedPacks(): SoundFolder[] {
-    return this.getAllowedSounds().filter(folder => folder.restricted);
+    return this.getAllowedSounds().filter(
+      folder => folder.restricted && folder.id !== DEFAULT_PACK
+    );
   }
 
   // Return a deep copy of the packs folders only containing folders

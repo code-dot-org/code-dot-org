@@ -315,11 +315,9 @@ module FakeDashboard
     ActiveRecord::Base.configurations = database
     ActiveRecord::Base.establish_connection
     ActiveRecord::Schema.verbose = false
-    ActiveRecord::Base.transaction do
-      # rubocop:disable CustomCops/DashboardRequires
-      require_relative('../../../dashboard/db/schema')
-      # rubocop:enable CustomCops/DashboardRequires
-    end
+    # rubocop:disable CustomCops/DashboardRequires
+    require_relative('../../../dashboard/db/schema')
+    # rubocop:enable CustomCops/DashboardRequires
 
     # Reuse the same connection in Sequel to share access to the temporary tables.
     connection = ActiveRecord::Base.connection.instance_variable_get(:@connection)

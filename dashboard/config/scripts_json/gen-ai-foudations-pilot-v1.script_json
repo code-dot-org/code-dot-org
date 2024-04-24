@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-foudations-pilot-v1",
-    "serialized_at": "2024-04-15 17:24:21 UTC",
+    "serialized_at": "2024-04-17 17:20:36 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2381,7 +2381,7 @@
     },
     {
       "name": "Generative AI Opinion 1",
-      "url": "https://docs.google.com/document/d/17KY7ewQfVZY9qApboAJpxzi9QRpVs6TOSas-MzMRGGU/edit",
+      "url": "https://docs.google.com/document/d/1FIZimuU8V2PcfDur9nVmpCRTqPIHZg47oyxYM1RZGu4/edit",
       "key": "generative_ai_opinion_1",
       "properties": {
         "audience": "Student",

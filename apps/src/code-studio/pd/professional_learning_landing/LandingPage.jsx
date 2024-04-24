@@ -2,7 +2,8 @@
 // studio.code.org/my-professional-learning
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {connect, useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
@@ -12,54 +13,89 @@ import SelfPacedProgressTable from './SelfPacedProgressTable';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
+import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
+import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
+import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import style from './landingPage.module.scss';
 import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
+import {
+  asyncLoadSectionData,
+  asyncLoadCoteacherInvite,
+  hiddenPlSectionIds,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import shapes from '@cdo/apps/templates/studioHomepages/shapes';
 
-const getAvailableTabs = () => {
-  // [TODO]: return a subset of the tabs below based on the user's permission level
-  return [
+const getAvailableTabs = permissions => {
+  let tabs = [
     {
       value: 'myPL',
-      text: i18n.plLandingHeading(),
+      text: i18n.professionalLearning(),
     },
-    // {
-    //   value: 'myFacilitatorCenter',
-    //   text: i18n.plLandingTabFacilitatorCenter(),
-    // },
-    // {
-    //   value: 'myRPCenter',
-    //   text: i18n.plLandingTabRPCenter(),
-    // },
-    // {
-    //   value: 'myWorkshopOrganizerCenter',
-    //   text: i18n.plLandingTabWorkshopOrganizerCenter(),
-    // },
-    // {
-    //   value: 'myInstructorCenter',
-    //   text: i18n.plLandingTabInstructorCenter(),
-    // },
   ];
+
+  if (permissions.includes('facilitator')) {
+    tabs.push({
+      value: 'myFacilitatorCenter',
+      text: i18n.plLandingTabFacilitatorCenter(),
+    });
+  }
+
+  if (
+    permissions.includes('universal_instructor') ||
+    permissions.includes('plc_reviewer')
+  ) {
+    tabs.push({
+      value: 'instructors',
+      text: i18n.plLandingTabInstructors(),
+    });
+  }
+
+  // {
+  //   value: 'myRPCenter',
+  //   text: i18n.plLandingTabRPCenter(),
+  // },
+  // {
+  //   value: 'myWorkshopOrganizerCenter',
+  //   text: i18n.plLandingTabWorkshopOrganizerCenter(),
+  // },
+
+  return tabs;
 };
 
-export default function LandingPage({
+function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   deeperLearningCourseData,
   currentYearApplicationId,
   workshopsAsParticipant,
   plCoursesStarted,
+  userPermissions,
+  joinedStudentSections,
+  joinedPlSections,
+  plSectionIds,
+  hiddenPlSectionIds,
 }) {
-  const availableTabs = getAvailableTabs();
+  const availableTabs = getAvailableTabs(userPermissions);
+  const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
   const headerContainerStyles =
-    availableTabs.length > 1 ? '' : style.headerWithoutTabsContainer;
-  // [TODO]: Uncomment this out once currentTab will affect what content is showed.
-  // const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
+    availableTabs.length > 1
+      ? style.headerWithTabsContainer
+      : style.headerWithoutTabsContainer;
 
   const showGettingStartedBanner =
     !currentYearApplicationId &&
     workshopsAsParticipant?.length === 0 &&
     plCoursesStarted?.length === 0;
+
+  // Load PL section info into redux
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(asyncLoadSectionData());
+    dispatch(asyncLoadCoteacherInvite());
+  }, [dispatch]);
 
   const RenderGettingStartedBanner = () => (
     <TwoColumnActionBlock
@@ -75,7 +111,6 @@ export default function LandingPage({
           text: i18n.plLandingGettingStartedButton(),
         },
       ]}
-      marginBottom={'0'}
     />
   );
 
@@ -142,44 +177,74 @@ export default function LandingPage({
                 name="myPLTabs"
                 tabs={availableTabs}
                 defaultSelectedTabValue={availableTabs[0].value}
-                onChange={tab => {
-                  // [TODO]: Uncomment this out once
-                  // currentTab affects what content
-                  // is shown.
-                  //setCurrentTab(tab);
-                  console.log(tab);
-                }}
+                onChange={tab => setCurrentTab(tab)}
               />
             </nav>
           )}
         </HeaderBannerNoImage>
       </div>
       <main className={style.wrapper}>
-        {showGettingStartedBanner && RenderGettingStartedBanner()}
-        {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
-        <EnrolledWorkshops />
-        {plCoursesStarted?.length >= 1 && (
-          <section id={'self-paced-pl'}>
-            <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
-            {RenderSelfPacedProgressTable()}
-          </section>
-        )}
-        {deeperLearningCourseData?.length >= 1 && (
-          <section>
-            <Heading2>Online Professional Learning Courses</Heading2>
-            <ProfessionalLearningCourseProgress
-              deeperLearningCourseData={deeperLearningCourseData}
+        {currentTab === 'myPL' && (
+          <>
+            {showGettingStartedBanner && RenderGettingStartedBanner()}
+            {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+            {plCoursesStarted?.length >= 1 && (
+              <section id={'self-paced-pl'}>
+                <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
+                {RenderSelfPacedProgressTable()}
+              </section>
+            )}
+            <JoinSectionArea
+              initialJoinedStudentSections={joinedStudentSections}
+              initialJoinedPlSections={joinedPlSections}
+              isTeacher={true}
+              isPlSections={true}
             />
+            <section>
+              <EnrolledWorkshops />
+            </section>
+            {deeperLearningCourseData?.length >= 1 && (
+              <section>
+                <Heading2>Online Professional Learning Courses</Heading2>
+                <ProfessionalLearningCourseProgress
+                  deeperLearningCourseData={deeperLearningCourseData}
+                />
+              </section>
+            )}
+            <section>
+              <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
+              {RenderStaticRecommendedPL()}
+            </section>
+          </>
+        )}
+        {['myFacilitatorCenter', 'instructors'].includes(currentTab) && (
+          <section>
+            <Heading2>{i18n.plSectionsInstructorTitle()}</Heading2>
+            <SetUpSections
+              headingText={i18n.newSectionCreate()}
+              descriptionText={i18n.newSectionMyPlAdd()}
+              solidBorder={true}
+            />
+            <CoteacherInviteNotification isForPl={true} />
+            <OwnedSections
+              isPlSections={true}
+              sectionIds={plSectionIds}
+              hiddenSectionIds={hiddenPlSectionIds}
+            />
+            <AddSectionDialog />
           </section>
         )}
-        <section>
-          <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
-          {RenderStaticRecommendedPL()}
-        </section>
       </main>
     </>
   );
 }
+
+export const UnconnectedLandingPage = LandingPage;
+
+export default connect(state => ({
+  plSectionIds: state.teacherSections.plSectionIds,
+  hiddenPlSectionIds: hiddenPlSectionIds(state),
+}))(LandingPage);
 
 LandingPage.propTypes = {
   lastWorkshopSurveyUrl: PropTypes.string,
@@ -187,5 +252,11 @@ LandingPage.propTypes = {
   deeperLearningCourseData: PropTypes.array,
   currentYearApplicationId: PropTypes.number,
   workshopsAsParticipant: PropTypes.array,
+  plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
+  userPermissions: PropTypes.arrayOf(PropTypes.string),
+  joinedStudentSections: shapes.sections,
+  joinedPlSections: shapes.sections,
+  plSectionIds: PropTypes.arrayOf(PropTypes.number),
+  hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),
 };
