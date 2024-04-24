@@ -4,25 +4,38 @@ import './styles/config.css';
 import {ProjectType, ConfigType} from '@cdoide/types';
 
 type ConfigProps = {
-  config: ProjectType | ConfigType;
-  setConfig: (name: string, config: ProjectType | ConfigType) => void;
+  config: ProjectType | ConfigType | string;
+  setConfig: (name: string, config: ProjectType | ConfigType | string) => void;
   configName: string;
   cancelConfig: () => void;
+  Instructions?: () => JSX.Element;
 };
+
+const parseJSON = (v: string) => JSON.parse(v);
+const stringifyJSON = (s: string | ProjectType | ConfigType) =>
+  JSON.stringify(s, undefined, 2);
+
+const parseString = (v: string) => v;
+const stringifyString = (s: string | ProjectType | ConfigType) => s as string;
 
 export const Config = ({
   config,
   setConfig,
   configName,
   cancelConfig,
+  Instructions,
 }: ConfigProps) => {
-  const [localConfig, setLocalConfig] = useState(
-    JSON.stringify(config, undefined, 2)
-  );
+  const [stringify, parser] =
+    typeof config === 'object'
+      ? [stringifyJSON, parseJSON]
+      : [stringifyString, parseString];
+
+  const [localConfig, setLocalConfig] = useState(stringify(config));
   const [isValid, setIsValid] = useState(true);
   return (
     <div className="config-modal">
       <div>Configuring {configName}</div>
+      {Instructions && <Instructions />}
       <textarea
         rows={20}
         cols={50}
@@ -31,7 +44,7 @@ export const Config = ({
           const val = e.target.value;
           setLocalConfig(val);
           try {
-            JSON.parse(val);
+            parser(val);
             setIsValid(true);
           } catch (e) {
             setIsValid(false);
@@ -45,7 +58,7 @@ export const Config = ({
         </button>
         <button
           type="button"
-          onClick={() => setConfig(configName, JSON.parse(localConfig))}
+          onClick={() => setConfig(configName, parser(localConfig))}
           disabled={!isValid}
         >
           Save changes

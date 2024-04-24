@@ -33,6 +33,9 @@ export type ConfigType = {
   instructions: string | undefined;
   defaultTheme?: EditorTheme;
   leftNav: LeftNavElement[];
+  gridLayout: string;
+  gridLayoutRows?: string;
+  gridLayoutColumns?: string;
   EditorComponent?: EditorComponent;
   editableFileTypes?: string[];
   previewFileTypes?: string[];

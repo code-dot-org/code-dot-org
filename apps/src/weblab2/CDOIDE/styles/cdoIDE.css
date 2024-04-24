@@ -1,6 +1,5 @@
 .cdoide-container {
   display: grid;
-  grid-template-rows: 100px 32px auto;
   width: 100%;
   height: 100%;
 }

@@ -26,13 +26,16 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
   css: css(),
 };
 
+const DefaultEditorComponent = () =>
+  CDOEditor(weblabLangMapping, ['html', 'css']);
+
 const defaultConfig: ConfigType = {
   //showSideBar: true,
   // showLeftNav: false,
   // showEditor: false,
   // showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: () => CDOEditor(weblabLangMapping, ['html', 'css']),
+  EditorComponent: DefaultEditorComponent,
   // editableFileTypes: ["html"],
   // previewFileTypes: ["html"],
   leftNav: [
@@ -62,6 +65,13 @@ const defaultConfig: ConfigType = {
     },
   ],
   instructions,
+  gridLayoutRows: '100px 32px auto',
+  gridLayout: `
+    "instructions instructions preview-container"
+    "side-bar file-tabs preview-container"
+    "file-browser editor preview-container"
+  `,
+
   //editableFileTypes: ["html", "css"],
   //previewFileTypes: ["html"],
   /* PreviewComponents: {
@@ -150,7 +160,9 @@ const Weblab2View = () => {
   const [currentProject, setCurrentProject] =
     useState<ProjectType>(defaultProject);
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [showConfig, setShowConfig] = useState<'project' | 'config' | ''>('');
+  const [showConfig, setShowConfig] = useState<
+    'project' | 'config' | 'layout' | ''
+  >('');
   const initialSources = useAppSelector(state => state.lab.initialSources);
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
@@ -174,6 +186,26 @@ const Weblab2View = () => {
     );
   }, [channelId, initialSources]);
 
+  const configKey = {
+    project: currentProject,
+    config: config,
+    layout: config.gridLayout,
+  };
+
+  const LayoutInstructions = () => (
+    <div>
+      You may layout a CSS grid with the following keys:
+      <ul>
+        <li>editor</li>
+        <li>instructions</li>
+        <li>preview-container</li>
+        <li>file-browser</li>
+        <li>file-tabs</li>
+        <li>side-bar</li>
+      </ul>
+    </div>
+  );
+
   return (
     <div className="app-wrapper">
       <div className="app-wrapper-nav">
@@ -182,6 +214,9 @@ const Weblab2View = () => {
         </button>
         <button type="button" onClick={() => setShowConfig('config')}>
           Edit config
+        </button>
+        <button type="button" onClick={() => setShowConfig('layout')}>
+          Edit layout
         </button>
       </div>
       <div className="app-ide">
@@ -194,20 +229,28 @@ const Weblab2View = () => {
       </div>
       {showConfig && (
         <Config
-          config={showConfig === 'project' ? currentProject : config}
+          config={configKey[showConfig]}
           setConfig={(
             configName: string,
-            newConfig: ProjectType | ConfigType
+            newConfig: ProjectType | ConfigType | string
           ) => {
             if (configName === 'project') {
               setProject(newConfig as ProjectType);
             } else if (configName === 'config') {
+              (newConfig as ConfigType).EditorComponent =
+                DefaultEditorComponent;
               setConfig(newConfig as ConfigType);
+            } else if (configName === 'layout') {
+              const updatedConfig = {...config, gridLayout: newConfig};
+              setConfig(updatedConfig as ConfigType);
             }
             setShowConfig('');
           }}
           cancelConfig={() => setShowConfig('')}
           configName={showConfig}
+          Instructions={
+            showConfig === 'layout' ? LayoutInstructions : () => <div />
+          }
         />
       )}
     </div>

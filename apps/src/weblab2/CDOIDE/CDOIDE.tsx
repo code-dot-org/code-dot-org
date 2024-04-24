@@ -50,12 +50,6 @@ const paneWidths: (PaneKey & {width: string})[] = [
 
 const paneHeights: (PaneKey & {height: string})[] = [];
 
-const layout = `
-  "instructions instructions preview-container"
-  "side-bar file-tabs preview-container"
-  "file-browser editor preview-container"
-`;
-
 export const CDOIDE = React.memo(
   ({project, config, setProject, setConfig}: CDOIDEProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
@@ -80,6 +74,15 @@ export const CDOIDE = React.memo(
     });
 
     const EditorComponent = config.EditorComponent || DisabledEditor;
+    console.log('EC IS : ');
+    const ComponentMap = {
+      'file-browser': FileBrowser,
+      'side-bar': SideBar,
+      editor: EditorComponent,
+      'preview-container': PreviewContainer,
+      instructions: Instructions,
+      'file-tabs': FileTabs,
+    };
 
     return (
       <CDOIDEContextProvider
@@ -91,16 +94,22 @@ export const CDOIDE = React.memo(
           ...projectUtilities,
         }}
       >
-        <div className="cdoide-container" style={{gridTemplateAreas: layout}}>
-          <FileBrowser />
-          <SideBar />
-          <EditorComponent />
-          <PreviewContainer />
-          <Instructions />
-          <FileTabs />
-          {/*<Search />
+        <div
+          className="cdoide-container"
+          style={{
+            gridTemplateAreas: config.gridLayout,
+            gridTemplateRows: config.gridLayoutRows,
+            gridTemplateColumns: config.gridLayoutColumns,
+          }}
+        >
+          {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
+            .filter(key => config.gridLayout.match(key))
+            .map(key => {
+              const Component = ComponentMap[key];
+              return <Component key={key} />;
+            })}
 
-          <FileTabs />*/}
+          {/*<Search />*/}
         </div>
       </CDOIDEContextProvider>
     );
