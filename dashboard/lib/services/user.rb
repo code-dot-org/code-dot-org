@@ -45,7 +45,6 @@ class Services::User
     params_school_info = params['school_info_attributes']
     if params_school_info
       # Disable validation because the school info fields are optional on the registration page
-      params_school_info[:validation_type] = SchoolInfo::VALIDATION_NONE
       user.assign_attributes(school_info_attributes: params_school_info)
     end
   end
