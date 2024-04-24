@@ -111,6 +111,14 @@ export function adjustCalloutsOnViewportChange(
   }
 }
 
+export function resizeWorkspaceOnLoad(event: GoogleBlockly.Events.Abstract) {
+  if (event && event.type === Blockly.Events.FINISHED_LOADING) {
+    setTimeout(() => {
+      Blockly.common.svgResize(Blockly.getMainWorkspace());
+    }, 1000);
+  }
+}
+
 // When the browser is resized, we need to re-adjust the width of any open flyout.
 export function reflowToolbox() {
   const mainWorkspace = Blockly.getMainWorkspace() as WorkspaceSvg;

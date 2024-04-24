@@ -76,6 +76,7 @@ import {
   adjustCalloutsOnViewportChange,
   disableOrphans,
   reflowToolbox,
+  resizeWorkspaceOnLoad,
   updateBlockLimits,
 } from './eventHandlers';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
@@ -729,6 +730,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       .getFlyout()
       ?.getWorkspace()
       ?.addChangeListener(adjustCalloutsOnViewportChange);
+
+    workspace.addChangeListener(resizeWorkspaceOnLoad);
 
     initializeScrollbarPair(workspace);
 
