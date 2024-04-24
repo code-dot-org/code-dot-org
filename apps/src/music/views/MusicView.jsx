@@ -75,6 +75,7 @@ class UnconnectedMusicView extends React.Component {
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
+    isRtl: PropTypes.bool,
     libraryName: PropTypes.string,
     setLibraryName: PropTypes.func,
     packId: PropTypes.string,
@@ -274,7 +275,8 @@ class UnconnectedMusicView extends React.Component {
       document.getElementById(BLOCKLY_DIV_ID),
       this.onBlockSpaceChange,
       this.props.isReadOnlyWorkspace,
-      levelData?.toolbox
+      levelData?.toolbox,
+      this.props.isRtl
     );
 
     this.library.setAllowedSounds(levelData?.sounds);
@@ -685,6 +687,8 @@ const MusicView = connect(
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
     signInState: state.currentUser.signInState,
+
+    isRtl: state.isRtl,
 
     libraryName: state.music.libraryName,
     packId: state.music.packId,

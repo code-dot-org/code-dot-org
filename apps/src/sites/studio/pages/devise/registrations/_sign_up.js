@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 $(document).ready(() => {
-  analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT);
+  analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT, {}, PLATFORMS.BOTH);
 
   document
     .getElementById('signup_form_submit')
@@ -26,7 +26,11 @@ $(document).ready(() => {
 });
 
 function logUserLoginType(loginType) {
-  analyticsReporter.sendEvent(EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT, {
-    'user login type': loginType,
-  });
+  analyticsReporter.sendEvent(
+    EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT,
+    {
+      'user login type': loginType,
+    },
+    PLATFORMS.BOTH
+  );
 }
