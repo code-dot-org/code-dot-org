@@ -88,27 +88,18 @@ module Cdo
     end
 
     def user_id
-      @user_id ||= user_id_from_session_cookie
+      @user_id ||= user_id_from_session_store
     end
 
-    def user_id_from_session_cookie
+    def user_id_from_session_store
       session_cookie_key = "_learn_session"
       session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
 
       message = CGI.unescape(cookies[session_cookie_key].to_s)
+      session_id = Rack::Session::SessionId.new(message)
 
-      key_generator = ActiveSupport::KeyGenerator.new(
-        CDO.dashboard_secret_key_base,
-        iterations: 1000
-      )
-
-      encryptor = ActiveSupport::MessageEncryptor.new(
-        key_generator.generate_key('encrypted cookie')[0, ActiveSupport::MessageEncryptor.key_len],
-        key_generator.generate_key('signed encrypted cookie')
-      )
-
-      return nil unless cookie = encryptor.decrypt_and_verify(message)
-      return nil unless warden = cookie['warden.user.user.key']
+      return nil unless session = dashboard_session_store.send(:get_session_with_fallback, session_id)
+      return nil unless warden = session['warden.user.user.key']
       warden.first.first
     rescue
       return nil
@@ -121,6 +112,13 @@ module Cdo
 
     def gdpr?
       gdpr_country_code?(country)
+    end
+
+    private def dashboard_session_store
+      @dashboard_session_store ||= Dashboard::Application.config.session_store.new(
+        Dashboard::Application,
+        Dashboard::Application.config.session_options
+      )
     end
   end
 end
