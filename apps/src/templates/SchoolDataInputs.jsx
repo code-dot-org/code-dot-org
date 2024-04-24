@@ -43,8 +43,7 @@ export default function SchoolDataInputs({
   }
 
   useEffect(() => {
-    const isValidZip = new RegExp(/(^\d{5}$)/).test(zip);
-    if (isValidZip) {
+    if (zip.length === 5) {
       setZipSearchReady(true);
       analyticsReporter.sendEvent(
         EVENTS.ZIP_CODE_ENTERED,
