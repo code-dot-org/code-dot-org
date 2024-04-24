@@ -470,7 +470,6 @@ class Craft < Blockly
 
   }.freeze
 
-  # Use a DCDO flag here so we can revert back to CDO Blockly without a deploy
   def uses_google_blockly?
     true
   end
