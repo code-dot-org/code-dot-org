@@ -740,10 +740,6 @@ class ScriptLevel < ApplicationRecord
     level_example_links
   end
 
-  def level_deprecated?
-    level&.deprecated?
-  end
-
   private def kind
     if level.unplugged?
       LEVEL_KIND.unplugged
