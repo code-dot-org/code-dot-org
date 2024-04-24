@@ -91,6 +91,8 @@ module Cdo
       @user_id ||= user_id_from_session_store
     end
 
+    # Fetch the user ID directly from the underlying Rails session store. This
+    # is a bit of a hack, but is necessary to preserve backwards compatibility.
     def user_id_from_session_store
       session_cookie_key = "_learn_session"
       session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
@@ -98,6 +100,10 @@ module Cdo
       message = CGI.unescape(cookies[session_cookie_key].to_s)
       session_id = Rack::Session::SessionId.new(message)
 
+      # Note that we are unfortunately calling a private method on the session
+      # store here; this is gross, but the only way to fetch this data without
+      # doing so would be to construct a fake Request object we could pass to
+      # the `find_session` method, which is even more gross.
       return nil unless session = dashboard_session_store.send(:get_session_with_fallback, session_id)
       return nil unless warden = session['warden.user.user.key']
       warden.first.first
@@ -114,6 +120,8 @@ module Cdo
       gdpr_country_code?(country)
     end
 
+    # Initialize a private instance of the SessionStore used in Dashboard, so
+    # we can access data stored there (ie, the id of the current user).
     private def dashboard_session_store
       @dashboard_session_store ||= Dashboard::Application.config.session_store.new(
         Dashboard::Application,
