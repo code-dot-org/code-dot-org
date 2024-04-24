@@ -84,7 +84,7 @@ function SectionProgressSelector({
 
   return (
     <div className={styles.pageContent}>
-      <ProgressBanners toggleUsed={toggleUsed} showV2Table={displayV2} />
+      {displayV2 && <ProgressBanners toggleUsed={toggleUsed} />}
       {toggleV1OrV2Link()}
       {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
     </div>

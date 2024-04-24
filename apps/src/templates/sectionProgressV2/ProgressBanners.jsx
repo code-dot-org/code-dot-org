@@ -6,7 +6,7 @@ import {BANNER_STATUS} from '@cdo/apps/lib/ui/feedback/FeedbackBanner';
 
 import ProgressFeedbackBanner from './ProgressFeedbackBanner';
 
-export default function ProgressBanners({toggleUsed, showV2Table}) {
+export default function ProgressBanners({toggleUsed}) {
   const [showComingSoon, setShowComingSoon] = React.useState(false);
 
   const bannerStatusCallback = bannerStatus => {
@@ -21,7 +21,7 @@ export default function ProgressBanners({toggleUsed, showV2Table}) {
   return (
     <>
       <ProgressFeedbackBanner
-        canShow={!toggleUsed && showV2Table}
+        canShow={!toggleUsed}
         bannerStatusCallback={bannerStatusCallback}
       />
       <Fade in={showComingSoon} unmountOnExit={true}>
