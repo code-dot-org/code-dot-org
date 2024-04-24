@@ -137,15 +137,15 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 : onPlaySong(project);
             }}
           >
-            {project.labConfig?.music?.packId && (
-              <div className={moduleStyles.pack}>
+            <div className={moduleStyles.pack}>
+              {project.labConfig?.music?.packId && (
                 <img
                   src={getPackImageUrl(project.labConfig?.music?.packId)}
                   className={moduleStyles.packImage}
                   alt=""
                 />
-              </div>
-            )}
+              )}
+            </div>
 
             <div className={moduleStyles.control}>
               <FontAwesomeV6Icon
