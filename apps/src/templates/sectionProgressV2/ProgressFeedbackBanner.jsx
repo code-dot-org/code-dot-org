@@ -48,10 +48,6 @@ const ProgressFeedbackBanner = ({
       return;
     }
 
-    console.log(progressV2Feedback);
-    console.log(answered);
-    console.log(bannerStatus);
-
     // If feedback has been loaded and empty and the user hasn't answered, it is unanswered.
     // If we have feedback and the user did not just submit feedback, close the banner.
     if (progressV2Feedback && !answered) {
