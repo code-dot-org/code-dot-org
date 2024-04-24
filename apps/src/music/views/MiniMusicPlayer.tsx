@@ -13,7 +13,6 @@ import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import Lab2Registry from '../../lab2/Lab2Registry';
 import moduleStyles from './MiniMusicPlayer.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {getBaseAssetUrl} from '../appConfig';
 
 interface MiniPlayerViewProps {
   projects: Channel[];
@@ -98,27 +97,6 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     setCurrentProjectId(undefined);
   }, []);
 
-  const getPackImageUrl = (packId: string) => {
-    const library = MusicLibrary.getInstance();
-    if (!library) {
-      return undefined;
-    }
-
-    const folder = library.getFolderForFolderId(packId);
-    if (!folder) {
-      return undefined;
-    }
-
-    const libraryGroupPath = library.getPath();
-
-    return (
-      folder.imageSrc &&
-      `${getBaseAssetUrl()}${libraryGroupPath}/${folder.path}/${
-        folder.imageSrc
-      }`
-    );
-  };
-
   // Some loading UI while we're fetching the library
   if (isLoading) {
     return <div>Loading...</div>;
@@ -140,7 +118,9 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
             <div className={moduleStyles.pack}>
               {project.labConfig?.music?.packId && (
                 <img
-                  src={getPackImageUrl(project.labConfig?.music?.packId)}
+                  src={MusicLibrary.getInstance()?.getPackImageUrl(
+                    project.labConfig?.music?.packId
+                  )}
                   className={moduleStyles.packImage}
                   alt=""
                 />
