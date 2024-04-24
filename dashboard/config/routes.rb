@@ -624,6 +624,9 @@ Dashboard::Application.routes.draw do
 
     get '/notes/:key', to: 'notes#index'
 
+    # Troubleshooter
+    get 'troubleshooter', to: 'troubleshooter#show'
+
     resources :zendesk_session, only: [:index]
 
     post '/report_abuse', to: 'report_abuse#report_abuse'

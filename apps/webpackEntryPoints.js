@@ -107,6 +107,7 @@ const CODE_STUDIO_ENTRIES = {
   'teacher_dashboard/show': './src/sites/studio/pages/teacher_dashboard/show.js',
   'teacher_dashboard/parent_letter': './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
   'teacher_feedbacks/index': './src/sites/studio/pages/teacher_feedbacks/index.js',
+  'troubleshooter/troubleshoot': './src/sites/studio/pages/troubleshooter/troubleshoot.js',
   'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
   'weblab_host/network_check': './src/sites/studio/pages/weblab_host/network_check.js',
 };
