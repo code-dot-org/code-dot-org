@@ -22,29 +22,30 @@ const PythonConsole: React.FunctionComponent = () => {
   const handleRun = (runTests: boolean) => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
     // For now, restrict running python code to levelbuilders.
-    if (parsedData.permissions.includes('levelbuilder')) {
-      if (source) {
-        if (runTests) {
-          dispatch(appendSystemMessage('Running tests...'));
-          runAllTests(source);
-        } else {
-          const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
-          if (code) {
-            dispatch(appendSystemMessage('Running program...'));
-            runPythonCode(code, source);
-          } else {
-            dispatch(
-              appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`)
-            );
-          }
-        }
-      } else {
-        dispatch(appendSystemMessage('You have no code to run.'));
-      }
-    } else {
+    if (!parsedData.permissions.includes('levelbuilder')) {
       dispatch(
         appendSystemMessage('You do not have permission to run python code.')
       );
+      return;
+    }
+    if (!source) {
+      dispatch(appendSystemMessage('You have no code to run.'));
+      return;
+    }
+    if (runTests) {
+      dispatch(appendSystemMessage('Running tests...'));
+      runAllTests(source);
+    } else {
+      // Run main.py
+      const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
+      if (!code) {
+        dispatch(
+          appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`)
+        );
+        return;
+      }
+      dispatch(appendSystemMessage('Running program...'));
+      runPythonCode(code, source);
     }
   };
 

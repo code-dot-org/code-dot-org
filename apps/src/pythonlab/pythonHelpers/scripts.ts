@@ -1,17 +1,16 @@
-// Find all tests in the project and run them. The test files need to start with 'test'
-// and end with '.py'. The tests be in the top-level folder or in a folder with an
+// Find all tests in the project and run them. The test files need to follow the filePattern regex.
+// The tests need to be in the top-level folder or in a folder with an
 // __init__.py file (the file can be empty). An init file signifies that the folder is a module.
-// In order to restrict to find tests in a specific folder or file we can parameterize this
-// and update the start_dir and/or pattern.
-export const FIND_AND_RUN_ALL_TESTS = `
+export function getTestRunnerScript(filePattern = 'test*.py') {
+  return `
 import unittest
 
-def discover_and_run(start_dir = '.', pattern = 'test*.py'):
+def discover_and_run(start_dir, pattern):
     loader = unittest.TestLoader()
     test_suite = loader.discover(start_dir, pattern)
     runner = unittest.TextTestRunner(verbosity=2)
     result = runner.run(test_suite)
-    return result
 
-discover_and_run()
+discover_and_run('.', '${filePattern}')
 `;
+}
