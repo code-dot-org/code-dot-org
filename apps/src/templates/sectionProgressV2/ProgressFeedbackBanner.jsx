@@ -21,7 +21,7 @@ const ProgressFeedbackBanner = ({
   fetchProgressV2Feedback,
   createProgressV2Feedback,
   errorWhenCreatingOrLoading,
-  visibilityCallback,
+  bannerStatusCallback,
 }) => {
   const [bannerStatus, setBannerStatus] = React.useState(BANNER_STATUS.UNSET);
 
@@ -67,6 +67,10 @@ const ProgressFeedbackBanner = ({
     }
   }, [errorWhenCreatingOrLoading, fetchProgressV2Feedback]);
 
+  React.useEffect(() => {
+    bannerStatusCallback?.(bannerStatus);
+  }, [bannerStatus, bannerStatusCallback]);
+
   const answer = satisfied => {
     if (bannerStatus === BANNER_STATUS.UNANSWERED) {
       createProgressV2Feedback(satisfied);
@@ -92,7 +96,6 @@ const ProgressFeedbackBanner = ({
       shareMore={i18n.progressV2_feedback_shareMore()}
       shareMoreLink={FOORM_LINK}
       shareMoreLinkText={i18n.progressV2_feedback_shareMoreLinkText()}
-      visibilityCallback={visibilityCallback}
     />
   );
 };
@@ -105,7 +108,7 @@ ProgressFeedbackBanner.propTypes = {
   fetchProgressV2Feedback: PropTypes.func.isRequired,
   createProgressV2Feedback: PropTypes.func.isRequired,
   errorWhenCreatingOrLoading: PropTypes.string,
-  visibilityCallback: PropTypes.func,
+  bannerStatusCallback: PropTypes.func,
 };
 
 export default connect(
