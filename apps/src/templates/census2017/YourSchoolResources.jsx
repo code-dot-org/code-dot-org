@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import ResourceCard from '../studioHomepages/ResourceCard';
-import i18n from '@cdo/locale';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from '@cdo/locale';
+
+import ResourceCard from '../studioHomepages/ResourceCard';
 
 class YourSchoolResources extends Component {
   render() {
