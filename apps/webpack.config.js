@@ -214,6 +214,7 @@ const WEBPACK_BASE_CONFIG = {
       '@cdo/storybook': p('.storybook'),
       serialport: false,
       '@cdoide': p('src/weblab2/CDOIDE'),
+      '@cdo/generated-scripts': p('generated-scripts'),
     },
   },
   module: {

@@ -4,7 +4,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {LmsLinks} from '@cdo/apps/util/sharedConstants';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {
@@ -74,7 +74,11 @@ export default function LtiSectionSyncDialog({
       <div>
         <h2 style={styles.dialogHeader}>{i18n.errorOccurredTitle()}</h2>
         {errorMessages.map((errorMessage: string, index: React.Key) => (
-          <SafeMarkdown key={index} markdown={errorMessage} />
+          <SafeMarkdown
+            openExternalLinksInNewTab={true}
+            key={index}
+            markdown={errorMessage}
+          />
         ))}
       </div>
     );
@@ -181,7 +185,10 @@ export default function LtiSectionSyncDialog({
             {dialogTitle}
           </h2>
           <div onClick={handleDocsClick}>
-            <SafeMarkdown markdown={dialogDescription} />
+            <SafeMarkdown
+              openExternalLinksInNewTab={true}
+              markdown={dialogDescription}
+            />
           </div>
           <div
             style={styles.summaryContainer}

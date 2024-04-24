@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressLessonContent from './ProgressLessonContent';
 import {fakeLevels, fakeLevel} from './progressTestHelpers';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import {reduxStore} from '@cdo/storybook/decorators';
 import {Provider} from 'react-redux';
 
