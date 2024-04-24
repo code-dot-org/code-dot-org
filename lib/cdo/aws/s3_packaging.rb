@@ -1,7 +1,6 @@
 require 'active_support/core_ext/string' # Get String#underscore
 require 'aws-sdk-s3'
 require 'logger'
-require 'cdo/metrics_helper'
 
 #
 # In the past, we've committed build outputs into our git repo. This has various
@@ -110,7 +109,7 @@ class S3Packaging
 
   def log_bundle_size
     stats = JSON.parse(File.read(@source_location + '/build/package/js/stats.json'))
-    Metrics.write_batch_metric(
+    @logger.info(
       stats['assets'].filter_map do |asset|
         next nil unless asset['name'].end_with? '.js'
         {
