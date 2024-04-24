@@ -14,9 +14,7 @@ export default {
 // TEMPLATE
 //
 const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
-  const [selectedValues, setValues] = useState(
-    (args.checkedOptions = [] as string[])
-  );
+  const [selectedValues, setValues] = useState(args.checkedOptions as string[]);
   const onChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       if (e.target.checked) {
@@ -160,22 +158,22 @@ DisabledCheckboxDropdown.args = {
   size: 'm',
 };
 
-// export const ReadOnlyCheckboxDropdown = SingleTemplate.bind({});
-// ReadOnlyCheckboxDropdown.args = {
-//   name: 'readOnly-dropdown',
-//   allOptions: [
-//     {value: 'option-1', label: 'Option 1'},
-//     {value: 'option-2', label: 'Option 2'},
-//   ],
-//   checkedOptions: ['option-1'],
-//   labelText: 'Disabled Dropdown',
-//   onChange: args => null,
-//   onSelectAll: args => null,
-//   onClearAll: args => null,
-//   disabled: true,
-//   color: dropdownColors.black,
-//   size: 'm',
-// };
+export const ReadOnlyCheckboxDropdown = SingleTemplate.bind({});
+ReadOnlyCheckboxDropdown.args = {
+  name: 'readOnly-dropdown',
+  allOptions: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  checkedOptions: ['option-1'],
+  labelText: 'ReadOnly Dropdown',
+  onChange: args => null,
+  onSelectAll: args => null,
+  onClearAll: args => null,
+  readOnly: true,
+  color: dropdownColors.black,
+  size: 'm',
+};
 
 export const WithDisabledOptionCheckboxDropdown = SingleTemplate.bind({});
 WithDisabledOptionCheckboxDropdown.args = {
