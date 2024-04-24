@@ -13,6 +13,7 @@ import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import Lab2Registry from '../../lab2/Lab2Registry';
 import moduleStyles from './MiniMusicPlayer.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {getBaseAssetUrl} from '../appConfig';
 
 interface MiniPlayerViewProps {
   projects: Channel[];
@@ -97,6 +98,27 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     setCurrentProjectId(undefined);
   }, []);
 
+  const getPackImageUrl = (packId: string) => {
+    const library = MusicLibrary.getInstance();
+    if (!library) {
+      return undefined;
+    }
+
+    const folder = library.getFolderForFolderId(packId);
+    if (!folder) {
+      return undefined;
+    }
+
+    const libraryGroupPath = library.getPath();
+
+    return (
+      folder.imageSrc &&
+      `${getBaseAssetUrl()}${libraryGroupPath}/${folder.path}/${
+        folder.imageSrc
+      }`
+    );
+  };
+
   // Some loading UI while we're fetching the library
   if (isLoading) {
     return <div>Loading...</div>;
@@ -115,6 +137,16 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 : onPlaySong(project);
             }}
           >
+            {project.labConfig?.music?.packId && (
+              <div className={moduleStyles.pack}>
+                <img
+                  src={getPackImageUrl(project.labConfig?.music?.packId)}
+                  className={moduleStyles.packImage}
+                  alt=""
+                />
+              </div>
+            )}
+
             <div className={moduleStyles.control}>
               <FontAwesomeV6Icon
                 iconName={project.id === currentProjectId ? 'stop' : 'play'}
@@ -122,21 +154,24 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 className={moduleStyles.icon}
               />
             </div>
+
             <div className={moduleStyles.name}>{project.name}</div>
-            <a
-              href={`/projects/music/${project.id}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={e => e.stopPropagation()}
-            >
-              <div className={moduleStyles.other}>
+
+            <div className={moduleStyles.other}>
+              <a
+                href={`/projects/music/${project.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={e => e.stopPropagation()}
+                className={moduleStyles.otherLink}
+              >
                 <FontAwesomeV6Icon
                   iconName="arrow-up-right-from-square"
                   iconStyle="solid"
                   className={moduleStyles.icon}
                 />
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         );
       })}
