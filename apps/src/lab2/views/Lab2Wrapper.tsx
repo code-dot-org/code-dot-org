@@ -6,7 +6,7 @@
 // boundary; a fade-in between levels; a loading spinner when a level takes a
 // while to load; and a sad bee when things go wrong.
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 import moduleStyles from './Lab2Wrapper.module.scss';
@@ -16,6 +16,9 @@ import {LabState, isLabLoading, hasPageError} from '../lab2Redux';
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
 import Lab2Registry from '../Lab2Registry';
 import Loading from './Loading';
+import {getServerLevelId} from '../projects/utils';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;
@@ -28,6 +31,16 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
+  const dispatch = useAppDispatch();
+
+  // Store the level ID provided by App Options in redux. This is needed
+  // on pages without a header, such as the share view.
+  const serverLevelId = getServerLevelId();
+  useEffect(() => {
+    if (serverLevelId) {
+      dispatch(setCurrentLevelId(serverLevelId.toString()));
+    }
+  }, [serverLevelId, dispatch]);
 
   return (
     <ErrorBoundary

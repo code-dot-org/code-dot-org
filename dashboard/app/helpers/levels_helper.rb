@@ -319,7 +319,7 @@ module LevelsHelper
 
     @app_options =
       if @level.uses_lab2?
-        {app: 'lab2', channel: view_options[:channel], projectType: @level.project_type}
+        {channel: view_options[:channel], levelId: @level.id}
       elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)

@@ -589,10 +589,11 @@ class ProjectsController < ApplicationController
   # yet support separate share pages.
   private def redirect_edit_view_for_lab2
     return nil unless @level.uses_lab2?
+    sharing = params[:iframe_embed] == true || params[:share] == true
+    return nil if sharing
 
     project = Projects.new(get_storage_id).get(params[:channel_id])
     is_owner = project[:isOwner]
-    sharing = params[:iframe_embed] == true || params[:share] == true
 
     return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && (sharing || request.path.ends_with?('/view'))
     return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && (sharing || request.path.ends_with?('/edit'))
