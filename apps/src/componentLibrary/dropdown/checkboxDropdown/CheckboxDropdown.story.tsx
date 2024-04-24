@@ -7,7 +7,7 @@ import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 
 export default {
   title: 'DesignSystem/Dropdown/Checkbox Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
-  component: CheckboxDropdown,
+  component: CheckboxDropdown.type,
 } as Meta;
 
 //
