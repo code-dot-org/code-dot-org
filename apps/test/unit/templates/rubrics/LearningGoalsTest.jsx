@@ -14,7 +14,7 @@ import LearningGoals, {
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';

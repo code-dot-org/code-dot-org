@@ -2,8 +2,8 @@ import {getStore} from '@cdo/apps/redux';
 import {
   applyPatches,
   deleteCachedUserModules,
-} from './patches/pythonScriptUtils';
-import {MATPLOTLIB_IMG_TAG} from './patches/patches';
+} from './pythonHelpers/pythonScriptUtils';
+import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 import {
   appendOutputImage,
   appendSystemMessage,
@@ -22,7 +22,7 @@ const callbacks = {};
 
 pyodideWorker.onmessage = event => {
   const {type, id, message} = event.data;
-  if (type === 'sysout') {
+  if (type === 'sysout' || type === 'syserr') {
     if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
       // This is a matplotlib image, so we need to append it to the output
       const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);

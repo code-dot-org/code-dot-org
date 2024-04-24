@@ -2,7 +2,7 @@ import {
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
   writeSource,
-} from './patches/pythonScriptUtils';
+} from './pythonHelpers/pythonScriptUtils';
 import {DEFAULT_FOLDER_ID} from '../weblab2/CDOIDE/constants';
 import {loadPyodide /*, version*/} from 'pyodide';
 
@@ -14,11 +14,8 @@ async function loadPyodideAndPackages() {
     // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
     packages: ['numpy', 'matplotlib'],
   });
-  self.pyodide.setStdout({
-    batched: msg => {
-      self.postMessage({type: 'sysout', message: msg, id: 'none'});
-    },
-  });
+  self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
+  self.pyodide.setStderr(getStreamHandlerOptions('syserr'));
 }
 
 let pyodideReadyPromise = null;
@@ -53,3 +50,12 @@ self.onmessage = async event => {
   self.postMessage({type: 'updated_source', message: updatedSource, id});
   self.postMessage({type: 'run_complete', message: results, id});
 };
+
+// Return the options for sysout or syserr stream handler.
+function getStreamHandlerOptions(type) {
+  return {
+    batched: msg => {
+      self.postMessage({type: type, message: msg, id: 'none'});
+    },
+  };
+}

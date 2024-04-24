@@ -8,6 +8,7 @@ export interface PyodidePathContent {
 export interface PyodideMessage {
   type:
     | 'sysout'
+    | 'syserr'
     | 'updated_source'
     | 'run_complete'
     | 'error'

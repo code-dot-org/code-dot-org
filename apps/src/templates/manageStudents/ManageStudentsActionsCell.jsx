@@ -7,8 +7,8 @@ import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {navigateToHref} from '@cdo/apps/utils';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';

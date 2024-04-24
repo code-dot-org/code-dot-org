@@ -9,13 +9,13 @@ markdown <<MARKDOWN
 
 ## Targeted Assistance
 
-#### Don't have the LLM write entire programs or essays. Instead, use it for specific tasks. You may have noticed each lesson introduces different ways to 
+#### Don't have the LLM write entire programs or essays. Instead, use it for specific tasks. You may have noticed each lesson introduces different ways to interact with AI.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">📝 Brainstorming</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p style = "font-size: 16px;">
- Encourage students to use the LLM to brainstorm ideas for code features or essay topics. Lesson 2 gives students opportunities to practice ethical and efficient ways to use AI as a brainstorming partner. 
+ Encourage students to use the LLM to brainstorm ideas for code features or essay topics. <br><br> <b>Lesson 2</b> gives students opportunities to practice ethical and efficient ways to use AI as a brainstorming partner. 
 </p></div>
 </details>
 
@@ -23,7 +23,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">⚙️ Code Generation</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p style = "font-size: 16px;">
- Let students provide prompts for the LLM to generate code snippets for specific functionalities. In lesson 3, students explore building algorithms with AI to help them with their programs. The AI can help students get unstuck and spark confidence for them to finish more complex code. 
+ Let students provide prompts for the LLM to generate code snippets for specific functionalities.<br><br> In <b>Lesson 3</b>, students explore building algorithms with AI to help them with their programs. The AI can help students get unstuck and spark confidence for them to finish more complex code. 
 </p></div>
 </details>
 
@@ -31,7 +31,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">🪲 Bug Identification</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p style = "font-size: 16px;">
- Students can input code sections and ask the LLM to identify potential errors or inefficiencies. All programmers get frustrated with code that does not work correctly. Lesson 4 guides students through properly using AI to help debug their code.
+ Students can input code sections and ask the LLM to identify potential errors or inefficiencies. All programmers get frustrated with code that does not work correctly. <br><br> <b>Lesson 4</b> guides students through properly using AI to help debug their code.
 </p></div>
 </details>
 
