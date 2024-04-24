@@ -52,7 +52,7 @@ Feature: Curriculum Catalog Page
 
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And I wait until element "h3:contains(Sign in or create account to assign a curriculum)" is visible
-    Then I click selector "a:contains(Sign in or create account)"
+    Then I click selector "a:contains(Sign in or create account)" to load a new page
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
   Scenario: Signed-in student does not see Assign button
@@ -199,7 +199,7 @@ Feature: Curriculum Catalog Page
     And I click selector "[aria-label='View details about AI for Oceans']"
     And I click selector "button:contains(Assign to class sections)"
     And I wait until element "h3:contains(Sign in or create account to assign a curriculum)" is visible
-    Then I click selector "a:contains(Sign in or create account)"
+    Then I click selector "a:contains(Sign in or create account)" to load a new page
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
   @no_mobile
