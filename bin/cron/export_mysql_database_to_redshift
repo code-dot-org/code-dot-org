@@ -6,7 +6,6 @@ require_relative '../../dashboard/config/environment'
 exit unless rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org'
 
 require 'cdo/aws/dms'
-require 'cdo/aws/rds'
 require 'cdo/chat_client'
 require 'cdo/redshift_import'
 
@@ -19,13 +18,6 @@ WEEKLY_TASK_MAX_EXECUTION_TIME = 40.hours
 
 def main
   ChatClient.message 'data', 'Beginning daily export from Aurora MySQL database to Redshift.'
-  # Delete clone of production cluster if it was incorrectly left behind by a previous execution of the import process.
-  Cdo::RDS.delete_cluster(RedshiftImport::CLONE_CLUSTER_ID)
-  Cdo::RDS.clone_cluster(
-    source_cluster_id: CDO.db_cluster_id,
-    clone_cluster_id: RedshiftImport::CLONE_CLUSTER_ID,
-    instance_type: RedshiftImport::CLONE_DB_INSTANCE_ID
-  )
 
   # Ensure that if any threads that are starting/monitoring DMS Tasks Raise an error, that the main thread here raises.
   Thread.abort_on_exception = true
@@ -61,8 +53,6 @@ def main
 rescue StandardError => exception
   ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{exception}", color: 'red'
   raise exception
-ensure
-  Cdo::RDS.delete_cluster(RedshiftImport::CLONE_CLUSTER_ID)
 end
 
 main
