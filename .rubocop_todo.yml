@@ -211,13 +211,6 @@ Style/ExpandPathArguments:
 Style/FetchEnvVar:
   Enabled: false
 
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: left_coerce, right_coerce, single_coerce, fdiv
-Style/FloatDivision:
-  Enabled: false
-
 # Offense count: 99
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle, MaxUnannotatedPlaceholdersAllowed, AllowedMethods, AllowedPatterns.
