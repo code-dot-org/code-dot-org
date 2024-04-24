@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursed-maker",
-    "serialized_at": "2024-04-17 23:42:27 UTC",
+    "serialized_at": "2024-04-24 03:01:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -107,6 +107,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to make a prototype of a automated lighting that switches on when it gets dark. The key concepts are: **loops, conditionals (if.. then.. else..), inputs** and **outputs**.",
+        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** \n\nNote: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.lesson.</a>**  "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -193,6 +195,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to use conditionals to make an electronic version of a classic game of change. The key concepts are: **events**, **conditionals (if.. then.. else...)**, and **variables.**",
+        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** \n\nNote: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.lesson.</a>**  "
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -326,12 +330,55 @@
       }
     },
     {
-      "key": "f4264793-9ac3-4511-8c17-ec0533a832a7",
+      "key": "f0cc7b73-43bf-4bcc-90ce-0f8fc73343ac",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0cc7b73-43bf-4bcc-90ce-0f8fc73343ac",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "f4264793-9ac3-4511-8c17-ec0533a832a7",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "f4264793-9ac3-4511-8c17-ec0533a832a7",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "e751d778-d2df-4ee5-a7c7-bcd7bef73d93",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e751d778-d2df-4ee5-a7c7-bcd7bef73d93",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "0d7163df-eb30-4aa1-862f-502ea9d82472",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0d7163df-eb30-4aa1-862f-502ea9d82472",
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursed-maker-2024"
@@ -515,12 +562,55 @@
       }
     },
     {
-      "key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab",
+      "key": "8e1ff1c8-f3af-4910-a5ac-2af6030131a9",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8e1ff1c8-f3af-4910-a5ac-2af6030131a9",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Student Coding"
       },
       "seeding_key": {
         "lesson_activity.key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "5ec3440e-fab7-4bc4-9a25-7becd51f727b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5ec3440e-fab7-4bc4-9a25-7becd51f727b",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "1e65381f-9a8d-4a36-be64-4e77871dc232",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e65381f-9a8d-4a36-be64-4e77871dc232",
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursed-maker-2024"
@@ -853,9 +943,23 @@
       }
     },
     {
+      "key": "6e0ae512-cd04-4cc4-927c-74fafe8f79f1",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to build a prototype of beach lighting for paths that guide humans safely but don't distract turtles by coding the micro:bit to light up the display only when it gets dark.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-d2-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-d2-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Loop**: The action of doing something over and over again (e.g., the \"forever\" block keeps running the code to check the light level)\n- **Conditional**: A statement that only runs under certain conditions (e.g., if the light level is below 100, show the turtle image on the LED display)\n- **Input**: The information computers get from users, or as in this case, from a sensor (e.g., light level reading)\n- **Output**: The information users get from computers (e.g., LED lights showing turtle image)\n\n**Do this**: Share the **<a href=\"https://mbit.io/csf-d2-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e0ae512-cd04-4cc4-927c-74fafe8f79f1",
+        "lesson_activity.key": "f0cc7b73-43bf-4bcc-90ce-0f8fc73343ac"
+      }
+    },
+    {
       "key": "7310a5db-a3b7-4392-a381-eca7b5eec2fc",
       "position": 1,
       "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-d2-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-d2-classroom\" target=\"_blank\">classroom session</a>** ",
+        "name": "Student Coding"
       },
       "seeding_key": {
         "activity_section.key": "7310a5db-a3b7-4392-a381-eca7b5eec2fc",
@@ -870,6 +974,29 @@
       "seeding_key": {
         "activity_section.key": "53eaa9d9-eeca-4629-ac31-a6ff0628427b",
         "lesson_activity.key": "f4264793-9ac3-4511-8c17-ec0533a832a7"
+      }
+    },
+    {
+      "key": "f988dd52-a900-410c-ab99-9eefbe9d683b",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "f988dd52-a900-410c-ab99-9eefbe9d683b",
+        "lesson_activity.key": "e751d778-d2df-4ee5-a7c7-bcd7bef73d93"
+      }
+    },
+    {
+      "key": "15474b3f-6c19-4bd1-9337-5380791ad592",
+      "position": 1,
+      "properties": {
+        "description": "**Experiment with light levels**: Vary the light level number to work better in your environment. Numbers higher than 100 will turn the light on even when it's brighter, numbers lower than 100 will only turn the light on when it gets darker.\n\n**Make an animation**: Show an animation by making a sequence of different images - for example, a turtle walking.\n\n**Find this project and more on <a href=\"https://microbit.org\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "15474b3f-6c19-4bd1-9337-5380791ad592",
+        "lesson_activity.key": "0d7163df-eb30-4aa1-862f-502ea9d82472"
       }
     },
     {
@@ -1559,9 +1686,21 @@
       }
     },
     {
+      "key": "01f73839-2f53-4fb0-9190-b83f7d2a3360",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to program a micro:bit to play a popular game of chance using events and conditionals.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-d3-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-d3-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Events**: actions that cause something to happen\n- **Conditional**: a statement that only runs under certain conditions (e.g., if the random number is 0, it shows a rock icon; if it's 1 it shows paper; otherwise it shows scissors)\n- **Variable**: a label for a piece of information used in a program (e.g., the code stores a random number between 0 to 2 in a variable called \"tool\" so it can be tested using a conditional \"if\" statement)\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-d3-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "01f73839-2f53-4fb0-9190-b83f7d2a3360",
+        "lesson_activity.key": "8e1ff1c8-f3af-4910-a5ac-2af6030131a9"
+      }
+    },
+    {
       "key": "770907f3-fea7-48bd-98e2-1db4dda49265",
       "position": 1,
       "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-d3-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-d3-classroom\" target=\"_blank\">classroom session</a>** "
       },
       "seeding_key": {
         "activity_section.key": "770907f3-fea7-48bd-98e2-1db4dda49265",
@@ -1576,6 +1715,29 @@
       "seeding_key": {
         "activity_section.key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259",
         "lesson_activity.key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab"
+      }
+    },
+    {
+      "key": "b556d52b-8a72-4f48-a017-8aa4cb140e7c",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "b556d52b-8a72-4f48-a017-8aa4cb140e7c",
+        "lesson_activity.key": "5ec3440e-fab7-4bc4-9a25-7becd51f727b"
+      }
+    },
+    {
+      "key": "fc6a6e9d-d379-46c7-abb1-4c2f1e96374d",
+      "position": 1,
+      "properties": {
+        "description": "**Design your own icons:**\n**Make a new game:**\n**Find this project and more on <a href=\"https://microbit.org\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc6a6e9d-d379-46c7-abb1-4c2f1e96374d",
+        "lesson_activity.key": "1e65381f-9a8d-4a36-be64-4e77871dc232"
       }
     }
   ],
@@ -2037,6 +2199,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_saving_sea_turtles"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2683,6 +2848,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_rock_paper_scissors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2929,6 +3097,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_activity_picker"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3685,6 +3856,30 @@
       }
     },
     {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1TUBADK7ZLaWXQoTYX52Bwa6kfNr2if9t/view?usp=drive_link",
+      "key": "cs_talking_points_for_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1WPRX8B_A3EOnkdXrosit_pEBGONvu4Dz/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
       "name": "CSF - Course D - Slides 2022-2023",
       "url": "https://docs.google.com/presentation/d/1QZjvTpft-xc7uU-rccLHsA2D-YFD8LgONjXwAjJ4nCQ/template/preview",
       "key": "csf_-_course_d_-_slides_2022-2023",
@@ -3721,6 +3916,102 @@
       },
       "seeding_key": {
         "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "name": "Saving Sea Turtles: Finished project",
+      "url": "https://mbit.io/csf-d2-project",
+      "key": "emotion_badge_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "emotion_badge_finished_project"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-d2-classroom",
+      "key": "live_micro_bit_classroom_session",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-d3-classroom",
+      "key": "live_micro_bit_classroom_session_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "name": "Rock, paper, scissors: Finished project",
+      "url": "https://mbit.io/csf-d3-project",
+      "key": "rock_paper_scissors_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "rock_paper_scissors_finished_project"
+      }
+    },
+    {
+      "name": "Rock, paper, scissors: Introduction video",
+      "url": "https://mbit.io/csf-d3-intro",
+      "key": "rock_paper_scissors_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "rock_paper_scissors_introduction_video"
+      }
+    },
+    {
+      "name": "Rock, paper, scissors: Step by step coding video ",
+      "url": "https://mbit.io/csf-d3-coding",
+      "key": "rock_paper_scissors_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "rock_paper_scissors_step_by_step_coding_video"
+      }
+    },
+    {
+      "name": "Saving Sea Turtles: Introduction Video",
+      "url": "https://mbit.io/csf-d2-intro",
+      "key": "saving_sea_turtles_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "saving_sea_turtles_introduction_video"
+      }
+    },
+    {
+      "name": "Saving Sea Turtles: Step by step coding video",
+      "url": "https://mbit.io/csf-d2-coding",
+      "key": "saving_sea_turtles_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "saving_sea_turtles_step_by_step_coding_video"
       }
     },
     {
@@ -3839,6 +4130,66 @@
         "lesson.key": "Text and Prompts",
         "resource.key": "sprite_lab_documentation"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "emotion_badge_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "saving_sea_turtles_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "saving_sea_turtles_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "rock_paper_scissors_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "rock_paper_scissors_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "rock_paper_scissors_step_by_step_coding_video"
+      }
     }
   ],
   "scripts_resources": [
@@ -3896,6 +4247,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -4021,6 +4382,18 @@
         "lesson.key": "Text and Prompts",
         "vocabulary.key": "variable"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "loop"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -4078,6 +4451,16 @@
       }
     },
     {
+      "key": "520d25d2-c929-46ee-b9b1-b149a49d421a",
+      "properties": {
+        "description": "code the micro:bit to randomly display rock, paper or scissors"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "520d25d2-c929-46ee-b9b1-b149a49d421a"
+      }
+    },
+    {
       "key": "5c4a290e-96c2-43f9-b8d7-021e0b93d11e",
       "properties": {
         "description": "Traverse a program and predict the outcome, given a set of input."
@@ -4098,6 +4481,16 @@
       }
     },
     {
+      "key": "7f0a1efb-27bb-4f56-8c51-a001c43927c7",
+      "properties": {
+        "description": "write code that includes loops and conditionals"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "7f0a1efb-27bb-4f56-8c51-a001c43927c7"
+      }
+    },
+    {
       "key": "948d6113-c4ad-4a10-8b09-5f64c5223c21",
       "properties": {
         "description": "Analyze the effects of too much, too little or just the right amount of algae in a marine ecosystem. "
@@ -4115,6 +4508,16 @@
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
         "objective.key": "94a0d889-2813-47ab-a52f-f3595a668da9"
+      }
+    },
+    {
+      "key": "a303cb55-d9e9-49ce-b4d1-934e8015528e",
+      "properties": {
+        "description": "program the input of the micro:bit to be the sensor detecting light level"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "a303cb55-d9e9-49ce-b4d1-934e8015528e"
       }
     },
     {
@@ -4145,6 +4548,16 @@
       "seeding_key": {
         "lesson.key": "Conditionals with Cards",
         "objective.key": "d16e06e7-5f04-4b35-a689-53723616c73f"
+      }
+    },
+    {
+      "key": "fd054f7b-705c-496e-9567-cef9147230ff",
+      "properties": {
+        "description": "write a program that includes events, conditionals and variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "fd054f7b-705c-496e-9567-cef9147230ff"
       }
     }
   ],
@@ -4266,6 +4679,34 @@
         "lesson.key": "Text and Prompts",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
       }
     }
   ],
