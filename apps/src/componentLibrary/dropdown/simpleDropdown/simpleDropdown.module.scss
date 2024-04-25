@@ -87,11 +87,6 @@
     select {
       color: $light_gray_200;
       border-color: $light_gray_200;
-
-      &.readOnlySelect {
-        color: $light_black;
-        opacity: 1;
-      }
     }
 
     .dropdownArrowDiv:after {
@@ -136,11 +131,6 @@
     select {
       color: $light_gray_900;
       border-color: $light_gray_900;
-
-        &.readOnlySelect {
-            color: $light_white;
-            opacity: 1;
-        }
     }
 
     .dropdownArrowDiv:after {

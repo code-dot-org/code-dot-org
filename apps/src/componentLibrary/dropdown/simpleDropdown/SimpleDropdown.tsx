@@ -28,8 +28,6 @@ export interface SimpleDropdownProps {
   className?: string;
   /** Is SimpleDropdown disabled */
   disabled?: boolean;
-  /** Is SimpleDropdown readOnly */
-  readOnly?: boolean;
   /** SimpleDropdown color. Sets the color of dropdown arrow, text, label and border color.
    * White stands for 'white' dropdown that'll be rendered on dark background,
    * 'black' stands for black dropdown that'll be rendered on the white/light background. */
@@ -64,7 +62,6 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   dropdownTextThickness = 'thick',
   isLabelVisible = true,
   disabled = false,
-  readOnly = false,
   color = 'black',
   size = 'm',
 }) => {
@@ -89,8 +86,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           onChange={onChange}
           value={selectedValue}
           id={id}
-          disabled={disabled || readOnly}
-          className={classNames(readOnly && moduleStyles.readOnlySelect)}
+          disabled={disabled}
         >
           {itemGroups.length > 0
             ? itemGroups.map(({label, groupItems}, index) => (
