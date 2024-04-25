@@ -8,7 +8,7 @@ import * as sort from 'sortabular';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import Button from '@cdo/apps/templates/Button';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {stringifyQueryParams} from '../../utils';

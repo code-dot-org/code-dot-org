@@ -127,7 +127,7 @@ describe('CurriculumCatalogCard', () => {
     const firstLabelText =
       translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
     const firstLabelNode = screen.getByText(firstLabelText);
-    firstLabelNode.focus();
+    firstLabelNode.closest('div').focus();
     expect(screen.getAllByText(firstLabelText)).to.have.lengthOf(2);
   });
 
@@ -159,7 +159,7 @@ describe('CurriculumCatalogCard', () => {
     const plusSignText = screen.getByText(
       `+${subjects.length + topics.length - 1}`
     );
-    plusSignText.focus();
+    plusSignText.closest('div').focus();
     remainingLabels.forEach(label => screen.getByText(translatedLabels[label]));
   });
 
