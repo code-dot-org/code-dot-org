@@ -88,7 +88,30 @@ class AichatControllerTest < ActionController::TestCase
     }.stringify_keys
   end
 
-  # Post request with a messages param containing PII returns a failure
+  test 'filters previous profanity when sending previous messages to Sagemaker' do
+    ok_message = {status: 'ok', role: 'user', content: 'hello'}
+    params = @valid_params.merge(stored_messages:
+      [
+        {status: 'profanity_violation', role: 'user', content: 'damn'},
+        ok_message
+      ]
+    )
+
+    params_actual = ActionController::Parameters.new(params)
+
+    # Note that second expected argument filters out the previous profane message
+    # in what we send to Sagemaker.
+    AichatSagemakerHelper.expects(:request_sagemaker_chat_completion).
+      with(params_actual[:aichatModelCustomizations], [ok_message], params_actual[:newMessage]).once
+
+    sign_in(@genai_pilot_student)
+    post :chat_completion, params: params, as: :json
+    assert_response :success
+
+    session = AichatSession.find(json_response['sessionId'])
+    assert_equal 3, JSON.parse(session.messages)
+  end
+
   test 'returns failure when chat message contains PII' do
     sign_in(@genai_pilot_student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'l.lovepadel@sports.edu'))
