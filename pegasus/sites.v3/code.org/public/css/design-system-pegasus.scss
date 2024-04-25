@@ -111,6 +111,11 @@ i.fa-fw {
   &.flex-direction-column {
     flex-direction: column;
   }
+  &.flex-direction-column-mobile {
+    @media screen and (max-width: $width-sm) {
+      flex-direction: column;
+    }
+  }
   &.flex-direction-row {
     flex-direction: row;
   }
@@ -153,6 +158,9 @@ i.fa-fw {
 
   & > .flex-1 {
     flex: 1;
+  }
+  & > .flex-2 {
+    flex: 2;
   }
 }
 
@@ -458,6 +466,28 @@ ul {
 
       h3 {
         @include heading-sm;
+      }
+    }
+  }
+
+  // Featured artists list
+  // See code.org/dance and code.org/music
+  &.featured-artists {
+    margin: 2rem auto;
+    @media (min-width: $width-sm) { gap: 1.5rem; }
+
+    li {
+      @media (min-width: $width-sm) { flex: 1; }
+      @media (max-width: $width-sm) { width: 29%; }
+
+      img {
+        border-radius: 100%;
+        width: 100%;
+        border: 4px solid var(--brand_secondary_default);
+      }
+
+      &:nth-of-type(even) img {
+        border-color: var(--brand_primary_default);
       }
     }
   }

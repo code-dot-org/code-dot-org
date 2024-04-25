@@ -3,7 +3,7 @@ title: Music Lab
 theme: responsive_full_width
 ---
 
-- button_url = "#"
+- button_url = CDO.studio_url("/s/music-intro-2024")
 - button_string = hoc_s("music_lab.button.try_music_lab")
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
@@ -26,4 +26,43 @@ theme: responsive_full_width
         %figure
           %img{src: "/images/avatars/amazon_future_engineer_light.png", alt: hoc_s("music_lab.amazon_future_engineer")}
     %figure
-      %img{src: "/images/music_lab/music-lab-banner-graphic.png", alt: "", style: "width: 100%"}
+      %img{src: "/images/music-lab/music-lab-banner-graphic.png", alt: "", style: "width: 100%"}
+
+%section.bg-neutral-light
+  .wrapper.flex-container.justify-space-between.align-items-center.gap-1.wrap.flex-direction-column-mobile
+    .text-wrapper.flex-1
+      %h2.heading-lg
+        =hoc_s("music_lab.featuring_songs_by")
+      %p ARTIST LIST HERE
+    .flex-2
+      = view :"music/music_lab_featured_artists"
+
+%section
+  .wrapper
+    FEATURED PROJECTS
+
+%section.bg-primary-light
+  .wrapper
+    AFE
+
+%section
+  .wrapper
+    VIDEO CAROUSEL
+
+%section.quote
+  .wrapper
+    QUOTES
+
+%section
+  .wrapper
+    TUTORIAL
+
+%section.bg-neutral-light
+  .wrapper
+    RESOURCES
+
+%section
+  .wrapper
+    = view :afe_partnership_block
+    %p.body-four.centered
+      =hoc_s(:dance_afe_disclaimer)

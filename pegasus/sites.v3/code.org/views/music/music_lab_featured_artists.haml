@@ -1,0 +1,8 @@
+- artist_index = 5
+
+- artist_photo = ["/images/music-lab/chainsmokers.png", "/images/music-lab/rosa-linn.png", "/images/music-lab/tinashe.png", "/images/music-lab/dove-cameron.png", "/images/music-lab/aloe-blacc.png"]
+
+%ul.featured-artists.clear-styles.flex-container.justify-space-between.wrap
+  - artist_index.times do |index|
+    %li
+      %img{src: artist_photo[index], alt: ""}
