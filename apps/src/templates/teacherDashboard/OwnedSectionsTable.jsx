@@ -12,7 +12,7 @@ import color from '@cdo/apps/util/color';
 import {
   StudentGradeLevels,
   SectionLoginType,
-} from '@cdo/apps/util/sharedConstants';
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {stringifyQueryParams} from '../../utils';
@@ -34,11 +34,6 @@ export const COLUMNS = {
   STUDENTS: 4,
   LOGIN_INFO: 5,
   EDIT_DELETE: 6,
-};
-
-const participantNames = {
-  facilitator: i18n.participantTypeFacilitatorTitle(),
-  teacher: i18n.participantTypeTeacherTitle(),
 };
 
 // Cell formatters for sortable OwnedSectionsTable.
@@ -164,7 +159,6 @@ class OwnedSectionsTable extends Component {
   static propTypes = {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func.isRequired,
-    isPlSections: PropTypes.bool,
 
     //Provided by redux
     sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
@@ -183,7 +177,7 @@ class OwnedSectionsTable extends Component {
   determineSorter = (data, activeColumn, directionArray) => {
     // If we are sorting on grade
     const gradeCol = COLUMNS.GRADE.toString();
-    if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
+    if (this.state.sortingColumns[gradeCol]) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
       return sortBy(data, function (obj) {
         return (
@@ -200,13 +194,7 @@ class OwnedSectionsTable extends Component {
 
   gradeFormatter = (grades, {rowData}) => {
     const formattedGrades = rowData.grades ? rowData.grades.join(', ') : null;
-    return (
-      <div>
-        {this.props.isPlSections
-          ? participantNames[rowData.participantType]
-          : formattedGrades}
-      </div>
-    );
+    return <div>{formattedGrades}</div>;
   };
 
   actionCellFormatter = (temp, {rowData}) => {
@@ -268,13 +256,11 @@ class OwnedSectionsTable extends Component {
         },
       },
       {
-        property: this.props.isPlSections ? 'participantType' : 'grades',
+        property: 'grades',
         header: {
-          label: this.props.isPlSections ? i18n.participants() : i18n.grade(),
+          label: i18n.grade(),
           props: {
-            className: this.props.isPlSections
-              ? 'uitest-participant-type-header'
-              : 'uitest-grade-header',
+            className: 'uitest-grade-header',
             style: tableLayoutStyles.headerCell,
           },
           transforms: [sortable],

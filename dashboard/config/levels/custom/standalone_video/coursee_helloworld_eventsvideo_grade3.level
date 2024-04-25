@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-04-23T19:37:04.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "csc-event-short-intro",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_grade3"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:37:04.331+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_eventsvideo_maker\\\"\"],\"cloned_from\":\"coursee_helloworld_eventsvideo_maker\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

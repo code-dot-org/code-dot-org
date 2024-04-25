@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "#### Functions\r\n\r\nOrganize your music using functions.\r\n\r\n1️⃣ Click [Functions](#clickable=toolbox-first-row)\r\n\r\n2️⃣ Attach [chorus](#clickable=toolbox-second-block) under [when run](#clickable=when-run-block)\r\n\r\n3️⃣ What do you notice? ",
+    "long_instructions": "#### Functions\r\n\r\nOrganize your music using functions.\r\n\r\n1 Click [Functions](#clickable=toolbox-first-row)\r\n\r\n2 Attach [chorus](#clickable=toolbox-second-block) under [when run](#clickable=when-run-block)\r\n\r\n3 What do you notice? ",
     "level_data": {
       "startSources": {
         "blocks": {
@@ -33,7 +33,7 @@
                 "userCreated": false
               },
               "fields": {
-                "NAME": "bass"
+                "NAME": "chorus"
               },
               "inputs": {
                 "STACK": {
@@ -42,7 +42,17 @@
                     "deletable": false,
                     "movable": false,
                     "fields": {
-                      "sound": "bass/bass_synth_glow_up"
+                      "sound": "bass/funky_bass"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "fields": {
+                          "sound": "bass/amped_bass"
+                        }
+                      }
                     }
                   }
                 }
@@ -92,7 +102,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T21:52:16.821+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_function_elementary\\\"\"],\"cloned_from\":\"musiclab_intro_function_elementary\"},{\"changed_at\":\"2024-04-17 22:39:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:04:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T21:52:16.821+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_function_elementary\\\"\"],\"cloned_from\":\"musiclab_intro_function_elementary\"},{\"changed_at\":\"2024-04-17 22:39:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:04:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 17:51:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 17:54:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 17:56:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 18:02:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 18:06:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

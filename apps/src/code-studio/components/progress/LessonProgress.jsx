@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import {canChangeLevelInPage} from '../../browserNavigation';
 import $ from 'jquery';
 

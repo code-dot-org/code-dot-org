@@ -1108,6 +1108,9 @@ class User < ApplicationRecord
     self.parent_email = nil
 
     new_attributes = email_preference.nil? ? {} : email_preference
+    if Policies::Lti.lti? self
+      self.lti_roster_sync_enabled = true
+    end
 
     transaction do
       if migrated?

@@ -8,7 +8,7 @@ import {
   StrongText,
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import {aiEvaluationShape, aiEvidenceShape} from './rubricShapes';
 import AiConfidenceBox from './AiConfidenceBox';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';

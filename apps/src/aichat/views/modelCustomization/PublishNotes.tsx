@@ -64,7 +64,7 @@ const PublishNotes: React.FunctionComponent = () => {
                     readOnly={isDisabled(visibility)}
                   />
                 )}
-                {property !== 'exampleTopics' && (
+                {property !== 'exampleTopics' && property !== 'isPublished' && (
                   <InputTag
                     id={property}
                     type="text"

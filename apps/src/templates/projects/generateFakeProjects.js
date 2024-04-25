@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {FeaturedProjectStatus} from '@cdo/apps/util/sharedConstants';
+import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 
 // Generate n fake personal projects for the project widget.
 // updatedAt data is normally a timestamp, but for storybook
