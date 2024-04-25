@@ -100,11 +100,14 @@ module Cdo
       message = CGI.unescape(cookies[session_cookie_key].to_s)
       session_id = Rack::Session::SessionId.new(message)
 
-      # Note that we are unfortunately calling a private method on the session
-      # store here; this is gross, but the only way to fetch this data without
-      # doing so would be to construct a fake Request object we could pass to
-      # the `find_session` method, which is even more gross.
-      return nil unless session = dashboard_session_store.send(:get_session_with_fallback, session_id)
+      # Fetch session data from the session store; this is essentially a manual
+      # reimplementation of the private `get_session_with_fallback` method
+      # which is used by `find_session` under the hood.
+      # See https://github.com/redis-store/redis-rack/blob/v3.0.0/lib/rack/session/redis.rb#L87-L89
+      session = dashboard_session_store.with do |connection|
+        connection.get(session_id.private_id) || connection.get(session_id.public_id)
+      end
+      return nil unless session
       return nil unless warden = session['warden.user.user.key']
       warden.first.first
     rescue
