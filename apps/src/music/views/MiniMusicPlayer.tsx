@@ -11,7 +11,7 @@ import {loadLibrary} from '../utils/Loader';
 import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import Lab2Registry from '../../lab2/Lab2Registry';
-import moduleStyles from './MiniMusicPlayer.module.scss';
+import moduleStyles from './mini-music-player.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 interface MiniPlayerViewProps {

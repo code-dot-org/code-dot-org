@@ -129,7 +129,7 @@ class UnconnectedMusicView extends React.Component {
       this.getValidationTimeout,
       this.player
     );
-    this.isPlayView = true;
+    this.isPlayView = false;
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(
