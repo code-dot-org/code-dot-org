@@ -25,6 +25,8 @@ export interface CheckboxDropdownProps {
   /** CheckboxDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
+  /** CheckboxDropdown custom class name */
+  className?: string;
   /** CheckboxDropdown color */
   color?: DropdownColor;
   /** CheckboxDropdown size */
@@ -50,6 +52,7 @@ export interface CheckboxDropdownProps {
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
+  className,
   labelText,
   labelType = 'thick',
   allOptions,
@@ -64,6 +67,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   return (
     <CustomDropdown
       name={name}
+      className={className}
       labelText={labelText}
       labelType={labelType}
       color={color}
