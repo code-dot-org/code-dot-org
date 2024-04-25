@@ -4,7 +4,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import EvidenceDescriptions from '@cdo/apps/lib/levelbuilder/rubrics/EvidenceDescriptions';
 import sinon from 'sinon';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('EvidenceDescriptions', () => {
   let defaultProps;

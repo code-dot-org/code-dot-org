@@ -115,6 +115,18 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 : onPlaySong(project);
             }}
           >
+            <div className={moduleStyles.pack}>
+              {project.labConfig?.music?.packId && (
+                <img
+                  src={MusicLibrary.getInstance()?.getPackImageUrl(
+                    project.labConfig?.music?.packId
+                  )}
+                  className={moduleStyles.packImage}
+                  alt=""
+                />
+              )}
+            </div>
+
             <div className={moduleStyles.control}>
               <FontAwesomeV6Icon
                 iconName={project.id === currentProjectId ? 'stop' : 'play'}
@@ -122,21 +134,24 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 className={moduleStyles.icon}
               />
             </div>
+
             <div className={moduleStyles.name}>{project.name}</div>
-            <a
-              href={`/projects/music/${project.id}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={e => e.stopPropagation()}
-            >
-              <div className={moduleStyles.other}>
+
+            <div className={moduleStyles.other}>
+              <a
+                href={`/projects/music/${project.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={e => e.stopPropagation()}
+                className={moduleStyles.otherLink}
+              >
                 <FontAwesomeV6Icon
                   iconName="arrow-up-right-from-square"
                   iconStyle="solid"
                   className={moduleStyles.icon}
                 />
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         );
       })}

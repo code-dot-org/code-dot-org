@@ -68,5 +68,15 @@
   "panelHeaderTimeline": "Timeline",
   "continue": "Continue",
   "undo": "Undo",
-  "redo": "Redo"
+  "redo": "Redo",
+  "soundsFilterPacks": "Packs",
+  "soundsFilterSounds": "Sounds",
+  "soundsFilterAll": "All",
+  "soundsFilterBeats": "Beats",
+  "soundsFilterBass": "Bass",
+  "soundsFilterLeads": "Leads",
+  "soundsFilterEffects": "Effects",
+  "soundsFilterVocals": "Vocals",
+  "packDialogTitle": "Choose a featured track",
+  "packDialogBody": "Level up your mix by adding sounds from a featured track."
 }
