@@ -90,12 +90,10 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'filters previous profanity when sending previous messages to Sagemaker' do
     ok_message = {status: 'ok', role: 'user', content: 'hello'}
-    params = @valid_params.merge(stored_messages:
-      [
-        {status: 'profanity_violation', role: 'user', content: 'damn'},
-        ok_message
-      ]
-    )
+    params = @valid_params.merge(stored_messages: [
+      {status: 'profanity_violation', role: 'user', content: 'damn'},
+      ok_message
+    ])
 
     params_actual = ActionController::Parameters.new(params)
 
