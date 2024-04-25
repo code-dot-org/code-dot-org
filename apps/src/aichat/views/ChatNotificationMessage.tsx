@@ -1,30 +1,31 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import Button from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './chatMessage.module.scss';
+import styles from './chat-notification-message.module.scss';
 
 const ChatNotificationMessage: React.FunctionComponent<{
   content: React.ReactNode;
   onRemove?: () => void;
   iconName: string;
   iconClass: string;
-}> = ({content, onRemove, iconName, iconClass}) => {
-  // might want container class for content for spacing
-
+  containerClass: string;
+}> = ({content, onRemove, iconName, iconClass, containerClass}) => {
   return (
     <div
-      style={{
-        minHeight: 25,
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flex: 1,
-      }}
+      className={classNames(
+        moduleStyles.modelUpdateMessageContainer,
+        containerClass
+      )}
     >
       <div>
-        <FontAwesomeV6Icon iconName={iconName} className={iconClass} />
+        <FontAwesomeV6Icon
+          iconName={iconName}
+          className={classNames(iconClass, styles.icon)}
+        />
         {content}
       </div>
       {onRemove && (

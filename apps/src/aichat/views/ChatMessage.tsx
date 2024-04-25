@@ -52,7 +52,8 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
       <ChatNotificationMessage
         content={INAPPROPRIATE_MESSAGE}
         iconName="circle-xmark"
-        iconClass={moduleStyles.check}
+        iconClass={moduleStyles.danger}
+        containerClass={moduleStyles.dangerContainer}
       />
     );
   } else if (status === Status.PII_VIOLATION) {
@@ -117,6 +118,7 @@ const displayModelUpdateMessage = (
       }
       iconName="check"
       iconClass={moduleStyles.check}
+      containerClass={moduleStyles.modelUpdateContainer}
     />
   );
 };
@@ -136,13 +138,10 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
         </div>
       )}
 
-      {isModelUpdate(message.role) && (
-        <div className={moduleStyles.modelUpdateMessageContainer}>
-          {displayModelUpdateMessage(message, () =>
-            dispatch(removeModelUpdateMessage(message.id))
-          )}
-        </div>
-      )}
+      {isModelUpdate(message.role) &&
+        displayModelUpdateMessage(message, () =>
+          dispatch(removeModelUpdateMessage(message.id))
+        )}
     </div>
   );
 };

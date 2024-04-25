@@ -19,10 +19,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $light_affirmative_100;
   border-radius: 4px;
   padding: 5px 10px;
   margin: 3px 0;
+  min-height: 25px;
 
   .removeStatusUpdate {
     background-color: transparent;
@@ -40,12 +40,25 @@
 }
 
 .modelUpdateMessageTextContainer {
-  margin: 0 10px;
+  margin-right: 10px;
+}
+
+.modelUpdateContainer {
+  background-color: $light_affirmative_100;
 }
 
 .check {
   color: $light_affirmative_500;
   font-size: 16px;
+}
+
+.danger {
+  color: $light_negative_500;
+  font-size: 16px;
+}
+
+.dangerContainer {
+  background-color: #FBE0DD;
 }
 
 .alert {
