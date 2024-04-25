@@ -84,6 +84,7 @@ export const setUpWithLevel = createAsyncThunk(
       scriptId?: number;
       levelPropertiesPath: string;
       channelId?: string;
+      userId: string;
     },
     thunkAPI
   ) => {
@@ -127,10 +128,12 @@ export const setUpWithLevel = createAsyncThunk(
         payload.channelId && isProjectLevel
           ? ProjectManagerFactory.getProjectManager(
               ProjectManagerStorageType.REMOTE,
-              payload.channelId
+              payload.channelId,
+              ''
             )
           : await ProjectManagerFactory.getProjectManagerForLevel(
               ProjectManagerStorageType.REMOTE,
+              payload.userId,
               payload.levelId,
               payload.scriptId
             );
@@ -185,7 +188,8 @@ export const setUpWithoutLevel = createAsyncThunk(
       // Create the new project manager.
       const projectManager = ProjectManagerFactory.getProjectManager(
         ProjectManagerStorageType.REMOTE,
-        payload.channelId
+        payload.channelId,
+        ''
       );
       Lab2Registry.getInstance().setProjectManager(projectManager);
 
