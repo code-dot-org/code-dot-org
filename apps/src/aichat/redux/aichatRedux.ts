@@ -478,16 +478,10 @@ const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   return true;
 };
 
-const allFieldsHidden = (
-  fieldVisibilities: AichatState['fieldVisibilities']
-) => {
-  for (const key of getTypedKeys(fieldVisibilities)) {
-    if (fieldVisibilities[key] !== Visibility.HIDDEN) {
-      return false;
-    }
-  }
-  return true;
-};
+const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
+  getTypedKeys(fieldVisibilities).every(
+    key => fieldVisibilities[key] === Visibility.HIDDEN
+  );
 
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(

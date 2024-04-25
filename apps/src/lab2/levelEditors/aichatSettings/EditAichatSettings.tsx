@@ -56,23 +56,13 @@ function sanitizeSettings(settings: LevelAichatSettings) {
   };
 }
 
-function sanitizeField<M extends object>(field: M, defaults: M) {
-  const validKeys = getTypedKeys<keyof M>(defaults);
-  // Delete entries for unrecognized keys
-  for (const key of getTypedKeys<keyof M>(field)) {
-    if (!getTypedKeys<keyof M>(defaults).includes(key)) {
-      delete field[key];
-    }
-  }
-
-  // Set default values for missing keys
-  for (const validKey of validKeys) {
-    if (field[validKey] === undefined) {
-      field[validKey] = defaults[validKey];
-    }
-  }
-
-  return field;
+function sanitizeField<F extends object>(field: F, defaults: F) {
+  // Iterate over default keys, keeping the value from the field if present, and otherwise using the default.
+  // This removes any extraneous keys and retains only expected keys.
+  return getTypedKeys<keyof F>(defaults).reduce(
+    (newField, key) => ({...newField, [key]: field[key] ?? defaults[key]}),
+    {}
+  );
 }
 
 /**
