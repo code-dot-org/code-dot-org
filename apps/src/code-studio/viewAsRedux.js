@@ -3,7 +3,7 @@
  * or as a instructor
  */
 
-import {makeEnum, reload} from '@cdo/apps/utils';
+import {makeEnum} from '@cdo/apps/utils';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 export const ViewType = makeEnum('Participant', 'Instructor');
@@ -49,10 +49,6 @@ export const changeViewType = viewType => {
     // participant
     if (viewType === ViewType.Participant && queryParams('user_id')) {
       updateQueryParam('user_id', undefined);
-      // todo: maybe don't need to reload.
-      // Make a stubbable call to window.location.reload
-      reload();
-      return;
     }
 
     dispatch(setViewType(viewType));
