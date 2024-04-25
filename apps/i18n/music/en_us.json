@@ -79,5 +79,10 @@
   "soundsFilterEffects": "Effects",
   "soundsFilterVocals": "Vocals",
   "packDialogTitle": "Choose a featured track",
-  "packDialogBody": "Level up your mix by adding sounds from a featured track."
+  "packDialogBody": "Level up your mix by adding sounds from a featured track.",
+  "effectsLabelsFull": "Full",
+  "effectsLabelsHigh": "High",
+  "effectsLabelsMedium": "Medium",
+  "effectsLabelsLow": "Low",
+  "effectsLabelsOff": "Off"
 }
