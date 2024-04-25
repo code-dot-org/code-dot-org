@@ -35,7 +35,8 @@ export default function JoinSectionArea({
     result,
     name,
     id,
-    sectionCapacity = null
+    sectionCapacity = null,
+    joiningPlSection = false
   ) => {
     setSectionResults({
       action: action,
@@ -43,6 +44,7 @@ export default function JoinSectionArea({
       resultName: name,
       resultId: id,
       sectionCapacity: sectionCapacity,
+      joiningPlSection: joiningPlSection,
     });
   };
 
@@ -60,6 +62,9 @@ export default function JoinSectionArea({
           name={sectionResults.resultName}
           id={sectionResults.resultId}
           sectionCapacity={sectionResults.sectionCapacity}
+          showMessageForJoiningNonPl={
+            isPlSections && !sectionResults.joiningPlSection
+          }
         />
         <JoinSection
           enrolledInASection={true}

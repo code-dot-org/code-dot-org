@@ -2,7 +2,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Notification from '@cdo/apps/templates/Notification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 export default function JoinSectionNotifications({
@@ -11,9 +13,15 @@ export default function JoinSectionNotifications({
   name,
   id,
   sectionCapacity,
+  showMessageForJoiningNonPl,
 }) {
   if (action === 'join' && result === 'success') {
-    return <JoinSectionSuccessNotification sectionName={name} />;
+    return (
+      <JoinSectionSuccessNotification
+        sectionName={name}
+        showMessageForJoiningNonPl={showMessageForJoiningNonPl}
+      />
+    );
   } else if (action === 'leave' && result === 'success') {
     return (
       <LeaveSectionSuccessNotification sectionName={name} sectionId={id} />
@@ -46,18 +54,34 @@ JoinSectionNotifications.propTypes = {
   name: PropTypes.string,
   id: PropTypes.string,
   sectionCapacity: PropTypes.number,
+  showMessageForJoiningNonPl: PropTypes.bool,
 };
 
-const JoinSectionSuccessNotification = ({sectionName}) => (
+const JoinSectionSuccessNotification = ({
+  sectionName,
+  showMessageForJoiningNonPl,
+}) => (
   <Notification
     type="success"
     notice={i18n.sectionsNotificationSuccess()}
-    details={i18n.sectionsNotificationJoinSuccess({sectionName})}
+    details={
+      showMessageForJoiningNonPl ? (
+        <SafeMarkdown
+          markdown={i18n.sectionsNotificationJoinSuccessForNonPl({
+            sectionName: sectionName,
+            teacherDashboardUrl: studio('/home'),
+          })}
+        />
+      ) : (
+        i18n.sectionsNotificationJoinSuccess({sectionName})
+      )
+    }
     dismissible={true}
   />
 );
 JoinSectionSuccessNotification.propTypes = {
   sectionName: PropTypes.string.isRequired,
+  showMessageForJoiningNonPl: PropTypes.bool,
 };
 
 const LeaveSectionSuccessNotification = ({sectionName, sectionId}) => (
