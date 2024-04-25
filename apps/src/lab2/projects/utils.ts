@@ -1,11 +1,12 @@
 import getScriptData from '@cdo/apps/util/getScriptData';
-import {ProjectFile, ProjectType} from '../types';
+import {ProjectFile} from '../types';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.
 interface PartialAppOptions {
   channel: string;
-  projectType: ProjectType;
+  levelId: number;
+  share: boolean;
 }
 
 /**
@@ -21,9 +22,23 @@ export function getStandaloneProjectId(): string | undefined {
   return appOptions.channel;
 }
 
-export function getProjectType(): string {
+/**
+ * Returns the level ID provided by App Options, if available.
+ * This is specifically used in scenarios where the level ID is not provided
+ * by other means (for example via header.js)
+ */
+export function getServerLevelId(): number | undefined {
   const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  return appOptions.projectType;
+  return appOptions.levelId;
+}
+
+/**
+ * Returns if the lab should presented in a share/play-only view,
+ * if present in App Options. Only used in standalone project levels.
+ */
+export function getIsShareView(): boolean | undefined {
+  const appOptions = getScriptData('appoptions') as PartialAppOptions;
+  return appOptions.share;
 }
 
 /**
