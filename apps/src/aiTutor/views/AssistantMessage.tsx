@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import classNames from 'classnames';
 
-import {ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
+import {
+  ChatCompletionMessage,
+  AITutorInteractionStatus as Status,
+} from '@cdo/apps/aiTutor/types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 
@@ -70,7 +73,7 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
               size="xs"
               type={feedbackState.thumbsUp ? 'primary' : 'tertiary'}
             />
-           <Button
+            <Button
               className={style.hamburgerMenuButton}
               color={buttonColors.black}
               disabled={false}
