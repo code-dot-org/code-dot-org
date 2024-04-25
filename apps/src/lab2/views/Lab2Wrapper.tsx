@@ -22,7 +22,7 @@ import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
 import Lab2Registry from '../Lab2Registry';
 import Loading from './Loading';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {getServerLevelId, getIsShareView} from '../projects/utils';
+import {getAppOptionsLevelId, getIsShareView} from '../projects/utils';
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 
 export interface Lab2WrapperProps {
@@ -44,12 +44,12 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
 
   // Store the level ID provided by App Options in redux if necessary.
   // This is needed on pages without a header, such as the share view.
-  const serverLevelId = getServerLevelId();
+  const appOptionsLevelId = getAppOptionsLevelId();
   useEffect(() => {
-    if (!currentLevelId && serverLevelId) {
-      dispatch(setCurrentLevelId(serverLevelId.toString()));
+    if (!currentLevelId && appOptionsLevelId) {
+      dispatch(setCurrentLevelId(appOptionsLevelId.toString()));
     }
-  }, [currentLevelId, serverLevelId, dispatch]);
+  }, [currentLevelId, appOptionsLevelId, dispatch]);
 
   // Store whether we are in share view in redux, from App Options.
   const isShareView = getIsShareView();

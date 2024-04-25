@@ -27,7 +27,7 @@ export function getStandaloneProjectId(): string | undefined {
  * This is specifically used in scenarios where the level ID is not provided
  * by other means (for example via header.js)
  */
-export function getServerLevelId(): number | undefined {
+export function getAppOptionsLevelId(): number | undefined {
   const appOptions = getScriptData('appoptions') as PartialAppOptions;
   return appOptions.levelId;
 }

@@ -734,7 +734,8 @@ module LevelsHelper
 
   def lab2_options
     app_options = {channel: view_options[:channel], level_id: @level.id}
-    app_options.merge! level_view_options(@level.id)
+    level_options = level_view_options(@level.id)
+    app_options[:share] = level_options[:share] if level_options[:share]
     app_options.camelize_keys
   end
 
