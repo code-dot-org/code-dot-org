@@ -29,8 +29,10 @@ const RATE_LIMIT = 600;
 const RATE_LIMIT_INTERVAL_MS = 60000;
 function rateLimit() {
   const now = Date.now();
-  rateLimitDataAccessTimes.push(now);
-  while (rateLimitDataAccessTimes[0] < now - RATE_LIMIT_INTERVAL_MS) {
+  while (
+    rateLimitDataAccessTimes.length > 0 &&
+    rateLimitDataAccessTimes[0] < now - RATE_LIMIT_INTERVAL_MS
+  ) {
     rateLimitDataAccessTimes.shift();
   }
   if (rateLimitDataAccessTimes.length > RATE_LIMIT) {
@@ -42,6 +44,8 @@ function rateLimit() {
         'The app is reading/writing data too many times per second. ' +
         "If you were trying to write data, it wasn't written."
     );
+  } else {
+    rateLimitDataAccessTimes.push(now);
   }
 }
 
