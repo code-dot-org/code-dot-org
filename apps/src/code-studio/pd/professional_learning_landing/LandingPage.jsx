@@ -211,9 +211,7 @@ function LandingPage({
           isTeacher={true}
           isPlSections={true}
         />
-        <section>
-          <EnrolledWorkshops />
-        </section>
+        <EnrolledWorkshops />
         {deeperLearningCourseData?.length >= 1 && (
           <section>
             <Heading2>Online Professional Learning Courses</Heading2>

@@ -225,8 +225,12 @@ class EnrolledWorkshopsTable extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <h2>My Workshops</h2>
-        {this.renderWorkshopsTable()}
+        {this.props.workshops && (
+          <section>
+            <h2>My Workshops</h2>
+            {this.renderWorkshopsTable()}
+          </section>
+        )}
       </div>
     );
   }
