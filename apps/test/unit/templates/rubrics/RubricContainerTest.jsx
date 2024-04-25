@@ -72,6 +72,12 @@ describe('RubricContainer', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  function stubUpdateTourStatus(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\w+\/update_ai_rubrics_tour_seen/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
   beforeEach(() => {
     ajaxStub = sinon.stub($, 'ajax');
     const request = sinon.stub();
@@ -871,5 +877,211 @@ describe('RubricContainer', () => {
 
     expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
       .not.exist;
+  });
+
+  it('sends event when tour is started for the first time', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_TOUR_STARTED,
+      {}
+    );
+
+    sendEventSpy.restore();
+  });
+
+  it('sends event when user clicks next and back buttons', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    const {getByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    const nextButton = getByText('Next Tip');
+
+    fireEvent.click(nextButton);
+
+    await wait();
+
+    expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_NEXT, {
+      step: 0,
+      nextStep: 1,
+    });
+
+    const backButton = getByText('Back');
+
+    fireEvent.click(backButton);
+
+    await wait();
+
+    expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_BACK, {
+      step: 1,
+      nextStep: 0,
+    });
+
+    sendEventSpy.restore();
+  });
+
+  it('sends event when user exits the tour', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    const {getByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    // Had to access this button indirectly because RTL can't find it by text
+    const skipButton = getByText(
+      'Getting Started with Your AI Teaching Assistant'
+    ).closest('div').childNodes[1];
+
+    fireEvent.click(skipButton);
+
+    await wait();
+
+    expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_CLOSED, {
+      step: 0,
+    });
+
+    sendEventSpy.restore();
+  });
+
+  it('sends event when user completes the tour', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    const {getByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    const nextButton = getByText('Next Tip');
+
+    fireEvent.click(nextButton);
+    await wait();
+    fireEvent.click(nextButton);
+    await wait();
+    fireEvent.click(nextButton);
+    await wait();
+    fireEvent.click(nextButton);
+    await wait();
+    fireEvent.click(nextButton);
+    await wait();
+
+    const doneButton = getByText('Done');
+    fireEvent.click(doneButton);
+    await wait();
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_TOUR_COMPLETE,
+      {}
+    );
+
+    sendEventSpy.restore();
+  });
+
+  it('sends event when tour is restarted from ? button', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: true});
+    stubUpdateTourStatus({seen: false});
+
+    const {getByTestId, queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .not.exist;
+
+    const element = getByTestId('restart-product-tour');
+    console.log(element);
+    fireEvent.click(element);
+    await wait();
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_TOUR_RESTARTED,
+      {}
+    );
+
+    sendEventSpy.restore();
   });
 });
