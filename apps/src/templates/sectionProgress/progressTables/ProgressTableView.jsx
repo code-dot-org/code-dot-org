@@ -180,7 +180,7 @@ class ProgressTableView extends React.Component {
     this.studentList?.bodyComponent.setState({
       amountOfRowsToRender: initialRows,
     });
-    this.contentView?.bodyComponent?.setState({
+    this.contentView?.bodyComponent.setState({
       amountOfRowsToRender: initialRows,
     });
     this.syncScrollTop();
@@ -210,10 +210,6 @@ class ProgressTableView extends React.Component {
   syncScrollTop() {
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
-      if (!this.contentView || !this.studentList) {
-        this.syncScrollTop();
-        return;
-      }
       this.setScrollState(this.contentView.bodyComponent);
       this.setScrollState(this.studentList.bodyComponent);
     }, 200);
