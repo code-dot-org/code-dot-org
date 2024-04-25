@@ -35,7 +35,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   // (Can be mobile browsers and some desktop browser like macOS Safari)
   // Requires HTTPS connection (adhoc or production page).
   // Was unable to access it on localhost with our routing (http://localhost-studio.code.org:3000/
-  // is not considered a sage URL by browser, only http://localhost:3000/ is).
+  // is not considered a safe URL by browser, only http://localhost:3000/ is).
   const canShare =
     navigator && navigator.canShare && navigator.canShare(shareData);
 
@@ -54,9 +54,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
       <div className={moduleStyles.musicPlayViewCard}>
         <img src={codeOrgLogo} alt="Code.org" />
         <Heading2>{projectName}</Heading2>
-        <BodyTwoText>
-          {musicI18n.madeWithMusicLabOn()} <Link href="/">Code.org</Link>
-        </BodyTwoText>
+        <BodyTwoText>Built on Music Lab</BodyTwoText>
 
         <div className={moduleStyles.musicPlayViewPlaySection}>
           <Button
