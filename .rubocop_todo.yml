@@ -60,11 +60,6 @@ Lint/EmptyBlock:
 Lint/EmptyClass:
   Enabled: false
 
-# Offense count: 1
-# Configuration parameters: AllowComments.
-Lint/EmptyFile:
-  Enabled: false
-
 # Offense count: 9
 Lint/MissingSuper:
   Enabled: false

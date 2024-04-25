@@ -31,8 +31,8 @@ class AichatControllerTest < ActionController::TestCase
 
   setup do
     @assistant_response = "This is an assistant response from Sagemaker"
-    AichatHelper.stubs(:request_sagemaker_chat_completion).returns({status: 200, json: {body: {}}})
-    AichatHelper.stubs(:get_sagemaker_assistant_response).returns(@assistant_response)
+    AichatSagemakerHelper.stubs(:request_sagemaker_chat_completion).returns({status: 200, json: {body: {}}})
+    AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(@assistant_response)
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
@@ -92,11 +92,11 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'can_request_aichat_chat_completion returns false when DCDO flag is set to `false`' do
     DCDO.stubs(:get).with('aichat_chat_completion', true).returns(false)
-    assert_equal false, AichatHelper.can_request_aichat_chat_completion?
+    assert_equal false, AichatSagemakerHelper.can_request_aichat_chat_completion?
   end
 
   test 'returns forbidden when DCDO flag is set to `false`' do
-    AichatHelper.stubs(:can_request_aichat_chat_completion?).returns(false)
+    AichatSagemakerHelper.stubs(:can_request_aichat_chat_completion?).returns(false)
     sign_in(@genai_pilot_teacher)
     post :chat_completion, params: @valid_params, as: :json
     assert_response :forbidden
