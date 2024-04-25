@@ -2,8 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/58209)
-* added `readOnly` prop to allow for setting the dropdown to read-only
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/58209)
 * minor styles updates for consistency
 * fix and update documentation
 
