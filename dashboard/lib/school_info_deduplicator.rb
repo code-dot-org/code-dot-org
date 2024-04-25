@@ -3,7 +3,7 @@ module SchoolInfoDeduplicator
   # Returns false if the SchoolInfo is new and should be stored or if it is invalid,
   # in which case we allow the save to fail as usual
   def deduplicate_school_info(school_info_attr, self_object)
-    school_info = get_duplicate_school_info(school_info_attr)
+    school_info = get_existing_school_info(school_info_attr)
     if school_info
       self_object.school_info = school_info
       return true
@@ -14,23 +14,14 @@ module SchoolInfoDeduplicator
 
   # Returns the SchoolInfo if it already exists.
   # Returns nil if the SchoolInfo is new or if it is invalid.
-  def get_duplicate_school_info(school_info_attr)
+  def get_existing_school_info(school_info_attr)
+    return SchoolInfo.where(school_id: attr[:school_id], validation_type: SchoolInfo::VALIDATION_FULL).first if school_info_attr[:school_id]
+    
     attr = process_school_info_attributes(school_info_attr)
 
     return false unless SchoolInfo.new(attr).valid?
 
-    # If the SchoolInfo is related to a School then any fully validated school info for that same school id is a match
-    school_info =
-      if attr[:school_id]
-        SchoolInfo.where(school_id: attr[:school_id], validation_type: SchoolInfo::VALIDATION_FULL).first
-      else
-        SchoolInfo.where(attr).first
-      end
-    if school_info
-      return school_info
-    end
-
-    return nil
+    SchoolInfo.where(attr).first
   end
 
   # Processes school info attributes (as they come in from a form) to be passed into SchoolInfo.new
