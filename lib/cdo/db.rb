@@ -13,7 +13,7 @@ require 'dynamic_config/gatekeeper'
 #   If set to -1, validate each time a request is made. Defaults to -1 (always revalidate)
 #   in test, 3600 (revalidate every hour) everywhere else.
 # @param query_timeout [number] The execution timeout for SELECT statements, in seconds.
-def sequel_connect(writer, reader, validation_frequency: rack_env?(:test) ? -1 : 3600, query_timeout: nil, multi_statements: false)
+def sequel_connect(writer, reader, validation_frequency: 3600, query_timeout: nil, multi_statements: false)
   reader = reader.gsub 'mysql:', 'mysql2:'
   writer = writer.gsub 'mysql:', 'mysql2:'
 
