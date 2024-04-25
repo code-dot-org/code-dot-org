@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import LevelDetailsDialog from './LevelDetailsDialog';
 
