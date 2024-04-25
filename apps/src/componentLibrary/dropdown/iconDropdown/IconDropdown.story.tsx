@@ -133,36 +133,9 @@ DisabledIconDropdown.args = {
   size: 'm',
 };
 
-export const ReadOnlyIconDropdown = SingleTemplate.bind({});
-ReadOnlyIconDropdown.args = {
-  name: 'readOnly-dropdown',
-  options: [
-    {
-      value: 'option-1',
-      label: 'Option 1',
-      icon: {iconName: 'check', iconStyle: 'solid'},
-    },
-    {
-      value: 'option-2',
-      label: 'Option 2',
-      icon: {iconName: 'xmark', iconStyle: 'solid'},
-    },
-  ],
-  selectedOption: {
-    value: 'option-1',
-    label: 'Option 1',
-    icon: {iconName: 'check', iconStyle: 'solid'},
-  },
-  labelText: 'Read Only Dropdown',
-  onChange: args => null,
-  readOnly: true,
-  color: dropdownColors.black,
-  size: 'm',
-};
-
 export const WithDisabledOptionIconDropdown = SingleTemplate.bind({});
 WithDisabledOptionIconDropdown.args = {
-  name: 'default-dropdown',
+  name: 'withDisabledOption-dropdown',
   options: [
     {
       value: 'option-1',
