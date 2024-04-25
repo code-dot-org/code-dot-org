@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
-import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
+import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 

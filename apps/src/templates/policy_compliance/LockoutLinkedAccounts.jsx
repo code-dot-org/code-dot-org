@@ -7,7 +7,7 @@ import {isEmail} from '@cdo/apps/util/formatValidation';
 import cookies from 'js-cookie';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import {ChildAccountComplianceStates} from '@cdo/apps/util/sharedConstants';
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import Spinner from '../../code-studio/pd/components/spinner';
 
 /**

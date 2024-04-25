@@ -111,6 +111,8 @@ ProgressFeedbackBanner.propTypes = {
   bannerStatusCallback: PropTypes.func,
 };
 
+export const UnconnectedProgressFeedbackBanner = ProgressFeedbackBanner;
+
 export default connect(
   state => ({
     currentUser: state.currentUser,
