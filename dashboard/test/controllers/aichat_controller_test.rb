@@ -22,10 +22,10 @@ class AichatControllerTest < ActionController::TestCase
     }
     valid_message = "hello"
     pii_violation_message = "my email is l.lovepadel@sports.edu"
-    profanity_violation_message = "Damn you, robot"
+    @profanity_violation_message = "Damn you, robot"
     @valid_params = @common_params.merge(newMessage: valid_message)
     @pii_violation_params = @common_params.merge(newMessage: pii_violation_message)
-    @profanity_violation_params = @common_params.merge(newMessage: profanity_violation_message)
+    @profanity_violation_params = @common_params.merge(newMessage: @profanity_violation_message)
     @missing_stored_messages_params = @common_params.except(:storedMessages)
   end
 
@@ -72,13 +72,20 @@ class AichatControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  # Post request with a profane messages param returns a failure
   test 'returns failure when chat message contains profanity' do
     sign_in(@genai_pilot_student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
     post :chat_completion, params: @profanity_violation_params, as: :json
     assert_equal ShareFiltering::FailureType::PROFANITY, json_response["status"]
     assert_equal "damn", json_response["flagged_content"]
+
+    session = AichatSession.find(json_response['sessionId'])
+    stored_message = JSON.parse(session.messages)[0]
+    assert_equal stored_message, {
+      role: 'user',
+      content: @profanity_violation_message,
+      status: 'profanity_violation'
+    }.stringify_keys
   end
 
   # Post request with a messages param containing PII returns a failure
@@ -113,8 +120,8 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal @valid_params[:aichatContext][:scriptId], session.script_id
     assert_equal 456, session.project_id
     assert_equal [
-      {role: 'user', content: @valid_params[:newMessage]}.stringify_keys,
-      {role: 'assistant', content: @assistant_response}.stringify_keys
+      {role: 'user', content: @valid_params[:newMessage], status: 'ok'}.stringify_keys,
+      {role: 'assistant', content: @assistant_response, status: 'ok'}.stringify_keys
     ],
       JSON.parse(session.messages)
     assert_equal @valid_params[:aichatModelCustomizations].stringify_keys,
@@ -131,8 +138,8 @@ class AichatControllerTest < ActionController::TestCase
       {
         sessionId: session.id,
         storedMessages: [
-          {role: 'user', content: @valid_params[:newMessage]}.stringify_keys,
-          {role: 'assistant', content: @assistant_response}.stringify_keys
+          {role: 'user', content: @valid_params[:newMessage], status: 'ok'}.stringify_keys,
+          {role: 'assistant', content: @assistant_response, status: 'ok'}.stringify_keys
         ]
       }
     ),
@@ -155,8 +162,8 @@ class AichatControllerTest < ActionController::TestCase
       {
         sessionId: session.id,
         storedMessages: [
-          {role: 'user', content: @valid_params[:newMessage]}.stringify_keys,
-          {role: 'assistant', content: @assistant_response}.stringify_keys
+          {role: 'user', content: @valid_params[:newMessage], status: 'ok'}.stringify_keys,
+          {role: 'assistant', content: @assistant_response, status: 'ok'}.stringify_keys
         ],
         aichatModelCustomizations: @default_model_customizations.merge(
           retrievalContexts: ["test", "mismatched retrieval context item"],

@@ -15,24 +15,37 @@ class AichatController < ApplicationController
     end
 
     # Check for PII / Profanity
-    # Copied from ai_tutor_interactions_controller.rb - not sure if filtering is working.
     locale = params[:locale] || "en"
-    new_message_text = params[:newMessage]
-    # Check only the newest message from the user for inappropriate content.
-    filter_result = ShareFiltering.find_failure(new_message_text, locale) if new_message_text
-    # If the content is inappropriate, we skip sending to endpoint and instead hardcode a warning response on the front-end.
-    return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
+    filter_result = ShareFiltering.find_failure(params[:newMessage], locale)
+    if filter_result
+      new_messages = [{role: 'user', content: params[:newMessage], status: 'profanity_violation'}]
+      session_id = log_chat_session(new_messages)
+      return render(
+        status: :ok,
+        json: {
+          status: filter_result.type,
+          flagged_content: filter_result.content,
+          sessionId: session_id
+        }
+      )
+    end
 
-    input_json = AichatSagemakerHelper.format_inputs_for_sagemaker_request(params[:aichatModelCustomizations], params[:storedMessages], params[:newMessage])
-    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input_json)
+    input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
+      params[:aichatModelCustomizations],
+      params[:storedMessages].filter {|message| message[:status] == 'ok'},
+      params[:newMessage]
+    )
+    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input)
     latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
-    assistant_message = {
-      role: "assistant",
-      content: latest_assistant_response,
-    }
 
-    session_id = log_chat_session(assistant_message)
-    return render(status: :ok, json: assistant_message.merge({sessionId: session_id}).to_json)
+    assistant_message = {role: "assistant", content: latest_assistant_response, status: 'ok'}
+    new_messages = [
+      {role: 'user', content: params[:newMessage], status: 'ok'},
+      assistant_message,
+    ]
+    session_id = log_chat_session(new_messages)
+
+    render(status: :ok, json: assistant_message.merge({sessionId: session_id}).to_json)
   end
 
   private def has_required_params?
@@ -47,16 +60,16 @@ class AichatController < ApplicationController
     params[:storedMessages].is_a?(Array)
   end
 
-  private def log_chat_session(assistant_message)
+  private def log_chat_session(new_messages)
     if params[:sessionId].present?
       session_id = params[:sessionId]
       session = AichatSession.find_by(id: session_id)
       if session && matches_existing_session?(session)
-        return update_session(session, assistant_message)
+        return update_session(session, new_messages)
       end
     end
 
-    create_session(assistant_message)
+    create_session(new_messages)
   end
 
   private def matches_existing_session?(session)
@@ -80,14 +93,13 @@ class AichatController < ApplicationController
     true
   end
 
-  private def update_session(session, assistant_message)
-    session.messages = updated_message_list(assistant_message).to_json
+  private def update_session(session, new_messages)
+    session.messages = updated_message_list(new_messages).to_json
     session.save
-
     session.id
   end
 
-  private def create_session(assistant_message)
+  private def create_session(new_messages)
     context = params[:aichatContext]
     _, project_id = storage_decrypt_channel_id(context[:channelId])
 
@@ -97,15 +109,11 @@ class AichatController < ApplicationController
       script_id: context[:scriptId],
       project_id: project_id,
       model_customizations: params[:aichatModelCustomizations].to_json,
-      messages: updated_message_list(assistant_message).to_json
+      messages: updated_message_list(new_messages).to_json
     ).id
   end
 
-  private def updated_message_list(assistant_message)
-    [
-      *params[:storedMessages],
-      {role: 'user', content: params[:newMessage]},
-      assistant_message
-    ]
+  private def updated_message_list(new_messages)
+    params[:storedMessages] + new_messages
   end
 end

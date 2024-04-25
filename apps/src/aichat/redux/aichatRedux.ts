@@ -275,7 +275,6 @@ export const submitChatContents = createAsyncThunk(
       aichatContext,
       currentSessionId
     );
-    console.log('chatApiResponse', chatApiResponse);
 
     // TODO: error handling
     thunkAPI.dispatch(setChatSessionId(chatApiResponse.sessionId));
