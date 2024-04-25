@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import LevelDetailsDialog from './LevelDetailsDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
