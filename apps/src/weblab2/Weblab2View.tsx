@@ -189,22 +189,8 @@ const Weblab2View = () => {
   const configKey = {
     project: currentProject,
     config: config,
-    layout: config.gridLayout,
+    layout: config,
   };
-
-  const LayoutInstructions = () => (
-    <div>
-      You may layout a CSS grid with the following keys:
-      <ul>
-        <li>editor</li>
-        <li>instructions</li>
-        <li>preview-container</li>
-        <li>file-browser</li>
-        <li>file-tabs</li>
-        <li>side-bar</li>
-      </ul>
-    </div>
-  );
 
   return (
     <div className="app-wrapper">
@@ -226,33 +212,28 @@ const Weblab2View = () => {
           setProject={setProject}
           setConfig={setConfig}
         />
+
+        {showConfig && (
+          <Config
+            config={configKey[showConfig]}
+            setConfig={(
+              configName: string,
+              newConfig: ProjectType | ConfigType | string
+            ) => {
+              if (configName === 'project') {
+                setProject(newConfig as ProjectType);
+              } else if (configName === 'config' || configName === 'layout') {
+                (newConfig as ConfigType).EditorComponent =
+                  DefaultEditorComponent;
+                setConfig(newConfig as ConfigType);
+              }
+              setShowConfig('');
+            }}
+            cancelConfig={() => setShowConfig('')}
+            configName={showConfig}
+          />
+        )}
       </div>
-      {showConfig && (
-        <Config
-          config={configKey[showConfig]}
-          setConfig={(
-            configName: string,
-            newConfig: ProjectType | ConfigType | string
-          ) => {
-            if (configName === 'project') {
-              setProject(newConfig as ProjectType);
-            } else if (configName === 'config') {
-              (newConfig as ConfigType).EditorComponent =
-                DefaultEditorComponent;
-              setConfig(newConfig as ConfigType);
-            } else if (configName === 'layout') {
-              const updatedConfig = {...config, gridLayout: newConfig};
-              setConfig(updatedConfig as ConfigType);
-            }
-            setShowConfig('');
-          }}
-          cancelConfig={() => setShowConfig('')}
-          configName={showConfig}
-          Instructions={
-            showConfig === 'layout' ? LayoutInstructions : () => <div />
-          }
-        />
-      )}
     </div>
   );
 };
