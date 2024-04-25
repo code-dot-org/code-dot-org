@@ -39,11 +39,11 @@ Scenario: Teacher can open and close lessons and see level data cells
   # Teacher can open lesson to view level data
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
-  And I wait until element ".ui-test-1" is visible
+  And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
 
   # Teacher can close lesson so level data is no longer visible
   And I click selector "#ui-test-expanded-progress-column-header-2"
-  And element ".ui-test-1" is not visible
+  And element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is not visible
 
 Scenario: Teacher can navigate to student work by clicking level cell.
   Given I create an authorized teacher-associated student named "Sally"
@@ -56,7 +56,7 @@ Scenario: Teacher can navigate to student work by clicking level cell.
   # Teacher opens lesson data and clicks on level data cell
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
-  And I click selector ".ui-test-1" once I see it to load a new tab
+  And I click selector "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" once I see it to load a new tab
   And check that the URL contains "&user_id="
   And check that the URL contains "allthethings/lessons/2/levels/1"
 
@@ -71,11 +71,11 @@ Scenario: Teacher can open lesson data, refresh the page, and lesson data will s
   # Open a lesson to see level data
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
-  And I wait until element ".ui-test-1" is visible
+  And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
 
   # Verify the lesson is still open
   Then I reload the page
-  And I wait until element ".ui-test-1" is visible
+  And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
 
 
 @eyes
@@ -128,7 +128,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I see no difference for "needs feedback icon is displayed"
 
   # Teacher gives feedbackAnd I wait to see "#rubric-input-performanceLevel1"
-  And I click selector ".ui-test-1" once I see it to load a new tab
+  And I click selector "#ui-test-s-allthethings-lessons-38-levels-1-cell-data" once I see it to load a new tab
   And I wait to see "#ui-test-feedback-input"
   And I press the first "#ui-test-feedback-input" element
   And I press keys "Nice!" for element "#ui-test-feedback-input"
@@ -143,7 +143,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I see no difference for "feedback given icon is displayed"
 
   # Teacher can indicate student needs to keep working
-  And I click selector ".ui-test-1" once I see it to load a new tab
+  And I click selector "#ui-test-s-allthethings-lessons-38-levels-1-cell-data" once I see it to load a new tab
   And I wait to see "#ui-test-feedback-input"
   And I click selector "#keep-working" once I see it
   And I press "#ui-test-submit-feedback" using jQuery
