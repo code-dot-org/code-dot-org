@@ -29,8 +29,8 @@ section.hero-banner-basic {
       width: 100%;
       height: 100%;
       background-image: url('/images/banners/banner-bg-music.png');
-      background-repeat: repeat;
-      background-size: contain;
+      background-repeat: repeat-x;
+      background-size: cover;
       z-index: 2;
     }
   }

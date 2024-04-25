@@ -28,34 +28,52 @@ theme: responsive_full_width
     %figure
       %img{src: "/images/music-lab/music-lab-banner-graphic.png", alt: "", style: "width: 100%"}
 
-%section.bg-neutral-light
-  .wrapper.flex-container.justify-space-between.align-items-center.gap-1.wrap.flex-direction-column-mobile
-    .text-wrapper.flex-1
-      %h2.heading-lg
-        =hoc_s("music_lab.featuring_songs_by")
-      %p.no-margin-bottom ARTIST LIST HERE
-    .flex-2
-      = view :"music/music_lab_featured_artists"
+-# TODO - ADD FINAL LIST OF ARTISTS
+-# %section.bg-neutral-light
+-#   .wrapper.flex-container.justify-space-between.align-items-center.gap-1.wrap.flex-direction-column-mobile
+-#     .text-wrapper.flex-1
+-#       %h2.heading-lg
+-#         =hoc_s("music_lab.featuring_songs_by")
+-#       -# TODO - ADD STRING HERE
+-#       -# %p.no-margin-bottom
+-#     .flex-2
+-#       = view :"music/music_lab_featured_artists"
 
-%section
-  .wrapper
-    FEATURED PROJECTS TBD
+-# %section
+-#   .wrapper
+-#     TODO - FEATURED PROJECTS
 
 %section.bg-primary-light
-  .wrapper
-    AFE
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap.flex-direction-column-mobile.gap-1
+    %figure
+      %img{src: "/images/marketing/afe-logo.svg", alt: hoc_s("music_lab.amazon_future_engineer"), style: "width: 100%"}
+    .text-wrapper.centered
+      %h2.heading-lg
+        =hoc_s("music_lab.amazon.heading")
+      %p.body-two.no-margin-bottom
+        =hoc_s("music_lab.amazon.desc")
+    %a.link-button.has-external-link{href: "https://www.amazonfutureengineer.com/music"}
+      =hoc_s("music_lab.button.amazon_career_tour")
 
-%section
-  .wrapper
-    VIDEO CAROUSEL TBD
+-# %section
+-#   .wrapper
+-#     TODO - VIDEO CAROUSEL
 
-%section.quote
-  .wrapper
-    QUOTES
+-# %section.quote
+-#   .wrapper
+-#     TODO - QUOTES CAROUSEL
 
-%section
-  .wrapper
-    TUTORIAL
+-# TODO - ADD IMAGE
+-# %section
+-#   .wrapper
+-#     .flex-container.justify-space-between.align-items-center.wrap.gap-2
+-#       %figure.col-47
+-#         %img.rounded-corners{src: "", alt: "", style: "width: 100%;"}
+-#       .text-wrapper.col-47
+-#         %h2=hoc_s("music_lab.tutorial.heading")
+-#         %p=hoc_s("music_lab.tutorial.desc")
+-#         %a.link-button{href: "/music-lab/tutorial"}
+-#           =hoc_s("music_lab.tutorial.button")
 
 %section.bg-neutral-light
   .wrapper
