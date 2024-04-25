@@ -33,13 +33,13 @@ theme: responsive_full_width
     .text-wrapper.flex-1
       %h2.heading-lg
         =hoc_s("music_lab.featuring_songs_by")
-      %p ARTIST LIST HERE
+      %p.no-margin-bottom ARTIST LIST HERE
     .flex-2
       = view :"music/music_lab_featured_artists"
 
 %section
   .wrapper
-    FEATURED PROJECTS
+    FEATURED PROJECTS TBD
 
 %section.bg-primary-light
   .wrapper
@@ -47,7 +47,7 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    VIDEO CAROUSEL
+    VIDEO CAROUSEL TBD
 
 %section.quote
   .wrapper
@@ -59,7 +59,9 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    RESOURCES
+    %h2.centered
+      =hoc_s("music_lab.additional_resources.heading")
+    = view :"music/music_lab_additional_resources"
 
 %section
   .wrapper
