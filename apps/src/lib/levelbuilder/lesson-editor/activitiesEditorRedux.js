@@ -5,7 +5,7 @@ import {
   scriptLevelShape,
   tipShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 const INIT_LEVEL_SEARCHING = 'activitiesEditor/INIT_LEVEL_SEARCHING';
 const INIT_UNIT_INFO = 'activitiesEditor/INIT_COURSE_INFO';
