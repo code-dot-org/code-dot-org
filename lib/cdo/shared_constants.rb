@@ -631,6 +631,8 @@ module SharedConstants
     PII_VIOLATION: 1001,
     # Profanity Failure
     PROFANITY_VIOLATION: 1002,
+    # Request Too Large
+    REQUEST_TOO_LARGE: 1003,
   }.freeze
 
   EMAIL_LINKS = OpenStruct.new(

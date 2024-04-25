@@ -104,11 +104,13 @@ def main
     USER_TYPES
   )
 
-  generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
-  generate_shared_js_file(generate_constants('VOICES'), "#{REPO_DIR}/apps/src/util/sharedVoices.js")
-  generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
-  generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabGoalBlocks.js")
-  generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/p5lab/gamelab/sharedGamelabBlocks.js")
+  # please place all generated scripts into #{REPO_DIR}/apps/generated_scripts
+  # then import with import { needed } from "@cdo/generated-scripts/generatedFile"
+  generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/generated-scripts/sharedConstants.js")
+  generate_shared_js_file(generate_constants('VOICES'), "#{REPO_DIR}/apps/generated-scripts/sharedVoices.js")
+  generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedApplabBlocks.js")
+  generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedApplabGoalBlocks.js")
+  generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedGamelabBlocks.js")
 
   generate_shared_js_file(
     generate_multiple_constants(

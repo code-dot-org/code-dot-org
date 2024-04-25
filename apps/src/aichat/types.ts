@@ -6,11 +6,14 @@ export type ChatCompletionMessage = {
   chatMessageText: string;
   status: AichatInteractionStatus;
   timestamp?: string;
+  // sessionId is the Rails-side identifier for the logging session to which this message belongs.
+  // It can be missing a) if the session has been reset because a model customization has changed (or chat history has been reset),
+  // or for model update messages that do not need to be sent to the server.
+  sessionId?: number;
 };
 
-export type ChatContext = {
-  userId: number;
-  currentLevelId: string | null;
+export type AichatContext = {
+  currentLevelId: number | null;
   scriptId: number | null;
   channelId: string | undefined;
 };
@@ -52,7 +55,7 @@ export interface AichatLevelProperties extends LevelProperties {
   aichatSettings?: LevelAichatSettings;
 }
 
-/** AI customizations for student chat bots
+/** Model customizations and model card information for aichat levels.
  *  selectedModelId is a foreign key to ModelDescription.id */
 export interface AiCustomizations {
   selectedModelId: string;
@@ -62,7 +65,9 @@ export interface AiCustomizations {
   modelCardInfo: ModelCardInfo;
 }
 
-export type AichatParameters = Omit<AiCustomizations, 'modelCardInfo'>;
+// Model customizations sent to backend for aichat levels - excludes modelCardInfo.
+// The customizations will be included in request to LLM endpoint.
+export type AichatModelCustomizations = Omit<AiCustomizations, 'modelCardInfo'>;
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {
@@ -72,6 +77,7 @@ export interface ModelCardInfo {
   limitationsAndWarnings: string;
   testingAndEvaluation: string;
   exampleTopics: string[];
+  isPublished: boolean;
 }
 
 /** Metadata about a given model, common across all aichat levels */

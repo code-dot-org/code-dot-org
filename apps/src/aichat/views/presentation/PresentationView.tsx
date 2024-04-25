@@ -17,8 +17,11 @@ const PresentationView: React.FunctionComponent = () => {
   const {selectedModelId, systemPrompt, temperature, retrievalContexts} =
     savedAiCustomizations;
   const modelCardInfo = savedAiCustomizations.modelCardInfo;
-  const {name: modelName = '', trainingData = ''} =
-    modelDescriptions.find(model => model.id === selectedModelId) ?? {};
+  const {
+    name: modelName = '',
+    trainingData = '',
+    overview = '',
+  } = modelDescriptions.find(model => model.id === selectedModelId) ?? {};
 
   const technicalInfo = useMemo(() => {
     const technicalInfoData: {
@@ -28,6 +31,7 @@ const PresentationView: React.FunctionComponent = () => {
         | boolean;
     } = {
       'Model Name': modelName,
+      Overview: overview,
       'Training Data': trainingData,
       'System Prompt': systemPrompt,
       Temperature: temperature,
@@ -40,7 +44,14 @@ const PresentationView: React.FunctionComponent = () => {
       return `${field}: ${technicalInfoData[field]}`;
     });
     return technicalInfo;
-  }, [retrievalContexts, systemPrompt, temperature, modelName, trainingData]);
+  }, [
+    retrievalContexts,
+    systemPrompt,
+    temperature,
+    modelName,
+    overview,
+    trainingData,
+  ]);
 
   return (
     <div className={styles.verticalFlexContainer}>
@@ -49,7 +60,7 @@ const PresentationView: React.FunctionComponent = () => {
           {modelCardInfo['botName']}
         </Heading4>
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, iconName]) => {
-          if (property === 'botName') {
+          if (property === 'botName' || property === 'isPublished') {
             return null;
           }
           return (

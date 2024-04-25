@@ -12,7 +12,7 @@ import {
   getBubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import CachedElement from '@cdo/apps/util/CachedElement';
-import {LevelKind} from '@cdo/apps/util/sharedConstants';
+import {LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 import {levelProgressStyle} from '../../progress/progressStyles';
 

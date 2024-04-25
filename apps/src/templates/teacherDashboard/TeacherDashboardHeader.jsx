@@ -3,14 +3,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
+import Link from '@cdo/apps/componentLibrary/link';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
 import Notification, {NotificationType} from '../Notification';
-import SmallChevronLink from '../SmallChevronLink';
 
 import FontAwesome from './../FontAwesome';
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
@@ -21,12 +21,15 @@ import {
   sortedSectionsList,
 } from './teacherSectionsRedux';
 
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
+
 function TeacherDashboardHeader({
   sections,
   selectedSection,
   assignmentName,
   openEditSectionDialog,
   asyncLoadCourseOfferings,
+  isRtl,
 }) {
   React.useEffect(() => {
     asyncLoadCourseOfferings();
@@ -88,32 +91,43 @@ function TeacherDashboardHeader({
   };
 
   return (
-    <div style={styles.headerContainer}>
-      <SmallChevronLink
-        href="/home#classroom-sections"
-        text={i18n.viewAllSections()}
-        iconBefore
-        style={styles.linkPadding}
-      />
+    <div className={dashboardStyles.headerContainer}>
+      <div className={dashboardStyles.headerLink}>
+        <a
+          href="/home#classroom-sections"
+          className={dashboardStyles.headerLinkChevron}
+        >
+          <FontAwesome
+            icon="chevron-left"
+            className={isRtl ? 'fa-flip-horizontal' : undefined}
+            style={{textDecoration: 'none'}}
+            aria-label={i18n.viewAllSections()}
+          />
+        </a>
+        <Link type="primary" size="s" href="/home#classroom-sections">
+          {i18n.viewAllSections()}
+        </Link>
+      </div>
       {lockedSectionNotification({
         restrictSection: selectedSection.restrictSection,
         loginType: selectedSection.loginType,
       })}
       {selectedSection.postMilestoneDisabled && progressNotSavingNotification()}
-      <div style={styles.header}>
+      <div className={dashboardStyles.header}>
         <div>
           <h1>{selectedSection.name}</h1>
           {assignmentName && (
-            <div id="assignment-name">
-              <span style={styles.sectionPrompt}>
-                {i18n.assignedToWithColon()}{' '}
-              </span>
+            <div
+              id="assignment-name"
+              className={dashboardStyles.headerCurriculum}
+            >
+              <span>{i18n.assignedToWithColon()} </span>
               {assignmentName}
             </div>
           )}
         </div>
-        <div style={styles.rightColumn}>
-          <div style={styles.buttonSection}>
+        <div className={dashboardStyles.headerRightColumn}>
+          <div className={dashboardStyles.headerButtonSection}>
             <Button
               __useDeprecatedTag
               href={editRedirectUrl(selectedSection.id)}
@@ -144,34 +158,13 @@ TeacherDashboardHeader.propTypes = {
   openEditSectionDialog: PropTypes.func.isRequired,
   assignmentName: PropTypes.string,
   asyncLoadCourseOfferings: PropTypes.func.isRequired,
+  isRtl: PropTypes.bool,
 };
 
 const styles = {
-  sectionPrompt: {
-    fontWeight: 'bold',
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginBottom: '5px',
-  },
-  rightColumn: {
-    display: 'flex',
-    flexDirection: 'column-reverse',
-  },
-  buttonSection: {
-    display: 'flex',
-    marginBottom: 5,
-  },
   buttonWithMargin: {
     margin: 0,
-    marginRight: 5,
-  },
-  linkPadding: {
-    padding: '10px 0',
-  },
-  headerContainer: {
-    padding: '0 64px',
+    marginInlineEnd: 5,
   },
 };
 
@@ -191,6 +184,7 @@ export default connect(
       state,
       state.teacherSections.selectedSectionId
     ),
+    isRtl: state.isRtl,
   }),
   dispatch => {
     return {

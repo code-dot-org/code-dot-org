@@ -587,6 +587,7 @@ class ActionController::TestCase
 end
 
 class ActionDispatch::IntegrationTest
+  include ActiveJob::TestHelper
   include Devise::Test::IntegrationHelpers
 
   setup do

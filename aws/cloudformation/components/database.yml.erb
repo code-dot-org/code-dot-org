@@ -131,7 +131,9 @@
         # https://github.com/code-dot-org/code-dot-org/blob/654d0cf90dd65848fdd045df3b9e4f85903d9f68/pegasus/test/fixtures/fake_dashboard.rb#L257-L271
         # Disable binary logging to improve write performance.
         binlog_format: 'OFF'
-        gtid-mode: ON_PERMISSIVE
+        gtid-mode: 'ON'
+        enforce_gtid_consistency: 'ON'
+
         innodb_autoinc_lock_mode: 2
         #END: Static configuration settings.
 
@@ -181,7 +183,9 @@
         # https://github.com/code-dot-org/code-dot-org/blob/654d0cf90dd65848fdd045df3b9e4f85903d9f68/pegasus/test/fixtures/fake_dashboard.rb#L257-L271
         # Disable binary logging to improve write performance.
         binlog_format: 'OFF'
-        gtid-mode: ON_PERMISSIVE
+        gtid-mode: 'ON'
+        enforce_gtid_consistency: 'ON'
+
         innodb_autoinc_lock_mode: 2
         #END: Static configuration settings.
 
@@ -351,7 +355,7 @@
       DBInstanceClass: !Ref DBInstanceType
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
-      # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
+      DBParameterGroupName: default.aurora-mysql5.7 #Explicitly stop setting a custom Instance ParameterGroup.
 <%    end -%>
 
   DBProxy:

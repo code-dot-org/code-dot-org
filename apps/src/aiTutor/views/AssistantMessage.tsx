@@ -1,12 +1,9 @@
 import React, {useState} from 'react';
 import classNames from 'classnames';
 
-import {
-  ChatCompletionMessage,
-  AITutorInteractionStatus as Status,
-} from '@cdo/apps/aiTutor/types';
+import {ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import Button from '@cdo/apps/templates/Button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 
 import {saveFeedback, FeedbackData} from '../interactionsApi';
 import style from './chat-workspace.module.scss';
@@ -29,6 +26,8 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
       return;
     }
 
+    // This logic allows the user to "ungive" feedback by clicking the same button again
+    // If the user "ungives" all feedback, a row with null values will persist in the database
     const feedbackData = {
       thumbsUp: thumbsUp ? (feedbackState.thumbsUp ? null : true) : null,
       thumbsDown: thumbsUp ? null : feedbackState.thumbsDown ? null : true,
@@ -46,8 +45,7 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
     message.id &&
     message.status !== Status.PROFANITY_VIOLATION &&
     message.status !== Status.PII_VIOLATION;
-  console.log('message', message);
-  console.log('message.status', message.status);
+
   return (
     <div className={style.assistantMessageContainer}>
       <Typography semanticTag="h5" visualAppearance="heading-xs">
@@ -63,26 +61,24 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
         {shouldRenderFeedbackButtons && (
           <>
             <Button
+              className={style.hamburgerMenuButton}
+              color={buttonColors.black}
+              disabled={false}
+              icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
+              isIconOnly={true}
               onClick={() => handleFeedbackSubmission(true, message.id)}
-              color={
-                feedbackState.thumbsUp
-                  ? Button.ButtonColor.green
-                  : Button.ButtonColor.white
-              }
-              icon="thumbs-up"
-              className={style.hamburgerMenuButton}
-              disabled={false}
+              size="xs"
+              type={feedbackState.thumbsUp ? 'primary' : 'tertiary'}
             />
-            <Button
-              onClick={() => handleFeedbackSubmission(false, message.id)}
-              color={
-                feedbackState.thumbsDown
-                  ? Button.ButtonColor.red
-                  : Button.ButtonColor.white
-              }
-              icon="thumbs-down"
+           <Button
               className={style.hamburgerMenuButton}
+              color={buttonColors.black}
               disabled={false}
+              icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
+              isIconOnly={true}
+              onClick={() => handleFeedbackSubmission(false, message.id)}
+              size="xs"
+              type={feedbackState.thumbsDown ? 'primary' : 'tertiary'}
             />
           </>
         )}

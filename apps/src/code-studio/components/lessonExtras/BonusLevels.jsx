@@ -26,22 +26,22 @@ class BonusLevels extends React.Component {
   }
 
   nextLesson = () => {
-    if (!this.isRightArrowDisabled()) {
+    if (!this.isNextArrowDisabled()) {
       this.setState({lessonIndex: this.state.lessonIndex + 1});
     }
   };
 
   previousLesson = () => {
-    if (!this.isLeftArrowDisabled()) {
+    if (!this.isPreviousArrowDisabled()) {
       this.setState({lessonIndex: this.state.lessonIndex - 1});
     }
   };
 
-  isLeftArrowDisabled = () => {
+  isPreviousArrowDisabled = () => {
     return this.state.lessonIndex === 0;
   };
 
-  isRightArrowDisabled = () => {
+  isNextArrowDisabled = () => {
     return this.state.lessonIndex === this.props.bonusLevels.length - 1;
   };
 
@@ -52,10 +52,11 @@ class BonusLevels extends React.Component {
     const previousNumLessons = this.props.bonusLevels.filter(
       lesson => lesson.lessonNumber < currLessonNum
     ).length;
-    const scrollAmount = -1 * previousNumLessons * CARD_AREA_SIZE;
+    const directionFactor = document.dir === 'rtl' ? 1 : -1;
+    const scrollAmount = directionFactor * previousNumLessons * CARD_AREA_SIZE;
 
-    const leftDisabled = this.isLeftArrowDisabled();
-    const rightDisabled = this.isRightArrowDisabled();
+    const previousDisabled = this.isPreviousArrowDisabled();
+    const nextDisabled = this.isNextArrowDisabled();
 
     return (
       <div>
@@ -66,9 +67,9 @@ class BonusLevels extends React.Component {
         </h2>
         <div style={styles.scroller}>
           <RadiumFontAwesome
-            icon="caret-left"
+            icon={document.dir === 'rtl' ? 'caret-right' : 'caret-left'}
             onClick={this.previousLesson}
-            style={[styles.arrow, leftDisabled && styles.arrowDisabled]}
+            style={[styles.arrow, previousDisabled && styles.arrowDisabled]}
           />
           <div
             style={{
@@ -100,9 +101,9 @@ class BonusLevels extends React.Component {
             ))}
           </div>
           <RadiumFontAwesome
-            icon="caret-right"
+            icon={document.dir === 'rtl' ? 'caret-left' : 'caret-right'}
             onClick={this.nextLesson}
-            style={[styles.arrow, rightDisabled && styles.arrowDisabled]}
+            style={[styles.arrow, nextDisabled && styles.arrowDisabled]}
           />
         </div>
       </div>

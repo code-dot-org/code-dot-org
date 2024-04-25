@@ -44,6 +44,8 @@ export default function RubricTabButtons({
         return i18n.aiEvaluationStatus_pii_error();
       case STATUS.PROFANITY_ERROR:
         return i18n.aiEvaluationStatus_profanity_error();
+      case STATUS.REQUEST_TOO_LARGE:
+        return i18n.aiEvaluationStatus_request_too_large();
     }
   };
 

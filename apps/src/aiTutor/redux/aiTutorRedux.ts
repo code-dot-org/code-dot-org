@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {systemPrompt as baseSystemPrompt} from '@cdo/apps/aiTutor/constants';
@@ -152,15 +153,9 @@ const aiTutorSlice = createSlice({
       action: PayloadAction<Partial<ChatCompletionMessage>>
     ) => {
       if (state.chatMessages.length > 0) {
-        const lastMessage = state.chatMessages[state.chatMessages.length - 1];
-        const payloadKeys = Object.keys(action.payload) as Array<
-          keyof ChatCompletionMessage
-        >;
-
-        payloadKeys.forEach(key => {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (lastMessage as any)[key] = action.payload[key];
-        });
+        const index = state.chatMessages.length - 1;
+        const lastMessage = state.chatMessages[index];
+        state.chatMessages[index] = _.merge({}, lastMessage, action.payload);
       }
     },
   },

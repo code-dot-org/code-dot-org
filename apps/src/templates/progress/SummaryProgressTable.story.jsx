@@ -1,6 +1,6 @@
 import React from 'react';
 import {UnconnectedSummaryProgressTable as SummaryProgressTable} from './SummaryProgressTable';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
