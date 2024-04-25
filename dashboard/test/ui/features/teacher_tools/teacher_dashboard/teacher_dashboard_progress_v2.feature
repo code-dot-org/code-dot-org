@@ -8,14 +8,9 @@ Scenario: Teacher can open and close Icon Key and details
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
-  And I wait until element "#uitest-teacher-dashboard-nav" is visible
-  And check that the URL contains "/teacher_dashboard/sections/"
-  And I wait until element "#uitest-course-dropdown" is visible
-  Then I append "/?enableExperiments=section_progress_v2" to the URL
-
+  And I navigate to the V2 progress dashboard
+  
   # toggle to V2 progress view
-  Then I click selector "#ui-test-toggle-progress-view"
   And I wait until element "h6:contains(Icon Key)" is visible
   And I wait until element "#ui-test-progress-table-v2" is visible
   And element "#ui-test-progress-table-v2" is visible 
@@ -36,18 +31,10 @@ Scenario: Teacher can open and close Icon Key and details
 Scenario: Teacher can open and close lessons and see level data cells
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-
+    
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
-  And I wait until element "#uitest-teacher-dashboard-nav" is visible
-  And check that the URL contains "/teacher_dashboard/sections/"
-  And I wait until element "#uitest-course-dropdown" is visible
-  Then I append "/?enableExperiments=section_progress_v2" to the URL
-
-  # toggle to V2 progress view
-  Then I click selector "#ui-test-toggle-progress-view"
-  And element "#ui-test-progress-table-v2" is visible 
+  And I navigate to the V2 progress dashboard
 
   # Teacher can open lesson to view level data
   And I wait until element "#ui-test-lesson-header-2" is visible
@@ -61,18 +48,10 @@ Scenario: Teacher can open and close lessons and see level data cells
 Scenario: Teacher can navigate to student work by clicking level cell.
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-
+    
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
-  And I wait until element "#uitest-teacher-dashboard-nav" is visible
-  And check that the URL contains "/teacher_dashboard/sections/"
-  And I wait until element "#uitest-course-dropdown" is visible
-  Then I append "/?enableExperiments=section_progress_v2" to the URL
-
-  # toggle to V2 progress view
-  Then I click selector "#ui-test-toggle-progress-view"
-  And element "#ui-test-progress-table-v2" is visible 
+  And I navigate to the V2 progress dashboard
 
   # Teacher opens lesson data and clicks on level data cell
   And I wait until element "#ui-test-lesson-header-2" is visible
@@ -84,18 +63,10 @@ Scenario: Teacher can navigate to student work by clicking level cell.
 Scenario: Teacher can open lesson data, refresh the page, and lesson data will still be shown
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-
+    
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
-  And I wait until element "#uitest-teacher-dashboard-nav" is visible
-  And check that the URL contains "/teacher_dashboard/sections/"
-  And I wait until element "#uitest-course-dropdown" is visible
-  Then I append "/?enableExperiments=section_progress_v2" to the URL
-
-  # toggle to V2 progress view
-  Then I click selector "#ui-test-toggle-progress-view"
-  And element "#ui-test-progress-table-v2" is visible 
+  And I navigate to the V2 progress dashboard
 
   # Open a lesson to see level data
   And I wait until element "#ui-test-lesson-header-2" is visible
@@ -125,16 +96,7 @@ Scenario: Teacher can view lesson progress for when students have completed a le
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
-  And I wait until element "#uitest-teacher-dashboard-nav" is visible
-  And check that the URL contains "/teacher_dashboard/sections/"
-  And I wait until element "#uitest-course-dropdown" is visible
-  Then I append "/?enableExperiments=section_progress_v2" to the URL
-
-  # toggle to V2 progress view
-  Then I click selector "#ui-test-toggle-progress-view"
-  And I wait until element "#ui-test-progress-table-v2" is visible
-  And element "#ui-test-progress-table-v2" is visible 
+  And I navigate to the V2 progress dashboard
   And I wait until element "#uitest-circle" is visible
 
   And I open my eyes to test "V2 progress dashboard"
@@ -157,14 +119,9 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   # Teacher sees "needs feedback" in the table
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
-  And I wait until element "#uitest-teacher-dashboard-nav" is visible
-  And check that the URL contains "/teacher_dashboard/sections/"
-  And I wait until element "#uitest-course-dropdown" is visible
-  Then I append "/?enableExperiments=section_progress_v2" to the URL
+  And I navigate to the V2 progress dashboard
 
   # Check that the needs feedback icon is present
-  Then I click selector "#ui-test-toggle-progress-view"
   And I wait until element "#ui-test-lesson-header-1" is visible
   And I scroll to "#ui-test-lesson-header-38"
   And I click selector "#ui-test-lesson-header-38"
