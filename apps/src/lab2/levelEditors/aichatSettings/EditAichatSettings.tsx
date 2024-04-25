@@ -23,6 +23,7 @@ import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
+import ModelSelectionFields from './ModelSelectionFields';
 import VisibilityDropdown from './VisibilityDropdown';
 import {UpdateContext} from './UpdateContext';
 import moduleStyles from './edit-aichat-settings.module.scss';
@@ -88,6 +89,23 @@ const EditAichatSettings: React.FunctionComponent<{
     [aichatSettings, setAichatSettings, initialCustomizations]
   );
 
+  const setModelSelectionValues = useCallback(
+    (additionalModelIds: string[], selectedModelId: string) => {
+      const availableModelIds = Array.from(
+        new Set(additionalModelIds).add(selectedModelId)
+      );
+      setAichatSettings({
+        ...aichatSettings,
+        availableModelIds,
+        initialCustomizations: {
+          ...aichatSettings.initialCustomizations,
+          selectedModelId,
+        },
+      });
+    },
+    [aichatSettings, setAichatSettings]
+  );
+
   return (
     <UpdateContext.Provider
       value={{
@@ -95,6 +113,7 @@ const EditAichatSettings: React.FunctionComponent<{
         setPropertyVisibility,
         setPropertyValue,
         setModelCardPropertyValue,
+        setModelSelectionValues,
       }}
     >
       <div>
@@ -114,6 +133,7 @@ const EditAichatSettings: React.FunctionComponent<{
           <br />
           <b>Hidden:</b> the field is not shown on the customization panel.
         </BodyThreeText>
+        <ModelSelectionFields />
         <FieldSection
           fieldName="temperature"
           labelText="Temperature"
