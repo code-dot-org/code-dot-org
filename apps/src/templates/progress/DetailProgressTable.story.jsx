@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import DetailProgressTable from './DetailProgressTable';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,

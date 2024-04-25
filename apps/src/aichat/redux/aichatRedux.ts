@@ -247,8 +247,7 @@ export const submitChatContents = createAsyncThunk(
     } = state.aichat;
 
     const aichatContext: AichatContext = {
-      userId: state.currentUser.userId,
-      currentLevelId: state.progress.currentLevelId,
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
@@ -273,7 +272,8 @@ export const submitChatContents = createAsyncThunk(
           )
         : [],
       aiCustomizations,
-      aichatContext
+      aichatContext,
+      currentSessionId
     );
     console.log('chatApiResponse', chatApiResponse);
 
