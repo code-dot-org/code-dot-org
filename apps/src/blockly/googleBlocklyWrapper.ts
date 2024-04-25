@@ -784,6 +784,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return workspace;
   };
 
+  // Used by StudioApp to tell Blockly to resize for Mobile Safari.
+  blocklyWrapper.fireUiEvent = function (element, eventName) {
+    if (eventName === 'resize') {
+      blocklyWrapper.svgResize(blocklyWrapper.mainBlockSpace);
+    }
+  };
+
   blocklyWrapper.setMainWorkspace = function (mainWorkspace) {
     this.mainWorkspace = mainWorkspace;
   };

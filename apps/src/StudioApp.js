@@ -2941,7 +2941,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // https://openradar.appspot.com/31725316
   // Resize the Blockly workspace after 500ms when clientWidth/Height
   // should be correct.
-  window.setTimeout(() => Blockly.svgResize(Blockly.mainBlockSpace), 500);
+  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
 };
 
 /**
