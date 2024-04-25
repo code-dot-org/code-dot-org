@@ -52,13 +52,13 @@ export default class MusicPlayer {
     audioPlayer?: AudioPlayer,
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
-    if (appConfig.getValue('player') === 'tonejs') {
-      console.log('[MusicPlayer] Using ToneJSPlayer');
-      this.audioPlayer = new ToneJSPlayer() || audioPlayer;
-    } else {
+    if (appConfig.getValue('player') === 'sample') {
       console.log('[MusicPlayer] Using SamplePlayer');
       this.audioPlayer =
         new SamplePlayerWrapper(new SamplePlayer()) || audioPlayer;
+    } else {
+      console.log('[MusicPlayer] Using ToneJSPlayer');
+      this.audioPlayer = new ToneJSPlayer() || audioPlayer;
     }
     this.metricsReporter = metricsReporter;
     this.updateConfiguration(bpm, key);
