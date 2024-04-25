@@ -1013,7 +1013,6 @@ Dashboard::Application.routes.draw do
     # @see http://guides.rubyonrails.org/routing.html#specifying-constraints
     get '/dashboardapi/v1/districtsearch/:q/:limit', to: 'api/v1/school_districts#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
     get '/dashboardapi/v1/schoolsearch/:q/:limit(/:use_new_search)', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
-    get '/dashboardapi/v1/schoolzipsearch/:zip', to: 'api/v1/schools#zip_search', defaults: {format: 'json'}, constraints: {zip: /\d{5}/}
 
     get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
@@ -1133,7 +1132,9 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
 
-    resources :ai_tutor_interactions, only: [:create, :index]
+    resources :ai_tutor_interactions, only: [:create, :index] do
+      resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
+    end
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
