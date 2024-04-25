@@ -49,7 +49,7 @@ module Metrics
           event_name: event_name,
           event_value: event_value,
           metadata: metadata,
-      }.compact
+        }.compact
         puts "Logging Event: #{event_details.to_json}"
       end
     end
