@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
-import {EnrolledWorkshops} from './EnrolledWorkshops';
+import {EnrolledWorkshops, EnrolledWorkshopsTable} from './EnrolledWorkshops';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
@@ -75,6 +75,9 @@ function LandingPage({
   deeperLearningCourseData,
   currentYearApplicationId,
   workshopsAsParticipant,
+  workshopsAsFacilitator,
+  workshopsAsOrganizer,
+  workshopsAsRegionalPartner,
   plCoursesStarted,
   userPermissions,
   joinedStudentSections,
@@ -144,14 +147,6 @@ function LandingPage({
     );
   };
 
-  const RenderEnrolledWorkshops = () => {
-    return (
-      <section>
-        <EnrolledWorkshops />
-      </section>
-    );
-  };
-
   const RenderStaticRecommendedPL = () => {
     const actionBlocks = [
       {
@@ -216,7 +211,9 @@ function LandingPage({
           isTeacher={true}
           isPlSections={true}
         />
-        {RenderEnrolledWorkshops()}
+        <section>
+          <EnrolledWorkshops />
+        </section>
         {deeperLearningCourseData?.length >= 1 && (
           <section>
             <Heading2>Online Professional Learning Courses</Heading2>
@@ -238,7 +235,12 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         {RenderOwnedPlSections()}
-        {RenderEnrolledWorkshops()}
+        {workshopsAsFacilitator?.length > 0 && (
+          <EnrolledWorkshopsTable
+            workshops={workshopsAsFacilitator}
+            forMyPlPage={true}
+          />
+        )}
       </>
     );
   };
@@ -251,7 +253,12 @@ function LandingPage({
     return (
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
-        {RenderEnrolledWorkshops()}
+        {workshopsAsRegionalPartner?.length > 0 && (
+          <EnrolledWorkshopsTable
+            workshops={workshopsAsRegionalPartner}
+            forMyPlPage={true}
+          />
+        )}
       </>
     );
   };
@@ -260,7 +267,12 @@ function LandingPage({
     return (
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
-        {RenderEnrolledWorkshops()}
+        {workshopsAsOrganizer?.length > 0 && (
+          <EnrolledWorkshopsTable
+            workshops={workshopsAsOrganizer}
+            forMyPlPage={true}
+          />
+        )}
       </>
     );
   };
@@ -306,6 +318,9 @@ LandingPage.propTypes = {
   deeperLearningCourseData: PropTypes.array,
   currentYearApplicationId: PropTypes.number,
   workshopsAsParticipant: PropTypes.array,
+  workshopsAsFacilitator: PropTypes.array,
+  workshopsAsOrganizer: PropTypes.array,
+  workshopsAsRegionalPartner: PropTypes.array,
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),

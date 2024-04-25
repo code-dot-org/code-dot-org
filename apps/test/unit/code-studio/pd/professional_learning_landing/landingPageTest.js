@@ -14,12 +14,35 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
 
+const TEST_WORKSHOP = {
+  id: 1,
+  course: 'Test Course 1',
+  subject: 'Test Subject',
+  dates: '1/1/2000',
+  location: 'Address 111',
+  sessions: [],
+  location_name: '111',
+  location_address: 'Address 111',
+  on_map: false,
+  funded: false,
+  virtual: false,
+  enrolled_teacher_count: 0,
+  capacity: 1,
+  facilitators: ['Mx. Facilitator'],
+  organizer: {name: 'Mx. Organizer'},
+  enrollment_code: 'ABCD',
+  status: 'Not Started',
+};
+
 const DEFAULT_PROPS = {
   lastWorkshopSurveyUrl: 'url',
   lastWorkshopSurveyCourse: 'CS Fundamentals',
   deeperLearningCourseData: [{data: 'oh yeah'}],
   currentYearApplicationId: 2024,
   workshopsAsParticipant: [{data: 'workshops'}],
+  workshopsAsFacilitator: [],
+  workshopsAsOrganizer: [],
+  workshopsAsRegionalPartner: [],
   plCoursesStarted: selfPacedCourseConstants,
   userPermissions: [],
   joinedStudentSections: [],
@@ -235,6 +258,7 @@ describe('LandingPage', () => {
   it('page shows expected sections in Facilitator Center tab', () => {
     renderDefault({
       userPermissions: ['facilitator'],
+      workshopsAsFacilitator: [TEST_WORKSHOP],
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabFacilitatorCenter()));
 
@@ -244,8 +268,8 @@ describe('LandingPage', () => {
     // Instructor Professional Learning sections table
     screen.getByText(i18n.plSectionsInstructorTitle());
 
-    // Enrolled workshops table
-    screen.getByTestId('enrolled-workshops-loader');
+    // Facilitated workshop table
+    screen.getByText('My Workshops');
   });
 
   it('page shows expected sections in Instructor Center tab (for universal instructor)', () => {
@@ -271,22 +295,24 @@ describe('LandingPage', () => {
   it('page shows expected sections in Regional Partner Center tab', () => {
     renderDefault({
       userPermissions: ['program_manager'],
+      workshopsAsRegionalPartner: [TEST_WORKSHOP],
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabRPCenter()));
 
-    // Enrolled workshops table
-    screen.getByTestId('enrolled-workshops-loader');
+    // Regional Partner workshop table
+    screen.getByText('My Workshops');
   });
 
   it('page shows expected sections in Workshop Organizer Center tab', () => {
     renderDefault({
       userPermissions: ['workshop_organizer'],
+      workshopsAsOrganizer: [TEST_WORKSHOP],
     });
     fireEvent.click(
       screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter())
     );
 
-    // Enrolled workshops table
-    screen.getByTestId('enrolled-workshops-loader');
+    // Workshop Organizer workshop table
+    screen.getByText('My Workshops');
   });
 });
