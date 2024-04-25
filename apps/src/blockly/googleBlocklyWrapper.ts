@@ -76,7 +76,6 @@ import {
   adjustCalloutsOnViewportChange,
   disableOrphans,
   reflowToolbox,
-  resizeWorkspaceOnLoad,
   updateBlockLimits,
 } from './eventHandlers';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
@@ -731,8 +730,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       ?.getWorkspace()
       ?.addChangeListener(adjustCalloutsOnViewportChange);
 
-    workspace.addChangeListener(resizeWorkspaceOnLoad);
-
     initializeScrollbarPair(workspace);
 
     window.addEventListener('resize', reflowToolbox);
@@ -785,13 +782,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
 
     return workspace;
-  };
-
-  // Used by StudioApp to tell Blockly to resize for Mobile Safari.
-  blocklyWrapper.fireUiEvent = function (element, eventName) {
-    if (eventName === 'resize') {
-      blocklyWrapper.svgResize(blocklyWrapper.mainBlockSpace);
-    }
   };
 
   blocklyWrapper.setMainWorkspace = function (mainWorkspace) {
