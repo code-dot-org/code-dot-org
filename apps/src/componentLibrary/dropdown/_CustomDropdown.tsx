@@ -29,8 +29,6 @@ export interface CustomDropdownProps {
   size: ComponentSizeXSToL;
   /** CustomDropdown disabled state */
   disabled?: boolean;
-  /** CustomDropdown readOnly state */
-  readOnly?: boolean;
   /** CustomDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
@@ -57,7 +55,6 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   isSomeValueSelected = false,
   icon,
   disabled = false,
-  readOnly = false,
   color = dropdownColors.black,
   size = 'm',
 }) => {
@@ -121,15 +118,12 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       <button
         id={`${name}-dropdown-button`}
         type="button"
-        className={classNames(
-          moduleStyles.dropdownButton,
-          readOnly && moduleStyles.readOnlyDropdownButton
-        )}
+        className={moduleStyles.dropdownButton}
         data-toggle="dropdown"
         aria-haspopup={true}
         aria-label={`${name} filter dropdown`}
         onClick={toggleDropdown}
-        disabled={disabled || readOnly}
+        disabled={disabled}
       >
         {isSomeValueSelected && (
           <FontAwesomeV6Icon iconName="check-circle" iconStyle="solid" />

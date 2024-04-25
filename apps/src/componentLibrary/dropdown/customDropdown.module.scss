@@ -214,13 +214,6 @@
       .dropdownLabel {
         color: $light_gray_200;
       }
-
-      &.readOnlyDropdownButton {
-        i:first-child, .dropdownLabel {
-          color: $light_black;
-          opacity: 1;
-        }
-      }
     }
 
     .dropdownLabel {
@@ -261,13 +254,6 @@
 
       .dropdownLabel {
         color: $light_gray_900;
-      }
-
-      &.readOnlyDropdownButton {
-        i:first-child, .dropdownLabel {
-          color: $light_white;
-          opacity: 1;
-        }
       }
     }
   }
