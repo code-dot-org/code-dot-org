@@ -2,7 +2,6 @@ import React, {memo, useCallback, useMemo} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import Link from '@cdo/apps/componentLibrary/link';
 import commonI18n from '@cdo/locale';
 import codeOrgLogo from '@cdo/static/code-dot-org-white-logo.svg';
 
@@ -54,7 +53,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
       <div className={moduleStyles.musicPlayViewCard}>
         <img src={codeOrgLogo} alt="Code.org" />
         <Heading2>{projectName}</Heading2>
-        <BodyTwoText>Built on Music Lab</BodyTwoText>
+        <BodyTwoText>Built with Music Lab</BodyTwoText>
 
         <div className={moduleStyles.musicPlayViewPlaySection}>
           <Button
