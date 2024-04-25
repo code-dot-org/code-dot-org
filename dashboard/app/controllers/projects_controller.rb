@@ -310,7 +310,7 @@ class ProjectsController < ApplicationController
     )
   end
 
-  # GET /projects(/script/:script_id)/level/:level_id/:user_id
+  # GET /projects(/script/:script_id)/level/:level_id(/user/:user_id)
   # Given a level_id and the current user (or signed out user), get the existing project
   # or create a new project for that level and user. If a script_id is provided, get or
   # create the project for that level, script and user
@@ -318,12 +318,14 @@ class ProjectsController < ApplicationController
   def get_or_create_for_level
     script_id = params[:script_id]
     level = Level.find(params[:level_id])
+    user_id = params[:user_id]
     error_message = under_13_without_tos_teacher?(level)
     return render(status: :forbidden, json: {error: error_message}) if error_message
     # get_storage_id works for signed out users as well, it uses the cookie to determine
     # the storage id.
-    user_storage_id = if params[:user_id]
-                        get_storage_ids_by_user_ids(params[:user_id])[params[:user_id].to_i]
+    user_storage_id = if user_id
+                        # todo: handle this not finding a valid storage id
+                        storage_id_for_user_id(user_id)
                       else
                         get_storage_id
                       end

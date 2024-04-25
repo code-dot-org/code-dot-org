@@ -15,7 +15,9 @@ export async function getChannelForLevel(
     requestString += `script/${scriptId}/`;
   }
   requestString += `level/${levelId}`;
-  requestString += `/${userId}`;
+  if (userId !== '') {
+    requestString += `/user/${userId}`;
+  }
   return fetch(requestString);
 }
 
