@@ -68,6 +68,12 @@ const defaultConfig: ConfigType = {
     },
   ],
   instructions: 'Welcome to Python Lab!',
+  gridLayoutRows: '100px 32px auto',
+  gridLayout: `
+    "instructions instructions preview-container"
+    "side-bar file-tabs preview-container"
+    "file-browser editor preview-container"
+  `,
 };
 
 const PythonlabView: React.FunctionComponent = () => {
