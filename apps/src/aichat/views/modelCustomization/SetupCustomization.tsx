@@ -33,9 +33,10 @@ const SetupCustomization: React.FunctionComponent = () => {
     systemPrompt,
     selectedModelId = DEFAULT_VISIBILITIES.selectedModelId,
   } = useAppSelector(state => state.aichat.fieldVisibilities);
-  const aiCustomizations = useAppSelector(
-    state => state.aichat.currentAiCustomizations
-  );
+  const {
+    hasChangedAiCustomizations,
+    currentAiCustomizations: aiCustomizations,
+  } = useAppSelector(state => state.aichat);
 
   const availableModelIds = useAppSelector(
     state =>
@@ -171,7 +172,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.footerButtonContainer}>
         <Button
           text="Update"
-          disabled={allFieldsDisabled}
+          disabled={allFieldsDisabled || !hasChangedAiCustomizations}
           iconLeft={{iconName: 'edit'}}
           onClick={onUpdate}
           className={styles.updateButton}

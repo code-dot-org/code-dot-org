@@ -22,6 +22,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   const {retrievalContexts} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
+  const {hasChangedAiCustomizations} = useAppSelector(state => state.aichat);
 
   const onUpdate = useCallback(
     () => dispatch(updateAiCustomization()),
@@ -109,7 +110,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           onClick={onUpdate}
           iconLeft={{iconName: 'edit'}}
           className={modelCustomizationStyles.updateButton}
-          disabled={isDisabled(visibility)}
+          disabled={isDisabled(visibility) || !hasChangedAiCustomizations}
         />
       </div>
     </div>

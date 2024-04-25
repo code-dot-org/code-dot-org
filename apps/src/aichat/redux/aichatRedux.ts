@@ -78,6 +78,7 @@ export interface AichatState {
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
   viewMode: ViewMode;
   currentSessionId?: number;
+  hasChangedAiCustomizations: boolean;
 }
 
 const initialState: AichatState = {
@@ -89,6 +90,7 @@ const initialState: AichatState = {
   savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
   viewMode: ViewMode.EDIT,
+  hasChangedAiCustomizations: false,
 };
 
 // THUNKS
@@ -205,6 +207,18 @@ const saveAiCustomization = async (
     savedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
+
+  if (!changedProperties.length) {
+    dispatch(
+      addChatMessage({
+        id: getNewMessageId(),
+        role: Role.MODEL_UPDATE,
+        chatMessageText: 'no update found',
+        status: Status.OK,
+        timestamp: getCurrentTime(),
+      })
+    );
+  }
 
   if (
     changedProperties.some(property =>
@@ -413,6 +427,7 @@ const aichatSlice = createSlice({
       action: PayloadAction<AiCustomizations>
     ) => {
       state.savedAiCustomizations = action.payload;
+      state.hasChangedAiCustomizations = false;
     },
     setAiCustomizationProperty: (
       state,
@@ -427,6 +442,7 @@ const aichatSlice = createSlice({
         [property]: value,
       };
       state.currentAiCustomizations = updatedAiCustomizations;
+      state.hasChangedAiCustomizations = true;
     },
     setModelCardProperty: (
       state,
@@ -442,6 +458,7 @@ const aichatSlice = createSlice({
         [property]: value,
       };
       state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
+      state.hasChangedAiCustomizations = true;
     },
   },
   extraReducers: builder => {

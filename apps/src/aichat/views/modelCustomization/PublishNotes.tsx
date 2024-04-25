@@ -25,6 +25,7 @@ const PublishNotes: React.FunctionComponent = () => {
   const visibility = useAppSelector(
     state => state.aichat.fieldVisibilities.modelCardInfo
   );
+  const {hasChangedAiCustomizations} = useAppSelector(state => state.aichat);
   const {modelCardInfo} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
@@ -91,7 +92,7 @@ const PublishNotes: React.FunctionComponent = () => {
           iconLeft={{iconName: 'download'}}
           type="secondary"
           color="black"
-          disabled={isDisabled(visibility)}
+          disabled={isDisabled(visibility) || !hasChangedAiCustomizations}
           onClick={onSave}
           className={modelCustomizationStyles.updateButton}
         />
