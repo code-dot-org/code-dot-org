@@ -1,5 +1,4 @@
 @no_mobile
-@no_safari
 Feature: Teachers can see and give feedback on Rubrics
 
 Scenario: Teachers can give and send feedback on the rubric to students.
