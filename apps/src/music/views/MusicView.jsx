@@ -53,6 +53,7 @@ import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicLabView from './MusicLabView';
+import {getIsShareView} from '@cdo/apps/lab2/projects/utils';
 
 const BLOCKLY_DIV_ID = 'blockly-div';
 
@@ -129,7 +130,7 @@ class UnconnectedMusicView extends React.Component {
       this.getValidationTimeout,
       this.player
     );
-    this.isPlayView = false;
+    this.isPlayView = getIsShareView();
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(

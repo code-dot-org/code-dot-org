@@ -2,6 +2,17 @@
 @import './common.scss';
 
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  background-color: 'black';
+  z-index: 1,
+}
+
 .labContainer {
   position: fixed;
   top: 52px;
