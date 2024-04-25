@@ -80,7 +80,7 @@ DefaultDropdown.args = {
 
 export const DisabledDropdown = SingleTemplate.bind({});
 DisabledDropdown.args = {
-  name: 'default-dropdown',
+  name: 'disabled-dropdown',
   items: [
     {value: 'option-1', text: 'Option 1'},
     {value: 'option-2', text: 'Option 2'},
