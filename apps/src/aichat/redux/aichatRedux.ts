@@ -298,6 +298,13 @@ export const submitChatContents = createAsyncThunk(
         sessionId: chatApiResponse.sessionId,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+    } else if (chatApiResponse?.status === 'profanity') {
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.PROFANITY_VIOLATION,
+        })
+      );
     } else {
       // TODO: Update most recent user message's status if PII or profanity violation.
       // latest message's id is stored at `newMessageId`.
@@ -350,13 +357,13 @@ const aichatSlice = createSlice({
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
     },
-    updateChatMessageStatus: (
+    updateUserChatMessageStatus: (
       state,
       action: PayloadAction<{id: number; status: Status}>
     ) => {
       const {id, status} = action.payload;
       const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage) {
+      if (chatMessage && chatMessage.role === Role.USER) {
         chatMessage.status = status;
       }
     },
@@ -495,7 +502,7 @@ export const {
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,
-  updateChatMessageStatus,
+  updateUserChatMessageStatus,
   updateChatMessageSession,
   setViewMode,
   setStartingAiCustomizations,

@@ -3,8 +3,6 @@ import classNames from 'classnames';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Button from '@cdo/apps/componentLibrary/button';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
 import {removeModelUpdateMessage} from '../redux/aichatRedux';
@@ -14,6 +12,7 @@ import {
   AichatInteractionStatus as Status,
 } from '../types';
 import aichatI18n from '../locale';
+import ChatNotificationMessage from './ChatNotificationMessage';
 import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
@@ -31,21 +30,30 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK || status === Status.UNKNOWN) {
     return (
       <div
-        className={classNames(moduleStyles.message, moduleStyles.userMessage)}
+        className={classNames(
+          moduleStyles.message,
+          moduleStyles.userMessage,
+          moduleStyles.userMessageContainer
+        )}
       >
         {chatMessageText}
       </div>
     );
   } else if (status === Status.PROFANITY_VIOLATION) {
     return (
-      <div
-        className={classNames(
-          moduleStyles.message,
-          moduleStyles.inappropriateMessage
-        )}
-      >
-        {INAPPROPRIATE_MESSAGE}
-      </div>
+      // <div
+      //   className={classNames(
+      //     moduleStyles.message,
+      //     moduleStyles.inappropriateMessage
+      //   )}
+      // >
+      //   {INAPPROPRIATE_MESSAGE}
+      // </div>
+      <ChatNotificationMessage
+        content={INAPPROPRIATE_MESSAGE}
+        iconName="circle-xmark"
+        iconClass={moduleStyles.check}
+      />
     );
   } else if (status === Status.PII_VIOLATION) {
     return (
@@ -97,22 +105,19 @@ const displayModelUpdateMessage = (
   const {chatMessageText, timestamp} = message;
 
   return (
-    <>
-      <div>
-        <FontAwesomeV6Icon iconName="check" className={moduleStyles.check} />
-        <span className={moduleStyles.modelUpdateMessageTextContainer}>
-          <StrongText>{chatMessageText}</StrongText> has been updated
-        </span>
-        <StrongText>{timestamp}</StrongText>
-      </div>
-      <Button
-        onClick={onRemove}
-        isIconOnly
-        icon={{iconName: 'xmark'}}
-        size="s"
-        className={moduleStyles.removeStatusUpdate}
-      />
-    </>
+    <ChatNotificationMessage
+      onRemove={onRemove}
+      content={
+        <>
+          <span className={moduleStyles.modelUpdateMessageTextContainer}>
+            <StrongText>{chatMessageText}</StrongText> has been updated
+          </span>
+          <StrongText>{timestamp}</StrongText>
+        </>
+      }
+      iconName="check"
+      iconClass={moduleStyles.check}
+    />
   );
 };
 
@@ -121,11 +126,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
 
   return (
     <div id={`ChatMessage id: ${message.id}`}>
-      {isUser(message.role) && (
-        <div className={moduleStyles.userMessageContainer}>
-          {displayUserMessage(message.status, message.chatMessageText)}
-        </div>
-      )}
+      {isUser(message.role) &&
+        displayUserMessage(message.status, message.chatMessageText)}
 
       {isAssistant(message.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
