@@ -42,15 +42,15 @@ module MailJet
     return unless user&.id.present?
     return unless user.teacher?
 
-    contactdata = find_or_create_contactdata(user.email, user.name)
-    update_contact_field(contactdata, 'sign_up_date', user.created_at.to_datetime.rfc3339)
+    contact = find_or_create_contact(user.email, user.name)
+    update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
     send_template_email(
-      contactdata,
+      contact,
       EMAILS[:welcome]
     )
   end
 
-  def self.find_or_create_contactdata(email, name)
+  def self.find_or_create_contact(email, name)
     return nil unless enabled?
     return nil unless valid_email?(email)
 
@@ -60,7 +60,7 @@ module MailJet
       config.api_version = "v3"
     end
 
-    contact = Mailjet::Contactdata.find(email)
+    contact = Mailjet::Contact.find(email)
     return contact if contact&.id.present?
 
     Mailjet::Contact.create(
@@ -68,13 +68,14 @@ module MailJet
       email: email,
       name: name
     )
-    Mailjet::Contactdata.find(email)
+    Mailjet::Contact.find(email)
   end
 
-  def self.update_contact_field(contactdata, field_name, field_value)
+  def self.update_contact_field(contact, field_name, field_value)
     return unless enabled?
-    return if contactdata.nil?
+    return if contact.nil?
 
+    contactdata = Mailjet::Contactdata.find(contact.id)
     contactdata.update_attributes(
       data: [
         {
@@ -106,9 +107,9 @@ module MailJet
     end
   end
 
-  def self.send_template_email(contactdata, email_config)
+  def self.send_template_email(contact, email_config)
     return unless enabled?
-    return unless contactdata&.email.present?
+    return unless contact&.email.present?
 
     Mailjet.configure do |config|
       config.api_key = API_KEY
@@ -128,8 +129,8 @@ module MailJet
         },
         To: [
           {
-            Email: contactdata.email,
-            Name: contactdata.name
+            Email: contact.email,
+            Name: contact.name
           }
         ],
         TemplateID: template_id,
