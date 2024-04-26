@@ -189,4 +189,4 @@ export const NOTIFICATION_ALERT_TYPE = 'notification';
 
 export const START_BLOCKS = 'start_blocks';
 
-export const DEPRECATED_LABS = ['calc', 'eval'];
+export const DEPRECATED_PROJECT_TYPES = ['algebra_game', 'calc', 'eval'];
