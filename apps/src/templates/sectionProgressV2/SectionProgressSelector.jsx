@@ -32,6 +32,10 @@ function SectionProgressSelector({
     e => {
       e.preventDefault();
       const shouldShowV2 = !showProgressTableV2;
+      console.log('calling onShowProgressTableV2Change');
+      console.log(
+        'calling setShowProgressTableV2 with parameter ' + shouldShowV2
+      );
       new UserPreferences().setShowProgressTableV2(shouldShowV2);
       setShowProgressTableV2(shouldShowV2);
       setShowFeedbackBannerLocked(true);
@@ -89,7 +93,11 @@ function SectionProgressSelector({
         canShow={showFeedbackBannerLocked ? false : displayV2}
       />
       {toggleV1OrV2Link()}
-      {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
+      {displayV2 ? (
+        <SectionProgressV2 />
+      ) : (
+        <SectionProgress setShowProgressTableV2={setShowProgressTableV2} />
+      )}
     </div>
   );
 }

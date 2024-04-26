@@ -41,6 +41,8 @@ const SECTION_PROGRESS = 'SectionProgress';
  */
 class SectionProgress extends Component {
   static propTypes = {
+    setShowProgressTableV2: PropTypes.func.isRequired,
+
     //Provided by redux
     scriptId: PropTypes.number,
     sectionId: PropTypes.number,
@@ -60,7 +62,6 @@ class SectionProgress extends Component {
 
     this.state = {
       reportedInitialRender: false,
-      invitationOpen: true, // Need to connect this to user data
     };
   }
 
@@ -179,11 +180,9 @@ class SectionProgress extends Component {
         className={dashboardStyles.dashboardPage}
         data-testid="section-progress-v1"
       >
-        {this.state.invitationOpen && (
-          <InviteToV2ProgressModal
-            onClose={() => this.setState({invitationOpen: false})}
-          />
-        )}
+        <InviteToV2ProgressModal
+          setShowProgressTableV2={this.props.setShowProgressTableV2}
+        />
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
