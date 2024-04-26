@@ -2,16 +2,18 @@ require 'sequel'
 require 'sequel/connection_pool/threaded'
 require 'cdo/cache'
 require pegasus_dir 'data/static_models'
+require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 
 # Connects to database.  Uses the Sequel connection_validator:
 #   http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/connection_validator_rb.html
 # @param writer [String] Write conenction
 # @param reader [String] Read connection
-# @param validation_frequency [number] How often to validate the connection. If set to -1,
-#   validate each time a request is made.
+# @param validation_frequency [number] How often to validate the connection, in seconds.
+#   If set to -1, validate each time a request is made. Defaults to -1 (always revalidate)
+#   in test, 3600 (revalidate every hour) everywhere else.
 # @param query_timeout [number] The execution timeout for SELECT statements, in seconds.
-def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil, multi_statements: false)
+def sequel_connect(writer, reader, validation_frequency: rack_env?(:test) ? -1 : 3600, query_timeout: nil, multi_statements: false)
   reader = reader.gsub 'mysql:', 'mysql2:'
   writer = writer.gsub 'mysql:', 'mysql2:'
 
@@ -38,11 +40,6 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
     # `mysql_options` client options forwarded through the mysql2 adapter:
     # See: https://dev.mysql.com/doc/refman/5.7/en/mysql-options.html
 
-    # `MYSQL_OPT_RECONNECT`: Enable or disable automatic reconnection to the server if the connection is found to have
-    # been lost. Reconnect is off by default; this option provides a way to set reconnection behavior explicitly.
-    # See https://dev.mysql.com/doc/refman/5.7/en/c-api-auto-reconnect.html
-    reconnect: true,
-
     # `MYSQL_OPT_CONNECT_TIMEOUT`: The connect timeout in seconds.
     connect_timeout: 2,
 
@@ -57,6 +54,9 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
     # There is a retry if necessary, so the total effective timeout value is two times the option value.
     write_timeout: 5
   }
+
+  # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
+  db_options[:reconnect] = true if DCDO.get('enable_mysql_client_reconnect', false)
 
   if query_timeout
     db_options[:read_timeout] = query_timeout
@@ -75,11 +75,15 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
   end
   db = Sequel.connect writer, db_options
 
+  # Enable read splitting with the `with_server` method.
+  # https://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/server_block_rb.html
   db.extension :server_block
 
   # Check if validation frequency is valid and then use it to specify how often to
   # verify the db connection
   if validation_frequency && (validation_frequency == -1 || validation_frequency > 0)
+    # Handle terminated database connections.
+    # http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/connection_validator_rb.html
     db.extension(:connection_validator)
     db.pool.connection_validation_timeout = validation_frequency
   end
