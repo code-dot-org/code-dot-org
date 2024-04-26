@@ -21,6 +21,7 @@ import MusicPlayer from '../player/MusicPlayer';
 import useUpdatePlayer from './hooks/useUpdatePlayer';
 import AdvancedControls from './AdvancedControls';
 import PackDialog from './PackDialog';
+import MusicPlayView from './MusicPlayView';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -35,6 +36,8 @@ interface MusicLabViewProps {
   validator: MusicValidator;
   player: MusicPlayer;
   allowPackSelection: boolean;
+  compileSong: () => boolean;
+  executeCompiledSong: () => Promise<void>;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -50,6 +53,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   validator,
   player,
   allowPackSelection,
+  compileSong,
+  executeCompiledSong,
 }) => {
   useUpdatePlayer(player);
   const dispatch = useAppDispatch();
@@ -63,6 +68,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+  const isPlayView = useAppSelector(state => state.lab.isShareView);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -183,6 +189,15 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     AppConfig.getValue('player') === 'tonejs' &&
     AppConfig.getValue('advanced-controls-enabled') === 'true';
 
+  if (isPlayView) {
+    return (
+      <MusicPlayView
+        setPlaying={setPlaying}
+        compileSong={compileSong}
+        executeCompiledSong={executeCompiledSong}
+      />
+    );
+  }
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
       {allowPackSelection && <PackDialog player={player} />}

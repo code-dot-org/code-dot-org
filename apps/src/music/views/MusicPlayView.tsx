@@ -1,4 +1,4 @@
-import React, {memo, useCallback, useMemo} from 'react';
+import React, {memo, useCallback, useEffect, useMemo} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
@@ -13,17 +13,20 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 interface MusicPlayViewProps {
-  isPlaying: boolean;
-  onPlay: () => void;
-  onStop: () => void;
-  getCurrentPlayheadPosition: () => number;
-  projectName: string;
+  setPlaying: (value: boolean) => void;
+  compileSong: () => boolean;
+  executeCompiledSong: () => Promise<void>;
 }
 
 const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
-  onPlay,
-  onStop,
+  setPlaying,
+  compileSong,
+  executeCompiledSong,
 }) => {
+  useEffect(() => {
+    compileSong();
+    executeCompiledSong();
+  }, [compileSong, executeCompiledSong]);
   const {isPlaying, lastMeasure, currentPlayheadPosition} = useAppSelector(
     state => state.music
   );
@@ -89,7 +92,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
                 iconStyle: 'solid',
                 iconName: !isPlaying ? 'play' : 'stop',
               }}
-              onClick={!isPlaying ? onPlay : onStop}
+              onClick={() => setPlaying(!isPlaying)}
               size="s"
               color="white"
               type="secondary"

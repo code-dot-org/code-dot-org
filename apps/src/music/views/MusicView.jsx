@@ -12,7 +12,6 @@ import AppConfig, {getBlockMode} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
-import MusicPlayView from './MusicPlayView';
 import {
   setLibraryName,
   setPackId,
@@ -110,6 +109,7 @@ class UnconnectedMusicView extends React.Component {
     setUndoStatus: PropTypes.func,
     showCallout: PropTypes.func,
     clearCallout: PropTypes.func,
+    isPlayView: PropTypes.bool,
   };
 
   constructor(props) {
@@ -130,7 +130,6 @@ class UnconnectedMusicView extends React.Component {
       this.getValidationTimeout,
       this.player
     );
-    this.isPlayView = getIsShareView();
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(
@@ -274,20 +273,14 @@ class UnconnectedMusicView extends React.Component {
     }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
-    // this.isPlayView
-    //   ? this.musicBlocklyWorkspace.initHeadless()
-    //   : this.musicBlocklyWorkspace.init(
-    //       document.getElementById(BLOCKLY_DIV_ID),
-    //       this.onBlockSpaceChange,
-    //       this.props.isReadOnlyWorkspace,
-    //       levelData?.toolbox
-    //     );
-    this.musicBlocklyWorkspace.init(
-      document.getElementById(BLOCKLY_DIV_ID),
-      this.onBlockSpaceChange,
-      this.props.isReadOnlyWorkspace,
-      levelData?.toolbox
-    );
+    this.props.isPlayView
+      ? this.musicBlocklyWorkspace.initHeadless()
+      : this.musicBlocklyWorkspace.init(
+          document.getElementById(BLOCKLY_DIV_ID),
+          this.onBlockSpaceChange,
+          this.props.isReadOnlyWorkspace,
+          levelData?.toolbox
+        );
 
     this.library.setAllowedSounds(levelData?.sounds);
     this.props.setShowInstructions(
@@ -666,9 +659,6 @@ class UnconnectedMusicView extends React.Component {
             AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
           }
         />
-        {this.isPlayView && (
-          <MusicPlayView onPlay={this.playSong} onStop={this.stopSong} />
-        )}
         <MusicLabView
           blocklyDivId={BLOCKLY_DIV_ID}
           setPlaying={this.setPlaying}
@@ -686,6 +676,8 @@ class UnconnectedMusicView extends React.Component {
             !this.props.levelProperties?.levelData?.packId &&
             this.props.isProjectLevel
           }
+          compileSong={this.compileSong}
+          executeCompiledSong={this.executeCompiledSong}
         />
         <Callouts />
       </AnalyticsContext.Provider>
@@ -715,6 +707,7 @@ const MusicView = connect(
     isProjectLevel: state.lab.levelProperties?.isProjectLevel,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     startingPlayheadPosition: state.music.startingPlayheadPosition,
+    isPlayView: state.lab.isShareView,
   }),
   dispatch => ({
     setLibraryName: libraryName => dispatch(setLibraryName(libraryName)),
