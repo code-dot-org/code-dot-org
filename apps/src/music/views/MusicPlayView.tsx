@@ -8,20 +8,21 @@ import codeOrgLogo from '@cdo/static/code-dot-org-white-logo.svg';
 import moduleStyles from './music-play-view.module.scss';
 
 import musicI18n from '../locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 interface MusicPlayViewProps {
-  isPlaying: boolean;
-  onPlay: () => void;
-  onStop: () => void;
-  projectName: string;
+  setPlaying: (value: boolean) => void;
 }
 
 const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
-  isPlaying,
-  onPlay,
-  onStop,
-  projectName,
+  setPlaying,
 }) => {
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const projectName = useAppSelector(state => state.lab.channel?.name);
+  // TODO: Use isLoading to disable play button and/or show some loading indicator (spinner, etc)
+  const isLoading = useAppSelector(
+    state => state.music.soundLoadingProgress < 1
+  );
   const shareData = useMemo(
     () => ({
       title: projectName,
@@ -61,7 +62,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
           <Button
             isIconOnly={true}
             icon={{iconStyle: 'solid', iconName: !isPlaying ? 'play' : 'stop'}}
-            onClick={!isPlaying ? onPlay : onStop}
+            onClick={() => setPlaying(!isPlaying)}
             size="s"
             color="white"
             type="secondary"
