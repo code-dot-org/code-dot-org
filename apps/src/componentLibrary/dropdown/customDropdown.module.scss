@@ -201,7 +201,7 @@
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
       color: $light_black;
-      background-color: unset;
+      background-color: $light_white;
     }
   }
 
@@ -210,6 +210,10 @@
       color: $light_gray_200;
       border-color: $light_gray_200 !important;
       cursor: not-allowed;
+
+      .dropdownLabel {
+        color: $light_gray_200;
+      }
     }
 
     .dropdownLabel {
@@ -246,6 +250,11 @@
     .dropdownButton {
       color: $light_gray_900;
       border-color: $light_gray_900;
+      cursor: not-allowed;
+
+      .dropdownLabel {
+        color: $light_gray_900;
+      }
     }
   }
 }

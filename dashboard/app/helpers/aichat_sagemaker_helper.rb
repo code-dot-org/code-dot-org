@@ -1,25 +1,26 @@
-module AichatHelper
+module AichatSagemakerHelper
   ASSISTANT = "assistant"
   USER = "user"
-  BASE_PROMPT = "You are a helpful chatbot for children. Limit your responses to a small paragraph. "
   INSTRUCTIONS_BEGIN_TOKEN = "[INST]"
   INSTRUCTIONS_END_TOKEN = "[/INST]"
   SENTENCE_BEGIN_TOKEN = "<s>"
   SENTENCE_END_TOKEN = "</s>"
-  MAX_NEW_TOKENS = 300
-  SAGEMAKER_CLIENT = Aws::SageMakerRuntime::Client.new
-  SAGEMAKER_MODEL_ENDPOINT = "mistral-7b-inst-v01" # "BioMistral-7B"
+  MAX_NEW_TOKENS = 512
+  SAGEMAKER_MODEL_ENDPOINT = "gen-ai-mistral-7b-inst-v01"
   TOP_P = 0.9
+
+  def self.create_sagemaker_client
+    Aws::SageMakerRuntime::Client.new
+  end
 
   # The instruction-tuned version of Mistral accepts formatted instructions where conversation roles
   # must start with a user prompt and alternate between user and assistant.
   # Mistral-7B-Instruction LLM instruction format doc at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1.
   def self.format_inputs_for_sagemaker_request(aichat_params, stored_messages, new_message)
     all_messages = [*stored_messages, {role: USER, content: new_message}]
-    inputs = BASE_PROMPT + aichat_params[:systemPrompt]
+    inputs = aichat_params[:systemPrompt]
     inputs += aichat_params[:retrievalContexts].join(" ") if aichat_params[:retrievalContexts]
     inputs = SENTENCE_BEGIN_TOKEN + wrap_as_instructions(inputs)
-    # Filter only messages from user or assistant - ignore model update messages.
     all_messages.each do |msg|
       if msg[:role] == USER
         inputs += wrap_as_instructions(msg[:content])
@@ -40,7 +41,7 @@ module AichatHelper
   end
 
   def self.request_sagemaker_chat_completion(input_json)
-    SAGEMAKER_CLIENT.invoke_endpoint(
+    create_sagemaker_client.invoke_endpoint(
       endpoint_name: SAGEMAKER_MODEL_ENDPOINT, # required
       body: input_json.to_json, # required
       content_type: "application/json"
