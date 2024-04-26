@@ -42,7 +42,6 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
     }
   };
 
-  console.log('chatMessageText', message.chatMessageText);
   return (
     <div className={style.assistantMessageContainer}>
       <Typography semanticTag="h5" visualAppearance="heading-xs">
