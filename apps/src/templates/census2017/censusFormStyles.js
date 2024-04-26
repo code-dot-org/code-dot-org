@@ -1,5 +1,6 @@
-import color from '../../util/color';
 import fontConstants from '@cdo/apps/fontConstants';
+
+import color from '../../util/color';
 
 export const styles = {
   formHeading: {

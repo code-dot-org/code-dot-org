@@ -22,15 +22,13 @@ end
 
 # Update rows in batches.
 # (adapted from pegasus/migrations/076_migrate_channel_sources_to_s3.rb).
-def batch_update
+def batch_update(&block)
   offset = 0
   batch_size = 10_000
   loop do
     batch = from(:contacts).order(:id).offset(offset).limit(batch_size)
     break if batch.count == 0
-    batch.each do |row|
-      yield row
-    end
+    batch.each(&block)
     offset += batch_size
   end
 end

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SetUpCourses from './SetUpCourses';
 
 export default {

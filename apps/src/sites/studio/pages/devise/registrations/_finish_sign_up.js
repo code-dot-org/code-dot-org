@@ -2,11 +2,17 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
+import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {
+  SELECT_A_SCHOOL,
+  CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
+} from '@cdo/apps/templates/SchoolZipSearch';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -42,11 +48,6 @@ let schoolData = {
 // Keep track of whether the current user is in the U.S. or not (for regional partner email sharing)
 let isInUnitedStates = schoolData.countryCode === 'US';
 
-// Track whether clearer user type buttons rollout is enabled
-const inClearerUserTypeRollout = experiments.isEnabled(
-  experiments.CLEARER_SIGN_UP_USER_TYPE
-);
-
 let userInRegionalPartnerVariant = experiments.isEnabled(
   experiments.OPT_IN_EMAIL_REG_PARTNER
 );
@@ -59,23 +60,12 @@ $(document).ready(() => {
   function init() {
     let hiddenUserType = $('#user_user_type').attr('type') === 'hidden';
     if (!hiddenUserType) {
-      if (inClearerUserTypeRollout) {
-        // If in variant, toggle large buttons
-        document.getElementById('select-user-type-original').style.cssText =
-          'display:none;';
-        document.getElementById('select-user-type-variant').style.cssText =
-          'display:flex;';
-        document.getElementById('signup-select-user-type-label').style.cssText =
-          'width:135px;';
-      } else {
-        // Otherwise (also the default), keep original dropdown
-        document.getElementById('select-user-type-variant').style.cssText =
-          'display:none;';
-        document.getElementById('select-user-type-original').style.cssText =
-          'display:flex;';
-        document.getElementById('signup-select-user-type-label').style.cssText =
-          'width:220px;';
-      }
+      document.getElementById('select-user-type-original').style.cssText =
+        'display:none;';
+      document.getElementById('select-user-type-variant').style.cssText =
+        'display:flex;';
+      document.getElementById('signup-select-user-type-label').style.cssText =
+        'width:135px;';
     }
     setUserType(user_type);
     renderSchoolInfo();
@@ -98,9 +88,15 @@ $(document).ready(() => {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
-    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
-      'user type': user_type,
-    });
+    let ncesId = document.getElementById('uitest-school-dropdown').value;
+    analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_FINISHED_EVENT,
+      {
+        'user type': user_type,
+        'nces Id': ncesId,
+      },
+      PLATFORMS.BOTH
+    );
   });
 
   function cleanSchoolInfo() {
@@ -112,7 +108,11 @@ $(document).ready(() => {
     countryInputEl.val(schoolData.countryCode);
 
     // Clear school_id if the searched school is not found.
-    if (schoolData.ncesSchoolId === '-1') {
+    if (
+      ['-1', NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
+        schoolData.ncesSchoolId
+      )
+    ) {
       const schoolIdEl = $(
         'input[name="user[school_info_attributes][school_id]"]'
       );
@@ -167,9 +167,7 @@ $(document).ready(() => {
       // Show student fields by default.
       switchToStudent();
     }
-    if (inClearerUserTypeRollout) {
-      styleSelectedUserTypeButton(new_user_type);
-    }
+    styleSelectedUserTypeButton(new_user_type);
     user_type = new_user_type;
   }
 
@@ -203,9 +201,13 @@ $(document).ready(() => {
       event: 'select-' + type,
       data_string: signUpUID,
     });
-    analyticsReporter.sendEvent(EVENTS.ACCOUNT_TYPE_PICKED_EVENT, {
-      'account type': type,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.ACCOUNT_TYPE_PICKED_EVENT,
+      {
+        'account type': type,
+      },
+      PLATFORMS.BOTH
+    );
   }
 
   function fadeInFields(fields) {
@@ -228,28 +230,37 @@ $(document).ready(() => {
 
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
-      ReactDOM.render(
-        <div style={{padding: 10}}>
-          <SchoolInfoInputs
-            schoolType={schoolData.schoolType}
-            country={schoolData.country}
-            ncesSchoolId={schoolData.ncesSchoolId}
-            schoolName={schoolData.schoolName}
-            schoolCity={schoolData.schoolCity}
-            schoolState={schoolData.schoolState}
-            schoolZip={schoolData.schoolZip}
-            schoolLocation={schoolData.schoolLocation}
-            useLocationSearch={schoolData.useLocationSearch}
-            onCountryChange={onCountryChange}
-            onSchoolTypeChange={onSchoolTypeChange}
-            onSchoolChange={onSchoolChange}
-            onSchoolNotFoundChange={onSchoolNotFoundChange}
-            showRequiredIndicator={false}
-            styles={{width: 580}}
-          />
-        </div>,
-        schoolInfoMountPoint
-      );
+      if (experiments.isEnabled(experiments.SCHOOL_ASSOCIATION_V2)) {
+        ReactDOM.render(
+          <div style={{padding: 10}}>
+            <SchoolDataInputs />
+          </div>,
+          schoolInfoMountPoint
+        );
+      } else {
+        ReactDOM.render(
+          <div style={{padding: 10}}>
+            <SchoolInfoInputs
+              schoolType={schoolData.schoolType}
+              country={schoolData.country}
+              ncesSchoolId={schoolData.ncesSchoolId}
+              schoolName={schoolData.schoolName}
+              schoolCity={schoolData.schoolCity}
+              schoolState={schoolData.schoolState}
+              schoolZip={schoolData.schoolZip}
+              schoolLocation={schoolData.schoolLocation}
+              useLocationSearch={schoolData.useLocationSearch}
+              onCountryChange={onCountryChange}
+              onSchoolTypeChange={onSchoolTypeChange}
+              onSchoolChange={onSchoolChange}
+              onSchoolNotFoundChange={onSchoolNotFoundChange}
+              showRequiredIndicator={false}
+              styles={{width: 580}}
+            />
+          </div>,
+          schoolInfoMountPoint
+        );
+      }
     }
   }
 
@@ -257,6 +268,11 @@ $(document).ready(() => {
     if (event) {
       schoolData.country = event.value;
       schoolData.countryCode = event.label;
+      analyticsReporter.sendEvent(
+        EVENTS.COUNTRY_SELECTED,
+        {country: schoolData.country, countryCode: schoolData.countryCode},
+        PLATFORMS.BOTH
+      );
     }
     isInUnitedStates = schoolData.countryCode === 'US';
     toggleVisShareEmailRegPartner(isInUnitedStates);
@@ -270,6 +286,15 @@ $(document).ready(() => {
 
   function onSchoolChange(_, event) {
     schoolData.ncesSchoolId = event ? event.value : '';
+    // ID is set to -1 and '' respectively as user toggles 'I cannot find my
+    // school above': exlude these from school selection events
+    if (!['-1', ''].includes(schoolData.ncesSchoolId)) {
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_SELECTED_FROM_LIST,
+        {ncesId: schoolData.ncesSchoolId},
+        PLATFORMS.BOTH
+      );
+    }
     renderSchoolInfo();
   }
 

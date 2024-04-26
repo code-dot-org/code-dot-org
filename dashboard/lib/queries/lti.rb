@@ -16,6 +16,11 @@ class Queries::Lti
     LtiIntegration.find_by(issuer: issuer, client_id: client_id)
   end
 
+  def self.get_lms_name_from_user(user)
+    return nil unless Policies::Lti.lti? user
+    user.lti_user_identities.first.lti_integration&.platform_name
+  end
+
   def self.get_user_from_nrps(client_id:, issuer:, nrps_member:)
     id_token = {
       sub: nrps_member[:user_id],
@@ -38,10 +43,18 @@ class Queries::Lti
   end
 
   def self.find_or_create_lti_course(lti_integration_id:, context_id:, deployment_id:, nrps_url:, resource_link_id:)
-    LtiCourse.find_or_create_by(lti_integration_id: lti_integration_id, context_id: context_id) do |c|
+    lti_course = LtiCourse.find_or_create_by(lti_integration_id: lti_integration_id, context_id: context_id) do |c|
       c.lti_deployment_id = deployment_id
       c.nrps_url = nrps_url
       c.resource_link_id = resource_link_id
     end
+
+    # Update the resource link id if the resource link has changed
+    unless lti_course.resource_link_id == resource_link_id
+      lti_course.resource_link_id = resource_link_id
+      lti_course.save!
+    end
+
+    lti_course
   end
 end

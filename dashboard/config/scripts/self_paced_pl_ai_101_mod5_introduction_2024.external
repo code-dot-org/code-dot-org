@@ -1,0 +1,26 @@
+name 'self-paced-pl-ai-101-mod5-introduction_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Ensuring a Responsible Approach to AI
+
+
+#### Welcome! This professional learning module is designed to help you learn how to ensure that you and your students are using AI responsibly.
+
+<img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 75px; height: 275px; clear: both; margin: 0 0px 0px 0;">
+
+## In this module, you will:
+
+* #### Recognize and discuss the ethical considerations and potential biases in AI, especially as they relate to education.
+* #### Develop and implement responsible AI practices in your teaching, ensuring student safety and data privacy.
+* #### Revisit the benefits and address the risks of AI in an educational setting.
+
+
+### **Suggested time:**  60 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

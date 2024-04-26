@@ -70,14 +70,15 @@
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "game_design",
     "long_instructions": "**Develop your game!**\r\n1. Set up the environment\r\n\r\n- Add the player sprite & code their movement\r\n- Add the collectible or enemy sprite(s) & code their movement\r\n- Add your variable & code it to change with an event\r\n- Add a winning and/or losing condition\r\n\r\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"You will find all of the blocks organized into categories in the toolbox. \",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2250bd73219daa713cfda97d56841d49/game_jam_create_game.mp3\"}]",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"You will find all of the blocks organized into categories in the toolbox. \",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2250bd73219daa713cfda97d56841d49/game_jam_create_game.mp3\"}]"
+    "blockly_variables": "score"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:42:46.889+00:00\",\"changed\":[\"cloned from \\\"game_jam_choice_jump\\\"\"],\"cloned_from\":\"game_jam_choice_jump\"},{\"changed_at\":\"2024-03-18 20:42:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 18:22:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 18:26:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 18:26:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:05:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:07:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:15:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:16:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:17:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:20:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 14:50:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"standalone_app_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:09:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 18:14:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 18:19:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:42:46.889+00:00\",\"changed\":[\"cloned from \\\"game_jam_choice_jump\\\"\"],\"cloned_from\":\"game_jam_choice_jump\"},{\"changed_at\":\"2024-03-18 20:42:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 18:22:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 18:26:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 18:26:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:05:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:07:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:15:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:16:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:17:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:20:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 14:50:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"standalone_app_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:09:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 18:14:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 18:19:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 21:20:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 21:22:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 21:23:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 21:25:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 22:27:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 22:30:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-27 22:36:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 18:32:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-28 18:33:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-28 18:33:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-28 18:34:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-28 18:35:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1321,11 +1322,11 @@
     <toolbox_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable id="!o-[3E0/qE%Z0V!G#dn$">Score</variable>
+          <variable>score</variable>
         </variables>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs" id="r(E.fkuhHSRU_ftumD*U">
-            <field name="IMG">"gradient_02"</field>
+            <field name="IMG">"glowing-circle"</field>
           </block>
           <block type="gamelab_setBackground" id="#!.yvUw93xbJV-q;HiYC">
             <value name="COLOR">
@@ -1364,7 +1365,7 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon" id="5|=`/jipO.IDs[ehM~07">
-            <field name="ANIMATION_NAME">"dirt_snow"</field>
+            <field name="ANIMATION_NAME">"game_penguin"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker" id="F:Z5}07I#Zo4V;MDo`=?">
                 <field name="LOCATION">{"x":200,"y":200}</field>
@@ -1393,17 +1394,18 @@
           </block>
           <block type="gamelab_makeBurst" id=".YsTmI$1M4Zg6x}F337G">
             <field name="EFFECT">"burst"</field>
-            <field name="ANIMATION_NAME">"dirt_snow"</field>
+            <field name="ANIMATION_NAME">"gameplayobject_heart_02"</field>
             <value name="NUM">
               <block type="math_number" id="_q6G$H[=q+/bMITY$-?a">
                 <field name="NUM">10</field>
               </block>
             </value>
           </block>
+          <block type="gamelab_getAllSprites" id="}j0t94A2EVB|Tk}O?#!I"/>
           <block type="gamelab_destroy" id="($GG/Y[.3T/$]h2t1(0c">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" id="C^T+)/W^AO~m4jcu/fj%">
-                <field name="ANIMATION">"dirt_snow"</field>
+                <field name="ANIMATION">"gameplay_greendiamond2"</field>
               </block>
             </value>
           </block>
@@ -1411,7 +1413,7 @@
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" id="nW:wS:{cRtLdxx8df7Ww">
-                <field name="ANIMATION">"dirt_snow"</field>
+                <field name="ANIMATION">"game_penguin"</field>
               </block>
             </value>
             <value name="VAL">
@@ -1424,7 +1426,7 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" id="wfypnn:7X0T0_rML2A3T">
-                <field name="ANIMATION">"dirt_snow"</field>
+                <field name="ANIMATION">"game_penguin"</field>
               </block>
             </value>
             <value name="N">
@@ -1437,14 +1439,14 @@
             <field name="SPEECH">Hello, world!</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" id="WU!,|w?=Chyp4*z27.RV">
-                <field name="ANIMATION">"dirt_snow"</field>
+                <field name="ANIMATION">"game_penguin"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setTint" id="}hSLwYYy]vGd#m2)S~`s">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" id="rnr:XzH0oXYW00KEX8gN">
-                <field name="ANIMATION">"dirt_snow"</field>
+                <field name="ANIMATION">"game_penguin"</field>
               </block>
             </value>
             <value name="COLOR">
@@ -1457,7 +1459,7 @@
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" id="p,7?JqDvR$iF2`n;yzN9">
-                <field name="ANIMATION">"dirt_snow"</field>
+                <field name="ANIMATION">"game_penguin"</field>
               </block>
             </value>
             <value name="VAL">
@@ -1466,12 +1468,11 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_getAllSprites" id="}j0t94A2EVB|Tk}O?#!I"/>
           <block type="gamelab_setAnimation" id="q/5cf;QLkJ^6UAJ3@5m1">
-            <field name="ANIMATION">"dirt_snow"</field>
+            <field name="ANIMATION">"game_panda"</field>
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" id="%y~2p4/m!?}r6@Iy8M.7">
-                <field name="ANIMATION">"dirt_snow"</field>
+                <field name="ANIMATION">"game_penguin"</field>
               </block>
             </value>
           </block>
@@ -1479,7 +1480,7 @@
             <field name="GROUP">"players"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" id="AhJjL~Q.RK?)ZTMAFcYT">
-                <field name="ANIMATION">"dirt_snow"</field>
+                <field name="ANIMATION">"game_penguin"</field>
               </block>
             </value>
           </block>
@@ -1494,7 +1495,7 @@
             </value>
             <value name="BEHAVIOR">
               <block type="gamelab_behaviorPicker" id="{U-yrom%JR6H!2-9dD~l">
-                <field name="BEHAVIOR">driving with arrow keys</field>
+                <field name="BEHAVIOR">moving with arrow keys</field>
               </block>
             </value>
           </block>
@@ -1540,18 +1541,29 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_everyInterval" id="_XE=AcGAhQnaYa0@J6GJ">
+            <field name="UNIT">"seconds"</field>
+            <value name="N">
+              <block type="math_number" id="xL2?}gT%x7jUM$Uo0(FA">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
         </category>
         <category name="Variables" custom="VARIABLE">
           <block type="gamelab_showVariable" id="_2~iJ[jg7Hjp8QKvrC,w">
-            <field name="VAR" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
+            <field name="VAR">score</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker" id="1nF~2/0Fw#i:(?/KkQ97">
                 <field name="LOCATION">{"x":200,"y":200}</field>
               </block>
             </value>
           </block>
+          <block type="gamelab_hideVariable" id="SFdrUqb*DU$JYp0iQ,z7">
+            <field name="VAR">score</field>
+          </block>
           <block type="variables_set" id="I)lhdMV5WGSh,`TlR^yF">
-            <field name="VAR" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
+            <field name="VAR">score</field>
             <value name="VALUE">
               <block type="math_number" id="22)bHoex:[Gi=)vq-tcX">
                 <field name="NUM">0</field>
@@ -1559,7 +1571,7 @@
             </value>
           </block>
           <block type="math_change" id="0I1_nmfPS,Yqq?tTh;%=">
-            <field name="VAR" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
+            <field name="VAR">score</field>
             <value name="DELTA">
               <shadow type="math_number" id="p:f]5``s}2;CF~Sg8;`Y">
                 <field name="NUM">1</field>
@@ -1569,11 +1581,11 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_ifVarEquals" id="rMDd$s]b`VStWa._=q$H">
-            <field name="NUM" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
+          <block type="gamelab_ifVarEquals" id="^[_u*x!~G%Ss}tvJYO6M">
+            <field name="NUM">score2</field>
             <value name="VAL">
-              <block type="math_number" id="f8bE?RepV[dswUs?nhlf">
-                <field name="NUM">0</field>
+              <block type="math_number" id="v)`/_rHpdLI:kG.Z[{Tg">
+                <field name="NUM">5</field>
               </block>
             </value>
           </block>
@@ -1585,7 +1597,7 @@
           <block type="gamelab_countByAnimation" id="XHVzQO=,Jl%1[mm4Zag[">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" id="`CiT+Z=IR1eH;k~0jj3f">
-                <field name="ANIMATION">"dirt_snow"</field>
+                <field name="ANIMATION">"gameplay_greendiamond2"</field>
               </block>
             </value>
           </block>

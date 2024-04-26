@@ -191,6 +191,10 @@ Resources:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
+          # SageMaker Invoke Endpoint access
+          - Effect: Allow
+            Action: 'sagemaker:InvokeEndpoint'
+            Resource: !Sub "arn:aws:sagemaker:${AWS::Region}:${AWS::AccountId}:endpoint/gen-ai-*"
 
   # ---------------------------------------------
   # Frontend Servers
@@ -386,10 +390,11 @@ Resources:
 
 
 <% if frontends-%>
-  # ---------------------------------------------
-  # Elasticache
-  # ---------------------------------------------
+  # --------------------------------------------------------
+  # ElastiCache for Geocoder, Memcached, and Session Storage
+  # --------------------------------------------------------
 <%=  component 'cache'%>
+<%=  component 'session_store'%>
 <% end -%>
 
   # ---------------------------------------------

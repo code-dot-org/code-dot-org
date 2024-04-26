@@ -69,14 +69,14 @@
     "parent_level_id": 20692,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/sprites",
-      "/courses/csd-2022/guides/animation-tab",
-      "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/naming-variables",
-      "/courses/csd-2022/guides/drawing-shapes",
-      "/courses/csd-2022/guides/shapes-and-parameters",
-      "/courses/csd-2022/guides/sprite-interactions"
+      "/courses/csd-2024/guides/sprites",
+      "/courses/csd-2024/guides/animation-tab",
+      "/courses/csd-2024/guides/random-numbers",
+      "/courses/csd-2024/guides/variables",
+      "/courses/csd-2024/guides/naming-variables",
+      "/courses/csd-2024/guides/drawing-shapes",
+      "/courses/csd-2024/guides/shapes-and-parameters",
+      "/courses/csd-2024/guides/sprite-interactions"
     ],
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
@@ -90,7 +90,7 @@
       "CSD Games Properties multi predict_2024"
     ],
     "display_name": "Sprite Properties: Predict",
-    "map_reference": "/courses/csd-2022/guides/sprite-properties",
+    "map_reference": "/courses/csd-2024/guides/sprite-properties",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },

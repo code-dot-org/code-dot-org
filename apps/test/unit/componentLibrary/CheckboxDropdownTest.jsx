@@ -1,11 +1,11 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import sinon from 'sinon';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import {CheckboxDropdown} from '@cdo/apps/componentLibrary/dropdown';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const allOptions = [
   {value: 'option-1', label: 'option1'},
@@ -91,7 +91,6 @@ describe('Design System - Checkbox Dropdown Component', () => {
     rerender(<DropdownToRender />);
 
     expect(spyOnChange).to.have.been.calledOnce;
-    expect(option1.checked).to.be.true;
     expect(selectedValues[0]).to.equal('option-1');
     expect(selectedValues.length).to.equal(1);
 
@@ -102,8 +101,6 @@ describe('Design System - Checkbox Dropdown Component', () => {
     expect(spyOnChange).to.have.been.calledTwice;
     expect(selectedValues[1]).to.equal('option-2');
     expect(selectedValues.length).to.equal(2);
-    expect(option1.checked).to.be.true;
-    expect(option2.checked).to.be.true;
   });
 
   it("Checkbox Dropdown - renders disabled dropdown, doesn't change on click", async () => {

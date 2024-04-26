@@ -7,8 +7,10 @@ import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-
-import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
+import {
+  SectionLoginType,
+  PlGradeValue,
+} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -687,7 +689,6 @@ function newSectionData(participantType) {
     courseVersionId: null,
     unitId: null,
     hidden: false,
-    isAssigned: undefined,
     restrictSection: false,
   };
 }
@@ -1305,6 +1306,7 @@ export function getSectionRows(state, sectionIds) {
       'name',
       'courseVersionName',
       'loginType',
+      'loginTypeName',
       'studentCount',
       'code',
       'participantType',
@@ -1332,6 +1334,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
+  loginTypeName: serverSection.login_type_name,
   grades: serverSection.grades,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   lessonExtras: serverSection.lesson_extras,
@@ -1345,7 +1348,6 @@ export const sectionFromServerSection = serverSection => ({
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
-  isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
   postMilestoneDisabled: serverSection.post_milestone_disabled,
   codeReviewExpiresAt: serverSection.code_review_expires_at

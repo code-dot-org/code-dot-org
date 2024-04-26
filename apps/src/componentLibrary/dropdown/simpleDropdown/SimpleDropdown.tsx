@@ -1,7 +1,8 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+
 import moduleStyles from './simpleDropdown.module.scss';
 
 export interface SimpleDropdownProps {
@@ -15,6 +16,8 @@ export interface SimpleDropdownProps {
   onChange: (args: React.ChangeEvent<HTMLSelectElement>) => void;
   /** SimpleDropdown label text */
   labelText: string;
+  /** SimpleDropdown dropdown text thickness */
+  dropdownTextThickness?: 'thick' | 'thin';
   /** Is SimpleDropdown label visible or added via aria-label attribute */
   isLabelVisible?: boolean;
   /** SimpleDropdown name */
@@ -56,6 +59,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   id,
   className,
   labelText,
+  dropdownTextThickness = 'thick',
   isLabelVisible = true,
   disabled = false,
   color = 'black',
@@ -67,6 +71,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${size}`],
         moduleStyles[`dropdownContainer-${color}`],
+        moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
         className
       )}
     >
@@ -81,7 +86,6 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           onChange={onChange}
           value={selectedValue}
           id={id}
-          className={moduleStyles.dropdown}
           disabled={disabled}
         >
           {itemGroups.length > 0

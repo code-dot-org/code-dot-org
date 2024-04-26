@@ -7,8 +7,8 @@ fil-PH:
   accelerated_name: Pinabilis na Kurso
   account_sign_up_child_accept_terms: Kinukumpirma ko na may pahintulot ako ng aking
     magulang o ligal na tagapag-alaga na gamitin ang mga serbisyo ng Code.org.
-  account_sign_up_email_opt_in: Maaari ba kaming mag-email sa iyo tungkol sa mga pag-update
-    sa aming mga kurso, lokal na mga oportunidad, o iba pang balita sa agham ng computer?
+  account_sign_up_email_opt_in: Maaari ba kaming mag-email sa iyo tungkol sa mga update
+    sa mga kurso namin, lokal na mga oportunidad, o iba pang balita sa computer science?
     (halos isang beses sa isang buwan)
   ai_activity: Aktibidad
   ai_and_ethics: AI at Mga Etika
@@ -1263,6 +1263,7 @@ fil-PH:
   header_about_us: Tungkol sa Amin
   header_course_catalog: Catalog ng Kurso
   header_courses: Mga kurso
+  header_districts: Distrito
   header_documentation: Dokumentasyon
   header_educate_beyond: Pagkatapos ng Code.org
   header_educate_community: Online na Komunidad

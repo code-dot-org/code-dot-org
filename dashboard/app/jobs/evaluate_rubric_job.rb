@@ -3,8 +3,6 @@ require 'cdo/aws/metrics'
 require 'csv'
 
 class EvaluateRubricJob < ApplicationJob
-  queue_as :default
-
   S3_AI_BUCKET = 'cdo-ai'.freeze
 
   # The path to the release directory in S3 which contains the AI rubric evaluation config.
@@ -12,7 +10,7 @@ class EvaluateRubricJob < ApplicationJob
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-15-ai-rubrics-json-evidence/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-25-confidence-exact/'.freeze
 
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
@@ -30,16 +28,11 @@ class EvaluateRubricJob < ApplicationJob
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
     },
-    # TODO: re-enable these once rubrics have been added via levelbuilder
-    'interactive-games-animations-2023' => {
-      # 'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
-      # 'CSD web project animated review_2023' => 'csd3-2023-L14',
-      'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
-      # 'CSD games sidescroll review_2023' => 'csd3-2023-L21',
-      # 'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
-      # 'CSD games project review_2023' => 'csd3-2023-L28',
-    }
   }
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
 
   # This is raised if there is any raised error due to a rate limit, e.g. a 429
   # received from the aiproxy service.
@@ -53,6 +46,21 @@ class EvaluateRubricJob < ApplicationJob
       @response = response
 
       super("Too many requests for #{response.request.uri}")
+    end
+  end
+
+  # This is raised if the request is too large for the openai, indicating that
+  # the code was too long relative to the LLM's context window.
+  class RequestTooLargeError < StandardError
+    attr_reader :response
+
+    # Creates a RequestTooLargeError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
+
+      super("Request too large for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
     end
   end
 
@@ -191,6 +199,17 @@ class EvaluateRubricJob < ApplicationJob
     end
 
     # We gracefully just fail, here, and we do not file this exception
+  end
+
+  rescue_from(RequestTooLargeError) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob RequestTooLargeError: #{exception.message}"
+    end
+
+    # Record the failure mode, so we can show the right message to the teacher
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:REQUEST_TOO_LARGE]
+    rubric_ai_evaluation.save!
   end
 
   RETRIES_ON_RATE_LIMIT = 3
@@ -416,6 +435,8 @@ class EvaluateRubricJob < ApplicationJob
     # Raise too many requests error if we see a 429
     # The proxy service will bubble up the 429 error from the service itself
     raise TooManyRequestsError.new(response) if response.code == 429
+
+    raise RequestTooLargeError.new(response) if response.code == 413
 
     # General error will raise a generic StandardError
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?

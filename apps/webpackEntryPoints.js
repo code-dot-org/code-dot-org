@@ -41,6 +41,7 @@ const CODE_STUDIO_ENTRIES = {
   'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
   'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
+  'musiclab/embed': './src/sites/studio/pages/musiclab/embed.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
   'print_certificates/show': './src/sites/studio/pages/print_certificates/show.js',
@@ -86,6 +87,7 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
   'lti/v1/_early_access_banner': './src/sites/studio/pages/lti/v1/_early_access_banner.js',
+  'lti/v1/iframe': './src/sites/studio/pages/lti/v1/iframe.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/home': './src/sites/studio/pages/maker/home.js',
@@ -128,7 +130,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
-  'levels/editors/fields/_ai_customizations': './src/sites/studio/pages/levels/editors/fields/_ai_customizations.js',
+  'levels/editors/fields/_aichat_settings': './src/sites/studio/pages/levels/editors/fields/_aichat_settings.js',
   'levels/editors/fields/_animation': './src/sites/studio/pages/levels/editors/fields/_animation.js',
   'levels/editors/fields/_bubble_choice_sublevel': './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
   'levels/editors/fields/_blockly': './src/sites/studio/pages/levels/editors/fields/_blockly.js',
@@ -192,6 +194,8 @@ const PEGASUS_ENTRIES = {
   'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
   'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
   'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
+  'code.org/views/swiper_page_videos': './src/sites/code.org/pages/views/swiper_page_videos.js',
+  'code.org/views/swiper_page_minecraft': './src/sites/code.org/pages/views/swiper_page_minecraft.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com

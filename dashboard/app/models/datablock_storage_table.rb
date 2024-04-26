@@ -46,7 +46,7 @@ class DatablockStorageTable < ApplicationRecord
   class StudentFacingError < StandardError
     attr_reader :type
 
-    def initialize(type=nil)
+    def initialize(type = nil)
       super
       @type = type
     end
@@ -75,7 +75,9 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def self.find_shared_table(table_name)
-    DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
+    shared_table = DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
+    raise "Shared table '#{table_name}' does not exist" unless shared_table
+    return shared_table
   end
 
   def self.add_shared_table(project_id, table_name)
@@ -231,6 +233,8 @@ class DatablockStorageTable < ApplicationRecord
     end
 
     create_records(records)
+  rescue CSV::MalformedCSVError => exception
+    raise StudentFacingError.new(:INVALID_CSV), "Could not import CSV as it was not in the format we expected: #{exception.message}"
   end
 
   def add_column(column_name)
@@ -305,7 +309,11 @@ class DatablockStorageTable < ApplicationRecord
         value.to_s
       end
     when 'number'
-      Float(value) rescue raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to number"
+      begin
+        Float(value)
+      rescue
+        raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to number"
+      end
     when 'boolean'
       if [true, 'true'].include? value
         true

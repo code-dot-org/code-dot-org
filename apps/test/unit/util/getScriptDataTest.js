@@ -1,4 +1,5 @@
 import getScriptData from '@cdo/apps/util/getScriptData';
+
 import {expect} from '../../util/reconfiguredChai';
 
 describe('the getScriptData function', () => {

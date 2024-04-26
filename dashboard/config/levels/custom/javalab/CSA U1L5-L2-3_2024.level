@@ -759,7 +759,7 @@
     "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Change the condition for the second <code style=\"background-color: #ececec; color: black; font-weight: bold;\">while</code> loop on **Line 16** to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">jesse.canMove()</code> then run the program to observe the results. What happens when you run the program? Why do you think this happened?",
     "project_template_level_name": "CSA U1L5-Loops PBT_2024",
     "reference_links": [
-      "/courses/csa-2023/guides/while-loops"
+      "/courses/csa-2024/guides/while-loops"
     ],
     "teacher_markdown": "When changing the condition on **Line 16** from `jesse.hasPaint()` to `jesse.canMove()`, students see `\"There is no more paint in the painter's bucket\"` displayed in the console. When the condition checked if the `Painter` object had paint, it  executed the block of code until it ran out of paint. However, when the condition checks if the `Painter` object can move, the block of code repeats as long as the `Painter` object can move forward, even though it runs out of paint before the condition becomes `false`.",
     "name_suffix": "_2024",

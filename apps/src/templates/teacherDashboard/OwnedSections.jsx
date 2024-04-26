@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import LtiFeedbackBanner from '@cdo/apps/lib/ui/lti/feedback/LtiFeedbackBanner';
 import styleConstants from '@cdo/apps/styleConstants';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
@@ -12,6 +13,7 @@ import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {recordImpression} from './impressionHelpers';
+import OwnedPlSectionsTable from './OwnedPlSectionsTable';
 import OwnedSectionsTable from './OwnedSectionsTable';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import {beginEditingSection} from './teacherSectionsRedux';
@@ -64,12 +66,30 @@ class OwnedSections extends React.Component {
     });
   };
 
+  ownedSectionsTable = showHidden => {
+    const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
+    const sectionsToShow = showHidden
+      ? hiddenSectionIds
+      : _.without(sectionIds, ...hiddenSectionIds);
+
+    return isPlSections ? (
+      <OwnedPlSectionsTable
+        sectionIds={sectionsToShow}
+        onEdit={this.onEditSection}
+      />
+    ) : (
+      <OwnedSectionsTable
+        sectionIds={sectionsToShow}
+        onEdit={this.onEditSection}
+      />
+    );
+  };
+
   render() {
     const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
     const {viewHidden} = this.state;
 
     const hasSections = sectionIds.length > 0;
-    const visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
 
     return (
       <div
@@ -79,11 +99,8 @@ class OwnedSections extends React.Component {
       >
         {hasSections && (
           <div>
-            <OwnedSectionsTable
-              isPlSections={isPlSections}
-              sectionIds={visibleSectionIds}
-              onEdit={this.onEditSection}
-            />
+            <LtiFeedbackBanner />
+            {this.ownedSectionsTable(false)}
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
@@ -107,11 +124,7 @@ class OwnedSections extends React.Component {
                 <div style={styles.hiddenSectionDesc}>
                   {i18n.archivedSectionsTeacherDescription()}
                 </div>
-                <OwnedSectionsTable
-                  isPlSections={isPlSections}
-                  sectionIds={hiddenSectionIds}
-                  onEdit={this.onEditSection}
-                />
+                {this.ownedSectionsTable(true)}
               </div>
             )}
           </div>

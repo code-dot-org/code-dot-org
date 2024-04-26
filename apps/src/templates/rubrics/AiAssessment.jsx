@@ -16,7 +16,7 @@ export default function AiAssessment({
   aiEvalInfo,
 }) {
   return (
-    <div className="uitest-ai-assessment">
+    <div id="tour-ai-assessment" className="uitest-ai-assessment">
       <Heading6 visualAppearance={'body-three'}>
         <StrongText>{i18n.aiAssessment()}</StrongText>
       </Heading6>

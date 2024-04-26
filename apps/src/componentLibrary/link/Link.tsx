@@ -1,7 +1,8 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+
 import moduleStyles from './link.module.scss';
 
 export interface LinkProps {

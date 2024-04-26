@@ -25,21 +25,19 @@ module I18n
             progress_bar.progress = 100
           end
 
-          private
-
-          def prepare_blockly_core_files
+          private def prepare_blockly_core_files
             Dir.glob(File.join(BLOCKLY_CORE_DIR_PATH, '*.json')) do |filepath|
               I18nScriptUtils.copy_file(filepath, BLOCKLY_CORE_I18N_SOURCE_DIR)
             end
           end
 
           # Prepares AI Lab UI Strings
-          def prepare_ml_playground_file
+          private def prepare_ml_playground_file
             I18nScriptUtils.copy_file(ML_PLAYGROUND_FILE_PATH, ML_PLAYGROUND_I18N_SOURCE_DIR)
           end
 
           # Gets the display names of the datasets stored in the dataset manifest file.
-          def dataset_names
+          private def dataset_names
             @dataset_names ||= begin
               manifest_datasets = I18nScriptUtils.parse_file(DATASETS_MANIFEST_FILE_PATH)['datasets']
               manifest_datasets.map {|dataset| [dataset['id'], dataset['name']]}.to_h
@@ -47,7 +45,7 @@ module I18n
           end
 
           # Prepares AI Lab datasets
-          def prepare_dataset_files
+          private def prepare_dataset_files
             Dir.glob(File.join(DATASETS_DIR_PATH, '*.json')) do |dataset_file_path|
               original_dataset = I18nScriptUtils.parse_file(dataset_file_path)
               i18n_data = {}

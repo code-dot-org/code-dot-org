@@ -1,5 +1,7 @@
 import _ from 'lodash';
+
 import {TestResults} from '@cdo/apps/constants';
+
 import {TeacherScores} from './standardsConstants';
 
 const SET_STANDARDS_DATA = 'sectionStandardsProgress/SET_STANDARDS_DATA';

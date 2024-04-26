@@ -11,10 +11,11 @@ const defaultProps = {
   initialJoinedPlSections: [],
   initialJoinedStudentSections: [],
   isTeacher: false,
+  isPlSections: false,
 };
 
 describe('JoinSectionArea', () => {
-  it('shows student sections if has joined student sections', () => {
+  it('shows student sections if isPlSections is false and has joined student sections', () => {
     const wrapper = shallow(
       <JoinSectionArea
         {...defaultProps}
@@ -27,12 +28,13 @@ describe('JoinSectionArea', () => {
       false
     );
   });
-  it('shows participant sections for pl if has joined pl sections', () => {
+  it('shows participant sections for pl if isPlSections is true and has joined pl sections', () => {
     const wrapper = shallow(
       <JoinSectionArea
         {...defaultProps}
         isTeacher={true}
         initialJoinedPlSections={joinedPlSections}
+        isPlSections={true}
       />
     );
     expect(wrapper.find('Connect(JoinSection)').length).to.equal(1);

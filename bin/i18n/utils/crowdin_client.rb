@@ -13,6 +13,7 @@ module I18n
       MAX_CONCURRENT_REQUESTS = 10 # https://developer.crowdin.com/api/v2/#section/Introduction/Rate-Limits
 
       MAX_ITEMS_COUNT = Crowdin::Web::FetchAllExtensions::MAX_ITEMS_COUNT_PER_REQUEST.freeze
+      REQUEST_TIMEOUT = 120 # Number of seconds to wait for a request to complete
       REQUEST_RETRY_ATTEMPTS = 2 # Number of retries for a failed request
       REQUEST_RETRY_DELAY = 2 # Number of seconds to wait before retrying a failed request
       RETRIABLE_ERRORS = [
@@ -21,6 +22,8 @@ module I18n
         '500 Internal Server Error',
         '503 Service Unavailable',
         'Failed to open TCP connection',
+        'Timed out connecting to server',
+        'Timed out reading data from server',
       ].freeze # Request errors to retry
 
       # @param project [String] the Crowdin project name, one of the `CDO.crowdin_projects` keys
@@ -32,6 +35,7 @@ module I18n
         @client = ::Crowdin::Client.new do |config|
           config.api_token = I18nScriptUtils.crowdin_creds['api_token']
           config.project_id = CDO.crowdin_projects.dig(project, 'id')
+          config.request_timeout = REQUEST_TIMEOUT
         end
       end
 
@@ -209,11 +213,9 @@ module I18n
         end
       end
 
-      private
-
       attr_reader :project, :client
 
-      def crowdin_source_name(source_path)
+      private def crowdin_source_name(source_path)
         File.basename(source_path).remove(File::SEPARATOR)
       end
 
@@ -222,7 +224,7 @@ module I18n
       #
       # @param crowdin_dir_path [String] the absolute Crowdin source directory path, e.g "/course_content/2017"
       # @return [Hash, nil] the Crowdin source directory data
-      def source_directory(crowdin_dir_path)
+      private def source_directory(crowdin_dir_path)
         return if crowdin_dir_path.empty? || crowdin_dir_path == File::SEPARATOR
 
         @source_directories ||= {}
@@ -244,7 +246,7 @@ module I18n
         end
       end
 
-      def stringify_errors(errors)
+      private def stringify_errors(errors)
         messages = []
 
         errors.each do |error|
@@ -261,7 +263,7 @@ module I18n
         messages.join("\n")
       end
 
-      def request(endpoint, *params)
+      private def request(endpoint, *params)
         response = client.public_send(endpoint, *params)
 
         if response.is_a?(String) && response.include?('Something went wrong')
@@ -292,7 +294,7 @@ module I18n
         end
       end
 
-      def download_file(url, dest)
+      private def download_file(url, dest)
         opened_uri = URI.parse(url).open
         FileUtils.mkdir_p File.dirname(dest)
         IO.copy_stream(opened_uri, dest)

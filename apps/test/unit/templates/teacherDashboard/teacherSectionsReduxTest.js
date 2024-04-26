@@ -358,7 +358,6 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
       });
     });
@@ -390,7 +389,6 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: courseVersionId,
         unitId: unitId,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
       });
     });
@@ -418,7 +416,6 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
       });
     });
@@ -432,6 +429,7 @@ describe('teacherSectionsRedux', () => {
         name: 'My Other Section',
         courseVersionName: 'coursea-2017',
         loginType: 'picture',
+        loginTypeName: undefined,
         grades: ['11'],
         participantType: 'student',
         providerManaged: false,
@@ -447,7 +445,6 @@ describe('teacherSectionsRedux', () => {
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
@@ -764,6 +761,7 @@ describe('teacherSectionsRedux', () => {
           name: 'Aquarius PM Block 2',
           courseVersionName: undefined,
           loginType: 'picture',
+          loginTypeName: undefined,
           grades: ['3'],
           participantType: 'student',
           providerManaged: false,
@@ -779,7 +777,6 @@ describe('teacherSectionsRedux', () => {
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,
-          isAssigned: undefined,
           restrictSection: false,
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
@@ -1683,6 +1680,7 @@ describe('teacherSectionsRedux', () => {
           name: 'My Section',
           courseVersionName: 'csd-2017',
           loginType: 'picture',
+          loginTypeName: undefined,
           studentCount: 10,
           code: 'PMTKVH',
           courseOfferingsAreLoaded: true,
@@ -1698,6 +1696,7 @@ describe('teacherSectionsRedux', () => {
           name: 'My Other Section',
           courseVersionName: 'coursea-2017',
           loginType: 'picture',
+          loginTypeName: undefined,
           studentCount: 1,
           code: 'DWGMFX',
           courseOfferingsAreLoaded: true,

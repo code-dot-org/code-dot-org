@@ -85,7 +85,9 @@ class LtiV1Controller < ApplicationController
     return log_unauthorized('Missing "aud" or "iss" from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
-
+    # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
+    # unable to access values using dot notation and instead must use brackets. This still works with the value returned by Active Record,
+    # as it has a '[]' method that behaves in the same way https://api.rubyonrails.org/classes/ActiveRecord/AttributeMethods.html#method-i-5B-5D
     integration = read_cache(integration_cache_key) || LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
     return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id}) unless integration
     # Cache integration for fast retrieval on subsequent LTI launches. Set
@@ -99,14 +101,14 @@ class LtiV1Controller < ApplicationController
       Honeybadger.notify(exception, context: {message: 'Error reading state and nonce from cache'})
       return render status: :internal_server_error
     end
-    if (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
+    if cached_state_and_nonce.nil? || (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
       return log_unauthorized(
         'State or nonce mismatch in LTI JWT auth',
         {
           state: params[:state],
           nonce: decoded_jwt_no_auth[:nonce],
-          cached_state: cached_state_and_nonce[:state],
-          cached_nonce: cached_state_and_nonce[:nonce],
+          cached_state: cached_state_and_nonce&.[](:state),
+          cached_nonce: cached_state_and_nonce&.[](:nonce),
         }
       )
     end
@@ -123,18 +125,27 @@ class LtiV1Controller < ApplicationController
     # in a new tab. This flow appends a 'new_tab=true' query param, so it will
     # pass this block once the iframe "jail break" has happened.
     if Policies::Lti.force_iframe_launch?(decoded_jwt[:iss]) && !params[:new_tab]
-      id_token = params[:id_token]
-      state = params[:state]
-      token_hash = {id_token: id_token, state: state}
-      redirect_to "#{lti_v1_iframe_url}?#{token_hash.to_query}"
-      return
+      auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
+
+      query_params = {
+        id_token: params[:id_token],
+        state: params[:state],
+        new_tab: "true",
+      }
+
+      @auth_url = "#{auth_url_base}?#{query_params.to_query}"
+      render 'lti/v1/iframe', layout: false and return
     end
 
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
 
     if jwt_verifier.verify_jwt
-      message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
-      return wrong_resource_type unless message_type == 'LtiResourceLinkRequest'
+      message_type = decoded_jwt[Policies::Lti::MessageType::CLAIM]
+      if Policies::Lti::MessageType::SUPPORTED.exclude?(message_type)
+        return render status: :not_acceptable, template: 'lti/v1/authenticate/unsupported_message_type', locals: {
+          message_type: message_type,
+        }
+      end
 
       user = Queries::Lti.get_user(decoded_jwt)
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
@@ -163,7 +174,7 @@ class LtiV1Controller < ApplicationController
 
         metadata = {
           'user_type' => user.user_type,
-          'lms_type' => integration[:platform_name],
+          'lms_name' => integration[:platform_name],
         }
         Metrics::Events.log_event(
           user: user,
@@ -200,12 +211,13 @@ class LtiV1Controller < ApplicationController
     JSON::JWT.decode(id_token, jwk_set)
   end
 
-  def render_sync_course_error(message, status, error = nil)
-    @lti_section_sync_result = {error: error}
+  def render_sync_course_error(reason, status, error = nil, message: nil)
+    @lti_section_sync_result = {error: error, message: message}
     Honeybadger.notify(
       'LTI roster sync error',
       context: {
-        reason: message,
+        reason: reason,
+        details: message,
       }
     )
     return respond_to do |format|
@@ -214,18 +226,6 @@ class LtiV1Controller < ApplicationController
       end
       format.json {render json: @lti_section_sync_result, status: status}
     end
-  end
-
-  # GET /lti/v1/iframe
-  # Detects if an LMS is trying open Code.org in an iframe and prompts user to
-  # open in new tab. The experience is unchanged to non-iframe users.
-  def iframe
-    auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
-    id_token_param = params[:id_token]
-    state_param = params[:state]
-    new_tab_param = 'new_tab=true'
-    @auth_url = "#{auth_url_base}?id_token=#{id_token_param}&state=#{state_param}&#{new_tab_param}"
-    render 'lti/v1/iframe', layout: false
   end
 
   # GET /lti/v1/sync_course
@@ -250,7 +250,9 @@ class LtiV1Controller < ApplicationController
       end
     end
 
-    lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
+    lti_course, lti_integration, deployment_id, context_id,  nrps_url = nil
+    resource_link_id = params[:rlid]
+
     if params[:section_code].present?
       # Section code present, meaning this is a sync from the teacher dashboard.
       # Populate vars from the section associated with the input code.
@@ -261,8 +263,13 @@ class LtiV1Controller < ApplicationController
       lti_integration = lti_course.lti_integration
       deployment_id = lti_course.lti_deployment_id
       context_id = lti_course.context_id
-      resource_link_id = lti_course.resource_link_id
       nrps_url = lti_course.nrps_url
+      # Prefer the resource link from the SSO parameter instead of the course one. The resource link could have changed.
+      # For example, the teacher could have had Code.org in one material/module but deleted that material/module and
+      # made a new one (deleted the old LtiResourceLink and created a brand new one). This results in a mismatch between
+      # what is stored on Code.org's LtiCourse. Therefore, when doing an SSO sync, prefer the latest RLID and update our
+      # records with that.
+      resource_link_id ||= lti_course.resource_link_id
     else
       # Section code isn't present, meaning this is a sync from an LTI launch.
       # Populate vars from the request params.
@@ -273,16 +280,29 @@ class LtiV1Controller < ApplicationController
       end
       deployment_id = params[:deployment_id]
       context_id = params[:context_id]
-      resource_link_id = params[:rlid]
       nrps_url = params[:nrps_url]
     end
 
-    result = {
-      all: {},
-      changed: {}
-    }
+    lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+    nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+    if Policies::Lti.issuer_accepts_resource_link?(lti_integration.issuer)
+      nrps_response_errors = Services::Lti::NRPSResponseValidator.call(nrps_response)
 
+      if nrps_response_errors.present?
+        return render_sync_course_error(
+          'Invalid LTI key configuration',
+          :unprocessable_entity,
+          'invalid_configs',
+          message: nrps_response_errors.join("\n")
+        )
+      end
+    end
+    nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
+
+    result = nil
     had_changes = false
+    total_sections = 0
+    total_students = 0
     ActiveRecord::Base.transaction do
       lti_course ||= Queries::Lti.find_or_create_lti_course(
         lti_integration_id: lti_integration.id,
@@ -292,27 +312,30 @@ class LtiV1Controller < ApplicationController
         resource_link_id: resource_link_id
       )
 
-      lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
-      nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
-      nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
+      result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
+      had_changes ||= !result[:changed].empty?
 
-      sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
-      had_changes ||= sync_course_roster_results
-
-      # Report which sections were updated
-      nrps_sections.each do |section_id, section|
-        student_count = section[:members].count do |member|
-          member[:roles].include?(Policies::Lti::CONTEXT_LEARNER_ROLE)
-        end
-
-        result[:all][section_id] = {
-          name: section[:name],
-          size: student_count,
-        }
+      result[:changed].each_value do |section|
+        total_sections += 1
+        total_students += section[:size]
       end
     end
+    metadata = {
+      'number_of_sections' => total_sections,
+      'number_of_students' => total_students,
+    }
+    # If section code present, this is a sync from the teacher dashboard by button, otherwise it's a sync
+    # by LTI launch
+    event_name = params[:section_code] ? 'lti_section_update_by_button' : 'lti_section_update_by_launch'
+    Metrics::Events.log_event(
+      user: current_user,
+      event_name: event_name,
+      metadata: metadata,
+    )
 
+    result[:course_name] = nrps_response.dig(:context, :title)
     @lti_section_sync_result = result
+    @lms_name = lti_integration.platform_name
 
     respond_to do |format|
       format.html do
@@ -398,42 +421,36 @@ class LtiV1Controller < ApplicationController
     render status: :ok, json: {}
   end
 
-  private
-
   NAMESPACE = 'lti_v1_controller'.freeze
 
-  def unauthorized_status
+  private def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
   end
 
-  def wrong_resource_type
-    render(status: :not_acceptable, json: {error: I18n.t('lti.error.wrong_resource_type')})
-  end
-
-  def create_state_and_nonce
+  private def create_state_and_nonce
     state = generate_random_string 10
     nonce = Digest::SHA2.hexdigest(generate_random_string(10))
 
     {state: state, nonce: nonce}
   end
 
-  def write_cache(key, value, expires_in = 1.minute)
+  private def write_cache(key, value, expires_in = 1.minute)
     # TODO: Add error handling
     CDO.shared_cache.write("#{NAMESPACE}/#{key}", value.to_json, expires_in: expires_in)
   end
 
-  def read_cache(key)
+  private def read_cache(key)
     # TODO: Add error handling
     json_value = CDO.shared_cache.read("#{NAMESPACE}/#{key}")
     return nil unless json_value
     JSON.parse(json_value).symbolize_keys
   end
 
-  def generate_random_string(length)
+  private def generate_random_string(length)
     SecureRandom.alphanumeric length
   end
 
-  def log_unauthorized(exception, context = nil)
+  private def log_unauthorized(exception, context = nil)
     Honeybadger.notify(
       exception,
       context: context

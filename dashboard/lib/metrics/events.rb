@@ -1,13 +1,20 @@
+require 'cdo/statsig'
+
 module Metrics
   module Events
     class << self
       # Logs an event, delegating to the appropriate handler based on environment
       def log_event(user:, event_name:, event_value: nil, metadata: {})
         event_value = event_name if event_value.nil?
+        managed_test_environment = CDO.running_web_application? && CDO.test_system?
+
         if CDO.rack_env?(:development)
           log_event_to_stdout(user: user, event_name: event_name, event_value: event_value, metadata: metadata)
-        else
+        elsif CDO.rack_env?(:production) || managed_test_environment
           log_event_with_statsig(user: user, event_name: event_name, event_value: event_value, metadata: metadata)
+        else
+          # We don't want to log in other environments, just return silently
+          return
         end
       rescue => exception
         Honeybadger.notify(
@@ -16,21 +23,21 @@ module Metrics
       )
       end
 
-      private
-
       # Logs an event to Statsig
-      def log_event_with_statsig(user:, event_name:, event_value:, metadata:)
+      private def log_event_with_statsig(user:, event_name:, event_value:, metadata:)
+        # Re-initialize Statsig to make sure it's avaiable in current thread.
+        Cdo::StatsigInitializer.init
         statsig_user = build_statsig_user(user)
         Statsig.log_event(statsig_user, event_name, event_value, metadata)
       end
 
       # Builds a StatsigUser object from a user entity
-      def build_statsig_user(user)
+      private def build_statsig_user(user)
         StatsigUser.new({'userID' => user.id.to_s})
       end
 
       # Logs an event to stdout, useful for development and debugging
-      def log_event_to_stdout(user:, event_name:, event_value:, metadata:)
+      private def log_event_to_stdout(user:, event_name:, event_value:, metadata:)
         event_details = {
           user_id: user.id,
           event_name: event_name,

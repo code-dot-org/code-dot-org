@@ -61,10 +61,10 @@
     "parent_level_id": 20458,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/analog-sensors",
+      "/courses/csd-2024/guides/analog-sensors",
       "/maker/setup"
     ],
-    "map_reference": "/courses/csd-2022/guides/data-and-change-events",
+    "map_reference": "/courses/csd-2024/guides/data-and-change-events",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

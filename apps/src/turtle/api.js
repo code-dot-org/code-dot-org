@@ -1,5 +1,6 @@
-var _ = require('lodash');
 import {randomValue} from '../utils';
+
+var _ = require('lodash');
 
 /**
  * An instantiable Artist API logic. The methods on this object are called by
