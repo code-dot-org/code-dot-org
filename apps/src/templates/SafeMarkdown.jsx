@@ -17,6 +17,7 @@ import rehypeSanitize from 'rehype-sanitize';
 import rehypeReact from 'rehype-react';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 
+import CodeBlockWithCopy from './CodeBlockWithCopy';
 import externalLinks from './plugins/externalLinks';
 
 /**
@@ -29,23 +30,58 @@ class SafeMarkdown extends React.Component {
     markdown: PropTypes.string.isRequired,
     openExternalLinksInNewTab: PropTypes.bool,
     className: PropTypes.string,
+    includeCodeCopyButton: PropTypes.bool,
   };
 
+  static defaultProps = {
+    includeCodeCopyButton: false,
+  };
+
+  getParser() {
+    const components = {
+      // Use React component wrappers for Blockly XML elements to prevent
+      // React from warning us about invalid components.
+      ...blocklyComponentWrappers,
+      ...(this.props.includeCodeCopyButton ? {pre: CodeBlockWithCopy} : {}),
+    };
+
+    const parser = Parser.create()
+      .getParser()
+      // include custom plugins
+      .use([
+        clickableText,
+        expandableImages,
+        visualCodeBlock,
+        xmlAsTopLevelBlock,
+        details,
+      ])
+      // convert markdown to an HTML Abstract Syntax Tree (HAST)
+      .use(remarkRehype, {allowDangerousHTML: true}) // include any raw HTML in the markdown as raw HTML nodes in the HAST
+      // parse the raw HTML nodes in the HAST to actual HAST nodes
+      .use(rehypeRaw)
+      // sanitize the HAST
+      .use(rehypeSanitize, schema)
+      // convert the HAST to React
+      .use(rehypeReact, {
+        createElement: React.createElement,
+        components: components,
+      });
+
+    if (this.props.openExternalLinksInNewTab) {
+      parser.use(externalLinks, {links: 'all'});
+    }
+
+    return parser;
+  }
+
   render() {
-    // We only open external links in a new tab if it's explicitly specified
-    // that we do so; this is absolutely not something we want to do as a
-    // general practice, but unfortunately there are some situations in which
-    // it is currently a requirement.
-    const parser = this.props.openExternalLinksInNewTab
-      ? markdownToReactExternalLinks
-      : markdownToReact;
-
+    const parser = this.getParser();
     const rendered = parser.processSync(this.props.markdown).contents;
-
     const markdownProps = {};
     if (this.props.className) {
       markdownProps.className = this.props.className;
     }
+
     // rehype-react will only wrap the compiled markdown in a <div> tag
     // if it needs to (ie, if there would otherwise be multiple elements
     // returned) or we're assigning props. We prefer consistency over flexibility,
@@ -110,37 +146,6 @@ blocklyTags.forEach(tag => {
     // https://github.com/facebook/react/issues/11184#issuecomment-335942439
     return <BlocklyElement is={tag} {...props} />;
   };
-});
-
-const markdownToReact = Parser.create()
-  .getParser()
-  // include custom plugins
-  .use([
-    clickableText,
-    expandableImages,
-    visualCodeBlock,
-    xmlAsTopLevelBlock,
-    details,
-  ])
-  // convert markdown to an HTML Abstract Syntax Tree (HAST)
-  .use(remarkRehype, {
-    // include any raw HTML in the markdown as raw HTML nodes in the HAST
-    allowDangerousHTML: true,
-  })
-  // parse the raw HTML nodes in the HAST to actual HAST nodes
-  .use(rehypeRaw)
-  // sanitize the HAST
-  .use(rehypeSanitize, schema)
-  // convert the HAST to React
-  .use(rehypeReact, {
-    createElement: React.createElement,
-    // Use React component wrappers for Blockly XML elements to prevent
-    // React from warning us about invalid components.
-    components: blocklyComponentWrappers,
-  });
-
-const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
-  links: 'all',
 });
 
 export default SafeMarkdown;
