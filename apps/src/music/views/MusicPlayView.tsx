@@ -55,58 +55,62 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
 
   return (
     <div className={moduleStyles.musicPlayViewContainer}>
-      <img
-        className={moduleStyles.musicPlayViewImage}
-        src={musicPlayViewLogo}
-        alt="Code.org play view logo"
-      />
-      <div className={moduleStyles.musicPlayViewCard}>
-        <Heading2>{projectName}</Heading2>
-        <BodyTwoText>{musicI18n.builtWithMusicLab()}</BodyTwoText>
+      <div className={moduleStyles.musicPlayViewCardContainer}>
+        <img
+          className={moduleStyles.musicPlayViewImage}
+          src={musicPlayViewLogo}
+          alt="Code.org play view logo"
+        />
+        <div className={moduleStyles.musicPlayViewCard}>
+          <Heading2>{projectName}</Heading2>
+          <BodyTwoText>{musicI18n.builtWithMusicLab()}</BodyTwoText>
 
-        <div className={moduleStyles.musicPlayViewPlaySection}>
-          <Button
-            isIconOnly={true}
-            icon={{iconStyle: 'solid', iconName: !isPlaying ? 'play' : 'stop'}}
-            onClick={!isPlaying ? onPlay : onStop}
-            size="s"
-            color="white"
-            type="secondary"
-          />
-          {/*TODO: get the total length of the song, show current player position/play progress*/}
-          <input type="range" value={progressSliderValue} min="0" max="100" />
-        </div>
+          <div className={moduleStyles.musicPlayViewPlaySection}>
+            <Button
+              isIconOnly={true}
+              icon={{
+                iconStyle: 'solid',
+                iconName: !isPlaying ? 'play' : 'stop',
+              }}
+              onClick={!isPlaying ? onPlay : onStop}
+              size="s"
+              color="white"
+              type="secondary"
+            />
+            <input type="range" value={progressSliderValue} min="0" max="100" />
+          </div>
 
-        <div className={moduleStyles.musicPlayViewButtonsSection}>
-          <Button
-            text={commonI18n.viewCode()}
-            type="secondary"
-            color="white"
-            size="s"
-            iconLeft={{iconStyle: 'solid', iconName: 'code'}}
-            onClick={onViewCode}
-          />
-          <Button
-            text={commonI18n.makeMyOwn()}
-            type="secondary"
-            color="white"
-            size="s"
-            iconLeft={{iconStyle: 'solid', iconName: 'user-music'}}
-            onClick={onRemix}
-          />
-        </div>
-        {canShare && (
           <div className={moduleStyles.musicPlayViewButtonsSection}>
             <Button
-              text={musicI18n.share()}
+              text={commonI18n.viewCode()}
               type="secondary"
               color="white"
               size="s"
-              iconLeft={{iconStyle: 'solid', iconName: 'share'}}
-              onClick={onShareProject}
+              iconLeft={{iconStyle: 'solid', iconName: 'code'}}
+              onClick={onViewCode}
+            />
+            <Button
+              text={commonI18n.makeMyOwn()}
+              type="secondary"
+              color="white"
+              size="s"
+              iconLeft={{iconStyle: 'solid', iconName: 'user-music'}}
+              onClick={onRemix}
             />
           </div>
-        )}
+          {canShare && (
+            <div className={moduleStyles.musicPlayViewButtonsSection}>
+              <Button
+                text={musicI18n.share()}
+                type="secondary"
+                color="white"
+                size="s"
+                iconLeft={{iconStyle: 'solid', iconName: 'share'}}
+                onClick={onShareProject}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

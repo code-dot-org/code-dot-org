@@ -9,6 +9,14 @@
   width: 100%;
   background-color: $light_black;
 
+
+  .musicPlayViewCardContainer {
+    max-width: 360px;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+  }
+
   .musicPlayViewImage {
     align-self: center;
     display: flex;
@@ -16,7 +24,6 @@
     max-width: 350px;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    padding: 0.5em;
   }
 
   .musicPlayViewCard {
