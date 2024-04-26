@@ -1,4 +1,4 @@
-import getScriptData from '@cdo/apps/util/getScriptData';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import {ProjectFile} from '../types';
 
 // Partial definition of the App Options structure, only defining the
@@ -18,8 +18,10 @@ interface PartialAppOptions {
  * Note: We are trying to use app options as little as possible.
  */
 export function getStandaloneProjectId(): string | undefined {
-  const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  return appOptions.channel;
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.channel;
+  }
 }
 
 /**
@@ -28,8 +30,10 @@ export function getStandaloneProjectId(): string | undefined {
  * by other means (for example via header.js)
  */
 export function getAppOptionsLevelId(): number | undefined {
-  const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  return appOptions.levelId;
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.levelId;
+  }
 }
 
 /**
@@ -37,8 +41,10 @@ export function getAppOptionsLevelId(): number | undefined {
  * if present in App Options. Only used in standalone project levels.
  */
 export function getIsShareView(): boolean | undefined {
-  const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  return appOptions.share;
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.share;
+  }
 }
 
 /**
