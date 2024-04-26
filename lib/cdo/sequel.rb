@@ -13,7 +13,14 @@ module Cdo
     # @param validation_frequency [number] How often to validate the connection. If set to -1,
     #   validate each time a request is made.
     # @param query_timeout [number] The execution timeout for SELECT statements, in seconds.
-    def self.database_connection_pool(writer, reader, validation_frequency: nil, query_timeout: nil, multi_statements: false)
+    def (writer, reader, validation_frequency: nil, query_timeout: nil, multi_statements: false)
+      # Enable symbol splitting of qualified identifiers for backwards compatibility.
+      Sequel.split_symbols = true
+      # Enable deprecated Dataset#and method for backwards compatibility.
+      Sequel::Database.extension :sequel_4_dataset_methods
+      # Enable string literals in dataset filtering methods for backwards compatibility.
+      Sequel::Database.extension :auto_literal_strings
+
       reader = reader.gsub 'mysql:', 'mysql2:'
       writer = writer.gsub 'mysql:', 'mysql2:'
 
@@ -40,11 +47,6 @@ module Cdo
         # `mysql_options` client options forwarded through the mysql2 adapter:
         # See: https://dev.mysql.com/doc/refman/5.7/en/mysql-options.html
 
-        # `MYSQL_OPT_RECONNECT`: Enable or disable automatic reconnection to the server if the connection is found to have
-        # been lost. Reconnect is off by default; this option provides a way to set reconnection behavior explicitly.
-        # See https://dev.mysql.com/doc/refman/5.7/en/c-api-auto-reconnect.html
-        reconnect: true,
-
         # `MYSQL_OPT_CONNECT_TIMEOUT`: The connect timeout in seconds.
         connect_timeout: 2,
 
@@ -59,6 +61,9 @@ module Cdo
         # There is a retry if necessary, so the total effective timeout value is two times the option value.
         write_timeout: 5
       }
+
+      # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
+      db_options[:reconnect] = true if DCDO.get('enable_mysql_client_reconnect', false)
 
       if query_timeout
         db_options[:read_timeout] = query_timeout
@@ -77,11 +82,15 @@ module Cdo
       end
       db = Sequel.connect writer, db_options
 
+      # Enable read splitting with the `with_server` method.
+      # https://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/server_block_rb.html
       db.extension :server_block
 
       # Check if validation frequency is valid and then use it to specify how often to
       # verify the db connection
       if validation_frequency && (validation_frequency == -1 || validation_frequency > 0)
+        # Handle terminated database connections.
+        # http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/connection_validator_rb.html
         db.extension(:connection_validator)
         db.pool.connection_validation_timeout = validation_frequency
       end
