@@ -9,25 +9,38 @@
   width: 100%;
   background-color: $light_black;
 
+
+  .musicPlayViewCardContainer {
+    max-width: 360px;
+    border-color: $neutral_dark60;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+  }
+
+  .musicPlayViewImage {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
   .musicPlayViewCard {
     display: flex;
     flex-direction: column;
     max-width: 350px;
     background-color: $light_gray_900;
     gap: .5rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
+    padding: 1.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 
     .musicPlayViewInfoSection {
       display: flex;
       flex-direction: column;
       gap: .5rem;
-
-      img {
-        width: 56px;
-        align-self: center;
-      }
-
       h2, p {
         color: $light_white;
         margin-bottom: 0;
@@ -42,8 +55,8 @@
       input[type='range'] {
         overflow: hidden;
         width: 100%;
-        height: 4px;
-        accent-color: $light_gray_200;
+        height: 5px;
+        accent-color: yellow;
 
         background-color: $light_gray_800;
         color: $light_gray_800;
