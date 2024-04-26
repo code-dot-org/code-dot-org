@@ -822,7 +822,7 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    waitFor(
+    await waitFor(
       () =>
         expect(queryByText('Getting Started with Your AI Teaching Assistant'))
           .to.exist
@@ -900,7 +900,7 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    waitFor(() =>
+    await waitFor(() =>
       expect(sendEventSpy).to.have.been.calledWith(
         EVENTS.TA_RUBRIC_TOUR_STARTED,
         {}
@@ -935,7 +935,7 @@ describe('RubricContainer', () => {
 
     fireEvent.click(nextButton);
 
-    waitFor(() =>
+    await waitFor(() =>
       expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_NEXT, {
         step: 0,
         nextStep: 1,
@@ -946,7 +946,7 @@ describe('RubricContainer', () => {
 
     fireEvent.click(backButton);
 
-    waitFor(() =>
+    await waitFor(() =>
       expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_BACK, {
         step: 1,
         nextStep: 0,
@@ -981,7 +981,7 @@ describe('RubricContainer', () => {
 
     fireEvent.click(skipButton);
 
-    waitFor(() =>
+    await waitFor(() =>
       expect(sendEventSpy).to.have.been.calledWith(
         EVENTS.TA_RUBRIC_TOUR_CLOSED,
         {
@@ -1017,19 +1017,18 @@ describe('RubricContainer', () => {
     const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
-    await wait();
+    await findByText('Understanding the AI Assessment');
     fireEvent.click(nextButton);
-    await wait();
+    await findByText('Using Evidence');
     fireEvent.click(nextButton);
-    await wait();
+    await findByText('Understanding AI Confidence');
     fireEvent.click(nextButton);
-    await wait();
+    await findByText('Assigning a Rubric Score');
     fireEvent.click(nextButton);
-
     const doneButton = await findByText('Done');
     fireEvent.click(doneButton);
 
-    waitFor(() =>
+    await waitFor(() =>
       expect(sendEventSpy).to.have.been.calledWith(
         EVENTS.TA_RUBRIC_TOUR_COMPLETE,
         {}
@@ -1069,7 +1068,7 @@ describe('RubricContainer', () => {
     const element = await findByRole('button', {name: 'restart product tour'});
     fireEvent.click(element);
 
-    waitFor(() =>
+    await waitFor(() =>
       expect(sendEventSpy).to.have.been.calledWith(
         EVENTS.TA_RUBRIC_TOUR_RESTARTED,
         {}
