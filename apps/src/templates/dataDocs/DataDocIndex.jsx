@@ -1,6 +1,6 @@
-import {Link} from '@dsco_/link';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
+import {Link} from '@dsco_/link';
 
 const DataDocIndex = ({dataDocs}) => (
   <>

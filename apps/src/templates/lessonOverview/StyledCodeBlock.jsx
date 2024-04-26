@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
 
 export const buildProgrammingExpressionMarkdown = function (
   programmingExpression
