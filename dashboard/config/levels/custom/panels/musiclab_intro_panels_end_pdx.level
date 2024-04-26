@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-04-17T21:52:17.000Z",
   "level_num": "custom",
@@ -20,9 +21,16 @@
         }
       ]
     },
-    "name_suffix": "_pdx"
+    "name_suffix": "_pdx",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/294f99cfd6e1d55a2738e91a71b53570-musiclab_intro_end_2.png",
+        "text": "#### 🎶 Ready to jam? 🎶\n\nYou've learned the basics, and now you're ready to make your own song! \n\nBe sure to explore the sound library - there are plenty of cool sounds in there.\n\nClick Continue to go to a new project. ",
+        "key": "musiclab_intro_panels_end_pdx-88ca8817-6cb7-4c5b-a08a-69fc2267eb0b",
+        "nextUrl": "/projectbeats"
+      }
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-04-17T21:52:17.421+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_end_elementary\\\"\"],\"cloned_from\":\"musiclab_intro_panels_end_elementary\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T21:52:17.421+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_end_elementary\\\"\"],\"cloned_from\":\"musiclab_intro_panels_end_elementary\"},{\"changed_at\":\"2024-04-19 17:28:24 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 17:29:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 17:44:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-24 18:17:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

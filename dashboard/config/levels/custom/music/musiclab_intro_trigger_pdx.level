@@ -51,11 +51,14 @@
       },
       "toolbox": {
         "blocks": {
+          "Control": [
+            "repeat_simple2",
+            "play_sounds_together"
+          ],
           "Play": [
             "play_sound_at_current_location_simple2"
           ]
-        },
-        "type": "flyout"
+        }
       }
     },
     "instructions_important": "false",
@@ -83,7 +86,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T21:52:17.199+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_trigger_elementary\\\"\"],\"cloned_from\":\"musiclab_intro_trigger_elementary\"},{\"changed_at\":\"2024-04-17 23:06:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:06:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:10:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:11:26 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:11:40 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 19:12:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T21:52:17.199+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_trigger_elementary\\\"\"],\"cloned_from\":\"musiclab_intro_trigger_elementary\"},{\"changed_at\":\"2024-04-17 23:06:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:06:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:10:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:11:26 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 23:11:40 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 19:12:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 17:39:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-04-19T19:29:28.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Bias in Applications\r\n\r\n#### How might bias in computer vision applications impact users differently based on their background or characteristics?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20662,
+    "name_suffix": "_2024",
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "To evaluate students' understanding of the differential impacts of bias, such as how facial recognition systems may perform poorly on certain demographic groups due to underrepresentation in training datasets.\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-19T19:29:28.388+00:00\",\"changed\":[\"cloned from \\\"CV_L8_Reflection_3\\\"\"],\"cloned_from\":\"CV_L8_Reflection_3\"},{\"changed_at\":\"2024-04-19 19:29:42 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:30:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

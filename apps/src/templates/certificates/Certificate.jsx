@@ -1,14 +1,11 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {connect} from 'react-redux';
 import $ from 'jquery';
-import BackToFrontConfetti from '../BackToFrontConfetti';
-import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import SocialShare from './SocialShare';
-import LargeChevronLink from './LargeChevronLink';
+import React, {useEffect, useRef, useState} from 'react';
+import {connect} from 'react-redux';
+import {register} from 'swiper/element/bundle';
+
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
-import style from './congrats.module.scss';
 import {
   BodyTwoText,
   BodyThreeText,
@@ -16,7 +13,15 @@ import {
   Heading2,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
-import {register} from 'swiper/element/bundle';
+import i18n from '@cdo/locale';
+
+import BackToFrontConfetti from '../BackToFrontConfetti';
+
+import LargeChevronLink from './LargeChevronLink';
+import SocialShare from './SocialShare';
+
+import style from './congrats.module.scss';
+
 register();
 
 /**

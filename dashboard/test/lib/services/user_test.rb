@@ -12,6 +12,13 @@ class Services::UserTest < ActiveSupport::TestCase
         '0' => {
           'email' => expected_email
         }
+      },
+      'school_info_attributes' => {
+        'country' => 'US',
+        'school_type' => 'public',
+        'school_state' => 'Washington',
+        'school_name' => 'Test School',
+        'school_zip' => '99999'
       }
     }
     user = User.new(name: 'original_name')
@@ -22,5 +29,6 @@ class Services::UserTest < ActiveSupport::TestCase
 
     assert_equal expected_name, user.name
     assert_equal expected_email, user.authentication_options.first.email
+    assert_equal user.school_info.school_name, params.dig('school_info_attributes', 'school_name')
   end
 end
