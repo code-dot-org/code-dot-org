@@ -6,33 +6,33 @@ class MailJetTest < Minitest::Test
     MailJet.stubs(:enabled?).returns(true)
   end
 
-  def test_create_contactdata
+  def test_create_contact
     email = 'fake.email@test.xx'
     name = 'Fake Name'
 
     Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: true, email: email, name: name)
 
-    mock_contact = mock('Mailjet::Contactdata')
-    Mailjet::Contactdata.stubs(:find).with(email).returns(nil).then.returns(mock_contact)
+    mock_contact = mock('Mailjet::Contact')
+    Mailjet::Contact.stubs(:find).with(email).returns(nil).then.returns(mock_contact)
 
     MailJet.expects(:valid_email?).with(email).returns(true).once
 
-    refute_nil MailJet.find_or_create_contactdata(email, name)
+    refute_nil MailJet.find_or_create_contact(email, name)
   end
 
   def test_find_existing_contact
     email = 'fake.email@test.xx'
     name = 'Fake Name'
 
-    mock_existing_contact = mock('Mailjet::Contactdata')
+    mock_existing_contact = mock('Mailjet::Contact')
     mock_existing_contact.stubs(:id).returns(123)
-    Mailjet::Contactdata.expects(:find).with(email).returns(mock_existing_contact)
+    Mailjet::Contact.expects(:find).with(email).returns(mock_existing_contact)
 
     Mailjet::Contact.expects(:create).never
 
     MailJet.expects(:valid_email?).with(email).returns(true).once
 
-    refute_nil MailJet.find_or_create_contactdata(email, name)
+    refute_nil MailJet.find_or_create_contact(email, name)
   end
 
   def test_invalid_email_does_not_create_contact
@@ -42,14 +42,19 @@ class MailJetTest < Minitest::Test
     MailJet.expects(:valid_email?).with(email).returns(false).once
     Mailjet::Contact.expects(:create).never
 
-    assert_nil MailJet.find_or_create_contactdata(email, name)
+    assert_nil MailJet.find_or_create_contact(email, name)
   end
 
   def test_update_contact_field
     mock_contactdata = mock('Mailjet::Contactdata')
     mock_contactdata.stubs(:update_attributes).with(data: [{name: 'field_name', value: 'field_value'}])
 
-    MailJet.update_contact_field(mock_contactdata, 'field_name', 'field_value')
+    mock_contact_id = 123
+    Mailjet::Contactdata.expects(:find).with(mock_contact_id).returns(mock_contactdata)
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:id).returns(mock_contact_id)
+
+    MailJet.update_contact_field(mock_contact, 'field_name', 'field_value')
   end
 
   def test_send_template_email
@@ -61,9 +66,9 @@ class MailJetTest < Minitest::Test
 
     MailJet.stubs(:subaccount).returns('unit_test')
 
-    mock_contactdata = mock('Mailjet::Contactdata')
-    mock_contactdata.stubs(:email).returns(to_email)
-    mock_contactdata.stubs(:name).returns(to_name)
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:email).returns(to_email)
+    mock_contact.stubs(:name).returns(to_name)
 
     email_config = {
       from_address: from_address,
@@ -84,7 +89,7 @@ class MailJetTest < Minitest::Test
         messages[0][:TemplateID] == template_id
     end
 
-    MailJet.send_template_email(mock_contactdata, email_config)
+    MailJet.send_template_email(mock_contact, email_config)
   end
 
   def test_create_contact_and_send_welcome_email
@@ -99,7 +104,7 @@ class MailJetTest < Minitest::Test
     user.stubs(:created_at).returns(sign_up_time)
 
     mock_contactdata = mock('Mailjet::Contactdata')
-    MailJet.expects(:find_or_create_contactdata).with(email, user.name).returns(mock_contactdata)
+    MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contactdata)
 
     MailJet.expects(:update_contact_field).with(mock_contactdata, 'sign_up_date', sign_up_time.rfc3339)
 
