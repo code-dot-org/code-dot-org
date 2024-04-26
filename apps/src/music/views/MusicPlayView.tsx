@@ -94,7 +94,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               type="secondary"
               color="white"
               size="s"
-              iconLeft={{iconStyle: 'solid', iconName: 'user-music'}}
+              iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
               onClick={onRemix}
             />
           </div>
