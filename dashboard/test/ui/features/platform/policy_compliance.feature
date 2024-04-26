@@ -20,6 +20,35 @@ Feature: Policy Compliance and Parental Permission
     Then I wait to see "#lockout-panel-form"
     And element "#permission-status" contains text "Pending"
 
+  Scenario: New under 13 account should be able to provide state and see lockout page to send parental request.
+    Given I create a young student who has never signed in named "Sally Student" and go home
+    Given I am on "http://studio.code.org/lockout"
+
+    Then I wait to see '#student-information-modal'
+    Then I click selector "#user_us_state"
+    And I wait until element "span:contains(Colorado)" is visible
+    Then I click selector "span:contains(Colorado)"
+
+    Then I press '#submit-btn' using jQuery
+
+    Then I wait until I am on "http://studio.code.org/lockout"
+
+    # It should not be a pending request
+    Then I wait to see "#lockout-panel-form"
+    And element "#permission-status" contains text "Not Submitted"
+
+    # Type in the email do re-enable the button
+    And I press keys "parent@example.com" for element "#parent-email"
+    Then element "#lockout-submit" is enabled
+
+    # Ensure that we are now "pending"
+    And I take note of the current loaded page
+    When I press "lockout-submit"
+    Then I wait until I am on a different page than I noted before
+
+    Then I wait to see "#lockout-panel-form"
+    And element "#permission-status" contains text "Pending"
+
   Scenario: New under 13 account should be able to elect to sign out at the lockout.
     Given I create a young student in Colorado who has never signed in named "Sally Student" and go home
     Given I am on "http://studio.code.org/lockout"
