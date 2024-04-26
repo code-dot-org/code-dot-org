@@ -22,8 +22,11 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   const {isPlaying, lastMeasure, currentPlayheadPosition} = useAppSelector(
     state => state.music
   );
-  const progressSliderValue =
+  let progressSliderValue =
     ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
+  if (!progressSliderValue) {
+    progressSliderValue = 0;
+  }
   const projectName = useAppSelector(state => state.lab.channel?.name);
   // TODO: Use isLoading to disable play button and/or show some loading indicator (spinner, etc)
   // const isLoading = useAppSelector(
