@@ -1,5 +1,5 @@
 import moment from 'moment';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {fetchAITutorInteractions} from '@cdo/apps/aiTutor/interactionsApi';
 import InteractionsTableRow from './InteractionsTableRow';
 import style from './interactions-table.module.scss';
@@ -15,6 +15,7 @@ import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import UnitSelectorV2 from '@cdo/apps/templates/UnitSelectorV2';
 import {useSelector} from 'react-redux';
 import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 type StatusLabels = {
   [key in AITutorInteractionStatusValue]: string;
@@ -83,49 +84,92 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
     (state: {unitSelection: {scriptId: number}}) => state.unitSelection.scriptId
   );
 
-  console.log(`scriptId`, scriptId);
+  //console.log(`scriptId`, scriptId);
+
+  const isLoadingProgress = useSelector(
+    (state: {sectionProgress: {isLoadingProgress: boolean}}) =>
+      state.sectionProgress.isLoadingProgress
+  );
+  const isRefreshingProgress = useSelector(
+    (state: {sectionProgress: {isRefreshingProgress: boolean}}) =>
+      state.sectionProgress.isRefreshingProgress
+  );
+
+  const isSelectedUnitLoaded = useSelector(
+    (state: {sectionProgress: {unitDataByUnit: UnitData}}) =>
+      !!state.sectionProgress.unitDataByUnit[scriptId]
+  );
+
+  const levelDataInitialized = useMemo(() => {
+    return isSelectedUnitLoaded && !isLoadingProgress && !isRefreshingProgress;
+  }, [isSelectedUnitLoaded, isLoadingProgress, isRefreshingProgress]);
 
   const unitList = useSelector(
     (state: {sectionProgress: {unitDataByUnit: UnitData}}) =>
       state.sectionProgress.unitDataByUnit
   );
 
-  console.log('unitList', unitList);
+  //console.log('unitList', unitList);
 
-  console.log(`unitList[scriptId]`, unitList[scriptId]);
+  //console.log(`unitList[scriptId]`, unitList[scriptId]);
 
-  let lessonOptions: {text: string; value: string}[] = [];
-  if (unitList[scriptId] && unitList[scriptId].lessons) {
-    lessonOptions = unitList[scriptId].lessons.map((lesson: Lesson) => ({
-      text: lesson.name,
-      value: lesson.id.toString(),
-    }));
-  }
+  //let lessonOptions: {text: string; value: string}[] = [];
+  const [lessonOptions, setLessonOptions] = useState<
+    {text: string; value: string}[]
+  >([]);
 
-  console.log('lessonOptions', lessonOptions);
+  // const [renderDropdowns, setRenderDropdowns] = useState<boolean>(false);
 
-  const [selectedLessonId, setSelectedLessonId] = useState<string>(
-    lessonOptions[0].value
-  );
+  console.log('levelDataInitialized', levelDataInitialized);
 
-  console.log('selectedLessonId', selectedLessonId);
+  const [selectedLessonId, setSelectedLessonId] = useState<string>('');
 
-  const selectedLesson = unitList[scriptId].lessons.find(
-    lesson => lesson.id.toString() === selectedLessonId
-  );
-  console.log('selected lesson', selectedLesson);
-
-  let levelOptions: {label: string; value: string}[] = [];
-  if (selectedLesson && selectedLesson.levels) {
-    levelOptions = selectedLesson.levels.map((level: Level) => ({
-      label: level.levelNumber.toString(),
-      value: level.id.toString(),
-    }));
-  }
-
-  console.log('levelOptions', levelOptions);
+  const [levelOptions, setLevelOptions] = useState<
+    {label: string; value: string}[]
+  >([]);
 
   const [selectedLevelIds, setSelectedLevelIds] = useState<string[]>([]);
+
+  function initialLessonSetup(lessons: {text: string; value: string}[]) {
+    setLessonOptions(lessons);
+    setSelectedLessonId(lessons[0].value);
+  }
+
+  useEffect(() => {
+    if (
+      levelDataInitialized &&
+      unitList[scriptId] &&
+      unitList[scriptId].lessons
+    ) {
+      const newLessonOptions = unitList[scriptId].lessons.map(
+        (lesson: Lesson) => ({
+          text: lesson.name,
+          value: lesson.id.toString(),
+        })
+      );
+      initialLessonSetup(newLessonOptions);
+    }
+  }, [levelDataInitialized, unitList, scriptId]);
+
+  useEffect(() => {
+    console.log('lessonOptions', lessonOptions);
+    console.log('selectedLessonId', selectedLessonId);
+    const selectedLesson = unitList[scriptId].lessons.find(
+      lesson => lesson.id.toString() === selectedLessonId
+    );
+    console.log('selected lesson', selectedLesson);
+    if (selectedLesson && selectedLesson.levels) {
+      const newLevelOptions = selectedLesson.levels.map((level: Level) => ({
+        label: level.levelNumber.toString(),
+        value: level.id.toString(),
+      }));
+      setLevelOptions(newLevelOptions);
+    }
+    console.log('levelOptions Updated');
+  }, [lessonOptions, selectedLessonId, scriptId, unitList]);
+  // useEffect(() => {
+  //   updateLevels();
+  // }, [selectedLessonId]);
 
   useEffect(() => {
     (async () => {
@@ -234,121 +278,150 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       <h3>Select Unit</h3>
       <div className={style.filterDropdowns}>
         <UnitSelectorV2 />
-        <SimpleDropdown
-          items={lessonOptions}
-          selectedValue={selectedLessonId}
-          onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
-            setSelectedLessonId(event.target.value)
-          }
-          name="lesson-filter"
-          color="black"
-          size="s"
-          labelText="Choose Lesson"
-          isLabelVisible={false}
-        />
-        <CheckboxDropdown
-          allOptions={levelOptions}
-          checkedOptions={selectedLevelIds}
-          color="black"
-          labelText="Filter by Level"
-          name="filter-levels"
-          onChange={handleStatusFilterChange}
-          onClearAll={() => setSelectedLevelIds([])}
-          onSelectAll={() =>
-            setSelectedLevelIds(Object.values(AITutorInteractionStatus))
-          }
-          size="s"
-        />
+        {levelDataInitialized && (
+          <div className={style.filterDropdowns}>
+            <SimpleDropdown
+              items={lessonOptions}
+              selectedValue={selectedLessonId}
+              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                setSelectedLessonId(event.target.value);
+                // updateLevels();
+              }}
+              name="lesson-filter"
+              color="black"
+              size="s"
+              labelText="Choose Lesson"
+              isLabelVisible={false}
+            />
+            <CheckboxDropdown
+              allOptions={levelOptions}
+              checkedOptions={selectedLevelIds}
+              color="black"
+              labelText="Filter by Level"
+              name="filter-levels"
+              onChange={handleStatusFilterChange}
+              onClearAll={() => setSelectedLevelIds([])}
+              onSelectAll={() =>
+                setSelectedLevelIds(Object.values(AITutorInteractionStatus))
+              }
+              size="s"
+            />
+          </div>
+        )}
+        {!levelDataInitialized && (
+          <FontAwesome
+            id="uitest-spinner"
+            icon="spinner"
+            className="fa-pulse fa-3x"
+            title="Loading..."
+          />
+        )}
       </div>
 
-      <div className={style.filterDropdowns}>
-        <CheckboxDropdown
-          allOptions={statusOptions}
-          checkedOptions={selectedStatuses}
-          color="black"
-          labelText="Filter by Status"
-          name="filter-statuses"
-          onChange={handleStatusFilterChange}
-          onClearAll={() => setSelectedStatuses([])}
-          onSelectAll={() =>
-            setSelectedStatuses(Object.values(AITutorInteractionStatus))
-          }
-          size="s"
-        />
-        <CheckboxDropdown
-          allOptions={studentFilterOptions}
-          checkedOptions={selectedUserIds}
-          color="black"
-          labelText="Filter by Student"
-          name="filter-students"
-          onChange={handleStudentFilterChange}
-          onClearAll={() => setSelectedUserIds([])}
-          onSelectAll={() =>
-            setSelectedUserIds(studentFilterOptions.map(option => option.value))
-          }
-          size="s"
-        />
-        <SimpleDropdown
-          items={TIME_FILTER_OPTIONS}
-          selectedValue={selectedTimeFilter}
-          onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
-            setSelectedTimeFilter(event.target.value)
-          }
-          name="time-filter"
-          color="black"
-          size="s"
-          labelText="Filter by Time"
-          isLabelVisible={false}
-        />
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <td>
-              <div className={style.header}>Id</div>
-            </td>
-            <td>
-              <div className={style.header}>Student</div>
-            </td>
-            <td>
-              <div className={style.header}>Timestamp</div>
-            </td>
-            <td>
-              <div className={style.header}>AI Tutor Responses</div>
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          {!filteredChatMessages.length ? (
+      {levelDataInitialized && (
+        <div className={style.filterDropdowns}>
+          <CheckboxDropdown
+            allOptions={statusOptions}
+            checkedOptions={selectedStatuses}
+            color="black"
+            labelText="Filter by Status"
+            name="filter-statuses"
+            onChange={handleStatusFilterChange}
+            onClearAll={() => setSelectedStatuses([])}
+            onSelectAll={() =>
+              setSelectedStatuses(Object.values(AITutorInteractionStatus))
+            }
+            size="s"
+          />
+          <CheckboxDropdown
+            allOptions={studentFilterOptions}
+            checkedOptions={selectedUserIds}
+            color="black"
+            labelText="Filter by Student"
+            name="filter-students"
+            onChange={handleStudentFilterChange}
+            onClearAll={() => setSelectedUserIds([])}
+            onSelectAll={() =>
+              setSelectedUserIds(
+                studentFilterOptions.map(option => option.value)
+              )
+            }
+            size="s"
+          />
+          <SimpleDropdown
+            items={TIME_FILTER_OPTIONS}
+            selectedValue={selectedTimeFilter}
+            onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
+              setSelectedTimeFilter(event.target.value)
+            }
+            name="time-filter"
+            color="black"
+            size="s"
+            labelText="Filter by Time"
+            isLabelVisible={false}
+          />
+        </div>
+      )}
+      {levelDataInitialized && (
+        <table>
+          <thead>
             <tr>
-              <td colSpan={4}>No chat messages found.</td>
+              <td>
+                <div className={style.header}>Id</div>
+              </td>
+              <td>
+                <div className={style.header}>Student</div>
+              </td>
+              <td>
+                <div className={style.header}>Timestamp</div>
+              </td>
+              <td>
+                <div className={style.header}>AI Tutor Responses</div>
+              </td>
             </tr>
-          ) : (
-            currentItems.map(chatMessage => (
-              <InteractionsTableRow
-                key={chatMessage.id}
-                chatMessage={chatMessage}
-              />
-            ))
-          )}
-        </tbody>
-      </table>
-      <div>
-        <Button
-          color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={currentPage === 1}
-          onClick={() => setCurrentPage(currentPage - 1)}
-        >
-          Previous
-        </Button>
-        <Button
-          color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={currentPage === totalPages}
-          onClick={() => setCurrentPage(currentPage + 1)}
-        >
-          Next
-        </Button>
-      </div>
+          </thead>
+          <tbody>
+            {!filteredChatMessages.length ? (
+              <tr>
+                <td colSpan={4}>No chat messages found.</td>
+              </tr>
+            ) : (
+              currentItems.map(chatMessage => (
+                <InteractionsTableRow
+                  key={chatMessage.id}
+                  chatMessage={chatMessage}
+                />
+              ))
+            )}
+          </tbody>
+        </table>
+      )}
+      {levelDataInitialized && (
+        <div>
+          <Button
+            color={Button.ButtonColor.brandSecondaryDefault}
+            disabled={currentPage === 1}
+            onClick={() => setCurrentPage(currentPage - 1)}
+          >
+            Previous
+          </Button>
+          <Button
+            color={Button.ButtonColor.brandSecondaryDefault}
+            disabled={currentPage === totalPages}
+            onClick={() => setCurrentPage(currentPage + 1)}
+          >
+            Next
+          </Button>
+        </div>
+      )}
+      {!levelDataInitialized && (
+        <FontAwesome
+          id="uitest-spinner"
+          icon="spinner"
+          className="fa-pulse fa-3x"
+          title="Loading..."
+        />
+      )}
     </div>
   );
 };
