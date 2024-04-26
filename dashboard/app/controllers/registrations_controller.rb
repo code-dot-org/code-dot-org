@@ -135,6 +135,15 @@ class RegistrationsController < Devise::RegistrationsController
           metadata: metadata,
         )
       end
+      has_school = current_user.school_info_id?
+      event_metadata = {
+        'has_school' => has_school,
+      }
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'Sign Up Finished Backend',
+        metadata: event_metadata,
+      )
     end
 
     SignUpTracking.log_sign_up_result resource, session
