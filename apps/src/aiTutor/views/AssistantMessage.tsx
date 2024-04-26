@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {saveFeedback, FeedbackData} from '../interactionsApi';
 import style from './chat-workspace.module.scss';
@@ -41,6 +42,7 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
     }
   };
 
+  console.log('chatMessageText', message.chatMessageText);
   return (
     <div className={style.assistantMessageContainer}>
       <Typography semanticTag="h5" visualAppearance="heading-xs">
@@ -51,7 +53,7 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
           id={'chat-workspace-message-body'}
           className={classNames(style.message, style.assistantMessage)}
         >
-          {message.chatMessageText}
+          <SafeMarkdown markdown={message.chatMessageText} />
         </div>
         {message.id && (
           <>
