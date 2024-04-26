@@ -17,6 +17,7 @@ class ViewAsToggle extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     changeViewType: PropTypes.func.isRequired,
     logToFirehose: PropTypes.func,
+    isAsync: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -36,11 +37,11 @@ class ViewAsToggle extends React.Component {
   };
 
   onChange = viewType => {
-    const {changeViewType, logToFirehose} = this.props;
+    const {changeViewType, isAsync, logToFirehose} = this.props;
 
     updateQueryParam('viewAs', viewType);
 
-    changeViewType(viewType);
+    changeViewType(viewType, isAsync);
 
     if (logToFirehose) {
       logToFirehose('toggle_view', {view_type: viewType});
@@ -95,11 +96,11 @@ export default connect(
     viewAs: state.viewAs,
   }),
   dispatch => ({
-    changeViewType(viewAs) {
+    changeViewType(viewAs, isAsync) {
       if (viewAs === ViewType.Participant) {
         dispatch(setUserId(null));
       }
-      dispatch(changeViewType(viewAs));
+      dispatch(changeViewType(viewAs, isAsync));
     },
   })
 )(UnconnectedViewAsToggle);

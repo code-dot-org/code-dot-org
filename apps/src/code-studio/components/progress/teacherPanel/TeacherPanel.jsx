@@ -20,6 +20,7 @@ import {
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
+import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -27,7 +28,10 @@ import {
   queryUserProgress,
   setUserId,
 } from '@cdo/apps/code-studio/progressRedux';
-import {hasLockableLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  hasLockableLessons,
+  levelsForLessonId,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
@@ -67,6 +71,7 @@ class TeacherPanel extends React.Component {
     teacherId: PropTypes.number,
     exampleSolutions: PropTypes.array,
     currentLevelId: PropTypes.number,
+    levels: PropTypes.arrayOf(levelWithProgressType),
     selectUser: PropTypes.func.isRequired,
     setStudentsForCurrentSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
@@ -133,9 +138,21 @@ class TeacherPanel extends React.Component {
     });
   };
 
+  isCurrentLevelLab2 = () => {
+    const currentLevel = this.props.levels.find(level => level.isCurrentLevel);
+    return currentLevel.usesLab2;
+  };
+
   onSelectUser = (id, selectType) => {
     this.logToFirehose('select_student', {select_type: selectType});
-    const isAsync = true || this.props.pageType === pageTypes.scriptOverview;
+
+    const isLab2Level = this.isCurrentLevelLab2();
+    if (isLab2Level) {
+      console.log('Teacher panel: select user is async because level is Lab2.');
+    }
+
+    const isAsync =
+      isLab2Level || this.props.pageType === pageTypes.scriptOverview;
     this.props.selectUser(id, isAsync);
   };
 
@@ -179,7 +196,10 @@ class TeacherPanel extends React.Component {
       <TeacherPanelContainer logToFirehose={this.logToFirehose}>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
-          <ViewAsToggle logToFirehose={this.logToFirehose} />
+          <ViewAsToggle
+            isAsync={this.isCurrentLevelLab2()}
+            logToFirehose={this.logToFirehose}
+          />
           {displaySelectedStudentInfo && (
             <SelectedStudentInfo
               students={students}
@@ -354,6 +374,7 @@ export default connect(
       teacherId: state.currentUser.userId,
       exampleSolutions: state.pageConstants?.exampleSolutions,
       currentLevelId: state.progress.currentLevelId,
+      levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
     };
   },
   dispatch => ({
@@ -367,7 +388,6 @@ export default connect(
       } else {
         reload();
       }
-      //isAsync ? dispatch(queryUserProgress(userId)) : reload();
     },
     setStudentsForCurrentSection: (sectionId, students) => {
       dispatch(setStudentsForCurrentSection(sectionId, students));

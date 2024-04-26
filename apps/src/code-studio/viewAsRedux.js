@@ -3,7 +3,7 @@
  * or as a instructor
  */
 
-import {makeEnum} from '@cdo/apps/utils';
+import {makeEnum, reload} from '@cdo/apps/utils';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 export const ViewType = makeEnum('Participant', 'Instructor');
@@ -42,13 +42,18 @@ export const setViewType = viewType => ({
   viewType,
 });
 
-export const changeViewType = viewType => {
+export const changeViewType = (viewType, isAsync) => {
   return dispatch => {
     // If changing to viewAs participant while we are a particular participant, remove
     // the user_id and do a reload so that we're instead viewing as a generic
     // participant
     if (viewType === ViewType.Participant && queryParams('user_id')) {
       updateQueryParam('user_id', undefined);
+
+      if (!isAsync) {
+        reload();
+        return;
+      }
     }
 
     dispatch(setViewType(viewType));
