@@ -2,7 +2,7 @@ module MailJetConstants
   EMAILS = {
     welcome: {
       template_id: {
-        production: 5_421_128,
+        production: 5_831_384,
         staging: 5_826_411,
         development: 5_808_078
       },
