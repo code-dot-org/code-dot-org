@@ -2011,7 +2011,7 @@
     introducing: "Introducing"
     music_lab: "Music Lab"
     introducing_music_lab: "Introducing Music Lab"
-    introducing_music_lab_strong: "Introducing **Music Lab**"
+    introducing_music_lab_strong: "Introducing **%{music_lab}**"
     button:
       try_music_lab: "Try Music Lab"
       learn_more: "Learn more"
