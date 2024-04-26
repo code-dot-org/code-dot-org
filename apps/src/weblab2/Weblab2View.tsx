@@ -29,6 +29,23 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
 const DefaultEditorComponent = () =>
   CDOEditor(weblabLangMapping, ['html', 'css']);
 
+const horizontalLayout = {
+  gridLayoutRows: '32px 300px auto',
+  gridLayoutColumns: '300px auto auto',
+  gridLayout: `    "instructions file-tabs file-tabs"
+      "instructions editor preview-container"
+      "file-browser editor preview-container"`,
+};
+
+const verticalLayout = {
+  gridLayoutRows: '32px 300px auto auto',
+  gridLayoutColumns: '300px auto',
+  gridLayout: `    "instructions file-tabs file-tabs"
+      "instructions editor editor"
+      "file-browser editor editor"
+      "file-browser preview-container preview-container"`,
+};
+
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
   EditorComponent: DefaultEditorComponent,
@@ -61,12 +78,7 @@ const defaultConfig: ConfigType = {
     },
   ],
   instructions,
-  gridLayoutRows: '100px 32px auto',
-  gridLayout: `
-    "instructions instructions preview-container"
-    "side-bar file-tabs preview-container"
-    "file-browser editor preview-container"
-  `,
+  ...horizontalLayout,
 };
 
 const defaultProject: ProjectType = {
@@ -191,6 +203,18 @@ const Weblab2View = () => {
         </button>
         <button type="button" onClick={() => setShowConfig('layout')}>
           Edit layout
+        </button>
+        <button
+          type="button"
+          onClick={() => setConfig({...config, ...horizontalLayout})}
+        >
+          Use horizontal layout
+        </button>
+        <button
+          type="button"
+          onClick={() => setConfig({...config, ...verticalLayout})}
+        >
+          Use vertical layout
         </button>
       </div>
       <div className="app-ide">
