@@ -16,6 +16,8 @@ export interface ChannelsStore {
 
   redirectToRemix: (channel: Channel) => void;
 
+  redirectToView: (channel: Channel) => void;
+
   publish: (channel: Channel) => Promise<Response>;
 
   unpublish: (channel: Channel) => Promise<Response>;
@@ -44,6 +46,10 @@ export class LocalChannelsStore implements ChannelsStore {
   }
 
   redirectToRemix() {
+    // Remix is not supported for local storage.
+  }
+
+  redirectToView() {
     // Remix is not supported for local storage.
   }
 
@@ -76,6 +82,10 @@ export class RemoteChannelsStore implements ChannelsStore {
 
   redirectToRemix(channel: Channel) {
     projectsApi.redirectToRemix(channel.id, channel.projectType);
+  }
+
+  redirectToView(channel: Channel) {
+    projectsApi.redirectToView(channel.id, channel.projectType);
   }
 
   publish(channel: Channel) {

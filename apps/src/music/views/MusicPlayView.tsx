@@ -10,6 +10,7 @@ import moduleStyles from './music-play-view.module.scss';
 import musicI18n from '../locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 interface MusicPlayViewProps {
   isPlaying: boolean;
@@ -29,6 +30,8 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   const progressSliderValue =
     ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
   const projectName = useAppSelector(state => state.lab.channel?.name);
+
+  // const projectViewUrl = projectUrl && `${projectUrl}/view`;
   const shareData = useMemo(
     () => ({
       title: projectName,
@@ -48,15 +51,24 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
     (navigator && navigator.canShare && navigator.canShare(shareData)) ||
     canShareInternal;
 
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
   const onShareProject = useCallback(() => {
     navigator?.share(shareData);
   }, [shareData]);
   const onViewCode = useCallback(() => {
-    console.log('view code');
-  }, []);
+    if (projectManager) {
+      projectManager.flushSave().then(() => {
+        projectManager.redirectToView();
+      });
+    }
+  }, [projectManager]);
   const onRemix = useCallback(() => {
-    console.log('make my own');
-  }, []);
+    if (projectManager) {
+      projectManager.flushSave().then(() => {
+        projectManager.redirectToRemix();
+      });
+    }
+  }, [projectManager]);
 
   return (
     <div className={moduleStyles.musicPlayViewContainer}>
