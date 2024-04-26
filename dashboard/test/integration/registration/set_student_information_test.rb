@@ -42,6 +42,7 @@ module RegistrationsControllerTests
       assert_equal 18, student.age
       assert_equal 'AK', student.us_state
       assert_equal 'm', student.gender
+      assert_equal true, student.user_provided_us_state
     end
 
     test "set_student_information sets age if user is signed in and age is blank" do
