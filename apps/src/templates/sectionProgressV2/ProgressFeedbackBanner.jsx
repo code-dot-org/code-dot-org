@@ -32,10 +32,14 @@ const ProgressFeedbackBanner = ({
 
   React.useEffect(() => {
     // If we can't show the banner, it is unavailable
-    setBannerStatus(canShow ? BANNER_STATUS.UNSET : BANNER_STATUS.UNAVAILABLE);
-  }, [canShow]);
+    if (!canShow) {
+      setBannerStatus(BANNER_STATUS.UNAVAILABLE);
+      return;
+    } else if (bannerStatus === BANNER_STATUS.UNAVAILABLE) {
+      setBannerStatus(BANNER_STATUS.UNSET);
+      return;
+    }
 
-  React.useEffect(() => {
     // If feedback has been loaded and empty and the user hasn't answered, it is unanswered.
     // If we have feedback and the user did not just submit feedback, set to previously-answered.
     if (
