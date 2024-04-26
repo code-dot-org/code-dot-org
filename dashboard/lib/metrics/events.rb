@@ -4,8 +4,9 @@ module Metrics
   module Events
     class << self
       # Logs an event, delegating to the appropriate handler based on environment
-      def log_event(user:, event_name:, event_value: nil, metadata: {}, enabled_experiments: nil)
+      def log_event(user:, event_name:, event_value: nil, metadata: {}, get_enabled_experiments: false)
         event_value = event_name if event_value.nil?
+        enabled_experiments = get_enabled_experiments ? user.get_active_experiment_names : nil
         managed_test_environment = CDO.running_web_application? && CDO.test_system?
 
         if CDO.rack_env?(:development)
