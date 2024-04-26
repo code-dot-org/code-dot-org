@@ -1,5 +1,5 @@
 class AichatController < ApplicationController
-  include AichatHelper
+  include AichatSagemakerHelper
   authorize_resource class: false
 
   # params are
@@ -9,7 +9,7 @@ class AichatController < ApplicationController
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
-    return render status: :forbidden, json: {} unless AichatHelper.can_request_aichat_chat_completion?
+    return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
     unless has_required_params?
       return render status: :bad_request, json: {}
     end
@@ -23,9 +23,9 @@ class AichatController < ApplicationController
     # If the content is inappropriate, we skip sending to endpoint and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
-    input_json = AichatHelper.format_inputs_for_sagemaker_request(params[:aichatModelCustomizations], params[:storedMessages], params[:newMessage])
-    sagemaker_response = AichatHelper.request_sagemaker_chat_completion(input_json)
-    latest_assistant_response = AichatHelper.get_sagemaker_assistant_response(sagemaker_response)
+    input_json = AichatSagemakerHelper.format_inputs_for_sagemaker_request(params[:aichatModelCustomizations], params[:storedMessages], params[:newMessage])
+    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input_json)
+    latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
     assistant_message = {
       role: "assistant",
       content: latest_assistant_response,
