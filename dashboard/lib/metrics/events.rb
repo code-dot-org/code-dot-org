@@ -45,11 +45,14 @@ module Metrics
       private def log_event_to_stdout(user:, event_name:, event_value:, metadata:, enabled_experiments:)
         event_details = {
           user_id: user.id,
-          enabled_experiments: enabled_experiments,
+          custom_ids: {
+            user_type: user.user_type,
+            enabled_experiments: enabled_experiments,
+          }.compact,
           event_name: event_name,
           event_value: event_value,
           metadata: metadata,
-        }.compact
+        }
         puts "Logging Event: #{event_details.to_json}"
       end
     end
