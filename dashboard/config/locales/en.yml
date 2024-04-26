@@ -1432,8 +1432,6 @@ en:
         This isn't currently supported.
         Please try launching Code.org again from a [supported method](%{supported_methods_url}).
       missing_tool_config: 'Your LTI Tool configuration is missing the required "%{field}" field'
-    iframe_button: "Open in New Tab"
-    iframe_message: "Code.org cannot be run in an embedded window. Please open it in a new tab."
     iframe_title: "Opening Code.org in New Tab"
     sign_up:
       warning1:
