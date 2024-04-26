@@ -318,6 +318,7 @@ class ProjectsController < ApplicationController
   def get_or_create_for_level
     script_id = params[:script_id]
     level = Level.find(params[:level_id])
+    # todo: check permission to access this user id!
     user_id = params[:user_id]
     error_message = under_13_without_tos_teacher?(level)
     return render(status: :forbidden, json: {error: error_message}) if error_message
