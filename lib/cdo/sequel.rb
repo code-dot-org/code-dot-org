@@ -1,6 +1,7 @@
 require 'sequel'
 require 'sequel/connection_pool/threaded'
 require 'dynamic_config/gatekeeper'
+require 'dynamic_config/dcdo'
 
 module Cdo
   # Wrapper for Sequel database framework, which is primarily used by Sinatra.
@@ -13,13 +14,13 @@ module Cdo
     # @param validation_frequency [number] How often to validate the connection. If set to -1,
     #   validate each time a request is made.
     # @param query_timeout [number] The execution timeout for SELECT statements, in seconds.
-    def (writer, reader, validation_frequency: nil, query_timeout: nil, multi_statements: false)
+    def self.database_connection_pool(writer, reader, validation_frequency: nil, query_timeout: nil, multi_statements: false)
       # Enable symbol splitting of qualified identifiers for backwards compatibility.
-      Sequel.split_symbols = true
+      ::Sequel.split_symbols = true
       # Enable deprecated Dataset#and method for backwards compatibility.
-      Sequel::Database.extension :sequel_4_dataset_methods
+      ::Sequel::Database.extension :sequel_4_dataset_methods
       # Enable string literals in dataset filtering methods for backwards compatibility.
-      Sequel::Database.extension :auto_literal_strings
+      ::Sequel::Database.extension :auto_literal_strings
 
       reader = reader.gsub 'mysql:', 'mysql2:'
       writer = writer.gsub 'mysql:', 'mysql2:'
@@ -80,7 +81,7 @@ module Cdo
 
         db_options[:servers] = {read_only: Sequel::Database.send(:uri_to_options, reader_uri)}
       end
-      db = Sequel.connect writer, db_options
+      db = ::Sequel.connect writer, db_options
 
       # Enable read splitting with the `with_server` method.
       # https://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/server_block_rb.html
