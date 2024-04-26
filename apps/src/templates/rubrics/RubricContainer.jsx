@@ -281,7 +281,7 @@ export default function RubricContainer({
             {canProvideFeedback && (
               <button
                 id="ui-restart-product-tour"
-                data-testid="restart-product-tour"
+                aria-label="restart product tour"
                 type="button"
                 onClick={tourRestartHandler}
                 className={classnames(style.buttonStyle, style.closeButton)}

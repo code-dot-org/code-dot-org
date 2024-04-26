@@ -1,5 +1,5 @@
 // react testing library import
-import {render, fireEvent, act} from '@testing-library/react';
+import {render, fireEvent, act, waitFor} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
@@ -822,9 +822,11 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    await wait();
-    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
-      .exist;
+    waitFor(
+      () =>
+        expect(queryByText('Getting Started with Your AI Teaching Assistant'))
+          .to.exist
+    );
   });
 
   it('does not display product tour when getTourStatus returns true', async function () {
@@ -848,7 +850,6 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-
     expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
       .not.exist;
   });
@@ -874,7 +875,6 @@ describe('RubricContainer', () => {
     );
 
     await wait();
-
     expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
       .not.exist;
   });
@@ -900,11 +900,11 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    await wait();
-
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_TOUR_STARTED,
-      {}
+    waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_TOUR_STARTED,
+        {}
+      )
     );
 
     sendEventSpy.restore();
@@ -918,7 +918,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchTourStatus({seen: null});
 
-    const {getByText} = render(
+    const {findByText} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -931,29 +931,27 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    await wait();
-
-    const nextButton = getByText('Next Tip');
+    const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
 
-    await wait();
+    waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_NEXT, {
+        step: 0,
+        nextStep: 1,
+      })
+    );
 
-    expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_NEXT, {
-      step: 0,
-      nextStep: 1,
-    });
-
-    const backButton = getByText('Back');
+    const backButton = await findByText('Back');
 
     fireEvent.click(backButton);
 
-    await wait();
-
-    expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_BACK, {
-      step: 1,
-      nextStep: 0,
-    });
+    waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_BACK, {
+        step: 1,
+        nextStep: 0,
+      })
+    );
 
     sendEventSpy.restore();
   });
@@ -966,7 +964,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchTourStatus({seen: null});
 
-    const {getByText} = render(
+    const {findByRole} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -979,20 +977,18 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    await wait();
-
-    // Had to access this button indirectly because RTL can't find it by text
-    const skipButton = getByText(
-      'Getting Started with Your AI Teaching Assistant'
-    ).closest('div').childNodes[1];
+    const skipButton = await findByRole('button', {name: '×'});
 
     fireEvent.click(skipButton);
 
-    await wait();
-
-    expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_CLOSED, {
-      step: 0,
-    });
+    waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_TOUR_CLOSED,
+        {
+          step: 0,
+        }
+      )
+    );
 
     sendEventSpy.restore();
   });
@@ -1005,7 +1001,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchTourStatus({seen: null});
 
-    const {getByText} = render(
+    const {findByText} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -1018,9 +1014,7 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    await wait();
-
-    const nextButton = getByText('Next Tip');
+    const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
     await wait();
@@ -1031,15 +1025,15 @@ describe('RubricContainer', () => {
     fireEvent.click(nextButton);
     await wait();
     fireEvent.click(nextButton);
-    await wait();
 
-    const doneButton = getByText('Done');
+    const doneButton = await findByText('Done');
     fireEvent.click(doneButton);
-    await wait();
 
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_TOUR_COMPLETE,
-      {}
+    waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_TOUR_COMPLETE,
+        {}
+      )
     );
 
     sendEventSpy.restore();
@@ -1054,7 +1048,7 @@ describe('RubricContainer', () => {
     stubFetchTourStatus({seen: true});
     stubUpdateTourStatus({seen: false});
 
-    const {getByTestId, queryByText} = render(
+    const {findByRole, queryByText} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -1072,14 +1066,14 @@ describe('RubricContainer', () => {
     expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
       .not.exist;
 
-    const element = getByTestId('restart-product-tour');
-    console.log(element);
+    const element = await findByRole('button', {name: 'restart product tour'});
     fireEvent.click(element);
-    await wait();
 
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_TOUR_RESTARTED,
-      {}
+    waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_TOUR_RESTARTED,
+        {}
+      )
     );
 
     sendEventSpy.restore();
