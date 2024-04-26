@@ -1,6 +1,7 @@
+import {screen} from '@testing-library/dom';
+import {render, fireEvent, act} from '@testing-library/react';
 import {mount} from 'enzyme';
 import React from 'react';
-import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
 
@@ -412,7 +413,7 @@ describe('RubricSettings', () => {
   it('displays the AI enable toggle', () => {
     stubFetchEvalStatusForAll(ready);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -423,11 +424,8 @@ describe('RubricSettings', () => {
       </Provider>
     );
 
-    const input = wrapper.find(
-      '.uitest-rubric-ai-enable input[type="checkbox"]'
-    );
-    expect(input.length).to.equal(1);
-    expect(input.first().props().checked).to.be.true;
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    expect(input.checked).to.be.true;
   });
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
@@ -436,7 +434,7 @@ describe('RubricSettings', () => {
     // Set the user's opt-out setting to true (our setting will now be false)
     store.dispatch(setAiRubricsDisabled(true));
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -447,17 +445,14 @@ describe('RubricSettings', () => {
       </Provider>
     );
 
-    const input = wrapper.find(
-      '.uitest-rubric-ai-enable input[type="checkbox"]'
-    );
-    expect(input.length).to.equal(1);
-    expect(input.first().props().checked).to.be.false;
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    expect(input.checked).to.be.false;
   });
 
-  it('updates the AI disabled user setting when the toggle is used', () => {
+  it('updates the AI disabled user setting when the toggle is used', async () => {
     stubFetchEvalStatusForAll(ready);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -473,10 +468,12 @@ describe('RubricSettings', () => {
       UserPreferences.prototype,
       'setAiRubricsDisabled'
     );
-    const input = wrapper.find(
-      '.uitest-rubric-ai-enable input[type="checkbox"]'
-    );
-    input.simulate('change');
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    fireEvent.click(input);
+    fireEvent.change(input);
+
+    expect(input.checked).to.be.false;
     expect(setStub).to.have.been.calledWith(true);
     setStub.restore();
   });
