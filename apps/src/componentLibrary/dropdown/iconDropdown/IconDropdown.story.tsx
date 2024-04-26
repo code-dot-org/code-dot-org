@@ -108,7 +108,7 @@ DefaultIconDropdown.args = {
 
 export const DisabledIconDropdown = SingleTemplate.bind({});
 DisabledIconDropdown.args = {
-  name: 'default-dropdown',
+  name: 'disabled-dropdown',
   options: [
     {
       value: 'option-1',
@@ -135,7 +135,7 @@ DisabledIconDropdown.args = {
 
 export const WithDisabledOptionIconDropdown = SingleTemplate.bind({});
 WithDisabledOptionIconDropdown.args = {
-  name: 'default-dropdown',
+  name: 'withDisabledOption-dropdown',
   options: [
     {
       value: 'option-1',
