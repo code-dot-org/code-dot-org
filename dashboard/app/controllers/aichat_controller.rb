@@ -30,10 +30,13 @@ class AichatController < ApplicationController
       )
     end
 
+    # Use to_unsafe_h here to allow testing this function.
+    # Safe params are primarily targeted at preventing "mass assignment vulnerability"
+    # which isn't relevant here.
     input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
-      params[:aichatModelCustomizations],
-      params[:storedMessages].filter {|message| message[:status] == 'ok'},
-      params[:newMessage]
+      params.to_unsafe_h[:aichatModelCustomizations],
+      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == 'ok'},
+      params.to_unsafe_h[:newMessage]
     )
     sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input)
     latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)

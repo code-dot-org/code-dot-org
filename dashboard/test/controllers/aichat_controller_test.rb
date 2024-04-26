@@ -10,7 +10,7 @@ class AichatControllerTest < ActionController::TestCase
     pilot_section = create(:section, user: @genai_pilot_teacher)
     @genai_pilot_student = create(:follower, section: pilot_section).student_user
 
-    @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}
+    @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
     @common_params = {
       storedMessages: [],
       aichatModelCustomizations: @default_model_customizations,
@@ -88,26 +88,27 @@ class AichatControllerTest < ActionController::TestCase
     }.stringify_keys
   end
 
-  test 'filters previous profanity when sending previous messages to Sagemaker' do
-    ok_message = {status: 'ok', role: 'user', content: 'hello'}
-    params = @valid_params.merge(stored_messages: [
-      {status: 'profanity_violation', role: 'user', content: 'damn'},
-      ok_message
-    ])
-
-    params_actual = ActionController::Parameters.new(params)
+  test 'filters previous profanity when sending previous messages to Sagemaker but still logs' do
+    ok_message = {status: 'ok', role: 'user', content: 'another message'}.stringify_keys
+    params = @valid_params.merge(
+      storedMessages: [
+        {status: 'profanity_violation', role: 'user', content: 'damn'},
+        ok_message
+      ]
+    )
 
     # Note that second expected argument filters out the previous profane message
     # in what we send to Sagemaker.
-    AichatSagemakerHelper.expects(:request_sagemaker_chat_completion).
-      with(params_actual[:aichatModelCustomizations], [ok_message], params_actual[:newMessage]).once
+    AichatSagemakerHelper.expects(:format_inputs_for_sagemaker_request).
+      with(params[:aichatModelCustomizations], [ok_message], params[:newMessage]).once
 
     sign_in(@genai_pilot_student)
     post :chat_completion, params: params, as: :json
     assert_response :success
 
     session = AichatSession.find(json_response['sessionId'])
-    assert_equal 3, JSON.parse(session.messages)
+    assert_equal 4, JSON.parse(session.messages).length
+    assert_equal 1, (JSON.parse(session.messages).count {|message| message["status"] == 'profanity_violation'})
   end
 
   test 'returns failure when chat message contains PII' do
