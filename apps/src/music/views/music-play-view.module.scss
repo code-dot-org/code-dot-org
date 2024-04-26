@@ -12,9 +12,10 @@
 
   .musicPlayViewCardContainer {
     max-width: 360px;
-    border-color: white;
+    border-color: $neutral_dark60;
     border-width: 1px;
     border-style: solid;
+    border-radius: 5px;
   }
 
   .musicPlayViewImage {

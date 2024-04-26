@@ -9,6 +9,7 @@ import moduleStyles from './music-play-view.module.scss';
 
 import musicI18n from '../locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 interface MusicPlayViewProps {
   isPlaying: boolean;
@@ -39,9 +40,13 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   // (Can be mobile browsers and some desktop browser like macOS Safari)
   // Requires HTTPS connection (adhoc or production page).
   // Was unable to access it on localhost with our routing (http://localhost-studio.code.org:3000/
-  // is not considered a sage URL by browser, only http://localhost:3000/ is).
+  // is not considered a safe URL by browser, only http://localhost:3000/ is).
+
+  // For testing purposes, we can pass a query parameter canShare=true to force the button to appear.
+  const canShareInternal = queryParams('canShare') === 'true';
   const canShare =
-    navigator && navigator.canShare && navigator.canShare(shareData);
+    (navigator && navigator.canShare && navigator.canShare(shareData)) ||
+    canShareInternal;
 
   const onShareProject = useCallback(() => {
     navigator?.share(shareData);
