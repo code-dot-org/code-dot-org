@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/58209)
+* minor styles and stories updates for consistency
+* added `className` prop
+
 ## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/57827)
 * added `thick` and `thin` label style types (`labelType` prop)
 * added black and white background color fill
