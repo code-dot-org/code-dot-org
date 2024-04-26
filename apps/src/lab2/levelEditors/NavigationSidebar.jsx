@@ -3,7 +3,6 @@ import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './navigation.module.scss';
 
 const NavigationSidebar = () => {
-  const [linksToHeadings, setLinksToHeadings] = useState([]);
   const [linksToSubHeadings, setLinksToSubHeadings] = useState([]);
   const [organizedHeadings, setOrganizedHeadings] = useState([]);
 
@@ -30,7 +29,6 @@ const NavigationSidebar = () => {
       };
     });
 
-    setLinksToHeadings(linksData);
     setLinksToSubHeadings(indentedLinksData);
     setOrganizedHeadings(processArrays(linksData, indentedLinksData));
   }, []); // Empty dependency array to run once on mount
@@ -41,7 +39,8 @@ const NavigationSidebar = () => {
     // Iterate over largeArr
     largeArr.forEach(largeItem => {
       // Use .find to check for the presence of largeItem's id in smallArr
-      const smallItem = smallArr.find(item => item.id === largeItem.id);
+      const smallItem = smallArr.find(item => item.text === largeItem.text);
+      console.log('smallItem', smallItem);
 
       if (smallItem) {
         // If an item with the same id is found in smallArr, push that item to newArr
@@ -55,8 +54,10 @@ const NavigationSidebar = () => {
     return newArr;
   }
   //Added console.log to pass check
-  console.log(organizedHeadings);
-  console.log(linksToSubHeadings);
+  useEffect(() => {
+    console.log(organizedHeadings);
+    console.log(linksToSubHeadings);
+  }, [organizedHeadings, linksToSubHeadings]);
 
   const handleClick = (event, element) => {
     event.preventDefault();
@@ -65,20 +66,41 @@ const NavigationSidebar = () => {
     }
   };
 
+  function createMenuItemHtml(menuItem, index) {
+    if (menuItem.className === 'indented-heading') {
+      return (
+        <ul>
+          <li key={index}>
+            <a
+              href={menuItem.target}
+              onClick={event => handleClick(event, menuItem.target)}
+            >
+              {menuItem.text}
+            </a>
+          </li>
+        </ul>
+      );
+    } else {
+      return (
+        <li key={index}>
+          <a
+            href={menuItem.target}
+            onClick={event => handleClick(event, menuItem.target)}
+          >
+            {menuItem.text}
+          </a>
+        </li>
+      );
+    }
+  }
+
   return (
     <div className={moduleStyles.navBarContainer}>
       <Heading3>Navigation</Heading3>
       <ul className={moduleStyles.narrowList}>
-        {linksToHeadings.map((link, index) => (
-          <li key={index}>
-            <a
-              href={link.target}
-              onClick={event => handleClick(event, link.target)}
-            >
-              {link.text}
-            </a>
-          </li>
-        ))}
+        {organizedHeadings.map((menuItem, index) =>
+          createMenuItemHtml(menuItem, index)
+        )}
       </ul>
     </div>
   );
