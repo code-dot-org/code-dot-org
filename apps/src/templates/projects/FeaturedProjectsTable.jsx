@@ -15,7 +15,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import experiments from '@cdo/apps/util/experiments';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {SimpleDropdown} from '@cdo/component-library';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';

@@ -7,7 +7,7 @@ import {
   BodyTwoText,
   Heading3,
   Heading4,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   aiEvaluationShape,

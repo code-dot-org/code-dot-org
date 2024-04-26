@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import {StrongText} from '@cdo/component-library';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Button from '@cdo/apps/templates/Button';

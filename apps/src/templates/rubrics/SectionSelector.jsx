@@ -11,7 +11,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
-import {BodyThreeText, EmText} from '@cdo/apps/componentLibrary/typography';
+import {BodyThreeText, EmText} from '@cdo/component-library';
 
 // Exported for unit testing
 export const NO_SELECTED_SECTION_VALUE = '';

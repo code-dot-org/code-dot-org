@@ -10,7 +10,7 @@ import {lessonHasLevels} from '../progress/progressHelpers';
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/component-library';
 
 const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
   return (

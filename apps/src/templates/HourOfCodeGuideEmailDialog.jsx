@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
+import {Heading2, Heading3} from '@cdo/component-library';
 import style from './hoc-guide-dialogue.module.scss';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 

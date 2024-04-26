@@ -7,9 +7,9 @@ import {
   BodyFourText,
   StrongText,
   EmText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import Checkbox from '@cdo/component-library';
 import Button from '@cdo/apps/templates/Button';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 

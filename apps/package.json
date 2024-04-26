@@ -3,6 +3,10 @@
   "version": "0.0.161",
   "repository": "code-dot-org/code-dot-org",
   "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "engines": {
     "node": "^18.16.0",
     "npm": "^9.5.1"
@@ -182,6 +186,7 @@
     "@blockly/plugin-scroll-options": "~5.0.8",
     "@blockly/theme-dark": "6.0.4",
     "@blockly/theme-highcontrast": "5.0.4",
+    "@cdo/component-library": "*",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
     "@code-dot-org/blockly": "4.0.14",

@@ -7,7 +7,7 @@ import {
   BodyOneText,
   BodyThreeText,
   BodyFourText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import Button from '@cdo/apps/templates/Button';
 
 import styles from './twoColumnActionBlock.module.scss';

@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React from 'react';
 
-import {Heading5} from '@cdo/apps/componentLibrary/typography';
+import {Heading5} from '@cdo/component-library';
 
 import moduleStyles from './sections-refresh.module.scss';
 

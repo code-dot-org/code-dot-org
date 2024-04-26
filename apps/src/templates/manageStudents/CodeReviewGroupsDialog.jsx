@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import StylizedBaseDialog from '@cdo/component-library';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/templates/Button';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';

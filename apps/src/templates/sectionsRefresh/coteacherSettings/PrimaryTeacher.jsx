@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import {StrongText} from '@cdo/component-library';
 import i18n from '@cdo/locale';
 
 import styles from './coteacher-settings.module.scss';

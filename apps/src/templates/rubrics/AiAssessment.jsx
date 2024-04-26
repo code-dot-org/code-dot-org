@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {Heading6, StrongText} from '@cdo/apps/componentLibrary/typography';
+import {Heading6, StrongText} from '@cdo/component-library';
 import AiAssessmentBox from './AiAssessmentBox';
 import {aiEvaluationShape, aiEvidenceShape} from './rubricShapes';
 import aiBotImage from './images/AiBot_2x.png';

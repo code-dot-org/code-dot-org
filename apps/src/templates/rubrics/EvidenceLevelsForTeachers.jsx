@@ -4,12 +4,12 @@ import classNames from 'classnames';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {evidenceLevelShape} from './rubricShapes';
-import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
+import RadioButton from '@cdo/component-library';
 import {
   BodyThreeText,
   StrongText,
   Heading6,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function EvidenceLevelsForTeachers({

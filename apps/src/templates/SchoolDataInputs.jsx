@@ -5,9 +5,9 @@ import {
   Heading2,
   BodyTwoText,
   BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import style from './school-association.module.scss';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {SimpleDropdown} from '@cdo/component-library';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';

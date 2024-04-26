@@ -1,11 +1,11 @@
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import FontAwesomeV6Icon from '@cdo/component-library';
+import Typography from '@cdo/component-library';
 import React, {useState, useCallback} from 'react';
 import moduleStyles from './collapsible-section.module.scss';
 import {
   SemanticTag as TypographyElementSemanticTag,
   VisualAppearance as TypographyElementVisualAppearance,
-} from '@cdo/apps/componentLibrary/typography/types';
+} from '@cdo/component-library';
 
 interface CollapsibleSectionProps {
   title: string;

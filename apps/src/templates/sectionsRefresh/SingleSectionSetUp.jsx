@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import Chips from '@cdo/apps/componentLibrary/chips';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import Chips from '@cdo/component-library';
+import {Heading2} from '@cdo/component-library';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';

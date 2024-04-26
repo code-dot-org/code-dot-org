@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import Button from '@cdo/component-library';
 
 import moduleStyles from './multi-item-input.module.scss';
 

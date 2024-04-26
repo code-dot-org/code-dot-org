@@ -4,7 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import style from './header-banner-no-image.module.scss';
-import {Heading1, BodyOneText} from '@cdo/apps/componentLibrary/typography';
+import {Heading1, BodyOneText} from '@cdo/component-library';
 
 export default class HeaderBannerNoImage extends React.Component {
   static propTypes = {

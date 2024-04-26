@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {LinkButton} from '@cdo/component-library';
+import {BodyTwoText} from '@cdo/component-library';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 

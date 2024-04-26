@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
 import classnames from 'classnames';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {Heading6} from '@cdo/component-library';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   reportingDataShape,

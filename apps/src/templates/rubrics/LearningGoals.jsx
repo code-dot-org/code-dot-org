@@ -18,7 +18,7 @@ import {
   OverlineThreeText,
   Heading5,
   StrongText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';

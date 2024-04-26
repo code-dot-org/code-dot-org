@@ -8,13 +8,13 @@ import {
   Heading3,
   Heading4,
   StrongText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
 import SectionSelector from './SectionSelector';
-import Link from '@cdo/apps/componentLibrary/link/Link';
+import Link from '@cdo/component-library';
 import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';
 import {CSVLink} from 'react-csv';
 import _ from 'lodash';

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import {Heading2} from '@cdo/component-library';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';

@@ -16,8 +16,8 @@ import {
   Heading3,
   Heading5,
   BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+} from '@cdo/component-library';
+import Checkbox from '@cdo/component-library';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
 

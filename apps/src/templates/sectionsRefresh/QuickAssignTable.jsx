@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
+import {Heading4} from '@cdo/component-library';
 import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import i18n from '@cdo/locale';
 

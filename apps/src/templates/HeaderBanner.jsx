@@ -5,7 +5,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import Typography from '@cdo/component-library';
 import style from './header-banner.module.scss';
 
 export default class HeaderBanner extends React.Component {

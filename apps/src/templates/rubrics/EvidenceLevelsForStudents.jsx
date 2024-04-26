@@ -8,7 +8,7 @@ import {
   BodyThreeText,
   Heading6,
   StrongText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function EvidenceLevelsForStudents({

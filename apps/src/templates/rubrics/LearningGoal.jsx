@@ -16,7 +16,7 @@ import {
   BodyFourText,
   ExtraStrongText,
   Heading6,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import EvidenceLevels from './EvidenceLevels';

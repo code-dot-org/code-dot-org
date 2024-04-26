@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
+import {Heading4} from '@cdo/component-library';
 import i18n from '@cdo/locale';
 
 import {MARKETING_AUDIENCE} from './CurriculumQuickAssign';

@@ -15,7 +15,7 @@ import {
   BodyThreeText,
   EmText,
   OverlineThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import {reportingDataShape} from './rubricShapes';
 
 const NO_SELECTED_SECTION_VALUE = '';

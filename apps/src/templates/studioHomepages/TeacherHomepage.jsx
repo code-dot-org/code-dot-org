@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {LinkButton} from '@cdo/component-library';
+import {Heading2, BodyTwoText} from '@cdo/component-library';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';

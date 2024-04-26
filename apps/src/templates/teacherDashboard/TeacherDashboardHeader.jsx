@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
-import Link from '@cdo/apps/componentLibrary/link';
+import Link from '@cdo/component-library';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';

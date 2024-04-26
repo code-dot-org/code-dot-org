@@ -9,7 +9,7 @@ import {
   BodyTwoText,
   Heading1,
   Heading3,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';

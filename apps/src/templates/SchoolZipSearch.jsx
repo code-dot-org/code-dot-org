@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText} from '@cdo/component-library';
 import style from './school-association.module.scss';
 import classNames from 'classnames';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {SimpleDropdown} from '@cdo/component-library';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import Button from '@cdo/apps/templates/Button';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';

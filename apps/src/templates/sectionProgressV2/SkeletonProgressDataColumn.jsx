@@ -5,7 +5,7 @@ import React from 'react';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/component-library';
 
 export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
   return (

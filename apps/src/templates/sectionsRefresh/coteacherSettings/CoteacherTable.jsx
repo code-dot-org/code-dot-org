@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import {StrongText, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {StrongText, BodyTwoText} from '@cdo/component-library';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 

@@ -5,7 +5,7 @@ import {
   Heading1,
   Heading3,
   Heading4,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';

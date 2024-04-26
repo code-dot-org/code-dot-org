@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+} from '@cdo/component-library';
 import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
 import ExampleImage from '@cdo/apps/templates/instructions/ExampleImage';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';

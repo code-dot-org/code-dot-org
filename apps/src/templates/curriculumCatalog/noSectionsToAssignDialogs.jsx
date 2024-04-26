@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
+import Typography from '@cdo/component-library';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';

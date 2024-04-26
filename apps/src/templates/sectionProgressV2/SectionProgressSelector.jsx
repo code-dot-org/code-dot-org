@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 import {connect} from 'react-redux';
 
-import Link from '@cdo/apps/componentLibrary/link';
+import Link from '@cdo/component-library';
 import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';

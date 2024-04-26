@@ -7,7 +7,7 @@ import {
   EmText,
   StrongText,
   BodyFourText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import {aiEvaluationShape, aiEvidenceShape} from './rubricShapes';
 import AiConfidenceBox from './AiConfidenceBox';

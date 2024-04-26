@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import {StrongText} from '@cdo/component-library';
 import i18n from '@cdo/locale';
 
 import {ITEM_TYPE} from './ItemType';

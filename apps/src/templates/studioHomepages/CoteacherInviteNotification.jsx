@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
 
-import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, StrongText} from '@cdo/component-library';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
