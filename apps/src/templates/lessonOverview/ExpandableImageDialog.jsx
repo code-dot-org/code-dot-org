@@ -2,9 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
-
 import BaseDialog from '../BaseDialog';
+import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
 
 /**
  * A super basic component which connects our generic BaseDialog component to

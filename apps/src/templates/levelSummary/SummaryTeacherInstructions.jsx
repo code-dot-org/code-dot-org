@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
-
 import styles from './summary.module.scss';
 
 const SummaryTeacherInstructions = ({scriptData}) => {
