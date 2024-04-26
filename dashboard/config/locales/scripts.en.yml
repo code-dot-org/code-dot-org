@@ -16704,3 +16704,23 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        k5-ai-data-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: k5-ai-data-2024
+          title: How AI Makes Predictions
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        music-tutorial-2024:
+          lessons:
+            lesson-1:
+              name: 'Music Lab Intro Tutorial '
+          lesson_groups: {}
+          name: music-tutorial-2024
+          title: Music Lab Tutorial
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

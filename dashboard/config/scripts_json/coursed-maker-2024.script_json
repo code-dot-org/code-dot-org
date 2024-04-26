@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursed-maker",
-    "serialized_at": "2024-04-24 03:01:52 UTC",
+    "serialized_at": "2024-04-25 16:57:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -154,16 +154,18 @@
       }
     },
     {
-      "key": "lesson-8",
-      "name": "Cristina - Rock, paper, scissors with micro:bit",
+      "key": "lesson-9",
+      "name": "Cristina - Rock, Paper, Scissors with micro:bit",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to use conditionals to make an electronic version of a classic game of change. The key concepts are: **events**, **conditionals (if.. then.. else...)**, and **variables.**",
+        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** \n\nNote: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.lesson.</a>**  "
       },
       "seeding_key": {
-        "lesson.key": "lesson-8",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursed-maker-2024"
       }
@@ -188,18 +190,16 @@
       }
     },
     {
-      "key": "lesson-9",
+      "key": "lesson-8",
       "name": "Cristina - Activity picker with micro:bit",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "In today's **skill-building** lesson, the goal is to use conditionals to make an electronic version of a classic game of change. The key concepts are: **events**, **conditionals (if.. then.. else...)**, and **variables.**",
-        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** \n\nNote: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.lesson.</a>**  "
       },
       "seeding_key": {
-        "lesson.key": "lesson-9",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursed-maker-2024"
       }
@@ -508,13 +508,56 @@
       }
     },
     {
-      "key": "9ec2e413-4a1e-420d-a29c-cc01ebc5ba99",
+      "key": "8e1ff1c8-f3af-4910-a5ac-2af6030131a9",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "9ec2e413-4a1e-420d-a29c-cc01ebc5ba99",
-        "lesson.key": "lesson-8",
+        "lesson_activity.key": "8e1ff1c8-f3af-4910-a5ac-2af6030131a9",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Student Coding"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "5ec3440e-fab7-4bc4-9a25-7becd51f727b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5ec3440e-fab7-4bc4-9a25-7becd51f727b",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "1e65381f-9a8d-4a36-be64-4e77871dc232",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e65381f-9a8d-4a36-be64-4e77871dc232",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursed-maker-2024"
       }
@@ -562,56 +605,13 @@
       }
     },
     {
-      "key": "8e1ff1c8-f3af-4910-a5ac-2af6030131a9",
+      "key": "9ec2e413-4a1e-420d-a29c-cc01ebc5ba99",
       "position": 1,
       "properties": {
-        "duration": 10,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "8e1ff1c8-f3af-4910-a5ac-2af6030131a9",
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursed-maker-2024"
-      }
-    },
-    {
-      "key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Student Coding"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab",
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursed-maker-2024"
-      }
-    },
-    {
-      "key": "5ec3440e-fab7-4bc4-9a25-7becd51f727b",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5ec3440e-fab7-4bc4-9a25-7becd51f727b",
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "coursed-maker-2024"
-      }
-    },
-    {
-      "key": "1e65381f-9a8d-4a36-be64-4e77871dc232",
-      "position": 4,
-      "properties": {
-        "name": "[Optional] Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1e65381f-9a8d-4a36-be64-4e77871dc232",
-        "lesson.key": "lesson-9",
+        "lesson_activity.key": "9ec2e413-4a1e-420d-a29c-cc01ebc5ba99",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursed-maker-2024"
       }
@@ -1523,23 +1523,58 @@
       }
     },
     {
-      "key": "4eadb9d8-010d-48dc-b5c8-59f78ec2d033",
+      "key": "01f73839-2f53-4fb0-9190-b83f7d2a3360",
       "position": 1,
       "properties": {
+        "description": "**Say**: Today's aim is to program a micro:bit to play a popular game of chance using events and conditionals.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-d3-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-d3-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Events**: actions that cause something to happen\n- **Conditional**: a statement that only runs under certain conditions (e.g., if the random number is 0, it shows a rock icon; if it's 1 it shows paper; otherwise it shows scissors)\n- **Variable**: a label for a piece of information used in a program (e.g., the code stores a random number between 0 to 2 in a variable called \"tool\" so it can be tested using a conditional \"if\" statement)\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-d3-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity."
       },
       "seeding_key": {
-        "activity_section.key": "4eadb9d8-010d-48dc-b5c8-59f78ec2d033",
-        "lesson_activity.key": "9ec2e413-4a1e-420d-a29c-cc01ebc5ba99"
+        "activity_section.key": "01f73839-2f53-4fb0-9190-b83f7d2a3360",
+        "lesson_activity.key": "8e1ff1c8-f3af-4910-a5ac-2af6030131a9"
       }
     },
     {
-      "key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6",
+      "key": "770907f3-fea7-48bd-98e2-1db4dda49265",
+      "position": 1,
+      "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-d3-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-d3-classroom\" target=\"_blank\">classroom session</a>** "
+      },
+      "seeding_key": {
+        "activity_section.key": "770907f3-fea7-48bd-98e2-1db4dda49265",
+        "lesson_activity.key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab"
+      }
+    },
+    {
+      "key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259",
       "position": 2,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6",
-        "lesson_activity.key": "9ec2e413-4a1e-420d-a29c-cc01ebc5ba99"
+        "activity_section.key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259",
+        "lesson_activity.key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab"
+      }
+    },
+    {
+      "key": "b556d52b-8a72-4f48-a017-8aa4cb140e7c",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "b556d52b-8a72-4f48-a017-8aa4cb140e7c",
+        "lesson_activity.key": "5ec3440e-fab7-4bc4-9a25-7becd51f727b"
+      }
+    },
+    {
+      "key": "fc6a6e9d-d379-46c7-abb1-4c2f1e96374d",
+      "position": 1,
+      "properties": {
+        "description": "**Design your own icons:**\n**Make a new game:**\n**Find this project and more on <a href=\"https://microbit.org\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc6a6e9d-d379-46c7-abb1-4c2f1e96374d",
+        "lesson_activity.key": "1e65381f-9a8d-4a36-be64-4e77871dc232"
       }
     },
     {
@@ -1686,58 +1721,23 @@
       }
     },
     {
-      "key": "01f73839-2f53-4fb0-9190-b83f7d2a3360",
+      "key": "4eadb9d8-010d-48dc-b5c8-59f78ec2d033",
       "position": 1,
       "properties": {
-        "description": "**Say**: Today's aim is to program a micro:bit to play a popular game of chance using events and conditionals.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-d3-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-d3-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Events**: actions that cause something to happen\n- **Conditional**: a statement that only runs under certain conditions (e.g., if the random number is 0, it shows a rock icon; if it's 1 it shows paper; otherwise it shows scissors)\n- **Variable**: a label for a piece of information used in a program (e.g., the code stores a random number between 0 to 2 in a variable called \"tool\" so it can be tested using a conditional \"if\" statement)\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-d3-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity."
       },
       "seeding_key": {
-        "activity_section.key": "01f73839-2f53-4fb0-9190-b83f7d2a3360",
-        "lesson_activity.key": "8e1ff1c8-f3af-4910-a5ac-2af6030131a9"
+        "activity_section.key": "4eadb9d8-010d-48dc-b5c8-59f78ec2d033",
+        "lesson_activity.key": "9ec2e413-4a1e-420d-a29c-cc01ebc5ba99"
       }
     },
     {
-      "key": "770907f3-fea7-48bd-98e2-1db4dda49265",
-      "position": 1,
-      "properties": {
-        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-d3-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-d3-classroom\" target=\"_blank\">classroom session</a>** "
-      },
-      "seeding_key": {
-        "activity_section.key": "770907f3-fea7-48bd-98e2-1db4dda49265",
-        "lesson_activity.key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab"
-      }
-    },
-    {
-      "key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259",
+      "key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6",
       "position": 2,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259",
-        "lesson_activity.key": "5bcf8c92-648e-4ed0-87f3-1b9271a93bab"
-      }
-    },
-    {
-      "key": "b556d52b-8a72-4f48-a017-8aa4cb140e7c",
-      "position": 1,
-      "properties": {
-        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
-        "name": "Discussion"
-      },
-      "seeding_key": {
-        "activity_section.key": "b556d52b-8a72-4f48-a017-8aa4cb140e7c",
-        "lesson_activity.key": "5ec3440e-fab7-4bc4-9a25-7becd51f727b"
-      }
-    },
-    {
-      "key": "fc6a6e9d-d379-46c7-abb1-4c2f1e96374d",
-      "position": 1,
-      "properties": {
-        "description": "**Design your own icons:**\n**Make a new game:**\n**Find this project and more on <a href=\"https://microbit.org\" target=\"_blank\">microbit.org</a>**"
-      },
-      "seeding_key": {
-        "activity_section.key": "fc6a6e9d-d379-46c7-abb1-4c2f1e96374d",
-        "lesson_activity.key": "1e65381f-9a8d-4a36-be64-4e77871dc232"
+        "activity_section.key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6",
+        "lesson_activity.key": "9ec2e413-4a1e-420d-a29c-cc01ebc5ba99"
       }
     }
   ],
@@ -2858,7 +2858,7 @@
           "course_d_maker_rock_paper_scissors"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "coursed-maker-2024",
         "activity_section.key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6"
       },
@@ -3107,7 +3107,7 @@
           "course_d_maker_activity_picker"
         ],
         "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "coursed-maker-2024",
         "activity_section.key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259"
       },
@@ -3652,7 +3652,7 @@
           "course_d_maker_rock_paper_scissors"
         ],
         "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "coursed-maker-2024",
         "activity_section.key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6"
       }
@@ -3772,7 +3772,7 @@
           "course_d_maker_activity_picker"
         ],
         "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "coursed-maker-2024",
         "activity_section.key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259"
       }
