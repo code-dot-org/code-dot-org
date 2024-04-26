@@ -1,2 +1,2 @@
-export type {ToggleProps} from './Toggle';
-export {default as default} from './Toggle';
+export type {ToggleProps} from './Tooltip';
+export {default as default} from './Tooltip';

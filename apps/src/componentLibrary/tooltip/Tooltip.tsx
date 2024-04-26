@@ -1,11 +1,11 @@
 import classnames from 'classnames';
-import React, {ChangeEvent, memo} from 'react';
+import React, {ChangeEvent} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import Typography from '@cdo/apps/componentLibrary/typography';
 
-import moduleStyles from './toggle.module.scss';
+import moduleStyles from './tooltip.module.scss';
 
 export interface ToggleProps {
   /** Toggle checked state */
@@ -29,7 +29,20 @@ export interface ToggleProps {
   size?: ComponentSizeXSToL;
 }
 
-const Toggle: React.FunctionComponent<ToggleProps> = ({
+/**
+ * ## Production-ready Checklist:
+ *  * (✔) implementation of component approved by design team;
+ *  * (✔) has storybook, covered with stories and documentation;
+ *  * (✔) has tests: test every prop, every state and every interaction that's js related;
+ *  * (see apps/test/unit/componentLibrary/ToggleTest.jsx)
+ *  * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Toggle Component.
+ * Can be used to render a single Toggle component or as a part of bigger/more complex components (e.g. some form, modal, etc).
+ */
+const Tooltip: React.FunctionComponent<ToggleProps> = ({
   checked,
   onChange,
   name,
@@ -73,17 +86,4 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
   );
 };
 
-/**
- * ## Production-ready Checklist:
- *  * (✔) implementation of component approved by design team;
- *  * (✔) has storybook, covered with stories and documentation;
- *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see apps/test/unit/componentLibrary/ToggleTest.jsx)
- *  * (?) passes accessibility checks;
- *
- * ###  Status: ```Ready for dev```
- *
- * Design System: Toggle Component.
- * Can be used to render a single Toggle component or as a part of bigger/more complex components (e.g. some form, modal, etc).
- */
-export default memo(Toggle);
+export default Tooltip;

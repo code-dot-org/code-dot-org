@@ -1,10 +1,10 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
-import Toggle, {ToggleProps} from './index';
+import Tooltip, {ToggleProps} from './index';
 
 export default {
-  title: 'DesignSystem/Toggle', // eslint-disable-line storybook/no-title-property-in-meta
+  title: 'DesignSystem/Tooltip', // eslint-disable-line storybook/no-title-property-in-meta
   /**
    * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
    * This workaround (component: Component.type instead of component: Component) is taken from
@@ -13,7 +13,7 @@ export default {
    */
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore-next-line
-  component: Toggle.type,
+  component: Tooltip,
 } as Meta;
 
 //
@@ -21,34 +21,34 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: StoryFn<ToggleProps> = args => <Toggle {...args} />;
+const SingleTemplate: StoryFn<ToggleProps> = args => <Tooltip {...args} />;
 
 const MultipleTemplate: StoryFn<{components: ToggleProps[]}> = args => (
   <>
     {args.components?.map(componentArg => (
-      <Toggle key={componentArg.name} {...componentArg} />
+      <Tooltip key={componentArg.name} {...componentArg} />
     ))}
   </>
 );
 
-export const DefaultToggle = SingleTemplate.bind({});
-DefaultToggle.args = {
-  name: 'controlled_toggle',
-  label: 'Toggle Label',
+export const DefaultTooltip = SingleTemplate.bind({});
+DefaultTooltip.args = {
+  name: 'controlled_Tooltip',
+  label: 'Tooltip Label',
 };
 
-export const DefaultToggleGroup = MultipleTemplate.bind({});
-DefaultToggleGroup.args = {
+export const DefaultTooltipGroup = MultipleTemplate.bind({});
+DefaultTooltipGroup.args = {
   components: [
     {
       name: 'test-left',
-      label: 'Toggle left',
+      label: 'Tooltip left',
       checked: false,
       onChange: () => null,
     },
     {
       name: 'test-right',
-      label: 'Toggle right',
+      label: 'Tooltip right',
       position: 'right',
       checked: false,
       onChange: () => null,
@@ -56,19 +56,19 @@ DefaultToggleGroup.args = {
   ],
 };
 
-export const DisabledToggleGroup = MultipleTemplate.bind({});
-DisabledToggleGroup.args = {
+export const DisabledTooltipGroup = MultipleTemplate.bind({});
+DisabledTooltipGroup.args = {
   components: [
     {
       name: 'test-disabled',
-      label: 'Disabled toggle',
+      label: 'Disabled Tooltip',
       disabled: true,
       checked: false,
       onChange: () => null,
     },
     {
       name: 'test-disabled-checked',
-      label: 'Disabled checked toggle',
+      label: 'Disabled checked Tooltip',
       checked: true,
       disabled: true,
       onChange: () => null,
@@ -76,8 +76,8 @@ DisabledToggleGroup.args = {
   ],
 };
 
-export const SizesOfToggleGroup = MultipleTemplate.bind({});
-SizesOfToggleGroup.args = {
+export const SizesOfTooltipGroup = MultipleTemplate.bind({});
+SizesOfTooltipGroup.args = {
   components: [
     {
       name: 'test-xs',
