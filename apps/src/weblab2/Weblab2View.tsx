@@ -30,10 +30,6 @@ const DefaultEditorComponent = () =>
   CDOEditor(weblabLangMapping, ['html', 'css']);
 
 const defaultConfig: ConfigType = {
-  //showSideBar: true,
-  // showLeftNav: false,
-  // showEditor: false,
-  // showPreview: false,
   activeLeftNav: 'Files',
   EditorComponent: DefaultEditorComponent,
   // editableFileTypes: ["html"],
@@ -71,14 +67,6 @@ const defaultConfig: ConfigType = {
     "side-bar file-tabs preview-container"
     "file-browser editor preview-container"
   `,
-
-  //editableFileTypes: ["html", "css"],
-  //previewFileTypes: ["html"],
-  /* PreviewComponents: {
-    html: () => <div>I am previewing HTML</div>,
-  }, */
-  //blankEmptyEditor: true,
-  //EmptyEditorComponent: () => <div>Nothing is open.</div>,
 };
 
 const defaultProject: ProjectType = {

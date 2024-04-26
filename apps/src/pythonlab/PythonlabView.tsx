@@ -38,7 +38,6 @@ const defaultProject: MultiFileSource = {
 };
 
 const defaultConfig: ConfigType = {
-  showPreview: false,
   activeLeftNav: 'Files',
   EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
   leftNav: [
@@ -67,12 +66,24 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions: 'Welcome to Python Lab!',
-  gridLayoutRows: '100px 32px auto',
+  Instructions: () => (
+    <div
+      style={{
+        backgroundColor: 'white',
+        color: 'black',
+        gridArea: 'instructions',
+      }}
+    >
+      Welcome to Python Lab!
+    </div>
+  ),
+  gridLayoutRows: '32px 100px 32px auto',
+  gridLayoutColumns: '300px auto',
   gridLayout: `
-    "instructions instructions preview-container"
-    "side-bar file-tabs preview-container"
-    "file-browser editor preview-container"
+    "instructions file-tabs"
+    "instructions editor"
+    "side-bar editor"
+    "file-browser editor"
   `,
 };
 

@@ -25,31 +25,6 @@ type CDOIDEProps = {
   setConfig: SetConfigFunction;
 };
 
-type PaneKey = {
-  key: keyof typeof configVisibilityDefaults;
-};
-
-const configVisibilityDefaults = {
-  showPreview: true,
-  showEditor: true,
-  showLeftNav: true,
-};
-
-const getConfigVisibilityVal = (
-  key: keyof typeof configVisibilityDefaults,
-  config: ConfigType
-) => {
-  return config[key] ?? configVisibilityDefaults[key] ?? false;
-};
-
-const paneWidths: (PaneKey & {width: string})[] = [
-  {key: 'showLeftNav', width: '1fr'},
-  {key: 'showPreview', width: '2fr'},
-  {key: 'showEditor', width: '2fr'},
-];
-
-const paneHeights: (PaneKey & {height: string})[] = [];
-
 export const CDOIDE = React.memo(
   ({project, config, setProject, setConfig}: CDOIDEProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
@@ -59,28 +34,14 @@ export const CDOIDE = React.memo(
       setProject
     );
 
-    const outerGridRows = ['auto'];
-    paneHeights.forEach(pair => {
-      if (getConfigVisibilityVal(pair.key, config)) {
-        outerGridRows.push(pair.height);
-      }
-    });
-
-    const innerGridCols: string[] = [];
-    paneWidths.forEach(pair => {
-      if (getConfigVisibilityVal(pair.key, config)) {
-        innerGridCols.push(pair.width);
-      }
-    });
-
     const EditorComponent = config.EditorComponent || DisabledEditor;
-    console.log('EC IS : ');
+
     const ComponentMap = {
       'file-browser': FileBrowser,
       'side-bar': SideBar,
       editor: EditorComponent,
       'preview-container': PreviewContainer,
-      instructions: Instructions,
+      instructions: config.Instructions || Instructions,
       'file-tabs': FileTabs,
     };
 
