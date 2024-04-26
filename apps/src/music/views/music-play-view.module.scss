@@ -18,14 +18,20 @@
     padding: 2rem;
     border-radius: 0.5rem;
 
-    img {
-      width: 56px;
-      align-self: center;
-    }
+    .musicPlayViewInfoSection {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
 
-    h2, p, a {
-      color: $light_white;
-      margin-bottom: 0;
+      img {
+        width: 56px;
+        align-self: center;
+      }
+
+      h2, p {
+        color: $light_white;
+        margin-bottom: 0;
+      }
     }
 
     .musicPlayViewPlaySection {

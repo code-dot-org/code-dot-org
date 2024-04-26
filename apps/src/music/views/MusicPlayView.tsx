@@ -51,9 +51,11 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   return (
     <div className={moduleStyles.musicPlayViewContainer}>
       <div className={moduleStyles.musicPlayViewCard}>
-        <img src={codeOrgLogo} alt="Code.org" />
-        <Heading2>{projectName}</Heading2>
-        <BodyTwoText>Built with Music Lab</BodyTwoText>
+        <div className={moduleStyles.musicPlayViewInfoSection}>
+          <img src={codeOrgLogo} alt="Code.org" />
+          <Heading2>{projectName}</Heading2>
+          <BodyTwoText>Built with Music Lab</BodyTwoText>
+        </div>
 
         <div className={moduleStyles.musicPlayViewPlaySection}>
           <Button
