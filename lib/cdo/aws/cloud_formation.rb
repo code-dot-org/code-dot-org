@@ -69,9 +69,9 @@ module AWS
         tempfile.write(template)
         tempfile.close
 
-        cfn_lint_installed = system('which cfn-lint > /dev/null 2>&1' || 'where cfn-lint > NUL 2>&1')
+        cfn_lint_installed = system('which cfn-lint > /dev/null 2>&1')
         unless cfn_lint_installed
-          log.info "WARNING: cfn-lint is not installed, skipping lint task."
+          log.info "WARNING: cfn-lint is not installed, skipping lint task.\nInstall from https://github.com/aws-cloudformation/cfn-lint?tab=readme-ov-file#install"
           next
         end
 
