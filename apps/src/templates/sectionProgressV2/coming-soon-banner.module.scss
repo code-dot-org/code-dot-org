@@ -1,0 +1,49 @@
+@import 'animations';
+@import 'color';
+@import 'font';
+
+.comingSoonBanner {
+  $indent: 1rem;
+
+  background-color: $light_info_100;
+  border-color: $light_info_100;
+  color: $dark_charcoal;
+  line-height: 2rem;
+
+  & .icon {
+    display: inline-block;
+    margin-right: $indent;
+
+    @include wave-animation;
+    animation-iteration-count: 2;
+
+    & .megaphone {
+      font-weight: 400;
+      vertical-align: middle;
+
+      &:hover {
+        @include wave-animation;
+      }
+    }
+  }
+
+  & .bannerText {
+
+    font-size: 16px;
+  }
+
+  & i {
+    color: #0f0f0f;
+    font-size: 1.3rem;
+  }
+
+  & button {
+    border: unset !important;
+    box-shadow: none;
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: unset;
+    margin: 0;
+    top: 0;
+  }
+}

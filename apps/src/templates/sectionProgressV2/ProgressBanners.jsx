@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import {BANNER_STATUS} from '@cdo/apps/lib/ui/feedback/FeedbackBanner';
 
+import ComingSoonBanner from './ComingSoonBanner';
 import ProgressFeedbackBanner from './ProgressFeedbackBanner';
 
 export default function ProgressBanners({toggleUsed}) {
@@ -24,14 +24,11 @@ export default function ProgressBanners({toggleUsed}) {
         canShow={!toggleUsed}
         bannerStatusCallback={bannerStatusCallback}
       />
-      <Fade in={showComingSoon} unmountOnExit={true}>
-        <div>Coming soon</div>
-      </Fade>
+      <ComingSoonBanner canShow={showComingSoon} />
     </>
   );
 }
 
 ProgressBanners.propTypes = {
   toggleUsed: PropTypes.bool,
-  showV2Table: PropTypes.bool,
 };
