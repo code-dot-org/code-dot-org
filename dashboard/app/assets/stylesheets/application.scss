@@ -898,6 +898,10 @@ $small-footer-standard-width: 400px;
       color: $neutral_light;
     }
   }
+
+  .blocklyDropDownContent {
+    max-height: initial !important;
+  }
 }
 
 .header_separator {

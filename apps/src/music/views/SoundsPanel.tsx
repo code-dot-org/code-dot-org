@@ -123,16 +123,19 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
 
 interface SoundsPanelRowProps {
   currentValue: string;
+  highlightedValue?: string;
   playingPreview: string;
   folder: SoundFolder;
   sound: SoundData;
   showingSoundsOnly: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
+  setHighlightedValue: (value: string) => void;
   currentSoundRefCallback: (ref: HTMLDivElement) => void;
 }
 
-const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
+/*
+const SoundsPanelRowOld: React.FunctionComponent<SoundsPanelRowProps> = ({
   currentValue,
   playingPreview,
   folder,
@@ -214,6 +217,105 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
     </div>
   );
 };
+*/
+
+const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
+  currentValue,
+  highlightedValue,
+  playingPreview,
+  folder,
+  sound,
+  showingSoundsOnly,
+  onSelect,
+  onPreview,
+  setHighlightedValue,
+  currentSoundRefCallback,
+}) => {
+  const soundPath = folder.id + '/' + sound.src;
+  const isSelected = soundPath === currentValue;
+  const isHighlighted = soundPath === highlightedValue;
+  const isPlayingPreview = playingPreview === soundPath;
+  const onPreviewClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (!isPlayingPreview) {
+        onPreview(soundPath);
+      }
+      setHighlightedValue(soundPath);
+      e.stopPropagation();
+    },
+    [isPlayingPreview, onPreview, soundPath, setHighlightedValue]
+  );
+
+  return (
+    <div
+      className={classNames(
+        'sounds-panel-sound-row',
+        styles.soundRow,
+        isSelected && styles.soundRowSelected,
+        isHighlighted && styles.soundRowHighlighted
+      )}
+      onClick={onPreviewClick}
+      /*onClick={() => onSelect(folder.id + '/' + sound.src)}*/
+      onKeyDown={event => {
+        if (event.key === 'Enter') {
+          onSelect(folder.id + '/' + sound.src);
+        }
+      }}
+      ref={isSelected ? currentSoundRefCallback : null}
+      aria-label={sound.name}
+      tabIndex={0}
+      role="button"
+    >
+      <div className={styles.soundRowLeft}>
+        <div
+          className={classNames(
+            styles.iconContainer,
+            SoundStyle[sound.type]?.classNameBackground,
+            SoundStyle[sound.type]?.classNameBorder,
+            isHighlighted && styles.iconContainerHighlighted
+          )}
+        >
+          <FontAwesomeV6Icon
+            iconName={SoundStyle[sound.type]?.icon || ''}
+            className={classNames(
+              styles.typeIcon,
+              SoundStyle[sound.type]?.classNameColor
+            )}
+          />
+          {/*<div className={styles.previewContainer}>
+            <FontAwesome
+              title={undefined}
+              icon={'play-circle'}
+              className={classNames(
+                styles.preview,
+                isPlayingPreview && styles.previewPlaying
+              )}
+              onClick={onPreviewClick}
+            />
+          </div>*/}
+        </div>
+        <div
+          className={classNames(
+            styles.name,
+            sound.type === 'vocal' && styles.nameVocal
+          )}
+        >
+          {sound.name}
+        </div>
+      </div>
+      {showingSoundsOnly && (
+        <div className={styles.soundRowMiddle}>
+          {folder.name} &bull; {folder.artist}
+        </div>
+      )}
+      <div className={styles.soundRowRight}>
+        <div className={styles.length}>
+          {getLengthRepresentation(sound.length)}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 interface SoundsPanelProps {
   library: MusicLibrary;
@@ -240,6 +342,10 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   );
   const [mode, setMode] = useState<Mode>('packs');
   const [filter, setFilter] = useState<Filter>('all');
+
+  const [highlightedValue, setHighlightedValue] = useState<string | undefined>(
+    undefined
+  );
 
   const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
@@ -319,6 +425,12 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     filterButton => availableSoundTypes[filterButton.value]
   );
 
+  const setSoundToSelectedSound = () => {
+    if (highlightedValue) {
+      onSelect(highlightedValue);
+    }
+  };
+
   return (
     <FocusLock>
       <div id="sounds-panel" className={styles.soundsPanel} aria-modal>
@@ -368,6 +480,8 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 <SoundsPanelRow
                   key={soundIndex}
                   currentValue={currentValue}
+                  highlightedValue={highlightedValue}
+                  setHighlightedValue={setHighlightedValue}
                   playingPreview={playingPreview}
                   folder={soundEntry.folder}
                   sound={soundEntry.sound}
@@ -379,6 +493,20 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
               );
             })}
           </div>
+        </div>
+        <div className={styles.soundsPanelBottom}>
+          <button
+            onClick={() => setSoundToSelectedSound()}
+            className={classNames(
+              styles.continue,
+              styles.button,
+              !highlightedValue && styles.continueDisabled
+            )}
+            disabled={!highlightedValue}
+            type="button"
+          >
+            Select
+          </button>
         </div>
       </div>
     </FocusLock>
