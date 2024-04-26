@@ -110,7 +110,10 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
                 type="secondary"
                 color="white"
                 size="s"
-                iconLeft={{iconStyle: 'solid', iconName: 'share'}}
+                iconLeft={{
+                  iconStyle: 'solid',
+                  iconName: 'arrow-up-from-bracket',
+                }}
                 onClick={onShareProject}
               />
             </div>
