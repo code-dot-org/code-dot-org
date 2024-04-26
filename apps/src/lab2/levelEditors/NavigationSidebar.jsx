@@ -3,7 +3,6 @@ import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './navigation.module.scss';
 
 const NavigationSidebar = () => {
-  const [linksToSubHeadings, setLinksToSubHeadings] = useState([]);
   const [organizedHeadings, setOrganizedHeadings] = useState([]);
 
   useEffect(() => {
@@ -28,36 +27,30 @@ const NavigationSidebar = () => {
         className: 'indented-heading',
       };
     });
-
-    setLinksToSubHeadings(indentedLinksData);
-    setOrganizedHeadings(processArrays(linksData, indentedLinksData));
+    setOrganizedHeadings(processHeadings(linksData, indentedLinksData));
   }, []); // Empty dependency array to run once on mount
 
-  function processArrays(largeArr, smallArr) {
+  function processHeadings(allHeadings, indentedHeadings) {
     const newArr = [];
 
     // Iterate over largeArr
-    largeArr.forEach(largeItem => {
+    allHeadings.forEach(heading => {
       // Use .find to check for the presence of largeItem's id in smallArr
-      const smallItem = smallArr.find(item => item.text === largeItem.text);
-      console.log('smallItem', smallItem);
+      const indentedHeading = indentedHeadings.find(
+        item => item.text === heading.text
+      );
 
-      if (smallItem) {
+      if (indentedHeading) {
         // If an item with the same id is found in smallArr, push that item to newArr
-        newArr.push(smallItem);
+        newArr.push(indentedHeading);
       } else {
         // If not found, push the largeArr item to newArr
-        newArr.push(largeItem);
+        newArr.push(heading);
       }
     });
 
     return newArr;
   }
-  //Added console.log to pass check
-  useEffect(() => {
-    console.log(organizedHeadings);
-    console.log(linksToSubHeadings);
-  }, [organizedHeadings, linksToSubHeadings]);
 
   const handleClick = (event, element) => {
     event.preventDefault();
@@ -69,7 +62,7 @@ const NavigationSidebar = () => {
   function createMenuItemHtml(menuItem, index) {
     if (menuItem.className === 'indented-heading') {
       return (
-        <ul>
+        <ul key={'indented-list-' + index}>
           <li key={index}>
             <a
               href={menuItem.target}
@@ -97,7 +90,7 @@ const NavigationSidebar = () => {
   return (
     <div className={moduleStyles.navBarContainer}>
       <Heading3>Navigation</Heading3>
-      <ul className={moduleStyles.narrowList}>
+      <ul className={moduleStyles.narrowList} key={'navigation-list'}>
         {organizedHeadings.map((menuItem, index) =>
           createMenuItemHtml(menuItem, index)
         )}
