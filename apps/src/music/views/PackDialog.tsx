@@ -5,7 +5,6 @@ import styles from './PackDialog.module.scss';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setPackId} from '../redux/musicRedux';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
-import {getBaseAssetUrl} from '../appConfig';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MusicPlayer from '../player/MusicPlayer';
@@ -13,7 +12,6 @@ import {DEFAULT_PACK} from '../constants';
 import musicI18n from '../locale';
 
 interface PackEntryProps {
-  libraryGroupPath: string;
   playingPreview: string | null;
   folder: SoundFolder;
   isSelected: boolean;
@@ -22,19 +20,18 @@ interface PackEntryProps {
 }
 
 const PackEntry: React.FunctionComponent<PackEntryProps> = ({
-  libraryGroupPath,
   playingPreview,
   folder,
   isSelected,
   onSelect,
   onPreview,
 }) => {
+  const library = MusicLibrary.getInstance();
+
   const previewSound = folder.sounds.find(sound => sound.type === 'preview');
   const soundPath = previewSound && folder.id + '/' + previewSound.src;
   const isPlayingPreview = previewSound && playingPreview === soundPath;
-  const imageSrc =
-    folder.imageSrc &&
-    `${getBaseAssetUrl()}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
+  const imageSrc = library?.getPackImageUrl(folder.id);
 
   const onPreviewClick = useCallback(
     (e: Event) => {
@@ -183,7 +180,6 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
   if (!library) return null;
 
   const folders = library.getRestrictedPacks();
-  const libraryGroupPath = library.getPath();
 
   if (currentPackId) {
     return null;
@@ -209,7 +205,6 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
               return (
                 <PackEntry
                   key={folderIndex}
-                  libraryGroupPath={libraryGroupPath}
                   playingPreview={playingPreviewState}
                   folder={folder}
                   isSelected={folder.id === selectedFolderId}

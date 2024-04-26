@@ -159,6 +159,21 @@ export default class MusicLibrary {
     return folders.find(folder => folder.id === folderId) || null;
   }
 
+  // Given a pack ID (e.g. "pack1"), return the path for its image.
+  getPackImageUrl(packId: string): string | undefined {
+    const folder = this.getFolderForFolderId(packId);
+    if (!folder) {
+      return undefined;
+    }
+
+    return (
+      folder.imageSrc &&
+      `${getBaseAssetUrl()}${this.libraryJson.path}/${folder.path}/${
+        folder.imageSrc
+      }`
+    );
+  }
+
   // A progression step might specify a smaller set of allowed sounds.
   setAllowedSounds(allowedSounds: Sounds): void {
     this.allowedSounds = allowedSounds;

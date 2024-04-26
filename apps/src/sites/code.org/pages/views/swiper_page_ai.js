@@ -10,6 +10,7 @@ register();
 
 const swiperActionBlocks = document.querySelector('swiper-container.swiper-01');
 const swiperQuotes = document.querySelector('swiper-container.swiper-02');
+const swiperVideos = document.querySelector('swiper-container.how-ai-works');
 
 const commonParams = {
   pagination: {
@@ -57,6 +58,19 @@ const quotesParams = {
   },
 };
 
+const videosParams = {
+  ...commonParams,
+  autoHeight: false,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+  },
+};
+
 const setSwiperParams = (swiper, params) => {
   Object.assign(swiper, params);
   swiper.initialize();
@@ -65,6 +79,7 @@ const setSwiperParams = (swiper, params) => {
 const swipers = [
   {swiper: swiperActionBlocks, params: actionBlocksParams},
   {swiper: swiperQuotes, params: quotesParams},
+  {swiper: swiperVideos, params: videosParams},
 ];
 
 swipers.forEach(({swiper, params}) => setSwiperParams(swiper, params));
