@@ -3,7 +3,7 @@ import React, {memo, useCallback, useMemo} from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import commonI18n from '@cdo/locale';
-import codeOrgLogo from '@cdo/static/code-dot-org-white-logo.svg';
+import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
 
 import moduleStyles from './music-play-view.module.scss';
 
@@ -55,8 +55,12 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
 
   return (
     <div className={moduleStyles.musicPlayViewContainer}>
+      <img
+        className={moduleStyles.musicPlayViewImage}
+        src={musicPlayViewLogo}
+        alt="Code.org play view logo"
+      />
       <div className={moduleStyles.musicPlayViewCard}>
-        <img src={codeOrgLogo} alt="Code.org" />
         <Heading2>{projectName}</Heading2>
         <BodyTwoText>{musicI18n.builtWithMusicLab()}</BodyTwoText>
 

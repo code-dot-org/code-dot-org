@@ -9,19 +9,25 @@
   width: 100%;
   background-color: $light_black;
 
+  .musicPlayViewImage {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 0.5em;
+  }
+
   .musicPlayViewCard {
     display: flex;
     flex-direction: column;
     max-width: 350px;
     background-color: $light_gray_900;
     gap: .5rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-
-    img {
-      width: 56px;
-      align-self: center;
-    }
+    padding: 1.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 
     h2, p, a {
       color: $light_white;
