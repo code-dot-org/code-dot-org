@@ -1,16 +1,14 @@
-import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
-
-import {Heading6, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
+import {queryParams, updateQueryParam} from '../../code-studio/utils';
+import style from '../../../style/code-studio/curriculum_catalog_filters.module.scss';
+import {curriculumDataShape} from './curriculumCatalogConstants';
+import CheckboxDropdown from '../CheckboxDropdown';
+import Toggle from '../../componentLibrary/toggle/Toggle.tsx';
 import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import i18n from '@cdo/locale';
-
-import {queryParams, updateQueryParam} from '../../code-studio/utils';
-import Toggle from '../../componentLibrary/toggle/Toggle.tsx';
-import CheckboxDropdown from '../CheckboxDropdown';
+import {Heading6, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {
   translatedCourseOfferingCsTopics,
   translatedInterdisciplinary,
@@ -20,10 +18,8 @@ import {
   translatedGradeLevels,
   gradeLevelsMap,
 } from '../teacherDashboard/CourseOfferingHelpers';
-
-import {curriculumDataShape} from './curriculumCatalogConstants';
-
-import style from '../../../style/code-studio/curriculum_catalog_filters.module.scss';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const filterTypes = {
   grade: {

@@ -1,17 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import LessonStandards, {
   ExpandMode,
 } from '@cdo/apps/templates/lessonOverview/LessonStandards';
-import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-
 import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
-
 import {lessonShape} from './rollupShapes';
 
 export default class RollupLessonEntrySection extends Component {
