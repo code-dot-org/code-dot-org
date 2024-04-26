@@ -1,23 +1,27 @@
-import React, {useEffect, useRef} from 'react';
-import style from './expanded_curriculum_catalog_card.module.scss';
-import centererStyle from './curriculum_catalog_card.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
+import React, {useEffect, useRef} from 'react';
+
 import {
   BodyTwoText,
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
-import {TextLink} from '@dsco_/link';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
+
 import {
   translatedCourseOfferingDeviceTypes,
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
+
 import {defaultImageSrc} from './curriculumCatalogConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+import centererStyle from './curriculum_catalog_card.module.scss';
+import style from './expanded_curriculum_catalog_card.module.scss';
 
 const ExpandedCurriculumCatalogCard = ({
   courseKey,
