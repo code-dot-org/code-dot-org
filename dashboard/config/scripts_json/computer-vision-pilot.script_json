@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision-pilot",
-    "serialized_at": "2024-04-22 15:53:47 UTC",
+    "serialized_at": "2024-04-25 15:26:19 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -50,9 +50,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this introductory lesson on computer vision, students explore the fundamentals of how computers interpret visual data. The lesson begins with a warm-up activity where students hypothesize algorithms to differentiate between \"X\" and \"O\". They then engage with a video that discusses the basics of machine learning and the recognition of complex shapes in computer vision. The core activity, \"The Search for Pixel,\" provides a hands-on approach to understanding image processing through a series of problem-solving rounds. By the end of the lesson, students should be able to construct a working definition of computer vision and identify its real-world applications.\n\n**Question of the day:** How can computer vision be used to solve problems?\n",
+        "overview": "**How can computer vision be used to solve problems?**\n\nIn this introductory lesson on computer vision, students explore the fundamentals of how computers interpret visual data. The lesson begins with a warm-up activity where students hypothesize algorithms to differentiate between \"X\" and \"O\". They then engage with a video that discusses the basics of machine learning and the recognition of complex shapes in computer vision. The core activity, \"The Search for Pixel,\" provides a hands-on approach to understanding image processing through a series of problem-solving rounds. By the end of the lesson, students should be able to construct a working definition of computer vision and identify its real-world applications.",
         "preparation": "* Print copies of The Search for Pixel activity guide (one for each student)\n* Print the Clue Cards resource (one class set)\n",
-        "student_overview": "Today, we dive into how computers \"see\" and process images. You explore algorithms that distinguish between symbols like \"X\" and \"O\" and watch a video on how machine learning enables computers to recognize complex shapes. Our main activity, \"The Search for Pixel,\" will challenge you to apply these concepts through hands-on image recognition tasks.\n\n**Question of the day:** How can computer vision be used to solve problems?\n"
+        "student_overview": "**How can computer vision be used to solve problems?**\n\nToday, we dive into how computers \"see\" and process images. You explore algorithms that distinguish between symbols like \"X\" and \"O\" and watch a video on how machine learning enables computers to recognize complex shapes. Our main activity, \"The Search for Pixel,\" will challenge you to apply these concepts through hands-on image recognition tasks."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -946,10 +946,22 @@
   ],
   "activity_sections": [
     {
-      "key": "c40b25bd-4afe-41ed-b9f7-bbd64d500360",
+      "key": "59c9a6f6-b974-426c-8d47-1e082cc2d399",
       "position": 1,
       "properties": {
-        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Today marks the beginning of our explorations with computer vision. We’re going to peel back the curtain and see how computers use images & video to “see” the world around them, turning pixels into patterns, and patterns into predictions. It’s a field of study that is ongoing, current, and with many applications now and in the near future that promise to change the way that society looks and functions.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How might we create an algorithm so that a computer can see the difference between \"X\" and \"O\"?_\n\n**Discussion Goal:** A simple algorithm that students might come up with is to test whether the corners are filled in; if so, then it must be an X. They might also suggest to test to see if the lines present cross each other. Encourage students to come up with as many rules / steps as they are able to in the amount of time given. Teaching Tip Consider having students talk to a shoulder partner for a minute or two to discuss and work out an algorithm before beginning a whole class discussion.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Does your algorithm work for the examples of an \"X\" seen here? Why or why not?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** No matter how detailed the algorithm was that students created previously, it is highly likely that it didn’t account for some variation of the 'X' seen here. And even if it did, it was also likely that there could be an 'X' drawn that did not account for the algorithm. Traditional algorithmic thinking has specific conditions to check for, but even in an example as small as this 9x9 grid, we can see that it is difficult, if not impossible, to account for all of the variations. It is important to point out that one of the main goals of computer vision technologies is to be able to train computers to recognize an 'X'-- in addition to other objects– in new and novel implementations.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Throughout this module we will be learning how computer scientists are developing sophisticated computer vision algorithms utilizing AI and data. By training these models with loads of data, the computer itself begins to write and tweak its own algorithms to help it decode and understand what an \"X\" might be. Even if it sees a version that it has never seen before, if the training was thorough enough, it should be able to recognize the letter. That is one of the goals of computer vision: to train computers to see and interpret the world around them just like we are able to do as human beings.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Let’s take a look at an introductory video that details the basics of what computer vision is, how it differs from traditional programming / algorithm development, and what some uses might be.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** How AI Works: Computer Vision (2:24 to 3:46)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _When teaching a computer to \"see\", how does machine learning differ from traditional programming?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** With traditional programming, we often hard-code in certain assumptions and conditions– like it might be an X shape if the center pixel filled in. However, that doesn’t account for situations where the X shape is askew or transformed across the canvas. Machine learning allows a computer to use data to develop an algorithm for itself. The more data that the computer has, the more accurate the guess that it can make becomes. Machine learning finds patterns by learning from its mistakes.",
+        "description": "Today marks the beginning of our explorations with computer vision. We’re going to peel back the curtain and see how computers use images & video to “see” the world around them, turning pixels into patterns, and patterns into predictions. It’s a field of study that is ongoing, current, and with many applications now and in the near future that promise to change the way that society looks and functions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "59c9a6f6-b974-426c-8d47-1e082cc2d399",
+        "lesson_activity.key": "6711eebe-6fc6-46e7-809f-49cc9e4b597c"
+      }
+    },
+    {
+      "key": "c40b25bd-4afe-41ed-b9f7-bbd64d500360",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How might we create an algorithm so that a computer can see the difference between \"X\" and \"O\"?_\n\n**Discussion Goal:** A simple algorithm that students might come up with is to test whether the corners are filled in; if so, then it must be an X. They might also suggest to test to see if the lines present cross each other. Encourage students to come up with as many rules / steps as they are able to in the amount of time given. Teaching Tip Consider having students talk to a shoulder partner for a minute or two to discuss and work out an algorithm before beginning a whole class discussion.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Does your algorithm work for the examples of an \"X\" seen here? Why or why not?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** No matter how detailed the algorithm was that students created previously, it is highly likely that it didn’t account for some variation of the 'X' seen here. And even if it did, it was also likely that there could be an 'X' drawn that did not account for the algorithm. Traditional algorithmic thinking has specific conditions to check for, but even in an example as small as this 9x9 grid, we can see that it is difficult, if not impossible, to account for all of the variations. It is important to point out that one of the main goals of computer vision technologies is to be able to train computers to recognize an 'X'-- in addition to other objects– in new and novel implementations.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** How AI Works: Computer Vision (2:24 to 3:46)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _When teaching a computer to \"see\", how does machine learning differ from traditional programming?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** With traditional programming, we often hard-code in certain assumptions and conditions– like it might be an X shape if the center pixel filled in. However, that doesn’t account for situations where the X shape is askew or transformed across the canvas. Machine learning allows a computer to use data to develop an algorithm for itself. The more data that the computer has, the more accurate the guess that it can make becomes. Machine learning finds patterns by learning from its mistakes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -963,8 +975,42 @@
       }
     },
     {
+      "key": "943a235b-3517-45ed-a269-9e4398d8351d",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "943a235b-3517-45ed-a269-9e4398d8351d",
+        "lesson_activity.key": "6711eebe-6fc6-46e7-809f-49cc9e4b597c"
+      }
+    },
+    {
+      "key": "09864add-28e5-486d-a563-93cba2904b4d",
+      "position": 4,
+      "properties": {
+        "description": "Throughout this module we will be learning how computer scientists are developing sophisticated computer vision algorithms utilizing AI and data. By training these models with loads of data, the computer itself begins to write and tweak its own algorithms to help it decode and understand what an \"X\" might be. Even if it sees a version that it has never seen before, if the training was thorough enough, it should be able to recognize the letter. That is one of the goals of computer vision: to train computers to see and interpret the world around them just like we are able to do as human beings.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "09864add-28e5-486d-a563-93cba2904b4d",
+        "lesson_activity.key": "6711eebe-6fc6-46e7-809f-49cc9e4b597c"
+      }
+    },
+    {
+      "key": "46134871-fc4c-40d0-9103-5ead87fa507f",
+      "position": 5,
+      "properties": {
+        "description": "Let’s take a look at an introductory video that details the basics of what computer vision is, how it differs from traditional programming / algorithm development, and what some uses might be.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "46134871-fc4c-40d0-9103-5ead87fa507f",
+        "lesson_activity.key": "6711eebe-6fc6-46e7-809f-49cc9e4b597c"
+      }
+    },
+    {
       "key": "e7b2c6e0-ac3f-42a9-a1fc-49d42216c1e6",
-      "position": 2,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** How AI Works: Computer Vision (4:16 to 6:25)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What does a computer have to do to recognize complex shapes?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** A computer often begins by looking at the edges within an image, and then to break down what is left into smaller, simpler patterns. An eye, in the example given, can have its edges highlighted to reveal that it contains two arcs with two concentric circles inside. By training a machine learning model using lots of data, the computer can keep increasing its accuracy with its guesses until it learns how to “see” correctly."
       },
@@ -991,10 +1037,32 @@
       }
     },
     {
-      "key": "64d29712-e1f2-461d-a720-19a8d474c8cf",
+      "key": "af014fdb-fb24-4ea0-9dc7-9aa21f7ad9b7",
       "position": 2,
       "properties": {
-        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** In order to learn a bit more about computer vision, you are all going to assume the roles of digital detectives today. Pixel the cat has gone missing! You will visit different locations around the city, searching for information about what happened to the cat, and aided by use of computer vision techniques to reveal these clues.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete The Search for Pixel activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "af014fdb-fb24-4ea0-9dc7-9aa21f7ad9b7",
+        "lesson_activity.key": "a8bc16bb-caba-447a-87e5-3fada4b8d328"
+      }
+    },
+    {
+      "key": "aa82a2a5-abc3-4419-bc2a-4b78bbcd8104",
+      "position": 3,
+      "properties": {
+        "description": "In order to learn a bit more about computer vision, you are all going to assume the roles of digital detectives today. Pixel the cat has gone missing! You will visit different locations around the city, searching for information about what happened to the cat, and aided by use of computer vision techniques to reveal these clues.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aa82a2a5-abc3-4419-bc2a-4b78bbcd8104",
+        "lesson_activity.key": "a8bc16bb-caba-447a-87e5-3fada4b8d328"
+      }
+    },
+    {
+      "key": "64d29712-e1f2-461d-a720-19a8d474c8cf",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete The Search for Pixel activity."
       },
       "seeding_key": {
         "activity_section.key": "64d29712-e1f2-461d-a720-19a8d474c8cf",
@@ -1003,19 +1071,9 @@
     },
     {
       "key": "ac657f81-b1e2-487c-9466-897c9e113321",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "progression_name": "The Search for Pixel"
-      },
-      "seeding_key": {
-        "activity_section.key": "ac657f81-b1e2-487c-9466-897c9e113321",
-        "lesson_activity.key": "a8bc16bb-caba-447a-87e5-3fada4b8d328"
-      }
-    },
-    {
-      "key": "7c2c58e7-eab7-40e3-8693-d2aa17196e3b",
-      "position": 4,
-      "properties": {
+        "progression_name": "The Search for Pixel",
         "tips": [
           {
             "type": "teachingTip",
@@ -1024,7 +1082,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "7c2c58e7-eab7-40e3-8693-d2aa17196e3b",
+        "activity_section.key": "ac657f81-b1e2-487c-9466-897c9e113321",
         "lesson_activity.key": "a8bc16bb-caba-447a-87e5-3fada4b8d328"
       }
     },
@@ -1033,7 +1091,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete the reflection question:\n\n* _What is your definition of computer vision?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** Allows students to share what they have constructed as their working definition of computer vision thus far. This definition is sure to evolve and grow as the module progresses. Some possible examples for a working definition might include: Computer vision is like when your computer tries to figure out what's in a picture, kind of like how we recognize our friends' faces or stuff in photos Computer vision helps computers 'see' and understand the images and videos like we do, but through cameras and algorithms It's like teaching a computer to see and interpret the world around it, so it can recognize objects, people, and even actions It's a part of artificial intelligence where computers are trained to interpret and understand the visual world.",
-        "progression_name": "Reflection Question",
+        "progression_name": "Reflection",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1140,7 +1198,7 @@
       "key": "90a1dc63-9679-436b-8626-45a052dc6f3e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete the reflection questions on Levels 1 and 2.\n\n* _Describe a community you belong to and a potential problem within that community that you discussed with your group._\n* _What was one research question you wrote down to learn more about the users' needs and why would that be important to learn about?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** This question aims to assess students' ability to connect their personal experiences with the broader scope of computer vision applications, encouraging them to think critically about how technology can serve diverse needs. The goal here is to evaluate students' understanding of how to translate observations about a community's challenges into open-ended questions that can effectively guide user research and data gathering.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete the reflection questions on Levels 1 and 2.\n\n1. _Describe a community you belong to and a potential problem within that community that you discussed with your group._\n2. _What was one research question you wrote down to learn more about the users' needs and why would that be important to learn about?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** \n\n1. This question aims to assess students' ability to connect their personal experiences with the broader scope of computer vision applications, encouraging them to think critically about how technology can serve diverse needs. \n2. The goal here is to evaluate students' understanding of how to translate observations about a community's challenges into open-ended questions that can effectively guide user research and data gathering.",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -1404,7 +1462,7 @@
       "key": "903075f6-98f3-43a2-ba26-2d4b6b2b0021",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What problem statements did you come up with? How did you get to these statements from your user stories?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get 2-3 different groups to share out to see how these statements can be framed differently.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1, 2, and 3.\n\n* _Explain what a user persona is and how it helps in designing a computer vision application._\n* _Describe a user story you created based on your data visualizations. What data informed this story?_\n* _How did you transition from your user story to developing a core problem statement? Provide an example from your work._\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** Students should be able to articulate that a user persona is a fictional character created based on research to represent a user type that might use the application, emphasizing how it helps focus design efforts to meet specific user needs. This question assesses students' ability to analyze data visualizations and extract insights that inform the creation of a user story, demonstrating the link between data interpretation and user-centered design. Students should explain the process of identifying core issues from user stories by asking \"Why?\" multiple times, showcasing their understanding of digging deeper into user needs to define a core problem.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What problem statements did you come up with? How did you get to these statements from your user stories?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get 2-3 different groups to share out to see how these statements can be framed differently.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1, 2, and 3.\n\n1. _Explain what a user persona is and how it helps in designing a computer vision application._\n2. _Describe a user story you created based on your data visualizations. What data informed this story?_\n3. _How did you transition from your user story to developing a core problem statement? Provide an example from your work._\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** \n1. Students should be able to articulate that a user persona is a fictional character created based on research to represent a user type that might use the application, emphasizing how it helps focus design efforts to meet specific user needs. \n2. This question assesses students' ability to analyze data visualizations and extract insights that inform the creation of a user story, demonstrating the link between data interpretation and user-centered design. \n3. Students should explain the process of identifying core issues from user stories by asking \"Why?\" multiple times, showcasing their understanding of digging deeper into user needs to define a core problem.",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -1604,7 +1662,7 @@
       "key": "d4753242-5a1a-411c-8c37-5004a3bc0066",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 and 2.\n\n* _Explain the concept of edge detection in computer vision and its importance in image processing._\n* _How might edge detection filters be utilized in the computer vision application you're developing?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** Students should be able to define edge detection as a technique used to identify the boundaries or edges within images, highlighting its significance in distinguishing objects from their background, which is crucial for various computer vision applications. Encourages students to think about the practical application of edge detection in their own computer vision projects, discussing how it could improve object recognition, tracking, or other functionalities.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 and 2.\n\n1. _Explain the concept of edge detection in computer vision and its importance in image processing._\n2. _How might edge detection filters be utilized in the computer vision application you're developing?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** \n1. Students should be able to define edge detection as a technique used to identify the boundaries or edges within images, highlighting its significance in distinguishing objects from their background, which is crucial for various computer vision applications. \n2. Encourages students to think about the practical application of edge detection in their own computer vision projects, discussing how it could improve object recognition, tracking, or other functionalities.",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -1794,7 +1852,7 @@
       "key": "51cdb67e-e6ea-417a-b09c-3180fbf21389",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 5 to complete their reflection questions on Levels 5, 6, and 7.\n\n* _Can you explain how datasets like COCO and ImageNet are used in training computer vision models?_\n* _What is a confidence score, and why is it important in the output of a computer vision model?_\n* _Reflecting on today’s lesson, how do the suitability and characteristics of different datasets influence the design of computer vision applications?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** Students should discuss the role of large image datasets in providing the labeled data necessary for training computer vision models to recognize and classify objects within images This question assesses students’ understanding of confidence scores as a measure of how certain a computer vision model is about its predictions, emphasizing its importance in determining the reliability of these predictions. To synthesize learning by having students articulate the critical role of selecting appropriate datasets in designing computer vision applications that can accurately perceive and interpret images.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 5 to complete their reflection questions on Levels 5, 6, and 7.\n\n5. _Can you explain how datasets like COCO and ImageNet are used in training computer vision models?_\n6. _What is a confidence score, and why is it important in the output of a computer vision model?_\n7. _Reflecting on today’s lesson, how do the suitability and characteristics of different datasets influence the design of computer vision applications?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** \n5. Students should discuss the role of large image datasets in providing the labeled data necessary for training computer vision models to recognize and classify objects within images. \n6. This question assesses students’ understanding of confidence scores as a measure of how certain a computer vision model is about its predictions, emphasizing its importance in determining the reliability of these predictions. \n7. To synthesize learning by having students articulate the critical role of selecting appropriate datasets in designing computer vision applications that can accurately perceive and interpret images.",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -1907,7 +1965,7 @@
       "key": "5259fa36-d8c0-464f-9314-401e171a7219",
       "position": 1,
       "properties": {
-        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** In the next class session, please come prepared with any media that you might need to train a sample model for your computer vision application. This can take the form of physical objects, images, video, sounds, music, etc. The more data that you bring, the better the model will likely perform. If the model does not perform as well as you thought it might, there will be opportunities during upcoming project time when you can make adjustments and tweaks to your model.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What physical objects, images, video, or other artifacts are you going to bring to class next to help train your model?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a good time to make sure that students are clear that they will need to be responsible for bringing training data for their model in the next class period. For example, if a student is making proposing an application that would help zookeepers know how many bananas a gorilla has eaten on a given day, then they would need to bring in a banana to train their model with– likely one that is undisturbed, and one that has been eaten and just the peel remains. Using this object, students could train a model to recognize both forms of banana, and could then use this model as a part of their application.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection question.\n\n* _How might bias in computer vision applications impact users differently based on their background or characteristics? How can bias in the data used to train computer vision models affect the performance and reliability of these systems?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** To evaluate students' understanding of the differential impacts of bias, such as how facial recognition systems may perform poorly on certain demographic groups due to underrepresentation in training datasets. Students should discuss how biased training data can lead to computer vision systems that are unfair or inaccurate, particularly by failing to recognize or improperly categorizing objects or people not adequately represented in the training data.\n",
+        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** In the next class session, please come prepared with any media that you might need to train a sample model for your computer vision application. This can take the form of physical objects, images, video, sounds, music, etc. The more data that you bring, the better the model will likely perform. If the model does not perform as well as you thought it might, there will be opportunities during upcoming project time when you can make adjustments and tweaks to your model.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What physical objects, images, video, or other artifacts are you going to bring to class next to help train your model?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a good time to make sure that students are clear that they will need to be responsible for bringing training data for their model in the next class period. For example, if a student is making proposing an application that would help zookeepers know how many bananas a gorilla has eaten on a given day, then they would need to bring in a banana to train their model with– likely one that is undisturbed, and one that has been eaten and just the peel remains. Using this object, students could train a model to recognize both forms of banana, and could then use this model as a part of their application.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Levels 2 & 3 to complete their reflection question.\n\n2. _How might bias in computer vision applications impact users differently based on their background or characteristics? \n3. How can bias in the data used to train computer vision models affect the performance and reliability of these systems?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** \n2. To evaluate students' understanding of the differential impacts of bias, such as how facial recognition systems may perform poorly on certain demographic groups due to underrepresentation in training datasets. \n3. Students should discuss how biased training data can lead to computer vision systems that are unfair or inaccurate, particularly by failing to recognize or improperly categorizing objects or people not adequately represented in the training data.\n",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -1976,7 +2034,7 @@
       "key": "6ca0323f-747b-4bde-81a1-93a4ffa32802",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection questions on Levels 2, 3, and 4.\n\n* _What challenges did you encounter while creating and training your model, and how did you address them?_\n* _How can the model you created be applied to the real-world problem you are trying to solve with your computer vision application?_\n* _Reflecting on today's lesson, why is the diversity of data crucial in training a computer vision model, and how did the Teachable Machine activity enhance your understanding of this concept?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** Encourages students to reflect on any difficulties faced during model training, such as inadequate data or model misclassification, and discuss the strategies they used to overcome these challenges. This question aims to connect the technical process of model training with its practical application, encouraging students to think about how their model addresses the specific needs identified in their project's problem statement. To synthesize learning by having students articulate the importance of diverse training data in developing effective and equitable computer vision models and reflect on how the hands-on experience with Teachable Machine highlighted these concepts.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection questions on Levels 2, 3, and 4.\n\n2. _What challenges did you encounter while creating and training your model, and how did you address them?_\n3. _How can the model you created be applied to the real-world problem you are trying to solve with your computer vision application?_\n4. _Reflecting on today's lesson, why is the diversity of data crucial in training a computer vision model, and how did the Teachable Machine activity enhance your understanding of this concept?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** \n2. Encourages students to reflect on any difficulties faced during model training, such as inadequate data or model misclassification, and discuss the strategies they used to overcome these challenges. \n3. This question aims to connect the technical process of model training with its practical application, encouraging students to think about how their model addresses the specific needs identified in their project's problem statement. \n4. To synthesize learning by having students articulate the importance of diverse training data in developing effective and equitable computer vision models and reflect on how the hands-on experience with Teachable Machine highlighted these concepts.",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -2051,7 +2109,7 @@
       "key": "cb94bb23-b44e-4048-a208-b2c0bc747eab",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection questions on Levels 2, 3, and 4.\n\n* _Complete this statement: When investigating my computer vision technology, I originally thought \\_\\_\\_\\_\\_\\_. After comparing and discussing with classmates who had the same tech, I now/still think \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_, because \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_._\n* _How can society navigate the ethical challenges presented by Computer Vision technologies to ensure they benefit all members equitably?_\n* _What is the single most important ethical consideration that you feel needs to be made when a new Computer Vision technology is introduced? Why do you feel that way?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** Completing this statement encourages students to reflect on and articulate how collaborative discussions have deepened or altered their understanding of computer vision technologies, particularly regarding their ethical, privacy, and societal implications. The goal here is to encourage students to think broadly about the roles of education, transparency, public engagement and perhaps even policy in addressing ethical challenges. This discussion aims to highlight the importance of multidisciplinary approaches, including ethics, law, and technology, in creating a framework that safeguards individual rights while fostering innovation. This question aims to personalize the ethical considerations of computer vision technologies, prompting students to reflect on and articulate their values and priorities. The goal is to foster a deeper understanding of the diverse ethical dimensions these technologies entail, such as privacy, consent, transparency, and accountability. By identifying and discussing the most pressing ethical issue from their perspective, students can explore the rationale behind ethical guidelines and the potential consequences of overlooking these considerations.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection questions on Levels 2, 3, and 4.\n\n2. _Complete this statement: When investigating my computer vision technology, I originally thought \\_\\_\\_\\_\\_\\_. After comparing and discussing with classmates who had the same tech, I now/still think \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_, because \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_._\n3. _How can society navigate the ethical challenges presented by Computer Vision technologies to ensure they benefit all members equitably?_\n4. _What is the single most important ethical consideration that you feel needs to be made when a new Computer Vision technology is introduced? Why do you feel that way?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** \n2. Completing this statement encourages students to reflect on and articulate how collaborative discussions have deepened or altered their understanding of computer vision technologies, particularly regarding their ethical, privacy, and societal implications. \n3. The goal here is to encourage students to think broadly about the roles of education, transparency, public engagement and perhaps even policy in addressing ethical challenges. \n4. This discussion aims to highlight the importance of multidisciplinary approaches, including ethics, law, and technology, in creating a framework that safeguards individual rights while fostering innovation. This question aims to personalize the ethical considerations of computer vision technologies, prompting students to reflect on and articulate their values and priorities. The goal is to foster a deeper understanding of the diverse ethical dimensions these technologies entail, such as privacy, consent, transparency, and accountability. By identifying and discussing the most pressing ethical issue from their perspective, students can explore the rationale behind ethical guidelines and the potential consequences of overlooking these considerations.",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -2097,7 +2155,7 @@
       "key": "1853513e-54cc-485d-b62e-1bb6fc70e499",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 and 2.\n\n* _What part of today’s prototyping activity was most useful, interesting, or engaging for you? Explain why._\n* _What does 'scope' mean in the context of project planning, and how did you determine the scope of your prototype?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** Reading through student responses before the start of the next class will be helpful to course correct any issues or identify any students who are struggling to identify anything useful, interesting or engaging about the prototyping process and work with them to find something useful or engaging and to better address student needs on Day Two. Students should explain the concept of project scope as it relates to the features, functions, and timeline of their prototype, discussing how they decided what was feasible to accomplish within the constraints of the project.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 and 2.\n\n1. _What part of today’s prototyping activity was most useful, interesting, or engaging for you? Explain why._\n2. _What does 'scope' mean in the context of project planning, and how did you determine the scope of your prototype?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** \n1. Reading through student responses before the start of the next class will be helpful to course correct any issues or identify any students who are struggling to identify anything useful, interesting or engaging about the prototyping process and work with them to find something useful or engaging and to better address student needs on Day Two. \n2. Students should explain the concept of project scope as it relates to the features, functions, and timeline of their prototype, discussing how they decided what was feasible to accomplish within the constraints of the project.\n",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -2166,7 +2224,7 @@
       "key": "5b9fd0ff-4c09-4745-a157-344cbdaa961e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection question on Levels 2 and 3.\n\n* _Reflect on the prototyping process so far. What aspects of your prototype are you most proud of, and why?_\n* _How have you prepared your prototype for user testing, and what are you hoping to learn from this phase?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** Encourages students to think critically about their work, focusing on achievements and innovations they've introduced in their prototype, fostering a sense of accomplishment and encouraging peer-to-peer learning. Students should discuss their preparations for the testing phase, what they aim to learn from user interactions, and how they plan to use this feedback to further refine their computer vision applications.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection question on Levels 2 and 3.\n\n2. _Reflect on the prototyping process so far. What aspects of your prototype are you most proud of, and why?_\n3. _How have you prepared your prototype for user testing, and what are you hoping to learn from this phase?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** \n2. Encourages students to think critically about their work, focusing on achievements and innovations they've introduced in their prototype, fostering a sense of accomplishment and encouraging peer-to-peer learning. \n3. Students should discuss their preparations for the testing phase, what they aim to learn from user interactions, and how they plan to use this feedback to further refine their computer vision applications.\n",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -2206,7 +2264,7 @@
       "key": "00e97685-454c-4b9a-a69e-da61daf88cc9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 through 3.\n\n* _What can we learn by testing our design in front of our intended users?_\n* _How did role-playing as a user persona change your perspective on the computer vision applications you reviewed?_\n* _What was the most surprising or insightful piece of feedback you received, and how will it influence your project moving forward?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** Responses should reflect an understanding that user testing is essential for creating solutions that are genuinely useful and user-friendly. Students should mention how testing with intended users ensures the product meets real-world needs and usability standards. Encourages students to reflect on how adopting a user persona provided new insights into the user experience, highlighting the value of empathy in designing user-centered solutions. Students should evaluate how feedback from diverse perspectives can offer unexpected insights, and how such feedback can drive the project to better meet user needs or address previously overlooked issues.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 through 3.\n\n1. _What can we learn by testing our design in front of our intended users?_\n2. _How did role-playing as a user persona change your perspective on the computer vision applications you reviewed?_\n3. _What was the most surprising or insightful piece of feedback you received, and how will it influence your project moving forward?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** \n1. Responses should reflect an understanding that user testing is essential for creating solutions that are genuinely useful and user-friendly. Students should mention how testing with intended users ensures the product meets real-world needs and usability standards. \n2. Encourages students to reflect on how adopting a user persona provided new insights into the user experience, highlighting the value of empathy in designing user-centered solutions. \n3. Students should evaluate how feedback from diverse perspectives can offer unexpected insights, and how such feedback can drive the project to better meet user needs or address previously overlooked issues.",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -2297,7 +2355,7 @@
       "key": "e9d597a7-a6e9-4af1-88e0-fe41c11e5d62",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1, 2, and 3.\n\n* _Reflect on the iteration process of your prototype. What aspects of this process did you find most effective in improving your design, and why do you think these elements were particularly successful?_\n* _Describe a specific instance where implementing feedback was challenging. What was the feedback, why was it difficult to implement, and how did you address the challenge?_\n* _What have you learned about the process of collecting, evaluating, and acting on feedback throughout this project? How will this learning influence your approach to future projects?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** This question encourages students to analyze and articulate which parts of the iteration process contributed most significantly to their prototype's development, fostering an understanding of effective design practices. Students should provide clear examples of successful iteration elements, such as rapid prototyping, user testing sessions, or specific types of feedback that were particularly insightful along with an explanation of why these elements were effective. This question encourages students to reflect on the difficulties encountered in implementing feedback and discuss the strategies or compromises made to navigate these challenges while still striving to meet user needs. This question aims to explore what students have gleaned from their experiences with feedback, emphasizing the importance of feedback in design and how it shapes their approach to projects.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1, 2, and 3.\n\n1. _Reflect on the iteration process of your prototype. What aspects of this process did you find most effective in improving your design, and why do you think these elements were particularly successful?_\n2. _Describe a specific instance where implementing feedback was challenging. What was the feedback, why was it difficult to implement, and how did you address the challenge?_\n3. _What have you learned about the process of collecting, evaluating, and acting on feedback throughout this project? How will this learning influence your approach to future projects?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** \n1. This question encourages students to analyze and articulate which parts of the iteration process contributed most significantly to their prototype's development, fostering an understanding of effective design practices. Students should provide clear examples of successful iteration elements, such as rapid prototyping, user testing sessions, or specific types of feedback that were particularly insightful along with an explanation of why these elements were effective. \n2. This question encourages students to reflect on the difficulties encountered in implementing feedback and discuss the strategies or compromises made to navigate these challenges while still striving to meet user needs. \n3. This question aims to explore what students have gleaned from their experiences with feedback, emphasizing the importance of feedback in design and how it shapes their approach to projects.",
         "progression_name": "Reflection Questions",
         "tips": [
           {
@@ -2342,12 +2400,12 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CV_L1_Reflection_1"
         ],
-        "progression": "Reflection Question"
+        "progression": "Reflection"
       },
       "bonus": false,
       "seeding_key": {

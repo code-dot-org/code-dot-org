@@ -24,11 +24,11 @@
     "panels": [
       {
         "imageUrl": "https://images.code.org/2843a02314c84e8efb37bfcfa95138ba-loop.gif",
-        "text": "###Repeat a sound\n\nYou can play a sound over and over again by using a repeat loop. \n\nSet the number to how many times you want it to repeat.",
+        "text": "###Repeat a sound\n\nChoose a sound and set the number of times to play it using a repeat block.\n",
         "key": "musiclab_intro_panels_playtogether_pdx-a0d88b4a-e9a8-4641-8ec9-3ce98e7a1cc4"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-24T18:39:57.655+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_playtogether_v2\\\"\"],\"cloned_from\":\"musiclab_intro_panels_playtogether_v2\"},{\"changed_at\":\"2024-04-24 18:43:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-24T18:39:57.655+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_playtogether_v2\\\"\"],\"cloned_from\":\"musiclab_intro_panels_playtogether_v2\"},{\"changed_at\":\"2024-04-24 18:43:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-25 21:36:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-04-25 21:36:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>
