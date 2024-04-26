@@ -111,6 +111,11 @@ i.fa-fw {
   &.flex-direction-column {
     flex-direction: column;
   }
+  &.flex-direction-column-tablet {
+    @media screen and (max-width: $width-md) {
+      flex-direction: column;
+    }
+  }
   &.flex-direction-column-mobile {
     @media screen and (max-width: $width-sm) {
       flex-direction: column;
