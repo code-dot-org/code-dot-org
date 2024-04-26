@@ -25,9 +25,7 @@ Feature: Policy Compliance and Parental Permission
     Given I am on "http://studio.code.org/lockout"
 
     Then I wait to see "#student-information-modal"
-    Then I click selector "#user_us_state"
-    And I wait until element "span:contains(Colorado)" is visible
-    Then I click selector "span:contains(Colorado)"
+    And I select the "Colorado" option in dropdown "user_us_state"
 
     Then I press "#submit-btn" using jQuery
 
