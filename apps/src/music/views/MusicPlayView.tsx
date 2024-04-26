@@ -23,10 +23,13 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   compileSong,
   executeCompiledSong,
 }) => {
+  const libraryName = useAppSelector(state => state.music.libraryName);
   useEffect(() => {
-    compileSong();
-    executeCompiledSong();
-  }, [compileSong, executeCompiledSong]);
+    if (libraryName) {
+      compileSong();
+      executeCompiledSong();
+    }
+  }, [compileSong, executeCompiledSong, libraryName]);
   const {isPlaying, lastMeasure, currentPlayheadPosition} = useAppSelector(
     state => state.music
   );

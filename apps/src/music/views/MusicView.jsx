@@ -271,7 +271,6 @@ class UnconnectedMusicView extends React.Component {
     if (libraryName === LEGACY_DEFAULT_LIBRARY) {
       libraryName = DEFAULT_LIBRARY;
     }
-    await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
     this.props.isPlayView
       ? this.musicBlocklyWorkspace.initHeadless()
@@ -281,6 +280,8 @@ class UnconnectedMusicView extends React.Component {
           this.props.isReadOnlyWorkspace,
           levelData?.toolbox
         );
+
+    await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
     this.library.setAllowedSounds(levelData?.sounds);
     this.props.setShowInstructions(
