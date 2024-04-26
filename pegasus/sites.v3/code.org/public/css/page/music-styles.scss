@@ -44,6 +44,17 @@ section.hero-banner-basic {
     z-index: 10;
   }
 
+  p.has-icon {
+    margin-bottom: 0.5rem;
+
+    strong::before {
+      font: var(--fa-font-solid);
+      content: "\f001";
+      font-size: 1rem;
+      margin-inline: 6px;
+    }
+  }
+
   .afe {
     gap: 0.5rem;
 

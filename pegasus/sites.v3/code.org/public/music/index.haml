@@ -12,9 +12,8 @@ theme: responsive_full_width
 %section.hero-banner-basic.overlay
   .wrapper.grid-container.justify-space-between.align-items-center.gap-4
     .text-wrapper
-      -# TODO - ADD ICON STRING
-      -# %p.body-one.white
-      -#   ICON STRING HERE
+      %p.body-one.white.has-icon
+        =hoc_s("music_lab.introducing_music_lab_strong", markdown: :inline, locals:{music_lab: "Music Lab"})
       %h1.white
         =hoc_s("music_lab.banner.heading")
       %p.body-one.white
@@ -29,16 +28,16 @@ theme: responsive_full_width
     %figure
       %img{src: "/images/music-lab/music-lab-banner-graphic.png", alt: "", style: "width: 100%"}
 
--# TODO - ADD FINAL LIST OF ARTISTS
--# %section.bg-neutral-light
--#   .wrapper.flex-container.justify-space-between.align-items-center.gap-1.wrap.flex-direction-column-mobile
--#     .text-wrapper.flex-1
--#       %h2.heading-lg
--#         =hoc_s("music_lab.featuring_songs_by")
--#       -# TODO - ADD STRING HERE
--#       -# %p.no-margin-bottom
--#     .flex-2
--#       = view :"music/music_lab_featured_artists"
+-# TODO - ADD FINAL LIST OF ARTISTS BEFORE LAUNCH
+%section.bg-neutral-light
+  .wrapper.flex-container.justify-space-between.align-items-center.gap-1.wrap.flex-direction-column-mobile
+    .text-wrapper.flex-1
+      %h2.heading-lg
+        =hoc_s("music_lab.featuring_songs_by")
+      %p.no-margin-bottom
+        =hoc_s("music_lab.artist_list", markdown: :inline, locals:{artist_list: "The Chainsmokers, Rosa Linn, Carly Rae Jepson, Dove Cameron, Aloe Blacc"})
+    .flex-1-5
+      = view :"music/music_lab_featured_artists"
 
 -# %section
 -#   .wrapper
@@ -73,7 +72,7 @@ theme: responsive_full_width
 -#       .text-wrapper.col-47
 -#         %h2=hoc_s("music_lab.tutorial.heading")
 -#         %p=hoc_s("music_lab.tutorial.desc")
--#         %a.link-button{href: "/music-lab/tutorial"}
+-#         %a.link-button{href: CDO.studio_url("/s/music-tutorial-2024")}
 -#           =hoc_s("music_lab.tutorial.button")
 
 %section.bg-neutral-light
