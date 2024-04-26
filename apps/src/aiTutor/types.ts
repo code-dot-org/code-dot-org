@@ -1,7 +1,7 @@
 import {
   AiTutorInteractionStatus as AITutorInteractionStatus,
   AiTutorTypes as AITutorTypes,
-} from '@cdo/apps/util/sharedConstants';
+} from '@cdo/generated-scripts/sharedConstants';
 
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AITutorTypesValue = string;
