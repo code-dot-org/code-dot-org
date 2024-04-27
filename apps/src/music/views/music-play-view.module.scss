@@ -40,8 +40,8 @@
     .musicPlayViewInfoSection {
       display: flex;
       flex-direction: column;
-      gap: .5rem;
-      h2, p {
+      gap: 0.5rem;
+      .musicPlayViewInfoText {
         color: $light_white;
         margin-bottom: 0;
       }
@@ -50,7 +50,7 @@
     .musicPlayViewPlaySection {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
 
       input[type='range'] {
         overflow: hidden;
@@ -65,7 +65,7 @@
 
     .musicPlayViewButtonsSection {
       display: flex;
-      gap: .5rem;
+      gap: 1rem;
       justify-content: center;
     }
   }

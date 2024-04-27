@@ -1,4 +1,4 @@
-import React, {memo, useCallback, useMemo, useEffect, useState} from 'react';
+import React, {memo, useCallback, useMemo} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
@@ -83,8 +83,12 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
         />
         <div className={moduleStyles.musicPlayViewCard}>
           <div className={moduleStyles.musicPlayViewInfoSection}>
-            <Heading2>{projectName}</Heading2>
-            <BodyTwoText>{musicI18n.builtWithMusicLab()}</BodyTwoText>
+            <Heading2 className={moduleStyles.musicPlayViewInfoText}>
+              {projectName}
+            </Heading2>
+            <BodyTwoText className={moduleStyles.musicPlayViewInfoText}>
+              {musicI18n.builtWithMusicLab()}
+            </BodyTwoText>
           </div>
           <div className={moduleStyles.musicPlayViewPlaySection}>
             <Button
