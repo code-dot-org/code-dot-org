@@ -36,6 +36,7 @@ const DEFAULT_PROPS = {
   teacherId: 5,
   exampleSolutions: [],
   selectUser: () => {},
+  setUserId: () => {},
   setStudentsForCurrentSection: () => {},
   setSections: () => {},
   setSectionLockStatus: () => {},
