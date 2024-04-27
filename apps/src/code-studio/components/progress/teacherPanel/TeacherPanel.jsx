@@ -148,7 +148,7 @@ class TeacherPanel extends React.Component {
 
   isCurrentLevelLab2 = () => {
     const currentLevel = this.props.levels.find(level => level.isCurrentLevel);
-    return currentLevel.usesLab2;
+    return currentLevel?.usesLab2;
   };
 
   onSelectUser = (id, selectType) => {
@@ -240,7 +240,7 @@ class TeacherPanel extends React.Component {
               <div>{i18n.viewingSection()}</div>
               <SectionSelector
                 style={{margin: '0px 10px'}}
-                reloadOnChange={false}
+                reloadOnChange={true}
                 logToFirehose={() => this.logToFirehose('select_section')}
               />
               {selectedSection && (
