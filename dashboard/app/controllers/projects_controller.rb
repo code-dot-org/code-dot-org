@@ -317,11 +317,21 @@ class ProjectsController < ApplicationController
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
-    level = Level.find(params[:level_id])
-    # todo: check permission to access this user id!
     user_id = params[:user_id]
+    level = Level.find(params[:level_id])
+
+    # If viewing another user's work, ensure that we have permission.
+    if user_id
+      script_level = level.script_levels.find_by_script_id(script_id)
+      user = User.find(user_id)
+      unless can?(:view_as_user, script_level, user)
+        return render(status: :forbidden, json: {error: "Access denied."})
+      end
+    end
+
     error_message = under_13_without_tos_teacher?(level)
     return render(status: :forbidden, json: {error: error_message}) if error_message
+
     # get_storage_id works for signed out users as well, it uses the cookie to determine
     # the storage id.
     user_storage_id = if user_id
@@ -330,6 +340,7 @@ class ProjectsController < ApplicationController
                       else
                         get_storage_id
                       end
+
     # Find the channel for the user and level if it exists, or create a new one.
     channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
     script_name = !script_id.nil? && Unit.find(script_id)&.name
