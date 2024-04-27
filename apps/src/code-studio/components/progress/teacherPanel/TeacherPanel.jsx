@@ -70,9 +70,10 @@ class TeacherPanel extends React.Component {
     loadLevelsWithProgress: PropTypes.func.isRequired,
     teacherId: PropTypes.number,
     exampleSolutions: PropTypes.array,
-    currentLevelId: PropTypes.number,
+    currentLevelId: PropTypes.string,
     levels: PropTypes.arrayOf(levelWithProgressType),
     selectUser: PropTypes.func.isRequired,
+    setUserId: PropTypes.func.isRequired,
     setStudentsForCurrentSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
     setSectionLockStatus: PropTypes.func.isRequired,
@@ -82,9 +83,16 @@ class TeacherPanel extends React.Component {
 
   componentDidMount() {
     const initialViewAs = queryParams('viewAs') || ViewType.Instructor;
-
     if (this.props.viewAs !== initialViewAs) {
       this.props.setViewType(initialViewAs);
+    }
+
+    const initialUserId = this.getSelectedUserId();
+    if (initialUserId) {
+      console.log('Setting user ID from URL:', initialUserId);
+      this.props.setUserId(initialUserId);
+    } else {
+      console.log('No initial user ID from URL.');
     }
 
     this.loadInitialData();
@@ -388,6 +396,9 @@ export default connect(
       } else {
         reload();
       }
+    },
+    setUserId: userId => {
+      dispatch(setUserId(userId));
     },
     setStudentsForCurrentSection: (sectionId, students) => {
       dispatch(setStudentsForCurrentSection(sectionId, students));
