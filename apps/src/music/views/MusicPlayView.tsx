@@ -1,4 +1,4 @@
-import React, {memo, useCallback, useMemo} from 'react';
+import React, {memo, useCallback, useMemo, useEffect, useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
@@ -22,11 +22,11 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   const {isPlaying, lastMeasure, currentPlayheadPosition} = useAppSelector(
     state => state.music
   );
-  let progressSliderValue =
-    ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
-  if (!progressSliderValue) {
-    progressSliderValue = 0;
-  }
+  const progressSliderValue = (
+    ((currentPlayheadPosition - 1) / (lastMeasure - 1)) *
+    100
+  ).toString();
+
   const projectName = useAppSelector(state => state.lab.channel?.name);
   // TODO: Use isLoading to disable play button and/or show some loading indicator (spinner, etc)
   // const isLoading = useAppSelector(
@@ -97,7 +97,13 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               color="white"
               type="secondary"
             />
-            <input type="range" value={progressSliderValue} min="0" max="100" />
+            <input
+              type="range"
+              readOnly
+              value={progressSliderValue}
+              min="0"
+              max="100"
+            />
           </div>
 
           <div className={moduleStyles.musicPlayViewButtonsSection}>
