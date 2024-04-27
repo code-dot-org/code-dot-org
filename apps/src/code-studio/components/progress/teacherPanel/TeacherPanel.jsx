@@ -147,7 +147,7 @@ class TeacherPanel extends React.Component {
   };
 
   isCurrentLevelLab2 = () => {
-    const currentLevel = this.props.levels.find(level => level.isCurrentLevel);
+    const currentLevel = this.props.levels?.find(level => level.isCurrentLevel);
     return currentLevel?.usesLab2;
   };
 
