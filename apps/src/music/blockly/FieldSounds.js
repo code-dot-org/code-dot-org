@@ -136,8 +136,8 @@ class FieldSounds extends GoogleBlockly.Field {
         }}
         onSelect={value => {
           this.setValue(value);
-          this.hide_();
         }}
+        onHide={() => this.hide_()}
       />,
       this.newDiv_
     );

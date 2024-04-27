@@ -186,7 +186,7 @@
 .soundsPanel {
   user-select: none;
   width: 600px;
-  height: 340px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -212,16 +212,21 @@
 
     .leftColumn {
       background-color: $neutral_dark;
-      width: 33%;
+      width: calc(33% - 00px);
       overflow-y: scroll;
     }
 
     .rightColumn {
       background-color: $neutral_dark;
-      width: 67%;
+      width: calc(67% + 00px);
       overflow-y: scroll;
       display: grid;
-      grid-template-columns: 33.3333% 33.3333% 33.3333%;
+      grid-template-columns: calc(33.3333% - 0px) calc(33.3333% - 0px) calc(33.3333% - 0px);
+
+      &FullWidth {
+        width: 100%;
+        grid-template-columns: 20% 20% 20% 20% 20%
+      }
     }
   }
 
@@ -415,5 +420,15 @@
         cursor: default;
       }
     }
+  }
+
+  .closeIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: initial;
+    border: none;
+    color: $neutral_dark30;
+    margin: 0;
   }
 }
