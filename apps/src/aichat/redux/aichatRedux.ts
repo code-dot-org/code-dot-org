@@ -277,16 +277,13 @@ export const submitChatContents = createAsyncThunk(
       currentSessionId
     );
 
-    // There should always be a session ID
-    if (chatApiResponse?.session_id) {
-      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-      thunkAPI.dispatch(
-        updateChatMessageSession({
-          id: newMessage.id,
-          sessionId: chatApiResponse.session_id,
-        })
-      );
-    }
+    thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
+    thunkAPI.dispatch(
+      updateChatMessageSession({
+        id: newMessage.id,
+        sessionId: chatApiResponse.session_id,
+      })
+    );
 
     if (chatApiResponse?.status === 'profanity') {
       return thunkAPI.dispatch(
