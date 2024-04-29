@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/templates/Button';
+import {default as LinkedButton} from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
 import styles from './progress-v2-invitation.module.scss';
@@ -67,9 +68,10 @@ export default function InviteToV2ProgressModal({
             id="accept-invitation"
             text={i18n.tryItNow()}
             onClick={handleAcceptedInvitation}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            type="primary"
+            size="l"
           />
-          <Button
+          <LinkedButton
             id="remind-me-later-option"
             text={i18n.remindMeLater()}
             onClick={handleDelayInvitation}

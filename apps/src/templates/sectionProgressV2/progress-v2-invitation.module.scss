@@ -2,17 +2,15 @@
 @import 'font';
 
 .dialog {
-  margin-left: 8px;
-  margin-right: 8px;
   flex-direction: column;
   display: flex;
-  align-self: center;
   align-items: center;
   text-align: center;
   max-width: 670px;
+  margin: 12px;
 
-  h6 {
-    margin-bottom: 0;
+  h2 {
+    margin: 8px 0 20px 0;
   }
 }
 
@@ -26,6 +24,7 @@
 .remindMeLaterButton {
   color: $neutral_dark !important;
   text-decoration: underline !important;
+  margin: 12px 0 !important;
 }
 
 .xCloseButton {
