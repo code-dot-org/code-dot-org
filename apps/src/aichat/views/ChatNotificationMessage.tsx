@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import Button from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
-import moduleStyles from './chatMessage.module.scss';
 import styles from './chat-notification-message.module.scss';
 
 const ChatNotificationMessage: React.FunctionComponent<{
@@ -15,12 +14,7 @@ const ChatNotificationMessage: React.FunctionComponent<{
   containerClass: string;
 }> = ({content, onRemove, iconName, iconClass, containerClass}) => {
   return (
-    <div
-      className={classNames(
-        moduleStyles.modelUpdateMessageContainer,
-        containerClass
-      )}
-    >
+    <div className={classNames(styles.container, containerClass)}>
       <div>
         <FontAwesomeV6Icon
           iconName={iconName}
@@ -34,7 +28,7 @@ const ChatNotificationMessage: React.FunctionComponent<{
           isIconOnly
           icon={{iconName: 'xmark'}}
           size="s"
-          className={moduleStyles.removeStatusUpdate}
+          className={styles.removeButton}
         />
       )}
     </div>

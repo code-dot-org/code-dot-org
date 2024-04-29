@@ -18,14 +18,20 @@ class AichatController < ApplicationController
     locale = params[:locale] || "en"
     filter_result = ShareFiltering.find_failure(params[:newMessage], locale)
     if filter_result
-      new_messages = [{role: 'user', content: params[:newMessage], status: 'profanity_violation'}]
+      new_messages = [
+        {
+          role: 'user',
+          content: params[:newMessage],
+          status: SharedConstants::AICHAT_INTERACTION_STATUS[:PROFANITY_VIOLATION]
+        }
+      ]
       session_id = log_chat_session(new_messages)
       return render(
         status: :ok,
         json: {
           status: filter_result.type,
           flagged_content: filter_result.content,
-          sessionId: session_id
+          session_id: session_id
         }
       )
     end
@@ -35,20 +41,20 @@ class AichatController < ApplicationController
     # which isn't relevant here.
     input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
       params.to_unsafe_h[:aichatModelCustomizations],
-      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == 'ok'},
+      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AICHAT_INTERACTION_STATUS[:OK]},
       params.to_unsafe_h[:newMessage]
     )
     sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input)
     latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
 
-    assistant_message = {role: "assistant", content: latest_assistant_response, status: 'ok'}
+    assistant_message = {role: "assistant", content: latest_assistant_response, status: SharedConstants::AICHAT_INTERACTION_STATUS[:OK]}
     new_messages = [
-      {role: 'user', content: params[:newMessage], status: 'ok'},
+      {role: 'user', content: params[:newMessage], status: SharedConstants::AICHAT_INTERACTION_STATUS[:OK]},
       assistant_message,
     ]
     session_id = log_chat_session(new_messages)
 
-    render(status: :ok, json: assistant_message.merge({sessionId: session_id}).to_json)
+    render(status: :ok, json: assistant_message.merge({session_id: session_id}).to_json)
   end
 
   private def has_required_params?

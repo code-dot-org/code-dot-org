@@ -4,13 +4,10 @@ import classNames from 'classnames';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
+import {AichatInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {removeModelUpdateMessage} from '../redux/aichatRedux';
-import {
-  ChatCompletionMessage,
-  Role,
-  AichatInteractionStatus as Status,
-} from '../types';
+import {ChatCompletionMessage, Role} from '../types';
 import aichatI18n from '../locale';
 import ChatNotificationMessage from './ChatNotificationMessage';
 import moduleStyles from './chatMessage.module.scss';
@@ -30,25 +27,13 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK || status === Status.UNKNOWN) {
     return (
       <div
-        className={classNames(
-          moduleStyles.message,
-          moduleStyles.userMessage,
-          moduleStyles.userMessageContainer
-        )}
+        className={classNames(moduleStyles.message, moduleStyles.userMessage)}
       >
         {chatMessageText}
       </div>
     );
   } else if (status === Status.PROFANITY_VIOLATION) {
     return (
-      // <div
-      //   className={classNames(
-      //     moduleStyles.message,
-      //     moduleStyles.inappropriateMessage
-      //   )}
-      // >
-      //   {INAPPROPRIATE_MESSAGE}
-      // </div>
       <ChatNotificationMessage
         content={INAPPROPRIATE_MESSAGE}
         iconName="circle-xmark"

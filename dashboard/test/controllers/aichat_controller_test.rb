@@ -79,7 +79,7 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal ShareFiltering::FailureType::PROFANITY, json_response["status"]
     assert_equal "damn", json_response["flagged_content"]
 
-    session = AichatSession.find(json_response['sessionId'])
+    session = AichatSession.find(json_response['session_id'])
     stored_message = JSON.parse(session.messages)[0]
     assert_equal stored_message, {
       role: 'user',
@@ -106,7 +106,7 @@ class AichatControllerTest < ActionController::TestCase
     post :chat_completion, params: params, as: :json
     assert_response :success
 
-    session = AichatSession.find(json_response['sessionId'])
+    session = AichatSession.find(json_response['session_id'])
     assert_equal 4, JSON.parse(session.messages).length
     assert_equal 1, (JSON.parse(session.messages).count {|message| message["status"] == 'profanity_violation'})
   end
@@ -135,7 +135,7 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@genai_pilot_teacher)
 
     post :chat_completion, params: @valid_params, as: :json
-    session = AichatSession.find(json_response['sessionId'])
+    session = AichatSession.find(json_response['session_id'])
 
     assert_equal @genai_pilot_teacher.id, session.user_id
     assert_equal @valid_params[:aichatContext][:currentLevelId], session.level_id
@@ -154,7 +154,7 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@genai_pilot_teacher)
 
     post :chat_completion, params: @valid_params, as: :json
-    session = AichatSession.find(json_response['sessionId'])
+    session = AichatSession.find(json_response['session_id'])
 
     post :chat_completion, params: @valid_params.merge(
       {
@@ -166,7 +166,7 @@ class AichatControllerTest < ActionController::TestCase
       }
     ),
       as: :json
-    assert_equal session.id, json_response['sessionId']
+    assert_equal session.id, json_response['session_id']
 
     # Check that we added two new messages to the stored messages
     # (the new user and assistant messages).
@@ -178,7 +178,7 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@genai_pilot_teacher)
 
     post :chat_completion, params: @valid_params, as: :json
-    session = AichatSession.find(json_response['sessionId'])
+    session = AichatSession.find(json_response['session_id'])
 
     post :chat_completion, params: @valid_params.merge(
       {
@@ -193,6 +193,6 @@ class AichatControllerTest < ActionController::TestCase
       }
     ),
       as: :json
-    refute_equal session.id, json_response['sessionId']
+    refute_equal session.id, json_response['session_id']
   end
 end

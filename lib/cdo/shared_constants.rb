@@ -709,13 +709,16 @@ module SharedConstants
   AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
 
   # These reflect the 'status' of an AI Tutor Interaction
-  AI_TUTOR_INTERACTION_STATUS = {
+  AI_INTERACTION_STATUS = {
     ERROR: 'error',
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
+
+  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
+  AICHAT_INTERACTION_STATUS = AI_INTERACTION_STATUS
 
   # These are the types of assistance AI Tutor can provide
   AI_TUTOR_TYPES = {
