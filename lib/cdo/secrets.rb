@@ -66,7 +66,7 @@ module Cdo
         parse_json(get_secret_value(client, key))
       rescue => exception
         modified_message = "#{exception.class}: #{exception.message} Key: #{key}"
-        raise modified_message
+        raise exception.class.new(modified_message)
       end
     end
 
