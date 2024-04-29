@@ -106,6 +106,10 @@ export const UnconnectedTeacherHomepage = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    analyticsReporter.sendEvent(EVENTS.TEACHER_HOMEPAGE_VISITED);
+  }, []);
+
   const handleCensusBannerSubmit = () => {
     if (censusBanner.current.isValid()) {
       $.ajax({
