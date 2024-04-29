@@ -134,6 +134,7 @@ function LevelDataCell({
       headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
       <Link
+        id={'ui-test' + level.path?.replaceAll('/', '-') + '-cell-data'}
         href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
         openInNewTab
         external
