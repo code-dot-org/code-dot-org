@@ -133,6 +133,10 @@ class Studio < Grid
     JS
   end
 
+  def deprecated?
+    return project_type == 'algebra_game'
+  end
+
   def common_blocks(type)
     <<~XML.chomp
       <category name="Start">
