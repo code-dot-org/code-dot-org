@@ -228,9 +228,11 @@ $(document).ready(() => {
     }
   }
 
+  const enabled = true;
+
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
-      if (experiments.isEnabled(experiments.SCHOOL_ASSOCIATION_V2)) {
+      if (enabled) {
         ReactDOM.render(
           <div style={{padding: 10}}>
             <SchoolDataInputs />
