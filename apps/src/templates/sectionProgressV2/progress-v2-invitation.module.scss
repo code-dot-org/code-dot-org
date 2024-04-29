@@ -1,4 +1,32 @@
-@import 'color.scss';
+@import 'color';
+@import 'font';
+
+.dialog {
+  margin-left: 8px;
+  margin-right: 8px;
+  flex-direction: column;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  max-width: 670px;
+
+  h6 {
+    margin-bottom: 0;
+  }
+}
+
+.modal {
+  min-width: 980px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remindMeLaterButton {
+  color: $neutral_dark !important;
+  text-decoration: underline !important;
+}
 
 .xCloseButton {
   // Clear default button styles
@@ -42,17 +70,4 @@
     outline: $brand_primary_default solid 2px;
     outline-offset: 2px;
   }
-}
-
-.bodyContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
 }
