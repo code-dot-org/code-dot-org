@@ -53,6 +53,10 @@ export default function ExpandedProgressColumnHeader({
           scope="colgroup"
         >
           <button
+            id={
+              'ui-test-expanded-progress-column-header-' +
+              lesson.relative_position
+            }
             onClick={() => removeExpandedLesson(lesson.id)}
             aria-label={headerText}
             aria-expanded={true}
