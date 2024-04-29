@@ -1,15 +1,26 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Alert} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {tryGetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import styles from './coming-soon-banner.module.scss';
 
+const localStorageKey = 'progress-v2-coming-soon-closed';
+
 export default function ComingSoonBanner({canShow}) {
-  const [closed, setClosed] = React.useState(false);
+  const [closed, setClosed] = React.useState(() => {
+    const localStorageClosed = tryGetLocalStorage(localStorageKey, 'false');
+
+    return localStorageClosed === 'true';
+  });
+
+  const closeBanner = () => {
+    setClosed(true);
+    localStorage.setItem(localStorageKey, 'true');
+  };
 
   return (
     <>
@@ -19,14 +30,14 @@ export default function ComingSoonBanner({canShow}) {
           className={styles.comingSoonBanner}
           bsStyle="info"
           closeLabel={i18n.closeDialog()}
-          onDismiss={() => setClosed(true)}
+          onDismiss={closeBanner}
         >
           <div className={styles.bannerText}>
             <span className={styles.icon}>
               <FontAwesomeV6Icon
                 iconStyle="solid"
                 iconName="megaphone"
-                className={classNames('fa-rotate-90', styles.megaphone)}
+                className={styles.megaphone}
               />
             </span>
             <span>

@@ -41,7 +41,7 @@
     color: $light_black;
   }
 
-  & :global(button) {
+  & :global(button.close) {
     border: unset !important;
     box-shadow: none;
     font-size: 1.6rem;
