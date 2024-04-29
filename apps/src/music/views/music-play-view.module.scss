@@ -66,6 +66,11 @@
       display: flex;
       gap: 1rem;
       justify-content: center;
+
+      .musicPlayViewShareButton {
+        margin-top: 5px;
+        width: 10rem;
+      }
     }
   }
 }

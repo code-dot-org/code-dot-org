@@ -130,6 +130,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
           {canShare && (
             <div className={moduleStyles.musicPlayViewButtonsSection}>
               <Button
+                className={moduleStyles.musicPlayViewShareButton}
                 text={musicI18n.share()}
                 type="secondary"
                 color="white"
