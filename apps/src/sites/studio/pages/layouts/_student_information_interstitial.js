@@ -25,12 +25,6 @@ $(document).ready(function () {
   }
 
   form.on('ajax:success', () => {
-    retrieveInfoForCap || forceStudentInterstitial
-      ? location.reload()
-      : modal.modal('hide');
-  });
-
-  form.on('submit', () => {
     const newStateValue = $('#user_us_state').val();
     if (newStateValue && (retrieveInfoForCap || forceStudentInterstitial))
       analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_PROVIDED, {
@@ -39,5 +33,9 @@ $(document).ready(function () {
         us_state: newStateValue,
         previous_us_state: previousStateValue,
       });
+
+    retrieveInfoForCap || forceStudentInterstitial
+      ? location.reload()
+      : modal.modal('hide');
   });
 });

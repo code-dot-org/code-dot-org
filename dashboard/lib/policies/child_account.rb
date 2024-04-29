@@ -33,6 +33,14 @@ class Policies::ChildAccount
     user.child_account_compliance_state == ComplianceState::PERMISSION_GRANTED
   end
 
+  # Checks if a user predates the us_state collection that occurs during the sign up
+  # flow. We want to make sure we retrieve the state for those older accounts which have their
+  # state missing
+  # We use Colorado as it is the only start date we have for now
+  def self.user_predates_state_collection?(user)
+    user.created_at < STATE_POLICY['CO'][:start_date]
+  end
+
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
   def self.user_predates_policy?(user)

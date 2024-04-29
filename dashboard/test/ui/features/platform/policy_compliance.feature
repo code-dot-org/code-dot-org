@@ -21,15 +21,15 @@ Feature: Policy Compliance and Parental Permission
     And element "#permission-status" contains text "Pending"
 
   Scenario: New under 13 account should be able to provide state and see lockout page to send parental request.
-    Given I create a young student who has never signed in named "Sally Student" and go home
-    Given I am on "http://studio.code.org/lockout"
+    Given I create a young student who has never signed in named "Sally Student"
+    Given I am on "http://studio.code.org/home?forceStudentInterstitial=true"
 
     Then I wait to see "#student-information-modal"
     And I select the "Colorado" option in dropdown "user_us_state"
 
     Then I press "#submit-btn" using jQuery
 
-    Then I wait until I am on "http://studio.code.org/lockout"
+    Given I am on "http://studio.code.org/lockout"
 
     # It should not be a pending request
     Then I wait to see "#lockout-panel-form"

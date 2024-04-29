@@ -336,6 +336,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'student under 13 and in US with no us_state gets student information prompt' do
     student = create(:student, age: 12)
+    student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
     student.update_attribute(:us_state, nil) # bypasses validations
     refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
@@ -352,6 +353,7 @@ class HomeControllerTest < ActionController::TestCase
     student = create(:student, age: 12)
     student.update_attribute(:us_state, 'DC')
     student.update_attribute(:user_provided_us_state, false)
+    student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
     student = student.reload
     assert student.age, 12
