@@ -511,7 +511,7 @@ module UsersHelper
     return false unless country_code.nil? || usa?(country_code)
     return false if user.user_provided_us_state
     return false unless Policies::ChildAccount.user_predates_state_collection?(user)
-    DCDO.get('cap-state-modal', true) && user.under_13? && Policies::ChildAccount.personal_account?(user)
+    Policies::ChildAccount.show_cap_state_modal? && user.under_13? && Policies::ChildAccount.personal_account?(user)
   end
 
   def lti_user_info_required?(user)

@@ -41,6 +41,10 @@ class Policies::ChildAccount
     user.created_at < STATE_POLICY['CO'][:start_date]
   end
 
+  def self.show_cap_state_modal?
+    DCDO.get('cap-state-modal', false)
+  end
+
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
   def self.user_predates_policy?(user)
