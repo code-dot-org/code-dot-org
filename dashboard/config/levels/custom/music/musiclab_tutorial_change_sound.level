@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-04-26T04:02:24.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "####Play more sounds\r\nTry playing one sound after another.\r\n\r\n1 Drag one or more [play](#clickable=play-sound-block) blocks to the program. \r\n\r\n2 Then press [▶ Run](#clickable=run-button).\r\n\r\n",
+    "long_instructions": "####Play more sounds\r\nTry playing one sound after another.\r\n\r\n1. Drag one or more [play](#clickable=play-sound-block) blocks into the program. \r\n\r\n2. Then press [Run](#clickable=run-button).\r\n\r\n",
     "level_data": {
       "library": "intro2024",
       "startSources": {
@@ -60,7 +61,7 @@
     "validations": [
       {
         "key": "musiclab_intro_change_sound_v2_6054328e-dc95-47fe-8c65-980ce00299f1",
-        "message": "Great work! You added new sounds to your track. ",
+        "message": "Great work! You added new sounds to your song. ",
         "next": true,
         "conditions": [
           {
@@ -83,8 +84,7 @@
     ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-04-26T04:02:24.372+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_change_sound_v2\\\"\"],\"cloned_from\":\"musiclab_intro_change_sound_v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-26T04:02:24.372+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_change_sound_v2\\\"\"],\"cloned_from\":\"musiclab_intro_change_sound_v2\"},{\"changed_at\":\"2024-04-26 21:59:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-26 22:49:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-26 22:50:37 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
