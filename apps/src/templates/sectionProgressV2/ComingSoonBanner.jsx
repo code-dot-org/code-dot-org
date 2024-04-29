@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Alert} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -25,7 +26,7 @@ export default function ComingSoonBanner({canShow}) {
               <FontAwesomeV6Icon
                 iconStyle="solid"
                 iconName="megaphone"
-                className={styles.megaphone}
+                className={classNames('fa-rotate-90', styles.megaphone)}
               />
             </span>
             <span>
