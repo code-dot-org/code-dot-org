@@ -42,12 +42,9 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
     [projectName]
   );
 
-  // Share button will only appear when users browser supports the Web Share API
+  // Share button will only appear when user's browser supports the Web Share API.
   // (Can be mobile browsers and some desktop browser like macOS Safari)
-  // Requires HTTPS connection (adhoc or production page).
-  // Was unable to access it on localhost with our routing (http://localhost-studio.code.org:3000/
-  // is not considered a safe URL by browser, only http://localhost:3000/ is).
-
+  // Requires HTTPS connection.
   // For testing purposes, we can pass a query parameter canShare=true to force the button to appear.
   const canShareInternal = queryParams('canShare') === 'true';
   const canShare =
