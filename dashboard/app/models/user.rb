@@ -1936,7 +1936,15 @@ class User < ApplicationRecord
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
     pl_scripts = pl_user_scripts.map(&:script)
 
-    user_levels = UserLevel.where(user: self, script: pl_scripts)
+    levels = pl_scripts.map(&:levels).flatten
+    level_ids = levels.pluck(:id)
+
+    levels.filter {|l| l.contained_levels.count > 0 && !l.is_a?(BubbleChoice)}.each do |level|
+      contained_levels = level.contained_levels
+      level_ids += contained_levels.pluck(:id)
+    end
+
+    user_levels = UserLevel.where(user: self, script: pl_scripts, level_id: level_ids)
     return [] if user_levels.empty?
     user_levels_by_script = user_levels.group_by(&:script_id)
     percent_completed_by_script = {}

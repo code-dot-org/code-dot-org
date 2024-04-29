@@ -5219,4 +5219,51 @@ class UserTest < ActiveSupport::TestCase
     assert_equal fully_registered_teacher.school_info.school_name, params.dig('school_info_attributes', 'school_name')
     assert_equal fully_registered_teacher.authentication_options.first.email, params.dig('authentication_options_attributes', '0', 'email')
   end
+
+  test 'pl_units_started handles BubbleChoice levels correctly' do
+    pl_unit = create :pl_unit
+    create :course_version, content_root: pl_unit
+
+    sublevels = []
+    3.times do
+      sublevels << create(:level)
+    end
+    bubble_choice_level = create :bubble_choice_level, sublevels: sublevels
+    lg = create :lesson_group, script: pl_unit
+    lesson = create :lesson, script: pl_unit, lesson_group: lg
+    create :script_level, script: pl_unit, levels: [bubble_choice_level], position: 0, lesson: lesson
+    pl_unit.reload
+
+    user = create :teacher
+    create :user_script, user: user, script: pl_unit
+
+    sublevels.each {|sl| create :user_level, user: user, script: pl_unit, level: sl, best_result: ActivityConstants::MINIMUM_PASS_RESULT}
+    create :user_level, user: user, script: pl_unit, level: bubble_choice_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+
+    pl_units_started = user.pl_units_started
+    assert_equal 100, pl_units_started[0][:percent_completed]
+  end
+
+  test "pl_units_started counts predict level" do
+    pl_unit = create :pl_unit
+    create :course_version, content_root: pl_unit
+
+    free_response_level = create :free_response, name: 'free response level'
+    game_level = create :level
+    game_level.contained_level_names = ['free response level']
+    game_level.save!
+
+    lg = create :lesson_group, script: pl_unit
+    lesson = create :lesson, script: pl_unit, lesson_group: lg
+    create :script_level, script: pl_unit, levels: [game_level], position: 0, lesson: lesson
+    pl_unit.reload
+
+    user = create :teacher
+    create :user_script, user: user, script: pl_unit
+
+    create :user_level, user: user, script: pl_unit, level: free_response_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+
+    pl_units_started = user.pl_units_started
+    assert_equal 100, pl_units_started[0][:percent_completed]
+  end
 end
