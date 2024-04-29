@@ -1,31 +1,18 @@
 import classnames from 'classnames';
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './tooltip.module.scss';
 
-export interface ToggleProps {
-  /** Toggle checked state */
-  checked: boolean;
-  /** Toggle onChange handler */
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  /** The name attribute specifies the name of an input element.
-   The name attribute is used to reference elements in a JavaScript,
-   or to reference form data after a form is submitted.
-   Note: Only form elements with a name attribute will have their values passed when submitting a form. */
-  name: string;
-  /** The value attribute specifies the value of an input element. */
-  value?: string;
-  /** Toggle label*/
-  label?: string;
-  /** Is Toggle disabled */
-  disabled?: boolean;
-  /** Toggle switch placement */
-  position?: 'left' | 'right';
-  /** Size of Radio Button */
+export interface TooltipProps {
+  text: string;
+  iconLeft?: FontAwesomeV6IconProps;
+  iconRight?: FontAwesomeV6IconProps;
+  direction?: 'onTop' | 'onRight' | 'onBottom' | 'onLeft';
   size?: ComponentSizeXSToL;
 }
 
@@ -34,55 +21,34 @@ export interface ToggleProps {
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see apps/test/unit/componentLibrary/ToggleTest.jsx)
+ *  * (see apps/test/unit/componentLibrary/TooltipTest.jsx)
  *  * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
  *
- * Design System: Toggle Component.
- * Can be used to render a single Toggle component or as a part of bigger/more complex components (e.g. some form, modal, etc).
+ * Design System: Tooltip Component.
+ * Renders Tooltip for a given html element.
  */
-const Tooltip: React.FunctionComponent<ToggleProps> = ({
-  checked,
-  onChange,
-  name,
-  value,
-  label,
-  disabled = false,
-  position = 'left',
-  size = 'm',
+const Tooltip: React.FunctionComponent<TooltipProps> = ({
+  text,
+  iconLeft,
+  iconRight,
+  direction,
+  size,
 }) => {
-  const bodyTextSize = componentSizeToBodyTextSizeMap[size];
-
   return (
-    <label
+    <div
       className={classnames(
-        moduleStyles.toggle,
-        moduleStyles[`toggle-${size}`],
-        position === 'right' && moduleStyles['toggle-right']
+        moduleStyles.tooltip,
+        moduleStyles[`tooltip-${direction}`],
+        moduleStyles[`tooltip-${size}`]
       )}
+      role="tooltip"
     >
-      <div>
-        <input
-          type="checkbox"
-          name={name}
-          value={value}
-          checked={checked}
-          onChange={onChange}
-          disabled={disabled}
-        />
-        <span className={moduleStyles.switch}>
-          <i className="fa-solid" />
-          <span />
-        </span>
-      </div>
-
-      {label && (
-        <Typography semanticTag="span" visualAppearance={bodyTextSize}>
-          {label}
-        </Typography>
-      )}
-    </label>
+      {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+      <span>{text}</span>
+      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+    </div>
   );
 };
 

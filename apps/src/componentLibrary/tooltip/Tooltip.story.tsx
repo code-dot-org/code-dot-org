@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
-import Tooltip, {ToggleProps} from './index';
+import Tooltip, {TooltipProps} from './index';
 
 export default {
   title: 'DesignSystem/Tooltip', // eslint-disable-line storybook/no-title-property-in-meta
@@ -21,57 +21,56 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: StoryFn<ToggleProps> = args => <Tooltip {...args} />;
+const SingleTemplate: StoryFn<TooltipProps> = args => <Tooltip {...args} />;
 
-const MultipleTemplate: StoryFn<{components: ToggleProps[]}> = args => (
+const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
   <>
     {args.components?.map(componentArg => (
-      <Tooltip key={componentArg.name} {...componentArg} />
+      <Tooltip key={componentArg.text} {...componentArg} />
     ))}
   </>
 );
 
 export const DefaultTooltip = SingleTemplate.bind({});
 DefaultTooltip.args = {
-  name: 'controlled_Tooltip',
-  label: 'Tooltip Label',
+  text: 'Tooltip Label',
 };
 
-export const DefaultTooltipGroup = MultipleTemplate.bind({});
-DefaultTooltipGroup.args = {
+export const IconsTooltipGroup = MultipleTemplate.bind({});
+IconsTooltipGroup.args = {
   components: [
     {
-      name: 'test-left',
-      label: 'Tooltip left',
-      checked: false,
-      onChange: () => null,
+      text: 'Tooltip right',
     },
     {
-      name: 'test-right',
-      label: 'Tooltip right',
-      position: 'right',
-      checked: false,
-      onChange: () => null,
+      text: 'Tooltip left',
+      iconLeft: {iconStyle: 'solid', iconName: 'smile'},
+    },
+    {
+      text: 'Tooltip right',
+      iconRight: {iconStyle: 'solid', iconName: 'smile'},
     },
   ],
 };
 
-export const DisabledTooltipGroup = MultipleTemplate.bind({});
-DisabledTooltipGroup.args = {
+export const DirectionOfTooltipGroup = MultipleTemplate.bind({});
+DirectionOfTooltipGroup.args = {
   components: [
     {
-      name: 'test-disabled',
-      label: 'Disabled Tooltip',
-      disabled: true,
-      checked: false,
-      onChange: () => null,
+      text: 'Text - onTop',
+      direction: 'onTop',
     },
     {
-      name: 'test-disabled-checked',
-      label: 'Disabled checked Tooltip',
-      checked: true,
-      disabled: true,
-      onChange: () => null,
+      text: 'Text - onRight',
+      direction: 'onRight',
+    },
+    {
+      text: 'Text - onBottom',
+      direction: 'onBottom',
+    },
+    {
+      text: 'Text - onLeft',
+      direction: 'onLeft',
     },
   ],
 };
@@ -80,32 +79,20 @@ export const SizesOfTooltipGroup = MultipleTemplate.bind({});
 SizesOfTooltipGroup.args = {
   components: [
     {
-      name: 'test-xs',
-      label: 'Label - XS',
+      text: 'text - XS',
       size: 'xs',
-      checked: false,
-      onChange: () => null,
     },
     {
-      name: 'test-s',
-      label: 'Label - S',
+      text: 'text - S',
       size: 's',
-      checked: false,
-      onChange: () => null,
     },
     {
-      name: 'test-m',
-      label: 'Label - M',
+      text: 'text - M',
       size: 'm',
-      checked: false,
-      onChange: () => null,
     },
     {
-      name: 'test-l',
-      label: 'Label - L',
+      text: 'text - L',
       size: 'l',
-      checked: false,
-      onChange: () => null,
     },
   ],
 };
