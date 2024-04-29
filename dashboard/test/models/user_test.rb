@@ -5220,7 +5220,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal fully_registered_teacher.authentication_options.first.email, params.dig('authentication_options_attributes', '0', 'email')
   end
 
-  test 'pl_units_started handles BubbleChoice levels correctly' do
+  test 'pl_units_started only counts parent BubbleChoice level' do
     pl_unit = create :pl_unit
     create :course_version, content_root: pl_unit
 
