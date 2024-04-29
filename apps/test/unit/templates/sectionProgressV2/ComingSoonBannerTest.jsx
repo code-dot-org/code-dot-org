@@ -18,7 +18,7 @@ describe('ComingSoonBanner', () => {
     expect(screen.getByText('Coming Soon!')).to.be.visible;
     expect(
       screen.getByText(
-        "Our next update will add information about students' time spent and most recent activity date"
+        "Our next update will add information about students' time spent and most recent activity date."
       )
     ).to.be.visible;
     expect(screen.getByRole('button', {type: 'close'})).to.be.visible;
@@ -40,6 +40,8 @@ describe('ComingSoonBanner', () => {
     expect(getLocalStub).to.be.calledOnce;
     expect(screen.queryByText('Coming Soon!')).to.not.exist;
     expect(screen.queryByRole('alert')).to.not.exist;
+
+    getLocalStub.restore();
   });
 
   it('closes banner when close button is clicked', () => {
@@ -52,5 +54,7 @@ describe('ComingSoonBanner', () => {
     expect(setLocalStub).to.be.calledOnce;
     expect(screen.queryByText('Coming Soon!')).to.not.exist;
     expect(screen.queryByRole('alert')).to.not.exist;
+
+    setLocalStub.restore();
   });
 });
