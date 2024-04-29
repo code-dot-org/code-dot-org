@@ -1,7 +1,7 @@
 import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
 import {
   activityCssClass,

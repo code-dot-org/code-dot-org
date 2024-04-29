@@ -40,7 +40,7 @@ import teacherSections, {
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';

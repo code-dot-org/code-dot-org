@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2024-04-18 15:27:35 UTC",
+    "serialized_at": "2024-04-24 19:44:30 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3641,6 +3641,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_notes_pdx"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3662,6 +3665,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_drums_pdx"
+        ]
       },
       "bonus": false,
       "seeding_key": {
