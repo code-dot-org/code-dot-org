@@ -78,6 +78,10 @@ const Callouts: React.FunctionComponent = () => {
   const elementLeft = elementRect.left + elementWidth / 2;
   const elementTop = elementRect.bottom + 4;
 
+  if (elementRect.width === 0) {
+    return null;
+  }
+
   return (
     <div
       id="callout"
