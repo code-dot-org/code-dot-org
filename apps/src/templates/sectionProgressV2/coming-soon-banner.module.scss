@@ -2,23 +2,21 @@
 @import 'color';
 @import 'font';
 
-.comingSoonBanner {
-  $indent: 1rem;
 
-  background-color: $light_info_100;
-  border-color: $light_info_100;
-  color: $dark_charcoal;
+.comingSoonBanner {
+  background-color: $light_secondary_100;
+  border: 0;
+  color: $light_gray_700;
   line-height: 2rem;
 
   & .icon {
     display: inline-block;
-    margin-right: $indent;
+    margin-inline-end: 1rem;
 
     @include wave-animation;
     animation-iteration-count: 2;
 
     & .megaphone {
-      font-weight: 400;
       vertical-align: middle;
 
       &:hover {
@@ -28,16 +26,22 @@
   }
 
   & .bannerText {
-
     font-size: 16px;
+    height: 100%;
+    line-height: 2rem;
+    display: inline-block;
   }
 
   & i {
-    color: #0f0f0f;
+    color:  $light_black;
     font-size: 1.3rem;
   }
 
-  & button {
+  & b {
+    color: $light_black;
+  }
+
+  & :global(button) {
     border: unset !important;
     box-shadow: none;
     font-size: 1.6rem;

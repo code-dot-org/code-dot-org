@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Alert} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -12,27 +11,31 @@ export default function ComingSoonBanner({canShow}) {
   const [closed, setClosed] = React.useState(false);
 
   return (
-    <Alert
-      key="coming-soon-banner"
-      dismissible={true}
-      show={canShow && !closed}
-      className={classNames('in', styles.comingSoonBanner)}
-      variant="info"
-      closeLabel={i18n.closeDialog()}
-      onDismiss={() => setClosed(true)}
-    >
-      <span className={styles.icon}>
-        <FontAwesomeV6Icon
-          iconStyle="solid"
-          iconName="megaphone"
-          className={styles.megaphone}
-        />
-      </span>
-      <span className={styles.bannerText}>
-        <b>{i18n.progressV2_comingSoon()}</b>
-        {i18n.progressV2_comingSoonBanner()}
-      </span>
-    </Alert>
+    <>
+      {!closed && (
+        <Alert
+          key="coming-soon-banner"
+          className={styles.comingSoonBanner}
+          bsStyle="info"
+          closeLabel={i18n.closeDialog()}
+          onDismiss={() => setClosed(true)}
+        >
+          <div className={styles.bannerText}>
+            <span className={styles.icon}>
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="megaphone"
+                className={styles.megaphone}
+              />
+            </span>
+            <span>
+              <b>{i18n.progressV2_comingSoon()}</b>{' '}
+              {i18n.progressV2_comingSoonBanner()}
+            </span>
+          </div>
+        </Alert>
+      )}
+    </>
   );
 }
 
