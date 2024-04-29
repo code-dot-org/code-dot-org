@@ -182,6 +182,7 @@ class SectionProgress extends Component {
       >
         <InviteToV2ProgressModal
           setShowProgressTableV2={this.props.setShowProgressTableV2}
+          sectionId={sectionId}
         />
         <div style={styles.topRowContainer}>
           <div>

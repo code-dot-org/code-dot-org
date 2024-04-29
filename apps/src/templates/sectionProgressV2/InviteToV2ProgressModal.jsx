@@ -2,48 +2,65 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
-export default function InviteToV2ProgressModal({setShowProgressTableV2}) {
-  // const [invitationStatus, setInvitationStatus] = React.useState();
+import styles from './progress-v2-invitation.module.scss';
+
+const newProgressViewGraphic = require('@cdo/static/teacherDashboard/progressOpenBetaAnnouncementGraphic.png');
+
+export default function InviteToV2ProgressModal({
+  setShowProgressTableV2,
+  sectionId,
+}) {
   const [invitationOpen, setInvitationOpen] = React.useState(true); // in the future this will use logic and data to determine if the invitation should start open or not
 
-  // These three could be combined into one function 1) Sends data, 2) closes the modal
   const handleDismiss = () => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
+      sectionId: sectionId,
+    });
     setInvitationOpen(false);
-    // In the future, send data
   };
 
   const handleAcceptedInvitation = () => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
+      sectionId: sectionId,
+    });
+    new UserPreferences().setShowProgressTableV2(true);
     setShowProgressTableV2(true);
-    // perhaps add new UserPreferences().setShowProgressTableV2(shouldShowV2); (see SectionProgressSelector)
-    console.log('accepted invitation');
   };
 
   const handleDelayInvitation = () => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DELAY_INVITATION, {
+      sectionId: sectionId,
+    });
     setInvitationOpen(false);
+    new UserPreferences().setDateInvitationDelayed(new Date());
     // send data indicating the invitation was delayed
     console.log('delayed invitation');
   };
 
   if (invitationOpen) {
     return (
-      <AccessibleDialog onClose={handleDismiss}>
+      <AccessibleDialog onClose={handleDismiss} className={styles.modal}>
         <div
           role="region"
           aria-label={i18n.directionsForAssigningSections()}
-          className={'null'}
+          className={styles.dialog}
         >
           <button
             id="ui-close-dialog"
             type="button"
             onClick={handleDismiss}
-            className={'styles.xCloseButton'}
+            className={styles.xCloseButton}
           >
             <i id="x-close" className="fa-solid fa-xmark" />
           </button>
+          <img src={newProgressViewGraphic} alt="" />
           <Heading2>{i18n.progressTrackingAnnouncement()}</Heading2>
           <BodyTwoText>{i18n.progressTrackingInvite()}</BodyTwoText>
           <Button
@@ -57,7 +74,7 @@ export default function InviteToV2ProgressModal({setShowProgressTableV2}) {
             text={i18n.remindMeLater()}
             onClick={handleDelayInvitation}
             styleAsText
-            color={Button.ButtonColor.brandSecondaryDefault}
+            className={styles.remindMeLaterButton}
           />
         </div>
       </AccessibleDialog>
@@ -69,17 +86,5 @@ export default function InviteToV2ProgressModal({setShowProgressTableV2}) {
 
 InviteToV2ProgressModal.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
+  sectionId: PropTypes.number.isRequired,
 };
-
-// export default connect(
-//     state => ({
-//       currentUser: state.currentUser,
-//       isLoading: state.progressV2Feedback.isLoading,
-//       progressV2Feedback: state.progressV2Feedback.progressV2Feedback,
-//       errorWhenCreatingOrLoading: state.progressV2Feedback.error,
-//     }),
-//     {
-//       createProgressV2InvitationStatus,
-//       fetchProgressV2InvitationStatus,
-//     }
-//   )(InviteToV2ProgressModal);
