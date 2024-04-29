@@ -190,8 +190,7 @@ Setup steps for macOS:
     1. Install NVM via `brew install nvm`
 
     2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
-        1. If you get an error `nvm: command not found`, run `brew info nvm` and follow the instructions there. They will include making an `.nvm` folder and updating your
-            shell configuration file.
+        1. If you get an error `nvm: command not found`, run `brew info nvm` and follow the instructions there. They will include making an `.nvm` folder and updating your shell configuration file.
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
