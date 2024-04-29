@@ -24,7 +24,6 @@ const swiperParams = {
     clickable: true,
   },
   spaceBetween: 24,
-  observeSlideChildren: true,
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 768px

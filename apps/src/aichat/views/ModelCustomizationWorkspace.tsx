@@ -10,8 +10,13 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
-  const {temperature, systemPrompt, retrievalContexts, modelCardInfo} =
-    useAppSelector(state => state.aichat.fieldVisibilities);
+  const {
+    temperature,
+    systemPrompt,
+    retrievalContexts,
+    modelCardInfo,
+    selectedModelId,
+  } = useAppSelector(state => state.aichat.fieldVisibilities);
 
   const hidePresentationPanel = useAppSelector(
     state =>
@@ -20,7 +25,9 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   );
 
   const showSetupCustomization =
-    isVisible(temperature) || isVisible(systemPrompt);
+    isVisible(temperature) ||
+    isVisible(systemPrompt) ||
+    isVisible(selectedModelId);
 
   return (
     <div className={styles.modelCustomizationWorkspace}>

@@ -1,5 +1,6 @@
 require 'cdo/firehose'
 require 'cdo/honeybadger'
+require 'cdo/mailjet'
 require 'cpa'
 require_relative '../../../shared/middleware/helpers/experiments'
 require 'metrics/events'
@@ -114,12 +115,17 @@ class RegistrationsController < Devise::RegistrationsController
       end
       super
     end
-    should_send_new_teacher_email = current_user&.teacher?
-    TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
-    should_send_parent_email = current_user && current_user.parent_email.present?
-    ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
 
-    if current_user # successful registration
+    if current_user && current_user.errors.blank?
+      if current_user.teacher?
+        if MailJet.enabled? && request.locale != 'es-MX'
+          MailJet.create_contact_and_send_welcome_email(current_user)
+        else
+          TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now
+        end
+      end
+      ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
+
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
