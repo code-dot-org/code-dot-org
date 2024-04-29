@@ -112,18 +112,17 @@ frontend_device_name ||= '/dev/sda1'
     LaunchConfiguration: {Ref: 'FrontendLaunchConfig'}
   %>
   Frontends:
-    DependsOn: [ASGCount]
     Type: AWS::AutoScaling::AutoScalingGroup
     CreationPolicy:
       ResourceSignal:
         Timeout: <%=frontend_timeout%>
-        Count: !GetAtt [ASGCount, DesiredCapacity]
+        Count: !GetAtt ASGCount.DesiredCapacity
       AutoScalingCreationPolicy:
         MinSuccessfulInstancesPercent: 80
     UpdatePolicy:
       AutoScalingRollingUpdate:
         MaxBatchSize: !Ref AutoscaleRollingBatchSize
-        MinInstancesInService: !GetAtt [ASGCount, DesiredCapacity]
+        MinInstancesInService: !GetAtt ASGCount.DesiredCapacity
         MinSuccessfulInstancesPercent: 80
         PauseTime: <%=frontend_timeout%>
         SuspendProcesses: [ScheduledActions]
@@ -132,9 +131,9 @@ frontend_device_name ||= '/dev/sda1'
       AutoScalingGroupName: !Sub "Frontends-${AWS::StackName}"
       VPCZoneIdentifier: <%= subnets.to_json %>
       LaunchConfigurationName: !Ref FrontendLaunchConfig
-      MinSize: !GetAtt [ASGCount, MinSize]
-      MaxSize: !GetAtt [ASGCount, MaxSize]
-      DesiredCapacity: !GetAtt [ASGCount, DesiredCapacity]
+      MinSize: !GetAtt ASGCount.MinSize
+      MaxSize: !GetAtt ASGCount.MaxSize
+      DesiredCapacity: !GetAtt ASGCount.DesiredCapacity
       HealthCheckType: EC2 # TODO: use ELB health check that returns healthy even when fully loaded.
       HealthCheckGracePeriod: 2000
       <%=indent(add_properties(frontend_properties), 6)%>
