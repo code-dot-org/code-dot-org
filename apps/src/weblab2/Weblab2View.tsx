@@ -32,7 +32,7 @@ const DefaultEditorComponent = () =>
 const horizontalLayout = {
   gridLayoutRows: '32px 300px auto',
   gridLayoutColumns: '300px auto auto',
-  gridLayout: `    "instructions file-tabs file-tabs"
+  gridLayout: `    "instructions file-tabs preview-container"
       "instructions editor preview-container"
       "file-browser editor preview-container"`,
 };
