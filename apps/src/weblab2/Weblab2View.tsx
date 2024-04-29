@@ -15,12 +15,6 @@ import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import {css} from '@codemirror/lang-css';
 
-const instructions = `Add html pages and preview them in the right pane.
-
-Add css pages (and link them to your html).
-
-Use the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)`;
-
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
@@ -61,7 +55,6 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions,
   //editableFileTypes: ["html", "css"],
   //previewFileTypes: ["html"],
   /* PreviewComponents: {

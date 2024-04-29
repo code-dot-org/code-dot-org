@@ -67,7 +67,6 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions: 'Welcome to Python Lab!',
 };
 
 const PythonlabView: React.FunctionComponent = () => {

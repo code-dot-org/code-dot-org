@@ -30,7 +30,6 @@ export type ConfigType = {
   showDebug?: boolean;
   activeLeftNav: string;
   sideBar: SideBarItem[];
-  instructions: string | undefined;
   defaultTheme?: EditorTheme;
   leftNav: LeftNavElement[];
   EditorComponent?: EditorComponent;
