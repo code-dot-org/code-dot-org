@@ -341,6 +341,7 @@ class HomeControllerTest < ActionController::TestCase
     refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
     sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
     get :home
 
     assert_select '#student-information-modal', true
@@ -359,6 +360,7 @@ class HomeControllerTest < ActionController::TestCase
     assert student.age, 12
 
     sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
     get :home
 
     assert_select '#student-information-modal', true
