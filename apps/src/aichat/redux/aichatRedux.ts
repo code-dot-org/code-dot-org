@@ -286,6 +286,9 @@ export const submitChatContents = createAsyncThunk(
     );
 
     if (chatApiResponse?.status === 'profanity') {
+      // Logging to allow visibility into flagged content.
+      console.log(chatApiResponse);
+
       return thunkAPI.dispatch(
         updateUserChatMessageStatus({
           id: newMessage.id,
