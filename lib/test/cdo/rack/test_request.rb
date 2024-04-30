@@ -28,17 +28,20 @@ class RequestTest
     end
 
     def test_trusted_proxies
-      # Standard IP addresse as used by the base Request implementation still
-      # work.
+      # Standard IP addresses and hostnames as used by the base Request
+      # implementation still work as expected.
       assert @mock_request.trusted_proxy?('localhost')
       refute @mock_request.trusted_proxy?('93.184.215.14') # example.com
 
-      # IP Addresses within our custom set of trusted proxies also work.
-      # Note: we may need to update this test if the contents of
-      # lib/cdo/trusted_proxies.json ever change.
-      assert @mock_request.trusted_proxy?('44.220.202.0')
-      assert @mock_request.trusted_proxy?('18.175.65.0')
-      assert @mock_request.trusted_proxy?('3.35.130.128')
+      # IP addresses within our custom set of trusted proxies should all be
+      # trusted. This list is dynamic and automatically updated, so we sample
+      # from it for testing rather than hardcoding anything.
+      proxy_ranges = JSON.parse(File.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges']
+      proxy_ranges.sample(5).each do |proxy_range|
+        proxy_ip = proxy_range.split('/').first
+        message = "expected #{proxy_ip.inspect} to be trusted"
+        assert @mock_request.trusted_proxy?(proxy_ip), message
+      end
     end
 
     def test_referer_site_with_port
