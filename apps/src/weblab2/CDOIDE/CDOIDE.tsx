@@ -15,9 +15,6 @@ import {
 import React from 'react';
 import './styles/cdoIDE.css';
 
-// import {Search} from '@cdoide/Search';
-// const Editor = () => <div style={{gridArea: 'editor'}}>This is me editor</div>;
-
 type CDOIDEProps = {
   project: ProjectType;
   config: ConfigType;
