@@ -84,7 +84,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     return () => {
       // If we have an early return, we will abort the promise in progress.
       // An early return could happen if the level is changed mid-load.
-      promise.abort();
+      promise?.abort();
     };
   }, [
     channelId,
