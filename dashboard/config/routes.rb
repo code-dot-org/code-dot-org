@@ -616,6 +616,10 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resource :feedback, controller: :feedback, only: %i[create show]
+        controller :dynamic_registration do
+          get 'dynamic_registration', action: :new_registration
+          post 'dynamic_registration', action: :create_registration
+        end
         resources :sections, only: [] do
           collection do
             patch :bulk_update_owners

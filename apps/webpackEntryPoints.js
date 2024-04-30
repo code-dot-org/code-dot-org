@@ -91,6 +91,7 @@ const CODE_STUDIO_ENTRIES = {
   'lti/v1/_early_access_banner': './src/sites/studio/pages/lti/v1/_early_access_banner.js',
   'lti/v1/iframe': './src/sites/studio/pages/lti/v1/iframe.js',
   'lti/v1/account_linking/landing': './src/sites/studio/pages/lti/v1/account_linking/landing.js',
+  'lti/v1/dynamic_registration': './src/sites/studio/pages/lti/v1/dynamic_registration.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/home': './src/sites/studio/pages/maker/home.js',
