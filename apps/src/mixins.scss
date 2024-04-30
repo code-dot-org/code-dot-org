@@ -33,11 +33,11 @@
 }
 
 @mixin slider-thumb {
-  border: 1px solid $neutral_dark;
-  height: 32px;
-  width: 6px;
+  height: 20px;
+  width: 4px;
   border-radius: 1px;
   background: white;
+  box-shadow: 1px 1px $neutral_dark80;
 }
 
 @mixin slider-track {
