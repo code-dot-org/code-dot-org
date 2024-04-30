@@ -272,6 +272,9 @@ Dashboard::Application.routes.draw do
     # can include script_id to get or create a project for the level and script.
     get "projects(/script/:script_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
+    # Get a project for the given script_id, level_id, and optional user_id.
+    get "projects_get/script/:script_id/level/:level_id(/user/:user_id)", to: 'projects#get_for_level'
+
     post '/locale', to: 'home#set_locale', as: 'locale'
 
     # quick links for cartoon network arabic

@@ -42,21 +42,25 @@ export default class ProjectManagerFactory {
     projectManagerStorageType: ProjectManagerStorageType,
     levelId: number,
     userId?: string,
+    readOnly?: boolean,
     scriptId?: number
-  ): Promise<ProjectManager> {
+  ): Promise<ProjectManager | null> {
     const channelsStore = this.getChannelsStore(projectManagerStorageType);
     let channelId: string | undefined = undefined;
     let reduceChannelUpdates = false;
     const response = await channelsStore.loadForLevel(
       levelId,
       scriptId,
-      userId
+      userId,
+      readOnly
     );
     if (response.ok) {
       const responseBody = await response.json();
       if (responseBody && responseBody.channel) {
         channelId = responseBody.channel;
         reduceChannelUpdates = responseBody.reduceChannelUpdates;
+      } else if (responseBody && responseBody.started === false) {
+        return null;
       }
     }
     if (!channelId) {
@@ -67,7 +71,8 @@ export default class ProjectManagerFactory {
       channelsStore,
       channelId,
       reduceChannelUpdates,
-      userId
+      userId,
+      readOnly
     );
   }
 

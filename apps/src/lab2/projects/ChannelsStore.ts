@@ -13,7 +13,8 @@ export interface ChannelsStore {
   loadForLevel: (
     levelId: number,
     scriptId?: number,
-    userId?: string
+    userId?: string,
+    readOnly?: boolean
   ) => Promise<Response>;
 
   save: (channel: Channel) => Promise<Response>;
@@ -65,8 +66,13 @@ export class LocalChannelsStore implements ChannelsStore {
 export class RemoteChannelsStore implements ChannelsStore {
   defaultChannel: DefaultChannel = {name: 'New Project'};
 
-  loadForLevel(levelId: number, scriptId?: number, userId?: string) {
-    return projectsApi.getChannelForLevel(levelId, scriptId, userId);
+  loadForLevel(
+    levelId: number,
+    scriptId?: number,
+    userId?: string,
+    readOnly?: boolean
+  ) {
+    return projectsApi.getChannelForLevel(levelId, scriptId, userId, readOnly);
   }
 
   load(channelId: string) {

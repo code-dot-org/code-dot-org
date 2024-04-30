@@ -32,6 +32,10 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     (state: {progress: ProgressState}) =>
       state.progress.viewAsUserId || undefined
   );
+  const readOnly = useSelector(
+    (state: {progress: ProgressState}) =>
+      state.progress.viewReadOnly || undefined
+  );
   const scriptId = useSelector(
     (state: {progress: ProgressState}) => state.progress.scriptId || undefined
   );
@@ -67,6 +71,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
         setUpWithLevel({
           levelId: parseInt(currentLevelId),
           userId,
+          readOnly,
           scriptId,
           levelPropertiesPath,
           channelId,
@@ -95,6 +100,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     levelPropertiesPath,
     dispatch,
     userId,
+    readOnly,
   ]);
 
   useEffect(() => {

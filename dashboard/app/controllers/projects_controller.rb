@@ -319,29 +319,14 @@ class ProjectsController < ApplicationController
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
-    user_id = params[:user_id]
     level = Level.find(params[:level_id])
-
-    # If viewing another user's work, ensure that we have permission.
-    if user_id
-      script_level = level.script_levels.find_by_script_id(script_id)
-      user = User.find(user_id)
-      unless can?(:view_as_user, script_level, user)
-        return render(status: :forbidden, json: {error: "Access denied."})
-      end
-    end
 
     error_message = under_13_without_tos_teacher?(level)
     return render(status: :forbidden, json: {error: error_message}) if error_message
 
     # get_storage_id works for signed out users as well, it uses the cookie to determine
     # the storage id.
-    user_storage_id = if user_id
-                        # todo: handle this not finding a valid storage id
-                        storage_id_for_user_id(user_id)
-                      else
-                        get_storage_id
-                      end
+    user_storage_id = get_storage_id
 
     # Find the channel for the user and level if it exists, or create a new one.
     channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
@@ -351,6 +336,42 @@ class ProjectsController < ApplicationController
                               !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script_name}, default: true) :
                               false
     render(status: :ok, json: {channel: channel_token.channel, reduceChannelUpdates: reduce_channel_updates})
+  end
+
+  # GET projects_get/script/:script_id/level/:level_id(/user/:user_id)
+  def get_for_level
+    script_id = params[:script_id]
+    user_id = params[:user_id]
+    level = Level.find(params[:level_id])
+
+    if user_id
+      # If viewing another user's work, ensure that we have permission.
+      script_level = level.script_levels.find_by_script_id(script_id)
+      user = User.find(user_id)
+      unless can?(:view_as_user, script_level, user)
+        return render(status: :forbidden, json: {error: "Access denied."})
+      end
+
+      # And return early if the level has not been started.
+      script = Unit.get_from_cache(script_id)
+      unless level_started?(level, script, user)
+        return render(status: :ok, json: {started: false})
+      end
+    end
+
+    error_message = under_13_without_tos_teacher?(level)
+    return render(status: :forbidden, json: {error: error_message}) if error_message
+
+    user_storage_id = if user_id
+                        storage_id_for_user_id(user_id)
+                      else
+                        get_storage_id
+                      end
+
+    # Find the channel for the user and level, if it exists.
+    channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
+
+    render(status: :ok, json: {channel: channel_token&.channel})
   end
 
   def weblab_footer

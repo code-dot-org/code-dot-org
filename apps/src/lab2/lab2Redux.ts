@@ -88,6 +88,7 @@ export const setUpWithLevel = createAsyncThunk(
       levelPropertiesPath: string;
       channelId?: string;
       userId?: string;
+      readOnly?: boolean;
     },
     thunkAPI
   ) => {
@@ -137,11 +138,18 @@ export const setUpWithLevel = createAsyncThunk(
               ProjectManagerStorageType.REMOTE,
               payload.levelId,
               payload.userId,
+              payload.readOnly,
               payload.scriptId
             );
       // Only set the project manager and initiate load
       // if this request hasn't been cancelled.
       if (thunkAPI.signal.aborted) {
+        return;
+      }
+
+      // We might be a teacher attempting to view a student level that hasn't been
+      // started, and there is no project manager available.
+      if (!projectManager) {
         return;
       }
 
