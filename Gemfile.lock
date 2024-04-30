@@ -1111,7 +1111,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rails-accessibility
-  ruby-prof
+  ruby-prof (>= 1.7.0)
   ruby-progressbar
   sass-rails (~> 6.0.0)
   sassc-rails!
