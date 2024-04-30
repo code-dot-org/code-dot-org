@@ -119,7 +119,7 @@
       cronjob at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'covid19')
-      cronjob at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
+      cronjob at:'00 23 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
       cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'send_permission_email_reminders')
