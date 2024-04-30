@@ -112,7 +112,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
           <div className={moduleStyles.musicPlayViewButtonsSection}>
             <Button
               text={commonI18n.viewCode()}
-              type="secondary"
+              type="tertiary"
               color="white"
               size="s"
               iconLeft={{iconStyle: 'solid', iconName: 'code'}}
@@ -120,7 +120,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
             />
             <Button
               text={commonI18n.makeMyOwn()}
-              type="secondary"
+              type="tertiary"
               color="white"
               size="s"
               iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
@@ -130,9 +130,8 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
           {canShare && (
             <div className={moduleStyles.musicPlayViewButtonsSection}>
               <Button
-                className={moduleStyles.musicPlayViewShareButton}
                 text={musicI18n.share()}
-                type="secondary"
+                type="tertiary"
                 color="white"
                 size="s"
                 iconLeft={{
