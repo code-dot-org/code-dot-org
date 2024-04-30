@@ -313,7 +313,9 @@ class ProjectsController < ApplicationController
   # GET /projects(/script/:script_id)/level/:level_id(/user/:user_id)
   # Given a level_id and the current user (or signed out user), get the existing project
   # or create a new project for that level and user. If a script_id is provided, get or
-  # create the project for that level, script and user
+  # create the project for that level, script and user.  If a user_id is provided, get
+  # or create the project for that level, script and user_id; this is used for Lab2 levels
+  # when a teacher views a student's work, and the relevant permission is verified here.
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
