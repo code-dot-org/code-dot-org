@@ -1,4 +1,5 @@
 require 'rack/request'
+require 'rack/session/abstract/id'
 require 'ipaddr'
 require 'json'
 require 'country_codes'
