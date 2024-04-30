@@ -66,12 +66,11 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  gridLayoutRows: '32px 200px 32px auto',
+  gridLayoutRows: '32px 232px auto',
   gridLayoutColumns: '300px auto',
   gridLayout: `
     "instructions file-tabs"
     "instructions editor"
-    "side-bar editor"
     "file-browser editor"
   `,
 };
