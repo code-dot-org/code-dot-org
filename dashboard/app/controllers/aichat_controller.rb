@@ -22,7 +22,7 @@ class AichatController < ApplicationController
         {
           role: 'user',
           content: params[:newMessage],
-          status: SharedConstants::AICHAT_INTERACTION_STATUS[:PROFANITY_VIOLATION]
+          status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]
         }
       ]
       session_id = log_chat_session(new_messages)
@@ -41,15 +41,15 @@ class AichatController < ApplicationController
     # which isn't relevant here.
     input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
       params.to_unsafe_h[:aichatModelCustomizations],
-      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AICHAT_INTERACTION_STATUS[:OK]},
+      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]},
       params.to_unsafe_h[:newMessage]
     )
     sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input)
     latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
 
-    assistant_message = {role: "assistant", content: latest_assistant_response, status: SharedConstants::AICHAT_INTERACTION_STATUS[:OK]}
+    assistant_message = {role: "assistant", content: latest_assistant_response, status: SharedConstants::AI_INTERACTION_STATUS[:OK]}
     new_messages = [
-      {role: 'user', content: params[:newMessage], status: SharedConstants::AICHAT_INTERACTION_STATUS[:OK]},
+      {role: 'user', content: params[:newMessage], status: SharedConstants::AI_INTERACTION_STATUS[:OK]},
       assistant_message,
     ]
     session_id = log_chat_session(new_messages)

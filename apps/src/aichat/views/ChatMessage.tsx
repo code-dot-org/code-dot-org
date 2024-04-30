@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
-import {AichatInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {removeModelUpdateMessage} from '../redux/aichatRedux';
 import {ChatCompletionMessage, Role} from '../types';

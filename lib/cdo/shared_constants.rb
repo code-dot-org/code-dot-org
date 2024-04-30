@@ -719,7 +719,6 @@ module SharedConstants
   }.freeze
 
   AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
-  AICHAT_INTERACTION_STATUS = AI_INTERACTION_STATUS
 
   # These are the types of assistance AI Tutor can provide
   AI_TUTOR_TYPES = {

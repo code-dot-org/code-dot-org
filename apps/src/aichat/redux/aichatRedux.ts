@@ -11,7 +11,7 @@ import {
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {AichatInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
