@@ -134,7 +134,8 @@ describe('SectionProgressSelector', () => {
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(stub).calledOnceWith('/api/v1/users/show_progress_table_v2', {
+    expect(stub).calledTwice();
+    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
       show_progress_table_v2: true,
     });
 
@@ -178,7 +179,7 @@ describe('SectionProgressSelector', () => {
   });
 
   it('calls analytics when toggling to v2', () => {
-    const post = sinon.stub($, 'post');
+    const stub = sinon.stub($, 'post');
 
     renderDefault();
 
@@ -186,15 +187,16 @@ describe('SectionProgressSelector', () => {
 
     fireEvent.click(toggle);
 
-    expect(post).calledOnceWith('/api/v1/users/show_progress_table_v2', {
+    expect(stub).calledTwice();
+    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
       show_progress_table_v2: true,
     });
 
-    post.restore();
+    stub.restore();
   });
 
   it('calls analytics when toggling to v1', () => {
-    const post = sinon.stub($, 'post');
+    const stub = sinon.stub($, 'post');
 
     renderDefault();
     store.dispatch(setShowProgressTableV2(true));
@@ -203,10 +205,11 @@ describe('SectionProgressSelector', () => {
 
     fireEvent.click(toggle);
 
-    expect(post).calledOnceWith('/api/v1/users/show_progress_table_v2', {
+    expect(stub).calledTwice();
+    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
       show_progress_table_v2: false,
     });
 
-    post.restore();
+    stub.restore();
   });
 });
