@@ -97,7 +97,6 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
           <SimpleDropdown
             id="uitest-school-dropdown"
             disabled={disabled}
-            className={style.dropdown}
             name={fieldNames.ncesSchoolId}
             itemGroups={[
               {

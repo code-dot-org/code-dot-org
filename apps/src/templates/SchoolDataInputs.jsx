@@ -92,7 +92,6 @@ export default function SchoolDataInputs({
         </BodyTwoText>
         <SimpleDropdown
           id="uitest-country-dropdown"
-          className={style.dropdown}
           name={fieldNames.country}
           items={COUNTRY_ITEMS}
           selectedValue={country}
