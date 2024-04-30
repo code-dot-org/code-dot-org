@@ -2,6 +2,7 @@
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 
 .tooltip {
+  position: relative;
   display: flex;
   align-items: center;
   width: fit-content;
@@ -18,18 +19,63 @@
 // Direction
 .tooltip-onTop {
   display: flex;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline-start: 50%;
+    margin-inline-start: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $light_gray_900 transparent transparent transparent;
+  }
 }
 
 .tooltip-onRight {
-  display: flex;
+  &::after {
+    content: "";
+    position: absolute;
+    //inset-block-end: 100%;
+    inset-inline-end: 100%;
+    margin-inline-start: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent $light_gray_900 transparent transparent;
+
+    html[dir='rtl'] & {
+      border-color: transparent transparent transparent $light_gray_900;
+    }
+  }
 }
 
 .tooltip-onBottom {
-  display: flex;
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-end: 100%;
+    inset-inline-start: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent $light_gray_900 transparent;
+  }
 }
 
 .tooltip-onLeft {
-  display: flex;
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 100%;
+    margin-inline-end: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent $light_gray_900;
+
+    html[dir='rtl'] & {
+      border-color: transparent $light_gray_900 transparent transparent;
+    }
+  }
 }
 
 // Sizes
