@@ -96,9 +96,10 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               }}
               onClick={() => setPlaying(!isPlaying)}
               disabled={isLoading}
-              size="s"
+              size="l"
               color="white"
               type="secondary"
+              className={moduleStyles.musicPlayViewButton}
             />
             <input
               type="range"

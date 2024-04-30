@@ -52,6 +52,12 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      background: $neutral_dark;
+      padding: 10px;
+
+      .musicPlayViewButton {
+        border-color: transparent;
+      }
 
       input[type=range] {
         -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
@@ -90,8 +96,7 @@
 
     .musicPlayViewButtonsSection {
       display: flex;
-      gap: 1rem;
-      justify-content: center;
+      justify-content: space-between;
       margin-top: 10px;
     }
   }
