@@ -4,7 +4,7 @@ import {
   BodyThreeText,
   BodyTwoText,
   Heading1,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import Button from '@cdo/apps/templates/Button';
 import RubricEditor from './RubricEditor';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';

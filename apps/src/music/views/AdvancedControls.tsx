@@ -8,10 +8,10 @@ import {
   setLoopEnd,
   setLoopStart,
 } from '../redux/musicRedux';
-import {Heading5} from '@cdo/apps/componentLibrary/typography';
+import {Heading5} from '@cdo/component-library';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import classNames from 'classnames';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import {Checkbox} from '@cdo/component-library';
 import {MAX_BPM, MIN_BPM} from '../constants';
 
 /**

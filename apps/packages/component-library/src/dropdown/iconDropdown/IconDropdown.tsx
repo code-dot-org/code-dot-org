@@ -11,7 +11,8 @@ import {
   DropdownColor,
 } from '@/common/types';
 import CustomDropdown from '@/dropdown/_CustomDropdown';
-import FontAwesomeV6Icon, {
+import {
+  FontAwesomeV6Icon,
   FontAwesomeV6IconProps,
 } from '@/fontAwesomeV6Icon';
 

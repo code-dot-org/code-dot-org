@@ -1,5 +1,5 @@
 import React, {useCallback, useState, useRef} from 'react';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import {Typography} from '@cdo/component-library';
 import FocusLock from 'react-focus-lock';
 import styles from './PackDialog.module.scss';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';

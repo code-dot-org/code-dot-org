@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {Heading6} from '@cdo/component-library';
 import EvidenceDescriptionsRow from './EvidenceDescriptionsRow';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';

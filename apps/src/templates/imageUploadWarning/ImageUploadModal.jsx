@@ -1,12 +1,10 @@
 // Warning dialog that says if you upload, you can no longer share and remix,
 // and you confirm you will not upload PII.
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import msg from '@cdo/locale';
-
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import styles from './image-upload-warning.module.scss';
 
 export default function ImageUploadModal({

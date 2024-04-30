@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
 import queryString from 'query-string';
 import Button from '@cdo/apps/templates/Button';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import StylizedBaseDialog from '@cdo/component-library';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog';
 

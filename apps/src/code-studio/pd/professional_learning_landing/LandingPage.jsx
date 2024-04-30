@@ -6,7 +6,7 @@ import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import {Heading2} from '@cdo/component-library';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {EnrolledWorkshops} from './EnrolledWorkshops';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
@@ -20,7 +20,7 @@ import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDia
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import style from './landingPage.module.scss';
 import './tableStyles.scss';
-import Tabs from '@cdo/apps/componentLibrary/tabs';
+import Tabs from '@cdo/component-library';
 import {
   asyncLoadSectionData,
   asyncLoadCoteacherInvite,

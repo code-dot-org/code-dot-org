@@ -7,10 +7,11 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import SegmentedButtons, {
+import {
+  SegmentedButtons,
   SegmentedButtonsProps,
-} from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
-import Button from '@cdo/apps/componentLibrary/button/Button';
+} from '@cdo/component-library';
+import {Button} from '@cdo/component-library';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
@@ -19,6 +20,7 @@ import {
   setStartingAiCustomizations,
   setViewMode,
   clearChatMessages,
+  selectAllFieldsHidden,
 } from '../redux/aichatRedux';
 import {AichatLevelProperties, ViewMode} from '../types';
 import {isDisabled} from './modelCustomization/utils';
@@ -53,6 +55,8 @@ const AichatView: React.FunctionComponent = () => {
     state => state.aichat
   );
   const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
+
+  const allFieldsHidden = useAppSelector(selectAllFieldsHidden);
 
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(initialSources);
@@ -132,14 +136,16 @@ const AichatView: React.FunctionComponent = () => {
                 <Instructions beforeNextLevel={beforeNextLevel} />
               </PanelContainer>
             </div>
-            <div className={moduleStyles.customizationArea}>
-              <PanelContainer
-                id="aichat-model-customization-panel"
-                headerContent="Model Customization"
-              >
-                <ModelCustomizationWorkspace />
-              </PanelContainer>
-            </div>
+            {!allFieldsHidden && (
+              <div className={moduleStyles.customizationArea}>
+                <PanelContainer
+                  id="aichat-model-customization-panel"
+                  headerContent="Model Customization"
+                >
+                  <ModelCustomizationWorkspace />
+                </PanelContainer>
+              </div>
+            )}
           </>
         )}
         {viewMode === ViewMode.PRESENTATION && (

@@ -17,7 +17,7 @@ import {
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import StylizedBaseDialog from '@cdo/component-library';
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
 const MAX_UPLOAD_SIZE = 101000;

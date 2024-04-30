@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import {Button} from '@cdo/component-library';
 import moduleStyles from './user-chat-message-editor.module.scss';
 import aichatI18n from '../locale';
 import {submitChatContents} from '../redux/aichatRedux';

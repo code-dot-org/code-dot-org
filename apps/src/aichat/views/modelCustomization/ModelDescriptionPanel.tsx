@@ -1,8 +1,8 @@
 import React, {useEffect, useState, useRef} from 'react';
 
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import {BodyThreeText, StrongText} from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import {SimpleDropdown} from '@cdo/component-library';
+import {BodyThreeText, StrongText} from '@cdo/component-library';
+import {Button} from '@cdo/component-library';
 import {ModelDescription} from '../../types';
 
 import styles from './compare-models-dialog.module.scss';

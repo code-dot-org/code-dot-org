@@ -1,4 +1,4 @@
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {Typography} from '@cdo/component-library';
 import {Validation, ConditionType, AppName} from '../../types';
 import {MusicConditions} from '@cdo/apps/music/progress/MusicValidator';
 import {convertOptionalStringToBoolean} from '@cdo/apps/types/utils';

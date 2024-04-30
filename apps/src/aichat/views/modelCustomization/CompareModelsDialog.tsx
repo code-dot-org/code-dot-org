@@ -2,8 +2,8 @@ import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import {Heading3} from '@cdo/component-library';
+import {Button} from '@cdo/component-library';
 
 import ModelDescriptionPanel from './ModelDescriptionPanel';
 import styles from './compare-models-dialog.module.scss';

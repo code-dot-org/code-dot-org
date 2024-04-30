@@ -7,7 +7,7 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import style from './report-abuse-pop-up.module.scss';
 import Button from '@cdo/apps/templates/Button';
-import CheckBox from '@cdo/component-library';
+import {Checkbox} from '@cdo/component-library';
 import {connect} from 'react-redux';
 import {Heading3, BodyTwoText} from '@cdo/component-library';
 

@@ -17,7 +17,7 @@ import {
   Heading5,
   BodyTwoText,
 } from '@cdo/component-library';
-import Checkbox from '@cdo/component-library';
+import {Checkbox} from '@cdo/component-library';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
 

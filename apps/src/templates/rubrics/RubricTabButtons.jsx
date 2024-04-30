@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
-import SegmentedButtons from '@cdo/component-library';
+import {SegmentedButtons} from '@cdo/component-library';
 import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import {InfoAlert} from './RubricContent';

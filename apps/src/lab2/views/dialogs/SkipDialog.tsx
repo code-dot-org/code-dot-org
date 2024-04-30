@@ -1,4 +1,4 @@
-import Typography from '@cdo/apps/componentLibrary/typography';
+import {Typography} from '@cdo/component-library';
 import React from 'react';
 import {BaseDialogProps} from './DialogManager';
 import moduleStyles from './confirm-dialog.module.scss';

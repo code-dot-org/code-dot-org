@@ -2,14 +2,14 @@ import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import moduleStyles from './edit-panels.module.scss';
 import PanelsView from '@cdo/apps/panels/PanelsView';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {SimpleDropdown} from '@cdo/component-library';
 import {
   BodyThreeText,
   Heading3,
   Heading5,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import {createUuid} from '@cdo/apps/utils';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
 import classNames from 'classnames';
 import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
 import Button from '@cdo/apps/templates/Button';

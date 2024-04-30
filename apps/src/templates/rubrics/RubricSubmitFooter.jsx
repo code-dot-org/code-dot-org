@@ -14,7 +14,7 @@ import {getTeacherFeedbackForStudent} from '@cdo/apps/templates/instructions/top
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import Button from '@cdo/apps/templates/Button';
-import Checkbox from '@cdo/component-library';
+import {Checkbox} from '@cdo/component-library';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 function RubricSubmitFooter({

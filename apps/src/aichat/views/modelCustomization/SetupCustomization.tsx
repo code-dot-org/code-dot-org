@@ -2,9 +2,9 @@ import React, {useCallback, useState, useMemo} from 'react';
 import classNames from 'classnames';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
+import {StrongText} from '@cdo/component-library';
+import {Button} from '@cdo/component-library';
+import {SimpleDropdown} from '@cdo/component-library';
 import {
   setAiCustomizationProperty,
   updateAiCustomization,

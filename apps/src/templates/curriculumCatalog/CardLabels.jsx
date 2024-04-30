@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import Tags from '@cdo/component-library';
 
 export default function CardLabels({subjectsAndTopics}) {

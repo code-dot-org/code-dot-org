@@ -4,7 +4,7 @@ import i18n from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+} from '@cdo/component-library';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import CommitDialogBody from './CommitDialogBody';

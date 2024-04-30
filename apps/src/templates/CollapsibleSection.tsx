@@ -1,5 +1,5 @@
-import FontAwesomeV6Icon from '@cdo/component-library';
-import Typography from '@cdo/component-library';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
+import {Typography} from '@cdo/component-library';
 import React, {useState, useCallback} from 'react';
 import moduleStyles from './collapsible-section.module.scss';
 import {

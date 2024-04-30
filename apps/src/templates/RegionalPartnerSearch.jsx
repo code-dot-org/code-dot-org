@@ -19,7 +19,7 @@ import {
   BodyThreeText,
   Heading2,
   Heading3,
-} from '../componentLibrary/typography';
+} from '@cdo/component-library';
 import Button from './Button';
 
 const WorkshopCard = props => {

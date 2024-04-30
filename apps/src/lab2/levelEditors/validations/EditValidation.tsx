@@ -1,4 +1,4 @@
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {Typography} from '@cdo/component-library';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import React from 'react';
 import {ConditionType, Validation, Condition} from '../../types';

@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-
-import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
+import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import i18n from '@cdo/locale';
+import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 
 const DataDocView = props => {
   const {dataDocName, dataDocContent} = props;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
 
 const PublishStatus: React.FunctionComponent<{
   iconName: string;

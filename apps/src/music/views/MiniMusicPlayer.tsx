@@ -12,7 +12,7 @@ import MusicLibrary from '../player/MusicLibrary';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import Lab2Registry from '../../lab2/Lab2Registry';
 import moduleStyles from './MiniMusicPlayer.module.scss';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
 
 interface MiniPlayerViewProps {
   projects: Channel[];

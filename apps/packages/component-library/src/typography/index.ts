@@ -1,2 +1,3 @@
 export * from './TypographyElements';
-export {default as default} from './Typography';
+export * from './types';
+export {default as Typography} from './Typography';

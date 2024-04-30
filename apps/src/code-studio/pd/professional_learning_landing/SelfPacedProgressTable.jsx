@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import Link from '@cdo/apps/componentLibrary/link';
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import Link from '@cdo/component-library';
+import {LinkButton} from '@cdo/component-library';
 import {
   BodyThreeText,
   BodyFourText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import styles from './selfPacedProgressTable.module.scss';
 // Generic table styles that are shared with LandingPage.jsx
 import './tableStyles.scss';

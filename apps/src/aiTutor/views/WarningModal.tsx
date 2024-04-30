@@ -4,7 +4,7 @@ import {
   BodyTwoText,
   Heading2,
   StrongText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/component-library';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 

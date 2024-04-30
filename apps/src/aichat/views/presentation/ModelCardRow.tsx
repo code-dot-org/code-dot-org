@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import moduleStyles from './model-card-row.module.scss';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import {BodyThreeText} from '@cdo/component-library';
 
 interface ModelCardRowProps {
   title: string;

@@ -5,7 +5,7 @@
 This package exports one styled React component: [FontAwesomeV6Icon](FontAwesomeV6Icon.tsx). You can import it like this:
 
 ```javascript
-import FontAwesomeV6Icon from '@/fontAwesomeV6';
+import {FontAwesomeV6Icon} from '@/fontAwesomeV6';
 ```
 
 For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/cdo-styleguide/?path=/story/designsystem-fontawesomev6icon-component--default-font-awesome-v-6-icon_).

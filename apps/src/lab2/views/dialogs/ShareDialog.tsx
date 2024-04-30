@@ -1,6 +1,6 @@
 import React, {useCallback, useState} from 'react';
-import Typography from '@cdo/apps/componentLibrary/typography';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {Typography} from '@cdo/component-library';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import FocusLock from 'react-focus-lock';
 import moduleStyles from './ShareDialog.module.scss';

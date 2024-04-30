@@ -3,7 +3,7 @@ import React, {ChangeEvent, memo} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
-import Typography from '@/typography';
+import {Typography} from '@/typography';
 
 import moduleStyles from './toggle.module.scss';
 

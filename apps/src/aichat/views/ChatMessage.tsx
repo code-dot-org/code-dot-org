@@ -2,9 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Button from '@cdo/apps/componentLibrary/button';
+import {StrongText} from '@cdo/component-library';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
+import {Button} from '@cdo/component-library';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
 import {removeModelUpdateMessage} from '../redux/aichatRedux';

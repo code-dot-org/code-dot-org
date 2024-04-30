@@ -5,7 +5,7 @@ import {
   TECHNICAL_INFO_FIELDS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
 import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
+import {Heading4} from '@cdo/component-library';
 import moduleStyles from './presentation-view.module.scss';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {modelDescriptions} from '../../constants';

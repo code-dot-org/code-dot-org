@@ -1,7 +1,8 @@
 import classnames from 'classnames';
 import React, {useCallback} from 'react';
 
-import FontAwesomeV6Icon, {
+import {
+  FontAwesomeV6Icon,
   FontAwesomeV6IconProps,
 } from '@/fontAwesomeV6Icon';
 

@@ -13,3 +13,6 @@ export {
   IconDropdown,
   SimpleDropdown,
 };
+export * from './checkboxDropdown';
+export * from './iconDropdown';
+export * from './simpleDropdown';

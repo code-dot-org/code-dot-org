@@ -3,7 +3,8 @@ import React, {memo, useMemo} from 'react';
 
 import {ButtonType, ButtonColor} from '@/button';
 import {ComponentSizeXSToL} from '@/common/types';
-import FontAwesomeV6Icon, {
+import {
+  FontAwesomeV6Icon,
   FontAwesomeV6IconProps,
 } from '@/fontAwesomeV6Icon';
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
 import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import StylizedBaseDialog from '@cdo/component-library';
 
 const destroyEnvironment = (destroyPath, successCallback, failureCallback) => {
   fetch(destroyPath, {

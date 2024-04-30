@@ -3,7 +3,7 @@ import React, {useRef, useEffect, ChangeEvent} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
-import Typography from '@/typography';
+import {Typography} from '@/typography';
 
 import moduleStyles from './checkbox.module.scss';
 

@@ -34,7 +34,7 @@ export const TECHNICAL_INFO_FIELDS = [
   'Retrieval Used',
 ] as const;
 
-const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
+export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   botName: '',
   description: '',
   intendedUse: '',

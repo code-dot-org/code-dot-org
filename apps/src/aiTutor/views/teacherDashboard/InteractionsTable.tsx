@@ -8,10 +8,11 @@ import {
   AITutorInteractionStatus,
   AITutorInteractionStatusValue,
 } from '@cdo/apps/aiTutor/types';
-import CheckboxDropdown, {
+import {
+  CheckboxDropdown,
   CheckboxOption,
-} from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+} from '@cdo/component-library';
+import {SimpleDropdown} from '@cdo/component-library';
 
 type StatusLabels = {
   [key in AITutorInteractionStatusValue]: string;

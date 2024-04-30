@@ -8,8 +8,8 @@ import {
   selectHasFilledOutModelCard,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import {StrongText} from '@cdo/component-library';
+import {Button} from '@cdo/component-library';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import {isDisabled} from './utils';

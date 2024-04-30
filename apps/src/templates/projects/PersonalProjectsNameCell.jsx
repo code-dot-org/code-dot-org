@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import {updateProjectName} from './projectsRedux';
-import FontAwesomeV6Icon from '@cdo/component-library';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
 import {showFrozenProjectInfoDialog} from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
 import moduleStyles from './personal-projects-name-cell.module.scss';
 

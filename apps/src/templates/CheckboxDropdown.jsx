@@ -2,14 +2,14 @@ import React, {useCallback} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import Typography from '@cdo/component-library';
+import {Typography} from '@cdo/component-library';
 import Button from '@cdo/apps/templates/Button';
 import FontAwesome from './FontAwesome';
 
 import i18n from '@cdo/locale';
 
 import style from './checkbox-dropdown.module.scss';
-import Checkbox from '@cdo/component-library';
+import {Checkbox} from '@cdo/component-library';
 
 const CheckboxDropdown = ({
   name,

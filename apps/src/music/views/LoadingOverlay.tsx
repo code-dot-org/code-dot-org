@@ -1,4 +1,4 @@
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
 import React from 'react';
 import moduleStyles from './loading-overlay.module.scss';
 import classNames from 'classnames';

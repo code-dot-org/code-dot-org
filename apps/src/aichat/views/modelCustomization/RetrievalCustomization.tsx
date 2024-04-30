@@ -1,9 +1,9 @@
 import React, {useState, useCallback} from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
+import {Button} from '@cdo/component-library';
+import {StrongText} from '@cdo/component-library';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
 import {isDisabled} from './utils';

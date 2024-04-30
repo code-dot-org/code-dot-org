@@ -6,7 +6,7 @@ import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+} from '@cdo/component-library';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';

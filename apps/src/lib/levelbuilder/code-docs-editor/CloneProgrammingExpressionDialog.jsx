@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import $ from 'jquery';
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+} from '@cdo/component-library';
 import {TextLink} from '@dsco_/link';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';

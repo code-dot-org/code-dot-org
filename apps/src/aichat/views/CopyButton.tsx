@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import {Button} from '@cdo/component-library';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
 

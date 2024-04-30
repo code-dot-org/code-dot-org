@@ -4,7 +4,7 @@ import commonI18n from '@cdo/locale';
 import weblabI18n from '@cdo/weblab/locale';
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+} from '@cdo/component-library';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
 

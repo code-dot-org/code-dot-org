@@ -9,7 +9,7 @@ import {
   EmText,
 } from '@cdo/component-library';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Checkbox from '@cdo/component-library';
+import {Checkbox} from '@cdo/component-library';
 import Button from '@cdo/apps/templates/Button';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 

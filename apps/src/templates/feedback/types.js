@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-
 import {makeEnum} from '@cdo/apps/utils';
 
 export const feedbackShape = PropTypes.shape({

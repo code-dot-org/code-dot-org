@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
 import MusicLibrary, {
   SoundData,
   SoundFolder,
@@ -11,7 +11,7 @@ import MusicLibrary, {
 } from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
 import FocusLock from 'react-focus-lock';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
+import {SegmentedButtons} from '@cdo/component-library';
 import musicI18n from '../locale';
 
 /*

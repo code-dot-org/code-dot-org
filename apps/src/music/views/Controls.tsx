@@ -10,7 +10,7 @@ import {
 } from '../redux/musicRedux';
 import {useMusicSelector} from './types';
 import {commonI18n} from '@cdo/apps/types/locale';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {FontAwesomeV6Icon} from '@cdo/component-library';
 
 const LoadingProgress: React.FunctionComponent = () => {
   const progressValue = useMusicSelector(

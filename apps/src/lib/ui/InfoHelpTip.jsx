@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText} from '@cdo/component-library';
 import color from '@cdo/apps/util/color';
 
 export default function InfoHelpTip({id, content}) {

@@ -8,7 +8,7 @@ import {
   FrozenProjectInfoDialogState,
   hideFrozenProjectInfoDialog,
 } from './frozenProjectInfoDialogRedux';
-import Typography from '@cdo/component-library';
+import {Typography} from '@cdo/component-library';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import i18n from '@cdo/locale';
