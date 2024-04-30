@@ -153,6 +153,8 @@ class User < ApplicationRecord
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
     ai_tutor_access_denied
+    progress_table_v2_timestamp
+    progress_table_v1_timestamp
   )
 
   attr_accessor(
