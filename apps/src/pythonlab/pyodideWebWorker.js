@@ -8,12 +8,18 @@ import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
-    indexURL: `https://cdn.jsdelivr.net/pyodide/v${version}/full`,
+    //indexURL: `https://cdn.jsdelivr.net/pyodide/v${version}/full`,
     // This URL is not working on prod, so we will use the CDN for now.
-    // indexURL: `/assets/js/pyodide/${version}/`,
+    indexURL: `/assets/js/pyodide/${version}/`,
     // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
     packages: ['numpy', 'matplotlib'],
   });
+  await self.pyodide.loadPackage('micropip');
+  const micropip = self.pyodide.pyimport('micropip');
+  await micropip.install(
+    'http://localhost-studio.code.org:9000/assets/js/pyodide/0.25.1/pythonlab_setup-0.0.1-py3-none-any.whl'
+  );
+  console.log(micropip.list());
   self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
   self.pyodide.setStderr(getStreamHandlerOptions('syserr'));
 }

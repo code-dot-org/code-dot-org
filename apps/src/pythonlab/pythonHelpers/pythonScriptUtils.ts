@@ -13,7 +13,7 @@ import {PyodideMessage, PyodidePathContent} from '../types';
 import {HIDDEN_FOLDERS} from './constants';
 import {ALL_PATCHES} from './patches';
 
-export function applyPatches(originalCode: string) {
+export function applyPatches(originalCode: string, channelId: string) {
   let finalCode = originalCode;
 
   for (const patch of ALL_PATCHES) {

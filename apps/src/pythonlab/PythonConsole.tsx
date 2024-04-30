@@ -18,6 +18,7 @@ const PythonConsole: React.FunctionComponent = () => {
   const codeOutput = useAppSelector(state => state.pythonlab.output);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
+  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const handleRun = (runTests: boolean) => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
@@ -28,13 +29,13 @@ const PythonConsole: React.FunctionComponent = () => {
       );
       return;
     }
-    if (!source) {
+    if (!source || !channelId) {
       dispatch(appendSystemMessage('You have no code to run.'));
       return;
     }
     if (runTests) {
       dispatch(appendSystemMessage('Running tests...'));
-      runAllTests(source);
+      runAllTests(source, channelId);
     } else {
       // Run main.py
       const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -45,7 +46,7 @@ const PythonConsole: React.FunctionComponent = () => {
         return;
       }
       dispatch(appendSystemMessage('Running program...'));
-      runPythonCode(code, source);
+      runPythonCode(code, source, channelId);
     }
   };
 
