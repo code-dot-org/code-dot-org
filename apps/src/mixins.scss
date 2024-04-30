@@ -37,13 +37,13 @@
   height: 32px;
   width: 6px;
   border-radius: 1px;
-  background: yellow;
+  background: white;
 }
 
 @mixin slider-track {
   width: 100%;
   height: 6px;
   background: $light_gray_700;   
-  border-radius: 1px;
+  border-radius: 10px;
   border: 0.5px solid $neutral_dark;
 }
