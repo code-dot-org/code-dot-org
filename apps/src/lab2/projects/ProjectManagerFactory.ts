@@ -18,15 +18,13 @@ export default class ProjectManagerFactory {
    */
   static getProjectManager(
     projectManagerStorageType: ProjectManagerStorageType,
-    projectId: string,
-    userId: string
+    projectId: string
   ): ProjectManager {
     return new ProjectManager(
       this.getSourcesStore(projectManagerStorageType),
       this.getChannelsStore(projectManagerStorageType),
       projectId,
-      false, // reduceChannelUpdates will only be true for a project in a script.
-      userId
+      false // reduceChannelUpdates will only be true for a project in a script.
     );
   }
 
@@ -36,13 +34,14 @@ export default class ProjectManagerFactory {
    * throw an error if the channel request fails.
    * @param projectManagerStorageType The storage type for the project manager.
    * @param levelId The identifier for the level.
+   * @param userId The user ID of the creator.  Can be undefined if the user is looking at their own work.
    * @param scriptId The id of the script. Can be undefined if the level is not in the context of a script.
    * @returns A project manager
    */
   static async getProjectManagerForLevel(
     projectManagerStorageType: ProjectManagerStorageType,
-    userId: string,
     levelId: number,
+    userId?: string,
     scriptId?: number
   ): Promise<ProjectManager> {
     const channelsStore = this.getChannelsStore(projectManagerStorageType);

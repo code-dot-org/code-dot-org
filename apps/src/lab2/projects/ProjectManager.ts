@@ -50,14 +50,14 @@ export default class ProjectManager {
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
   private forceReloading: boolean;
-  private userId: string;
+  private userId: string | undefined;
 
   constructor(
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
     channelId: string,
     reduceChannelUpdates: boolean,
-    userId: string,
+    userId?: string,
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     this.channelId = channelId;
@@ -212,9 +212,7 @@ export default class ProjectManager {
       '/projects/' +
       this.lastChannel.projectType +
       '/' +
-      this.channelId +
-      '/' +
-      this.userId
+      this.channelId
     );
   }
 

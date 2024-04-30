@@ -56,8 +56,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
     const {sources, channel} = await projectManager.load();
     expect(sources).to.deep.equal(FAKE_SOURCE);
@@ -70,8 +69,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -85,8 +83,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
     await projectManager.load();
     await projectManager.save(FAKE_SOURCE);
@@ -100,8 +97,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -118,8 +114,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -136,8 +131,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
     await projectManager.load();
     projectManager.destroy();
@@ -153,8 +147,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      true /* turn emergency mode on */,
-      ''
+      true /* turn emergency mode on */
     );
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -173,8 +166,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
 
     const noopListener = sinon.stub();
@@ -189,8 +181,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
     await projectManager.load();
     await projectManager.rename('new name');
@@ -208,8 +199,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -224,8 +214,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
 
     const {channel, sources} = await projectManager.load();
@@ -244,8 +233,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
 
     try {
@@ -263,8 +251,7 @@ describe('ProjectManager', () => {
       sourcesStore,
       channelsStore,
       FAKE_CHANNEL_ID,
-      false,
-      ''
+      false
     );
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
