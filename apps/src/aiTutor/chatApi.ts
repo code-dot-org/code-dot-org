@@ -18,6 +18,15 @@ enum ShareFilterStatus {
 
 const CHAT_COMPLETION_URL = '/openai/chat_completion';
 
+// Analogous to https://github.com/code-dot-org/ml-playground/pull/299
+// We want to expose enough information to help troubleshoot false positives
+const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
+  console.info('Violation detected in chat completion response', {
+    type: response.status,
+    content: response.flagged_content,
+  });
+};
+
 /**
  * This function sends a POST request to the chat completion backend controller.
  * Note: This function needs access to the tutorType so it can decide whether to include
@@ -88,6 +97,7 @@ export async function getChatCompletionMessage(
 
   switch (response.status) {
     case ShareFilterStatus.Profanity:
+      logViolationDetails(response);
       return {
         status: Status.PROFANITY_VIOLATION,
         assistantResponse:
@@ -96,6 +106,7 @@ export async function getChatCompletionMessage(
     case ShareFilterStatus.Email:
     case ShareFilterStatus.Phone:
     case ShareFilterStatus.Address:
+      logViolationDetails(response);
       return {
         status: Status.PII_VIOLATION,
         assistantResponse: `To protect your privacy, please remove any personal details like your ${response.status} from your message and try again.`,
@@ -109,6 +120,8 @@ type OpenaiChatCompletionMessage = {
   status?: AITutorInteractionStatusValue;
   role: Role;
   content: string;
+  // Only used in case of PII or profanity violation
+  flagged_content?: string;
 };
 
 type ChatCompletionResponse = {
