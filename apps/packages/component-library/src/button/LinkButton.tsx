@@ -22,4 +22,4 @@ const LinkButton: React.FunctionComponent<LinkButtonProps> = props => (
  *
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
  */
-export default memo(LinkButton);
+export default (LinkButton);

@@ -10,6 +10,9 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, './src/index.ts'),
       formats: ['cjs']
+    },
+    rollupOptions: {
+      external: ['react', 'react/jsx-runtime'],
     }
   },
   resolve: {
@@ -21,7 +24,5 @@ export default defineConfig({
       "font.scss": resolve(__dirname, '../../../shared/css/font.scss')
     }
   },
-  rollupOptions: {
-           external: ['react', 'react/jsx-runtime'],
-       }
+
 })

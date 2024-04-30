@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
-import {LinkButton} from '@cdo/component-library';
-import {Heading2, BodyTwoText} from '@cdo/component-library';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -16,6 +14,7 @@ import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWit
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import {LinkButton, Heading2, BodyTwoText} from '@cdo/component-library';
 import i18n from '@cdo/locale';
 
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
@@ -34,6 +33,10 @@ import TeacherResources from './TeacherResources';
 import TeacherSections from './TeacherSections';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
+
+require('react-dom');
+window.React2 = require('react');
+console.log(window.React1 === window.React2);
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
