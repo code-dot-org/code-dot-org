@@ -45,7 +45,7 @@ export interface ProgressState {
   lessons: Lesson[] | null;
   lessonGroups: LessonGroup[] | null;
   scriptId: number | null;
-  userId: string | null;
+  viewAsUserId: string | null;
   scriptName: string | null;
   scriptDisplayName: string | undefined;
   unitTitle: string | null;
@@ -87,7 +87,7 @@ const initialState: ProgressState = {
   lessons: null,
   lessonGroups: null,
   scriptId: null,
-  userId: null,
+  viewAsUserId: null,
   scriptName: null,
   scriptDisplayName: undefined,
   unitTitle: null,
@@ -258,8 +258,8 @@ const progressSlice = createSlice({
     setLessonExtrasEnabled(state, action: PayloadAction<boolean>) {
       state.lessonExtrasEnabled = action.payload;
     },
-    setUserId(state, action: PayloadAction<string>) {
-      state.userId = action.payload;
+    setViewAsUserId(state, action: PayloadAction<string>) {
+      state.viewAsUserId = action.payload;
     },
   },
   extraReducers: {
@@ -513,7 +513,7 @@ export const {
   setCurrentLessonId,
   setScriptCompleted,
   setLessonExtrasEnabled,
-  setUserId,
+  setViewAsUserId,
 } = progressSlice.actions;
 
 export default progressSlice.reducer;

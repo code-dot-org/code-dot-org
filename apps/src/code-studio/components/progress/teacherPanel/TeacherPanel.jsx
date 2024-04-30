@@ -26,7 +26,7 @@ import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   queryUserProgress,
-  setUserId,
+  setViewAsUserId,
 } from '@cdo/apps/code-studio/progressRedux';
 import {
   hasLockableLessons,
@@ -73,12 +73,13 @@ class TeacherPanel extends React.Component {
     currentLevelId: PropTypes.string,
     levels: PropTypes.arrayOf(levelWithProgressType),
     selectUser: PropTypes.func.isRequired,
-    setUserId: PropTypes.func.isRequired,
+    setViewAsUserId: PropTypes.func.isRequired,
     setStudentsForCurrentSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
     setSectionLockStatus: PropTypes.func.isRequired,
     selectSection: PropTypes.func.isRequired,
     setViewType: PropTypes.func.isRequired,
+    isCurrentLevelLab2: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -89,10 +90,7 @@ class TeacherPanel extends React.Component {
 
     const initialUserId = this.getSelectedUserId();
     if (initialUserId) {
-      console.log('Setting user ID from URL:', initialUserId);
-      this.props.setUserId(initialUserId);
-    } else {
-      console.log('No initial user ID from URL.');
+      this.props.setViewAsUserId(initialUserId);
     }
 
     this.loadInitialData();
@@ -146,21 +144,12 @@ class TeacherPanel extends React.Component {
     });
   };
 
-  isCurrentLevelLab2 = () => {
-    const currentLevel = this.props.levels?.find(level => level.isCurrentLevel);
-    return currentLevel?.usesLab2;
-  };
-
   onSelectUser = (id, selectType) => {
     this.logToFirehose('select_student', {select_type: selectType});
 
-    const isLab2Level = this.isCurrentLevelLab2();
-    if (isLab2Level) {
-      console.log('Teacher panel: select user is async because level is Lab2.');
-    }
-
     const isAsync =
-      isLab2Level || this.props.pageType === pageTypes.scriptOverview;
+      this.props.isCurrentLevelLab2 ||
+      this.props.pageType === pageTypes.scriptOverview;
     this.props.selectUser(id, isAsync);
   };
 
@@ -205,7 +194,7 @@ class TeacherPanel extends React.Component {
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle
-            isAsync={this.isCurrentLevelLab2()}
+            isAsync={this.props.isCurrentLevelLab2}
             logToFirehose={this.logToFirehose}
           />
           {displaySelectedStudentInfo && (
@@ -368,6 +357,15 @@ export default connect(
       lockableAuthorized &&
       hasLockableLessons(state.progress);
 
+    const levels = levelsForLessonId(
+      state.progress,
+      state.progress.currentLessonId
+    );
+
+    const isCurrentLevelLab2 = levels?.find(
+      level => level.isCurrentLevel
+    )?.usesLab2;
+
     return {
       viewAs: state.viewAs,
       hasSections: sectionIds.length > 0,
@@ -382,7 +380,8 @@ export default connect(
       teacherId: state.currentUser.userId,
       exampleSolutions: state.pageConstants?.exampleSolutions,
       currentLevelId: state.progress.currentLevelId,
-      levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
+      levels,
+      isCurrentLevelLab2,
     };
   },
   dispatch => ({
@@ -392,13 +391,13 @@ export default connect(
       updateQueryParam('version');
       if (isAsync) {
         dispatch(queryUserProgress(userId));
-        dispatch(setUserId(userId));
+        dispatch(setViewAsUserId(userId));
       } else {
         reload();
       }
     },
-    setUserId: userId => {
-      dispatch(setUserId(userId));
+    setViewAsUserId: viewAsUserId => {
+      dispatch(setViewAsUserId(viewAsUserId));
     },
     setStudentsForCurrentSection: (sectionId, students) => {
       dispatch(setStudentsForCurrentSection(sectionId, students));
