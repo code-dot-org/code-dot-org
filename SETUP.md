@@ -158,7 +158,7 @@ Setup steps for macOS:
           4. Confirm MySQL has started by running `brew services` again.
 
 4. Install the **Java 8 JSK**
-   1. Install [sdkman](https://sdkman.io/) and instal a suitable JDK 8. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
+   1. Install [sdkman](https://sdkman.io/) and install a suitable JDK 8. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
       1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
