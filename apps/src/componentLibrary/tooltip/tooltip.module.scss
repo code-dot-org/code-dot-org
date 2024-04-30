@@ -25,7 +25,6 @@
     position: absolute;
     inset-block-start: 100%;
     inset-inline-start: 50%;
-    margin-inline-start: -5px;
     border-width: 5px;
     border-style: solid;
     border-color: $light_gray_900 transparent transparent transparent;
@@ -36,10 +35,7 @@
   &::after {
     content: "";
     position: absolute;
-    //inset-block-end: 100%;
     inset-inline-end: 100%;
-    margin-inline-start: -5px;
-    border-width: 5px;
     border-style: solid;
     border-color: transparent $light_gray_900 transparent transparent;
 
@@ -55,8 +51,6 @@
     position: absolute;
     inset-block-end: 100%;
     inset-inline-start: 50%;
-    margin-left: -5px;
-    border-width: 5px;
     border-style: solid;
     border-color: transparent transparent $light_gray_900 transparent;
   }
@@ -67,8 +61,6 @@
     content: "";
     position: absolute;
     inset-inline-start: 100%;
-    margin-inline-end: -5px;
-    border-width: 5px;
     border-style: solid;
     border-color: transparent transparent transparent $light_gray_900;
 
@@ -87,6 +79,16 @@
     @include body-one;
     margin-bottom: 0;
   }
+
+  &::after {
+    border-width: 12px;
+    margin-inline-start: -12px;
+  }
+
+  &.tooltip-onLeft::after {
+    margin-inline-end: -12px;
+    margin-inline-start: 0;
+  }
 }
 
 .tooltip-m {
@@ -96,6 +98,15 @@
   span {
     @include body-two;
     margin-bottom: 0;
+  }
+
+  &::after {
+    border-width: 9px;
+    margin-inline-start: -9px;
+  }
+  &.tooltip-onLeft::after {
+    margin-inline-end: -9px;
+    margin-inline-start: 0;
   }
 }
 
@@ -107,6 +118,15 @@
     @include body-three;
     margin-bottom: 0;
   }
+
+  &::after {
+    border-width: 6px;
+    margin-inline-start: -6px;
+  }
+  &.tooltip-onLeft::after {
+    margin-inline-end: -6px;
+    margin-inline-start: 0;
+  }
 }
 
 .tooltip-xs {
@@ -116,5 +136,14 @@
   span {
     @include body-four;
     margin-bottom: 0;
+  }
+
+  &::after {
+    border-width: 6px;
+    margin-inline-start: -6px;
+  }
+  &.tooltip-onLeft::after {
+    margin-inline-end: -6px;
+    margin-inline-start: 0;
   }
 }
