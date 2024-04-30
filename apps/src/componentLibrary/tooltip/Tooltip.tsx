@@ -45,19 +45,25 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
   size = 'm',
 }) => {
   return (
-    <div
-      className={classnames(
-        moduleStyles.tooltip,
-        moduleStyles[`tooltip-${direction}`],
-        moduleStyles[`tooltip-${size}`],
-        className
-      )}
-      role="tooltip"
-    >
-      {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      <span className={moduleStyles.tooltipText}>{text}</span>
-      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
-    </div>
+    <>
+      <button aria-describedby={text} type="button">
+        hover me
+      </button>
+      <div
+        id={text}
+        className={classnames(
+          moduleStyles.tooltip,
+          moduleStyles[`tooltip-${direction}`],
+          moduleStyles[`tooltip-${size}`],
+          className
+        )}
+        role="tooltip"
+      >
+        {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+        <span className={moduleStyles.tooltipText}>{text}</span>
+        {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+      </div>
+    </>
   );
 };
 

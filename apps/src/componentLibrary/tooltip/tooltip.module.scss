@@ -2,6 +2,7 @@
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 
 .tooltip {
+  visibility: hidden;
   position: relative;
   display: flex;
   align-items: center;
@@ -14,6 +15,15 @@
   .tooltipText, i {
     color: $light_white;
   }
+}
+
+[aria-describedby]:hover,
+[aria-describedby]:focus {
+  position: relative;
+}
+[aria-describedby]:hover + [role="tooltip"],
+[aria-describedby]:focus + [role="tooltip"] {
+  visibility: visible;
 }
 
 // Direction
