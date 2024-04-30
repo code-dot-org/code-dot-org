@@ -23,6 +23,7 @@ export default function JoinSectionArea({
     resultName: null,
     resultId: null,
     sectionCapacity: null,
+    joiningPlSection: false,
   });
   const [joinedPlSections, setJoinedPlSections] = useState(
     initialJoinedPlSections

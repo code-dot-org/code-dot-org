@@ -66,7 +66,7 @@ class JoinSection extends React.Component {
           s => s.code === normalizedSectionCode
         );
         const sectionName = section.name;
-        const joiningPlSection = section.grades.includes('pl');
+        const joiningPlSection = section.grades?.includes('pl');
         this.props.updateSections(data.studentSections, data.plSections);
         this.props.updateSectionsResult(
           'join',
