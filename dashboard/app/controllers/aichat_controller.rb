@@ -17,7 +17,7 @@ class AichatController < ApplicationController
     # Check for PII / Profanity
     locale = params[:locale] || "en"
     filter_result = ShareFiltering.find_failure(params[:newMessage], locale)
-    if filter_result
+    if filter_result&.type == 'profanity'
       new_messages = [
         {
           role: 'user',
