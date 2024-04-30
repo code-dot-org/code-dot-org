@@ -107,7 +107,7 @@ properties_encryption_key: ''
 
 ### macOS
 
-These steps are for Apple devices running **macOS Monterey and Ventura**, including those running on [Apple Silicon (M1|M2|M3)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
+These steps are for Apple devices running **macOS 14.x**, including those running on [Apple Silicon (M1|M2|M3) ARM architecture CPUs](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
 
 Notes:
 - At this time, if you are using an M1 Macbook, we recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
