@@ -143,6 +143,7 @@ class RegistrationsController < Devise::RegistrationsController
         user: current_user,
         event_name: 'Sign Up Finished Backend',
         metadata: event_metadata,
+        get_enabled_experiments: true,
       )
     end
 
