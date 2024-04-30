@@ -21,10 +21,8 @@ class AichatControllerTest < ActionController::TestCase
       }
     }
     valid_message = "hello"
-    pii_violation_message = "my email is l.lovepadel@sports.edu"
     @profanity_violation_message = "Damn you, robot"
     @valid_params = @common_params.merge(newMessage: valid_message)
-    @pii_violation_params = @common_params.merge(newMessage: pii_violation_message)
     @profanity_violation_params = @common_params.merge(newMessage: @profanity_violation_message)
     @missing_stored_messages_params = @common_params.except(:storedMessages)
   end
@@ -109,14 +107,6 @@ class AichatControllerTest < ActionController::TestCase
     session = AichatSession.find(json_response['session_id'])
     assert_equal 4, JSON.parse(session.messages).length
     assert_equal 1, (JSON.parse(session.messages).count {|message| message["status"] == 'profanity_violation'})
-  end
-
-  test 'returns failure when chat message contains PII' do
-    sign_in(@genai_pilot_student)
-    ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'l.lovepadel@sports.edu'))
-    post :chat_completion, params: @pii_violation_params, as: :json
-    assert_equal ShareFiltering::FailureType::EMAIL, json_response["status"]
-    assert_equal "l.lovepadel@sports.edu", json_response["flagged_content"]
   end
 
   test 'can_request_aichat_chat_completion returns false when DCDO flag is set to `false`' do

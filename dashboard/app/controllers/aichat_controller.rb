@@ -14,7 +14,7 @@ class AichatController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    # Check for PII / Profanity
+    # Check for profanity
     locale = params[:locale] || "en"
     filter_result = ShareFiltering.find_failure(params[:newMessage], locale)
     if filter_result&.type == 'profanity'
