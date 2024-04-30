@@ -176,4 +176,37 @@ describe('SectionProgressSelector', () => {
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
     expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
   });
+
+  it('calls analytics when toggling to v2', () => {
+    const post = sinon.stub($, 'post');
+
+    renderDefault();
+
+    const toggle = screen.getByRole('button', {name: V2_PAGE_LINK_TEXT});
+
+    fireEvent.click(toggle);
+
+    expect(post).calledOnceWith('/api/v1/users/show_progress_table_v2', {
+      show_progress_table_v2: true,
+    });
+
+    post.restore();
+  });
+
+  it('calls analytics when toggling to v1', () => {
+    const post = sinon.stub($, 'post');
+
+    renderDefault();
+    store.dispatch(setShowProgressTableV2(true));
+
+    const toggle = screen.getByRole('button', {name: V1_PAGE_LINK_TEXT});
+
+    fireEvent.click(toggle);
+
+    expect(post).calledOnceWith('/api/v1/users/show_progress_table_v2', {
+      show_progress_table_v2: false,
+    });
+
+    post.restore();
+  });
 });
