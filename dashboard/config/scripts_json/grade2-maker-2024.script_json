@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade2-maker",
-    "serialized_at": "2024-04-23 21:35:03 UTC",
+    "serialized_at": "2024-04-29 23:16:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -114,7 +114,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "In today's **skill-building** lesson, the goal is to program the micro:bit to show different emotion images when you press different buttons. This could be used to help people who have difficulty reading facial expressions. The key concepts are: **events**, **inputs** and **outputs**. ",
-        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** ",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.\n",
         "student_overview": "Program the micro:bit to show different emotion icons when you press different buttons."
       },
       "seeding_key": {
@@ -1731,6 +1731,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_dance_party_unplugged_grade2"
+        ],
         "progression": "Dance Party"
       },
       "bonus": false,
@@ -1753,6 +1756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_flappyIntro_grade2"
+        ],
         "progression": "Video: Code Your Own Flappy Game"
       },
       "bonus": false,
@@ -1775,6 +1781,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events1_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1797,6 +1806,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events2_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1819,6 +1831,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events3_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1841,6 +1856,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events4_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1863,6 +1881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events5_grade2"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -1885,6 +1906,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events6_grade2"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -1907,6 +1931,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events7_grade2"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -1929,6 +1956,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events8_grade2"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -1951,6 +1981,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events9_grade2"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -1973,6 +2006,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events10_grade2"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -1995,6 +2031,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit_grade2"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -2017,6 +2056,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade2-maker-matching-1"
+        ],
         "progression": "Matching Activity"
       },
       "bonus": false,
@@ -2039,6 +2081,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_emotion_badge_grade2"
+        ],
         "progression": "Emotion Badge"
       },
       "bonus": false,
@@ -2061,6 +2106,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-matching-1"
+        ],
         "progression": "Content Assessment"
       },
       "bonus": false,
@@ -2083,6 +2131,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-matching-2"
+        ],
         "progression": "Content Assessment"
       },
       "bonus": false,
@@ -2105,6 +2156,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-3"
+        ],
         "progression": "Content Assessment"
       },
       "bonus": false,
@@ -2127,6 +2181,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-4"
+        ],
         "progression": "Content Assessment"
       },
       "bonus": false,
@@ -2149,6 +2206,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-5"
+        ],
         "progression": "Content Assessment"
       },
       "bonus": false,
@@ -2171,6 +2231,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MyLoopyRoboticFriends-Unplugged2022_maker_grade2"
+        ],
         "progression": "My Loopy Robotic Friends - Unplugged Activity"
       },
       "bonus": false,
@@ -2193,6 +2256,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_ArtistIntro_grade2"
+        ],
         "progression": "Video: The Artist in Code Studio"
       },
       "bonus": false,
@@ -2215,6 +2281,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops1_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2237,6 +2306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_artistLoops_grade2"
+        ],
         "progression": "Video: Repeat Blocks with the Artist"
       },
       "bonus": false,
@@ -2259,6 +2331,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops2_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2281,6 +2356,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops3_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2303,6 +2381,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops4_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2325,6 +2406,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops5_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2347,6 +2431,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops6_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2370,6 +2457,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseB_artist_loops7_grade2"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2392,6 +2482,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops8_grade2"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2414,6 +2507,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops9_grade2"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2436,6 +2532,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops10_grade2"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2458,6 +2557,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge1_grade2"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2480,6 +2582,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge2_grade2"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2502,6 +2607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_data wizard_grade2"
+        ],
         "progression": "Picturing Data"
       },
       "bonus": false,
@@ -2524,6 +2632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_grade2"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2546,6 +2657,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict2_grade2"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2568,6 +2682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2590,6 +2707,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2612,6 +2732,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_click_grade2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2634,6 +2757,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_explore_grade2"
+        ],
         "progression": "Exploration: Clicker Game"
       },
       "bonus": false,
@@ -2656,6 +2782,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_grade2"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2678,6 +2807,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_grade2"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2700,6 +2832,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_grade2"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2722,6 +2857,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_grade2"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2744,6 +2882,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_grade2"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
