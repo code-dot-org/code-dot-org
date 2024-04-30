@@ -9,10 +9,17 @@ import FontAwesomeV6Icon, {
 import moduleStyles from './tooltip.module.scss';
 
 export interface TooltipProps {
+  /** Tooltip text */
   text: string;
+  /** Tooltip left icon */
   iconLeft?: FontAwesomeV6IconProps;
+  /** Tooltip right icon */
   iconRight?: FontAwesomeV6IconProps;
+  /** Tooltip direction/position relative to connected element */
   direction?: 'onTop' | 'onRight' | 'onBottom' | 'onLeft';
+  /** Tooltip custom className */
+  className?: string;
+  /** Tooltip size */
   size?: ComponentSizeXSToL;
 }
 
@@ -33,20 +40,22 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
   text,
   iconLeft,
   iconRight,
-  direction,
-  size,
+  direction = 'onTop',
+  className,
+  size = 'm',
 }) => {
   return (
     <div
       className={classnames(
         moduleStyles.tooltip,
         moduleStyles[`tooltip-${direction}`],
-        moduleStyles[`tooltip-${size}`]
+        moduleStyles[`tooltip-${size}`],
+        className
       )}
       role="tooltip"
     >
       {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      <span>{text}</span>
+      <span className={moduleStyles.tooltipText}>{text}</span>
       {iconRight && <FontAwesomeV6Icon {...iconRight} />}
     </div>
   );

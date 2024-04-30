@@ -25,9 +25,16 @@ const SingleTemplate: StoryFn<TooltipProps> = args => <Tooltip {...args} />;
 
 const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
   <>
-    {args.components?.map(componentArg => (
-      <Tooltip key={componentArg.text} {...componentArg} />
-    ))}
+    <p>
+      * Margins on this screen does not represent Component's margins, and are
+      only added to improve storybook view *
+    </p>
+    <p>Multiple Tooltips:</p>
+    <div style={{display: 'flex', gap: '20px'}}>
+      {args.components?.map(componentArg => (
+        <Tooltip key={componentArg.text} {...componentArg} />
+      ))}
+    </div>
   </>
 );
 
@@ -40,14 +47,14 @@ export const IconsTooltipGroup = MultipleTemplate.bind({});
 IconsTooltipGroup.args = {
   components: [
     {
-      text: 'Tooltip right',
+      text: 'Tooltip',
     },
     {
-      text: 'Tooltip left',
+      text: 'Tooltip Icon Left',
       iconLeft: {iconStyle: 'solid', iconName: 'smile'},
     },
     {
-      text: 'Tooltip right',
+      text: 'Tooltip Icon Right',
       iconRight: {iconStyle: 'solid', iconName: 'smile'},
     },
   ],
@@ -57,19 +64,19 @@ export const DirectionOfTooltipGroup = MultipleTemplate.bind({});
 DirectionOfTooltipGroup.args = {
   components: [
     {
-      text: 'Text - onTop',
+      text: 'Tooltip - onTop',
       direction: 'onTop',
     },
     {
-      text: 'Text - onRight',
+      text: 'Tooltip - onRight',
       direction: 'onRight',
     },
     {
-      text: 'Text - onBottom',
+      text: 'Tooltip - onBottom',
       direction: 'onBottom',
     },
     {
-      text: 'Text - onLeft',
+      text: 'Tooltip - onLeft',
       direction: 'onLeft',
     },
   ],
@@ -79,19 +86,19 @@ export const SizesOfTooltipGroup = MultipleTemplate.bind({});
 SizesOfTooltipGroup.args = {
   components: [
     {
-      text: 'text - XS',
+      text: 'Tooltip - XS',
       size: 'xs',
     },
     {
-      text: 'text - S',
+      text: 'Tooltip - S',
       size: 's',
     },
     {
-      text: 'text - M',
+      text: 'Tooltip - M',
       size: 'm',
     },
     {
-      text: 'text - L',
+      text: 'Tooltip - L',
       size: 'l',
     },
   ],
