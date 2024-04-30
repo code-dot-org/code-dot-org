@@ -70,7 +70,7 @@ class MusiclabController < ApplicationController
 
     @projects = Project.
       find(project_ids).
-      map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"]}}.
+      map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"], labConfig: JSON.parse(project.value)["labConfig"]}}.
       compact_blank.
       to_json
   end

@@ -542,6 +542,8 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailgun-ruby (1.2.14)
+      rest-client (>= 2.0.2)
     mailjet (1.7.3)
       activesupport (>= 3.1.0)
       rack (>= 1.4.0)
@@ -1054,6 +1056,7 @@ DEPENDENCIES
   kaminari
   lograge!
   loofah (~> 2.19.1)
+  mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
   memory_profiler
   mini_magick (>= 4.10.0)
