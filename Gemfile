@@ -362,4 +362,5 @@ gem 'http', '~> 5.0'
 
 gem 'statsig', '~> 1.33'
 
+gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'

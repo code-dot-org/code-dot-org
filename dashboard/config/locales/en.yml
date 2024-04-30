@@ -1399,8 +1399,11 @@ en:
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Pixel Format"
   course_deprecated:
-    title: "Heads up! This curriculum is no longer available, but Code.org has newer options available for you."
-    button: "View new curriculum"
+    title: "Heads up! This %{path_type} is no longer available, but Code.org has newer options available for you."
+    curriculum: "curriculum"
+    project_type: "project type"
+    button: "View alternative courses"
+    projects_button: "Go to Projects"
   hoc_tutorial_email_subject: "Rock the Hour of Code with Code.org Tutorials!"
   hoc_tutorial_email_content:
     dear_teacher: "Dear %{teacher_name},"
@@ -1429,8 +1432,6 @@ en:
         This isn't currently supported.
         Please try launching Code.org again from a [supported method](%{supported_methods_url}).
       missing_tool_config: 'Your LTI Tool configuration is missing the required "%{field}" field'
-    iframe_button: "Open in New Tab"
-    iframe_message: "Code.org cannot be run in an embedded window. Please open it in a new tab."
     iframe_title: "Opening Code.org in New Tab"
     sign_up:
       warning1:
@@ -1438,7 +1439,7 @@ en:
         **This will create a new account for you**, using the email below.
         To access this new account again, **make sure to log-in via the %{provider} integration**!
       warning2:
-        If have you an existing account with this email (e.g. Google, Clever, or Personal Account),
+        If you have an existing account with this email (e.g. Google, Clever, or Personal Account),
         **you can continue to log-in to your existing account** via those methods.
     integration:
       client_id: "LMS Client ID"

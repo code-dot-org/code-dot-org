@@ -85,6 +85,7 @@ const EVENTS = {
   COMPLETED_EVENT: 'Section Setup Completed',
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
   PROGRESS_VIEWED: 'Section Progress Viewed',
+  PROGRESS_VIEWED_FIXED: 'Accurate V1 Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
@@ -246,6 +247,9 @@ const EVENTS = {
   // LTI Incubator
   LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
   LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
+
+  // Teacher Homepage
+  TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
 };
 
 const EVENT_GROUP_NAMES = {

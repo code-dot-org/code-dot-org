@@ -2,8 +2,8 @@ import {getStore} from '@cdo/apps/redux';
 import {
   applyPatches,
   deleteCachedUserModules,
-} from './patches/pythonScriptUtils';
-import {MATPLOTLIB_IMG_TAG} from './patches/patches';
+} from './pythonHelpers/pythonScriptUtils';
+import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 import {
   appendOutputImage,
   appendSystemMessage,
@@ -11,6 +11,7 @@ import {
   setAndSaveSource,
 } from './pythonlabRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import MetricsReporter from '../lib/metrics/MetricsReporter';
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
@@ -21,7 +22,7 @@ const callbacks = {};
 
 pyodideWorker.onmessage = event => {
   const {type, id, message} = event.data;
-  if (type === 'sysout') {
+  if (type === 'sysout' || type === 'syserr') {
     if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
       // This is a matplotlib image, so we need to append it to the output
       const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
@@ -37,6 +38,12 @@ pyodideWorker.onmessage = event => {
     return;
   } else if (type === 'error') {
     getStore().dispatch(appendSystemMessage(`Error: ${message}`));
+    return;
+  } else if (type === 'internal_error') {
+    MetricsReporter.logError({
+      type: 'PythonLabInternalError',
+      message,
+    });
     return;
   } else {
     console.warn(

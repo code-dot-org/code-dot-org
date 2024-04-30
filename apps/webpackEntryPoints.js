@@ -87,6 +87,7 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
   'lti/v1/_early_access_banner': './src/sites/studio/pages/lti/v1/_early_access_banner.js',
+  'lti/v1/iframe': './src/sites/studio/pages/lti/v1/iframe.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/home': './src/sites/studio/pages/maker/home.js',

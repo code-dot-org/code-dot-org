@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
@@ -41,6 +43,13 @@ class ProgressViewHeader extends Component {
       },
       {includeUserId: true}
     );
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight,
+    });
   };
 
   render() {
