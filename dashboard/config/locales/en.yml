@@ -1439,7 +1439,7 @@ en:
         **This will create a new account for you**, using the email below.
         To access this new account again, **make sure to log-in via the %{provider} integration**!
       warning2:
-        If have you an existing account with this email (e.g. Google, Clever, or Personal Account),
+        If you have an existing account with this email (e.g. Google, Clever, or Personal Account),
         **you can continue to log-in to your existing account** via those methods.
     integration:
       client_id: "LMS Client ID"
