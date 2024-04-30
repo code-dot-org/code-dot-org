@@ -31,3 +31,19 @@
     border: none !important;
   }
 }
+
+@mixin slider-thumb {
+  border: 1px solid $neutral_dark;
+  height: 32px;
+  width: 6px;
+  border-radius: 1px;
+  background: yellow;
+}
+
+@mixin slider-track {
+  width: 100%;
+  height: 6px;
+  background: $light_gray_700;   
+  border-radius: 1px;
+  border: 0.5px solid $neutral_dark;
+}

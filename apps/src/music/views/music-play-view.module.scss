@@ -1,4 +1,5 @@
 @import 'color';
+@import '../../mixins.scss';
 
 .musicPlayViewContainer {
   display: flex;
@@ -52,14 +53,39 @@
       align-items: center;
       gap: 1rem;
 
-      input[type='range'] {
-        overflow: hidden;
-        width: 100%;
-        accent-color: yellow;
-
-        background-color: $light_gray_800;
-        color: $light_gray_800;
+      input[type=range] {
+        -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+        width: 100%; /* Specific width is required for Firefox. */
+        background: transparent; /* Otherwise white in Chrome */
       }
+      
+      input[type=range]::-ms-track {
+        width: 100%;      
+        /* Hides the slider so custom styles can be added */
+        background: transparent; 
+        border-color: transparent;
+        color: transparent;
+      }
+
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        @include slider-thumb;
+        margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox it is automatic */
+      }
+
+      /* Firefox */
+      input[type=range]::-moz-range-thumb {
+        @include slider-thumb;
+      }
+
+      input[type=range]::-webkit-slider-runnable-track{
+        @include slider-track;
+      }
+
+      /* Firefox */
+      input[type=range]::-moz-range-track {
+        @include slider-track;
+      }    
     }
 
     .musicPlayViewButtonsSection {
