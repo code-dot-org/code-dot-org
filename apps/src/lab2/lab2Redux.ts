@@ -57,6 +57,8 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
+  // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
+  isShareView: boolean | undefined;
 }
 
 const initialState: LabState = {
@@ -67,6 +69,7 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  isShareView: undefined,
 };
 
 // Thunks
@@ -275,6 +278,9 @@ const labSlice = createSlice({
       state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;
     },
+    setIsShareView(state, action: PayloadAction<boolean>) {
+      state.isShareView = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -423,8 +429,13 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
-export const {setIsLoading, setPageError, clearPageError, setValidationState} =
-  labSlice.actions;
+export const {
+  setIsLoading,
+  setPageError,
+  clearPageError,
+  setValidationState,
+  setIsShareView,
+} = labSlice.actions;
 
 // These should not be set outside of the lab slice.
 const {setChannel, onLevelChange} = labSlice.actions;

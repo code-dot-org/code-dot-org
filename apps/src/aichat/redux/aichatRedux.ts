@@ -29,6 +29,7 @@ import {
   ViewMode,
   Visibility,
 } from '../types';
+import {getTypedKeys} from '@cdo/apps/types/utils';
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],
@@ -247,8 +248,7 @@ export const submitChatContents = createAsyncThunk(
     } = state.aichat;
 
     const aichatContext: AichatContext = {
-      userId: state.currentUser.userId,
-      currentLevelId: state.progress.currentLevelId,
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
@@ -273,7 +273,8 @@ export const submitChatContents = createAsyncThunk(
           )
         : [],
       aiCustomizations,
-      aichatContext
+      aichatContext,
+      currentSessionId
     );
     console.log('chatApiResponse', chatApiResponse);
 
@@ -460,18 +461,16 @@ const aichatSlice = createSlice({
 });
 
 const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
-  for (const key of Object.keys(modelCardInfo)) {
-    const typedKey = key as keyof ModelCardInfo;
-
-    if (typedKey === 'isPublished') {
+  for (const key of getTypedKeys(modelCardInfo)) {
+    if (key === 'isPublished') {
       continue;
-    } else if (typedKey === 'exampleTopics') {
+    } else if (key === 'exampleTopics') {
       if (
         !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
       ) {
         return false;
       }
-    } else if (!modelCardInfo[typedKey].length) {
+    } else if (!modelCardInfo[key].length) {
       return false;
     }
   }
@@ -479,11 +478,20 @@ const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   return true;
 };
 
+const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
+  getTypedKeys(fieldVisibilities).every(
+    key => fieldVisibilities[key] === Visibility.HIDDEN
+  );
+
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
-  (state: {aichat: AichatState}) =>
-    state.aichat.currentAiCustomizations.modelCardInfo,
+  (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
   hasFilledOutModelCard
+);
+
+export const selectAllFieldsHidden = createSelector(
+  (state: RootState) => state.aichat.fieldVisibilities,
+  allFieldsHidden
 );
 
 registerReducers({aichat: aichatSlice.reducer});

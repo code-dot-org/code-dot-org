@@ -8291,7 +8291,7 @@ __metadata:
     progress-bar-webpack-plugin: ^2.1.0
     prop-types: ^15.6.2
     pusher-js: 4.1.0
-    pyodide: ^0.24.1
+    pyodide: ^0.25.1
     qrcode.react: ^0.8.0
     qtip2: 2.2.0
     query-string: 4.1.0
@@ -20887,13 +20887,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"pyodide@npm:^0.24.1":
-  version: 0.24.1
-  resolution: "pyodide@npm:0.24.1"
+"pyodide@npm:^0.25.1":
+  version: 0.25.1
+  resolution: "pyodide@npm:0.25.1"
   dependencies:
     base-64: ^1.0.0
     ws: ^8.5.0
-  checksum: ab18e5eed3195b919c0e70b39a81bab0449ab56e42f28e8635664e688dba732da060492505719c3cb477302979791dbcc1df09ff39dc9e0816064b69818f283d
+  checksum: 744a88a4ab024ff58881e5d526a494fda83d2d65ec142bf9fb26c8a3a9140fcd7a98c03b4e41d8a0b32e9f8dd34ca4ff2ce43cc7b55ff29cbed3e7df130b4030
   languageName: node
   linkType: hard
 
