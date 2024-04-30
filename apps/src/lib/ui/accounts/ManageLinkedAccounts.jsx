@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
 import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
 import fontConstants from '@cdo/apps/fontConstants';
+import lockImage from './images/lock.svg';
 
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 const authOptionPropType = PropTypes.shape({
@@ -22,6 +23,9 @@ const EMPTY_AUTH_OPTION = {
   credentialType: '',
   email: '',
   error: '',
+};
+const CONNECT_DISABLED_STATUS = {
+  PARENTAL_PERMISSION_REQUIRED: 'parentalPermissionRequired',
 };
 const DISCONNECT_DISABLED_STATUS = {
   ROSTER_SECTION: 'rosterSection',
@@ -71,6 +75,14 @@ class ManageLinkedAccounts extends React.Component {
     return true;
   };
 
+  shouldDisableConnectButton = authOption => {
+    return (
+      PERSONAL_LOGIN_TYPES.includes(authOption.credentialType) &&
+      !this.formatEmail(authOption) &&
+      !this.props.personalAccountLinkingEnabled
+    );
+  };
+
   disconnectDisabledStatus = authOption => {
     // Cannot disconnect from Google or Clever if student is in a Google Classroom or Clever section
     if (
@@ -88,6 +100,13 @@ class ManageLinkedAccounts extends React.Component {
     });
     if (!this.userHasLoginOption(otherAuthOptions)) {
       return DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS;
+    }
+  };
+
+  connectDisabledStatus = authOption => {
+    // When the policy status disables the button, that's a particular state
+    if (this.shouldDisableConnectButton(authOption)) {
+      return CONNECT_DISABLED_STATUS.PARENTAL_PERMISSION_REQUIRED;
     }
   };
 
@@ -134,7 +153,29 @@ class ManageLinkedAccounts extends React.Component {
     return formattedOptions;
   };
 
+  renderAuthOption = authOption => {
+    return (
+      <OauthConnection
+        key={authOption.id || _.uniqueId('empty_')}
+        displayName={this.getDisplayName(authOption.credentialType)}
+        id={authOption.id}
+        email={this.formatEmail(authOption)}
+        credentialType={authOption.credentialType}
+        disabledStatus={
+          authOption.id
+            ? this.disconnectDisabledStatus(authOption)
+            : this.connectDisabledStatus(authOption)
+        }
+        error={authOption.error}
+        personalAccountLinkingEnabled={this.props.personalAccountLinkingEnabled}
+      />
+    );
+  };
+
   render() {
+    const lockedOptions = this.formatAuthOptions().filter(option => {
+      return this.shouldDisableConnectButton(option);
+    });
     return (
       <div style={styles.container}>
         <hr />
@@ -154,26 +195,51 @@ class ManageLinkedAccounts extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.formatAuthOptions().map(option => {
-              return (
-                <OauthConnection
-                  key={option.id || _.uniqueId('empty_')}
-                  displayName={this.getDisplayName(option.credentialType)}
-                  id={option.id}
-                  email={this.formatEmail(option)}
-                  credentialType={option.credentialType}
-                  disconnectDisabledStatus={
-                    option.id ? this.disconnectDisabledStatus(option) : null
-                  }
-                  error={option.error}
-                  personalAccountLinkingEnabled={
-                    this.props.personalAccountLinkingEnabled
-                  }
-                />
-              );
-            })}
+            {/* The options that are always available. */}
+            {this.formatAuthOptions()
+              .filter(option => {
+                return !this.shouldDisableConnectButton(option);
+              })
+              .map(this.renderAuthOption)}
           </tbody>
         </table>
+        {lockedOptions.length > 0 && (
+          <p style={styles.message}>
+            {i18n.manageLinkedAccounts_parentalPermissionRequired()}
+          </p>
+        )}
+        {lockedOptions.length > 0 && (
+          <div style={styles.lockContainer}>
+            <table style={{...styles.table, ...styles.lockedTable}}>
+              <thead>
+                <tr>
+                  <th
+                    style={{...styles.headerCell, ...styles.headerCellLocked}}
+                  >
+                    {i18n.manageLinkedAccounts_loginType()}
+                  </th>
+                  <th
+                    style={{...styles.headerCell, ...styles.headerCellLocked}}
+                  >
+                    {i18n.manageLinkedAccounts_emailAddress()}
+                  </th>
+                  <th
+                    style={{...styles.headerCell, ...styles.headerCellLocked}}
+                  >
+                    {i18n.manageLinkedAccounts_actions()}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* The options that could be locked by account policy. */}
+                {lockedOptions.map(this.renderAuthOption)}
+              </tbody>
+            </table>
+            <div aria-hidden="true" style={styles.lockSection}>
+              <img alt="" style={styles.lockImage} src={lockImage} />
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -196,42 +262,34 @@ class OauthConnection extends React.Component {
     id: PropTypes.number,
     credentialType: PropTypes.string.isRequired,
     email: PropTypes.string,
-    disconnectDisabledStatus: PropTypes.string,
+    disabledStatus: PropTypes.string,
     error: PropTypes.string,
     personalAccountLinkingEnabled: PropTypes.bool.isRequired,
   };
 
-  getDisconnectDisabledTooltip = () => {
-    switch (this.props.disconnectDisabledStatus) {
+  getDisabledTooltip = () => {
+    switch (this.props.disabledStatus) {
       case DISCONNECT_DISABLED_STATUS.ROSTER_SECTION:
         return i18n.manageLinkedAccounts_rosteredSectionTooltip();
       case DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS:
         return i18n.manageLinkedAccounts_noLoginTooltip();
+      case CONNECT_DISABLED_STATUS.PARENTAL_PERMISSION_REQUIRED:
+        return i18n.manageLinkedAccounts_parentalPermissionRequired();
       default:
         return null;
     }
   };
 
-  shouldDisableConnectButton = () => {
-    return (
-      PERSONAL_LOGIN_TYPES.includes(this.props.credentialType) &&
-      !this.props.personalAccountLinkingEnabled
-    );
-  };
-
   render() {
-    const {
-      credentialType,
-      disconnectDisabledStatus,
-      displayName,
-      id,
-      email,
-      error,
-    } = this.props;
+    const {credentialType, disabledStatus, displayName, id, email, error} =
+      this.props;
     // if given an email, we are already connected to this provider and should
     // present the option to disconnect. Otherwise, we should present the
     // option to connect.
     const isConnected = !!email;
+    const cellStyles = !disabledStatus
+      ? styles.cell
+      : {...styles.cell, ...styles.cellLocked};
     const emailStyles = isConnected
       ? styles.cell
       : {...styles.cell, ...styles.emptyEmailCell};
@@ -244,20 +302,20 @@ class OauthConnection extends React.Component {
       ? `/users/auth/${id}/disconnect`
       : `/users/auth/${credentialType}?action=connect`;
 
-    // There are two causes for errors: disconnectDisabledStatus and logging in to
+    // There are two causes for errors: disabledStatus and logging in to
     // Google from the Maker App. Set the appropriate error text.
-    let disconnectDisabledMessage;
-    if (!!disconnectDisabledStatus) {
-      disconnectDisabledMessage = this.getDisconnectDisabledTooltip();
+    let disabledMessage;
+    if (!!disabledStatus) {
+      disabledMessage = this.getDisabledTooltip();
     }
 
     return (
       <tr>
-        <td style={styles.cell}>{displayName}</td>
+        <td style={cellStyles}>{displayName}</td>
         <td style={emailStyles}>
           {email || i18n.manageLinkedAccounts_notConnected()}
         </td>
-        <td style={styles.cell}>
+        <td style={cellStyles}>
           <div data-for={tooltipId} data-tip>
             <form
               style={styles.noMargin}
@@ -275,21 +333,18 @@ class OauthConnection extends React.Component {
                 type="submit"
                 style={styles.button}
                 text={buttonText}
-                disabled={
-                  !!disconnectDisabledMessage ||
-                  (!isConnected && this.shouldDisableConnectButton())
-                }
+                disabled={!!disabledMessage}
               />
               <RailsAuthenticityToken />
             </form>
-            {!!disconnectDisabledMessage && (
+            {!!disabledMessage && (
               <ReactTooltip
                 id={tooltipId}
                 offset={styles.tooltipOffset}
                 role="tooltip"
                 effect="solid"
               >
-                <div style={styles.tooltip}> {disconnectDisabledMessage} </div>
+                <div style={styles.tooltip}> {disabledMessage} </div>
               </ReactTooltip>
             )}
           </div>
@@ -315,6 +370,9 @@ const styles = {
     ...tableLayoutStyles.table,
     marginTop: GUTTER,
   },
+  lockedTable: {
+    marginTop: 0,
+  },
   headerCell: {
     ...tableLayoutStyles.headerCell,
     paddingLeft: GUTTER,
@@ -322,10 +380,16 @@ const styles = {
     fontWeight: 'normal',
     width: CELL_WIDTH,
   },
+  headerCellLocked: {
+    color: color.light_gray,
+  },
   cell: {
     ...tableLayoutStyles.cell,
     paddingLeft: GUTTER,
     paddingRight: GUTTER,
+  },
+  cellLocked: {
+    color: color.light_gray,
   },
   emptyEmailCell: {
     color: color.light_gray,
@@ -349,6 +413,31 @@ const styles = {
     paddingLeft: GUTTER / 2,
     color: color.red,
     fontStyle: 'italic',
+  },
+  message: {
+    paddingTop: GUTTER,
+  },
+  lockContainer: {
+    position: 'relative',
+  },
+  lockSection: {
+    /* Cover the entire locked table */
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    /* Center the 'lock' image */
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    /* Allow the tooltip to appear over the button */
+    pointerEvents: 'none',
+  },
+  lockImage: {
+    width: '3rem',
+    height: '3rem',
   },
   noMargin: {
     margin: 0,
