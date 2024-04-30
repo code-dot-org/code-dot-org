@@ -29,6 +29,21 @@
     font-weight: 400 !important;
     width: 100% !important;
   }
+
+  button {
+    border: 0;
+    padding-inline: 0;
+
+    &:hover {
+      background: none !important;
+      text-decoration: underline !important;
+    }
+  }
+
+  .errorMessage {
+    margin-block: 0.125rem 0;
+    color: $light_negative_500;
+  }
 }
 
 .inputContainer {
@@ -44,6 +59,6 @@
   }
 
   .disabledLabel {
-      color: $light_gray_300 !important;
-    }
+    color: $light_gray_300 !important;
   }
+}

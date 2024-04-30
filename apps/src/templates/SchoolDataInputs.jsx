@@ -117,7 +117,9 @@ export default function SchoolDataInputs({
                 value={zip}
               />
               {zip && !zipSearchReady && (
-                <BodyThreeText>{i18n.zipInvalidMessage()}</BodyThreeText>
+                <BodyThreeText className={style.errorMessage}>
+                  {i18n.zipInvalidMessage()}
+                </BodyThreeText>
               )}
             </label>
             <SchoolZipSearch
