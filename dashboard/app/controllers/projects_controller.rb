@@ -365,7 +365,8 @@ class ProjectsController < ApplicationController
       params[:channel_id] = params[:channel_id].tr(cipher, alphabet)
     end
 
-    redirect_for_lab2 = redirect_view_for_lab2
+    set_lab2_responsive_view_options
+    redirect_for_lab2 = redirect_edit_view_for_lab2
     return redirect_for_lab2 if redirect_for_lab2
 
     iframe_embed = params[:iframe_embed] == true
@@ -589,12 +590,9 @@ class ProjectsController < ApplicationController
   # Redirect to the correct view/edit page for Lab2 projects. If a project owner is on a /view
   # page, redirect to /edit. If a non-owner is on an /edit page, redirect to /view.
   # For legacy (non-Lab2) labs, this is handled on the front-end.
-  private def redirect_view_for_lab2
+  private def redirect_edit_view_for_lab2
     return nil unless @level.uses_lab2?
-    # If the user is on the play view '/projects/channel_id', set `response_content`.`
-    if params[:share] == true
-      view_options(responsive_content: true)
-    end
+
     project = Projects.new(get_storage_id).get(params[:channel_id])
     is_owner = project[:isOwner]
 
@@ -602,6 +600,14 @@ class ProjectsController < ApplicationController
     return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && request.path.ends_with?('/edit')
   end
 
+  private def set_lab2_responsive_view_options
+    return nil unless @level.uses_lab2?
+  
+    # If the user is on the play view '/projects/channel_id', set `response_content`.`
+    if params[:share] == true
+      view_options(responsive_content: true)
+    end
+  end
   # Automatically catch authorization exceptions on any methods in this controller
   # Overrides handler defined in application_controller.rb.
   # Special for projects controller - when forbidden, redirect to home instead
