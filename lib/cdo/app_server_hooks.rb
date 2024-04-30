@@ -34,6 +34,7 @@ module Cdo
       # intialized in config/initializers/statsig.rb
       require 'cdo/statsig'
       Cdo::StatsigInitializer.init
+      Aws.empty_connection_pools!
     end
   end
 end
