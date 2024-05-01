@@ -4,7 +4,7 @@
 
 - artist_alt_text = ["Miley Cyrus", "BTS", "Lil Nas X", "Harry Styles", "Nicki Minaj", "Rosalia"]
 
-%ul.dance-party-featured-artists.clear-styles.flex-container.justify-space-between.wrap
+%ul.featured-artists.clear-styles.flex-container.justify-space-between.wrap
   - artist_index.times do |index|
     %li
       %img{src: artist_photo[index], alt: artist_alt_text[index]}
