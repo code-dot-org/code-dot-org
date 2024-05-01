@@ -186,7 +186,7 @@ describe('SectionProgressSelector', () => {
 
     renderDefault();
 
-    const toggle = screen.getByRole('button', {name: V2_PAGE_LINK_TEXT});
+    const toggle = screen.getByRole('button', {name: V1_PAGE_LINK_TEXT});
 
     fireEvent.click(toggle);
 
@@ -207,7 +207,7 @@ describe('SectionProgressSelector', () => {
     renderDefault();
     store.dispatch(setShowProgressTableV2(true));
 
-    const toggle = screen.getByRole('button', {name: V1_PAGE_LINK_TEXT});
+    const toggle = screen.getByRole('button', {name: V2_PAGE_LINK_TEXT});
 
     fireEvent.click(toggle);
 
