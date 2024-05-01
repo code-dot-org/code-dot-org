@@ -27,6 +27,7 @@ import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
 import PanelsLabView from '@cdo/apps/panels/PanelsLabView';
 import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
 import Loading from './Loading';
+import ExtraLinks from './ExtraLinks';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -192,6 +193,7 @@ const VisibilityContainer: React.FunctionComponent<
         visible && moduleStyles.visible
       )}
     >
+      <ExtraLinks />
       {children}
     </div>
   );
