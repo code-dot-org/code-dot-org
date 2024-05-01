@@ -139,9 +139,22 @@ export const setUpWithLevel = createAsyncThunk(
               payload.userId,
               payload.scriptId
             );
+
       // Only set the project manager and initiate load
       // if this request hasn't been cancelled.
       if (thunkAPI.signal.aborted) {
+        return;
+      }
+
+      // We might be a teacher attempting to view a student level that hasn't been
+      // started, and there is no project manager available.
+      if (!projectManager) {
+        // If the level hasn't been started, we can skip loading projects data.
+        setProjectAndLevelData(
+          {levelProperties},
+          thunkAPI.signal.aborted,
+          thunkAPI.dispatch
+        );
         return;
       }
 
