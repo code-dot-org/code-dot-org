@@ -5,7 +5,28 @@
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
-    "encrypted": "false"
+    "encrypted": "false",
+    "source": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print('Hello start!')",
+          "folderId": "1",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "src",
+          "parentId": "0",
+          "open": true
+        }
+      }
+    }
   },
   "published": true
 }]]></config>

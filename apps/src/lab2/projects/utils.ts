@@ -3,8 +3,9 @@ import {ProjectFile} from '../types';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.
-interface PartialAppOptions {
+export interface PartialAppOptions {
   channel: string;
+  editBlocks: string;
   levelId: number;
   share: boolean;
 }
