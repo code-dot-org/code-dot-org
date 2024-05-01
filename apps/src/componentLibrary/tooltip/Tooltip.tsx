@@ -45,7 +45,7 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
   size = 'm',
 }) => {
   return (
-    <>
+    <div style={{position: 'relative', width: 'fit-content'}}>
       <button aria-describedby={text} type="button">
         hover me
       </button>
@@ -63,7 +63,7 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
         <span className={moduleStyles.tooltipText}>{text}</span>
         {iconRight && <FontAwesomeV6Icon {...iconRight} />}
       </div>
-    </>
+    </div>
   );
 };
 

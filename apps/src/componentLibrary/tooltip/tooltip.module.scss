@@ -3,7 +3,8 @@
 
 .tooltip {
   visibility: hidden;
-  position: relative;
+  position: absolute;
+  z-index: 10;
   display: flex;
   align-items: center;
   width: fit-content;
@@ -21,6 +22,7 @@
 [aria-describedby]:focus {
   position: relative;
 }
+
 [aria-describedby]:hover + [role="tooltip"],
 [aria-describedby]:focus + [role="tooltip"] {
   visibility: visible;
@@ -29,6 +31,14 @@
 // Direction
 .tooltip-onTop {
   display: flex;
+  inset-block-end: 100%;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+
+  html[dir='rtl'] & {
+    transform: translateX(50%);
+  }
+
 
   &::after {
     content: "";
@@ -42,6 +52,12 @@
 }
 
 .tooltip-onRight {
+  inset-block-start: 50%;
+  inset-inline-start: 100%;
+  inset-inline-end: -100%;
+  transform: translateY(-50%);
+
+
   &::after {
     content: "";
     position: absolute;
@@ -56,6 +72,14 @@
 }
 
 .tooltip-onBottom {
+  inset-block-start: auto;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+
+  html[dir='rtl'] & {
+    transform: translateX(50%);
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -67,6 +91,11 @@
 }
 
 .tooltip-onLeft {
+  inset-block-start: 50%;
+  inset-inline-start: -100%;
+  inset-inline-end: 100%;
+  transform: translateY(-50%);
+
   &::after {
     content: "";
     position: absolute;
@@ -114,6 +143,7 @@
     border-width: 9px;
     margin-inline-start: -9px;
   }
+
   &.tooltip-onLeft::after {
     margin-inline-end: -9px;
     margin-inline-start: 0;
@@ -133,6 +163,7 @@
     border-width: 6px;
     margin-inline-start: -6px;
   }
+
   &.tooltip-onLeft::after {
     margin-inline-end: -6px;
     margin-inline-start: 0;
@@ -152,6 +183,7 @@
     border-width: 6px;
     margin-inline-start: -6px;
   }
+
   &.tooltip-onLeft::after {
     margin-inline-end: -6px;
     margin-inline-start: 0;
