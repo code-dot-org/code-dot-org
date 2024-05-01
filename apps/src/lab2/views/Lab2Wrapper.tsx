@@ -73,8 +73,9 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
       <div
         id="lab-container"
         className={classNames(
-          !isShareView && moduleStyles.labContainer,
-          isShareView && moduleStyles.shareViewContainer
+          isLoading && moduleStyles.labContainerLoading,
+          moduleStyles.labContainer,
+          isShareView && moduleStyles.labContainerShareView
         )}
       >
         {children}

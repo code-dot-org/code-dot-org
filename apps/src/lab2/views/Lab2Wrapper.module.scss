@@ -23,6 +23,11 @@
     pointer-events: none;
   }
 
+  &ShareView {
+    top: 0;
+    bottom: 0;
+  }
+
   .pageErrorContainer {
     @extend %full-container-overlay;
     animation: fadein 0.5s;
