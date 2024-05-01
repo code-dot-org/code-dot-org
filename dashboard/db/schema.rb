@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_16_200438) do
+ActiveRecord::Schema.define(version: 2024_05_01_215821) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -166,6 +166,18 @@ ActiveRecord::Schema.define(version: 2024_04_16_200438) do
     t.text "qtip_config"
     t.string "on"
     t.string "callout_text"
+  end
+
+  create_table "cap_user_events", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.string "name", limit: 64, null: false
+    t.datetime "occurred_at", null: false
+    t.integer "user_id", null: false
+    t.string "policy", limit: 16, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name", "policy"], name: "index_cap_user_events_on_name_and_policy"
+    t.index ["policy"], name: "index_cap_user_events_on_policy"
+    t.index ["user_id"], name: "index_cap_user_events_on_user_id"
   end
 
   create_table "census_state_course_codes", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2411,6 +2423,7 @@ ActiveRecord::Schema.define(version: 2024_04_16_200438) do
 
   add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
   add_foreign_key "ai_tutor_interaction_feedbacks", "users"
+  add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "hint_view_requests", "users"
