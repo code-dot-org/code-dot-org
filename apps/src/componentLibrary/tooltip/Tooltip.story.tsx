@@ -1,7 +1,9 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
-import Tooltip, {TooltipProps} from './index';
+import {Button} from '@cdo/apps/componentLibrary/button';
+
+import Tooltip, {TooltipOverlay, TooltipProps} from './index';
 
 export default {
   title: 'DesignSystem/Tooltip', // eslint-disable-line storybook/no-title-property-in-meta
@@ -21,7 +23,14 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: StoryFn<TooltipProps> = args => <Tooltip {...args} />;
+const SingleTemplate: StoryFn<TooltipProps> = args => (
+  <TooltipOverlay>
+    <button aria-describedby={args.tooltipId} type="button">
+      Hover me
+    </button>
+    <Tooltip {...args} />
+  </TooltipOverlay>
+);
 
 const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
   <>
@@ -32,7 +41,16 @@ const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
     <p>Multiple Tooltips:</p>
     <div style={{display: 'flex', gap: '20px'}}>
       {args.components?.map(componentArg => (
-        <Tooltip key={componentArg.text} {...componentArg} />
+        <TooltipOverlay key={componentArg.tooltipId}>
+          <Button
+            aria-describedby={componentArg.tooltipId}
+            onClick={() => {}}
+            color="white"
+            text="Hover me"
+            size="xs"
+          />
+          <Tooltip {...componentArg} />
+        </TooltipOverlay>
       ))}
     </div>
   </>
@@ -41,6 +59,8 @@ const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
 export const DefaultTooltip = SingleTemplate.bind({});
 DefaultTooltip.args = {
   text: 'Tooltip Label',
+  direction: 'onBottom',
+  tooltipId: 'tooltipId',
 };
 
 export const IconsTooltipGroup = MultipleTemplate.bind({});
@@ -48,13 +68,16 @@ IconsTooltipGroup.args = {
   components: [
     {
       text: 'Tooltip',
+      tooltipId: 'tooltipNoIcon',
     },
     {
       text: 'Tooltip Icon Left',
+      tooltipId: 'tooltipIconLeft',
       iconLeft: {iconStyle: 'solid', iconName: 'smile'},
     },
     {
       text: 'Tooltip Icon Right',
+      tooltipId: 'tooltipIconRight',
       iconRight: {iconStyle: 'solid', iconName: 'smile'},
     },
   ],
@@ -65,18 +88,22 @@ DirectionOfTooltipGroup.args = {
   components: [
     {
       text: 'Tooltip - onTop',
+      tooltipId: 'tooltipOnTop',
       direction: 'onTop',
     },
     {
       text: 'Tooltip - onRight',
+      tooltipId: 'tooltipOnRight',
       direction: 'onRight',
     },
     {
       text: 'Tooltip - onBottom',
+      tooltipId: 'tooltipOnBottom',
       direction: 'onBottom',
     },
     {
       text: 'Tooltip - onLeft',
+      tooltipId: 'tooltipOnLeft',
       direction: 'onLeft',
     },
   ],
@@ -87,18 +114,22 @@ SizesOfTooltipGroup.args = {
   components: [
     {
       text: 'Tooltip - XS',
+      tooltipId: 'tooltipXS',
       size: 'xs',
     },
     {
       text: 'Tooltip - S',
+      tooltipId: 'tooltipS',
       size: 's',
     },
     {
       text: 'Tooltip - M',
+      tooltipId: 'tooltipM',
       size: 'm',
     },
     {
       text: 'Tooltip - L',
+      tooltipId: 'tooltipL',
       size: 'l',
     },
   ],

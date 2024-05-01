@@ -11,6 +11,9 @@ import moduleStyles from './tooltip.module.scss';
 export interface TooltipProps {
   /** Tooltip text */
   text: string;
+  /** Tooltip id Required to connect the element using the tooltip.
+   *  Also you need to pass this id to that element as aria-describedBy html attribute */
+  tooltipId: string;
   /** Tooltip left icon */
   iconLeft?: FontAwesomeV6IconProps;
   /** Tooltip right icon */
@@ -22,6 +25,22 @@ export interface TooltipProps {
   /** Tooltip size */
   size?: ComponentSizeXSToL;
 }
+
+export interface TooltipOverlayProps {
+  /** TooltipOverlay children (Element that needs a Tooltip + Tooltip itself) */
+  children: React.ReactNode;
+  /** TooltipOverlay custom className */
+  className?: string;
+}
+
+export const TooltipOverlay: React.FunctionComponent<TooltipOverlayProps> = ({
+  children,
+  className,
+}) => (
+  <div className={classnames(moduleStyles.tooltipOverlay, className)}>
+    {children}
+  </div>
+);
 
 /**
  * ## Production-ready Checklist:
@@ -38,6 +57,7 @@ export interface TooltipProps {
  */
 const Tooltip: React.FunctionComponent<TooltipProps> = ({
   text,
+  tooltipId,
   iconLeft,
   iconRight,
   direction = 'onTop',
@@ -45,24 +65,19 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
   size = 'm',
 }) => {
   return (
-    <div style={{position: 'relative', width: 'fit-content'}}>
-      <button aria-describedby={text} type="button">
-        hover me
-      </button>
-      <div
-        id={text}
-        className={classnames(
-          moduleStyles.tooltip,
-          moduleStyles[`tooltip-${direction}`],
-          moduleStyles[`tooltip-${size}`],
-          className
-        )}
-        role="tooltip"
-      >
-        {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-        <span className={moduleStyles.tooltipText}>{text}</span>
-        {iconRight && <FontAwesomeV6Icon {...iconRight} />}
-      </div>
+    <div
+      id={tooltipId}
+      className={classnames(
+        moduleStyles.tooltip,
+        moduleStyles[`tooltip-${direction}`],
+        moduleStyles[`tooltip-${size}`],
+        className
+      )}
+      role="tooltip"
+    >
+      {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+      <span className={moduleStyles.tooltipText}>{text}</span>
+      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
     </div>
   );
 };

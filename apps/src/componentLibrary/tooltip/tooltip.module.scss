@@ -1,15 +1,22 @@
 @import "color";
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 
+.tooltipOverlay {
+  position: relative;
+  width: fit-content;
+}
+
 .tooltip {
   visibility: hidden;
   position: absolute;
   z-index: 10;
   display: flex;
   align-items: center;
-  width: fit-content;
   height: fit-content;
   background-color: $light_gray_900;
+  min-width: 60px;
+  max-width: 250px;
+  text-align: center;
   border-radius: 0.25rem;
   box-shadow: 0 8px 12px 0 rgb(0 0 0 / 0.12), 0 0 12px 0 rgba(0 0 0 / 0.12);
 
@@ -93,8 +100,8 @@
 .tooltip-onLeft {
   inset-block-start: 50%;
   inset-inline-start: -100%;
-  inset-inline-end: 100%;
-  transform: translateY(-50%);
+  //inset-inline-end: -100%;
+  transform: translate(calc(-50% - 9px),-50%);
 
   &::after {
     content: "";

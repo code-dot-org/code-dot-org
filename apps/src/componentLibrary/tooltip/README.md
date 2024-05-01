@@ -5,7 +5,7 @@
 This package exports one styled React component: [Tooltip](Tooltip.tsx). You can import it like this:
 
 ```javascript
-import Tooltip from '@cdo/apps/componentLibrary/tooltip';
+import Tooltip, {TooltipOverlay} from '@cdo/apps/componentLibrary/tooltip';
 ```
 
 For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
