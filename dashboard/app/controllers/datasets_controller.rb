@@ -22,11 +22,19 @@ class DatasetsController < ApplicationController
   # GET /datasets/:dataset_name/
   def show
     @table_name = params[:dataset_name]
-    table = DatablockStorageTable.find_shared_table @table_name
-    @dataset = {
-      columns: table.get_columns,
-      records: table.read_records.map(&:to_json),
-    }
+    begin
+      table = DatablockStorageTable.find_shared_table @table_name
+      @dataset = {
+        columns: table.get_columns,
+        records: table.read_records,
+      }
+    rescue
+      # This must be a new shared table, so no existing dataset
+      @dataset = {
+        columns: [],
+        records: [],
+      }
+    end
     @live_datasets = LIVE_DATASETS
   end
 
