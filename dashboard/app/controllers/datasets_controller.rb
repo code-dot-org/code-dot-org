@@ -15,8 +15,7 @@ class DatasetsController < ApplicationController
 
   # GET /datasets
   def index
-    tables = @firebase.get_shared_table_list
-    @datasets = tables.map {|name, _| name}
+    @datasets = DatablockStorageTable.get_shared_table_names
     @live_datasets = LIVE_DATASETS
   end
 
