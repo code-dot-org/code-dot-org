@@ -76,9 +76,12 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Birds, Milestone 6",
+    "bubble_choice_description": "Randomize which custom notification is displayed to the user when they add a favorite bird.",
+    "thumbnail_url": "https://images.code.org/0fdb1b51d1a815dd986c7af70b001676-Birds.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-05T20:14:42.575+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L5\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L5\"},{\"changed_at\":\"2024-04-05 20:18:23 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 18:44:39 +0000\",\"changed\":[\"code_functions\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 19:00:20 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 15:07:50 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-05T20:14:42.575+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L5\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L5\"},{\"changed_at\":\"2024-04-05 20:18:23 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 18:44:39 +0000\",\"changed\":[\"code_functions\",\"callout_json\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 19:00:20 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 15:07:50 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:08:09 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

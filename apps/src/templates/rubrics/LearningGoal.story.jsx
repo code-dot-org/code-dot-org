@@ -1,5 +1,5 @@
 import React from 'react';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import LearningGoal from './LearningGoal';
 
 export default {

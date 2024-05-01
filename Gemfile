@@ -240,6 +240,7 @@ gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3'
+gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
@@ -361,4 +362,5 @@ gem 'http', '~> 5.0'
 
 gem 'statsig', '~> 1.33'
 
+gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'

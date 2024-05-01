@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-04-17T21:52:16.000Z",
   "level_num": "custom",
@@ -19,9 +20,20 @@
         }
       ]
     },
-    "name_suffix": "_pdx"
+    "name_suffix": "_pdx",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/b9610a69da8c79f4375ccc123d6c31be-play together no words.jpg",
+        "text": "###Play Together\n\nYou can play two sounds at the same time by using the *play together* block.",
+        "key": "musiclab_intro_panels_playtogether_pdx-a0d88b4a-e9a8-4641-8ec9-3ce98e7a1cc4"
+      },
+      {
+        "imageUrl": "https://images.code.org/56cb740eb24c9ad4cef84e86def22901-play together (1).gif",
+        "text": "Drag two or more sounds into the **play together** block.",
+        "key": "musiclab_intro_panels_playtogether_pdx-a5066092-2920-4c8d-89ea-00b7a8531ad0"
+      }
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-04-17T21:52:16.048+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_playtogether_elementary\\\"\"],\"cloned_from\":\"musiclab_intro_panels_playtogether_elementary\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T21:52:16.048+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_playtogether_elementary\\\"\"],\"cloned_from\":\"musiclab_intro_panels_playtogether_elementary\"},{\"changed_at\":\"2024-04-19 16:24:46 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 16:39:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-22 17:00:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

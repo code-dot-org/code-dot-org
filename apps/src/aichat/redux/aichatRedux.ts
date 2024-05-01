@@ -17,19 +17,19 @@ import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
-import {initialChatMessages} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
   AichatInteractionStatus as Status,
   ChatCompletionMessage,
-  ChatContext,
+  AichatContext,
   LevelAichatSettings,
   ModelCardInfo,
   Role,
   ViewMode,
   Visibility,
 } from '../types';
+import {getTypedKeys} from '@cdo/apps/types/utils';
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],
@@ -78,10 +78,11 @@ export interface AichatState {
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
   viewMode: ViewMode;
+  currentSessionId?: number;
 }
 
 const initialState: AichatState = {
-  chatMessages: initialChatMessages,
+  chatMessages: [],
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
@@ -99,13 +100,15 @@ const initialState: AichatState = {
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
-    const rootState = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
+      rootState.aichat;
     const {dispatch} = thunkAPI;
 
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      chatMessages,
       dispatch
     );
   }
@@ -121,10 +124,12 @@ export const publishModel = createAsyncThunk(
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
 
     const rootState = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
+      rootState.aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      chatMessages,
       dispatch
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -143,22 +148,32 @@ export const saveModelCard = createAsyncThunk(
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
 
-    const {currentAiCustomizations, savedAiCustomizations} = (
+    const {currentAiCustomizations, savedAiCustomizations, chatMessages} = (
       thunkAPI.getState() as RootState
     ).aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      chatMessages,
       dispatch
     );
   }
 );
+
+// This variable keeps track of the most recent message ID so that we can
+// assign a unique message id in increasing sequence to a new message.
+let latestMessageId = 0;
+const getNewMessageId = () => {
+  latestMessageId += 1;
+  return latestMessageId;
+};
 
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
+  storedMessages: ChatCompletionMessage[],
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
@@ -191,10 +206,24 @@ const saveAiCustomization = async (
     savedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
+
+  if (
+    changedProperties.some(property =>
+      [
+        'selectedModelId',
+        'temperature',
+        'systemPrompt',
+        'retrievalContexts',
+      ].includes(property)
+    )
+  ) {
+    dispatch(setNewChatSession());
+  }
+
   changedProperties.forEach(property => {
     dispatch(
       addChatMessage({
-        id: 0,
+        id: getNewMessageId(),
         role: Role.MODEL_UPDATE,
         chatMessageText:
           AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
@@ -212,46 +241,62 @@ export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
-    const aiCustomizations = state.aichat.savedAiCustomizations;
-    const storedMessages = state.aichat.chatMessages;
-    const chatContext: ChatContext = {
-      userId: state.currentUser.userId,
-      currentLevelId: state.progress.currentLevelId,
+    const {
+      savedAiCustomizations: aiCustomizations,
+      chatMessages: storedMessages,
+      currentSessionId,
+    } = state.aichat;
+
+    const aichatContext: AichatContext = {
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
-    const newMessageId =
-      storedMessages.length === 0
-        ? 1
-        : storedMessages[storedMessages.length - 1].id + 1;
-
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
-      id: newMessageId,
+      id: getNewMessageId(),
       role: Role.USER,
       status: Status.OK,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
+      sessionId: currentSessionId,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
+
     const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
-      storedMessages,
+      currentSessionId
+        ? storedMessages.filter(
+            message => message.sessionId === currentSessionId
+          )
+        : [],
       aiCustomizations,
-      chatContext
+      aichatContext,
+      currentSessionId
     );
     console.log('chatApiResponse', chatApiResponse);
+
+    // TODO: error handling
+    thunkAPI.dispatch(setChatSessionId(chatApiResponse.sessionId));
+    thunkAPI.dispatch(
+      updateChatMessageSession({
+        id: newMessage.id,
+        sessionId: chatApiResponse.sessionId,
+      })
+    );
+
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: newMessageId + 1,
+        id: getNewMessageId(),
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
         // The accuracy of this timestamp is debatable since it's not when our backend
         // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
+        sessionId: chatApiResponse.sessionId,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     } else {
@@ -267,24 +312,38 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const newMessageId =
-        state.chatMessages[state.chatMessages.length - 1].id + 1;
-      const newMessage = {
-        ...action.payload,
-        id: newMessageId,
-      };
-      state.chatMessages.push(newMessage);
+      state.chatMessages.push(action.payload);
     },
-    removeChatMessage: (state, action: PayloadAction<number>) => {
-      const updatedMessages = state.chatMessages.filter(
-        message => message.id !== action.payload
+    removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
+      const updatedMessages = [...state.chatMessages];
+      const messageToRemovePosition = updatedMessages.findIndex(
+        message => message.id === action.payload
       );
-      if (updatedMessages.length !== state.chatMessages.length) {
-        state.chatMessages = updatedMessages;
+
+      // Only allow removing individual messages that are model updates,
+      // as we want to retain user and bot message history
+      // when requesting model responses within a chat session.
+      // If we want to clear all history
+      // and start a new session, see clearChatMessages.
+      if (
+        messageToRemovePosition < 0 ||
+        updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE
+      ) {
+        return;
       }
+      updatedMessages.splice(messageToRemovePosition, 1);
+
+      state.chatMessages = updatedMessages;
     },
     clearChatMessages: state => {
-      state.chatMessages = initialChatMessages;
+      state.chatMessages = [];
+      state.currentSessionId = undefined;
+    },
+    setNewChatSession: state => {
+      state.currentSessionId = undefined;
+    },
+    setChatSessionId: (state, action: PayloadAction<number>) => {
+      state.currentSessionId = action.payload;
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
@@ -300,6 +359,16 @@ const aichatSlice = createSlice({
       const chatMessage = state.chatMessages.find(msg => msg.id === id);
       if (chatMessage) {
         chatMessage.status = status;
+      }
+    },
+    updateChatMessageSession: (
+      state,
+      action: PayloadAction<{id: number; sessionId: number}>
+    ) => {
+      const {id, sessionId} = action.payload;
+      const chatMessage = state.chatMessages.find(msg => msg.id === id);
+      if (chatMessage) {
+        chatMessage.sessionId = sessionId;
       }
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
@@ -392,18 +461,16 @@ const aichatSlice = createSlice({
 });
 
 const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
-  for (const key of Object.keys(modelCardInfo)) {
-    const typedKey = key as keyof ModelCardInfo;
-
-    if (typedKey === 'isPublished') {
+  for (const key of getTypedKeys(modelCardInfo)) {
+    if (key === 'isPublished') {
       continue;
-    } else if (typedKey === 'exampleTopics') {
+    } else if (key === 'exampleTopics') {
       if (
         !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
       ) {
         return false;
       }
-    } else if (!modelCardInfo[typedKey].length) {
+    } else if (!modelCardInfo[key].length) {
       return false;
     }
   }
@@ -411,21 +478,33 @@ const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   return true;
 };
 
+const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
+  getTypedKeys(fieldVisibilities).every(
+    key => fieldVisibilities[key] === Visibility.HIDDEN
+  );
+
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
-  (state: {aichat: AichatState}) =>
-    state.aichat.currentAiCustomizations.modelCardInfo,
+  (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
   hasFilledOutModelCard
+);
+
+export const selectAllFieldsHidden = createSelector(
+  (state: RootState) => state.aichat.fieldVisibilities,
+  allFieldsHidden
 );
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
-  removeChatMessage,
+  removeModelUpdateMessage,
+  setNewChatSession,
+  setChatSessionId,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
+  updateChatMessageSession,
   setViewMode,
   setStartingAiCustomizations,
   setSavedAiCustomizations,
