@@ -42,7 +42,7 @@ export const NewRequestForm = () => {
 
 export const UpdateRequestForm = () => {
   const state = {
-    parentPermissionRequest: {
+    parentalPermissionRequest: {
       parent_email: 'parent@email.com',
       requested_at: new Date().toISOString(),
     },

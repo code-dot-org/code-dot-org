@@ -23,11 +23,11 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import newRequestImg from '@cdo/static/common_images/penguin/yelling.png';
 import updateRequestImg from '@cdo/static/common_images/penguin/dancing.png';
 
-import parentPermissionRequestReducer, {
-  REQUEST_PARENT_PERMISSION_SUCCESS,
+import parentalPermissionRequestReducer, {
+  REQUEST_PARENTAL_PERMISSION_SUCCESS,
   fetchPendingPermissionRequest,
-  requestParentPermission,
-} from '@cdo/apps/redux/cap/parentPermissionRequestReducer';
+  requestParentalPermission,
+} from '@cdo/apps/redux/parentalPermissionRequestReducer';
 
 import './index.scss';
 
@@ -49,18 +49,18 @@ const PreLockdownParentPermissionModal: React.FC<
   );
 
   const [
-    {action, isLoading, error, parentPermissionRequest},
-    parentPermissionRequestDispatch,
-  ] = useReducer(parentPermissionRequestReducer, {isLoading: false});
-  const prevParentPermissionRequest = usePrevious(parentPermissionRequest);
+    {action, isLoading, error, parentalPermissionRequest},
+    parentalPermissionRequestDispatch,
+  ] = useReducer(parentalPermissionRequestReducer, {isLoading: false});
+  const prevParentalPermissionRequest = usePrevious(parentalPermissionRequest);
 
   const reportEvent = (eventName: string, payload: object = {}) => {
     analyticsReporter.sendEvent(eventName, payload, PLATFORMS.STATSIG);
   };
 
   useEffect(() => {
-    setParentEmail(parentPermissionRequest?.parent_email || '');
-  }, [parentPermissionRequest]);
+    setParentEmail(parentalPermissionRequest?.parent_email || '');
+  }, [parentalPermissionRequest]);
 
   useEffect(() => {
     setRequestError(error || '');
@@ -68,7 +68,7 @@ const PreLockdownParentPermissionModal: React.FC<
 
   useEffect(() => {
     if (show) {
-      fetchPendingPermissionRequest(parentPermissionRequestDispatch);
+      fetchPendingPermissionRequest(parentalPermissionRequestDispatch);
       reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_SHOWN, {
         consentStatus: initConsentStatus,
       });
@@ -87,20 +87,20 @@ const PreLockdownParentPermissionModal: React.FC<
    * Update event if a previous permission request exists and the parent email has changed.
    */
   useEffect(() => {
-    if (action !== REQUEST_PARENT_PERMISSION_SUCCESS) return;
-    if (!parentPermissionRequest) return;
+    if (action !== REQUEST_PARENTAL_PERMISSION_SUCCESS) return;
+    if (!parentalPermissionRequest) return;
 
     const eventPayload = {
       consentStatusBefore:
-        prevParentPermissionRequest?.consent_status || initConsentStatus,
-      consentStatusAfter: parentPermissionRequest.consent_status,
+        prevParentalPermissionRequest?.consent_status || initConsentStatus,
+      consentStatusAfter: parentalPermissionRequest.consent_status,
     };
 
-    if (!prevParentPermissionRequest) {
+    if (!prevParentalPermissionRequest) {
       reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_SUBMITTED, eventPayload);
     } else if (
-      prevParentPermissionRequest.parent_email ===
-      parentPermissionRequest.parent_email
+      prevParentalPermissionRequest.parent_email ===
+      parentalPermissionRequest.parent_email
     ) {
       reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_RESEND, eventPayload);
     } else {
@@ -109,8 +109,8 @@ const PreLockdownParentPermissionModal: React.FC<
   }, [
     action,
     initConsentStatus,
-    prevParentPermissionRequest,
-    parentPermissionRequest,
+    prevParentalPermissionRequest,
+    parentalPermissionRequest,
   ]);
 
   const handleParentEmailChange: React.FormEventHandler<
@@ -122,7 +122,7 @@ const PreLockdownParentPermissionModal: React.FC<
 
   const requestPermission = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    requestParentPermission(parentPermissionRequestDispatch, parentEmail);
+    requestParentalPermission(parentalPermissionRequestDispatch, parentEmail);
   };
 
   const permissionRequestStatusBlock = () => {
@@ -132,7 +132,7 @@ const PreLockdownParentPermissionModal: React.FC<
       status = <Skeleton />;
     } else if (requestError) {
       status = <span className="status error">{requestError}</span>;
-    } else if (parentPermissionRequest) {
+    } else if (parentalPermissionRequest) {
       status = (
         <span className="status pending">
           {i18n.sessionLockoutStatusPending()}
@@ -166,13 +166,13 @@ const PreLockdownParentPermissionModal: React.FC<
   };
 
   const lastEmailSentAtLabel = () => {
-    if (!parentPermissionRequest?.requested_at) return;
+    if (!parentalPermissionRequest?.requested_at) return;
 
     const lastEmailSentAt = isLoading ? (
       <Skeleton />
     ) : (
       i18n.policyCompliance_preLockdown_parentPermissionModal_lastEmailSentAt({
-        sendingTime: moment(parentPermissionRequest.requested_at)
+        sendingTime: moment(parentalPermissionRequest.requested_at)
           .lang(currentLocale)
           .format('lll'),
       })
@@ -267,7 +267,7 @@ const PreLockdownParentPermissionModal: React.FC<
   const updatePermissionRequestForm = () => {
     const isResend =
       parentEmail.toLowerCase() ===
-      parentPermissionRequest?.parent_email?.toLowerCase();
+      parentalPermissionRequest?.parent_email?.toLowerCase();
     const submitText = isResend
       ? i18n.sessionLockoutResendEmail()
       : i18n.sessionLockoutUpdateSubmit();
@@ -325,9 +325,9 @@ const PreLockdownParentPermissionModal: React.FC<
   };
 
   const permissionRequestForm = () => {
-    if (parentPermissionRequest === undefined && isLoading) {
+    if (parentalPermissionRequest === undefined && isLoading) {
       return <Skeleton height={500} />;
-    } else if (parentPermissionRequest) {
+    } else if (parentalPermissionRequest) {
       return updatePermissionRequestForm();
     } else {
       return newPermissionRequestForm();

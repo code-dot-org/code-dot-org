@@ -6,61 +6,61 @@ import i18n from '@cdo/locale';
 const FETCH_PENDING_PERMISSION_REQUEST_URL =
   '/policy_compliance/pending_permission_request';
 const FETCH_PENDING_PERMISSION_REQUEST_PERFORM =
-  'cap/fetchPendingPermissionRequest/perform';
+  'fetchPendingPermissionRequest/perform';
 const FETCH_PENDING_PERMISSION_REQUEST_SUCCESS =
-  'cap/fetchPendingPermissionRequest/success';
+  'fetchPendingPermissionRequest/success';
 const FETCH_PENDING_PERMISSION_REQUEST_FAILURE =
-  'cap/fetchPendingPermissionRequest/failure';
+  'fetchPendingPermissionRequest/failure';
 
-const REQUEST_PARENT_PERMISSION_URL =
+const REQUEST_PARENTAL_PERMISSION_URL =
   '/policy_compliance/child_account_consent';
-const REQUEST_PARENT_PERMISSION_PERFORM = 'cap/requestParentPermission/perform';
-export const REQUEST_PARENT_PERMISSION_SUCCESS =
-  'cap/requestParentPermission/success';
-const REQUEST_PARENT_PERMISSION_FAILURE = 'cap/requestParentPermission/failure';
+const REQUEST_PARENTAL_PERMISSION_PERFORM = 'requestParentalPermission/perform';
+export const REQUEST_PARENTAL_PERMISSION_SUCCESS =
+  'requestParentalPermission/success';
+const REQUEST_PARENTAL_PERMISSION_FAILURE = 'requestParentalPermission/failure';
 
-interface ParentPermissionRequest {
+interface ParentalPermissionRequest {
   parent_email: string;
   requested_at: string;
   resends_sent: number;
   consent_status: string;
 }
 
-type ParentPermissionRequestAction =
+type ParentalPermissionRequestAction =
   | {
       type: typeof FETCH_PENDING_PERMISSION_REQUEST_PERFORM;
     }
   | {
       type: typeof FETCH_PENDING_PERMISSION_REQUEST_SUCCESS;
-      parentPermissionRequest: ParentPermissionRequest | null;
+      parentalPermissionRequest: ParentalPermissionRequest | null;
     }
   | {
       type: typeof FETCH_PENDING_PERMISSION_REQUEST_FAILURE;
       error: string;
     }
   | {
-      type: typeof REQUEST_PARENT_PERMISSION_PERFORM;
+      type: typeof REQUEST_PARENTAL_PERMISSION_PERFORM;
     }
   | {
-      type: typeof REQUEST_PARENT_PERMISSION_SUCCESS;
-      parentPermissionRequest: ParentPermissionRequest;
+      type: typeof REQUEST_PARENTAL_PERMISSION_SUCCESS;
+      parentalPermissionRequest: ParentalPermissionRequest;
     }
   | {
-      type: typeof REQUEST_PARENT_PERMISSION_FAILURE;
+      type: typeof REQUEST_PARENTAL_PERMISSION_FAILURE;
       error: string;
     };
 
-export interface ParentPermissionRequestState {
+export interface ParentalPermissionRequestState {
   action?: string | null;
   isLoading: boolean;
-  parentPermissionRequest?: ParentPermissionRequest | null;
+  parentalPermissionRequest?: ParentalPermissionRequest | null;
   error?: string | null;
 }
 
-export default function parentPermissionRequestReducer(
-  state: ParentPermissionRequestState,
-  action: ParentPermissionRequestAction
-): ParentPermissionRequestState {
+export default function parentalPermissionRequestReducer(
+  state: ParentalPermissionRequestState,
+  action: ParentalPermissionRequestAction
+): ParentalPermissionRequestState {
   switch (action.type) {
     case FETCH_PENDING_PERMISSION_REQUEST_PERFORM:
       return {
@@ -74,7 +74,7 @@ export default function parentPermissionRequestReducer(
         ...state,
         action: action.type,
         isLoading: false,
-        parentPermissionRequest: action.parentPermissionRequest,
+        parentalPermissionRequest: action.parentalPermissionRequest,
       };
     case FETCH_PENDING_PERMISSION_REQUEST_FAILURE:
       return {
@@ -83,21 +83,21 @@ export default function parentPermissionRequestReducer(
         isLoading: false,
         error: action.error,
       };
-    case REQUEST_PARENT_PERMISSION_PERFORM:
+    case REQUEST_PARENTAL_PERMISSION_PERFORM:
       return {
         ...state,
         action: action.type,
         isLoading: true,
         error: null,
       };
-    case REQUEST_PARENT_PERMISSION_SUCCESS:
+    case REQUEST_PARENTAL_PERMISSION_SUCCESS:
       return {
         ...state,
         action: action.type,
         isLoading: false,
-        parentPermissionRequest: action.parentPermissionRequest,
+        parentalPermissionRequest: action.parentalPermissionRequest,
       };
-    case REQUEST_PARENT_PERMISSION_FAILURE:
+    case REQUEST_PARENTAL_PERMISSION_FAILURE:
       return {
         ...state,
         action: action.type,
@@ -110,7 +110,7 @@ export default function parentPermissionRequestReducer(
 }
 
 export const fetchPendingPermissionRequest = (
-  dispatch: Dispatch<ParentPermissionRequestAction>
+  dispatch: Dispatch<ParentalPermissionRequestAction>
 ) => {
   dispatch({type: FETCH_PENDING_PERMISSION_REQUEST_PERFORM});
 
@@ -126,10 +126,10 @@ export const fetchPendingPermissionRequest = (
       if (response.status === 204) return null;
       return response.json();
     })
-    .then(parentPermissionRequest => {
+    .then(parentalPermissionRequest => {
       dispatch({
         type: FETCH_PENDING_PERMISSION_REQUEST_SUCCESS,
-        parentPermissionRequest,
+        parentalPermissionRequest,
       });
     })
     .catch(error => {
@@ -142,13 +142,13 @@ export const fetchPendingPermissionRequest = (
     });
 };
 
-export const requestParentPermission = async (
-  dispatch: Dispatch<ParentPermissionRequestAction>,
+export const requestParentalPermission = async (
+  dispatch: Dispatch<ParentalPermissionRequestAction>,
   parentEmail: string
 ) => {
-  dispatch({type: REQUEST_PARENT_PERMISSION_PERFORM});
+  dispatch({type: REQUEST_PARENTAL_PERMISSION_PERFORM});
 
-  fetch(REQUEST_PARENT_PERMISSION_URL, {
+  fetch(REQUEST_PARENTAL_PERMISSION_URL, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -165,17 +165,17 @@ export const requestParentPermission = async (
         throw responseData.error || i18n.formServerError();
       }
     })
-    .then(parentPermissionRequest => {
+    .then(parentalPermissionRequest => {
       dispatch({
-        type: REQUEST_PARENT_PERMISSION_SUCCESS,
-        parentPermissionRequest,
+        type: REQUEST_PARENTAL_PERMISSION_SUCCESS,
+        parentalPermissionRequest,
       });
     })
     .catch(error => {
-      console.error(REQUEST_PARENT_PERMISSION_FAILURE, error);
+      console.error(REQUEST_PARENTAL_PERMISSION_FAILURE, error);
 
       dispatch({
-        type: REQUEST_PARENT_PERMISSION_FAILURE,
+        type: REQUEST_PARENTAL_PERMISSION_FAILURE,
         error: error instanceof Error ? i18n.formServerError() : error,
       });
     });
