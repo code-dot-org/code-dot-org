@@ -24,7 +24,7 @@ class AichatController < ApplicationController
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
     input_json = AichatSagemakerHelper.format_inputs_for_sagemaker_request(params[:aichatModelCustomizations], params[:storedMessages], params[:newMessage])
-    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input_json)
+    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input_json, params[:aichatModelCustomizations][:selectedModelId])
     latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
     assistant_message = {
       role: "assistant",
