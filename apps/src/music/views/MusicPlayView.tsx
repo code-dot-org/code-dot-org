@@ -19,13 +19,13 @@ interface MusicPlayViewProps {
 const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   setPlaying,
 }) => {
-  const {isPlaying, lastMeasure, currentPlayheadPosition} = useAppSelector(
-    state => state.music
-  );
-  const progressValue =
-    lastMeasure === 1
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const progressValue = useAppSelector(state => {
+    const {currentPlayheadPosition, lastMeasure} = state.music;
+    return lastMeasure === 1
       ? 0
       : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
+  });
   const progressSliderValue = progressValue.toString();
 
   const projectName = useAppSelector(state => state.lab.channel?.name);
@@ -47,9 +47,12 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   // Requires HTTPS connection.
   // For testing purposes, we can pass a query parameter canShare=true to force the button to appear.
   const canShareInternal = queryParams('canShare') === 'true';
-  const canShare =
-    (navigator && navigator.canShare && navigator.canShare(shareData)) ||
-    canShareInternal;
+  const canShare = useMemo(() => {
+    return (
+      (navigator && navigator.canShare && navigator.canShare(shareData)) ||
+      canShareInternal
+    );
+  }, [canShareInternal, shareData]);
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const onShareProject = useCallback(() => {
@@ -57,9 +60,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   }, [shareData]);
   const onViewCode = useCallback(() => {
     if (projectManager) {
-      projectManager.flushSave().then(() => {
-        projectManager.redirectToView();
-      });
+      projectManager.redirectToView();
     }
   }, [projectManager]);
   const onRemix = useCallback(() => {
@@ -71,23 +72,21 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   }, [projectManager]);
 
   return (
-    <div className={moduleStyles.musicPlayViewContainer}>
-      <div className={moduleStyles.musicPlayViewCardContainer}>
+    <div className={moduleStyles.container}>
+      <div className={moduleStyles.cardContainer}>
         <img
-          className={moduleStyles.musicPlayViewImage}
+          className={moduleStyles.playViewImage}
           src={musicPlayViewLogo}
           alt="Code.org play view logo"
         />
-        <div className={moduleStyles.musicPlayViewCard}>
-          <div className={moduleStyles.musicPlayViewInfoSection}>
-            <Heading2 className={moduleStyles.musicPlayViewInfoText}>
-              {projectName}
-            </Heading2>
-            <BodyTwoText className={moduleStyles.musicPlayViewInfoText}>
+        <div className={moduleStyles.card}>
+          <div className={moduleStyles.infoSection}>
+            <Heading2 className={moduleStyles.infoText}>{projectName}</Heading2>
+            <BodyTwoText className={moduleStyles.infoText}>
               {musicI18n.builtWithMusicLab()}
             </BodyTwoText>
           </div>
-          <div className={moduleStyles.musicPlayViewPlaySection}>
+          <div className={moduleStyles.playSection}>
             <Button
               isIconOnly={true}
               icon={{
@@ -99,7 +98,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               size="l"
               color="white"
               type="secondary"
-              className={moduleStyles.musicPlayViewButton}
+              className={moduleStyles.playViewButton}
             />
             <input
               type="range"
@@ -110,7 +109,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
             />
           </div>
 
-          <div className={moduleStyles.musicPlayViewButtonsSection}>
+          <div className={moduleStyles.buttonsSection}>
             <Button
               text={commonI18n.viewCode()}
               type="tertiary"
