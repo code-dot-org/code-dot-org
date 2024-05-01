@@ -29,6 +29,7 @@ module AichatSagemakerHelper
         inputs += msg[:content] + SENTENCE_END_TOKEN
       end
     end
+
     {
       inputs: inputs,
       parameters: {
@@ -39,10 +40,10 @@ module AichatSagemakerHelper
     }
   end
 
-  def self.request_sagemaker_chat_completion(input_json, endpoint_name)
+  def self.request_sagemaker_chat_completion(input, endpoint_name)
     create_sagemaker_client.invoke_endpoint(
       endpoint_name: endpoint_name, # required
-      body: input_json.to_json, # required
+      body: input.to_json, # required
       content_type: "application/json"
     )
   end
