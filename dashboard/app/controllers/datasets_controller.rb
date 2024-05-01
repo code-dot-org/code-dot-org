@@ -26,7 +26,7 @@ class DatasetsController < ApplicationController
       table = DatablockStorageTable.find_shared_table @table_name
       @dataset = {
         columns: table.get_columns,
-        records: table.read_records,
+        records: table.read_records.map(&:to_json),
       }
     rescue
       # This must be a new shared table, so no existing dataset
