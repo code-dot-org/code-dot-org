@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {default as LinkedButton} from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -14,16 +14,21 @@ import styles from './progress-v2-invitation.module.scss';
 
 const newProgressViewGraphic = require('@cdo/static/teacherDashboard/progressOpenBetaAnnouncementGraphic.png');
 
-export default function InviteToV2ProgressModal({
+function InviteToV2ProgressModal({
   setShowProgressTableV2,
   sectionId,
+
+  // from redux
+  dateProgressTableInvtationDelayed,
+  hasSeenProgressTableInvite,
 }) {
-  const [invitationOpen, setInvitationOpen] = React.useState(true); // in the future this will use logic and data to determine if the invitation should start open or not
+  const [invitationOpen, setInvitationOpen] = React.useState(showInvitation);
 
   const handleDismiss = () => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
       sectionId: sectionId,
     });
+    setHasSeenProgressTableInvite();
     setInvitationOpen(false);
   };
 
@@ -31,7 +36,7 @@ export default function InviteToV2ProgressModal({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
       sectionId: sectionId,
     });
-    new UserPreferences().setShowProgressTableV2(true);
+    setHasSeenProgressTableInvite();
     setShowProgressTableV2(true);
   };
 
@@ -40,9 +45,45 @@ export default function InviteToV2ProgressModal({
       sectionId: sectionId,
     });
     setInvitationOpen(false);
-    new UserPreferences().setDateInvitationDelayed(new Date());
-    // send data indicating the invitation was delayed
-    console.log('delayed invitation');
+    setDateInvitationDelayed(new Date());
+  };
+
+  const setDateInvitationDelayed = date => {
+    return $.post(`/api/v1/users/date_progress_table_invitation_last_delayed`, {
+      date_progress_table_invitation_last_delayed: date,
+    });
+  };
+
+  const setHasSeenProgressTableInvite = () => {
+    return $.post(`/api/v1/users/has_seen_progress_table_v2_invitation`, {
+      has_seen_progress_table_v2_invitation: true,
+    });
+  };
+
+  // Put both of these on an onMount hook?
+  const timeSinceInvitationLastDelayed = () => {
+    console.log('starting date' + dateProgressTableInvtationDelayed);
+    const today = new Date();
+    const differenceInMilliseconds = today - dateProgressTableInvtationDelayed;
+    const differenceInDays = differenceInMilliseconds / (1000 * 3600 * 24);
+    return Math.floor(differenceInDays);
+  };
+
+  const showInvitation = () => {
+    const alreadyViewedInvitation = !!hasSeenProgressTableInvite;
+    if (alreadyViewedInvitation) {
+      return false;
+    } else {
+      if (dateProgressTableInvtationDelayed) {
+        if (timeSinceInvitationLastDelayed() > 3) {
+          return true;
+        } else {
+          return false;
+        }
+      } else {
+        return true;
+      }
+    }
   };
 
   if (invitationOpen) {
@@ -89,4 +130,12 @@ export default function InviteToV2ProgressModal({
 InviteToV2ProgressModal.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
   sectionId: PropTypes.number.isRequired,
+  dateProgressTableInvtationDelayed: PropTypes.string,
+  hasSeenProgressTableInvite: PropTypes.bool,
 };
+
+export default connect(state => ({
+  dateProgressTableInvtationDelayed:
+    state.currentUser.dateProgressTableInvtationDelayed,
+  hasSeenProgressTableInvite: state.currentUser.hasSeenProgressTableInvite,
+}))(InviteToV2ProgressModal);

@@ -186,6 +186,8 @@ export default function currentUser(state = initialState, action) {
       show_progress_table_v2,
       progress_table_v2_closed_beta,
       is_lti,
+      date_progress_table_invitation_last_delayed,
+      has_seen_progress_table_v2_invitation,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -209,6 +211,10 @@ export default function currentUser(state = initialState, action) {
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,
+      dateProgressTableInvtationDelayed:
+        date_progress_table_invitation_last_delayed,
+      hasSeenProgressTableInvite: has_seen_progress_table_v2_invitation,
+      // Add the data for the data I need here (date and if they have seen the invitation)
     };
   }
 
