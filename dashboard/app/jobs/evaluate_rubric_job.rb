@@ -231,16 +231,27 @@ class EvaluateRubricJob < ApplicationJob
   RETRIES_ON_TIMEOUT = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
-    # Job arguments are always serializable, so we just pull out the hash
-    # and send it as context.
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, _error|
     options = job.arguments.first
+    script_level = ScriptLevel.find(options[:script_level_id])
 
-    # Send it to honeybadger even though we are handling the error via retry
-    Honeybadger.notify(
-      error,
-      error_message: "Retrying rubric evaluation job due to timeout.",
-      context: options
+    Cdo::Metrics.push(
+      AI_RUBRIC_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: :RetryOnTimeout,
+          value: 1,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'UserId',  value: options[:user_id]},
+            {name: 'RequesterId', value: options[:requester_id]},
+            {name: 'ScriptName', value: script_level.script.name},
+            {name: 'LessonNumber', value: script_level.lesson.absolute_position},
+            {name: 'LevelName', value: script_level.level.name},
+          ],
+          unit: 'Count'
+        }
+      ]
     )
   end
 
