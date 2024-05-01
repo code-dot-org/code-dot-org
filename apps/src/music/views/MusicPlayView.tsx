@@ -20,13 +20,14 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   setPlaying,
 }) => {
   const isPlaying = useAppSelector(state => state.music.isPlaying);
-  const progressValue = useAppSelector(state => {
+  const progressSliderValue = useAppSelector(state => {
     const {currentPlayheadPosition, lastMeasure} = state.music;
-    return lastMeasure === 1
-      ? 0
-      : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
+    const value =
+      lastMeasure === 1
+        ? 0
+        : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
+    return value.toString();
   });
-  const progressSliderValue = progressValue.toString();
 
   const projectName = useAppSelector(state => state.lab.channel?.name);
   // Disable play button until sound is loaded.
@@ -59,9 +60,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
     navigator?.share(shareData);
   }, [shareData]);
   const onViewCode = useCallback(() => {
-    if (projectManager) {
-      projectManager.redirectToView();
-    }
+    projectManager?.redirectToView();
   }, [projectManager]);
   const onRemix = useCallback(() => {
     if (projectManager) {
