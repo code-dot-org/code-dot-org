@@ -148,3 +148,39 @@ Feature: Policy Compliance and Parental Permission
   Scenario: Existing under 13 account in Colorado should not be locked out.
     Given I create a young student in Colorado who has never signed in named "Sally Student" before CPA exception and go home
     Given I am on "http://studio.code.org/home"
+
+  Scenario: Student should not be able to connect a third-party account until their account is unlocked
+    Given I create an old account for a young student in Colorado who has never signed in named "Coco Student" and go home
+
+    # Find the locked buttons to connect an account
+    Given I am on "http://studio.code.org/users/edit"
+    Then I wait to see "#manage-linked-accounts"
+    Then I wait until "form[action=\'/users/auth/google_oauth2?action=connect\'] button" is disabled
+
+    # Navigate the lockout process
+    Given I am on "http://studio.code.org/lockout"
+    Then I wait to see "#lockout-panel-form"
+    And element "#permission-status" contains text "Not Submitted"
+    And I press keys "parent@example.com" for element "#parent-email"
+    Then element "#lockout-submit" is enabled
+
+    # Submit request
+    And I take note of the current loaded page
+    When I press "lockout-submit"
+    Then I wait until I am on a different page than I noted before
+
+    # Accept request
+    Then My parent permits my parental request
+
+    # Find the now unlocked buttons to connect an account
+    Given I am on "http://studio.code.org/users/edit"
+    Then I wait to see "#manage-linked-accounts"
+    Then I wait until "form[action=\'/users/auth/google_oauth2?action=connect\'] button" is not disabled
+
+  Scenario: Student should be able to add a personal email on an unlocked account
+    Given I create an authorized teacher-associated under-13 old account sponsored student in Colorado named "Tandy"
+
+    # Find the disabled region to provide a personal login
+    Given I am on "http://studio.code.org/users/edit"
+    Then I wait to see "#edit_user_create_personal_account"
+    Then I wait until "#edit_user_create_personal_account input[type=\'password\']" is disabled

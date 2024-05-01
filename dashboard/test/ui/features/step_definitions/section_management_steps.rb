@@ -95,7 +95,7 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
   GHERKIN
 end
 
-And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([^"]*)"$/) do |authorized, under_13, name|
+And(/^I create a(n authorized)? teacher-associated( under-13)?( old account)?( sponsored)? student( in Colorado)? named "([^"]*)"$/) do |authorized, under_13, old_account, sponsored, locked, name|
   steps "Given I create a teacher named \"Teacher_#{name}\""
   # enroll in a plc course as a way of becoming an authorized teacher
   steps 'And I am enrolled in a plc course' if authorized
@@ -103,7 +103,28 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
-  create_user(name, url: "/join/#{section_code}", age: under_13 ? '10' : '16')
+
+  user_opts = {
+    age: under_13 ? '10' : '16',
+  }
+
+  if sponsored
+    user_opts[:email] = nil
+    user_opts[:password] = nil
+    user_opts[:password_confirmation] = nil
+    user_opts[:provider] = "sponsored"
+  end
+
+  if locked
+    user_opts[:country_code] = "US"
+    user_opts[:us_state] = "CO"
+  end
+
+  if old_account
+    user_opts[:created_at] = DateTime.new(2020)
+  end
+
+  create_user(name, url: "/join/#{section_code}", **user_opts)
 end
 
 And(/^I save the student section url$/) do
