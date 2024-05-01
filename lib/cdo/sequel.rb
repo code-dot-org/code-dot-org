@@ -14,7 +14,7 @@ module Cdo
     # @param validation_frequency [number] How often to validate the connection. If set to -1,
     #   validate each time a request is made.
     # @param query_timeout [number] The execution timeout for SELECT statements, in seconds.
-    def self.database_connection_pool(writer, reader, validation_frequency: nil, query_timeout: nil, multi_statements: false)
+    def self.database_connection_pool(writer, reader, validation_frequency: rack_env?(:test) ? -1 : 3600, query_timeout: nil, multi_statements: false)
       # Enable symbol splitting of qualified identifiers for backwards compatibility.
       ::Sequel.split_symbols = true
       # Enable deprecated Dataset#and method for backwards compatibility.
