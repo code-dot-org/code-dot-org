@@ -125,11 +125,10 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
 
   test 'instructor cannot remove section owner' do
     section = create(:section, user: @teacher, login_type: 'word')
-    si = SectionInstructor.find_by(instructor_id: @teacher.id, section_id: section.id) # this is a user object
-    puts si
+    si = SectionInstructor.find_by(instructor_id: @teacher.id, section_id: section.id)
     create(:section_instructor, section: section, instructor: @teacher2, status: :active)
     sign_in @teacher2
-    delete :destroy, params: {id: si.id} # this is looking for the section instructors entry id
+    delete :destroy, params: {id: si.id}
     assert_response :forbidden
     assert si.reload.deleted_at.nil?
   end
