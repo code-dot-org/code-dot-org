@@ -1,4 +1,4 @@
-class Cpa::PendingPermissionRequestSerializer < ActiveModel::Serializer
+class ChildAccount::PendingPermissionRequestSerializer < ActiveModel::Serializer
   attributes :parent_email, :requested_at, :resends_sent, :consent_status
 
   def requested_at

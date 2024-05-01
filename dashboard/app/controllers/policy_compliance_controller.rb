@@ -31,7 +31,7 @@ class PolicyComplianceController < ApplicationController
     @pending_permission_request = Queries::ChildAccount.latest_permission_request(current_user)
 
     if @pending_permission_request
-      render json: Cpa::PendingPermissionRequestSerializer.new(@pending_permission_request).as_json
+      render json: ChildAccount::PendingPermissionRequestSerializer.new(@pending_permission_request).as_json
     else
       head :no_content
     end
@@ -71,7 +71,7 @@ class PolicyComplianceController < ApplicationController
 
       format.json do
         if permission_request_form.request
-          render status: :created, json: Cpa::PendingPermissionRequestSerializer.new(permission_request_form.record).as_json
+          render status: :created, json: ChildAccount::PendingPermissionRequestSerializer.new(permission_request_form.record).as_json
         else
           render status: :unprocessable_entity, json: {error: permission_request_form.errors.full_messages.first}
         end
