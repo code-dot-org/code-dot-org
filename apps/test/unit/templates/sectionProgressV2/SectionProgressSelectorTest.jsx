@@ -134,10 +134,13 @@ describe('SectionProgressSelector', () => {
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(stub).calledTwice();
-    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
-      show_progress_table_v2: true,
-    });
+    expect(stub).to.have.been.calledTwice();
+    expect(stub).to.have.been.calledWith(
+      '/api/v1/users/show_progress_table_v2',
+      {
+        show_progress_table_v2: true,
+      }
+    );
 
     stub.reset();
   });
@@ -187,10 +190,13 @@ describe('SectionProgressSelector', () => {
 
     fireEvent.click(toggle);
 
-    expect(stub).calledTwice();
-    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
-      show_progress_table_v2: true,
-    });
+    expect(stub).to.have.been.calledTwice();
+    expect(stub).to.have.been.calledWith(
+      '/api/v1/users/show_progress_table_v2',
+      {
+        show_progress_table_v2: true,
+      }
+    );
 
     stub.restore();
   });
@@ -205,10 +211,13 @@ describe('SectionProgressSelector', () => {
 
     fireEvent.click(toggle);
 
-    expect(stub).calledTwice();
-    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
-      show_progress_table_v2: false,
-    });
+    expect(stub).to.have.been.calledTwice();
+    expect(stub).to.have.been.calledWith(
+      '/api/v1/users/show_progress_table_v2',
+      {
+        show_progress_table_v2: false,
+      }
+    );
 
     stub.restore();
   });
