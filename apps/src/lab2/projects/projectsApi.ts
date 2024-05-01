@@ -2,7 +2,6 @@ import {ProjectType} from '../types';
 import * as utils from '@cdo/apps/utils';
 
 const rootUrl = '/projects/';
-const rootUrlReadOnly = '/projects_get/';
 
 // Given a levelId and optionally a scriptId,
 // get the project identifier (channel id) for that level (and script, if provided).
@@ -12,7 +11,7 @@ export async function getChannelForLevel(
   userId?: string,
   readOnly?: boolean
 ): Promise<Response> {
-  let requestString = readOnly ? rootUrlReadOnly : rootUrl;
+  let requestString = rootUrl;
   if (scriptId !== undefined) {
     requestString += `script/${scriptId}/`;
   }

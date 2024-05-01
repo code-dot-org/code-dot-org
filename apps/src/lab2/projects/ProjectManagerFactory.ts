@@ -42,7 +42,6 @@ export default class ProjectManagerFactory {
     projectManagerStorageType: ProjectManagerStorageType,
     levelId: number,
     userId?: string,
-    readOnly?: boolean,
     scriptId?: number
   ): Promise<ProjectManager | null> {
     const channelsStore = this.getChannelsStore(projectManagerStorageType);
@@ -51,8 +50,7 @@ export default class ProjectManagerFactory {
     const response = await channelsStore.loadForLevel(
       levelId,
       scriptId,
-      userId,
-      readOnly
+      userId
     );
     if (response.ok) {
       const responseBody = await response.json();
@@ -71,8 +69,7 @@ export default class ProjectManagerFactory {
       channelsStore,
       channelId,
       reduceChannelUpdates,
-      userId,
-      readOnly
+      userId
     );
   }
 

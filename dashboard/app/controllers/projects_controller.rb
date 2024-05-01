@@ -313,36 +313,18 @@ class ProjectsController < ApplicationController
   # GET /projects(/script/:script_id)/level/:level_id(/user/:user_id)
   # Given a level_id and the current user (or signed out user), get the existing project
   # or create a new project for that level and user. If a script_id is provided, get or
-  # create the project for that level, script and user.  If a user_id is provided, get
-  # or create the project for that level, script and user_id; this is used for Lab2 levels
-  # when a teacher views a student's work, and the relevant permission is verified here.
+  # create the project for that level, script and user.
+  # If a user_id is provided, get but do not create the project for that level, script and
+  # user_id; this is used for Lab2 levels when a teacher views a student's work, and the
+  # relevant permission is verified here.
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
     level = Level.find(params[:level_id])
+    user_id = params[:user_id]
 
     error_message = under_13_without_tos_teacher?(level)
     return render(status: :forbidden, json: {error: error_message}) if error_message
-
-    # get_storage_id works for signed out users as well, it uses the cookie to determine
-    # the storage id.
-    user_storage_id = get_storage_id
-
-    # Find the channel for the user and level if it exists, or create a new one.
-    channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
-    script_name = !script_id.nil? && Unit.find(script_id)&.name
-    # We can limit channel updates during periods of high use using the updateChannelOnSave flag.
-    reduce_channel_updates = script_name ?
-                              !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script_name}, default: true) :
-                              false
-    render(status: :ok, json: {channel: channel_token.channel, reduceChannelUpdates: reduce_channel_updates})
-  end
-
-  # GET projects_get/script/:script_id/level/:level_id(/user/:user_id)
-  def get_for_level
-    script_id = params[:script_id]
-    user_id = params[:user_id]
-    level = Level.find(params[:level_id])
 
     if user_id
       # If viewing another user's work, ensure that we have permission.
@@ -357,21 +339,27 @@ class ProjectsController < ApplicationController
       unless level_started?(level, script, user)
         return render(status: :ok, json: {started: false})
       end
+
+      user_storage_id = storage_id_for_user_id(user_id)
+
+      # Find the channel for the user and level, if it exists.
+      channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
+    else
+      # get_storage_id works for signed out users as well; it uses the cookie to determine
+      # the storage id.
+      user_storage_id = get_storage_id
+
+      # Find the channel for the user and level if it exists, or create a new one.
+      channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
     end
 
-    error_message = under_13_without_tos_teacher?(level)
-    return render(status: :forbidden, json: {error: error_message}) if error_message
+    # We can limit channel updates during periods of high use using the updateChannelOnSave flag.
+    script_name = !script_id.nil? && Unit.find(script_id)&.name
+    reduce_channel_updates = script_name ?
+                              !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script_name}, default: true) :
+                              false
 
-    user_storage_id = if user_id
-                        storage_id_for_user_id(user_id)
-                      else
-                        get_storage_id
-                      end
-
-    # Find the channel for the user and level, if it exists.
-    channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
-
-    render(status: :ok, json: {channel: channel_token&.channel})
+    render(status: :ok, json: {channel: channel_token.channel, reduceChannelUpdates: reduce_channel_updates})
   end
 
   def weblab_footer

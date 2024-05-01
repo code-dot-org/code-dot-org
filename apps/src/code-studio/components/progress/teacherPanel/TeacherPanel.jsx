@@ -27,7 +27,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   queryUserProgress,
   setViewAsUserId,
-  setViewReadOnly,
 } from '@cdo/apps/code-studio/progressRedux';
 import {
   hasLockableLessons,
@@ -75,7 +74,6 @@ class TeacherPanel extends React.Component {
     levels: PropTypes.arrayOf(levelWithProgressType),
     selectUser: PropTypes.func.isRequired,
     setViewAsUserId: PropTypes.func.isRequired,
-    setViewReadOnly: PropTypes.func.isRequired,
     setStudentsForCurrentSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
     setSectionLockStatus: PropTypes.func.isRequired,
@@ -94,7 +92,6 @@ class TeacherPanel extends React.Component {
     if (initialUserId) {
       this.props.setViewAsUserId(initialUserId);
     }
-    this.props.setViewReadOnly(!!initialUserId);
 
     this.loadInitialData();
   }
@@ -401,9 +398,6 @@ export default connect(
     },
     setViewAsUserId: viewAsUserId => {
       dispatch(setViewAsUserId(viewAsUserId));
-    },
-    setViewReadOnly: viewReadOnly => {
-      dispatch(setViewReadOnly(viewReadOnly));
     },
     setStudentsForCurrentSection: (sectionId, students) => {
       dispatch(setStudentsForCurrentSection(sectionId, students));
