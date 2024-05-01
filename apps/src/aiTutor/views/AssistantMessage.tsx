@@ -52,7 +52,10 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
           id={'chat-workspace-message-body'}
           className={classNames(style.message, style.assistantMessage)}
         >
-          <SafeMarkdown markdown={message.chatMessageText} />
+          <SafeMarkdown
+            markdown={message.chatMessageText}
+            className={style.aiTutorMarkdown}
+          />
         </div>
         {message.id && (
           <>
