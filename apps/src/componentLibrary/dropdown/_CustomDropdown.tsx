@@ -23,6 +23,8 @@ export interface CustomDropdownProps {
   /** CustomDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
+  /** CustomDropdown custom class name */
+  className?: string;
   /** CustomDropdown color */
   color?: DropdownColor;
   /** CustomDropdown size */
@@ -49,6 +51,7 @@ export interface CustomDropdownProps {
  */
 const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   name,
+  className,
   labelText,
   labelType = 'thick',
   children,
@@ -110,7 +113,8 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         {[moduleStyles.open]: isOpen},
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${color}`],
-        moduleStyles[`dropdownContainer-${size}`]
+        moduleStyles[`dropdownContainer-${size}`],
+        className
       )}
       onKeyDown={onKeyDown}
       ref={dropdownRef}
