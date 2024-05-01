@@ -77,7 +77,7 @@ export default function SchoolDataInputs({
   };
 
   return (
-    <div className={style.outerContainer}>
+    <div className={style.schoolAssociationWrapper}>
       {includeHeaders && (
         <div>
           <Heading2 className={style.topPadding}>
