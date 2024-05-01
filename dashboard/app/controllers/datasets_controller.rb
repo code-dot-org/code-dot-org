@@ -22,7 +22,11 @@ class DatasetsController < ApplicationController
   # GET /datasets/:dataset_name/
   def show
     @table_name = params[:dataset_name]
-    @dataset = @firebase.get_shared_table params[:dataset_name]
+    table = DatablockStorageTable.find_shared_table @table_name
+    @dataset = {
+      columns: table.get_columns,
+      records: table.read_records.map(&:to_json),
+    }
     @live_datasets = LIVE_DATASETS
   end
 
