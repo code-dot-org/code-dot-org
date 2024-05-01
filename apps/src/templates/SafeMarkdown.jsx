@@ -17,7 +17,7 @@ import rehypeSanitize from 'rehype-sanitize';
 import rehypeReact from 'rehype-react';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 
-import CodeBlockWithCopy from './CodeBlockWithCopy';
+import CopyablePreBlock from './CopyablePreBlock';
 import externalLinks from './plugins/externalLinks';
 
 /**
@@ -30,11 +30,11 @@ class SafeMarkdown extends React.Component {
     markdown: PropTypes.string.isRequired,
     openExternalLinksInNewTab: PropTypes.bool,
     className: PropTypes.string,
-    includeCodeCopyButton: PropTypes.bool,
+    copyPreformattedText: PropTypes.bool,
   };
 
   static defaultProps = {
-    includeCodeCopyButton: false,
+    copyPreformattedText: false,
   };
 
   getParser() {
@@ -42,7 +42,7 @@ class SafeMarkdown extends React.Component {
       // Use React component wrappers for Blockly XML elements to prevent
       // React from warning us about invalid components.
       ...blocklyComponentWrappers,
-      ...(this.props.includeCodeCopyButton ? {pre: CodeBlockWithCopy} : {}),
+      ...(this.props.copyPreformattedText ? {pre: CopyablePreBlock} : {}),
     };
 
     const parser = Parser.create()

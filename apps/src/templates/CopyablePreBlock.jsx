@@ -5,10 +5,10 @@ import color from '@cdo/apps/util/color';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
-const CodeBlockWithCopy = ({children}) => {
+const CopyablePreBlock = ({children}) => {
   const textRef = useRef();
-  const [copySuccess, setCopySuccess] = useState(false);
   const timeoutRef = useRef();
+  const [copySuccess, setCopySuccess] = useState(false);
 
   const handleCopy = () => {
     copyToClipboard(textRef.current.textContent, () => {
@@ -53,17 +53,13 @@ const CodeBlockWithCopy = ({children}) => {
           type="tertiary"
         />
       </div>
-      <pre ref={textRef}>
-        <code style={{display: 'block', whiteSpace: 'pre-wrap'}}>
-          {children}
-        </code>
-      </pre>
+      <pre ref={textRef}>{children}</pre>
     </div>
   );
 };
 
-CodeBlockWithCopy.propTypes = {
+CopyablePreBlock.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default CodeBlockWithCopy;
+export default CopyablePreBlock;
