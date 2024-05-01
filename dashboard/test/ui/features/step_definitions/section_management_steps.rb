@@ -124,7 +124,10 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( old account)?( s
     user_opts[:created_at] = DateTime.new(2020)
   end
 
-  create_user(name, url: "/join/#{section_code}", **user_opts)
+  create_user(name, **user_opts)
+
+  # Sign up the user in the section
+  browser_request(url: "/join/#{section_code}", method: 'POST', code: 200)
 end
 
 And(/^I save the student section url$/) do
