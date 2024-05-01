@@ -45,6 +45,19 @@ module RegistrationsControllerTests
       assert_equal true, student.user_provided_us_state
     end
 
+    test "set_student_information sets age if user is only shown age option" do
+      student = create :student_in_picture_section, birthday: nil
+      assert student.age.blank?
+
+      sign_in student
+      patch '/users/set_student_information', params: {user: {age: '20'}}
+      assert_response :success
+
+      student.reload
+      assert_equal 20, student.age
+      assert_equal nil, student.user_provided_us_state
+    end
+
     test "set_student_information sets age if user is signed in and age is blank" do
       student = create :student_in_picture_section, birthday: nil
       assert student.age.blank?

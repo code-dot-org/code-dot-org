@@ -232,7 +232,7 @@ class RegistrationsController < Devise::RegistrationsController
 
     student_information[:age] = params[:user][:age] if current_user.age.blank?
     student_information[:us_state] = params[:user][:us_state] unless current_user.user_provided_us_state
-    student_information[:user_provided_us_state] = true unless current_user.user_provided_us_state
+    student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
     student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
 
     current_user.update(student_information) unless student_information.empty?
