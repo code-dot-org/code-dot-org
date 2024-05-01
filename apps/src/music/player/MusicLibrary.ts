@@ -174,6 +174,12 @@ export default class MusicLibrary {
     );
   }
 
+  // Given a pack ID (e.g. "pack1"), return the RGB object for its theme color.
+  getPackImageRgb(packId: string): RGB | undefined {
+    const folder = this.getFolderForFolderId(packId);
+    return folder?.imageRgb;
+  }
+
   // A progression step might specify a smaller set of allowed sounds.
   setAllowedSounds(allowedSounds: Sounds): void {
     this.allowedSounds = allowedSounds;
@@ -299,6 +305,12 @@ export interface SoundData {
 
 export type SoundFolderType = 'sound' | 'kit' | 'instrument';
 
+interface RGB {
+  r: number;
+  g: number;
+  b: number;
+}
+
 export interface SoundFolder {
   name: string;
   artist?: string;
@@ -306,6 +318,7 @@ export interface SoundFolder {
   type?: SoundFolderType;
   path: string;
   imageSrc: string;
+  imageRgb?: RGB;
   restricted?: boolean;
   sounds: SoundData[];
   bpm?: number;

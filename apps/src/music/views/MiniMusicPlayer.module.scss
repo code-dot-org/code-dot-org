@@ -39,14 +39,28 @@
         height: 42px;
         width: 42px;
         max-width: initial;
+        border-radius: 4px;
       }
     }
 
-    .name {
+    .body {
       flex-grow: 1;
-      white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
+
+      .name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+
+      .details {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+      }
     }
 
     .other {

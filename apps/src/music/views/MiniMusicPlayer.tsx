@@ -14,6 +14,8 @@ import Lab2Registry from '../../lab2/Lab2Registry';
 import moduleStyles from './MiniMusicPlayer.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
+const noteImage = require(`@cdo/static/music/music-note.png`);
+
 interface MiniPlayerViewProps {
   projects: Channel[];
   libraryName: string;
@@ -102,6 +104,26 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     return <div>Loading...</div>;
   }
 
+  const getPackImageBackgroundStyle = (packId: string) => {
+    const rgb = MusicLibrary.getInstance()?.getPackImageRgb(packId);
+
+    if (!rgb) {
+      return undefined;
+    }
+
+    return `radial-gradient(rgb(${rgb.r}, ${rgb.g}, ${rgb.b}), rgb(0,0,0))`;
+  };
+
+  const getPackDetails = (packId: string) => {
+    const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(packId);
+
+    if (!packFolder) {
+      return null;
+    }
+
+    return {name: packFolder.name, artist: packFolder.artist};
+  };
+
   return (
     <div className={moduleStyles.miniMusicPlayer}>
       {projects.map(project => {
@@ -118,10 +140,13 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
             <div className={moduleStyles.pack}>
               {project.labConfig?.music?.packId && (
                 <img
-                  src={MusicLibrary.getInstance()?.getPackImageUrl(
-                    project.labConfig?.music?.packId
-                  )}
+                  src={noteImage}
                   className={moduleStyles.packImage}
+                  style={{
+                    background: getPackImageBackgroundStyle(
+                      project.labConfig.music.packId
+                    ),
+                  }}
                   alt=""
                 />
               )}
@@ -135,7 +160,15 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
               />
             </div>
 
-            <div className={moduleStyles.name}>{project.name}</div>
+            <div className={moduleStyles.body}>
+              <div className={moduleStyles.name}>{project.name}</div>
+              {project.labConfig?.music?.packId && (
+                <div className={moduleStyles.details}>
+                  {getPackDetails(project.labConfig.music.packId)?.name} &bull;{' '}
+                  {getPackDetails(project.labConfig.music.packId)?.artist}
+                </div>
+              )}
+            </div>
 
             <div className={moduleStyles.other}>
               <a
