@@ -69,7 +69,7 @@ const JoinSectionSuccessNotification = ({
         <SafeMarkdown
           markdown={i18n.sectionsNotificationJoinSuccessForNonPl({
             sectionName: sectionName,
-            teacherDashboardUrl: studio('/home'),
+            teacherHomepageUrl: studio('/home'),
           })}
         />
       ) : (

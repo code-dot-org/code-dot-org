@@ -2384,7 +2384,7 @@
   "sectionsNotificationJoinFull": "We couldn't add you to section {sectionId} because there are already {sectionCapacity} students in it. Please contact your teacher for help.",
   "sectionsNotificationJoinNotFound": "Section {sectionId} doesn't exist.",
   "sectionsNotificationJoinSuccess": "You joined section {sectionName}.",
-  "sectionsNotificationJoinSuccessForNonPl": "You joined section {sectionName}. This is not a Professional Learning section so it will be visible on the [Teacher Dashboard]({teacherDashboardUrl}).",
+  "sectionsNotificationJoinSuccessForNonPl": "You joined section {sectionName}. This is not a Professional Learning section so it will be visible on the [Teacher Homepage]({teacherHomepageUrl}).",
   "sectionsNotificationJoinRestricted": "We couldn't add you to section {sectionId} because it is locked. Please contact your teacher for help.",
   "sectionsNotificationLeaveSuccess": "You left section {sectionName}. If you left by mistake, you can join again with section code {sectionId}.",
   "sectionsNotificationSuccess": "Success!",
