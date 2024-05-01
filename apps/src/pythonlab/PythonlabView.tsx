@@ -13,6 +13,8 @@ import PythonConsole from './PythonConsole';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {PartialAppOptions} from '../lab2/projects/utils';
+import header from '@cdo/apps/code-studio/header';
+import {LabState} from '../lab2/lab2Redux';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -41,6 +43,19 @@ const defaultProject: MultiFileSource = {
 
 const defaultSources: ProjectSources = {
   source: defaultProject,
+};
+
+const selectInitialSources = (labState: LabState, isStartMode: boolean) => {
+  // Get the start sources from the level or use our hard-coded default.
+  const startSources = labState.levelProperties?.source
+    ? labState.levelProperties
+    : defaultSources;
+  if (isStartMode) {
+    return startSources;
+  }
+  const projectSources = labState.initialSources;
+  // projectSources will be undefined if the user hasn't begun a project.
+  return projectSources || startSources;
 };
 
 const defaultConfig: ConfigType = {
@@ -78,21 +93,12 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  console.log(config);
   const appOptions = getScriptData('appoptions') as PartialAppOptions;
   const isStartMode = appOptions.editBlocks === 'start_sources';
-  const initialSources = useAppSelector(state => {
-    // Get the start sources from the level or use our hard-coded default.
-    const startSources = state.lab.levelProperties?.source
-      ? state.lab.levelProperties
-      : defaultSources;
-    if (isStartMode) {
-      return startSources;
-    }
-    const projectSources = state.lab.initialSources;
-    // projectSources will be undefined if the user hasn't begun a project.
-    return projectSources || startSources;
-  });
+  const initialSources = useAppSelector(state =>
+    selectInitialSources(state.lab, isStartMode)
+  );
+  console.log({initialSources});
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
   const source = useAppSelector(state => state.pythonlab.source);
@@ -109,7 +115,16 @@ const PythonlabView: React.FunctionComponent = () => {
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
     dispatch(setSource(initialSources?.source as MultiFileSource));
-  }, [channelId, dispatch, initialSources]);
+    if (isStartMode && initialSources?.source) {
+      header.showLevelBuilderSaveButton(() => {
+        console.log('attempting to save updated source', initialSources.source);
+        return {
+          // TODO: Make this work. It does work if stringified.
+          source: initialSources.source,
+        };
+      });
+    }
+  }, [channelId, dispatch, initialSources, isStartMode]);
 
   return (
     <div className={moduleStyles.pythonlab}>
