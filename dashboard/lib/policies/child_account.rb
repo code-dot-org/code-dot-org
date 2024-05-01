@@ -45,19 +45,6 @@ class Policies::ChildAccount
   # The maximum number of times a student can resend a request to a parent.
   MAX_PARENT_PERMISSION_RESENDS = 3
 
-  def self.state_policy(user)
-    return unless user.us_state
-    STATE_POLICY[user.us_state]
-  end
-
-  # The date on which the student's account will be locked if the account is not compliant.
-  def self.lockout_date(user)
-    return DateTime.parse('2024-07-01')
-    return if compliant?(user)
-
-    state_policy(user).try(:[], :lockout_date)
-  end
-
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
@@ -74,6 +61,17 @@ class Policies::ChildAccount
   # policy going into effect.
   def self.user_predates_policy?(user)
     parent_permission_required?(user) && user.created_at < STATE_POLICY[user.us_state][:start_date]
+  end
+
+  # The date on which the student's account will be locked if the account is not compliant.
+  def self.lockout_date(user)
+    return if compliant?(user)
+    state_policy(user).try(:[], :lockout_date)
+  end
+
+  private_class_method def self.state_policy(user)
+    return unless user.us_state
+    STATE_POLICY[user.us_state]
   end
 
   # Check if parent permission is required for this account according to our
