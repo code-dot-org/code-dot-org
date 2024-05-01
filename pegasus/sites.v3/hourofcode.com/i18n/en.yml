@@ -2008,6 +2008,7 @@
         how_to: "App Lab How-to: Make a Choose-Your-Own-Adventure App"
 
   music_lab:
+    opengraph_title: "%{music_lab} | Create music with code"
     introducing: "Introducing"
     music_lab: "Music Lab"
     introducing_music_lab: "Introducing Music Lab"
