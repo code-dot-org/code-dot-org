@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import LevelFeedback from '@cdo/apps/templates/feedback/LevelFeedback';
 import i18n from '@cdo/locale';
-
 import {levelFeedbackShape} from './types';
 
 function AllFeedbacks({feedbacksByLevel}) {

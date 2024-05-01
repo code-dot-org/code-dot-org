@@ -157,6 +157,12 @@ const EVENTS = {
     'TA Rubric AI Eval started from section request',
   TA_RUBRIC_WINDOW_MOVE_START: 'TA Rubric window move start',
   TA_RUBRIC_WINDOW_MOVE_END: 'TA Rubric window move end',
+  TA_RUBRIC_TOUR_STARTED: 'First view of TA Rubric product tour',
+  TA_RUBRIC_TOUR_RESTARTED: 'TA Rubric product tour restart from ? button',
+  TA_RUBRIC_TOUR_NEXT: 'TA Rubric product tour next button clicked',
+  TA_RUBRIC_TOUR_BACK: 'TA Rubric product tour back button clicked',
+  TA_RUBRIC_TOUR_CLOSED: 'TA Rubric product tour closed',
+  TA_RUBRIC_TOUR_COMPLETE: 'User viewed all of TA Rubric product tour',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -247,6 +253,9 @@ const EVENTS = {
   // LTI Incubator
   LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
   LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
+
+  // Teacher Homepage
+  TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
 };
 
 const EVENT_GROUP_NAMES = {
