@@ -142,7 +142,7 @@ describe('SectionProgressSelector', () => {
       }
     );
 
-    stub.reset();
+    stub.restore();
   });
 
   it('shows v1 only if user not in closed beta', () => {
