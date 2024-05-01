@@ -5,7 +5,9 @@ import React, {useCallback, useMemo} from 'react';
 
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
-const Editor = (
+import './styles/editor.css';
+
+export const Editor = (
   langMapping: {[key: string]: LanguageSupport},
   editableFileTypes: string[]
 ) => {
@@ -52,5 +54,3 @@ const Editor = (
     </div>
   );
 };
-
-export default Editor;
