@@ -96,7 +96,7 @@
         = render partial: 'layouts/logo'
       - if current_user && Policies::Lti.early_access_banner_available?(current_user)
         = render partial: 'lti/v1/early_access_banner'
-      - if experiment_value('cap-parent-permission-warnings-enabled', request, true)
+      - if Cpa.cpa_experience(request) == Cpa::ALL_USER_LOCKOUT_WARNING
         - if current_user && (student_lockout_date = Policies::ChildAccount.lockout_date(current_user))
           = render partial: 'policy_compliance/pre_lockdown/parent_permission_modal',
                    locals: {student_uuid: current_user.uuid, lockout_date: student_lockout_date}
