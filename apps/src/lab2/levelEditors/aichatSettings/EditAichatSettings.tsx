@@ -31,6 +31,7 @@ import VisibilityDropdown from './VisibilityDropdown';
 import {UpdateContext} from './UpdateContext';
 import moduleStyles from './edit-aichat-settings.module.scss';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
 
 function sanitizeSettings(settings: LevelAichatSettings) {
   const sanitizedModelCardInfo = sanitizeField(
@@ -46,8 +47,14 @@ function sanitizeSettings(settings: LevelAichatSettings) {
     DEFAULT_VISIBILITIES
   );
 
+  // Ensure that only valid model IDs are included.
+  const filteredModelIds = (settings.availableModelIds || []).filter(id =>
+    modelDescriptions.map(model => model.id).includes(id)
+  );
+
   return {
     ...settings,
+    availableModelIds: filteredModelIds,
     initialCustomizations: {
       ...sanitizedCustomizations,
       modelCardInfo: sanitizedModelCardInfo,
