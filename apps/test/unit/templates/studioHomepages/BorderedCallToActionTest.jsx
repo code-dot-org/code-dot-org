@@ -75,7 +75,7 @@ describe('BorderedCallToAction', () => {
       expect(button.props.color).to.equal('black');
     });
 
-    it('can use a custom onClick, which ignores buttonUrl', () => {
+    it('can use a custom onClick', () => {
       const onClickSpy = sinon.spy();
       const borderedCtA = isolateComponent(
         <BorderedCallToAction {...defaultProps} onClick={onClickSpy} />
