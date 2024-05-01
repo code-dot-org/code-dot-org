@@ -1,60 +1,69 @@
 import PropTypes from 'prop-types';
-import React, {useRef} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
-
-CodeBlockWithCopy.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+import color from '@cdo/apps/util/color';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 const CodeBlockWithCopy = ({children}) => {
   const textRef = useRef();
+  const [copySuccess, setCopySuccess] = useState(false);
+  const timeoutRef = useRef();
 
   const handleCopy = () => {
-    navigator.clipboard
-      .writeText(textRef.current.textContent)
-      .then(() => alert('Code copied!'))
-      .catch(err => console.error('Failed to copy text:', err));
+    copyToClipboard(textRef.current.textContent, () => {
+      setCopySuccess(true);
+      timeoutRef.current = setTimeout(() => {
+        setCopySuccess(false);
+      }, 2000);
+    });
   };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div
       style={{
-        position: 'relative',
-        border: '1px solid #ccc',
-        margin: '10px',
-        fontFamily: 'Arial, sans-serif',
+        margin: '5px',
       }}
     >
-      <pre
-        ref={textRef}
+      <div
         style={{
-          margin: 0,
-          padding: '20px',
-          overflow: 'auto',
-          backgroundColor: '#f9f9f9',
+          backgroundColor: color.black,
+          display: 'flex',
+          justifyContent: 'flex-end',
         }}
       >
+        <Button
+          color={buttonColors.white}
+          disabled={false}
+          iconRight={{
+            iconName: copySuccess ? 'check' : 'clipboard',
+            iconStyle: 'solid',
+          }}
+          onClick={handleCopy}
+          text={copySuccess ? 'Copied!' : 'Copy code'}
+          size="xs"
+          type="tertiary"
+        />
+      </div>
+      <pre ref={textRef}>
         <code style={{display: 'block', whiteSpace: 'pre-wrap'}}>
           {children}
         </code>
       </pre>
-      <Button />
-      <button
-        onClick={handleCopy}
-        style={{
-          position: 'absolute',
-          top: '5px',
-          right: '5px',
-          padding: '5px 10px',
-          cursor: 'pointer',
-        }}
-        type="button"
-      >
-        Copy
-      </button>
     </div>
   );
+};
+
+CodeBlockWithCopy.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default CodeBlockWithCopy;
