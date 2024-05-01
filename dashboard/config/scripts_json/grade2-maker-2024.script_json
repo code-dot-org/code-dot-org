@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade2-maker",
-    "serialized_at": "2024-04-29 23:16:49 UTC",
+    "serialized_at": "2024-04-30 22:01:43 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -87,12 +87,32 @@
       }
     },
     {
-      "key": "Cristina - Meet your micro:bit",
-      "name": "Meet your micro:bit",
+      "key": "Events in Bounce",
+      "name": "Events in Bounce",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **context-setting**/**skill-building** lesson, students will learn what events are and how programmers use them in video games. Students will build a game that they can customize with different speeds and sounds.",
+        "preparation": "\n - Play through the puzzles to find any potential problem areas for your class.\n",
+        "purpose": "Events are very common in computer programs, especially in video games.  \n\nIn this lesson, students will develop their understanding of events by making a sports-based game. Students will learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will get to customize their game to make it more unique!",
+        "student_overview": "Ever wish you could play video games in school? In this lesson, you will get to make your own!"
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "Cristina - Meet your micro:bit",
+      "name": "Meet your micro:bit",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
       "properties": {
         "overview": "This lesson gives your students an early hands-on experience to discover the excitement that learning with the micro:bit offers. It helps reinforce what your students already know about code and computing concepts by transferring them to the physical world through exploring preprogrammed micro:bits. The exploration is also designed for you to model reviewing code together, helping your students make links between familiar computing concepts and their practical application by programming a physical device. This lesson is a pre-requisite before moving on to the rest of the activities in this unit.",
         "preparation": "- Watch **<a href=\"https://www.youtube.com/watch?v=G46PU1K1wBA&feature=youtu.be&themeRefresh=1\" target=\"_blank\"> Meet your micro:bit video</a>**\n\n- Get to know the **<a href=\"https://makecode.microbit.org/#editor\" target=\"_blank\"> MakeCode editor</a>**\n\n- Load **<a href=\"https://mbit.io/csf-1-project\" target=\"_blank\">Meet your micro:bit</a>** code onto micro:bits\n\n**Materials:**\n- micro:bits with micro USB cords (one for every two to three students is ideal)\n\n- Power source for the micro:bits (battery packs are best, but you can also power from the computer USB port)",
@@ -108,10 +128,10 @@
     {
       "key": "Cristina - Emotion badge with micro:bit",
       "name": "Emotion badge with micro:bit",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "overview": "In today's **skill-building** lesson, the goal is to program the micro:bit to show different emotion images when you press different buttons. This could be used to help people who have difficulty reading facial expressions. The key concepts are: **events**, **inputs** and **outputs**. ",
         "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.\n",
@@ -126,10 +146,10 @@
     {
       "key": "My Loopy Robotic Friends Jr",
       "name": "My Loopy Robotic Friends Jr.",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **context-setting** lesson builds on the initial \"My Robotic Friends\" activity, featuring larger and more complicated designs. ",
@@ -146,10 +166,10 @@
     {
       "key": "Drawing Gardens with Loops",
       "name": "Drawing Gardens with Loops",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. ",
@@ -166,10 +186,10 @@
     {
       "key": "Picturing Data",
       "name": "Picturing Data",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will collect data from a Play Lab project and visualize it using different graphs in this **exploratory** lesson.",
@@ -186,10 +206,10 @@
     {
       "key": "Counting with Variables",
       "name": "Counting with Variables",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game.",
         "preparation": "Play through the levels and review the **lesson slides**.\n",
@@ -324,6 +344,74 @@
       "seeding_key": {
         "lesson_activity.key": "42c4150d-313b-4230-965e-8237b9c25df0",
         "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "18db2437-2173-4654-b628-91f46402ea78",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18db2437-2173-4654-b628-91f46402ea78",
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "5f44add9-91a3-4d6f-8849-37c4d4e5a87f",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f44add9-91a3-4d6f-8849-37c4d4e5a87f",
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "2c67e09a-ca09-4a4a-8b9e-043d4da3f2fa",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c67e09a-ca09-4a4a-8b9e-043d4da3f2fa",
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "4fce82ba-4711-4c7d-b37c-eddeb49f6f16",
+      "position": 4,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4fce82ba-4711-4c7d-b37c-eddeb49f6f16",
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024"
+      }
+    },
+    {
+      "key": "4cd4c746-77ad-4bfb-9329-57195e60773d",
+      "position": 5,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4cd4c746-77ad-4bfb-9329-57195e60773d",
+        "lesson.key": "Events in Bounce",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade2-maker-2024"
       }
@@ -948,6 +1036,122 @@
       "seeding_key": {
         "activity_section.key": "2dffa783-69e5-45f0-afd2-455366f2bd4f",
         "lesson_activity.key": "42c4150d-313b-4230-965e-8237b9c25df0"
+      }
+    },
+    {
+      "key": "2a7a2fd6-8833-4c90-9d39-7739ab1626cc",
+      "position": 1,
+      "properties": {
+        "description": "\n&nbsp\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When have you caused something to happen because of an action you took? For example, you flipped a switch, the light turned on._",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a7a2fd6-8833-4c90-9d39-7739ab1626cc",
+        "lesson_activity.key": "18db2437-2173-4654-b628-91f46402ea78"
+      }
+    },
+    {
+      "key": "795de5eb-caa0-48c6-821b-e926ac204d6a",
+      "position": 2,
+      "properties": {
+        "description": "\n&nbsp\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\n**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you tap on a device, an app starts.*\n- *When the ball goes in the net, score a point.*\n- *When (event)*, *(action)*.\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\n**Say:** *Normally when we hear “event” we think of:*\n- *Field trip*\n- *Competition*\n- *Birthday Party*\n\n*We’re learning a new meaning for the word \"event\" today.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "795de5eb-caa0-48c6-821b-e926ac204d6a",
+        "lesson_activity.key": "18db2437-2173-4654-b628-91f46402ea78"
+      }
+    },
+    {
+      "key": "da5ce284-3bfa-4f50-8220-214fe2668214",
+      "position": 3,
+      "properties": {
+        "description": "###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:** *In Computer Science, events cause other actions to happen.*\n\n*This lesson has one new and important vocabulary word:*\n\n- **Event** - An event is an action that causes something to happen."
+      },
+      "seeding_key": {
+        "activity_section.key": "da5ce284-3bfa-4f50-8220-214fe2668214",
+        "lesson_activity.key": "18db2437-2173-4654-b628-91f46402ea78"
+      }
+    },
+    {
+      "key": "5397b39c-dc06-426b-94a0-c8f91cf767f8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-7 - Skill Building” slide",
+        "name": "Events in Bounce",
+        "progression_name": "Skill-Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8",
+        "lesson_activity.key": "5f44add9-91a3-4d6f-8849-37c4d4e5a87f"
+      }
+    },
+    {
+      "key": "4c4b234c-2cca-413b-a2cc-ffc5d5b988b1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c4b234c-2cca-413b-a2cc-ffc5d5b988b1",
+        "lesson_activity.key": "5f44add9-91a3-4d6f-8849-37c4d4e5a87f"
+      }
+    },
+    {
+      "key": "4fb6361c-be51-48da-84ae-3f7caf25bb85",
+      "position": 3,
+      "properties": {
+        "description": "####Online Puzzles\n\nAt the end of the set of puzzles, students will have the opportunity to make their game unique. Have the students try new ways to make the game more challenging. For example, try playing with many balls at once, or each time the ball bounces off a wall, launch more balls.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4fb6361c-be51-48da-84ae-3f7caf25bb85",
+        "lesson_activity.key": "5f44add9-91a3-4d6f-8849-37c4d4e5a87f"
+      }
+    },
+    {
+      "key": "ce318ce6-8273-4e31-add5-77d8b518eee3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the “Events in Bounce” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the “List these events” slide\n\nHave students record the correct order of events shown on this slide. Call on a few students to share their answers before revealing the \"Answer\" slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the “Answer” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the “How do events work?” slide\n\n\nDiscuss the correct sequence with the class.",
+        "name": "How Events Happen",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Although introduced in this lesson, the slide deck ***Events in Bounce - How Do They Happen?** can be applied more generally to express the relationship between hardware and software. Particularly, the final slide simplifies the input-to-output sequence and can be made into a poster for your classroom.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ce318ce6-8273-4e31-add5-77d8b518eee3",
+        "lesson_activity.key": "2c67e09a-ca09-4a4a-8b9e-043d4da3f2fa"
+      }
+    },
+    {
+      "key": "12571ad3-0b0c-4468-8c9a-a02f0a518329",
+      "position": 1,
+      "properties": {
+        "description": "####Take Me Out to the Ball Game\n\nTake the students outside to play some sort of ball game. Keep track of events and actions. For example, not dribbling in basketball results in a traveling foul and the other team gets the ball. In soccer, kicking the ball out of bounds results in the other team kicking the ball in. Getting the ball to the goal results in a point! Make up more events if your students are into it. Have all of the students yell \"Yippee\" when the captain of one team scores a point. Have everyone fall to the ground and roll around if a student makes two goals in a row!"
+      },
+      "seeding_key": {
+        "activity_section.key": "12571ad3-0b0c-4468-8c9a-a02f0a518329",
+        "lesson_activity.key": "4fce82ba-4711-4c7d-b37c-eddeb49f6f16"
+      }
+    },
+    {
+      "key": "15ec6578-1024-4860-93cd-ac3e3184f815",
+      "position": 1,
+      "properties": {
+        "description": "###Game Day Commentary (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[Game Day Commentary](https://docs.google.com/document/d/1wdBbcgvYXN3GgA1Y2nJjloGosfLxhhWKhUpbQtZPCP0/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. In this activity, students will read aloud instructions as they learn to code with events in Bounce to make a game. Once the game is complete, students will provide play-by-play commentary as their classmates predict which way the ball will bounce in order to score. Students will also complete a Frayer model about bar graphs prior to creating a scaled bar graph using the data collected during their game.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.RF.3.4:** Read with sufficient accuracy and fluency to support comprehension.\n\n- **CCSS.ELA-LITERACY.SL.3.4:** Report on a topic or text, tell a story, or recount an experience with appropriate facts and relevant, descriptive details, speaking clearly at an understandable pace.\n\n- **CCSS.MATH.CONTENT.3.MD.B.3:** Draw a scaled picture graph and a scaled bar graph to represent a data set with several categories. Solve one- and two-step \"how many more\" and \"how many less\" problems using information presented in scaled bar graphs. \n\n- **NGSS.3-PS2-2:** Make observations and/or measurements of an object’s motion to provide evidence that a pattern can be used to predict future motion. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "15ec6578-1024-4860-93cd-ac3e3184f815",
+        "lesson_activity.key": "4cd4c746-77ad-4bfb-9329-57195e60773d"
       }
     },
     {
@@ -2900,6 +3104,182 @@
       "level_keys": [
         "courseF_clicker_finish_grade2"
       ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill-Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events1s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      },
+      "level_keys": [
+        "courseD_bounce_events1s_grade2"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill-Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events2s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      },
+      "level_keys": [
+        "courseD_bounce_events2s_grade2"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill-Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events5s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      },
+      "level_keys": [
+        "courseD_bounce_events5s_grade2"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill-Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events6s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      },
+      "level_keys": [
+        "courseD_bounce_events6s_grade2"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill-Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events7s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      },
+      "level_keys": [
+        "courseD_bounce_events7s_grade2"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill-Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events10s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      },
+      "level_keys": [
+        "courseD_bounce_events10s_grade2"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill-Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events11s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      },
+      "level_keys": [
+        "courseD_bounce_events11s_grade2"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events12s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "4c4b234c-2cca-413b-a2cc-ffc5d5b988b1"
+      },
+      "level_keys": [
+        "courseD_bounce_events12s_grade2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3466,6 +3846,102 @@
         "script.name": "grade2-maker-2024",
         "activity_section.key": "26e2bf97-bb58-4738-bc3b-5523dadcd3de"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events1s_grade2",
+        "script_level.level_keys": [
+          "courseD_bounce_events1s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events2s_grade2",
+        "script_level.level_keys": [
+          "courseD_bounce_events2s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events5s_grade2",
+        "script_level.level_keys": [
+          "courseD_bounce_events5s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events6s_grade2",
+        "script_level.level_keys": [
+          "courseD_bounce_events6s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events7s_grade2",
+        "script_level.level_keys": [
+          "courseD_bounce_events7s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events10s_grade2",
+        "script_level.level_keys": [
+          "courseD_bounce_events10s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events11s_grade2",
+        "script_level.level_keys": [
+          "courseD_bounce_events11s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "5397b39c-dc06-426b-94a0-c8f91cf767f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events12s_grade2",
+        "script_level.level_keys": [
+          "courseD_bounce_events12s_grade2"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade2-maker-2024",
+        "activity_section.key": "4c4b234c-2cca-413b-a2cc-ffc5d5b988b1"
+      }
     }
   ],
   "resources": [
@@ -3715,6 +4191,18 @@
       }
     },
     {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
+      "key": "open-ended_programming_levels_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels_1"
+      }
+    },
+    {
       "name": "Pause and Think Online",
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "pause_and_think_online",
@@ -3929,6 +4417,24 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing Gardens with Loops",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "resource.key": "grade_2_-_maker_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "resource.key": "open-ended_programming_levels_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
         "resource.key": "pause_and_think_online"
       }
     },
@@ -4177,6 +4683,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "My Loopy Robotic Friends Jr",
         "vocabulary.key": "loop"
       }
@@ -4275,6 +4787,16 @@
       }
     },
     {
+      "key": "3d9c7ce1-0f2f-43cf-908e-1bc81c681796",
+      "properties": {
+        "description": "Share a creative artifact with other students."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "objective.key": "3d9c7ce1-0f2f-43cf-908e-1bc81c681796"
+      }
+    },
+    {
       "key": "3e7193d6-55d3-40f4-9c3b-89e1557c7a81",
       "properties": {
         "description": "Use the simulator to test the program before transferring it to the micro:bit"
@@ -4282,6 +4804,16 @@
       "seeding_key": {
         "lesson.key": "Cristina - Emotion badge with micro:bit",
         "objective.key": "3e7193d6-55d3-40f4-9c3b-89e1557c7a81"
+      }
+    },
+    {
+      "key": "4f3ca075-d8c0-434b-a871-db6b8e5c5fb3",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "objective.key": "4f3ca075-d8c0-434b-a871-db6b8e5c5fb3"
       }
     },
     {
@@ -4352,6 +4884,16 @@
       "seeding_key": {
         "lesson.key": "Cristina - Emotion badge with micro:bit",
         "objective.key": "8b47655c-9c97-44d6-840d-84cc3f1a76ca"
+      }
+    },
+    {
+      "key": "aceead5a-4d99-431d-9bab-c954a628a89a",
+      "properties": {
+        "description": "Create an interactive game using sequence and event-handlers."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "objective.key": "aceead5a-4d99-431d-9bab-c954a628a89a"
       }
     },
     {
@@ -4506,6 +5048,41 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "My Loopy Robotic Friends Jr",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
@@ -4555,6 +5132,13 @@
     }
   ],
   "lessons_opportunity_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "ngss",
+        "opportunity_standard.shortcode": "3-5-ETS1-1"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Picturing Data",
