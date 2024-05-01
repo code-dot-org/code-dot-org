@@ -25,10 +25,7 @@ const BorderedCallToAction = ({
   const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
 
   return (
-    <div
-      className={`${styles.outerBox} ${borderStyle} ${className}`}
-      id={'bordered-call-to-action'}
-    >
+    <div className={`${styles.outerBox} ${borderStyle} ${className}`}>
       <div className={styles.textWrapper}>
         <Heading3 visualAppearance="heading-sm">{headingText}</Heading3>
         <BodyThreeText>{descriptionText}</BodyThreeText>

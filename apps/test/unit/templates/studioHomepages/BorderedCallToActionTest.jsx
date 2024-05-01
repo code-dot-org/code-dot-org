@@ -1,102 +1,93 @@
-import {render, screen} from '@testing-library/react';
+import {isolateComponent} from 'isolate-react';
 import React from 'react';
-// import sinon from 'sinon';
+import sinon from 'sinon';
 
+import {Button} from '@cdo/apps/componentLibrary/button';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 
 import {expect} from '../../../util/reconfiguredChai';
 
-const DEFAULT_PROPS = {
-  headingText: 'Do Something',
-  descriptionText: 'Get started now',
-  className: '',
-  buttonType: 'primary',
-  buttonText: 'Get to it',
-  buttonUrl: '/my/path',
-  buttonClass: '',
-  buttonColor: 'purple',
-  solidBorder: false,
-  useAsLink: false,
-};
-
 describe('BorderedCallToAction', () => {
-  function renderDefault(propOverrides = {}) {
-    render(<BorderedCallToAction {...DEFAULT_PROPS} {...propOverrides} />);
-  }
+  const headingText = 'Do Something';
+  const descriptionText = 'Get started now';
+  const buttonText = 'Get to it';
+  const buttonUrl = '/my/path';
+  const buttonColor = 'purple';
+  const defaultProps = {
+    headingText,
+    descriptionText,
+    buttonText,
+    buttonUrl,
+    buttonColor,
+  };
 
-  it('renders a heading', () => {
-    renderDefault();
-    screen.getByText('Do Something');
+  describe('default behavior', () => {
+    const borderedCtA = isolateComponent(
+      <BorderedCallToAction {...defaultProps} />
+    );
+
+    it('renders a heading', () => {
+      expect(borderedCtA.content()).contains(descriptionText);
+    });
+
+    it('renders a description', () => {
+      expect(borderedCtA.content()).contains(descriptionText);
+    });
+
+    it('renders a purple button with text', () => {
+      const button = borderedCtA.findOne(Button);
+      expect(button.props.text).to.equal(buttonText);
+      expect(button.props.color).to.equal(buttonColor);
+    });
+
+    it('has a dashed border', () => {
+      expect(borderedCtA.findAll('div.dashedBorder'));
+    });
+
+    it('button goes to url when clicked', () => {
+      const button = borderedCtA.findOne(Button);
+      expect(button.props.href).contains(buttonUrl);
+    });
   });
 
-  it('renders a description', () => {
-    renderDefault();
-    screen.getByText('Get started now');
+  describe('custom behavior', () => {
+    it('must have either a buttonUrl or onClick', () => {
+      expect(() => {
+        isolateComponent(
+          <BorderedCallToAction {...defaultProps} buttonUrl={undefined} />
+        );
+      }).to.throw(Error);
+    });
+
+    it('can have a solid border', () => {
+      const borderedCtA = isolateComponent(
+        <BorderedCallToAction {...defaultProps} solidBorder />
+      );
+      expect(borderedCtA.findAll('div.solidBorder'));
+    });
+
+    it('can have a custom button color', () => {
+      const borderedCtA = isolateComponent(
+        <BorderedCallToAction {...defaultProps} buttonColor={'black'} />
+      );
+      const button = borderedCtA.findOne(Button);
+      expect(button.props.text).to.equal(buttonText);
+      expect(button.props.color).to.equal('black');
+    });
+
+    it('can use a custom onClick, which ignores buttonUrl', () => {
+      const onClickSpy = sinon.spy();
+      const borderedCtA = isolateComponent(
+        <BorderedCallToAction
+          {...defaultProps}
+          buttonUrl={'/courses'}
+          onClick={onClickSpy}
+        />
+      );
+
+      const button = borderedCtA.findOne(Button);
+      button.props.onClick();
+      expect(onClickSpy).to.have.been.calledOnce;
+    });
   });
-
-  it('renders a button with text', () => {
-    renderDefault();
-    screen.getByText('Get to it');
-  });
-
-  it('has a dashed border', () => {
-    renderDefault();
-    screen.debug();
-    const container = document.querySelector('#bordered-call-to-action');
-    expect(container.classList.contains('dashedBorder')).toBe(true);
-  });
-
-  // it('button goes to url when clicked', () => {
-  //   const path = '/my/path';
-  //   sinon.stub(utils, 'navigateToHref');
-
-  //   const button = borderedCtA.findOne('Button');
-  //   button.props.onClick();
-
-  //   expect(utils.navigateToHref).to.have.been.calledWith(path);
-
-  //   utils.navigateToHref.restore();
-  // });
 });
-
-// describe('custom behavior', () => {
-//   it('must have either a buttonUrl or onClick', () => {
-//     expect(() => {
-//       isolateComponent(
-//         <BorderedCallToAction {...defaultProps} buttonUrl={undefined} />
-//       );
-//     }).to.throw(Error);
-//   });
-
-//   it('can have a solid border', () => {
-//     const borderedCtA = isolateComponent(
-//       <BorderedCallToAction {...defaultProps} solidBorder />
-//     );
-//     expect(borderedCtA.findAll('div.solidBorder'));
-//   });
-
-//   it('can have a custom button color', () => {
-//     const borderedCtA = isolateComponent(
-//       <BorderedCallToAction {...defaultProps} buttonColor={'black'} />
-//     );
-//     const button = borderedCtA.findOne('Button');
-//     expect(button.props.text).to.equal(buttonText);
-//     expect(button.props.color).to.equal('black');
-//   });
-
-// it('can use a custom onClick, which ignores buttonUrl', () => {
-//   const onClickSpy = sinon.spy();
-//   sinon.stub(utils, 'navigateToHref');
-//   const borderedCtA = isolateComponent(
-//     <BorderedCallToAction {...defaultProps} onClick={onClickSpy} />
-//   );
-
-//   const button = borderedCtA.findOne('Button');
-//   button.props.onClick();
-
-//   expect(utils.navigateToHref).not.to.have.been.called;
-//   expect(onClickSpy).to.have.been.calledOnce;
-
-//   utils.navigateToHref.restore();
-// });
-// });
