@@ -1,5 +1,6 @@
 require 'cdo/firehose'
 require 'cdo/honeybadger'
+require 'cdo/mailjet'
 require 'cpa'
 require_relative '../../../shared/middleware/helpers/experiments'
 require 'metrics/events'
@@ -114,12 +115,17 @@ class RegistrationsController < Devise::RegistrationsController
       end
       super
     end
-    should_send_new_teacher_email = current_user&.teacher?
-    TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
-    should_send_parent_email = current_user && current_user.parent_email.present?
-    ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
 
-    if current_user # successful registration
+    if current_user && current_user.errors.blank?
+      if current_user.teacher?
+        if MailJet.enabled? && request.locale != 'es-MX'
+          MailJet.create_contact_and_send_welcome_email(current_user)
+        else
+          TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now
+        end
+      end
+      ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
+
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
@@ -231,7 +237,8 @@ class RegistrationsController < Devise::RegistrationsController
     student_information = {}
 
     student_information[:age] = params[:user][:age] if current_user.age.blank?
-    student_information[:us_state] = params[:user][:us_state] if current_user.us_state.blank?
+    student_information[:us_state] = params[:user][:us_state] unless current_user.user_provided_us_state
+    student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
     student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
 
     current_user.update(student_information) unless student_information.empty?
@@ -490,6 +497,7 @@ class RegistrationsController < Devise::RegistrationsController
       :provider,
       :us_state,
       :country_code,
+      :user_provided_us_state,
       :ai_rubrics_disabled,
       :lti_roster_sync_enabled,
       school_info_attributes: [

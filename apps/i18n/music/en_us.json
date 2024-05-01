@@ -84,5 +84,8 @@
   "effectsLabelsHigh": "High",
   "effectsLabelsMedium": "Medium",
   "effectsLabelsLow": "Low",
-  "effectsLabelsOff": "Off"
+  "effectsLabelsOff": "Off",
+  "effectsLabelsVolume": "Volume",
+  "effectsLabelsDelay": "Delay",
+  "effectsLabelsFilter": "Filter"
 }

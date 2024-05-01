@@ -15,7 +15,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "temperature": "0.8",
-        "systemPrompt": "",
+        "systemPrompt": "You are a business college professor. One of your students wants to talk out a business idea with you. Ask questions about and provide feedback on the clarity of their concept, the value proposition, target audience, revenue model, and scalability. Ask questions that push the students thinking",
         "retrievalContexts": [
 
         ],
@@ -31,7 +31,7 @@
         }
       },
       "visibilities": {
-        "temperature": "readonly",
+        "temperature": "editable",
         "systemPrompt": "readonly",
         "retrievalContexts": "editable",
         "modelCardInfo": "hidden"
@@ -39,6 +39,6 @@
       "hidePresentationPanel": true
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-25T01:47:05.786+00:00\",\"changed\":[\"cloned from \\\"baruch-test-2\\\"\"],\"cloned_from\":\"baruch-test-2\"},{\"changed_at\":\"2024-04-25 01:52:36 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"project_template_level_name\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-25 01:53:40 +0000\",\"changed\":[],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-25T01:47:05.786+00:00\",\"changed\":[\"cloned from \\\"baruch-test-2\\\"\"],\"cloned_from\":\"baruch-test-2\"},{\"changed_at\":\"2024-04-25 01:52:36 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"project_template_level_name\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-25 01:53:40 +0000\",\"changed\":[],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"},{\"changed_at\":\"2024-04-26 15:09:34 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18972,\"changed_by_email\":\"sarah.judd@code.org\"}]"
 }]]></config>
 </Aichat>

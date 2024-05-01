@@ -6,7 +6,7 @@ require_relative '../src/env'
 require src_dir 'database'
 require_relative 'properties'
 
-PEGASUS_DB_READER = sequel_connect(CDO.pegasus_db_reader, CDO.pegasus_db_reader, query_timeout: 1200)
+PEGASUS_DB_READER = Cdo::Sequel.database_connection_pool(CDO.pegasus_db_reader, CDO.pegasus_db_reader, query_timeout: 1200)
 
 WEIGHTED_COUNT = "SUM( " \
   "IF(session REGEXP '^_.*_'," +
