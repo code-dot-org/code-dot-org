@@ -317,52 +317,22 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     end
   end
 
-  test 'workshop organizers see dashboard links' do
+  test "workshop organizers do not see extra links box" do
     workshop_organizer = create :workshop_organizer
     load_pl_landing workshop_organizer
-    assert_select '.extra-links' do
-      assert_select 'a[href=?]', '/pd/workshop_dashboard'
-    end
+    assert_select '.extra-links', count: 0
   end
 
-  test 'workshop organizers who are regional partner program managers see application dashboard links' do
-    workshop_organizer = create :workshop_organizer, :as_regional_partner_program_manager
-    load_pl_landing workshop_organizer
-    assert_select '.extra-links' do
-      assert_select 'a[href=?]', '/pd/application_dashboard'
-    end
-  end
-
-  test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
-    workshop_organizer = create :workshop_organizer
-    load_pl_landing workshop_organizer
-    assert_select '.extra-links' do
-      assert_select 'a[href="/pd/application_dashboard"]', {count: 0}
-    end
-  end
-
-  test 'program managers see workshop dashboard links' do
-    program_manager = create :program_manager
-    load_pl_landing program_manager
-    assert_select '.extra-links' do
-      assert_select 'a[href=?]', '/pd/workshop_dashboard'
-    end
-  end
-
-  test 'program managers see application dashboard links' do
-    program_manager = create :program_manager
-    load_pl_landing program_manager
-    assert_select '.extra-links' do
-      assert_select 'a[href=?]', '/pd/application_dashboard'
-    end
-  end
-
-  test 'facilitators see workshop dashboard links' do
+  test "facilitators do not see extra links box" do
     facilitator = create :facilitator
     load_pl_landing facilitator
-    assert_select '.extra-links' do
-      assert_select 'a[href=?]', '/pd/workshop_dashboard'
-    end
+    assert_select '.extra-links', count: 0
+  end
+
+  test "program managers do not see extra links box" do
+    program_manager = create :program_manager
+    load_pl_landing program_manager
+    assert_select '.extra-links', count: 0
   end
 
   test "teachers with no extra permissions do not see extra links box" do

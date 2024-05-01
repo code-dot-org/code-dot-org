@@ -23,10 +23,22 @@
 #homepage-container
 
 #workshop-links.container.main
-  -if can?(:read, Pd::Application::ApplicationBase) || can?(:read, Pd::Workshop) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
-    Looking for a link? They've moved to
-    = link_to "the Professional Learning Landing Page", professional_learning_landing_path
-  -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+  -if can? :read, Pd::Application::ApplicationBase
+    %h1
+      Application Dashboard
+    = link_to pd_application_dashboard_path do
+      %h3
+        Manage Applications
+  -if can? :read, Pd::Workshop
+    %h1
+      Workshop Dashboard
+    %a{href:'/pd/workshop_dashboard'}
+      %h3
+        Manage PD Workshops
+    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      = link_to pd_workshop_admins_path do
+        %h3
+          Directory for Workshop Admins
     - courses_facilitated = Pd::CourseFacilitator.where(facilitator: current_user).map(&:course)
     -if courses_facilitated.any?
       %h1
