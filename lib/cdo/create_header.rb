@@ -31,9 +31,6 @@ class CreateHeader
     poetry_hoc: {
       image: "logo_poetry.png"
     },
-    thebadguys: {
-      image: "logo_thebadguys.png"
-    }
   }.freeze
 
   # project info data can be inferred from the key, except when otherwise
