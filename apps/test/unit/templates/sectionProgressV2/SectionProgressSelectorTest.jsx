@@ -134,7 +134,7 @@ describe('SectionProgressSelector', () => {
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(stub).to.have.been.calledTwice();
+    expect(stub).to.have.been.calledTwice;
     expect(stub).to.have.been.calledWith(
       '/api/v1/users/show_progress_table_v2',
       {
@@ -190,7 +190,7 @@ describe('SectionProgressSelector', () => {
 
     fireEvent.click(toggle);
 
-    expect(stub).to.have.been.calledTwice();
+    expect(stub).to.have.been.calledTwice;
     expect(stub).to.have.been.calledWith(
       '/api/v1/users/show_progress_table_v2',
       {
@@ -211,7 +211,7 @@ describe('SectionProgressSelector', () => {
 
     fireEvent.click(toggle);
 
-    expect(stub).to.have.been.calledTwice();
+    expect(stub).to.have.been.calledTwice;
     expect(stub).to.have.been.calledWith(
       '/api/v1/users/show_progress_table_v2',
       {
