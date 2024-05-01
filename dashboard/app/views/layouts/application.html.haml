@@ -98,11 +98,8 @@
         = render partial: 'lti/v1/early_access_banner'
 
       -# CAP parent permission warnings
-      - if Cpa.cpa_experience(request) == Cpa::ALL_USER_LOCKOUT_WARNING
-        - if current_user && (student_lockout_date = Policies::ChildAccount.lockout_date(current_user))
-          - unless Policies::ChildAccount::ComplianceState.request_sent?(current_user)
-            = render partial: 'policy_compliance/pre_lockdown/parent_permission_modal',
-                     locals: {student_uuid: current_user.uuid, lockout_date: student_lockout_date}
+      - if current_user
+        = render_pre_lockdown_parent_permission_modal(current_user, request)
 
       - page = yield
 
