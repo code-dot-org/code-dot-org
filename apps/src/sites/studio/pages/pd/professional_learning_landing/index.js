@@ -27,6 +27,11 @@ $(() => {
           landingPageData['current_year_application_id']
         }
         workshopsAsParticipant={landingPageData['workshops_as_participant']}
+        workshopsAsFacilitator={landingPageData['workshops_as_facilitator']}
+        workshopsAsOrganizer={landingPageData['workshops_as_organizer']}
+        workshopsAsRegionalPartner={
+          landingPageData['workshops_for_regional_partner']
+        }
         plCoursesStarted={landingPageData['pl_courses_started']}
         userPermissions={landingPageData['user_permissions']}
         joinedStudentSections={landingPageData['joined_student_sections']}
