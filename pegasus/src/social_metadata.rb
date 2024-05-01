@@ -18,6 +18,7 @@
 #   code.org/videos
 #   code.org/10years
 #   code.org/youngwomen
+#   code.org/music
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -69,6 +70,7 @@ def get_social_metadata_for_page(request)
     videos_page: {path: "/shared/images/social-media/videos-page.png", width: 1200, height: 630},
     ten_years: {path: "/shared/images/social-media/10years-social.png", width: 1200, height: 630},
     young_women_in_cs: {path: "/shared/images/social-media/young-women-social.png", width: 1200, height: 630},
+    music_lab: {path: "/shared/images/social-media/music-lab.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -249,6 +251,13 @@ def get_social_metadata_for_page(request)
         image: images[:hoc_2023_social]
       }
     },
+    "music_lab" => {
+      "default" => {
+        title: hoc_s("music_lab.opengraph_title", markdown: :inline, locals: {music_lab: "Music Lab"}),
+        description: hoc_s("music_lab.banner.desc"),
+        image: images[:music_lab]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -291,6 +300,8 @@ def get_social_metadata_for_page(request)
     page = "ten_years"
   elsif request.path == "/youngwomen" && request.site == "code.org"
     page = "young_women_in_cs"
+  elsif request.path == "/music" && request.site == "code.org"
+    page = "music_lab"
   else
     return {}
   end
