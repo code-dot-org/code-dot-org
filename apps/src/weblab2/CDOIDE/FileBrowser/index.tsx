@@ -8,7 +8,7 @@ import {ProjectType, FileId, FolderId} from '@cdoide/types';
 import {findFolder, getErrorMessage} from '@cdoide/utils';
 import React, {useMemo} from 'react';
 
-import './styles/files.css';
+import './styles/fileBrowser.css';
 
 type FilesComponentProps = {
   newFolderPrompt: (parentId?: string) => void;
@@ -21,7 +21,7 @@ type FilesComponentProps = {
   renameFolderPrompt: (folderId: FolderId) => void;
 };
 
-const FilesBrowser = React.memo(
+const InnerFileBrowser = React.memo(
   ({
     parentId,
     folders,
@@ -78,7 +78,7 @@ const FilesBrowser = React.memo(
                 </span>
                 {f.open && (
                   <ul>
-                    <FilesBrowser
+                    <InnerFileBrowser
                       folders={folders}
                       newFolderPrompt={newFolderPrompt}
                       parentId={f.id}
@@ -119,7 +119,7 @@ const FilesBrowser = React.memo(
   }
 );
 
-export const Files = React.memo(() => {
+export const FileBrowser = React.memo(() => {
   const {
     project,
     newFile,
@@ -260,7 +260,7 @@ export const Files = React.memo(() => {
   );
 
   return (
-    <div>
+    <div className="file-browser">
       <div className="files-toolbar">
         <button type="button" onClick={() => newFolderPrompt()}>
           <i className="fa-solid fa-folder" />
@@ -272,7 +272,7 @@ export const Files = React.memo(() => {
         </button>
       </div>
       <ul>
-        <FilesBrowser
+        <InnerFileBrowser
           parentId={DEFAULT_FOLDER_ID}
           folders={project.folders}
           newFolderPrompt={newFolderPrompt}

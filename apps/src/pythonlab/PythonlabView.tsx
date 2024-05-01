@@ -2,7 +2,7 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
-import Editor from '@cdo/apps/weblab2/CDOIDE/CenterPane/Editor';
+import {Editor} from '@cdo/apps/weblab2/CDOIDE/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {CDOIDE} from '@cdo/apps/weblab2/CDOIDE';
@@ -38,7 +38,6 @@ const defaultProject: MultiFileSource = {
 };
 
 const defaultConfig: ConfigType = {
-  showPreview: false,
   activeLeftNav: 'Files',
   EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
   leftNav: [
@@ -67,7 +66,25 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions: 'Welcome to Python Lab!',
+  Instructions: () => (
+    <div
+      style={{
+        backgroundColor: 'white',
+        color: 'black',
+        gridArea: 'instructions',
+      }}
+    >
+      Welcome to Python Lab!
+    </div>
+  ),
+  gridLayoutRows: '32px 100px 32px auto',
+  gridLayoutColumns: '300px auto',
+  gridLayout: `
+    "instructions file-tabs"
+    "instructions editor"
+    "side-bar editor"
+    "file-browser editor"
+  `,
 };
 
 const PythonlabView: React.FunctionComponent = () => {
