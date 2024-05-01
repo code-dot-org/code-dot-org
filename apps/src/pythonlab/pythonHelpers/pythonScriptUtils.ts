@@ -11,7 +11,7 @@ import {DEFAULT_FOLDER_ID} from '@cdo/apps/weblab2/CDOIDE/constants';
 import {PyodideMessage, PyodidePathContent} from '../types';
 
 import {HIDDEN_FOLDERS} from './constants';
-import {ALL_PATCHES} from './patches';
+import {ALL_PATCHES, getSetupCode} from './patches';
 
 export function applyPatches(originalCode: string, channelId: string) {
   let finalCode = originalCode;
@@ -21,6 +21,7 @@ export function applyPatches(originalCode: string, channelId: string) {
       ? patch.contents + '\n' + finalCode
       : finalCode + '\n' + patch.contents;
   }
+  finalCode = getSetupCode(location.host, channelId) + finalCode;
   return finalCode;
 }
 
