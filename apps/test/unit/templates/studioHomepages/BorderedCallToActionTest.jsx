@@ -78,13 +78,8 @@ describe('BorderedCallToAction', () => {
     it('can use a custom onClick, which ignores buttonUrl', () => {
       const onClickSpy = sinon.spy();
       const borderedCtA = isolateComponent(
-        <BorderedCallToAction
-          {...defaultProps}
-          buttonUrl={'/courses'}
-          onClick={onClickSpy}
-        />
+        <BorderedCallToAction {...defaultProps} onClick={onClickSpy} />
       );
-
       const button = borderedCtA.findOne(Button);
       button.props.onClick();
       expect(onClickSpy).to.have.been.calledOnce;
