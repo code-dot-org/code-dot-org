@@ -48,14 +48,14 @@ module Forms
       private def parent_email_is_correct
         return if Cdo::EmailValidator.email_address?(parent_email)
 
-        errors.add(:base, I18n.t('cpa.parental_permission_request.errors.invalid_parent_email'))
+        errors.add(:base, I18n.t('child_account.parental_permission_request.errors.invalid_parent_email'))
       end
 
       # If we already comply, don't suddenly invalid it
       private def permission_not_granted
         return unless Policies::ChildAccount::ComplianceState.permission_granted?(child_account)
 
-        errors.add(:base, I18n.t('cpa.parental_permission_request.errors.already_granted'))
+        errors.add(:base, I18n.t('child_account.parental_permission_request.errors.already_granted'))
       end
 
       private def parent_email_is_not_own
@@ -63,14 +63,14 @@ module Forms
         sanitized_parent_email = parent_email.sub(/\+[^@]+@/, '@')
         return unless child_account.hashed_email == Digest::MD5.hexdigest(sanitized_parent_email)
 
-        errors.add(:base, I18n.t('cpa.parental_permission_request.errors.parent_email_is_own'))
+        errors.add(:base, I18n.t('child_account.parental_permission_request.errors.parent_email_is_own'))
       end
 
       private def resend_limit_not_reached
         return if record.new_record?
         return if record.resends_sent.next < Policies::ChildAccount::MAX_PARENT_PERMISSION_RESENDS
 
-        errors.add(:base, I18n.t('cpa.parental_permission_request.errors.resend_limit_reached'))
+        errors.add(:base, I18n.t('child_account.parental_permission_request.errors.resend_limit_reached'))
       end
 
       private def daily_limit_not_reached
@@ -80,7 +80,7 @@ module Forms
         today_requests = ::ParentalPermissionRequest.where(user: child_account, created_at: Time.zone.now.all_day)
         return unless today_requests.limit(max_daily_requests).count == max_daily_requests
 
-        errors.add(:base, I18n.t('cpa.parental_permission_request.errors.daily_limit_reached'))
+        errors.add(:base, I18n.t('child_account.parental_permission_request.errors.daily_limit_reached'))
       end
     end
   end
