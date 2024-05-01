@@ -49,7 +49,7 @@ function sanitizeSettings(settings: LevelAichatSettings) {
 
   // Ensure that only valid model IDs are included.
   const filteredModelIds = (settings.availableModelIds || []).filter(id =>
-    modelDescriptions.map(model => model.id).includes(id)
+    modelDescriptions.some(model => model.id === id)
   );
 
   return {
