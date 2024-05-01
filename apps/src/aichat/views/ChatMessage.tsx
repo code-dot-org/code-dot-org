@@ -24,7 +24,11 @@ const isUser = (role: string) => role === Role.USER;
 const isModelUpdate = (role: string) => role === Role.MODEL_UPDATE;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
-  if (status === Status.OK || status === Status.UNKNOWN) {
+  if (
+    status === Status.OK ||
+    status === Status.UNKNOWN ||
+    status === Status.ERROR
+  ) {
     return (
       <div
         className={classNames(moduleStyles.message, moduleStyles.userMessage)}
@@ -52,18 +56,6 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {TOO_PERSONAL_MESSAGE}
       </div>
     );
-  } else if (status === Status.ERROR) {
-    return (
-      <div
-        className={classNames(
-          moduleStyles.message,
-          // TODO: Add dedicated error message styling.
-          moduleStyles.tooPersonalMessage
-        )}
-      >
-        {'There was an error getting a response. Please try again.'}
-      </div>
-    );
   } else {
     return null;
   }
@@ -79,6 +71,18 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
         )}
       >
         {chatMessageText}
+      </div>
+    );
+  } else if (status === Status.ERROR) {
+    return (
+      <div
+        className={classNames(
+          moduleStyles.message,
+          moduleStyles.assistantMessage,
+          moduleStyles.errorMessage
+        )}
+      >
+        {'There was an error getting a response. Please try again.'}
       </div>
     );
   }

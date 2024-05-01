@@ -257,7 +257,7 @@ export const submitChatContents = createAsyncThunk(
     const newMessage: ChatCompletionMessage = {
       id: getNewMessageId(),
       role: Role.USER,
-      status: Status.OK,
+      status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
       sessionId: currentSessionId,
@@ -265,18 +265,52 @@ export const submitChatContents = createAsyncThunk(
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
+    let chatApiResponse;
+    try {
+      chatApiResponse = await postAichatCompletionMessage(
+        newUserMessageText,
+        currentSessionId
+          ? storedMessages.filter(
+              message => message.sessionId === currentSessionId
+            )
+          : [],
+        aiCustomizations,
+        aichatContext,
+        currentSessionId
+      );
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (e: any) {
+      const response = await e.response.json();
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: getNewMessageId(),
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: getCurrentTimestamp(),
+        // session id here?
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
 
-    const chatApiResponse = await postAichatCompletionMessage(
-      newUserMessageText,
-      currentSessionId
-        ? storedMessages.filter(
-            message => message.sessionId === currentSessionId
-          )
-        : [],
-      aiCustomizations,
-      aichatContext,
-      currentSessionId
-    );
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.ERROR,
+        })
+      );
+
+      thunkAPI.dispatch(setChatSessionId(response.session_id));
+      thunkAPI.dispatch(
+        updateChatMessageSession({
+          id: newMessage.id,
+          sessionId: response.session_id,
+        })
+      );
+      return;
+      // add new assistant error message
+      // update status of user message to error
+      // question: how is logging state managed?
+      // question: should all this stuff be in the catch?
+    }
 
     thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
     thunkAPI.dispatch(
@@ -304,15 +338,11 @@ export const submitChatContents = createAsyncThunk(
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
-        // The accuracy of this timestamp is debatable since it's not when our backend
-        // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
         sessionId: chatApiResponse.session_id,
       };
       return thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
-
-    console.log('Could not handle response.');
   }
 );
 

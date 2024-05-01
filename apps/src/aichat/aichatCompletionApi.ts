@@ -36,9 +36,8 @@ export async function postAichatCompletionMessage(
     aichatContext,
     ...(sessionId ? {sessionId} : {}),
   };
-  let response;
   try {
-    response = await HttpClient.post(
+    const response = await HttpClient.post(
       CHAT_COMPLETION_URL,
       JSON.stringify(payload),
       true,
@@ -46,16 +45,12 @@ export async function postAichatCompletionMessage(
         'Content-Type': 'application/json; charset=UTF-8',
       }
     );
-    // For now, response will be null if there was an error.
-    if (response.ok) {
-      return await response.json();
-    } else {
-      return null;
-    }
+    return await response.json();
   } catch (error) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Error in aichat completion request', error as Error);
+    throw error;
   }
 }
 
