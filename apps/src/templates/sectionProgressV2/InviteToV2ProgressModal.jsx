@@ -25,8 +25,6 @@ function InviteToV2ProgressModal({
   const [invitationOpen, setInvitationOpen] = React.useState(false);
 
   React.useEffect(() => {
-    // This effect runs only once on mount
-
     const timeSinceInvitationLastDelayed = () => {
       const startingDate = new Date(dateProgressTableInvtationDelayed);
       const today = new Date();
@@ -86,28 +84,6 @@ function InviteToV2ProgressModal({
       has_seen_progress_table_v2_invitation: true,
     });
   };
-
-  // // Put both of these on an onMount hook?
-  // const timeSinceInvitationLastDelayed = () => {
-  //   const startingDate = new Date(dateProgressTableInvtationDelayed);
-  //   const today = new Date();
-  //   const differenceInMilliseconds = today.getTime() - startingDate.getTime();
-  //   const differenceInDays = differenceInMilliseconds / (1000 * 3600 * 24);
-  //   return Math.floor(differenceInDays);
-  // };
-
-  // const showInvitation = () => {
-  //   const alreadyViewedInvitation = !!hasSeenProgressTableInvite;
-  //   if (alreadyViewedInvitation) {
-  //     return false;
-  //   } else {
-  //     if (!!dateProgressTableInvtationDelayed) {
-  //       return timeSinceInvitationLastDelayed() > 3;
-  //     } else {
-  //       return true;
-  //     }
-  //   }
-  // };
 
   if (invitationOpen) {
     return (
