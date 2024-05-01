@@ -63,12 +63,10 @@ class RegistrationsController < Devise::RegistrationsController
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
-      redirect_to new_user_registration_path unless is_signup_post_enabled
-    else
-      render 'new' unless is_signup_post_enabled # Re-render form to display validation errors
+      redirect_to new_user_registration_path and return unless is_signup_post_enabled
     end
 
-    render 'new' if is_signup_post_enabled
+    render 'new'
   end
 
   #
