@@ -200,7 +200,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     response = assigns(:landing_page_data)
     assert_equal 3, response[:workshops_as_participant].length
-    assert_equal([@csf_workshop, @csd_workshop, @csp_workshop].map(&:course_name), response[:workshops_as_participant].map {|workshop| workshop[:course_name]})
+    assert_equal([@csf_workshop, @csd_workshop, @csp_workshop].map(&:course_name), response[:workshops_as_participant].map {|workshop| workshop[:course]})
   end
 
   test 'facilitated workshops are passed down' do
@@ -214,7 +214,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     response = assigns(:landing_page_data)
     assert_equal 1, response[:workshops_as_facilitator].length
-    assert_equal workshop.course_name, response[:workshops_as_facilitator].first[:course_name]
+    assert_equal workshop.course_name, response[:workshops_as_facilitator].first[:course]
   end
 
   test 'organized workshops are passed down' do
@@ -227,7 +227,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     response = assigns(:landing_page_data)
     assert_equal 1, response[:workshops_as_organizer].length
-    assert_equal workshop.course_name, response[:workshops_as_organizer].first[:course_name]
+    assert_equal workshop.course_name, response[:workshops_as_organizer].first[:course]
   end
 
   test 'workshops for regional partner are passed down' do
@@ -241,7 +241,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
     response = assigns(:landing_page_data)
     assert_equal 1, response[:workshops_for_regional_partner].length
-    assert_equal workshop.course_name, response[:workshops_for_regional_partner].first[:course_name]
+    assert_equal workshop.course_name, response[:workshops_for_regional_partner].first[:course]
   end
 
   test 'progress in PL courses is passed down' do
