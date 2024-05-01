@@ -99,7 +99,8 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def read_records
-    is_shared_table ? shared_table.records : records
+    record_rows = is_shared_table ? shared_table.records : records
+    record_rows.map(&:record_json)
   end
 
   ##########################################################
@@ -117,7 +118,7 @@ class DatablockStorageTable < ApplicationRecord
 
     CSV.generate do |csv|
       csv << column_names
-      read_records.map(&:record_json).each do |record_json|
+      read_records.each do |record_json|
         csv << column_names.map {|x| record_json[x]}
       end
     end
@@ -130,7 +131,7 @@ class DatablockStorageTable < ApplicationRecord
   def get_column(column_name)
     if get_columns.include? column_name
       read_records.map do |record|
-        record.record_json[column_name]
+        record[column_name]
       end
     else
       [] # javascript expects a list with every element undefined to indicate column doesn't exists error

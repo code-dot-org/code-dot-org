@@ -237,7 +237,7 @@ class DatablockStorageController < ApplicationController
   def read_records
     table = find_table_or_shared_table
 
-    render json: table.read_records.map(&:record_json)
+    render json: table.read_records
   end
 
   def update_record
