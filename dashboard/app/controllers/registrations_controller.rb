@@ -141,7 +141,7 @@ class RegistrationsController < Devise::RegistrationsController
           metadata: metadata,
         )
       end
-      has_school = current_user.school_info_id?
+      has_school = current_user.school_info&.school_id.present?
       event_metadata = {
         'has_school' => has_school,
       }
