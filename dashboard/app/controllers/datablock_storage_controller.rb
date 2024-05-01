@@ -118,9 +118,6 @@ class DatablockStorageController < ApplicationController
   def import_csv
     table = table_or_create
 
-    # import_csv should overwrite existing data:
-    table.records.delete_all
-
     table.import_csv params[:table_data_csv]
     table.save!
 

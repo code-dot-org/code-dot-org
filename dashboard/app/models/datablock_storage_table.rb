@@ -216,11 +216,11 @@ class DatablockStorageTable < ApplicationRecord
   def import_csv(table_data_csv)
     if_shared_table_copy_on_write
 
-    records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
+    new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
 
     # Auto-cast CSV strings on import, e.g. "5.0" => 5.0
     same_as_undefined = ['', 'undefined']
-    records.map! do |record|
+    new_records.map! do |record|
       # This is equivalent to setting the value to be 'undefined' in JS: it deletes the key
       record.reject! {|_key, value| same_as_undefined.include? value}
       record.transform_values! do |string_value|
@@ -233,7 +233,10 @@ class DatablockStorageTable < ApplicationRecord
       end
     end
 
-    create_records(records)
+    # import_csv should overwrite existing data:
+    records.delete_all
+
+    create_records(new_records)
   rescue CSV::MalformedCSVError => exception
     raise StudentFacingError.new(:INVALID_CSV), "Could not import CSV as it was not in the format we expected: #{exception.message}"
   end
