@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursed-maker",
-    "serialized_at": "2024-04-30 22:15:28 UTC",
+    "serialized_at": "2024-05-01 18:54:10 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1015,7 +1015,7 @@
       "key": "53eaa9d9-eeca-4629-ac31-a6ff0628427b",
       "position": 2,
       "properties": {
-        "progression_name": "Saving SeaTurtles with micro:bit"
+        "progression_name": "Saving sea turtles with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "53eaa9d9-eeca-4629-ac31-a6ff0628427b",
@@ -1796,7 +1796,7 @@
       "key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6",
       "position": 2,
       "properties": {
-        "progression_name": "Counter with micro:bit"
+        "progression_name": "Activity picker with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6",
@@ -2288,7 +2288,7 @@
         "level_keys": [
           "course_d_maker_saving_sea_turtles"
         ],
-        "progression": "Saving SeaTurtles with micro:bit"
+        "progression": "Saving sea turtles with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -2935,15 +2935,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "course_d_maker_activity_picker"
-        ],
         "progression": "Rock, paper, scissors with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "course_d_maker_activity_picker"
+          "course_d_maker_rock_paper_scissors"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-3",
@@ -2951,7 +2948,7 @@
         "activity_section.key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259"
       },
       "level_keys": [
-        "course_d_maker_activity_picker"
+        "course_d_maker_rock_paper_scissors"
       ]
     },
     {
@@ -3185,15 +3182,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "course_d_maker_rock_paper_scissors"
-        ],
-        "progression": "Counter with micro:bit"
+        "progression": "Activity picker with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "course_d_maker_rock_paper_scissors"
+          "course_d_maker_activity_picker"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-4",
@@ -3201,7 +3195,7 @@
         "activity_section.key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6"
       },
       "level_keys": [
-        "course_d_maker_rock_paper_scissors"
+        "course_d_maker_activity_picker"
       ]
     }
   ],
@@ -3736,9 +3730,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "course_d_maker_activity_picker",
+        "level.key": "course_d_maker_rock_paper_scissors",
         "script_level.level_keys": [
-          "course_d_maker_activity_picker"
+          "course_d_maker_rock_paper_scissors"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-3",
@@ -3856,9 +3850,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "course_d_maker_rock_paper_scissors",
+        "level.key": "course_d_maker_activity_picker",
         "script_level.level_keys": [
-          "course_d_maker_rock_paper_scissors"
+          "course_d_maker_activity_picker"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-4",
