@@ -80,6 +80,13 @@ module SetupTest
     CDO.stubs(newrelic_logging: true)
 
     VCR.use_cassette(cassette_name, record: record_mode) do
+      # The nested transaction seems to cause a database connection failure in some cases. Ensure that the connection
+      # is validated before trying to use it and create a new one if not.
+      PEGASUS_DB.extension(:connection_validator)
+      PEGASUS_DB.pool.connection_validation_timeout = -1
+      DASHBOARD_DB.extension(:connection_validator)
+      DASHBOARD_DB.pool.connection_validation_timeout = -1
+
       # rubocop:disable CustomCops/PegasusDbUsage
       PEGASUS_DB.transaction(rollback: :always) do
         # rubocop:disable CustomCops/DashboardDbUsage
@@ -95,6 +102,10 @@ module SetupTest
         # rubocop:enable CustomCops/DashboardDbUsage
       end
       # rubocop:enable CustomCops/PegasusDbUsage
+
+      # Return connection validation to default settings.
+      PEGASUS_DB.pool.connection_validation_timeout = 3600
+      DASHBOARD_DB.pool.connection_validation_timeout = 3600
     end
 
     # Cached S3-client objects contain AWS credentials,
