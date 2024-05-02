@@ -149,7 +149,7 @@
         # Favor write performance over durability. In the event of a database server crash
         # we could lose roughly 1 second of transactions.
         # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
-        innodb_flush_log_at_trx_commit: 0
+        innodb_flush_log_at_trx_commit: 1
         # END: Dynamic configuration settings.
   AuroraWriterDBParameters:
     Type: AWS::RDS::DBParameterGroup
@@ -201,7 +201,7 @@
         # Favor write performance over durability. In the event of a database server crash
         # we could lose roughly 1 second of transactions.
         # https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
-        innodb_flush_log_at_trx_commit: 0
+        innodb_flush_log_at_trx_commit: 1
         innodb_trx_commit_allow_data_loss: 1
         # END: Dynamic configuration settings.
   DBProxyRole:
