@@ -50,14 +50,12 @@ export default class ProjectManager {
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
   private forceReloading: boolean;
-  private userId: string | undefined;
 
   constructor(
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
     channelId: string,
     reduceChannelUpdates: boolean,
-    userId?: string,
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     this.channelId = channelId;
@@ -66,7 +64,6 @@ export default class ProjectManager {
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
     this.forceReloading = false;
-    this.userId = userId;
     this.metricsReporter = metricsReporter;
   }
 

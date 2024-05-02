@@ -58,6 +58,7 @@ export default class ProjectManagerFactory {
         channelId = responseBody.channel;
         reduceChannelUpdates = responseBody.reduceChannelUpdates;
       } else if (responseBody && responseBody.started === false) {
+        // A teacher is attenpting to view a student's work, but the student has not yet started.
         return null;
       }
     }
@@ -68,8 +69,7 @@ export default class ProjectManagerFactory {
       this.getSourcesStore(projectManagerStorageType),
       channelsStore,
       channelId,
-      reduceChannelUpdates,
-      userId
+      reduceChannelUpdates
     );
   }
 
