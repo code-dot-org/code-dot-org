@@ -292,6 +292,7 @@ export const processedLevel = level => {
       typeof level.page_number !== 'undefined'
         ? level.page_number
         : PUZZLE_PAGE_NONE,
+    scriptLevelId: level.id,
     sublevels:
       level.sublevels && level.sublevels.map(level => processedLevel(level)),
     path: level.path,

@@ -22,7 +22,6 @@ import {
 import {
   processServerStudentProgress,
   getLevelResult,
-  processedLevel,
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {mergeActivityResult} from './activityUtils';
 import {SET_VIEW_TYPE} from './viewAsRedux';
@@ -33,7 +32,11 @@ import {
   updateBrowserForLevelNavigation,
 } from './browserNavigation';
 import {TestResults} from '@cdo/apps/constants';
-import {nextLevelId} from './progressReduxSelectors';
+import {
+  getCurrentLevelOrSublevelId,
+  levelById,
+  nextLevelId,
+} from './progressReduxSelectors';
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {navigateToHref} from '../utils';
 
@@ -72,6 +75,7 @@ export interface ProgressState {
   unitStudentDescription: string | undefined;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
+  currentSublevelPosition: number | undefined;
 }
 
 const initialState: ProgressState = {
@@ -122,6 +126,7 @@ const initialState: ProgressState = {
   unitStudentDescription: undefined,
   changeFocusAreaPath: undefined,
   unitCompleted: undefined,
+  currentSublevelPosition: undefined,
 };
 
 const progressSlice = createSlice({
@@ -156,6 +161,7 @@ const progressSlice = createSlice({
       state.hasFullProgress = action.payload.isFullProgress;
       state.isLessonExtras = action.payload.isLessonExtras;
       state.currentPageNumber = action.payload.currentPageNumber;
+      state.currentSublevelPosition = action.payload.currentSublevelPosition;
     },
     setCurrentLevelId(state, action: PayloadAction<string>) {
       state.currentLevelId = action.payload;
@@ -292,15 +298,15 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     if (!state.currentLessonId || !state.currentLevelId) {
       return;
     }
-    const newLevel = processedLevel(
-      getLevelById(state.lessons, state.currentLessonId, levelId)
-    );
+    const newLevel = levelById(state, state.currentLessonId, levelId);
     if (!newLevel) {
       return;
     }
 
-    const currentLevel = processedLevel(
-      getLevelById(state.lessons, state.currentLessonId, state.currentLevelId)
+    const currentLevel = levelById(
+      state,
+      state.currentLessonId,
+      state.currentLevelId
     );
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
@@ -329,19 +335,15 @@ export function navigateToNextLevel(): ProgressThunkAction {
 export function sendSuccessReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
     const state = getState().progress;
-    const levelId = state.currentLevelId;
+    const levelId = getCurrentLevelOrSublevelId(getState());
     if (!state.currentLessonId || !levelId) {
       return;
     }
-    const currentLevel = getLevelById(
-      state.lessons,
-      state.currentLessonId,
-      levelId
-    );
+    const currentLevel = levelById(state, state.currentLessonId, levelId);
     if (!currentLevel) {
       return;
     }
-    const scriptLevelId = currentLevel.id;
+    const scriptLevelId = currentLevel.scriptLevelId;
 
     // The server does not appear to use the user ID parameter,
     // so just pass 0, like some other milestone posts do.
@@ -452,21 +454,6 @@ const userProgressFromServer = (
     }
   });
 };
-
-/**
- * Given an array of lessons, a lesson ID, and a level ID, returns
- * the requested level.
- */
-function getLevelById(
-  lessons: Lesson[] | null,
-  lessonId: number,
-  levelId: string
-) {
-  const lesson = lessons?.find(lesson => lesson.id === lessonId);
-  if (lesson) {
-    return lesson.levels.find(level => level.ids.find(id => id === levelId));
-  }
-}
 
 /**
  * Does some processing of our passed in lesson, namely

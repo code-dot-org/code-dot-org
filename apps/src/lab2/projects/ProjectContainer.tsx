@@ -14,7 +14,10 @@ import {
   shouldHideShareAndRemix,
 } from '../lab2Redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevelOrSublevelId,
+  getLevelPropertiesPath,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import header from '@cdo/apps/code-studio/header';
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
@@ -25,9 +28,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   channelId,
   appName,
 }) => {
-  const currentLevelId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.currentLevelId
-  );
+  const currentLevelId = useSelector(getCurrentLevelOrSublevelId);
   const scriptId = useSelector(
     (state: {progress: ProgressState}) => state.progress.scriptId || undefined
   );

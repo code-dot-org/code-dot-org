@@ -130,6 +130,9 @@
       href: script_path(@script, section_id: section_id, user_id: user_id),
       smallText: small_text
     }
+    if @script_level.bubble_choice? && params[:sublevel_position]
+      sublevel_position = params[:sublevel_position].to_i
+    end
   elsif @is_code_reviewing
     script_name_data = {
       name: script_level.lesson.localized_title,
@@ -151,7 +154,8 @@
       #{signed_in},
       #{lesson_extras_enabled || 'null'},
       #{script_name_data.to_json},
-      #{!script_level}
+      #{!script_level},
+      #{sublevel_position}
     );
     //]]>
 

@@ -69,6 +69,8 @@ var header = {};
  *   lessonExtras enabled for this script
  * @param {boolean} isLessonExtras Boolean indicating we are not on a script
  *   level and therefore are on lesson extras
+ * @param {number} currentSublevelPosition The position of the current sublevel
+ *   if we are on a sublevel
  */
 header.build = function (
   scriptData,
@@ -80,7 +82,8 @@ header.build = function (
   signedIn,
   lessonExtrasEnabled,
   scriptNameData,
-  isLessonExtras
+  isLessonExtras,
+  currentSublevelPosition
 ) {
   scriptData = scriptData || {};
   lessonGroupData = lessonGroupData || {};
@@ -101,7 +104,8 @@ header.build = function (
     signedIn,
     lessonExtrasEnabled,
     isLessonExtras,
-    currentPageNumber
+    currentPageNumber,
+    currentSublevelPosition
   );
 
   // Set up a navigation handler, in case we contain levels that don't

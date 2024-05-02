@@ -103,18 +103,43 @@ export const getLevelPropertiesPath = state => {
     const lessonPosition = state.progress.lessons?.find(
       lesson => lesson.id === state.progress.currentLessonId
     ).relative_position;
-    const levelNumber =
-      levelsForLessonId(
-        state.progress,
-        state.progress.currentLessonId
-      ).findIndex(level => level.isCurrentLevel) + 1;
-    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_properties`;
+    const level = levelsForLessonId(
+      state.progress,
+      state.progress.currentLessonId
+    ).find(level => level.isCurrentLevel);
+    const sublevelPosition = state.progress.currentSublevelPosition;
+
+    // Include the sublevel position if we're on a sublevel
+    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${
+      level.levelNumber
+    }/${
+      sublevelPosition === undefined ? '' : `sublevel/${sublevelPosition}/`
+    }level_properties`;
   } else if (state.progress.currentLevelId !== null) {
     const levelId = state.progress.currentLevelId;
     return `/levels/${levelId}/level_properties`;
   } else {
     return undefined;
   }
+};
+
+/**
+ * Get the ID of the current level, or sublevel if we're on a sublevel.
+ */
+export const getCurrentLevelOrSublevelId = state => {
+  if (state.progress.currentSublevelPosition === undefined) {
+    return state.progress.currentLevelId;
+  }
+
+  const currentLevel = levelById(
+    state.progress,
+    state.progress.currentLessonId,
+    state.progress.currentLevelId
+  );
+  return (
+    currentLevel.sublevels?.[state.progress.currentSublevelPosition - 1]?.id ||
+    state.progress.currentLevelId
+  );
 };
 
 /**
@@ -211,6 +236,15 @@ export const levelsForLessonId = (state, lessonId) => {
 };
 
 /**
+ * Given a lesson ID, and a level ID, returns the requested level.
+ */
+export const levelById = (state, lessonId, levelId) => {
+  return levelsForLessonId(state, lessonId)?.find(
+    level => level.id === levelId
+  );
+};
+
+/**
  * Get the index of the current level. On script levels, check
  * which level has isCurrentLevel set. For single levels, return 0.
  * Otherwise, return undefined.
@@ -242,7 +276,15 @@ export const nextLevelId = state => {
     state.progress,
     state.progress.currentLessonId
   );
-  const currentLevelIndex = levels.findIndex(level => level.isCurrentLevel);
+  const currentLevel = levels.find(level => level.isCurrentLevel);
+  // If we are on a sublevel, navigate back to the parent level.
+  if (
+    currentLevel.sublevels &&
+    state.progress.currentSublevelPosition !== undefined
+  ) {
+    return currentLevel.id;
+  }
+  const currentLevelIndex = currentLevel.levelNumber;
   if (currentLevelIndex === levels.length - 1) {
     return undefined;
   }

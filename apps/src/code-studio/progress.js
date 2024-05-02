@@ -76,6 +76,8 @@ progress.showDisabledBubblesAlert = function () {
  *   level and therefore are on lesson extras
  * @param {number} currentPageNumber The page we are on if this is a multi-
  *   page level.
+ * @param {number} currentSublevelPosition The position of the current sublevel
+ *   if we are on a sublevel.
  * @returns {Promise<void>}
  */
 progress.generateLessonProgress = function (
@@ -88,7 +90,8 @@ progress.generateLessonProgress = function (
   signedIn,
   lessonExtrasEnabled,
   isLessonExtras,
-  currentPageNumber
+  currentPageNumber,
+  currentSublevelPosition
 ) {
   const store = getStore();
 
@@ -109,7 +112,8 @@ progress.generateLessonProgress = function (
     false,
     saveAnswersBeforeNavigation,
     isLessonExtras,
-    currentPageNumber
+    currentPageNumber,
+    currentSublevelPosition
   );
 
   if (lessonExtrasEnabled) {
@@ -329,6 +333,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  *   a script level and therefore are on lesson extras
  * @param {number} [currentPageNumber] Optional. The page we are on if this is
  *   a multi-page level.
+ * @param {number} [currentSublevelPosition] Optional. The sublevel position if we
+ *   are on a sublevel.
  */
 function initializeStoreWithProgress(
   store,
@@ -338,7 +344,7 @@ function initializeStoreWithProgress(
   saveAnswersBeforeNavigation = false,
   isLessonExtras = false,
   currentPageNumber,
-  displayName
+  currentSublevelPosition
 ) {
   store.dispatch(
     initProgress({
@@ -359,6 +365,7 @@ function initializeStoreWithProgress(
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,
       currentPageNumber: currentPageNumber,
+      currentSublevelPosition: currentSublevelPosition,
     })
   );
 
