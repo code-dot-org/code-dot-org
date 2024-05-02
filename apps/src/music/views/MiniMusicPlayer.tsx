@@ -13,7 +13,6 @@ import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import Lab2Registry from '../../lab2/Lab2Registry';
 import moduleStyles from './MiniMusicPlayer.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {RGB} from '../types';
 
 import noteImage from '@cdo/static/music/music-note.png';
 
@@ -105,19 +104,9 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     return <div>Loading...</div>;
   }
 
-  function getRadialGradient(from: RGB, to: RGB) {
-    return `radial-gradient(rgb(${from.r}, ${from.g}, ${from.b}), rgb(${to.r}, ${to.g}, ${to.b}))`;
+  function getRadialGradient(from: string, to: string) {
+    return `radial-gradient(${from}, ${to})`;
   }
-
-  const getPackImageBackgroundStyle = (packId: string) => {
-    const rgb = MusicLibrary.getInstance()?.getPackImageRgb(packId);
-
-    if (!rgb) {
-      return undefined;
-    }
-
-    return getRadialGradient(rgb, {r: 0, g: 0, b: 0});
-  };
 
   const getPackDetails = (packId: string) => {
     const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(packId);
@@ -126,7 +115,11 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       return null;
     }
 
-    return {name: packFolder.name, artist: packFolder.artist};
+    return {
+      name: packFolder.name,
+      artist: packFolder.artist,
+      color: packFolder.color,
+    };
   };
 
   return (
@@ -151,7 +144,9 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                   src={noteImage}
                   className={moduleStyles.packImage}
                   style={{
-                    background: getPackImageBackgroundStyle(packId),
+                    background:
+                      packDetails?.color &&
+                      getRadialGradient(packDetails.color, '#000'),
                   }}
                   alt=""
                 />

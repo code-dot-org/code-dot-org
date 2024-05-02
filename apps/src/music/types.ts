@@ -22,9 +22,3 @@ export type SoundLoadCallbacks = {
   onLoadFinished?: LoadFinishedCallback;
   updateLoadProgress?: UpdateLoadProgressCallback;
 };
-
-export interface RGB {
-  r: number;
-  g: number;
-  b: number;
-}
