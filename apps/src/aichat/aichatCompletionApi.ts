@@ -19,7 +19,8 @@ export async function postAichatCompletionMessage(
   newMessage: string,
   messagesToSend: ChatCompletionMessage[],
   aiCustomizations: AiCustomizations,
-  aichatContext: AichatContext
+  aichatContext: AichatContext,
+  sessionId?: number
 ) {
   const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
@@ -33,6 +34,7 @@ export async function postAichatCompletionMessage(
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
+    ...(sessionId ? {sessionId} : {}),
   };
   let response;
   try {
@@ -61,7 +63,11 @@ const formatMessagesForAichatCompletion = (
   chatMessages: ChatCompletionMessage[]
 ): AichatCompletionMessage[] => {
   return chatMessages.map(message => {
-    return {role: message.role, content: message.chatMessageText};
+    return {
+      role: message.role,
+      content: message.chatMessageText,
+      status: message.status,
+    };
   });
 };
 

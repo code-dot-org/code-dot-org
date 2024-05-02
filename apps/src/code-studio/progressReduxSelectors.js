@@ -2,7 +2,7 @@
 // because they are quite complex and progressRedux.js is already quite large.
 
 import _ from 'lodash';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {TestResults} from '@cdo/apps/constants';
 import {activityCssClass} from './activityUtils';

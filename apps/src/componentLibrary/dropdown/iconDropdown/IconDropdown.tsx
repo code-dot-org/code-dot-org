@@ -28,6 +28,8 @@ export interface IconDropdownProps {
   /** IconDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
+  /** IconDropdown custom class name */
+  className?: string;
   /** IconDropdown color */
   color?: DropdownColor;
   /** IconDropdown size */
@@ -49,6 +51,7 @@ export interface IconDropdownProps {
 
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
+  className,
   labelText,
   labelType = 'thick',
   options,
@@ -72,6 +75,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   return (
     <CustomDropdown
       name={name}
+      className={className}
       labelText={labelText}
       labelType={labelType}
       disabled={disabled}

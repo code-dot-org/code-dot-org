@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
-import {EnrolledWorkshops} from './EnrolledWorkshops';
+import {EnrolledWorkshops, EnrolledWorkshopsTable} from './EnrolledWorkshops';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
@@ -17,6 +17,7 @@ import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/Cot
 import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import style from './landingPage.module.scss';
 import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
@@ -25,6 +26,7 @@ import {
   asyncLoadCoteacherInvite,
   hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import shapes from '@cdo/apps/templates/studioHomepages/shapes';
 
 const getAvailableTabs = permissions => {
   let tabs = [
@@ -39,26 +41,30 @@ const getAvailableTabs = permissions => {
       value: 'myFacilitatorCenter',
       text: i18n.plLandingTabFacilitatorCenter(),
     });
-  }
-
-  if (
+  } else if (
     permissions.includes('universal_instructor') ||
     permissions.includes('plc_reviewer')
   ) {
+    // We only want to show the Instructor Center if the user is also not a Facilitator
     tabs.push({
-      value: 'instructors',
-      text: i18n.plLandingTabInstructors(),
+      value: 'instructorCenter',
+      text: i18n.plLandingTabInstructorCenter(),
     });
   }
 
-  // {
-  //   value: 'myRPCenter',
-  //   text: i18n.plLandingTabRPCenter(),
-  // },
-  // {
-  //   value: 'myWorkshopOrganizerCenter',
-  //   text: i18n.plLandingTabWorkshopOrganizerCenter(),
-  // },
+  if (permissions.includes('program_manager')) {
+    tabs.push({
+      value: 'RPCenter',
+      text: i18n.plLandingTabRPCenter(),
+    });
+  }
+
+  if (permissions.includes('workshop_organizer')) {
+    tabs.push({
+      value: 'workshopOrganizerCenter',
+      text: i18n.plLandingTabWorkshopOrganizerCenter(),
+    });
+  }
 
   return tabs;
 };
@@ -69,8 +75,13 @@ function LandingPage({
   deeperLearningCourseData,
   currentYearApplicationId,
   workshopsAsParticipant,
+  workshopsAsFacilitator,
+  workshopsAsOrganizer,
+  workshopsAsRegionalPartner,
   plCoursesStarted,
   userPermissions,
+  joinedStudentSections,
+  joinedPlSections,
   plSectionIds,
   hiddenPlSectionIds,
 }) {
@@ -127,8 +138,13 @@ function LandingPage({
     />
   );
 
-  const RenderSelfPacedProgressTable = () => {
-    return <SelfPacedProgressTable plCoursesStarted={plCoursesStarted} />;
+  const RenderSelfPacedPL = () => {
+    return (
+      <section id={'self-paced-pl'}>
+        <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
+        <SelfPacedProgressTable plCoursesStarted={plCoursesStarted} />
+      </section>
+    );
   };
 
   const RenderStaticRecommendedPL = () => {
@@ -163,6 +179,102 @@ function LandingPage({
     return <ActionBlocksWrapper actionBlocks={actionBlocks} />;
   };
 
+  const RenderOwnedPlSections = () => {
+    return (
+      <section>
+        <Heading2>{i18n.plSectionsInstructorTitle()}</Heading2>
+        <SetUpSections
+          headingText={i18n.newSectionCreate()}
+          descriptionText={i18n.newSectionMyPlAdd()}
+          solidBorder={true}
+        />
+        <CoteacherInviteNotification isForPl={true} />
+        <OwnedSections
+          isPlSections={true}
+          sectionIds={plSectionIds}
+          hiddenSectionIds={hiddenPlSectionIds}
+        />
+        <AddSectionDialog />
+      </section>
+    );
+  };
+
+  const RenderMyPlTab = () => {
+    return (
+      <>
+        {showGettingStartedBanner && RenderGettingStartedBanner()}
+        {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
+        <JoinSectionArea
+          initialJoinedStudentSections={joinedStudentSections}
+          initialJoinedPlSections={joinedPlSections}
+          isTeacher={true}
+          isPlSections={true}
+        />
+        <EnrolledWorkshops />
+        {deeperLearningCourseData?.length >= 1 && (
+          <section>
+            <Heading2>Online Professional Learning Courses</Heading2>
+            <ProfessionalLearningCourseProgress
+              deeperLearningCourseData={deeperLearningCourseData}
+            />
+          </section>
+        )}
+        <section>
+          <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
+          {RenderStaticRecommendedPL()}
+        </section>
+      </>
+    );
+  };
+
+  const RenderFacilitatorCenterTab = () => {
+    return (
+      <>
+        {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        {RenderOwnedPlSections()}
+        {workshopsAsFacilitator?.length > 0 && (
+          <EnrolledWorkshopsTable
+            workshops={workshopsAsFacilitator}
+            forMyPlPage={true}
+          />
+        )}
+      </>
+    );
+  };
+
+  const RenderInstructorCenterTab = () => {
+    return RenderOwnedPlSections();
+  };
+
+  const RenderRPCenterTab = () => {
+    return (
+      <>
+        {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        {workshopsAsRegionalPartner?.length > 0 && (
+          <EnrolledWorkshopsTable
+            workshops={workshopsAsRegionalPartner}
+            forMyPlPage={true}
+          />
+        )}
+      </>
+    );
+  };
+
+  const RenderWorkshopOrganizerCenterTab = () => {
+    return (
+      <>
+        {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        {workshopsAsOrganizer?.length > 0 && (
+          <EnrolledWorkshopsTable
+            workshops={workshopsAsOrganizer}
+            forMyPlPage={true}
+          />
+        )}
+      </>
+    );
+  };
+
   return (
     <>
       <div className={`${headerContainerStyles} ${style.headerContainer}`}>
@@ -180,50 +292,12 @@ function LandingPage({
         </HeaderBannerNoImage>
       </div>
       <main className={style.wrapper}>
-        {currentTab === 'myPL' && (
-          <>
-            {showGettingStartedBanner && RenderGettingStartedBanner()}
-            {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
-            {plCoursesStarted?.length >= 1 && (
-              <section id={'self-paced-pl'}>
-                <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
-                {RenderSelfPacedProgressTable()}
-              </section>
-            )}
-            <section>
-              <EnrolledWorkshops />
-            </section>
-            {deeperLearningCourseData?.length >= 1 && (
-              <section>
-                <Heading2>Online Professional Learning Courses</Heading2>
-                <ProfessionalLearningCourseProgress
-                  deeperLearningCourseData={deeperLearningCourseData}
-                />
-              </section>
-            )}
-            <section>
-              <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
-              {RenderStaticRecommendedPL()}
-            </section>
-          </>
-        )}
-        {['myFacilitatorCenter', 'instructors'].includes(currentTab) && (
-          <section>
-            <Heading2>{i18n.plSectionsInstructorTitle()}</Heading2>
-            <SetUpSections
-              headingText={i18n.newSectionCreate()}
-              descriptionText={i18n.newSectionMyPlAdd()}
-              solidBorder={true}
-            />
-            <CoteacherInviteNotification isForPl={true} />
-            <OwnedSections
-              isPlSections={true}
-              sectionIds={plSectionIds}
-              hiddenSectionIds={hiddenPlSectionIds}
-            />
-            <AddSectionDialog />
-          </section>
-        )}
+        {currentTab === 'myPL' && RenderMyPlTab()}
+        {currentTab === 'myFacilitatorCenter' && RenderFacilitatorCenterTab()}
+        {currentTab === 'instructorCenter' && RenderInstructorCenterTab()}
+        {currentTab === 'RPCenter' && RenderRPCenterTab()}
+        {currentTab === 'workshopOrganizerCenter' &&
+          RenderWorkshopOrganizerCenterTab()}
       </main>
     </>
   );
@@ -242,9 +316,14 @@ LandingPage.propTypes = {
   deeperLearningCourseData: PropTypes.array,
   currentYearApplicationId: PropTypes.number,
   workshopsAsParticipant: PropTypes.array,
+  workshopsAsFacilitator: PropTypes.array,
+  workshopsAsOrganizer: PropTypes.array,
+  workshopsAsRegionalPartner: PropTypes.array,
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
+  joinedStudentSections: shapes.sections,
+  joinedPlSections: shapes.sections,
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),
 };

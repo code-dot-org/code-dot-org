@@ -64,8 +64,11 @@ class ScriptLevelsController < ApplicationController
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
 
-    if @script.is_deprecated
+    # Check if the script or current level is deprecated
+    level_is_deprecated = @script_level&.level_deprecated?
+    if @script.is_deprecated || level_is_deprecated
       return render 'errors/deprecated_course'
     end
 
@@ -103,7 +106,6 @@ class ScriptLevelsController < ApplicationController
 
     @public_caching = configure_caching(@script)
 
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
 
     if @script.login_required? || (!params.nil? && params[:login_required] == "true")

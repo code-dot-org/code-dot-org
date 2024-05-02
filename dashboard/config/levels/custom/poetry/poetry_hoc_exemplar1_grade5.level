@@ -1,0 +1,87 @@
+<Poetry>
+  <config><![CDATA[{
+  "game_id": 69,
+  "created_at": "2024-04-23T19:54:18.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "block_pools": [
+      "GamelabJr",
+      "Poetry"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "use_modal_function_editor": "false",
+    "embed": "true",
+    "instructions_important": "false",
+    "short_instructions": "Did the sounds and images match the mood of the poem? ",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"ee418c45-96ab-46c1-af4d-70073ee59fde\",\r\n    \"ea0e0b61-add2-4890-90ce-657b36acf35d\",\r\n    \"a0b3644e-d42e-487f-bf8b-63d874b8bc8e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"ee418c45-96ab-46c1-af4d-70073ee59fde\": {\r\n      \"name\": \"grid_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr/category_backgrounds/background_grid.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"ea0e0b61-add2-4890-90ce-657b36acf35d\": {\r\n      \"name\": \"planeRed1_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/doNsuLSldRWw4EqNUuQ0oxoMGvLIMOca/category_vehicles/planeRed1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"doNsuLSldRWw4EqNUuQ0oxoMGvLIMOca\",\r\n      \"categories\": [\r\n        \"vehicles\"\r\n      ]\r\n    },\r\n    \"a0b3644e-d42e-487f-bf8b-63d874b8bc8e\": {\r\n      \"name\": \"planeBlue1_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/N8nE_yTUDZ.3xJ03IT21_joiiSkUtXbd/category_vehicles/planeBlue1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"N8nE_yTUDZ.3xJ03IT21_joiiSkUtXbd\",\r\n      \"categories\": [\r\n        \"vehicles\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "validation_code": "var validationInfo = getValidationInfo();\r\nif (!validationInfo.successFrame) {\r\n  setSuccessFrame();\r\n}\r\n\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  levelFailure(0, 'successLevel2');\r\n}\r\n",
+    "hide_pause_button": "true",
+    "instructions_icon": "octiHopeful",
+    "standalone_app_name": "poetry_hoc",
+    "skip_autosave": true,
+    "contained_level_names": [
+      "poem art predict_sing_grade5"
+    ],
+    "default_poem": "rumi1",
+    "name_suffix": "_grade5",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:54:18.867+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_exemplar1_maker\\\"\"],\"cloned_from\":\"poetry_hoc_exemplar1_maker\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="Poetry_setBackgroundEffect">
+              <title name="EFFECT">"clouds"</title>
+              <title name="PALETTE">"ocean"</title>
+              <next>
+                <block type="Poetry_playMusic">
+                  <title name="SOUND">"sound://category_nature/forest_woodland_ambience_2.mp3"</title>
+                  <next>
+                    <block type="Poetry_setFont">
+                      <title name="FONT">"Arial"</title>
+                      <next>
+                        <block type="Poetry_setTextEffect">
+                          <title name="EFFECT">"fade"</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+  </blocks>
+</Poetry>

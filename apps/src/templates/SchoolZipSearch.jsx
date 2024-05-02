@@ -6,7 +6,7 @@ import style from './school-association.module.scss';
 import classNames from 'classnames';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
-import Button from '@cdo/apps/templates/Button';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -26,7 +26,8 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
 
   useEffect(() => {
     if (!disabled) {
-      const searchUrl = `/dashboardapi/v1/schoolsearch/${zip}/40`;
+      setSelectedSchoolNcesId(SELECT_A_SCHOOL);
+      const searchUrl = `/dashboardapi/v1/schoolzipsearch/${zip}`;
       fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
         .then(response => (response.ok ? response.json() : []))
         .then(json => {
@@ -54,7 +55,9 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
       setInputManually(true);
       sendAnalyticsEvent(EVENTS.ADD_MANUALLY_CLICKED, {});
     } else {
-      sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {ncesId: schoolId});
+      sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {
+        'nces Id': schoolId,
+      });
     }
     setSelectedSchoolNcesId(schoolId);
   };
@@ -94,7 +97,6 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
           <SimpleDropdown
             id="uitest-school-dropdown"
             disabled={disabled}
-            className={style.dropdown}
             name={fieldNames.ncesSchoolId}
             itemGroups={[
               {
@@ -113,7 +115,9 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
           <Button
             text={i18n.noSchoolSetting()}
             disabled={disabled}
-            styleAsText={true}
+            color={'purple'}
+            type={'tertiary'}
+            size={'xs'}
             onClick={e => {
               e.preventDefault();
               setSelectedSchoolNcesId(NO_SCHOOL_SETTING);
@@ -127,7 +131,9 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
           <SchoolNameInput fieldNames={{schoolName: fieldNames.schoolName}} />
           <Button
             text={i18n.returnToResults()}
-            styleAsText={true}
+            color={'purple'}
+            type={'tertiary'}
+            size={'xs'}
             onClick={() => {
               setInputManually(false);
               setSelectedSchoolNcesId(SELECT_A_SCHOOL);

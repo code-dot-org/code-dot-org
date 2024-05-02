@@ -5,7 +5,7 @@ import {
   fakeLevels,
   createStoreWithHiddenLesson,
 } from './progressTestHelpers';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import {Provider} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 

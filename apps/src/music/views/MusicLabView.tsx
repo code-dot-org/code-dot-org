@@ -21,6 +21,7 @@ import MusicPlayer from '../player/MusicPlayer';
 import useUpdatePlayer from './hooks/useUpdatePlayer';
 import AdvancedControls from './AdvancedControls';
 import PackDialog from './PackDialog';
+import MusicPlayView from './MusicPlayView';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -63,6 +64,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+  const isPlayView = useAppSelector(state => state.lab.isShareView);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -160,7 +162,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             </PanelContainer>
           </div>
 
-          <div id="timeline-area" className={moduleStyles.timelineArea}>
+          <div
+            dir="ltr"
+            id="timeline-area"
+            className={moduleStyles.timelineArea}
+          >
             <PanelContainer
               id="timeline-panel"
               headerContent={musicI18n.panelHeaderTimeline()}
@@ -178,6 +184,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const showAdvancedControls =
     AppConfig.getValue('player') === 'tonejs' &&
     AppConfig.getValue('advanced-controls-enabled') === 'true';
+
+  if (isPlayView) {
+    return <MusicPlayView setPlaying={setPlaying} />;
+  }
 
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
