@@ -90,21 +90,25 @@ DirectionOfTooltipGroup.args = {
       text: 'Tooltip - onTop',
       tooltipId: 'tooltipOnTop',
       direction: 'onTop',
+      size: 'm',
     },
     {
       text: 'Tooltip - onRight',
       tooltipId: 'tooltipOnRight',
       direction: 'onRight',
+      size: 'm',
     },
     {
       text: 'Tooltip - onBottom',
       tooltipId: 'tooltipOnBottom',
       direction: 'onBottom',
+      size: 'm',
     },
     {
       text: 'Tooltip - onLeft',
       tooltipId: 'tooltipOnLeft',
       direction: 'onLeft',
+      size: 'm',
     },
   ],
 };
@@ -115,22 +119,128 @@ SizesOfTooltipGroup.args = {
     {
       text: 'Tooltip - XS',
       tooltipId: 'tooltipXS',
+      direction: 'onBottom',
       size: 'xs',
     },
     {
       text: 'Tooltip - S',
       tooltipId: 'tooltipS',
+      direction: 'onBottom',
       size: 's',
     },
     {
       text: 'Tooltip - M',
       tooltipId: 'tooltipM',
+      direction: 'onBottom',
       size: 'm',
     },
     {
       text: 'Tooltip - L',
       tooltipId: 'tooltipL',
+      direction: 'onBottom',
       size: 'l',
+    },
+  ],
+};
+
+export const TooltipsFullGroup = MultipleTemplate.bind({});
+TooltipsFullGroup.args = {
+  components: [
+    {
+      text: 'Tooltip - onTopL',
+      tooltipId: 'tooltipOnTopL',
+      direction: 'onTop',
+      size: 'l',
+    },
+    {
+      text: 'Tooltip - onRightL',
+      tooltipId: 'tooltipOnRightL',
+      direction: 'onRight',
+      size: 'l',
+    },
+    {
+      text: 'Tooltip - onBottomL',
+      tooltipId: 'tooltipOnBottomL',
+      direction: 'onBottom',
+      size: 'l',
+    },
+    {
+      text: 'Tooltip - onLeftL',
+      tooltipId: 'tooltipOnLeftL',
+      direction: 'onLeft',
+      size: 'l',
+    },
+    {
+      text: 'Tooltip - onTopM',
+      tooltipId: 'tooltipOnTopM',
+      direction: 'onTop',
+      size: 'm',
+    },
+    {
+      text: 'Tooltip - onRightM',
+      tooltipId: 'tooltipOnRightM',
+      direction: 'onRight',
+      size: 'm',
+    },
+    {
+      text: 'Tooltip - onBottomM',
+      tooltipId: 'tooltipOnBottomM',
+      direction: 'onBottom',
+      size: 'm',
+    },
+    {
+      text: 'Tooltip - onLeftM',
+      tooltipId: 'tooltipOnLeftM',
+      direction: 'onLeft',
+      size: 'm',
+    },
+    {
+      text: 'Tooltip - onTopS',
+      tooltipId: 'tooltipOnTopS',
+      direction: 'onTop',
+      size: 's',
+    },
+    {
+      text: 'Tooltip - onRightS',
+      tooltipId: 'tooltipOnRightS',
+      direction: 'onRight',
+      size: 's',
+    },
+    {
+      text: 'Tooltip - onBottomS',
+      tooltipId: 'tooltipOnBottomS',
+      direction: 'onBottom',
+      size: 's',
+    },
+    {
+      text: 'Tooltip - onLeftS',
+      tooltipId: 'tooltipOnLeftS',
+      direction: 'onLeft',
+      size: 's',
+    },
+    {
+      text: 'Tooltip - onTopXS',
+      tooltipId: 'tooltipOnTopXS',
+      direction: 'onTop',
+      size: 'xs',
+    },
+    {
+      text: 'Tooltip - onRightXS',
+      tooltipId: 'tooltipOnRightXS',
+      direction: 'onRight',
+      size: 'xs',
+    },
+    {
+      text: 'Tooltip - onBottomXS',
+      tooltipId: 'tooltipOnBottomXS',
+      direction: 'onBottom',
+      size: 'xs',
+    },
+    {
+      text: 'Tooltip - onLeftXS',
+      tooltipId: 'tooltipOnLeftXS',
+      direction: 'onLeft',
+      size: 'xs',
     },
   ],
 };

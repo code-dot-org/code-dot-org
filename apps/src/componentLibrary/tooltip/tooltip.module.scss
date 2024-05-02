@@ -1,6 +1,53 @@
 @import "color";
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 
+$tail-offset: 4px;
+$l-tail-length: 12px;
+$m-tail-length: 9px;
+$s-tail-length: 6px;
+$xs-tail-length: 6px;
+
+@mixin tooltip-tail-sizing($tail-length) {
+  &::after {
+    border-width: $tail-length;
+    margin-inline-start: -$tail-length;
+  }
+
+  &.tooltip-onTop {
+    inset-block-end: calc(100% + $tail-length + $tail-offset);
+
+    &::after {
+      border-bottom-width: 0;
+    }
+  }
+
+  &.tooltip-onRight {
+    inset-inline-start: calc(100% + $tail-length + $tail-offset);
+
+    &::after {
+      border-inline-start-width: 0;
+    }
+  }
+
+  &.tooltip-onBottom {
+    inset-block-start: calc(100% + $tail-length + $tail-offset);
+
+    &::after {
+      border-top-width: 0;
+    }
+  }
+
+  &.tooltip-onLeft {
+    inset-inline-end: calc(100% + $tail-length + $tail-offset);
+
+    &::after {
+      border-inline-end-width: 0;
+      margin-inline-start: 0;
+      margin-inline-end: -$tail-length;
+    }
+  }
+}
+
 .tooltipOverlay {
   position: relative;
   width: fit-content;
@@ -14,8 +61,8 @@
   align-items: center;
   height: fit-content;
   background-color: $light_gray_900;
-  min-width: 60px;
-  max-width: 250px;
+  min-width: 64px;
+  max-width: 256px;
   text-align: center;
   border-radius: 0.25rem;
   box-shadow: 0 8px 12px 0 rgb(0 0 0 / 0.12), 0 0 12px 0 rgba(0 0 0 / 0.12);
@@ -38,7 +85,6 @@
 // Direction
 .tooltip-onTop {
   display: flex;
-  inset-block-end: 100%;
   inset-inline-start: 50%;
   transform: translateX(-50%);
 
@@ -52,7 +98,6 @@
     position: absolute;
     inset-block-start: 100%;
     inset-inline-start: 50%;
-    border-width: 5px;
     border-style: solid;
     border-color: $light_gray_900 transparent transparent transparent;
   }
@@ -60,8 +105,6 @@
 
 .tooltip-onRight {
   inset-block-start: 50%;
-  inset-inline-start: 100%;
-  inset-inline-end: -100%;
   transform: translateY(-50%);
 
 
@@ -79,7 +122,6 @@
 }
 
 .tooltip-onBottom {
-  inset-block-start: auto;
   inset-inline-start: 50%;
   transform: translateX(-50%);
 
@@ -99,9 +141,7 @@
 
 .tooltip-onLeft {
   inset-block-start: 50%;
-  inset-inline-start: -100%;
-  //inset-inline-end: -100%;
-  transform: translate(calc(-50% - 9px),-50%);
+  transform: translateY(-50%);
 
   &::after {
     content: "";
@@ -126,15 +166,7 @@
     margin-bottom: 0;
   }
 
-  &::after {
-    border-width: 12px;
-    margin-inline-start: -12px;
-  }
-
-  &.tooltip-onLeft::after {
-    margin-inline-end: -12px;
-    margin-inline-start: 0;
-  }
+  @include tooltip-tail-sizing($l-tail-length);
 }
 
 .tooltip-m {
@@ -146,15 +178,7 @@
     margin-bottom: 0;
   }
 
-  &::after {
-    border-width: 9px;
-    margin-inline-start: -9px;
-  }
-
-  &.tooltip-onLeft::after {
-    margin-inline-end: -9px;
-    margin-inline-start: 0;
-  }
+  @include tooltip-tail-sizing($m-tail-length);
 }
 
 .tooltip-s {
@@ -166,15 +190,7 @@
     margin-bottom: 0;
   }
 
-  &::after {
-    border-width: 6px;
-    margin-inline-start: -6px;
-  }
-
-  &.tooltip-onLeft::after {
-    margin-inline-end: -6px;
-    margin-inline-start: 0;
-  }
+  @include tooltip-tail-sizing($s-tail-length);
 }
 
 .tooltip-xs {
@@ -186,13 +202,5 @@
     margin-bottom: 0;
   }
 
-  &::after {
-    border-width: 6px;
-    margin-inline-start: -6px;
-  }
-
-  &.tooltip-onLeft::after {
-    margin-inline-end: -6px;
-    margin-inline-start: 0;
-  }
+  @include tooltip-tail-sizing($xs-tail-length);
 }
