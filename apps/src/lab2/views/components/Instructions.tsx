@@ -156,7 +156,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
       id="instructions"
       className={classNames(
         moduleStyles['instructions-' + theme],
-        vertical && moduleStyles.vertical
+        vertical && moduleStyles.vertical,
+        'instructions'
       )}
     >
       <div
