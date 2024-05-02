@@ -42,7 +42,7 @@ const DEFAULT_PROPS = {
   setSectionLockStatus: () => {},
   selectSection: () => {},
   setViewType: () => {},
-  isCurrentLevelLab2: () => {},
+  isCurrentLevelLab2: false,
 };
 
 const setUp = overrideProps => {
