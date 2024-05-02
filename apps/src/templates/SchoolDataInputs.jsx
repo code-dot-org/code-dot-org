@@ -43,7 +43,8 @@ export default function SchoolDataInputs({
   }
 
   useEffect(() => {
-    if (zip.length === 5) {
+    const isValidZip = new RegExp(/(^\d{5}$)/).test(zip);
+    if (isValidZip) {
       setZipSearchReady(true);
       analyticsReporter.sendEvent(
         EVENTS.ZIP_CODE_ENTERED,
@@ -76,7 +77,7 @@ export default function SchoolDataInputs({
   };
 
   return (
-    <div className={style.outerContainer}>
+    <div className={style.schoolAssociationWrapper}>
       {includeHeaders && (
         <div>
           <Heading2 className={style.topPadding}>
@@ -91,7 +92,6 @@ export default function SchoolDataInputs({
         </BodyTwoText>
         <SimpleDropdown
           id="uitest-country-dropdown"
-          className={style.dropdown}
           name={fieldNames.country}
           items={COUNTRY_ITEMS}
           selectedValue={country}
@@ -117,7 +117,9 @@ export default function SchoolDataInputs({
                 value={zip}
               />
               {zip && !zipSearchReady && (
-                <BodyThreeText>{i18n.zipInvalidMessage()}</BodyThreeText>
+                <BodyThreeText className={style.errorMessage}>
+                  {i18n.zipInvalidMessage()}
+                </BodyThreeText>
               )}
             </label>
             <SchoolZipSearch

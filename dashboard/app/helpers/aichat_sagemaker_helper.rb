@@ -6,9 +6,11 @@ module AichatSagemakerHelper
   SENTENCE_BEGIN_TOKEN = "<s>"
   SENTENCE_END_TOKEN = "</s>"
   MAX_NEW_TOKENS = 512
-  SAGEMAKER_CLIENT = Aws::SageMakerRuntime::Client.new
-  SAGEMAKER_MODEL_ENDPOINT = "gen-ai-mistral-7b-inst-v01"
   TOP_P = 0.9
+
+  def self.create_sagemaker_client
+    Aws::SageMakerRuntime::Client.new
+  end
 
   # The instruction-tuned version of Mistral accepts formatted instructions where conversation roles
   # must start with a user prompt and alternate between user and assistant.
@@ -27,6 +29,7 @@ module AichatSagemakerHelper
         inputs += msg[:content] + SENTENCE_END_TOKEN
       end
     end
+
     {
       inputs: inputs,
       parameters: {
@@ -37,10 +40,10 @@ module AichatSagemakerHelper
     }
   end
 
-  def self.request_sagemaker_chat_completion(input_json)
-    SAGEMAKER_CLIENT.invoke_endpoint(
-      endpoint_name: SAGEMAKER_MODEL_ENDPOINT, # required
-      body: input_json.to_json, # required
+  def self.request_sagemaker_chat_completion(input, endpoint_name)
+    create_sagemaker_client.invoke_endpoint(
+      endpoint_name: endpoint_name, # required
+      body: input.to_json, # required
       content_type: "application/json"
     )
   end

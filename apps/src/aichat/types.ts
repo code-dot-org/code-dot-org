@@ -1,10 +1,13 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
+// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
+export type AichatInteractionStatusValue = string;
+
 export type ChatCompletionMessage = {
   id: number;
   role: Role;
   chatMessageText: string;
-  status: AichatInteractionStatus;
+  status: AichatInteractionStatusValue;
   timestamp?: string;
   // sessionId is the Rails-side identifier for the logging session to which this message belongs.
   // It can be missing a) if the session has been reset because a model customization has changed (or chat history has been reset),
@@ -17,14 +20,6 @@ export type AichatContext = {
   scriptId: number | null;
   channelId: string | undefined;
 };
-
-export enum AichatInteractionStatus {
-  ERROR = 'error',
-  PII_VIOLATION = 'pii_violation',
-  PROFANITY_VIOLATION = 'profanity_violation',
-  OK = 'ok',
-  UNKNOWN = 'unknown',
-}
 
 export enum Role {
   ASSISTANT = 'assistant',

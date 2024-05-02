@@ -36,6 +36,14 @@
       "buttonText": "Learn more about AI Teaching Assistant",
       "buttonUrl": "https://code.org/ai-ta",
       "buttonId": "ai-teaching-assistant"
+    },
+    "music-lab-launch": {
+      "image": "/shared/images/banners/music-lab-with-afe-logo.png",
+      "title": "Introducing Music Lab",
+      "body": "Get creative with your favorite artist's music and code new songs and mixes!",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/music",
+      "buttonId": "music-lab-launch"
     }
   }
 }

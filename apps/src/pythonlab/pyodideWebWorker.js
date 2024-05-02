@@ -4,11 +4,11 @@ import {
   writeSource,
 } from './pythonHelpers/pythonScriptUtils';
 import {DEFAULT_FOLDER_ID} from '../weblab2/CDOIDE/constants';
-import {loadPyodide /*, version*/} from 'pyodide';
+import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
-    indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full',
+    indexURL: `https://cdn.jsdelivr.net/pyodide/v${version}/full`,
     // This URL is not working on prod, so we will use the CDN for now.
     // indexURL: `/assets/js/pyodide/${version}/`,
     // pre-load numpy as it will frequently be used, and matplotlib as we patch it.
