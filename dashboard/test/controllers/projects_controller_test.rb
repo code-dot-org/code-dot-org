@@ -425,6 +425,55 @@ class ProjectsControllerTest < ActionController::TestCase
     refute_nil @response.body['channel']
   end
 
+  test 'get_or_create_for_level with user returns forbiddden if not teacher of student' do
+    student = create :user
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :forbidden
+  end
+
+  test 'get_or_create_for_level with user returns not started if student has not started' do
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'word')
+    student = create :user
+    create(:follower, section: section, student_user: student)
+    sign_in teacher
+
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :success
+    body = JSON.parse(@response.body)
+    assert_equal body['started'], false
+  end
+
+  test 'get_or_create_for_level with user returns channel' do
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'word')
+    student = create :user
+    create(:follower, section: section, student_user: student)
+
+    # The student should do some work.
+    sign_in_with_request(student)
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    create :user_level, level: level, user: student, script: script
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
+    assert_response :success
+    refute_nil @response.body['channel']
+    sign_out student
+
+    # Now that the channel has been created, check that the teacher can retrieve it for their student.
+    sign_in teacher
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :success
+    refute_nil @response.body['channel']
+  end
+
   test 'on lab2 levels navigating to /view redirects to /edit if user is project owner' do
     channel_id = '12345'
     Projects.any_instance.stubs(:get).returns({isOwner: true})
