@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
@@ -20,13 +21,10 @@ import SectionProgressV2 from './SectionProgressV2';
 import styles from './progress-header.module.scss';
 
 const updateUserTimestamps = isV2Table => {
-  return $.post(`/api/v1/users/set_progress_table_timestamp`, {
+  $.post(`/api/v1/users/set_progress_table_timestamp`, {
     is_v2_table: isV2Table,
   });
 };
-
-const updateV1Timestamp = _.once(() => updateUserTimestamps(false));
-const updateV2Timestamp = _.once(() => updateUserTimestamps(true));
 
 function SectionProgressSelector({
   showProgressTableV2,
@@ -37,6 +35,9 @@ function SectionProgressSelector({
   // Only show the feedback banner's default state if the user has not manually selected a view.
   const [showFeedbackBannerLocked, setShowFeedbackBannerLocked] =
     React.useState(false);
+
+  const updateV1Timestamp = _.once(() => updateUserTimestamps(false));
+  const updateV2Timestamp = _.once(() => updateUserTimestamps(true));
 
   const onShowProgressTableV2Change = useCallback(
     e => {
@@ -62,7 +63,13 @@ function SectionProgressSelector({
         });
       }
     },
-    [showProgressTableV2, setShowProgressTableV2, sectionId]
+    [
+      showProgressTableV2,
+      setShowProgressTableV2,
+      sectionId,
+      updateV1Timestamp,
+      updateV2Timestamp,
+    ]
   );
 
   // If progress table is disabled, only show the v1 table.
