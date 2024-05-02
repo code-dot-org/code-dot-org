@@ -16,18 +16,14 @@ interface ProgressSliderProps {
 const ProgressSlider: React.FunctionComponent<ProgressSliderProps> = ({
   percentProgress,
 }) => {
-  if (percentProgress < 0) {
-    percentProgress = 0;
-  } else if (percentProgress > 100) {
-    percentProgress = 100;
-  }
+  const boundedPercentProgress = Math.min(Math.max(0, percentProgress), 100);
   const sliderWidth = parseInt(moduleStyles.sliderWidth.replace('px', ''));
-  const playheadDisplacement = (percentProgress / 100) * sliderWidth;
+  const playheadDisplacement = (boundedPercentProgress / 100) * sliderWidth;
   return (
     <div className={moduleStyles.slider}>
       <div
         className={moduleStyles.progressBar}
-        style={{width: `${percentProgress}%`}}
+        style={{width: `${boundedPercentProgress}%`}}
       />
       <div
         className={moduleStyles.playhead}
