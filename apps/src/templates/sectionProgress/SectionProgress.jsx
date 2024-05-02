@@ -41,7 +41,6 @@ const SECTION_PROGRESS = 'SectionProgress';
  */
 class SectionProgress extends Component {
   static propTypes = {
-    setShowProgressTableV2: PropTypes.func,
     allowUserToSelectV2View: PropTypes.bool,
 
     //Provided by redux
@@ -180,10 +179,7 @@ class SectionProgress extends Component {
         data-testid="section-progress-v1"
       >
         {allowUserToSelectV2View && (
-          <InviteToV2ProgressModal
-            setShowProgressTableV2={this.props.setShowProgressTableV2}
-            sectionId={sectionId}
-          />
+          <InviteToV2ProgressModal sectionId={sectionId} />
         )}
         <div style={styles.topRowContainer}>
           <div>

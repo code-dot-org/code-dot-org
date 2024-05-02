@@ -92,10 +92,7 @@ function SectionProgressSelector({
       {displayV2 ? (
         <SectionProgressV2 />
       ) : (
-        <SectionProgress
-          setShowProgressTableV2={setShowProgressTableV2}
-          allowUserToSelectV2View={true}
-        />
+        <SectionProgress allowUserToSelectV2View={true} />
       )}
     </div>
   );

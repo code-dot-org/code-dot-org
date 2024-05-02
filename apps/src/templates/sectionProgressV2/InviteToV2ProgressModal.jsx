@@ -8,7 +8,11 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {default as LinkedButton} from '@cdo/apps/templates/Button';
-import {setHasSeenProgressTableInvite} from '@cdo/apps/templates/currentUserRedux';
+import {
+  setHasSeenProgressTableInvite,
+  setShowProgressTableV2,
+  setDateProgressTableInvtationDelayed,
+} from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 
 import styles from './progress-v2-invitation.module.scss';
@@ -16,13 +20,13 @@ import styles from './progress-v2-invitation.module.scss';
 const newProgressViewGraphic = require('@cdo/static/teacherDashboard/progressOpenBetaAnnouncementGraphic.png');
 
 function InviteToV2ProgressModal({
-  setShowProgressTableV2,
   sectionId,
 
   // from redux
   dateProgressTableInvtationDelayed,
   hasSeenProgressTableInvite,
   setHasSeenProgressTableInvite,
+  setShowProgressTableV2,
 }) {
   const [invitationOpen, setInvitationOpen] = React.useState(false);
 
@@ -56,8 +60,9 @@ function InviteToV2ProgressModal({
       sectionId,
     });
     setHasSeenProgressTableInviteData();
+    setHasSeenProgressTableInvite(true);
     setInvitationOpen(false);
-  }, [sectionId]);
+  }, [sectionId, setHasSeenProgressTableInvite]);
 
   const handleAcceptedInvitation = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
@@ -73,6 +78,7 @@ function InviteToV2ProgressModal({
       sectionId,
     });
     setDateInvitationDelayed(new Date());
+    setDateProgressTableInvtationDelayed(new Date());
     setInvitationOpen(false);
   }, [sectionId]);
 
@@ -146,5 +152,11 @@ export default connect(
   dispatch => ({
     setHasSeenProgressTableInvite: hasSeenProgressTableInvite =>
       dispatch(setHasSeenProgressTableInvite(hasSeenProgressTableInvite)),
+    setShowProgressTableV2: showProgressTableV2 =>
+      dispatch(setShowProgressTableV2(showProgressTableV2)),
+    setDateProgressTableInvtationDelayed: dateProgressTableInviteLastDelayed =>
+      dispatch(
+        setDateProgressTableInvtationDelayed(dateProgressTableInviteLastDelayed)
+      ),
   })
 )(InviteToV2ProgressModal);
