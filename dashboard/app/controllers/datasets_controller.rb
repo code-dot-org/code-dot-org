@@ -7,7 +7,7 @@ require 'uri'
 class DatasetsController < ApplicationController
   before_action :authenticate_user!
   before_action :require_levelbuilder_mode
-  before_action :initialize_firebase
+  # before_action :initialize_firebase
   authorize_resource class: false
 
   LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide',
@@ -58,10 +58,10 @@ class DatasetsController < ApplicationController
   end
 
   # DELETE /datasets/:dataset_name/
-  # TODO: unfirebase, #56998
   def destroy
-    response = @firebase.delete_shared_table params[:dataset_name]
-    render json: {}, status: response.code
+    table_name = params[:dataset_name]
+    table = DatablockStorageTable.find_shared_table table_name
+    table.destroy!
   end
 
   # GET /datasets/manifest/edit
