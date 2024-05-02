@@ -71,7 +71,6 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions,
   ...horizontalLayout,
 };
 

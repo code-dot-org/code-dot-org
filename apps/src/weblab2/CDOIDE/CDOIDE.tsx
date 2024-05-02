@@ -41,7 +41,7 @@ export const CDOIDE = React.memo(
       'side-bar': SideBar,
       editor: EditorComponent,
       'preview-container': PreviewContainer,
-      instructions: config.Instructions || Instructions,
+      instructions: Instructions,
       'file-tabs': FileTabs,
     };
 
