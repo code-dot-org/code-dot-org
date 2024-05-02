@@ -19,13 +19,21 @@ const SEARCH_DEFAULTS = [
 ];
 const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
 
+// Controls the logic and components surrounding a zip input box and its error
+// messaging, the api school search filtered on zip, and the school dropdown
+// that search populates.
 export default function SchoolZipSearch({fieldNames}) {
   const [selectedSchoolNcesId, setSelectedSchoolNcesId] =
     useState(SELECT_A_SCHOOL);
   const [inputManually, setInputManually] = useState(false);
   const [dropdownSchools, setDropdownSchools] = useState([]);
   const [zip, setZip] = useState('');
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [isSchoolDropdownDisabled, setIsSchoolDropdownDisabled] =
+    useState(true);
+
+  const labelClassName = isSchoolDropdownDisabled
+    ? classNames(style.padding, style.disabledLabel)
+    : style.padding;
 
   useEffect(() => {
     const isValidZip = ZIP_REGEX.test(zip);
@@ -44,14 +52,14 @@ export default function SchoolZipSearch({fieldNames}) {
             error.message
           );
         });
-      setIsDisabled(false);
+      setIsSchoolDropdownDisabled(false);
       analyticsReporter.sendEvent(
         EVENTS.ZIP_CODE_ENTERED,
         {zip: zip},
         PLATFORMS.BOTH
       );
     } else {
-      setIsDisabled(true);
+      setIsSchoolDropdownDisabled(true);
     }
   }, [zip]);
 
@@ -88,10 +96,6 @@ export default function SchoolZipSearch({fieldNames}) {
     return sortedSchools;
   };
 
-  const labelClassName = isDisabled
-    ? classNames(style.padding, style.disabledLabel)
-    : style.padding;
-
   const SORTED_SCHOOLS_OPTION_GROUP = [
     {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
   ].concat(sortSchoolsByName(dropdownSchools));
@@ -111,7 +115,7 @@ export default function SchoolZipSearch({fieldNames}) {
           }}
           value={zip}
         />
-        {zip && isDisabled && (
+        {zip && isSchoolDropdownDisabled && (
           <BodyThreeText className={style.errorMessage}>
             {i18n.zipInvalidMessage()}
           </BodyThreeText>
@@ -127,7 +131,7 @@ export default function SchoolZipSearch({fieldNames}) {
           </BodyTwoText>
           <SimpleDropdown
             id="uitest-school-dropdown"
-            disabled={isDisabled}
+            disabled={isSchoolDropdownDisabled}
             name={fieldNames.ncesSchoolId}
             itemGroups={[
               {
@@ -145,7 +149,7 @@ export default function SchoolZipSearch({fieldNames}) {
           />
           <Button
             text={i18n.noSchoolSetting()}
-            disabled={isDisabled}
+            disabled={isSchoolDropdownDisabled}
             color={'purple'}
             type={'tertiary'}
             size={'xs'}
