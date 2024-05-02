@@ -8,7 +8,11 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
+import {
+  SectionLoginType,
+  PlGradeValue,
+  ChildGradeLevels,
+} from '../../util/sharedConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -1316,6 +1320,17 @@ export function getSectionRows(state, sectionIds) {
     assignmentPaths: assignmentPaths(courseOfferings, sections[id]),
     courseOfferingsAreLoaded,
   }));
+}
+
+export function getChildAccountSections(state, sectionIds) {
+  const sectionData = getSectionRows(state, sectionIds);
+  const childSections = _.filter(sectionData, function (section) {
+    return (
+      section.loginType === 'email' &&
+      section.grades.some(grade => ChildGradeLevels.includes(grade))
+    );
+  });
+  return childSections.map(section => section.id);
 }
 
 export function getAssignmentName(state, sectionId) {

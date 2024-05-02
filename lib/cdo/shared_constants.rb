@@ -53,6 +53,8 @@ module SharedConstants
 
   STUDENT_GRADE_LEVELS = %w(K 1 2 3 4 5 6 7 8 9 10 11 12 Other).freeze
 
+  CHILD_GRADE_LEVELS = %w[K 1 2 3 4 5 6 7 8 Other].freeze
+
   PL_GRADE_VALUE = 'pl'.freeze
 
   # The set of artist autorun options
