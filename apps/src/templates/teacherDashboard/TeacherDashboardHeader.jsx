@@ -86,8 +86,10 @@ function TeacherDashboardHeader({
   /**
    * Returns the URL to the correct section to be edited
    */
-  const editRedirectUrl = sectionId => {
-    return '/sections/' + sectionId + '/edit';
+  const editRedirectUrl = (sectionId, isPl) => {
+    let editSectionUrl = '/sections/' + sectionId + '/edit';
+    editSectionUrl += isPl ? 'redirectToPage=my-professional-learning' : '';
+    return editSectionUrl;
   };
 
   return (
@@ -130,7 +132,10 @@ function TeacherDashboardHeader({
           <div className={dashboardStyles.headerButtonSection}>
             <Button
               __useDeprecatedTag
-              href={editRedirectUrl(selectedSection.id)}
+              href={editRedirectUrl(
+                selectedSection.id,
+                selectedSection.grades?.includes('pl')
+              )}
               className="edit-section-details-link"
               icon="gear"
               size="narrow"
