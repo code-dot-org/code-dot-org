@@ -33,6 +33,9 @@ export interface TooltipOverlayProps {
   className?: string;
 }
 
+/** TooltipOverlay component
+ * Used to wrap the element that needs a Tooltip + Tooltip itself to make sure the Tooltip is displayed correctly
+ * */
 export const TooltipOverlay: React.FunctionComponent<TooltipOverlayProps> = ({
   children,
   className,
@@ -53,7 +56,7 @@ export const TooltipOverlay: React.FunctionComponent<TooltipOverlayProps> = ({
  * ###  Status: ```Ready for dev```
  *
  * Design System: Tooltip Component.
- * Renders Tooltip for a given html element.
+ * Renders Tooltip for a given html element (Needs to be wrapped in TooltipOverlay, see stories or README.md).
  */
 const Tooltip: React.FunctionComponent<TooltipProps> = ({
   text,
