@@ -15,7 +15,6 @@ import RosterDialog from '../teacherDashboard/RosterDialog';
 import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
-  hiddenPlSectionIds,
   hiddenStudentSectionIds,
 } from '../teacherDashboard/teacherSectionsRedux';
 
@@ -29,7 +28,6 @@ function TeacherSections({
   coteacherInviteForPl,
   studentSectionIds,
   plSectionIds,
-  hiddenPlSectionIds,
   hiddenStudentSectionIds,
   sectionsAreLoaded,
 }) {
@@ -91,7 +89,6 @@ TeacherSections.propTypes = {
   coteacherInviteForPl: PropTypes.object,
   studentSectionIds: PropTypes.array,
   plSectionIds: PropTypes.array,
-  hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   sectionsAreLoaded: PropTypes.bool,
 };
@@ -104,7 +101,6 @@ export default connect(
     coteacherInviteForPl: state.teacherSections.coteacherInviteForPl,
     studentSectionIds: state.teacherSections.studentSectionIds,
     plSectionIds: state.teacherSections.plSectionIds,
-    hiddenPlSectionIds: hiddenPlSectionIds(state),
     hiddenStudentSectionIds: hiddenStudentSectionIds(state),
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
   }),
