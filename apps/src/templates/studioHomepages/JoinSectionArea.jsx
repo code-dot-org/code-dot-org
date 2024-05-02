@@ -63,9 +63,8 @@ export default function JoinSectionArea({
           name={sectionResults.resultName}
           id={sectionResults.resultId}
           sectionCapacity={sectionResults.sectionCapacity}
-          showMessageForJoiningNonPl={
-            isPlSections && !sectionResults.joiningPlSection
-          }
+          showingPlSections={isPlSections}
+          joiningPlSection={sectionResults.joiningPlSection}
         />
         <JoinSection
           enrolledInASection={true}

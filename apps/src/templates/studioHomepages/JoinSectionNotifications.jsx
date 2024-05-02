@@ -13,13 +13,15 @@ export default function JoinSectionNotifications({
   name,
   id,
   sectionCapacity,
-  showMessageForJoiningNonPl,
+  showingPlSections,
+  joiningPlSection,
 }) {
   if (action === 'join' && result === 'success') {
     return (
       <JoinSectionSuccessNotification
         sectionName={name}
-        showMessageForJoiningNonPl={showMessageForJoiningNonPl}
+        showingPlSections={showingPlSections}
+        joiningPlSection={joiningPlSection}
       />
     );
   } else if (action === 'leave' && result === 'success') {
@@ -54,34 +56,55 @@ JoinSectionNotifications.propTypes = {
   name: PropTypes.string,
   id: PropTypes.string,
   sectionCapacity: PropTypes.number,
-  showMessageForJoiningNonPl: PropTypes.bool,
+  showingPlSections: PropTypes.bool,
+  joiningPlSection: PropTypes.bool,
 };
 
 const JoinSectionSuccessNotification = ({
   sectionName,
-  showMessageForJoiningNonPl,
-}) => (
-  <Notification
-    type="success"
-    notice={i18n.sectionsNotificationSuccess()}
-    details={
-      showMessageForJoiningNonPl ? (
-        <SafeMarkdown
-          markdown={i18n.sectionsNotificationJoinSuccessForNonPl({
-            sectionName: sectionName,
-            teacherHomepageUrl: studio('/home'),
-          })}
-        />
-      ) : (
-        i18n.sectionsNotificationJoinSuccess({sectionName})
-      )
-    }
-    dismissible={true}
-  />
-);
+  showingPlSections,
+  joiningPlSection,
+}) => {
+  let notificationMessage = null;
+  if (showingPlSections && !joiningPlSection) {
+    // Notify user if they are joining a non-PL section on the My PL page so they'll have to
+    // go to the Teacher Homepage if they want to view it.
+    notificationMessage = (
+      <SafeMarkdown
+        markdown={i18n.sectionsNotificationJoinSuccessForNonPlWrongPage({
+          sectionName: sectionName,
+          teacherHomepageUrl: studio('/home'),
+        })}
+      />
+    );
+  } else if (!showingPlSections && joiningPlSection) {
+    // Notify user if they are joining a Professional Learning section not on the My PL page
+    // so they'll have to go to the My PL page if they want to view it.
+    notificationMessage = (
+      <SafeMarkdown
+        markdown={i18n.sectionsNotificationJoinSuccessForPlWrongPage({
+          sectionName: sectionName,
+          myPlUrl: studio('/my-professional-learning'),
+        })}
+      />
+    );
+  } else {
+    notificationMessage = i18n.sectionsNotificationJoinSuccess({sectionName});
+  }
+
+  return (
+    <Notification
+      type="success"
+      notice={i18n.sectionsNotificationSuccess()}
+      details={notificationMessage}
+      dismissible={true}
+    />
+  );
+};
 JoinSectionSuccessNotification.propTypes = {
   sectionName: PropTypes.string.isRequired,
-  showMessageForJoiningNonPl: PropTypes.bool,
+  showingPlSections: PropTypes.bool,
+  joiningPlSection: PropTypes.bool,
 };
 
 const LeaveSectionSuccessNotification = ({sectionName, sectionId}) => (
