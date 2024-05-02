@@ -4,7 +4,6 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 interface Props {
@@ -25,11 +24,7 @@ export const ChildSectionsWarningDialog: React.FC<Props> = ({
   const getDialogBody = () => {
     return (
       <div data-testid="lti-upgrade-account">
-        <h2 style={styles.dialogHeader}>
-          <SafeMarkdown
-            markdown={i18n.childAccountPolicy_sectionsWarning_dialogTitle()}
-          />
-        </h2>
+        <h3>{i18n.childAccountPolicy_sectionsWarning_dialogTitle()}</h3>
         <SafeMarkdown
           markdown={i18n.childAccountPolicy_sectionsWarning_dialogBody()}
         />
@@ -41,7 +36,7 @@ export const ChildSectionsWarningDialog: React.FC<Props> = ({
           })}
         />
 
-        <DialogFooter>
+        <DialogFooter rightAlign={true}>
           <Button
             text={i18n.closeDialog()}
             onClick={handleClose}
@@ -67,16 +62,6 @@ export const ChildSectionsWarningDialog: React.FC<Props> = ({
 const styles: {[styleKey: string]: CSSProperties} = {
   dialog: {
     padding: 20,
-  },
-  dialogHeader: {
-    fontSize: '28px',
-    marginTop: 0,
-  },
-  error: {
-    color: color.red,
-  },
-  formLabel: {
-    padding: 8,
   },
   spinnerContainer: {
     textAlign: 'center',
