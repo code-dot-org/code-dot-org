@@ -41,6 +41,7 @@ export const UnconnectedTeacherHomepage = ({
   plCourses,
   courses,
   afeEligible,
+  isUsa,
   joinedStudentSections,
   joinedPlSections,
   ncesSchoolId,
@@ -270,7 +271,7 @@ export const UnconnectedTeacherHomepage = ({
             <div style={styles.clear} />
           </div>
         )}
-        <TeacherSections />
+        <TeacherSections isUsa={isUsa} />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
@@ -330,6 +331,7 @@ UnconnectedTeacherHomepage.propTypes = {
   courses: shapes.courses,
   afeEligible: PropTypes.bool,
   hocLaunch: PropTypes.string,
+  isUsa: PropTypes.bool,
   joinedStudentSections: shapes.sections,
   joinedPlSections: shapes.sections,
   ncesSchoolId: PropTypes.string,

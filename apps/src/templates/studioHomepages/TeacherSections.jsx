@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
@@ -6,7 +7,7 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import ChildSectionsWarningNotification from '@cdo/apps/templates/childAccountPolicy/ChildSectionsWarningNotification';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';
@@ -16,6 +17,7 @@ import RosterDialog from '../teacherDashboard/RosterDialog';
 import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
+  getChildAccountSections,
   hiddenPlSectionIds,
   hiddenStudentSectionIds,
 } from '../teacherDashboard/teacherSectionsRedux';
@@ -26,8 +28,10 @@ import SetUpSections from './SetUpSections';
 function TeacherSections({
   asyncLoadSectionData,
   asyncLoadCoteacherInvite,
+  childAccountSections,
   coteacherInvite,
   coteacherInviteForPl,
+  isUsa,
   studentSectionIds,
   plSectionIds,
   hiddenPlSectionIds,
@@ -47,17 +51,6 @@ function TeacherSections({
     return plSectionIds?.length > 0 || !!coteacherInviteForPl;
   };
 
-  const renderChildAccountPolicyNotification = () => {
-    return (
-      <Notification
-        type={NotificationType.warning}
-        notice="Heads up!"
-        details="Some of your students are under 13 and will require parental consent to continue using their personal accounts after 7/1/2024. "
-        dismissible={false}
-      />
-    );
-  };
-
   return (
     <div id="classroom-sections">
       <ContentContainer heading={i18n.createSection()}>
@@ -66,7 +59,9 @@ function TeacherSections({
       </ContentContainer>
       {shouldRenderSections() && (
         <ContentContainer heading={i18n.sectionsTitle()}>
-          {renderChildAccountPolicyNotification()}
+          {!_.isEmpty(childAccountSections) && isUsa && (
+            <ChildSectionsWarningNotification />
+          )}
           <CoteacherInviteNotification isForPl={false} />
           <OwnedSections
             sectionIds={studentSectionIds}
@@ -101,8 +96,10 @@ TeacherSections.propTypes = {
   //Redux provided
   asyncLoadSectionData: PropTypes.func.isRequired,
   asyncLoadCoteacherInvite: PropTypes.func.isRequired,
+  childAccountSections: PropTypes.arrayOf(PropTypes.number),
   coteacherInvite: PropTypes.object,
   coteacherInviteForPl: PropTypes.object,
+  isUsa: PropTypes.bool,
   studentSectionIds: PropTypes.array,
   plSectionIds: PropTypes.array,
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -114,6 +111,10 @@ export const UnconnectedTeacherSections = TeacherSections;
 
 export default connect(
   state => ({
+    childAccountSections: getChildAccountSections(
+      state,
+      state.teacherSections.studentSectionIds
+    ),
     coteacherInvite: state.teacherSections.coteacherInvite,
     coteacherInviteForPl: state.teacherSections.coteacherInviteForPl,
     studentSectionIds: state.teacherSections.studentSectionIds,
