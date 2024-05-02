@@ -28,33 +28,33 @@ function InviteToV2ProgressModal({
   setHasSeenProgressTableInvite,
   setShowProgressTableV2,
 }) {
-  const [invitationOpen, setInvitationOpen] = React.useState(true);
-  // const [invitationOpen, setInvitationOpen] = React.useState(false);
+  // const [invitationOpen, setInvitationOpen] = React.useState(true);
+  const [invitationOpen, setInvitationOpen] = React.useState(false);
 
-  // React.useEffect(() => {
-  //   const timeSinceInvitationLastDelayed = () => {
-  //     const startingDate = new Date(dateProgressTableInvtationDelayed);
-  //     const today = new Date();
-  //     const differenceInMilliseconds = today.getTime() - startingDate.getTime();
-  //     const differenceInDays = differenceInMilliseconds / (1000 * 3600 * 24);
-  //     return Math.floor(differenceInDays);
-  //   };
+  React.useEffect(() => {
+    const timeSinceInvitationLastDelayed = () => {
+      const startingDate = new Date(dateProgressTableInvtationDelayed);
+      const today = new Date();
+      const differenceInMilliseconds = today.getTime() - startingDate.getTime();
+      const differenceInDays = differenceInMilliseconds / (1000 * 3600 * 24);
+      return Math.floor(differenceInDays);
+    };
 
-  //   const showInvitation = () => {
-  //     const alreadyViewedInvitation = !!hasSeenProgressTableInvite;
-  //     if (alreadyViewedInvitation) {
-  //       return false;
-  //     } else {
-  //       if (!!dateProgressTableInvtationDelayed) {
-  //         return timeSinceInvitationLastDelayed() > 3;
-  //       } else {
-  //         return true;
-  //       }
-  //     }
-  //   };
+    const showInvitation = () => {
+      const alreadyViewedInvitation = !!hasSeenProgressTableInvite;
+      if (alreadyViewedInvitation) {
+        return false;
+      } else {
+        if (!!dateProgressTableInvtationDelayed) {
+          return timeSinceInvitationLastDelayed() > 3;
+        } else {
+          return true;
+        }
+      }
+    };
 
-  //   setInvitationOpen(showInvitation());
-  // }, [dateProgressTableInvtationDelayed, hasSeenProgressTableInvite]);
+    setInvitationOpen(showInvitation());
+  }, [dateProgressTableInvtationDelayed, hasSeenProgressTableInvite]);
 
   const handleDismiss = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
