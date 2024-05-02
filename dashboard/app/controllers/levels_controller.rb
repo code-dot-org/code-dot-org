@@ -486,23 +486,40 @@ class LevelsController < ApplicationController
   end
 
   # GET /levels/:id/extra_links
-  # Get the extra links for the level. Only levelbuilders and project validators can use extra links.
+  # Get the extra links for the level. Only levelbuilders can use extra links.
   def extra_links
-    unless current_user && (current_user.levelbuilder? || current_user.project_validator?)
+    unless current_user&.levelbuilder?
       return head :forbidden
     end
 
     links = {}
 
     links[@level.name] = [{text: level_path(@level), url: level_url(@level)}]
+    if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?
+      links[@level.name] << {text: "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}", url: ''}
+    end
     is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     if Rails.application.config.levelbuilder_mode && !is_standalone_project
       if can? :edit, @level
         links[@level.name] << {text: 'Edit', url: edit_level_path(@level)}
-        if @level.is_a? Blockly
-          links[@level.name] << {text: "Start (#{Blockly.count_xml_blocks(@level.start_blocks)})", url: edit_blocks_level_path(@level, :start_blocks)}
+        if @level.is_a?(Blockly) # && !@level.is_a?(Music)
+          links[@level.name] << {
+            text: "Start (#{Blockly.count_xml_blocks(@level.start_blocks)})",
+            url: edit_blocks_level_path(@level, :start_blocks)
+          }
+          links[@level.name] << {text: 'Solution', url: edit_blocks_level_path(@level, :solution_blocks)}
+          links[@level.name] << {text: 'Toolbox', url: edit_blocks_level_path(@level, :toolbox_blocks)}
+          links[@level.name] << {text: 'required', url: edit_blocks_level_path(@level, :required_blocks)}
+          links[@level.name] << {text: 'recommended', url: edit_blocks_level_path(@level, :recommended_blocks)}
+          links[@level.name] << {
+            text: "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})",
+            url: edit_blocks_level_path(@level, :initialization_blocks)
+          }
+          if @level.is_a? Artist
+            links[@level.name] << {text: 'pre-draw', url: edit_blocks_level_path(@level, :predraw_blocks)}
+          end
         elsif @level.is_a?(Javalab) || @level.is_a?(Pythonlab) || @level.is_a?(Weblab2)
           links[@level.name] << {text: "Start", url: edit_blocks_level_path(@level, :start_sources)}
           links[@level.name] << {text: "Exemplar", url: edit_exemplar_level_path(@level)}
@@ -510,8 +527,31 @@ class LevelsController < ApplicationController
       else
         links[@level.name] << {text: '(Cannot edit)', url: ''}
       end
+      if @level.is_a?(LevelGroup)
+        links["Sublevels"] = @level.levels.map {|sublevel| {text: sublevel.name, url: level_path(sublevel)}}
+      end
+
+      if project_template_level_name = @level.properties['project_template_level_name']
+        project_template_level = Level.find_by_name(project_template_level_name)
+        links["Template Level"] = [
+          {text: project_template_level_name, url: level_path(project_template_level)},
+          {text: 'Edit', url: edit_level_path(project_template_level)}
+        ]
+      end
+
+    elsif @script_level
+      links[@level.name] << {
+        text: 'edit on levelbuilder',
+        url: URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level, @extra_params)).to_s
+      }
     end
-    return render json: {links: links}
+
+    # TODO: Not present here, but present in original extra links. Some of these can be handled on the client side.
+    # Anything project-specific should be handled via a separate API, as this controller has no context for projects.
+    # Gamelab show animation json, list contained levels, Blockly helpers, list of scripts, list of parent levels, all project
+    # validator links (should be handled elsewhere), abuse handlers (should be handled elsewhere).
+
+    return render json: {links: links, can_clone: can?(:clone, @level), can_delete: can?(:delete, @level)}
   end
 
   # Use callbacks to share common setup or constraints between actions.

@@ -23,8 +23,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     return <></>;
   }
   const linkData = data as ExtraLinksResponse;
-  console.log({linkData});
-  console.log('rendering button?');
+  const onClose = () => setIsModalOpen(false);
 
   return (
     <>
@@ -34,8 +33,16 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
         className={moduleStyles.extraLinksButton}
       />
       {isModalOpen && (
-        <AccessibleDialog onClose={() => setIsModalOpen(false)}>
+        <AccessibleDialog onClose={onClose}>
           <Heading3>Extra links</Heading3>
+
+          <button
+            type="button"
+            onClick={onClose}
+            className={moduleStyles.xCloseButton}
+          >
+            <i id="x-close" className="fa-solid fa-xmark" />
+          </button>
           {Object.entries(linkData.links).map(([listTitle, links]) => (
             <div>
               <StrongText>{listTitle}</StrongText>
@@ -53,7 +60,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
             </div>
           ))}
 
-          <Button onClick={() => setIsModalOpen(false)} text={'Close'} />
+          {/* <Button onClick={onClose} text={'Close'} /> */}
         </AccessibleDialog>
       )}
     </>
