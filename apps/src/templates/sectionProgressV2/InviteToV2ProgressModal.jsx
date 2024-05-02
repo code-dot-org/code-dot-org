@@ -8,6 +8,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {default as LinkedButton} from '@cdo/apps/templates/Button';
+import {setHasSeenProgressTableInvite} from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 
 import styles from './progress-v2-invitation.module.scss';
@@ -21,6 +22,7 @@ function InviteToV2ProgressModal({
   // from redux
   dateProgressTableInvtationDelayed,
   hasSeenProgressTableInvite,
+  setHasSeenProgressTableInvite,
 }) {
   const [invitationOpen, setInvitationOpen] = React.useState(false);
 
@@ -53,7 +55,7 @@ function InviteToV2ProgressModal({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
       sectionId,
     });
-    setHasSeenProgressTableInvite();
+    setHasSeenProgressTableInviteData();
     setInvitationOpen(false);
   }, [sectionId]);
 
@@ -61,9 +63,10 @@ function InviteToV2ProgressModal({
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
       sectionId,
     });
-    setHasSeenProgressTableInvite();
+    setHasSeenProgressTableInviteData();
+    setHasSeenProgressTableInvite(true);
     setShowProgressTableV2(true);
-  }, [sectionId, setShowProgressTableV2]);
+  }, [sectionId, setShowProgressTableV2, setHasSeenProgressTableInvite]);
 
   const handleDelayInvitation = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DELAY_INVITATION, {
@@ -79,7 +82,7 @@ function InviteToV2ProgressModal({
     });
   };
 
-  const setHasSeenProgressTableInvite = () => {
+  const setHasSeenProgressTableInviteData = () => {
     return $.post(`/api/v1/users/has_seen_progress_table_v2_invitation`, {
       has_seen_progress_table_v2_invitation: true,
     });
@@ -128,13 +131,20 @@ function InviteToV2ProgressModal({
 
 InviteToV2ProgressModal.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
+  setHasSeenProgressTableInvite: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
   dateProgressTableInvtationDelayed: PropTypes.string,
   hasSeenProgressTableInvite: PropTypes.bool,
 };
 
-export default connect(state => ({
-  dateProgressTableInvtationDelayed:
-    state.currentUser.dateProgressTableInvtationDelayed,
-  hasSeenProgressTableInvite: state.currentUser.hasSeenProgressTableInvite,
-}))(InviteToV2ProgressModal);
+export default connect(
+  state => ({
+    dateProgressTableInvtationDelayed:
+      state.currentUser.dateProgressTableInvtationDelayed,
+    hasSeenProgressTableInvite: state.currentUser.hasSeenProgressTableInvite,
+  }),
+  dispatch => ({
+    setHasSeenProgressTableInvite: hasSeenProgressTableInvite =>
+      dispatch(setHasSeenProgressTableInvite(hasSeenProgressTableInvite)),
+  })
+)(InviteToV2ProgressModal);

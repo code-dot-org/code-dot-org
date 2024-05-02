@@ -18,6 +18,10 @@ const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 const SET_SHOW_PROGRESS_TABLE_V2 = 'currentUser/SET_SHOW_PROGRESS_TABLE_V2';
 const SET_PROGRESS_TABLE_V2_CLOSED_BETA =
   'currentUser/SET_PROGRESS_TABLE_V2_CLOSED_BETA';
+const SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED =
+  'currentUser/SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED';
+const SET_SEEN_PROGRESS_TABLE_INVITATION =
+  'currentUser/SET_SEEN_PROGRESS_TABLE_INVITATION';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -78,6 +82,15 @@ export const setProgressTableV2ClosedBeta = progressTableV2ClosedBeta => ({
   type: SET_PROGRESS_TABLE_V2_CLOSED_BETA,
   progressTableV2ClosedBeta,
 });
+export const setHasSeenProgressTableInvite = hasSeenProgressTableInvite => ({
+  type: SET_SEEN_PROGRESS_TABLE_INVITATION,
+  hasSeenProgressTableInvite,
+});
+export const setDateProgressTableInvtationDelayed =
+  dateProgressTableInviteLastDelayed => ({
+    type: SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED,
+    dateProgressTableInviteLastDelayed,
+  });
 
 const initialState = {
   userId: null,
@@ -171,6 +184,19 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       progressTableV2ClosedBeta: action.progressTableV2ClosedBeta,
+    };
+  }
+  if (action.type === SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED) {
+    return {
+      ...state,
+      dateProgressTableInvtationDelayed:
+        action.dateProgressTableInvtationDelayed,
+    };
+  }
+  if (action.type === SET_SEEN_PROGRESS_TABLE_INVITATION) {
+    return {
+      ...state,
+      hasSeenProgressTableInvite: action.hasSeenProgressTableInvite,
     };
   }
   if (action.type === SET_INITIAL_DATA) {
