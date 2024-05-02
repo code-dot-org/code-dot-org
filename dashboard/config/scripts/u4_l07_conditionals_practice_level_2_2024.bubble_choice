@@ -3,6 +3,6 @@ display_name 'Conditionals Practice, Part 2'
 description 'Continue working through the development sequence with the app that you chose in the previous level. There is a sequence of four total levels associated with this Practice activity. If you want to change apps, please start back at level 1 in order to follow the development sequence.'
 
 sublevels
-level 'U4_L07_Conditionals Practice_Choice_2-2_2024'
-level 'U4_L07_Conditionals Practice_Choice_1-2_2024'
-level 'U4_L07_Conditionals Practice_Choice_3-2_2024'
+level 'CSP Conditionals Practice MindEase L1'
+level 'CSP Conditionals Practice VeloCity Ride L1'
+level 'CSP Conditionals Practice Tix Finder L1'

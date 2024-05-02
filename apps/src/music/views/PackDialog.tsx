@@ -200,19 +200,21 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
           <div className={styles.body}>{musicI18n.packDialogBody()}</div>
 
-          <div className={styles.packs}>
-            {folders.map((folder, folderIndex) => {
-              return (
-                <PackEntry
-                  key={folderIndex}
-                  playingPreview={playingPreviewState}
-                  folder={folder}
-                  isSelected={folder.id === selectedFolderId}
-                  onSelect={handleSelectFolder}
-                  onPreview={onPreview}
-                />
-              );
-            })}
+          <div className={styles.packsContainer}>
+            <div className={styles.packs}>
+              {folders.map((folder, folderIndex) => {
+                return (
+                  <PackEntry
+                    key={folderIndex}
+                    playingPreview={playingPreviewState}
+                    folder={folder}
+                    isSelected={folder.id === selectedFolderId}
+                    onSelect={handleSelectFolder}
+                    onPreview={onPreview}
+                  />
+                );
+              })}
+            </div>
           </div>
 
           <div className={styles.buttonContainer}>
