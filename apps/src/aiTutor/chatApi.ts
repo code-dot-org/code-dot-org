@@ -6,7 +6,9 @@ import {
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import Lab2Registry from '../lab2/Lab2Registry';
+
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
 // These are the possible statuses returned by ShareFiltering.find_failure
 enum ShareFilterStatus {
@@ -24,6 +26,9 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
   console.info('Violation detected in chat completion response', {
     type: response.status,
     content: response.flagged_content,
+  });
+  MetricsReporter.logWarning({
+    event: MetricEvent.AI_TUTOR_CHAT_PROFANITY_PII_VIOLATION,
   });
 };
 
@@ -88,9 +93,11 @@ export async function getChatCompletionMessage(
       tutorType
     );
   } catch (error) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError('Error in chat completion request', error as Error);
+    MetricsReporter.logError({
+      event: MetricEvent.AI_TUTOR_CHAT_COMPLETION_FAIL,
+      errorMessage:
+        (error as Error).message || 'Error in chat completion request',
+    });
   }
 
   if (!response) return {status: Status.ERROR};
