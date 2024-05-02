@@ -12,6 +12,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {LabState} from '../../lab2Redux';
 import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
+
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
@@ -156,7 +157,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
       id="instructions"
       className={classNames(
         moduleStyles['instructions-' + theme],
-        vertical && moduleStyles.vertical
+        vertical && moduleStyles.vertical,
+        'instructions'
       )}
     >
       <div
