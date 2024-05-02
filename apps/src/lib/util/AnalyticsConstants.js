@@ -269,6 +269,11 @@ const EVENTS = {
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
 
   // CPA
+  CPA_PARENT_EMAIL_BANNER_CLICKED: 'cpa_parent_email_banner_clicked',
+  CPA_PARENT_EMAIL_BANNER_SUBMITTED: 'cpa_parent_email_banner_submitted',
+  CPA_PARENT_EMAIL_BANNER_UPDATED: 'cpa_parent_email_banner_updated',
+  CPA_PARENT_EMAIL_BANNER_RESEND: 'cpa_parent_email_banner_resend',
+  CPA_PARENT_EMAIL_BANNER_CLOSED: 'cpa_parent_email_banner_closed',
   CPA_PARENT_EMAIL_MODAL_SHOWN: 'cpa_parent_email_modal_shown',
   CPA_PARENT_EMAIL_MODAL_SUBMITTED: 'cpa_parent_email_modal_submitted',
   CPA_PARENT_EMAIL_MODAL_UPDATED: 'cpa_parent_email_modal_updated',

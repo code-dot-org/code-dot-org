@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useReducer, useMemo} from 'react';
+import React, {useState, useEffect, useReducer} from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 // eslint-disable-next-line no-restricted-imports
@@ -11,10 +11,7 @@ import {
   Fade,
 } from 'react-bootstrap';
 
-import {getStore} from '@cdo/apps/redux';
 import usePrevious from '@cdo/apps/util/usePrevious';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import i18n from '@cdo/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -26,28 +23,45 @@ import updateRequestImg from '@cdo/static/common_images/penguin/dancing.png';
 
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
+  ParentalPermissionRequest,
   fetchPendingPermissionRequest,
   requestParentalPermission,
+  resetParentalPermissionRequest,
 } from '@cdo/apps/redux/parentalPermissionRequestReducer';
 
 import './style.scss';
 
 interface ParentalPermissionModalProps {
-  lockoutDate: Date;
+  lockoutDate: string;
+  show?: boolean;
+  onClose?: (
+    parentalPermissionRequest: ParentalPermissionRequest | null | undefined
+  ) => void;
+  onSubmit?: (parentalPermissionRequest: ParentalPermissionRequest) => void;
+  onResend?: (
+    prevParentalPermissionRequest: ParentalPermissionRequest,
+    parentalPermissionRequest: ParentalPermissionRequest
+  ) => void;
+  onUpdate?: (
+    prevParentalPermissionRequest: ParentalPermissionRequest,
+    parentalPermissionRequest: ParentalPermissionRequest
+  ) => void;
 }
 
 const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
   lockoutDate,
+  show = true,
+  onClose = () => {},
+  onSubmit = () => {},
+  onResend = () => {},
+  onUpdate = () => {},
 }) => {
-  const currentUser = getStore().getState().currentUser;
-  const initConsentStatus = currentUser.childAccountComplianceState;
-  const [show, setShow] = useState(true);
+  const [shown, setShown] = useState(show);
   const [requestError, setRequestError] = useState('');
   const [parentEmail, setParentEmail] = useState('');
-  const formattedLockoutDate = useMemo(
-    () => moment(lockoutDate).lang(currentLocale()).format('ll'),
-    [lockoutDate]
-  );
+  const formattedLockoutDate = moment(lockoutDate)
+    .lang(currentLocale())
+    .format('ll');
 
   const [
     {action, isLoading, error, parentalPermissionRequest},
@@ -55,9 +69,13 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
   ] = useReducer(parentalPermissionRequestReducer, {isLoading: false});
   const prevParentalPermissionRequest = usePrevious(parentalPermissionRequest);
 
-  const reportEvent = (eventName: string, payload: object = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.STATSIG);
-  };
+  useEffect(() => {
+    setShown(show);
+  }, [show]);
+
+  useEffect(() => {
+    shown && fetchPendingPermissionRequest(parentalPermissionRequestDispatch);
+  }, [shown]);
 
   useEffect(() => {
     setParentEmail(parentalPermissionRequest?.parent_email || '');
@@ -66,19 +84,6 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
   useEffect(() => {
     setRequestError(error || '');
   }, [error]);
-
-  useEffect(() => {
-    if (show) {
-      fetchPendingPermissionRequest(parentalPermissionRequestDispatch);
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_SHOWN, {
-        consentStatus: initConsentStatus,
-      });
-    } else {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_CLOSED, {
-        consentStatus: initConsentStatus,
-      });
-    }
-  }, [show, initConsentStatus]);
 
   /**
    * This useEffect hook is responsible for reporting successful parent permission request events:
@@ -91,28 +96,30 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
     if (action !== REQUEST_PARENTAL_PERMISSION_SUCCESS) return;
     if (!parentalPermissionRequest) return;
 
-    const eventPayload = {
-      consentStatusBefore:
-        prevParentalPermissionRequest?.consent_status || initConsentStatus,
-      consentStatusAfter: parentalPermissionRequest.consent_status,
-    };
-
     if (!prevParentalPermissionRequest) {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_SUBMITTED, eventPayload);
+      onSubmit(parentalPermissionRequest);
     } else if (
       prevParentalPermissionRequest.parent_email ===
       parentalPermissionRequest.parent_email
     ) {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_RESEND, eventPayload);
+      onResend(prevParentalPermissionRequest, parentalPermissionRequest);
     } else {
-      reportEvent(EVENTS.CPA_PARENT_EMAIL_MODAL_UPDATED, eventPayload);
+      onUpdate(prevParentalPermissionRequest, parentalPermissionRequest);
     }
   }, [
     action,
-    initConsentStatus,
     prevParentalPermissionRequest,
     parentalPermissionRequest,
+    onSubmit,
+    onResend,
+    onUpdate,
   ]);
+
+  const close = () => {
+    onClose(parentalPermissionRequest);
+    resetParentalPermissionRequest(parentalPermissionRequestDispatch);
+    setShown(false);
+  };
 
   const handleParentEmailChange: React.FormEventHandler<
     FormControl
@@ -230,7 +237,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
         <Modal.Header
           closeButton
           closeLabel={i18n.closeDialog()}
-          onHide={() => setShow(false)}
+          onHide={close}
         >
           <img src={newRequestImg} alt="" aria-hidden="true" />
 
@@ -275,7 +282,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
         <Modal.Header
           closeButton
           closeLabel={i18n.closeDialog()}
-          onHide={() => setShow(false)}
+          onHide={close}
         >
           <img src={updateRequestImg} alt="" aria-hidden="true" />
 
@@ -310,7 +317,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
             type="button"
             text={i18n.closeDialog()}
             color={Button.ButtonColor.gray}
-            onClick={() => setShow(false)}
+            onClick={close}
           />
 
           {submitButton(submitText)}
@@ -320,7 +327,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
   };
 
   const permissionRequestForm = () => {
-    if (parentalPermissionRequest === undefined && isLoading) {
+    if (parentalPermissionRequest === undefined) {
       return <Skeleton height={500} />;
     } else if (parentalPermissionRequest) {
       return updatePermissionRequestForm();
@@ -331,11 +338,11 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
 
   return (
     <>
-      <Fade in={show} mountOnEnter unmountOnExit>
+      <Fade in={shown} mountOnEnter unmountOnExit>
         <div className="modal-backdrop" />
       </Fade>
 
-      <Fade in={show} mountOnEnter unmountOnExit>
+      <Fade in={shown} mountOnEnter unmountOnExit>
         <Modal.Dialog
           id="parental-permission-modal"
           aria-labelledby="parental-permission-modal-title"
@@ -348,7 +355,12 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
 };
 
 ParentalPermissionModal.propTypes = {
-  lockoutDate: PropTypes.instanceOf(Date).isRequired,
+  lockoutDate: PropTypes.string.isRequired,
+  show: PropTypes.bool,
+  onClose: PropTypes.func,
+  onSubmit: PropTypes.func,
+  onResend: PropTypes.func,
+  onUpdate: PropTypes.func,
 };
 
 export default ParentalPermissionModal;

@@ -6,7 +6,7 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {Meta, StoryFn} from '@storybook/react';
 import {Provider} from 'react-redux';
-import ParentalPermissionModal from '.';
+import ParentalPermissionBanner from '.';
 
 const store = getStore();
 registerReducers({currentUser});
@@ -18,7 +18,7 @@ store.dispatch(
 );
 
 export default {
-  component: ParentalPermissionModal,
+  component: ParentalPermissionBanner,
   decorators: [
     (Story: StoryFn) => (
       <Provider store={store}>
@@ -30,27 +30,12 @@ export default {
 
 const spy = sinon.spy();
 const useReducerStub = sinon.stub(React, 'useReducer');
-const Template = (state: object = {}) => {
-  useReducerStub.returns([state, spy]);
-
-  return <ParentalPermissionModal lockoutDate={Date()} />;
-};
-
-export const NewRequestForm = () => {
+export const Default = () => {
   const state = {
     parentalPermissionRequest: null,
   };
 
-  return Template(state);
-};
+  useReducerStub.returns([state, spy]);
 
-export const UpdateRequestForm = () => {
-  const state = {
-    parentalPermissionRequest: {
-      parent_email: 'parent@email.com',
-      requested_at: Date(),
-    },
-  };
-
-  return Template(state);
+  return <ParentalPermissionBanner lockoutDate={Date()} />;
 };

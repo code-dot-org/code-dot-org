@@ -47,6 +47,7 @@ const Notification = ({
   type,
   tooltipText,
   width,
+  color,
 }) => {
   const [open, setOpen] = useState(true);
 
@@ -124,7 +125,9 @@ const Notification = ({
     return null;
   }
 
-  const colorStyles = styles.colors[type];
+  const colorStyles = color
+    ? {backgroundColor: color, borderColor: color}
+    : styles.colors[type];
 
   const tooltipId = _.uniqueId();
 
@@ -212,7 +215,7 @@ const Notification = ({
 };
 
 Notification.propTypes = {
-  type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
+  type: PropTypes.oneOf(Object.keys(NotificationType)),
   notice: PropTypes.string.isRequired,
   details: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   detailsLinkText: PropTypes.string,
@@ -255,6 +258,8 @@ Notification.propTypes = {
 
   // Can be specified to override default width
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+
+  color: PropTypes.string,
 };
 
 const styles = {
