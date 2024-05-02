@@ -245,6 +245,7 @@ class EvaluateRubricJob < ApplicationJob
             {name: 'Environment', value: CDO.rack_env},
             {name: 'UserId',  value: options[:user_id]},
             {name: 'RequesterId', value: options[:requester_id]},
+            {name: 'ScriptLevelId', value: options[:script_level_id]},
             {name: 'ScriptName', value: script_level.script.name},
             {name: 'LessonNumber', value: script_level.lesson.absolute_position},
             {name: 'LevelName', value: script_level.level.name},
