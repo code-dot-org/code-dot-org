@@ -90,6 +90,7 @@ function showHomepage() {
             hocLaunch={homepageData.hocLaunch}
             courses={homepageData.courses}
             plCourses={homepageData.plCourses}
+            isUsa={homepageData.isUsa}
             joinedStudentSections={homepageData.joined_student_sections}
             joinedPlSections={homepageData.joined_pl_sections}
             topCourse={homepageData.topCourse}

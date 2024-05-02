@@ -103,12 +103,16 @@ class HomeController < ApplicationController
 
     @homepage_data = {}
     @homepage_data[:isEnglish] = request.language == 'en'
+    @homepage_data[:isUsa] = request.country.nil? || %w[US RD].include?(request.country.to_s.upcase)
     @homepage_data[:locale] = Unit.locale_english_name_map[request.locale]
     @homepage_data[:localeCode] = request.locale
     @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
     @homepage_data[:providers] = current_user.providers
     @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
     @homepage_data[:currentUserId] = current_user.id
+    @user_data = {}
+    @user_data[:country] = request.country.to_s.upcase
+    @user_data[:state] = current_user.properties['us_state']
 
     current_user_permissions = UserPermission.where(user_id: current_user.id).pluck(:permission)
     @homepage_data[:showStudentAsVerifiedTeacherWarning] = current_user.student? && current_user_permissions.include?(UserPermission::AUTHORIZED_TEACHER)
