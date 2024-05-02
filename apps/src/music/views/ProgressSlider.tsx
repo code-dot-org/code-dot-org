@@ -6,13 +6,11 @@ interface ProgressSliderProps {
 }
 
 /*
-  * A progress slider that displays the current progress of a music lab song.
-  * The slider is a gray bar that fills up with a white color as the song progresses.
-  * A playhead moves along the slider to show the current progress of the song.
-  * @param percentProgress - The percentage of the song that has been played.
-  * @param sliderWidth - The width of the slider in pixels.
-  
-*/
+ * A progress slider that displays the current progress of a music lab song.
+ * The slider is a gray bar that fills up with a white color as the song progresses.
+ * A playhead moves along the slider to show the current progress of the song.
+ * @param percentProgress - The percentage of the song that has been played.
+ */
 const ProgressSlider: React.FunctionComponent<ProgressSliderProps> = ({
   percentProgress,
 }) => {
