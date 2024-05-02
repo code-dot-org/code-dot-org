@@ -1,0 +1,103 @@
+@import 'breakpoints';
+
+#bars {
+  max-width: 1240px;
+  height: 450px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: $width-md) {
+    height: 400px;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    height: 500px;
+  }
+
+  & > div.col-33 {
+    position: absolute;
+    background-position: center !important;
+
+    // Left image
+    &:nth-of-type(1) {
+      height: inherit;
+      max-width: 360px;
+      left: 0;
+      top: 0;
+
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+
+    // Copy and buttons (.hoc-banner.homepage)
+    &:nth-of-type(2) {
+      width: 700px;
+      top: unset;
+      left: unset;
+      transform: unset;
+      padding-bottom: 0 !important;
+
+      @media screen and (max-width: $width-lg) {
+        width: 610px;
+        margin-top: 0;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
+
+    // Right image
+    &:nth-of-type(3) {
+      height: inherit;
+      max-width: 360px;
+      right: 0;
+      bottom: 0;
+
+      @media screen and (max-width: $width-md) {
+        width: 45%;
+        right: -5%;
+      }
+    }
+  }
+}
+
+.music-lab-launch.homepage {
+  text-align: center;
+  color: var(--neutral_white);
+  max-width: 860px;
+
+  h1, p {
+    color: var(--neutral_white)
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .afe {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    & > figure {
+      margin: 0;
+      width: 170px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Misc styles that need to be overridden
+.widehero_do_not_hide.phone-feature {
+  background-position: 50% 0% !important;
+}
