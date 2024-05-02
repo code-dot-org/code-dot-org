@@ -29,7 +29,7 @@ class AichatController < ApplicationController
       return render(
         status: :ok,
         json: {
-          status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL],
+          status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_USER],
           flagged_content: filter_result.content,
           session_id: session_id
         }

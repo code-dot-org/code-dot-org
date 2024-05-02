@@ -45,12 +45,16 @@ export async function postAichatCompletionMessage(
         'Content-Type': 'application/json; charset=UTF-8',
       }
     );
-    return await response.json();
+    // For now, response will be null if there was an error.
+    if (response.ok) {
+      return await response.json();
+    } else {
+      return null;
+    }
   } catch (error) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Error in aichat completion request', error as Error);
-    throw error;
   }
 }
 

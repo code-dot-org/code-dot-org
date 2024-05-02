@@ -304,6 +304,13 @@ export const submitChatContents = createAsyncThunk(
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
 
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.OK,
+        })
+      );
+
       // error state #1: model generated profanity
     } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
       const assistantChatMessage: ChatCompletionMessage = {
