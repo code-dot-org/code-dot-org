@@ -1,8 +1,9 @@
 @import 'color';
+$slider-width: 200px;
 
 .slider {
   position: relative;
-  width: 200px;
+  width: $slider-width;
   height: 6px;
   border-radius: 10px;
   background-color: $light_gray_700;
@@ -26,4 +27,8 @@
   border-radius: 1px;
   background-color: white;
   box-shadow: 1px 1px $neutral_dark80;
+}
+
+:export {
+  sliderWidth: $slider-width;
 }

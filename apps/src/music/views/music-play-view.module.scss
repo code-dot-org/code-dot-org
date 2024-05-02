@@ -10,7 +10,6 @@
   background-color: $light_black;
   border-radius: 4px;
 
-
   .cardContainer {
     max-width: 360px;
     border-radius: 4px;
@@ -38,6 +37,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+
       .infoText {
         color: $light_white;
         margin-bottom: 0;
@@ -58,7 +58,6 @@
       .playViewButton {
         border-color: transparent;
       }
-   
     }
 
     .buttonsSection {

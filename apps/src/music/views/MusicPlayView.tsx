@@ -13,7 +13,6 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
-const SLIDER_WIDTH = 200;
 interface MusicPlayViewProps {
   setPlaying: (value: boolean) => void;
 }
@@ -22,7 +21,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   setPlaying,
 }) => {
   const isPlaying = useAppSelector(state => state.music.isPlaying);
-  const progressSliderValue = useAppSelector(state => {
+  const percentPlayed = useAppSelector(state => {
     const {currentPlayheadPosition, lastMeasure} = state.music;
     return lastMeasure === 1
       ? 0
@@ -99,12 +98,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               type="secondary"
               className={moduleStyles.playViewButton}
             />
-            <ProgressSlider
-              min={0}
-              max={100}
-              value={progressSliderValue}
-              sliderWidth={SLIDER_WIDTH}
-            />
+            <ProgressSlider percentProgress={percentPlayed} />
           </div>
 
           <div className={moduleStyles.buttonsSection}>

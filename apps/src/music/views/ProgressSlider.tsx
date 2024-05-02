@@ -2,36 +2,37 @@ import React, {memo} from 'react';
 import moduleStyles from './progress-slider.module.scss';
 
 interface ProgressSliderProps {
-  min: number;
-  max: number;
-  value: number;
-  sliderWidth: number;
+  percentProgress: number;
 }
 
+/*
+  * A progress slider that displays the current progress of a music lab song.
+  * The slider is a gray bar that fills up with a white color as the song progresses.
+  * A playhead moves along the slider to show the current progress of the song.
+  * @param percentProgress - The percentage of the song that has been played.
+  * @param sliderWidth - The width of the slider in pixels.
+  
+*/
 const ProgressSlider: React.FunctionComponent<ProgressSliderProps> = ({
-  min,
-  max,
-  value,
-  sliderWidth,
+  percentProgress,
 }) => {
-  let checkedValue = value;
-  if (value < min) {
-    checkedValue = min;
-  } else if (value > max) {
-    checkedValue = max;
+  if (percentProgress < 0) {
+    percentProgress = 0;
+  } else if (percentProgress > 100) {
+    percentProgress = 100;
   }
-  const progressPercent = ((checkedValue - min) / (max - min)) * 100;
-  const progressValue = ((checkedValue - min) / (max - min)) * sliderWidth;
+  const sliderWidth = parseInt(moduleStyles.sliderWidth.replace('px', ''));
+  const playheadDisplacement = (percentProgress / 100) * sliderWidth;
   return (
     <div className={moduleStyles.slider}>
       <div
         className={moduleStyles.progressBar}
-        style={{width: `${progressPercent}%`}}
+        style={{width: `${percentProgress}%`}}
       />
       <div
         className={moduleStyles.playhead}
         style={{
-          left: progressValue,
+          left: playheadDisplacement,
         }}
       />
     </div>
