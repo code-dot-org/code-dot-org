@@ -79,7 +79,7 @@ class SectionActionDropdown extends Component {
    */
   editRedirectUrl = (sectionId, isPl) => {
     let editSectionUrl = '/sections/' + sectionId + '/edit';
-    editSectionUrl += isPl ? 'redirectToPage=my-professional-learning' : '';
+    editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
     return editSectionUrl;
   };
 
