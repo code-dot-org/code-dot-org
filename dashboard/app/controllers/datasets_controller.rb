@@ -65,9 +65,8 @@ class DatasetsController < ApplicationController
   end
 
   # GET /datasets/manifest/edit
-  # TODO: unfirebase, #56998
   def edit_manifest
-    @dataset_library_manifest = @firebase.get_library_manifest
+    @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
   end
 
   # POST /datasets/manifest/update
