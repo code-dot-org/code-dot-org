@@ -11,6 +11,7 @@ import {
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
@@ -20,7 +21,7 @@ import {
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
-  AichatInteractionStatus as Status,
+  AichatInteractionStatusValue,
   ChatCompletionMessage,
   AichatContext,
   LevelAichatSettings,
@@ -276,16 +277,26 @@ export const submitChatContents = createAsyncThunk(
       aichatContext,
       currentSessionId
     );
-    console.log('chatApiResponse', chatApiResponse);
 
-    // TODO: error handling
-    thunkAPI.dispatch(setChatSessionId(chatApiResponse.sessionId));
+    thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
     thunkAPI.dispatch(
       updateChatMessageSession({
         id: newMessage.id,
-        sessionId: chatApiResponse.sessionId,
+        sessionId: chatApiResponse.session_id,
       })
     );
+
+    if (chatApiResponse?.status === 'profanity') {
+      // Logging to allow visibility into flagged content.
+      console.log(chatApiResponse);
+
+      return thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.PROFANITY_VIOLATION,
+        })
+      );
+    }
 
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
@@ -296,14 +307,12 @@ export const submitChatContents = createAsyncThunk(
         // The accuracy of this timestamp is debatable since it's not when our backend
         // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
-        sessionId: chatApiResponse.sessionId,
+        sessionId: chatApiResponse.session_id,
       };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-    } else {
-      // TODO: Update most recent user message's status if PII or profanity violation.
-      // latest message's id is stored at `newMessageId`.
-      console.log('Did not receive assistant response.');
+      return thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
+
+    console.log('Could not handle response.');
   }
 );
 
@@ -351,13 +360,13 @@ const aichatSlice = createSlice({
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
     },
-    updateChatMessageStatus: (
+    updateUserChatMessageStatus: (
       state,
-      action: PayloadAction<{id: number; status: Status}>
+      action: PayloadAction<{id: number; status: AichatInteractionStatusValue}>
     ) => {
       const {id, status} = action.payload;
       const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage) {
+      if (chatMessage && chatMessage.role === Role.USER) {
         chatMessage.status = status;
       }
     },
@@ -503,7 +512,7 @@ export const {
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,
-  updateChatMessageStatus,
+  updateUserChatMessageStatus,
   updateChatMessageSession,
   setViewMode,
   setStartingAiCustomizations,

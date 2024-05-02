@@ -1,5 +1,4 @@
 @no_mobile
-@no_safari
 Feature: Teachers can see and give feedback on Rubrics
 
 Scenario: Teachers can give and send feedback on the rubric to students.
@@ -26,7 +25,9 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element ".student-table" is visible
   And I click selector ".student-table tr:nth(1)" to load a new page
   And I wait for the page to fully load
-  And I click selector ".introjs-skipbutton" if it exists
+  And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
+  And I click selector ".introjs-skipbutton" once I see it
+  And I wait for 2 seconds
   And I click selector "#ui-floatingActionButton" once I see it
   And I wait until element "h5:contains(Code Quality)" is visible
   And I wait until element "button:contains(Extensive)" is visible
@@ -34,6 +35,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element "#ui-teacherFeedback" is enabled
   And I click selector "#ui-teacherFeedback" once I see it
   And I press keys "Nice work Lillian!" for element "#ui-teacherFeedback"
+  And I wait until element "textarea:contains(Nice work Lillian!)" is visible
   And I wait to see "#ui-autosaveConfirm"
   And I click selector "#ui-submitFeedbackButton" once I see it
   And I wait to see "#ui-feedback-submitted-timestamp"

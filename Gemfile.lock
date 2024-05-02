@@ -542,6 +542,8 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailgun-ruby (1.2.14)
+      rest-client (>= 2.0.2)
     mailjet (1.7.3)
       activesupport (>= 3.1.0)
       rack (>= 1.4.0)
@@ -804,7 +806,7 @@ GEM
     rubocop-rails-accessibility (0.2.0)
       rubocop (>= 1.0.0)
     ruby-openid (2.9.2)
-    ruby-prof (0.15.9)
+    ruby-prof (1.7.0)
     ruby-progressbar (1.13.0)
     ruby-rc4 (0.1.5)
     ruby2_keywords (0.0.5)
@@ -1043,6 +1045,7 @@ DEPENDENCIES
   kaminari
   lograge!
   loofah (~> 2.19.1)
+  mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
   memory_profiler
   mini_magick (>= 4.10.0)
@@ -1108,7 +1111,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rails-accessibility
-  ruby-prof
+  ruby-prof (>= 1.7.0)
   ruby-progressbar
   sass-rails (~> 6.0.0)
   sassc-rails!
