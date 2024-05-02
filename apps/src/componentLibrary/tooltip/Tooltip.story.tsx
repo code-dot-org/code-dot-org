@@ -1,8 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-
 import Tooltip, {TooltipOverlay, TooltipProps} from './index';
 
 export default {
@@ -39,16 +37,16 @@ const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
       only added to improve storybook view *
     </p>
     <p>Multiple Tooltips:</p>
-    <div style={{display: 'flex', gap: '20px'}}>
+    <div style={{display: 'flex', gap: '20px', flexWrap: 'wrap'}}>
       {args.components?.map(componentArg => (
         <TooltipOverlay key={componentArg.tooltipId}>
-          <Button
+          <button
             aria-describedby={componentArg.tooltipId}
+            type="button"
             onClick={() => {}}
-            color="white"
-            text="Hover me"
-            size="xs"
-          />
+          >
+            Hover Me
+          </button>
           <Tooltip {...componentArg} />
         </TooltipOverlay>
       ))}
@@ -69,15 +67,18 @@ IconsTooltipGroup.args = {
     {
       text: 'Tooltip',
       tooltipId: 'tooltipNoIcon',
+      direction: 'onBottom',
     },
     {
       text: 'Tooltip Icon Left',
       tooltipId: 'tooltipIconLeft',
+      direction: 'onBottom',
       iconLeft: {iconStyle: 'solid', iconName: 'smile'},
     },
     {
       text: 'Tooltip Icon Right',
       tooltipId: 'tooltipIconRight',
+      direction: 'onBottom',
       iconRight: {iconStyle: 'solid', iconName: 'smile'},
     },
   ],
