@@ -225,6 +225,15 @@ export default class ProjectManager {
     this.channelsStore.redirectToRemix(this.lastChannel);
   }
 
+  redirectToView() {
+    this.throwErrorIfDestroyed('redirectToView');
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError('Cannot view without channel');
+      return;
+    }
+    this.channelsStore.redirectToView(this.lastChannel);
+  }
+
   /**
    * Publish the current channel.
    */

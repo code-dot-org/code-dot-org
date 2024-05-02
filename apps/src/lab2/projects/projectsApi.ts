@@ -27,3 +27,10 @@ export async function redirectToRemix(
 ) {
   utils.navigateToHref(`${rootUrl}${projectType}/${channelId}/remix`);
 }
+
+export async function redirectToView(
+  channelId: string,
+  projectType: ProjectType
+) {
+  utils.navigateToHref(`${rootUrl}${projectType}/${channelId}/view`);
+}

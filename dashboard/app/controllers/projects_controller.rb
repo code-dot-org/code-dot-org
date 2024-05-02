@@ -400,6 +400,7 @@ class ProjectsController < ApplicationController
     iframe_embed = params[:iframe_embed] == true
     iframe_embed_app_and_code = params[:iframe_embed_app_and_code] == true
     sharing = iframe_embed || params[:share] == true
+    set_lab2_responsive_view_options(sharing)
     readonly = params[:readonly] == true
     if iframe_embed || iframe_embed_app_and_code
       # explicitly set security related headers so that this page can actually
@@ -628,6 +629,14 @@ class ProjectsController < ApplicationController
     return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && request.path.ends_with?('/edit')
   end
 
+  private def set_lab2_responsive_view_options(sharing)
+    return nil unless @level.uses_lab2?
+
+    # If the user is on the play view '/projects/channel_id', set `response_content`.`
+    if sharing == true
+      view_options(responsive_content: true)
+    end
+  end
   # Automatically catch authorization exceptions on any methods in this controller
   # Overrides handler defined in application_controller.rb.
   # Special for projects controller - when forbidden, redirect to home instead
