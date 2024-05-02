@@ -53,6 +53,8 @@ export const STATES = [
   'Wyoming',
 ];
 
+export const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
+
 // Note that this array is returned sorted by country name, not abbreviation.
 export const COUNTRIES = [
   {label: 'AD', value: 'Andorra'},

@@ -8,7 +8,7 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {COUNTRIES} from '@cdo/apps/geographyConstants';
+import {COUNTRIES, ZIP_REGEX} from '@cdo/apps/geographyConstants';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -43,16 +43,10 @@ export default function SchoolDataInputs({
   }
 
   useEffect(() => {
-    const isValidZip = new RegExp(/(^\d{5}$)/).test(zip);
+    const isValidZip = ZIP_REGEX.test(zip);
     if (isValidZip) {
       setZipSearchReady(true);
-      analyticsReporter.sendEvent(
-        EVENTS.ZIP_CODE_ENTERED,
-        {zip: zip},
-        PLATFORMS.BOTH
-      );
     } else {
-      // Removes the school dropdown if you delete part of the zip
       setZipSearchReady(false);
     }
   }, [zip]);
@@ -128,7 +122,6 @@ export default function SchoolDataInputs({
                 schoolName: fieldNames.schoolName,
               }}
               zip={zip}
-              disabled={!zipSearchReady}
             />
           </div>
         )}

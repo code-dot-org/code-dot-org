@@ -9,6 +9,7 @@ import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {ZIP_REGEX} from '@cdo/apps/geographyConstants';
 
 export const SELECT_A_SCHOOL = 'selectASchool';
 export const CLICK_TO_ADD = 'clickToAdd';
@@ -18,14 +19,16 @@ const SEARCH_DEFAULTS = [
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
 
-export default function SchoolZipSearch({fieldNames, zip, disabled}) {
+export default function SchoolZipSearch({fieldNames, zip}) {
   const [selectedSchoolNcesId, setSelectedSchoolNcesId] =
     useState(SELECT_A_SCHOOL);
   const [inputManually, setInputManually] = useState(false);
   const [dropdownSchools, setDropdownSchools] = useState([]);
+  const [isDisabled, setIsDisabled] = useState(true);
 
   useEffect(() => {
-    if (!disabled) {
+    const isValidZip = ZIP_REGEX.test(zip);
+    if (isValidZip) {
       setSelectedSchoolNcesId(SELECT_A_SCHOOL);
       const searchUrl = `/dashboardapi/v1/schoolzipsearch/${zip}`;
       fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
@@ -40,8 +43,16 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
             error.message
           );
         });
+      setIsDisabled(false);
+      analyticsReporter.sendEvent(
+        EVENTS.ZIP_CODE_ENTERED,
+        {zip: zip},
+        PLATFORMS.BOTH
+      );
+    } else {
+      setIsDisabled(true);
     }
-  }, [zip, disabled]);
+  }, [zip]);
 
   const sendAnalyticsEvent = (eventName, data) => {
     analyticsReporter.sendEvent(eventName, data, PLATFORMS.BOTH);
@@ -76,7 +87,7 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
     return sortedSchools;
   };
 
-  const labelClassName = disabled
+  const labelClassName = isDisabled
     ? classNames(style.padding, style.disabledLabel)
     : style.padding;
 
@@ -96,7 +107,7 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
           </BodyTwoText>
           <SimpleDropdown
             id="uitest-school-dropdown"
-            disabled={disabled}
+            disabled={isDisabled}
             name={fieldNames.ncesSchoolId}
             itemGroups={[
               {
@@ -114,7 +125,7 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
           />
           <Button
             text={i18n.noSchoolSetting()}
-            disabled={disabled}
+            disabled={isDisabled}
             color={'purple'}
             type={'tertiary'}
             size={'xs'}
@@ -148,5 +159,4 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
 SchoolZipSearch.propTypes = {
   fieldNames: PropTypes.object,
   zip: PropTypes.string.isRequired,
-  disabled: PropTypes.bool.isRequired,
 };
