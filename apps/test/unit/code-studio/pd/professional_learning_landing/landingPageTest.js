@@ -299,6 +299,11 @@ describe('LandingPage', () => {
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabRPCenter()));
 
+    // Regional Partner resource center
+    screen.getByText(i18n.plSectionsRegionalPartnerApplicationTitle());
+    screen.getByText(i18n.plSectionsRegionalPartnerWorkshopTitle());
+    screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
+
     // Regional Partner workshop table
     screen.getByText('My Workshops');
   });
