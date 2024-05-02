@@ -1,6 +1,3 @@
-# TODO: unfirebase, migrate this to datablock storage, ok to be migrated but not enabled: #56998
-# TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
-
 require 'json'
 require 'uri'
 
