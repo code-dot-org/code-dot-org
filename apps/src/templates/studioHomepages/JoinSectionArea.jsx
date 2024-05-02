@@ -90,12 +90,10 @@ export default function JoinSectionArea({
 
   return isPlSections ? (
     <>
-      <section>
-        <Heading2>
-          {i18n.joinedProfessionalLearningSectionsHomepageTitle()}
-        </Heading2>
-        {renderSectionContent()}
-      </section>
+      <Heading2>
+        {i18n.joinedProfessionalLearningSectionsHomepageTitle()}
+      </Heading2>
+      {renderSectionContent()}
     </>
   ) : (
     <ContentContainer heading={i18n.joinASection()}>

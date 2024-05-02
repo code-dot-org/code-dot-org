@@ -1,6 +1,22 @@
 @import 'color';
 
-.musicPlayViewContainer {
+@mixin slider-thumb {
+  height: 20px;
+  width: 4px;
+  border-radius: 1px;
+  background: white;
+  box-shadow: 1px 1px $neutral_dark80;
+}
+
+@mixin slider-track {
+  width: 100%;
+  height: 6px;
+  background: $light_gray_700;   
+  border-radius: 10px;
+  border: 0.5px solid $neutral_dark;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,52 +24,89 @@
   height: 100%;
   width: 100%;
   background-color: $light_black;
+  border-radius: 4px;
 
-  .musicPlayViewCard {
+
+  .cardContainer {
+    max-width: 360px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 6px black;
+  }
+
+  .playViewImage {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    border-radius: 4px;
+  }
+
+  .card {
     display: flex;
     flex-direction: column;
     max-width: 350px;
     background-color: $light_gray_900;
     gap: .5rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 4px;
 
-    .musicPlayViewInfoSection {
+    .infoSection {
       display: flex;
       flex-direction: column;
-      gap: .5rem;
-
-      img {
-        width: 56px;
-        align-self: center;
-      }
-
-      h2, p {
+      gap: 0.5rem;
+      .infoText {
         color: $light_white;
         margin-bottom: 0;
       }
     }
 
-    .musicPlayViewPlaySection {
+    .playSection {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
+      background: $neutral_dark;
+      padding: 10px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $light_gray_700;
+      border-radius: 4px;
 
-      input[type='range'] {
-        overflow: hidden;
-        width: 100%;
-        height: 4px;
-        accent-color: $light_gray_200;
-
-        background-color: $light_gray_800;
-        color: $light_gray_800;
+      .playViewButton {
+        border-color: transparent;
       }
+
+      input[type="range"] {
+        -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+        width: 100%; /* Specific width is required for Firefox. */
+        background: transparent; /* Otherwise white in Chrome */
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+
+        @include slider-thumb;
+        margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox it is automatic */
+      }
+
+      /* Firefox */
+      input[type="range"]::-moz-range-thumb {
+        @include slider-thumb;
+      }
+
+      input[type="range"]::-webkit-slider-runnable-track{
+        @include slider-track;
+      }
+
+      /* Firefox */
+      input[type="range"]::-moz-range-track {
+        @include slider-track;
+      }    
     }
 
-    .musicPlayViewButtonsSection {
+    .buttonsSection {
       display: flex;
-      gap: .5rem;
-      justify-content: center;
+      justify-content: space-between;
+      margin-top: 10px;
     }
   }
 }

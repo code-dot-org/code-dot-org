@@ -141,6 +141,16 @@ class RegistrationsController < Devise::RegistrationsController
           metadata: metadata,
         )
       end
+      has_school = current_user.school_info&.school_id.present?
+      event_metadata = {
+        'has_school' => has_school,
+      }
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'Sign Up Finished Backend',
+        metadata: event_metadata,
+        get_enabled_experiments: true,
+      )
     end
 
     SignUpTracking.log_sign_up_result resource, session
@@ -237,7 +247,8 @@ class RegistrationsController < Devise::RegistrationsController
     student_information = {}
 
     student_information[:age] = params[:user][:age] if current_user.age.blank?
-    student_information[:us_state] = params[:user][:us_state] if current_user.us_state.blank?
+    student_information[:us_state] = params[:user][:us_state] unless current_user.user_provided_us_state
+    student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
     student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
 
     current_user.update(student_information) unless student_information.empty?
@@ -496,6 +507,7 @@ class RegistrationsController < Devise::RegistrationsController
       :provider,
       :us_state,
       :country_code,
+      :user_provided_us_state,
       :ai_rubrics_disabled,
       :lti_roster_sync_enabled,
       school_info_attributes: [

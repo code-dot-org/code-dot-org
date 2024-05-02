@@ -3,11 +3,6 @@ import React, {useState} from 'react';
 
 import './styles/sideBar.css';
 
-/* type NavBarProps = {
-  setActivePane: (newActivePane: string) => void;
-  activePane: string;
-}; */
-
 export const SideBar = React.memo(() => {
   const {config} = useCDOIDEContext();
   const [activePane, setActivePane] = useState<string>(

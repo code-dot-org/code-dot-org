@@ -40,10 +40,7 @@ const participantNames = {
 // Cell formatters for sortable OwnedPlSectionsTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   return (
-    <a
-      style={plTableLayoutStyles.sectionLink}
-      href={teacherDashboardUrl(rowData.id)}
-    >
+    <a style={plTableLayoutStyles.link} href={teacherDashboardUrl(rowData.id)}>
       {rowData.name}
     </a>
   );
@@ -110,7 +107,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   }
   return (
     <a
-      style={plTableLayoutStyles.link}
+      style={plTableLayoutStyles.sectionCodeLink}
       href={teacherDashboardUrl(rowData.id, '/login_info')}
     >
       {sectionCode}

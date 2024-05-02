@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursed-maker",
-    "serialized_at": "2024-04-27 04:27:36 UTC",
+    "serialized_at": "2024-05-01 18:54:10 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -108,7 +108,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In today's **skill-building** lesson, the goal is to make a prototype of a automated lighting that switches on when it gets dark. The key concepts are: **loops, conditionals (if.. then.. else..), inputs** and **outputs**.",
-        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** \n\nNote: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.lesson.</a>**  "
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- “Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.”\n\n- Note: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\"> Lesson 13: Mini-Project: Chase Game.</a>**  "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -162,7 +162,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "In today's **skill-building** lesson, the goal is to use conditionals to make an electronic version of a classic game of change. The key concepts are: **events**, **conditionals (if.. then.. else...)**, and **variables.**",
-        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** \n\nNote: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.lesson.</a>**  "
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.\n\n- Note: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.</a>**  "
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -198,7 +198,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "In today's **skill-building** lesson, the goal is make an activity picker using random numbers and conditionals. The key concepts are: **events**, **conditionals (if.. then.. else...)**, and **variables.**",
-        "preparation": "Make sure students have completed the **<a href=\"https://studio.code.org/s/coursec-maker-2024/lessons/3\" target=\"_blank\">Meet your micro:bit exploration lesson.</a>** \n\nNote: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.lesson.</a>**  "
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploratory lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.\n\n- Note: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\">Lesson 13: Mini-Project: Chase Game.</a>**  "
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -1015,6 +1015,7 @@
       "key": "53eaa9d9-eeca-4629-ac31-a6ff0628427b",
       "position": 2,
       "properties": {
+        "progression_name": "Saving sea turtles with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "53eaa9d9-eeca-4629-ac31-a6ff0628427b",
@@ -1594,6 +1595,7 @@
       "key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259",
       "position": 2,
       "properties": {
+        "progression_name": "Rock, paper, scissors with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259",
@@ -1794,6 +1796,7 @@
       "key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6",
       "position": 2,
       "properties": {
+        "progression_name": "Activity picker with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6",
@@ -1816,7 +1819,7 @@
       "key": "13428f93-e511-4914-997c-6b616e98602b",
       "position": 1,
       "properties": {
-        "description": "**Customize it:** Customize your \"Activity picker\" by putting your own activities in the code.\n\n**More activities:**Add more activities.\n\n**Avoid boring chores!**: How could you make it less likely that it tells you to tidy your room?\n\n**Find this project and more on <a href=\"https://microbit.org\" target=\"_blank\">microbit.org</a>**"
+        "description": "**Customize it:** Customize your \"Activity picker\" by putting your own activities in the code.\n\n**More activities:** Add more activities.\n\n**Avoid boring chores!**: How could you make it less likely that it tells you to tidy your room?\n\n**Find this project and more on <a href=\"https://microbit.org\" target=\"_blank\">microbit.org</a>**"
       },
       "seeding_key": {
         "activity_section.key": "13428f93-e511-4914-997c-6b616e98602b",
@@ -2284,7 +2287,8 @@
       "properties": {
         "level_keys": [
           "course_d_maker_saving_sea_turtles"
-        ]
+        ],
+        "progression": "Saving sea turtles with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -2931,14 +2935,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "course_d_maker_activity_picker"
-        ]
+        "progression": "Rock, paper, scissors with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "course_d_maker_activity_picker"
+          "course_d_maker_rock_paper_scissors"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-3",
@@ -2946,7 +2948,7 @@
         "activity_section.key": "d8ecce95-6dcd-4d5b-95eb-37e3b6891259"
       },
       "level_keys": [
-        "course_d_maker_activity_picker"
+        "course_d_maker_rock_paper_scissors"
       ]
     },
     {
@@ -3180,14 +3182,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "course_d_maker_rock_paper_scissors"
-        ]
+        "progression": "Activity picker with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "course_d_maker_rock_paper_scissors"
+          "course_d_maker_activity_picker"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-4",
@@ -3195,7 +3195,7 @@
         "activity_section.key": "a3ec11c1-3de3-4b04-9745-614eb8b9f8b6"
       },
       "level_keys": [
-        "course_d_maker_rock_paper_scissors"
+        "course_d_maker_activity_picker"
       ]
     }
   ],
@@ -3730,9 +3730,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "course_d_maker_activity_picker",
+        "level.key": "course_d_maker_rock_paper_scissors",
         "script_level.level_keys": [
-          "course_d_maker_activity_picker"
+          "course_d_maker_rock_paper_scissors"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-3",
@@ -3850,9 +3850,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "course_d_maker_rock_paper_scissors",
+        "level.key": "course_d_maker_activity_picker",
         "script_level.level_keys": [
-          "course_d_maker_rock_paper_scissors"
+          "course_d_maker_activity_picker"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-4",
