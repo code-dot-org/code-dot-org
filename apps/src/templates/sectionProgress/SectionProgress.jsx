@@ -15,7 +15,6 @@ import i18n from '@cdo/locale';
 
 import {h3Style} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
-import InviteToV2ProgressModal from '../sectionProgressV2/InviteToV2ProgressModal';
 
 import LessonSelector from './LessonSelector';
 import ProgressViewHeader from './ProgressViewHeader';
@@ -41,8 +40,6 @@ const SECTION_PROGRESS = 'SectionProgress';
  */
 class SectionProgress extends Component {
   static propTypes = {
-    allowUserToSelectV2View: PropTypes.bool,
-
     //Provided by redux
     scriptId: PropTypes.number,
     sectionId: PropTypes.number,
@@ -161,7 +158,6 @@ class SectionProgress extends Component {
       scriptData,
       sectionId,
       showStandardsIntroDialog,
-      allowUserToSelectV2View,
     } = this.props;
     const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
@@ -178,9 +174,6 @@ class SectionProgress extends Component {
         className={dashboardStyles.dashboardPage}
         data-testid="section-progress-v1"
       >
-        {allowUserToSelectV2View && (
-          <InviteToV2ProgressModal sectionId={sectionId} />
-        )}
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>

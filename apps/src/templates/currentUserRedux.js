@@ -87,9 +87,9 @@ export const setHasSeenProgressTableInvite = hasSeenProgressTableInvite => ({
   hasSeenProgressTableInvite,
 });
 export const setDateProgressTableInvtationDelayed =
-  dateProgressTableInviteLastDelayed => ({
+  dateProgressTableInviteDelayed => ({
     type: SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED,
-    dateProgressTableInviteLastDelayed,
+    dateProgressTableInviteDelayed,
   });
 
 const initialState = {
@@ -241,7 +241,7 @@ export default function currentUser(state = initialState, action) {
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,
-      dateProgressTableInvtationDelayed:
+      dateProgressTableInvitationDelayed:
         date_progress_table_invitation_last_delayed,
       hasSeenProgressTableInvite: has_seen_progress_table_v2_invitation,
     };

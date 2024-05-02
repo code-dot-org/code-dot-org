@@ -13,6 +13,7 @@ import i18n from '@cdo/locale';
 
 import SectionProgress from '../sectionProgress/SectionProgress';
 
+import InviteToV2ProgressModal from './InviteToV2ProgressModal';
 import ProgressFeedbackBanner from './ProgressFeedbackBanner';
 import SectionProgressV2 from './SectionProgressV2';
 
@@ -59,7 +60,7 @@ function SectionProgressSelector({
     DCDO.get('progress-table-v2-enabled', false) ||
     isInClosedBeta;
   if (!allowSelection) {
-    return <SectionProgress allowUserToSelectV2View={false} />;
+    return <SectionProgress />;
   }
 
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
@@ -89,10 +90,14 @@ function SectionProgressSelector({
         canShow={showFeedbackBannerLocked ? false : displayV2}
       />
       {toggleV1OrV2Link()}
+
       {displayV2 ? (
         <SectionProgressV2 />
       ) : (
-        <SectionProgress allowUserToSelectV2View={true} />
+        <>
+          <InviteToV2ProgressModal sectionId={sectionId} />
+          <SectionProgress allowUserToSelectV2View={true} />
+        </>
       )}
     </div>
   );
