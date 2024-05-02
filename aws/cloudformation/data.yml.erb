@@ -110,7 +110,7 @@ Resources:
       # production RDS Proxy Reporting endpoint.
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
-      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400;ExecuteTimeout=86400
+      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
   RedshiftEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
