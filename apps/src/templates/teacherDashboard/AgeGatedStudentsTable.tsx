@@ -1,0 +1,130 @@
+import React, {useEffect} from 'react';
+import {connect} from 'react-redux';
+// @ts-expect-error Import error for reactabular-table in typescript
+import * as Table from 'reactabular-table';
+
+import {
+  convertStudentDataToArray,
+  filterAgeGatedStudents,
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import i18n from '@cdo/locale';
+
+import ManageStudentsConsentStatusCell from '../manageStudents/ManageStudentsConsentStatusCell';
+import ManageStudentsFamilyNameCell from '../manageStudents/ManageStudentsFamilyNameCell';
+import {tableLayoutStyles} from '../tables/tableConstants';
+
+interface ReduxState {
+  manageStudents: {
+    studentData?: object;
+  };
+}
+
+interface Props {
+  studentData?: object;
+}
+
+const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
+  useEffect(() => {
+    console.log(studentData);
+  });
+
+  const getColumns = () => {
+    const columns = [nameColumn(), consentStatusColumn()];
+
+    return columns;
+  };
+
+  const nameFormatter = (name: string, {rowData}: object) => {
+    const editedValue = rowData.isEditing ? rowData.editingData.name : '';
+    const familyName = rowData.familyName ? rowData.familyName : '';
+    return (
+      <ManageStudentsFamilyNameCell
+        id={rowData.id}
+        familyName={`${name} ${familyName}`}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+      />
+    );
+  };
+
+  const consentStatusFormatter = (
+    childAccountComplianceState: string,
+    {rowData}: object
+  ) => {
+    return (
+      <ManageStudentsConsentStatusCell
+        id={rowData.id}
+        consentStatus={childAccountComplianceState}
+      />
+    );
+  };
+
+  const nameColumn = () => {
+    return {
+      property: 'name',
+      header: {
+        label: i18n.loginExportHeader_studentName(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+      },
+      cell: {
+        formatters: [nameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  };
+
+  const consentStatusColumn = () => {
+    return {
+      property: 'childAccountComplianceState',
+      header: {
+        label: i18n.childAccountPolicy_consentStatus(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+      },
+      cell: {
+        formatters: [consentStatusFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  };
+
+  const columns = getColumns();
+  return (
+    <div>
+      <Table.Provider
+        columns={columns}
+        style={tableLayoutStyles.table}
+        id="uitest-manage-students-table"
+      >
+        <Table.Header />
+        <Table.Body rows={studentData} rowKey="id" />
+      </Table.Provider>
+    </div>
+  );
+};
+
+export const UnconnectedAgeGatedStudentsTable = AgeGatedStudentsTable;
+
+export default connect(
+  (state: ReduxState) => ({
+    studentData: filterAgeGatedStudents(
+      convertStudentDataToArray(state.manageStudents.studentData)
+    ),
+  }),
+  {}
+)(AgeGatedStudentsTable);
