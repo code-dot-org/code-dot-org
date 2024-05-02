@@ -61,6 +61,7 @@ $xs-tail-length: 6px;
   align-items: center;
   height: fit-content;
   background-color: $light_gray_900;
+  box-sizing: border-box;
   min-width: 64px;
   max-width: 256px;
   text-align: center;
@@ -69,6 +70,7 @@ $xs-tail-length: 6px;
 
   .tooltipText, i {
     color: $light_white;
+    width: max-content;
   }
 }
 

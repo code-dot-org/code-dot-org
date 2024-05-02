@@ -23,7 +23,7 @@ export default {
 // eslint-disable-next-line
 const SingleTemplate: StoryFn<TooltipProps> = args => (
   <TooltipOverlay>
-    <button aria-describedby={args.tooltipId} type="button">
+    <button aria-describedby={args.tooltipId} style={{margin: 0}} type="button">
       Hover me
     </button>
     <Tooltip {...args} />
@@ -43,6 +43,7 @@ const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
           <button
             aria-describedby={componentArg.tooltipId}
             type="button"
+            style={{margin: 0}}
             onClick={() => {}}
           >
             Hover Me
