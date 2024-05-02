@@ -27,6 +27,9 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
       lastMeasure === 1
         ? 0
         : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
+    if (value < 0) {
+      return 0;
+    }
     return Math.min(value, 100);
   });
 
