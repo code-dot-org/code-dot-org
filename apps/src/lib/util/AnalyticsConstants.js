@@ -109,6 +109,10 @@ const EVENTS = {
   PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
   PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
   PROGRESS_V2_VIEW_LEVEL_DETAILS: 'Section New Progress Level Details',
+  PROGRESS_V2_ACCEPT_INVITATION: 'Section Progress Invitation Modal Accept',
+  PROGRESS_V2_DISMISS_INVITATION: 'Section Progress Invitation Modal Dismiss',
+  PROGRESS_V2_DELAY_INVITATION:
+    'Section Progress Invitation Modal Remind Later',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',

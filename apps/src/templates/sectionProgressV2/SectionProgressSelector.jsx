@@ -59,7 +59,7 @@ function SectionProgressSelector({
     DCDO.get('progress-table-v2-enabled', false) ||
     isInClosedBeta;
   if (!allowSelection) {
-    return <SectionProgress />;
+    return <SectionProgress allowUserToSelectV2View={false} />;
   }
 
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
@@ -89,7 +89,14 @@ function SectionProgressSelector({
         canShow={showFeedbackBannerLocked ? false : displayV2}
       />
       {toggleV1OrV2Link()}
-      {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
+      {displayV2 ? (
+        <SectionProgressV2 />
+      ) : (
+        <SectionProgress
+          setShowProgressTableV2={setShowProgressTableV2}
+          allowUserToSelectV2View={true}
+        />
+      )}
     </div>
   );
 }
