@@ -30,9 +30,10 @@ const ChatWorkspace: React.FunctionComponent = () => {
 
   useEffect(() => {
     if (conversationContainerRef.current) {
-      console.log(conversationContainerRef.current.scrollTop);
-      conversationContainerRef.current.scrollTop =
-        conversationContainerRef.current?.scrollHeight;
+      conversationContainerRef.current.scrollTo({
+        top: conversationContainerRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
     }
   }, [conversationContainerRef, storedMessages, isWaitingForChatResponse]);
 
