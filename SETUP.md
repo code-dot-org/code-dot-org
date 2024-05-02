@@ -107,7 +107,7 @@ properties_encryption_key: ''
 
 ### macOS
 
-These steps are for Apple devices running **macOS Monterey and Ventura**, including those running on [Apple Silicon (M1|M2)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
+These steps are for Apple devices running **macOS 14.x**, including those running on [Apple Silicon (M1|M2|M3) ARM architecture CPUs](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
 
 Notes:
 - At this time, if you are using an M1 Macbook, we recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
@@ -158,8 +158,7 @@ Setup steps for macOS:
           4. Confirm MySQL has started by running `brew services` again.
 
 4. Install the **Java 8 JSK**
-   1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
-   2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
+   1. Install [sdkman](https://sdkman.io/) and install a suitable JDK 8. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
       1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
@@ -191,6 +190,7 @@ Setup steps for macOS:
     1. Install NVM via `brew install nvm`
 
     2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
+        1. If you get an error `nvm: command not found`, run `brew info nvm` and follow the instructions there. They will include making an `.nvm` folder and updating your shell configuration file.
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 

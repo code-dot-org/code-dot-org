@@ -128,6 +128,7 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
   if locked
     user_opts[:country_code] = "US"
     user_opts[:us_state] = "CO"
+    user_opts[:user_provided_us_state] = true
   end
 
   if parent_created

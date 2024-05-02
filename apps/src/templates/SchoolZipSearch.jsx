@@ -6,7 +6,7 @@ import style from './school-association.module.scss';
 import classNames from 'classnames';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
-import Button from '@cdo/apps/templates/Button';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -97,7 +97,6 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
           <SimpleDropdown
             id="uitest-school-dropdown"
             disabled={disabled}
-            className={style.dropdown}
             name={fieldNames.ncesSchoolId}
             itemGroups={[
               {
@@ -116,7 +115,9 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
           <Button
             text={i18n.noSchoolSetting()}
             disabled={disabled}
-            styleAsText={true}
+            color={'purple'}
+            type={'tertiary'}
+            size={'xs'}
             onClick={e => {
               e.preventDefault();
               setSelectedSchoolNcesId(NO_SCHOOL_SETTING);
@@ -130,7 +131,9 @@ export default function SchoolZipSearch({fieldNames, zip, disabled}) {
           <SchoolNameInput fieldNames={{schoolName: fieldNames.schoolName}} />
           <Button
             text={i18n.returnToResults()}
-            styleAsText={true}
+            color={'purple'}
+            type={'tertiary'}
+            size={'xs'}
             onClick={() => {
               setInputManually(false);
               setSelectedSchoolNcesId(SELECT_A_SCHOOL);

@@ -11,6 +11,7 @@ require_relative '../../../lib/cdo/only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require File.expand_path('../../../../pegasus/src/env', __FILE__)
+require 'cdo/sequel'
 require src_dir 'database'
 load pegasus_dir('helpers.rb')
 
@@ -18,7 +19,7 @@ load pegasus_dir('helpers.rb')
 MAX_EXECUTION_TIME = 1_200_000
 
 # Create DB connection with extended execution time.
-PEGASUS_DB_READER = sequel_connect(
+PEGASUS_DB_READER = Cdo::Sequel.database_connection_pool(
   CDO.pegasus_db_reader,
   CDO.pegasus_db_reader,
   query_timeout: MAX_EXECUTION_TIME / 1000

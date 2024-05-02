@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursef-maker",
-    "serialized_at": "2024-04-17 23:49:06 UTC",
+    "serialized_at": "2024-05-02 02:53:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2818,6 +2818,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_step_counter"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3515,6 +3518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_microbit_pet"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3961,6 +3967,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_max_min_thermometer"
+        ]
       },
       "bonus": false,
       "seeding_key": {
