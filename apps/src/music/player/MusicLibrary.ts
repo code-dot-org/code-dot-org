@@ -306,6 +306,7 @@ export interface SoundFolder {
   type?: SoundFolderType;
   path: string;
   imageSrc: string;
+  color?: string;
   restricted?: boolean;
   sounds: SoundData[];
   bpm?: number;

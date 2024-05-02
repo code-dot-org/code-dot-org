@@ -23,16 +23,15 @@ export type SideBarItem = {
 };
 
 export type ConfigType = {
-  showLeftNav?: boolean;
-  showEditor?: boolean;
-  showPreview?: boolean;
-  showSideBar?: boolean;
-  showDebug?: boolean;
   activeLeftNav: string;
   sideBar: SideBarItem[];
-  instructions: string | undefined;
+  instructions?: string;
+  Instructions?: () => JSX.Element;
   defaultTheme?: EditorTheme;
   leftNav: LeftNavElement[];
+  gridLayout: string;
+  gridLayoutRows?: string;
+  gridLayoutColumns?: string;
   EditorComponent?: EditorComponent;
   editableFileTypes?: string[];
   previewFileTypes?: string[];

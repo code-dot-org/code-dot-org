@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 71,
-  "created_at": "2024-03-29T04:55:25.000Z",
+  "created_at": "2023-08-04T05:25:28.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -14,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "llama2",
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": 0.5,
         "systemPrompt": "",
         "retrievalContexts": [
@@ -22,6 +22,7 @@
           "Retrieval two"
         ],
         "modelCardInfo": {
+          "botName": "Recycling Bot",
           "description": "The chatbot helps the user learn more about how to recycle in Tucson, such as what items are recyclable and where to go for more complicated items. It’s meant for anyone who wants to be better at recycling because of the environment.",
           "intendedUse": "People can ask it questions about what things are recyclable or not. They can also ask it about information for Tucson specifically, like that you can recycle electronics at RISE.",
           "limitationsAndWarnings": "Some of the responses might not make sense for other places depending on the laws or regulations. Really serious questions should be double checked with a search engine",
@@ -33,7 +34,7 @@
             "What are everyday items I use that I can recycle?",
             "Communities in Tucson focused on recycling"
           ],
-          "botName": "Recycling Bot"
+          "isPublished": false
         }
       },
       "visibilities": {
@@ -45,11 +46,12 @@
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "llama2",
-        "mistral-7b-v2"
+        "gen-ai-mistral-7b-inst-v01",
+        "gen-ai-biomistral-7b",
+        "gen-ai-mental-health-mistral-7b"
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2023-04-05 09:03:03 +0000\",\"changed\":[\"published\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-03 15:36:40 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-14 15:34:06 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-14 15:45:15 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-16 15:16:49 -0700\",\"changed\":[\"system_prompt\",\"bot_title\",\"bot_description\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-16 15:18:26 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-16 16:34:05 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-17 15:16:49 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-17 21:47:08 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-17 22:22:00 +0000\",\"changed\":[\"system_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-17 22:25:46 +0000\",\"changed\":[\"system_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-17 23:14:32 +0000\",\"changed\":[\"long_instructions\",\"system_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-18 02:39:03 +0000\",\"changed\":[\"bot_title\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 00:55:38 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 17:31:22 +0000\",\"changed\":[\"initial_ai_customizations\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 17:32:35 +0000\",\"changed\":[\"initial_ai_customizations\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 17:33:26 +0000\",\"changed\":[\"initial_ai_customizations\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 17:34:01 +0000\",\"changed\":[\"initial_ai_customizations\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 16:19:31 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"cassi.brenci+local@code.org\"},{\"changed_at\":\"2024-04-18 16:43:40 -0700\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"cassi.brenci+local@code.org\"},{\"changed_at\":\"2024-04-23 13:35:01 -0700\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"cassi.brenci+local@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-05 09:03:03 +0000\",\"changed\":[\"published\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-03 15:36:40 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-14 15:34:06 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-14 15:45:15 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-16 15:16:49 -0700\",\"changed\":[\"system_prompt\",\"bot_title\",\"bot_description\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-16 15:18:26 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-16 16:34:05 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-17 15:16:49 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-17 21:47:08 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-17 22:22:00 +0000\",\"changed\":[\"system_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-17 22:25:46 +0000\",\"changed\":[\"system_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-17 23:14:32 +0000\",\"changed\":[\"long_instructions\",\"system_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-18 02:39:03 +0000\",\"changed\":[\"bot_title\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 00:55:38 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 17:31:22 +0000\",\"changed\":[\"initial_ai_customizations\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 17:32:35 +0000\",\"changed\":[\"initial_ai_customizations\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 17:33:26 +0000\",\"changed\":[\"initial_ai_customizations\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-28 17:34:01 +0000\",\"changed\":[\"initial_ai_customizations\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-18 16:19:31 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"cassi.brenci+local@code.org\"},{\"changed_at\":\"2024-04-18 16:43:40 -0700\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"cassi.brenci+local@code.org\"},{\"changed_at\":\"2024-04-23 13:35:01 -0700\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"cassi.brenci+local@code.org\"},{\"changed_at\":\"2024-04-30 17:50:09 -0700\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-04-30 17:54:40 -0700\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
 </Aichat>

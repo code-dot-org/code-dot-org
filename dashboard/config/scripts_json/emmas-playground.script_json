@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "emmas-playground",
-    "serialized_at": "2024-02-28 23:40:12 UTC",
+    "serialized_at": "2024-05-02 03:24:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -492,6 +492,17 @@
       },
       "seeding_key": {
         "activity_section.key": "efff6bf6-a6bf-431f-818a-b19daaae2b35",
+        "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad"
+      }
+    },
+    {
+      "key": "c208f936-b745-4c28-a822-33eb2f35ef5f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Sorting Items with Validation"
+      },
+      "seeding_key": {
+        "activity_section.key": "c208f936-b745-4c28-a822-33eb2f35ef5f",
         "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad"
       }
     }
@@ -1752,6 +1763,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emmaplayground_helloworld_freeplay_food"
+        ],
         "progression": "Feature Vector"
       },
       "bonus": false,
@@ -1766,6 +1780,28 @@
       },
       "level_keys": [
         "emmaplayground_helloworld_freeplay_food"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sorting Items with Validation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c208f936-b745-4c28-a822-33eb2f35ef5f"
+      },
+      "level_keys": [
+        "k5_ai_pilot_sorting_items_emmatest"
       ]
     }
   ],
@@ -2392,6 +2428,18 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "efff6bf6-a6bf-431f-818a-b19daaae2b35"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_pilot_sorting_items_emmatest",
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c208f936-b745-4c28-a822-33eb2f35ef5f"
       }
     }
   ],

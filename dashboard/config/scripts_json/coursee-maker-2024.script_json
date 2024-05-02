@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursee-maker",
-    "serialized_at": "2024-04-30 23:53:17 UTC",
+    "serialized_at": "2024-05-01 23:15:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -254,16 +254,19 @@
       }
     },
     {
-      "key": "lesson-10",
-      "name": "Cristina - Tilt alarm with micro:bit",
+      "key": "Cristina - Calming LEDs with micro:bit",
+      "name": "Cristina - Tilt Alarm with micro:bit",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "In today's skill-building lesson, the goal is to use the micro:bit's accelerometer and radio features to make an alarm that warns you when something has been moved - and learn how functions can make code more compact and easier to read and modify. Note: This project works best with two students working in pairs, each with their own micro:bit (two micro:bits per pair of students). The key concepts are: **functions**.",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.",
+        "student_overview": "Today you will make an alarm to tell if an object has been moved. "
       },
       "seeding_key": {
-        "lesson.key": "lesson-10",
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursee-maker-2024"
       }
@@ -860,13 +863,56 @@
       }
     },
     {
-      "key": "26e6f6b8-6d59-4955-a6cd-df6c06d798f1",
+      "key": "ae790d96-6ee1-43e3-bd03-3d4c77e092ef",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "26e6f6b8-6d59-4955-a6cd-df6c06d798f1",
-        "lesson.key": "lesson-10",
+        "lesson_activity.key": "ae790d96-6ee1-43e3-bd03-3d4c77e092ef",
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursee-maker-2024"
+      }
+    },
+    {
+      "key": "dfe98ab0-9513-4ea7-919a-75d3ff86598b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dfe98ab0-9513-4ea7-919a-75d3ff86598b",
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursee-maker-2024"
+      }
+    },
+    {
+      "key": "82a2f745-b095-4e6e-a3d4-3ea8c5b92aea",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82a2f745-b095-4e6e-a3d4-3ea8c5b92aea",
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursee-maker-2024"
+      }
+    },
+    {
+      "key": "f55ba85c-52b8-4b39-b77f-6e4415c19b7c",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f55ba85c-52b8-4b39-b77f-6e4415c19b7c",
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursee-maker-2024"
       }
@@ -1709,7 +1755,7 @@
       "key": "913a179f-9355-456b-a7cd-9a5efb8e2032",
       "position": 1,
       "properties": {
-        "description": "**Say**: Today's aim is to create an alarm to show when someone has been in a room using a magnet and the micro:bit's compass as a magnetometer to measure the strength of magnetic fields.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-e3-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-e3-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\nInstead of using real doors, you can model this project in class using a magnet and any box with a lid - for example, a shoe box.\n\n**Discuss** possible uses for an alarm like this. For example, making sure doors are kept closed to keep warm or cool air in a room.\n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Loop**: The action of doing something over and over again (e.g., the \"forever\" block keeps running the code to check the light level)\n- **Conditional**: A statement that only runs under certain conditions (e.g., if the light level is below 100, show the turtle image on the LED display)\n\n\n**Do this**: Share the **<a href=\"https://mbit.io/csf-d2-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.\n\nNote that the value you use to trigger the alarm may be different depending on how strong your magnet is, so there are a few steps to making this project:\n- Coding\n- Transfer and test code on a real micro:bit: does moving the magnet away trigger the alarm? If not, press button A to measure the strength of your magnet when it's close and far away to decide what number to use.\n- Modify the code to work with your magnet.\n- Transfer the code and test again.",
+        "description": "**Say**: Today's aim is to create an alarm to show when someone has been in a room using a magnet and the micro:bit's compass as a magnetometer to measure the strength of magnetic fields.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-e3-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-e3-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\nInstead of using real doors, you can model this project in class using a magnet and any box with a lid - for example, a shoe box.\n\n**Discuss** possible uses for an alarm like this. For example, making sure doors are kept closed to keep warm or cool air in a room.\n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Loop**: The action of doing something over and over again (e.g., the \"forever\" block keeps running the code to check the light level)\n- **Conditional**: A statement that only runs under certain conditions (e.g., if the light level is below 100, show the turtle image on the LED display)\n\n\n**Do this**: Share the **<a href=\"https://mbit.io/csf-e3-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.\n\nNote that the value you use to trigger the alarm may be different depending on how strong your magnet is, so there are a few steps to making this project:\n- Coding\n- Transfer and test code on a real micro:bit: does moving the magnet away trigger the alarm? If not, press button A to measure the strength of your magnet when it's close and far away to decide what number to use.\n- Modify the code to work with your magnet.\n- Transfer the code and test again.",
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -2249,23 +2295,63 @@
       }
     },
     {
-      "key": "33a2f94f-45b3-4d93-9af1-9f678c5bf49c",
+      "key": "353f9fb4-1952-4ceb-b442-47672012b95e",
       "position": 1,
       "properties": {
+        "description": "**Say**: Today's aim is to use the micro:bit's accelerometer and radio features to make an alarm that warns you when something has been moved - and learn how functions can make code more compact and easier to read and modify.\n\n[Option 1] **Do this:** Watch the **<a href=\"https://mbit.io/csf-e4-intro\" target=\"_blank\">introduction video.</a>** \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-e4-project\" target=\"_blank\"> project </a>** uploaded onto micro:bits prior to the lesson.\n\n**Discuss** where these concepts are being used and where students have used them before:\n\n- **Functions:** a piece of code that you can call over and over again (e.g., the alarm showing an image on the LED display and playing an audible alert is in a function because it's used twice: when the micro:bit is moved and when is receives an alert message by radio)\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-e4-project\" target=\"_blank\"> project </a>** working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "duration": "10",
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "33a2f94f-45b3-4d93-9af1-9f678c5bf49c",
-        "lesson_activity.key": "26e6f6b8-6d59-4955-a6cd-df6c06d798f1"
+        "activity_section.key": "353f9fb4-1952-4ceb-b442-47672012b95e",
+        "lesson_activity.key": "ae790d96-6ee1-43e3-bd03-3d4c77e092ef"
       }
     },
     {
-      "key": "206804a8-2f45-4905-b2e4-31b5bbe3aa3c",
-      "position": 2,
+      "key": "42a6ccb0-2bad-43ab-8f62-5010c0a4a315",
+      "position": 1,
       "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-e4-coding\" target=\"_blank\"> video </a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-e4-classroom\" target=\"_blank\"> classroom session </a>**",
+        "name": "Student Coding"
       },
       "seeding_key": {
-        "activity_section.key": "206804a8-2f45-4905-b2e4-31b5bbe3aa3c",
-        "lesson_activity.key": "26e6f6b8-6d59-4955-a6cd-df6c06d798f1"
+        "activity_section.key": "42a6ccb0-2bad-43ab-8f62-5010c0a4a315",
+        "lesson_activity.key": "dfe98ab0-9513-4ea7-919a-75d3ff86598b"
+      }
+    },
+    {
+      "key": "5830dc49-f691-45a5-9a37-db79eace516b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Tilt Alarm with micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "5830dc49-f691-45a5-9a37-db79eace516b",
+        "lesson_activity.key": "dfe98ab0-9513-4ea7-919a-75d3ff86598b"
+      }
+    },
+    {
+      "key": "81ca1aff-0d93-4578-9eff-8ee90417ae49",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "duration": "5",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "81ca1aff-0d93-4578-9eff-8ee90417ae49",
+        "lesson_activity.key": "82a2f745-b095-4e6e-a3d4-3ea8c5b92aea"
+      }
+    },
+    {
+      "key": "a0657157-4155-485d-9841-a26f937fda00",
+      "position": 1,
+      "properties": {
+        "description": "**Change the alert:** Edit the function to change the alert - for example, you could use animations, scrolling text, or different sounds.\n\n**Radio distance:** Test how far away you can get before the radio messages stop working.\n\n**Split the code:** Split the code into two different programs - one just to send a radio signal when shaken which can be kept in the object you want to keep safe, and another that just receives messages and alerts you.\n\n**Find this project and more on <a href=\"https://mbit.io/csf-e4-make\" target=\"_blank\"> microbit.org </a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0657157-4155-485d-9841-a26f937fda00",
+        "lesson_activity.key": "f55ba85c-52b8-4b39-b77f-6e4415c19b7c"
       }
     }
   ],
@@ -2756,7 +2842,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "course_d_maker_rock_paper_scissors_coursee"
+          "course_e_maker_sensory_toy"
         ],
         "lesson.key": "Cristina - Activity picker with micro:bit",
         "lesson_group.key": "lessonGroup-2",
@@ -2764,7 +2850,7 @@
         "activity_section.key": "a58745d2-ba02-437e-93ca-5e7ad9cd89c4"
       },
       "level_keys": [
-        "course_d_maker_rock_paper_scissors_coursee"
+        "course_e_maker_sensory_toy"
       ]
     },
     {
@@ -3229,7 +3315,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "course_d_maker_saving_sea_turtles_coursee"
+          "course_e_maker_simple_door_alarm"
         ],
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
         "lesson_group.key": "lessonGroup-3",
@@ -3237,7 +3323,7 @@
         "activity_section.key": "5b4722c8-9545-4e62-8422-60329b4c620c"
       },
       "level_keys": [
-        "course_d_maker_saving_sea_turtles_coursee"
+        "course_e_maker_simple_door_alarm"
       ]
     },
     {
@@ -3971,19 +4057,17 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "course_e_maker_tilt_alarm"
-        ]
+        "progression": "Tilt Alarm with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "course_e_maker_tilt_alarm"
         ],
-        "lesson.key": "lesson-10",
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursee-maker-2024",
-        "activity_section.key": "206804a8-2f45-4905-b2e4-31b5bbe3aa3c"
+        "activity_section.key": "5830dc49-f691-45a5-9a37-db79eace516b"
       },
       "level_keys": [
         "course_e_maker_tilt_alarm"
@@ -4221,9 +4305,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "course_d_maker_rock_paper_scissors_coursee",
+        "level.key": "course_e_maker_sensory_toy",
         "script_level.level_keys": [
-          "course_d_maker_rock_paper_scissors_coursee"
+          "course_e_maker_sensory_toy"
         ],
         "lesson.key": "Cristina - Activity picker with micro:bit",
         "lesson_group.key": "lessonGroup-2",
@@ -4449,9 +4533,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "course_d_maker_saving_sea_turtles_coursee",
+        "level.key": "course_e_maker_simple_door_alarm",
         "script_level.level_keys": [
-          "course_d_maker_saving_sea_turtles_coursee"
+          "course_e_maker_simple_door_alarm"
         ],
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
         "lesson_group.key": "lessonGroup-3",
@@ -4813,10 +4897,10 @@
         "script_level.level_keys": [
           "course_e_maker_tilt_alarm"
         ],
-        "lesson.key": "lesson-10",
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursee-maker-2024",
-        "activity_section.key": "206804a8-2f45-4905-b2e4-31b5bbe3aa3c"
+        "activity_section.key": "5830dc49-f691-45a5-9a37-db79eace516b"
       }
     }
   ],
@@ -4855,6 +4939,42 @@
       },
       "seeding_key": {
         "resource.key": "activity_picker_step_by_step_coding_video"
+      }
+    },
+    {
+      "name": "Tilt Alarm: Finished project",
+      "url": "https://mbit.io/csf-e4-project",
+      "key": "calming_leds_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "calming_leds_finished_project"
+      }
+    },
+    {
+      "name": "Tilt Alarm: Introduction Video",
+      "url": "https://mbit.io/csf-e4-intro",
+      "key": "calming_leds_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "calming_leds_introduction_video"
+      }
+    },
+    {
+      "name": "Tilt Alarm: Step by step coding video",
+      "url": "https://mbit.io/csf-e4-coding",
+      "key": "calming_leds_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "calming_leds_step_by_step_coding_video"
       }
     },
     {
@@ -4955,6 +5075,18 @@
       },
       "seeding_key": {
         "resource.key": "cs_talking_points_for_code_1"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1l5AOuR1ZBgrVdRzoT9AQbo7sk6jdM6gv/view?usp=drive_link",
+      "key": "cs_talking_points_for_code_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code_2"
       }
     },
     {
@@ -5091,6 +5223,18 @@
       },
       "seeding_key": {
         "resource.key": "live_micro_bit_classroom_session_1"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-e4-classroom",
+      "key": "live_micro_bit_classroom_session_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session_2"
       }
     },
     {
@@ -5272,6 +5416,36 @@
       "seeding_key": {
         "lesson.key": "Cristina - Activity picker with micro:bit",
         "resource.key": "live_micro_bit_classroom_session"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "resource.key": "calming_leds_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "resource.key": "calming_leds_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "resource.key": "calming_leds_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "resource.key": "cs_talking_points_for_code_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session_2"
       }
     },
     {
@@ -5545,6 +5719,16 @@
       }
     },
     {
+      "key": "radio",
+      "word": "Radio",
+      "definition": "A way to send signals over a long distance, to deliver information from one place to another.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "radio"
+      }
+    },
+    {
       "key": "sensor",
       "word": "Sensor",
       "definition": "A device that detects or records changes in the environment, such as the micro:bit's sensors for temperature, light, movement, and magnetism. ",
@@ -5578,6 +5762,18 @@
       "seeding_key": {
         "lesson.key": "Cristina - Activity picker with micro:bit",
         "vocabulary.key": "gestures"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "vocabulary.key": "radio"
       }
     },
     {
@@ -5714,6 +5910,16 @@
       }
     },
     {
+      "key": "15eef265-5670-4a26-83a5-c24db79d3c79",
+      "properties": {
+        "description": "Write code that uses micro:bit's accelerometer and radio functions."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "objective.key": "15eef265-5670-4a26-83a5-c24db79d3c79"
+      }
+    },
+    {
       "key": "19fa0d77-d896-4281-a062-ef8e78df80b1",
       "properties": {
         "description": "Discuss real-world uses for a program like this."
@@ -5784,6 +5990,16 @@
       }
     },
     {
+      "key": "4c130905-34ac-43e7-b21e-e192c1131d80",
+      "properties": {
+        "description": "Program events on MakeCode."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "objective.key": "4c130905-34ac-43e7-b21e-e192c1131d80"
+      }
+    },
+    {
       "key": "4f271b7e-bf6f-4128-83ee-35cb99964ec3",
       "properties": {
         "description": "Create dance animations with code"
@@ -5834,6 +6050,16 @@
       }
     },
     {
+      "key": "6af377a0-6bde-4b46-92ad-29df5b6182e8",
+      "properties": {
+        "description": "Collaborate with a partner to complete the project."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "objective.key": "6af377a0-6bde-4b46-92ad-29df5b6182e8"
+      }
+    },
+    {
       "key": "70f43e80-3df2-4bd0-9ce5-016c2cfab0ea",
       "properties": {
         "description": "Solve puzzles using a combination of looped sequences and conditionals."
@@ -5861,6 +6087,16 @@
       "seeding_key": {
         "lesson.key": "Conditionals with Cards",
         "objective.key": "8d53154d-5253-412c-86f5-3dbb2b189db3"
+      }
+    },
+    {
+      "key": "8f29a0e6-2bba-4eff-82b6-c91e0a4074ac",
+      "properties": {
+        "description": "Use functions to make code more compact and easier to read and modify."
+      },
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "objective.key": "8f29a0e6-2bba-4eff-82b6-c91e0a4074ac"
       }
     },
     {
@@ -5954,6 +6190,13 @@
         "lesson.key": "Cristina - Activity picker with micro:bit",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-IC-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Cristina - Calming LEDs with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
       }
     },
     {
