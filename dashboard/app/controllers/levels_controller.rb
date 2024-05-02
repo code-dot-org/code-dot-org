@@ -8,7 +8,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :get_extra_links]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -483,6 +483,35 @@ class LevelsController < ApplicationController
     )
     view_options(full_width: true)
     render 'levels/show'
+  end
+
+  # GET /levels/:id/extra_links
+  # Get the extra links for the level. Only levelbuilders and project validators can use extra links.
+  def extra_links
+    unless current_user && (current_user.levelbuilder? || current_user.project_validator?)
+      return head :forbidden
+    end
+
+    links = {}
+
+    links[@level.name] = [{text: level_path(@level), url: level_url(@level)}]
+    is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+    # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
+    # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
+    if Rails.application.config.levelbuilder_mode && !is_standalone_project
+      if can? :edit, @level
+        links[@level.name] << {text: 'Edit', url: edit_level_path(@level)}
+        if @level.is_a? Blockly
+          links[@level.name] << {text: "Start (#{Blockly.count_xml_blocks(@level.start_blocks)})", url: edit_blocks_level_path(@level, :start_blocks)}
+        elsif @level.is_a?(Javalab) || @level.is_a?(Pythonlab) || @level.is_a?(Weblab2)
+          links[@level.name] << {text: "Start", url: edit_blocks_level_path(@level, :start_sources)}
+          links[@level.name] << {text: "Exemplar", url: edit_exemplar_level_path(@level)}
+        end
+      else
+        links[@level.name] << {text: '(Cannot edit)', url: ''}
+      end
+    end
+    return render json: {links: links}
   end
 
   # Use callbacks to share common setup or constraints between actions.

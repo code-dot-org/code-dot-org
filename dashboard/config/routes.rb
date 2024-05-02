@@ -320,6 +320,7 @@ Dashboard::Application.routes.draw do
         post 'update_start_code'
         post 'update_exemplar_code'
         get 'level_properties'
+        get 'extra_links'
       end
     end
 
