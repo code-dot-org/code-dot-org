@@ -39,17 +39,22 @@ class DatasetsController < ApplicationController
   end
 
   # POST /datasets/:dataset_name/
-  # TODO: unfirebase, #56998
   def update
-    records, columns = @firebase.csv_as_table(params[:csv_data])
-    @firebase.delete_shared_table params[:dataset_name]
-    response = @firebase.upload_shared_table(params[:dataset_name], records, columns)
-    data = {}
-    if response.success?
-      data[:records] = records
-      data[:columns] = columns
+    table_name = params[:dataset_name]
+
+    # Find or create the shared table
+    table = begin
+      DatablockStorageTable.find_shared_table table_name
+    rescue
+      DatablockStorageTable.create!(project_id: DatablockStorageTable::SHARED_TABLE_PROJECT_ID, table_name: table_name)
     end
-    render json: data, status: response.code
+
+    table.import_csv params[:csv_data]
+    data = {
+      columns: table.get_columns,
+      records: table.read_records.map(&:to_json),
+    }
+    render json: data
   end
 
   # DELETE /datasets/:dataset_name/

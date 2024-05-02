@@ -188,6 +188,9 @@ class DatablockStorageTable < ApplicationRecord
       # Preserve the old column's order while adding any new columns
       self.columns += (cols_in_records - columns).to_a
       save!
+
+      # Reload association because we didn't modify records thru it
+      records.reload
     end
   end
 
@@ -235,6 +238,7 @@ class DatablockStorageTable < ApplicationRecord
 
     # import_csv should overwrite existing data:
     records.delete_all
+    records.columns = ['id']
 
     create_records(new_records)
   rescue CSV::MalformedCSVError => exception
