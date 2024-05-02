@@ -104,10 +104,6 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     return <div>Loading...</div>;
   }
 
-  function getRadialGradient(from: string, to: string) {
-    return `radial-gradient(${from}, ${to})`;
-  }
-
   const getPackDetails = (packId: string) => {
     const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(packId);
 
@@ -146,7 +142,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                   style={{
                     background:
                       packDetails?.color &&
-                      getRadialGradient(packDetails.color, '#000'),
+                      `radial-gradient(${packDetails.color}, #000`,
                   }}
                   alt=""
                 />
