@@ -1,29 +1,29 @@
 @import 'color';
 
 .slider {
-    position: relative;
-    width: 200px;
-    background-color: $light_gray_700;
-    height: 6px;
-    border-radius: 10px;
+  position: relative;
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: $light_gray_700;
 }
 
 .progressBar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $light_gray_100;
-    height: 6px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: $light_gray_100;
+}
 
-  .playhead {
-    position: absolute;
-    top: -6px;
-    height: 20px;
-    border-radius: 1px;
-    width: 3px;
-    background-color: white;
-    box-shadow: 1px 1px $neutral_dark80;
-  }
+.playhead {
+  position: absolute;
+  top: -6px;
+  height: 20px;
+  width: 3px;
+  border-radius: 1px;
+  background-color: white;
+  box-shadow: 1px 1px $neutral_dark80;
+}
