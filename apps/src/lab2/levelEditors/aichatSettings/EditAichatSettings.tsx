@@ -17,6 +17,9 @@ import {
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
   DEFAULT_LEVEL_AICHAT_SETTINGS,
+  EMPTY_AI_CUSTOMIZATIONS,
+  DEFAULT_VISIBILITIES,
+  EMPTY_MODEL_CARD_INFO,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
 import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
@@ -27,6 +30,47 @@ import ModelSelectionFields from './ModelSelectionFields';
 import VisibilityDropdown from './VisibilityDropdown';
 import {UpdateContext} from './UpdateContext';
 import moduleStyles from './edit-aichat-settings.module.scss';
+import {getTypedKeys} from '@cdo/apps/types/utils';
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
+
+function sanitizeSettings(settings: LevelAichatSettings) {
+  const sanitizedModelCardInfo = sanitizeField(
+    settings.initialCustomizations.modelCardInfo,
+    EMPTY_MODEL_CARD_INFO
+  );
+  const sanitizedCustomizations = sanitizeField(
+    settings.initialCustomizations,
+    EMPTY_AI_CUSTOMIZATIONS
+  );
+  const sanitizedVisibilities = sanitizeField(
+    settings.visibilities,
+    DEFAULT_VISIBILITIES
+  );
+
+  // Ensure that only valid model IDs are included.
+  const filteredModelIds = (settings.availableModelIds || []).filter(id =>
+    modelDescriptions.some(model => model.id === id)
+  );
+
+  return {
+    ...settings,
+    availableModelIds: filteredModelIds,
+    initialCustomizations: {
+      ...sanitizedCustomizations,
+      modelCardInfo: sanitizedModelCardInfo,
+    },
+    visibilities: sanitizedVisibilities,
+  };
+}
+
+function sanitizeField<F extends object>(field: F, defaults: F) {
+  // Iterate over default keys, keeping the value from the field if present, and otherwise using the default.
+  // This removes any extraneous keys and retains only expected keys.
+  return getTypedKeys<keyof F>(defaults).reduce(
+    (newField, key) => ({...newField, [key]: field[key] ?? defaults[key]}),
+    {}
+  );
+}
 
 /**
  * Editor for the AI Customizations on the level edit page.
@@ -121,7 +165,7 @@ const EditAichatSettings: React.FunctionComponent<{
           type="hidden"
           id="level_aichat_settings"
           name="level[aichat_settings]"
-          value={JSON.stringify(aichatSettings)}
+          value={JSON.stringify(sanitizeSettings(aichatSettings))}
         />
         <BodyThreeText>
           Set the initial values and visibility for AI model customizations.

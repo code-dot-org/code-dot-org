@@ -916,9 +916,23 @@ class Pd::Workshop < ApplicationRecord
 
   def summarize_for_my_pl_page
     {
-      course_name: course_name,
+      id: id,
+      course: course_name,
+      subject: subject,
       dates: workshop_date_range_string,
       location: location_address,
+      sessions: sessions,
+      location_name: location_name,
+      location_address: location_address,
+      on_map: on_map,
+      funded: funded,
+      virtual: virtual?,
+      enrolled_teacher_count: enrollments ? enrollments.count : 0,
+      capacity: capacity,
+      facilitators: facilitators,
+      organizer: organizer,
+      enrollment_code: enrollments&.first&.code,
+      status: state,
     }
   end
 end
