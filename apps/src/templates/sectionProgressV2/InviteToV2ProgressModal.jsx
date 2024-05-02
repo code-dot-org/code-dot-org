@@ -128,7 +128,7 @@ function InviteToV2ProgressModal({
 
 InviteToV2ProgressModal.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
-  sectionId: PropTypes.number.isRequired,
+  sectionId: PropTypes.number,
   dateProgressTableInvtationDelayed: PropTypes.string,
   hasSeenProgressTableInvite: PropTypes.bool,
 };

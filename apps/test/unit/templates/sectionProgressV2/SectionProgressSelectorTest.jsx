@@ -131,6 +131,8 @@ describe('SectionProgressSelector', () => {
     const stub = sinon.stub($, 'post');
     renderDefault();
 
+    const remindLaterLink = screen.getByText('Remind me later');
+    fireEvent.click(remindLaterLink);
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 

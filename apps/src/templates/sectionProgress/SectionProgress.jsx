@@ -42,7 +42,7 @@ const SECTION_PROGRESS = 'SectionProgress';
 class SectionProgress extends Component {
   static propTypes = {
     setShowProgressTableV2: PropTypes.func,
-    allowUserToSelectV2View: PropTypes.bool.isRequired,
+    allowUserToSelectV2View: PropTypes.bool,
 
     //Provided by redux
     scriptId: PropTypes.number,
