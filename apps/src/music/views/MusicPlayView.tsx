@@ -13,6 +13,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
+const SLIDER_WIDTH = 200;
 interface MusicPlayViewProps {
   setPlaying: (value: boolean) => void;
 }
@@ -98,7 +99,12 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               type="secondary"
               className={moduleStyles.playViewButton}
             />
-            <ProgressSlider min={0} max={100} value={progressSliderValue} />
+            <ProgressSlider
+              min={0}
+              max={100}
+              value={progressSliderValue}
+              sliderWidth={SLIDER_WIDTH}
+            />
           </div>
 
           <div className={moduleStyles.buttonsSection}>

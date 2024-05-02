@@ -5,12 +5,14 @@ interface ProgressSliderProps {
   min: number;
   max: number;
   value: number;
+  sliderWidth: number;
 }
 
 const ProgressSlider: React.FunctionComponent<ProgressSliderProps> = ({
   min,
   max,
   value,
+  sliderWidth,
 }) => {
   let progressValue = value;
   if (value < min) {
@@ -26,7 +28,7 @@ const ProgressSlider: React.FunctionComponent<ProgressSliderProps> = ({
       />
       <div
         className={moduleStyles.playhead}
-        style={{left: progressValue * 2}}
+        style={{left: (progressValue / 100) * sliderWidth}}
       />
     </div>
   );
