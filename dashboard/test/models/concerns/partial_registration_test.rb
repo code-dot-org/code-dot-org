@@ -91,8 +91,10 @@ class PartialRegistrationTest < ActiveSupport::TestCase
 
     user = User.new_from_partial_registration @session do |u|
       u.name = 'Different fake name'
+      u.email = 'different-email@code.org'
     end
     assert_equal 'Different fake name', user.name
+    assert_equal 'different-email@code.org', user.email
   end
 
   test 'round-trip preserves important attributes (email)' do
