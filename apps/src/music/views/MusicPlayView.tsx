@@ -3,25 +3,37 @@ import React, {memo, useCallback, useMemo} from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import commonI18n from '@cdo/locale';
-import codeOrgLogo from '@cdo/static/code-dot-org-white-logo.svg';
+import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
 
 import moduleStyles from './music-play-view.module.scss';
+import ProgressSlider from './ProgressSlider';
 
 import musicI18n from '../locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 interface MusicPlayViewProps {
-  isPlaying: boolean;
-  onPlay: () => void;
-  onStop: () => void;
-  projectName: string;
+  setPlaying: (value: boolean) => void;
 }
 
 const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
-  isPlaying,
-  onPlay,
-  onStop,
-  projectName,
+  setPlaying,
 }) => {
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const percentPlayed = useAppSelector(state => {
+    const {currentPlayheadPosition, lastMeasure} = state.music;
+    return lastMeasure === 1
+      ? 0
+      : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
+  });
+
+  const projectName = useAppSelector(state => state.lab.channel?.name);
+  // Disable play button until sound is loaded.
+  const isLoading = useAppSelector(
+    state => state.music.soundLoadingProgress < 1
+  );
+
   const shareData = useMemo(
     () => ({
       title: projectName,
@@ -30,76 +42,97 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
     [projectName]
   );
 
-  // Share button will only appear when users browser supports the Web Share API
+  // Share button will only appear when user's browser supports the Web Share API.
   // (Can be mobile browsers and some desktop browser like macOS Safari)
-  // Requires HTTPS connection (adhoc or production page).
-  // Was unable to access it on localhost with our routing (http://localhost-studio.code.org:3000/
-  // is not considered a safe URL by browser, only http://localhost:3000/ is).
-  const canShare =
-    navigator && navigator.canShare && navigator.canShare(shareData);
+  // Requires HTTPS connection.
+  // For testing purposes, we can pass a query parameter canShare=true to force the button to appear.
+  const canShareInternal = queryParams('canShare') === 'true';
+  const canShare = useMemo(() => {
+    return (
+      (navigator && navigator.canShare && navigator.canShare(shareData)) ||
+      canShareInternal
+    );
+  }, [canShareInternal, shareData]);
 
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
   const onShareProject = useCallback(() => {
     navigator?.share(shareData);
   }, [shareData]);
   const onViewCode = useCallback(() => {
-    console.log('view code');
-  }, []);
+    projectManager?.redirectToView();
+  }, [projectManager]);
   const onRemix = useCallback(() => {
-    console.log('make my own');
-  }, []);
+    if (projectManager) {
+      projectManager.flushSave().then(() => {
+        projectManager.redirectToRemix();
+      });
+    }
+  }, [projectManager]);
 
   return (
-    <div className={moduleStyles.musicPlayViewContainer}>
-      <div className={moduleStyles.musicPlayViewCard}>
-        <div className={moduleStyles.musicPlayViewInfoSection}>
-          <img src={codeOrgLogo} alt="Code.org" />
-          <Heading2>{projectName}</Heading2>
-          <BodyTwoText>Built with Music Lab</BodyTwoText>
-        </div>
-
-        <div className={moduleStyles.musicPlayViewPlaySection}>
-          <Button
-            isIconOnly={true}
-            icon={{iconStyle: 'solid', iconName: !isPlaying ? 'play' : 'stop'}}
-            onClick={!isPlaying ? onPlay : onStop}
-            size="s"
-            color="white"
-            type="secondary"
-          />
-          {/*TODO: get the total length of the song, show current player position/play progress*/}
-          <input type="range" min="0" max="100" />
-        </div>
-
-        <div className={moduleStyles.musicPlayViewButtonsSection}>
-          <Button
-            text={commonI18n.viewCode()}
-            type="secondary"
-            color="white"
-            size="s"
-            iconLeft={{iconStyle: 'solid', iconName: 'code'}}
-            onClick={onViewCode}
-          />
-          <Button
-            text={commonI18n.makeMyOwn()}
-            type="secondary"
-            color="white"
-            size="s"
-            iconLeft={{iconStyle: 'solid', iconName: 'user-music'}}
-            onClick={onRemix}
-          />
-        </div>
-        {canShare && (
-          <div className={moduleStyles.musicPlayViewButtonsSection}>
+    <div className={moduleStyles.container}>
+      <div className={moduleStyles.cardContainer}>
+        <img
+          className={moduleStyles.playViewImage}
+          src={musicPlayViewLogo}
+          alt="Code.org play view logo"
+        />
+        <div className={moduleStyles.card}>
+          <div className={moduleStyles.infoSection}>
+            <Heading2 className={moduleStyles.infoText}>{projectName}</Heading2>
+            <BodyTwoText className={moduleStyles.infoText}>
+              {musicI18n.builtWithMusicLab()}
+            </BodyTwoText>
+          </div>
+          <div className={moduleStyles.playSection}>
             <Button
-              text={musicI18n.share()}
-              type="secondary"
+              isIconOnly={true}
+              icon={{
+                iconStyle: 'solid',
+                iconName: !isPlaying ? 'play' : 'stop',
+              }}
+              onClick={() => setPlaying(!isPlaying)}
+              disabled={isLoading}
+              size="l"
               color="white"
-              size="s"
-              iconLeft={{iconStyle: 'solid', iconName: 'share'}}
-              onClick={onShareProject}
+              type="secondary"
+              className={moduleStyles.playViewButton}
+            />
+            <ProgressSlider percentProgress={percentPlayed} />
+          </div>
+
+          <div className={moduleStyles.buttonsSection}>
+            <Button
+              text={commonI18n.viewCode()}
+              type="tertiary"
+              color="white"
+              size="xs"
+              iconLeft={{iconStyle: 'solid', iconName: 'code'}}
+              onClick={onViewCode}
+            />
+            {canShare && (
+              <Button
+                text={musicI18n.share()}
+                type="tertiary"
+                color="white"
+                size="xs"
+                iconLeft={{
+                  iconStyle: 'solid',
+                  iconName: 'arrow-up-from-bracket',
+                }}
+                onClick={onShareProject}
+              />
+            )}
+            <Button
+              text={commonI18n.makeMyOwn()}
+              type="tertiary"
+              color="white"
+              size="xs"
+              iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
+              onClick={onRemix}
             />
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

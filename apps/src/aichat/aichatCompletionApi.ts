@@ -63,7 +63,11 @@ const formatMessagesForAichatCompletion = (
   chatMessages: ChatCompletionMessage[]
 ): AichatCompletionMessage[] => {
   return chatMessages.map(message => {
-    return {role: message.role, content: message.chatMessageText};
+    return {
+      role: message.role,
+      content: message.chatMessageText,
+      status: message.status,
+    };
   });
 };
 

@@ -281,8 +281,10 @@ class HomeControllerTest < ActionController::TestCase
   test 'student without age gets student information prompt with age select' do
     student = create(:student)
     student.update_attribute(:birthday, nil) # bypasses validations
+    student.update_attribute(:us_state, 'DC')
     student = student.reload
     refute student.age, "user should not have age, but value was #{student.age}"
+    assert student.us_state
 
     sign_in student
     get :home
@@ -303,7 +305,6 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     assert_select '#student-information-modal'
-    assert_select '#user_age'
     assert_select '#user_us_state'
     assert_select '#user_gender_student_input'
   end
@@ -328,6 +329,81 @@ class HomeControllerTest < ActionController::TestCase
 
     sign_in student
 
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
+  test 'student under 13 and in US with no us_state gets student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
+    student.update_attribute(:us_state, nil) # bypasses validations
+    refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'student under 13 and in US with no provided us_state gets student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:us_state, 'DC')
+    student.update_attribute(:user_provided_us_state, false)
+    student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    student = student.reload
+    assert student.age, 12
+
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'CAP student missing us_state and created after CPA started does sees the student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:created_at, DateTime.new(2023, 7, 1))
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    student = student.reload
+    assert student.age, 12
+
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'student under 13 and in US with provided us_state does not get student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:us_state, 'DC')
+    student.update_attribute(:user_provided_us_state, true)
+    student = student.reload
+    assert student.age, 12
+    assert student.us_state
+
+    sign_in student
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
+  test 'student over 13 and in US with us_state does not get student information prompt' do
+    student = create(:student, age: 19)
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
     get :home
 
     assert_select '#student-information-modal', false

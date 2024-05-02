@@ -42,11 +42,11 @@ $default-spacing: 2px;
   flex-grow: 1;
 }
 
-.inappropriateMessage {
+.profaneMessage {
   background-color: $lightest_red;
 }
 
-.tooPersonalMessage {
+.piiMessage {
   background-color: $lightest_yellow;
 }
 
