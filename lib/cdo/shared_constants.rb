@@ -10,6 +10,8 @@ require_relative 'http_cache'
 # result in changes to these other files.
 
 module SharedConstants
+  DEFAULT_LOCALE = 'en-US'.freeze
+
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {

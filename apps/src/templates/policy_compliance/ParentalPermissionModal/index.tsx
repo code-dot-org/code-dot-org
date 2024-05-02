@@ -15,7 +15,8 @@ import {getStore} from '@cdo/apps/redux';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import i18n, {currentLocale} from '@cdo/locale';
+import i18n from '@cdo/locale';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Skeleton from '@cdo/apps/util/loadingSkeleton';
 import Button from '@cdo/apps/templates/Button';
@@ -44,7 +45,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
   const [requestError, setRequestError] = useState('');
   const [parentEmail, setParentEmail] = useState('');
   const formattedLockoutDate = useMemo(
-    () => moment(lockoutDate).lang(currentLocale).format('ll'),
+    () => moment(lockoutDate).lang(currentLocale()).format('ll'),
     [lockoutDate]
   );
 
@@ -173,7 +174,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
     ) : (
       i18n.policyCompliance_parentalPermissionModal_lastEmailSentAt({
         sendingTime: moment(parentalPermissionRequest.requested_at)
-          .lang(currentLocale)
+          .lang(currentLocale())
           .format('lll'),
       })
     );
