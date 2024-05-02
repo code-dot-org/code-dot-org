@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import moment from 'moment';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import PreLockdownParentPermissionModal from '@cdo/apps/templates/policy_compliance/PreLockdownParentPermissionModal';
+import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
 
 const SHOW_DELAY = 86400; // 1 day
 
@@ -12,10 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const lockoutDate = new Date(getScriptData('lockoutDate'));
 
     return ReactDOM.render(
-      <PreLockdownParentPermissionModal lockoutDate={lockoutDate} />,
-      document.getElementById(
-        'pre-lockdown-parental-permission-modal-container'
-      )
+      <ParentalPermissionModal lockoutDate={lockoutDate} />,
+      document.getElementById('parental-permission-modal-container')
     );
   };
 

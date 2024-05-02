@@ -97,9 +97,9 @@
       - if current_user && Policies::Lti.early_access_banner_available?(current_user)
         = render partial: 'lti/v1/early_access_banner'
 
-      -# CAP parent permission warnings
+      -# CAP parental permission warnings
       - if current_user
-        = render_pre_lockdown_parent_permission_modal(current_user, request)
+        = render_parental_permission_modal(current_user, request)
 
       - page = yield
 

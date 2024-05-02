@@ -6,7 +6,7 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {Meta, StoryFn} from '@storybook/react';
 import {Provider} from 'react-redux';
-import PreLockdownParentPermissionModal from './index';
+import ParentalPermissionModal from './index';
 
 const store = getStore();
 registerReducers({currentUser});
@@ -18,7 +18,7 @@ store.dispatch(
 );
 
 export default {
-  component: PreLockdownParentPermissionModal,
+  component: ParentalPermissionModal,
   decorators: [
     (Story: StoryFn) => (
       <Provider store={store}>
@@ -33,7 +33,7 @@ const useReducerStub = sinon.stub(React, 'useReducer');
 const Template = (state: object = {}) => {
   useReducerStub.returns([state, spy]);
 
-  return <PreLockdownParentPermissionModal lockoutDate={new Date()} />;
+  return <ParentalPermissionModal lockoutDate={new Date()} />;
 };
 
 export const NewRequestForm = () => {

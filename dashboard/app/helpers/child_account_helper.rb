@@ -3,8 +3,8 @@ module ChildAccountHelper
   # @param user [User] the student (child) account
   # @param request [ActionDispatch::Request] the web request
   # @return [String] the HTML for the pre-lockdown parent permission modal
-  def render_pre_lockdown_parent_permission_modal(user, request)
-    force_display = request.params.key?(:show_pre_lockdown_parent_permission_modal)
+  def render_parental_permission_modal(user, request)
+    force_display = request.params.key?(:show_parental_permission_modal)
     student_lockout_date = Policies::ChildAccount.lockout_date(user)
 
     if force_display
@@ -15,7 +15,7 @@ module ChildAccountHelper
       return if Policies::ChildAccount::ComplianceState.request_sent?(user)
     end
 
-    render partial: 'policy_compliance/pre_lockdown/parent_permission_modal',
+    render partial: 'policy_compliance/parental_permission/modal',
            locals: {student_uuid: user.uuid, lockout_date: student_lockout_date, force_display: force_display}
   end
 end

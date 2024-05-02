@@ -1,7 +1,7 @@
 @import 'color';
 @import 'font';
 
-#pre-lockdown-parental-permission-modal {
+#parental-permission-modal {
   $icon-font-path: 'bootstrap-sass/assets/fonts/bootstrap/';
 
   @import 'bootstrap-sass/assets/stylesheets/bootstrap'; // stylelint-disable-line no-invalid-position-at-import-rule
@@ -82,7 +82,7 @@
         line-height: 21px;
       }
 
-      & #parent-permission-request {
+      & #parental-permission-request {
         margin: 32px 0;
 
         & .form-group-lg {
@@ -105,7 +105,7 @@
             padding: unset;
           }
 
-          &#parent-permission-request-status {
+          &#parental-permission-request-status {
             & .form-control-static {
               font-size: $font-size;
               font-weight: $font-weight;
@@ -124,7 +124,7 @@
             }
           }
 
-          &#parent-permission-request-email {
+          &#parental-permission-request-email {
             margin-bottom: 32px;
 
             & #last-email-sent-at {

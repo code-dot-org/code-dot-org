@@ -31,13 +31,13 @@ import parentalPermissionRequestReducer, {
 
 import './index.scss';
 
-interface PreLockdownParentPermissionModalProps {
+interface ParentalPermissionModalProps {
   lockoutDate: Date;
 }
 
-const PreLockdownParentPermissionModal: React.FC<
-  PreLockdownParentPermissionModalProps
-> = ({lockoutDate}) => {
+const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
+  lockoutDate,
+}) => {
   const currentUser = getStore().getState().currentUser;
   const initConsentStatus = currentUser.childAccountComplianceState;
   const [show, setShow] = useState(true);
@@ -148,7 +148,7 @@ const PreLockdownParentPermissionModal: React.FC<
 
     return (
       <FormGroup
-        id="parent-permission-request-status"
+        id="parental-permission-request-status"
         className="row"
         bsSize="large"
       >
@@ -171,7 +171,7 @@ const PreLockdownParentPermissionModal: React.FC<
     const lastEmailSentAt = isLoading ? (
       <Skeleton />
     ) : (
-      i18n.policyCompliance_preLockdown_parentPermissionModal_lastEmailSentAt({
+      i18n.policyCompliance_parentalPermissionModal_lastEmailSentAt({
         sendingTime: moment(parentalPermissionRequest.requested_at)
           .lang(currentLocale)
           .format('lll'),
@@ -184,7 +184,7 @@ const PreLockdownParentPermissionModal: React.FC<
   const parentEmailField = () => {
     return (
       <FormGroup
-        id="parent-permission-request-email"
+        id="parental-permission-request-email"
         className="row"
         bsSize="large"
       >
@@ -233,26 +233,23 @@ const PreLockdownParentPermissionModal: React.FC<
         >
           <img src={newRequestImg} alt="" aria-hidden="true" />
 
-          <Modal.Title
-            componentClass="h2"
-            id="pre-lockdown-parent-permission-modal-title"
-          >
-            {i18n.policyCompliance_preLockdown_parentPermissionModal_newRequestForm_title()}
+          <Modal.Title componentClass="h2" id="parental-permission-modal-title">
+            {i18n.policyCompliance_parentalPermissionModal_newRequestForm_title()}
           </Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
           <SafeMarkdown
-            markdown={i18n.policyCompliance_preLockdown_parentPermissionModal_newRequestForm_text1(
+            markdown={i18n.policyCompliance_parentalPermissionModal_newRequestForm_text1(
               {lockoutDate: formattedLockoutDate}
             )}
           />
 
           <p>
-            {i18n.policyCompliance_preLockdown_parentPermissionModal_newRequestForm_text2()}
+            {i18n.policyCompliance_parentalPermissionModal_newRequestForm_text2()}
           </p>
 
-          <div id="parent-permission-request">
+          <div id="parental-permission-request">
             {permissionRequestStatusBlock()}
 
             {parentEmailField()}
@@ -281,28 +278,25 @@ const PreLockdownParentPermissionModal: React.FC<
         >
           <img src={updateRequestImg} alt="" aria-hidden="true" />
 
-          <Modal.Title
-            componentClass="h2"
-            id="pre-lockdown-parent-permission-modal-title"
-          >
-            {i18n.policyCompliance_preLockdown_parentPermissionModal_updateRequestForm_title()}
+          <Modal.Title componentClass="h2" id="parental-permission-modal-title">
+            {i18n.policyCompliance_parentalPermissionModal_updateRequestForm_title()}
           </Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
           <p>
-            {i18n.policyCompliance_preLockdown_parentPermissionModal_updateRequestForm_text1(
+            {i18n.policyCompliance_parentalPermissionModal_updateRequestForm_text1(
               {lockoutDate: formattedLockoutDate}
             )}
           </p>
 
-          <div id="parent-permission-request">
+          <div id="parental-permission-request">
             {permissionRequestStatusBlock()}
 
             {parentEmailField()}
 
             <SafeMarkdown
-              markdown={i18n.policyCompliance_preLockdown_parentPermissionModal_updateRequestForm_text2(
+              markdown={i18n.policyCompliance_parentalPermissionModal_updateRequestForm_text2(
                 {profileUrl: studio('/users/edit')}
               )}
             />
@@ -342,8 +336,8 @@ const PreLockdownParentPermissionModal: React.FC<
 
       <Fade in={show} mountOnEnter unmountOnExit>
         <Modal.Dialog
-          id="pre-lockdown-parental-permission-modal"
-          aria-labelledby="pre-lockdown-parent-permission-modal-title"
+          id="parental-permission-modal"
+          aria-labelledby="parental-permission-modal-title"
         >
           {permissionRequestForm()}
         </Modal.Dialog>
@@ -352,8 +346,8 @@ const PreLockdownParentPermissionModal: React.FC<
   );
 };
 
-PreLockdownParentPermissionModal.propTypes = {
+ParentalPermissionModal.propTypes = {
   lockoutDate: PropTypes.instanceOf(Date).isRequired,
 };
 
-export default PreLockdownParentPermissionModal;
+export default ParentalPermissionModal;
