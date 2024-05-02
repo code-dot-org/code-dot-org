@@ -13,8 +13,9 @@ import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import Lab2Registry from '../../lab2/Lab2Registry';
 import moduleStyles from './MiniMusicPlayer.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {RGB} from '../types';
 
-const noteImage = require(`@cdo/static/music/music-note.png`);
+import noteImage from '@cdo/static/music/music-note.png';
 
 interface MiniPlayerViewProps {
   projects: Channel[];
@@ -104,6 +105,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     return <div>Loading...</div>;
   }
 
+  function getRadialGradient(from: RGB, to: RGB) {
+    return `radial-gradient(rgb(${from.r}, ${from.g}, ${from.b}), rgb(${to.r}, ${to.g}, ${to.b}))`;
+  }
+
   const getPackImageBackgroundStyle = (packId: string) => {
     const rgb = MusicLibrary.getInstance()?.getPackImageRgb(packId);
 
@@ -111,7 +116,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       return undefined;
     }
 
-    return `radial-gradient(rgb(${rgb.r}, ${rgb.g}, ${rgb.b}), rgb(0,0,0))`;
+    return getRadialGradient(rgb, {r: 0, g: 0, b: 0});
   };
 
   const getPackDetails = (packId: string) => {
@@ -127,6 +132,9 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   return (
     <div className={moduleStyles.miniMusicPlayer}>
       {projects.map(project => {
+        const packId = project?.labConfig?.music.packId;
+        const packDetails = packId ? getPackDetails(packId) : undefined;
+
         return (
           <div
             className={moduleStyles.entry}
@@ -138,14 +146,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
             }}
           >
             <div className={moduleStyles.pack}>
-              {project.labConfig?.music?.packId && (
+              {packId && (
                 <img
                   src={noteImage}
                   className={moduleStyles.packImage}
                   style={{
-                    background: getPackImageBackgroundStyle(
-                      project.labConfig.music.packId
-                    ),
+                    background: getPackImageBackgroundStyle(packId),
                   }}
                   alt=""
                 />
@@ -162,10 +168,9 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
             <div className={moduleStyles.body}>
               <div className={moduleStyles.name}>{project.name}</div>
-              {project.labConfig?.music?.packId && (
+              {packDetails && (
                 <div className={moduleStyles.details}>
-                  {getPackDetails(project.labConfig.music.packId)?.name} &bull;{' '}
-                  {getPackDetails(project.labConfig.music.packId)?.artist}
+                  {packDetails.name} &bull; {packDetails.artist}
                 </div>
               )}
             </div>

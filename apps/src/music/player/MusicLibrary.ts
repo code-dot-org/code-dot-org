@@ -2,6 +2,7 @@ import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
 import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
 import {getBaseAssetUrl} from '../appConfig';
+import {RGB} from '../types';
 
 export default class MusicLibrary {
   private static instance: MusicLibrary;
@@ -304,12 +305,6 @@ export interface SoundData {
 }
 
 export type SoundFolderType = 'sound' | 'kit' | 'instrument';
-
-interface RGB {
-  r: number;
-  g: number;
-  b: number;
-}
 
 export interface SoundFolder {
   name: string;
