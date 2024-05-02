@@ -1,10 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import {
-  Heading2,
-  BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';

@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import {BodyTwoText, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyTwoText,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import classNames from 'classnames';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
