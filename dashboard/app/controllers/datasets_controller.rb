@@ -7,7 +7,6 @@ require 'uri'
 class DatasetsController < ApplicationController
   before_action :authenticate_user!
   before_action :require_levelbuilder_mode
-  # before_action :initialize_firebase
   authorize_resource class: false
 
   LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide',
@@ -70,16 +69,13 @@ class DatasetsController < ApplicationController
   end
 
   # POST /datasets/manifest/update
-  # TODO: unfirebase, #56998
   def update_manifest
     parsed_manifest = JSON.parse(params['manifest'])
-    response = @firebase.set_library_manifest parsed_manifest
-    render json: {}, status: response.code
+    db_manifest = DatablockStorageLibraryManifest.instance
+    db_manifest.library_manifest = parsed_manifest
+    db_manifest.save!
+    render json: {}
   rescue JSON::ParserError
     render json: {msg: 'Invalid JSON'}
-  end
-
-  private def initialize_firebase
-    @firebase = FirebaseHelper.new('shared')
   end
 end
