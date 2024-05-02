@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "sandbox-coding-with-ai",
-    "serialized_at": "2024-04-22 19:41:49 UTC",
+    "serialized_at": "2024-05-01 15:20:16 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -532,6 +532,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-lesson2_DigitalJournal"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1054,6 +1057,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-bestpractice2"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1076,6 +1082,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-bestpractice3"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,

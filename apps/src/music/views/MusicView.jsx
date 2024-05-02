@@ -108,6 +108,7 @@ class UnconnectedMusicView extends React.Component {
     setUndoStatus: PropTypes.func,
     showCallout: PropTypes.func,
     clearCallout: PropTypes.func,
+    isPlayView: PropTypes.bool,
   };
 
   constructor(props) {
@@ -271,13 +272,15 @@ class UnconnectedMusicView extends React.Component {
     }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
-    this.musicBlocklyWorkspace.init(
-      document.getElementById(BLOCKLY_DIV_ID),
-      this.onBlockSpaceChange,
-      this.props.isReadOnlyWorkspace,
-      levelData?.toolbox,
-      this.props.isRtl
-    );
+    this.props.isPlayView
+      ? this.musicBlocklyWorkspace.initHeadless()
+      : this.musicBlocklyWorkspace.init(
+          document.getElementById(BLOCKLY_DIV_ID),
+          this.onBlockSpaceChange,
+          this.props.isReadOnlyWorkspace,
+          levelData?.toolbox,
+          this.props.isRtl
+        );
 
     this.library.setAllowedSounds(levelData?.sounds);
     this.props.setShowInstructions(
@@ -295,6 +298,10 @@ class UnconnectedMusicView extends React.Component {
       }
       this.loadCode(codeToLoad);
     }
+
+    // Go ahead and compile and execute the initial song once code is loaded.
+    this.compileSong();
+    this.executeCompiledSong();
 
     Globals.setShowSoundFilters(
       AppConfig.getValue('show-sound-filters') !== 'false' &&
@@ -703,6 +710,7 @@ const MusicView = connect(
     isProjectLevel: state.lab.levelProperties?.isProjectLevel,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     startingPlayheadPosition: state.music.startingPlayheadPosition,
+    isPlayView: state.lab.isShareView,
   }),
   dispatch => ({
     setLibraryName: libraryName => dispatch(setLibraryName(libraryName)),
