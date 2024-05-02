@@ -14,21 +14,25 @@ const ProgressSlider: React.FunctionComponent<ProgressSliderProps> = ({
   value,
   sliderWidth,
 }) => {
-  let progressValue = value;
+  let checkedValue = value;
   if (value < min) {
-    progressValue = min;
+    checkedValue = min;
   } else if (value > max) {
-    progressValue = max;
+    checkedValue = max;
   }
+  const progressPercent = ((checkedValue - min) / (max - min)) * 100;
+  const progressValue = ((checkedValue - min) / (max - min)) * sliderWidth;
   return (
     <div className={moduleStyles.slider}>
       <div
         className={moduleStyles.progressBar}
-        style={{width: `${progressValue}%`}}
+        style={{width: `${progressPercent}%`}}
       />
       <div
         className={moduleStyles.playhead}
-        style={{left: (progressValue / 100) * sliderWidth}}
+        style={{
+          left: progressValue,
+        }}
       />
     </div>
   );
