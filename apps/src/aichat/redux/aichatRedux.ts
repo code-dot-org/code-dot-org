@@ -11,7 +11,10 @@ import {
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiInteractionStatus as Status,
+  AichatErrorType,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
@@ -277,49 +280,19 @@ export const submitChatContents = createAsyncThunk(
       currentSessionId
     );
 
-    thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-    thunkAPI.dispatch(
-      updateChatMessageSession({
-        id: newMessage.id,
-        sessionId: chatApiResponse.session_id,
-      })
-    );
-
-    // add new assistant error message
-    // update status of user message to error
-    // question: how is logging state managed?
-    // question: should all this stuff be in the catch?
-    if (chatApiResponse?.status === 'profanity_model') {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: getCurrentTimestamp(),
-        // session id here?
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
+    // Regardless of response type,
+    // assign last user message to session.
+    if (chatApiResponse.session_id) {
+      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
       thunkAPI.dispatch(
-        updateUserChatMessageStatus({
+        updateChatMessageSession({
           id: newMessage.id,
-          status: Status.ERROR,
+          sessionId: chatApiResponse.session_id,
         })
       );
     }
 
-    if (chatApiResponse?.status === 'profanity') {
-      // Logging to allow visibility into flagged content.
-      console.log(chatApiResponse);
-
-      return thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.PROFANITY_VIOLATION,
-        })
-      );
-    }
-
+    // success state: received response from model ("assistant")
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
         id: getNewMessageId(),
@@ -329,7 +302,37 @@ export const submitChatContents = createAsyncThunk(
         timestamp: getCurrentTimestamp(),
         sessionId: chatApiResponse.session_id,
       };
-      return thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+
+      // error state #1: model generated profanity
+    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: getNewMessageId(),
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: getCurrentTimestamp(),
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.ERROR,
+        })
+      );
+
+      // error state #2: user message contained profanity
+    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
+      // Logging to allow visibility into flagged content.
+      console.log(chatApiResponse);
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.PROFANITY_VIOLATION,
+        })
+      );
     }
   }
 );
