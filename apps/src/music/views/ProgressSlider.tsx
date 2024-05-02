@@ -2,12 +2,22 @@ import React, {memo} from 'react';
 import moduleStyles from './progress-slider.module.scss';
 
 interface ProgressSliderProps {
-  progressValue: number;
+  min: number;
+  max: number;
+  value: number;
 }
 
 const ProgressSlider: React.FunctionComponent<ProgressSliderProps> = ({
-  progressValue,
+  min,
+  max,
+  value,
 }) => {
+  let progressValue = value;
+  if (value < min) {
+    progressValue = min;
+  } else if (value > max) {
+    progressValue = max;
+  }
   return (
     <div className={moduleStyles.slider}>
       <div

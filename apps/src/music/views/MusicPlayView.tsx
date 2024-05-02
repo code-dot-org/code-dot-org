@@ -23,14 +23,9 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const progressSliderValue = useAppSelector(state => {
     const {currentPlayheadPosition, lastMeasure} = state.music;
-    const value =
-      lastMeasure === 1
-        ? 0
-        : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
-    if (value < 0) {
-      return 0;
-    }
-    return Math.min(value, 100);
+    return lastMeasure === 1
+      ? 0
+      : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
   });
 
   const projectName = useAppSelector(state => state.lab.channel?.name);
@@ -103,7 +98,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               type="secondary"
               className={moduleStyles.playViewButton}
             />
-            <ProgressSlider progressValue={progressSliderValue} />
+            <ProgressSlider min={0} max={100} value={progressSliderValue} />
           </div>
 
           <div className={moduleStyles.buttonsSection}>
