@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import classNames from 'classnames';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
@@ -9,7 +9,6 @@ import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {ZIP_REGEX} from '@cdo/apps/geographyConstants';
 
 export const SELECT_A_SCHOOL = 'selectASchool';
 export const CLICK_TO_ADD = 'clickToAdd';
@@ -18,12 +17,14 @@ const SEARCH_DEFAULTS = [
   {value: CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
+const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
 
-export default function SchoolZipSearch({fieldNames, zip}) {
+export default function SchoolZipSearch({fieldNames}) {
   const [selectedSchoolNcesId, setSelectedSchoolNcesId] =
     useState(SELECT_A_SCHOOL);
   const [inputManually, setInputManually] = useState(false);
   const [dropdownSchools, setDropdownSchools] = useState([]);
+  const [zip, setZip] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
 
   useEffect(() => {
@@ -97,6 +98,25 @@ export default function SchoolZipSearch({fieldNames, zip}) {
 
   return (
     <div>
+      <label>
+        <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
+          {i18n.enterYourSchoolZip()}
+        </BodyTwoText>
+        <input
+          id="uitest-school-zip"
+          type="text"
+          name={fieldNames.schoolZip}
+          onChange={e => {
+            setZip(e.target.value);
+          }}
+          value={zip}
+        />
+        {zip && isDisabled && (
+          <BodyThreeText className={style.errorMessage}>
+            {i18n.zipInvalidMessage()}
+          </BodyThreeText>
+        )}
+      </label>
       {!inputManually && (
         <div>
           <BodyTwoText
@@ -158,5 +178,4 @@ export default function SchoolZipSearch({fieldNames, zip}) {
 
 SchoolZipSearch.propTypes = {
   fieldNames: PropTypes.object,
-  zip: PropTypes.string.isRequired,
 };

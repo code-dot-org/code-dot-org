@@ -4,11 +4,10 @@ import i18n from '@cdo/locale';
 import {
   Heading2,
   BodyTwoText,
-  BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {COUNTRIES, ZIP_REGEX} from '@cdo/apps/geographyConstants';
+import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -25,9 +24,7 @@ export default function SchoolDataInputs({
 }) {
   const [askForZip, setAskForZip] = useState(false);
   const [isOutsideUS, setIsOutsideUS] = useState(false);
-  const [zip, setZip] = useState('');
   const [country, setCountry] = useState('');
-  const [zipSearchReady, setZipSearchReady] = useState(false);
 
   // Add 'Select a country' and 'United States' to the top of the country list
   let COUNTRY_ITEMS = [
@@ -41,15 +38,6 @@ export default function SchoolDataInputs({
   for (const item of nonUsCountries) {
     COUNTRY_ITEMS.push({value: item.label, text: item.value});
   }
-
-  useEffect(() => {
-    const isValidZip = ZIP_REGEX.test(zip);
-    if (isValidZip) {
-      setZipSearchReady(true);
-    } else {
-      setZipSearchReady(false);
-    }
-  }, [zip]);
 
   const onCountryChange = e => {
     const country = e.target.value;
@@ -94,34 +82,12 @@ export default function SchoolDataInputs({
         />
         {askForZip && (
           <div>
-            <label>
-              <BodyTwoText
-                className={style.padding}
-                visualAppearance={'heading-xs'}
-              >
-                {i18n.enterYourSchoolZip()}
-              </BodyTwoText>
-              <input
-                id="uitest-school-zip"
-                type="text"
-                name={fieldNames.schoolZip}
-                onChange={e => {
-                  setZip(e.target.value);
-                }}
-                value={zip}
-              />
-              {zip && !zipSearchReady && (
-                <BodyThreeText className={style.errorMessage}>
-                  {i18n.zipInvalidMessage()}
-                </BodyThreeText>
-              )}
-            </label>
             <SchoolZipSearch
               fieldNames={{
+                schoolZip: fieldNames.schoolZip,
                 ncesSchoolId: fieldNames.ncesSchoolId,
                 schoolName: fieldNames.schoolName,
               }}
-              zip={zip}
             />
           </div>
         )}
