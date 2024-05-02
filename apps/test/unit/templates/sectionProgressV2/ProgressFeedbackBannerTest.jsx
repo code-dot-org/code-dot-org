@@ -152,9 +152,7 @@ describe('UnconnectedProgressFeedbackBanner', () => {
     );
     expect(thumbsUpButton).to.be.visible;
     fireEvent.click(thumbsUpButton);
-    await waitFor(() => {
-      expect(fakeCreate).to.have.been.calledOnce;
-    });
+    expect(fakeCreate).to.have.been.calledOnce;
 
     // Close the banner
     const closeButton = screen.getByText('×');
@@ -172,24 +170,33 @@ describe('UnconnectedProgressFeedbackBanner', () => {
     });
   });
 
-  // TODO: Fix test after Liam updates component
-  // it('attempts reset and reload if error from createFeedback', () => {
-  //   const {rerender} = render(
-  //     <UnconnectedProgressFeedbackBanner {...defaultProps} />
-  //   );
-  //   rerender(
-  //     <UnconnectedProgressFeedbackBanner
-  //       {...defaultProps}
-  //       errorWhenCreatingOrLoading={'This produced an error.'}
-  //     />
-  //   );
-  //   const questionText = screen.queryByText(
-  //     i18n.progressV2_feedback_question()
-  //   );
-  //   const shareMoreText = screen.queryByText(
-  //     i18n.progressV2_feedback_shareMore()
-  //   );
-  //   expect(questionText).to.not.exist;
-  //   expect(shareMoreText).to.not.exist;
-  // });
+  it('attempts reset and reload if error from createFeedback', async () => {
+    const {rerender} = render(
+      <UnconnectedProgressFeedbackBanner
+        {...defaultProps}
+        errorWhenCreatingOrLoading={null}
+        fetchProgressV2Feedback={fakeFetch}
+      />
+    );
+
+    // Give feedback
+    const thumbsUpButton = screen.getByTitle(
+      i18n.progressV2_feedback_thumbsUp()
+    );
+    expect(thumbsUpButton).to.be.visible;
+    fireEvent.click(thumbsUpButton);
+
+    rerender(
+      <UnconnectedProgressFeedbackBanner
+        {...defaultProps}
+        errorWhenCreatingOrLoading={'This produced an error.'}
+        fetchProgressV2Feedback={fakeFetch}
+      />
+    );
+
+    await waitFor(() => {
+      expect(fakeFetch).to.have.been.calledTwice;
+    });
+    expect(screen.getByText(i18n.progressV2_feedback_question())).to.be.visible;
+  });
 });

@@ -18,6 +18,7 @@ import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import style from './landingPage.module.scss';
 import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
@@ -199,6 +200,43 @@ function LandingPage({
     );
   };
 
+  const RenderRegionalPartnerResources = () => {
+    const resources = [
+      {
+        headingText: i18n.plSectionsRegionalPartnerApplicationTitle(),
+        descriptionText: i18n.plSectionsRegionalPartnerApplicationDesc(),
+        buttonText: i18n.plSectionsRegionalPartnerApplicationButton(),
+        buttonUrl: '/pd/application_dashboard',
+      },
+      {
+        headingText: i18n.plSectionsRegionalPartnerWorkshopTitle(),
+        descriptionText: i18n.plSectionsRegionalPartnerWorkshopDesc(),
+        buttonText: i18n.plSectionsRegionalPartnerWorkshopButton(),
+        buttonUrl: '/pd/workshop_dashboard',
+      },
+      {
+        headingText: i18n.plSectionsRegionalPartnerPlaybookTitle(),
+        descriptionText: i18n.plSectionsRegionalPartnerPlaybookDesc(),
+        buttonText: i18n.plSectionsRegionalPartnerPlaybookButton(),
+        buttonUrl: pegasus('/educate/regional-partner/playbook'),
+      },
+    ];
+    return (
+      <>
+        {resources.map((resource, index) => (
+          <BorderedCallToAction
+            key={index}
+            headingText={resource.headingText}
+            descriptionText={resource.descriptionText}
+            buttonText={resource.buttonText}
+            buttonUrl={resource.buttonUrl}
+            solidBorder={true}
+          />
+        ))}
+      </>
+    );
+  };
+
   const RenderMyPlTab = () => {
     return (
       <>
@@ -251,6 +289,10 @@ function LandingPage({
     return (
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        <section>
+          <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
+          {RenderRegionalPartnerResources()}
+        </section>
         {workshopsAsRegionalPartner?.length > 0 && (
           <EnrolledWorkshopsTable
             workshops={workshopsAsRegionalPartner}

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-foudations-pilot-v1",
-    "serialized_at": "2024-04-24 23:53:57 UTC",
+    "serialized_at": "2024-05-01 22:15:52 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -838,6 +838,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "dde39cdb-7273-4b98-8bff-ffabdd6f99b4",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "5b18a66f-252d-4fac-ae42-280aa12734fe",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b18a66f-252d-4fac-ae42-280aa12734fe",
         "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "gen-ai-foudations-pilot-v1"
@@ -2237,6 +2250,30 @@
       "seeding_key": {
         "activity_section.key": "6de4cf4c-fb76-4f59-b1b2-b08ba2d5eb73",
         "lesson_activity.key": "dde39cdb-7273-4b98-8bff-ffabdd6f99b4"
+      }
+    },
+    {
+      "key": "e652bee3-54ac-41fd-bd22-f49b6d641a6c",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the project**](https://docs.google.com/forms/d/e/1FAIpQLSecvMR4JoSFcE1HwG6LkSbWmHTTZwdzp31pTgIxLQBm27zqIw/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)",
+        "name": "Post-Project Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "e652bee3-54ac-41fd-bd22-f49b6d641a6c",
+        "lesson_activity.key": "5b18a66f-252d-4fac-ae42-280aa12734fe"
+      }
+    },
+    {
+      "key": "313c445e-2d69-46dc-843f-29e5e7a6ff23",
+      "position": 2,
+      "properties": {
+        "description": "Congratulations on finishing the unit! \n- **For Teachers:** [Please complete this final survey](https://docs.google.com/forms/d/e/1FAIpQLSdWJGsjTdlxdP2n_n1Wh4HxfnigkeRH9lLDzJuFBug0fp46ew/viewform) to provide holistic feedback on the unit. This is the final step before we send an Amazon gift card!\n- **For Students:** Please provide students with access to this survey: [https://bit.ly/gen-ai-student-survey-post-unit](https://bit.ly/gen-ai-student-survey-post-unit). This survey includes a few open-ended questions, so is best completed at a computer.",
+        "name": "Post-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "313c445e-2d69-46dc-843f-29e5e7a6ff23",
+        "lesson_activity.key": "5b18a66f-252d-4fac-ae42-280aa12734fe"
       }
     }
   ],

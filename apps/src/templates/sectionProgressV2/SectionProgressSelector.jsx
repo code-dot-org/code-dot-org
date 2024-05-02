@@ -14,7 +14,7 @@ import i18n from '@cdo/locale';
 import SectionProgress from '../sectionProgress/SectionProgress';
 
 import InviteToV2ProgressModal from './InviteToV2ProgressModal';
-import ProgressFeedbackBanner from './ProgressFeedbackBanner';
+import ProgressBanners from './ProgressBanners';
 import SectionProgressV2 from './SectionProgressV2';
 
 import styles from './progress-header.module.scss';
@@ -25,9 +25,7 @@ function SectionProgressSelector({
   progressTableV2ClosedBeta,
   sectionId,
 }) {
-  // Only show the feedback banner's default state if the user has not manually selected a view.
-  const [showFeedbackBannerLocked, setShowFeedbackBannerLocked] =
-    React.useState(false);
+  const [toggleUsed, setToggleUsed] = React.useState(false);
 
   const onShowProgressTableV2Change = useCallback(
     e => {
@@ -35,7 +33,7 @@ function SectionProgressSelector({
       const shouldShowV2 = !showProgressTableV2;
       new UserPreferences().setShowProgressTableV2(shouldShowV2);
       setShowProgressTableV2(shouldShowV2);
-      setShowFeedbackBannerLocked(true);
+      setToggleUsed(true);
 
       if (shouldShowV2) {
         analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
@@ -84,11 +82,10 @@ function SectionProgressSelector({
       </Link>
     </div>
   );
+
   return (
     <div className={styles.pageContent}>
-      <ProgressFeedbackBanner
-        canShow={showFeedbackBannerLocked ? false : displayV2}
-      />
+      {displayV2 && <ProgressBanners toggleUsed={toggleUsed} />}
       {toggleV1OrV2Link()}
 
       {displayV2 ? (

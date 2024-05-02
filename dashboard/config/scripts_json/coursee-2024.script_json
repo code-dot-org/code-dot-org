@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-04-16 20:16:31 UTC",
+    "serialized_at": "2024-05-01 17:49:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8864,7 +8864,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursee-2023/resources",
+      "url": "/s/coursee-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8875,7 +8875,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursee-2023/standards",
+      "url": "/s/coursee-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8886,7 +8886,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursee-2023/vocab",
+      "url": "/s/coursee-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
