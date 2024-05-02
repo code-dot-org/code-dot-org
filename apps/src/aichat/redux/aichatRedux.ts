@@ -265,22 +265,31 @@ export const submitChatContents = createAsyncThunk(
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
-    let chatApiResponse;
-    try {
-      chatApiResponse = await postAichatCompletionMessage(
-        newUserMessageText,
-        currentSessionId
-          ? storedMessages.filter(
-              message => message.sessionId === currentSessionId
-            )
-          : [],
-        aiCustomizations,
-        aichatContext,
-        currentSessionId
-      );
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (e: any) {
-      const response = await e.response.json();
+    const chatApiResponse = await postAichatCompletionMessage(
+      newUserMessageText,
+      currentSessionId
+        ? storedMessages.filter(
+            message => message.sessionId === currentSessionId
+          )
+        : [],
+      aiCustomizations,
+      aichatContext,
+      currentSessionId
+    );
+
+    thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
+    thunkAPI.dispatch(
+      updateChatMessageSession({
+        id: newMessage.id,
+        sessionId: chatApiResponse.session_id,
+      })
+    );
+
+    // add new assistant error message
+    // update status of user message to error
+    // question: how is logging state managed?
+    // question: should all this stuff be in the catch?
+    if (chatApiResponse?.status === 'profanity_model') {
       const assistantChatMessage: ChatCompletionMessage = {
         id: getNewMessageId(),
         role: Role.ASSISTANT,
@@ -297,28 +306,7 @@ export const submitChatContents = createAsyncThunk(
           status: Status.ERROR,
         })
       );
-
-      thunkAPI.dispatch(setChatSessionId(response.session_id));
-      thunkAPI.dispatch(
-        updateChatMessageSession({
-          id: newMessage.id,
-          sessionId: response.session_id,
-        })
-      );
-      return;
-      // add new assistant error message
-      // update status of user message to error
-      // question: how is logging state managed?
-      // question: should all this stuff be in the catch?
     }
-
-    thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-    thunkAPI.dispatch(
-      updateChatMessageSession({
-        id: newMessage.id,
-        sessionId: chatApiResponse.session_id,
-      })
-    );
 
     if (chatApiResponse?.status === 'profanity') {
       // Logging to allow visibility into flagged content.
