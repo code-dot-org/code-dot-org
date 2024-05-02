@@ -49,29 +49,29 @@ function InviteToV2ProgressModal({
     setInvitationOpen(showInvitation());
   }, [dateProgressTableInvtationDelayed, hasSeenProgressTableInvite]);
 
-  const handleDismiss = () => {
+  const handleDismiss = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
-      sectionId: sectionId,
+      sectionId,
     });
     setHasSeenProgressTableInvite();
     setInvitationOpen(false);
-  };
+  }, [sectionId]);
 
-  const handleAcceptedInvitation = () => {
+  const handleAcceptedInvitation = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
-      sectionId: sectionId,
+      sectionId,
     });
     setHasSeenProgressTableInvite();
     setShowProgressTableV2(true);
-  };
+  }, [sectionId, setShowProgressTableV2]);
 
-  const handleDelayInvitation = () => {
+  const handleDelayInvitation = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DELAY_INVITATION, {
-      sectionId: sectionId,
+      sectionId,
     });
-    setInvitationOpen(false);
     setDateInvitationDelayed(new Date());
-  };
+    setInvitationOpen(false);
+  }, [sectionId]);
 
   const setDateInvitationDelayed = date => {
     return $.post(`/api/v1/users/date_progress_table_invitation_last_delayed`, {
@@ -87,7 +87,7 @@ function InviteToV2ProgressModal({
 
   if (invitationOpen) {
     return (
-      <AccessibleDialog onClose={handleDismiss} className={styles.modal}>
+      <AccessibleDialog onClose={() => {}} className={styles.modal}>
         <div
           role="region"
           aria-label={i18n.directionsForAssigningSections()}

@@ -41,7 +41,8 @@ const SECTION_PROGRESS = 'SectionProgress';
  */
 class SectionProgress extends Component {
   static propTypes = {
-    setShowProgressTableV2: PropTypes.func.isRequired,
+    setShowProgressTableV2: PropTypes.func,
+    allowUserToSelectV2View: PropTypes.bool.isRequired,
 
     //Provided by redux
     scriptId: PropTypes.number,
@@ -164,6 +165,7 @@ class SectionProgress extends Component {
       scriptData,
       sectionId,
       showStandardsIntroDialog,
+      allowUserToSelectV2View,
     } = this.props;
     const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
@@ -180,10 +182,12 @@ class SectionProgress extends Component {
         className={dashboardStyles.dashboardPage}
         data-testid="section-progress-v1"
       >
-        <InviteToV2ProgressModal
-          setShowProgressTableV2={this.props.setShowProgressTableV2}
-          sectionId={sectionId}
-        />
+        {allowUserToSelectV2View && (
+          <InviteToV2ProgressModal
+            setShowProgressTableV2={this.props.setShowProgressTableV2}
+            sectionId={sectionId}
+          />
+        )}
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
