@@ -1,6 +1,7 @@
 // Extensions & Mutator Names
 
 export const DEFAULT_TRACK_NAME_EXTENSION = 'default_track_name_extension';
+export const EFFECTS_FIELD_EXTENSION = 'effects_field_extension';
 export const PLAY_MULTI_MUTATOR = 'play_multi_mutator';
 
 // Field / Input Names
@@ -51,4 +52,24 @@ export const TriggerStart = {
   IMMEDIATELY: 'immediately',
   NEXT_BEAT: 'next_beat',
   NEXT_MEASURE: 'next_measure',
+};
+
+export const DEFAULT_EFFECT_VALUE = 'normal';
+
+export const FIELD_EFFECTS_OPTIONS = {
+  volume: [
+    ['Full', DEFAULT_EFFECT_VALUE],
+    ['Medium', 'medium'],
+    ['Low', 'low'],
+  ],
+  filter: [
+    ['Off', DEFAULT_EFFECT_VALUE],
+    ['Medium', 'medium'],
+    ['Low', 'low'],
+  ],
+  delay: [
+    ['Off', DEFAULT_EFFECT_VALUE],
+    ['High', 'medium'],
+    ['Low', 'low'],
+  ],
 };

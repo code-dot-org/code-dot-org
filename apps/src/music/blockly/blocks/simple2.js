@@ -10,6 +10,7 @@ import {
   DOCS_BASE_URL,
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
+  EFFECTS_FIELD_EXTENSION,
 } from '../constants';
 import {
   fieldSoundsDefinition,
@@ -217,13 +218,8 @@ export const setEffectAtCurrentLocationSimple2 = {
         ],
       },
       {
-        type: 'field_dropdown',
+        type: 'input_dummy',
         name: FIELD_EFFECTS_VALUE,
-        options: [
-          ['normal', 'normal'],
-          ['medium', 'medium'],
-          ['low', 'low'],
-        ],
       },
     ],
     inputsInline: true,
@@ -232,6 +228,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockSetEffectTooltip(),
     helpUrl: DOCS_BASE_URL + 'set_effect',
+    extensions: [EFFECTS_FIELD_EXTENSION],
   },
   generator: block => {
     const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
