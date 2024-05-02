@@ -24,6 +24,14 @@ module PartialRegistration
     end
   end
 
+  def self.can_finish_signup?(params, session)
+    if DCDO.get('student-email-post-enabled', false)
+      params&.dig(:user)&.dig(:email)&.present? && in_progress?(session)
+    else
+      in_progress?(session)
+    end
+  end
+
   def self.in_progress?(session)
     session[SESSION_KEY] && CDO.shared_cache.exist?(session[SESSION_KEY])
   end
