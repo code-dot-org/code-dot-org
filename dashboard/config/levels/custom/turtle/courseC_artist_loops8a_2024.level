@@ -1,5 +1,6 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
   "game_id": 23,
   "created_at": "2024-04-03T21:24:59.000Z",
   "level_num": "custom",
@@ -44,11 +45,13 @@
     "show_type_hints": "false",
     "encrypted_examples": "nIAPyc4HvGI6gUF3iQ/AEA1Xtx97o0xiNvoLO1ayOlelGoDuYbnlr77oXmTu\nAaCF1Y/ev0uLPfWwF4h2cSznz87nARWhp7FCNbkNidiMB9sghBjEQcwenKZm\npV+eDQoNpLKNT8UULnqFZjBcnkhjzglZarK0thbMCxZh15PEFpZ2GPGL+xdW\n1+5VPDxRPVsLGsp2XFLzCnmdc0mFrA4GGDhFUQs9iSS2A419oIioMEMwUBuv\nXjCb30D3xRDXbaeRMb3Nvb7HutYrTZno2MGAbw==\n",
     "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \r\n\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \r\n* Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
+    "hint_prompt_attempts_threshold": "1",
+    "validation_enabled": "false",
+    "enable_download_image": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:24:59.558+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_loops8a_2023\\\"\"],\"cloned_from\":\"courseC_artist_loops8a_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:24:59.558+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_loops8a_2023\\\"\"],\"cloned_from\":\"courseC_artist_loops8a_2023\"},{\"changed_at\":\"2024-04-16 19:43:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-04-16 19:44:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1

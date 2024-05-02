@@ -13,13 +13,19 @@
 
   textarea {
     @extend %full-width;
-    height: 100px;
+    height: 120px;
+    min-height: 50px;
     resize: vertical;
     margin: 0;
+    border-radius: 4px;
+    border-color: $light_black;
   }
 
   input {
     @extend %full-width;
+    height: 30px;
+    border-radius: 4px;
+    border-color: $light_black;
   }
 
   .inputContainer {
@@ -55,8 +61,20 @@
 
 .selectedModelDropdown {
   @extend %full-width;
+  padding-bottom: 10px;
 }
 
 .updateButton {
   width: 100%;
+  margin: 10px;
+}
+
+.buttonNoMargin {
+  width: 100%;
+  margin: 0;
+}
+
+.compareModelsButton {
+  padding: 5px 16px;
+  margin: 10px 0;
 }

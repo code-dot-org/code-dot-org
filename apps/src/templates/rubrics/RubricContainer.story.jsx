@@ -1,5 +1,5 @@
 import React from 'react';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import RubricContainer from './RubricContainer';
 import {Provider} from 'react-redux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';

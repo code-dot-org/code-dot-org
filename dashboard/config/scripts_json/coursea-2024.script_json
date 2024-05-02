@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2024-04-11 22:56:51 UTC",
+    "serialized_at": "2024-05-01 17:52:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1358,8 +1358,19 @@
       }
     },
     {
-      "key": "a7fae380-3d62-4183-814a-0522d24058e8",
+      "key": "3078b3ab-b006-43e6-8bfa-db4998fbc3c8",
       "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Level 1-12: Skill Building\" slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3078b3ab-b006-43e6-8bfa-db4998fbc3c8",
+        "lesson_activity.key": "e1d24a22-7860-4239-a183-3b1af57f35d3"
+      }
+    },
+    {
+      "key": "a7fae380-3d62-4183-814a-0522d24058e8",
+      "position": 6,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -1453,7 +1464,7 @@
       "key": "35e58f31-731b-418a-ba6a-505e72e8325a",
       "position": 2,
       "properties": {
-        "description": "In this exercise, the class will get map cards that have a pre-defined start space (flurb) and end space (fruit).  Students will need to get the flurbs to the fruit on each card, using the arrows provided.\n\n**Model:**  Select one of the intermediate maps from the Happy Maps Cards worksheet (e.g., #3). Display it for the class and work through the puzzle together.\n\nHave students look at the puzzle, then think-pair-share their solution for how they would get the flurb to the fruit.\n\n**Think:**  This flurb needs to take two steps to get to the fruit. Work with your elbow partner to decide what you think those two steps are.\n\n**Pair:**  Have students discuss with neighbors for about 90 seconds.\n\n**Share:** Ask a few students to describe their algorithm to the class. Move your finger along the displayed map as the students read their steps. Once you have a solution, ask if anyone else came up with a different idea that also works. \n\n\nNow, share with the students that the magic step of changing an algorithm into a program happens when the code is written down using symbols.  Do the students see any symbols on the display?\n\n**Think:** Challenge students to encode the algorithm that they came up with before into symbols, and to write those symbols down in their journals (or on a piece of paper.)\n\n**Pair:** Once students have written down their symbols, ask them to swap with a partner to see if they can follow each others' instructions.\n\n**Share:** Ask for volunteers to come draw their arrows on the board. If the original code doesn't work, spend some time debugging as a class. Students should be familiar with the idea of \"debugging\" from previous lessons, so be sure to use the vocabulary to get them comfortable with it.\n\nOnce the code has been successfully written on the board, congratulate the class on writing their first program together!"
+        "description": "In this exercise, the class will get map cards that have a pre-defined start space (flurb) and end space (fruit).  Students will need to get the flurbs to the fruit on each card, using the arrows provided.\n\n**Model:**  Select one of the intermediate maps from the Happy Maps Cards worksheet (e.g., #3). Display it for the class and work through the puzzle together.\n\nHave students look at the puzzle, then think-pair-share their solution for how they would get the flurb to the fruit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n**Think:**  This flurb needs to take two steps to get to the fruit. Work with your elbow partner to decide what you think those two steps are.\n\n**Pair:**  Have students discuss with neighbors for about 90 seconds.\n\n**Share:** Ask a few students to describe their algorithm to the class. Move your finger along the displayed map as the students read their steps. Once you have a solution, ask if anyone else came up with a different idea that also works. \n\n\nNow, share with the students that the magic step of changing an algorithm into a program happens when the code is written down using symbols.  Do the students see any symbols on the display?\n\n**Think:** Challenge students to encode the algorithm that they came up with before into symbols, and to write those symbols down in their journals (or on a piece of paper.)\n\n**Pair:** Once students have written down their symbols, ask them to swap with a partner to see if they can follow each others' instructions.\n\n**Share:** Ask for volunteers to come draw their arrows on the board. If the original code doesn't work, spend some time debugging as a class. Students should be familiar with the idea of \"debugging\" from previous lessons, so be sure to use the vocabulary to get them comfortable with it.\n\nOnce the code has been successfully written on the board, congratulate the class on writing their first program together!"
       },
       "seeding_key": {
         "activity_section.key": "35e58f31-731b-418a-ba6a-505e72e8325a",
@@ -1561,6 +1572,7 @@
       "key": "29d981ce-177b-4643-b7e4-8972cbecc1ab",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Intro to Code Studio” slide ",
         "name": "Programming with Blocks",
         "progression_name": "Video: Programming with Blocks"
       },
@@ -1573,7 +1585,7 @@
       "key": "238cbcf8-89a6-49a2-9542-7f70dd4613f6",
       "position": 2,
       "properties": {
-        "description": "###Online Puzzles\n\nThis will teach students how to use Code.org to complete online puzzles.\n\nWatch the ***Pair Programming** video with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.",
+        "description": "###Online Puzzles\n\nThis will teach students how to use Code.org to complete online puzzles.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Pair Programming” slide \n\nWatch the ***Pair Programming** video with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1590,6 +1602,7 @@
       "key": "d9c3e17b-1d86-42ba-bea1-d6a7a77df685",
       "position": 3,
       "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide \n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1662,8 +1675,19 @@
       }
     },
     {
-      "key": "cc1c7e9d-e195-4b91-9bb9-da85184a9073",
+      "key": "b0a0fb58-51ac-4c12-bb10-f5405f03eedf",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Pair Programming” slide \n\nWatch the ***Pair Programming** video with your students, then assign them to pairs.  This should help students start off in the right direction.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0a0fb58-51ac-4c12-bb10-f5405f03eedf",
+        "lesson_activity.key": "021bdaaf-d572-478b-a686-5752647570bd"
+      }
+    },
+    {
+      "key": "cc1c7e9d-e195-4b91-9bb9-da85184a9073",
+      "position": 2,
       "properties": {
         "progression_name": "Video: Pair Programming "
       },
@@ -1674,8 +1698,9 @@
     },
     {
       "key": "5d70550b-0a95-4143-8f02-16b5e368e1a7",
-      "position": 2,
+      "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1685,8 +1710,9 @@
     },
     {
       "key": "8eec6e2a-9d91-4330-8e41-0bfa3d9feaaa",
-      "position": 3,
+      "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Debugging with the Step Button” slide ",
         "progression_name": "Video: Debugging with the Step Button"
       },
       "seeding_key": {
@@ -1696,8 +1722,9 @@
     },
     {
       "key": "138f16cf-76ee-47a0-a398-dfab261849ee",
-      "position": 4,
+      "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-8: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1707,8 +1734,9 @@
     },
     {
       "key": "6647068a-7fdb-49a7-a803-e8d3cbe1e5b0",
-      "position": 5,
+      "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1718,8 +1746,9 @@
     },
     {
       "key": "d6d40cbd-4182-4d02-a465-afb9f1413035",
-      "position": 6,
+      "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10-12: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1729,7 +1758,7 @@
     },
     {
       "key": "8b055ec0-ceec-4266-bb30-49d2fb640eef",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Lesson Extras"
       },
@@ -1740,7 +1769,7 @@
     },
     {
       "key": "e06645d6-ca1e-474d-8aaf-9ba9d22f60a8",
-      "position": 8,
+      "position": 9,
       "properties": {
         "tips": [
           {
@@ -1756,7 +1785,7 @@
     },
     {
       "key": "e38e65ca-8bad-4854-8b5f-97df4aec1b5f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming**  - student video whenever possible.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
@@ -1815,6 +1844,7 @@
       "key": "e83e695d-4716-4589-940a-2eb5e03635c2",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Programming with Rey and BB-8” slide\n\n\n",
         "name": "Programming with Rey and BB-8",
         "progression_name": "Video: Programming with Rey and BB-8"
       },
@@ -1827,6 +1857,7 @@
       "key": "70579ce0-a31a-41db-a186-d3e4ec1c1282",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-8: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1838,6 +1869,7 @@
       "key": "84c42f1d-8c98-4df7-bddd-986a1a0f92fb",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1849,6 +1881,7 @@
       "key": "3a65f526-f6d5-4794-b6cf-c96b61262d5b",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10-12: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2044,7 +2077,7 @@
       "key": "b26ad4f2-3085-4ce4-9e77-9e1304ed1d07",
       "position": 2,
       "properties": {
-        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. without a loop."
+        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. without a loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps."
       },
       "seeding_key": {
         "activity_section.key": "b26ad4f2-3085-4ce4-9e77-9e1304ed1d07",
@@ -2211,7 +2244,7 @@
       "key": "d8119e9f-33a3-43ab-99f9-de5793dc441e",
       "position": 3,
       "properties": {
-        "description": "Prediction Levels:\r\n\r\n - [Course A, Loops in Collector #1](https://studio.code.org/levels/8728)\r\n - [Course A, Loops in Collector #2](https://studio.code.org/levels/8727)"
+        "description": "Prediction Levels:\n\n - [Course A, Loops in Collector #1](https://studio.code.org/levels/8728)\n - [Course A, Loops in Collector #2](https://studio.code.org/levels/8727)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps."
       },
       "seeding_key": {
         "activity_section.key": "d8119e9f-33a3-43ab-99f9-de5793dc441e",
@@ -2222,6 +2255,7 @@
       "key": "b474efdb-d464-40d1-ab00-1b6fb898a567",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Collector” slide",
         "progression_name": "Video: The Collector"
       },
       "seeding_key": {
@@ -2233,6 +2267,7 @@
       "key": "65045f67-d71a-4143-bae7-13dffcd3dc5d",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2244,6 +2279,7 @@
       "key": "8480a404-c96d-46ef-a83a-7a092efcbb1c",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Using the Repeat Block” slide",
         "progression_name": "Video: Using the Repeat Block"
       },
       "seeding_key": {
@@ -2255,6 +2291,7 @@
       "key": "81dbbb0f-d70a-44ad-820f-9a0aa0ca9df6",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-10: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2266,6 +2303,7 @@
       "key": "ff77fc91-850c-4571-aabd-e3bcb846a734",
       "position": 8,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2277,6 +2315,7 @@
       "key": "3b1a550e-a51b-4a9f-8dae-8c5b03a0a630",
       "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-14: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2346,7 +2385,7 @@
       "key": "6df38ff9-9f96-402e-8bdc-e193f5c02cb2",
       "position": 2,
       "properties": {
-        "description": "We've included some multiple choice prediction levels that are difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\r\n\r\nPrediction Levels:\r\n\r\n - [Course A, Loops in Artist](https://studio.code.org/levels/8726)"
+        "description": "We've included some multiple choice prediction levels that are difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\n\nPrediction Levels:\n\n - [Course A, Loops in Artist](https://studio.code.org/levels/8726)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps."
       },
       "seeding_key": {
         "activity_section.key": "6df38ff9-9f96-402e-8bdc-e193f5c02cb2",
@@ -2357,6 +2396,7 @@
       "key": "ab92ee13-bd68-472e-a80b-965dace8ec85",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Artist in Code Studio” slide",
         "progression_name": "Video: The Artist in Code Studio"
       },
       "seeding_key": {
@@ -2368,6 +2408,7 @@
       "key": "0d64e358-6a9c-4d37-bd2c-28314f16e253",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-4: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2379,6 +2420,7 @@
       "key": "c3a5e84d-0585-4490-9b4e-2507c7a3327c",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Loops in Artist” slide",
         "progression_name": "Video: Loops in Artist"
       },
       "seeding_key": {
@@ -2390,6 +2432,7 @@
       "key": "2282c454-e14c-4428-88a1-336660a39c2d",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 6-10: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2401,6 +2444,7 @@
       "key": "1fbe0f6a-af67-48e1-ba61-10daa2f8a37b",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 11: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2412,6 +2456,7 @@
       "key": "7b2e719c-29c7-4816-8ec3-a1a81a8430e2",
       "position": 8,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 12-13: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2423,6 +2468,7 @@
       "key": "c9e3adf7-ad78-4539-a054-701183314727",
       "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 14: Free Play” slide",
         "progression_name": "Free Play",
         "tips": [
           {
@@ -2526,7 +2572,7 @@
       "key": "de412899-3618-4e89-a8c2-3d1a09c10fd7",
       "position": 3,
       "properties": {
-        "description": "\nIn earlier lessons, we created algorithms that allowed us to control a friend or flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- \n**Project** ***The Big Event (Courses A, B) - Controller Image** onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
+        "description": "\nIn earlier lessons, we created algorithms that allowed us to control a friend or flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- \n**Project** ***The Big Event (Courses A, B) - Controller Image** onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps."
       },
       "seeding_key": {
         "activity_section.key": "de412899-3618-4e89-a8c2-3d1a09c10fd7",
@@ -2640,10 +2686,20 @@
       }
     },
     {
-      "key": "4b8de743-5496-4199-a987-55679bcd0bc7",
+      "key": "1caf5782-bc38-4ed0-9ad1-3062415e0ab2",
       "position": 1,
       "properties": {
-        "description": "This is the most free-form plugged activity of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, particularly for students who are overwhelmed by too many options.",
+      },
+      "seeding_key": {
+        "activity_section.key": "1caf5782-bc38-4ed0-9ad1-3062415e0ab2",
+        "lesson_activity.key": "9cece25a-3e38-4e8a-b88c-726462c28d1e"
+      }
+    },
+    {
+      "key": "4b8de743-5496-4199-a987-55679bcd0bc7",
+      "position": 2,
+      "properties": {
+        "description": "This is the most free-form plugged activity of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, particularly for students who are overwhelmed by too many options.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.",
         "name": "On the Move with Events"
       },
       "seeding_key": {
@@ -2653,8 +2709,9 @@
     },
     {
       "key": "0ecf1d69-bc6a-4d20-bf8a-b9ed6d72854e",
-      "position": 2,
+      "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Introduction to Play Lab” slide",
         "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
@@ -2664,8 +2721,9 @@
     },
     {
       "key": "c94147cc-c2d2-485e-ba3f-0b901887a598",
-      "position": 3,
+      "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2: Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2675,8 +2733,9 @@
     },
     {
       "key": "0d892878-ca77-44f1-ba59-2df9dea885c0",
-      "position": 4,
+      "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2686,8 +2745,9 @@
     },
     {
       "key": "a7e31ab9-b939-44ca-a80a-7f81bd912f4f",
-      "position": 5,
+      "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-8: Mini-project” slide",
         "progression_name": "Mini-project: Jorge the Dog"
       },
       "seeding_key": {
@@ -2697,7 +2757,7 @@
     },
     {
       "key": "0a6fb119-7c1b-45c0-8079-1aef13294e58",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Lesson Extras"
       },
@@ -6701,7 +6761,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursea-2023/resources",
+      "url": "/s/coursea-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6712,7 +6772,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursea-2023/standards",
+      "url": "/s/coursea-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6723,7 +6783,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursea-2023/vocab",
+      "url": "/s/coursea-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -8584,6 +8644,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
@@ -8636,13 +8703,6 @@
         "lesson.key": "Safety in My Online Neighborhood",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-CS-01"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Safety in My Online Neighborhood",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-IC-16"
       }
     },
     {

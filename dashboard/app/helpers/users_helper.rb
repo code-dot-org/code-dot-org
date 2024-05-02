@@ -501,4 +501,23 @@ module UsersHelper
     end
     (100.0 * completed / levels.count).round(2)
   end
+
+  def usa?(country_code)
+    %w[US RD].include?(country_code.to_s.upcase)
+  end
+
+  def cap_user_info_required?(user, country_code)
+    return false unless user.student?
+    return false unless country_code.nil? || usa?(country_code)
+    return false if user.user_provided_us_state
+    return false unless Policies::ChildAccount.user_predates_state_collection?(user)
+    Policies::ChildAccount.show_cap_state_modal? && user.under_13? && Policies::ChildAccount.personal_account?(user)
+  end
+
+  def lti_user_info_required?(user)
+    return false unless user.student?
+    return false unless user.us_state.nil?
+
+    Policies::Lti.lti?(current_user)
+  end
 end

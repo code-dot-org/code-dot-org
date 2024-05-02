@@ -23,12 +23,9 @@ class LevelsController < ApplicationController
     Artist,
     Bounce,
     BubbleChoice,
-    Calc,
-    ContractMatch,
     Craft,
     CurriculumReference,
     Dancelab,
-    Eval,
     EvaluationMulti,
     External,
     ExternalLink,
@@ -416,10 +413,6 @@ class LevelsController < ApplicationController
         @game = Game.custom_artist
       elsif @type_class <= Studio
         @game = Game.custom_studio
-      elsif @type_class <= Calc
-        @game = Game.calc
-      elsif @type_class <= Eval
-        @game = Game.eval
       elsif @type_class <= Applab
         @game = Game.applab
       elsif @type_class <= Gamelab

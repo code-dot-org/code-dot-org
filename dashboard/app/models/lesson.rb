@@ -605,7 +605,7 @@ class Lesson < ApplicationRecord
     end
     next_level = next_level_for_lesson_extras(user)
     next_level ?
-      build_script_level_path(next_level) : script_completion_redirect(script)
+      build_script_level_path(next_level) : script_completion_redirect(user, script)
   end
 
   def next_level_number_for_lesson_extras(user)

@@ -1,10 +1,11 @@
 require 'cdo/log_collector'
 require 'honeybadger/ruby'
+require 'cdo/sequel'
 
 class ContactRollupsV2
   MAX_EXECUTION_TIME_SEC = 18_000
 
-  DASHBOARD_DB_WRITER = sequel_connect(
+  DASHBOARD_DB_WRITER = Cdo::Sequel.database_connection_pool(
     CDO.dashboard_db_writer,
     CDO.dashboard_db_reader,
     query_timeout: MAX_EXECUTION_TIME_SEC

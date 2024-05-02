@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-04-12 17:42:52 UTC",
+    "serialized_at": "2024-05-01 17:49:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2059,6 +2059,17 @@
       }
     },
     {
+      "key": "ee8553b3-38af-4976-b204-c936b08590a4",
+      "position": 5,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee8553b3-38af-4976-b204-c936b08590a4",
+        "lesson_activity.key": "bf9f5169-57b3-44ae-9099-fff0d07558dd"
+      }
+    },
+    {
       "key": "0d227a2b-1a31-4a6d-ac80-8b1a274dd56d",
       "position": 1,
       "properties": {
@@ -2397,7 +2408,7 @@
       "key": "9889e10f-8545-4928-bfe7-d36f8653d081",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Quick Share” slide\n\nAt a midway point of the lesson, have students turn to a partner to show their progress so far. This is a great chance for students to verbalize what they are coding and explain their code. It is also an opportunity to practice kind and helpful feedback. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Quick Share” slide\n\nAt a midway point of the lesson, have students turn to a partner to show their progress so far. This is a great chance for students to verbalize what they are coding and explain their code. It is also an opportunity to practice kind and helpful feedback. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead."
       },
       "seeding_key": {
         "activity_section.key": "9889e10f-8545-4928-bfe7-d36f8653d081",
@@ -3592,7 +3603,7 @@
       "key": "f08c7ab0-5168-4861-9647-e14d34f4c79a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 3: Try” slide\n\nStudents will use this day to build an initial version of their project.\n\nEquipped with their ***Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Try” slide\n\nDon’t let the class forget to fill out the **Try** section of their project guide as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 3: Try” slide\n\nStudents will use this day to build an initial version of their project.\n\nEquipped with their ***Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Try” slide\n\nDon’t let the class forget to fill out the **Try** section of their project guide as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -8853,7 +8864,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursee-2023/resources",
+      "url": "/s/coursee-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8864,7 +8875,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursee-2023/standards",
+      "url": "/s/coursee-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8875,7 +8886,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursee-2023/vocab",
+      "url": "/s/coursee-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -10829,6 +10840,13 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: About Me",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: About Me",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-IC-21"
       }
     },
@@ -10837,6 +10855,13 @@
         "lesson.key": "Mini-Project: About Me",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Design a Snowflake",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-13"
       }
     },
     {

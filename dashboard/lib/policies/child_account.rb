@@ -13,6 +13,15 @@ class Policies::ChildAccount
 
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.PERMISSION_GRANTED
+
+    # def self.locked_out?(student)
+    # def self.request_sent?(student)
+    # def self.permission_granted?(student)
+    SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.each do |key, value|
+      define_singleton_method("#{key.downcase}?") do |student|
+        student.child_account_compliance_state == value
+      end
+    end
   end
 
   # The individual US State child account policy configuration
@@ -25,12 +34,32 @@ class Policies::ChildAccount
     }
   }.freeze
 
+  # The delay is intended to provide notice to a parent
+  # when a student may no longer be monitoring the "parent's email."
+  PERMISSION_GRANTED_MAIL_DELAY = 24.hours
+
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
   def self.compliant?(user)
     return true unless parent_permission_required?(user)
-    user.child_account_compliance_state == ComplianceState::PERMISSION_GRANTED
+    # CPA Part 2: unlock students created before the policy went into effect
+    # who have requested parental permission but have not yet received approval.
+    return true if ComplianceState.request_sent?(user) && user_predates_policy?(user)
+
+    ComplianceState.permission_granted?(user)
+  end
+
+  # Checks if a user predates the us_state collection that occurs during the sign up
+  # flow. We want to make sure we retrieve the state for those older accounts which have their
+  # state missing
+  # We use Colorado as it is the only start date we have for now
+  def self.user_predates_state_collection?(user)
+    user.created_at < STATE_POLICY['CO'][:start_date]
+  end
+
+  def self.show_cap_state_modal?
+    DCDO.get('cap-state-modal', false)
   end
 
   # Checks if a user is affected by a state policy but was created prior to the
@@ -56,7 +85,7 @@ class Policies::ChildAccount
 
   # Does the user login using credentials they personally control?
   # For example, some accounts are created and owned by schools (Clever).
-  private_class_method def self.personal_account?(user)
+  def self.personal_account?(user)
     return false if user.sponsored?
     # List of credential types which we believe schools have ownership of.
     # Does the user have an authentication method which is not controlled by

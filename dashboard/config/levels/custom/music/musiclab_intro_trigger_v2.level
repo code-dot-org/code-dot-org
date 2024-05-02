@@ -1,0 +1,92 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-04-19T21:53:41.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "long_instructions": "#### Play Live\r\nNow you are in control!\r\n\r\n1 Attach a [play](#clickable=play-sound-block) block to the [trigger](#clickable=trigger-block-workspace) block.\r\n\r\n2 Press [Run](#clickable=run-button).\r\n\r\n3 Press [1](#clickable=trigger-button-1) to trigger the sound when you want it.",
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "triggered_at_simple2",
+              "x": 230,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>",
+                "inputs": {
+                  "STACK": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "deletable": false,
+                      "movable": false,
+                      "fields": {
+                        "sound": "bass/bass_synth_glow_up"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Control": [
+            "repeat_simple2",
+            "play_sounds_together"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        }
+      }
+    },
+    "instructions_important": "false",
+    "name_suffix": "_v2",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "conditions": [
+          {
+            "name": "played_sound_triggered"
+          }
+        ],
+        "message": "Nice work.  You successfully played a sound by using the trigger.",
+        "next": true,
+        "key": "musiclab_intro_trigger_elementary_7d8f341d-9582-4fc8-8622-464260ce978c"
+      },
+      {
+        "message": "Nothing has been triggered yet. ",
+        "key": "musiclab_intro_trigger_elementary_55abe67c-58ad-4ce2-aab9-172acb91a090",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-04-19T21:53:41.788+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_trigger_pdx\\\"\"],\"cloned_from\":\"musiclab_intro_trigger_pdx\"},{\"changed_at\":\"2024-04-25 22:23:17 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-04-25 22:24:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-04-25 22:25:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -2,8 +2,7 @@ class Ability
   include CanCan::Ability
   include Pd::Application::ActiveApplicationModels
 
-  CSA_PILOT = 'csa-pilot'
-  CSA_PILOT_FACILITATORS = 'csa-pilot-facilitators'
+  GENAI_PILOT = 'gen-ai-lab-v1'
 
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
@@ -464,6 +463,12 @@ class Ability
 
       can :use_unrestricted_javabuilder, :javabuilder_session do
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+      end
+
+      if user.has_pilot_experiment?(GENAI_PILOT) ||
+          (!user.teachers.empty? &&
+          user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
+        can :chat_completion, :aichat
       end
     end
 

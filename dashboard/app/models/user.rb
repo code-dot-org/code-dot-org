@@ -110,6 +110,7 @@ class User < ApplicationRecord
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
   #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
+  #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -153,6 +154,7 @@ class User < ApplicationRecord
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
     ai_tutor_access_denied
+    user_provided_us_state
   )
 
   attr_accessor(
@@ -1108,6 +1110,9 @@ class User < ApplicationRecord
     self.parent_email = nil
 
     new_attributes = email_preference.nil? ? {} : email_preference
+    if Policies::Lti.lti? self
+      self.lti_roster_sync_enabled = true
+    end
 
     transaction do
       if migrated?
@@ -1577,7 +1582,11 @@ class User < ApplicationRecord
 
   def age=(val)
     @age = val
-    val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
+    val = begin
+      val.to_i
+    rescue
+      0 # sometimes we get age: {"Pr" => nil}
+    end
     return unless val > 0
     return unless val < 200
     return if birthday && val == age # don't change birthday if we want to stay the same age

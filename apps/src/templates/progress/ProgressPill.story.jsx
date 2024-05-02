@@ -1,6 +1,6 @@
 import React from 'react';
 import {UnconnectedProgressPill as ProgressPill} from './ProgressPill';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 export default {
   component: ProgressPill,

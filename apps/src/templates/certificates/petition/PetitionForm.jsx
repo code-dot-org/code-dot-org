@@ -1,8 +1,11 @@
+import $ from 'jquery';
+import {range, mapValues, without, find} from 'lodash';
+import PropTypes from 'prop-types';
 import React, {useState, useCallback} from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {range, mapValues, without, find} from 'lodash';
-import i18n from '@cdo/locale';
-import $ from 'jquery';
+
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 import {
   keyValidation,
   getInvalidFields,
@@ -10,9 +13,7 @@ import {
   getAgeSafeData,
   professionOptions,
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
-import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
-import PropTypes from 'prop-types';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from '@cdo/locale';
 
 const PetitionForm = ({tutorial}) => {
   // data starts with all fields having an empty value to ensure consistent data shape

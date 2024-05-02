@@ -700,11 +700,11 @@ en:
           description_teacher: ''
           version_title: ''
         self-paced-pl-csd-unit1-2024:
-          title: self-paced-pl-csd-unit1-2024
+          title: Teaching Problem Solving and Computing
           description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
+          version_title: "'24-'25"
         self-paced-pl-csd-unit2-2024:
           title: self-paced-pl-csd-unit2-2024
           description_short: ''
@@ -807,19 +807,31 @@ en:
           title: AI 101 Self Paced Professional Learning for Educators
           description_short: ''
           description_student: |-
-            ## Welcome
-            Welcome to Code.org's free self-paced online course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.
+            ## Welcome!
+            Welcome to Code.org's free self-paced online course for educators to get started with AI!
 
             ### Find the learning that works for you
             * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
 
-            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**
           description_teacher: |-
-            ## Welcome
-            Welcome to Code.org's free self-paced online course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.
+            ## Welcome!
+            Welcome to Code.org's free self-paced online course for educators to get started with AI!
 
             ### Find the learning that works for you
             * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
 
-            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**
+          version_title: ''
+        lorisandbox:
+          title: lorisandbox
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-pl-cv:
+          title: sandbox-pl-cv
+          description_short: 'Sandbox for the teaching with computer vision self-paced PL '
+          description_student: ''
+          description_teacher: ''
           version_title: ''
