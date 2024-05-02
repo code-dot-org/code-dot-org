@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision-pilot",
-    "serialized_at": "2024-04-26 15:22:10 UTC",
+    "serialized_at": "2024-04-30 15:40:43 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5741,6 +5741,19 @@
       }
     },
     {
+      "name": "Project Rubric",
+      "url": "https://docs.google.com/document/d/1l7tloBAGPlodfS-OpK7TqtqWGrYkn60XKvmGUMu5SpQ/edit?usp=sharing",
+      "key": "project_rubric",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "project_rubric"
+      }
+    },
+    {
       "name": "Prototype Development, Part 1",
       "url": "https://docs.google.com/presentation/d/1w4lWpmOWIMCT3KZU9lV6AYrL4e9tlnTgkJXCANi_i_Q/template/preview",
       "key": "prototype_development_part_1",
@@ -5985,6 +5998,12 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "prototype_development_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "project_rubric"
       }
     },
     {

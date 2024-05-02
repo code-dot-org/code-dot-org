@@ -829,3 +829,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        sandbox-pl-cv:
+          title: sandbox-pl-cv
+          description_short: 'Sandbox for the teaching with computer vision self-paced PL '
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

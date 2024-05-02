@@ -6,9 +6,10 @@
 # either nothing (no matches), a single matching email, or a set of data representing multiple potential matches.
 
 require_relative '../../pegasus/src/env'
+require 'cdo/sequel'
 require src_dir 'database'
 
-PEGASUS_REPORTING_DB = sequel_connect CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_reader
+PEGASUS_REPORTING_DB = Cdo::Sequel.database_connection_pool CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_reader
 
 unless ARGV[0]
   puts 'Usage: lookup_hoc2016_robotics_prize_name input_csv_filename'
