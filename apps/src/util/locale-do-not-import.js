@@ -13,4 +13,4 @@ import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
 
 let locale = safeLoadLocale('common_locale');
 locale = localeWithI18nStringTracker(locale, 'common');
-export default module.exports = locale;
+module.exports = locale;
