@@ -9,6 +9,12 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {EnrolledWorkshops, EnrolledWorkshopsTable} from './EnrolledWorkshops';
+import {
+  COURSE_CSF,
+  COURSE_CSD,
+  COURSE_CSP,
+  COURSE_CSA,
+} from '../workshop_dashboard/workshopConstants';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
@@ -83,6 +89,7 @@ function LandingPage({
   userPermissions,
   joinedStudentSections,
   joinedPlSections,
+  coursesAsFacilitator,
   plSectionIds,
   hiddenPlSectionIds,
 }) {
@@ -200,6 +207,69 @@ function LandingPage({
     );
   };
 
+  const RenderFacilitatorResources = () => {
+    let landingPageCourses = [];
+    if (coursesAsFacilitator.includes(COURSE_CSF)) {
+      landingPageCourses.push('CSF');
+    }
+    if (coursesAsFacilitator.includes(COURSE_CSD)) {
+      landingPageCourses.push('CSD');
+    }
+    if (coursesAsFacilitator.includes(COURSE_CSP)) {
+      landingPageCourses.push('CSP');
+    }
+    if (coursesAsFacilitator.includes(COURSE_CSA)) {
+      landingPageCourses.push('CSA');
+    }
+
+    let landingPageResources = [];
+    landingPageCourses.forEach(coursePage => {
+      landingPageResources.push({
+        headingText: i18n.plSectionsFacilitatorResourcesTitle({
+          course_name: coursePage,
+        }),
+        descriptionText: i18n.plSectionsFacilitatorResourcesDesc({
+          course_name: coursePage,
+        }),
+        buttonText: i18n.plSectionsFacilitatorResourcesTitle({
+          course_name: coursePage,
+        }),
+        buttonUrl: pegasus(`/educate/facilitator-landing/${coursePage}`),
+      });
+    });
+
+    const allResources = [
+      {
+        headingText: i18n.plSectionsWorkshopTitle(),
+        descriptionText: i18n.plSectionsWorkshopDesc(),
+        buttonText: i18n.plSectionsWorkshopButton(),
+        buttonUrl: '/pd/workshop_dashboard',
+      },
+      ...landingPageResources,
+      {
+        headingText: i18n.plSectionsOnboardingTitle(),
+        descriptionText: i18n.plSectionsOnboardingDesc(),
+        buttonText: i18n.plSectionsOnboardingTitle(),
+        buttonUrl: '/deeper-learning',
+      },
+    ];
+
+    return (
+      <>
+        {allResources.map((resource, index) => (
+          <BorderedCallToAction
+            key={index}
+            headingText={resource.headingText}
+            descriptionText={resource.descriptionText}
+            buttonText={resource.buttonText}
+            buttonUrl={resource.buttonUrl}
+            solidBorder={true}
+          />
+        ))}
+      </>
+    );
+  };
+
   const RenderRegionalPartnerResources = () => {
     const resources = [
       {
@@ -270,6 +340,10 @@ function LandingPage({
     return (
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        <section>
+          <Heading2>{i18n.plSectionsFacilitatorResources()}</Heading2>
+          {RenderFacilitatorResources()}
+        </section>
         {RenderOwnedPlSections()}
         {workshopsAsFacilitator?.length > 0 && (
           <EnrolledWorkshopsTable
@@ -377,6 +451,7 @@ LandingPage.propTypes = {
   userPermissions: PropTypes.arrayOf(PropTypes.string),
   joinedStudentSections: shapes.sections,
   joinedPlSections: shapes.sections,
+  coursesAsFacilitator: PropTypes.arrayOf(PropTypes.string),
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),
 };
