@@ -8,7 +8,6 @@ import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import Button from '@cdo/apps/templates/Button';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import Notification from '@cdo/apps/templates/Notification';
@@ -223,7 +222,6 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
-            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -234,7 +232,6 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
-            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
