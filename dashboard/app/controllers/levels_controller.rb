@@ -510,25 +510,7 @@ class LevelsController < ApplicationController
     if Rails.application.config.levelbuilder_mode && !is_standalone_project
       if can? :edit, @level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
-        # Music Lab only edits via the level edit page.
-        if @level.is_a?(Blockly) && !@level.is_a?(Music)
-          links[@level.name] << {
-            text: "[s]tart (#{Blockly.count_xml_blocks(@level.start_blocks)})",
-            url: edit_blocks_level_path(@level, :start_blocks),
-            access_key: 's'
-          }
-          links[@level.name] << {text: 's[o]lution', url: edit_blocks_level_path(@level, :solution_blocks), access_key: 'o'}
-          links[@level.name] << {text: '[t]oolbox', url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
-          links[@level.name] << {text: 'required', url: edit_blocks_level_path(@level, :required_blocks)}
-          links[@level.name] << {text: 'recommended', url: edit_blocks_level_path(@level, :recommended_blocks)}
-          links[@level.name] << {
-            text: "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})",
-            url: edit_blocks_level_path(@level, :initialization_blocks)
-          }
-          if @level.is_a? Artist
-            links[@level.name] << {text: 'pre-draw', url: edit_blocks_level_path(@level, :predraw_blocks)}
-          end
-        elsif @level.is_a?(Javalab) || @level.is_a?(Pythonlab) || @level.is_a?(Weblab2)
+        if @level.is_a?(Javalab) || @level.is_a?(Pythonlab) || @level.is_a?(Weblab2)
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
           links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
         end
@@ -556,8 +538,9 @@ class LevelsController < ApplicationController
 
     # TODO: Not present here, but present in original extra links. Some of these can be handled on the client side.
     # Anything project-specific should be handled via a separate API, as this controller has no context for projects.
-    # Gamelab show animation json, list contained levels, Blockly helpers, list of scripts, list of parent levels, all project
-    # validator links (should be handled elsewhere), abuse handlers (should be handled elsewhere).
+    # Gamelab show animation json, list contained levels, Blockly start/toolbox/etc, Blockly helpers, list of scripts,
+    # list of parent levels, all project validator links (should be handled elsewhere),
+    # abuse handlers (should be handled elsewhere).
 
     return render json: {links: links, can_clone: can?(:clone, @level), can_delete: can?(:delete, @level), level_name: @level.name}
   end
