@@ -112,7 +112,7 @@ export const updateAiCustomization = createAsyncThunk(
       currentAiCustomizations,
       savedAiCustomizations,
       dispatch,
-      true, // isUpdating flag to send analytics event
+      'UPDATE_CHATBOT',
       levelId
     );
   }
@@ -129,10 +129,13 @@ export const publishModel = createAsyncThunk(
 
     const rootState = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const levelId = rootState.progress.currentLevelId;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      dispatch
+      dispatch,
+      'PUBLISH_MODEL_CARD_INFO',
+      levelId
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
   }
@@ -144,8 +147,10 @@ export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
   async (_, thunkAPI) => {
     const {dispatch} = thunkAPI;
-    const modelCardInfo = (thunkAPI.getState() as RootState).aichat
-      .currentAiCustomizations.modelCardInfo;
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const modelCardInfo =
+      rootState.aichat.currentAiCustomizations.modelCardInfo;
+    const levelId = rootState.progress.currentLevelId;
     if (!hasFilledOutModelCard(modelCardInfo)) {
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
@@ -156,7 +161,9 @@ export const saveModelCard = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      dispatch
+      dispatch,
+      'SAVE_MODEL_CARD_INFO',
+      levelId
     );
   }
 );
@@ -175,8 +182,11 @@ const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
-  isUpdating: boolean = false,
-  levelId: string | null = null
+  eventKey:
+    | 'UPDATE_CHATBOT'
+    | 'PUBLISH_MODEL_CARD_INFO'
+    | 'SAVE_MODEL_CARD_INFO',
+  levelId: string | null
 ) => {
   // Remove any empty example topics on save
   const trimmedExampleTopics =
@@ -232,9 +242,9 @@ const saveAiCustomization = async (
         timestamp: getCurrentTime(),
       })
     );
-    if (isUpdating) {
+    if (eventKey) {
       analyticsReporter.sendEvent(
-        EVENTS.UPDATE_CHATBOT,
+        EVENTS[eventKey],
         {
           propertyUpdated: property,
           level: levelId,
