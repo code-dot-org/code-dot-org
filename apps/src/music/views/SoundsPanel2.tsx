@@ -466,7 +466,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
             {rightColumnSoundEntries.map(soundEntry => {
               return (
                 <SoundsPanelEntry
-                  key={soundEntry.sound.src}
+                  key={soundEntry.folder.id + '/' + soundEntry.sound.src}
                   currentValue={currentValue}
                   playingPreview={playingPreview}
                   folder={soundEntry.folder}
