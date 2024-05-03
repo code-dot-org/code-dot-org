@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
 import {getBaseAssetUrl} from '../appConfig';
-import styles from './soundsPanel.module.scss';
+import styles from './soundsPanel2.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import MusicLibrary, {

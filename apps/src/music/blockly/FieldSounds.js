@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SoundsPanel from '../views/SoundsPanel';
+import SoundsPanel2 from '../views/SoundsPanel2';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
 import SoundStyle from '../utils/SoundStyle';
+import AppConfig from '../appConfig';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
@@ -111,8 +112,13 @@ class FieldSounds extends GoogleBlockly.Field {
       return;
     }
 
+    const CurrentSoundsPanel =
+      AppConfig.getValue('sounds-panel-2') === 'true'
+        ? SoundsPanel2
+        : SoundsPanel2;
+
     ReactDOM.render(
-      <SoundsPanel
+      <CurrentSoundsPanel
         library={this.options.getLibrary()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
