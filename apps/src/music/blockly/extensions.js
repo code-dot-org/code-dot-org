@@ -116,6 +116,11 @@ export const playMultiMutator = {
   },
 };
 
+/*
+ * Extension for the effects field, which replaces the input_dummy in the block
+ * with a dynamic field_dropdown and updates the effect value dropdown
+ * based on the selected effect name.
+ */
 export const effectsFieldExtension = function () {
   // Set the initial state when the block gets created
   const thisBlock = this;
