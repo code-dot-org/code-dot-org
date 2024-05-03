@@ -11,6 +11,7 @@ import {
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
   EFFECTS_FIELD_EXTENSION,
+  FIELD_EFFECT_NAME_OPTIONS,
 } from '../constants';
 import {
   fieldSoundsDefinition,
@@ -211,13 +212,10 @@ export const setEffectAtCurrentLocationSimple2 = {
       {
         type: 'field_dropdown',
         name: FIELD_EFFECTS_NAME,
-        options: [
-          ['volume', 'volume'],
-          ['filter', 'filter'],
-          ['delay', 'delay'],
-        ],
+        options: FIELD_EFFECT_NAME_OPTIONS,
       },
       {
+        // This input is replaced with a field_dropdown by the extension
         type: 'input_dummy',
         name: FIELD_EFFECTS_VALUE,
       },

@@ -1,3 +1,5 @@
+import musicI18n from '../locale';
+
 // Extensions & Mutator Names
 
 export const DEFAULT_TRACK_NAME_EXTENSION = 'default_track_name_extension';
@@ -54,22 +56,32 @@ export const TriggerStart = {
   NEXT_MEASURE: 'next_measure',
 };
 
+export const FIELD_EFFECT_NAME_OPTIONS = [
+  [musicI18n.effectsLabelsVolume(), 'volume'],
+  [musicI18n.effectsLabelsFilter(), 'filter'],
+  [musicI18n.effectsLabelsDelay(), 'delay'],
+];
+
+// Even though these strings don't necessarily match the labels, they must
+// stay the same to avoid breaking existing projects saved with these values.
 export const DEFAULT_EFFECT_VALUE = 'normal';
+export const MEDIUM_EFFECT_VALUE = 'medium';
+export const LOW_EFFECT_VALUE = 'low';
 
 export const FIELD_EFFECTS_OPTIONS = {
   volume: [
-    ['Full', DEFAULT_EFFECT_VALUE],
-    ['Medium', 'medium'],
-    ['Low', 'low'],
+    [musicI18n.effectsLabelsFull(), DEFAULT_EFFECT_VALUE],
+    [musicI18n.effectsLabelsMedium(), MEDIUM_EFFECT_VALUE],
+    [musicI18n.effectsLabelsLow(), LOW_EFFECT_VALUE],
   ],
   filter: [
-    ['Off', DEFAULT_EFFECT_VALUE],
-    ['Medium', 'medium'],
-    ['Low', 'low'],
+    [musicI18n.effectsLabelsOff(), DEFAULT_EFFECT_VALUE],
+    [musicI18n.effectsLabelsMedium(), MEDIUM_EFFECT_VALUE],
+    [musicI18n.effectsLabelsLow(), LOW_EFFECT_VALUE],
   ],
   delay: [
-    ['Off', DEFAULT_EFFECT_VALUE],
-    ['High', 'medium'],
-    ['Low', 'low'],
+    [musicI18n.effectsLabelsOff(), DEFAULT_EFFECT_VALUE],
+    [musicI18n.effectsLabelsHigh(), MEDIUM_EFFECT_VALUE],
+    [musicI18n.effectsLabelsLow(), LOW_EFFECT_VALUE],
   ],
 };
