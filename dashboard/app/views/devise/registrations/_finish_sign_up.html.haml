@@ -41,6 +41,8 @@
           = link_to t('cancel'), users_cancel_path
 
     = f.hidden_field :locale, value: locale
+    - if DCDO.get('student-email-post-enabled', false)
+      = f.hidden_field :email, value: @user.email
     - if @user.errors.any?
       .row
         .span8
@@ -148,6 +150,7 @@
         .span5
           = f.select :us_state, us_state_options, include_blank: true
           = f.hidden_field :country_code, value: country_code
+          = f.hidden_field :user_provided_us_state, value: true
 
     - if experiment_value('gender', request)
       .row#gender-field
