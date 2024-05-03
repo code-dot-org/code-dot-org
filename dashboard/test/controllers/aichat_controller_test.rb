@@ -78,7 +78,7 @@ class AichatControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_USER], json_response["status"]
     assert_equal "damn", json_response["flagged_content"]
-    assert_equal json_response.keys(), ['status', 'flagged_content', 'session_id']
+    assert_equal json_response.keys, ['status', 'flagged_content', 'session_id']
 
     session = AichatSession.find(json_response['session_id'])
     stored_message = JSON.parse(session.messages)[0]
@@ -122,7 +122,7 @@ class AichatControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL], json_response["status"]
-    assert_equal json_response.keys(), ['status', 'session_id']
+    assert_equal json_response.keys, ['status', 'session_id']
 
     session = AichatSession.find(json_response['session_id'])
     stored_message = JSON.parse(session.messages)[0]
