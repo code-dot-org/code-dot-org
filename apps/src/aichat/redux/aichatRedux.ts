@@ -111,9 +111,9 @@ export const updateAiCustomization = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      dispatch,
       'UPDATE_CHATBOT',
-      levelId
+      levelId,
+      dispatch
     );
   }
 );
@@ -133,9 +133,9 @@ export const publishModel = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      dispatch,
       'PUBLISH_MODEL_CARD_INFO',
-      levelId
+      levelId,
+      dispatch
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
   }
@@ -161,9 +161,9 @@ export const saveModelCard = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      dispatch,
       'SAVE_MODEL_CARD_INFO',
-      levelId
+      levelId,
+      dispatch
     );
   }
 );
@@ -181,12 +181,12 @@ const getNewMessageId = () => {
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
-  dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
   eventKey:
     | 'UPDATE_CHATBOT'
     | 'PUBLISH_MODEL_CARD_INFO'
     | 'SAVE_MODEL_CARD_INFO',
-  levelId: string | null
+  levelId: string | null,
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
   const trimmedExampleTopics =
