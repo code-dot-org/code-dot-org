@@ -260,11 +260,26 @@ describe('LandingPage', () => {
     renderDefault({
       userPermissions: ['facilitator'],
       workshopsAsFacilitator: [TEST_WORKSHOP],
+      coursesAsFacilitator: ['CS Discoveries', 'Computer Science A'],
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabFacilitatorCenter()));
 
     // Last workshop survey banner
     screen.getByText(i18n.plLandingSubheading());
+
+    // Facilitator Resources
+    screen.getByText(i18n.plSectionsWorkshopTitle());
+    screen.getByText(
+      i18n.plSectionsFacilitatorResourcesTitle({
+        course_name: 'CSD',
+      })
+    );
+    screen.getByText(
+      i18n.plSectionsFacilitatorResourcesTitle({
+        course_name: 'CSA',
+      })
+    );
+    screen.getByText(i18n.plSectionsOnboardingTitle());
 
     // Instructor Professional Learning sections table
     screen.getByText(i18n.plSectionsInstructorTitle());
