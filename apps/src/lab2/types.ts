@@ -251,3 +251,10 @@ export enum ProjectManagerStorageType {
   LOCAL = 'LOCAL',
   REMOTE = 'REMOTE',
 }
+
+export interface ExtraLinksData {
+  links: {[key: string]: {text: string; url: string; access_key?: string}[]};
+  can_clone: boolean;
+  can_delete: boolean;
+  level_name: string;
+}
