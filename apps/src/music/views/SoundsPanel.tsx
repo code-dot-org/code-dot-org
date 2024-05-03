@@ -213,6 +213,80 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   );
 };
 
+interface ScrollIntoViewProps {
+  id?: string;
+  className?: string;
+  doScroll: boolean;
+  delay: number;
+  frames: number;
+  distanceY: number;
+  children: React.ReactNode;
+}
+
+const ScrollIntoView: React.FunctionComponent<ScrollIntoViewProps> = ({
+  id,
+  className,
+  doScroll,
+  delay,
+  frames,
+  distanceY,
+  children,
+}) => {
+  const scrollStep = useRef<number | undefined>(0);
+  const lastScrollPosition = useRef<number | undefined>(undefined);
+  const containerRef: React.MutableRefObject<HTMLDivElement | null> =
+    useRef(null);
+
+  const containerRefCallback = (ref: HTMLDivElement) => {
+    containerRef.current = ref;
+  };
+
+  function easeOutSine(x: number): number {
+    return Math.sin((x * Math.PI) / 2);
+  }
+
+  // Initial render.
+  useEffect(() => {
+    if (!doScroll) {
+      return;
+    }
+
+    setInterval(() => {
+      const manualScrollDetectionThreshold = 5;
+
+      if (scrollStep.current !== undefined && containerRef.current) {
+        if (
+          lastScrollPosition.current &&
+          Math.abs(
+            containerRef.current?.scrollTop - lastScrollPosition.current
+          ) > manualScrollDetectionThreshold
+        ) {
+          scrollStep.current = undefined;
+        } else {
+          const progress = Math.max(0, (scrollStep.current - delay) / frames);
+          const scrollPosition = distanceY - distanceY * easeOutSine(progress);
+
+          containerRef.current?.scroll(0, scrollPosition);
+
+          lastScrollPosition.current = scrollPosition;
+
+          scrollStep.current++;
+
+          if (scrollStep.current > delay + frames) {
+            scrollStep.current = undefined;
+          }
+        }
+      }
+    }, 1000 / 60);
+  }, [delay, distanceY, doScroll, frames]);
+
+  return (
+    <div id={id} className={className} ref={containerRefCallback}>
+      {children}
+    </div>
+  );
+};
+
 interface SoundsPanelProps {
   library: MusicLibrary;
   currentValue: string;
@@ -243,14 +317,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     useRef(null);
   const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
-  const foldersContainerRef: React.MutableRefObject<HTMLDivElement | null> =
-    useRef(null);
-  const soundsContainerRef: React.MutableRefObject<HTMLDivElement | null> =
-    useRef(null);
-
-  const foldersScrollStep = useRef<number>(0);
-  const soundsScrollStep = useRef<number | undefined>(0);
-  const lastSoundsScrollPosition = useRef<number | undefined>(undefined);
 
   const isDefaultSoundSelected = currentValue === library.getDefaultSound();
 
@@ -262,62 +328,12 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     setFilter(value);
   }, []);
 
-  function easeOutSine(x: number): number {
-    return Math.sin((x * Math.PI) / 2);
-  }
-
-  // Iniital render.
+  // Initial render.
   useEffect(() => {
     // If the default sound is selected, then do a smooth scroll of the two columns.
     // Otherwise, scroll instantly to the selected entry in each column.
     if (isDefaultSoundSelected) {
-      setInterval(() => {
-        const foldersFrames = 50;
-        const soundsDelay = 5;
-        const soundsFrames = 50;
-        const distanceY = 70;
-        const manualScrollDetectionThreshold = 5;
-
-        if (foldersScrollStep.current < foldersFrames) {
-          foldersScrollStep.current++;
-
-          const progress = foldersScrollStep.current / foldersFrames;
-          const scrollPosition = distanceY - distanceY * easeOutSine(progress);
-          foldersContainerRef.current?.scroll(0, scrollPosition);
-        }
-
-        if (
-          soundsScrollStep.current !== undefined &&
-          soundsContainerRef.current
-        ) {
-          if (
-            lastSoundsScrollPosition.current &&
-            Math.abs(
-              soundsContainerRef.current?.scrollTop -
-                lastSoundsScrollPosition.current
-            ) > manualScrollDetectionThreshold
-          ) {
-            soundsScrollStep.current = undefined;
-          } else {
-            const progress = Math.max(
-              0,
-              (soundsScrollStep.current - soundsDelay) / soundsFrames
-            );
-            const scrollPosition =
-              distanceY - distanceY * easeOutSine(progress);
-
-            soundsContainerRef.current?.scroll(0, scrollPosition);
-
-            lastSoundsScrollPosition.current = scrollPosition;
-
-            soundsScrollStep.current++;
-
-            if (soundsScrollStep.current > soundsDelay + soundsFrames) {
-              soundsScrollStep.current = undefined;
-            }
-          }
-        }
-      }, 1000 / 60);
+      // We will use scrollIntoView.
     } else {
       // This timeout allows the initial scroll-to-current-selection to work
       // when wrapping the content with FocusLock.
@@ -334,14 +350,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   const currentSoundRefCallback = (ref: HTMLDivElement) => {
     currentSoundRef.current = ref;
-  };
-
-  const foldersContainerRefCallback = (ref: HTMLDivElement) => {
-    foldersContainerRef.current = ref;
-  };
-
-  const soundsContainerRefCallback = (ref: HTMLDivElement) => {
-    soundsContainerRef.current = ref;
   };
 
   let possibleSoundEntries: SoundEntry[] = [];
@@ -418,10 +426,13 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         )}
         <div id="sounds-panel-body" className={styles.soundsPanelBody}>
           {mode === 'packs' && (
-            <div
+            <ScrollIntoView
               id="sounds-panel-left"
               className={styles.leftColumn}
-              ref={foldersContainerRefCallback}
+              doScroll={isDefaultSoundSelected}
+              delay={0}
+              frames={50}
+              distanceY={70}
             >
               {folders.map(folder => {
                 return (
@@ -437,15 +448,18 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                   />
                 );
               })}
-            </div>
+            </ScrollIntoView>
           )}
-          <div
+          <ScrollIntoView
             id="sounds-panel-right"
             className={classNames(
               styles.rightColumn,
               mode === 'sounds' && styles.rightColumnFullWidth
             )}
-            ref={soundsContainerRefCallback}
+            doScroll={isDefaultSoundSelected}
+            delay={5}
+            frames={50}
+            distanceY={70}
           >
             {rightColumnSoundEntries.map(soundEntry => {
               return (
@@ -462,7 +476,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 />
               );
             })}
-          </div>
+          </ScrollIntoView>
         </div>
       </div>
     </FocusLock>
