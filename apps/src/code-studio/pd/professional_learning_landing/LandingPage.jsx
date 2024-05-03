@@ -231,7 +231,7 @@ function LandingPage({
         descriptionText: i18n.plSectionsFacilitatorResourcesDesc({
           course_name: coursePage,
         }),
-        buttonText: i18n.plSectionsFacilitatorResourcesTitle({
+        buttonText: i18n.plSectionsFacilitatorResourcesButton({
           course_name: coursePage,
         }),
         buttonUrl: pegasus(`/educate/facilitator-landing/${coursePage}`),
@@ -249,7 +249,7 @@ function LandingPage({
       {
         headingText: i18n.plSectionsOnboardingTitle(),
         descriptionText: i18n.plSectionsOnboardingDesc(),
-        buttonText: i18n.plSectionsOnboardingTitle(),
+        buttonText: i18n.plSectionsOnboardingButton(),
         buttonUrl: '/deeper-learning',
       },
     ];
