@@ -108,10 +108,10 @@ $width-sm: 640px;
 
     // Right image
     &:nth-of-type(3) {
-      right: 0;
+      right: -1rem;
 
       @media (max-width: $width-md) {
-        right: calc(-15% + -1rem);
+        right: -15%;
       }
     }
   }
