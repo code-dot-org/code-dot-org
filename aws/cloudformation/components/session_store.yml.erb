@@ -1,4 +1,6 @@
-  # Create a Redis-based Session Store
+  #
+  # Redis-based Session Store
+  #
   SessionStoreSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
@@ -33,8 +35,9 @@
   # https://aws.amazon.com/blogs/database/monitoring-best-practices-with-amazon-elasticache-for-redis-using-amazon-cloudwatch/
   SessionStoreCPUUsageAlarm:
     Type: AWS::CloudWatch::Alarm
+    DependsOn: SessionStoreGroup
     Properties:
-      AlarmName: Redis Session Store CPU Usage Too High
+      AlarmName: <%="Redis Session Store CPU Usage Too High (#{stack_name})" %>
       AlarmDescription: AWS Documentation recommends maintaining
         EngineCPUUtilization below 90%. Note that we use EngineCPUUtilization
         rather than CPUUtilization because the cache.r7g.xlarge nodes we're
@@ -67,8 +70,9 @@
 <% end -%>
   SessionStoreEvictionsAlarm:
     Type: AWS::CloudWatch::Alarm
+    DependsOn: SessionStoreGroup
     Properties:
-      AlarmName: Redis Session Store High Eviction Rate
+      AlarmName: <%="Redis Session Store High Eviction Rate (#{stack_name})" %>
       AlarmDescription: We're seeing a lot of evictions from the Redis session store.
         A steady amount of evictions is not a bad thing, but a rapid increase in
         eviction rate could be a sign of other instability.
@@ -100,8 +104,9 @@
 <% end -%>
   SessionStoreCurrConnectionsAlarm:
     Type: AWS::CloudWatch::Alarm
+    DependsOn: SessionStoreGroup
     Properties:
-      AlarmName: Redis Session Store Too Many Connections
+      AlarmName: <%="Redis Session Store Too Many Connections (#{stack_name})" %>
       AlarmDescription: >-
         ElastiCache's default limit on the maximum number of connections is up
         to 65,000 simultaneous connections per node. We set this alarm at 80% of
