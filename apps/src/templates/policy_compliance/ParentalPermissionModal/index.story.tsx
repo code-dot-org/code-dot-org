@@ -6,7 +6,7 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {Meta, StoryFn} from '@storybook/react';
 import {Provider} from 'react-redux';
-import ParentalPermissionModal from './index';
+import ParentalPermissionModal from '.';
 
 const store = getStore();
 registerReducers({currentUser});

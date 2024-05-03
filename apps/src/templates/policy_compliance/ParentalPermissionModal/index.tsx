@@ -30,7 +30,7 @@ import parentalPermissionRequestReducer, {
   requestParentalPermission,
 } from '@cdo/apps/redux/parentalPermissionRequestReducer';
 
-import './index.scss';
+import './style.scss';
 
 interface ParentalPermissionModalProps {
   lockoutDate: Date;
