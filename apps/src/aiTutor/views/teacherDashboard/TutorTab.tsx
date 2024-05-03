@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import InteractionsTable from './InteractionsTable';
 import AccessControls from './AccessControls';
 import Button from '@cdo/apps/templates/Button';
+import SectionAccessToggle from './SectionAccessToggle';
 
 /**
  * Renders table of student chat messages and toggles to control student access to AI Tutor.
@@ -23,6 +24,7 @@ const TutorTab: React.FC<TutorTabProps> = ({sectionId}) => {
 
   return (
     <div>
+      <SectionAccessToggle sectionId={sectionId} />
       <Button
         color={Button.ButtonColor.brandSecondaryDefault}
         key="controlAccess"

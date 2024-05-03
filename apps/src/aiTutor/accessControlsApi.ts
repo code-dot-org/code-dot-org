@@ -35,6 +35,27 @@ export const handleUpdateAITutorAccess = async (
   }
 };
 
+export const handleUpdateSectionAITutorEnabled = async (
+  sectionId: number,
+  newEnabled: boolean
+) => {
+  try {
+    const response = await fetch(`/api/v1/sections/${sectionId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+      body: JSON.stringify({ai_tutor_enabled: newEnabled}),
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+  } catch (error) {
+    console.log('error', error);
+  }
+};
+
 // Fetch students and whether they have access to AI Tutor or not.
 export const fetchStudents = async (sectionId: number) => {
   try {

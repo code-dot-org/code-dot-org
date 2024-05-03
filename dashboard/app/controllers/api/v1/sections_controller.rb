@@ -89,6 +89,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
+  # PATCH /api/v1/sections/<id>
   # Allows you to update a section. Clears any assigned script_id in the process
   def update
     section = Section.find(params[:id])
@@ -104,8 +105,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = @course&.id
-    fields[:script_id] = @unit&.id
+    fields[:course_id] = @course.id if @course
+    fields[:script_id] = @unit.id if @unit
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grades] = [params[:grade]] if Section.valid_grades?([params[:grade]])
