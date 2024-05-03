@@ -6,7 +6,7 @@ module Cpa
   ALL_USER_LOCKOUT_WARNING = 'cpa_all_user_lockout_warning'
   ALL_USER_LOCKOUT = 'cpa_all_user_lockout'
 
-  # There are three phases for the Colorado Privacy Act:
+  # There are four phases for the Colorado Privacy Act:
   # 1. Nothing - nil
   # 2. New User Accounts must be compliant - 'cpa_new_user_lockout'
   # 3. Existing accounts warned of lockout - 'cpa_all_user_lockout_warning'
