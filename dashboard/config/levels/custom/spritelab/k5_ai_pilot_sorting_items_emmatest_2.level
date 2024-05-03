@@ -1,7 +1,8 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
-  "created_at": "2024-05-02T03:24:01.000Z",
+  "created_at": "2024-05-02T15:11:16.000Z",
   "level_num": "custom",
   "user_id": 833,
   "properties": {
@@ -38,7 +39,7 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "parent_level_id": 28361,
-    "short_instructions": "It's time to sort!",
+    "short_instructions": "It's time to sort!\r\n\r\n",
     "mini_rubric": "false",
     "encrypted": "false",
     "auto_run_setup": "DRAW_LOOP",
@@ -54,12 +55,11 @@
     "authored_hints": "[]",
     "skip_autosave": true,
     "standalone_app_name": "spritelab",
-    "validation_code": "// Check criteria and give failure feedback\r\n//if (total > 0) {\r\n//  levelFailure(0, \"genericSuccess\");\r\n//}",
+    "validation_code": "// Check criteria and give failure feedback\r\nif (total >= 10) {\r\n levelFailure(0, \"genericSuccess\");\r\n}",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-02T03:24:01.486+00:00\",\"changed\":[\"cloned from \\\"k5_ai_pilot_sorting_items_dantest\\\"\"],\"cloned_from\":\"k5_ai_pilot_sorting_items_dantest\"},{\"changed_at\":\"2024-05-02 03:24:05 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 03:26:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 03:27:35 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 14:40:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 14:42:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 14:43:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 14:47:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 14:50:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 14:52:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:02:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:06:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:08:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:13:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:23:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:24:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:41:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:41:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:43:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:44:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 17:28:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-02T15:11:16.767+00:00\",\"changed\":[\"cloned from \\\"k5_ai_pilot_sorting_items_emmatest\\\"\"],\"cloned_from\":\"k5_ai_pilot_sorting_items_emmatest\"},{\"changed_at\":\"2024-05-02 15:11:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:12:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:19:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:19:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:20:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:25:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:43:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:44:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:45:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 15:47:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 16:04:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-02 17:13:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 17:18:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-02 17:29:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -79,7 +79,7 @@
           <variable id="^/#oNi7Szrhlm{(B#@S(">touchBool10</variable>
           <variable id="]qvtxNA:hm-.S+/b%9aL">correctlySorted</variable>
         </variables>
-        <block type="when_run" deletable="false" x="36" y="12">
+        <block type="when_run" deletable="false" x="48" y="12">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"sort_shapes_bg_2"</field>
@@ -88,7 +88,7 @@
                   <field name="ANIMATION_NAME">"cardBack_blue1"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":67,"y":239}</field>
+                      <field name="LOCATION">{"x":67,"y":256}</field>
                     </block>
                   </value>
                   <next>
@@ -96,7 +96,7 @@
                       <field name="ANIMATION_NAME">"cardBack_green1"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":200,"y":239}</field>
+                          <field name="LOCATION">{"x":200,"y":256}</field>
                         </block>
                       </value>
                       <next>
@@ -104,7 +104,7 @@
                           <field name="ANIMATION_NAME">"cardBack_red1"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":333,"y":239}</field>
+                              <field name="LOCATION">{"x":333,"y":256}</field>
                             </block>
                           </value>
                           <next>
@@ -479,7 +479,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_everyInterval" x="410" y="17">
+        <block type="gamelab_everyInterval" x="441" y="16">
           <field name="UNIT">"frames"</field>
           <value name="N">
             <block type="math_number">
@@ -530,7 +530,7 @@
                     <block type="gamelab_isTouchingSprite">
                       <value name="SPRITE">
                         <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"black_red_square"</field>
+                          <field name="ANIMATION">"red_white_circle"</field>
                         </block>
                       </value>
                       <value name="TARGET">
@@ -567,7 +567,7 @@
                         <block type="gamelab_isTouchingSprite">
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"black_yellow_square"</field>
+                              <field name="ANIMATION">"red_yellow_triangle"</field>
                             </block>
                           </value>
                           <value name="TARGET">
@@ -604,7 +604,7 @@
                             <block type="gamelab_isTouchingSprite">
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"green_white_circle"</field>
+                                  <field name="ANIMATION">"black_red_square"</field>
                                 </block>
                               </value>
                               <value name="TARGET">
@@ -678,7 +678,7 @@
                                     <block type="gamelab_isTouchingSprite">
                                       <value name="SPRITE">
                                         <block type="gamelab_allSpritesWithAnimation">
-                                          <field name="ANIMATION">"red_white_circle"</field>
+                                          <field name="ANIMATION">"black_red_triangle"</field>
                                         </block>
                                       </value>
                                       <value name="TARGET">
@@ -715,7 +715,7 @@
                                         <block type="gamelab_isTouchingSprite">
                                           <value name="SPRITE">
                                             <block type="gamelab_allSpritesWithAnimation">
-                                              <field name="ANIMATION">"green_red_circle"</field>
+                                              <field name="ANIMATION">"black_yellow_square"</field>
                                             </block>
                                           </value>
                                           <value name="TARGET">
@@ -789,7 +789,7 @@
                                                 <block type="gamelab_isTouchingSprite">
                                                   <value name="SPRITE">
                                                     <block type="gamelab_allSpritesWithAnimation">
-                                                      <field name="ANIMATION">"black_red_triangle"</field>
+                                                      <field name="ANIMATION">"green_white_circle"</field>
                                                     </block>
                                                   </value>
                                                   <value name="TARGET">
@@ -826,7 +826,7 @@
                                                     <block type="gamelab_isTouchingSprite">
                                                       <value name="SPRITE">
                                                         <block type="gamelab_allSpritesWithAnimation">
-                                                          <field name="ANIMATION">"red_yellow_triangle"</field>
+                                                          <field name="ANIMATION">"green_red_circle"</field>
                                                         </block>
                                                       </value>
                                                       <value name="TARGET">
