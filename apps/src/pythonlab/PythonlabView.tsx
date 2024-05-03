@@ -1,5 +1,5 @@
 // Pythonlab view
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
 import {Editor} from '@cdo/apps/weblab2/CDOIDE/Editor';
@@ -103,10 +103,10 @@ const PythonlabView: React.FunctionComponent = () => {
   const initialSources = useAppSelector(state =>
     selectInitialSources(state.lab, isStartMode)
   );
-  console.log({initialSources});
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
   const source = useAppSelector(state => state.pythonlab.source);
+  const sourceRef = useRef(source); // useRef to hold the current source
 
   // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
   // https://codedotorg.atlassian.net/browse/CT-499
@@ -118,18 +118,21 @@ const PythonlabView: React.FunctionComponent = () => {
   );
 
   useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    dispatch(setSource(initialSources?.source as MultiFileSource));
-    if (isStartMode && initialSources?.source) {
+    sourceRef.current = source;
+  }, [source]);
+
+  useEffect(() => {
+    if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        console.log('attempting to save updated source', initialSources.source);
-        return {
-          // TODO: Make this work. It does work if stringified.
-          source: initialSources.source,
-        };
+        return {source: sourceRef.current};
       });
     }
-  }, [channelId, dispatch, initialSources, isStartMode]);
+  }, [isStartMode]);
+
+  useEffect(() => {
+    // We reset the project when the channelId changes, as this means we are on a new level.
+    dispatch(setSource(initialSources?.source as MultiFileSource));
+  }, [channelId, dispatch, initialSources]);
 
   return (
     <div className={moduleStyles.pythonlab}>
