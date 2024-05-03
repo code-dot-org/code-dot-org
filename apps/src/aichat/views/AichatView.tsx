@@ -15,6 +15,7 @@ import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWor
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {ANALYTICS_SAMPLE_RATE} from '@cdo/apps/aichat/constants';
+import {isSampling} from '@cdo/apps/lib/util/analyticsUtils';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
@@ -166,7 +167,7 @@ const AichatView: React.FunctionComponent = () => {
             headerContent={chatWorkspaceHeader}
             rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
               dispatch(clearChatMessages());
-              if (Math.random() < ANALYTICS_SAMPLE_RATE) {
+              if (isSampling(ANALYTICS_SAMPLE_RATE)) {
                 analyticsReporter.sendEvent(
                   EVENTS.CHAT_ACTION,
                   {
