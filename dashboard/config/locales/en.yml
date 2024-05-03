@@ -1484,8 +1484,8 @@ en:
   child_account:
     parental_permission_request:
       errors:
-        invalid_parent_email: The parent/guardian's email address is invalid
         already_granted: Parental permission has already been granted
+        daily_limit_reached: The daily request limit has been reached
+        invalid_parent_email: The parent/guardian's email address is invalid
         parent_email_is_own: A request cannot be sent to your own email address
         resend_limit_reached: The limit for resend requests has been reached
-        daily_limit_reached: The daily request limit has been reached
