@@ -231,10 +231,7 @@ class EvaluateRubricJob < ApplicationJob
   RETRIES_ON_TIMEOUT = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, _error|
-    options = job.arguments.first
-    script_level = ScriptLevel.find(options[:script_level_id])
-
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |_job, _error|
     Cdo::Metrics.push(
       AI_RUBRIC_METRICS_NAMESPACE,
       [
@@ -243,12 +240,6 @@ class EvaluateRubricJob < ApplicationJob
           value: 1,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
-            {name: 'UserId',  value: options[:user_id]},
-            {name: 'RequesterId', value: options[:requester_id]},
-            {name: 'ScriptLevelId', value: options[:script_level_id]},
-            {name: 'ScriptName', value: script_level.script.name},
-            {name: 'LessonNumber', value: script_level.lesson.absolute_position},
-            {name: 'LevelName', value: script_level.level.name},
           ],
           unit: 'Count'
         }
