@@ -2280,6 +2280,8 @@
   "rubricLevelTwoHeader": "Convincing Evidence",
   "rubricLevelFourHeader": "No Evidence",
   "rubricScores": "Rubric Scores",
+  "rubricNextLearningGoal": "Go to next learning goal",
+  "rubricPreviousLearningGoal": "Go to previous learning goal",
   "rubricAiHeaderText": "AI Teaching Assistant",
   "rubricTourNextButtonText": "Next Tip",
   "rubricTourStepOneTitle": "Getting Started with Your AI Teaching Assistant",

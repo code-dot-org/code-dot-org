@@ -248,6 +248,12 @@ export function annotateLines(evidence, observations) {
     }
   }
 
+  // If there was no evidence given, we do at least want to include the
+  // observations column.
+  if (ret.length === 0) {
+    shouldIncludeObservationsColumn = true;
+  }
+
   // Somewhere, we annotated with the obserations column, or we have no other
   // sources of evidence. We want to list out the observations column in our
   // rendered list. So, here we parse out the observations column.
@@ -519,8 +525,17 @@ export default function LearningGoals({
   const aiEvidence = useMemo(() => {
     // Annotate the lines based on the AI observation
     clearAnnotations();
-    if (!!aiEvalInfo?.evidence && !productTour) {
-      return annotateLines(aiEvalInfo.evidence, aiEvalInfo.observations);
+
+    if (!!aiEvalInfo && !productTour) {
+      const annotations = annotateLines(
+        aiEvalInfo.evidence,
+        aiEvalInfo.observations
+      );
+      // Scroll to first evidence, if possible
+      if (annotations[0]?.firstLine) {
+        EditorAnnotator.scrollToLine(annotations[0].firstLine);
+      }
+      return annotations;
     } else if (productTour) {
       return [
         {
@@ -588,6 +603,7 @@ export default function LearningGoals({
               style.learningGoalButton,
               style.learningGoalButtonLeft
             )}
+            aria-label={i18n.rubricPreviousLearningGoal()}
             onClick={() => onCarouselPress(-1)}
           >
             <FontAwesome icon="angle-left" />
@@ -655,6 +671,7 @@ export default function LearningGoals({
               style.learningGoalButton,
               style.learningGoalButtonRight
             )}
+            aria-label={i18n.rubricNextLearningGoal()}
             onClick={() => onCarouselPress(1)}
           >
             <FontAwesome icon="angle-right" />
