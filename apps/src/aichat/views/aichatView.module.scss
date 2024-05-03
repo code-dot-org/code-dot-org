@@ -19,15 +19,18 @@
   .instructionsArea {
     width: 30%;
     height: 100%;
+    min-width: 200px;
   }
 
   .chatWorkspaceArea {
     flex: 1;
+    min-width: 200px;
   }
 
   .customizationArea {
     height: 100%;
     width: 30%;
+    min-width: 200px;
   }
 
   .presentationArea {
@@ -41,6 +44,7 @@
   display: flex;
   flex: 1;
   gap: 2px;
+  overflow: auto;
 }
 
 .clearButton {
