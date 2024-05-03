@@ -86,10 +86,10 @@ export const setHasSeenProgressTableInvite = hasSeenProgressTableInvite => ({
   type: SET_SEEN_PROGRESS_TABLE_INVITATION,
   hasSeenProgressTableInvite,
 });
-export const setDateProgressTableInvtationDelayed =
-  dateProgressTableInviteDelayed => ({
+export const setDateProgressTableInvitationDelayed =
+  dateProgressTableInvitationDelayed => ({
     type: SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED,
-    dateProgressTableInviteDelayed,
+    dateProgressTableInvitationDelayed,
   });
 
 const initialState = {
@@ -189,8 +189,8 @@ export default function currentUser(state = initialState, action) {
   if (action.type === SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED) {
     return {
       ...state,
-      dateProgressTableInvtationDelayed:
-        action.dateProgressTableInvtationDelayed,
+      dateProgressTableInvitationDelayed:
+        action.dateProgressTableInvitationDelayed,
     };
   }
   if (action.type === SET_SEEN_PROGRESS_TABLE_INVITATION) {

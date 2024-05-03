@@ -11,7 +11,7 @@ import {default as LinkedButton} from '@cdo/apps/templates/Button';
 import {
   setHasSeenProgressTableInvite,
   setShowProgressTableV2,
-  setDateProgressTableInvtationDelayed,
+  setDateProgressTableInvitationDelayed,
 } from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 
@@ -23,17 +23,18 @@ function InviteToV2ProgressModal({
   sectionId,
 
   // from redux
-  dateProgressTableInvtationDelayed,
+  dateProgressTableInvitationDelayed,
   hasSeenProgressTableInvite,
   setHasSeenProgressTableInvite,
   setShowProgressTableV2,
+  setDateProgressTableInvitationDelayed,
 }) {
   // const [invitationOpen, setInvitationOpen] = React.useState(true);
   const [invitationOpen, setInvitationOpen] = React.useState(false);
 
   React.useEffect(() => {
     const timeSinceInvitationLastDelayed = () => {
-      const startingDate = new Date(dateProgressTableInvtationDelayed);
+      const startingDate = new Date(dateProgressTableInvitationDelayed);
       const today = new Date();
       const differenceInMilliseconds = today.getTime() - startingDate.getTime();
       const differenceInDays = differenceInMilliseconds / (1000 * 3600 * 24);
@@ -45,7 +46,7 @@ function InviteToV2ProgressModal({
       if (alreadyViewedInvitation) {
         return false;
       } else {
-        if (!!dateProgressTableInvtationDelayed) {
+        if (!!dateProgressTableInvitationDelayed) {
           return timeSinceInvitationLastDelayed() > 3;
         } else {
           return true;
@@ -54,7 +55,7 @@ function InviteToV2ProgressModal({
     };
 
     setInvitationOpen(showInvitation());
-  }, [dateProgressTableInvtationDelayed, hasSeenProgressTableInvite]);
+  }, [dateProgressTableInvitationDelayed, hasSeenProgressTableInvite]);
 
   const handleDismiss = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
@@ -79,9 +80,9 @@ function InviteToV2ProgressModal({
       sectionId,
     });
     setDateInvitationDelayed(new Date());
-    setDateProgressTableInvtationDelayed(new Date());
+    setDateProgressTableInvitationDelayed(new Date());
     setInvitationOpen(false);
-  }, [sectionId]);
+  }, [sectionId, setDateProgressTableInvitationDelayed]);
 
   const setDateInvitationDelayed = date => {
     return $.post(`/api/v1/users/date_progress_table_invitation_last_delayed`, {
@@ -140,8 +141,9 @@ InviteToV2ProgressModal.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
   setHasSeenProgressTableInvite: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
-  dateProgressTableInvtationDelayed: PropTypes.string,
+  dateProgressTableInvitationDelayed: PropTypes.string,
   hasSeenProgressTableInvite: PropTypes.bool,
+  setDateProgressTableInvitationDelayed: PropTypes.func.isRequired,
 };
 
 export default connect(
@@ -155,9 +157,11 @@ export default connect(
       dispatch(setHasSeenProgressTableInvite(hasSeenProgressTableInvite)),
     setShowProgressTableV2: showProgressTableV2 =>
       dispatch(setShowProgressTableV2(showProgressTableV2)),
-    setDateProgressTableInvtationDelayed: dateProgressTableInviteLastDelayed =>
+    setDateProgressTableInvitationDelayed: dateProgressTableInvitationDelayed =>
       dispatch(
-        setDateProgressTableInvtationDelayed(dateProgressTableInviteLastDelayed)
+        setDateProgressTableInvitationDelayed(
+          dateProgressTableInvitationDelayed
+        )
       ),
   })
 )(InviteToV2ProgressModal);
