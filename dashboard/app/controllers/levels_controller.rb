@@ -494,7 +494,9 @@ class LevelsController < ApplicationController
   end
 
   # GET /levels/:id/extra_links
-  # Get the extra links for the level. Only levelbuilders can use extra links.
+  # Get the extra links for the level, for use by levelbuilders.
+  # This is used by lab2 levels that cannot use the haml "extra links" box
+  # as that box will not refresh when changing levels.
   def extra_links
     unless current_user&.levelbuilder?
       return head :forbidden
@@ -511,14 +513,16 @@ class LevelsController < ApplicationController
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     if Rails.application.config.levelbuilder_mode && !is_standalone_project
       if can? :edit, @level
-        links[@level.name] << {text: 'Edit', url: edit_level_path(@level)}
-        if @level.is_a?(Blockly) # && !@level.is_a?(Music)
+        links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
+        # Music Lab only edits via the level edit page.
+        if @level.is_a?(Blockly) && !@level.is_a?(Music)
           links[@level.name] << {
-            text: "Start (#{Blockly.count_xml_blocks(@level.start_blocks)})",
-            url: edit_blocks_level_path(@level, :start_blocks)
+            text: "[s]tart (#{Blockly.count_xml_blocks(@level.start_blocks)})",
+            url: edit_blocks_level_path(@level, :start_blocks),
+            access_key: 's'
           }
-          links[@level.name] << {text: 'Solution', url: edit_blocks_level_path(@level, :solution_blocks)}
-          links[@level.name] << {text: 'Toolbox', url: edit_blocks_level_path(@level, :toolbox_blocks)}
+          links[@level.name] << {text: 's[o]lution', url: edit_blocks_level_path(@level, :solution_blocks), access_key: 'o'}
+          links[@level.name] << {text: '[t]oolbox', url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           links[@level.name] << {text: 'required', url: edit_blocks_level_path(@level, :required_blocks)}
           links[@level.name] << {text: 'recommended', url: edit_blocks_level_path(@level, :recommended_blocks)}
           links[@level.name] << {
@@ -529,8 +533,8 @@ class LevelsController < ApplicationController
             links[@level.name] << {text: 'pre-draw', url: edit_blocks_level_path(@level, :predraw_blocks)}
           end
         elsif @level.is_a?(Javalab) || @level.is_a?(Pythonlab) || @level.is_a?(Weblab2)
-          links[@level.name] << {text: "Start", url: edit_blocks_level_path(@level, :start_sources)}
-          links[@level.name] << {text: "Exemplar", url: edit_exemplar_level_path(@level)}
+          links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
+          links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
         end
       else
         links[@level.name] << {text: '(Cannot edit)', url: ''}

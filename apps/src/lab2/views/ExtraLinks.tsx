@@ -11,7 +11,7 @@ interface ExtraLinksProps {
 }
 
 interface ExtraLinksResponse {
-  links: {[key: string]: {text: string; url: string}[]};
+  links: {[key: string]: {text: string; url: string; access_key?: string}[]};
   can_clone: boolean;
   can_delete: boolean;
   level_name: string;
@@ -39,9 +39,13 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     return <></>;
   }
 
-  const onClose = () => setIsModalOpen(false);
+  const onClose = () => {
+    setIsModalOpen(false);
+    setShowCloneField(false);
+    setShowDeleteConfirm(false);
+  };
+
   const handleClone = async () => {
-    console.log('cloning', clonedLevelName);
     if (clonedLevelName) {
       $.ajax({
         url: `/levels/${levelId}/clone?name=${clonedLevelName}`,
@@ -105,7 +109,11 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
                 {links.map((link, index) => (
                   <li key={index}>
                     {link.url ? (
-                      <a href={link.url}>{link.text}</a>
+                      // This menu is only used by internal users, who have explicitly requested access keys.
+                      // eslint-disable-next-line jsx-a11y/no-access-key
+                      <a href={link.url} accessKey={link.access_key}>
+                        {link.text}
+                      </a>
                     ) : (
                       <p>{link.text}</p>
                     )}
