@@ -64,6 +64,19 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  class ServiceUnavailableError < StandardError
+    attr_reader :response
+
+    # Creates a ServiceUnavailableError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
+
+      super("Service unavailable for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
+    end
+  end
+
   # For testing purposes, we can raise this error to simulate a missing key
   class StubNoSuchKey < StandardError
   end
@@ -237,6 +250,26 @@ class EvaluateRubricJob < ApplicationJob
       [
         {
           metric_name: :RetryOnTimeout,
+          value: 1,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ],
+          unit: 'Count'
+        }
+      ]
+    )
+  end
+
+  RETRIES_ON_SERVICE_UNAVAILABLE = 3
+
+  # Retry on a 503 Service Unavailable error, including those returned by aiproxy
+  # when openai returns 500. 'exponentially_longer' waits 3s, 18s, and then 83s.
+  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: RETRIES_ON_SERVICE_UNAVAILABLE do |_job, _error|
+    Cdo::Metrics.push(
+      AI_RUBRIC_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: :ServiceUnavailableError,
           value: 1,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
@@ -440,6 +473,8 @@ class EvaluateRubricJob < ApplicationJob
     raise TooManyRequestsError.new(response) if response.code == 429
 
     raise RequestTooLargeError.new(response) if response.code == 413
+
+    raise ServiceUnavailableError.new(response) if response.code == 503
 
     # General error will raise a generic StandardError
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
