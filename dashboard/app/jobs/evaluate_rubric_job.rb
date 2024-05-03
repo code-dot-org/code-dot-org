@@ -278,7 +278,7 @@ class EvaluateRubricJob < ApplicationJob
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500. 'exponentially_longer' waits 3s, 18s, and then 83s.
   retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: RETRIES_ON_SERVICE_UNAVAILABLE do |_job, error|
-    agent = error.message.include?('openai') ? 'openai' : 'aiproxy'
+    agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
 
     Cdo::Metrics.push(
       AI_RUBRIC_METRICS_NAMESPACE,
@@ -301,7 +301,7 @@ class EvaluateRubricJob < ApplicationJob
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
   # when openai request times out. 'exponentially_longer' waits 3s, 18s, and then 83s.
   retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: RETRIES_ON_GATEWAY_TIMEOUT do |_job, error|
-    agent = error.message.include?('openai') ? 'openai' : 'aiproxy'
+    agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
 
     Cdo::Metrics.push(
       AI_RUBRIC_METRICS_NAMESPACE,

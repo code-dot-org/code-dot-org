@@ -292,7 +292,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     # the stub response currently returns a json object, so just make sure that
     # response contains "openai" rather than going through the trouble of composing
     # a more accurate response representing a 503 error.
-    stub_get_openai_evaluations(status: 503, message: 'openai')
+    stub_get_openai_evaluations(status: 503, message: 'OpenAI')
 
     # The superclass, ApplicationJob, logs metrics around all jobs.
     # Those calls must be stubbed to test metrics for this job.
@@ -337,7 +337,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     # the stub response currently returns a json object, so just make sure that
     # response contains "openai" rather than going through the trouble of composing
     # a more accurate response representing a 504 error.
-    stub_get_openai_evaluations(status: 504, message: 'openai')
+    stub_get_openai_evaluations(status: 504, message: 'OpenAI')
 
     # The superclass, ApplicationJob, logs metrics around all jobs.
     # Those calls must be stubbed to test metrics for this job.
