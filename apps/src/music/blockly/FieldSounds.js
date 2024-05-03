@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SoundsPanel from '../views/SoundsPanel';
 import SoundsPanel2 from '../views/SoundsPanel2';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
@@ -115,7 +116,7 @@ class FieldSounds extends GoogleBlockly.Field {
     const CurrentSoundsPanel =
       AppConfig.getValue('sounds-panel-2') === 'true'
         ? SoundsPanel2
-        : SoundsPanel2;
+        : SoundsPanel;
 
     ReactDOM.render(
       <CurrentSoundsPanel
