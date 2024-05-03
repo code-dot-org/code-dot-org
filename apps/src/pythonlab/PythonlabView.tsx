@@ -6,7 +6,7 @@ import {Editor} from '@cdo/apps/weblab2/CDOIDE/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {CDOIDE} from '@cdo/apps/weblab2/CDOIDE';
-import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setAndSaveSource, setSource} from './pythonlabRedux';
 import PythonConsole from './PythonConsole';
@@ -14,7 +14,7 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {PartialAppOptions} from '../lab2/projects/utils';
 import header from '@cdo/apps/code-studio/header';
-import {LabState} from '../lab2/lab2Redux';
+import {useInitialSources} from '@cdoide/hooks';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -39,23 +39,6 @@ const defaultProject: MultiFileSource = {
       parentId: '0',
     },
   },
-};
-
-const defaultSources: ProjectSources = {
-  source: defaultProject,
-};
-
-const selectInitialSources = (labState: LabState, isStartMode: boolean) => {
-  // Get the start sources from the level or use our hard-coded default.
-  const startSources = labState.levelProperties?.source
-    ? labState.levelProperties
-    : defaultSources;
-  if (isStartMode) {
-    return startSources;
-  }
-  const projectSources = labState.initialSources;
-  // projectSources will be undefined if the user hasn't begun a project.
-  return projectSources || startSources;
 };
 
 const defaultConfig: ConfigType = {
@@ -100,9 +83,9 @@ const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const appOptions = getScriptData('appoptions') as PartialAppOptions;
   const isStartMode = appOptions.editBlocks === 'start_sources';
-  const initialSources = useAppSelector(state =>
-    selectInitialSources(state.lab, isStartMode)
-  );
+  const initialSources = useInitialSources({
+    source: defaultProject,
+  });
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
   const source = useAppSelector(state => state.pythonlab.source);
