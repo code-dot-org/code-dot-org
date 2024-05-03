@@ -14,6 +14,7 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {ANALYTICS_SAMPLE_RATE} from '@cdo/apps/aichat/constants';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
@@ -165,13 +166,15 @@ const AichatView: React.FunctionComponent = () => {
             headerContent={chatWorkspaceHeader}
             rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
               dispatch(clearChatMessages());
-              analyticsReporter.sendEvent(
-                EVENTS.CHAT_ACTION,
-                {
-                  action: 'Clear chat history',
-                },
-                PLATFORMS.BOTH
-              );
+              if (Math.random() < ANALYTICS_SAMPLE_RATE) {
+                analyticsReporter.sendEvent(
+                  EVENTS.CHAT_ACTION,
+                  {
+                    action: 'Clear chat history',
+                  },
+                  PLATFORMS.BOTH
+                );
+              }
             })}
           >
             <ChatWorkspace />

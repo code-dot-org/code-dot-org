@@ -14,6 +14,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {ANALYTICS_SAMPLE_RATE} from '@cdo/apps/aichat/constants';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
@@ -232,7 +233,7 @@ const saveAiCustomization = async (
         timestamp: getCurrentTime(),
       })
     );
-    if (isUpdating) {
+    if (isUpdating && Math.random() < ANALYTICS_SAMPLE_RATE) {
       analyticsReporter.sendEvent(
         EVENTS.UPDATE_CHATBOT,
         {
