@@ -332,11 +332,10 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   // Initial render.
   useEffect(() => {
-    // If the default sound is selected, then do a smooth scroll of the two columns.
-    // Otherwise, scroll instantly to the selected entry in each column.
-    if (isDefaultSoundSelected) {
-      // We will use scrollIntoView.
-    } else {
+    // If the user has selected a non-default sound, then jump directly to it.
+    // If the default sound is selected, then the ScrollIntoView component will do
+    // an initial scroll instead.
+    if (!isDefaultSoundSelected) {
       // This timeout allows the initial scroll-to-current-selection to work
       // when wrapping the content with FocusLock.
       setTimeout(() => {
