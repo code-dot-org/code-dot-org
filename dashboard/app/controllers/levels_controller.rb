@@ -395,12 +395,20 @@ class LevelsController < ApplicationController
   # DELETE /levels/1.json
   def destroy
     result = @level.destroy
-    if result
-      flash.notice = "Deleted #{@level.name.inspect}"
-      redirect_to(params[:redirect] || levels_url)
+    if request.format.symbol == :json
+      if result
+        return render json: {redirect: levels_url}
+      else
+        return render status: :unprocessable_entity, plain: "Could not delete. Error(s): #{@level.errors.full_messages.join('. ')}"
+      end
     else
-      flash.alert = @level.errors.full_messages.join(". ")
-      redirect_to(edit_level_path(@level))
+      if result
+        flash.notice = "Deleted #{@level.name.inspect}"
+        redirect_to(params[:redirect] || levels_url)
+      else
+        flash.alert = @level.errors.full_messages.join(". ")
+        redirect_to(edit_level_path(@level))
+      end
     end
   end
 
@@ -551,7 +559,7 @@ class LevelsController < ApplicationController
     # Gamelab show animation json, list contained levels, Blockly helpers, list of scripts, list of parent levels, all project
     # validator links (should be handled elsewhere), abuse handlers (should be handled elsewhere).
 
-    return render json: {links: links, can_clone: can?(:clone, @level), can_delete: can?(:delete, @level)}
+    return render json: {links: links, can_clone: can?(:clone, @level), can_delete: can?(:delete, @level), level_name: @level.name}
   end
 
   # Use callbacks to share common setup or constraints between actions.
