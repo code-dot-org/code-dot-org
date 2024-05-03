@@ -1937,16 +1937,10 @@ class User < ApplicationRecord
     pl_scripts = pl_user_scripts.map(&:script)
 
     levels = pl_scripts.map(&:levels).flatten
-    level_ids = levels.pluck(:id)
+    level_ids = levels.map(&:id)
 
     # Handle levels-within-levels
-    # For bubble choice levels, a UserLevel is created for the parent, so no need to handle children
-    # However, for non-bubble choice levels, a UserLevel is only created for the child level, so we need
-    # to include it in the list of level_ids to chck for
-    levels.filter {|l| l.contained_levels.count > 0 && !l.is_a?(BubbleChoice)}.each do |level|
-      contained_levels = level.contained_levels
-      level_ids += contained_levels.pluck(:id)
-    end
+    levels.each {|l| level_ids << l.contained_levels.first&.id unless l.contained_levels.empty?}
 
     user_levels = UserLevel.where(user: self, script: pl_scripts, level_id: level_ids)
     return [] if user_levels.empty?
