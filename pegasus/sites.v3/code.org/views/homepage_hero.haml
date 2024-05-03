@@ -76,8 +76,8 @@
       - elsif entry[:type] == "music-lab-launch-2024"
         %div.flex-container
           .text-wrapper
-            %p.overline.body-one
-              = I18n.t(entry[:text_overline])
+            %p.has-icon.body-one
+              =hoc_s(:"music_lab.introducing_music_lab_strong", markdown: :inline, locals:{music_lab: "Music Lab"})
             %h1
               = I18n.t(entry[:text_h1])
             %p.body-one.wrap-balance
