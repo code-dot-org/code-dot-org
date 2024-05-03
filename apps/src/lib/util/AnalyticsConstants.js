@@ -264,7 +264,7 @@ const EVENTS = {
   // Aichat
   UPDATE_CHATBOT: 'Student updates their aichat bot',
   AICHAT_VALIDATION: 'Student passes/fails validation on an aichat level',
-  AICHAT_OPTIONS: 'Student takes a chat action',
+  CHAT_ACTION: 'Student takes a chat action',
 };
 
 const EVENT_GROUP_NAMES = {
