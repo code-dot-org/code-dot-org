@@ -231,7 +231,7 @@ class EvaluateRubricJob < ApplicationJob
   RETRIES_ON_TIMEOUT = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |_job, _error|
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do
     Cdo::Metrics.push(
       AI_RUBRIC_METRICS_NAMESPACE,
       [
