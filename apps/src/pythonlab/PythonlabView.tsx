@@ -81,15 +81,13 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  const isStartMode = appOptions.editBlocks === 'start_sources';
   const initialSources = useInitialSources({
     source: defaultProject,
   });
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
   const source = useAppSelector(state => state.pythonlab.source);
-  const sourceRef = useRef(source); // useRef to hold the current source
+  const sourceRef = useRef(source);
 
   // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
   // https://codedotorg.atlassian.net/browse/CT-499
@@ -100,6 +98,10 @@ const PythonlabView: React.FunctionComponent = () => {
     [dispatch]
   );
 
+  // When editing start sources, we provide a save button in the header.
+  // We track the current source as it changes so that it can be saved any time.
+  const appOptions = getScriptData('appoptions') as PartialAppOptions;
+  const isStartMode = appOptions.editBlocks === 'start_sources';
   useEffect(() => {
     sourceRef.current = source;
   }, [source]);
