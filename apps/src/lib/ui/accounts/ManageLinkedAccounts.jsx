@@ -204,41 +204,41 @@ class ManageLinkedAccounts extends React.Component {
           </tbody>
         </table>
         {lockedOptions.length > 0 && (
-          <p style={styles.message}>
-            {i18n.manageLinkedAccounts_parentalPermissionRequired()}
-          </p>
-        )}
-        {lockedOptions.length > 0 && (
-          <div style={styles.lockContainer}>
-            <table style={{...styles.table, ...styles.lockedTable}}>
-              <thead>
-                <tr>
-                  <th
-                    style={{...styles.headerCell, ...styles.headerCellLocked}}
-                  >
-                    {i18n.manageLinkedAccounts_loginType()}
-                  </th>
-                  <th
-                    style={{...styles.headerCell, ...styles.headerCellLocked}}
-                  >
-                    {i18n.manageLinkedAccounts_emailAddress()}
-                  </th>
-                  <th
-                    style={{...styles.headerCell, ...styles.headerCellLocked}}
-                  >
-                    {i18n.manageLinkedAccounts_actions()}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {/* The options that could be locked by account policy. */}
-                {lockedOptions.map(this.renderAuthOption)}
-              </tbody>
-            </table>
-            <div aria-hidden="true" style={styles.lockSection}>
-              <img alt="" style={styles.lockImage} src={lockImage} />
+          <>
+            <p style={styles.message}>
+              {i18n.manageLinkedAccounts_parentalPermissionRequired()}
+            </p>
+            <div style={styles.lockContainer}>
+              <table style={{...styles.table, ...styles.lockedTable}}>
+                <thead>
+                  <tr>
+                    <th
+                      style={{...styles.headerCell, ...styles.headerCellLocked}}
+                    >
+                      {i18n.manageLinkedAccounts_loginType()}
+                    </th>
+                    <th
+                      style={{...styles.headerCell, ...styles.headerCellLocked}}
+                    >
+                      {i18n.manageLinkedAccounts_emailAddress()}
+                    </th>
+                    <th
+                      style={{...styles.headerCell, ...styles.headerCellLocked}}
+                    >
+                      {i18n.manageLinkedAccounts_actions()}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* The options that could be locked by account policy. */}
+                  {lockedOptions.map(this.renderAuthOption)}
+                </tbody>
+              </table>
+              <div aria-hidden="true" style={styles.lockSection}>
+                <img alt="" style={styles.lockImage} src={lockImage} />
+              </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     );
