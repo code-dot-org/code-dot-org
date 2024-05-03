@@ -264,15 +264,18 @@ class EvaluateRubricJob < ApplicationJob
 
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500. 'exponentially_longer' waits 3s, 18s, and then 83s.
-  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: RETRIES_ON_SERVICE_UNAVAILABLE do |_job, _error|
+  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: RETRIES_ON_SERVICE_UNAVAILABLE do |_job, error|
+    agent = error.message.include?('openai') ? 'openai' : 'aiproxy'
+
     Cdo::Metrics.push(
       AI_RUBRIC_METRICS_NAMESPACE,
       [
         {
-          metric_name: :ServiceUnavailableError,
+          metric_name: :RetryOnServiceUnavailable,
           value: 1,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
+            {name: 'Agent', value: agent},
           ],
           unit: 'Count'
         }

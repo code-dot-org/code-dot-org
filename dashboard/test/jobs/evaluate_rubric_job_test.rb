@@ -289,14 +289,24 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_lesson_s3_data
 
-    stub_get_openai_evaluations(status: 503)
+    # the stub response currently returns a json object, so just make sure that
+    # response contains "openai" rather than going through the trouble of composing
+    # a more accurate response representing a 503 error.
+    stub_get_openai_evaluations(status: 503, message: 'openai')
 
-    # verify the correct metric is published
+    # The superclass, ApplicationJob, logs metrics around all jobs.
+    # Those calls must be stubbed to test metrics for this job.
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      anything
+    )
+
+    # ensure RetryOnServiceUnavailable metric is logged
     Cdo::Metrics.expects(:push).with(
       EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(RetryOnServiceUnavailable: 1),
-        includes_dimensions(:RetryOnServiceUnavailable, Environment: CDO.rack_env)
+        includes_dimensions(:RetryOnServiceUnavailable, Environment: CDO.rack_env, Agent: 'openai')
       )
     )
 
@@ -473,7 +483,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
   end
 
-  private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {}, response_type: 'tsv')
+  private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {}, response_type: 'tsv', message: 'message')
     raise "invalid response type #{response_type}" unless ['tsv', 'json'].include? response_type
     expected_examples = [
       ['fake-code-1', 'fake-response-1'],
@@ -516,7 +526,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     response = stub(
       body: {metadata: metadata, data: fake_ai_evaluations}.to_json,
       code: status,
-      message: 'message',
+      message: message,
       request: request,
       success?: status == 200
     )
