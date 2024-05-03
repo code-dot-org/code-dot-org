@@ -66,23 +66,11 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  Instructions: () => (
-    <div
-      style={{
-        backgroundColor: 'white',
-        color: 'black',
-        gridArea: 'instructions',
-      }}
-    >
-      Welcome to Python Lab!
-    </div>
-  ),
-  gridLayoutRows: '32px 100px 32px auto',
+  gridLayoutRows: '32px 232px auto',
   gridLayoutColumns: '300px auto',
   gridLayout: `
     "instructions file-tabs"
     "instructions editor"
-    "side-bar editor"
     "file-browser editor"
   `,
 };
