@@ -10,6 +10,10 @@ import {
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {ANALYTICS_SAMPLE_RATE} from '@cdo/apps/aichat/constants';
+import {isSampling} from '@cdo/apps/lib/util/analyticsUtils';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import {isDisabled} from './utils';
@@ -32,10 +36,28 @@ const PublishNotes: React.FunctionComponent = () => {
 
   const onSave = useCallback(() => {
     dispatch(saveModelCard());
+    if (isSampling(ANALYTICS_SAMPLE_RATE)) {
+      analyticsReporter.sendEvent(
+        EVENTS.UPDATE_MODEL_CARD_INFO,
+        {
+          action: 'User clicks on save button',
+        },
+        PLATFORMS.BOTH
+      );
+    }
   }, [dispatch]);
 
   const onPublish = useCallback(() => {
     dispatch(publishModel());
+    if (isSampling(ANALYTICS_SAMPLE_RATE)) {
+      analyticsReporter.sendEvent(
+        EVENTS.UPDATE_MODEL_CARD_INFO,
+        {
+          action: 'User clicks on publish button',
+        },
+        PLATFORMS.BOTH
+      );
+    }
   }, [dispatch]);
 
   return (

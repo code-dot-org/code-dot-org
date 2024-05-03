@@ -265,6 +265,7 @@ const EVENTS = {
   UPDATE_CHATBOT: 'Student updates their aichat bot',
   AICHAT_VALIDATION: 'Student passes/fails validation on an aichat level',
   CHAT_ACTION: 'Student takes a chat action',
+  UPDATE_MODEL_CARD_INFO: 'Student updates their model card info',
 };
 
 const EVENT_GROUP_NAMES = {
