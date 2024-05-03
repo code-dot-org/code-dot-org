@@ -1,6 +1,6 @@
 @import 'color';
 
-.musicPlayViewContainer {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,52 +8,62 @@
   height: 100%;
   width: 100%;
   background-color: $light_black;
+  border-radius: 4px;
 
-  .musicPlayViewCard {
+  .cardContainer {
+    max-width: 360px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 6px black;
+  }
+
+  .playViewImage {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    border-radius: 4px;
+  }
+
+  .card {
     display: flex;
     flex-direction: column;
     max-width: 350px;
     background-color: $light_gray_900;
     gap: .5rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 4px;
 
-    .musicPlayViewInfoSection {
+    .infoSection {
       display: flex;
       flex-direction: column;
-      gap: .5rem;
+      gap: 0.5rem;
 
-      img {
-        width: 56px;
-        align-self: center;
-      }
-
-      h2, p {
+      .infoText {
         color: $light_white;
         margin-bottom: 0;
       }
     }
 
-    .musicPlayViewPlaySection {
+    .playSection {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
+      background: $neutral_dark;
+      padding: 10px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $light_gray_700;
+      border-radius: 4px;
 
-      input[type='range'] {
-        overflow: hidden;
-        width: 100%;
-        height: 4px;
-        accent-color: $light_gray_200;
-
-        background-color: $light_gray_800;
-        color: $light_gray_800;
+      .playViewButton {
+        border-color: transparent;
       }
     }
 
-    .musicPlayViewButtonsSection {
+    .buttonsSection {
       display: flex;
-      gap: .5rem;
-      justify-content: center;
+      justify-content: space-between;
+      margin-top: 10px;
     }
   }
 }
