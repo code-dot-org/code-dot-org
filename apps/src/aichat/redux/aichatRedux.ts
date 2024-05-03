@@ -176,7 +176,7 @@ const saveAiCustomization = async (
   savedAiCustomizations: AiCustomizations,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
   isUpdating: boolean = false,
-  levelId: string | undefined = undefined
+  levelId: string | null = null
 ) => {
   // Remove any empty example topics on save
   const trimmedExampleTopics =
