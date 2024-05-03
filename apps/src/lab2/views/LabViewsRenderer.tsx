@@ -108,7 +108,6 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.appName
   );
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
-  console.log({levelId});
 
   const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
 

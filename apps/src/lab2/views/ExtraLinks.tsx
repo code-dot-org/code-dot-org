@@ -15,9 +15,7 @@ interface ExtraLinksResponse {
   level_name: string;
 }
 
-// Extra Links modal. This is used to display helpful links for levelbuilders, and should
-// be extended to also include links for project validators as well. It replaces the haml
-// version of extra links, which doesn't work on lab2 after a level change.
+// Fetch extra links for the level, then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
 }: ExtraLinksProps) => {
