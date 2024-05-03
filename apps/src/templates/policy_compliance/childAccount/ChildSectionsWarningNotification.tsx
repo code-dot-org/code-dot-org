@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import ChildSectionsWarningDialog from '@cdo/apps/templates/childAccountPolicy/ChildSectionsWarningDialog';
+import ChildSectionsWarningDialog from '@cdo/apps/templates/policy_compliance/childAccountPolicy/ChildSectionsWarningDialog';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
