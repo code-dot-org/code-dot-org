@@ -322,6 +322,51 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
   end
 
+  test 'job is retried when proxy server returns 504' do
+    # Perform an otherwise successful run
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # Create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data
+
+    # the stub response currently returns a json object, so just make sure that
+    # response contains "openai" rather than going through the trouble of composing
+    # a more accurate response representing a 504 error.
+    stub_get_openai_evaluations(status: 504, message: 'openai')
+
+    # The superclass, ApplicationJob, logs metrics around all jobs.
+    # Those calls must be stubbed to test metrics for this job.
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      anything
+    )
+
+    # ensure RetryOnGatewayTimeout metric is logged
+    Cdo::Metrics.expects(:push).with(
+      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(RetryOnGatewayTimeout: 1),
+        includes_dimensions(:RetryOnGatewayTimeout, Environment: CDO.rack_env, Agent: 'openai')
+      )
+    )
+
+    # Run the job (and track attempts)
+    assert_performed_jobs EvaluateRubricJob::RETRIES_ON_RATE_LIMIT do
+      perform_enqueued_jobs do
+        EvaluateRubricJob.perform_later(
+          user_id: @student.id,
+          requester_id: @student.id,
+          script_level_id: @script_level.id
+        )
+      end
+    end
+  end
+
   test "job records REQUEST_TOO_LARGE on http status 413" do
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 

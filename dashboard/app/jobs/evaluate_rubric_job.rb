@@ -77,6 +77,19 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  class GatewayTimeoutError < StandardError
+    attr_reader :response
+
+    # Creates a GatewayTimeoutError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
+
+      super("Gateway Timeout for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
+    end
+  end
+
   # For testing purposes, we can raise this error to simulate a missing key
   class StubNoSuchKey < StandardError
   end
@@ -283,6 +296,29 @@ class EvaluateRubricJob < ApplicationJob
     )
   end
 
+  RETRIES_ON_GATEWAY_TIMEOUT = 3
+
+  # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
+  # when openai request times out. 'exponentially_longer' waits 3s, 18s, and then 83s.
+  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: RETRIES_ON_GATEWAY_TIMEOUT do |_job, error|
+    agent = error.message.include?('openai') ? 'openai' : 'aiproxy'
+
+    Cdo::Metrics.push(
+      AI_RUBRIC_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: :RetryOnGatewayTimeout,
+          value: 1,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'Agent', value: agent},
+          ],
+          unit: 'Count'
+        }
+      ]
+    )
+  end
+
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
@@ -478,6 +514,8 @@ class EvaluateRubricJob < ApplicationJob
     raise RequestTooLargeError.new(response) if response.code == 413
 
     raise ServiceUnavailableError.new(response) if response.code == 503
+
+    raise GatewayTimeoutError.new(response) if response.code == 504
 
     # General error will raise a generic StandardError
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
