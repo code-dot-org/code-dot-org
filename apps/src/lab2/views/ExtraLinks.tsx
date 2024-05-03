@@ -19,7 +19,8 @@ interface ExtraLinksResponse {
   level_name: string;
 }
 
-// Fetch extra links for the level, then display a modal with the link data.
+// If the user has permission to see extra links, fetch extra links for the level,
+// then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
 }: ExtraLinksProps) => {
