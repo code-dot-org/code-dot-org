@@ -38,45 +38,51 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     setIsOpen(false);
     setShowCloneField(false);
     setShowDeleteConfirm(false);
+    setCloneError('');
+    setDeleteError('');
   };
 
   const handleClone = async () => {
     if (clonedLevelName) {
-      $.ajax({
-        url: `/levels/${levelId}/clone?name=${clonedLevelName}`,
-        method: 'POST',
-        dataType: 'json',
-        contentType: 'application/json;charset=UTF-8',
-        headers: {
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
-      })
-        .done(result => {
-          // Redirect to the new level
-          if (result.redirect) {
-            window.location.href = result.redirect;
-          }
-        })
-        .fail(error => {
-          setCloneError(error.responseText);
-        });
+      const response = await fetch(
+        `/levels/${levelId}/clone?name=${clonedLevelName}`,
+        {
+          method: 'POST',
+          headers: {
+            contentType: 'application/json;charset=UTF-8',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+        }
+      );
+      if (response.ok) {
+        const result = await response.json();
+        if (result.redirect) {
+          window.location.href = result.redirect;
+        }
+      } else {
+        const responseText = await response.text();
+        setCloneError(responseText);
+      }
     }
   };
 
   const handleDelete = async () => {
-    $.ajax({
-      url: `/levels/${levelId}`,
+    const response = await fetch(`/levels/${levelId}`, {
       method: 'DELETE',
-      dataType: 'json',
-    })
-      .done(result => {
-        if (result.redirect) {
-          window.location.href = result.redirect;
-        }
-      })
-      .fail(error => {
-        setDeleteError(error.responseText);
-      });
+      headers: {
+        Accept: 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+    });
+    if (response.ok) {
+      const result = await response.json();
+      if (result.redirect) {
+        window.location.href = result.redirect;
+      }
+    } else {
+      const responseText = await response.text();
+      setDeleteError(responseText);
+    }
   };
 
   return isOpen ? (

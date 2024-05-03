@@ -498,10 +498,6 @@ class LevelsController < ApplicationController
   # This is used by lab2 levels that cannot use the haml "extra links" box
   # as that box will not refresh when changing levels.
   def extra_links
-    unless current_user&.levelbuilder?
-      return head :forbidden
-    end
-
     links = {}
 
     links[@level.name] = [{text: level_path(@level), url: level_url(@level)}]
