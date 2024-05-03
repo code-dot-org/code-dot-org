@@ -1,15 +1,5 @@
 @import "color.scss";
 
-%button {
-  border: 2px solid;
-  transition: background-color 0.1s ease;
-
-  &:hover, &:active {
-    box-shadow: none;
-    border: 2px solid !important;
-  }
-}
-
 .soundsPanel {
   user-select: none;
   width: 600px;
@@ -112,7 +102,7 @@
     }
   }
 
-  .soundRow {
+  .soundEntry {
     overflow: hidden;
     height: 110px;
     font-size: 14px;
@@ -137,7 +127,7 @@
       outline: $neutral_light solid 1px;
     }
 
-    &Left {
+    &Main {
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -181,25 +171,6 @@
         }
       }
     }
-
-    &Middle {
-      font-size: 11px;
-    }
-
-    &Right {
-      display: flex;
-      margin-right: 15px;
-    }
-  }
-
-  .length {
-    display: inline-block;
-    display: none;
-    font-size: 13px;
-    width: 15px;
-    margin-right: 10px;
-    color: $neutral_dark50;
-    text-align: right;
   }
 
   .previewContainer {
@@ -218,42 +189,5 @@
       color: $neutral_dark70;
       cursor: default;
     }
-  }
-
-  .soundsPanelBottom {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .continue {
-      @extend %button;
-      background-color: $neutral_light;
-      border-color: $neutral_light;
-      color: $neutral_dark;
-      font-size: 14px;
-      padding: 4px 20px;
-      margin: 5px 5px 0 auto;
-
-      &:hover {
-        background-color: $neutral_light;
-        border-color: $neutral_light !important;
-      }
-
-      &Disabled {
-        opacity: 30%;
-        cursor: default;
-      }
-    }
-  }
-
-  .closeIcon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: initial;
-    border: none;
-    color: $neutral_dark30;
-    margin: 0;
   }
 }

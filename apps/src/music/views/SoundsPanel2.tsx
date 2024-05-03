@@ -27,13 +27,7 @@ type SoundEntry = {
   sound: SoundData;
 };
 
-const getLengthRepresentation = (length: number) => {
-  const lengthToSymbol: {[length: number]: string} = {
-    0.5: '\u00bd',
-    0.25: '\u00bc',
-  };
-  return lengthToSymbol[length] || length;
-};
+// FolderPanelRow: A single folder.
 
 interface FolderPanelRowProps {
   libraryGroupPath: string;
@@ -121,7 +115,9 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   );
 };
 
-interface SoundsPanelRowProps {
+// SoundPanelEntry: A single sound.
+
+interface SoundsPanelEntryProps {
   currentValue: string;
   playingPreview: string;
   folder: SoundFolder;
@@ -132,7 +128,7 @@ interface SoundsPanelRowProps {
   currentSoundRefCallback?: (ref: HTMLDivElement) => void;
 }
 
-const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
+const SoundsPanelEntry: React.FunctionComponent<SoundsPanelEntryProps> = ({
   currentValue,
   playingPreview,
   folder,
@@ -163,9 +159,9 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   return (
     <div
       className={classNames(
-        'sounds-panel-sound-row',
-        styles.soundRow,
-        isSelected && styles.soundRowSelected
+        'sounds-panel-sound-entry',
+        styles.soundEntry,
+        isSelected && styles.soundEntrySelected
       )}
       onClick={onSoundClick}
       onKeyDown={event => {
@@ -178,7 +174,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
       tabIndex={0}
       role="button"
     >
-      <div className={styles.soundRowLeft}>
+      <div className={styles.soundEntryMain}>
         <div
           className={classNames(
             styles.iconContainer,
@@ -204,14 +200,13 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
           {sound.name}
         </div>
       </div>
-      <div className={styles.soundRowRight}>
-        <div className={styles.length}>
-          {getLengthRepresentation(sound.length)}
-        </div>
-      </div>
     </div>
   );
 };
+
+// ScrollIntoView: This component does an eased scroll of the container's content,
+// starting from a distance below the top, and scrolling to the top.  It's useful
+// to show the user that some new content is scrollable.
 
 interface ScrollIntoViewProps {
   id?: string;
@@ -261,8 +256,11 @@ const ScrollIntoView: React.FunctionComponent<ScrollIntoViewProps> = ({
             containerRef.current?.scrollTop - lastScrollPosition.current
           ) > manualScrollDetectionThreshold
         ) {
+          // The user appears to have scrolled manually, so stop doing the
+          // automatic scroll now.
           scrollStep.current = undefined;
         } else {
+          // Update the automatic scroll.
           const progress = Math.max(0, (scrollStep.current - delay) / frames);
           const scrollPosition = distanceY - distanceY * easeOutSine(progress);
 
@@ -273,6 +271,7 @@ const ScrollIntoView: React.FunctionComponent<ScrollIntoViewProps> = ({
           scrollStep.current++;
 
           if (scrollStep.current > delay + frames) {
+            // The automatic scroll has reached its destination.
             scrollStep.current = undefined;
           }
         }
@@ -286,6 +285,9 @@ const ScrollIntoView: React.FunctionComponent<ScrollIntoViewProps> = ({
     </div>
   );
 };
+
+// SoundsPanel: a component used inside a Blockly dropdown that allows
+// for browsing folders and the sounds inside them.
 
 interface SoundsPanelProps {
   library: MusicLibrary;
@@ -463,7 +465,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
           >
             {rightColumnSoundEntries.map(soundEntry => {
               return (
-                <SoundsPanelRow
+                <SoundsPanelEntry
                   key={soundEntry.sound.src}
                   currentValue={currentValue}
                   playingPreview={playingPreview}
