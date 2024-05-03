@@ -34,6 +34,8 @@ class EvaluateRubricJob < ApplicationJob
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
 
+  AIPROXY_API_TIMEOUT = 165
+
   # This is raised if there is any raised error due to a rate limit, e.g. a 429
   # received from the aiproxy service.
   class TooManyRequestsError < StandardError
@@ -504,7 +506,7 @@ class EvaluateRubricJob < ApplicationJob
       uri,
       body: URI.encode_www_form(openai_params),
       headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
-      timeout: 120
+      timeout: AIPROXY_API_TIMEOUT
     )
 
     # Raise too many requests error if we see a 429
