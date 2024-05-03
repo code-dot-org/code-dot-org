@@ -47,6 +47,7 @@ const DEFAULT_PROPS = {
   userPermissions: [],
   joinedStudentSections: [],
   joinedPlSections: [],
+  coursesAsFacilitator: [],
   plSectionIds: [],
   hiddenPlSectionIds: [],
 };
