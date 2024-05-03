@@ -123,24 +123,20 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
 
 interface SoundsPanelRowProps {
   currentValue: string;
-  highlightedValue?: string;
   playingPreview: string;
   folder: SoundFolder;
   sound: SoundData;
   showingSoundsOnly: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
-  setHighlightedValue: (value: string) => void;
   currentSoundRefCallback?: (ref: HTMLDivElement) => void;
 }
 
-/*
-const SoundsPanelRowOld: React.FunctionComponent<SoundsPanelRowProps> = ({
+const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   currentValue,
   playingPreview,
   folder,
   sound,
-  showingSoundsOnly,
   onSelect,
   onPreview,
   currentSoundRefCallback,
@@ -148,14 +144,20 @@ const SoundsPanelRowOld: React.FunctionComponent<SoundsPanelRowProps> = ({
   const soundPath = folder.id + '/' + sound.src;
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
-  const onPreviewClick = useCallback(
-    (e: Event) => {
-      if (!isPlayingPreview) {
-        onPreview(soundPath);
-      }
+
+  const onSoundSelect = useCallback(() => {
+    if (!isPlayingPreview) {
+      onPreview(soundPath);
+    }
+    onSelect(soundPath);
+  }, [isPlayingPreview, onPreview, onSelect, soundPath]);
+
+  const onSoundClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
       e.stopPropagation();
+      onSoundSelect();
     },
-    [isPlayingPreview, onPreview, soundPath]
+    [onSoundSelect]
   );
 
   return (
@@ -165,104 +167,13 @@ const SoundsPanelRowOld: React.FunctionComponent<SoundsPanelRowProps> = ({
         styles.soundRow,
         isSelected && styles.soundRowSelected
       )}
-      onClick={() => onSelect(folder.id + '/' + sound.src)}
+      onClick={onSoundClick}
       onKeyDown={event => {
         if (event.key === 'Enter') {
-          onSelect(folder.id + '/' + sound.src);
+          onSoundSelect();
         }
       }}
       ref={isSelected ? currentSoundRefCallback : null}
-      aria-label={sound.name}
-      tabIndex={0}
-      role="button"
-    >
-      <div className={styles.soundRowLeft}>
-        <FontAwesomeV6Icon
-          iconName={SoundStyle[sound.type]?.icon || ''}
-          className={classNames(
-            styles.typeIcon,
-            SoundStyle[sound.type]?.classNameColor
-          )}
-        />
-        <div
-          className={classNames(
-            styles.name,
-            sound.type === 'vocal' && styles.nameVocal
-          )}
-        >
-          {sound.name}
-        </div>
-      </div>
-      {showingSoundsOnly && (
-        <div className={styles.soundRowMiddle}>
-          {folder.name} &bull; {folder.artist}
-        </div>
-      )}
-      <div className={styles.soundRowRight}>
-        <div className={styles.length}>
-          {getLengthRepresentation(sound.length)}
-        </div>
-        <div className={styles.previewContainer}>
-          <FontAwesome
-            title={undefined}
-            icon={'play-circle'}
-            className={classNames(
-              styles.preview,
-              isPlayingPreview && styles.previewPlaying
-            )}
-            onClick={onPreviewClick}
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
-*/
-
-const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
-  currentValue,
-  highlightedValue,
-  playingPreview,
-  folder,
-  sound,
-  showingSoundsOnly,
-  onSelect,
-  onPreview,
-  setHighlightedValue,
-  currentSoundRefCallback,
-}) => {
-  const soundPath = folder.id + '/' + sound.src;
-  const isSelected = soundPath === currentValue;
-  const isHighlighted = soundPath === highlightedValue;
-  const isPlayingPreview = playingPreview === soundPath;
-  const onPreviewClick = useCallback(
-    (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!isPlayingPreview) {
-        onPreview(soundPath);
-      }
-      setHighlightedValue(soundPath);
-      e.stopPropagation();
-      onSelect(soundPath);
-    },
-    [isPlayingPreview, onPreview, soundPath, setHighlightedValue]
-  );
-
-  return (
-    <div
-      className={classNames(
-        'sounds-panel-sound-row',
-        styles.soundRow,
-        isSelected && styles.soundRowSelected,
-        isHighlighted && styles.soundRowHighlighted
-      )}
-      onClick={onPreviewClick}
-      /*onClick={() => onSelect(folder.id + '/' + sound.src)}*/
-      onKeyDown={event => {
-        if (event.key === 'Enter') {
-          onSelect(folder.id + '/' + sound.src);
-        }
-      }}
-      //ref={/*isSelected ? currentSoundRefCallback : null*/}
       aria-label={sound.name}
       tabIndex={0}
       role="button"
@@ -273,7 +184,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
             styles.iconContainer,
             SoundStyle[sound.type]?.classNameBackground,
             SoundStyle[sound.type]?.classNameBorder,
-            isHighlighted && styles.iconContainerHighlighted
+            isSelected && styles.iconContainerSelected
           )}
         >
           <FontAwesomeV6Icon
@@ -283,17 +194,6 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
               SoundStyle[sound.type]?.classNameColor
             )}
           />
-          {/*<div className={styles.previewContainer}>
-            <FontAwesome
-              title={undefined}
-              icon={'play-circle'}
-              className={classNames(
-                styles.preview,
-                isPlayingPreview && styles.previewPlaying
-              )}
-              onClick={onPreviewClick}
-            />
-          </div>*/}
         </div>
         <div
           className={classNames(
@@ -304,11 +204,6 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
           {sound.name}
         </div>
       </div>
-      {/*showingSoundsOnly && (
-        <div className={styles.soundRowMiddle}>
-          {folder.name} &bull; {folder.artist}
-        </div>
-      )*/}
       <div className={styles.soundRowRight}>
         <div className={styles.length}>
           {getLengthRepresentation(sound.length)}
@@ -324,7 +219,6 @@ interface SoundsPanelProps {
   playingPreview: string;
   showSoundFilters: boolean;
   onSelect: (path: string) => void;
-  onHide: () => void;
   onPreview: (path: string) => void;
 }
 
@@ -334,7 +228,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   playingPreview,
   showSoundFilters,
   onSelect,
-  onHide,
   onPreview,
 }) => {
   const folders = library.getAvailableSounds();
@@ -346,14 +239,20 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const [mode, setMode] = useState<Mode>('packs');
   const [filter, setFilter] = useState<Filter>('all');
 
-  const [highlightedValue, setHighlightedValue] = useState<string | undefined>(
-    undefined
-  );
-
   const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
   const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
+  const foldersContainerRef: React.MutableRefObject<HTMLDivElement | null> =
+    useRef(null);
+  const soundsContainerRef: React.MutableRefObject<HTMLDivElement | null> =
+    useRef(null);
+
+  const foldersScrollStep = useRef<number>(0);
+  const soundsScrollStep = useRef<number | undefined>(0);
+  const lastSoundsScrollPosition = useRef<number | undefined>(undefined);
+
+  const isDefaultSoundSelected = currentValue === library.getDefaultSound();
 
   const onModeChange = useCallback((value: Mode) => {
     setMode(value);
@@ -367,30 +266,67 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     return Math.sin((x * Math.PI) / 2);
   }
 
-  let step = 0;
-
+  // Iniital render.
   useEffect(() => {
-    // This timeout allows the initial scroll-to-current-selection to work
-    // when wrapping the content with FocusLock.
-    /*setTimeout(() => {
-      currentFolderRef.current?.scrollIntoView();
-      //currentSoundRef.current?.scrollIntoView({behavior: 'smooth'});
-      //scrollToComponent(currentSoundRef.current, { offset: 200, align: 'top', duration: 0});
-      //scrollToComponent(currentSoundRef.current, { offset: 0, align: 'top', duration: 1500});
-      currentSoundRef.current?.scroll(0, 100);
-    }, 0);*/
-    setInterval(() => {
-      const frames = 40;
+    // If the default sound is selected, then do a smooth scroll of the two columns.
+    // Otherwise, scroll instantly to the selected entry in each column.
+    if (isDefaultSoundSelected) {
+      setInterval(() => {
+        const foldersFrames = 50;
+        const soundsDelay = 5;
+        const soundsFrames = 50;
+        const distanceY = 70;
+        const manualScrollDetectionThreshold = 5;
 
-      if (step < frames) {
-        step++;
+        if (foldersScrollStep.current < foldersFrames) {
+          foldersScrollStep.current++;
 
-        const progress = step / frames;
-        const scrollPosition = 100 - 100 * easeOutSine(progress);
-        currentSoundRef.current?.scroll(0, scrollPosition);
-      }
-    }, 1000 / 60);
-  }, []);
+          const progress = foldersScrollStep.current / foldersFrames;
+          const scrollPosition = distanceY - distanceY * easeOutSine(progress);
+          foldersContainerRef.current?.scroll(0, scrollPosition);
+        }
+
+        if (
+          soundsScrollStep.current !== undefined &&
+          soundsContainerRef.current
+        ) {
+          if (
+            lastSoundsScrollPosition.current &&
+            Math.abs(
+              soundsContainerRef.current?.scrollTop -
+                lastSoundsScrollPosition.current
+            ) > manualScrollDetectionThreshold
+          ) {
+            soundsScrollStep.current = undefined;
+          } else {
+            const progress = Math.max(
+              0,
+              (soundsScrollStep.current - soundsDelay) / soundsFrames
+            );
+            const scrollPosition =
+              distanceY - distanceY * easeOutSine(progress);
+
+            soundsContainerRef.current?.scroll(0, scrollPosition);
+
+            lastSoundsScrollPosition.current = scrollPosition;
+
+            soundsScrollStep.current++;
+
+            if (soundsScrollStep.current > soundsDelay + soundsFrames) {
+              soundsScrollStep.current = undefined;
+            }
+          }
+        }
+      }, 1000 / 60);
+    } else {
+      // This timeout allows the initial scroll-to-current-selection to work
+      // when wrapping the content with FocusLock.
+      setTimeout(() => {
+        currentFolderRef.current?.scrollIntoView();
+        currentSoundRef.current?.scrollIntoView();
+      }, 0);
+    }
+  }, [isDefaultSoundSelected]);
 
   const currentFolderRefCallback = (ref: HTMLDivElement) => {
     currentFolderRef.current = ref;
@@ -398,6 +334,14 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   const currentSoundRefCallback = (ref: HTMLDivElement) => {
     currentSoundRef.current = ref;
+  };
+
+  const foldersContainerRefCallback = (ref: HTMLDivElement) => {
+    foldersContainerRef.current = ref;
+  };
+
+  const soundsContainerRefCallback = (ref: HTMLDivElement) => {
+    soundsContainerRef.current = ref;
   };
 
   let possibleSoundEntries: SoundEntry[] = [];
@@ -448,13 +392,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     filterButton => availableSoundTypes[filterButton.value]
   );
 
-  const hide = () => {
-    onHide();
-    /*if (highlightedValue) {
-      onSelect(highlightedValue);
-    }*/
-  };
-
   return (
     <FocusLock>
       <div id="sounds-panel" className={styles.soundsPanel} aria-modal>
@@ -481,11 +418,15 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         )}
         <div id="sounds-panel-body" className={styles.soundsPanelBody}>
           {mode === 'packs' && (
-            <div id="sounds-panel-left" className={styles.leftColumn}>
-              {folders.map((folder, folderIndex) => {
+            <div
+              id="sounds-panel-left"
+              className={styles.leftColumn}
+              ref={foldersContainerRefCallback}
+            >
+              {folders.map(folder => {
                 return (
                   <FolderPanelRow
-                    key={folderIndex}
+                    key={folder.id}
                     libraryGroupPath={libraryGroupPath}
                     playingPreview={playingPreview}
                     folder={folder}
@@ -504,46 +445,25 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
               styles.rightColumn,
               mode === 'sounds' && styles.rightColumnFullWidth
             )}
-            ref={currentSoundRefCallback}
+            ref={soundsContainerRefCallback}
           >
-            {rightColumnSoundEntries.map((soundEntry, soundIndex) => {
+            {rightColumnSoundEntries.map(soundEntry => {
               return (
                 <SoundsPanelRow
-                  key={soundIndex}
+                  key={soundEntry.sound.src}
                   currentValue={currentValue}
-                  highlightedValue={highlightedValue}
-                  setHighlightedValue={setHighlightedValue}
                   playingPreview={playingPreview}
                   folder={soundEntry.folder}
                   sound={soundEntry.sound}
                   showingSoundsOnly={mode === 'sounds'}
                   onSelect={onSelect}
                   onPreview={onPreview}
-                  //currentSoundRefCallback={currentSoundRefCallback}
+                  currentSoundRefCallback={currentSoundRefCallback}
                 />
               );
             })}
           </div>
         </div>
-        {/*
-        <button type="button" onClick={hide} className={styles.closeIcon}>
-          <FontAwesomeV6Icon iconName="circle-xmark" />
-        </button>
-        */}
-        {/*<div className={styles.soundsPanelBottom}>
-          <button
-            onClick={() => setSoundToSelectedSound()}
-            className={classNames(
-              styles.continue,
-              styles.button,
-              !highlightedValue && styles.continueDisabled
-            )}
-            disabled={!highlightedValue}
-            type="button"
-          >
-            Select
-          </button>
-          </div>*/}
       </div>
     </FocusLock>
   );

@@ -10,179 +10,6 @@
   }
 }
 
-.soundsPanelOriginal {
-  user-select: none;
-  width: 600px;
-  height: 290px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-  &Top {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0;
-
-    .segmentedButtons {
-      span {
-        font-size: 12px !important;
-      }
-    }
-  }
-
-  &Body {
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    flex: 1;
-    gap: 5px;
-
-    .leftColumn {
-      background-color: $neutral_dark;
-      flex: 1;
-      overflow-y: scroll;
-    }
-
-    .rightColumn {
-      background-color: $neutral_dark;
-      flex: 1;
-      overflow-y: scroll;
-    }
-  }
-
-  .folderRow {
-    padding: 6px 0;
-    margin: 1px 1px 6px 1px;
-    overflow: hidden;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $neutral_dark90;
-    }
-
-    &:focus-visible {
-      outline: $neutral_light solid 1px;
-    }
-
-    &Selected {
-      background-color: $neutral_dark80;
-    }
-
-    &:first-child {
-      margin-top: 1px;
-    }
-    &:not(:first-child) {
-      margin-top: 14px;
-    }
-
-    &Left {
-      width: 55px;
-      height: 55px;
-      margin: 0 6px 0 4px;
-      float: left;
-    }
-
-    &Middle {
-      width: calc(100% - 75px - 58px);
-      float: left;
-
-      &Name {
-        font-size: 16px;
-      }
-
-      &SubTitle {
-        font-size: 11px;
-        line-height: 2em;
-      }
-    }
-
-    &Right {
-      float: right;
-      width: 43px;
-      margin-right: 15px;
-    }
-  }
-
-  .soundRow {
-    overflow: hidden;
-    padding: 4px 0;
-    font-size: 14px;
-    margin: 1px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $neutral_dark90;
-    }
-
-    &:focus-visible {
-      outline: $neutral_light solid 1px;
-    }
-
-    &Selected {
-      background-color: $neutral_dark80;
-    }
-
-    &Left {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-
-      .typeIcon {
-        margin-right: 6px;
-        margin-left: 4px;
-        width: 24px;
-        text-align: center;
-      }
-
-      .name {
-        font-size: 14px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        &Vocal {
-          font-style: italic;
-        }
-      }
-    }
-
-    &Middle {
-      font-size: 11px;
-    }
-
-    &Right {
-      display: flex;
-      margin-right: 15px;
-    }
-  }
-
-  .length {
-    display: inline-block;
-    font-size: 13px;
-    width: 15px;
-    margin-right: 10px;
-    color: $neutral_dark50;
-    text-align: right;
-  }
-
-  .previewContainer {
-    display: inline-block;
-    font-size: 16px;
-  }
-
-  .preview {
-    color: $neutral_dark40;
-
-    &Playing {
-      color: $neutral_dark70;
-      cursor: default;
-    }
-  }
-}
-
 .soundsPanel {
   user-select: none;
   width: 600px;
@@ -195,6 +22,7 @@
     display: flex;
     justify-content: space-between;
     margin: 5px 0;
+    user-select: none;
 
     .segmentedButtons {
       span {
@@ -212,7 +40,7 @@
 
     .leftColumn {
       background-color: $neutral_dark;
-      width: calc(33% - 00px);
+      width: calc(40% - 00px);
       overflow-y: scroll;
     }
 
@@ -222,6 +50,7 @@
       overflow-y: scroll;
       display: grid;
       grid-template-columns: calc(33.3333% - 0px) calc(33.3333% - 0px) calc(33.3333% - 0px);
+      position: relative;
 
       &FullWidth {
         width: 100%;
@@ -245,7 +74,7 @@
     }
 
     &Selected {
-      background-color: $neutral_dark80;
+      background-color: $neutral_dark70;
     }
 
     &:first-child {
@@ -297,10 +126,6 @@
     border-radius: 5px;
 
     &Selected {
-      background-color: $neutral_dark90;
-    }
-
-    &Highlighted {
       background-color: $neutral_dark70 !important;
     }
 
@@ -328,12 +153,11 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        margin-top: 4px;
-
+        margin-top: 8px;
         transform: scale(1, 1);
         transition: 0.1s ease-in-out;
 
-        &:hover, &Highlighted {
+        &:hover, &Selected {
           transform: scale(1.05, 1.05);
           transition: 0.1s ease-in-out;
         }
@@ -350,6 +174,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         margin-top: 5px;
+        text-align: center;
 
         &Vocal {
           font-style: italic;
