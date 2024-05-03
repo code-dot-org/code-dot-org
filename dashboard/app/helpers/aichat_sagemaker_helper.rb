@@ -18,7 +18,7 @@ module AichatSagemakerHelper
   # Mistral-7B-Instruction LLM instruction format doc at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1.
   def self.format_inputs_for_sagemaker_request(aichat_params, stored_messages, new_message)
     all_messages = [*stored_messages, {role: USER, content: new_message}]
-    inputs = aichat_params[:systemPrompt]
+    inputs = aichat_params[:systemPrompt] + " "
     inputs += aichat_params[:retrievalContexts].join(" ") if aichat_params[:retrievalContexts]
     inputs = SENTENCE_BEGIN_TOKEN + wrap_as_instructions(inputs)
     all_messages.each do |msg|

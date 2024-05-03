@@ -70,12 +70,15 @@ class AichatControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test 'returns failure when chat message contains profanity' do
+  test 'returns user profanity status when chat message contains profanity' do
     sign_in(@genai_pilot_student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
     post :chat_completion, params: @profanity_violation_params, as: :json
+
+    assert_response :success
     assert_equal SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_USER], json_response["status"]
     assert_equal "damn", json_response["flagged_content"]
+    assert_equal json_response.keys(), ['status', 'flagged_content', 'session_id']
 
     session = AichatSession.find(json_response['session_id'])
     stored_message = JSON.parse(session.messages)[0]
@@ -109,14 +112,17 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal 1, (JSON.parse(session.messages).count {|message| message["status"] == 'profanity_violation'})
   end
 
-  test 'returns failure when model response contains profanity' do
+  test 'returns model profanity status when model response contains profanity' do
     sign_in(@genai_pilot_student)
     ShareFiltering.stubs(:find_failure).returns(
       nil,
       ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn')
     )
     post :chat_completion, params: @valid_params, as: :json
+
+    assert_response :success
     assert_equal SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL], json_response["status"]
+    assert_equal json_response.keys(), ['status', 'session_id']
 
     session = AichatSession.find(json_response['session_id'])
     stored_message = JSON.parse(session.messages)[0]
