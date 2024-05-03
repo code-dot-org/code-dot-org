@@ -102,7 +102,7 @@ $width-sm: 640px;
       left: 0;
 
       @media (max-width: $width-md) {
-        left: calc(-10% + -1rem);
+        left: calc(-10% + -2rem);
       }
     }
 
