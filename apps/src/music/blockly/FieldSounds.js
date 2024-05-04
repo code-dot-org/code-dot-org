@@ -143,8 +143,10 @@ class FieldSounds extends GoogleBlockly.Field {
         }}
         onSelect={value => {
           this.setValue(value);
+          if (AppConfig.getValue('sounds-panel-2') !== 'true') {
+            this.hide_();
+          }
         }}
-        onHide={() => this.hide_()}
       />,
       this.newDiv_
     );
