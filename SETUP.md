@@ -21,8 +21,9 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version  # --> ruby 3.0.5
-     node --version  # --> v18.16.0
+     ruby --version     # --> ruby 3.0.5
+     node --version     # --> v18.16.0
+     git-lfs --version  #  >= git-lfs/3.0
      ```
 
 1. `git lfs pull`
