@@ -4,9 +4,11 @@
 
 
 .comingSoonBanner {
+  align-items: flex-start;
   background-color: $light_secondary_100;
   border: 0;
   color: $light_gray_700;
+  display: flex;
   line-height: 2rem;
 
   & .icon {
@@ -26,6 +28,7 @@
   }
 
   & .bannerText {
+    flex: 1 1 80%;
     font-size: 16px;
     height: 100%;
     line-height: 2rem;
@@ -48,6 +51,7 @@
     font-weight: normal;
     line-height: unset;
     margin: 0;
+    order: 2;
     top: 0;
   }
 }
