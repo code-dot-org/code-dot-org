@@ -311,7 +311,13 @@ end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  wait_until {@browser.current_url == url}
+  begin
+    wait_until {@browser.current_url == url}
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
@@ -604,8 +610,10 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
 
-Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
-  @browser.execute_script("return #{expression}")
+Then /^execute JavaScript expression "([^"]*)"( to load a new page)?$/ do |expression, load|
+  page_load(load) do
+    @browser.execute_script("return #{expression}")
+  end
 end
 
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|
@@ -751,6 +759,25 @@ end
 
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
+end
+
+Then /^element "([^"]*)" is (not )?categorized by OneTrust$/ do |selector, negation|
+  wait_for_jquery
+  elements = @browser.execute_script("return $(\"#{selector}\").map((index, elem) => { return {src:elem.src, class:elem.className}}).get()")
+  # The element needs to exist if we want to verify it is categorized.
+  if negation.nil?
+    expect(elements).to satisfy('have at least one element should be found', &:any?)
+  end
+  # Check each element which matches the selector to see if it has the
+  # expected OneTrust categorization.
+  elements.each do |element|
+    # When OneTrust categorizes an element, it adds the class
+    # "optanon-category-..." to it, for example "optanon-category-C0002"
+    element_class = element['class'] || ''
+    has_category = element_class.include?('optanon-category-')
+    desc = "#{negation ? 'not ' : ''}have a category"
+    expect(element).to satisfy(desc) {|_| has_category == !negation}
+  end
 end
 
 Then /^element "([^"]*)" is (not )?read-?only$/ do |selector, negation|
@@ -987,10 +1014,10 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_
   expect(actual_parent_id).to eq(parent_id)
 end
 
-And(/^I set the language cookie$/) do
+def set_cookie(key, value)
   params = {
-    name: "_language",
-    value: 'en'
+    name: key,
+    value: value,
   }
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
@@ -1001,18 +1028,16 @@ And(/^I set the language cookie$/) do
   @browser.manage.add_cookie params
 end
 
+And(/^I set the language cookie$/) do
+  set_cookie '_language', 'en'
+end
+
 And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
-  params = {
-    name: "pm",
-    value: cookie_value
-  }
+  set_cookie 'pm', cookie_value
+end
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
-    params[:domain] = '.code.org' # top level domain cookie
-  end
-
-  @browser.manage.add_cookie params
+And(/^I set the cookie named "([^"]*)" to "([^"]*)"$/) do |key, value|
+  set_cookie key, value
 end
 
 Given(/^I am enrolled in a plc course$/) do

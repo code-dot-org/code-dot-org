@@ -30,5 +30,6 @@ class AiTutorInteraction < ApplicationRecord
   belongs_to :level, optional: true
   belongs_to :script, optional: true
   validates :type, inclusion: {in: SharedConstants::AI_TUTOR_TYPES.values}
-  validates :status, inclusion: {in: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS.values}
+  validates :status, inclusion: {in: SharedConstants::AI_TUTOR_INTERACTION_STATUS.values}
+  has_many :feedbacks, class_name: 'AiTutorInteractionFeedback', dependent: :destroy
 end

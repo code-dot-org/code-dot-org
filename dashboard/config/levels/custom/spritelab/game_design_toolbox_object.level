@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:11:13.000Z",
   "level_num": "custom",
@@ -34,7 +33,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "hide_view_data_button": "false",
@@ -64,12 +63,19 @@
     "hint_prompt_attempts_threshold": "1",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"mini-toolbox-blue-button\",\r\n  \"callout_text\": \"Click the blue button to open or close.\",\r\n  \"element_id\": \"#whenclicked\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 12,\r\n     \"y\": 24\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function() {\r\n    return spritesDefaultSize();\r\n  }, 'spritesNotDefaultSize');\r\n  addCriteria(function(){\r\n    return anySpriteClicked();\r\n  }, 'spritelabFeedbackClickSprites');\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, 'eventNotDetected');\r\n  addCriteria(function(){\r\n    return onlyClickedPropChanged('scale')&&clickEventFound();\r\n  }, 'changeOrSetSize');\r\n}\r\n\r\ncheck();",
-    "encrypted_examples": "f3WJ3Ls8kx7g0iVPhYANqu/aEWrLQTLozldF7vh3mN6a1xUGXjB8fH2QuHYk\n8el1vAhsNhnVvss6KjJ+GDYlcA==\n",
+    "encrypted_examples": "MJwARGTEqHcHSLd2bn0NWPKrp+7ZaP3lhyAPa1wl0mimRFRYUZ24wcCqA4hc\n6F0aU1EK4viRssFboo2XA8LYD6UgQ6mJ3HtBuCkU/T7sXHHr4AvCsAYhkk1I\nPSAlxsQ1mH7TNKo3u48YrBPLLgrCiw==\n",
     "standalone_app_name": "spritelab",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton",
+      "downButton"
+    ],
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:11:13.586+00:00\",\"changed\":[\"cloned from \\\"hello_games_toolbox_object\\\"\"],\"cloned_from\":\"hello_games_toolbox_object\"},{\"changed_at\":\"2024-03-18 20:11:28 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:34:51 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:43:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 20:02:00 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 20:02:57 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:11:13.586+00:00\",\"changed\":[\"cloned from \\\"hello_games_toolbox_object\\\"\"],\"cloned_from\":\"hello_games_toolbox_object\"},{\"changed_at\":\"2024-03-18 20:11:28 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:34:51 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:43:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 20:02:00 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 20:02:57 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 15:22:14 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 15:34:51 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 15:35:34 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 16:00:32 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 17:33:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -90,7 +96,7 @@
           </next>
         </block>
         <block type="gamelab_spriteClicked" id="whenclicked" deletable="false" movable="false" x="16" y="107">
-          <mutation useDefaultIcon="false"/>
+          <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">

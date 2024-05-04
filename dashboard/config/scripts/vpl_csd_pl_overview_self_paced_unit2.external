@@ -3,8 +3,6 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# UPDATE THIS PAGE 
-
 # Module Overview
 
 ## What's included in this module?
@@ -13,14 +11,17 @@ markdown <<MARKDOWN
 
 #### This professional learning module is made up of four parts:
 
-### 🏘️ **Introduction to Data and Society** - ⭐️ You're here!
-#### This section will give you an overview of what is included in Unit 1 - Problem Solving and Computing. We'll share what you can expect when reading lesson plans, an overview of the two chapters (or parts) of the unit, and through-unit frameworks.
+### 🏘️ **Introduction to Web Development** - ⭐️ You're here!
+#### This section will give you an overview of what is included in Unit 2 - Web Development. We'll share what you can expect when reading lesson plans, an overview of the two chapters (or parts) of the unit, and through-unit frameworks.
 
-### 📊 **Explore Data at a Small Scale**
-#### This section reviews important concepts for representing data, like ASCII and binary. You'll have the opportunity to practice representing information in a variety of ways. You will also learn how to descrypt information using a key and why keeping data private is important.
+### 🖥️ **Build a Website with HTML**
+#### This section covers what Hypertext Markup Language (HTML) is, its syntax, and how it is used. You will have ample opportunities to practice adding structure and images to a webpage using HTML.
 
-### 📈 **Explore Data at a Large Scale**
-#### This section reviews how students can work with larger datasets to make decisions. You'll have the opportunity to solve complex problems using data to guide your decisions.
+### 🎨 **Style a Website with CSS**
+#### This section builds on the previous one by reviewing Cascading Style Sheets (CSS), its syntax, and how it is used. You will practice styling a webpage using CSS and learn about Flexbox.
+
+### 🤔 **Consider Roles and Responsibilities in Digital Media**
+#### Several lessons within Unit 2 - Web Development cover students and their role and responsibilities as both creators and consumers of digital media. This section reviews those topics to prepare you to teach about them.
 
 ### 🎁 **Unit Wrap Up**
 #### This section goes over the unit projects to prepare you to lead them with your students.
@@ -28,4 +29,5 @@ markdown <<MARKDOWN
 ## Engaging with This Module
 
 #### Feel free to complete as much or as little of this module as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. You'll be able to give Code.org your feedback on the last level of this module.
+
 MARKDOWN

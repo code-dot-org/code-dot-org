@@ -1,10 +1,12 @@
+import {isolateComponent} from 'isolate-react';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import {expect} from '../../../util/deprecatedChai';
-import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/textResponses/TextResponses';
-import * as textReponsesDataApi from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-react';
+
+import * as textReponsesDataApi from '@cdo/apps/templates/textResponses/textReponsesDataApi';
+import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/textResponses/TextResponses';
+
+import {expect} from '../../../util/deprecatedChai';
 
 // responses (object) - keys are scriptIds, values are
 // array of student text responses for that script

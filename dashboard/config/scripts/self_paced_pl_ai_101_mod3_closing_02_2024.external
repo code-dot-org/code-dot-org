@@ -1,0 +1,9 @@
+name 'self-paced-pl-ai-101-mod3-closing_02_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Additional Practice and Resources
+
+#### This section is not available for the pilot.
+MARKDOWN

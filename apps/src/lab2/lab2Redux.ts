@@ -57,6 +57,8 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
+  // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
+  isShareView: boolean | undefined;
 }
 
 const initialState: LabState = {
@@ -67,6 +69,7 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  isShareView: undefined,
 };
 
 // Thunks
@@ -198,7 +201,7 @@ export const setUpWithoutLevel = createAsyncThunk(
         {
           initialSources: sources,
           channel,
-          levelProperties: {appName: payload.appName},
+          levelProperties: {id: 0, appName: payload.appName},
         },
         thunkAPI.signal.aborted,
         thunkAPI.dispatch
@@ -231,6 +234,9 @@ export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
   const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
   return hideShareAndRemix === undefined ? true : hideShareAndRemix;
 };
+
+export const isProjectTemplateLevel = (state: {lab: LabState}) =>
+  !!state.lab.levelProperties?.projectTemplateLevelName;
 
 const labSlice = createSlice({
   name: 'lab',
@@ -271,6 +277,9 @@ const labSlice = createSlice({
       state.channel = action.payload.channel;
       state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;
+    },
+    setIsShareView(state, action: PayloadAction<boolean>) {
+      state.isShareView = action.payload;
     },
   },
   extraReducers: builder => {
@@ -420,8 +429,13 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
-export const {setIsLoading, setPageError, clearPageError, setValidationState} =
-  labSlice.actions;
+export const {
+  setIsLoading,
+  setPageError,
+  clearPageError,
+  setValidationState,
+  setIsShareView,
+} = labSlice.actions;
 
 // These should not be set outside of the lab slice.
 const {setChannel, onLevelChange} = labSlice.actions;

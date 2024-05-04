@@ -35,7 +35,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "hide_view_data_button": "false",
@@ -46,7 +46,6 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "parent_level_id": 21671,
-    "display_name": "Create a Sprite Lab project",
     "block_pool": "gamelab",
     "include_shared_functions": "true",
     "name_suffix": "_2023",
@@ -63,23 +62,21 @@
       "upButton",
       "downButton"
     ],
-    "thumbnail_url": "https://code.org/shared/images/courses/logo_gamelab_square.png",
     "mini_toolbox": "true",
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Explore what happens when we apply gravity! Click `Finish` when you're ready to continue on.",
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "game_design",
     "long_instructions": "##Sprite Type: Player\r\n\r\n**When the sprite's type is set to player, it will slowly fall as if there is gravity and it will stand on top of environment type sprites!**\r\n\r\n1. Add the new `set sprite type to player` to the `When run` program\r\n\r\n- Click `Run` and watch the player drop and land on the ground",
+    "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return playerSpriteFound(); // Check whether or not the student created a player sprite.\r\n  }, \"gameDesignSetSpriteTypeToPlayer\");  // Failure message: \"You need to set a sprite's type to player.\"\r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();\r\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Practice setting the sprite's type to **player.**\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"GameDev_setGroup\\\" id=\\\"s0~~e0!}K[fm;ShKs2sG\\\">\\n  <field name=\\\"GROUP\\\">\\\"players\\\"</field>\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\" id=\\\"x,sMj}}CfvGtzA+U2wfm\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"game_penguin\\\"</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ae1140b82486100bba277e22cdcb039c/game_development_player_type.mp3\"}]",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return playerSpriteFound(); // Check whether or not the student created a player sprite.\r\n  }, \"gameDesignNoPlayerSprite\");  // Failure message: \"You need to make a player sprite.\"\r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();\r\n"
+    "encrypted_examples": "TIdALavgLHun/5mCEOx4RHk141pArBgimnO+au9Uz5b0fW1RYu09aIVc5W9X\ndvq8VhPkhRriHFsdSpjwxXIGkw==\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-21T15:44:36.818+00:00\",\"changed\":[\"cloned from \\\"game_new3_player_type\\\"\"],\"cloned_from\":\"game_new3_player_type\"},{\"changed_at\":\"2024-03-22 18:07:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:43:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-21T15:44:36.818+00:00\",\"changed\":[\"cloned from \\\"game_new3_player_type\\\"\"],\"cloned_from\":\"game_new3_player_type\"},{\"changed_at\":\"2024-03-22 18:07:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 18:43:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 14:46:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"standalone_app_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:20:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:23:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:24:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"authored_hints\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 17:47:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 20:56:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-27 22:00:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1266,16 +1263,16 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="GameDev_setGroup" id="s0~~e0!}K[fm;ShKs2sG" x="18" y="44">
+        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="15" y="31">
+          <field name="IMG">"gradient_02"</field>
+        </block>
+        <block type="GameDev_setGroup" id="s0~~e0!}K[fm;ShKs2sG" x="38" y="136">
           <field name="GROUP">"players"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="x,sMj}}CfvGtzA+U2wfm">
               <field name="ANIMATION">"game_penguin"</field>
             </block>
           </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="21" y="149">
-          <field name="IMG">"gradient_02"</field>
         </block>
         <block type="gamelab_makeSpritesGridInput" id="%lIt9m#@H2J}unSh8[y!" x="21" y="247">
           <field name="ANIMATION_NAME">"dirt_grass"</field>

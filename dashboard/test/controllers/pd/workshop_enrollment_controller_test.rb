@@ -377,9 +377,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     refute prop('collect_demographics')
   end
 
-  private
-
-  def enrollment_test_params(teacher = nil)
+  private def enrollment_test_params(teacher = nil)
     if teacher
       first_name, last_name = teacher.name.split(' ', 2)
       email = teacher.email
@@ -396,7 +394,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     }
   end
 
-  def school_info_params
+  private def school_info_params
     {
       country: 'US',
       school_type: 'public',
@@ -406,7 +404,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     }
   end
 
-  def prop(name)
+  private def prop(name)
     JSON.parse(assigns(:script_data).try(:[], :props)).try(:[], name)
   end
 end

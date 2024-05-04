@@ -366,9 +366,11 @@
   "gameDesignTouchEnvironment": "Try making your player bump into the environment around it.",
   "gameDesignNoPlayerSprite": "You need to make a player sprite.",
   "gameDesignEventNoJump": "Make sure your player jumps when you press a key.",
-  "gameDesignNeedMoreCostumes": "You need to add at least 3 different `make new sprite` blocks in your program.",
+  "gameDesignMissingType": "You need to add another block so the monster can land on the green platforms:\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"GameDev_setGroup\">\n  <field name=\"GROUP\">\"walls\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\">\n      <field name=\"ANIMATION\">\"ground_grass\"</field>\n    </block>\n  </value>\n</block>\n</xml>",
+  "gameDesignNeedMoreCostumes": "You need to add at least 3 different `make new sprite` blocks in your program. Your program should have a player, environment, and collectibles.",
   "gameDesignMissingSpriteCostumes": "You need to add at least 3 sprites for the player to collect. Make sure  to not set them as player or environment.",
   "gameDesignWhenTouchingEvent": "Make sure to add a `when sprite touches` event block in your code. Then make your player touch the collectible sprites.",
   "gameDesignTouchEventSpriteNotRemoved": "Your player sprite touched the collectible but didn't remove it. Make sure to add a `remove object` block under your event.",
-  "gameDesignPlayerTouchVariableNotChanged": "Your variable needs to increase when the player sprite touches a collectible item."
+  "gameDesignPlayerTouchVariableNotChanged": "Your variable needs to increase when the player sprite touches a collectible item.",
+  "gameDesignSetSpriteTypeToPlayer": "You need to set a sprite's type to player."
 }

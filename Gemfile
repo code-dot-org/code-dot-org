@@ -91,7 +91,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
-  gem 'ruby-prof'
+  gem 'ruby-prof', '>= 1.7.0'
   gem 'vcr', require: false
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
@@ -158,7 +158,7 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 3.5.0'
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
@@ -240,6 +240,7 @@ gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3'
+gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
@@ -349,7 +350,7 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.8.1'
+gem 'crowdin-api', '~> 1.10.0'
 
 gem "delayed_job_active_record", "~> 4.1"
 
@@ -361,4 +362,5 @@ gem 'http', '~> 5.0'
 
 gem 'statsig', '~> 1.33'
 
+gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'

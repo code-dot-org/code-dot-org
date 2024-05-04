@@ -1,25 +1,28 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+// react testing library import
+import {render, fireEvent, act, waitFor} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
+import $ from 'jquery';
+import React from 'react';
+import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import * as utils from '@cdo/apps/code-studio/utils';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
-import {Provider} from 'react-redux';
-import * as utils from '@cdo/apps/code-studio/utils';
-import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
+import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-import $ from 'jquery';
 
-// react testing library import
-import {render, fireEvent, act} from '@testing-library/react';
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricContainer', () => {
   let clock;
@@ -63,6 +66,18 @@ describe('RubricContainer', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  function stubFetchTourStatus(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\w+\/get_ai_rubrics_tour_seen/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
+  function stubUpdateTourStatus(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\w+\/update_ai_rubrics_tour_seen/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
   beforeEach(() => {
     ajaxStub = sinon.stub($, 'ajax');
     const request = sinon.stub();
@@ -73,7 +88,11 @@ describe('RubricContainer', () => {
       },
     });
     fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns({});
+    fetchStub.returns(
+      Promise.resolve(
+        new Response(JSON.stringify({}), {status: 200, statusText: 'OK'})
+      )
+    );
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
@@ -133,6 +152,7 @@ describe('RubricContainer', () => {
   const successJson = {
     attempted: true,
     lastAttemptEvaluated: true,
+    csrfToken: 'abcdef',
     status: RubricAiEvaluationStatus.SUCCESS,
   };
 
@@ -150,14 +170,14 @@ describe('RubricContainer', () => {
         key: '1',
         learningGoal: 'goal 1',
         aiEnabled: false,
-        evidenceLevels: [],
+        evidenceLevels: [{understanding: 1, id: 1, teacherDescription: 'test'}],
       },
       {
         id: 2,
         key: '2',
         learningGoal: 'goal 2',
         aiEnabled: true,
-        evidenceLevels: [],
+        evidenceLevels: [{understanding: 1, id: 2, teacherDescription: 'test'}],
       },
     ],
     script: {
@@ -190,7 +210,7 @@ describe('RubricContainer', () => {
   const defaultStudentInfo = {user_id: 1, name: 'Jane Doe'};
 
   const mockAiEvaluations = [
-    {id: 2, learning_goal_id: 2, understanding: 2, aiConfidencePassFail: 2},
+    {id: 2, learning_goal_id: 2, understanding: 0, aiConfidencePassFail: 2},
   ];
 
   it('renders a RubricContent component when the rubric tab is selected', () => {
@@ -212,6 +232,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForAll(successJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     const evalFetch = stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -408,11 +429,12 @@ describe('RubricContainer', () => {
       8. Calls refreshAiEvaluations
     */
     clock = sinon.useFakeTimers();
-
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations([]);
+    stubFetchTourStatus({seen: true});
 
     const wrapper = mount(
       <Provider store={store}>
@@ -442,6 +464,15 @@ describe('RubricContainer', () => {
       .returns(Promise.resolve(new Response(JSON.stringify({}))));
     stubFetchEvalStatusForUser(pendingJson);
     wrapper.find('Button').at(0).simulate('click');
+
+    //expect amplitude event on click
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_INDIVIDUAL_AI_EVAL,
+      {
+        rubricId: defaultRubric.id,
+        studentId: defaultStudentInfo.user_id,
+      }
+    );
 
     // Wait for fetches and re-render
     clock.tick(5000);
@@ -478,6 +509,7 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
       mockAiEvaluations
     );
+    sendEventSpy.restore();
   });
 
   it('shows general error message for status 1000', async () => {
@@ -518,7 +550,7 @@ describe('RubricContainer', () => {
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_error());
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
   });
 
   it('shows PII error message for status 1001', async () => {
@@ -605,6 +637,49 @@ describe('RubricContainer', () => {
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
   });
 
+  it('shows request too large error message for status 1003', async () => {
+    const returnedJson = {
+      attempted: true,
+      lastAttemptEvaluated: false,
+      status: 1003,
+    };
+    const returnedJsonAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+    };
+
+    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
+    );
+
+    // Perform fetches
+    await wait();
+
+    wrapper.update();
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
+    expect(wrapper.text()).to.include(
+      i18n.aiEvaluationStatus_request_too_large()
+    );
+    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+  });
+
   // react testing library
   it('moves rubric container when user clicks and drags component', async () => {
     stubFetchEvalStatusForUser(successJson);
@@ -625,9 +700,7 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
 
     const element = getByTestId('draggable-test-id');
 
@@ -641,6 +714,49 @@ describe('RubricContainer', () => {
     const newPosition = element.style.transform;
 
     expect(newPosition).to.not.equal(initialPosition);
+  });
+
+  it('sends event when window is dragged', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: true});
+
+    const {getByTestId} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    const element = getByTestId('draggable-test-id');
+
+    // simulate dragging
+    fireEvent.mouseDown(element, {clientX: 0, clientY: 0});
+    fireEvent.mouseMove(element, {clientX: 100, clientY: 100});
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_WINDOW_MOVE_START,
+      {window_x_start: 0, window_y_start: 0}
+    );
+
+    fireEvent.mouseUp(element);
+
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_WINDOW_MOVE_END,
+      {window_x_end: 0, window_y_end: 0}
+    );
+    sendEventSpy.restore();
   });
 
   it('renders a RubricSubmitFooter if student data for an evaluation level', () => {
@@ -684,5 +800,281 @@ describe('RubricContainer', () => {
       />
     );
     expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+  });
+
+  it('displays product tour when getTourStatus is false', async function () {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    const {queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await waitFor(
+      () =>
+        expect(queryByText('Getting Started with Your AI Teaching Assistant'))
+          .to.exist
+    );
+  });
+
+  it('does not display product tour when getTourStatus returns true', async function () {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: true});
+
+    const {queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .not.exist;
+  });
+
+  it('does not display product tour when on non-assessment level', async function () {
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    const {queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'non-assessment-level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .not.exist;
+  });
+
+  it('sends event when tour is started for the first time', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_TOUR_STARTED,
+        {}
+      )
+    );
+
+    sendEventSpy.restore();
+  });
+
+  it('sends event when user clicks next and back buttons', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    const {findByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    const nextButton = await findByText('Next Tip');
+
+    fireEvent.click(nextButton);
+
+    await waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_NEXT, {
+        step: 0,
+        nextStep: 1,
+      })
+    );
+
+    const backButton = await findByText('Back');
+
+    fireEvent.click(backButton);
+
+    await waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(EVENTS.TA_RUBRIC_TOUR_BACK, {
+        step: 1,
+        nextStep: 0,
+      })
+    );
+
+    sendEventSpy.restore();
+  });
+
+  it('sends event when user exits the tour', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    const {findByRole} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    const skipButton = await findByRole('button', {name: '×'});
+
+    fireEvent.click(skipButton);
+
+    await waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_TOUR_CLOSED,
+        {
+          step: 0,
+        }
+      )
+    );
+
+    sendEventSpy.restore();
+  });
+
+  it('sends event when user completes the tour', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: null});
+
+    const {findByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    const nextButton = await findByText('Next Tip');
+
+    fireEvent.click(nextButton);
+    await findByText('Understanding the AI Assessment');
+    fireEvent.click(nextButton);
+    await findByText('Using Evidence');
+    fireEvent.click(nextButton);
+    await findByText('Understanding AI Confidence');
+    fireEvent.click(nextButton);
+    await findByText('Assigning a Rubric Score');
+    fireEvent.click(nextButton);
+    const doneButton = await findByText('Done');
+    fireEvent.click(doneButton);
+
+    await waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_TOUR_COMPLETE,
+        {}
+      )
+    );
+
+    sendEventSpy.restore();
+  });
+
+  it('sends event when tour is restarted from ? button', async function () {
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchTourStatus({seen: true});
+    stubUpdateTourStatus({seen: false});
+
+    const {findByRole, queryByText} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
+      .not.exist;
+
+    const element = await findByRole('button', {name: 'restart product tour'});
+    fireEvent.click(element);
+
+    await waitFor(() =>
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_TOUR_RESTARTED,
+        {}
+      )
+    );
+
+    sendEventSpy.restore();
   });
 });

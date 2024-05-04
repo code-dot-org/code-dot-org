@@ -1,11 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import React from 'react';
+
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from '@cdo/apps/util/color';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import color from '@cdo/apps/util/color';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
 
 const styles = {

@@ -7,9 +7,10 @@
 // specified, otherwise, use background.png.
 // look: Colour of sonar-like look icon.
 
+import neighborhoodSprites from './neighborhoodSprites.json';
+
 var skinsBase = require('../skins');
 var randomValue = require('../utils').randomValue;
-import neighborhoodSprites from './neighborhoodSprites.json';
 
 var CONFIGS = {
   letters: {

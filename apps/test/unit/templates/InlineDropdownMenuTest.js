@@ -1,9 +1,11 @@
-import {expect} from '../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import {InlineDropdownMenu} from '@cdo/apps/templates/InlineDropdownMenu';
+
 import {KeyCodes} from '@cdo/apps/constants';
+import {InlineDropdownMenu} from '@cdo/apps/templates/InlineDropdownMenu';
+
+import {expect} from '../../util/reconfiguredChai';
 
 const clickSpy = sinon.spy();
 

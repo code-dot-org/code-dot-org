@@ -52,7 +52,7 @@ Feature: Curriculum Catalog Page
 
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And I wait until element "h3:contains(Sign in or create account to assign a curriculum)" is visible
-    Then I click selector "a:contains(Sign in or create account)"
+    Then I click selector "a:contains(Sign in or create account)" to load a new page
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
   Scenario: Signed-in student does not see Assign button
@@ -150,6 +150,8 @@ Feature: Curriculum Catalog Page
     And I wait until element "a:contains(See curriculum details)" is visible
     And I wait until element "#similarCurriculumImage" is visible
     And I wait until element "#similarCurriculumButton" is visible
+    And I wait until element "#stretchCurriculumImage" is visible
+    And I wait until element "#stretchCurriculumButton" is visible
 
   @no_mobile
   Scenario: Signed-out user sees course offering page when clicking on see curriculum details on expanded card
@@ -158,7 +160,7 @@ Feature: Curriculum Catalog Page
 
     And I click selector "[aria-label='View details about AI for Oceans']"
 
-    And I click selector "a:contains(See curriculum details)"
+    And I click selector "a:contains(See curriculum details)" to load a new page
     And I wait until element "h1:contains(AI for Oceans)" is visible
 
   @no_mobile
@@ -170,7 +172,7 @@ Feature: Curriculum Catalog Page
     Then I wait until element "a:contains(Facilitator led workshops)" is visible
     And I click selector "a:contains(Facilitator led workshops)"
     Then I wait for jquery to load
-    And I wait until current URL contains "/professional-development-workshops"
+    And I wait until current URL contains "/professional-learning/elementary"
 
   @no_mobile
   Scenario: On expanded card, Signed-in teacher sees professional learning section
@@ -197,7 +199,7 @@ Feature: Curriculum Catalog Page
     And I click selector "[aria-label='View details about AI for Oceans']"
     And I click selector "button:contains(Assign to class sections)"
     And I wait until element "h3:contains(Sign in or create account to assign a curriculum)" is visible
-    Then I click selector "a:contains(Sign in or create account)"
+    Then I click selector "a:contains(Sign in or create account)" to load a new page
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
   @no_mobile

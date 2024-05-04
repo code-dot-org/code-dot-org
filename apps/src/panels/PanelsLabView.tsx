@@ -3,27 +3,37 @@
 // This is a React client for a panels level.  Note that this is
 // only used for levels that use Lab2.
 
-import React, {useCallback} from 'react';
+import React, {useCallback, useContext} from 'react';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   sendSuccessReport,
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
-import {PanelsLevelData} from './types';
+import {PanelsLevelData, PanelsLevelProperties} from './types';
 import PanelsView from './PanelsView';
 import useWindowSize from '../util/hooks/useWindowSize';
+import {
+  DialogContext,
+  DialogType,
+} from '@cdo/apps/lab2/views/dialogs/DialogManager';
 
 const appName = 'panels';
 
 const PanelsLabView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
-  const levelData = useAppSelector(
-    state => state.lab.levelProperties?.levelData
+  const panels = useAppSelector(
+    state =>
+      (state.lab.levelProperties as PanelsLevelProperties | undefined)
+        ?.panels ||
+      (state.lab.levelProperties?.levelData as PanelsLevelData)?.panels
   );
   const currentAppName = useAppSelector(
     state => state.lab.levelProperties?.appName
   );
+  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+
+  const dialogControl = useContext(DialogContext);
 
   const onContinue = useCallback(
     (nextUrl?: string) => {
@@ -39,7 +49,15 @@ const PanelsLabView: React.FunctionComponent = () => {
     [dispatch]
   );
 
-  const panels = (levelData as PanelsLevelData | undefined)?.panels;
+  const onSkip = useCallback(() => {
+    if (dialogControl) {
+      dialogControl.showDialog(DialogType.Skip, () => {
+        if (skipUrl) {
+          window.location.href = skipUrl;
+        }
+      });
+    }
+  }, [dialogControl, skipUrl]);
 
   const [windowWidth, windowHeight] = useWindowSize();
 
@@ -51,6 +69,7 @@ const PanelsLabView: React.FunctionComponent = () => {
     <PanelsView
       panels={panels}
       onContinue={onContinue}
+      onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}
       targetHeight={windowHeight}
     />

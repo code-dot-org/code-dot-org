@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -7,6 +6,7 @@ import i18n from '@cdo/locale';
 import FontAwesome from '../FontAwesome';
 
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import {getLessonColumnHeaderId} from './LevelDataCell';
 import LevelProgressHeader from './LevelProgressHeader';
 
 import styles from './progress-table-v2.module.scss';
@@ -42,28 +42,43 @@ export default function ExpandedProgressColumnHeader({
       : lesson.title;
 
   return (
-    <div className={styles.expandedHeader} key={lesson.id}>
-      <div
-        className={classNames(
-          styles.gridBox,
-          styles.expandedHeaderLessonCell,
-          styles.pointerMouse
-        )}
-        style={{width: headerWidth + 'px'}}
-        onClick={() => removeExpandedLesson(lesson.id)}
-        aria-label={headerText}
-        data-tip
-        data-for={getTooltipId(lesson)}
-      >
-        <LessonTitleTooltip lesson={lesson} />
-        <FontAwesome
-          icon="caret-down"
-          className={styles.expandedHeaderCaret}
-          title={i18n.unexpand()}
-        />
-        <div className={styles.expandedHeaderLessonText}>{headerText}</div>
-      </div>
-      <div
+    <tbody className={styles.expandedHeader} key={lesson.id}>
+      <tr>
+        <th
+          className={styles.expandedHeaderLessonCell}
+          style={{width: headerWidth + 'px', maxWidth: headerWidth + 'px'}}
+          data-tip
+          data-for={getTooltipId(lesson)}
+          id={getLessonColumnHeaderId(lesson.id)}
+          scope="colgroup"
+        >
+          <button
+            id={
+              'ui-test-expanded-progress-column-header-' +
+              lesson.relative_position
+            }
+            onClick={() => removeExpandedLesson(lesson.id)}
+            aria-label={headerText}
+            aria-expanded={true}
+            type="button"
+            className={styles.expandedHeaderLessonCellButton}
+          >
+            <LessonTitleTooltip lesson={lesson} />
+            <FontAwesome
+              icon="caret-down"
+              className={styles.expandedHeaderCaret}
+              title={i18n.unexpand()}
+            />
+            <div
+              className={styles.expandedHeaderLessonText}
+              title={lesson.title}
+            >
+              {headerText}
+            </div>
+          </button>
+        </th>
+      </tr>
+      <tr
         className={styles.expandedHeaderSecondRow}
         ref={expandedLevelHeaderRef}
       >
@@ -76,8 +91,8 @@ export default function ExpandedProgressColumnHeader({
             toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
           />
         ))}
-      </div>
-    </div>
+      </tr>
+    </tbody>
   );
 }
 

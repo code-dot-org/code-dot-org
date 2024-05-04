@@ -1,0 +1,24 @@
+name 'self-paced-pl-ai-101-mod1-introduction_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing AI for Educators 
+
+
+#### Welcome! This professional learning module is designed to introduce you to AI and its impact on your role as an educator.
+
+<img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="A cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 75px; height: 275px; clear: both; margin: 0 0px 0px 0;">
+
+## In this module, you will:
+
+* #### Begin to realize the benefits and address the risks of AI in an educational setting.
+* #### Describe AI Literacy and explain the benefits of AI literacy for both educators and students.
+
+### **Suggested time:**  60 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

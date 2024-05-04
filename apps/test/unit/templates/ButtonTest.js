@@ -1,9 +1,12 @@
-import {assert} from '../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme';
-import Button from '@cdo/apps/templates/Button';
-import style from '@cdo/apps/templates/button.module.scss';
+import React from 'react';
 import sinon from 'sinon';
+
+import Button from '@cdo/apps/templates/Button';
+
+import {assert} from '../../util/reconfiguredChai';
+
+import style from '@cdo/apps/templates/button.module.scss';
 
 describe('Button', () => {
   it('renders an anchor tag when button has an href', () => {

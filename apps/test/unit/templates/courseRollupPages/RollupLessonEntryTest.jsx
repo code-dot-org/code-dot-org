@@ -1,7 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import RollupLessonEntry from '@cdo/apps/templates/courseRollupPages/RollupLessonEntry';
+
+import {expect} from '../../../util/reconfiguredChai';
+
 import {courseData} from './rollupTestData';
 
 describe('RollupLessonEntry', () => {

@@ -1,7 +1,9 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import {PersonalProjectsTableActionsCell} from '@cdo/apps/templates/projects/PersonalProjectsTableActionsCell';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('PersonalProjectsTableActionsCell', () => {
   it('shows NameFailureDialog when there is a projectNameFailure', () => {

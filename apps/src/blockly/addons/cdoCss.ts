@@ -32,6 +32,26 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyFlyoutButton:hover {
       fill: ${color.brand_secondary_dark};
     }
+    /* Change look of the editor in angle fields */
+    .blocklyAngleCircle {
+      fill: ${color.white};
+    }
+    .blocklyAngleGauge {
+      fill: ${color.brand_secondary_default};
+    }
+    .blocklyAngleLine {
+      stroke: ${color.brand_secondary_dark};
+      stroke-width: 3;
+    }
+    .blocklyLimit rect {
+      fill: ${color.brand_accent_default};
+    }
+    .blocklyLimit.overLimit rect {
+      fill: ${color.product_caution_default};
+    }
+    .blocklyLimit.overLimit text {
+      fill: ${color.neutral_dark} !important;
+    }
     `
   );
 }

@@ -35,9 +35,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
-    "free_play": "true",
+    "free_play": "false",
     "hide_view_data_button": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
@@ -73,14 +73,12 @@
     "standalone_app_name": "spritelab",
     "long_instructions": "**Making Lots of Sprites with a Grid**\r\n\r\n\r\n1. With this new block you can create many sprites with the same costume at exact locations.\r\n\r\n<img src=\"https://images.code.org/166f495ee24fe3f22839ba19a8263b64-image-1710796817915.gif\" style=\"height: 200px; margin-right: 40px; float: right\"> \r\n\r\n2.  **Click on the grid** to choose exactly where you want to place lots of sprites\r\n",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return minimumSprites(1); // Check whether or not the student created a sprite.\r\n  }, \"noSprites\");  // Failure message: \"You need to make a sprite.\"\r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();\r\n",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Click on this grid, then select the boxes where you want the sprite to go. Click off the grid when you are finished.\\n\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_bitmap\\\" id=\\\"#S=#M-:kSk3kGf8~s/pi\\\">\\n  <field name=\\\"GRID\\\">[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]</field>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3def5e4e6c25fedc6b1a73c0c7b618a8/game_design_make_grid.mp3\"}]",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Click on this grid, then select the boxes where you want the sprite to go. Click off the grid when you are finished.\\n\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_bitmap\\\" id=\\\"#S=#M-:kSk3kGf8~s/pi\\\">\\n  <field name=\\\"GRID\\\">[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]</field>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3def5e4e6c25fedc6b1a73c0c7b618a8/game_design_make_grid.mp3\"}]"
+    "encrypted_examples": "adpHCZA1W+C2QVkfq9nQJ/q7bFrL9BAHERET43SLAuv83hS2V8p6qjsWB3iC\nzc9c6mzgiVU2lz7Bz+tNCmA8yA==\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-21T18:36:52.532+00:00\",\"changed\":[\"cloned from \\\"game_development_make_grid\\\"\"],\"cloned_from\":\"game_development_make_grid\"},{\"changed_at\":\"2024-03-21 18:41:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 18:42:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 18:42:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 18:43:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 18:44:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 19:56:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-21T18:36:52.532+00:00\",\"changed\":[\"cloned from \\\"game_development_make_grid\\\"\"],\"cloned_from\":\"game_development_make_grid\"},{\"changed_at\":\"2024-03-21 18:41:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 18:42:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 18:42:56 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 18:43:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 18:44:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 19:56:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-26 15:34:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-26 16:00:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

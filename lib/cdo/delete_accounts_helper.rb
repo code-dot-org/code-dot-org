@@ -1,5 +1,6 @@
 require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
+require 'cdo/mailjet'
 require 'cdo/db'
 
 # rubocop:disable CustomCops/PegasusDbUsage
@@ -28,7 +29,7 @@ class DeleteAccountsHelper
   #   usual checks on account type, row limits, etc.  For use only when an
   #   engineer needs to purge an account manually after investigating whatever
   #   prevented it from being automatically purged.
-  def initialize(log: STDERR, bypass_safety_constraints: false)
+  def initialize(log: $stderr, bypass_safety_constraints: false)
     @pegasus_db = PEGASUS_DB
 
     @log = log
@@ -250,6 +251,10 @@ class DeleteAccountsHelper
     ContactRollupsPardotMemory.find_or_create_by(email: email).update(marked_for_deletion_at: Time.now.utc)
   end
 
+  def remove_mailjet_contact(email)
+    MailJet.delete_contact(email)
+  end
+
   # Removes the StudioPerson record associated with the user IF it is not
   # associated with any other users.
   # @param [User] user The user whose studio person we will delete if it's not shared
@@ -441,6 +446,7 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
+    remove_mailjet_contact(user_email) if user_email&.present?
     purge_contact_rollups(user_email)
     purge_unshared_studio_person(user)
     anonymize_user(user)
@@ -470,18 +476,16 @@ class DeleteAccountsHelper
     clean_pegasus_forms_for_email(email)
   end
 
-  private
-
-  def clean_pegasus_forms_for_user(user)
+  private def clean_pegasus_forms_for_user(user)
     @log.puts "Cleaning pegasus forms for user"
     clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
   end
 
-  def clean_pegasus_forms_for_email(email)
+  private def clean_pegasus_forms_for_email(email)
     clean_pegasus_forms(@pegasus_db[:forms].where(email: email))
   end
 
-  def clean_pegasus_forms(forms_recordset)
+  private def clean_pegasus_forms(forms_recordset)
     form_ids = forms_recordset.map {|f| f[:id]}
     @pegasus_db[:form_geos].
       where(form_id: form_ids).

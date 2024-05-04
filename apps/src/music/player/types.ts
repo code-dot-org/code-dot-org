@@ -17,15 +17,19 @@ export interface AudioPlayer {
   /** Load sounds into the cache */
   loadSounds(
     sampleUrls: string[],
+    instruments: InstrumentData[],
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
 
   /** Load instrument into the cache */
   loadInstrument(
     instrumentName: string,
-    sampleMap: {[note: number]: string},
+    sampleMap: SampleMap,
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
+
+  /** If the given instrument is currently loading */
+  isInstrumentLoading(instrumentName: string): boolean;
 
   /** If the given instrument has been loaded */
   isInstrumentLoaded(instrumentName: string): boolean;
@@ -73,6 +77,11 @@ export interface AudioPlayer {
 
   /** Jump to the given playback position */
   jumpToPosition(position: number): void;
+
+  registerCallback(
+    event: PlayerEvent,
+    callback: (payload?: string) => void
+  ): void;
 }
 
 /** A single sound played on the timeline */
@@ -99,4 +108,14 @@ export interface SamplerSequence {
   instrument: string;
   // Notes to play
   events: {notes: string[]; playbackPosition: number}[];
+  effects?: Effects;
 }
+
+export type SampleMap = {[note: number]: string};
+
+export interface InstrumentData {
+  instrumentName: string;
+  sampleMap: SampleMap;
+}
+
+export type PlayerEvent = 'InstrumentLoaded'; // Add more as needed

@@ -45,9 +45,7 @@ module Pd::Foorm
       question
     end
 
-    protected
-
-    def get_friendly_agenda(workshop_agenda)
+    protected def get_friendly_agenda(workshop_agenda)
       # if workshop agenda starts with module, the agenda will be in the format "module1"
       # convert to Module 1 for readability
       if workshop_agenda.start_with? "module"

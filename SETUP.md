@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD033 -->
 # Setup
 
-This document describes how to set up your workstation to develop for Code.org.
+👋 This document describes how to set up your workstation to develop for Code.org.
 
 You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu in a VM/WSL). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
 
@@ -92,17 +92,20 @@ Some functionality will not work on your local site without this, for example, s
 ### For external contributors
 
 External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
-          - slack_bot_token: localoverride
-          - pardot_private_key: localoverride
-          - firebase_secret: localoverride
-          - firebase_shared_secret: localoverride
-          - properties_encryption_key: ''
+
+```
+slack_bot_token: localoverride
+pardot_private_key: localoverride
+firebase_secret: localoverride
+firebase_shared_secret: localoverride
+properties_encryption_key: ''
+```
 
 ## OS-specific prerequisites
 
 ### macOS
 
-Setup steps for Apple devices running **macOS Ventura and Sonoma**, including those running on [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon#M_series) and Intel x86:
+These steps are for Apple devices running **macOS 14.x**, including those running on [Apple Silicon (M1|M2|M3) ARM architecture CPUs](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
 
 1. Open a Terminal.
 
@@ -159,10 +162,15 @@ Setup steps for Apple devices running **macOS Ventura and Sonoma**, including th
         ```
 
 1.  Install **Node.js**
-    1. Install node version specified by [.nvmrc](.nvmrc):
+    1. Install node version specified by [.
+    rc](.nvmrc):
         ```
         nvm install    # run from the project root directory
         ```
+      <details>
+        <summary>If you get an error `nvm: command not found`</summary>
+        Run `brew info nvm` and follow the instructions there. They will include making an `.nvm` folder and updating your shell configuration file.
+      </details>
     2. Set default node version:
         ```
         nvm alias default $(cat ./.nvmrc)

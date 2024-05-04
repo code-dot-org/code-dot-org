@@ -1,16 +1,16 @@
 import React from 'react';
-import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';
+
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+
+import {removeModelUpdateMessage} from '../redux/aichatRedux';
+import {ChatCompletionMessage, Role} from '../types';
 import aichatI18n from '../locale';
-import {
-  AichatLevelProperties,
-  ChatCompletionMessage,
-  Role,
-  Status,
-} from '../types';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import {useSelector} from 'react-redux';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import ChatNotificationMessage from './ChatNotificationMessage';
+import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
   message: ChatCompletionMessage;
@@ -19,13 +19,9 @@ interface ChatMessageProps {
 const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
 const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 
-const isAssistant = (role: string) => {
-  return role === Role.ASSISTANT;
-};
-
-const isUser = (role: string) => {
-  return role === Role.USER;
-};
+const isAssistant = (role: string) => role === Role.ASSISTANT;
+const isUser = (role: string) => role === Role.USER;
+const isModelUpdate = (role: string) => role === Role.MODEL_UPDATE;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK || status === Status.UNKNOWN) {
@@ -36,18 +32,16 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {chatMessageText}
       </div>
     );
-  } else if (status === Status.INAPPROPRIATE) {
+  } else if (status === Status.PROFANITY_VIOLATION) {
     return (
-      <div
-        className={classNames(
-          moduleStyles.message,
-          moduleStyles.inappropriateMessage
-        )}
-      >
-        {INAPPROPRIATE_MESSAGE}
-      </div>
+      <ChatNotificationMessage
+        content={INAPPROPRIATE_MESSAGE}
+        iconName="circle-xmark"
+        iconClass={moduleStyles.danger}
+        containerClass={moduleStyles.dangerContainer}
+      />
     );
-  } else if (status === Status.PERSONAL) {
+  } else if (status === Status.PII_VIOLATION) {
     return (
       <div
         className={classNames(
@@ -79,7 +73,6 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK) {
     return (
       <div
-        id={'chat-workspace-message-body'}
         className={classNames(
           moduleStyles.message,
           moduleStyles.assistantMessage
@@ -91,29 +84,49 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
   }
 };
 
+const displayModelUpdateMessage = (
+  message: ChatCompletionMessage,
+  onRemove: () => void
+) => {
+  const {chatMessageText, timestamp} = message;
+
+  return (
+    <ChatNotificationMessage
+      onRemove={onRemove}
+      content={
+        <>
+          <span className={moduleStyles.modelUpdateMessageTextContainer}>
+            <StrongText>{chatMessageText}</StrongText> has been updated
+          </span>
+          <StrongText>{timestamp}</StrongText>
+        </>
+      }
+      iconName="check"
+      iconClass={moduleStyles.check}
+      containerClass={moduleStyles.modelUpdateContainer}
+    />
+  );
+};
+
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
-  const botTitle =
-    useSelector(
-      (state: {lab: LabState}) =>
-        (state.lab.levelProperties as AichatLevelProperties | undefined)
-          ?.botTitle
-    ) || 'EduBot';
+  const dispatch = useAppDispatch();
+
   return (
     <div id={`ChatMessage id: ${message.id}`}>
-      {isUser(message.role) && (
-        <div className={moduleStyles.userMessageContainer}>
-          {displayUserMessage(message.status, message.chatMessageText)}
-        </div>
-      )}
+      {isUser(message.role) &&
+        displayUserMessage(message.status, message.chatMessageText)}
 
       {isAssistant(message.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
-          <Typography semanticTag="h5" visualAppearance="heading-xs">
-            {botTitle} ({message.role})
-          </Typography>
+          <img src={aiBotIcon} alt="An icon depicting a robot" />
           {displayAssistantMessage(message.status, message.chatMessageText)}
         </div>
       )}
+
+      {isModelUpdate(message.role) &&
+        displayModelUpdateMessage(message, () =>
+          dispatch(removeModelUpdateMessage(message.id))
+        )}
     </div>
   );
 };

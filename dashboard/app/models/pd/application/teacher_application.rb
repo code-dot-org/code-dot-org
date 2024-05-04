@@ -1197,9 +1197,7 @@ module Pd::Application
       }
     end
 
-    protected
-
-    def school
+    protected def school
       school_id = self.school_id
       return nil unless school_id
 

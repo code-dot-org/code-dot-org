@@ -21,6 +21,7 @@ const childrenAreaHeight = 70;
 interface PanelsProps {
   panels: Panel[];
   onContinue: (nextUrl?: string) => void;
+  onSkip?: () => void;
   targetWidth: number;
   targetHeight: number;
   resetOnChange?: boolean;
@@ -32,6 +33,7 @@ interface PanelsProps {
 const PanelsView: React.FunctionComponent<PanelsProps> = ({
   panels,
   onContinue,
+  onSkip,
   targetWidth,
   targetHeight,
   resetOnChange = true,
@@ -79,7 +81,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   // Reset to last panel if number of panels has reduced
   useEffect(() => {
     if (currentPanel >= panels.length) {
-      setCurrentPanel(panels.length - 1);
+      setCurrentPanel(Math.max(panels.length - 1, 0));
     }
   }, [currentPanel, panels]);
 
@@ -90,8 +92,12 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   const showSmallText = height < 300;
   const textLayoutClass =
-    panel.layout === 'text-bottom-left'
+    panel.layout === 'text-top-left'
+      ? styles.markdownTextTopLeft
+      : panel.layout === 'text-bottom-left'
       ? styles.markdownTextBottomLeft
+      : panel.layout === 'text-bottom-right'
+      ? styles.markdownTextBottomRight
       : styles.markdownTextTopRight;
 
   return (
@@ -152,6 +158,20 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           </div>
         )}
       </div>
+      {onSkip && (
+        <div className={styles.skipContainer}>
+          <button onClick={onSkip} type="button" className={styles.buttonSkip}>
+            <span className={styles.buttonSkipContent}>
+              {commonI18n.skipToProject()}
+            </span>
+            <FontAwesome
+              title={commonI18n.skipToProject()}
+              icon="arrow-right"
+              className={'icon'}
+            />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

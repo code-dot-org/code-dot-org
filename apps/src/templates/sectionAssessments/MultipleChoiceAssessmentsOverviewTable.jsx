@@ -1,16 +1,19 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import i18n from '@cdo/locale';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import PercentAnsweredCell from './PercentAnsweredCell';
+
 import styleConstants from '@cdo/apps/styleConstants';
-import {multipleChoiceDataPropType} from './assessmentDataShapes';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import {multipleChoiceDataPropType} from './assessmentDataShapes';
+import PercentAnsweredCell from './PercentAnsweredCell';
 import {setQuestionIndex} from './sectionAssessmentsRedux';
 
 export const COLUMNS = {

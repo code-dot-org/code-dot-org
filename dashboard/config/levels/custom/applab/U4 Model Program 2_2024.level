@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2023-11-28T21:16:34.000Z",
   "level_num": "custom",
@@ -51,11 +50,11 @@
     "parent_level_id": 20248,
     "name_suffix": "_2024",
     "reference_links": [
-      "/courses/csd-2022/guides/multi-screen-apps",
-      "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/design-mode-elements"
+      "/courses/csd-2024/guides/multi-screen-apps",
+      "/courses/csd-2024/guides/design-mode",
+      "/courses/csd-2024/guides/design-mode-elements"
     ],
-    "map_reference": "/courses/csd-2022/guides/importing-screens",
+    "map_reference": "/courses/csd-2024/guides/importing-screens",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -63,6 +62,7 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2023-11-28T21:16:34.925+00:00\",\"changed\":[\"cloned from \\\"U4 Model Program 2_2023\\\"\"],\"cloned_from\":\"U4 Model Program 2_2023\"},{\"changed_at\":\"2024-03-11 15:36:47 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 15:39:38 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-15 15:13:34 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

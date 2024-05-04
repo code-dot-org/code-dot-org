@@ -1,5 +1,6 @@
 /* eslint-disable import/order */
 const path = require('path');
+var pyodide = require('pyodide');
 const sass = require('sass');
 const webpack = require('webpack');
 
@@ -45,6 +46,7 @@ const nodeModulesToTranspile = [
   '@blockly/field-grid-dropdown',
   '@blockly/keyboard-navigation',
   '@blockly/plugin-scroll-options',
+  '@blockly/field-angle',
   '@blockly/field-bitmap',
   'blockly',
   '@code-dot-org/dance-party',
@@ -211,6 +213,8 @@ const WEBPACK_BASE_CONFIG = {
       repl: p('src/noop'),
       '@cdo/storybook': p('.storybook'),
       serialport: false,
+      '@cdoide': p('src/weblab2/CDOIDE'),
+      '@cdo/generated-scripts': p('generated-scripts'),
     },
   },
   module: {
@@ -658,7 +662,9 @@ function createWebpackConfig({
               }),
             ]),
       }),
-      new PyodidePlugin(),
+      new PyodidePlugin({
+        outDirectory: `pyodide/${pyodide.version}`,
+      }),
       ...(envConstants.HOT
         ? [
             new webpack.HotModuleReplacementPlugin({}),
@@ -691,7 +697,7 @@ function createWebpackConfig({
           ]
         : []),
     ],
-    devServer: envConstants.HOT
+    devServer: envConstants.DEV
       ? {
           allowedHosts: ['localhost-studio.code.org', 'localhost.code.org'],
           client: {overlay: false},
@@ -705,7 +711,8 @@ function createWebpackConfig({
             },
           ],
           host: '0.0.0.0',
-          hot: true,
+          hot: envConstants.HOT,
+          liveReload: envConstants.HOT,
           devMiddleware: {
             writeToDisk: true,
           },

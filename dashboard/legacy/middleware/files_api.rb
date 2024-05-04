@@ -222,7 +222,11 @@ class FilesApi < Sinatra::Base
   #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
-    NewRelic::Agent.ignore_enduser rescue nil
+    begin
+      NewRelic::Agent.ignore_enduser
+    rescue
+      nil
+    end
 
     buckets = get_bucket_impl(endpoint).new
     cache_duration ||= buckets.cache_duration_seconds
@@ -1062,20 +1066,18 @@ class FilesApi < Sinatra::Base
     no_content
   end
 
-  private
-
   #
   # Returns the (parsed) manifest associated with the given encrypted_channel_id.
   #
-  def get_manifest(bucket, encrypted_channel_id)
+  private def get_manifest(bucket, encrypted_channel_id)
     bucket.get_manifest(encrypted_channel_id)
   end
 
-  def moderate_type?(project_type)
+  private def moderate_type?(project_type)
     MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
   end
 
-  def moderate_channel?(encrypted_channel_id)
+  private def moderate_channel?(encrypted_channel_id)
     project = Projects.new(get_storage_id)
     !project.content_moderation_disabled?(encrypted_channel_id)
   end

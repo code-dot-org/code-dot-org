@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
+    "skipUrl": "/projects/music/new",
     "long_instructions": "#### Functions\r\n\r\nYou can organize your music using functions.\r\n\r\nClick [Functions](#clickable=toolbox-first-row), then drag [bass](#clickable=toolbox-second-block) to [when run](#clickable=when-run-block), to play the content of the bass function.",
     "level_data": {
       "library": "intro2024",

@@ -1,6 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {LevelKind} from '@cdo/apps/util/sharedConstants';
+import React from 'react';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BasicBubble,
   BubbleLink,
@@ -9,9 +11,9 @@ import {
   getBubbleClassNames,
   getBubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import CachedElement from '@cdo/apps/util/CachedElement';
+import {LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
 import {levelProgressStyle} from '../../progress/progressStyles';
 
 /**

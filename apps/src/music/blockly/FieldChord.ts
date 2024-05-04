@@ -6,6 +6,7 @@ import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
+import {LoadFinishedCallback} from '../types';
 const experiments = require('@cdo/apps/util/experiments');
 const color = require('@cdo/apps/util/color');
 
@@ -20,6 +21,15 @@ interface FieldChordOptions {
   previewNote: (note: number, instrument: string, onStop?: () => void) => void;
   cancelPreviews: () => void;
   currentValue: ChordEventValue;
+  setupSampler: (
+    instrument: string,
+    onLoadFinished?: LoadFinishedCallback
+  ) => void;
+  isInstrumentLoading: (instrument: string) => boolean;
+  isInstrumentLoaded: (instrument: string) => boolean;
+  registerInstrumentLoadCallback: (
+    callback: (instrumentName: string) => void
+  ) => void;
 }
 
 /**
@@ -185,10 +195,8 @@ export default class FieldChord extends Field {
       React.createElement<ChordPanelProps>(ChordPanel, {
         library: this.options.getLibrary(),
         initValue: this.getValue(),
-        previewChord: this.options.previewChord,
-        previewNote: this.options.previewNote,
-        cancelPreviews: this.options.cancelPreviews,
         onChange: this.onValueChange,
+        ...this.options,
       }),
       this.newDiv
     );

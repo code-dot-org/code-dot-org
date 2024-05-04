@@ -5,6 +5,7 @@ import {
   isDevelopmentEnvironment,
 } from '../../utils';
 import Statsig from 'statsig-js';
+import experiments from '@cdo/apps/util/experiments';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
@@ -12,6 +13,21 @@ const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
 
 class StatsigReporter {
   constructor() {
+    let user = {
+      custom: {
+        enabledExperiments: experiments.getEnabledExperiments(),
+      },
+    };
+    const user_id_element = document.querySelector('script[data-user-id]');
+    const user_id = user_id_element ? user_id_element.dataset.userId : null;
+    const user_type_element = document.querySelector('script[data-user-type');
+    const user_type = user_type_element
+      ? user_type_element.dataset.userType
+      : null;
+    if (user_id) {
+      user.userID = this.formatUserId(user_id);
+      user.custom.userType = user_type;
+    }
     const api_element = document.querySelector(
       'script[data-statsig-api-client-key]'
     );
@@ -26,13 +42,16 @@ class StatsigReporter {
     const options = {
       environment: {tier: getEnvironment()},
       localMode: this.local_mode,
+      disableErrorLogging: true,
     };
-    this.initialize(api_key, options);
+    this.initialize(api_key, user, options);
   }
 
-  async initialize(api_key, options) {
+  // This user object will potentially update via a setUserProperties call
+  // (below) from current user redux
+  async initialize(api_key, user, options) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      await Statsig.initialize(api_key, options);
+      await Statsig.initialize(api_key, user, options);
     }
   }
 
@@ -41,10 +60,7 @@ class StatsigReporter {
     const formattedUserId = this.formatUserId(userId);
     const user = {
       userID: formattedUserId,
-      custom: {
-        type: userType,
-        experiments: enabledExperiments,
-      },
+      custom: {userType: userType, enabledExperiments: enabledExperiments},
     };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(

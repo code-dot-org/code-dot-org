@@ -1,8 +1,11 @@
-import React from 'react';
 import {mount} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+
 import VersionUnitDropdowns from '@cdo/apps/templates/sectionsRefresh/VersionUnitDropdowns';
+
+import {expect} from '../../../util/reconfiguredChai';
+
 import {highSchoolCourseOfferings} from './CourseOfferingsTestData';
 
 const csdOffering = highSchoolCourseOfferings['high']['Course'][

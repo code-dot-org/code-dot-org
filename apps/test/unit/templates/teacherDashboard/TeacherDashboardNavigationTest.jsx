@@ -1,8 +1,10 @@
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
-import {render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
+
 import TeacherDashboardNavigation from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation.jsx';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const CUSTOM_LINKS = [
   {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {assert} from 'chai';
 import {UnconnectedLessonProgress as LessonProgress} from '@cdo/apps/code-studio/components/progress/LessonProgress';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import {shallow} from 'enzyme';
 
 describe('LessonProgress', () => {
