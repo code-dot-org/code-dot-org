@@ -1,18 +1,17 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import React, {useState} from 'react';
-
-import {useCDOIDEContext} from '@cdo/apps/codebridge/codebridgeContext';
 
 import './styles/sideBar.css';
 
 export const SideBar = React.memo(() => {
-  const {config} = useCDOIDEContext();
+  const {config} = useCodebridgeContext();
   const [activePane, setActivePane] = useState<string>(
     config.activeLeftNav || config.leftNav[0].component
   );
 
   const {
     config: {leftNav},
-  } = useCDOIDEContext();
+  } = useCodebridgeContext();
   if (!leftNav || !leftNav.length) {
     return null;
   }

@@ -1,13 +1,12 @@
-import React, {useMemo} from 'react';
-
 import {
-  useCDOIDEContext,
+  useCodebridgeContext,
   getNextFileId,
   getNextFolderId,
-} from '@cdo/apps/codebridge/codebridgeContext';
-import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
-import {ProjectType, FileId, FolderId} from '@cdo/apps/codebridge/types';
-import {findFolder, getErrorMessage} from '@cdo/apps/codebridge/utils';
+} from '@codebridge/codebridgeContext';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {ProjectType, FileId, FolderId} from '@codebridge/types';
+import {findFolder, getErrorMessage} from '@codebridge/utils';
+import React, {useMemo} from 'react';
 
 import './styles/fileBrowser.css';
 
@@ -34,7 +33,7 @@ const InnerFileBrowser = React.memo(
     renameFolderPrompt,
   }: FilesComponentProps) => {
     const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
-      useCDOIDEContext();
+      useCodebridgeContext();
 
     return (
       <>
@@ -129,7 +128,7 @@ export const FileBrowser = React.memo(() => {
 
     renameFolder,
     newFolder,
-  } = useCDOIDEContext();
+  } = useCodebridgeContext();
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
     () =>

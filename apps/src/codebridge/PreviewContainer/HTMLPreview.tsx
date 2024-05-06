@@ -1,8 +1,7 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {ProjectFile} from '@codebridge/types';
+import {findFolder} from '@codebridge/utils';
 import React, {useRef, useMemo} from 'react';
-
-import {useCDOIDEContext} from '@cdo/apps/codebridge/codebridgeContext';
-import {ProjectFile} from '@cdo/apps/codebridge/types';
-import {findFolder} from '@cdo/apps/codebridge/utils';
 
 type HTMLPreviewProps = {
   file: ProjectFile;
@@ -12,7 +11,7 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
   const iframeRef = useRef(null);
   const {
     project: {files, folders},
-  } = useCDOIDEContext();
+  } = useCodebridgeContext();
 
   const srcdoc = useMemo(() => {
     if (!file) {

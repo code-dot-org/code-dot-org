@@ -1,7 +1,7 @@
-import {useCDOIDEContext} from '@cdo/apps/codebridge/codebridgeContext';
-import {getEmptyEditor} from '@cdo/apps/codebridge/utils';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {getEmptyEditor} from '@codebridge/utils';
 
 export const useEmptyEditor = () => {
-  const {config} = useCDOIDEContext();
+  const {config} = useCodebridgeContext();
   return getEmptyEditor(config);
 };

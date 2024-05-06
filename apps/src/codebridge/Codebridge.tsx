@@ -1,30 +1,29 @@
-import React from 'react';
-
-import {CDOIDEContextProvider} from '@cdo/apps/codebridge/codebridgeContext';
-import DisabledEditor from '@cdo/apps/codebridge/Editor/DisabledEditor';
-import {FileBrowser} from '@cdo/apps/codebridge/FileBrowser';
-import {FileTabs} from '@cdo/apps/codebridge/FileTabs';
-import {useSynchronizedProject} from '@cdo/apps/codebridge/hooks';
-import {Instructions} from '@cdo/apps/codebridge/Instructions';
-import {PreviewContainer} from '@cdo/apps/codebridge/PreviewContainer';
-import {SideBar} from '@cdo/apps/codebridge/SideBar';
+import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
+import DisabledEditor from '@codebridge/Editor/DisabledEditor';
+import {FileBrowser} from '@codebridge/FileBrowser';
+import {FileTabs} from '@codebridge/FileTabs';
+import {useSynchronizedProject} from '@codebridge/hooks';
+import {Instructions} from '@codebridge/Instructions';
+import {PreviewContainer} from '@codebridge/PreviewContainer';
+import {SideBar} from '@codebridge/SideBar';
 import {
   ProjectType,
   ConfigType,
   SetProjectFunction,
   SetConfigFunction,
-} from '@cdo/apps/codebridge/types';
+} from '@codebridge/types';
+import React from 'react';
 import './styles/cdoIDE.css';
 
-type CDOIDEProps = {
+type CodebridgeProps = {
   project: ProjectType;
   config: ConfigType;
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
 };
 
-export const CDOIDE = React.memo(
-  ({project, config, setProject, setConfig}: CDOIDEProps) => {
+export const Codebridge = React.memo(
+  ({project, config, setProject, setConfig}: CodebridgeProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
     // see useSynchronizedProject for more info.
     const [internalProject, projectUtilities] = useSynchronizedProject(
@@ -44,7 +43,7 @@ export const CDOIDE = React.memo(
     };
 
     return (
-      <CDOIDEContextProvider
+      <CodebridgeContextProvider
         value={{
           project: internalProject,
           config,
@@ -70,7 +69,7 @@ export const CDOIDE = React.memo(
 
           {/*<Search />*/}
         </div>
-      </CDOIDEContextProvider>
+      </CodebridgeContextProvider>
     );
   }
 );

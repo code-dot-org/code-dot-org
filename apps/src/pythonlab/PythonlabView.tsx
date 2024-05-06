@@ -1,11 +1,11 @@
 // Pythonlab view
 import React, {useEffect, useMemo, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
-import {ConfigType} from '@cdo/apps/codebridge/types';
-import {Editor} from '@cdo/apps/codebridge/Editor';
+import {ConfigType} from '@codebridge/types';
+import {Editor} from '@codebridge/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
-import {CDOIDE} from '@cdo/apps/codebridge';
+import {Codebridge} from '@codebridge/Codebridge';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setAndSaveSource, setSource} from './pythonlabRedux';
@@ -13,7 +13,7 @@ import PythonConsole from './PythonConsole';
 import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import header from '@cdo/apps/code-studio/header';
-import {useInitialSources} from '@cdo/apps/codebridge/hooks';
+import {useInitialSources} from '@codebridge/hooks';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -115,7 +115,7 @@ const PythonlabView: React.FunctionComponent = () => {
     <div className={moduleStyles.pythonlab}>
       <div className={moduleStyles.editor}>
         {source && (
-          <CDOIDE
+          <Codebridge
             project={source}
             config={config}
             setProject={setProject}
