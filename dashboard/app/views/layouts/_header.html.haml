@@ -149,13 +149,12 @@
       #{lesson_group_data.to_json},
       #{lesson_data.to_json},
       #{user_progress},
-      "#{script_level&.level_id || -1}",
+      "#{@level.id}",
       #{puzzle_page},
       #{signed_in},
       #{lesson_extras_enabled || 'null'},
       #{script_name_data.to_json},
       #{!script_level},
-      #{sublevel_position}
     );
     //]]>
 

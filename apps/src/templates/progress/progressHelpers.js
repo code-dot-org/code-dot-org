@@ -267,9 +267,10 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
  * script.lessons.levels) contains more data than we need. This parses the parts
  * we care about to conform to our `levelType` object.
  */
-export const processedLevel = level => {
+export const processedLevel = (level, parentLevelId) => {
+  const id = level.activeId || level.id;
   return {
-    id: level.activeId || level.id,
+    id,
     url: level.url,
     name: level.name,
     app: level.app,
@@ -279,7 +280,10 @@ export const processedLevel = level => {
     kind: level.kind,
     icon: level.icon,
     isUnplugged: level.display_as_unplugged,
-    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
+    levelNumber:
+      level.kind === LevelKind.unplugged
+        ? undefined
+        : level.title || level.position,
     bubbleText:
       level.kind === LevelKind.unplugged
         ? undefined
@@ -294,8 +298,10 @@ export const processedLevel = level => {
         : PUZZLE_PAGE_NONE,
     scriptLevelId: level.id,
     sublevels:
-      level.sublevels && level.sublevels.map(level => processedLevel(level)),
+      level.sublevels &&
+      level.sublevels.map(sublevel => processedLevel(sublevel, id)),
     path: level.path,
+    parentLevelId,
   };
 };
 

@@ -33,7 +33,7 @@ import {
 } from './browserNavigation';
 import {TestResults} from '@cdo/apps/constants';
 import {
-  getCurrentLevelOrSublevelId,
+  getCurrentLevel,
   levelById,
   nextLevelId,
 } from './progressReduxSelectors';
@@ -75,7 +75,6 @@ export interface ProgressState {
   unitStudentDescription: string | undefined;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
-  currentSublevelPosition: number | undefined;
 }
 
 const initialState: ProgressState = {
@@ -126,7 +125,6 @@ const initialState: ProgressState = {
   unitStudentDescription: undefined,
   changeFocusAreaPath: undefined,
   unitCompleted: undefined,
-  currentSublevelPosition: undefined,
 };
 
 const progressSlice = createSlice({
@@ -161,7 +159,6 @@ const progressSlice = createSlice({
       state.hasFullProgress = action.payload.isFullProgress;
       state.isLessonExtras = action.payload.isLessonExtras;
       state.currentPageNumber = action.payload.currentPageNumber;
-      state.currentSublevelPosition = action.payload.currentSublevelPosition;
     },
     setCurrentLevelId(state, action: PayloadAction<string>) {
       state.currentLevelId = action.payload;
@@ -303,11 +300,7 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
       return;
     }
 
-    const currentLevel = levelById(
-      state,
-      state.currentLessonId,
-      state.currentLevelId
-    );
+    const currentLevel = getCurrentLevel(getState());
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
       updateBrowserForLevelNavigation(state, newLevel.path, levelId);
@@ -335,15 +328,26 @@ export function navigateToNextLevel(): ProgressThunkAction {
 export function sendSuccessReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
     const state = getState().progress;
-    const levelId = getCurrentLevelOrSublevelId(getState());
+    const levelId = state.currentLevelId;
     if (!state.currentLessonId || !levelId) {
       return;
     }
-    const currentLevel = levelById(state, state.currentLessonId, levelId);
+    const currentLevel = getCurrentLevel(getState());
     if (!currentLevel) {
       return;
     }
-    const scriptLevelId = currentLevel.scriptLevelId;
+
+    let scriptLevelId;
+    if (currentLevel.parentLevelId) {
+      const parentLevel = levelById(
+        state,
+        state.currentLessonId,
+        currentLevel.parentLevelId
+      );
+      scriptLevelId = parentLevel.scriptLevelId;
+    } else {
+      scriptLevelId = currentLevel.scriptLevelId;
+    }
 
     // The server does not appear to use the user ID parameter,
     // so just pass 0, like some other milestone posts do.

@@ -82,8 +82,7 @@ header.build = function (
   signedIn,
   lessonExtrasEnabled,
   scriptNameData,
-  isLessonExtras,
-  currentSublevelPosition
+  isLessonExtras
 ) {
   scriptData = scriptData || {};
   lessonGroupData = lessonGroupData || {};
@@ -104,8 +103,7 @@ header.build = function (
     signedIn,
     lessonExtrasEnabled,
     isLessonExtras,
-    currentPageNumber,
-    currentSublevelPosition
+    currentPageNumber
   );
 
   // Set up a navigation handler, in case we contain levels that don't
