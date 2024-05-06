@@ -75,12 +75,16 @@
       AlarmName: <%="Redis Session Store High Eviction Rate (#{stack_name})" %>
       AlarmDescription: We're seeing a lot of evictions from the Redis session store.
         A steady amount of evictions is not a bad thing, but a rapid increase in
-        eviction rate could be a sign of other instability.
+        eviction rate could be a sign of other instability. Note that the
+        current limit is aribtrary and speculative; we should adjust it once we
+        have enough data to understand our normal operating eviction rate.
       ActionsEnabled: true
       AlarmActions:
         - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-LowPriority"
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
+      # TODO infra: update this threshold and upgrade the alarm to Urgent once
+      # we've collected enough data to make a reasonable estimate of this.
       Threshold: 500
       ComparisonOperator: GreaterThanThreshold
       TreatMissingData: missing
@@ -102,37 +106,72 @@
             Period: 60
             Stat: Maximum
 <% end -%>
-  SessionStoreCurrConnectionsAlarm:
+  SessionStoreNetworkBytesInAlarm:
     Type: AWS::CloudWatch::Alarm
     DependsOn: SessionStoreGroup
     Properties:
-      AlarmName: <%="Redis Session Store Too Many Connections (#{stack_name})" %>
-      AlarmDescription: >-
-        ElastiCache's default limit on the maximum number of connections is up
-        to 65,000 simultaneous connections per node. We set this alarm at 80% of
-        that, or 52,000 connections on any given node.
-
-        We normally max out at ~1600 connections, so 52k is a generous cap.
+      AlarmName: <%="Redis Session Store Incoming Network Traffic Too High (#{stack_name})" %>
+      AlarmDescription:
+        The cache.r7g.xlarge nodes we use have a guaranteed performance of "Up
+        to 12.5 Gigabit"; because that includes both reads and writes and
+        because we generally read more than we write, set the write limit to
+        1/4 of the total.
       ActionsEnabled: true
       AlarmActions:
         - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
-      Threshold: 52000
+      Threshold: 3125000000
       ComparisonOperator: GreaterThanThreshold
       TreatMissingData: missing
       Metrics:
-        - Id: max_currconnections
-          Label: Maximum Current Connections Among Redis Session Store Nodes
+        - Id: max_networkin
+          Label: Maximum Incoming Network Traffic Among Redis Session Store Nodes
           ReturnData: true
           Expression: MAX(METRICS())
 <% (1..num_cache_clusters).each do |cluster_id| -%>
-        - Id: <%= "currconnections_#{cluster_id}" %>
+        - Id: <%= "networkin_#{cluster_id}" %>
           ReturnData: false
           MetricStat:
             Metric:
               Namespace: AWS/ElastiCache
-              MetricName: CurrConnections
+              MetricName: NetworkBytesIn
+              Dimensions:
+                - Name: CacheClusterId
+                  Value: !Sub "${SessionStoreGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
+            Period: 60
+            Stat: Maximum
+<% end -%>
+  SessionStoreNetworkBytesOutAlarm:
+    Type: AWS::CloudWatch::Alarm
+    DependsOn: SessionStoreGroup
+    Properties:
+      AlarmName: <%="Redis Session Store Outgoing Network Traffic Too High (#{stack_name})" %>
+      AlarmDescription:
+        The cache.r7g.xlarge nodes we use have a guaranteed performance of "Up
+        to 12.5 Gigabit"; because that includes both reads and writes and
+        because we generally read more than we write, set the read limit to 1/2
+        of the total.
+      ActionsEnabled: true
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 3
+      Threshold: 6250000000
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: missing
+      Metrics:
+        - Id: max_networkout
+          Label: Maximum Outgoing Network Traffic Among Redis Session Store Nodes
+          ReturnData: true
+          Expression: MAX(METRICS())
+<% (1..num_cache_clusters).each do |cluster_id| -%>
+        - Id: <%= "networkout_#{cluster_id}" %>
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/ElastiCache
+              MetricName: NetworkBytesOut
               Dimensions:
                 - Name: CacheClusterId
                   Value: !Sub "${SessionStoreGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
