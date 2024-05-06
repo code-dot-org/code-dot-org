@@ -198,6 +198,7 @@ const PEGASUS_ENTRIES = {
   'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
   'code.org/views/swiper_page_videos': './src/sites/code.org/pages/views/swiper_page_videos.js',
   'code.org/views/swiper_page_minecraft': './src/sites/code.org/pages/views/swiper_page_minecraft.js',
+  'code.org/views/swiper_page_music_lab': './src/sites/code.org/pages/views/swiper_page_music_lab.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com

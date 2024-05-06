@@ -1938,7 +1938,13 @@ class User < ApplicationRecord
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
     pl_scripts = pl_user_scripts.map(&:script)
 
-    user_levels = UserLevel.where(user: self, script: pl_scripts)
+    levels = pl_scripts.map(&:levels).flatten
+    level_ids = levels.map(&:id)
+
+    # Handle levels-within-levels
+    levels.each {|l| level_ids << l.contained_levels.first&.id unless l.contained_levels.empty?}
+
+    user_levels = UserLevel.where(user: self, script: pl_scripts, level_id: level_ids)
     return [] if user_levels.empty?
     user_levels_by_script = user_levels.group_by(&:script_id)
     percent_completed_by_script = {}

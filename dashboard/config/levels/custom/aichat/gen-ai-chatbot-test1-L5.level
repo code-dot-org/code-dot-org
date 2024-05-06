@@ -39,9 +39,12 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "hidePresentationPanel": true
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T20:54:27.272+00:00\",\"changed\":[\"cloned from \\\"gen-ai-chatbot-test1-L3\\\"\"],\"cloned_from\":\"gen-ai-chatbot-test1-L3\"},{\"changed_at\":\"2024-04-17 20:54:29 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:00:55 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:02:13 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-29 17:03:19 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T20:54:27.272+00:00\",\"changed\":[\"cloned from \\\"gen-ai-chatbot-test1-L3\\\"\"],\"cloned_from\":\"gen-ai-chatbot-test1-L3\"},{\"changed_at\":\"2024-04-17 20:54:29 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:00:55 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:02:13 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-29 17:03:19 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-03 17:34:13 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -341,7 +341,7 @@ class HomeControllerTest < ActionController::TestCase
     refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
     sign_in student
-    Policies::ChildAccount.stubs(:show_cap_state_modal?).returns(true)
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
     get :home
 
     assert_select '#student-information-modal', true
@@ -360,7 +360,24 @@ class HomeControllerTest < ActionController::TestCase
     assert student.age, 12
 
     sign_in student
-    Policies::ChildAccount.stubs(:show_cap_state_modal?).returns(true)
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'CAP student missing us_state and created after CPA started does sees the student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:created_at, DateTime.new(2023, 7, 1))
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    student = student.reload
+    assert student.age, 12
+
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
     get :home
 
     assert_select '#student-information-modal', true
