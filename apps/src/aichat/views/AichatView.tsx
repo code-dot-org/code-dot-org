@@ -12,6 +12,8 @@ import SegmentedButtons, {
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
@@ -163,6 +165,13 @@ const AichatView: React.FunctionComponent = () => {
             headerContent={chatWorkspaceHeader}
             rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
               dispatch(clearChatMessages());
+              analyticsReporter.sendEvent(
+                EVENTS.CHAT_ACTION,
+                {
+                  action: 'Clear chat history',
+                },
+                PLATFORMS.BOTH
+              );
             })}
           >
             <ChatWorkspace />
