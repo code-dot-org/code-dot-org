@@ -19,6 +19,10 @@ interface ReduxState {
   };
 }
 
+interface RowData {
+  rowData: object;
+}
+
 interface Props {
   studentData?: object;
 }
@@ -34,7 +38,8 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
     return columns;
   };
 
-  const nameFormatter = (name: string, {rowData}: object) => {
+  const nameFormatter = (name: string, {rowData}: RowData) => {
+    console.log(rowData, typeof rowData);
     const editedValue = rowData.isEditing ? rowData.editingData.name : '';
     const familyName = rowData.familyName ? rowData.familyName : '';
     return (
@@ -49,7 +54,7 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
 
   const consentStatusFormatter = (
     childAccountComplianceState: string,
-    {rowData}: object
+    {rowData}: RowData
   ) => {
     return (
       <ManageStudentsConsentStatusCell
