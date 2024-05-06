@@ -80,3 +80,16 @@ ul.featured-artists {
     column-gap: 1rem;
   }
 }
+
+section.student-projects {
+  .grid-container {
+    @media (min-width: $width-md) {
+      grid-template-columns: 60% auto;
+    }
+  }
+
+  .text-wrapper {
+    background: var(--neutral_light);
+    padding: 2rem;
+  }
+}
