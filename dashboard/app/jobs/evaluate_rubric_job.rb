@@ -277,26 +277,7 @@ class EvaluateRubricJob < ApplicationJob
       ]
     )
 
-    options = job.arguments.first
-    script_level = ScriptLevel.find(options[:script_level_id])
-
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: AI_RUBRICS_FIREHOSE_STUDY,
-        study_group: 'v0',
-        event: 'retry-on-timeout',
-        data_string: "#{error.class.name}: #{error.message}",
-        data_json: {
-          user_id: options[:user_id],
-          requester_id: options[:requester_id],
-          script_level_id: options[:script_level_id],
-          script_name: script_level.script.name,
-          lesson_number: script_level.lesson.relative_position,
-          level_name: script_level.level.name,
-        }.to_json
-      }
-    )
+    log_to_firehose(job: job, error: error, event_name: 'retry-on-timeout')
   end
 
   RETRIES_ON_SERVICE_UNAVAILABLE = 3
@@ -342,6 +323,29 @@ class EvaluateRubricJob < ApplicationJob
           unit: 'Count'
         }
       ]
+    )
+  end
+
+  def self.log_to_firehose(job:, error:, event_name:)
+    options = job.arguments.first
+    script_level = ScriptLevel.find(options[:script_level_id])
+
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: AI_RUBRICS_FIREHOSE_STUDY,
+        study_group: 'v0',
+        event: event_name,
+        data_string: "#{error.class.name}: #{error.message}",
+        data_json: {
+          user_id: options[:user_id],
+          requester_id: options[:requester_id],
+          script_level_id: options[:script_level_id],
+          script_name: script_level.script.name,
+          lesson_number: script_level.lesson.relative_position,
+          level_name: script_level.level.name,
+        }.to_json
+      }
     )
   end
 
