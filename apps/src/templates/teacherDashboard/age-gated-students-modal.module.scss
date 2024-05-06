@@ -1,25 +1,25 @@
 @use 'sass:math';
 @import 'color.scss';
 
-$standard-padding: 20px;
-
 .modalContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $black;
-  z-index: 1000;
+  padding: 20px;
+
+  hr {
+    border-color: $lighter_gray;
+  }
 }
 
-.modalContent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: $white;
-  padding: 20px;
-  border-radius: 5px;
-  width: 50%;
+.modalHeader {
+  color: $black;
+  font-weight: 600;
+}
+
+.modalButton {
+  text-align: end;
+
+  button {
+    background-color: $brand_secondary_default;
+    border-color: $brand_secondary_default;
+    color: $neutral_white;
+  }
 }
