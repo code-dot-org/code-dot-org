@@ -75,7 +75,7 @@ export const askAITutor = createAsyncThunk(
 
     if (levelInstructions.length > 0) {
       systemPrompt +=
-        '\n Here are the student instructions for this level: ' +
+        '\n Here is what the Code.org curriculum asks of the student: ' +
         levelInstructions;
     }
 
