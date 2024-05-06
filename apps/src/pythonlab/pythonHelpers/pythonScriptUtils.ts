@@ -1,12 +1,12 @@
+import {
+  getNextFileId,
+  getNextFolderId,
+} from '@codebridge/codebridgeContext/utils';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
 import {PyodideInterface} from 'pyodide';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {
-  getNextFileId,
-  getNextFolderId,
-} from '@cdo/apps/weblab2/CDOIDE/cdoIDEContext/utils';
-import {DEFAULT_FOLDER_ID} from '@cdo/apps/weblab2/CDOIDE/constants';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
 

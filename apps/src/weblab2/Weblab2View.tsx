@@ -4,11 +4,11 @@ import './styles/Weblab2View.css';
 
 import {Config} from './Config';
 
-import {CDOIDE} from '@cdoide/CDOIDE';
-import {ConfigType, ProjectType} from '@cdoide/types';
-import {useInitialSources} from '@cdoide/hooks';
+import {Codebridge} from '@codebridge/Codebridge';
+import {ConfigType, ProjectType} from '@codebridge/types';
+import {useInitialSources} from '@codebridge/hooks';
 
-import {Editor as CDOEditor} from './CDOIDE/Editor';
+import {Editor as CDOEditor} from '@codebridge/Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -214,7 +214,7 @@ const Weblab2View = () => {
         </button>
       </div>
       <div className="app-ide">
-        <CDOIDE
+        <Codebridge
           project={currentProject}
           config={config}
           setProject={setProject}

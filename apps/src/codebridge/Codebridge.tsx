@@ -1,29 +1,29 @@
-import {CDOIDEContextProvider} from '@cdoide/cdoIDEContext';
-import DisabledEditor from '@cdoide/Editor/DisabledEditor';
-import {FileBrowser} from '@cdoide/FileBrowser';
-import {FileTabs} from '@cdoide/FileTabs';
-import {useSynchronizedProject} from '@cdoide/hooks';
-import {Instructions} from '@cdoide/Instructions';
-import {PreviewContainer} from '@cdoide/PreviewContainer';
-import {SideBar} from '@cdoide/SideBar';
+import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
+import DisabledEditor from '@codebridge/Editor/DisabledEditor';
+import {FileBrowser} from '@codebridge/FileBrowser';
+import {FileTabs} from '@codebridge/FileTabs';
+import {useSynchronizedProject} from '@codebridge/hooks';
+import {Instructions} from '@codebridge/Instructions';
+import {PreviewContainer} from '@codebridge/PreviewContainer';
+import {SideBar} from '@codebridge/SideBar';
 import {
   ProjectType,
   ConfigType,
   SetProjectFunction,
   SetConfigFunction,
-} from '@cdoide/types';
+} from '@codebridge/types';
 import React from 'react';
 import './styles/cdoIDE.css';
 
-type CDOIDEProps = {
+type CodebridgeProps = {
   project: ProjectType;
   config: ConfigType;
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
 };
 
-export const CDOIDE = React.memo(
-  ({project, config, setProject, setConfig}: CDOIDEProps) => {
+export const Codebridge = React.memo(
+  ({project, config, setProject, setConfig}: CodebridgeProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
     // see useSynchronizedProject for more info.
     const [internalProject, projectUtilities] = useSynchronizedProject(
@@ -43,7 +43,7 @@ export const CDOIDE = React.memo(
     };
 
     return (
-      <CDOIDEContextProvider
+      <CodebridgeContextProvider
         value={{
           project: internalProject,
           config,
@@ -69,7 +69,7 @@ export const CDOIDE = React.memo(
 
           {/*<Search />*/}
         </div>
-      </CDOIDEContextProvider>
+      </CodebridgeContextProvider>
     );
   }
 );

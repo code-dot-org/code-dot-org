@@ -1,6 +1,6 @@
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import {ProjectFile, ConfigType, PreviewComponent} from '@cdoide/types';
-import {previewFileType} from '@cdoide/utils';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {ProjectFile, ConfigType, PreviewComponent} from '@codebridge/types';
+import {previewFileType} from '@codebridge/utils';
 import React, {useState, useEffect} from 'react';
 
 import {HTMLPreview} from './HTMLPreview';
@@ -33,7 +33,7 @@ export const PreviewContainer = () => {
   const {
     project: {files},
     config: {previewFileTypes, PreviewComponents},
-  } = useCDOIDEContext();
+  } = useCodebridgeContext();
   const [previewFile, setPreviewFile] = useState<ProjectFile | undefined>(
     Object.values(files).find(
       (f: ProjectFile) => f.name === 'index.html' && !f.folderId

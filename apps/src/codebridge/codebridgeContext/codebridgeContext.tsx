@@ -22,7 +22,7 @@ import {
   RenameFolderFunction,
 } from './types';
 
-type CDOIDEContextType = {
+type CodebridgeContextType = {
   project: ProjectType;
   config: ConfigType;
   setProject: SetProjectFunction;
@@ -41,24 +41,28 @@ type CDOIDEContextType = {
   renameFolder: RenameFolderFunction;
 };
 
-export const CDOIDEContext = createContext<CDOIDEContextType | null>(null);
+export const CodebridgeContext = createContext<CodebridgeContextType | null>(
+  null
+);
 
-export const useCDOIDEContext = () => {
-  const context = useContext(CDOIDEContext);
+export const useCodebridgeContext = () => {
+  const context = useContext(CodebridgeContext);
   if (context === null) {
     throw new Error('CDO IDE Context has not been provided!');
   }
   return context;
 };
 
-type CDOIDEContextProviderType = {
+type CodebridgeContextProviderType = {
   children: React.ReactNode;
-  value: CDOIDEContextType;
+  value: CodebridgeContextType;
 };
 
-export const CDOIDEContextProvider = ({
+export const CodebridgeContextProvider = ({
   children,
   value,
-}: CDOIDEContextProviderType) => (
-  <CDOIDEContext.Provider value={value}>{children}</CDOIDEContext.Provider>
+}: CodebridgeContextProviderType) => (
+  <CodebridgeContext.Provider value={value}>
+    {children}
+  </CodebridgeContext.Provider>
 );
