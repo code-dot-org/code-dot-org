@@ -1,7 +1,8 @@
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import {ProjectFile} from '@cdoide/types';
-import {findFolder} from '@cdoide/utils';
 import React, {useRef, useMemo} from 'react';
+
+import {useCDOIDEContext} from '@cdo/apps/codebridge/codebridgeContext';
+import {ProjectFile} from '@cdo/apps/codebridge/types';
+import {findFolder} from '@cdo/apps/codebridge/utils';
 
 type HTMLPreviewProps = {
   file: ProjectFile;

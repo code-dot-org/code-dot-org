@@ -1,8 +1,8 @@
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import {editableFileType} from '@cdoide/utils';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useCallback, useMemo} from 'react';
 
+import {useCDOIDEContext} from '@cdo/apps/codebridge/codebridgeContext';
+import {editableFileType} from '@cdo/apps/codebridge/utils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
 import './styles/editor.css';

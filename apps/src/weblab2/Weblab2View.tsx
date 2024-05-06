@@ -4,11 +4,11 @@ import './styles/Weblab2View.css';
 
 import {Config} from './Config';
 
-import {CDOIDE} from '@cdoide/CDOIDE';
-import {ConfigType, ProjectType} from '@cdoide/types';
-import {useInitialSources} from '@cdoide/hooks';
+import {CDOIDE} from '@cdo/apps/codebridge/CDOIDE';
+import {ConfigType, ProjectType} from '@cdo/apps/codebridge/types';
+import {useInitialSources} from '@cdo/apps/codebridge/hooks';
 
-import {Editor as CDOEditor} from '@cdoide/Editor';
+import {Editor as CDOEditor} from '@cdo/apps/codebridge/Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';

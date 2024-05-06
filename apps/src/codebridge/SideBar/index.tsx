@@ -1,5 +1,6 @@
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import React, {useState} from 'react';
+
+import {useCDOIDEContext} from '@cdo/apps/codebridge/codebridgeContext';
 
 import './styles/sideBar.css';
 

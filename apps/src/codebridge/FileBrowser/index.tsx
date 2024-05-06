@@ -1,12 +1,13 @@
+import React, {useMemo} from 'react';
+
 import {
   useCDOIDEContext,
   getNextFileId,
   getNextFolderId,
-} from '@cdoide/cdoIDEContext';
-import {DEFAULT_FOLDER_ID} from '@cdoide/constants';
-import {ProjectType, FileId, FolderId} from '@cdoide/types';
-import {findFolder, getErrorMessage} from '@cdoide/utils';
-import React, {useMemo} from 'react';
+} from '@cdo/apps/codebridge/codebridgeContext';
+import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
+import {ProjectType, FileId, FolderId} from '@cdo/apps/codebridge/types';
+import {findFolder, getErrorMessage} from '@cdo/apps/codebridge/utils';
 
 import './styles/fileBrowser.css';
 

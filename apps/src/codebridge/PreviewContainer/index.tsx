@@ -1,7 +1,12 @@
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import {ProjectFile, ConfigType, PreviewComponent} from '@cdoide/types';
-import {previewFileType} from '@cdoide/utils';
 import React, {useState, useEffect} from 'react';
+
+import {useCDOIDEContext} from '@cdo/apps/codebridge/codebridgeContext';
+import {
+  ProjectFile,
+  ConfigType,
+  PreviewComponent,
+} from '@cdo/apps/codebridge/types';
+import {previewFileType} from '@cdo/apps/codebridge/utils';
 
 import {HTMLPreview} from './HTMLPreview';
 import './styles/previewContainer.css';

@@ -1,6 +1,10 @@
-import {projectReducer, useProjectUtilities} from '@cdoide/cdoIDEContext';
-import {ProjectType, SetProjectFunction} from '@cdoide/types';
 import {useRef, useReducer, useEffect} from 'react';
+
+import {
+  projectReducer,
+  useProjectUtilities,
+} from '@cdo/apps/codebridge/codebridgeContext';
+import {ProjectType, SetProjectFunction} from '@cdo/apps/codebridge/types';
 
 /*
   CDOIDE is designed as an opaque component that receives a ProjectType, manipulates it, and then

@@ -1,10 +1,11 @@
+import {useMemo} from 'react';
+
 import {
   ProjectType,
   ProjectFile,
   ProjectFolder,
   ReducerAction,
-} from '@cdoide/types';
-import {useMemo} from 'react';
+} from '@cdo/apps/codebridge/types';
 
 import {DEFAULT_FOLDER_ID} from '../constants';
 

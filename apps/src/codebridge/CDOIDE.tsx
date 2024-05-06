@@ -1,18 +1,19 @@
-import {CDOIDEContextProvider} from '@cdoide/cdoIDEContext';
-import DisabledEditor from '@cdoide/Editor/DisabledEditor';
-import {FileBrowser} from '@cdoide/FileBrowser';
-import {FileTabs} from '@cdoide/FileTabs';
-import {useSynchronizedProject} from '@cdoide/hooks';
-import {Instructions} from '@cdoide/Instructions';
-import {PreviewContainer} from '@cdoide/PreviewContainer';
-import {SideBar} from '@cdoide/SideBar';
+import React from 'react';
+
+import {CDOIDEContextProvider} from '@cdo/apps/codebridge/codebridgeContext';
+import DisabledEditor from '@cdo/apps/codebridge/Editor/DisabledEditor';
+import {FileBrowser} from '@cdo/apps/codebridge/FileBrowser';
+import {FileTabs} from '@cdo/apps/codebridge/FileTabs';
+import {useSynchronizedProject} from '@cdo/apps/codebridge/hooks';
+import {Instructions} from '@cdo/apps/codebridge/Instructions';
+import {PreviewContainer} from '@cdo/apps/codebridge/PreviewContainer';
+import {SideBar} from '@cdo/apps/codebridge/SideBar';
 import {
   ProjectType,
   ConfigType,
   SetProjectFunction,
   SetConfigFunction,
-} from '@cdoide/types';
-import React from 'react';
+} from '@cdo/apps/codebridge/types';
 import './styles/cdoIDE.css';
 
 type CDOIDEProps = {

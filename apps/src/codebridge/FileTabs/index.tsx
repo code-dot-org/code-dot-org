@@ -1,6 +1,7 @@
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import {sortFilesByName} from '@cdoide/utils';
 import React from 'react';
+
+import {useCDOIDEContext} from '@cdo/apps/codebridge/codebridgeContext';
+import {sortFilesByName} from '@cdo/apps/codebridge/utils';
 import './styles/fileTabs.css';
 
 export const FileTabs = React.memo(() => {
