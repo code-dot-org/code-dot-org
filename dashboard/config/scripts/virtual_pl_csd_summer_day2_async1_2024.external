@@ -5,20 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Day 2, Asynchronous Part 1
 
-##### Welcome! This asynchronous module is designed to give you time to review the lesson that your group will be leading during your TLO (Teacher-Learner-Observer) session.
+#### Welcome! This asynchronous module is designed to give you time to review the lesson that your group will be leading during your TLO (Teacher-Learner-Observer) session.
 
-<img src="https://images.code.org/1c6ff48b9dec896910061ee5699154de-image-1650260131988.JPG" alt="Image of the CS Discoveries lesson plans." style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/3e15c29990638ea50fe189cd851a0fbe-image-1714796783626.25.50 PM.jpg" alt="Two students look at a book together." style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
-## In this module, you will:
+### **In this module, you will:**
 
-* ##### Explore the lesson plan and additional resources for your assigned TLO lesson.
-* ##### Complete the activities from your assigned TLO lesson.
-* ##### Complete Part 1 of your TLO Lesson Planning Guide
+* #### Explore the lesson plan and additional resources for your assigned TLO lesson.
+* #### Complete the activities from your assigned TLO lesson.
+* #### Complete Part 1 of your TLO Lesson Planning Guide
+<br>
 
-### **Suggested time:** 60 minutes
-
-## Let's get started!
-
-<div style="clear:both"/>
-
+#### **Suggested time:** 60 minutes
+<br><br><br><br><br>
 MARKDOWN

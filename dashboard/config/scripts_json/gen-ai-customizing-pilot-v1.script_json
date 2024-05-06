@@ -1,0 +1,4002 @@
+{
+  "script": {
+    "name": "gen-ai-customizing-pilot-v1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_course": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": "gen-ai-customizing-pilot-v1",
+    "serialized_at": "2024-05-04 03:05:59 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "gen-ai-customizing-pilot-v1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Foundations of Generative AI"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Customizing Language Models"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Foundations in a Day",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Interacting with Language Models",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "System Prompting - Exploration",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "System Prompting - Practice",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "System Prompting - Synthesis",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Retrieval - Exploration",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Retrieval - Practice",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Retrieval - Synthesis",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Fine Tuning - Exploration",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Model Cards - Exploration",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Model Cards - Practice",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Chatbots in Society",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Project: Make your own Chatbot",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "8523f6c4-dbce-4931-87a7-b408d7279e02",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8523f6c4-dbce-4931-87a7-b408d7279e02",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "df26fa82-9165-4891-bc46-7400dd461fde",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df26fa82-9165-4891-bc46-7400dd461fde",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "af3fbe72-31d1-481d-8f42-a113fc25a202",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af3fbe72-31d1-481d-8f42-a113fc25a202",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "1e497943-cee8-4a47-9ee8-05948f39cd48",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e497943-cee8-4a47-9ee8-05948f39cd48",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "90881645-2a18-48fa-ab16-1e6b25925642",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "90881645-2a18-48fa-ab16-1e6b25925642",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "f53f1585-de74-4cf7-a27a-c97e8d4e7961",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f53f1585-de74-4cf7-a27a-c97e8d4e7961",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "90d44495-5e1b-4f06-8ce9-b6db3d01af0c",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "90d44495-5e1b-4f06-8ce9-b6db3d01af0c",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "2b7a5189-b3eb-4a8f-a311-7758bbb9943f",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2b7a5189-b3eb-4a8f-a311-7758bbb9943f",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "6d91ea4e-3556-4d1e-8420-c7508fdf00af",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d91ea4e-3556-4d1e-8420-c7508fdf00af",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "846addf9-725b-4564-b199-a25e3d61637d",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "846addf9-725b-4564-b199-a25e3d61637d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "cd486df7-8354-4127-ab77-b2ffd2c3f9b7",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd486df7-8354-4127-ab77-b2ffd2c3f9b7",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "46199fc1-bb0f-4da3-9d51-ad4aa35c64fe",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46199fc1-bb0f-4da3-9d51-ad4aa35c64fe",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "a8d0c9ba-811a-4a15-9bf2-1be40e35ab58",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8d0c9ba-811a-4a15-9bf2-1be40e35ab58",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "4d4df88f-779c-4930-8559-ebd63f149c67",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d4df88f-779c-4930-8559-ebd63f149c67",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "49ee4dc1-91ef-4cbd-b4c3-8f9aa7ec3252",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "49ee4dc1-91ef-4cbd-b4c3-8f9aa7ec3252",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "e4f38f83-b452-4ecd-9f16-7a4687584fb8",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e4f38f83-b452-4ecd-9f16-7a4687584fb8",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "2194fb68-0320-4e48-bd61-1da89e8e2704",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2194fb68-0320-4e48-bd61-1da89e8e2704",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "00e6cd2e-1881-49dd-bf49-952e66e174cf",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00e6cd2e-1881-49dd-bf49-952e66e174cf",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "f207923e-79e2-4686-82e4-24b8dda514c8",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f207923e-79e2-4686-82e4-24b8dda514c8",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "c423ccff-a113-46fb-bd4e-4d100fc90895",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c423ccff-a113-46fb-bd4e-4d100fc90895",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "2b84c505-a74d-4aae-9eba-a1ad1c419834",
+      "position": 3,
+      "properties": {
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2b84c505-a74d-4aae-9eba-a1ad1c419834",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "68ee8219-e33c-42be-a192-cddaccbd384b",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "68ee8219-e33c-42be-a192-cddaccbd384b",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "ad1b88e0-10ca-4371-b8af-73da24ee33f5",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad1b88e0-10ca-4371-b8af-73da24ee33f5",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "3ac5662b-c3e1-4f91-b4b2-bae0f38ed15f",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ac5662b-c3e1-4f91-b4b2-bae0f38ed15f",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "e546eed0-f930-4fb0-a8cf-3ef90ce2fcd6",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e546eed0-f930-4fb0-a8cf-3ef90ce2fcd6",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "d381d216-8717-47bd-a3f6-20d2c33ae598",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d381d216-8717-47bd-a3f6-20d2c33ae598",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "a1ed96a2-1fed-4274-9570-8d63f2eb426d",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1ed96a2-1fed-4274-9570-8d63f2eb426d",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "602f158b-42e1-4e5d-a199-4754b6fa7f16",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "bb310607-de62-49c3-8053-d5482b99e6ca",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb310607-de62-49c3-8053-d5482b99e6ca",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "88e8120e-2d7a-4994-b61b-354aefbfe13c",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "88e8120e-2d7a-4994-b61b-354aefbfe13c",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "387913a6-27e2-4029-a426-c00e77247a36",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "387913a6-27e2-4029-a426-c00e77247a36",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "eb750d2b-9ce0-4251-95e7-86e85d5fdedc",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb750d2b-9ce0-4251-95e7-86e85d5fdedc",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "09172780-2395-4671-8e8a-f09eafe32d65",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "09172780-2395-4671-8e8a-f09eafe32d65",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "ec6341ab-36c8-4cb9-bab8-51f483737a80",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec6341ab-36c8-4cb9-bab8-51f483737a80",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "ea47fd64-5376-42c3-a108-f616e8f4003d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea47fd64-5376-42c3-a108-f616e8f4003d",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    },
+    {
+      "key": "5c1162fa-b1d3-4fa1-b85d-dae0494d8928",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5c1162fa-b1d3-4fa1-b85d-dae0494d8928",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "6f7bb6ce-cf07-427d-962d-c4dcb73eb4f6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6f7bb6ce-cf07-427d-962d-c4dcb73eb4f6",
+        "lesson_activity.key": "8523f6c4-dbce-4931-87a7-b408d7279e02"
+      }
+    },
+    {
+      "key": "d0cc9333-b7b0-4eca-8426-eadcd5a8df1d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d0cc9333-b7b0-4eca-8426-eadcd5a8df1d",
+        "lesson_activity.key": "df26fa82-9165-4891-bc46-7400dd461fde"
+      }
+    },
+    {
+      "key": "c1ea86a2-2a13-4ec8-a972-f1b9382525d7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c1ea86a2-2a13-4ec8-a972-f1b9382525d7",
+        "lesson_activity.key": "af3fbe72-31d1-481d-8f42-a113fc25a202"
+      }
+    },
+    {
+      "key": "bd6b858d-4c3d-4ed3-8c85-b7630c254714",
+      "position": 1,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd6b858d-4c3d-4ed3-8c85-b7630c254714",
+        "lesson_activity.key": "1e497943-cee8-4a47-9ee8-05948f39cd48"
+      }
+    },
+    {
+      "key": "65522912-6918-4352-baa6-7eae15f8df61",
+      "position": 2,
+      "properties": {
+        "progression_name": "Investigate"
+      },
+      "seeding_key": {
+        "activity_section.key": "65522912-6918-4352-baa6-7eae15f8df61",
+        "lesson_activity.key": "1e497943-cee8-4a47-9ee8-05948f39cd48"
+      }
+    },
+    {
+      "key": "b164b96b-91f1-44d2-a35a-c35e585cbe55",
+      "position": 3,
+      "properties": {
+        "progression_name": "Modify"
+      },
+      "seeding_key": {
+        "activity_section.key": "b164b96b-91f1-44d2-a35a-c35e585cbe55",
+        "lesson_activity.key": "1e497943-cee8-4a47-9ee8-05948f39cd48"
+      }
+    },
+    {
+      "key": "971fb121-e13f-48e8-a6fb-61f99d57342f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "971fb121-e13f-48e8-a6fb-61f99d57342f",
+        "lesson_activity.key": "1e497943-cee8-4a47-9ee8-05948f39cd48"
+      }
+    },
+    {
+      "key": "b2162d80-d4e8-4ed2-90bc-c8feee7b56d0",
+      "position": 5,
+      "properties": {
+        "progression_name": "Make"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2162d80-d4e8-4ed2-90bc-c8feee7b56d0",
+        "lesson_activity.key": "1e497943-cee8-4a47-9ee8-05948f39cd48"
+      }
+    },
+    {
+      "key": "28559daa-28c7-4b6d-9452-f25374dff70b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "28559daa-28c7-4b6d-9452-f25374dff70b",
+        "lesson_activity.key": "90881645-2a18-48fa-ab16-1e6b25925642"
+      }
+    },
+    {
+      "key": "3b3a38ea-8187-4acf-9cde-a2999229aef9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3b3a38ea-8187-4acf-9cde-a2999229aef9",
+        "lesson_activity.key": "f53f1585-de74-4cf7-a27a-c97e8d4e7961"
+      }
+    },
+    {
+      "key": "fede683a-35e2-4d3e-a1be-9066d35d5673",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fede683a-35e2-4d3e-a1be-9066d35d5673",
+        "lesson_activity.key": "90d44495-5e1b-4f06-8ce9-b6db3d01af0c"
+      }
+    },
+    {
+      "key": "ef636785-4824-4e9d-9fed-4e85553452b3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Using a System Prompt"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef636785-4824-4e9d-9fed-4e85553452b3",
+        "lesson_activity.key": "2b7a5189-b3eb-4a8f-a311-7758bbb9943f"
+      }
+    },
+    {
+      "key": "e6aa360a-6203-4a1c-984b-a213c3c6f40e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Role & Tone"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6aa360a-6203-4a1c-984b-a213c3c6f40e",
+        "lesson_activity.key": "2b7a5189-b3eb-4a8f-a311-7758bbb9943f"
+      }
+    },
+    {
+      "key": "2a01fa4e-da4a-4cc6-9a05-24efd9d7341c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Audience & Delivery"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a01fa4e-da4a-4cc6-9a05-24efd9d7341c",
+        "lesson_activity.key": "2b7a5189-b3eb-4a8f-a311-7758bbb9943f"
+      }
+    },
+    {
+      "key": "81657ac8-393f-4bd9-b8a4-ab5f4d31e2cb",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "81657ac8-393f-4bd9-b8a4-ab5f4d31e2cb",
+        "lesson_activity.key": "2b7a5189-b3eb-4a8f-a311-7758bbb9943f"
+      }
+    },
+    {
+      "key": "6497c37d-2687-4986-b142-3d706c8182e5",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "6497c37d-2687-4986-b142-3d706c8182e5",
+        "lesson_activity.key": "2b7a5189-b3eb-4a8f-a311-7758bbb9943f"
+      }
+    },
+    {
+      "key": "9736ef7f-acc7-40d0-8227-0602595e1410",
+      "position": 6,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "9736ef7f-acc7-40d0-8227-0602595e1410",
+        "lesson_activity.key": "2b7a5189-b3eb-4a8f-a311-7758bbb9943f"
+      }
+    },
+    {
+      "key": "d77af503-dbd5-437a-a85c-56bbfd594e03",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "d77af503-dbd5-437a-a85c-56bbfd594e03",
+        "lesson_activity.key": "2b7a5189-b3eb-4a8f-a311-7758bbb9943f"
+      }
+    },
+    {
+      "key": "e533f4fd-a71c-482c-888f-350574fa1895",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e533f4fd-a71c-482c-888f-350574fa1895",
+        "lesson_activity.key": "6d91ea4e-3556-4d1e-8420-c7508fdf00af"
+      }
+    },
+    {
+      "key": "74f22442-9da5-43e3-a067-9f502e95be6a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "74f22442-9da5-43e3-a067-9f502e95be6a",
+        "lesson_activity.key": "846addf9-725b-4564-b199-a25e3d61637d"
+      }
+    },
+    {
+      "key": "6c2a4d9e-2768-4451-9628-0c2b9fc26da8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6c2a4d9e-2768-4451-9628-0c2b9fc26da8",
+        "lesson_activity.key": "cd486df7-8354-4127-ab77-b2ffd2c3f9b7"
+      }
+    },
+    {
+      "key": "963151dc-b8e7-4ab6-9946-0a6052be999a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Chain of Reasoning"
+      },
+      "seeding_key": {
+        "activity_section.key": "963151dc-b8e7-4ab6-9946-0a6052be999a",
+        "lesson_activity.key": "46199fc1-bb0f-4da3-9d51-ad4aa35c64fe"
+      }
+    },
+    {
+      "key": "3b32e6c9-02ef-4b2f-9936-27a055fc85a8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Giving Examples"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b32e6c9-02ef-4b2f-9936-27a055fc85a8",
+        "lesson_activity.key": "46199fc1-bb0f-4da3-9d51-ad4aa35c64fe"
+      }
+    },
+    {
+      "key": "4ae95005-4a9b-4c93-8bf8-886fdf1211ce",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ae95005-4a9b-4c93-8bf8-886fdf1211ce",
+        "lesson_activity.key": "46199fc1-bb0f-4da3-9d51-ad4aa35c64fe"
+      }
+    },
+    {
+      "key": "db648d7b-a682-42e5-9b47-27f62e5fdda9",
+      "position": 4,
+      "properties": {
+        "progression_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "activity_section.key": "db648d7b-a682-42e5-9b47-27f62e5fdda9",
+        "lesson_activity.key": "46199fc1-bb0f-4da3-9d51-ad4aa35c64fe"
+      }
+    },
+    {
+      "key": "d6e9958b-86ca-4fa5-804b-7bf8ba2a4b07",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6e9958b-86ca-4fa5-804b-7bf8ba2a4b07",
+        "lesson_activity.key": "46199fc1-bb0f-4da3-9d51-ad4aa35c64fe"
+      }
+    },
+    {
+      "key": "929311fb-9eb7-4bef-8b8e-56b4481e4e06",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "929311fb-9eb7-4bef-8b8e-56b4481e4e06",
+        "lesson_activity.key": "a8d0c9ba-811a-4a15-9bf2-1be40e35ab58"
+      }
+    },
+    {
+      "key": "4095c385-e8a4-4433-9068-01a7f8ea6cb2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4095c385-e8a4-4433-9068-01a7f8ea6cb2",
+        "lesson_activity.key": "4d4df88f-779c-4930-8559-ebd63f149c67"
+      }
+    },
+    {
+      "key": "5c4913c6-3293-4fd7-aefd-151b0ac91cf2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5c4913c6-3293-4fd7-aefd-151b0ac91cf2",
+        "lesson_activity.key": "49ee4dc1-91ef-4cbd-b4c3-8f9aa7ec3252"
+      }
+    },
+    {
+      "key": "b4e55cbb-1e65-4aae-a177-c25d69a4c4f1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4e55cbb-1e65-4aae-a177-c25d69a4c4f1",
+        "lesson_activity.key": "e4f38f83-b452-4ecd-9f16-7a4687584fb8"
+      }
+    },
+    {
+      "key": "32e1f844-acc5-4338-9b25-7a186826a76b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "32e1f844-acc5-4338-9b25-7a186826a76b",
+        "lesson_activity.key": "e4f38f83-b452-4ecd-9f16-7a4687584fb8"
+      }
+    },
+    {
+      "key": "2c022c5e-876f-4700-86a6-fa1b54adfad9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Investigate"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c022c5e-876f-4700-86a6-fa1b54adfad9",
+        "lesson_activity.key": "e4f38f83-b452-4ecd-9f16-7a4687584fb8"
+      }
+    },
+    {
+      "key": "23ac3e99-e095-48c0-97e3-dda40fec3b54",
+      "position": 4,
+      "properties": {
+        "progression_name": "Modify"
+      },
+      "seeding_key": {
+        "activity_section.key": "23ac3e99-e095-48c0-97e3-dda40fec3b54",
+        "lesson_activity.key": "e4f38f83-b452-4ecd-9f16-7a4687584fb8"
+      }
+    },
+    {
+      "key": "1e3a278f-9811-4479-b6e1-9ee61de8b3b6",
+      "position": 5,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e3a278f-9811-4479-b6e1-9ee61de8b3b6",
+        "lesson_activity.key": "e4f38f83-b452-4ecd-9f16-7a4687584fb8"
+      }
+    },
+    {
+      "key": "8830cdb4-9a3f-4bfc-95fc-99c650577b74",
+      "position": 6,
+      "properties": {
+        "progression_name": "Make"
+      },
+      "seeding_key": {
+        "activity_section.key": "8830cdb4-9a3f-4bfc-95fc-99c650577b74",
+        "lesson_activity.key": "e4f38f83-b452-4ecd-9f16-7a4687584fb8"
+      }
+    },
+    {
+      "key": "e9c5455b-a00f-4213-a146-774d04709428",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e9c5455b-a00f-4213-a146-774d04709428",
+        "lesson_activity.key": "2194fb68-0320-4e48-bd61-1da89e8e2704"
+      }
+    },
+    {
+      "key": "03a427ac-e143-4dba-9d09-e3175f943e48",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "03a427ac-e143-4dba-9d09-e3175f943e48",
+        "lesson_activity.key": "00e6cd2e-1881-49dd-bf49-952e66e174cf"
+      }
+    },
+    {
+      "key": "096cd937-000e-4135-a394-3abb86048302",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "096cd937-000e-4135-a394-3abb86048302",
+        "lesson_activity.key": "f207923e-79e2-4686-82e4-24b8dda514c8"
+      }
+    },
+    {
+      "key": "b7140078-29d7-48e5-bd10-56bc4d8f8c1a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Current Information"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7140078-29d7-48e5-bd10-56bc4d8f8c1a",
+        "lesson_activity.key": "c423ccff-a113-46fb-bd4e-4d100fc90895"
+      }
+    },
+    {
+      "key": "3d6b68cb-3a00-4d27-9c0c-5952eb21e7c3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Specialized Information"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d6b68cb-3a00-4d27-9c0c-5952eb21e7c3",
+        "lesson_activity.key": "c423ccff-a113-46fb-bd4e-4d100fc90895"
+      }
+    },
+    {
+      "key": "38bf27c0-264f-4e74-abcc-6f3cf0741fd7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Accurate Information"
+      },
+      "seeding_key": {
+        "activity_section.key": "38bf27c0-264f-4e74-abcc-6f3cf0741fd7",
+        "lesson_activity.key": "c423ccff-a113-46fb-bd4e-4d100fc90895"
+      }
+    },
+    {
+      "key": "ae66c477-f292-457d-9513-ff5da5da36e1",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae66c477-f292-457d-9513-ff5da5da36e1",
+        "lesson_activity.key": "c423ccff-a113-46fb-bd4e-4d100fc90895"
+      }
+    },
+    {
+      "key": "8e1f2275-a9d4-4c8b-a4b8-02af8e28db1d",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e1f2275-a9d4-4c8b-a4b8-02af8e28db1d",
+        "lesson_activity.key": "c423ccff-a113-46fb-bd4e-4d100fc90895"
+      }
+    },
+    {
+      "key": "5055bb98-ec38-4d5b-8611-ffd44bb04c29",
+      "position": 6,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "5055bb98-ec38-4d5b-8611-ffd44bb04c29",
+        "lesson_activity.key": "c423ccff-a113-46fb-bd4e-4d100fc90895"
+      }
+    },
+    {
+      "key": "e1252c02-15ec-44e1-a6c3-d6d1c0fe8426",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1252c02-15ec-44e1-a6c3-d6d1c0fe8426",
+        "lesson_activity.key": "c423ccff-a113-46fb-bd4e-4d100fc90895"
+      }
+    },
+    {
+      "key": "15918d56-f8ef-4f9d-b803-bc202a7136c6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "15918d56-f8ef-4f9d-b803-bc202a7136c6",
+        "lesson_activity.key": "2b84c505-a74d-4aae-9eba-a1ad1c419834"
+      }
+    },
+    {
+      "key": "47c4c487-917c-477a-930e-abbbea6d3911",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "47c4c487-917c-477a-930e-abbbea6d3911",
+        "lesson_activity.key": "68ee8219-e33c-42be-a192-cddaccbd384b"
+      }
+    },
+    {
+      "key": "1c088a88-0e33-4ee8-9107-67ba6ccc9450",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1c088a88-0e33-4ee8-9107-67ba6ccc9450",
+        "lesson_activity.key": "ad1b88e0-10ca-4371-b8af-73da24ee33f5"
+      }
+    },
+    {
+      "key": "2fae6a15-8cd7-4c80-a132-c3f8df3d2b83",
+      "position": 1,
+      "properties": {
+        "progression_name": "Scenario #1"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fae6a15-8cd7-4c80-a132-c3f8df3d2b83",
+        "lesson_activity.key": "3ac5662b-c3e1-4f91-b4b2-bae0f38ed15f"
+      }
+    },
+    {
+      "key": "68605947-4bef-46b8-b348-d0cec2f796a5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Scenario #2"
+      },
+      "seeding_key": {
+        "activity_section.key": "68605947-4bef-46b8-b348-d0cec2f796a5",
+        "lesson_activity.key": "3ac5662b-c3e1-4f91-b4b2-bae0f38ed15f"
+      }
+    },
+    {
+      "key": "0f933cad-60cb-400b-ba81-f265c5d15b48",
+      "position": 3,
+      "properties": {
+        "progression_name": "Scenario #3"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f933cad-60cb-400b-ba81-f265c5d15b48",
+        "lesson_activity.key": "3ac5662b-c3e1-4f91-b4b2-bae0f38ed15f"
+      }
+    },
+    {
+      "key": "7b2d8469-1135-4338-b031-786454efbfc9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7b2d8469-1135-4338-b031-786454efbfc9",
+        "lesson_activity.key": "e546eed0-f930-4fb0-a8cf-3ef90ce2fcd6"
+      }
+    },
+    {
+      "key": "fab192a3-ac39-43f4-bc67-bbb42f9a80b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fab192a3-ac39-43f4-bc67-bbb42f9a80b9",
+        "lesson_activity.key": "d381d216-8717-47bd-a3f6-20d2c33ae598"
+      }
+    },
+    {
+      "key": "a37385a8-e1af-4d6c-930c-922684127c53",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a37385a8-e1af-4d6c-930c-922684127c53",
+        "lesson_activity.key": "a1ed96a2-1fed-4274-9570-8d63f2eb426d"
+      }
+    },
+    {
+      "key": "2cdfa28b-4c87-40e0-85b1-a4a0a21f6389",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "2cdfa28b-4c87-40e0-85b1-a4a0a21f6389",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
+      "key": "36bc2bd7-f2fa-40fe-b90b-c2d70d93ef93",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "36bc2bd7-f2fa-40fe-b90b-c2d70d93ef93",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
+      "key": "dc7280e0-9705-4a48-a18b-dc5f1e28b149",
+      "position": 3,
+      "properties": {
+        "progression_name": "Investigate"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc7280e0-9705-4a48-a18b-dc5f1e28b149",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
+      "key": "4bfd4fa8-fcda-4936-8007-b34bb5209b19",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "4bfd4fa8-fcda-4936-8007-b34bb5209b19",
+        "lesson_activity.key": "602f158b-42e1-4e5d-a199-4754b6fa7f16"
+      }
+    },
+    {
+      "key": "fcf383dd-1c98-42c3-a8c5-678dd4470834",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fcf383dd-1c98-42c3-a8c5-678dd4470834",
+        "lesson_activity.key": "bb310607-de62-49c3-8053-d5482b99e6ca"
+      }
+    },
+    {
+      "key": "d1c0ef6b-d572-4abf-a458-6e9704764f4b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d1c0ef6b-d572-4abf-a458-6e9704764f4b",
+        "lesson_activity.key": "88e8120e-2d7a-4994-b61b-354aefbfe13c"
+      }
+    },
+    {
+      "key": "b80f9d15-461d-4b99-a47e-b27716da31dc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b80f9d15-461d-4b99-a47e-b27716da31dc",
+        "lesson_activity.key": "387913a6-27e2-4029-a426-c00e77247a36"
+      }
+    },
+    {
+      "key": "93e3c5f6-a3fb-4b14-be08-88bc63969e18",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "93e3c5f6-a3fb-4b14-be08-88bc63969e18",
+        "lesson_activity.key": "eb750d2b-9ce0-4251-95e7-86e85d5fdedc"
+      }
+    },
+    {
+      "key": "6aeda3b4-5e6c-46c7-b4a2-32be825ba560",
+      "position": 1,
+      "properties": {
+        "progression_name": "Initial Scenario"
+      },
+      "seeding_key": {
+        "activity_section.key": "6aeda3b4-5e6c-46c7-b4a2-32be825ba560",
+        "lesson_activity.key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f"
+      }
+    },
+    {
+      "key": "5d071f29-70df-4cfb-83bc-8f2dc04a7df4",
+      "position": 2,
+      "properties": {
+        "progression_name": "You Decide!"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d071f29-70df-4cfb-83bc-8f2dc04a7df4",
+        "lesson_activity.key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f"
+      }
+    },
+    {
+      "key": "e408178b-15f8-42f0-9e83-be328329d708",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e408178b-15f8-42f0-9e83-be328329d708",
+        "lesson_activity.key": "09172780-2395-4671-8e8a-f09eafe32d65"
+      }
+    },
+    {
+      "key": "37e028ad-596f-45d6-8525-9b68faf0a09b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37e028ad-596f-45d6-8525-9b68faf0a09b",
+        "lesson_activity.key": "ec6341ab-36c8-4cb9-bab8-51f483737a80"
+      }
+    },
+    {
+      "key": "baaea6e1-33de-4fd9-bd3c-4d02642d8ef1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "baaea6e1-33de-4fd9-bd3c-4d02642d8ef1",
+        "lesson_activity.key": "ea47fd64-5376-42c3-a108-f616e8f4003d"
+      }
+    },
+    {
+      "key": "95e65be9-05b8-483a-9e1d-609b303cf089",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "95e65be9-05b8-483a-9e1d-609b303cf089",
+        "lesson_activity.key": "5c1162fa-b1d3-4fa1-b85d-dae0494d8928"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "bd6b858d-4c3d-4ed3-8c85-b7630c254714"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-explore-L1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "bd6b858d-4c3d-4ed3-8c85-b7630c254714"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-explore-L2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "65522912-6918-4352-baa6-7eae15f8df61"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-explore-L3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "65522912-6918-4352-baa6-7eae15f8df61"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-explore-L4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b164b96b-91f1-44d2-a35a-c35e585cbe55"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-explore-L5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L6"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "971fb121-e13f-48e8-a6fb-61f99d57342f"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-explore-L6"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L7"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b2162d80-d4e8-4ed2-90bc-c8feee7b56d0"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-explore-L7"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using a System Prompt"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "ef636785-4824-4e9d-9fed-4e85553452b3"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using a System Prompt"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "ef636785-4824-4e9d-9fed-4e85553452b3"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Using a System Prompt"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "ef636785-4824-4e9d-9fed-4e85553452b3"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L3"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Role & Tone"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "e6aa360a-6203-4a1c-984b-a213c3c6f40e"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L4"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Role & Tone"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "e6aa360a-6203-4a1c-984b-a213c3c6f40e"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L5"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Role & Tone"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "e6aa360a-6203-4a1c-984b-a213c3c6f40e"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L6"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Audience & Delivery"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L7"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2a01fa4e-da4a-4cc6-9a05-24efd9d7341c"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L7"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Audience & Delivery"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L8"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2a01fa4e-da4a-4cc6-9a05-24efd9d7341c"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L8"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Audience & Delivery"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L9"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2a01fa4e-da4a-4cc6-9a05-24efd9d7341c"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L9"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L10"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "81657ac8-393f-4bd9-b8a4-ab5f4d31e2cb"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L10"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L11"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "6497c37d-2687-4986-b142-3d706c8182e5"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L11"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L12"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "9736ef7f-acc7-40d0-8227-0602595e1410"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L12"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L13"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "d77af503-dbd5-437a-a85c-56bbfd594e03"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-practice-L13"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chain of Reasoning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "963151dc-b8e7-4ab6-9946-0a6052be999a"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Chain of Reasoning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "963151dc-b8e7-4ab6-9946-0a6052be999a"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Chain of Reasoning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "963151dc-b8e7-4ab6-9946-0a6052be999a"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L3"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Chain of Reasoning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "963151dc-b8e7-4ab6-9946-0a6052be999a"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L4"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Giving Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3b32e6c9-02ef-4b2f-9936-27a055fc85a8"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L5"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Giving Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L6"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3b32e6c9-02ef-4b2f-9936-27a055fc85a8"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L6"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Giving Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L7"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3b32e6c9-02ef-4b2f-9936-27a055fc85a8"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L7"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L8"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "4ae95005-4a9b-4c93-8bf8-886fdf1211ce"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L8"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Show What You Know"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "db648d7b-a682-42e5-9b47-27f62e5fdda9"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L9"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L10"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "d6e9958b-86ca-4fa5-804b-7bf8ba2a4b07"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L10"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b4e55cbb-1e65-4aae-a177-c25d69a4c4f1"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-explore-L1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "32e1f844-acc5-4338-9b25-7a186826a76b"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-explore-L2"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "32e1f844-acc5-4338-9b25-7a186826a76b"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-explore-L3"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "32e1f844-acc5-4338-9b25-7a186826a76b"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-explore-L4"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2c022c5e-876f-4700-86a6-fa1b54adfad9"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-explore-L5"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2c022c5e-876f-4700-86a6-fa1b54adfad9"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-explore-L6"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "23ac3e99-e095-48c0-97e3-dda40fec3b54"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-explore-L7"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L8"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "1e3a278f-9811-4479-b6e1-9ee61de8b3b6"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-explore-L8"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L9"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "8830cdb4-9a3f-4bfc-95fc-99c650577b74"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-explore-L9"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Current Information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b7140078-29d7-48e5-bd10-56bc4d8f8c1a"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Current Information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b7140078-29d7-48e5-bd10-56bc4d8f8c1a"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L2"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Specialized Information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3d6b68cb-3a00-4d27-9c0c-5952eb21e7c3"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L3"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Specialized Information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3d6b68cb-3a00-4d27-9c0c-5952eb21e7c3"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L4"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Accurate Information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L5"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "38bf27c0-264f-4e74-abcc-6f3cf0741fd7"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L5"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Accurate Information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L6"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "38bf27c0-264f-4e74-abcc-6f3cf0741fd7"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L6"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Accurate Information"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L7"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "38bf27c0-264f-4e74-abcc-6f3cf0741fd7"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L7"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L8"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "ae66c477-f292-457d-9513-ff5da5da36e1"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L8"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L9"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "8e1f2275-a9d4-4c8b-a4b8-02af8e28db1d"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L9"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L10"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "5055bb98-ec38-4d5b-8611-ffd44bb04c29"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L10"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L11"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "e1252c02-15ec-44e1-a6c3-d6d1c0fe8426"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-practice-L11"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario #1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2fae6a15-8cd7-4c80-a132-c3f8df3d2b83"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L1"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario #1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2fae6a15-8cd7-4c80-a132-c3f8df3d2b83"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L2"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario #1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2fae6a15-8cd7-4c80-a132-c3f8df3d2b83"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L3"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario #2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L4"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "68605947-4bef-46b8-b348-d0cec2f796a5"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L4"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario #2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L5"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "68605947-4bef-46b8-b348-d0cec2f796a5"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L5"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario #2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L6"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "68605947-4bef-46b8-b348-d0cec2f796a5"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L6"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario #3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L7"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "0f933cad-60cb-400b-ba81-f265c5d15b48"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L7"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario #3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "0f933cad-60cb-400b-ba81-f265c5d15b48"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L8"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario #3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L9"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "0f933cad-60cb-400b-ba81-f265c5d15b48"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L9"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2cdfa28b-4c87-40e0-85b1-a4a0a21f6389"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L1"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "36bc2bd7-f2fa-40fe-b90b-c2d70d93ef93"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L2"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "36bc2bd7-f2fa-40fe-b90b-c2d70d93ef93"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L3"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "dc7280e0-9705-4a48-a18b-dc5f1e28b149"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L4"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "dc7280e0-9705-4a48-a18b-dc5f1e28b149"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L5"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "4bfd4fa8-fcda-4936-8007-b34bb5209b19"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L6"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Initial Scenario"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "6aeda3b4-5e6c-46c7-b4a2-32be825ba560"
+      },
+      "level_keys": [
+        "gen-ai-customizing-modelcards-practice-L1"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "You Decide!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "5d071f29-70df-4cfb-83bc-8f2dc04a7df4"
+      },
+      "level_keys": [
+        "gen-ai-customizing-modelcards-practice-L2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-explore-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "bd6b858d-4c3d-4ed3-8c85-b7630c254714"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-explore-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "bd6b858d-4c3d-4ed3-8c85-b7630c254714"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-explore-L3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "65522912-6918-4352-baa6-7eae15f8df61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-explore-L4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "65522912-6918-4352-baa6-7eae15f8df61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-explore-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b164b96b-91f1-44d2-a35a-c35e585cbe55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-explore-L6",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L6"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "971fb121-e13f-48e8-a6fb-61f99d57342f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-explore-L7",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-explore-L7"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b2162d80-d4e8-4ed2-90bc-c8feee7b56d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "ef636785-4824-4e9d-9fed-4e85553452b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "ef636785-4824-4e9d-9fed-4e85553452b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "ef636785-4824-4e9d-9fed-4e85553452b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "e6aa360a-6203-4a1c-984b-a213c3c6f40e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "e6aa360a-6203-4a1c-984b-a213c3c6f40e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L6",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "e6aa360a-6203-4a1c-984b-a213c3c6f40e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L7",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L7"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2a01fa4e-da4a-4cc6-9a05-24efd9d7341c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L8",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L8"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2a01fa4e-da4a-4cc6-9a05-24efd9d7341c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L9",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L9"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2a01fa4e-da4a-4cc6-9a05-24efd9d7341c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L10",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L10"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "81657ac8-393f-4bd9-b8a4-ab5f4d31e2cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L11",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L11"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "6497c37d-2687-4986-b142-3d706c8182e5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L12",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L12"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "9736ef7f-acc7-40d0-8227-0602595e1410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-practice-L13",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-practice-L13"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "d77af503-dbd5-437a-a85c-56bbfd594e03"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "963151dc-b8e7-4ab6-9946-0a6052be999a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "963151dc-b8e7-4ab6-9946-0a6052be999a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "963151dc-b8e7-4ab6-9946-0a6052be999a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "963151dc-b8e7-4ab6-9946-0a6052be999a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3b32e6c9-02ef-4b2f-9936-27a055fc85a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L6",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L6"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3b32e6c9-02ef-4b2f-9936-27a055fc85a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L7",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L7"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3b32e6c9-02ef-4b2f-9936-27a055fc85a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L8",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L8"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "4ae95005-4a9b-4c93-8bf8-886fdf1211ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L9",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "db648d7b-a682-42e5-9b47-27f62e5fdda9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-L10",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L10"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "d6e9958b-86ca-4fa5-804b-7bf8ba2a4b07"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-explore-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b4e55cbb-1e65-4aae-a177-c25d69a4c4f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-explore-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "32e1f844-acc5-4338-9b25-7a186826a76b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-explore-L3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "32e1f844-acc5-4338-9b25-7a186826a76b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-explore-L4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "32e1f844-acc5-4338-9b25-7a186826a76b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-explore-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2c022c5e-876f-4700-86a6-fa1b54adfad9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-explore-L6",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2c022c5e-876f-4700-86a6-fa1b54adfad9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-explore-L7",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "23ac3e99-e095-48c0-97e3-dda40fec3b54"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-explore-L8",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L8"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "1e3a278f-9811-4479-b6e1-9ee61de8b3b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-explore-L9",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-explore-L9"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "8830cdb4-9a3f-4bfc-95fc-99c650577b74"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b7140078-29d7-48e5-bd10-56bc4d8f8c1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "b7140078-29d7-48e5-bd10-56bc4d8f8c1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3d6b68cb-3a00-4d27-9c0c-5952eb21e7c3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "3d6b68cb-3a00-4d27-9c0c-5952eb21e7c3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L5"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "38bf27c0-264f-4e74-abcc-6f3cf0741fd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L6",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L6"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "38bf27c0-264f-4e74-abcc-6f3cf0741fd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L7",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L7"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "38bf27c0-264f-4e74-abcc-6f3cf0741fd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L8",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L8"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "ae66c477-f292-457d-9513-ff5da5da36e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L9",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L9"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "8e1f2275-a9d4-4c8b-a4b8-02af8e28db1d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L10",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L10"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "5055bb98-ec38-4d5b-8611-ffd44bb04c29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-practice-L11",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-practice-L11"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "e1252c02-15ec-44e1-a6c3-d6d1c0fe8426"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2fae6a15-8cd7-4c80-a132-c3f8df3d2b83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2fae6a15-8cd7-4c80-a132-c3f8df3d2b83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2fae6a15-8cd7-4c80-a132-c3f8df3d2b83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L4"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "68605947-4bef-46b8-b348-d0cec2f796a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L5"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "68605947-4bef-46b8-b348-d0cec2f796a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L6",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L6"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "68605947-4bef-46b8-b348-d0cec2f796a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L7",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L7"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "0f933cad-60cb-400b-ba81-f265c5d15b48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L8",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "0f933cad-60cb-400b-ba81-f265c5d15b48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L9",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L9"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "0f933cad-60cb-400b-ba81-f265c5d15b48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-finetuning-explore-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2cdfa28b-4c87-40e0-85b1-a4a0a21f6389"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-finetuning-explore-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "36bc2bd7-f2fa-40fe-b90b-c2d70d93ef93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-finetuning-explore-L3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "36bc2bd7-f2fa-40fe-b90b-c2d70d93ef93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-finetuning-explore-L4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "dc7280e0-9705-4a48-a18b-dc5f1e28b149"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-finetuning-explore-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "dc7280e0-9705-4a48-a18b-dc5f1e28b149"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-finetuning-explore-L6",
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "4bfd4fa8-fcda-4936-8007-b34bb5209b19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-modelcards-practice-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "6aeda3b4-5e6c-46c7-b4a2-32be825ba560"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-modelcards-practice-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "5d071f29-70df-4cfb-83bc-8f2dc04a7df4"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Chatbots in Society",
+      "url": "https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/template/preview",
+      "key": "chatbots_in_society",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "chatbots_in_society"
+      }
+    },
+    {
+      "name": "Fine Tuning - Exploration",
+      "url": "https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/template/preview",
+      "key": "fine_tuning_-_exploration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "fine_tuning_-_exploration"
+      }
+    },
+    {
+      "name": "Foundations in a Day",
+      "url": "https://docs.google.com/presentation/d/1Shn3KIT3f63BGf36XgZ2AkBLGILl7IIV0LMpO2rY5Og/template/preview",
+      "key": "foundations_in_a_day",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "foundations_in_a_day"
+      }
+    },
+    {
+      "name": "Interacting with Language Models",
+      "url": "https://docs.google.com/presentation/d/1oBkecogXS8uEUQCK19t28A9DOAHUoTyeC3q2LK4kAs4/template/preview",
+      "key": "interacting_with_language_models",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "interacting_with_language_models"
+      }
+    },
+    {
+      "name": "Model Cards - Exploration",
+      "url": "https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/template/preview",
+      "key": "model_cards_-_exploration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "model_cards_-_exploration"
+      }
+    },
+    {
+      "name": "Model Cards - Practice",
+      "url": "https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/template/preview",
+      "key": "model_cards_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "model_cards_-_practice"
+      }
+    },
+    {
+      "name": "Project: Make your own Chatbot",
+      "url": "https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/template/preview",
+      "key": "project_make_your_own_chatbot",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_make_your_own_chatbot"
+      }
+    },
+    {
+      "name": "Retrieval - Exploration",
+      "url": "https://docs.google.com/presentation/d/1Q64bzj24cx0l9ePYgymrhn7z0nMM2PDG9RgJxiuLJ_A/template/preview",
+      "key": "retrieval_-_exploration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "retrieval_-_exploration"
+      }
+    },
+    {
+      "name": "Retrieval - Practice",
+      "url": "https://docs.google.com/presentation/d/1WepfsQ4BqHORfYbIGsIuX3cTog436Ae5-n5JvfXqrug/template/preview",
+      "key": "retrieval_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "retrieval_-_practice"
+      }
+    },
+    {
+      "name": "Retrieval - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1YEm0J3733QiyulpXOsTAcgO4QInTIIKtdGc9q7dCn04/template/preview",
+      "key": "retrieval_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "retrieval_-_synthesis"
+      }
+    },
+    {
+      "name": "System Prompting - Exploration",
+      "url": "https://docs.google.com/presentation/d/1BpTaMUqNdcLTRqHfn9YyNqZstR0WIlZ8FkCQSlxTJqw/template/preview",
+      "key": "system_prompting_-_exploration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "system_prompting_-_exploration"
+      }
+    },
+    {
+      "name": "System Prompting - Practice",
+      "url": "https://docs.google.com/presentation/d/1keAW0kOKmbkg9a9Q6LrXhjPAW40T_GZEMAj2BSYcEQM/template/preview",
+      "key": "system_prompting_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "system_prompting_-_practice"
+      }
+    },
+    {
+      "name": "System Prompting - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1EjKJttJMIkm5I-xhF8z7jmkDiFkjQT5hbQtt9y0S_ww/template/preview",
+      "key": "system_prompting_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "system_prompting_-_synthesis"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "foundations_in_a_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "model_cards_-_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "chatbots_in_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "project_make_your_own_chatbot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "model_cards_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "interacting_with_language_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "system_prompting_-_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "system_prompting_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "system_prompting_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "retrieval_-_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "retrieval_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "retrieval_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "fine_tuning_-_exploration"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
