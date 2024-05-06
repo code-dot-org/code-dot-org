@@ -57,9 +57,10 @@ theme: responsive_full_width
 -#   .wrapper
 -#     TODO - VIDEO CAROUSEL
 
--# %section.quote
--#   .wrapper
--#     TODO - QUOTES CAROUSEL
+%section.quote
+  .wrapper
+    %h2.white=hoc_s("music_lab.quotes.heading")
+    = view :"music/music_lab_carousel_quotes"
 
 %section
   .wrapper
@@ -83,3 +84,5 @@ theme: responsive_full_width
     = view :afe_partnership_block
     %p.body-four.centered
       =hoc_s(:dance_afe_disclaimer)
+
+= view :swiper_page_music_lab
