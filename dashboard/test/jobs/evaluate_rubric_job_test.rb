@@ -317,6 +317,13 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
+    # ensure firehose event is logged
+    FirehoseClient.instance.expects(:put_record).with do |stream, data|
+      data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
+        data[:event] == 'retry-on-503' &&
+        stream == :analysis
+    end
+
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::RETRIES_ON_RATE_LIMIT do
       perform_enqueued_jobs do
@@ -361,6 +368,13 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
         includes_dimensions(:RetryOnGatewayTimeout, Environment: CDO.rack_env, Agent: 'openai')
       )
     )
+
+    # ensure firehose event is logged
+    FirehoseClient.instance.expects(:put_record).with do |stream, data|
+      data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
+        data[:event] == 'retry-on-504' &&
+        stream == :analysis
+    end
 
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::RETRIES_ON_RATE_LIMIT do

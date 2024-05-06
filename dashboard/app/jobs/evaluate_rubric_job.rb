@@ -284,7 +284,7 @@ class EvaluateRubricJob < ApplicationJob
 
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500. 'exponentially_longer' waits 3s, 18s, and then 83s.
-  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: RETRIES_ON_SERVICE_UNAVAILABLE do |_job, error|
+  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: RETRIES_ON_SERVICE_UNAVAILABLE do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
 
     Cdo::Metrics.push(
@@ -301,13 +301,15 @@ class EvaluateRubricJob < ApplicationJob
         }
       ]
     )
+
+    log_to_firehose(job: job, error: error, event_name: 'retry-on-503')
   end
 
   RETRIES_ON_GATEWAY_TIMEOUT = 3
 
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
   # when openai request times out. 'exponentially_longer' waits 3s, 18s, and then 83s.
-  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: RETRIES_ON_GATEWAY_TIMEOUT do |_job, error|
+  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: RETRIES_ON_GATEWAY_TIMEOUT do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
 
     Cdo::Metrics.push(
@@ -324,6 +326,8 @@ class EvaluateRubricJob < ApplicationJob
         }
       ]
     )
+
+    log_to_firehose(job: job, error: error, event_name: 'retry-on-504')
   end
 
   def self.log_to_firehose(job:, error:, event_name:)
