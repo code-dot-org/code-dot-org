@@ -1,10 +1,10 @@
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import {sortFilesByName} from '@cdoide/utils';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {sortFilesByName} from '@codebridge/utils';
 import React from 'react';
 import './styles/fileTabs.css';
 
 export const FileTabs = React.memo(() => {
-  const {project, closeFile, setActiveFile} = useCDOIDEContext();
+  const {project, closeFile, setActiveFile} = useCodebridgeContext();
 
   const files = sortFilesByName(project.files, {mustBeOpen: true});
 

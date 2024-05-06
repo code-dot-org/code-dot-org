@@ -1,5 +1,8 @@
-import {projectReducer, useProjectUtilities} from '@cdoide/cdoIDEContext';
-import {ProjectType, SetProjectFunction} from '@cdoide/types';
+import {
+  projectReducer,
+  useProjectUtilities,
+} from '@codebridge/codebridgeContext';
+import {ProjectType, SetProjectFunction} from '@codebridge/types';
 import {useRef, useReducer, useEffect} from 'react';
 
 /*

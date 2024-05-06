@@ -1,4 +1,4 @@
-import {ConfigType} from '@cdoide/types';
+import {ConfigType} from '@codebridge/types';
 
 import {DefaultEmptyEditor, BlankEmptyEditor} from '../DefaultEmptyEditors';
 

@@ -1,5 +1,5 @@
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
-import {editableFileType} from '@cdoide/utils';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {editableFileType} from '@codebridge/utils';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useCallback, useMemo} from 'react';
 
@@ -11,7 +11,7 @@ export const Editor = (
   langMapping: {[key: string]: LanguageSupport},
   editableFileTypes: string[]
 ) => {
-  const {project, saveFile} = useCDOIDEContext();
+  const {project, saveFile} = useCodebridgeContext();
   const file = Object.values(project.files).filter(f => f.active)?.[0];
   // this is a stupid hack. the low level code-mirror editor won't update itself
   // automatically if the doc is changed externally. So in lieu of doing it better,

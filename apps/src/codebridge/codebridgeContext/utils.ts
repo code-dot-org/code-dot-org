@@ -3,7 +3,7 @@ import {
   ProjectFile,
   ProjectFolder,
   ReducerAction,
-} from '@cdoide/types';
+} from '@codebridge/types';
 import {useMemo} from 'react';
 
 import {DEFAULT_FOLDER_ID} from '../constants';

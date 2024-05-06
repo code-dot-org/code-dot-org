@@ -1,5 +1,5 @@
-import {DEFAULT_FOLDER_ID} from '@cdoide/constants';
-import {ProjectFolder} from '@cdoide/types';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {ProjectFolder} from '@codebridge/types';
 
 export const findFolder = (
   folderLineage: string[] = [],
