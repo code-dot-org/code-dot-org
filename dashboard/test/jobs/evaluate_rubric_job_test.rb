@@ -581,7 +581,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       uri,
       body: URI.encode_www_form(expected_form_data),
       headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
-      timeout: 120
+      timeout: EvaluateRubricJob::AIPROXY_API_TIMEOUT
     )
 
     if raises
