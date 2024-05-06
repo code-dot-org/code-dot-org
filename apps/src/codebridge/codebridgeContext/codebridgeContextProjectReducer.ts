@@ -1,10 +1,5 @@
-import {
-  ProjectType,
-  ReducerAction,
-  FileId,
-  FolderId,
-} from '@cdo/apps/codebridge/types';
-import {sortFilesByName} from '@cdo/apps/codebridge/utils';
+import {ProjectType, ReducerAction, FileId, FolderId} from '@codebridge/types';
+import {sortFilesByName} from '@codebridge/utils';
 
 import {PROJECT_REDUCER_ACTIONS} from './constants';
 import {findFiles, findSubFolders} from './utils';

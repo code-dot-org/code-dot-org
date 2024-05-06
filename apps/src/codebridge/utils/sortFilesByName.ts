@@ -1,4 +1,4 @@
-import {ProjectType} from '@cdo/apps/codebridge/types';
+import {ProjectType} from '@codebridge/types';
 
 export const sortFilesByName = (
   files: ProjectType['files'],
