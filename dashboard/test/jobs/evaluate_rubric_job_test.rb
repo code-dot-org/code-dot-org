@@ -269,6 +269,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
       data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
         data[:event] == 'retry-on-timeout' &&
+        JSON.parse(data[:data_json])['agent'].nil? &&
         stream == :analysis
     end
 
@@ -321,6 +322,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
       data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
         data[:event] == 'retry-on-503' &&
+        JSON.parse(data[:data_json])['agent'] == 'openai' &&
         stream == :analysis
     end
 
@@ -373,6 +375,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
       data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
         data[:event] == 'retry-on-504' &&
+        JSON.parse(data[:data_json])['agent'] == 'openai' &&
         stream == :analysis
     end
 

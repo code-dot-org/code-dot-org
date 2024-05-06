@@ -302,7 +302,7 @@ class EvaluateRubricJob < ApplicationJob
       ]
     )
 
-    log_to_firehose(job: job, error: error, event_name: 'retry-on-503')
+    log_to_firehose(job: job, error: error, event_name: 'retry-on-503', agent: agent)
   end
 
   RETRIES_ON_GATEWAY_TIMEOUT = 3
@@ -327,10 +327,10 @@ class EvaluateRubricJob < ApplicationJob
       ]
     )
 
-    log_to_firehose(job: job, error: error, event_name: 'retry-on-504')
+    log_to_firehose(job: job, error: error, event_name: 'retry-on-504', agent: agent)
   end
 
-  def self.log_to_firehose(job:, error:, event_name:)
+  def self.log_to_firehose(job:, error:, event_name:, agent: nil)
     options = job.arguments.first
     script_level = ScriptLevel.find(options[:script_level_id])
 
@@ -348,6 +348,7 @@ class EvaluateRubricJob < ApplicationJob
           script_name: script_level.script.name,
           lesson_number: script_level.lesson.relative_position,
           level_name: script_level.level.name,
+          agent: agent
         }.to_json
       }
     )
