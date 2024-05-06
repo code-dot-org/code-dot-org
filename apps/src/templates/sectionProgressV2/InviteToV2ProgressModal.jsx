@@ -10,7 +10,6 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {default as LinkedButton} from '@cdo/apps/templates/Button';
 import {
   setHasSeenProgressTableInvite,
-  setShowProgressTableV2,
   setDateProgressTableInvitationDelayed,
 } from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
@@ -21,12 +20,12 @@ const newProgressViewGraphic = require('@cdo/static/teacherDashboard/progressOpe
 
 function InviteToV2ProgressModal({
   sectionId,
+  onShowProgressTableV2Change,
 
   // from redux
   dateProgressTableInvitationDelayed,
   hasSeenProgressTableInvite,
   setHasSeenProgressTableInvite,
-  setShowProgressTableV2,
   setDateProgressTableInvitationDelayed,
 }) {
   // const [invitationOpen, setInvitationOpen] = React.useState(true);
@@ -57,6 +56,12 @@ function InviteToV2ProgressModal({
     setInvitationOpen(showInvitation());
   }, [dateProgressTableInvitationDelayed, hasSeenProgressTableInvite]);
 
+  const handleModalClose = React.useCallback(() => {
+    setHasSeenProgressTableInviteData();
+    setHasSeenProgressTableInvite(true);
+    setInvitationOpen(false);
+  }, [setHasSeenProgressTableInvite]);
+
   const handleDismiss = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
       sectionId,
@@ -66,14 +71,17 @@ function InviteToV2ProgressModal({
     setInvitationOpen(false);
   }, [sectionId, setHasSeenProgressTableInvite]);
 
+  // pass in onshowprogressV2 change and call that when accepted.
+  // you will need to pass in the function to the modal
+
   const handleAcceptedInvitation = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
       sectionId,
     });
     setHasSeenProgressTableInviteData();
     setHasSeenProgressTableInvite(true);
-    setShowProgressTableV2(true);
-  }, [sectionId, setShowProgressTableV2, setHasSeenProgressTableInvite]);
+    onShowProgressTableV2Change();
+  }, [sectionId, onShowProgressTableV2Change, setHasSeenProgressTableInvite]);
 
   const handleDelayInvitation = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DELAY_INVITATION, {
@@ -98,16 +106,21 @@ function InviteToV2ProgressModal({
 
   if (invitationOpen) {
     return (
-      <AccessibleDialog onClose={() => {}} className={styles.modal}>
+      <AccessibleDialog
+        onClose={handleModalClose}
+        initialFocus={false}
+        className={styles.modal}
+      >
         <div
           role="region"
-          aria-label={i18n.directionsForAssigningSections()}
+          aria-label={i18n.dialogAnnouncement()}
           className={styles.dialog}
         >
           <button
             id="ui-close-dialog"
             type="button"
             onClick={handleDismiss}
+            aria-label={i18n.closeDialog()}
             className={styles.xCloseButton}
           >
             <i id="x-close" className="fa-solid fa-xmark" />
@@ -138,7 +151,7 @@ function InviteToV2ProgressModal({
 }
 
 InviteToV2ProgressModal.propTypes = {
-  setShowProgressTableV2: PropTypes.func.isRequired,
+  onShowProgressTableV2Change: PropTypes.func.isRequired,
   setHasSeenProgressTableInvite: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
   dateProgressTableInvitationDelayed: PropTypes.string,
@@ -155,8 +168,6 @@ export default connect(
   dispatch => ({
     setHasSeenProgressTableInvite: hasSeenProgressTableInvite =>
       dispatch(setHasSeenProgressTableInvite(hasSeenProgressTableInvite)),
-    setShowProgressTableV2: showProgressTableV2 =>
-      dispatch(setShowProgressTableV2(showProgressTableV2)),
     setDateProgressTableInvitationDelayed: dateProgressTableInvitationDelayed =>
       dispatch(
         setDateProgressTableInvitationDelayed(
