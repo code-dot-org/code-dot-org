@@ -265,6 +265,13 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
+    # ensure firehose event is logged
+    FirehoseClient.instance.expects(:put_record).with do |stream, data|
+      data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
+        data[:event] == 'retry-on-timeout' &&
+        stream == :analysis
+    end
+
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::RETRIES_ON_TIMEOUT do
       perform_enqueued_jobs do

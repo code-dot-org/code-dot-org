@@ -99,6 +99,9 @@ class EvaluateRubricJob < ApplicationJob
   # The CloudWatch metric namespace
   AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
 
+  # The firehose study name
+  AI_RUBRICS_FIREHOSE_STUDY = 'ai-rubrics'.freeze
+
   # Write out metrics reflected in the response to CloudWatch
   #
   # Currently, this keeps track of a curated set of metrics returned
@@ -280,7 +283,7 @@ class EvaluateRubricJob < ApplicationJob
     FirehoseClient.instance.put_record(
       :analysis,
       {
-        study: 'ai-rubrics',
+        study: AI_RUBRICS_FIREHOSE_STUDY,
         study_group: 'v0',
         event: 'retry-on-timeout',
         data_string: "#{error.class.name}: #{error.message}",
