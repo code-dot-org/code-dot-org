@@ -111,7 +111,7 @@ export const updateAiCustomization = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      'UPDATE_CHATBOT',
+      EVENTS.UPDATE_CHATBOT,
       levelId,
       dispatch
     );
@@ -133,7 +133,7 @@ export const publishModel = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      'PUBLISH_MODEL_CARD_INFO',
+      EVENTS.PUBLISH_MODEL_CARD_INFO,
       levelId,
       dispatch
     );
@@ -161,7 +161,7 @@ export const saveModelCard = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      'SAVE_MODEL_CARD_INFO',
+      EVENTS.SAVE_MODEL_CARD_INFO,
       levelId,
       dispatch
     );
@@ -181,10 +181,7 @@ const getNewMessageId = () => {
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
-  eventKey:
-    | 'UPDATE_CHATBOT'
-    | 'PUBLISH_MODEL_CARD_INFO'
-    | 'SAVE_MODEL_CARD_INFO',
+  eventDescription: string,
   levelId: string | null,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
@@ -242,12 +239,12 @@ const saveAiCustomization = async (
         timestamp: getCurrentTime(),
       })
     );
-    if (eventKey) {
+    if (eventDescription) {
       analyticsReporter.sendEvent(
-        EVENTS[eventKey],
+        eventDescription,
         {
           propertyUpdated: property,
-          level: levelId,
+          levelId,
         },
         PLATFORMS.BOTH
       );
