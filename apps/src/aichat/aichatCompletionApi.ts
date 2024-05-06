@@ -36,9 +36,8 @@ export async function postAichatCompletionMessage(
     aichatContext,
     ...(sessionId ? {sessionId} : {}),
   };
-  let response;
   try {
-    response = await HttpClient.post(
+    const response = await HttpClient.post(
       CHAT_COMPLETION_URL,
       JSON.stringify(payload),
       true,
