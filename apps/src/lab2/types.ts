@@ -135,6 +135,7 @@ export interface LevelProperties {
   isK1?: boolean;
   skin?: string;
   toolboxBlocks?: string;
+  source?: MultiFileSource;
   sharedBlocks?: BlockDefinition[];
   // We are moving level validations out of level data and into level properties.
   // Temporarily keeping them in both places to avoid breaking existing code.

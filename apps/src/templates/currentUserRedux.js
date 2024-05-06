@@ -16,6 +16,7 @@ const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 const SET_SHOW_PROGRESS_TABLE_V2 = 'currentUser/SET_SHOW_PROGRESS_TABLE_V2';
+const SET_AI_RUBRICS_DISABLED = 'currentUser/SET_AI_RUBRICS_DISABLED';
 const SET_PROGRESS_TABLE_V2_CLOSED_BETA =
   'currentUser/SET_PROGRESS_TABLE_V2_CLOSED_BETA';
 const SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED =
@@ -91,6 +92,10 @@ export const setDateProgressTableInvitationDelayed =
     type: SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED,
     dateProgressTableInvitationDelayed,
   });
+export const setAiRubricsDisabled = aiRubricsDisabled => ({
+  type: SET_AI_RUBRICS_DISABLED,
+  aiRubricsDisabled,
+});
 
 const initialState = {
   userId: null,
@@ -199,6 +204,12 @@ export default function currentUser(state = initialState, action) {
       hasSeenProgressTableInvite: action.hasSeenProgressTableInvite,
     };
   }
+  if (action.type === SET_AI_RUBRICS_DISABLED) {
+    return {
+      ...state,
+      aiRubricsDisabled: action.aiRubricsDisabled,
+    };
+  }
   if (action.type === SET_INITIAL_DATA) {
     const {
       id,
@@ -210,6 +221,7 @@ export default function currentUser(state = initialState, action) {
       over_21,
       sort_by_family_name,
       show_progress_table_v2,
+      ai_rubrics_disabled,
       progress_table_v2_closed_beta,
       is_lti,
       date_progress_table_invitation_last_delayed,
@@ -238,6 +250,7 @@ export default function currentUser(state = initialState, action) {
       over21: over_21,
       isSortedByFamilyName: sort_by_family_name,
       showProgressTableV2: show_progress_table_v2,
+      aiRubricsDisabled: ai_rubrics_disabled,
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,

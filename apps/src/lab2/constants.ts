@@ -18,3 +18,5 @@ export const BLOCKLY_LABS: AppName[] = [
 ];
 
 export const MAIN_PYTHON_FILE = 'main.py';
+
+export const START_SOURCES = 'start_sources';

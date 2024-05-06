@@ -264,6 +264,13 @@ const EVENTS = {
 
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
+
+  // Aichat
+  UPDATE_CHATBOT: 'Student updates their aichat bot',
+  AICHAT_VALIDATION: 'Student passes/fails validation on an aichat level',
+  CHAT_ACTION: 'Student takes a chat action',
+  SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
+  PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
 };
 
 const EVENT_GROUP_NAMES = {
