@@ -6,6 +6,7 @@ import {Config} from './Config';
 
 import {CDOIDE} from '@cdoide/CDOIDE';
 import {ConfigType, ProjectType} from '@cdoide/types';
+import {useInitialSources} from '@cdoide/hooks';
 
 import {Editor as CDOEditor} from './CDOIDE/Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -156,7 +157,9 @@ const Weblab2View = () => {
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
-  const initialSources = useAppSelector(state => state.lab.initialSources);
+  const initialSources = useInitialSources({
+    source: defaultProject,
+  });
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const setProject = useMemo(
