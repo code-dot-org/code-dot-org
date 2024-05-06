@@ -2,10 +2,7 @@ import {useMemo, useEffect} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {
-  setAndSaveProjectSource,
-  setProjectSource,
-} from '@cdo/apps/lab2/lab2Redux';
+import {setAndSaveProjectSource} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -49,12 +46,10 @@ export const useSource = (defaultSources: ProjectSources) => {
 
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
-    dispatch(
-      setProjectSource(
-        initialSources?.source ? {source: initialSources?.source} : undefined
-      )
-    );
-  }, [channelId, dispatch, initialSources]);
+    if (initialSources) {
+      setProject(initialSources.source as MultiFileSource);
+    }
+  }, [channelId, initialSources, setProject]);
 
   return {source, setProject};
 };

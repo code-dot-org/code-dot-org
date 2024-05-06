@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useMemo} from 'react';
+import React, {useState} from 'react';
 
 import './styles/Weblab2View.css';
 
@@ -6,15 +6,12 @@ import {Config} from './Config';
 
 import {Codebridge} from '@codebridge/Codebridge';
 import {ConfigType, ProjectType} from '@codebridge/types';
-import {useInitialSources} from '@codebridge/hooks';
 
 import {Editor as CDOEditor} from '@codebridge/Editor';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import {css} from '@codemirror/lang-css';
+import {useSource} from '../codebridge/hooks/useSource';
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
@@ -151,39 +148,14 @@ const defaultProject: ProjectType = {
 };
 
 const Weblab2View = () => {
-  const [currentProject, setCurrentProject] =
-    useState<ProjectType>(defaultProject);
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const {source, setProject} = useSource({source: defaultProject});
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
-  const initialSources = useInitialSources({
-    source: defaultProject,
-  });
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-
-  const setProject = useMemo(
-    () => (newProject: MultiFileSource) => {
-      setCurrentProject(newProject);
-      if (Lab2Registry.getInstance().getProjectManager()) {
-        const projectSources = {
-          source: newProject,
-        };
-        Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-      }
-    },
-    [setCurrentProject]
-  );
-
-  useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    setCurrentProject(
-      (initialSources?.source as MultiFileSource) || defaultProject
-    );
-  }, [channelId, initialSources]);
 
   const configKey = {
-    project: currentProject,
+    project: source,
     config: config,
     layout: config,
   };
@@ -214,12 +186,14 @@ const Weblab2View = () => {
         </button>
       </div>
       <div className="app-ide">
-        <Codebridge
-          project={currentProject}
-          config={config}
-          setProject={setProject}
-          setConfig={setConfig}
-        />
+        {source && (
+          <Codebridge
+            project={source}
+            config={config}
+            setProject={setProject}
+            setConfig={setConfig}
+          />
+        )}
 
         {showConfig && (
           <Config
