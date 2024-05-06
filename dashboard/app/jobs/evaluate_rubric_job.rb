@@ -118,20 +118,8 @@ class EvaluateRubricJob < ApplicationJob
       # service used (openai, etc) and the current environment.
       tokens = response.dig('metadata', 'usage', name.to_s.underscore)
       next if tokens.nil?
-      Cdo::Metrics.push(
-        AI_RUBRIC_METRICS_NAMESPACE,
-        [
-          {
-            metric_name: name,
-            value: tokens,
-            dimensions: [
-              {name: 'Environment', value: CDO.rack_env},
-              {name: 'Agent', value: response.dig('metadata', 'agent') || 'unknown'},
-            ],
-            unit: 'Count'
-          }
-        ]
-      )
+      agent = response.dig('metadata', 'agent') || 'unknown'
+      log_count_metric(metric_name: name, agent: agent, value: tokens)
     end
   end
 
@@ -263,20 +251,7 @@ class EvaluateRubricJob < ApplicationJob
 
   # Retry just once on a timeout. It is likely to timeout again.
   retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
-    Cdo::Metrics.push(
-      AI_RUBRIC_METRICS_NAMESPACE,
-      [
-        {
-          metric_name: :RetryOnTimeout,
-          value: 1,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-          ],
-          unit: 'Count'
-        }
-      ]
-    )
-
+    log_count_metric(metric_name: :RetryOnTimeout)
     log_to_firehose(job: job, error: error, event_name: 'retry-on-timeout')
   end
 
@@ -286,22 +261,7 @@ class EvaluateRubricJob < ApplicationJob
   # when openai returns 500. 'exponentially_longer' waits 3s, 18s, and then 83s.
   retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: RETRIES_ON_SERVICE_UNAVAILABLE do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
-
-    Cdo::Metrics.push(
-      AI_RUBRIC_METRICS_NAMESPACE,
-      [
-        {
-          metric_name: :RetryOnServiceUnavailable,
-          value: 1,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'Agent', value: agent},
-          ],
-          unit: 'Count'
-        }
-      ]
-    )
-
+    log_count_metric(metric_name: :RetryOnServiceUnavailable, agent: agent)
     log_to_firehose(job: job, error: error, event_name: 'retry-on-503', agent: agent)
   end
 
@@ -311,13 +271,17 @@ class EvaluateRubricJob < ApplicationJob
   # when openai request times out. 'exponentially_longer' waits 3s, 18s, and then 83s.
   retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: RETRIES_ON_GATEWAY_TIMEOUT do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
+    log_count_metric(metric_name: :RetryOnGatewayTimeout, agent: agent)
+    log_to_firehose(job: job, error: error, event_name: 'retry-on-504', agent: agent)
+  end
 
+  def self.log_count_metric(metric_name:, agent: nil, value: 1)
     Cdo::Metrics.push(
       AI_RUBRIC_METRICS_NAMESPACE,
       [
         {
-          metric_name: :RetryOnGatewayTimeout,
-          value: 1,
+          metric_name: metric_name,
+          value: value,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
             {name: 'Agent', value: agent},
@@ -326,8 +290,6 @@ class EvaluateRubricJob < ApplicationJob
         }
       ]
     )
-
-    log_to_firehose(job: job, error: error, event_name: 'retry-on-504', agent: agent)
   end
 
   def self.log_to_firehose(job:, error:, event_name:, agent: nil)
