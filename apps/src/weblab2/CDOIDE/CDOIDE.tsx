@@ -1,8 +1,11 @@
 import {CDOIDEContextProvider} from '@cdoide/cdoIDEContext';
-import {CenterPane} from '@cdoide/CenterPane';
+import DisabledEditor from '@cdoide/Editor/DisabledEditor';
+import {FileBrowser} from '@cdoide/FileBrowser';
+import {FileTabs} from '@cdoide/FileTabs';
 import {useSynchronizedProject} from '@cdoide/hooks';
-import {LeftPane} from '@cdoide/LeftPane';
-import {RightPane} from '@cdoide/RightPane';
+import {Instructions} from '@cdoide/Instructions';
+import {PreviewContainer} from '@cdoide/PreviewContainer';
+import {SideBar} from '@cdoide/SideBar';
 import {
   ProjectType,
   ConfigType,
@@ -19,31 +22,6 @@ type CDOIDEProps = {
   setConfig: SetConfigFunction;
 };
 
-type PaneKey = {
-  key: keyof typeof configVisibilityDefaults;
-};
-
-const configVisibilityDefaults = {
-  showPreview: true,
-  showEditor: true,
-  showLeftNav: true,
-};
-
-const getConfigVisibilityVal = (
-  key: keyof typeof configVisibilityDefaults,
-  config: ConfigType
-) => {
-  return config[key] ?? configVisibilityDefaults[key] ?? false;
-};
-
-const paneWidths: (PaneKey & {width: string})[] = [
-  {key: 'showLeftNav', width: '1fr'},
-  {key: 'showPreview', width: '2fr'},
-  {key: 'showEditor', width: '2fr'},
-];
-
-const paneHeights: (PaneKey & {height: string})[] = [];
-
 export const CDOIDE = React.memo(
   ({project, config, setProject, setConfig}: CDOIDEProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
@@ -53,19 +31,17 @@ export const CDOIDE = React.memo(
       setProject
     );
 
-    const outerGridRows = ['auto'];
-    paneHeights.forEach(pair => {
-      if (getConfigVisibilityVal(pair.key, config)) {
-        outerGridRows.push(pair.height);
-      }
-    });
+    const EditorComponent = config.EditorComponent || DisabledEditor;
 
-    const innerGridCols: string[] = [];
-    paneWidths.forEach(pair => {
-      if (getConfigVisibilityVal(pair.key, config)) {
-        innerGridCols.push(pair.width);
-      }
-    });
+    const ComponentMap = {
+      'file-browser': FileBrowser,
+      'side-bar': SideBar,
+      editor: EditorComponent,
+      'preview-container': PreviewContainer,
+      instructions: config.Instructions || Instructions,
+      'file-tabs': FileTabs,
+    };
+
     return (
       <CDOIDEContextProvider
         value={{
@@ -77,27 +53,21 @@ export const CDOIDE = React.memo(
         }}
       >
         <div
-          className="cdo-ide-outer"
-          style={{gridTemplateRows: outerGridRows.join(' ')}}
+          className="cdoide-container"
+          style={{
+            gridTemplateAreas: config.gridLayout,
+            gridTemplateRows: config.gridLayoutRows,
+            gridTemplateColumns: config.gridLayoutColumns,
+          }}
         >
-          <div
-            className="cdo-ide-inner"
-            style={{
-              gridTemplateColumns: innerGridCols.join(' '),
-            }}
-          >
-            {getConfigVisibilityVal('showLeftNav', config) && (
-              <div className="cdo-ide-area">
-                <LeftPane />
-              </div>
-            )}
-            {getConfigVisibilityVal('showEditor', config) && (
-              <div className="cdo-ide-area">
-                <CenterPane />
-              </div>
-            )}
-            {getConfigVisibilityVal('showPreview', config) && <RightPane />}
-          </div>
+          {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
+            .filter(key => config.gridLayout.match(key))
+            .map(key => {
+              const Component = ComponentMap[key];
+              return <Component key={key} />;
+            })}
+
+          {/*<Search />*/}
         </div>
       </CDOIDEContextProvider>
     );

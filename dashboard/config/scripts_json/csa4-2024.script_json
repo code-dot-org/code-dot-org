@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 20:59:46 UTC",
+    "serialized_at": "2024-05-02 19:41:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4749,6 +4749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L1_2024"
+        ],
         "progression": "Predict and Run: The Theater"
       },
       "bonus": false,
@@ -4771,6 +4774,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L2_2024"
+        ],
         "progression": "Investigate and Modify: The Theater"
       },
       "bonus": false,
@@ -4793,6 +4799,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L3_2024"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4815,6 +4824,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L4_2024"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4837,6 +4849,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L5_2024"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4859,6 +4874,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L6_2024"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4881,6 +4899,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4903,6 +4924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_2024"
+        ],
         "progression": "Predict and Run: Static Variables and Methods"
       },
       "bonus": false,
@@ -4925,6 +4949,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_2024"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -4947,6 +4974,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_2024"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -4969,6 +4999,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_2024"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -4991,6 +5024,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_2024"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5013,6 +5049,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6_2024"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5035,6 +5074,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7_2024"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5057,6 +5099,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L8_2024"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5079,6 +5124,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L9_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5101,6 +5149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L1_2024"
+        ],
         "progression": "Predict and Run: The Math Class"
       },
       "bonus": false,
@@ -5123,6 +5174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L2_2024"
+        ],
         "progression": "Investigate and Modify: The Math Class"
       },
       "bonus": false,
@@ -5145,6 +5199,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L3_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5167,6 +5224,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L4_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5189,6 +5249,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L5_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5211,6 +5274,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L6_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5233,6 +5299,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L7_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5255,6 +5324,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5277,6 +5349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L1_2024"
+        ],
         "progression": "Investigate and Modify: Casting"
       },
       "bonus": false,
@@ -5299,6 +5374,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L2_2024"
+        ],
         "progression": "Investigate and Modify: Division"
       },
       "bonus": false,
@@ -5321,6 +5399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L3_2024"
+        ],
         "progression": "Investigate and Modify: Rounding"
       },
       "bonus": false,
@@ -5343,6 +5424,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L4_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5365,6 +5449,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L1_2024"
+        ],
         "progression": "Predict and Run: Random Numbers"
       },
       "bonus": false,
@@ -5387,6 +5474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L2_2024"
+        ],
         "progression": "Investigate and Modify: Random Numbers"
       },
       "bonus": false,
@@ -5409,6 +5499,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L3_2024"
+        ],
         "progression": "Investigate and Modify: Random Numbers"
       },
       "bonus": false,
@@ -5431,6 +5524,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L4_2024"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -5453,6 +5549,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L5_2024"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -5475,6 +5574,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L6_2024"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -5497,6 +5599,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5519,6 +5624,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1_2024"
+        ],
         "progression": "Predict and Run: Comparing Objects"
       },
       "bonus": false,
@@ -5541,6 +5649,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2_2024"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -5563,6 +5674,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3_2024"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -5585,6 +5699,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4_2024"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -5607,6 +5724,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5_2024"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -5629,6 +5749,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6_2024"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -5651,6 +5774,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L7_2024"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -5673,6 +5799,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5695,6 +5824,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L1_2024"
+        ],
         "progression": "Predict and Run: Nested if Statements"
       },
       "bonus": false,
@@ -5717,6 +5849,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L2_2024"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -5739,6 +5874,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L3_2024"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -5761,6 +5899,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L4_2024"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -5783,6 +5924,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L5_2024"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -5805,6 +5949,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L6_2024"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -5827,6 +5974,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5849,6 +5999,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L1_2024"
+        ],
         "progression": "Predict and Run: Logical Operators"
       },
       "bonus": false,
@@ -5871,6 +6024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L2_2024"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -5893,6 +6049,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L3_2024"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -5915,6 +6074,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L4_2024"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -5937,6 +6099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L5 Finding Patterns_2024"
+        ],
         "progression": "Finding Patterns"
       },
       "bonus": false,
@@ -5959,6 +6124,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L6_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5981,6 +6149,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L1_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6003,6 +6174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L1_2024"
+        ],
         "progression": "Predict and Run: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6025,6 +6199,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L2_2024"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6047,6 +6224,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L3_2024"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6069,6 +6249,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L4_2024"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6091,6 +6274,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L5_2024"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6113,6 +6299,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L6_2024"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6135,6 +6324,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L7_2024"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6157,6 +6349,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6179,6 +6374,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project_2024"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -6201,6 +6399,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 4 Assessment_2024"
+        ],
         "progression": "Unit 4 Assessment"
       },
       "bonus": false,
@@ -6223,6 +6424,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa4_2024"
+        ],
         "progression": "Unit 4 Survey"
       },
       "bonus": false,
@@ -6245,6 +6449,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_2024"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -6267,6 +6474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6288,6 +6498,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -6310,6 +6523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -6332,6 +6548,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7613,7 +7832,7 @@
     },
     {
       "name": "Abstract Data Art Project",
-      "url": "https://docs.google.com/presentation/d/1p0XTkK0jPFt2ki-gOuNXzLHhR6AXxvX9eewmGhyfjdk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1J-yIJtwo-Fgjv4FXQHgR2yBjLOjtmjXlRuGsavEjB50/edit?usp=drive_link",
       "key": "abstract_data_art_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -7625,7 +7844,7 @@
     },
     {
       "name": "Abstract Data Art Project",
-      "url": "https://docs.google.com/presentation/d/1rWRCD67ZSGoG9npnStCWbDbAY2_OGgEkB7_i959w50k/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1TnCKdOqwxX2fLM1ZIsKzXKq3U59OoIHb8XwHqAMYCXU/edit?usp=drive_link",
       "key": "abstract_data_art_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -7707,7 +7926,7 @@
     },
     {
       "name": "BingoCaller FRQ",
-      "url": "https://docs.google.com/presentation/d/1zWknOZk_WgBVORYUGyRtT6Wq6EpzPzPo4rAoEAMTtxA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1u9F_mzarc2fW95xAOkpXer3wu-LSNaZHDRAd4MT5qNM/edit?usp=drive_link",
       "key": "bingocaller_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -7757,7 +7976,7 @@
     },
     {
       "name": "Casting and Rounding",
-      "url": "https://docs.google.com/presentation/d/1Ov571dOvLtWGz_nmIh_SIx76ANF20kqmTqlBviyfH8E/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1wLMEUidX-HchvtoKTcAzVYFZ4HU0EWEY2TDL9a0toKY/edit?usp=drive_link",
       "key": "casting_and_rounding",
       "properties": {
         "audience": "Verified Teacher",
@@ -7781,11 +8000,9 @@
     },
     {
       "name": "CSA Unit 4 Slides",
-      "url": "https://docs.google.com/presentation/d/1fQ5U_CHAs_Mbgc47Cf9CdH-HU12llSLl9N7_fiSSJWg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1nEifZ178Au-iZFWFHbtfGRdby_sV3bopL_rYK2-reXg/edit?usp=drive_link",
       "key": "csa_unit_4_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_4_slides"
@@ -7818,7 +8035,7 @@
     },
     {
       "name": "De Morgan's Laws",
-      "url": "https://docs.google.com/presentation/d/1moTgZvwiGc5l2vfEDO6xK63kC_rpltGNzmhMGUWOQxo/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1tMkznKULU2jaOdm8asJrwHGwUTESjPNab4U2Mr3126I/edit?usp=drive_link",
       "key": "de_morgan_s_laws",
       "properties": {
         "audience": "Verified Teacher",
@@ -7918,7 +8135,7 @@
     },
     {
       "name": "Logical Operators",
-      "url": "https://docs.google.com/presentation/d/1JyK6boBm2ufia8OOYhf1mrartpFUYOsXkCzM5LTTivY/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1tqD0Ntbv_FZlrQ_8o8MqUR3N1viaw-3GrBQWTdmYD0Q/edit?usp=drive_link",
       "key": "logical_operators",
       "properties": {
         "audience": "Verified Teacher",
@@ -7943,7 +8160,7 @@
     },
     {
       "name": "Multi-Selection Statements",
-      "url": "https://docs.google.com/presentation/d/1yHCPp6jI7jwmXtn4FCh8KBGSd3EkpmQPnRWxb6SIo1o/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1HqmMQhpOqCISz9lFPWko9pWje3cm0de1ctoGANd_dlI/edit?usp=drive_link",
       "key": "multi-selection_statements",
       "properties": {
         "audience": "Verified Teacher",
@@ -7967,7 +8184,7 @@
     },
     {
       "name": "Nested If Statements",
-      "url": "https://docs.google.com/presentation/d/1k8IMh1PiFVilw-Oqi-AiWbySFzbVoUWVnmkwG_v6ujQ/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1KCzuow1Dne_k3xePknuKsSDKmjEXcbsomPTMaa9c2nM/edit?usp=drive_link",
       "key": "nested_if_statements",
       "properties": {
         "audience": "Verified Teacher",
@@ -7979,7 +8196,7 @@
     },
     {
       "name": "Object Aliases and Equality",
-      "url": "https://docs.google.com/presentation/d/1RLoDviznF_MliNGpxO-Ao7T7HyEgzV52VWV6m2H7Eag/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1JjCoqrDekU3vaPna_juNk5PlX8oKnWAa9p_znnsamT0/edit?usp=drive_link",
       "key": "object_aliases_and_equality",
       "properties": {
         "audience": "Verified Teacher",
@@ -7991,7 +8208,7 @@
     },
     {
       "name": "Random",
-      "url": "https://docs.google.com/presentation/d/10Oi5yzHeycikvA4BgJxuD1FDT-drSB976PN76_2Kx2U/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1f9l_HWwb1dykKJnwb_JIPbNIc-G5xAH9Jj5dfX4UWGo/edit?usp=drive_link",
       "key": "random",
       "properties": {
         "audience": "Verified Teacher",
@@ -8039,7 +8256,7 @@
     },
     {
       "name": "Static Variables and Methods",
-      "url": "https://docs.google.com/presentation/d/1GUF7kIY5-CqKawO2Ljc-9xLQCSn3peGS3fZ8d_aZBo4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1pFHIFRe2rzBVJPGArDR-cFQwSLWTEhXjzJxAqpLdQTM/edit?usp=drive_link",
       "key": "static_variables_and_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -8063,7 +8280,7 @@
     },
     {
       "name": "The Math Class",
-      "url": "https://docs.google.com/presentation/d/1bUhXmjeEfmXuiiTRwJLtCuK2BF-DEQposRXgYY66wRg/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1OIoiqCPw2Gk2WN_CAwM4chSsUeusQk3SlNoIi2aqyfQ/edit?usp=drive_link",
       "key": "the_math_class",
       "properties": {
         "audience": "Verified Teacher",
@@ -8088,7 +8305,7 @@
     },
     {
       "name": "The Theater",
-      "url": "https://docs.google.com/presentation/d/1USdmfj6RRnhnVG4G9lb9cyxg4yBpjvYSE5a2V1cAeWs/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1ZfjfjlDL91iZagG40QSZMeENQqcjkPdmtpnnl7AKG7I/edit?usp=drive_link",
       "key": "the_theater",
       "properties": {
         "audience": "Verified Teacher",
@@ -8373,7 +8590,7 @@
     },
     {
       "name": "Unit 4 Assessment",
-      "url": "https://docs.google.com/presentation/d/1kLbs0Ppy8BTV332assDj3KoM4UzbUEM11dkhDMcAm5s/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1kGYRJUgH_-hmIfm_YV089zny4qieWNNMkkEedYb2Bxc/edit?usp=drive_link",
       "key": "unit_4_assessment",
       "properties": {
         "audience": "Verified Teacher",

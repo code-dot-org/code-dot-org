@@ -9,8 +9,8 @@ Feature: Professional learning Sections
     Then I am on "http://studio.code.org/my-professional-learning"
 
     # Go to the right My PL page tab
-    And I wait until element "button:contains(Instructors)" is visible
-    Then I click selector "button:contains(Instructors)"
+    And I wait until element "button:contains(Instructor Center)" is visible
+    Then I click selector "button:contains(Instructor Center)"
 
     # Create section button
     When I see the section set up box
@@ -32,8 +32,8 @@ Feature: Professional learning Sections
     Then I am on "http://studio.code.org/my-professional-learning"
 
     # Professional Learning Sections Table
-    Then I wait until element "button:contains(Instructors)" is visible
-    Then I click selector "button:contains(Instructors)"
+    Then I wait until element "button:contains(Instructor Center)" is visible
+    Then I click selector "button:contains(Instructor Center)"
     Then I wait until element ".uitest-owned-pl-sections" is visible
     Then I should see the professional learning section table
     Then the professional learning section table should have 1 row
@@ -48,8 +48,8 @@ Feature: Professional learning Sections
     Then I am on "http://studio.code.org/my-professional-learning"
 
     # Go to the right My PL page tab
-    And I wait until element "button:contains(Instructors)" is visible
-    Then I click selector "button:contains(Instructors)"
+    And I wait until element "button:contains(Instructor Center)" is visible
+    Then I click selector "button:contains(Instructor Center)"
 
     # Create section button
     When I see the section set up box
@@ -71,8 +71,8 @@ Feature: Professional learning Sections
     Then I am on "http://studio.code.org/my-professional-learning"
 
     # Professional Learning Sections Table
-    Then I wait until element "button:contains(Instructors)" is visible
-    Then I click selector "button:contains(Instructors)"
+    Then I wait until element "button:contains(Instructor Center)" is visible
+    Then I click selector "button:contains(Instructor Center)"
     Then I wait until element ".uitest-owned-pl-sections" is visible
     Then I should see the professional learning section table
     Then the professional learning section table should have 1 row

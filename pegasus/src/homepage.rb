@@ -360,25 +360,24 @@ class Homepage
         text: "homepage_slot_text_blurb_students_courses",
         color1: "118, 101, 160",
         color2: "166, 155, 193",
-        url: CDO.studio_url("/courses"),
+        url: "/students",
         image: "/shared/images/courses/logo_tall_elementary.jpg",
         links:
           [
             {
-              text: "homepage_slot_text_link_codestudio",
-              url: CDO.studio_url("/")
+              text: "header_educate_elementary",
+              url: "/student/elementary"
             },
             {
-              text: "homepage_slot_text_link_thebadguys",
-              url: "/thebadguys"
+              text: "khan_beyond_gradelevel",
+              url: "/student/middle-high"
             },
             {
-              text: "homepage_slot_text_link_othercourses",
-              url: "/learn/beyond"
+              text: "header_about_jobs",
+              url: "/careers-with-cs"
             }
           ]
       },
-
       {
         id: "educators-en",
         type: "block",
@@ -386,7 +385,7 @@ class Homepage
         text: "homepage_slot_text_blurb_educators",
         color1: "0, 148, 202",
         color2: "89, 185, 220",
-        url: "/educate",
+        url: "/teach",
         image: "/shared/images/courses/logo_tall_teacher2.jpg",
         links:
           [
@@ -404,7 +403,6 @@ class Homepage
             }
           ]
       },
-
       {
         id: "advocate-en",
         type: "block",
