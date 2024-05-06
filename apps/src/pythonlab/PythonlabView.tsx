@@ -1,5 +1,5 @@
 // Pythonlab view
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@codebridge/types';
 import {Editor} from '@codebridge/Editor';
@@ -7,13 +7,9 @@ import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {setAndSaveSource, setSource} from './pythonlabRedux';
 import PythonConsole from './PythonConsole';
-import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import header from '@cdo/apps/code-studio/header';
-import {useInitialSources} from '@codebridge/hooks';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {useSource} from '../codebridge/hooks/useSource';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -80,36 +76,7 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const initialSources = useInitialSources({
-    source: defaultProject,
-  });
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-  const dispatch = useAppDispatch();
-  const source = useAppSelector(state => state.pythonlab.source);
-
-  // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
-  // https://codedotorg.atlassian.net/browse/CT-499
-  const setProject = useMemo(
-    () => (newProject: MultiFileSource) => {
-      dispatch(setAndSaveSource(newProject));
-    },
-    [dispatch]
-  );
-
-  // When editing start sources, we provide a save button in the header.
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  useEffect(() => {
-    if (isStartMode) {
-      header.showLevelBuilderSaveButton(() => {
-        return {source};
-      });
-    }
-  }, [isStartMode, source]);
-
-  useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    dispatch(setSource(initialSources?.source as MultiFileSource));
-  }, [channelId, dispatch, initialSources]);
+  const {source, setProject} = useSource({source: defaultProject});
 
   return (
     <div className={moduleStyles.pythonlab}>
