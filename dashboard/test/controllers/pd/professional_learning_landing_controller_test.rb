@@ -301,6 +301,46 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     assert_equal [@csd_workshop.course, @csp_workshop.course], response[:courses_as_facilitator]
   end
 
+  test 'workshop admins see application dashboard links' do
+    workshop_admin = create :workshop_admin
+    load_pl_landing workshop_admin
+    assert_select '.extra-links' do
+      assert_select 'a[href=?]', '/pd/application_dashboard'
+    end
+  end
+
+  test 'workshop admins see workshop dashboard links' do
+    workshop_admin = create :workshop_admin
+    load_pl_landing workshop_admin
+    assert_select '.extra-links' do
+      assert_select 'a[href=?]', '/pd/workshop_dashboard'
+    end
+  end
+
+  test "workshop organizers do not see extra links box" do
+    workshop_organizer = create :workshop_organizer
+    load_pl_landing workshop_organizer
+    assert_select '.extra-links', count: 0
+  end
+
+  test "facilitators do not see extra links box" do
+    facilitator = create :facilitator
+    load_pl_landing facilitator
+    assert_select '.extra-links', count: 0
+  end
+
+  test "program managers do not see extra links box" do
+    program_manager = create :program_manager
+    load_pl_landing program_manager
+    assert_select '.extra-links', count: 0
+  end
+
+  test "teachers with no extra permissions do not see extra links box" do
+    teacher = create :teacher
+    load_pl_landing teacher
+    assert_select '.extra-links', count: 0
+  end
+
   def go_to_workshop(workshop, teacher)
     enrollment = create :pd_enrollment, email: teacher.email, workshop: workshop
     create :pd_attendance, session: workshop.sessions.first, enrollment: enrollment
