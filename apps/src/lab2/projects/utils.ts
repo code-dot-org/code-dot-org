@@ -3,8 +3,9 @@ import {ProjectFile} from '../types';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.
-interface PartialAppOptions {
+export interface PartialAppOptions {
   channel: string;
+  editBlocks: string;
   levelId: number;
   share: boolean;
 }
@@ -36,6 +37,16 @@ export function getAppOptionsLevelId(): number | undefined {
   }
 }
 
+/**
+ * Returns the edit mode provided by App Options, if available.
+ * This can be used to tell if we are a levelbuilder mode (e.g. start_sources)
+ */
+export function getAppOptionsEditBlocks(): string | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.editBlocks;
+  }
+}
 /**
  * Returns if the lab should presented in a share/play-only view,
  * if present in App Options. Only used in standalone project levels.

@@ -25,9 +25,11 @@ import {
 // Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {
   if (!!participantType && !!loginType) {
-    navigateToHref(
-      `/sections/new?participantType=${participantType}&loginType=${loginType}`
-    );
+    const createSectionFromMyPl = participantType !== 'student';
+    const hrefNav =
+      `/sections/new?participantType=${participantType}&loginType=${loginType}` +
+      (createSectionFromMyPl ? '&redirectToPage=my-professional-learning' : '');
+    navigateToHref(hrefNav);
   }
 };
 

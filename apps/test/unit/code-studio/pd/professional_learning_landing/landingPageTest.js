@@ -301,7 +301,7 @@ describe('LandingPage', () => {
 
     // Regional Partner resource center
     screen.getByText(i18n.plSectionsRegionalPartnerApplicationTitle());
-    screen.getByText(i18n.plSectionsRegionalPartnerWorkshopTitle());
+    screen.getByText(i18n.plSectionsWorkshopTitle());
     screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
 
     // Regional Partner workshop table
@@ -316,6 +316,9 @@ describe('LandingPage', () => {
     fireEvent.click(
       screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter())
     );
+
+    // Workshop Organizer Resources
+    screen.getByText(i18n.plSectionsWorkshopResources());
 
     // Workshop Organizer workshop table
     screen.getByText('My Workshops');

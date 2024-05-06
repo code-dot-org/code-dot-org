@@ -47,6 +47,7 @@ class DCDOBase < DynamicConfigBase
       # Whether to show the marketing banners for the AI Teacher Assistant launch. Can be removed later.
       'ai-teaching-assistant-launch': DCDO.get('ai-teaching-assistant-launch', false),
       'incubator-canvas-block-enabled': DCDO.get('incubator-canvas-block-enabled', true),
+      'music-lab-launch-2024': DCDO.get('music-lab-launch-2024', false),
     }
   end
 end

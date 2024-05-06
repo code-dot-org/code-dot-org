@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-27 21:51:31 UTC",
+    "serialized_at": "2024-05-05 01:20:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -307,6 +307,7 @@
       "key": "c201f362-4d1b-4760-8dc7-4271f5fba69e",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "c201f362-4d1b-4760-8dc7-4271f5fba69e",
@@ -495,6 +496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-AsyncIntro_2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -517,6 +521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community1_2024"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -539,6 +546,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community2_2024"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -561,6 +571,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community3_2024"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -583,6 +596,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community4_2024"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -605,6 +621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community5_2024"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -627,6 +646,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community6_2024"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -649,6 +671,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community7_2024"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -671,6 +696,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community8_2024"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -693,6 +721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-WrapUp_2024"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

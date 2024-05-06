@@ -15532,15 +15532,19 @@ en:
           student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-csd1-2024
         self-paced-pl-csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Navigating Code.org
           title: 'Module 2: Navigating Code.org'
-          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes\n\n\n\n\n"
-          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes\n\n\n\n\n"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-csd2-2024
         self-paced-pl-csd3-2024:
           lesson_groups:
             lessonGroup-2:
@@ -15550,15 +15554,19 @@ en:
           student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-csd3-2024
         self-paced-pl-csd4-2024:
           lesson_groups:
             lessonGroup-2:
-              display_name: Teaching and learning CS Discoveries
-          title: 'Module 4: Teaching and learning CS Discoveries'
+              display_name: Teaching and Learning CS Discoveries
+          title: 'Module 4: Teaching and Learning CS Discoveries'
           description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
           student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-csd4-2024
         self-paced-pl-csd5-2024:
           lesson_groups:
             lessonGroup-2:
@@ -15568,6 +15576,8 @@ en:
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-csd5-2024
         self-paced-pl-csd-unit1-1-2024:
           lesson_groups:
             lessonGroup-2:
@@ -15577,18 +15587,26 @@ en:
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-csd-unit1-1-2024
         self-paced-pl-csd-unit1-2-2024:
           title: Preparing to Teach Problem Solving and Computing
           description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit1-2-2024
         self-paced-pl-csd-unit2-1-2024:
           title: Getting Started with Code.org
           description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit2-1-2024
         self-paced-pl-csd-unit2-2-2024:
           title: Preparing to Teach Web Development
           description: |-
@@ -15621,6 +15639,9 @@ en:
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit3-1-2024
         self-paced-pl-csd-unit3-2-2024:
           title: Preparing to Teach Interactive Animations and Games
           description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
@@ -15633,12 +15654,18 @@ en:
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit5-1-2024
         self-paced-pl-csd-unit5-2-2024:
           title: Preparing to Teach Data and Society
           description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit5-2-2024
         self-paced-pl-physical-computing1-2024:
           lesson_groups:
             lessonGroup-2:
@@ -15648,15 +15675,19 @@ en:
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the unit.\n\n**Suggested time:** 80 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-physical-computing1-2024
         self-paced-pl-physical-computing2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparing to Teach Creating Apps for Devices with Circuit Playgrounds
-          title: Preparing to Teach Creating Apps for Devices
+          title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n\n**Suggested time:** 100 minutes\n"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-physical-computing2-2024
         vpl-csd-2024-m1:
           title: Module 1
           description: ''
@@ -16019,6 +16050,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: pl-csd-summer-2024-day2
         pl-csd-summer-2024-day3:
           lesson_groups:
             lessonGroup-2:
@@ -16028,6 +16061,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: pl-csd-summer-2024-day3
         pl-csd-summer-2024-day4:
           lesson_groups:
             lessonGroup-2:
@@ -16046,6 +16081,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: pl-csd-summer-2024-day5
         virtual-pl-csd-summer-2024-day1:
           lesson_groups:
             lessonGroup-2:
@@ -16061,6 +16098,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: virtual-pl-csd-summer-2024-day1
         virtual-pl-csd-summer-2024-day2:
           lesson_groups:
             lessonGroup-2:
@@ -16128,15 +16167,19 @@ en:
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-microbit1-2024
         self-paced-pl-microbit2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparing to Teach Creating Apps for Devices with micro:bits
-          title: Preparing to Teach Creating Apps for Devices with micro:bits
+          title: Preparing to Teach Creating Apps for Devices (micro:bit)
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-microbit2-2024
         self-paced-pl-aiml1-2024:
           lesson_groups:
             lessonGroup-2:
@@ -16164,6 +16207,8 @@ en:
             **Suggested time:** 80 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-aiml1-2024
         self-paced-pl-aiml2-2024:
           lesson_groups:
             lessonGroup-2:
@@ -16199,6 +16244,9 @@ en:
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit4-1-2024
         self-paced-pl-csd-unit4-2-2024:
           title: Preparing to Teach The Design Process
           description: |-
@@ -16225,6 +16273,9 @@ en:
             **Suggested time:** 120 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit4-2-2024
         k5-onlinepd-2024:
           lesson_groups:
             Implementing and Teaching CS:
@@ -16779,3 +16830,51 @@ en:
           description_short: ''
           description: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Computer Vision unit.\n\n##### The Computer Vision unit is designed as a standalone unit for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Computer Vision unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Computer Vision Unit. \n\n\n"
           student_description: "Welcome! This professional learning module is designed to help you prepare to teach Code.org’s Computer Vision unit.\n\nThe Computer Vision unit is designed as a standalone unit for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\nIn this module, you will: \nGet an introduction to Teaching Computer Vision\nDefine and identify different uses of computer vision\nUtilize the design process to solve problems\nExplore Computer Vision lessons\n"
+        gen-ai-customizing-pilot-v1:
+          lessons:
+            lesson-1:
+              name: Foundations in a Day
+            lesson-2:
+              name: Interacting with Language Models
+            lesson-3:
+              name: System Prompting - Exploration
+            lesson-4:
+              name: System Prompting - Practice
+            lesson-5:
+              name: System Prompting - Synthesis
+            lesson-6:
+              name: Retrieval - Exploration
+            lesson-7:
+              name: Retrieval - Practice
+            lesson-8:
+              name: Retrieval - Synthesis
+            lesson-9:
+              name: Fine Tuning - Exploration
+            lesson-10:
+              name: Model Cards
+            lesson-11:
+              name: Chatbots in Society
+            lesson-12:
+              name: 'Project: Make your own Chatbot'
+            lesson-13:
+              name: Model Cards - Practice
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Foundations of Generative AI
+            lessonGroup-3:
+              display_name: Customizing Language Models
+          name: gen-ai-customizing-pilot-v1
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        elem-game-design-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: elem-game-design-2024
+          title: Game Design (2024)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
