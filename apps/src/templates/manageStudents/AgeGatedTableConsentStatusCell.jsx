@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 
 import {tableLayoutStyles} from '../tables/tableConstants';
 
-export class ManageStudentsConsentStatusCell extends Component {
+export class AgeGatedTableConsentStatusCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     consentStatus: PropTypes.string.isRequired,

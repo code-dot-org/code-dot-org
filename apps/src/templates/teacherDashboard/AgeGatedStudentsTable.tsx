@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import i18n from '@cdo/locale';
 
-import {ManageStudentsConsentStatusCell} from '../manageStudents/ManageStudentsConsentStatusCell';
+import {AgeGatedTableConsentStatusCell} from '../manageStudents/AgeGatedTableConsentStatusCell';
 import ManageStudentsFamilyNameCell from '../manageStudents/ManageStudentsFamilyNameCell';
 import {tableLayoutStyles} from '../tables/tableConstants';
 
@@ -52,7 +52,7 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
     {rowData}: RowData
   ) => {
     return (
-      <ManageStudentsConsentStatusCell
+      <AgeGatedTableConsentStatusCell
         id={rowData.id}
         consentStatus={childAccountComplianceState}
       />
