@@ -1,0 +1,25 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2024-05-05T01:30:25.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    \\n  </head>\\n  <body>\\n    <p>My name is Sofia</p>\\n    \\n    My favorite color is blue!\\n    \\n    My favorite animal is an Axolotl\\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "hide_share_and_remix": "false",
+    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# Add Text to the Body\r\n\r\nWhen you start any Web Lab project, it will automatically add `<!DOCTYPE>`, `<html>`, `<head>`, and `<body>` tags to your project. When you add content to your projects, you'll need to do it between the `<body>` and `</body>` tags because it should be part of the body of your webpage.\r\n\r\nAnother student, Sofia, has already started adding text to her webpage. She started to add paragraph tags so each sentence would appear on its own line, but hasn't finished\r\n\r\n<img src=\"https://images.code.org/391e34e673c238090ce87c314b3fdd7e-weblab-inspector.gif\" style=\"width:300px; float:right; margin-left: 10px; margin-right: 10px;\">\r\n\r\n# Do This\r\n\r\n1) Finish adding `<p>` and `</p>` tags to Sofia's code so each sentence appears on a separate line\r\n- Use the Inspector tool to verify that each line appears on its own\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n<img src=\"https://images.code.org/cdc75459cb46bd58d5af50df0ca56e3d-image-1677101838977.gif\" style=\"width:500px\">\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n:::\r\n\r\n![]()",
+    "submittable": "false",
+    "parent_level_id": 20000,
+    "name_suffix": "_CSD-PL-23",
+    "map_reference": "/courses/csd-2024/guides/html-tags",
+    "video_key": "csd_weblab_intro_2",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-05T01:30:25.790+00:00\",\"changed\":[\"cloned from \\\"CSD U2 HTML Adding Paragraphs_2024\\\"\"],\"cloned_from\":\"CSD U2 HTML Adding Paragraphs_2024\"}]"
+}]]></config>
+</Weblab>

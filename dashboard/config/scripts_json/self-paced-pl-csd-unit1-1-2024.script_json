@@ -8,11 +8,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-24 20:45:17 UTC",
+    "serialized_at": "2024-05-05 22:59:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -347,6 +348,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -369,6 +373,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -566,6 +573,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations"
+        ],
         "progression": "Set Up a Class Section"
       },
       "bonus": false,

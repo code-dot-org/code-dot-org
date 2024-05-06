@@ -1,11 +1,9 @@
-import {useCDOIDEContext} from '@cdoide/cdoIDEContext';
 import React from 'react';
+
+import InstructionsView from '@cdo/apps/lab2/views/components/Instructions';
 
 import './styles/instructions.css';
 
 export const Instructions = React.memo(() => {
-  const {
-    config: {instructions},
-  } = useCDOIDEContext();
-  return <div className="instructions">{instructions}</div>;
+  return <InstructionsView />;
 });

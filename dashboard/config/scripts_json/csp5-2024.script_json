@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-05 00:08:12 UTC",
+    "serialized_at": "2024-05-02 19:17:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3213,6 +3213,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 1_2024"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -3235,6 +3238,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 2_2024"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -3257,6 +3263,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 3_2024"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -3279,6 +3288,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 10_2024"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -3301,6 +3313,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 4_2024"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -3323,6 +3338,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 5_2024"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -3345,6 +3363,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 6_2024"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -3367,6 +3388,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice equivalent expressions_2024"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -3389,6 +3413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 7_2024"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -3411,6 +3438,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 8_2024"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -3433,6 +3463,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Conditionals Practice MOD_2024"
+        ],
         "progression": "MOD Practice"
       },
       "bonus": false,
@@ -3455,6 +3488,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L7 Choice_2024"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -3477,6 +3513,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Conditionals Psuedocode2022_2024"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -3499,6 +3538,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Conditionals Psuedocode 22022_2024"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,

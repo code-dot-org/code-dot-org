@@ -720,17 +720,15 @@ module SharedConstants
 
   AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
 
-  # These are the types of assistance AI Tutor can provide
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
   }.freeze
 
-  PII_TYPES = {
-    EMAIL: 'email',
-    PHONE: 'phone',
-    ADDRESS: 'address',
+  AICHAT_ERROR_TYPE = {
+    PROFANITY_MODEL: 'profanity_model',
+    PROFANITY_USER: 'profanity_user'
   }.freeze
 
   USER_TYPES = OpenStruct.new(

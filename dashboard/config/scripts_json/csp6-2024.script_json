@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-01 22:25:53 UTC",
+    "serialized_at": "2024-05-02 19:18:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3609,6 +3609,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 6_2024"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3631,6 +3634,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 7_2024"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3653,6 +3659,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 8_2024"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3675,6 +3684,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 9_2024"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3697,6 +3709,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 10_2024"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,

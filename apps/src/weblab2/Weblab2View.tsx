@@ -6,6 +6,7 @@ import {Config} from './Config';
 
 import {CDOIDE} from '@cdoide/CDOIDE';
 import {ConfigType, ProjectType} from '@cdoide/types';
+import {useInitialSources} from '@cdoide/hooks';
 
 import {Editor as CDOEditor} from './CDOIDE/Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -14,12 +15,6 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import {css} from '@codemirror/lang-css';
-
-const instructions = `Add html pages and preview them in the right pane.
-
-Add css pages (and link them to your html).
-
-Use the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)`;
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
@@ -77,7 +72,6 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions,
   ...horizontalLayout,
 };
 
@@ -163,7 +157,9 @@ const Weblab2View = () => {
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
-  const initialSources = useAppSelector(state => state.lab.initialSources);
+  const initialSources = useInitialSources({
+    source: defaultProject,
+  });
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const setProject = useMemo(
