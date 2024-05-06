@@ -15,6 +15,8 @@ import {
   AiInteractionStatus as Status,
   AichatErrorType,
 } from '@cdo/generated-scripts/sharedConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
@@ -105,14 +107,15 @@ export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
     const rootState = (await thunkAPI.getState()) as RootState;
-    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
-      rootState.aichat;
+    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const levelId = rootState.progress.currentLevelId;
     const {dispatch} = thunkAPI;
 
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      chatMessages,
+      EVENTS.UPDATE_CHATBOT,
+      levelId,
       dispatch
     );
   }
@@ -128,12 +131,13 @@ export const publishModel = createAsyncThunk(
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
 
     const rootState = thunkAPI.getState() as RootState;
-    const {currentAiCustomizations, savedAiCustomizations, chatMessages} =
-      rootState.aichat;
+    const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const levelId = rootState.progress.currentLevelId;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      chatMessages,
+      EVENTS.PUBLISH_MODEL_CARD_INFO,
+      levelId,
       dispatch
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -146,19 +150,22 @@ export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
   async (_, thunkAPI) => {
     const {dispatch} = thunkAPI;
-    const modelCardInfo = (thunkAPI.getState() as RootState).aichat
-      .currentAiCustomizations.modelCardInfo;
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const modelCardInfo =
+      rootState.aichat.currentAiCustomizations.modelCardInfo;
+    const levelId = rootState.progress.currentLevelId;
     if (!hasFilledOutModelCard(modelCardInfo)) {
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
 
-    const {currentAiCustomizations, savedAiCustomizations, chatMessages} = (
+    const {currentAiCustomizations, savedAiCustomizations} = (
       thunkAPI.getState() as RootState
     ).aichat;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
-      chatMessages,
+      EVENTS.SAVE_MODEL_CARD_INFO,
+      levelId,
       dispatch
     );
   }
@@ -177,7 +184,8 @@ const getNewMessageId = () => {
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
-  storedMessages: ChatCompletionMessage[],
+  eventDescription: string,
+  levelId: string | null,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
@@ -210,7 +218,6 @@ const saveAiCustomization = async (
     savedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
-
   if (
     changedProperties.some(property =>
       [
@@ -235,6 +242,16 @@ const saveAiCustomization = async (
         timestamp: getCurrentTime(),
       })
     );
+    if (eventDescription) {
+      analyticsReporter.sendEvent(
+        eventDescription,
+        {
+          propertyUpdated: property,
+          levelId,
+        },
+        PLATFORMS.BOTH
+      );
+    }
   });
 };
 
