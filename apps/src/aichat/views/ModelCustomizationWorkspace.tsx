@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Tabs, {Tab} from './tabs/Tabs';
 import SetupCustomization from './modelCustomization/SetupCustomization';
@@ -29,6 +29,12 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     isVisible(systemPrompt) ||
     isVisible(selectedModelId);
 
+  const [showTab, setShowTab] = useState<boolean>(true);
+  setTimeout(() => {
+    console.log('here');
+    setShowTab(false);
+  }, 10000);
+
   return (
     <div className={styles.modelCustomizationWorkspace}>
       <Tabs
@@ -42,7 +48,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
               title: 'Retrieval',
               content: <RetrievalCustomization />,
             },
-            isVisible(modelCardInfo) &&
+            showTab &&
               !hidePresentationPanel && {
                 title: 'Publish',
                 content: <PublishNotes />,

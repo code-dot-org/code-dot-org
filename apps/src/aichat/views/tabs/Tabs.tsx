@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import classNames from 'classnames';
 
 import styles from './tabs.module.scss';
@@ -27,6 +27,10 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
       ? initialActiveIndex
       : 0
   );
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [tabs]);
 
   const handleTabClick = (index: number) => {
     setActiveIndex(index);
