@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 // @ts-expect-error Import error for reactabular-table in typescript
 import * as Table from 'reactabular-table';
@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import i18n from '@cdo/locale';
 
-import ManageStudentsConsentStatusCell from '../manageStudents/ManageStudentsConsentStatusCell';
+import {ManageStudentsConsentStatusCell} from '../manageStudents/ManageStudentsConsentStatusCell';
 import ManageStudentsFamilyNameCell from '../manageStudents/ManageStudentsFamilyNameCell';
 import {tableLayoutStyles} from '../tables/tableConstants';
 
@@ -20,7 +20,10 @@ interface ReduxState {
 }
 
 interface RowData {
-  rowData: object;
+  rowData: {
+    id: number;
+    familyName: string;
+  };
 }
 
 interface Props {
@@ -28,10 +31,6 @@ interface Props {
 }
 
 const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
-  useEffect(() => {
-    console.log(studentData);
-  });
-
   const getColumns = () => {
     const columns = [nameColumn(), consentStatusColumn()];
 
@@ -39,15 +38,11 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
   };
 
   const nameFormatter = (name: string, {rowData}: RowData) => {
-    console.log(rowData, typeof rowData);
-    const editedValue = rowData.isEditing ? rowData.editingData.name : '';
     const familyName = rowData.familyName ? rowData.familyName : '';
     return (
       <ManageStudentsFamilyNameCell
         id={rowData.id}
         familyName={`${name} ${familyName}`}
-        isEditing={rowData.isEditing}
-        editedValue={editedValue}
       />
     );
   };

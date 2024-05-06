@@ -1,26 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 
-import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles} from '../tables/tableConstants';
 
-import {editStudent} from './manageStudentsRedux';
-
-class ManageStudentsConsentStatusCell extends Component {
+export class ManageStudentsConsentStatusCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
-    consentStatus: PropTypes.string.isReequired,
-
-    //Provided by redux
-    editStudent: PropTypes.func.isRequired,
-    scriptName: PropTypes.string,
-  };
-
-  onChangeName = e => {
-    this.props.editStudent(this.props.id, {name: e.target.value});
+    consentStatus: PropTypes.string.isRequired,
   };
 
   getConsentStatus = () => {
@@ -44,14 +32,3 @@ class ManageStudentsConsentStatusCell extends Component {
     );
   }
 }
-
-export default connect(
-  state => ({
-    scriptName: getSelectedScriptName(state),
-  }),
-  dispatch => ({
-    editStudent(id, studentInfo) {
-      dispatch(editStudent(id, studentInfo));
-    },
-  })
-)(ManageStudentsConsentStatusCell);
