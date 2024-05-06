@@ -28,7 +28,7 @@
       "@cdo/apps/*": ["./src/*"],
       "@cdo/static/*": ["./static/*"],
       "@cdo/i18n/*": ["./i18n/*"],
-      "@cdoide/*": ["./src/weblab2/CDOIDE/*"],
+      "@cdoide/*": ["./src/CDOIDE/*"],
       "@cdo/generated-scripts/*": ["./generated-scripts/*"]
     },
     "resolveJsonModule": true,

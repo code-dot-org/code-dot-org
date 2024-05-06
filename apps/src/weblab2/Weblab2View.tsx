@@ -8,7 +8,7 @@ import {CDOIDE} from '@cdoide/CDOIDE';
 import {ConfigType, ProjectType} from '@cdoide/types';
 import {useInitialSources} from '@cdoide/hooks';
 
-import {Editor as CDOEditor} from './CDOIDE/Editor';
+import {Editor as CDOEditor} from '@cdoide/Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';

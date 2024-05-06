@@ -1,11 +1,11 @@
 // Pythonlab view
 import React, {useEffect, useMemo, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
-import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
-import {Editor} from '@cdo/apps/weblab2/CDOIDE/Editor';
+import {ConfigType} from '@cdo/apps/CDOIDE/types';
+import {Editor} from '@cdo/apps/CDOIDE/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
-import {CDOIDE} from '@cdo/apps/weblab2/CDOIDE';
+import {CDOIDE} from '@cdo/apps/CDOIDE';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setAndSaveSource, setSource} from './pythonlabRedux';
