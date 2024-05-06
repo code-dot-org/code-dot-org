@@ -259,7 +259,7 @@ class EvaluateRubricJob < ApplicationJob
   RETRIES_ON_TIMEOUT = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
     Cdo::Metrics.push(
       AI_RUBRIC_METRICS_NAMESPACE,
       [
@@ -272,6 +272,27 @@ class EvaluateRubricJob < ApplicationJob
           unit: 'Count'
         }
       ]
+    )
+
+    options = job.arguments.first
+    script_level = ScriptLevel.find(options[:script_level_id])
+
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'ai-rubrics',
+        study_group: 'v0',
+        event: 'retry-on-timeout',
+        data_string: "#{error.class.name}: #{error.message}",
+        data_json: {
+          user_id: options[:user_id],
+          requester_id: options[:requester_id],
+          script_level_id: options[:script_level_id],
+          script_name: script_level.script.name,
+          lesson_number: script_level.lesson.relative_position,
+          level_name: script_level.level.name,
+        }.to_json
+      }
     )
   end
 
