@@ -7,7 +7,7 @@ Feature: BubbleChoice
 
     # Complete the level
     And I wait until element ".submitButton" is visible
-    And I click selector ".submitButton"
+    And I click selector ".submitButton" to load a new page
 
     # Make sure you are taken back to the BubbleChoice activity page with progress
     And I wait until current URL contains "/lessons/40/levels/1"
