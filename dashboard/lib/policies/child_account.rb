@@ -50,6 +50,22 @@ class Policies::ChildAccount
     ComplianceState.permission_granted?(user)
   end
 
+  # Checks if a user predates the us_state collection that occurs during the sign up
+  # flow. We want to make sure we retrieve the state for those older accounts which have their
+  # state missing
+  # We use Colorado as it is the only start date we have for now
+  def self.user_predates_state_collection?(user)
+    user.created_at < STATE_POLICY['CO'][:start_date]
+  end
+
+  # 'cap-state-modal-rollout' should be a value in the range [0,100]
+  # If the value is 10, 10% of users will see the modal
+  # If the value is 50, 50% of users will see the modal
+  def self.show_cap_state_modal?(user)
+    return false unless user&.id
+    (user.id % 100) < DCDO.get('cap-state-modal-rollout', 0)
+  end
+
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
   def self.user_predates_policy?(user)
@@ -73,7 +89,7 @@ class Policies::ChildAccount
 
   # Does the user login using credentials they personally control?
   # For example, some accounts are created and owned by schools (Clever).
-  private_class_method def self.personal_account?(user)
+  def self.personal_account?(user)
     return false if user.sponsored?
     # List of credential types which we believe schools have ownership of.
     # Does the user have an authentication method which is not controlled by

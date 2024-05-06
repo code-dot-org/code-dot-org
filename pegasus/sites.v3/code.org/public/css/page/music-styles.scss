@@ -81,6 +81,19 @@ ul.featured-artists {
   }
 }
 
+section.student-projects {
+  .grid-container {
+    @media (min-width: $width-md) {
+      grid-template-columns: 60% auto;
+    }
+  }
+
+  .text-wrapper {
+    background: var(--neutral_light);
+    padding: 2rem;
+  }
+}
+
 section.quote {
   background: url("/images/banners/banner-bg-music.png") center repeat-x;
   background-size: contain;

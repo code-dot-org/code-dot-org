@@ -6,8 +6,10 @@
   overflow: hidden;
 }
 
-.userMessageContainer {
+.userMessage {
   margin: 0 0 15px 50px;
+  background-color: $brand_teal_5;
+  border-radius: 16px 0 16px 16px;
 }
 
 .assistantMessageContainer {
@@ -15,32 +17,12 @@
   display: flex;
 }
 
-.modelUpdateMessageContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $light_affirmative_100;
-  border-radius: 4px;
-  padding: 5px 10px;
-  margin: 3px 0;
-
-  .removeStatusUpdate {
-    background-color: transparent;
-    color: $light_gray_700;
-
-    &:hover {
-      background-color: transparent;
-      color: $light_gray_700;
-    }
-  }
-
-  &Alert {
-    background-color: #FEF7DF;
-  }
+.modelUpdateMessageTextContainer {
+  margin-right: 10px;
 }
 
-.modelUpdateMessageTextContainer {
-  margin: 0 10px;
+.modelUpdateContainer {
+  background-color: $light_affirmative_100;
 }
 
 .check {
@@ -48,14 +30,13 @@
   font-size: 16px;
 }
 
-.alert {
-  color: $light_caution_500;
+.danger {
+  color: $light_negative_500;
   font-size: 16px;
 }
 
-.userMessage {
-  background-color: $brand_teal_5;
-  border-radius: 16px 0 16px 16px;
+.dangerContainer {
+  background-color: #FBE0DD;
 }
 
 .assistantMessage {

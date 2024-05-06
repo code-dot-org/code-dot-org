@@ -10,7 +10,7 @@ class EvaluateRubricJob < ApplicationJob
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-25-confidence-exact/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-04-30-confidence-autogen-turbo/'.freeze
 
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 

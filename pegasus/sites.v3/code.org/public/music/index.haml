@@ -3,9 +3,6 @@ title: Music Lab
 theme: responsive_full_width
 ---
 
-- button_url = CDO.studio_url("/s/music-intro-2024")
-- button_string = hoc_s("music_lab.button.try_music_lab")
-
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/music-styles.css", rel: "stylesheet"}
 
@@ -18,11 +15,11 @@ theme: responsive_full_width
         =hoc_s("music_lab.banner.heading")
       %p.body-one.white
         =hoc_s("music_lab.banner.desc")
-      %a.link-button.white{href: button_url}
-        =button_string
+      %a.link-button.white{href: CDO.studio_url("/s/music-intro-2024")}
+        =hoc_s("music_lab.button.try_music_lab")
       .afe.flex-container.align-items-baseline.wrap
         %p.add-margin-top.no-margin-bottom.white
-          =hoc_s("music_lab.in_partnerhip_with")
+          =hoc_s("music_lab.in_partnership_with")
         %figure
           %img{src: "/images/avatars/amazon_future_engineer_light.png", alt: hoc_s("music_lab.amazon_future_engineer")}
     %figure
@@ -39,9 +36,10 @@ theme: responsive_full_width
     .flex-1-5
       = view :"music/music_lab_featured_artists"
 
--# %section
--#   .wrapper
--#     TODO - FEATURED PROJECTS
+%section.student-projects
+  .wrapper
+    %h2=hoc_s("music_lab.student_projects.heading")
+    = view :"music/music_lab_student_projects"
 
 %section.bg-primary-light
   .wrapper.flex-container.justify-space-between.align-items-center.wrap.flex-direction-column-tablet.gap-1
