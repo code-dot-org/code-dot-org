@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-05-04T03:02:31.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Heading\r\n\r\nParagraph\r\n\r\n### Do This\r\n\r\n1) Thing\r\n   * Sub-bullet\r\n   * Sub-bullet\r\n2) Thing\r\n\r\nTest the chatbot! Type in a message and press the `Continue`(#7435b2) button!\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Idea 1\r\n* Idea 2\r\n* Idea 3\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "editable"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-04T03:02:31.325+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-template\"},{\"changed_at\":\"2024-05-04 03:03:15 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

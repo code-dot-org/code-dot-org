@@ -1,0 +1,10 @@
+name 'CSD Games variables challenge_CSD-PL-24'
+display_name 'Variables Challenges'
+description 'Expand your variables skills with these challenges.'
+
+sublevels
+level 'CSD U3 Variables Draw Challenge_CSD-PL-24'
+level 'CSD U3 Variables Challenge_CSD-PL-24'
+level 'CSD U3 Variables String Challenge_CSD-PL-24'
+level 'CSD U3 L5 Freeplay_CSD-PL-24'
+level 'CSD U3 L5 Freeplay2_CSD-PL-24'
