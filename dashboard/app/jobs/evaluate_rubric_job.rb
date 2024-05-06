@@ -109,7 +109,7 @@ class EvaluateRubricJob < ApplicationJob
   # the AI proxy service.
   #
   # @param [Hash] response The parsed JSON response from the AI proxy.
-  def self.log_metrics(response)
+  def self.log_token_metrics(response)
     # Record the metadata
     # The aiproxy service will report the usage in the metadata via:
     # { metadata: { agent: 'openai', usage: { total_tokens: 1234, prompt_tokens: 432, completion_tokens: 802 } } }
@@ -343,7 +343,7 @@ class EvaluateRubricJob < ApplicationJob
     response = get_openai_evaluations(openai_params)
 
     # Log tokens and usage information
-    EvaluateRubricJob.log_metrics(response)
+    EvaluateRubricJob.log_token_metrics(response)
 
     # Get and validate the response data
     ai_evaluations = response['data']
