@@ -1,19 +1,24 @@
 import React, {useEffect, useState} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import {
   BodyTwoText,
+  BodyThreeText,
   Heading3,
   Heading4,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
 import SectionSelector from './SectionSelector';
+import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';
 import {CSVLink} from 'react-csv';
@@ -34,13 +39,15 @@ const STATUS_ALL = {
   ERROR: 'error',
 };
 
-export default function RubricSettings({
+function RubricSettings({
   visible,
   refreshAiEvaluations,
   rubric,
   sectionId,
   tabSelectCallback,
   reportingData,
+  aiRubricsDisabled,
+  setAiRubricsDisabled,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -61,6 +68,11 @@ export default function RubricSettings({
       return {label: String(lg.learningGoal), key: String(lg.id)};
     })
   );
+
+  const updateAiRubricsDisabled = () => {
+    new UserPreferences().setAiRubricsDisabled(!aiRubricsDisabled);
+    setAiRubricsDisabled(!aiRubricsDisabled);
+  };
 
   const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
     return fetch(
@@ -352,6 +364,27 @@ export default function RubricSettings({
             )}
           </div>
         </div>
+
+        <div className={style.settingsGroup}>
+          <Heading4>{i18n.aiSettings()}</Heading4>
+          <div
+            className={classnames(
+              'uitest-rubric-ai-enable',
+              style.settingsContainers,
+              style.aiSettingsContainer
+            )}
+          >
+            <BodyThreeText>
+              <StrongText>{i18n.useAiFeaturesOnCodeOrg()}</StrongText>
+            </BodyThreeText>
+            <Toggle
+              label={i18n.useAiFeatures()}
+              checked={!aiRubricsDisabled}
+              onChange={updateAiRubricsDisabled}
+              size="s"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -366,4 +399,18 @@ RubricSettings.propTypes = {
   sectionId: PropTypes.number,
   tabSelectCallback: PropTypes.func,
   reportingData: reportingDataShape,
+  aiRubricsDisabled: PropTypes.bool,
+  setAiRubricsDisabled: PropTypes.func.isRequired,
 };
+
+export const UnconnectedRubricSettings = RubricSettings;
+
+export default connect(
+  state => ({
+    aiRubricsDisabled: state.currentUser.aiRubricsDisabled,
+  }),
+  dispatch => ({
+    setAiRubricsDisabled: aiRubricsDisabled =>
+      dispatch(setAiRubricsDisabled(aiRubricsDisabled)),
+  })
+)(RubricSettings);
