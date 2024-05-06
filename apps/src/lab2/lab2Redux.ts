@@ -32,9 +32,8 @@ import {
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
-
-import getScriptData from '@cdo/apps/util/getScriptData';
-import {PartialAppOptions} from '../lab2/projects/utils';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {START_SOURCES} from './constants';
 
 interface PageError {
   errorMessage: string;
@@ -128,8 +127,7 @@ export const setUpWithLevel = createAsyncThunk(
 
       // Start mode doesn't use channel ids so we can skip creating
       // a project manager and just set the level data.
-      const appOptions = getScriptData('appoptions') as PartialAppOptions;
-      const isStartMode = appOptions.editBlocks === 'start_sources';
+      const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
       if (isStartMode) {
         setProjectAndLevelData(
           {levelProperties},

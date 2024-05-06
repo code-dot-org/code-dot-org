@@ -1,14 +1,13 @@
 import {useMemo} from 'react';
 
-import {PartialAppOptions} from '@cdo/apps/lab2/projects/utils';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
-import getScriptData from '@cdo/apps/util/getScriptData';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 export const useInitialSources = (defaultSources: ProjectSources) => {
   const labState = useAppSelector(state => state.lab);
-  const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  const isStartMode = appOptions.editBlocks === 'start_sources';
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const initialSources = useMemo(() => {
     const startSources = labState.levelProperties?.source

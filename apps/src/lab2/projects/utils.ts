@@ -38,6 +38,16 @@ export function getAppOptionsLevelId(): number | undefined {
 }
 
 /**
+ * Returns the edit mode provided by App Options, if available.
+ * This can be used to tell if we are a levelbuilder mode (e.g. start_sources)
+ */
+export function getAppOptionsEditBlocks(): string | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.editBlocks;
+  }
+}
+/**
  * Returns if the lab should presented in a share/play-only view,
  * if present in App Options. Only used in standalone project levels.
  */

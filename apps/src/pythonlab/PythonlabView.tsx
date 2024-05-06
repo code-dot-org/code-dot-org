@@ -1,5 +1,5 @@
 // Pythonlab view
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
 import {Editor} from '@cdo/apps/weblab2/CDOIDE/Editor';
@@ -10,9 +10,8 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setAndSaveSource, setSource} from './pythonlabRedux';
 import PythonConsole from './PythonConsole';
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import {PartialAppOptions} from '../lab2/projects/utils';
+import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import header from '@cdo/apps/code-studio/header';
 import {useInitialSources} from '@cdoide/hooks';
 
@@ -87,7 +86,6 @@ const PythonlabView: React.FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
   const source = useAppSelector(state => state.pythonlab.source);
-  const sourceRef = useRef(source);
 
   // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
   // https://codedotorg.atlassian.net/browse/CT-499
@@ -99,20 +97,14 @@ const PythonlabView: React.FunctionComponent = () => {
   );
 
   // When editing start sources, we provide a save button in the header.
-  // We track the current source as it changes so that it can be saved any time.
-  const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  const isStartMode = appOptions.editBlocks === 'start_sources';
-  useEffect(() => {
-    sourceRef.current = source;
-  }, [source]);
-
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        return {source: sourceRef.current};
+        return {source};
       });
     }
-  }, [isStartMode]);
+  }, [isStartMode, source]);
 
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
