@@ -18,14 +18,6 @@ module Lti
         if existing_user&.valid_password?(params[:password])
           user_params = params[:user] || ActionController::Parameters.new
           user_params[:user_type] ||= session[:default_sign_up_user_type]
-          # rehydrated_user = User.new_with_session(user_params.permit(:user_type), session)
-          # ao = rehydrated_user.authentication_options.first
-          # existing_user.authentication_options << ao
-          # Services::Lti.create_lti_user_identity(existing_user)
-          # if existing_user.user_type == User::TYPE_TEACHER
-          #   user.lti_roster_sync_enabled = true
-          # end
-          # PartialRegistration.delete(session)
           Services::Lti::AccountLinker.call(user: existing_user, session: session)
           sign_in existing_user
           redirect_to home_path
