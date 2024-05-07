@@ -4,7 +4,7 @@ import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import moduleStyles from './extra-links.module.scss';
 import Button from '@cdo/apps/templates/Button';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
 // Extra Links modal. This is used to display helpful links for levelbuilders, and should
 // be extended to also include links for project validators as well. It replaces the haml
@@ -12,14 +12,14 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 interface ExtraLinksModalProps {
   linkData: ExtraLinksData;
   isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
+  closeModal: () => void;
   levelId: number;
 }
 
 const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   linkData,
   isOpen,
-  setIsOpen,
+  closeModal,
   levelId,
 }) => {
   const [showCloneField, setShowCloneField] = useState(false);
@@ -29,13 +29,11 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   const [deleteError, setDeleteError] = useState('');
 
   useEffect(() => {
-    if (linkData) {
-      setClonedLevelName(linkData.level_name);
-    }
+    setClonedLevelName(linkData.level_name);
   }, [linkData]);
 
   const onClose = () => {
-    setIsOpen(false);
+    closeModal();
     setShowCloneField(false);
     setShowDeleteConfirm(false);
     setCloneError('');
@@ -44,44 +42,44 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
 
   const handleClone = async () => {
     if (clonedLevelName) {
-      const response = await fetch(
-        `/levels/${levelId}/clone?name=${clonedLevelName}`,
-        {
-          method: 'POST',
-          headers: {
-            contentType: 'application/json;charset=UTF-8',
-            'X-CSRF-Token': await getAuthenticityToken(),
-          },
-        }
-      );
-      if (response.ok) {
+      try {
+        const response = await HttpClient.post(
+          `/levels/${levelId}/clone?name=${clonedLevelName}`,
+          undefined,
+          true,
+          {contentType: 'application/json;charset=UTF-8'}
+        );
         const result = await response.json();
         if (result.redirect) {
           window.location.href = result.redirect;
         }
-      } else {
-        const responseText = await response.text();
-        setCloneError(responseText);
+      } catch (e) {
+        if (e instanceof NetworkError) {
+          const responseText = await e.response.text();
+          setCloneError(responseText);
+        } else {
+          setCloneError((e as Error).message);
+        }
       }
     }
   };
 
   const handleDelete = async () => {
-    const response = await fetch(`/levels/${levelId}`, {
-      method: 'DELETE',
-      headers: {
+    try {
+      const response = await HttpClient.delete(`/levels/${levelId}`, true, {
         Accept: 'application/json',
-        'X-CSRF-Token': await getAuthenticityToken(),
-      },
-    });
-    if (response.ok) {
+      });
       const result = await response.json();
       if (result.redirect) {
         window.location.href = result.redirect;
       }
-    } else {
-      const responseText = await response.text();
-      setDeleteError(responseText);
+    } catch (e) {
+      if (e instanceof NetworkError) {
+        const responseText = await e.response.text();
+        setDeleteError(responseText);
+      } else {
+        setDeleteError((e as Error).message);
+      }
     }
   };
 

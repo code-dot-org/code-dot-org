@@ -3,6 +3,8 @@ import {useFetch} from '@cdo/apps/util/useFetch';
 import React, {useEffect, useState} from 'react';
 import moduleStyles from './extra-links.module.scss';
 import ExtraLinksModal from './ExtraLinksModal';
+import {PERMISSIONS} from '../constants';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 interface ExtraLinksProps {
   levelId: number;
@@ -32,14 +34,16 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     const permissionData = data
       ? (data as PermissionResponse)
       : {permissions: []};
-    if (permissionData.permissions.includes('levelbuilder')) {
-      fetch(`/levels/${levelId}/extra_links`).then(response => {
-        if (response.ok) {
-          response.json().then((data: ExtraLinksResponse) => {
-            setLinkData(data);
-          });
-        }
-      });
+    if (permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER)) {
+      try {
+        HttpClient.fetchJson<ExtraLinksResponse>(
+          `/levels/${levelId}/extra_links`
+        ).then(response => {
+          setLinkData(response.value);
+        });
+      } catch (e) {
+        console.error('Error fetching extra links', e);
+      }
     }
   }, [data, levelId]);
 
@@ -47,7 +51,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     ? (data as PermissionResponse)
     : {permissions: []};
 
-  if (!permissionData.permissions.includes('levelbuilder')) {
+  if (!permissionData.permissions.includes(PERMISSIONS.LEVELBUILDER)) {
     return <></>;
   }
 
@@ -62,7 +66,7 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
         <ExtraLinksModal
           linkData={linkData}
           isOpen={isModalOpen}
-          setIsOpen={setIsModalOpen}
+          closeModal={() => setIsModalOpen(false)}
           levelId={levelId}
         />
       )}

@@ -18,3 +18,8 @@ export const BLOCKLY_LABS: AppName[] = [
 ];
 
 export const MAIN_PYTHON_FILE = 'main.py';
+
+export enum PERMISSIONS {
+  // Add more permissions as needed.
+  LEVELBUILDER = 'levelbuilder',
+}
