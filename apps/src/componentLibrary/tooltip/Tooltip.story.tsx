@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
-import Tooltip, {TooltipOverlay, TooltipProps} from './index';
+import Tooltip, {TooltipOverlay, TooltipProps, WithTooltip} from './index';
 
 export default {
   title: 'DesignSystem/Tooltip', // eslint-disable-line storybook/no-title-property-in-meta
@@ -11,23 +11,18 @@ export default {
    * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
    * Feel free to remove this workaround when storybook fixes this issue.
    */
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore-next-line
   component: Tooltip,
 } as Meta;
 
 //
 // TEMPLATE
 //
-// This is needed to fix children type error (passing string instead of React.ReactNode type)
-// eslint-disable-next-line
 const SingleTemplate: StoryFn<TooltipProps> = args => (
-  <TooltipOverlay>
-    <button aria-describedby={args.tooltipId} style={{margin: 0}} type="button">
+  <WithTooltip tooltipProps={{...args}}>
+    <button style={{margin: 0}} type="button">
       Hover me
     </button>
-    <Tooltip {...args} />
-  </TooltipOverlay>
+  </WithTooltip>
 );
 
 const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
@@ -54,7 +49,6 @@ const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
     </div>
   </>
 );
-
 export const DefaultTooltip = SingleTemplate.bind({});
 DefaultTooltip.args = {
   text: 'Tooltip Label',
