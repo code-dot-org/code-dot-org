@@ -16,6 +16,7 @@
 .assistantMessageContainer {
   margin: 0 50px 15px 0;
   display: flex;
+  align-items: start;
 }
 
 .modelUpdateMessageTextContainer {
@@ -43,6 +44,7 @@
 .assistantMessage {
   background-color: $light_gray_50;
   border-radius: 0 16px 16px 16px;
+  margin-top: 14px; // a quarter of height of bot icon
 }
 
 .inappropriateMessage {
