@@ -46,6 +46,7 @@ const PythonSourceResponseValidator: ResponseValidator<
   return sourceValidatorHelper(response, pythonValidator);
 };
 
+// Validator for labs that use JSON sources
 const JsonSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
