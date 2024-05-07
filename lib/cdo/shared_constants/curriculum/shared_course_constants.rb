@@ -59,7 +59,9 @@ module Curriculum
         pd_workshop_activity_csf: 'PD Workshop Activity CSF',
         pd_workshop_activity_csd: 'PD Workshop Activity CSD',
         pd_workshop_activity_csp: 'PD Workshop Activity CSP',
-        pd_workshop_activity_csa: 'PD Workshop Activity CSA'
+        pd_workshop_activity_csa: 'PD Workshop Activity CSA',
+        foundations_of_cs: 'Foundations of CS',
+        foundations_of_programming: 'Foundations of Programming'
       }
     ).freeze
 

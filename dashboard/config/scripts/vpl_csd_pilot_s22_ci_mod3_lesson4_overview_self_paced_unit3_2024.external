@@ -5,19 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Explore Game Design
 
-##### In the next section of this professional learning module, you will be introduced to additional commands that will allow students to create more sophisticated animations and games. 
+#### In the next section of this professional learning module, you will be introduced to additional commands that will allow students to create more sophisticated animations and games. 
 </p></div>
 
-## You will:
+### **You will:**
 
-* ##### Use conditionals to react to changes in variables and sprite properties.
-* ##### Move sprites in response to inputs. 
-* ##### Use abstractions to reduce the complexity of code. 
+* #### Use conditionals to react to changes in variables and sprite properties.
+* #### Move sprites in response to inputs. 
+* #### Use abstractions to reduce the complexity of code. 
+<br>
 
 ### **Suggested time:** 20 minutes
-
-#### Let's keep learning! 
-
-
-
 MARKDOWN

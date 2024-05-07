@@ -5,18 +5,18 @@ description 'description here'
 markdown <<MARKDOWN
 # Engage with Prototypes
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+#### After learning the basics of inputs and outputs in Chapter 1, students will move on to focus on how their physical device can interact with the outside world. 
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">After learning the basics of inputs and outputs in Chapter 1, students will move on to focus on how their physical device can interact with the outside world. In Chapter 2, students learn how to <strong>use sensors and the accelerometer to react to the physical environment.</strong> They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.</p></div>
+#### In Chapter 2, students learn how to <strong>use sensors and the accelerometer to react to the physical environment.</strong> They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. 
 
-## You will:
+#### By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.</p></div>
 
-* ##### Explore sample apps and prototypes. 
+### **You will:**
 
-### **Suggested time:** 20 minutes
+* #### Explore sample apps and prototypes. 
+<br>
 
-## Let's keep learning! 
-
+#### **Suggested time:** 20 minutes
 
 
 MARKDOWN

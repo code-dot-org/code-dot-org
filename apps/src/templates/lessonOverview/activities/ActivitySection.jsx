@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonTip from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
