@@ -18,8 +18,9 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
 
-// TODO: These tableLayoutStylesOverrides are necessary to use reactabular-table
-// with our existing table styles. We should ultimately modify the types in tableConstants
+// TODO: Some of these overrides are necessary to reconcile CSS property values that are numbers
+// in the tableConstants file but must be strings according to the reactabular-table type definitions.
+// We should consider updating the tableConstants file to use strings where necessary.
 const styleOverrides = {
   table: {
     borderWidth: '1px',
