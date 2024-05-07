@@ -41,9 +41,8 @@ memcached_endpoints.each do |endpoint|
         data = sock.readline
         break if !data || data.empty? || data == "END\r\n" || data == "ERROR\r\n"
         matches = data.scan(/^key=(?<key>.*) exp=-1/)
-        break if matches.empty?
-        all_keys_without_expiration += matches.flatten!
-        ''
+        next if matches.empty?
+        all_keys_without_expiration.concat(matches.flatten!)
       end
     end
   rescue EOFError
