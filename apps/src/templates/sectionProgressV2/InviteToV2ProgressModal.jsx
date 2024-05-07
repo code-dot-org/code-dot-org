@@ -59,7 +59,7 @@ function InviteToV2ProgressModal({
   }, [dateProgressTableInvitationDelayed, hasSeenProgressTableInvite]);
 
   const handleModalClose = React.useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_SEEEN_INVITATION, {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_SEEN_INVITATION, {
       sectionId,
     });
     setInvitationOpen(false);
