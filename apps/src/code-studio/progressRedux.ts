@@ -11,6 +11,7 @@ import {
   LevelResults,
   ViewType,
   PeerReviewLevelInfo,
+  LevelWithProgress,
 } from '@cdo/apps/types/progressTypes';
 import {
   AnyAction,
@@ -34,6 +35,7 @@ import {
 import {TestResults} from '@cdo/apps/constants';
 import {
   getCurrentLevel,
+  getCurrentLevels,
   levelById,
   nextLevelId,
 } from './progressReduxSelectors';
@@ -309,6 +311,35 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
       const url = getBubbleUrl(newLevel.path, undefined, undefined, true);
       navigateToHref(url);
     }
+  };
+}
+
+// Updates the current level ID in the store when the level
+// (and possibly sublevel) index changes.
+// Typically happens when the user presses the browser back/forward button
+// in a level progression that doesn't require page reloads.
+export function onLevelIndexChange(
+  levelIndex: number,
+  sublevelIndex?: number
+): ProgressThunkAction {
+  return (dispatch, getState) => {
+    const levels: LevelWithProgress[] = getCurrentLevels(getState());
+    if (!levels || levels.length === 0) {
+      return;
+    }
+
+    const level = levels[levelIndex];
+    let newLevelId = level.id;
+    if (
+      sublevelIndex !== undefined &&
+      level.sublevels &&
+      sublevelIndex < level.sublevels.length
+    ) {
+      const sublevel = level.sublevels[sublevelIndex];
+      newLevelId = sublevel.id;
+    }
+
+    dispatch(setCurrentLevelId(newLevelId));
   };
 }
 
