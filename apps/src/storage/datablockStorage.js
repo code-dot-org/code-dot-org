@@ -34,7 +34,7 @@ async function _fetch(path, method, params) {
       headers: {
         'Content-Type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
-        'X-CSRF-Token': getAuthenticityToken(),
+        'X-CSRF-Token': await getAuthenticityToken(),
       },
       credentials: 'same-origin',
     });
