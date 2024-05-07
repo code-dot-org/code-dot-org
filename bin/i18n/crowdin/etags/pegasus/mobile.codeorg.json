@@ -1,242 +1,242 @@
 {
   "ar-SA": {
-    "/pegasus/mobile.yml": "4db65f48bd5128275de3e5ceaeab0e01"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "az-AZ": {
-    "/pegasus/mobile.yml": "4db65f48bd5128275de3e5ceaeab0e01"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "bg-BG": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "bn-BD": {
-    "/pegasus/mobile.yml": "4db65f48bd5128275de3e5ceaeab0e01"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "bs-BA": {
-    "/pegasus/mobile.yml": "4db65f48bd5128275de3e5ceaeab0e01"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "ca-ES": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "co-CO": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "cs-CZ": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "2a1f83d6e59f8ded3d91c535d0e3064c"
   },
   "da-DK": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "2a1f83d6e59f8ded3d91c535d0e3064c"
   },
   "de-DE": {
-    "/pegasus/mobile.yml": "d19f31c2178f9be625df65ff2ba5f55c"
+    "/pegasus/mobile.yml": "4269df4fc1ae0f9c1dc8e0b9fb23ab17"
   },
   "dv-MV": {
-    "/pegasus/mobile.yml": "489dfa38015e87b1b3ca46ea6bbad3ef"
+    "/pegasus/mobile.yml": "2a1f83d6e59f8ded3d91c535d0e3064c"
   },
   "el-GR": {
-    "/pegasus/mobile.yml": "d19f31c2178f9be625df65ff2ba5f55c"
+    "/pegasus/mobile.yml": "bf394505be0aba81bfa7e489d5b47442"
   },
   "en-GB": {
-    "/pegasus/mobile.yml": "489dfa38015e87b1b3ca46ea6bbad3ef"
+    "/pegasus/mobile.yml": "67b4fa7b057dc65243c6472566001f93"
   },
   "es-ES": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "a90f7dd499ebd8ff5e3c6ad0c77617f0"
   },
   "es-MX": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "078affc66a17136403bc57897228f25b"
   },
   "et-EE": {
-    "/pegasus/mobile.yml": "489dfa38015e87b1b3ca46ea6bbad3ef"
+    "/pegasus/mobile.yml": "acdef035d1ce716a1644394ca307fdd2"
   },
   "eu-ES": {
-    "/pegasus/mobile.yml": "4db65f48bd5128275de3e5ceaeab0e01"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "fa-AF": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "2a1f83d6e59f8ded3d91c535d0e3064c"
   },
   "fa-IR": {
-    "/pegasus/mobile.yml": "23391aa78c546ad0254dbe6fb69b49c7"
+    "/pegasus/mobile.yml": "700d010fce550f28f4ea47c2504dfc94"
   },
   "fi-FI": {
-    "/pegasus/mobile.yml": "489dfa38015e87b1b3ca46ea6bbad3ef"
+    "/pegasus/mobile.yml": "d49c27755a2bef45febc676330eccde2"
   },
   "fil-PH": {
-    "/pegasus/mobile.yml": "489dfa38015e87b1b3ca46ea6bbad3ef"
+    "/pegasus/mobile.yml": "75c5c1c78661f1d7236afac2328fb1c8"
   },
   "fr-FR": {
-    "/pegasus/mobile.yml": "489dfa38015e87b1b3ca46ea6bbad3ef"
+    "/pegasus/mobile.yml": "bc1b0de26b528006ba1bf389a4d314da"
   },
   "ga-IE": {
-    "/pegasus/mobile.yml": "851ccfe2522757abe6605cd9a35a4459"
+    "/pegasus/mobile.yml": "a1fcde785c94d08ed43e9dfa5d7e3b99"
   },
   "gl-ES": {
-    "/pegasus/mobile.yml": "d19f31c2178f9be625df65ff2ba5f55c"
+    "/pegasus/mobile.yml": "7edbae12f3eaa8327dfa114867f7e269"
   },
   "haw-HI": {
-    "/pegasus/mobile.yml": "d19f31c2178f9be625df65ff2ba5f55c"
+    "/pegasus/mobile.yml": "1f0d12c4f256231c6054cc7331e086ca"
   },
   "he-IL": {
-    "/pegasus/mobile.yml": "d19f31c2178f9be625df65ff2ba5f55c"
+    "/pegasus/mobile.yml": "2639d21f2a41899b04e22e9e18e8136e"
   },
   "hi-IN": {
-    "/pegasus/mobile.yml": "d19f31c2178f9be625df65ff2ba5f55c"
+    "/pegasus/mobile.yml": "49e8afcefac2ec6bb4fcaa4bdda0c8a6"
   },
   "hr-HR": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "hu-HU": {
-    "/pegasus/mobile.yml": "851ccfe2522757abe6605cd9a35a4459"
+    "/pegasus/mobile.yml": "07b685f732d2e243b76586eba3d1e479"
   },
   "hy-AM": {
-    "/pegasus/mobile.yml": "4db65f48bd5128275de3e5ceaeab0e01"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "id-ID": {
-    "/pegasus/mobile.yml": "851ccfe2522757abe6605cd9a35a4459"
+    "/pegasus/mobile.yml": "80bf4d33fb4d655c51294fa0cccad437"
   },
   "is-IS": {
-    "/pegasus/mobile.yml": "851ccfe2522757abe6605cd9a35a4459"
+    "/pegasus/mobile.yml": "687b52a5201e91853dac5bd5884bba8a"
   },
   "it-IT": {
-    "/pegasus/mobile.yml": "851ccfe2522757abe6605cd9a35a4459"
+    "/pegasus/mobile.yml": "69e032cb1e6025d4dcf95b8680cf967d"
   },
   "ja-JP": {
-    "/pegasus/mobile.yml": "851ccfe2522757abe6605cd9a35a4459"
+    "/pegasus/mobile.yml": "f1e5658e54acb68e93aa1c99fc5b6f70"
   },
   "ka-GE": {
-    "/pegasus/mobile.yml": "d19f31c2178f9be625df65ff2ba5f55c"
+    "/pegasus/mobile.yml": "3e5f2524d621c5117deed2a8fde3aa68"
   },
   "kk-KZ": {
-    "/pegasus/mobile.yml": "851ccfe2522757abe6605cd9a35a4459"
+    "/pegasus/mobile.yml": "445ae737023cf80599a36ff18fe545a1"
   },
   "kn-IN": {
-    "/pegasus/mobile.yml": "851ccfe2522757abe6605cd9a35a4459"
+    "/pegasus/mobile.yml": "f97272082113170ec5b8191af51ae8d4"
   },
   "km-KH": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "6c8bb4f053119d5dacca5985afc0712d"
   },
   "ko-KR": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "dbb490d9bde9da49d2c98868d56be211"
   },
   "ku-IQ": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "a29b9e889a76d38bf9cba55b45d427d7"
   },
   "ky-KG": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "c600a058278ab48652aaf1cf74c6e566"
   },
   "lt-LT": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "6e4f6fc4107b0b4999a5825e1f047e39"
   },
   "lv-LV": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "ea91ffff946354274eeed9424f2d605c"
   },
   "mi-NZ": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "72bff72729ff44ba63a0dbfc4275c314"
   },
   "mk-MK": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "090b3898f96ccd7c87cb62b1864cee54"
   },
   "mn-MN": {
-    "/pegasus/mobile.yml": "23391aa78c546ad0254dbe6fb69b49c7"
+    "/pegasus/mobile.yml": "84c5b90787244da2384745304f3897f1"
   },
   "mr-IN": {
-    "/pegasus/mobile.yml": "23391aa78c546ad0254dbe6fb69b49c7"
+    "/pegasus/mobile.yml": "399953596d0ba7b226514b29bd158ce7"
   },
   "ms-MY": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "5b0fbb45c23cd6eeedae93a067441a43"
   },
   "mt-MT": {
-    "/pegasus/mobile.yml": "e0da934c351c90aadaab4dc1dd4175e7"
+    "/pegasus/mobile.yml": "4a0ced1a567992b034446130fcb76899"
   },
   "my-MM": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "ne-NP": {
-    "/pegasus/mobile.yml": "23391aa78c546ad0254dbe6fb69b49c7"
+    "/pegasus/mobile.yml": "1afae7e143402522acfde86ee7301877"
   },
   "nl-NL": {
-    "/pegasus/mobile.yml": "489dfa38015e87b1b3ca46ea6bbad3ef"
+    "/pegasus/mobile.yml": "2a1f83d6e59f8ded3d91c535d0e3064c"
   },
   "nn-NO": {
-    "/pegasus/mobile.yml": "23391aa78c546ad0254dbe6fb69b49c7"
+    "/pegasus/mobile.yml": "f52082d0aac9a6d30738a18a604b673e"
   },
   "no-NO": {
-    "/pegasus/mobile.yml": "23391aa78c546ad0254dbe6fb69b49c7"
+    "/pegasus/mobile.yml": "414e508740c63afc0c8859220fa38fba"
   },
   "pl-PL": {
-    "/pegasus/mobile.yml": "0afeccdb70052a6055900b2ca1a57d27"
+    "/pegasus/mobile.yml": "294d7ebc155d58da22c887ff1404ee37"
   },
   "ps-AF": {
-    "/pegasus/mobile.yml": "23391aa78c546ad0254dbe6fb69b49c7"
+    "/pegasus/mobile.yml": "bbad23a18d888478f9970bb77efae3d8"
   },
   "pt-BR": {
-    "/pegasus/mobile.yml": "0afeccdb70052a6055900b2ca1a57d27"
+    "/pegasus/mobile.yml": "a4fa269e5e1bd6cbe6a0f538faf2666a"
   },
   "pt-PT": {
-    "/pegasus/mobile.yml": "0afeccdb70052a6055900b2ca1a57d27"
+    "/pegasus/mobile.yml": "68fc813393229ce274306a5f78d6e6a6"
   },
   "ro-RO": {
-    "/pegasus/mobile.yml": "0afeccdb70052a6055900b2ca1a57d27"
+    "/pegasus/mobile.yml": "8ffeb4f9fae43332f4ad8c3010a3b6a3"
   },
   "ru-RU": {
-    "/pegasus/mobile.yml": "0afeccdb70052a6055900b2ca1a57d27"
+    "/pegasus/mobile.yml": "3f7578dc00656494aaea32fca279495b"
   },
   "se-FI": {
-    "/pegasus/mobile.yml": "23391aa78c546ad0254dbe6fb69b49c7"
+    "/pegasus/mobile.yml": "4941b4a58437a77b9c2f2e3abc484ef3"
   },
   "sm-WS": {
-    "/pegasus/mobile.yml": "71eab4c9f479a1b4fc4f88233e70286c"
+    "/pegasus/mobile.yml": "3366cd2318ed63f064b8527c0f8c3130"
   },
   "si-LK": {
-    "/pegasus/mobile.yml": "0afeccdb70052a6055900b2ca1a57d27"
+    "/pegasus/mobile.yml": "0b49b574c883b55a30c935b34b42c2d8"
   },
   "sk-SK": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "e6c3be0577dd165f8785f90e390cae66"
   },
   "sl-SI": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "7571e043e5d53071e3ec2761c93ba35c"
   },
   "sq-AL": {
-    "/pegasus/mobile.yml": "4db65f48bd5128275de3e5ceaeab0e01"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "sr-SP": {
-    "/pegasus/mobile.yml": "0afeccdb70052a6055900b2ca1a57d27"
+    "/pegasus/mobile.yml": "5fd3a0352ff90a56ebdd00d9e3bb7868"
   },
   "sv-SE": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "dfc33c30cb6a9f24c59846f5044cbbb3"
   },
   "ta-IN": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "dfe9ee300e3b5e6a0f6eaf985f3e3d59"
   },
   "te-IN": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "f1e14719044c3f16444cb3ddaeb70098"
   },
   "tg-TJ": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "d058669bc9c1e0d990b2c5d84bc8f66a"
   },
   "th-TH": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "88a394663c4acde44c7e3356c2fa9e0a"
   },
   "tr-TR": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "a59e60aa1c96a57704e384ff42fd6d55"
   },
   "uk-UA": {
-    "/pegasus/mobile.yml": "b73501e2ca9cf7e3404de7fdd71db30d"
+    "/pegasus/mobile.yml": "b2355f769edfe4a751a0a3c773c319b8"
   },
   "ur-PK": {
-    "/pegasus/mobile.yml": "71eab4c9f479a1b4fc4f88233e70286c"
+    "/pegasus/mobile.yml": "a1dfc7af014f8a2c163b5e25b2495167"
   },
   "uz-UZ": {
-    "/pegasus/mobile.yml": "71eab4c9f479a1b4fc4f88233e70286c"
+    "/pegasus/mobile.yml": "3c824442c138e17b60f47501c227fd6f"
   },
   "vi-VN": {
-    "/pegasus/mobile.yml": "71eab4c9f479a1b4fc4f88233e70286c"
+    "/pegasus/mobile.yml": "b43383ea446feede9f9763a106a0d49b"
   },
   "zh-CN": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "zh-TW": {
-    "/pegasus/mobile.yml": "c60acbd5f92b922b7ef51ec5512aa6b1"
+    "/pegasus/mobile.yml": "f1b5d8bc2bba705ed64cd10f2f3a22ef"
   },
   "zu-ZA": {
-    "/pegasus/mobile.yml": "71eab4c9f479a1b4fc4f88233e70286c"
+    "/pegasus/mobile.yml": "3544ae2f87c0e4208be3fb12b9943eaa"
   }
 }

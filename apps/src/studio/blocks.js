@@ -136,6 +136,7 @@ function getSpriteOrDropdownIndex(
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
   var generator = blockly.getGenerator();

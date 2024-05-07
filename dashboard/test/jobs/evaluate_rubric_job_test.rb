@@ -247,7 +247,23 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_lesson_s3_data
 
-    stub_get_openai_evaluations(status: 429, raises: Net::ReadTimeout)
+    stub_get_openai_evaluations(raises: Net::ReadTimeout)
+
+    # The superclass, ApplicationJob, logs metrics around all jobs.
+    # Those calls must be stubbed to test metrics for this job.
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      anything
+    )
+
+    # ensure RetryOnTimeout metric is logged
+    Cdo::Metrics.expects(:push).with(
+      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(RetryOnTimeout: 1),
+        includes_dimensions(:RetryOnTimeout, Environment: CDO.rack_env)
+      )
+    )
 
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::RETRIES_ON_TIMEOUT do
