@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
-import ChildSectionsWarningDialog from '@cdo/apps/templates/teacherDashboard/childAccount/ChildSectionsWarningDialog';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import ChildSectionsWarningDialog from '@cdo/apps/templates/teacherDashboard/childAccountPolicy/ChildSectionsWarningDialog';
 import i18n from '@cdo/locale';
 
 interface Props {

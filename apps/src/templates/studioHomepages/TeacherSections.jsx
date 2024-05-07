@@ -7,7 +7,7 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import ChildSectionsWarningNotification from '@cdo/apps/templates/childAccountPolicy/ChildSectionsWarningNotification';
+import ChildSectionsWarningNotification from '@cdo/apps/templates/teacherDashboard/childAccountPolicy/ChildSectionsWarningNotification';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';
