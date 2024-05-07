@@ -268,7 +268,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     # ensure firehose event is logged
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
       data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'retry-on-timeout' &&
+        data[:event] == 'timeout-error' &&
         JSON.parse(data[:data_json])['agent'].nil? &&
         stream == :analysis
     end
@@ -321,7 +321,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     # ensure firehose event is logged
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
       data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'retry-on-503' &&
+        data[:event] == 'service-unavailable' &&
         JSON.parse(data[:data_json])['agent'] == 'openai' &&
         stream == :analysis
     end
@@ -374,7 +374,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     # ensure firehose event is logged
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
       data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'retry-on-504' &&
+        data[:event] == 'gateway-timeout' &&
         JSON.parse(data[:data_json])['agent'] == 'openai' &&
         stream == :analysis
     end
