@@ -21,27 +21,3 @@
         = render partial: 'home/survey_diversity'
 
 #homepage-container
-
-#workshop-links.container.main
-  -if can? :read, Pd::Application::ApplicationBase
-    %h1
-      Application Dashboard
-    = link_to pd_application_dashboard_path do
-      %h3
-        Manage Applications
-  -if can? :read, Pd::Workshop
-    %h1
-      Workshop Dashboard
-    %a{href:'/pd/workshop_dashboard'}
-      %h3
-        Manage PD Workshops
-    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
-      = link_to pd_workshop_admins_path do
-        %h3
-          Directory for Workshop Admins
-    - courses_facilitated = Pd::CourseFacilitator.where(facilitator: current_user).map(&:course)
-    -if courses_facilitated.any?
-      %h1
-        Facilitator Landing Page
-      Links to Facilitator Landing Pages and the Workshop Dashboard have moved to your
-      = link_to("My Professional Learning page", "https://studio.code.org/my-professional-learning") + '.'
