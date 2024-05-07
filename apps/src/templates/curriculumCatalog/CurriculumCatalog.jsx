@@ -96,7 +96,6 @@ const CurriculumCatalog = ({
   };
 
   const renderAssignDialog = () => {
-    console.log(sectionsForDropdown);
     const curriculumToAssign = filteredCurricula.find(
       curriculum => curriculum.key === courseKeyForAssign
     );
@@ -122,6 +121,7 @@ const CurriculumCatalog = ({
           courseOfferingId={curriculumToAssign?.course_offering_id}
           courseVersionId={curriculumToAssign?.course_version_id}
           sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
+          isStandAloneUnit={curriculumToAssign?.is_standalone_unit}
           {...props}
         />
       );
