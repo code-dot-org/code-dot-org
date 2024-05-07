@@ -7,7 +7,7 @@ require_relative '../../dashboard/config/environment'
 
 # This script inspects all cache entries in the partial registration namespace for the presence of a TTL.
 # If no TTL is present, the cache entry is removed.
-DRY_RUN = false
+DRY_RUN = true
 
 puts "Processing... DRYRUN=#{DRY_RUN}"
 
