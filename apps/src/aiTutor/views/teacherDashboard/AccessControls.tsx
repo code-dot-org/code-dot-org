@@ -80,18 +80,15 @@ const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
       cell: {
         formatters: [
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (aiTutorAccessDenied: boolean, {rowData}: any) => {
-            console.log(rowData);
-            return (
-              <StudentAccessToggle
-                aiTutorAccessDenied={aiTutorAccessDenied}
-                displayGlobalError={displayGlobalError}
-                studentId={rowData?.id}
-              />
-            );
-          },
+          (aiTutorAccessDenied: boolean, {rowData}: any) => (
+            <StudentAccessToggle
+              aiTutorAccessDenied={aiTutorAccessDenied}
+              displayGlobalError={displayGlobalError}
+              studentId={rowData?.id}
+            />
+          ),
         ],
-        props: {style: {...tableStyles.cell, maxWidth: 'unset'}},
+        props: {style: {...tableStyles.cell}},
       },
     },
   ];

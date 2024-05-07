@@ -17,6 +17,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
+// TODO: Condense use of inline and imported styles
 import interactionsStyle from './interactions-table.module.scss';
 
 // TODO: Some of these overrides are necessary to reconcile CSS property values that are numbers

@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
-
-import {handleUpdateAITutorAccess} from '@cdo/apps/aiTutor/accessControlsApi';
-// import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-
-// import style from './interactions-table.module.scss';
+import {handleUpdateAITutorAccess} from '@cdo/apps/aiTutor/accessControlsApi';
 
 interface StudentAccessToggleProps {
   studentId: number;
