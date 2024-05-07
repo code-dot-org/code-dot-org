@@ -178,6 +178,7 @@ export default function SectionsSetUpContainer({
     const participantType = isNewSection
       ? queryParams('participantType')
       : section.participantType;
+    const redirectUrl = queryParams('redirectToPage');
 
     const form = document.querySelector(`#${FORM_ID}`);
     // If we find a missing field in the form, report which one and reset save status
@@ -232,14 +233,18 @@ export default function SectionsSetUpContainer({
             getCoteacherMetricInfoFromSection(section)
           );
         });
-        // Redirect to the sections list.
-        let redirectUrl = window.location.origin + '/home';
-        if (createAnotherSection) {
-          redirectUrl += '?openAddSectionDialog=true';
-        } else if (shouldShowCelebrationDialogOnRedirect) {
-          redirectUrl += '?showSectionCreationDialog=true';
+        // Redirect to the given redirectUrl if present, otherwise redirect to the
+        // sections list on the homepage.
+        let url =
+          window.location.origin + (redirectUrl ? `/${redirectUrl}` : '/home');
+        if (!redirectUrl) {
+          if (createAnotherSection) {
+            url += '?openAddSectionDialog=true';
+          } else if (shouldShowCelebrationDialogOnRedirect) {
+            url += '?showSectionCreationDialog=true';
+          }
         }
-        navigateToHref(redirectUrl);
+        navigateToHref(url);
       })
       .catch(err => {
         setIsSaveInProgress(false);

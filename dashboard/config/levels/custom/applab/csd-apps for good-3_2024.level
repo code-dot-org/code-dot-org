@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-11-28T21:16:19.000Z",
   "level_num": "custom",
@@ -212,17 +213,21 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "parent_level_id": 18762,
     "widget_mode": "false",
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Four Square",
+    "thumbnail_url": "https://images.code.org/8bb5eb13207c03bba11669bf8c5deb5d-Screenshot 2024-05-05 at 5.25.47 PM.png",
+    "ai_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:16:19.512+00:00\",\"changed\":[\"cloned from \\\"csd-apps for good-3_2023\\\"\"],\"cloned_from\":\"csd-apps for good-3_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:16:19.512+00:00\",\"changed\":[\"cloned from \\\"csd-apps for good-3_2023\\\"\"],\"cloned_from\":\"csd-apps for good-3_2023\"},{\"changed_at\":\"2024-05-06 00:27:31 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

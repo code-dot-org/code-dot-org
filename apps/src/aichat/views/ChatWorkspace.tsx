@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useRef, useEffect} from 'react';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
@@ -26,6 +26,17 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
   );
 
+  const conversationContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (conversationContainerRef.current) {
+      conversationContainerRef.current.scrollTo({
+        top: conversationContainerRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
+  }, [conversationContainerRef, storedMessages, isWaitingForChatResponse]);
+
   const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
@@ -51,6 +62,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
       <div
         id="chat-workspace-conversation"
         className={moduleStyles.conversationArea}
+        ref={conversationContainerRef}
       >
         {storedMessages.map(message => (
           <ChatMessage message={message} key={message.id} />
