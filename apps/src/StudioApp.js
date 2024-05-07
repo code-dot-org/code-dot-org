@@ -1588,10 +1588,7 @@ StudioApp.prototype.resizeToolboxHeader = function () {
 StudioApp.prototype.highlight = function (id, spotlight) {
   if (this.isUsingBlockly() && !isEditWhileRun(getStore().getState())) {
     if (id) {
-      var m = id.match(/^block_id_(\d+)$/);
-      if (m) {
-        id = m[1];
-      }
+      id = id.replace(/^block_id_/, '');
     }
 
     Blockly.mainBlockSpace.highlightBlock(id, spotlight);
