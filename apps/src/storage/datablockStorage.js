@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 // DatablockStorage powers the "Data" tab in App Lab and Game Lab, including the
 // datasets library, and the data blocks such as `readRecords` and `getKeyValue`.
@@ -33,6 +34,7 @@ async function _fetch(path, method, params) {
       headers: {
         'Content-Type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-Token': getAuthenticityToken(),
       },
       credentials: 'same-origin',
     });
