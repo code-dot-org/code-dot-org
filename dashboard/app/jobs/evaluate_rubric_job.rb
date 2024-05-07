@@ -233,7 +233,7 @@ class EvaluateRubricJob < ApplicationJob
 
   ATTEMPTS_ON_RATE_LIMIT = 3
 
-  # Retry on any reported rate limit (429 status) 'exponentially_longer' waits 3s, 18s, and then 83s.
+  # Retry on any reported rate limit (429 status). With 3 attempts, 'exponentially_longer' waits 3s, then 18s.
   retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
     # Job arguments are always serializable, so we just pull out the hash
     # and send it as context.
@@ -258,7 +258,7 @@ class EvaluateRubricJob < ApplicationJob
   ATTEMPTS_ON_SERVICE_UNAVAILABLE = 3
 
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
-  # when openai returns 500. 'exponentially_longer' waits 3s, 18s, and then 83s.
+  # when openai returns 500.
   retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
     log_metric(metric_name: :ServiceUnavailable, agent: agent)
@@ -268,7 +268,7 @@ class EvaluateRubricJob < ApplicationJob
   ATTEMPTS_ON_GATEWAY_TIMEOUT = 3
 
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
-  # when openai request times out. 'exponentially_longer' waits 3s, 18s, and then 83s.
+  # when openai request times out.
   retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
     log_metric(metric_name: :GatewayTimeout, agent: agent)
