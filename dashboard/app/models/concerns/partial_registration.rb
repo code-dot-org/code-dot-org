@@ -40,7 +40,12 @@ module PartialRegistration
     # Push the potential user's attributes into our application cache.
     cache_key = PartialRegistration.cache_key(user)
     user_attributes = Policies::User.user_attributes(user)
-    CDO.shared_cache.write(cache_key, user_attributes.to_json)
+
+    if DCDO.get('student-email-post-enabled', false)
+      CDO.shared_cache.write(cache_key, user_attributes.to_json, expires_in: 8.hours)
+    else
+      CDO.shared_cache.write(cache_key, user_attributes.to_json)
+    end
 
     # Put the cache key into the session, to
     # 1. track that a partial registration is in progress
