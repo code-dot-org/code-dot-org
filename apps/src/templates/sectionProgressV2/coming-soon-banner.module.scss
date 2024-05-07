@@ -28,7 +28,7 @@
   }
 
   & .bannerText {
-    flex: 1 1 80%;
+    flex-grow: 1;
     font-size: 16px;
     height: 100%;
     line-height: 2rem;
