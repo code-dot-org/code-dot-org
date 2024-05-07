@@ -66,7 +66,6 @@ describe('CurriculumCatalog', () => {
     registerReducers({responsive, teacherSections});
     store = getStore();
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
-    store.dispatch(setSections(sections));
 
     replacedLocation = undefined;
     window.history.replaceState = (_, __, newLocation) => {
@@ -876,6 +875,78 @@ describe('CurriculumCatalog', () => {
       expect(storedRecommenderResults[firstTestCurriculum.key].key).to.equal(
         recommendedStretchCurriculum.key
       );
+    });
+  });
+
+  it('clicking Assign button as a teacher with sections shows dialog with sections and catalog-specific text with year', () => {
+    store.dispatch(setSections(sections));
+    const props = {...defaultProps, isSignedOut: false, isTeacher: true};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${allCurricula[0].display_name} to your classroom`
+      ),
+    });
+
+    sections.forEach(
+      section => expect(screen.queryByText(section.name)).to.be.null
+    );
+    fireEvent.click(assignButton);
+    sections.forEach(section => screen.getByText(section.name));
+    screen.getByText(
+      `Which section(s) do you want to assign "${allCurricula[0].display_name_with_latest_year}" to?`,
+      {
+        exact: false,
+      }
+    );
+    screen.getByText('The most recent recommended version', {
+      exact: false,
+    });
+  });
+
+  it('clicking Assign button as a teacher without sections shows dialog to create section', () => {
+    store.dispatch(setSections([]));
+    const props = {...defaultProps, isSignedOut: false, isTeacher: true};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${allCurricula[0].display_name} to your classroom`
+      ),
+    });
+
+    fireEvent.click(assignButton);
+    screen.getByRole('heading', {
+      name: 'Create class section to assign a curriculum',
+    });
+  });
+
+  it('clicking Assign button as a signed out user shows dialog to sign in', () => {
+    const props = {...defaultProps, isSignedOut: true};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${allCurricula[0].display_name} to your classroom`
+      ),
+    });
+
+    fireEvent.click(assignButton);
+    screen.getByRole('heading', {
+      name: 'Sign in or create account to assign a curriculum',
     });
   });
 });
