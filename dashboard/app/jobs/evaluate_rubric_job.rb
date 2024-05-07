@@ -231,10 +231,10 @@ class EvaluateRubricJob < ApplicationJob
     rubric_ai_evaluation.save!
   end
 
-  RETRIES_ON_RATE_LIMIT = 3
+  ATTEMPTS_ON_RATE_LIMIT = 3
 
   # Retry on any reported rate limit (429 status) 'exponentially_longer' waits 3s, 18s, and then 83s.
-  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: RETRIES_ON_RATE_LIMIT do |job, error|
+  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
     # Job arguments are always serializable, so we just pull out the hash
     # and send it as context.
     options = job.arguments.first
@@ -247,29 +247,29 @@ class EvaluateRubricJob < ApplicationJob
     )
   end
 
-  RETRIES_ON_TIMEOUT = 2
+  ATTEMPTS_ON_TIMEOUT = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: ATTEMPTS_ON_TIMEOUT do |job, error|
     log_metric(metric_name: :TimeoutError)
     log_to_firehose(job: job, error: error, event_name: 'retry-on-timeout')
   end
 
-  RETRIES_ON_SERVICE_UNAVAILABLE = 3
+  ATTEMPTS_ON_SERVICE_UNAVAILABLE = 3
 
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500. 'exponentially_longer' waits 3s, 18s, and then 83s.
-  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: RETRIES_ON_SERVICE_UNAVAILABLE do |job, error|
+  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
     log_metric(metric_name: :ServiceUnavailable, agent: agent)
     log_to_firehose(job: job, error: error, event_name: 'retry-on-503', agent: agent)
   end
 
-  RETRIES_ON_GATEWAY_TIMEOUT = 3
+  ATTEMPTS_ON_GATEWAY_TIMEOUT = 3
 
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
   # when openai request times out. 'exponentially_longer' waits 3s, 18s, and then 83s.
-  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: RETRIES_ON_GATEWAY_TIMEOUT do |job, error|
+  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
     log_metric(metric_name: :GatewayTimeout, agent: agent)
     log_to_firehose(job: job, error: error, event_name: 'retry-on-504', agent: agent)

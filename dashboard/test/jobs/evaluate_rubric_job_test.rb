@@ -224,7 +224,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     stub_get_openai_evaluations(status: 429)
 
     # Run the job (and track attempts)
-    assert_performed_jobs EvaluateRubricJob::RETRIES_ON_RATE_LIMIT do
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_RATE_LIMIT do
       perform_enqueued_jobs do
         EvaluateRubricJob.perform_later(
           user_id: @student.id,
@@ -274,7 +274,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
 
     # Run the job (and track attempts)
-    assert_performed_jobs EvaluateRubricJob::RETRIES_ON_TIMEOUT do
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_TIMEOUT do
       perform_enqueued_jobs do
         EvaluateRubricJob.perform_later(
           user_id: @student.id,
@@ -327,7 +327,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
 
     # Run the job (and track attempts)
-    assert_performed_jobs EvaluateRubricJob::RETRIES_ON_RATE_LIMIT do
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_RATE_LIMIT do
       perform_enqueued_jobs do
         EvaluateRubricJob.perform_later(
           user_id: @student.id,
@@ -380,7 +380,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
 
     # Run the job (and track attempts)
-    assert_performed_jobs EvaluateRubricJob::RETRIES_ON_RATE_LIMIT do
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_RATE_LIMIT do
       perform_enqueued_jobs do
         EvaluateRubricJob.perform_later(
           user_id: @student.id,
