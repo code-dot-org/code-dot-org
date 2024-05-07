@@ -2,7 +2,7 @@ import moment from 'moment';
 import React, {useEffect, useState} from 'react';
 import * as Table from 'reactabular-table';
 import {fetchAITutorInteractions} from '@cdo/apps/aiTutor/interactionsApi';
-
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {
   StudentChatRow,
   AITutorInteractionStatus,
@@ -93,6 +93,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   const [selectedTimeFilter, setSelectedTimeFilter] = useState<string>(
     TimeFilter.AllTime
   );
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     (async () => {
@@ -101,8 +102,9 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
         setChatMessages(messages);
         setStudentFilterOptions(generateFilterOptions(messages));
       } catch (error) {
-        console.log('error', error);
+        setChatMessages([]);
       }
+      setIsLoading(false);
     })();
   }, [sectionId]);
 
@@ -235,6 +237,10 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
     }
   };
 
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   return (
     <div>
       <div>
@@ -277,7 +283,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           isLabelVisible={false}
         />
       </div>
-      {chatMessages && chatMessages.length === 0 ? (
+      {filteredChatMessages && filteredChatMessages.length === 0 ? (
         <>There are no chat messages to display.</>
       ) : (
         <Table.Provider
