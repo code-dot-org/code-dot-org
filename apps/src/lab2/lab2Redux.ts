@@ -8,7 +8,6 @@ import {
   createAsyncThunk,
   createSlice,
   PayloadAction,
-  ThunkAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 import {
@@ -35,7 +34,6 @@ import {
 import {LevelPropertiesValidator} from './responseValidators';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {START_SOURCES} from './constants';
-import {RootState} from '@cdo/apps/types/redux';
 
 interface PageError {
   errorMessage: string;
@@ -63,7 +61,6 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
-  projectSource: ProjectSources | undefined;
 }
 
 const initialState: LabState = {
@@ -75,7 +72,6 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
-  projectSource: undefined,
 };
 
 // Thunks
@@ -229,17 +225,6 @@ export const setUpWithoutLevel = createAsyncThunk(
   }
 );
 
-export const setAndSaveProjectSource = (
-  projectSource: ProjectSources
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return dispatch => {
-    dispatch(labSlice.actions.setProjectSource(projectSource));
-    if (Lab2Registry.getInstance().getProjectManager()) {
-      Lab2Registry.getInstance().getProjectManager()?.save(projectSource);
-    }
-  };
-};
-
 // Selectors
 
 // If any load is currently in progress.
@@ -308,9 +293,6 @@ const labSlice = createSlice({
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
-    },
-    setProjectSource(state, action: PayloadAction<ProjectSources | undefined>) {
-      state.projectSource = action.payload;
     },
   },
   extraReducers: builder => {
@@ -466,7 +448,6 @@ export const {
   clearPageError,
   setValidationState,
   setIsShareView,
-  setProjectSource,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

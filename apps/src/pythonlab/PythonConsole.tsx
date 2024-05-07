@@ -15,9 +15,9 @@ interface PermissionResponse {
 }
 
 const PythonConsole: React.FunctionComponent = () => {
-  const source = useAppSelector(state => state.lab.projectSource?.source) as
-    | MultiFileSource
-    | undefined;
+  const source = useAppSelector(
+    state => state.lab2Project.projectSource?.source
+  ) as MultiFileSource | undefined;
   const codeOutput = useAppSelector(state => state.pythonlab.output);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();

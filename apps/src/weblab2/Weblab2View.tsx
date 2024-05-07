@@ -155,7 +155,7 @@ const Weblab2View = () => {
   >('');
 
   const configKey = {
-    project: source,
+    project: source || defaultProject,
     config: config,
     layout: config,
   };
