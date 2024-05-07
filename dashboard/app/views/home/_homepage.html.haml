@@ -30,19 +30,18 @@
     Links to the Application Dashboard have moved to your
     = link_to("My Professional Learning page", "https://studio.code.org/my-professional-learning") + '.'
   -if can? :read, Pd::Workshop
-    %h1
+    %h1{style: 'margin-top: 16px'}
       Workshop Dashboard
     Links to the Workshop Dashboard have moved to your
     = link_to("My Professional Learning page", "https://studio.code.org/my-professional-learning") + '.'
     -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
-      = link_to pd_workshop_admins_path do
-        %h3
-          Directory for Workshop Admins
-        The Directory for Workshop Admins has moved to your
-        = link_to("My Professional Learning page", "https://studio.code.org/my-professional-learning") + '.'
+      %h1{style: 'margin-top: 16px'}
+        Directory for Workshop Admins
+      The Directory for Workshop Admins has moved to your
+      = link_to("My Professional Learning page", "https://studio.code.org/my-professional-learning") + '.'
     - courses_facilitated = Pd::CourseFacilitator.where(facilitator: current_user).map(&:course)
     -if courses_facilitated.any?
-      %h1
+      %h1{style: 'margin-top: 32px'}
         Facilitator Landing Page
       Links to Facilitator Landing Pages and the Workshop Dashboard have moved to your
       = link_to("My Professional Learning page", "https://studio.code.org/my-professional-learning") + '.'
