@@ -20,7 +20,50 @@
     "version_year": "2024"
   },
   "resources": [
-
+    {
+      "name": "All Code",
+      "url": "/courses/csd-2024/code",
+      "key": "all_code_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_6"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/csd-2024/resources",
+      "key": "all_resources_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_8"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csd-2024/standards",
+      "key": "all_standards_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_8"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csd-2024/vocab",
+      "key": "all_vocabulary_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_8"
+      }
+    }
   ],
   "student_resources": [
 
