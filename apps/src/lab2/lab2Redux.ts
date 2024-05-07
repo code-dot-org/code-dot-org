@@ -32,6 +32,8 @@ import {
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {START_SOURCES} from './constants';
 
 interface PageError {
   errorMessage: string;
@@ -123,6 +125,17 @@ export const setUpWithLevel = createAsyncThunk(
         return;
       }
 
+      // Start mode doesn't use channel ids so we can skip creating
+      // a project manager and just set the level data.
+      const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+      if (isStartMode) {
+        setProjectAndLevelData(
+          {levelProperties},
+          thunkAPI.signal.aborted,
+          thunkAPI.dispatch
+        );
+        return;
+      }
       // Create a new project manager. If we have a channel id,
       // default to loading the project for that channel. Otherwise
       // create a project manager for the given level and script id.

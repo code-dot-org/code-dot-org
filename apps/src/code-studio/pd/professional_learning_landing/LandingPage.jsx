@@ -209,9 +209,9 @@ function LandingPage({
         buttonUrl: '/pd/application_dashboard',
       },
       {
-        headingText: i18n.plSectionsRegionalPartnerWorkshopTitle(),
-        descriptionText: i18n.plSectionsRegionalPartnerWorkshopDesc(),
-        buttonText: i18n.plSectionsRegionalPartnerWorkshopButton(),
+        headingText: i18n.plSectionsWorkshopTitle(),
+        descriptionText: i18n.plSectionsWorkshopDesc(),
+        buttonText: i18n.plSectionsWorkshopButton(),
         buttonUrl: '/pd/workshop_dashboard',
       },
       {
@@ -307,6 +307,17 @@ function LandingPage({
     return (
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        <section>
+          <Heading2>{i18n.plSectionsWorkshopResources()}</Heading2>
+          <BorderedCallToAction
+            key={4}
+            headingText={i18n.plSectionsWorkshopTitle()}
+            descriptionText={i18n.plSectionsWorkshopDesc()}
+            buttonText={i18n.plSectionsWorkshopButton()}
+            buttonUrl={'/pd/workshop_dashboard'}
+            solidBorder={true}
+          />
+        </section>
         {workshopsAsOrganizer?.length > 0 && (
           <EnrolledWorkshopsTable
             workshops={workshopsAsOrganizer}

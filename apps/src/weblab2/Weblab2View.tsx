@@ -4,10 +4,11 @@ import './styles/Weblab2View.css';
 
 import {Config} from './Config';
 
-import {CDOIDE} from '@cdoide/CDOIDE';
-import {ConfigType, ProjectType} from '@cdoide/types';
+import {Codebridge} from '@codebridge/Codebridge';
+import {ConfigType, ProjectType} from '@codebridge/types';
+import {useInitialSources} from '@codebridge/hooks';
 
-import {Editor as CDOEditor} from './CDOIDE/Editor';
+import {Editor as CDOEditor} from '@codebridge/Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -156,7 +157,9 @@ const Weblab2View = () => {
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
-  const initialSources = useAppSelector(state => state.lab.initialSources);
+  const initialSources = useInitialSources({
+    source: defaultProject,
+  });
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const setProject = useMemo(
@@ -211,7 +214,7 @@ const Weblab2View = () => {
         </button>
       </div>
       <div className="app-ide">
-        <CDOIDE
+        <Codebridge
           project={currentProject}
           config={config}
           setProject={setProject}

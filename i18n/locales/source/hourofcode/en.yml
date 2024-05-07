@@ -2011,6 +2011,7 @@
     introducing: "Introducing"
     music_lab: "Music Lab"
     introducing_music_lab: "Introducing Music Lab"
+    introducing_music_lab_strong: "Introducing **%{music_lab}**"
     button:
       try_music_lab: "Try Music Lab"
       learn_more: "Learn more"
@@ -2023,6 +2024,10 @@
       heading: "Create music with code"
       desc: "Get creative with your favorite artist's music and code new songs and mixes!"
     featuring_songs_by: "Featuring songs by:"
+    artist_list: "%{artist_list} and more!"
+    artist:
+      singer_songwriter: "%{artist_name}, Singer-songwriter"
+      band: "%{artist_name} from %{band_name}"
     student_projects:
       heading: "Listen to what students are creating"
       subheading: "Getting started is easy!"
