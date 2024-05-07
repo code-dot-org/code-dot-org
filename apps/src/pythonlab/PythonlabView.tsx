@@ -1,17 +1,19 @@
 // Pythonlab view
 import React, {useEffect, useMemo, useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
-import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
-import Editor from '@cdo/apps/weblab2/CDOIDE/CenterPane/Editor';
+import {ConfigType} from '@codebridge/types';
+import {Editor} from '@codebridge/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
-import {CDOIDE} from '@cdo/apps/weblab2/CDOIDE';
+import {Codebridge} from '@codebridge/Codebridge';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import Lab2Registry from '../lab2/Lab2Registry';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {setSource} from './pythonlabRedux';
+import {setAndSaveSource, setSource} from './pythonlabRedux';
 import PythonConsole from './PythonConsole';
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import header from '@cdo/apps/code-studio/header';
+import {useInitialSources} from '@codebridge/hooks';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -39,7 +41,6 @@ const defaultProject: MultiFileSource = {
 };
 
 const defaultConfig: ConfigType = {
-  showPreview: false,
   activeLeftNav: 'Files',
   EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
   leftNav: [
@@ -68,46 +69,54 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions: 'Welcome to Python Lab!',
+  gridLayoutRows: '32px 232px auto',
+  gridLayoutColumns: '300px auto',
+  gridLayout: `
+    "instructions file-tabs"
+    "instructions editor"
+    "file-browser editor"
+  `,
 };
 
 const PythonlabView: React.FunctionComponent = () => {
-  const [currentProject, setCurrentProject] = useState<MultiFileSource>();
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const initialSources = useAppSelector(state => state.lab.initialSources);
+  const initialSources = useInitialSources({
+    source: defaultProject,
+  });
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
+  const source = useAppSelector(state => state.pythonlab.source);
 
   // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
   // https://codedotorg.atlassian.net/browse/CT-499
   const setProject = useMemo(
     () => (newProject: MultiFileSource) => {
-      setCurrentProject(newProject);
-      dispatch(setSource(newProject));
-      if (Lab2Registry.getInstance().getProjectManager()) {
-        const projectSources = {
-          source: newProject,
-        };
-        Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-      }
+      dispatch(setAndSaveSource(newProject));
     },
     [dispatch]
   );
 
+  // When editing start sources, we provide a save button in the header.
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  useEffect(() => {
+    if (isStartMode) {
+      header.showLevelBuilderSaveButton(() => {
+        return {source};
+      });
+    }
+  }, [isStartMode, source]);
+
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
-    setCurrentProject(
-      (initialSources?.source as MultiFileSource) || defaultProject
-    );
     dispatch(setSource(initialSources?.source as MultiFileSource));
   }, [channelId, dispatch, initialSources]);
 
   return (
     <div className={moduleStyles.pythonlab}>
       <div className={moduleStyles.editor}>
-        {currentProject && (
-          <CDOIDE
-            project={currentProject}
+        {source && (
+          <Codebridge
+            project={source}
             config={config}
             setProject={setProject}
             setConfig={setConfig}

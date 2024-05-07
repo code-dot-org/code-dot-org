@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-27 21:50:34 UTC",
+    "serialized_at": "2024-05-05 01:35:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -131,7 +131,7 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Teachers formatively assess student understanding throughout the lesson\n\n* **Lesson Decisions:**\n  * Use the videos as check-in points for participants using the discussion questions provided in the teacher notes as sensemaking opportunities.\n  * The teacher uses the assessment opportunities from the lesson plan to influence the probing questions asked while circulating through the room to check for understanding\n  * The teacher asks participants to explain how they think they should score on the mini rubrics in the assessment level\n  * The teacher uses a wrap up to assess understanding within the room\n\n\n* **Debrief Topic:** Formative Assessment\n\n\n**Objectives:**\n* Participants have reflected on ways to use formative assessment throughout the lesson to gauge the level of understanding within the room\n* Participants are comfortable with the basics of game lab\n* Participants have experimented with the grid in Game Lab\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2022/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose:**\n* **Essential Practice:** Teachers formatively assess student understanding throughout the lesson\n\n* **Lesson Decisions:**\n  * Use the videos as check-in points for participants using the discussion questions provided in the teacher notes as sensemaking opportunities.\n  * The teacher uses the assessment opportunities from the lesson plan to influence the probing questions asked while circulating through the room to check for understanding\n  * The teacher asks participants to explain how they think they should score on the mini rubrics in the assessment level\n  * The teacher uses a wrap up to assess understanding within the room\n\n\n* **Debrief Topic:** Formative Assessment\n\n\n**Objectives:**\n* Participants have reflected on ways to use formative assessment throughout the lesson to gauge the level of understanding within the room\n* Participants are comfortable with the basics of game lab\n* Participants have experimented with the grid in Game Lab\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "* Prepare projector or other means of showing videos if you wish to watch as a class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How can we communicate to a computer how to draw shapes on the screen?\n\nIn this lesson, you will begin to use Game Lab to position shapes on the screen while working through the concepts of sequencing and debugging. "
       },
@@ -201,7 +201,7 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n\n* **Essential Practice:** Programming lessons are meant to have active teacher engagement with the teacher circulating to direct students to appropriate resources, guide them through the debugging process, assess understanding and help students determine when to move on and when to do more practice in choice levels.\n\n\n* **Lesson Decisions:**\n  * The teacher instructs participants to complete all choice level bubbles until they feel comfortable enough to move on to the assessment. If they are successful with the assessment (use the mini rubric to check) they can move on to the challenge choice levels.\n  * As participants are working in choice levels, ask to see their work in the assessment level. Ask participants to justify their score on the mini rubric.\n  * The teacher directs participants to the student version of the “Student Guide to Debugging” on page 24 of their Resource Packet and prompts them to use the debugging process when they encounter bugs.\n\n\n* **Debrief Topic:**\n  * Context setting\n  * Exploration\n  * Experimentation\n  * Assessment\n\n\n**Objectives:**\n* Participants understand how programming lessons are structured within the curriculum\n* Participants reinforce their understanding of the debugging process\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose:**\n\n* **Essential Practice:** Programming lessons are meant to have active teacher engagement with the teacher circulating to direct students to appropriate resources, guide them through the debugging process, assess understanding and help students determine when to move on and when to do more practice in choice levels.\n\n\n* **Lesson Decisions:**\n  * The teacher instructs participants to complete all choice level bubbles until they feel comfortable enough to move on to the assessment. If they are successful with the assessment (use the mini rubric to check) they can move on to the challenge choice levels.\n  * As participants are working in choice levels, ask to see their work in the assessment level. Ask participants to justify their score on the mini rubric.\n  * The teacher directs participants to the student version of the “Student Guide to Debugging” on page 24 of their Resource Packet and prompts them to use the debugging process when they encounter bugs.\n\n\n* **Debrief Topic:**\n  * Context setting\n  * Exploration\n  * Experimentation\n  * Assessment\n\n\n**Objectives:**\n* Participants understand how programming lessons are structured within the curriculum\n* Participants reinforce their understanding of the debugging process\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "* Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:**  How can we use variables to store information in our programs?\n\nIn this lesson, you will be introduced to variables - an important concept in programming used to store values for your programs!"
       },
@@ -358,6 +358,7 @@
       "key": "bfb2459c-0ba7-4614-80c0-5d4d1452b4b1",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "bfb2459c-0ba7-4614-80c0-5d4d1452b4b1",
@@ -448,6 +449,7 @@
       "key": "13985ac7-64ba-443d-88e3-d3e2a2f2301b",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "13985ac7-64ba-443d-88e3-d3e2a2f2301b",
@@ -1069,6 +1071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L3 rect_2024"
+        ],
         "progression": "Predict - Introduction to Game Lab"
       },
       "bonus": false,
@@ -1091,6 +1096,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 rect_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1113,6 +1121,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Drawing Squares to Corners_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1135,6 +1146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 fill_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1157,6 +1171,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 sequence_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1179,6 +1196,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 ellipse_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1201,6 +1221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice choice_csd-vpl-23_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1223,6 +1246,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 debug_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1245,6 +1271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing challenges_csd-vpl-23_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1267,6 +1296,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async1_2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1289,6 +1321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async1.5_2024"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1311,6 +1346,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async2_2024"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1333,6 +1371,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async3_2024"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1355,6 +1396,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async4_2024"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1377,6 +1421,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async5_2024"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1399,6 +1446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where X_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1421,6 +1471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where XY_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1443,6 +1496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L5 - SB1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1465,6 +1521,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables naming rules v2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1487,6 +1546,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Poppy_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1509,6 +1571,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables practice_csd-vpl-23_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1531,6 +1596,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1553,6 +1621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables challenge_csd-vpl-23_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1575,6 +1646,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async6_2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1597,6 +1671,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources1_2024"
+        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -1619,6 +1696,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources2_2024"
+        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -1641,6 +1721,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources3_2024"
+        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -1663,6 +1746,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment1_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1685,6 +1771,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment3_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1707,6 +1796,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment2_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1729,6 +1821,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Assessment4_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1751,6 +1846,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-Levels_2024"
+        ],
         "progression": "Completing Model Lesson Levels"
       },
       "bonus": false,

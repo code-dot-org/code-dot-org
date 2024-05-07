@@ -8,7 +8,7 @@ import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {featuredProjectDataPropType} from './projectConstants';
-import {FeaturedProjectStatus} from '@cdo/apps/util/sharedConstants';
+import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';

@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
-import i18n from '@cdo/locale';
+
 import fontConstants from '@cdo/apps/fontConstants';
-import {styles} from './censusFormStyles';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import i18n from '@cdo/locale';
+
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+
+import {styles} from './censusFormStyles';
 
 const singleLineLayoutStyles = {
   display: 'table-cell',

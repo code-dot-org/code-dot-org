@@ -5,15 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Implementation Options
 
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">CS Discoveries can be taught as a full-year course, a single semester course, or multiple courses split across grade levels. We recommend always starting with Chapter 1 of Unit 1 to introduce the problem solving process and classroom norms. If students have already completed this content in another grade level, you may use one of the alternate lessons available for introducing the problem solving process. 
+</p></div>
 
-
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">CS Discoveries can be taught as a full-year course, a single semester course, or multiple courses split across grade levels. We recommend always starting with Chapter 1 of Unit 1 to introduce the problem solving process and classroom norms. If students have already completed this content in another grade level, you may use one of the alternate lessons available for introducing the problem solving process. 
-</p>
-</div>
-
-##### **Consider the following when selecting the content you will teach in your CS Discoveries class.** 
+#### Consider the following when selecting the content you will teach in your CS Discoveries class.
 
 <div style="clear:both"/>
 
@@ -21,19 +16,20 @@ markdown <<MARKDOWN
 
 ## What are the unit dependencies?
 
-##### Some units in CS Discoveries rely on concepts that are taught in previous units. Every unit relies on the Problem Solving Process, which is thoroughly introduced in Chapter 1 of the first unit and reintroduced in the first lesson of chapter 1 for most units (_Unit 5 reintroduces the Problem Solving Process in the first lesson of chapter 2_). Unit dependencies are highlighted on the CS Discoveries course overview page and in the CS Discoveries Implementation Guide.  
+#### Some units in CS Discoveries rely on concepts that are taught in previous units. Every unit relies on the Problem Solving Process, which is thoroughly introduced in Chapter 1 of the first unit and reintroduced in the first lesson of chapter 1 for most units (_Unit 5 reintroduces the Problem Solving Process in the first lesson of chapter 2_). Unit dependencies are highlighted on the CS Discoveries course overview page and in the CS Discoveries Implementation Guide.  
 
 ## Which standards will I cover? 
 
-##### CS Discoveries is mapped to the CSTA standards. <a href="https://studio.code.org/courses/csd-2023/standards" target="blank" rel="noopener noreferrer">Click here</a> to view the list of standards addressed in each unit. 
+#### CS Discoveries is mapped to the CSTA standards. <a href="https://studio.code.org/courses/csd-2024/standards" target="blank" rel="noopener noreferrer">Click here</a> to view the list of standards addressed in each unit. 
 
 ## How much instructional time do I have? 
 
-##### As you plan your course pacing, use the unit calender at the top of each Unit Overview page to adjust for your instructional minutes. If you are short on time and want to cover more topics with your students, consider teaching the first chapter of multiple units.  
+#### As you plan your course pacing, use the unit calender at the top of each Unit Overview page to adjust for your instructional minutes. If you are short on time and want to cover more topics with your students, consider teaching the first chapter of multiple units.  
 
 <div style="clear:both"/>
+<br>
 
-#### For more information, <a href="https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view" target="blank" rel="noopener noreferrer">click here</a> to read the full CS Discoveries Implementation Guide.
+#### For more information, <a href="https://docs.google.com/document/d/1wNaYFmhH62KfkSjDY9zLat5bwwK4nuvKChJasvSMHeM/view" target="blank" rel="noopener noreferrer">click here</a> to read the full CS Discoveries Implementation Guide.
 
 
 MARKDOWN

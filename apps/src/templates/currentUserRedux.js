@@ -3,7 +3,7 @@ import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
-import {UserTypes} from '@cdo/apps/util/sharedConstants';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
@@ -16,6 +16,7 @@ const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 const SET_SHOW_PROGRESS_TABLE_V2 = 'currentUser/SET_SHOW_PROGRESS_TABLE_V2';
+const SET_AI_RUBRICS_DISABLED = 'currentUser/SET_AI_RUBRICS_DISABLED';
 const SET_PROGRESS_TABLE_V2_CLOSED_BETA =
   'currentUser/SET_PROGRESS_TABLE_V2_CLOSED_BETA';
 
@@ -77,6 +78,10 @@ export const setShowProgressTableV2 = showProgressTableV2 => ({
 export const setProgressTableV2ClosedBeta = progressTableV2ClosedBeta => ({
   type: SET_PROGRESS_TABLE_V2_CLOSED_BETA,
   progressTableV2ClosedBeta,
+});
+export const setAiRubricsDisabled = aiRubricsDisabled => ({
+  type: SET_AI_RUBRICS_DISABLED,
+  aiRubricsDisabled,
 });
 
 const initialState = {
@@ -173,6 +178,12 @@ export default function currentUser(state = initialState, action) {
       progressTableV2ClosedBeta: action.progressTableV2ClosedBeta,
     };
   }
+  if (action.type === SET_AI_RUBRICS_DISABLED) {
+    return {
+      ...state,
+      aiRubricsDisabled: action.aiRubricsDisabled,
+    };
+  }
   if (action.type === SET_INITIAL_DATA) {
     const {
       id,
@@ -184,6 +195,7 @@ export default function currentUser(state = initialState, action) {
       over_21,
       sort_by_family_name,
       show_progress_table_v2,
+      ai_rubrics_disabled,
       progress_table_v2_closed_beta,
       is_lti,
     } = action.serverUser;
@@ -194,7 +206,11 @@ export default function currentUser(state = initialState, action) {
     );
     // Calling Statsig separately to emphasize different user integrations
     // and because dual reporting is aspirationally temporary (March 2024)
-    statsigReporter.setUserProperties(id, user_type);
+    statsigReporter.setUserProperties(
+      id,
+      user_type,
+      experiments.getEnabledExperiments()
+    );
     return {
       ...state,
       userId: id,
@@ -206,6 +222,7 @@ export default function currentUser(state = initialState, action) {
       over21: over_21,
       isSortedByFamilyName: sort_by_family_name,
       showProgressTableV2: show_progress_table_v2,
+      aiRubricsDisabled: ai_rubrics_disabled,
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,

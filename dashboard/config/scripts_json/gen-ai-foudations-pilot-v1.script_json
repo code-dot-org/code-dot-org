@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-foudations-pilot-v1",
-    "serialized_at": "2024-04-17 17:20:36 UTC",
+    "serialized_at": "2024-05-06 17:43:57 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -77,13 +77,13 @@
     },
     {
       "key": "lesson-3",
-      "name": "Bias in the Machine",
+      "name": "(Optional) Bias in the Machine",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "This lesson begins with students contemplating how their decisions in learning a new language influence their vocabulary and phrase knowledge. It then transitions into an activity where they examine how their choices in training data affect a language model's word associations and patterns. By analyzing top search results on a topic, students discuss the potential overrepresentation or absence of information and its impact on a language model. The lesson introduces the concept of bias, prompting students to consider how their decisions, or lack thereof, could lead to biased training data.",
+        "overview": "**Update 4/24:** See note in the lesson plan for more information on why this lesson is marked \"optional\" and potential alternative activities.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how our choices can influence a large-language model"
       },
@@ -349,8 +349,21 @@
       }
     },
     {
-      "key": "785b7e04-3d03-44d1-aa39-379a9d9f03b0",
+      "key": "385b5dbc-ec67-4ec4-bfd3-11eb69f39f2b",
       "position": 1,
+      "properties": {
+        "name": "Update 4/24"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "385b5dbc-ec67-4ec4-bfd3-11eb69f39f2b",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
+    },
+    {
+      "key": "785b7e04-3d03-44d1-aa39-379a9d9f03b0",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -364,7 +377,7 @@
     },
     {
       "key": "ffdb6fd6-5e0f-455d-9b82-adb122157471",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -378,7 +391,7 @@
     },
     {
       "key": "392f3fcb-4a85-4b06-a288-5a26c4b3f180",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -392,7 +405,7 @@
     },
     {
       "key": "3f11b91e-e2c3-45d4-bb92-3e3d32c2bc4d",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Pilot Feedback"
       },
@@ -829,6 +842,19 @@
         "lesson_group.key": "",
         "script.name": "gen-ai-foudations-pilot-v1"
       }
+    },
+    {
+      "key": "5b18a66f-252d-4fac-ae42-280aa12734fe",
+      "position": 4,
+      "properties": {
+        "name": "Pilot Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b18a66f-252d-4fac-ae42-280aa12734fe",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-foudations-pilot-v1"
+      }
     }
   ],
   "activity_sections": [
@@ -908,7 +934,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Teaching Tip: Vocabulary Management** - Artificial Intelligence may seem ubiquitous, but we don’t want to assume everyone in the room has heard this term before so we introduce it here so everyone starts with the same foundation. However, this sometimes introduces tension with vocabulary management - how should students keep track of vocabulary in this unit so they can reference it when needed? This unit provides a partial solution - students will get a graphic organizer at the end of this lesson that includes key vocabulary and concepts for the entire unit. However, not all words (like this one) are represented in that organizer. If you have your own system for tracking vocabulary, feel free to apply it for these terms as well. But it’s also reasonable to avoid this altogether and instead provide other supports for students to reference key vocabulary - for example, you could create a Word Wall or posters for these vocabulary terms and hang them up in your classroom as they are introduced throughout the unit. Or, you could have a vocabulary handout that is updated after lessons and lives near desks or computers so students can reference as needed."
+            "markdown": "**Teaching Tip: Vocabulary Management** - Artificial Intelligence may seem ubiquitous, but we don’t want to assume everyone in the room has heard this term before so we introduce it here so everyone starts with the same foundation. However, this sometimes introduces tension with vocabulary management - how should students keep track of vocabulary in this unit so they can reference it when needed? \n\nThis unit provides a partial solution - students will get a graphic organizer at the end of this lesson that includes key vocabulary and concepts for the entire unit. However, not all words (like this one) are represented in that organizer. If you have your own system for tracking vocabulary that you've used in previous units, consider applying it here as well so students have a consistent experience.\n\nIf you don't have a system for managing vocabulary, you might consider the following strategies:\n- Create a Word Wall or posters for these vocabulary terms and hang them up in your classroom as they are introduced throughout the unit. \n- Provide a vocabulary handout that is updated after lessons and lives near desks or computers so students can reference as needed."
           }
         ]
       },
@@ -1111,6 +1137,42 @@
       "seeding_key": {
         "activity_section.key": "1844e168-8209-46b4-b1df-aaf1df84b292",
         "lesson_activity.key": "230db07e-1da7-4fba-a37c-3f5f8cb840b5"
+      }
+    },
+    {
+      "key": "ad801036-7d2b-4010-907c-a82a63274a51",
+      "position": 1,
+      "properties": {
+        "description": "Early feedback on this lesson has made it clear that the main activity, as designed below, is not meeting the goals we set out for this lesson. This is why we pilot - to make sure the lessons we design match in real classrooms with real students - and we're grateful to all the folks who tried out this lesson and provided feedback.\n\nHowever - the concept of bias in generative AI is extremely important and is necessary for the final project. This puts is in a bind - we already know this lesson doesn't do a great job of introducing bias, but we also feel it's too important to skip. With that in mind, here are a few options for how to consider this day in the sequence:",
+        "name": "From the Curriculum Team"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad801036-7d2b-4010-907c-a82a63274a51",
+        "lesson_activity.key": "385b5dbc-ec67-4ec4-bfd3-11eb69f39f2b"
+      }
+    },
+    {
+      "key": "54fde25a-d272-4044-8c14-23ac29119872",
+      "position": 2,
+      "properties": {
+        "description": "Consider showing the following videos to students on bias in artificial intelligence:\n- [3 Types of Bias in AI](https://www.youtube.com/watch?v=59bMh59JQDo)\n- [Gender Shades](https://www.youtube.com/watch?v=TWWsW1w-BVo)\n- [The Coded Gaze: Unmasking Algorithmic Bias](https://www.youtube.com/watch?v=162VzSzzoPs)\n\nWe recommend these videos because they provide concrete examples and they highlight the roles that humans and society play in how bias is encoded and perpetuated in AI systems. Through our actions (or inactions), bias can enter AI systems - which also means, by being proactive, we can have a hand in reducing harm from biased AI systems.\n\nWith that in mind, after showing the videos, consider highlighting [Dr Joy Buolmwini](https://www.csedweek.org/cs-heroes/joy-buolamwini) and investigating her work with algorithmic bias in facial recognition. This provides students with a concrete example of how algorithmic bias prioritizes some and excludes others, and provides a role model of someone working against algorithmic bias in the AI field.",
+        "name": "Option 1: Videos & Research"
+      },
+      "seeding_key": {
+        "activity_section.key": "54fde25a-d272-4044-8c14-23ac29119872",
+        "lesson_activity.key": "385b5dbc-ec67-4ec4-bfd3-11eb69f39f2b"
+      }
+    },
+    {
+      "key": "5b12feb9-6ec6-47b5-80aa-8841b1e8e0c9",
+      "position": 3,
+      "properties": {
+        "description": "We plan to revise the lesson below and make some significant changes. If you were to teach the lesson below, here's what we would suggest (it may make more sense to read the lesson plan first, then return to this list):\n- The current introduction to the activity is unclear. When introducing the activity, emphasize that the job is to curate data sources that will be used to train an AI. If students are familiar with a \"web crawler\" that automatically downloads websites on the internet: we're like a version of that, where we can decide which websites to download and use as examples to train a new AI model.\n- There are too many choices. Have the entire class look up the same topic - we recommend using either recipes or movie reviews.\n- Only have students look up one article instead of two.\n- Remove the bottom portion of the activity guide. Just have students focus on headlines, author, date, and 1-2 sentence summary\n- The second half of the lesson can be run as a full class, with students sharing out articles they found. Then you (and the class) can start to notice similarities amongst all of the articles\n  - Focus on similar authors (male vs female), similar timeframe (just from the last year), and similar summaries (did everyone look up recipes for fast food? Did everyone look up movie reviews for the same kinds of movies?)\n- The takeaway from the lesson is unclear. It can be helpful to say this explicitly: \"Bias in large language models happens at a large scale - it's not just one data source that contributes to bias, but when you have a collection of sources that implicitly emphasize or exclude certain things\"\n- Help students see their role in this process, as someone who chooses what sources to include in a language model (similar to the warm-up, where we can choose where to live which influences the new words we learn). ",
+        "name": "Option 2: Adapt the Lesson Below"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b12feb9-6ec6-47b5-80aa-8841b1e8e0c9",
+        "lesson_activity.key": "385b5dbc-ec67-4ec4-bfd3-11eb69f39f2b"
       }
     },
     {
@@ -2188,6 +2250,30 @@
       "seeding_key": {
         "activity_section.key": "6de4cf4c-fb76-4f59-b1b2-b08ba2d5eb73",
         "lesson_activity.key": "dde39cdb-7273-4b98-8bff-ffabdd6f99b4"
+      }
+    },
+    {
+      "key": "e652bee3-54ac-41fd-bd22-f49b6d641a6c",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the project**](https://docs.google.com/forms/d/e/1FAIpQLSecvMR4JoSFcE1HwG6LkSbWmHTTZwdzp31pTgIxLQBm27zqIw/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)",
+        "name": "Post-Project Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "e652bee3-54ac-41fd-bd22-f49b6d641a6c",
+        "lesson_activity.key": "5b18a66f-252d-4fac-ae42-280aa12734fe"
+      }
+    },
+    {
+      "key": "313c445e-2d69-46dc-843f-29e5e7a6ff23",
+      "position": 2,
+      "properties": {
+        "description": "Congratulations on finishing the unit! \n- **For Teachers:** [Please complete this final survey](https://docs.google.com/forms/d/e/1FAIpQLSdWJGsjTdlxdP2n_n1Wh4HxfnigkeRH9lLDzJuFBug0fp46ew/viewform) to provide holistic feedback on the unit. This is the final step before we send an Amazon gift card!\n- **For Students:** Please provide students with access to this survey: [https://bit.ly/gen-ai-student-survey-post-unit](https://bit.ly/gen-ai-student-survey-post-unit). This survey includes a few open-ended questions, so is best completed at a computer.",
+        "name": "Post-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "313c445e-2d69-46dc-843f-29e5e7a6ff23",
+        "lesson_activity.key": "5b18a66f-252d-4fac-ae42-280aa12734fe"
       }
     }
   ],

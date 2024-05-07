@@ -8,26 +8,26 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/824949023d7e48fdafa2f81aad4308ad-image-1648842652007.50.36 PM.png" alt="Screenshot of a navigation plan" style="float: right; height: 375px; clear: both; margin: 0 20px 20px 0;">
 
-##### After students design their paper prototypes (which will eventually become their digital prototypes), it's time to test them! You'll notice that the user testing activity below is very similar to the same activity in Chapter 1 of this unit. 
+#### After students design their paper prototypes (which will eventually become their digital prototypes), it's time to test them! You'll notice that the user testing activity below is very similar to the same activity in Chapter 1 of this unit. 
 
-##### One difference, however, is that students will be working **in teams** to build their apps. Therefore, in addition to the **user** and the **computer**, we are introducing the roles of **narrator** and **observers**.
+#### One difference, however, is that students will be working **in teams** to build their apps. Therefore, in addition to the **user** and the **computer**, we are introducing the roles of **narrator** and **observers**.
 
-#### **Activity Overview**
+### **Activity Overview**
 
-* ##### The **user** is the person who is testing the app in the form of a paper prototype. They should pretend to execute the “app” by pressing on the prototype with their fingers in the way that makes the most sense.
-* ##### The user speaks through what they are thinking-out-loud. They can also offer helpful suggestions in our critiquing form with sentences starting with “I like…”, “I wish…”, and “I wonder… “
-* ##### The **computer** reacts to what the user does. If the user tries something that isn’t a part of the app navigation diagram, then the computer doesn’t react.
-* ##### The **narrator** is the person who is running the test. This person will introduce the team members, the app, and its purpose.
-* ##### The **observers** are the other students on the team. They will watch the interaction and write down in their notes what they see the user do in response to the computer. They don’t make any comments themselves - they just take notes.
+* #### The **user** is the person who is testing the app in the form of a paper prototype. They should pretend to execute the “app” by pressing on the prototype with their fingers in the way that makes the most sense.
+* #### The user speaks through what they are thinking-out-loud. They can also offer helpful suggestions in our critiquing form with sentences starting with “I like…”, “I wish…”, and “I wonder… “
+* #### The **computer** reacts to what the user does. If the user tries something that isn’t a part of the app navigation diagram, then the computer doesn’t react.
+* #### The **narrator** is the person who is running the test. This person will introduce the team members, the app, and its purpose.
+* #### The **observers** are the other students on the team. They will watch the interaction and write down in their notes what they see the user do in response to the computer. They don’t make any comments themselves - they just take notes.
 
 ## Key Takeaway
 
-##### A key takeaway from this activity is that students **leave with a plan for changes they can make to their app** based on their testing. This usually requires setting your ego aside and seeing feedback as opportunities for improvement rather than evidence of failure. Remind students that these are just prototypes, nowhere near the final project. Also, remind students not to take feedback personally - that all apps go through this process and they get better because of it.
+#### A key takeaway from this activity is that students **leave with a plan for changes they can make to their app** based on their testing. This usually requires setting your ego aside and seeing feedback as opportunities for improvement rather than evidence of failure. Remind students that these are just prototypes, nowhere near the final project. Also, remind students not to take feedback personally - that all apps go through this process and they get better because of it.
 
-##### Students may notice that **new users discovered new ways to use the app or encountered certain problems they never considered**. This can lead to a **conversation about bias** - because the team was involved in the creation of the app, they may have overlooked different aspects of how the UI is designed or made assumptions about how the user would use it. This is why it’s important to have an outside user test those assumptions early and often.
+#### Students may notice that **new users discovered new ways to use the app or encountered certain problems they never considered**. This can lead to a **conversation about bias** - because the team was involved in the creation of the app, they may have overlooked different aspects of how the UI is designed or made assumptions about how the user would use it. This is why it’s important to have an outside user test those assumptions early and often.
 
 
-##### <a href="https://studio.code.org/s/csd4-2023/lessons/13" target="blank" rel="noopener noreferrer">Click here</a> if you would like to read the full lesson plan and explore the lesson resources. 
+#### <a href="https://studio.code.org/s/csd4-2024/lessons/13" target="blank" rel="noopener noreferrer">Click here</a> if you would like to read the full lesson plan and explore the lesson resources. 
 
 
 MARKDOWN

@@ -4,8 +4,9 @@ import {
   ModelCardInfo,
   Visibility,
 } from '../../types';
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
 
-export const MIN_TEMPERATURE = 0;
+export const MIN_TEMPERATURE = 0.1;
 export const MAX_TEMPERATURE = 1;
 export const SET_TEMPERATURE_STEP = 0.1;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
@@ -26,13 +27,14 @@ export const MODEL_CARD_FIELDS_LABELS_ICONS: [
 
 export const TECHNICAL_INFO_FIELDS = [
   'Model Name',
+  'Overview',
   'Training Data',
   'System Prompt',
   'Temperature',
   'Retrieval Used',
 ] as const;
 
-const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
+export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   botName: '',
   description: '',
   intendedUse: '',
@@ -43,7 +45,7 @@ const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
 };
 
 export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
-  selectedModelId: '',
+  selectedModelId: modelDescriptions[0].id,
   temperature: 0.5,
   systemPrompt: '',
   retrievalContexts: [],
@@ -53,7 +55,7 @@ export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
 export const DEFAULT_VISIBILITIES: {
   [key in keyof AiCustomizations]: Visibility;
 } = {
-  selectedModelId: Visibility.EDITABLE,
+  selectedModelId: Visibility.READONLY,
   temperature: Visibility.EDITABLE,
   systemPrompt: Visibility.EDITABLE,
   retrievalContexts: Visibility.EDITABLE,
@@ -64,7 +66,7 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   initialCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   visibilities: DEFAULT_VISIBILITIES,
   hidePresentationPanel: false,
-  availableModelIds: [],
+  availableModelIds: [modelDescriptions[0].id],
 };
 
 export const AI_CUSTOMIZATIONS_LABELS: {
@@ -74,5 +76,5 @@ export const AI_CUSTOMIZATIONS_LABELS: {
   temperature: 'Temperature',
   systemPrompt: 'System prompt',
   retrievalContexts: 'Retrieval',
-  modelCardInfo: 'Model description',
+  modelCardInfo: 'Model card information',
 };

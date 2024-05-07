@@ -36,7 +36,6 @@ import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
-import userAgentParser from './code-studio/initApp/userAgentParser';
 import {
   KeyCodes,
   TestResults,
@@ -1589,13 +1588,10 @@ StudioApp.prototype.resizeToolboxHeader = function () {
 StudioApp.prototype.highlight = function (id, spotlight) {
   if (this.isUsingBlockly() && !isEditWhileRun(getStore().getState())) {
     if (id) {
-      var m = id.match(/^block_id_(\d+)$/);
-      if (m) {
-        id = m[1];
-      }
+      id = id.replace(/^block_id_/, '');
     }
 
-    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.cdoUtils.highlightBlock(id, spotlight);
   }
 };
 
@@ -2938,13 +2934,11 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
   this.setStartBlocks_(config, true);
 
-  if (userAgentParser.isMobile() && userAgentParser.isSafari()) {
-    // Mobile Safari resize events fire too early, see:
-    // https://openradar.appspot.com/31725316
-    // Rerun the blockly resize handler after 500ms when clientWidth/Height
-    // should be correct
-    window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
-  }
+  // In some cases, resize events fire too early. For example, see:
+  // https://openradar.appspot.com/31725316
+  // Resize the Blockly workspace after 500ms when clientWidth/Height
+  // should be correct.
+  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
 };
 
 /**

@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ## Role of the teacher
 
-#### The lessons at the start of the unit are designed to help students build foundational knowledge about how to leverage generative AI to ethically and productively help them with coding. All lessons within the Coding with AI unit are intended to be facilitated by a teacher. These lessons are not designed as self-paced experiences for students to work through at their own pace.
+#### The lessons at the start of the unit are designed to help students build foundational knowledge about how to leverage generative AI to ethically and productively help them with coding. All lessons within the Coding with AI unit are intended to be **facilitated by a teacher**. These lessons are **not designed as self-paced experiences for students** to work through at their own pace.
 
 ---
 
@@ -18,11 +18,15 @@ markdown <<MARKDOWN
 
 #### The Coding with AI Unit is made up of 5 lessons. You can choose to teach all 5 lessons, or just select the ones that fit in your schedule. 
 
-- #### **Lesson 1:** Introduction to Coding with AI
-- #### **Lesson 2:** AI as your Ideation Partner 
-- #### **Lesson 3:** Navigating Algorithms with the Help of AI
-- #### **Lesson 4:** AI as your Debugging Partner
-- #### **Lesson 5:** Beyond the Finished Code
+- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 1:</b></a> Introduction to Coding with AI
+
+- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/2" target="blank" rel="noopener noreferrer"><b>Lesson 2:</b></a> AI as your Ideation Partner 
+
+- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/3" target="blank" rel="noopener noreferrer"><b>Lesson 3:</b></a> Navigating Algorithms with the Help of AI
+
+- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/4" target="blank" rel="noopener noreferrer"><b>Lesson 4:</b></a> AI as your Debugging Partner
+
+- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/5" target="blank" rel="noopener noreferrer"><b>Lesson 5:</b></a> Beyond the Finished Code
 
 ---
 ## Lesson Structure 
@@ -37,5 +41,5 @@ markdown <<MARKDOWN
 
 #### **Wrap-up:** Lessons conclude with a clear summary and takeaways to solidify key concepts.
 
-![]()
+
 MARKDOWN

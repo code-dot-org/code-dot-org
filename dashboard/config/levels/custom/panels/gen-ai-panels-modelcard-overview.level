@@ -9,12 +9,36 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "",
-        "imageUrl": "",
+        "text": "Press the \"Publish\" button to navigate to the Model Card for the chatbot. ",
+        "imageUrl": "https://images.code.org/b54e67e74e3ade0e22f880a2988e5dc8-navigate_to_model-chatbot_modelcard.png",
         "key": "gen-ai-panels-chatbot-overview-d3f0947e-62e1-42b4-a1af-7c29c6c57ed8"
+      },
+      {
+        "text": "Enter model info in each of the text fields. In order to publish, you must fill out the model card completely. ",
+        "imageUrl": "https://images.code.org/90eda80469b28e3d027217b6c0123102-enter_model_info-chatbot_modelcard.png",
+        "key": "gen-ai-panels-modelcard-overview-688b875d-5793-40d4-9c7b-7a35bdf2b320",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "Use the \"Save\" button to save your progress as you go.",
+        "imageUrl": "https://images.code.org/1ead0b0be738a73d9cffbbc26ba17585-save_model_info-chatbot_modelcard.png",
+        "key": "gen-ai-panels-modelcard-overview-048c31ba-a221-4538-96c4-dbdfea29064f",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "Press the \"Publish\" button when you are ready to test your model out!",
+        "imageUrl": "https://images.code.org/d92b9689f7995d7230aef18725ebe0a9-publish_model_info-chatbot_modelcard.png",
+        "key": "gen-ai-panels-modelcard-overview-b0e46364-676a-4765-8ff0-66f52ea7e4c1",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Your published model is ready for testing. ",
+        "imageUrl": "https://images.code.org/e7f592a3476859c90ea3dda61e04953b-published_model-chatbot_modelcard.png",
+        "key": "gen-ai-panels-modelcard-overview-1b020b48-8b54-4f3a-8ba1-997021067f8c",
+        "layout": "text-bottom-left"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-18T19:44:45.989+00:00\",\"changed\":[\"cloned from \\\"gen-ai-panels-retrieval-overview\\\"\"],\"cloned_from\":\"gen-ai-panels-retrieval-overview\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-18T19:44:45.989+00:00\",\"changed\":[\"cloned from \\\"gen-ai-panels-retrieval-overview\\\"\"],\"cloned_from\":\"gen-ai-panels-retrieval-overview\"},{\"changed_at\":\"2024-04-20 08:39:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-04-21 05:51:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-04-21 05:52:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-04-21 05:53:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Panels>

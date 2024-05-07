@@ -11,25 +11,31 @@ import {
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  AiInteractionStatus as Status,
+  AichatErrorType,
+} from '@cdo/generated-scripts/sharedConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
-import {initialChatMessages} from '../constants';
 import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {
   AiCustomizations,
-  AichatInteractionStatus as Status,
+  AichatInteractionStatusValue,
   ChatCompletionMessage,
-  ChatContext,
+  AichatContext,
   LevelAichatSettings,
   ModelCardInfo,
   Role,
   ViewMode,
   Visibility,
 } from '../types';
+import {getTypedKeys} from '@cdo/apps/types/utils';
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],
@@ -78,10 +84,11 @@ export interface AichatState {
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
   viewMode: ViewMode;
+  currentSessionId?: number;
 }
 
 const initialState: AichatState = {
-  chatMessages: initialChatMessages,
+  chatMessages: [],
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
@@ -99,13 +106,16 @@ const initialState: AichatState = {
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, thunkAPI) => {
-    const rootState = thunkAPI.getState() as RootState;
+    const rootState = (await thunkAPI.getState()) as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const levelId = rootState.progress.currentLevelId;
     const {dispatch} = thunkAPI;
 
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      EVENTS.UPDATE_CHATBOT,
+      levelId,
       dispatch
     );
   }
@@ -122,9 +132,12 @@ export const publishModel = createAsyncThunk(
 
     const rootState = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
+    const levelId = rootState.progress.currentLevelId;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      EVENTS.PUBLISH_MODEL_CARD_INFO,
+      levelId,
       dispatch
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -137,8 +150,10 @@ export const saveModelCard = createAsyncThunk(
   'aichat/saveModelCard',
   async (_, thunkAPI) => {
     const {dispatch} = thunkAPI;
-    const modelCardInfo = (thunkAPI.getState() as RootState).aichat
-      .currentAiCustomizations.modelCardInfo;
+    const rootState = (await thunkAPI.getState()) as RootState;
+    const modelCardInfo =
+      rootState.aichat.currentAiCustomizations.modelCardInfo;
+    const levelId = rootState.progress.currentLevelId;
     if (!hasFilledOutModelCard(modelCardInfo)) {
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
@@ -149,16 +164,28 @@ export const saveModelCard = createAsyncThunk(
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
+      EVENTS.SAVE_MODEL_CARD_INFO,
+      levelId,
       dispatch
     );
   }
 );
+
+// This variable keeps track of the most recent message ID so that we can
+// assign a unique message id in increasing sequence to a new message.
+let latestMessageId = 0;
+const getNewMessageId = () => {
+  latestMessageId += 1;
+  return latestMessageId;
+};
 
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
+  eventDescription: string,
+  levelId: string | null,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
@@ -191,10 +218,23 @@ const saveAiCustomization = async (
     savedAiCustomizations,
     trimmedCurrentAiCustomizations
   );
+  if (
+    changedProperties.some(property =>
+      [
+        'selectedModelId',
+        'temperature',
+        'systemPrompt',
+        'retrievalContexts',
+      ].includes(property)
+    )
+  ) {
+    dispatch(setNewChatSession());
+  }
+
   changedProperties.forEach(property => {
     dispatch(
       addChatMessage({
-        id: 0,
+        id: getNewMessageId(),
         role: Role.MODEL_UPDATE,
         chatMessageText:
           AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
@@ -202,6 +242,16 @@ const saveAiCustomization = async (
         timestamp: getCurrentTime(),
       })
     );
+    if (eventDescription) {
+      analyticsReporter.sendEvent(
+        eventDescription,
+        {
+          propertyUpdated: property,
+          levelId,
+        },
+        PLATFORMS.BOTH
+      );
+    }
   });
 };
 
@@ -212,52 +262,101 @@ export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
-    const aiCustomizations = state.aichat.savedAiCustomizations;
-    const storedMessages = state.aichat.chatMessages;
-    const chatContext: ChatContext = {
-      userId: state.currentUser.userId,
-      currentLevelId: state.progress.currentLevelId,
+    const {
+      savedAiCustomizations: aiCustomizations,
+      chatMessages: storedMessages,
+      currentSessionId,
+    } = state.aichat;
+
+    const aichatContext: AichatContext = {
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
-    const newMessageId =
-      storedMessages.length === 0
-        ? 1
-        : storedMessages[storedMessages.length - 1].id + 1;
-
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
-      id: newMessageId,
+      id: getNewMessageId(),
       role: Role.USER,
-      status: Status.OK,
+      status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
+      sessionId: currentSessionId,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
-      storedMessages,
+      currentSessionId
+        ? storedMessages.filter(
+            message => message.sessionId === currentSessionId
+          )
+        : [],
       aiCustomizations,
-      chatContext
+      aichatContext,
+      currentSessionId
     );
-    console.log('chatApiResponse', chatApiResponse);
+
+    // Regardless of response type,
+    // assign last user message to session.
+    if (chatApiResponse.session_id) {
+      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
+      thunkAPI.dispatch(
+        updateChatMessageSession({
+          id: newMessage.id,
+          sessionId: chatApiResponse.session_id,
+        })
+      );
+    }
+
+    // success state: received response from model ("assistant")
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: newMessageId + 1,
+        id: getNewMessageId(),
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
-        // The accuracy of this timestamp is debatable since it's not when our backend
-        // issued the message, but it's good enough for user testing.
+        timestamp: getCurrentTimestamp(),
+        sessionId: chatApiResponse.session_id,
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.OK,
+        })
+      );
+
+      // error state #1: model generated profanity
+    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: getNewMessageId(),
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
         timestamp: getCurrentTimestamp(),
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-    } else {
-      // TODO: Update most recent user message's status if PII or profanity violation.
-      // latest message's id is stored at `newMessageId`.
-      console.log('Did not receive assistant response.');
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.ERROR,
+        })
+      );
+
+      // error state #2: user message contained profanity
+    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
+      // Logging to allow visibility into flagged content.
+      console.log(chatApiResponse);
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.PROFANITY_VIOLATION,
+        })
+      );
     }
   }
 );
@@ -267,24 +366,38 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      const newMessageId =
-        state.chatMessages[state.chatMessages.length - 1].id + 1;
-      const newMessage = {
-        ...action.payload,
-        id: newMessageId,
-      };
-      state.chatMessages.push(newMessage);
+      state.chatMessages.push(action.payload);
     },
-    removeChatMessage: (state, action: PayloadAction<number>) => {
-      const updatedMessages = state.chatMessages.filter(
-        message => message.id !== action.payload
+    removeModelUpdateMessage: (state, action: PayloadAction<number>) => {
+      const updatedMessages = [...state.chatMessages];
+      const messageToRemovePosition = updatedMessages.findIndex(
+        message => message.id === action.payload
       );
-      if (updatedMessages.length !== state.chatMessages.length) {
-        state.chatMessages = updatedMessages;
+
+      // Only allow removing individual messages that are model updates,
+      // as we want to retain user and bot message history
+      // when requesting model responses within a chat session.
+      // If we want to clear all history
+      // and start a new session, see clearChatMessages.
+      if (
+        messageToRemovePosition < 0 ||
+        updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE
+      ) {
+        return;
       }
+      updatedMessages.splice(messageToRemovePosition, 1);
+
+      state.chatMessages = updatedMessages;
     },
     clearChatMessages: state => {
-      state.chatMessages = initialChatMessages;
+      state.chatMessages = [];
+      state.currentSessionId = undefined;
+    },
+    setNewChatSession: state => {
+      state.currentSessionId = undefined;
+    },
+    setChatSessionId: (state, action: PayloadAction<number>) => {
+      state.currentSessionId = action.payload;
     },
     setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForChatResponse = action.payload;
@@ -292,14 +405,24 @@ const aichatSlice = createSlice({
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
     },
-    updateChatMessageStatus: (
+    updateUserChatMessageStatus: (
       state,
-      action: PayloadAction<{id: number; status: Status}>
+      action: PayloadAction<{id: number; status: AichatInteractionStatusValue}>
     ) => {
       const {id, status} = action.payload;
       const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage) {
+      if (chatMessage && chatMessage.role === Role.USER) {
         chatMessage.status = status;
+      }
+    },
+    updateChatMessageSession: (
+      state,
+      action: PayloadAction<{id: number; sessionId: number}>
+    ) => {
+      const {id, sessionId} = action.payload;
+      const chatMessage = state.chatMessages.find(msg => msg.id === id);
+      if (chatMessage) {
+        chatMessage.sessionId = sessionId;
       }
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
@@ -392,18 +515,16 @@ const aichatSlice = createSlice({
 });
 
 const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
-  for (const key of Object.keys(modelCardInfo)) {
-    const typedKey = key as keyof ModelCardInfo;
-
-    if (typedKey === 'isPublished') {
+  for (const key of getTypedKeys(modelCardInfo)) {
+    if (key === 'isPublished') {
       continue;
-    } else if (typedKey === 'exampleTopics') {
+    } else if (key === 'exampleTopics') {
       if (
         !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
       ) {
         return false;
       }
-    } else if (!modelCardInfo[typedKey].length) {
+    } else if (!modelCardInfo[key].length) {
       return false;
     }
   }
@@ -411,21 +532,33 @@ const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   return true;
 };
 
+const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
+  getTypedKeys(fieldVisibilities).every(
+    key => fieldVisibilities[key] === Visibility.HIDDEN
+  );
+
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
-  (state: {aichat: AichatState}) =>
-    state.aichat.currentAiCustomizations.modelCardInfo,
+  (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
   hasFilledOutModelCard
+);
+
+export const selectAllFieldsHidden = createSelector(
+  (state: RootState) => state.aichat.fieldVisibilities,
+  allFieldsHidden
 );
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addChatMessage,
-  removeChatMessage,
+  removeModelUpdateMessage,
+  setNewChatSession,
+  setChatSessionId,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,
-  updateChatMessageStatus,
+  updateUserChatMessageStatus,
+  updateChatMessageSession,
   setViewMode,
   setStartingAiCustomizations,
   setSavedAiCustomizations,

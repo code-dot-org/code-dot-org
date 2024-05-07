@@ -213,7 +213,8 @@ const WEBPACK_BASE_CONFIG = {
       repl: p('src/noop'),
       '@cdo/storybook': p('.storybook'),
       serialport: false,
-      '@cdoide': p('src/weblab2/CDOIDE'),
+      '@codebridge': p('src/codebridge'),
+      '@cdo/generated-scripts': p('generated-scripts'),
     },
   },
   module: {

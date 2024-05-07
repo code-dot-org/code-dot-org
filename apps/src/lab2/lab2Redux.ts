@@ -32,6 +32,8 @@ import {
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {START_SOURCES} from './constants';
 
 interface PageError {
   errorMessage: string;
@@ -57,6 +59,8 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
+  // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
+  isShareView: boolean | undefined;
 }
 
 const initialState: LabState = {
@@ -67,6 +71,7 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  isShareView: undefined,
 };
 
 // Thunks
@@ -120,6 +125,17 @@ export const setUpWithLevel = createAsyncThunk(
         return;
       }
 
+      // Start mode doesn't use channel ids so we can skip creating
+      // a project manager and just set the level data.
+      const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+      if (isStartMode) {
+        setProjectAndLevelData(
+          {levelProperties},
+          thunkAPI.signal.aborted,
+          thunkAPI.dispatch
+        );
+        return;
+      }
       // Create a new project manager. If we have a channel id,
       // default to loading the project for that channel. Otherwise
       // create a project manager for the given level and script id.
@@ -275,6 +291,9 @@ const labSlice = createSlice({
       state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;
     },
+    setIsShareView(state, action: PayloadAction<boolean>) {
+      state.isShareView = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -423,8 +442,13 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
-export const {setIsLoading, setPageError, clearPageError, setValidationState} =
-  labSlice.actions;
+export const {
+  setIsLoading,
+  setPageError,
+  clearPageError,
+  setValidationState,
+  setIsShareView,
+} = labSlice.actions;
 
 // These should not be set outside of the lab slice.
 const {setChannel, onLevelChange} = labSlice.actions;

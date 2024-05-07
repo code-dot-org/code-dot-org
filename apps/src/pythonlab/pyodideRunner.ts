@@ -1,5 +1,6 @@
 import {MultiFileSource} from '../lab2/types';
 import {asyncRun} from './pyodideWorkerManager';
+import {getTestRunnerScript} from './pythonHelpers/scripts';
 
 export async function runPythonCode(mainFile: string, source: MultiFileSource) {
   try {
@@ -15,4 +16,9 @@ export async function runPythonCode(mainFile: string, source: MultiFileSource) {
       `Error in pyodideWorker at ${e.filename}, Line: ${e.lineno}, ${e.message}`
     );
   }
+}
+
+export async function runAllTests(source: MultiFileSource) {
+  // To run all tests in the project, we look for files that follow the regex 'test*.py'
+  await runPythonCode(getTestRunnerScript('test*.py'), source);
 }

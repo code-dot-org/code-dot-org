@@ -57,13 +57,13 @@ export const plTableLayoutStyles = {
   link: {
     ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
-    textDecoration: 'none',
-  },
-  sectionLink: {
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 14,
     color: color.neutral_dark,
     textDecoration: 'underline',
+  },
+  sectionCodeLink: {
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 14,
+    color: color.brand_secondary_default,
   },
   currentUnit: {
     marginTop: 10,
@@ -76,6 +76,9 @@ export const plTableLayoutStyles = {
     width: 40,
   },
   participantTypeCell: {
+    fontSize: 14,
+  },
+  leaveButton: {
     fontSize: 14,
   },
 };

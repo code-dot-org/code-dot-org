@@ -8,7 +8,6 @@ import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import Button from '@cdo/apps/templates/Button';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import Notification from '@cdo/apps/templates/Notification';
@@ -19,6 +18,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import ContentContainer from '../ContentContainer';
 import HeaderBanner from '../HeaderBanner';
 import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -68,12 +68,12 @@ export const UnconnectedTeacherHomepage = ({
   /*
    * Determines whether the AFE banner will take premium space on the Teacher Homepage
    */
-  const shouldShowAFEBanner = false;
+  const shouldShowAFEBanner = true;
 
   /*
-   * Set to true to hide the census banner (Census banner live as of Mar 2024)
+   * Set to true to hide the census banner
    */
-  const forceHideCensusBanner = false;
+  const forceHideCensusBanner = true;
 
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
    * when we want to show the PL banner again set this to true
@@ -103,6 +103,10 @@ export const UnconnectedTeacherHomepage = ({
       beginGoogleImportRosterFlow();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    analyticsReporter.sendEvent(EVENTS.TEACHER_HOMEPAGE_VISITED);
   }, []);
 
   const handleCensusBannerSubmit = () => {
@@ -218,7 +222,6 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
-            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -229,7 +232,6 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
-            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -312,11 +314,30 @@ export const UnconnectedTeacherHomepage = ({
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
-        <JoinSectionArea
-          initialJoinedStudentSections={joinedStudentSections}
-          initialJoinedPlSections={joinedPlSections}
-          isTeacher={true}
-        />
+        <section>
+          <JoinSectionArea
+            initialJoinedStudentSections={joinedStudentSections}
+            initialJoinedPlSections={joinedPlSections}
+            isTeacher={true}
+          />
+        </section>
+        <ContentContainer
+          heading={i18n.joinedProfessionalLearningSectionsHomepageTitle()}
+        >
+          <BodyTwoText>
+            {i18n.joinedProfessionalLearningSectionsHomepageDesc()}
+          </BodyTwoText>
+          <LinkButton
+            color={'purple'}
+            href={studio('/my-professional-learning')}
+            iconLeft={{
+              iconName: 'book-circle-arrow-right',
+              iconStyle: 'solid',
+            }}
+            size="s"
+            text={i18n.myProfessionalLearningSectionsHomepageButton()}
+          />
+        </ContentContainer>
       </div>
     </div>
   );

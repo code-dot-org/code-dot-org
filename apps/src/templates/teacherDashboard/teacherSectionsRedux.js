@@ -7,8 +7,10 @@ import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-
-import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
+import {
+  SectionLoginType,
+  PlGradeValue,
+} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
