@@ -45,6 +45,32 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     refute PartialRegistration.in_progress? @session
   end
 
+  describe 'can_finish_signup?' do
+    before do
+      DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+    end
+
+    it 'can_finish_signup? is false when params are not present' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      refute PartialRegistration.can_finish_signup?(nil, @session)
+    end
+
+    it 'can_finish_signup? is false when no user params are present' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      refute PartialRegistration.can_finish_signup?({}, @session)
+    end
+
+    it 'can_finish_signup? is false when email is not present' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      refute PartialRegistration.can_finish_signup?({user: {}}, @session)
+    end
+
+    it 'can_finish_signup? is true when email is present' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      assert PartialRegistration.can_finish_signup?({user: {email: 'anything@code.org'}}, @session)
+    end
+  end
+
   test 'new_from_partial_registration raises unless a partial registration is available' do
     exception = assert_raise RuntimeError do
       User.new_from_partial_registration @session
