@@ -113,6 +113,7 @@ const EVENTS = {
   PROGRESS_V2_DISMISS_INVITATION: 'Section Progress Invitation Modal Dismiss',
   PROGRESS_V2_DELAY_INVITATION:
     'Section Progress Invitation Modal Remind Later',
+  PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
