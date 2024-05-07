@@ -105,8 +105,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = @course.id
-    fields[:script_id] = @unit.id
+    fields[:course_id] = @course&.id
+    fields[:script_id] = @unit&.id
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grades] = [params[:grade]] if Section.valid_grades?([params[:grade]])
