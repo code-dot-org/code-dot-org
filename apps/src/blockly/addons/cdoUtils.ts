@@ -701,3 +701,12 @@ export function processToolboxXml(toolboxString: string) {
   const modifiedXmlString = new XMLSerializer().serializeToString(xmlDoc);
   return modifiedXmlString;
 }
+
+export function highlightBlock(id: string, spotlight: boolean) {
+  // Google Blockly doesn't consider the selected block to be a highlighted block,
+  // so we unselect it first.
+  if (Blockly.selected) {
+    Blockly.selected.unselect();
+  }
+  Blockly.getMainWorkspace().highlightBlock(id, spotlight);
+}

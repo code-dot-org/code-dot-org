@@ -1591,7 +1591,7 @@ StudioApp.prototype.highlight = function (id, spotlight) {
       id = id.replace(/^block_id_/, '');
     }
 
-    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.cdoUtils.highlightBlock(id, spotlight);
   }
 };
 
