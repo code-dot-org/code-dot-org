@@ -100,7 +100,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       try {
         const messages = await fetchAITutorInteractions({sectionId});
         setChatMessages(messages);
-        setStudentFilterOptions(generateFilterOptions(messages));
+        setStudentFilterOptions(generateStudentFilterOptions(messages));
       } catch (error) {
         setChatMessages([]);
       }
@@ -108,7 +108,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
     })();
   }, [sectionId]);
 
-  const generateFilterOptions = (messages: StudentChatRow[]) => {
+  const generateStudentFilterOptions = (messages: StudentChatRow[]) => {
     return messages.reduce<CheckboxOption[]>((acc, message) => {
       const userId = `${message.userId}`;
       if (!acc.some(student => student.value === userId)) {
@@ -117,35 +117,6 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       return acc;
     }, []);
   };
-
-  const isTimeMatch = (createdAt: string) => {
-    const messageDate = moment(createdAt);
-    switch (selectedTimeFilter) {
-      case TimeFilter.LastHour:
-        return messageDate.isAfter(moment().subtract(1, 'hours'));
-      case TimeFilter.Last24Hours:
-        return messageDate.isAfter(moment().subtract(24, 'hours'));
-      case TimeFilter.Last7Days:
-        return messageDate.isAfter(moment().subtract(7, 'days'));
-      case TimeFilter.Last30Days:
-        return messageDate.isAfter(moment().subtract(30, 'days'));
-      default:
-        return true;
-    }
-  };
-
-  const filteredChatMessages = chatMessages
-    .filter(message => {
-      const statusMatch =
-        selectedStatuses.length === 0 ||
-        selectedStatuses.includes(message.status);
-      const userMatch =
-        selectedUserIds.length === 0 ||
-        selectedUserIds.includes(`${message.userId}`);
-      const timeMatch = isTimeMatch(message.createdAt);
-      return statusMatch && userMatch && timeMatch;
-    })
-    .sort((a, b) => moment(b.createdAt).diff(moment(a.createdAt)));
 
   const statusOptions = Object.values(AITutorInteractionStatus).map(status => ({
     label: STATUS_LABELS[status] || 'Unknown',
@@ -236,6 +207,35 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       setSelectedUserIds(selectedUserIds.filter(student => student !== value));
     }
   };
+
+  const isTimeMatch = (createdAt: string) => {
+    const messageDate = moment(createdAt);
+    switch (selectedTimeFilter) {
+      case TimeFilter.LastHour:
+        return messageDate.isAfter(moment().subtract(1, 'hours'));
+      case TimeFilter.Last24Hours:
+        return messageDate.isAfter(moment().subtract(24, 'hours'));
+      case TimeFilter.Last7Days:
+        return messageDate.isAfter(moment().subtract(7, 'days'));
+      case TimeFilter.Last30Days:
+        return messageDate.isAfter(moment().subtract(30, 'days'));
+      default:
+        return true;
+    }
+  };
+
+  const filteredChatMessages = chatMessages
+    .filter(message => {
+      const statusMatch =
+        selectedStatuses.length === 0 ||
+        selectedStatuses.includes(message.status);
+      const userMatch =
+        selectedUserIds.length === 0 ||
+        selectedUserIds.includes(`${message.userId}`);
+      const timeMatch = isTimeMatch(message.createdAt);
+      return statusMatch && userMatch && timeMatch;
+    })
+    .sort((a, b) => moment(b.createdAt).diff(moment(a.createdAt)));
 
   if (isLoading) {
     return <Spinner />;
