@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-27 21:50:55 UTC",
+    "serialized_at": "2024-05-05 01:36:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -131,7 +131,7 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Students have strategies for debugging\n\n\n* **Potential Teaching Group Decisions:**\n  * The teacher directs participants to the student version of the “Guide to Debugging” (page 24 of the Resource Packet) and prompts them to use the debugging process when they encounter bugs.\n  * Teacher instructs participants to complete at least one debugging level in the practice choice level (Level 6b)\n  * Teacher has participants document bugs in their journals\n  * In the wrap up, after students have written about things that might like to be random in their programs, teachers lead a discussion on potential bugs that might arise.\n\n\n**Objectives:**\n* Participants have brainstormed ways to support students in the process of debugging\n* Participants can generate and use random numbers in a program and update a value stored in a variable\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a> \n",
+        "overview": "**Purpose:**\n* **Essential Practice:** Students have strategies for debugging\n\n\n* **Potential Teaching Group Decisions:**\n  * The teacher directs participants to the student version of the “Guide to Debugging” (page 24 of the Resource Packet) and prompts them to use the debugging process when they encounter bugs.\n  * Teacher instructs participants to complete at least one debugging level in the practice choice level (Level 6b)\n  * Teacher has participants document bugs in their journals\n  * In the wrap up, after students have written about things that might like to be random in their programs, teachers lead a discussion on potential bugs that might arise.\n\n\n**Objectives:**\n* Participants have brainstormed ways to support students in the process of debugging\n* Participants can generate and use random numbers in a program and update a value stored in a variable\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
         "preparation": "- Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How can we make our programs behave differently each time they are run?\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a> "
       },
@@ -201,7 +201,7 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n* **Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>",
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n* **Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites, which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
       },
@@ -237,7 +237,7 @@
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson.\n\n\n* **Potential Teaching Group Decisions:* \n  * Group students and allow them to work together while circulating around the entire class.\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * When students have to come to a decision about the user they’ve chosen and how they will design their smart clothing, allow them to come to an answer together and facilitate letting all students have a say.\n\n\n**Objectives:**\n* Participants engage in Unit 4 Lesson 3 while playing the role of the student\n* Participants reflect on their experience as a student engaging in the lesson\n* Participants discuss the role of teamwork and collaboration in the CS Discoveries curriculum\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd4-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>  ",
+        "overview": "**Purpose:**\n* **Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson.\n\n\n* **Potential Teaching Group Decisions:* \n  * Group students and allow them to work together while circulating around the entire class.\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * When students have to come to a decision about the user they’ve chosen and how they will design their smart clothing, allow them to come to an answer together and facilitate letting all students have a say.\n\n\n**Objectives:**\n* Participants engage in Unit 4 Lesson 3 while playing the role of the student\n* Participants reflect on their experience as a student engaging in the lesson\n* Participants discuss the role of teamwork and collaboration in the CS Discoveries curriculum\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd4-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>  ",
         "preparation": "* Ensure you have plenty of sticky notes, pens and large poster paper for students to work on\n* Set up groups with preferably 3 students each\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "student_overview": "**Question of the Day:** How can we design for people other than ourselves?\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. \n\n<a href=\"https://studio.code.org/s/csd4-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>  "
       },
@@ -394,6 +394,7 @@
       "key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "72d0d018-b1ce-43dd-bc42-ecec9a6f1894",
@@ -538,6 +539,7 @@
       "key": "ff07ccbc-5de1-4b36-953f-4ade25756b44",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "ff07ccbc-5de1-4b36-953f-4ade25756b44",
@@ -1482,6 +1484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L6 - Predict_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1504,6 +1509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1526,6 +1534,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1548,6 +1559,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1570,6 +1584,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1592,6 +1609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_csd-vpl-23_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1614,6 +1634,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1636,6 +1659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_csd-vpl-23_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1658,6 +1684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context1_2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1680,6 +1709,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1702,6 +1734,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context3_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1724,6 +1759,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1746,6 +1784,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context5_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1768,6 +1809,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context6_2024"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1790,6 +1834,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Levels1_2024"
+        ],
         "progression": "Completing TLO Lesson Levels"
       },
       "bonus": false,
@@ -1812,6 +1859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predict_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1834,6 +1884,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1856,6 +1909,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1878,6 +1934,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1900,6 +1959,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites 2_csd-vpl-23_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1922,6 +1984,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1944,6 +2009,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1966,6 +2034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_csd-vpl-23_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1988,6 +2059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_csd-vpl-23_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2010,6 +2084,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2032,6 +2109,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_csd-vpl-23_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2054,6 +2134,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL-summer- CSD U3 L7 mini project_2024"
+        ],
         "progression": "Lesson 7: Mini-Project - Robot Faces"
       },
       "bonus": false,
@@ -2076,6 +2159,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL summer - CSD U3 Scene Example_2024"
+        ],
         "progression": "Lesson 11: Mini-Project - Captioned Scenes"
       },
       "bonus": false,
@@ -2098,6 +2184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL Summer - CSD web project animated example_2024"
+        ],
         "progression": "Lesson 14: Mini-Project - Animation"
       },
       "bonus": false,
@@ -2120,6 +2209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL Summer CSD U3 - Interactive Card - ExampleChoice_2024"
+        ],
         "progression": "Lesson 18: Project - Interactive Card"
       },
       "bonus": false,
@@ -2142,6 +2234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2_2024"
+        ],
         "progression": "Asynchronous Work Overview"
       },
       "bonus": false,
@@ -2164,6 +2259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture2_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2186,6 +2284,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture3_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2208,6 +2309,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture4_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2230,6 +2334,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture5_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2252,6 +2359,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture1_2024"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2274,6 +2384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2end_2024"
+        ],
         "progression": "Completing TLO Levels"
       },
       "bonus": false,

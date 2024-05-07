@@ -4,6 +4,8 @@ import {useSelector} from 'react-redux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const CopyButton: React.FunctionComponent = () => {
   const storedMessages = useSelector(
@@ -25,6 +27,13 @@ const CopyButton: React.FunctionComponent = () => {
       () => {
         console.error('Error in copying text');
       }
+    );
+    analyticsReporter.sendEvent(
+      EVENTS.CHAT_ACTION,
+      {
+        action: 'Copy chat history',
+      },
+      PLATFORMS.BOTH
     );
   };
 

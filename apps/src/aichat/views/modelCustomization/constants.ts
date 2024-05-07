@@ -76,5 +76,5 @@ export const AI_CUSTOMIZATIONS_LABELS: {
   temperature: 'Temperature',
   systemPrompt: 'System prompt',
   retrievalContexts: 'Retrieval',
-  modelCardInfo: 'Model description',
+  modelCardInfo: 'Model card information',
 };

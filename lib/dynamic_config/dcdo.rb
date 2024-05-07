@@ -48,6 +48,7 @@ class DCDOBase < DynamicConfigBase
       'ai-teaching-assistant-launch': DCDO.get('ai-teaching-assistant-launch', false),
       'incubator-canvas-block-enabled': DCDO.get('incubator-canvas-block-enabled', true),
       'progress-table-v2-metadata-enabled': DCDO.get('progress-table-v2-metadata-enabled', false),
+      'music-lab-launch-2024': DCDO.get('music-lab-launch-2024', false),
     }
   end
 end
