@@ -121,7 +121,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install **brew packages**:
    ```
-   brew install rbenv ruby-build nvm mysql@5.7 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   brew install rbenv ruby-build nvm mysql redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
 1. Initialize **Git LFS**:
@@ -129,25 +129,21 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
    git lfs install --skip-repo
    ```
 
-1. Setup your local **[MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) server**
-   1. Use mysql 5.7, even though its an older version:
+1. Setup your local **MySql server**
+   1. Start mysql server:
         ```
-        brew link mysql@5.7 --force
+        brew services start mysql
         ```
-   2. Start mysql server:
-        ```
-        brew services start mysql@5.7
-        ```
-   3. Confirm that MySQL has started by running:
+   2. Confirm that MySQL has started by running:
         ```
         brew services    # should show: "started"
         ```
 
       If the status is instead "stopped", you may need initialize your mysql database:
         ```
-        brew services stop mysql@5.7
+        brew services stop mysql
         mysqld --initialize-insecure  # this will leave the root password blank, which is required
-        brew services start mysql@5.7
+        brew services start mysql
         brew services   # should show: "started"
         ```
 
