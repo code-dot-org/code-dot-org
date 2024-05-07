@@ -1,8 +1,8 @@
 import moment from 'moment';
 import React, {useEffect, useState} from 'react';
+import * as Table from 'reactabular-table';
 import {fetchAITutorInteractions} from '@cdo/apps/aiTutor/interactionsApi';
-import InteractionsTableRow from './InteractionsTableRow';
-import style from './interactions-table.module.scss';
+
 import {
   StudentChatRow,
   AITutorInteractionStatus,
@@ -12,6 +12,27 @@ import CheckboxDropdown, {
   CheckboxOption,
 } from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import color from '@cdo/apps/util/color';
+import styleConstants from '@cdo/apps/styleConstants';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
+import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
+
+// TODO: These tableLayoutStylesOverrides are necessary to use reactabular-table
+// with our existing table styles. We should ultimately modify the types in tableConstants
+const styleOverrides = {
+  table: {
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    width: `${styleConstants['content-width']}`,
+    backgroundColor: color.table_light_row,
+  },
+  headerCell: {
+    paddingLeft: '10px',
+    paddingRight: '10px',
+  },
+};
 
 type StatusLabels = {
   [key in AITutorInteractionStatusValue]: string;
@@ -41,6 +62,20 @@ const TIME_FILTER_OPTIONS = [
   {value: TimeFilter.AllTime, text: 'All Time'},
 ];
 
+const interactionFormatter = (prompt: string, aiResponse: string) => {
+  const placeholderPrompt = 'No prompt associated with this interaction.';
+  const placeholderResponse = 'No response associated with this interaction.';
+
+  return (
+    <>
+      <span style={{fontWeight: 'bold'}}>{prompt || placeholderPrompt}</span>
+      <br />
+      <br />
+      <SafeMarkdown markdown={aiResponse || placeholderResponse} />
+    </>
+  );
+};
+
 /**
  * Renders a table showing the section's students' chat messages with AI Tutor.
  */
@@ -62,27 +97,121 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   useEffect(() => {
     (async () => {
       try {
-        const chatMessages = await fetchAITutorInteractions({sectionId});
-        setChatMessages(chatMessages);
+        const messages = await fetchAITutorInteractions({sectionId});
+        setChatMessages(messages);
+        setStudentFilterOptions(generateFilterOptions(messages));
       } catch (error) {
         console.log('error', error);
       }
     })();
   }, [sectionId]);
 
-  useEffect(() => {
-    const uniqueStudentFilterOptions = chatMessages.reduce<CheckboxOption[]>(
-      (acc, message) => {
-        const userId = `${message.userId}`;
-        if (!acc.some(student => student.value === userId)) {
-          acc.push({label: message.studentName, value: userId});
-        }
-        return acc;
+  const generateFilterOptions = (messages: StudentChatRow[]) => {
+    return messages.reduce<CheckboxOption[]>((acc, message) => {
+      const userId = `${message.userId}`;
+      if (!acc.some(student => student.value === userId)) {
+        acc.push({label: message.studentName, value: userId});
+      }
+      return acc;
+    }, []);
+  };
+
+  const isTimeMatch = (createdAt: string) => {
+    const messageDate = moment(createdAt);
+    switch (selectedTimeFilter) {
+      case TimeFilter.LastHour:
+        return messageDate.isAfter(moment().subtract(1, 'hours'));
+      case TimeFilter.Last24Hours:
+        return messageDate.isAfter(moment().subtract(24, 'hours'));
+      case TimeFilter.Last7Days:
+        return messageDate.isAfter(moment().subtract(7, 'days'));
+      case TimeFilter.Last30Days:
+        return messageDate.isAfter(moment().subtract(30, 'days'));
+      default:
+        return true;
+    }
+  };
+
+  const filteredChatMessages = chatMessages
+    .filter(message => {
+      const statusMatch =
+        selectedStatuses.length === 0 ||
+        selectedStatuses.includes(message.status);
+      const userMatch =
+        selectedUserIds.length === 0 ||
+        selectedUserIds.includes(`${message.userId}`);
+      const timeMatch = isTimeMatch(message.createdAt);
+      return statusMatch && userMatch && timeMatch;
+    })
+    .sort((a, b) => moment(b.createdAt).diff(moment(a.createdAt)));
+
+  const statusOptions = Object.values(AITutorInteractionStatus).map(status => ({
+    label: STATUS_LABELS[status] || 'Unknown',
+    value: status,
+  }));
+
+  const columns = [
+    {
+      property: 'student',
+      header: {
+        label: 'Student',
+        props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
       },
-      []
-    );
-    setStudentFilterOptions(uniqueStudentFilterOptions);
-  }, [chatMessages]);
+      cell: {
+        formatters: [(studentName: string) => <span>{studentName}</span>],
+        props: {style: style.cell},
+      },
+    },
+    {
+      property: 'timestamp',
+      header: {
+        label: 'Timestamp',
+        props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
+      },
+      cell: {
+        formatters: [
+          (timestamp: moment.MomentInput) => (
+            <span>{moment(timestamp).format('MMM DD, h:mm A')}</span>
+          ),
+        ],
+        props: {style: style.cell},
+      },
+    },
+    {
+      property: 'interaction',
+      header: {
+        label: 'Interaction',
+        // Override the default max-width style to allow for longer messages
+        props: {
+          style: {
+            ...style.headerCell,
+            ...styleOverrides.headerCell,
+            maxWidth: 'unset',
+          },
+        },
+      },
+      cell: {
+        formatters: [
+          (rowData: {prompt: string; aiResponse: string}) => {
+            console.log('rowData', rowData);
+            return interactionFormatter(rowData.prompt, rowData.aiResponse);
+          },
+        ],
+        props: {style: {...style.cell, maxWidth: 'unset'}},
+      },
+    },
+    {
+      property: 'status',
+      header: {
+        label: 'Status',
+        props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
+      },
+      cell: {
+        formatters: [(status: string) => <span>{STATUS_LABELS[status]}</span>],
+        props: {style: style.cell},
+      },
+    },
+  ];
 
   const handleStatusFilterChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -105,44 +234,6 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       setSelectedUserIds(selectedUserIds.filter(student => student !== value));
     }
   };
-
-  const filteredChatMessages = chatMessages.filter(message => {
-    const statusMatch =
-      selectedStatuses.length === 0 ||
-      selectedStatuses.includes(message.status);
-
-    const userMatch =
-      selectedUserIds.length === 0 ||
-      selectedUserIds.includes(`${message.userId}`);
-
-    const messageDate = moment(message.createdAt);
-    let timeMatch = false;
-    switch (selectedTimeFilter) {
-      case TimeFilter.LastHour:
-        timeMatch = messageDate.isAfter(moment().subtract(1, 'hours'));
-        break;
-      case TimeFilter.Last24Hours:
-        timeMatch = messageDate.isAfter(moment().subtract(24, 'hours'));
-        break;
-      case TimeFilter.Last7Days:
-        timeMatch = messageDate.isAfter(moment().subtract(7, 'days'));
-        break;
-      // For now, the last 30 days and all-time filters are equivalent because of a
-      // cron job that deletes chat messages older than 30 days.
-      case TimeFilter.Last30Days:
-        timeMatch = messageDate.isAfter(moment().subtract(30, 'days'));
-        break;
-      default:
-        timeMatch = true;
-    }
-
-    return statusMatch && userMatch && timeMatch;
-  });
-
-  const statusOptions = Object.values(AITutorInteractionStatus).map(status => ({
-    label: STATUS_LABELS[status] || 'Unknown',
-    value: status,
-  }));
 
   return (
     <div>
@@ -186,38 +277,26 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           isLabelVisible={false}
         />
       </div>
-      <table>
-        <thead>
-          <tr>
-            <td>
-              <div className={style.header}>Id</div>
-            </td>
-            <td>
-              <div className={style.header}>Student</div>
-            </td>
-            <td>
-              <div className={style.header}>Timestamp</div>
-            </td>
-            <td>
-              <div className={style.header}>AI Tutor Responses</div>
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          {!filteredChatMessages.length ? (
-            <tr>
-              <td colSpan={4}>No chat messages found.</td>
-            </tr>
-          ) : (
-            filteredChatMessages.map(chatMessage => (
-              <InteractionsTableRow
-                key={chatMessage.id}
-                chatMessage={chatMessage}
-              />
-            ))
-          )}
-        </tbody>
-      </table>
+      {chatMessages && chatMessages.length === 0 ? (
+        <>There are no chat messages to display.</>
+      ) : (
+        <Table.Provider
+          columns={columns}
+          style={{...style.table, ...styleOverrides.table}}
+        >
+          <Table.Header />
+          <Table.Body
+            rows={filteredChatMessages.map(msg => ({
+              id: msg.id,
+              student: msg.studentName,
+              timestamp: msg.createdAt,
+              interaction: {prompt: msg.prompt, aiResponse: msg.aiResponse},
+              status: msg.status,
+            }))}
+            rowKey="id"
+          />
+        </Table.Provider>
+      )}
     </div>
   );
 };
