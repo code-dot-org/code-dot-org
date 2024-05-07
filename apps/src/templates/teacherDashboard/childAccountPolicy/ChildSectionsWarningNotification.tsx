@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import ChildSectionsWarningDialog from '@cdo/apps/templates/policy_compliance/childAccountPolicy/ChildSectionsWarningDialog';
+import ChildSectionsWarningDialog from '@cdo/apps/templates/teacherDashboard/childAccount/ChildSectionsWarningDialog';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
@@ -12,7 +12,7 @@ interface Props {
 export const ChildSectionsWarningNotification: React.FC<Props> = ({}) => {
   const [childSectionsDialogOpen, setChildSectionsDialogOpen] = useState(false);
   const onClose = () => {
-    setChildSectionsDialogOpen(!childSectionsDialogOpen);
+    setChildSectionsDialogOpen(dialogState => !dialogState);
   };
 
   return (
