@@ -281,7 +281,7 @@ export const nextLevelId = state => {
   if (currentLevel.parentLevelId) {
     return currentLevel.parentLevelId;
   }
-  const currentLevelIndex = currentLevel.levelNumber;
+  const currentLevelIndex = currentLevel.levelNumber - 1;
   if (currentLevelIndex === levels.length - 1) {
     return undefined;
   }
