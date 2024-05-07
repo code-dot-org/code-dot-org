@@ -1,9 +1,11 @@
 import React from 'react';
-import LessonStandards, {ExpandMode} from './LessonStandards';
+
 import {
   cspStandards,
   cstaStandards,
 } from '../../../test/unit/templates/lessonOverview/sampleStandardsData.js';
+
+import LessonStandards, {ExpandMode} from './LessonStandards';
 
 export default {
   component: LessonStandards,

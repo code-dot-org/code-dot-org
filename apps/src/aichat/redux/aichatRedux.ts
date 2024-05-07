@@ -11,7 +11,10 @@ import {
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiInteractionStatus as Status,
+  AichatErrorType,
+} from '@cdo/generated-scripts/sharedConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -274,7 +277,7 @@ export const submitChatContents = createAsyncThunk(
     const newMessage: ChatCompletionMessage = {
       id: getNewMessageId(),
       role: Role.USER,
-      status: Status.OK,
+      status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
       timestamp: getCurrentTimestamp(),
       sessionId: currentSessionId,
@@ -282,7 +285,6 @@ export const submitChatContents = createAsyncThunk(
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
-
     const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
       currentSessionId
@@ -295,41 +297,67 @@ export const submitChatContents = createAsyncThunk(
       currentSessionId
     );
 
-    thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-    thunkAPI.dispatch(
-      updateChatMessageSession({
-        id: newMessage.id,
-        sessionId: chatApiResponse.session_id,
-      })
-    );
-
-    if (chatApiResponse?.status === 'profanity') {
-      // Logging to allow visibility into flagged content.
-      console.log(chatApiResponse);
-
-      return thunkAPI.dispatch(
-        updateUserChatMessageStatus({
+    // Regardless of response type,
+    // assign last user message to session.
+    if (chatApiResponse.session_id) {
+      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
+      thunkAPI.dispatch(
+        updateChatMessageSession({
           id: newMessage.id,
-          status: Status.PROFANITY_VIOLATION,
+          sessionId: chatApiResponse.session_id,
         })
       );
     }
 
+    // success state: received response from model ("assistant")
     if (chatApiResponse?.role === Role.ASSISTANT) {
       const assistantChatMessage: ChatCompletionMessage = {
         id: getNewMessageId(),
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.content,
-        // The accuracy of this timestamp is debatable since it's not when our backend
-        // issued the message, but it's good enough for user testing.
         timestamp: getCurrentTimestamp(),
         sessionId: chatApiResponse.session_id,
       };
-      return thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-    }
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
 
-    console.log('Could not handle response.');
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.OK,
+        })
+      );
+
+      // error state #1: model generated profanity
+    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: getNewMessageId(),
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: getCurrentTimestamp(),
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.ERROR,
+        })
+      );
+
+      // error state #2: user message contained profanity
+    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
+      // Logging to allow visibility into flagged content.
+      console.log(chatApiResponse);
+
+      thunkAPI.dispatch(
+        updateUserChatMessageStatus({
+          id: newMessage.id,
+          status: Status.PROFANITY_VIOLATION,
+        })
+      );
+    }
   }
 );
 

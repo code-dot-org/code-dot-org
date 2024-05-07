@@ -140,3 +140,11 @@ $default-spacing: 2px;
   gap: 10px;
   align-items: center;
 }
+
+.aiTutorMarkdown {
+  pre {
+    // Color copied for consistency with bootstrap styles auto-applied to SafeMarkdown component
+    background-color: #f7f7f9;
+    color: $purple;
+  }
+}

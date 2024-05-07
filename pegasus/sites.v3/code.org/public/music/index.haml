@@ -57,16 +57,16 @@ theme: responsive_full_width
 -#   .wrapper
 -#     TODO - VIDEO CAROUSEL
 
--# %section.quote
--#   .wrapper
--#     TODO - QUOTES CAROUSEL
+%section.quote
+  .wrapper
+    %h2.white=hoc_s("music_lab.quotes.heading")
+    = view :"music/music_lab_carousel_quotes"
 
--# TODO - ADD IMAGE
 %section
   .wrapper
     .flex-container.justify-space-between.align-items-center.wrap.gap-2
       %figure.col-47
-        %img.rounded-corners{src: "", alt: "", style: "width: 100%;"}
+        %img.rounded-corners{src: "/images/music-lab/music-lab-tutorial.png", alt: "", style: "width: 100%;"}
       .text-wrapper.col-47
         %h2=hoc_s("music_lab.tutorial.heading")
         %p=hoc_s("music_lab.tutorial.desc")
@@ -84,3 +84,5 @@ theme: responsive_full_width
     = view :afe_partnership_block
     %p.body-four.centered
       =hoc_s(:dance_afe_disclaimer)
+
+= view :swiper_page_music_lab
