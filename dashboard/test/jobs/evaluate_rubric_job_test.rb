@@ -274,7 +274,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
 
     # Run the job (and track attempts)
-    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_TIMEOUT do
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_TIMEOUT_ERROR do
       perform_enqueued_jobs do
         EvaluateRubricJob.perform_later(
           user_id: @student.id,
@@ -327,7 +327,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
 
     # Run the job (and track attempts)
-    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_RATE_LIMIT do
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_SERVICE_UNAVAILABLE do
       perform_enqueued_jobs do
         EvaluateRubricJob.perform_later(
           user_id: @student.id,
@@ -380,7 +380,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
 
     # Run the job (and track attempts)
-    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_RATE_LIMIT do
+    assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_GATEWAY_TIMEOUT do
       perform_enqueued_jobs do
         EvaluateRubricJob.perform_later(
           user_id: @student.id,

@@ -247,10 +247,10 @@ class EvaluateRubricJob < ApplicationJob
     )
   end
 
-  ATTEMPTS_ON_TIMEOUT = 2
+  ATTEMPTS_ON_TIMEOUT_ERROR = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: ATTEMPTS_ON_TIMEOUT do |job, error|
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: ATTEMPTS_ON_TIMEOUT_ERROR do |job, error|
     log_metric(metric_name: :TimeoutError)
     log_to_firehose(job: job, error: error, event_name: 'timeout-error')
   end
