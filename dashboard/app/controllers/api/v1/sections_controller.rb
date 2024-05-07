@@ -105,8 +105,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = @course.id if @course
-    fields[:script_id] = @unit.id if @unit
+    fields[:course_id] = @course.id
+    fields[:script_id] = @unit.id
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grades] = [params[:grade]] if Section.valid_grades?([params[:grade]])
@@ -287,6 +287,12 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     @section.update_code_review_expiration(enable_code_review)
     @section.save
     render json: {result: 'success', expiration: @section.code_review_expires_at}
+  end
+
+  # POST /api/v1/sections/<id>/ai_tutor_enabled
+  def set_ai_tutor_enabled
+    @section.update!(ai_tutor_enabled: params[:ai_tutor_enabled])
+    render json: {result: 'success'}
   end
 
   private def find_follower

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import InteractionsTable from './InteractionsTable';
 import AccessControls from './AccessControls';
-import SectionAccessToggle from './SectionAccessToggle';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 
 /**
@@ -21,7 +20,6 @@ const TutorTab: React.FC<TutorTabProps> = ({sectionId}) => {
 
   return (
     <div>
-      <SectionAccessToggle sectionId={sectionId} />
       <SegmentedButtons
         className="ai-tutor-tab-buttons"
         selectedButtonValue={selectedTab}
