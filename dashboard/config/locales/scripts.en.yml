@@ -15619,7 +15619,7 @@ en:
             * Engage with Web Lab.
             * Explore end-of-chapter projects.
 
-            **Suggested time**: 90 minutes
+            **Suggested time**: 120 minutes
           student_description: |-
             This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
 
@@ -15630,9 +15630,12 @@ en:
             * Engage with Web Lab.
             * Explore end-of-chapter projects.
 
-            **Suggested time**: 90 minutes
+            **Suggested time**: 120 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit2-2-2024
         self-paced-pl-csd-unit3-1-2024:
           title: Getting Started with Code.org
           description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
@@ -15648,6 +15651,9 @@ en:
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit3-2-2024
         self-paced-pl-csd-unit5-1-2024:
           title: Getting Started with Code.org
           description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
@@ -16238,6 +16244,8 @@ en:
             **Suggested Time:** 100 minutes
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: self-paced-pl-aiml2-2024
         self-paced-pl-csd-unit4-1-2024:
           title: Getting Started with Code.org
           description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"

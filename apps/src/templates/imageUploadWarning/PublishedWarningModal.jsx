@@ -1,9 +1,11 @@
 // Warning dialog that you cannot upload until you un-publish your project.
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import msg from '@cdo/locale';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import msg from '@cdo/locale';
+
 import styles from './image-upload-warning.module.scss';
 
 export default function PublishedWarningModal({isOpen, onClose}) {
