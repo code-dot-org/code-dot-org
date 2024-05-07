@@ -230,11 +230,6 @@ Style/HashLikeCase:
 Style/HashTransformKeys:
   Enabled: false
 
-# Offense count: 12
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Style/HashTransformValues:
-  Enabled: false
-
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: AllowedMethods.
