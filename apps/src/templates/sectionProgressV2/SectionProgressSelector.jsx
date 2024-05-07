@@ -13,6 +13,7 @@ import i18n from '@cdo/locale';
 
 import SectionProgress from '../sectionProgress/SectionProgress';
 
+import ProgressBanners from './ProgressBanners';
 import SectionProgressV2 from './SectionProgressV2';
 
 import styles from './progress-header.module.scss';
@@ -23,12 +24,15 @@ function SectionProgressSelector({
   progressTableV2ClosedBeta,
   sectionId,
 }) {
+  const [toggleUsed, setToggleUsed] = React.useState(false);
+
   const onShowProgressTableV2Change = useCallback(
     e => {
       e.preventDefault();
       const shouldShowV2 = !showProgressTableV2;
       new UserPreferences().setShowProgressTableV2(shouldShowV2);
       setShowProgressTableV2(shouldShowV2);
+      setToggleUsed(true);
 
       if (shouldShowV2) {
         analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
@@ -65,15 +69,22 @@ function SectionProgressSelector({
 
   const toggleV1OrV2Link = () => (
     <div className={styles.toggleViews}>
-      <Link type="primary" size="s" onClick={onShowProgressTableV2Change}>
+      <Link
+        type="primary"
+        size="s"
+        onClick={onShowProgressTableV2Change}
+        id="ui-test-toggle-progress-view"
+      >
         {displayV2
           ? i18n.switchToOldProgressView()
           : i18n.switchToNewProgressView()}
       </Link>
     </div>
   );
+
   return (
-    <div>
+    <div className={styles.pageContent}>
+      {displayV2 && <ProgressBanners toggleUsed={toggleUsed} />}
       {toggleV1OrV2Link()}
       {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
     </div>

@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
 import {studentLevelProgressType} from '../progress/progressTypes';
@@ -69,6 +69,8 @@ function LevelDataCell({
   sectionId,
   studentLevelProgress,
   expandedChoiceLevel,
+  className,
+  linkClassName,
   parentLevelId,
   lessonId,
 }) {
@@ -123,15 +125,21 @@ function LevelDataCell({
 
   return (
     <td
-      className={classNames(styles.gridBox, styles.gridBoxLevel, feedbackStyle)}
+      className={classNames(
+        styles.gridBox,
+        styles.gridBoxLevel,
+        feedbackStyle,
+        className
+      )}
       headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
       <Link
+        id={'ui-test' + level.path?.replaceAll('/', '-') + '-cell-data'}
         href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
         openInNewTab
         external
         onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
-        className={styles.expandedLevelLink}
+        className={classNames(styles.expandedLevelLink, linkClassName)}
       >
         {itemType ? (
           <ProgressIcon itemType={itemType} />
@@ -157,4 +165,6 @@ LevelDataCell.propTypes = {
   expandedChoiceLevel: PropTypes.bool,
   parentLevelId: PropTypes.string,
   lessonId: PropTypes.number.isRequired,
+  className: PropTypes.string,
+  linkClassName: PropTypes.string,
 };

@@ -101,14 +101,14 @@ class LtiV1Controller < ApplicationController
       Honeybadger.notify(exception, context: {message: 'Error reading state and nonce from cache'})
       return render status: :internal_server_error
     end
-    if (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
+    if cached_state_and_nonce.nil? || (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
       return log_unauthorized(
         'State or nonce mismatch in LTI JWT auth',
         {
           state: params[:state],
           nonce: decoded_jwt_no_auth[:nonce],
-          cached_state: cached_state_and_nonce[:state],
-          cached_nonce: cached_state_and_nonce[:nonce],
+          cached_state: cached_state_and_nonce&.[](:state),
+          cached_nonce: cached_state_and_nonce&.[](:nonce),
         }
       )
     end
@@ -125,18 +125,27 @@ class LtiV1Controller < ApplicationController
     # in a new tab. This flow appends a 'new_tab=true' query param, so it will
     # pass this block once the iframe "jail break" has happened.
     if Policies::Lti.force_iframe_launch?(decoded_jwt[:iss]) && !params[:new_tab]
-      id_token = params[:id_token]
-      state = params[:state]
-      token_hash = {id_token: id_token, state: state}
-      redirect_to "#{lti_v1_iframe_url}?#{token_hash.to_query}"
-      return
+      auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
+
+      query_params = {
+        id_token: params[:id_token],
+        state: params[:state],
+        new_tab: "true",
+      }
+
+      @auth_url = "#{auth_url_base}?#{query_params.to_query}"
+      render 'lti/v1/iframe', layout: false and return
     end
 
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
 
     if jwt_verifier.verify_jwt
-      message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
-      return wrong_resource_type unless message_type == 'LtiResourceLinkRequest'
+      message_type = decoded_jwt[Policies::Lti::MessageType::CLAIM]
+      if Policies::Lti::MessageType::SUPPORTED.exclude?(message_type)
+        return render status: :not_acceptable, template: 'lti/v1/authenticate/unsupported_message_type', locals: {
+          message_type: message_type,
+        }
+      end
 
       user = Queries::Lti.get_user(decoded_jwt)
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
@@ -219,18 +228,6 @@ class LtiV1Controller < ApplicationController
     end
   end
 
-  # GET /lti/v1/iframe
-  # Detects if an LMS is trying open Code.org in an iframe and prompts user to
-  # open in new tab. The experience is unchanged to non-iframe users.
-  def iframe
-    auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
-    id_token_param = params[:id_token]
-    state_param = params[:state]
-    new_tab_param = 'new_tab=true'
-    @auth_url = "#{auth_url_base}?id_token=#{id_token_param}&state=#{state_param}&#{new_tab_param}"
-    render 'lti/v1/iframe', layout: false
-  end
-
   # GET /lti/v1/sync_course
   # Syncs an LMS course from an LTI launch or from the teacher dashboard sync button.
   # It can respond to either HTML or JSON content requests.
@@ -253,7 +250,9 @@ class LtiV1Controller < ApplicationController
       end
     end
 
-    lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
+    lti_course, lti_integration, deployment_id, context_id,  nrps_url = nil
+    resource_link_id = params[:rlid]
+
     if params[:section_code].present?
       # Section code present, meaning this is a sync from the teacher dashboard.
       # Populate vars from the section associated with the input code.
@@ -264,8 +263,13 @@ class LtiV1Controller < ApplicationController
       lti_integration = lti_course.lti_integration
       deployment_id = lti_course.lti_deployment_id
       context_id = lti_course.context_id
-      resource_link_id = lti_course.resource_link_id
       nrps_url = lti_course.nrps_url
+      # Prefer the resource link from the SSO parameter instead of the course one. The resource link could have changed.
+      # For example, the teacher could have had Code.org in one material/module but deleted that material/module and
+      # made a new one (deleted the old LtiResourceLink and created a brand new one). This results in a mismatch between
+      # what is stored on Code.org's LtiCourse. Therefore, when doing an SSO sync, prefer the latest RLID and update our
+      # records with that.
+      resource_link_id ||= lti_course.resource_link_id
     else
       # Section code isn't present, meaning this is a sync from an LTI launch.
       # Populate vars from the request params.
@@ -276,7 +280,6 @@ class LtiV1Controller < ApplicationController
       end
       deployment_id = params[:deployment_id]
       context_id = params[:context_id]
-      resource_link_id = params[:rlid]
       nrps_url = params[:nrps_url]
     end
 
@@ -422,10 +425,6 @@ class LtiV1Controller < ApplicationController
 
   private def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
-  end
-
-  private def wrong_resource_type
-    render(status: :not_acceptable, json: {error: I18n.t('lti.error.wrong_resource_type')})
   end
 
   private def create_state_and_nonce

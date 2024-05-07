@@ -221,7 +221,12 @@ class ToneJSPlayer implements AudioPlayer {
   }
 
   setBpm(bpm: number) {
+    if (Transport.bpm.value === bpm) {
+      return;
+    }
     Transport.bpm.value = bpm;
+    // We need to regenerate all effect busses when BPM changes as some effects (e.g. delay) are BPM-dependent.
+    this.generateEffectBusses();
   }
 
   scheduleSample(sample: SampleEvent) {

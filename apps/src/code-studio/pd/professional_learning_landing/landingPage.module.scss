@@ -10,15 +10,24 @@ main.wrapper {
 }
 
 section {
-  padding: 4rem 1rem 0 1rem !important;
+  padding: 0 0 4rem;
 }
 
 .headerContainer {
   background-color: color.$light_gray_50;
+  padding: 0 1rem;
 }
 
 .headerWithoutTabsContainer {
-  padding-bottom: 4rem;
+  section {
+    padding: 4rem 0 4rem !important;
+  }
+}
+
+.headerWithTabsContainer {
+  section {
+    padding: 4rem 0 0 !important;
+  }
 }
 
 .myPlTabsContainer {

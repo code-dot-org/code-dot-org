@@ -8,7 +8,7 @@ import {
   StrongText,
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import {aiEvaluationShape, aiEvidenceShape} from './rubricShapes';
 import AiConfidenceBox from './AiConfidenceBox';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
@@ -130,7 +130,7 @@ export default function AiAssessmentBox({
         <AiAssessmentFeedback aiEvalInfo={aiEvalInfo} />
       )}
       {isAiAssessed && aiEvidence && aiEvidence.length > 0 && (
-        <div>
+        <div id="tour-ai-evidence">
           <BodyFourText className={style.aiAssessmentEvidenceBlock}>
             {/* Evidence: */}
             <StrongText>{i18n.aiAssessmentEvidence()}</StrongText>

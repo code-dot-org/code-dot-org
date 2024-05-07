@@ -4,42 +4,26 @@
   padding: 10px 10px;
   border-radius: 10px;
   overflow: hidden;
+  white-space: pre-line;
 }
 
-.userMessageContainer {
+.userMessage {
   margin: 0 0 15px 50px;
+  background-color: $brand_teal_5;
+  border-radius: 16px 0 16px 16px;
 }
 
 .assistantMessageContainer {
   margin: 0 50px 15px 0;
-
-  h5 {
-    margin: 5px 0 5px 0;
-  }
-}
-
-.modelUpdateMessageContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $light_affirmative_100;
-  border-radius: 4px;
-  padding: 5px 10px;
-  margin: 3px 0;
-
-  .removeStatusUpdate {
-    background-color: transparent;
-    color: $light_gray_700;
-
-    &:hover {
-      background-color: transparent;
-      color: $light_gray_700;
-    }
-  }
 }
 
 .modelUpdateMessageTextContainer {
-  margin: 0 10px;
+  margin-right: 10px;
+}
+
+.modelUpdateContainer {
+  background-color: $light_affirmative_100;
 }
 
 .check {
@@ -47,18 +31,24 @@
   font-size: 16px;
 }
 
-.userMessage {
-  background-color: $lightest_cyan;
+.danger {
+  color: $light_negative_500;
+  font-size: 16px;
+}
+
+.dangerContainer {
+  background-color: #FBE0DD;
 }
 
 .assistantMessage {
-  background-color: $lightest_gray;
+  background-color: $light_gray_50;
+  border-radius: 0 16px 16px 16px;
 }
 
 .inappropriateMessage {
   background-color: $lightest_red;
 }
 
-.tooPersonalMessage {
+.errorMessage {
   background-color: $lightest_yellow;
 }

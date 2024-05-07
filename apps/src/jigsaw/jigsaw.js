@@ -5,14 +5,18 @@
  *
  */
 
+import {TestResults, ResultType} from '../constants';
+import {getStore} from '../redux';
+import AppView from '../templates/AppView';
+
 var React = require('react');
 var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
 var Provider = require('react-redux').Provider;
-import AppView from '../templates/AppView';
-var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
+
 var dom = require('../dom');
-import {getStore} from '../redux';
+var studioApp = require('../StudioApp').singleton;
+
+var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 
 /**
  * Create a namespace for the application.
@@ -21,8 +25,6 @@ var Jigsaw = module.exports;
 
 var level;
 var skin;
-
-import {TestResults, ResultType} from '../constants';
 
 studioApp().setCheckForEmptyBlocks(true);
 

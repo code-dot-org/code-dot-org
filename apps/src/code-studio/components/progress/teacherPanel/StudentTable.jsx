@@ -116,7 +116,7 @@ class StudentTable extends React.Component {
 const styles = {
   table: {
     width: '90%',
-    margin: 'auto',
+    margin: '8px auto auto',
   },
   tr: {
     height: 41,

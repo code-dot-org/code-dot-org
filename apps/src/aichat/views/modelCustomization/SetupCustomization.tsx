@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useMemo} from 'react';
 import classNames from 'classnames';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -11,28 +11,63 @@ import {
 } from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 import {
+  DEFAULT_VISIBILITIES,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
-import {isVisible, isDisabled} from './utils';
+import {isVisible, isDisabled, isEditable} from './utils';
 import CompareModelsDialog from './CompareModelsDialog';
+import {modelDescriptions} from '../../constants';
+import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
-  const [chosenModel, setChosenModel] = useState<string>('llama2');
   const [isShowingModelDialog, setIsShowingModelDialog] =
     useState<boolean>(false);
 
-  const {temperature, systemPrompt} = useAppSelector(
-    state => state.aichat.fieldVisibilities
-  );
+  // we default selectedModelId because it was added later and may not exist in all levels
+  const {
+    temperature,
+    systemPrompt,
+    selectedModelId = DEFAULT_VISIBILITIES.selectedModelId,
+  } = useAppSelector(state => state.aichat.fieldVisibilities);
   const aiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
 
-  const allFieldsDisabled = isDisabled(temperature) && isDisabled(systemPrompt);
+  const availableModelIds = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.aichatSettings?.availableModelIds
+  );
+
+  // Handle the possibility that modelDescription can change but levels
+  // may be using outdated model ids. Fall back to first modelDescription.
+  const availableModels = useMemo(() => {
+    let models: ModelDescription[] = [];
+    if (availableModelIds && availableModelIds.length) {
+      // Exclude any models that we don't have descriptions for
+      models = modelDescriptions.filter(model =>
+        availableModelIds.includes(model.id)
+      );
+    }
+    return models.length ? models : [modelDescriptions[0]];
+  }, [availableModelIds]);
+
+  const chosenModelId = useMemo(() => {
+    return (
+      availableModels.find(
+        model => model.id === aiCustomizations.selectedModelId
+      )?.id || availableModels[0].id
+    );
+  }, [aiCustomizations.selectedModelId, availableModels]);
+
+  const allFieldsDisabled =
+    isDisabled(temperature) &&
+    isDisabled(systemPrompt) &&
+    isDisabled(selectedModelId);
 
   const onUpdate = useCallback(
     () => dispatch(updateAiCustomization()),
@@ -41,32 +76,42 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const renderChooseAndCompareModels = () => {
     return (
-      <div
-        className={classNames(
-          styles.inputContainer,
-          styles.fullWidthDropdownContainer
-        )}
-      >
+      <div className={styles.inputContainer}>
         <SimpleDropdown
           labelText="Selected model:"
-          onChange={e => setChosenModel(e.target.value)}
-          items={[
-            {value: 'llama2', text: 'LLama 2'},
-            {value: 'gpt', text: 'ChatGPT'},
-          ]}
-          selectedValue={chosenModel}
+          onChange={event =>
+            dispatch(
+              setAiCustomizationProperty({
+                property: 'selectedModelId',
+                value: event.target.value,
+              })
+            )
+          }
+          items={availableModels.map(model => {
+            return {value: model.id, text: model.name};
+          })}
+          selectedValue={chosenModelId}
           name="model"
           size="s"
           className={styles.selectedModelDropdown}
+          disabled={isDisabled(selectedModelId)}
         />
-        <Button
-          text="Compare Models"
-          onClick={() => setIsShowingModelDialog(true)}
-          type="secondary"
-          className={styles.updateButton}
-        />
+        {isEditable(selectedModelId) && (
+          <Button
+            text="Compare Models"
+            onClick={() => setIsShowingModelDialog(true)}
+            type="secondary"
+            className={classNames(
+              styles.updateButton,
+              styles.compareModelsButton
+            )}
+          />
+        )}
         {isShowingModelDialog && (
-          <CompareModelsDialog onClose={() => setIsShowingModelDialog(false)} />
+          <CompareModelsDialog
+            onClose={() => setIsShowingModelDialog(false)}
+            availableModels={availableModels}
+          />
         )}
       </div>
     );
@@ -75,7 +120,7 @@ const SetupCustomization: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       <div className={styles.customizationContainer}>
-        {renderChooseAndCompareModels()}
+        {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>

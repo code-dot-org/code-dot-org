@@ -284,7 +284,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private def register_new_user(user)
     PartialRegistration.persist_attributes(session, user)
-    redirect_to new_user_registration_url
+
+    if DCDO.get('student-email-post-enabled', false)
+      @form_data = {
+        email: user.email
+      }
+
+      render 'omniauth/redirect', {layout: false}
+    else
+      redirect_to new_user_registration_url
+    end
   end
 
   private def extract_powerschool_data(auth)

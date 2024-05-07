@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-04-08 22:06:25 UTC",
+    "serialized_at": "2024-05-01 17:49:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1575,7 +1575,7 @@
       "key": "aa032c36-f660-4150-8292-f4c82cbcb5b4",
       "position": 1,
       "properties": {
-        "description": "* **hardwired**: something you are born with\n* **personal information**: information about you that cannot be used to identify you because it is also true for many other people (e.g. your hair color or the city you live in)\n* **private information**: information about you that can be used to identify you because it is unique to you (e.g. your full name or your address)\n* **register (online)**: to enter your information in order to sign up and get access to a website or app\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [Share Jumper](https://www.digitalpassport.org/share-jumper.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Say**: _Today we're going to start with a little game. For each statement that I read, if it is true about you, stand up. If it isn't true, stay seated. After each statement, look around to see who else is standing or sitting._ ([Slide 4](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_283))\n\n**Read** the statements below to your class, allowing time for students to stand or sit after each one. Prompt all students to sit back down before moving on to the next statement.\n\n* _Stand up if you or your family speak another language besides English._\n* _Stand up if you have two or more siblings._\n* _Stand up if you have a pet._\n* _Stand up if you have ever been on YouTube._\n* _Stand up if you have ever shared something about yourself online._\n \n**Have** students all sit back down and ask: _What did you learn from doing that activity? Did you enjoy it? Why or why not?_\n\nInvite volunteers to share out. If necessary, follow up with students who share by asking to explain what they found fun or not fun about it.\n\n**Say**: _The purpose of that activity was to have some fun getting to know each other better. There are many situations where sharing information about yourself can be fun and positive. One of those situations is on the internet, where sharing your likes, opinions, and other personal information -- but not private information -- can be positive and fun._",
+        "description": "* **personal information**: information about you that cannot be used to identify you because it is also true for many other people (e.g. your hair color or the city you live in)\n* **private information**: information about you that can be used to identify you because it is unique to you (e.g. your full name or your address)\n* **register (online)**: to enter your information in order to sign up and get access to a website or app\n* **hardwired**: something you are born with\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [Share Jumper](https://www.digitalpassport.org/share-jumper.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Say**: _Today we're going to start with a little game. For each statement that I read, if it is true about you, stand up. If it isn't true, stay seated. After each statement, look around to see who else is standing or sitting._ ([Slide 4](https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit#slide=id.g3c5590bcca_0_283))\n\n**Read** the statements below to your class, allowing time for students to stand or sit after each one. Prompt all students to sit back down before moving on to the next statement.\n\n* _Stand up if you or your family speak another language besides English._\n* _Stand up if you have two or more siblings._\n* _Stand up if you have a pet._\n* _Stand up if you have ever been on YouTube._\n* _Stand up if you have ever shared something about yourself online._\n \n**Have** students all sit back down and ask: _What did you learn from doing that activity? Did you enjoy it? Why or why not?_\n\nInvite volunteers to share out. If necessary, follow up with students who share by asking to explain what they found fun or not fun about it.\n\n**Say**: _The purpose of that activity was to have some fun getting to know each other better. There are many situations where sharing information about yourself can be fun and positive. One of those situations is on the internet, where sharing your likes, opinions, and other personal information -- but not private information -- can be positive and fun._",
         "name": "Key Vocabulary\r"
       },
       "seeding_key": {
@@ -1954,7 +1954,7 @@
       "key": "5b72a820-c0fb-4f51-b499-dcd0146f0248",
       "position": 8,
       "properties": {
-        "description": "If a group or individual finishes early, encourage them to continue building a project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your project?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- What should your sprites do when they are clicked?\n- Invite students to share ideas and to learn from each other. They can also attempt another tutorial by visiting [code.org/learn](https://code.org/learn).\n"
+        "description": "If a group or individual finishes early, encourage them to continue building a project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your project?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- What should your sprites do when they are clicked?\n- Invite students to share ideas and to learn from each other.\n"
       },
       "seeding_key": {
         "activity_section.key": "5b72a820-c0fb-4f51-b499-dcd0146f0248",
@@ -2059,6 +2059,17 @@
       }
     },
     {
+      "key": "ee8553b3-38af-4976-b204-c936b08590a4",
+      "position": 5,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee8553b3-38af-4976-b204-c936b08590a4",
+        "lesson_activity.key": "bf9f5169-57b3-44ae-9099-fff0d07558dd"
+      }
+    },
+    {
       "key": "0d227a2b-1a31-4a6d-ac80-8b1a274dd56d",
       "position": 1,
       "properties": {
@@ -2097,7 +2108,7 @@
       "key": "ac25e590-f3a7-4a4a-a2f2-6630cbd66973",
       "position": 1,
       "properties": {
-        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. We recommend teaching them strategies for breaking the instructions down into subtasks. The Warm Up example is taken from Level 5 which asks students to draw a square using a loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide\n\n**Make a plan for solving this puzzle:**\n\n_1. What should the Artist do first?_\n\n_2. What should the Artist do next?_\n\n_3. How can you use a loop (a repeat block) to simplify your code?_",
+        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. We recommend teaching them strategies for breaking the instructions down into subtasks. The Warm Up example is taken from Level 5 which asks students to draw a square using a loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose It” slide\n\n**Break the problem down into steps:**\n\n_1. What should the Artist do first?_\n\n_2. What should the Artist do next?_\n\n_3. How can you use a loop (a repeat block) to simplify your code?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2109,7 +2120,7 @@
       "key": "9df5ed38-82fb-4333-aa37-eaa174fda525",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again."
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n- **Decompose** - Break down problems into smaller tasks. "
       },
       "seeding_key": {
         "activity_section.key": "9df5ed38-82fb-4333-aa37-eaa174fda525",
@@ -2238,7 +2249,7 @@
       "key": "c8d2c8d9-df1a-4454-8997-216065280cff",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pause & Think Online” video\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nStudents might benefit from having a puzzle done as a class.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pause & Think Online” video\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns.\n\nAdditionally, students might benefit from having a puzzle done as a class as a model to get started.\n",
         "name": "Fancy Shapes Using Nested Loops",
         "tips": [
           {
@@ -2373,7 +2384,7 @@
       "key": "564964f4-8918-4749-9456-fc4aae1dc194",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n\n**Do This**: If there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _\"Frozen\"_. Give the class the sisters' backstory if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!"
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n- **Nested Loop** - A loop inside of another loop.\n\n**Do This**: If there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _\"Frozen\"_. Give the class the sisters' backstory if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!"
       },
       "seeding_key": {
         "activity_section.key": "564964f4-8918-4749-9456-fc4aae1dc194",
@@ -2394,8 +2405,19 @@
       }
     },
     {
-      "key": "c34d7804-c0dc-4d5f-8da3-2ee2fce0b4f0",
+      "key": "9889e10f-8545-4928-bfe7-d36f8653d081",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Quick Share” slide\n\nAt a midway point of the lesson, have students turn to a partner to show their progress so far. This is a great chance for students to verbalize what they are coding and explain their code. It is also an opportunity to practice kind and helpful feedback. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead."
+      },
+      "seeding_key": {
+        "activity_section.key": "9889e10f-8545-4928-bfe7-d36f8653d081",
+        "lesson_activity.key": "3d853b3a-3934-4126-9d20-f16183c612e1"
+      }
+    },
+    {
+      "key": "c34d7804-c0dc-4d5f-8da3-2ee2fce0b4f0",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-9 - Mini-Project: Snowflake #2” slide\n",
         "progression_name": "Mini-Project: Snowflake #2"
@@ -2498,7 +2520,7 @@
       "key": "5bb616f6-ee84-45e7-bff4-98036cbc32c2",
       "position": 6,
       "properties": {
-        "description": "Now, imagine that this song is a computer program. Defining a title (like \"chorus\") for a little piece of code that you use over and over again is called creating a function. \n\nThis is helpful to computer scientists for some of the same reasons that it is helpful to songwriters. \n\n - It saves time not having to write all the code over and over in the program. \n - If you make a mistake, you only have to change it one place. \n - The program feels less complicated with the repeating pieces defined just once at the top.\n\nWe are going to play with songs a little more, to try to really understand how often this technique is used!"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Connection” slide\n Now, imagine that this song is a computer program. Defining a title (like \"chorus\") for a little piece of code that you use over and over again is called creating a function. \n\nThis is helpful to computer scientists for some of the same reasons that it is helpful to songwriters. \n\n - It saves time not having to write all the code over and over in the program. \n - If you make a mistake, you only have to change it one place. \n - The program feels less complicated with the repeating pieces defined just once at the top.\n\nWe are going to play with songs a little more, to try to really understand how often this technique is used!"
       },
       "seeding_key": {
         "activity_section.key": "5bb616f6-ee84-45e7-bff4-98036cbc32c2",
@@ -3570,7 +3592,7 @@
       "key": "c08dd598-d2b3-48ee-ba27-a65f98780ea6",
       "position": 3,
       "properties": {
-        "description": "#### Handout: Define and Prepare:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Define and Prepare” slide\n\nNow that the class has their project guide in hand, they should start filling out the questions under the **Define** and **Prepare** sections.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 2, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
+        "description": "#### Handout: Define and Prepare:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Define and Prepare” slide\n\nNow that the class has their project guide in hand, they should start filling out the questions under the **Define** and **Prepare** sections.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nRemind students to give proper attribution to their code and ideas if they are inspired by others. \n\nStudents should focus on defining and planning their project during Day 2, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
       },
       "seeding_key": {
         "activity_section.key": "c08dd598-d2b3-48ee-ba27-a65f98780ea6",
@@ -3581,7 +3603,7 @@
       "key": "f08c7ab0-5168-4861-9647-e14d34f4c79a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 3: Try” slide\n\nStudents will use this day to build an initial version of their project.\n\nEquipped with their ***Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Try” slide\n\nDon’t let the class forget to fill out the **Try** section of their project guide as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 3: Try” slide\n\nStudents will use this day to build an initial version of their project.\n\nEquipped with their ***Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Try” slide\n\nDon’t let the class forget to fill out the **Try** section of their project guide as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -8842,7 +8864,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursee-2023/resources",
+      "url": "/s/coursee-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8853,7 +8875,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursee-2023/standards",
+      "url": "/s/coursee-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8864,7 +8886,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursee-2023/vocab",
+      "url": "/s/coursee-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -9638,6 +9660,16 @@
   ],
   "vocabularies": [
     {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to complete a task.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
       "key": "behavior",
       "word": "Behavior",
       "definition": "An action that a sprite performs continuously until it’s told to stop.",
@@ -9698,6 +9730,16 @@
       }
     },
     {
+      "key": "decompose",
+      "word": "Decompose",
+      "definition": "Break down problems into smaller tasks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decompose"
+      }
+    },
+    {
       "key": "define",
       "word": "Define",
       "definition": "Figure out the details of the problems that you are trying to solve",
@@ -9705,6 +9747,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "define"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
       }
     },
     {
@@ -9728,6 +9780,37 @@
       }
     },
     {
+      "key": "modify",
+      "word": "Modify",
+      "definition": "make partial or minor changes to something, typically so as to improve it ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "modify"
+      }
+    },
+    {
+      "key": "nested_loop",
+      "word": "Nested Loop",
+      "definition": "A loop inside of another loop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "nested_loop"
+      }
+    },
+    {
+      "key": "personal_information_csm",
+      "word": "Personal Information",
+      "definition": " information about you that cannot be used to identify you because it is also true for many other people (e.g. your hair color or the city you live in)",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "personal_information_csm"
+      }
+    },
+    {
       "key": "prepare",
       "word": "Prepare",
       "definition": "Research, plan, and acquire materials for the activity you are about to do",
@@ -9735,6 +9818,17 @@
       },
       "seeding_key": {
         "vocabulary.key": "prepare"
+      }
+    },
+    {
+      "key": "private_information_csm",
+      "word": "Private Information:",
+      "definition": "information about you that can be used to identify you because it is unique to you (e.g. your full name or your address)",
+      "properties": {
+        "common_sense_media": true
+      },
+      "seeding_key": {
+        "vocabulary.key": "private_information_csm"
       }
     },
     {
@@ -9828,6 +9922,12 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing with Loops",
+        "vocabulary.key": "decompose"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing with Loops",
         "vocabulary.key": "loop"
       }
     },
@@ -9865,6 +9965,12 @@
       "seeding_key": {
         "lesson.key": "Fancy Shapes using Nested Loops",
         "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "vocabulary.key": "nested_loop"
       }
     },
     {
@@ -9911,6 +10017,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Hello World",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "vocabulary.key": "modify"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: Design a Snowflake",
         "vocabulary.key": "loop"
       }
@@ -9923,6 +10053,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Private and Personal Information",
+        "vocabulary.key": "personal_information_csm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Private and Personal Information",
+        "vocabulary.key": "private_information_csm"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Songwriting",
         "vocabulary.key": "function"
       }
@@ -9931,6 +10073,12 @@
       "seeding_key": {
         "lesson.key": "Swimming Fish with Sprite Lab",
         "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "vocabulary.key": "modify"
       }
     },
     {
@@ -10115,6 +10263,16 @@
       }
     },
     {
+      "key": "6bc7d9c6-72a9-4d92-90f4-c035d616d83f",
+      "properties": {
+        "description": "Modify an existing program in order add more advanced features."
+      },
+      "seeding_key": {
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "objective.key": "6bc7d9c6-72a9-4d92-90f4-c035d616d83f"
+      }
+    },
+    {
       "key": "7945e1fb-5b94-4e9c-9296-5fa958725ccd",
       "properties": {
         "description": "Improve upon an existing app design by addressing the accessibility needs of users."
@@ -10265,6 +10423,16 @@
       }
     },
     {
+      "key": "e45155a6-93e1-4380-82c2-030eaea2834c",
+      "properties": {
+        "description": "Add on to a project to include more advanced features. "
+      },
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "objective.key": "e45155a6-93e1-4380-82c2-030eaea2834c"
+      }
+    },
+    {
       "key": "e5a2003c-51f5-4f51-89ee-d180a631131d",
       "properties": {
         "description": "Create new sprites and assign them costumes and behaviors."
@@ -10362,9 +10530,37 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with the Farmer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Conditionals with the Farmer",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with the Farmer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
       }
     },
     {
@@ -10413,7 +10609,21 @@
       "seeding_key": {
         "lesson.key": "Digital Sharing",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
+        "standard.shortcode": "1B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Sharing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {
@@ -10476,7 +10686,35 @@
       "seeding_key": {
         "lesson.key": "Fancy Shapes using Nested Loops",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
       }
     },
     {
@@ -10490,7 +10728,28 @@
       "seeding_key": {
         "lesson.key": "Functions in Minecraft",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {
@@ -10504,7 +10763,28 @@
       "seeding_key": {
         "lesson.key": "Functions with Artist",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
       }
     },
     {
@@ -10518,21 +10798,21 @@
       "seeding_key": {
         "lesson.key": "Functions with Harvester",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Hello World",
+        "lesson.key": "Functions with Harvester",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Hello World",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-IC-17"
+        "standard.shortcode": "1B-AP-17"
       }
     },
     {
@@ -10547,6 +10827,20 @@
         "lesson.key": "Hello World",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: About Me",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-14"
       }
     },
     {
@@ -10567,6 +10861,13 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: Design a Snowflake",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Design a Snowflake",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
       }
     },
@@ -10575,6 +10876,27 @@
         "lesson.key": "Mini-Project: Design a Snowflake",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Design a Snowflake",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Design a Snowflake",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Design a Snowflake",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
       }
     },
     {
@@ -10593,16 +10915,23 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Songwriting",
+        "lesson.key": "Swimming Fish with Sprite Lab",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
+        "standard.shortcode": "1B-AP-12"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Swimming Fish with Sprite Lab",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-05"
       }
     }
   ],

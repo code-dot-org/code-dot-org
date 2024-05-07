@@ -69,10 +69,10 @@
     "encrypted_examples": "04eC4RCQF6pNU/wepe1TOzxGrNviFEci0zK+6atQ7/G2zbCU1M7YJPJgcKjJ\nGUDwmfxwFsBC14Wokofr3RXJsA==\n",
     "text_mode_at_start": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/taking-input-with-getproperty",
+      "/courses/csd-2024/guides/taking-input-with-getproperty",
       "/maker/setup"
     ],
-    "map_reference": "/courses/csd-2022/guides/physical-input",
+    "map_reference": "/courses/csd-2024/guides/physical-input",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

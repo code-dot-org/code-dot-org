@@ -1,7 +1,6 @@
 @import "color.scss";
 
 .progressV2Page {
-  padding: 24px 64px 64px 64px;
   background-color: white;
 }
 
@@ -22,9 +21,10 @@
   }
 
   // note: unless border is set, you will need to override
-  // the active border state
+  // the active border state. Important is necessary to override
+  // the default !important
   // &:active {
-  //   border: ____;
+  //   border: ____ !important;
   // }
 }
 
@@ -232,7 +232,7 @@ $level-cell-width: 52;
       align-items: center;
 
       &:active {
-        border: none;
+        border: none !important;
       }
     }
     
@@ -271,6 +271,22 @@ $level-cell-width: 52;
       flex-wrap: nowrap;
       color: inherit;
       background-color: inherit;
+
+      &Expandable {
+        @include remove-default-button-styles;
+        display: flex;
+        flex-direction: row;
+        line-height: 32px;
+        align-items: center;
+        overflow: hidden;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        width: 100%;
+
+        &:active {
+          border: none !important;
+        }
+      }
 
       &LevelNumber {
         margin-top: 0.0625em;
@@ -334,6 +350,24 @@ $level-cell-width: 52;
     line-height: 47px !important;
   }
 
+  &ChoiceLevelLink {
+    border-left: 1px solid $light_gray_100;
+    height: 32px;
+    margin: 8px 0;
+    line-height: 32px !important;
+    width: $level-cell-width + px;
+  }
+
+  &LevelCell {
+    display: flex;
+    border-left: 0;
+    width: auto;
+
+    &First {
+      border-inline-start: 1px solid $neutral_dark40;
+    }
+  }
+
   &LevelEmpty {
     height: 100%;
     width: 100%;
@@ -341,12 +375,12 @@ $level-cell-width: 52;
 }
 
 .sortDropdown {
-  height: 72px;
+  height: 64px;
   width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .studentColumn {

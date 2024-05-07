@@ -68,6 +68,10 @@ section.bg-pattern-dark {
 // Removes the bottom margin or padding —
 // often helpful on a last paragraphs or list elements
 // to maintain consistent white space between sections
+
+// !important is used here to override existing margin
+// or padding bottom styles – this allows this class to
+// work on any element
 .no-margin-bottom {
   margin-bottom: 0 !important;
 }
@@ -76,11 +80,13 @@ section.bg-pattern-dark {
 }
 
 // Adds 2rem of space above or below an element
+// !important is used here to override existing margin
+// – this allows this class to work on any element
 .add-margin-top {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 .add-margin-bottom {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 
@@ -105,6 +111,16 @@ i.fa-fw {
   &.flex-direction-column {
     flex-direction: column;
   }
+  &.flex-direction-column-tablet {
+    @media screen and (max-width: $width-md) {
+      flex-direction: column;
+    }
+  }
+  &.flex-direction-column-mobile {
+    @media screen and (max-width: $width-sm) {
+      flex-direction: column;
+    }
+  }
   &.flex-direction-row {
     flex-direction: row;
   }
@@ -119,6 +135,9 @@ i.fa-fw {
   }
   &.align-content-baseline {
     align-content: baseline;
+  }
+  &.align-items-baseline {
+    align-items: baseline;
   }
   &.align-items-center {
     align-items: center;
@@ -145,6 +164,9 @@ i.fa-fw {
   & > .flex-1 {
     flex: 1;
   }
+  & > .flex-1-5 {
+    flex: 1.5;
+  }
 }
 
 // Grid container
@@ -162,6 +184,9 @@ i.fa-fw {
   }
   &.align-items-center {
     align-items: center;
+  }
+  &.gap-2 {
+    gap: 2rem;
   }
   &.gap-4 {
     gap: 4rem;
@@ -200,7 +225,7 @@ div.divider {
 // Add a thick box shadow to an element
 // See code.org/teach for an example
 .box-shadow-primary {
-  box-shadow: 8px 8px 0 var(--brand_primary_light);
+  box-shadow: 8px 8px 0 rgba(171, 223, 229, 0.50);
 }
 
 // Add a soft box shadow to an element
@@ -446,6 +471,28 @@ ul {
 
       h3 {
         @include heading-sm;
+      }
+    }
+  }
+
+  // Featured artists list
+  // See code.org/dance and code.org/music
+  &.featured-artists {
+    margin: 2rem auto;
+    @media (min-width: $width-sm) { gap: 1.5rem; }
+
+    li {
+      @media (min-width: $width-sm) { flex: 1; }
+      @media (max-width: $width-sm) { width: 29%; }
+
+      img {
+        border-radius: 100%;
+        width: 100%;
+        border: 4px solid var(--brand_secondary_default);
+      }
+
+      &:nth-of-type(even) img {
+        border-color: var(--brand_primary_default);
       }
     }
   }

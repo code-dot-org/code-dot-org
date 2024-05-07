@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2024-04-08 22:02:41 UTC",
+    "serialized_at": "2024-05-01 17:50:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1833,7 +1833,7 @@
       "key": "005d9583-5bd6-46fa-a569-2285fffbcd51",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2056,7 +2056,7 @@
       "key": "058148d7-eed1-44df-a576-9a7f79864599",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2222,7 +2222,7 @@
       "key": "d1075a50-6be2-4d91-bc7d-b9a89d303d90",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2366,7 +2366,7 @@
       "key": "c75e32e6-75a8-417e-a45e-2ff3c0d270d6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2502,6 +2502,7 @@
       "key": "f0917c0e-8404-429f-b34f-4eda66bae946",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n",
         "name": "My Loopy Robotic Friends",
         "progression_name": "My Loopy Robotic Friends - Unplugged Activity"
       },
@@ -2671,7 +2672,7 @@
       "key": "6f53a933-f833-4cd8-948c-41ecac627649",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2850,7 +2851,7 @@
       "key": "41ae176b-4291-4e7e-a2c2-f9f677477c64",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-8 - Skill Building” slide\n\nWhen students are using loops to repeat an action (such as harvesting pumpkins), encourage them to think about the movements before and after that action. Could those actions be brought into the loop as well?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-8 - Skill Building” slide\n\nWhen students are using loops to repeat an action (such as harvesting pumpkins), encourage them to think about the movements before and after that action. Could those actions be brought into the loop as well?",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2998,7 +2999,7 @@
       "key": "ee68041e-45db-4818-9554-78f5a1994161",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-8 - Mini-Project: Sticker Art” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-8 - Mini-Project: Sticker Art” slide\n",
         "progression_name": "Mini-Project: Sticker Art"
       },
       "seeding_key": {
@@ -3010,7 +3011,7 @@
       "key": "701f604f-1f3e-4029-a22d-31316c51ce13",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n\n**Say:**\n- *Make your own Sticker Art.*\n- *Plan out your design.*\n- *Program your design.*\n- *Share your design at the end of the lesson.*\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n\n**Say:**\n- *Make your own Sticker Art.*\n- *Plan out your design.*\n- *Program your design.*\n- *Share your design at the end of the lesson.*\n\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3022,7 +3023,7 @@
       "key": "9e8419bf-15f0-4cf1-9760-baceb09eda1e",
       "position": 4,
       "properties": {
-        "description": "Some students may discover where to add repeat loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)"
+        "description": "Some students may discover where to add repeat loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)\n\n"
       },
       "seeding_key": {
         "activity_section.key": "9e8419bf-15f0-4cf1-9760-baceb09eda1e",
@@ -3121,7 +3122,7 @@
       "key": "1eaa774f-a530-4011-90ba-43898ac49f0d",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Event Controller” slide\n\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](https://code.org/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Event Controller” slide\n\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](https://code.org/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n    - What buttons would you need to press to get \"Twist, Twist, Clap, Stomp\"?\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
       },
       "seeding_key": {
         "activity_section.key": "1eaa774f-a530-4011-90ba-43898ac49f0d",
@@ -3274,7 +3275,7 @@
       "key": "d86cfee6-bb9d-4900-9b03-9358b1460c38",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3413,7 +3414,7 @@
       "key": "4f8748eb-c359-42a6-88ee-3f63ff4c2c1e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Skill Building” slide",
         "progression_name": "Skill-Building"
       },
       "seeding_key": {
@@ -3437,7 +3438,7 @@
       "key": "aed266ee-f33e-47d9-9f27-5131488d80ab",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3788,7 +3789,7 @@
       "key": "0840de3e-9d47-435e-a588-48e1452e7979",
       "position": 13,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bits Versus Bytes” video\n\n**Do This:** Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What Letter is This?” slide\n\n**Do This:**\nDrag the blocks on the slide to make different letters.\n\n\n\t\t\n- Go over a few examples of converting letters into binary, then back.\n- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n- When the class can figure out that encoded letter on their own, you can move on to the activity."
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bits Versus Bytes” video\n\n**Do This:** Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What Letter is This?” slide\n\n**Do This:**\nDrag the blocks on the slide to make different letters. Show students how to break down the 8-bit sequence into the first 4 bits and the last 4 bits to read it more easily. Within each 4 bit sequence, have students break it down further by looking at the bits from left to right to determine if the bit is on or off.\n\t\t\n- Go over a few examples of converting letters into binary, then back.\n- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n- When the class can figure out that encoded letter on their own, you can move on to the activity."
       },
       "seeding_key": {
         "activity_section.key": "0840de3e-9d47-435e-a588-48e1452e7979",
@@ -3809,6 +3810,7 @@
       "key": "36cbe416-1cfc-4620-a404-db05c7894440",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n",
         "name": "Binary Bracelets",
         "progression_name": "Binary Bracelets - Unplugged Activity"
       },
@@ -3985,7 +3987,7 @@
       "key": "282603bd-c120-482e-835a-1abbdac67298",
       "position": 1,
       "properties": {
-        "description": "Equipped with their completed planning guides, students are now ready to bring their projects to life. These levels correspond to the structure of the planning guide, and help navigate students through the process of transforming their ideas into code.",
+        "description": "Equipped with their completed planning guides, students are now ready to bring their projects to life. These levels correspond to the structure of the planning guide, and help navigate students through the process of transforming their ideas into code.\n\nDiscuss how different types of projects meet different user needs and preferences. Students should be able to explain what type of project or game they chose to make and what type of user they had in mind when designing it.",
         "name": "Coding Project",
         "tips": [
           {
@@ -4015,7 +4017,7 @@
       "key": "46833f10-0e19-4043-94ef-eb83978b8b1e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Create Your Project” slide",
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Create Your Project” slide",
         "progression_name": "Project"
       },
       "seeding_key": {
@@ -8931,7 +8933,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/coursec-2023/resources",
+      "url": "/s/coursec-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8942,7 +8944,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursec-2023/standards",
+      "url": "/s/coursec-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8953,7 +8955,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursec-2023/vocab",
+      "url": "/s/coursec-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -10034,6 +10036,16 @@
       }
     },
     {
+      "key": "online",
+      "word": "Online",
+      "definition": "Using a computer, phone, or tablet to visit a website or app",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "online"
+      }
+    },
+    {
       "key": "persistence",
       "word": "Persistence",
       "definition": "Not giving up.",
@@ -10119,6 +10131,18 @@
       "seeding_key": {
         "lesson.key": "Creating Art with Code",
         "vocabulary.key": "angle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -10251,6 +10275,12 @@
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
         "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Putting a STOP to Online Meanness",
+        "vocabulary.key": "online"
       }
     },
     {
@@ -10445,6 +10475,16 @@
       }
     },
     {
+      "key": "93db18c7-1b40-4171-9588-3165606cc539",
+      "properties": {
+        "description": "Write an algorithm by breaking down the steps to create an art piece."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Sticker Art",
+        "objective.key": "93db18c7-1b40-4171-9588-3165606cc539"
+      }
+    },
+    {
       "key": "97ec1005-fc75-4ec4-a6fa-5e8cac8f4131",
       "properties": {
         "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
@@ -10485,6 +10525,16 @@
       }
     },
     {
+      "key": "ada13516-8ae8-47bf-9931-e19bdb7fba77",
+      "properties": {
+        "description": "Use numbers as angle measurements and distances."
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "objective.key": "ada13516-8ae8-47bf-9931-e19bdb7fba77"
+      }
+    },
+    {
       "key": "b10db75f-49bf-48f0-89d3-704a870ee52a",
       "properties": {
         "description": "Collect and record data about quantities of real objects, or characters on a screen"
@@ -10512,6 +10562,16 @@
       "seeding_key": {
         "lesson.key": "Collecting Treasure with Laurel",
         "objective.key": "baa09ff5-bb27-45db-b7a8-8fdcf8a3174f"
+      }
+    },
+    {
+      "key": "bcc88fca-7e3a-4b63-b5c5-4aec64641e74",
+      "properties": {
+        "description": "Name daily processes where you follow an algorithm of steps to complete a task."
+      },
+      "seeding_key": {
+        "lesson.key": "My Robotic Friends Jr",
+        "objective.key": "bcc88fca-7e3a-4b63-b5c5-4aec64641e74"
       }
     },
     {
@@ -10873,7 +10933,7 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: Chase Game",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-CS-01"
+        "standard.shortcode": "1A-AP-13"
       }
     },
     {
@@ -10895,6 +10955,13 @@
         "lesson.key": "Mini-Project: Sticker Art",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Sticker Art",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-13"
       }
     },
     {
@@ -10979,6 +11046,13 @@
         "lesson.key": "Programming with Angry Birds",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-15"
       }
     },
     {

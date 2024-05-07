@@ -707,6 +707,32 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal uid, partial_user.uid
   end
 
+  test 'google_oauth2: renders redirector to complete registration if user is not found by credentials' do
+    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
+    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+    # Given I do not have a Code.org account
+    uid = "nonexistent-google-oauth2"
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '' # Google doesn't provider user_type
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I go to the registration page to finish signing up
+    assert_template 'omniauth/redirect'
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal AuthenticationOption::GOOGLE, partial_user.provider
+    assert_equal uid, partial_user.uid
+  end
+
   test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration' do
     # Given I do not have a Code.org account
     uid = "nonexistent-google-oauth2"

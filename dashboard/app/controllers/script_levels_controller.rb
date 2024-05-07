@@ -64,8 +64,11 @@ class ScriptLevelsController < ApplicationController
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
 
-    if @script.is_deprecated
+    # Check if the script or current level is deprecated
+    level_is_deprecated = @script_level&.level_deprecated?
+    if @script.is_deprecated || level_is_deprecated
       return render 'errors/deprecated_course'
     end
 
@@ -103,10 +106,22 @@ class ScriptLevelsController < ApplicationController
 
     @public_caching = configure_caching(@script)
 
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    # If we have a signed out user for any of these cases we will want to redirect them to sign in
-    authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true")
+
+    if @script.login_required? || (!params.nil? && params[:login_required] == "true")
+      if cachable_request?(request)
+        # if login_required on a cached level, redirect to cached_page_auth_redirect
+        # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
+        uri = Addressable::URI.parse request.fullpath
+        uri.query_values = uri&.query_values&.except('login_required')
+        uri.query_values = nil if uri.query_values && uri.query_values.empty?
+        return redirect_to api_v1_users_cached_page_auth_redirect_path({user_return_to: uri.to_s})
+      else
+        authenticate_user!
+      end
+    end
+    authenticate_user! unless can?(:read, @script)
+
     return render 'levels/no_access' unless can?(:read, @script_level)
 
     if current_user&.script_level_hidden?(@script_level)

@@ -1,6 +1,6 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
-import {baseAssetUrlRestricted} from '../constants';
+import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
 import {getBaseAssetUrl} from '../appConfig';
 
 export default class MusicLibrary {
@@ -15,8 +15,14 @@ export default class MusicLibrary {
   }
 
   name: string;
-  libraryJson: LibraryJson;
-  folders: SoundFolder[];
+
+  packs: SoundFolder[];
+  instruments: SoundFolder[];
+  kits: SoundFolder[];
+
+  private folders: SoundFolder[];
+
+  private libraryJson: LibraryJson;
   private allowedSounds: Sounds | null;
   private currentPackId: string | null;
   private hasRestrictedPacks: boolean;
@@ -40,6 +46,10 @@ export default class MusicLibrary {
       ...libraryJson.kits,
     ];
 
+    this.packs = libraryJson.packs;
+    this.instruments = libraryJson.instruments;
+    this.kits = libraryJson.kits;
+
     if (libraryJson.bpm) {
       this.bpm = libraryJson.bpm;
     }
@@ -57,6 +67,10 @@ export default class MusicLibrary {
     this.determineAvailableSoundTypes();
   }
 
+  getPath() {
+    return this.libraryJson.path;
+  }
+
   setCurrentPackId(packId: string) {
     this.currentPackId = packId;
   }
@@ -68,7 +82,7 @@ export default class MusicLibrary {
   // Determine the available sound types available in this library.
   // Only currently-allowed sounds from packs are included.
   private determineAvailableSoundTypes() {
-    const folders = this.getAllowedSounds(undefined, false);
+    const folders = this.getAllowedSounds();
 
     folders.forEach(folder => {
       folder.sounds.forEach(sound => {
@@ -91,7 +105,7 @@ export default class MusicLibrary {
 
     // The fallback is the first non-instrument/kit folder's first non-preview sound.
     // We will skip restricted folders unless it's the currently selected pack.
-    const firstFolder = this.folders.find(
+    const firstFolder = this.packs.find(
       group =>
         !group.type && (!group.restricted || group.id === this.currentPackId)
     );
@@ -124,31 +138,40 @@ export default class MusicLibrary {
     return this.getFolderForFolderId(folderId);
   }
 
-  // Given a folder ID (e.g. "pack1") return the SoundFolder.
+  // Given a folder ID (e.g. "pack1", "kit1", or "instrument1") return the SoundFolder.
   getFolderForFolderId(folderId: string): SoundFolder | null {
     return this.folders.find(folder => folder.id === folderId) || null;
   }
 
-  // Given a folderType and a sound ID (e.g. "pack1/sound1"), return only an
+  // Given a a sound ID (e.g. "pack1/sound1"), return only an
   // allowed SoundFolder containing the allowed sounds.
-  getAllowedFolderForSoundId(
-    folderType: string | undefined,
-    id: string
-  ): SoundFolder | null {
+  getAllowedFolderForSoundId(id: string): SoundFolder | null {
     const lastSlashIndex = id.lastIndexOf('/');
     const folderId = id.substring(0, lastSlashIndex);
 
-    return this.getAllowedFolderForFolderId(folderType, folderId);
+    return this.getAllowedFolderForFolderId(folderId);
   }
 
   // Given a folderType and a folder ID (e.g. "pack1"), return only an
   // allowed SoundFolder containing the allowed sounds.
-  getAllowedFolderForFolderId(
-    folderType: string | undefined,
-    folderId: string
-  ): SoundFolder | null {
-    const folders = this.getAllowedSounds(folderType, false);
+  getAllowedFolderForFolderId(folderId: string): SoundFolder | null {
+    const folders = this.getAllowedSounds();
     return folders.find(folder => folder.id === folderId) || null;
+  }
+
+  // Given a pack ID (e.g. "pack1"), return the path for its image.
+  getPackImageUrl(packId: string): string | undefined {
+    const folder = this.getFolderForFolderId(packId);
+    if (!folder) {
+      return undefined;
+    }
+
+    return (
+      folder.imageSrc &&
+      `${getBaseAssetUrl()}${this.libraryJson.path}/${folder.path}/${
+        folder.imageSrc
+      }`
+    );
   }
 
   // A progression step might specify a smaller set of allowed sounds.
@@ -165,33 +188,27 @@ export default class MusicLibrary {
     return `${baseUrl}${this.libraryJson.path}/${folder.path}/${optionalSoundPath}${soundData.src}.mp3`;
   }
 
-  // A sound picker might want to show the subset of sounds permitted by the
-  // progression's currently allowed sounds.
-  getAllowedSounds(
-    folderType: string | undefined,
-    enumerateRestrictedPacks: boolean
-  ): SoundFolder[] {
+  getAvailableSounds() {
+    return this.getAllowedSounds().filter(
+      folder =>
+        (!folder.restricted || this.currentPackId === folder.id) &&
+        folder.id !== DEFAULT_PACK
+    );
+  }
+
+  getRestrictedPacks(): SoundFolder[] {
+    return this.getAllowedSounds().filter(
+      folder => folder.restricted && folder.id !== DEFAULT_PACK
+    );
+  }
+
+  // Return a deep copy of the packs folders only containing folders
+  // and sounds currently allowed by the level.
+  private getAllowedSounds(): SoundFolder[] {
     // Let's just do a deep copy and then do filtering in-place.
     let foldersCopy: SoundFolder[] = JSON.parse(
-      JSON.stringify(this.folders)
+      JSON.stringify(this.packs)
     ) as SoundFolder[];
-
-    // Whether or not we have allowedSounds, we need to filter by type.
-    // If we are enumerating restricted packs, then we only allow them.
-    // If we are enumerating available sounds, then we only allow
-    // restricted sounds if they are the current pack.
-    foldersCopy = foldersCopy.filter(
-      (folder: SoundFolder) =>
-        folder.type === folderType &&
-        ((!this.currentPackId &&
-          enumerateRestrictedPacks &&
-          folder.restricted) ||
-          (!this.currentPackId &&
-            !enumerateRestrictedPacks &&
-            !folder.restricted) ||
-          (this.currentPackId &&
-            (!folder.restricted || this.currentPackId === folder.id)))
-    );
 
     if (this.allowedSounds) {
       foldersCopy = foldersCopy.filter(
@@ -208,12 +225,28 @@ export default class MusicLibrary {
     return foldersCopy;
   }
 
+  // Returns the library BPM, or the BPM of the currently selected pack if present.
   getBPM(): number | undefined {
-    return this.bpm;
+    if (!this.currentPackId) {
+      return this.bpm;
+    }
+    const folder = this.getFolderForFolderId(this.currentPackId);
+    // Read BPM from the folder, or the first sound that has a BPM if not present on the folder.
+    return (
+      folder?.bpm || folder?.sounds.find(sound => sound.bpm !== undefined)?.bpm
+    );
   }
 
+  // Returns the library key, or the key of the currently selected pack if present.
   getKey(): Key | undefined {
-    return this.key;
+    if (!this.currentPackId) {
+      return this.key;
+    }
+    const folder = this.getFolderForFolderId(this.currentPackId);
+    // Read key from the folder, or the first sound that has a key if not present on the folder.
+    return (
+      folder?.key || folder?.sounds.find(sound => sound.key !== undefined)?.key
+    );
   }
 }
 
@@ -273,10 +306,11 @@ export interface SoundFolder {
   type?: SoundFolderType;
   path: string;
   imageSrc: string;
+  color?: string;
   restricted?: boolean;
   sounds: SoundData[];
   bpm?: number;
-  key?: string;
+  key?: Key;
 }
 
 export type LibraryJson = {

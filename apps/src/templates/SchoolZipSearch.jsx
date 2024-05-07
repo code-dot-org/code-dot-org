@@ -1,42 +1,69 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyTwoText,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
+import classNames from 'classnames';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
-import Button from '@cdo/apps/templates/Button';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-const SELECT_A_SCHOOL = 'selectASchool';
-const CLICK_TO_ADD = 'clickToAdd';
-const NO_SCHOOL_SETTING = 'noSchoolSetting';
+export const SELECT_A_SCHOOL = 'selectASchool';
+export const CLICK_TO_ADD = 'clickToAdd';
+export const NO_SCHOOL_SETTING = 'noSchoolSetting';
 const SEARCH_DEFAULTS = [
-  {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
   {value: CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
+const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
 
-export default function SchoolZipSearch({fieldNames, zip}) {
-  const [selectedSchoolNcesId, setSelectedSchoolNcesId] = useState('');
+// Controls the logic and components surrounding a zip input box and its error
+// messaging, the api school search filtered on zip, and the school dropdown
+// that search populates.
+export default function SchoolZipSearch({fieldNames}) {
+  const [selectedSchoolNcesId, setSelectedSchoolNcesId] =
+    useState(SELECT_A_SCHOOL);
   const [inputManually, setInputManually] = useState(false);
   const [dropdownSchools, setDropdownSchools] = useState([]);
+  const [zip, setZip] = useState('');
+  const [isSchoolDropdownDisabled, setIsSchoolDropdownDisabled] =
+    useState(true);
+
+  const labelClassName = isSchoolDropdownDisabled
+    ? classNames(style.padding, style.disabledLabel)
+    : style.padding;
 
   useEffect(() => {
-    const searchUrl = `/dashboardapi/v1/schoolsearch/${zip}/40`;
-    fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
-      .then(response => (response.ok ? response.json() : []))
-      .then(json => {
-        const schools = json.map(school => constructSchoolOption(school));
-        setDropdownSchools(schools);
-      })
-      .catch(error => {
-        console.log(
-          'There was a problem with the fetch operation:',
-          error.message
-        );
-      });
+    const isValidZip = ZIP_REGEX.test(zip);
+    if (isValidZip) {
+      setSelectedSchoolNcesId(SELECT_A_SCHOOL);
+      const searchUrl = `/dashboardapi/v1/schoolzipsearch/${zip}`;
+      fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
+        .then(response => (response.ok ? response.json() : []))
+        .then(json => {
+          const schools = json.map(school => constructSchoolOption(school));
+          setDropdownSchools(schools);
+        })
+        .catch(error => {
+          console.log(
+            'There was a problem with the fetch operation:',
+            error.message
+          );
+        });
+      setIsSchoolDropdownDisabled(false);
+      analyticsReporter.sendEvent(
+        EVENTS.ZIP_CODE_ENTERED,
+        {zip: zip},
+        PLATFORMS.BOTH
+      );
+    } else {
+      setIsSchoolDropdownDisabled(true);
+    }
   }, [zip]);
 
   const sendAnalyticsEvent = (eventName, data) => {
@@ -45,23 +72,17 @@ export default function SchoolZipSearch({fieldNames, zip}) {
 
   const onSchoolChange = e => {
     const schoolId = e.target.value;
-    let ncesId;
     if (schoolId === NO_SCHOOL_SETTING) {
-      ncesId = '';
       sendAnalyticsEvent(EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED, {});
-    } else if (schoolId === SELECT_A_SCHOOL) {
-      ncesId = '';
-      // sendAnalyticsEvent(EVENTS.SCHOOL_LIST_OPENED, {});
     } else if (schoolId === CLICK_TO_ADD) {
-      ncesId = '';
       setInputManually(true);
       sendAnalyticsEvent(EVENTS.ADD_MANUALLY_CLICKED, {});
     } else {
-      // In the case the value given is a real school ID, use that
-      ncesId = schoolId;
-      sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {ncesId: ncesId});
+      sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {
+        'nces Id': schoolId,
+      });
     }
-    setSelectedSchoolNcesId(ncesId);
+    setSelectedSchoolNcesId(schoolId);
   };
 
   const constructSchoolOption = school => ({
@@ -78,23 +99,68 @@ export default function SchoolZipSearch({fieldNames, zip}) {
     return sortedSchools;
   };
 
+  const SORTED_SCHOOLS_OPTION_GROUP = [
+    {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
+  ].concat(sortSchoolsByName(dropdownSchools));
+
   return (
     <div>
+      <label>
+        <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
+          {i18n.enterYourSchoolZip()}
+        </BodyTwoText>
+        <input
+          id="uitest-school-zip"
+          type="text"
+          name={fieldNames.schoolZip}
+          onChange={e => {
+            setZip(e.target.value);
+          }}
+          value={zip}
+        />
+        {zip && isSchoolDropdownDisabled && (
+          <BodyThreeText className={style.errorMessage}>
+            {i18n.zipInvalidMessage()}
+          </BodyThreeText>
+        )}
+      </label>
       {!inputManually && (
         <div>
           <BodyTwoText
-            className={style.padding}
+            className={labelClassName}
             visualAppearance={'heading-xs'}
           >
             {i18n.selectYourSchool()}
           </BodyTwoText>
           <SimpleDropdown
-            className={style.dropdown}
+            id="uitest-school-dropdown"
+            disabled={isSchoolDropdownDisabled}
             name={fieldNames.ncesSchoolId}
-            items={SEARCH_DEFAULTS.concat(sortSchoolsByName(dropdownSchools))}
+            itemGroups={[
+              {
+                label: i18n.schools(),
+                groupItems: SORTED_SCHOOLS_OPTION_GROUP,
+              },
+              {
+                label: i18n.additionalOptions(),
+                groupItems: SEARCH_DEFAULTS,
+              },
+            ]}
             selectedValue={selectedSchoolNcesId}
             onChange={onSchoolChange}
             size="m"
+          />
+          <Button
+            text={i18n.noSchoolSetting()}
+            disabled={isSchoolDropdownDisabled}
+            color={'purple'}
+            type={'tertiary'}
+            size={'xs'}
+            onClick={e => {
+              e.preventDefault();
+              setSelectedSchoolNcesId(NO_SCHOOL_SETTING);
+              sendAnalyticsEvent(EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED, {});
+            }}
           />
         </div>
       )}
@@ -103,7 +169,9 @@ export default function SchoolZipSearch({fieldNames, zip}) {
           <SchoolNameInput fieldNames={{schoolName: fieldNames.schoolName}} />
           <Button
             text={i18n.returnToResults()}
-            styleAsText={true}
+            color={'purple'}
+            type={'tertiary'}
+            size={'xs'}
             onClick={() => {
               setInputManually(false);
               setSelectedSchoolNcesId(SELECT_A_SCHOOL);
@@ -117,5 +185,4 @@ export default function SchoolZipSearch({fieldNames, zip}) {
 
 SchoolZipSearch.propTypes = {
   fieldNames: PropTypes.object,
-  zip: PropTypes.string.isRequired,
 };

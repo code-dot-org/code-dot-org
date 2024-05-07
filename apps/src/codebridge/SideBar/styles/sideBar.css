@@ -1,0 +1,18 @@
+.side-bar {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  width: 100%;
+
+  grid-area: side-bar;
+}
+
+.side-bar div {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

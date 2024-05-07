@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState, useRef} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
@@ -18,6 +18,14 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import Draggable from 'react-draggable';
 import {TAB_NAMES} from './rubricHelpers';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+// product Tour
+import './introjs.scss';
+import {Steps} from 'intro.js-react';
+import {INITIAL_STEP, STEPS, DUMMY_PROPS} from './productTourHelpers';
 
 export default function RubricContainer({
   rubric,
@@ -51,6 +59,10 @@ export default function RubricContainer({
   const [aiEvaluations, setAiEvaluations] = useState(null);
 
   const [feedbackAdded, setFeedbackAdded] = useState(false);
+
+  const [productTour, setProductTour] = useState(false);
+  const tourStep = useRef(null);
+  const tourRestarted = useRef(false);
 
   const tabSelectCallback = tabSelection => {
     setSelectedTab(tabSelection);
@@ -100,6 +112,19 @@ export default function RubricContainer({
   const onStopHandler = (event, dragElement) => {
     setPositionX(dragElement.x);
     setPositionY(dragElement.y);
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_WINDOW_MOVE_END, {
+      ...(reportingData || {}),
+      window_x_end: dragElement.x,
+      window_y_end: dragElement.y,
+    });
+  };
+
+  const onStartHandler = (event, dragElement) => {
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_WINDOW_MOVE_START, {
+      ...(reportingData || {}),
+      window_x_start: dragElement.x,
+      window_y_start: dragElement.y,
+    });
   };
 
   // Currently the settings tab only provides a way to manually run AI.
@@ -107,9 +132,113 @@ export default function RubricContainer({
   // add more functionality to the settings tab.
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
+  const updateTourStatus = useCallback(() => {
+    const bodyData = JSON.stringify({seen: productTour});
+    const rubricId = rubric.id;
+    const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
+    HttpClient.post(url, bodyData, true, {
+      'Content-Type': 'application/json',
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        if (json['seen']) {
+          setProductTour(false);
+        } else {
+          setProductTour(true);
+        }
+      });
+  }, [rubric.id, productTour]);
+
+  const getTourStatus = useCallback(() => {
+    const rubricId = rubric.id;
+    const url = `/rubrics/${rubricId}/get_ai_rubrics_tour_seen`;
+    fetch(url)
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        if (json['seen']) {
+          setProductTour(false);
+        } else {
+          setProductTour(true);
+        }
+      });
+  }, [rubric.id]);
+
+  useEffect(() => {
+    getTourStatus();
+  }, [getTourStatus]);
+
+  const tourRestartHandler = () => {
+    tourRestarted.current = true;
+    updateTourStatus();
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_RESTARTED, {
+      ...(reportingData || {}),
+    });
+  };
+
+  const onTourStart = stepIndex => {
+    tourStep.current = stepIndex;
+    if (tourRestarted.current) {
+      tourRestarted.current = false;
+    } else {
+      analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_STARTED, {
+        ...(reportingData || {}),
+      });
+    }
+  };
+
+  const onTourExit = stepIndex => {
+    updateTourStatus();
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_CLOSED, {
+      ...(reportingData || {}),
+      step: stepIndex,
+    });
+  };
+
+  const onTourComplete = () => {
+    updateTourStatus();
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_COMPLETE, {
+      ...(reportingData || {}),
+    });
+  };
+
+  const onStepChange = (nextStepIndex, nextElement) => {
+    if (tourStep.current !== null && nextStepIndex !== tourStep.current) {
+      if (nextStepIndex < tourStep.current) {
+        analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_BACK, {
+          ...(reportingData || {}),
+          step: tourStep.current,
+          nextStep: nextStepIndex,
+        });
+      } else {
+        analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_NEXT, {
+          ...(reportingData || {}),
+          step: tourStep.current,
+          nextStep: nextStepIndex,
+        });
+      }
+      tourStep.current = nextStepIndex;
+      if (nextStepIndex === 1) {
+        document.getElementById('tour-fab-bg').scrollBy(0, 1000);
+      }
+    }
+  };
+
+  const onBeforeStepChange = (nextStepIndex, nextElement) => {
+    if (nextStepIndex === 1) {
+      if (!open) {
+        document.getElementById('ui-floatingActionButton').click();
+      }
+    }
+  };
+
   return (
     <Draggable
       defaultPosition={{x: positionX, y: positionY}}
+      onStart={onStartHandler}
       onStop={onStopHandler}
     >
       <div
@@ -119,6 +248,26 @@ export default function RubricContainer({
           [style.hiddenRubricContainer]: !open,
         })}
       >
+        <Steps
+          enabled={canProvideFeedback && productTour}
+          initialStep={INITIAL_STEP}
+          steps={STEPS}
+          onStart={onTourStart}
+          onExit={onTourExit}
+          onChange={onStepChange}
+          onBeforeChange={onBeforeStepChange}
+          onComplete={onTourComplete}
+          options={{
+            scrollToElement: false,
+            exitOnOverlayClick: false,
+            hidePrev: true,
+            nextLabel: i18n.rubricTourNextButtonText(),
+            prevLabel: i18n.back(),
+            doneLabel: i18n.done(),
+            showBullets: false,
+            showStepNumbers: true,
+          }}
+        />
         <div className={style.rubricHeaderRedesign}>
           <div className={style.rubricHeaderLeftSide}>
             <img
@@ -129,6 +278,17 @@ export default function RubricContainer({
             <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
+            {canProvideFeedback && (
+              <button
+                id="ui-restart-product-tour"
+                aria-label="restart product tour"
+                type="button"
+                onClick={tourRestartHandler}
+                className={classnames(style.buttonStyle, style.closeButton)}
+              >
+                <FontAwesome icon="circle-question" />
+              </button>
+            )}
             <button
               type="button"
               onClick={closeRubric}
@@ -139,7 +299,7 @@ export default function RubricContainer({
           </div>
         </div>
 
-        <div className={style.fabBackground}>
+        <div id="tour-fab-bg" className={style.fabBackground}>
           <RubricTabButtons
             tabSelectCallback={tabSelectCallback}
             selectedTab={selectedTab}
@@ -150,19 +310,30 @@ export default function RubricContainer({
             refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
             studentName={studentLevelInfo && studentLevelInfo.name}
-            reportingData={reportingData}
           />
-
           <RubricContent
-            rubric={rubric}
+            productTour={productTour}
+            rubric={
+              canProvideFeedback && productTour
+                ? DUMMY_PROPS['rubricDummy']
+                : rubric
+            }
             open={open}
-            studentLevelInfo={studentLevelInfo}
+            studentLevelInfo={
+              canProvideFeedback && productTour
+                ? DUMMY_PROPS['studentLevelInfoDummy']
+                : studentLevelInfo
+            }
             teacherHasEnabledAi={teacherHasEnabledAi}
             canProvideFeedback={canProvideFeedback}
             onLevelForEvaluation={onLevelForEvaluation}
             reportingData={reportingData}
             visible={selectedTab === TAB_NAMES.RUBRIC}
-            aiEvaluations={aiEvaluations}
+            aiEvaluations={
+              canProvideFeedback && productTour
+                ? DUMMY_PROPS['aiEvaluationsDummy']
+                : aiEvaluations
+            }
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}

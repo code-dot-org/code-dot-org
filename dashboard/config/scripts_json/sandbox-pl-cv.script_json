@@ -1,0 +1,1421 @@
+{
+  "script": {
+    "name": "sandbox-pl-cv",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "sandbox-pl-cv",
+    "serialized_at": "2024-05-06 19:45:22 UTC",
+    "published_state": "in_development",
+    "instruction_type": "self_paced",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
+    "seeding_key": {
+      "script.name": "sandbox-pl-cv"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Computer Vision",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "##### In this module, you will: \n- #####Get an introduction to Teaching Computer Vision\n- #####Define and identify different uses of computer vision\n- #####Utilize the design process to solve problems\n- #####Explore Computer Vision lessons\n\n#####**Suggested Time:** 25 minutes\n",
+        "student_overview": "##### In this module, you will: \n- #####Get an introduction to Teaching Computer Vision\n- #####Define and identify different uses of computer vision\n- #####Utilize the design process to solve problems\n- #####Explore Computer Vision lessons\n\n#####**Suggested Time:** 25 minutes\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson Exploration",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "##### In this lesson you will: \n- ##### Review the content of each lesson \n\n- ##### Preview activities in the lessons \n\n##### **Suggested time:** 75 minutes \n",
+        "student_overview": "##### In this lesson you will: \n- ##### Review the content of each lesson \n\n- ##### Preview activities in the lessons \n\n##### **Suggested time:** 75 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Teaching Resources",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "4259c405-ab3e-44f1-8212-a55ff7258ad2",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4259c405-ab3e-44f1-8212-a55ff7258ad2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv"
+      }
+    },
+    {
+      "key": "6e061ef2-2e3c-4bdb-a4e3-5e0490543250",
+      "position": 1,
+      "properties": {
+        "duration": 75
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e061ef2-2e3c-4bdb-a4e3-5e0490543250",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "05538f63-c139-4f07-b619-1f0281ba8ceb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview of Teaching Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "05538f63-c139-4f07-b619-1f0281ba8ceb",
+        "lesson_activity.key": "4259c405-ab3e-44f1-8212-a55ff7258ad2"
+      }
+    },
+    {
+      "key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2",
+        "lesson_activity.key": "4259c405-ab3e-44f1-8212-a55ff7258ad2"
+      }
+    },
+    {
+      "key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396",
+        "lesson_activity.key": "6e061ef2-2e3c-4bdb-a4e3-5e0490543250"
+      }
+    },
+    {
+      "key": "72275fa6-0bf5-4463-916c-161a960a2e97",
+      "position": 2,
+      "properties": {
+        "progression_name": "Empathize "
+      },
+      "seeding_key": {
+        "activity_section.key": "72275fa6-0bf5-4463-916c-161a960a2e97",
+        "lesson_activity.key": "6e061ef2-2e3c-4bdb-a4e3-5e0490543250"
+      }
+    },
+    {
+      "key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Defining"
+      },
+      "seeding_key": {
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d",
+        "lesson_activity.key": "6e061ef2-2e3c-4bdb-a4e3-5e0490543250"
+      }
+    },
+    {
+      "key": "3831f83d-9b49-4727-88b9-e3079cd0b795",
+      "position": 4,
+      "properties": {
+        "progression_name": "Ideating"
+      },
+      "seeding_key": {
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795",
+        "lesson_activity.key": "6e061ef2-2e3c-4bdb-a4e3-5e0490543250"
+      }
+    },
+    {
+      "key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35",
+      "position": 5,
+      "properties": {
+        "progression_name": "Prototyping"
+      },
+      "seeding_key": {
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35",
+        "lesson_activity.key": "6e061ef2-2e3c-4bdb-a4e3-5e0490543250"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_overview_sandbox"
+        ],
+        "progression": "Overview of Teaching Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_overview_sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "05538f63-c139-4f07-b619-1f0281ba8ceb"
+      },
+      "level_keys": [
+        "sp-pl-CV_overview_sandbox"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_ cert_sandbox"
+        ],
+        "progression": "Overview of Teaching Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_ cert_sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "05538f63-c139-4f07-b619-1f0281ba8ceb"
+      },
+      "level_keys": [
+        "sp-pl-CV_ cert_sandbox"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_overview2"
+        ],
+        "progression": "Overview of Teaching Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_overview2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "05538f63-c139-4f07-b619-1f0281ba8ceb"
+      },
+      "level_keys": [
+        "sp-pl-CV_overview2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_definingCv"
+        ],
+        "progression": "What is Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_definingCv"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      },
+      "level_keys": [
+        "sp-pl-CV_definingCv"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_Video"
+        ],
+        "progression": "What is Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      },
+      "level_keys": [
+        "sp-pl-CV_Video"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_Design_Process"
+        ],
+        "progression": "What is Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_Design_Process"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      },
+      "level_keys": [
+        "sp-pl-CV_Design_Process"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_Design_Process_Cycle"
+        ],
+        "progression": "What is Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_Design_Process_Cycle"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      },
+      "level_keys": [
+        "sp-pl-CV_Design_Process_Cycle"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV-chk_LLM"
+        ],
+        "progression": "What is Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV-chk_LLM"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      },
+      "level_keys": [
+        "sp-pl-CV-chk_LLM"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_lesson_structure"
+        ],
+        "progression": "What is Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_lesson_structure"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      },
+      "level_keys": [
+        "sp-pl-CV_lesson_structure"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_Lesson_resources"
+        ],
+        "progression": "What is Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_Lesson_resources"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      },
+      "level_keys": [
+        "sp-pl-CV_Lesson_resources"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV-lesson2Overview"
+        ],
+        "progression": "Introduction to Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV-lesson2Overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396"
+      },
+      "level_keys": [
+        "sp-pl-CV-lesson2Overview"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_Intro-to-CV"
+        ],
+        "progression": "Introduction to Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_Intro-to-CV"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396"
+      },
+      "level_keys": [
+        "sp-pl-CV_Intro-to-CV"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-CV_The Search for Pixel - review copy"
+        ],
+        "progression": "Introduction to Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-CV_The Search for Pixel - review copy"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396"
+      },
+      "level_keys": [
+        "pl-CV_The Search for Pixel - review copy"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_empathize"
+        ],
+        "progression": "Empathize "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_empathize"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "72275fa6-0bf5-4463-916c-161a960a2e97"
+      },
+      "level_keys": [
+        "sp-pl-CV_empathize"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_empathize_Lessons"
+        ],
+        "progression": "Empathize "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_empathize_Lessons"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "72275fa6-0bf5-4463-916c-161a960a2e97"
+      },
+      "level_keys": [
+        "sp-pl-CV_empathize_Lessons"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_empathize_Communities"
+        ],
+        "progression": "Empathize "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_empathize_Communities"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "72275fa6-0bf5-4463-916c-161a960a2e97"
+      },
+      "level_keys": [
+        "sp-pl-CV_empathize_Communities"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_empathize_problem_observations"
+        ],
+        "progression": "Empathize "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_empathize_problem_observations"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "72275fa6-0bf5-4463-916c-161a960a2e97"
+      },
+      "level_keys": [
+        "sp-pl-CV_empathize_problem_observations"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_defining"
+        ],
+        "progression": "Defining"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_defining"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      },
+      "level_keys": [
+        "sp-pl-CV_defining"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_defining_Lessons"
+        ],
+        "progression": "Defining"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_defining_Lessons"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      },
+      "level_keys": [
+        "sp-pl-CV_defining_Lessons"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_defining_userstories"
+        ],
+        "progression": "Defining"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_defining_userstories"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      },
+      "level_keys": [
+        "sp-pl-CV_defining_userstories"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_defining_digDeeper"
+        ],
+        "progression": "Defining"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_defining_digDeeper"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      },
+      "level_keys": [
+        "sp-pl-CV_defining_digDeeper"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Defining"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_defining_diggingDeeper"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      },
+      "level_keys": [
+        "sp-pl-CV_defining_diggingDeeper"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ideating"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      },
+      "level_keys": [
+        "sp-pl-CV_ideating"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Ideating"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating_Lessons"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      },
+      "level_keys": [
+        "sp-pl-CV_ideating_Lessons"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Ideating"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating_Lessons2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      },
+      "level_keys": [
+        "sp-pl-CV_ideating_Lessons2"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 16,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Ideating"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating_Trainingdata_bias"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      },
+      "level_keys": [
+        "sp-pl-CV_ideating_Trainingdata_bias"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Ideating"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating_MediaPipe"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      },
+      "level_keys": [
+        "sp-pl-CV_ideating_MediaPipe"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 18,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Ideating"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_CV_L9_MediaPipe_ObDet-Images_Link"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      },
+      "level_keys": [
+        "pl_CV_L9_MediaPipe_ObDet-Images_Link"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 19,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prototyping"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_prototyping"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      },
+      "level_keys": [
+        "sp-pl-CV_prototyping"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 20,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Prototyping"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_protoyping_Lessons"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      },
+      "level_keys": [
+        "sp-pl-CV_protoyping_Lessons"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 21,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Prototyping"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_prototyping_teachableMachine"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      },
+      "level_keys": [
+        "sp-pl-CV_prototyping_teachableMachine"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 22,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Prototyping"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_prototyping_trainingAModel"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      },
+      "level_keys": [
+        "sp-pl-CV_prototyping_trainingAModel"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 23,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Prototyping"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp_pl_CV_L10_TeachableMachine_Link"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      },
+      "level_keys": [
+        "sp_pl_CV_L10_TeachableMachine_Link"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_overview_sandbox",
+        "script_level.level_keys": [
+          "sp-pl-CV_overview_sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "05538f63-c139-4f07-b619-1f0281ba8ceb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_ cert_sandbox",
+        "script_level.level_keys": [
+          "sp-pl-CV_ cert_sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "05538f63-c139-4f07-b619-1f0281ba8ceb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_overview2",
+        "script_level.level_keys": [
+          "sp-pl-CV_overview2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "05538f63-c139-4f07-b619-1f0281ba8ceb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_definingCv",
+        "script_level.level_keys": [
+          "sp-pl-CV_definingCv"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_Video",
+        "script_level.level_keys": [
+          "sp-pl-CV_Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_Design_Process",
+        "script_level.level_keys": [
+          "sp-pl-CV_Design_Process"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_Design_Process_Cycle",
+        "script_level.level_keys": [
+          "sp-pl-CV_Design_Process_Cycle"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV-chk_LLM",
+        "script_level.level_keys": [
+          "sp-pl-CV-chk_LLM"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_lesson_structure",
+        "script_level.level_keys": [
+          "sp-pl-CV_lesson_structure"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_Lesson_resources",
+        "script_level.level_keys": [
+          "sp-pl-CV_Lesson_resources"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "ad7f37b3-2ba7-4ff7-9524-f1b82003b3b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV-lesson2Overview",
+        "script_level.level_keys": [
+          "sp-pl-CV-lesson2Overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_Intro-to-CV",
+        "script_level.level_keys": [
+          "sp-pl-CV_Intro-to-CV"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-CV_The Search for Pixel - review copy",
+        "script_level.level_keys": [
+          "pl-CV_The Search for Pixel - review copy"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_empathize",
+        "script_level.level_keys": [
+          "sp-pl-CV_empathize"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "72275fa6-0bf5-4463-916c-161a960a2e97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_empathize_Lessons",
+        "script_level.level_keys": [
+          "sp-pl-CV_empathize_Lessons"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "72275fa6-0bf5-4463-916c-161a960a2e97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_empathize_Communities",
+        "script_level.level_keys": [
+          "sp-pl-CV_empathize_Communities"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "72275fa6-0bf5-4463-916c-161a960a2e97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_empathize_problem_observations",
+        "script_level.level_keys": [
+          "sp-pl-CV_empathize_problem_observations"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "72275fa6-0bf5-4463-916c-161a960a2e97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_defining",
+        "script_level.level_keys": [
+          "sp-pl-CV_defining"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_defining_Lessons",
+        "script_level.level_keys": [
+          "sp-pl-CV_defining_Lessons"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_defining_userstories",
+        "script_level.level_keys": [
+          "sp-pl-CV_defining_userstories"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_defining_digDeeper",
+        "script_level.level_keys": [
+          "sp-pl-CV_defining_digDeeper"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_defining_diggingDeeper",
+        "script_level.level_keys": [
+          "sp-pl-CV_defining_diggingDeeper"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "525b0f62-d5e5-475e-a37e-ea03b25cdf8d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_ideating",
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_ideating_Lessons",
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating_Lessons"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_ideating_Lessons2",
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating_Lessons2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_ideating_Trainingdata_bias",
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating_Trainingdata_bias"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_ideating_MediaPipe",
+        "script_level.level_keys": [
+          "sp-pl-CV_ideating_MediaPipe"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_CV_L9_MediaPipe_ObDet-Images_Link",
+        "script_level.level_keys": [
+          "pl_CV_L9_MediaPipe_ObDet-Images_Link"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "3831f83d-9b49-4727-88b9-e3079cd0b795"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_prototyping",
+        "script_level.level_keys": [
+          "sp-pl-CV_prototyping"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_protoyping_Lessons",
+        "script_level.level_keys": [
+          "sp-pl-CV_protoyping_Lessons"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_prototyping_teachableMachine",
+        "script_level.level_keys": [
+          "sp-pl-CV_prototyping_teachableMachine"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_prototyping_trainingAModel",
+        "script_level.level_keys": [
+          "sp-pl-CV_prototyping_trainingAModel"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp_pl_CV_L10_TeachableMachine_Link",
+        "script_level.level_keys": [
+          "sp_pl_CV_L10_TeachableMachine_Link"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "1885761f-f59b-468a-b6b4-fea7b2cd1f35"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

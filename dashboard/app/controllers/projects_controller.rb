@@ -183,20 +183,6 @@ class ProjectsController < ApplicationController
     }
   }.with_indifferent_access.freeze
 
-  # Automatically catch authorization exceptions on any methods in this controller
-  # Overrides handler defined in application_controller.rb.
-  # Special for projects controller - when forbidden, redirect to home instead
-  # of returning a 403.
-  rescue_from CanCan::AccessDenied do
-    if current_user
-      # Logged in and trying to reach a forbidden page - redirect to home.
-      redirect_to '/'
-    else
-      # Not logged in and trying to reach a forbidden page - redirect to sign in.
-      authenticate_user!
-    end
-  end
-
   @@project_level_cache = {}
 
   # GET /projects/:tab_name
@@ -352,6 +338,10 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    if @level.deprecated?
+      return render 'errors/deprecated_course'
+    end
+
     if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
@@ -371,6 +361,7 @@ class ProjectsController < ApplicationController
     iframe_embed = params[:iframe_embed] == true
     iframe_embed_app_and_code = params[:iframe_embed_app_and_code] == true
     sharing = iframe_embed || params[:share] == true
+    set_lab2_responsive_view_options(sharing)
     readonly = params[:readonly] == true
     if iframe_embed || iframe_embed_app_and_code
       # explicitly set security related headers so that this page can actually
@@ -539,6 +530,20 @@ class ProjectsController < ApplicationController
     !project_validator && limited_project_gallery
   end
 
+  # Automatically catch authorization exceptions on any methods in this controller
+  # Overrides handler defined in application_controller.rb.
+  # Special for projects controller - when forbidden, redirect to home instead
+  # of returning a 403.
+  rescue_from CanCan::AccessDenied do
+    if current_user
+      # Logged in and trying to reach a forbidden page - redirect to home.
+      redirect_to '/'
+    else
+      # Not logged in and trying to reach a forbidden page - redirect to sign in.
+      authenticate_user!
+    end
+  end
+
   private def initial_data
     data = {
       name: 'Untitled Project',
@@ -599,16 +604,22 @@ class ProjectsController < ApplicationController
   # Redirect to the correct view/edit page for Lab2 projects. If a project owner is on a /view
   # page, redirect to /edit. If a non-owner is on an /edit page, redirect to /view.
   # For legacy (non-Lab2) labs, this is handled on the front-end.
-  # We will also redirect away from share URLs to the correct view/edit page as Lab2 does not
-  # yet support separate share pages.
   private def redirect_edit_view_for_lab2
     return nil unless @level.uses_lab2?
 
     project = Projects.new(get_storage_id).get(params[:channel_id])
     is_owner = project[:isOwner]
-    sharing = params[:iframe_embed] == true || params[:share] == true
 
-    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && (sharing || request.path.ends_with?('/view'))
-    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && (sharing || request.path.ends_with?('/edit'))
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && request.path.ends_with?('/view')
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && request.path.ends_with?('/edit')
+  end
+
+  private def set_lab2_responsive_view_options(sharing)
+    return nil unless @level.uses_lab2?
+
+    # If the user is on the play view '/projects/channel_id', set `response_content`.`
+    if sharing == true
+      view_options(responsive_content: true)
+    end
   end
 end

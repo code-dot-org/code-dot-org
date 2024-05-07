@@ -1,18 +1,23 @@
+import {screen} from '@testing-library/dom';
+import {render, fireEvent, act} from '@testing-library/react';
 import {mount} from 'enzyme';
 import React from 'react';
-import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import currentUser, {
+  setAiRubricsDisabled,
+} from '@cdo/apps/templates/currentUserRedux';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
@@ -45,7 +50,7 @@ describe('RubricSettings', () => {
     refreshAiEvaluationsSpy = sinon.spy();
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
-    registerReducers({teacherSections});
+    registerReducers({teacherSections, currentUser});
     store = getStore();
   });
 
@@ -145,6 +150,7 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
+
     expect(wrapper.find('SectionSelector').length).to.equal(1);
   });
 
@@ -320,14 +326,10 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
     expect(wrapper.find('Button').at(1).text()).to.include(
@@ -352,14 +354,10 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.text()).to.include(
       i18n.rubricNumberStudentEvals({
@@ -388,14 +386,10 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     //fetch for get_teacher_evaluations_all is the 2nd fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.text()).to.include(
       i18n.rubricNumberStudentEvals({
@@ -414,5 +408,73 @@ describe('RubricSettings', () => {
       }
     );
     sendEventSpy.restore();
+  });
+
+  it('displays the AI enable toggle', () => {
+    stubFetchEvalStatusForAll(ready);
+
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    expect(input.checked).to.be.true;
+  });
+
+  it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
+    stubFetchEvalStatusForAll(ready);
+
+    // Set the user's opt-out setting to true (our setting will now be false)
+    store.dispatch(setAiRubricsDisabled(true));
+
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    expect(input.checked).to.be.false;
+  });
+
+  it('updates the AI disabled user setting when the toggle is used', async () => {
+    stubFetchEvalStatusForAll(ready);
+
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    // Let's stub out setting the field via UserPreferences
+    const setStub = sinon.stub(
+      UserPreferences.prototype,
+      'setAiRubricsDisabled'
+    );
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    fireEvent.click(input);
+    fireEvent.change(input);
+
+    expect(input.checked).to.be.false;
+    expect(setStub).to.have.been.calledWith(true);
+    setStub.restore();
   });
 });

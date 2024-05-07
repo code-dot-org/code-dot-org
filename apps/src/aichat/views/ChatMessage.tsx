@@ -1,22 +1,15 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Button from '@cdo/apps/componentLibrary/button';
+import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {removeChatMessage} from '../redux/aichatRedux';
-import {
-  AichatLevelProperties,
-  ChatCompletionMessage,
-  Role,
-  AITutorInteractionStatus as Status,
-} from '../types';
+import {removeModelUpdateMessage} from '../redux/aichatRedux';
+import {ChatCompletionMessage, Role} from '../types';
 import aichatI18n from '../locale';
+import ChatNotificationMessage from './ChatNotificationMessage';
 import moduleStyles from './chatMessage.module.scss';
 
 interface ChatMessageProps {
@@ -31,7 +24,11 @@ const isUser = (role: string) => role === Role.USER;
 const isModelUpdate = (role: string) => role === Role.MODEL_UPDATE;
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
-  if (status === Status.OK || status === Status.UNKNOWN) {
+  if (
+    status === Status.OK ||
+    status === Status.UNKNOWN ||
+    status === Status.ERROR
+  ) {
     return (
       <div
         className={classNames(moduleStyles.message, moduleStyles.userMessage)}
@@ -41,14 +38,12 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
     );
   } else if (status === Status.PROFANITY_VIOLATION) {
     return (
-      <div
-        className={classNames(
-          moduleStyles.message,
-          moduleStyles.inappropriateMessage
-        )}
-      >
-        {INAPPROPRIATE_MESSAGE}
-      </div>
+      <ChatNotificationMessage
+        content={INAPPROPRIATE_MESSAGE}
+        iconName="circle-xmark"
+        iconClass={moduleStyles.danger}
+        containerClass={moduleStyles.dangerContainer}
+      />
     );
   } else if (status === Status.PII_VIOLATION) {
     return (
@@ -61,18 +56,6 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {TOO_PERSONAL_MESSAGE}
       </div>
     );
-  } else if (status === Status.ERROR) {
-    return (
-      <div
-        className={classNames(
-          moduleStyles.message,
-          // TODO: Add dedicated error message styling.
-          moduleStyles.tooPersonalMessage
-        )}
-      >
-        {'There was an error getting a response. Please try again.'}
-      </div>
-    );
   } else {
     return null;
   }
@@ -82,13 +65,24 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
   if (status === Status.OK) {
     return (
       <div
-        id={'chat-workspace-message-body'}
         className={classNames(
           moduleStyles.message,
           moduleStyles.assistantMessage
         )}
       >
         {chatMessageText}
+      </div>
+    );
+  } else if (status === Status.ERROR) {
+    return (
+      <div
+        className={classNames(
+          moduleStyles.message,
+          moduleStyles.assistantMessage,
+          moduleStyles.errorMessage
+        )}
+      >
+        {'There was an error getting a response. Please try again.'}
       </div>
     );
   }
@@ -101,59 +95,42 @@ const displayModelUpdateMessage = (
   const {chatMessageText, timestamp} = message;
 
   return (
-    <>
-      <div>
-        <FontAwesomeV6Icon iconName="check" className={moduleStyles.check} />
-        <span className={moduleStyles.modelUpdateMessageTextContainer}>
-          <StrongText>{chatMessageText}</StrongText> has been updated
-        </span>
-        <StrongText>{timestamp}</StrongText>
-      </div>
-      <Button
-        onClick={onRemove}
-        isIconOnly
-        icon={{iconName: 'xmark'}}
-        size="s"
-        className={moduleStyles.removeStatusUpdate}
-      />
-    </>
+    <ChatNotificationMessage
+      onRemove={onRemove}
+      content={
+        <>
+          <span className={moduleStyles.modelUpdateMessageTextContainer}>
+            <StrongText>{chatMessageText}</StrongText> has been updated
+          </span>
+          <StrongText>{timestamp}</StrongText>
+        </>
+      }
+      iconName="check"
+      iconClass={moduleStyles.check}
+      containerClass={moduleStyles.modelUpdateContainer}
+    />
   );
 };
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
   const dispatch = useAppDispatch();
 
-  const botTitle =
-    useSelector(
-      (state: {lab: LabState}) =>
-        (state.lab.levelProperties as AichatLevelProperties | undefined)
-          ?.botTitle
-    ) || 'EduBot';
-
   return (
     <div id={`ChatMessage id: ${message.id}`}>
-      {isUser(message.role) && (
-        <div className={moduleStyles.userMessageContainer}>
-          {displayUserMessage(message.status, message.chatMessageText)}
-        </div>
-      )}
+      {isUser(message.role) &&
+        displayUserMessage(message.status, message.chatMessageText)}
 
       {isAssistant(message.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
-          <Typography semanticTag="h5" visualAppearance="heading-xs">
-            {botTitle} ({message.role})
-          </Typography>
+          <img src={aiBotIcon} alt="An icon depicting a robot" />
           {displayAssistantMessage(message.status, message.chatMessageText)}
         </div>
       )}
 
-      {isModelUpdate(message.role) && (
-        <div className={moduleStyles.modelUpdateMessageContainer}>
-          {displayModelUpdateMessage(message, () =>
-            dispatch(removeChatMessage(message.id))
-          )}
-        </div>
-      )}
+      {isModelUpdate(message.role) &&
+        displayModelUpdateMessage(message, () =>
+          dispatch(removeModelUpdateMessage(message.id))
+        )}
     </div>
   );
 };

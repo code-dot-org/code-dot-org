@@ -1,8 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from './locale';
+
 import CraftDialog from './CraftDialog';
+import i18n from './locale';
 
 /**
  * Dialog for selecting a player in Minecraft tutorials.
