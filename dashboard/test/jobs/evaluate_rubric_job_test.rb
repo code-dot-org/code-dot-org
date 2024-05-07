@@ -256,12 +256,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       anything
     )
 
-    # ensure RetryOnTimeout metric is logged
+    # ensure TimeoutError metric is logged
     Cdo::Metrics.expects(:push).with(
       EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
-        includes_metrics(RetryOnTimeout: 1),
-        includes_dimensions(:RetryOnTimeout, Environment: CDO.rack_env)
+        includes_metrics(TimeoutError: 1),
+        includes_dimensions(:TimeoutError, Environment: CDO.rack_env)
       )
     )
 
@@ -309,12 +309,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       anything
     )
 
-    # ensure RetryOnServiceUnavailable metric is logged
+    # ensure ServiceUnavailable metric is logged
     Cdo::Metrics.expects(:push).with(
       EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
-        includes_metrics(RetryOnServiceUnavailable: 1),
-        includes_dimensions(:RetryOnServiceUnavailable, Environment: CDO.rack_env, Agent: 'openai')
+        includes_metrics(ServiceUnavailable: 1),
+        includes_dimensions(:ServiceUnavailable, Environment: CDO.rack_env, Agent: 'openai')
       )
     )
 
@@ -362,12 +362,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       anything
     )
 
-    # ensure RetryOnGatewayTimeout metric is logged
+    # ensure GatewayTimeout metric is logged
     Cdo::Metrics.expects(:push).with(
       EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
-        includes_metrics(RetryOnGatewayTimeout: 1),
-        includes_dimensions(:RetryOnGatewayTimeout, Environment: CDO.rack_env, Agent: 'openai')
+        includes_metrics(GatewayTimeout: 1),
+        includes_dimensions(:GatewayTimeout, Environment: CDO.rack_env, Agent: 'openai')
       )
     )
 

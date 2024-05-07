@@ -251,7 +251,7 @@ class EvaluateRubricJob < ApplicationJob
 
   # Retry just once on a timeout. It is likely to timeout again.
   retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
-    log_metric(metric_name: :RetryOnTimeout)
+    log_metric(metric_name: :TimeoutError)
     log_to_firehose(job: job, error: error, event_name: 'retry-on-timeout')
   end
 
@@ -261,7 +261,7 @@ class EvaluateRubricJob < ApplicationJob
   # when openai returns 500. 'exponentially_longer' waits 3s, 18s, and then 83s.
   retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: RETRIES_ON_SERVICE_UNAVAILABLE do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
-    log_metric(metric_name: :RetryOnServiceUnavailable, agent: agent)
+    log_metric(metric_name: :ServiceUnavailable, agent: agent)
     log_to_firehose(job: job, error: error, event_name: 'retry-on-503', agent: agent)
   end
 
@@ -271,7 +271,7 @@ class EvaluateRubricJob < ApplicationJob
   # when openai request times out. 'exponentially_longer' waits 3s, 18s, and then 83s.
   retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: RETRIES_ON_GATEWAY_TIMEOUT do |job, error|
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
-    log_metric(metric_name: :RetryOnGatewayTimeout, agent: agent)
+    log_metric(metric_name: :GatewayTimeout, agent: agent)
     log_to_firehose(job: job, error: error, event_name: 'retry-on-504', agent: agent)
   end
 
