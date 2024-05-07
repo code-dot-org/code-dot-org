@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-05-06T18:05:30.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Argument Chatbot\r\n\r\nThis chatbot is designed to make an argument for a given topic. Let's try to adjust the temperature so the chatbot works as expected.\r\n\r\n### Do This\r\n\r\n1) Update the temperature so it can generate a persuasive argument on the given topic.\r\n    - **Remember to press the `Update`(#7435b2) button each time you change the temperature!**\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the `Continue`(#7435b2) button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Dogs are better than cats\r\n* recycling is good for the planet\r\n* A hot dog is a sandwich\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "You are a chatbot who will create arguments for the user. They will supply a statement and you will supply an argument to defend that position.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-06T18:05:30.412+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-template\"},{\"changed_at\":\"2024-05-06 23:52:43 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

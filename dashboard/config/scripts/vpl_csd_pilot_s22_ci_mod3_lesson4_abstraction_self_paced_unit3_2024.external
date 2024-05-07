@@ -5,17 +5,21 @@ description 'description here'
 markdown <<MARKDOWN
 # Abstraction
 
-> ##### **Abstraction** - a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-##### **Abstraction** is a major theme in Chapter 2 of the Interactive Animations and Games unit. Students will learn that complex behavior can be represented in simpler ways to make it easier to write and reason about code. 
+## Key Term
+#### <b>Abstraction</b> - a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+</p></div>
 
 ## Velocity
 
-##### Early in the Interactive Animations and Games unit, students are introduced to the counter pattern that can be used to move sprites across the screen. In Chapter 2, students learn how to use the velocity blocks to simplify the code for moving a sprite across the screen. 
+#### Early in the Interactive Animations and Games unit, students are introduced to the counter pattern that can be used to move sprites across the screen. In Chapter 2, students learn how to use the velocity blocks to simplify the code for moving a sprite across the screen. 
 
+<br>
 <img src="https://images.code.org/9dce89c2503d49ac6cacda2209d57f42-image-1648672793597.56.51 PM.png" style="padding-left: 200px; height: 150px; clear: both; margin: 0 20px 20px 0;" alt="A screenshot showing three lines of code that create a fish sprite and assign it an image and velocity.">
+<br>
 
-##### This marks a shift in how new blocks are introduced. Whereas previously blocks were presented as enabling completely new behaviors, they are now presented as simplifying code students could have written with the blocks previously available. As students continue through the unit, they will see how this method of managing complexity allows them to produce more interesting sprite behaviors.
+#### This marks a shift in how new blocks are introduced. Whereas previously blocks were presented as enabling completely new behaviors, they are now presented as simplifying code students could have written with the blocks previously available. As students continue through the unit, they will see how this method of managing complexity allows them to produce more interesting sprite behaviors.
 
 
 MARKDOWN
