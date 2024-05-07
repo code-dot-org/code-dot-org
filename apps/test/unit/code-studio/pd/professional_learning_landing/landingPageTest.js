@@ -87,8 +87,6 @@ describe('LandingPage', () => {
     screen.getByTestId('enrolled-workshops-loader');
     expect(screen.queryByText(i18n.plLandingSelfPacedProgressHeading())).to.not
       .exist;
-    expect(screen.queryByText('Online Professional Learning Courses')).to.not
-      .exist;
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
@@ -99,7 +97,6 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingStartSurvey());
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    screen.getByText('Online Professional Learning Courses');
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
@@ -110,7 +107,6 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingStartSurvey());
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    screen.getByText('Online Professional Learning Courses');
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
@@ -124,7 +120,6 @@ describe('LandingPage', () => {
     expect(screen.queryByText(i18n.plLandingStartSurvey())).to.not.exist;
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    screen.getByText('Online Professional Learning Courses');
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
@@ -292,7 +287,9 @@ describe('LandingPage', () => {
     renderDefault({
       userPermissions: ['universal_instructor'],
     });
-    fireEvent.click(screen.getByText(i18n.plLandingTabInstructorCenter()));
+    fireEvent.click(
+      screen.getAllByText(i18n.plLandingTabInstructorCenter())[0]
+    );
 
     // Instructor Professional Learning sections table
     screen.getByText(i18n.plSectionsInstructorTitle());
@@ -330,7 +327,7 @@ describe('LandingPage', () => {
       workshopsAsOrganizer: [TEST_WORKSHOP],
     });
     fireEvent.click(
-      screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter())
+      screen.getAllByText(i18n.plLandingTabWorkshopOrganizerCenter())[0]
     );
 
     // Workshop Organizer Resources
