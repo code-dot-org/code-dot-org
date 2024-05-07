@@ -225,11 +225,6 @@ Style/GlobalVars:
 Style/HashLikeCase:
   Enabled: false
 
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Style/HashTransformKeys:
-  Enabled: false
-
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: AllowedMethods.
