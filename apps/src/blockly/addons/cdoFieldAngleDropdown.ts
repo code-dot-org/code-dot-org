@@ -1,5 +1,6 @@
 import {FieldAngle} from '@blockly/field-angle';
 import {MenuOption} from 'blockly';
+
 import {CLOCKWISE_TURN_DIRECTION} from '../constants';
 
 interface AngleDropdownOptions {
