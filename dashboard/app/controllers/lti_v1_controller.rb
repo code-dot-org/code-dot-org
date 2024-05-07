@@ -196,6 +196,9 @@ class LtiV1Controller < ApplicationController
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         PartialRegistration.persist_attributes(session, user)
         session[:user_return_to] = destination_url
+        if DCDO.get('lti_account_linking_enabled', false)
+          redirect_to '/lti/v1/users/link_existing_account' and return
+        end
         redirect_to new_user_registration_url
       end
     else

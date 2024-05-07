@@ -1,0 +1,23 @@
+module Services
+  module Lti
+    class AccountLinker < Services::Base
+      def initialize(user:, session:)
+        @user = user
+        @session = session
+      end
+
+      def call
+        rehydrated_user = ::User.new_with_session(ActionController::Parameters.new, @session)
+        auth_option = rehydrated_user.authentication_options.first
+        ActiveRecord::Base.transaction do
+          @user.authentication_options << auth_option
+          Services::Lti.create_lti_user_identity(@user)
+          if @user.user_type == ::User::TYPE_TEACHER
+            @user.lti_roster_sync_enabled = true
+          end
+          PartialRegistration.delete(@session)
+        end
+      end
+    end
+  end
+end

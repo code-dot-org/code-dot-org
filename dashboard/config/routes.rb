@@ -617,6 +617,12 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
+        resources :users, only: [] do
+          collection do
+            get :link_existing_account
+            post :link_email
+          end
+        end
       end
     end
 
