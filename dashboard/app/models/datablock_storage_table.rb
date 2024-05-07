@@ -238,7 +238,7 @@ class DatablockStorageTable < ApplicationRecord
 
     # import_csv should overwrite existing data:
     records.delete_all
-    records.columns = ['id']
+    self.columns = ['id']
 
     create_records(new_records)
   rescue CSV::MalformedCSVError => exception
