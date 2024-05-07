@@ -69,8 +69,6 @@ var header = {};
  *   lessonExtras enabled for this script
  * @param {boolean} isLessonExtras Boolean indicating we are not on a script
  *   level and therefore are on lesson extras
- * @param {number} currentSublevelPosition The position of the current sublevel
- *   if we are on a sublevel
  */
 header.build = function (
   scriptData,

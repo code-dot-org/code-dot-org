@@ -337,7 +337,8 @@ function initializeStoreWithProgress(
   isFullProgress,
   saveAnswersBeforeNavigation = false,
   isLessonExtras = false,
-  currentPageNumber
+  currentPageNumber,
+  displayName
 ) {
   store.dispatch(
     initProgress({
