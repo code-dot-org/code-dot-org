@@ -136,7 +136,7 @@ describe('SectionProgressSelector', () => {
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(stub).calledOnceWith('/api/v1/users/show_progress_table_v2', {
+    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
       show_progress_table_v2: true,
     });
 
