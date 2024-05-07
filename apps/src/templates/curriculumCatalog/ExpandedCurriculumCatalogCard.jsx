@@ -277,7 +277,9 @@ const ExpandedCurriculumCatalogCard = ({
                   <Button
                     color={Button.ButtonColor.brandSecondaryDefault}
                     type="button"
-                    onClick={() => assignButtonOnClick('expanded-card')}
+                    onClick={() =>
+                      assignButtonOnClick('expanded-card', courseKey)
+                    }
                     aria-label={assignButtonDescription}
                     text={i18n.assignToClassSections()}
                     className={centererStyle.buttonFlex}
