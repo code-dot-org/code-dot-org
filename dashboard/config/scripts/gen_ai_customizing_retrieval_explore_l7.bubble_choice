@@ -1,0 +1,14 @@
+name 'gen-ai-customizing-retrieval-explore-L7'
+editor_experiment ''
+display_name 'Bubble Choice: All the Choices'
+description 'Try These Levels!'
+
+sublevels
+level 'gen-ai-customizing-retrieval-explore-L7A'
+level 'gen-ai-customizing-retrieval-explore-L7B'
+level 'gen-ai-customizing-retrieval-explore-L7C'
+level 'gen-ai-customizing-retrieval-explore-L7D'
+
+markdown <<MARKDOWN
+[Use the description field above instead of these]
+MARKDOWN

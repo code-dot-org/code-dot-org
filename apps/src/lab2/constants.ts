@@ -23,3 +23,5 @@ export enum PERMISSIONS {
   // Add more permissions as needed.
   LEVELBUILDER = 'levelbuilder',
 }
+
+export const START_SOURCES = 'start_sources';

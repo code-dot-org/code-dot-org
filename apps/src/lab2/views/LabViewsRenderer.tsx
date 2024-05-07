@@ -90,7 +90,7 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
         default: PythonlabView,
       }))
     ),
-    theme: Theme.LIGHT,
+    theme: Theme.DARK,
   },
   panels: {
     backgroundMode: false,
@@ -99,7 +99,7 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   weblab2: {
     backgroundMode: false,
     node: <Weblab2View />,
-    theme: Theme.LIGHT,
+    theme: Theme.DARK,
   },
 };
 

@@ -4,10 +4,11 @@ import './styles/Weblab2View.css';
 
 import {Config} from './Config';
 
-import {CDOIDE} from '@cdoide/CDOIDE';
-import {ConfigType, ProjectType} from '@cdoide/types';
+import {Codebridge} from '@codebridge/Codebridge';
+import {ConfigType, ProjectType} from '@codebridge/types';
+import {useInitialSources} from '@codebridge/hooks';
 
-import CDOEditor from './CDOIDE/CenterPane/Editor';
+import {Editor as CDOEditor} from '@codebridge/Editor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -15,24 +16,34 @@ import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import {css} from '@codemirror/lang-css';
 
-const instructions = `Add html pages and preview them in the right pane.
-
-Add css pages (and link them to your html).
-
-Use the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)`;
-
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
 };
 
+const DefaultEditorComponent = () =>
+  CDOEditor(weblabLangMapping, ['html', 'css']);
+
+const horizontalLayout = {
+  gridLayoutRows: '32px 300px auto',
+  gridLayoutColumns: '300px auto auto',
+  gridLayout: `    "instructions file-tabs preview-container"
+      "instructions editor preview-container"
+      "file-browser editor preview-container"`,
+};
+
+const verticalLayout = {
+  gridLayoutRows: '32px 300px auto auto',
+  gridLayoutColumns: '300px auto',
+  gridLayout: `    "instructions file-tabs file-tabs"
+      "instructions editor editor"
+      "file-browser editor editor"
+      "file-browser preview-container preview-container"`,
+};
+
 const defaultConfig: ConfigType = {
-  //showSideBar: true,
-  // showLeftNav: false,
-  // showEditor: false,
-  // showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: () => CDOEditor(weblabLangMapping, ['html', 'css']),
+  EditorComponent: DefaultEditorComponent,
   // editableFileTypes: ["html"],
   // previewFileTypes: ["html"],
   leftNav: [
@@ -61,14 +72,7 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions,
-  //editableFileTypes: ["html", "css"],
-  //previewFileTypes: ["html"],
-  /* PreviewComponents: {
-    html: () => <div>I am previewing HTML</div>,
-  }, */
-  //blankEmptyEditor: true,
-  //EmptyEditorComponent: () => <div>Nothing is open.</div>,
+  ...horizontalLayout,
 };
 
 const defaultProject: ProjectType = {
@@ -150,8 +154,12 @@ const Weblab2View = () => {
   const [currentProject, setCurrentProject] =
     useState<ProjectType>(defaultProject);
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [showConfig, setShowConfig] = useState<'project' | 'config' | ''>('');
-  const initialSources = useAppSelector(state => state.lab.initialSources);
+  const [showConfig, setShowConfig] = useState<
+    'project' | 'config' | 'layout' | ''
+  >('');
+  const initialSources = useInitialSources({
+    source: defaultProject,
+  });
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const setProject = useMemo(
@@ -174,6 +182,12 @@ const Weblab2View = () => {
     );
   }, [channelId, initialSources]);
 
+  const configKey = {
+    project: currentProject,
+    config: config,
+    layout: config,
+  };
+
   return (
     <div className="app-wrapper">
       <div className="app-wrapper-nav">
@@ -183,33 +197,51 @@ const Weblab2View = () => {
         <button type="button" onClick={() => setShowConfig('config')}>
           Edit config
         </button>
+        <button type="button" onClick={() => setShowConfig('layout')}>
+          Edit layout
+        </button>
+        <button
+          type="button"
+          onClick={() => setConfig({...config, ...horizontalLayout})}
+        >
+          Use horizontal layout
+        </button>
+        <button
+          type="button"
+          onClick={() => setConfig({...config, ...verticalLayout})}
+        >
+          Use vertical layout
+        </button>
       </div>
       <div className="app-ide">
-        <CDOIDE
+        <Codebridge
           project={currentProject}
           config={config}
           setProject={setProject}
           setConfig={setConfig}
         />
+
+        {showConfig && (
+          <Config
+            config={configKey[showConfig]}
+            setConfig={(
+              configName: string,
+              newConfig: ProjectType | ConfigType | string
+            ) => {
+              if (configName === 'project') {
+                setProject(newConfig as ProjectType);
+              } else if (configName === 'config' || configName === 'layout') {
+                (newConfig as ConfigType).EditorComponent =
+                  DefaultEditorComponent;
+                setConfig(newConfig as ConfigType);
+              }
+              setShowConfig('');
+            }}
+            cancelConfig={() => setShowConfig('')}
+            configName={showConfig}
+          />
+        )}
       </div>
-      {showConfig && (
-        <Config
-          config={showConfig === 'project' ? currentProject : config}
-          setConfig={(
-            configName: string,
-            newConfig: ProjectType | ConfigType
-          ) => {
-            if (configName === 'project') {
-              setProject(newConfig as ProjectType);
-            } else if (configName === 'config') {
-              setConfig(newConfig as ConfigType);
-            }
-            setShowConfig('');
-          }}
-          cancelConfig={() => setShowConfig('')}
-          configName={showConfig}
-        />
-      )}
     </div>
   );
 };
