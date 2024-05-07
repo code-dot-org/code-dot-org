@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ProgressLesson from './ProgressLesson';
 import {groupedLessonsType} from './progressTypes';
 

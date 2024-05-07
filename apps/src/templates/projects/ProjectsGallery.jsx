@@ -1,15 +1,18 @@
-import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import color from '../../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import {selectGallery} from './projectsRedux';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Galleries} from './projectConstants';
-import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
-import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
-import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
+import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
+import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+
+import {Galleries} from './projectConstants';
+import {selectGallery} from './projectsRedux';
 
 const galleryTabs = [
   {

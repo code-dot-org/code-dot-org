@@ -1,21 +1,24 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import React, {useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
-import style from './rubrics.module.scss';
-import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
-import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
-import taIcon from '@cdo/static/ai-bot-tag-TA.png';
-import RubricContainer from './RubricContainer';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
+import taIcon from '@cdo/static/ai-bot-tag-TA.png';
+import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
+
+import RubricContainer from './RubricContainer';
 import {
   rubricShape,
   reportingDataShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import classNames from 'classnames';
+
+import style from './rubrics.module.scss';
 
 function RubricFloatingActionButton({
   rubric,

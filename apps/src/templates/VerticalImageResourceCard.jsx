@@ -1,8 +1,11 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import React, {Component} from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+
 import color from '../util/color';
+
 import Button from './Button';
 
 /**

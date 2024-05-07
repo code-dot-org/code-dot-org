@@ -1,14 +1,17 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import Button from '../Button';
-import i18n from '@cdo/locale';
-import {getStore} from '../../redux';
-import {isEmail} from '@cdo/apps/util/formatValidation';
 import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import {isEmail} from '@cdo/apps/util/formatValidation';
+import i18n from '@cdo/locale';
+
+import {getStore} from '../../redux';
 import * as color from '../../util/color';
-import headerImage from './images/lockout_penguin.png';
-import headerThanksImage from './images/dancing_penguin.png';
 import {hashString} from '../../utils';
+import Button from '../Button';
+
+import headerThanksImage from './images/dancing_penguin.png';
+import headerImage from './images/lockout_penguin.png';
 
 /**
  * This panel represents the page that is displayed to accounts that are being

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import CreativeCommons from '@cdo/static/creative-commons-by-nc-sa.png';
