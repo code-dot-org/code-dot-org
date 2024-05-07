@@ -106,14 +106,16 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
   const columns = getColumns();
   return (
     <div>
-      <Table.Provider
-        columns={columns}
-        style={tableLayoutStyles.table}
-        id="uitest-manage-students-table"
-      >
-        <Table.Header />
-        <Table.Body rows={studentData} rowKey="id" />
-      </Table.Provider>
+      {studentData && (
+        <Table.Provider
+          columns={columns}
+          style={tableLayoutStyles.table}
+          data-testid="uitest-age-gated-students-table"
+        >
+          <Table.Header />
+          <Table.Body rows={studentData} rowKey="id" />
+        </Table.Provider>
+      )}
     </div>
   );
 };

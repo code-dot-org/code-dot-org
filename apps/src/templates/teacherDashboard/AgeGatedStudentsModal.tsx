@@ -35,7 +35,10 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
       useUpdatedStyles={true}
       fixedWidth={800}
     >
-      <div className={styles.modalContainer} id="modal">
+      <div
+        className={styles.modalContainer}
+        data-testid="age-gated-students-modal"
+      >
         <div>
           <h2 className={styles.modalHeader}>
             {i18n.childAccountPolicy_studentParentalConsentStatus()}
