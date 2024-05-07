@@ -96,7 +96,6 @@ en:
       speed: speed
       startX: startX
       startY: startY
-      stopped-left: stopped-left
       time: time
       type: type
       variable: variable

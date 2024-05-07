@@ -736,6 +736,10 @@ module LevelsHelper
     raise ArgumentError.new("#{@level} is not a Lab2 level") unless @level.uses_lab2?
     app_options = {channel: view_options[:channel], level_id: @level.id}
     level_options = level_view_options(@level.id)
+    # Add edit_blocks to app_options if it exists in level_options
+    if level_options[:edit_blocks]
+      app_options[:edit_blocks] = level_options[:edit_blocks]
+    end
     app_options[:share] = level_options[:share] if level_options[:share]
     app_options.camelize_keys
   end

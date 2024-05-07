@@ -80,6 +80,7 @@ const DIRECTION_VALUES = [
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
   var skin = blockInstallOptions.skin;
 
   var generator = blockly.getGenerator();
