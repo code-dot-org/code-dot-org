@@ -219,6 +219,8 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       case TimeFilter.Last7Days:
         return messageDate.isAfter(moment().subtract(7, 'days'));
       case TimeFilter.Last30Days:
+        // For now, the last 30 days and all-time filters are equivalent because of a
+        // cron job that deletes chat messages older than 30 days.
         return messageDate.isAfter(moment().subtract(30, 'days'));
       default:
         return true;
