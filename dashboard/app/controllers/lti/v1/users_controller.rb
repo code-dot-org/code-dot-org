@@ -3,11 +3,15 @@ module Lti
     class UsersController < ApplicationController
       before_action :lti_account_linking_enabled?
 
+      # GET /lti/v1/users/new
+      def new_user_landing
+        render 'lti/v1/new_user_landing_page'
+      end
+
       # GET /lti/v1/users/link_existing_account
       def link_existing_account
-        user_params = params[:user] || ActionController::Parameters.new
-        @user = User.new_with_session(user_params.permit(:user_type), session)
-        render 'lti/v1/link_existing_account' and return
+        @user = User.new_with_session(ActionController::Parameters.new, session)
+        render 'lti/v1/link_existing_account'
       end
 
       # POST /lti/v1/users/link_email
@@ -16,8 +20,6 @@ module Lti
         params.require([:email, :password])
         existing_user = User.find_by_email_or_hashed_email(params[:email])
         if existing_user&.valid_password?(params[:password])
-          user_params = params[:user] || ActionController::Parameters.new
-          user_params[:user_type] ||= session[:default_sign_up_user_type]
           Services::Lti::AccountLinker.call(user: existing_user, session: session)
           sign_in existing_user
           redirect_to home_path

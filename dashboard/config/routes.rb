@@ -619,6 +619,7 @@ Dashboard::Application.routes.draw do
         end
         resources :users, only: [] do
           collection do
+            get 'new', to: 'users#new_user_landing'
             get :link_existing_account
             post :link_email
           end
