@@ -64,7 +64,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:29:50.375+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab_2023\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab_2023\"},{\"changed_at\":\"2024-04-12 23:02:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-06 23:43:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:29:50.375+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab_2023\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab_2023\"},{\"changed_at\":\"2024-04-12 23:02:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-06 23:43:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-07 17:26:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -593,8 +593,8 @@
             </value>
           </block>
           <block type="gamelab_randomColor" id="QtKa|pZeKfGpnCNqh;cA"/>
-          <block type="gamelab_playSound" id="H)pDKK{9?:}5{x|[oF96">
-            <field name="SOUND">sound://category_digital/ping.mp3</field>
+          <block type="gamelab_playSoundOptions" id="HSSFW4)#A@+@K*^^T0tn">
+            <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
           </block>
           <block type="gamelab_printText" id="HCq?PI#dD~mPm[|zDk-s">
             <value name="TEXT">
