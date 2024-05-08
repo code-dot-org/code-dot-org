@@ -7,8 +7,13 @@ import {connect, useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
-import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {EnrolledWorkshops, EnrolledWorkshopsTable} from './EnrolledWorkshops';
+import {
+  COURSE_CSF,
+  COURSE_CSD,
+  COURSE_CSP,
+  COURSE_CSA,
+} from '../workshop_dashboard/workshopConstants';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
@@ -18,6 +23,7 @@ import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import style from './landingPage.module.scss';
 import './tableStyles.scss';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
@@ -82,6 +88,7 @@ function LandingPage({
   userPermissions,
   joinedStudentSections,
   joinedPlSections,
+  coursesAsFacilitator,
   plSectionIds,
   hiddenPlSectionIds,
 }) {
@@ -199,6 +206,106 @@ function LandingPage({
     );
   };
 
+  const RenderFacilitatorResources = () => {
+    let allResources = [
+      {
+        headingText: i18n.plSectionsWorkshopTitle(),
+        descriptionText: i18n.plSectionsWorkshopDesc(),
+        buttonText: i18n.plSectionsWorkshopButton(),
+        buttonUrl: '/pd/workshop_dashboard',
+      },
+    ];
+
+    let landingPageCourses = [];
+    if (coursesAsFacilitator.includes(COURSE_CSF)) {
+      landingPageCourses.push('CSF');
+    }
+    if (coursesAsFacilitator.includes(COURSE_CSD)) {
+      landingPageCourses.push('CSD');
+    }
+    if (coursesAsFacilitator.includes(COURSE_CSP)) {
+      landingPageCourses.push('CSP');
+    }
+    if (coursesAsFacilitator.includes(COURSE_CSA)) {
+      landingPageCourses.push('CSA');
+    }
+    landingPageCourses.forEach(coursePage => {
+      allResources.push({
+        headingText: i18n.plSectionsFacilitatorResourcesTitle({
+          course_name: coursePage,
+        }),
+        descriptionText: i18n.plSectionsFacilitatorResourcesDesc({
+          course_name: coursePage,
+        }),
+        buttonText: i18n.plSectionsFacilitatorResourcesButton({
+          course_name: coursePage,
+        }),
+        buttonUrl: pegasus(`/educate/facilitator-landing/${coursePage}`),
+      });
+    });
+
+    if (deeperLearningCourseData?.length >= 1) {
+      allResources.push({
+        headingText: i18n.plSectionsOnboardingTitle(),
+        descriptionText: i18n.plSectionsOnboardingDesc(),
+        buttonText: i18n.plSectionsOnboardingButton(),
+        buttonUrl: '/deeper-learning',
+      });
+    }
+
+    return (
+      <>
+        {allResources.map((resource, index) => (
+          <BorderedCallToAction
+            key={index}
+            headingText={resource.headingText}
+            descriptionText={resource.descriptionText}
+            buttonText={resource.buttonText}
+            buttonUrl={resource.buttonUrl}
+            solidBorder={true}
+          />
+        ))}
+      </>
+    );
+  };
+
+  const RenderRegionalPartnerResources = () => {
+    const resources = [
+      {
+        headingText: i18n.plSectionsRegionalPartnerApplicationTitle(),
+        descriptionText: i18n.plSectionsRegionalPartnerApplicationDesc(),
+        buttonText: i18n.plSectionsRegionalPartnerApplicationButton(),
+        buttonUrl: '/pd/application_dashboard',
+      },
+      {
+        headingText: i18n.plSectionsWorkshopTitle(),
+        descriptionText: i18n.plSectionsWorkshopDesc(),
+        buttonText: i18n.plSectionsWorkshopButton(),
+        buttonUrl: '/pd/workshop_dashboard',
+      },
+      {
+        headingText: i18n.plSectionsRegionalPartnerPlaybookTitle(),
+        descriptionText: i18n.plSectionsRegionalPartnerPlaybookDesc(),
+        buttonText: i18n.plSectionsRegionalPartnerPlaybookButton(),
+        buttonUrl: pegasus('/educate/regional-partner/playbook'),
+      },
+    ];
+    return (
+      <>
+        {resources.map((resource, index) => (
+          <BorderedCallToAction
+            key={index}
+            headingText={resource.headingText}
+            descriptionText={resource.descriptionText}
+            buttonText={resource.buttonText}
+            buttonUrl={resource.buttonUrl}
+            solidBorder={true}
+          />
+        ))}
+      </>
+    );
+  };
+
   const RenderMyPlTab = () => {
     return (
       <>
@@ -212,14 +319,6 @@ function LandingPage({
           isPlSections={true}
         />
         <EnrolledWorkshops />
-        {deeperLearningCourseData?.length >= 1 && (
-          <section>
-            <Heading2>Online Professional Learning Courses</Heading2>
-            <ProfessionalLearningCourseProgress
-              deeperLearningCourseData={deeperLearningCourseData}
-            />
-          </section>
-        )}
         <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
           {RenderStaticRecommendedPL()}
@@ -232,6 +331,10 @@ function LandingPage({
     return (
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        <section>
+          <Heading2>{i18n.plSectionsFacilitatorResources()}</Heading2>
+          {RenderFacilitatorResources()}
+        </section>
         {RenderOwnedPlSections()}
         {workshopsAsFacilitator?.length > 0 && (
           <EnrolledWorkshopsTable
@@ -251,6 +354,10 @@ function LandingPage({
     return (
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        <section>
+          <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
+          {RenderRegionalPartnerResources()}
+        </section>
         {workshopsAsRegionalPartner?.length > 0 && (
           <EnrolledWorkshopsTable
             workshops={workshopsAsRegionalPartner}
@@ -265,6 +372,17 @@ function LandingPage({
     return (
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        <section>
+          <Heading2>{i18n.plSectionsWorkshopResources()}</Heading2>
+          <BorderedCallToAction
+            key={4}
+            headingText={i18n.plSectionsWorkshopTitle()}
+            descriptionText={i18n.plSectionsWorkshopDesc()}
+            buttonText={i18n.plSectionsWorkshopButton()}
+            buttonUrl={'/pd/workshop_dashboard'}
+            solidBorder={true}
+          />
+        </section>
         {workshopsAsOrganizer?.length > 0 && (
           <EnrolledWorkshopsTable
             workshops={workshopsAsOrganizer}
@@ -324,6 +442,7 @@ LandingPage.propTypes = {
   userPermissions: PropTypes.arrayOf(PropTypes.string),
   joinedStudentSections: shapes.sections,
   joinedPlSections: shapes.sections,
+  coursesAsFacilitator: PropTypes.arrayOf(PropTypes.string),
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),
 };

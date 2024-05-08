@@ -1,21 +1,5 @@
 @import 'color';
 
-@mixin slider-thumb {
-  height: 20px;
-  width: 4px;
-  border-radius: 1px;
-  background: white;
-  box-shadow: 1px 1px $neutral_dark80;
-}
-
-@mixin slider-track {
-  width: 100%;
-  height: 6px;
-  background: $light_gray_700;   
-  border-radius: 10px;
-  border: 0.5px solid $neutral_dark;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -25,7 +9,6 @@
   width: 100%;
   background-color: $light_black;
   border-radius: 4px;
-
 
   .cardContainer {
     max-width: 360px;
@@ -54,6 +37,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+
       .infoText {
         color: $light_white;
         margin-bottom: 0;
@@ -74,33 +58,6 @@
       .playViewButton {
         border-color: transparent;
       }
-
-      input[type="range"] {
-        -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-        width: 100%; /* Specific width is required for Firefox. */
-        background: transparent; /* Otherwise white in Chrome */
-      }
-
-      input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-
-        @include slider-thumb;
-        margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox it is automatic */
-      }
-
-      /* Firefox */
-      input[type="range"]::-moz-range-thumb {
-        @include slider-thumb;
-      }
-
-      input[type="range"]::-webkit-slider-runnable-track{
-        @include slider-track;
-      }
-
-      /* Firefox */
-      input[type="range"]::-moz-range-track {
-        @include slider-track;
-      }    
     }
 
     .buttonsSection {

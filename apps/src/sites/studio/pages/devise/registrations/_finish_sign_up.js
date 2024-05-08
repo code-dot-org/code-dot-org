@@ -113,11 +113,21 @@ $(document).ready(() => {
     countryInputEl.val(schoolData.countryCode);
 
     // Clear school_id if the searched school is not found.
+    // New school search flow
+    const newSchoolIdEl = $(
+      'select[name="user[school_info_attributes][school_id]"]'
+    );
     if (
-      ['-1', NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
-        schoolData.ncesSchoolId
+      [NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
+        newSchoolIdEl.val()
       )
     ) {
+      newSchoolIdEl.val('');
+      // Clear out zip before saving as well
+      $('input[name="user[school_info_attributes][school_zip]"]').val('');
+    }
+    // Old school search flow
+    if (schoolData.ncesSchoolId === '-1') {
       const schoolIdEl = $(
         'input[name="user[school_info_attributes][school_id]"]'
       );

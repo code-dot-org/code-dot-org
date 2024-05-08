@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:41:05 UTC",
+    "serialized_at": "2024-05-02 19:18:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2333,6 +2333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q1_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2355,6 +2358,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q2_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2377,6 +2383,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q3_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2399,6 +2408,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L1 CFU Return2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2421,6 +2433,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Investigate Rock_2024"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2443,6 +2458,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Investigate Poetry App_2024"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2465,6 +2483,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L2 CSP CFU Param and Return_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2487,6 +2508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7_L03_Parameters and Return Practice_Level 1_2024"
+        ],
         "progression": "App Development Activity"
       },
       "bonus": false,
@@ -2509,6 +2533,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7_L03_Parameters and Return Practice_Level 2_2024"
+        ],
         "progression": "App Development Activity"
       },
       "bonus": false,
@@ -2531,6 +2558,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7_L03_Parameters and Return Practice_Level 3_2024"
+        ],
         "progression": "App Development Activity"
       },
       "bonus": false,
@@ -2553,6 +2583,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7_L03_Parameters and Return Practice_Level 4_2024"
+        ],
         "progression": "App Development Activity"
       },
       "bonus": false,
@@ -2575,6 +2608,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7_L03_Parameters and Return Practice_Level 5_2024"
+        ],
         "progression": "App Development Activity"
       },
       "bonus": false,
@@ -2597,6 +2633,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7_L03_Parameters and Return Practice_Level 6_2024"
+        ],
         "progression": "App Development Activity"
       },
       "bonus": false,
@@ -2619,6 +2658,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7_L03_Parameters and Return Practice_Level 7_2024"
+        ],
         "progression": "App Development Activity"
       },
       "bonus": false,
@@ -2641,6 +2683,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U73 CFU Param Return AP2022_2024"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2663,6 +2708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App_2024"
+        ],
         "progression": "Try the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -2685,6 +2733,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App Project_2024"
+        ],
         "progression": "Make the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -2707,6 +2758,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 L04 Exit Ticket_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2729,6 +2783,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 States App Investigation_2024"
+        ],
         "progression": "States App"
       },
       "bonus": false,
@@ -2751,6 +2808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 Pigify App Investigation_2024"
+        ],
         "progression": "Pigify App"
       },
       "bonus": false,
@@ -2773,6 +2833,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L6 CSP CFU Libraries_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2795,6 +2858,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 3_2024"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -2817,6 +2883,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 5_2024"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -2839,6 +2908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 2_2024"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -2861,6 +2933,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 1_2024"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -2883,6 +2958,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 4_2024"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -2905,6 +2983,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U77 CFU Libraries AP2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2927,6 +3008,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 1_2024"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -2949,6 +3033,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 2_2024"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -2971,6 +3058,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Test a Library_2024"
+        ],
         "progression": "Test a Classmate's Library"
       },
       "bonus": false,
@@ -2993,6 +3083,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 3_2024"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -3015,6 +3108,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp7_2024"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -3037,6 +3133,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 7 AP-Style Assessment 2022_2024"
+        ],
         "progression": "Unit 7 Exam"
       },
       "bonus": false,
@@ -3059,6 +3158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_2024"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,

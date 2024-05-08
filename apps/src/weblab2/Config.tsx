@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './styles/config.css';
 
-import {ProjectType, ConfigType} from '@cdoide/types';
+import {ProjectType, ConfigType} from '@codebridge/types';
 
 type BaseConfigProps = {configName: string; cancelConfig: () => void};
 

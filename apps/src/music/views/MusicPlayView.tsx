@@ -6,6 +6,7 @@ import commonI18n from '@cdo/locale';
 import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
 
 import moduleStyles from './music-play-view.module.scss';
+import ProgressSlider from './ProgressSlider';
 
 import musicI18n from '../locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -20,13 +21,11 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   setPlaying,
 }) => {
   const isPlaying = useAppSelector(state => state.music.isPlaying);
-  const progressSliderValue = useAppSelector(state => {
+  const percentPlayed = useAppSelector(state => {
     const {currentPlayheadPosition, lastMeasure} = state.music;
-    const value =
-      lastMeasure === 1
-        ? 0
-        : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
-    return value.toString();
+    return lastMeasure === 1
+      ? 0
+      : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
   });
 
   const projectName = useAppSelector(state => state.lab.channel?.name);
@@ -99,13 +98,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               type="secondary"
               className={moduleStyles.playViewButton}
             />
-            <input
-              type="range"
-              readOnly
-              value={progressSliderValue}
-              min="0"
-              max="100"
-            />
+            <ProgressSlider percentProgress={percentPlayed} />
           </div>
 
           <div className={moduleStyles.buttonsSection}>
