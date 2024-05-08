@@ -119,31 +119,35 @@ const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
   ];
 
   return (
-    <div className={style.interactionsElement}>
+    <div>
       {globalErrorMessage && (
         <div className={style.alert}>{globalErrorMessage}</div>
       )}
-      <SectionAccessToggle sectionId={sectionId} />
-      {aiTutorEnabledForSection ? (
-        isLoading ? (
-          <Spinner />
-        ) : (
-          <Table.Provider
-            columns={columns}
-            style={{...tableStyles.table, ...styleOverrides.table}}
-          >
-            <Table.Header />
-            <Table.Body
-              rows={students.map(student => ({
-                id: student.id,
-                name: student.name,
-                aiTutorAccessDenied: student.aiTutorAccessDenied,
-              }))}
-              rowKey="id"
-            />
-          </Table.Provider>
-        )
-      ) : null}
+      <div className={style.interactionsElement}>
+        <SectionAccessToggle sectionId={sectionId} />
+      </div>
+      <div className={style.interactionsElement}>
+        {aiTutorEnabledForSection ? (
+          isLoading ? (
+            <Spinner />
+          ) : (
+            <Table.Provider
+              columns={columns}
+              style={{...tableStyles.table, ...styleOverrides.table}}
+            >
+              <Table.Header />
+              <Table.Body
+                rows={students.map(student => ({
+                  id: student.id,
+                  name: student.name,
+                  aiTutorAccessDenied: student.aiTutorAccessDenied,
+                }))}
+                rowKey="id"
+              />
+            </Table.Provider>
+          )
+        ) : null}
+      </div>
     </div>
   );
 };
