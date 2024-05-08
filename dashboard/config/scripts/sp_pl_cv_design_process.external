@@ -1,0 +1,20 @@
+name 'sp-pl-CV_Design_Process'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Design Thinking Process
+
+#### The **Design Thinking Process** involves five steps that teams use to understand users, challenge assumptions, redefine problems, and create innovative solutions to prototype and test. This method fosters a **user-centric mindset** and encourages iterative learning, making it crucial for students as it enhances their problem-solving skills and adaptability.
+
+## Why use this process?
+
+#### By embracing this process, students learn to approach challenges creatively and develop solutions that are both effective and empathetic, preparing them for real-world scenarios where innovation is key.
+
+
+
+<img src="https://images.code.org/0afc2123a979a00ffffb0c1e864886e8-image-1714589343584.png" alt=" icons of each step of the design thinking process" width="700px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+MARKDOWN

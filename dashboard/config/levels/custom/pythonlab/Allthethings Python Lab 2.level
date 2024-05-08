@@ -6,7 +6,8 @@
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
-    "encrypted": "false"
+    "encrypted": "false",
+    "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code."
   },
   "audit_log": "[{\"changed_at\":\"2024-03-07T16:07:49.125-08:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"}]"
 }]]></config>

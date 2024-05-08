@@ -36,7 +36,6 @@ import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
-import userAgentParser from './code-studio/initApp/userAgentParser';
 import {
   KeyCodes,
   TestResults,
@@ -2938,13 +2937,11 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
   this.setStartBlocks_(config, true);
 
-  if (userAgentParser.isMobile() && userAgentParser.isSafari()) {
-    // Mobile Safari resize events fire too early, see:
-    // https://openradar.appspot.com/31725316
-    // Rerun the blockly resize handler after 500ms when clientWidth/Height
-    // should be correct
-    window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
-  }
+  // In some cases, resize events fire too early. For example, see:
+  // https://openradar.appspot.com/31725316
+  // Resize the Blockly workspace after 500ms when clientWidth/Height
+  // should be correct.
+  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
 };
 
 /**

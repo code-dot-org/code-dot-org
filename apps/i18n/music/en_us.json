@@ -52,6 +52,7 @@
   "blockly_toolboxCategorySimple": "Simple",
   "blockly_toolboxCategoryTracks": "Tracks",
   "blockly_toolboxCategoryVariables": "Variables",
+  "builtWithMusicLab": "Built with Music Lab",
   "control": "Control",
   "chordArpeggioUp": "Arpeggio Up",
   "chordArpeggioDown": "Arpeggio Down",
@@ -78,5 +79,13 @@
   "soundsFilterEffects": "Effects",
   "soundsFilterVocals": "Vocals",
   "packDialogTitle": "Choose a featured track",
-  "packDialogBody": "Level up your mix by adding sounds from a featured track."
+  "packDialogBody": "Level up your mix by adding sounds from a featured track.",
+  "effectsLabelsFull": "Full",
+  "effectsLabelsHigh": "High",
+  "effectsLabelsMedium": "Medium",
+  "effectsLabelsLow": "Low",
+  "effectsLabelsOff": "Off",
+  "effectsLabelsVolume": "Volume",
+  "effectsLabelsDelay": "Delay",
+  "effectsLabelsFilter": "Filter"
 }

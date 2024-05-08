@@ -10,7 +10,7 @@ class EvaluateRubricJob < ApplicationJob
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-25-confidence-exact/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-04-30-confidence-autogen-turbo/'.freeze
 
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
@@ -231,16 +231,19 @@ class EvaluateRubricJob < ApplicationJob
   RETRIES_ON_TIMEOUT = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
-    # Job arguments are always serializable, so we just pull out the hash
-    # and send it as context.
-    options = job.arguments.first
-
-    # Send it to honeybadger even though we are handling the error via retry
-    Honeybadger.notify(
-      error,
-      error_message: "Retrying rubric evaluation job due to timeout.",
-      context: options
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do
+    Cdo::Metrics.push(
+      AI_RUBRIC_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: :RetryOnTimeout,
+          value: 1,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ],
+          unit: 'Count'
+        }
+      ]
     )
   end
 

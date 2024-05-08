@@ -1,15 +1,16 @@
+import {
+  getNextFileId,
+  getNextFolderId,
+} from '@codebridge/codebridgeContext/utils';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
 import {PyodideInterface} from 'pyodide';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {
-  getNextFileId,
-  getNextFolderId,
-} from '@cdo/apps/weblab2/CDOIDE/cdoIDEContext/utils';
-import {DEFAULT_FOLDER_ID} from '@cdo/apps/weblab2/CDOIDE/constants';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
 
+import {HIDDEN_FOLDERS} from './constants';
 import {ALL_PATCHES} from './patches';
 
 export function applyPatches(originalCode: string) {
@@ -114,44 +115,46 @@ function updateAndDeleteSourceWithContents(
     const fileExtension = content.name.split('.').pop();
     const fullPath = currentPath + content.name;
     if (pyodide.FS.isFile(content.mode)) {
-      if (fileExtension === 'csv' || fileExtension === 'txt') {
-        const file = Object.values(source.files).find(
-          f => f.name === content.name && f.folderId === folderId
-        );
-        try {
-          const newContents = pyodide.FS.readFile(fullPath, {
-            encoding: 'utf8',
-          });
-          if (!file) {
-            const newFileId = getNextFileId(Object.values(source.files));
-            source.files[newFileId] = {
-              id: newFileId,
-              folderId,
-              name: content.name,
-              language: fileExtension,
-              contents: newContents,
-            };
-          } else {
-            file.contents = newContents;
-          }
-        } catch (e) {
-          console.warn(`could not read file ${content.name}, ${e}`);
+      const file = Object.values(source.files).find(
+        f => f.name === content.name && f.folderId === folderId
+      );
+      try {
+        const newContents = pyodide.FS.readFile(fullPath, {
+          encoding: 'utf8',
+        });
+        if (!file) {
+          const newFileId = getNextFileId(Object.values(source.files));
+          source.files[newFileId] = {
+            id: newFileId,
+            folderId,
+            name: content.name,
+            language: fileExtension || '',
+            contents: newContents,
+          };
+        } else {
+          file.contents = newContents;
         }
-      } else {
-        if (!Object.values(source.files).some(f => f.name === content.name)) {
-          sendMessage({
-            type: 'error',
-            message: `You cannot write a ${fileExtension} file in Python Lab`,
-            id: id,
-          });
-        }
+      } catch (e) {
+        sendMessage({
+          type: 'internal_error',
+          message: `Failed to read file ${fullPath}`,
+          id: id,
+        });
       }
       // Delete the file now that we have handled it.
-      pyodide.FS.unlink(fullPath);
-      // Do not create or iterate through folders that start with '.' as these are hidden folders.
+      try {
+        pyodide.FS.unlink(fullPath);
+      } catch (e) {
+        sendMessage({
+          type: 'internal_error',
+          message: `Failed to unlink ${fullPath}`,
+          id: id,
+        });
+      }
+      // Do not create or iterate through folders that should be hidden.
     } else if (
       pyodide.FS.isDir(content.mode) &&
-      !content.name.startsWith('.')
+      !HIDDEN_FOLDERS.includes(content.name)
     ) {
       const newPath = currentPath + content.name + '/';
       const existingFolder = Object.values(source.folders).find(
@@ -180,7 +183,15 @@ function updateAndDeleteSourceWithContents(
         sendMessage
       );
       // Now that we've handled the contents, delete the folder.
-      pyodide.FS.rmdir(newPath);
+      try {
+        pyodide.FS.rmdir(newPath);
+      } catch (e) {
+        sendMessage({
+          type: 'internal_error',
+          message: `Failed to remove directory ${newPath}`,
+          id: id,
+        });
+      }
     }
   });
 }

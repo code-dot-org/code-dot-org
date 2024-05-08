@@ -10,7 +10,7 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "self-paced-pl-csd-unit2",
-    "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2024"
   },
   "resources": [

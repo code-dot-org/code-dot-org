@@ -46,10 +46,12 @@ const toolboxBlocks = {
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2]: {
+    id: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2]: {
+    id: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
   },
