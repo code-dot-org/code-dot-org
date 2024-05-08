@@ -34,7 +34,7 @@ pyodideWorker.onmessage = event => {
   } else if (type === 'run_complete') {
     getStore().dispatch(appendSystemMessage('Program completed.'));
   } else if (type === 'updated_source') {
-    getStore().dispatch(setAndSaveProjectSource(message));
+    getStore().dispatch(setAndSaveProjectSource({source: message}));
     return;
   } else if (type === 'error') {
     getStore().dispatch(appendSystemMessage(`Error: ${message}`));
