@@ -6,7 +6,7 @@ import {Editor} from '@codebridge/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 import PythonConsole from './PythonConsole';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {useSource} from '../codebridge/hooks/useSource';
@@ -15,23 +15,25 @@ const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
 };
 
-const defaultProject: MultiFileSource = {
-  files: {
-    '0': {
-      id: '0',
-      name: MAIN_PYTHON_FILE,
-      language: 'py',
-      contents: 'print("Hello world!")',
-      folderId: '1',
-      active: true,
-      open: true,
+const defaultProject: ProjectSources = {
+  source: {
+    files: {
+      '0': {
+        id: '0',
+        name: MAIN_PYTHON_FILE,
+        language: 'py',
+        contents: 'print("Hello world!")',
+        folderId: '1',
+        active: true,
+        open: true,
+      },
     },
-  },
-  folders: {
-    '1': {
-      id: '1',
-      name: 'src',
-      parentId: '0',
+    folders: {
+      '1': {
+        id: '1',
+        name: 'src',
+        parentId: '0',
+      },
     },
   },
 };
@@ -76,7 +78,7 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setProject} = useSource({source: defaultProject});
+  const {source, setProject} = useSource(defaultProject);
 
   return (
     <div className={moduleStyles.pythonlab}>

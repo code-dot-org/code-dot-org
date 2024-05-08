@@ -15,18 +15,15 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     state => state.lab.levelProperties?.source,
     isEqual
   );
+  const projectStartSource = useMemo(
+    () => (levelStartSource ? {source: levelStartSource} : undefined),
+    [levelStartSource]
+  );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const initialSources = useMemo(() => {
-    console.log({
-      levelStartSource,
-      defaultSources,
-      isStartMode,
-      labInitialSources,
-    });
-    const startSources = levelStartSource
-      ? {source: levelStartSource}
-      : defaultSources;
+    console.log('in useMemo for initialSources');
+    const startSources = projectStartSource || defaultSources;
 
     if (isStartMode) {
       return startSources;
@@ -34,7 +31,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
 
     const projectSources = labInitialSources;
     return projectSources || startSources;
-  }, [levelStartSource, defaultSources, isStartMode, labInitialSources]);
+  }, [labInitialSources, projectStartSource, defaultSources, isStartMode]);
 
   return initialSources;
 };

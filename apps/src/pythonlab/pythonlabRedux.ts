@@ -1,12 +1,4 @@
-import {
-  AnyAction,
-  createSlice,
-  PayloadAction,
-  ThunkAction,
-} from '@reduxjs/toolkit';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {RootState} from '@cdo/apps/types/redux';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface PythonlabState {
@@ -20,25 +12,8 @@ export interface ConsoleLog {
 }
 
 export const initialState: PythonlabState = {
-  //source: undefined,
   output: [],
 };
-
-// THUNKS
-// Set the source in the redux store and initiate a save to the project manager.
-// export const setAndSaveSource = (
-//   source: MultiFileSource
-// ): ThunkAction<void, RootState, undefined, AnyAction> => {
-//   return dispatch => {
-//     dispatch(pythonlabSlice.actions.setSource(source));
-//     if (Lab2Registry.getInstance().getProjectManager()) {
-//       const projectSources = {
-//         source: source,
-//       };
-//       Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-//     }
-//   };
-// };
 
 // SLICE
 const pythonlabSlice = createSlice({
