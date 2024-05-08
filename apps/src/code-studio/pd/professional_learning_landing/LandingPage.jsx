@@ -312,12 +312,20 @@ function LandingPage({
         {showGettingStartedBanner && RenderGettingStartedBanner()}
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
-        <JoinSectionArea
-          initialJoinedStudentSections={joinedStudentSections}
-          initialJoinedPlSections={joinedPlSections}
-          isTeacher={true}
-          isPlSections={true}
-        />
+        <div
+          className={
+            joinedPlSections?.length > 0
+              ? ''
+              : style.joinedPlSectionsWithNoSections
+          }
+        >
+          <JoinSectionArea
+            initialJoinedStudentSections={joinedStudentSections}
+            initialJoinedPlSections={joinedPlSections}
+            isTeacher={true}
+            isPlSections={true}
+          />
+        </div>
         <EnrolledWorkshops />
         <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
