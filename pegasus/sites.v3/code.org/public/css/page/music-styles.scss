@@ -93,3 +93,13 @@ section.student-projects {
     padding: 2rem;
   }
 }
+
+section.quote {
+  background: url("/images/banners/banner-bg-music.png") center repeat-x;
+  background-size: contain;
+  background-color: var(--neutral_dark);
+
+  @media (max-width: $width-md) {
+    background-position: bottom;
+  }
+}
