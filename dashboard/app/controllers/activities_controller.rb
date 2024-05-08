@@ -26,8 +26,10 @@ class ActivitiesController < ApplicationController
     # TODO: do we use the :result and :testResult params for the same thing?
     solved = (params[:result] == 'true')
     script_name = ''
+    puts "params = #{params}"
 
     if params[:script_level_id]
+      puts "params[:script_level_id] = #{params[:script_level_id]}"
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
       @level = params[:level_id] ? Unit.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name

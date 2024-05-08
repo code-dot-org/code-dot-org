@@ -295,6 +295,7 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     const newLevel = processedLevel(
       getLevelById(state.lessons, state.currentLessonId, levelId)
     );
+    console.log('newLevel', newLevel);
     if (!newLevel) {
       return;
     }

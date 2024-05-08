@@ -606,6 +606,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
     userId: state.currentUser.userId,
   });
 
+  // Here we send the report from Dance.
   const sendReport = () => {
     this.studioApp_.report({
       app: 'dance',

@@ -148,8 +148,9 @@ class ScriptLevel < ApplicationRecord
     extras_lesson = nil,
     bubble_choice_parent: false
   )
-
+    puts "next_level_or_redirect_path_for_user: #{user}"
     if valid_progression_level?(user)
+      puts "valid_progress_level"
       # if we're coming from an unplugged level, it's ok to continue to unplugged
       # level (example: if you start a sequence of assessments associated with an
       # unplugged level you should continue on that sequence instead of skipping to
@@ -180,6 +181,7 @@ class ScriptLevel < ApplicationRecord
       next_unit = script.next_unit(user)
       next_unit ? script_path(next_unit) : script_completion_redirect(user, script)
     elsif bubble_choice? && !bubble_choice_parent
+      puts "bubble_choice"
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self)
     elsif bonus
@@ -187,6 +189,7 @@ class ScriptLevel < ApplicationRecord
       # to that lesson
       script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
     else
+      puts "else unit overview page"
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
@@ -197,6 +200,7 @@ class ScriptLevel < ApplicationRecord
           script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
         end
       else
+        puts "level_to_follow=#{level_to_follow}"
         level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(user, script)
       end
     end

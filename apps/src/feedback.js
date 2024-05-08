@@ -114,6 +114,7 @@ FeedbackUtils.prototype.displayFeedback = function (
   maxRecommendedBlocksToFlag
 ) {
   options.level = options.level || {};
+  console.log('options in displayFeedback', options);
 
   const {onContinue, shareLink} = options;
   const hadShareFailure = options.response && options.response.share_failure;
@@ -385,7 +386,7 @@ FeedbackUtils.prototype.displayFeedback = function (
     if (options.response && options.response.puzzle_ratings_enabled) {
       feedback.appendChild(puzzleRatingUtils.buildPuzzleRatingButtons());
     }
-
+    // Finish button here.
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
       recordFinishShare(
@@ -608,6 +609,8 @@ FeedbackUtils.prototype.getNumCountableBlocks = function () {
  *
  */
 FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
+  console.log('getFeedbackButtons_');
+  console.log('options', options);
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
 

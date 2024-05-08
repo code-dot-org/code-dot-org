@@ -13,6 +13,7 @@ export default class PlayZone extends React.Component {
   }
 
   render() {
+    console.log('playzone render');
     return (
       <div style={styles.container}>
         <h1 style={styles.primaryHeader}>

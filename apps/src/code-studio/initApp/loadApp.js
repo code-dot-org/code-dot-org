@@ -89,6 +89,7 @@ export function setupApp(appOptions) {
       }
       $(document).trigger('appInitialized');
     },
+    // Here is onAttempt!
     onAttempt: function (/*MilestoneReport*/ report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return tryToUploadShareImageToS3({
@@ -134,9 +135,11 @@ export function setupApp(appOptions) {
     },
     onContinue: function () {
       var lastServerResponse = reporting.getLastServerResponse();
+      console.log('lastServerResponse', lastServerResponse);
       if (lastServerResponse.videoInfo) {
         showVideoDialog(lastServerResponse.videoInfo);
       } else if (lastServerResponse.endOfLessonExperience) {
+        console.log('lastServerResponse.endOfLessonExperience', lastServerResponse.endOfLessonExperience);
         const body = document.createElement('div');
         const lessonInfo = lastServerResponse.previousStageInfo;
         const lessonName = `${msg.lesson()} ${lessonInfo.position}: ${

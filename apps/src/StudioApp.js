@@ -1686,6 +1686,7 @@ StudioApp.prototype.displayFeedback = function (options) {
   );
   if (options.useDialog) {
     // let feedback handle creating the dialog
+    // This is feedback displayFeedback function.
     this.feedback_.displayFeedback(
       options,
       this.requiredBlocks_,
@@ -1756,6 +1757,7 @@ StudioApp.prototype.getTestResults = function (levelComplete, options) {
   );
 };
 
+// Here is report back to server. Calls on onAttempt from loadApp.
 /**
  * Report back to the server, if available.
  * @param {MilestoneReport} options
