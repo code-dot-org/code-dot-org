@@ -108,7 +108,6 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
         )}
       </div>
       <div className={styles.folderRowRight}>
-        <div className={styles.length}>&nbsp;</div>
         {previewSound && (
           <div className={styles.previewContainer}>
             <FontAwesome

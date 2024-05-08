@@ -30,16 +30,16 @@
 
     .leftColumn {
       background-color: $neutral_dark;
-      width: calc(40% - 00px);
+      width: calc(40%);
       overflow-y: scroll;
     }
 
     .rightColumn {
       background-color: $neutral_dark;
-      width: calc(67% + 00px);
+      width: calc(100% * 2 / 3);
       overflow-y: scroll;
       display: grid;
-      grid-template-columns: calc(33.3333% - 0px) calc(33.3333% - 0px) calc(33.3333% - 0px);
+      grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
       position: relative;
 
       &FullWidth {
@@ -54,17 +54,18 @@
     margin: 1px 1px 6px 1px;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
 
     &:hover {
       background-color: $neutral_dark90;
     }
 
-    &:focus-visible {
-      outline: $neutral_light solid 1px;
+    &Selected, &Selected:hover {
+      background-color: $neutral_dark70;
     }
 
-    &Selected {
-      background-color: $neutral_dark70;
+    &:focus-visible {
+      outline: $neutral_light solid 1px;
     }
 
     &:first-child {
@@ -78,12 +79,10 @@
       width: 55px;
       height: 55px;
       margin: 0 6px 0 4px;
-      float: left;
     }
 
     &Middle {
-      width: calc(100% - 75px - 58px);
-      float: left;
+      flex: 1;
 
       &Name {
         font-size: 16px;
@@ -96,9 +95,7 @@
     }
 
     &Right {
-      float: right;
-      width: 43px;
-      margin-right: 15px;
+      margin-right: 8px;
     }
   }
 
@@ -115,12 +112,12 @@
     flex-direction: column;
     border-radius: 5px;
 
-    &Selected {
-      background-color: $neutral_dark70 !important;
-    }
-
     &:hover {
       background-color: $neutral_dark90;
+    }
+
+    &Selected, &Selected:hover {
+      background-color: $neutral_dark70;
     }
 
     &:focus-visible {
@@ -175,18 +172,14 @@
 
   .previewContainer {
     display: inline-block;
-    display: none;
     font-size: 16px;
-    position: absolute;
-    right: 5px;
-    top: 50px;
   }
 
   .preview {
     color: $neutral_dark40;
 
     &Playing {
-      color: $neutral_dark70;
+      color: $neutral_dark50;
       cursor: default;
     }
   }
