@@ -1,20 +1,20 @@
 module Lti
   module V1
-    class UsersController < ApplicationController
+    class AccountLinkingController < ApplicationController
       before_action :lti_account_linking_enabled?
 
-      # GET /lti/v1/users/new
-      def new_user_landing
-        render 'lti/v1/new_user_landing_page'
+      # GET /lti/v1/account_linking/landing
+      def landing
+        render 'lti/v1/account_linking/landing_page'
       end
 
-      # GET /lti/v1/users/link_existing_account
+      # GET /lti/v1/account_linking/link_existing_account
       def link_existing_account
         @user = User.new_with_session(ActionController::Parameters.new, session)
-        render 'lti/v1/link_existing_account'
+        render 'lti/v1/account_linking/link_existing_account'
       end
 
-      # POST /lti/v1/users/link_email
+      # POST /lti/v1/account_linking/link_email
       def link_email
         head :bad_request unless PartialRegistration.in_progress?(session)
         params.require([:email, :password])

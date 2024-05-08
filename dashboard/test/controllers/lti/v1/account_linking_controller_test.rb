@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Lti::V1::UsersControllerTest < ActionController::TestCase
+class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   setup do
     @user = create(:teacher, email: 'test@lti.com')
     @lti_integration = create :lti_integration
@@ -41,7 +41,7 @@ class Lti::V1::UsersControllerTest < ActionController::TestCase
     DCDO.expects(:get).with('lti_account_linking_enabled', false).times(3).returns(false)
     get :link_existing_account
     assert_response :not_found
-    get :new_user_landing
+    get :landing
     assert_response :not_found
     post :link_email, params: {email: @user.email, password: 'password'}
     assert_response :not_found

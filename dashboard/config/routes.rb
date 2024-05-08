@@ -617,9 +617,9 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
-        resources :users, only: [] do
+        resource :account_linking, only: [], controller: 'account_linking' do
           collection do
-            get 'new', to: 'users#new_user_landing'
+            get :landing
             get :link_existing_account
             post :link_email
           end
