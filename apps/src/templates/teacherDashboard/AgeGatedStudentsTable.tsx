@@ -106,7 +106,7 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
   const columns = getColumns();
   return (
     <div>
-      {studentData && (
+      {Object.keys(studentData).length !== 0 && (
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}
