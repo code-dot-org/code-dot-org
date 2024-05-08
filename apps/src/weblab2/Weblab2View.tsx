@@ -12,6 +12,7 @@ import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import {css} from '@codemirror/lang-css';
 import {useSource} from '../codebridge/hooks/useSource';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
@@ -72,7 +73,7 @@ const defaultConfig: ConfigType = {
   ...horizontalLayout,
 };
 
-const defaultProject: ProjectType = {
+const defaultSource: ProjectType = {
   // folders: {},
   folders: {
     '1': {id: '1', name: 'foo', parentId: '0'},
@@ -147,9 +148,11 @@ const defaultProject: ProjectType = {
   },
 };
 
+const defaultProject: ProjectSources = {source: defaultSource};
+
 const Weblab2View = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setProject} = useSource({source: defaultProject});
+  const {source, setProject} = useSource(defaultProject);
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');

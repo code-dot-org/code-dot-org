@@ -1,4 +1,3 @@
-import {isEqual} from 'lodash';
 import {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -7,14 +6,11 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 export const useInitialSources = (defaultSources: ProjectSources) => {
-  const labInitialSources = useAppSelector(
-    state => state.lab.initialSources,
-    isEqual
-  );
+  const labInitialSources = useAppSelector(state => state.lab.initialSources);
   const levelStartSource = useAppSelector(
-    state => state.lab.levelProperties?.source,
-    isEqual
+    state => state.lab.levelProperties?.source
   );
+  // We memoize this object so that is doesn't cause an unexpected re-render.
   const projectStartSource = useMemo(
     () => (levelStartSource ? {source: levelStartSource} : undefined),
     [levelStartSource]
@@ -22,7 +18,6 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const initialSources = useMemo(() => {
-    console.log('in useMemo for initialSources');
     const startSources = projectStartSource || defaultSources;
 
     if (isStartMode) {

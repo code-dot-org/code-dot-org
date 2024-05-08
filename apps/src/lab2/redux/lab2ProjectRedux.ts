@@ -12,6 +12,10 @@ const initialState: Lab2ProjectState = {
   projectSource: undefined,
 };
 
+// THUNKS
+
+// Store the project source in the redux store and tell the project manager
+// to save it.
 export const setAndSaveProjectSource = (
   projectSource: ProjectSources
 ): ThunkAction<void, RootState, undefined, AnyAction> => {

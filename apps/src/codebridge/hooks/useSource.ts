@@ -1,4 +1,3 @@
-import {isEqual} from 'lodash';
 import {useMemo, useEffect} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
@@ -13,8 +12,7 @@ import {useInitialSources} from './useInitialSources';
 export const useSource = (defaultSources: ProjectSources) => {
   const dispatch = useAppDispatch();
   const projectSource = useAppSelector(
-    state => state.lab2Project.projectSource,
-    isEqual
+    state => state.lab2Project.projectSource
   );
   const source = projectSource?.source as MultiFileSource;
   const channelId = useAppSelector(state => state.lab.channel?.id);
