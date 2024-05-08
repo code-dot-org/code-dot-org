@@ -1,5 +1,7 @@
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
-import {ProjectFile} from '../types';
+import {MultiFileSource, ProjectFile} from '../types';
+
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.
@@ -74,4 +76,20 @@ export function getFileByName(
     }
   }
   return null;
+}
+
+/**
+ * Given a map of {fileId: ProjectFile}, return the first file with the given name.
+ * @param project - The folders and files for a given project.
+ * @returns The first file that is both active and visible, or the first file.
+ */
+export function getActiveFileForProject(project: MultiFileSource) {
+  const files = Object.values(project.files);
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const activeFiles = files.filter(
+    f => f.active && (f.visible !== false || isStartMode)
+  );
+
+  // If the only active file is hidden, make the first file active.
+  return activeFiles?.[0] || files[0];
 }

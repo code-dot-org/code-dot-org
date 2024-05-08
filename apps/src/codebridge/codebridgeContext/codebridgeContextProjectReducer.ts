@@ -1,6 +1,8 @@
 import {ProjectType, ReducerAction, FileId, FolderId} from '@codebridge/types';
 import {sortFilesByName} from '@codebridge/utils';
 
+import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
+
 import {PROJECT_REDUCER_ACTIONS} from './constants';
 import {findFiles, findSubFolders} from './utils';
 
@@ -94,9 +96,7 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
     case PROJECT_REDUCER_ACTIONS.OPEN_FILE:
     case PROJECT_REDUCER_ACTIONS.ACTIVATE_FILE: {
       const {fileId} = <DefaultFilePayload>action.payload;
-      const activeFile = Object.values(project.files).filter(
-        f => f.active
-      )?.[0];
+      const activeFile = getActiveFileForProject(project);
 
       // if this file is already active, then no change.
       if (activeFile?.id === fileId) {

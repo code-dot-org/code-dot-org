@@ -100,12 +100,23 @@ const InnerFileBrowser = React.memo(
             );
           })}
         {Object.values(files)
-          .filter(f => f.folderId === parentId)
+          .filter(
+            f => f.folderId === parentId && (f.visible !== false || isStartMode)
+          )
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
             <li key={f.id}>
               <span className="label">
-                <span onClick={() => openFile(f.id)}>{f.name}</span>
+                <span onClick={() => openFile(f.id)}>
+                  {isStartMode && (
+                    <i
+                      className={`fa-solid ${
+                        f.visible === false ? 'fa-eye-slash' : 'fa-eye'
+                      }`}
+                    />
+                  )}
+                  {f.name}
+                </span>
                 <span className="button-bar">
                   <span onClick={() => moveFilePrompt(f.id)}>
                     <i className="fa-solid fa-arrow-right" />
@@ -117,8 +128,17 @@ const InnerFileBrowser = React.memo(
                     <i className="fa-solid fa-trash" />
                   </span>
                   {isStartMode && (
-                    <span onClick={() => toggleFileVisibility(f.id)}>
-                      <i className="fa-solid fa-eye" />
+                    <span
+                      onClick={e => {
+                        e.stopPropagation();
+                        toggleFileVisibility(f.id);
+                      }}
+                    >
+                      <i
+                        className={`fa-solid ${
+                          f.visible === false ? 'fa-eye' : 'fa-eye-slash'
+                        }`}
+                      />
                     </span>
                   )}
                 </span>
