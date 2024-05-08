@@ -15,8 +15,10 @@ import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import musicI18n from '../locale';
 
 /*
- * Renders a UI for previewing and choosing samples. This is currently used within a
- * custom Blockly Field {@link FieldSounds}
+ * Renders a UI for previewing and choosing samples.  Version 2 implements a new UI that shows a
+ * larger grid of sound entries, and both previews and selects the sound when its entry is clicked,
+ * though without dismissing the panel.
+ * This is currently used within a custom Blockly Field {@link FieldSounds}
  */
 
 type Mode = 'packs' | 'sounds';
@@ -74,11 +76,14 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
         classNames(styles.folderRow, isSelected && styles.folderRowSelected)
       )}
       onClick={() => onSelect(folder)}
-      onKeyDown={event => {
-        if (event.key === 'Enter') {
-          onSelect(folder);
-        }
-      }}
+      onKeyDown={useCallback(
+        (event: React.KeyboardEvent<HTMLDivElement>) => {
+          if (event.key === 'Enter') {
+            onSelect(folder);
+          }
+        },
+        [folder, onSelect]
+      )}
       ref={isSelected ? currentFolderRefCallback : null}
       aria-label={folder.name}
       tabIndex={0}
@@ -164,11 +169,14 @@ const SoundsPanelEntry: React.FunctionComponent<SoundsPanelEntryProps> = ({
         isSelected && styles.soundEntrySelected
       )}
       onClick={onSoundClick}
-      onKeyDown={event => {
-        if (event.key === 'Enter') {
-          onSoundSelect();
-        }
-      }}
+      onKeyDown={useCallback(
+        (event: React.KeyboardEvent<HTMLDivElement>) => {
+          if (event.key === 'Enter') {
+            onSoundSelect();
+          }
+        },
+        [onSoundSelect]
+      )}
       ref={isSelected ? currentSoundRefCallback : null}
       aria-label={sound.name}
       tabIndex={0}
@@ -372,16 +380,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     });
   }
 
-  if (filter === 'all') {
-    rightColumnSoundEntries = possibleSoundEntries.filter(
-      soundEntry => soundEntry.sound.type !== 'preview'
-    );
-  } else {
-    rightColumnSoundEntries = possibleSoundEntries.filter(
-      soundEntry =>
-        soundEntry.sound.type === filter && soundEntry.sound.type !== 'preview'
-    );
-  }
+  rightColumnSoundEntries = possibleSoundEntries.filter(
+    soundEntry =>
+      soundEntry.sound.type !== 'preview' &&
+      (soundEntry.sound.type === filter || filter === 'all')
+  );
 
   const availableSoundTypes: {[key: string]: boolean} = {
     all: true,
