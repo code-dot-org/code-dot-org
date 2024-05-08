@@ -62,7 +62,7 @@
         },
         {
           "type": "text",
-          "name": "teacher_role_other",
+          "name": "teacher_role_other_comment",
           "visibleIf": "{teacher_role} = 'other'",
           "title": "What other role best describes you?"
         },
@@ -463,7 +463,7 @@
         },
         {
           "type": "text",
-          "name": "other_cs_providers_comment",
+          "name": "other_cs_providers_other_comment",
           "visibleIf": "{other_cs_providers_select} = 'other'",
           "title": "What other Computer Science education providers do you use to teach?"
         },
@@ -624,7 +624,7 @@
         },
         {
           "type": "text",
-          "name": "cs_plans_next_sy_reasons_no_other",
+          "name": "cs_plans_next_sy_reasons_no_other_comment",
           "visibleIf": "{cs_plans_next_sy_reasons_no} = 'other'",
           "title": "Please describe the main reason why you won't be teaching computer science next school year."
         },
@@ -654,7 +654,7 @@
         },
         {
           "type": "text",
-          "name": "cs_plans_next_sy_reasons_not_sure_other",
+          "name": "cs_plans_next_sy_reasons_not_sure_other_comment",
           "visibleIf": "{cs_plans_next_sy_reasons_not_sure} = 'other'",
           "title": "Please describe the main reason why you don't know if you will teach computer science next school year."
         },
@@ -723,7 +723,7 @@
         },
         {
           "type": "text",
-          "name": "cdo_plans_next_sy_reasons_no_other",
+          "name": "cdo_plans_next_sy_reasons_no_other_comment",
           "visibleIf": "{cdo_plans_next_sy_reasons_no} contains 'other'",
           "title": "Please describe the main reason why you don't plan to use Code.org next school year, besides the options listed."
         },
@@ -899,7 +899,7 @@
         },
         {
           "type": "text",
-          "name": "6_12_standalone_units_reasons_comment",
+          "name": "6_12_standalone_units_reasons_other_comment",
           "visibleIf": "{6_12_standalone_units_reasons} = 'other'",
           "title": "Please share what are some other reasons why you are not likely to teach short units on specific topics such as data science or AI."
         },
@@ -959,7 +959,7 @@
         },
         {
           "type": "text",
-          "name": "9_12_cs_founds_reasons_comment",
+          "name": "9_12_cs_founds_reasons_other_comment",
           "visibleIf": "{9_12_cs_foundations_reasons} = 'other'",
           "title": "Please share what are some other reasons why you are not likely to teach an introductory course about foundations of computer science."
         },
@@ -1083,7 +1083,7 @@
         {
           "type": "html",
           "name": "section2_description",
-          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your teaching experience with Code.org during the 2022-23 school year.</span></p>\n"
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your teaching experience with Code.org during the 2023-24 school year.</span></p>\n"
         },
         {
           "type": "rating",

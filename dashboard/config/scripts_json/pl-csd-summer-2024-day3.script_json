@@ -8,11 +8,12 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-04 03:34:20 UTC",
+    "serialized_at": "2024-05-07 20:50:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -61,7 +62,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session is designed to create a space for participants to reflect on the culture they hope to create in their classrooms. There is time to describe a positive classroom culture and collaborate with other teachers to share strategies for creating that culture. This is also a time to tie together themes from the previous TLOs as participants think about how a positive classroom culture might support practices such as pair programming, debugging, and student collaboration. The session ends with a discussion about teamwork, which is a large component of Chapter 2 or Unit 2 - Web Development.\n\n\n**Objectives:**\n* Participants have reflected on and defined what a positive classroom culture looks like\n* Participants have collaborated with their peers about ways to create a positive classroom culture that supports practices such as debugging, pair programming, and peer collaboration\n* Participants have shared strategies for supporting student teamwork\n\n**Suggested Time:** 50 minutes",
+        "overview": "**Purpose:**\nThis session is designed to create a space for participants to reflect on the culture they hope to create in their classrooms. Participants will describe a positive classroom culture and collaborate with other teachers to share strategies for creating that culture. \n\n\n**Objectives:**\n* Participants have reflected on and defined what a positive classroom culture looks like\n* Participants have collaborated with their peers about ways to create a positive classroom culture that supports practices such as debugging, pair programming, and peer collaboration\n* Participants have shared strategies for supporting student teamwork\n* Participants understand the importance of modeling as a lead learner in the CS classroom.\n\n**Suggested Time:** 50 minutes",
         "student_overview": "**You will:**\n* Reflect on and define what a positive classroom culture looks like\n* Collaborate with other teachers about ways to create a positive classroom culture that supports practices such as debugging, pair programming, and peer collaboration\n* Shared strategies for supporting student teamwork"
       },
       "seeding_key": {
@@ -1245,6 +1246,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L6 - Predict_CSD-PL-24"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1267,6 +1271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1289,6 +1296,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1311,6 +1321,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1333,6 +1346,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1355,6 +1371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_CSD-PL-24"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1377,6 +1396,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_CSD-PL-24"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1399,6 +1421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_CSD-PL-24"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1421,6 +1446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predict_CSD-PL-24"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1443,6 +1471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1465,6 +1496,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1487,6 +1521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1509,6 +1546,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1531,6 +1571,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1553,6 +1596,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_CSD-PL-24"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1575,6 +1621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_CSD-PL-24"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1597,6 +1646,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_CSD-PL-24"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1619,6 +1671,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_CSD-PL-24"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1641,6 +1696,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_CSD-PL-24"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2038,19 +2096,6 @@
   ],
   "resources": [
     {
-      "name": "Activity Packet",
-      "url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-      "key": "activity_packet",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "activity_packet"
-      }
-    },
-    {
       "name": "Animation Tab",
       "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
       "key": "animation_tab",
@@ -2063,31 +2108,43 @@
       }
     },
     {
-      "name": "Day 3 Agenda",
-      "url": "https://docs.google.com/document/d/1Oaq7AuEaepfqTuELad0ymvBIv455LRwfWIrJtQlfI6s/edit?usp=share_link",
-      "key": "day_3_agenda",
+      "name": "CSD Activity Packet 2024",
+      "url": "https://docs.google.com/document/d/1e6h0_yN0txqYVXmxUEco5ldh0l1K8cU4tukxdnXh3Xo/edit?usp=drive_link",
+      "key": "csd_activity_packet_2024",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1Oaq7AuEaepfqTuELad0ymvBIv455LRwfWIrJtQlfI6s/edit?usp=share_link",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "day_3_agenda"
+        "resource.key": "csd_activity_packet_2024"
       }
     },
     {
-      "name": "Day 3 Slides Template",
-      "url": "https://docs.google.com/presentation/d/1cRUvbNDhcybvQYoeakvi9RkxPH74ewc1C1grYJKj674/edit?usp=share_link",
-      "key": "day_3_slides_template",
+      "name": "CSD In-Person Summer Workshop Day 3 Agenda",
+      "url": "https://docs.google.com/document/d/1u0fq0msjhfNs528pbILMonq9epbB4eeqNwXqm-Sl6p0/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_3_agenda_1",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1cRUvbNDhcybvQYoeakvi9RkxPH74ewc1C1grYJKj674/edit?usp=share_link",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "day_3_slides_template"
+        "resource.key": "csd_in-person_summer_workshop_day_3_agenda_1"
+      }
+    },
+    {
+      "name": "CSD In-Person Summer Workshop Day 3 Slides",
+      "url": "https://docs.google.com/presentation/d/1RaloaP4JBmxR1tGLQxT3IgFi97gNBUE1ff0K0BxGb54/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_3_slides_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_3_slides_1"
+      }
+    },
+    {
+      "name": "CSD Resource Packet 2024",
+      "url": "https://docs.google.com/document/d/17b0KVjqOsr2X3NUyE6gS82SEkXOsAuEE815H_Z6FRGU/edit?usp=drive_link",
+      "key": "csd_resource_packet_2024",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024"
       }
     },
     {
@@ -2304,31 +2361,30 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "activity_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_3_agenda_1",
         "script.name": "pl-csd-summer-2024-day3"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "day_3_agenda",
-        "script.name": "pl-csd-summer-2024-day3"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "day_3_slides_template",
-        "script.name": "pl-csd-summer-2024-day3"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "resource_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_3_slides_1",
         "script.name": "pl-csd-summer-2024-day3"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_activity_packet_2024",
+        "script.name": "pl-csd-summer-2024-day3"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024",
+        "script.name": "pl-csd-summer-2024-day3"
+      }
+    }
   ],
   "vocabularies": [
     {
