@@ -304,8 +304,9 @@ class UnconnectedMusicView extends React.Component {
     this.executeCompiledSong();
 
     Globals.setShowSoundFilters(
-      AppConfig.getValue('show-sound-filters') === 'true' ||
-        levelData?.showSoundFilters
+      AppConfig.getValue('show-sound-filters') !== 'false' &&
+        (AppConfig.getValue('show-sound-filters') === 'true' ||
+          levelData?.showSoundFilters)
     );
   }
 
