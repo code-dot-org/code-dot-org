@@ -12,9 +12,7 @@ module Services
         ActiveRecord::Base.transaction do
           user.authentication_options << rehydrated_user.authentication_options.first
           Services::Lti.create_lti_user_identity(user)
-          if user.user_type == ::User::TYPE_TEACHER
-            user.lti_roster_sync_enabled = true
-          end
+          user.lti_roster_sync_enabled = true if user.teacher?
           PartialRegistration.delete(session)
         end
       end
