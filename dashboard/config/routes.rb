@@ -617,12 +617,10 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
-        resource :account_linking, only: [], controller: 'account_linking' do
-          collection do
-            get :landing
-            get :link_existing_account
-            post :link_email
-          end
+        namespace :account_linking do
+          get :landing
+          get :existing_account
+          post :link_email
         end
       end
     end

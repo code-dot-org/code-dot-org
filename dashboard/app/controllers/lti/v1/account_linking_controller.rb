@@ -5,13 +5,11 @@ module Lti
 
       # GET /lti/v1/account_linking/landing
       def landing
-        render 'lti/v1/account_linking/landing_page'
       end
 
-      # GET /lti/v1/account_linking/link_existing_account
-      def link_existing_account
+      # GET /lti/v1/account_linking/existing_account
+      def existing_account
         @user = User.new_with_session(ActionController::Parameters.new, session)
-        render 'lti/v1/account_linking/link_existing_account'
       end
 
       # POST /lti/v1/account_linking/link_email

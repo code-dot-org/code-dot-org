@@ -39,7 +39,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   test 'blocks access if lti_account_linking_enabled is false' do
     sign_in @user
     DCDO.expects(:get).with('lti_account_linking_enabled', false).times(3).returns(false)
-    get :link_existing_account
+    get :existing_account
     assert_response :not_found
     get :landing
     assert_response :not_found
@@ -48,7 +48,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   end
 
   test 'allows access if lti_account_linking_enabled is true' do
-    get :link_existing_account
+    get :existing_account
     assert_response :ok
   end
 end
