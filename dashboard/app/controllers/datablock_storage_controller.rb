@@ -26,7 +26,6 @@
 class DatablockStorageController < ApplicationController
   before_action :validate_channel_id
   before_action :authenticate_user!
-  skip_before_action :verify_authenticity_token
 
   StudentFacingError = DatablockStorageTable::StudentFacingError
 

@@ -13,6 +13,7 @@ import i18n from '@cdo/locale';
 
 import SectionProgress from '../sectionProgress/SectionProgress';
 
+import InviteToV2ProgressModal from './InviteToV2ProgressModal';
 import ProgressBanners from './ProgressBanners';
 import SectionProgressV2 from './SectionProgressV2';
 
@@ -86,7 +87,15 @@ function SectionProgressSelector({
     <div className={styles.pageContent}>
       {displayV2 && <ProgressBanners toggleUsed={toggleUsed} />}
       {toggleV1OrV2Link()}
-      {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
+
+      {displayV2 ? (
+        <SectionProgressV2 />
+      ) : (
+        <>
+          <InviteToV2ProgressModal sectionId={sectionId} />
+          <SectionProgress allowUserToSelectV2View={true} />
+        </>
+      )}
     </div>
   );
 }
