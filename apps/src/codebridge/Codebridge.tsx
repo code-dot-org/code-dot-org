@@ -13,17 +13,21 @@ import {
   SetConfigFunction,
 } from '@codebridge/types';
 import React from 'react';
+
 import './styles/cdoIDE.css';
+import {ResetProjectFunction} from './codebridgeContext/types';
+import Workspace from './Workspace';
 
 type CodebridgeProps = {
   project: ProjectType;
   config: ConfigType;
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
+  resetProject: ResetProjectFunction;
 };
 
 export const Codebridge = React.memo(
-  ({project, config, setProject, setConfig}: CodebridgeProps) => {
+  ({project, config, setProject, setConfig, resetProject}: CodebridgeProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
     // see useSynchronizedProject for more info.
     const [internalProject, projectUtilities] = useSynchronizedProject(
@@ -40,6 +44,7 @@ export const Codebridge = React.memo(
       'preview-container': PreviewContainer,
       instructions: config.Instructions || Instructions,
       'file-tabs': FileTabs,
+      workspace: () => <Workspace EditorComponent={EditorComponent} />,
     };
 
     return (
@@ -49,6 +54,7 @@ export const Codebridge = React.memo(
           config,
           setProject,
           setConfig,
+          resetProject,
           ...projectUtilities,
         }}
       >

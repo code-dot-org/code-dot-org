@@ -152,7 +152,7 @@ const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource} = useSource(defaultProject);
+  const {source, setSource, resetToStartSource} = useSource(defaultProject);
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
@@ -195,6 +195,7 @@ const Weblab2View = () => {
             config={config}
             setProject={setSource}
             setConfig={setConfig}
+            resetProject={resetToStartSource}
           />
         )}
 

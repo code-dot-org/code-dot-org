@@ -3,13 +3,12 @@
   justify-content: flex-start;
   gap: 6px;
   align-items: flex-end;
-  height: 100%;
   overflow-x: scroll;
   max-width: 100%;
   background-color: #3f444b;
   color: white;
   scrollbar-width: none;
-  grid-area: file-tabs;
+  /* grid-area: file-tabs; */
 }
 
 .file-tab {

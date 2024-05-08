@@ -70,15 +70,15 @@ const defaultConfig: ConfigType = {
   gridLayoutRows: '32px 232px auto',
   gridLayoutColumns: '300px auto',
   gridLayout: `
-    "instructions file-tabs"
-    "instructions editor"
-    "file-browser editor"
+    "instructions workspace"
+    "instructions workspace"
+    "file-browser workspace"
   `,
 };
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource} = useSource(defaultProject);
+  const {source, setSource, resetToStartSource} = useSource(defaultProject);
 
   return (
     <div className={moduleStyles.pythonlab}>
@@ -89,6 +89,7 @@ const PythonlabView: React.FunctionComponent = () => {
             config={config}
             setProject={setSource}
             setConfig={setConfig}
+            resetProject={resetToStartSource}
           />
         )}
       </div>

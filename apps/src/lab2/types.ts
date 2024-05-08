@@ -260,3 +260,11 @@ export interface ExtraLinksData {
   can_delete: boolean;
   level_name: string;
 }
+
+export const TEXT_BASED_LABS: AppName[] = [
+  'applab',
+  'javalab',
+  'weblab',
+  'pythonlab',
+  'weblab2',
+];
