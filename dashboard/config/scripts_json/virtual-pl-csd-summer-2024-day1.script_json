@@ -7,11 +7,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-05 01:34:28 UTC",
+    "serialized_at": "2024-05-07 22:25:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -198,8 +199,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**Purpose:**\nThis session comes just before the first Unit 2 - Web Development model lesson. The goal of this session, Model Lesson #1, and Model Lesson #2 is to ensure that participants feel comfortable using HTML and CSS. With this knowledge, participants have a foundation for the rest of the lessons in this unit.\n\n**Objectives:**\n\n* Participants see the big picture of Unit 2 - Web Development\n* Participants know what HTML and CSS are\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* See the big picture of Unit 2 - Web Development\n* Get an introduction to HTML and CSS "
+        "overview": "**Purpose:**\nThis session comes just before the first Unit 2 - Web Development model lesson. The goal of this session, Model Lesson #1, and Model Lesson #2 is to ensure that participants feel comfortable using HTML and CSS. With this knowledge, participants have a foundation for the rest of the lessons in this unit.\n\n**Objectives:**\n\n* Participants see the big picture of Unit 2 - Web Development\n\n**Suggested time:** 5 minutes",
+        "student_overview": "**You will:**\n\n* See the big picture of Unit 2 - Web Development"
       },
       "seeding_key": {
         "lesson.key": "Intro to Unit 2 - Web Development",
@@ -216,7 +217,7 @@
       "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose**:\n* **Essential Practice:** Teachers provide opportunities for exploration coupled with opportunities for sensemaking.\n\n* **Lesson Decisions:**\n  * Allow participants time to explore Web Lab before discussing its capabilities as a whole group\n  * Watch videos together as a whole group and utilize the discussion questions from the teacher resources to facilitate group sense-making\n  * Do not answer questions directly, instead point participants to resources that might help them answer the question themselves.\n  * Create a poster with a list of resources throughout the lesson and refer to it often. Have participants keep a similar list in their journals.\n\n* **Debrief Topic:** Exploration\n\n**Objectives:**\n* Participants understand the value of exploration along with how resources can support student exploration\n* Participants gain experience using HTML and Web Lab\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2024/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "overview": "**Purpose**:\n\n**Essential Practice:** Teachers provide opportunities for exploration coupled with opportunities for sensemaking.\n\n**Lesson Decisions:**\n  * Allow participants time to explore Web Lab before discussing its capabilities as a whole group\n  * Watch videos together as a whole group and utilize the discussion questions from the teacher resources to facilitate group sense-making\n  * Do not answer questions directly, instead point participants to resources that might help them answer the question themselves.\n  * Create a poster with a list of resources throughout the lesson and refer to it often. Have participants keep a similar list in their journals.\n\n**Debrief Topic:** Exploration\n\n**Objectives:**\n* Participants understand the value of exploration along with how resources can support student exploration\n* Participants gain experience using HTML and Web Lab\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2024/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "* Review the Code Studio levels\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we tell the computer both *what* to put on the web page, and *how* to organize it?\n\n\nYou will look at an HTML page in Web Lab and use HTML to write your first web page of the unit.\n"
       },
@@ -228,14 +229,14 @@
     },
     {
       "key": "Styling Text with CSS",
-      "name": "Model Lesson 1 - U2L6 Styling Text with CSS",
+      "name": "Model Lesson 2 - U2L6 Styling Text with CSS",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose**:\n* **Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson\n\n* **Lesson Decisions:**\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * During discussions, have participants collaborate with table teams to develop group answers\n  * Encourage participants to work together to solve bugs\n\n\n* **Debrief Topic:** Peer Collaboration\n\n**Objectives:**\n* Participants brainstorm ways to promote student collaboration during skill building lessons\n* Participants are able to use CSS to change the style of text on a web page\n\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2024/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
+        "overview": "**Purpose**:\n\n**Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson\n\n**Lesson Decisions:**\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * During discussions, have participants collaborate with table teams to develop group answers\n  * Encourage participants to work together to solve bugs\n\n\n**Debrief Topic:** Peer Collaboration\n\n**Objectives:**\n* Participants brainstorm ways to promote student collaboration during skill-building lessons\n* Participants are able to use CSS to change the style of text on a web page\n\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2024/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
         "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we change the style of text on a web page?\n\nIn this lesson, you will learn how to use CSS to style the HTML elements on your web page. \n\n"
       },
@@ -1556,6 +1557,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Type Anything_CSD-PL-23"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1578,6 +1582,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Inspector Warm Up_CSD-PL-23"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1600,6 +1607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1622,6 +1632,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1644,6 +1657,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Debug Paragraphs_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1666,6 +1682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - Prac_CSD-PL-23"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1688,6 +1707,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - PracC_CSD-PL-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1710,6 +1732,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L2 Assess FR_CSD-PL-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1732,6 +1757,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - Chal_CSD-PL-23"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1754,6 +1782,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Sample CSS text_CSD-PL-23"
+        ],
         "progression": "Sample Website"
       },
       "bonus": false,
@@ -1776,6 +1807,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS explore CSS_CSD-PL-23"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1798,6 +1832,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h1_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1820,6 +1857,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h3_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1842,6 +1882,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1864,6 +1907,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice 2_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1886,6 +1932,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style size_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1908,6 +1957,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 add file_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1930,6 +1982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS practice_pilot_CSD-PL-23"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1952,6 +2007,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Web CSS Assessment_CSD-PL-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1974,6 +2032,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L6 Assess FR_CSD-PL-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1996,6 +2057,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS challenge_pilot_CSD-PL-23"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2871,23 +2935,23 @@
   ],
   "resources": [
     {
-      "name": "2023 Virtual CSD Summer Workshop - Day 1 Agenda",
-      "url": "https://docs.google.com/document/d/1E3JcesXBJ6Dq-42tsZ1hdzQlUkFbQOMWWpEu0qSGD5U/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_1_agenda",
+      "name": "CSD Virtual Summer Workshop Day 1 Agenda",
+      "url": "https://docs.google.com/document/d/17dvQlqP5kbMpflsr6lQQ31Lmi0_5g3Upj_MehIacAZY/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_1_agenda",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_1_agenda"
+        "resource.key": "csd_virtual_summer_workshop_day_1_agenda"
       }
     },
     {
-      "name": "2023 Virtual CSD Summer Workshop - Day 1 Slides",
-      "url": "https://docs.google.com/presentation/d/1NWODFszldZLS60jpvD7yTbvjATiQ1xRjIzbvUmy0BVY/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_1_slides",
+      "name": "CSD Virtual Summer Workshop Day 1 Slides",
+      "url": "https://docs.google.com/presentation/d/1crRAq4BvjcVjBGhWK0NA6BxALnYCfm3pDk9r6AqinJY/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_1_slides",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_1_slides"
+        "resource.key": "csd_virtual_summer_workshop_day_1_slides"
       }
     },
     {
@@ -3098,13 +3162,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_1_agenda",
+        "resource.key": "csd_virtual_summer_workshop_day_1_agenda",
         "script.name": "virtual-pl-csd-summer-2024-day1"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_1_slides",
+        "resource.key": "csd_virtual_summer_workshop_day_1_slides",
         "script.name": "virtual-pl-csd-summer-2024-day1"
       }
     }

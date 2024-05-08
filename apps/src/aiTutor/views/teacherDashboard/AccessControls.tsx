@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
+import * as Table from 'reactabular-table';
 
 import {fetchStudents} from '@cdo/apps/aiTutor/accessControlsApi';
 import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {tableLayoutStyles as tableStyles} from '@cdo/apps/templates/tables/tableConstants';
 
+import {styleOverrides} from './InteractionsTable';
 import style from './interactions-table.module.scss';
 import StudentAccessToggle from './StudentAccessToggle';
 import SectionAccessToggle from './SectionAccessToggle';
@@ -21,6 +24,11 @@ interface SectionsData {
   [index: number]: {
     aiTutorEnabled: boolean;
   };
+}
+interface StudentRowData {
+  id: number;
+  name: string;
+  aiTutorAccessDenied: boolean;
 }
 
 const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
@@ -53,8 +61,65 @@ const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
     })();
   }, [sectionId]);
 
+  const columns = [
+    {
+      property: 'id',
+      header: {
+        label: 'Student ID',
+        props: {
+          style: {...tableStyles.headerCell, ...styleOverrides.headerCell},
+        },
+      },
+      cell: {
+        formatters: [(id: string) => <span>{id}</span>],
+        props: {style: {...tableStyles.cell, minWidth: '100px'}},
+      },
+    },
+    {
+      property: 'name',
+      header: {
+        label: 'Name',
+        props: {
+          style: {...tableStyles.headerCell, ...styleOverrides.headerCell},
+        },
+      },
+      cell: {
+        formatters: [(name: string) => <span>{name}</span>],
+        props: {style: {...tableStyles.cell, minWidth: '150px'}},
+      },
+    },
+    {
+      property: 'aiTutorAccessDenied',
+      header: {
+        label: 'AI Tutor Access',
+        props: {
+          style: {
+            ...tableStyles.headerCell,
+            ...styleOverrides.headerCell,
+            minWidth: '150px',
+          },
+        },
+      },
+      cell: {
+        formatters: [
+          (
+            aiTutorAccessDenied: boolean,
+            {rowData}: {rowData: StudentRowData}
+          ) => (
+            <StudentAccessToggle
+              aiTutorAccessDenied={aiTutorAccessDenied}
+              displayGlobalError={displayGlobalError}
+              studentId={rowData?.id}
+            />
+          ),
+        ],
+        props: {style: {...tableStyles.cell}},
+      },
+    },
+  ];
+
   return (
-    <div>
+    <div className={style.interactionsElement}>
       {globalErrorMessage && (
         <div className={style.alert}>{globalErrorMessage}</div>
       )}
@@ -63,33 +128,20 @@ const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
         isLoading ? (
           <Spinner />
         ) : (
-          <table>
-            <thead>
-              <tr>
-                <td>
-                  <div className={style.header}>Id</div>
-                </td>
-                <td>
-                  <div className={style.header}>Student</div>
-                </td>
-                <td>
-                  <div className={style.header}>Allow Access to AI Tutor</div>
-                </td>
-              </tr>
-            </thead>
-            <tbody>
-              {students.map(student => (
-                <StudentAccessToggle
-                  key={student.id}
-                  student={student}
-                  displayGlobalError={error => {
-                    setGlobalErrorMessage(error);
-                    setTimeout(() => setGlobalErrorMessage(null), 3000);
-                  }}
-                />
-              ))}
-            </tbody>
-          </table>
+          <Table.Provider
+            columns={columns}
+            style={{...tableStyles.table, ...styleOverrides.table}}
+          >
+            <Table.Header />
+            <Table.Body
+              rows={students.map(student => ({
+                id: student.id,
+                name: student.name,
+                aiTutorAccessDenied: student.aiTutorAccessDenied,
+              }))}
+              rowKey="id"
+            />
+          </Table.Provider>
         )
       ) : null}
     </div>
