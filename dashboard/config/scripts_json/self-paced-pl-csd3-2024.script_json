@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-05 23:03:13 UTC",
+    "serialized_at": "2024-05-06 17:11:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -145,7 +145,7 @@
       "key": "53f623cd-7cc0-43a1-a0d5-d87d9f1b9b49",
       "position": 2,
       "properties": {
-        "progression_name": "Course Overvew"
+        "progression_name": "Course Overview"
       },
       "seeding_key": {
         "activity_section.key": "53f623cd-7cc0-43a1-a0d5-d87d9f1b9b49",
@@ -265,7 +265,7 @@
         "level_keys": [
           "SP-VPL-21-mod3-CV-Equity_2024"
         ],
-        "progression": "Course Overvew"
+        "progression": "Course Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -290,7 +290,7 @@
         "level_keys": [
           "SP-VPL-21-mod3-CSD-vid_2024"
         ],
-        "progression": "Course Overvew"
+        "progression": "Course Overview"
       },
       "bonus": false,
       "seeding_key": {

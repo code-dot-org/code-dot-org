@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-05-06T15:03:55.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "self-paced-pl-ai-101-Training_Data",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_23",
+    "encrypted": "false",
+    "long_instructions": "\r\n\r\n#### In lesson 9, students will create an outline for their idea. As part of this outline, they will consider the sources of their data and analyze potential areas of bias that could be in the data. \r\n\r\n---\r\n#### Watch this video to see how bias can unintentionally be infiltrated in training data. \r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-06T15:03:55.807+00:00\",\"changed\":[\"cloned from \\\"sp-pl-CV_Video\\\"\"],\"cloned_from\":\"sp-pl-CV_Video\"},{\"changed_at\":\"2024-05-06 15:58:39 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

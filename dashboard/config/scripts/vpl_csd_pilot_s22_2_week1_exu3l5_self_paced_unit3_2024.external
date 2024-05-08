@@ -5,16 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Foundational Lessons
 
-##### The first several lessons of the unit help students build foundational knowledge that they will continue to draw upon as they move through the unit. The following information is designed to give you an overview of the first week or so of instruction. We will go more in-depth and give you time to practice these foundational programming skills in the next section of this professional learning module.
+#### The first several lessons of the unit help students build foundational knowledge that they will continue to draw upon as they move through the unit. The following information is designed to give you an overview of the first week or so of instruction. We will go more in-depth and give you time to practice these foundational programming skills in the next section of this professional learning module.
 
 <img src="https://images.code.org/5dd50bd93f58f30efbd318028a2c9e14-image-1700516716478.png" alt="A hand choosing between multiple options." width="30px" style="float:left; margin: 10px 10px 5px 0px;">
 <br>
 
-##### Rather read the lesson plans instead? Start <a href="https://studio.code.org/s/csd3-2023/lessons/1" target="blank">here</a>!
+#### Rather read the lesson plans instead? Start <a href="https://studio.code.org/s/csd3-2024/lessons/1" target="blank">here</a>!
 
 ## Overview of Lessons 1 - 6
 
-###### Click the dropdown arrows below to view lesson overviews.
+##### Click the dropdown arrows below to view lesson overviews.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 1: Programming for a Purpose</summary>
@@ -22,16 +22,16 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/d66317bfcada6fb0162053e666403c38-image-1680655837044.png" alt="Image of Templates" width="150px" style="float:left; margin-left:10px; margin-right:10px; padding-right: 30px;">
 
-**Question of the Day:** How can we design animations and games based on the needs of a user?
+#### **Question of the Day:** How can we design animations and games based on the needs of a user?
 
-**Lesson Overview:**
+### **Lesson Overview:**
 
-Students begin by investigating the design of different animations and games. Students look at a variety of animations and games and attempt to match each design with a potential user. Then students choose a user and attempt to prototype an animation or game design for them on paper or in a digital template. To conclude the activity, students consider what it means to be an animation and game designer and create resources for other users.
+#### Students begin by investigating the design of different animations and games. Students look at a variety of animations and games and attempt to match each design with a potential user. Then students choose a user and attempt to prototype an animation or game design for them on paper or in a digital template. To conclude the activity, students consider what it means to be an animation and game designer and create resources for other users.
 
-**Students will be able to:** 
-* Understand the steps of the problem-solving process
-* Identify features of an animation or game design that match the needs of users
-* Create a prototype of an animation or game design to meet the needs of a user using the problem-solving process
+### **Students will be able to:** 
+* #### Understand the steps of the problem-solving process
+* #### Identify features of an animation or game design that match the needs of users
+* #### Create a prototype of an animation or game design to meet the needs of a user using the problem-solving process
 </p></div>
 </details>
 
@@ -44,15 +44,15 @@ Students begin by investigating the design of different animations and games. St
     <p>
 <img src="https://images.code.org/eab1ca733940261c15ef0c280e382175-image-1648858668304.JPG" alt="Image of smiley face in Game Lab" width="250px" style="float:left; margin-bottom:40px; margin-left:10px; margin-right:10px; padding-right: 30px;">
 
-**Question of the Day:** How can we clearly communicate how to draw something on a screen?
+#### **Question of the Day:** How can we clearly communicate how to draw something on a screen?
 
-**Lesson Overview:**
+### **Lesson Overview:**
 
-Students explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity demonstrates the challenges of communicating position without some shared reference point. In the main activity, students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. 
+#### Students explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity demonstrates the challenges of communicating position without some shared reference point. In the main activity, students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. 
 
-**Students will be able to:** 
-* Communicate how to draw an image in Game Lab, accounting for shape position, color, and order
-* Reason about locations on the Game Lab coordinate grid
+### **Students will be able to:** 
+* #### Communicate how to draw an image in Game Lab, accounting for shape position, color, and order
+* #### Reason about locations on the Game Lab coordinate grid
 </p></div>
 </details>
 
@@ -64,15 +64,15 @@ Students explore the challenges of communicating how to draw with shapes and use
     <p>
 <img src="https://images.code.org/f86bbbe77921555476a841575371d2c9-image-1680656312856.png" alt="Image of a purple flower created in Game Lab" width="200px" style="float:left; margin-left:10px; margin-right:10px;margin-bottom:40px;  padding-right: 30px;">
 
-**Question of the Day:** How can we communicate to a computer how to draw shapes on the screen?
+#### **Question of the Day:** How can we communicate to a computer how to draw shapes on the screen?
 
-**Lesson Overview:**
+### **Lesson Overview:**
 
-Students are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.
+#### Students are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.
 
-**Students will be able to:** 
-* Sequence code correctly to overlay shapes.
-* Use a coordinate system to place elements on the screen.
+### **Students will be able to:** 
+* #### Sequence code correctly to overlay shapes.
+* #### Use a coordinate system to place elements on the screen.
 </p></div>
 </details>
 
@@ -84,14 +84,14 @@ Students are introduced to Game Lab, the programming environment for this unit, 
     <p>
 <img src="https://images.code.org/fb47328f06de64a012392ae72aaf16c6-image-1680656503196.png" alt="Image of pig created in Game Lab" width="200px" style="float:left; margin-left:10px; margin-right:10px; margin-bottom:40px;  padding-right: 30px;">
 
-**Question of the Day:** How can we use parameters to give the computer more specific instructions?
+#### **Question of the Day:** How can we use parameters to give the computer more specific instructions?
 
-**Lesson Overview:**
+### **Lesson Overview:**
 
-In this lesson students continue to develop their familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or "parameters". Students learn to draw with versions of ellipse() and rect() that include width and height parameters. They also learn to use the background() block.
+#### In this lesson students continue to develop their familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or "parameters". Students learn to draw with versions of ellipse() and rect() that include width and height parameters. They also learn to use the background() block.
 
-**Students will be able to:** 
-* Use and reason about drawing commands with multiple parameters
+### **Students will be able to:** 
+* #### Use and reason about drawing commands with multiple parameters
 </p></div>
 </details>
 
@@ -103,15 +103,15 @@ In this lesson students continue to develop their familiarity with Game Lab by m
     <p>
 <img src="https://images.code.org/512ab9f19d266ad1fadfc0b76db7ed5e-image-1680656713927.png" alt="Image of a gray robot created in Game Lab" width="200px" style="float:left; margin-left:10px; margin-right:10px; margin-bottom:40px;  padding-right: 30px;">
 
-**Question of the Day:** How can we use variables to store information in our programs?
+#### **Question of the Day:** How can we use variables to store information in our programs?
 
-**Lesson Overview:**
+### **Lesson Overview:**
 
-In this lesson students learn how to use variables to label a number. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number.
+#### In this lesson students learn how to use variables to label a number. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number.
 
-**Students will be able to:** 
-* Identify a variable as a way to label and reference a value in a program
-* Use variables in a program to store a piece of information that is used multiple times
+### **Students will be able to:** 
+* #### Identify a variable as a way to label and reference a value in a program
+* #### Use variables in a program to store a piece of information that is used multiple times
 </p></div>
 </details>
 
@@ -121,15 +121,15 @@ In this lesson students learn how to use variables to label a number. Students b
     <p>
 <img src="https://images.code.org/375aa29ce7950b1c788a7d2c828f5f62-image-1663809341908.com-gif-maker.gif" alt="Image of a gray robot created in Game Lab" width="200px" style="float:left; margin-left:10px; margin-right:10px; margin-bottom:40px;  padding-right: 30px;">
 
-**Question of the Day:** How can we make our programs behave differently each time they are run?
+#### **Question of the Day:** How can we make our programs behave differently each time they are run?
 
-**Lesson Overview:**
+### **Lesson Overview:**
 
-This lesson introduces randomness, which is important both as a way to make programs more interesting and also to motivate the use of variables. Students are introduced to the randomNumber() block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program. Combining all of these skills, students draw randomized images.
+#### This lesson introduces randomness, which is important both as a way to make programs more interesting and also to motivate the use of variables. Students are introduced to the randomNumber() block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program. Combining all of these skills, students draw randomized images.
 
-**Students will be able to:** 
-* Generate and use random numbers in a program
-* Update a value stored in a variable
+### **Students will be able to:** 
+* #### Generate and use random numbers in a program
+* #### Update a value stored in a variable
 
 </p></div>
 </details>
@@ -138,7 +138,7 @@ This lesson introduces randomness, which is important both as a way to make prog
 
 ___
 
-#### **Up Next**
+### **Up Next**
 
-##### In the next section of this module, "Create a Scene", you'll start programming in Game Lab!
+#### In the next section of this module, "Create a Scene", you'll start programming in Game Lab!
 MARKDOWN

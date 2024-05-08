@@ -108,14 +108,12 @@ export const updateAiCustomization = createAsyncThunk(
   async (_, thunkAPI) => {
     const rootState = (await thunkAPI.getState()) as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
-    const levelId = rootState.progress.currentLevelId;
     const {dispatch} = thunkAPI;
 
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
       EVENTS.UPDATE_CHATBOT,
-      levelId,
       dispatch
     );
   }
@@ -132,12 +130,10 @@ export const publishModel = createAsyncThunk(
 
     const rootState = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
-    const levelId = rootState.progress.currentLevelId;
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
       EVENTS.PUBLISH_MODEL_CARD_INFO,
-      levelId,
       dispatch
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -153,7 +149,6 @@ export const saveModelCard = createAsyncThunk(
     const rootState = (await thunkAPI.getState()) as RootState;
     const modelCardInfo =
       rootState.aichat.currentAiCustomizations.modelCardInfo;
-    const levelId = rootState.progress.currentLevelId;
     if (!hasFilledOutModelCard(modelCardInfo)) {
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
@@ -165,7 +160,6 @@ export const saveModelCard = createAsyncThunk(
       currentAiCustomizations,
       savedAiCustomizations,
       EVENTS.SAVE_MODEL_CARD_INFO,
-      levelId,
       dispatch
     );
   }
@@ -185,7 +179,6 @@ const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
   eventDescription: string,
-  levelId: string | null,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
@@ -247,7 +240,7 @@ const saveAiCustomization = async (
         eventDescription,
         {
           propertyUpdated: property,
-          levelId,
+          levelPath: window.location.pathname,
         },
         PLATFORMS.BOTH
       );

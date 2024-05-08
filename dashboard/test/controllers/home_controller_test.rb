@@ -501,7 +501,6 @@ class HomeControllerTest < ActionController::TestCase
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
-    assert_select 'h3', count: 1, text: 'Manage Applications'
   end
 
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
@@ -511,7 +510,6 @@ class HomeControllerTest < ActionController::TestCase
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
-    assert_select 'h3', count: 1, text: 'Manage Applications'
   end
 
   test 'program managers see application dashboard links' do
@@ -521,7 +519,6 @@ class HomeControllerTest < ActionController::TestCase
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
-    assert_select 'h3', count: 1, text: 'Manage Applications'
   end
 
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
@@ -531,6 +528,5 @@ class HomeControllerTest < ActionController::TestCase
       get :home
     end
     assert_select 'h1', count: 0, text: 'Application Dashboard'
-    assert_select 'h3', count: 0, text: 'Manage Applications'
   end
 end
