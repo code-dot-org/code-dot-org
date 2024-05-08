@@ -25,10 +25,9 @@ function urlFor(func_name) {
 // every write, pop off the queue until reach a timestamp that is <60 seconds ago
 // if queue size gets bigger than 600, throw an error
 const rateLimitAccessLog = [];
-const RATE_LIMIT = 600;
-const RATE_LIMIT_INTERVAL_MS = 60000;
-function rateLimit() {
-  const now = Date.now();
+export const RATE_LIMIT = 600;
+export const RATE_LIMIT_INTERVAL_MS = 60000;
+export function rateLimit(now = Date.now()) {
   const timeSinceEarliestLog = () => now - rateLimitAccessLog[0];
 
   // Drop log entries older than RATE_LIMIT_INTERVAL_MS

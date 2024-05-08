@@ -1,9 +1,48 @@
 import {expect} from '../../util/reconfiguredChai';
+import {
+  rateLimit,
+  RATE_LIMIT,
+  RATE_LIMIT_INTERVAL_MS,
+} from '../../../src/storage/datablockStorage';
 
 describe('DatablockStorage', () => {
   describe('rate limiting', () => {
-    it('warns and succeeds on keys with invalid characters', done => {
-      expect(true).to.equal.true;
+    it('succeeds if calling less times than the rate limit', done => {
+      const now = Date.now();
+
+      for (let i = 0; i < RATE_LIMIT; i++) {
+        const time = now + i;
+        rateLimit(time);
+      }
+
+      done();
+    });
+    it('fails if called one more time than the rate limit', done => {
+      const now = Date.now();
+
+      for (let i = 0; i < RATE_LIMIT; i++) {
+        const time = now + i;
+        rateLimit(time);
+      }
+
+      // This should be over the rate limit
+      expect(() => rateLimit(now + RATE_LIMIT)).to.throw(Error);
+
+      done();
+    });
+    it('it succeeds if called more than the rate limit, but after waiting rate limit interval', done => {
+      let now = Date.now();
+
+      for (let i = 0; i < RATE_LIMIT; i++) {
+        const time = now + i;
+        rateLimit(time);
+      }
+
+      now += RATE_LIMIT_INTERVAL_MS;
+      for (let i = 0; i < RATE_LIMIT; i++) {
+        const time = now + i;
+        rateLimit(time);
+      }
       done();
     });
   });
