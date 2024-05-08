@@ -158,8 +158,6 @@ class LevelsController < ApplicationController
     @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     if @level.is_a? Applab
-      # TODO: unfirebase, this is migrated to datablock storage but NOT TESTED: #56998
-      # TODO: post-firebase-cleanup, remove this code: #56994
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     end
   end
