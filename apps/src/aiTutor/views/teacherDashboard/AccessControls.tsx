@@ -16,6 +16,12 @@ interface AccessControlsProps {
   sectionId: number;
 }
 
+interface StudentRowData {
+  id: number;
+  name: string;
+  aiTutorAccessDenied: boolean;
+}
+
 const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
   const [students, setStudents] = useState<StudentAccessData[]>([]);
   const [globalErrorMessage, setGlobalErrorMessage] = useState<string | null>(
@@ -79,8 +85,10 @@ const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
       },
       cell: {
         formatters: [
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (aiTutorAccessDenied: boolean, {rowData}: any) => (
+          (
+            aiTutorAccessDenied: boolean,
+            {rowData}: {rowData: StudentRowData}
+          ) => (
             <StudentAccessToggle
               aiTutorAccessDenied={aiTutorAccessDenied}
               displayGlobalError={displayGlobalError}

@@ -168,10 +168,8 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
       },
       cell: {
         formatters: [
-          (rowData: {prompt: string; aiResponse: string}) => {
-            console.log('rowData', rowData);
-            return interactionFormatter(rowData.prompt, rowData.aiResponse);
-          },
+          (rowData: {prompt: string; aiResponse: string}) =>
+            interactionFormatter(rowData.prompt, rowData.aiResponse),
         ],
         props: {style: {...style.cell, maxWidth: 'unset'}},
       },
