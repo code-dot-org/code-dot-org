@@ -14119,11 +14119,11 @@ en:
               name: Cristina - Counter with micro:bit
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Beginner: Events'
+              display_name: Emotion Badge with micro:bit - Events
             lessonGroup-3:
-              display_name: 'Intermediate: Sequencing and Loops'
+              display_name: Calming LEDs with micro:bit - Sequencing and Loops
             lessonGroup-4:
-              display_name: 'Stretch: Data and Variables'
+              display_name: Counter with micro:bit - Data and Variables
           name: coursec-maker-2024
           title: Course C - Maker with micro:bit
           description_audience: ''
@@ -16078,6 +16078,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: pl-csd-summer-2024-day4
         pl-csd-summer-2024-day5:
           lesson_groups:
             lessonGroup-2:
@@ -16121,6 +16123,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: virtual-pl-csd-summer-2024-day2
         virtual-pl-csd-summer-2024-day3:
           lesson_groups:
             lessonGroup-2:
@@ -16136,6 +16140,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: virtual-pl-csd-summer-2024-day3
         virtual-pl-csd-summer-2024-day4:
           lesson_groups:
             lessonGroup-2:
@@ -16151,6 +16157,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: virtual-pl-csd-summer-2024-day4
         virtual-pl-csd-summer-2024-day5:
           lesson_groups:
             lessonGroup-2:
@@ -16164,6 +16172,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: virtual-pl-csd-summer-2024-day5
         self-paced-pl-microbit1-2024:
           lesson_groups:
             lessonGroup-2:
@@ -16755,9 +16765,11 @@ en:
           lessons: {}
           lesson_groups:
             lessonGroup-2:
-              display_name: Events, Sequencing, and Loops
+              display_name: Emotion Badge with micro:bit - Events
             lessonGroup-3:
-              display_name: "[Optional] Extension: Data and Variables"
+              display_name: Calming LEDs with micro:bit - Sequencing and Loops
+            lessonGroup-4:
+              display_name: Counter with micro:bit - Data and Variables
           name: grade2-maker-2024
           title: Grade 2 - Maker with micro:bit
           description_audience: ''
@@ -16768,9 +16780,11 @@ en:
           lessons: {}
           lesson_groups:
             lessonGroup-2:
-              display_name: Conditionals and Events
+              display_name: Rock, Paper, Scissors with micro:bit - Conditionals and Events
             lessonGroup-3:
-              display_name: "[Optional] Extension: Conditionals and Text Inputs"
+              display_name: Activity picker with micro:bit - Conditionals and Text Inputs
+            lessonGroup-4:
+              display_name: Saving sea turtles with micro:bit - Conditionals
           name: grade3-maker-2024
           title: Grade 3 - Maker with micro:bit
           description_audience: ''
@@ -16781,9 +16795,11 @@ en:
           lessons: {}
           lesson_groups:
             lessonGroup-2:
-              display_name: Events, Conditionals, and Designing for Accessibility
+              display_name: Simple Door Alarm Coding with micro:bit - Conditionals
             lessonGroup-3:
-              display_name: "[Optional] Extension: Functions"
+              display_name: Tilt alarm with micro:bit - Functions
+            lessonGroup-4:
+              display_name: Sensory Toy with micro:bit - Events and Designing for Accessibility
           name: grade4-maker-2024
           title: Grade 4 - Maker with micro:bit
           description_audience: ''
@@ -16794,9 +16810,11 @@ en:
           lessons: {}
           lesson_groups:
             lessonGroup-2:
-              display_name: Events, Variables, Conditionals, and Sounds
+              display_name: micro:bit pet - Conditionals, Events, and Sounds
             lessonGroup-3:
-              display_name: "[Optional] Extension: Events, Conditionals, and Variables"
+              display_name: Max-min thermometer with micro:bit - Events, Conditionals, and Variables
+            lessonGroup-4:
+              display_name: Step Counter with micro:bit - Events and Variables
           name: grade5-maker-2024
           title: Grade 5 - Maker with micro:bit
           description_audience: ''
@@ -16804,7 +16822,9 @@ en:
           description: ''
           student_description: ''
         k5-ai-data-2024:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: lesson test
           lesson_groups: {}
           name: k5-ai-data-2024
           title: How AI Makes Predictions
@@ -16886,3 +16906,16 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        gettingstarted-k5:
+          lessons:
+            lesson-1:
+              name: test
+            lesson-2:
+              name: t
+          lesson_groups: {}
+          name: gettingstarted-k5
+          title: 'Getting Started with Code.org '
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
