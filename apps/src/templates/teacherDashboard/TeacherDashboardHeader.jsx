@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
@@ -13,6 +13,7 @@ import Notification, {NotificationType} from '../Notification';
 import SmallChevronLink from '../SmallChevronLink';
 
 import FontAwesome from './../FontAwesome';
+import AgeGatedStudentsModal from './AgeGatedStudentsModal';
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import {
   asyncLoadCourseOfferings,
@@ -28,6 +29,12 @@ function TeacherDashboardHeader({
   openEditSectionDialog,
   asyncLoadCourseOfferings,
 }) {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
   React.useEffect(() => {
     asyncLoadCourseOfferings();
   }, [asyncLoadCourseOfferings]);
@@ -80,6 +87,20 @@ function TeacherDashboardHeader({
       />
     );
   };
+
+  const ageGatedStudentsNotification = () => {
+    return (
+      <Notification
+        type={NotificationType.warning}
+        notice={i18n.headsUp()}
+        details={i18n.childAccountPolicy_ageGatedStudentsWarning()}
+        buttonText={i18n.learnMore()}
+        buttonLink={'#'}
+        onButtonClick={toggleModal}
+        dismissable={false}
+      />
+    );
+  };
   /**
    * Returns the URL to the correct section to be edited
    */
@@ -100,6 +121,8 @@ function TeacherDashboardHeader({
         loginType: selectedSection.loginType,
       })}
       {selectedSection.postMilestoneDisabled && progressNotSavingNotification()}
+      {true && ageGatedStudentsNotification()}
+      <AgeGatedStudentsModal isOpen={modalOpen} onClose={toggleModal} />
       <div style={styles.header}>
         <div>
           <h1>{selectedSection.name}</h1>
