@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-foudations-pilot-v1",
-    "serialized_at": "2024-05-01 22:15:52 UTC",
+    "serialized_at": "2024-05-06 17:43:57 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -934,7 +934,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Teaching Tip: Vocabulary Management** - Artificial Intelligence may seem ubiquitous, but we don’t want to assume everyone in the room has heard this term before so we introduce it here so everyone starts with the same foundation. However, this sometimes introduces tension with vocabulary management - how should students keep track of vocabulary in this unit so they can reference it when needed? This unit provides a partial solution - students will get a graphic organizer at the end of this lesson that includes key vocabulary and concepts for the entire unit. However, not all words (like this one) are represented in that organizer. If you have your own system for tracking vocabulary, feel free to apply it for these terms as well. But it’s also reasonable to avoid this altogether and instead provide other supports for students to reference key vocabulary - for example, you could create a Word Wall or posters for these vocabulary terms and hang them up in your classroom as they are introduced throughout the unit. Or, you could have a vocabulary handout that is updated after lessons and lives near desks or computers so students can reference as needed."
+            "markdown": "**Teaching Tip: Vocabulary Management** - Artificial Intelligence may seem ubiquitous, but we don’t want to assume everyone in the room has heard this term before so we introduce it here so everyone starts with the same foundation. However, this sometimes introduces tension with vocabulary management - how should students keep track of vocabulary in this unit so they can reference it when needed? \n\nThis unit provides a partial solution - students will get a graphic organizer at the end of this lesson that includes key vocabulary and concepts for the entire unit. However, not all words (like this one) are represented in that organizer. If you have your own system for tracking vocabulary that you've used in previous units, consider applying it here as well so students have a consistent experience.\n\nIf you don't have a system for managing vocabulary, you might consider the following strategies:\n- Create a Word Wall or posters for these vocabulary terms and hang them up in your classroom as they are introduced throughout the unit. \n- Provide a vocabulary handout that is updated after lessons and lives near desks or computers so students can reference as needed."
           }
         ]
       },
