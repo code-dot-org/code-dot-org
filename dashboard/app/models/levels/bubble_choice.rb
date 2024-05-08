@@ -145,6 +145,10 @@ class BubbleChoice < DSLDefined
         build_script_level_url(script_level, {sublevel_position: index + 1}) :
         level_url(level.id)
 
+      level_info[:path] = script_level ?
+        build_script_level_path(script_level, {sublevel_position: index + 1}) :
+        level_path(level.id)
+
       if user_id
         level_for_sublevel_progress = BubbleChoice.level_for_progress_for_sublevel(level)
         user_level = UserLevel.find_by(

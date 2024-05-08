@@ -296,7 +296,8 @@ export const processedLevel = (level, parentLevelId) => {
       typeof level.page_number !== 'undefined'
         ? level.page_number
         : PUZZLE_PAGE_NONE,
-    scriptLevelId: level.id,
+    // Script level ID doesn't apply for sublevels. Set to undefined if we have a parent level.
+    scriptLevelId: parentLevelId ? undefined : level.id,
     sublevels:
       level.sublevels &&
       level.sublevels.map(sublevel => processedLevel(sublevel, id)),
