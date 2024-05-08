@@ -19,6 +19,7 @@ type FilesComponentProps = {
   moveFilePrompt: (fileId: FileId) => void;
   renameFilePrompt: (fileId: FileId) => void;
   renameFolderPrompt: (folderId: FolderId) => void;
+  toggleFileVisibility: (fileId: FileId) => void;
 };
 
 const InnerFileBrowser = React.memo(
@@ -31,6 +32,7 @@ const InnerFileBrowser = React.memo(
     moveFilePrompt,
     renameFilePrompt,
     renameFolderPrompt,
+    toggleFileVisibility,
   }: FilesComponentProps) => {
     const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
       useCodebridgeContext();
@@ -87,6 +89,7 @@ const InnerFileBrowser = React.memo(
                       moveFilePrompt={moveFilePrompt}
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
+                      toggleFileVisibility={toggleFileVisibility}
                     />
                   </ul>
                 )}
@@ -109,6 +112,9 @@ const InnerFileBrowser = React.memo(
                   </span>
                   <span onClick={() => deleteFile(f.id)}>
                     <i className="fa-solid fa-trash" />
+                  </span>
+                  <span onClick={() => toggleFileVisibility(f.id)}>
+                    <i className="fa-solid fa-eye" />
                   </span>
                 </span>
               </span>
@@ -259,6 +265,15 @@ export const FileBrowser = React.memo(() => {
     [renameFolder, project.folders]
   );
 
+  const toggleFileVisibility: FilesComponentProps['toggleFileVisibility'] =
+    useMemo(
+      () => fileId => {
+        const file = project.files[fileId];
+        console.log(file);
+      },
+      [project.files]
+    );
+
   return (
     <div className="file-browser">
       <div className="files-toolbar">
@@ -281,6 +296,7 @@ export const FileBrowser = React.memo(() => {
           moveFilePrompt={moveFilePrompt}
           renameFilePrompt={renameFilePrompt}
           renameFolderPrompt={renameFolderPrompt}
+          toggleFileVisibility={toggleFileVisibility}
         />
       </ul>
     </div>
