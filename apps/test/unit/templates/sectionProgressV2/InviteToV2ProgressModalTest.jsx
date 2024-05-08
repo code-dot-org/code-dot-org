@@ -18,12 +18,12 @@ import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
-const setShowProgressTableV2Stub = sinon.stub();
-const setHasSeenProgressTableInviteStub = sinon.stub();
+// const setShowProgressTableV2Stub = sinon.stub();
+// const setHasSeenProgressTableInviteStub = sinon.stub();
 
 const DEFAULT_PROPS = {
-  setShowProgressTableV2: setShowProgressTableV2Stub,
-  setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
+  setShowProgressTableV2: () => {},
+  setHasSeenProgressTableInvite: () => {},
   setDateProgressTableInvitationDelayed: () => {},
 };
 
@@ -46,8 +46,8 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
   afterEach(() => {
     restoreRedux();
     postStub.restore();
-    setHasSeenProgressTableInviteStub.restore();
-    setShowProgressTableV2Stub.restore();
+    // setHasSeenProgressTableInviteStub.restore();
+    // setShowProgressTableV2Stub.restore();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -72,7 +72,13 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
 
   it('allows user to accept the invitation', () => {
     // const postStub = sinon.stub($, 'post');
-    renderDefault();
+    const setShowProgressTableV2Stub = sinon.stub();
+    const setHasSeenProgressTableInviteStub = sinon.stub();
+
+    renderDefault({
+      setShowProgressTableV2: setShowProgressTableV2Stub,
+      setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
+    });
 
     expect(screen.getByText(i18n.progressTrackingAnnouncement())).be.visible;
     const acceptButton = screen.getByText(i18n.tryItNow());
@@ -96,7 +102,13 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
 
   it('allows user to decline the invitation', () => {
     // const postStub = sinon.stub($, 'post');
-    renderDefault();
+    const setShowProgressTableV2Stub = sinon.stub();
+    const setHasSeenProgressTableInviteStub = sinon.stub();
+
+    renderDefault({
+      setShowProgressTableV2: setShowProgressTableV2Stub,
+      setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
+    });
 
     const xButton = screen.getByLabelText(i18n.closeDialog());
     fireEvent.click(xButton);
