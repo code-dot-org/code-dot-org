@@ -1,5 +1,7 @@
 /** @file Actions that can be given to a playlab sprite to execute over a set time. */
 
+import {valueOr} from '../utils';
+
 import {
   Direction,
   DEFAULT_ACTOR_FADE_TIME,
@@ -7,7 +9,6 @@ import {
   SHAKE_DEFAULT_DISTANCE,
   SHAKE_DEFAULT_DURATION,
 } from './constants';
-import {valueOr} from '../utils';
 
 /**
  * Work/animation for a sprite to do that will require more than one tick/frame.

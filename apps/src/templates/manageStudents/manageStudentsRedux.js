@@ -6,7 +6,7 @@ import {
   sectionName,
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',

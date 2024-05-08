@@ -6,7 +6,8 @@ ja-JP:
   accelerated_gradelevel: 10-18 才
   accelerated_name: 上級コース
   account_sign_up_child_accept_terms: Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。
-  account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
+  account_sign_up_email_opt_in: コースの最新情報、地元でのイベント、その他コンピュータサイエンスに関する情報などをメールでお知らせしてもよろしいですか？
+    ( 概ね月1回)
   ai_activity: アクティビティ
   ai_aiedu_intro: 'AiEdu: 人工知能入門'
   ai_aiedu_intro_description: Intro to AI は、学生が AI とは何か、そしてそれが現実世界でどのように使用されているかについて、概念的な知識を身につけることができる、革新的で文化的な関連性を備えた無料のカリキュラムです。

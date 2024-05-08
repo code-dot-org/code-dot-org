@@ -20,6 +20,7 @@ Feature: Using the teacher dashboard
 
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
@@ -30,8 +31,17 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#ui-close-dialog"
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+
+    # Toggle to V2 progress view
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I wait until element "h6:contains(Icon Key)" is visible
+    And I wait until element "#ui-test-progress-table-v2" is visible
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I wait until element "#uitest-course-dropdown" is visible
 
     # Stats tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it

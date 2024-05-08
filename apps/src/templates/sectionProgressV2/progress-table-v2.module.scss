@@ -1,7 +1,6 @@
 @import "color.scss";
 
 .progressV2Page {
-  padding: 24px 64px 64px 64px;
   background-color: white;
 }
 
@@ -351,6 +350,24 @@ $level-cell-width: 52;
     line-height: 47px !important;
   }
 
+  &ChoiceLevelLink {
+    border-left: 1px solid $light_gray_100;
+    height: 32px;
+    margin: 8px 0;
+    line-height: 32px !important;
+    width: $level-cell-width + px;
+  }
+
+  &LevelCell {
+    display: flex;
+    border-left: 0;
+    width: auto;
+
+    &First {
+      border-inline-start: 1px solid $neutral_dark40;
+    }
+  }
+
   &LevelEmpty {
     height: 100%;
     width: 100%;
@@ -358,12 +375,12 @@ $level-cell-width: 52;
 }
 
 .sortDropdown {
-  height: 72px;
+  height: 64px;
   width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .studentColumn {

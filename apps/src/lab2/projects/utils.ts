@@ -1,11 +1,13 @@
-import getScriptData from '@cdo/apps/util/getScriptData';
-import {ProjectFile, ProjectType} from '../types';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+import {ProjectFile} from '../types';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.
-interface PartialAppOptions {
+export interface PartialAppOptions {
   channel: string;
-  projectType: ProjectType;
+  editBlocks: string;
+  levelId: number;
+  share: boolean;
 }
 
 /**
@@ -17,13 +19,43 @@ interface PartialAppOptions {
  * Note: We are trying to use app options as little as possible.
  */
 export function getStandaloneProjectId(): string | undefined {
-  const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  return appOptions.channel;
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.channel;
+  }
 }
 
-export function getProjectType(): string {
-  const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  return appOptions.projectType;
+/**
+ * Returns the level ID provided by App Options, if available.
+ * This is specifically used in scenarios where the level ID is not provided
+ * by other means (for example via header.js)
+ */
+export function getAppOptionsLevelId(): number | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.levelId;
+  }
+}
+
+/**
+ * Returns the edit mode provided by App Options, if available.
+ * This can be used to tell if we are a levelbuilder mode (e.g. start_sources)
+ */
+export function getAppOptionsEditBlocks(): string | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.editBlocks;
+  }
+}
+/**
+ * Returns if the lab should presented in a share/play-only view,
+ * if present in App Options. Only used in standalone project levels.
+ */
+export function getIsShareView(): boolean | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.share;
+  }
 }
 
 /**

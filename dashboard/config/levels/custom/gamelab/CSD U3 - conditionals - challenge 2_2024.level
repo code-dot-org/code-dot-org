@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:12:09.000Z",
   "level_num": "custom",
@@ -84,7 +85,8 @@
       "equalityOperator": null,
       "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
-      "lessThanOrEqualOperator": null
+      "lessThanOrEqualOperator": null,
+      "assign_x": null
     },
     "show_debug_watch": "true",
     "palette_category_at_start": "sprites",
@@ -120,9 +122,8 @@
     "start_blocks": "var tree = createSprite(200, 220);\r\ntree.setAnimation(\"tree\");\r\ntree.scale = 0.75;\r\n\r\nvar ghost = createSprite(300, 320);\r\nghost.setAnimation(\"ghost\");\r\n\r\nvar monster = createSprite(400, 320);\r\nmonster.setAnimation(\"orange_monster\");\r\nmonster.scale = 0.35;\r\n\r\n\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"plum\");\r\n  fill(\"palegreen\");\r\n  rect(-5, 350, 405, 50);\r\n\r\n  // 1) Use the counter pattern to make the ghost and monster sprites both travel from right to left.\r\n\r\n\r\n\r\n\r\n  //2) Add a conditional that checks to see if the ghost sprite has gone off the left side of the screen.\r\n  //3) Inside the conditional, reset the ghost sprite's location to the right side of the screen\r\n\r\n\r\n\r\n\r\n  //4) Repeat steps 2 & 3 for the monster sprite\r\n\r\n\r\n  // Draw Animations\r\n  drawSprites();\r\n  \r\n}",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:12:09.925+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - challenge 2_2023\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - challenge 2_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:12:09.925+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - challenge 2_2023\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - challenge 2_2023\"},{\"changed_at\":\"2024-04-25 15:45:18 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

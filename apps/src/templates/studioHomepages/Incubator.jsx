@@ -6,7 +6,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import Button from '@cdo/apps/templates/Button';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import {LmsLinks} from '@cdo/apps/util/sharedConstants';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import HeaderBanner from '../HeaderBanner';
@@ -60,6 +60,27 @@ class Incubator extends Component {
               computer science education. We would love to hear what you think.
             </p>
           </div>
+
+          <TwoColumnActionBlock
+            imageUrl="/shared/images/teacher-announcement/incubator-rubrics-pilot-graphic.png"
+            subHeading={i18n.incubator_aiRubric_title()}
+            description={
+              <span>
+                {i18n.incubator_aiRubric_desc1()}{' '}
+                <a href="https://www.edweek.org/technology/this-ai-tool-cut-one-teachers-grading-time-in-half-how-it-works/2024/04">
+                  {i18n.incubator_aiRubric_descLink()}
+                </a>{' '}
+                {i18n.incubator_aiRubric_desc2()}
+              </span>
+            }
+            marginBottom="20px"
+            buttons={[
+              {
+                url: 'https://code.org/ai/teaching-assistant',
+                text: 'Learn More',
+              },
+            ]}
+          />
 
           {this.state.canvasBlockEnabled && (
             <TwoColumnActionBlock

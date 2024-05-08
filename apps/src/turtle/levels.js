@@ -1,8 +1,10 @@
+var blockUtils = require('../block_utils');
 var levelBase = require('../level_base');
+var utils = require('../utils');
+
 var answer = require('./answers').answer;
 var msg = require('./locale');
-var blockUtils = require('../block_utils');
-var utils = require('../utils');
+var req = require('./requiredBlocks');
 
 // An early hack introduced some levelbuilder levels as page 5, level 7. Long
 // term we can probably do something much cleaner, but for now I'm calling
@@ -25,7 +27,6 @@ var startBlocks = function (page, level) {
   });
 };
 
-var req = require('./requiredBlocks');
 var makeMathNumber = req.makeMathNumber;
 var simpleBlock = req.simpleBlock;
 var repeat = req.repeat;

@@ -1,0 +1,2782 @@
+{
+  "script": {
+    "name": "elem-game-design-2024",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "2024"
+    },
+    "new_name": null,
+    "family_name": "elem-game-design",
+    "serialized_at": "2024-05-07 22:06:45 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "elem-game-design-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Game Design",
+      "name": "Game Design",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "This lesson is intended to prepare students to create simple game projects in Sprite Lab, a block-based programming environment where you can make simple animations and games with objects and characters that interact with each other. Students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves. \n\nIn this skill-building lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Students will learn to create and animate sprites and make them interactive using events."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "Variables as Score",
+      "name": "Variables as Score",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "In this skill-building lesson students will use variables to track a value that changes over time, like a counter or a scoreboard in a game. Students will begin learning how to modify the data stored in a variable by setting the initial value in the program and using events that cause the data to change based on user interaction. This key understanding of how variables work will also enable them to create more advanced projects and games.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "Environment and Players",
+      "name": "Environment and Players",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "In this skill-building lesson, students will delve into the world of game mechanics while furthering their understanding of Sprite Lab. Students will explore the mechanics that make games fun and engaging. They will learn about concepts such as player movement, obstacles, scoring systems, and win/lose conditions. They will begin to assign roles to different elements within their games learning to differentiate between sprites that act as players (controlled by the user) and sprites that form the environment (static elements or obstacles). They will understand the roles these sprites play in shaping gameplay dynamics.  \n\nThroughout the lesson, students will apply their knowledge by designing and implementing game mechanics using Sprite Lab. By the end of the lesson, they will have a solid grasp of how to create interactive and engaging game experiences within the framework of Sprite Lab and will be ready to code their own creative game in the following lesson!"
+      },
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "Game Jam Day 1: Create",
+      "name": "Game Jam Day 1: Create",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**Get ready to join a Game Jam!** In this creative project-based lesson, students will apply their newfound skills in Sprite Lab to develop an original game from start to finish in the context of game development industry practice: Game Jam.  Students will experience the thrill of rapid game development as they participate in a collaborative challenge to create a new game based on a randomly generated theme. Working against the clock, they'll brainstorm, plan, and code their games, embracing the creative constraints of the theme to produce innovative and engaging gameplay experiences. Students will include variables in their games to track and modify values dynamically. \n\nBy the end of the lesson, they will have gained experience in game design, coding, and problem-solving, ready to share their creations with others in a user testing experience in the next lesson."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "Game Jam Day 2: Play",
+      "name": "Game Jam Day 2: Play",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "In this culminating lesson, students will learn how to collect and analyze valuable data from users of their games. This will empower them to make informed decisions for future iterations and improvements. Through hands-on activities and discussions, students will delve into the importance of user feedback and data-driven decision-making in game development. \n\nBy the end of the lesson, they'll understand how to leverage the data they collected in order to iterate on their games, refine gameplay mechanics, user interfaces, and the overall player experience. This final lesson equips students with the skills and mindset needed to create games that continuously evolve and improve based on user insights."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "75ad6492-e190-4721-a8da-1384ba8ac4de",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75ad6492-e190-4721-a8da-1384ba8ac4de",
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "837bdd2f-37c7-4c6f-96fa-c583e9610214",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "837bdd2f-37c7-4c6f-96fa-c583e9610214",
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "84639837-d608-4597-b383-4ad44bd68ec9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "84639837-d608-4597-b383-4ad44bd68ec9",
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "f9b26f87-df75-4900-bb44-151fc6af4dbb",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9b26f87-df75-4900-bb44-151fc6af4dbb",
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "640b723f-6635-43b2-9899-f54b278c3ff9",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "640b723f-6635-43b2-9899-f54b278c3ff9",
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "9d95bb6b-202d-4069-a586-b77dc9bcdd88",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9d95bb6b-202d-4069-a586-b77dc9bcdd88",
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "3d008b2f-bdf5-41b2-b81e-9d7dfb394a01",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d008b2f-bdf5-41b2-b81e-9d7dfb394a01",
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "0ced4cfe-5071-4e3d-9b16-c6a46a15f0d1",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ced4cfe-5071-4e3d-9b16-c6a46a15f0d1",
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "e9f182be-3af3-428a-9143-cc1866d39afb",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e9f182be-3af3-428a-9143-cc1866d39afb",
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "beb167fe-d638-47e3-9cc1-5895ac414164",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "beb167fe-d638-47e3-9cc1-5895ac414164",
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "4df7386b-8779-48a3-9436-de1728991280",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4df7386b-8779-48a3-9436-de1728991280",
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "22c9fdeb-641a-4da9-9819-56de3590956d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22c9fdeb-641a-4da9-9819-56de3590956d",
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "95406d70-f442-49b0-adef-a8df15fa863d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95406d70-f442-49b0-adef-a8df15fa863d",
+        "lesson.key": "Game Jam Day 2: Play",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "98d0bc4b-250d-4c55-82ea-7c07501c0eda",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98d0bc4b-250d-4c55-82ea-7c07501c0eda",
+        "lesson.key": "Game Jam Day 2: Play",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "key": "6287977c-6d4d-4f3f-8186-5dde07ba96f7",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6287977c-6d4d-4f3f-8186-5dde07ba96f7",
+        "lesson.key": "Game Jam Day 2: Play",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9ec20400-9479-4364-b980-98ffc7ee41a6",
+      "position": 1,
+      "properties": {
+        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide0.png)   | <p><a href=\"https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview\" target=\"_blank\">Click here to access slides<br></a></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide1.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide2.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide3.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide4.png)   | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide5.png)   | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide6.png)   | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the slide<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide7.png)   | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Sprites are objects that have different attributes or properties. The object is like a car that has different properties like size, color, make, model, and year. Or it’s like a dog that has a size, breed, age, color. Each sprite can be a little different and you can set the properties with code.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide8.png)   | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> You will choose the costume the sprite starts with and you can code the costume to change whenever you want in the program or game.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide9.png)   | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How would you describe this sprite scene? If you wanted someone to create this scene for you on a computer what instructions would they need?<br></p><p><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should identify both sprites in this project, describe their behaviors (movements), and also notice there is a background. Give students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide10.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s look at these instructions line by line<br></p><p><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation to reveal each new line of the instructions<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide11.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is the code that was used to make this scene. Let’s read through it together. The computer always reads code in the sequence (order) it is written from top to bottom.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the code one block at a time starting at the top. Point to each block and each image as you go. Make a note about sequence and how we couldn't put the behavior block before the make sprite block because the computer reads code form top to bottom accentuating the remark above.<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the same or different about our instructions and this code?<br></p><p><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will notice the code sequence was similar to the instructions. They will see each part was specifically mentioned (background, penguin, fire box, and the penguin’s movement). They will also see how the coding blocks describe what the code will do, for example “sprite begins patrolling” makes it clear that this sprite will start a “patrolling” behavior.<br><br></p>|"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ec20400-9479-4364-b980-98ffc7ee41a6",
+        "lesson_activity.key": "75ad6492-e190-4721-a8da-1384ba8ac4de"
+      }
+    },
+    {
+      "key": "95db67f0-4d2e-48d5-a359-489850c3a3e0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Game Design Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "95db67f0-4d2e-48d5-a359-489850c3a3e0",
+        "lesson_activity.key": "837bdd2f-37c7-4c6f-96fa-c583e9610214"
+      }
+    },
+    {
+      "key": "a4cbc6b8-7f71-4720-9bf1-b175c1e154d2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sprite Behaviors"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4cbc6b8-7f71-4720-9bf1-b175c1e154d2",
+        "lesson_activity.key": "837bdd2f-37c7-4c6f-96fa-c583e9610214"
+      }
+    },
+    {
+      "key": "94321661-0ae5-49f7-8235-a98501da2a6a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "94321661-0ae5-49f7-8235-a98501da2a6a",
+        "lesson_activity.key": "837bdd2f-37c7-4c6f-96fa-c583e9610214"
+      }
+    },
+    {
+      "key": "f00598c1-086e-4918-8cda-f1255dd2f5b4",
+      "position": 4,
+      "properties": {
+        "progression_name": "Groups of Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4",
+        "lesson_activity.key": "837bdd2f-37c7-4c6f-96fa-c583e9610214"
+      }
+    },
+    {
+      "key": "86bb5b91-19ab-41d4-aad5-7987ce8a6c80",
+      "position": 5,
+      "properties": {
+        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide12.png)  | <p><br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g26883921e75_0_44)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the video for students.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide14.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to their devices. Have them go to <a href=\"https://studio.code.org/s/pilot-k5-game-design/lessons/1/levels/2\" target=\"_blank\">Level 2</a>. Remind them to follow the instructions on each level, click on the light bulb for hints and read the feedback in the yellow box under the instructions if something is not quite right in their code.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Independent Work Time</summary><br>In Levels 2-16, students will be following instructions and working at their own pace. Here are a few tips that should help students while they're working through the levels:</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide15.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> When several students have reached level 6, pause students’ independent work in order to give an overview of events. It’s okay if the whole class is not quite finished with Level 5 to preview events.<br><br>Explain how events work with the four part diagram on this slide. 1. The user presses a key on the keyboard. 2. The keyboard sends a signal to the computer. 3. The computer makes a decision based on the code. 4. The computer updates the display.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide16.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Explain that arrow keys are one type of event that can make a program interactive.<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What other ways could we give a user control over what happens in an app or game?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will start to recognize that events trigger actions to happen on the computer. Some other examples might include: pushing the power button, moving the mouse, clicking on an button on the screen, pressing buttons on the keyboard<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide17.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the slide aloud to the class. This is a very common misconception in coding events in Sprite Lab.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide18.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students back to their devices. Have them resume where they left off and work up to level 9.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide19.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Pause students’ independent work when several students have finished level 9 in order to give an overview of using groups of sprites. It’s okay if the whole class is not yet finished with level 9 to preview the Lots of Sprites video.<br><br>Play the video for students as a whole class.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide20.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> When you’re working with groups of sprites, sometimes you will only want to give instructions to one sprite at a time. To help achieve this, events have a mini-toolbox that opens when you click the +.<br>Inside the toolbox are subject and object sprites that you can drag into other coding blocks for more precise control.<br><br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide21.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students back to their devices. Have them resume where they left off for the remainder of the levels.<br><br></p>|\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "86bb5b91-19ab-41d4-aad5-7987ce8a6c80",
+        "lesson_activity.key": "837bdd2f-37c7-4c6f-96fa-c583e9610214"
+      }
+    },
+    {
+      "key": "fe2d00cc-ee41-4b2e-8177-aa5f95ac72fc",
+      "position": 1,
+      "properties": {
+        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide22.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide23.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide24.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Look over and read aloud the 3 code snippets together as a class.<br><br><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click on the slide to reveal the first scenario<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students write down which code they think would be best. After everyone has an answer, discuss as a class. Repeat for all three scenarios.<br><br>…to arrange 8 enemies in a perfect line? [Answer: Code C because with the grid block you can easily place multiple sprites exactly where you want them to go]<br><br>… to make a game with 100 randomly placed gems to collect? [Answer: Code B because with this block you can choose the number of sprites and they will be randomly placed on screen]<br><br>…to set the location of one player at the beginning of the game? [Answer: Code A because with this block you are placing just one sprite at a time and setting the location with x,y coordinates]<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> When we are coding there are often many different ways to program the same thing. The best solution is the one that creates the shortest, most efficient program.<br><br><br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide25.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great job today, coders! In the next lesson we will learn how to use variables to keep track of score in a game.<br><br><br><br><br></p>|"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe2d00cc-ee41-4b2e-8177-aa5f95ac72fc",
+        "lesson_activity.key": "84639837-d608-4597-b383-4ad44bd68ec9"
+      }
+    },
+    {
+      "key": "54bec48a-be2c-4d5a-9a3d-8b7cdf178125",
+      "position": 1,
+      "properties": {
+        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide26.png)  | <p><a href=\"https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview\" target=\"_blank\">Click here to access slides</a><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide27.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide28.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide29.png)  | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide30.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the slide<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide31.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students read the code aloud one line at a time. It may be helpful to have a student (or yourself) point to one block at a time and students read aloud as a group or quietly in pairs.<br><br>Then label the each of the following actions. If you are not projecting the slides onto a white board or smartboard that you can write on, just point to the block that matches each action on the list.<br><br>- Main player sprite [Answer: Red block- make new unicorn sprite]<br>- Opponent/Enemy Sprites [Answer: Red block- make 3 new small fireball sprites]<br>- Main character’s movement [Answer: Blue block- sprite unicorn begins moving with arrow keys]<br>- What happens when sprites touch? [Answer: remove unicorn sprite and fireball says Game over!]<br>- Mountain scene in the background [Answer: Purple block set background to mountain scene]<br>- Sprite explains how to play [Answer: Blue block- unicorn says Avoid the fireballs!]<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide32.png)  | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How do you play this game? How do you win/lose?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> By looking at the code, we can make a guess about how to play. We can see the unicorn’s behavior is set to `moving with arrow keys` so we know we will be controlling the unicorn with arrow keys. We see that the unicorn gives us instructions to “Avoid the fireballs!” so we know we have to try not to let the fireballs touch the unicorn. Under the event `when unicorn touches fireball` we see the unicorn goes away and the game is over so we can assume that’s how you would lose the game. By looking closely at each line of code, students will gain confidence and experience reading the code blocks and understanding the purpose of each block.<br></p>|\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "54bec48a-be2c-4d5a-9a3d-8b7cdf178125",
+        "lesson_activity.key": "f9b26f87-df75-4900-bb44-151fc6af4dbb"
+      }
+    },
+    {
+      "key": "4b35affb-1817-4752-92d8-780f16a0c708",
+      "position": 1,
+      "properties": {
+        "progression_name": "Intro to Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b35affb-1817-4752-92d8-780f16a0c708",
+        "lesson_activity.key": "640b723f-6635-43b2-9899-f54b278c3ff9"
+      }
+    },
+    {
+      "key": "d043e5ad-0156-402e-8da7-36fde33739e6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6",
+        "lesson_activity.key": "640b723f-6635-43b2-9899-f54b278c3ff9"
+      }
+    },
+    {
+      "key": "d1212f17-b7ee-451f-bb35-e951da6f556c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Practice & Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1212f17-b7ee-451f-bb35-e951da6f556c",
+        "lesson_activity.key": "640b723f-6635-43b2-9899-f54b278c3ff9"
+      }
+    },
+    {
+      "key": "c8bc9964-9295-4a52-942c-5223144a927e",
+      "position": 4,
+      "properties": {
+        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide33.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide34.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students transition to their computer and explore the choices on level 1<br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g2bf6befb715_0_71)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the video for students.<br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g2c237d4bf3d_0_103)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Variables can be very powerful and helpful to use in your code! As we saw in the video, we will be adding variables to some games to help us store and keep track of information as it changes during the game.<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Point out that variables are similar to a box that holds information (data). We can always find the information (data) by looking in the correct box. Then have students click through the panels on <a href=\"http://studio.code.org/s/pilot-k5-game-design/lessons/2/levels/3\" target=\"_blank\">level 3</a> to preview how to use them in their game.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide37.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students work through the levels at their own pace.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide38.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Carefully match the code on the right with the images of the left. This will help me know how well you are understanding how to code variables in Sprite Lab<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Checks for understanding</summary><br>It's helpful to check that students understand how variables can work in their program. It is encouraged to look over students' answers and check for any misconceptions at this point in the progression.</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide39.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students work through the levels at their own pace.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide40.png)  | <p><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Prediction Level</summary><br>In prediction levels students are asked to read the provided start code and predict what the code will do when they click “Run”. The \"Run\" button is not able to be clicked until the student types something in the text box. Prediction levels, unlike matching levels are not intended to be a Check For Understanding but an opportunity for students to make an educated guess about what an unfamiliar program does. Instead of using this level as an assessment of student learning, we encourage you to use this as a way to start a discussion with students about how variables work in their code.</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide41.png)  | <p><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Pacing</summary><br>By this point in the lesson, students working independently will be at different places in the level progression. This is perfectly okay and expected. Level 11 is built as a choice level to give students extra practice but it is not required that students complete all of the options. Similarly, Level 12 is an open ended project meaning you can have students spend as much or as little time on it as is left in the class session.</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide42.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Encourage students to get creative here! If they’re having trouble getting started, you might suggest that they try recreating a game they have played before.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Free Play Level</summary><br>Free Play levels are like offering an artist all the tools they need to fill a blank page. This is an opportunity for students to apply the skills and concepts they learned throughout the progression with a high ceiling for creativity. These levels can be remixed and shared.</details></p>|\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8bc9964-9295-4a52-942c-5223144a927e",
+        "lesson_activity.key": "640b723f-6635-43b2-9899-f54b278c3ff9"
+      }
+    },
+    {
+      "key": "720dafa0-49f6-4855-9104-d51ad5c001f3",
+      "position": 1,
+      "properties": {
+        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide43.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide44.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide45.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Take a moment to look carefully at this game and the code that created it.<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Decide to have students write down their answers for you to collect or if a group discussion would work best for your class.<br><br><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation to reveal each question. Give students time to consider their answer, then have them write it or discuss with a partner. Repeat for each question.<br><br>What are the two variables in this program? [Answer: Points and Power]<br>Explain how the variable power changes. [Answer: Power decreases by one when the cow touches the fireball]<br>Explain why the variables have different starting values. [Answer: The variables start at different values because one will increase and while the other will decrease]<br><br><br></p>|\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "720dafa0-49f6-4855-9104-d51ad5c001f3",
+        "lesson_activity.key": "9d95bb6b-202d-4069-a586-b77dc9bcdd88"
+      }
+    },
+    {
+      "key": "f6fcf975-b4c1-497c-8fba-b1a4fadf08c5",
+      "position": 1,
+      "properties": {
+        "description": "| Slide                                                                                                         | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |\n| ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide46.png)  | <p><br><a href=\"https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview\" target=\"_blank\">Click here to access slides</a></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide47.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide48.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide49.png)  | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide50.png)  | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide51.png)  | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide52.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the slide<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide53.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now that we’ve learned the basics of Sprite Lab in lesson 1 and how to use variables in lesson 2, we’re ready to learn about and apply game mechanics!<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Guide students to look at the image closely. You can play the video animation of the image and pause it as needed.<br><br><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the slide to reveal one example of game mechanics at a time. Read the line and find the evidence in the image or video<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide54.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now let’s look at another classic video game and answer the following questions about the game mechanics.<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> You can play the video animation and pause it as needed.<br><br><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the slide to reveal one question at a time. Read the question and find the evidence in the image or video<br><br>[Answer: The objective is to collect coins and jump on monsters. We know this because the scoreboard increases each time Mario gets a coin or smashes the monster. There is a scoreboard and a coin collection at the top.]<br>[Answer: Mario can get points and coins]<br>[Answer: Mario runs on top of the ground blocks, jumps on top of bricks, jumps over on onto monsters, etc]<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide55.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Here is another classic video game, Frogger.<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> You can play the video of the image in action and pause as needed. Consider having students write their answers individually before discussing as a class if you would like to use as a check for understanding of the newly introduced concept of game mechanics.<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are the game mechanics of the classic Frogger game?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will be able to explain how the frog moves on the screen, and the basic objective and rules of the game.<br><br>An example response might be: “In this game the player controls the frog by moving it up, down, right, or left. The goal is to get across the road and then across the river. If the frog touches a car, it has to start over. If the frog touches the water, it has to try crossing again by jumping on top of turtles and logs as they move.<br><br><br><br></p>|\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6fcf975-b4c1-497c-8fba-b1a4fadf08c5",
+        "lesson_activity.key": "3d008b2f-bdf5-41b2-b81e-9d7dfb394a01"
+      }
+    },
+    {
+      "key": "acb89784-b45d-4eee-893a-7d05d1e2fc36",
+      "position": 1,
+      "properties": {
+        "name": "Level Details:",
+        "progression_name": "Sprite Type: Environment"
+      },
+      "seeding_key": {
+        "activity_section.key": "acb89784-b45d-4eee-893a-7d05d1e2fc36",
+        "lesson_activity.key": "0ced4cfe-5071-4e3d-9b16-c6a46a15f0d1"
+      }
+    },
+    {
+      "key": "569c0277-323e-439e-b438-8bd5731552ff",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sprite Type: Player"
+      },
+      "seeding_key": {
+        "activity_section.key": "569c0277-323e-439e-b438-8bd5731552ff",
+        "lesson_activity.key": "0ced4cfe-5071-4e3d-9b16-c6a46a15f0d1"
+      }
+    },
+    {
+      "key": "02f92ece-f68c-4196-8fad-fcf615542b48",
+      "position": 3,
+      "properties": {
+        "progression_name": "Create a game"
+      },
+      "seeding_key": {
+        "activity_section.key": "02f92ece-f68c-4196-8fad-fcf615542b48",
+        "lesson_activity.key": "0ced4cfe-5071-4e3d-9b16-c6a46a15f0d1"
+      }
+    },
+    {
+      "key": "09ad5c6f-0498-4dab-bf6b-6ecd556345e3",
+      "position": 4,
+      "properties": {
+        "description": "| Slide                                                                                                         | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |\n| ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide56.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide57.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> On this exploratory choice level, students don't have to complete all levels but can choose one that interests them<br><br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g2c40b6689ed_2_494)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Have you ever played a game where you can jump from platform to platform? How does your game know which sprites should act like walls or floors and which sprite is the player? A sprite’s type helps identify them and determine how they interact with sprites of other types. For example, “player” sprites might be able to jump, while “environment” sprites stop other sprites from moving through them.<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> As a class or in pairs, have students look over the gifs and read the text on the first and second panel in <a href=\"http://studio.code.org/s/pilot-k5-game-design/lessons/3/levels/2\" target=\"_blank\">level 2</a>.<br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g2c40b6689ed_2_474)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students work through the levels at their own pace.<br><br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g26cd249a908_0_4)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now let’s learn about the other sprite type: player. <br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> As a class or in pairs, have students look over the gifs and read the text on all four panels in <a href=\"http://studio.code.org/s/pilot-k5-game-design/lessons/3/levels/5\" target=\"_blank\">level 5</a>.<br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g2c40b6689ed_2_457)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students work through the levels at their own pace.<br><br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g2c40b6689ed_2_485)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> This level is an exploration of a game that has been made. Students can pass the level by using the arrow keys to make the player sprite catch all 5 hearts.<br><br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g2c40b6689ed_2_522)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students work through the levels at their own pace.<br><br></p>|\n| ![](https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/png?id=1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo&pageid=g2c40b6689ed_2_512) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Students can use their newly developed skills in a creative way on this free play level.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Free Play Level</summary><br>Free Play levels are like offering an artist all the tools they need to fill a blank page. This is an opportunity for students to apply the skills and concepts they learned throughout the progression with a high ceiling for creativity. These levels can be remixed and shared.</details></p>|\n",
+        "name": "Lesson Details:"
+      },
+      "seeding_key": {
+        "activity_section.key": "09ad5c6f-0498-4dab-bf6b-6ecd556345e3",
+        "lesson_activity.key": "0ced4cfe-5071-4e3d-9b16-c6a46a15f0d1"
+      }
+    },
+    {
+      "key": "d6e4254f-5b18-4250-94be-ab2d15b900d1",
+      "position": 1,
+      "properties": {
+        "description": "| Slide                                                                                                         | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |\n| ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide64.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide65.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide66.png)  | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What makes a game fun? What makes a game not so fun?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may come up with a wide variety of answers for these questions and many will be personal preferences. Continue advancing the discussions until they can find some things they all agree on. Ideally, they will identify that games with just the right amount of challenge are more fun that games that are too easy or too difficult. Also fun games tend to have clear and solid game mechanics.</p>|\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6e4254f-5b18-4250-94be-ab2d15b900d1",
+        "lesson_activity.key": "e9f182be-3af3-428a-9143-cc1866d39afb"
+      }
+    },
+    {
+      "key": "a3a5ea11-a5a0-49e6-8457-aa17b96fc4ca",
+      "position": 1,
+      "properties": {
+        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide67.png)  | <p><br><br><a href=\"https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview\" target=\"_blank\">Click here to access slides</a><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide68.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide69.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide70.png)  | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Watch these Game Jam videos for reference</summary><br>Here are two videos that explain what a Game Jam is and how it works. This first <a href=\"https://www.youtube.com/watch?v=3QYq0HOneIg\" target=\"_blank\">video</a> is a thorough explanation of how game jams work. Feel free to watch only up to 1:40. This second <a href=\"https://www.youtube.com/watch?v=9U4KurpH57s\" target=\"_blank\">video</a> features students in Bulgaria who have participated in a Game Jam and are sharing their thoughts. Note that this second video features subtitles in English, which you may want to read aloud for students.</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide71.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the slide<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide72.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’re ready to make our own games in today’s Game Jam! Let’s get our creativity warmed up with some quick brainstorming<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Use the steps listed to come up with 3-5 games very quickly as a whole class. The purpose of this warm up is to model quick decision making by keeping the ideas simple. Show how students can make up parts of the game – without including too many details – and then move on to the next idea.<br><br>Open both spinners in their own tabs: <a href=\"https://wheelofnames.com/wkm-e9j\" target=\"_blank\">Game Mechanic Spinner Link</a>, <a href=\"https://wheelofnames.com/e6p-gd3\" target=\"_blank\">Game Character Spinner Link</a><br>1. Spin to randomly select a game mechanic.<br>2. Spin to choose the main character.<br>3. With your randomly selected game mechanic and character, use the sentence stems on the slide to brainstorm a silly game.<br><br><strong>The goal is to keep it simple, silly and quick-paced.</strong> Here are some examples you might come up with:<br>- You spun ‘avoid’ &#x26; ‘grumpy cat’. In this game the grumpy cat tries to avoid the floating hearts. The variable would be named grumpyLevel and it would decrease when the cat touches the heart.<br>- You spun ‘click’ and ‘sassy fox.’ In this game the player tries to click on the sassy fox but she keeps disappearing and changing her location so it’s challenging to catch her. The variable would be named score and it would increase each time the player clicks on the sassy fox before she disappears.<br>- You spun ‘move’ and ‘chill sloth.’ In this game the chill sloth is moving extremely slow and the player tries to move him to his food before the fast ants eat it all. The variable would be named food. It would increase when the sloth touches the food and decrease when the ants touch the food.<br><br></p>|"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3a5ea11-a5a0-49e6-8457-aa17b96fc4ca",
+        "lesson_activity.key": "beb167fe-d638-47e3-9cc1-5895ac414164"
+      }
+    },
+    {
+      "key": "dfd59aee-5f33-44f4-a73b-05f231a42e2f",
+      "position": 1,
+      "properties": {
+        "duration": "2",
+        "name": "Game Jam Theme Generator",
+        "progression_name": "Game Jam Theme Generator"
+      },
+      "seeding_key": {
+        "activity_section.key": "dfd59aee-5f33-44f4-a73b-05f231a42e2f",
+        "lesson_activity.key": "4df7386b-8779-48a3-9436-de1728991280"
+      }
+    },
+    {
+      "key": "ab3ce2af-af1b-4927-bdff-83da5d3e32d3",
+      "position": 2,
+      "properties": {
+        "duration": "8",
+        "name": "Quick Plan",
+        "progression_name": "Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab3ce2af-af1b-4927-bdff-83da5d3e32d3",
+        "lesson_activity.key": "4df7386b-8779-48a3-9436-de1728991280"
+      }
+    },
+    {
+      "key": "4f71d687-fa98-4d1e-abad-99240aacc9c9",
+      "position": 3,
+      "properties": {
+        "duration": "25",
+        "name": "Make the Game",
+        "progression_name": "Create"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f71d687-fa98-4d1e-abad-99240aacc9c9",
+        "lesson_activity.key": "4df7386b-8779-48a3-9436-de1728991280"
+      }
+    },
+    {
+      "key": "df7a3ae9-55e2-4351-a941-a6a4cc452830",
+      "position": 4,
+      "properties": {
+        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide73.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide74.png)  | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s start the Game Jam!<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Use this random team generator or any other strategy to create groups of 2-3 students. Have students sit with their teams.<br></p><p><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Pair Programming</summary><br>Pair programming allows students to work together on programming projects, side-by-side at the same computer. Students can choose teammates from a list of other students in their section when they are ready to pair, and then teachers can track both team progress and individual student progress. Refer to this complete guide to setting up pair programming on the Code.org platform.</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide75.png)  | <p><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1hTmxVocE21LqVcYnLQT5b1xTqdcKZsP9SFV7QvnWeFA/template/preview\" target=\"_blank\">Game Plan &#x26; Create Activity Guide</a><br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> In teams, have students ready to complete the first question on the plan using Lesson 4 Level 1, Game Jam Theme Generator.<br><br><br><br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide76.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Open <a href=\"http://studio.code.org/s/pilot-k5-game-design/lessons/4/levels/1\" target=\"_blank\">Lesson 1 Level 1</a>. It may be most efficient and effective for the instructor to make the official roll (or have a student come to the board to do the clicking) to generate a theme for each team. Have the students write the results on their <a href=\"https://docs.google.com/document/d/1hTmxVocE21LqVcYnLQT5b1xTqdcKZsP9SFV7QvnWeFA/template/preview\" target=\"_blank\">Game Plan &#x26; Create Activity Guide</a>.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide77.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete their <a href=\"https://docs.google.com/document/d/1hTmxVocE21LqVcYnLQT5b1xTqdcKZsP9SFV7QvnWeFA/template/preview\" target=\"_blank\">Game Plan &#x26; Create Activity Guide</a> as a team.<br></p><p><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Pacing</summary><br>It might be helpful to time box each question to just 1-2 minutes in order to finish the plan with enough time to code their game. For any students having trouble getting started offer the option to model their game after another game they have played before so that all team members can visualize what they will be creating.</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide78.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> This is an optional slide to support students who might need help thinking of ideas for their selected game mechanic.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide79.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the video for students. There is also this alternate <a href=\"https://www.youtube.com/watch?v=q7d_JtyCq1A\" target=\"_blank\">pair programming video </a>for older students.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide80.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Before students begin coding their game together they will need to turn on pair programming and choose their teammates. They can choose up to three other students in the class to pair with. Refer to this <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work\" target=\"_blank\">complete guide</a> to setting up pair programming on the Code.org platform.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide81.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have one student in each group (with pair programming turned on) navigate to level 3 and use the checklist to code their game together. Consider using a timer to keep track of when it is time to switch roles so that each team member gets a chance to be the driver and the navigator.<br></p><p><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: How to display student work from your Teacher Panel</summary><br>If you are signed in and your students are in your class section, you can navigate to Level 1, open your Teacher Panel, and find the student’s name to access their work. <a href=\"https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-\" target=\"_blank\">Click here to learn more about the Teacher Panel</a>.</details></p>|"
+      },
+      "seeding_key": {
+        "activity_section.key": "df7a3ae9-55e2-4351-a941-a6a4cc452830",
+        "lesson_activity.key": "4df7386b-8779-48a3-9436-de1728991280"
+      }
+    },
+    {
+      "key": "2e020bbb-a226-49b0-960f-5952fd1ff828",
+      "position": 1,
+      "properties": {
+        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide82.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide83.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students write their answers to these reflection questions or discuss in pairs.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: If you’re short on time, choose 1 or 2 of the questions</summary><br>You might choose to give more time to 1 or 2 of these reflection questions rather than having students answer all of them. Choose which questions are most relevant and useful to reflect on for your students.</details></p>|"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e020bbb-a226-49b0-960f-5952fd1ff828",
+        "lesson_activity.key": "22c9fdeb-641a-4da9-9819-56de3590956d"
+      }
+    },
+    {
+      "key": "7e525379-1f01-4cb0-bbd8-79b875e81dcc",
+      "position": 1,
+      "properties": {
+        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide84.png)  | <p><a href=\"https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview\" target=\"_blank\">Click here to access slides</a><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide85.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide86.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide87.png)  | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide88.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the slide<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide89.png)  | <p><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass<a href=\"https://docs.google.com/document/d/1xjTLfwzxeMKtqlC2yd8iIvhGXP-JqkfsmhCVHCSHGF4/template/preview\" target=\"_blank\"> out the Activity Guide User Testing Data</a>.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview together as a class. Preview the questions for the user tests and explain that the Activity Guide will stay at the computer with the game. When students move to a new computer to test another game, they will leave the Activity Guide. This way, when they return to their own computer and Activity Guide, it will be full of user data specific to their game which they will use to complete pages 4 - 5 in the second half of the lesson.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide90.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Give students a little time to set up their game on their device and place the User Testing Data activity guide beside it. Each member of the team from the game jam will open the game on their own computer. If they have set up pair programming properly, they will all have access to the game the made in Lesson 4 Level 3.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We are setting up for user testing today! User testing help will you make your game even more awesome by seeing how real players like it. You’ll use their feedback to figure out how to make your game better before sharing it with the world! It is okay if your game still needs some work. It can be really helpful to get user feedback before the project is complete so you know what is most important to work on to finish it up.<br><br><br></p>|\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e525379-1f01-4cb0-bbd8-79b875e81dcc",
+        "lesson_activity.key": "95406d70-f442-49b0-adef-a8df15fa863d"
+      }
+    },
+    {
+      "key": "09377ab7-c0ab-4b10-b780-8ada4c8e57c9",
+      "position": 1,
+      "properties": {
+        "duration": "15",
+        "name": "User Testing",
+        "progression_name": "Game Jam: Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "09377ab7-c0ab-4b10-b780-8ada4c8e57c9",
+        "lesson_activity.key": "98d0bc4b-250d-4c55-82ea-7c07501c0eda"
+      }
+    },
+    {
+      "key": "cfe571cd-9395-4658-a8c1-2a09332edfb4",
+      "position": 2,
+      "properties": {
+        "duration": "20",
+        "name": "Data Analysis "
+      },
+      "seeding_key": {
+        "activity_section.key": "cfe571cd-9395-4658-a8c1-2a09332edfb4",
+        "lesson_activity.key": "98d0bc4b-250d-4c55-82ea-7c07501c0eda"
+      }
+    },
+    {
+      "key": "a2babd16-9244-4ab1-bc98-5e00c1827d7d",
+      "position": 3,
+      "properties": {
+        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide91.png)  | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide92.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Guide students in how they will move to a new computer to check out the next game.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Start by looking over the code for this team’s game. Can you make some predictions about how the game will work, how the variable will change and how to win or lose? After looking at the code, click run and play the game. Keep in mind that the game may not be completely finished, which is why we are doing user tests. You are looking for helpful feedback for next steps for this team! Keep it positive and have fun!<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Provide a timer to signal when it’s time to start playing the game and when they user test is finished so they have time to record their testing data.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide93.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Signal to students that it is time to record their testing data on the Activity Guide next to the game they have just played.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now that you’ve had a chance to test this game, record your observations on the Activity Guide next to this computer.<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Provide a timer to signal when it’s time to move on to the next game.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide94.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Guide students in how they will move to a new computer and game to check out.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Start by looking over the code for this team’s game. Can you make some predictions about how the game will work, how the variable will change and how to win or lose? After looking at the code, click run and play the game. Keep in mind that the game may not be completely finished, which is why we are doing user tests. You are looking for helpful feedback for next steps for this team! Keep it positive and have fun!<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Provide a timer to signal when it’s time to start playing the game and when they user test is finished so they have time to record their testing data.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide95.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Signal to students that it is time to record their testing data on the Activity Guide next to the game they have just played.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now that you’ve had a chance to test this game, record your observations on the Activity Guide next to this computer.<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Provide a timer to signal when it’s time to move on to the next game.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide96.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Guide students in how they will move to a new computer and game to check out.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Start by looking over the code for this team’s game. Can you make some predictions about how the game will work, how the variable will change and how to win or lose? After looking at the code, click run and play the game. Keep in mind that the game may not be completely finished, which is why we are doing user tests. You are looking for helpful feedback for next steps for this team! Keep it positive and have fun!<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Provide a timer to signal when it’s time to start playing the game and when they user test is finished so they have time to record their testing data.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide97.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Signal to students that it is time to record their testing data on the Activity Guide next to the game they have just played.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now that you’ve had a chance to test this game, record your observations on the Activity Guide next to this computer.<br></p><p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Provide a timer to signal when it’s time to move back to their own computer.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide98.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students analyze the data using the steps on this slide as a guide. They will complete the graphs on pages 4-5 of their Activity Guide and then answer the reflection question on page 5.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now that some people have been able to test out your game, it’s time to compile the feedback into graphs so that it is easier for us to see patterns. After you complete your analysis independently, you can compare notes with the other members of your team.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide99.png)  | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students chart the results from the user testing by coloring in one box for each response. Depending on time, it may be valuable for students to get with their Game Jam teammates and compile the results from all of their data sheets and discuss the reflection questions together.<br></p>|\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2babd16-9244-4ab1-bc98-5e00c1827d7d",
+        "lesson_activity.key": "98d0bc4b-250d-4c55-82ea-7c07501c0eda"
+      }
+    },
+    {
+      "key": "9306ca7d-8c8d-456e-9f78-751ebd9b351d",
+      "position": 1,
+      "properties": {
+        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide100.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide101.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Explain how user testing can make product better. Was there any user data that surprised you? Can you think of any other projects that would benefit from doing user testing?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will reflect on the benefits of user testing and consider how it may be a helpful strategy to improve other projects they’re working on.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/slide102.png) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great work everyone! That wraps up our game design module. We have gone from learning the basics of adding sprites to being able to keep track of changing values stored in a variable. Then we used that knowledge to create winning or losing conditions in a game by using a conditional statement to check when our variable reaches a certain value. We worked in teams during a fun Game Jam just like game developers do in the real world. Then we conducted user tests to collect data and make decisions on how to improve our games. You can keep creating games of your own in Sprite Lab anytime!<br></p><p><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Wrapping up the module</summary><br>This is where the game design module concludes but you may wish to offer another lesson where students can implement the feedback they received.</details></p>|\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "9306ca7d-8c8d-456e-9f78-751ebd9b351d",
+        "lesson_activity.key": "6287977c-6d4d-4f3f-8186-5dde07ba96f7"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Design Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_video_sprites_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "95db67f0-4d2e-48d5-a359-489850c3a3e0"
+      },
+      "level_keys": [
+        "game_design_video_sprites_2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Design Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_player_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "95db67f0-4d2e-48d5-a359-489850c3a3e0"
+      },
+      "level_keys": [
+        "game_design_player_2024"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Design Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_location_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "95db67f0-4d2e-48d5-a359-489850c3a3e0"
+      },
+      "level_keys": [
+        "game_design_location_2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Design Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_say_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "95db67f0-4d2e-48d5-a359-489850c3a3e0"
+      },
+      "level_keys": [
+        "game_design_say_2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_behavior_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "a4cbc6b8-7f71-4720-9bf1-b175c1e154d2"
+      },
+      "level_keys": [
+        "game_design_behavior_2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_two_behaviors_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "a4cbc6b8-7f71-4720-9bf1-b175c1e154d2"
+      },
+      "level_keys": [
+        "game_design_two_behaviors_2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_about_events_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "94321661-0ae5-49f7-8235-a98501da2a6a"
+      },
+      "level_keys": [
+        "game_design_about_events_2024"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_event_click_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "94321661-0ae5-49f7-8235-a98501da2a6a"
+      },
+      "level_keys": [
+        "game_design_event_click_2024"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_event_touch_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "94321661-0ae5-49f7-8235-a98501da2a6a"
+      },
+      "level_keys": [
+        "game_design_event_touch_2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Groups of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_video_lots_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      },
+      "level_keys": [
+        "game_design_video_lots_2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Groups of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_make_lots_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      },
+      "level_keys": [
+        "game_design_make_lots_2024"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Groups of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_make_grid_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      },
+      "level_keys": [
+        "game_design_make_grid_2024"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Groups of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_toolbox_object_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      },
+      "level_keys": [
+        "game_design_toolbox_object_2024"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Groups of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_remove_object_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      },
+      "level_keys": [
+        "game_design_remove_object_2024"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Groups of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_change_costume_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      },
+      "level_keys": [
+        "game_design_change_costume_2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Groups of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_practice_lots_choice_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      },
+      "level_keys": [
+        "game_design_practice_lots_choice_2024"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_intro_choices_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "4b35affb-1817-4752-92d8-780f16a0c708"
+      },
+      "level_keys": [
+        "game_variables_intro_choices_2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_video_intro_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "4b35affb-1817-4752-92d8-780f16a0c708"
+      },
+      "level_keys": [
+        "game_variables_video_intro_2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_about_panel_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "4b35affb-1817-4752-92d8-780f16a0c708"
+      },
+      "level_keys": [
+        "game_variables_about_panel_2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_show_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      },
+      "level_keys": [
+        "game_variables_show_2024"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_increase_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      },
+      "level_keys": [
+        "game_variables_increase_2024"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_conditional_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      },
+      "level_keys": [
+        "game_variables_conditional_2024"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_match_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      },
+      "level_keys": [
+        "game_variables_match_2024"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_show_two_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      },
+      "level_keys": [
+        "game_variables_show_two_2024"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_decrease_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      },
+      "level_keys": [
+        "game_variables_decrease_2024"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 10,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_predict_condition_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      },
+      "level_keys": [
+        "game_variables_predict_condition_2024"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice & Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_fix_choices_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d1212f17-b7ee-451f-bb35-e951da6f556c"
+      },
+      "level_keys": [
+        "game_variables_fix_choices_2024"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice & Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_freeplay_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d1212f17-b7ee-451f-bb35-e951da6f556c"
+      },
+      "level_keys": [
+        "game_variables_freeplay_2024"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Type: Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_environment_choices_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "acb89784-b45d-4eee-893a-7d05d1e2fc36"
+      },
+      "level_keys": [
+        "game_development_environment_choices_2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Type: Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_sprites_type_panel_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "acb89784-b45d-4eee-893a-7d05d1e2fc36"
+      },
+      "level_keys": [
+        "game_development_sprites_type_panel_2024"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Type: Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_environment_type_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "acb89784-b45d-4eee-893a-7d05d1e2fc36"
+      },
+      "level_keys": [
+        "game_development_environment_type_2024"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Type: Environment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_environment_type2_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "acb89784-b45d-4eee-893a-7d05d1e2fc36"
+      },
+      "level_keys": [
+        "game_development_environment_type2_2024"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Type: Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_player_type_panel_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "569c0277-323e-439e-b438-8bd5731552ff"
+      },
+      "level_keys": [
+        "game_development_player_type_panel_2024"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Type: Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_player_type_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "569c0277-323e-439e-b438-8bd5731552ff"
+      },
+      "level_keys": [
+        "game_development_player_type_2024"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Type: Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_jump_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "569c0277-323e-439e-b438-8bd5731552ff"
+      },
+      "level_keys": [
+        "game_development_jump_2024"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Type: Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_platform_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "569c0277-323e-439e-b438-8bd5731552ff"
+      },
+      "level_keys": [
+        "game_development_platform_2024"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_try_it_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "02f92ece-f68c-4196-8fad-fcf615542b48"
+      },
+      "level_keys": [
+        "game_development_try_it_2024"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_collectible_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "02f92ece-f68c-4196-8fad-fcf615542b48"
+      },
+      "level_keys": [
+        "game_development_collectible_2024"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_scoreboard_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "02f92ece-f68c-4196-8fad-fcf615542b48"
+      },
+      "level_keys": [
+        "game_development_scoreboard_2024"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_freeplay_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "02f92ece-f68c-4196-8fad-fcf615542b48"
+      },
+      "level_keys": [
+        "game_development_freeplay_2024"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Jam Theme Generator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_theme_generator_2024"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "dfd59aee-5f33-44f4-a73b-05f231a42e2f"
+      },
+      "level_keys": [
+        "game_jam_theme_generator_2024"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Plan"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_create_plan_2024"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "ab3ce2af-af1b-4927-bdff-83da5d3e32d3"
+      },
+      "level_keys": [
+        "game_jam_create_plan_2024"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_create_game_2024"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "4f71d687-fa98-4d1e-abad-99240aacc9c9"
+      },
+      "level_keys": [
+        "game_jam_create_game_2024"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Jam: Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_play_2024"
+        ],
+        "lesson.key": "Game Jam Day 2: Play",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "09377ab7-c0ab-4b10-b780-8ada4c8e57c9"
+      },
+      "level_keys": [
+        "game_jam_play_2024"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "game_design_video_sprites_2024",
+        "script_level.level_keys": [
+          "game_design_video_sprites_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "95db67f0-4d2e-48d5-a359-489850c3a3e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_player_2024",
+        "script_level.level_keys": [
+          "game_design_player_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "95db67f0-4d2e-48d5-a359-489850c3a3e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_location_2024",
+        "script_level.level_keys": [
+          "game_design_location_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "95db67f0-4d2e-48d5-a359-489850c3a3e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_say_2024",
+        "script_level.level_keys": [
+          "game_design_say_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "95db67f0-4d2e-48d5-a359-489850c3a3e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_behavior_2024",
+        "script_level.level_keys": [
+          "game_design_behavior_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "a4cbc6b8-7f71-4720-9bf1-b175c1e154d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_two_behaviors_2024",
+        "script_level.level_keys": [
+          "game_design_two_behaviors_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "a4cbc6b8-7f71-4720-9bf1-b175c1e154d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_about_events_2024",
+        "script_level.level_keys": [
+          "game_design_about_events_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "94321661-0ae5-49f7-8235-a98501da2a6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_event_click_2024",
+        "script_level.level_keys": [
+          "game_design_event_click_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "94321661-0ae5-49f7-8235-a98501da2a6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_event_touch_2024",
+        "script_level.level_keys": [
+          "game_design_event_touch_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "94321661-0ae5-49f7-8235-a98501da2a6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_video_lots_2024",
+        "script_level.level_keys": [
+          "game_design_video_lots_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_make_lots_2024",
+        "script_level.level_keys": [
+          "game_design_make_lots_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_make_grid_2024",
+        "script_level.level_keys": [
+          "game_design_make_grid_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_toolbox_object_2024",
+        "script_level.level_keys": [
+          "game_design_toolbox_object_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_remove_object_2024",
+        "script_level.level_keys": [
+          "game_design_remove_object_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_change_costume_2024",
+        "script_level.level_keys": [
+          "game_design_change_costume_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_practice_lots_choice_2024",
+        "script_level.level_keys": [
+          "game_design_practice_lots_choice_2024"
+        ],
+        "lesson.key": "Game Design",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "f00598c1-086e-4918-8cda-f1255dd2f5b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_intro_choices_2024",
+        "script_level.level_keys": [
+          "game_variables_intro_choices_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "4b35affb-1817-4752-92d8-780f16a0c708"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_video_intro_2024",
+        "script_level.level_keys": [
+          "game_variables_video_intro_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "4b35affb-1817-4752-92d8-780f16a0c708"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_about_panel_2024",
+        "script_level.level_keys": [
+          "game_variables_about_panel_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "4b35affb-1817-4752-92d8-780f16a0c708"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_show_2024",
+        "script_level.level_keys": [
+          "game_variables_show_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_increase_2024",
+        "script_level.level_keys": [
+          "game_variables_increase_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_conditional_2024",
+        "script_level.level_keys": [
+          "game_variables_conditional_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_match_2024",
+        "script_level.level_keys": [
+          "game_variables_match_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_show_two_2024",
+        "script_level.level_keys": [
+          "game_variables_show_two_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_decrease_2024",
+        "script_level.level_keys": [
+          "game_variables_decrease_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_predict_condition_2024",
+        "script_level.level_keys": [
+          "game_variables_predict_condition_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d043e5ad-0156-402e-8da7-36fde33739e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_fix_choices_2024",
+        "script_level.level_keys": [
+          "game_variables_fix_choices_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d1212f17-b7ee-451f-bb35-e951da6f556c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_freeplay_2024",
+        "script_level.level_keys": [
+          "game_variables_freeplay_2024"
+        ],
+        "lesson.key": "Variables as Score",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "d1212f17-b7ee-451f-bb35-e951da6f556c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_environment_choices_2024",
+        "script_level.level_keys": [
+          "game_development_environment_choices_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "acb89784-b45d-4eee-893a-7d05d1e2fc36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_sprites_type_panel_2024",
+        "script_level.level_keys": [
+          "game_development_sprites_type_panel_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "acb89784-b45d-4eee-893a-7d05d1e2fc36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_environment_type_2024",
+        "script_level.level_keys": [
+          "game_development_environment_type_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "acb89784-b45d-4eee-893a-7d05d1e2fc36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_environment_type2_2024",
+        "script_level.level_keys": [
+          "game_development_environment_type2_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "acb89784-b45d-4eee-893a-7d05d1e2fc36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_player_type_panel_2024",
+        "script_level.level_keys": [
+          "game_development_player_type_panel_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "569c0277-323e-439e-b438-8bd5731552ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_player_type_2024",
+        "script_level.level_keys": [
+          "game_development_player_type_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "569c0277-323e-439e-b438-8bd5731552ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_jump_2024",
+        "script_level.level_keys": [
+          "game_development_jump_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "569c0277-323e-439e-b438-8bd5731552ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_platform_2024",
+        "script_level.level_keys": [
+          "game_development_platform_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "569c0277-323e-439e-b438-8bd5731552ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_try_it_2024",
+        "script_level.level_keys": [
+          "game_development_try_it_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "02f92ece-f68c-4196-8fad-fcf615542b48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_collectible_2024",
+        "script_level.level_keys": [
+          "game_development_collectible_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "02f92ece-f68c-4196-8fad-fcf615542b48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_scoreboard_2024",
+        "script_level.level_keys": [
+          "game_development_scoreboard_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "02f92ece-f68c-4196-8fad-fcf615542b48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_freeplay_2024",
+        "script_level.level_keys": [
+          "game_development_freeplay_2024"
+        ],
+        "lesson.key": "Environment and Players",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "02f92ece-f68c-4196-8fad-fcf615542b48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_theme_generator_2024",
+        "script_level.level_keys": [
+          "game_jam_theme_generator_2024"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "dfd59aee-5f33-44f4-a73b-05f231a42e2f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_create_plan_2024",
+        "script_level.level_keys": [
+          "game_jam_create_plan_2024"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "ab3ce2af-af1b-4927-bdff-83da5d3e32d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_create_game_2024",
+        "script_level.level_keys": [
+          "game_jam_create_game_2024"
+        ],
+        "lesson.key": "Game Jam Day 1: Create",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "4f71d687-fa98-4d1e-abad-99240aacc9c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_play_2024",
+        "script_level.level_keys": [
+          "game_jam_play_2024"
+        ],
+        "lesson.key": "Game Jam Day 2: Play",
+        "lesson_group.key": "",
+        "script.name": "elem-game-design-2024",
+        "activity_section.key": "09377ab7-c0ab-4b10-b780-8ada4c8e57c9"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[KEY] Game Plan Activity Guide",
+      "url": "https://docs.google.com/document/d/1CuHHVs1uRPfV4z73ifRCsTiUk0bIovLc0l_m0X2Ww3U/template/preview",
+      "key": "_key_game_plan_activity_guide",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1CuHHVs1uRPfV4z73ifRCsTiUk0bIovLc0l_m0X2Ww3U/export/pdf",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_game_plan_activity_guide"
+      }
+    },
+    {
+      "name": "[KEY] User Data Activity Guide",
+      "url": "https://docs.google.com/document/d/1SqkjDDxWbC-5KxIXulYRMw-72EpkVw7uc6yyfKGJQLg/template/preview",
+      "key": "_key_user_data_activity_guide",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1SqkjDDxWbC-5KxIXulYRMw-72EpkVw7uc6yyfKGJQLg/export/pdf",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_user_data_activity_guide"
+      }
+    },
+    {
+      "name": "Game Design Slides",
+      "url": "https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/template/preview",
+      "key": "game_design_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1KRnRj7qT0fDm8f5fpRCxFu6xLcQfuSYFsnbJrPN8Yqo/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "game_design_slides"
+      }
+    },
+    {
+      "name": "Game Plan Activity Guide",
+      "url": "https://docs.google.com/document/d/1hTmxVocE21LqVcYnLQT5b1xTqdcKZsP9SFV7QvnWeFA/template/preview",
+      "key": "game_plan_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1hTmxVocE21LqVcYnLQT5b1xTqdcKZsP9SFV7QvnWeFA/export/pdf",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "game_plan_activity_guide"
+      }
+    },
+    {
+      "name": "Helpful Hints",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "name": "Intro to Sprite Lab",
+      "url": "https://youtu.be/yd-9xZ275dM",
+      "key": "intro_to_sprite_lab_video",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_sprite_lab_video"
+      }
+    },
+    {
+      "name": "User Data Activity Guide",
+      "url": "https://docs.google.com/document/d/1xjTLfwzxeMKtqlC2yd8iIvhGXP-JqkfsmhCVHCSHGF4/template/preview",
+      "key": "user_data_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1xjTLfwzxeMKtqlC2yd8iIvhGXP-JqkfsmhCVHCSHGF4/export/pdf",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "user_data_activity_guide"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "resource.key": "game_design_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "resource.key": "game_design_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "resource.key": "intro_to_sprite_lab_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "resource.key": "_key_game_plan_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "resource.key": "game_design_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "resource.key": "game_plan_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "resource.key": "_key_user_data_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "resource.key": "game_design_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "resource.key": "user_data_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "resource.key": "game_design_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "resource.key": "helpful_hints"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see whether it is true before deciding to take an action.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "key": "conditionals",
+      "word": "Conditionals",
+      "definition": "A chunk of code that only runs if the condition is true.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "key": "data",
+      "word": "Data",
+      "definition": "Collection of information  for reference or analysis.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action, like a key press, that causes something in your program to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "game_jam",
+      "word": "Game Jam",
+      "definition": "A creative event where people come together in teams to make video games based on a chosen theme within a limited amount of time. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "game_jam"
+      }
+    },
+    {
+      "key": "game_mechanics",
+      "word": "Game Mechanics",
+      "definition": "Define how the game works and what determines success or failure in the game.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "game_mechanics"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "An object on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "key": "sprite_type",
+      "word": "Sprite Type",
+      "definition": "Identifies sprites as player or environment, which determines how they interact with sprites of  other types.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite_type"
+      }
+    },
+    {
+      "key": "user_testing",
+      "word": "User testing ",
+      "definition": "Asking real people to try out a product and then make it better based on user feedback.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user_testing"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "Variables store information (data). The value stored in a variable can be updated throughout a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "vocabulary.key": "game_mechanics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "vocabulary.key": "sprite_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "vocabulary.key": "game_jam"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "vocabulary.key": "game_mechanics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "vocabulary.key": "user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "vocabulary.key": "variable"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "11ed57c6-aa2f-488b-9ccb-27770d9e5dc5",
+      "properties": {
+        "description": "Participate in a Game Jam to create a new game based on a randomly generated theme."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "objective.key": "11ed57c6-aa2f-488b-9ccb-27770d9e5dc5"
+      }
+    },
+    {
+      "key": "253a3625-cd72-466b-affb-176b0a22cb15",
+      "properties": {
+        "description": "Program a variable that changes throughout the game."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "objective.key": "253a3625-cd72-466b-affb-176b0a22cb15"
+      }
+    },
+    {
+      "key": "3bc0abb9-cc2d-44be-b0c9-b7fe270ec02b",
+      "properties": {
+        "description": "Collect useful data from users  of your game."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "objective.key": "3bc0abb9-cc2d-44be-b0c9-b7fe270ec02b"
+      }
+    },
+    {
+      "key": "4aff0fed-3236-49a3-9beb-32314de294d8",
+      "properties": {
+        "description": "Analyze data from users in order to determine areas for improvement."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "objective.key": "4aff0fed-3236-49a3-9beb-32314de294d8"
+      }
+    },
+    {
+      "key": "88ab4f9f-4604-458e-a1d5-ff4a96b27597",
+      "properties": {
+        "description": "Create new sprites."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "objective.key": "88ab4f9f-4604-458e-a1d5-ff4a96b27597"
+      }
+    },
+    {
+      "key": "9a97d32d-b92d-4c45-be36-289f18e3cacb",
+      "properties": {
+        "description": "Utilize new Sprite Lab & coding skills to develop (plan and code) a creative game."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "objective.key": "9a97d32d-b92d-4c45-be36-289f18e3cacb"
+      }
+    },
+    {
+      "key": "a72ad3c5-067e-416a-bd6c-ad7c4a030c38",
+      "properties": {
+        "description": "Assign sprites as player type or environment type"
+      },
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "objective.key": "a72ad3c5-067e-416a-bd6c-ad7c4a030c38"
+      }
+    },
+    {
+      "key": "c4125c83-fb4d-4386-b6b7-badc15cbaf00",
+      "properties": {
+        "description": "Create groups of sprites, and control a single sprite from the group using events."
+      },
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "objective.key": "c4125c83-fb4d-4386-b6b7-badc15cbaf00"
+      }
+    },
+    {
+      "key": "c92fe23f-d3d2-4c98-81a5-439686309a93",
+      "properties": {
+        "description": "Use a conditional statement to check for a winning score"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "objective.key": "c92fe23f-d3d2-4c98-81a5-439686309a93"
+      }
+    },
+    {
+      "key": "ed33c203-a870-476e-bb52-3a96aef33702",
+      "properties": {
+        "description": "Explore game mechanics"
+      },
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "objective.key": "ed33c203-a870-476e-bb52-3a96aef33702"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Environment and Players",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 1: Create",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Game Jam Day 2: Play",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables as Score",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

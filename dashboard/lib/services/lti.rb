@@ -105,7 +105,7 @@ module Services
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?
         user.user_type = ::User::TYPE_TEACHER
-        user.update_primary_contact_info(new_email: email_address, new_hashed_email: ::User.hash_email(email_address))
+        user.lti_roster_sync_enabled = true
       else
         user.user_type = ::User::TYPE_STUDENT
         user.family_name = get_claim(nrps_member_message, :family_name)
@@ -122,6 +122,7 @@ module Services
         email: email_address,
         )
       user.authentication_options = [ao]
+      user.primary_contact_info = ao
       # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
       user
     end
@@ -131,7 +132,7 @@ module Services
       members = nrps_response[:members]
       context_title = nrps_response.dig(:context, :title)
       members.each do |member|
-        next if member[:status] == 'Inactive'
+        next if member[:status] == 'Inactive' || member[:roles].include?(Policies::Lti::CONTEXT_MENTOR_ROLE)
         # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
 
         # If the LMS hasn't implemented the resource link level membership service, we don't get the message property in the member object
@@ -234,6 +235,7 @@ module Services
         name: lti_section.section.name,
         short_name: nrps_section[:short_name],
         instructors: instructor_list,
+        lti_section_id: lti_section.id,
       }
     end
 

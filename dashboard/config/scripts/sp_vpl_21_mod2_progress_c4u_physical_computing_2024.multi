@@ -1,23 +1,22 @@
 name 'SP-VPL-21-mod2-progress-c4u_physical-computing_2024'
-title 'Check for understanding'
+title 'Check for Understanding'
 description ''
 question 'Which level is best used to assess student understanding of the lesson objectives?'
 wrong 'Level 3'
 wrong 'Level 4'
-wrong 'Level 8'
-right 'Level 9'
+right 'Level 8'
+wrong 'Level 9'
 
 
 markdown <<MARKDOWN
-![Image showing two student progressions. Student A has completed all ten levels, while Student B has not completed levels 5, 6, 7, and 9.](https://images.code.org/c92e6cd9ee2669a069e72e67b919af2e-image-1625773034493.36.58 PM.png)
-
+![Image showing a student progress. The student has completed Levels 1 through 8.](https://images.code.org/97dd2d9b0ef8bd8b9f41701447aae815-image-1713995939189.58.29 PM.png)
 
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-**Explanation:** Shapes that are outlined but not filled mean the student viewed the level but did not make significant changes to the provided code. This indicates that the student likely did not complete the assigned task. 
+#### **Explanation:** Levels with stars next to them denote an assessment level. Level 8 is an assessment level, and the empty purple triangle shows that feedback can be left to the student. Further, the solid green circle means that the student has submitted an answer.
 
-Visit the <a href="https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress" target="blank" > *viewing student progress*</a> support article to learn more about tracking student progress. 
+#### Visit the <a href="https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress" target="blank" > *viewing student progress*</a> support article to learn more about tracking student progress. 
 MARKDOWN
 
 allow_multiple_attempts true

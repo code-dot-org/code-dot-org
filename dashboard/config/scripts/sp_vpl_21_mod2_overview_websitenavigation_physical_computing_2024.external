@@ -5,21 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Navigating Code.org 
 
-##### Welcome to Lesson 2! This lesson is designed to orient you to the Code.org website and teaching tools. 
+<img src="https://images.code.org/d83020a28b0525fa84d3fc765673085d-image-1713985590249.06.25 PM.png" alt="Two students sitting at individual laptops smile at the camera" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
 
-<img src="https://images.code.org/65b0f234d50ccf544ff6d54c0b5bbff6-image-1627656763104.jpg" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+#### Welcome! This lesson is designed to orient you to the Code.org website and teaching tools. 
 
+### **You will learn how to:**
 
-## You will learn how to:
+* #### Navigate the Code.org website and teacher tools.
+* #### Set up a class section.
+<br>
 
-* ##### Navigate the Code.org website and teacher tools.
-* ##### Set up a class section.
+#### **Suggested time:** 35 minutes
 
-### **Suggested time:** 35 minutes
-
-<div style="clear:both"/>
-
-## Let's get started!
-
-
+<br><br><br><br>
 MARKDOWN

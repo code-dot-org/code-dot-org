@@ -13,7 +13,7 @@ import {
   UNDERSTANDING_LEVEL_STRINGS,
   UNDERSTANDING_LEVEL_STRINGS_V2,
 } from './rubricHelpers';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 const INVALID_UNDERSTANDING = -1;
 

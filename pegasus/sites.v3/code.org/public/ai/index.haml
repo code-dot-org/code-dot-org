@@ -142,16 +142,7 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_video_series_title)
     %p=hoc_s(:ai_video_series_desc, markdown: :inline, locals: {how_ai_works_url: "/ai/how-ai-works"})
-    .video-series
-      = view :ai_vid_intro
-      = view :ai_vid_mlintro
-      = view :ai_vid_trainingdata
-      = view :ai_vid_neuralnetworks
-      = view :ai_vid_computervision
-      = view :ai_vid_chatbots
-      = view :ai_vid_creativity
-      = view :ai_vid_ethics1
-      = view :ai_vid_ethics2
+    = view :carousel_how_ai_works_video
 
 %section
   .wrapper
@@ -162,12 +153,14 @@ theme: responsive_full_width
     %figure.col-45{style: "margin-bottom: 1rem"}
       %img{src: "/images/ai/pl/101/TeachAI.png", alt: "", style: "width: 100%"}
     .text-wrapper.col-50{style: "margin-bottom: 1rem"}
-      %h2
-        =hoc_s(:teach_ai_title)
-      %p
-        =hoc_s(:teach_ai_description)
-      %a.link-button.has-external-link{href: "https://teachai.org/toolkit", target: "_blank", rel: "noopener noreferrer"}
-        =hoc_s(:teach_ai_button_label)
+      %p.new
+        =hoc_s(:new)
+      %h2.heading-lg
+        =hoc_s(:ai_promote_literacy)
+      %p.body-three
+        =hoc_s(:ai_section_body)
+      %a.link-button.has-external-link{href: "https://teachai.org/policy", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:ai_explore_the_resources)
   .clear
 
 %section
@@ -176,6 +169,7 @@ theme: responsive_full_width
       =hoc_s("ai_donors.desc")
     .logos-wrapper.no-margin-bottom
       %img{src: "/images/avatars/microsoft.png", alt: "Microsoft logo", style: "max-width: 150px"}
+      %img{src: "/images/avatars/infosys_foundation_usa.png", alt: "Infosys logo", style: "max-width: 50px"}
       %img{src: "/images/avatars/schmidt-futures.png", alt: "Schmidt Futures logo", style: "max-width: 340px"}
 
 

@@ -6,8 +6,7 @@ import {
   ProjectSources,
 } from './types';
 import Lab2Registry from './Lab2Registry';
-import {BLOCKLY_LABS} from './constants';
-import {getFileByName} from './projects/utils';
+import {BLOCKLY_LABS, LABS_WITH_JSON_SOURCES} from './constants';
 
 // Validator for Blockly sources.
 const BlocklySourceResponseValidator: ResponseValidator<
@@ -40,11 +39,26 @@ const PythonSourceResponseValidator: ResponseValidator<
       throw new ValidationError('Python sources must be a JSON object');
     }
     const source = responseToValidate.source as MultiFileSource;
-    if (!source?.files || getFileByName(source.files, 'main.py') === null) {
-      throwMissingFieldError('main.py');
+    if (!source?.files || !source.folders) {
+      throw new ValidationError('Invalid source code');
     }
   };
   return sourceValidatorHelper(response, pythonValidator);
+};
+
+// Validator for non-Blockly labs that use JSON sources
+const JsonSourceResponseValidator: ResponseValidator<
+  ProjectSources
+> = response => {
+  const jsonValidator = (responseToValidate: Record<string, unknown>) => {
+    try {
+      JSON.parse(responseToValidate.source as string);
+    } catch (e) {
+      throw new ValidationError('Error parsing JSON: ' + e);
+    }
+  };
+
+  return sourceValidatorHelper(response, jsonValidator);
 };
 
 // Default source validator. This just checks if there is a source field.
@@ -63,6 +77,8 @@ export const SourceResponseValidator: ResponseValidator<
   } else if (appName !== null && BLOCKLY_LABS.includes(appName)) {
     // Blockly labs
     return BlocklySourceResponseValidator(response);
+  } else if (appName !== null && LABS_WITH_JSON_SOURCES.includes(appName)) {
+    return JsonSourceResponseValidator(response);
   } else {
     // Everything else uses the default validator
     return DefaultSourceResponseValidator(response);

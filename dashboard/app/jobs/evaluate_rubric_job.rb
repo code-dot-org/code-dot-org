@@ -3,8 +3,6 @@ require 'cdo/aws/metrics'
 require 'csv'
 
 class EvaluateRubricJob < ApplicationJob
-  queue_as :default
-
   S3_AI_BUCKET = 'cdo-ai'.freeze
 
   # The path to the release directory in S3 which contains the AI rubric evaluation config.
@@ -12,7 +10,7 @@ class EvaluateRubricJob < ApplicationJob
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-25-confidence-exact/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-04-30-confidence-autogen-turbo/'.freeze
 
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
@@ -48,6 +46,21 @@ class EvaluateRubricJob < ApplicationJob
       @response = response
 
       super("Too many requests for #{response.request.uri}")
+    end
+  end
+
+  # This is raised if the request is too large for the openai, indicating that
+  # the code was too long relative to the LLM's context window.
+  class RequestTooLargeError < StandardError
+    attr_reader :response
+
+    # Creates a RequestTooLargeError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
+
+      super("Request too large for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
     end
   end
 
@@ -188,6 +201,17 @@ class EvaluateRubricJob < ApplicationJob
     # We gracefully just fail, here, and we do not file this exception
   end
 
+  rescue_from(RequestTooLargeError) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob RequestTooLargeError: #{exception.message}"
+    end
+
+    # Record the failure mode, so we can show the right message to the teacher
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:REQUEST_TOO_LARGE]
+    rubric_ai_evaluation.save!
+  end
+
   RETRIES_ON_RATE_LIMIT = 3
 
   # Retry on any reported rate limit (429 status) 'exponentially_longer' waits 3s, 18s, and then 83s.
@@ -207,16 +231,19 @@ class EvaluateRubricJob < ApplicationJob
   RETRIES_ON_TIMEOUT = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
-    # Job arguments are always serializable, so we just pull out the hash
-    # and send it as context.
-    options = job.arguments.first
-
-    # Send it to honeybadger even though we are handling the error via retry
-    Honeybadger.notify(
-      error,
-      error_message: "Retrying rubric evaluation job due to timeout.",
-      context: options
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do
+    Cdo::Metrics.push(
+      AI_RUBRIC_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: :RetryOnTimeout,
+          value: 1,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ],
+          unit: 'Count'
+        }
+      ]
     )
   end
 
@@ -411,6 +438,8 @@ class EvaluateRubricJob < ApplicationJob
     # Raise too many requests error if we see a 429
     # The proxy service will bubble up the 429 error from the service itself
     raise TooManyRequestsError.new(response) if response.code == 429
+
+    raise RequestTooLargeError.new(response) if response.code == 413
 
     # General error will raise a generic StandardError
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
