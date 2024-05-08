@@ -24,20 +24,25 @@ function urlFor(func_name) {
 // record the timestamp of the last 600 writes into a queue
 // every write, pop off the queue until reach a timestamp that is <60 seconds ago
 // if queue size gets bigger than 600, throw an error
-const rateLimitDataAccessTimes = [];
+const rateLimitAccessLog = [];
 const RATE_LIMIT = 600;
 const RATE_LIMIT_INTERVAL_MS = 60000;
 function rateLimit() {
   const now = Date.now();
+  const timeSinceEarliestLog = () => now - rateLimitAccessLog[0];
+
+  // Drop log entries older than RATE_LIMIT_INTERVAL_MS
   while (
-    rateLimitDataAccessTimes.length > 0 &&
-    rateLimitDataAccessTimes[0] < now - RATE_LIMIT_INTERVAL_MS
+    rateLimitAccessLog.length > 0 &&
+    timeSinceEarliestLog() < RATE_LIMIT_INTERVAL_MS
   ) {
-    rateLimitDataAccessTimes.shift();
+    rateLimitAccessLog.shift();
   }
-  if (rateLimitDataAccessTimes.length > RATE_LIMIT) {
+
+  // If we're over the rate limit, throw an error
+  if (rateLimitAccessLog.length > RATE_LIMIT) {
     const waitTime = Math.ceil(
-      (RATE_LIMIT_INTERVAL_MS - (now - rateLimitDataAccessTimes[0])) / 1000
+      (RATE_LIMIT_INTERVAL_MS - timeSinceEarliestLog()) / 1000
     );
     throw new Error(
       `Data access rate limit exceeded; Please wait ${waitTime} seconds before retrying. ` +
@@ -45,7 +50,8 @@ function rateLimit() {
         "If you were trying to write data, it wasn't written."
     );
   } else {
-    rateLimitDataAccessTimes.push(now);
+    // Log the current access
+    rateLimitAccessLog.push(now);
   }
 }
 
