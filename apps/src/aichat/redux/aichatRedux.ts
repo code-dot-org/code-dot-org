@@ -278,6 +278,7 @@ export const submitChatContents = createAsyncThunk(
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
+    const startTime = Date.now();
     const chatApiResponse = await postAichatCompletionMessage(
       newUserMessageText,
       currentSessionId
@@ -289,6 +290,14 @@ export const submitChatContents = createAsyncThunk(
       aichatContext,
       currentSessionId
     );
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
+        {
+          name: 'ModelId',
+          value: aiCustomizations.selectedModelId,
+        },
+      ]);
 
     // Regardless of response type,
     // assign last user message to session.
