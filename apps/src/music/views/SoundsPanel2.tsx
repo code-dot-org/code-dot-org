@@ -16,6 +16,11 @@ import ScrollIntoView from './ScrollIntoView';
 
 import musicI18n from '../locale';
 
+const scrollIntoViewDelayFramesFolders = 0;
+const scrollIntoViewDelayFramesSounds = 5;
+const scrollIntoViewFrames = 50;
+const scrollIntoViewDistanceY = 70;
+
 /*
  * Renders a UI for previewing and choosing samples.  Version 2 implements a new UI that shows a
  * larger grid of sound entries, and both previews and selects the sound when its entry is clicked,
@@ -354,9 +359,9 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
               id="sounds-panel-left"
               className={styles.leftColumn}
               doScroll={isDefaultSoundSelected}
-              delay={0}
-              frames={50}
-              distanceY={70}
+              delay={scrollIntoViewDelayFramesFolders}
+              frames={scrollIntoViewFrames}
+              distanceY={scrollIntoViewDistanceY}
             >
               {folders.map(folder => {
                 return (
@@ -381,9 +386,9 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
               mode === 'sounds' && styles.rightColumnFullWidth
             )}
             doScroll={isDefaultSoundSelected}
-            delay={5}
-            frames={50}
-            distanceY={70}
+            delay={scrollIntoViewDelayFramesSounds}
+            frames={scrollIntoViewFrames}
+            distanceY={scrollIntoViewDistanceY}
           >
             {rightColumnSoundEntries.map(soundEntry => {
               return (

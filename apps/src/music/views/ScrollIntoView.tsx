@@ -1,5 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 
+const animationFramesPerSecond = 60;
+
 // ScrollIntoView: This component does an eased scroll of the container's content,
 // starting from a distance below the top, and scrolling to the top.  It's useful
 // to show the user that some new content is scrollable.
@@ -72,7 +74,7 @@ const ScrollIntoView: React.FunctionComponent<ScrollIntoViewProps> = ({
           }
         }
       }
-    }, 1000 / 60);
+    }, 1000 / animationFramesPerSecond);
   }, [delay, distanceY, doScroll, frames]);
 
   return (
