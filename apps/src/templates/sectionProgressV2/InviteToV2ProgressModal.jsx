@@ -34,11 +34,13 @@ function InviteToV2ProgressModal({
   const [invitationOpen, setInvitationOpen] = React.useState(false);
 
   React.useEffect(() => {
-    const timeSinceInvitationLastDelayed = () => {
+    const numDaysSinceInvitationLastDelayed = () => {
+      const MILLISECONDS_IN_ONE_DAY = 1000 * 3600 * 24;
       const startingDate = new Date(dateProgressTableInvitationDelayed);
       const today = new Date();
       const differenceInMilliseconds = today.getTime() - startingDate.getTime();
-      const differenceInDays = differenceInMilliseconds / (1000 * 3600 * 24);
+      const differenceInDays =
+        differenceInMilliseconds / MILLISECONDS_IN_ONE_DAY;
       return Math.floor(differenceInDays);
     };
 
@@ -48,7 +50,7 @@ function InviteToV2ProgressModal({
         return false;
       } else {
         if (!!dateProgressTableInvitationDelayed) {
-          return timeSinceInvitationLastDelayed() > 3;
+          return numDaysSinceInvitationLastDelayed() > 3;
         } else {
           return true;
         }
