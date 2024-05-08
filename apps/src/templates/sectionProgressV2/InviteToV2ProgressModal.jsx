@@ -164,6 +164,8 @@ InviteToV2ProgressModal.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
 };
 
+export const UnconnectedInviteToV2ProgressModal = InviteToV2ProgressModal;
+
 export default connect(
   state => ({
     dateProgressTableInvitationDelayed:
