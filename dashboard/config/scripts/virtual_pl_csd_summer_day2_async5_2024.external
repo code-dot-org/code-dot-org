@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Day 2, Asynchronous Part I Wrap Up
 
-## Next steps
+## Next Steps
 
 <img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
 
@@ -18,6 +18,8 @@ markdown <<MARKDOWN
 <br>
 
 #### Please be prepared to share out when you return from lunch!
-
+___
+<p align="center">
+<img src="https://images.code.org/c18bde1dd10003d1e80d06136ee1d0d7-image-1686602144261.34.54 PM.png" alt="A read stop sign that reads, STOP This is the end of asynchronous work." width="200px" style="border-radius:10px; margin: 0px 0px 0px 0px;"></p>
 
 MARKDOWN

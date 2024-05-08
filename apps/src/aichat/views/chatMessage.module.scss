@@ -4,17 +4,19 @@
   padding: 10px 10px;
   border-radius: 10px;
   overflow: hidden;
+  white-space: pre-line;
 }
 
 .userMessage {
-  margin: 0 0 15px 50px;
+  margin: 0 0 5px 50px;
   background-color: $brand_teal_5;
   border-radius: 16px 0 16px 16px;
 }
 
 .assistantMessageContainer {
-  margin: 0 50px 15px 0;
+  margin: 0 50px 5px 0;
   display: flex;
+  align-items: start;
 }
 
 .modelUpdateMessageTextContainer {
@@ -42,12 +44,14 @@
 .assistantMessage {
   background-color: $light_gray_50;
   border-radius: 0 16px 16px 16px;
+  margin-top: 14px; // a quarter of height of bot icon
+  overflow-x: scroll;
 }
 
 .inappropriateMessage {
   background-color: $lightest_red;
 }
 
-.tooPersonalMessage {
+.errorMessage {
   background-color: $lightest_yellow;
 }

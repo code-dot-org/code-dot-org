@@ -17,7 +17,7 @@ class AichatController < ApplicationController
     # Check for profanity
     locale = params[:locale] || "en"
     filter_result = ShareFiltering.find_failure(params[:newMessage], locale)
-    if filter_result&.type == 'profanity'
+    if filter_result&.type == ShareFiltering::FailureType::PROFANITY
       new_messages = [
         {
           role: 'user',
@@ -29,7 +29,7 @@ class AichatController < ApplicationController
       return render(
         status: :ok,
         json: {
-          status: filter_result.type,
+          status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_USER],
           flagged_content: filter_result.content,
           session_id: session_id
         }
@@ -44,8 +44,35 @@ class AichatController < ApplicationController
       params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]},
       params.to_unsafe_h[:newMessage]
     )
-    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input)
+    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
     latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
+
+    filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
+    if filter_result&.type == ShareFiltering::FailureType::PROFANITY
+      new_messages = [
+        {
+          role: 'user',
+          content: params[:newMessage],
+          status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]
+        }
+      ]
+      session_id = log_chat_session(new_messages)
+
+      Honeybadger.notify(
+        'Profanity returned from aichat model',
+        context: {
+          flagged_content: filter_result.content,
+          aichat_session_id: session_id
+        }
+      )
+      return render(
+        status: :ok,
+        json: {
+          status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL],
+          session_id: log_chat_session(new_messages)
+        }
+      )
+    end
 
     assistant_message = {role: "assistant", content: latest_assistant_response, status: SharedConstants::AI_INTERACTION_STATUS[:OK]}
     new_messages = [

@@ -5963,6 +5963,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/reactabular-table@npm:^8.14.6":
+  version: 8.14.6
+  resolution: "@types/reactabular-table@npm:8.14.6"
+  dependencies:
+    "@types/react": "*"
+  checksum: 0e01a7c36ba8bdfd4229a6e690b1d915018e521672a58ba78ea4cd0295045d3376d15095dbcfc43a2ff8e543113a91c10235c313372b50b63571b6131af3932d
+  languageName: node
+  linkType: hard
+
 "@types/resolve@npm:^1.20.2":
   version: 1.20.6
   resolution: "@types/resolve@npm:1.20.6"
@@ -8083,6 +8092,7 @@ __metadata:
     "@types/react": ^18.0.28
     "@types/react-bootstrap": ^0.32.36
     "@types/react-dom": ^18.0.11
+    "@types/reactabular-table": ^8.14.6
     "@types/sinon": ^10.0.14
     "@typescript-eslint/eslint-plugin": ^7.0.2
     "@typescript-eslint/parser": ^7.0.2

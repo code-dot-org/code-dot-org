@@ -141,6 +141,8 @@ describe('SectionProgressSelector', () => {
   it('sets user preference when link clicked', () => {
     renderDefault();
 
+    const remindLaterLink = screen.getByText('Remind me later');
+    fireEvent.click(remindLaterLink);
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 

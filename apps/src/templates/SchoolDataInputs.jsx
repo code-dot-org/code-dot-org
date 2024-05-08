@@ -1,11 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import {
-  Heading2,
-  BodyTwoText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
@@ -25,9 +21,7 @@ export default function SchoolDataInputs({
 }) {
   const [askForZip, setAskForZip] = useState(false);
   const [isOutsideUS, setIsOutsideUS] = useState(false);
-  const [zip, setZip] = useState('');
   const [country, setCountry] = useState('');
-  const [zipSearchReady, setZipSearchReady] = useState(false);
 
   // Add 'Select a country' and 'United States' to the top of the country list
   let COUNTRY_ITEMS = [
@@ -41,21 +35,6 @@ export default function SchoolDataInputs({
   for (const item of nonUsCountries) {
     COUNTRY_ITEMS.push({value: item.label, text: item.value});
   }
-
-  useEffect(() => {
-    const isValidZip = new RegExp(/(^\d{5}$)/).test(zip);
-    if (isValidZip) {
-      setZipSearchReady(true);
-      analyticsReporter.sendEvent(
-        EVENTS.ZIP_CODE_ENTERED,
-        {zip: zip},
-        PLATFORMS.BOTH
-      );
-    } else {
-      // Removes the school dropdown if you delete part of the zip
-      setZipSearchReady(false);
-    }
-  }, [zip]);
 
   const onCountryChange = e => {
     const country = e.target.value;
@@ -77,7 +56,7 @@ export default function SchoolDataInputs({
   };
 
   return (
-    <div className={style.outerContainer}>
+    <div className={style.schoolAssociationWrapper}>
       {includeHeaders && (
         <div>
           <Heading2 className={style.topPadding}>
@@ -92,7 +71,6 @@ export default function SchoolDataInputs({
         </BodyTwoText>
         <SimpleDropdown
           id="uitest-country-dropdown"
-          className={style.dropdown}
           name={fieldNames.country}
           items={COUNTRY_ITEMS}
           selectedValue={country}
@@ -101,33 +79,12 @@ export default function SchoolDataInputs({
         />
         {askForZip && (
           <div>
-            <label>
-              <BodyTwoText
-                className={style.padding}
-                visualAppearance={'heading-xs'}
-              >
-                {i18n.enterYourSchoolZip()}
-              </BodyTwoText>
-              <input
-                id="uitest-school-zip"
-                type="text"
-                name={fieldNames.schoolZip}
-                onChange={e => {
-                  setZip(e.target.value);
-                }}
-                value={zip}
-              />
-              {zip && !zipSearchReady && (
-                <BodyThreeText>{i18n.zipInvalidMessage()}</BodyThreeText>
-              )}
-            </label>
             <SchoolZipSearch
               fieldNames={{
+                schoolZip: fieldNames.schoolZip,
                 ncesSchoolId: fieldNames.ncesSchoolId,
                 schoolName: fieldNames.schoolName,
               }}
-              zip={zip}
-              disabled={!zipSearchReady}
             />
           </div>
         )}
