@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+
 import InteractionsTable from './InteractionsTable';
 import AccessControls from './AccessControls';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+
+import style from './interactions-table.module.scss';
 
 /**
  * Renders table of student chat messages and toggles to control student access to AI Tutor.
@@ -20,25 +23,29 @@ const TutorTab: React.FC<TutorTabProps> = ({sectionId}) => {
 
   return (
     <div>
-      <SegmentedButtons
-        className="ai-tutor-tab-buttons"
-        selectedButtonValue={selectedTab}
-        size="s"
-        buttons={[
-          {label: 'View Access Controls', value: TAB_NAMES.ACCESS},
-          {
-            label: 'View Interactions',
-            value: TAB_NAMES.INTERACTIONS,
-          },
-        ]}
-        onChange={setSelectedTab}
-      />
-      {selectedTab === TAB_NAMES.ACCESS && (
-        <AccessControls sectionId={sectionId} />
-      )}
-      {selectedTab === TAB_NAMES.INTERACTIONS && (
-        <InteractionsTable sectionId={sectionId} />
-      )}
+      <div className={style.interactionsElement}>
+        <SegmentedButtons
+          className="ai-tutor-tab-buttons"
+          selectedButtonValue={selectedTab}
+          size="s"
+          buttons={[
+            {label: 'View Access Controls', value: TAB_NAMES.ACCESS},
+            {
+              label: 'View Interactions',
+              value: TAB_NAMES.INTERACTIONS,
+            },
+          ]}
+          onChange={setSelectedTab}
+        />
+      </div>
+      <div>
+        {selectedTab === TAB_NAMES.ACCESS && (
+          <AccessControls sectionId={sectionId} />
+        )}
+        {selectedTab === TAB_NAMES.INTERACTIONS && (
+          <InteractionsTable sectionId={sectionId} />
+        )}
+      </div>
     </div>
   );
 };
