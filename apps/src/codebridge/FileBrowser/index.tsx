@@ -8,6 +8,9 @@ import {ProjectType, FileId, FolderId} from '@codebridge/types';
 import {findFolder, getErrorMessage} from '@codebridge/utils';
 import React, {useMemo} from 'react';
 
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+
 import './styles/fileBrowser.css';
 
 type FilesComponentProps = {
@@ -36,7 +39,7 @@ const InnerFileBrowser = React.memo(
   }: FilesComponentProps) => {
     const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
       useCodebridgeContext();
-
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     return (
       <>
         {Object.values(folders)
@@ -113,9 +116,11 @@ const InnerFileBrowser = React.memo(
                   <span onClick={() => deleteFile(f.id)}>
                     <i className="fa-solid fa-trash" />
                   </span>
-                  <span onClick={() => toggleFileVisibility(f.id)}>
-                    <i className="fa-solid fa-eye" />
-                  </span>
+                  {isStartMode && (
+                    <span onClick={() => toggleFileVisibility(f.id)}>
+                      <i className="fa-solid fa-eye" />
+                    </span>
+                  )}
                 </span>
               </span>
             </li>
@@ -134,6 +139,7 @@ export const FileBrowser = React.memo(() => {
 
     renameFolder,
     newFolder,
+    setFileVisibility,
   } = useCodebridgeContext();
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
@@ -269,9 +275,12 @@ export const FileBrowser = React.memo(() => {
     useMemo(
       () => fileId => {
         const file = project.files[fileId];
-        console.log(file);
+        // file.visible could be undefined.
+        // We only want to show the file if it's currently explicitly hidden.
+        const visibility = file.visible === false;
+        setFileVisibility(fileId, visibility);
       },
-      [project.files]
+      [setFileVisibility, project.files]
     );
 
   return (
