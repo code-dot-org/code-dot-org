@@ -17,7 +17,6 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 
 import {
   AI_CUSTOMIZATIONS_LABELS,
@@ -109,14 +108,12 @@ export const updateAiCustomization = createAsyncThunk(
   async (_, thunkAPI) => {
     const rootState = (await thunkAPI.getState()) as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
-    const levelPath = getLevelPath(rootState.progress);
     const {dispatch} = thunkAPI;
 
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
       EVENTS.UPDATE_CHATBOT,
-      levelPath,
       dispatch
     );
   }
@@ -133,12 +130,10 @@ export const publishModel = createAsyncThunk(
 
     const rootState = thunkAPI.getState() as RootState;
     const {currentAiCustomizations, savedAiCustomizations} = rootState.aichat;
-    const levelPath = getLevelPath(rootState.progress);
     await saveAiCustomization(
       currentAiCustomizations,
       savedAiCustomizations,
       EVENTS.PUBLISH_MODEL_CARD_INFO,
-      levelPath,
       dispatch
     );
     dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -154,7 +149,6 @@ export const saveModelCard = createAsyncThunk(
     const rootState = (await thunkAPI.getState()) as RootState;
     const modelCardInfo =
       rootState.aichat.currentAiCustomizations.modelCardInfo;
-    const levelPath = getLevelPath(rootState.progress);
     if (!hasFilledOutModelCard(modelCardInfo)) {
       dispatch(setModelCardProperty({property: 'isPublished', value: false}));
     }
@@ -166,24 +160,10 @@ export const saveModelCard = createAsyncThunk(
       currentAiCustomizations,
       savedAiCustomizations,
       EVENTS.SAVE_MODEL_CARD_INFO,
-      levelPath,
       dispatch
     );
   }
 );
-
-const getLevelPath = (progress: ProgressState) => {
-  const levelId = progress.currentLevelId;
-  const lessons = progress?.lessons;
-  let levelPath = null;
-  if (levelId && lessons) {
-    const levels = lessons[0].levels;
-    const levelBasePath = lessons[0].lessonEditPath.slice(0, -4);
-    const index = levels.findIndex(level => level.activeId === levelId);
-    levelPath = `${levelBasePath}levels/${index + 1}`;
-  }
-  return levelPath;
-};
 
 // This variable keeps track of the most recent message ID so that we can
 // assign a unique message id in increasing sequence to a new message.
@@ -199,7 +179,6 @@ const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   savedAiCustomizations: AiCustomizations,
   eventDescription: string,
-  levelPath: string | null,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
   // Remove any empty example topics on save
@@ -261,7 +240,7 @@ const saveAiCustomization = async (
         eventDescription,
         {
           propertyUpdated: property,
-          levelPath,
+          levelPath: window.location.pathname,
         },
         PLATFORMS.BOTH
       );
