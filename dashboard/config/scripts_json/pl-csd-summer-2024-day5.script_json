@@ -8,11 +8,12 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-04 03:42:00 UTC",
+    "serialized_at": "2024-05-07 20:52:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -361,43 +362,43 @@
   ],
   "resources": [
     {
-      "name": "Activity Packet",
-      "url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-      "key": "activity_packet",
+      "name": "CSD Activity Packet 2024",
+      "url": "https://docs.google.com/document/d/1e6h0_yN0txqYVXmxUEco5ldh0l1K8cU4tukxdnXh3Xo/edit?usp=drive_link",
+      "key": "csd_activity_packet_2024",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-        "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "activity_packet"
+        "resource.key": "csd_activity_packet_2024"
       }
     },
     {
-      "name": "Day 5 Agenda",
-      "url": "https://docs.google.com/document/d/14T8nyJAB0UPu7elW0cmhIUFAjU6b0sJnwyvLZJVjhSE/edit#",
-      "key": "day_5_agenda",
+      "name": "CSD In-Person Summer Workshop Day 5 Agenda",
+      "url": "https://docs.google.com/document/d/1wqmQfryf27dhl0nApe5JqcsXmDJ7Ys6vT0VTUf_XhPg/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_5_agenda",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/14T8nyJAB0UPu7elW0cmhIUFAjU6b0sJnwyvLZJVjhSE/edit#",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "day_5_agenda"
+        "resource.key": "csd_in-person_summer_workshop_day_5_agenda"
       }
     },
     {
-      "name": "Day 5 Slides Template",
-      "url": "https://docs.google.com/presentation/d/1TiHYT50LWV8G6ldyoZds6ZeXRpHu8gldMF_YjZ8d8uM/edit?usp=share_link",
-      "key": "day_5_slides_template",
+      "name": "CSD In-Person Summer Workshop Day 5 Slides",
+      "url": "https://docs.google.com/presentation/d/1_IGDyXtadz25a3Ad9K5-4IO0A96ZZhNQF4nBUWulk8w/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_5_slides",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TiHYT50LWV8G6ldyoZds6ZeXRpHu8gldMF_YjZ8d8uM/edit?usp=share_link",
-        "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "day_5_slides_template"
+        "resource.key": "csd_in-person_summer_workshop_day_5_slides"
+      }
+    },
+    {
+      "name": "CSD Resource Packet 2024",
+      "url": "https://docs.google.com/document/d/17b0KVjqOsr2X3NUyE6gS82SEkXOsAuEE815H_Z6FRGU/edit?usp=drive_link",
+      "key": "csd_resource_packet_2024",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024"
       }
     },
     {
@@ -437,31 +438,30 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "activity_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_5_agenda",
         "script.name": "pl-csd-summer-2024-day5"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "day_5_agenda",
-        "script.name": "pl-csd-summer-2024-day5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "day_5_slides_template",
-        "script.name": "pl-csd-summer-2024-day5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "resource_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_5_slides",
         "script.name": "pl-csd-summer-2024-day5"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_activity_packet_2024",
+        "script.name": "pl-csd-summer-2024-day5"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024",
+        "script.name": "pl-csd-summer-2024-day5"
+      }
+    }
   ],
   "vocabularies": [
 

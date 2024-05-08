@@ -127,10 +127,13 @@ class BubbleChoice < DSLDefined
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans.symbolize_keys
 
+      level_desc = level.try(:bubble_choice_description)
+      level_desc = I18n.t(level.name, scope: %i[data bubble_choice_description], default: level_desc) if should_localize
+
       level_info.merge!(
         {
           id: level.id.to_s,
-          description: level.try(:bubble_choice_description),
+          description: level_desc,
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
           letter: ALPHABET[index],

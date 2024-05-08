@@ -64,7 +64,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:41:32.400+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab2022\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab2022\"},{\"changed_at\":\"2024-05-06 23:42:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:41:32.400+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab2022\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab2022\"},{\"changed_at\":\"2024-05-06 23:42:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-07 17:26:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -593,8 +593,8 @@
             </value>
           </block>
           <block type="gamelab_randomColor" id="A^P@rBVGr0|!c@s7wk_]"/>
-          <block type="gamelab_playSound" id="s6~8:[C*1GfQN{w8}d-u">
-            <field name="SOUND">sound://category_digital/ping.mp3</field>
+          <block type="gamelab_playSoundOptions" id="1@[?-636k}wN69iML$36">
+            <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
           </block>
           <block type="gamelab_printText" id="7{Y{+@^%Qo%wVtLO-:~[">
             <value name="TEXT">

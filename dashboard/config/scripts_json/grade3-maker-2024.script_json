@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade3-maker",
-    "serialized_at": "2024-05-03 21:37:17 UTC",
+    "serialized_at": "2024-05-07 21:26:08 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21,11 +21,23 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Conditionals and Events"
+        "display_name": "Saving sea turtles with micro:bit - Conditionals"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Rock, Paper, Scissors with micro:bit - Conditionals and Events"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -35,9 +47,9 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
-        "display_name": "[Optional] Extension: Conditionals and Text Inputs"
+        "display_name": "Activity picker with micro:bit - Conditionals and Text Inputs"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -63,7 +75,7 @@
       },
       "seeding_key": {
         "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -83,7 +95,7 @@
       },
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -101,7 +113,7 @@
       },
       "seeding_key": {
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -120,7 +132,7 @@
       },
       "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -132,12 +144,12 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "In today's **skill-building** lesson, the goal is to make a prototype of a automated lighting that switches on when it gets dark. The key concepts are: **loops, conditionals (if.. then.. else..), inputs** and **outputs**.",
+        "overview": "In today's **skill-building** lesson, the goal is to make a prototype of automated lighting that switches on when it gets dark. The key concepts are: **loops, conditionals (if.. then.. else..), inputs** and **outputs**.",
         "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n\n- “Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.”\n\n- Note: Variables are not covered explicitly in CS Fundamentals Course D, but your students may have used them as a game score counter in Course C **<a href=\"https://mbit.io/csf-chase-game\" target=\"_blank\"> Lesson 13: Mini-Project: Chase Game.</a>**  "
       },
       "seeding_key": {
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -225,7 +237,7 @@
       "seeding_key": {
         "lesson_activity.key": "9a484769-3dd0-4cc1-9c26-c9feb330d650",
         "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -239,7 +251,7 @@
       "seeding_key": {
         "lesson_activity.key": "b256c2e7-0f5a-46bf-9ece-e7a4174bdc9b",
         "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -253,7 +265,7 @@
       "seeding_key": {
         "lesson_activity.key": "11f27e84-a297-4e28-8ce3-f5a5f0a2d400",
         "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -266,7 +278,7 @@
       "seeding_key": {
         "lesson_activity.key": "cfcace95-2d6e-4b4c-a6d0-fe21652e7bab",
         "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -279,7 +291,7 @@
       "seeding_key": {
         "lesson_activity.key": "ac7802c0-ac98-429b-971f-3488f7c728d0",
         "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -293,7 +305,7 @@
       "seeding_key": {
         "lesson_activity.key": "fac972e3-e1d1-4428-a25c-ba60011a66f4",
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -307,7 +319,7 @@
       "seeding_key": {
         "lesson_activity.key": "68279b1a-2473-4f73-ba55-786514e2c918",
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -321,7 +333,7 @@
       "seeding_key": {
         "lesson_activity.key": "39c4e45b-80a7-416c-a762-8ceae3f362f9",
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -334,7 +346,7 @@
       "seeding_key": {
         "lesson_activity.key": "73f81137-ba86-4558-b4ee-8780647746cc",
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -347,7 +359,7 @@
       "seeding_key": {
         "lesson_activity.key": "0691499f-29df-4983-a35b-95898abf1c7e",
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -361,7 +373,7 @@
       "seeding_key": {
         "lesson_activity.key": "b563671b-54c0-4535-a043-e9f4664675a6",
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -375,7 +387,7 @@
       "seeding_key": {
         "lesson_activity.key": "6b6252e3-8952-478e-8db8-123a1ab76153",
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -389,7 +401,7 @@
       "seeding_key": {
         "lesson_activity.key": "8f6e3d6b-722c-488f-9909-e37db51ddaa0",
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -402,7 +414,7 @@
       "seeding_key": {
         "lesson_activity.key": "6c320092-4401-444e-be26-94eaf9e233cc",
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -416,7 +428,7 @@
       "seeding_key": {
         "lesson_activity.key": "c01ea0e2-c596-4b66-aa16-a064cb8a0254",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -430,7 +442,7 @@
       "seeding_key": {
         "lesson_activity.key": "e904532f-3106-4107-b34f-e5a17a13cc3d",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -444,7 +456,7 @@
       "seeding_key": {
         "lesson_activity.key": "af07a5f5-197f-4d3d-ab4a-f0c0664cd393",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -457,7 +469,7 @@
       "seeding_key": {
         "lesson_activity.key": "f420e009-16ee-44a8-af27-da455c592f5e",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -471,7 +483,7 @@
       "seeding_key": {
         "lesson_activity.key": "71b7ef00-2c26-4dde-be79-9f0ce0fd4f6e",
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -485,7 +497,7 @@
       "seeding_key": {
         "lesson_activity.key": "ba1fd7cb-aec5-4d89-87fe-67793d68bbc8",
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -499,7 +511,7 @@
       "seeding_key": {
         "lesson_activity.key": "d583f55b-bbb7-449d-9aee-5624f531d55f",
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -512,7 +524,7 @@
       "seeding_key": {
         "lesson_activity.key": "c337e6a3-b27b-48e2-a187-f84748d6d340",
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024"
       }
     },
@@ -2006,7 +2018,7 @@
           "ConditionalsWithCards-Unplugged2022_maker_grade3"
         ],
         "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "91a7073d-d364-4fcf-b81c-04fa45057156"
       },
@@ -2031,7 +2043,7 @@
           "courseD_bee_conditionalsVid1_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "0a949a29-e472-4fc2-a05e-bc0e47a9875c"
       },
@@ -2056,7 +2068,7 @@
           "courseD_bee_conditionals1_predict1_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "ee90826e-6798-46df-877d-4e0e437bb29f"
       },
@@ -2081,7 +2093,7 @@
           "courseD_bee_conditionals2_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       },
@@ -2106,7 +2118,7 @@
           "courseD_bee_conditionals3_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       },
@@ -2131,7 +2143,7 @@
           "courseD_bee_conditionals4_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       },
@@ -2156,7 +2168,7 @@
           "courseD_bee_conditionals5_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       },
@@ -2181,7 +2193,7 @@
           "courseD_bee_conditionals6_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       },
@@ -2206,7 +2218,7 @@
           "courseD_bee_conditionalsVidIfElse_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "66c71eaa-8f44-4946-8fd6-eca27d0072dd"
       },
@@ -2231,7 +2243,7 @@
           "courseD_bee_conditionals7_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "e8741e8c-6e7b-4d75-bce6-db3c94d25c33"
       },
@@ -2256,7 +2268,7 @@
           "courseD_bee_conditionals7_predict2_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "58d5eb56-a700-4537-9abd-1cf152b6d9c9"
       },
@@ -2282,7 +2294,7 @@
           "courseD_bee_conditionals8_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "f6cc2ff1-6392-4082-a90e-20482ebd0678"
       },
@@ -2307,7 +2319,7 @@
           "courseD_bee_conditionals9_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "c6645a61-a52e-4e20-ad81-64497f9adae3"
       },
@@ -2332,7 +2344,7 @@
           "courseD_bee_conditionals10_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "c6645a61-a52e-4e20-ad81-64497f9adae3"
       },
@@ -2357,7 +2369,7 @@
           "courseD_bee_conditionals_challenge1_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "5b119fd9-d737-431f-a42e-a9a440cb59ff"
       },
@@ -2382,7 +2394,7 @@
           "courseD_bee_conditionals_challenge2_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "5b119fd9-d737-431f-a42e-a9a440cb59ff"
       },
@@ -2407,7 +2419,7 @@
           "CourseD_2022LessonExtra14a_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "6a67ebc8-bc33-4df7-ab6c-d8d218294e91"
       },
@@ -2432,7 +2444,7 @@
           "CourseD_2022_LessonExtra14b_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "6a67ebc8-bc33-4df7-ab6c-d8d218294e91"
       },
@@ -2457,7 +2469,7 @@
           "csc_ecosystems_intro video_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "85c11db4-30af-476d-b804-47719306a25b"
       },
@@ -2482,7 +2494,7 @@
           "csc_ecosystems_ocean_fish_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "b9aa69e8-a0e3-4506-9256-b732af697955"
       },
@@ -2507,7 +2519,7 @@
           "csc_ecosystems_ocean_algae_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "4f6b3e58-d683-4fd5-a19c-a4c7aed4aa4b"
       },
@@ -2532,7 +2544,7 @@
           "csc_ecosystems_ocean_boat_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "4f6b3e58-d683-4fd5-a19c-a4c7aed4aa4b"
       },
@@ -2557,7 +2569,7 @@
           "csc_ecosystems_matching_events_maker_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "4f6b3e58-d683-4fd5-a19c-a4c7aed4aa4b"
       },
@@ -2582,7 +2594,7 @@
           "csc_ecosystems_conditionals_overview_maker_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       },
@@ -2607,7 +2619,7 @@
           "csc_ecosystems_ocean_coral_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       },
@@ -2632,7 +2644,7 @@
           "csc_ecosystems_ocean_coral_health_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       },
@@ -2657,7 +2669,7 @@
           "csc_ecosystems_ocean_justright_algae_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       },
@@ -2682,7 +2694,7 @@
           "csc_ecosystems_matching_conditionals_maker_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       },
@@ -2707,7 +2719,7 @@
           "csc_ecosystems_algae_freeplay_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "1e133a7e-4f33-4982-9d9e-f6c8230a4b29"
       },
@@ -2732,7 +2744,7 @@
           "course_c_maker_meet_your_microbit_grade3"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "9052d885-e0c0-44e6-b3d1-e64381b1a68d"
       },
@@ -2757,7 +2769,7 @@
           "grade3-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "e064b2d4-fb4a-497e-8721-f158f0676ed8"
       },
@@ -2771,6 +2783,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_saving_sea_turtles_grade3"
+        ],
         "progression": "Saving sea turtles with micro:bit"
       },
       "bonus": false,
@@ -2779,7 +2794,7 @@
           "course_d_maker_saving_sea_turtles_grade3"
         ],
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "939b383a-716c-4c45-bd4e-0600c3972a1d"
       },
@@ -3143,6 +3158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_rock_paper_scissors_grade3"
+        ],
         "progression": "Rock, paper, scissors with micro:bit"
       },
       "bonus": false,
@@ -3390,6 +3408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_activity_picker_grade3"
+        ],
         "progression": "Activity picker with micro:bit"
       },
       "bonus": false,
@@ -3415,7 +3436,7 @@
           "ConditionalsWithCards-Unplugged2022_maker_grade3"
         ],
         "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "91a7073d-d364-4fcf-b81c-04fa45057156"
       }
@@ -3427,7 +3448,7 @@
           "courseD_bee_conditionalsVid1_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "0a949a29-e472-4fc2-a05e-bc0e47a9875c"
       }
@@ -3439,7 +3460,7 @@
           "courseD_bee_conditionals1_predict1_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "ee90826e-6798-46df-877d-4e0e437bb29f"
       }
@@ -3451,7 +3472,7 @@
           "courseD_bee_conditionals2_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       }
@@ -3463,7 +3484,7 @@
           "courseD_bee_conditionals3_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       }
@@ -3475,7 +3496,7 @@
           "courseD_bee_conditionals4_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       }
@@ -3487,7 +3508,7 @@
           "courseD_bee_conditionals5_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       }
@@ -3499,7 +3520,7 @@
           "courseD_bee_conditionals6_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "038361df-d0eb-48c0-9401-c08ffe7acdc6"
       }
@@ -3511,7 +3532,7 @@
           "courseD_bee_conditionalsVidIfElse_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "66c71eaa-8f44-4946-8fd6-eca27d0072dd"
       }
@@ -3523,7 +3544,7 @@
           "courseD_bee_conditionals7_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "e8741e8c-6e7b-4d75-bce6-db3c94d25c33"
       }
@@ -3535,7 +3556,7 @@
           "courseD_bee_conditionals7_predict2_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "58d5eb56-a700-4537-9abd-1cf152b6d9c9"
       }
@@ -3547,7 +3568,7 @@
           "courseD_bee_conditionals8_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "f6cc2ff1-6392-4082-a90e-20482ebd0678"
       }
@@ -3559,7 +3580,7 @@
           "courseD_bee_conditionals9_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "c6645a61-a52e-4e20-ad81-64497f9adae3"
       }
@@ -3571,7 +3592,7 @@
           "courseD_bee_conditionals10_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "c6645a61-a52e-4e20-ad81-64497f9adae3"
       }
@@ -3583,7 +3604,7 @@
           "courseD_bee_conditionals_challenge1_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "5b119fd9-d737-431f-a42e-a9a440cb59ff"
       }
@@ -3595,7 +3616,7 @@
           "courseD_bee_conditionals_challenge2_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "5b119fd9-d737-431f-a42e-a9a440cb59ff"
       }
@@ -3607,7 +3628,7 @@
           "CourseD_2022LessonExtra14a_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "6a67ebc8-bc33-4df7-ab6c-d8d218294e91"
       }
@@ -3619,7 +3640,7 @@
           "CourseD_2022_LessonExtra14b_grade3"
         ],
         "lesson.key": "If/Else with Bee",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "6a67ebc8-bc33-4df7-ab6c-d8d218294e91"
       }
@@ -3631,7 +3652,7 @@
           "csc_ecosystems_intro video_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "85c11db4-30af-476d-b804-47719306a25b"
       }
@@ -3643,7 +3664,7 @@
           "csc_ecosystems_ocean_fish_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "b9aa69e8-a0e3-4506-9256-b732af697955"
       }
@@ -3655,7 +3676,7 @@
           "csc_ecosystems_ocean_algae_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "4f6b3e58-d683-4fd5-a19c-a4c7aed4aa4b"
       }
@@ -3667,7 +3688,7 @@
           "csc_ecosystems_ocean_boat_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "4f6b3e58-d683-4fd5-a19c-a4c7aed4aa4b"
       }
@@ -3679,7 +3700,7 @@
           "csc_ecosystems_matching_events_maker_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "4f6b3e58-d683-4fd5-a19c-a4c7aed4aa4b"
       }
@@ -3691,7 +3712,7 @@
           "csc_ecosystems_conditionals_overview_maker_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       }
@@ -3703,7 +3724,7 @@
           "csc_ecosystems_ocean_coral_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       }
@@ -3715,7 +3736,7 @@
           "csc_ecosystems_ocean_coral_health_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       }
@@ -3727,7 +3748,7 @@
           "csc_ecosystems_ocean_justright_algae_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       }
@@ -3739,7 +3760,7 @@
           "csc_ecosystems_matching_conditionals_maker_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "20fd7d6c-3316-4ee9-ac57-7f1ba5404507"
       }
@@ -3751,7 +3772,7 @@
           "csc_ecosystems_algae_freeplay_grade3"
         ],
         "lesson.key": "Overfishing Simulation",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "1e133a7e-4f33-4982-9d9e-f6c8230a4b29"
       }
@@ -3763,7 +3784,7 @@
           "course_c_maker_meet_your_microbit_grade3"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "9052d885-e0c0-44e6-b3d1-e64381b1a68d"
       }
@@ -3775,7 +3796,7 @@
           "grade3-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "e064b2d4-fb4a-497e-8721-f158f0676ed8"
       }
@@ -3787,7 +3808,7 @@
           "course_d_maker_saving_sea_turtles_grade3"
         ],
         "lesson.key": "Cristina - Saving sea turtles with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade3-maker-2024",
         "activity_section.key": "939b383a-716c-4c45-bd4e-0600c3972a1d"
       }

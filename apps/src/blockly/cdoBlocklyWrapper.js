@@ -349,6 +349,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     processToolboxXml(toolbox) {
       return toolbox;
     },
+    highlightBlock(id, spotlight) {
+      Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    },
   };
   blocklyWrapper.customBlocks = customBlocks;
 
