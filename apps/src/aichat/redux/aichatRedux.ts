@@ -301,8 +301,8 @@ export const submitChatContents = createAsyncThunk(
       .getMetricsReporter()
       .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
         {
-          name: 'Pathname',
-          value: window.location.pathname,
+          name: 'ModelId',
+          value: aiCustomizations.selectedModelId,
         },
       ]);
 
