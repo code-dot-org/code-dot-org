@@ -223,6 +223,30 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_get_openai_evaluations(status: 429)
 
+    # The superclass, ApplicationJob, logs metrics around all jobs.
+    # Those calls must be stubbed to test metrics for this job.
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      anything
+    )
+
+    # ensure RateLimit metric is logged
+    Cdo::Metrics.expects(:push).with(
+      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(RateLimit: 1),
+        includes_dimensions(:RateLimit, Environment: CDO.rack_env)
+      )
+    )
+
+    # ensure firehose event is logged
+    FirehoseClient.instance.expects(:put_record).with do |stream, data|
+      data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
+        data[:event] == 'rate-limit' &&
+        JSON.parse(data[:data_json])['agent'].nil? &&
+        stream == :analysis
+    end
+
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_RATE_LIMIT do
       perform_enqueued_jobs do

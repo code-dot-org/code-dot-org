@@ -235,16 +235,8 @@ class EvaluateRubricJob < ApplicationJob
 
   # Retry on any reported rate limit (429 status). With 3 attempts, 'exponentially_longer' waits 3s, then 18s.
   retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
-    # Job arguments are always serializable, so we just pull out the hash
-    # and send it as context.
-    options = job.arguments.first
-
-    # Send it to honeybadger even though we are handling the error via retry
-    Honeybadger.notify(
-      error,
-      error_message: "Retrying rubric evaluation job due to rate limiting (429).",
-      context: options
-    )
+    log_metric(metric_name: :RateLimit)
+    log_to_firehose(job: job, error: error, event_name: 'rate-limit')
   end
 
   ATTEMPTS_ON_TIMEOUT_ERROR = 2
