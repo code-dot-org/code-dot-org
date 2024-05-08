@@ -27,6 +27,8 @@ export const setAndSaveProjectSource = (
   };
 };
 
+// SLICE
+
 const projectSlice = createSlice({
   name: 'lab2Project',
   initialState,

@@ -152,7 +152,7 @@ const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setProject} = useSource(defaultProject);
+  const {source, setSource} = useSource(defaultProject);
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
@@ -193,7 +193,7 @@ const Weblab2View = () => {
           <Codebridge
             project={source}
             config={config}
-            setProject={setProject}
+            setProject={setSource}
             setConfig={setConfig}
           />
         )}
@@ -206,7 +206,7 @@ const Weblab2View = () => {
               newConfig: ProjectType | ConfigType | string
             ) => {
               if (configName === 'project') {
-                setProject(newConfig as ProjectType);
+                setSource(newConfig as ProjectType);
               } else if (configName === 'config' || configName === 'layout') {
                 (newConfig as ConfigType).EditorComponent =
                   DefaultEditorComponent;

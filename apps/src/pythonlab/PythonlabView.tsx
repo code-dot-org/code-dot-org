@@ -78,7 +78,7 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setProject} = useSource(defaultProject);
+  const {source, setSource} = useSource(defaultProject);
 
   return (
     <div className={moduleStyles.pythonlab}>
@@ -87,7 +87,7 @@ const PythonlabView: React.FunctionComponent = () => {
           <Codebridge
             project={source}
             config={config}
-            setProject={setProject}
+            setProject={setSource}
             setConfig={setConfig}
           />
         )}

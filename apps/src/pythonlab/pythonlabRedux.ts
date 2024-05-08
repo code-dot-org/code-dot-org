@@ -2,7 +2,6 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface PythonlabState {
-  //source: MultiFileSource | undefined;
   output: ConsoleLog[];
 }
 
@@ -20,9 +19,6 @@ const pythonlabSlice = createSlice({
   name: 'pythonlab',
   initialState,
   reducers: {
-    // setSource(state, action: PayloadAction<MultiFileSource>) {
-    //   state.source = action.payload;
-    // },
     appendSystemOutMessage(state, action: PayloadAction<string>) {
       state.output.push({type: 'system_out', contents: action.payload});
     },
@@ -44,7 +40,6 @@ const pythonlabSlice = createSlice({
 registerReducers({pythonlab: pythonlabSlice.reducer});
 
 export const {
-  //setSource,
   appendSystemOutMessage,
   appendSystemInMessage,
   appendOutputImage,

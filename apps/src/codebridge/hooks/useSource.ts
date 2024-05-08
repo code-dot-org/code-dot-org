@@ -9,6 +9,9 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useInitialSources} from './useInitialSources';
 
+// Hook for handling the project source for the current level.
+// Returns the current project source and a function to save the source.
+// This also handles displaying the levelbuilder save button in start mode.
 export const useSource = (defaultSources: ProjectSources) => {
   const dispatch = useAppDispatch();
   const projectSource = useAppSelector(
@@ -19,9 +22,9 @@ export const useSource = (defaultSources: ProjectSources) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const initialSources = useInitialSources(defaultSources);
 
-  const setProject = useMemo(
-    () => (newProject: MultiFileSource) => {
-      dispatch(setAndSaveProjectSource({source: newProject}));
+  const setSource = useMemo(
+    () => (newSource: MultiFileSource) => {
+      dispatch(setAndSaveProjectSource({source: newSource}));
     },
     [dispatch]
   );
@@ -37,13 +40,9 @@ export const useSource = (defaultSources: ProjectSources) => {
   useEffect(() => {
     // We reset the project when the channelId changes, as this means we are on a new level.
     if (initialSources) {
-      dispatch(
-        setAndSaveProjectSource({
-          source: initialSources.source as MultiFileSource,
-        })
-      );
+      dispatch(setAndSaveProjectSource(initialSources));
     }
   }, [channelId, initialSources, dispatch]);
 
-  return {source, setProject};
+  return {source, setSource};
 };
