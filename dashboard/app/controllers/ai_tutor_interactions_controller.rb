@@ -76,6 +76,44 @@ class AiTutorInteractionsController < ApplicationController
     render json: format_ai_tutor_interactions(interactions)
   end
 
+  # GET /ai_tutor_interactions/system_prompt
+  def system_prompt
+    prompt = read_prompt
+    if prompt
+      render json: {prompt: prompt}, status: :ok
+    else
+      render json: {error: 'System prompt not found.'}, status: :not_found
+    end
+  rescue StandardError => exception
+    Rails.logger.error "Failed to fetch system prompt: #{exception.message}"
+    render json: {error: 'Internal server error.'}, status: :internal_server_error
+  end
+
+  private def read_prompt
+    s3_bucket = ENV['S3_AI_BUCKET'] || 'default-bucket-name'
+    s3_key = "#{ENV['S3_AI_RELEASE_PATH'] || 'default-path'}/system_prompt.txt"
+
+    # Check for a local file in development or testing
+    return read_local_file(s3_bucket, s3_key) if Rails.env.development? || Rails.env.test?
+
+    # Fallback to S3 in production or if no local file found
+    read_from_s3(s3_bucket, s3_key)
+  end
+
+  private def read_local_file(bucket, key)
+    local_path = Rails.root.join('local-aws', bucket, key)
+    return File.read(local_path) if File.exist?(local_path)
+    nil
+  end
+
+  private def read_from_s3(bucket, key)
+    s3 = Aws::S3::Client.new
+    response = s3.get_object(bucket: bucket, key: key)
+    response.body.read
+  rescue Aws::S3::Errors::NoSuchKey
+    nil
+  end
+
   private def user_has_chat_access?
     current_user.can_view_student_ai_chat_messages? || current_user.has_ai_tutor_access?
   end

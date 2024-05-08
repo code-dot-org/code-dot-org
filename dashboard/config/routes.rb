@@ -1138,6 +1138,10 @@ Dashboard::Application.routes.draw do
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
+
+      collection do
+        get 'system_prompt', to: 'ai_tutor_interactions#system_prompt'
+      end
     end
 
     # Policy Compliance
