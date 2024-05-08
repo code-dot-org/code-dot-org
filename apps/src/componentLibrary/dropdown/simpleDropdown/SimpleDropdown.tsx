@@ -78,6 +78,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
         moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
         className
       )}
+      aria-describedby={ariaProps['aria-describedby']}
     >
       {isLabelVisible && (
         <span className={moduleStyles.dropdownLabel}>{labelText}</span>

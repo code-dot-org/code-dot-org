@@ -123,6 +123,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       )}
       onKeyDown={onKeyDown}
       ref={dropdownRef}
+      aria-describedby={ariaProps['aria-describedby']}
     >
       <button
         id={`${name}-dropdown-button`}
