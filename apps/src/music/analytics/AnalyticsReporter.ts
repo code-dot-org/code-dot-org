@@ -240,10 +240,10 @@ export default class AnalyticsReporter {
   }
 
   private formatUserId(userId: number) {
-    const userIdString = userId.toString() || 'none';
     if (!userId) {
-      return userIdString;
+      return 'none';
     }
+    const userIdString = userId.toString();
     if (isProductionEnvironment()) {
       return userIdString.padStart(5, '0');
     } else {
