@@ -146,7 +146,6 @@ describe('SectionProgressSelector', () => {
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(postStub).to.have.been.calledTwice;
     expect(postStub).to.have.been.calledWith(
       '/api/v1/users/show_progress_table_v2',
       {
@@ -194,16 +193,14 @@ describe('SectionProgressSelector', () => {
   it('calls analytics when toggling to v2', () => {
     renderDefault();
 
-    const toggle = screen.getByRole('link', {name: V1_PAGE_LINK_TEXT});
+    const remindLaterLink = screen.getByText('Remind me later');
+    fireEvent.click(remindLaterLink);
 
+    const toggle = screen.getByRole('link', {name: V1_PAGE_LINK_TEXT});
     fireEvent.click(toggle);
 
-    expect(postStub).to.have.been.calledTwice;
     expect(postStub).to.have.been.calledWith(
-      '/api/v1/users/show_progress_table_v2',
-      {
-        show_progress_table_v2: true,
-      }
+      '/api/v1/users/set_progress_table_timestamp'
     );
   });
 
@@ -215,12 +212,8 @@ describe('SectionProgressSelector', () => {
 
     fireEvent.click(toggle);
 
-    expect(postStub).to.have.been.calledTwice;
     expect(postStub).to.have.been.calledWith(
-      '/api/v1/users/show_progress_table_v2',
-      {
-        show_progress_table_v2: false,
-      }
+      '/api/v1/users/set_progress_table_timestamp'
     );
   });
 });
