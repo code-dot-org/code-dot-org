@@ -56,7 +56,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
           <hr />
           <div className={styles.modalButton}>
             <button type="button" onClick={onClose}>
-              Close
+              {i18n.closeDialog()}
             </button>
           </div>
         </div>
