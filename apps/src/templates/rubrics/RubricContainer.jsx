@@ -27,6 +27,8 @@ import RubricTabButtons from './RubricTabButtons';
 
 import style from './rubrics.module.scss';
 
+/* eslint-disable import/order */
+// Disabling import/order rule for grouped product tour imports.
 // product Tour
 import './introjs.scss';
 import {Steps} from 'intro.js-react';
