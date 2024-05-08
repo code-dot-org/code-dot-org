@@ -22,7 +22,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai';
 
 describe('AgeGatedStudentsModal', () => {
   const fakeStudent = {
@@ -59,7 +59,6 @@ describe('AgeGatedStudentsModal', () => {
     hidden: false,
   };
   beforeEach(() => {
-    // Stub Redux
     stubRedux();
     const store = getStore();
     registerReducers({
@@ -75,12 +74,11 @@ describe('AgeGatedStudentsModal', () => {
   });
 
   afterEach(() => {
-    // Restore Redux
     restoreRedux();
   });
 
   it('should show a sync results view', () => {
-    const {getByTestId, debug} = render(
+    const {getByTestId} = render(
       <Provider store={getStore()}>
         <AgeGatedStudentsModal
           manageStudents={{isLoadingStudents: false}}
@@ -90,6 +88,5 @@ describe('AgeGatedStudentsModal', () => {
       </Provider>
     );
     expect(getByTestId('age-gated-students-modal'));
-    debug();
   });
 });
