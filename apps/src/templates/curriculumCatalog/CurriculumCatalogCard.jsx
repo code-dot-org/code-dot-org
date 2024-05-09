@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {createPortal} from 'react-dom';
 import {concat, intersection} from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
@@ -412,9 +413,7 @@ export const CustomizableCurriculumCatalogCard = ({
           </div>
         </div>
         {isAssignDialogOpen &&
-          (props.customRenderAssignDialog
-            ? props.customRenderAssignDialog(courseId)
-            : renderAssignDialog())}
+          createPortal(renderAssignDialog(), document.body)}
       </div>
       {isExpanded && (
         <ExpandedCurriculumCatalogCard

@@ -1,63 +1,11 @@
-import React, {useEffect, useRef, useState} from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import style from './congrats.module.scss';
+import React, {useEffect, useRef} from 'react';
+
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
-import {CreateSectionsToAssignSectionsDialog} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
-import {
-  assignToSection,
-  sectionsForDropdown,
-  unassignSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import i18n from '@cdo/locale';
 
-function SuggestedAssignableCourses({
-  assignableCourseSuggestions,
-  sectionsForDropdown,
-  assignToSection,
-  unassignSection,
-}) {
-  const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
-  const [courseIdToAssign, setCourseIdToAssign] = useState(null);
-  const onAssign = courseId => {
-    setIsAssignDialogOpen(true);
-    setCourseIdToAssign(courseId);
-  };
+import style from './congrats.module.scss';
 
-  const renderAssignDialog = () => {
-    if (sectionsForDropdown.length > 0) {
-      const courseToAssign = assignableCourseSuggestions.find(
-        course => course.course_id === courseIdToAssign
-      );
-      console.log('courseToAssign', courseToAssign);
-      return (
-        <MultipleSectionsAssigner
-          assignmentName={courseToAssign.display_name_with_latest_year}
-          onClose={() => setIsAssignDialogOpen(false)}
-          sections={sectionsForDropdown}
-          participantAudience="student"
-          onAssignSuccess={() => {
-            console.log('onAssignSuccess');
-            //setIsAssignDialogOpen(false);
-          }}
-          isAssigningCourse={!!courseIdToAssign}
-          courseId={courseIdToAssign}
-          sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
-          assignToSection={assignToSection}
-          unassignSection={unassignSection}
-        />
-      );
-    } else {
-      return (
-        <CreateSectionsToAssignSectionsDialog
-          onClose={() => setIsAssignDialogOpen(false)}
-          onClick={() => {}}
-        />
-      );
-    }
-  };
-
+function SuggestedAssignableCourses({assignableCourseSuggestions}) {
   const renderCurriculumCard = suggestedCurriculum => {
     const {
       key,
@@ -119,7 +67,6 @@ function SuggestedAssignableCourses({
         availableResources={available_resources}
         isSignedOut={false}
         isTeacher
-        customRenderAssignDialog={onAssign}
       />
     );
   };
@@ -170,7 +117,6 @@ function SuggestedAssignableCourses({
           </swiper-slide>
         ))}
       </swiper-container>
-      {isAssignDialogOpen && renderAssignDialog()}
     </div>
   );
 }
@@ -182,17 +128,4 @@ SuggestedAssignableCourses.propTypes = {
   unassignSection: PropTypes.func.isRequired,
 };
 
-export default connect(
-  (state, ownProps) => ({
-    sectionsForDropdown: sectionsForDropdown(
-      state.teacherSections,
-      ownProps.courseOfferingId,
-      ownProps.courseVersionId,
-      state.progress?.scriptId
-    ),
-  }),
-  {
-    assignToSection,
-    unassignSection,
-  }
-)(SuggestedAssignableCourses);
+export default SuggestedAssignableCourses;
