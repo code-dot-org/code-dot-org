@@ -1,14 +1,13 @@
+/* eslint-disable import/order */
+// Disabling import order due to circular dependencies.
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import VersionRow from './VersionRow';
+import {sources as sourcesApi, files as filesApi} from '../clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import i18n from '@cdo/locale';
-
-import {sources as sourcesApi, files as filesApi} from '../clientApi';
 import * as utils from '../utils';
-
-import VersionRow from './VersionRow';
+import i18n from '@cdo/locale';
 
 /**
  * A component for viewing project version history.
