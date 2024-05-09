@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-08 02:29:33 UTC",
+    "serialized_at": "2024-05-08 20:48:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -163,12 +163,16 @@
     },
     {
       "key": "Make your own Digital Scene",
-      "name": "Make your own Digital Scene",
+      "name": "Digital Scene Project",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment": true,
+        "overview": "**How can we use programming concepts such as functions, loops, and randomization to effectively solve complex visual problems and create engaging, dynamic scenes?**\n\nThis two-day project challenges students to apply their knowledge of programming concepts to design and implement a unique digital scene. Students will use functions, loops, and randomization to create dynamic and visually appealing scenes in a programming environment. The project encourages creativity, problem-solving, and application of programming skills, culminating in a presentation where students showcase their work.",
+        "preparation": "* Print copies of the Design a Digital Scene Project Planning Guide (one for each student)",
+        "student_overview": "**How can we use programming concepts such as functions, loops, and randomization to effectively solve complex visual problems and create engaging, dynamic scenes?**\n\nOver the next two days, you’ll dive deep into the world of programming to design and build your own unique digital scene. This project is your chance to showcase your coding skills and imagination by using functions, loops, and even random elements to bring your vision to life."
       },
       "seeding_key": {
         "lesson.key": "Make your own Digital Scene",
@@ -477,10 +481,24 @@
       "position": 1,
       "properties": {
         "duration": 45,
-        "name": "Levels"
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15",
+        "lesson.key": "Make your own Digital Scene",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d",
         "lesson.key": "Make your own Digital Scene",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024"
@@ -1359,15 +1377,239 @@
       }
     },
     {
-      "key": "ed197c91-f575-4d0a-810d-758895a5255d",
+      "key": "70bc17bc-2cf5-4c88-84d7-7e6f940bfd48",
       "position": 1,
       "properties": {
-        "name": "Personal Digital Scene",
-        "progression_name": "Personal Digital Scene"
+        "description": "I want you to think about a scene from your favorite movie, game, or book that really stuck with you. What made it memorable? Was it the colors, the action, the characters? Keep that scene in mind because it's going to inspire our project work today. Let’s share and explore how we can bring similar elements into our own programming projects to make them just as engaging and memorable.",
+        "duration": "5",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "70bc17bc-2cf5-4c88-84d7-7e6f940bfd48",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "643ad986-d0ce-4d56-b28d-d9a59459d840",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of a memorable scene from a movie, game, or book that you really like. What elements make this scene stand out to you, and how could you incorporate similar elements into your own programming project?*\n\n**Discussion Goal:** Encourage students to connect with creative and memorable elements from familiar media and explore how these elements can be translated into their own programming projects. The aim is to inspire creativity and foster an understanding of how to bring dynamic storytelling or visual components into their scene designs, enhancing their ability to think critically and innovatively about their coding projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "643ad986-d0ce-4d56-b28d-d9a59459d840",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "bab8277f-f916-4b7e-8168-f6b9f146cb73",
+      "position": 3,
+      "properties": {
+        "description": "Alright, now that we've shared some inspiring scenes, it's time to bring your own ideas to life. Take a few minutes to brainstorm what kind of scene you'd like to create. Think about the setting, characters, and any actions that might take place. Once you have a clear idea, go ahead and sketch a quick outline of your scene on paper. This doesn't have to be perfect—it's just a blueprint to help you visualize and plan your project. Let your creativity flow and remember, the more detailed your plan, the easier it will be to translate it into code!",
+        "duration": "35",
+        "name": "Activity",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bab8277f-f916-4b7e-8168-f6b9f146cb73",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "8d0cb00a-7fbf-477e-a821-6c2656567140",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Design a Digital Scene Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm ideas for their scene. Encourage them to think broadly at first about the setting, characters, and actions that could take place in their scene. Once they have a concept, they should make a quick sketch of the scene layout."
+      },
+      "seeding_key": {
+        "activity_section.key": "8d0cb00a-7fbf-477e-a821-6c2656567140",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "944e76dd-a319-4d4e-99c8-95ff9b1a714f",
+      "position": 5,
+      "properties": {
+        "description": "Now that you have a sketch of your scene, let's start breaking it down into programmable parts. Think about the different elements in your scene that can be created using functions—these might be trees, buildings, animals, or any repeating pattern. Then, consider where loops can help you repeat certain actions or elements efficiently. Identify what parameters your functions will need, and how loops can simplify your coding process. This step is crucial for turning your creative ideas into functional code, so take your time to map it out clearly!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "944e76dd-a319-4d4e-99c8-95ff9b1a714f",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "815322d5-3dda-4686-93f0-92e1c6cda660",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students which parts of their scene can be created using functions and where loops could be used to repeat elements or actions. They should write a brief description of each function they plan to use, what parameters it might need, and how loops will be integrated."
+      },
+      "seeding_key": {
+        "activity_section.key": "815322d5-3dda-4686-93f0-92e1c6cda660",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "4a42ea20-f4c4-481f-a970-6096301ef0fb",
+      "position": 7,
+      "properties": {
+        "description": "Great work on planning and organizing your functions and loops! Now comes the exciting part—let's start bringing your scenes to life with code. Begin by coding the functions you've outlined, testing each one as you go to make sure it works as expected. Remember, it's okay if everything isn't perfect on the first try. Programming is an iterative process, and every error is an opportunity to learn and refine your skills. Let's get coding and see your creative ideas take form on the screen!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4a42ea20-f4c4-481f-a970-6096301ef0fb",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "ed197c91-f575-4d0a-810d-758895a5255d",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 to start their Design a Digital Scene project.",
+        "progression_name": "Personal Digital Scene",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to start with simple functions and test these as they go to ensure they work correctly before moving on to more complex functions or adding loops."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ed197c91-f575-4d0a-810d-758895a5255d",
         "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "35bb21d5-c21e-4f4d-9d95-d9024d4c6113",
+      "position": 9,
+      "properties": {
+        "description": "Alright, everyone, let's take a few minutes to wrap up today's session. I'd love for you to pair up and share the concept of your scene and the functions you've started to implement. Discuss how your initial planning helped shape your coding so far and consider any challenges you might be facing. This reflection is key to understanding the progress you've made today and preparing for what's next. Let's share some thoughts and get ready to dive back in tomorrow!",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "35bb21d5-c21e-4f4d-9d95-d9024d4c6113",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "3e4540be-de47-4a66-ae23-812a66851c59",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students briefly share their scene concept and the functions they plan to implement with a partner or small group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How has the planning process influenced your approach to starting your scene design? What challenges do you anticipate as you continue to develop your project?*\n\n**Discussion Goal:** The goal of this discussion is to have students reflect on the value of the initial planning and brainstorming phase in setting a strong foundation for their coding projects. Encourage them to articulate how this preparation has helped organize their thoughts and approach to building their scenes. Additionally, the discussion should help students identify potential challenges they may face, fostering a proactive mindset and encouraging problem-solving as they move forward with their projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "3e4540be-de47-4a66-ae23-812a66851c59",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "cf219345-5dcd-4445-8446-b71c1c9b1496",
+      "position": 1,
+      "properties": {
+        "description": "Let’s start today by taking a moment to reflect on the work you did yesterday. Think about the part of your project that you’re really proud of, and also consider an area you’d like to improve as we continue today. This reflection will help us set our goals for this session and ensure that you leave today feeling accomplished and satisfied with your projects.",
+        "duration": "5",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cf219345-5dcd-4445-8446-b71c1c9b1496",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "63f24833-366a-44a3-90de-7142ff51ed73",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Reflecting on yesterday's session, what part of your project are you most proud of? What is one aspect you hope to improve by the end of today?*\n\n**Discussion Goal:** Encourage students to engage in self-reflection on their coding projects, acknowledging their successes while also identifying areas for improvement. The goal is to help students develop a growth mindset, where they recognize the value of their achievements and also see challenges as opportunities for learning and skill enhancement. This reflection should motivate them to focus their efforts effectively during the day’s activities and foster a supportive environment where sharing insights and strategies is encouraged."
+      },
+      "seeding_key": {
+        "activity_section.key": "63f24833-366a-44a3-90de-7142ff51ed73",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "76a435f4-fbf9-4c2b-8cae-1204738a11a5",
+      "position": 3,
+      "properties": {
+        "description": "Alright, let’s get started with today’s main activity! You’ve all done some excellent planning and have set clear goals for today based on our warm-up discussion. Now it’s time to dive back into your projects and bring all those creative ideas to life. Remember, focus on refining your functions, integrating those loops effectively, and don’t hesitate to experiment with adding random elements to make your scenes truly unique. Let’s make the most of this session, code creatively, and if you run into any challenges, I’m here to help.",
+        "duration": "35",
+        "name": "Activity",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "76a435f4-fbf9-4c2b-8cae-1204738a11a5",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "fe95ddcd-b97e-490c-a2e2-399e9182aea0",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to return to Level 1 to finish developing their project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students about incorporating random elements to their scenes, such as random colors, sizes, or positions, to add variety and visual interest."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fe95ddcd-b97e-490c-a2e2-399e9182aea0",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "65923167-70de-417e-9d2d-696bd2de61c0",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "65923167-70de-417e-9d2d-696bd2de61c0",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "cc5bff2a-b9eb-4665-9ea8-bf07b8d116af",
+      "position": 6,
+      "properties": {
+        "description": "Great work on your projects, everyone! Now comes the exciting part—sharing what you've created. As we start the project presentations, remember, this is a fantastic opportunity to showcase your hard work and creativity. Explain not just what you made, but how you made it, the challenges you overcame, and what you learned in the process. Let's all give supportive feedback and celebrate each other's achievements. Let’s see those amazing scenes you’ve all been working on!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cc5bff2a-b9eb-4665-9ea8-bf07b8d116af",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "37b38f35-2ebd-4e45-aa1a-f580d2693d60",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students present their completed scenes to the class, describing their design process, the functions and loops used, and how they incorporated randomization.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to provide constructive feedback on each other's projects, focusing on what they liked and suggestions for improvement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "37b38f35-2ebd-4e45-aa1a-f580d2693d60",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "fcbd3715-5546-4ef7-8b5b-f82b36334565",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If you were to do this project again, what would you do differently, and why?*\n\n**Discussion Goal:** The goal of this question is to encourage students to engage in critical thinking about their own work and decision-making processes. This discussion aims to foster a mindset of iterative improvement, where students identify potential enhancements or different approaches they could take in future projects. The objective is to help students learn from their experiences, understand the value of self-evaluation, and develop strategies for continuous personal and academic growth.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcbd3715-5546-4ef7-8b5b-f82b36334565",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
       }
     }
   ],
@@ -1378,6 +1620,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU natural language_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1400,6 +1645,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L01 Algorithms vs Problems_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1747,6 +1995,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3L2 Virtual CFU"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1994,6 +2245,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L06 Assessment2_2018_2019_virtual"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2341,6 +2595,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3L4 Virtual CFU"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2661,7 +2918,7 @@
       "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "Free_play_digital_scene_virtual"
@@ -3347,6 +3604,19 @@
       }
     },
     {
+      "name": "Design a Digital Scene Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1GYZlDlCXq7p_LGYZFg7oRP64080_xeZx3-knMC7jXfQ/edit?usp=sharing",
+      "key": "design_a_digital_scene_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "design_a_digital_scene_project_planning_guide"
+      }
+    },
+    {
       "name": "Functions with Parameters",
       "url": "https://www.youtube.com/watch?v=k7Ji1E97-V0&feature=youtu.be",
       "key": "functions_with_parameters",
@@ -3430,6 +3700,12 @@
       "seeding_key": {
         "lesson.key": "Looping and Random Numbers",
         "resource.key": "using_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "resource.key": "design_a_digital_scene_project_planning_guide"
       }
     },
     {
@@ -3866,6 +4142,26 @@
       }
     },
     {
+      "key": "a41a4d17-3c7e-48cf-bc08-953d549c99f8",
+      "properties": {
+        "description": "Use functions, loops, and randomization to create dynamic and interactive scenes"
+      },
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "objective.key": "a41a4d17-3c7e-48cf-bc08-953d549c99f8"
+      }
+    },
+    {
+      "key": "ab3a22f8-8758-4ba0-afc9-0e4fe5f19789",
+      "properties": {
+        "description": "Explain the project development process and outcomes"
+      },
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "objective.key": "ab3a22f8-8758-4ba0-afc9-0e4fe5f19789"
+      }
+    },
+    {
       "key": "b51587e2-595e-4b45-8679-b7e850f7a693",
       "properties": {
         "description": "Explain the qualities that differentiate natural languages and programming languages"
@@ -4032,6 +4328,48 @@
         "lesson.key": "Looping and Random Numbers",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
       }
     },
     {

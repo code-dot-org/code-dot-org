@@ -54,7 +54,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:16.602+00:00\",\"changed\":[\"cloned from \\\"game_variables_conditional\\\"\"],\"cloned_from\":\"game_variables_conditional\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:16.602+00:00\",\"changed\":[\"cloned from \\\"game_variables_conditional\\\"\"],\"cloned_from\":\"game_variables_conditional\"},{\"changed_at\":\"2024-05-08 21:23:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:24:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:26:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -66,29 +66,29 @@
         </variables>
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="16" y="16">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
+            <block type="gamelab_setBackgroundImageAs" movable="false">
               <field name="IMG">"video_game_bg"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
+                <block type="gamelab_makeNewSpriteAnon" movable="false">
                   <field name="ANIMATION_NAME">"game_heart"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker">
+                    <block type="gamelab_location_picker" deletable="false" movable="false">
                       <field name="LOCATION">{"x":201,"y":217}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_showVariable">
+                    <block type="gamelab_showVariable" deletable="false" movable="false">
                       <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker">
+                        <block type="gamelab_location_picker" deletable="false" movable="false">
                           <field name="LOCATION">{"x":201,"y":103}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="variables_set">
+                        <block type="variables_set" deletable="false" movable="false">
                           <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
                           <value name="VALUE">
-                            <block type="math_number">
+                            <block type="math_number" movable="false">
                               <field name="NUM">0</field>
                             </block>
                           </value>
@@ -101,7 +101,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="16" y="230">
+        <block type="gamelab_spriteClicked" x="44" y="251">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
@@ -111,13 +111,13 @@
             </block>
           </value>
           <next>
-            <block type="math_change">
+            <block type="math_change" movable="false">
               <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">score</field>
               <value name="DELTA">
                 <shadow type="math_number" id="[o[fCv%xLKlU/tXpTXSK">
                   <field name="NUM">1</field>
                 </shadow>
-                <block type="math_number">
+                <block type="math_number" movable="false">
                   <field name="NUM">1</field>
                 </block>
               </value>
@@ -1267,16 +1267,7 @@
         <variables>
           <variable id="@-=S@3O,n:QRq]zW8kK+">score</variable>
         </variables>
-        <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="27" y="14">
-          <field name="IMG">"rainbow_bright"</field>
-        </block>
-        <block type="gamelab_playSoundOptions" id="`nxg2C!0cUq29SoV|V7e" x="104" y="90">
-          <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
-        </block>
-        <block type="gamelab_setForegroundEffect" id="R@jCxhQQZu5NvQqTs38B" x="76" y="140">
-          <field name="EFFECT">"bubbles"</field>
-        </block>
-        <block type="gamelab_ifVarEquals" id="`kUb%OM1icUG[7n:kdsV" x="54" y="197">
+        <block type="gamelab_ifVarEquals" id="`kUb%OM1icUG[7n:kdsV" x="40" y="50">
           <field name="NUM" id="@-=S@3O,n:QRq]zW8kK+">score</field>
           <value name="VAL">
             <block type="gamelab_int10" id="2t8E!7{*h:db_buZJ|3I">
@@ -1284,13 +1275,8 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_makeNewSpriteAnon" id="fT?]IwQ|tg)~Ae:v]C%~" x="14" y="298">
-          <field name="ANIMATION_NAME">"game_heart"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="CkfC[{;IHaYw#*EolhS9">
-              <field name="LOCATION">{"x":195,"y":239}</field>
-            </block>
-          </value>
+        <block type="gamelab_setForegroundEffect" id="R@jCxhQQZu5NvQqTs38B" x="76" y="140">
+          <field name="EFFECT">"bubbles"</field>
         </block>
         <block type="gamelab_showVariable" id="3.cNzacS^N.O/t!LPkxr" x="42" y="370">
           <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">score</field>

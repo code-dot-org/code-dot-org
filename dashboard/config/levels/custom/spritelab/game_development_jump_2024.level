@@ -68,15 +68,15 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": " Program the player to `begin moving with arrow keys` and `jump`. Choose the jump size.\r\n",
     "standalone_app_name": "game_design",
-    "long_instructions": "**Get your player moving and jumping**\r\n1. Program the player sprite to `begin moving with arrow keys` when the program runs\r\n- Add a `make player do jump` block to the `when up pressed` event and choose the jump size\r\n\r\n-  Press `Run` then tap the arrows to move!",
+    "long_instructions": "**Make your player jump!**\r\n1. Add a `make player do jump` block to the `when up pressed` event and choose the jump size\r\n\r\n-  Press `Run` then tap the arrows to move and jump!",
     "validation_code": "if (World.frameCount == 1) {\r\n  \r\n   addCriteria(function() {\r\n  return playerSpriteFound() && minimumGroupSprites(\"walls\", 8);\r\n   }, \"starterSprites\"); //It looks like you removed a sprite. You can add it back or reset your program using the Version History button below.\r\n  \r\n   addCriteria(function() {\r\n  return minimumMatchingBehaviors(\"moving_with_arrow_keys\"); \r\n   }, \"noBehavior\"); //Your sprite needs a behavior.\r\n  \r\n    addCriteria(function() {\r\n  return keyWentDown(\"up\");\r\n   }, \"cscBookcoverClickUpArrowKey\"); //You need to click the up arrow key!\r\n  \r\n   addCriteria(function() {\r\n  return keyPressEventFound();\r\n   }, \"cscBookcoverAddEventBlock\"); //Add a 'when up arrow clicked' event block \r\n  \r\n    addCriteria(function() {\r\n  return keyPressEventFound() && playerSpriteJumping();\r\n   }, \"gameDesignEventNoJump\"); //Make sure your player jumps when you press a key.\r\n\r\n}\r\ncheck();\r\n",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Add the player sprite's behavior to the <code style=\\\"color:black; background-color:#FFBD46\\\">When run</code> program.\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_toggleBehaviorSimple\\\" id=\\\"+H{.X4]Mx;D!jf2Ok]8{\\\">\\n  <field name=\\\"TOGGLE\\\">\\\"begins\\\"</field>\\n  <value name=\\\"SPRITE\\\">\\n    <block type=\\\"gamelab_allSpritesWithAnimation\\\" id=\\\"#@}@B-CM_z?vgs~L7`:O\\\">\\n      <field name=\\\"ANIMATION\\\">\\\"game_penguin\\\"</field>\\n    </block>\\n  </value>\\n  <value name=\\\"BEHAVIOR\\\">\\n    <block type=\\\"gamelab_behavior_get\\\" id=\\\"yf*T0|()Ufr%3+7V==qK\\\">\\n      <mutation behaviorId=\\\"moving with arrow keys\\\" name=\\\"moving with arrow keys\\\"></mutation>\\n      <field name=\\\"NAME\\\">moving with arrow keys</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\\n\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/afebf40299fabda0f30a2e7f54855174/game_development_jump.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"There is a new block that makes any player type sprites jump! Attach it to the <code style=\\\"color:black; background-color:#6AF36C\\\">when up pressed</code> event. \\n\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"GameDev_playerJump\\\" id=\\\"yy{.[X:.rZzA*3xi2kJb\\\">\\n  <field name=\\\"STRENGTH\\\">6.5</field>\\n</block>\\n</xml>\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/80738e3e7252daeb48a69d849fba541d/game_development_jump.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"There is a new block that makes any player type sprites jump! Attach it to the <code style=\\\"color:black; background-color:#6AF36C\\\">when up pressed</code> event. \\n\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"GameDev_playerJump\\\" id=\\\"yy{.[X:.rZzA*3xi2kJb\\\">\\n  <field name=\\\"STRENGTH\\\">6.5</field>\\n</block>\\n</xml>\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/80738e3e7252daeb48a69d849fba541d/game_development_jump_2024.mp3\"}]",
     "encrypted_examples": "TIdALavgLHun/5mCEOx4RL8WPQB/sNtoGA5d21h0d1fawHADmFBYmPU7b85P\nSzX1Xqy20CRjDA+xf0fno/8yGw==\n",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:28:13.024+00:00\",\"changed\":[\"cloned from \\\"game_development_jump\\\"\"],\"cloned_from\":\"game_development_jump\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:28:13.024+00:00\",\"changed\":[\"cloned from \\\"game_development_jump\\\"\"],\"cloned_from\":\"game_development_jump\"},{\"changed_at\":\"2024-05-08 22:11:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:12:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:13:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:14:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:14:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 22:51:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -122,6 +122,22 @@
                                   <field name="ANIMATION">"game_penguin"</field>
                                 </block>
                               </value>
+                              <next>
+                                <block type="gamelab_toggleBehaviorSimple">
+                                  <field name="TOGGLE">"begins"</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"game_penguin"</field>
+                                    </block>
+                                  </value>
+                                  <value name="BEHAVIOR">
+                                    <block type="gamelab_behavior_get">
+                                      <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+                                      <field name="NAME">moving with arrow keys</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -1227,25 +1243,12 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_setBackgroundImageAs" id="h!!GMS1H)!V})+hb4D)2" x="204" y="0">
-          <field name="IMG">"gradient_02"</field>
-        </block>
-        <block type="gamelab_toggleBehaviorSimple" id="+H{.X4]Mx;D!jf2Ok]8{" x="82" y="69">
-          <field name="TOGGLE">"begins"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="#@}@B-CM_z?vgs~L7`:O">
-              <field name="ANIMATION">"game_penguin"</field>
-            </block>
-          </value>
-          <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get" id="yf*T0|()Ufr%3+7V==qK">
-              <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
-              <field name="NAME">moving with arrow keys</field>
-            </block>
-          </value>
-        </block>
         <block type="GameDev_playerJump" id="yy{.[X:.rZzA*3xi2kJb" x="126" y="145">
-          <field name="STRENGTH">6.5</field>
+          <field name="STRENGTH">6</field>
+        </block>
+        <block type="gamelab_keyPressed" id="m.$^=s}*r%j`#)Jz9fCe" x="452" y="196">
+          <field name="CONDITION">"when"</field>
+          <field name="KEY">"up"</field>
         </block>
         <block type="gamelab_makeSpritesGridInput" id="](:gZbK.u65)58Oqq$6L" x="30" y="249">
           <field name="ANIMATION_NAME">"dirt_grass"</field>
@@ -1266,6 +1269,20 @@
             </block>
           </value>
         </block>
+        <block type="gamelab_toggleBehaviorSimple" id="+H{.X4]Mx;D!jf2Ok]8{" x="239" y="416">
+          <field name="TOGGLE">"begins"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="#@}@B-CM_z?vgs~L7`:O">
+              <field name="ANIMATION">"game_penguin"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behavior_get" id="yf*T0|()Ufr%3+7V==qK">
+              <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+              <field name="NAME">moving with arrow keys</field>
+            </block>
+          </value>
+        </block>
         <block type="GameDev_setGroup" id="Ns/(cIF~q7lQ-h(Q/5*?" x="30" y="476">
           <field name="GROUP">"walls"</field>
           <value name="SPRITE">
@@ -1274,9 +1291,8 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_keyPressed" id="m.$^=s}*r%j`#)Jz9fCe" x="33" y="561">
-          <field name="CONDITION">"when"</field>
-          <field name="KEY">"up"</field>
+        <block type="gamelab_setBackgroundImageAs" id="h!!GMS1H)!V})+hb4D)2" x="259" y="572">
+          <field name="IMG">"gradient_02"</field>
         </block>
       </xml>
     </toolbox_blocks>

@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-07T21:27:15.000Z",
   "level_num": "custom",
@@ -50,10 +51,10 @@
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"This block will show your variable on the playspace:\\n<xml><block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_showVariable\\\" id=\\\"CX]E4@VU[,b3Rb$gNv6@\\\" disabled=\\\"false\\\">\\n  <field name=\\\"VAR\\\" id=\\\"@-=S@3O,n:QRq]zW8kK+\\\">Score</field>\\n  <value name=\\\"LOCATION\\\">\\n    <block type=\\\"gamelab_location_picker\\\" id=\\\"-OyFO}@bmFm.tQyEPF8L\\\">\\n      <field name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/66ffc6dd769784ce651b7242396a6c9d/game_variables_show.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"The starting value of your variable is set using this block: \\n<xml><block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"variables_set\\\" id=\\\"vfHl|%AE}ZTDYwycPNsB\\\" disabled=\\\"false\\\">\\n  <field name=\\\"VAR\\\" id=\\\"@-=S@3O,n:QRq]zW8kK+\\\">Score</field>\\n  <value name=\\\"VALUE\\\">\\n    <block type=\\\"math_number\\\" id=\\\"it,if~~;$kMchS*:VO!|\\\">\\n      <field name=\\\"NUM\\\">0</field>\\n    </block>\\n  </value>\\n</block></xml>\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/467f39f8a2ff03a5a1121922d1cb2caa/game_variables_show.mp3\"}]",
     "encrypted_examples": "7Y9SVB5MZp/aBqfoLWLRPHgP89eL8gmZ2v0udBugbEUL/wmrTAPWSOd2IC1p\n3jgAwP3dwx3vrlfJjc8Qsm7yvA==\n",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "instructions_icon": "fox"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:15.904+00:00\",\"changed\":[\"cloned from \\\"game_variables_show\\\"\"],\"cloned_from\":\"game_variables_show\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:15.904+00:00\",\"changed\":[\"cloned from \\\"game_variables_show\\\"\"],\"cloned_from\":\"game_variables_show\"},{\"changed_at\":\"2024-05-08 21:20:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:20:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:21:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:42:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,8 +63,8 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="16" y="16">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"gradient_01"</field>
+            <block type="gamelab_setBackgroundImageAs" movable="false">
+              <field name="IMG">"video_game_bg"</field>
             </block>
           </next>
         </block>
@@ -1210,10 +1211,7 @@
         <variables>
           <variable id="@-=S@3O,n:QRq]zW8kK+">score</variable>
         </variables>
-        <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="47" y="1">
-          <field name="IMG">"video_game_bg"</field>
-        </block>
-        <block type="gamelab_showVariable" id="CX]E4@VU[,b3Rb$gNv6@" x="0" y="78">
+        <block type="gamelab_showVariable" id="CX]E4@VU[,b3Rb$gNv6@" x="16" y="78">
           <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">score</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="-OyFO}@bmFm.tQyEPF8L">
