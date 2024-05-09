@@ -1,0 +1,63 @@
+require 'test_helper'
+
+class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
+  setup do
+    @user = create(:non_compliant_child)
+  end
+
+  test 'call - creates CAP user event' do
+    event_name = CAP::UserEvent::ACCOUNT_LOCKING
+
+    assert_creates 'CAP::UserEvent' do
+      Timecop.freeze
+
+      assert_attributes Services::ChildAccount::EventLogger.call(user: @user, event_name: event_name), {
+        id: :not_nil,
+        user: @user,
+        name: event_name,
+        policy: 'cpa',
+        created_at: Time.zone.now,
+      }
+
+      Timecop.return
+    end
+  end
+
+  test 'call - does not create CAP user event when no policy found' do
+    @user.update(us_state: nil)
+
+    assert_does_not_create 'CAP::UserEvent' do
+      assert_nil Services::ChildAccount::EventLogger.call(user: @user, event_name: CAP::UserEvent::ACCOUNT_LOCKING)
+    end
+  end
+
+  test 'log_parent_email_submit' do
+    event_name = CAP::UserEvent::PARENT_EMAIL_SUBMIT
+    Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
+    assert_equal event_name, Services::ChildAccount::EventLogger.log_parent_email_submit(@user)
+  end
+
+  test 'log_parent_email_update' do
+    event_name = CAP::UserEvent::PARENT_EMAIL_UPDATE
+    Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
+    assert_equal event_name, Services::ChildAccount::EventLogger.log_parent_email_update(@user)
+  end
+
+  test 'log_permission_granting' do
+    event_name = CAP::UserEvent::PERMISSION_GRANTING
+    Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
+    assert_equal event_name, Services::ChildAccount::EventLogger.log_permission_granting(@user)
+  end
+
+  test 'log_account_locking' do
+    event_name = CAP::UserEvent::ACCOUNT_LOCKING
+    Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
+    assert_equal event_name, Services::ChildAccount::EventLogger.log_account_locking(@user)
+  end
+
+  test 'log_account_purging' do
+    event_name = CAP::UserEvent::ACCOUNT_PURGING
+    Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
+    assert_equal event_name, Services::ChildAccount::EventLogger.log_account_purging(@user)
+  end
+end

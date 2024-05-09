@@ -29,6 +29,7 @@ class Policies::ChildAccount
   # start_date: the date on which this policy first went into effect.
   STATE_POLICY = {
     'CO' => {
+      name: 'CPA', # Colorado Privacy Act
       max_age: 12,
       lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => '2024-07-01T00:00:00MST'})[Cpa::ALL_USER_LOCKOUT]),
       start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => '2023-07-01T00:00:00Z'})[Cpa::NEW_USER_LOCKOUT])
@@ -79,15 +80,15 @@ class Policies::ChildAccount
     parent_permission_required?(user) && user.created_at < STATE_POLICY[user.us_state][:start_date]
   end
 
+  def self.state_policy(user)
+    return unless user.us_state
+    STATE_POLICY[user.us_state]
+  end
+
   # The date on which the student's account will be locked if the account is not compliant.
   def self.lockout_date(user)
     return if compliant?(user)
     state_policy(user).try(:[], :lockout_date)
-  end
-
-  private_class_method def self.state_policy(user)
-    return unless user.us_state
-    STATE_POLICY[user.us_state]
   end
 
   # Check if parent permission is required for this account according to our
