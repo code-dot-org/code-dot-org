@@ -22,7 +22,7 @@
           - if @user.errors[:password].present?
             %p.error= @user.errors[:password]&.first
         .span4
-          = f.password_field :password, maxlength: 255
+          = f.password_field :password, maxlength: 255, required: true
 
       / Submit
       .row
