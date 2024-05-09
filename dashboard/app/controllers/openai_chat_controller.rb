@@ -1,6 +1,13 @@
 class OpenaiChatController < ApplicationController
+  S3_AI_BUCKET = 'cdo-ai'.freeze
+  S3_TUTOR_SYSTEM_PROMPT_PATH = 'tutor/system_prompt.txt'.freeze
+
   include OpenaiChatHelper
   authorize_resource class: false
+
+  def s3_client
+    @s3_client ||= AWS::S3.create_client
+  end
 
   # POST /openai/chat_completion
   def chat_completion
@@ -15,6 +22,9 @@ class OpenaiChatController < ApplicationController
     filter_result = ShareFiltering.find_failure(message, locale) if message
     # If the content is inappropriate, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
+
+    system_prompt = get_system_prompt
+    messages = prepend_system_prompt(system_prompt, params[:messages])
 
     if validated_level?
       level_id = params[:levelId]
@@ -39,7 +49,36 @@ class OpenaiChatController < ApplicationController
     params[:type].present? && params[:type] == 'validation'
   end
 
-  def get_validated_level_test_file_contents(level_id)
+  # The system prompt is stored server-side so we need to prepend it to the student's messages.
+  private def prepend_system_prompt(system_prompt, messages)
+    system_prompt_message = {
+      "content" => system_prompt,
+      "role" => "system"
+    }
+    messages.unshift(system_prompt_message)
+    puts "messages after: #{messages}"
+    messages
+  end
+
+  def get_system_prompt
+    # TODO: Determine appropriate level of cache freshness
+    Rails.cache.fetch("system_prompt", expires_in: 12.hours) do
+      read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
+    end
+  end
+
+  private def read_file_from_s3(key_path)
+    if [:development, :test].include?(rack_env)
+      local_path = File.join("local-aws", S3_AI_BUCKET, key_path)
+      if File.exist?(local_path)
+        puts "Note: Reading AI prompt from local file: #{key_path}"
+        return File.read(local_path)
+      end
+    end
+    s3_client.get_object(bucket: S3_AI_BUCKET, key: key_path).body.read
+  end
+
+  private def get_validated_level_test_file_contents(level_id)
     level = Level.find(level_id)
 
     unless level

@@ -74,14 +74,12 @@ const formatForChatCompletion = (
  * to `postOpenaiChatCompletion`, then returns the status of the response and assistant message if successful.
  */
 export async function getChatCompletionMessage(
-  systemPrompt: string,
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
   levelId?: number,
   tutorType?: AITutorTypesValue
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
-    {role: Role.SYSTEM, content: systemPrompt},
     ...formatForChatCompletion(chatMessages),
     {role: Role.USER, content: formattedQuestion},
   ];

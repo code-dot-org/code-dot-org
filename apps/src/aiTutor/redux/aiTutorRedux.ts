@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {systemPrompt as baseSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
   Role,
@@ -44,17 +43,24 @@ const initialState: AITutorState = {
   chatMessageError: false,
 };
 
-const formatQuestionForAITutor = (chatContext: ChatContext) => {
+const enhanceInputForAITutor = (
+  levelInstructions: string,
+  chatContext: ChatContext
+) => {
+  const separator = '\n\n---\n\n';
+  // TODO: Remove instructions for code compilation errors?
+  const instructionsFormatted = `'Here are my instructions for this level:\n${levelInstructions}\n\n`;
   if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
-    return chatContext.studentInput;
+    // For general questions, only prepend level instructions
+    return `${instructionsFormatted}${separator}${chatContext.studentInput}`;
   }
 
-  const separator = '\n\n---\n\n';
-  const codePrefix = "Here is the student's code:\n\n```\n";
-  const codePostfix = '\n```';
+  const codePrefix = 'Here is the student’s code:\n\n```';
+  const codePostfix = '```\n\n';
+  const studentCodeFormatted = `${codePrefix}${chatContext.studentCode}${codePostfix}`;
 
-  const formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
-  return formattedQuestion;
+  // For compilation and validation, prepend level instructions and student code
+  return `${instructionsFormatted}${chatContext.studentInput}${separator}${studentCodeFormatted}`;
 };
 
 // THUNKS
@@ -70,14 +76,7 @@ export const askAITutor = createAsyncThunk(
       scriptId: aiTutorState.aiTutor.scriptId,
     };
 
-    let systemPrompt = baseSystemPrompt;
     const levelInstructions = instructionsState.instructions.longInstructions;
-
-    if (levelInstructions.length > 0) {
-      systemPrompt +=
-        '\n Here are the student instructions for this level: ' +
-        levelInstructions;
-    }
 
     const storedMessages = aiTutorState.aiTutor.chatMessages;
     const newMessage: ChatCompletionMessage = {
@@ -87,10 +86,9 @@ export const askAITutor = createAsyncThunk(
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
-    const formattedQuestion = formatQuestionForAITutor(chatContext);
+    const input = enhanceInputForAITutor(levelInstructions, chatContext);
     const chatApiResponse = await getChatCompletionMessage(
-      systemPrompt,
-      formattedQuestion,
+      input,
       storedMessages,
       levelContext.levelId,
       chatContext.actionType
