@@ -21,6 +21,8 @@ import styles from './progress-v2-invitation.module.scss';
 
 const newProgressViewGraphic = require('@cdo/static/teacherDashboard/progressOpenBetaAnnouncementGraphic.png');
 
+const MILLISECONDS_IN_ONE_DAY = 1000 * 3600 * 24;
+
 function InviteToV2ProgressModal({
   sectionId,
 
@@ -35,7 +37,6 @@ function InviteToV2ProgressModal({
 
   React.useEffect(() => {
     const numDaysSinceInvitationLastDelayed = () => {
-      const MILLISECONDS_IN_ONE_DAY = 1000 * 3600 * 24;
       const startingDate = new Date(dateProgressTableInvitationDelayed);
       const today = new Date();
       const differenceInMilliseconds = today.getTime() - startingDate.getTime();
