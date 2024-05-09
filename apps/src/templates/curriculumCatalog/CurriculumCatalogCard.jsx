@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import {createPortal} from 'react-dom';
 import {concat, intersection} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -422,9 +423,7 @@ export const CustomizableCurriculumCatalogCard = ({
           </div>
         </div>
         {isAssignDialogOpen &&
-          (props.customRenderAssignDialog
-            ? props.customRenderAssignDialog(courseId)
-            : renderAssignDialog())}
+          createPortal(renderAssignDialog(), document.body)}
       </div>
       {isExpanded && (
         <ExpandedCurriculumCatalogCard
