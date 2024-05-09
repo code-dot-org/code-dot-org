@@ -9,7 +9,7 @@ class EvaluateRubricJob < ApplicationJob
   # When launching AI config changes, this path should be updated to point to the new release.
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
-  # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
+  # by running `EvaluateRubricJob.validate_ai_config` from the rails console.
   S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-04-30-confidence-autogen-turbo/'.freeze
 
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
@@ -234,7 +234,7 @@ class EvaluateRubricJob < ApplicationJob
     locale = (user.locale || 'en')[0...2]
     ShareFiltering.find_share_failure(code, locale, exceptions: true)
 
-    openai_params = get_openai_params(lesson_s3_name, code)
+    openai_params = EvaluateRubricJob.get_openai_params(lesson_s3_name, code)
     response = get_openai_evaluations(openai_params)
 
     # Log tokens and usage information
@@ -244,8 +244,8 @@ class EvaluateRubricJob < ApplicationJob
     ai_evaluations = response['data']
     validate_evaluations(ai_evaluations, rubric)
 
-    ai_confidence_levels_pass_fail = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
-    confidence_exact_json = read_file_from_s3(lesson_s3_name, 'confidence-exact.json', allow_missing: true)
+    ai_confidence_levels_pass_fail = JSON.parse(EvaluateRubricJob.read_file_from_s3(lesson_s3_name, 'confidence.json'))
+    confidence_exact_json = EvaluateRubricJob.read_file_from_s3(lesson_s3_name, 'confidence-exact.json', allow_missing: true)
     ai_confidence_levels_exact_match = confidence_exact_json ? JSON.parse(confidence_exact_json) : nil
     merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
 
@@ -357,8 +357,8 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   # The client for s3 access made directly by this job, not via SourceBucket.
-  def s3_client
-    @s3_client ||= AWS::S3.create_client
+  def self.s3_client
+    @@s3_client ||= AWS::S3.create_client
   end
 
   # get the channel id of the project which stores the user's code on this script level.
@@ -385,7 +385,7 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def read_file_from_s3(lesson_s3_name, key_suffix, allow_missing: false)
+  def self.read_file_from_s3(lesson_s3_name, key_suffix, allow_missing: false)
     key = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/#{key_suffix}"
     if [:development, :test].include?(rack_env) && File.exist?(File.join("local-aws", S3_AI_BUCKET, key))
       puts "Note: Reading AI prompt from local file: #{key}"
@@ -398,7 +398,7 @@ class EvaluateRubricJob < ApplicationJob
     nil
   end
 
-  private def read_examples(lesson_s3_name, response_type)
+  def self.read_examples(lesson_s3_name, response_type)
     raise "invalid response type #{response_type.inspect}" unless ['tsv', 'json'].include?(response_type)
     prefix = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/examples/"
     response = s3_client.list_objects_v2(bucket: S3_AI_BUCKET, prefix: prefix)
@@ -413,7 +413,7 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def get_openai_params(lesson_s3_name, code)
+  def self.get_openai_params(lesson_s3_name, code)
     params = JSON.parse(read_file_from_s3(lesson_s3_name, 'params.json'))
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
     rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
@@ -428,7 +428,7 @@ class EvaluateRubricJob < ApplicationJob
     )
   end
 
-  def validate_ai_config
+  def self.validate_ai_config
     lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
     code = 'hello world'
     lesson_s3_names.each do |lesson_s3_name|
@@ -438,7 +438,7 @@ class EvaluateRubricJob < ApplicationJob
     S3_AI_RELEASE_PATH
   end
 
-  def validate_ai_config_for_lesson(lesson_s3_name, code)
+  def self.validate_ai_config_for_lesson(lesson_s3_name, code)
     # this step should raise an error if any essential config files are missing
     # from the S3 release directory
     get_openai_params(lesson_s3_name, code)
@@ -449,7 +449,7 @@ class EvaluateRubricJob < ApplicationJob
   # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
   # ai-enabled learning goal in its rubric in the database has a corresponding
   # learning goal in the rubric in S3.
-  def validate_learning_goals
+  def self.validate_learning_goals
     UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
       levels = level_to_lesson.keys
       unless Unit.find_by_name(unit_name)
@@ -467,7 +467,7 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  def validate_learning_goals_for_rubric(rubric)
+  def self.validate_learning_goals_for_rubric(rubric)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
     db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
     s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
@@ -477,7 +477,7 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  def get_s3_learning_goals(lesson_s3_name)
+  def self.get_s3_learning_goals(lesson_s3_name)
     rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
     rubric_rows.map {|row| row['Key Concept']}

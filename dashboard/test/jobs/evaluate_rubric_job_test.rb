@@ -573,7 +573,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       }
     )
 
-    EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
+    EvaluateRubricJob.stubs(:s3_client).returns(s3_client)
   end
 
   private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {}, response_type: 'tsv', message: 'message')
