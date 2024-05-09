@@ -15,7 +15,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.source
   );
-  // We memoize this object so that is doesn't cause an unexpected re-render.
+  // We memoize this object so that it doesn't cause an unexpected re-render.
   const projectStartSource: ProjectSources | undefined = useMemo(
     () => (levelStartSource ? {source: levelStartSource} : undefined),
     [levelStartSource]
