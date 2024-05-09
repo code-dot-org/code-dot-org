@@ -170,7 +170,6 @@ ActiveRecord::Schema.define(version: 2024_05_01_215821) do
 
   create_table "cap_user_events", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", limit: 64, null: false
-    t.datetime "occurred_at", null: false
     t.integer "user_id", null: false
     t.string "policy", limit: 16, null: false
     t.datetime "created_at", precision: 6, null: false
