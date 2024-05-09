@@ -1,16 +1,15 @@
 /** @file Redux actions and reducer for the Projects Gallery */
 
-/* eslint-disable import/order */
-// Disabling import order due to circular dependencies errors from build.
-// This could be fixed by disabling import/order on specific imports.
-import {combineReducers} from 'redux';
 import $ from 'jquery';
 import _ from 'lodash';
+import {combineReducers} from 'redux';
+
 import {Galleries} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
-import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
-import {channels as channelsApi} from '../../clientApi';
-import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+// Disabling import order due to circular dependencies errors from build.
+import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux'; /* eslint-disable-line import/order */
+import {channels as channelsApi} from '../../clientApi'; /* eslint-disable-line import/order */
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi'; /* eslint-disable-line import/order */
 
 // Action types
 

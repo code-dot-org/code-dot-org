@@ -1,14 +1,17 @@
-/* eslint-disable import/order */
-// Disabling import order due to circular dependencies errors from build.
-// This could be fixed by disabling import/order on specific imports.
 import PropTypes from 'prop-types';
 import React from 'react';
-import VersionRow from './VersionRow';
+
+// Disabling import order due to circular dependencies errors from build.
+import VersionRow from './VersionRow'; /* eslint-disable-line import/order */
+
+/* eslint-disable-next-line import/order */
 import {sources as sourcesApi, files as filesApi} from '../clientApi';
-import project from '@cdo/apps/code-studio/initApp/project';
+
+import project from '@cdo/apps/code-studio/initApp/project'; /* eslint-disable-line import/order */
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import * as utils from '../utils';
 import i18n from '@cdo/locale';
+
+import * as utils from '../utils';
 
 /**
  * A component for viewing project version history.
