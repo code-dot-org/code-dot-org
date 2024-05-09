@@ -1,4 +1,3 @@
-/* eslint-disable import/order */
 // Disabling import/order rule for this file because product tour imports are grouped.
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -27,12 +26,13 @@ import RubricTabButtons from './RubricTabButtons';
 
 import style from './rubrics.module.scss';
 
+// product Tour
 /* eslint-disable import/order */
 // Disabling import/order rule for grouped product tour imports.
-// product Tour
 import './introjs.scss';
 import {Steps} from 'intro.js-react';
 import {INITIAL_STEP, STEPS, DUMMY_PROPS} from './productTourHelpers';
+/* eslint-enable import/order */
 
 export default function RubricContainer({
   rubric,
