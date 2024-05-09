@@ -3,52 +3,54 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching Tips for Using LLMs in Class 
+# Teaching about Bias
 
-#### Setting clear boundaries and limitations is essential when using AI to teach coding, ensuring that students engage with the technology honestly. By carefully structuring your lessons, like in this Coding with AI unit, you can maintain a dynamic and engaging learning environment while promoting integrity and ethical use of AI.
+#### Lesson 9 addresses biases in datasets and AI. Teaching about biases in technology can be a sensitive subject for your students. These action items will help you feel more comfortable discussion these issues in your class. 
 
-## Prevent Overreliance and Cheating 
-#### Keep your your students in charge of their learning.
+## Bias
+#### Bias occurs when a decision favors some things and de-prioritizes or excludes others. Bias within an AI system is a direct reflection of the data a system was trained on and the way it is trained.
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🚦 Set Clear Expectations</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style = "font-size: 16px;">
-  Set clear guidelines on appropriate LLM use before introducing it. Decide the level of AI use permitted for each assignment. Are students able to freely use AI, or are their more moderate or restrictive guidelines for how they can use AI on a given assignment? <br><br> <b>Lesson guides</b> in this unit model effective ways to set expectations with your students.
-</p></div>
-</details>
+## Action Items
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">⚙️ Focus on the Learning Process</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;"> 🖥️Assume all AI systems have bias</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p style = "font-size: 16px;">
-   Emphasize the importance of the learning journey, not just the final product. Have students document their learning process by showing where they used AI and how it helped. <br><br> The <b>digital journal</b> in this unit is a great example of this.
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Prioritize Understanding</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style = "font-size: 16px;">
-   Structure activities that require students to demonstrate their own understanding, not just the LLM's capabilities.<br><br> <b>Lesson activities</b> in this unit are designed with peer interactions, discussions, and reflections to prioritize understanding. 
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">✅ Promote Responsible Use</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style = "font-size: 16px;">
-   Emphasize the importance of using LLMs ethically and responsibly, avoiding plagiarism and ensuring that the work produced reflects their own understanding and effort. <br><br> Code.org's  <a href="https://code.org/ai" target="blank" rel="noopener noreferrer">Ethics and AI videos</a> help establish working knowledge of the ethical considerations of using AI. 
+  Even AI systems that seem innocuous are likely to have biases, whether those are deeply harmful or just irritating. <br><br> Before using an AI system to make decisions in your classroom, examine the ways it might be biased. Start by trying to understand the historical biases in the data the AI system uses.
 
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">👍 Peer Review and Discussion</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🚦Approach discussions of AI bias carefully</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p style = "font-size: 16px;">
-   Facilitate peer review sessions for code and writing to identify areas requiring deeper understanding.<br><br> <b>Lesson activities</b> in this unit are designed with peer interactions, discussions, and reflections to prioritize understanding.
+   Many students have had personal experiences with bias, but may not have used that specific word to explain it. Approach discussions of AI bias with an understanding that students may need time to process such an emotionally difficult concept.
+
 </p></div>
 </details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🌍 Emphasize the importance of team diversity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Talk with students about how team diversity can help in developing widely useful AI systems. Use this fact as a motivator to encourage students to design for their community and advocate for their wants and needs. Avoid positioning students as the ones to fix others’ mistakes, but rather as innovators with a deeply valuable perspective.
+ </p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✅ Support companies committed to reducing bias</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Seek out companies that follow specific, actionable commitments that reduce bias in their AI tools. Read about the company’s background, checking for independent audits and partnerships with reputable community organizations.
+
+</p></div>
+</details>
+
+---
+
+## Supportive Scripts 
+#### Addressing concerns about AI bias from administrators, parents, or fellow teachers can be challenging. To facilitate these conversations, utilize the range of scripts provided in this link (<a href="https://docs.google.com/document/d/1N2C5ymAYQ2JR0NKoPQ2v5IK9Ig77t-1-juVfnWMpNYw/copy" target="blank" rel="noopener noreferrer">🔗link</a>). These resources are designed to help clarify issues and foster understanding. Additionally, there is a specific script available for students to help them express their experiences when affected by AI bias.
+
 
 MARKDOWN
