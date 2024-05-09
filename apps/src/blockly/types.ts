@@ -43,6 +43,7 @@ import CdoFieldVariable from './addons/cdoFieldVariable';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
 import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
+import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 
 export interface BlockDefinition {
   category: string;
@@ -76,6 +77,9 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  selected: BlockSvg;
+  blockCountMap: Map<string, number> | undefined;
+  blockLimitMap: Map<string, number> | undefined;
   readOnly: boolean;
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
@@ -185,6 +189,7 @@ export interface ExtendedBlockSvg extends BlockSvg {
   thumbnailSize?: number;
   // used for function blocks
   functionalSvg_?: BlockSvgFrame;
+  blockSvgLimitIndicator?: BlockSvgLimitIndicator;
   workspace: ExtendedWorkspaceSvg;
 }
 

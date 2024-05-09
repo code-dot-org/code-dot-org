@@ -14,6 +14,8 @@ export const BANNER_STATUS = Object.freeze({
   UNANSWERED: 'unanswered',
   // The status when the user has provided feedback.
   ANSWERED: 'answered',
+  // The status when the user has previously submitted feedback and the banner is not shown.
+  PREVIOUSLY_ANSWERED: 'previously_answered',
   // The status when the banner has been closed by the user.
   CLOSED: 'closed',
 });
@@ -47,13 +49,16 @@ const FeedbackBanner: React.FC<FeedbackBannerProps> = ({
   shareMoreLink,
   shareMoreLinkText,
 }) => {
+  const isBannerVisible = React.useMemo(
+    () =>
+      ([BANNER_STATUS.UNANSWERED, BANNER_STATUS.ANSWERED] as string[]).includes(
+        answerStatus
+      ),
+    [answerStatus]
+  );
+
   return (
-    <Fade
-      in={(
-        [BANNER_STATUS.UNANSWERED, BANNER_STATUS.ANSWERED] as string[]
-      ).includes(answerStatus)}
-      unmountOnExit={true}
-    >
+    <Fade in={isBannerVisible} unmountOnExit={true}>
       <Alert
         key={alertKey}
         bsStyle="info"
@@ -74,7 +79,11 @@ const FeedbackBanner: React.FC<FeedbackBannerProps> = ({
         <Fade in={!isLoading}>
           {answerStatus === BANNER_STATUS.UNANSWERED ? (
             <span>
-              <span id="feedback-banner-title" aria-hidden="true">
+              <span
+                id="feedback-banner-title"
+                className="feedback-title"
+                aria-hidden="true"
+              >
                 {question}
               </span>
 
@@ -107,7 +116,7 @@ const FeedbackBanner: React.FC<FeedbackBannerProps> = ({
               </span>
             </span>
           ) : (
-            <span>
+            <span className="share-more">
               <span id="feedback-banner-title" aria-hidden="true">
                 {shareMore}
               </span>

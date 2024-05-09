@@ -47,12 +47,7 @@ export default class StartNewProject extends React.Component {
       ? DEFAULT_PROJECT_TYPES_ADVANCED
       : DEFAULT_PROJECT_TYPES_BASIC;
 
-    const OPEN_ENDED_PROJECT_TYPES = [
-      'spritelab',
-      'dance',
-      'poetry',
-      'thebadguys',
-    ];
+    const OPEN_ENDED_PROJECT_TYPES = ['spritelab', 'dance', 'poetry'];
 
     const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
 

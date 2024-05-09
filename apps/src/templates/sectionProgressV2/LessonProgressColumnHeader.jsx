@@ -63,6 +63,7 @@ export default function LessonProgressColumnHeader({
   }
   return (
     <button
+      id={'ui-test-lesson-header-' + lesson.relative_position}
       className={styles.lessonHeaderCellInteractive}
       data-tip
       data-for={getTooltipId(lesson)}

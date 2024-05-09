@@ -4,7 +4,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {combineReducers, createStore} from 'redux';
 import {Provider} from 'react-redux';
 import {fakeLesson, fakeLevels} from './progressTestHelpers';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';

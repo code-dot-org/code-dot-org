@@ -3,90 +3,40 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Best Practices for Teaching with micro:bit
+# Teaching Tips for Using LLMs in Class 
 
-#### Physical computing offers an exciting and interactive approach to involve students in coding, and with thoughtful consideration, your lessons can be seamlessly executed.
+#### Interacting with AI offers a dynamic and engaging approach to get your students excited about coding, and with thoughtful consideration, your lessons can be seamlessly executed. The lessons in this unit are designed to help you scaffold and model appropriate use of LLMs. 
 
-## Before the lesson
+## Targeted Assistance
+
+#### Don't have the LLM write entire programs or essays. Instead, use it for specific tasks. You may have noticed each lesson introduces different ways to interact with AI.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🗃️ Organization tips</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Brainstorming</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-<img src="https://images.code.org/8c5598c604dc9e7a0e4edcf01d5b7244-image-1707322034881.png" alt="storage container for micro:bit" width="160px" style="border-radius:10px; float:right; margin: 0 40px 40px 40px;">
-
-- #### Label the micro:bits to keep track of them easily.
-
-- #### Store micro:bits in their original anti-static pouch to keep them safe.
-
-- #### Get creative with storage options for multiple micro:bits, like purchasing containers to organize them and their accessories.
+    <p style = "font-size: 16px;">
+ Encourage students to use the LLM to brainstorm ideas for code features or essay topics. <br><br> <b>Lesson 2</b> gives students opportunities to practice ethical and efficient ways to use AI as a brainstorming partner. 
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Preparation </summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">⚙️ Code Generation</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-<img src="https://images.code.org/a99418675b349371703fe1ed4b821fc4-image-1707407730242.png" alt="two micro:bits with faces" width="160px" style="border-radius:10px; float:right; margin: 0 40px 0px 20px;">
-
-- #### **Review the lesson plans in the selected pathway beforehand.** Familiarize yourself with the lessons and consider areas where students might need extra help.
-
-- #### Plan for how the devices will be distributed among your students. 
-
-- #### Practice the lessons.  
-</p></div>
-</details>
-
-
-## During the lesson
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💭 Relate to familiar concepts </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-<img src="https://images.code.org/f97e7a0677c60156fdd380843c4fc2ea-image-1707322374547.png" alt="micro:bit on a shoe with a one on it" width="160px" style="border-radius:10px; float:right; margin: -20px 40px 0px 20px;">
-
-- #### Use familiar examples and real-life situations to explain micro:bit concepts in a way that students can relate to.
-
-- #### Review coding concepts that have been previously taught in the CSF pathway and remind students that these apply when coding their micro:bits. 
-
-
+    <p style = "font-size: 16px;">
+ Let students provide prompts for the LLM to generate code snippets for specific functionalities.<br><br> In <b>Lesson 3</b>, students explore building algorithms with AI to help them with their programs. The AI can help students get unstuck and spark confidence for them to finish more complex code. 
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🎨 Encourage Creativity </summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🪲 Bug Identification</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-<img src="https://images.code.org/613d33bfaf85b3d47b95e2ad96c84c8d-image-1707323049639.png" alt="students holding a micro:bit" width="160px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
-
-
-- #### Unlike some of the coding levels on the Code.org platform, MakeCode does not automatically check your code to let you move on. This allows students to come up with creative or unique solutions. 
-- #### Encourage students to be creative and explore the possibilities. 
-- #### Celebrate perseverance and trying new things, even if it doesn't always work.
-
+    <p style = "font-size: 16px;">
+ Students can input code sections and ask the LLM to identify potential errors or inefficiencies. All programmers get frustrated with code that does not work correctly. <br><br> <b>Lesson 4</b> guides students through properly using AI to help debug their code.
 </p></div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧑‍🏫 Facilitating the Lesson </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
 
-<img src="https://images.code.org/0fa0e524a2e581105f69df060126cf8c-image-1707408688944.png" alt="students holding a micro:bit" width="160px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
 
-- #### **Use the virtual micro:bit.** MakeCode has a virtual micro:bit embedded on the site for students to test their code while they are programming. It is a great tool if you have limited devices or if you want students to practice coding first. 
-
-- #### **Implement pair programming strategies.** Assign one student to be the driver and another as the navigator. Set a timer and allow the students to switch roles. 
-
-- #### **Encourage discussion.** Enrich learning experiences by adding discussion and sharing amongst students. Students can  demo their projects and discuss challenges and successes with the process.
-</details>
- 
 
 
 MARKDOWN

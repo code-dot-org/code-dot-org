@@ -29,7 +29,11 @@ def main
 
   DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
     data = JSON.parse(form[:data])
-    processed_data = JSON.parse(form[:processed_data]) rescue {}
+    processed_data = begin
+      JSON.parse(form[:processed_data])
+    rescue
+      {}
+    end
     # ***
     # If these rules are changed and we wish to display a broader set of events,
     # update our JS code (hoc_events_map.js) that visualizes these events

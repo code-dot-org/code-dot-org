@@ -19,6 +19,11 @@
       "title": "AI Teaching Assistant",
       "body": "Elevate teaching confidence and streamline assessment of student progress. This tool heralds a new chapter in personalized learning and instructional excellence.",
       "buttonText": "Learn more about AI Teaching Assistant"
+    },
+    "music-lab-launch": {
+      "title": "Introducing Music Lab",
+      "body": "Get creative with your favorite artist's music and code new songs and mixes!",
+      "buttonText": "Learn more"
     }
   }
 }

@@ -18,10 +18,12 @@ markdown <<MARKDOWN
     <p>
 
 #### **To Do:** 
-* #### Go to https://www.craiyon.com.
+* #### Go to <a href="https://www.craiyon.com" target="_blank">Craiyon</a>. 
 * #### Put in whatever prompt you’d like and choose your art type.
 * #### Click the “Draw” button.
 * #### If you’d like, explore “Expert Mode”.
+
+<br>
 
 #### **Take it Further:** 
 #### Try prompting to draw a person in a few different specific fields, such as "draw a CEO leading a board meeting in a skyscraper in NYC”. Note any biases you notice in the images that are generated.
@@ -39,6 +41,8 @@ markdown <<MARKDOWN
 * #### Open a voice-enabled virtual assistant such as Siri, Alexa, or Google Assistant.
 * #### Ask the virtual assistant to tell you about a topic you are unfamiliar with such as the Harlem Renaissance, capybaras, or even AI.
 
+<br>
+
 #### **Take it Further:** 
 #### Fact check what you learned with other resources or a Google search. Note any discrepancies.
 
@@ -51,10 +55,12 @@ markdown <<MARKDOWN
     <p>
 
 #### **To Do:** 
-* #### Go to https://beta.diffit.me/#topic.
+* #### Go to <a href="https://beta.diffit.me/#topic" target="_blank">Diffit</a>.
 * #### Copy and paste a reading from a recent lesson plan or any news article.
 * #### Choose the reading level to differentiate it to and/or language to translate it into.
 * #### Click “Generate Resource”.
+
+<br>
 
 #### **Take it Further:** 
 #### Try a video!

@@ -128,6 +128,7 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
   if locked
     user_opts[:country_code] = "US"
     user_opts[:us_state] = "CO"
+    user_opts[:user_provided_us_state] = true
   end
 
   if parent_created
@@ -177,6 +178,13 @@ And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |inv
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "#{age}" option in dropdown "user_age"
     And I click ".btn.btn-primary" to load a new page
+  GHERKIN
+end
+
+And(/^I fill in the sign up email field with a random email$/) do
+  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+  steps <<~GHERKIN
+    And I type "#{email}" into "#user_email"
   GHERKIN
 end
 

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import GameButtons from '../../templates/GameButtons';
 import BelowVisualization from '../../templates/BelowVisualization';
+import GameButtons from '../../templates/GameButtons';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 
 export default class CraftVisualizationColumn extends React.Component {

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-13 16:00:22 UTC",
+    "serialized_at": "2024-05-08 21:16:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2464,6 +2464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q1"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2486,6 +2489,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q2"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2508,6 +2514,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q3"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2530,6 +2539,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L01 CFU innovations_2023"
+        ],
         "progression": "Check For Understanding - Day 1"
       },
       "bonus": false,
@@ -2552,6 +2564,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L02 CFU innovations part 2_2023"
+        ],
         "progression": "Check For Understanding - Day 2"
       },
       "bonus": false,
@@ -2574,6 +2589,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L3 CFU Why Collect PII2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2596,6 +2614,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Keylogging2022_2023"
+        ],
         "progression": "Keylogging"
       },
       "bonus": false,
@@ -2618,6 +2639,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Phishing2022_2023"
+        ],
         "progression": "Phishing"
       },
       "bonus": false,
@@ -2640,6 +2664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Rogue Access Points2022_2023"
+        ],
         "progression": "Malware"
       },
       "bonus": false,
@@ -2662,6 +2689,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L07 CFU security risks_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2684,6 +2714,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L08 CFU security risks_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2706,6 +2739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher_2023"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -2728,6 +2764,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution_2023"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -2750,6 +2789,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L9 CFU public key_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2772,6 +2814,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L10 CFU MFA_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2794,6 +2839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp10_2023"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,

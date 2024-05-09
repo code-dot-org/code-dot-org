@@ -1,6 +1,6 @@
 import React from 'react';
 import {UnconnectedProgressLevelSet as ProgressLevelSet} from './ProgressLevelSet';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import {fakeLevels, fakeLevel} from './progressTestHelpers';
 import {reduxStore} from '@cdo/storybook/decorators';
 import {Provider} from 'react-redux';

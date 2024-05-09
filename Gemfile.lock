@@ -257,6 +257,9 @@ GEM
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
+    aws-sdk-sagemakerruntime (1.55.0)
+      aws-sdk-core (~> 3, >= 3.177.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-secretsmanager (1.48.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
@@ -299,7 +302,7 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    crowdin-api (1.8.1)
+    crowdin-api (1.10.0)
       open-uri (>= 0.1.0, < 0.2.0)
       rest-client (>= 2.0.0, < 2.2.0)
     css_parser (1.10.0)
@@ -539,6 +542,8 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailgun-ruby (1.2.14)
+      rest-client (>= 2.0.2)
     mailjet (1.7.3)
       activesupport (>= 3.1.0)
       rack (>= 1.4.0)
@@ -801,7 +806,7 @@ GEM
     rubocop-rails-accessibility (0.2.0)
       rubocop (>= 1.0.0)
     ruby-openid (2.9.2)
-    ruby-prof (0.15.9)
+    ruby-prof (1.7.0)
     ruby-progressbar (1.13.0)
     ruby-rc4 (0.1.5)
     ruby2_keywords (0.0.5)
@@ -982,6 +987,7 @@ DEPENDENCIES
   aws-sdk-rds
   aws-sdk-route53
   aws-sdk-s3
+  aws-sdk-sagemakerruntime
   aws-sdk-secretsmanager
   bcrypt (= 3.1.13)
   benchmark-ips
@@ -995,7 +1001,7 @@ DEPENDENCIES
   cld
   colorize
   composite_primary_keys (~> 13.0)
-  crowdin-api (~> 1.8.1)
+  crowdin-api (~> 1.10.0)
   cucumber
   daemons
   dalli
@@ -1039,6 +1045,7 @@ DEPENDENCIES
   kaminari
   lograge!
   loofah (~> 2.19.1)
+  mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
   memory_profiler
   mini_magick (>= 4.10.0)
@@ -1104,7 +1111,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rails-accessibility
-  ruby-prof
+  ruby-prof (>= 1.7.0)
   ruby-progressbar
   sass-rails (~> 6.0.0)
   sassc-rails!

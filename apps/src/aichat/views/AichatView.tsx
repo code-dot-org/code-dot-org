@@ -1,48 +1,37 @@
 /** @file Top-level view for AI Chat Lab */
 
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect} from 'react';
+
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import SegmentedButtons, {
+  SegmentedButtonsProps,
+} from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
 import {
   setStartingAiCustomizations,
+  setViewMode,
   clearChatMessages,
+  selectAllFieldsHidden,
 } from '../redux/aichatRedux';
+import {AichatLevelProperties, ViewMode} from '../types';
+import {isDisabled} from './modelCustomization/utils';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
 import CopyButton from './CopyButton';
-import SegmentedButtons, {
-  SegmentedButtonsProps,
-} from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import moduleStyles from './aichatView.module.scss';
-import {AichatLevelProperties, ViewMode} from '@cdo/apps/aichat/types';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
-import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
-
-const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
-  return (
-    <div>
-      <Button
-        onClick={onClear}
-        text="Clear"
-        iconLeft={{iconName: 'paintbrush'}}
-        size="xs"
-        color="white"
-        type="secondary"
-      />
-      <CopyButton />
-    </div>
-  );
-};
 
 const AichatView: React.FunctionComponent = () => {
-  const [viewMode, setViewMode] = useState<string>(ViewMode.EDIT);
   const dispatch = useAppDispatch();
 
   const beforeNextLevel = useCallback(() => {
@@ -59,7 +48,16 @@ const AichatView: React.FunctionComponent = () => {
     state => (state.lab.initialSources?.source as string) || '{}'
   );
 
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+
+  const {currentAiCustomizations, viewMode} = useAppSelector(
+    state => state.aichat
+  );
+  const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
+
+  const allFieldsHidden = useAppSelector(selectAllFieldsHidden);
 
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(initialSources);
@@ -71,9 +69,22 @@ const AichatView: React.FunctionComponent = () => {
     );
   }, [dispatch, initialSources, levelAichatSettings]);
 
-  const {botName} = useAppSelector(
-    state => state.aichat.currentAiCustomizations.modelCardInfo
-  );
+  // When the level changes, clear the chat message history and start a new session.
+  useEffect(() => {
+    dispatch(clearChatMessages());
+  }, [currentLevelId, dispatch]);
+
+  // Showing presentation view when:
+  // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and
+  // 2) we have a published model card (either by the student, or in readonly form from the levelbuilder)
+  const showPresentationToggle = () => {
+    return (
+      !levelAichatSettings?.hidePresentationPanel &&
+      (isPublished ||
+        (levelAichatSettings?.visibilities &&
+          isDisabled(levelAichatSettings.visibilities.modelCardInfo)))
+    );
+  };
 
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
@@ -92,9 +103,9 @@ const AichatView: React.FunctionComponent = () => {
         },
       },
     ],
-    size: 'm',
+    size: 's',
     selectedButtonValue: viewMode,
-    onChange: setViewMode,
+    onChange: viewMode => dispatch(setViewMode(viewMode as ViewMode)),
   };
 
   const chatWorkspaceHeader = (
@@ -110,7 +121,7 @@ const AichatView: React.FunctionComponent = () => {
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
-      {!levelAichatSettings?.hidePresentationPanel && (
+      {showPresentationToggle() && (
         <div className={moduleStyles.viewModeButtons}>
           <SegmentedButtons {...viewModeButtonsProps} />
         </div>
@@ -126,14 +137,16 @@ const AichatView: React.FunctionComponent = () => {
                 <Instructions beforeNextLevel={beforeNextLevel} />
               </PanelContainer>
             </div>
-            <div className={moduleStyles.customizationArea}>
-              <PanelContainer
-                id="aichat-model-customization-panel"
-                headerContent="Model Customization"
-              >
-                <ModelCustomizationWorkspace />
-              </PanelContainer>
-            </div>
+            {!allFieldsHidden && (
+              <div className={moduleStyles.customizationArea}>
+                <PanelContainer
+                  id="aichat-model-customization-panel"
+                  headerContent="Model Customization"
+                >
+                  <ModelCustomizationWorkspace />
+                </PanelContainer>
+              </div>
+            )}
           </>
         )}
         {viewMode === ViewMode.PRESENTATION && (
@@ -141,9 +154,6 @@ const AichatView: React.FunctionComponent = () => {
             <PanelContainer
               id="aichat-presentation-panel"
               headerContent={'Model Card'}
-              rightHeaderContent={renderChatWorkspaceHeaderRight(() =>
-                dispatch(clearChatMessages())
-              )}
             >
               <PresentationView />
             </PanelContainer>
@@ -153,12 +163,38 @@ const AichatView: React.FunctionComponent = () => {
           <PanelContainer
             id="aichat-workspace-panel"
             headerContent={chatWorkspaceHeader}
-            rightHeaderContent={<CopyButton />}
+            rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
+              dispatch(clearChatMessages());
+              analyticsReporter.sendEvent(
+                EVENTS.CHAT_ACTION,
+                {
+                  action: 'Clear chat history',
+                },
+                PLATFORMS.BOTH
+              );
+            })}
           >
             <ChatWorkspace />
           </PanelContainer>
         </div>
       </div>
+    </div>
+  );
+};
+
+const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
+  return (
+    <div className={moduleStyles.chatHeaderRight}>
+      <Button
+        onClick={onClear}
+        text="Clear"
+        iconLeft={{iconName: 'paintbrush'}}
+        size="xs"
+        color="white"
+        type="secondary"
+        className={moduleStyles.clearButton}
+      />
+      <CopyButton />
     </div>
   );
 };

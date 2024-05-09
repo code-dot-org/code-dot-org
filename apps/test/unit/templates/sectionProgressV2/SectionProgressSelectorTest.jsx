@@ -17,6 +17,7 @@ import currentUser, {
   setProgressTableV2ClosedBeta,
 } from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
@@ -39,6 +40,7 @@ describe('SectionProgressSelector', () => {
       sectionProgress,
       unitSelection,
       teacherSections,
+      progressV2Feedback,
     });
 
     store = getStore();
@@ -129,10 +131,12 @@ describe('SectionProgressSelector', () => {
     const stub = sinon.stub($, 'post');
     renderDefault();
 
+    const remindLaterLink = screen.getByText('Remind me later');
+    fireEvent.click(remindLaterLink);
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(stub).calledOnceWith('/api/v1/users/show_progress_table_v2', {
+    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
       show_progress_table_v2: true,
     });
 

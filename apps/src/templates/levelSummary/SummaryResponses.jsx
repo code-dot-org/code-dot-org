@@ -1,14 +1,17 @@
-import React, {useCallback, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useCallback, useEffect, useState} from 'react';
 import {connect} from 'react-redux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
-import i18n from '@cdo/locale';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import i18n from '@cdo/locale';
+
 import FreeResponseResponses from './FreeResponseResponses';
 import MultiResponses from './MultiResponses';
+
 import styles from './summary.module.scss';
 
 const FREE_RESPONSE = 'FreeResponse';

@@ -46,7 +46,7 @@ class DatablockStorageTable < ApplicationRecord
   class StudentFacingError < StandardError
     attr_reader :type
 
-    def initialize(type=nil)
+    def initialize(type = nil)
       super
       @type = type
     end
@@ -99,7 +99,8 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def read_records
-    is_shared_table ? shared_table.records : records
+    record_rows = is_shared_table ? shared_table.records : records
+    record_rows.map(&:record_json)
   end
 
   ##########################################################
@@ -117,7 +118,7 @@ class DatablockStorageTable < ApplicationRecord
 
     CSV.generate do |csv|
       csv << column_names
-      read_records.map(&:record_json).each do |record_json|
+      read_records.each do |record_json|
         csv << column_names.map {|x| record_json[x]}
       end
     end
@@ -130,7 +131,7 @@ class DatablockStorageTable < ApplicationRecord
   def get_column(column_name)
     if get_columns.include? column_name
       read_records.map do |record|
-        record.record_json[column_name]
+        record[column_name]
       end
     else
       [] # javascript expects a list with every element undefined to indicate column doesn't exists error
@@ -187,6 +188,9 @@ class DatablockStorageTable < ApplicationRecord
       # Preserve the old column's order while adding any new columns
       self.columns += (cols_in_records - columns).to_a
       save!
+
+      # Reload association because we didn't modify records thru it
+      records.reload
     end
   end
 
@@ -215,11 +219,11 @@ class DatablockStorageTable < ApplicationRecord
   def import_csv(table_data_csv)
     if_shared_table_copy_on_write
 
-    records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
+    new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
 
     # Auto-cast CSV strings on import, e.g. "5.0" => 5.0
     same_as_undefined = ['', 'undefined']
-    records.map! do |record|
+    new_records.map! do |record|
       # This is equivalent to setting the value to be 'undefined' in JS: it deletes the key
       record.reject! {|_key, value| same_as_undefined.include? value}
       record.transform_values! do |string_value|
@@ -232,7 +236,11 @@ class DatablockStorageTable < ApplicationRecord
       end
     end
 
-    create_records(records)
+    # import_csv should overwrite existing data:
+    records.delete_all
+    self.columns = ['id']
+
+    create_records(new_records)
   rescue CSV::MalformedCSVError => exception
     raise StudentFacingError.new(:INVALID_CSV), "Could not import CSV as it was not in the format we expected: #{exception.message}"
   end
@@ -309,7 +317,11 @@ class DatablockStorageTable < ApplicationRecord
         value.to_s
       end
     when 'number'
-      Float(value) rescue raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to number"
+      begin
+        Float(value)
+      rescue
+        raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to number"
+      end
     when 'boolean'
       if [true, 'true'].include? value
         true

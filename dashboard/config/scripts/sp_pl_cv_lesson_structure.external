@@ -1,0 +1,66 @@
+name 'sp-pl-CV_lesson_structure'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Structure
+
+## Role of the teacher
+
+#### The lessons at the start of the unit are designed to help students build foundational knowledge about how to leverage generative AI to ethically and productively help them with coding. All lessons within the Computer Vision unit are intended to be **facilitated by a teacher**. These lessons are **not designed as self-paced experiences for students** to work through at their own pace.
+
+---
+## Computer Vision lessons
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Table</title>
+</head>
+<body>
+      <table border="1" style="font-size: 16pt; width: 100%; table-layout: fixed;">
+        <tr>
+        <tr>
+            <th>Empathy</th>
+            <th>Defining</th>
+            <th>Ideating</th>
+            <th>Prototyping</th>
+            <th>Testing</th>
+        </tr>
+        <tr >
+            <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 2:</b></a> <br>Empathizing <br> with Users<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 3:</b></a> <br>Gathering Data</td>
+            
+           <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 4:</b></a> <br>Data Visualization<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 5:</b></a> <br>User Stories and<br>Problem Statments</td>
+            
+           <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 6:</b></a> <br>Pixels and QR Codes<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 7:</b></a> <br>Edge Detection <br><br><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 8:</b></a> <br>Data Sets and Models<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 9:</b></a> <br>Data Training and Bias</td>
+            
+            <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 10:</b></a> <br>Training a Model<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 11:</b></a> <br>Impacts of <br>Computer Vision <br><br>(End of Unit Project) <br><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 12:</b></a> <br>Prototype Development <br> Part 1 <br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 13:</b></a> <br>Prototype Development <br> Part 2</td>
+            
+            <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 14:</b></a> <br>User Feedback <br> with Users<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 15:</b></a> <br>Implementing <br> Feedback</td>
+        </tr>
+    </table>
+</body>
+
+<img src="https://images.code.org/94c91bb3b11d912f8b4c38f34b241e09-image-1712760508654.png" alt="AI bot with thought bubbles" width="250px" style="border-radius:10px; float:right; margin: 80px 50px 0px 40px;">
+
+
+
+
+
+
+
+
+---
+## Lesson Structure 
+
+#### Each lesson plan follows a clear structure to maximize learning and engagement.
+
+#### **Warm-up:** All lessons start with a warm-up activity to activate prior knowledge and introduce the topic.
+
+#### **Engage & Interact:** The core of the lesson features engaging and interactive activities designed for students to solidify understanding through hands-on exploration and collaboration.
+
+#### **Reflect:** Built-in reflection time allows students to process the learned material and make connections.
+
+#### **Wrap-up:** Lessons conclude with a clear summary and takeaways to solidify key concepts.
+
+
+MARKDOWN

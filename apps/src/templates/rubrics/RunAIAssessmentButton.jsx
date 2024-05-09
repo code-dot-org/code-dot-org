@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
-import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
+import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
@@ -28,6 +28,8 @@ export const STATUS = {
   PII_ERROR: 'pii_error',
   // profanity present in code
   PROFANITY_ERROR: 'profanity_error',
+  // request too large
+  REQUEST_TOO_LARGE: 'request_too_large',
 };
 
 const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
@@ -86,6 +88,10 @@ export default function RunAIAssessmentButton({
               data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
             ) {
               setStatus(STATUS.PROFANITY_ERROR);
+            } else if (
+              data.status === RubricAiEvaluationStatus.REQUEST_TOO_LARGE
+            ) {
+              setStatus(STATUS.REQUEST_TOO_LARGE);
             } else {
               setStatus(STATUS.READY);
             }
@@ -124,6 +130,10 @@ export default function RunAIAssessmentButton({
                 data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
               ) {
                 setStatus(STATUS.PROFANITY_ERROR);
+              } else if (
+                data.status === RubricAiEvaluationStatus.REQUEST_TOO_LARGE
+              ) {
+                setStatus(STATUS.REQUEST_TOO_LARGE);
               }
             });
           }

@@ -631,6 +631,8 @@ module SharedConstants
     PII_VIOLATION: 1001,
     # Profanity Failure
     PROFANITY_VIOLATION: 1002,
+    # Request Too Large
+    REQUEST_TOO_LARGE: 1003,
   }.freeze
 
   EMAIL_LINKS = OpenStruct.new(
@@ -692,6 +694,8 @@ module SharedConstants
       INTEGRATION_EARLY_ACCESS_URL: 'https://docs.google.com/forms/d/e/1FAIpQLScjfVR4CZs8Utf5vI4mz3e1q8vdH6RNIgTUWygZXN0oovBSQg/viewform',
       INTEGRATION_BUG_REPORT_URL: 'https://support.code.org/hc/en-us/requests/new?ticket_form_id=14998494738829&tf_23889708=lms_eaf',
       ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
+      # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation
+      SUPPORTED_METHODS_URL: 'https://github.com/code-dot-org/code-dot-org/blob/staging/docs/lti-integration.md#option-2-manual-entry',
     }
   ).freeze
 
@@ -702,10 +706,11 @@ module SharedConstants
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
+  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4-turbo-2024-04-09'
 
-  # These reflect the 'status' of an AI Tutor Interaction
-  AI_TUTOR_INTERACTION_STATUS = {
+  # These reflect the 'status' of an AI Interaction,
+  # and are used in both AI Tutor and AI Chat.
+  AI_INTERACTION_STATUS = {
     ERROR: 'error',
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
@@ -713,17 +718,17 @@ module SharedConstants
     UNKNOWN: 'unknown',
   }.freeze
 
-  # These are the types of assistance AI Tutor can provide
+  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
+
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
   }.freeze
 
-  PII_TYPES = {
-    EMAIL: 'email',
-    PHONE: 'phone',
-    ADDRESS: 'address',
+  AICHAT_ERROR_TYPE = {
+    PROFANITY_MODEL: 'profanity_model',
+    PROFANITY_USER: 'profanity_user'
   }.freeze
 
   USER_TYPES = OpenStruct.new(

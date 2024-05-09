@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
 import {studentLevelProgressType} from '../progress/progressTypes';
@@ -134,6 +134,7 @@ function LevelDataCell({
       headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
       <Link
+        id={'ui-test' + level.path?.replaceAll('/', '-') + '-cell-data'}
         href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
         openInNewTab
         external

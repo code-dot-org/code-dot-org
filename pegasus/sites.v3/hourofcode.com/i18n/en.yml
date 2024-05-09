@@ -1037,6 +1037,7 @@
   ai_pl_desc: "Introduction to artificial intelligence and machine learning. Train a machine learning model using AI Lab. and engage with machine learning apps. Consider real-world implications of AI and machine learning."
   ai_promote_literacy: "Promote AI Literacy. Support Innovation. Provide Guidance."
   ai_section_body: "The latest resource from TeachAI, Foundational Policy Ideas for AI in Education, provides briefs, policy considerations, and presentation materials for policymakers to craft responsible policies for teaching with and about AI. Let's #TeachAI."
+  ai_banner_body: "The latest resource from TeachAI provides briefs, policy considerations, and presentation materials for policymakers."
   ai_video_series_title: "How AI Works"
   ai_video_series_desc: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making. Watch the video series below, or [check out our How AI Works lessons](%{how_ai_works_url})!"
   ai_resources_heading: "Additional resources"
@@ -2005,6 +2006,78 @@
         simple: "App Lab: Make a simple app"
         emoji: "App Lab: Make a Whack-E-Moji Game"
         how_to: "App Lab How-to: Make a Choose-Your-Own-Adventure App"
+
+  music_lab:
+    opengraph_title: "%{music_lab} | Create music with code"
+    introducing: "Introducing"
+    music_lab: "Music Lab"
+    introducing_music_lab: "Introducing Music Lab"
+    introducing_music_lab_strong: "Introducing **%{music_lab}**"
+    button:
+      try_music_lab: "Try Music Lab"
+      learn_more: "Learn more"
+      access_teachers_guide: "Access teacher's guide"
+      get_teachers_guide: "Get the teacher's guide"
+      amazon_career_tour: "See Career Tour"
+    in_partnership_with: "In partnership with"
+    amazon_future_engineer: "Amazon Future Engineer"
+    banner:
+      heading: "Create music with code"
+      desc: "Get creative with your favorite artist's music and code new songs and mixes!"
+    featuring_songs_by: "Featuring songs by:"
+    artist_list: "%{artist_list} and more!"
+    artist:
+      singer_songwriter: "%{artist_name}, Singer-songwriter"
+      band: "%{artist_name} from %{band_name}"
+    student_projects:
+      heading: "Listen to what students are creating"
+      subheading: "Getting started is easy!"
+      desc: "Remix one of these featured projects or create your own!"
+      list_create: "Create your own mix with code"
+      list_artist: "Use your favorite artist's music"
+      list_share: "Share your mix and remix others!"
+    amazon:
+      heading: "Check out the Amazon Music Career Tour!"
+      desc: "Discover the jobs that bring technology together with music!"
+    videos:
+      heading: "Watch your favorite artists try Music Lab"
+    quotes:
+      heading: "What teachers and students are saying about Music Lab"
+      bryant:
+        quote: "Massive success! Kids really enjoyed it; engagement was great, especially for some students that aren't as hooked into other modes of learning/practicing CS skills."
+        byline: "STEM Specialist"
+      lori:
+        quote: "I think Music Lab is a great addition to the Code.org platform…it's a great cross curriculum that can engage students of all different areas and interests and help bring teachers together."
+        byline: "Computer Science Teacher"
+      joe:
+        quote: "So my reaction to seeing Music Lab was one of amazement. I was truly impressed by the ability to blend the field of STEM with what we do in music…there's so much overlap to be had."
+        byline: "Music Teacher"
+      student:
+        quote_01: "It's like you're coding without even knowing you're coding."
+        quote_02: "I never would have imagined I'd be making music with computer science."
+        quote_03: "I think it's a cool way to compose music."
+        byline: "High School Student"
+    teachers_guide:
+      heading: "Get the teacher's guide to Music Lab"
+      desc: "Grab your copy of the teacher's guide to Music Lab to learn how to get started, explore activity ideas, and get answers to frequently asked questions."
+    tutorial:
+      heading: "Teach Music Lab in your Classroom"
+      desc: "Use our Music Lab tutorial to unleash your students' musical creativity, combining the joy of music with the principles of coding."
+      button: "Start tutorial"
+    additional_resources:
+      heading: "Additional resources"
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      videos:
+        title: "Video Library"
+        desc: "Explore our large library of engaging and informative videos to learn about key computer science concepts on a broad range of topics."
+        button: "View video library"
+      hoc:
+        title: "Try an Hour of Code"
+        desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
+        button: "See Hour of Code activities"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
@@ -10761,7 +10834,7 @@
   about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url}) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:"
   about_page_section_specific_description_8: "Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](%{partners_url}), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organization for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization."
   about_page_section_donors_description_1: "Code.org® is a registered public 501c3 nonprofit, with support from the general public. We are grateful for the generous support we've received from [individuals and organizations](%{individuals_url}) who support our vision."
-  about_page_section_donors_description_2: "Codes accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
+  about_page_section_donors_description_2: "Code.org's accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
   about_page_donors_link_1: "Make a donations"
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
 

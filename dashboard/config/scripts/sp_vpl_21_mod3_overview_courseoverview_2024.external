@@ -5,29 +5,22 @@ description 'description here'
 markdown <<MARKDOWN
 # Overview of CS Discoveries
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+#### Welcome to Module 3! This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Welcome to Module 3! This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
-</p>
-</div>
+<img src="https://images.code.org/78ae06c6d1e380e76ab2f94a4006f354-image-1627690953862.jpg" alt="Three students working on laptops while a teacher looks over their shoulders." style="border-radius:10px; float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">
 
-<img src="https://images.code.org/78ae06c6d1e380e76ab2f94a4006f354-image-1627690953862.jpg" alt="Image of three students working on laptops while a teacher looks over their shoulders." style="border-radius:10px; float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">
+### **You will:**
 
+* #### Gain a high-level understanding of the CS Discoveries curriculum.
+* #### Become familiar with the student learning tools used within CS Discoveries.
+* #### Decide which units of CS Discoveries you will teach in your class.
 
-## You will:
+#### You will begin with a lesson focused on the content of the CS Discoveries course. 
+<br>
 
-
-* ##### Gain a high-level understanding of the CS Discoveries curriculum.
-* ##### Become familiar with the student learning tools used within CS Discoveries.
-* ##### Decide which units of CS Discoveries you will teach in your class.
-
-### **Suggested time:** 60 minutes
+#### **Suggested time:** 60 minutes
 
 <div style="clear:both"/>
-
-### You will begin with a lesson focused on the content of the CS Discoveries course. 
-
-## Let's get started!
 
 
 MARKDOWN
