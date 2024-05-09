@@ -618,6 +618,11 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
+        namespace :account_linking do
+          get :landing
+          get :existing_account
+          post :link_email
+        end
       end
     end
 
