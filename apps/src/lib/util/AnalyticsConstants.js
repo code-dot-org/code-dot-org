@@ -35,6 +35,7 @@ const EVENTS = {
   // Child Account Policy
   CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
   CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
+  CAP_STATE_FORM_DISMISSED: 'CAP State Form Sign Out Button Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
