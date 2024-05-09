@@ -23,8 +23,9 @@ module Cpa
     return nil unless current_request
     # schedule [Map] A map of the CPA phases to dates. Example:
     # {
-    #   “new_user_lockout”: “2023-07-01T00:00:00Z”,
-    #   “all_user_lockout”: “2024-07-01T00:00:00Z”
+    #   “cpa_new_user_lockout”:         “2023-07-05T23:15:00+00:00”,
+    #   “cpa_all_user_lockout_warning”: “2024-05-01T00:00:00MST”,
+    #   “cpa_all_user_lockout”:         “2024-07-01T00:00:00MST”
     # }
     schedule = experiment_value('cpa_schedule', current_request)
     # override [String] configuration overrides if we are manually testing the
