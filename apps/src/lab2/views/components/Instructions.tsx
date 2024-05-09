@@ -153,6 +153,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   handleInstructionsTextClick,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
 
   const imageClicked = () => {
     setShowBigImage(!showBigImage);
@@ -168,8 +169,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
     if (beforeNextLevel) {
       beforeNextLevel();
     }
-    console.log('Congrats! You finished!');
+    setIsFinished(true);
   };
+
+  const finalMessage =
+    '<strong>You finished this lesson! Check in with your teacher for the next activity.</strong>';
 
   return (
     <div
@@ -253,6 +257,12 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
               )}
+              {finalMessage && isFinished && (
+                <EnhancedSafeMarkdown
+                  markdown={finalMessage}
+                  className={moduleStyles.markdownText}
+                />
+              )}
               {canShowNextButton && (
                 <button
                   id="instructions-feedback-button"
@@ -269,6 +279,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   type="button"
                   onClick={onFinish}
                   className={moduleStyles.buttonContinue}
+                  disabled={isFinished}
                 >
                   {commonI18n.finish()}
                 </button>
