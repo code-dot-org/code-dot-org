@@ -1,0 +1,16 @@
+name 'sp-pl-CV_feedback_wrapUp'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrapping up
+
+
+#### wrap up / reflection something here  
+
+<img src="https://images.code.org/395ac1562aade16e680fe37ef96b290c-image-1715026230678.png" alt="teachable machine sample with girl and stuffed dog" width="200px"  style="border-radius:10px; float:right; margin: 40px 20px 10px 40px;">
+
+
+ 
+
+MARKDOWN

@@ -1,0 +1,39 @@
+name 'self-paced-pl-ai-101-mod1-closing_00_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What’s Next?
+
+#### In the upcoming modules we’ll cover the following topics. While we recommend completing all modules in order, feel free to jump around to focus on what’s most relevant to you and your role as an educator.
+
+<br>
+
+#### **Understanding AI**: Build your foundational understanding of AI.
+* #### Define artificial intelligence and explain its fundamental concepts.
+* #### Identify common applications of AI in various fields, illustrating its broad impact and potential.
+
+<br>
+
+#### **Transforming Teaching with AI**: Learn how to use AI to support your role as an educator.
+* #### Learn guiding principles when using AI in an educational context.
+* #### Practice how to effectively use AI tools to support various educational tasks.
+* #### Assess the suitability of different AI tools and platforms for their specific teaching contexts.
+
+<br>
+
+#### **Bringing AI to the Classroom**: Learn how to bring AI to the students in your classroom.
+* #### Critically evaluate AI tools and resources for their applicability and effectiveness in the classroom.
+* #### Reflect on AI implementation strategies through the lens of Universal Design for Learning and Culturally Responsive Teaching.
+* #### Explore how you could introduce and integrate AI technologies into your own classroom settings, taking into consideration your specific educational contexts and student needs.
+* #### Learn about the resources available to teach about AI in your classroom.
+
+<br>
+
+#### **Ensuring a Responsible Approach to AI**: Learn how to ensure that you and your students are using AI responsibly.
+* #### Recognize and discuss the ethical considerations and potential biases in AI, especially as they relate to education.
+* #### Develop and implement responsible AI practices in your teaching, ensuring student safety and data privacy.
+* #### Revisit the benefits and address the risks of AI in an educational setting.
+
+
+MARKDOWN

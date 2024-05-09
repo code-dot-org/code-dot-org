@@ -1,0 +1,21 @@
+name 'sp-pl-CV_defining_diggingDeeper'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Digging Deeper with Why
+
+
+
+#### Once students have created personoas, they will dig into core issues by digging deeper by asking, **"why?"**
+
+#### This analysis will help them write their core problem statement. 
+
+### Now that a problem has been established, they can get working on the solutions! 
+
+<img src="https://images.code.org/63b997bdfffb19fca35f5edab5fbb297-image-1715007451616.png" alt="top portion of handout" width="750px" style="border-radius:10px; float:right; margin: 10px 100px 80px 100px; border: 2px solid black;">
+
+<br>
+
+## Let’s move to Ideating! 
+MARKDOWN

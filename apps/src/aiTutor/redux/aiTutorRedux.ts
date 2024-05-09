@@ -21,6 +21,7 @@ export interface AITutorState {
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   chatMessageError: boolean;
+  isChatOpen: boolean;
 }
 
 export interface InstructionsState {
@@ -42,6 +43,7 @@ const initialState: AITutorState = {
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   chatMessageError: false,
+  isChatOpen: false,
 };
 
 const formatQuestionForAITutor = (chatContext: ChatContext) => {
@@ -95,7 +97,6 @@ export const askAITutor = createAsyncThunk(
       levelContext.levelId,
       chatContext.actionType
     );
-
     thunkAPI.dispatch(
       updateLastChatMessage({
         status: chatApiResponse.status,
@@ -105,7 +106,7 @@ export const askAITutor = createAsyncThunk(
     if (chatApiResponse.assistantResponse) {
       const assistantChatMessage: ChatCompletionMessage = {
         role: Role.ASSISTANT,
-        status: Status.OK,
+        status: chatApiResponse.status,
         chatMessageText: chatApiResponse.assistantResponse,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
@@ -159,6 +160,9 @@ const aiTutorSlice = createSlice({
         state.chatMessages[index] = _.merge({}, lastMessage, action.payload);
       }
     },
+    setIsChatOpen: (state, action: PayloadAction<boolean>) => {
+      state.isChatOpen = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(askAITutor.fulfilled, state => {
@@ -183,4 +187,5 @@ export const {
   clearChatMessages,
   setIsWaitingForChatResponse,
   updateLastChatMessage,
+  setIsChatOpen,
 } = aiTutorSlice.actions;

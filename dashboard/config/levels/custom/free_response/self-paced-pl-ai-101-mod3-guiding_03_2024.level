@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Reflection\r\n\r\nChoose a concern from the list below (you also saw this list in Module 1) and briefly analyze its negative aspects. Then, commit to how you will work with these possibilities. You could discuss how you might minimize the negative aspects or reframe it into a positive or actionable perspective by identifying opportunities for improvement and suggesting practical solutions.\r\n* Plagiarism and academic dishonesty\r\n* Accountability for students\r\n* Student privacy\r\n* Overreliance and loss of critical thinking\r\n* Perpetuating bias",
+    "long_instructions": "# Reflection\r\n\r\n#### Choose a concern from the list below (you also saw this list in the Introducing AI for Educators module) and briefly analyze its negative aspects. Then, commit to how you will work with these possibilities. You could discuss how you might minimize the negative aspects or reframe it into a positive or actionable perspective by identifying opportunities for improvement and suggesting practical solutions.\r\n* #### Plagiarism and academic dishonesty\r\n* #### Accountability for students\r\n* #### Student privacy\r\n* #### Overreliance and loss of critical thinking\r\n* #### Perpetuating bias",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -20,7 +20,7 @@
     "allow_multiple_attempts": "true"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-12T18:50:54.153+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-impact_06_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-impact_06_2024\"},{\"changed_at\":\"2024-04-12 18:51:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-12T18:50:54.153+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-impact_06_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-impact_06_2024\"},{\"changed_at\":\"2024-04-12 18:51:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 14:44:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 19:59:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
