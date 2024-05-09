@@ -42,7 +42,7 @@ $(document).ready(function () {
       : modal.modal('hide');
   });
 
-  $('#sign-out-btn').on('click', function () {
+  $('#sign-out-btn').on('click', () => {
     analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_DISMISSED, {
       user_id: userId,
       in_section: inSection,
