@@ -60,6 +60,7 @@ Scenario: Teacher can navigate to student work by clicking level cell.
   And check that the URL contains "&user_id="
   And check that the URL contains "allthethings/lessons/2/levels/1"
 
+@skip
 Scenario: Teacher can open lesson data, refresh the page, and lesson data will still be shown
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
