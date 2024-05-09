@@ -1,7 +1,5 @@
-// 600 writes per 60 seconds
-// record the timestamp of the last 600 writes into a queue
-// every write, pop off the queue until reach a timestamp that is <60 seconds ago
-// if queue size gets bigger than 600, throw an error
+// rateLimit() throws an error if called more than RATE_LIMIT times per RATE_LIMIT_INTERVAL_MS
+// we use this in Applab commands.js to rate limit access to Datablock Storage from student code
 const rateLimitAccessLog = [];
 export const RATE_LIMIT = 600;
 export const RATE_LIMIT_INTERVAL_MS = 60000;
