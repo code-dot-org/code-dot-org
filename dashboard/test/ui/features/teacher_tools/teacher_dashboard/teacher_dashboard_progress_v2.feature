@@ -72,6 +72,8 @@ Scenario: Teacher can open lesson data, refresh the page, and lesson data will s
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
   And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
+  # Waiting to make sure the user object has been updated before reloading the page
+  And I wait for 3 seconds
 
   # Verify the lesson is still open
   Then I reload the page
