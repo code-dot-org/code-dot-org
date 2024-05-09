@@ -36,6 +36,17 @@ class EvaluateRubricJob < ApplicationJob
 
   AIPROXY_API_TIMEOUT = 165
 
+  ATTEMPTS_ON_RATE_LIMIT = 3
+  ATTEMPTS_ON_TIMEOUT_ERROR = 2
+  ATTEMPTS_ON_SERVICE_UNAVAILABLE = 3
+  ATTEMPTS_ON_GATEWAY_TIMEOUT = 3
+
+  # The CloudWatch metric namespace
+  AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
+
+  # The firehose study name
+  AI_RUBRICS_FIREHOSE_STUDY = 'ai-rubrics'.freeze
+
   # This is raised if there is any raised error due to a rate limit, e.g. a 429
   # received from the aiproxy service.
   class TooManyRequestsError < StandardError
@@ -95,12 +106,6 @@ class EvaluateRubricJob < ApplicationJob
   # For testing purposes, we can raise this error to simulate a missing key
   class StubNoSuchKey < StandardError
   end
-
-  # The CloudWatch metric namespace
-  AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
-
-  # The firehose study name
-  AI_RUBRICS_FIREHOSE_STUDY = 'ai-rubrics'.freeze
 
   # Write out metrics reflected in the response to CloudWatch
   #
@@ -231,23 +236,17 @@ class EvaluateRubricJob < ApplicationJob
     rubric_ai_evaluation.save!
   end
 
-  ATTEMPTS_ON_RATE_LIMIT = 3
-
   # Retry on any reported rate limit (429 status). With 3 attempts, 'exponentially_longer' waits 3s, then 18s.
   retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
     log_metric(metric_name: :RateLimit)
     log_to_firehose(job: job, error: error, event_name: 'rate-limit')
   end
 
-  ATTEMPTS_ON_TIMEOUT_ERROR = 2
-
   # Retry just once on a timeout. It is likely to timeout again.
   retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: ATTEMPTS_ON_TIMEOUT_ERROR do |job, error|
     log_metric(metric_name: :TimeoutError)
     log_to_firehose(job: job, error: error, event_name: 'timeout-error')
   end
-
-  ATTEMPTS_ON_SERVICE_UNAVAILABLE = 3
 
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500.
@@ -256,8 +255,6 @@ class EvaluateRubricJob < ApplicationJob
     log_metric(metric_name: :ServiceUnavailable, agent: agent)
     log_to_firehose(job: job, error: error, event_name: 'service-unavailable', agent: agent)
   end
-
-  ATTEMPTS_ON_GATEWAY_TIMEOUT = 3
 
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
   # when openai request times out.
