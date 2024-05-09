@@ -154,7 +154,7 @@ $container-width: 309px;
   }
 }
 
-.buttonFlex {
+button.buttonFlex {
   flex: 1;
 }
 
@@ -182,7 +182,7 @@ $container-width: 309px;
     display: block !important;
   }
 
-  .quickViewButton {
+  button.quickViewButton {
     display: none !important;
   }
 

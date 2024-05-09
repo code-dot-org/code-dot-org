@@ -132,3 +132,21 @@ p.enterName {
   right: 1rem;
   background-size: contain;
 }
+
+.swiperNav {
+  // position: absolute;
+  top: 42%;
+  border: 0;
+  height: 48px;
+}
+
+.swiperNavPrev {
+  background: url("//localhost.code.org:3000/images/carousel/prev.svg") no-repeat;
+  left: -4rem;
+  border: 0;
+}
+
+.swiperNavNext {
+  background: url("//localhost.code.org:3000/images/carousel/next.svg") no-repeat;
+  right: -4rem;
+}
