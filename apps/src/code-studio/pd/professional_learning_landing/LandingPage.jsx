@@ -104,6 +104,9 @@ function LandingPage({
     workshopsAsParticipant?.length === 0 &&
     plCoursesStarted?.length === 0;
 
+  const joinedPlSectionsStyling =
+    joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
+
   // Load PL section info into redux
   const dispatch = useDispatch();
   useEffect(() => {
@@ -312,13 +315,7 @@ function LandingPage({
         {showGettingStartedBanner && RenderGettingStartedBanner()}
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
-        <div
-          className={
-            joinedPlSections?.length > 0
-              ? ''
-              : style.joinedPlSectionsWithNoSections
-          }
-        >
+        <div className={joinedPlSectionsStyling}>
           <JoinSectionArea
             initialJoinedStudentSections={joinedStudentSections}
             initialJoinedPlSections={joinedPlSections}
