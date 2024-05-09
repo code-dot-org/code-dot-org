@@ -107,59 +107,6 @@ class EvaluateRubricJob < ApplicationJob
   class StubNoSuchKey < StandardError
   end
 
-  # Write out metrics reflected in the response to CloudWatch
-  #
-  # Currently, this keeps track of a curated set of metrics returned
-  # within the 'metadata.usage' field of the returned response from
-  # the AI proxy service.
-  #
-  # @param [Hash] response The parsed JSON response from the AI proxy.
-  def self.log_token_metrics(response)
-    # Record the metadata
-    # The aiproxy service will report the usage in the metadata via:
-    # { metadata: { agent: 'openai', usage: { total_tokens: 1234, prompt_tokens: 432, completion_tokens: 802 } } }
-    [:TotalTokens, :PromptTokens, :CompletionTokens].each do |name|
-      # Send a metric to the AIRubric namespace under categories for both the
-      # service used (openai, etc) and the current environment.
-      tokens = response.dig('metadata', 'usage', name.to_s.underscore)
-      next if tokens.nil?
-      agent = response.dig('metadata', 'agent') || 'unknown'
-      log_metric(metric_name: name, agent: agent, value: tokens)
-    end
-  end
-
-  # Ensure that the RubricAiEvaluation exists as an argument to the job
-  private def pass_in_or_create_rubric_ai_evaluation(job)
-    # Get the first argument to perform() which is the hash of named arguments
-    options = job.arguments.first
-
-    # Get the level containing the rubric
-    script_level = ScriptLevel.find(options[:script_level_id])
-
-    # Will raise an exception if the rubric does not exist
-    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
-
-    user = User.find(options[:user_id])
-    channel_id = get_channel_id(user, script_level)
-    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
-
-    # Create a queued record of this work request (if none were given)
-    rubric_ai_evaluation_id = options[:rubric_ai_evaluation_id]
-    rubric_ai_evaluation = (rubric_ai_evaluation_id && RubricAiEvaluation.find(rubric_ai_evaluation_id)) || RubricAiEvaluation.create!(
-      user_id: options[:user_id],
-      requester_id: options[:requester_id],
-      rubric: rubric,
-      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
-      project_id: project_id,
-    )
-
-    # Set it back so the job can reference it
-    options[:rubric_ai_evaluation_id] = rubric_ai_evaluation.id
-
-    # Return the Rubric
-    rubric_ai_evaluation
-  end
-
   before_enqueue do |job|
     rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(job)
     rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
@@ -262,6 +209,59 @@ class EvaluateRubricJob < ApplicationJob
     agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
     log_metric(metric_name: :GatewayTimeout, agent: agent)
     log_to_firehose(job: job, error: error, event_name: 'gateway-timeout', agent: agent)
+  end
+
+  # Write out metrics reflected in the response to CloudWatch
+  #
+  # Currently, this keeps track of a curated set of metrics returned
+  # within the 'metadata.usage' field of the returned response from
+  # the AI proxy service.
+  #
+  # @param [Hash] response The parsed JSON response from the AI proxy.
+  def self.log_token_metrics(response)
+    # Record the metadata
+    # The aiproxy service will report the usage in the metadata via:
+    # { metadata: { agent: 'openai', usage: { total_tokens: 1234, prompt_tokens: 432, completion_tokens: 802 } } }
+    [:TotalTokens, :PromptTokens, :CompletionTokens].each do |name|
+      # Send a metric to the AIRubric namespace under categories for both the
+      # service used (openai, etc) and the current environment.
+      tokens = response.dig('metadata', 'usage', name.to_s.underscore)
+      next if tokens.nil?
+      agent = response.dig('metadata', 'agent') || 'unknown'
+      log_metric(metric_name: name, agent: agent, value: tokens)
+    end
+  end
+
+  # Ensure that the RubricAiEvaluation exists as an argument to the job
+  private def pass_in_or_create_rubric_ai_evaluation(job)
+    # Get the first argument to perform() which is the hash of named arguments
+    options = job.arguments.first
+
+    # Get the level containing the rubric
+    script_level = ScriptLevel.find(options[:script_level_id])
+
+    # Will raise an exception if the rubric does not exist
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+
+    user = User.find(options[:user_id])
+    channel_id = get_channel_id(user, script_level)
+    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+
+    # Create a queued record of this work request (if none were given)
+    rubric_ai_evaluation_id = options[:rubric_ai_evaluation_id]
+    rubric_ai_evaluation = (rubric_ai_evaluation_id && RubricAiEvaluation.find(rubric_ai_evaluation_id)) || RubricAiEvaluation.create!(
+      user_id: options[:user_id],
+      requester_id: options[:requester_id],
+      rubric: rubric,
+      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
+      project_id: project_id,
+    )
+
+    # Set it back so the job can reference it
+    options[:rubric_ai_evaluation_id] = rubric_ai_evaluation.id
+
+    # Return the Rubric
+    rubric_ai_evaluation
   end
 
   def self.log_metric(metric_name:, agent: nil, value: 1)
