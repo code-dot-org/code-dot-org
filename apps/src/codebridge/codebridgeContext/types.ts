@@ -23,3 +23,4 @@ export type NewFileFunction = (arg: {
 export type RenameFileFunction = (fileId: FileId, newName: string) => void;
 export type RenameFolderFunction = (folderId: string, newName: string) => void;
 export type MoveFileFunction = (fileId: FileId, folderId: FolderId) => void;
+export type SetFileVisibilityFunction = (fileId: FileId, hide: boolean) => void;

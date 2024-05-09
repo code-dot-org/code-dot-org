@@ -3,6 +3,7 @@ import {editableFileType} from '@codebridge/utils';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useCallback, useMemo} from 'react';
 
+import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
 import './styles/editor.css';
@@ -12,7 +13,8 @@ export const Editor = (
   editableFileTypes: string[]
 ) => {
   const {project, saveFile} = useCodebridgeContext();
-  const file = Object.values(project.files).filter(f => f.active)?.[0];
+
+  const file = getActiveFileForProject(project);
   // this is a stupid hack. the low level code-mirror editor won't update itself
   // automatically if the doc is changed externally. So in lieu of doing it better,
   // for now we just key the component off of the file ID + an incrementing value that

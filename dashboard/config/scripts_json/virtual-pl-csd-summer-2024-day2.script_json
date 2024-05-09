@@ -7,11 +7,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-05 01:35:18 UTC",
+    "serialized_at": "2024-05-07 22:26:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -106,37 +107,37 @@
       }
     },
     {
-      "key": "Unit 3 Curriculum Investigation: Shapes & Variables",
-      "name": "Unit 3 Curriculum Investigation: Shapes & Variables",
+      "key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+      "name": "Model Lesson 3: U3L3 Drawing in Game Lab",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nThis session is a preparation for the next two Model Lessons that participants will engage in: U3L3 Drawing in Game Lab and U3L5 Variables. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants are introduced to Unit 3 - Interactive Animations and Games.\n* Participants gain experience with Game Lab.\n* Participants prepare to engage in Unit 3 - Interactive Animations and Games Model Lessons and TLOs by previewing how to create and modify shapes in Game Lab.\n\n**Suggested Time:** 40 minutes",
-        "student_overview": "**You will:**\n* Get an introduction to Unit 3 - Interactive Animations and Games.\n* Gain experience with Game Lab.\n* Prepare to engage in Unit 3 - Interactive Animations and Games Model Lessons and TLOs by previewing how to create and modify shapes in Game Lab."
-      },
-      "seeding_key": {
-        "lesson.key": "Unit 3 Curriculum Investigation: Shapes & Variables",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "virtual-pl-csd-summer-2024-day2"
-      }
-    },
-    {
-      "key": "Model Lesson 3: U3L3 Drawing in Game Lab",
-      "name": "Model Lesson 3: U3L3 Drawing in Game Lab",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
-      "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Teachers formatively assess student understanding throughout the lesson\n\n* **Lesson Decisions:**\n  * Use the videos as check-in points for participants using the discussion questions provided in the teacher notes as sensemaking opportunities.\n  * The teacher uses the assessment opportunities from the lesson plan to influence the probing questions asked while circulating through the room to check for understanding\n  * The teacher asks participants to explain how they think they should score on the mini rubrics in the assessment level\n  * The teacher uses a wrap up to assess understanding within the room\n\n\n* **Debrief Topic:** Formative Assessment\n\n\n**Objectives:**\n* Participants have reflected on ways to use formative assessment throughout the lesson to gauge the level of understanding within the room\n* Participants are comfortable with the basics of game lab\n* Participants have experimented with the grid in Game Lab\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "overview": "**Purpose:**\n\n**Essential Practice:** Teachers formatively assess student understanding throughout the lesson\n\n**Lesson Decisions:**\n  * Use the videos as check-in points for participants using the discussion questions provided in the teacher notes as sensemaking opportunities.\n  * The teacher uses the assessment opportunities from the lesson plan to influence the probing questions asked while circulating through the room to check for understanding\n  * The teacher asks participants to explain how they think they should score on the mini rubrics in the assessment level\n  * The teacher uses a wrap up to assess understanding within the room\n\n\n**Debrief Topic:** Formative Assessment\n\n\n**Objectives:**\n* Participants have reflected on ways to use formative assessment throughout the lesson to gauge the level of understanding within the room\n* Participants are comfortable with the basics of game lab\n* Participants have experimented with the grid in Game Lab\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "* Prepare projector or other means of showing videos if you wish to watch as a class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How can we communicate to a computer how to draw shapes on the screen?\n\nIn this lesson, you will begin to use Game Lab to position shapes on the screen while working through the concepts of sequencing and debugging. "
       },
       "seeding_key": {
         "lesson.key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day2"
+      }
+    },
+    {
+      "key": "Unit 3 Curriculum Investigation: Shapes & Variables",
+      "name": "Unit 3 Curriculum Investigation: Shapes & Variables",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is a preparation for the next two Model Lessons that participants will engage in: U3L3 Drawing in Game Lab and U3L5 Variables. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants are introduced to Unit 3 - Interactive Animations and Games.\n* Participants gain experience with Game Lab.\n* Participants prepare to engage in Unit 3 - Interactive Animations and Games Model Lessons and TLOs by previewing how to create and modify shapes in Game Lab.\n\n**Suggested Time:** 35 minutes",
+        "student_overview": "**You will:**\n* Get an introduction to Unit 3 - Interactive Animations and Games.\n* Gain experience with Game Lab.\n* Prepare to engage in Unit 3 - Interactive Animations and Games Model Lessons and TLOs by previewing how to create and modify shapes in Game Lab."
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Curriculum Investigation: Shapes & Variables",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csd-summer-2024-day2"
       }
@@ -201,7 +202,7 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n\n* **Essential Practice:** Programming lessons are meant to have active teacher engagement with the teacher circulating to direct students to appropriate resources, guide them through the debugging process, assess understanding and help students determine when to move on and when to do more practice in choice levels.\n\n\n* **Lesson Decisions:**\n  * The teacher instructs participants to complete all choice level bubbles until they feel comfortable enough to move on to the assessment. If they are successful with the assessment (use the mini rubric to check) they can move on to the challenge choice levels.\n  * As participants are working in choice levels, ask to see their work in the assessment level. Ask participants to justify their score on the mini rubric.\n  * The teacher directs participants to the student version of the “Student Guide to Debugging” on page 24 of their Resource Packet and prompts them to use the debugging process when they encounter bugs.\n\n\n* **Debrief Topic:**\n  * Context setting\n  * Exploration\n  * Experimentation\n  * Assessment\n\n\n**Objectives:**\n* Participants understand how programming lessons are structured within the curriculum\n* Participants reinforce their understanding of the debugging process\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "overview": "**Purpose:**\n\n**Essential Practice:** Programming lessons are meant to have active teacher engagement with the teacher circulating to direct students to appropriate resources, guide them through the debugging process, assess understanding and help students determine when to move on and when to do more practice in choice levels.\n\n\n**Lesson Decisions:**\n  * The teacher instructs participants to complete all choice level bubbles until they feel comfortable enough to move on to the assessment. If they are successful with the assessment (use the mini rubric to check) they can move on to the challenge choice levels.\n  * As participants are working in choice levels, ask to see their work in the assessment level. Ask participants to justify their score on the mini rubric.\n  * The teacher directs participants to the student version of the “Student Guide to Debugging” on page 24 of their Resource Packet and prompts them to use the debugging process when they encounter bugs.\n\n\n**Debrief Topic:**\n  * Context setting\n  * Exploration\n  * Experimentation\n  * Assessment\n\n\n**Objectives:**\n* Participants understand how programming lessons are structured within the curriculum\n* Participants reinforce their understanding of the debugging process\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "* Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:**  How can we use variables to store information in our programs?\n\nIn this lesson, you will be introduced to variables - an important concept in programming used to store values for your programs!"
       },
@@ -219,7 +220,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:** Creating a plan for how to teach the lesson during a 30-minute period in the TLO session at the workshop.\n* Pick a Classroom Practice to focus on\n* Write out a run of show\n* Make sure everyone in the teaching group has a role\n* Create additional materials needed (posters, etc)\n\n\n**Objectives:**\n* Prepare to deliver TLO lesson\n\n**Suggested Time:** 70 minutes",
+        "overview": "**Purpose:** Creating a plan for how to teach the lesson during a 30-minute period in the TLO session at the workshop.\n* Pick a Classroom Practice to focus on\n* Write out a run of show\n* Make sure everyone in the teaching group has a role\n* Create additional materials needed (posters, etc)\n\n\n**Objectives:**\n* Prepare to deliver TLO lesson\n\n**Suggested Time:** 65 minutes",
         "student_overview": "**You will:**\n* Prepare to deliver your TLO lesson"
       },
       "seeding_key": {
@@ -289,18 +290,6 @@
       }
     },
     {
-      "key": "a101994b-8cd6-4e40-a7f3-83a83986e4cb",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a101994b-8cd6-4e40-a7f3-83a83986e4cb",
-        "lesson.key": "Unit 3 Curriculum Investigation: Shapes & Variables",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "virtual-pl-csd-summer-2024-day2"
-      }
-    },
-    {
       "key": "bd224ad9-ccb7-4ef4-b3a5-ec3d1acd6922",
       "position": 1,
       "properties": {
@@ -338,6 +327,18 @@
       "seeding_key": {
         "lesson_activity.key": "2a979583-123e-44f8-8f2b-0d17f3e594d9",
         "lesson.key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-2024-day2"
+      }
+    },
+    {
+      "key": "a101994b-8cd6-4e40-a7f3-83a83986e4cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a101994b-8cd6-4e40-a7f3-83a83986e4cb",
+        "lesson.key": "Unit 3 Curriculum Investigation: Shapes & Variables",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csd-summer-2024-day2"
       }
@@ -478,16 +479,6 @@
       "seeding_key": {
         "activity_section.key": "f040d1ba-e126-402b-bcb3-d1e853fb4656",
         "lesson_activity.key": "772c27bc-766c-4b3b-aec7-3f45656f2637"
-      }
-    },
-    {
-      "key": "6b910899-a397-4f8d-ba87-a7c40caa260f",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "6b910899-a397-4f8d-ba87-a7c40caa260f",
-        "lesson_activity.key": "a101994b-8cd6-4e40-a7f3-83a83986e4cb"
       }
     },
     {
@@ -737,6 +728,16 @@
       "seeding_key": {
         "activity_section.key": "b46c6bbe-b3d0-42ae-9c7d-94f1513020a2",
         "lesson_activity.key": "2a979583-123e-44f8-8f2b-0d17f3e594d9"
+      }
+    },
+    {
+      "key": "6b910899-a397-4f8d-ba87-a7c40caa260f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6b910899-a397-4f8d-ba87-a7c40caa260f",
+        "lesson_activity.key": "a101994b-8cd6-4e40-a7f3-83a83986e4cb"
       }
     },
     {
@@ -2254,23 +2255,23 @@
   ],
   "resources": [
     {
-      "name": "2023 Virtual CSD Summer Workshop - Day 2 Agenda",
-      "url": "https://docs.google.com/document/d/11qQySP2NJJ_0mXimjLB7TBt7llAeZIDLbzAF5StpTFY/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_2_agenda",
+      "name": "CSD Virtual Summer Workshop Day 2 Agenda",
+      "url": "https://docs.google.com/document/d/1MYUNRCphP03kX0kZTtV3dhnteu9nH246kMzgxGd_ZiY/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_2_agenda",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_2_agenda"
+        "resource.key": "csd_virtual_summer_workshop_day_2_agenda"
       }
     },
     {
-      "name": "2023 Virtual CSD Summer Workshop - Day 2 Slides",
-      "url": "https://docs.google.com/presentation/d/18sTUAQETzm0yhBpmKTvJm2PXvMYSV2faoSgAYPNYZeI/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_2_slides",
+      "name": "CSD Virtual Summer Workshop Day 2 Slides",
+      "url": "https://docs.google.com/presentation/d/1m8ugew7U2ojJdcWjztTc8uuWS0-OiuEXr5pJDXqHZCQ/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_2_slides",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_2_slides"
+        "resource.key": "csd_virtual_summer_workshop_day_2_slides"
       }
     },
     {
@@ -2426,13 +2427,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_2_agenda",
+        "resource.key": "csd_virtual_summer_workshop_day_2_agenda",
         "script.name": "virtual-pl-csd-summer-2024-day2"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_2_slides",
+        "resource.key": "csd_virtual_summer_workshop_day_2_slides",
         "script.name": "virtual-pl-csd-summer-2024-day2"
       }
     }
