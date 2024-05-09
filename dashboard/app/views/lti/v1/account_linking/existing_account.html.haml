@@ -13,7 +13,7 @@
           - if @user.errors[:email].present?
             %p.error= @user.errors[:email]&.first
         .span4
-          = f.email_field :email, maxlength: 255
+          = f.email_field :email, maxlength: 255, required: true
 
       / Password
       .row
