@@ -23,7 +23,7 @@ class OpenaiChatController < ApplicationController
     # If the content is inappropriate, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
-    system_prompt = get_system_prompt
+    system_prompt = read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
     messages = prepend_system_prompt(system_prompt, params[:levelInstructions], params[:messages])
 
     if validated_level?
@@ -59,13 +59,6 @@ class OpenaiChatController < ApplicationController
     # Prepend the system prompt message to the messages array
     messages.unshift(system_prompt_message)
     messages
-  end
-
-  def get_system_prompt
-    # TODO: Determine appropriate level of cache freshness
-    Rails.cache.fetch("system_prompt", expires_in: 12.hours) do
-      read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
-    end
   end
 
   private def read_file_from_s3(key_path)
