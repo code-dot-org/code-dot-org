@@ -2,7 +2,7 @@ module ScriptLevelsHelper
   def script_level_solved_response(response, script_level)
     puts "script_level_solved_response - response #{response}"
     next_user_redirect = script_level.next_level_or_redirect_path_for_user(current_user, @lesson)
-
+    puts "next_user_redirect #{next_user_redirect}"
     if script_level.has_another_level_to_go_to?
       if script_level == script_level.lesson.last_progression_script_level
         response[:lesson_changing] = {previous: {name: script_level.name, position: script_level.lesson.absolute_position}}
@@ -37,7 +37,7 @@ module ScriptLevelsHelper
       end
     end
     puts "here's where redirect is assigned"
-    puts "response[:redirect] #{response[:redirect]}"
+    puts "response[:redirect] #{response[:redirect]} #{next_user_redirect}"
     response[:redirect] ||= next_user_redirect
   end
 

@@ -24,7 +24,7 @@ class ActivitiesController < ApplicationController
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
-    solved = (params[:result] == 'true')
+    solved = params[:result] || params[:result] == 'true'
     puts "solved = #{solved}"
     script_name = ''
     puts "params = #{params}"

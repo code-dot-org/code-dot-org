@@ -380,7 +380,7 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
     const data = {
       app: appType,
       level: levelId,
-      result: 'true',
+      result: true,
       testResult: idealPassResult,
     };
 
