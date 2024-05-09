@@ -3,7 +3,7 @@ import {
   rateLimit,
   RATE_LIMIT,
   RATE_LIMIT_INTERVAL_MS,
-} from '../../../src/storage/datablockStorage';
+} from '../../../src/storage/rateLimit';
 
 describe('DatablockStorage', () => {
   describe('rate limiting', () => {
