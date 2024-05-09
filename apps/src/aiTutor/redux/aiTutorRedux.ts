@@ -21,6 +21,7 @@ export interface AITutorState {
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   chatMessageError: boolean;
+  isChatOpen: boolean;
 }
 
 export interface InstructionsState {
@@ -42,6 +43,7 @@ const initialState: AITutorState = {
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   chatMessageError: false,
+  isChatOpen: false,
 };
 
 const formatQuestionForAITutor = (chatContext: ChatContext) => {
@@ -158,6 +160,9 @@ const aiTutorSlice = createSlice({
         state.chatMessages[index] = _.merge({}, lastMessage, action.payload);
       }
     },
+    setIsChatOpen: (state, action: PayloadAction<boolean>) => {
+      state.isChatOpen = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(askAITutor.fulfilled, state => {
@@ -182,4 +187,5 @@ export const {
   clearChatMessages,
   setIsWaitingForChatResponse,
   updateLastChatMessage,
+  setIsChatOpen,
 } = aiTutorSlice.actions;

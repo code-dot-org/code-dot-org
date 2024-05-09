@@ -1,6 +1,6 @@
+require 'test_helper'
 require 'webmock/minitest'
 WebMock.disable_net_connect!(allow_localhost: true)
-require 'test_helper'
 
 class ProgrammingExpressionsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers

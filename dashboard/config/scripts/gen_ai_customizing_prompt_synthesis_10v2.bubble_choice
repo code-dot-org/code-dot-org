@@ -1,0 +1,15 @@
+name 'gen-ai-customizing-prompt-synthesis-10V2'
+editor_experiment ''
+display_name 'Bubble Choice: All the Choices'
+description 'These are the same levels from an earlier lesson. Using what you\'ve learned, revise one of these levels or start a new one. You can even make your own chatbot using the skills you\'ve learned'
+
+sublevels
+level 'gen-ai-customizing-prompt-synthesis-L10A'
+level 'gen-ai-customizing-prompt-synthesis-L10B'
+level 'gen-ai-customizing-prompt-synthesis-L10C'
+level 'gen-ai-customizing-prompt-synthesis-L10D'
+level 'gen-ai-customizing-prompt-synthesis-L10E'
+
+markdown <<MARKDOWN
+
+MARKDOWN

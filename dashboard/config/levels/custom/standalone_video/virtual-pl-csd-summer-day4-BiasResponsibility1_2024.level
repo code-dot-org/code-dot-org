@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-03-27T21:51:08.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28814,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "## While you watch\r\n\r\n#### Consider the following question while you watch this video:\r\n\r\n#### **Which of your own identity markers are you most aware of when you are teaching in your computer science classroom? Why?**\r\n___\r\n\r\n<img src=\"https://images.code.org/ed1c067606ddc55ebe59bcb9af138209-image-1684268171621.png\" alt=\"A clipboard with paper on it and a magnifying glass next to it. This icon is used to signal a resource for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### You may want to refer to the list of identity markers on page 3 of your Activity Packet while you watch to help you.\r\n<br>"
+    "long_instructions": "## While You Watch...\r\n\r\n#### Consider the following question while you watch this video:\r\n\r\n#### **Which of your own identity markers are you most aware of when you are teaching in your computer science classroom? Why?**\r\n___\r\n\r\n<img src=\"https://images.code.org/ed1c067606ddc55ebe59bcb9af138209-image-1684268171621.png\" alt=\"A clipboard with paper on it and a magnifying glass next to it. This icon is used to signal a resource for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### You may want to refer to the list of identity markers on page 3 of your Activity Packet while you watch to help you.\r\n<br>"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-27T21:51:08.727+00:00\",\"changed\":[\"cloned from \\\"virtual-pl-csd-summer-day4-BiasResponsibility1\\\"\"],\"cloned_from\":\"virtual-pl-csd-summer-day4-BiasResponsibility1\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-27T21:51:08.727+00:00\",\"changed\":[\"cloned from \\\"virtual-pl-csd-summer-day4-BiasResponsibility1\\\"\"],\"cloned_from\":\"virtual-pl-csd-summer-day4-BiasResponsibility1\"},{\"changed_at\":\"2024-05-05 01:00:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

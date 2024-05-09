@@ -77,8 +77,9 @@ class SectionActionDropdown extends Component {
   /**
    * Returns the URL to the correct section to be edited
    */
-  editRedirectUrl = sectionId => {
-    const editSectionUrl = '/sections/' + sectionId + '/edit';
+  editRedirectUrl = (sectionId, isPl) => {
+    let editSectionUrl = '/sections/' + sectionId + '/edit';
+    editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
     return editSectionUrl;
   };
 
@@ -114,7 +115,10 @@ class SectionActionDropdown extends Component {
       <span>
         <QuickActionsCell type={'header'}>
           <PopUpMenu.Item
-            href={this.editRedirectUrl(sectionData.id)}
+            href={this.editRedirectUrl(
+              sectionData.id,
+              sectionData.grades?.includes('pl')
+            )}
             className="edit-section-details-link"
           >
             {i18n.editSectionDetails()}

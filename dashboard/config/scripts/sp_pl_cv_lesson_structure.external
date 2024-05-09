@@ -7,26 +7,47 @@ markdown <<MARKDOWN
 
 ## Role of the teacher
 
-#### The lessons at the start of the unit are designed to help students build foundational knowledge about how to leverage generative AI to ethically and productively help them with coding. All lessons within the Coding with AI unit are intended to be **facilitated by a teacher**. These lessons are **not designed as self-paced experiences for students** to work through at their own pace.
+#### The lessons at the start of the unit are designed to help students build foundational knowledge about how to leverage generative AI to ethically and productively help them with coding. All lessons within the Computer Vision unit are intended to be **facilitated by a teacher**. These lessons are **not designed as self-paced experiences for students** to work through at their own pace.
 
 ---
+## Computer Vision lessons
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Table</title>
+</head>
+<body>
+      <table border="1" style="font-size: 16pt; width: 100%; table-layout: fixed;">
+        <tr>
+        <tr>
+            <th>Empathy</th>
+            <th>Defining</th>
+            <th>Ideating</th>
+            <th>Prototyping</th>
+            <th>Testing</th>
+        </tr>
+        <tr >
+            <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 2:</b></a> <br>Empathizing <br> with Users<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 3:</b></a> <br>Gathering Data</td>
+            
+           <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 4:</b></a> <br>Data Visualization<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 5:</b></a> <br>User Stories and<br>Problem Statments</td>
+            
+           <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 6:</b></a> <br>Pixels and QR Codes<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 7:</b></a> <br>Edge Detection <br><br><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 8:</b></a> <br>Data Sets and Models<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 9:</b></a> <br>Data Training and Bias</td>
+            
+            <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 10:</b></a> <br>Training a Model<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 11:</b></a> <br>Impacts of <br>Computer Vision <br><br>(End of Unit Project) <br><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 12:</b></a> <br>Prototype Development <br> Part 1 <br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 13:</b></a> <br>Prototype Development <br> Part 2</td>
+            
+            <td style="font-size: 12pt; vertical-align: top;"><a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 14:</b></a> <br>User Feedback <br> with Users<br><br> <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 15:</b></a> <br>Implementing <br> Feedback</td>
+        </tr>
+    </table>
+</body>
 
 <img src="https://images.code.org/94c91bb3b11d912f8b4c38f34b241e09-image-1712760508654.png" alt="AI bot with thought bubbles" width="250px" style="border-radius:10px; float:right; margin: 80px 50px 0px 40px;">
 
 
-## Coding with AI Lessons
 
-#### The Coding with AI Unit is made up of 5 lessons. You can choose to teach all 5 lessons, or just select the ones that fit in your schedule. 
 
-- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 1:</b></a> Introduction to Coding with AI
 
-- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/2" target="blank" rel="noopener noreferrer"><b>Lesson 2:</b></a> AI as your Ideation Partner 
 
-- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/3" target="blank" rel="noopener noreferrer"><b>Lesson 3:</b></a> Navigating Algorithms with the Help of AI
 
-- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/4" target="blank" rel="noopener noreferrer"><b>Lesson 4:</b></a> AI as your Debugging Partner
-
-- #### <a href="https://studio.code.org/s/coding-with-ai/lessons/5" target="blank" rel="noopener noreferrer"><b>Lesson 5:</b></a> Beyond the Finished Code
 
 ---
 ## Lesson Structure 

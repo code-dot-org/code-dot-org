@@ -18,8 +18,6 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import {useSelector} from 'react-redux';
-import {LabState} from '../lab2Redux';
 import ProgressContainer from '../progress/ProgressContainer';
 import {AppName} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
@@ -27,6 +25,8 @@ import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
 import PanelsLabView from '@cdo/apps/panels/PanelsLabView';
 import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
 import Loading from './Loading';
+import ExtraLinks from './ExtraLinks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -104,9 +104,10 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
 };
 
 const LabViewsRenderer: React.FunctionComponent = () => {
-  const currentAppName = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.appName
+  const currentAppName = useAppSelector(
+    state => state.lab.levelProperties?.appName
   );
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
 
   const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
 
@@ -160,12 +161,14 @@ const LabViewsRenderer: React.FunctionComponent = () => {
                 visible={currentAppName === appName}
               >
                 {renderApp(properties)}
+                {levelId && <ExtraLinks levelId={levelId} />}
               </VisibilityContainer>
             )}
 
             {!properties.backgroundMode && currentAppName === appName && (
               <VisibilityContainer appName={appName} visible={true}>
                 {renderApp(properties)}
+                {levelId && <ExtraLinks levelId={levelId} />}
               </VisibilityContainer>
             )}
           </ProgressContainer>
