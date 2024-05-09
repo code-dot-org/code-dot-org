@@ -37,6 +37,7 @@ module AnalyticsConstants
     TEACHER_LOGIN_EVENT = 'Teacher Login'.freeze,
     VIDEO_LIBRARY_PAGE_VISIT_EVENT = 'Video Library Page Visited'.freeze,
     INTL_PL_PAGE_VISIT_EVENT = 'International Professional Learning Page Visited'.freeze,
-    INTL_PL_PARTNERS_PAGE_VISIT_EVENT = 'International Professional Learning Partners Page Visited'.freeze
+    INTL_PL_PARTNERS_PAGE_VISIT_EVENT = 'International Professional Learning Partners Page Visited'.freeze,
+    MUSIC_PAGE_VISITED_EVENT = 'Music Lab Marketing Page Visited'.freeze
   ].freeze
 end
