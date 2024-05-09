@@ -232,7 +232,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # ensure RateLimit metric is logged
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(RateLimit: 1),
         includes_dimensions(:RateLimit, Environment: CDO.rack_env)
@@ -241,7 +241,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # ensure firehose event is logged
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
+      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
         data[:event] == 'rate-limit' &&
         JSON.parse(data[:data_json])['agent'].nil? &&
         stream == :analysis
@@ -282,7 +282,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # ensure TimeoutError metric is logged
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(TimeoutError: 1),
         includes_dimensions(:TimeoutError, Environment: CDO.rack_env)
@@ -291,7 +291,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # ensure firehose event is logged
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
+      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
         data[:event] == 'timeout-error' &&
         JSON.parse(data[:data_json])['agent'].nil? &&
         stream == :analysis
@@ -335,7 +335,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # ensure ServiceUnavailable metric is logged
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(ServiceUnavailable: 1),
         includes_dimensions(:ServiceUnavailable, Environment: CDO.rack_env, Agent: 'openai')
@@ -344,7 +344,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # ensure firehose event is logged
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
+      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
         data[:event] == 'service-unavailable' &&
         JSON.parse(data[:data_json])['agent'] == 'openai' &&
         stream == :analysis
@@ -388,7 +388,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # ensure GatewayTimeout metric is logged
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(GatewayTimeout: 1),
         includes_dimensions(:GatewayTimeout, Environment: CDO.rack_env, Agent: 'openai')
@@ -397,7 +397,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # ensure firehose event is logged
     FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == EvaluateRubricJob::AI_RUBRICS_FIREHOSE_STUDY &&
+      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
         data[:event] == 'gateway-timeout' &&
         JSON.parse(data[:data_json])['agent'] == 'openai' &&
         stream == :analysis
@@ -467,7 +467,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # Expect metrics to be logged for the AI evaluation
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(TotalTokens: 123),
         includes_dimensions(:TotalTokens, Environment: CDO.rack_env, Agent: 'openai')
@@ -475,7 +475,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     )
 
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(CompletionTokens: 100),
         includes_dimensions(:CompletionTokens, Environment: CDO.rack_env, Agent: 'openai')
@@ -483,7 +483,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     )
 
     Cdo::Metrics.expects(:push).with(
-      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
       all_of(
         includes_metrics(PromptTokens: 23),
         includes_dimensions(:PromptTokens, Environment: CDO.rack_env, Agent: 'openai')
