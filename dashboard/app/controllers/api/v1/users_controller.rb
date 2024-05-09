@@ -41,6 +41,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         ai_tutor_access_denied: !!current_user.ai_tutor_access_denied,
         has_seen_progress_table_v2_invitation: current_user.has_seen_progress_table_v2_invitation?,
         date_progress_table_invitation_last_delayed: current_user.date_progress_table_invitation_last_delayed,
+        us_state: current_user.us_state,
       }
     else
       render json: {
