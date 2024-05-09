@@ -43,24 +43,19 @@ const initialState: AITutorState = {
   chatMessageError: false,
 };
 
-const enhanceInputForAITutor = (
-  levelInstructions: string,
-  chatContext: ChatContext
-) => {
-  const separator = '\n\n---\n\n';
-  // TODO: Remove instructions for code compilation errors?
-  const instructionsFormatted = `'Here are my instructions for this level:\n${levelInstructions}\n\n`;
+const enhanceInputForAITutor = (chatContext: ChatContext) => {
   if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
     // For general questions, only prepend level instructions
-    return `${instructionsFormatted}${separator}${chatContext.studentInput}`;
+    return `${chatContext.studentInput}`;
   }
 
-  const codePrefix = 'Here is the student’s code:\n\n```';
+  const separator = '\n\n---\n\n';
+  const codePrefix = 'Here is my code:\n\n```';
   const codePostfix = '```\n\n';
   const studentCodeFormatted = `${codePrefix}${chatContext.studentCode}${codePostfix}`;
 
   // For compilation and validation, prepend level instructions and student code
-  return `${instructionsFormatted}${chatContext.studentInput}${separator}${studentCodeFormatted}`;
+  return `${chatContext.studentInput}${separator}${studentCodeFormatted}`;
 };
 
 // THUNKS
@@ -86,12 +81,13 @@ export const askAITutor = createAsyncThunk(
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
-    const input = enhanceInputForAITutor(levelInstructions, chatContext);
+    const input = enhanceInputForAITutor(chatContext);
     const chatApiResponse = await getChatCompletionMessage(
       input,
       storedMessages,
       levelContext.levelId,
-      chatContext.actionType
+      chatContext.actionType,
+      levelInstructions
     );
     thunkAPI.dispatch(
       updateLastChatMessage({

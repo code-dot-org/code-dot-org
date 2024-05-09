@@ -24,16 +24,13 @@ class OpenaiChatController < ApplicationController
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
     system_prompt = get_system_prompt
-    messages = prepend_system_prompt(system_prompt, params[:messages])
+    messages = prepend_system_prompt(system_prompt, params[:levelInstructions], params[:messages])
 
     if validated_level?
       level_id = params[:levelId]
       test_file_contents = get_validated_level_test_file_contents(level_id)
-      messages = params[:messages]
       messages.first["content"] = messages.first["content"] + " The contents of the test file are: #{test_file_contents}"
       messages.second["content"] = "The student's code is: " + messages.second["content"]
-    else
-      messages = params[:messages]
     end
 
     response = OpenaiChatHelper.request_chat_completion(messages)
@@ -50,13 +47,17 @@ class OpenaiChatController < ApplicationController
   end
 
   # The system prompt is stored server-side so we need to prepend it to the student's messages.
-  private def prepend_system_prompt(system_prompt, messages)
+  private def prepend_system_prompt(system_prompt, level_instructions, messages)
+    unless level_instructions.empty?
+      system_prompt += "\n Here are the student instructions for this level: " + level_instructions
+    end
     system_prompt_message = {
       "content" => system_prompt,
       "role" => "system"
     }
+
+    # Prepend the system prompt message to the messages array
     messages.unshift(system_prompt_message)
-    puts "messages after: #{messages}"
     messages
   end
 
@@ -70,11 +71,13 @@ class OpenaiChatController < ApplicationController
   private def read_file_from_s3(key_path)
     if [:development, :test].include?(rack_env)
       local_path = File.join("local-aws", S3_AI_BUCKET, key_path)
+      puts "Reading AI prompt from local file: #{local_path}"
       if File.exist?(local_path)
         puts "Note: Reading AI prompt from local file: #{key_path}"
         return File.read(local_path)
       end
     end
+    puts "Reading AI prompt from S3: #{key_path}"
     s3_client.get_object(bucket: S3_AI_BUCKET, key: key_path).body.read
   end
 

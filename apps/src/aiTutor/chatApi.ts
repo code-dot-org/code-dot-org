@@ -40,11 +40,17 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
-  tutorType?: AITutorTypesValue
+  tutorType?: AITutorTypesValue,
+  levelInstructions?: string
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = levelId
-    ? {levelId: levelId, messages: messagesToSend, type: tutorType}
-    : {messages: messagesToSend, type: tutorType};
+    ? {
+        levelId: levelId,
+        messages: messagesToSend,
+        type: tutorType,
+        levelInstructions,
+      }
+    : {messages: messagesToSend, type: tutorType, levelInstructions};
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -77,7 +83,8 @@ export async function getChatCompletionMessage(
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
   levelId?: number,
-  tutorType?: AITutorTypesValue
+  tutorType?: AITutorTypesValue,
+  levelInstructions?: string
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     ...formatForChatCompletion(chatMessages),
@@ -88,7 +95,8 @@ export async function getChatCompletionMessage(
     response = await postOpenaiChatCompletion(
       messagesToSend,
       levelId,
-      tutorType
+      tutorType,
+      levelInstructions
     );
   } catch (error) {
     MetricsReporter.logError({
