@@ -1,6 +1,6 @@
 name 'game_variables_intro_choices_2024'
-display_name 'Choose a game to play'
-description 'Try out these simple games! Watch for similarities in how the games work.
+display_name 'Games with variables as score'
+description '**Try out one of these simple games!** How does the scoring work? When you are ready to code your own scoreboard click Finish!
 
 The spicy peppers indicate how difficult the game is to win. 
 

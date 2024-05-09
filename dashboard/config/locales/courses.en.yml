@@ -806,7 +806,13 @@ en:
           description_short: ''
           description_student: |-
             ## Welcome!
-            Welcome to Code.org's free self-paced online course for educators to get started with AI!
+            Welcome to Code.org's free self-paced online course for educators to get started with AI.
+
+            This is a free, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
+
+            In this five-part series we'll demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes.
+
+            Join us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI.
 
             ### Find the learning that works for you
             * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
@@ -814,7 +820,13 @@ en:
             * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**
           description_teacher: |-
             ## Welcome!
-            Welcome to Code.org's free self-paced online course for educators to get started with AI!
+            Welcome to Code.org's free self-paced online course for educators to get started with AI.
+
+            This is a free, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
+
+            In this five-part series we'll demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes.
+
+            Join us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI.
 
             ### Find the learning that works for you
             * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
@@ -833,3 +845,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        csa-2024:
+          title: Computer Science A ('24-'25)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+
+            **Did You Know?**
+            * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
+
+            * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'24-'25"

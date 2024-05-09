@@ -24,7 +24,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Show two variables!**\r\n\r\n1.  Add the `show variable health` block to the `when run` program\r\n- Then connect a `set health to 5` block \r\n- You can change the location of the variable with the `location pin`\r\n\r\n- Press `Run` when you're finished",
+    "long_instructions": "**Add a health variable!**\r\n\r\n1.  Add the `show variable health` block to the `when run` program\r\n- Then connect a `set health to 5` block \r\n\r\n\t***Tip:*** *You can change the location of the variable with the `location pin`*\r\n\r\n- Press `Run` when you're finished",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -53,40 +53,17 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:18.088+00:00\",\"changed\":[\"cloned from \\\"game_variables_show_two\\\"\"],\"cloned_from\":\"game_variables_show_two\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:18.088+00:00\",\"changed\":[\"cloned from \\\"game_variables_show_two\\\"\"],\"cloned_from\":\"game_variables_show_two\"},{\"changed_at\":\"2024-05-08 21:29:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:30:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:30:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:45:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:46:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <variables>
-          <variable id="y5GjhN/!~,kNnJ;H{^Ig">score</variable>
-        </variables>
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="16" y="16">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
+            <block type="gamelab_setBackgroundImageAs" movable="false">
               <field name="IMG">"video_game_bg"</field>
-              <next>
-                <block type="gamelab_showVariable">
-                  <field name="VAR" id="y5GjhN/!~,kNnJ;H{^Ig">score</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":140,"y":120}</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="variables_set">
-                      <field name="VAR" id="y5GjhN/!~,kNnJ;H{^Ig">score</field>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <field name="NUM">0</field>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </next>
             </block>
           </next>
         </block>
@@ -1237,7 +1214,7 @@
           <field name="VAR" id="g$@Yzsw3_w!Ncw.ve]S-">health</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="-OyFO}@bmFm.tQyEPF8L">
-              <field name="LOCATION">{"x":280,"y":120}</field>
+              <field name="LOCATION">{"x":200,"y":150}</field>
             </block>
           </value>
         </block>
@@ -1248,9 +1225,6 @@
               <field name="NUM">5</field>
             </block>
           </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="16" y="168">
-          <field name="IMG">"video_game_bg"</field>
         </block>
       </xml>
     </toolbox_blocks>
