@@ -12,9 +12,9 @@ module ActionDispatch
     # and start using a non-customized implementation of redis-based session
     # storage.
     module MigrateCookiesStore
-      # Ultimately loads session data from the database, after first checking
-      # for session data in the cookie and persisting it to the database if we
-      # find any.
+      # Ultimately loads session data from the data store, after first checking
+      # for session data in the cookie and persisting it to the data store if
+      # we find any.
       def load_session(request)
         # migrate_session_data will return the extracted session id if there
         # was one; otherwise, we fetch the session id from the request object.
@@ -24,8 +24,8 @@ module ActionDispatch
       end
 
       # If we already have existing session data in the cookie, this helper
-      # method will clear the cookie, write that session data to the database,
-      # and return the session id it extracted from the cookie.
+      # method will clear the cookie, write that session data to the data
+      # store, and return the session id it extracted from the cookie.
       #
       # If the cookie does not contain any existing session data, do nothing
       # and return nothing.
