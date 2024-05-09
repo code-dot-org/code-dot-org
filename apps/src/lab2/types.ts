@@ -259,4 +259,8 @@ export interface ExtraLinksData {
   can_clone: boolean;
   can_delete: boolean;
   level_name: string;
+  script_level_path_links: {
+    script: string;
+    path: string;
+  }[];
 }
