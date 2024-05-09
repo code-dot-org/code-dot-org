@@ -330,6 +330,12 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  private def confidence_s_to_i(confidence_level)
+    confidence_levels = LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS.keys.map(&:to_s)
+    raise "Unexpected confidence level: #{confidence_level.inspect}" unless confidence_levels.include?(confidence_level)
+    LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[confidence_level.to_sym]
+  end
+
   private def write_ai_evaluations(user, ai_evaluations, rubric, rubric_ai_evaluation, project_version)
     ActiveRecord::Base.transaction do
       # Update the base rubric status
@@ -379,11 +385,5 @@ class EvaluateRubricJob < ApplicationJob
     else
       raise "Unexpected understanding: #{understanding}"
     end
-  end
-
-  private def confidence_s_to_i(confidence_level)
-    confidence_levels = LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS.keys.map(&:to_s)
-    raise "Unexpected confidence level: #{confidence_level.inspect}" unless confidence_levels.include?(confidence_level)
-    LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[confidence_level.to_sym]
   end
 end
