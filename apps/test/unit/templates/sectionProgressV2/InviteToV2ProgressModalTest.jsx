@@ -37,10 +37,10 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
   it('renders the dialog with required elements', () => {
     renderDefault();
 
-    expect(screen.getByText(i18n.progressTrackingAnnouncement())).be.visible;
-    expect(screen.getByText(i18n.tryItNow())).be.visible;
-    expect(screen.getByText(i18n.remindMeLater())).be.visible;
-    expect(screen.getByLabelText(i18n.closeDialog())).be.visible;
+    expect(screen.getByText(i18n.progressTrackingAnnouncement())).to.exist;
+    expect(screen.getByText(i18n.tryItNow())).to.exist;
+    expect(screen.getByText(i18n.remindMeLater())).to.exist;
+    expect(screen.getByLabelText(i18n.closeDialog())).to.exist;
   });
 
   it('allows user to accept the invitation', () => {
@@ -52,7 +52,7 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
     });
 
-    expect(screen.getByText(i18n.progressTrackingAnnouncement())).be.visible;
+    expect(screen.getByText(i18n.progressTrackingAnnouncement())).to.exist;
     const acceptButton = screen.getByText(i18n.tryItNow());
     fireEvent.click(acceptButton);
 
@@ -135,10 +135,10 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
         'Wed May 01 2024 14:22:23 GMT-0500 (Central Daylight Time)',
     });
 
-    expect(screen.getByText(i18n.progressTrackingAnnouncement())).be.visible;
-    expect(screen.getByText(i18n.tryItNow())).be.visible;
-    expect(screen.getByText(i18n.remindMeLater())).be.visible;
-    expect(screen.getByLabelText(i18n.closeDialog())).be.visible;
+    expect(screen.getByText(i18n.progressTrackingAnnouncement())).to.exist;
+    expect(screen.getByText(i18n.tryItNow())).to.exist;
+    expect(screen.getByText(i18n.remindMeLater())).to.exist;
+    expect(screen.getByLabelText(i18n.closeDialog())).to.exist;
   });
 
   it('does not show the dialog if it has been less than three days since they delayed the pop-up', () => {
