@@ -104,6 +104,9 @@ function LandingPage({
     workshopsAsParticipant?.length === 0 &&
     plCoursesStarted?.length === 0;
 
+  const joinedPlSectionsStyling =
+    joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
+
   // Load PL section info into redux
   const dispatch = useDispatch();
   useEffect(() => {
@@ -312,12 +315,14 @@ function LandingPage({
         {showGettingStartedBanner && RenderGettingStartedBanner()}
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
-        <JoinSectionArea
-          initialJoinedStudentSections={joinedStudentSections}
-          initialJoinedPlSections={joinedPlSections}
-          isTeacher={true}
-          isPlSections={true}
-        />
+        <div className={joinedPlSectionsStyling}>
+          <JoinSectionArea
+            initialJoinedStudentSections={joinedStudentSections}
+            initialJoinedPlSections={joinedPlSections}
+            isTeacher={true}
+            isPlSections={true}
+          />
+        </div>
         <EnrolledWorkshops />
         <section>
           <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
