@@ -353,6 +353,7 @@ export default class MusicPlayer {
           effects: soundEvent.effects,
           originalBpm: soundData.bpm || DEFAULT_BPM,
           pitchShift: this.calculatePitchShift(soundData),
+          preview: soundData.type === 'preview',
         },
       ];
     } else if (event.type === 'pattern') {
