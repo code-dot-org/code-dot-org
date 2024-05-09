@@ -268,7 +268,7 @@ class DatablockStorageTable < ApplicationRecord
 
     # First rename the column in all the JSON records
     records.each do |record|
-      record.record_json[new_column_name] = record.record_json.delete(old_column_name)
+      record.record_json[new_column_name] = record.record_json.delete(old_column_name) if record.record_json.key?(old_column_name)
     end
 
     # Second rename the column in the table definition
