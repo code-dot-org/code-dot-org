@@ -29,13 +29,13 @@ export default {
 } as Meta;
 
 const spy = sinon.spy();
-const useReducerStub = sinon.stub(React, 'useReducer');
 export const Default = () => {
   const state = {
     parentalPermissionRequest: null,
   };
 
-  useReducerStub.returns([state, spy]);
+  React.useReducer.restore && React.useReducer.restore();
+  sinon.stub(React, 'useReducer').returns([state, spy]);
 
   return <ParentalPermissionBanner lockoutDate={new Date().toISOString()} />;
 };

@@ -29,9 +29,10 @@ export default {
 } as Meta;
 
 const spy = sinon.spy();
-const useReducerStub = sinon.stub(React, 'useReducer');
 const Template = (state: object = {}) => {
-  useReducerStub.returns([state, spy]);
+  React.useReducer.restore && React.useReducer.restore();
+
+  sinon.stub(React, 'useReducer').returns([state, spy]);
 
   return <ParentalPermissionModal lockoutDate={new Date().toISOString()} />;
 };
