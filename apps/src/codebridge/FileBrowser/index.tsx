@@ -100,9 +100,7 @@ const InnerFileBrowser = React.memo(
             );
           })}
         {Object.values(files)
-          .filter(
-            f => f.folderId === parentId && (f.visible !== false || isStartMode)
-          )
+          .filter(f => f.folderId === parentId && (!f.hidden || isStartMode))
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
             <li key={f.id}>
@@ -111,7 +109,7 @@ const InnerFileBrowser = React.memo(
                   {isStartMode && (
                     <i
                       className={`fa-solid ${
-                        f.visible === false ? 'fa-eye-slash' : 'fa-eye'
+                        f.hidden ? 'fa-eye-slash' : 'fa-eye'
                       }`}
                     />
                   )}
@@ -131,7 +129,7 @@ const InnerFileBrowser = React.memo(
                     <span onClick={() => toggleFileVisibility(f.id)}>
                       <i
                         className={`fa-solid ${
-                          f.visible === false ? 'fa-eye' : 'fa-eye-slash'
+                          f.hidden ? 'fa-eye' : 'fa-eye-slash'
                         }`}
                       />
                     </span>
@@ -290,10 +288,8 @@ export const FileBrowser = React.memo(() => {
     useMemo(
       () => fileId => {
         const file = project.files[fileId];
-        // file.visible could be undefined.
-        // We only want to show the file if it's currently explicitly hidden.
-        const visibility = file.visible === false;
-        setFileVisibility(fileId, visibility);
+        const hide = !file.hidden;
+        setFileVisibility(fileId, hide);
       },
       [setFileVisibility, project.files]
     );

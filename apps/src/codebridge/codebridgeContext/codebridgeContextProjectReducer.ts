@@ -79,7 +79,7 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
     }
 
     case PROJECT_REDUCER_ACTIONS.SET_FILE_VISIBILITY: {
-      const {fileId, visibility} = <DefaultFilePayload & {visibility: boolean}>(
+      const {fileId, hide} = <DefaultFilePayload & {hide: boolean}>(
         action.payload
       );
 
@@ -87,7 +87,7 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
         ...project,
         files: {
           ...project.files,
-          [fileId]: {...project.files[fileId], visible: visibility},
+          [fileId]: {...project.files[fileId], hidden: hide},
         },
       };
     }

@@ -80,7 +80,7 @@ export interface ProjectFile {
   open?: boolean;
   active?: boolean;
   folderId: string;
-  visible?: boolean;
+  hidden?: boolean;
 }
 
 export interface ProjectFolder {

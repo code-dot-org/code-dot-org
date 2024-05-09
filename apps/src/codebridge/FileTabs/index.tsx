@@ -20,11 +20,10 @@ export const FileTabs = React.memo(() => {
   return (
     <div className="file-tabs">
       {files
-        .filter(f => f.visible !== false || isStartMode)
+        .filter(f => !f.hidden || isStartMode)
         .map(f => {
-          const isHidden = f.visible === false;
           const tabIconClassName =
-            'fa-solid ' + (isHidden ? 'fa-eye-slash' : 'fa-file');
+            'fa-solid ' + (f.hidden ? 'fa-eye-slash' : 'fa-file');
           return (
             <div
               className={`file-tab ${

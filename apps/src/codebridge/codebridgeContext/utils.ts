@@ -131,10 +131,10 @@ export const useProjectUtilities = (
         });
       }),
 
-      setFileVisibility: <SetFileVisibilityFunction>((fileId, visibility) => {
+      setFileVisibility: <SetFileVisibilityFunction>((fileId, hide) => {
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.SET_FILE_VISIBILITY,
-          payload: {fileId, visibility},
+          payload: {fileId, hide},
         });
       }),
 
