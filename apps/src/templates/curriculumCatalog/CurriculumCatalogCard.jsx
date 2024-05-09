@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
+import {BodyThreeText, Heading4} from '@cdo/apps/componentLibrary/typography';
 import {
   Button,
   buttonColors,
@@ -39,7 +40,6 @@ import {
   defaultImageSrc,
 } from './curriculumCatalogConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
-
 import style from './curriculum_catalog_card.module.scss';
 
 const CurriculumCatalogCard = ({
@@ -197,6 +197,7 @@ const CustomizableCurriculumCatalogCard = ({
   availableResources,
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
+  wide,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -251,6 +252,103 @@ const CustomizableCurriculumCatalogCard = ({
       );
     }
   };
+
+  if (wide) {
+    console.log(style.wideCard);
+    const subjectsAndTopicsTagList = [];
+    if (subjectsAndTopics.length >= 1) {
+      const firstTag = subjectsAndTopics[0];
+      subjectsAndTopicsTagList.push({
+        label: firstTag,
+        tooltipContent: firstTag,
+        toolTipId: firstTag.replace(/s+/g, '-').toLowerCase(),
+      });
+    }
+    if (subjectsAndTopics.length > 1) {
+      const remainingTags = subjectsAndTopics.slice(1);
+      subjectsAndTopicsTagList.push({
+        label: `+${remainingTags.length}`,
+        tooltipContent: remainingTags.join(', '),
+        toolTipId: 'remaining-labels-tooltip',
+      });
+    }
+    return (
+      <div className={style.wideCard}>
+        <img src={imageSrc} alt={imageAltText} className={style.wideCardImg} />
+        <div className={style.wideCardContentAndButtons}>
+          <div className={style.wideCardContent}>
+            {<CardLabels subjectsAndTopics={subjectsAndTopics} />}
+            <Heading4>{courseDisplayName}</Heading4>
+            <BodyThreeText className={style.wideCardDescription}>
+              {description}
+            </BodyThreeText>
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="user" className="fa-solid" />
+              <p>{gradeRange}</p>
+            </div>
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="clock" className="fa-solid" />
+              <p>{duration}</p>
+            </div>
+          </div>
+          <div
+            className={classNames(
+              style.wideCardButtonsContainer,
+              isEnglish
+                ? style.buttonsContainer_english
+                : style.buttonsContainer_notEnglish
+            )}
+          >
+            <Button
+              color={Button.ButtonColor.neutralDark}
+              type="button"
+              onClick={onQuickViewClick}
+              aria-label={quickViewButtonDescription}
+              text={i18n.quickView()}
+              className={`${style.buttonFlex} ${style.quickViewButton}`}
+            />
+            {isTeacherOrSignedOut && (
+              <>
+                <Button
+                  __useDeprecatedTag
+                  color={Button.ButtonColor.neutralDark}
+                  type="button"
+                  href={pathToCourse}
+                  aria-label={i18n.learnMoreDescription({
+                    course_name: courseDisplayName,
+                  })}
+                  text={i18n.learnMore()}
+                  className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
+                />
+                <Button
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  type="button"
+                  onClick={() => handleClickAssign('top-card')}
+                  aria-label={assignButtonDescription}
+                  text={assignButtonText}
+                  className={style.buttonFlex}
+                />
+              </>
+            )}
+            {!isTeacherOrSignedOut && (
+              <Button
+                __useDeprecatedTag
+                color={Button.ButtonColor.brandSecondaryDefault}
+                type="button"
+                href={pathToCourse}
+                aria-label={i18n.tryCourseNow({
+                  course_name: courseDisplayName,
+                })}
+                text={i18n.tryNow()}
+                className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
+              />
+            )}
+          </div>
+        </div>
+        {isAssignDialogOpen && renderAssignDialog()}
+      </div>
+    );
+  }
 
   return (
     <div
@@ -416,6 +514,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   availableResources: PropTypes.object,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
+
+  wide: PropTypes.bool,
 };
 
 export default connect(
