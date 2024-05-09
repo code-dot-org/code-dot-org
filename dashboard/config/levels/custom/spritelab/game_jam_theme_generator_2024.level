@@ -42,7 +42,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:29:10.747+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme_generator\\\"\"],\"cloned_from\":\"game_jam_theme_generator\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:29:10.747+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme_generator\\\"\"],\"cloned_from\":\"game_jam_theme_generator\"},{\"changed_at\":\"2024-05-08 21:50:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:51:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 21:53:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -54,8 +54,8 @@
           <variable id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</variable>
           <variable id="]Si3({hy[g/eACL0uF(.">bowlClicked</variable>
           <variable id="y.k{y^@L5/J4KC8JOUSO">Die1</variable>
-          <variable id="o%Gf]w6X~I1cV0-KtV+5">Die3</variable>
           <variable id="*bwUIgam]yqliB@J}i=(">Die2</variable>
+          <variable id="o%Gf]w6X~I1cV0-KtV+5">Die3</variable>
           <variable id="fJ=JTldFL5I=dWWsSn}J">rollNoun</variable>
           <variable id="?1eJD=(A_xClmS/E+:BK">rollMechanic</variable>
           <variable id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</variable>
@@ -65,61 +65,67 @@
         </variables>
         <block type="when_run" deletable="false" x="144" y="5">
           <next>
-            <block type="gamelab_printText">
-              <value name="TEXT">
-                <block type="text">
-                  <field name="TEXT">Click on each character to roll the dice that randomly selects the theme for your game!</field>
+            <block type="gamelab_makeNewSpriteAnon">
+              <field name="ANIMATION_NAME">"face_ramen"</field>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <field name="LOCATION">{"x":55,"y":95}</field>
                 </block>
               </value>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"face_ramen"</field>
+                  <field name="ANIMATION_NAME">"face_lettuce"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":55,"y":95}</field>
+                      <field name="LOCATION">{"x":200,"y":170}</field>
                     </block>
                   </value>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"face_lettuce"</field>
+                      <field name="ANIMATION_NAME">"face_burger"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":200,"y":170}</field>
+                          <field name="LOCATION">{"x":340,"y":272}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"face_burger"</field>
+                        <block type="gamelab_createNewSprite">
+                          <field name="NAME" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                          <field name="COSTUME">"dieRed1"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":340,"y":272}</field>
+                              <field name="LOCATION">{"x":110,"y":120}</field>
                             </block>
                           </value>
                           <next>
                             <block type="gamelab_createNewSprite">
-                              <field name="NAME" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                              <field name="NAME" id="*bwUIgam]yqliB@J}i=(">Die2</field>
                               <field name="COSTUME">"dieRed1"</field>
                               <value name="LOCATION">
                                 <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":110,"y":120}</field>
+                                  <field name="LOCATION">{"x":260,"y":197}</field>
                                 </block>
                               </value>
                               <next>
                                 <block type="gamelab_createNewSprite">
-                                  <field name="NAME" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                  <field name="NAME" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
                                   <field name="COSTUME">"dieRed1"</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":260,"y":197}</field>
+                                      <field name="LOCATION">{"x":273,"y":289}</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="gamelab_createNewSprite">
-                                      <field name="NAME" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                      <field name="COSTUME">"dieRed1"</field>
-                                      <value name="LOCATION">
-                                        <block type="gamelab_location_picker">
-                                          <field name="LOCATION">{"x":273,"y":289}</field>
+                                    <block type="gamelab_setProp">
+                                      <field name="PROPERTY">"scale"</field>
+                                      <value name="SPRITE">
+                                        <block type="sprite_variables_get">
+                                          <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                        </block>
+                                      </value>
+                                      <value name="VAL">
+                                        <block type="math_number">
+                                          <field name="NUM">75</field>
                                         </block>
                                       </value>
                                       <next>
@@ -127,7 +133,7 @@
                                           <field name="PROPERTY">"scale"</field>
                                           <value name="SPRITE">
                                             <block type="sprite_variables_get">
-                                              <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
                                             </block>
                                           </value>
                                           <value name="VAL">
@@ -140,7 +146,7 @@
                                               <field name="PROPERTY">"scale"</field>
                                               <value name="SPRITE">
                                                 <block type="sprite_variables_get">
-                                                  <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                                  <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
                                                 </block>
                                               </value>
                                               <value name="VAL">
@@ -149,29 +155,24 @@
                                                 </block>
                                               </value>
                                               <next>
-                                                <block type="gamelab_setProp">
-                                                  <field name="PROPERTY">"scale"</field>
-                                                  <value name="SPRITE">
-                                                    <block type="sprite_variables_get">
-                                                      <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="VAL">
-                                                    <block type="math_number">
-                                                      <field name="NUM">75</field>
+                                                <block type="gamelab_makeNewSpriteAnon">
+                                                  <field name="ANIMATION_NAME">"face_avocado"</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":39,"y":396}</field>
                                                     </block>
                                                   </value>
                                                   <next>
-                                                    <block type="gamelab_makeNewSpriteAnon">
-                                                      <field name="ANIMATION_NAME">"face_avocado"</field>
-                                                      <value name="LOCATION">
-                                                        <block type="gamelab_location_picker">
-                                                          <field name="LOCATION">{"x":39,"y":396}</field>
+                                                    <block type="variables_set">
+                                                      <field name="VAR" id="]Si3({hy[g/eACL0uF(.">bowlClicked</field>
+                                                      <value name="VALUE">
+                                                        <block type="logic_boolean">
+                                                          <field name="BOOL">FALSE</field>
                                                         </block>
                                                       </value>
                                                       <next>
                                                         <block type="variables_set">
-                                                          <field name="VAR" id="]Si3({hy[g/eACL0uF(.">bowlClicked</field>
+                                                          <field name="VAR" id="2l356B?RW,)`H50jHAJ4">cabbageClicked</field>
                                                           <value name="VALUE">
                                                             <block type="logic_boolean">
                                                             <field name="BOOL">FALSE</field>
@@ -179,22 +180,12 @@
                                                           </value>
                                                           <next>
                                                             <block type="variables_set">
-                                                            <field name="VAR" id="2l356B?RW,)`H50jHAJ4">cabbageClicked</field>
-                                                            <value name="VALUE">
-                                                            <block type="logic_boolean">
-                                                            <field name="BOOL">FALSE</field>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="variables_set">
                                                             <field name="VAR" id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</field>
                                                             <value name="VALUE">
                                                             <block type="logic_boolean">
                                                             <field name="BOOL">FALSE</field>
                                                             </block>
                                                             </value>
-                                                            </block>
-                                                            </next>
                                                             </block>
                                                           </next>
                                                         </block>
@@ -337,7 +328,7 @@
                                                   <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                      <field name="LOCATION">{"x":169,"y":245}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -382,7 +373,7 @@
                                                   <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                      <field name="LOCATION">{"x":169,"y":245}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -427,7 +418,7 @@
                                                   <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                      <field name="LOCATION">{"x":169,"y":245}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -472,7 +463,7 @@
                                                   <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                      <field name="LOCATION">{"x":169,"y":245}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -517,7 +508,7 @@
                                                   <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                      <field name="LOCATION">{"x":169,"y":245}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -547,7 +538,7 @@
                                                   <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                      <field name="LOCATION">{"x":169,"y":245}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -776,7 +767,7 @@
                                       </value>
                                       <statement name="DO0">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite1"</field>
+                                          <field name="ANIMATION">"dieRed1"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
@@ -821,7 +812,7 @@
                                       </value>
                                       <statement name="DO1">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite2"</field>
+                                          <field name="ANIMATION">"dieRed2"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
@@ -866,7 +857,7 @@
                                       </value>
                                       <statement name="DO2">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite3"</field>
+                                          <field name="ANIMATION">"dieRed3"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
@@ -911,7 +902,7 @@
                                       </value>
                                       <statement name="DO3">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite4"</field>
+                                          <field name="ANIMATION">"dieRed4"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
@@ -956,7 +947,7 @@
                                       </value>
                                       <statement name="DO4">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite5"</field>
+                                          <field name="ANIMATION">"dieRed5"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
@@ -986,7 +977,7 @@
                                       </statement>
                                       <statement name="ELSE">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite6"</field>
+                                          <field name="ANIMATION">"dieRed6"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
@@ -1234,7 +1225,7 @@
                                       </value>
                                       <statement name="DO0">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite1"</field>
+                                          <field name="ANIMATION">"dieRed1"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
@@ -1279,7 +1270,7 @@
                                       </value>
                                       <statement name="DO1">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite2"</field>
+                                          <field name="ANIMATION">"dieRed2"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
@@ -1324,7 +1315,7 @@
                                       </value>
                                       <statement name="DO2">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite3"</field>
+                                          <field name="ANIMATION">"dieRed3"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
@@ -1369,7 +1360,7 @@
                                       </value>
                                       <statement name="DO3">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite4"</field>
+                                          <field name="ANIMATION">"dieRed4"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
@@ -1414,7 +1405,7 @@
                                       </value>
                                       <statement name="DO4">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite5"</field>
+                                          <field name="ANIMATION">"dieRed5"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
@@ -1444,7 +1435,7 @@
                                       </statement>
                                       <statement name="ELSE">
                                         <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"dieWhite6"</field>
+                                          <field name="ANIMATION">"dieRed6"</field>
                                           <value name="THIS">
                                             <block type="sprite_variables_get">
                                               <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
@@ -1595,6 +1586,27 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="gamelab_location_picker" x="1217" y="1044">
+          <field name="LOCATION">{"x":169,"y":245}</field>
+        </block>
+        <block type="gamelab_location_picker" x="1381" y="1080">
+          <field name="LOCATION">{"x":234,"y":358}</field>
+        </block>
+        <block type="gamelab_location_picker" x="1370" y="1086">
+          <field name="LOCATION">{"x":234,"y":358}</field>
+        </block>
+        <block type="gamelab_location_picker" x="1382" y="1113">
+          <field name="LOCATION">{"x":234,"y":358}</field>
+        </block>
+        <block type="gamelab_location_picker" x="1385" y="1171">
+          <field name="LOCATION">{"x":234,"y":358}</field>
+        </block>
+        <block type="gamelab_location_picker" x="1268" y="1761">
+          <field name="LOCATION">{"x":246,"y":207}</field>
+        </block>
+        <block type="gamelab_location_picker" x="1276" y="1763">
+          <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
       </xml>
     </start_blocks>

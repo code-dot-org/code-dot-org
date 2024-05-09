@@ -39,7 +39,7 @@
     "start_in_animation_tab": "false",
     "mini_toolbox": "true",
     "hide_pause_button": "false",
-    "long_instructions": "**Explain the game by using say blocks.**\r\n1.  Add **two** `sprite says` coding blocks. One for each sprite. \r\n- You can change the text the sprite says!\r\n\r\n- Press `Run` when you are finished.",
+    "long_instructions": "**Explain the game by using say blocks.**\r\n1.  Add **two** `sprite says` coding blocks. One for each sprite. \r\n- You can change the text the sprites say!\r\n\r\n- Press `Run` when you are finished.",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -55,7 +55,7 @@
     "encrypted_examples": "FSjGqOPz1FccGoLFkghSmoGJ/WVIwlxFsaew2mkyN7uAqcKugfUVQ1SHKQV0\n5iAOcVAZzwvLtnkGBfSvnQDsPg==\n",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:26:45.389+00:00\",\"changed\":[\"cloned from \\\"game_design_say\\\"\"],\"cloned_from\":\"game_design_say\"},{\"changed_at\":\"2024-05-07 22:15:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:26:45.389+00:00\",\"changed\":[\"cloned from \\\"game_design_say\\\"\"],\"cloned_from\":\"game_design_say\"},{\"changed_at\":\"2024-05-07 22:15:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 20:57:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

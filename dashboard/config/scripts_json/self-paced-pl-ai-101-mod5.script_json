@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-18 18:14:52 UTC",
+    "serialized_at": "2024-05-08 17:27:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -152,6 +152,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-certificate"
+        ],
         "progression": "Opening (10 min)"
       },
       "bonus": false,
@@ -824,6 +827,28 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Wrap Up (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-closing_02b_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3"
+      },
+      "level_keys": [
+        "self-paced-pl-ai-101-mod5-closing_02b_2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "self-paced-pl-ai-101-mod5-closing_02_2024"
         ],
@@ -844,9 +869,9 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
-      "activity_section_position": 4,
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1199,6 +1224,18 @@
         "level.key": "self-paced-pl-ai-101-mod5-closing_03a_2024",
         "script_level.level_keys": [
           "self-paced-pl-ai-101-mod5-closing_03a_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-mod5",
+        "activity_section.key": "bb4ddc64-0af9-40f7-b617-4286ad7d6fd3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-ai-101-mod5-closing_02b_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-ai-101-mod5-closing_02b_2024"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

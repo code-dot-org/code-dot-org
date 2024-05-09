@@ -2927,5 +2927,17 @@
   },
   "https://studio.code.org/s/allthethings/lessons/49/levels/2": {
     "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/1": {
+    "long_instructions": "## Welcome to Python Lab\n\nPress the Run button and see what happens."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/2": {
+    "long_instructions": "## Python Lab Basics\n\nTry adding some new code."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
+    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
+    "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!"
   }
 }

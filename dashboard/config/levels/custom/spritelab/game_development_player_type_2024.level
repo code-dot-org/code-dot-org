@@ -76,7 +76,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:28:12.682+00:00\",\"changed\":[\"cloned from \\\"game_development_player_type\\\"\"],\"cloned_from\":\"game_development_player_type\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:28:12.682+00:00\",\"changed\":[\"cloned from \\\"game_development_player_type\\\"\"],\"cloned_from\":\"game_development_player_type\"},{\"changed_at\":\"2024-05-08 22:50:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1263,9 +1263,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="15" y="31">
-          <field name="IMG">"gradient_02"</field>
-        </block>
         <block type="GameDev_setGroup" id="s0~~e0!}K[fm;ShKs2sG" x="38" y="136">
           <field name="GROUP">"players"</field>
           <value name="SPRITE">
@@ -1292,6 +1289,9 @@
               <field name="LOCATION">{"x":81,"y":34}</field>
             </block>
           </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="112" y="434">
+          <field name="IMG">"gradient_02"</field>
         </block>
       </xml>
     </toolbox_blocks>

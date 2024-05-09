@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-07 20:46:53 UTC",
+    "serialized_at": "2024-05-08 18:42:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -134,8 +134,8 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**Purpose:**\nThis session is a preparation for the next two Model Lessons that participants will engage in: U3L3 Drawing in Game Lab and U3L5 Variables. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants are introduced to Unit 3 - Interactive Animations and Games.\n* Participants gain experience with Game Lab.\n* Participants prepare to engage in Unit 3 - Interactive Animations and Games Model Lessons and TLOs by previewing how to create and modify shapes in Game Lab.\n\n**Suggested Time:** 40 minutes",
-        "student_overview": "**You will:**\n* Get an introduction to Unit 3 - Interactive Animations and Games.\n* Gain experience with Game Lab.\n* Prepare to engage in Unit 3 - Interactive Animations and Games Model Lessons and TLOs by previewing how to create and modify shapes in Game Lab.\n"
+        "overview": "**Purpose:**\nThis curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants are familiar with Unit 3 - Interactive Animations and Games.\n* Participants gain experience with Game Lab.\n* Participants can create and modify shapes in Game Lab.\n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Be familiar with Unit 3 - Interactive Animations and Games.\n* Gain experience with Game Lab.\n* Create and modify shapes in Game Lab.\n"
       },
       "seeding_key": {
         "lesson.key": "Unit 3 Curiculum Investigation: Shapes and Variables",
