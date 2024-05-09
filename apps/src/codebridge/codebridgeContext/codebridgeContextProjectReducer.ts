@@ -5,7 +5,6 @@ import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
 
 import {PROJECT_REDUCER_ACTIONS} from './constants';
 import {findFiles, findSubFolders} from './utils';
-
 type DefaultFilePayload = {
   fileId: FileId;
 };
@@ -99,7 +98,7 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
       const activeFile = getActiveFileForProject(project);
 
       // if this file is already active, then no change.
-      if (activeFile?.id === fileId) {
+      if (activeFile?.id === fileId && activeFile.active) {
         return project;
       }
 

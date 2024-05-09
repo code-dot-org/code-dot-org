@@ -79,17 +79,17 @@ export function getFileByName(
 }
 
 /**
- * Given a map of {fileId: ProjectFile}, return the first file with the given name.
+ * Given a map of {fileId: ProjectFile}, return the first file that is both
+ * active and visible.
  * @param project - The folders and files for a given project.
  * @returns The first file that is both active and visible, or the first file.
  */
 export function getActiveFileForProject(project: MultiFileSource) {
   const files = Object.values(project.files);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const activeFiles = files.filter(
-    f => f.active && (f.visible !== false || isStartMode)
-  );
+  // All files are visible in start mode.
+  const visibleFiles = files.filter(f => f.visible !== false || isStartMode);
 
-  // If the only active file is hidden, make the first file active.
-  return activeFiles?.[0] || files[0];
+  // Get the first active file, or the first file.
+  return visibleFiles.find(f => f.active) || visibleFiles[0];
 }

@@ -128,12 +128,7 @@ const InnerFileBrowser = React.memo(
                     <i className="fa-solid fa-trash" />
                   </span>
                   {isStartMode && (
-                    <span
-                      onClick={e => {
-                        e.stopPropagation();
-                        toggleFileVisibility(f.id);
-                      }}
-                    >
+                    <span onClick={() => toggleFileVisibility(f.id)}>
                       <i
                         className={`fa-solid ${
                           f.visible === false ? 'fa-eye' : 'fa-eye-slash'
