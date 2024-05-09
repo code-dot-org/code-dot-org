@@ -255,11 +255,8 @@ export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
-    const {
-      savedAiCustomizations: aiCustomizations,
-      chatMessages: storedMessages,
-      currentSessionId,
-    } = state.aichat;
+    const {savedAiCustomizations: aiCustomizations, currentSessionId} =
+      state.aichat;
 
     const aichatContext: AichatContext = {
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
@@ -277,15 +274,17 @@ export const submitChatContents = createAsyncThunk(
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
+    const stateUpdated = thunkAPI.getState() as RootState;
+    const {chatMessages: storedMessages} = stateUpdated.aichat;
+
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
     const chatApiResponse = await postAichatCompletionMessage(
-      newUserMessageText,
-      currentSessionId
-        ? storedMessages.filter(
-            message => message.sessionId === currentSessionId
-          )
-        : [],
+      storedMessages.filter(
+        message =>
+          message.sessionId === currentSessionId ||
+          message.status === Status.UNKNOWN
+      ),
       aiCustomizations,
       aichatContext,
       currentSessionId
@@ -301,65 +300,67 @@ export const submitChatContents = createAsyncThunk(
 
     // Regardless of response type,
     // assign last user message to session.
-    if (chatApiResponse.session_id) {
-      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-      thunkAPI.dispatch(
-        updateChatMessageSession({
-          id: newMessage.id,
-          sessionId: chatApiResponse.session_id,
-        })
-      );
-    }
+    // if (chatApiResponse.session_id) {
+    //   thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
+    //   thunkAPI.dispatch(
+    //     updateChatMessageSession({
+    //       id: newMessage.id,
+    //       sessionId: chatApiResponse.session_id,
+    //     })
+    //   );
+    // }
+
+    thunkAPI.dispatch(setChatMessages(chatApiResponse?.messages));
 
     // success state: received response from model ("assistant")
-    if (chatApiResponse?.role === Role.ASSISTANT) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.OK,
-        chatMessageText: chatApiResponse.content,
-        timestamp: getCurrentTimestamp(),
-        sessionId: chatApiResponse.session_id,
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.OK,
-        })
-      );
-
-      // error state #1: model generated profanity
-    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: getCurrentTimestamp(),
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.ERROR,
-        })
-      );
-
-      // error state #2: user message contained profanity
-    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
-      // Logging to allow visibility into flagged content.
-      console.log(chatApiResponse);
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.PROFANITY_VIOLATION,
-        })
-      );
-    }
+    // if (chatApiResponse?.role === Role.ASSISTANT) {
+    //   const assistantChatMessage: ChatCompletionMessage = {
+    //     id: getNewMessageId(),
+    //     role: Role.ASSISTANT,
+    //     status: Status.OK,
+    //     chatMessageText: chatApiResponse.content,
+    //     timestamp: getCurrentTimestamp(),
+    //     sessionId: chatApiResponse.session_id,
+    //   };
+    //   thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+    //
+    //   thunkAPI.dispatch(
+    //     updateUserChatMessageStatus({
+    //       id: newMessage.id,
+    //       status: Status.OK,
+    //     })
+    //   );
+    //
+    //   // error state #1: model generated profanity
+    // } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
+    //   const assistantChatMessage: ChatCompletionMessage = {
+    //     id: getNewMessageId(),
+    //     role: Role.ASSISTANT,
+    //     status: Status.ERROR,
+    //     chatMessageText: 'error',
+    //     timestamp: getCurrentTimestamp(),
+    //   };
+    //   thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+    //
+    //   thunkAPI.dispatch(
+    //     updateUserChatMessageStatus({
+    //       id: newMessage.id,
+    //       status: Status.ERROR,
+    //     })
+    //   );
+    //
+    //   // error state #2: user message contained profanity
+    // } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
+    //   // Logging to allow visibility into flagged content.
+    //   console.log(chatApiResponse);
+    //
+    //   thunkAPI.dispatch(
+    //     updateUserChatMessageStatus({
+    //       id: newMessage.id,
+    //       status: Status.PROFANITY_VIOLATION,
+    //     })
+    //   );
+    // }
   }
 );
 
@@ -394,6 +395,12 @@ const aichatSlice = createSlice({
     clearChatMessages: state => {
       state.chatMessages = [];
       state.currentSessionId = undefined;
+    },
+    setChatMessages: (
+      state,
+      action: PayloadAction<ChatCompletionMessage[]>
+    ) => {
+      state.chatMessages = action.payload;
     },
     setNewChatSession: state => {
       state.currentSessionId = undefined;
@@ -556,6 +563,7 @@ export const {
   removeModelUpdateMessage,
   setNewChatSession,
   setChatSessionId,
+  setChatMessages,
   clearChatMessages,
   setIsWaitingForChatResponse,
   setShowWarningModal,

@@ -16,7 +16,6 @@ const CHAT_COMPLETION_URL = '/aichat/chat_completion';
  * and assistant message if successful.
  */
 export async function postAichatCompletionMessage(
-  newMessage: string,
   messagesToSend: ChatCompletionMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
@@ -30,7 +29,6 @@ export async function postAichatCompletionMessage(
   };
   const storedMessages = formatMessagesForAichatCompletion(messagesToSend);
   const payload = {
-    newMessage,
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
@@ -60,14 +58,8 @@ export async function postAichatCompletionMessage(
 
 const formatMessagesForAichatCompletion = (
   chatMessages: ChatCompletionMessage[]
-): AichatCompletionMessage[] => {
-  return chatMessages.map(message => {
-    return {
-      role: message.role,
-      content: message.chatMessageText,
-      status: message.status,
-    };
-  });
+): ChatCompletionMessage[] => {
+  return chatMessages;
 };
 
 type AichatCompletionMessage = {
