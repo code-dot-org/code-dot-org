@@ -43,19 +43,17 @@ const initialState: AITutorState = {
   chatMessageError: false,
 };
 
-const enhanceInputForAITutor = (chatContext: ChatContext) => {
+const formatQuestionForAITutor = (chatContext: ChatContext) => {
   if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
-    // For general questions, only prepend level instructions
-    return `${chatContext.studentInput}`;
+    return chatContext.studentInput;
   }
 
   const separator = '\n\n---\n\n';
-  const codePrefix = 'Here is my code:\n\n```';
-  const codePostfix = '```\n\n';
-  const studentCodeFormatted = `${codePrefix}${chatContext.studentCode}${codePostfix}`;
+  const codePrefix = "Here is the student's code:\n\n```\n";
+  const codePostfix = '\n```';
 
-  // For compilation and validation, prepend level instructions and student code
-  return `${chatContext.studentInput}${separator}${studentCodeFormatted}`;
+  const formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
+  return formattedQuestion;
 };
 
 // THUNKS
@@ -81,9 +79,9 @@ export const askAITutor = createAsyncThunk(
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
-    const input = enhanceInputForAITutor(chatContext);
+    const formattedQuestion = formatQuestionForAITutor(chatContext);
     const chatApiResponse = await getChatCompletionMessage(
-      input,
+      formattedQuestion,
       storedMessages,
       levelContext.levelId,
       chatContext.actionType,
