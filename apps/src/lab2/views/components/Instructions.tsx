@@ -9,6 +9,7 @@ import {
   currentLevelIndex,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import {LabState} from '../../lab2Redux';
 import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
@@ -63,11 +64,14 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     (state: {lab: LabState}) => state.lab.validationState
   );
 
-  // If there are no validation conditions, we can show the next button so long as
+  // If there are no validation conditions, we can show the continue button so long as
   // there is another level. If validation is present, also check that conditions are satisfied.
-  const showNextButton =
+  const showContinueButton =
     (!hasConditions || satisfied) && levelIndex + 1 < currentLevelCount;
 
+  // If there are no validation conditions, we can show the finish button so long as
+  // this is the last level in the progression. If validation is present, also
+  // check that conditions are satisfied.
   const showFinishButton =
     (!hasConditions || satisfied) && levelIndex + 1 === currentLevelCount;
 
@@ -92,7 +96,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       text={instructionsText}
       message={message || undefined}
       messageIndex={index}
-      showNextButton={showNextButton}
+      showContinueButton={showContinueButton}
       showFinishButton={showFinishButton}
       beforeNextLevel={beforeNextLevel}
       onNextPanel={onNextPanel}
@@ -111,8 +115,8 @@ interface InstructionsPanelProps {
   messageIndex?: number;
   /** Optional image URL to display. */
   imageUrl?: string;
-  /** If the next button should be shown. */
-  showNextButton?: boolean;
+  /** If the continue button should be shown. */
+  showContinueButton?: boolean;
   /** If the finish button should be shown. */
   showFinishButton?: boolean;
   /** Additional callback to fire before navigating to the next level. */
@@ -143,7 +147,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   message,
   messageIndex,
   imageUrl,
-  showNextButton,
+  showContinueButton,
   showFinishButton,
   beforeNextLevel,
   onNextPanel,
@@ -161,7 +165,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
 
   const vertical = layout === 'vertical';
 
-  const canShowNextButton = showNextButton && onNextPanel;
+  const canShowContinueButton = showContinueButton && onNextPanel;
 
   const canShowFinishButton = showFinishButton;
 
@@ -240,7 +244,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             />
           </div>
         )}
-        {(message || canShowNextButton || canShowFinishButton) && (
+        {(message || canShowContinueButton || canShowFinishButton) && (
           <div
             key={messageIndex + ' - ' + message}
             id="instructions-feedback"
@@ -257,32 +261,27 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
               )}
+              {canShowContinueButton && (
+                <Button
+                  text={commonI18n.continue()}
+                  disabled={isFinished}
+                  onClick={onNextPanel}
+                  className={moduleStyles.button}
+                />
+              )}
+              {canShowFinishButton && (
+                <Button
+                  text={commonI18n.finish()}
+                  disabled={isFinished}
+                  onClick={onFinish}
+                  className={moduleStyles.button}
+                />
+              )}
               {finalMessage && isFinished && (
                 <EnhancedSafeMarkdown
                   markdown={finalMessage}
                   className={moduleStyles.markdownText}
                 />
-              )}
-              {canShowNextButton && (
-                <button
-                  id="instructions-feedback-button"
-                  type="button"
-                  onClick={onNextPanel}
-                  className={moduleStyles.buttonContinue}
-                >
-                  {commonI18n.continue()}
-                </button>
-              )}
-              {canShowFinishButton && (
-                <button
-                  id="instructions-feedback-button"
-                  type="button"
-                  onClick={onFinish}
-                  className={moduleStyles.buttonContinue}
-                  disabled={isFinished}
-                >
-                  {commonI18n.finish()}
-                </button>
               )}
             </div>
           </div>
