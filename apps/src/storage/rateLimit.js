@@ -1,6 +1,6 @@
 // rateLimit() throws an error if called more than RATE_LIMIT times per RATE_LIMIT_INTERVAL_MS
 // we use this in Applab commands.js to rate limit access to Datablock Storage from student code
-const rateLimitAccessLog = [];
+let rateLimitAccessLog = [];
 export const RATE_LIMIT = 600;
 export const RATE_LIMIT_INTERVAL_MS = 60000;
 export function rateLimit(now = Date.now()) {
@@ -9,13 +9,13 @@ export function rateLimit(now = Date.now()) {
   // Drop log entries older than RATE_LIMIT_INTERVAL_MS
   while (
     rateLimitAccessLog.length > 0 &&
-    timeSinceEarliestLog() < RATE_LIMIT_INTERVAL_MS
+    timeSinceEarliestLog() >= RATE_LIMIT_INTERVAL_MS
   ) {
     rateLimitAccessLog.shift();
   }
 
   // If we're over the rate limit, throw an error
-  if (rateLimitAccessLog.length > RATE_LIMIT) {
+  if (rateLimitAccessLog.length >= RATE_LIMIT) {
     const waitTime = Math.ceil(
       (RATE_LIMIT_INTERVAL_MS - timeSinceEarliestLog()) / 1000
     );
@@ -28,4 +28,8 @@ export function rateLimit(now = Date.now()) {
     // Log the current access
     rateLimitAccessLog.push(now);
   }
+}
+
+export function resetRateLimit() {
+  rateLimitAccessLog = [];
 }

@@ -1,11 +1,19 @@
 import {expect} from '../../util/reconfiguredChai';
 import {
   rateLimit,
+  resetRateLimit,
   RATE_LIMIT,
   RATE_LIMIT_INTERVAL_MS,
 } from '../../../src/storage/rateLimit';
 
 describe('DatablockStorage', () => {
+  beforeEach(() => {
+    resetRateLimit();
+  });
+  afterEach(() => {
+    resetRateLimit();
+  });
+
   describe('rate limiting', () => {
     it('succeeds if calling less times than the rate limit', done => {
       const now = Date.now();
