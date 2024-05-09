@@ -351,7 +351,7 @@ class TestController < ApplicationController
   end
 
   def get_validate_rubric_ai_config
-    EvaluateRubricJob.validate_ai_config
+    AiRubricConfig.validate_ai_config
     render plain: 'OK'
   end
 

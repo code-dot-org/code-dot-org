@@ -23,7 +23,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job succeeds on ai-enabled level with tsv response type" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -45,7 +45,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job succeeds on ai-enabled level with json response type" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -67,7 +67,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job succeeds on ai-enabled level without confidence exact json" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -89,7 +89,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails on non-ai level" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns(nil)
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns(nil)
 
     # create a project (we still build a rubric evaluation record first, which means that check is first)
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -104,7 +104,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails if channel token does not exist" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     exception = assert_raises RuntimeError do
       EvaluateRubricJob.perform_now(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
@@ -113,7 +113,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails if project source code not found" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -129,7 +129,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails if rubric not found" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
     @rubric.learning_goals.each do |lg|
       LearningGoalAiEvaluation.where(learning_goal_id: lg.id).map(&:destroy)
     end
@@ -150,7 +150,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails when the code contains profanity" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -180,7 +180,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails when the code contains PII violations" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -211,7 +211,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
   test "job is retried when the proxy server returns a 429" do
     # Perform an otherwise successful run
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # Create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -261,7 +261,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
   test "job is retried when the proxy server times out" do
     # Perform an otherwise successful run
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # Create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -311,7 +311,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
   test 'job is retried when proxy server returns 503' do
     # Perform an otherwise successful run
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # Create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -364,7 +364,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
   test 'job is retried when proxy server returns 504' do
     # Perform an otherwise successful run
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # Create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -416,7 +416,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job records REQUEST_TOO_LARGE on http status 413" do
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -438,7 +438,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
   test "metrics for tokens used are logged" do
     # Perform an otherwise successful run
-    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # Create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
@@ -541,7 +541,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       'temperature' => '0.2',
       'response-type' => response_type,
     }.to_json
-    path_prefix = EvaluateRubricJob::S3_AI_RELEASE_PATH
+    path_prefix = AiRubricConfig::S3_AI_RELEASE_PATH
     bucket = {
       "#{path_prefix}fake-lesson-s3-name/system_prompt.txt" => 'fake-system-prompt',
       "#{path_prefix}fake-lesson-s3-name/standard_rubric.csv" => 'fake-standard-rubric',
@@ -561,7 +561,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       ->(context) do
         key = context.params[:key]
         obj = bucket[key]
-        raise EvaluateRubricJob::StubNoSuchKey.new(key) unless obj
+        raise AiRubricConfig::StubNoSuchKey.new(key) unless obj
         {body: StringIO.new(obj)}
       end
     )
@@ -573,7 +573,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       }
     )
 
-    EvaluateRubricJob.stubs(:s3_client).returns(s3_client)
+    AiRubricConfig.stubs(:s3_client).returns(s3_client)
   end
 
   private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {}, response_type: 'tsv', message: 'message')
