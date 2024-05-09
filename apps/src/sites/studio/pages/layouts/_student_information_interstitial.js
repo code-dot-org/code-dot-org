@@ -43,10 +43,11 @@ $(document).ready(function () {
   });
 
   $('#sign-out-btn').on('click', () => {
-    analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_DISMISSED, {
-      user_id: userId,
-      in_section: inSection,
-      selected_language: selectedLanguage,
-    });
+    (retrieveInfoForCap || forceStudentInterstitial) &&
+      analyticsReporter.sendEvent(EVENTS.CAP_STATE_FORM_DISMISSED, {
+        user_id: userId,
+        in_section: inSection,
+        selected_language: selectedLanguage,
+      });
   });
 });
