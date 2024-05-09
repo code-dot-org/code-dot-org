@@ -3,7 +3,7 @@ import musicI18n from '../locale';
 // Extensions & Mutator Names
 
 export const DEFAULT_TRACK_NAME_EXTENSION = 'default_track_name_extension';
-export const EFFECTS_FIELD_EXTENSION = 'effects_field_extension';
+export const FIELD_EFFECTS_EXTENSION = 'field_effects_extension';
 export const PLAY_MULTI_MUTATOR = 'play_multi_mutator';
 
 // Field / Input Names
@@ -68,7 +68,7 @@ export const DEFAULT_EFFECT_VALUE = 'normal';
 export const MEDIUM_EFFECT_VALUE = 'medium';
 export const LOW_EFFECT_VALUE = 'low';
 
-export const FIELD_EFFECTS_OPTIONS = {
+export const FIELD_EFFECTS_VALUE_OPTIONS = {
   volume: [
     [musicI18n.effectsLabelsFull(), DEFAULT_EFFECT_VALUE],
     [musicI18n.effectsLabelsMedium(), MEDIUM_EFFECT_VALUE],

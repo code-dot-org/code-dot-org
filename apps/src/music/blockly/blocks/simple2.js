@@ -10,7 +10,7 @@ import {
   DOCS_BASE_URL,
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
-  EFFECTS_FIELD_EXTENSION,
+  FIELD_EFFECTS_EXTENSION,
   FIELD_EFFECT_NAME_OPTIONS,
 } from '../constants';
 import {
@@ -226,7 +226,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockSetEffectTooltip(),
     helpUrl: DOCS_BASE_URL + 'set_effect',
-    extensions: [EFFECTS_FIELD_EXTENSION],
+    extensions: [FIELD_EFFECTS_EXTENSION],
   },
   generator: block => {
     const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);

@@ -7,7 +7,7 @@ import {
   TRACK_NAME_FIELD,
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE,
-  FIELD_EFFECTS_OPTIONS,
+  FIELD_EFFECTS_VALUE_OPTIONS,
   DEFAULT_EFFECT_VALUE,
 } from './constants';
 
@@ -125,7 +125,9 @@ export const effectsFieldExtension = function () {
   // Set the initial state when the block gets created
   const thisBlock = this;
   const valuesDropdown = new Blockly.FieldDropdown(function () {
-    return FIELD_EFFECTS_OPTIONS[thisBlock.getFieldValue(FIELD_EFFECTS_NAME)];
+    return FIELD_EFFECTS_VALUE_OPTIONS[
+      thisBlock.getFieldValue(FIELD_EFFECTS_NAME)
+    ];
   });
   valuesDropdown.setValue(DEFAULT_EFFECT_VALUE);
   this.getInput(FIELD_EFFECTS_VALUE).appendField(
@@ -134,15 +136,18 @@ export const effectsFieldExtension = function () {
   );
 
   // Set up handler to update the effect value when the effect name changes
-  const effectNameField = this.getField(FIELD_EFFECTS_NAME);
-  const baseHandler = effectNameField.onItemSelected_;
-  effectNameField.onItemSelected_ = (menu, menuItem) => {
+  const fieldEffectsName = this.getField(FIELD_EFFECTS_NAME);
+
+  // Override the default onItemSelected_ handler
+  const baseHandler = fieldEffectsName.onItemSelected_;
+  fieldEffectsName.onItemSelected_ = (menu, menuItem) => {
     // Update the effect value dropdown's options to match the newly selected effect
-    const newNameValue = menuItem.opt_value;
+    const selectedEffectName = menuItem.opt_value;
     const effectValueField = this.getField(FIELD_EFFECTS_VALUE);
-    effectValueField.menuGenerator_ = FIELD_EFFECTS_OPTIONS[newNameValue];
+    effectValueField.menuGenerator_ =
+      FIELD_EFFECTS_VALUE_OPTIONS[selectedEffectName];
     effectValueField.setValue(DEFAULT_EFFECT_VALUE);
 
-    baseHandler.call(effectNameField, menu, menuItem);
+    baseHandler.call(fieldEffectsName, menu, menuItem);
   };
 };
