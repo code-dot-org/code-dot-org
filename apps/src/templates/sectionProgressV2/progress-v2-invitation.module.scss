@@ -15,10 +15,19 @@
 }
 
 .modal {
-  min-width: 90% !important;
+  // min-width: 90% !important;
+  width: 980px !important;
+  max-width: 980px !important;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 980px) {
+  .modal {
+    width: 90% !important; /* Set width to 90% of the viewport width */
+    max-width: 980px !important; /* Optional: Ensures width does not exceed 950px */
+  }
 }
 
 .remindMeLaterButton {
