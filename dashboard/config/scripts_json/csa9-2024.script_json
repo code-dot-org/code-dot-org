@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-02 19:39:53 UTC",
+    "serialized_at": "2024-05-08 23:43:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3132,6 +3132,30 @@
       }
     },
     {
+      "name": "Code.org U9L2 MCQ Pre-Assessment",
+      "url": "https://apclassroom.collegeboard.org/8/shared-quizzes/c6eb9e5d6bbe4e7bad4eb7910519027b",
+      "key": "code_org_u9l2_mcq_pre-assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "code_org_u9l2_mcq_pre-assessment"
+      }
+    },
+    {
+      "name": "Code.org U9L6 FRQ Pre-Assessment",
+      "url": "https://apclassroom.collegeboard.org/8/shared-quizzes/7f77322ede9d43ac8a40cf938631331c",
+      "key": "code_org_u9l6_frq_pre-assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "code_org_u9l6_frq_pre-assessment"
+      }
+    },
+    {
       "name": "Course and Exam Description",
       "url": "https://docs.google.com/document/d/13plMgDK_6RDMdtAs52nP8R9obQf9i4RM6UsdhD0GnRU/edit?usp=sharing",
       "key": "course_and_exam_description",
@@ -3601,6 +3625,12 @@
     {
       "seeding_key": {
         "lesson.key": "FRQ Pre-Assessment",
+        "resource.key": "code_org_u9l6_frq_pre-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Pre-Assessment",
         "resource.key": "frq_answer_sheet"
       }
     },
@@ -3668,6 +3698,12 @@
       "seeding_key": {
         "lesson.key": "MCQ Pre-Assessment",
         "resource.key": "ap_classroom_user_guide_for_students"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Pre-Assessment",
+        "resource.key": "code_org_u9l2_mcq_pre-assessment"
       }
     },
     {

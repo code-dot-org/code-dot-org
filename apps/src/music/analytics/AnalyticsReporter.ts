@@ -5,13 +5,17 @@ import {
   identify,
   setSessionId,
   flush,
+  setUserId,
 } from '@amplitude/analytics-browser';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {isDevelopmentEnvironment} from '@cdo/apps/utils';
+import {
+  getEnvironment,
+  isDevelopmentEnvironment,
+  isProductionEnvironment,
+} from '@cdo/apps/utils';
 import {Block} from 'blockly';
-
-const BlockTypes = require('../blockly/blockTypes').BlockTypes;
-const FIELD_SOUNDS_NAME = require('../blockly/constants').FIELD_SOUNDS_NAME;
+import {BlockTypes} from '../blockly/blockTypes';
+import {FIELD_SOUNDS_NAME} from '../blockly/constants';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
@@ -25,7 +29,7 @@ const blockFeatureList = [
   BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
 ];
 
-const triggerBlocks = [
+const triggerBlocks: string[] = [
   BlockTypes.TRIGGERED_AT,
   BlockTypes.TRIGGERED_AT_SIMPLE,
   BlockTypes.TRIGGERED_AT_SIMPLE2,
@@ -45,8 +49,6 @@ interface BlockStats {
 
 interface SessionEndPayload {
   durationSeconds: number;
-  mostInstructionsVisited: number;
-  lastInstructionsVisited: number;
   soundsUsed: string[];
   blockStats: BlockStats;
   featuresUsed: {[feature: string]: boolean};
@@ -61,8 +63,6 @@ export default class AnalyticsReporter {
   private sessionInProgress: boolean;
   private identifyObj: Identify;
   private sessionStartTime: number;
-  private maxInstructionsSeen: number;
-  private currentInstructionsPage: number;
   private soundsUsed: Set<string>;
   private blockStats: BlockStats;
   private featuresUsed: {[feature: string]: boolean};
@@ -71,8 +71,6 @@ export default class AnalyticsReporter {
     this.sessionInProgress = false;
     this.identifyObj = new Identify();
     this.sessionStartTime = -1;
-    this.maxInstructionsSeen = 0;
-    this.currentInstructionsPage = 0;
     this.soundsUsed = new Set();
     this.blockStats = {
       endingBlockCount: 0,
@@ -101,9 +99,7 @@ export default class AnalyticsReporter {
       this.sessionInProgress = true;
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
-      console.log(
-        `[AMPLITUDE ANALYTICS] Did not initialize analytics reporter.  (${message})`
-      );
+      this.log(`Did not initialize analytics reporter.  (${message})`);
 
       // Log an error if this is not development. On development, this error is expected.
       if (!isDevelopmentEnvironment()) {
@@ -125,16 +121,14 @@ export default class AnalyticsReporter {
     return init(responseJson.key, undefined, {minIdLength: 1}).promise;
   }
 
-  setUserProperties(userId: string, userType: string, signInState: string) {
+  setUserProperties(userId: number, userType: string, signInState: string) {
     if (!this.sessionInProgress) {
       this.log('No session in progress');
       return;
     }
 
-    // Temporarily disabled, pending user privacy compliance discussions.
-    // if (userId) {
-    //   setUserId(hashString(userId));
-    // }
+    const formattedUserId = this.formatUserId(userId);
+    setUserId(formattedUserId);
 
     this.identifyObj.set('userType', userType);
     this.identifyObj.set('signInState', signInState);
@@ -169,29 +163,6 @@ export default class AnalyticsReporter {
     }
 
     track(eventType, payload).promise;
-  }
-
-  onVideoClosed(id: string, duration: number) {
-    const logMessage = `Video closed. Id: ${id}. Duration: ${duration}}`;
-
-    if (!this.sessionInProgress) {
-      this.log(`No session in progress.  (${logMessage})`);
-      return;
-    } else {
-      this.log(logMessage);
-    }
-
-    track('Video closed', {id, duration}).promise;
-  }
-
-  onInstructionsVisited(page: number) {
-    if (!this.sessionInProgress) {
-      this.log('No session in progress');
-      return;
-    }
-
-    this.currentInstructionsPage = page;
-    this.maxInstructionsSeen = Math.max(this.maxInstructionsSeen, page);
   }
 
   onBlocksUpdated(blocks: Block[]) {
@@ -253,8 +224,6 @@ export default class AnalyticsReporter {
 
     const payload: SessionEndPayload = {
       durationSeconds: duration / 1000,
-      mostInstructionsVisited: this.maxInstructionsSeen,
-      lastInstructionsVisited: this.currentInstructionsPage,
       soundsUsed: Array.from(this.soundsUsed),
       blockStats: this.blockStats,
       featuresUsed: this.featuresUsed,
@@ -267,6 +236,19 @@ export default class AnalyticsReporter {
   }
 
   log(message: string) {
-    console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
+    console.log(`[MUSIC AMPLITUDE ANALYTICS EVENT]: ${message}`);
+  }
+
+  private formatUserId(userId: number) {
+    if (!userId) {
+      return 'none';
+    }
+    const userIdString = userId.toString();
+    if (isProductionEnvironment()) {
+      return userIdString.padStart(5, '0');
+    } else {
+      const environment = getEnvironment();
+      return `${environment}-${userIdString}`;
+    }
   }
 }

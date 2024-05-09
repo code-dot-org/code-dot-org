@@ -69,7 +69,7 @@ class AichatController < ApplicationController
         status: :ok,
         json: {
           status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL],
-          session_id: log_chat_session(new_messages)
+          session_id: session_id
         }
       )
     end

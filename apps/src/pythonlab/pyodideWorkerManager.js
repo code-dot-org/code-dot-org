@@ -8,10 +8,10 @@ import {
   appendOutputImage,
   appendSystemMessage,
   appendSystemOutMessage,
-  setAndSaveSource,
 } from './pythonlabRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import MetricsReporter from '../lib/metrics/MetricsReporter';
+import {setAndSaveProjectSource} from '../lab2/redux/lab2ProjectRedux';
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
@@ -34,7 +34,7 @@ pyodideWorker.onmessage = event => {
   } else if (type === 'run_complete') {
     getStore().dispatch(appendSystemMessage('Program completed.'));
   } else if (type === 'updated_source') {
-    getStore().dispatch(setAndSaveSource(message));
+    getStore().dispatch(setAndSaveProjectSource({source: message}));
     return;
   } else if (type === 'error') {
     getStore().dispatch(appendSystemMessage(`Error: ${message}`));
