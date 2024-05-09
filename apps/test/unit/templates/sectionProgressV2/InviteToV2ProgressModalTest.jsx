@@ -71,7 +71,6 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
   });
 
   it('allows user to accept the invitation', () => {
-    // const postStub = sinon.stub($, 'post');
     const setShowProgressTableV2Stub = sinon.stub();
     const setHasSeenProgressTableInviteStub = sinon.stub();
 
@@ -96,17 +95,12 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
         has_seen_progress_table_v2_invitation: true,
       }
     );
-
-    // postStub.reset();
   });
 
   it('allows user to decline the invitation', () => {
-    // const postStub = sinon.stub($, 'post');
-    const setShowProgressTableV2Stub = sinon.stub();
     const setHasSeenProgressTableInviteStub = sinon.stub();
 
     renderDefault({
-      setShowProgressTableV2: setShowProgressTableV2Stub,
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,
     });
 
@@ -120,6 +114,56 @@ describe('UnconnectedInviteToV2ProgressModal', () => {
         has_seen_progress_table_v2_invitation: true,
       }
     );
-    // postStub.reset();
+    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
+    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+  });
+
+  // it('allows user to delay the invitation', () => {
+  //   renderDefault();
+
+  //   const delayButton = screen.getByText(i18n.remindMeLater());
+  //   fireEvent.click(delayButton);
+
+  //   expect(postStub).calledWith(
+  //     '/api/v1/users/date_progress_table_invitation_last_delayed'
+  //   ).to.be.true;
+  //   expect(screen.queryByText(i18n.tryItNow())).to.be.null;
+  //   expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
+  //   expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+  // });
+
+  it('does not show the dialog if they have already accepted or rejected the invitation', () => {
+    renderDefault({hasSeenProgressTableInvite: true});
+
+    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
+    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+  });
+
+  it('shows the dialog if it has been more than three days since they delayed the pop-up', () => {
+    renderDefault({
+      dateProgressTableInvitationDelayed:
+        'Wed May 01 2024 14:22:23 GMT-0500 (Central Daylight Time)',
+    });
+
+    expect(screen.getByText(i18n.progressTrackingAnnouncement())).be.visible;
+    expect(screen.getByText(i18n.tryItNow())).be.visible;
+    expect(screen.getByText(i18n.remindMeLater())).be.visible;
+    expect(screen.getByLabelText(i18n.closeDialog())).be.visible;
+  });
+
+  it('does not show the dialog if it has been less than three days since they delayed the pop-up', () => {
+    const today = new Date();
+    const yesterday = new Date(today);
+
+    yesterday.setDate(yesterday.getDate() - 1);
+    renderDefault({
+      dateProgressTableInvitationDelayed: yesterday,
+    });
+
+    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
+    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
   });
 });
