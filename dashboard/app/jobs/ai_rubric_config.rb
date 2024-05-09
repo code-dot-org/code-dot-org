@@ -107,6 +107,7 @@ class AiRubricConfig
   rescue Aws::S3::Errors::NoSuchKey => exception
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
   end
+  private_class_method :validate_ai_config_for_lesson
 
   # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
   # ai-enabled learning goal in its rubric in the database has a corresponding
@@ -128,6 +129,7 @@ class AiRubricConfig
       end
     end
   end
+  private_class_method :validate_learning_goals
 
   def self.validate_learning_goals_for_rubric(rubric)
     lesson_s3_name = get_lesson_s3_name(rubric.get_script_level)
@@ -138,6 +140,7 @@ class AiRubricConfig
       raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
     end
   end
+  private_class_method :validate_learning_goals_for_rubric
 
   def self.get_s3_learning_goals(lesson_s3_name)
     rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
