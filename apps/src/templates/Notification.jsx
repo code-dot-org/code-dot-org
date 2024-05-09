@@ -11,6 +11,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import fontConstants from '@cdo/apps/fontConstants';
 
 export const NotificationType = {
+  default: 'default',
   information: 'information',
   success: 'success',
   failure: 'failure',
@@ -47,7 +48,7 @@ const Notification = ({
   type,
   tooltipText,
   width,
-  color,
+  colors,
 }) => {
   const [open, setOpen] = useState(true);
 
@@ -125,9 +126,7 @@ const Notification = ({
     return null;
   }
 
-  const colorStyles = color
-    ? {backgroundColor: color, borderColor: color}
-    : styles.colors[type];
+  const colorStyles = {...styles.colors[type], ...colors};
 
   const tooltipId = _.uniqueId();
 
@@ -215,7 +214,7 @@ const Notification = ({
 };
 
 Notification.propTypes = {
-  type: PropTypes.oneOf(Object.keys(NotificationType)),
+  type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
   notice: PropTypes.string.isRequired,
   details: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   detailsLinkText: PropTypes.string,
@@ -259,7 +258,16 @@ Notification.propTypes = {
   // Can be specified to override default width
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
-  color: PropTypes.string,
+  colors: PropTypes.shape({
+    backgroundColor: PropTypes.string,
+    borderColor: PropTypes.string,
+    color: PropTypes.string,
+  }),
+};
+
+Notification.defaultProps = {
+  type: NotificationType.default,
+  colors: {},
 };
 
 const styles = {
@@ -335,6 +343,10 @@ const styles = {
     marginBottom: 18,
   },
   colors: {
+    [NotificationType.default]: {
+      borderColor: color.teal,
+      backgroundColor: color.teal,
+    },
     [NotificationType.information]: {
       borderColor: color.teal,
       color: color.teal,

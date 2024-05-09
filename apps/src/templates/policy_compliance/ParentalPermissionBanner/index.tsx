@@ -109,7 +109,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
       />
 
       <Notification
-        color={color.orange}
+        colors={{backgroundColor: color.orange, borderColor: color.orange}}
         notice={i18n.policyCompliance_parentalPermissionBanner_title()}
         details={i18n.policyCompliance_parentalPermissionBanner_desc({
           lockoutDate: formattedLockoutDate,
