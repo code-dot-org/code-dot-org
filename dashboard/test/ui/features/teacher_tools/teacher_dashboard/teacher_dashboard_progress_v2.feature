@@ -77,6 +77,9 @@ Scenario: Teacher can open lesson data, refresh the page, and lesson data will s
   Then I reload the page
   And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
 
+# =============================================================================
+# EYES TESTS
+# =============================================================================
 
 @eyes
 Scenario: Teacher can view lesson progress for when students have completed a lesson and when they have started a lesson but not finished
@@ -157,3 +160,14 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
 
   And I close my eyes
 
+@eyes
+Scenario: Teacher can view validated level progress
+  And I open my eyes to test "V2 Progress - validated level"
+
+  And I close my eyes
+
+@eyes
+Scenario: Teacher can view choice level progress and expansion
+  And I open my eyes to test "V2 Progress - choice level"
+
+  And I close my eyes
