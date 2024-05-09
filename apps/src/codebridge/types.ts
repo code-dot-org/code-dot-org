@@ -1,3 +1,5 @@
+import {LanguageSupport} from '@codemirror/language';
+
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
 export type {
@@ -38,6 +40,8 @@ export type ConfigType = {
   EmptyEditorComponent?: EmptyEditorComponent;
   blankEmptyEditor?: boolean;
   PreviewComponents?: {[key: string]: PreviewComponent};
+  languageMapping: {[key: string]: LanguageSupport};
+  allowedLanguages: string[];
 };
 
 export type ProjectType = MultiFileSource;

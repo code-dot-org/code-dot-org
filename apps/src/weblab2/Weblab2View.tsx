@@ -7,7 +7,6 @@ import {Config} from './Config';
 import {Codebridge} from '@codebridge/Codebridge';
 import {ConfigType, ProjectType} from '@codebridge/types';
 
-import {Editor as CDOEditor} from '@codebridge/Editor';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import {css} from '@codemirror/lang-css';
@@ -19,8 +18,8 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
   css: css(),
 };
 
-const DefaultEditorComponent = () =>
-  CDOEditor(weblabLangMapping, ['html', 'css']);
+// const DefaultEditorComponent = () =>
+//   CDOEditor(weblabLangMapping, ['html', 'css']);
 
 const horizontalLayout = {
   gridLayoutRows: '32px 300px auto',
@@ -41,7 +40,9 @@ const verticalLayout = {
 
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
-  EditorComponent: DefaultEditorComponent,
+  //EditorComponent: DefaultEditorComponent,
+  languageMapping: weblabLangMapping,
+  allowedLanguages: ['html', 'css'],
   // editableFileTypes: ["html"],
   // previewFileTypes: ["html"],
   leftNav: [
@@ -208,11 +209,12 @@ const Weblab2View = () => {
             ) => {
               if (configName === 'project') {
                 setSource(newConfig as ProjectType);
-              } else if (configName === 'config' || configName === 'layout') {
-                (newConfig as ConfigType).EditorComponent =
-                  DefaultEditorComponent;
-                setConfig(newConfig as ConfigType);
               }
+              // else if (configName === 'config' || configName === 'layout') {
+              //   (newConfig as ConfigType).EditorComponent =
+              //     DefaultEditorComponent;
+              //   setConfig(newConfig as ConfigType);
+              // }
               setShowConfig('');
             }}
             cancelConfig={() => setShowConfig('')}

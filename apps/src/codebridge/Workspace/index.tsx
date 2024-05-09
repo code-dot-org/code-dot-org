@@ -2,18 +2,14 @@ import React from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
+import {useCodebridgeContext} from '../codebridgeContext';
+import {Editor} from '../Editor';
 import {FileTabs} from '../FileTabs';
-import {EditorComponent} from '../types';
 
 import HeaderButtons from './HeaderButtons';
 
-interface WorkspaceProps {
-  EditorComponent: EditorComponent | React.ExoticComponent;
-}
-
-const Workspace: React.FunctionComponent<WorkspaceProps> = ({
-  EditorComponent,
-}) => {
+const Workspace = () => {
+  const {config} = useCodebridgeContext();
   return (
     <PanelContainer
       id="editor-workspace"
@@ -22,10 +18,12 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
     >
       <div>
         <FileTabs />
-        <EditorComponent />
+        <Editor
+          langMapping={config.languageMapping}
+          editableFileTypes={config.allowedLanguages}
+        />
       </div>
     </PanelContainer>
   );
 };
-
 export default Workspace;

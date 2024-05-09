@@ -2,7 +2,6 @@
 import React, {useState} from 'react';
 import moduleStyles from './pythonlab-view.module.scss';
 import {ConfigType} from '@codebridge/types';
-import {Editor} from '@codebridge/Editor';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
@@ -40,7 +39,8 @@ const defaultProject: ProjectSources = {
 
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
-  EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
+  languageMapping: pythonlabLangMapping,
+  allowedLanguages: ['py', 'csv', 'txt'],
   leftNav: [
     {
       icon: 'fa-square-check',

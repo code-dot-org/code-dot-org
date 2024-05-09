@@ -44,7 +44,7 @@ export const Codebridge = React.memo(
       'preview-container': PreviewContainer,
       instructions: config.Instructions || Instructions,
       'file-tabs': FileTabs,
-      workspace: () => <Workspace EditorComponent={EditorComponent} />,
+      workspace: Workspace,
     };
 
     return (
