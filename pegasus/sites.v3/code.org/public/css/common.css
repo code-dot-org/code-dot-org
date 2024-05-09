@@ -493,14 +493,6 @@
   font-weight: var(--semi-bold-font-weight);
 }
 
-@media screen and (min-width: 970px) {
-  #stats-carousel .slide .slide-img,
-  #stats-impact-carousel .slide .slide-img {
-    width: 850px;
-    height: 503px;
-  }
-}
-
 #congress-right {
   margin: 0 0 2em 0;
 }
