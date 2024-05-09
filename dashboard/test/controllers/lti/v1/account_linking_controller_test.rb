@@ -4,9 +4,6 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   setup do
     @user = create(:teacher, email: 'test@lti.com')
     @lti_integration = create :lti_integration
-  end
-
-  setup do
     DCDO.stubs(:get)
     DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
   end
