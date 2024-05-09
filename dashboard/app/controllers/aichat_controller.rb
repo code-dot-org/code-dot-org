@@ -2,110 +2,97 @@ class AichatController < ApplicationController
   include AichatSagemakerHelper
   authorize_resource class: false
 
-  def chat_completion
-    return render(
-      status: :ok,
-      json: {
-        messages: params[:storedMessages]
-      }
-    )
-  end
-
   # params are
   # newMessage: string
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
-  # def chat_completion
-  #
-  #   return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
-  #   unless has_required_params?
-  #     return render status: :bad_request, json: {}
-  #   end
-  #
-  #   # Check for profanity
-  #   # locale = params[:locale] || "en"
-  #   # filter_result = ShareFiltering.find_failure(params[:newMessage], locale)
-  #   # if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-  #   #   new_messages = [
-  #   #     {
-  #   #       role: 'user',
-  #   #       content: params[:newMessage],
-  #   #       status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]
-  #   #     }
-  #   #   ]
-  #   #   session_id = log_chat_session(new_messages)
-  #   #   return render(
-  #   #     status: :ok,
-  #   #     json: {
-  #   #       status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_USER],
-  #   #       flagged_content: filter_result.content,
-  #   #       session_id: session_id
-  #   #     }
-  #   #   )
-  #   # end
-  #
-  #   # Use to_unsafe_h here to allow testing this function.
-  #   # Safe params are primarily targeted at preventing "mass assignment vulnerability"
-  #   # which isn't relevant here.
-  #   input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
-  #     params.to_unsafe_h[:aichatModelCustomizations],
-  #     params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] ||
-  #       message[:status] == SharedConstants::AI_INTERACTION_STATUS[:UNKNOWN]
-  #     }
-  #   )
-  #   sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
-  #   latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
-  #
-  #   # filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
-  #   # if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-  #   #   new_messages = [
-  #   #     {
-  #   #       role: 'user',
-  #   #       content: params[:newMessage],
-  #   #       status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]
-  #   #     }
-  #   #   ]
-  #   #   session_id = log_chat_session(new_messages)
-  #   #
-  #   #   Honeybadger.notify(
-  #   #     'Profanity returned from aichat model',
-  #   #     context: {
-  #   #       flagged_content: filter_result.content,
-  #   #       aichat_session_id: session_id
-  #   #     }
-  #   #   )
-  #   #   return render(
-  #   #     status: :ok,
-  #   #     json: {
-  #   #       status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL],
-  #   #       session_id: session_id
-  #   #     }
-  #   #   )
-  #   # end
-  #
-  #   # how to manage ID?
-  #   # switch most recent user message status from unknown to ok
-  #   messages = [
-  #     *params[:storedMessages],
-  #     {
-  #       id: 100,
-  #       role: "assistant",
-  #       status: "ok",
-  #       chatMessageText: latest_assistant_response,
-  #       timestamp: 'fix this'
-  #     }
-  #   ]
-  #   # assistant_message = {role: "assistant", content: latest_assistant_response, status: SharedConstants::AI_INTERACTION_STATUS[:OK]}
-  #   # new_messages = [
-  #   #   {role: 'user', content: params[:newMessage], status: SharedConstants::AI_INTERACTION_STATUS[:OK]},
-  #   #   assistant_message,
-  #   # ]
-  #   # session_id = log_chat_session(new_messages)
-  #
-  #   render(status: :ok, json: {messages: messages})
-  # end
+  def chat_completion
+    return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
+    unless has_required_params?
+      return render status: :bad_request, json: {}
+    end
+
+    # Check for profanity
+    # locale = params[:locale] || "en"
+    # filter_result = ShareFiltering.find_failure(params[:newMessage], locale)
+    # if filter_result&.type == ShareFiltering::FailureType::PROFANITY
+    #   new_messages = [
+    #     {
+    #       role: 'user',
+    #       content: params[:newMessage],
+    #       status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]
+    #     }
+    #   ]
+    #   session_id = log_chat_session(new_messages)
+    #   return render(
+    #     status: :ok,
+    #     json: {
+    #       status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_USER],
+    #       flagged_content: filter_result.content,
+    #       session_id: session_id
+    #     }
+    #   )
+    # end
+
+    # Use to_unsafe_h here to allow testing this function.
+    # Safe params are primarily targeted at preventing "mass assignment vulnerability"
+    # which isn't relevant here.
+    input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
+      params.to_unsafe_h[:aichatModelCustomizations],
+      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] ||
+        message[:status] == SharedConstants::AI_INTERACTION_STATUS[:UNKNOWN]
+      }
+    )
+    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
+    latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
+
+    # filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
+    # if filter_result&.type == ShareFiltering::FailureType::PROFANITY
+    #   new_messages = [
+    #     {
+    #       role: 'user',
+    #       content: params[:newMessage],
+    #       status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]
+    #     }
+    #   ]
+    #   session_id = log_chat_session(new_messages)
+    #
+    #   Honeybadger.notify(
+    #     'Profanity returned from aichat model',
+    #     context: {
+    #       flagged_content: filter_result.content,
+    #       aichat_session_id: session_id
+    #     }
+    #   )
+    #   return render(
+    #     status: :ok,
+    #     json: {
+    #       status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL],
+    #       session_id: session_id
+    #     }
+    #   )
+    # end
+
+    assistant_message = {
+      id: 100,
+      role: "assistant",
+      status: SharedConstants::AI_INTERACTION_STATUS[:OK],
+      chatMessageText: latest_assistant_response,
+      timestamp: 'fix this'
+    }
+
+    # how to manage ID?
+    # switch most recent user message status from unknown to ok
+    messages = [
+      *params[:storedMessages],
+      assistant_message
+    ]
+    session_id = log_chat_session([assistant_message])
+
+    render(status: :ok, json: {messages: messages})
+  end
 
   private def has_required_params?
     begin
@@ -141,7 +128,7 @@ class AichatController < ApplicationController
     end
 
     if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations) ||
-        params[:storedMessages] != JSON.parse(session.messages)
+        params[:storedMessages][0..-1] != JSON.parse(session.messages)
       return false
     end
 
