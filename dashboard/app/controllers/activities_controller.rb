@@ -25,6 +25,7 @@ class ActivitiesController < ApplicationController
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
     solved = (params[:result] == 'true')
+    puts "solved = #{solved}"
     script_name = ''
     puts "params = #{params}"
 
@@ -45,6 +46,7 @@ class ActivitiesController < ApplicationController
     post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
     post_failed_run_milestone = Gatekeeper.allows('postFailedRunMilestone', where: {script_name: script_name}, default: true)
     final_level = @script_level.try(:end_of_script?)
+    puts "final_level = #{final_level}"
     # We should only expect milestone posts if:
     #  - post_milestone is true, AND (we post on failed runs, or this was successful), or
     #  - this is the final level in the script - we always post on final level
@@ -98,6 +100,7 @@ class ActivitiesController < ApplicationController
         level_id: @script_level.level.id,
         script_id: @script_level.script.id
       )
+      puts "current_user"
       # For lockable lessons, the last script_level (which will be a LevelGroup) is the only one where
       # we actually prevent milestone requests. It will be have no user_level until it first gets unlocked
       # so having no user_level is equivalent to being locked
@@ -141,7 +144,7 @@ class ActivitiesController < ApplicationController
         EvaluateRubricJob.perform_later(user_id: current_user.id, requester_id: current_user.id, script_level_id: @script_level.id)
       end
     end
-
+    # milestone_response defined in ApplicationController
     render json: milestone_response(
       script_level: @script_level,
       level: @level,

@@ -35,6 +35,7 @@ const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const beforeNextLevel = useCallback(() => {
+    console.log('sendSuccessReport in aichatview');
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
 

@@ -79,7 +79,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const doPlaybackUpdate = useCallback(() => {
     dispatch(setCurrentPlayheadPosition(getCurrentPlayheadPosition()));
     updateHighlightedBlocks();
-    progressManager?.updateProgress();
+    progressManager?.updateProgress(); // updateProgress called here.
   }, [
     dispatch,
     getCurrentPlayheadPosition,

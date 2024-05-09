@@ -89,7 +89,7 @@ export default class ProgressManager {
           if (!this.currentValidationState.satisfied) {
             this.currentValidationState.satisfied = validation.next;
             this.currentValidationState.message = validation.message;
-            this.onProgressChange();
+            this.onProgressChange(); // onProgressChange called here.
           }
           return;
         }

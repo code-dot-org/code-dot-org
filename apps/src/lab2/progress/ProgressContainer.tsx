@@ -34,7 +34,11 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
     dispatch(setValidationState(currentState));
 
     // Tell the external system (if there is one) about the success.
+    console.log('in ProgressContainer');
+    console.log('isScriptLevel', isScriptLevel);
+    console.log('currentState', currentState);
     if (isScriptLevel && currentState.satisfied) {
+      console.log('sendSuccessReport - appType in progresscontainer', appType);
       dispatch(sendSuccessReport(appType));
     }
   }, [dispatch, appType, isScriptLevel]);

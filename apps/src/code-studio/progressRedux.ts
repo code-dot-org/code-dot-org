@@ -328,6 +328,7 @@ export function navigateToNextLevel(): ProgressThunkAction {
 // The user has successfully completed the level and the page
 // will not be reloading.
 export function sendSuccessReport(appType: string): ProgressThunkAction {
+  console.log('sendSuccessReport');
   return (dispatch, getState) => {
     const state = getState().progress;
     const levelId = state.currentLevelId;
@@ -348,12 +349,38 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
     // so just pass 0, like some other milestone posts do.
     const userId = 0;
 
-    // An ideal score.
+    // An ideal score until validation is implemented in all lab2 servers.
     const idealPassResult = TestResults.ALL_PASS;
+
+    /*
+      app: 'dance',
+      level: this.level.id,
+      result: levelComplete,
+      testResult: this.testResults,
+      program: program,
+      onComplete: this.onReportComplete.bind(this),
+    */
+   /*
+     const serverFields = [
+    'program',
+    'app',
+    'allowMultipleSends',
+    'level',
+    'result',
+    'testResult',
+    'submitted',
+    'time',
+    'timeSinceLastMilestone',
+    'lines',
+    'attempt',
+    'image',
+  ];
+   */
 
     const data = {
       app: appType,
-      result: true,
+      level: levelId,
+      result: 'true',
       testResult: idealPassResult,
     };
 
@@ -364,6 +391,7 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
       },
       body: JSON.stringify(data),
     }).then(response => {
+      console.log('response from milestone in progressRedux', response);
       if (response.ok && levelId !== null) {
         // Update the progress store by merging in this
         // particular result immediately.

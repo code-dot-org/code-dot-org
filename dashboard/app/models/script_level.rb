@@ -156,6 +156,7 @@ class ScriptLevel < ApplicationRecord
       # unplugged level you should continue on that sequence instead of skipping to
       # next lesson)
       level_to_follow = next_progression_level(user)
+      puts "level_to_follow in if valid_progress_level= #{level_to_follow.named_level}"
     else
       # don't ever continue to a locked/hidden level
       level_to_follow = next_level
@@ -189,18 +190,18 @@ class ScriptLevel < ApplicationRecord
       # to that lesson
       script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
     else
-      puts "else unit overview page"
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
       if end_of_lesson? && script.show_unit_overview_between_lessons?
+        puts "else unit overview page"
         if script.lesson_extras_available
           script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
         else
           script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
         end
       else
-        puts "level_to_follow=#{level_to_follow}"
+        puts "level_to_follow at end of else =#{level_to_follow.named_level}"
         level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(user, script)
       end
     end
@@ -264,10 +265,12 @@ class ScriptLevel < ApplicationRecord
   end
 
   def end_of_lesson?
+    puts "end_of_lesson? lesson.script_levels.to_a.last = #{lesson.script_levels.to_a.last}"
     lesson.script_levels.to_a.last == self
   end
 
   def end_of_script?
+    puts "end_of_script? script.script_levels.to_a.last = #{script.script_levels.to_a.last}"
     script.script_levels.to_a.last == self
   end
 

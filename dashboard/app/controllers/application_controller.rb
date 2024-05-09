@@ -191,6 +191,7 @@ class ApplicationController < ActionController::Base
     level = options[:level]
 
     if script_level
+      puts "in application_controller - if script_level"
       response[:script_id] = script_level.script.id
       response[:level_id] = level.id
 

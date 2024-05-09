@@ -266,6 +266,7 @@ reporting.sendReport = function (report) {
     queryItems.push(key + '=' + report[key]);
   }
   const queryString = queryItems.join('&');
+  console.log('queryString', queryString);
 
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
@@ -298,7 +299,7 @@ reporting.sendReport = function (report) {
       report.error = xhr.responseText;
       reportComplete(report, getFallbackResponse(report));
     };
-
+    console.log('report.callback', report.callback);
     var thisAjax = $.ajax({
       type: 'POST',
       url: report.callback,
@@ -334,6 +335,9 @@ reporting.sendReport = function (report) {
           // instead
           response.redirect = appOptions.nextLevelUrl;
         }
+        console.log('calling reportComplete after post');
+        console.log('report', report);
+        console.log('response', response);
         reportComplete(report, response);
       },
       error: xhr => onNoSuccess(xhr),
@@ -408,6 +412,7 @@ function maybeParse(data) {
 function reportComplete(report, response) {
   lastAjaxRequest = null;
   if (response) {
+    console.log('response in reportComplete', response);
     lastServerResponse.report_error = report.error;
     lastServerResponse.nextRedirect = response.redirect;
     lastServerResponse.videoInfo = response.video_info;

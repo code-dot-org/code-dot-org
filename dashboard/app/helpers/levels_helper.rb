@@ -253,6 +253,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
 
     if @script_level
+      puts "set next_level_url"
       view_options(
         lesson_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,

@@ -23,7 +23,7 @@ export default function usePlaybackUpdate(
       if (intervalId.current !== undefined) {
         window.clearInterval(intervalId.current);
       }
-      intervalId.current = window.setInterval(doUpdate, UPDATE_RATE);
+      intervalId.current = window.setInterval(doUpdate, UPDATE_RATE); // when user plays run
     } else {
       onStop?.();
       window.clearInterval(intervalId.current);
