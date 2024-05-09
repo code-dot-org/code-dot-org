@@ -1,7 +1,8 @@
 /** @file Redux actions and reducer for the Projects Gallery */
 
 /* eslint-disable import/order */
-// Disabling import order due to circular dependencies.
+// Disabling import order due to circular dependencies errors from build.
+// This could be fixed by disabling import/order on specific imports.
 import {combineReducers} from 'redux';
 import $ from 'jquery';
 import _ from 'lodash';

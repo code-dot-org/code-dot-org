@@ -1,5 +1,6 @@
 /* eslint-disable import/order */
-// Disabling import order due to circular dependencies.
+// Disabling import order due to circular dependencies errors from build.
+// This could be fixed by disabling import/order on specific imports.
 import PropTypes from 'prop-types';
 import React from 'react';
 import VersionRow from './VersionRow';
