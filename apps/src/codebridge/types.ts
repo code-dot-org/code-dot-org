@@ -34,10 +34,8 @@ export type ConfigType = {
   gridLayout: string;
   gridLayoutRows?: string;
   gridLayoutColumns?: string;
-  EditorComponent?: EditorComponent;
   editableFileTypes?: string[];
   previewFileTypes?: string[];
-  EmptyEditorComponent?: EmptyEditorComponent;
   blankEmptyEditor?: boolean;
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};

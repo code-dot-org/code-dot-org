@@ -1,7 +1,5 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import DisabledEditor from '@codebridge/Editor/DisabledEditor';
 import {FileBrowser} from '@codebridge/FileBrowser';
-import {FileTabs} from '@codebridge/FileTabs';
 import {useSynchronizedProject} from '@codebridge/hooks';
 import {Instructions} from '@codebridge/Instructions';
 import {PreviewContainer} from '@codebridge/PreviewContainer';
@@ -35,15 +33,11 @@ export const Codebridge = React.memo(
       setProject
     );
 
-    const EditorComponent = config.EditorComponent || DisabledEditor;
-
     const ComponentMap = {
       'file-browser': FileBrowser,
       'side-bar': SideBar,
-      editor: EditorComponent,
       'preview-container': PreviewContainer,
       instructions: config.Instructions || Instructions,
-      'file-tabs': FileTabs,
       workspace: Workspace,
     };
 

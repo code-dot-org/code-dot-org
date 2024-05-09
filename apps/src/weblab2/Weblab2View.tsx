@@ -18,9 +18,6 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
   css: css(),
 };
 
-// const DefaultEditorComponent = () =>
-//   CDOEditor(weblabLangMapping, ['html', 'css']);
-
 const horizontalLayout = {
   gridLayoutRows: '32px 300px auto',
   gridLayoutColumns: '300px auto auto',
@@ -40,11 +37,8 @@ const verticalLayout = {
 
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
-  //EditorComponent: DefaultEditorComponent,
   languageMapping: weblabLangMapping,
   allowedLanguages: ['html', 'css'],
-  // editableFileTypes: ["html"],
-  // previewFileTypes: ["html"],
   leftNav: [
     {
       icon: 'fa-square-check',

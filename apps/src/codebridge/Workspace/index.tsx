@@ -1,10 +1,9 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {Editor} from '@codebridge/Editor';
+import {FileTabs} from '@codebridge/FileTabs';
 import React from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-
-import {useCodebridgeContext} from '../codebridgeContext';
-import {Editor} from '../Editor';
-import {FileTabs} from '../FileTabs';
 
 import HeaderButtons from './HeaderButtons';
 
