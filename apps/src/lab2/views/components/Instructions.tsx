@@ -68,6 +68,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const showNextButton =
     (!hasConditions || satisfied) && levelIndex + 1 < currentLevelCount;
 
+  const showFinishButton =
+    (!hasConditions || satisfied) && levelIndex + 1 === currentLevelCount;
+
   const dispatch = useAppDispatch();
 
   const {theme} = useContext(ThemeContext);
@@ -90,6 +93,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       message={message || undefined}
       messageIndex={index}
       showNextButton={showNextButton}
+      showFinishButton={showFinishButton}
+      beforeNextLevel={beforeNextLevel}
       onNextPanel={onNextPanel}
       theme={theme}
       {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
@@ -108,6 +113,10 @@ interface InstructionsPanelProps {
   imageUrl?: string;
   /** If the next button should be shown. */
   showNextButton?: boolean;
+  /** If the finish button should be shown. */
+  showFinishButton?: boolean;
+  /** Additional callback to fire before navigating to the next level. */
+  beforeNextLevel?: () => void;
   /** Callback to call when clicking the next button. */
   onNextPanel?: () => void;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
@@ -135,6 +144,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   messageIndex,
   imageUrl,
   showNextButton,
+  showFinishButton,
+  beforeNextLevel,
   onNextPanel,
   layout = 'vertical',
   imagePopOutDirection = 'right',
@@ -150,6 +161,15 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   const vertical = layout === 'vertical';
 
   const canShowNextButton = showNextButton && onNextPanel;
+
+  const canShowFinishButton = showFinishButton;
+
+  const onFinish = () => {
+    if (beforeNextLevel) {
+      beforeNextLevel();
+    }
+    console.log('Congrats! You finished!');
+  };
 
   return (
     <div
@@ -216,7 +236,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             />
           </div>
         )}
-        {(message || canShowNextButton) && (
+        {(message || canShowNextButton || canShowFinishButton) && (
           <div
             key={messageIndex + ' - ' + message}
             id="instructions-feedback"
@@ -238,9 +258,19 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   id="instructions-feedback-button"
                   type="button"
                   onClick={onNextPanel}
-                  className={moduleStyles.buttonNext}
+                  className={moduleStyles.buttonContinue}
                 >
                   {commonI18n.continue()}
+                </button>
+              )}
+              {canShowFinishButton && (
+                <button
+                  id="instructions-feedback-button"
+                  type="button"
+                  onClick={onFinish}
+                  className={moduleStyles.buttonContinue}
+                >
+                  {commonI18n.finish()}
                 </button>
               )}
             </div>
