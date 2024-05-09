@@ -1,4 +1,4 @@
-# `apps/src/componentLibrary/tolltip`
+# `apps/src/componentLibrary/tooltip`
 
 ## Consuming This Component
 
