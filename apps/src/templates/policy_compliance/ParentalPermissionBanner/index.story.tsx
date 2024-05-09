@@ -37,5 +37,5 @@ export const Default = () => {
 
   useReducerStub.returns([state, spy]);
 
-  return <ParentalPermissionBanner lockoutDate={Date()} />;
+  return <ParentalPermissionBanner lockoutDate={new Date().toISOString()} />;
 };

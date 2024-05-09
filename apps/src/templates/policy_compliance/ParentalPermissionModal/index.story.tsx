@@ -33,7 +33,7 @@ const useReducerStub = sinon.stub(React, 'useReducer');
 const Template = (state: object = {}) => {
   useReducerStub.returns([state, spy]);
 
-  return <ParentalPermissionModal lockoutDate={Date()} />;
+  return <ParentalPermissionModal lockoutDate={new Date().toISOString()} />;
 };
 
 export const NewRequestForm = () => {
@@ -48,7 +48,7 @@ export const UpdateRequestForm = () => {
   const state = {
     parentalPermissionRequest: {
       parent_email: 'parent@email.com',
-      requested_at: Date(),
+      requested_at: new Date().toISOString(),
     },
   };
 
