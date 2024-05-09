@@ -56,7 +56,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
   const prevParentalPermissionRequest = usePrevious(parentalPermissionRequest);
 
   const reportEvent = (eventName: string, payload: object = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.STATSIG);
+    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
   };
 
   useEffect(() => {
