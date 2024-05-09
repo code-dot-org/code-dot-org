@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require_relative '../../dashboard/config/environment'
+
+def main
+  CSV.open("output.csv", "w") do |csv|
+    headers = %w[
+      id user_id level_id script_id project_id created_at
+      updated_at selectedModelId temperature systemPrompt retrievalContexts
+      status role content
+    ]
+    csv << headers
+
+    AichatSession.last(10).each do |session|
+      model_customizations = JSON.parse(session.model_customizations)
+      messages = JSON.parse(session.messages)
+
+      base_row = [
+        session.id,
+        session.user_id,
+        session.level_id,
+        session.script_id,
+        session.project_id,
+        session.created_at,
+        session.updated_at,
+        model_customizations["selectedModelId"],
+        model_customizations["temperature"],
+        model_customizations["systemPrompt"],
+        model_customizations["retrievalContexts"],
+      ]
+
+      messages.each do |message|
+        row = [
+          *base_row,
+          message["status"],
+          message["role"],
+          message["content"]
+        ]
+        csv << row
+      end
+    end
+  end
+end
+
+main
