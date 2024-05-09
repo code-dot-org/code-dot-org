@@ -191,3 +191,49 @@ $container-width: 309px;
     }
   }
 }
+
+.wideCard {
+  display: flex;
+  height: 305px;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  width: 960px;
+  border-radius: 4px;
+  border: 1px solid $neutral_dark;
+  background: $neutral_white;
+}
+
+.wideCardImg {
+  height: 305px;
+  width: 480px;
+  object-fit: cover;
+  border-radius: $border-radius $border-radius 0 0;
+}
+
+.wideCardContentAndButtons {
+  display: flex;
+  padding: 16px 24px 20px 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+}
+
+.wideCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.wideCardButtonsContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+p.wideCardDescription {
+  margin-bottom: 0.5em;
+}
