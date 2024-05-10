@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "What is a situation where you think Chain of Reasoning could be useful?\r\n\r\nWhat is a situation where you think Response Examples could be useful?",
+    "long_instructions": "What is a situation where you think Chain of Reasoning could be useful?\r\n\r\nWhat is a situation where you think Providing Examples could be useful?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19018,
@@ -22,7 +22,7 @@
     "placeholder": "Type your answer here!"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:09:10.702+00:00\",\"changed\":[\"cloned from \\\"gen-ai-response-template\\\"\"],\"cloned_from\":\"gen-ai-response-template\"},{\"changed_at\":\"2024-05-08 03:08:55 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:09:10.702+00:00\",\"changed\":[\"cloned from \\\"gen-ai-response-template\\\"\"],\"cloned_from\":\"gen-ai-response-template\"},{\"changed_at\":\"2024-05-08 03:08:55 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 19:32:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

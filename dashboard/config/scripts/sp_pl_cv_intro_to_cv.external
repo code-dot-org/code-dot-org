@@ -5,13 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson 1: Introduction to Computer Vision
 
-#### In this introductory lesson on computer vision, students explore the fundamentals of how computers interpret visual data. The lesson begins with a warm-up activity where students hypothesize algorithms to differentiate between "X" and "O". They then engage with a video that discusses the basics of machine learning and the recognition of complex shapes in computer vision.
+<img src="https://images.code.org/d84e29dc1d036a5fd755e0f1ca039ffa-image-1715268406186.png" alt="cat from the pixel activity" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px; transform: scaleX(-1);">
 
-#### The core activity, "The Search for Pixel," provides a hands-on approach to understanding image processing through a series of problem-solving rounds. By the end of the lesson, students should be able to construct a working definition of computer vision and identify its real-world applications.
+#### In this introductory lesson on computer vision, students explore the fundamentals of **how computers interpret visual data**. 
 
+#### The core activity, **"The Search for Pixel,"** provides a hands-on approach to understanding image processing through a series of problem-solving rounds. 
 
+#### By the end of the lesson, students should be able to construct a working definition of **computer vision** and identify its **real-world applications.**
 
+## Check it out!
 
+#### Explore the **Search for Pixel** activity on the next level. Read the directions carefully and click through the provided slides to experience some of the activity. You can work through the entire activity, or just part of it to get an idea of what your students will learn. 
 
 
 MARKDOWN

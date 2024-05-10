@@ -30,6 +30,7 @@ class Policies::ChildAccount
   STATE_POLICY = {
     'CO' => {
       max_age: 12,
+      lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::ALL_USER_LOCKOUT => '2024-07-01T00:00:00MST'})[Cpa::ALL_USER_LOCKOUT]),
       start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => '2023-07-01T00:00:00Z'})[Cpa::NEW_USER_LOCKOUT])
     }
   }.freeze
@@ -37,6 +38,12 @@ class Policies::ChildAccount
   # The delay is intended to provide notice to a parent
   # when a student may no longer be monitoring the "parent's email."
   PERMISSION_GRANTED_MAIL_DELAY = 24.hours
+
+  # The maximum number of daily requests a student can send to their parent.
+  MAX_STUDENT_DAILY_PARENT_PERMISSION_REQUESTS = 3
+
+  # The maximum number of times a student can resend a request to a parent.
+  MAX_PARENT_PERMISSION_RESENDS = 3
 
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
@@ -72,14 +79,31 @@ class Policies::ChildAccount
     parent_permission_required?(user) && user.created_at < STATE_POLICY[user.us_state][:start_date]
   end
 
+  # The date on which the student's account will be locked if the account is not compliant.
+  def self.lockout_date(user)
+    return if compliant?(user)
+    state_policy(user).try(:[], :lockout_date)
+  end
+
+  private_class_method def self.state_policy(user)
+    return unless user.us_state
+    STATE_POLICY[user.us_state]
+  end
+
   # Check if parent permission is required for this account according to our
   # Child Account Policy.
   private_class_method def self.parent_permission_required?(user)
-    return false unless user.us_state
-    policy = STATE_POLICY[user.us_state]
+    return false unless user.student?
+
+    policy = state_policy(user)
     return false unless policy
-    return false unless policy[:start_date] < DateTime.now
-    return false unless user.age.to_i <= policy[:max_age].to_i
+
+    lockout_date = policy[:lockout_date]
+    student_birthday = user.birthday.in_time_zone(lockout_date.utc_offset)
+    min_required_age = policy[:max_age].next.years
+    # Checks if the student meets the minimum age requirement at the start of the lockout
+    return false if student_birthday.since(min_required_age) <= lockout_date
+
     personal_account?(user)
   end
 

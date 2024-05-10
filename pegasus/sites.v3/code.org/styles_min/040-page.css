@@ -826,19 +826,6 @@ a.about_list_item:hover {
   border-radius: 5px;
 }
 
-#stats-carousel .slide-prev > span {
-  border-right-color: #b9bf15;
-}
-#stats-carousel .slide-next > span {
-  border-left-color: #b9bf15;
-}
-.carousel-wrapper .pagination a {
-  background: var(--brand_primary_light);
-}
-.carousel-wrapper .pagination a.selected {
-  background: var(--brand_primary_default);
-}
-
 @media screen and (max-width: 450px) {
   #index .count h1 {
     font-size: 32px;
