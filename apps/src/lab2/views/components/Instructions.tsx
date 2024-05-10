@@ -8,7 +8,7 @@ import {
   levelCount,
   currentLevelIndex,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState} from '../../lab2Redux';
 import {ProjectLevelData} from '../../types';
@@ -169,8 +169,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
 
   const canShowFinishButton = showFinishButton;
 
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-
   const onFinish = useCallback(() => {
     if (beforeFinish) {
       beforeFinish();
@@ -178,10 +176,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
     setIsFinished(true);
   }, [beforeFinish]);
 
-  // When the level changes, the Finish button is active again if user returns to last level.
+  // Reset the Finish button state when it changes from shown to hidden.
   useEffect(() => {
     setIsFinished(false);
-  }, [currentLevelId]);
+  }, [canShowFinishButton]);
 
   const finalMessage =
     'You finished this lesson! Check in with your teacher for the next activity';
