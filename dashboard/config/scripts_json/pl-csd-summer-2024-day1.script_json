@@ -8,11 +8,12 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-04 01:36:54 UTC",
+    "serialized_at": "2024-05-07 20:48:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1412,6 +1413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Sample CSS text_CSD-PL-23"
+        ],
         "progression": "Sample Website"
       },
       "bonus": false,
@@ -1434,6 +1438,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS explore CSS_CSD-PL-23"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1456,6 +1463,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h1_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1478,6 +1488,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h3_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1500,6 +1513,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1522,6 +1538,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice 2_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1544,6 +1563,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style size_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1566,6 +1588,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 add file_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1588,6 +1613,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS practice_pilot_CSD-PL-23"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1610,6 +1638,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Web CSS Assessment_CSD-PL-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1632,6 +1663,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L6 Assess FR_CSD-PL-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1654,6 +1688,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS challenge_pilot_CSD-PL-23"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1927,43 +1964,43 @@
   ],
   "resources": [
     {
-      "name": "Activity Packet",
-      "url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-      "key": "activity_packet",
+      "name": "CSD Activity Packet 2024",
+      "url": "https://docs.google.com/document/d/1e6h0_yN0txqYVXmxUEco5ldh0l1K8cU4tukxdnXh3Xo/edit?usp=drive_link",
+      "key": "csd_activity_packet_2024",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-        "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "activity_packet"
+        "resource.key": "csd_activity_packet_2024"
       }
     },
     {
-      "name": "Day 1 Agenda",
-      "url": "https://docs.google.com/document/d/1gHO0llCfUmKVlmanE_ihc9F-3zI6_hy7F1z2UqqLGZ8/edit#",
-      "key": "day_1_agenda",
+      "name": "CSD In-Person Summer Workshop Day 1 Agenda",
+      "url": "https://docs.google.com/document/d/19yDO9ZvDvwaoOJq7xsHpWMTt9M2NoSLb2QG9WwTqgmo/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_1_agenda_1",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1gHO0llCfUmKVlmanE_ihc9F-3zI6_hy7F1z2UqqLGZ8/edit#",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "day_1_agenda"
+        "resource.key": "csd_in-person_summer_workshop_day_1_agenda_1"
       }
     },
     {
-      "name": "Day 1 Slides Template",
-      "url": "https://docs.google.com/presentation/d/1Q_gFGh9AjjMiXgjqjZF1E8sH9LwLpiV9HpzzO0oy298/view",
-      "key": "day_1_slides_template",
+      "name": "CSD In-Person Summer Workshop Day 1 Slides",
+      "url": "https://docs.google.com/presentation/d/1Bi6jmjag7-ZdKhmcZLfX6jyBrYMMt7gAyBxLmTkmIlk/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_1_slides_1",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Q_gFGh9AjjMiXgjqjZF1E8sH9LwLpiV9HpzzO0oy298/view",
-        "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "day_1_slides_template"
+        "resource.key": "csd_in-person_summer_workshop_day_1_slides_1"
+      }
+    },
+    {
+      "name": "CSD Resource Packet 2024",
+      "url": "https://docs.google.com/document/d/17b0KVjqOsr2X3NUyE6gS82SEkXOsAuEE815H_Z6FRGU/edit?usp=drive_link",
+      "key": "csd_resource_packet_2024",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024"
       }
     },
     {
@@ -2199,31 +2236,30 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "activity_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_1_agenda_1",
         "script.name": "pl-csd-summer-2024-day1"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "day_1_agenda",
-        "script.name": "pl-csd-summer-2024-day1"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "day_1_slides_template",
-        "script.name": "pl-csd-summer-2024-day1"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "resource_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_1_slides_1",
         "script.name": "pl-csd-summer-2024-day1"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_activity_packet_2024",
+        "script.name": "pl-csd-summer-2024-day1"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024",
+        "script.name": "pl-csd-summer-2024-day1"
+      }
+    }
   ],
   "vocabularies": [
     {

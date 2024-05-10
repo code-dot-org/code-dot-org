@@ -1,11 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-05-04T02:16:51.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Title\r\n\r\nQuestion!",
+    "long_instructions": "<img style=\"width: 400px; float: right;  margin: 5px\" src=\"https://images.code.org/193057c22cae98e713bdd478891f91c0-image-1715203719083.png\" />\r\n\r\nBased on feedback and his own personal expertise, Dan is about to introduce Version 2 of his chatbot. This version has an additional setting called retrieval, which we'll learn more about in this lesson. \r\n\r\nBased just on this screenshot: What do you notice? What do you wonder?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19018,
@@ -15,13 +16,14 @@
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
-    "optional": "true",
+    "optional": "false",
     "allow_multiple_attempts": "true",
-    "title": "Free Response Question",
-    "placeholder": "Type your answer here!"
+    "title": "Predict (Part 1)",
+    "placeholder": "What do you notice? What do you wonder?"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:16:51.226+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L8\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L8\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:16:51.226+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L8\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L8\"},{\"changed_at\":\"2024-05-08 21:30:18 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\",\"placeholder\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

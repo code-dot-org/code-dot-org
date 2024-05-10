@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-customizing-pilot-v1",
-    "serialized_at": "2024-05-06 18:31:25 UTC",
+    "serialized_at": "2024-05-08 22:44:55 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1160,8 +1160,19 @@
       }
     },
     {
-      "key": "4ae95005-4a9b-4c93-8bf8-886fdf1211ce",
+      "key": "db648d7b-a682-42e5-9b47-27f62e5fdda9",
       "position": 3,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "db648d7b-a682-42e5-9b47-27f62e5fdda9",
+        "lesson_activity.key": "46199fc1-bb0f-4da3-9d51-ad4aa35c64fe"
+      }
+    },
+    {
+      "key": "4ae95005-4a9b-4c93-8bf8-886fdf1211ce",
+      "position": 4,
       "properties": {
         "progression_name": "Check-In"
       },
@@ -1171,21 +1182,10 @@
       }
     },
     {
-      "key": "db648d7b-a682-42e5-9b47-27f62e5fdda9",
-      "position": 4,
-      "properties": {
-        "progression_name": "Show What You Know"
-      },
-      "seeding_key": {
-        "activity_section.key": "db648d7b-a682-42e5-9b47-27f62e5fdda9",
-        "lesson_activity.key": "46199fc1-bb0f-4da3-9d51-ad4aa35c64fe"
-      }
-    },
-    {
       "key": "d6e9958b-86ca-4fa5-804b-7bf8ba2a4b07",
       "position": 5,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Show What You Know"
       },
       "seeding_key": {
         "activity_section.key": "d6e9958b-86ca-4fa5-804b-7bf8ba2a4b07",
@@ -1459,6 +1459,28 @@
       }
     },
     {
+      "key": "2dd857da-56d3-43c8-b3e6-e4c43763a6ae",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "2dd857da-56d3-43c8-b3e6-e4c43763a6ae",
+        "lesson_activity.key": "3ac5662b-c3e1-4f91-b4b2-bae0f38ed15f"
+      }
+    },
+    {
+      "key": "734a888b-519e-4ff4-8dbd-0186d113891b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "activity_section.key": "734a888b-519e-4ff4-8dbd-0186d113891b",
+        "lesson_activity.key": "3ac5662b-c3e1-4f91-b4b2-bae0f38ed15f"
+      }
+    },
+    {
       "key": "7b2d8469-1135-4338-b031-786454efbfc9",
       "position": 1,
       "properties": {
@@ -1705,6 +1727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L1"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -1727,6 +1752,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L2"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -1749,6 +1777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L3"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -1771,6 +1802,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L4"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -1793,6 +1827,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L5"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -1815,6 +1852,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L6"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -1837,6 +1877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L7"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -1859,6 +1902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2557,6 +2603,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "db648d7b-a682-42e5-9b47-27f62e5fdda9"
+      },
+      "level_keys": [
+        "gen-ai-customizing-prompt-synthesis-L9"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "gen-ai-customizing-prompt-synthesis-L8"
         ],
         "progression": "Check-In"
@@ -2576,45 +2647,17 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 9,
+      "chapter": 38,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gen-ai-customizing-prompt-synthesis-L9"
-        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-customizing-prompt-synthesis-L9"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-customizing-pilot-v1",
-        "activity_section.key": "db648d7b-a682-42e5-9b47-27f62e5fdda9"
-      },
-      "level_keys": [
-        "gen-ai-customizing-prompt-synthesis-L9"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-prompt-synthesis-L10"
-        ],
-        "progression": "Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-prompt-synthesis-L10"
+          "gen-ai-customizing-prompt-synthesis-10V2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
@@ -2622,7 +2665,7 @@
         "activity_section.key": "d6e9958b-86ca-4fa5-804b-7bf8ba2a4b07"
       },
       "level_keys": [
-        "gen-ai-customizing-prompt-synthesis-L10"
+        "gen-ai-customizing-prompt-synthesis-10V2"
       ]
     },
     {
@@ -2781,15 +2824,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gen-ai-customizing-retrieval-explore-L7"
-        ],
         "progression": "Modify"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-customizing-retrieval-explore-L7"
+          "gen-ai-customizing-retrieval-explore-L7A"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
@@ -2797,7 +2837,7 @@
         "activity_section.key": "23ac3e99-e095-48c0-97e3-dda40fec3b54"
       },
       "level_keys": [
-        "gen-ai-customizing-retrieval-explore-L7"
+        "gen-ai-customizing-retrieval-explore-L7A"
       ]
     },
     {
@@ -3352,6 +3392,50 @@
     },
     {
       "chapter": 68,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2dd857da-56d3-43c8-b3e6-e4c43763a6ae"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L10"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Show What You Know"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "734a888b-519e-4ff4-8dbd-0186d113891b"
+      },
+      "level_keys": [
+        "gen-ai-customizing-retrieval-synthesis-L11"
+      ]
+    },
+    {
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3376,7 +3460,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3401,7 +3485,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3426,7 +3510,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3451,7 +3535,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -3476,7 +3560,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3501,7 +3585,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3526,7 +3610,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3551,11 +3635,14 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L1"
+        ],
         "progression": "Model, Temperature, and Prompt"
       },
       "bonus": false,
@@ -3573,11 +3660,14 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L2"
+        ],
         "progression": "Retrieval"
       },
       "bonus": false,
@@ -3595,11 +3685,14 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L3"
+        ],
         "progression": "Model Card"
       },
       "bonus": false,
@@ -4040,18 +4133,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-prompt-synthesis-L8",
-        "script_level.level_keys": [
-          "gen-ai-customizing-prompt-synthesis-L8"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-customizing-pilot-v1",
-        "activity_section.key": "4ae95005-4a9b-4c93-8bf8-886fdf1211ce"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-customizing-prompt-synthesis-L9",
         "script_level.level_keys": [
           "gen-ai-customizing-prompt-synthesis-L9"
@@ -4064,9 +4145,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-prompt-synthesis-L10",
+        "level.key": "gen-ai-customizing-prompt-synthesis-L8",
         "script_level.level_keys": [
-          "gen-ai-customizing-prompt-synthesis-L10"
+          "gen-ai-customizing-prompt-synthesis-L8"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "4ae95005-4a9b-4c93-8bf8-886fdf1211ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-prompt-synthesis-10V2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-prompt-synthesis-10V2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
@@ -4148,9 +4241,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-retrieval-explore-L7",
+        "level.key": "gen-ai-customizing-retrieval-explore-L7A",
         "script_level.level_keys": [
-          "gen-ai-customizing-retrieval-explore-L7"
+          "gen-ai-customizing-retrieval-explore-L7A"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
@@ -4420,6 +4513,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-customizing-pilot-v1",
         "activity_section.key": "0f933cad-60cb-400b-ba81-f265c5d15b48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L10",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "2dd857da-56d3-43c8-b3e6-e4c43763a6ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-retrieval-synthesis-L11",
+        "script_level.level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-customizing-pilot-v1",
+        "activity_section.key": "734a888b-519e-4ff4-8dbd-0186d113891b"
       }
     },
     {
