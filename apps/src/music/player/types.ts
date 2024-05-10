@@ -100,8 +100,8 @@ export interface SampleEvent {
   effects?: Effects;
   // Length in measures to play the sample for
   length?: number;
-  // Whether the event is a preview that should be played in original form.
-  preview?: boolean;
+  // Whether tempo should not be adjusted.
+  disableTempoAdjustment?: boolean;
 }
 
 /** A sequence of notes played on a sampler instrument */
