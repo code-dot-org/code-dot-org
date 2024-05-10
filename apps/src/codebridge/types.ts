@@ -34,12 +34,11 @@ export type ConfigType = {
   gridLayout: string;
   gridLayoutRows?: string;
   gridLayoutColumns?: string;
-  editableFileTypes?: string[];
+  editableFileTypes: string[];
   previewFileTypes?: string[];
   blankEmptyEditor?: boolean;
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
-  allowedLanguages: string[];
 };
 
 export type ProjectType = MultiFileSource;

@@ -40,7 +40,7 @@ const defaultProject: ProjectSources = {
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
   languageMapping: pythonlabLangMapping,
-  allowedLanguages: ['py', 'csv', 'txt'],
+  editableFileTypes: ['py', 'csv', 'txt'],
   leftNav: [
     {
       icon: 'fa-square-check',

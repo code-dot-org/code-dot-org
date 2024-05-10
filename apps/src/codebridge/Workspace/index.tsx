@@ -20,7 +20,7 @@ const Workspace = () => {
       <FileTabs />
       <Editor
         langMapping={config.languageMapping}
-        editableFileTypes={config.allowedLanguages}
+        editableFileTypes={config.editableFileTypes}
       />
     </PanelContainer>
   );

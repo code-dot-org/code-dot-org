@@ -38,7 +38,7 @@ const verticalLayout = {
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
   languageMapping: weblabLangMapping,
-  allowedLanguages: ['html', 'css'],
+  editableFileTypes: ['html', 'css'],
   leftNav: [
     {
       icon: 'fa-square-check',
