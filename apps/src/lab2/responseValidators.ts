@@ -30,20 +30,20 @@ const BlocklySourceResponseValidator: ResponseValidator<
   return sourceValidatorHelper(response, blocklyValidator);
 };
 
-// Validator for Python sources.
-const PythonSourceResponseValidator: ResponseValidator<
+// Validator for CodeBridge sources.
+const CodeBridgeSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  const pythonValidator = (responseToValidate: Record<string, unknown>) => {
+  const codeBridgeValidator = (responseToValidate: Record<string, unknown>) => {
     if (typeof responseToValidate.source === 'string') {
-      throw new ValidationError('Python sources must be a JSON object');
+      throw new ValidationError('CodeBridge sources must be a JSON object');
     }
     const source = responseToValidate.source as MultiFileSource;
     if (!source?.files || !source.folders) {
       throw new ValidationError('Invalid source code');
     }
   };
-  return sourceValidatorHelper(response, pythonValidator);
+  return sourceValidatorHelper(response, codeBridgeValidator);
 };
 
 // Validator for non-Blockly labs that use JSON sources
@@ -72,8 +72,8 @@ export const SourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
   const appName = Lab2Registry.getInstance().getAppName();
-  if (appName === 'pythonlab') {
-    return PythonSourceResponseValidator(response);
+  if (appName === 'pythonlab' || appName === 'weblab2') {
+    return CodeBridgeSourceResponseValidator(response);
   } else if (appName !== null && BLOCKLY_LABS.includes(appName)) {
     // Blockly labs
     return BlocklySourceResponseValidator(response);
