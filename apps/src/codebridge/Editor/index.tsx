@@ -39,7 +39,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     return <div>Cannot currently edit files of type {file.language}</div>;
   }
 
-  console.log(`rendering editor for file ${file.id}/${1}`);
   return (
     <div className="editor-container">
       {file && (

@@ -28,14 +28,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
   useEffect(() => {
-    console.log(
-      `in editor setup useEffect, didInit is ${didInit}, editorRef is ${editorRef.current}`
-    );
     if (editorRef.current === null || didInit) {
-      console.log('returning early');
       return;
     }
-    console.log('not returning early');
 
     const onEditorUpdate = EditorView.updateListener.of(
       (update: ViewUpdate) => {
@@ -77,7 +72,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // A new channelId means we are loading a new project, and we need to reset the editor.
   useEffect(() => {
     if (editorView && editorView.state.doc.toString() !== startCode) {
-      console.log('resetting editor');
       editorView.dispatch({
         changes: {
           from: 0,

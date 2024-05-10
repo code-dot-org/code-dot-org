@@ -15,8 +15,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const onClickStartOver = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog(DialogType.StartOver, resetProject);
-    } else {
-      console.log('no dialog control');
     }
   }, [dialogControl, resetProject]);
 

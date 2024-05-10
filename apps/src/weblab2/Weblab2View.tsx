@@ -21,17 +21,17 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
 const horizontalLayout = {
   gridLayoutRows: '32px 300px auto',
   gridLayoutColumns: '300px auto auto',
-  gridLayout: `    "instructions file-tabs preview-container"
-      "instructions editor preview-container"
-      "file-browser editor preview-container"`,
+  gridLayout: `    "instructions workspace preview-container"
+      "instructions workspace preview-container"
+      "file-browser workspace preview-container"`,
 };
 
 const verticalLayout = {
   gridLayoutRows: '32px 300px auto auto',
   gridLayoutColumns: '300px auto',
-  gridLayout: `    "instructions file-tabs file-tabs"
-      "instructions editor editor"
-      "file-browser editor editor"
+  gridLayout: `    "instructions workspace workspace"
+      "instructions workspace workspace"
+      "file-browser workspace workspace"
       "file-browser preview-container preview-container"`,
 };
 
@@ -203,12 +203,9 @@ const Weblab2View = () => {
             ) => {
               if (configName === 'project') {
                 setSource(newConfig as ProjectType);
+              } else if (configName === 'config' || configName === 'layout') {
+                setConfig(newConfig as ConfigType);
               }
-              // else if (configName === 'config' || configName === 'layout') {
-              //   (newConfig as ConfigType).EditorComponent =
-              //     DefaultEditorComponent;
-              //   setConfig(newConfig as ConfigType);
-              // }
               setShowConfig('');
             }}
             cancelConfig={() => setShowConfig('')}
