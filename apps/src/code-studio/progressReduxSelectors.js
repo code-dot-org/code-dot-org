@@ -243,18 +243,9 @@ export const levelById = (state, lessonId, levelId) => {
 };
 
 export const getCurrentLevel = state => {
-  for (const level of getCurrentLevels(state)) {
-    if (level.isCurrentLevel) {
-      return level;
-    }
-
-    if (level.sublevels) {
-      for (const sublevel of level.sublevels) {
-        if (sublevel.isCurrentLevel) {
-          return sublevel;
-        }
-      }
-    }
+  return getCurrentLevels(state)
+    .flatMap(level => [level, ...level.sublevels])
+    .find(level => level.isCurrentLevel)
   }
 };
 
