@@ -1,5 +1,6 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import $ from 'jquery';
+import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
@@ -33,6 +34,8 @@ const DEFAULT_PROPS = {};
 describe('SectionProgressSelector', () => {
   let store;
 
+  let postStub;
+
   beforeEach(() => {
     stubRedux();
     registerReducers({
@@ -50,10 +53,18 @@ describe('SectionProgressSelector', () => {
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-default-v2', false);
     DCDO.set('progress-table-v2-closed-beta-enabled', false);
+
+    postStub = sinon.stub($, 'post');
+    postStub.returns(Promise.resolve());
+
+    sinon.stub(_, 'debounce').callsFake(fn => fn);
   });
 
   afterEach(() => {
     restoreRedux();
+
+    postStub.restore();
+    sinon.restore();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -128,7 +139,6 @@ describe('SectionProgressSelector', () => {
   });
 
   it('sets user preference when link clicked', () => {
-    const stub = sinon.stub($, 'post');
     renderDefault();
 
     const remindLaterLink = screen.getByText('Remind me later');
@@ -136,11 +146,12 @@ describe('SectionProgressSelector', () => {
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(stub).calledWith('/api/v1/users/show_progress_table_v2', {
-      show_progress_table_v2: true,
-    });
-
-    stub.reset();
+    expect(postStub).to.have.been.calledWith(
+      '/api/v1/users/show_progress_table_v2',
+      {
+        show_progress_table_v2: true,
+      }
+    );
   });
 
   it('shows v1 only if user not in closed beta', () => {

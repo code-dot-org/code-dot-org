@@ -197,8 +197,15 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_show_progress_table_v2
     return head :unauthorized unless current_user
 
-    current_user.show_progress_table_v2 = !!params[:show_progress_table_v2].try(:to_bool)
-    current_user.save
+    show_v2_arg = !!params[:show_progress_table_v2].try(:to_bool)
+    current_user.show_progress_table_v2 = show_v2_arg
+
+    if show_v2_arg
+      current_user.progress_table_v2_timestamp = DateTime.now
+    else
+      current_user.progress_table_v1_timestamp = DateTime.now
+    end
+    current_user.save!
 
     head :no_content
   end
