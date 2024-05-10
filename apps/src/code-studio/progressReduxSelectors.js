@@ -227,18 +227,9 @@ export const levelsForLessonId = (state, lessonId) => {
  * Given a lesson ID, and a level ID, returns the requested level.
  */
 export const levelById = (state, lessonId, levelId) => {
-  for (const level of levelsForLessonId(state, lessonId)) {
-    if (level.id === levelId) {
-      return level;
-    }
-
-    if (level.sublevels) {
-      for (const sublevel of level.sublevels) {
-        if (sublevel.id === levelId) {
-          return sublevel;
-        }
-      }
-    }
+  return levelsForLessonId(state, lessonId)
+    .flatMap(level => [level, ...level.sublevels])
+    .find(level => level.id === levelId);
   }
 };
 
