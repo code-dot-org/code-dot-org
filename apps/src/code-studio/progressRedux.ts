@@ -340,7 +340,6 @@ export function onLevelIndexChange(
       const newLevelId = level.id;
       dispatch(setCurrentLevelId(newLevelId));
     }
-
   };
 }
 
@@ -356,7 +355,7 @@ export function navigateToNextLevel(): ProgressThunkAction {
 }
 
 // The user has successfully completed the level and the page
-// will not be reloading.
+// will not be reloading. Currently only used by Lab2 labs.
 export function sendSuccessReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
     const state = getState().progress;
