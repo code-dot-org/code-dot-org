@@ -1,10 +1,12 @@
-import _ from 'lodash';
-import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {WorkspaceSvg} from 'blockly';
+import _ from 'lodash';
+
+import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+
 import {DARK_THEME_SUFFIX, Themes} from './constants';
 
 type xmlAttribute = string | null;

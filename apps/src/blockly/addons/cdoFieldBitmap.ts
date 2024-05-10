@@ -1,4 +1,5 @@
 import {FieldBitmap} from '@blockly/field-bitmap';
+
 import {commonI18n} from '@cdo/apps/types/locale';
 
 // The parent class sets a static pixel size and calculate the field size dymanically.
