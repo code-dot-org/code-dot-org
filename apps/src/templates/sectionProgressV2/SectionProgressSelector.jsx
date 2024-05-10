@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 import {connect} from 'react-redux';
@@ -19,6 +21,12 @@ import SectionProgressV2 from './SectionProgressV2';
 
 import styles from './progress-header.module.scss';
 
+const updateUserTimestamps = isV2Table => {
+  $.post(`/api/v1/users/set_progress_table_timestamp`, {
+    is_v2_table: isV2Table,
+  });
+};
+
 function SectionProgressSelector({
   showProgressTableV2,
   setShowProgressTableV2,
@@ -27,6 +35,9 @@ function SectionProgressSelector({
 }) {
   const [toggleUsed, setToggleUsed] = React.useState(false);
 
+  const updateV1Timestamp = _.once(() => updateUserTimestamps(false));
+  const updateV2Timestamp = _.once(() => updateUserTimestamps(true));
+
   const onShowProgressTableV2Change = useCallback(
     e => {
       e.preventDefault();
@@ -34,6 +45,12 @@ function SectionProgressSelector({
       new UserPreferences().setShowProgressTableV2(shouldShowV2);
       setShowProgressTableV2(shouldShowV2);
       setToggleUsed(true);
+
+      if (shouldShowV2) {
+        updateV2Timestamp();
+      } else {
+        updateV1Timestamp();
+      }
 
       if (shouldShowV2) {
         analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
@@ -45,7 +62,13 @@ function SectionProgressSelector({
         });
       }
     },
-    [showProgressTableV2, setShowProgressTableV2, sectionId]
+    [
+      showProgressTableV2,
+      setShowProgressTableV2,
+      sectionId,
+      updateV1Timestamp,
+      updateV2Timestamp,
+    ]
   );
 
   // If progress table is disabled, only show the v1 table.

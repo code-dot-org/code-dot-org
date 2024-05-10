@@ -117,9 +117,6 @@ class DatablockStorageController < ApplicationController
   def import_csv
     table = table_or_create
 
-    # import_csv should overwrite existing data:
-    table.records.delete_all
-
     table.import_csv params[:table_data_csv]
     table.save!
 
@@ -236,7 +233,7 @@ class DatablockStorageController < ApplicationController
   def read_records
     table = find_table_or_shared_table
 
-    render json: table.read_records.map(&:record_json)
+    render json: table.read_records
   end
 
   def update_record

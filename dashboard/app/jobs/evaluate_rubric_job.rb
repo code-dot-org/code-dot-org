@@ -34,6 +34,8 @@ class EvaluateRubricJob < ApplicationJob
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
 
+  AIPROXY_API_TIMEOUT = 165
+
   # This is raised if there is any raised error due to a rate limit, e.g. a 429
   # received from the aiproxy service.
   class TooManyRequestsError < StandardError
@@ -64,12 +66,41 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  class ServiceUnavailableError < StandardError
+    attr_reader :response
+
+    # Creates a ServiceUnavailableError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
+
+      super("Service unavailable for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
+    end
+  end
+
+  class GatewayTimeoutError < StandardError
+    attr_reader :response
+
+    # Creates a GatewayTimeoutError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
+
+      super("Gateway Timeout for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
+    end
+  end
+
   # For testing purposes, we can raise this error to simulate a missing key
   class StubNoSuchKey < StandardError
   end
 
   # The CloudWatch metric namespace
   AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
+
+  # The firehose study name
+  AI_RUBRICS_FIREHOSE_STUDY = 'ai-rubrics'.freeze
 
   # Write out metrics reflected in the response to CloudWatch
   #
@@ -78,7 +109,7 @@ class EvaluateRubricJob < ApplicationJob
   # the AI proxy service.
   #
   # @param [Hash] response The parsed JSON response from the AI proxy.
-  def self.log_metrics(response)
+  def self.log_token_metrics(response)
     # Record the metadata
     # The aiproxy service will report the usage in the metadata via:
     # { metadata: { agent: 'openai', usage: { total_tokens: 1234, prompt_tokens: 432, completion_tokens: 802 } } }
@@ -87,20 +118,8 @@ class EvaluateRubricJob < ApplicationJob
       # service used (openai, etc) and the current environment.
       tokens = response.dig('metadata', 'usage', name.to_s.underscore)
       next if tokens.nil?
-      Cdo::Metrics.push(
-        AI_RUBRIC_METRICS_NAMESPACE,
-        [
-          {
-            metric_name: name,
-            value: tokens,
-            dimensions: [
-              {name: 'Environment', value: CDO.rack_env},
-              {name: 'Agent', value: response.dig('metadata', 'agent') || 'unknown'},
-            ],
-            unit: 'Count'
-          }
-        ]
-      )
+      agent = response.dig('metadata', 'agent') || 'unknown'
+      log_metric(metric_name: name, agent: agent, value: tokens)
     end
   end
 
@@ -212,38 +231,80 @@ class EvaluateRubricJob < ApplicationJob
     rubric_ai_evaluation.save!
   end
 
-  RETRIES_ON_RATE_LIMIT = 3
+  ATTEMPTS_ON_RATE_LIMIT = 3
 
-  # Retry on any reported rate limit (429 status) 'exponentially_longer' waits 3s, 18s, and then 83s.
-  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: RETRIES_ON_RATE_LIMIT do |job, error|
-    # Job arguments are always serializable, so we just pull out the hash
-    # and send it as context.
-    options = job.arguments.first
-
-    # Send it to honeybadger even though we are handling the error via retry
-    Honeybadger.notify(
-      error,
-      error_message: "Retrying rubric evaluation job due to rate limiting (429).",
-      context: options
-    )
+  # Retry on any reported rate limit (429 status). With 3 attempts, 'exponentially_longer' waits 3s, then 18s.
+  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
+    log_metric(metric_name: :RateLimit)
+    log_to_firehose(job: job, error: error, event_name: 'rate-limit')
   end
 
-  RETRIES_ON_TIMEOUT = 2
+  ATTEMPTS_ON_TIMEOUT_ERROR = 2
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: ATTEMPTS_ON_TIMEOUT_ERROR do |job, error|
+    log_metric(metric_name: :TimeoutError)
+    log_to_firehose(job: job, error: error, event_name: 'timeout-error')
+  end
+
+  ATTEMPTS_ON_SERVICE_UNAVAILABLE = 3
+
+  # Retry on a 503 Service Unavailable error, including those returned by aiproxy
+  # when openai returns 500.
+  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |job, error|
+    agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
+    log_metric(metric_name: :ServiceUnavailable, agent: agent)
+    log_to_firehose(job: job, error: error, event_name: 'service-unavailable', agent: agent)
+  end
+
+  ATTEMPTS_ON_GATEWAY_TIMEOUT = 3
+
+  # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
+  # when openai request times out.
+  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |job, error|
+    agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
+    log_metric(metric_name: :GatewayTimeout, agent: agent)
+    log_to_firehose(job: job, error: error, event_name: 'gateway-timeout', agent: agent)
+  end
+
+  def self.log_metric(metric_name:, agent: nil, value: 1)
     Cdo::Metrics.push(
       AI_RUBRIC_METRICS_NAMESPACE,
       [
         {
-          metric_name: :RetryOnTimeout,
-          value: 1,
+          metric_name: metric_name,
+          value: value,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
+            {name: 'Agent', value: agent},
           ],
           unit: 'Count'
         }
       ]
+    )
+  end
+
+  def self.log_to_firehose(job:, error:, event_name:, agent: nil)
+    options = job.arguments.first
+    script_level = ScriptLevel.find(options[:script_level_id])
+
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: AI_RUBRICS_FIREHOSE_STUDY,
+        study_group: 'v0',
+        event: event_name,
+        data_string: "#{error.class.name}: #{error.message}",
+        data_json: {
+          user_id: options[:user_id],
+          requester_id: options[:requester_id],
+          script_level_id: options[:script_level_id],
+          script_name: script_level.script.name,
+          lesson_number: script_level.lesson.relative_position,
+          level_name: script_level.level.name,
+          agent: agent
+        }.to_json
+      }
     )
   end
 
@@ -274,7 +335,7 @@ class EvaluateRubricJob < ApplicationJob
     response = get_openai_evaluations(openai_params)
 
     # Log tokens and usage information
-    EvaluateRubricJob.log_metrics(response)
+    EvaluateRubricJob.log_token_metrics(response)
 
     # Get and validate the response data
     ai_evaluations = response['data']
@@ -432,7 +493,7 @@ class EvaluateRubricJob < ApplicationJob
       uri,
       body: URI.encode_www_form(openai_params),
       headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
-      timeout: 120
+      timeout: AIPROXY_API_TIMEOUT
     )
 
     # Raise too many requests error if we see a 429
@@ -440,6 +501,10 @@ class EvaluateRubricJob < ApplicationJob
     raise TooManyRequestsError.new(response) if response.code == 429
 
     raise RequestTooLargeError.new(response) if response.code == 413
+
+    raise ServiceUnavailableError.new(response) if response.code == 503
+
+    raise GatewayTimeoutError.new(response) if response.code == 504
 
     # General error will raise a generic StandardError
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?

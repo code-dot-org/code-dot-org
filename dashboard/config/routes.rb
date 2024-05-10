@@ -618,6 +618,11 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
+        namespace :account_linking do
+          get :landing
+          get :existing_account
+          post :link_email
+        end
       end
     end
 
@@ -907,6 +912,7 @@ Dashboard::Application.routes.draw do
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+        post 'users/set_progress_table_timestamp', to: 'users#post_set_progress_table_timestamp'
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
