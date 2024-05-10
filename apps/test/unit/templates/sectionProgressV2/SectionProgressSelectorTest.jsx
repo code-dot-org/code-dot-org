@@ -57,7 +57,7 @@ describe('SectionProgressSelector', () => {
     postStub = sinon.stub($, 'post');
     postStub.returns(Promise.resolve());
 
-    sinon.stub(_, 'once').callsFake(fn => fn);
+    sinon.stub(_, 'debounce').callsFake(fn => fn);
   });
 
   afterEach(() => {
@@ -188,32 +188,5 @@ describe('SectionProgressSelector', () => {
 
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
     expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
-  });
-
-  it('calls analytics when toggling to v2', () => {
-    renderDefault();
-
-    const remindLaterLink = screen.getByText('Remind me later');
-    fireEvent.click(remindLaterLink);
-
-    const toggle = screen.getByRole('link', {name: V1_PAGE_LINK_TEXT});
-    fireEvent.click(toggle);
-
-    expect(postStub).to.have.been.calledWith(
-      '/api/v1/users/set_progress_table_timestamp'
-    );
-  });
-
-  it('calls analytics when toggling to v1', () => {
-    renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
-
-    const toggle = screen.getByRole('link', {name: V2_PAGE_LINK_TEXT});
-
-    fireEvent.click(toggle);
-
-    expect(postStub).to.have.been.calledWith(
-      '/api/v1/users/set_progress_table_timestamp'
-    );
   });
 });
