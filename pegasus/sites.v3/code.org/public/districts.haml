@@ -13,6 +13,7 @@ theme: responsive_full_width
 -# Button urls
 - url_learn_more = "#email-signup-form"
 - url_enroll_now = "https://share.hsforms.com/1_4JKSt-hS1OCz86gmiczdgqs0ef"
+- district_partners_url = "https://code.org/educate/district/partners"
 
 -# FontAwesome icons
 - icon_laptop_file = "fa-solid fa-laptop-file"
@@ -23,6 +24,8 @@ theme: responsive_full_width
 - icon_folder_open = "fa-solid fa-folder-open"
 - icon_smile = "fa-solid fa-smile"
 - icon_money_check_dollar_pen = "fa-solid fa-money-check-dollar-pen"
+
+= view :top_skinny_banner, banner_id: "banner-districts", banner_url: nil, banner_icon: "fa-solid fa-megaphone", banner_text: hoc_s("districts_skinny_banner_title", markdown: :inline, locals: {district_partners_url: district_partners_url}), external_link: false, light_theme: true
 
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
@@ -110,6 +113,20 @@ theme: responsive_full_width
     .button-wrapper.centered
       %a.link-button{href: url_learn_more} Learn more
       %a.link-button.secondary{href: url_enroll_now, target: "_blank", rel: "noopener noreferrer"} Enroll now
+
+%section.bg-neutral-light
+  %h2.centered
+    Meet the Districts in our District Program
+  %p.centered
+    Over 100 school districts have already joined!
+  .logos-wrapper
+    %img{src: "/images/marketing/fill-110x60/detroit_public_schools_logo.png", alt: "Detroit Public Schools logo", style: "max-width: 110px"}
+    %img{src: "/images/marketing/fill-110x60/hartford_public_schools_logo.png", alt: "Hartford Public Schools logo", style: "max-width: 110px"}
+    %img{src: "/images/marketing/fill-86x60/miami_dade_county_public_schools_logo.png", alt: "Miami Dade County Public Schools logo", style: "max-width: 86px"}
+    %img{src: "/images/marketing/fill-180x60/lausd_unified_logo.png", alt: "LAUSD Unified logo", style: "max-width: 180px"}
+    %img{src: "/images/marketing/fill-111x60/clark_county_school_district_logo.png", alt: "Clark County School District logo", style: "max-width: 111px"}
+  %div.centered
+    %a.link-button.secondary{href: district_partners_url, target: "_blank", rel: "noopener noreferrer"} See full district partner list
 
 %section.bg-primary-light.centered
   .wrapper

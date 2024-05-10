@@ -6,23 +6,17 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
+import {Block, WorkspaceSvg} from 'blockly';
+import {IProcedureModel} from 'blockly/core/procedures';
+import {State} from 'blockly/core/serialization/blocks';
+
 import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
-import {commonI18n} from '@cdo/apps/types/locale';
+import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
-import {
-  MODAL_EDITOR_ID,
-  MODAL_EDITOR_CLOSE_ID,
-  MODAL_EDITOR_DELETE_ID,
-} from './functionEditorConstants';
-import CdoConnectionChecker from './cdoConnectionChecker';
-import CdoMetricsManager from './cdoMetricsManager';
-import WorkspaceSvgFrame from './workspaceSvgFrame';
-import {BLOCK_TYPES} from '../constants';
-import {frameSizes} from './cdoConstants';
-import CdoTrashcan from './cdoTrashcan';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {getAlphanumericId} from '@cdo/apps/utils';
-import {initializeScrollbarPair} from './cdoScrollbar';
+
+import {BLOCK_TYPES} from '../constants';
 import {
   EditorWorkspaceSvg,
   ExtendedBlocklyOptions,
@@ -30,9 +24,18 @@ import {
   ProcedureBlockConfiguration,
   ProcedureType,
 } from '../types';
-import {Block, WorkspaceSvg} from 'blockly';
-import {IProcedureModel} from 'blockly/core/procedures';
-import {State} from 'blockly/core/serialization/blocks';
+
+import CdoConnectionChecker from './cdoConnectionChecker';
+import {frameSizes} from './cdoConstants';
+import CdoMetricsManager from './cdoMetricsManager';
+import {initializeScrollbarPair} from './cdoScrollbar';
+import CdoTrashcan from './cdoTrashcan';
+import {
+  MODAL_EDITOR_ID,
+  MODAL_EDITOR_CLOSE_ID,
+  MODAL_EDITOR_DELETE_ID,
+} from './functionEditorConstants';
+import WorkspaceSvgFrame from './workspaceSvgFrame';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
