@@ -69,7 +69,7 @@
   %swiper-container.ai-educator-resources.three-col{navigation: "true", "navigation-next-el": ".nav-next-ai-educator-resources", "navigation-prev-el": ".nav-prev-ai-educator-resources", init: "false"}
     - resource_item.each do |resource_item|
       %swiper-slide
-        .action-block.action-block--one-col
+        .action-block.action-block--one-col.flex-space-between
           .content-wrapper
             %p.overline-two
               = resource_item[:overline]

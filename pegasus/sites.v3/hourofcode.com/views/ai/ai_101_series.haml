@@ -13,7 +13,7 @@
   %swiper-container.ai-101-series.three-col{navigation: "true", "navigation-next-el": ".nav-next-ai-101-series", "navigation-prev-el": ".nav-prev-ai-101-series", init: "false"}
     - video_101_index.times do |index|
       %swiper-slide
-        .action-block.action-block--one-col
+        .action-block.action-block--one-col.flex-space-between
           .content-wrapper
             %figure.video-responsive
               %div
@@ -24,19 +24,19 @@
               = video_101_desc[index]
           .content-footer
             - if index === 1
-              %p
+              %p.no-margin-bottom
                 %i{class: "#{icon_book}"}
                 %strong=hoc_s(:ai_pl_101_resources_guide)
                 %a.has-external-link{href: "https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy", target: "_blank", rel: "noopener noreferrer"}
                   =hoc_s(:ai_pl_101_llm_slides_title)
             - if index === 2
-              %p
+              %p.no-margin-bottom
                 %i{class: "#{icon_book}"}
                 %strong=hoc_s(:ai_pl_101_resources_guide)
                 %a.has-external-link{href: "http://bit.ly/TransformLearningAI", target: "_blank", rel: "noopener noreferrer"}
                   =hoc_s(:ai_pl_101_resources_3)
             - if index === 3
-              %p
+              %p.no-margin-bottom
                 %i{class: "#{icon_book}"}
                 %strong=hoc_s(:ai_pl_101_resources_guide)
                 %a.has-external-link{href: "http://bit.ly/AIRespUse", target: "_blank", rel: "noopener noreferrer"}
