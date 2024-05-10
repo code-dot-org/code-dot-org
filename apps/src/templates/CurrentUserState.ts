@@ -25,4 +25,6 @@ export interface CurrentUserState {
   over21: boolean;
   showProgressTableV2: boolean;
   progressTableV2ClosedBeta: boolean;
+  childAccountComplianceState: string | null;
+  inSection: boolean | null;
 }

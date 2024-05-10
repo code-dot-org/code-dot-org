@@ -135,7 +135,9 @@ const Notification = ({
       <div style={{...colorStyles, ...mainStyle}}>
         {type !== NotificationType.course && (
           <div style={{...styles.iconBox, ...colorStyles, ...iconStyles}}>
-            <FontAwesome icon={icons[type]} style={styles.icon} />
+            {icons[type] && (
+              <FontAwesome icon={icons[type]} style={styles.icon} />
+            )}
           </div>
         )}
         <div style={styles.contentBox}>

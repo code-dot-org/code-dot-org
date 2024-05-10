@@ -60,7 +60,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
   const [requestError, setRequestError] = useState('');
   const [parentEmail, setParentEmail] = useState('');
   const formattedLockoutDate = moment(lockoutDate)
-    .lang(currentLocale())
+    .locale(currentLocale())
     .format('ll');
 
   const [

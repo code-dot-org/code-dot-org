@@ -12,7 +12,10 @@ const SHOW_DELAY = 86400; // 1 day
 
 document.addEventListener('DOMContentLoaded', () => {
   const renderModal = () => {
+    const inSection = getScriptData('inSection');
+
     const reportEvent = (eventName, payload = {}) => {
+      payload.isSection = inSection;
       analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
     };
 

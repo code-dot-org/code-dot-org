@@ -82,7 +82,10 @@ function showHomepage() {
 
   const announcement = getTeacherAnnouncement(announcementOverride);
   const parentalPermissionBanner = homepageData.parentalPermissionBanner && (
-    <ParentalPermissionBanner {...homepageData.parentalPermissionBanner} />
+    <ParentalPermissionBanner
+      key="parentla-permission-bnner"
+      {...homepageData.parentalPermissionBanner}
+    />
   );
 
   ReactDOM.render(

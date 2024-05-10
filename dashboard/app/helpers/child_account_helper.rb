@@ -44,6 +44,11 @@ module ChildAccountHelper
     end
 
     render partial: 'policy_compliance/parental_permission/modal',
-           locals: {studentUuid: user.uuid, lockoutDate: student_lockout_date.iso8601, forceDisplay: force_display}
+           locals: {
+             studentUuid: user.uuid,
+             inSection: user.sections_as_student.present?,
+             lockoutDate: student_lockout_date.iso8601,
+             forceDisplay: force_display,
+           }
   end
 end
