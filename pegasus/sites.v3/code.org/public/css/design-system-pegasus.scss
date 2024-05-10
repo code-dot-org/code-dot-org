@@ -971,7 +971,7 @@ form {
       img {
         width: 150px;
         height: 150px;
-        margin-right: 3rem;
+        margin-inline-end: 3rem;
 
         @media screen and (max-width: $width-md) {
           display: block;
