@@ -35,6 +35,7 @@ const EVENTS = {
   // Child Account Policy
   CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
   CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
+  CAP_STATE_FORM_DISMISSED: 'CAP State Form Sign Out Button Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -109,6 +110,11 @@ const EVENTS = {
   PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
   PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
   PROGRESS_V2_VIEW_LEVEL_DETAILS: 'Section New Progress Level Details',
+  PROGRESS_V2_ACCEPT_INVITATION: 'Section Progress Invitation Modal Accept',
+  PROGRESS_V2_DISMISS_INVITATION: 'Section Progress Invitation Modal Dismiss',
+  PROGRESS_V2_DELAY_INVITATION:
+    'Section Progress Invitation Modal Remind Later',
+  PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',

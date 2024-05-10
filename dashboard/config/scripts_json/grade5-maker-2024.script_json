@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "grade5-maker",
-    "serialized_at": "2024-05-03 21:37:31 UTC",
+    "serialized_at": "2024-05-07 21:31:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21,11 +21,23 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Events, Variables, Conditionals, and Sounds"
+        "display_name": "Step Counter with micro:bit - Events and Variables"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "micro:bit pet - Conditionals, Events, and Sounds"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -35,9 +47,9 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
-        "display_name": "[Optional] Extension: Events, Conditionals, and Variables"
+        "display_name": "Max-min thermometer with micro:bit - Events, Conditionals, and Variables"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -62,7 +74,7 @@
       },
       "seeding_key": {
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -82,7 +94,7 @@
       },
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -101,7 +113,7 @@
       },
       "seeding_key": {
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -120,7 +132,7 @@
       },
       "seeding_key": {
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -138,7 +150,7 @@
       },
       "seeding_key": {
         "lesson.key": "Cristina - Step Counter Coding with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -285,7 +297,7 @@
       "seeding_key": {
         "lesson_activity.key": "f4fc6217-f6db-4a46-b852-74131358f04a",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -299,7 +311,7 @@
       "seeding_key": {
         "lesson_activity.key": "6cf6207a-3724-4152-8896-df2c86e41375",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -313,7 +325,7 @@
       "seeding_key": {
         "lesson_activity.key": "e0937b74-2028-4342-b5f9-fd47c7ff6681",
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -327,7 +339,7 @@
       "seeding_key": {
         "lesson_activity.key": "679cb898-3584-4b61-a94f-4d98431cd179",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -341,7 +353,7 @@
       "seeding_key": {
         "lesson_activity.key": "c99e1b89-399c-4a17-b3d4-281c4c1cb925",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -355,7 +367,7 @@
       "seeding_key": {
         "lesson_activity.key": "c1136f08-3874-4a99-9e0e-87952cd45de5",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -367,7 +379,7 @@
       "seeding_key": {
         "lesson_activity.key": "b5da0146-a4a1-4ab2-b627-89e216fe87cf",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -380,7 +392,7 @@
       "seeding_key": {
         "lesson_activity.key": "b51b35b5-2259-419a-bac8-5c918eb16bdf",
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -394,7 +406,7 @@
       "seeding_key": {
         "lesson_activity.key": "28f70105-59df-4bc7-9078-c33596303ad4",
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -408,7 +420,7 @@
       "seeding_key": {
         "lesson_activity.key": "92e00c85-cacd-4481-be4b-74e676c5d7d5",
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -422,7 +434,7 @@
       "seeding_key": {
         "lesson_activity.key": "69a137a6-3c91-4153-ac5d-3f2ee029f6b2",
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -436,7 +448,7 @@
       "seeding_key": {
         "lesson_activity.key": "90e78118-feb4-4e20-9f9f-75e12c0c4910",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -450,7 +462,7 @@
       "seeding_key": {
         "lesson_activity.key": "a5ffe97a-e16b-4750-a06b-ae9d14c9a56b",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -464,7 +476,7 @@
       "seeding_key": {
         "lesson_activity.key": "ebf79f14-0a01-41b0-8f2d-a894080278d9",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -477,7 +489,7 @@
       "seeding_key": {
         "lesson_activity.key": "37bdefd0-b8de-4e9b-9553-16923a38343c",
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -491,7 +503,7 @@
       "seeding_key": {
         "lesson_activity.key": "1d91418b-1ca3-442e-9141-9a3858604618",
         "lesson.key": "Cristina - Step Counter Coding with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -505,7 +517,7 @@
       "seeding_key": {
         "lesson_activity.key": "529243ba-7b96-4b93-919d-984450783d97",
         "lesson.key": "Cristina - Step Counter Coding with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -519,7 +531,7 @@
       "seeding_key": {
         "lesson_activity.key": "1d10e3ce-e460-415d-9b35-5dc2d757ad5f",
         "lesson.key": "Cristina - Step Counter Coding with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -532,7 +544,7 @@
       "seeding_key": {
         "lesson_activity.key": "0b271ae2-cdfc-47c6-adb3-922ec658b708",
         "lesson.key": "Cristina - Step Counter Coding with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024"
       }
     },
@@ -2517,7 +2529,7 @@
           "course_f_maker_dance_party_unplugged_grade5"
         ],
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "2c71f35d-7887-4c54-b923-424e2c7c6cbe"
       },
@@ -2542,7 +2554,7 @@
           "CourseD_Dance_2020_vid1_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "1e7e4437-f8be-46cf-9f4d-53bd1e8c789f"
       },
@@ -2567,7 +2579,7 @@
           "CourseD_Dance_2020_01_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "454d4fc1-35fc-4683-942d-5005b8bbabca"
       },
@@ -2592,7 +2604,7 @@
           "CourseD_Dance_2020_vid2_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "b1367eff-c58d-4a3d-bad0-e8b13ee59950"
       },
@@ -2617,7 +2629,7 @@
           "CourseD_Dance_2020_02_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6a0c4aa4-c565-46c9-bd1d-4a56b7b585f2"
       },
@@ -2642,7 +2654,7 @@
           "CourseD_Dance_2020_03_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6a0c4aa4-c565-46c9-bd1d-4a56b7b585f2"
       },
@@ -2667,7 +2679,7 @@
           "CourseD_Dance_2020_vid3_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "02d215c9-8566-4a21-991f-11a848988b0d"
       },
@@ -2692,7 +2704,7 @@
           "CourseD_Dance_2020_04_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       },
@@ -2717,7 +2729,7 @@
           "CourseD_Dance_2020_05_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       },
@@ -2742,7 +2754,7 @@
           "CourseD_Dance_2020_06_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       },
@@ -2767,7 +2779,7 @@
           "CourseD_Dance_2020_vid4_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "23c5f2de-59ab-4b0d-a95f-49e469d20096"
       },
@@ -2792,7 +2804,7 @@
           "CourseD_Dance_2020_07_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       },
@@ -2817,7 +2829,7 @@
           "CourseD_Dance_2020_08_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       },
@@ -2842,7 +2854,7 @@
           "CourseD_Dance_2020_09_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       },
@@ -2867,7 +2879,7 @@
           "CourseD_Dance_2020_vid5_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "cadb2ee2-9b1d-4c9e-9f71-bb1471e28b44"
       },
@@ -2892,7 +2904,7 @@
           "CourseD_Dance_2020_10_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6e0c86dc-890e-4a17-bea6-48228470017e"
       },
@@ -2917,7 +2929,7 @@
           "CourseD_Dance_2020_bonus1_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "a0e9a13e-b83d-4679-bb2f-7b452d7805af"
       },
@@ -2942,7 +2954,7 @@
           "CourseD_Dance_2020_bonus3_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "a0e9a13e-b83d-4679-bb2f-7b452d7805af"
       },
@@ -2967,7 +2979,7 @@
           "courseF_variables2_predict_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "35814670-1a95-4b95-849e-2c577eb54b4a"
       },
@@ -2992,7 +3004,7 @@
           "courseF_variables2_predict2_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "35814670-1a95-4b95-849e-2c577eb54b4a"
       },
@@ -3017,7 +3029,7 @@
           "courseF_variables2_set_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       },
@@ -3042,7 +3054,7 @@
           "courseF_variables2_change_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       },
@@ -3067,7 +3079,7 @@
           "courseF_variables2_click_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       },
@@ -3092,7 +3104,7 @@
           "courseF_clicker_explore_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "74f60e20-b39e-41da-9aa4-ed6d6b980d08"
       },
@@ -3117,7 +3129,7 @@
           "courseF_clicker_sprites_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -3142,7 +3154,7 @@
           "courseF_clicker_remove_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -3167,7 +3179,7 @@
           "courseF_clicker_variable_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -3192,7 +3204,7 @@
           "courseF_clicker_score_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -3217,7 +3229,7 @@
           "courseF_clicker_finish_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       },
@@ -3242,7 +3254,7 @@
           "course_c_maker_meet_your_microbit_grade5"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "72786804-aa93-4fb5-a764-f493eb5c0fe8"
       },
@@ -3267,7 +3279,7 @@
           "grade5-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "f325180d-269d-40f8-b36b-7608f1ab05e1"
       },
@@ -3281,6 +3293,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_step_counter_grade5"
+        ],
         "progression": "Step Counter Coding with micro:bit"
       },
       "bonus": false,
@@ -3289,7 +3304,7 @@
           "course_f_maker_step_counter_grade5"
         ],
         "lesson.key": "Cristina - Step Counter Coding with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "29b63ed3-1b89-4944-a186-6c2cdd55a0ea"
       },
@@ -3979,6 +3994,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_microbit_pet_grade5"
+        ],
         "progression": "Micro:bit pet"
       },
       "bonus": false,
@@ -4426,6 +4444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_max_min_thermometer_grade5"
+        ],
         "progression": "Max-min thermometer"
       },
       "bonus": false,
@@ -4451,7 +4472,7 @@
           "course_f_maker_dance_party_unplugged_grade5"
         ],
         "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "2c71f35d-7887-4c54-b923-424e2c7c6cbe"
       }
@@ -4463,7 +4484,7 @@
           "CourseD_Dance_2020_vid1_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "1e7e4437-f8be-46cf-9f4d-53bd1e8c789f"
       }
@@ -4475,7 +4496,7 @@
           "CourseD_Dance_2020_01_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "454d4fc1-35fc-4683-942d-5005b8bbabca"
       }
@@ -4487,7 +4508,7 @@
           "CourseD_Dance_2020_vid2_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "b1367eff-c58d-4a3d-bad0-e8b13ee59950"
       }
@@ -4499,7 +4520,7 @@
           "CourseD_Dance_2020_02_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6a0c4aa4-c565-46c9-bd1d-4a56b7b585f2"
       }
@@ -4511,7 +4532,7 @@
           "CourseD_Dance_2020_03_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6a0c4aa4-c565-46c9-bd1d-4a56b7b585f2"
       }
@@ -4523,7 +4544,7 @@
           "CourseD_Dance_2020_vid3_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "02d215c9-8566-4a21-991f-11a848988b0d"
       }
@@ -4535,7 +4556,7 @@
           "CourseD_Dance_2020_04_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       }
@@ -4547,7 +4568,7 @@
           "CourseD_Dance_2020_05_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       }
@@ -4559,7 +4580,7 @@
           "CourseD_Dance_2020_06_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "39b5b390-86ac-4e06-a2a1-2b9828482870"
       }
@@ -4571,7 +4592,7 @@
           "CourseD_Dance_2020_vid4_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "23c5f2de-59ab-4b0d-a95f-49e469d20096"
       }
@@ -4583,7 +4604,7 @@
           "CourseD_Dance_2020_07_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       }
@@ -4595,7 +4616,7 @@
           "CourseD_Dance_2020_08_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       }
@@ -4607,7 +4628,7 @@
           "CourseD_Dance_2020_09_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "e16d16a7-d4ea-4a4c-88ed-bb7910db2fe7"
       }
@@ -4619,7 +4640,7 @@
           "CourseD_Dance_2020_vid5_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "cadb2ee2-9b1d-4c9e-9f71-bb1471e28b44"
       }
@@ -4631,7 +4652,7 @@
           "CourseD_Dance_2020_10_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "6e0c86dc-890e-4a17-bea6-48228470017e"
       }
@@ -4643,7 +4664,7 @@
           "CourseD_Dance_2020_bonus1_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "a0e9a13e-b83d-4679-bb2f-7b452d7805af"
       }
@@ -4655,7 +4676,7 @@
           "CourseD_Dance_2020_bonus3_grade5"
         ],
         "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "a0e9a13e-b83d-4679-bb2f-7b452d7805af"
       }
@@ -4667,7 +4688,7 @@
           "courseF_variables2_predict_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "35814670-1a95-4b95-849e-2c577eb54b4a"
       }
@@ -4679,7 +4700,7 @@
           "courseF_variables2_predict2_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "35814670-1a95-4b95-849e-2c577eb54b4a"
       }
@@ -4691,7 +4712,7 @@
           "courseF_variables2_set_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       }
@@ -4703,7 +4724,7 @@
           "courseF_variables2_change_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       }
@@ -4715,7 +4736,7 @@
           "courseF_variables2_click_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "60772d61-edfc-41e7-a16c-d20e9307a82d"
       }
@@ -4727,7 +4748,7 @@
           "courseF_clicker_explore_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "74f60e20-b39e-41da-9aa4-ed6d6b980d08"
       }
@@ -4739,7 +4760,7 @@
           "courseF_clicker_sprites_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4751,7 +4772,7 @@
           "courseF_clicker_remove_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4763,7 +4784,7 @@
           "courseF_clicker_variable_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4775,7 +4796,7 @@
           "courseF_clicker_score_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4787,7 +4808,7 @@
           "courseF_clicker_finish_grade5"
         ],
         "lesson.key": "Counting with Variables",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "ae8d0d07-4a8b-4736-a0f2-78e509814ddb"
       }
@@ -4799,7 +4820,7 @@
           "course_c_maker_meet_your_microbit_grade5"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "72786804-aa93-4fb5-a764-f493eb5c0fe8"
       }
@@ -4811,7 +4832,7 @@
           "grade5-maker-matching-1"
         ],
         "lesson.key": "Cristina - Meet your micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "f325180d-269d-40f8-b36b-7608f1ab05e1"
       }
@@ -4823,7 +4844,7 @@
           "course_f_maker_step_counter_grade5"
         ],
         "lesson.key": "Cristina - Step Counter Coding with micro:bit",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
         "activity_section.key": "29b63ed3-1b89-4944-a186-6c2cdd55a0ea"
       }

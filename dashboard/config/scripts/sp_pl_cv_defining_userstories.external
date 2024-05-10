@@ -3,13 +3,29 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson Sample: Communities I Belong To
+# Lesson Sample: User Stories and Problem Statement Activities
 
-#### In Lesson 2, students start the empathizing phase of the design thinking process by first figuring out who they are designing for, which involves finding a community with a need. To help with this, students will brainstorm a list of communities that they belong to in their unit guides. 
+<img src="https://images.code.org/02171063fec505ff1007cbf3d7c57f55-image-1715005977636.png" alt="user perosona card" width="230px" style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
 
-<img src="https://images.code.org/b55123eeb1c42d68962633580eb4fe69-image-1714579014878.png" alt="AI bot with a directional sign" width="900px" style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
 
-#### Activity guide -  <a href="https://docs.google.com/document/d/1E-WCtundW0divnocQqD34RyWGBPuGm5lO_KR9rXOy88/edit?usp=sharing" target="blank" rel="noopener noreferrer"><b>Communities I Belong To</b></a>
+#### The goal of the activity in lesson 5 is for students to walk away with a core issue that their group can focus problem-solving skills on when they move to Ideating and beyond. 
 
-![]()
+#### Using data visualizations from the previous lesson, students will identify user personas and create user stories. 
+
+#### Create user stories using this format:
+
+ <p style="font-weight: bold; font-size: 18px;">As a <span style="color: #0093A4;">{describe your user}</span>, I <span style="color: #0093A4;">{action connected to data}</span>.</p>
+
+## Example: 
+
+#### As a **ride-share driver who works in diverse driving conditions**, I look for technologies that assist in accident prevention and enhance passenger experience, aiming to provide the safest and most efficient service possible.
+
+
+
+
+
+
+ 
+
+
 MARKDOWN

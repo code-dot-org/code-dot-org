@@ -1,6 +1,6 @@
 {
+  "title": "End-of-School-Year Survey 2024",
   "logoPosition": "right",
-  "title": "End-of-School-Year Survey, 2024",
   "pages": [
     {
       "name": "preamble_page",
@@ -30,7 +30,8 @@
         {
           "type": "html",
           "name": "section1_teaching_context",
-          "html": "<h1>Teaching Context</h1>\n<p><span style='font-size: 12pt;'>This survey is about teaching with Code.org materials and resources during the 2023-24 school year.</p>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand better who our teachers are, their motivation to use the Code.org curriculum and tools, as well as some questions about professional development preferences.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+          "visible": false,
+          "html": "<h1>Teaching Context</h1>\\n<p><span style='font-size: 12pt;'>This survey is about teaching with Code.org materials and resources during the 2023-24 school year.</p>\\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand better who our teachers are, their motivation to use the Code.org curriculum and tools, as well as some questions about professional development preferences.</span></p>\\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
         },
         {
           "type": "radiogroup",
@@ -61,7 +62,7 @@
         },
         {
           "type": "text",
-          "name": "teacher_role_other",
+          "name": "teacher_role_other_comment",
           "visibleIf": "{teacher_role} = 'other'",
           "title": "What other role best describes you?"
         },
@@ -188,12 +189,6 @@
         },
         {
           "type": "text",
-          "name": "teach_other_courses_other",
-          "visibleIf": "{teach_other_courses} = 'other'",
-          "title": "What other courses do you teach?"
-        },
-        {
-          "type": "text",
           "name": "teaching_experience_years",
           "title": "How many years have you been teaching at K-12 schools?",
           "description": "(Please enter a number 0-90: enter 1 if this is your first year)",
@@ -220,6 +215,144 @@
           "max": 90
         },
         {
+          "type": "html",
+          "name": "section_pd_experience",
+          "html": "<h2>Computer Science Professional Learning Experience</h2>"
+        },
+        {
+          "type": "checkbox",
+          "name": "pd_experience",
+          "title": "Have you participated in a professional learning program for teaching Computer Science? ",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "yes_facilitator_led_cdo",
+              "text": "Yes, in one or more of Code.org's facilitator-led professional learning programs"
+            },
+            {
+              "value": "yes_facilitator_led_other_provider",
+              "text": "Yes, in a facilitator-led professional learning program led by an organization different from Code.org"
+            },
+            {
+              "value": "yes_self_paced_pd_cdo",
+              "text": "Yes, in one or more of Code.org's online, self-paced professional learning modules."
+            },
+            {
+              "value": "yes_self_paced_pd_other_provider",
+              "text": "Yes, in one or more online, self-paced professional learning content offered by an organization different from Code.org"
+            },
+            {
+              "value": "no",
+              "text": "No, I have not participated in a professional learning program for teaching computer science"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "pd_facilitator_led_effectiveness",
+          "visibleIf": "{pd_experience} allof ['yes_facilitator_led_cdo ']",
+          "title": "In retrospect, how useful was Code.org's facilitator-led professional learning in preparing you to teach the content you learned about?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Useful",
+          "maxRateDescription": "Very Useful"
+        },
+        {
+          "type": "radiogroup",
+          "name": "pd_facilitator_led_most_effective_component",
+          "visibleIf": "{pd_experience} allof ['yes_facilitator_led_cdo ']",
+          "title": "What component of Code.org's facilitator-led professional learning experience was most effective at preparing you to teach computer science?",
+          "choices": [
+            {
+              "value": "curriculum_walkthrough",
+              "text": "Walk through the curriculum"
+            },
+            {
+              "value": "cs_concepts",
+              "text": "Learning about computer science concepts"
+            },
+            {
+              "value": "practice_reflection",
+              "text": "Reflecting on your own teaching practice"
+            },
+            {
+              "value": "tool_navigation",
+              "text": "Understanding Code.org's tools and navigation"
+            },
+            {
+              "value": "community_building",
+              "text": "Building a community of practice with fellow computer science educators"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            },
+            {
+              "value": "none",
+              "text": "None"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "pd_facilitator_led_more_effective_comment",
+          "visibleIf": "{pd_facilitator_led_effectiveness} < 6",
+          "title": "What would have made  Code.org's facilitator-led professional learning more effective to prepare you to teach the content you learned about?"
+        },
+        {
+          "type": "rating",
+          "name": "pd_self_paced_effectiveness",
+          "visibleIf": "{pd_experience} allof ['yes_self_paced_pd_cdo']",
+          "title": "In retrospect, how useful was Code.org's online, self-paced professional learning in preparing you to teach the content you learned about?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Useful",
+          "maxRateDescription": "Very Useful"
+        },
+        {
+          "type": "radiogroup",
+          "name": "pd_self_paced_most_effective_component",
+          "visibleIf": "{pd_experience} allof ['yes_self_paced_pd_cdo']",
+          "title": "What component of Code.org's online, self-paced professional learning modules was most effective at preparing you to teach computer science?",
+          "choices": [
+            {
+              "value": "curriculum_walkthrough",
+              "text": "Walk through the curriculum"
+            },
+            {
+              "value": "cs_concepts",
+              "text": "Learning about computer science concepts"
+            },
+            {
+              "value": "practice_reflection",
+              "text": "Reflecting on your own teaching practice"
+            },
+            {
+              "value": "tool_navigation",
+              "text": "Understanding Code.org's tools and navigation"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            },
+            {
+              "value": "none",
+              "text": "None"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "pd_self_paced_more_effective_comment",
+          "visibleIf": "{pd_self_paced_effectiveness} < 5",
+          "title": "What would have made  Code.org's online, self-paced professional learning more effective in preparing you to teach the content you learned about?"
+        },
+        {
+          "type": "html",
+          "name": "section_teaching_cdo",
+          "html": "<h2>Your Experience Teaching with Code.org</h2>"
+        },
+        {
           "type": "radiogroup",
           "name": "cdo_goal",
           "title": "What is your main goal for using Code.org in your classroom?",
@@ -229,12 +362,8 @@
               "text": "Teaching a full computer science course using Code.org's curriculum and activities (e.g. CS Fundamentals / CS Discoveries / CS Principles / Computer Science A)"
             },
             {
-              "value": "full_cs_course_other",
-              "text": "Teaching a full computer science course using content from different providers, my own content, and some content from Code.org's curriculum and activities"
-            },
-            {
               "value": "some_units",
-              "text": "Teaching some Code.org units or lessons that align to my curriculum"
+              "text": "Teaching some specific Code.org units or lessons that align with my curriculum"
             },
             {
               "value": "expose_cs_concepts",
@@ -252,9 +381,99 @@
         },
         {
           "type": "text",
-          "name": "cdo_goal_other",
+          "name": "cdo_goal_other_comment",
           "visibleIf": "{cdo_goal} = 'other'",
-          "title": "Please describe what is your main goal for using Code.org in your classroom."
+          "title": "Please share what is your main goal for using Code.org in your classroom?"
+        },
+        {
+          "type": "radiogroup",
+          "name": "use_other_cs_providers",
+          "title": "Do you use other education providers to teach computer science?",
+          "choices": [
+            {
+              "value": "another_most_of_the_time",
+              "text": "Yes, most of the time I use another provider and complement instruction with Code.org content"
+            },
+            {
+              "value": "multiple_providers_evenly",
+              "text": "Yes, I use content from both Code.org and other providers somewhat evenly"
+            },
+            {
+              "value": "cdo_most_of_the_time",
+              "text": "Yes, most of the time I use Code.org content and sometimes complement with content from other providers"
+            },
+            {
+              "value": "only_cdo",
+              "text": "No, I only use Code.org"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "other_cs_providers_select",
+          "visibleIf": "{use_other_cs_providers} anyof ['another_most_of_the_time', 'multiple_providers_evenly', 'cdo_most_of_the_time']",
+          "title": "Which other education providers do you use to teach computer science?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "bjc",
+              "text": "BJC"
+            },
+            {
+              "value": "bootstrap",
+              "text": "Bootstrap"
+            },
+            {
+              "value": "cmu_cs_academy",
+              "text": "CMU CS Academy"
+            },
+            {
+              "value": "code_hs",
+              "text": "CodeHS"
+            },
+            {
+              "value": "code_monkey",
+              "text": "Code Monkey"
+            },
+            {
+              "value": "code_savvy",
+              "text": "Code Savvy"
+            },
+            {
+              "value": "code_spark",
+              "text": "CodeSpark"
+            },
+            {
+              "value": "code_wizards",
+              "text": "Code Wizards"
+            },
+            {
+              "value": "kodable",
+              "text": "Kodable "
+            },
+            {
+              "value": "popfizz",
+              "text": "Popfizz"
+            },
+            {
+              "value": "scratch",
+              "text": "Scratch/Scratch Jr."
+            },
+            {
+              "value": "tynker",
+              "text": "Tynker"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "other_cs_providers_other_comment",
+          "visibleIf": "{other_cs_providers_select} anyof ['other']",
+          "title": "What other Computer Science education providers do you use to teach?"
         },
         {
           "type": "radiogroup",
@@ -413,7 +632,7 @@
         },
         {
           "type": "text",
-          "name": "cs_plans_next_sy_reasons_no_other",
+          "name": "cs_plans_next_sy_reasons_no_other_comment",
           "visibleIf": "{cs_plans_next_sy_reasons_no} = 'other'",
           "title": "Please describe the main reason why you won't be teaching computer science next school year."
         },
@@ -443,7 +662,7 @@
         },
         {
           "type": "text",
-          "name": "cs_plans_next_sy_reasons_not_sure_other",
+          "name": "cs_plans_next_sy_reasons_not_sure_other_comment",
           "visibleIf": "{cs_plans_next_sy_reasons_not_sure} = 'other'",
           "title": "Please describe the main reason why you don't know if you will teach computer science next school year."
         },
@@ -512,9 +731,15 @@
         },
         {
           "type": "text",
-          "name": "cdo_plans_next_sy_reasons_no_other",
+          "name": "cdo_plans_next_sy_reasons_no_other_comment",
           "visibleIf": "{cdo_plans_next_sy_reasons_no} contains 'other'",
           "title": "Please describe the main reason why you don't plan to use Code.org next school year, besides the options listed."
+        },
+        {
+          "type": "text",
+          "name": "cdo_plans_next_sy_reasons_not_sure_comment",
+          "visibleIf": "{cdo_plans_next_sy} contains 'not_sure'",
+          "title": "Please describe the main reasons why you are not sure if you will use Code.org next school year."
         },
         {
           "type": "checkbox",
@@ -533,10 +758,6 @@
             {
               "value": "lack_support_admin",
               "text": "Lack of support/interest by administrators"
-            },
-            {
-              "value": "space",
-              "text": "Lack of classroom space"
             },
             {
               "value": "scheduling",
@@ -583,58 +804,6 @@
               "text": "None"
             }
           ]
-        },
-        {
-          "type": "checkbox",
-          "name": "more_content_additional",
-          "title": "What additional computer science content would you want to teach?",
-          "description": "(select all that apply)",
-          "choices": [
-            {
-              "value": "web_design",
-              "text": "Web design"
-            },
-            {
-              "value": "Game_development",
-              "text": "Game development"
-            },
-            {
-              "value": "Devices",
-              "text": "Computing with devices"
-            },
-            {
-              "value": "aiml",
-              "text": "Artificial intelligence"
-            },
-            {
-              "value": "Digital_citizenship",
-              "text": "Digital citizenship"
-            },
-            {
-              "value": "App_development",
-              "text": "App development"
-            },
-            {
-              "value": "cybersecurity",
-              "text": "Cybersecurity"
-            },
-            {
-              "value": "data_science",
-              "text": "Data Science"
-            },
-            {
-              "value": "python",
-              "text": "Coding with Python"
-            },
-            {
-              "value": "integrated_cs",
-              "text": "Computer science integrated into other subjects"
-            },
-            {
-              "value": "other",
-              "text": "Other"
-            }
-          ]
         }
       ]
     },
@@ -643,13 +812,13 @@
       "elements": [
         {
           "type": "html",
-          "name": "section2_header",
+          "name": "section2_using_cdo_header",
           "html": "<h1>Using Code.org in Your Classroom </h1>"
         },
         {
           "type": "html",
-          "name": "section2_description",
-          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your teaching experience with Code.org during the 2022-23 school year.</span></p>\n"
+          "name": "section2_using_cdo_description",
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your teaching experience with Code.org during the 2023-24 school year.</span></p>\n"
         },
         {
           "type": "rating",
@@ -707,13 +876,71 @@
         },
         {
           "type": "html",
+          "name": "teaching_resources_space",
+          "html": "<br/><br>"
+        },
+        {
+          "type": "matrix",
+          "name": "teaching_resources_matrix",
+          "title": "How much do you agree or disagree with the following statements about Code.org's teaching resources (lesson plans and slides)? ",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Never"
+            },
+            {
+              "value": "2",
+              "text": "Once or twice"
+            },
+            {
+              "value": "3",
+              "text": "Once in a while"
+            },
+            {
+              "value": "4",
+              "text": "Sometimes"
+            },
+            {
+              "value": "5",
+              "text": "Often"
+            },
+            {
+              "value": "6",
+              "text": "Almost every time"
+            },
+            {
+              "value": "7",
+              "text": "Every time I taught"
+            }
+          ],
+          "rows": [
+            {
+              "value": "teaching_resources_lesson_plans_frequency",
+              "text": "I used the lesson plans every time I taught a Code.org lesson"
+            },
+            {
+              "value": "teaching_resources_lesson_plans_effectiveness",
+              "text": "I found it easy to teach a lesson following the lesson plans that are part of Code.org's curriculum"
+            },
+            {
+              "value": "teaching_resources_lesson_plans_ease_of_use",
+              "text": "When I use Code.org's lesson plans, teaching new content is easier than when I don't "
+            },
+            {
+              "value": "teaching_resources_slides_plans_frequency",
+              "text": "I used the lesson slides every time I taught a Code.org lesson"
+            }
+          ]
+        },
+        {
+          "type": "html",
           "name": "cdo_features_space",
-          "html": "\n<p></p>"
+          "html": "<br/><br>"
         },
         {
           "type": "html",
           "name": "cdo_features_intro",
-          "html": "\n<p><span style='font-size: 12pt;'>In the following two questions please select the <strong>top two reasons</strong> why you opt for Code.org when choosing a computer science curriculum and tool.</span></p>"
+          "html": "\n<p>\n<p><span style='font-size: 12pt;'>In the following two questions please select the <strong>top two reasons</strong> why you opt for Code.org when choosing a computer science curriculum and tool.</span></p>"
         },
         {
           "type": "radiogroup",
@@ -770,7 +997,7 @@
             {
               "value": "student_learning_experience",
               "text": "Code.org's curriculum affords a high-quality learning experience for my students",
-              "visibleIf": "{features_main_choice} <> 'features_learning_experience'"
+              "visibleIf": "{features_main_choice} <> 'student_learning_experience'"
             },
             {
               "value": "features_teacher_forum",
@@ -805,7 +1032,7 @@
             {
               "value": "features_students_experience",
               "text": "My students have used it before so they are already familiar with it",
-              "visibleIf": "{features_main_choice} <> 'features_student_experience'"
+              "visibleIf": "{features_main_choice} <> 'features_students_experience'"
             },
             {
               "value": "features_third_party_rating",
@@ -826,56 +1053,105 @@
       "elements": [
         {
           "type": "html",
-          "name": "section4_header",
-          "html": "<h1>Computer Science Professional Learning</h1>"
+          "name": "section3_new_content_cdo_header",
+          "html": "<h1>Expanding Code.org Curriculum</h1>"
         },
         {
           "type": "html",
-          "name": "section4_description",
-          "html": "\n<p><span style='font-size: 12pt;'>This section of the survey includes questions about your interest in professional development courses to help us adjust our programming to better fit your needs.</span></p>\n"
+          "name": "section3_new_content_cdo_description",
+          "html": "\n<p><span style='font-size: 12pt;'>At Code.org we are exploring different ways to expand our curriculum to better meet your interests and needs. Your answers to the following questions will inform what new content to design for you and your students.</span></p>\n"
+        },
+        {
+          "type": "checkbox",
+          "name": "more_content_additional",
+          "title": "What additional computer science content would you want to teach?",
+          "description": "(select all that apply)",
+          "choices": [
+            {
+              "value": "web_design",
+              "text": "Web design"
+            },
+            {
+              "value": "Game_development",
+              "text": "Game development"
+            },
+            {
+              "value": "Devices",
+              "text": "Computing with devices"
+            },
+            {
+              "value": "aiml",
+              "text": "Artificial intelligence"
+            },
+            {
+              "value": "Digital_citizenship",
+              "text": "Digital citizenship"
+            },
+            {
+              "value": "App_development",
+              "text": "App development"
+            },
+            {
+              "value": "cybersecurity",
+              "text": "Cybersecurity"
+            },
+            {
+              "value": "data_science",
+              "text": "Data Science"
+            },
+            {
+              "value": "python",
+              "text": "Coding with Python"
+            },
+            {
+              "value": "integrated_cs",
+              "text": "Computer science integrated into other subjects"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
         },
         {
           "type": "rating",
-          "name": "pd_interest",
-          "title": "Are you interested in professional development for teaching computer science?",
+          "name": "6_12_standalone_units_likelihood",
+          "visibleIf": "{grade} anyof [6, 7, 8, 9, 10, 11, 12, '12up']",
+          "title": "If Code.org were to offer new units, 2-8 weeks in length, on specific topics such as data science or AI, designed for students in grades 6-12, how likely would you be to teach them?",
           "rateCount": 7,
           "rateMax": 7,
-          "minRateDescription": "Not Interested",
-          "maxRateDescription": "Very interested"
+          "minRateDescription": "Not Likely",
+          "maxRateDescription": "Very Likely"
         },
         {
-          "type": "radiogroup",
-          "name": "pd_motivation",
-          "visibleIf": "{pd_interest} > 3",
-          "title": "What is your main reason for participating in a computer science professional development? ",
+          "type": "checkbox",
+          "name": "6_12_standalone_units_reasons",
+          "visibleIf": "{6_12_standalone_units_likelihood} <= 4",
+          "title": "Please share some reasons why you wouldn't be likely to teach short units for students in grades 6-12, on specific topics such as data science or AI.",
           "choices": [
             {
-              "value": "learn_curriculum",
-              "text": "To get familiar with the curriculum of the course I will be teaching"
+              "value": "content_overlaps",
+              "text": "Content overlaps with what I already teach"
             },
             {
-              "value": "learn_as_students",
-              "text": "To learn to do what my students will be learning and doing"
+              "value": "teacher_time",
+              "text": "I don't have time to teach more than I already do"
             },
             {
-              "value": "learn_tools",
-              "text": "To learn to use code.org's teaching and learning tools"
+              "value": "lack_teacher_knowledge",
+              "text": "I need more preparation and deeper subject knowledge"
             },
             {
-              "value": "learn_content",
-              "text": "To master the content of the course I will be teaching"
+              "value": "scheduling",
+              "text": "Scheduling constraints: adding new content to students' schedules is challenging"
             },
             {
-              "value": "engage_cs_teachers",
-              "text": "To engage with fellow teachers and share experiences and best practices around teaching computer science"
+              "value": "lack_student_interest",
+              "text": "There isn't enough student interest/enrollment"
             },
             {
-              "value": "teach_cs_equitably",
-              "text": "To teach computer science equitably"
-            },
-            {
-              "value": "ce_credits",
-              "text": "To receive Continued Education credit"
+              "value": "lack_support_admin",
+              "text": "There isn't enough support/interest by administrators"
             },
             {
               "value": "other",
@@ -885,77 +1161,177 @@
         },
         {
           "type": "text",
-          "name": "pd_motivation_other",
-          "visibleIf": "{pd_motivation} = 'other'",
-          "title": "Please describe your main reason for participating in a computer science professional development training."
+          "name": "6_12_standalone_units_reasons_other_comment",
+          "visibleIf": "{6_12_standalone_units_reasons} contains 'other'",
+          "title": "Please share what are some other reasons why you are not likely to teach short units on specific topics such as data science or AI."
         },
         {
-          "type": "radiogroup",
-          "name": "pd_type_preference",
-          "visibleIf": "{pd_interest} > 3",
-          "title": "When thinking about engaging in computer science professional development, what would would you prefer?",
-          "choices": [
-            {
-              "value": "pd_facilitator_led",
-              "text": "A workshop experience facilitated by a CS education expert with fellow CS teachers"
-            },
-            {
-              "value": "pd_self_paced",
-              "text": "An online course that I can navigate at my own pace"
-            }
-          ]
+          "type": "rating",
+          "name": "9_12_cs_foundations_likelihood",
+          "visibleIf": "{grade} anyof [ 9, 10, 11, 12, '12up']",
+          "title": "If Code.org were to offer a semester-long, introductory course about foundations of computer science, for students in grades 9-12, how likely would you be to teach it?  This course would be aligned to State and CSTA standards and would not be an AP course.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Likely",
+          "maxRateDescription": "Very Likely"
         },
         {
           "type": "checkbox",
-          "name": "pd_barriers",
-          "title": "Which of the following might PREVENT YOU from enrolling in a professional learning workshop?",
-          "description": "(Select all that apply)",
+          "name": "9_12_cs_foundations_reasons",
+          "visibleIf": "{9_12_cs_foundations_likelihood} <= 4",
+          "title": "Please share some reasons why you are not likely to teach an introductory course about foundations of computer science, for students in grades 9-12.",
           "choices": [
             {
-              "value": "pd_barriers_outofschool",
-              "text": "Professional learning sessions take place after school or during weekends"
+              "value": "already_teaching_similar_course",
+              "text": "I already teach a course like this"
             },
             {
-              "value": "pd_barriers_summer",
-              "text": "Professional learning sessions take place during the summer"
+              "value": "prefer_ap_course",
+              "text": "I would rather teach an AP course"
             },
             {
-              "value": "pd_barriers_schooltime",
-              "text": "Professional learning sessions take place during school days"
+              "value": "teacher_time",
+              "text": "I don't have time to teach more than I already do"
             },
             {
-              "value": "pd_barriers_ce_credits",
-              "text": "The program does not award Continued Education credit"
+              "value": "lack_teacher_knowledge",
+              "text": "I need more preparation and deeper subject knowledge"
             },
             {
-              "value": "pd_barriers_certification",
-              "text": "The program that does not award certification"
+              "value": "scheduling",
+              "text": "Scheduling constraints: adding new content to students' schedules is challenging"
             },
             {
-              "value": "pd_barriers_unpaid",
-              "text": "Time in professional learning sessions is unpaid"
+              "value": "lack_student_interest",
+              "text": "There isn't enough student interest/enrollment"
             },
             {
-              "value": "pd_barriers_family",
-              "text": "Attending professional learning requires scheduling around family commitments"
+              "value": "lack_support_admin",
+              "text": "There isn't enough support/interest by administrators"
             },
             {
-              "value": "pd_barriers_caretaking",
-              "text": "Attending professional learning requires finding care-taking alternatives"
-            },
-            {
-              "value": "pd_barriers_commute",
-              "text": "Attending professional learning requires travel or a long commute"
-            },
-            {
-              "value": "pd_barriers_too_long",
-              "text": "The program lasts more than two days"
-            },
-            {
-              "value": "pd_participated_previously",
-              "text": "I have already participated in professional learning for Computer Science and don't need additional training"
+              "value": "other",
+              "text": "Other"
             }
           ]
+        },
+        {
+          "type": "text",
+          "name": "9_12_cs_foundations_reasons_other_comment",
+          "visibleIf": "{9_12_cs_foundations_reasons} contains 'other'",
+          "title": "Please share what are some other reasons why you are not likely to teach an introductory course about foundations of computer science."
+        },
+        {
+          "type": "rating",
+          "name": "k_5_standalone_units_likelihood",
+          "visibleIf": "{grade} anyof ['k', 1, 2, 3, 4, 5]",
+          "title": "If Code.org were to offer short modules, a week or less in length, on focused topics such as game development or AI, designed for students in elementary school (K-5), how likely would you be to teach them?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Likely",
+          "maxRateDescription": "Very Likely"
+        },
+        {
+          "type": "checkbox",
+          "name": "k_5_cross_curricular_content",
+          "visibleIf": "{grade} anyof ['k', 1, 2, 3, 4, 5]",
+          "title": "Would you (or your colleagues) be interested in teaching short units (three to five lessons long) that incorporate computer science concepts while teaching core subject standards of the following areas?",
+          "description": "(Please select all that you (or your colleagues) would be likely to teach)",
+          "choices": [
+            {
+              "value": "math",
+              "text": "Math"
+            },
+            {
+              "value": "art",
+              "text": "Art"
+            },
+            {
+              "value": "ela",
+              "text": "English Language Arts"
+            },
+            {
+              "value": "science",
+              "text": "Science"
+            },
+            {
+              "value": "Social_studies",
+              "text": "Social Studies"
+            },
+            {
+              "value": "music",
+              "text": "Music"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "k_5_cross_curricular_content_other_comment",
+          "visibleIf": "{k_5_cross_curricular_content} contains 'other'",
+          "title": "What other subjects would you like to see integrated into our computer science curriculum?"
+        },
+        {
+          "type": "html",
+          "name": "customized_teaching_space",
+          "html": "<br/><br>"
+        },
+        {
+          "type": "matrix",
+          "name": "customized_teaching_matrix",
+          "title": "How interested would you be in using the following features to customize the Code.org content you teach?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Not likely at all"
+            },
+            {
+              "value": "2",
+              "text": "Unlikely"
+            },
+            {
+              "value": "3",
+              "text": "Somewhat unlikely"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Somewhat likely"
+            },
+            {
+              "value": "6",
+              "text": " Likely"
+            },
+            {
+              "value": "7",
+              "text": "Definitely likely"
+            }
+          ],
+          "rows": [
+            {
+              "value": "customized_teaching_group_lessons",
+              "text": "Grouping existing lessons to create your own curriculum"
+            },
+            {
+              "value": "customized_teaching_create_assessments",
+              "text": "Creating your own assessments to assign to students"
+            },
+            {
+              "value": "customized_teaching_create_activities",
+              "text": "Creating your own puzzles and activities to assign to students"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "customized_teaching_other",
+          "title": "If there are any other ways in which you would want to customize the Code.org content you teach, please describe them."
         }
       ]
     },
@@ -964,18 +1340,18 @@
       "elements": [
         {
           "type": "html",
-          "name": "section5_header",
-          "html": "<h1>Teaching Artificial Intelligence/Machine Learning and Computer Science</h1>"
+          "name": "section5_teaching_ai_header",
+          "html": "<h1>Teaching Artificial Intelligence and Computer Science</h1>"
         },
         {
           "type": "html",
-          "name": "section5_description",
-          "html": "\n<p><span style='font-size: 12pt;'>The following are questions about your experience and interests in teaching Artificial Intelligence/Machine Learning (AI/ML). Your responses will provide insight as we develop curriculum for this content.</span></p>\n"
+          "name": "section5_teaching_ai_description",
+          "html": "\n<p><span style='font-size: 12pt;'>The following are questions about your experience and interests in <strong>teaching Artificial Intelligence (AI).</strong> Your responses will provide insight as we develop curriculum for this content.</span></p>\n"
         },
         {
           "type": "rating",
           "name": "ai_familiarity",
-          "title": "How familiar are you with AI and Machine Learning concepts and content?",
+          "title": "How familiar are you with AI concepts and content?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Familiar At All",
@@ -984,7 +1360,7 @@
         {
           "type": "radiogroup",
           "name": "ai_teaching_experience",
-          "title": "Have you taught AI/ML content in a K-12 classroom?",
+          "title": "Have you taught AI content in a K-12 classroom?",
           "choices": [
             {
               "value": "no",
@@ -1005,29 +1381,9 @@
           ]
         },
         {
-          "type": "radiogroup",
-          "name": "ai_teaching_interest",
-          "title": "Are you interested in more AI/ML content for your classroom? ",
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "maybe",
-              "text": "Maybe, I am not very familiar with the existing content"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            }
-          ]
-        },
-        {
           "type": "checkbox",
           "name": "ai_teaching_topics",
-          "visibleIf": "{ai_teaching_interest} anyof ['yes', 'maybe']",
-          "title": "What topics are you most interested in having more content on?",
+          "title": "Which of the following AI topics would you be most interested in teaching?",
           "description": "(Select all that apply)",
           "choices": [
             {
@@ -1035,89 +1391,58 @@
               "text": "An overview of AI: what it is, how it works, main topics and uses"
             },
             {
-              "value": "ai_generated_code",
-              "text": "AI-generated programming code"
+              "value": "ai_how_to_use_for_cs",
+              "text": "How to use AI tools for computer science and programming"
             },
             {
-              "value": "ai_generated_text_images",
-              "text": "AI-generated text and images (e.g. ChatGPT, DALL-E)"
+              "value": "ai_how_to_use_for_other_content_areas",
+              "text": "How to use AI tools for other subjects (e.g. ELA, history) "
             },
             {
-              "value": "ai_other_subjects",
-              "text": "AI in other subjects (e.g. ELA, history)"
+              "value": "ai_how_works_in_depth",
+              "text": "In-depth content about how AI works (e.g. Machine Learning, Natural Language Processing)"
             },
             {
               "value": "ai_ethics",
-              "text": "Ethical implications of AI"
-            },
-            {
-              "value": "ai_society",
-              "text": "How AI is affecting jobs, industries and society"
-            },
-            {
-              "value": "ai_computer_sensing",
-              "text": "Computer sensing (e.g. sound and vision sensing)"
-            },
-            {
-              "value": "ai_apps",
-              "text": "Developing apps that use AI"
-            },
-            {
-              "value": "ai_ml",
-              "text": "Machine Learning (ML)"
-            },
-            {
-              "value": "ai_npl",
-              "text": "Natural Language Processing (NPL)"
+              "text": "Ethical and societal implications of AI"
             },
             {
               "value": "other",
               "text": "Other"
+            },
+            {
+              "value": "none",
+              "text": "None"
             }
           ]
         },
         {
-          "type": "text",
-          "name": "ai_teaching_topics_other",
-          "visibleIf": "{ai_teaching_topics} = 'other'",
-          "title": "What other topics are you interested in having more content for?"
-        },
-        {
           "type": "checkbox",
-          "name": "ai_teaching_subjects",
-          "visibleIf": "{ai_teaching_interest} anyof ['yes', 'maybe']",
-          "title": "Code.org is exploring ways to integrate AI into other subjects and topics. Out of the following subjects, which one would you want to have AI-integrated curriculum for?",
+          "name": "ai_teaching_barriers",
+          "title": "Which of the following do you see as barriers to implementing AI curriculum at your school?",
           "description": "(Select all that apply)",
           "choices": [
+            {
+              "value": "need_more_prep_or_knowledge",
+              "text": "I would like to understand AI better before introducing it to my students"
+            },
+            {
+              "value": "time_adoption",
+              "text": "I don't have time to teach more than I already do"
+            },
+            {
+              "value": "support_admin",
+              "text": "AI has been discouraged in my school/district"
+            },
+            {
+              "value": "lack_access_ai_tools",
+              "text": "My school restricts access to AI tools"
+            },
             {
               "value": "none",
               "text": "None"
             },
             {
-              "value": "math",
-              "text": "Math"
-            },
-            {
-              "value": "english",
-              "text": "English"
-            },
-            {
-              "value": "history",
-              "text": "History"
-            },
-            {
-              "value": "art",
-              "text": "Art (visual or performing)"
-            },
-            {
-              "value": "science",
-              "text": "Science (any area)"
-            },
-            {
-              "value": "social_studies",
-              "text": "Social Studies"
-            },
-            {
               "value": "other",
               "text": "Other"
             }
@@ -1125,39 +1450,25 @@
         },
         {
           "type": "text",
-          "name": "ai_teaching_subjects_other",
-          "visibleIf": "{ai_teaching_subjects} = 'other'",
-          "title": "What other subjects would you want to have AI-integrated curriculum for?"
-        },
-        {
-          "type": "checkbox",
-          "name": "ai_teaching_barriers",
-          "visibleIf": "{ai_teaching_interest} <> 'maybe'",
-          "title": "Which of the following do you see as the biggest barrier to implementing new AI curriculum at your school?",
-          "description": "(Select all that apply)",
-          "choices": [
-            {
-              "value": "need_more_prep_or_knowledge",
-              "text": "I would like more preparation before introducing AI to my students"
-            },
-            {
-              "value": "time_adoption",
-              "text": "Limited time to adopt new curriculum"
-            },
-            {
-              "value": "support_admin",
-              "text": "Lack of support from my school's administration"
-            },
-            {
-              "value": "support_teachers",
-              "text": "Lack of support from other teachers"
-            }
-          ]
+          "name": "ai_teaching_barriers_other_comment",
+          "visibleIf": "{ai_teaching_barriers_content} = 'other'",
+          "title": "What other barriers do you think could prevent you from implementing new AI curriculum at your school?"
         },
         {
           "type": "comment",
           "name": "ai_teaching_comments",
-          "title": "Is there anything you would like us to know as we think about future AI/ML content development?"
+          "title": "Is there anything you would like us to know as we think about future AI content development?"
+        }
+      ]
+    },
+    {
+      "name": "page5",
+      "elements": [
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/annual_survey",
+          "library_version": 0,
+          "name": "teaching_with_ai_panel"
         }
       ]
     },
@@ -1240,8 +1551,22 @@
           "type": "comment",
           "name": "other_feedback_FR",
           "title": "Is there anything else you’d like to tell us about your experience teaching with Code.org?",
-          "cols": 60,
           "rows": 3
+        },
+        {
+          "type": "radiogroup",
+          "name": "participate_focus_group",
+          "title": "Would you be willing to participate in a follow-up discussion to provide direct feedback about your experience teaching with Code.org?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
         },
         {
           "type": "html",
@@ -1251,7 +1576,7 @@
         {
           "type": "html",
           "name": "gift_card_conf_header",
-          "html": "<p><strong><span style='font-size: 14pt;'>Amazon Gift Card Confirmation</span></strong></p>\n<p><span style='font-size: 12pt;'>Please accept a small token of appreciation in the form of an Amazon gift card, while supplies last.*</span></p>\n<p style='text-align: right;'><span style='font-size: 8pt;'>*First 1000 respondents will receive gift card. Please allow 1-2 weeks to receive the code. </span></p>"
+          "html": "<p><strong><span style='font-size: 14pt;'>Amazon Gift Card Confirmation</span></strong></p>\n<p><span style='font-size: 12pt;'>Please accept a small token of appreciation in the form of an Amazon gift card, while supplies last.*</span></p>\n<p style='text-align: left;'><span style='font-size: 8pt;'>*First 1000 respondents will receive gift card. Please allow 1-2 weeks to receive the code. </span></p>"
         },
         {
           "type": "radiogroup",
@@ -1314,5 +1639,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }
