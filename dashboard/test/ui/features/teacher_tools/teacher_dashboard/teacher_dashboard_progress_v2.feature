@@ -1,7 +1,5 @@
 @no_mobile
 Feature: Using the V2 teacher dashboard
-  @no_mobile
-  Feature: Using the V2 teacher dashboard
 
   Scenario: Teacher can open and close Icon Key and details
     Given I create an authorized teacher-associated student named "Sally"
