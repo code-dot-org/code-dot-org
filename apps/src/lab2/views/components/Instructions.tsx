@@ -176,8 +176,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
     setIsFinished(true);
   }, [beforeFinish]);
 
-  // Set the Finish button to active based on the showFinishButton prop which changes
-  // when the level changes.
+  // Reset the Finish button state when it changes from shown to hidden.
   useEffect(() => {
     setIsFinished(false);
   }, [canShowFinishButton]);
