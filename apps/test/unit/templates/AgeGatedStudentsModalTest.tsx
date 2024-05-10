@@ -1,14 +1,9 @@
-import {render} from '@testing-library/react';
-import React from 'react';
+import {render, fireEvent} from '@testing-library/react';
+import React, {useState} from 'react';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux,
-} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import manageStudents, {
   RowType,
@@ -21,6 +16,7 @@ import teacherSections, {
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
 
 import {expect} from '../../util/reconfiguredChai';
 
@@ -59,7 +55,6 @@ describe('AgeGatedStudentsModal', () => {
     hidden: false,
   };
   beforeEach(() => {
-    stubRedux();
     const store = getStore();
     registerReducers({
       teacherSections,
@@ -73,10 +68,6 @@ describe('AgeGatedStudentsModal', () => {
     store.dispatch(setStudents(fakeStudents));
   });
 
-  afterEach(() => {
-    restoreRedux();
-  });
-
   it('should show a sync results view', () => {
     const {getByTestId} = render(
       <Provider store={getStore()}>
@@ -88,5 +79,31 @@ describe('AgeGatedStudentsModal', () => {
       </Provider>
     );
     expect(getByTestId('age-gated-students-modal'));
+  });
+
+  it('should close age gated students modal on close button press', () => {
+    const WrapperComponent: React.FC = () => {
+      const [isOpen, setIsOpen] = useState(true);
+      return (
+        <div>
+          <AgeGatedStudentsModal
+            manageStudents={{isLoadingStudents: false}}
+            onClose={() => setIsOpen(false)}
+            isOpen={isOpen}
+          />
+        </div>
+      );
+    };
+
+    const {queryByTestId, getByTestId, getByText} = render(
+      <Provider store={getStore()}>
+        <WrapperComponent />
+      </Provider>
+    );
+    expect(getByTestId('age-gated-students-modal'));
+    const button = getByText(i18n.closeDialog());
+    fireEvent.click(button);
+    const ageGatedTable = queryByTestId('age-gated-students-modal');
+    expect(ageGatedTable).to.not.exist;
   });
 });

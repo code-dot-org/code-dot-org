@@ -3,12 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux,
-} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import manageStudents, {
   RowType,
@@ -23,7 +18,7 @@ import teacherSections, {
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai';
 
 interface FakeStudent {
   id: number;
@@ -143,7 +138,6 @@ describe('AgeGatedStudentsModal', () => {
     }
   };
   beforeEach(() => {
-    stubRedux();
     const store = getStore();
     registerReducers({
       teacherSections,
@@ -155,10 +149,6 @@ describe('AgeGatedStudentsModal', () => {
     store.dispatch(setSections([fakeSection]));
     store.dispatch(selectSection(fakeSection.id));
     store.dispatch(setStudents(fakeStudents));
-  });
-
-  afterEach(() => {
-    restoreRedux();
   });
 
   it('should show table with students', () => {

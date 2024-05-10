@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// @ts-expect-error Import error for reactabular-table in typescript
 import * as Table from 'reactabular-table';
 
 import {
@@ -9,7 +8,7 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import i18n from '@cdo/locale';
 
-import {AgeGatedTableConsentStatusCell} from '../manageStudents/AgeGatedTableConsentStatusCell';
+import AgeGatedTableConsentStatusCell from '../manageStudents/AgeGatedTableConsentStatusCell';
 import ManageStudentsFamilyNameCell from '../manageStudents/ManageStudentsFamilyNameCell';
 import {tableLayoutStyles} from '../tables/tableConstants';
 
@@ -27,7 +26,7 @@ interface RowData {
 }
 
 interface Props {
-  studentData?: object;
+  studentData?: [];
 }
 
 const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
@@ -106,7 +105,7 @@ const AgeGatedStudentsTable: React.FC<Props> = ({studentData}) => {
   const columns = getColumns();
   return (
     <div>
-      {Object.keys(studentData).length !== 0 && (
+      {studentData && studentData.length !== 0 && (
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}

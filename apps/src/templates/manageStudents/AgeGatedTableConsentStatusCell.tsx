@@ -5,7 +5,12 @@ import i18n from '@cdo/locale';
 
 import {tableLayoutStyles} from '../tables/tableConstants';
 
-export class AgeGatedTableConsentStatusCell extends Component {
+interface Props {
+  id: number;
+  consentStatus: string;
+}
+
+class AgeGatedTableConsentStatusCell extends Component<Props> {
   static propTypes = {
     id: PropTypes.number.isRequired,
     consentStatus: PropTypes.string.isRequired,
@@ -32,3 +37,5 @@ export class AgeGatedTableConsentStatusCell extends Component {
     );
   }
 }
+
+export default AgeGatedTableConsentStatusCell;
