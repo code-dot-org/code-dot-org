@@ -57,6 +57,14 @@ class OpenaiChatControllerTest < ActionController::TestCase
   params: {messages: [{role: "user", content: "this is also a test!"}]},
   response: :success
 
+  # Post request without a messages param returns a bad request
+  test_user_gets_response_for :chat_completion,
+  name: "no_messages_test",
+  user: :ai_tutor_access,
+  method: :post,
+  params: {},
+  response: :bad_request
+
   # Post request with a profane messages param returns a failure
   test 'returns failure when chat message contains profanity' do
     student = create(:student_with_ai_tutor_access)
@@ -77,28 +85,50 @@ class OpenaiChatControllerTest < ActionController::TestCase
     assert_equal json_response["flagged_content"], "l.lovegood@hogwarts.edu"
   end
 
-  test 'prepend_system_prompt appends level instructions to system prompt and prepends to messages' do
-    system_prompt = "Content of the system prompt file"
-    level_instructions = "Follow these steps"
-    messages = [{role: "user", content: "User question"}]
+  test 'add_content_to_system_prompt appends both level instructions and test file contents' do
+    system_prompt = "Initial prompt"
+    level_instructions = "Complete these steps"
+    test_file_contents = "Test file data"
 
-    result = @controller.send(:prepend_system_prompt, system_prompt, level_instructions, messages)
-    assert_equal 2, result.size
-    assert_equal "Content of the system prompt file\n Here are the student instructions for this level: Follow these steps", result.first[:content]
-    assert_equal "system", result.first[:role]
-    assert_equal "User question", result.last[:content]
+    expected_result = "Initial prompt\n Here are the student instructions for this level: Complete these steps\n The contents of the test file are: Test file data"
+    actual_result = @controller.add_content_to_system_prompt(system_prompt, level_instructions, test_file_contents)
+
+    assert_equal expected_result, actual_result
   end
 
-  test 'prepend_system_prompt does not append level instructions when they are nil' do
-    system_prompt = "Content of the system prompt file"
+  test 'add_content_to_system_prompt handles nil inputs without appending' do
+    system_prompt = "Initial prompt"
     level_instructions = nil
-    messages = [{role: "user", content: "User question"}]
+    test_file_contents = nil
 
-    result = @controller.send(:prepend_system_prompt, system_prompt, level_instructions, messages)
-    assert_equal 2, result.size
-    assert_equal "Content of the system prompt file", result.first[:content], "System prompt should not append nil level instructions"
+    expected_result = "Initial prompt"
+    actual_result = @controller.add_content_to_system_prompt(system_prompt, level_instructions, test_file_contents)
+
+    assert_equal expected_result, actual_result
+  end
+
+  test 'prepend_system_prompt correctly prepends system prompt to messages' do
+    system_prompt = "Initial system prompt"
+    messages = [{role: "user", content: "First message"}, {role: "user", content: "Second message"}]
+
+    result = @controller.send(:prepend_system_prompt, system_prompt, messages)
+
+    assert_equal 3, result.size
+    assert_equal "Initial system prompt", result.first[:content]
     assert_equal "system", result.first[:role]
-    assert_equal "User question", result.last[:content]
+    assert_equal "First message", result[1][:content]
+    assert_equal "Second message", result[2][:content]
+  end
+
+  test 'prepend_system_prompt handles empty message array' do
+    system_prompt = "Initial system prompt"
+    messages = []
+
+    result = @controller.send(:prepend_system_prompt, system_prompt, messages)
+
+    assert_equal 1, result.size
+    assert_equal "Initial system prompt", result.first[:content]
+    assert_equal "system", result.first[:role]
   end
 
   test 'read_file_from_s3 retrieves the correct system prompt' do
@@ -128,12 +158,4 @@ class OpenaiChatControllerTest < ActionController::TestCase
 
     assert_equal "The specified key does not exist.", exception.message
   end
-
-  # Post request without a messages param returns a bad request
-  test_user_gets_response_for :chat_completion,
-  name: "no_messages_test",
-  user: :ai_tutor_access,
-  method: :post,
-  params: {},
-  response: :bad_request
 end

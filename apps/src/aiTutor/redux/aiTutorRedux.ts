@@ -19,7 +19,6 @@ export interface AITutorState {
   aiResponse: string | undefined;
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
-  chatMessageError: boolean;
 }
 
 export interface InstructionsState {
@@ -40,7 +39,6 @@ const initialState: AITutorState = {
   aiResponse: '',
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
-  chatMessageError: false,
 };
 
 const formatQuestionForAITutor = (chatContext: ChatContext) => {

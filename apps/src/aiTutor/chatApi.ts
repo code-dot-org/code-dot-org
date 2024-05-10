@@ -63,7 +63,7 @@ export async function postOpenaiChatCompletion(
   if (response.ok) {
     return await response.json();
   } else {
-    return null;
+    throw new Error('Error getting chat completion response');
   }
 }
 
@@ -106,7 +106,12 @@ export async function getChatCompletionMessage(
     });
   }
 
-  if (!response) return {status: Status.ERROR};
+  if (!response)
+    return {
+      status: Status.ERROR,
+      assistantResponse:
+        'There was an error processing your request. Please try again.',
+    };
 
   switch (response.status) {
     case ShareFilterStatus.Profanity:

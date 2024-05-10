@@ -47,6 +47,7 @@ const AssistantMessage: React.FC<AssistantMessageProps> = ({message}) => {
 
   const shouldRenderFeedbackButtons =
     message.id &&
+    message.status !== Status.ERROR &&
     message.status !== Status.PROFANITY_VIOLATION &&
     message.status !== Status.PII_VIOLATION;
 

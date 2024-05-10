@@ -23,15 +23,18 @@ class OpenaiChatController < ApplicationController
     # If the content is inappropriate, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
+    # The system prompt is stored server-side so we need to prepend it to the student's messages
     system_prompt = read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
-    messages = prepend_system_prompt(system_prompt, params[:levelInstructions], params[:messages])
 
+    # Determine if the level is validated and fetch test file contents if it is
+    test_file_contents = ""
     if validated_level?
       level_id = params[:levelId]
       test_file_contents = get_validated_level_test_file_contents(level_id)
-      messages.first["content"] = messages.first["content"] + " The contents of the test file are: #{test_file_contents}"
-      messages.second["content"] = "The student's code is: " + messages.second["content"]
     end
+
+    updated_system_prompt = add_content_to_system_prompt(system_prompt, params[:levelInstructions], test_file_contents)
+    messages = prepend_system_prompt(updated_system_prompt, params[:messages])
 
     response = OpenaiChatHelper.request_chat_completion(messages)
     chat_completion_return_message = OpenaiChatHelper.get_chat_completion_response_message(response)
@@ -46,17 +49,24 @@ class OpenaiChatController < ApplicationController
     params[:type].present? && params[:type] == 'validation'
   end
 
-  # The system prompt is stored server-side so we need to prepend it to the student's messages.
-  private def prepend_system_prompt(system_prompt, level_instructions, messages)
+  def add_content_to_system_prompt(system_prompt, level_instructions, test_file_contents)
     if level_instructions.present?
-      system_prompt += "\n Here are the student instructions for this level: " + level_instructions
+      system_prompt += "\n Here are the student instructions for this level: #{level_instructions}"
     end
+
+    if test_file_contents.present?
+      system_prompt += "\n The contents of the test file are: #{test_file_contents}"
+    end
+
+    system_prompt
+  end
+
+  private def prepend_system_prompt(system_prompt, messages)
     system_prompt_message = {
       content: system_prompt,
       role: "system"
     }
 
-    # Prepend the system prompt message to the messages array
     messages.unshift(system_prompt_message)
     messages
   end
