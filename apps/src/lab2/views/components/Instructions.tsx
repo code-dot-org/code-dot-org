@@ -176,7 +176,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
     setIsFinished(true);
   }, [beforeFinish]);
 
-  // When the level changes, the Finish button is active again if user returns to last level.
+  // Set the Finish button to active based on the showFinishButton prop which changes
+  // when the level changes.
   useEffect(() => {
     setIsFinished(false);
   }, [canShowFinishButton]);
