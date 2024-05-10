@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Next Steps
 
-#### Thank you for completing the **Coding with AI** self-paced professional learning module. Now that you've learned some basic AI partnership strategies, check out our curriculum and professional learning offerings to continue your journey.
+#### Thank you for completing the **Teaching Computer Vision** self-paced professional learning module. Now that you've learned about using the Design Thinking process to create computer vision solutions, check out our curriculum and professional learning offerings to continue your journey.
 
 ## Help us make this module better!
 
@@ -14,20 +14,20 @@ markdown <<MARKDOWN
 <a class="btn btn-large btn-primary" href="LINK" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 
-## Teach Coding with AI in your class
+## Teach Computer Vision in your class
 #### Explore these curriculum options to get started teaching with and about AI in your class right away. 
 
 
 <table width="1000px">
 	<tr> 
-    	<th style="font-size: 16px;"> <b>Coding with AI</b> <br><i>(6th-12th grade)</i></th>
+    	<th style="font-size: 16px;"> <b>Computer Vision</b> <br><i>(6th-12th grade)</i></th>
         <th style="font-size: 16px;"> <b>How AI Works</b> <br> <i>(6th-12th grade)</i></th>
         <th style="font-size: 16px;"> <b>AI and Machine Learning</b> <br> <i>(6th - 12th grade)</i></th>
-        <th style="font-size: 16px;"> <b>AI and Ethics </b> <br><i>(7th-12th grade)</i></th>
+        <th style="font-size: 16px;"> <b>Coding with AI </b> <br><i>(6th-12th grade)</i></th>
     </tr>
     <tr>
     	<td>
-         <a href="https://code.org/curriculum/coding-with-ai" target="blank" rel="noopener noreferrer">Coding with AI</a> 
+         <a href="https://code.org/curriculum/coding-with-ai" target="blank" rel="noopener noreferrer">Computer Vision</a> 
         	
         </td>
     	<td>
@@ -39,7 +39,7 @@ markdown <<MARKDOWN
         	
         </td>
         <td>
-         <a href="https://studio.code.org/s/ai-ethics-2023/lessons/1" target="blank" rel="noopener noreferrer">AI and Ethics </a> 
+         <a href="https://code.org/curriculum/coding-with-ai" target="blank" rel="noopener noreferrer">Coding with AI</a>  
         	
         </td>
       </tr>

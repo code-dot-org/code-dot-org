@@ -64,7 +64,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:41:32.400+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab2022\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab2022\"},{\"changed_at\":\"2024-05-06 23:42:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-07 17:26:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:41:32.400+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab2022\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab2022\"},{\"changed_at\":\"2024-05-06 23:42:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-07 17:26:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-08 21:52:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -708,6 +708,16 @@
               <block type="math_number" id="nz3#+jE9/6d!a:-;t?3l">
                 <field name="NUM">10</field>
               </block>
+            </value>
+          </block>
+          <block type="gamelab_jumpTo" id="{i;M#qzJOA%u#`dTGUBo">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="vpB6+uY2-2=x8_7T^Yy0">
+                <field name="ANIMATION">"green monster"</field>
+              </block>
+            </value>
+            <value name="LOCATION">
+              <block type="gamelab_randomLocation" id="N?cTwW=Dwvs%FEgUeFF_"/>
             </value>
           </block>
           <block type="gamelab_destroy" id="U^l+o(xS][m!*8pTTFNJ">

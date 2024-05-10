@@ -5,7 +5,9 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
@@ -14,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2024-05-02 19:59:49 UTC",
+    "serialized_at": "2024-05-09 17:38:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

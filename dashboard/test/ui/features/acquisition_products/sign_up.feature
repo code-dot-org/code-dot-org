@@ -1,3 +1,4 @@
+@skip
 @eyes
 Feature: Teacher can create a new account
 

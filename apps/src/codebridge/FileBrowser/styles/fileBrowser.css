@@ -48,3 +48,8 @@ span.caret-container {
   color: white;
   padding: 0;
 }
+
+.file-browser ul li span.label i,
+.file-browser ul li span.button-bar i {
+  margin-right: 4px;
+}

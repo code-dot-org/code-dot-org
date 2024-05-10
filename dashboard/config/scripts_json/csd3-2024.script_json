@@ -5,6 +5,7 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -16,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-02 19:08:14 UTC",
+    "serialized_at": "2024-05-09 17:32:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

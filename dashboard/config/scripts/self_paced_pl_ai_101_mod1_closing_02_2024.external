@@ -5,6 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Additional Practice and Resources
 
-#### This section is not available for the pilot.
+* #### <a href="https://quickdraw.withgoogle.com/" target="_blank">Quick, Draw with Google</a> a quick and fun AI-powered game.
+* #### <a href="https://www.khanmigo.ai/" target="_blank">Khanmigo</a> Khanacademy’s on-demand AI-powered support for education.
+* #### <a href="https://claude.ai/" target="_blank">Claude</a> another AI assistant built for work and trained to be safe, accurate, and secure.
+* #### <a href="https://labs.google/" target="_blank">Labs.Google</a> Google’s home for the latest AI tools, technology and discourse.
+
+##Take it Further
+#### Learn some more about AI on your own. Watch one or more AI-themed <a href="https://www.ted.com/playlists/310/artificial_intelligence" target="_blank">Ted Talks</a>. A TED Talk is a short, powerful presentation, typically 18 minutes or less, given by experts on a wide range of topics including technology, entertainment, and design, aimed at spreading innovative ideas and sparking discussion.
 
 MARKDOWN
