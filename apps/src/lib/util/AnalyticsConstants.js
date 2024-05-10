@@ -36,6 +36,17 @@ const EVENTS = {
   CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
   CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
   CAP_STATE_FORM_DISMISSED: 'CAP State Form Sign Out Button Clicked',
+  CPA_PARENT_EMAIL_BANNER_SHOWN: 'cpa_parent_email_banner_shown',
+  CPA_PARENT_EMAIL_BANNER_CLICKED: 'cpa_parent_email_banner_clicked',
+  CPA_PARENT_EMAIL_BANNER_SUBMITTED: 'cpa_parent_email_banner_submitted',
+  CPA_PARENT_EMAIL_BANNER_UPDATED: 'cpa_parent_email_banner_updated',
+  CPA_PARENT_EMAIL_BANNER_RESEND: 'cpa_parent_email_banner_resend',
+  CPA_PARENT_EMAIL_BANNER_CLOSED: 'cpa_parent_email_banner_closed',
+  CPA_PARENT_EMAIL_MODAL_SHOWN: 'cpa_parent_email_modal_shown',
+  CPA_PARENT_EMAIL_MODAL_SUBMITTED: 'cpa_parent_email_modal_submitted',
+  CPA_PARENT_EMAIL_MODAL_UPDATED: 'cpa_parent_email_modal_updated',
+  CPA_PARENT_EMAIL_MODAL_RESEND: 'cpa_parent_email_modal_resend',
+  CPA_PARENT_EMAIL_MODAL_CLOSED: 'cpa_parent_email_modal_closed',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -273,18 +284,6 @@ const EVENTS = {
   CHAT_ACTION: 'Student takes a chat action',
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
-
-  // CPA
-  CPA_PARENT_EMAIL_BANNER_CLICKED: 'cpa_parent_email_banner_clicked',
-  CPA_PARENT_EMAIL_BANNER_SUBMITTED: 'cpa_parent_email_banner_submitted',
-  CPA_PARENT_EMAIL_BANNER_UPDATED: 'cpa_parent_email_banner_updated',
-  CPA_PARENT_EMAIL_BANNER_RESEND: 'cpa_parent_email_banner_resend',
-  CPA_PARENT_EMAIL_BANNER_CLOSED: 'cpa_parent_email_banner_closed',
-  CPA_PARENT_EMAIL_MODAL_SHOWN: 'cpa_parent_email_modal_shown',
-  CPA_PARENT_EMAIL_MODAL_SUBMITTED: 'cpa_parent_email_modal_submitted',
-  CPA_PARENT_EMAIL_MODAL_UPDATED: 'cpa_parent_email_modal_updated',
-  CPA_PARENT_EMAIL_MODAL_RESEND: 'cpa_parent_email_modal_resend',
-  CPA_PARENT_EMAIL_MODAL_CLOSED: 'cpa_parent_email_modal_closed',
 };
 
 const EVENT_GROUP_NAMES = {

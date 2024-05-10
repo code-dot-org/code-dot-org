@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment/moment';
 import {Provider} from 'react-redux';
@@ -32,6 +32,12 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
   const reportEvent = (eventName: string, payload: object = {}) => {
     analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
   };
+
+  useEffect(() => {
+    reportEvent(EVENTS.CPA_PARENT_EMAIL_BANNER_SHOWN, {
+      consentStatus: currentUser.childAccountComplianceState,
+    });
+  }, [currentUser]);
 
   const handleModalShow = () => {
     setShowModal(true);

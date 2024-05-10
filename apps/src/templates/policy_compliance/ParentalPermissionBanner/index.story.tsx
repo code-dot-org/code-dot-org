@@ -34,6 +34,7 @@ export const Default = () => {
     parentalPermissionRequest: null,
   };
 
+  // @ts-expect-error eslint-disable-next-line @typescript-eslint/ban-ts-comment
   React.useReducer.restore && React.useReducer.restore();
   sinon.stub(React, 'useReducer').returns([state, spy]);
 
