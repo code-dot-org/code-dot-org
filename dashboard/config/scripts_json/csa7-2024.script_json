@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-08 22:24:16 UTC",
+    "serialized_at": "2024-05-09 19:38:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5625,6 +5625,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] U7L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/14mjtcPZPErsFXgjtb2pC7AdqEN2urrJc-yDe4IiiB_A/edit?usp=sharing",
+      "key": "_exemplar_u7l7_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u7l7_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] U7L9 Guided Notes",
       "url": "https://docs.google.com/document/d/1f87HaFOh5yBSEIkFr-yGXozIJb71gEVVtI612-xpOeU/edit?usp=sharing",
       "key": "_exemplar_u7l9_guided_notes",
@@ -6485,6 +6497,19 @@
       }
     },
     {
+      "name": "U7L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1VRW4YWrRlHH6lJN789c_fJ-GW5LGa7l0X1XMupY2BDA/edit?usp=sharing",
+      "key": "u7l7_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "u7l7_guided_notes"
+      }
+    },
+    {
       "name": "U7L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1yh2nWu2ErbFYjzsiZvYHmIpSh9fYimlFZf6yo6vtdDs/edit?usp=share_link",
       "key": "u7l8_extra_practice",
@@ -6913,6 +6938,12 @@
     {
       "seeding_key": {
         "lesson.key": "Recursion",
+        "resource.key": "_exemplar_u7l7_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Recursion",
         "resource.key": "_key_recursion_unplugged"
       }
     },
@@ -6956,6 +6987,12 @@
       "seeding_key": {
         "lesson.key": "Recursion",
         "resource.key": "u7l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Recursion",
+        "resource.key": "u7l7_guided_notes"
       }
     },
     {

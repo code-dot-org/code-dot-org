@@ -45,7 +45,7 @@
   background-color: $light_gray_50;
   border-radius: 0 16px 16px 16px;
   margin-top: 14px; // a quarter of height of bot icon
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .inappropriateMessage {
