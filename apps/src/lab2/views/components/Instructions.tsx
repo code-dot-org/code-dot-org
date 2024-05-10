@@ -9,7 +9,6 @@ import {
   currentLevelIndex,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState} from '../../lab2Redux';
 import {ProjectLevelData} from '../../types';
@@ -270,20 +269,26 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 />
               )}
               {canShowContinueButton && (
-                <Button
-                  text={commonI18n.continue()}
+                <button
+                  id="instructions-continue-button"
+                  type="button"
                   onClick={onNextPanel}
                   className={moduleStyles.button}
-                />
+                >
+                  {commonI18n.continue()}
+                </button>
               )}
               {canShowFinishButton && (
                 <>
-                  <Button
-                    text={commonI18n.finish()}
-                    disabled={isFinished}
+                  <button
+                    id="instructions-finish-button"
+                    type="button"
                     onClick={onFinish}
+                    disabled={isFinished}
                     className={moduleStyles.button}
-                  />
+                  >
+                    {commonI18n.finish()}
+                  </button>
                   {isFinished && <Heading6>{finalMessage}</Heading6>}
                 </>
               )}
