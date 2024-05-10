@@ -87,7 +87,11 @@ class OpenaiChatController < ApplicationController
     end
 
     content = s3_client.get_object(bucket: S3_AI_BUCKET, key: key_path).body.read
-    CDO.shared_cache.write(cache_key, content, expires_in: 1.hour)
+    # In production, cache the content after fetching it from S3
+    # Note: We will hit this codepath in dev if the file is not found locally
+    if Rails.env.production?
+      CDO_SHARED_CACHE.write(cache_key, content, expires_in: 12.hours)
+    end
     return content
   end
 
