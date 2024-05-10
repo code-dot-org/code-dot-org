@@ -525,8 +525,7 @@ class Level < ApplicationRecord
       name: name,
       display_name: display_name,
       is_validated: validated?,
-      can_have_feedback: can_have_feedback?,
-      uses_lab2: uses_lab2?,
+      can_have_feedback: can_have_feedback?
     }
   end
 

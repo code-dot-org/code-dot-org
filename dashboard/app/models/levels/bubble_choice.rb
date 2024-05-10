@@ -137,7 +137,8 @@ class BubbleChoice < DSLDefined
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
           letter: ALPHABET[index],
-          icon: level.try(:icon)
+          icon: level.try(:icon),
+          uses_lab2: level.uses_lab2?
         }
       )
 

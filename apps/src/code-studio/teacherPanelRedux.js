@@ -80,7 +80,7 @@ const getLevelProgressQueryParams = state => {
     // If we are on a sublevel, use the level ID of the main (parent) level
     return {
       script_id: state.progress.scriptId,
-      level_id: currentLevel.parentLevelId || state.progress.currentLevelId,
+      level_id: currentLevel?.parentLevelId || state.progress.currentLevelId,
     };
   }
 };
